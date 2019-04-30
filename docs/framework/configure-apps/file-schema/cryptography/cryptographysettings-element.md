@@ -9,48 +9,48 @@ helpviewer_keywords:
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705223"
 ---
-# <a name="cryptographysettings-element"></a><span data-ttu-id="fc9b3-102">\<cryptographySettings> Element</span><span class="sxs-lookup"><span data-stu-id="fc9b3-102">\<cryptographySettings> Element</span></span>
-<span data-ttu-id="fc9b3-103">Zawiera ustawienia szyfrowania.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-103">Contains cryptography settings.</span></span>  
+# <a name="cryptographysettings-element"></a><span data-ttu-id="6e94f-102">\<cryptographySettings> Element</span><span class="sxs-lookup"><span data-stu-id="6e94f-102">\<cryptographySettings> Element</span></span>
+<span data-ttu-id="6e94f-103">Zawiera ustawienia szyfrowania.</span><span class="sxs-lookup"><span data-stu-id="6e94f-103">Contains cryptography settings.</span></span>  
   
- <span data-ttu-id="fc9b3-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="fc9b3-104">\<configuration></span></span>  
-<span data-ttu-id="fc9b3-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="fc9b3-105">\<mscorlib></span></span>  
-<span data-ttu-id="fc9b3-106">\<cryptographySettings></span><span class="sxs-lookup"><span data-stu-id="fc9b3-106">\<cryptographySettings></span></span>  
+ <span data-ttu-id="6e94f-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="6e94f-104">\<configuration></span></span>  
+<span data-ttu-id="6e94f-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="6e94f-105">\<mscorlib></span></span>  
+<span data-ttu-id="6e94f-106">\<cryptographySettings></span><span class="sxs-lookup"><span data-stu-id="6e94f-106">\<cryptographySettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fc9b3-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="fc9b3-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e94f-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="6e94f-107">Syntax</span></span>  
   
 ```xml  
       <cryptographySettings>   
 </cryptographySettings>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fc9b3-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="fc9b3-108">Attributes and Elements</span></span>  
- <span data-ttu-id="fc9b3-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6e94f-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="6e94f-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="6e94f-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="6e94f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fc9b3-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="fc9b3-110">Attributes</span></span>  
- <span data-ttu-id="fc9b3-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6e94f-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="6e94f-110">Attributes</span></span>  
+ <span data-ttu-id="6e94f-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="6e94f-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fc9b3-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="fc9b3-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6e94f-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="6e94f-112">Child Elements</span></span>  
   
-|<span data-ttu-id="fc9b3-113">Element</span><span class="sxs-lookup"><span data-stu-id="fc9b3-113">Element</span></span>|<span data-ttu-id="fc9b3-114">Opis</span><span class="sxs-lookup"><span data-stu-id="fc9b3-114">Description</span></span>|  
+|<span data-ttu-id="6e94f-113">Element</span><span class="sxs-lookup"><span data-stu-id="6e94f-113">Element</span></span>|<span data-ttu-id="6e94f-114">Opis</span><span class="sxs-lookup"><span data-stu-id="6e94f-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fc9b3-115">\<cryptoNameMapping></span><span class="sxs-lookup"><span data-stu-id="fc9b3-115">\<cryptoNameMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|<span data-ttu-id="fc9b3-116">Zawiera mapowania klasy przyjazne nazwy.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-116">Contains mappings of classes to friendly names.</span></span>|  
-|[<span data-ttu-id="fc9b3-117">\<oidMap></span><span class="sxs-lookup"><span data-stu-id="fc9b3-117">\<oidMap></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|<span data-ttu-id="fc9b3-118">Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-118">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
+|[<span data-ttu-id="6e94f-115">\<cryptoNameMapping></span><span class="sxs-lookup"><span data-stu-id="6e94f-115">\<cryptoNameMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|<span data-ttu-id="6e94f-116">Zawiera mapowania klasy przyjazne nazwy.</span><span class="sxs-lookup"><span data-stu-id="6e94f-116">Contains mappings of classes to friendly names.</span></span>|  
+|[<span data-ttu-id="6e94f-117">\<oidMap></span><span class="sxs-lookup"><span data-stu-id="6e94f-117">\<oidMap></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|<span data-ttu-id="6e94f-118">Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.</span><span class="sxs-lookup"><span data-stu-id="6e94f-118">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fc9b3-119">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="fc9b3-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6e94f-119">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="6e94f-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="fc9b3-120">Element</span><span class="sxs-lookup"><span data-stu-id="fc9b3-120">Element</span></span>|<span data-ttu-id="fc9b3-121">Opis</span><span class="sxs-lookup"><span data-stu-id="fc9b3-121">Description</span></span>|  
+|<span data-ttu-id="6e94f-120">Element</span><span class="sxs-lookup"><span data-stu-id="6e94f-120">Element</span></span>|<span data-ttu-id="6e94f-121">Opis</span><span class="sxs-lookup"><span data-stu-id="6e94f-121">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="fc9b3-122">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`mscorlib`|<span data-ttu-id="fc9b3-123">Zawiera `cryptographySettings` elementu.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-123">Contains the `cryptographySettings` element.</span></span>|  
+|`configuration`|<span data-ttu-id="6e94f-122">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6e94f-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`mscorlib`|<span data-ttu-id="6e94f-123">Zawiera `cryptographySettings` elementu.</span><span class="sxs-lookup"><span data-stu-id="6e94f-123">Contains the `cryptographySettings` element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="fc9b3-124">Przykład</span><span class="sxs-lookup"><span data-stu-id="fc9b3-124">Example</span></span>  
- <span data-ttu-id="fc9b3-125">Poniższy przykład pokazuje jak używać  **\<cryptographysettings — >** element zawiera mapowania identyfikatora OID i mapowań nazw kryptografii.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-125">The following example shows how use the **\<cryptographySettings>** element to contain cryptography name mappings and OID mappings.</span></span> <span data-ttu-id="fc9b3-126">Ten przykład umożliwia skonfigurowanie środowiska uruchomieniowego, aby <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> zwraca `MyHashClass` obiektu i `MyCryptoClass` klasy mapuje do identyfikatora obiektu 1.3.36.2.1.</span><span class="sxs-lookup"><span data-stu-id="fc9b3-126">This example configures the runtime so that <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> returns a `MyHashClass` object and the `MyCryptoClass` class maps to the object identifier 1.3.36.2.1.</span></span>  
+## <a name="example"></a><span data-ttu-id="6e94f-124">Przykład</span><span class="sxs-lookup"><span data-stu-id="6e94f-124">Example</span></span>  
+ <span data-ttu-id="6e94f-125">Poniższy przykład pokazuje jak używać  **\<cryptographysettings — >** element zawiera mapowania identyfikatora OID i mapowań nazw kryptografii.</span><span class="sxs-lookup"><span data-stu-id="6e94f-125">The following example shows how use the **\<cryptographySettings>** element to contain cryptography name mappings and OID mappings.</span></span> <span data-ttu-id="6e94f-126">Ten przykład umożliwia skonfigurowanie środowiska uruchomieniowego, aby <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> zwraca `MyHashClass` obiektu i `MyCryptoClass` klasy mapuje do identyfikatora obiektu 1.3.36.2.1.</span><span class="sxs-lookup"><span data-stu-id="6e94f-126">This example configures the runtime so that <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> returns a `MyHashClass` object and the `MyCryptoClass` class maps to the object identifier 1.3.36.2.1.</span></span>  
   
 ```xml  
 <configuration>  
@@ -76,8 +76,8 @@ ms.locfileid: "59164141"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fc9b3-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fc9b3-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e94f-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6e94f-127">See also</span></span>
 
-- [<span data-ttu-id="fc9b3-128">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="fc9b3-128">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="fc9b3-129">Schemat ustawień kryptografii</span><span class="sxs-lookup"><span data-stu-id="fc9b3-129">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [<span data-ttu-id="fc9b3-130">Usługi kryptograficzne</span><span class="sxs-lookup"><span data-stu-id="fc9b3-130">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="6e94f-128">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="6e94f-128">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="6e94f-129">Schemat ustawień kryptografii</span><span class="sxs-lookup"><span data-stu-id="6e94f-129">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [<span data-ttu-id="6e94f-130">Usługi kryptograficzne</span><span class="sxs-lookup"><span data-stu-id="6e94f-130">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)

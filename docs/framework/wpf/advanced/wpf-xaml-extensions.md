@@ -9,21 +9,21 @@ helpviewer_keywords:
 - WPF Namespace [WPF]
 ms.assetid: 5e1d60e8-9403-47d0-98e4-b49aec871ee7
 ms.openlocfilehash: 91416bba9c94c26cbc107e90c2f528d94600699c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764559"
 ---
-# <a name="wpf-xaml-extensions"></a><span data-ttu-id="4117e-102">Rozszerzenia WPF XAML</span><span class="sxs-lookup"><span data-stu-id="4117e-102">WPF XAML Extensions</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="4117e-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="4117e-103">In This Section</span></span>  
- [<span data-ttu-id="4117e-104">Rozszerzenie znaczników powiązania</span><span class="sxs-lookup"><span data-stu-id="4117e-104">Binding Markup Extension</span></span>](binding-markup-extension.md)  
-  [<span data-ttu-id="4117e-105">ColorConvertedBitmap, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="4117e-105">ColorConvertedBitmap Markup Extension</span></span>](colorconvertedbitmap-markup-extension.md)  
-  [<span data-ttu-id="4117e-106">ComponentResourceKey, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="4117e-106">ComponentResourceKey Markup Extension</span></span>](componentresourcekey-markup-extension.md)  
-  [<span data-ttu-id="4117e-107">DynamicResource, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="4117e-107">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
-  [<span data-ttu-id="4117e-108">RelativeSource, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="4117e-108">RelativeSource MarkupExtension</span></span>](relativesource-markupextension.md)  
-  [<span data-ttu-id="4117e-109">StaticResource, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="4117e-109">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
-  [<span data-ttu-id="4117e-110">TemplateBinding, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="4117e-110">TemplateBinding Markup Extension</span></span>](templatebinding-markup-extension.md)  
-  [<span data-ttu-id="4117e-111">ThemeDictionary, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="4117e-111">ThemeDictionary Markup Extension</span></span>](themedictionary-markup-extension.md)  
-  [<span data-ttu-id="4117e-112">PropertyPath, składnia XAML</span><span class="sxs-lookup"><span data-stu-id="4117e-112">PropertyPath XAML Syntax</span></span>](propertypath-xaml-syntax.md)  
-  [<span data-ttu-id="4117e-113">PresentationOptions:Freeze, atrybut</span><span class="sxs-lookup"><span data-stu-id="4117e-113">PresentationOptions:Freeze Attribute</span></span>](presentationoptions-freeze-attribute.md)
+# <a name="wpf-xaml-extensions"></a><span data-ttu-id="db4a2-102">Rozszerzenia WPF XAML</span><span class="sxs-lookup"><span data-stu-id="db4a2-102">WPF XAML Extensions</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="db4a2-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="db4a2-103">In This Section</span></span>  
+ [<span data-ttu-id="db4a2-104">Rozszerzenie znaczników powiązania</span><span class="sxs-lookup"><span data-stu-id="db4a2-104">Binding Markup Extension</span></span>](binding-markup-extension.md)  
+  [<span data-ttu-id="db4a2-105">ColorConvertedBitmap, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="db4a2-105">ColorConvertedBitmap Markup Extension</span></span>](colorconvertedbitmap-markup-extension.md)  
+  [<span data-ttu-id="db4a2-106">ComponentResourceKey, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="db4a2-106">ComponentResourceKey Markup Extension</span></span>](componentresourcekey-markup-extension.md)  
+  [<span data-ttu-id="db4a2-107">DynamicResource, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="db4a2-107">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
+  [<span data-ttu-id="db4a2-108">RelativeSource, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="db4a2-108">RelativeSource MarkupExtension</span></span>](relativesource-markupextension.md)  
+  [<span data-ttu-id="db4a2-109">StaticResource, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="db4a2-109">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
+  [<span data-ttu-id="db4a2-110">TemplateBinding, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="db4a2-110">TemplateBinding Markup Extension</span></span>](templatebinding-markup-extension.md)  
+  [<span data-ttu-id="db4a2-111">ThemeDictionary, rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="db4a2-111">ThemeDictionary Markup Extension</span></span>](themedictionary-markup-extension.md)  
+  [<span data-ttu-id="db4a2-112">PropertyPath, składnia XAML</span><span class="sxs-lookup"><span data-stu-id="db4a2-112">PropertyPath XAML Syntax</span></span>](propertypath-xaml-syntax.md)  
+  [<span data-ttu-id="db4a2-113">PresentationOptions:Freeze, atrybut</span><span class="sxs-lookup"><span data-stu-id="db4a2-113">PresentationOptions:Freeze Attribute</span></span>](presentationoptions-freeze-attribute.md)

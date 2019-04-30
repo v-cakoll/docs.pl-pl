@@ -3,17 +3,17 @@ title: 'Instrukcje: Serializowanie przy użyciu elementu DataContractSerializer 
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
 ms.openlocfilehash: 75f805c2a954957519f2ebb9425ae7e2e2a967b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667681"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="0a04f-102">Instrukcje: Serializowanie przy użyciu elementu DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="0a04f-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
-<span data-ttu-id="0a04f-103">W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="0a04f-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="54b5b-102">Instrukcje: Serializowanie przy użyciu elementu DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="54b5b-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="54b5b-103">W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="54b5b-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0a04f-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="0a04f-104">Example</span></span>  
- <span data-ttu-id="0a04f-105">Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiektów.</span><span class="sxs-lookup"><span data-stu-id="0a04f-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="0a04f-106">Szereguje je w plikach tekstowych i deserializuje z plików tekstowych.</span><span class="sxs-lookup"><span data-stu-id="0a04f-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="54b5b-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="54b5b-104">Example</span></span>  
+ <span data-ttu-id="54b5b-105">Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiektów.</span><span class="sxs-lookup"><span data-stu-id="54b5b-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="54b5b-106">Szereguje je w plikach tekstowych i deserializuje z plików tekstowych.</span><span class="sxs-lookup"><span data-stu-id="54b5b-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -80,7 +80,7 @@ public class XElementNullContainer
 }  
 ```  
   
- <span data-ttu-id="0a04f-107">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="0a04f-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="54b5b-107">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="54b5b-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: System.Xml.Linq.XElement  
@@ -91,6 +91,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0a04f-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0a04f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54b5b-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="54b5b-108">See also</span></span>
 
-- [<span data-ttu-id="0a04f-109">Serializowanie wykresów obiektów, które zawierają obiekty XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="0a04f-109">Serializing Object Graphs that Contain XElement Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [<span data-ttu-id="54b5b-109">Serializowanie wykresów obiektów, które zawierają obiekty XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="54b5b-109">Serializing Object Graphs that Contain XElement Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

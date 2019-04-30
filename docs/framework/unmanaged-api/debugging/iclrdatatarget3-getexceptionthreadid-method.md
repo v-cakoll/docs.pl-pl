@@ -15,16 +15,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6503efbaa4db89b243a85b69f60b091c6bb49ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697904"
 ---
-# <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="a93f2-102">Metoda ICLRDataTarget3::GetExceptionThreadID</span><span class="sxs-lookup"><span data-stu-id="a93f2-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
-<span data-ttu-id="a93f2-103">Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) usługi dostępu do danych można uzyskać identyfikator wątku, który wygenerował wyjątek.</span><span class="sxs-lookup"><span data-stu-id="a93f2-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  
+# <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="067fa-102">Metoda ICLRDataTarget3::GetExceptionThreadID</span><span class="sxs-lookup"><span data-stu-id="067fa-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
+<span data-ttu-id="067fa-103">Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) usługi dostępu do danych można uzyskać identyfikator wątku, który wygenerował wyjątek.</span><span class="sxs-lookup"><span data-stu-id="067fa-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a93f2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a93f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="067fa-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="067fa-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionThreadID(  
@@ -32,32 +32,32 @@ HRESULT GetExceptionThreadID(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a93f2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a93f2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="067fa-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="067fa-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="a93f2-106">[out] Identyfikator wątku, który wygenerował wyjątek.</span><span class="sxs-lookup"><span data-stu-id="a93f2-106">[out] The ID of the thread that threw the exception.</span></span>  
+ <span data-ttu-id="067fa-106">[out] Identyfikator wątku, który wygenerował wyjątek.</span><span class="sxs-lookup"><span data-stu-id="067fa-106">[out] The ID of the thread that threw the exception.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a93f2-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a93f2-107">Return Value</span></span>  
- <span data-ttu-id="a93f2-108">Wartość zwracana jest `S_OK` na powodzenie lub niepowodzenie `HRESULT` kod błędu.</span><span class="sxs-lookup"><span data-stu-id="a93f2-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="a93f2-109">`HRESULT` Mogą obejmować kody, ale nie są ograniczone do następujących:</span><span class="sxs-lookup"><span data-stu-id="a93f2-109">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="067fa-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="067fa-107">Return Value</span></span>  
+ <span data-ttu-id="067fa-108">Wartość zwracana jest `S_OK` na powodzenie lub niepowodzenie `HRESULT` kod błędu.</span><span class="sxs-lookup"><span data-stu-id="067fa-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="067fa-109">`HRESULT` Mogą obejmować kody, ale nie są ograniczone do następujących:</span><span class="sxs-lookup"><span data-stu-id="067fa-109">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="a93f2-110">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="a93f2-110">Return code</span></span>|<span data-ttu-id="a93f2-111">Opis</span><span class="sxs-lookup"><span data-stu-id="a93f2-111">Description</span></span>|  
+|<span data-ttu-id="067fa-110">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="067fa-110">Return code</span></span>|<span data-ttu-id="067fa-111">Opis</span><span class="sxs-lookup"><span data-stu-id="067fa-111">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="a93f2-112">Metody powiodło się.</span><span class="sxs-lookup"><span data-stu-id="a93f2-112">Method succeeded.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="a93f2-113">Nie można odnaleźć Identyfikatora wątku prawidłowy dla wyjątku.</span><span class="sxs-lookup"><span data-stu-id="a93f2-113">Could not find a valid thread ID for the exception.</span></span>|  
+|`S_OK`|<span data-ttu-id="067fa-112">Metody powiodło się.</span><span class="sxs-lookup"><span data-stu-id="067fa-112">Method succeeded.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="067fa-113">Nie można odnaleźć Identyfikatora wątku prawidłowy dla wyjątku.</span><span class="sxs-lookup"><span data-stu-id="067fa-113">Could not find a valid thread ID for the exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a93f2-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a93f2-114">Remarks</span></span>  
- <span data-ttu-id="a93f2-115">Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a93f2-115">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="067fa-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="067fa-114">Remarks</span></span>  
+ <span data-ttu-id="067fa-115">Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="067fa-115">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a93f2-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a93f2-116">Requirements</span></span>  
- <span data-ttu-id="a93f2-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a93f2-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="067fa-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="067fa-116">Requirements</span></span>  
+ <span data-ttu-id="067fa-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="067fa-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a93f2-118">**Nagłówek:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="a93f2-118">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="067fa-118">**Nagłówek:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="067fa-118">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="a93f2-119">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a93f2-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="067fa-119">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="067fa-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a93f2-120">**Wersje programu .NET framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a93f2-120">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
+ <span data-ttu-id="067fa-120">**Wersje programu .NET framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="067fa-120">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a93f2-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a93f2-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="067fa-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="067fa-121">See also</span></span>
 
-- [<span data-ttu-id="a93f2-122">ICLRDataTarget3, interfejs</span><span class="sxs-lookup"><span data-stu-id="a93f2-122">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [<span data-ttu-id="a93f2-123">GetExceptionContextRecord, metoda</span><span class="sxs-lookup"><span data-stu-id="a93f2-123">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [<span data-ttu-id="a93f2-124">GetExceptionRecord, metoda</span><span class="sxs-lookup"><span data-stu-id="a93f2-124">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
+- [<span data-ttu-id="067fa-122">ICLRDataTarget3, interfejs</span><span class="sxs-lookup"><span data-stu-id="067fa-122">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [<span data-ttu-id="067fa-123">GetExceptionContextRecord, metoda</span><span class="sxs-lookup"><span data-stu-id="067fa-123">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [<span data-ttu-id="067fa-124">GetExceptionRecord, metoda</span><span class="sxs-lookup"><span data-stu-id="067fa-124">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)

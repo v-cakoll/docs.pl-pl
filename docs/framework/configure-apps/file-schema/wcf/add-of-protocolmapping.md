@@ -3,20 +3,20 @@ title: <add> dla <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
 ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704495"
 ---
-# <a name="add-of-protocolmapping"></a><span data-ttu-id="fabb4-102">\<Dodaj > z \<protocolMapping ></span><span class="sxs-lookup"><span data-stu-id="fabb4-102">\<add> of \<protocolMapping></span></span>
-<span data-ttu-id="fabb4-103">Reprezentuje domyślne mapowanie protokołu pomiędzy schematem protokołu transportu (np. http, net.tcp, net.pipe, itp.) a powiązaniem Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="fabb4-103">Represents a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a Windows Communication Foundation (WCF) binding.</span></span> <span data-ttu-id="fabb4-104">Podczas tworzenia domyślne punkty końcowe w czasie wykonywania, WCF analizuje skonfigurowanego mapowania i decyduje o tym, na które powiązania do użycia dla określonego na podstawie adresu.</span><span class="sxs-lookup"><span data-stu-id="fabb4-104">When creating default endpoints at runtime, WCF looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
+# <a name="add-of-protocolmapping"></a><span data-ttu-id="a7a02-102">\<Dodaj > z \<protocolMapping ></span><span class="sxs-lookup"><span data-stu-id="a7a02-102">\<add> of \<protocolMapping></span></span>
+<span data-ttu-id="a7a02-103">Reprezentuje domyślne mapowanie protokołu pomiędzy schematem protokołu transportu (np. http, net.tcp, net.pipe, itp.) a powiązaniem Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="a7a02-103">Represents a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a Windows Communication Foundation (WCF) binding.</span></span> <span data-ttu-id="a7a02-104">Podczas tworzenia domyślne punkty końcowe w czasie wykonywania, WCF analizuje skonfigurowanego mapowania i decyduje o tym, na które powiązania do użycia dla określonego na podstawie adresu.</span><span class="sxs-lookup"><span data-stu-id="a7a02-104">When creating default endpoints at runtime, WCF looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
   
- <span data-ttu-id="fabb4-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="fabb4-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="fabb4-106">\<protocolMapping ></span><span class="sxs-lookup"><span data-stu-id="fabb4-106">\<protocolMapping></span></span>  
-<span data-ttu-id="fabb4-107">\<add></span><span class="sxs-lookup"><span data-stu-id="fabb4-107">\<add></span></span>  
+ <span data-ttu-id="a7a02-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="a7a02-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="a7a02-106">\<protocolMapping ></span><span class="sxs-lookup"><span data-stu-id="a7a02-106">\<protocolMapping></span></span>  
+<span data-ttu-id="a7a02-107">\<add></span><span class="sxs-lookup"><span data-stu-id="a7a02-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fabb4-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="fabb4-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7a02-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="a7a02-108">Syntax</span></span>  
   
 ```xml  
 <protocolMapping>
@@ -26,28 +26,28 @@ ms.locfileid: "59109268"
 </protocolMapping>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fabb4-109">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="fabb4-109">Attributes and Elements</span></span>  
- <span data-ttu-id="fabb4-110">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="fabb4-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a7a02-109">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="a7a02-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="a7a02-110">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="a7a02-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fabb4-111">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="fabb4-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a7a02-111">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="a7a02-111">Attributes</span></span>  
   
-|<span data-ttu-id="fabb4-112">Element</span><span class="sxs-lookup"><span data-stu-id="fabb4-112">Element</span></span>|<span data-ttu-id="fabb4-113">Opis</span><span class="sxs-lookup"><span data-stu-id="fabb4-113">Description</span></span>|  
+|<span data-ttu-id="a7a02-112">Element</span><span class="sxs-lookup"><span data-stu-id="a7a02-112">Element</span></span>|<span data-ttu-id="a7a02-113">Opis</span><span class="sxs-lookup"><span data-stu-id="a7a02-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="fabb4-114">powiązanie</span><span class="sxs-lookup"><span data-stu-id="fabb4-114">binding</span></span>|<span data-ttu-id="fabb4-115">Ciąg określający typ powiązania stosowanego dla punktu końcowego podczas domyślnego tworzenia punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="fabb4-115">A string that specifies the type of binding to be used for an endpoint during default endpoint creation.</span></span>|  
-|<span data-ttu-id="fabb4-116">bindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="fabb4-116">bindingConfiguration</span></span>|<span data-ttu-id="fabb4-117">Ciąg określający nazwę sekcji konfiguracji powiązania można odwoływać się.</span><span class="sxs-lookup"><span data-stu-id="fabb4-117">A string that specifies the name of the binding configuration section to be referenced.</span></span>|  
-|<span data-ttu-id="fabb4-118">schemat</span><span class="sxs-lookup"><span data-stu-id="fabb4-118">scheme</span></span>|<span data-ttu-id="fabb4-119">Schematem protokołu transportu, która ma być używany dla domyślnego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="fabb4-119">The transport protocol scheme to be used for the default endpoint.</span></span>|  
+|<span data-ttu-id="a7a02-114">powiązanie</span><span class="sxs-lookup"><span data-stu-id="a7a02-114">binding</span></span>|<span data-ttu-id="a7a02-115">Ciąg określający typ powiązania stosowanego dla punktu końcowego podczas domyślnego tworzenia punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="a7a02-115">A string that specifies the type of binding to be used for an endpoint during default endpoint creation.</span></span>|  
+|<span data-ttu-id="a7a02-116">bindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="a7a02-116">bindingConfiguration</span></span>|<span data-ttu-id="a7a02-117">Ciąg określający nazwę sekcji konfiguracji powiązania można odwoływać się.</span><span class="sxs-lookup"><span data-stu-id="a7a02-117">A string that specifies the name of the binding configuration section to be referenced.</span></span>|  
+|<span data-ttu-id="a7a02-118">schemat</span><span class="sxs-lookup"><span data-stu-id="a7a02-118">scheme</span></span>|<span data-ttu-id="a7a02-119">Schematem protokołu transportu, która ma być używany dla domyślnego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="a7a02-119">The transport protocol scheme to be used for the default endpoint.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="fabb4-120">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="fabb4-120">Child Elements</span></span>  
- <span data-ttu-id="fabb4-121">Brak.</span><span class="sxs-lookup"><span data-stu-id="fabb4-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a7a02-120">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="a7a02-120">Child Elements</span></span>  
+ <span data-ttu-id="a7a02-121">Brak.</span><span class="sxs-lookup"><span data-stu-id="a7a02-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="fabb4-122">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="fabb4-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a7a02-122">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="a7a02-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="fabb4-123">Element</span><span class="sxs-lookup"><span data-stu-id="fabb4-123">Element</span></span>|<span data-ttu-id="fabb4-124">Opis</span><span class="sxs-lookup"><span data-stu-id="fabb4-124">Description</span></span>|  
+|<span data-ttu-id="a7a02-123">Element</span><span class="sxs-lookup"><span data-stu-id="a7a02-123">Element</span></span>|<span data-ttu-id="a7a02-124">Opis</span><span class="sxs-lookup"><span data-stu-id="a7a02-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fabb4-125">\<protocolMapping ></span><span class="sxs-lookup"><span data-stu-id="fabb4-125">\<protocolMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|<span data-ttu-id="fabb4-126">Reprezentuje sekcję konfiguracji do definiowania domyślnego mapowania protokołu pomiędzy schematami protokołu transportu (np. http, net.tcp, net.pipe, itp.) i powiązania Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="fabb4-126">Represents a configuration section for defining default protocol mappings between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and Windows Communication Foundation (WCF) bindings.</span></span>|  
+|[<span data-ttu-id="a7a02-125">\<protocolMapping ></span><span class="sxs-lookup"><span data-stu-id="a7a02-125">\<protocolMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|<span data-ttu-id="a7a02-126">Reprezentuje sekcję konfiguracji do definiowania domyślnego mapowania protokołu pomiędzy schematami protokołu transportu (np. http, net.tcp, net.pipe, itp.) i powiązania Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="a7a02-126">Represents a configuration section for defining default protocol mappings between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and Windows Communication Foundation (WCF) bindings.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="fabb4-127">Przykład</span><span class="sxs-lookup"><span data-stu-id="fabb4-127">Example</span></span>  
- <span data-ttu-id="fabb4-128">W poniższym przykładzie konfiguracji zawiera domyślne mapowanie protokołu w pliku machine.config.</span><span class="sxs-lookup"><span data-stu-id="fabb4-128">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="fabb4-129">Możesz przesłonić to domyślne mapowanie na poziomie komputera przez zmodyfikowanie pliku machine.config.</span><span class="sxs-lookup"><span data-stu-id="fabb4-129">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="fabb4-130">Lub jeśli chcesz tylko jej zastąpienie w zakresie aplikacji, można zastąpić w tej sekcji w pliku konfiguracyjnym aplikacji i zmienić mapowanie schematów pojedynczy protokół.</span><span class="sxs-lookup"><span data-stu-id="fabb4-130">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
+## <a name="example"></a><span data-ttu-id="a7a02-127">Przykład</span><span class="sxs-lookup"><span data-stu-id="a7a02-127">Example</span></span>  
+ <span data-ttu-id="a7a02-128">W poniższym przykładzie konfiguracji zawiera domyślne mapowanie protokołu w pliku machine.config.</span><span class="sxs-lookup"><span data-stu-id="a7a02-128">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="a7a02-129">Możesz przesłonić to domyślne mapowanie na poziomie komputera przez zmodyfikowanie pliku machine.config.</span><span class="sxs-lookup"><span data-stu-id="a7a02-129">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="a7a02-130">Lub jeśli chcesz tylko jej zastąpienie w zakresie aplikacji, można zastąpić w tej sekcji w pliku konfiguracyjnym aplikacji i zmienić mapowanie schematów pojedynczy protokół.</span><span class="sxs-lookup"><span data-stu-id="a7a02-130">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
   
 ```xml  
 <protocolMapping>
@@ -62,7 +62,7 @@ ms.locfileid: "59109268"
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fabb4-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fabb4-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7a02-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a7a02-131">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

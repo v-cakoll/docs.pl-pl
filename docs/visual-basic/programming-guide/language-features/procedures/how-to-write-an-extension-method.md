@@ -7,32 +7,32 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
 ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666004"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a><span data-ttu-id="c1779-102">Instrukcje: Zapisywanie metody rozszerzenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c1779-102">How to: Write an Extension Method (Visual Basic)</span></span>
-<span data-ttu-id="c1779-103">Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy.</span><span class="sxs-lookup"><span data-stu-id="c1779-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="c1779-104">Metoda rozszerzenia może być wywoływana, jakby była wystąpieniem tej klasy.</span><span class="sxs-lookup"><span data-stu-id="c1779-104">The extension method can be called as if it were an instance of that class.</span></span>  
+# <a name="how-to-write-an-extension-method-visual-basic"></a><span data-ttu-id="3f2a2-102">Instrukcje: Zapisywanie metody rozszerzenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f2a2-102">How to: Write an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="3f2a2-103">Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="3f2a2-104">Metoda rozszerzenia może być wywoływana, jakby była wystąpieniem tej klasy.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-104">The extension method can be called as if it were an instance of that class.</span></span>  
   
-### <a name="to-define-an-extension-method"></a><span data-ttu-id="c1779-105">Aby zdefiniować metodę rozszerzenia</span><span class="sxs-lookup"><span data-stu-id="c1779-105">To define an extension method</span></span>  
+### <a name="to-define-an-extension-method"></a><span data-ttu-id="3f2a2-105">Aby zdefiniować metodę rozszerzenia</span><span class="sxs-lookup"><span data-stu-id="3f2a2-105">To define an extension method</span></span>  
   
-1. <span data-ttu-id="c1779-106">Otwieranie nowej lub istniejącej aplikacji języka Visual Basic w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c1779-106">Open a new or existing Visual Basic application in Visual Studio.</span></span>  
+1. <span data-ttu-id="3f2a2-106">Otwieranie nowej lub istniejącej aplikacji języka Visual Basic w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-106">Open a new or existing Visual Basic application in Visual Studio.</span></span>  
   
-2. <span data-ttu-id="c1779-107">W górnej części pliku, w której chcesz zdefiniować metodę rozszerzenia obejmują następującą instrukcję import:</span><span class="sxs-lookup"><span data-stu-id="c1779-107">At the top of the file in which you want to define an extension method, include the following import statement:</span></span>  
+2. <span data-ttu-id="3f2a2-107">W górnej części pliku, w której chcesz zdefiniować metodę rozszerzenia obejmują następującą instrukcję import:</span><span class="sxs-lookup"><span data-stu-id="3f2a2-107">At the top of the file in which you want to define an extension method, include the following import statement:</span></span>  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3. <span data-ttu-id="c1779-108">W module w nowej lub istniejącej aplikacji Rozpocznij definicję metody z atrybutem rozszerzenia:</span><span class="sxs-lookup"><span data-stu-id="c1779-108">Within a module in your new or existing application, begin the method definition with the extension attribute:</span></span>  
+3. <span data-ttu-id="3f2a2-108">W module w nowej lub istniejącej aplikacji Rozpocznij definicję metody z atrybutem rozszerzenia:</span><span class="sxs-lookup"><span data-stu-id="3f2a2-108">Within a module in your new or existing application, begin the method definition with the extension attribute:</span></span>  
   
     ```  
     <Extension()>  
     ```  
   
-4. <span data-ttu-id="c1779-109">Zadeklaruj metodę w zwykły sposób, z tą różnicą, że typ pierwszego parametru musi być typu danych, które chcesz rozszerzyć.</span><span class="sxs-lookup"><span data-stu-id="c1779-109">Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.</span></span>  
+4. <span data-ttu-id="3f2a2-109">Zadeklaruj metodę w zwykły sposób, z tą różnicą, że typ pierwszego parametru musi być typu danych, które chcesz rozszerzyć.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-109">Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.</span></span>  
   
     ```  
     <Extension()>   
@@ -41,8 +41,8 @@ ms.locfileid: "59313765"
     End Sub  
     ```  
   
-## <a name="example"></a><span data-ttu-id="c1779-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="c1779-110">Example</span></span>  
- <span data-ttu-id="c1779-111">Poniższy przykład deklaruje metodę rozszerzenia w module `StringExtensions`.</span><span class="sxs-lookup"><span data-stu-id="c1779-111">The following example declares an extension method in module `StringExtensions`.</span></span> <span data-ttu-id="c1779-112">Drugi moduł `Module1`, importuje `StringExtensions` i wywołuje metodę.</span><span class="sxs-lookup"><span data-stu-id="c1779-112">A second module, `Module1`, imports `StringExtensions` and calls the method.</span></span> <span data-ttu-id="c1779-113">Metoda rozszerzenia musi być w zakresie, gdy jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="c1779-113">The extension method must be in scope when it is called.</span></span> <span data-ttu-id="c1779-114">Metoda rozszerzenia `PrintAndPunctuate` rozszerza <xref:System.String> klasę z metodą, która wyświetla wystąpienia ciągu następuje ciąg symbole znaków interpunkcyjnych wysyłane jako parametr.</span><span class="sxs-lookup"><span data-stu-id="c1779-114">Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.</span></span>  
+## <a name="example"></a><span data-ttu-id="3f2a2-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="3f2a2-110">Example</span></span>  
+ <span data-ttu-id="3f2a2-111">Poniższy przykład deklaruje metodę rozszerzenia w module `StringExtensions`.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-111">The following example declares an extension method in module `StringExtensions`.</span></span> <span data-ttu-id="3f2a2-112">Drugi moduł `Module1`, importuje `StringExtensions` i wywołuje metodę.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-112">A second module, `Module1`, imports `StringExtensions` and calls the method.</span></span> <span data-ttu-id="3f2a2-113">Metoda rozszerzenia musi być w zakresie, gdy jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-113">The extension method must be in scope when it is called.</span></span> <span data-ttu-id="3f2a2-114">Metoda rozszerzenia `PrintAndPunctuate` rozszerza <xref:System.String> klasę z metodą, która wyświetla wystąpienia ciągu następuje ciąg symbole znaków interpunkcyjnych wysyłane jako parametr.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-114">Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.</span></span>  
   
 ```vb  
 ' Declarations will typically be in a separate module.  
@@ -75,16 +75,16 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="c1779-115">Należy zauważyć, że metoda jest zdefiniowana za pomocą dwóch parametrów i wywoływana tylko z jednym.</span><span class="sxs-lookup"><span data-stu-id="c1779-115">Notice that the method is defined with two parameters and called with only one.</span></span> <span data-ttu-id="c1779-116">Pierwszy parametr `aString`, w metodzie definicji jest powiązany z `example`, wystąpienie `String` , wywołuje metodę.</span><span class="sxs-lookup"><span data-stu-id="c1779-116">The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method.</span></span> <span data-ttu-id="c1779-117">Dane wyjściowe z przykładu jest następująca:</span><span class="sxs-lookup"><span data-stu-id="c1779-117">The output of the example is as follows:</span></span>  
+ <span data-ttu-id="3f2a2-115">Należy zauważyć, że metoda jest zdefiniowana za pomocą dwóch parametrów i wywoływana tylko z jednym.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-115">Notice that the method is defined with two parameters and called with only one.</span></span> <span data-ttu-id="3f2a2-116">Pierwszy parametr `aString`, w metodzie definicji jest powiązany z `example`, wystąpienie `String` , wywołuje metodę.</span><span class="sxs-lookup"><span data-stu-id="3f2a2-116">The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method.</span></span> <span data-ttu-id="3f2a2-117">Dane wyjściowe z przykładu jest następująca:</span><span class="sxs-lookup"><span data-stu-id="3f2a2-117">The output of the example is as follows:</span></span>  
   
  `Hello?`  
   
  `Hello!!!!`  
   
-## <a name="see-also"></a><span data-ttu-id="c1779-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c1779-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f2a2-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3f2a2-118">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [<span data-ttu-id="c1779-119">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="c1779-119">Extension Methods</span></span>](./extension-methods.md)
-- [<span data-ttu-id="c1779-120">Instrukcja Module</span><span class="sxs-lookup"><span data-stu-id="c1779-120">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [<span data-ttu-id="c1779-121">Parametry i argumenty procedur</span><span class="sxs-lookup"><span data-stu-id="c1779-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="c1779-122">Zakres w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c1779-122">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="3f2a2-119">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="3f2a2-119">Extension Methods</span></span>](./extension-methods.md)
+- [<span data-ttu-id="3f2a2-120">Instrukcja Module</span><span class="sxs-lookup"><span data-stu-id="3f2a2-120">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [<span data-ttu-id="3f2a2-121">Parametry i argumenty procedur</span><span class="sxs-lookup"><span data-stu-id="3f2a2-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="3f2a2-122">Zakres w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3f2a2-122">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

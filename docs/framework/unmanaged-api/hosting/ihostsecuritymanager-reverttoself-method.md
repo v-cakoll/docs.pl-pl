@@ -18,46 +18,46 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d282f6d37a2be8a41f4fbda579b3b467b9bfc8ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696694"
 ---
-# <a name="ihostsecuritymanagerreverttoself-method"></a><span data-ttu-id="c0627-102">IHostSecurityManager::RevertToSelf — Metoda</span><span class="sxs-lookup"><span data-stu-id="c0627-102">IHostSecurityManager::RevertToSelf Method</span></span>
-<span data-ttu-id="c0627-103">Kończy działanie personifikacji bieżącej tożsamości użytkownika, a następnie zwraca oryginalny tokenu wątku.</span><span class="sxs-lookup"><span data-stu-id="c0627-103">Terminates impersonation of the current user identity and returns the original thread token.</span></span>  
+# <a name="ihostsecuritymanagerreverttoself-method"></a><span data-ttu-id="cd8f1-102">IHostSecurityManager::RevertToSelf — Metoda</span><span class="sxs-lookup"><span data-stu-id="cd8f1-102">IHostSecurityManager::RevertToSelf Method</span></span>
+<span data-ttu-id="cd8f1-103">Kończy działanie personifikacji bieżącej tożsamości użytkownika, a następnie zwraca oryginalny tokenu wątku.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-103">Terminates impersonation of the current user identity and returns the original thread token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c0627-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c0627-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd8f1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cd8f1-104">Syntax</span></span>  
   
 ```  
 HRESULT RevertToSelf ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="c0627-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c0627-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cd8f1-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="cd8f1-105">Return Value</span></span>  
   
-|<span data-ttu-id="c0627-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c0627-106">HRESULT</span></span>|<span data-ttu-id="c0627-107">Opis</span><span class="sxs-lookup"><span data-stu-id="c0627-107">Description</span></span>|  
+|<span data-ttu-id="cd8f1-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cd8f1-106">HRESULT</span></span>|<span data-ttu-id="cd8f1-107">Opis</span><span class="sxs-lookup"><span data-stu-id="cd8f1-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c0627-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="c0627-108">S_OK</span></span>|<span data-ttu-id="c0627-109">`RevertToSelf` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="c0627-109">`RevertToSelf` returned successfully.</span></span>|  
-|<span data-ttu-id="c0627-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c0627-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c0627-111">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="c0627-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c0627-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c0627-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c0627-113">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="c0627-113">The call timed out.</span></span>|  
-|<span data-ttu-id="c0627-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c0627-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c0627-115">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="c0627-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c0627-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c0627-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c0627-117">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="c0627-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c0627-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c0627-118">E_FAIL</span></span>|<span data-ttu-id="c0627-119">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="c0627-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c0627-120">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="c0627-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c0627-121">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="c0627-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="cd8f1-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="cd8f1-108">S_OK</span></span>|<span data-ttu-id="cd8f1-109">`RevertToSelf` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-109">`RevertToSelf` returned successfully.</span></span>|  
+|<span data-ttu-id="cd8f1-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="cd8f1-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="cd8f1-111">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="cd8f1-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="cd8f1-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="cd8f1-113">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-113">The call timed out.</span></span>|  
+|<span data-ttu-id="cd8f1-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="cd8f1-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="cd8f1-115">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="cd8f1-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="cd8f1-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="cd8f1-117">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="cd8f1-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="cd8f1-118">E_FAIL</span></span>|<span data-ttu-id="cd8f1-119">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="cd8f1-120">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="cd8f1-121">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c0627-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c0627-122">Remarks</span></span>  
- <span data-ttu-id="c0627-123">`RevertToSelf` jest wywoływana, aby powrócić do oryginalnego tokenu wątku po wcześniejszym wywołaniem [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="c0627-123">`RevertToSelf` is called to return to the original thread token, after an earlier call to the [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cd8f1-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="cd8f1-122">Remarks</span></span>  
+ <span data-ttu-id="cd8f1-123">`RevertToSelf` jest wywoływana, aby powrócić do oryginalnego tokenu wątku po wcześniejszym wywołaniem [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="cd8f1-123">`RevertToSelf` is called to return to the original thread token, after an earlier call to the [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c0627-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c0627-124">Requirements</span></span>  
- <span data-ttu-id="c0627-125">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c0627-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd8f1-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cd8f1-124">Requirements</span></span>  
+ <span data-ttu-id="cd8f1-125">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd8f1-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c0627-126">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c0627-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="cd8f1-126">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cd8f1-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c0627-127">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c0627-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="cd8f1-127">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cd8f1-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c0627-128">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0627-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cd8f1-128">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd8f1-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0627-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c0627-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd8f1-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cd8f1-129">See also</span></span>
 
-- [<span data-ttu-id="c0627-130">IHostSecurityContext, interfejs</span><span class="sxs-lookup"><span data-stu-id="c0627-130">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [<span data-ttu-id="c0627-131">IHostSecurityManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="c0627-131">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [<span data-ttu-id="c0627-132">ImpersonateLoggedOnUser, metoda</span><span class="sxs-lookup"><span data-stu-id="c0627-132">ImpersonateLoggedOnUser Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)
+- [<span data-ttu-id="cd8f1-130">IHostSecurityContext, interfejs</span><span class="sxs-lookup"><span data-stu-id="cd8f1-130">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="cd8f1-131">IHostSecurityManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="cd8f1-131">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="cd8f1-132">ImpersonateLoggedOnUser, metoda</span><span class="sxs-lookup"><span data-stu-id="cd8f1-132">ImpersonateLoggedOnUser Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)

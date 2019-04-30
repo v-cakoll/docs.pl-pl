@@ -4,31 +4,31 @@ description: Dowiedz się, jak można zastosować technicznego opracowywania fun
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: e26a4b293869b7cdad3c439237bd0145cafa314a
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689688"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="70f99-103">Zastosuj technicznego opracowywania funkcji Machine learning model szkoleń dotyczących danych tekstowych za pomocą platformy ML.NET</span><span class="sxs-lookup"><span data-stu-id="70f99-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="697b1-103">Zastosuj technicznego opracowywania funkcji Machine learning model szkoleń dotyczących danych tekstowych za pomocą platformy ML.NET</span><span class="sxs-lookup"><span data-stu-id="697b1-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="70f99-104">W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie.</span><span class="sxs-lookup"><span data-stu-id="70f99-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="70f99-105">Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="70f99-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="697b1-104">W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie.</span><span class="sxs-lookup"><span data-stu-id="697b1-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="697b1-105">Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="697b1-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="70f99-106">Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**.</span><span class="sxs-lookup"><span data-stu-id="70f99-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="70f99-107">Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="70f99-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+<span data-ttu-id="697b1-106">Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**.</span><span class="sxs-lookup"><span data-stu-id="697b1-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="697b1-107">Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="697b1-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="70f99-108">Należy przekonwertować żadnych danych innych niż float do `float` typy danych, ponieważ wszystkie strukturze ML.NET `learners` oczekiwane funkcje jak `float vector`.</span><span class="sxs-lookup"><span data-stu-id="70f99-108">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="697b1-108">Należy przekonwertować żadnych danych innych niż float do `float` typy danych, ponieważ wszystkie strukturze ML.NET `learners` oczekiwane funkcje jak `float vector`.</span><span class="sxs-lookup"><span data-stu-id="697b1-108">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="70f99-109">Aby dowiedzieć się więcej na dane tekstowe, należy wyodrębnić funkcje tekstu.</span><span class="sxs-lookup"><span data-stu-id="70f99-109">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="70f99-110">Strukturze ML.NET ma pewne podstawowe tekstu funkcję wyodrębniania mechanizmów:</span><span class="sxs-lookup"><span data-stu-id="70f99-110">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="697b1-109">Aby dowiedzieć się więcej na dane tekstowe, należy wyodrębnić funkcje tekstu.</span><span class="sxs-lookup"><span data-stu-id="697b1-109">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="697b1-110">Strukturze ML.NET ma pewne podstawowe tekstu funkcję wyodrębniania mechanizmów:</span><span class="sxs-lookup"><span data-stu-id="697b1-110">ML.NET has some basic text feature extraction mechanisms:</span></span>
 
-- <span data-ttu-id="70f99-111">`Text normalization` (usuwania znak interpunkcyjny, znaki diakrytyczne, przełączenie na małe litery itp.)</span><span class="sxs-lookup"><span data-stu-id="70f99-111">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="70f99-112">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="70f99-112">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="70f99-113">`Stopword` usuwanie.</span><span class="sxs-lookup"><span data-stu-id="70f99-113">`Stopword` removal.</span></span>
-- <span data-ttu-id="70f99-114">`Ngram` i `skip-gram` wyodrębniania.</span><span class="sxs-lookup"><span data-stu-id="70f99-114">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="70f99-115">`TF-IDF` Podczas ponownego skalowania.</span><span class="sxs-lookup"><span data-stu-id="70f99-115">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="70f99-116">`Bag of words` Konwersja.</span><span class="sxs-lookup"><span data-stu-id="70f99-116">`Bag of words` conversion.</span></span>
+- <span data-ttu-id="697b1-111">`Text normalization` (usuwania znak interpunkcyjny, znaki diakrytyczne, przełączenie na małe litery itp.)</span><span class="sxs-lookup"><span data-stu-id="697b1-111">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="697b1-112">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="697b1-112">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="697b1-113">`Stopword` usuwanie.</span><span class="sxs-lookup"><span data-stu-id="697b1-113">`Stopword` removal.</span></span>
+- <span data-ttu-id="697b1-114">`Ngram` i `skip-gram` wyodrębniania.</span><span class="sxs-lookup"><span data-stu-id="697b1-114">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="697b1-115">`TF-IDF` Podczas ponownego skalowania.</span><span class="sxs-lookup"><span data-stu-id="697b1-115">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="697b1-116">`Bag of words` Konwersja.</span><span class="sxs-lookup"><span data-stu-id="697b1-116">`Bag of words` conversion.</span></span>
 
-<span data-ttu-id="70f99-117">W poniższym przykładzie pokazano strukturze ML.NET tekst funkcję wyodrębniania mechanizmów przy użyciu [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="70f99-117">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="697b1-117">W poniższym przykładzie pokazano strukturze ML.NET tekst funkcję wyodrębniania mechanizmów przy użyciu [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="697b1-117">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 <!-- markdownlint-disable MD010 -->
 ```console

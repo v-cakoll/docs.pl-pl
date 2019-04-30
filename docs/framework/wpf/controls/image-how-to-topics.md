@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
 ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696122"
 ---
-# <a name="image-how-to-topics"></a><span data-ttu-id="dd556-102">Obraz Tematy porad</span><span class="sxs-lookup"><span data-stu-id="dd556-102">Image How-to Topics</span></span>
-<span data-ttu-id="dd556-103">Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.Image> elementu.</span><span class="sxs-lookup"><span data-stu-id="dd556-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
+# <a name="image-how-to-topics"></a><span data-ttu-id="5695a-102">Obraz Tematy porad</span><span class="sxs-lookup"><span data-stu-id="5695a-102">Image How-to Topics</span></span>
+<span data-ttu-id="5695a-103">Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.Image> elementu.</span><span class="sxs-lookup"><span data-stu-id="5695a-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dd556-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="dd556-104">In This Section</span></span>  
- [<span data-ttu-id="dd556-105">Używanie elementu obrazu</span><span class="sxs-lookup"><span data-stu-id="dd556-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
-  [<span data-ttu-id="dd556-106">Konwertowanie obrazu na odcienie szarości</span><span class="sxs-lookup"><span data-stu-id="dd556-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
-  [<span data-ttu-id="dd556-107">Przycinanie obrazu</span><span class="sxs-lookup"><span data-stu-id="dd556-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
-  [<span data-ttu-id="dd556-108">Obracanie obrazu</span><span class="sxs-lookup"><span data-stu-id="dd556-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5695a-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="5695a-104">In This Section</span></span>  
+ [<span data-ttu-id="5695a-105">Używanie elementu obrazu</span><span class="sxs-lookup"><span data-stu-id="5695a-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
+  [<span data-ttu-id="5695a-106">Konwertowanie obrazu na odcienie szarości</span><span class="sxs-lookup"><span data-stu-id="5695a-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
+  [<span data-ttu-id="5695a-107">Przycinanie obrazu</span><span class="sxs-lookup"><span data-stu-id="5695a-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
+  [<span data-ttu-id="5695a-108">Obracanie obrazu</span><span class="sxs-lookup"><span data-stu-id="5695a-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="dd556-109">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="dd556-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5695a-109">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="5695a-109">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="dd556-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dd556-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5695a-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5695a-110">See also</span></span>
 
-- [<span data-ttu-id="dd556-111">Obrazowanie — przegląd</span><span class="sxs-lookup"><span data-stu-id="dd556-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="dd556-112">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="dd556-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+- [<span data-ttu-id="5695a-111">Obrazowanie — przegląd</span><span class="sxs-lookup"><span data-stu-id="5695a-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="5695a-112">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="5695a-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

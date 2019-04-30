@@ -10,13 +10,13 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: eb5db8598780a18d2bd65b08964f5df84fc9b8af
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706016"
 ---
-# <a name="ipicturedisp-interface"></a><span data-ttu-id="39fd9-102">Interfejs elementu IPictureDisp</span><span class="sxs-lookup"><span data-stu-id="39fd9-102">IPictureDisp Interface</span></span>
+# <a name="ipicturedisp-interface"></a><span data-ttu-id="04c2b-102">IPictureDisp, interfejs</span><span class="sxs-lookup"><span data-stu-id="04c2b-102">IPictureDisp Interface</span></span>
 
 ```csharp
 [InterfaceTypeAttribute()]
@@ -24,8 +24,8 @@ ms.locfileid: "58634930"
 public interface IPictureDisp
 ```
 
-## <a name="requirements"></a><span data-ttu-id="39fd9-103">Wymagania</span><span class="sxs-lookup"><span data-stu-id="39fd9-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="04c2b-103">Wymagania</span><span class="sxs-lookup"><span data-stu-id="04c2b-103">Requirements</span></span>
 
-<span data-ttu-id="39fd9-104">**Namespace:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="39fd9-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="04c2b-104">**Namespace:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="04c2b-104">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="39fd9-105">**Zestaw:** stdole (w stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="39fd9-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="04c2b-105">**Zestaw:** stdole (w stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="04c2b-105">**Assembly:** stdole (in stdole.dll)</span></span>

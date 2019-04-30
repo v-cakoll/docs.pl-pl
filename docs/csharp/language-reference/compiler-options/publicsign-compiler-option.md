@@ -8,43 +8,43 @@ helpviewer_keywords:
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
 ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662533"
 ---
-# <a name="-publicsign-c-compiler-options"></a><span data-ttu-id="7c50c-102">-publicsign (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="7c50c-102">-publicsign (C# Compiler Options)</span></span>
+# <a name="-publicsign-c-compiler-options"></a><span data-ttu-id="576dc-102">-publicsign (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="576dc-102">-publicsign (C# Compiler Options)</span></span>
 
-<span data-ttu-id="7c50c-103">Ta opcja powoduje, że kompilator zastosować klucz publiczny, ale nie faktycznego podpisywania zestawu.</span><span class="sxs-lookup"><span data-stu-id="7c50c-103">This option causes the compiler to apply a public key but does not actually sign the assembly.</span></span> <span data-ttu-id="7c50c-104">**- Publicsign** również ustawia bit w zestawie, który informuje środowiska uruchomieniowego, w rzeczywistości podpisania pliku.</span><span class="sxs-lookup"><span data-stu-id="7c50c-104">The **-publicsign** option also sets a bit in the assembly that tells the runtime that the file is actually signed.</span></span>
+<span data-ttu-id="576dc-103">Ta opcja powoduje, że kompilator zastosować klucz publiczny, ale nie faktycznego podpisywania zestawu.</span><span class="sxs-lookup"><span data-stu-id="576dc-103">This option causes the compiler to apply a public key but does not actually sign the assembly.</span></span> <span data-ttu-id="576dc-104">**- Publicsign** również ustawia bit w zestawie, który informuje środowiska uruchomieniowego, w rzeczywistości podpisania pliku.</span><span class="sxs-lookup"><span data-stu-id="576dc-104">The **-publicsign** option also sets a bit in the assembly that tells the runtime that the file is actually signed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="7c50c-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="7c50c-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="576dc-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="576dc-105">Syntax</span></span>
 
 ```console
 -publicsign
 ```
 
-## <a name="arguments"></a><span data-ttu-id="7c50c-106">Argumenty</span><span class="sxs-lookup"><span data-stu-id="7c50c-106">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="576dc-106">Argumenty</span><span class="sxs-lookup"><span data-stu-id="576dc-106">Arguments</span></span>
 
-<span data-ttu-id="7c50c-107">Brak.</span><span class="sxs-lookup"><span data-stu-id="7c50c-107">None.</span></span>
+<span data-ttu-id="576dc-107">Brak.</span><span class="sxs-lookup"><span data-stu-id="576dc-107">None.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="7c50c-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7c50c-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="576dc-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="576dc-108">Remarks</span></span>
 
-<span data-ttu-id="7c50c-109">**- Publicsign** opcja wymaga użycia [- keyfile](keyfile-compiler-option.md) lub [- keycontainer](keycontainer-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="7c50c-109">The **-publicsign** option requires the use of the [-keyfile](keyfile-compiler-option.md) or [-keycontainer](keycontainer-compiler-option.md).</span></span> <span data-ttu-id="7c50c-110">**Keyfile** lub **keycontainer** opcji Określ klucz publiczny.</span><span class="sxs-lookup"><span data-stu-id="7c50c-110">The **keyfile** or **keycontainer** options specify the public key.</span></span>
+<span data-ttu-id="576dc-109">**- Publicsign** opcja wymaga użycia [- keyfile](keyfile-compiler-option.md) lub [- keycontainer](keycontainer-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="576dc-109">The **-publicsign** option requires the use of the [-keyfile](keyfile-compiler-option.md) or [-keycontainer](keycontainer-compiler-option.md).</span></span> <span data-ttu-id="576dc-110">**Keyfile** lub **keycontainer** opcji Określ klucz publiczny.</span><span class="sxs-lookup"><span data-stu-id="576dc-110">The **keyfile** or **keycontainer** options specify the public key.</span></span>
 
-<span data-ttu-id="7c50c-111">**- Publicsign** i **- delaysign** opcje wykluczają się wzajemnie.</span><span class="sxs-lookup"><span data-stu-id="7c50c-111">The **-publicsign** and **-delaysign** options are mutually exclusive.</span></span>
+<span data-ttu-id="576dc-111">**- Publicsign** i **- delaysign** opcje wykluczają się wzajemnie.</span><span class="sxs-lookup"><span data-stu-id="576dc-111">The **-publicsign** and **-delaysign** options are mutually exclusive.</span></span>
 
-<span data-ttu-id="7c50c-112">Czasami nazywane "fałszywych znak" lub "OSS znak", publiczne podpisywanie zawiera klucz publiczny w zestawie danych wyjściowych i ustawia flagę "podpisem", ale faktycznie nie podpisać zestaw przy użyciu klucza prywatnego.</span><span class="sxs-lookup"><span data-stu-id="7c50c-112">Sometimes called "fake sign" or "OSS sign", public signing includes the public key in an output assembly and sets the "signed" flag, but doesn't actually sign the assembly with a private key.</span></span> <span data-ttu-id="7c50c-113">Jest to przydatne w przypadku projektów "open source", gdzie użytkownicy chcą utworzyć zestawy, które są zgodne z wydana w zestawach "niecałkowicie podpisany", ale nie mają dostępu do prywatnego klucza używanego do podpisywania zestawów.</span><span class="sxs-lookup"><span data-stu-id="7c50c-113">This is useful for open source projects where people want to build assemblies which are compatible with the released "fully signed" assemblies, but don't have access to the private key used to sign the assemblies.</span></span> <span data-ttu-id="7c50c-114">Ponieważ niemal żadnych użytkowników jest potrzebna do sprawdzenia, jeśli zestaw jest niecałkowicie podpisany, publicznie skompilowanych zestawów są niemożliwe w prawie w każdym scenariuszu, w której będzie służyć całkowicie podpisanego jeden.</span><span class="sxs-lookup"><span data-stu-id="7c50c-114">Since almost no consumers actually need to check if the assembly is fully signed, these publicly built assemblies are useable in almost every scenario where the fully signed one would be used.</span></span>
+<span data-ttu-id="576dc-112">Czasami nazywane "fałszywych znak" lub "OSS znak", publiczne podpisywanie zawiera klucz publiczny w zestawie danych wyjściowych i ustawia flagę "podpisem", ale faktycznie nie podpisać zestaw przy użyciu klucza prywatnego.</span><span class="sxs-lookup"><span data-stu-id="576dc-112">Sometimes called "fake sign" or "OSS sign", public signing includes the public key in an output assembly and sets the "signed" flag, but doesn't actually sign the assembly with a private key.</span></span> <span data-ttu-id="576dc-113">Jest to przydatne w przypadku projektów "open source", gdzie użytkownicy chcą utworzyć zestawy, które są zgodne z wydana w zestawach "niecałkowicie podpisany", ale nie mają dostępu do prywatnego klucza używanego do podpisywania zestawów.</span><span class="sxs-lookup"><span data-stu-id="576dc-113">This is useful for open source projects where people want to build assemblies which are compatible with the released "fully signed" assemblies, but don't have access to the private key used to sign the assemblies.</span></span> <span data-ttu-id="576dc-114">Ponieważ niemal żadnych użytkowników jest potrzebna do sprawdzenia, jeśli zestaw jest niecałkowicie podpisany, publicznie skompilowanych zestawów są niemożliwe w prawie w każdym scenariuszu, w której będzie służyć całkowicie podpisanego jeden.</span><span class="sxs-lookup"><span data-stu-id="576dc-114">Since almost no consumers actually need to check if the assembly is fully signed, these publicly built assemblies are useable in almost every scenario where the fully signed one would be used.</span></span>
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="7c50c-115">Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7c50c-115">To set this compiler option in the Visual Studio development environment</span></span>
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="576dc-115">Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio</span><span class="sxs-lookup"><span data-stu-id="576dc-115">To set this compiler option in the Visual Studio development environment</span></span>
 
-1. <span data-ttu-id="7c50c-116">Otwórz **właściwości** strony dla projektu.</span><span class="sxs-lookup"><span data-stu-id="7c50c-116">Open the **Properties** page for the project.</span></span>
-1. <span data-ttu-id="7c50c-117">Modyfikowanie **opóźnienie logowania tylko** właściwości.</span><span class="sxs-lookup"><span data-stu-id="7c50c-117">Modify the **Delay sign only** property.</span></span>
+1. <span data-ttu-id="576dc-116">Otwórz **właściwości** strony dla projektu.</span><span class="sxs-lookup"><span data-stu-id="576dc-116">Open the **Properties** page for the project.</span></span>
+1. <span data-ttu-id="576dc-117">Modyfikowanie **opóźnienie logowania tylko** właściwości.</span><span class="sxs-lookup"><span data-stu-id="576dc-117">Modify the **Delay sign only** property.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7c50c-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7c50c-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="576dc-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="576dc-118">See also</span></span>
 
-- [<span data-ttu-id="7c50c-119">C# Compiler -delaysign option</span><span class="sxs-lookup"><span data-stu-id="7c50c-119">C# Compiler -delaysign option</span></span>](delaysign-compiler-option.md)
-- [<span data-ttu-id="7c50c-120">-Keyfile — opcja kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="7c50c-120">C# Compiler -keyfile option</span></span>](keyfile-compiler-option.md)
-- [<span data-ttu-id="7c50c-121">Kompilator języka C# - keycontainer — opcja</span><span class="sxs-lookup"><span data-stu-id="7c50c-121">C# Compiler -keycontainer option</span></span>](keycontainer-compiler-option.md)
-- [<span data-ttu-id="7c50c-122">Opcje kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="7c50c-122">C# Compiler Options</span></span>](index.md)
-- [<span data-ttu-id="7c50c-123">Zarządzanie właściwościami projektu i rozwiązania</span><span class="sxs-lookup"><span data-stu-id="7c50c-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="576dc-119">C# Compiler -delaysign option</span><span class="sxs-lookup"><span data-stu-id="576dc-119">C# Compiler -delaysign option</span></span>](delaysign-compiler-option.md)
+- [<span data-ttu-id="576dc-120">-Keyfile — opcja kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="576dc-120">C# Compiler -keyfile option</span></span>](keyfile-compiler-option.md)
+- [<span data-ttu-id="576dc-121">Kompilator języka C# - keycontainer — opcja</span><span class="sxs-lookup"><span data-stu-id="576dc-121">C# Compiler -keycontainer option</span></span>](keycontainer-compiler-option.md)
+- [<span data-ttu-id="576dc-122">Opcje kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="576dc-122">C# Compiler Options</span></span>](index.md)
+- [<span data-ttu-id="576dc-123">Zarządzanie właściwościami projektu i rozwiązania</span><span class="sxs-lookup"><span data-stu-id="576dc-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
 ms.openlocfilehash: 39e6963c97340daab3f0ab7ad6860695f1f6c135
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747047"
 ---
-# <a name="externalsource-directive"></a><span data-ttu-id="08d9d-102">#ExternalSource — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="08d9d-102">#ExternalSource Directive</span></span>
-<span data-ttu-id="08d9d-103">Wskazuje mapowanie między poszczególne wiersze kodu źródłowego, a tekstem zewnętrznym do źródła.</span><span class="sxs-lookup"><span data-stu-id="08d9d-103">Indicates a mapping between specific lines of source code and text external to the source.</span></span>  
+# <a name="externalsource-directive"></a><span data-ttu-id="a0a98-102">#ExternalSource — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="a0a98-102">#ExternalSource Directive</span></span>
+<span data-ttu-id="a0a98-103">Wskazuje mapowanie między poszczególne wiersze kodu źródłowego, a tekstem zewnętrznym do źródła.</span><span class="sxs-lookup"><span data-stu-id="a0a98-103">Indicates a mapping between specific lines of source code and text external to the source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08d9d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="08d9d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a0a98-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a0a98-104">Syntax</span></span>  
   
 ```  
 #ExternalSource( StringLiteral , IntLiteral )  
@@ -30,26 +30,26 @@ ms.locfileid: "58823431"
 #End ExternalSource  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="08d9d-105">Części</span><span class="sxs-lookup"><span data-stu-id="08d9d-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="a0a98-105">Części</span><span class="sxs-lookup"><span data-stu-id="a0a98-105">Parts</span></span>  
  `StringLiteral`  
- <span data-ttu-id="08d9d-106">Ścieżka do źródła zewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="08d9d-106">The path to the external source.</span></span>  
+ <span data-ttu-id="a0a98-106">Ścieżka do źródła zewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="a0a98-106">The path to the external source.</span></span>  
   
  `IntLiteral`  
- <span data-ttu-id="08d9d-107">Numer wiersza w pierwszej linii źródła zewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="08d9d-107">The line number of the first line of the external source.</span></span>  
+ <span data-ttu-id="a0a98-107">Numer wiersza w pierwszej linii źródła zewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="a0a98-107">The line number of the first line of the external source.</span></span>  
   
  `LogicalLine`  
- <span data-ttu-id="08d9d-108">Wiersz, w którym występuje błąd ze źródła zewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="08d9d-108">The line where the error occurs in the external source.</span></span>  
+ <span data-ttu-id="a0a98-108">Wiersz, w którym występuje błąd ze źródła zewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="a0a98-108">The line where the error occurs in the external source.</span></span>  
   
  `#End ExternalSource`  
- <span data-ttu-id="08d9d-109">Kończy blok `#ExternalSource`.</span><span class="sxs-lookup"><span data-stu-id="08d9d-109">Terminates the `#ExternalSource` block.</span></span>  
+ <span data-ttu-id="a0a98-109">Kończy blok `#ExternalSource`.</span><span class="sxs-lookup"><span data-stu-id="a0a98-109">Terminates the `#ExternalSource` block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="08d9d-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="08d9d-110">Remarks</span></span>  
- <span data-ttu-id="08d9d-111">Ta dyrektywa jest używany tylko przez kompilator i debugera.</span><span class="sxs-lookup"><span data-stu-id="08d9d-111">This directive is used only by the compiler and the debugger.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a0a98-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a0a98-110">Remarks</span></span>  
+ <span data-ttu-id="a0a98-111">Ta dyrektywa jest używany tylko przez kompilator i debugera.</span><span class="sxs-lookup"><span data-stu-id="a0a98-111">This directive is used only by the compiler and the debugger.</span></span>  
   
- <span data-ttu-id="08d9d-112">Plik źródłowy może zawierać dyrektyw zewnętrznego źródła, które wskazują mapowanie między poszczególne wiersze kodu w pliku źródłowym i tekstem zewnętrznym do źródła, takich jak plik .aspx.</span><span class="sxs-lookup"><span data-stu-id="08d9d-112">A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file.</span></span> <span data-ttu-id="08d9d-113">Jeśli wystąpią błędy w kodzie źródłowym wyznaczonej podczas kompilacji, są one zidentyfikowane jako pochodzące z zewnętrznego źródła.</span><span class="sxs-lookup"><span data-stu-id="08d9d-113">If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.</span></span>  
+ <span data-ttu-id="a0a98-112">Plik źródłowy może zawierać dyrektyw zewnętrznego źródła, które wskazują mapowanie między poszczególne wiersze kodu w pliku źródłowym i tekstem zewnętrznym do źródła, takich jak plik .aspx.</span><span class="sxs-lookup"><span data-stu-id="a0a98-112">A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file.</span></span> <span data-ttu-id="a0a98-113">Jeśli wystąpią błędy w kodzie źródłowym wyznaczonej podczas kompilacji, są one zidentyfikowane jako pochodzące z zewnętrznego źródła.</span><span class="sxs-lookup"><span data-stu-id="a0a98-113">If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.</span></span>  
   
- <span data-ttu-id="08d9d-114">Dyrektywy zewnętrznego źródła, nie mają wpływu na kompilację i nie mogą być zagnieżdżone.</span><span class="sxs-lookup"><span data-stu-id="08d9d-114">External source directives have no effect on compilation and cannot be nested.</span></span> <span data-ttu-id="08d9d-115">Są one przeznaczone do użytku wewnętrznego przez aplikację tylko.</span><span class="sxs-lookup"><span data-stu-id="08d9d-115">They are intended for internal use by the application only.</span></span>  
+ <span data-ttu-id="a0a98-114">Dyrektywy zewnętrznego źródła, nie mają wpływu na kompilację i nie mogą być zagnieżdżone.</span><span class="sxs-lookup"><span data-stu-id="a0a98-114">External source directives have no effect on compilation and cannot be nested.</span></span> <span data-ttu-id="a0a98-115">Są one przeznaczone do użytku wewnętrznego przez aplikację tylko.</span><span class="sxs-lookup"><span data-stu-id="a0a98-115">They are intended for internal use by the application only.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08d9d-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="08d9d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0a98-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a0a98-116">See also</span></span>
 
-- [<span data-ttu-id="08d9d-117">Kompilacja warunkowa</span><span class="sxs-lookup"><span data-stu-id="08d9d-117">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [<span data-ttu-id="a0a98-117">Kompilacja warunkowa</span><span class="sxs-lookup"><span data-stu-id="a0a98-117">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

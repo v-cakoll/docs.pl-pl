@@ -19,15 +19,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750179"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="ba306-102">ICorDebugCode::GetEnCRemapSequencePoints — Metoda</span><span class="sxs-lookup"><span data-stu-id="ba306-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="ba306-103">Ta metoda nie jest zaimplementowana w bieżącej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ba306-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="5cd10-102">ICorDebugCode::GetEnCRemapSequencePoints — Metoda</span><span class="sxs-lookup"><span data-stu-id="5cd10-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="5cd10-103">Ta metoda nie jest zaimplementowana w bieżącej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5cd10-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba306-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ba306-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5cd10-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5cd10-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -38,4 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ba306-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ba306-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5cd10-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5cd10-105">See also</span></span>

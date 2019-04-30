@@ -3,21 +3,21 @@ title: Wyszukiwanie tekstu w dokumentach programu Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702337"
 ---
-# <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="7255d-102">Wyszukiwanie tekstu w dokumentach programu Word (C#)</span><span class="sxs-lookup"><span data-stu-id="7255d-102">Finding Text in Word Documents (C#)</span></span>
-<span data-ttu-id="7255d-103">Ten temat rozszerza poprzednich zapytań, aby zrobić coś, co jest użyteczne: Znajdź wszystkie wystąpienia ciągu w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="7255d-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
+# <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="ca9be-102">Wyszukiwanie tekstu w dokumentach programu Word (C#)</span><span class="sxs-lookup"><span data-stu-id="ca9be-102">Finding Text in Word Documents (C#)</span></span>
+<span data-ttu-id="ca9be-103">Ten temat rozszerza poprzednich zapytań, aby zrobić coś, co jest użyteczne: Znajdź wszystkie wystąpienia ciągu w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="ca9be-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7255d-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="7255d-104">Example</span></span>  
- <span data-ttu-id="7255d-105">W tym przykładzie przetwarza dokument WordprocessingML, aby znaleźć wszystkie wystąpienia określonego fragmentu tekstu w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="7255d-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="7255d-106">Aby to zrobić, używamy kwerendę, która wyszukuje ciąg "Hello".</span><span class="sxs-lookup"><span data-stu-id="7255d-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="7255d-107">W tym przykładzie opiera się na poprzednich przykładach w tym samouczku.</span><span class="sxs-lookup"><span data-stu-id="7255d-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="7255d-108">Nowe zapytanie jest wywoływane w komentarzach, w poniższym kodzie.</span><span class="sxs-lookup"><span data-stu-id="7255d-108">The new query is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="ca9be-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="ca9be-104">Example</span></span>  
+ <span data-ttu-id="ca9be-105">W tym przykładzie przetwarza dokument WordprocessingML, aby znaleźć wszystkie wystąpienia określonego fragmentu tekstu w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="ca9be-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="ca9be-106">Aby to zrobić, używamy kwerendę, która wyszukuje ciąg "Hello".</span><span class="sxs-lookup"><span data-stu-id="ca9be-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="ca9be-107">W tym przykładzie opiera się na poprzednich przykładach w tym samouczku.</span><span class="sxs-lookup"><span data-stu-id="ca9be-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="ca9be-108">Nowe zapytanie jest wywoływane w komentarzach, w poniższym kodzie.</span><span class="sxs-lookup"><span data-stu-id="ca9be-108">The new query is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="7255d-109">Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie, zobacz [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="7255d-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="ca9be-109">Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie, zobacz [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="ca9be-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="7255d-110">W tym przykładzie użyto klasy znalezione w zestawie WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="7255d-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="7255d-111">Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="7255d-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="ca9be-110">W tym przykładzie użyto klasy znalezione w zestawie WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="ca9be-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="ca9be-111">Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="ca9be-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -165,14 +165,14 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="7255d-112">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="7255d-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="ca9be-112">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="ca9be-112">This example produces the following output:</span></span>  
   
 ```  
 StyleName:Code >        Console.WriteLine("Hello World");<  
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="7255d-113">Oczywiście można zmodyfikować wyszukiwania, tak, aby wyszukiwania wierszy z konkretnego stylu.</span><span class="sxs-lookup"><span data-stu-id="7255d-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="7255d-114">Następujące zapytanie znajdzie wszystkie puste wiersze, które mają styl kodu:</span><span class="sxs-lookup"><span data-stu-id="7255d-114">The following query finds all blank lines that have the Code style:</span></span>  
+ <span data-ttu-id="ca9be-113">Oczywiście można zmodyfikować wyszukiwania, tak, aby wyszukiwania wierszy z konkretnego stylu.</span><span class="sxs-lookup"><span data-stu-id="ca9be-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="ca9be-114">Następujące zapytanie znajdzie wszystkie puste wiersze, które mają styl kodu:</span><span class="sxs-lookup"><span data-stu-id="ca9be-114">The following query finds all blank lines that have the Code style:</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -312,23 +312,23 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="7255d-115">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="7255d-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="ca9be-115">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="ca9be-115">This example produces the following output:</span></span>  
   
 ```  
 StyleName:Code ><  
 ```  
   
- <span data-ttu-id="7255d-116">Oczywiście w tym przykładzie można wzbogacić wiele sposobów.</span><span class="sxs-lookup"><span data-stu-id="7255d-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="7255d-117">Na przykład moglibyśmy użyć wyrażeń regularnych do wyszukiwania tekstu, firma Microsoft może wykonać iterację pliki programu Word w określonym katalogu i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="7255d-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
+ <span data-ttu-id="ca9be-116">Oczywiście w tym przykładzie można wzbogacić wiele sposobów.</span><span class="sxs-lookup"><span data-stu-id="ca9be-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="ca9be-117">Na przykład moglibyśmy użyć wyrażeń regularnych do wyszukiwania tekstu, firma Microsoft może wykonać iterację pliki programu Word w określonym katalogu i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="ca9be-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
   
- <span data-ttu-id="7255d-118">Należy pamiętać, że w tym przykładzie wykonuje około również tak, jakby zostały napisane w jednym zapytaniu.</span><span class="sxs-lookup"><span data-stu-id="7255d-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="7255d-119">Ponieważ każda kwerenda jest implementowany w sposób z opóźnieniem, odroczone, każde zapytanie nie daje równoważne wyniki do czasu postanowiliśmy jest zapytanie.</span><span class="sxs-lookup"><span data-stu-id="7255d-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="7255d-120">Aby uzyskać więcej informacji na temat wykonywania i obliczanie z opóźnieniem, zobacz [wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7255d-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="ca9be-118">Należy pamiętać, że w tym przykładzie wykonuje około również tak, jakby zostały napisane w jednym zapytaniu.</span><span class="sxs-lookup"><span data-stu-id="ca9be-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="ca9be-119">Ponieważ każda kwerenda jest implementowany w sposób z opóźnieniem, odroczone, każde zapytanie nie daje równoważne wyniki do czasu postanowiliśmy jest zapytanie.</span><span class="sxs-lookup"><span data-stu-id="ca9be-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="ca9be-120">Aby uzyskać więcej informacji na temat wykonywania i obliczanie z opóźnieniem, zobacz [wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ca9be-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="7255d-121">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="7255d-121">Next Steps</span></span>  
- <span data-ttu-id="7255d-122">Następna sekcja zawiera więcej informacji na temat dokumentów WordprocessingML:</span><span class="sxs-lookup"><span data-stu-id="7255d-122">The next section provides more information about WordprocessingML documents:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="ca9be-121">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="ca9be-121">Next Steps</span></span>  
+ <span data-ttu-id="ca9be-122">Następna sekcja zawiera więcej informacji na temat dokumentów WordprocessingML:</span><span class="sxs-lookup"><span data-stu-id="ca9be-122">The next section provides more information about WordprocessingML documents:</span></span>  
   
--   [<span data-ttu-id="7255d-123">Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7255d-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [<span data-ttu-id="ca9be-123">Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ca9be-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7255d-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7255d-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ca9be-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ca9be-124">See also</span></span>
 
-- [<span data-ttu-id="7255d-125">Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="7255d-125">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="7255d-126">Refaktoryzacja przy użyciu czystej funkcji (C#)</span><span class="sxs-lookup"><span data-stu-id="7255d-126">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [<span data-ttu-id="7255d-127">Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="7255d-127">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="ca9be-125">Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="ca9be-125">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="ca9be-126">Refaktoryzacja przy użyciu czystej funkcji (C#)</span><span class="sxs-lookup"><span data-stu-id="ca9be-126">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
+- [<span data-ttu-id="ca9be-127">Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ca9be-127">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -3,20 +3,20 @@ title: Wskazówki dotyczące migracji
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009997"
 ---
 # <a name="migration-guidance"></a>Wskazówki dotyczące migracji
 W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Microsoft udostępnia drugą wersją główną systemu Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] został wydany w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (to uwzględnione typy w przestrzeniach nazw System.Workflow.*; teraz nazywana WF3) i ulepszone w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 jest również częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ale istnieje się wraz z technologią przepływu pracy (typy System.Activities.\* obszarów nazw; nazywane WF4). Podczas wybierania, kiedy należy przyjąć WF4, należy najpierw rozpoznaje, że możesz kontrolować termin.  
   
--   WF3 jest w pełni obsługiwana częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
+- WF3 jest w pełni obsługiwana częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
--   WF3 aplikacje są uruchamiane w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bez żadnych modyfikacji i w dalszym ciągu można w pełni obsługiwane.  
+- WF3 aplikacje są uruchamiane w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bez żadnych modyfikacji i w dalszym ciągu można w pełni obsługiwane.  
   
--   Można tworzyć nowe aplikacje WF3 i istniejących aplikacji można edytować w programie Visual Studio 2012 i są w pełni obsługiwane.  
+- Można tworzyć nowe aplikacje WF3 i istniejących aplikacji można edytować w programie Visual Studio 2012 i są w pełni obsługiwane.  
   
  W efekcie decyzji o przyjęciu programu .NET Framework 4 jest całkowicie niezależna od Twoją decyzję, aby przejść do WF4 (System.Activities.*) z WF3 (System.Workflow.\*). Ten temat zawiera łącza do wskazówek dotyczących migracji WF, który zawiera informacje o pracy z WF3 i WF4.  
   

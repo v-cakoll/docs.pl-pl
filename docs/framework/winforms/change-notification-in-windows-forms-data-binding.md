@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011882"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows
 Jednym z najważniejszych pojęć powiązanie danych formularzy Windows jest *powiadomienie o zmianie*. Aby upewnij się, że źródło danych i formanty powiązane zawsze najnowsze dane, należy dodać powiadomienia o zmianie dla powiązania danych. Aby mieć pewność, że formanty powiązane są powiadamiani o zmianach wprowadzonych do swojego źródła danych i źródła danych jest powiadamiany o zmianach wprowadzonych do powiązanych właściwości kontrolki.  
   
  Istnieją różne rodzaje powiadomienie o zmianie w zależności od rodzaju powiązania danych:  
   
--   Proste powiązanie danych, w którym właściwość jeden formant jest powiązany z pojedynczym wystąpieniem obiektu.  
+- Proste powiązanie danych, w którym właściwość jeden formant jest powiązany z pojedynczym wystąpieniem obiektu.  
   
--   Oparte na liście powiązania, który może zawierać właściwości jeden formant powiązany z właściwości elementu na liście lub właściwości kontrolki powiązane z listy obiektów.  
+- Oparte na liście powiązania, który może zawierać właściwości jeden formant powiązany z właściwości elementu na liście lub właściwości kontrolki powiązane z listy obiektów.  
   
  Ponadto w przypadku tworzenia formantów Windows Forms, które chcesz użyć dla powiązania danych, należy najpierw zastosować *PropertyName*zmienione wzorca dla formantów, aby zmiany właściwości powiązanej kontrolki są propagowane do źródło danych.  
   

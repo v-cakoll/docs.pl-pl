@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009217"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Rozwiązywanie problemów związanych z formantami oraz autoryzacją elementów
 Ten temat zawiera następujące typowe problemy, które występują podczas tworzenia składników i formantów. Aby uzyskać więcej informacji, zobacz [Programowanie przy użyciu składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
--   Nie można dodać kontrolki do przybornika  
+- Nie można dodać kontrolki do przybornika  
   
--   Nie można debugować kontrolki użytkownika interfejsu Windows Forms lub składnika  
+- Nie można debugować kontrolki użytkownika interfejsu Windows Forms lub składnika  
   
--   Zdarzenie jest zgłaszane w dwukrotnie odziedziczoną kontrolkę lub składnika  
+- Zdarzenie jest zgłaszane w dwukrotnie odziedziczoną kontrolkę lub składnika  
   
--   Błąd w czasie projektowania: "Nie można utworzyć składnika"*nazwa składnika*""  
+- Błąd w czasie projektowania: "Nie można utworzyć składnika"*nazwa składnika*""  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   Ikona składnika nie jest wyświetlana w przyborniku  
+- Ikona składnika nie jest wyświetlana w przyborniku  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Nie można dodać kontrolki do przybornika  
  Jeśli chcesz dodać formant niestandardowy, który został utworzony w innym projekcie lub kontrolki z innych firm **przybornika**, należy to zrobić ręcznie. Jeśli bieżący projekt zawiera kontrolki lub składnika, powinien pojawić się w **przybornika** automatycznie. Aby uzyskać więcej informacji, zobacz [instruktażu: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
@@ -42,11 +42,11 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
   
 2. W **wybierz elementy przybornika** okna dialogowego Dodaj składnik:  
   
-    -   Jeśli chcesz dodać do składnik .NET Framework lub formantu, kliknij przycisk **składników .NET Framework** kartę.  
+    - Jeśli chcesz dodać do składnik .NET Framework lub formantu, kliknij przycisk **składników .NET Framework** kartę.  
   
          — lub —  
   
-    -   Aby dodać składnik COM lub formantu ActiveX, kliknij przycisk **składników COM** kartę.  
+    - Aby dodać składnik COM lub formantu ActiveX, kliknij przycisk **składników COM** kartę.  
   
 3. Jeśli formant znajduje się w oknie dialogowym, upewnij się, jest zaznaczone, a następnie kliknij przycisk **OK**.  
   
@@ -54,15 +54,15 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
   
 4. Jeśli formant nie znajduje się w oknie dialogowym, wykonaj następujące czynności:  
   
-    1.  Kliknij przycisk **Przeglądaj** przycisku.  
+    1. Kliknij przycisk **Przeglądaj** przycisku.  
   
-    2.  Przejdź do folderu, który zawiera plik .dll, który zawiera formant.  
+    2. Przejdź do folderu, który zawiera plik .dll, który zawiera formant.  
   
-    3.  Wybierz plik .dll, a następnie kliknij przycisk **Otwórz**.  
+    3. Wybierz plik .dll, a następnie kliknij przycisk **Otwórz**.  
   
          Formant zostanie wyświetlony w oknie dialogowym.  
   
-    4.  Upewnij się, czy formant jest zaznaczone, a następnie kliknij **OK**.  
+    4. Upewnij się, czy formant jest zaznaczone, a następnie kliknij **OK**.  
   
          Formant jest dodawany do **przybornika**.  
   

@@ -3,24 +3,24 @@ title: 'Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogu (L
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
 ms.openlocfilehash: 7ba330b18020b7c3b823b70d0541cdda199aa898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008905"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (Visual Basic)
 Ten przykład przedstawia pięć zapytań dotyczących rozmiar pliku w bajtach:  
   
--   Jak pobrać rozmiar w bajtach największy plik.  
+- Jak pobrać rozmiar w bajtach największy plik.  
   
--   Jak pobrać rozmiar w bajtach najmniejszy plik.  
+- Jak pobrać rozmiar w bajtach najmniejszy plik.  
   
--   Jak pobrać <xref:System.IO.FileInfo> pliku największą lub najmniejszą z jednego lub więcej folderów w folderze głównym określonego obiektu.  
+- Jak pobrać <xref:System.IO.FileInfo> pliku największą lub najmniejszą z jednego lub więcej folderów w folderze głównym określonego obiektu.  
   
--   Jak pobrać sekwencji, np. 10 największych plików.  
+- Jak pobrać sekwencji, np. 10 największych plików.  
   
--   Jak kolejność plików do grup, w oparciu o ich rozmiar pliku w bajtach, pliki, których wartość jest mniejsza niż określony rozmiar zostaną zignorowane.  
+- Jak kolejność plików do grup, w oparciu o ich rozmiar pliku w bajtach, pliki, których wartość jest mniejsza niż określony rozmiar zostaną zignorowane.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład zawiera pięć oddzielne zapytania, które pokazują, jak wykonać zapytanie i grupy plików, w zależności od ich rozmiar pliku w bajtach. Można łatwo modyfikować te przykłady, aby utworzyć kwerendy na kilka innych właściwości <xref:System.IO.FileInfo> obiektu.  

@@ -1,18 +1,18 @@
 ---
-title: Namespace wpływ na rozwijanie odwołań do jednostek dla nowych węzłów zawierających elementy i atrybuty
+title: Wpływ przestrzeni nazw na rozwijanie odwołań do jednostek w przypadku nowych węzłów zawierających elementy i atrybuty
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4231516848cc50212a3a6a03d101907b2f6b3920
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027111"
 ---
-# <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Namespace wpływ na rozwijanie odwołań do jednostek dla nowych węzłów zawierających elementy i atrybuty
+# <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Wpływ przestrzeni nazw na rozwijanie odwołań do jednostek w przypadku nowych węzłów zawierających elementy i atrybuty
 Zawartość deklaracji jednostki może zawierać prawie wszystko, istnieje możliwość, który zawartości może zawierać element, takich jak `<!ENTITY aname "<elem>test</elem>">`.  
   
  Gdy zostanie przeanalizowany plik XML, `&aname;` z jego zawartością zastępczy nie jest rozwinięty w czasie analizy. Rozszerzenie pliku XML nie jest wykonywane, ponieważ nie może wystąpić rozpoznawania nazw dla elementu, aż węzeł znajduje się w dokumencie. Do tego czasu nie ma żadnych informacji o jakie przestrzeni nazw znajduje się w zakresie. Gdy węzeł zostanie przełączone do dokumentu, następnie występuje rozpoznawania nazw, a wynikowy jednostki zawartości jest przekształcany do jego odpowiednich węzłów.  

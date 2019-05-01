@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
 ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009139"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Tryb wirtualny w formancie DataGridView formularzy systemu Windows
 Tryb wirtualny, można zarządzać interakcji między <xref:System.Windows.Forms.DataGridView> kontroli i pamięć podręczna danych niestandardowych. Aby zaimplementować trybu wirtualnego, należy ustawić <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwość `true` i obsługi co najmniej jeden zdarzenia opisane w tym temacie. Zazwyczaj będziesz obsługiwać co najmniej `CellValueNeeded` zdarzenie, które umożliwia kontrolki odnośnika wartości w pamięci podręcznej danych.  

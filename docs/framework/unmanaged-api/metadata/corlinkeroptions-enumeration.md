@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045802"
 ---
-# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="bb487-102">CorLinkerOptions — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="bb487-102">CorLinkerOptions Enumeration</span></span>
-<span data-ttu-id="bb487-103">Określa flagi, aby wybrać opcje do konsolidatora metadanych.</span><span class="sxs-lookup"><span data-stu-id="bb487-103">Specifies flags to select options for the metadata linker.</span></span>  
+# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="e6528-102">CorLinkerOptions — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="e6528-102">CorLinkerOptions Enumeration</span></span>
+<span data-ttu-id="e6528-103">Określa flagi, aby wybrać opcje do konsolidatora metadanych.</span><span class="sxs-lookup"><span data-stu-id="e6528-103">Specifies flags to select options for the metadata linker.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb487-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="bb487-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6528-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e6528-104">Syntax</span></span>  
   
 ```  
 typedef enum CorLinkerOptions {  
@@ -35,20 +35,20 @@ typedef enum CorLinkerOptions {
 } CorLinkerOptions;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="bb487-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="bb487-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e6528-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="e6528-105">Members</span></span>  
   
-|<span data-ttu-id="bb487-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="bb487-106">Member</span></span>|<span data-ttu-id="bb487-107">Opis</span><span class="sxs-lookup"><span data-stu-id="bb487-107">Description</span></span>|  
+|<span data-ttu-id="e6528-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="e6528-106">Member</span></span>|<span data-ttu-id="e6528-107">Opis</span><span class="sxs-lookup"><span data-stu-id="e6528-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDAssembly`|<span data-ttu-id="bb487-108">Prywatne typy i funkcje globalne nie są zachowywane.</span><span class="sxs-lookup"><span data-stu-id="bb487-108">The private types and global functions are not preserved.</span></span>|  
-|`MDNetModule`|<span data-ttu-id="bb487-109">Prywatne typy i funkcje globalne są zachowywane.</span><span class="sxs-lookup"><span data-stu-id="bb487-109">The private types and global functions are preserved.</span></span>|  
+|`MDAssembly`|<span data-ttu-id="e6528-108">Prywatne typy i funkcje globalne nie są zachowywane.</span><span class="sxs-lookup"><span data-stu-id="e6528-108">The private types and global functions are not preserved.</span></span>|  
+|`MDNetModule`|<span data-ttu-id="e6528-109">Prywatne typy i funkcje globalne są zachowywane.</span><span class="sxs-lookup"><span data-stu-id="e6528-109">The private types and global functions are preserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="bb487-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bb487-110">Requirements</span></span>  
- <span data-ttu-id="bb487-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb487-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6528-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e6528-110">Requirements</span></span>  
+ <span data-ttu-id="e6528-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6528-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bb487-112">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="bb487-112">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="e6528-112">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="e6528-112">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="bb487-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb487-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e6528-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6528-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb487-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bb487-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6528-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e6528-114">See also</span></span>
 
-- [<span data-ttu-id="bb487-115">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="bb487-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="e6528-115">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="e6528-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

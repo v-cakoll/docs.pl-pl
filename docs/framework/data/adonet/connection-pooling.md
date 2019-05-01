@@ -3,23 +3,23 @@ title: Pula połączeń
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 4cba53993489f51ed39ac52bff4fa252beb9aafd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880024"
 ---
-# <a name="connection-pooling"></a><span data-ttu-id="f2e2a-102">Pula połączeń</span><span class="sxs-lookup"><span data-stu-id="f2e2a-102">Connection Pooling</span></span>
-<span data-ttu-id="f2e2a-103">Łączenie ze źródłem danych może zająć dużo czasu.</span><span class="sxs-lookup"><span data-stu-id="f2e2a-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="f2e2a-104">Aby zminimalizować koszty otwarcia połączeń, ADO.NET wykorzystuje technikę optymalizacji, o nazwie *buforowanie połączeń*, które minimalizuje koszty wielokrotnym otwieraniem i zamykaniem połączeń.</span><span class="sxs-lookup"><span data-stu-id="f2e2a-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="f2e2a-105">Pula połączeń różni się dla dostawcy danych .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f2e2a-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
+# <a name="connection-pooling"></a><span data-ttu-id="3a2b6-102">Pula połączeń</span><span class="sxs-lookup"><span data-stu-id="3a2b6-102">Connection Pooling</span></span>
+<span data-ttu-id="3a2b6-103">Łączenie ze źródłem danych może zająć dużo czasu.</span><span class="sxs-lookup"><span data-stu-id="3a2b6-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="3a2b6-104">Aby zminimalizować koszty otwarcia połączeń, ADO.NET wykorzystuje technikę optymalizacji, o nazwie *buforowanie połączeń*, które minimalizuje koszty wielokrotnym otwieraniem i zamykaniem połączeń.</span><span class="sxs-lookup"><span data-stu-id="3a2b6-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="3a2b6-105">Pula połączeń różni się dla dostawcy danych .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3a2b6-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f2e2a-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="f2e2a-106">In This Section</span></span>  
- [<span data-ttu-id="f2e2a-107">Buforowanie połączenia z programem SQL Server (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="f2e2a-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
- <span data-ttu-id="f2e2a-108">Zawiera omówienie buforowanie połączeń, a w tym artykule opisano, jak działa buforowanie połączeń w programie SQL Server.</span><span class="sxs-lookup"><span data-stu-id="f2e2a-108">Provides an overview of connection pooling and describes how connection pooling works in SQL Server.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="3a2b6-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="3a2b6-106">In This Section</span></span>  
+ [<span data-ttu-id="3a2b6-107">Buforowanie połączenia z programem SQL Server (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="3a2b6-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
+ <span data-ttu-id="3a2b6-108">Zawiera omówienie buforowanie połączeń, a w tym artykule opisano, jak działa buforowanie połączeń w programie SQL Server.</span><span class="sxs-lookup"><span data-stu-id="3a2b6-108">Provides an overview of connection pooling and describes how connection pooling works in SQL Server.</span></span>  
   
- [<span data-ttu-id="f2e2a-109">Buforowanie połączenia Oracle, OLE DB i ODBC</span><span class="sxs-lookup"><span data-stu-id="f2e2a-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- <span data-ttu-id="f2e2a-110">W tym artykule opisano tworzenie puli połączeń dla .NET Framework Data Provider for OLE DB dla programu .NET Framework Data Provider for ODBC i .NET Framework Data Provider for Oracle.</span><span class="sxs-lookup"><span data-stu-id="f2e2a-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
+ [<span data-ttu-id="3a2b6-109">Buforowanie połączenia Oracle, OLE DB i ODBC</span><span class="sxs-lookup"><span data-stu-id="3a2b6-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ <span data-ttu-id="3a2b6-110">W tym artykule opisano tworzenie puli połączeń dla .NET Framework Data Provider for OLE DB dla programu .NET Framework Data Provider for ODBC i .NET Framework Data Provider for Oracle.</span><span class="sxs-lookup"><span data-stu-id="3a2b6-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2e2a-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f2e2a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a2b6-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3a2b6-111">See also</span></span>
 
-- [<span data-ttu-id="f2e2a-112">Pobieranie i modyfikowanie danych ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f2e2a-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [<span data-ttu-id="f2e2a-113">ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych</span><span class="sxs-lookup"><span data-stu-id="f2e2a-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="3a2b6-112">Pobieranie i modyfikowanie danych ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3a2b6-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [<span data-ttu-id="3a2b6-113">ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych</span><span class="sxs-lookup"><span data-stu-id="3a2b6-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

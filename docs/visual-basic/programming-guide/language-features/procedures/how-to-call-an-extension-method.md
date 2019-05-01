@@ -6,16 +6,16 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
 ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863678"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a><span data-ttu-id="9ddce-102">Instrukcje: Wywoływanie metody rozszerzenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9ddce-102">How to: Call an Extension Method (Visual Basic)</span></span>
-<span data-ttu-id="9ddce-103">Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy.</span><span class="sxs-lookup"><span data-stu-id="9ddce-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="9ddce-104">Po metody rozszerzenia są deklarowane i dostosowane do zakresu, można też wywołać, takich jak metoda wystąpienia typu, który stanowi rozszerzenie.</span><span class="sxs-lookup"><span data-stu-id="9ddce-104">After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends.</span></span> <span data-ttu-id="9ddce-105">Aby uzyskać więcej informacji na temat pisania metodę rozszerzenia, zobacz [jak: Zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md).</span><span class="sxs-lookup"><span data-stu-id="9ddce-105">For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).</span></span>  
+# <a name="how-to-call-an-extension-method-visual-basic"></a><span data-ttu-id="e0165-102">Instrukcje: Wywoływanie metody rozszerzenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0165-102">How to: Call an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="e0165-103">Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy.</span><span class="sxs-lookup"><span data-stu-id="e0165-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="e0165-104">Po metody rozszerzenia są deklarowane i dostosowane do zakresu, można też wywołać, takich jak metoda wystąpienia typu, który stanowi rozszerzenie.</span><span class="sxs-lookup"><span data-stu-id="e0165-104">After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends.</span></span> <span data-ttu-id="e0165-105">Aby uzyskać więcej informacji na temat pisania metodę rozszerzenia, zobacz [jak: Zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md).</span><span class="sxs-lookup"><span data-stu-id="e0165-105">For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).</span></span>  
   
- <span data-ttu-id="9ddce-106">Poniższe instrukcje dotyczą — metoda rozszerzenia `PrintAndPunctuate`, co spowoduje wyświetlenie wystąpieniu ciągu, który wywołuje on następuje niezależnie od wartości wysyłane jako drugi parametr `punc`.</span><span class="sxs-lookup"><span data-stu-id="9ddce-106">The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.</span></span>  
+ <span data-ttu-id="e0165-106">Poniższe instrukcje dotyczą — metoda rozszerzenia `PrintAndPunctuate`, co spowoduje wyświetlenie wystąpieniu ciągu, który wywołuje on następuje niezależnie od wartości wysyłane jako drugi parametr `punc`.</span><span class="sxs-lookup"><span data-stu-id="e0165-106">The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -30,40 +30,40 @@ Module StringExtensions
 End Module  
 ```  
   
- <span data-ttu-id="9ddce-107">Metoda musi być w zakresie, gdy jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="9ddce-107">The method must be in scope when it is called.</span></span>  
+ <span data-ttu-id="e0165-107">Metoda musi być w zakresie, gdy jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="e0165-107">The method must be in scope when it is called.</span></span>  
   
-### <a name="to-call-an-extension-method"></a><span data-ttu-id="9ddce-108">Aby wywołać metodę rozszerzenia</span><span class="sxs-lookup"><span data-stu-id="9ddce-108">To call an extension method</span></span>  
+### <a name="to-call-an-extension-method"></a><span data-ttu-id="e0165-108">Aby wywołać metodę rozszerzenia</span><span class="sxs-lookup"><span data-stu-id="e0165-108">To call an extension method</span></span>  
   
-1. <span data-ttu-id="9ddce-109">Zadeklaruj zmienną, która ma typ danych pierwszy parametr metody rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="9ddce-109">Declare a variable that has the data type of the first parameter of the extension method.</span></span> <span data-ttu-id="9ddce-110">Aby uzyskać `PrintAndPunctuate`, potrzebujesz <xref:System.String> zmiennej:</span><span class="sxs-lookup"><span data-stu-id="9ddce-110">For `PrintAndPunctuate`, you need a <xref:System.String> variable:</span></span>  
+1. <span data-ttu-id="e0165-109">Zadeklaruj zmienną, która ma typ danych pierwszy parametr metody rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="e0165-109">Declare a variable that has the data type of the first parameter of the extension method.</span></span> <span data-ttu-id="e0165-110">Aby uzyskać `PrintAndPunctuate`, potrzebujesz <xref:System.String> zmiennej:</span><span class="sxs-lookup"><span data-stu-id="e0165-110">For `PrintAndPunctuate`, you need a <xref:System.String> variable:</span></span>  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2. <span data-ttu-id="9ddce-111">Czy zmienna spowoduje wywołanie metody rozszerzenia, a jego wartość jest związana z pierwszego parametru `aString`.</span><span class="sxs-lookup"><span data-stu-id="9ddce-111">That variable will invoke the extension method, and its value is bound to the first parameter, `aString`.</span></span> <span data-ttu-id="9ddce-112">Zostanie wyświetlona następująca instrukcja wywoływania `Ready?`.</span><span class="sxs-lookup"><span data-stu-id="9ddce-112">The following calling statement will display `Ready?`.</span></span>  
+2. <span data-ttu-id="e0165-111">Czy zmienna spowoduje wywołanie metody rozszerzenia, a jego wartość jest związana z pierwszego parametru `aString`.</span><span class="sxs-lookup"><span data-stu-id="e0165-111">That variable will invoke the extension method, and its value is bound to the first parameter, `aString`.</span></span> <span data-ttu-id="e0165-112">Zostanie wyświetlona następująca instrukcja wywoływania `Ready?`.</span><span class="sxs-lookup"><span data-stu-id="e0165-112">The following calling statement will display `Ready?`.</span></span>  
   
     ```  
     example.PrintAndPunctuate("?")  
     ```  
   
-     <span data-ttu-id="9ddce-113">Należy zauważyć, że wywołanie tej metody rozszerzenia wygląda po prostu, takie jak wywołanie jednej z <xref:System.String> wystąpienia metody, które wymagają jednego parametru:</span><span class="sxs-lookup"><span data-stu-id="9ddce-113">Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:</span></span>  
+     <span data-ttu-id="e0165-113">Należy zauważyć, że wywołanie tej metody rozszerzenia wygląda po prostu, takie jak wywołanie jednej z <xref:System.String> wystąpienia metody, które wymagają jednego parametru:</span><span class="sxs-lookup"><span data-stu-id="e0165-113">Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:</span></span>  
   
     ```  
     example.EndsWith("dy")  
     example.IndexOf("R")  
     ```  
   
-3. <span data-ttu-id="9ddce-114">Zadeklaruj innej zmiennej ciągu i wywołanie metody ponownie, aby zobaczyć, czy działa z dowolnym ciągiem.</span><span class="sxs-lookup"><span data-stu-id="9ddce-114">Declare another string variable and call the method again to see that it works with any string.</span></span>  
+3. <span data-ttu-id="e0165-114">Zadeklaruj innej zmiennej ciągu i wywołanie metody ponownie, aby zobaczyć, czy działa z dowolnym ciągiem.</span><span class="sxs-lookup"><span data-stu-id="e0165-114">Declare another string variable and call the method again to see that it works with any string.</span></span>  
   
     ```  
     Dim example2 = " or not"  
     example2.PrintAndPunctuate("!!!")  
     ```  
   
-     <span data-ttu-id="9ddce-115">Wynik jest w tej chwili: `or not!!!`.</span><span class="sxs-lookup"><span data-stu-id="9ddce-115">The result this time is: `or not!!!`.</span></span>  
+     <span data-ttu-id="e0165-115">Wynik jest w tej chwili: `or not!!!`.</span><span class="sxs-lookup"><span data-stu-id="e0165-115">The result this time is: `or not!!!`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9ddce-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ddce-116">Example</span></span>  
- <span data-ttu-id="9ddce-117">Poniższy kod jest kompletny przykład tworzenia i używania metody proste rozszerzenie.</span><span class="sxs-lookup"><span data-stu-id="9ddce-117">The following code is a complete example of the creation and use of a simple extension method.</span></span>  
+## <a name="example"></a><span data-ttu-id="e0165-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="e0165-116">Example</span></span>  
+ <span data-ttu-id="e0165-117">Poniższy kod jest kompletny przykład tworzenia i używania metody proste rozszerzenie.</span><span class="sxs-lookup"><span data-stu-id="e0165-117">The following code is a complete example of the creation and use of a simple extension method.</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -94,8 +94,8 @@ End Module
 ' Goodbye?  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9ddce-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9ddce-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0165-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e0165-118">See also</span></span>
 
-- [<span data-ttu-id="9ddce-119">Instrukcje: Zapisywanie metody rozszerzenia</span><span class="sxs-lookup"><span data-stu-id="9ddce-119">How to: Write an Extension Method</span></span>](./how-to-write-an-extension-method.md)
-- [<span data-ttu-id="9ddce-120">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="9ddce-120">Extension Methods</span></span>](./extension-methods.md)
-- [<span data-ttu-id="9ddce-121">Zakres w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9ddce-121">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="e0165-119">Instrukcje: Zapisywanie metody rozszerzenia</span><span class="sxs-lookup"><span data-stu-id="e0165-119">How to: Write an Extension Method</span></span>](./how-to-write-an-extension-method.md)
+- [<span data-ttu-id="e0165-120">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="e0165-120">Extension Methods</span></span>](./extension-methods.md)
+- [<span data-ttu-id="e0165-121">Zakres w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e0165-121">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

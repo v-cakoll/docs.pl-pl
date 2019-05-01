@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03b8ecc996e14263510e2d0a658cec020696c263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914504"
 ---
-# <a name="assemblycomparisonresult-enumeration"></a><span data-ttu-id="5c285-102">AssemblyComparisonResult — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="5c285-102">AssemblyComparisonResult Enumeration</span></span>
-<span data-ttu-id="5c285-103">Wskazuje na równoważność dwóch tożsamości zestawu, zgodnie z ustaleniami [compareassemblyidentity —](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="5c285-103">Indicates the equivalence of two assembly identities, as determined by the [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) function.</span></span>  
+# <a name="assemblycomparisonresult-enumeration"></a><span data-ttu-id="02d34-102">AssemblyComparisonResult — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="02d34-102">AssemblyComparisonResult Enumeration</span></span>
+<span data-ttu-id="02d34-103">Wskazuje na równoważność dwóch tożsamości zestawu, zgodnie z ustaleniami [compareassemblyidentity —](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="02d34-103">Indicates the equivalence of two assembly identities, as determined by the [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c285-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5c285-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02d34-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="02d34-104">Syntax</span></span>  
   
 ```  
 typedef enum _tagAssemblyComparisonResult {  
@@ -45,33 +45,33 @@ typedef enum _tagAssemblyComparisonResult {
 } AssemblyComparisonResult;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5c285-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="5c285-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="02d34-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="02d34-105">Members</span></span>  
   
-|<span data-ttu-id="5c285-106">Nazwa elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="5c285-106">Member name</span></span>|<span data-ttu-id="5c285-107">Opis</span><span class="sxs-lookup"><span data-stu-id="5c285-107">Description</span></span>|  
+|<span data-ttu-id="02d34-106">Nazwa elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="02d34-106">Member name</span></span>|<span data-ttu-id="02d34-107">Opis</span><span class="sxs-lookup"><span data-stu-id="02d34-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`ACR_EquivalentFullMatch`|<span data-ttu-id="5c285-108">Wskazuje, że zestaw wszystkich pól dopasowania porównania.</span><span class="sxs-lookup"><span data-stu-id="5c285-108">Indicates that all assembly fields in the comparison match.</span></span>|  
-|`ACR_EquivalentFXUnified`|<span data-ttu-id="5c285-109">Wskazuje, że zestawy są uważane za równoważne oparte na wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) w wersji ujednolicenie numery wersji zestawu w .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="5c285-109">Indicates that assemblies are considered equivalent based on the common language runtime version (CLR) unification of assembly version numbers in the .NET Framework version 2.0.</span></span>|  
-|`ACR_EquivalentPartialFXUnified`|<span data-ttu-id="5c285-110">Wskazuje częściowe dopasowanie zestawów, w oparciu o ujednolicenie środowiska CLR numery wersji zestawu w programie .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="5c285-110">Indicates a partial match of the assemblies based on the CLR unification of assembly version numbers in the .NET Framework 2.0.</span></span>|  
-|`ACR_EquivalentPartialMatch`|<span data-ttu-id="5c285-111">Wskazuje częściowe dopasowanie zestawów.</span><span class="sxs-lookup"><span data-stu-id="5c285-111">Indicates a partial match of the assemblies.</span></span>|  
-|`ACR_EquivalentPartialUnified`|<span data-ttu-id="5c285-112">Wskazuje częściowym zestawy oparte na starszych ujednolicenie numerów wersji.</span><span class="sxs-lookup"><span data-stu-id="5c285-112">Indicates a partial match of the assemblies based on legacy unification of version numbers.</span></span>|  
-|`ACR_EquivalentPartialWeakNamed`|<span data-ttu-id="5c285-113">Wskazuje częściowe dopasowanie, po prostu nazwanych zestawów.</span><span class="sxs-lookup"><span data-stu-id="5c285-113">Indicates a partial match of simply named assemblies.</span></span>|  
-|`ACR_EquivalentUnified`|<span data-ttu-id="5c285-114">Wskazuje, że zestawy są uważane za równoważne oparte na ujednolicenie środowiska CLR numery wersji w starszych wersjach programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5c285-114">Indicates that assemblies are considered equivalent based on the CLR unification of version numbers in legacy versions of the .NET Framework.</span></span>|  
-|`ACR_EquivalentWeakNamed`|<span data-ttu-id="5c285-115">Wskazuje zgodność między dwa po prostu nazwane zestawy, których numery wersji zostały zignorowane.</span><span class="sxs-lookup"><span data-stu-id="5c285-115">Indicates a match between two simply named assemblies whose version numbers were ignored.</span></span>|  
-|`ACR_NonEquivalent`|<span data-ttu-id="5c285-116">Wskazuje, że dopasowanie nie wystąpił między dwoma zestawami.</span><span class="sxs-lookup"><span data-stu-id="5c285-116">Indicates that no match occurred between the two assemblies.</span></span>|  
-|`ACR_NonEquivalentPartialVersion`|<span data-ttu-id="5c285-117">Wskazuje, że te dwa zestawy są zgodne z wyjątkiem ich numery wersji i tylko częściowo zgodne.</span><span class="sxs-lookup"><span data-stu-id="5c285-117">Indicates that the two assemblies match except for their version numbers, which match only partially.</span></span>|  
-|`ACR_NonEquivalentVersion`|<span data-ttu-id="5c285-118">Wskazuje, że te dwa zestawy są zgodne z wyjątkiem ich numery wersji, które nie są zgodne.</span><span class="sxs-lookup"><span data-stu-id="5c285-118">Indicates that the two assemblies match except for their version numbers, which do not match.</span></span>|  
-|`ACR_Unknown`|<span data-ttu-id="5c285-119">Wskazuje przyczynę niż równoważności jest nieznany.</span><span class="sxs-lookup"><span data-stu-id="5c285-119">Indicates that the reason for non-equivalency is not known.</span></span>|  
+|`ACR_EquivalentFullMatch`|<span data-ttu-id="02d34-108">Wskazuje, że zestaw wszystkich pól dopasowania porównania.</span><span class="sxs-lookup"><span data-stu-id="02d34-108">Indicates that all assembly fields in the comparison match.</span></span>|  
+|`ACR_EquivalentFXUnified`|<span data-ttu-id="02d34-109">Wskazuje, że zestawy są uważane za równoważne oparte na wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) w wersji ujednolicenie numery wersji zestawu w .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="02d34-109">Indicates that assemblies are considered equivalent based on the common language runtime version (CLR) unification of assembly version numbers in the .NET Framework version 2.0.</span></span>|  
+|`ACR_EquivalentPartialFXUnified`|<span data-ttu-id="02d34-110">Wskazuje częściowe dopasowanie zestawów, w oparciu o ujednolicenie środowiska CLR numery wersji zestawu w programie .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="02d34-110">Indicates a partial match of the assemblies based on the CLR unification of assembly version numbers in the .NET Framework 2.0.</span></span>|  
+|`ACR_EquivalentPartialMatch`|<span data-ttu-id="02d34-111">Wskazuje częściowe dopasowanie zestawów.</span><span class="sxs-lookup"><span data-stu-id="02d34-111">Indicates a partial match of the assemblies.</span></span>|  
+|`ACR_EquivalentPartialUnified`|<span data-ttu-id="02d34-112">Wskazuje częściowym zestawy oparte na starszych ujednolicenie numerów wersji.</span><span class="sxs-lookup"><span data-stu-id="02d34-112">Indicates a partial match of the assemblies based on legacy unification of version numbers.</span></span>|  
+|`ACR_EquivalentPartialWeakNamed`|<span data-ttu-id="02d34-113">Wskazuje częściowe dopasowanie, po prostu nazwanych zestawów.</span><span class="sxs-lookup"><span data-stu-id="02d34-113">Indicates a partial match of simply named assemblies.</span></span>|  
+|`ACR_EquivalentUnified`|<span data-ttu-id="02d34-114">Wskazuje, że zestawy są uważane za równoważne oparte na ujednolicenie środowiska CLR numery wersji w starszych wersjach programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="02d34-114">Indicates that assemblies are considered equivalent based on the CLR unification of version numbers in legacy versions of the .NET Framework.</span></span>|  
+|`ACR_EquivalentWeakNamed`|<span data-ttu-id="02d34-115">Wskazuje zgodność między dwa po prostu nazwane zestawy, których numery wersji zostały zignorowane.</span><span class="sxs-lookup"><span data-stu-id="02d34-115">Indicates a match between two simply named assemblies whose version numbers were ignored.</span></span>|  
+|`ACR_NonEquivalent`|<span data-ttu-id="02d34-116">Wskazuje, że dopasowanie nie wystąpił między dwoma zestawami.</span><span class="sxs-lookup"><span data-stu-id="02d34-116">Indicates that no match occurred between the two assemblies.</span></span>|  
+|`ACR_NonEquivalentPartialVersion`|<span data-ttu-id="02d34-117">Wskazuje, że te dwa zestawy są zgodne z wyjątkiem ich numery wersji i tylko częściowo zgodne.</span><span class="sxs-lookup"><span data-stu-id="02d34-117">Indicates that the two assemblies match except for their version numbers, which match only partially.</span></span>|  
+|`ACR_NonEquivalentVersion`|<span data-ttu-id="02d34-118">Wskazuje, że te dwa zestawy są zgodne z wyjątkiem ich numery wersji, które nie są zgodne.</span><span class="sxs-lookup"><span data-stu-id="02d34-118">Indicates that the two assemblies match except for their version numbers, which do not match.</span></span>|  
+|`ACR_Unknown`|<span data-ttu-id="02d34-119">Wskazuje przyczynę niż równoważności jest nieznany.</span><span class="sxs-lookup"><span data-stu-id="02d34-119">Indicates that the reason for non-equivalency is not known.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5c285-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5c285-120">Requirements</span></span>  
- <span data-ttu-id="5c285-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c285-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02d34-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="02d34-120">Requirements</span></span>  
+ <span data-ttu-id="02d34-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02d34-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5c285-122">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5c285-122">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="02d34-122">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="02d34-122">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="5c285-123">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5c285-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="02d34-123">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="02d34-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5c285-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c285-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="02d34-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02d34-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c285-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5c285-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02d34-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="02d34-125">See also</span></span>
 
-- [<span data-ttu-id="5c285-126">CompareAssemblyIdentity, funkcja</span><span class="sxs-lookup"><span data-stu-id="5c285-126">CompareAssemblyIdentity Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
-- [<span data-ttu-id="5c285-127">Wyliczenia łączenia</span><span class="sxs-lookup"><span data-stu-id="5c285-127">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="02d34-126">CompareAssemblyIdentity, funkcja</span><span class="sxs-lookup"><span data-stu-id="02d34-126">CompareAssemblyIdentity Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
+- [<span data-ttu-id="02d34-127">Wyliczenia łączenia</span><span class="sxs-lookup"><span data-stu-id="02d34-127">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

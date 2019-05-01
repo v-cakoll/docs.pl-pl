@@ -2,20 +2,20 @@
 title: System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress
 ms.date: 10/30/2018
 ms.openlocfilehash: ec275f545d3dd09a6a80ac4be5ebfd53891f155c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955210"
 ---
-# <a name="systemservicemodelwarnservicehealthenablednobaseaddress"></a><span data-ttu-id="f3519-102">System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress</span><span class="sxs-lookup"><span data-stu-id="f3519-102">System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress</span></span>
-<span data-ttu-id="f3519-103">System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress</span><span class="sxs-lookup"><span data-stu-id="f3519-103">System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress</span></span>  
+# <a name="systemservicemodelwarnservicehealthenablednobaseaddress"></a><span data-ttu-id="06d23-102">System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress</span><span class="sxs-lookup"><span data-stu-id="06d23-102">System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress</span></span>
+<span data-ttu-id="06d23-103">System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress</span><span class="sxs-lookup"><span data-stu-id="06d23-103">System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f3519-104">Opis</span><span class="sxs-lookup"><span data-stu-id="f3519-104">Description</span></span>  
- <span data-ttu-id="f3519-105">Strona kondycji ServiceHealthBehavior na adres względny jest włączone i nie można utworzyć, ponieważ nie istnieje żaden adres podstawowy.</span><span class="sxs-lookup"><span data-stu-id="f3519-105">The ServiceHealthBehavior health page is enabled at a relative address and cannot be created because there is no base address.</span></span>  
+## <a name="description"></a><span data-ttu-id="06d23-104">Opis</span><span class="sxs-lookup"><span data-stu-id="06d23-104">Description</span></span>  
+ <span data-ttu-id="06d23-105">Strona kondycji ServiceHealthBehavior na adres względny jest włączone i nie można utworzyć, ponieważ nie istnieje żaden adres podstawowy.</span><span class="sxs-lookup"><span data-stu-id="06d23-105">The ServiceHealthBehavior health page is enabled at a relative address and cannot be created because there is no base address.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3519-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f3519-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06d23-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="06d23-106">See also</span></span>
 
-- [<span data-ttu-id="f3519-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="f3519-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="f3519-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="f3519-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="f3519-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="f3519-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="06d23-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="06d23-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="06d23-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="06d23-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="06d23-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="06d23-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

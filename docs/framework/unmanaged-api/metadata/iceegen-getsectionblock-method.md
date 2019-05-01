@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7e600f29a9036bb28031bd7854bc8cbb34c4566a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905492"
 ---
-# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="d98bd-102">ICeeGen::GetSectionBlock — Metoda</span><span class="sxs-lookup"><span data-stu-id="d98bd-102">ICeeGen::GetSectionBlock Method</span></span>
-<span data-ttu-id="d98bd-103">Pobiera blok części bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="d98bd-103">Gets a section block of the code base.</span></span>  
+# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="9289b-102">ICeeGen::GetSectionBlock — Metoda</span><span class="sxs-lookup"><span data-stu-id="9289b-102">ICeeGen::GetSectionBlock Method</span></span>
+<span data-ttu-id="9289b-103">Pobiera blok części bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="9289b-103">Gets a section block of the code base.</span></span>  
   
- <span data-ttu-id="d98bd-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="d98bd-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="9289b-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="9289b-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d98bd-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="d98bd-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9289b-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="9289b-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSectionBlock (  
@@ -40,31 +40,31 @@ HRESULT GetSectionBlock (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d98bd-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="d98bd-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9289b-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="9289b-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="d98bd-107">[in] Sekcja, z których mają być pobierane blok bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="d98bd-107">[in] The section from which to retrieve a block of the code base.</span></span>  
+ <span data-ttu-id="9289b-107">[in] Sekcja, z których mają być pobierane blok bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="9289b-107">[in] The section from which to retrieve a block of the code base.</span></span>  
   
  `len`  
- <span data-ttu-id="d98bd-108">[in] Długość bloku, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="d98bd-108">[in] The length of the block to be retrieved.</span></span>  
+ <span data-ttu-id="9289b-108">[in] Długość bloku, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="9289b-108">[in] The length of the block to be retrieved.</span></span>  
   
  `align`  
- <span data-ttu-id="d98bd-109">[in] Bajt względem początku sekcji, z którą ma zostać wyrównywanie pierwszego bajtu bloku.</span><span class="sxs-lookup"><span data-stu-id="d98bd-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="d98bd-110">Jest to pozycja bloku, w ramach tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="d98bd-110">This is the position of the block within the section.</span></span>  
+ <span data-ttu-id="9289b-109">[in] Bajt względem początku sekcji, z którą ma zostać wyrównywanie pierwszego bajtu bloku.</span><span class="sxs-lookup"><span data-stu-id="9289b-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="9289b-110">Jest to pozycja bloku, w ramach tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="9289b-110">This is the position of the block within the section.</span></span>  
   
  `ppBytes`  
- <span data-ttu-id="d98bd-111">[out] Wskaźnik do lokalizacji, która otrzymuje adres bloku pobrane.</span><span class="sxs-lookup"><span data-stu-id="d98bd-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
+ <span data-ttu-id="9289b-111">[out] Wskaźnik do lokalizacji, która otrzymuje adres bloku pobrane.</span><span class="sxs-lookup"><span data-stu-id="9289b-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d98bd-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d98bd-112">Remarks</span></span>  
- <span data-ttu-id="d98bd-113">Wywołaj `GetSectionBlock` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.</span><span class="sxs-lookup"><span data-stu-id="d98bd-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9289b-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9289b-112">Remarks</span></span>  
+ <span data-ttu-id="9289b-113">Wywołaj `GetSectionBlock` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.</span><span class="sxs-lookup"><span data-stu-id="9289b-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d98bd-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d98bd-114">Requirements</span></span>  
- <span data-ttu-id="d98bd-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d98bd-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9289b-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9289b-114">Requirements</span></span>  
+ <span data-ttu-id="9289b-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9289b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d98bd-116">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="d98bd-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9289b-116">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="9289b-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d98bd-117">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d98bd-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9289b-117">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9289b-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d98bd-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d98bd-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9289b-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9289b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d98bd-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d98bd-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9289b-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9289b-119">See also</span></span>
 
-- [<span data-ttu-id="d98bd-120">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="d98bd-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="9289b-120">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="9289b-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

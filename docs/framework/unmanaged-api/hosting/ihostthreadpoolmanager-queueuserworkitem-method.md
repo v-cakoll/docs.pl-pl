@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c548ae7f8d605ff84da2046d057e436c8e95721
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796581"
 ---
-# <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a><span data-ttu-id="4310f-102">IHostThreadPoolManager::QueueUserWorkItem — Metoda</span><span class="sxs-lookup"><span data-stu-id="4310f-102">IHostThreadPoolManager::QueueUserWorkItem Method</span></span>
-<span data-ttu-id="4310f-103">Kolejki funkcję do wykonania i określa obiekt zawierający dane, które ma być używany przez tę funkcję.</span><span class="sxs-lookup"><span data-stu-id="4310f-103">Queues a function for execution, and specifies an object containing data to be used by that function.</span></span> <span data-ttu-id="4310f-104">Funkcja wykonuje, gdy wątek stanie się dostępna.</span><span class="sxs-lookup"><span data-stu-id="4310f-104">The function executes when a thread becomes available.</span></span>  
+# <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a><span data-ttu-id="9d624-102">IHostThreadPoolManager::QueueUserWorkItem — Metoda</span><span class="sxs-lookup"><span data-stu-id="9d624-102">IHostThreadPoolManager::QueueUserWorkItem Method</span></span>
+<span data-ttu-id="9d624-103">Kolejki funkcję do wykonania i określa obiekt zawierający dane, które ma być używany przez tę funkcję.</span><span class="sxs-lookup"><span data-stu-id="9d624-103">Queues a function for execution, and specifies an object containing data to be used by that function.</span></span> <span data-ttu-id="9d624-104">Funkcja wykonuje, gdy wątek stanie się dostępna.</span><span class="sxs-lookup"><span data-stu-id="9d624-104">The function executes when a thread becomes available.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4310f-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="4310f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d624-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="9d624-105">Syntax</span></span>  
   
 ```  
 HRESULT QueueUserWorkItem (  
@@ -37,41 +37,41 @@ HRESULT QueueUserWorkItem (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4310f-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="4310f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9d624-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="9d624-106">Parameters</span></span>  
  `Function`  
- <span data-ttu-id="4310f-107">[in] Wskaźnik funkcji, która reprezentuje funkcję do wykonania.</span><span class="sxs-lookup"><span data-stu-id="4310f-107">[in] A function pointer that represents the function to execute.</span></span>  
+ <span data-ttu-id="9d624-107">[in] Wskaźnik funkcji, która reprezentuje funkcję do wykonania.</span><span class="sxs-lookup"><span data-stu-id="9d624-107">[in] A function pointer that represents the function to execute.</span></span>  
   
  `Context`  
- <span data-ttu-id="4310f-108">[in] Obiekt, który zawiera dane używane przez `Function`.</span><span class="sxs-lookup"><span data-stu-id="4310f-108">[in] An object that contains data to be used by `Function`.</span></span>  
+ <span data-ttu-id="9d624-108">[in] Obiekt, który zawiera dane używane przez `Function`.</span><span class="sxs-lookup"><span data-stu-id="9d624-108">[in] An object that contains data to be used by `Function`.</span></span>  
   
  `Flags`  
- <span data-ttu-id="4310f-109">[in] Jedną z flag wartości, zgodnie z definicją dla Win32 `QueueUserWorkItem` metody, które sterują wykonywania.</span><span class="sxs-lookup"><span data-stu-id="4310f-109">[in] One of the flags values, as defined for the Win32 `QueueUserWorkItem` method, that control execution.</span></span>  
+ <span data-ttu-id="9d624-109">[in] Jedną z flag wartości, zgodnie z definicją dla Win32 `QueueUserWorkItem` metody, które sterują wykonywania.</span><span class="sxs-lookup"><span data-stu-id="9d624-109">[in] One of the flags values, as defined for the Win32 `QueueUserWorkItem` method, that control execution.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4310f-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="4310f-110">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9d624-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="9d624-110">Return Value</span></span>  
   
-|<span data-ttu-id="4310f-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4310f-111">HRESULT</span></span>|<span data-ttu-id="4310f-112">Opis</span><span class="sxs-lookup"><span data-stu-id="4310f-112">Description</span></span>|  
+|<span data-ttu-id="9d624-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9d624-111">HRESULT</span></span>|<span data-ttu-id="9d624-112">Opis</span><span class="sxs-lookup"><span data-stu-id="9d624-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4310f-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="4310f-113">S_OK</span></span>|<span data-ttu-id="4310f-114">`QueueUserWorkItem` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="4310f-114">`QueueUserWorkItem` returned successfully.</span></span>|  
-|<span data-ttu-id="4310f-115">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4310f-115">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4310f-116">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="4310f-116">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="4310f-117">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4310f-117">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4310f-118">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="4310f-118">The call timed out.</span></span>|  
-|<span data-ttu-id="4310f-119">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4310f-119">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4310f-120">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="4310f-120">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="4310f-121">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4310f-121">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4310f-122">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="4310f-122">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="4310f-123">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4310f-123">E_FAIL</span></span>|<span data-ttu-id="4310f-124">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="4310f-124">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4310f-125">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="4310f-125">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="4310f-126">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="4310f-126">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="9d624-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="9d624-113">S_OK</span></span>|<span data-ttu-id="9d624-114">`QueueUserWorkItem` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="9d624-114">`QueueUserWorkItem` returned successfully.</span></span>|  
+|<span data-ttu-id="9d624-115">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9d624-115">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9d624-116">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="9d624-116">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="9d624-117">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9d624-117">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9d624-118">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="9d624-118">The call timed out.</span></span>|  
+|<span data-ttu-id="9d624-119">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9d624-119">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9d624-120">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="9d624-120">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="9d624-121">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9d624-121">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9d624-122">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="9d624-122">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="9d624-123">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9d624-123">E_FAIL</span></span>|<span data-ttu-id="9d624-124">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="9d624-124">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9d624-125">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="9d624-125">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9d624-126">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="9d624-126">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4310f-127">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4310f-127">Remarks</span></span>  
- <span data-ttu-id="4310f-128">`QueueUserWorkItem` umieszcza w kolejce elementu roboczego do wątku roboczego w puli wątków.</span><span class="sxs-lookup"><span data-stu-id="4310f-128">`QueueUserWorkItem` queues a work item to a worker thread in the thread pool.</span></span> <span data-ttu-id="4310f-129">Jego typy podpisu i parametru są identyczne z odpowiedniej funkcji Win32, która ma taką samą nazwę.</span><span class="sxs-lookup"><span data-stu-id="4310f-129">Its signature and parameter types are identical to those of the corresponding Win32 function, which has the same name.</span></span> <span data-ttu-id="4310f-130">Aby uzyskać więcej informacji zobacz dokumentację platformy Windows.</span><span class="sxs-lookup"><span data-stu-id="4310f-130">For more information, see the Windows Platform documentation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d624-127">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9d624-127">Remarks</span></span>  
+ <span data-ttu-id="9d624-128">`QueueUserWorkItem` umieszcza w kolejce elementu roboczego do wątku roboczego w puli wątków.</span><span class="sxs-lookup"><span data-stu-id="9d624-128">`QueueUserWorkItem` queues a work item to a worker thread in the thread pool.</span></span> <span data-ttu-id="9d624-129">Jego typy podpisu i parametru są identyczne z odpowiedniej funkcji Win32, która ma taką samą nazwę.</span><span class="sxs-lookup"><span data-stu-id="9d624-129">Its signature and parameter types are identical to those of the corresponding Win32 function, which has the same name.</span></span> <span data-ttu-id="9d624-130">Aby uzyskać więcej informacji zobacz dokumentację platformy Windows.</span><span class="sxs-lookup"><span data-stu-id="9d624-130">For more information, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4310f-131">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4310f-131">Requirements</span></span>  
- <span data-ttu-id="4310f-132">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4310f-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d624-131">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9d624-131">Requirements</span></span>  
+ <span data-ttu-id="9d624-132">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d624-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4310f-133">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4310f-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9d624-133">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9d624-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4310f-134">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4310f-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9d624-134">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9d624-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4310f-135">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4310f-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9d624-135">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d624-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4310f-136">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4310f-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d624-136">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9d624-136">See also</span></span>
 
 - <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
 - <xref:System.Threading.ThreadPool>
-- [<span data-ttu-id="4310f-137">IHostThreadPoolManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="4310f-137">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [<span data-ttu-id="9d624-137">IHostThreadPoolManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="9d624-137">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

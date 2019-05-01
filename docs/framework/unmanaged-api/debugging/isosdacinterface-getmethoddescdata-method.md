@@ -16,19 +16,19 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914878"
 ---
-# <a name="isosdacinterfacegetmethoddescdata-method"></a><span data-ttu-id="6d6ff-102">Metoda ISOSDacInterface::GetMethodDescData</span><span class="sxs-lookup"><span data-stu-id="6d6ff-102">ISOSDacInterface::GetMethodDescData Method</span></span>
+# <a name="isosdacinterfacegetmethoddescdata-method"></a><span data-ttu-id="0e424-102">Metoda ISOSDacInterface::GetMethodDescData</span><span class="sxs-lookup"><span data-stu-id="0e424-102">ISOSDacInterface::GetMethodDescData Method</span></span>
 
-<span data-ttu-id="6d6ff-103">Pobiera dane dla danego wskaźnika MethodDesc.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-103">Gets the data for the given MethodDesc pointer.</span></span>
+<span data-ttu-id="0e424-103">Pobiera dane dla danego wskaźnika MethodDesc.</span><span class="sxs-lookup"><span data-stu-id="0e424-103">Gets the data for the given MethodDesc pointer.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="6d6ff-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6d6ff-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="0e424-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0e424-104">Syntax</span></span>
 
 ```
 HRESULT GetMethodDescData(
@@ -41,38 +41,38 @@ HRESULT GetMethodDescData(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="6d6ff-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6d6ff-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="0e424-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0e424-105">Parameters</span></span>
 
 `methodDesc`\
-<span data-ttu-id="6d6ff-106">[in] Adres MethodDesc.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-106">[in] The address of the MethodDesc.</span></span>
+<span data-ttu-id="0e424-106">[in] Adres MethodDesc.</span><span class="sxs-lookup"><span data-stu-id="0e424-106">[in] The address of the MethodDesc.</span></span>
 
 `ip`\
-<span data-ttu-id="6d6ff-107">[in] Adres IP metody.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-107">[in] The IP address of the method.</span></span>
+<span data-ttu-id="0e424-107">[in] Adres IP metody.</span><span class="sxs-lookup"><span data-stu-id="0e424-107">[in] The IP address of the method.</span></span>
 
 `data`\
-<span data-ttu-id="6d6ff-108">[out] Dane skojarzone z MethodDesc w postaci zwracanej przez wewnętrznych interfejsach API.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-108">[out] The data associated with the MethodDesc as returned from the internal APIs.</span></span>
+<span data-ttu-id="0e424-108">[out] Dane skojarzone z MethodDesc w postaci zwracanej przez wewnętrznych interfejsach API.</span><span class="sxs-lookup"><span data-stu-id="0e424-108">[out] The data associated with the MethodDesc as returned from the internal APIs.</span></span>
 
 `cRevertedRejitVersions`\
-<span data-ttu-id="6d6ff-109">[out] Numer wersji przywróconym rejit.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-109">[out] The number of reverted rejit versions.</span></span>
+<span data-ttu-id="0e424-109">[out] Numer wersji przywróconym rejit.</span><span class="sxs-lookup"><span data-stu-id="0e424-109">[out] The number of reverted rejit versions.</span></span>
 
 `rgRevertedRejitData`\
-<span data-ttu-id="6d6ff-110">[out] Dane związane z wersjami przywróconym rejit jak zwrócony z wewnętrznych interfejsach API.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-110">[out] The data associated with the reverted rejit versions as returned from the internal APIs.</span></span>
+<span data-ttu-id="0e424-110">[out] Dane związane z wersjami przywróconym rejit jak zwrócony z wewnętrznych interfejsach API.</span><span class="sxs-lookup"><span data-stu-id="0e424-110">[out] The data associated with the reverted rejit versions as returned from the internal APIs.</span></span>
 
 `pcNeededRevertedRejitData`\
-<span data-ttu-id="6d6ff-111">[out] Liczba bajtów potrzebnych do przechowania danych skojarzonych z przywróconym wersje ReJit.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-111">[out] The number of bytes required to store the data associated with the reverted ReJit versions.</span></span>
+<span data-ttu-id="0e424-111">[out] Liczba bajtów potrzebnych do przechowania danych skojarzonych z przywróconym wersje ReJit.</span><span class="sxs-lookup"><span data-stu-id="0e424-111">[out] The number of bytes required to store the data associated with the reverted ReJit versions.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="6d6ff-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6d6ff-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0e424-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0e424-112">Remarks</span></span>
 
-<span data-ttu-id="6d6ff-113">Podana metoda jest częścią `ISOSDacInterface` interfejs i odnosi się do 20 gniazda tabeli metod wirtualnych.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-113">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 20th slot of the virtual method table.</span></span> <span data-ttu-id="6d6ff-114">Aby móc ich używać, [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) musi być zdefiniowany jako 64-bitowej nieoznaczonej liczby całkowitej.</span><span class="sxs-lookup"><span data-stu-id="6d6ff-114">To be able to use them, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) must be defined as a 64-bit unsigned integer.</span></span>
+<span data-ttu-id="0e424-113">Podana metoda jest częścią `ISOSDacInterface` interfejs i odnosi się do 20 gniazda tabeli metod wirtualnych.</span><span class="sxs-lookup"><span data-stu-id="0e424-113">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 20th slot of the virtual method table.</span></span> <span data-ttu-id="0e424-114">Aby móc ich używać, [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) musi być zdefiniowany jako 64-bitowej nieoznaczonej liczby całkowitej.</span><span class="sxs-lookup"><span data-stu-id="0e424-114">To be able to use them, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) must be defined as a 64-bit unsigned integer.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="6d6ff-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6d6ff-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="0e424-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0e424-115">Requirements</span></span>
 
-<span data-ttu-id="6d6ff-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d6ff-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="6d6ff-117">**Nagłówek:** Brak</span><span class="sxs-lookup"><span data-stu-id="6d6ff-117">**Header:** None</span></span>  
-<span data-ttu-id="6d6ff-118">**Biblioteka:** Brak</span><span class="sxs-lookup"><span data-stu-id="6d6ff-118">**Library:** None</span></span>  
-<span data-ttu-id="6d6ff-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="6d6ff-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="0e424-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0e424-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="0e424-117">**Nagłówek:** Brak</span><span class="sxs-lookup"><span data-stu-id="0e424-117">**Header:** None</span></span>  
+<span data-ttu-id="0e424-118">**Biblioteka:** Brak</span><span class="sxs-lookup"><span data-stu-id="0e424-118">**Library:** None</span></span>  
+<span data-ttu-id="0e424-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0e424-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="6d6ff-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6d6ff-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e424-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0e424-120">See also</span></span>
 
-- [<span data-ttu-id="6d6ff-121">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="6d6ff-121">Debugging</span></span>](index.md)
-- [<span data-ttu-id="6d6ff-122">Interfejs ISOSDacInterface</span><span class="sxs-lookup"><span data-stu-id="6d6ff-122">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)
+- [<span data-ttu-id="0e424-121">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="0e424-121">Debugging</span></span>](index.md)
+- [<span data-ttu-id="0e424-122">Interfejs ISOSDacInterface</span><span class="sxs-lookup"><span data-stu-id="0e424-122">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)

@@ -18,36 +18,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 321298ce942b35d11a861c87cdf6b8714179ea97
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786311"
 ---
-# <a name="icordebugterminate-method"></a><span data-ttu-id="d9d4d-102">ICorDebug::Terminate — Metoda</span><span class="sxs-lookup"><span data-stu-id="d9d4d-102">ICorDebug::Terminate Method</span></span>
-<span data-ttu-id="d9d4d-103">Kończy `ICorDebug` obiektu.</span><span class="sxs-lookup"><span data-stu-id="d9d4d-103">Terminates the `ICorDebug` object.</span></span>  
+# <a name="icordebugterminate-method"></a><span data-ttu-id="224f8-102">ICorDebug::Terminate — Metoda</span><span class="sxs-lookup"><span data-stu-id="224f8-102">ICorDebug::Terminate Method</span></span>
+<span data-ttu-id="224f8-103">Kończy `ICorDebug` obiektu.</span><span class="sxs-lookup"><span data-stu-id="224f8-103">Terminates the `ICorDebug` object.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d9d4d-104">`Terminate` nie powinien być wywoływany do momentu [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) otrzymał wywołania zwrotnego dla wszystkich procesów debugowania.</span><span class="sxs-lookup"><span data-stu-id="d9d4d-104">`Terminate` should not be called until an [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) callback has been received for all processes being debugged.</span></span>  
+>  <span data-ttu-id="224f8-104">`Terminate` nie powinien być wywoływany do momentu [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) otrzymał wywołania zwrotnego dla wszystkich procesów debugowania.</span><span class="sxs-lookup"><span data-stu-id="224f8-104">`Terminate` should not be called until an [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) callback has been received for all processes being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d9d4d-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="d9d4d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="224f8-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="224f8-105">Syntax</span></span>  
   
 ```  
 HRESULT Terminate ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="d9d4d-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d9d4d-106">Remarks</span></span>  
- <span data-ttu-id="d9d4d-107">`Terminate` musi być wywoływana, gdy `ICorDebug` obiektu nie jest już potrzebny.</span><span class="sxs-lookup"><span data-stu-id="d9d4d-107">`Terminate` must be called when the `ICorDebug` object is no longer needed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="224f8-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="224f8-106">Remarks</span></span>  
+ <span data-ttu-id="224f8-107">`Terminate` musi być wywoływana, gdy `ICorDebug` obiektu nie jest już potrzebny.</span><span class="sxs-lookup"><span data-stu-id="224f8-107">`Terminate` must be called when the `ICorDebug` object is no longer needed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d9d4d-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d9d4d-108">Requirements</span></span>  
- <span data-ttu-id="d9d4d-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9d4d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="224f8-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="224f8-108">Requirements</span></span>  
+ <span data-ttu-id="224f8-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="224f8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d9d4d-110">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9d4d-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="224f8-110">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="224f8-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d9d4d-111">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9d4d-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="224f8-111">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="224f8-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d9d4d-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9d4d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="224f8-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="224f8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9d4d-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d9d4d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="224f8-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="224f8-113">See also</span></span>
 
-- [<span data-ttu-id="d9d4d-114">ICorDebug, interfejs</span><span class="sxs-lookup"><span data-stu-id="d9d4d-114">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="224f8-114">ICorDebug, interfejs</span><span class="sxs-lookup"><span data-stu-id="224f8-114">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

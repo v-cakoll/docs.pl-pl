@@ -7,23 +7,23 @@ helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
 ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981685"
 ---
-# <a name="adorners-how-to-topics"></a><span data-ttu-id="96a96-102">Moduły definiowania układu Tematy porad</span><span class="sxs-lookup"><span data-stu-id="96a96-102">Adorners How-to Topics</span></span>
-<span data-ttu-id="96a96-103">Poniższe przykłady pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework moduł definiowania układu kodu.</span><span class="sxs-lookup"><span data-stu-id="96a96-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
+# <a name="adorners-how-to-topics"></a><span data-ttu-id="d9755-102">Moduły definiowania układu Tematy porad</span><span class="sxs-lookup"><span data-stu-id="d9755-102">Adorners How-to Topics</span></span>
+<span data-ttu-id="d9755-103">Poniższe przykłady pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework moduł definiowania układu kodu.</span><span class="sxs-lookup"><span data-stu-id="d9755-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="96a96-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="96a96-104">In This Section</span></span>  
- [<span data-ttu-id="96a96-105">Implementowanie modułu definiowania układu</span><span class="sxs-lookup"><span data-stu-id="96a96-105">Implement an Adorner</span></span>](how-to-implement-an-adorner.md)  
- [<span data-ttu-id="96a96-106">Powiązywanie modułu definiowania układu z elementem</span><span class="sxs-lookup"><span data-stu-id="96a96-106">Bind an Adorner to an Element</span></span>](how-to-bind-an-adorner-to-an-element.md)  
- [<span data-ttu-id="96a96-107">Powiązywanie elementów podrzędnych panelu</span><span class="sxs-lookup"><span data-stu-id="96a96-107">Adorn the Children of a Panel</span></span>](how-to-adorn-the-children-of-a-panel.md)  
- [<span data-ttu-id="96a96-108">Usuwanie modułu definiowania układów z elementu</span><span class="sxs-lookup"><span data-stu-id="96a96-108">Remove an Adorner from an Element</span></span>](how-to-remove-an-adorner-from-an-element.md)  
- [<span data-ttu-id="96a96-109">Usuwanie wszystkich modułów definiowania układów z elementu</span><span class="sxs-lookup"><span data-stu-id="96a96-109">Remove all Adorners from an Element</span></span>](how-to-remove-all-adorners-from-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d9755-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d9755-104">In This Section</span></span>  
+ [<span data-ttu-id="d9755-105">Implementowanie modułu definiowania układu</span><span class="sxs-lookup"><span data-stu-id="d9755-105">Implement an Adorner</span></span>](how-to-implement-an-adorner.md)  
+ [<span data-ttu-id="d9755-106">Powiązywanie modułu definiowania układu z elementem</span><span class="sxs-lookup"><span data-stu-id="d9755-106">Bind an Adorner to an Element</span></span>](how-to-bind-an-adorner-to-an-element.md)  
+ [<span data-ttu-id="d9755-107">Powiązywanie elementów podrzędnych panelu</span><span class="sxs-lookup"><span data-stu-id="d9755-107">Adorn the Children of a Panel</span></span>](how-to-adorn-the-children-of-a-panel.md)  
+ [<span data-ttu-id="d9755-108">Usuwanie modułu definiowania układów z elementu</span><span class="sxs-lookup"><span data-stu-id="d9755-108">Remove an Adorner from an Element</span></span>](how-to-remove-an-adorner-from-an-element.md)  
+ [<span data-ttu-id="d9755-109">Usuwanie wszystkich modułów definiowania układów z elementu</span><span class="sxs-lookup"><span data-stu-id="d9755-109">Remove all Adorners from an Element</span></span>](how-to-remove-all-adorners-from-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="96a96-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="96a96-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d9755-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="d9755-110">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -34,4 +34,4 @@ ms.locfileid: "57359253"
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="96a96-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="96a96-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d9755-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="d9755-111">Related Sections</span></span>

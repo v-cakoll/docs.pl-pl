@@ -8,20 +8,20 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
 ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799362"
 ---
-# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="51634-102">Cyfrowy atrament Tematy porad</span><span class="sxs-lookup"><span data-stu-id="51634-102">Digital Ink How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="51634-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="51634-103">In This Section</span></span>  
- [<span data-ttu-id="51634-104">Wybieranie pisma odręcznego w niestandardowym formancie</span><span class="sxs-lookup"><span data-stu-id="51634-104">Select Ink from a Custom Control</span></span>](how-to-select-ink-from-a-custom-control.md)  
-  [<span data-ttu-id="51634-105">Dodawanie niestandardowych danych do danych pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="51634-105">Add Custom Data to Ink Data</span></span>](how-to-add-custom-data-to-ink-data.md)  
-  [<span data-ttu-id="51634-106">Usuwanie pisma odręcznego na niestandardowej kontrolce</span><span class="sxs-lookup"><span data-stu-id="51634-106">Erase Ink on a Custom Control</span></span>](how-to-erase-ink-on-a-custom-control.md)  
-  [<span data-ttu-id="51634-107">Rozpoznawanie gestów w aplikacji</span><span class="sxs-lookup"><span data-stu-id="51634-107">Recognize Application Gestures</span></span>](how-to-recognize-application-gestures.md)  
-  [<span data-ttu-id="51634-108">Pismo odręczne — przeciąganie i upuszczanie</span><span class="sxs-lookup"><span data-stu-id="51634-108">Drag and Drop Ink</span></span>](how-to-drag-and-drop-ink.md)  
-  [<span data-ttu-id="51634-109">Powiązywanie danych z elementem InkCanvas</span><span class="sxs-lookup"><span data-stu-id="51634-109">Data Bind to an InkCanvas</span></span>](how-to-data-bind-to-an-inkcanvas.md)  
-  [<span data-ttu-id="51634-110">Analizowanie pisma odręcznego za pomocą wskazówek analizy</span><span class="sxs-lookup"><span data-stu-id="51634-110">Analyze Ink with Analysis Hints</span></span>](how-to-analyze-ink-with-analysis-hints.md)  
-  [<span data-ttu-id="51634-111">Obracanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="51634-111">Rotate Ink</span></span>](how-to-rotate-ink.md)  
-  [<span data-ttu-id="51634-112">Wyłączanie elementu RealTimeStylus dla aplikacji WPF</span><span class="sxs-lookup"><span data-stu-id="51634-112">Disable the RealTimeStylus for WPF Applications</span></span>](disable-the-realtimestylus-for-wpf-applications.md)
+# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="0bedb-102">Cyfrowy atrament Tematy porad</span><span class="sxs-lookup"><span data-stu-id="0bedb-102">Digital Ink How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="0bedb-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="0bedb-103">In This Section</span></span>  
+ [<span data-ttu-id="0bedb-104">Wybieranie pisma odręcznego w niestandardowym formancie</span><span class="sxs-lookup"><span data-stu-id="0bedb-104">Select Ink from a Custom Control</span></span>](how-to-select-ink-from-a-custom-control.md)  
+  [<span data-ttu-id="0bedb-105">Dodawanie niestandardowych danych do danych pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="0bedb-105">Add Custom Data to Ink Data</span></span>](how-to-add-custom-data-to-ink-data.md)  
+  [<span data-ttu-id="0bedb-106">Usuwanie pisma odręcznego na niestandardowej kontrolce</span><span class="sxs-lookup"><span data-stu-id="0bedb-106">Erase Ink on a Custom Control</span></span>](how-to-erase-ink-on-a-custom-control.md)  
+  [<span data-ttu-id="0bedb-107">Rozpoznawanie gestów w aplikacji</span><span class="sxs-lookup"><span data-stu-id="0bedb-107">Recognize Application Gestures</span></span>](how-to-recognize-application-gestures.md)  
+  [<span data-ttu-id="0bedb-108">Pismo odręczne — przeciąganie i upuszczanie</span><span class="sxs-lookup"><span data-stu-id="0bedb-108">Drag and Drop Ink</span></span>](how-to-drag-and-drop-ink.md)  
+  [<span data-ttu-id="0bedb-109">Powiązywanie danych z elementem InkCanvas</span><span class="sxs-lookup"><span data-stu-id="0bedb-109">Data Bind to an InkCanvas</span></span>](how-to-data-bind-to-an-inkcanvas.md)  
+  [<span data-ttu-id="0bedb-110">Analizowanie pisma odręcznego za pomocą wskazówek analizy</span><span class="sxs-lookup"><span data-stu-id="0bedb-110">Analyze Ink with Analysis Hints</span></span>](how-to-analyze-ink-with-analysis-hints.md)  
+  [<span data-ttu-id="0bedb-111">Obracanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="0bedb-111">Rotate Ink</span></span>](how-to-rotate-ink.md)  
+  [<span data-ttu-id="0bedb-112">Wyłączanie elementu RealTimeStylus dla aplikacji WPF</span><span class="sxs-lookup"><span data-stu-id="0bedb-112">Disable the RealTimeStylus for WPF Applications</span></span>](disable-the-realtimestylus-for-wpf-applications.md)

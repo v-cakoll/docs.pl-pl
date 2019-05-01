@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: KrzysztofCwalina
 ms.openlocfilehash: d0b16530863b009010383c8739c9512738dfdffd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026474"
 ---
-# <a name="common-design-patterns"></a><span data-ttu-id="bd003-102">Często używane wzorce projektowe</span><span class="sxs-lookup"><span data-stu-id="bd003-102">Common Design Patterns</span></span>
-<span data-ttu-id="bd003-103">Istnieje wiele książek na wzorce oprogramowania, wzorzec, języków i antywzorców, które rozwiązują bardzo szerokie zagadnienie, wzorców.</span><span class="sxs-lookup"><span data-stu-id="bd003-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="bd003-104">W związku z tym ten rozdział zawiera wytyczne i dyskusji związanych z bardzo ograniczony zestaw wzorców, które są często stosowane w projektowaniu interfejsów API programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bd003-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
+# <a name="common-design-patterns"></a><span data-ttu-id="f0517-102">Często używane wzorce projektowe</span><span class="sxs-lookup"><span data-stu-id="f0517-102">Common Design Patterns</span></span>
+<span data-ttu-id="f0517-103">Istnieje wiele książek na wzorce oprogramowania, wzorzec, języków i antywzorców, które rozwiązują bardzo szerokie zagadnienie, wzorców.</span><span class="sxs-lookup"><span data-stu-id="f0517-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="f0517-104">W związku z tym ten rozdział zawiera wytyczne i dyskusji związanych z bardzo ograniczony zestaw wzorców, które są często stosowane w projektowaniu interfejsów API programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f0517-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bd003-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="bd003-105">In This Section</span></span>  
- [<span data-ttu-id="bd003-106">Właściwości zależności</span><span class="sxs-lookup"><span data-stu-id="bd003-106">Dependency Properties</span></span>](../../../docs/standard/design-guidelines/dependency-properties.md)  
- [<span data-ttu-id="bd003-107">Wzorzec Dispose</span><span class="sxs-lookup"><span data-stu-id="bd003-107">Dispose Pattern</span></span>](../../../docs/standard/design-guidelines/dispose-pattern.md)  
- <span data-ttu-id="bd003-108">*Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*</span><span class="sxs-lookup"><span data-stu-id="bd003-108">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f0517-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="f0517-105">In This Section</span></span>  
+ [<span data-ttu-id="f0517-106">Właściwości zależności</span><span class="sxs-lookup"><span data-stu-id="f0517-106">Dependency Properties</span></span>](../../../docs/standard/design-guidelines/dependency-properties.md)  
+ [<span data-ttu-id="f0517-107">Wzorzec Dispose</span><span class="sxs-lookup"><span data-stu-id="f0517-107">Dispose Pattern</span></span>](../../../docs/standard/design-guidelines/dispose-pattern.md)  
+ <span data-ttu-id="f0517-108">*Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*</span><span class="sxs-lookup"><span data-stu-id="f0517-108">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="bd003-109">*Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*</span><span class="sxs-lookup"><span data-stu-id="bd003-109">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="f0517-109">*Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*</span><span class="sxs-lookup"><span data-stu-id="f0517-109">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd003-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bd003-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0517-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f0517-110">See also</span></span>
 
-- [<span data-ttu-id="bd003-111">Struktura — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="bd003-111">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="f0517-111">Struktura — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="f0517-111">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

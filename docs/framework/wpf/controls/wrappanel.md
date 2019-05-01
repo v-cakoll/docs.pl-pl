@@ -9,16 +9,16 @@ helpviewer_keywords:
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
 ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023796"
 ---
-# <a name="wrappanel"></a><span data-ttu-id="922cc-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="922cc-102">WrapPanel</span></span>
-<span data-ttu-id="922cc-103"><xref:System.Windows.Controls.WrapPanel> Element umieszcza elementy podrzędne na kolejnych pozycjach od lewej do prawej, istotnej zawartości do następnego wiersza na krawędzi jego zawierającego pole.</span><span class="sxs-lookup"><span data-stu-id="922cc-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
+# <a name="wrappanel"></a><span data-ttu-id="546c6-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="546c6-102">WrapPanel</span></span>
+<span data-ttu-id="546c6-103"><xref:System.Windows.Controls.WrapPanel> Element umieszcza elementy podrzędne na kolejnych pozycjach od lewej do prawej, istotnej zawartości do następnego wiersza na krawędzi jego zawierającego pole.</span><span class="sxs-lookup"><span data-stu-id="546c6-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="922cc-104">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="922cc-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="546c6-104">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="546c6-104">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -33,9 +33,9 @@ ms.locfileid: "57362152"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="922cc-105">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="922cc-105">Related Sections</span></span>  
- [<span data-ttu-id="922cc-106">Układ</span><span class="sxs-lookup"><span data-stu-id="922cc-106">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="546c6-105">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="546c6-105">Related Sections</span></span>  
+ [<span data-ttu-id="546c6-106">Układ</span><span class="sxs-lookup"><span data-stu-id="546c6-106">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="922cc-107">Przewodnik: Mój pierwszy aplikacji klasycznej WPF</span><span class="sxs-lookup"><span data-stu-id="922cc-107">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="546c6-107">Przewodnik: Mój pierwszy aplikacji klasycznej WPF</span><span class="sxs-lookup"><span data-stu-id="546c6-107">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="922cc-108">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="922cc-108">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="546c6-108">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="546c6-108">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

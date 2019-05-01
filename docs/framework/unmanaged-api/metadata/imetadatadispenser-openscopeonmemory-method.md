@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 732ec6cbb2158037252bc2ea4bf406f47f11da9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050197"
 ---
-# <a name="imetadatadispenseropenscopeonmemory-method"></a><span data-ttu-id="4e999-102">IMetaDataDispenser::OpenScopeOnMemory — Metoda</span><span class="sxs-lookup"><span data-stu-id="4e999-102">IMetaDataDispenser::OpenScopeOnMemory Method</span></span>
-<span data-ttu-id="4e999-103">Zostanie otwarty obszar pamięci, który zawiera istniejące metadane.</span><span class="sxs-lookup"><span data-stu-id="4e999-103">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="4e999-104">Oznacza to ta metoda powoduje otwarcie określonego obszaru pamięci, w którym istniejących danych jest traktowana jako metadanych.</span><span class="sxs-lookup"><span data-stu-id="4e999-104">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>  
+# <a name="imetadatadispenseropenscopeonmemory-method"></a><span data-ttu-id="f8e07-102">IMetaDataDispenser::OpenScopeOnMemory — Metoda</span><span class="sxs-lookup"><span data-stu-id="f8e07-102">IMetaDataDispenser::OpenScopeOnMemory Method</span></span>
+<span data-ttu-id="f8e07-103">Zostanie otwarty obszar pamięci, który zawiera istniejące metadane.</span><span class="sxs-lookup"><span data-stu-id="f8e07-103">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="f8e07-104">Oznacza to ta metoda powoduje otwarcie określonego obszaru pamięci, w którym istniejących danych jest traktowana jako metadanych.</span><span class="sxs-lookup"><span data-stu-id="f8e07-104">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e999-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="4e999-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8e07-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="f8e07-105">Syntax</span></span>  
   
 ```  
 HRESULT OpenScopeOnMemory (  
@@ -39,47 +39,47 @@ HRESULT OpenScopeOnMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4e999-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="4e999-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8e07-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="f8e07-106">Parameters</span></span>  
  `pData`  
- <span data-ttu-id="4e999-107">[in] Wskaźnik Określa adres początkowy obszaru pamięci.</span><span class="sxs-lookup"><span data-stu-id="4e999-107">[in] A pointer that specifies the starting address of the memory area.</span></span>  
+ <span data-ttu-id="f8e07-107">[in] Wskaźnik Określa adres początkowy obszaru pamięci.</span><span class="sxs-lookup"><span data-stu-id="f8e07-107">[in] A pointer that specifies the starting address of the memory area.</span></span>  
   
  `cbData`  
- <span data-ttu-id="4e999-108">[in] Rozmiar obszaru pamięci w bajtach.</span><span class="sxs-lookup"><span data-stu-id="4e999-108">[in] The size of the memory area, in bytes.</span></span>  
+ <span data-ttu-id="f8e07-108">[in] Rozmiar obszaru pamięci w bajtach.</span><span class="sxs-lookup"><span data-stu-id="f8e07-108">[in] The size of the memory area, in bytes.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="4e999-109">[in] Wartość [coropenflags —](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) wyliczeniu, aby określić tryb (Odczyt, zapis i tak dalej) otwierania.</span><span class="sxs-lookup"><span data-stu-id="4e999-109">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span></span>  
+ <span data-ttu-id="f8e07-109">[in] Wartość [coropenflags —](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) wyliczeniu, aby określić tryb (Odczyt, zapis i tak dalej) otwierania.</span><span class="sxs-lookup"><span data-stu-id="f8e07-109">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span></span>  
   
  `riid`  
- <span data-ttu-id="4e999-110">[in] IID interfejsu żądaną metadanych ma zostać zwrócona; obiekt wywołujący użyje interfejsu do zaimportowania (odczyt) lub emitować metadane (Zapisz).</span><span class="sxs-lookup"><span data-stu-id="4e999-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span></span>  
+ <span data-ttu-id="f8e07-110">[in] IID interfejsu żądaną metadanych ma zostać zwrócona; obiekt wywołujący użyje interfejsu do zaimportowania (odczyt) lub emitować metadane (Zapisz).</span><span class="sxs-lookup"><span data-stu-id="f8e07-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span></span>  
   
- <span data-ttu-id="4e999-111">Wartość `riid` należy określić jeden z interfejsów "import" lub "Dodaj".</span><span class="sxs-lookup"><span data-stu-id="4e999-111">The value of `riid` must specify one of the "import" or "emit" interfaces.</span></span> <span data-ttu-id="4e999-112">Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 lub IID_IMetaDataImport2.</span><span class="sxs-lookup"><span data-stu-id="4e999-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span></span>  
+ <span data-ttu-id="f8e07-111">Wartość `riid` należy określić jeden z interfejsów "import" lub "Dodaj".</span><span class="sxs-lookup"><span data-stu-id="f8e07-111">The value of `riid` must specify one of the "import" or "emit" interfaces.</span></span> <span data-ttu-id="f8e07-112">Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 lub IID_IMetaDataImport2.</span><span class="sxs-lookup"><span data-stu-id="f8e07-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="4e999-113">[out] Wskaźnik do interfejsu zwrócone.</span><span class="sxs-lookup"><span data-stu-id="4e999-113">[out] The pointer to the returned interface.</span></span>  
+ <span data-ttu-id="f8e07-113">[out] Wskaźnik do interfejsu zwrócone.</span><span class="sxs-lookup"><span data-stu-id="f8e07-113">[out] The pointer to the returned interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4e999-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4e999-114">Remarks</span></span>  
- <span data-ttu-id="4e999-115">Kopia w pamięci metadanych mogą być przeszukiwane przy użyciu metod z jednego z interfejsów "import" lub dodane do przy użyciu metod z jednego z interfejsów "Dodaj".</span><span class="sxs-lookup"><span data-stu-id="4e999-115">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8e07-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f8e07-114">Remarks</span></span>  
+ <span data-ttu-id="f8e07-115">Kopia w pamięci metadanych mogą być przeszukiwane przy użyciu metod z jednego z interfejsów "import" lub dodane do przy użyciu metod z jednego z interfejsów "Dodaj".</span><span class="sxs-lookup"><span data-stu-id="f8e07-115">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span></span>  
   
- <span data-ttu-id="4e999-116">`OpenScopeOnMemory` Metoda jest podobna do [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) metody, z tą różnicą, że metadane zainteresowania już istnieje w pamięci, a nie w pliku na dysku.</span><span class="sxs-lookup"><span data-stu-id="4e999-116">The `OpenScopeOnMemory` method is similar to the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, except that the metadata of interest already exists in memory, rather than in a file on disk.</span></span>  
+ <span data-ttu-id="f8e07-116">`OpenScopeOnMemory` Metoda jest podobna do [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) metody, z tą różnicą, że metadane zainteresowania już istnieje w pamięci, a nie w pliku na dysku.</span><span class="sxs-lookup"><span data-stu-id="f8e07-116">The `OpenScopeOnMemory` method is similar to the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, except that the metadata of interest already exists in memory, rather than in a file on disk.</span></span>  
   
- <span data-ttu-id="4e999-117">Jeśli obszar pamięci, docelowy nie zawiera wspólnych metadanych języka wspólnego (CLR) `OpenScopeOnMemory` metoda zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="4e999-117">If the target area of memory does not contain common language runtime (CLR) metadata, the `OpenScopeOnMemory` method will fail.</span></span>  
+ <span data-ttu-id="f8e07-117">Jeśli obszar pamięci, docelowy nie zawiera wspólnych metadanych języka wspólnego (CLR) `OpenScopeOnMemory` metoda zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="f8e07-117">If the target area of memory does not contain common language runtime (CLR) metadata, the `OpenScopeOnMemory` method will fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4e999-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4e999-118">Requirements</span></span>  
- <span data-ttu-id="4e999-119">**Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4e999-119">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8e07-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f8e07-118">Requirements</span></span>  
+ <span data-ttu-id="f8e07-119">**Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8e07-119">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4e999-120">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="4e999-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f8e07-120">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="f8e07-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4e999-121">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4e999-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f8e07-121">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f8e07-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4e999-122">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e999-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f8e07-122">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8e07-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e999-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4e999-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8e07-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f8e07-123">See also</span></span>
 
-- [<span data-ttu-id="4e999-124">IMetaDataDispenser, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e999-124">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [<span data-ttu-id="4e999-125">IMetaDataDispenserEx, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e999-125">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="4e999-126">IMetaDataAssemblyEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e999-126">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="4e999-127">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e999-127">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="4e999-128">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e999-128">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="4e999-129">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e999-129">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="4e999-130">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e999-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="4e999-131">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="4e999-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="f8e07-124">IMetaDataDispenser, interfejs</span><span class="sxs-lookup"><span data-stu-id="f8e07-124">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="f8e07-125">IMetaDataDispenserEx, interfejs</span><span class="sxs-lookup"><span data-stu-id="f8e07-125">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="f8e07-126">IMetaDataAssemblyEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="f8e07-126">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="f8e07-127">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="f8e07-127">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="f8e07-128">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="f8e07-128">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="f8e07-129">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="f8e07-129">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="f8e07-130">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="f8e07-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f8e07-131">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="f8e07-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

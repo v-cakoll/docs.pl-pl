@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29fb23dce20883e2a2a894972cc7c397c04517a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995985"
 ---
-# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="998c9-102">ICorDebugErrorInfoEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="998c9-102">ICorDebugErrorInfoEnum::Next Method</span></span>
-<span data-ttu-id="998c9-103">`ICorDebugErrorInfoEnum::Next` jest przestarzały.</span><span class="sxs-lookup"><span data-stu-id="998c9-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="998c9-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="998c9-104">Do not call this method.</span></span>  
+# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="37425-102">ICorDebugErrorInfoEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="37425-102">ICorDebugErrorInfoEnum::Next Method</span></span>
+<span data-ttu-id="37425-103">`ICorDebugErrorInfoEnum::Next` jest przestarzały.</span><span class="sxs-lookup"><span data-stu-id="37425-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="37425-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="37425-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="998c9-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="998c9-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37425-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="37425-105">See also</span></span>
 
-- [<span data-ttu-id="998c9-106">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="998c9-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="37425-106">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="37425-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

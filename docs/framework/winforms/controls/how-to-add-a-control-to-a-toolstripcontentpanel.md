@@ -8,31 +8,31 @@ helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
 ms.openlocfilehash: d228300e00a5c2be9cf530cd921865a01accab05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011219"
 ---
-# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a><span data-ttu-id="9e465-102">Instrukcje: dodawanie kontrolki do elementu ToolStripContentPanel</span><span class="sxs-lookup"><span data-stu-id="9e465-102">How to: Add a Control to a ToolStripContentPanel</span></span>
-<span data-ttu-id="9e465-103">Możesz programowo dodać co najmniej jedną kontrolkę do <xref:System.Windows.Forms.ToolStripContentPanel>.</span><span class="sxs-lookup"><span data-stu-id="9e465-103">You can programmatically add one or more controls to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
+# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a><span data-ttu-id="87219-102">Instrukcje: dodawanie kontrolki do elementu ToolStripContentPanel</span><span class="sxs-lookup"><span data-stu-id="87219-102">How to: Add a Control to a ToolStripContentPanel</span></span>
+<span data-ttu-id="87219-103">Możesz programowo dodać co najmniej jedną kontrolkę do <xref:System.Windows.Forms.ToolStripContentPanel>.</span><span class="sxs-lookup"><span data-stu-id="87219-103">You can programmatically add one or more controls to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9e465-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="9e465-104">Example</span></span>  
- <span data-ttu-id="9e465-105">Poniższy przykład kodu demonstruje sposób dodawania <xref:System.Windows.Forms.RichTextBox> do <xref:System.Windows.Forms.ToolStripContentPanel>.</span><span class="sxs-lookup"><span data-stu-id="9e465-105">The following code example demonstrates how to add a <xref:System.Windows.Forms.RichTextBox> to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
+## <a name="example"></a><span data-ttu-id="87219-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="87219-104">Example</span></span>  
+ <span data-ttu-id="87219-105">Poniższy przykład kodu demonstruje sposób dodawania <xref:System.Windows.Forms.RichTextBox> do <xref:System.Windows.Forms.ToolStripContentPanel>.</span><span class="sxs-lookup"><span data-stu-id="87219-105">The following code example demonstrates how to add a <xref:System.Windows.Forms.RichTextBox> to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStripContainer#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStripContainer#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9e465-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="9e465-106">Compiling the Code</span></span>  
- <span data-ttu-id="9e465-107">Poniższy przykład kodu wymaga:</span><span class="sxs-lookup"><span data-stu-id="9e465-107">This code example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="87219-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="87219-106">Compiling the Code</span></span>  
+ <span data-ttu-id="87219-107">Poniższy przykład kodu wymaga:</span><span class="sxs-lookup"><span data-stu-id="87219-107">This code example requires:</span></span>  
   
--   <span data-ttu-id="9e465-108">Odwołania do zestawów systemu, dane systemowe i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="9e465-108">References to the System, System.Data and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="87219-108">Odwołania do zestawów systemu, dane systemowe i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="87219-108">References to the System, System.Data and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="9e465-109">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="9e465-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="9e465-110">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="9e465-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>
+ <span data-ttu-id="87219-109">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="87219-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="87219-110">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="87219-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="9e465-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9e465-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87219-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="87219-111">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStripContentPanel>
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [<span data-ttu-id="9e465-112">ToolStripContainer, kontrolka</span><span class="sxs-lookup"><span data-stu-id="9e465-112">ToolStripContainer Control</span></span>](toolstripcontainer-control.md)
-- [<span data-ttu-id="9e465-113">ToolStrip, kontrolka</span><span class="sxs-lookup"><span data-stu-id="9e465-113">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="87219-112">ToolStripContainer, kontrolka</span><span class="sxs-lookup"><span data-stu-id="87219-112">ToolStripContainer Control</span></span>](toolstripcontainer-control.md)
+- [<span data-ttu-id="87219-113">ToolStrip, kontrolka</span><span class="sxs-lookup"><span data-stu-id="87219-113">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)

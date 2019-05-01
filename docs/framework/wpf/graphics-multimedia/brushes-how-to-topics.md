@@ -8,36 +8,36 @@ helpviewer_keywords:
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
 ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010218"
 ---
-# <a name="brushes-how-to-topics"></a><span data-ttu-id="3981e-102">Pędzle Tematy porad</span><span class="sxs-lookup"><span data-stu-id="3981e-102">Brushes How-to Topics</span></span>
-<span data-ttu-id="3981e-103">W poniższych tematach pokazano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzli w celu rysowania zawartości ekranu.</span><span class="sxs-lookup"><span data-stu-id="3981e-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
+# <a name="brushes-how-to-topics"></a><span data-ttu-id="457f1-102">Pędzle Tematy porad</span><span class="sxs-lookup"><span data-stu-id="457f1-102">Brushes How-to Topics</span></span>
+<span data-ttu-id="457f1-103">W poniższych tematach pokazano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzli w celu rysowania zawartości ekranu.</span><span class="sxs-lookup"><span data-stu-id="457f1-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3981e-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="3981e-104">In This Section</span></span>  
- [<span data-ttu-id="3981e-105">Animowanie koloru lub nieprzezroczystości elementu SolidColorBrush</span><span class="sxs-lookup"><span data-stu-id="3981e-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [<span data-ttu-id="3981e-106">Animowanie położenia i koloru zatrzymania gradientu</span><span class="sxs-lookup"><span data-stu-id="3981e-106">Animate the Position or Color of a Gradient Stop</span></span>](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [<span data-ttu-id="3981e-107">Tworzenie odbicia</span><span class="sxs-lookup"><span data-stu-id="3981e-107">Create a Reflection</span></span>](how-to-create-a-reflection.md)  
- [<span data-ttu-id="3981e-108">Tworzenie różnych wzorów kafelkowych z użyciem elementu TileBrush</span><span class="sxs-lookup"><span data-stu-id="3981e-108">Create Different Tile Patterns with a TileBrush</span></span>](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [<span data-ttu-id="3981e-109">Definiowanie pióra</span><span class="sxs-lookup"><span data-stu-id="3981e-109">Define a Pen</span></span>](how-to-define-a-pen.md)  
- [<span data-ttu-id="3981e-110">Malowanie obszaru za pomocą rysowania</span><span class="sxs-lookup"><span data-stu-id="3981e-110">Paint an Area with a Drawing</span></span>](how-to-paint-an-area-with-a-drawing.md)  
- [<span data-ttu-id="3981e-111">Malowanie obszaru za pomocą obrazu</span><span class="sxs-lookup"><span data-stu-id="3981e-111">Paint an Area with an Image</span></span>](how-to-paint-an-area-with-an-image.md)  
- [<span data-ttu-id="3981e-112">Malowanie obszaru gradientem liniowym</span><span class="sxs-lookup"><span data-stu-id="3981e-112">Paint an Area with a Linear Gradient</span></span>](how-to-paint-an-area-with-a-linear-gradient.md)  
- [<span data-ttu-id="3981e-113">Malowanie obszaru gradientem promieniowym</span><span class="sxs-lookup"><span data-stu-id="3981e-113">Paint an Area with a Radial Gradient</span></span>](how-to-paint-an-area-with-a-radial-gradient.md)  
- [<span data-ttu-id="3981e-114">Malowanie obszaru jednolitym kolorem</span><span class="sxs-lookup"><span data-stu-id="3981e-114">Paint an Area with a Solid Color</span></span>](how-to-paint-an-area-with-a-solid-color.md)  
- [<span data-ttu-id="3981e-115">Malowanie obszaru pędzlem systemowym</span><span class="sxs-lookup"><span data-stu-id="3981e-115">Paint an Area with a System Brush</span></span>](how-to-paint-an-area-with-a-system-brush.md)  
- [<span data-ttu-id="3981e-116">Malowanie obszaru za pomocą wideo</span><span class="sxs-lookup"><span data-stu-id="3981e-116">Paint an Area with a Video</span></span>](how-to-paint-an-area-with-a-video.md)  
- [<span data-ttu-id="3981e-117">Malowanie obszaru za pomocą wizualizacji</span><span class="sxs-lookup"><span data-stu-id="3981e-117">Paint an Area with a Visual</span></span>](how-to-paint-an-area-with-a-visual.md)  
- [<span data-ttu-id="3981e-118">Zachowywanie formatu obrazu użytego jako tło</span><span class="sxs-lookup"><span data-stu-id="3981e-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [<span data-ttu-id="3981e-119">Ustawianie wyrównania elementu TileBrush w poziomie i pionie</span><span class="sxs-lookup"><span data-stu-id="3981e-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [<span data-ttu-id="3981e-120">Ustawianie rozmiaru kafelka dla elementu TileBrush</span><span class="sxs-lookup"><span data-stu-id="3981e-120">Set the Tile Size for a TileBrush</span></span>](how-to-set-the-tile-size-for-a-tilebrush.md)  
- [<span data-ttu-id="3981e-121">Przekształcanie pędzla</span><span class="sxs-lookup"><span data-stu-id="3981e-121">Transform a Brush</span></span>](how-to-transform-a-brush.md)  
- [<span data-ttu-id="3981e-122">Używanie kolorów systemowych w gradiencie</span><span class="sxs-lookup"><span data-stu-id="3981e-122">Use System Colors in a Gradient</span></span>](how-to-use-system-colors-in-a-gradient.md)  
+## <a name="in-this-section"></a><span data-ttu-id="457f1-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="457f1-104">In This Section</span></span>  
+ [<span data-ttu-id="457f1-105">Animowanie koloru lub nieprzezroczystości elementu SolidColorBrush</span><span class="sxs-lookup"><span data-stu-id="457f1-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [<span data-ttu-id="457f1-106">Animowanie położenia i koloru zatrzymania gradientu</span><span class="sxs-lookup"><span data-stu-id="457f1-106">Animate the Position or Color of a Gradient Stop</span></span>](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [<span data-ttu-id="457f1-107">Tworzenie odbicia</span><span class="sxs-lookup"><span data-stu-id="457f1-107">Create a Reflection</span></span>](how-to-create-a-reflection.md)  
+ [<span data-ttu-id="457f1-108">Tworzenie różnych wzorów kafelkowych z użyciem elementu TileBrush</span><span class="sxs-lookup"><span data-stu-id="457f1-108">Create Different Tile Patterns with a TileBrush</span></span>](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [<span data-ttu-id="457f1-109">Definiowanie pióra</span><span class="sxs-lookup"><span data-stu-id="457f1-109">Define a Pen</span></span>](how-to-define-a-pen.md)  
+ [<span data-ttu-id="457f1-110">Malowanie obszaru za pomocą rysowania</span><span class="sxs-lookup"><span data-stu-id="457f1-110">Paint an Area with a Drawing</span></span>](how-to-paint-an-area-with-a-drawing.md)  
+ [<span data-ttu-id="457f1-111">Malowanie obszaru za pomocą obrazu</span><span class="sxs-lookup"><span data-stu-id="457f1-111">Paint an Area with an Image</span></span>](how-to-paint-an-area-with-an-image.md)  
+ [<span data-ttu-id="457f1-112">Malowanie obszaru gradientem liniowym</span><span class="sxs-lookup"><span data-stu-id="457f1-112">Paint an Area with a Linear Gradient</span></span>](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [<span data-ttu-id="457f1-113">Malowanie obszaru gradientem promieniowym</span><span class="sxs-lookup"><span data-stu-id="457f1-113">Paint an Area with a Radial Gradient</span></span>](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [<span data-ttu-id="457f1-114">Malowanie obszaru jednolitym kolorem</span><span class="sxs-lookup"><span data-stu-id="457f1-114">Paint an Area with a Solid Color</span></span>](how-to-paint-an-area-with-a-solid-color.md)  
+ [<span data-ttu-id="457f1-115">Malowanie obszaru pędzlem systemowym</span><span class="sxs-lookup"><span data-stu-id="457f1-115">Paint an Area with a System Brush</span></span>](how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="457f1-116">Malowanie obszaru za pomocą wideo</span><span class="sxs-lookup"><span data-stu-id="457f1-116">Paint an Area with a Video</span></span>](how-to-paint-an-area-with-a-video.md)  
+ [<span data-ttu-id="457f1-117">Malowanie obszaru za pomocą wizualizacji</span><span class="sxs-lookup"><span data-stu-id="457f1-117">Paint an Area with a Visual</span></span>](how-to-paint-an-area-with-a-visual.md)  
+ [<span data-ttu-id="457f1-118">Zachowywanie formatu obrazu użytego jako tło</span><span class="sxs-lookup"><span data-stu-id="457f1-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [<span data-ttu-id="457f1-119">Ustawianie wyrównania elementu TileBrush w poziomie i pionie</span><span class="sxs-lookup"><span data-stu-id="457f1-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [<span data-ttu-id="457f1-120">Ustawianie rozmiaru kafelka dla elementu TileBrush</span><span class="sxs-lookup"><span data-stu-id="457f1-120">Set the Tile Size for a TileBrush</span></span>](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [<span data-ttu-id="457f1-121">Przekształcanie pędzla</span><span class="sxs-lookup"><span data-stu-id="457f1-121">Transform a Brush</span></span>](how-to-transform-a-brush.md)  
+ [<span data-ttu-id="457f1-122">Używanie kolorów systemowych w gradiencie</span><span class="sxs-lookup"><span data-stu-id="457f1-122">Use System Colors in a Gradient</span></span>](how-to-use-system-colors-in-a-gradient.md)  
   
-## <a name="reference"></a><span data-ttu-id="3981e-123">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="3981e-123">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="457f1-123">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="457f1-123">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -50,7 +50,7 @@ ms.locfileid: "57373260"
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="3981e-124">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="3981e-124">Related Sections</span></span>  
- [<span data-ttu-id="3981e-125">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="3981e-125">Graphics and Multimedia</span></span>](index.md)  
+## <a name="related-sections"></a><span data-ttu-id="457f1-124">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="457f1-124">Related Sections</span></span>  
+ [<span data-ttu-id="457f1-125">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="457f1-125">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="3981e-126">Renderowanie grafiki WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="3981e-126">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="457f1-126">Renderowanie grafiki WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="457f1-126">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

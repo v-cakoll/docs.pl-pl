@@ -8,18 +8,18 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
 ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010566"
 ---
-# <a name="digital-ink"></a><span data-ttu-id="71c4e-102">Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="71c4e-102">Digital Ink</span></span>
-<span data-ttu-id="71c4e-103">W tej sekcji omówiono używanie cyfrowy atrament w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="71c4e-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="71c4e-104">Tradycyjnie znalezione tylko w zestawie SDK komputerze typu Tablet, cyfrowy atrament jest teraz dostępna w obszarach podstawowych Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="71c4e-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="71c4e-105">Oznacza to, że w pełni funkcjonalnego komputerów typu Tablet aplikacji mogą teraz tworzyć, korzystając z możliwości systemu Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="71c4e-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
+# <a name="digital-ink"></a><span data-ttu-id="41703-102">Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="41703-102">Digital Ink</span></span>
+<span data-ttu-id="41703-103">W tej sekcji omówiono używanie cyfrowy atrament w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="41703-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="41703-104">Tradycyjnie znalezione tylko w zestawie SDK komputerze typu Tablet, cyfrowy atrament jest teraz dostępna w obszarach podstawowych Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="41703-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="41703-105">Oznacza to, że w pełni funkcjonalnego komputerów typu Tablet aplikacji mogą teraz tworzyć, korzystając z możliwości systemu Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="41703-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="71c4e-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="71c4e-106">In This Section</span></span>  
- [<span data-ttu-id="71c4e-107">Omówienia</span><span class="sxs-lookup"><span data-stu-id="71c4e-107">Overviews</span></span>](digital-ink-overviews.md)  
-  [<span data-ttu-id="71c4e-108">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="71c4e-108">How-to Topics</span></span>](digital-ink-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="41703-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="41703-106">In This Section</span></span>  
+ [<span data-ttu-id="41703-107">Omówienia</span><span class="sxs-lookup"><span data-stu-id="41703-107">Overviews</span></span>](digital-ink-overviews.md)  
+  [<span data-ttu-id="41703-108">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="41703-108">How-to Topics</span></span>](digital-ink-how-to-topics.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="71c4e-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="71c4e-109">Related Sections</span></span>  
- [<span data-ttu-id="71c4e-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="71c4e-110">Windows Presentation Foundation</span></span>](../index.md)
+## <a name="related-sections"></a><span data-ttu-id="41703-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="41703-109">Related Sections</span></span>  
+ [<span data-ttu-id="41703-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="41703-110">Windows Presentation Foundation</span></span>](../index.md)

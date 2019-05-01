@@ -14,26 +14,26 @@ helpviewer_keywords:
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
 ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013000"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="bdcbf-102">Instrukcje: pokazywanie listy czcionek przy użyciu składnika FontDialog</span><span class="sxs-lookup"><span data-stu-id="bdcbf-102">How to: Show a Font List with the FontDialog Component</span></span>
-<span data-ttu-id="bdcbf-103">[FontDialog](fontdialog-component-windows-forms.md) składnika pozwala użytkownikom na wybór czcionki, a także zmienić jego aspektach wyświetlania, takie jak rozmiar i grubość.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-103">The [FontDialog](fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="c6aaa-102">Instrukcje: pokazywanie listy czcionek przy użyciu składnika FontDialog</span><span class="sxs-lookup"><span data-stu-id="c6aaa-102">How to: Show a Font List with the FontDialog Component</span></span>
+<span data-ttu-id="c6aaa-103">[FontDialog](fontdialog-component-windows-forms.md) składnika pozwala użytkownikom na wybór czcionki, a także zmienić jego aspektach wyświetlania, takie jak rozmiar i grubość.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-103">The [FontDialog](fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
   
- <span data-ttu-id="bdcbf-104">Czcionka zaznaczona w oknie dialogowym są zwracane w <xref:System.Windows.Forms.FontDialog.Font%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="bdcbf-105">W związku z tym wykorzystując czcionkę wybrane przez użytkownika jest równie proste jak odczytywanie właściwości.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
+ <span data-ttu-id="c6aaa-104">Czcionka zaznaczona w oknie dialogowym są zwracane w <xref:System.Windows.Forms.FontDialog.Font%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="c6aaa-105">W związku z tym wykorzystując czcionkę wybrane przez użytkownika jest równie proste jak odczytywanie właściwości.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
   
-### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="bdcbf-106">Aby wybrać właściwości czcionki przy użyciu składnika FontDialog</span><span class="sxs-lookup"><span data-stu-id="bdcbf-106">To select font properties using the FontDialog Component</span></span>  
+### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="c6aaa-106">Aby wybrać właściwości czcionki przy użyciu składnika FontDialog</span><span class="sxs-lookup"><span data-stu-id="c6aaa-106">To select font properties using the FontDialog Component</span></span>  
   
-1. <span data-ttu-id="bdcbf-107">Wyświetlane przy użyciu okno dialogowe <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
+1. <span data-ttu-id="c6aaa-107">Wyświetlane przy użyciu okno dialogowe <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
-2. <span data-ttu-id="bdcbf-108">Użyj <xref:System.Windows.Forms.DialogResult> właściwości w celu określenia, jak okno dialogowe zostało zamknięte.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
+2. <span data-ttu-id="c6aaa-108">Użyj <xref:System.Windows.Forms.DialogResult> właściwości w celu określenia, jak okno dialogowe zostało zamknięte.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
   
-3. <span data-ttu-id="bdcbf-109">Użyj <xref:System.Windows.Forms.FontDialog.Font%2A> właściwość umożliwiająca ustawienie wymaganej czcionki.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
+3. <span data-ttu-id="c6aaa-109">Użyj <xref:System.Windows.Forms.FontDialog.Font%2A> właściwość umożliwiająca ustawienie wymaganej czcionki.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
   
-     <span data-ttu-id="bdcbf-110">W poniższym przykładzie <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> zostanie otwarty program obsługi zdarzeń <xref:System.Windows.Forms.FontDialog> składnika.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="bdcbf-111">Gdy czcionka jest wybrana, a użytkownik kliknie **OK**, <xref:System.Windows.Forms.FontDialog.Font%2A> właściwość <xref:System.Windows.Forms.TextBox> formant, który znajduje się w formularzu jest ustawiona na wybranej czcionki.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="bdcbf-112">W przykładzie założono, formularz ma <xref:System.Windows.Forms.Button> kontroli <xref:System.Windows.Forms.TextBox> kontroli i <xref:System.Windows.Forms.FontDialog> składnika.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
+     <span data-ttu-id="c6aaa-110">W poniższym przykładzie <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> zostanie otwarty program obsługi zdarzeń <xref:System.Windows.Forms.FontDialog> składnika.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="c6aaa-111">Gdy czcionka jest wybrana, a użytkownik kliknie **OK**, <xref:System.Windows.Forms.FontDialog.Font%2A> właściwość <xref:System.Windows.Forms.TextBox> formant, który znajduje się w formularzu jest ustawiona na wybranej czcionki.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="c6aaa-112">W przykładzie założono, formularz ma <xref:System.Windows.Forms.Button> kontroli <xref:System.Windows.Forms.TextBox> kontroli i <xref:System.Windows.Forms.FontDialog> składnika.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -66,7 +66,7 @@ ms.locfileid: "59307330"
        }  
     ```  
   
-     <span data-ttu-id="bdcbf-113">(Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="bdcbf-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="c6aaa-113">(Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="c6aaa-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -76,7 +76,7 @@ ms.locfileid: "59307330"
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="bdcbf-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bdcbf-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6aaa-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c6aaa-114">See also</span></span>
 
 - <xref:System.Windows.Forms.FontDialog>
-- [<span data-ttu-id="bdcbf-115">FontDialog, składnik</span><span class="sxs-lookup"><span data-stu-id="bdcbf-115">FontDialog Component</span></span>](fontdialog-component-windows-forms.md)
+- [<span data-ttu-id="c6aaa-115">FontDialog, składnik</span><span class="sxs-lookup"><span data-stu-id="c6aaa-115">FontDialog Component</span></span>](fontdialog-component-windows-forms.md)

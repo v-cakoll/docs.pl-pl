@@ -5,11 +5,11 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019129"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Samouczek: Umożliwia strukturze ML.NET w scenariuszu klasyfikacji wieloklasowej klasyfikacji problemów w usłudze GitHub
 

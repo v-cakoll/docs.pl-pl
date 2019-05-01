@@ -1,15 +1,15 @@
 ---
-title: Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
+title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Dowiedz się, jak wdrożyć aplikację przy użyciu usługi Azure Kubernetes Service.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006546"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Wdrażanie w usłudze Azure Kubernetes Service (AKS)
 

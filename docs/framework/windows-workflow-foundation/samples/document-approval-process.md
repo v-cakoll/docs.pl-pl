@@ -3,11 +3,11 @@ title: Proces zatwierdzania dokumentu
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
 ms.openlocfilehash: dfc2e0a12d053733823427ac50066b1e4a0f97aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005120"
 ---
 # <a name="document-approval-process"></a>Proces zatwierdzania dokumentu
 Niniejszy przykład pokazuje użycie wielu funkcji Windows Workflow Foundation (WF) i Windows Communication Foundation (WCF) ze sobą. Razem mogą implementować scenariusza proces zatwierdzania dokumentu. Aplikacja kliencka można przesłać dokumenty do zatwierdzenia i zatwierdzić dokumenty. Aplikacja menedżera zatwierdzenia istnieje ułatwienie komunikacji między klientami i wymuszać reguły proces zatwierdzania. Proces zatwierdzania jest przepływ pracy, który może wykonać kilka typów zatwierdzenia. Działania ma korzystać z jednego zatwierdzenia, zatwierdzenia kworum (procent zestaw osób zatwierdzających) i proces zatwierdzania złożony, który składa się z kworum i jednego zatwierdzenia w sekwencji.

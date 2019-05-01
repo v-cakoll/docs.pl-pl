@@ -11,11 +11,11 @@ ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973488"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Dołączone i odłączone zadania podrzędne
 A *zadanie podrzędne* (lub *zadanie zagnieżdżone*) jest <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> wystąpienia, który jest tworzony w delegowanym użytkowniku innego zadania, który jest znany jako *zadanie nadrzędne*. Zadanie podrzędne może odłączone lub dołączone. A *odłączone zadanie podrzędne* jest zadaniem wykonywanym niezależnie od jego obiektu nadrzędnego. *Dołączone zadanie podrzędne* to zagnieżdżone zadanie, które są tworzone za pomocą <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcji, których elementem nadrzędnym nie jawnie lub domyślnie zabronić jako załączniki. Zadanie może utworzyć dowolną liczbę podrzędnych dołączonych i odłączonych zadań podrzędnych, ograniczony tylko ilością zasobów systemowych.  
@@ -25,7 +25,7 @@ A *zadanie podrzędne* (lub *zadanie zagnieżdżone*) jest <xref:System.Threadin
 |Kategoria|Odłączonych zadań podrzędnych|Dołączonych zadań podrzędnych|  
 |--------------|--------------------------|--------------------------|  
 |Zadanie nadrzędne czeka na zakończenie zadań podrzędnych.|Nie|Tak|  
-|Zadanie nadrzędne propaguje wyjątki generowane przez zadania podrzędne.|Nie|Tak|  
+|Zadanie nadrzędne propaguje wyjątki generowane przez zadania podrzędne.|Nie|Yes|  
 |Stan obiektu nadrzędnego zależy od stanu elementu podrzędnego.|Nie|Tak|  
   
  W większości scenariuszy firma Microsoft zaleca używanie odłączonych zadań podrzędnych, ponieważ ich relacje z innymi zadaniami są mniej skomplikowane. Oznacza to dlaczego zadania utworzone wewnątrz zadania nadrzędnego są odłączone domyślnie, i należy jawnie określić <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcję, aby utworzyć dołączone zadanie podrzędne.  

@@ -3,20 +3,20 @@ title: Blokada zabezpieczeń PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989654"
 ---
 # <a name="pii-security-lockdown"></a>Blokada zabezpieczeń PII
 W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF) przez:  
   
--   Szyfrowanie poufnych informacji w pliku konfiguracji usługi.  
+- Szyfrowanie poufnych informacji w pliku konfiguracji usługi.  
   
--   Blokowanie elementów w pliku konfiguracji, tak, aby zagnieżdżone podkatalogów usługi nie może przesłonić ustawienia.  
+- Blokowanie elementów w pliku konfiguracji, tak, aby zagnieżdżone podkatalogów usługi nie może przesłonić ustawienia.  
   
--   Kontrolowanie logowania z osobiście identyfikowalne dane osobowe w dziennikach śledzenia i wiadomości.  
+- Kontrolowanie logowania z osobiście identyfikowalne dane osobowe w dziennikach śledzenia i wiadomości.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
@@ -124,9 +124,9 @@ W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezp
   
  Istnieje również możliwość szyfrowania przy użyciu interfejsu DPAPI i RSA elementy pliku konfiguracji. Aby uzyskać więcej informacji zobacz następujące linki:  
   
--   [Tworzenie aplikacji ASP.NET bezpiecznego: Uwierzytelniania, autoryzacji i bezpiecznej komunikacji](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Tworzenie aplikacji ASP.NET bezpiecznego: Uwierzytelniania, autoryzacji i bezpiecznej komunikacji](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Instrukcje: Szyfrowanie sekcji konfiguracyjnych w programie ASP.NET 2.0 przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Instrukcje: Szyfrowanie sekcji konfiguracyjnych w programie ASP.NET 2.0 przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   

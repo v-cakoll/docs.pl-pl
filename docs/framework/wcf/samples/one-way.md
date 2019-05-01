@@ -3,11 +3,11 @@ title: Komunikacja jednokierunkowa
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008036"
 ---
 # <a name="one-way"></a>Komunikacja jednokierunkowa
 Niniejszy przykład pokazuje usługi skontaktuj się z operacji usługi jednokierunkowej. Klient nie czeka na zakończenie, jak w przypadku operacji dwukierunkowe usługi przy użyciu operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i używa `wsHttpBinding` powiązania. Usługi w tym przykładzie to aplikacja konsoli Self-Hosted umożliwia obserwowanie usługa, która odbiera i przetwarza żądania. Klient jest również Aplikacja konsoli.  

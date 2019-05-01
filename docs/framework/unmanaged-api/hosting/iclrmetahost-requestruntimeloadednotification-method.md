@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61fce3e06b5245872f7061716e8d995dd5f5043c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984649"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification — Metoda
 Oferuje funkcję wywołania zwrotnego, która może być wywoływana, gdy typowe wersję środowiska uruchomieniowego (języka wspólnego CLR) języka jest ładowana jako pierwsza, ale jeszcze nie rozpoczęty. Ta metoda zastępuje [lockclrversion —](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) funkcji.  
@@ -49,11 +49,11 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="remarks"></a>Uwagi  
  Wywołanie zwrotne działa w następujący sposób:  
   
--   Wywołanie zwrotne jest wywoływane tylko wtedy, gdy środowisko uruchomieniowe jest ładowany po raz pierwszy.  
+- Wywołanie zwrotne jest wywoływane tylko wtedy, gdy środowisko uruchomieniowe jest ładowany po raz pierwszy.  
   
--   Wywołanie zwrotne nie jest wywoływany w przypadku obciążeń współużytkowane tego samego środowiska uruchomieniowego.  
+- Wywołanie zwrotne nie jest wywoływany w przypadku obciążeń współużytkowane tego samego środowiska uruchomieniowego.  
   
--   W przypadku obciążeń nie obsługującą środowiska uruchomieniowego są serializowane wywołania do funkcji wywołania zwrotnego.  
+- W przypadku obciążeń nie obsługującą środowiska uruchomieniowego są serializowane wywołania do funkcji wywołania zwrotnego.  
   
  Funkcja wywołania zwrotnego zawiera poniższy prototyp:  
   
@@ -66,13 +66,13 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Prototypy funkcji wywołania zwrotnego są następujące:  
   
--   `pfnCallbackThreadSet`:  
+- `pfnCallbackThreadSet`:  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
--   `pfnCallbackThreadUnset`:  
+- `pfnCallbackThreadUnset`:  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
@@ -80,11 +80,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Jeśli host zamierza obciążenia lub powodują, że innego środowiska uruchomieniowego do załadowania w sposób współużytkowane `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` parametry, które znajdują się w wywołania zwrotnego funkcji muszą być używane w następujący sposób:  
   
--   `pfnCallbackThreadSet` musi zostać wywołany przez wątek, który może spowodować obciążenia środowiska uruchomieniowego, przed próbą takie obciążenia.  
+- `pfnCallbackThreadSet` musi zostać wywołany przez wątek, który może spowodować obciążenia środowiska uruchomieniowego, przed próbą takie obciążenia.  
   
--   `pfnCallbackThreadUnset` musi być wywoływana, gdy wątek już nie spowoduje obciążenia środowiska uruchomieniowego (i przed powrotem po początkowej wywołania zwrotnego).  
+- `pfnCallbackThreadUnset` musi być wywoływana, gdy wątek już nie spowoduje obciążenia środowiska uruchomieniowego (i przed powrotem po początkowej wywołania zwrotnego).  
   
--   `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` są nie obsługującą.  
+- `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` są nie obsługującą.  
   
 > [!NOTE]
 >  Hostowanie aplikacji nie mogą wywoływać `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` poza zakresem `pCallbackFunction` parametru.  

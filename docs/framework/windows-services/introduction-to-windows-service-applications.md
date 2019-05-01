@@ -23,11 +23,11 @@ helpviewer_keywords:
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008697"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Wprowadzenie do aplikacji usług systemu Windows
 Usługi Microsoft Windows, znana wcześniej jako usługi NT, umożliwiają tworzenie długotrwałych wykonywalny aplikacji, które działają w ich własnych sesjach Windows. Te usługi mogą być uruchamiane automatycznie podczas rozruchu komputera, mogą być wstrzymywane i ponownie uruchomiony i nie wyświetlają żadnego interfejsu użytkownika. Te funkcje idealnym rozwiązaniem usługi do użycia na serwerze lub w przypadku, gdy potrzebujesz długo działających funkcji, które nie kolidują z innymi użytkownikami pracującymi na tym samym komputerze. Można również uruchomić usługi w kontekście zabezpieczeń konta określonego użytkownika, który jest inny niż zalogowany użytkownik lub domyślne konto komputera. Aby uzyskać więcej informacji o usługach i sesjach Windows zobacz dokumentację zestawu Windows SDK.  
@@ -41,19 +41,19 @@ Usługi Microsoft Windows, znana wcześniej jako usługi NT, umożliwiają tworz
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Aplikacje usług vs. Inne aplikacje programu Visual Studio  
  Funkcja aplikacji usług różni się od wielu innych typów projektów, na kilka sposobów:  
   
--   Skompilowany plik wykonywalny, który tworzy projekt aplikacji usługi musi być zainstalowany na serwerze zanim projekt mógł działać w znaczący sposób. Nie można debugować lub uruchomić aplikacji usługi, naciskając klawisz F5 lub F11; Nie można natychmiast uruchomić usługi lub wejść w jej kod. Zamiast tego należy zainstalować i uruchom usługę i następnie dołączyć debuger do procesu usługi. Aby uzyskać więcej informacji, zobacz [jak: Debugowanie aplikacji usług Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+- Skompilowany plik wykonywalny, który tworzy projekt aplikacji usługi musi być zainstalowany na serwerze zanim projekt mógł działać w znaczący sposób. Nie można debugować lub uruchomić aplikacji usługi, naciskając klawisz F5 lub F11; Nie można natychmiast uruchomić usługi lub wejść w jej kod. Zamiast tego należy zainstalować i uruchom usługę i następnie dołączyć debuger do procesu usługi. Aby uzyskać więcej informacji, zobacz [jak: Debugowanie aplikacji usług Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
--   W odróżnieniu od niektórych typów projektów należy utworzyć składniki instalacyjne dla aplikacji usług. Składniki instalacji Zainstaluj i rejestrują usługę na serwerze i tworzą wpis dla usługi przy użyciu Windows **Menedżera sterowania usługami**. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- W odróżnieniu od niektórych typów projektów należy utworzyć składniki instalacyjne dla aplikacji usług. Składniki instalacji Zainstaluj i rejestrują usługę na serwerze i tworzą wpis dla usługi przy użyciu Windows **Menedżera sterowania usługami**. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
--   `Main` Metoda dla aplikacji usługi musi wydać polecenie Uruchom dla usług projektu zawiera. `Run` Metoda ładuje usługi do **Menedżera sterowania usługami** na odpowiednim serwerze. Jeśli używasz **usług Windows** szablon projektu, ta metoda jest napisana dla Ciebie automatycznie. Należy pamiętać, że ładowanie usługi nie jest tym samym co uruchamianie usługi. Zobacz "Okres istnienia usługi" poniżej Aby uzyskać więcej informacji.  
+- `Main` Metoda dla aplikacji usługi musi wydać polecenie Uruchom dla usług projektu zawiera. `Run` Metoda ładuje usługi do **Menedżera sterowania usługami** na odpowiednim serwerze. Jeśli używasz **usług Windows** szablon projektu, ta metoda jest napisana dla Ciebie automatycznie. Należy pamiętać, że ładowanie usługi nie jest tym samym co uruchamianie usługi. Zobacz "Okres istnienia usługi" poniżej Aby uzyskać więcej informacji.  
   
--   Usługa Windows aplikacje uruchamiane w innej stacji okna niż interaktywna stacja zalogowanego użytkownika. Stacja jest zabezpieczonym obiektem, który zawiera Schowek, zestaw globalnych atomów i grupę obiektów pulpitu. Ponieważ stacja usługi Windows nie jest stacją interaktywną, okna dialogowe wywoływane w w Windows aplikacja usługi nie będą widoczne i mogą spowodować, że program przestanie odpowiadać. Podobnie komunikaty o błędach powinny być rejestrowane w dzienniku zdarzeń Windows zamiast zgłoszone w interfejsie użytkownika.  
+- Usługa Windows aplikacje uruchamiane w innej stacji okna niż interaktywna stacja zalogowanego użytkownika. Stacja jest zabezpieczonym obiektem, który zawiera Schowek, zestaw globalnych atomów i grupę obiektów pulpitu. Ponieważ stacja usługi Windows nie jest stacją interaktywną, okna dialogowe wywoływane w w Windows aplikacja usługi nie będą widoczne i mogą spowodować, że program przestanie odpowiadać. Podobnie komunikaty o błędach powinny być rejestrowane w dzienniku zdarzeń Windows zamiast zgłoszone w interfejsie użytkownika.  
   
      Klasy usług Windows, które są obsługiwane przez program .NET Framework nie obsługują interakcji ze stacjami interaktywnymi, czyli zalogowanego użytkownika. .NET Framework nie zawiera również klasy reprezentującej stacje i komputery stacjonarne. Jeśli usługa Windows musi współdziałać z innymi stacjami, konieczne będzie dostęp do niezarządzanego interfejsu API Windows. Aby uzyskać więcej informacji zobacz dokumentację zestawu Windows SDK.  
   
      Interakcja Windows service z użytkownikiem lub innymi stacjami należy starannie zaprojektować, uwzględniając takie scenariusze jak istnienie niezalogowanego lub użytkownika mającego nieoczekiwany zestaw obiektów pulpitu. W niektórych przypadkach może być bardziej odpowiednie napisanie aplikacji Windows, która działa pod kontrolą użytkownika.  
   
--   Aplikacje usługi Windows działają w kontekstu zabezpieczeń i są uruchamiane przed zalogowaniem użytkownika do systemu Windows, na którym są zainstalowane. Należy zaplanować dokładnie, jakiego konta użytkownika, aby uruchomić usługę; Usługa uruchomiona przy użyciu konta systemowego ma więcej uprawnień i przywilejów niż konto użytkownika.  
+- Aplikacje usługi Windows działają w kontekstu zabezpieczeń i są uruchamiane przed zalogowaniem użytkownika do systemu Windows, na którym są zainstalowane. Należy zaplanować dokładnie, jakiego konta użytkownika, aby uruchomić usługę; Usługa uruchomiona przy użyciu konta systemowego ma więcej uprawnień i przywilejów niż konto użytkownika.  
   
 ## <a name="service-lifetime"></a>Okres istnienia usługi  
  Usługa przechodzi przez kilka stanów wewnętrznych w okresie swojego istnienia. Najpierw usługa jest zainstalowana w systemie, na którym będzie uruchamiany. Ten proces wykonuje instalatorów dla projektu usługi i ładuje usługę do **Menedżera sterowania usługami** dla tego komputera. **Menedżera sterowania usługami** to centralne narzędzie oferowane przez Windows do administrowania usługami.  
@@ -76,9 +76,9 @@ Usługi Microsoft Windows, znana wcześniej jako usługi NT, umożliwiają tworz
   
 ## <a name="requirements"></a>Wymagania  
   
--   Usługi muszą być tworzone w **usługi Windows** projekt aplikacji lub innym projekcie rozpoznającym program .NET Framework, tworzy plik .exe, podczas kompilacji, która dziedziczy po elemencie <xref:System.ServiceProcess.ServiceBase> klasy.  
+- Usługi muszą być tworzone w **usługi Windows** projekt aplikacji lub innym projekcie rozpoznającym program .NET Framework, tworzy plik .exe, podczas kompilacji, która dziedziczy po elemencie <xref:System.ServiceProcess.ServiceBase> klasy.  
   
--   Projekty zawierające usług Windows muszą mieć składniki instalacyjne dla projektu i jego usług. Można to łatwo zrobić z **właściwości** okna. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- Projekty zawierające usług Windows muszą mieć składniki instalacyjne dla projektu i jego usług. Można to łatwo zrobić z **właściwości** okna. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

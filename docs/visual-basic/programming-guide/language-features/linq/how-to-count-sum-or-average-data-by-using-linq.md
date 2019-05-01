@@ -16,11 +16,11 @@ helpviewer_keywords:
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
 ms.openlocfilehash: 9b29c738a953bb6260357b1b67cc46a97eeb4369
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000899"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Instrukcje: Liczba, Sum lub uśrednianie danych za pomocą LINQ (Visual Basic)
 Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i wykonywania zapytań.  

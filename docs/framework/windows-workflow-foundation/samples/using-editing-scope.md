@@ -3,11 +3,11 @@ title: Używanie zakresu edycji
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004773"
 ---
 # <a name="using-editing-scope"></a>Używanie zakresu edycji
 Niniejszy przykład pokazuje jak dzielić na partie zestaw zmian, dzięki czemu mogą zostać cofnięte w pojedynczą jednostkę atomic. Domyślnie akcje wykonywane przez autora projektanta działań są automatycznie zintegrowane system Cofnij/Ponów.  
@@ -28,9 +28,9 @@ Niniejszy przykład pokazuje jak dzielić na partie zestaw zmian, dzięki czemu 
   
 2. Kliknij przycisk **Otwórz zakresu edycji**.  
   
-    1.  To polecenie wymaga <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> , tworzy zakresu edycji i wypycha go na stosie edycji.  
+    1. To polecenie wymaga <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> , tworzy zakresu edycji i wypycha go na stosie edycji.  
   
-    2.  Trzy czynności zostaną następnie dodane do wybranych <xref:System.Activities.Presentation.Model.ModelItem>. Należy pamiętać, że jeśli zakresu edycji nie był on otwarty przy użyciu <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, trzy nowe działania zostanie wyświetlony na kanwie projektanta. Ponieważ ta operacja jest nadal oczekujące w ramach <xref:System.Activities.Presentation.Model.EditingScope>, Projektant nie jest jeszcze zaktualizowane.  
+    2. Trzy czynności zostaną następnie dodane do wybranych <xref:System.Activities.Presentation.Model.ModelItem>. Należy pamiętać, że jeśli zakresu edycji nie był on otwarty przy użyciu <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, trzy nowe działania zostanie wyświetlony na kanwie projektanta. Ponieważ ta operacja jest nadal oczekujące w ramach <xref:System.Activities.Presentation.Model.EditingScope>, Projektant nie jest jeszcze zaktualizowane.  
   
 3. Naciśnij klawisz **Zamknij zakresu edycji** zatwierdzić zakresu edycji. Trzy czynności są wyświetlane w projektancie.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
 ms.openlocfilehash: d70c5b8f548cf325083782d6ea185c18fd2fa003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011141"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Instrukcje: dodawanie elementu ToolStripContainer do formularza
 Możesz programowo dodać <xref:System.Windows.Forms.ToolStripContainer> do formularza Windows i wypełnić ją za pomocą kontrolek.  
@@ -28,7 +28,7 @@ Możesz programowo dodać <xref:System.Windows.Forms.ToolStripContainer> do form
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Poniższy przykład kodu wymaga:  
   
--   Odwołania do zestawów System.Drawing, System.Text i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów System.Drawing, System.Text i przestrzeń nazw System.Windows.Forms.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.
   

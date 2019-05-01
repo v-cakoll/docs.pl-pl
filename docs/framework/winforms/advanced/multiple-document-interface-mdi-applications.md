@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MDI
 ms.assetid: 599faf75-13cf-49cc-ad3c-255545e5cb97
 ms.openlocfilehash: 0ce7c66946d03d566b21473711cb6b3315885236
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61952051"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>Aplikacje interfejsu wielu dokumentów (MDI)
 Aplikacje interfejsu wielu dokumentów (MDI) umożliwiają wyświetlanie wiele dokumentów w tym samym czasie za pomocą każdy dokument wyświetlany w osobnym oknie. Aplikacje MDI często mają element menu Okno oraz podmenu do przełączania się między systemem windows lub dokumenty.  

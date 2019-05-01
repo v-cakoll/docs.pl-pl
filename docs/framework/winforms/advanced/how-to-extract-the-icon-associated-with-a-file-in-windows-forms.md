@@ -10,11 +10,11 @@ helpviewer_keywords:
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
 ms.openlocfilehash: d754dc5e8a57b3c4e2e5439bb2524a22d44813c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004045"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Instrukcje: Wyodrębnianie ikon skojarzonych z plikiem w formularzach systemu Windows
 Wiele plików zostały osadzone ikon, które zapewniają wizualnej reprezentacji skojarzonego typu pliku. Na przykład dokumenty Microsoft Word zawiera ikonę która identyfikuje je jako dokumenty programu Word. Wyświetlanie plików w formancie listy lub kontrolki tabeli, można wyświetlić ikony reprezentującej typ pliku obok nazwy każdego pliku. Łatwo to zrobić, korzystając z <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> metody.  
@@ -28,7 +28,7 @@ Wiele plików zostały osadzone ikon, które zapewniają wizualnej reprezentacji
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Aby skompilować przykład:  
   
--   Wklej powyższy kod do formularza Windows i Wywołaj `ExtractAssociatedIconExample` metody z konstruktora formularza lub <xref:System.Windows.Forms.Form.Load> metody obsługi zdarzeń.  
+- Wklej powyższy kod do formularza Windows i Wywołaj `ExtractAssociatedIconExample` metody z konstruktora formularza lub <xref:System.Windows.Forms.Form.Load> metody obsługi zdarzeń.  
   
      Należy się upewnić, że formularz importuje <xref:System.IO> przestrzeni nazw.  
   

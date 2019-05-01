@@ -9,11 +9,11 @@ helpviewer_keywords:
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
 ms.openlocfilehash: 83d674e3fb7ff7e715b75c635b891cd4e9703a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972058"
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown — Formant (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.DomainUpDown> kontroli wygląda kombinacją pole tekstowe oraz parę przycisków przenoszenia w górę lub w dół na liście. Kontrolka Wyświetla i ustawia ciąg tekstowy z listy dostępnych opcji. Użytkownik może wybrać ciąg przez kliknięcie przycisków, aby przejść na liście w górę i w dół, przez naciśnięcie klawiszy strzałek w górę i w dół lub wpisując ciąg, który pasuje do elementu na liście. Jedno możliwe użycie tej kontrolki jest służąca do wybierania elementów z alfabetycznie posortowaną listę nazw. (Aby posortować listę, należy ustawić <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> właściwość `true`.) Funkcja ta kontrolka jest bardzo podobne do pola listy lub pola kombi, ale zajmuje on bardzo mało miejsca.  

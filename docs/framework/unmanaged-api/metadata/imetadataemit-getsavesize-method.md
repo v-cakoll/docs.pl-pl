@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992514"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize — Metoda
 Szacowany rozmiar binarne zestawu i jego metadane są pobierane w bieżącym zakresie.  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in] Wartość [corsavesize —](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) wyliczenie, które określa, czy uzyskać dokładne lub Przybliżony rozmiar. Tylko dla trzech wartości są prawidłowe: cssAccurate, cssQuick i cssDiscardTransientCAs:  
   
--   cssAccurate zwraca dokładnie Zapisz rozmiar, ale trwa dłużej do obliczenia.  
+- cssAccurate zwraca dokładnie Zapisz rozmiar, ale trwa dłużej do obliczenia.  
   
--   cssQuick zwraca rozmiar, uzupełniona na potrzeby bezpieczeństwa, ale zajmuje mniej czasu, aby obliczyć.  
+- cssQuick zwraca rozmiar, uzupełniona na potrzeby bezpieczeństwa, ale zajmuje mniej czasu, aby obliczyć.  
   
--   informuje cssDiscardTransientCAs `GetSaveSize` , może ona zgłosić natychmiast discardable atrybutów niestandardowych.  
+- informuje cssDiscardTransientCAs `GetSaveSize` , może ona zgłosić natychmiast discardable atrybutów niestandardowych.  
   
  `pdwSaveSize`  
  [out] Wskaźnik do rozmiaru który jest wymagany, aby zapisać plik.  

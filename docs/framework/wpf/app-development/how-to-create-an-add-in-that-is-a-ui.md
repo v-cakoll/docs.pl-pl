@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947891"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Instrukcje: Tworzenie dodatku, który jest interfejsem użytkownika
 Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Presentation Foundation (WPF), która jest hostowana przez oddzielną aplikację WPF.  
@@ -25,9 +25,9 @@ Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Present
   
  W tym przykładzie wyróżnia rozszerzenia WPF model dodatku .NET Framework, które umożliwiają w tym scenariuszu i przyjęto założenie, że:  
   
--   Znajomość środowiska .NET Framework — w modelu, w tym potoku dodatku i rozwoju hosta. Jeśli nie jesteś zaznajomiony z tych pojęć, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Aby uzyskać samouczek, który przedstawia implementację potoku dodatku i aplikacji hosta, zobacz [instruktażu: Tworzenie aplikacji rozszerzalnej](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Znajomość środowiska .NET Framework — w modelu, w tym potoku dodatku i rozwoju hosta. Jeśli nie jesteś zaznajomiony z tych pojęć, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Aby uzyskać samouczek, który przedstawia implementację potoku dodatku i aplikacji hosta, zobacz [instruktażu: Tworzenie aplikacji rozszerzalnej](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Wiedza na temat rozszerzenia WPF model dodatku .NET Framework. Zobacz [Przegląd dodatki WPF](wpf-add-ins-overview.md).  
+- Wiedza na temat rozszerzenia WPF model dodatku .NET Framework. Zobacz [Przegląd dodatki WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Przykład  
  Aby utworzyć dodatek, który jest interfejsem użytkownika WPF wymaga określonego kodu dla każdy z segmentów potoku dodatku i aplikacji hosta.  
@@ -87,9 +87,9 @@ Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Present
   
  Kod dla przetwarzania interakcji z interfejsem użytkownika dodatku działa w dodatku w domenie aplikacji. Interakcje te obejmują:  
   
--   Obsługa <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
+- Obsługa <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
   
--   Wyświetlanie <xref:System.Windows.MessageBox>.  
+- Wyświetlanie <xref:System.Windows.MessageBox>.  
   
  To działanie jest całkowicie odizolowana od aplikacji hosta.  
   

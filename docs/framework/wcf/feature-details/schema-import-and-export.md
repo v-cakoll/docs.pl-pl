@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991019"
 ---
 # <a name="schema-import-and-export"></a>Importowanie i eksportowanie schematu
 Windows Communication Foundation (WCF) obejmuje nowy mechanizm serializacji, <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML (w obu kierunkach). Oprócz samego elementu serializującego WCF obejmuje import skojarzonego schematu i mechanizmy eksportu schematu. *Schemat* jest posiadanie, dokładne i czytelnym opis kształt XML generuje serializator lub Deserializator mogą uzyskiwać dostęp do. WCF używa języka definicji schematu XML World Wide Web Consortium (W3C) (XSD) jako jego reprezentację schematu i jest szeroko współpracujący z wieloma platformami innych firm.  
@@ -33,11 +33,11 @@ Windows Communication Foundation (WCF) obejmuje nowy mechanizm serializacji, <xr
   
  Należy pamiętać, że wygenerowany typ następuje kilka danych kontraktu najlepszych rozwiązań (znalezione w [najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   Typ implementuje <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+- Typ implementuje <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
--   Elementy członkowskie danych są implementowane jako właściwości publiczne, które umieszczają w otoce pól prywatnych.  
+- Elementy członkowskie danych są implementowane jako właściwości publiczne, które umieszczają w otoce pól prywatnych.  
   
--   Klasa jest klasą częściowe i dodatków jest możliwe bez konieczności modyfikowania kodu wygenerowanego.  
+- Klasa jest klasą częściowe i dodatków jest możliwe bez konieczności modyfikowania kodu wygenerowanego.  
   
  <xref:System.Runtime.Serialization.XsdDataContractExporter> Umożliwia sytuacja odwrotna — zająć typy, które są możliwe do serializacji z `DataContractSerializer` i generowania dokumentu schematu XSD.  
   

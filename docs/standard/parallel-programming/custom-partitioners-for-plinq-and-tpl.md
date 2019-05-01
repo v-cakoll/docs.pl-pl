@@ -11,11 +11,11 @@ ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973423"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Niestandardowe partycjonery dla PLINQ i TPL
 Równoległe przetwarzanie operacji na źródle danych, jest jedną z czynności niezbędne do *partycji* źródło w wiele sekcji, które mogą być udostępniane jednocześnie z wielu wątków. Program PLINQ i Biblioteka zadań równoległych (TPL) zapewnia domyślne moduły partycjonowania, które działają w sposób niewidoczny dla użytkownika podczas wpisywania zapytanie równoległe lub <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli. Dla bardziej zaawansowanych scenariuszy można dodać własne partycjonera.  
@@ -100,25 +100,25 @@ Równoległe przetwarzanie operacji na źródle danych, jest jedną z czynności
 ### <a name="contract-for-partitioners"></a>Kontrakt dla Partycjonery  
  Podczas implementowania niestandardowego partycjonera, należy przestrzegać następujących wytycznych, aby zapewnić poprawne interakcji z PLINQ i <xref:System.Threading.Tasks.Parallel.ForEach%2A> w TPL:  
   
--   Jeśli <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> jest wywołana z nieprawidłowym argumentem zero lub szybciej w przypadku `partitionsCount`, throw <xref:System.ArgumentOutOfRangeException>. Mimo że PLINQ i TPL nigdy nie przejdzie w `partitionCount` równa 0, jednak zaleca się ochronić możliwości.  
+- Jeśli <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> jest wywołana z nieprawidłowym argumentem zero lub szybciej w przypadku `partitionsCount`, throw <xref:System.ArgumentOutOfRangeException>. Mimo że PLINQ i TPL nigdy nie przejdzie w `partitionCount` równa 0, jednak zaleca się ochronić możliwości.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> zawsze powinna zwrócić `partitionsCount` liczę partycji. Jeśli partycjonera zabraknie danych i nie można utworzyć dowolną liczbę partycji, zgodnie z żądaniem, metoda powinna zwrócić puste wyliczenie dla każdej z pozostałych partycji. W przeciwnym razie zgłosi PLINQ i TPL <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> zawsze powinna zwrócić `partitionsCount` liczę partycji. Jeśli partycjonera zabraknie danych i nie można utworzyć dowolną liczbę partycji, zgodnie z żądaniem, metoda powinna zwrócić puste wyliczenie dla każdej z pozostałych partycji. W przeciwnym razie zgłosi PLINQ i TPL <xref:System.InvalidOperationException>.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> nigdy nie powinna zwracać `null` (`Nothing` w języku Visual Basic). Jeśli tak, program PLINQ / zgłosi TPL <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, i <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> nigdy nie powinna zwracać `null` (`Nothing` w języku Visual Basic). Jeśli tak, program PLINQ / zgłosi TPL <xref:System.InvalidOperationException>.  
   
--   Metody, które zwracają partycji zawsze powinien zwrócić partycje, które można w pełni i jednoznacznie wyliczania źródła danych. Powinna istnieć nie ma duplikatów w źródle danych lub pominięte elementy, chyba że jednoznacznie wymagane przez projekt partycjonera. Jeśli ta reguła nie zostanie zastosowane, kolejność danych wyjściowych może być zaszyfrowane.  
+- Metody, które zwracają partycji zawsze powinien zwrócić partycje, które można w pełni i jednoznacznie wyliczania źródła danych. Powinna istnieć nie ma duplikatów w źródle danych lub pominięte elementy, chyba że jednoznacznie wymagane przez projekt partycjonera. Jeśli ta reguła nie zostanie zastosowane, kolejność danych wyjściowych może być zaszyfrowane.  
   
--   Następujące pobierające logiczna zawsze dokładnie musi zwracać następujące wartości, tak, aby kolejność danych wyjściowych nie jest on używany jako:  
+- Następujące pobierające logiczna zawsze dokładnie musi zwracać następujące wartości, tak, aby kolejność danych wyjściowych nie jest on używany jako:  
   
-    -   `KeysOrderedInEachPartition`: Każda partycja zwraca elementy z rosnącym kluczowych wskaźników.  
+    - `KeysOrderedInEachPartition`: Każda partycja zwraca elementy z rosnącym kluczowych wskaźników.  
   
-    -   `KeysOrderedAcrossPartitions`: Dla wszystkich partycji, które są zwracane kluczy indeksów w partycji *i* są większe niż indeksy klucza partycji *i*-1.  
+    - `KeysOrderedAcrossPartitions`: Dla wszystkich partycji, które są zwracane kluczy indeksów w partycji *i* są większe niż indeksy klucza partycji *i*-1.  
   
-    -   `KeysNormalized`: Wszystkie indeksy klucza monotonicznie coraz więcej bez przerwy, począwszy od zera.  
+    - `KeysNormalized`: Wszystkie indeksy klucza monotonicznie coraz więcej bez przerwy, począwszy od zera.  
   
--   Wszystkie indeksy muszą być unikatowe. Nie mogą być zduplikowane indeksy. Jeśli ta reguła nie zostanie zastosowane, kolejność danych wyjściowych może być zaszyfrowane.  
+- Wszystkie indeksy muszą być unikatowe. Nie mogą być zduplikowane indeksy. Jeśli ta reguła nie zostanie zastosowane, kolejność danych wyjściowych może być zaszyfrowane.  
   
--   Wszystkie indeksy muszą być nieujemne. Jeśli ta reguła nie zostanie zastosowane, PLINQ/TPL może zgłaszać wyjątki.  
+- Wszystkie indeksy muszą być nieujemne. Jeśli ta reguła nie zostanie zastosowane, PLINQ/TPL może zgłaszać wyjątki.  
   
 ## <a name="see-also"></a>Zobacz także
 

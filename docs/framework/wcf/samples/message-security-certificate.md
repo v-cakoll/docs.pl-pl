@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
 ms.openlocfilehash: b5a36d39e6e38f121bf3155c822681fb198f0850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006424"
 ---
 # <a name="message-security-certificate"></a>Certyfikat zabezpieczeń komunikatów
 Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania certyfikatów X.509 v3 klienta i wymaga uwierzytelnienia serwera za pomocą certyfikat serwera X.509 v3. Ta próbka używa domyślnych ustawień w taki sposób, że wszystkie komunikaty aplikacji między klientem i serwerem są podpisane i szyfrowane. Ten przykład jest oparty na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) i składa się z programu konsoli klienta i Biblioteka usługi hostowanej przez Internetowe usługi informacyjne (IIS). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".  
@@ -204,7 +204,7 @@ Press <ENTER> to terminate client.
   
  Plik wsadowy Setup.bat jest dołączone do przykładów zabezpieczenia komunikatów umożliwia konfigurowanie klienta i serwera przy użyciu odpowiednich certyfikatów uruchamianie hostowanej aplikacji, która wymaga zabezpieczeń oparte na certyfikatach. Plik wsadowy mogą być uruchamiane w trzech trybów. Do uruchamiania w trybie pojedynczego komputera typu **setup.bat** w wiersz polecenia dewelopera dla programu Visual Studio; w przypadku typu tryb usługi **setup.bat usługi**; i typ trybu klienta **klienta setup.bat**. Użyj trybu klienta i serwera na komputerach działa aplikacja przykładowa. Zapoznaj się z procedurą konfiguracji na końcu tego tematu, aby uzyskać szczegółowe informacje. Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji:  
   
--   Tworzenie certyfikatu klienta.  
+- Tworzenie certyfikatu klienta.  
   
      Następujący wiersz w pliku wsadowym tworzy certyfikat klienta. Podana nazwa klienta jest używany w nazwie podmiotu certyfikatu, utworzony. Certyfikat jest przechowywany w `My` przechowywać `CurrentUser` lokalizacji magazynu.  
   
@@ -215,7 +215,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
     ```  
   
--   Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera.  
+- Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera.  
   
      Następujący wiersz w kopii pliku wsadowego certyfikat klienta do serwera TrustedPeople przechowywać tak, aby istotne zaufania lub decyzji dotyczących zaufania nie mogą być serwera. Aby uzyskać certyfikat, który został zainstalowany w magazynie TrustedPeople być uważany za zaufany przez usługę Windows Communication Foundation (WCF), tryb walidacji certyfikatu klienta musi być równa `PeerOrChainTrust` lub `PeerTrust`. Zobacz poprzedni przykład konfiguracji usługi, aby dowiedzieć się, jak można to zrobić przy użyciu pliku konfiguracji.  
   
@@ -226,7 +226,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople   
     ```  
   
--   Tworzenie certyfikatu serwera.  
+- Tworzenie certyfikatu serwera.  
   
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany.  
   
@@ -242,7 +242,7 @@ Press <ENTER> to terminate client.
   
      % Zmienna % nazwa_serwera Określa nazwę serwera. Certyfikat jest przechowywany w magazynie LocalMachine. Jeśli plik wsadowy Setup.bat jest uruchamiany z nieprawidłowym argumentem usługi (takie jak **usługi setup.bat**) nazwa_serwera % zawiera w pełni kwalifikowana nazwa domeny komputera. W przeciwnym razie wartość domyślna hosta lokalnego.  
   
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.  
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.  
   
      Następujący wiersz kopiuje certyfikatu serwera w magazynie zaufanych osób klienta. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Przyznawanie uprawnień do klucza prywatnego certyfikatu.  
+- Przyznawanie uprawnień do klucza prywatnego certyfikatu.  
   
      Następujące wiersze w plik Setup.bat jest udostępnić certyfikat serwera, przechowywane w magazynie dostępne dla [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proces roboczy.  
   
@@ -329,7 +329,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
--   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+- Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
     > [!NOTE]
     >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

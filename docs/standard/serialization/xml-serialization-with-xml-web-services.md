@@ -1,5 +1,5 @@
 ---
-title: Serializacji XML przy użyciu usług XML sieci Web
+title: Serializacja XML z usługami internetowymi XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018074"
 ---
-# <a name="xml-serialization-with-xml-web-services"></a>Serializacji XML przy użyciu usług XML sieci Web
+# <a name="xml-serialization-with-xml-web-services"></a>Serializacja XML z usługami internetowymi XML
 Serializacji XML jest źródłowego transportu mechanizm używany w architekturze usług sieci Web XML przez <xref:System.Xml.Serialization.XmlSerializer> klasy. Aby kontrolować XML generowanych przez usługi sieci Web XML, można zastosować atrybuty wymienione w obu [atrybuty czy kontroli serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) i [atrybuty czy kontroli kodowany protokołu SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) do klasy, zwracanej wartości, parametry i pola pliku używany do tworzenia usługi XML sieci Web (.asmx). Aby uzyskać więcej informacji na temat tworzenia usługi XML sieci Web, zobacz [ASP.NET przy użyciu usług XML sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
   
 ## <a name="literal-and-encoded-styles"></a>Literał i zakodowany stylów  

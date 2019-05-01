@@ -9,11 +9,11 @@ ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e330e0d06077d1eef63cf44f31bbcbf7c3431b59
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985546"
 ---
 # <a name="hosting-interfaces"></a>Hosting — Interfejsy
 W tej sekcji opisano interfejsy, które niezarządzane hosty służy do integrowania środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.  

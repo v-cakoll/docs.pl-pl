@@ -3,11 +3,11 @@ title: Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikató
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: 1551ab407049e871a9275d148b1c84dc2791ccad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007542"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów
 Niniejszy przykład pokazuje, jak aplikacja Windows Communication Foundation (WCF) może także wysłać komunikat do aplikacji usługi kolejkowania komunikatów (MSMQ). Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce. Usługa i klient nie musi być uruchomiona w tym samym czasie.
@@ -138,15 +138,15 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.  
   
-    1.  Otwórz Menedżera serwera w programie Visual Studio 2012.  
+    1. Otwórz Menedżera serwera w programie Visual Studio 2012.  
   
-    2.  Rozwiń **funkcji** kartę.  
+    2. Rozwiń **funkcji** kartę.  
   
-    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.  
+    3. Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.  
   
-    4.  Sprawdź **transakcyjna** pole.  
+    4. Sprawdź **transakcyjna** pole.  
   
-    5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.  
+    5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.  
   
 3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002286"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Malowanie obrazami, rysowaniem i Visual
 W tym temacie opisano sposób użycia <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> obiektów można malować obszar za pomocą obrazu, <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>.  
@@ -57,15 +57,15 @@ Obiekty malowane przez DrawingBrush
   
  A <xref:System.Windows.Media.DrawingBrush> Malowanie obszaru za pomocą <xref:System.Windows.Media.Drawing> obiektu. A <xref:System.Windows.Media.Drawing> obiekt w tym artykule opisano widoczne zawartości, takiej jak kształt, mapy bitowej, wideo lub wiersza tekstu. Różne rodzaje rysunki opis różnych typów zawartości. Oto lista różne rodzaje Rysowanie obiektów.  
   
--   <xref:System.Windows.Media.GeometryDrawing> — Rysuje kształt.  
+- <xref:System.Windows.Media.GeometryDrawing> — Rysuje kształt.  
   
--   <xref:System.Windows.Media.ImageDrawing> — Rysuje obraz.  
+- <xref:System.Windows.Media.ImageDrawing> — Rysuje obraz.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> — Rysuje tekst.  
+- <xref:System.Windows.Media.GlyphRunDrawing> — Rysuje tekst.  
   
--   <xref:System.Windows.Media.VideoDrawing> — Odtwarza plik audio lub wideo.  
+- <xref:System.Windows.Media.VideoDrawing> — Odtwarza plik audio lub wideo.  
   
--   <xref:System.Windows.Media.DrawingGroup> — Rysuje inne rysunki. Aby połączyć inne rysunki w jeden złożony, należy użyć rysowania grupy.  
+- <xref:System.Windows.Media.DrawingGroup> — Rysuje inne rysunki. Aby połączyć inne rysunki w jeden złożony, należy użyć rysowania grupy.  
   
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Drawing> obiekty, zobacz [Przegląd obiektów rysowania](drawing-objects-overview.md).  
   
@@ -89,9 +89,9 @@ Obiekty malowane przez DrawingBrush
   
  Istnieją dwa sposoby, aby określić <xref:System.Windows.Media.VisualBrush.Visual%2A> zawartości <xref:System.Windows.Media.VisualBrush>.  
   
--   Utwórz nową <xref:System.Windows.Media.Visual> i użyj go, aby ustawić <xref:System.Windows.Media.VisualBrush.Visual%2A> właściwość <xref:System.Windows.Media.VisualBrush>. Aby uzyskać przykład, zobacz [przykładu: Malowanie obiektu za pomocą wizualizacji](#examplevisualbrush1) Poniższa sekcja.  
+- Utwórz nową <xref:System.Windows.Media.Visual> i użyj go, aby ustawić <xref:System.Windows.Media.VisualBrush.Visual%2A> właściwość <xref:System.Windows.Media.VisualBrush>. Aby uzyskać przykład, zobacz [przykładu: Malowanie obiektu za pomocą wizualizacji](#examplevisualbrush1) Poniższa sekcja.  
   
--   Użyj istniejącego <xref:System.Windows.Media.Visual>, który tworzy zduplikowane obraz elementu docelowego <xref:System.Windows.Media.Visual>. Następnie można użyć <xref:System.Windows.Media.VisualBrush> do tworzenia efektów interesujące, takie jak odbicia i powiększenia. Aby uzyskać przykład, zobacz [przykładu: Tworzenie odbicia](#examplevisualbrush2) sekcji.  
+- Użyj istniejącego <xref:System.Windows.Media.Visual>, który tworzy zduplikowane obraz elementu docelowego <xref:System.Windows.Media.Visual>. Następnie można użyć <xref:System.Windows.Media.VisualBrush> do tworzenia efektów interesujące, takie jak odbicia i powiększenia. Aby uzyskać przykład, zobacz [przykładu: Tworzenie odbicia](#examplevisualbrush2) sekcji.  
   
  Podczas definiowania nowej <xref:System.Windows.Media.VisualBrush.Visual%2A> dla <xref:System.Windows.Media.VisualBrush> i <xref:System.Windows.Media.Visual> jest <xref:System.Windows.UIElement> (takich jak panel lub kontrolka), układ jest uruchomiony system <xref:System.Windows.UIElement> i jego elementy podrzędne przy <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> właściwość jest ustawiona na `true`. Jednak główny <xref:System.Windows.UIElement> jest zasadniczo jest odizolowana od reszty systemu: stylów i układu zewnętrznych nie charakteryzują tę granicę. W związku z tym, należy jawnie określić rozmiar głównej <xref:System.Windows.UIElement>, ponieważ jest jedynym nadrzędnego <xref:System.Windows.Media.VisualBrush> i w związku z tym go nie może automatycznie rozmiar samego do obszaru są rysowane. Aby uzyskać więcej informacji na temat układu w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], zobacz [układ](../advanced/layout.md).  
   

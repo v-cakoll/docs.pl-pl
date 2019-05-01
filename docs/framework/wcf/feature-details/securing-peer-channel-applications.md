@@ -3,11 +3,11 @@ title: Zabezpieczanie aplikacji kanałów równorzędnych
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990954"
 ---
 # <a name="securing-peer-channel-applications"></a>Zabezpieczanie aplikacji kanałów równorzędnych
 Jak innych powiązań w obszarze [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` ma domyślnie włączona, zabezpieczeń i oferuje zarówno zabezpieczenia na poziomie transportu i komunikat (lub obie). W tym temacie omówiono te dwa rodzaje zabezpieczeń. Typ zabezpieczeń jest określony przez tag tryb zabezpieczeń w specyfikacji powiązania (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
@@ -15,16 +15,16 @@ Jak innych powiązań w obszarze [!INCLUDE[vstecwinfx](../../../../includes/vste
 ## <a name="transport-based-security"></a>Zabezpieczenia na poziomie transportu  
  Kanał elementu równorzędnego obsługuje dwa typy poświadczeń uwierzytelniania dla zabezpieczanie transportu, które wymagają ustawienie poziomie `ClientCredentialSettings.Peer` właściwości skojarzonego `ChannelFactory`:  
   
--   Hasło. Klienci używają znajomość tajnego hasła do uwierzytelniania połączenia. Jeśli ten typ poświadczeń jest używany, `ClientCredentialSettings.Peer.MeshPassword` musi zawierać prawidłowe hasło i opcjonalnie `X509Certificate2` wystąpienia.  
+- Hasło. Klienci używają znajomość tajnego hasła do uwierzytelniania połączenia. Jeśli ten typ poświadczeń jest używany, `ClientCredentialSettings.Peer.MeshPassword` musi zawierać prawidłowe hasło i opcjonalnie `X509Certificate2` wystąpienia.  
   
--   certyfikat. Jest używane uwierzytelnianie określonej aplikacji. Ten typ poświadczeń jest używany, należy użyć konkretną implementację <xref:System.IdentityModel.Selectors.X509CertificateValidator> w `ClientCredentialSettings.Peer.PeerAuthentication`.  
+- certyfikat. Jest używane uwierzytelnianie określonej aplikacji. Ten typ poświadczeń jest używany, należy użyć konkretną implementację <xref:System.IdentityModel.Selectors.X509CertificateValidator> w `ClientCredentialSettings.Peer.PeerAuthentication`.  
   
 ## <a name="message-based-security"></a>Zabezpieczenia na poziomie komunikatu  
  Korzystanie z zabezpieczeń komunikatów aplikacji mogą podpisywać komunikaty wychodzące tak, aby wszystkie strony odbieranie sprawdzić, czy komunikat jest wysyłany przez zaufany i wiadomość nie została naruszona. Obecnie kanał elementu równorzędnego obsługuje tylko podpisywanie komunikatów poświadczeń X.509.  
   
 ## <a name="best-practices"></a>Najlepsze praktyki  
   
--   W tej sekcji omówiono najlepsze rozwiązania dotyczące zabezpieczania aplikacji kanałów równorzędnych.  
+- W tej sekcji omówiono najlepsze rozwiązania dotyczące zabezpieczania aplikacji kanałów równorzędnych.  
   
 ### <a name="enable-security-with-peer-channel-applications"></a>Włącz zabezpieczenia za pomocą aplikacji kanałów równorzędnych  
  Ze względu na Rozproszony charakter protokoły kanału równorzędnego trudno wymusić członkostwa siatki, poufności i ochrony prywatności w niezabezpieczonych siatki. Jest również pamiętać do zabezpieczania komunikacji między klientami i usługi rozpoznawania nazw. W obszarze rozpoznawania protokołu PNRP (Peer Name), Użyj bezpiecznego nazwy w celu uniknięcia fałszowania i innymi typowymi atakami. Zabezpieczanie usługi niestandardowym programem rozpoznawania nazw, należy włączyć zabezpieczeń przy użyciu połączenia klientów do kontaktowania się z usługi rozpoznawania nazw, w tym zarówno zabezpieczenia oparte na komunikat i do transportu.  

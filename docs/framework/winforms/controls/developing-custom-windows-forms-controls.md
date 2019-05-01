@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
 ms.openlocfilehash: 3d628d75b75c311c266648886b3b971c4833d172
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972253"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework
 Kontrolek formularzy Windows Forms są składniki wielokrotnego użytku, hermetyzacji funkcjonalność interfejsu użytkownika, które są używane w aplikacjach opartych na Windows po stronie klienta. Nie tylko formularze Windows zapewnia wiele kontrolek gotowych do użycia, również udostępnia infrastrukturę do tworzenia własnych kontrolek. Można połączyć istniejące kontrolki, rozszerzanie istniejących kontrolek lub tworzyć własne niestandardowe formanty. Ta sekcja zawiera ogólne informacje i przykłady ułatwiające opracowywanie kontrolek formularzy Windows Forms.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
 ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010566"
 ---
 # <a name="digital-ink"></a>Cyfrowy atrament
 W tej sekcji omówiono używanie cyfrowy atrament w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tradycyjnie znalezione tylko w zestawie SDK komputerze typu Tablet, cyfrowy atrament jest teraz dostępna w obszarach podstawowych Windows Presentation Foundation. Oznacza to, że w pełni funkcjonalnego komputerów typu Tablet aplikacji mogą teraz tworzyć, korzystając z możliwości systemu Windows Presentation Foundation.  

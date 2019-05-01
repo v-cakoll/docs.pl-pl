@@ -3,11 +3,11 @@ title: Ataki oparte na metodzie powtórzeń
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991149"
 ---
 # <a name="replay-attacks"></a>Ataki oparte na metodzie powtórzeń
 A *powtarzania atak* występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarza strumienia do jednego lub więcej stron. Chyba że skorygowane, komputery, które podlegają ataku przetwarzania strumienia jako wiarygodnego wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówienia elementu.  
@@ -17,11 +17,11 @@ A *powtarzania atak* występuje, gdy osoba atakująca kopiuje strumienia komunik
   
  Odbicie ataków zostały skorygowane domyślnie, ponieważ model usług WCF dodaje identyfikator podpisanej wiadomości do komunikatów żądań i oczekuje, że zalogowany `relates-to` nagłówek wiadomości odpowiedzi. W związku z tym komunikat żądania nie może być powtórzone w odpowiedzi. W scenariuszach zabezpieczoną wiadomość niezawodne (RM) zostały skorygowane odbicie ataków, ponieważ:  
   
--   Tworzenie sekwencji i schematów komunikatów odpowiedzi sekwencji Utwórz są różne.  
+- Tworzenie sekwencji i schematów komunikatów odpowiedzi sekwencji Utwórz są różne.  
   
--   Simpleks sekwencji sekwencję wiadomości, przysyłane przez klienta nie można odtworzyć powrotu do tego, ponieważ klient nie może rozpoznać takich wiadomości.  
+- Simpleks sekwencji sekwencję wiadomości, przysyłane przez klienta nie można odtworzyć powrotu do tego, ponieważ klient nie może rozpoznać takich wiadomości.  
   
--   Dwukierunkowe sekwencji sekwencji dwa identyfikatory muszą być unikatowe. W związku z tym wychodzącej wiadomości sekwencji nie może być powtórzone zwrotnym w formie wiadomości przychodzących sekwencji (wszystkich sekwencji nagłówki i treść są podpisane, zbyt).  
+- Dwukierunkowe sekwencji sekwencji dwa identyfikatory muszą być unikatowe. W związku z tym wychodzącej wiadomości sekwencji nie może być powtórzone zwrotnym w formie wiadomości przychodzących sekwencji (wszystkich sekwencji nagłówki i treść są podpisane, zbyt).  
   
  Tylko powiązań, które są podatne na ataki odbicia są bez WS-Addressing: powiązań niestandardowych, które WS-Addressing wyłączone i użyj symetrycznego opartego na kluczu zabezpieczeń. <xref:System.ServiceModel.BasicHttpBinding> Nie jest używana WS-Addressing domyślnie, ale nie używa zabezpieczeń opartych na klucz symetryczny w sposób, który umożliwia są narażone na atak.  
   
@@ -32,9 +32,9 @@ A *powtarzania atak* występuje, gdy osoba atakująca kopiuje strumienia komunik
   
  Środki zaradcze obejmują:  
   
--   Komunikat tryb zabezpieczeń za pomocą tokenów kontekstu zabezpieczeń stanową (z lub bez bezpiecznej konwersacji włączona). Aby uzyskać więcej informacji, zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+- Komunikat tryb zabezpieczeń za pomocą tokenów kontekstu zabezpieczeń stanową (z lub bez bezpiecznej konwersacji włączona). Aby uzyskać więcej informacji, zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
--   Skonfiguruj usługę do użycia zabezpieczenia na poziomie transportu.  
+- Skonfiguruj usługę do użycia zabezpieczenia na poziomie transportu.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,11 +3,11 @@ title: Lokalny kanał
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
 ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989836"
 ---
 # <a name="local-channel"></a>Lokalny kanał
 Lokalny kanał jest Windows Communication Foundation (WCF) kanał transportu, który jest używany do komunikacji w ramach tej samej domenie aplikacji. Jest to przydatne w scenariuszach, w którym klient i usługa są uruchomione w tej samej domenie aplikacji i należy unikać obciążenie typowe stosu kanału WCF (serializacji i deserializacji komunikatów).  
@@ -18,9 +18,9 @@ Lokalny kanał jest Windows Communication Foundation (WCF) kanał transportu, kt
 ## <a name="discussion"></a>Dyskusja  
  Przykład składa się z dwóch plików projektu:  
   
--   **LocalChannel**: Programowe reprezentacja kanałów lokalnych w bieżącej domenie aplikacji. W tym projekcie wysyłania składnika umieszcza komunikat w kolejce w pamięci i odbieranie składnika cofnąć kolejki komunikatów do jej otrzymania.  
+- **LocalChannel**: Programowe reprezentacja kanałów lokalnych w bieżącej domenie aplikacji. W tym projekcie wysyłania składnika umieszcza komunikat w kolejce w pamięci i odbieranie składnika cofnąć kolejki komunikatów do jej otrzymania.  
   
--   **ClientAndService**: Ten projekt hostuje usługę w aplikacji konsoli, a następnie uruchamia klienta do wywołania z usług w ramach tej samej domenie aplikacji.  
+- **ClientAndService**: Ten projekt hostuje usługę w aplikacji konsoli, a następnie uruchamia klienta do wywołania z usług w ramach tej samej domenie aplikacji.  
   
  Projekt lokalny kanał pomija stosu kanału i zwiększyć szybkość procesu serializacji. Kanał transportowy lokalnego jest implementowany przy użyciu kolejki w celu transportu wywołań usługi od klienta do usługi i zwraca wartość z powrotem do klienta. Zamiast serializacji, parametrów i zwracanych wartości, przykładowy skrypt kopiuje obiektów.  
   

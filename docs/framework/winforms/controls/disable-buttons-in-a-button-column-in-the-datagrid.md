@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], disabling button cells
 ms.assetid: 5c344d01-013a-4a6b-8f8d-62ec9321d81e
 ms.openlocfilehash: 8c3c9cf000266a902b42b15a4abe31c979224f8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972201"
 ---
 # <a name="how-to-disable-buttons-in-a-button-column-in-the-windows-forms-datagridview-control"></a>Instrukcje: wyłączanie przycisków w kolumnie przycisków w kontrolce DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Zawiera kontrolki <xref:System.Windows.Forms.DataGridViewButtonCell> klasy do wyświetlania komórki za pomocą interfejsu użytkownika (UI), jak przycisk. Jednak <xref:System.Windows.Forms.DataGridViewButtonCell> nie zapewnia możliwość wyłączenia wyglądu przycisku wyświetlane w komórce.  
@@ -31,7 +31,7 @@ ms.locfileid: "59105589"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, System.Drawing, przestrzeń nazw System.Windows.Forms i System.Windows.Forms.VisualStyles.  
+- Odwołania do zestawów systemu, System.Drawing, przestrzeń nazw System.Windows.Forms i System.Windows.Forms.VisualStyles.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

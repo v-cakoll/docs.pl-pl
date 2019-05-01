@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005644"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Typ klucza w WF projektanta model programowania, który umożliwia edytowanie kolekcję elementów zawartych. Niniejszy przykład pokazuje sposób kompilowania, Projektant działań, która udostępnia można edytować kolekcji.
 
  W tym przykładzie przedstawiono:
 
--   Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+- Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
 
--   Tworzenie projektanta działań przy użyciu widoku "zwiniętego" i "rozwiniętego".
+- Tworzenie projektanta działań przy użyciu widoku "zwiniętego" i "rozwiniętego".
 
--   Zastępowanie domyślnego projektanta w rehostowanym aplikacji.
+- Zastępowanie domyślnego projektanta w rehostowanym aplikacji.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
 
@@ -32,15 +32,15 @@ ms.locfileid: "59344874"
 ## <a name="sample-highlights"></a>Najważniejsze funkcje próbki
  Kod w tym przykładzie przedstawiono poniżej:
 
--   Działanie programu designer zaprojektowano pod kątem:  `Parallel`
+- Działanie programu designer zaprojektowano pod kątem:  `Parallel`
 
--   Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Kilka kwestii, które zwracają uwagę na:
+- Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Kilka kwestii, które zwracają uwagę na:
 
-    -   Zwróć uwagę na użycie powiązanie danych WPF można powiązać `ModelItem.Branches`. `ModelItem` jest to właściwość na `WorkflowElementDesigner` odwołujący się do obiektu źródłowego projektanta jest używany, w tym przypadku nasze `Parallel`.
+    - Zwróć uwagę na użycie powiązanie danych WPF można powiązać `ModelItem.Branches`. `ModelItem` jest to właściwość na `WorkflowElementDesigner` odwołujący się do obiektu źródłowego projektanta jest używany, w tym przypadku nasze `Parallel`.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> Można umieścić element wizualny, aby wyświetlić między poszczególne elementy w kolekcji.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> Można umieścić element wizualny, aby wyświetlić między poszczególne elementy w kolekcji.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> jest szablon, który można przekazać do określania układu elementów w kolekcji. W tym przypadku jest używany panel stosu poziomej.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> jest szablon, który można przekazać do określania układu elementów w kolekcji. W tym przypadku jest używany panel stosu poziomej.
 
  Ten poniższy przykład kodu pokazuje to.
 
@@ -60,9 +60,9 @@ ms.locfileid: "59344874"
   </sad:WorkflowItemsPresenter>
 ```
 
--   Wykonaj stowarzyszenie `DesignerAttribute` do `Parallel` typu i następnie dane wyjściowe zgłaszane atrybutów.
+- Wykonaj stowarzyszenie `DesignerAttribute` do `Parallel` typu i następnie dane wyjściowe zgłaszane atrybutów.
 
-    -   Najpierw należy zarejestrować wszystkie domyślne projektantów.
+    - Najpierw należy zarejestrować wszystkie domyślne projektantów.
 
  Poniżej przedstawiono przykładowy kod.
 
@@ -80,7 +80,7 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   Następnie zastąp równoległego w `RegisterCustomMetadata` metody.
+    - Następnie zastąp równoległego w `RegisterCustomMetadata` metody.
 
  Poniższy kod przedstawia to w języku C# i Visual Basic.
 
@@ -101,7 +101,7 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   Na koniec Zwróć uwagę na użycie różnych szablonów danych i wyzwalaczy, aby wybrać odpowiedni szablon na podstawie `IsRootDesigner` właściwości.
+- Na koniec Zwróć uwagę na użycie różnych szablonów danych i wyzwalaczy, aby wybrać odpowiedni szablon na podstawie `IsRootDesigner` właściwości.
 
  Poniżej przedstawiono przykładowy kod.
 

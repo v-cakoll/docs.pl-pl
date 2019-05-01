@@ -3,11 +3,11 @@ title: Kontekst niezawodnej instancji
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990273"
 ---
 # <a name="durable-instance-context"></a>Kontekst niezawodnej instancji
 Niniejszy przykład pokazuje sposób dostosowywania środowiska uruchomieniowego Windows Communication Foundation (WCF), aby włączyć kontekst niezawodnej instancji. Jako jej zapasowy magazyn (SQL Server 2005 Express w tym przypadku) używa programu SQL Server 2005. Jednak także zapewnia możliwość dostępu do magazynu niestandardowego mechanizmów.  
@@ -233,11 +233,11 @@ else
   
  Usługi WCF umożliwia rozszerzanie jego składnika środowiska wykonawczego typu InstanceContext przez dodanie nowego Państwa i zachowanie przy użyciu jego wzorzec extensible object. Wzorzec extensible object jest używany w programie WCF, albo rozszerzanie istniejących klas środowiska uruchomieniowego przy użyciu nowych funkcji lub dodać nowe funkcje stan z obiektem. Istnieją trzy interfejsy we wzorcu extensible object - IExtensibleObject\<T >, IExtension\<T >, a IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > Interfejs jest implementowany przez obiekty, które umożliwia rozszerzenia umożliwiające dostosowanie ich funkcje.  
+- IExtensibleObject\<T > Interfejs jest implementowany przez obiekty, które umożliwia rozszerzenia umożliwiające dostosowanie ich funkcje.  
   
--   IExtension\<T > Interfejs jest implementowany przez obiekty, które mają rozszerzenia klas typu T.  
+- IExtension\<T > Interfejs jest implementowany przez obiekty, które mają rozszerzenia klas typu T.  
   
--   IExtensionCollection\<T > Interfejs jest zbiorem IExtensions, która umożliwia pobieranie IExtensions według ich typu.  
+- IExtensionCollection\<T > Interfejs jest zbiorem IExtensions, która umożliwia pobieranie IExtensions według ich typu.  
   
  W związku z tym klasę InstanceContextExtension powinny zostać utworzone implementuje interfejs IExtension, który definiuje wymagany stan do zapisania identyfikatora kontekstu. Ta klasa udostępnia także stanu do przechowywania magazynu manager używane. Po zapisaniu nowego stanu nie powinna być go zmodyfikować. W związku z tym stan ma być dostarczana i zapisywane do wystąpienia w czasie, który jest zbudowany, a następnie dostępny tylko za pomocą właściwości tylko do odczytu.  
   

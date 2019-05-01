@@ -1,45 +1,45 @@
 ---
-title: 118 - WorkflowInstanceUnhandledExceptionRecordWithId
+title: 118 — WorkflowInstanceUnhandledExceptionRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
 ms.openlocfilehash: eb69fc4760cd89294e24680b5aab83fcd058feb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009880"
 ---
-# <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a>118 - WorkflowInstanceUnhandledExceptionRecordWithId
+# <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a>118 — WorkflowInstanceUnhandledExceptionRecordWithId
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|118|  
-|Słowa kluczowe|HealthMonitoring, WFTracking|  
+|Identyfikator|118|  
+|słowa kluczowe|HealthMonitoring, WFTracking|  
 |Poziom|Błąd|  
 |Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowane przez uczestnika śledzenia zdarzeń systemu Windows, gdy WorkflowInstanceUnhandledExceptionRecord emituje wystąpienia przepływu pracy.  
+ To zdarzenie jest emitowane przez uczestnika śledzenia zdarzeń systemu Windows, gdy wystąpienie przepływu pracy emituje WorkflowInstanceUnhandledExceptionRecord.  
   
 ## <a name="message"></a>Komunikat  
- TrackRecord = WorkflowInstanceUnhandledExceptionRecord, identyfikator wystąpienia = %1, RecordNumber = %2, EventTime = %3, obiekt ActivityDefinitionId = %4, Nazwa = %5, identyfikator = %6, SourceInstanceId = %7 SourceTypeName = %8, wyjątku = %9 adnotacje = % 10 ProfileName = % 11, WorkflowDefinitionIdentity = % 12  
+ TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, identyfikator = %6, SourceInstanceId = %7, SourceTypeName = %8, wyjątek = %9, adnotacje = % 10, ProfileName = % 11, WorkflowDefinitionIdentity = % 12  
   
 ## <a name="details"></a>Szczegóły  
   
 |Nazwa elementu danych|Typ elementu danych|Opis|  
 |--------------------|--------------------|-----------------|  
-|Identyfikator wystąpienia|xs:GUID|Identyfikator wystąpienia przepływu pracy|  
-|RecordNumber|xs:Long|Numer sekwencyjny emitowany rekordu|  
-|eventTime|xs: DateTime|Godzina w formacie UTC podczas zdarzenia zostały wyemitowane|  
-|Obiekt ActivityDefinitionId|xs:String|Nazwa działania głównego w przepływie pracy|  
-|SourceName|xs:String|Nazwa działania źródłowej przerwana, co powoduje unhandledException|  
-|SourceId|xs:String|Identyfikator działania działania źródła błędu|  
-|SourceInstanceId|xs:String|Identyfikator wystąpienia działania działania źródła błędu|  
-|SourceTypeName|xs:String|Nazwa typu działania źródłowej przerwana, co powoduje unhandledException|  
-|Wyjątek|xs:String|Szczegóły wyjątku nieobsługiwany wyjątek|  
+|InstanceId|xs:GUID|Identyfikator wystąpienia przepływu pracy|  
+|RecordNumber|xs:long|Numer sekwencyjny emitowany rekordu|  
+|eventTime|xs:dateTime|Godzina w formacie UTC zdarzenia został wyemitowany|  
+|ActivityDefinitionId|xs:String|Nazwa działania głównego w przepływie pracy|  
+|SourceName|xs:String|Nazwa źródłowego działania, za pomocą komunikacji niezawodnej skutkuje unhandledException|  
+|SourceId|xs:String|Identyfikator działania działania źródłowego błędów|  
+|SourceInstanceId|xs:String|Identyfikator wystąpienia działania działania źródłowego błędów|  
+|SourceTypeName|xs:String|Nazwa źródłowego działania typu, który zwracające błędy powodujące unhandledException|  
+|Wyjątek|xs:String|Szczegóły wyjątku dla nieobsłużonych wyjątków|  
 |Stan|xs:String|Bieżący stan przepływu pracy.|  
-|Adnotacje|xs:String|Adnotacje, które zostały dodane do tego zdarzenia. Wartości są przechowywane w elemencie xml w formacie \<elementy >\< nazwa elementu = "annotationName" type="System.String" > annotationValue\</elementu > \< /elementy >. Jeśli nie określono bez adnotacji, a następnie ciąg zawiera \<elementów / >. Rozmiar zdarzenia ETW jest ograniczona przez rozmiar bufora ETW lub max ładunku zdarzenia ETW. Jeśli limity ETW przekracza rozmiar zdarzenia, a następnie zdarzenia został obcięty przez usunięcie adnotacje i zastąpienie wartości adnotacji z \<elementy >...  \< /elementy >.|  
-|ProfileName|xs:String|Nazwa lub profilu śledzenia, które spowodowały to zdarzenie jest emitowany|  
+|Adnotacje|xs:String|Adnotacje, które zostały dodane do tego zdarzenia. Wartości są przechowywane w elemencie xml w formacie \<elementy >\< nazwa elementu = "annotationName" type="System.String" > annotationValue\</item > \< /elementy >. Jeśli nie określono bez adnotacji, a następnie ciąg zawiera \<elementów / >. Rozmiar zdarzenia ETW jest ograniczona przez rozmiar buforu ETW lub max ładunek zdarzenia ETW. Jeśli rozmiar zdarzenia przekracza limit ETW, a następnie zdarzenie zostanie obcięta przez usunięcie adnotacje i zastępując wartość symbolu adnotacji z \<elementy >...  \< /elementy >.|  
+|ProfileName|xs:String|Nazwa lub profilu śledzenia, które spowodowały to zdarzenie jest emitowane|  
 |WorkflowDefinitionIdentity|xs:String|Identyfikator definicji przepływu pracy|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

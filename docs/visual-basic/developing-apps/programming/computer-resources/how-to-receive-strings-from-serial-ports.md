@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 ms.openlocfilehash: 6c832cd9ef5df904850261f4de2d769bfc28c3cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013975"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Instrukcje: Odbieranie ciągów z portów seryjnych w Visual Basic
 W tym temacie opisano sposób użycia `My.Computer.Ports` na odbieranie ciągów z portów szeregowych komputera w języku Visual Basic.  

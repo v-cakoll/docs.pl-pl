@@ -13,11 +13,11 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981945"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optymalizacja wydajności: Grafika 2D i obrazowanie
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia szeroką gamę grafika 2D i funkcji przetwarzania obrazów, które mogą być optymalizowane dla wymagań aplikacji. Ten temat zawiera informacje dotyczące optymalizacji wydajności w tych obszarach.  
@@ -34,13 +34,13 @@ ms.locfileid: "59074992"
   
  Istnieją cztery rodzaje <xref:System.Windows.Media.Drawing> obiektów:  
   
--   <xref:System.Windows.Media.GeometryDrawing> Rysuje kształt.  
+- <xref:System.Windows.Media.GeometryDrawing> Rysuje kształt.  
   
--   <xref:System.Windows.Media.ImageDrawing> Rysuje obraz.  
+- <xref:System.Windows.Media.ImageDrawing> Rysuje obraz.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> Rysuje tekst.  
+- <xref:System.Windows.Media.GlyphRunDrawing> Rysuje tekst.  
   
--   <xref:System.Windows.Media.DrawingGroup> Rysuje inne rysunki. Aby połączyć inne rysunki w jeden złożony, należy użyć rysowania grupy.  
+- <xref:System.Windows.Media.DrawingGroup> Rysuje inne rysunki. Aby połączyć inne rysunki w jeden złożony, należy użyć rysowania grupy.  
   
  <xref:System.Windows.Media.GeometryDrawing> Obiekt jest używany do renderowania zawartości geometrii. <xref:System.Windows.Media.Geometry> Klasy i konkretnych klas, które dziedziczyć po nim, takie jak <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, i <xref:System.Windows.Media.PathGeometry>, zapewniają środki do renderowania grafiki 2D, a także testowanie trafień i pomocy technicznej wycinka. Obiekty geometrii może służyć do definiowania z regionem danej kontrolki, na przykład, lub aby zdefiniować obszar przycinania do zastosowania do obrazu. Obiekty geometrii mogą być proste regionów, takie jak prostokąty i okręgów lub złożone regionów utworzone na podstawie dwóch lub więcej obiektów geometrii. Można utworzyć bardziej złożone regionów geometryczne, łącząc <xref:System.Windows.Media.PathSegment>-pochodnych obiektów, takich jak <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, i <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "59074992"
   
  Korzystając z obrazów, należy wziąć pod uwagę następujące zalecenia zapewniające lepszą wydajność:  
   
--   Jeśli aplikacja wymaga wyświetlić obrazy miniatur, należy rozważyć utworzenie zmniejszona o rozmiarze zerowym wersję obrazu. Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ładuje obraz i dekoduje go do pełnego rozmiaru. Jeśli chcesz tylko miniatury wersję obrazu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] niepotrzebne dekoduje obrazu do jego pełnym rozmiarze i skaluje ją do rozmiaru miniatur. Aby uniknąć tego niepotrzebnych nakładów pracy, możesz zażądać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można dekodować obraz, który ma rozmiar miniatury lub zażądać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można załadować obrazu rozmiaru miniatur.  
+- Jeśli aplikacja wymaga wyświetlić obrazy miniatur, należy rozważyć utworzenie zmniejszona o rozmiarze zerowym wersję obrazu. Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ładuje obraz i dekoduje go do pełnego rozmiaru. Jeśli chcesz tylko miniatury wersję obrazu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] niepotrzebne dekoduje obrazu do jego pełnym rozmiarze i skaluje ją do rozmiaru miniatur. Aby uniknąć tego niepotrzebnych nakładów pracy, możesz zażądać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można dekodować obraz, który ma rozmiar miniatury lub zażądać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można załadować obrazu rozmiaru miniatur.  
   
--   Zawsze dekodować obraz żądany rozmiar, a nie domyślny rozmiar. Jak wspomniano powyżej, żądanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do dekodowania obrazu żądany rozmiar i nie domyślne pełnym rozmiarze. Zmniejszy nie tylko aplikacji zestawu roboczego, ale również szybkości wykonywania.  
+- Zawsze dekodować obraz żądany rozmiar, a nie domyślny rozmiar. Jak wspomniano powyżej, żądanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do dekodowania obrazu żądany rozmiar i nie domyślne pełnym rozmiarze. Zmniejszy nie tylko aplikacji zestawu roboczego, ale również szybkości wykonywania.  
   
--   Jeśli to możliwe połączyć obrazy w pojedynczy obraz, takie jak pasek filmu składa się z wielu obrazów.  
+- Jeśli to możliwe połączyć obrazy w pojedynczy obraz, takie jak pasek filmu składa się z wielu obrazów.  
   
--   Aby uzyskać więcej informacji, zobacz [Przegląd obrazowanie](../graphics-multimedia/imaging-overview.md).  
+- Aby uzyskać więcej informacji, zobacz [Przegląd obrazowanie](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  Gdy animowanie Skaluj wszelkie mapy bitowej, domyślny obraz o wysokiej jakości ponowne próbkowanie algorytm czasami mogą wykorzystywać wystarczających zasobów systemu, aby spowodować spadek współczynnik ramki, efektywnie powoduje animacji odtwarzanie przerywane. Ustawiając <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> właściwość <xref:System.Windows.Media.RenderOptions> obiekt <xref:System.Windows.Media.BitmapScalingMode.LowQuality> płynniejszą animację można utworzyć podczas skalowania mapy bitowej. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> Tryb informuje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparat renderowania, aby przełączyć się z algorytmem zoptymalizowane pod kątem jakości jest algorytm zoptymalizowane pod kątem szybkości, podczas przetwarzania obrazów.  

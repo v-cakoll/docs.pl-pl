@@ -3,11 +3,11 @@ title: 'Instrukcje: pobieranie metadanych i implementowanie zgodnej usługi'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000795"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Instrukcje: pobieranie metadanych i implementowanie zgodnej usługi
 Tę samą osobę nie często, projektowania i implementacji usługi. W środowiskach, w których ważne aplikacje współpracy kontrakty mogą być zaprojektowana lub opisanego w sieci Web Services Description Language (WSDL) i deweloper musi implementować to usługa, która spełnia podane kontraktu. Można również migrować istniejącą usługę do programu Windows Communication Foundation (WCF), ale zachować format o komunikacji sieciowej. Ponadto kontrakty dwukierunkowe wymaga wywołań zaimplementować kontrakt wywołania zwrotnego, który jest również.  
@@ -39,17 +39,17 @@ Tę samą osobę nie często, projektowania i implementacji usługi. W środowis
   
  Poniższy kod pokazuje:  
   
--   Kontrakt usługi interfejs, który, po wdrożeniu, spełnia wymagania umowy (`ISampleService`).  
+- Kontrakt usługi interfejs, który, po wdrożeniu, spełnia wymagania umowy (`ISampleService`).  
   
--   Interfejs pomocnika do użytku klienta, która rozszerza zarówno interfejs kontraktu usługi i <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> i jest dostępny do użycia w aplikacji klienckiej (`ISampleServiceChannel`).  
+- Interfejs pomocnika do użytku klienta, która rozszerza zarówno interfejs kontraktu usługi i <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> i jest dostępny do użycia w aplikacji klienckiej (`ISampleServiceChannel`).  
   
--   Klasa pomocnika, która rozszerza <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> i jest dostępny do użycia w aplikacji klienckiej (`SampleServiceClient`).  
+- Klasa pomocnika, która rozszerza <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> i jest dostępny do użycia w aplikacji klienckiej (`SampleServiceClient`).  
   
--   Plik konfiguracji, generowane przez usługę.  
+- Plik konfiguracji, generowane przez usługę.  
   
--   Prosty `ISampleService` implementacji usługi.  
+- Prosty `ISampleService` implementacji usługi.  
   
--   Konwersja pliku konfiguracji po stronie klienta do wersji po stronie usługi.  
+- Konwersja pliku konfiguracji po stronie klienta do wersji po stronie usługi.  
   
 [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]
 

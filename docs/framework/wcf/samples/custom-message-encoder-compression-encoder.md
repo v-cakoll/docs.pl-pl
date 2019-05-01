@@ -6,8 +6,8 @@ ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003096"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Niestandardowy koder komunikatów: Koder kompresji
 Ten przykład demonstruje sposób implementacji niestandardowego kodera, za pomocą platformy Windows Communication Foundation (WCF).  
@@ -29,13 +29,13 @@ Ten przykład demonstruje sposób implementacji niestandardowego kodera, za pomo
   
  W przykładzie pokazano sposób tworzenia i zintegrować niestandardowy koder komunikatów aplikacji WCF. Biblioteka GZipEncoder.dll jest wdrażana przy użyciu zarówno klient, jak i usługi. Niniejszy przykład pokazuje także wpływ kompresowanie wiadomości. Kod w GZipEncoder.dll pokazuje następujące czynności:  
   
--   Tworzenie niestandardowego kodera, a koder fabryki.  
+- Tworzenie niestandardowego kodera, a koder fabryki.  
   
--   Tworzenie elementu powiązania dla niestandardowego kodera.  
+- Tworzenie elementu powiązania dla niestandardowego kodera.  
   
--   Za pomocą konfiguracji powiązania niestandardowego do integrowania elementy niestandardowego powiązania.  
+- Za pomocą konfiguracji powiązania niestandardowego do integrowania elementy niestandardowego powiązania.  
   
--   Tworzenie obsługi niestandardowej konfiguracji, który umożliwia skonfigurowanie pliku elementu niestandardowego powiązania.  
+- Tworzenie obsługi niestandardowej konfiguracji, który umożliwia skonfigurowanie pliku elementu niestandardowego powiązania.  
   
  Jak wcześniej wspomniano, istnieje kilka warstw, które są implementowane w niestandardowego kodera. Aby lepiej zilustrować relacji między każdym z tych warstw, uproszczone kolejności zdarzeń dla uruchamiania usługi jest na poniższej liście:  
   
@@ -43,13 +43,13 @@ Ten przykład demonstruje sposób implementacji niestandardowego kodera, za pomo
   
 2. Informacje o konfiguracji jest do odczytu.  
   
-    1.  Konfiguracja usługi rejestruje obsługi konfiguracji niestandardowej.  
+    1. Konfiguracja usługi rejestruje obsługi konfiguracji niestandardowej.  
   
-    2.  Host usługi zostanie utworzony i otwarty.  
+    2. Host usługi zostanie utworzony i otwarty.  
   
-    3.  Niestandardowy element konfiguracji, tworzy i zwraca element niestandardowego powiązania.  
+    3. Niestandardowy element konfiguracji, tworzy i zwraca element niestandardowego powiązania.  
   
-    4.  Element niestandardowego powiązania, tworzy i zwraca fabrykę koder komunikatu.  
+    4. Element niestandardowego powiązania, tworzy i zwraca fabrykę koder komunikatu.  
   
 3. Wiadomość zostaje odebrana.  
   

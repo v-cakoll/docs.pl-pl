@@ -3,11 +3,11 @@ title: Weryfikacja zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 ms.openlocfilehash: 1ad52431d68af847d7c26a0a3bd42dbcb3ce51c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007945"
 ---
 # <a name="security-validation"></a>Weryfikacja zabezpieczeń
 W tym przykładzie pokazano, jak umożliwia zachowanie niestandardowe sprawdzanie poprawności usługi na komputerze, aby upewnić się, że spełniają określone kryteria. W tym przykładzie usług są weryfikowane przez niestandardowe zachowanie przez skanowanie za pomocą każdego punktu końcowego w usłudze i sprawdzanie, czy zawierają one elementy bezpiecznego powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

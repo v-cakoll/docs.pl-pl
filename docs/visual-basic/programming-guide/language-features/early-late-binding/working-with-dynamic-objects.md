@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
 ms.openlocfilehash: ea7d7aae1cd79a0243a9c721b5e3958fba82f84f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973189"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>Praca z obiektami dynamicznymi (Visual Basic)
 Obiektów dynamicznych to kolejny sposób, w innych niż `Object` typ późne powiązania do obiektu w czasie wykonywania. Obiekt dynamiczny udostępnia składowych, takich jak właściwości i metody w czasie wykonywania przy użyciu dynamicznych interfejsów, które są zdefiniowane w <xref:System.Dynamic> przestrzeni nazw. Można użyć klas w <xref:System.Dynamic> przestrzeni nazw do tworzenia obiektów, które działają z struktur danych, które nie są zgodne, typu statycznego lub w formacie. Można również użyć obiektów dynamicznych, które są zdefiniowane w dynamicznych języków, takich jak IronPython i IronRuby. Przykłady pokazujące, jak utworzyć obiekty dynamiczne lub użyć obiekt dynamiczny, zdefiniowane w języka dynamicznego, zobacz [instruktażu: Tworzenie obiektów dynamicznych i posługiwanie](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, lub <xref:System.Dynamic.ExpandoObject>.  

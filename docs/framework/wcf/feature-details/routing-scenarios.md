@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991065"
 ---
 # <a name="routing-scenarios"></a>Scenariusze routingu
 Usługa routingu jest w dużym stopniu dostosowywane, może być wyzwaniem wymagającym projektować wydajne logikę routingu, tworząc nową konfigurację od podstaw.  Istnieje jednak kilka typowych scenariuszy, które należy wykonać w większości konfiguracji usługa routingu. Te scenariusze mogą nie dotyczą bezpośrednio do określonej konfiguracji, zrozumienie, jak można skonfigurować do obsługi tych scenariuszy, usługa routingu będzie pomocy można zrozumieć usługa routingu.  
@@ -49,9 +49,9 @@ Usługa routingu jest w dużym stopniu dostosowywane, może być wyzwaniem wymag
 ### <a name="multicast"></a>Multiemisji  
  Gdy routing komunikatów, zazwyczaj można routingu każdy komunikat do jednego określonego miejsca docelowego punktu końcowego.  Jednak czasami konieczne może być kierować kopię wiadomości do wielu docelowych punktów końcowych. Aby przeprowadzić routing multiemisji, muszą być spełnione następujące warunki:  
   
--   Kształtu kanału nie może być "żądanie-odpowiedź" (chociaż może on być jednokierunkowe lub dupleksowy,), ponieważ "żądanie-odpowiedź" określającemu, że tylko jedną odpowiedź może zostać odebrana przez aplikację klienta w odpowiedzi na żądanie.  
+- Kształtu kanału nie może być "żądanie-odpowiedź" (chociaż może on być jednokierunkowe lub dupleksowy,), ponieważ "żądanie-odpowiedź" określającemu, że tylko jedną odpowiedź może zostać odebrana przez aplikację klienta w odpowiedzi na żądanie.  
   
--   Wiele filtrów musi zwracać **true** podczas oceniania wiadomości.  
+- Wiele filtrów musi zwracać **true** podczas oceniania wiadomości.  
   
  Jeśli te warunki są spełnione, każdy docelowy punkt końcowy, który jest skojarzony z filtrem, który zwraca wartość true, otrzyma kopię wiadomości.  
   

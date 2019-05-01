@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Padding property [Windows Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
 ms.openlocfilehash: d1a3954c8eda87bdda9fa17df1bd2b3858c43619
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012831"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Układ w formantach formularzy systemu Windows
 

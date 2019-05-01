@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001582"
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu zapewnia zaawansowany [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] w celu uzyskania danych wejściowych z różnych urządzeń, m.in. myszy, klawiatury, touch i Pióro. W tym temacie opisano usługi świadczone przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę systemów danych wejściowych.
@@ -144,43 +144,43 @@ ms.locfileid: "59320018"
 ### <a name="prerequisites"></a>Wymagania wstępne
  Następujące składniki do tworzenia aplikacji, która reaguje na dotyk są wymagane.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   Windows 7.
+- Windows 7.
 
--   Urządzenie, na przykład ekranu dotykowego, który obsługuje Windows Touch.
+- Urządzenie, na przykład ekranu dotykowego, który obsługuje Windows Touch.
 
 ### <a name="terminology"></a>Terminologia
  Poniższe terminy są używane, gdy omówiono touch.
 
--   **Touch** jest typem danych wejściowych użytkownika, który jest rozpoznawany przez Windows 7. Zazwyczaj touch jest inicjowane przez umieszczenie palców na ekranie dotykowej. Należy pamiętać, że urządzeń, takich jak dotykowej, który często na komputerach przenośnych obsługuje touch, gdy urządzenie jedynie konwertuje pozycję i przepływu jako wejście myszy finger.
+- **Touch** jest typem danych wejściowych użytkownika, który jest rozpoznawany przez Windows 7. Zazwyczaj touch jest inicjowane przez umieszczenie palców na ekranie dotykowej. Należy pamiętać, że urządzeń, takich jak dotykowej, który często na komputerach przenośnych obsługuje touch, gdy urządzenie jedynie konwertuje pozycję i przepływu jako wejście myszy finger.
 
--   **Multitouch** jest touch, która występuje z więcej niż jeden punkt jednocześnie. Windows 7 i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje multitouch. Zawsze, gdy touch opisanej w dokumentacji dotyczącej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], stosowania pojęć do multitouch.
+- **Multitouch** jest touch, która występuje z więcej niż jeden punkt jednocześnie. Windows 7 i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje multitouch. Zawsze, gdy touch opisanej w dokumentacji dotyczącej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], stosowania pojęć do multitouch.
 
--   A **manipulowania** występuje, gdy touch jest interpretowany jako fizycznych akcji, która jest stosowana do obiektu. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], manipulowania zdarzenia interpretowanie danych wejściowych jako manipulowania tłumaczenia, rozszerzenia lub obrotu.
+- A **manipulowania** występuje, gdy touch jest interpretowany jako fizycznych akcji, która jest stosowana do obiektu. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], manipulowania zdarzenia interpretowanie danych wejściowych jako manipulowania tłumaczenia, rozszerzenia lub obrotu.
 
--   A `touch device` reprezentuje urządzenie, które generuje dotykowym, takich jak pojedynczy palcem na ekranie dotykowym.
+- A `touch device` reprezentuje urządzenie, które generuje dotykowym, takich jak pojedynczy palcem na ekranie dotykowym.
 
 ### <a name="controls-that-respond-to-touch"></a>Formanty, które odpowiadają Touch
  Może być przewijane następujące kontrolki, przeciągając palcem na formant ma zawartość, która jest przewijane poza widokiem.
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  <xref:System.Windows.Controls.ScrollViewer> Definiuje <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> dołączona właściwość, która pozwala na określenie, czy przesuwanie dotykowe jest włączony w pionie, w poziomie, obie lub nie. <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> Właściwość określa, jak szybko przewijania spowalnia po użytkownik wind palcem z ekran dotykowy. <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> Dołączoną właściwość określa współczynnik przewijanie przesunięcie do translacji przesunięcie manipulacji.
 
@@ -189,25 +189,25 @@ ms.locfileid: "59320018"
 
  Wszystkie trzy klasy definiują następujące zdarzenia, które działają w podobny sposób, niezależnie od tego, definiowanie klas.
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  Podobnie jak w przypadku zdarzeń klawiatury oraz myszy zdarzenia dotykowe są zdarzenia trasowane. Zdarzenia, które zaczynają się od `Preview` są tunelowanie zdarzeń i zdarzeń, które zaczynają się od `Touch` są zdarzenia propagacji. Aby uzyskać więcej informacji na temat zdarzenia trasowane, zobacz [Przegląd zdarzeń kierowane](routed-events-overview.md). Podczas obsługi tych zdarzeń, pozycja danych wejściowych, względem dowolnego elementu można uzyskać przez wywołanie metody <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> lub <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> metody.
 
@@ -232,11 +232,11 @@ ms.locfileid: "59320018"
 ### <a name="manipulation-events"></a>Zdarzenia manipulowania
  W przypadkach, gdy aplikacja umożliwia użytkownikowi manipulowania obiektu <xref:System.Windows.UIElement> klasa definiuje do manipulowania zdarzenia. W przeciwieństwie do zdarzeń touch, które po prostu Zgłoś pozycja touch zdarzenia manipulowania raportu, jak interpretować dane wejściowe. Istnieją trzy typy manipulacje, tłumaczenia, rozszerzenia oraz obrotu. Na poniższej liście opisano, jak wywołać trzy rodzaje manipulacji.
 
--   Umieść palcem na obiekcie i finger poruszają się ekran dotykowy do wywołania manipulowania tłumaczenia. Przenosi to zazwyczaj obiekt.
+- Umieść palcem na obiekcie i finger poruszają się ekran dotykowy do wywołania manipulowania tłumaczenia. Przenosi to zazwyczaj obiekt.
 
--   Umieścić dwóch palców dla obiektu, a następnie przenieść palców, razem lub oddalone od siebie, aby wywołać manipulowania rozszerzenia. To zazwyczaj zmienia rozmiar obiektu.
+- Umieścić dwóch palców dla obiektu, a następnie przenieść palców, razem lub oddalone od siebie, aby wywołać manipulowania rozszerzenia. To zazwyczaj zmienia rozmiar obiektu.
 
--   Umieść dwóch palców dla obiektu i Obróć palców wokół sobą w celu wywołania manipulowania obrotu. Obraca to zazwyczaj obiekt.
+- Umieść dwóch palców dla obiektu i Obróć palców wokół sobą w celu wywołania manipulowania obrotu. Obraca to zazwyczaj obiekt.
 
  Jednocześnie może występować więcej niż jeden typ manipulacji.
 
@@ -246,17 +246,17 @@ ms.locfileid: "59320018"
 
  <xref:System.Windows.UIElement> Definiuje następujące zdarzenia manipulowania.
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  Domyślnie <xref:System.Windows.UIElement> nie otrzymuje tych do manipulowania zdarzenia. Aby odbierać zdarzenia manipulowania na <xref:System.Windows.UIElement>ustaw <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> do `true`.
 
@@ -300,13 +300,13 @@ ms.locfileid: "59320018"
 
  Na poniższej liście opisano relację między Dotyk i manipulowania zdarzenia, które jest wyświetlany na poprzedniej ilustracji.
 
--   Podczas pierwszego urządzenia dotykowe generuje <xref:System.Windows.UIElement.TouchDown> zdarzenie na <xref:System.Windows.UIElement>, wywołania logiki manipulowania <xref:System.Windows.UIElement.CaptureTouch%2A> metody, która generuje <xref:System.Windows.UIElement.GotTouchCapture> zdarzeń.
+- Podczas pierwszego urządzenia dotykowe generuje <xref:System.Windows.UIElement.TouchDown> zdarzenie na <xref:System.Windows.UIElement>, wywołania logiki manipulowania <xref:System.Windows.UIElement.CaptureTouch%2A> metody, która generuje <xref:System.Windows.UIElement.GotTouchCapture> zdarzeń.
 
--   Gdy <xref:System.Windows.UIElement.GotTouchCapture> występuje wywołania logiki manipulowania <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> metody, która generuje <xref:System.Windows.UIElement.ManipulationStarting> zdarzeń.
+- Gdy <xref:System.Windows.UIElement.GotTouchCapture> występuje wywołania logiki manipulowania <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> metody, która generuje <xref:System.Windows.UIElement.ManipulationStarting> zdarzeń.
 
--   Gdy <xref:System.Windows.UIElement.TouchMove> wystąpieniu zdarzenia, generuje logiki manipulowania <xref:System.Windows.UIElement.ManipulationDelta> wydarzenia, występujących przed <xref:System.Windows.UIElement.ManipulationInertiaStarting> zdarzeń.
+- Gdy <xref:System.Windows.UIElement.TouchMove> wystąpieniu zdarzenia, generuje logiki manipulowania <xref:System.Windows.UIElement.ManipulationDelta> wydarzenia, występujących przed <xref:System.Windows.UIElement.ManipulationInertiaStarting> zdarzeń.
 
--   Podczas ostatniego touch urządzenia element zgłasza <xref:System.Windows.UIElement.TouchUp> generuje logiki manipulowania zdarzenia <xref:System.Windows.UIElement.ManipulationInertiaStarting> zdarzeń.
+- Podczas ostatniego touch urządzenia element zgłasza <xref:System.Windows.UIElement.TouchUp> generuje logiki manipulowania zdarzenia <xref:System.Windows.UIElement.ManipulationInertiaStarting> zdarzeń.
 
 <a name="focus"></a>
 ## <a name="focus"></a>fokus

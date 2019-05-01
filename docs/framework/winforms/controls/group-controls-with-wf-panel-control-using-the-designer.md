@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971304"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant
 Windows Forms <xref:System.Windows.Forms.Panel> formantów służą do grupowania innych kontrolek. Istnieją trzy powody do grupy kontrolek. Jeden jest wizualne grupowanie elementów powiązanych formularza dla interfejsu użytkownika wyraźne; innym jest programowe grupowanie przycisków radiowych np. ostatni jest przenoszenie kontrolek jako jednostki w czasie projektowania.  

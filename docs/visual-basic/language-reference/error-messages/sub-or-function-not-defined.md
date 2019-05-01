@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982439"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Procedura lub funkcja nie jest zdefiniowana
 A `Sub` lub `Function` muszą być zdefiniowane w celu wywołana. Możliwe przyczyny tego błędu:  
   
--   Błąd w pisowni nazwy procedury.  
+- Błąd w pisowni nazwy procedury.  
   
--   Podjęcie próby wywołać procedurę z innego projektu bez jawnie dodać odwołanie do tego projektu w **odwołania** okno dialogowe.  
+- Podjęcie próby wywołać procedurę z innego projektu bez jawnie dodać odwołanie do tego projektu w **odwołania** okno dialogowe.  
   
--   Określenie procedury, która jest niewidoczna dla procedury wywołującej.  
+- Określenie procedury, która jest niewidoczna dla procedury wywołującej.  
   
--   Deklarowanie procedury biblioteki dołączanej (dynamicznie DLL) Windows lub dla komputerów Macintosh zasobów kod procedury, która nie jest określony zasób biblioteki lub kodu.  
+- Deklarowanie procedury biblioteki dołączanej (dynamicznie DLL) Windows lub dla komputerów Macintosh zasobów kod procedury, która nie jest określony zasób biblioteki lub kodu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   

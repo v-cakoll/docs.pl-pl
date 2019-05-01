@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010621"
 ---
 # <a name="data-and-data-objects"></a>Dane i obiekty danych
 Dane są przesyłane w ramach operacji przeciągania i upuszczania są przechowywane w obiekcie danych.  Model obiektu danych składa się z co najmniej jedną z następujących par:  
   
--   <xref:System.Object> Zawierający rzeczywistych danych.  
+- <xref:System.Object> Zawierający rzeczywistych danych.  
   
--   Odpowiedni identyfikator format danych.  
+- Odpowiedni identyfikator format danych.  
   
  Samych danych może zawierać wszystko, co może być reprezentowany jako podstawa <xref:System.Object>.  Odpowiedni format danych jest ciągiem lub <xref:System.Type> zapewniający wskazówkę o tym, co formatowania danych znajduje się w.  Obiekty danych obsługi wiele par format data/data; Dzięki temu obiekt danych jednego dostarczający dane w wielu formatach.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - animation [WPF], 3-D translations [WPF], with key frames (QuaternionAnimationUsingKeyFrames)
 ms.assetid: 09e5707b-7523-4a08-9aa7-bb13cbedccdf
 ms.openlocfilehash: 87176df26405a69cb2c3d63620def0575b750b52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010270"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames-quaternionanimationusingkeyframes"></a>Instrukcje: Animowanie obrotu 3D przy użyciu klatek kluczowych (QuaternionAnimationUsingKeyFrames)
 W poniższym przykładzie <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> używa w celu obracania obiektu 3D. Ta animacja używa następujących klatek kluczowych:  

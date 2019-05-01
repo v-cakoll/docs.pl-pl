@@ -3,11 +3,11 @@ title: Wznowienie zakładki WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: a708064f-50b0-4751-b44e-d5410d08d451
 ms.openlocfilehash: 5c3c996a73d8f88e925d459fae3eb785996eada4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004747"
 ---
 # <a name="workflowhostingendpoint-resume-bookmark"></a>Wznowienie zakładki WorkflowHostingEndpoint
 W tym przykładzie przedstawiono sposób, w jaki <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> mogą być używane z <xref:System.ServiceModel.Activities.WorkflowServiceHost> do utworzenia wystąpienia przepływu pracy.  
@@ -18,9 +18,9 @@ W tym przykładzie przedstawiono sposób, w jaki <xref:System.ServiceModel.Activ
 ## <a name="discussion"></a>Dyskusja  
  W tym przykładzie użyto <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> można utworzyć wystąpienia przepływu pracy, hostowane przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> jest punktem rozszerzalności dla <xref:System.ServiceModel.Activities.WorkflowServiceHost> mogą służyć w następujących scenariuszach:  
   
--   Tworzenie nowego wystąpienia przepływu pracy.  
+- Tworzenie nowego wystąpienia przepływu pracy.  
   
--   Wznowienie zakładki w wystąpieniu przepływu pracy hostowane w <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+- Wznowienie zakładki w wystąpieniu przepływu pracy hostowane w <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
  Punkt końcowy przykład, który jest dołączony udostępnia kontraktu, który zawiera operacje tworzenia przepływu pracy i zwracają Identyfikatora wystąpienia, aby utworzyć wystąpienie z określonym identyfikatorem. Przykładowa aplikacja konsolowa tworzy <xref:System.ServiceModel.Activities.WorkflowServiceHost> wystąpienia z definicją podstawowy przepływ pracy i dodaje `CreationEndpoint` do hosta. Następnie wywołuje `Create` operacji w punkcie końcowym, aby utworzyć nowe wystąpienie przepływu pracy.  
   

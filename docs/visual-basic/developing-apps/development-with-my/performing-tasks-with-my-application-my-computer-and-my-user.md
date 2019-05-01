@@ -10,11 +10,11 @@ helpviewer_keywords:
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
 ms.openlocfilehash: 0372fbf63f6d12e266674f92225183911aa4ca30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014131"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>Wykonywanie zadań z My.Application, My.Computer oraz My.User (Visual Basic)
 Trzy centralnego `My` obiekty, które zapewniają dostęp do informacji i najczęściej używane funkcje są `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), a `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). Dostęp do informacji, który jest powiązany z bieżącej aplikacji, komputera, na którym aplikacja jest zainstalowana na lub z bieżącym użytkownikiem aplikacji, odpowiednio, można użyć tych obiektów.  

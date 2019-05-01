@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
 ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972006"
 ---
 # <a name="soundplayer-class-overview"></a>Przegląd klasy SoundPlayer
 <xref:System.Media.SoundPlayer> Klasy umożliwia łatwe uwzględnianie dźwięki w aplikacji.  

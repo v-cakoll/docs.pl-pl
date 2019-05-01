@@ -10,11 +10,11 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001315"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Opcje układu dla elementu WindowsFormsHost
 W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.WindowsFormsHost> element wchodzi w interakcję z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
@@ -38,13 +38,13 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
 ## <a name="layout-limitations"></a>Ograniczenia układu  
  Ogólnie rzecz biorąc [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolki nie mogą być skalowane i przekształcone w miarę możliwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Na poniższej liście opisano znane ograniczenia podczas <xref:System.Windows.Forms.Integration.WindowsFormsHost> element próbuje integrowanie swojej hostowanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sterowania do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
   
--   W niektórych przypadkach [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formanty nie można zmienić rozmiaru lub rozmiar można zmieniać tylko dla określonych wymiarów. Na przykład [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> kontrolka obsługuje tylko jedną wysokość, która jest zdefiniowana przez rozmiar czcionki formantu. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układ dynamiczny, gdzie elementy można rozciągnąć pionowo, hostowany <xref:System.Windows.Forms.ComboBox> nie można rozproszyć kontrolki, zgodnie z oczekiwaniami.  
+- W niektórych przypadkach [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formanty nie można zmienić rozmiaru lub rozmiar można zmieniać tylko dla określonych wymiarów. Na przykład [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> kontrolka obsługuje tylko jedną wysokość, która jest zdefiniowana przez rozmiar czcionki formantu. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układ dynamiczny, gdzie elementy można rozciągnąć pionowo, hostowany <xref:System.Windows.Forms.ComboBox> nie można rozproszyć kontrolki, zgodnie z oczekiwaniami.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolki nie można obracać lub nierówne. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Wywołuje element <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> zdarzeń, jeśli zastosujesz przekształcenia przesunięcia czasowego lub obrotu. Jeśli nie obsługują <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> zdarzenia <xref:System.InvalidOperationException> jest wywoływane.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolki nie można obracać lub nierówne. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Wywołuje element <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> zdarzeń, jeśli zastosujesz przekształcenia przesunięcia czasowego lub obrotu. Jeśli nie obsługują <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> zdarzenia <xref:System.InvalidOperationException> jest wywoływane.  
   
--   W większości przypadków [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów nie obsługują skalowanie proporcjonalne. Mimo że będzie się skalować wymiary formantu formanty podrzędne i elementy składowe formantu może nie zmienić rozmiar zgodnie z oczekiwaniami. To ograniczenie zależy od stopnia każdy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolka obsługuje skalowanie. Ponadto, nie będzie można skalować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek w dół, aby rozmiar 0 pikseli.  
+- W większości przypadków [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów nie obsługują skalowanie proporcjonalne. Mimo że będzie się skalować wymiary formantu formanty podrzędne i elementy składowe formantu może nie zmienić rozmiar zgodnie z oczekiwaniami. To ograniczenie zależy od stopnia każdy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolka obsługuje skalowanie. Ponadto, nie będzie można skalować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek w dół, aby rozmiar 0 pikseli.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Formanty obsługują skalowanie automatyczne, w którym formularza będzie automatycznie zmieniać rozmiar wraz z jego formantów, w oparciu o rozmiar czcionki. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika, zmienianie rozmiaru czcionki nie zmienia rozmiaru całej układ, mimo że poszczególne elementy mogą dynamicznie rozmiar.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Formanty obsługują skalowanie automatyczne, w którym formularza będzie automatycznie zmieniać rozmiar wraz z jego formantów, w oparciu o rozmiar czcionki. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika, zmienianie rozmiaru czcionki nie zmienia rozmiaru całej układ, mimo że poszczególne elementy mogą dynamicznie rozmiar.  
   
 ### <a name="z-order"></a>Z-order  
  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika można zmienić porządek elementów do formantu nakładających się zachowanie. Hostowany [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] rysowania kontrolki w oddzielnych HWND, dzięki czemu jest zawsze wstawiany w górnej części [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów.  
@@ -94,9 +94,9 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
   
  Jeśli <xref:System.Windows.Forms.Control.Size%2A> właściwości jest niezgodny z określonym ograniczeniem, obsługiwanego formantu nie obsługuje ciągłego zmiany rozmiaru. Na przykład <xref:System.Windows.Forms.MonthCalendar> kontrolka zezwala na tylko dyskretnych rozmiarów. Dozwolone rozmiary dla tego formantu składają się z liczb całkowitych (reprezentująca liczbę miesięcy) na szerokość i wysokość. W przypadkach, takich jak ta <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu zachowuje się w następujący sposób:  
   
--   Jeśli <xref:System.Windows.Forms.Control.Size%2A> właściwość zwraca większy rozmiar niż określona ograniczenie <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu klipów obsługiwanego formantu. Wysokość i szerokość są obsługiwane osobno, dzięki czemu mogą zostać obcięte kontroli hostowanych w dowolnym kierunku.  
+- Jeśli <xref:System.Windows.Forms.Control.Size%2A> właściwość zwraca większy rozmiar niż określona ograniczenie <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu klipów obsługiwanego formantu. Wysokość i szerokość są obsługiwane osobno, dzięki czemu mogą zostać obcięte kontroli hostowanych w dowolnym kierunku.  
   
--   Jeśli <xref:System.Windows.Forms.Control.Size%2A> właściwość zwraca rozmiar mniejszy niż określony ograniczenie <xref:System.Windows.Forms.Integration.WindowsFormsHost> akceptuje tej wartości rozmiaru i zwraca wartość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
+- Jeśli <xref:System.Windows.Forms.Control.Size%2A> właściwość zwraca rozmiar mniejszy niż określony ograniczenie <xref:System.Windows.Forms.Integration.WindowsFormsHost> akceptuje tej wartości rozmiaru i zwraca wartość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
   
 ## <a name="see-also"></a>Zobacz także
 

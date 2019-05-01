@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
 ms.openlocfilehash: cd1b0db5305c7879d89cfdfff6cd458d6dea14f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973033"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Instrukcje: Elementów podrzędnych XML dostępu (Visual Basic)
 W tym przykładzie pokazano, jak używać elementem podrzędnym właściwości osi, aby dostęp do wszystkich elementów podrzędnych XML, które mają określoną nazwą w elemencie XML. W szczególności używa <xref:System.Xml.Linq.XElement.Value%2A> właściwość, aby pobrać wartość pierwszego elementu w kolekcji `name` zwraca właściwości osi podrzędnej. `name` Właściwości osi elementu podrzędnego pobiera wszystkie elementy podrzędne, o nazwie `phone` w `contact` obiektu. W tym przykładzie również użyto `phone` właściwości osi elementu podrzędnego na dostęp do wszystkich elementów podrzędnych o nazwie `phone` są zawarte w `contact` obiektu.  
@@ -23,7 +23,7 @@ W tym przykładzie pokazano, jak używać elementem podrzędnym właściwości o
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołanie do <xref:System.Xml.Linq> przestrzeni nazw.  
+- Odwołanie do <xref:System.Xml.Linq> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
 

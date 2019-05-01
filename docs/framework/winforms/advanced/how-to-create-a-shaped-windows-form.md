@@ -19,11 +19,11 @@ helpviewer_keywords:
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
 ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004383"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>Instrukcje: Tworzenie formularzy systemu Windows o określonych kształtach
 W tym przykładzie daje formularza kształcie elipsy, który zmienia rozmiar za pomocą formularza.  
@@ -36,7 +36,7 @@ W tym przykładzie daje formularza kształcie elipsy, który zmienia rozmiar za 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołuje się do <xref:System.Windows.Forms> i <xref:System.Drawing> przestrzeni nazw.  
+- Odwołuje się do <xref:System.Windows.Forms> i <xref:System.Drawing> przestrzeni nazw.  
   
  Ten przykład przedstawia przesłonięcie <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, aby zmienić kształt formularza. Aby użyć tego kodu, skopiuj deklaracji metody, a także kod rysowania wewnątrz metody.  
   

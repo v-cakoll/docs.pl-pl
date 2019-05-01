@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
 ms.openlocfilehash: 421a4535888f432974c764b238c06b5b323aefb3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977711"
 ---
 # <a name="implement-retries-with-exponential-backoff"></a>Implementowanie ponownych prób z wykorzystaniem wykładniczego wycofywania
 

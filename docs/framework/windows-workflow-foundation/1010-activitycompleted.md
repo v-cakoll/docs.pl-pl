@@ -1,29 +1,29 @@
 ---
-title: 1010 - ActivityCompleted
+title: 1010 — ActivityCompleted
 ms.date: 03/30/2017
 ms.assetid: d256284e-3fd2-4c33-82f4-abb617575706
 ms.openlocfilehash: 355281e6aa8f621bd2f9c0862e641fafec872750
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008374"
 ---
-# <a name="1010---activitycompleted"></a>1010 - ActivityCompleted
+# <a name="1010---activitycompleted"></a>1010 — ActivityCompleted
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|1010|  
-|Słowa kluczowe|WFRuntime|  
+|Identyfikator|1010|  
+|słowa kluczowe|WFRuntime|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
  Wskazuje, że działanie zakończy działanie.  
   
 ## <a name="message"></a>Komunikat  
- Działanie "%1", nazwa wyświetlana: %2, identyfikator wystąpienia: '%3' została ukończona w stan "%4".  
+ Działanie "%1", DisplayName: "%2", InstanceId: "%3" zostało ukończone w stanie "%4".  
   
 ## <a name="details"></a>Szczegóły  
   
@@ -31,6 +31,6 @@ ms.locfileid: "33509700"
 |--------------------|--------------------|-----------------|  
 |Działanie|xs:String|Nazwa typu działania.|  
 |Nazwa wyświetlana|xs:String|Nazwa wyświetlana działania.|  
-|Identyfikator wystąpienia|xs:String|Identyfikator wystąpienia działania.|  
+|InstanceId|xs:String|Identyfikator wystąpienia działania.|  
 |Stan|xs:String|Stan działania.|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

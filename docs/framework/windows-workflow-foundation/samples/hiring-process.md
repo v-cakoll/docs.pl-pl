@@ -3,11 +3,11 @@ title: Proces zatrudniania
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005059"
 ---
 # <a name="hiring-process"></a>Proces zatrudniania
 Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyciu działań dotyczących komunikatów i dwa przepływy pracy hostowany jako usług przepływu pracy. Te przepływy pracy są częścią infrastruktury IT w fikcyjnej firmy o nazwie Contoso, Inc.  
@@ -18,35 +18,35 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
   
  W tym przykładzie przedstawiono następujące funkcje [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence> przepływów pracy na potrzeby modelowania procesów biznesowych.  
+- <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence> przepływów pracy na potrzeby modelowania procesów biznesowych.  
   
--   Usługi przepływu pracy.  
+- Usługi przepływu pracy.  
   
--   Działania dotyczące komunikatów.  
+- Działania dotyczące komunikatów.  
   
--   Korelacja oparta na zawartości.  
+- Korelacja oparta na zawartości.  
   
--   Działania niestandardowe (deklaratywne i oparte na kodzie).  
+- Działania niestandardowe (deklaratywne i oparte na kodzie).  
   
--   Dostarczane przez system server stanów trwałych programu SQL.  
+- Dostarczane przez system server stanów trwałych programu SQL.  
   
--   Niestandardowe <xref:System.Activities.Persistence.PersistenceParticipant>.  
+- Niestandardowe <xref:System.Activities.Persistence.PersistenceParticipant>.  
   
--   Niestandardowe śledzenia.  
+- Niestandardowe śledzenia.  
   
--   Śledzenie zdarzeń dla zdarzeń śledzenia Windows (ETW).  
+- Śledzenie zdarzeń dla zdarzeń śledzenia Windows (ETW).  
   
--   Kompozycja działań.  
+- Kompozycja działań.  
   
--   <xref:System.Activities.Statements.Parallel> działania.  
+- <xref:System.Activities.Statements.Parallel> działania.  
   
--   <xref:System.Activities.Statements.CancellationScope> działanie.  
+- <xref:System.Activities.Statements.CancellationScope> działanie.  
   
--   Czasomierze trwałe (<xref:System.Activities.Statements.Delay> działanie).  
+- Czasomierze trwałe (<xref:System.Activities.Statements.Delay> działanie).  
   
--   Transakcje.  
+- Transakcje.  
   
--   Więcej niż jeden przepływ pracy w tym samym rozwiązaniu.  
+- Więcej niż jeden przepływ pracy w tym samym rozwiązaniu.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
@@ -64,25 +64,25 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
   
 2. Menedżer żądającego musi zatwierdzić żądanie:  
   
-    1.  Menedżer może odrzucić żądanie.  
+    1. Menedżer może odrzucić żądanie.  
   
-    2.  Menedżer może zwrócić żądania do zleceniodawcy, aby uzyskać dodatkowe informacje:  
+    2. Menedżer może zwrócić żądania do zleceniodawcy, aby uzyskać dodatkowe informacje:  
   
-        1.  Osoby żądającej przeglądów i wysyła żądanie do menedżera.  
+        1. Osoby żądającej przeglądów i wysyła żądanie do menedżera.  
   
-    3.  Menedżer może zatwierdzić.  
+    3. Menedżer może zatwierdzić.  
   
 3. Po Menedżera żądającego zatwierdza, właściciel działu, musisz zatwierdzić żądanie:  
   
-    1.  Właściciel działu może odrzucić.  
+    1. Właściciel działu może odrzucić.  
   
-    2.  Właściciel działu mogą zatwierdzać.  
+    2. Właściciel działu mogą zatwierdzać.  
   
 4. Po zatwierdzeniu przez właściciela działu, ten proces wymaga zatwierdzenia menedżerów 2 h lub dyrektora generalnego:  
   
-    1.  Ten proces można przejść do stanu zaakceptowane lub odrzucone.  
+    1. Ten proces można przejść do stanu zaakceptowane lub odrzucone.  
   
-    2.  Jeśli proces zostanie zaakceptowana, nowe wystąpienie klasy `ResumeRequest` uruchamiania przepływu pracy (`ResumeRequest` jest połączony z HiringRequest.csproj poprzez odwołanie do usługi.)  
+    2. Jeśli proces zostanie zaakceptowana, nowe wystąpienie klasy `ResumeRequest` uruchamiania przepływu pracy (`ResumeRequest` jest połączony z HiringRequest.csproj poprzez odwołanie do usługi.)  
   
  Po zatwierdzić menedżerowie zatrudniania nowych pracowników działu KADR muszą znaleźć odpowiednim kandydatem. Ten proces odbywa się przez drugi przepływu pracy (`ResumeRequest`zdefiniowaną w ResumeRequestService.csproj). Ten przepływ pracy definiuje proces przesyłania zadania publikowanie za pomocą kariery możliwość zewnętrznej witryny sieci Web kariery firmy Contoso, otrzyma wznawia od kandydatów, a następnie monitoruje stan delegowania zadań. Pozycje są dostępne przez stały okres (aż do czasu wygaśnięcia) lub dopóki pracownika z firmy Contoso decyduje go usunąć. `ResumeRequest` Przepływu pracy składa się z następujących czynności:  
   
@@ -215,19 +215,19 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
   
 2. Jeśli rozwiązanie nie twórz, sprawdź następujące informacje:  
   
-    -   Odwołanie do `ContosoHR` nie brakuje `InternalClient` lub `CareersWebSite` projektów.  
+    - Odwołanie do `ContosoHR` nie brakuje `InternalClient` lub `CareersWebSite` projektów.  
   
 3. Jeśli rozwiązanie wykonanie nie powiedzie się, sprawdź następujące informacje:  
   
-    1.  Wszystkie usługi są uruchomione.  
+    1. Wszystkie usługi są uruchomione.  
   
-    2.  Odwołania do usług są aktualizowane.  
+    2. Odwołania do usług są aktualizowane.  
   
-        1.  Otwórz App_WebReferences folder  
+        1. Otwórz App_WebReferences folder  
   
-        2.  Kliknij prawym przyciskiem myszy **Contoso** i wybierz **aktualizacja odwołań sieci Web/usługi**.  
+        2. Kliknij prawym przyciskiem myszy **Contoso** i wybierz **aktualizacja odwołań sieci Web/usługi**.  
   
-        3.  Ponownie skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B w programie Visual Studio.  
+        3. Ponownie skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B w programie Visual Studio.  
   
 ## <a name="uninstalling"></a>Odinstalowywanie  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009113"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel
 Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas zmiany rozmiaru formularza lub zawartość zmienia rozmiar formularza. Kiedy należy układ dynamiczny i nie chcesz obsługiwać <xref:System.Windows.Forms.Control.Layout> zdarzenia jawnie w kodzie, należy wziąć pod uwagę przy użyciu panelu układu.  
@@ -28,21 +28,21 @@ Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas 
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu Windows Forms  
+- Tworzenie projektu Windows Forms  
   
--   Rozmieszczanie formantów w wiersze i kolumny  
+- Rozmieszczanie formantów w wiersze i kolumny  
   
--   Ustawienie wierszy i kolumn właściwości  
+- Ustawienie wierszy i kolumn właściwości  
   
--   Obejmowanie wierszy i kolumn z kontrolką  
+- Obejmowanie wierszy i kolumn z kontrolką  
   
--   Automatyczną obsługę przepełnienia  
+- Automatyczną obsługę przepełnienia  
   
--   Wstawianie formantów, klikając je dwukrotnie w przyborniku  
+- Wstawianie formantów, klikając je dwukrotnie w przyborniku  
   
--   Wstawianie kontrolki za pomocą rysowania konturu jej  
+- Wstawianie kontrolki za pomocą rysowania konturu jej  
   
--   Ponowne przypisywanie istniejących formantów do innego elementu nadrzędnego  
+- Ponowne przypisywanie istniejących formantów do innego elementu nadrzędnego  
   
  Gdy skończysz, masz zrozumienia rolę odgrywaną przez te funkcje ważne układu.  
   
@@ -158,25 +158,25 @@ Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas 
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Aby zademonstrować, że wielu formantów w komórkach nie są dozwolone  
   
--   Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do <xref:System.Windows.Forms.TableLayoutPanel> kontroli i upuść go w jednej z komórek zajęty. Należy pamiętać, że <xref:System.Windows.Forms.TableLayoutPanel> kontroli nie pozwalają na upuszczanie <xref:System.Windows.Forms.Button> formant w komórce zajęty.  
+- Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do <xref:System.Windows.Forms.TableLayoutPanel> kontroli i upuść go w jednej z komórek zajęty. Należy pamiętać, że <xref:System.Windows.Forms.TableLayoutPanel> kontroli nie pozwalają na upuszczanie <xref:System.Windows.Forms.Button> formant w komórce zajęty.  
   
 ## <a name="swapping-controls"></a>Trwa zamienianie formantów  
  <xref:System.Windows.Forms.TableLayoutPanel> Kontroli umożliwia przełączanie kontrolek zajmuje dwie różne komórki.  
   
 #### <a name="to-swap-controls"></a>Można zamienić formantów  
   
--   Przeciągnij jeden z <xref:System.Windows.Forms.Button> formantów z zajętych komórkę i upuść do na innej komórce zajęty. Należy pamiętać, że dwie kontrolki są przenoszone z jedną komórkę do drugiej.  
+- Przeciągnij jeden z <xref:System.Windows.Forms.Button> formantów z zajętych komórkę i upuść do na innej komórce zajęty. Należy pamiętać, że dwie kontrolki są przenoszone z jedną komórkę do drugiej.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Układ złożony przy użyciu kombinacji panele układów i formanty można osiągnąć. Sugestie dotyczące więcej eksploracji obejmują:  
   
--   Spróbuj zmienić rozmiar poszczególnych <xref:System.Windows.Forms.Button> kontrolki o większym rozmiarze i zwróć uwagę, wpływ na układ.  
+- Spróbuj zmienić rozmiar poszczególnych <xref:System.Windows.Forms.Button> kontrolki o większym rozmiarze i zwróć uwagę, wpływ na układ.  
   
--   Wklej zaznaczenie wielu formantów do <xref:System.Windows.Forms.TableLayoutPanel> kontroli i należy pamiętać, jak są wstawiane kontrolki.  
+- Wklej zaznaczenie wielu formantów do <xref:System.Windows.Forms.TableLayoutPanel> kontroli i należy pamiętać, jak są wstawiane kontrolki.  
   
--   Panele układów może zawierać innych paneli układów. Eksperymentuj z usuwanie <xref:System.Windows.Forms.TableLayoutPanel> kontroli do istniejącej kontrolki.  
+- Panele układów może zawierać innych paneli układów. Eksperymentuj z usuwanie <xref:System.Windows.Forms.TableLayoutPanel> kontroli do istniejącej kontrolki.  
   
--   Zadokuj <xref:System.Windows.Forms.TableLayoutPanel> formantu do formularza nadrzędnego. Zmień rozmiar formularza i zanotuj wpływa na układ.  
+- Zadokuj <xref:System.Windows.Forms.TableLayoutPanel> formantu do formularza nadrzędnego. Zmień rozmiar formularza i zanotuj wpływa na układ.  
   
 ## <a name="see-also"></a>Zobacz także
 

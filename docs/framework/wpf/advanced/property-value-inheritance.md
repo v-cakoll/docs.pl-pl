@@ -7,11 +7,11 @@ helpviewer_keywords:
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
 ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981919"
 ---
 # <a name="property-value-inheritance"></a>Przejęcie wartości właściwości
 Dziedziczenie wartości właściwości jest funkcją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] właściwości systemu. Dziedziczenie wartości właściwości umożliwia elementy podrzędne w drzewie elementów, aby uzyskać wartość określonej właściwości z obiektu nadrzędnego elementom dziedziczenie tę wartość, jak go w dowolnym miejscu została ustawiona w najbliższym elemencie nadrzędnym. Element nadrzędny może także uzyskać wartość poprzez dziedziczenie wartości właściwości, więc system potencjalnie recurses aż do głównej strony. Dziedziczenie wartości właściwości nie jest to domyślne zachowanie systemu właściwości; Właściwość, należy ustanowić z ustawieniem określonego metadanych aby spowodować, że tę właściwość można zainicjować dziedziczenie wartości właściwości dla elementów podrzędnych.  

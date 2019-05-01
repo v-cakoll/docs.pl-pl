@@ -7,11 +7,11 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008758"
 ---
 # <a name="gridview-overview"></a>GridView — Przegląd
 <xref:System.Windows.Controls.GridView> tryb widoku to jeden z trybów wyświetlania dla <xref:System.Windows.Controls.ListView> kontroli. <xref:System.Windows.Controls.GridView> Klasy i jej klasy pomocnicze umożliwiają Ty i Twoi użytkownicy elementu przeglądać kolekcje w tabeli, która zwykle używa przyciski jako nagłówków kolumn interaktywne. W tym temacie przedstawiono <xref:System.Windows.Controls.GridView> klasy i opisano jego użycia.  
@@ -73,30 +73,30 @@ ms.locfileid: "59201302"
   
  Poniższa lista w tym artykule omówiono bardziej szczegółowo możliwości korzystania z <xref:System.Windows.Controls.GridView> do interakcji z użytkownikiem:  
   
--   **Zmienianie kolejności kolumn przy użyciu metody przeciągania i upuszczania.**  
+- **Zmienianie kolejności kolumn przy użyciu metody przeciągania i upuszczania.**  
   
      Użytkownicy mogą zmienić kolejność kolumn w <xref:System.Windows.Controls.GridView> , naciskając klawisze lewy przycisk myszy jest przemieszczany nad nagłówek kolumny, a następnie przeciągając tę kolumnę do nowej pozycji. Gdy użytkownik przeciągnie nagłówek kolumny, zmiennoprzecinkowy wersję nagłówka jest wyświetlany oraz linia ciągła czarny, pokazujący miejsca do wstawienia w kolumnie.  
   
      Jeśli chcesz zmodyfikować domyślny styl zmiennoprzecinkowy wersji nagłówka, należy określić <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.GridViewColumnHeader> typ wyzwalane, gdy <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> właściwość jest ustawiona na <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Aby uzyskać więcej informacji, zobacz [Tworzenie stylu dla nagłówka kolumny GridView przeciągnąć](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
--   **Zmień rozmiar kolumny do jego zawartości.**  
+- **Zmień rozmiar kolumny do jego zawartości.**  
   
      Użytkownicy, można kliknąć dwukrotnie uchwytu z prawej strony nagłówka kolumny, aby można było zmienić rozmiar kolumny w celu dopasowania do jego zawartości.  
   
     > [!NOTE]
     >  Możesz ustawić <xref:System.Windows.Controls.GridViewColumn.Width%2A> właściwość `Double.NaN` aby wygenerować ten sam efekt.  
   
--   **Wybierz elementy wierszy.**  
+- **Wybierz elementy wierszy.**  
   
      Użytkownicy mogą wybrać jeden lub więcej elementów w <xref:System.Windows.Controls.GridView>.  
   
      Jeśli chcesz zmienić <xref:System.Windows.Style> wybranego elementu, zobacz [używanie wyzwalaczy do zaznaczonego elementu w ListView, styl](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
--   **Przewiń do wyświetlania zawartości, który nie jest początkowo widoczne na ekranie.**  
+- **Przewiń do wyświetlania zawartości, który nie jest początkowo widoczne na ekranie.**  
   
      Jeśli rozmiar <xref:System.Windows.Controls.GridView> jest zbyt mały, aby wyświetlić wszystkie elementy, użytkownicy mogą być przewijane w poziomie lub pionie za pomocą paski przewijania, które są dostarczane przez <xref:System.Windows.Controls.ScrollViewer> kontroli. Element <xref:System.Windows.Controls.Primitives.ScrollBar> jest ukryta, jeśli cała zawartość jest widoczna w określonym kierunku. Nagłówki kolumn przewijane pionowy pasek przewijania, ale być przewijane w poziomie.  
   
--   **Za pomocą przycisków nagłówka kolumny wchodzić w interakcje z kolumnami.**  
+- **Za pomocą przycisków nagłówka kolumny wchodzić w interakcje z kolumnami.**  
   
      Gdy użytkownik kliknie przycisk nagłówka kolumny, posortuj dane, które jest wyświetlane w kolumnie, jeśli podano algorytmu sortowania.  
   
@@ -110,17 +110,17 @@ ms.locfileid: "59201302"
 ## <a name="gridview-supporting-classes"></a>Klasy obsługi widoku GridView  
  Następujące klasy pomocy technicznej <xref:System.Windows.Controls.GridView> trybu wyświetlania.  
   
--   <xref:System.Windows.Controls.GridViewColumn>  
+- <xref:System.Windows.Controls.GridViewColumn>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GridViewRowPresenter>  
+- <xref:System.Windows.Controls.GridViewRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
+- <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewColumnCollection>  
+- <xref:System.Windows.Controls.GridViewColumnCollection>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
+- <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>Zobacz także
 

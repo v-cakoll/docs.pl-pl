@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
 ms.openlocfilehash: d8453d85afb92c69bdf3066ccb8b31e26a34c6d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006489"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
 Ten przykład demonstruje sposób implementacji typowych usług i typowego klienta za pomocą usługi Windows Communication Foundation (WCF). W tym przykładzie składa się z konsoli programu klienckiego (client.exe) i Biblioteka usługi hostowanej przez Internetowe usługi informacyjne (IIS). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź". Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia). Klient wysyła żądań synchronicznych operacji matematycznych danego i odpowiedzi usługi z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Tree Item control type
 ms.assetid: 229f341a-477f-434e-b877-4db9973068eb
 ms.openlocfilehash: aea10ea857c2c347a5f8f5f6240af9d0b581abd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996479"
 ---
 # <a name="ui-automation-support-for-the-treeitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu kontrolki TreeItem
 > [!NOTE]
@@ -63,7 +63,7 @@ ms.locfileid: "59202238"
 |Właściwości wzorzec/wzorzec kontrolki|Obsługa/wartość|Uwagi|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Zależy od|Implementacja tego wzorca kontrolki, jeśli element drzewa ma oddzielne polecenie informacje z możliwością działania.|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Tak|Wszystkie elementy drzewa może można rozwijać i zwijać.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Yes|Wszystkie elementy drzewa może można rozwijać i zwijać.|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Rozwinięte, zwinięty lub typu liść węzła|Drzewo elementów będzie węzły liści, gdy nie są one rozwinięta czy zwinięta.|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Zależy od|Implementacja tego wzorca kontrolki, jeśli kontener drzewa obsługuje wzorca kontrolki przewijania.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Zależy od|Implementacja tego wzorca kontrolki, jeśli jest to możliwe zapewnienie aktywnego zaznaczenia, zachowywane po użytkownik powraca do kontenera drzewa.|  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 74e5908dfcd42d031464ffccedb530be4a71a3f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983362"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementacja wzorca kontrolki MultipleView dla automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -27,13 +27,13 @@ ms.locfileid: "59125201"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki widoku wielu, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> również powinny być zrealizowane w kontenerze, który zarządza bieżący widok, jeśli jest inny niż formant, który zawiera bieżący widok. Na przykład Eksploratora Windows zawiera kontrolkę listy do bieżącej zawartości folderu, kiedy widoku dla kontrolki jest zarządzana z poziomu aplikacji w Eksploratorze Windows.  
+- <xref:System.Windows.Automation.Provider.IMultipleViewProvider> również powinny być zrealizowane w kontenerze, który zarządza bieżący widok, jeśli jest inny niż formant, który zawiera bieżący widok. Na przykład Eksploratora Windows zawiera kontrolkę listy do bieżącej zawartości folderu, kiedy widoku dla kontrolki jest zarządzana z poziomu aplikacji w Eksploratorze Windows.  
   
--   Formant, który jest w stanie sortowania jego zawartość nie jest uważany za obsługuje wiele widoków.  
+- Formant, który jest w stanie sortowania jego zawartość nie jest uważany za obsługuje wiele widoków.  
   
--   Kolekcja widoków muszą być identyczne w wystąpieniach.  
+- Kolekcja widoków muszą być identyczne w wystąpieniach.  
   
--   Wyświetlanie nazw musi być odpowiednia do stosowania w zamiany tekstu na mowę, Braille'a i inne aplikacje czytelny dla człowieka.  
+- Wyświetlanie nazw musi być odpowiednia do stosowania w zamiany tekstu na mowę, Braille'a i inne aplikacje czytelny dla człowieka.  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>Wymagane elementy IMultipleViewProvider  

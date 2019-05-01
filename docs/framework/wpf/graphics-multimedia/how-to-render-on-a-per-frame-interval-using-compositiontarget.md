@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008931"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Instrukcje: Renderowanie w interwałach klatek z użyciem elementu CompositionTarget
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aparat animacji udostępnia wiele funkcji do tworzenia opartych na klatkach animacji. Istnieją jednak scenariuszy aplikacji, w których potrzebujesz bardziej szczegółowej kontroli nad renderowania na zasadzie na ramki. <xref:System.Windows.Media.CompositionTarget> Obiekt zapewnia możliwość tworzenia niestandardowe animacje oparte na wywołanie zwrotne poszczególnych klatkach.  

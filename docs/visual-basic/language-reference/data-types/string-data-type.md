@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971720"
 ---
 # <a name="string-data-type-visual-basic"></a>String — Typ danych (Visual Basic)
 Zawiera sekwencje punktów niepodpisanego kodu (2-bajtowych) 16-bitowych tego zakresu wartości od 0 do 65 535. Każdy *punktem kodu*, lub kod znaku reprezentuje pojedynczy znak Unicode. Ciąg może zawierać od 0 do około miliarda dwóch (2 ^ 31) znaków Unicode.  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Liczby ujemne.** Należy pamiętać, że znaki w posiadaniu `String` niepodpisanych i nie może reprezentować wartości ujemnych. W każdym przypadku, nie należy używać `String` do przechowywania wartości liczbowych.  
+- **Liczby ujemne.** Należy pamiętać, że znaki w posiadaniu `String` niepodpisanych i nie może reprezentować wartości ujemnych. W każdym przypadku, nie należy używać `String` do przechowywania wartości liczbowych.  
   
--   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework na przykład obiektami automatyzacji lub COM, pamiętaj, że znaków w ciągu ma różną szerokość danych (8 bitów) w innych środowiskach. Jeśli przekazujesz argumentu ciągu znaków 8-bitowych do takiego składnika, Zadeklaruj go jako `Byte()`, tablicę `Byte` elementów, zamiast `String` nowego kodu języka Visual Basic.  
+- **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework na przykład obiektami automatyzacji lub COM, pamiętaj, że znaków w ciągu ma różną szerokość danych (8 bitów) w innych środowiskach. Jeśli przekazujesz argumentu ciągu znaków 8-bitowych do takiego składnika, Zadeklaruj go jako `Byte()`, tablicę `Byte` elementów, zamiast `String` nowego kodu języka Visual Basic.  
   
--   **Znaki typu.** Dołączanie znaku typu identyfikator `$` do jakiegokolwiek identyfikatora wymusza `String` typu danych. `String` nie ma typ literału znaku. Jednak kompilator traktuje literały ujęta w znaki cudzysłowu (`" "`) jako `String`.  
+- **Znaki typu.** Dołączanie znaku typu identyfikator `$` do jakiegokolwiek identyfikatora wymusza `String` typu danych. `String` nie ma typ literału znaku. Jednak kompilator traktuje literały ujęta w znaki cudzysłowu (`" "`) jako `String`.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.String?displayProperty=nameWithType> klasy.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.String?displayProperty=nameWithType> klasy.  
   
 ## <a name="see-also"></a>Zobacz także
 

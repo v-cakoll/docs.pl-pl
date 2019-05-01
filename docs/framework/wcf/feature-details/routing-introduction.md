@@ -3,11 +3,11 @@ title: Wprowadzenie do routingu
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991097"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólny podłączanych SOAP pośrednie umożliwiającym routing wiadomości na podstawie zawartości komunikatu. Usługa routingu umożliwia tworzenie złożoną logikę routingu, która pozwala na implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi, routing priorytet i routing multiemisji. Usługa routingu znajdują się również dodanymi komentarzami, która pozwala na konfigurowanie wykaz kopii zapasowych punktów końcowych, do którego są wysyłane wiadomości, jeśli wystąpi błąd podczas wysyłania do docelowego podstawowego punktu końcowego.  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  Gdy wiele konfiguracji usługa routingu używana logika wyłączny filtr, które kieruje komunikaty do tylko jednego określonego punktu końcowego, może być konieczne kierowania danego komunikatu do wielu docelowych punktów końcowych. Do obsługi multiemisji komunikatu do wielu miejsc docelowych muszą być spełnione następujące warunki:  
   
--   Kształtu kanału nie może być "żądanie-odpowiedź" (chociaż może być jedno- lub dupleksowy,), ponieważ tylko jedną odpowiedź może zostać odebrany przez aplikację klienta w odpowiedzi na żądanie.  
+- Kształtu kanału nie może być "żądanie-odpowiedź" (chociaż może być jedno- lub dupleksowy,), ponieważ tylko jedną odpowiedź może zostać odebrany przez aplikację klienta w odpowiedzi na żądanie.  
   
--   Wiele filtrów musi zwracać `true` podczas oceniania wiadomości.  
+- Wiele filtrów musi zwracać `true` podczas oceniania wiadomości.  
   
  Jeśli te warunki są spełnione, komunikat jest kierowany do wszystkich punktów końcowych wszystkie filtry, które dają `true`. W poniższym przykładzie zdefiniowano konfiguracji routingu, powstałego w komunikatach jest kierowany do obu punktów końcowych, jeśli adres punktu końcowego w komunikacie `http://localhost:8000/routingservice/router/rounding`.  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **Przetwarzanie żądania**  
   
--   Pobierz **element MessageVersion** wychodzącego powiązania/kanału.  
+- Pobierz **element MessageVersion** wychodzącego powiązania/kanału.  
   
--   Uzyskaj odczytujący treść oryginalnej wiadomości.  
+- Uzyskaj odczytujący treść oryginalnej wiadomości.  
   
--   Utwórz nową wiadomość z tą samą akcją, treść i nową **element MessageVersion**.  
+- Utwórz nową wiadomość z tą samą akcją, treść i nową **element MessageVersion**.  
   
--   Jeśli <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, skopiuj To, z FaultTo i nagłówków RelatesTo nowy komunikat.  
+- Jeśli <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, skopiuj To, z FaultTo i nagłówków RelatesTo nowy komunikat.  
   
--   Skopiuj wszystkie właściwości wiadomości na nowy komunikat.  
+- Skopiuj wszystkie właściwości wiadomości na nowy komunikat.  
   
--   Store oryginalnego komunikatu żądania do użycia podczas przetwarzania odpowiedzi.  
+- Store oryginalnego komunikatu żądania do użycia podczas przetwarzania odpowiedzi.  
   
--   Zwraca nowy komunikat żądania.  
+- Zwraca nowy komunikat żądania.  
   
  **Przetwarzanie odpowiedzi**  
   
--   Pobierz **element MessageVersion** oryginalnego komunikatu żądania.  
+- Pobierz **element MessageVersion** oryginalnego komunikatu żądania.  
   
--   Uzyskaj odczytujący treść komunikatu Odebrano odpowiedź.  
+- Uzyskaj odczytujący treść komunikatu Odebrano odpowiedź.  
   
--   Utwórz nowy komunikat odpowiedzi z tą samą akcją odczytujący treść i **element MessageVersion** oryginalnego komunikatu żądania.  
+- Utwórz nowy komunikat odpowiedzi z tą samą akcją odczytujący treść i **element MessageVersion** oryginalnego komunikatu żądania.  
   
--   Jeśli <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, skopiuj To, z FaultTo i nagłówków RelatesTo nowy komunikat.  
+- Jeśli <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, skopiuj To, z FaultTo i nagłówków RelatesTo nowy komunikat.  
   
--   Kopiuj właściwości komunikatu do nowej wiadomości.  
+- Kopiuj właściwości komunikatu do nowej wiadomości.  
   
--   Zwraca nowy komunikat odpowiedzi.  
+- Zwraca nowy komunikat odpowiedzi.  
   
  Domyślnie **SoapProcessingBehavior** jest automatycznie dodawany do punktów końcowych klienta przez <xref:System.ServiceModel.Routing.RoutingBehavior> podczas uruchamiania usługi; Jednakże, można kontrolować, czy przetwarzanie protokołu SOAP jest dodawany do wszystkich punktów końcowych klienta przy użyciu <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> właściwości. Można również dodać zachowanie bezpośrednio do określonego punktu końcowego i włączyć lub wyłączyć tego zachowania, na poziomie punktu końcowego, jeśli wymagana jest większą kontrolę nad przetwarzania protokołu SOAP.  
   
@@ -356,16 +356,16 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
   
 |Wzorzec|Sesja|Transakcja|Kontekstu odbierania|Lista kopii zapasowych jest obsługiwana|Uwagi|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
-|Komunikacja jednokierunkowa||||Yes|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Jeśli ten komunikat jest multiemisji, tylko wiadomość na kanale zakończonych niepowodzeniem jest przenoszony do miejsca docelowego kopii zapasowej.|  
+|Komunikacja jednokierunkowa||||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Jeśli ten komunikat jest multiemisji, tylko wiadomość na kanale zakończonych niepowodzeniem jest przenoszony do miejsca docelowego kopii zapasowej.|  
 |Komunikacja jednokierunkowa||✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
-|Komunikacja jednokierunkowa|||✓|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnie odebrany komunikat pełny otrzymywać wszystkich kontekstów. Jeśli komunikat nie zostanie pomyślnie odebrany przez dowolnego punktu końcowego, kontekstu odbierania nie jest ukończona.<br /><br /> Jeśli ten komunikat jest multiemisji kontekstu odbierania jest wypełniane, jeśli wiadomość została odebrana pomyślnie co najmniej jeden punkt końcowy (podstawowych lub zapasowych). Jeśli żaden z punktów końcowych, które w żadnym z multiemisji ścieżki pomyślnie wiadomości, kontekstu odbierania nie jest ukończona.|  
-|Komunikacja jednokierunkowa||✓|✓|Tak|Przerwij poprzednia transakcja, Utwórz nową transakcję i ponownie wysłać wszystkie wiadomości. Komunikaty, które napotkały błąd są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji w którym wszystkie transmisje powiedzie się, wykonaj kontekstów odbierania i zatwierdzania transakcji.|  
-|Komunikacja jednokierunkowa|✓|||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. W przypadku multiemisji tylko wiadomości w sesji, która napotkała błąd lub którego sesja zamknąć sesji nie powiodło się są wysyłane ponownie do tworzenia kopii zapasowej miejsc docelowych.|  
+|Komunikacja jednokierunkowa|||✓|Yes|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnie odebrany komunikat pełny otrzymywać wszystkich kontekstów. Jeśli komunikat nie zostanie pomyślnie odebrany przez dowolnego punktu końcowego, kontekstu odbierania nie jest ukończona.<br /><br /> Jeśli ten komunikat jest multiemisji kontekstu odbierania jest wypełniane, jeśli wiadomość została odebrana pomyślnie co najmniej jeden punkt końcowy (podstawowych lub zapasowych). Jeśli żaden z punktów końcowych, które w żadnym z multiemisji ścieżki pomyślnie wiadomości, kontekstu odbierania nie jest ukończona.|  
+|Komunikacja jednokierunkowa||✓|✓|Yes|Przerwij poprzednia transakcja, Utwórz nową transakcję i ponownie wysłać wszystkie wiadomości. Komunikaty, które napotkały błąd są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji w którym wszystkie transmisje powiedzie się, wykonaj kontekstów odbierania i zatwierdzania transakcji.|  
+|Komunikacja jednokierunkowa|✓|||Yes|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. W przypadku multiemisji tylko wiadomości w sesji, która napotkała błąd lub którego sesja zamknąć sesji nie powiodło się są wysyłane ponownie do tworzenia kopii zapasowej miejsc docelowych.|  
 |Komunikacja jednokierunkowa|✓|✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Komunikacja jednokierunkowa|✓||✓|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po wszystkich komunikatów wysyła ukończone bez błędów, sesja wskazuje dalszych komunikatów i usługa routingu pomyślnie zamyka wszystkie kanały wychodzących sesji, wszystkie otrzymywać konteksty są wykonywane i kanałów przychodzących sesji jest zamknięty.|  
-|Komunikacja jednokierunkowa|✓|✓|✓|Tak|Przerwanie bieżącej transakcji i Utwórz nową. Wyślij ponownie wszystkie poprzednie komunikaty o w sesji. Po utworzeniu transakcji, w którym wszystkie komunikaty zostały pomyślnie wysłane i sesji wskazuje, że odbieranie dalszych komunikatów, wszystkie kanały wychodzących sesji są zamknięte, konteksty są wykonywane przy użyciu transakcji, kanał przychodzących sesji jest zamknięte, a transakcja została zatwierdzona.<br /><br /> Gdy sesje są multiemisji w wiadomości, które miały błąd nie są wysyłane ponownie do tego samego miejsca docelowego jako przed i komunikaty, które napotkał błąd są wysyłane do miejsca docelowe kopii zapasowej.|  
+|Komunikacja jednokierunkowa|✓|✓|✓|Yes|Przerwanie bieżącej transakcji i Utwórz nową. Wyślij ponownie wszystkie poprzednie komunikaty o w sesji. Po utworzeniu transakcji, w którym wszystkie komunikaty zostały pomyślnie wysłane i sesji wskazuje, że odbieranie dalszych komunikatów, wszystkie kanały wychodzących sesji są zamknięte, konteksty są wykonywane przy użyciu transakcji, kanał przychodzących sesji jest zamknięte, a transakcja została zatwierdzona.<br /><br /> Gdy sesje są multiemisji w wiadomości, które miały błąd nie są wysyłane ponownie do tego samego miejsca docelowego jako przed i komunikaty, które napotkał błąd są wysyłane do miejsca docelowe kopii zapasowej.|  
 |Dwukierunkowa||||Tak|Wyślij do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
-|Dwukierunkowa|✓|||Tak|Wszystkie wiadomości na kanale można wysłać do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
+|Dwukierunkowa|✓|||Yes|Wszystkie wiadomości na kanale można wysłać do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
 |Dwukierunkowa||✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Dwukierunkowa|✓|✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Dupleks||||Nie|Komunikację dupleksową non sesji nie jest obecnie obsługiwane.|  

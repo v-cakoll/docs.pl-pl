@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc409d409cd4da54b61b16d069ce50c2456b53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985851"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx — Funkcja
 Włącza niezarządzane hosty do załadowania środowisko uruchomieniowe języka wspólnego (CLR) do procesu. [CorBindToRuntime —](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) i `CorBindToRuntimeEx` funkcje wykonują tę samą operację, ale `CorBindToRuntimeEx` funkcja pozwala na ustawienie flagi, aby określić zachowanie środowiska CLR.  
@@ -31,18 +31,18 @@ Włącza niezarządzane hosty do załadowania środowisko uruchomieniowe języka
   
  Ta funkcja pobiera zestaw parametrów, zezwalających na hoście, wykonaj następujące czynności:  
   
--   Określ wersję środowiska uruchomieniowego, które będą ładowane.  
+- Określ wersję środowiska uruchomieniowego, które będą ładowane.  
   
--   Wskazuje, czy serwer lub stacja robocza kompilacji powinny być załadowane.  
+- Wskazuje, czy serwer lub stacja robocza kompilacji powinny być załadowane.  
   
--   Kontrolowanie, czy współbieżne wyrzucanie elementów bezużytecznych lub niewspółbieżnym wyrzucaniem elementów bezużytecznych jest wykonywane.  
+- Kontrolowanie, czy współbieżne wyrzucanie elementów bezużytecznych lub niewspółbieżnym wyrzucaniem elementów bezużytecznych jest wykonywane.  
   
 > [!NOTE]
 >  Współbieżne wyrzucanie elementów bezużytecznych nie jest obsługiwana w aplikacjach działających w emulatorze WOW64 x86 emulatora w systemach 64-bitowych, które implementują architekturę Intel Itanium (wcześniej noszącą nazwę IA-64). Aby uzyskać więcej informacji o używaniu WOW64 w 64-bitowych systemach Windows, zobacz [uruchomiona 32-bitowych aplikacji](/windows/desktop/WinProg64/running-32-bit-applications).  
   
--   Kontrolowanie, czy zestawy są ładowane jako niezależne od domeny.  
+- Kontrolowanie, czy zestawy są ładowane jako niezależne od domeny.  
   
--   Wskaźnik interfejsu do uzyskania [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) można ustawić dodatkowe opcje dotyczące konfigurowania wystąpienia środowiska CLR, przed jej ponownym uruchomieniu.  
+- Wskaźnik interfejsu do uzyskania [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) można ustawić dodatkowe opcje dotyczące konfigurowania wystąpienia środowiska CLR, przed jej ponownym uruchomieniu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -75,31 +75,31 @@ HRESULT CorBindToRuntimeEx (
  `startupFlags`  
  [in] Kombinacja wartości [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) wyliczenia. Te flagi kontrolować współbieżne wyrzucanie elementów bezużytecznych, kodem domeny neutralnej i zachowaniem `pwszVersion` parametru. Wartość domyślna to pojedyncza domena, jeśli flaga nie jest ustawiona. Następujące wartości są prawidłowe:  
   
--   `STARTUP_CONCURRENT_GC`  
+- `STARTUP_CONCURRENT_GC`  
   
--   `STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`  
+- `STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`  
   
--   `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`  
+- `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`  
   
--   `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`  
+- `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`  
   
--   `STARTUP_LOADER_SAFEMODE`  
+- `STARTUP_LOADER_SAFEMODE`  
   
--   `STARTUP_LEGACY_IMPERSONATION`  
+- `STARTUP_LEGACY_IMPERSONATION`  
   
--   `STARTUP_LOADER_SETPREFERENCE`  
+- `STARTUP_LOADER_SETPREFERENCE`  
   
--   `STARTUP_SERVER_GC`  
+- `STARTUP_SERVER_GC`  
   
--   `STARTUP_HOARD_GC_VM`  
+- `STARTUP_HOARD_GC_VM`  
   
--   `STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`  
+- `STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`  
   
--   `STARTUP_LEGACY_IMPERSONATION`  
+- `STARTUP_LEGACY_IMPERSONATION`  
   
--   `STARTUP_DISABLE_COMMITTHREADSTACK`  
+- `STARTUP_DISABLE_COMMITTHREADSTACK`  
   
--   `STARTUP_ALWAYSFLOW_IMPERSONATION`  
+- `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
  Aby uzyskać opis tych flag, zobacz [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) wyliczenia.  
   
@@ -124,9 +124,9 @@ HRESULT CorBindToRuntimeEx (
   
 2. Po zmianie procesu domyślny tryb na tryb zgodności w wersji 1, gdzie <xref:System.Security.Principal.WindowsIdentity> nie przepływ obiektu w dowolnym momencie asynchronicznego niezależnie od wartości <xref:System.Threading.ExecutionContext> ustawień w bieżącym wątku. Jak zmienić domyślny tryb, zależy od tego, czy używać zarządzanego pliku wykonywalnego lub niezarządzanego interfejsu hostingu do ładowania CLR:  
   
-    1.  Dla zarządzanych plików wykonywalnych, należy ustawić `enabled` atrybutu [ \<legacyimpersonationpolicy — >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elementu `true`.  
+    1. Dla zarządzanych plików wykonywalnych, należy ustawić `enabled` atrybutu [ \<legacyimpersonationpolicy — >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elementu `true`.  
   
-    2.  W przypadku niezarządzane interfejsy hostingu, skonfigurować `STARTUP_LEGACY_IMPERSONATION` znacznik w `startupFlags` parametru podczas wywoływania `CorBindToRuntimeEx` funkcji.  
+    2. W przypadku niezarządzane interfejsy hostingu, skonfigurować `STARTUP_LEGACY_IMPERSONATION` znacznik w `startupFlags` parametru podczas wywoływania `CorBindToRuntimeEx` funkcji.  
   
      Tryb zgodności w wersji 1 ma zastosowanie do całego procesu i wszystkie domeny aplikacji w procesie.  
   

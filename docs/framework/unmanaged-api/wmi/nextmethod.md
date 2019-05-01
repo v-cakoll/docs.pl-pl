@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3667f7371131a4c1394ba5ca619d1f605c89ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000184"
 ---
 # <a name="nextmethod-function"></a>NextMethod — funkcja
 Pobiera kolejna metoda wyliczenie, które zaczyna się od wywołania [BeginMethodEnumeration](beginmethodenumeration.md).  

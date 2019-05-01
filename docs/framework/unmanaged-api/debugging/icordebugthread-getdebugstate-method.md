@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987158"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState — Metoda
 Pobiera bieżący stan debugowania tego obiektu ICorDebugThread.  

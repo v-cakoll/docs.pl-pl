@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982374"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje zdarzenia trasowane terminologii, w tym artykule opisano sposób zdarzenia trasowane są przesyłane za pośrednictwem drzewa elementów, podsumowano, jak obsługiwać zdarzenia trasowane i wyjaśniono, jak tworzyć własne niestandardowe zdarzenia trasowane.
@@ -86,11 +86,11 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
 ## <a name="routing-strategies"></a>Strategie routingu  
  Kierowane Użyj zdarzeń, jednego z trzech strategie routingu:  
   
--   **Bubbling:** Są wywoływane programy obsługi zdarzeń w źródle zdarzenia. Aż do osiągnięcia element główny drzewa zdarzenia trasowanego kieruje do elementów nadrzędnych kolejnych. Większość zdarzeń trasowanych używają propagacji strategii routingu. Propagacja zdarzeń trasowanych są zazwyczaj używane do zgłaszania zmian danych wejściowych lub stanu z różnych kontrolkę lub inne elementy interfejsu użytkownika.  
+- **Bubbling:** Są wywoływane programy obsługi zdarzeń w źródle zdarzenia. Aż do osiągnięcia element główny drzewa zdarzenia trasowanego kieruje do elementów nadrzędnych kolejnych. Większość zdarzeń trasowanych używają propagacji strategii routingu. Propagacja zdarzeń trasowanych są zazwyczaj używane do zgłaszania zmian danych wejściowych lub stanu z różnych kontrolkę lub inne elementy interfejsu użytkownika.  
   
--   **Bezpośrednie:** Element źródłowy, sama jest możliwość wywołania procedur obsługi w odpowiedzi. To jest odpowiednikiem "routing" który [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] używa zdarzeń. Jednak w przeciwieństwie do standardowego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzeń, bezpośrednie obsługiwać zdarzenia trasowane, klasa (Obsługa klasy jest opisana w następnej sekcji) i mogą być używane przez <xref:System.Windows.EventSetter> i <xref:System.Windows.EventTrigger>.  
+- **Bezpośrednie:** Element źródłowy, sama jest możliwość wywołania procedur obsługi w odpowiedzi. To jest odpowiednikiem "routing" który [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] używa zdarzeń. Jednak w przeciwieństwie do standardowego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzeń, bezpośrednie obsługiwać zdarzenia trasowane, klasa (Obsługa klasy jest opisana w następnej sekcji) i mogą być używane przez <xref:System.Windows.EventSetter> i <xref:System.Windows.EventTrigger>.  
   
--   **Tunelowanie:** Początkowo są wywoływane programy obsługi zdarzeń na element główny drzewa. Zdarzenia trasowanego następnie przybliżone ilości tych danych trasę przez elementy podrzędne kolejnych wzdłuż trasy, elementu węzła, który jest źródłem zdarzeń trasowanych (element, który spowodował zdarzenie trasowane). Zdarzenia trasowane tunelowania są często używane lub obsługiwane jako część składania kontrolki, w taki sposób, że zdarzenia z części złożonego mogą być celowo pominięty lub zastąpione przez zdarzenia, które są specyficzne dla pełną kontrolę. Dane wejściowe zdarzenia w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] często jest opracowywane zaimplementowane jako para tunelowania Propagacja. Tunelowania zdarzenia są czasami określane jako zdarzenia (wersja zapoznawcza), ze względu na Konwencję nazewnictwa, która jest używana dla par.  
+- **Tunelowanie:** Początkowo są wywoływane programy obsługi zdarzeń na element główny drzewa. Zdarzenia trasowanego następnie przybliżone ilości tych danych trasę przez elementy podrzędne kolejnych wzdłuż trasy, elementu węzła, który jest źródłem zdarzeń trasowanych (element, który spowodował zdarzenie trasowane). Zdarzenia trasowane tunelowania są często używane lub obsługiwane jako część składania kontrolki, w taki sposób, że zdarzenia z części złożonego mogą być celowo pominięty lub zastąpione przez zdarzenia, które są specyficzne dla pełną kontrolę. Dane wejściowe zdarzenia w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] często jest opracowywane zaimplementowane jako para tunelowania Propagacja. Tunelowania zdarzenia są czasami określane jako zdarzenia (wersja zapoznawcza), ze względu na Konwencję nazewnictwa, która jest używana dla par.  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>Dlaczego zdarzenia trasowanego użycia?  
@@ -104,9 +104,9 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  Inne niż aspekt routingu, istnieją dwie inne przyczyny tego dowolnej podanej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń można zaimplementować jako zdarzenia trasowanego zamiast standardowego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzeń. W przypadku wdrażania własnych zdarzeń można też rozważyć następujące zasady:  
   
--   Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Tworzenie szablonów i stylów funkcje, takie jak <xref:System.Windows.EventSetter> i <xref:System.Windows.EventTrigger> odwołania zdarzeń do zdarzenia trasowanego wymagają. Jest scenariusz identyfikator zdarzenia wspomnianych wcześniej.  
+- Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Tworzenie szablonów i stylów funkcje, takie jak <xref:System.Windows.EventSetter> i <xref:System.Windows.EventTrigger> odwołania zdarzeń do zdarzenia trasowanego wymagają. Jest scenariusz identyfikator zdarzenia wspomnianych wcześniej.  
   
--   Zdarzenia trasowane obsługuje klasy obsługi mechanizmu, według której klasy można określić metody statyczne, które mają możliwość obsługi zdarzenia trasowane, zanim wszystkie procedury obsługi zarejestrowane wystąpienia można uzyskiwać do nich dostęp. Może to być przydatne w przypadku projektowania formantu, dlatego klasy mogą zostać wymuszone zachowania klasy oparte na zdarzeniach, których nie można pominąć przypadkowo dzięki obsłudze zdarzeń w wystąpieniu.  
+- Zdarzenia trasowane obsługuje klasy obsługi mechanizmu, według której klasy można określić metody statyczne, które mają możliwość obsługi zdarzenia trasowane, zanim wszystkie procedury obsługi zarejestrowane wystąpienia można uzyskiwać do nich dostęp. Może to być przydatne w przypadku projektowania formantu, dlatego klasy mogą zostać wymuszone zachowania klasy oparte na zdarzeniach, których nie można pominąć przypadkowo dzięki obsłudze zdarzeń w wystąpieniu.  
   
  W osobnej sekcji w tym temacie omówiono każdego z powyższych zagadnienia.  
   
@@ -147,21 +147,21 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  Istnieje jednak mechanizm "handledEventsToo", według której odbiorników nadal można uruchomić procedury obsługi w odpowiedzi na zdarzenia trasowane gdzie <xref:System.Windows.RoutedEventArgs.Handled%2A> jest `true` danych zdarzenia. Innymi słowy trasy zdarzeń nie jest naprawdę wyłączana jako obsłużony, oznaczając dane zdarzenia. Mechanizm handledEventsToo można używać tylko w kodzie lub w <xref:System.Windows.EventSetter>:  
   
--   W kodzie, a nie za pomocą składni zdarzenia specyficzne dla języka, który działa ogólne [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] wywoływać zdarzenia, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metoda <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> do dodawania programu obsługi. Określ wartość `handledEventsToo` jako `true`.  
+- W kodzie, a nie za pomocą składni zdarzenia specyficzne dla języka, który działa ogólne [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] wywoływać zdarzenia, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metoda <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> do dodawania programu obsługi. Określ wartość `handledEventsToo` jako `true`.  
   
--   W <xref:System.Windows.EventSetter>ustaw <xref:System.Windows.EventSetter.HandledEventsToo%2A> atrybut był `true`.  
+- W <xref:System.Windows.EventSetter>ustaw <xref:System.Windows.EventSetter.HandledEventsToo%2A> atrybut był `true`.  
   
  Oprócz zachowania, <xref:System.Windows.RoutedEventArgs.Handled%2A> stanu tworzy w zdarzenia trasowane koncepcji <xref:System.Windows.RoutedEventArgs.Handled%2A> ma wpływ na sposób należy zaprojektować aplikację i napisać kod procedury obsługi zdarzeń. Można wyobrażenie <xref:System.Windows.RoutedEventArgs.Handled%2A> jako prosty protokół, który jest udostępniany przez zdarzenia trasowane. Dokładnie jak używać tego protokołu zależy od należy jednak projektowe dotyczące wartości <xref:System.Windows.RoutedEventArgs.Handled%2A> jest przeznaczony do użycia jest następująca:  
   
--   Jeśli zdarzenia trasowanego jest oznaczony jako obsłużony, następnie go nie trzeba ponownie obsłużenia przez inne elementy wzdłuż tej trasy.  
+- Jeśli zdarzenia trasowanego jest oznaczony jako obsłużony, następnie go nie trzeba ponownie obsłużenia przez inne elementy wzdłuż tej trasy.  
   
--   Jeśli zdarzenia trasowanego nie jest oznaczony jako obsłużony, a następnie innych nasłuchujących, która była wcześniej wzdłuż trasy wybrał opcję nie, aby zarejestrować program obsługi lub obsługi, które zostały zarejestrowane wybierz opcję nie, aby wykonywać operacje na danych zdarzenia i ustawić <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true`. (Można także oczywiście jest to możliwe, że bieżący odbiornika jest pierwszym punktem w trasie). Programy obsługi odbiornik bieżącego mają teraz trzy możliwe kursów akcji:  
+- Jeśli zdarzenia trasowanego nie jest oznaczony jako obsłużony, a następnie innych nasłuchujących, która była wcześniej wzdłuż trasy wybrał opcję nie, aby zarejestrować program obsługi lub obsługi, które zostały zarejestrowane wybierz opcję nie, aby wykonywać operacje na danych zdarzenia i ustawić <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true`. (Można także oczywiście jest to możliwe, że bieżący odbiornika jest pierwszym punktem w trasie). Programy obsługi odbiornik bieżącego mają teraz trzy możliwe kursów akcji:  
   
-    -   Nie podejmuj żadnych działań w ogóle; Zdarzenie pozostaje nieobsłużony i zdarzenia kieruje połączenia z odbiornikiem dalej.  
+    - Nie podejmuj żadnych działań w ogóle; Zdarzenie pozostaje nieobsłużony i zdarzenia kieruje połączenia z odbiornikiem dalej.  
   
-    -   Wykonanie kodu w odpowiedzi na zdarzenie, ale wprowadzać określenie, że akcję podejmowaną nie jest istotne, aby gwarantowało to oznaczenie zdarzenia jako obsługiwane. Trasy zdarzeń do następnego odbiornika.  
+    - Wykonanie kodu w odpowiedzi na zdarzenie, ale wprowadzać określenie, że akcję podejmowaną nie jest istotne, aby gwarantowało to oznaczenie zdarzenia jako obsługiwane. Trasy zdarzeń do następnego odbiornika.  
   
-    -   Wykonanie kodu w odpowiedzi na zdarzenie. Znacznik zdarzenia jako obsługiwane w przypadku danych przekazanych do programu obsługi, ponieważ akcję podejmowaną został uznany za istotne, aby gwarantowało oznaczanie jako obsługiwane. Zdarzenie nadal kieruje połączenia z odbiornikiem dalej, ale z <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` w danych zdarzeń, dlatego tylko `handledEventsToo` odbiorników mieć możliwość dalszego wywoływanie programów obsługi.  
+    - Wykonanie kodu w odpowiedzi na zdarzenie. Znacznik zdarzenia jako obsługiwane w przypadku danych przekazanych do programu obsługi, ponieważ akcję podejmowaną został uznany za istotne, aby gwarantowało oznaczanie jako obsługiwane. Zdarzenie nadal kieruje połączenia z odbiornikiem dalej, ale z <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` w danych zdarzeń, dlatego tylko `handledEventsToo` odbiorników mieć możliwość dalszego wywoływanie programów obsługi.  
   
  Ten projekt koncepcyjny wspiera zachowania routingu, o których wspomniano wcześniej: trudniej jest (chociaż jest to możliwe, w kodzie lub style) można dołączyć programy obsługi dla zdarzenia trasowane, które są wywoływane, nawet jeśli poprzednie obsługi wzdłuż trasy już ustawił <xref:System.Windows.RoutedEventArgs.Handled%2A>do `true`.  
   

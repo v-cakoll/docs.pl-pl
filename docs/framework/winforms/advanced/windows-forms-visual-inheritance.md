@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
 ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011869"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Formularze systemu Windows — dziedziczenie Visual
 Od czasu do czasu może zdecydować, że projekt wymaga formularz podobny do jednego, utworzony w poprzednim projektu. Możesz też utworzyć podstawowy formularz przy użyciu ustawień, takich jak znak wodny lub niektórych układu kontrolki, która będzie następnie używana ponownie w ramach projektu, z każdą iteracją, zawierający modyfikacji oryginalnego szablonu formularza. Dziedziczenie formularzy pozwala na tworzenie formularza podstawowego, a następnie dziedziczyć po nim i wprowadź zmiany przy jednoczesnym zachowaniu niezależnie od oryginalnego ustawienia, należy.  

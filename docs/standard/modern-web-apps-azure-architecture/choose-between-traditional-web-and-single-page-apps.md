@@ -1,15 +1,15 @@
 ---
-title: Wybierz między aplikacjami tradycyjnej sieci web i aplikacje jednostronicowe
+title: Wybieranie między tradycyjnymi aplikacjami internetowymi i aplikacjami jednostronicowymi
 description: Dowiedz się, jak dokonać wyboru między tradycyjnych aplikacji i internetowych aplikacji jednostronicowej (źródła), podczas tworzenia aplikacji sieci web.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019415"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami tradycyjnej sieci Web i aplikacje jednostronicowe (źródła)
 

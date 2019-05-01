@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007282"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.
@@ -28,24 +28,24 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
  Zadania przedstawione w niniejszym przewodniku to m.in.:
 
--   Tworzenie projektu aplikacji WPF.
+- Tworzenie projektu aplikacji WPF.
 
--   Dodawanie odwołania do [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Dodawanie odwołania do [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
 
--   Inicjowanie pamięci podręcznej.
+- Inicjowanie pamięci podręcznej.
 
--   Dodawanie wpisu pamięci podręcznej, który zawiera zawartość pliku tekstowego.
+- Dodawanie wpisu pamięci podręcznej, który zawiera zawartość pliku tekstowego.
 
--   Zapewnianie zasady eksmisji dla wpisu pamięci podręcznej.
+- Zapewnianie zasady eksmisji dla wpisu pamięci podręcznej.
 
--   Monitorowanie ścieżkę do pliku pamięci podręcznej i powiadamiania wystąpienie pamięci podręcznej o zmiany monitorowania elementów.
+- Monitorowanie ścieżkę do pliku pamięci podręcznej i powiadamiania wystąpienie pamięci podręcznej o zmiany monitorowania elementów.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
  Aby ukończyć ten przewodnik, potrzebne są:
 
--   Microsoft Visual Studio 2010.
+- Microsoft Visual Studio 2010.
 
--   Plik tekstowy, który zawiera niewielkiej ilości tekstu. (W oknie komunikatu zostanie wyświetlona zawartość pliku tekstowego). Kod zilustrowane w instruktażu przyjęto założenie, że pracujesz z następującego pliku:
+- Plik tekstowy, który zawiera niewielkiej ilości tekstu. (W oknie komunikatu zostanie wyświetlona zawartość pliku tekstowego). Kod zilustrowane w instruktażu przyjęto założenie, że pracujesz z następującego pliku:
 
      `c:\cache\cacheText.txt`
 
@@ -109,9 +109,9 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 7. Dodaj odwołanie do pamięci podręcznej zestawów, wykonując następujące czynności:
 
-    1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **Dodaj odwołanie**.
+    1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **Dodaj odwołanie**.
 
-    2.  Wybierz **.NET** zaznacz `System.Runtime.Caching`, a następnie kliknij przycisk **OK**.
+    2. Wybierz **.NET** zaznacz `System.Runtime.Caching`, a następnie kliknij przycisk **OK**.
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Aby zmienić docelową aplikację .NET Framework w projektach Visual C#
 
@@ -125,9 +125,9 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 4. Dodaj odwołanie do pamięci podręcznej zestawów, wykonując następujące czynności:
 
-    1.  Kliknij prawym przyciskiem myszy **odwołania** folder, a następnie kliknij przycisk **Dodaj odwołanie**.
+    1. Kliknij prawym przyciskiem myszy **odwołania** folder, a następnie kliknij przycisk **Dodaj odwołanie**.
 
-    2.  Wybierz **.NET** zaznacz `System.Runtime.Caching`, a następnie kliknij przycisk **OK**.
+    2. Wybierz **.NET** zaznacz `System.Runtime.Caching`, a następnie kliknij przycisk **OK**.
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>Dodawanie przycisku do okna WPF
  Następnie będzie dodać formant przycisku i utworzyć program obsługi zdarzeń dla przycisku `Click` zdarzeń. Później dodasz kod, po kliknięciu przycisku, zawartość pliku tekstowego są buforowane i wyświetlane.
@@ -143,13 +143,13 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>Inicjowanie pamięci podręcznej i buforowania wpis
  Następnie dodasz kod do wykonywania następujących zadań:
 
--   Tworzenie wystąpienia klasy pamięci podręcznej — oznacza to, można będzie utworzyć <xref:System.Runtime.Caching.MemoryCache> obiektu.
+- Tworzenie wystąpienia klasy pamięci podręcznej — oznacza to, można będzie utworzyć <xref:System.Runtime.Caching.MemoryCache> obiektu.
 
--   Korzysta z pamięci podręcznej <xref:System.Runtime.Caching.HostFileChangeMonitor> obiektów do monitorowania zmian w pliku tekstowym.
+- Korzysta z pamięci podręcznej <xref:System.Runtime.Caching.HostFileChangeMonitor> obiektów do monitorowania zmian w pliku tekstowym.
 
--   Odczyt pliku tekstowego i jego zawartość w pamięci podręcznej jako wpis pamięci podręcznej.
+- Odczyt pliku tekstowego i jego zawartość w pamięci podręcznej jako wpis pamięci podręcznej.
 
--   Wyświetl zawartość pliku tekstowego pamięci podręcznej.
+- Wyświetl zawartość pliku tekstowego pamięci podręcznej.
 
 #### <a name="to-create-the-cache-object"></a>Można utworzyć obiektu pamięci podręcznej
 

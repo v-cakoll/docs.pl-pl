@@ -20,11 +20,11 @@ helpviewer_keywords:
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
 ms.openlocfilehash: 3a9d891fe898cf691a5f0d36e6360c2a73fb199d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004526"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Kodowanie i globalizacja formularzy systemu Windows
 Aplikacje Windows Forms są całkowicie obsługujące format Unicode, co oznacza, że każdy znak jest reprezentowany przez unikatowy numer, niezależnie od tego, jakie platformy, programu lub języka. Aby uzyskać więcej informacji na temat systemu Unicode, zobacz [witryny sieci Web konsorcjum Unicode](https://www.unicode.org).  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032022"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Przegląd Dwukierunkowe funkcje WPF
 W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma wiele funkcji, które obsługują szybkiego opracowywania zawartości dwukierunkowy, na przykład mieszanej po lewej stronie kliknij prawym przyciskiem myszy i kliknij prawym przyciskiem myszy, aby left danych w tym samym dokumencie. W tym samym czasie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tworzy doskonałe środowisko dla użytkowników, którzy potrzebują dwukierunkowe funkcje, takie jak arabski i hebrajski wypowiedzi użytkowników.  
@@ -166,11 +166,11 @@ W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](..
   
  Ta właściwość określa sposób ustalania kultury dla liczb. Przyjmuje on jedną z trzech <xref:System.Windows.Media.NumberCultureSource> wartości wyliczenia.  
   
--   Zastąpienie: Liczba kultury jest <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> właściwości.  
+- Zastąpienie: Liczba kultury jest <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> właściwości.  
   
--   Tekst: Liczba kulturą jest kultura tekstu, uruchom. W znaczniku, będzie to `xml:lang`, lub jego alias `Language` właściwości (<xref:System.Windows.FrameworkElement.Language%2A> lub <xref:System.Windows.FrameworkContentElement.Language%2A>). Ponadto jest ustawieniem domyślnym dla klasy wywodzące się z <xref:System.Windows.FrameworkContentElement>. Takich klas obejmują <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> itd.  
+- Tekst: Liczba kulturą jest kultura tekstu, uruchom. W znaczniku, będzie to `xml:lang`, lub jego alias `Language` właściwości (<xref:System.Windows.FrameworkElement.Language%2A> lub <xref:System.Windows.FrameworkContentElement.Language%2A>). Ponadto jest ustawieniem domyślnym dla klasy wywodzące się z <xref:System.Windows.FrameworkContentElement>. Takich klas obejmują <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> itd.  
   
--   Użytkownik: Liczba kulturą jest kultura bieżącego wątku. Ta właściwość jest ustawieniem domyślnym dla wszystkich podklasy <xref:System.Windows.FrameworkElement> takich jak <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> i <xref:System.Windows.Controls.TextBlock>.  
+- Użytkownik: Liczba kulturą jest kultura bieżącego wątku. Ta właściwość jest ustawieniem domyślnym dla wszystkich podklasy <xref:System.Windows.FrameworkElement> takich jak <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> i <xref:System.Windows.Controls.TextBlock>.  
   
  **CultureOverride**:  
   
@@ -180,15 +180,15 @@ W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](..
   
  Ta właściwość określa typ numeru podstawienia do wykonania. Przyjmuje on jedną z następujących <xref:System.Windows.Media.NumberSubstitutionMethod> wartości wyliczenia.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie kultury numer <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> właściwości. Domyślnie włączone.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie kultury numer <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> właściwości. Domyślnie włączone.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Liczba kulturą jest arabski lub Farsi kultury, określa, że cyfry są zależne od kontekstu.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Liczba kulturą jest arabski lub Farsi kultury, określa, że cyfry są zależne od kontekstu.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Numery zawsze są renderowane jako cyfry Europejskich.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Numery zawsze są renderowane jako cyfry Europejskich.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Cyfry są renderowane przy użyciu national cyfr numeru kultury, określony przez kultury <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Cyfry są renderowane przy użyciu national cyfr numeru kultury, określony przez kultury <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Cyfry są renderowane przy użyciu tradycyjnych cyfr numeru kultury. Dla większości kultur jest to taka sama jak <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Jednak <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> skutkuje alfabetu łacińskiego cyfr dla niektórych kultur arabski, natomiast wartość ta powoduje arabski cyfr dla wszystkich języków arabski.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Cyfry są renderowane przy użyciu tradycyjnych cyfr numeru kultury. Dla większości kultur jest to taka sama jak <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Jednak <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> skutkuje alfabetu łacińskiego cyfr dla niektórych kultur arabski, natomiast wartość ta powoduje arabski cyfr dla wszystkich języków arabski.  
   
  Co oznaczają te wartości dwukierunkowe deweloperowi zawartości? W większości przypadków, deweloper może być konieczne tylko w celu zdefiniowania <xref:System.Windows.FlowDirection> i język każdy tekstową [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementu, na przykład `Language="ar-SA"` i <xref:System.Windows.Media.NumberSubstitution> logiki dba o wyświetlaniu liczb zgodnie z prawidłowych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Poniższy przykład demonstruje użycie arabski i angielskim numerów [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji uruchomionej w języku arabskim wersję [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   

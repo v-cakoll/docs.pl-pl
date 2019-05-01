@@ -3,11 +3,11 @@ title: Anonse — przykład
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002758"
 ---
 # <a name="announcements-sample"></a>Anonse — przykład
 W tym przykładzie pokazano, jak korzystać z funkcji ogłoszenie funkcji odnajdywania. Anonse Zezwól usługom do wysłania komunikatów Anons, które zawierają metadane dotyczące usługi. Domyślnie ogłoszenie hello jest wysyłany podczas uruchamiania usługi i ogłoszenie bye jest wysyłana, gdy usługa kończy pracę. Anonse te mogą być multiemisji lub mogą być wysyłane point-to-point. W tym przykładzie składa się z dwóch projektów usługi i klienta.  

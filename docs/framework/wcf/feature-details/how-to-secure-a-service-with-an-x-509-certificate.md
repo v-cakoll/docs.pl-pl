@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
 ms.openlocfilehash: 75c7a0e50301ce80d51b9b2a10ed650a1600ec79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047740"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Instrukcje: zabezpieczanie usługi za pomocą certyfikatu X.509
 Zabezpieczanie usługi za pomocą certyfikatu X.509 to podstawowa technika, używanego przez większość powiązania w Windows Communication Foundation (WCF). W tym temacie przedstawiono kroki konfigurowania samodzielnie hostowanej usłudze przy użyciu certyfikatu X.509.  
@@ -70,17 +70,17 @@ Zabezpieczanie usługi za pomocą certyfikatu X.509 to podstawowa technika, uży
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Następujące przestrzenie nazw są wymagane, aby skompilować kod:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.Web.Services.Description>  
+- <xref:System.Web.Services.Description>  
   
--   <xref:System.Security.Cryptography.X509Certificates>  
+- <xref:System.Security.Cryptography.X509Certificates>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>Zobacz także
 

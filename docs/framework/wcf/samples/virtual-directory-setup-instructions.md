@@ -3,11 +3,11 @@ title: Instrukcje dotyczące konfigurowania katalogów wirtualnych
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007555"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrukcje dotyczące konfigurowania katalogów wirtualnych
 Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnego katalogu wirtualnego o nazwie servicemodelsamples, który jest zamapowany na %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.  
@@ -59,9 +59,9 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólneg
   
 7. Domyślnie wybrane są następujące pola wyboru:  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **Uruchamianie skryptów (np. ASP)**  
+    - **Uruchamianie skryptów (np. ASP)**  
   
 8. Kliknij przycisk **dalej**, a następnie kliknij przycisk **Zakończ** aby zakończyć działanie kreatora.  
   
@@ -84,11 +84,11 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólneg
   
 2. Domyślnie wybrane są następujące pola wyboru:  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **Rejestruj wizyty**  
+    - **Rejestruj wizyty**  
   
-    -   **Indeksuj ten zasób**  
+    - **Indeksuj ten zasób**  
   
 3. Wybierz **przeglądanie katalogów** pole wyboru. Dzięki temu można uzyskać dostępu do katalogu, w katalogu za pomocą programu Internet Explorer, która pomaga podczas debugowania usługi.  
   
@@ -130,21 +130,21 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólneg
   
      Jeśli nie ma na liście:  
   
-    1.  Kliknij przycisk **Start** a następnie kliknij przycisk **Panelu sterowania**.  
+    1. Kliknij przycisk **Start** a następnie kliknij przycisk **Panelu sterowania**.  
   
-    2.  Jeśli nie widzisz **kont użytkowników** ikonę, kliknij przycisk **Przełącz do widoku kategorii**.  
+    2. Jeśli nie widzisz **kont użytkowników** ikonę, kliknij przycisk **Przełącz do widoku kategorii**.  
   
-    3.  Kliknij przycisk **kont użytkowników** ikony.  
+    3. Kliknij przycisk **kont użytkowników** ikony.  
   
-    4.  W obszarze "lub wybierz ikonę Panelu sterowania" kliknij **kont użytkowników**.  
+    4. W obszarze "lub wybierz ikonę Panelu sterowania" kliknij **kont użytkowników**.  
   
-    5.  W **kont użytkowników** okno dialogowe, kliknij przycisk **zaawansowane** kartę.  
+    5. W **kont użytkowników** okno dialogowe, kliknij przycisk **zaawansowane** kartę.  
   
-    6.  Kliknij przycisk **zaawansowane**.  
+    6. Kliknij przycisk **zaawansowane**.  
   
-    7.  W **lokalnych użytkowników i grup** okno dialogowe, kliknij, aby rozwinąć **użytkowników** folderu.  
+    7. W **lokalnych użytkowników i grup** okno dialogowe, kliknij, aby rozwinąć **użytkowników** folderu.  
   
-    8.  W okienku po prawej stronie, kliknij dwukrotnie **konta gościa Internet**.  
+    8. W okienku po prawej stronie, kliknij dwukrotnie **konta gościa Internet**.  
   
     9. W **właściwości** okno dialogowe, kopia nazwa używana jako konto gościa internetowego. Domyślnie nazwa zaczyna się od "USR_", po której następuje nazwa komputera.  
   
@@ -166,17 +166,17 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólneg
   
      Jeśli usługa sieciowa nie ma na liście:  
   
-    1.  Kliknij przycisk **Dodaj**.  
+    1. Kliknij przycisk **Dodaj**.  
   
-    2.  W **Wybieranie użytkowników lub grup** okno dialogowe, wpisz nazwę komputera, a następnie znakiem ukośnika odwrotnego.  
+    2. W **Wybieranie użytkowników lub grup** okno dialogowe, wpisz nazwę komputera, a następnie znakiem ukośnika odwrotnego.  
   
-    3.  Typ **usługi** po ukośniku odwrotnym (bez spacji).  
+    3. Typ **usługi** po ukośniku odwrotnym (bez spacji).  
   
-    4.  Kliknij przycisk **Sprawdź nazwy**.  
+    4. Kliknij przycisk **Sprawdź nazwy**.  
   
-    5.  Jeśli zostaną znalezione wiele nazw, zaznacz **Usługa sieciowa** i kliknij przycisk **OK**.  
+    5. Jeśli zostaną znalezione wiele nazw, zaznacz **Usługa sieciowa** i kliknij przycisk **OK**.  
   
-    6.  Kliknij przycisk **OK** zamknąć **Wybieranie użytkowników lub grup** okno dialogowe.  
+    6. Kliknij przycisk **OK** zamknąć **Wybieranie użytkowników lub grup** okno dialogowe.  
   
 6. Jeśli usługi IIS 5.1 za pomocą Windows XP z dodatkiem SP2, sprawdź, liście zarówno konta gościa Internet, jak i ASPNET **nazwy grupy lub użytkownika** pole.  
   
@@ -184,11 +184,11 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólneg
   
      Aby sprawdzić, czy ASPNET jest częścią **użytkowników** grupy zabezpieczeń:  
   
-    1.  Na **Start** menu, kliknij przycisk **Panelu sterowania**.  
+    1. Na **Start** menu, kliknij przycisk **Panelu sterowania**.  
   
-    2.  Kliknij przycisk **kont użytkowników** ikony.  
+    2. Kliknij przycisk **kont użytkowników** ikony.  
   
-    3.  W **grupy** kolumny, sprawdź, czy wartość **ASPNET** jest "Użytkownicy".  
+    3. W **grupy** kolumny, sprawdź, czy wartość **ASPNET** jest "Użytkownicy".  
   
 ## <a name="see-also"></a>Zobacz także
 

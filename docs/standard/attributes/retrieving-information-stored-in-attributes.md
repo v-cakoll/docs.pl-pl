@@ -14,11 +14,11 @@ ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969419"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Pobieranie informacji przechowywanych w atrybutach
 Podczas pobierania atrybutów niestandardowych jest prostym procesem. Najpierw należy zadeklarować wystąpienia atrybutu, który ma zostać pobrane. Następnie należy użyć <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> metodę, aby zainicjować nowy atrybut, aby wartość atrybutu, który ma zostać pobrane. Po zainicjowaniu nowy atrybut, po prostu użyć jego właściwości w celu uzyskania wartości.  
@@ -28,11 +28,11 @@ Podczas pobierania atrybutów niestandardowych jest prostym procesem. Najpierw n
   
  W tej sekcji opisano następujące sposoby pobierania atrybutów:  
   
--   [Trwa pobieranie jedno wystąpienie atrybutu](#cpconretrievingsingleinstanceofattribute)  
+- [Trwa pobieranie jedno wystąpienie atrybutu](#cpconretrievingsingleinstanceofattribute)  
   
--   [Trwa pobieranie wielu wystąpień zastosowany do tego samego zakresu](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [Trwa pobieranie wielu wystąpień zastosowany do tego samego zakresu](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [Trwa pobieranie wielu wystąpień atrybutem zastosowanym do różnych zakresów](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Trwa pobieranie wielu wystąpień atrybutem zastosowanym do różnych zakresów](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Trwa pobieranie jedno wystąpienie atrybutu  

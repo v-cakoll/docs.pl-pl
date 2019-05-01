@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61974795"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Przewodnik: Programowanie Office (C# i Visual Basic)
 Visual Studio oferuje funkcje w języku C# i Visual Basic, które zwiększają programowania Microsoft Office. Przydatne funkcje języka C# zawierają argumenty nazwane i opcjonalne i zwracanie wartości typu `dynamic`. W programowaniu modelu COM, można pominąć `ref` — słowo kluczowe i uzyskanie dostępu do właściwości indeksowanych. Funkcje w języku Visual Basic obejmują automatycznie implementowane właściwości instrukcji w wyrażeniach lambda i inicjatory kolekcji.
@@ -93,11 +93,11 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
   
      Dwie nowe funkcje języka C# są używane w przypadku tej metody. Obie te funkcje już istnieją w języku Visual Basic.  
   
-    -   Metoda [Dodaj](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) ma *opcjonalny parametr* służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłane w poprzednim przykładzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - Metoda [Dodaj](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) ma *opcjonalny parametr* służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłane w poprzednim przykładzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Aby uzyskać więcej informacji, zobacz [nazwane i opcjonalne argumenty](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   `Range` i `Offset` właściwości [zakres](<xref:Microsoft.Office.Interop.Excel.Range>) wykorzystują *właściwości indeksowanych* funkcji. Ta funkcja umożliwia korzystanie z tych właściwości z typów modelu COM za pomocą następujących typowych C# składni. Właściwości indeksowane również włączyć przy użyciu `Value` właściwość `Range` obiektu, eliminując konieczność stosowania `Value2` właściwości. `Value` Jest indeksowana właściwość, ale indeks jest opcjonalne. Argumenty opcjonalne właściwości indeksowanych współpracują w poniższym przykładzie.  
+    - `Range` i `Offset` właściwości [zakres](<xref:Microsoft.Office.Interop.Excel.Range>) wykorzystują *właściwości indeksowanych* funkcji. Ta funkcja umożliwia korzystanie z tych właściwości z typów modelu COM za pomocą następujących typowych C# składni. Właściwości indeksowane również włączyć przy użyciu `Value` właściwość `Range` obiektu, eliminując konieczność stosowania `Value2` właściwości. `Value` Jest indeksowana właściwość, ale indeks jest opcjonalne. Argumenty opcjonalne właściwości indeksowanych współpracują w poniższym przykładzie.  
   
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   

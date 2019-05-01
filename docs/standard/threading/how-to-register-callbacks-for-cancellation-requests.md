@@ -1,5 +1,5 @@
 ---
-title: 'Porady: rejestrowanie wywołań zwrotnych żądań anulowania'
+title: 'Instrukcje: Rejestrowanie wywołań zwrotnych żądań anulowania'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2d61ba254a76235a12ca5dda23fdecb8838ae75
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62015021"
 ---
-# <a name="how-to-register-callbacks-for-cancellation-requests"></a>Porady: rejestrowanie wywołań zwrotnych żądań anulowania
+# <a name="how-to-register-callbacks-for-cancellation-requests"></a>Instrukcje: Rejestrowanie wywołań zwrotnych żądań anulowania
 Poniższy przykład pokazuje, jak zarejestrować delegata, która zostanie wywołana, gdy <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość zostanie spełniony ze względu na wywołanie <xref:System.Threading.CancellationTokenSource.Cancel%2A> na obiekt, który utworzył token. Tej techniki należy używać dla anulowania operacji asynchronicznych, które nie obsługują natywnie w ramach ujednoliconego anulowania, a także dla metod odblokowywania, które może być oczekiwanie na zakończenie operacji asynchronicznej.  
   
 > [!NOTE]

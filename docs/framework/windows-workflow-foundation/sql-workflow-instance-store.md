@@ -3,11 +3,11 @@ title: Magazyn wystąpień przepływu pracy SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004630"
 ---
 # <a name="sql-workflow-instance-store"></a>Magazyn wystąpień przepływu pracy SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Jest dostarczany z programem SQL Store wystąpienia przepływu pracy, który umożliwia przepływy pracy, aby utrwalić informacje o stanie dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Ta funkcja jest zaimplementowany głównie w formie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> klasy, która jest pochodną abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy framework trwałości. Funkcja Store wystąpienia przepływu pracy SQL stanowi dostawcy stanów trwałych programu SQL, który jest konkretną implementację trwałości interfejsu API, który korzysta z hosta do wysyłania poleceń trwałości do magazynu.  
@@ -22,19 +22,19 @@ ms.locfileid: "59086575"
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Właściwości magazynu wystąpień przepływu pracy SQL](properties-of-sql-workflow-instance-store.md)  
+- [Właściwości magazynu wystąpień przepływu pracy SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Instrukcje: Włączanie stanów trwałych programu SQL dla przepływów pracy i usług przepływu pracy](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [Instrukcje: Włączanie stanów trwałych programu SQL dla przepływów pracy i usług przepływu pracy](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Aktywacja wystąpienia](instance-activation.md)  
+- [Aktywacja wystąpienia](instance-activation.md)  
   
--   [Obsługa zapytań](support-for-queries.md)  
+- [Obsługa zapytań](support-for-queries.md)  
   
--   [Rozszerzalność magazynu](store-extensibility.md)  
+- [Rozszerzalność magazynu](store-extensibility.md)  
   
--   [Zabezpieczenia](security.md)  
+- [Zabezpieczenia](security.md)  
   
--   [Baza danych stanów trwałych programu SQL Server](sql-server-persistence-database.md)  
+- [Baza danych stanów trwałych programu SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

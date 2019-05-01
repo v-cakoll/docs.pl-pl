@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
 ms.openlocfilehash: db482af7750012d8805d4f834063a2c82224cf67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014001"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Instrukcje: Modemy dostępowe powiązane z portami seryjnymi w Visual Basic
 W tym temacie opisano sposób użycia `My.Computer.Ports` należy regulować w modem w języku Visual Basic.  

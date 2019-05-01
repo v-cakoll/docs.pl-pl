@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
 ms.openlocfilehash: 1a5378665d29e02799dd732d17705e462f40a2b1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009503"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip — Formant (Formularze systemu Windows)
 <xref:System.Windows.Forms.ToolStrip> Formanty są paski narzędzi, które mogą hostować, menu, formantów i kontrolki użytkownika w aplikacjach Windows Forms.  
@@ -73,13 +73,13 @@ ms.locfileid: "57721466"
  [Instrukcje: Implementowanie niestandardowego elementu ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)  
  Opisuje sposób dostosowywania wyglądu <xref:System.Windows.Forms.ToolStrip> kontroli poprzez implementację klasy, która pochodzi od klasy <xref:System.Windows.Forms.ToolStripRenderer>.  
   
--   [Instrukcje: Tworzenie podstawowy Windows Forms ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [Instrukcje: Tworzenie podstawowy Windows Forms ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
--   [Instrukcje: Przenoszenie elementu ToolStrip z ToolStripContainer na formularz](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+- [Instrukcje: Przenoszenie elementu ToolStrip z ToolStripContainer na formularz](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [Przewodnik: Tworzenie profesjonalnego formantu ToolStrip](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [Przewodnik: Tworzenie profesjonalnego formantu ToolStrip](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [Przewodnik: Tworzenie formularza MDI ze scalaniem Menu i formantów ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [Przewodnik: Tworzenie formularza MDI ze scalaniem Menu i formantów ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.ToolStrip> Klasa  

@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949269"
 ---
 # <a name="loader-etw-events"></a>Zdarzenia ETW modułu ładującego
 <a name="top"></a> Te zdarzenia zbierać informacje dotyczące ładowanie i zwalnianie domen aplikacji, zestawów i modułów.  
@@ -21,15 +21,15 @@ ms.locfileid: "59141534"
   
  Zdarzenia modułu ładującego są podzielone na następujące czynności:  
   
--   [Zdarzenia domeny aplikacji](#application_domain_events)  
+- [Zdarzenia domeny aplikacji](#application_domain_events)  
   
--   [Zdarzenia zestaw modułu ładującego CLR](#clr_loader_assembly_events)  
+- [Zdarzenia zestaw modułu ładującego CLR](#clr_loader_assembly_events)  
   
--   [Zdarzenia modułu](#module_events)  
+- [Zdarzenia modułu](#module_events)  
   
--   [Zdarzenia modułu domeny CLR](#clr_domain_module_events)  
+- [Zdarzenia modułu domeny CLR](#clr_domain_module_events)  
   
--   [Zakres modułu zdarzeń](#module_range_events)  
+- [Zakres modułu zdarzeń](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>Zdarzenia domeny aplikacji  
@@ -134,11 +134,11 @@ ms.locfileid: "59141534"
   
 ### <a name="remarks"></a>Uwagi  
   
--   Pola, które mają "Pdb" w nazwach może służyć przez narzędzia profilowania, aby zlokalizować pliki PDB, które odpowiadają moduły, które zostały załadowane podczas sesji profilowania. Wartości te pola odpowiadają zapisanych na sekcje IMAGE_DIRECTORY_ENTRY_DEBUG modułu zwykle używane przez debugery do lokalizowania plików PDB, które odpowiadają załadowane moduły danych.  
+- Pola, które mają "Pdb" w nazwach może służyć przez narzędzia profilowania, aby zlokalizować pliki PDB, które odpowiadają moduły, które zostały załadowane podczas sesji profilowania. Wartości te pola odpowiadają zapisanych na sekcje IMAGE_DIRECTORY_ENTRY_DEBUG modułu zwykle używane przez debugery do lokalizowania plików PDB, które odpowiadają załadowane moduły danych.  
   
--   Nazwy pól, które zaczynają się od "ManagedPdb" odnoszą się do zarządzanego pliku PDB, odpowiadający moduł MSIL, który został wygenerowany przez kompilator zarządzanych (takie jak C# lub kompilator Visual Basic). Ten plik PDB używa zarządzanego format pliku PDB, a w tym artykule opisano, jak elementy z oryginalnego zarządzanym kodzie źródłowym, takie jak pliki, numery wierszy i nazwy symboli mapują do elementów MSIL, które są kompilowane do moduł MSIL.  
+- Nazwy pól, które zaczynają się od "ManagedPdb" odnoszą się do zarządzanego pliku PDB, odpowiadający moduł MSIL, który został wygenerowany przez kompilator zarządzanych (takie jak C# lub kompilator Visual Basic). Ten plik PDB używa zarządzanego format pliku PDB, a w tym artykule opisano, jak elementy z oryginalnego zarządzanym kodzie źródłowym, takie jak pliki, numery wierszy i nazwy symboli mapują do elementów MSIL, które są kompilowane do moduł MSIL.  
   
--   Nazwy pól, które zaczynają się od "NativePdb" odnoszą się do polecenia NGen pliku PDB, wygenerowanego przez wywołanie metody `NGEN createPDB`. Ten plik PDB używa natywnego formatu pliku PDB i opisuje sposób mapowania elementów od oryginalnego kodu zarządzanego źródła, takich jak pliki, numery wierszy i nazwy symboli do natywnego elementów, które są kompilowane do modułu programu NGen.  
+- Nazwy pól, które zaczynają się od "NativePdb" odnoszą się do polecenia NGen pliku PDB, wygenerowanego przez wywołanie metody `NGEN createPDB`. Ten plik PDB używa natywnego formatu pliku PDB i opisuje sposób mapowania elementów od oryginalnego kodu zarządzanego źródła, takich jak pliki, numery wierszy i nazwy symboli do natywnego elementów, które są kompilowane do modułu programu NGen.  
   
  [Powrót do początku](#top)  
   

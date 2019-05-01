@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025443"
 ---
 # <a name="white-space-processing-in-xaml"></a>Przetwarzanie spacji w XAML
 Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie opisano te reguły języka XAML. Również dokumenty obsługi dodatkowe biały znak, który jest definiowany przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacji procesora XAML i zapisywania XAML do serializacji.  
@@ -41,13 +41,13 @@ Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Biały znak w tekst wewnętrzny i ciągu w nim elementów podstawowych  
  Poprzednie reguły normalizacji mają zastosowanie do wewnętrznego tekst, który znajduje się w obrębie elementów XAML. Po normalizacji procesor XAML konwertuje tekst wewnętrzny na odpowiedni typ w następujący sposób:  
   
--   Jeśli typ właściwości nie jest kolekcją, ale nie jest bezpośrednio <xref:System.Object> typu procesor XAML próbuje przekonwertować danego typu przy użyciu jego konwertera typów. W tym miejscu nie powiodło się konwersja powoduje błąd kompilacji.  
+- Jeśli typ właściwości nie jest kolekcją, ale nie jest bezpośrednio <xref:System.Object> typu procesor XAML próbuje przekonwertować danego typu przy użyciu jego konwertera typów. W tym miejscu nie powiodło się konwersja powoduje błąd kompilacji.  
   
--   Jeśli typ właściwości jest kolekcją, a tekst wewnętrzny jest ciągły (nie pośredniczące elementu tagi), tekst wewnętrzny jest analizowany jako pojedynczy <xref:System.String>. Jeśli typ kolekcji nie może akceptować <xref:System.String>, powoduje błąd kompilacji.  
+- Jeśli typ właściwości jest kolekcją, a tekst wewnętrzny jest ciągły (nie pośredniczące elementu tagi), tekst wewnętrzny jest analizowany jako pojedynczy <xref:System.String>. Jeśli typ kolekcji nie może akceptować <xref:System.String>, powoduje błąd kompilacji.  
   
--   Jeśli typ właściwości to <xref:System.Object>, tekst wewnętrzny jest analizowany jako pojedynczy <xref:System.String>. Jeśli są aktywne tagi elementów, powoduje to błąd w czasie kompilacji, ponieważ <xref:System.Object> typu oznacza pojedynczy obiekt (<xref:System.String> lub w inny sposób).  
+- Jeśli typ właściwości to <xref:System.Object>, tekst wewnętrzny jest analizowany jako pojedynczy <xref:System.String>. Jeśli są aktywne tagi elementów, powoduje to błąd w czasie kompilacji, ponieważ <xref:System.Object> typu oznacza pojedynczy obiekt (<xref:System.String> lub w inny sposób).  
   
--   Jeśli typ właściwości jest kolekcją, a tekst wewnętrzny nie jest ciągły, pierwszego podciągu jest konwertowana na <xref:System.String> dodany jako element kolekcji, pośredniczące element zostanie dodany jako element kolekcji, a na koniec jest końcowe substring (jeśli istnieje) dodawane do kolekcji jako trzeci <xref:System.String> elementu.  
+- Jeśli typ właściwości jest kolekcją, a tekst wewnętrzny nie jest ciągły, pierwszego podciągu jest konwertowana na <xref:System.String> dodany jako element kolekcji, pośredniczące element zostanie dodany jako element kolekcji, a na koniec jest końcowe substring (jeśli istnieje) dodawane do kolekcji jako trzeci <xref:System.String> elementu.  
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>Zachowywanie białych  

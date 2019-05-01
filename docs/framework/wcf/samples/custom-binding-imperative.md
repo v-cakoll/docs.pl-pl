@@ -3,11 +3,11 @@ title: Powiązanie niestandardowe imperatywne
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
 ms.openlocfilehash: 6277fd258d44045958759132dcd3c6208c23a939
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002435"
 ---
 # <a name="custom-binding-imperative"></a>Powiązanie niestandardowe imperatywne
 W przykładzie pokazano sposób pisania kodu imperatywnego do definiowania i używania powiązań niestandardowych bez przy użyciu pliku konfiguracji lub klienta generowany Windows Communication Foundation (WCF). W tym przykładzie to połączenie funkcji oferowanych przez transportu HTTP i kanał niezawodnej sesji, aby utworzyć niezawodne powiązania oparty na protokole HTTP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora.  

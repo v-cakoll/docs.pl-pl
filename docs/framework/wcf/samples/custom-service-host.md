@@ -3,11 +3,11 @@ title: Niestandardowy host usługi
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
 ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990668"
 ---
 # <a name="custom-service-host"></a>Niestandardowy host usługi
 W tym przykładzie przedstawiono sposób użycia niestandardowego utworów zależnych od <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania. Metoda ta umożliwia wielokrotnego użytku alternatywa konfigurowanie dużej liczby usług w typowy sposób. W przykładzie pokazano również sposób użycia <xref:System.ServiceModel.Activation.ServiceHostFactory> klasy, aby użyć niestandardowego elementu ServiceHost w środowisku hostingu usług Internet Information Services (IIS) lub Windows Process Activation Service (WAS).  

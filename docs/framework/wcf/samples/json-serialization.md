@@ -3,11 +3,11 @@ title: Serializacja JSON
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
 ms.openlocfilehash: bb38005c02e9b3e850282d2a81c2e17143657025
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989862"
 ---
 # <a name="json-serialization"></a>Serializacja JSON
 W tym przykładzie przedstawiono sposób użycia <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> do serializacji i deserializacji danych w formacie JavaScript Object Notation (JSON). Ten mechanizm serializacji konwertuje dane JSON do wystąpień [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów i z powrotem na dane JSON. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obsługuje te same typy jako <xref:System.Runtime.Serialization.DataContractSerializer>. Format danych JSON jest szczególnie przydatne podczas pisania asynchronicznego języka JavaScript i XML (technologia AJAX)-stylów aplikacji sieci Web. Obsługa technologii AJAX w Windows Communication Foundation (WCF) została zoptymalizowana do użytku przy użyciu rozszerzeń ASP.NET AJAX, za pomocą formantu ScriptManager. Przykłady dotyczące używania usługi Windows Communication Foundation (WCF) przy użyciu rozszerzeń ASP.NET AJAX, zobacz [przykłady AJAX](ajax.md).  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008361"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Przegląd Kształty i podstawowe rysowanie w WPF
 Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.Shapes.Shape> obiektów. A <xref:System.Windows.Shapes.Shape> jest typem <xref:System.Windows.UIElement> pozwala narysować kształt na ekranie. Ponieważ są one elementy interfejsu użytkownika <xref:System.Windows.Shapes.Shape> obiekty mogą być używane wewnątrz <xref:System.Windows.Controls.Panel> elementów i większości kontrolek.  
@@ -28,13 +28,13 @@ Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.S
 ## <a name="shape-objects"></a>Obiekty kształtów  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wiele gotowych do użycia <xref:System.Windows.Shapes.Shape> obiektów.  Wszystkie obiekty kształtów dziedziczyć <xref:System.Windows.Shapes.Shape> klasy. Kształt dostępne obiekty zawierają <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, i <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> obiekty mają następujące wspólne właściwości.  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: W tym artykule opisano, jak jest malowane kontur figury.  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>: W tym artykule opisano, jak jest malowane kontur figury.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: W tym artykule opisano Grubość konturu tego kształtu.  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: W tym artykule opisano Grubość konturu tego kształtu.  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: W tym artykule opisano, jak jest malowane wnętrze figury.  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>: W tym artykule opisano, jak jest malowane wnętrze figury.  
   
--   Właściwości danych, aby określić współrzędne i wierzchołki, podawana w pikselach niezależnych od urządzenia.  
+- Właściwości danych, aby określić współrzędne i wierzchołki, podawana w pikselach niezależnych od urządzenia.  
   
  Ponieważ pochodzą one od <xref:System.Windows.UIElement>, obiekty kształtów można używać wewnątrz paneli i większość formantów. <xref:System.Windows.Controls.Canvas> Panel jest szczególnie dobrym wyborem dla tworzenia rysunki złożone, ponieważ obsługuje on pozycjonowanie absolutne jego obiektów podrzędnych.  
   
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Właściwości rozciągania ma jedną z następujących wartości:  
   
--   <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu nie jest rozciągana.  
+- <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu nie jest rozciągana.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Konfiguracji zawartości obiektu do wypełnienia jego układu przestrzeni.  Współczynnik proporcji nie są zachowywane.  
+- <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Konfiguracji zawartości obiektu do wypełnienia jego układu przestrzeni.  Współczynnik proporcji nie są zachowywane.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu konfiguracji jak najszerzej w celu wypełnienia jego układu przestrzeni, zachowując jego oryginalny współczynnik proporcji.  
+- <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu konfiguracji jak najszerzej w celu wypełnienia jego układu przestrzeni, zachowując jego oryginalny współczynnik proporcji.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu konfiguracji Aby całkowicie wypełnić jego układu przestrzeni, zachowując jego oryginalny współczynnik proporcji.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu konfiguracji Aby całkowicie wypełnić jego układu przestrzeni, zachowując jego oryginalny współczynnik proporcji.  
   
  Należy zauważyć, że gdy <xref:System.Windows.Shapes.Shape> konfiguracji zawartość obiektu <xref:System.Windows.Shapes.Shape> kontur obiektu jest malowane po rozciąganie.  
   

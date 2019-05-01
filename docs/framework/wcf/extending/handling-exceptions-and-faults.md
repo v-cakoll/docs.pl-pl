@@ -3,11 +3,11 @@ title: Obsługa wyjątków i błędów
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991422"
 ---
 # <a name="handling-exceptions-and-faults"></a>Obsługa wyjątków i błędów
 Wyjątki są używane do komunikowania się błędy lokalnie w implementacji klienta lub usługi. Błędy, z drugiej strony, są używane do komunikacji błędów przez granice usługi, takie jak z serwera do klienta lub na odwrót. Oprócz błędów kanały transportu często używają mechanizmów specyficznych dla transportu do komunikowania się błędy na poziomie transportu. Na przykład transportu HTTP używa kodów stanu, takie jak 404 do komunikowania się nieistniejące adresu URL punktu końcowego (jest nie punktu końcowego do odesłania błędów). Ten dokument zawiera trzy sekcje, które zapewniają wskazówki autorom w niestandardowym kanale. Pierwsza sekcja zawiera wskazówki dotyczące kiedy i jak zdefiniować i zgłaszać wyjątki. Druga sekcja zawiera wskazówki dotyczące generowania i korzystanie z błędów. Trzecia sekcja wyjaśnia, jak Podaj informacje o śledzeniu ułatwiające użytkownika niestandardowego kanału Rozwiązywanie problemów z uruchomionych aplikacji.  
@@ -309,9 +309,9 @@ public class MessageFault
 ## <a name="tracing"></a>Śledzenie  
  Program .NET Framework dostarcza mechanizm śledzenia wykonywania programu, jako sposób, aby ułatwić diagnozowanie aplikacji produkcyjnych lub sporadycznych problemów, w którym nie jest możliwe tylko dołączanie debugera i Przechodź przez kod. Podstawowe składniki ten mechanizm znajdują się w <xref:System.Diagnostics?displayProperty=nameWithType> przestrzeni nazw i składają się:  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, który jest źródłem informacji śledzenia do zapisania, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, który jest abstrakcyjna klasa bazowa dla konkretnych obiektów nasłuchujących otrzymywać informacje, które mają być śledzone od <xref:System.Diagnostics.TraceSource> i wyprowadzić dane do miejsca docelowego określonego odbiornika. Na przykład <xref:System.Diagnostics.XmlWriterTraceListener> dane wyjściowe śledzenia informacji do pliku XML. Na koniec <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, który umożliwia użytkownikowi aplikacji, Kontroluj ich szczegółowość śledzenia i zwykle jest określona w konfiguracji.  
+- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, który jest źródłem informacji śledzenia do zapisania, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, który jest abstrakcyjna klasa bazowa dla konkretnych obiektów nasłuchujących otrzymywać informacje, które mają być śledzone od <xref:System.Diagnostics.TraceSource> i wyprowadzić dane do miejsca docelowego określonego odbiornika. Na przykład <xref:System.Diagnostics.XmlWriterTraceListener> dane wyjściowe śledzenia informacji do pliku XML. Na koniec <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, który umożliwia użytkownikowi aplikacji, Kontroluj ich szczegółowość śledzenia i zwykle jest określona w konfiguracji.  
   
--   Oprócz podstawowych składników można używać [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) wyszukiwania usługi WCF i wyświetlić ślady. To narzędzie jest przeznaczony specjalnie dla plików śledzenia generowane przez program WCF i napisanych przy użyciu <xref:System.Diagnostics.XmlWriterTraceListener>. Na poniższej ilustracji przedstawiono różne składniki zaangażowane w śledzenia.  
+- Oprócz podstawowych składników można używać [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) wyszukiwania usługi WCF i wyświetlić ślady. To narzędzie jest przeznaczony specjalnie dla plików śledzenia generowane przez program WCF i napisanych przy użyciu <xref:System.Diagnostics.XmlWriterTraceListener>. Na poniższej ilustracji przedstawiono różne składniki zaangażowane w śledzenia.  
   
  ![Obsługa wyjątków i błędów](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   

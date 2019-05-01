@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039565"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Instrukcje: udostępnianie kanału informacyjnego w formatach Atom i RSS
 Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udostępnia kanał. W tym temacie omówiono sposób tworzenia usługi syndykacji, który udostępnia kanał, za pomocą RSS 2.0 i Atom 1.0. Ta usługa udostępnia jeden punkt końcowy, który może zwracać albo formacie syndykacji. Dla uproszczenia usługi używane w tym przykładzie jest samodzielnie hostowana. W środowisku produkcyjnym usługi tego typu może być hostowana w ramach usług IIS i WAS. Aby uzyskać więcej informacji o różnych technologii WCF opcji hostingu, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  

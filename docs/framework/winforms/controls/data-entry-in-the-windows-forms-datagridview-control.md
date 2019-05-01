@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
 ms.openlocfilehash: 3ebfcaaf22ca632e5784dc1f01a351583e78e865
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011509"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Wprowadzanie danych w formancie DataGridView formularzy systemu Windows
 `DataGridView` Control oferuje kilka funkcji umożliwiające, możesz zmienić sposób użytkownikom dodawanie lub modyfikowanie danych w formancie. Na przykład umożliwia wprowadzanie danych bardziej wydajne, podając wartości domyślne dla nowych wierszy, jak również alertów użytkowników, jeśli wystąpią błędy.  

@@ -3,11 +3,11 @@ title: Ochrona komunikatów za pomocą zabezpieczeń transportu
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990967"
 ---
 # <a name="securing-messages-using-transport-security"></a>Ochrona komunikatów za pomocą zabezpieczeń transportu
 W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikatów (MSMQ) używanego do zabezpieczenia komunikatów wysłanych do kolejki.  
@@ -25,11 +25,11 @@ W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikat�
   
  Za pomocą zabezpieczeń transportu <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ma wpływ na sposób zabezpieczonych wiadomości usługi MSMQ w drodze między kolejki transmisji i kolejka docelowa w przypadku, gdy chronione oznacza:  
   
--   Podpisywanie komunikat, aby upewnić się, że nie zostanie naruszony.  
+- Podpisywanie komunikat, aby upewnić się, że nie zostanie naruszony.  
   
--   Szyfrowanie wiadomości, aby upewnić się, że nie może być widoczny ani zmodyfikowane. Jest to zalecane, ale opcjonalne.  
+- Szyfrowanie wiadomości, aby upewnić się, że nie może być widoczny ani zmodyfikowane. Jest to zalecane, ale opcjonalne.  
   
--   Menedżer kolejki docelowej identyfikuje nadawcy wiadomości na wyłączność podpisu.  
+- Menedżer kolejki docelowej identyfikuje nadawcy wiadomości na wyłączność podpisu.  
   
  W usłudze MSMQ niezależnie od uwierzytelniania, kolejka docelowa ma listy kontroli dostępu (ACL), aby sprawdzić, czy klient ma uprawnienia do wysyłania wiadomości do kolejki docelowej. Aplikacja jest również sprawdzane pod kątem uprawnienia do odbierania wiadomości z kolejki docelowej.  
   

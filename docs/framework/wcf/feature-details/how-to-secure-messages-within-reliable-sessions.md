@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Zabezpieczanie komunikatów w sesjach niezawodnych'
+title: 'Instrukcje: zabezpieczanie komunikatów w sesjach niezawodnych'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
 ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973007"
 ---
-# <a name="how-to-secure-messages-within-reliable-sessions"></a>Instrukcje: Zabezpieczanie komunikatów w sesjach niezawodnych
+# <a name="how-to-secure-messages-within-reliable-sessions"></a>Instrukcje: zabezpieczanie komunikatów w sesjach niezawodnych
 
 W tym temacie opisano kroki wymagane w celu umożliwienia zabezpieczenia na poziomie komunikatu dla komunikatów wymienianych w ramach niezawodnej sesji przy użyciu jednej z powiązań dostarczanych przez system, które obsługują sesji programu, ale nie domyślnie. Włącz bezpieczne i niezawodne sesji obowiązkowo przy użyciu kodu lub deklaratywnie w pliku konfiguracji. Ta procedura używa plików konfiguracji klienta i usługi, aby umożliwić bezpieczne i niezawodne sesji.
 

@@ -3,11 +3,11 @@ title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
 ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989892"
 ---
 # <a name="jsonp"></a>JSONP
 Niniejszy przykład pokazuje sposób obsługi formatu JSON przy użyciu dopełnienie (JSONP) w usługach REST programu WCF. JSONP jest Konwencji, używane do wywołania między domenami skryptów przez generowanie tagi skryptu w bieżącym dokumencie. Wynik jest zwracany dla funkcji określonego wywołania zwrotnego. JSONP opiera się na koncepcji, takich jak tagi `<script src="http://..." >` ocenić skryptów z dowolnej domeny, a skrypt pobierane przez tych znaczników jest szacowana w zakresie, w którym innych funkcji może być już zdefiniowane.

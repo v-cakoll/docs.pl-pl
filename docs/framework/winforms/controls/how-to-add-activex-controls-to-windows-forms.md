@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
 ms.openlocfilehash: 780411949c543a2178de5e7c531bd2202703f27a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011157"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Instrukcje: dodawanie kontrolek ActiveX do formularzy systemu Windows
 Gdy Windows Forms Designer jest zoptymalizowany do kontrolek Windows Forms hosta, możesz umieścić formantów na formularzach Windows Forms.  
@@ -26,7 +26,7 @@ Gdy Windows Forms Designer jest zoptymalizowany do kontrolek Windows Forms hosta
   
 ### <a name="to-add-an-activex-control-to-your-windows-form"></a>Aby dodać formant ActiveX do formularza Windows  
   
--   Kliknij dwukrotnie formant w przyborniku.  
+- Kliknij dwukrotnie formant w przyborniku.  
   
      Visual Studio dodaje wszystkie odwołania do formantu w projekcie. Aby uzyskać więcej informacji na temat kwestii, które należy pamiętać, korzystając z formantów na formularzach Windows Forms, zobacz [uwagi odnośnie do hostowania kontrolki ActiveX na formularzu Windows](considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
   

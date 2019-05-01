@@ -3,22 +3,22 @@ title: Dynamiczne włączanie śledzenia danych analitycznych
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
 ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999472"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Dynamiczne włączanie śledzenia danych analitycznych
 Za pomocą narzędzia, które są dostarczane z systemem operacyjnym Windows, można włączyć lub wyłączyć śledzenie dynamicznie przy użyciu śledzenie zdarzeń dla Windows (ETW). Dla wszystkich [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] usług Windows Communication Foundation (WCF), może być śledzenie danych analitycznych, włączone i wyłączone dynamicznie bez modyfikowania pliku Web.config aplikacji i ponowne uruchomienie usługi. Umożliwia to aplikacji, który emituje zdarzenia śledzenia, aby zachować prawidłowe.  
   
  W podobny sposób można skonfigurować opcje śledzenia WCF. Na przykład można zmienić poziom ważności z **błąd** do **informacji** bez zakłócania działania aplikacji. Można to zrobić za pomocą następujących narzędzi:  
   
--   **Logman** — narzędzie wiersza polecenia do konfigurowania, kontrolowanie i wykonywanie zapytań o dane śledzenia. Aby uzyskać więcej informacji, zobacz [Logman tworzyć śledzenia](https://go.microsoft.com/fwlink/?LinkId=165426) i [śledzenia aktualizacji Logman](https://go.microsoft.com/fwlink/?LinkId=165427).  
+- **Logman** — narzędzie wiersza polecenia do konfigurowania, kontrolowanie i wykonywanie zapytań o dane śledzenia. Aby uzyskać więcej informacji, zobacz [Logman tworzyć śledzenia](https://go.microsoft.com/fwlink/?LinkId=165426) i [śledzenia aktualizacji Logman](https://go.microsoft.com/fwlink/?LinkId=165427).  
   
--   **Informacje w Podglądzie zdarzeń** — Windows graficzne narzędzie do zarządzania w celu wyświetlania wyników śledzenia. Aby uzyskać więcej informacji, zobacz [usługi WCF i zdarzenia śledzenia dla Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) i [Podgląd zdarzeń](https://go.microsoft.com/fwlink/?LinkId=165428).  
+- **Informacje w Podglądzie zdarzeń** — Windows graficzne narzędzie do zarządzania w celu wyświetlania wyników śledzenia. Aby uzyskać więcej informacji, zobacz [usługi WCF i zdarzenia śledzenia dla Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) i [Podgląd zdarzeń](https://go.microsoft.com/fwlink/?LinkId=165428).  
   
--   **Monitora wydajności** — narzędzie do zarządzania w trybie graficznym Windows, które używa liczników, liczniki śledzenia monitora i efekty śledzenia na wydajność. Aby uzyskać więcej informacji, zobacz [danych moduł zbierający zestawu ręcznie utworzyć](https://go.microsoft.com/fwlink/?LinkId=165429).  
+- **Monitora wydajności** — narzędzie do zarządzania w trybie graficznym Windows, które używa liczników, liczniki śledzenia monitora i efekty śledzenia na wydajność. Aby uzyskać więcej informacji, zobacz [danych moduł zbierający zestawu ręcznie utworzyć](https://go.microsoft.com/fwlink/?LinkId=165429).  
   
 ### <a name="keywords"></a>słowa kluczowe  
  Korzystając z <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> klasy .NET Framework komunikaty śledzenia zazwyczaj są filtrowane według poziom ważności (na przykład błędu, ostrzeżenia i informacje). ETW obsługuje pojęcie poziom ważności, ale wprowadza mechanizm filtrowania nowego, elastycznego za pomocą słów kluczowych. Słowa kluczowe są dowolne wartości tekstowej, umożliwiających zdarzenia śledzenia zapewnić dodatkowy kontekst informacji na temat znaczenia tego zdarzenia.  

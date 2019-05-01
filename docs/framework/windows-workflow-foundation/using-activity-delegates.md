@@ -3,11 +3,11 @@ title: Używanie delegatów działania
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 8c9d82f47f709a89455f41691526b6ac9718a01f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004617"
 ---
 # <a name="using-activity-delegates"></a>Używanie delegatów działania
 Działania delegatach Włącz autorzy działania do udostępnienia wywołania zwrotne z określonych podpisów, dla których użytkownicy, działania mogą podać obsługi na podstawie działania. Dostępne są dwa typy działania delegatach: <xref:System.Activities.ActivityAction%601> służy do definiowania delegatów działania, które nie mają wartości zwracanej i <xref:System.Activities.ActivityFunc%601> służy do definiowania delegatów działania, które mają wartość zwracaną.

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolTip component [Windows Forms], about ToolTip component
 ms.assetid: 3fbc6f08-c882-4acd-a960-a08efe3c7e6e
 ms.openlocfilehash: 3fbe883501d1ce36ca25ea07631f98042f451e07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009340"
 ---
 # <a name="tooltip-component-overview-windows-forms"></a>ToolTip — Informacje o składniku (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.ToolTip> składnika wyświetla tekst, gdy użytkownik wskaże na kontrolki. Etykietka narzędzia może być skojarzona z dowolną kontrolkę. Przykładowe zastosowanie tego składnika: Aby zaoszczędzić miejsce na formularzu, mała ikona jest wyświetlana na przycisku i służyć etykietka narzędzia w celu wyjaśnienia przycisku — funkcja.  

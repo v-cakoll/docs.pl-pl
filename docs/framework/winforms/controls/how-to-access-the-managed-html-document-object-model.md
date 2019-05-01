@@ -9,18 +9,18 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
 ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011258"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Instrukcje: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodzajów aplikacji:  
   
--   Aplikacji Windows Forms (.exe), która obsługiwana zarządzanej <xref:System.Windows.Forms.WebBrowser> kontroli. Te dwie technologie wzajemnie się uzupełniają, za pomocą <xref:System.Windows.Forms.WebBrowser> kontroli stroną dla użytkownika i HTML DOM reprezentującej strukturę logiczną dokumentu.  
+- Aplikacji Windows Forms (.exe), która obsługiwana zarządzanej <xref:System.Windows.Forms.WebBrowser> kontroli. Te dwie technologie wzajemnie się uzupełniają, za pomocą <xref:System.Windows.Forms.WebBrowser> kontroli stroną dla użytkownika i HTML DOM reprezentującej strukturę logiczną dokumentu.  
   
--   Formularze Windows <xref:System.Windows.Forms.UserControl> hostowany w programie Internet Explorer. Możesz uzyskać dostęp DOM HTML reprezentujący stronę, na którym Twojej <xref:System.Windows.Forms.UserControl> znajduje się w celu zmiany struktury dokumentu lub Otwórz modalnych okien dialogowych, wśród wielu innych możliwości.  
+- Formularze Windows <xref:System.Windows.Forms.UserControl> hostowany w programie Internet Explorer. Możesz uzyskać dostęp DOM HTML reprezentujący stronę, na którym Twojej <xref:System.Windows.Forms.UserControl> znajduje się w celu zmiany struktury dokumentu lub Otwórz modalnych okien dialogowych, wśród wielu innych możliwości.  
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Aby uzyskać dostęp do modelu DOM z aplikacji Windows Forms  
   

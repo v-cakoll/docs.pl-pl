@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008205"
 ---
 # <a name="path-markup-syntax"></a>Składni znacznikowania ścieżki
 Ścieżki są omówione w [kształty i podstawowe Rysowanie w WPF — Przegląd](shapes-and-basic-drawing-in-wpf-overview.md) i [Przegląd Geometria](geometry-overview.md), jednak w tym temacie opisano szczegółowo zaawansowanych i złożonych mini języka można użyć do określenia ścieżki Więcej bardziej kompaktowy przy użyciu geometrii [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -25,11 +25,11 @@ ms.locfileid: "59082493"
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Streamgeometry — i PathFigureCollection Mini języków  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera dwie klasy, które zapewniają mini języków do opisywania względem ścieżek geometrycznych: <xref:System.Windows.Media.StreamGeometry> i <xref:System.Windows.Media.PathFigureCollection>.  
   
--   Możesz użyć <xref:System.Windows.Media.StreamGeometry> mini języka podczas ustawiania właściwości typu <xref:System.Windows.Media.Geometry>, takich jak <xref:System.Windows.UIElement.Clip%2A> właściwość <xref:System.Windows.UIElement> lub <xref:System.Windows.Shapes.Path.Data%2A> właściwość <xref:System.Windows.Shapes.Path> elementu. W poniższym przykładzie użyto składni atrybutów, aby utworzyć <xref:System.Windows.Media.StreamGeometry>.  
+- Możesz użyć <xref:System.Windows.Media.StreamGeometry> mini języka podczas ustawiania właściwości typu <xref:System.Windows.Media.Geometry>, takich jak <xref:System.Windows.UIElement.Clip%2A> właściwość <xref:System.Windows.UIElement> lub <xref:System.Windows.Shapes.Path.Data%2A> właściwość <xref:System.Windows.Shapes.Path> elementu. W poniższym przykładzie użyto składni atrybutów, aby utworzyć <xref:System.Windows.Media.StreamGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   Możesz użyć <xref:System.Windows.Media.PathFigureCollection> mini języka podczas ustawiania <xref:System.Windows.Media.PathGeometry.Figures%2A> właściwość <xref:System.Windows.Media.PathGeometry>. W poniższym przykładzie użyto składni atrybutów, aby utworzyć <xref:System.Windows.Media.PathFigureCollection> dla <xref:System.Windows.Media.PathGeometry>.  
+- Możesz użyć <xref:System.Windows.Media.PathFigureCollection> mini języka podczas ustawiania <xref:System.Windows.Media.PathGeometry.Figures%2A> właściwość <xref:System.Windows.Media.PathGeometry>. W poniższym przykładzie użyto składni atrybutów, aby utworzyć <xref:System.Windows.Media.PathFigureCollection> dla <xref:System.Windows.Media.PathGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014287"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Rozszerzanie modelu aplikacji Visual Basic
 Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridable` członkowie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy. Ta technika umożliwia dostosowywanie zachowania dotyczącego modelu aplikacji i dodawać wywołania do swoje własne metody, jak aplikacja uruchamia się i kończy pracę.  
@@ -38,11 +38,11 @@ Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridab
   
      <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> Metoda wywołuje następujących metod:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Określa, czy aplikacja ma ekran powitalny zdefiniowane, a jeśli tak jest, wyświetla ekran powitalny w oddzielnym wątku.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Określa, czy aplikacja ma ekran powitalny zdefiniowane, a jeśli tak jest, wyświetla ekran powitalny w oddzielnym wątku.  
   
          <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Metoda zawiera kod, który wyświetla powitalny ekranu do wyrażony w milisekundach czas określony przez <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> właściwości. Aby używać tej funkcji, należy dodać ekran powitalny do swojej aplikacji za pomocą **projektanta projektu** (który określa `My.Application.MinimumSplashScreenDisplayTime` właściwości dwóch sekund), lub ustawić `My.Application.MinimumSplashScreenDisplayTime` właściwość w metodę, która zastępuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> lub <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metody. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Umożliwia projektanta emitować Kod, który inicjuje ekran powitalny.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Umożliwia projektanta emitować Kod, który inicjuje ekran powitalny.  
   
          Domyślnie ta metoda nie działa. Wybranie ekran powitalny dla aplikacji w języku Visual Basic **projektanta projektu**, Projektant zastępuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodę z metodą, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> właściwość nowe wystąpienie formularza ekran powitalny .  
   
@@ -54,11 +54,11 @@ Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridab
   
      Domyślnie przed uśpieniem pętli komunikatów Windows Forms, ta metoda wywołuje `OnCreateMainForm` (w celu utworzenia aplikacji formularza głównego) i `HideSplashScreen` (tak, aby zamknąć ekran powitalny) metody:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Zapewnia sposób projektanta emitować Kod, który inicjuje formularza głównego.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Zapewnia sposób projektanta emitować Kod, który inicjuje formularza głównego.  
   
          Domyślnie ta metoda nie działa. Jednak po wybraniu formularza głównego dla aplikacji w języku Visual Basic **projektanta projektu**, Projektant zastępuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodę z metodą, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> właściwości do nowego wystąpienia formularza głównego.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Jeśli aplikacja ma ekran powitalny zdefiniowany i jest otwarty, ta metoda zamyka ekran powitalny.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Jeśli aplikacja ma ekran powitalny zdefiniowany i jest otwarty, ta metoda zamyka ekran powitalny.  
   
          Domyślnie ta metoda zamyka ekran powitalny.  
   
@@ -97,7 +97,6 @@ Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridab
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Omówienie modelu aplikacji Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

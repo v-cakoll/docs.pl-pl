@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007477"
 ---
 # <a name="ws-transaction-flow"></a>Przepływ transakcji WS
 Niniejszy przykład pokazuje użycie transakcji koordynowane przez klienta i opcje klienta i serwera dla transakcji przepływu przy użyciu protokołu WS-Atomic Transaction albo OleTransactions. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator, ale operacje są przypisane do pokazują użycie `TransactionFlowAttribute` z **parametru TransactionFlowOption** wyliczenie, aby ustalić, jakie transakcji stopień przepływu jest włączone. W zakresie transakcji w dzienniku żądanych operacji zapisane w bazie danych i będzie nadal występować przed ukończeniem transakcji klienta koordynowany — Jeśli transakcja klienta nie zostanie ukończone, transakcji usługi sieci Web zapewnia, że odpowiednie aktualizacje bazy danych nie są zatwierdzone.  
@@ -39,13 +39,13 @@ public interface ICalculator
 
  Definiuje operacji w kolejności, w której mają być przetwarzane, są:  
   
--   `Add` Żądanie operacji musi zawierać transakcji.  
+- `Add` Żądanie operacji musi zawierać transakcji.  
   
--   A `Subtract` żądanie operacji mogą obejmować transakcji.  
+- A `Subtract` żądanie operacji mogą obejmować transakcji.  
   
--   A `Multiply` żądanie operacji nie może zawierać transakcji poprzez jawne ustawienie NotAllowed.  
+- A `Multiply` żądanie operacji nie może zawierać transakcji poprzez jawne ustawienie NotAllowed.  
   
--   A `Divide` żądanie operacji nie może zawierać transakcji za pośrednictwem pominięcie `TransactionFlow` atrybutu.  
+- A `Divide` żądanie operacji nie może zawierać transakcji za pośrednictwem pominięcie `TransactionFlow` atrybutu.  
   
  Aby włączyć przepływu transakcji, tylko powiązania z [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) właściwość włączone, należy użyć oprócz atrybutów, operacji odpowiednie. W tym przykładzie konfiguracji usługi uwidacznia punkt końcowy protokołu TCP i punkt końcowy HTTP, oprócz punkt końcowy wymiany metadanych. Punkt końcowy protokołu TCP i punkt końcowy HTTP używają następujących powiązania, które mają [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) właściwości włączone.  
   
@@ -182,15 +182,15 @@ Console.WriteLine("Transaction committed");
 
  Wywołania operacji są następujące:  
   
--   `Add` Żądania przepływu transakcji wymaganych do usługi i są wykonywane działania usługi w zakresie transakcji klienta.  
+- `Add` Żądania przepływu transakcji wymaganych do usługi i są wykonywane działania usługi w zakresie transakcji klienta.  
   
--   Pierwszy `Subtract` żądania również odbywa się dozwolonych transakcji do usługi i ponownie wykonywane działania usługi w zakresie transakcji klienta.  
+- Pierwszy `Subtract` żądania również odbywa się dozwolonych transakcji do usługi i ponownie wykonywane działania usługi w zakresie transakcji klienta.  
   
--   Drugi `Subtract` żądania jest wykonywane w ramach zadeklarowany za pomocą nowego zakresu transakcji `TransactionScopeOption.Suppress` opcji. To pomija początkowej transakcji zewnętrznym klienta i żądania nie przepływu transakcji do usługi. Takie podejście umożliwia klientowi jawnie zrezygnować z i chronić przepływu transakcji do usługi, gdy nie jest wymagane. Usługi są wykonywane działania w zakresie nowych i niepołączonych transakcji.  
+- Drugi `Subtract` żądania jest wykonywane w ramach zadeklarowany za pomocą nowego zakresu transakcji `TransactionScopeOption.Suppress` opcji. To pomija początkowej transakcji zewnętrznym klienta i żądania nie przepływu transakcji do usługi. Takie podejście umożliwia klientowi jawnie zrezygnować z i chronić przepływu transakcji do usługi, gdy nie jest wymagane. Usługi są wykonywane działania w zakresie nowych i niepołączonych transakcji.  
   
--   `Multiply` Żądania nie przepływu transakcji do usługi, ponieważ klient firmy wygenerowana definicja `ICalculator` interfejs zawiera <xref:System.ServiceModel.TransactionFlowAttribute> równa <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
+- `Multiply` Żądania nie przepływu transakcji do usługi, ponieważ klient firmy wygenerowana definicja `ICalculator` interfejs zawiera <xref:System.ServiceModel.TransactionFlowAttribute> równa <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
   
--   `Divide` Żądania nie przepływu transakcji do usługi, ponieważ ponownie klienta użytkownika wygenerowana definicja `ICalculator` nie ma interfejsu `TransactionFlowAttribute`. Usługi ponownie są wykonywane działania w zakresie nowych i niepołączonych transakcja.  
+- `Divide` Żądania nie przepływu transakcji do usługi, ponieważ ponownie klienta użytkownika wygenerowana definicja `ICalculator` nie ma interfejsu `TransactionFlowAttribute`. Usługi ponownie są wykonywane działania w zakresie nowych i niepołączonych transakcja.  
   
  Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
@@ -238,47 +238,47 @@ Press <ENTER> to terminate the service.
   
 1. Na komputerze usługi z systemem Windows Server 2003 lub Windows XP należy skonfigurować usługi MSDTC, aby zezwolić na przychodzące transakcje sieciowe, wykonując następujące instrukcje.  
   
-    1.  Z **Start** menu, przejdź do **Panelu sterowania**, następnie **narzędzia administracyjne**, a następnie **usługi składowe**.  
+    1. Z **Start** menu, przejdź do **Panelu sterowania**, następnie **narzędzia administracyjne**, a następnie **usługi składowe**.  
   
-    2.  Rozwiń **usługi składowe**. Otwórz **komputerów** folderu.  
+    2. Rozwiń **usługi składowe**. Otwórz **komputerów** folderu.  
   
-    3.  Kliknij prawym przyciskiem myszy **Mój komputer** i wybierz **właściwości**.  
+    3. Kliknij prawym przyciskiem myszy **Mój komputer** i wybierz **właściwości**.  
   
-    4.  Na **MSDTC** kliknij pozycję **konfiguracji zabezpieczeń**.  
+    4. Na **MSDTC** kliknij pozycję **konfiguracji zabezpieczeń**.  
   
-    5.  Sprawdź **DTC dostęp sieciowy** i **zezwolić na przychodzący**.  
+    5. Sprawdź **DTC dostęp sieciowy** i **zezwolić na przychodzący**.  
   
-    6.  Kliknij przycisk **OK**, następnie kliknij przycisk **tak** ponownego uruchomienia usługi MSDTC.  
+    6. Kliknij przycisk **OK**, następnie kliknij przycisk **tak** ponownego uruchomienia usługi MSDTC.  
   
-    7.  Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+    7. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
 2. Na komputerze usługi z systemem Windows Server 2008 lub Windows Vista należy skonfigurować usługi MSDTC, aby zezwolić na przychodzące transakcje sieciowe, wykonując następujące instrukcje.  
   
-    1.  Z **Start** menu, przejdź do **Panelu sterowania**, następnie **narzędzia administracyjne**, a następnie **usługi składowe**.  
+    1. Z **Start** menu, przejdź do **Panelu sterowania**, następnie **narzędzia administracyjne**, a następnie **usługi składowe**.  
   
-    2.  Rozwiń **usługi składowe**. Otwórz **komputerów** folderu. Wybierz **Koordynator transakcji rozproszonych**.  
+    2. Rozwiń **usługi składowe**. Otwórz **komputerów** folderu. Wybierz **Koordynator transakcji rozproszonych**.  
   
-    3.  Kliknij prawym przyciskiem myszy **koordynator DTC** i wybierz **właściwości**.  
+    3. Kliknij prawym przyciskiem myszy **koordynator DTC** i wybierz **właściwości**.  
   
-    4.  Na **zabezpieczeń** karcie wyboru **dostępu do sieci usługi DTC** i **Zezwalaj na przychodzące**.  
+    4. Na **zabezpieczeń** karcie wyboru **dostępu do sieci usługi DTC** i **Zezwalaj na przychodzące**.  
   
-    5.  Kliknij przycisk **OK**, następnie kliknij przycisk **tak** ponownego uruchomienia usługi MSDTC.  
+    5. Kliknij przycisk **OK**, następnie kliknij przycisk **tak** ponownego uruchomienia usługi MSDTC.  
   
-    6.  Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+    6. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
 3. Na komputerze klienckim należy skonfigurować usługi MSDTC, aby zezwolić na wychodzące transakcje sieciowe:  
   
-    1.  Z **Start** menu, przejdź do `Control Panel`, następnie **narzędzia administracyjne**, a następnie **usługi składowe**.  
+    1. Z **Start** menu, przejdź do `Control Panel`, następnie **narzędzia administracyjne**, a następnie **usługi składowe**.  
   
-    2.  Kliknij prawym przyciskiem myszy **Mój komputer** i wybierz **właściwości**.  
+    2. Kliknij prawym przyciskiem myszy **Mój komputer** i wybierz **właściwości**.  
   
-    3.  Na **MSDTC** kliknij pozycję **konfiguracji zabezpieczeń**.  
+    3. Na **MSDTC** kliknij pozycję **konfiguracji zabezpieczeń**.  
   
-    4.  Sprawdź **DTC dostęp sieciowy** i **Zezwalaj na wychodzące**.  
+    4. Sprawdź **DTC dostęp sieciowy** i **Zezwalaj na wychodzące**.  
   
-    5.  Kliknij przycisk **OK**, następnie kliknij przycisk **tak** ponownego uruchomienia usługi MSDTC.  
+    5. Kliknij przycisk **OK**, następnie kliknij przycisk **tak** ponownego uruchomienia usługi MSDTC.  
   
-    6.  Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+    6. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

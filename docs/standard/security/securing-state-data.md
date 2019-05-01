@@ -11,20 +11,20 @@ ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018557"
 ---
 # <a name="securing-state-data"></a>Zabezpieczanie danych o stanie
 Aplikacje, które obsługują dane poufne lub wprowadzić dowolnego rodzaju decyzje dotyczące bezpieczeństwa należy zachować te dane w ich własnych kontrolą i nie może dopuścić do innego potencjalnie złośliwego kodu bezpośrednio dostępu do danych. Najlepszym sposobem, aby chronić dane w pamięci jest do deklarowania dane jako prywatny lub wewnętrzny (z zakresu ograniczone do tego samego zestawu) zmienne. Jednak nawet w tych danych podlega dostępu, których należy wiedzieć:  
   
--   Za pomocą mechanizmów odbicia, wysoce zaufanym kodem, który może odwoływać się do obiektu może pobierać i ustawiać prywatnych elementów członkowskich.  
+- Za pomocą mechanizmów odbicia, wysoce zaufanym kodem, który może odwoływać się do obiektu może pobierać i ustawiać prywatnych elementów członkowskich.  
   
--   Za pomocą serializacji, wysoce zaufanym kodem może efektywnie pobierać i ustawiać prywatne składowe jeśli mogą uzyskać dostępu do odpowiednich danych w postaci serializowanej obiektu.  
+- Za pomocą serializacji, wysoce zaufanym kodem może efektywnie pobierać i ustawiać prywatne składowe jeśli mogą uzyskać dostępu do odpowiednich danych w postaci serializowanej obiektu.  
   
--   W obszarze debugowania, te dane mogą być odczytywane.  
+- W obszarze debugowania, te dane mogą być odczytywane.  
   
  Upewnij się, brak swoje własne metody lub właściwości przypadkowo udostępnia te wartości.  
   

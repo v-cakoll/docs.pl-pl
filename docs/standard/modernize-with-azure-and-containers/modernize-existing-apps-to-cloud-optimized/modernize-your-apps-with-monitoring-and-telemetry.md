@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012117"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizowanie aplikacji za pomocą monitorowania i telemetrii
 
@@ -35,15 +35,15 @@ Można dostęp do usługi Log Analytics za pośrednictwem portalu pakietu OMS lu
 
 [Rozwiązanie do monitorowania kontenerów](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) w usłudze Log Analytics ułatwia wyświetlanie i zarządzanie hostów platformy Docker i kontenerów Windows w obrębie jednej lokalizacji. To rozwiązanie przedstawia, kontenery, które są uruchomione, jakie obraz kontenera są one uruchamiane i gdzie są uruchomione kontenery. Można wyświetlić szczegółowe informacje inspekcji, włącznie z poleceniami, które są używane z kontenerami. Możesz również rozwiązać kontenerów, wyświetlania i przeszukiwania scentralizowanych dzienników, bez konieczności zdalnie wyświetlić hostów platformy Docker lub Windows. Możesz znaleźć kontenerów, które mogą być hałas i korzystanie z nich nadmiar zasobów na hoście. Ponadto można wyświetlić, scentralizowane procesora CPU, pamięci, magazynu i użycia sieci i informacje o wydajności dla kontenerów. Na komputerach z systemem Windows, można scentralizować i porównać dzienników z systemu Windows Server, Hyper-V i kontenery platformy Docker. Rozwiązanie obsługuje następujące koordynatorów kontenerów:
 
--   Docker Swarm
+- Docker Swarm
 
--   DC/OS
+- DC/OS
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric
+- Service Fabric
 
--   Red Hat OpenShift
+- Red Hat OpenShift
 
 Rysunek 4 – 11 przedstawiono relacje między różnymi hostach kontenerów i agentów i OMS.
 
@@ -53,45 +53,45 @@ Rysunek 4 – 11 przedstawiono relacje między różnymi hostach kontenerów i a
 
 Można użyć do rozwiązania monitorowanie kontenerów usługi Log Analytics:
 
--   Wyświetlone informacje o wszystkich hostach kontenerów w jednej lokalizacji.
+- Wyświetlone informacje o wszystkich hostach kontenerów w jednej lokalizacji.
 
--   Kontenery, które są uruchomione, obrazu są one uruchamiane i gdzie są one uruchamiane.
+- Kontenery, które są uruchomione, obrazu są one uruchamiane i gdzie są one uruchamiane.
 
--   Zobacz dziennik inspekcji dla działań w kontenerach.
+- Zobacz dziennik inspekcji dla działań w kontenerach.
 
--   Rozwiązywanie problemów, wyświetlania i przeszukiwania scentralizowanych dzienników bez zdalne logowanie do hostów platformy Docker.
+- Rozwiązywanie problemów, wyświetlania i przeszukiwania scentralizowanych dzienników bez zdalne logowanie do hostów platformy Docker.
 
--   Znajdź kontenerów, które mogą być "hałaśliwym sąsiadów" i zużywałoby nadmiar zasobów na hoście.
+- Znajdź kontenerów, które mogą być "hałaśliwym sąsiadów" i zużywałoby nadmiar zasobów na hoście.
 
--   Wyświetl scentralizowane procesora CPU, pamięci, magazynu i użycia sieci i informacje o wydajności dla kontenerów.
+- Wyświetl scentralizowane procesora CPU, pamięci, magazynu i użycia sieci i informacje o wydajności dla kontenerów.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Omówienie monitorowania na platformie Microsoft Azure**
+- **Omówienie monitorowania na platformie Microsoft Azure**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Co to jest usługa Application Insights?**
+- **Co to jest usługa Application Insights?**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **Co to jest usługa Log Analytics?**
+- **Co to jest usługa Log Analytics?**
 
 <https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Rozwiązanie do monitorowania kontenerów w usłudze Azure Monitor**
+- **Rozwiązanie do monitorowania kontenerów w usłudze Azure Monitor**
 
 <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Omówienie usługi Azure Monitor**
+- **Omówienie usługi Azure Monitor**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Co to jest Operations Management Suite (OMS)?**
+- **Co to jest Operations Management Suite (OMS)?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
--   **Monitorowanie kontenerów systemu Windows Server w usłudze Service Fabric za pomocą pakietu OMS**
+- **Monitorowanie kontenerów systemu Windows Server w usłudze Service Fabric za pomocą pakietu OMS**
 
 <https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 

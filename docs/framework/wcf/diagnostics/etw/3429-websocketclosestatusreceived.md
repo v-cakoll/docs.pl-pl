@@ -3,26 +3,26 @@ title: 3429 — WebSocketCloseStatusReceived
 ms.date: 03/30/2017
 ms.assetid: b4f16083-cb55-4215-af12-478d5e70301e
 ms.openlocfilehash: ddd7f8966db0556fa1c25e7a3ddca8b16eefaf05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33465708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999885"
 ---
 # <a name="3429---websocketclosestatusreceived"></a>3429 — WebSocketCloseStatusReceived
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|3429|  
-|Słowa kluczowe|HTTP|  
+|Identyfikator|3429|  
+|słowa kluczowe|HTTP|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany po odebraniu stanu zamknięcia obiektu WebSocket.  
+ To zdarzenie jest emitowane po odebraniu stan zamknięcia protokołu WebSocket.  
   
 ## <a name="message"></a>Komunikat  
- Połączenie gniazda websocketid: % 1 odebrało komunikat zamknięcia ze stanu "%2".  
+ Połączenie WebSocketId:% 1 Zamknij komunikat o stanie "%2".  
   
 ## <a name="details"></a>Szczegóły

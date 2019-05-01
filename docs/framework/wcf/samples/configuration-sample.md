@@ -3,11 +3,11 @@ title: Konfiguracja — przykład
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002251"
 ---
 # <a name="configuration-sample"></a>Konfiguracja — przykład
 Niniejszy przykład pokazuje użycie pliku konfiguracji, aby stał się wykrywalny usługi.  
@@ -27,15 +27,15 @@ Niniejszy przykład pokazuje użycie pliku konfiguracji, aby stał się wykrywal
 ## <a name="service-configuration"></a>Konfiguracja usługi  
  Plik konfiguracji, w tym przykładzie pokazano dwie funkcje:  
   
--   Dzięki czemu usługa stała się wykrywalna za pośrednictwem standardowego <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+- Dzięki czemu usługa stała się wykrywalna za pośrednictwem standardowego <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
--   Dostosowywanie informacje dotyczące odnajdywania dla punktu końcowego aplikacji i dostosowanie niektórych ustawień związanych z odnajdywania na standardowy punkt końcowy usługi.  
+- Dostosowywanie informacje dotyczące odnajdywania dla punktu końcowego aplikacji i dostosowanie niektórych ustawień związanych z odnajdywania na standardowy punkt końcowy usługi.  
   
  Aby włączyć odnajdywanie, kilka zmian, musi nastąpić w pliku konfiguracji aplikacji dla usługi:  
   
--   Punkt końcowy odnajdywania musi zostać dodany do `<service>` elementu. Jest to standardowy <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> punktu końcowego. Jest to punkt końcowy systemu kojarzące przez środowisko uruchomieniowe usługi odnajdywania. Usługa odnajdywania nasłuchuje komunikatów w tym punkcie końcowym.  
+- Punkt końcowy odnajdywania musi zostać dodany do `<service>` elementu. Jest to standardowy <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> punktu końcowego. Jest to punkt końcowy systemu kojarzące przez środowisko uruchomieniowe usługi odnajdywania. Usługa odnajdywania nasłuchuje komunikatów w tym punkcie końcowym.  
   
--   A `<serviceDiscovery>` zachowanie jest dodawany do `<serviceBehaviors>` sekcji. To pozwala usłudze, które mają zostać odnalezione w czasie wykonywania i używa punkt końcowy odnajdowania wymienionych wcześniej do nasłuchiwania pod kątem odnajdywania `Probe` i `Resolve` wiadomości. Z tych dwóch dodatki wykrywalny na punkt końcowy odnajdowania określony jest usługa.  
+- A `<serviceDiscovery>` zachowanie jest dodawany do `<serviceBehaviors>` sekcji. To pozwala usłudze, które mają zostać odnalezione w czasie wykonywania i używa punkt końcowy odnajdowania wymienionych wcześniej do nasłuchiwania pod kątem odnajdywania `Probe` i `Resolve` wiadomości. Z tych dwóch dodatki wykrywalny na punkt końcowy odnajdowania określony jest usługa.  
   
  Poniższy fragment konfiguracji przedstawia usługi z punktu końcowego aplikacji i punkt końcowy odnajdowania zdefiniowane:  
   

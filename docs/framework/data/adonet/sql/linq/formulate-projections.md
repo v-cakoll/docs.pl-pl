@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
 ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037911"
 ---
 # <a name="formulate-projections"></a>Formułowanie projekcji
 W poniższych przykładach pokazano sposób, w jaki `select` instrukcji w C# i `Select` instrukcji w języku Visual Basic można łączyć z innymi funkcjami do formularza projekcje zapytania.  
@@ -66,11 +66,11 @@ W poniższych przykładach pokazano sposób, w jaki `select` instrukcji w C# i `
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto zapytań zagnieżdżonej, aby zostały zwrócone następujące wyniki:  
   
--   Sekwencja wszystkich zamówień i odpowiadające im `OrderID`s.  
+- Sekwencja wszystkich zamówień i odpowiadające im `OrderID`s.  
   
--   Podsekwencji elementy w kolejności, dla którego jest rabat.  
+- Podsekwencji elementy w kolejności, dla którego jest rabat.  
   
--   Ilość pieniądze zapisane, jeżeli nie dołączono kosztu wysyłki.  
+- Ilość pieniądze zapisane, jeżeli nie dołączono kosztu wysyłki.  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  

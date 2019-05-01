@@ -1,29 +1,29 @@
 ---
-title: 1027 - StartTransactionContextWorkItem
+title: 1027 — StartTransactionContextWorkItem
 ms.date: 03/30/2017
 ms.assetid: 116ae5ec-b9d5-4231-824e-270d00eea7b8
 ms.openlocfilehash: 231a7607f2ce9a38e8dd6c1486a68bc9eb459e5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008827"
 ---
-# <a name="1027---starttransactioncontextworkitem"></a>1027 - StartTransactionContextWorkItem
+# <a name="1027---starttransactioncontextworkitem"></a>1027 — StartTransactionContextWorkItem
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|1027|  
-|Słowa kluczowe|WFRuntime|  
+|Identyfikator|1027|  
+|słowa kluczowe|WFRuntime|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- Wskazuje, że element roboczy TransactionContextWorkItem jest rozpoczęcie wykonywania.  
+ Wskazuje, że TransactionContextWorkItem Trwa uruchamianie wykonywania.  
   
 ## <a name="message"></a>Komunikat  
- Rozpoczęcie wykonywania elementu roboczego TransactionContextWorkItem dla działania %1, nazwa wyświetlana: %2, identyfikator wystąpienia: '%3'.  
+ Rozpoczynanie wykonywania TransactionContextWorkItem dla działania "%1", DisplayName: "%2", InstanceId: "%3".  
   
 ## <a name="details"></a>Szczegóły  
   
@@ -31,5 +31,5 @@ ms.locfileid: "33510812"
 |--------------------|--------------------|-----------------|  
 |Działanie|xs:String|Nazwa typu działania.|  
 |Nazwa wyświetlana|xs:String|Nazwa wyświetlana działania.|  
-|Identyfikator wystąpienia|xs:String|Identyfikator wystąpienia działania.|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|InstanceId|xs:String|Identyfikator wystąpienia działania.|  
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

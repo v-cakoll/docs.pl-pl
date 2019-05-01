@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009529"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.ToolStrip> kontrolki i ich skojarzonych klas zapewniają wspólną platformę łączenie elementów interfejsu użytkownika w paski narzędzi, paski stanu i menu. <xref:System.Windows.Forms.ToolStrip> kontrolki oferują bogate środowisko czasu projektowania, która obejmuje aktywacji w miejscu i edytowanie, układu niestandardowego i rafting, który jest możliwość udostępniania poziomej lub pionowej przestrzeni pasków narzędzi.  
@@ -24,19 +24,19 @@ Formularze Windows <xref:System.Windows.Forms.ToolStrip> kontrolki i ich skojarz
 ## <a name="features-of-the-toolstrip-controls"></a>Funkcje kontrolek ToolStrip  
  Użyj <xref:System.Windows.Forms.ToolStrip> kontrolę:  
   
--   Przedstawia wspólnego interfejsu użytkownika różnych kontenerów.  
+- Przedstawia wspólnego interfejsu użytkownika różnych kontenerów.  
   
--   Tworzenie łatwo dostosować, powszechnie wykorzystywane paski narzędzi, które obsługują zaawansowane funkcje interfejsu i układ użytkownika, takie jak przyciski dokowania, rafting, za pomocą tekstu i obrazów, przyciski i formanty overflow przycisków i zmiana kolejności środowiska wykonawczego <xref:System.Windows.Forms.ToolStrip> elementy.  
+- Tworzenie łatwo dostosować, powszechnie wykorzystywane paski narzędzi, które obsługują zaawansowane funkcje interfejsu i układ użytkownika, takie jak przyciski dokowania, rafting, za pomocą tekstu i obrazów, przyciski i formanty overflow przycisków i zmiana kolejności środowiska wykonawczego <xref:System.Windows.Forms.ToolStrip> elementy.  
   
--   Obsługuje przepełnienie i zmiany kolejności elementów w czasie wykonywania. Funkcja przepełnienie przenosi elementy do menu rozwijanego, gdy nie jest wystarczająco dużo miejsca, aby wyświetlić je w <xref:System.Windows.Forms.ToolStrip>.  
+- Obsługuje przepełnienie i zmiany kolejności elementów w czasie wykonywania. Funkcja przepełnienie przenosi elementy do menu rozwijanego, gdy nie jest wystarczająco dużo miejsca, aby wyświetlić je w <xref:System.Windows.Forms.ToolStrip>.  
   
--   Obsługiwać typowego wyglądu i zachowania systemu operacyjnego za pomocą wspólnego modelu renderowania.  
+- Obsługiwać typowego wyglądu i zachowania systemu operacyjnego za pomocą wspólnego modelu renderowania.  
   
--   Obsługa zdarzeń spójne dla wszystkich kontenerów i zawartych w niej elementów, w taki sam sposób obsługi zdarzeń dla innych kontrolek.  
+- Obsługa zdarzeń spójne dla wszystkich kontenerów i zawartych w niej elementów, w taki sam sposób obsługi zdarzeń dla innych kontrolek.  
   
--   Przeciągnij elementy z jednego <xref:System.Windows.Forms.ToolStrip> do innego lub w ramach <xref:System.Windows.Forms.ToolStrip>.  
+- Przeciągnij elementy z jednego <xref:System.Windows.Forms.ToolStrip> do innego lub w ramach <xref:System.Windows.Forms.ToolStrip>.  
   
--   Tworzenie kontrolki listy rozwijanej i użytkownika edytory typów interfejsu przy użyciu zaawansowanych układów w <xref:System.Windows.Forms.ToolStripDropDown>.  
+- Tworzenie kontrolki listy rozwijanej i użytkownika edytory typów interfejsu przy użyciu zaawansowanych układów w <xref:System.Windows.Forms.ToolStripDropDown>.  
   
  Użyj <xref:System.Windows.Forms.ToolStripControlHost> klasy na korzystanie z innych formantów <xref:System.Windows.Forms.ToolStrip> i uzyskanie <xref:System.Windows.Forms.ToolStrip> funkcjonalność dla nich.  
   

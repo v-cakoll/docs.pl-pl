@@ -10,26 +10,26 @@ helpviewer_keywords:
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
 ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010634"
 ---
 # <a name="custom-rendering-ink"></a>Niestandardowy atrament renderowania
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Właściwości pociągnięcia umożliwia określenie wyglądu pociągnięcia, takie jak rozmiar, kolor i kształt, ale mogą zaistnieć sytuacje, które chcesz dostosować wygląd poza to, co <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Zezwalaj. Można dostosować wygląd pisma odręcznego za renderowaniem w wygląd Aerograf, paint ropa naftowa i innych skutków. Windows Presentation Foundation (WPF) pozwala na niestandardowe renderowanie pisma odręcznego poprzez implementację niestandardową <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i <xref:System.Windows.Ink.Stroke> obiektu.  
   
  Ten temat zawiera następujące podsekcje:  
   
--   [Architektura](#Architecture)  
+- [Architektura](#Architecture)  
   
--   [Implementowanie dynamicznych programu renderującego](#ImplementingADynamicRenderer)  
+- [Implementowanie dynamicznych programu renderującego](#ImplementingADynamicRenderer)  
   
--   [Implementowanie niestandardowego pociągnięcia](#ImplementingCustomStrokes)  
+- [Implementowanie niestandardowego pociągnięcia](#ImplementingCustomStrokes)  
   
--   [Implementowanie niestandardowego InkCanvas](#ImplementingACustomInkCanvas)  
+- [Implementowanie niestandardowego InkCanvas](#ImplementingACustomInkCanvas)  
   
--   [Podsumowanie](#Conclusion)  
+- [Podsumowanie](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architektura  
@@ -75,11 +75,11 @@ ms.locfileid: "59323723"
   
  Niestandardowe renderowanie pociągnięć na <xref:System.Windows.Controls.InkCanvas> wykonaj następujące czynności:  
   
--   Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Controls.InkCanvas>.  
+- Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Controls.InkCanvas>.  
   
--   Przypisz dostosowanym <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> właściwości.  
+- Przypisz dostosowanym <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> właściwości.  
   
--   Zastąp <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> metody. W przypadku tej metody należy usunąć oryginalny obrys, który został dodany do przez obiekt InkCanvas. Następnie utwórz obrysu niestandardowego, dodaj ją do <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwość i wywołanie klasy bazowej z nową <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> zawierający niestandardowe obrysu.  
+- Zastąp <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> metody. W przypadku tej metody należy usunąć oryginalny obrys, który został dodany do przez obiekt InkCanvas. Następnie utwórz obrysu niestandardowego, dodaj ją do <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwość i wywołanie klasy bazowej z nową <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> zawierający niestandardowe obrysu.  
   
  Następujące C# kod pokazuje niestandardowy <xref:System.Windows.Controls.InkCanvas> klasę, która korzysta z niestandardową <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i zbieranie pociągnięć niestandardowych.  
   

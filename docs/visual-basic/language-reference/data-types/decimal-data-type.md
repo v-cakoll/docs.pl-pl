@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971773"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal — Typ danych (Visual Basic)
 Przechowuje podpisany 128-bitowego (16-bajtową) wartości reprezentujących numery 96-bitową liczbę całkowitą z (12-bajtową) skalowania przez zmienną potęgą liczby 10. Czynnik skalowania określa liczbę cyfr z prawej strony punktu dziesiętnego; waha się od 0 do 28. O skali 0 (bez miejsc dziesiętnych) największa możliwa wartość to +/-79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). 28 miejsc dziesiętnych największa wartość jest +/-7.9228162514264337593543950335 i najmniejszą wartość różną od zera jest +/-0,0000000000000000000000000001 (+/-1E-28).  
@@ -37,13 +37,13 @@ Przechowuje podpisany 128-bitowego (16-bajtową) wartości reprezentujących num
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Dokładność.** `Decimal` nie jest typem danych zmiennopozycyjnych. `Decimal` Struktury przechowuje wartość całkowitą binarne, wraz z bitem znaku i współczynnik, która określa, jaka część wartości jest ułamek dziesiętny skalowania liczby całkowitej. W związku z tym `Decimal` liczby mają bardziej precyzyjne reprezentacji w pamięci, niż typów zmiennoprzecinkowych (`Single` i `Double`).  
+- **Dokładność.** `Decimal` nie jest typem danych zmiennopozycyjnych. `Decimal` Struktury przechowuje wartość całkowitą binarne, wraz z bitem znaku i współczynnik, która określa, jaka część wartości jest ułamek dziesiętny skalowania liczby całkowitej. W związku z tym `Decimal` liczby mają bardziej precyzyjne reprezentacji w pamięci, niż typów zmiennoprzecinkowych (`Single` i `Double`).  
   
--   **Wydajność.** `Decimal` Typ danych jest najwolniejsze wszystkich typów liczbowych. Należy porównać znaczenie dokładności względem wydajności przed wybraniem typu danych.  
+- **Wydajność.** `Decimal` Typ danych jest najwolniejsze wszystkich typów liczbowych. Należy porównać znaczenie dokładności względem wydajności przed wybraniem typu danych.  
   
--   **Rozszerzanie.** `Decimal` — Typ danych rozszerza się na `Single` lub `Double`. Oznacza to, że możesz przekonwertować `Decimal` do jednej z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzanie.** `Decimal` — Typ danych rozszerza się na `Single` lub `Double`. Oznacza to, że możesz przekonwertować `Decimal` do jednej z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Końcowe zera.** Visual Basic nie przechowuje zera końcowe w `Decimal` literału. Jednak `Decimal` zmienna zachowuje dowolne zera końcowe, które zostały nabyte w praktyce. Ilustruje to poniższy przykład.  
+- **Końcowe zera.** Visual Basic nie przechowuje zera końcowe w `Decimal` literału. Jednak `Decimal` zmienna zachowuje dowolne zera końcowe, które zostały nabyte w praktyce. Ilustruje to poniższy przykład.  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -59,9 +59,9 @@ Przechowuje podpisany 128-bitowego (16-bajtową) wartości reprezentujących num
   
      d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4  
   
--   **Znaki typu.** Dołączanie znaku typu literał `D` do literału wymusza `Decimal` typu danych. Dołączanie znaku typu identyfikator `@` do jakiegokolwiek identyfikatora wymusza `Decimal`.  
+- **Znaki typu.** Dołączanie znaku typu literał `D` do literału wymusza `Decimal` typu danych. Dołączanie znaku typu identyfikator `@` do jakiegokolwiek identyfikatora wymusza `Decimal`.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Decimal?displayProperty=nameWithType> struktury.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Decimal?displayProperty=nameWithType> struktury.  
   
 ## <a name="range"></a>Zakres  
  Może być konieczne użycie `D` wpisz znak duża wartość, aby przypisać `Decimal` zmienną lub stałą. Jest to wymaganie, ponieważ kompilator interpretuje słowa kluczowe literału jako `Long` chyba, że znak literalny typu następuje literału, co ilustruje poniższy przykład.  

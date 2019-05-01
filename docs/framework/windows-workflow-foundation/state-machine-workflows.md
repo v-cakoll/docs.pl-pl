@@ -3,11 +3,11 @@ title: Przepływy pracy automatu stanów
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004678"
 ---
 # <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów
 Komputer stanu jest dobrze znanego modelu do tworzenia programów. <xref:System.Activities.Statements.StateMachine> Działania, wraz z <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, i inne działania może służyć do tworzenia programów przepływu pracy maszyny stanu. Ten temat zawiera omówienie tworzenia przepływów pracy automatu stanów.  
@@ -15,11 +15,11 @@ Komputer stanu jest dobrze znanego modelu do tworzenia programów. <xref:System.
 ## <a name="state-machine-workflow-overview"></a>Omówienie przepływu pracy automatu stanów  
  Przepływy pracy automatu stanów dostarczyć styl modelowania, za pomocą którego można modelować przepływu pracy, w sposób oparte na zdarzeniach. A <xref:System.Activities.Statements.StateMachine> działania zawiera Stany i przejścia, które tworzą logikę automatu stanów i może być używane wszędzie działanie może być używane. Istnieje kilka klas w środowisku uruchomieniowym maszyny stanu:  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  Aby utworzyć przepływ pracy automatu stanów, Stany są dodawane do <xref:System.Activities.Statements.StateMachine> działania i przejścia są używane sterowanie przepływem między stanami. Poniższy zrzut ekranu z [Samouczek wprowadzający](getting-started-tutorial.md) kroku [jak: Utwórz przepływ pracy automatu stanów](how-to-create-a-state-machine-workflow.md), przedstawia przepływ pracy automatu stanów z trzech stanów i trzy przejścia. **Inicjowanie docelowej** jest wstępny stan i reprezentuje pierwszy stan w przepływie pracy. To jest wyznaczony przez wiersz, co prowadzi do niej **Start** węzła. Stan końcowy w przepływie pracy jest o nazwie **FinalState**i reprezentuje punkt ukończeniu przepływu pracy.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 ms.openlocfilehash: 5de918f71f4361af3409c8382781844824747c83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002459"
 ---
 # <a name="concurrency"></a>Współbieżność
 Przykład współbieżności, który demonstruje sposób użycia <xref:System.ServiceModel.ServiceBehaviorAttribute> z <xref:System.ServiceModel.ConcurrencyMode> wyliczenia, które kontrolują, czy wystąpienie usługi przetwarza komunikaty kolejno lub równolegle. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. Ta przykładowa aplikacja definiuje kontrakt nowe `ICalculatorConcurrency`, który dziedziczy z `ICalculator`, zapewniając dwóch dodatkowych operacji sprawdzania stanu współbieżności usługi. Zmieniając ustawienie współbieżności, można obserwować zmiany w zachowaniu przez uruchomienie klienta.  
@@ -22,11 +22,11 @@ Przykład współbieżności, który demonstruje sposób użycia <xref:System.Se
   
  Dostępne są trzy tryby współbieżności:  
   
--   `Single`: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie. Jest to domyślny tryb współbieżności.  
+- `Single`: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie. Jest to domyślny tryb współbieżności.  
   
--   `Multiple`: Każde wystąpienie usługi przetwarza wiele wiadomości jednocześnie. Implementacja usługi musi być wątków, aby użyć tego trybu współbieżności.  
+- `Multiple`: Każde wystąpienie usługi przetwarza wiele wiadomości jednocześnie. Implementacja usługi musi być wątków, aby użyć tego trybu współbieżności.  
   
--   `Reentrant`: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie, ale akceptuje wywołania współużytkowane. Usługa akceptuje tylko te wywołania kontaktujący. Wielobieżna ConcurrencyMode została przedstawiona w [pomocą właściwości ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) próbki.  
+- `Reentrant`: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie, ale akceptuje wywołania współużytkowane. Usługa akceptuje tylko te wywołania kontaktujący. Wielobieżna ConcurrencyMode została przedstawiona w [pomocą właściwości ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) próbki.  
   
  Użycie współbieżności jest powiązana z trybu wystąpień. W <xref:System.ServiceModel.InstanceContextMode.PerCall> wystąpień, współbieżności nie jest ważna, ponieważ każdy komunikat jest przetwarzany przez nowe wystąpienie usługi. W <xref:System.ServiceModel.InstanceContextMode.Single> wystąpień, albo <xref:System.ServiceModel.ConcurrencyMode.Single> lub <xref:System.ServiceModel.ConcurrencyMode.Multiple> współbieżność jest istotne, w zależności od tego, czy pojedyncze wystąpienie przetwarza komunikaty kolejno lub równolegle. W <xref:System.ServiceModel.InstanceContextMode.PerSession> wystąpień, jednym z trybów współbieżności mogą być istotne.  
   

@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007165"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Przewodnik: rozmieszczanie kontrolek Windows Forms w WPF
 W tym instruktażu dowiesz się, jak używać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji układu, aby zorganizować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek w aplikacji hybrydowych.  
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu.  
+- Tworzenie projektu.  
   
--   Przy użyciu domyślnych ustawień układu.  
+- Przy użyciu domyślnych ustawień układu.  
   
--   Ustalanie rozmiaru zawartości.  
+- Ustalanie rozmiaru zawartości.  
   
--   Za pomocą pozycjonowanie absolutne.  
+- Za pomocą pozycjonowanie absolutne.  
   
--   Jawne określenie rozmiaru.  
+- Jawne określenie rozmiaru.  
   
--   Ustawianie właściwości układu.  
+- Ustawianie właściwości układu.  
   
--   Opis ograniczeń porządku osi z.  
+- Opis ograniczeń porządku osi z.  
   
--   Dokowania.  
+- Dokowania.  
   
--   Ustawienie widoczności.  
+- Ustawienie widoczności.  
   
--   Hosting formant, który nie Stretch Database.  
+- Hosting formant, który nie Stretch Database.  
   
--   Skalowanie.  
+- Skalowanie.  
   
--   Obracanie.  
+- Obracanie.  
   
--   Dopełnienie ustawienia zaznaczania i marginesów.  
+- Dopełnienie ustawienia zaznaczania i marginesów.  
   
--   Używanie kontenerów układ dynamiczny.  
+- Używanie kontenerów układ dynamiczny.  
   
  Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [rozmieszczanie formantów formularzy Windows w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971).  
   
@@ -64,11 +64,11 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 2. W Eksploratorze rozwiązań należy dodać odwołania do następujących zestawów.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. Kliknij dwukrotnie opcję MainWindow.xaml, aby otworzyć go w widoku XAML.  
   

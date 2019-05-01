@@ -3,11 +3,11 @@ title: 'Samouczek: Tworzenie dostawcy typów'
 description: Dowiedz się, jak tworzyć własne F# dostawców w typów F# 3.0, sprawdzając kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji.
 ms.date: 02/02/2019
 ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982621"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 

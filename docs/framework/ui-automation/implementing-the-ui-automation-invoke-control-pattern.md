@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983349"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementacja wzorca kontrolki wywołania automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,30 +25,30 @@ ms.locfileid: "59134787"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Podczas implementowania Invoke — wzorzec kontrolki, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Implementowanie kontrolek <xref:System.Windows.Automation.Provider.IInvokeProvider> jeśli takie samo zachowanie nie jest dostępna za pośrednictwem innego dostawcy wzorzec kontroli. Na przykład jeśli <xref:System.Windows.Automation.InvokePattern.Invoke%2A> metoda na formant wykonuje ta sama akcja co <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> metody, formant nie należy implementować <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
+- Implementowanie kontrolek <xref:System.Windows.Automation.Provider.IInvokeProvider> jeśli takie samo zachowanie nie jest dostępna za pośrednictwem innego dostawcy wzorzec kontroli. Na przykład jeśli <xref:System.Windows.Automation.InvokePattern.Invoke%2A> metoda na formant wykonuje ta sama akcja co <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> metody, formant nie należy implementować <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
   
--   Wywoływanie kontrolki zwykle odbywa się przez kliknięcie, dwukrotne kliknięcie lub naciśnięcie klawisza ENTER, skrót klawiaturowy wstępnie zdefiniowanych lub alternatywne kombinacja klawiszy.  
+- Wywoływanie kontrolki zwykle odbywa się przez kliknięcie, dwukrotne kliknięcie lub naciśnięcie klawisza ENTER, skrót klawiaturowy wstępnie zdefiniowanych lub alternatywne kombinacja klawiszy.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> jest wywoływane na formant, który został aktywowany (jako odpowiedzi do formantu przeprowadzania jego skojarzone z akcją). Jeśli to możliwe powinno być generowane zdarzenie, po kontrolki ukończył akcję i zwrócony bez blokowania. Powinno być generowane zdarzenie wywoływany przed obsługi żądania Invoke w następujących scenariuszach:  
+- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> jest wywoływane na formant, który został aktywowany (jako odpowiedzi do formantu przeprowadzania jego skojarzone z akcją). Jeśli to możliwe powinno być generowane zdarzenie, po kontrolki ukończył akcję i zwrócony bez blokowania. Powinno być generowane zdarzenie wywoływany przed obsługi żądania Invoke w następujących scenariuszach:  
   
-    -   Nie jest możliwe lub praktyczne czekać, aż do zakończenia akcji.  
+    - Nie jest możliwe lub praktyczne czekać, aż do zakończenia akcji.  
   
-    -   Akcja wymaga interakcji z użytkownikiem.  
+    - Akcja wymaga interakcji z użytkownikiem.  
   
-    -   Akcja jest czasochłonne i spowoduje, że klienta wywołującego zablokować na znaczną ilość czasu.  
+    - Akcja jest czasochłonne i spowoduje, że klienta wywołującego zablokować na znaczną ilość czasu.  
   
--   Jeśli wywołanie formantu znaczący efekty uboczne, te efekty uboczne powinny zostać ujawnione przez <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> właściwości. Na przykład nawet jeśli <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> nie jest skojarzony z zaznaczoną opcję <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> może spowodować, że inna kontrolka stają się wybrać.  
+- Jeśli wywołanie formantu znaczący efekty uboczne, te efekty uboczne powinny zostać ujawnione przez <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> właściwości. Na przykład nawet jeśli <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> nie jest skojarzony z zaznaczoną opcję <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> może spowodować, że inna kontrolka stają się wybrać.  
   
--   Zatrzymaj wskaźnik myszy (lub myszą) efekty ogólnie nie jest uznawany za wywołany. Jednak powinna obsługiwać formantów, które wykonują akcję (w przeciwieństwie do Przyczyna efekt wizualny) na podstawie stanu po wskazaniu wskaźnikiem <xref:System.Windows.Automation.InvokePattern> — wzorzec kontrolki.  
+- Zatrzymaj wskaźnik myszy (lub myszą) efekty ogólnie nie jest uznawany za wywołany. Jednak powinna obsługiwać formantów, które wykonują akcję (w przeciwieństwie do Przyczyna efekt wizualny) na podstawie stanu po wskazaniu wskaźnikiem <xref:System.Windows.Automation.InvokePattern> — wzorzec kontrolki.  
   
 > [!NOTE]
 >  Ta implementacja jest uznawana za zgłoszenie ułatwień dostępu, jeśli formant może być wywoływany tylko w wyniku związane z myszy efekt uboczny.  
   
--   Wywoływanie kontrolki różni się od zaznaczenie elementu. W zależności od kontrolki, wywołanie go może jednak spowodować element które mają zostać wybrana jako efekt uboczny. Na przykład, wywołanie [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] elementu listy dokumentów w folderze Moje dokumenty wybiera element i otwiera dokument.  
+- Wywoływanie kontrolki różni się od zaznaczenie elementu. W zależności od kontrolki, wywołanie go może jednak spowodować element które mają zostać wybrana jako efekt uboczny. Na przykład, wywołanie [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] elementu listy dokumentów w folderze Moje dokumenty wybiera element i otwiera dokument.  
   
--   Element może zniknąć z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa natychmiast po wywoływana. Trwa żądanie informacji z elementu dostarczone przez wywołanie zwrotne zdarzeń może zakończyć się niepowodzeniem w wyniku. Wstępnie pobieranie informacji o pamięci podręcznej jest zalecaną praktyką.  
+- Element może zniknąć z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa natychmiast po wywoływana. Trwa żądanie informacji z elementu dostarczone przez wywołanie zwrotne zdarzeń może zakończyć się niepowodzeniem w wyniku. Wstępnie pobieranie informacji o pamięci podręcznej jest zalecaną praktyką.  
   
--   Kontrolki można zaimplementować wiele wzorców kontrolek. Na przykład kontrolka koloru wypełnienia w [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] narzędzi implementuje interfejsy <xref:System.Windows.Automation.InvokePattern> i <xref:System.Windows.Automation.ExpandCollapsePattern> kontrolować wzorców. <xref:System.Windows.Automation.ExpandCollapsePattern> Udostępnia menu i <xref:System.Windows.Automation.InvokePattern> wypełnia aktywnego zaznaczenia z wybranym kolorze.  
+- Kontrolki można zaimplementować wiele wzorców kontrolek. Na przykład kontrolka koloru wypełnienia w [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] narzędzi implementuje interfejsy <xref:System.Windows.Automation.InvokePattern> i <xref:System.Windows.Automation.ExpandCollapsePattern> kontrolować wzorców. <xref:System.Windows.Automation.ExpandCollapsePattern> Udostępnia menu i <xref:System.Windows.Automation.InvokePattern> wypełnia aktywnego zaznaczenia z wybranym kolorze.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Wymagane elementy IInvokeProvider  

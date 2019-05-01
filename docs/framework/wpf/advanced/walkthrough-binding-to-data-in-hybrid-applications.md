@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981815"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Przewodnik: wiązanie z danymi w aplikacjach hybrydowych
 Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniając użytkownikom dostęp do danych bazowych, czy używasz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym instruktażu przedstawiono sposób korzystania powiązanie danych w aplikacjach hybrydowych, które zawierają zarówno [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu.  
+- Tworzenie projektu.  
   
--   Definiowanie szablonu danych.  
+- Definiowanie szablonu danych.  
   
--   Określanie układu formularza.  
+- Określanie układu formularza.  
   
--   Określanie powiązania danych.  
+- Określanie powiązania danych.  
   
--   Wyświetlanie danych za pomocą międzyoperacyjności.  
+- Wyświetlanie danych za pomocą międzyoperacyjności.  
   
--   Dodawanie źródła danych do projektu.  
+- Dodawanie źródła danych do projektu.  
   
--   Powiązania ze źródłem danych.  
+- Powiązania ze źródłem danych.  
   
  Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [powiązanie danych w przykładowej aplikacji hybrydowych](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
@@ -41,9 +41,9 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   Program Visual Studio.  
+- Program Visual Studio.  
   
--   Dostęp do przykładowej bazy danych Northwind uruchomiony program Microsoft SQL Server.  
+- Dostęp do przykładowej bazy danych Northwind uruchomiony program Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
   
@@ -53,9 +53,9 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
   
 2. W Eksploratorze rozwiązań należy dodać odwołania do następujących zestawów.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. Otwieranie pliku MainWindow.xaml w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -74,7 +74,7 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
   
 #### <a name="to-define-the-data-template"></a>Aby zdefiniować szablon danych  
   
--   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
+- Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
   
 #### <a name="to-set-up-the-grid-layout"></a>Aby zdefiniować układ siatki  
   
--   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
+- Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Aby skonfigurować formantów etykiet  
   
--   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
+- Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
   
 #### <a name="to-specify-data-bindings"></a>Aby określić powiązanie danych  
   
--   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
+- Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      <xref:System.Windows.Data.Binding> Klasy powiązań <xref:System.Windows.Controls.TextBox> formanty do odpowiednich pól w bazie danych.  
   
@@ -111,7 +111,7 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Wyświetlanie danych w formancie DataGridView  
   
--   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
+- Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

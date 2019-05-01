@@ -8,11 +8,11 @@ helpviewer_keywords:
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
 ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014100"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Instrukcje: Tworzenie siatek właściwości dla ustawień użytkownika w języku Visual Basic
 Można utworzyć siatki właściwości, dla ustawień użytkownika, definiując <xref:System.Windows.Forms.PropertyGrid> kontrola przy użyciu właściwości ustawienia użytkownika `My.Settings` obiektu.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002394"
 ---
 # <a name="timing-events-overview"></a>Przegląd Zdarzenia chronometrażu
 W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostępne na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiektów.  
@@ -23,11 +23,11 @@ W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostęp
   
  Istnieje wiele sposobów, aby animować właściwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Używanie obiektów scenorysu** (znaczników i kodu): Możesz użyć <xref:System.Windows.Media.Animation.Storyboard> obiektów Rozmieść i rozpowszechniania animacji jeden lub więcej obiektów. Aby uzyskać przykład, zobacz [animować właściwość przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md).  
+- **Używanie obiektów scenorysu** (znaczników i kodu): Możesz użyć <xref:System.Windows.Media.Animation.Storyboard> obiektów Rozmieść i rozpowszechniania animacji jeden lub więcej obiektów. Aby uzyskać przykład, zobacz [animować właściwość przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Za pomocą lokalnego animacji** (tylko kod): Można zastosować <xref:System.Windows.Media.Animation.AnimationTimeline> obiektów bezpośrednio do właściwości one animować. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md).  
+- **Za pomocą lokalnego animacji** (tylko kod): Można zastosować <xref:System.Windows.Media.Animation.AnimationTimeline> obiektów bezpośrednio do właściwości one animować. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md).  
   
--   **Za pomocą zegary** (tylko kod): Można jawnie zarządzać zegara tworzenia i dystrybucji zegary animacji, samodzielnie.  Aby uzyskać przykład, zobacz [animować właściwość przy użyciu AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
+- **Za pomocą zegary** (tylko kod): Można jawnie zarządzać zegara tworzenia i dystrybucji zegary animacji, samodzielnie.  Aby uzyskać przykład, zobacz [animować właściwość przy użyciu AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
   
  Ponieważ można ich używać w kodzie znaczników oraz kod, użyj na potrzeby przykładów w tym omówieniu <xref:System.Windows.Media.Animation.Storyboard> obiektów. Jednakże pojęcia opisane mogą dotyczyć innych metod animowanie właściwości.  
   

@@ -1,34 +1,34 @@
 ---
-title: Przykładowe FindPrivateKey - WCF
+title: Przykładowy FindPrivateKey — WCF
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
 ms.openlocfilehash: 72e2f49ae7c39b4a0486ec053ff1164c2d833cbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990096"
 ---
 # <a name="findprivatekey-sample"></a>Przykładowe FindPrivateKey
 
-Może być trudne znaleźć lokalizację i nazwę pliku klucza prywatnego skojarzonego z certyfikatem X.509 określonej w magazynie certyfikatów. Narzędzie FindPrivateKey.exe ułatwia ten proces.
+Może być trudne do znalezienia lokalizację i nazwę pliku klucza prywatnego skojarzonego z certyfikatem X.509 określonych w magazynie certyfikatów. Narzędzie FindPrivateKey.exe ułatwia ten proces.
 
 > [!IMPORTANT]
-> FindPrivateKey to przykład, który musi być skompilowany przed ich użyciem. Zobacz [Aby skompilować projekt FindPrivateKey](#to-build-the-findprivatekey-project) sekcji, aby uzyskać instrukcje dotyczące sposobu tworzenia narzędzia FindPrivateKey.
+> FindPrivateKey znajduje się przykładowy, który ma zostać skompilowany przed ich użyciem. Zobacz [do skompilowania projektu FindPrivateKey](#to-build-the-findprivatekey-project) sekcję, aby uzyskać instrukcje dotyczące sposobu narzędzie FindPrivateKey kompilacji.
 
-Certyfikaty X.509 są instalowane przez administratora lub dowolnego użytkownika na maszynie. Jednak certyfikat mogą być używane przez usługę uruchomiony przy użyciu innego konta. Na przykład konto Usługa sieciowa.
+Certyfikaty X.509 są instalowane przez administratora lub każdego użytkownika na maszynie. Jednak certyfikat może zostać oceniony przez Usługa uruchomiona przy użyciu innego konta. Na przykład konto Usługa sieciowa.
 
-To konto może nie mieć dostępu do pliku klucza prywatnego, ponieważ certyfikat nie został zainstalowany przez nią pierwotnie. FindPrivateKey udostępnia lokalizację pliku klucza prywatnego danego certyfikatu X.509. Można dodać uprawnienia lub usunąć uprawnienia do tego pliku, znając lokalizację certyfikatów X.509 określonego pliku klucza prywatnego.
+To konto może nie mieć dostępu do pliku klucza prywatnego, ponieważ certyfikat nie został zainstalowany przez niego pierwotnie. Narzędzie FindPrivateKey zapewnia lokalizacji pliku klucza prywatnego danego certyfikatu X.509. Można dodać uprawnienia lub usunąć uprawnienia do tego pliku, po znać lokalizację pliku klucza prywatnego określonego certyfikaty X.509.
 
-Przykłady, które korzystają z certyfikatów do zabezpieczenia za pomocą narzędzia FindPrivateKey w *pliku Setup.bat* pliku. Po znalezieniu pliku klucza prywatnego można użyć innych narzędzi takich jak *Cacls.exe* można ustawić odpowiednie uprawnienia dostępu do pliku.
+Przykłady, które korzystają z certyfikatów do zabezpieczenia przy użyciu narzędzia FindPrivateKey w *Setup.bat* pliku. Po znalezieniu pliku klucza prywatnego można użyć innych narzędzi, takich jak *Cacls.exe* można ustawić odpowiednie uprawnienia dostępu do pliku.
 
-Podczas uruchamiania usługi Windows Communication Foundation (WCF) przy użyciu konta użytkownika, takie jak hostowanie Samoobsługowe pliku wykonywalnego, upewnij się, że konto użytkownika ma dostęp tylko do odczytu do pliku. Podczas uruchamiania usługi WCF w obszarze usługi Internet Information Services (IIS) domyślne konta, które usługa będzie uruchamiana to usługa sieciowa w usługach IIS 7 i wcześniejsze wersje lub tożsamość puli aplikacji usług IIS 7.5 i nowsze wersje. Aby uzyskać więcej informacji, zobacz [tożsamości puli aplikacji](/iis/manage/configuring-security/application-pool-identities).
+Podczas uruchamiania usługi Windows Communication Foundation (WCF) w ramach konta użytkownika, takie jak własnego pliku wykonywalnego, upewnij się, że konto użytkownika ma dostęp tylko do odczytu do pliku. Podczas uruchamiania usługi WCF w ramach usługi Internet Information Services (IIS) domyślnych kont, które usługa będzie uruchamiana to usługa sieciowa w usługach IIS 7 i starszych wersji lub tożsamość puli aplikacji usług IIS 7.5 i nowsze wersje. Aby uzyskać więcej informacji, zobacz [tożsamości puli aplikacji](/iis/manage/configuring-security/application-pool-identities).
 
 ## <a name="examples"></a>Przykłady
 
-Podczas uzyskiwania dostępu do certyfikatu, dla którego proces nie ma uprawnień odczytu, zobaczysz komunikat o wyjątku podobny do poniższego przykładu:
+Podczas uzyskiwania dostępu do certyfikatu, dla którego ten proces nie ma uprawnień odczytu, zostanie wyświetlony komunikat wyjątku, które jest podobny do poniższego przykładu:
 
 ```
 System.ArgumentException was unhandled
@@ -36,7 +36,7 @@ Message="The certificate 'CN=localhost' must have a private key that is capable 
 Source="System.ServiceModel"
 ```
 
-W takim przypadku służy narzędzie FindPrivateKey można znaleźć pliku klucza prywatnego, a następnie ustaw dostępu prawa dla procesu, czy usługa jest uruchomiona w obszarze. Na przykład można to zrobić za pomocą narzędzia Cacls.exe jak pokazano w poniższym przykładzie:
+W takiej sytuacji narzędzie FindPrivateKey można znaleźć pliku klucza prywatnego, a następnie ustaw dostęp bezpośrednio do procesu, który jest uruchamiany przez usługę. Na przykład można to zrobić za pomocą narzędzia Cacls.exe jak pokazano w poniższym przykładzie:
 
 ```
 cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R
@@ -44,25 +44,25 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 #### <a name="to-build-the-findprivatekey-project"></a>Aby skompilować projekt FindPrivateKey
 
-Aby pobrać projekt, odwiedź stronę [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
+Aby pobrać projektu, odwiedź stronę [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Otwórz [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] i przejdź do *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* folder na lokalizację katalogu, w którym zainstalowano próbki.
+1. Otwórz [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] i przejdź do *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* folderze lokalizację katalogu, w którym zainstalowano próbki.
 
-2. Kliknij dwukrotnie ikonę pliku SLN, można otworzyć pliku w programie Visual Studio.
+2. Kliknij dwukrotnie ikonę pliku .sln, aby otworzyć go w programie Visual Studio.
 
-3. W **kompilacji** menu, wybierz opcję **Kompiluj ponownie rozwiązanie**.
+3. W **kompilacji** menu, wybierz opcję **Kompiluj rozwiązanie**.
 
-4. Tworzenie rozwiązania generuje plik: FindPrivateKey.exe.
+4. Skompilować rozwiązanie generuje plik: FindPrivateKey.exe.
 
 ## <a name="conventionscommand-line-entries"></a>Konwencje — wpisy wiersza polecenia
 
  "[*opcji*]" reprezentuje opcjonalny zestaw parametrów.
 
- "{*opcji*}" reprezentuje obowiązkowe zestaw parametrów.
+ "{*opcji*}" reprezentuje zestaw parametrów obowiązkowych.
 
- "*opcja 1* &#124; *option2*" reprezentuje wybór między Ustawia opcje.
+ "*opcja1* &#124; *opcja2*" reprezentuje wybór między zestawami opcji.
 
- "\<*wartość*>" reprezentuje należy podać wartość parametru.
+ "\<*wartość*>" reprezentuje wartość parametru, który ma zostać nawiązane.
 
 ## <a name="usage"></a>Użycie
 
@@ -80,23 +80,23 @@ Gdzie:
        -a            output absolute file name
 ```
 
-Jeśli nie zostały podane parametry w wierszu polecenia, wyświetlany jest ten tekst pomocy.
+Jeśli nie określono żadnych parametrów w wierszu polecenia, wyświetlany jest ten tekst pomocy.
 
 ## <a name="examples"></a>Przykłady
 
-W tym przykładzie znajdzie pliku certyfikatu z nazwą podmiotu "CN = host_lokalny", w magazynie osobistym bieżącego użytkownika.
+W tym przykładzie wyszukuje nazwy pliku certyfikatu, z nazwą podmiotu "CN = localhost", w magazynie osobistym bieżącego użytkownika.
 
 ```
 FindPrivateKey My CurrentUser -n "CN=localhost"
 ```
 
-W tym przykładzie znajdzie pliku certyfikatu z nazwą podmiotu "CN = host_lokalny", w osobistych przechowywać bieżącego użytkownika i dane wyjściowe pełną ścieżką.
+W tym przykładzie wyszukuje nazwy pliku certyfikatu, z nazwą podmiotu "CN = localhost", należy w osobistego przechowywać bieżącego użytkownika i danych wyjściowych pełną ścieżką.
 
 ```
 FindPrivateKey My CurrentUser -n "CN=localhost" -a
 ```
 
-W tym przykładzie znajdzie nazwę certyfikatu z odciskiem palca "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1 d 6b 52", w magazynie osobistym komputera lokalnego.
+W tym przykładzie wyszukuje nazwę pliku certyfikatu z odciskiem palca "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42, 1 d 6b 52", w magazynie osobistym komputera lokalnego.
 
 ```
 FindPrivateKey My LocalMachine -t "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52"

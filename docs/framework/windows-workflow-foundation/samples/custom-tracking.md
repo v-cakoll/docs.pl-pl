@@ -3,11 +3,11 @@ title: Niestandardowe śledzenie
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005366"
 ---
 # <a name="custom-tracking"></a>Niestandardowe śledzenie
 W tym przykładzie pokazano, jak tworzenie niestandardowego uczestnika śledzenia i zapisać zawartość danych śledzenia do konsoli. Ponadto w przykładzie pokazano jak emitowanie <xref:System.Activities.Tracking.CustomTrackingRecord> danych zdefiniowane przez obiekty użytkownika jest wypełniony. Filtry uczestnika śledzenia opartych na konsoli <xref:System.Activities.Tracking.TrackingRecord> obiektów emitowanych przez przepływ pracy korzystający z profilu śledzenia obiekt utworzony w kodzie.
@@ -110,9 +110,9 @@ invoker.Extensions.Add(customTrackingParticipant);
 ### <a name="emitting-custom-tracking-records"></a>Emitowanie niestandardowe rekordy śledzenia
  Niniejszy przykład pokazuje także możliwość emisji <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów z działanie niestandardowego przepływu pracy:
 
--   <xref:System.Activities.Tracking.CustomTrackingRecord> Obiekty są tworzone i wypełniane przy użyciu danych zdefiniowane przez użytkownika, którego pożądany jest emitowane z rekordem.
+- <xref:System.Activities.Tracking.CustomTrackingRecord> Obiekty są tworzone i wypełniane przy użyciu danych zdefiniowane przez użytkownika, którego pożądany jest emitowane z rekordem.
 
--   <xref:System.Activities.Tracking.CustomTrackingRecord> Są emitowane przez wywołanie metody śledzenia <xref:System.Activities.ActivityContext>.
+- <xref:System.Activities.Tracking.CustomTrackingRecord> Są emitowane przez wywołanie metody śledzenia <xref:System.Activities.ActivityContext>.
 
  W poniższym przykładzie pokazano sposób emitować <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów w ramach działań niestandardowych.
 

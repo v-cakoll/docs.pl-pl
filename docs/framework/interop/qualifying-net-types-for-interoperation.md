@@ -12,36 +12,36 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032660"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Kwalifikowanie typów .NET do międzyoperacyjności
 Jeśli zamierzasz ujawnić typy w zestawie, do aplikacji modelu COM, należy wziąć pod uwagę wymagania Usługa międzyoperacyjna modelu COM w czasie projektowania. Typy zarządzane (klasy, interfejsu, struktury i wyliczenia) bezproblemowo integrują się z typów modelu COM podczas przestrzegać następujących wytycznych:  
   
--   Klasy należy jawnie implementować interfejsów.  
+- Klasy należy jawnie implementować interfejsów.  
   
      Chociaż usługa międzyoperacyjna modelu COM udostępnia mechanizm do automatycznego generowania interfejs zawierający wszystkie elementy członkowskie klasy i składowych klasy bazowej, jest znacznie lepiej podać jawne interfejsy. Automatycznie generowanego interfejsu nosi nazwę interfejsu klasy. Aby uzyskać wskazówki, zobacz [wprowadzenie interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface).  
   
      Visual Basic, można użyć C#i C++, funkcje definicji interfejsu w kodzie, nie trzeba używać języka definicji interfejsu (IDL) lub jej odpowiednik. Szczegóły składni na ten temat można znaleźć w dokumentacji języka.  
   
--   Typy zarządzane muszą być publiczne.  
+- Typy zarządzane muszą być publiczne.  
   
      Tylko typy publiczne w zestawie są rejestrowane i wyeksportowane do biblioteki typów. W rezultacie tylko typy publiczne są widoczne dla modelu COM.  
   
      Zarządzane typy udostępniają funkcje do innego kodu zarządzanego, który nie może być widoczne dla modelu COM. Na przykład konstruktory sparametryzowane, metody statyczne i stałe pola nie są widoczne dla klientów modelu COM. Co więcej jak środowisko uruchomieniowe kieruje danych do i z typu, dane mogą zostać skopiowane lub przekształcone.  
   
--   Metody, właściwości, pola i zdarzenia muszą być publiczne.  
+- Metody, właściwości, pola i zdarzenia muszą być publiczne.  
   
      Elementów członkowskich typów publicznych również muszą być publiczne, jeśli mają być widoczne dla modelu COM. Widoczność zestaw, typ publiczny lub publiczne elementy członkowskie typu publicznego można ograniczyć, stosując <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Domyślnie wszystkie typy publiczne i elementy członkowskie są widoczne.  
   
--   Typy muszą mieć publicznego konstruktora domyślnego aktywacji z modelu COM.  
+- Typy muszą mieć publicznego konstruktora domyślnego aktywacji z modelu COM.  
   
      Typy zarządzane, publiczne są widoczne dla modelu COM. Jednak bez publicznego konstruktora domyślnego (Konstruktor bez argumentów), klienci COM nie można utworzyć typu. Klienci COM można nadal używać typu, jeśli jest aktywna w inny sposób.  
   
--   Typy nie może być abstrakcyjna.  
+- Typy nie może być abstrakcyjna.  
   
      Klienci COM ani klientów programu .NET nie można utworzyć typów abstrakcyjnych.  
   

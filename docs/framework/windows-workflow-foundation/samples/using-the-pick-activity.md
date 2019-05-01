@@ -3,11 +3,11 @@ title: Używanie działania Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004734"
 ---
 # <a name="using-the-pick-activity"></a>Używanie działania Pick
 W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Statements.Pick> działania.
@@ -24,17 +24,17 @@ W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Stateme
 
  Projektanta Workflow Designer wersję przykładu przedstawia sposób tworzenia przepływu pracy w projektancie. Uwzględnione są następujące pliki:
 
--   Program.cs : Obejmuje `Main` funkcja, która wykonuje przykładowy przepływ pracy.
+- Program.cs : Obejmuje `Main` funkcja, która wykonuje przykładowy przepływ pracy.
 
--   ReadString.cs: Niestandardowe działanie, które odczytuje dane wejściowe z konsoli.
+- ReadString.cs: Niestandardowe działanie, które odczytuje dane wejściowe z konsoli.
 
--   Sequence1.XAML: Przepływ pracy utworzony za pomocą projektanta, który używa wybierz.
+- Sequence1.XAML: Przepływ pracy utworzony za pomocą projektanta, który używa wybierz.
 
  Kodowane przepływu pracy kodowane wersję przykładu przedstawia sposób tworzenia przepływu pracy w projektancie. Uwzględnione są następujące pliki:
 
--   Program.cs : Obejmuje `Main` funkcja, która wykonuje przykładowy przepływ pracy.
+- Program.cs : Obejmuje `Main` funkcja, która wykonuje przykładowy przepływ pracy.
 
--   ReadString.cs: Niestandardowe działanie, które odczytuje dane wejściowe z konsoli.
+- ReadString.cs: Niestandardowe działanie, które odczytuje dane wejściowe z konsoli.
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 

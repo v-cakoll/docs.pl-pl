@@ -3,11 +3,11 @@ title: Nagłówki adresów
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
 ms.openlocfilehash: 4ccb309178251b32068d6cdbb81874322f991bb9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002953"
 ---
 # <a name="address-headers"></a>Nagłówki adresów
 

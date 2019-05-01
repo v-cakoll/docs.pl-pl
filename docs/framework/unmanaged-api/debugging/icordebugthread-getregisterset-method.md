@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 909bcad035516c494d1f867b71bb8f52939eba13
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993996"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>ICorDebugThread::GetRegisterSet — Metoda
 Pobiera wskaźnik interfejsu do zestawu rejestru, który jest skojarzony z active część tego obiektu ICorDebugThread.  

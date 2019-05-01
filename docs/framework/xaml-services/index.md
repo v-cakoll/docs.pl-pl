@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
 ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007425"
 ---
 # <a name="xaml-services"></a>Usługi XAML
 W tym temacie opisano funkcje, nazywane .NET Framework XAML usługi zestawu technologii. Większość usług i interfejsów API, opisane znajdują się w zestawie System.Xaml, która jest zestawem wprowadzone w programie [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zbiór zestawów programu .NET core. Usługi obejmują czytników i składników zapisywania klasy schematu i obsługa schematu, fabryk, przypisywanie klas, języka XAML, wsparcie wewnętrznej i inne funkcje języka XAML.  
@@ -19,19 +19,19 @@ W tym temacie opisano funkcje, nazywane .NET Framework XAML usługi zestawu tech
 ## <a name="about-this-documentation"></a>Informacje o tej dokumentacji  
  Dokumentacji koncepcyjnego dla usług programu .NET Framework XAML przyjęto założenie, iż poprzednie środowisko przy użyciu języka XAML i jak ją mogą być stosowane do określonych framework, na przykład [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] lub programu Windows Workflow Foundation lub funkcji określonej technologii obszar, na przykład dostosowania kompilacji funkcje w <xref:Microsoft.Build.Framework.XamlTypes>. Ta dokumentacja nie podjęto próby opisano podstawy XAML jako język znaczników, terminologia składni XAML lub inne materiały wprowadzających. Zamiast tego tej dokumentacji koncentruje się na specjalnie przy użyciu usług .NET Framework XAML, które są włączone w bibliotece System.Xaml zestawu. Większość z tych interfejsów API jest dla scenariuszy integracji języka XAML oraz rozszerzalność. Może zawierać żadnego z następujących czynności:  
   
--   Rozszerzanie możliwości podstawowego czytelnicy XAML lub autorzy XAML (bezpośrednio przetwarzania strumienia węzłów XAML; wyprowadzanie własne czytnika XAML lub zapis XAML).  
+- Rozszerzanie możliwości podstawowego czytelnicy XAML lub autorzy XAML (bezpośrednio przetwarzania strumienia węzłów XAML; wyprowadzanie własne czytnika XAML lub zapis XAML).  
   
--   Definiowanie typów niestandardowych można używać XAML, które nie mają zależności określonej struktury i przypisywanie typów w celu przekazania ich XAML typ właściwości do usług programu .NET Framework XAML.  
+- Definiowanie typów niestandardowych można używać XAML, które nie mają zależności określonej struktury i przypisywanie typów w celu przekazania ich XAML typ właściwości do usług programu .NET Framework XAML.  
   
--   Hosting czytniki XAML lub moduły zapisujące XAML jako część aplikacji, takich jak projektant wizualny lub interaktywny Edytor źródeł znaczników XAML.  
+- Hosting czytniki XAML lub moduły zapisujące XAML jako część aplikacji, takich jak projektant wizualny lub interaktywny Edytor źródeł znaczników XAML.  
   
--   Zapisywanie konwertery wartości XAML (rozszerzenia znaczników; typy konwerterów dla niestandardowych typów).  
+- Zapisywanie konwertery wartości XAML (rozszerzenia znaczników; typy konwerterów dla niestandardowych typów).  
   
--   Definiowanie niestandardowego kontekst schematu XAML (przy użyciu alternatywnych metod ładowania zestawu źródeł typ zapasowy; przy użyciu technik wyszukiwania znane typy, a nie zawsze odzwierciedlający zestawy; zostanie użyta załadowany zestaw pojęcia, które nie korzystają z środowiska CLR `AppDomain` i swój model zabezpieczeń skojarzone).  
+- Definiowanie niestandardowego kontekst schematu XAML (przy użyciu alternatywnych metod ładowania zestawu źródeł typ zapasowy; przy użyciu technik wyszukiwania znane typy, a nie zawsze odzwierciedlający zestawy; zostanie użyta załadowany zestaw pojęcia, które nie korzystają z środowiska CLR `AppDomain` i swój model zabezpieczeń skojarzone).  
   
--   Rozszerzanie podstawowego systemu typu XAML.  
+- Rozszerzanie podstawowego systemu typu XAML.  
   
--   Za pomocą `Lookup` lub `Invoker` technik do wywierania wpływu na XAML typ systemu i jak są obliczane podłoża typu.  
+- Za pomocą `Lookup` lub `Invoker` technik do wywierania wpływu na XAML typ systemu i jak są obliczane podłoża typu.  
   
  Jeśli chcesz uzyskać wprowadzające informacje na XAML jako język, możesz spróbować [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md). Ten temat omawia XAML dla odbiorców, co nowego zarówno do [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] a także przy użyciu znaczników XAML i funkcji języka XAML. Innym dokumencie przydatne jest wprowadzające informacje w [specyfikacji języka XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -45,50 +45,50 @@ W tym temacie opisano funkcje, nazywane .NET Framework XAML usługi zestawu tech
 ## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>Strumienie węzłów XAML, XAML czytniki i moduły zapisujące XAML  
  Aby zrozumieć, ról, usług programu .NET Framework XAML odtwarzany w relacji między języka XAML i określonych technologii, które używają XAML jako język, jest pomocne w zrozumieniu koncepcji strumienia węzłów XAML i jak związany z tą koncepcją kształty interfejsu API i terminologia. Strumień węzłów XAML jest koncepcyjny pośredni między reprezentacja języka XAML i wykres obiektu, który reprezentuje XAML, lub definiuje.  
   
--   Czytnik XAML jest jednostką, która przetwarza XAML w pewnej postaci i generuje strumień węzłów XAML. W interfejsie API czytnik XAML jest reprezentowany przez klasę bazową <xref:System.Xaml.XamlReader>.  
+- Czytnik XAML jest jednostką, która przetwarza XAML w pewnej postaci i generuje strumień węzłów XAML. W interfejsie API czytnik XAML jest reprezentowany przez klasę bazową <xref:System.Xaml.XamlReader>.  
   
--   Edytor XAML jest jednostką, która przetwarza strumień węzłów XAML i generuje coś innego. W interfejsie API Edytor XAML jest reprezentowane przez klasę bazową <xref:System.Xaml.XamlWriter>.  
+- Edytor XAML jest jednostką, która przetwarza strumień węzłów XAML i generuje coś innego. W interfejsie API Edytor XAML jest reprezentowane przez klasę bazową <xref:System.Xaml.XamlWriter>.  
   
  Dwie najbardziej typowych scenariuszy obejmujących XAML są podczas ładowania XAML do tworzenia wystąpienia grafu obiektów i zapisywania wykresu obiektu z aplikacji lub narzędzia i produkujących reprezentację XAML (zwykle w formie znaczników zapisany jako plik tekstowy). Ładowanie XAML i tworzenie wykresu obiektu jest często określonych w tej dokumentacji, jako ścieżkę obciążenia. Zapisywanie lub istniejący wykres serializacji obiektu do XAML jest często określana w tej dokumentacji jako Zapisz ścieżkę.  
   
  Najczęściej spotykanym typem ścieżki obciążenia można przedstawić w następujący sposób:  
   
--   Rozpoczynać reprezentację XAML w formacie XML kodowany w formacie UTF i zapisany jako plik tekstowy.  
+- Rozpoczynać reprezentację XAML w formacie XML kodowany w formacie UTF i zapisany jako plik tekstowy.  
   
--   Ładowanie tego XAML do <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> jest <xref:System.Xaml.XamlReader> podklasę.  
+- Ładowanie tego XAML do <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> jest <xref:System.Xaml.XamlReader> podklasę.  
   
--   Wynik jest strumień węzłów XAML. Dostęp poszczególnych węzłów użycia strumienia węzłów XAML <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> interfejsu API. W tym miejscu najbardziej typowych operacji jest przechodzić przez strumień węzłów XAML, przetwarzanie w każdym węźle, używając "bieżącego rekordu" metaphor.  
+- Wynik jest strumień węzłów XAML. Dostęp poszczególnych węzłów użycia strumienia węzłów XAML <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> interfejsu API. W tym miejscu najbardziej typowych operacji jest przechodzić przez strumień węzłów XAML, przetwarzanie w każdym węźle, używając "bieżącego rekordu" metaphor.  
   
--   Przekaż wynikowy węzłów ze strumienia węzłów XAML w celu <xref:System.Xaml.XamlObjectWriter> interfejsu API. <xref:System.Xaml.XamlObjectWriter> jest <xref:System.Xaml.XamlWriter> podklasę.  
+- Przekaż wynikowy węzłów ze strumienia węzłów XAML w celu <xref:System.Xaml.XamlObjectWriter> interfejsu API. <xref:System.Xaml.XamlObjectWriter> jest <xref:System.Xaml.XamlWriter> podklasę.  
   
--   <xref:System.Xaml.XamlObjectWriter> Zapisuje wykres obiektu jednego obiektu w czasie, zgodnie z postęp strumień węzłów XAML źródła. Można to zrobić z pomocą kontekst schematu XAML i implementację, które mają dostęp do zestawów i typów zapasowy typ systemu i framework.  
+- <xref:System.Xaml.XamlObjectWriter> Zapisuje wykres obiektu jednego obiektu w czasie, zgodnie z postęp strumień węzłów XAML źródła. Można to zrobić z pomocą kontekst schematu XAML i implementację, które mają dostęp do zestawów i typów zapasowy typ systemu i framework.  
   
--   Wywołaj <xref:System.Xaml.XamlObjectWriter.Result%2A> na końcu strumienia węzłów XAML do uzyskiwania obiektu głównego wykresu obiektu.  
+- Wywołaj <xref:System.Xaml.XamlObjectWriter.Result%2A> na końcu strumienia węzłów XAML do uzyskiwania obiektu głównego wykresu obiektu.  
   
  Najczęściej spotykanym typem ścieżka zapisu, można przedstawić w następujący sposób:  
   
--   Zacznij od wykresu obiektu czasu całej aplikacji, uruchamianie, zawartości interfejsu użytkownika i stan czasu wykonywania lub mniejszych segment cała aplikacja reprezentację obiektu w czasie wykonywania.  
+- Zacznij od wykresu obiektu czasu całej aplikacji, uruchamianie, zawartości interfejsu użytkownika i stan czasu wykonywania lub mniejszych segment cała aplikacja reprezentację obiektu w czasie wykonywania.  
   
--   Z obiektu start logiczne, takie jak katalog główny aplikacji lub katalog główny dokumentów, ładowanie obiektów do <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> jest <xref:System.Xaml.XamlReader> podklasę.  
+- Z obiektu start logiczne, takie jak katalog główny aplikacji lub katalog główny dokumentów, ładowanie obiektów do <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> jest <xref:System.Xaml.XamlReader> podklasę.  
   
--   Wynik jest strumień węzłów XAML. Dostęp poszczególnych węzłów użycia strumienia węzłów XAML <xref:System.Xaml.XamlObjectReader> i <xref:System.Xaml.XamlReader> interfejsu API. W tym miejscu najbardziej typowych operacji jest przechodzić przez strumień węzłów XAML, przetwarzanie w każdym węźle, używając "bieżącego rekordu" metaphor.  
+- Wynik jest strumień węzłów XAML. Dostęp poszczególnych węzłów użycia strumienia węzłów XAML <xref:System.Xaml.XamlObjectReader> i <xref:System.Xaml.XamlReader> interfejsu API. W tym miejscu najbardziej typowych operacji jest przechodzić przez strumień węzłów XAML, przetwarzanie w każdym węźle, używając "bieżącego rekordu" metaphor.  
   
--   Przekaż wynikowy węzłów ze strumienia węzłów XAML w celu <xref:System.Xaml.XamlXmlWriter> interfejsu API. <xref:System.Xaml.XamlXmlWriter> jest <xref:System.Xaml.XamlWriter> podklasę.  
+- Przekaż wynikowy węzłów ze strumienia węzłów XAML w celu <xref:System.Xaml.XamlXmlWriter> interfejsu API. <xref:System.Xaml.XamlXmlWriter> jest <xref:System.Xaml.XamlWriter> podklasę.  
   
--   <xref:System.Xaml.XamlXmlWriter> Zapisuje XAML w UTF XML, kodowania. To można zapisać jako plik tekstowy, jako strumień lub w innych form.  
+- <xref:System.Xaml.XamlXmlWriter> Zapisuje XAML w UTF XML, kodowania. To można zapisać jako plik tekstowy, jako strumień lub w innych form.  
   
--   Wywołaj <xref:System.Xaml.XamlXmlWriter.Flush%2A> uzyskanie do pliku wyjściowego.  
+- Wywołaj <xref:System.Xaml.XamlXmlWriter.Flush%2A> uzyskanie do pliku wyjściowego.  
   
  Aby uzyskać więcej informacji na temat koncepcji strumienia węzłów XAML, zobacz [opis XAML węzła Stream strukturami i koncepcjami](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ### <a name="the-xamlservices-class"></a>Klasa XamlServices  
  Nie zawsze jest konieczne poradzić sobie z strumień węzłów XAML. Jeśli chcesz ścieżka podstawowa obciążenia lub podstawowa ścieżka zapisu, możesz użyć interfejsów API w <xref:System.Xaml.XamlServices> klasy.  
   
--   Różne sygnatur <xref:System.Xaml.XamlServices.Load%2A> zaimplementować ścieżki obciążenia. Możesz załadować pliku lub strumienia lub załadować <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> lub <xref:System.Xaml.XamlReader> , zawijanie dane wejściowe XAML, ładując za pomocą interfejsów API ten czytnik.  
+- Różne sygnatur <xref:System.Xaml.XamlServices.Load%2A> zaimplementować ścieżki obciążenia. Możesz załadować pliku lub strumienia lub załadować <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> lub <xref:System.Xaml.XamlReader> , zawijanie dane wejściowe XAML, ładując za pomocą interfejsów API ten czytnik.  
   
--   Różne sygnatur <xref:System.Xaml.XamlServices.Save%2A> zapisywania wykresu obiektu i generować dane wyjściowe w postaci strumienia pliku lub <xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter> wystąpienia.  
+- Różne sygnatur <xref:System.Xaml.XamlServices.Save%2A> zapisywania wykresu obiektu i generować dane wyjściowe w postaci strumienia pliku lub <xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter> wystąpienia.  
   
--   <xref:System.Xaml.XamlServices.Transform%2A> Konwertuje XAML, łącząc ścieżki obciążenia i Zapisz ścieżkę jako pojedyncza operacja. Kontekst innego schematu lub tworzenie innej kopii typu systemu może służyć do <xref:System.Xaml.XamlReader> i <xref:System.Xaml.XamlWriter>, czyli, co ma wpływ na sposób wynikowy XAML jest przekształcane.  
+- <xref:System.Xaml.XamlServices.Transform%2A> Konwertuje XAML, łącząc ścieżki obciążenia i Zapisz ścieżkę jako pojedyncza operacja. Kontekst innego schematu lub tworzenie innej kopii typu systemu może służyć do <xref:System.Xaml.XamlReader> i <xref:System.Xaml.XamlWriter>, czyli, co ma wpływ na sposób wynikowy XAML jest przekształcane.  
   
  Aby uzyskać więcej informacji o sposobie używania <xref:System.Xaml.XamlServices>, zobacz [klasa XAMLServices i podstawowy odczyt XAML lub zapisywanie](xamlservices-class-and-basic-xaml-reading-or-writing.md).  
   

@@ -38,11 +38,11 @@ helpviewer_keywords:
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
 ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971746"
 ---
 # <a name="data-type-summary-visual-basic"></a>Typ danych — Podsumowanie (Visual Basic)
 W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługi popularnych typów środowiska wykonawczego dla języka, ich nominalnych alokacji i ich zakresami wartości.  
@@ -77,16 +77,16 @@ W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługi popular
 ## <a name="memory-consumption"></a>Użycie pamięci  
  Kiedy Deklarujesz na typ danych podstawowych, nie jest bezpiecznie przyjąć założenie, że użycie pamięci jest taka sama jak jego nominalnych alokacji. Jest to spowodowane następujące kwestie:  
   
--   **Przypisanie magazynu.** Środowisko uruchomieniowe języka wspólnego można przypisać pamięci masowej, na podstawie bieżącej właściwości platformy, na którym jest wykonywany aplikacji. Jeśli pamięć jest prawie pełna, jego może pakietu zadeklarowanych elementów tak blisko siebie jak to możliwe. W innych przypadkach go może być dostosowanie ich adresów pamięci do naturalnych ograniczeń sprzętowych w celu zoptymalizowania wydajności.  
+- **Przypisanie magazynu.** Środowisko uruchomieniowe języka wspólnego można przypisać pamięci masowej, na podstawie bieżącej właściwości platformy, na którym jest wykonywany aplikacji. Jeśli pamięć jest prawie pełna, jego może pakietu zadeklarowanych elementów tak blisko siebie jak to możliwe. W innych przypadkach go może być dostosowanie ich adresów pamięci do naturalnych ograniczeń sprzętowych w celu zoptymalizowania wydajności.  
   
--   **Szerokość platformy.** Przypisanie magazynu na platformie 64-bitowej różni się od przypisania na platformie 32-bitowej.  
+- **Szerokość platformy.** Przypisanie magazynu na platformie 64-bitowej różni się od przypisania na platformie 32-bitowej.  
   
 ### <a name="composite-data-types"></a>Złożone typy danych  
  To samo odnosi się do każdego członka złożonego typu danych, takie jak struktury lub tablicy. Nie można polegać na po prostu zsumowanie nominalnych alokacji elementów członkowskich typu. Ponadto istnieją inne zagadnienia, takie jak następujące:  
   
--   **Koszty.** Niektóre typy złożone mają wymagania dodatkowej pamięci. Na przykład tablica używa dodatkową pamięć, macierz, sama, a także dla każdego wymiaru. Na platformie 32-bitowy to obciążenie jest obecnie 12 bajtów plus 8 bajtów dla każdego wymiaru. Na platformie 64-bitowej podwaja się to wymaganie.  
+- **Koszty.** Niektóre typy złożone mają wymagania dodatkowej pamięci. Na przykład tablica używa dodatkową pamięć, macierz, sama, a także dla każdego wymiaru. Na platformie 32-bitowy to obciążenie jest obecnie 12 bajtów plus 8 bajtów dla każdego wymiaru. Na platformie 64-bitowej podwaja się to wymaganie.  
   
--   **Układ magazynu.** Nie można bezpiecznie przyjąć, że kolejność przechowywania w pamięci jest taka sama jak kolejność zgłoszenia. Jeszcze nie może wprowadzać założeń dotyczących bajtowe wyrównanie, takie jak 2-bajtowych i 4-bajtowych granic. Jeśli definiujesz klasy lub struktury, a należy kontrolować układ magazynu z jej członków, można zastosować <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu klasy lub struktury.  
+- **Układ magazynu.** Nie można bezpiecznie przyjąć, że kolejność przechowywania w pamięci jest taka sama jak kolejność zgłoszenia. Jeszcze nie może wprowadzać założeń dotyczących bajtowe wyrównanie, takie jak 2-bajtowych i 4-bajtowych granic. Jeśli definiujesz klasy lub struktury, a należy kontrolować układ magazynu z jej członków, można zastosować <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu klasy lub struktury.  
   
 ### <a name="object-overhead"></a>Obciążenie obiektu  
  `Object` Odwołujące się do żadnych danych podstawowych lub złożonego typu używa 4 bajtów oprócz danych znajdujących się na typ danych.  

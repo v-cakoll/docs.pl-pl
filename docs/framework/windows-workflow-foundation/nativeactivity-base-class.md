@@ -3,11 +3,11 @@ title: NativeActivity, klasa bazowa
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009984"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity, klasa bazowa
 
@@ -16,21 +16,21 @@ ms.locfileid: "59296592"
 ## <a name="using-nativeactivitycontext"></a>Za pomocą NativeActivityContext
  Funkcje środowiska wykonawczego przepływów pracy są dostępne z poziomu <xref:System.Activities.NativeActivity.Execute%2A> metody za pomocą elementów członkowskich `context` parametr typu <xref:System.Activities.NativeActivityContext>. Funkcje dostępne za pośrednictwem <xref:System.Activities.NativeActivityContext> obejmują następujące elementy:
 
--   Pobieranie i Ustawianie zmiennych i argumentów.
+- Pobieranie i Ustawianie zmiennych i argumentów.
 
--   Planowanie działań podrzędnych za pomocą <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+- Planowanie działań podrzędnych za pomocą <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
 
--   Trwa przerywanie wykonywania czynności za pomocą <xref:System.Activities.NativeActivityContext.Abort%2A>.
+- Trwa przerywanie wykonywania czynności za pomocą <xref:System.Activities.NativeActivityContext.Abort%2A>.
 
--   Anulowania wykonywania podrzędnych za pomocą <xref:System.Activities.NativeActivityContext.CancelChild%2A> i <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
+- Anulowania wykonywania podrzędnych za pomocą <xref:System.Activities.NativeActivityContext.CancelChild%2A> i <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
 
--   Dostęp do zakładki działania przy użyciu metody, takie jak <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, i <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
+- Dostęp do zakładki działania przy użyciu metody, takie jak <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, i <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
 
--   Niestandardowe śledzenia funkcji przy użyciu <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Niestandardowe śledzenia funkcji przy użyciu <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Dostęp do właściwości wykonania tego działania i wartości właściwości, za pomocą <xref:System.Activities.CodeActivityContext.GetProperty%2A> i <xref:System.Activities.NativeActivityContext.GetValue%2A>.
+- Dostęp do właściwości wykonania tego działania i wartości właściwości, za pomocą <xref:System.Activities.CodeActivityContext.GetProperty%2A> i <xref:System.Activities.NativeActivityContext.GetValue%2A>.
 
--   Planowanie akcji działania i funkcji przy użyciu <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> i <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
+- Planowanie akcji działania i funkcji przy użyciu <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> i <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Aby utworzyć niestandardowe działanie, która dziedziczy z elementu NativeActivity
 

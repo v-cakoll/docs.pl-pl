@@ -7,11 +7,11 @@ helpviewer_keywords:
 - grouping controls [Windows Forms]
 ms.assetid: ee7fb3ed-2fae-4df3-bdeb-15d42e5d7d75
 ms.openlocfilehash: b808a76f4aa9d2c28c838d0c6cfd7bc28d589061
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971265"
 ---
 # <a name="groupbox-control-windows-forms"></a>GroupBox — Formant (Formularze systemu Windows)
 Windows Forms <xref:System.Windows.Forms.GroupBox> formantów służą do zapewniania do zidentyfikowania grupowanie dla innych kontrolek. Zwykle Użyj pola grupy pozwalające na dalszy podział formularza za pomocą funkcji. Na przykład masz formularza zamówienia, określający korespondencyjny opcje, takie jak które przelewy operatora do użycia. Grupowanie wszystkie opcje w polu grupy zapewnia logiczną oznak wizualnych aktywacji. <xref:System.Windows.Forms.GroupBox> Kontroli jest podobny do <xref:System.Windows.Forms.Panel> kontrolować; jednak tylko <xref:System.Windows.Forms.GroupBox> kontrolka Wyświetla podpis i tylko <xref:System.Windows.Forms.Panel> formant może mieć paski przewijania.  

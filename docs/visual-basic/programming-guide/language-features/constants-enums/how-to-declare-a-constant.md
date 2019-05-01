@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975978"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Instrukcje: Deklarowanie stałej (Visual Basic)
 Możesz użyć `Const` instrukcję, aby zadeklarować stałą i określanie jego wartości. Wartość, przez zadeklarowanie stałą, przypisać znaczącą nazwę. Po zadeklarowaniu stałej nie można modyfikować ani przypisywana nowa wartość.  
@@ -41,7 +41,7 @@ Możesz użyć `Const` instrukcję, aby zadeklarować stałą i określanie jego
   
 ### <a name="to-declare-a-constant"></a>Aby zadeklarować — stała  
   
--   Deklaracja, która zawiera specyfikator dostępu do zapisu `Const` — słowo kluczowe i wyrażenie, tak jak w poniższych przykładach:  
+- Deklaracja, która zawiera specyfikator dostępu do zapisu `Const` — słowo kluczowe i wyrażenie, tak jak w poniższych przykładach:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
@@ -51,7 +51,7 @@ Możesz użyć `Const` instrukcję, aby zadeklarować stałą i określanie jego
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Aby zadeklarować stałą, która ma typ danych podane jawnie  
   
--   Zapis deklaracji, która obejmuje `As` — słowo kluczowe i jawne danych typu, jak w następujących przykładach:  
+- Zapis deklaracji, która obejmuje `As` — słowo kluczowe i jawne danych typu, jak w następujących przykładach:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
@@ -59,7 +59,7 @@ Możesz użyć `Const` instrukcję, aby zadeklarować stałą i określanie jego
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>Aby zadeklarować kilka stałych w pojedynczym wierszu  
   
--   Deklaracje oddzielać przecinkiem i spacją, jak w poniższym przykładzie:  
+- Deklaracje oddzielać przecinkiem i spacją, jak w poniższym przykładzie:  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  

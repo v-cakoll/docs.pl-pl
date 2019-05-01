@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004067"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>Instrukcje: Rysowanie tekstu w określonej lokalizacji
 Podczas wykonywania niestandardowego rysowania można rysować tekst w pojedynczej linii poziomej, zaczynając od określonego punktu. W ten sposób można rysować tekst przy użyciu <xref:System.Drawing.Graphics.DrawString%2A> przeciążone metody <xref:System.Drawing.Graphics> klasy, która przyjmuje <xref:System.Drawing.Point> lub <xref:System.Drawing.PointF> parametru. <xref:System.Drawing.Graphics.DrawString%2A> Wymaga również metoda <xref:System.Drawing.Brush> i <xref:System.Drawing.Font>  
@@ -43,7 +43,7 @@ Podczas wykonywania niestandardowego rysowania można rysować tekst w pojedyncz
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Wymagaj poprzednich przykładach:  
   
--   <xref:System.Windows.Forms.PaintEventArgs>  `e`, który jest parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
+- <xref:System.Windows.Forms.PaintEventArgs>  `e`, który jest parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz także
 

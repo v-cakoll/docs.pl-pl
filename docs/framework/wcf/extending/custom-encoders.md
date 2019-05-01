@@ -3,11 +3,11 @@ title: Niestandardowe kodery
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996908"
 ---
 # <a name="custom-encoders"></a>Niestandardowe kodery
 W tym temacie omówiono, jak utworzyć niestandardowe kodery.  
@@ -30,11 +30,11 @@ W tym temacie omówiono, jak utworzyć niestandardowe kodery.
   
  WCF zawiera następujące elementy powiązania pochodną <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> klasy, która może zapewnić tekstowych, plik binarny i kodowanie komunikatu transmisji optymalizacji mechanizm (MTOM):  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Najbardziej międzyoperacyjnych, ale co najmniej wydajne kodera komunikatów XML. Usługi sieci Web lub klient usługi sieci Web zazwyczaj może zrozumieć tekstowych XML. Przesyłanie dużych bloków danych binarnych jako tekst nie jest jednak wydajne.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Najbardziej międzyoperacyjnych, ale co najmniej wydajne kodera komunikatów XML. Usługi sieci Web lub klient usługi sieci Web zazwyczaj może zrozumieć tekstowych XML. Przesyłanie dużych bloków danych binarnych jako tekst nie jest jednak wydajne.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Reprezentuje element powiązania, który określa kodowanie znaków i wiadomości versioning używany dla wiadomości XML na podstawie pliku binarnego. Jest to najbardziej efektywny sposób opcji kodowania, ale co najmniej międzyoperacyjnych, ponieważ jest ona obsługiwana tylko przez punktami końcowymi programu WCF.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Reprezentuje element powiązania, który określa kodowanie znaków i wiadomości versioning używany dla wiadomości XML na podstawie pliku binarnego. Jest to najbardziej efektywny sposób opcji kodowania, ale co najmniej międzyoperacyjnych, ponieważ jest ona obsługiwana tylko przez punktami końcowymi programu WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Reprezentuje element powiązania, który określa kodowanie znaków i wersji komunikatu używany dla wiadomości przy użyciu kodowania komunikatu transmisji optymalizacji mechanizm (MTOM). MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM próbuje zachować równowagę między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Reprezentuje element powiązania, który określa kodowanie znaków i wersji komunikatu używany dla wiadomości przy użyciu kodowania komunikatu transmisji optymalizacji mechanizm (MTOM). MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM próbuje zachować równowagę między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst.  
   
  Element powiązania tworzy plik binarny, MTOM lub tekst <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Fabryka tworzy plik binarny, MTOM lub tekst <xref:System.ServiceModel.Channels.MessageEncoderFactory> wystąpienia. Zazwyczaj jest tylko jedno wystąpienie. Jednak sesji są używane, mogą być udostępniane do każdej sesji kodera innego. Kodera binarnego sprawia, że użycie tego do zapewnienia koordynacji słowników dynamiczne (patrz infrastruktury XML).  
   
@@ -69,19 +69,19 @@ W tym temacie omówiono, jak utworzyć niestandardowe kodery.
 ## <a name="writing-your-own-encoder"></a>Pisanie własnego kodera  
  Aby zaimplementować własny niestandardowy koder komunikatów, należy podać niestandardowych implementacji abstrakcyjnych klas bazowych:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  Konwertowanie z reprezentacji w pamięci, wiadomości na reprezentację w postaci, które mogą być zapisywane do strumienia jest zhermetyzowany wewnątrz <xref:System.ServiceModel.Channels.MessageEncoder> klasy, która służy jako fabrykę dla XML czytników i składników zapisywania XML, które obsługują określone typy kodowania XML.  
   
--   Klucza metody tej klasy, które musisz przesłonić to:  
+- Klucza metody tej klasy, które musisz przesłonić to:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> który bierze <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> obiektu i zapisuje go do <xref:System.IO.Stream> obiektu.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> który bierze <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> obiektu i zapisuje go do <xref:System.IO.Stream> obiektu.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> który bierze <xref:System.IO.Stream> obiektu i rozmiar maksymalny nagłówka i zwraca <xref:System.ServiceModel.Channels.Message> obiektu.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> który bierze <xref:System.IO.Stream> obiektu i rozmiar maksymalny nagłówka i zwraca <xref:System.ServiceModel.Channels.Message> obiektu.  
   
  Jest kod napisany w tych metodach, który obsługuje konwersję między protokołu transportowego standardowe i niestandardowe kodowania.  
   

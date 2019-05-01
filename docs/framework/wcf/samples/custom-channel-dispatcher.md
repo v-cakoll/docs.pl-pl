@@ -3,16 +3,16 @@ title: Niestandardowy dyspozytor kanału
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
 ms.openlocfilehash: 20574b4c849f312cb2cf55709d8d5e2a9b5dbca7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003109"
 ---
 # <a name="custom-channel-dispatcher"></a>Niestandardowy dyspozytor kanału
 W tym przykładzie przedstawiono sposób tworzenia kanału stosu w niestandardowy sposób przez zaimplementowanie <xref:System.ServiceModel.ServiceHostBase> bezpośrednio oraz sposób tworzenia dyspozytora niestandardowym kanale w środowisku hosta sieci Web. Dyspozytor kanału wchodzi w interakcję z <xref:System.ServiceModel.Channels.IChannelListener> do akceptowania kanałów oraz pobiera komunikaty ze stosu kanału. W tym przykładzie przedstawiono również podstawowy przykład, aby pokazać, jak utworzyć stos kanału w środowisku hosta sieci Web przy użyciu <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
-## <a name="custom-servicehostbase"></a>Niestandardowe ServiceHostBase  
+## <a name="custom-servicehostbase"></a>Custom ServiceHostBase  
  W tym przykładzie implementuje typu podstawowego <xref:System.ServiceModel.ServiceHostBase> zamiast <xref:System.ServiceModel.ServiceHost> wykazać, jak zastąpić implementacja stosu Windows Communication Foundation (WCF) z wiadomością niestandardową obsługę warstwy na szczycie stosu kanału. Należy przesłonić metodę wirtualną <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> tworzenie odbiorniki kanałów i Dyspozytor kanału.  
   
  Aby wdrożyć usługi hostowane w sieci Web, pobierz rozszerzenie usług <xref:System.ServiceModel.Activation.VirtualPathExtension> z <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> kolekcji i dodać go do <xref:System.ServiceModel.Channels.BindingParameterCollection> tak, aby warstwy transportowej wie, jak skonfigurować odbiornik kanału, w oparciu o ustawienia środowiska hostingu, który jest Internet Information Services (IIS) / ustawienia Windows Process Activation Service (WAS).  

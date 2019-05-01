@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971915"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Rozszerzenia znaczników dla przeglądu XAML
 Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie jest podstawowy ani określonego typu XAML. Użycie atrybutu rozszerzenia znaczników użytku sekwencję znaków znanych otwierającym nawiasie klamrowym `{` zakres rozszerzenia znaczników i zamykający nawias klamrowy `}` aby wyjść. Korzystając z usług programu .NET Framework XAML, możesz korzystać z niektórych wstępnie zdefiniowanych rozszerzeń znaczników języka XAML z zestawu System.Xaml. Możesz również podklasy z <xref:System.Windows.Markup.MarkupExtension> klasy zdefiniowane w System.Xaml i zdefiniować własne rozszerzenia znaczników. Lub możesz użyć rozszerzenia znaczników zdefiniowana przez strukturę określonego, jeśli są już odwołanie do tej struktury.  
@@ -54,9 +54,9 @@ Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>Definiowanie typ pomocy technicznej dla rozszerzenia znaczników niestandardowe  
  Korzystając z usług programu .NET Framework XAML lub struktur, które są kompilowane na .NET Framework XAML Services, dostępne są dwie opcje dotyczące nazw typu Obsługa rozszerzenia znaczników. Nazwa typu jest istotne jak składników zapisywania obiektu XAML próbują uzyskać dostęp i wywołania typ pomocy technicznej rozszerzenia znaczników, gdy napotkają użycie rozszerzenia znaczników w XAML. Użyj jednej z następujących strategii nazewnictwa:  
   
--   Nazwa, nazwa typu, który ma być dokładnie dopasowany do tokenu użycia znaczników XAML. Na przykład w celu obsługi `{Collate ...}` użycie rozszerzenia, nazwa typu obsługi `Collate`.  
+- Nazwa, nazwa typu, który ma być dokładnie dopasowany do tokenu użycia znaczników XAML. Na przykład w celu obsługi `{Collate ...}` użycie rozszerzenia, nazwa typu obsługi `Collate`.  
   
--   Nazwa typu, który ma być token ciągu użycia oraz sufiks nazwy `Extension`. Na przykład w celu obsługi `{Collate ...}` użycie rozszerzenia, nazwa typu obsługi `CollateExtension`.  
+- Nazwa typu, który ma być token ciągu użycia oraz sufiks nazwy `Extension`. Na przykład w celu obsługi `{Collate ...}` użycie rozszerzenia, nazwa typu obsługi `CollateExtension`.  
   
  Kolejność wyszukiwania to wyszukiwanie `Extension`— klasa sufiksami nazwę najpierw, a następnie poszukaj nazwy klasy bez `Extension` sufiks.  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  Przetwarzania działa pod względem koncepcyjnym tak, jakby rozszerzenie znaczników jest obiektem, ma zostać utworzony, a następnie jego wartości składowych są ustawione. Każda określona właściwość można ustawić jest oceniany, podobnie jak określony element członkowski może zostać ustawiona na utworzony obiekt gdy XAML jest analizowany. Istnieją dwie ważne różnice:  
   
--   Jak wspomniano wcześniej, typ pomocy technicznej rozszerzenia znaczników nie musi mieć domyślnego konstruktora, aby można było, można utworzyć wystąpienia w XAML. Konstrukcja obiektu jest odroczone do czasu jego możliwe argumenty w składni tekstu jest stokenizowana i jego ocenie jako argumenty pozycyjne i nazwane, a odpowiedni konstruktor jest wywoływany w tym czasie.  
+- Jak wspomniano wcześniej, typ pomocy technicznej rozszerzenia znaczników nie musi mieć domyślnego konstruktora, aby można było, można utworzyć wystąpienia w XAML. Konstrukcja obiektu jest odroczone do czasu jego możliwe argumenty w składni tekstu jest stokenizowana i jego ocenie jako argumenty pozycyjne i nazwane, a odpowiedni konstruktor jest wywoływany w tym czasie.  
   
--   Może być zagnieżdżona użycia rozszerzenia znaczników. Rozszerzenie znaczników najbardziej jest stosowana jako pierwsza. W związku z tym można założyć tych danych użycia i Zadeklaruj jeden z parametrów konstrukcji, jako typ, który wymaga konwertera wartości (na przykład rozszerzenie znaczników), aby utworzyć.  
+- Może być zagnieżdżona użycia rozszerzenia znaczników. Rozszerzenie znaczników najbardziej jest stosowana jako pierwsza. W związku z tym można założyć tych danych użycia i Zadeklaruj jeden z parametrów konstrukcji, jako typ, który wymaga konwertera wartości (na przykład rozszerzenie znaczników), aby utworzyć.  
   
  Poleganie na takie przetwarzanie został wyświetlony w poprzednim przykładzie. Moduł zapisywania obiektów platformy .NET Framework XAML Services XAML przetwarzania nazwy stałe wyliczeń do wartości wyliczenia na poziomie natywnych.  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> Raporty <xref:System.Type> informacje dla obiektu typu <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zwraca. Podpisem czystego <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zwraca <xref:System.Object>. Ale różnych użytkowników może być bardziej precyzyjne informacje o typie zwracanym. Możliwości obejmują:  
   
--   Projektanci i środowiskami IDE, który może mieć możliwość zapewnienia obsługujących typu Obsługa użycia rozszerzenia znaczników.  
+- Projektanci i środowiskami IDE, który może mieć możliwość zapewnienia obsługujących typu Obsługa użycia rozszerzenia znaczników.  
   
--   Zaawansowane implementacje `SetMarkupExtension` programów obsługi na klas docelowych, które może polegać na podstawie odbicia w celu określenia typu zwracanego rozszerzenia znaczników zamiast rozgałęzianie na określone znane <xref:System.Windows.Markup.MarkupExtension> implementacje według nazwy.  
+- Zaawansowane implementacje `SetMarkupExtension` programów obsługi na klas docelowych, które może polegać na podstawie odbicia w celu określenia typu zwracanego rozszerzenia znaczników zamiast rozgałęzianie na określone znane <xref:System.Windows.Markup.MarkupExtension> implementacje według nazwy.  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>Serializacja użycia rozszerzenia znaczników  

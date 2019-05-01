@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
 ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972028"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider — Informacje o składniku (Formularze systemu Windows)
 Formularze Windows [ErrorProvider](errorprovider-component-windows-forms.md) składnika służy do sprawdzania poprawności danych wejściowych użytkownika dla formularza lub formantu. Jest ona zwykle używana w połączeniu z sprawdzania poprawności danych wejściowych użytkownika na formularzu lub wyświetlanie błędów w zestawie danych. Błąd dostawcy jest lepszym niż wyświetlanie komunikatu o błędzie w oknie komunikatu, ponieważ po zamknięciu okno komunikatu, komunikat o błędzie nie jest już widoczna. <xref:System.Windows.Forms.ErrorProvider> Składnika Wyświetla ikonę błędu (![ikonę ErrorProvider](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) obok odpowiednie kontrolki, takie jak pole tekstowe; po użytkownik umieszcza wskaźnik myszy nad ikona błędu etykietka narzędzia zostanie wyświetlony ciąg komunikatu o błędzie.  

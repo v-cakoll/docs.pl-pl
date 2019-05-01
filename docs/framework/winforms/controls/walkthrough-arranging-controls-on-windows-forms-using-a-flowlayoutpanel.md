@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009126"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel
 Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas zmiany rozmiaru formularza lub zawartość zmienia rozmiar formularza. Kiedy należy układ dynamiczny i nie chcesz obsługiwać <xref:System.Windows.Forms.Control.Layout> zdarzenia jawnie w kodzie, należy wziąć pod uwagę przy użyciu panelu układu.  
@@ -23,23 +23,23 @@ Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas 
   
  <xref:System.Windows.Forms.FlowLayoutPanel> Rozmieszcza jego zawartość w kierunku określonego przepływu: pozioma lub pionowa. Jego zawartość może zostać zawinięty, jeden wiersz do następnego lub z jednej kolumny do następnego. Alternatywnie jego zawartość może zostać obcięty zamiast opakowana. Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu Windows Forms  
+- Tworzenie projektu Windows Forms  
   
--   Rozmieszczanie formantów w pionie i poziomie  
+- Rozmieszczanie formantów w pionie i poziomie  
   
--   Zmiana kierunku przepływu  
+- Zmiana kierunku przepływu  
   
--   Wstawianie podziałów przepływu  
+- Wstawianie podziałów przepływu  
   
--   Rozmieszczanie kontrolek przy użyciu dopełnienia i marginesów  
+- Rozmieszczanie kontrolek przy użyciu dopełnienia i marginesów  
   
--   Wstawianie formantów, klikając je dwukrotnie w przyborniku  
+- Wstawianie formantów, klikając je dwukrotnie w przyborniku  
   
--   Wstawianie kontrolki za pomocą rysowania konturu jej  
+- Wstawianie kontrolki za pomocą rysowania konturu jej  
   
--   Wstawianie formantów, używając symbolu grota  
+- Wstawianie formantów, używając symbolu grota  
   
--   Ponowne przypisywanie istniejących formantów do innego elementu nadrzędnego  
+- Ponowne przypisywanie istniejących formantów do innego elementu nadrzędnego  
   
  Gdy skończysz, masz zrozumienia rolę odgrywaną przez te funkcje ważne układu.  
   
@@ -179,13 +179,13 @@ Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas 
 ## <a name="next-steps"></a>Następne kroki  
  Układ złożony przy użyciu kombinacji panele układów i formanty można osiągnąć. Sugestie dotyczące więcej eksploracji obejmują:  
   
--   Zmień rozmiar jednego z <xref:System.Windows.Forms.Button> kontrolki o większym rozmiarze i zwróć uwagę, wpływ na układ.  
+- Zmień rozmiar jednego z <xref:System.Windows.Forms.Button> kontrolki o większym rozmiarze i zwróć uwagę, wpływ na układ.  
   
--   Panele układów może zawierać innych paneli układów. Eksperymentuj z usuwanie <xref:System.Windows.Forms.TableLayoutPanel> kontroli do istniejącej kontrolki.  
+- Panele układów może zawierać innych paneli układów. Eksperymentuj z usuwanie <xref:System.Windows.Forms.TableLayoutPanel> kontroli do istniejącej kontrolki.  
   
--   Zadokuj <xref:System.Windows.Forms.FlowLayoutPanel> formantu do formularza nadrzędnego. Zmień rozmiar formularza i zanotuj wpływa na układ.  
+- Zadokuj <xref:System.Windows.Forms.FlowLayoutPanel> formantu do formularza nadrzędnego. Zmień rozmiar formularza i zanotuj wpływa na układ.  
   
--   Ustaw <xref:System.Windows.Forms.Control.Visible%2A> właściwości kontrolki do `false` i zwróć uwagę, jak <xref:System.Windows.Forms.FlowLayoutPanel> przepływu w odpowiedzi.  
+- Ustaw <xref:System.Windows.Forms.Control.Visible%2A> właściwości kontrolki do `false` i zwróć uwagę, jak <xref:System.Windows.Forms.FlowLayoutPanel> przepływu w odpowiedzi.  
   
 ## <a name="see-also"></a>Zobacz także
 

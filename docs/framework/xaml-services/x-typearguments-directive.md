@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982595"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments — dyrektywa
 Przebiegi, ograniczając wpisz argumenty ogólne do konstruktora typu ogólnego.  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Wartości XAML 2006 i środowisku WPF XAML ogólnego użycia  
  Użycie XAML 2006 i XAML, która jest używana dla aplikacji WPF, obowiązują następujące ograniczenia dla `x:TypeArguments` i użycia typu ogólnego z XAML w ogólne:  
   
--   Tylko element główny plik XAML może obsługiwać ogólnego użycia XAML, który odwołuje się do typu ogólnego.  
+- Tylko element główny plik XAML może obsługiwać ogólnego użycia XAML, który odwołuje się do typu ogólnego.  
   
--   Element główny musi być mapowane z co najmniej jeden typ argumentu typu ogólnego. Może to być na przykład <xref:System.Windows.Navigation.PageFunction%601>. Funkcje strony są podstawowy scenariusz obsługi ogólnego użycia XAML w WPF.  
+- Element główny musi być mapowane z co najmniej jeden typ argumentu typu ogólnego. Może to być na przykład <xref:System.Windows.Navigation.PageFunction%601>. Funkcje strony są podstawowy scenariusz obsługi ogólnego użycia XAML w WPF.  
   
--   Element główny element XAML obiektu dla ogólnej musi również zadeklarować klasy częściowej przy użyciu `x:Class`. Ta zasada obowiązuje, nawet w przypadku definiowania WPF Akcja kompilacji.  
+- Element główny element XAML obiektu dla ogólnej musi również zadeklarować klasy częściowej przy użyciu `x:Class`. Ta zasada obowiązuje, nawet w przypadku definiowania WPF Akcja kompilacji.  
   
--   `x:TypeArguments` Nie można odwołać zagnieżdżonych ograniczenia ogólne.  
+- `x:TypeArguments` Nie można odwołać zagnieżdżonych ograniczenia ogólne.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 lub XAML 2006 bez WPF 3.0 lub WPF 3.5 zależności  
  W przypadku usług .NET Framework XAML XAML 2006 lub XAML 2009 ograniczenia związane z WPF ogólnego użycia XAML są złagodzone. Można utworzyć wystąpienia elementu obiekt rodzajowy, w dowolnym miejscu w znaczniku XAML, który zapasowy typ systemu i obiekt modelu mogą obsługiwać.  

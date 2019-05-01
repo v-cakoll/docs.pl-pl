@@ -12,11 +12,11 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051172"
 ---
 # <a name="option-strict-statement"></a>Option Strict — Instrukcja
 Ogranicza niejawne konwersje typów danych można tylko konwersje rozszerzające nie zezwalają na późne wiązanie i nie zezwalają na niejawnego wpisywania, które spowodowało, że `Object` typu.  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>Uwagi  
  Gdy `Option Strict On` lub `Option Strict` pojawia się w pliku, następujące warunki spowodować błąd kompilacji:  
   
--   Niejawne konwersje zawężające  
+- Niejawne konwersje zawężające  
   
--   Późne powiązania  
+- Późne powiązania  
   
--   Niejawnego wpisywania, które spowodowało, że `Object` typu  
+- Niejawnego wpisywania, które spowodowało, że `Object` typu  
   
 > [!NOTE]
 >  W konfiguracji ostrzeżeń, które można ustawić na [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), dostępne są trzy ustawienia, które odnoszą się do trzech warunków, które powodują błąd kompilacji. Aby uzyskać informacje o sposobie używania tych ustawień, zobacz [do ustawienia konfiguracje ostrzeżenie w środowisku IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) w dalszej części tego tematu.  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  Po ustawieniu `Option Strict` do `On`, Visual Basic sprawdza, czy typy danych są określone dla wszystkich elementów programowania. Typy danych mogą być jawnie określone lub określone za pomocą wnioskowanie o typie lokalnym. Określanie typów danych dla wszystkich elementów programowania jest zalecane, z następujących powodów:  
   
--   Umożliwia obsługę funkcji IntelliSense dla zmiennych i parametrów. Dzięki temu można zobaczyć ich właściwości i inne elementy członkowskie podczas pisania kodu.  
+- Umożliwia obsługę funkcji IntelliSense dla zmiennych i parametrów. Dzięki temu można zobaczyć ich właściwości i inne elementy członkowskie podczas pisania kodu.  
   
--   Umożliwia kompilatorowi wykonywanie sprawdzania typu. Kontrola typów pomoże Ci znaleźć instrukcje, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów konwersji typu. Określa on wywołania metod obiektów, które nie obsługują tych metod.  
+- Umożliwia kompilatorowi wykonywanie sprawdzania typu. Kontrola typów pomoże Ci znaleźć instrukcje, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów konwersji typu. Określa on wywołania metod obiektów, które nie obsługują tych metod.  
   
--   Przyspiesza wykonywanie kodu. Co dzieje się, jeśli nie określisz typ danych dla elementu programistycznego, kompilator Visual Basic przypisuje mu `Object` typu. Skompilowany kod może być konieczne konwersji do i z powrotem między `Object` a innymi typami danych, które powoduje zmniejszenie wydajności.  
+- Przyspiesza wykonywanie kodu. Co dzieje się, jeśli nie określisz typ danych dla elementu programistycznego, kompilator Visual Basic przypisuje mu `Object` typu. Skompilowany kod może być konieczne konwersji do i z powrotem między `Object` a innymi typami danych, które powoduje zmniejszenie wydajności.  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>Niejawne błędy konwersji zawężającej  
  Niejawne błędy konwersji zawężającej wystąpić, gdy jest konwersja typu danych niejawne, który jest konwersją zawężającą.  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  Konwersje, które mogą powodować błędy zawierają niejawne konwersje, które występują w wyrażeniach. Więcej informacji znajduje się w następujących tematach:  
   
--   [+, operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [+, operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+=, operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [+=, operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/ = — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char, typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Char, typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Podczas łączenia ciągów za pomocą [& — Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md), wszystkie konwersje do ciągów są uznawane za się rozszerzenia. Dzięki takiej konwersji nie generują niejawne błąd konwersji zawężających, nawet jeśli `Option Strict` znajduje się na.  
   
@@ -97,9 +97,9 @@ Option Strict { On | Off }
 |Określony typ danych?|Inicjatora określona?|Przykład|Wynik|  
 |---|---|---|---|  
 |Nie|Nie|`Dim qty`|Jeśli `Option Strict` jest wyłączone (domyślnie), zmienna jest ustawiana `Nothing`.<br /><br /> Jeśli `Option Strict` jest włączona, wystąpi błąd kompilacji.|  
-|Nie|Tak|`Dim qty = 5`|Jeśli `Option Infer` znajduje się na (ustawienie domyślne), zmienna przyjmuje dane typu inicjatora. Zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest wyłączone, zmienna ma typ danych `Object`.<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest włączona, wystąpi błąd kompilacji.|  
+|Nie|Yes|`Dim qty = 5`|Jeśli `Option Infer` znajduje się na (ustawienie domyślne), zmienna przyjmuje dane typu inicjatora. Zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest wyłączone, zmienna ma typ danych `Object`.<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest włączona, wystąpi błąd kompilacji.|  
 |Tak|Nie|`Dim qty As Integer`|Zmienna jest ustawiana na wartość domyślną dla typu danych. Aby uzyskać więcej informacji, zobacz [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
-|Tak|Tak|`Dim qty  As Integer = 5`|Jeśli typ danych Inicjator nie jest konwertowany na określony typ danych, wystąpi błąd kompilacji.|  
+|Tak|Yes|`Dim qty  As Integer = 5`|Jeśli typ danych Inicjator nie jest konwertowany na określony typ danych, wystąpi błąd kompilacji.|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Jeśli nie jest obecny Option Strict — instrukcja  
  Jeśli kod źródłowy nie zawiera `Option Strict` instrukcji **opcja strict** ustawienie [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) jest używany. **Kompiluj stronę** ma ustawienia, które zapewniają dodatkową kontrolę nad warunki, które generuje błąd.  
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> Aby ustawić konfiguracje ostrzeżenie w środowisku IDE  
  Kiedy używasz [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) zamiast `Option Strict` instrukcji, masz dodatkową kontrolę nad warunki, które generują błędy. **Konfiguracje ostrzeżenie** części **kompilowania strony** ma ustawienia, które odnoszą się do trzech warunków, które powodują błąd kompilacji podczas `Option Strict` znajduje się na. Te ustawienia są następujące:  
   
--   **Niejawna konwersja**  
+- **Niejawna konwersja**  
   
--   **Rozpoznanie późnego wiązania; Wywołanie może się nie powieść w czasie wykonywania**  
+- **Rozpoznanie późnego wiązania; Wywołanie może się nie powieść w czasie wykonywania**  
   
--   **Niejawne typu; założono, że obiekt**  
+- **Niejawne typu; założono, że obiekt**  
   
  Po ustawieniu **Option Strict** do **na**, wszystkie trzy ustawienia konfiguracji tych ostrzeżeń są ustawione na **błąd**. Po ustawieniu **Option Strict** do **poza**, wszystkie trzy ustawienia są ustawione na **Brak**.  
   

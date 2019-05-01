@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
 ms.openlocfilehash: cd7e97559458a4415399488b0fdb96a850033c44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008075"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 W tym przykładzie przedstawiono `netNamedPipeBinding` powiązanie, które zapewnia komunikację między procesami na tym samym komputerze. Nazwane potoki nie działają na komputerach. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) kalkulatora usługi.  

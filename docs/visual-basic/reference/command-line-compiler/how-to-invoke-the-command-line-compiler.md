@@ -8,11 +8,11 @@ helpviewer_keywords:
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 ms.openlocfilehash: 67cad0df3f10ff1fa1f6a58546fe150232fe1283
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032074"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Instrukcje: Wywoływanie kompilatora wiersza polecenia (Visual Basic)
 Można wywołać kompilatora wiersza polecenia, wpisując nazwę jego pliku wykonywalnego do wiersza polecenia, znany także jako wiersz systemu MS-DOS. Jeśli kompilujesz w wierszu polecenia Windows domyślnej, należy wpisać w pełni kwalifikowana ścieżka do pliku wykonywalnego. Aby zastąpić to zachowanie domyślne, można użyć wiersza polecenia dewelopera dla programu Visual Studio lub zmodyfikować zmiennej środowiskowej PATH. Obie umożliwiają kompilowanie z dowolnego katalogu, po prostu wpisując nazwę kompilatora.  

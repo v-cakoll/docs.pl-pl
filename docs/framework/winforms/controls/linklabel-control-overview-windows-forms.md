@@ -9,11 +9,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
 ms.openlocfilehash: 541467b0f1285d372e5f6d502d9d8f28c8c6333e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012961"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.LinkLabel> kontrolka zezwala na dodawanie łączy stylu sieci Web do aplikacji Windows Forms. Możesz użyć <xref:System.Windows.Forms.LinkLabel> kontrola wszystko, co umożliwia <xref:System.Windows.Forms.Label> kontrolki; można też określić część tekstu jako link do pliku, folderu lub strony sieci Web.  

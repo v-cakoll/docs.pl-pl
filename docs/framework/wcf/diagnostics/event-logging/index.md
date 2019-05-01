@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999261"
 ---
 # <a name="event-logging-in-wcf"></a>Rejestrowanie zdarzeń w architekturze WCF
 Windows Communication Foundation (WCF) śledzi wewnętrznego zdarzenia w dzienniku zdarzeń Windows.  
@@ -20,19 +20,19 @@ Windows Communication Foundation (WCF) śledzi wewnętrznego zdarzenia w dzienni
 ### <a name="application-event-log"></a>Dziennik zdarzeń aplikacji  
  **Dziennik zdarzeń aplikacji** zawiera większość zdarzeń generowanych przez usługi WCF. Większość pozycji wskazują, że dana funkcja nie można uruchomić aplikacji. Przykłady obejmują:  
   
--   Rejestrowanie/śledzenia komunikatów: WCF zapisuje zdarzenie w dzienniku zdarzeń, gdy śledzenie i rejestrowanie komunikatów nie powiodło się. Jednak nie każdy błąd śledzenia wyzwala zdarzenie. Aby zapobiec całkowicie wypełnione śledzenia błędów w dzienniku zdarzeń, usługi WCF implementuje okres niedostępności 10 minut na takie zdarzenie. Oznacza to, że jeśli WCF zapisuje błąd śledzenia do dziennika zdarzeń, nie będzie więc ponownie co najmniej 10 minut.  
+- Rejestrowanie/śledzenia komunikatów: WCF zapisuje zdarzenie w dzienniku zdarzeń, gdy śledzenie i rejestrowanie komunikatów nie powiodło się. Jednak nie każdy błąd śledzenia wyzwala zdarzenie. Aby zapobiec całkowicie wypełnione śledzenia błędów w dzienniku zdarzeń, usługi WCF implementuje okres niedostępności 10 minut na takie zdarzenie. Oznacza to, że jeśli WCF zapisuje błąd śledzenia do dziennika zdarzeń, nie będzie więc ponownie co najmniej 10 minut.  
   
--   Odbiornik udostępnione: Usługa Udostępnianie portów TCP WCF rejestruje zdarzenie, gdy nie została uruchomiona.  
+- Odbiornik udostępnione: Usługa Udostępnianie portów TCP WCF rejestruje zdarzenie, gdy nie została uruchomiona.  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Dzienniki zdarzeń, gdy nie można uruchomić usługi.  
+- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Dzienniki zdarzeń, gdy nie można uruchomić usługi.  
   
--   Krytyczne i błędy zdarzenia, takie jak błędy podczas uruchamiania lub awarie  
+- Krytyczne i błędy zdarzenia, takie jak błędy podczas uruchamiania lub awarie  
   
--   Rejestrowanie komunikatów jest włączona: Dzienniki zdarzeń, gdy jest włączone rejestrowanie komunikatów. Jest to Powiadom administratora, że poufne informacje specyficzne dla aplikacji może zostać zarejestrowane w wiadomości, nagłówki i treść.  
+- Rejestrowanie komunikatów jest włączona: Dzienniki zdarzeń, gdy jest włączone rejestrowanie komunikatów. Jest to Powiadom administratora, że poufne informacje specyficzne dla aplikacji może zostać zarejestrowane w wiadomości, nagłówki i treść.  
   
--   Zdarzenie jest rejestrowane po `enableLoggingKnownPII` atrybutu w `machineSettings` elementu `machine.config` plik jest ustawiony. Ten atrybut określa, w przypadku dowolnej aplikacji na maszynie jest uprawniony do logowania znanych identyfikowalne dane osobowe (PII).  
+- Zdarzenie jest rejestrowane po `enableLoggingKnownPII` atrybutu w `machineSettings` elementu `machine.config` plik jest ustawiony. Ten atrybut określa, w przypadku dowolnej aplikacji na maszynie jest uprawniony do logowania znanych identyfikowalne dane osobowe (PII).  
   
--   Jeśli `logKnownPii` atrybut albo `app.config` lub `web.config` pliku jest ustawiona na `true` dla określonej aplikacji włączyć rejestrowanie dane osobowe, ale `enableLoggingKnownPII` atrybutu w `machineSettings` elementu `machine.config` plik jest ustawiony Aby `false`, zdarzenie jest rejestrowane. Ponadto, jeśli obie `logKnownPii` i `enableLoggingKnownPII` są ustawione na `true`, a zdarzenie jest rejestrowane. Aby uzyskać więcej informacji na temat tych ustawień konfiguracji, zobacz sekcję zabezpieczeń [Konfigurowanie rejestrowania komunikatów](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) tematu.  
+- Jeśli `logKnownPii` atrybut albo `app.config` lub `web.config` pliku jest ustawiona na `true` dla określonej aplikacji włączyć rejestrowanie dane osobowe, ale `enableLoggingKnownPII` atrybutu w `machineSettings` elementu `machine.config` plik jest ustawiony Aby `false`, zdarzenie jest rejestrowane. Ponadto, jeśli obie `logKnownPii` i `enableLoggingKnownPII` są ustawione na `true`, a zdarzenie jest rejestrowane. Aby uzyskać więcej informacji na temat tych ustawień konfiguracji, zobacz sekcję zabezpieczeń [Konfigurowanie rejestrowania komunikatów](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) tematu.  
   
 ### <a name="security-event-log"></a>Dziennik zdarzeń zabezpieczeń  
  **Dziennika zdarzeń zabezpieczeń** zawiera zdarzenia inspekcji zabezpieczeń, które są rejestrowane przez architekturę WCF.  

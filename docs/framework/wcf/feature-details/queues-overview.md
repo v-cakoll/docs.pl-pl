@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991266"
 ---
 # <a name="queues-overview"></a>Omówienie kolejek
 W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących komunikacji. Kolejne sekcje przejść do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są dyskowe widoczne w Windows Communication Foundation (WCF).  
@@ -36,9 +36,9 @@ W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących
 ## <a name="queues-and-transactions"></a>Kolejki i transakcji  
  Transakcje umożliwiają grupowanie zestawu operacji, więc, że jeśli jedna operacja zakończy się niepowodzeniem, wszystkie operacje zakończyć się niepowodzeniem. Przykładowy sposób, aby móc używać transakcji jest, gdy osoba używa ATM do transferowania 1000 USD z jego rachunek oszczędnościowy jego konta. Pociąga za sobą następujące operacje:  
   
--   Wycofanie 1000 USD z konta oszczędności.  
+- Wycofanie 1000 USD z konta oszczędności.  
   
--   Złożenie 1000 USD przeznaczony do konta rozliczeniowego.  
+- Złożenie 1000 USD przeznaczony do konta rozliczeniowego.  
   
  Jeśli pierwsza operacja zakończy się pomyślnie i 1000 USD są wybierane z konta oszczędności, ale druga operacja zakończy się niepowodzeniem, 1000 USD jest utracone, ponieważ została już wycofana z konta oszczędności. Aby zachować konta w nieprawidłowym stanie, jeśli jedna operacja zakończy się niepowodzeniem, zarówno operacji musi zakończyć się niepowodzeniem.  
   
@@ -59,9 +59,9 @@ W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących
   
  Jakikolwiek błąd, takich jak wiadomości, których nie można osiągnąć kolejka docelowa lub Time-To-Live wygaśnie, muszą być przetwarzane osobno. Nie jest niczym niezwykłym, dlatego aplikacje umieszczonych w kolejce do zapisania dwa zestawy logiki:  
   
--   Normalne klient i usługa logiki wysyłania i odbierania wiadomości.  
+- Normalne klient i usługa logiki wysyłania i odbierania wiadomości.  
   
--   Logiki wyrównującej może obsługiwać komunikaty z transmisji nieudane lub dostarczania.  
+- Logiki wyrównującej może obsługiwać komunikaty z transmisji nieudane lub dostarczania.  
   
  W poniższych sekcjach omówiono te pojęcia.  
   

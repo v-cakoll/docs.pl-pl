@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971713"
 ---
 # <a name="single-data-type-visual-basic"></a>Single — Typ danych (Visual Basic)
 Przechowuje podpisany IEEE 32-bitowe (4-bajtową) pojedynczej precyzji liczb zmiennoprzecinkowych z zakresu od - 3.4028235E + 38 do - 1, 401298E-45 dla wartości ujemnych i 1, 401298E-45 za pośrednictwem 3.4028235E + 38 dla wartości dodatnich. Liczby o pojedynczej precyzji przechowywać przybliżeniem liczbą rzeczywistą.  
@@ -37,15 +37,15 @@ Przechowuje podpisany IEEE 32-bitowe (4-bajtową) pojedynczej precyzji liczb zmi
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Dokładność.** Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać o tym, że nie zawsze mają dokładne reprezentacji w pamięci. Może to spowodować nieoczekiwane wyniki z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Dokładność.** Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać o tym, że nie zawsze mają dokładne reprezentacji w pamięci. Może to spowodować nieoczekiwane wyniki z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Rozszerzanie.** `Single` — Typ danych rozszerza się na `Double`. Oznacza to, że możesz przekonwertować `Single` do `Double` nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzanie.** `Single` — Typ danych rozszerza się na `Double`. Oznacza to, że możesz przekonwertować `Single` do `Double` nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Końcowe zera.** Typy danych zmiennopozycyjnych nie ma żadnych wewnętrznej reprezentacji końcowych 0 znaków. Na przykład ich nie dokonuje rozróżnienia między 4.2000 i 4.2. W związku z tym końcowych 0 znaków nie są wyświetlane, gdy możesz wyświetlić lub wydrukować różne wartości zmiennoprzecinkowe.  
+- **Końcowe zera.** Typy danych zmiennopozycyjnych nie ma żadnych wewnętrznej reprezentacji końcowych 0 znaków. Na przykład ich nie dokonuje rozróżnienia między 4.2000 i 4.2. W związku z tym końcowych 0 znaków nie są wyświetlane, gdy możesz wyświetlić lub wydrukować różne wartości zmiennoprzecinkowe.  
   
--   **Znaki typu.** Dołączanie znaku typu literał `F` do literału wymusza `Single` typu danych. Dołączanie znaku typu identyfikator `!` do jakiegokolwiek identyfikatora wymusza `Single`.  
+- **Znaki typu.** Dołączanie znaku typu literał `F` do literału wymusza `Single` typu danych. Dołączanie znaku typu identyfikator `!` do jakiegokolwiek identyfikatora wymusza `Single`.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Single?displayProperty=nameWithType> struktury.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Single?displayProperty=nameWithType> struktury.  
   
 ## <a name="see-also"></a>Zobacz także
 

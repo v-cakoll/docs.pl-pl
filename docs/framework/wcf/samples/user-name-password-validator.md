@@ -3,11 +3,11 @@ title: Moduł weryfikacji nazwy użytkownika i hasła
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
 ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006437"
 ---
 # <a name="user-name-password-validator"></a>Moduł weryfikacji nazwy użytkownika i hasła
 Ten przykład demonstruje sposób implementacji niestandardowego modułu weryfikacji UserNamePassword. Jest to przydatne w przypadkach, gdy żadna z wbudowanych tryby weryfikacji UserNamePassword jest odpowiednia dla wymagań aplikacji; na przykład, gdy pary nazwy użytkownika/hasła są przechowywane w niektórych magazynu zewnętrznego, takie jak bazy danych. Niniejszy przykład pokazuje usługi, która ma niestandardowy moduł sprawdzania poprawności, który sprawdza, czy są dostępne dwie pary określonej nazwy użytkownika i hasła. Klient używa pary nazwa użytkownika i hasło do uwierzytelniania w usłudze.
@@ -26,11 +26,11 @@ Ten przykład demonstruje sposób implementacji niestandardowego modułu weryfik
 
  W podsumowaniu Niniejszy przykład pokazuje, jak:
 
--   Klient może zostać uwierzytelniony przy użyciu tokenu nazwy użytkownika.
+- Klient może zostać uwierzytelniony przy użyciu tokenu nazwy użytkownika.
 
--   Serwer sprawdza poprawność poświadczeń klienta przed niestandardowy element UserNamePasswordValidator i jak Propagacja niestandardowe usterek z logikę weryfikacji nazwy użytkownika i hasła do klienta.
+- Serwer sprawdza poprawność poświadczeń klienta przed niestandardowy element UserNamePasswordValidator i jak Propagacja niestandardowe usterek z logikę weryfikacji nazwy użytkownika i hasła do klienta.
 
--   Serwer jest uwierzytelniany przy użyciu certyfikatu X.509 serwera.
+- Serwer jest uwierzytelniany przy użyciu certyfikatu X.509 serwera.
 
  Usługa udostępnia jeden punkt końcowy do komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding` , wartość domyślna to przy użyciu uwierzytelniania nazwy użytkownika protokołu WS-Securityand. Określa zachowanie usługi `Custom` tryb weryfikacji pary nazwy użytkownika/hasła klienta wraz z typu klasy modułu sprawdzania poprawności. Zachowanie określa również, certyfikat serwera przy użyciu `serviceCertificate` elementu. Certyfikat serwera musi zawierać taką samą wartość `SubjectName` jako `findValue` w [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -254,7 +254,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
  Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.
 
--   Tworzenie certyfikatu serwera:
+- Tworzenie certyfikatu serwera:
 
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. % Zmienna % nazwa_serwera Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Wartość domyślna to hosta lokalnego.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
 
      Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 

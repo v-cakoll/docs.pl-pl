@@ -1,5 +1,5 @@
 ---
-title: Dane wejściowe obiektu XPathDocument klasy xsltransform
+title: Dane wejściowe obiektu XPathDocument klasy XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09f0301724e483def3bea9dfdf75a088ac09bb55
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026744"
 ---
-# <a name="xpathdocument-input-to-xsltransform"></a>Dane wejściowe obiektu XPathDocument klasy xsltransform
+# <a name="xpathdocument-input-to-xsltransform"></a>Dane wejściowe obiektu XPathDocument klasy XslTransform
 <xref:System.Xml.XPath.XPathDocument> Jest tylko do odczytu pamięci podręcznej, przetwarzanie dokumentów za pomocą <xref:System.Xml.Xsl.XslTransform>. Przypomina strukturę do XML Document Object Model (DOM), ale go jest wysoce zoptymalizowane pod kątem rozszerzalny język arkusza stylów przetwarzania przekształcenia (XSLT) i model danych XML Path Language (XPath) przy użyciu funkcji optymalizacji XPath na <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]

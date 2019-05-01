@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
 ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008944"
 ---
 # <a name="advanced-ink-handling"></a>Zaawansowana obsługa atramentu
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Jest dostarczany z <xref:System.Windows.Controls.InkCanvas>, i jest elementem można umieścić w aplikacji, aby natychmiast rozpocząć zbieranie i wyświetlanie pisma odręcznego. Jednak jeśli <xref:System.Windows.Controls.InkCanvas> kontroli nie zapewniają wystarczająco poprawnie poziom kontroli, można zachować kontrolę na wyższym poziomie, dostosowując własnych kolekcji pisma odręcznego i klas renderowanie pisma odręcznego przy użyciu <xref:System.Windows.Input.StylusPlugIns>.  

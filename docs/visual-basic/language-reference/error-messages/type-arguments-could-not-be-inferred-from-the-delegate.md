@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
 ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013637"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Nie można wywnioskować argumentów typu na podstawie obiektu delegowanego
 Używa instrukcji przypisania `AddressOf` na przypisanie adresu ogólnej procedury, aby obiekt delegowany, ale nie dostarcza żadnych argumentów typu rodzajowego procedury.  
@@ -23,7 +23,7 @@ Używa instrukcji przypisania `AddressOf` na przypisanie adresu ogólnej procedu
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Określ argumenty tupu ogólnego procedury w `AddressOf` wyrażenia.  
+- Określ argumenty tupu ogólnego procedury w `AddressOf` wyrażenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

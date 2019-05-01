@@ -3,24 +3,24 @@ title: Rehostowanie projektanta
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005236"
 ---
 # <a name="designer-rehosting"></a>Rehostowanie projektanta
 Rehostowanie projektanta jest to typowy scenariusz, która odwołuje się do hostowania kanwę projektu przepływu pracy w aplikacji niestandardowej. Aplikacji macierzystej, których większość osób, którzy znają to program Visual Studio, jednak istnieje kilka scenariuszy, których wyświetlanie w Projektancie przepływu pracy w aplikacji mogą być przydatne:  
   
--   Monitorowanie aplikacji (umożliwiając użytkownikowi końcowemu wizualizować proces, a także dane czasu wykonywania o procesie, takie jak aktualnie aktywnego stanu, łączny czas wykonywania danych lub inne informacje dotyczące wystąpienia przepływu pracy).  
+- Monitorowanie aplikacji (umożliwiając użytkownikowi końcowemu wizualizować proces, a także dane czasu wykonywania o procesie, takie jak aktualnie aktywnego stanu, łączny czas wykonywania danych lub inne informacje dotyczące wystąpienia przepływu pracy).  
   
--   Aplikacje, które umożliwiają użytkownikowi dostosowywanie procesu z ograniczonym zestawem działań.  
+- Aplikacje, które umożliwiają użytkownikowi dostosowywanie procesu z ograniczonym zestawem działań.  
   
  Aby zapewnić obsługę tych typów aplikacji, projektanta przepływu pracy jest dostarczany w .NET Framework i mogą być hostowane w aplikacji WPF lub w aplikacji formularzy WinForms przy użyciu odpowiedniej platformy WPF kod hostingu. W tym przykładzie przedstawiono:  
   
--   Rehostowanie projektanta programu WF.  
+- Rehostowanie projektanta programu WF.  
   
--   Przy użyciu rehostowanym przybornika i właściwości siatki także.  
+- Przy użyciu rehostowanym przybornika i właściwości siatki także.  
   
 ## <a name="rehosting-the-designer"></a>Rehostowanie projektanta  
  W tym przykładzie pokazano, jak utworzyć układ platformy WPF, projektanta, zawierać widoczne w następujących Układ tabelaryczny (kod przybornika pominięcia dotyczy miejsca). Należy pamiętać nazw obramowania, zawierające siatki projektanta i właściwości.  

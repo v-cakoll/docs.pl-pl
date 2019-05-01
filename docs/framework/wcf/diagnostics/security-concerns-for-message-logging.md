@@ -3,11 +3,11 @@ title: Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998156"
 ---
 # <a name="security-concerns-for-message-logging"></a>Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 W tym temacie opisano, jak możesz chronić dane poufne przed przypadkowym w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.  
@@ -21,11 +21,11 @@ W tym temacie opisano, jak możesz chronić dane poufne przed przypadkowym w dzi
   
  Poniższe porady mogą pomóc aby zawartość pliku dziennika przed przypadkowym ujawnieniem:  
   
--   Upewnij się, że dziennika, które pliki są chronione przez kontroli dostępu zawiera listę (ACL) zarówno w sieci Web hosta i hosta samodzielnego scenariuszy.  
+- Upewnij się, że dziennika, które pliki są chronione przez kontroli dostępu zawiera listę (ACL) zarówno w sieci Web hosta i hosta samodzielnego scenariuszy.  
   
--   Wybierz rozszerzenie pliku, który nie może być łatwo przekazywane za pomocą żądania sieci Web. Na przykład rozszerzenie pliku XML nie jest bezpiecznym wyborem. Można sprawdzić w podręczniku administratora usług Internet Information Services (IIS), aby wyświetlić listę rozszerzeń, które mogą być przekazywane.  
+- Wybierz rozszerzenie pliku, który nie może być łatwo przekazywane za pomocą żądania sieci Web. Na przykład rozszerzenie pliku XML nie jest bezpiecznym wyborem. Można sprawdzić w podręczniku administratora usług Internet Information Services (IIS), aby wyświetlić listę rozszerzeń, które mogą być przekazywane.  
   
--   Określ ścieżki bezwzględnej do lokalizacji pliku dziennika, która powinna być poza katalogiem publiczny głównego katalogu wirtualnego hosta o sieci Web, aby uniemożliwić dostęp do innych firm za pomocą przeglądarki sieci Web.  
+- Określ ścieżki bezwzględnej do lokalizacji pliku dziennika, która powinna być poza katalogiem publiczny głównego katalogu wirtualnego hosta o sieci Web, aby uniemożliwić dostęp do innych firm za pomocą przeglądarki sieci Web.  
   
  Domyślnie klucze identyfikowalne dane osobowe (PII), takie jak nazwa użytkownika i hasło nie są rejestrowane w śladach i rejestrowane komunikaty. Administrator komputera, jednak można użyć `enableLoggingKnownPII` atrybutu w `machineSettings` elementu w pliku Machine.config, aby zezwolić aplikacji na maszynie się znane identyfikowalne dane osobowe (PII). Następująca konfiguracja pokazuje, jak to zrobić:  
   
@@ -99,13 +99,13 @@ W tym temacie opisano, jak możesz chronić dane poufne przed przypadkowym w dzi
 ## <a name="events-triggered-by-message-logging"></a>Zdarzenia wyzwolone przez rejestrowanie komunikatów  
  Poniższa lista zawiera wszystkie zdarzenia, które są emitowane przez rejestrowanie komunikatów.  
   
--   Komunikat o błędzie logowania: To zdarzenie jest emitowane, gdy rejestrowanie komunikatów jest włączona w konfiguracji lub za pomocą usługi WMI. Zawartość zdarzenia jest "włączone rejestrowanie komunikatów. Informacje poufne może zostać zarejestrowane w postaci zwykłego tekstu, nawet jeśli zostały zaszyfrowane w sieci, na przykład, treści wiadomości."  
+- Komunikat o błędzie logowania: To zdarzenie jest emitowane, gdy rejestrowanie komunikatów jest włączona w konfiguracji lub za pomocą usługi WMI. Zawartość zdarzenia jest "włączone rejestrowanie komunikatów. Informacje poufne może zostać zarejestrowane w postaci zwykłego tekstu, nawet jeśli zostały zaszyfrowane w sieci, na przykład, treści wiadomości."  
   
--   Trwa wylogowywanie komunikat: To zdarzenie jest emitowane, jeśli rejestrowanie komunikatów jest wyłączone za pomocą usługi WMI. Zawartość zdarzenia jest "Komunikat rejestrowanie zostało wyłączone."  
+- Trwa wylogowywanie komunikat: To zdarzenie jest emitowane, jeśli rejestrowanie komunikatów jest wyłączone za pomocą usługi WMI. Zawartość zdarzenia jest "Komunikat rejestrowanie zostało wyłączone."  
   
--   Znany też danych osobowych Zaloguj się: To zdarzenie jest emitowane, gdy jest włączone rejestrowanie znane też danych osobowych. Dzieje się tak po `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `true`i `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`.  
+- Znany też danych osobowych Zaloguj się: To zdarzenie jest emitowane, gdy jest włączone rejestrowanie znane też danych osobowych. Dzieje się tak po `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `true`i `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`.  
   
--   Zaloguj się znane też danych osobowych, które są niedozwolone: To zdarzenie jest emitowane podczas rejestrowania znane dane osobowe nie jest dozwolone. Dzieje się tak po `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`, ale `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `false`. Jest zgłaszany żaden wyjątek.  
+- Zaloguj się znane też danych osobowych, które są niedozwolone: To zdarzenie jest emitowane podczas rejestrowania znane dane osobowe nie jest dozwolone. Dzieje się tak po `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`, ale `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `false`. Jest zgłaszany żaden wyjątek.  
   
  Zdarzenia te można wyświetlać w narzędziu Podgląd zdarzeń, które pochodzą z Windows. Aby uzyskać więcej informacji na temat tego, zobacz [rejestrowania zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009087"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. **Windows Forms Designer** udostępnia wiele narzędzi układu, w tym celu. Są trzy najważniejsze <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, i <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości, które znajdują się na wszystkie kontrolki Windows Forms.  
@@ -37,13 +37,13 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu Windows Forms  
+- Tworzenie projektu Windows Forms  
   
--   Ustawienie marginesów dla formantów  
+- Ustawienie marginesów dla formantów  
   
--   Ustawienie wypełnienia dla formantów  
+- Ustawienie wypełnienia dla formantów  
   
--   Automatyczne ustalanie rozmiaru kontrolki  
+- Automatyczne ustalanie rozmiaru kontrolki  
   
  Gdy skończysz, masz zrozumienia rolę odgrywaną przez te funkcje ważne układu.  
   
@@ -53,7 +53,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Aby ukończyć ten przewodnik, potrzebne są:  
   
--   Wystarczające uprawnienia, aby można było utworzyć i uruchomić projekty aplikacji Windows Forms na komputerze, w którym jest zainstalowany program Visual Studio.  
+- Wystarczające uprawnienia, aby można było utworzyć i uruchomić projekty aplikacji Windows Forms na komputerze, w którym jest zainstalowany program Visual Studio.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest tworzenie projektu i konfigurowanie formularza.  
@@ -178,11 +178,11 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="next-steps"></a>Następne kroki  
  Istnieje wiele innych funkcji układu dla rozmieszczanie formantów w aplikacjach Windows Forms. Poniżej przedstawiono niektóre kombinacje, które może wypróbować:  
   
--   Tworzenie formularza przy użyciu <xref:System.Windows.Forms.TableLayoutPanel> kontroli. Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Spróbuj zmienić wartości <xref:System.Windows.Forms.TableLayoutPanel> kontrolki <xref:System.Windows.Forms.Control.Padding%2A> właściwości, jak również <xref:System.Windows.Forms.Control.Margin%2A> właściwość jego formantów podrzędnych.  
+- Tworzenie formularza przy użyciu <xref:System.Windows.Forms.TableLayoutPanel> kontroli. Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Spróbuj zmienić wartości <xref:System.Windows.Forms.TableLayoutPanel> kontrolki <xref:System.Windows.Forms.Control.Padding%2A> właściwości, jak również <xref:System.Windows.Forms.Control.Margin%2A> właściwość jego formantów podrzędnych.  
   
--   Wypróbuj, w tym samym eksperymentu przy użyciu <xref:System.Windows.Forms.FlowLayoutPanel> kontroli. Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+- Wypróbuj, w tym samym eksperymentu przy użyciu <xref:System.Windows.Forms.FlowLayoutPanel> kontroli. Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Eksperymentuj z dokowanie formantów podrzędnych w <xref:System.Windows.Forms.Panel> kontroli. <xref:System.Windows.Forms.Control.Padding%2A> Właściwość jest bardziej ogólnych realizacji <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> właściwości, na które może spełnić samodzielnie, jest to poprzez umieszczenie kontrolki podrzędnej <xref:System.Windows.Forms.Panel> kontrolki i ustawiając kontrolę rodzicielską <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>. Ustaw <xref:System.Windows.Forms.Panel> kontrolki <xref:System.Windows.Forms.Control.Padding%2A> właściwości różnych wartości i zwróć uwagę, efekt.  
+- Eksperymentuj z dokowanie formantów podrzędnych w <xref:System.Windows.Forms.Panel> kontroli. <xref:System.Windows.Forms.Control.Padding%2A> Właściwość jest bardziej ogólnych realizacji <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> właściwości, na które może spełnić samodzielnie, jest to poprzez umieszczenie kontrolki podrzędnej <xref:System.Windows.Forms.Panel> kontrolki i ustawiając kontrolę rodzicielską <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>. Ustaw <xref:System.Windows.Forms.Panel> kontrolki <xref:System.Windows.Forms.Control.Padding%2A> właściwości różnych wartości i zwróć uwagę, efekt.  
   
 ## <a name="see-also"></a>Zobacz także
 

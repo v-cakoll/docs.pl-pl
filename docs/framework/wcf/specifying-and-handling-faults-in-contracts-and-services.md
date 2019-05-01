@@ -5,11 +5,11 @@ helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006408"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Określanie i obsługa błędów w kontraktach i usługach
 Aplikacje Windows Communication Foundation (WCF) obsługują sytuacje przez mapowanie wyjątków zarządzanych obiektów na obiekty błędu protokołu SOAP i błędów protokołu SOAP do obiektów zarządzanych wyjątkach. Tematy w tej sekcji omówiono sposób projektowania umów do udostępnienia błąd warunków jako niestandardowych błędach SOAP, sposób zwracania tych błędów w ramach implementacji usługi i jak klienci wychwycić takie błędy.  
@@ -25,9 +25,9 @@ Aplikacje Windows Communication Foundation (WCF) obsługują sytuacje przez mapo
   
  Zazwyczaj usługi (i klientom dupleks) wykonaj następujące kroki, aby pomyślnie integracja obsługi błędów w swoich aplikacjach:  
   
--   Warunków wyjątków są mapowane na niestandardowych błędach SOAP.  
+- Warunków wyjątków są mapowane na niestandardowych błędach SOAP.  
   
--   Klienci i usługi wysyłania i odbierania błędach SOAP jako wyjątki.  
+- Klienci i usługi wysyłania i odbierania błędach SOAP jako wyjątki.  
   
  Ponadto WCF klientów i usług służy błędach soap niezadeklarowany na potrzeby debugowania i rozszerzać domyślne zachowanie błąd. W poniższych sekcjach omówiono te zadania i pojęć.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011011"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Instrukcje: aranżowanie kontrolek z liniami przyciągania oraz siatki w formularzach systemu Windows
 Korzystanie z funkcji układu w wersji programu Visual Studio, można dokładnie kierować rozmieszczenie kontrolek w formularzu. Formantów dodana do formularza lub przeniesione w formularzu można automatycznie wyrównywane do wierszy i kolumn siatki projektanta Windows Forms, lub można wyrównać formanty, używając funkcji linii przyciągania.  
@@ -23,7 +23,7 @@ Korzystanie z funkcji układu w wersji programu Visual Studio, można dokładnie
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>Aby przyciągnąć wszystkich kontrolek do siatki  
   
--   Wybierz **SnapToGrid** tryb układu w programie Windows Forms Designer **opcje** okno dialogowe.  
+- Wybierz **SnapToGrid** tryb układu w programie Windows Forms Designer **opcje** okno dialogowe.  
   
      Aby uzyskać więcej informacji, zobacz [ogólne, Windows Forms Designer, okno dialogowe Opcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)). Wszystkie formanty teraz wyrównać się wzdłuż punktów danych na siatce.  
   
@@ -31,7 +31,7 @@ Korzystanie z funkcji układu w wersji programu Visual Studio, można dokładnie
   
 ### <a name="to-align-controls-using-snaplines"></a>Aby wyrównać formanty za pomocą linii przyciągania  
   
--   Wybierz **linii przyciągania** tryb układu w programie Windows Forms Designer **opcje** okno dialogowe.  
+- Wybierz **linii przyciągania** tryb układu w programie Windows Forms Designer **opcje** okno dialogowe.  
   
      Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Teraz można linii przyciągania wyrównywanie i rozmieszczanie formantów w formularzu.  
   

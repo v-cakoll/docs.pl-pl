@@ -5,18 +5,18 @@ f1_keywords:
 - vbrDiagnosticInfo_Memory
 ms.assetid: 1ba8f774-5858-438e-914e-99fddc9e5e7e
 ms.openlocfilehash: a8d1f3799de11596b9eed9df39e143587e283b55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970524"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a>Nie można uzyskać informacji o pamięci z powodu błędu wewnętrznego
 Wywołanie jednej z właściwości informacji o pamięci `My.Computer.Info` obiektu nie powiodła się.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Dodaj `Try...Catch` bloku wokół wywołania do właściwości informacji o pamięci `My.Computer.Info` obiektu.  
+- Dodaj `Try...Catch` bloku wokół wywołania do właściwości informacji o pamięci `My.Computer.Info` obiektu.  
   
 ## <a name="see-also"></a>Zobacz także
 

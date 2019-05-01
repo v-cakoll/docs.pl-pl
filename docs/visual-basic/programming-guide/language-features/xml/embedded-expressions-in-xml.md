@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961242"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Wyrażenia osadzone w XML (Visual Basic)
 Wyrażenia osadzone umożliwiają tworzenie literałów XML, które zawierają wyrażenia, które są oceniane w czasie wykonywania. Składnia wyrażenia osadzone jest `<%=` `expression` `%>`, która jest taka sama jak składnia używane w [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -42,27 +42,27 @@ Wyrażenia osadzone umożliwiają tworzenie literałów XML, które zawierają w
 |Atrybut — element XML|<xref:System.Xml.Linq.XAttribute> lub kolekcji <xref:System.Xml.Linq.XAttribute>|Ignorowane|  
 |Element główny dokumentu XML|<xref:System.Xml.Linq.XElement> lub kolekcji jednego <xref:System.Xml.Linq.XElement> obiektu i dowolną liczbę <xref:System.Xml.Linq.XProcessingInstruction> i <xref:System.Xml.Linq.XComment> obiektów|Ignorowane|  
   
--   Przykład wyrażenia osadzone w nazwa elementu XML:  
+- Przykład wyrażenia osadzone w nazwa elementu XML:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
--   Przykład wyrażenia osadzone w zawartości elementu XML:  
+- Przykład wyrażenia osadzone w zawartości elementu XML:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
--   Przykład wyrażenia osadzone w nazwie atrybutu elementu XML:  
+- Przykład wyrażenia osadzone w nazwie atrybutu elementu XML:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
--   Przykład wyrażenia osadzone w wartości atrybutu elementu XML:  
+- Przykład wyrażenia osadzone w wartości atrybutu elementu XML:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
--   Przykład wyrażenia osadzone w atrybucie — element XML:  
+- Przykład wyrażenia osadzone w atrybucie — element XML:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
--   Przykład wyrażenia osadzone w głównym elementem dokumentu XML:  
+- Przykład wyrażenia osadzone w głównym elementem dokumentu XML:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
 ms.openlocfilehash: c308805f5e73d740ff18a40d95b9cc2576ac95fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013598"
 ---
 # <a name="typename-is-a-delegate-type"></a>"\<typename >" jest typem delegowanym
 "\<typename >" jest typem delegowanym. Konstrukcja delegata zezwala na tylko pojedyncze wyrażenie AddressOf listy argumentów. Często można używać wyrażenia AddressOf zamiast tworzenia delegata.  
@@ -27,7 +27,7 @@ ms.locfileid: "58841269"
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Używanie pojedynczej `AddressOf` wyrażenia na liście argumentów dla klasy delegata w `New` klauzuli.  
+- Używanie pojedynczej `AddressOf` wyrażenia na liście argumentów dla klasy delegata w `New` klauzuli.  
   
 ## <a name="see-also"></a>Zobacz także
 

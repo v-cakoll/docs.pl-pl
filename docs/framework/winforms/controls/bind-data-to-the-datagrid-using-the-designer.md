@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
 ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011731"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: wiązanie danych z kontrolką DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Projektant umożliwia łączenie <xref:System.Windows.Forms.DataGridView> kontrolki źródła danych na kilka różnych odmian, w tym baz danych, obiekty biznesowe lub usług sieci Web. Gdy powiąże formant ze źródłem danych przy użyciu narzędzia Projektant kontrolki zostanie automatycznie powiązany <xref:System.Windows.Forms.BindingSource> składnik, który reprezentuje źródło danych. Ponadto kolumny są automatycznie generowane w formancie do dopasowania informacji o schemacie, dostarczone przez źródło danych.  

@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
 ms.openlocfilehash: 74966dd1661faa43df334987b2e3b0e84eff3446
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037867"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>Instrukcje: Reprezentacja kolumn jako elementów członkowskich klas
 Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby skojarzyć pola lub właściwości z kolumną bazy danych.  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>Do mapowania pola lub właściwości kolumny bazy danych  
   
--   Dodaj <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu deklaracji właściwości lub pola.  
+- Dodaj <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu deklaracji właściwości lub pola.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod mapy `CustomerID` pole `Customer` klasy `CustomerID` kolumny w `Customers` tabeli bazy danych.  

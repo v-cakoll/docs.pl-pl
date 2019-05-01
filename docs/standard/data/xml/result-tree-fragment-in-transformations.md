@@ -1,18 +1,18 @@
 ---
-title: Wynikowego fragmentu drzewa w przekształceniach
+title: Wynikowy fragment drzewa w przekształceniach
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027067"
 ---
-# <a name="result-tree-fragment-in-transformations"></a>Wynikowego fragmentu drzewa w przekształceniach
+# <a name="result-tree-fragment-in-transformations"></a>Wynikowy fragment drzewa w przekształceniach
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
@@ -194,7 +194,6 @@ Poniżej znajduje się wynik Przekształcanie XML za pomocą tego arkusza styló
 
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.XPath.XPathNodeIterator>
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Przekształcenia XSLT przy użyciu klasy XslTransform](xslt-transformations-with-the-xsltransform-class.md)
 - [Implementowanie procesora XSLT przy użyciu klasy XslTransform](xsltransform-class-implements-the-xslt-processor.md)

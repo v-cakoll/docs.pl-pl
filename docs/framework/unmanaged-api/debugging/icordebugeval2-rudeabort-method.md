@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0aabff090634f1ecdeec5636336ad1fb77b8b81c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988926"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort — Metoda
-Przerywa obliczenia tego `ICorDebugEval2` wykonuje obecnie.  
+Przerywa obliczeń że `ICorDebugEval2` Trwa wykonywanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,10 +34,10 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `RudeAbort` nie zwalnia wszystkie blokady, które przechowuje ewaluatora, więc pozostawia sesji debugowania w stanie niebezpieczny. Wywołanie tej metody za pomocą najwyższą ostrożność.  
+ `RudeAbort` nie spowoduje zwolnienia żadnych blokad, które przechowuje ewaluatora, więc pozostawia sesji debugowania w stanie niebezpieczne. Wywołaj tę metodę z najwyższą ostrożnością.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

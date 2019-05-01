@@ -13,11 +13,11 @@ ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2ad212117cc51c17b2a0f68a98bee24e1dd3fa05
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962555"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Instrukcje: Implementowanie wzorca przepływu danych producent — konsument
 W tym dokumencie opisano sposób umożliwia Implementowanie wzorca producent — konsument Biblioteka przepływu danych TPL. W tym wzorcu *producentów* wysyła komunikaty do bloku komunikatu i *konsumenta* odczytuje komunikaty z tego bloku.  
@@ -37,7 +37,7 @@ W tym dokumencie opisano sposób umożliwia Implementowanie wzorca producent —
   
  Visual C#  
   
- **CSC.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.cs**  
   
  Visual Basic  
   

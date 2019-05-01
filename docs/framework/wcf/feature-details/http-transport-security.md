@@ -3,11 +3,11 @@ title: Zabezpieczenia transportu HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000847"
 ---
 # <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
 Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarczana przez implementację protokołu Secure Sockets Layer (SSL). Protokół SSL jest powszechnie używanych w Internecie uwierzytelniania usługi do klienta, a następnie, aby zapewnić poufność (szyfrowanie) do kanału. W tym temacie wyjaśniono, jak działa protokół SSL oraz jego implementacji w Windows Communication Foundation (WCF).  
@@ -31,9 +31,9 @@ Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarc
 ## <a name="implementing-ssl-with-wcf"></a>Implementowanie protokołu SSL z usługą WCF  
  Zabezpieczenia transportu HTTP (lub SSL) jest udostępniony zewnętrznie do programu WCF. Można zaimplementować protokół SSL w jeden z dwóch sposobów; decydującym czynnikiem jest to, jak aplikacja jest hostowana:  
   
--   Korzystania z usług Internet Information Services (IIS) jako host usługi WCF umożliwia konfigurowanie protokołu SSL usługi infrastruktury usługi IIS.  
+- Korzystania z usług Internet Information Services (IIS) jako host usługi WCF umożliwia konfigurowanie protokołu SSL usługi infrastruktury usługi IIS.  
   
--   W przypadku tworzenia własnego aplikacji WCF adresu za pomocą narzędzia HttpCfg.exe można powiązać certyfikatu SSL.  
+- W przypadku tworzenia własnego aplikacji WCF adresu za pomocą narzędzia HttpCfg.exe można powiązać certyfikatu SSL.  
   
 ### <a name="using-iis-for-transport-security"></a>Korzystanie z usług IIS dla zabezpieczeń transportu  
   

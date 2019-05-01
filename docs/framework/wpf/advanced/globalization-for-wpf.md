@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031342"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 W tym temacie przedstawiono problemy, które należy wiedzieć podczas pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji na rynek globalny. Globalizacja programistyczny są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] w `System.Globalization`.
@@ -69,59 +69,59 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
  Obecnie obsługiwane są następujące skrypty:
 
--   Arabski
+- Arabski
 
--   Bengalski
+- Bengalski
 
--   Devanagari
+- Devanagari
 
--   Cyrylica
+- Cyrylica
 
--   grecki
+- grecki
 
--   Gudżarati
+- Gudżarati
 
--   Gurmukhi
+- Gurmukhi
 
--   Hebrajski
+- Hebrajski
 
--   Ideograficznych skryptów
+- Ideograficznych skryptów
 
--   Kannada
+- Kannada
 
--   Lao
+- Lao
 
--   Łaciński
+- Łaciński
 
--   Malajalam
+- Malajalam
 
--   Mongolian
+- Mongolian
 
--   Orija
+- Orija
 
--   Syryjski
+- Syryjski
 
--   Tamilski
+- Tamilski
 
--   Telugu
+- Telugu
 
--   Thaana
+- Thaana
 
--   Tajski *
+- Tajski *
 
--   Tibetan
+- Tibetan
 
  * W tej wersji wyświetlanie i edytowanie tajski tekstu jest obsługiwana; nie jest wyrazów.
 
  Obecnie nie są obsługiwane następujące skrypty:
 
--   Khmerski
+- Khmerski
 
--   Koreański Hangul stare
+- Koreański Hangul stare
 
--   Myanmar
+- Myanmar
 
--   Sinhala
+- Sinhala
 
  System pisma aparatów obsługi [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] czcionki mogą obejmować [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelach układu, które umożliwiają twórcom czcionki projektowania lepiej międzynarodowych wysokiej klasy związane z typografią czcionek i. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Czcionki tabele zawierają informacje dotyczące podstawienia symbol, pozycjonowanie symbol, uzasadnienie i położenie punktu odniesienia, umożliwiając aplikacji przetwarzanie tekstu w celu zwiększenia układu tekstu.
 
@@ -133,9 +133,9 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 ### <a name="international-layout"></a>Układ międzynarodowych
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia bardzo wygodny sposób obsługi poziome, dwukierunkowe i układów w pionie. W ramach prezentacji <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwość może służyć do definiowania układu. Dostępne są następujące wzorce kierunek przepływu:
 
--   *LeftToRight* — układ poziomy łaciński, Azja Wschodnia i tak dalej.
+- *LeftToRight* — układ poziomy łaciński, Azja Wschodnia i tak dalej.
 
--   *RightToLeft* -dwukierunkowych dla arabskiego, hebrajskiego i tak dalej.
+- *RightToLeft* -dwukierunkowych dla arabskiego, hebrajskiego i tak dalej.
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>Tworzenie zlokalizowanych aplikacjach

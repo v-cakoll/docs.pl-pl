@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
 ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010920"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Instrukcje: określanie elementów jako zaznaczone w kontrolce CheckedListBox formularzy systemu Windows
 Podczas wyświetlania danych w formularzach Windows <xref:System.Windows.Forms.CheckedListBox> kontrolki, można albo wykonać iterację kolekcji, przechowywane w <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> właściwości lub krok po kroku używając listy <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodę pozwala ustalić, które elementy są zaznaczone. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Metoda pobiera element o indeksie jako argument i zwraca `true` lub `false`. Sprzecznie może oczekiwań <xref:System.Windows.Forms.ListBox.SelectedItems%2A> i <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> właściwości nie może określić elementy, które są sprawdzane; ustalają one, elementy, które są wyróżnione.  

@@ -3,11 +3,11 @@ title: LINQ to XML — Przegląd (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 987409aab9d3d12cc3cbbebaa64da0bffcee1c8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021261"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML — Przegląd (Visual Basic)
 XML ma powszechnie zaakceptowany jako sposób na formatowanie danych w wielu kontekstach. Na przykład możesz znaleźć XML w sieci Web, w plikach konfiguracji, pliki programu Microsoft Office Word i baz danych.  
@@ -49,19 +49,19 @@ Select item
   
  Oprócz wspomnianych [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] możliwości [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] udostępnia Ulepszony interfejs programowania XML. Za pomocą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], możesz:  
   
--   Ładowanie kodu XML z plików i strumieni.  
+- Ładowanie kodu XML z plików i strumieni.  
   
--   Serializacji XML do plików i strumieni.  
+- Serializacji XML do plików i strumieni.  
   
--   Tworzenie XML od podstaw przy użyciu konstrukcja funkcjonalna.  
+- Tworzenie XML od podstaw przy użyciu konstrukcja funkcjonalna.  
   
--   Zapytanie XML przy użyciu notacji XPath osi.  
+- Zapytanie XML przy użyciu notacji XPath osi.  
   
--   Manipulowanie drzewa XML w pamięci przy użyciu metod, takich jak <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A>, i <xref:System.Xml.Linq.XElement.SetValue%2A>.  
+- Manipulowanie drzewa XML w pamięci przy użyciu metod, takich jak <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A>, i <xref:System.Xml.Linq.XElement.SetValue%2A>.  
   
--   Sprawdź poprawność drzew XML przy użyciu XSD.  
+- Sprawdź poprawność drzew XML przy użyciu XSD.  
   
--   Kombinacja tych funkcji umożliwia przekształcanie drzew XML z jednego kształtu do innego.  
+- Kombinacja tych funkcji umożliwia przekształcanie drzew XML z jednego kształtu do innego.  
   
 ## <a name="creating-xml-trees"></a>Tworzenie drzew XML  
  IOne najbardziej znaczące korzyści wynikające z programowania, korzystając z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest łatwe tworzenie drzew XML. Na przykład do tworzenia małych drzewa XML, należy można napisać kod w następujący sposób:  

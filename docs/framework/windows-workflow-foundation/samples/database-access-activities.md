@@ -3,11 +3,11 @@ title: Działania dostępu do bazy danych
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005215"
 ---
 # <a name="database-access-activities"></a>Działania dostępu do bazy danych
 Działania dostępu do bazy danych umożliwiają dostęp do bazy danych w przepływie pracy. Te działania, Zezwalaj na dostęp do bazy danych do pobierania lub modyfikowanie informacji i użycia [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) dostęp do bazy danych.  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>Konfigurowanie informacji o połączeniu
  Wszystkie DbActivities udostępniać te same parametry konfiguracji. Takie grupy można skonfigurować na dwa sposoby:
 
--   `ConnectionString + InvariantName`: Ustawienie dostawcy ADO.NET niezmienną nazwę i parametry połączenia.
+- `ConnectionString + InvariantName`: Ustawienie dostawcy ADO.NET niezmienną nazwę i parametry połączenia.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: Ustaw nazwę sekcji konfiguracji, który zawiera informacje o połączeniu.
+- `ConfigName`: Ustaw nazwę sekcji konfiguracji, który zawiera informacje o połączeniu.
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   W ramach działania:
+- W ramach działania:
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,15 +287,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Plik Setup.cmd skrypt wywołuje plik skryptu CreateDb.sql zawiera polecenia SQL, które należy wykonać następujące czynności:
 
--   Tworzy bazę danych o nazwie DbActivitiesSample.
+- Tworzy bazę danych o nazwie DbActivitiesSample.
 
--   Tworzy tabelę ról.
+- Tworzy tabelę ról.
 
--   Tworzy tabelę Pracownicy.
+- Tworzy tabelę Pracownicy.
 
--   Wstawia trzy rekordy w tabeli ról.
+- Wstawia trzy rekordy w tabeli ról.
 
--   Wstawia dwunastu rekordów do tabel pracownikami.
+- Wstawia dwunastu rekordów do tabel pracownikami.
 
 ##### <a name="to-run-setupcmd"></a>Aby uruchomić plik Setup.cmd
 

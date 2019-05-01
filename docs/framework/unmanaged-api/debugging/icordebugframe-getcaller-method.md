@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82902e6a395fe62464065ccea4cca5b52c960f0d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988822"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller — Metoda
 Pobiera wskaźnik do obiektu ICorDebugFrame w łańcuchu bieżącym wywołaniu tej ramki.  

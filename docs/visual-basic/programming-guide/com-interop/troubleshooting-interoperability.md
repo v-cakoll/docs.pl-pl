@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022301"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Rozwiązywanie problemów związanych z współdziałaniem (Visual Basic)
 Gdy współdziałania między COM i kodu zarządzanego z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], może wystąpić co najmniej jeden z następujących typowych problemów.  
@@ -100,11 +100,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> Problemy z kontrolki ActiveX  
  Większość kontrolki ActiveX, współpracujących z Visual Basic 6.0 pracować w Visual Basic .NET, które bez problemów. Główne wyjątki są kontrole kontenerów lub formanty, które będzie zawierać inne kontrolki. Kilka przykładów starsze formantów, które nie będą działać poprawnie z programem Visual Studio są następujące:  
   
--   Formant programu Microsoft Forms 2.0 ramki  
+- Formant programu Microsoft Forms 2.0 ramki  
   
--   Góra-dół kontrolki, znany także jako kontrolki pokrętła  
+- Góra-dół kontrolki, znany także jako kontrolki pokrętła  
   
--   Kontrolka karty Sheridan  
+- Kontrolka karty Sheridan  
   
  Istnieją tylko kilka obejścia nieobsługiwany występują problemy z kontrolki ActiveX. Można przeprowadzić migrację istniejących kontrolek do programu Visual Studio, jeśli jesteś właścicielem oryginalnego kodu źródłowego. W przeciwnym razie możesz skontaktować się z dostawcami oprogramowania dla aktualizacji. NET zgodnej wersji formantów, aby zastąpić nieobsługiwane formanty ActiveX.  
   

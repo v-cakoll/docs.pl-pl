@@ -16,11 +16,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
 ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920760"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 Określa, że właściwość lub procedura nie jest zaimplementowana w tej klasie i musi zostać zastąpiona w klasie pochodnej, zanim będzie można jej używać.  
@@ -30,13 +30,13 @@ Określa, że właściwość lub procedura nie jest zaimplementowana w tej klasi
   
 ## <a name="rules"></a>reguły  
   
--   **Deklaracja niekompletne.** Po określeniu `MustOverride`, nie trzeba dostarczać żadnych dodatkowych wierszy kodu właściwość lub procedura, nie nawet `End Function`, `End Property`, lub `End Sub` instrukcji.  
+- **Deklaracja niekompletne.** Po określeniu `MustOverride`, nie trzeba dostarczać żadnych dodatkowych wierszy kodu właściwość lub procedura, nie nawet `End Function`, `End Property`, lub `End Sub` instrukcji.  
   
--   **Modyfikatory połączone.** Nie można określić `MustOverride` wraz z `NotOverridable`, `Overridable`, lub `Shared` w tej samej deklaracji.  
+- **Modyfikatory połączone.** Nie można określić `MustOverride` wraz z `NotOverridable`, `Overridable`, lub `Shared` w tej samej deklaracji.  
   
--   **Przesłanianiem i zastępowaniem.** Zarówno przesłanianiem i zastępowaniem przedefiniować dziedziczonego elementu, ale istnieją znaczne różnice między dwa podejścia. Aby uzyskać więcej informacji, zobacz [przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **Przesłanianiem i zastępowaniem.** Zarówno przesłanianiem i zastępowaniem przedefiniować dziedziczonego elementu, ale istnieją znaczne różnice między dwa podejścia. Aby uzyskać więcej informacji, zobacz [przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
--   **Alternatywne warunki.** Element, którego nie można użyć z wyjątkiem w zastąpieniu jest czasami nazywane *czystej wirtualnej* elementu.  
+- **Alternatywne warunki.** Element, którego nie można użyć z wyjątkiem w zastąpieniu jest czasami nazywane *czystej wirtualnej* elementu.  
   
  `MustOverride` Modyfikator mogą być używane w tych kontekstach:  
   

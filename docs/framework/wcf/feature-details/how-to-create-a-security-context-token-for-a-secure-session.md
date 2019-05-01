@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950309"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Instrukcje: tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji
 Za pomocą tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej sesji, sesja może wytrzymać usługi odtwarzania. Na przykład gdy bezstanowe SCT jest używany w ramach bezpiecznej sesji i Internet Information Services (IIS) jest resetowany, następnie dane sesji, który jest skojarzony z usługą jest utracone. Te dane sesji obejmuje pamięci podręcznej SCT tokenu. Tak przy następnym klient wysyła usługi bezstanowej SCT, zwracany jest błąd, ponieważ nie można pobrać klucza, który jest skojarzony z SCT. Jeśli jednak stanowych SCT jest używany, klucz, który jest skojarzony z SCT jest zawarty w SCT. Ponieważ klucz jest zawarty w SCT i dlatego zawarte w wiadomości, bezpiecznej sesji nie występuje w usłudze odtwarzania. Domyślnie program Windows Communication Foundation (WCF) używa SCTs o bezstanowa w ramach bezpiecznej sesji. W tym temacie przedstawiono sposób użycia SCTs stanowych w ramach bezpiecznej sesji.  
@@ -26,15 +26,15 @@ Za pomocą tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej se
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>Aby użyć SCTs stanowych w ramach bezpiecznej sesji  
   
--   Tworzenie niestandardowego powiązania, określający, że komunikaty protokołu SOAP są chronione przez bezpiecznej sesji, która używa SCT stanowych.  
+- Tworzenie niestandardowego powiązania, określający, że komunikaty protokołu SOAP są chronione przez bezpiecznej sesji, która używa SCT stanowych.  
   
-    1.  Definiowanie niestandardowego powiązania, dodając [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) do pliku konfiguracji usługi.  
+    1. Definiowanie niestandardowego powiązania, dodając [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) do pliku konfiguracji usługi.  
   
         ```xml  
         <customBinding>  
         ```  
   
-    2.  Dodaj [ \<powiązania >](../../../../docs/framework/misc/binding.md) element podrzędny do [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+    2. Dodaj [ \<powiązania >](../../../../docs/framework/misc/binding.md) element podrzędny do [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Określ nazwę powiązania, ustawiając `name` atrybutu unikatową nazwę w pliku konfiguracji.  
   
@@ -42,7 +42,7 @@ Za pomocą tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej se
         <binding name="StatefulSCTSecureSession">  
         ```  
   
-    3.  Określa tryb uwierzytelniania dla wiadomości wysyłanych do i z tej usługi, dodając [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element podrzędny do [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+    3. Określa tryb uwierzytelniania dla wiadomości wysyłanych do i z tej usługi, dodając [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element podrzędny do [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Określ, że bezpiecznej sesji jest używany przez ustawienie `authenticationMode` atrybutu `SecureConversation`. Określ, że stanowych SCTs są używane przez ustawienie `requireSecurityContextCancellation` atrybutu `false`.  
   
@@ -51,7 +51,7 @@ Za pomocą tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej se
                   requireSecurityContextCancellation="false">  
         ```  
   
-    4.  Określ, jak klient jest uwierzytelniany podczas nawiązywania bezpiecznej sesji nawiązaniu przez dodanie [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element podrzędny do [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
+    4. Określ, jak klient jest uwierzytelniany podczas nawiązywania bezpiecznej sesji nawiązaniu przez dodanie [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element podrzędny do [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
   
          Określ, jak klient jest uwierzytelniany, ustawiając `authenticationMode` atrybutu.  
   
@@ -59,13 +59,13 @@ Za pomocą tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej se
         <secureConversationBootstrap authenticationMode="UserNameForCertificate" />  
         ```  
   
-    5.  Określ kodowanie komunikatu przez dodanie elementu kodowania, takich jak [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+    5. Określ kodowanie komunikatu przez dodanie elementu kodowania, takich jak [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
         ```xml  
         <textMessageEncoding />  
         ```  
   
-    6.  Określ transportu, dodając element transportu, takich jak [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+    6. Określ transportu, dodając element transportu, takich jak [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
         ```xml  
         <httpTransport />  

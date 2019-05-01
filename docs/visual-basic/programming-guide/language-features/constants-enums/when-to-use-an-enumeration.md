@@ -5,11 +5,11 @@ helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907312"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Kiedy stosować wyliczanie (Visual Basic)
 Wyliczenia oferują prosty sposób pracy z zestawami pokrewnych stałych. Moduł wyliczenia lub `Enum`, to Symboliczna nazwa zestawu wartości. Wyliczenia są traktowane jako typy danych i umożliwia im tworzenie zestawów stałych do użycia z zmienne i ich właściwości.  
@@ -19,13 +19,13 @@ Wyliczenia oferują prosty sposób pracy z zestawami pokrewnych stałych. Moduł
   
  Korzyści wynikające ze stosowania wyliczeń:  
   
--   Zmniejsza błędy spowodowane Transponowanie lub błędne liczby.  
+- Zmniejsza błędy spowodowane Transponowanie lub błędne liczby.  
   
--   Można łatwo zmienić wartości w przyszłości.  
+- Można łatwo zmienić wartości w przyszłości.  
   
--   Sprawia, że kod łatwiejsza do odczytania, co oznacza, że jest mniej prawdopodobne, że błędy będą pełzanie tę sytuację.  
+- Sprawia, że kod łatwiejsza do odczytania, co oznacza, że jest mniej prawdopodobne, że błędy będą pełzanie tę sytuację.  
   
--   Zapewnia zgodność z nowszymi wersjami. Z wyliczeniami kod jest mniej prawdopodobne zakończyć się niepowodzeniem, jeśli w przyszłości ktoś zmienia wartości odpowiadające nazwy elementów członkowskich.  
+- Zapewnia zgodność z nowszymi wersjami. Z wyliczeniami kod jest mniej prawdopodobne zakończyć się niepowodzeniem, jeśli w przyszłości ktoś zmienia wartości odpowiadające nazwy elementów członkowskich.  
   
 ## <a name="naming-enumerations"></a>Nazwy wyliczeń  
  Używa konwencji nazewnictwa dla elementów członkowskich wyliczenia. Gdy Visual Basic napotyka nazwa składowej wyliczenia, może zgłoszony wyjątek, jeśli inne biblioteki typów w przywoływanych zawierać taką samą nazwę. Użyj unikatowy prefiks, który identyfikuje wartości z aplikacji lub składnika.  

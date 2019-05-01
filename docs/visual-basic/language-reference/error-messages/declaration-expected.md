@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
 ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803834"
 ---
 # <a name="declaration-expected"></a>Oczekiwano deklaracji
 Nondeclarative instrukcji, takie jak przypisania lub instrukcji pętli jest wykonywane poza dowolnej procedury. Tylko deklaracje mogą poza procedur.  
@@ -23,11 +23,11 @@ Nondeclarative instrukcji, takie jak przypisania lub instrukcji pętli jest wyko
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Przenieś instrukcję nondeclarative treści procedury.  
+- Przenieś instrukcję nondeclarative treści procedury.  
   
--   Rozpocznij deklaracji z odpowiednią deklarację słowem kluczowym.  
+- Rozpocznij deklaracji z odpowiednią deklarację słowem kluczowym.  
   
--   Upewnij się, że deklaracja słowo kluczowe nie jest błędnie wpisana.  
+- Upewnij się, że deklaracja słowo kluczowe nie jest błędnie wpisana.  
   
 ## <a name="see-also"></a>Zobacz także
 

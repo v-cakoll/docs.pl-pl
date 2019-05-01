@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36563
 ms.assetid: 3ca8b873-e98d-419b-95f2-d75bd2a9eb6c
 ms.openlocfilehash: 925a17bef5147a5679a076af1801bdd305dd5bad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921033"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>Metoda nie ma podpisu zgodnego z obiektem delegowanym
 Występuje niezgodność między sygnatury metody i delegata, który próbujesz użyć. `Delegate` Instrukcja definiuje typy parametrów i zwracane typy klasy delegata. Każda procedura ma pasujących parametrów zgodnych typów i zwracanych typów może służyć do tworzenia wystąpienia tego typu delegata.  

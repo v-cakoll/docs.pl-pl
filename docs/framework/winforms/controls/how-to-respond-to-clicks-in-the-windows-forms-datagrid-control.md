@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
 ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913097"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Instrukcje: odpowiadanie na kliknięcia w kontrolce DataGrid formularzy systemu Windows
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "59191903"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Aby wykryć, kiedy użytkownik DataGrid wybierze inną komórkę  
   
--   W <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> programu obsługi zdarzeń, napisz kod reagować odpowiednio.  
+- W <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> programu obsługi zdarzeń, napisz kod reagować odpowiednio.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "59191903"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Aby określić, która część DataGrid użytkownik kliknął element  
   
--   Wywołaj <xref:System.Windows.Forms.DataGrid.HitTest%2A> metody w obsłudze zdarzeń właściwe, takie jak w przypadku <xref:System.Windows.Forms.Control.MouseDown> lub <xref:System.Windows.Forms.Control.Click> zdarzeń.  
+- Wywołaj <xref:System.Windows.Forms.DataGrid.HitTest%2A> metody w obsłudze zdarzeń właściwe, takie jak w przypadku <xref:System.Windows.Forms.Control.MouseDown> lub <xref:System.Windows.Forms.Control.Click> zdarzeń.  
   
      <xref:System.Windows.Forms.DataGrid.HitTest%2A> Metoda zwraca <xref:System.Windows.Forms.DataGrid.HitTestInfo> obiekt, który zawiera wiersza i kolumny kliknięto obszaru.  
   

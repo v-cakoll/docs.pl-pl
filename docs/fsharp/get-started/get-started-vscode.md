@@ -3,11 +3,11 @@ title: Rozpoczynanie pracy z usługą F# w programie Visual Studio Code
 description: Dowiedz się, jak używać F# za pomocą programu Visual Studio Code i Ionide zestawu wtyczki.
 ms.date: 12/23/2018
 ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949551"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy z usługą F# w programie Visual Studio Code
 

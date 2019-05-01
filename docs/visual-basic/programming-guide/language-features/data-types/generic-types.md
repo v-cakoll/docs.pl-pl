@@ -37,11 +37,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906789"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Typy ogólne w Visual Basic (Visual Basic)
 A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosowuje się do wykonywania funkcji dla różnych typów danych. Po zdefiniowaniu klasy ogólnej lub procedura ma definiuje oddzielnych wersji dla każdego typu danych, dla którego możesz chcieć wykonać tę funkcję.  
@@ -89,19 +89,19 @@ A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosow
   
  Ogólny typ ma następujące korzyści za pośrednictwem następujących alternatyw:  
   
--   **Bezpieczeństwo typów.** Typy ogólne wymusić, kontrola typów w czasie kompilacji. Na podstawie typów `Object` akceptować dowolny typ danych, a następnie należy napisać kod, aby sprawdzić, czy typ danych wejściowych jest dopuszczalna. Za pomocą typów ogólnych kompilator może przechwycić niezgodności typu przed w czasie wykonywania.  
+- **Bezpieczeństwo typów.** Typy ogólne wymusić, kontrola typów w czasie kompilacji. Na podstawie typów `Object` akceptować dowolny typ danych, a następnie należy napisać kod, aby sprawdzić, czy typ danych wejściowych jest dopuszczalna. Za pomocą typów ogólnych kompilator może przechwycić niezgodności typu przed w czasie wykonywania.  
   
--   **Wydajność.** Typy ogólne nie jest konieczne *pole* i *unbox* danych, ponieważ każdy z nich jest przeznaczone do jednego typu danych. Operacje na podstawie `Object` musi polu typów danych wejściowych w celu przekonwertowania ich do `Object` i rozpakowywanie danych przeznaczone dla danych wyjściowych. Opakowywanie i rozpakowywanie obniżenie wydajności.  
+- **Wydajność.** Typy ogólne nie jest konieczne *pole* i *unbox* danych, ponieważ każdy z nich jest przeznaczone do jednego typu danych. Operacje na podstawie `Object` musi polu typów danych wejściowych w celu przekonwertowania ich do `Object` i rozpakowywanie danych przeznaczone dla danych wyjściowych. Opakowywanie i rozpakowywanie obniżenie wydajności.  
   
      Na podstawie typów `Object` są również z późnym wiązaniem, co oznacza, że uzyskanie dostępu do swoich elementów członkowskich wymaga dodatkowego kodu w czasie wykonywania. Zmniejsza to wydajności.  
   
--   **Konsolidacja kodu.** Kod w typie ogólnym musi być zdefiniowany tylko jeden raz. Zbiór specyficznych dla typu wersji typu muszą być replikowane ten sam kod w każdej wersji, jedyną różnicą jest typ danych specyficznych dla danej wersji. Za pomocą typów ogólnych wersji typu są wszystkie generowane na podstawie oryginalnego typu ogólnego.  
+- **Konsolidacja kodu.** Kod w typie ogólnym musi być zdefiniowany tylko jeden raz. Zbiór specyficznych dla typu wersji typu muszą być replikowane ten sam kod w każdej wersji, jedyną różnicą jest typ danych specyficznych dla danej wersji. Za pomocą typów ogólnych wersji typu są wszystkie generowane na podstawie oryginalnego typu ogólnego.  
   
--   **Możesz pisać kod ponownego użycia.** Kod, który nie zależy od określonego typu danych mogą być używane różne typy danych, jeśli jest ona typu ogólnego. Nawet w przypadku typu danych, który nie pierwotnie przewidzieć często może używać go.  
+- **Możesz pisać kod ponownego użycia.** Kod, który nie zależy od określonego typu danych mogą być używane różne typy danych, jeśli jest ona typu ogólnego. Nawet w przypadku typu danych, który nie pierwotnie przewidzieć często może używać go.  
   
--   **Obsługa środowiska IDE.** Gdy używasz skonstruowanego typu zadeklarowane z typem ogólnym, zintegrowanego środowiska programistycznego (IDE) daje więcej obsługę podczas opracowywania kodu. Na przykład technologia IntelliSense można wyświetlić opcje specyficzne dla typu argumentu konstruktora lub metody.  
+- **Obsługa środowiska IDE.** Gdy używasz skonstruowanego typu zadeklarowane z typem ogólnym, zintegrowanego środowiska programistycznego (IDE) daje więcej obsługę podczas opracowywania kodu. Na przykład technologia IntelliSense można wyświetlić opcje specyficzne dla typu argumentu konstruktora lub metody.  
   
--   **Algorytmy rodzajowe.** Abstrakcyjna algorytmy, które są niezależne od typu dobrze nadają się do typów ogólnych. Na przykład ogólny procedury, która sortuje elementy przy użyciu <xref:System.IComparable> interfejsu może być używany z dowolnego typu danych, który implementuje <xref:System.IComparable>.  
+- **Algorytmy rodzajowe.** Abstrakcyjna algorytmy, które są niezależne od typu dobrze nadają się do typów ogólnych. Na przykład ogólny procedury, która sortuje elementy przy użyciu <xref:System.IComparable> interfejsu może być używany z dowolnego typu danych, który implementuje <xref:System.IComparable>.  
   
 ## <a name="constraints"></a>Ograniczenia  
  Mimo że kod w definicji typu ogólnego należy jako typ niezależne od jak to możliwe, może być konieczne wymagają możliwości dowolnego typu danych dostarczane do danego typu ogólnego. Na przykład, jeśli chcesz porównać dwa elementy na potrzeby sortowania i sortowania, typem danych, musi implementować <xref:System.IComparable> interfejsu. To wymaganie można wymusić, dodając *ograniczenie* na parametr typu.  
@@ -116,13 +116,13 @@ A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosow
 ### <a name="types-of-constraints"></a>Typy ograniczeń  
  Ograniczenia usługi można określić następujące wymagania w dowolnej kombinacji:  
   
--   Argument typu musi implementować jeden lub więcej interfejsów  
+- Argument typu musi implementować jeden lub więcej interfejsów  
   
--   Argument typu musi być typu, lub dziedziczyć z co najwyżej jednej klasy  
+- Argument typu musi być typu, lub dziedziczyć z co najwyżej jednej klasy  
   
--   Argument typu musi ujawniać konstruktor bez parametrów dostępny do kodu, który tworzy obiekty od niego  
+- Argument typu musi ujawniać konstruktor bez parametrów dostępny do kodu, który tworzy obiekty od niego  
   
--   Argument typu musi być *odwołania do typu*, lub musi być *typ wartości*  
+- Argument typu musi być *odwołania do typu*, lub musi być *typ wartości*  
   
  Jeśli zachodzi potrzeba narzucane przez więcej niż jedno wymaganie, możesz użyć rozdzielonych przecinkami *lista ograniczeń* w nawiasach klamrowych (`{ }`). Aby wymagać dostępny konstruktor, obejmują [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe na liście. Aby wymagać typem referencyjnym, obejmują `Class` słowa kluczowego; wymaga typu wartości dołączysz `Structure` — słowo kluczowe.  
   
@@ -136,15 +136,15 @@ A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosow
 ## <a name="important-terms"></a>Ważne terminy  
  Typy ogólne wprowadzenie i są używane następujące pojęcia:  
   
--   *Typ ogólny*. Definicja klasy, struktury, interfejsu, procedura lub delegata, dla którego należy podać co najmniej jednego typu danych w przypadku deklarowania.  
+- *Typ ogólny*. Definicja klasy, struktury, interfejsu, procedura lub delegata, dla którego należy podać co najmniej jednego typu danych w przypadku deklarowania.  
   
--   *Parametr typu*. W definicji typu ogólnego symbol zastępczy dla typu danych podajesz podczas deklarowania typu.  
+- *Parametr typu*. W definicji typu ogólnego symbol zastępczy dla typu danych podajesz podczas deklarowania typu.  
   
--   *Argument typu*. Typ konkretnych danych, który zastępuje parametr typu w deklaracji typu skonstruowany z typu ogólnego.  
+- *Argument typu*. Typ konkretnych danych, który zastępuje parametr typu w deklaracji typu skonstruowany z typu ogólnego.  
   
--   *Ograniczenie*. Warunek dla parametru typu, który ogranicza możliwość użycia argumentów typu można podać dla niego. Ograniczenie może wymagać, że argument typu musi implementuje danego interfejsu, lub dziedziczyć z konkretną klasą, ma dostępne konstruktora bez parametrów lub być typem referencyjnym lub typem wartości. Można połączyć te ograniczenia, ale można określić co najwyżej jedną klasę.  
+- *Ograniczenie*. Warunek dla parametru typu, który ogranicza możliwość użycia argumentów typu można podać dla niego. Ograniczenie może wymagać, że argument typu musi implementuje danego interfejsu, lub dziedziczyć z konkretną klasą, ma dostępne konstruktora bez parametrów lub być typem referencyjnym lub typem wartości. Można połączyć te ograniczenia, ale można określić co najwyżej jedną klasę.  
   
--   *Skonstruowany typ*. Klasy, struktury, interfejsu, procedura lub delegata zadeklarowane z typem ogólnym poprzez dostarczenie argumentów typu dla jego parametrów typu.  
+- *Skonstruowany typ*. Klasy, struktury, interfejsu, procedura lub delegata zadeklarowane z typem ogólnym poprzez dostarczenie argumentów typu dla jego parametrów typu.  
   
 ## <a name="see-also"></a>Zobacz także
 

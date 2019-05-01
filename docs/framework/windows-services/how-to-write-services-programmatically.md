@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
 ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913916"
 ---
 # <a name="how-to-write-services-programmatically"></a>Instrukcje: Programowane pisanie usług
 Jeśli nie chcesz użyć szablonu projektu usługi Windows, można napisać własne usługi, ustawiając dziedziczenia i inne elementy infrastruktury. Programowo utworzyć usługę, należy wykonać kilka kroków, które szablon w przeciwnym razie będzie obsługiwać dla Ciebie:  
   
--   Należy zdefiniować klasie usługi, aby odziedziczyć po <xref:System.ServiceProcess.ServiceBase> klasy.  
+- Należy zdefiniować klasie usługi, aby odziedziczyć po <xref:System.ServiceProcess.ServiceBase> klasy.  
   
--   Należy utworzyć `Main` metoda projekt usługi, który definiuje działanie usług i wywołania <xref:System.ServiceProcess.ServiceBase.Run%2A> metody na nich.  
+- Należy utworzyć `Main` metoda projekt usługi, który definiuje działanie usług i wywołania <xref:System.ServiceProcess.ServiceBase.Run%2A> metody na nich.  
   
--   Konieczne jest przesłonięcie <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedur i wypełnij jakiegokolwiek kodu, który ma ich wykonywania.  
+- Konieczne jest przesłonięcie <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedur i wypełnij jakiegokolwiek kodu, który ma ich wykonywania.  
   
 ### <a name="to-write-a-service-programmatically"></a>Aby programowane pisanie usług  
   
 1. Utwórz pusty projekt, a następnie utwórz odwołanie do przestrzeni nazw niezbędne wykonaj następujące czynności:  
   
-    1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** węzła i kliknij przycisk **Dodaj odwołanie**.  
+    1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** węzła i kliknij przycisk **Dodaj odwołanie**.  
   
-    2.  Na **.NET Framework** karty, przewiń do **System.dll** i kliknij przycisk **wybierz**.  
+    2. Na **.NET Framework** karty, przewiń do **System.dll** i kliknij przycisk **wybierz**.  
   
-    3.  Przewiń do **System.ServiceProcess.dll** i kliknij przycisk **wybierz**.  
+    3. Przewiń do **System.ServiceProcess.dll** i kliknij przycisk **wybierz**.  
   
-    4.  Kliknij przycisk **OK**.  
+    4. Kliknij przycisk **OK**.  
   
 2. Dodaj klasę i skonfiguruj ją, aby dziedziczyć <xref:System.ServiceProcess.ServiceBase>:  
   

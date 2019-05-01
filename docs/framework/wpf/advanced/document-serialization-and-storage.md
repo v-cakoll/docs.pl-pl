@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962737"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświetlanie dokumentów wysokiej jakości.  Ulepszone funkcje, które obsługują Naprawiono dokumenty i dokumenty przepływu, zaawansowane wyświetlania formantów, w połączeniu z zaawansowanych 2D i funkcje grafiki 3D aplikacji .NET Framework na nowy poziom jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem programu .NET Framework i możliwość efektywnie zapisywanie i ładowanie dokumentów z magazynu danych jest niezbędne do niemal wszystkich aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.  
@@ -24,19 +24,19 @@ Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświe
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>Funkcje programu .NET Framework 3.0 dokumentu serializatorów  
   
--   Bezpośredni dostęp do obiektów wysokiego poziomu dokumentu (drzewo logiczne i wizualizacje) umożliwiają wydajne magazynu z podziałem na strony zawartości, elementy 2D/3D, obrazy, media, hiperłącza, adnotacji i innej zawartości pomocy technicznej.  
+- Bezpośredni dostęp do obiektów wysokiego poziomu dokumentu (drzewo logiczne i wizualizacje) umożliwiają wydajne magazynu z podziałem na strony zawartości, elementy 2D/3D, obrazy, media, hiperłącza, adnotacji i innej zawartości pomocy technicznej.  
   
--   Operacja synchroniczne i asynchroniczne.  
+- Operacja synchroniczne i asynchroniczne.  
   
--   Pomoc techniczna dla dodatku plug-in serializatory z udoskonalonymi funkcjami:  
+- Pomoc techniczna dla dodatku plug-in serializatory z udoskonalonymi funkcjami:  
   
-    -   Dostęp do całego systemu dla wszystkich aplikacji .NET Framework.  
+    - Dostęp do całego systemu dla wszystkich aplikacji .NET Framework.  
   
-    -   Odnajdowanie wtyczki prostą aplikację.  
+    - Odnajdowanie wtyczki prostą aplikację.  
   
-    -   Proste wdrożenie, instalacji i aktualizacji dla niestandardowych wtyczek innych firm.  
+    - Proste wdrożenie, instalacji i aktualizacji dla niestandardowych wtyczek innych firm.  
   
-    -   Obsługa interfejsu użytkownika dla niestandardowych ustawień środowiska wykonawczego i opcje.  
+    - Obsługa interfejsu użytkownika dla niestandardowych ustawień środowiska wykonawczego i opcje.  
   
 ### <a name="xps-print-path"></a>Ścieżka wydruku XPS  
  Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku także rozszerzony mechanizm do zapisywania dokumentów za pośrednictwem wydruku danych wyjściowych.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Służy jako zarówno format pliku dokumentu i format natywnych buforu wydruku dla [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dokumenty, które mogą być wysyłane bezpośrednio do [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-zgodnymi drukarkami, bez potrzeby konwersji do formatu pośredniego.  Zobacz [Omówienie drukowania](printing-overview.md) dodatkowe informacje na temat opcji wyjściowych ścieżka wydruku i możliwości.  

@@ -10,11 +10,11 @@ ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908807"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Przewodnik: Korzystanie z przepływu danych w aplikacji Windows Forms
 W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które wykonują przetwarzania obrazów w aplikacji Windows Forms.  
@@ -29,13 +29,13 @@ W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które
 ## <a name="sections"></a>Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
   
--   [Tworzenie aplikacji Windows Forms](#winforms)  
+- [Tworzenie aplikacji Windows Forms](#winforms)  
   
--   [Tworzenie sieci przepływu danych](#network)  
+- [Tworzenie sieci przepływu danych](#network)  
   
--   [Proces łączenia dwóch sieci przepływu danych interfejsu użytkownika](#ui)  
+- [Proces łączenia dwóch sieci przepływu danych interfejsu użytkownika](#ui)  
   
--   [Kompletny przykład](#complete)  
+- [Kompletny przykład](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Tworzenie aplikacji Windows Forms  

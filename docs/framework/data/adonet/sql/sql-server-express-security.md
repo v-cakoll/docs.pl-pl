@@ -3,11 +3,11 @@ title: Bezpieczeństwo programu SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
 ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876788"
 ---
 # <a name="sql-server-express-security"></a>Bezpieczeństwo programu SQL Server Express
 Microsoft SQL Server Express Edition, (SQL Server Express) jest oparty na programie Microsoft SQL Server i obsługuje większość funkcji aparatu bazy danych. Zaprojektowano tak, aby mniej ważne funkcje i połączenie sieciowe są domyślnie wyłączone. Powoduje to zmniejszenie obszaru powierzchni dostępne ataku przez złośliwego użytkownika.  

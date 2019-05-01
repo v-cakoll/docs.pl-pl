@@ -82,11 +82,11 @@ helpviewer_keywords:
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
 ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802300"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funkcje konwersji typu (Visual Basic)
 Te funkcje są skompilowany w tekście, co oznacza, że kod konwersji jest częścią kodu, który oblicza wyrażenie. Czasami jest Brak wywołania do procedury wykonywania konwersji, co zwiększa wydajność. Każda funkcja przekształca wynik wyrażenia na określony typ danych.  
@@ -171,21 +171,21 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>Zachowanie  
   
--   **Wymuszenia.** Ogólnie rzecz biorąc można użyć funkcje konwersji typu danych można przekształcić wynik operacji do określonego typu danych, a nie domyślnym typem danych. Na przykład użyć `CDec` wymusić dziesiętna operacji arytmetycznych w przypadkach, w którym pojedynczej precyzji, podwójnej precyzji lub liczba całkowita arytmetyczne normalnie zajęłoby miejsce.  
+- **Wymuszenia.** Ogólnie rzecz biorąc można użyć funkcje konwersji typu danych można przekształcić wynik operacji do określonego typu danych, a nie domyślnym typem danych. Na przykład użyć `CDec` wymusić dziesiętna operacji arytmetycznych w przypadkach, w którym pojedynczej precyzji, podwójnej precyzji lub liczba całkowita arytmetyczne normalnie zajęłoby miejsce.  
   
--   **Konwersje nie powiodło się.** Jeśli `expression` przekazany do funkcji znajduje się poza zakresem typu danych, na który ma być przekonwertowany <xref:System.OverflowException> występuje.  
+- **Konwersje nie powiodło się.** Jeśli `expression` przekazany do funkcji znajduje się poza zakresem typu danych, na który ma być przekonwertowany <xref:System.OverflowException> występuje.  
   
--   **Ułamkowe.** Podczas konwertowania nonintegral wartość całkowita, liczba całkowita funkcje konwersji typu (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, i `CUShort`) Usuń ułamkową część i zaokrąglania wartości do najbliższej liczby całkowitej.  
+- **Ułamkowe.** Podczas konwertowania nonintegral wartość całkowita, liczba całkowita funkcje konwersji typu (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, i `CUShort`) Usuń ułamkową część i zaokrąglania wartości do najbliższej liczby całkowitej.  
   
      Jeśli część ułamkową jest dokładnie 0,5, funkcje konwersji liczby całkowitej czytelności warto je zaokrąglić do najbliższej parzystej liczby całkowitej. Na przykład 0,5 zaokrągla 0, i w wersji 1.5 2.5, które zarówno zaokrąglanie do 2. Jest to czasem nazywane *banker przez zaokrąglenie*, a jej celem jest, aby zrekompensować odchylenie, który może gromadzenie podczas dodawania wielu takich liczb ze sobą.  
   
      `CInt` i `CLng` różnią się od <xref:Microsoft.VisualBasic.Conversion.Int%2A> i <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funkcji, które truncate, zamiast zaokrąglanie część ułamkową liczby. Ponadto `Fix` i `Int` zawsze zwraca wartość typu danych, ponieważ są przekazywane w.  
   
--   **Data/Godzina konwersji.** Użyj <xref:Microsoft.VisualBasic.Information.IsDate%2A> funkcję, aby określić, jeśli można przekonwertować wartości do daty i godziny. `CDate` rozpoznaje literałów dat i godzin, ale wartości liczbowe nie. Aby przekonwertować Visual Basic 6.0 `Date` wartość, która `Date` wartość w języku Visual Basic 2005 lub nowszych wersjach można użyć <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> metody.  
+- **Data/Godzina konwersji.** Użyj <xref:Microsoft.VisualBasic.Information.IsDate%2A> funkcję, aby określić, jeśli można przekonwertować wartości do daty i godziny. `CDate` rozpoznaje literałów dat i godzin, ale wartości liczbowe nie. Aby przekonwertować Visual Basic 6.0 `Date` wartość, która `Date` wartość w języku Visual Basic 2005 lub nowszych wersjach można użyć <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> metody.  
   
--   **Niezależny od wartości daty/godziny.** [Date — typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md) zawsze zawiera informacje daty i godziny. W celu konwersji typu, Visual Basic traktuje 1/1/0001 (1 stycznia 1 rok) jako *neutralne wartość* dla daty i 00:00:00 (północ) jako neutralne wartość po raz. Po skonwertowaniu `Date` wartość na ciąg `CStr` nie zawiera neutralne wartości w ciągu wynikowym. Na przykład, jeśli można przekonwertować `#January 1, 0001 9:30:00#` na ciąg wyniku "9:30:00 AM"; informacje o dacie jest pomijane. Informacje o dacie jest jednak nadal znajdują się w oryginalnym `Date` wartości i można odzyskać za pomocą funkcji takich jak <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> funkcji.  
+- **Niezależny od wartości daty/godziny.** [Date — typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md) zawsze zawiera informacje daty i godziny. W celu konwersji typu, Visual Basic traktuje 1/1/0001 (1 stycznia 1 rok) jako *neutralne wartość* dla daty i 00:00:00 (północ) jako neutralne wartość po raz. Po skonwertowaniu `Date` wartość na ciąg `CStr` nie zawiera neutralne wartości w ciągu wynikowym. Na przykład, jeśli można przekonwertować `#January 1, 0001 9:30:00#` na ciąg wyniku "9:30:00 AM"; informacje o dacie jest pomijane. Informacje o dacie jest jednak nadal znajdują się w oryginalnym `Date` wartości i można odzyskać za pomocą funkcji takich jak <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> funkcji.  
   
--   **Czułość kultury.** Funkcje konwersji typu obejmujące ciągi wykonać konwersje w oparciu o bieżące ustawienia kultury w aplikacji. Na przykład `CDate` rozpoznaje formaty daty zgodnie z ustawieniami regionalnymi systemu. Należy podać dzień, miesiąc i rok w odpowiedniej kolejności dla ustawień regionalnych lub datę nie może zostać zinterpretowane poprawnie. Nie rozpoznano formatu daty długiej, jeśli zawiera ciąg, dzień tygodnia, taki jak "Środa".  
+- **Czułość kultury.** Funkcje konwersji typu obejmujące ciągi wykonać konwersje w oparciu o bieżące ustawienia kultury w aplikacji. Na przykład `CDate` rozpoznaje formaty daty zgodnie z ustawieniami regionalnymi systemu. Należy podać dzień, miesiąc i rok w odpowiedniej kolejności dla ustawień regionalnych lub datę nie może zostać zinterpretowane poprawnie. Nie rozpoznano formatu daty długiej, jeśli zawiera ciąg, dzień tygodnia, taki jak "Środa".  
   
      Jeśli musisz konwertować do lub z ciągu reprezentującego wartość w formacie innym niż ten, który został określony przez ustawienia regionalne, nie można użyć funkcje konwersji typu języka Visual Basic. Aby to zrobić, należy użyć `ToString(IFormatProvider)` i `Parse(String, IFormatProvider)` metod z typem tej wartości. Na przykład użyć <xref:System.Double.Parse%2A?displayProperty=nameWithType> podczas konwertowania ciągu do `Double`i użyj <xref:System.Double.ToString%2A?displayProperty=nameWithType> podczas konwertowania wartości typu `Double` na ciąg.  
   

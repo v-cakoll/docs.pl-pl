@@ -8,52 +8,52 @@ ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e88ba4260e9deaf53ae828f222d32f8ece61ffa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873343"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Wytyczne dotyczące tworzenia składników pod kątem wykonywania równoczesnego
 Wykonaj te ogólne wytyczne do tworzenia aplikacji zarządzanych lub składników przeznaczonych do wykonywania side-by-side:  
   
--   Typ tożsamości należy powiązać z określoną wersję pliku.  
+- Typ tożsamości należy powiązać z określoną wersję pliku.  
   
      Środowisko uruchomieniowe języka wspólnego wiąże tożsamość typ wersji danego pliku przy użyciu zestawów o silnych nazwach. Aby utworzyć aplikację lub składnik do wykonania side-by-side, musisz udzielić wszystkich zestawów silną nazwą. Umożliwia utworzenie tożsamości typu dokładne i zapewnia, że wszystkie rozwiązania typu jest kierowane do prawidłowego pliku. Zestawu z silną nazwą zawiera wersji, kultury i informacje o wydawcy, że środowisko wykonawcze używa do zlokalizowania odpowiedniego pliku do spełnienia żądania powiązania.  
   
--   Usługa storage rozpoznający wersje.  
+- Usługa storage rozpoznający wersje.  
   
      Środowisko wykonawcze używa globalnej pamięci podręcznej, aby zapewnić rozpoznający wersje magazynu. Global assembly cache to struktura katalogu rozpoznający wersje zainstalowane na każdym komputerze, który używa programu .NET Framework. Po zainstalowaniu nowej wersji tego zestawu, nie są zastępowane zainstalowanych w globalnej pamięci podręcznej zestawów.  
   
--   Utwórz aplikację lub składnik, który działa w izolacji.  
+- Utwórz aplikację lub składnik, który działa w izolacji.  
   
      Aplikacja lub składnik, który działa w izolacji muszą zarządzać zasobami w celu uniknięcia konfliktów, jeśli jednocześnie jest uruchomionych dwa wystąpienia aplikacji lub składnika. Aplikacja lub składnik należy również użyć struktury specyficzny dla wersji plików.  
   
 ## <a name="application-and-component-isolation"></a>Aplikacji i składników izolacji  
  Jeden klucz do pomyślnie projektowania aplikacji lub składnika do wykonania side-by-side jest izolacji. Aplikacja lub składnik musi zarządzanie wszystkimi zasobami, szczególnie plików we/wy, w sposób izolowany. Należy przestrzegać następujących wytycznych, aby upewnić się, że Twoja aplikacja lub składnik działa w izolacji:  
   
--   Wpisywanie do rejestru, w sposób specyficzny dla wersji. Store wartości w gałęzi lub klucze, które wskazują wersji i nie należy udostępniać informacje lub stan różnych wersji składnika. Zapobiega to dwie aplikacje lub składniki działające w tym samym czasie, informacje o zastępowaniu.  
+- Wpisywanie do rejestru, w sposób specyficzny dla wersji. Store wartości w gałęzi lub klucze, które wskazują wersji i nie należy udostępniać informacje lub stan różnych wersji składnika. Zapobiega to dwie aplikacje lub składniki działające w tym samym czasie, informacje o zastępowaniu.  
   
--   Wprowadź nazwany jądra obiektów specyficznych dla wersji, tak aby sytuacji wyścigu, która nie występuje. Na przykład sytuacja wyścigu występuje, gdy dwa semaforów z dwie wersje tej samej aplikacji czekać na siebie nawzajem.  
+- Wprowadź nazwany jądra obiektów specyficznych dla wersji, tak aby sytuacji wyścigu, która nie występuje. Na przykład sytuacja wyścigu występuje, gdy dwa semaforów z dwie wersje tej samej aplikacji czekać na siebie nawzajem.  
   
--   Wprowadź nazwy plików i katalogów rozpoznający wersje. Oznacza to, że struktury pliku należy polegać na informacje o wersji.  
+- Wprowadź nazwy plików i katalogów rozpoznający wersje. Oznacza to, że struktury pliku należy polegać na informacje o wersji.  
   
--   Tworzenie kont użytkowników i grup w sposób specyficzny dla wersji. Konta użytkowników i grup utworzonych przez aplikację, powinny być określone przez wersję. Nie należy udostępniać konta użytkowników i grupy między wersjami aplikacji.  
+- Tworzenie kont użytkowników i grup w sposób specyficzny dla wersji. Konta użytkowników i grup utworzonych przez aplikację, powinny być określone przez wersję. Nie należy udostępniać konta użytkowników i grupy między wersjami aplikacji.  
   
 ## <a name="installing-and-uninstalling-versions"></a>Instalowanie i odinstalowywanie wersji  
  Podczas projektowania aplikacji do wykonywania side-by-side, wykonaj te wytyczne dotyczące instalowania i odinstalowywania wersji:  
   
--   Nie należy usuwać informacji z rejestru, który może być wymagany przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
+- Nie należy usuwać informacji z rejestru, który może być wymagany przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
   
--   Nie należy wymieniać informacje w rejestrze, który może być wymagany przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
+- Nie należy wymieniać informacje w rejestrze, który może być wymagany przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
   
--   Nie wyrejestrować składników COM, które mogą być potrzebne przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
+- Nie wyrejestrować składników COM, które mogą być potrzebne przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
   
--   Nie zmieniaj **InprocServer32** lub inne wpisy rejestru dotyczące serwera COM, który został już zarejestrowany.  
+- Nie zmieniaj **InprocServer32** lub inne wpisy rejestru dotyczące serwera COM, który został już zarejestrowany.  
   
--   Nie należy usuwać konta użytkowników lub grupy, które mogą być potrzebne przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
+- Nie należy usuwać konta użytkowników lub grupy, które mogą być potrzebne przez inne aplikacje uruchomione w innej wersji programu .NET Framework.  
   
--   Nie należy dodawać żadnych w rejestrze, który zawiera ścieżkę wycofanie.  
+- Nie należy dodawać żadnych w rejestrze, który zawiera ścieżkę wycofanie.  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>Numer wersji pliku i numer wersji zestawu  
  Wersja pliku jest zasób wersji Win32, który nie jest używany w czasie wykonywania. Ogólnie rzecz biorąc należy zaktualizować wersję pliku, nawet w przypadku aktualizację w miejscu. Dwie identyczne pliki mogą zawierać informacje o wersji inny plik i dwóch różnych plikach może mieć te same informacje o wersji pliku.  

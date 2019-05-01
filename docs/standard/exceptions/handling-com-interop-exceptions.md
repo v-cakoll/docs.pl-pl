@@ -12,11 +12,11 @@ ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970940"
 ---
 # <a name="handling-com-interop-exceptions"></a>Obsługa wyjątków międzyoperacyjności COM
 Zarządzanego i niezarządzanego kodu mogą współpracować ze sobą, aby obsłużyć wyjątki. Jeśli metoda zgłasza wyjątek w kodzie zarządzanym, środowisko uruchomieniowe języka wspólnego może przekazywać wartość HRESULT do obiektu COM. Jeśli metoda nie powiedzie się w niezarządzanym kodzie, zwracając błąd HRESULT, środowisko wykonawcze zgłasza wyjątek, który może zostać przechwycony przez kod zarządzany.  

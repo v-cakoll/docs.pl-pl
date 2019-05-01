@@ -8,11 +8,11 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
 ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864343"
 ---
 # <a name="extension-methods-visual-basic"></a>Metody rozszerzeń (Visual Basic)
 Metody rozszerzające umożliwiają programistom dodawanie niestandardowych funkcji do typów danych, które są już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzające umożliwiają napisanie metody, która może być wywoływany tak, jakby jego była wystąpieniem metody istniejącego typu.  
@@ -93,19 +93,19 @@ End Module
 ## <a name="types-that-can-be-extended"></a>Typy, które mogą zostać rozszerzone  
  Można zdefiniować metodę rozszerzenia w większości typów, które mogą być reprezentowane w liście parametrów języka Visual Basic, takie jak następujące:  
   
--   Klasy (typy odwołań)  
+- Klasy (typy odwołań)  
   
--   Struktury (typy wartości)  
+- Struktury (typy wartości)  
   
--   Interfejsy  
+- Interfejsy  
   
--   Delegaty  
+- Delegaty  
   
--   Argumenty ByRef i ByVal  
+- Argumenty ByRef i ByVal  
   
--   Parametry metody ogólnej  
+- Parametry metody ogólnej  
   
--   Tablice  
+- Tablice  
   
  Ponieważ pierwszy parametr określa typ danych, który rozszerza metoda rozszerzenia, jest wymagana i nie może być opcjonalny. Z tego powodu `Optional` parametrów i `ParamArray` parametrów nie może być pierwszym parametrem na liście parametrów.  
   
@@ -118,15 +118,15 @@ End Module
   
  Najogólniej mówiąc metody rozszerzenia, które można dodać do typów, które nie są jego własnością są bardziej narażone niż metody rozszerzające dodane do typów, które możesz kontrolować. Kilka rzeczy, może wystąpić w klasach, których nie jesteś właścicielem, które mogą zakłócać Twoje rozszerzenia metody.  
   
--   Jeśli istnieje jakikolwiek dostępny członek wystąpienia, który ma podpis, który jest zgodny z argumentami w instrukcji wywołujące, bez konwersji zawężającej wymaganej od argumentu do parametru, metoda wystąpienia będą używane zamiast dowolnej metody. W związku z tym jeśli odpowiednia metoda wystąpienia jest dodawany do klasy w jakimś momencie, istniejący element członkowski rozszerzenia, które korzystają z może stać się niedostępny.  
+- Jeśli istnieje jakikolwiek dostępny członek wystąpienia, który ma podpis, który jest zgodny z argumentami w instrukcji wywołujące, bez konwersji zawężającej wymaganej od argumentu do parametru, metoda wystąpienia będą używane zamiast dowolnej metody. W związku z tym jeśli odpowiednia metoda wystąpienia jest dodawany do klasy w jakimś momencie, istniejący element członkowski rozszerzenia, które korzystają z może stać się niedostępny.  
   
--   Autor metody rozszerzenia nie może uniemożliwić innym programistom od pisania niezgodnych metod rozszerzeń, które mogą mieć pierwszeństwo nad oryginalnym rozszerzeniem.  
+- Autor metody rozszerzenia nie może uniemożliwić innym programistom od pisania niezgodnych metod rozszerzeń, które mogą mieć pierwszeństwo nad oryginalnym rozszerzeniem.  
   
--   Możesz ulepszyć odporność umieszczając metody rozszerzeń w ich przestrzeniach nazw. Konsumenci biblioteki mogą następnie włączyć obszar nazw lub go wykluczyć lub wybrać wśród obszarów nazw, niezależnie od pozostałej części biblioteki.  
+- Możesz ulepszyć odporność umieszczając metody rozszerzeń w ich przestrzeniach nazw. Konsumenci biblioteki mogą następnie włączyć obszar nazw lub go wykluczyć lub wybrać wśród obszarów nazw, niezależnie od pozostałej części biblioteki.  
   
--   Bezpieczniejsze może być rozszerzenie interfejsów niż rozszerzenie klas, zwłaszcza, jeśli nie posiadasz interfejsu lub klasy. Zmiany w interfejsie dotyczą każdej klasy, która implementuje go. W związku z tym Autor może być mniej prawdopodobne dodać lub zmienić metodę w interfejsie. Jeśli jednak klasa implementuje dwa interfejsy, które mają metodę rozszerzającą o tej samej sygnaturze, żadna metoda rozszerzenia jest widoczne.  
+- Bezpieczniejsze może być rozszerzenie interfejsów niż rozszerzenie klas, zwłaszcza, jeśli nie posiadasz interfejsu lub klasy. Zmiany w interfejsie dotyczą każdej klasy, która implementuje go. W związku z tym Autor może być mniej prawdopodobne dodać lub zmienić metodę w interfejsie. Jeśli jednak klasa implementuje dwa interfejsy, które mają metodę rozszerzającą o tej samej sygnaturze, żadna metoda rozszerzenia jest widoczne.  
   
--   Rozszerz najbardziej szczegółowy typ. możesz. W hierarchii typów, w przypadku wybrania typu, od których pochodzą wiele innych typów, istnieją warstwy możliwości wprowadzenia metod instancji lub innych metod rozszerzających, które mogą kolidować z Twoimi.  
+- Rozszerz najbardziej szczegółowy typ. możesz. W hierarchii typów, w przypadku wybrania typu, od których pochodzą wiele innych typów, istnieją warstwy możliwości wprowadzenia metod instancji lub innych metod rozszerzających, które mogą kolidować z Twoimi.  
   
 ## <a name="extension-methods-instance-methods-and-properties"></a>Metody rozszerzające, wystąpienia metod i właściwości  
  Gdy w zakresie metoda wystąpień posiada oznaczenie, które są zgodne z argumentami instrukcji wywołania, metoda wystąpienia jest wybierana mieszcząca wszystkich metod rozszerzenia. Metoda instancji ma pierwszeństwo, nawet jeśli metoda rozszerzenia ma lepsze dopasowanie. W poniższym przykładzie `ExampleClass` zawiera metodę instancji o nazwie `ExampleMethod` posiadającą jeden parametr typu `Integer`. Metoda rozszerzenia `ExampleMethod` rozszerza `ExampleClass`, i ma jeden parametr typu `Long`.  

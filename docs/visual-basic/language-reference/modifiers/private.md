@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
 ms.openlocfilehash: d6e28e5e87c3a88e4db3fc81177894683dbb0908
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920448"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie ich kontekst deklaracji, łącznie z w obrębie wszystkich typów zawartych.  
@@ -25,13 +25,13 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
 
 ## <a name="rules"></a>reguły  
 
--   **Kontekst deklaracji.** Możesz użyć `Private` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji `Private` elementu musi być modułu, klasy lub struktury, a nie może być plikiem źródłowym, przestrzeń nazw, interfejs lub procedury.  
+- **Kontekst deklaracji.** Możesz użyć `Private` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji `Private` elementu musi być modułu, klasy lub struktury, a nie może być plikiem źródłowym, przestrzeń nazw, interfejs lub procedury.  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Poziom dostępu.** Cały kod w kontekście deklaracji mogą uzyskiwać dostęp do jego `Private` elementów. W tym kodu w ramach zamkniętego typu, na przykład klasa zagnieżdżona lub wyrażenia przypisania w wyliczeniu. Żaden kod poza kontekstem deklaracji mogą uzyskiwać dostęp do jego `Private` elementów.  
+- **Poziom dostępu.** Cały kod w kontekście deklaracji mogą uzyskiwać dostęp do jego `Private` elementów. W tym kodu w ramach zamkniętego typu, na przykład klasa zagnieżdżona lub wyrażenia przypisania w wyliczeniu. Żaden kod poza kontekstem deklaracji mogą uzyskiwać dostęp do jego `Private` elementów.  
   
--   **Modyfikatory dostępu.** Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. Dla porównania modyfikatory dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Modyfikatory dostępu.** Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. Dla porównania modyfikatory dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Private` Modyfikator mogą być używane w tych kontekstach:  
   

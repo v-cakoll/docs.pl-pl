@@ -5,11 +5,11 @@ ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871514"
 ---
 # <a name="mitigation-path-normalization"></a>Środki zaradcze: Ścieżka normalizacji
 Począwszy od aplikacji docelowej [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zmienił ścieżkę normalizacji w programie .NET Framework.  
@@ -17,26 +17,26 @@ Począwszy od aplikacji docelowej [!INCLUDE[net_v462](../../../includes/net-v462
 ## <a name="what-is-path-normalization"></a>Co to jest ścieżka normalizacji?  
  Normalizowanie ścieżką obejmuje modyfikuje ciąg, który identyfikuje pliku lub ścieżki, tak aby odpowiada prawidłowej ścieżki, na docelowy system operacyjny. Normalizacja zwykle obejmuje:  
   
--   Przekształcania w formę kanoniczną separatory składnika i katalog.  
+- Przekształcania w formę kanoniczną separatory składnika i katalog.  
   
--   Stosowanie bieżący katalog do ścieżki względnej.  
+- Stosowanie bieżący katalog do ścieżki względnej.  
   
--   Ocena względna katalogu (`.`) lub katalogu nadrzędnego (`..`) w ścieżce.  
+- Ocena względna katalogu (`.`) lub katalogu nadrzędnego (`..`) w ścieżce.  
   
--   Przycinanie określonych znaków.  
+- Przycinanie określonych znaków.  
   
 ## <a name="the-changes"></a>Zmiany  
  Począwszy od aplikacji, których platformą docelową [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zmienił ścieżkę normalizacji w następujący sposób:  
   
--   Środowisko uruchomieniowe różni się w systemie operacyjnym [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) funkcję, aby znormalizować ścieżki.  
+- Środowisko uruchomieniowe różni się w systemie operacyjnym [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) funkcję, aby znormalizować ścieżki.  
   
--   Nie jest już normalizacji obejmuje przycinania koniec segmentów katalogu (np. miejsce na końcu nazwy katalogu).  
+- Nie jest już normalizacji obejmuje przycinania koniec segmentów katalogu (np. miejsce na końcu nazwy katalogu).  
   
--   Obsługa składnia ścieżki urządzenia w trybie pełnego zaufania, w tym `\\.\` a w przypadku plikowych interfejsów API we/wy w mscorlib.dll, `\\?\`.  
+- Obsługa składnia ścieżki urządzenia w trybie pełnego zaufania, w tym `\\.\` a w przypadku plikowych interfejsów API we/wy w mscorlib.dll, `\\?\`.  
   
--   Środowisko wykonawcze nie można zweryfikować ścieżki składni urządzeń.  
+- Środowisko wykonawcze nie można zweryfikować ścieżki składni urządzeń.  
   
--   Użycie składni urządzenia do uzyskania dostępu alternatywne strumienie danych jest obsługiwane.  
+- Użycie składni urządzenia do uzyskania dostępu alternatywne strumienie danych jest obsługiwane.  
   
 ## <a name="impact"></a>Wpływ  
  W przypadku aplikacji, których platformą docelową [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] lub nowszym, te zmiany są domyślnie włączone. One należy poprawić wydajność podczas gdy metody dostępu do ścieżki niedostępnych wcześniej.  

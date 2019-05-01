@@ -3,23 +3,23 @@ title: Śledzenie działania w ramach zabezpieczeń komunikatów
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912655"
 ---
 # <a name="activity-tracing-in-message-security"></a>Śledzenie działania w ramach zabezpieczeń komunikatów
 W tym temacie opisano śledzenie aktywności dla przetwarzania zabezpieczeń, co się stanie w następujące trzy etapy.  
   
--   Negocjowanie/SCT programu exchange. Może to nastąpić transportu (przez dane binarne exchange) lub warstwy komunikat (za pośrednictwem wymiany komunikatów protokołu SOAP).  
+- Negocjowanie/SCT programu exchange. Może to nastąpić transportu (przez dane binarne exchange) lub warstwy komunikat (za pośrednictwem wymiany komunikatów protokołu SOAP).  
   
--   Komunikat operacji szyfrowania i odszyfrowywania, za pomocą uwierzytelniania i weryfikacji podpisu. Ślady są wyświetlane w działaniu, otoczenia, zazwyczaj "Action procesu".  
+- Komunikat operacji szyfrowania i odszyfrowywania, za pomocą uwierzytelniania i weryfikacji podpisu. Ślady są wyświetlane w działaniu, otoczenia, zazwyczaj "Action procesu".  
   
--   Autoryzacja i weryfikacji. Można to zrobić, lokalnie lub gdy komunikacja między punktami końcowymi.  
+- Autoryzacja i weryfikacji. Można to zrobić, lokalnie lub gdy komunikacja między punktami końcowymi.  
   
 ## <a name="negotiationsct-exchange"></a>Negocjowanie/SCT programu exchange  
- W fazie exchange negocjowania/SCT dwa typy działań są tworzone na komputerze klienckim: "Ustaw się zabezpieczyć sesja" i "Zamknij bezpiecznej sesji." "Konfigurowanie Secure sesji" obejmuje śladów RST/RSTR/SCT wymianę komunikatów, gdy "Zamknij sesję Secure" zawiera dane śledzenia dla komunikatu Anuluj.  
+ W fazie exchange negocjowania/SCT tworzone są dwa typy działań na komputerze klienckim: "Konfigurowanie Secure sesja" i "Close bezpiecznej sesji." "Konfigurowanie Secure sesji" obejmuje śladów RST/RSTR/SCT wymianę komunikatów, gdy "Zamknij sesję Secure" zawiera dane śledzenia dla komunikatu Anuluj.  
   
  Na serwerze każdego żądanie/nietypizowana odpowiedź dla RST/RSTR/SCT pojawia się w swoje własne działania. Jeśli `propagateActivity` = `true` na serwer i klienta, mają taki sam identyfikator działania na serwerze i pojawiają się razem w "Ustawienia zabezpieczenia sesji" podczas wyświetlania za pośrednictwem przeglądarki danych śledzenia usługi.  
   

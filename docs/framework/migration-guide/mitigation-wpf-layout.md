@@ -5,11 +5,11 @@ ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f81af76ed305fb614202c240e449adc62b310933
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871247"
 ---
 # <a name="mitigation-wpf-layout"></a>Środki zaradcze: Układ platformy WPF
 Nieco zmienić układ kontrolek WPF.  
@@ -17,11 +17,11 @@ Nieco zmienić układ kontrolek WPF.
 ## <a name="impact"></a>Wpływ  
  W wyniku tej zmiany:  
   
--   Szerokość lub wysokość elementów może zwiększać i zmniejszać co najwyżej jeden piksel.  
+- Szerokość lub wysokość elementów może zwiększać i zmniejszać co najwyżej jeden piksel.  
   
--   Położenie obiektu można przenieść co najwyżej jeden piksel.  
+- Położenie obiektu można przenieść co najwyżej jeden piksel.  
   
--   Wyśrodkowany elementy mogą być w pionie lub w poziomie, od środka co najwyżej jeden piksel.  
+- Wyśrodkowany elementy mogą być w pionie lub w poziomie, od środka co najwyżej jeden piksel.  
   
  Domyślnie ten nowy układ jest włączona tylko dla aplikacji przeznaczonych dla platformy .NET Framework 4.6.  
   

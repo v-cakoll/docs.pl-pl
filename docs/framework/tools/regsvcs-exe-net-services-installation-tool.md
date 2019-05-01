@@ -12,20 +12,20 @@ ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919547"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Narzędzie instalacji usług .NET)
 Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:  
   
--   Ładuje i rejestruje zestawy.  
+- Ładuje i rejestruje zestawy.  
   
--   Generuje, rejestruje i instaluje biblioteki typów w określonej aplikacji COM+.  
+- Generuje, rejestruje i instaluje biblioteki typów w określonej aplikacji COM+.  
   
--   Konfiguruje usługi, które zostały programowo dodane do klasy użytkownika.  
+- Konfiguruje usługi, które zostały programowo dodane do klasy użytkownika.  
   
  Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   

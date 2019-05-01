@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907390"
 ---
 # <a name="composite-data-types-visual-basic"></a>Złożone typy danych (Visual Basic)
 Oprócz danych podstawowych typów języka Visual Basic dostaw, również można grupować elementy o różnych typach, aby utworzyć *złożone typy danych* takich jak klasy, tablic i struktur. Możesz tworzyć złożone typy danych, z typów podstawowych i z innych typów złożonych. Na przykład można zdefiniować tablicę elementy struktury lub struktury z tablicy elementów członkowskich.  
@@ -36,11 +36,11 @@ Spójna Kolekcja to lekki strukturę, która zawiera dwa lub więcej pól, któr
 ## <a name="array-types"></a>Typy tablic  
  Nie ma żadnych single — typ danych wchodzących w skład wszystkich tablic. Typ danych konkretnego wystąpienia tablicy jest określana przez następujące elementy:  
   
--   Fakt jest tablicą  
+- Fakt jest tablicą  
   
--   Ranga tablicy (liczba wymiarów)  
+- Ranga tablicy (liczba wymiarów)  
   
--   Typ elementu tablicy  
+- Typ elementu tablicy  
   
  W szczególności długość danego wymiaru nie jest częścią typu danych wystąpienia. Ilustruje to poniższy przykład.  
   

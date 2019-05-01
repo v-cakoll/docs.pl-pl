@@ -11,11 +11,11 @@ ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919378"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Narzędzie wydzielonej pamięci masowej)
 Narzędzie Isolated Storage obsługujące izolowane magazyny wyświetla lub usuwa wszystkie istniejące magazyny bieżącego użytkownika.  
@@ -49,11 +49,11 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Aplikacje można zapisać do jednego z dwóch magazynów użytkownika lub do magazynu komputera:  
   
--   Magazyn lokalny istnieje w lokalizacji, która może się nie korzystać z roamingu (w systemie operacyjnym Windows 2000 i nowszych), nawet jeśli roaming danych jest włączone dla danego użytkownika.  
+- Magazyn lokalny istnieje w lokalizacji, która może się nie korzystać z roamingu (w systemie operacyjnym Windows 2000 i nowszych), nawet jeśli roaming danych jest włączone dla danego użytkownika.  
   
--   Mobilny magazyn istnieje w lokalizacji, która jest w stanie korzystać z roamingu, ale tylko w przypadku, gdy roaming jest włączony dla użytkownika za pośrednictwem administracji systemu Windows NT.  
+- Mobilny magazyn istnieje w lokalizacji, która jest w stanie korzystać z roamingu, ale tylko w przypadku, gdy roaming jest włączony dla użytkownika za pośrednictwem administracji systemu Windows NT.  
   
--   Magazyn komputera jest wspólny dla wszystkich użytkowników komputera i jest przechowywany we wspólnym katalogu na tym komputerze.  
+- Magazyn komputera jest wspólny dla wszystkich użytkowników komputera i jest przechowywany we wspólnym katalogu na tym komputerze.  
   
     > [!NOTE]
     >  Magazyn komputera jest nowy w programie .NET Framework w wersji 2.0.  

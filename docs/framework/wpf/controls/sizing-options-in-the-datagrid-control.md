@@ -7,11 +7,11 @@ helpviewer_keywords:
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
 ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970992"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Opcje ustalania rozmiaru w formancie DataGrid
 Różne opcje są dostępne do kontroli sposób, w jaki <xref:System.Windows.Controls.DataGrid> rozciąga się. <xref:System.Windows.Controls.DataGrid>, A poszczególne wiersze i kolumny w <xref:System.Windows.Controls.DataGrid>, można ustawić rozmiar automatycznie, aby ich zawartość lub może być ustawiona na określone wartości. Domyślnie <xref:System.Windows.Controls.DataGrid> będzie rosnąć i Dopasuj przez zmniejszenie rozmiaru jego zawartość.  

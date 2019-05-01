@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
 ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913929"
 ---
 # <a name="how-to-start-services"></a>Instrukcje: Uruchamianie usług
 Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody w klasie usługi. Zazwyczaj <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda definiuje przydatnej pracy, wykona usługi. Po uruchomieniu usługi pozostaje aktywne do czasu jest ręcznie wstrzymana lub zatrzymana.  
@@ -58,11 +58,11 @@ Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:Sys
   
 1. Otwórz **Menedżera sterowania usługami** , wykonując jedną z następujących czynności:  
   
-    -   Windows XP lub 2000 Professional, kliknij prawym przyciskiem myszy **Mój komputer** na pulpicie, a następnie kliknij **Zarządzaj**. W oknie dialogowym Rozwiń **usługi i aplikacje** węzła.  
+    - Windows XP lub 2000 Professional, kliknij prawym przyciskiem myszy **Mój komputer** na pulpicie, a następnie kliknij **Zarządzaj**. W oknie dialogowym Rozwiń **usługi i aplikacje** węzła.  
   
          \- lub —  
   
-    -   W systemie Windows Server 2003 i Windows 2000 Server, kliknij przycisk **Start**, wskaż polecenie **programy**, kliknij przycisk **narzędzia administracyjne**, a następnie kliknij przycisk **usług**.  
+    - W systemie Windows Server 2003 i Windows 2000 Server, kliknij przycisk **Start**, wskaż polecenie **programy**, kliknij przycisk **narzędzia administracyjne**, a następnie kliknij przycisk **usług**.  
   
         > [!NOTE]
         >  W Windows NT 4.0, możesz otworzyć to okno dialogowe z **Panelu sterowania**.  

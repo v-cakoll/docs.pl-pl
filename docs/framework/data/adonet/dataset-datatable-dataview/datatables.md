@@ -3,11 +3,11 @@ title: Elementy DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880003"
 ---
 # <a name="datatables"></a>Elementy DataTable
 A <xref:System.Data.DataSet> składa się z kolekcją tabel, relacje i ograniczenia. W ADO.NET <xref:System.Data.DataTable> obiekty są używane do reprezentowania tabel w **zestawu danych**. A **DataTable** reprezentuje jedną tabelę danych relacyjnych w pamięci; dane są lokalne. Aplikacja oparta na NET, w którym to znajduje się, ale mogą zostać wypełnione ze źródła danych, takich jak Microsoft SQL Server przy użyciu **DataAdapter** Aby uzyskać więcej informacji, zobacz [wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  

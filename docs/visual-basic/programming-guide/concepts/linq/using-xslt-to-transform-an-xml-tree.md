@@ -3,11 +3,11 @@ title: Przy użyciu drzewa XML (Visual Basic) transformacji XSLT
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
 ms.openlocfilehash: a013e042bcaab321d8a5596368c349f296240d0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908157"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Przy użyciu drzewa XML (Visual Basic) transformacji XSLT
 Można utworzyć drzewa XML, tworzenie <xref:System.Xml.XmlReader> z drzewa XML Utwórz nowy dokument, a następnie utwórz <xref:System.Xml.XmlWriter> która będzie zapisywała do nowego dokumentu. Następnie możesz wywołać transformację XSLT, przekazując <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> do przekształcania. Po pomyślnym ukończeniu przekształcenie nowego drzewa XML jest wypełniana wyniki przekształcenia.  

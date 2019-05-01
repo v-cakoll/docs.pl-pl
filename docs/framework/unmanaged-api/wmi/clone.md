@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf9cca10a580af7991889de6993e931347fc27ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968158"
 ---
 # <a name="clone-function"></a>Clone, funkcja
 Zwraca nowy obiekt, który jest kompletny klonowania bieżącego obiektu.   

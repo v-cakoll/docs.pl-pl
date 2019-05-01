@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918453"
 ---
 # <a name="long-data-type-visual-basic"></a>Long — typ danych (Visual Basic)
 
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
 
--   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, pamiętaj, że `Long` ma różną szerokość danych (32-bitowy) w innych środowiskach. Jeśli przekazujesz 32-bitowy argument do takiego składnika, Zadeklaruj go jako `Integer` zamiast `Long` nowego kodu języka Visual Basic.  
+- **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, pamiętaj, że `Long` ma różną szerokość danych (32-bitowy) w innych środowiskach. Jeśli przekazujesz 32-bitowy argument do takiego składnika, Zadeklaruj go jako `Integer` zamiast `Long` nowego kodu języka Visual Basic.  
   
--   **Rozszerzanie.** `Long` — Typ danych rozszerza się na `Decimal`, `Single`, lub `Double`. Oznacza to, że możesz przekonwertować `Long` do jednej z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzanie.** `Long` — Typ danych rozszerza się na `Decimal`, `Single`, lub `Double`. Oznacza to, że możesz przekonwertować `Long` do jednej z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Znaki typu.** Dołączanie znaku typu literał `L` do literału wymusza `Long` typu danych. Dołączanie znaku typu identyfikator `&` do jakiegokolwiek identyfikatora wymusza `Long`.  
+- **Znaki typu.** Dołączanie znaku typu literał `L` do literału wymusza `Long` typu danych. Dołączanie znaku typu identyfikator `&` do jakiegokolwiek identyfikatora wymusza `Long`.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Int64?displayProperty=nameWithType> struktury.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Int64?displayProperty=nameWithType> struktury.  
 
 ## <a name="see-also"></a>Zobacz także
 

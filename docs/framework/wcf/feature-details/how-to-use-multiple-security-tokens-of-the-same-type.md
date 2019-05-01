@@ -6,13 +6,13 @@ ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972838"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Instrukcje: używanie wielu tokenów zabezpieczeń tego samego typu
--   W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, token wiadomość tylko jeden zawartej klienta dla dowolnego typu. Teraz komunikatów klienta może zawierać wiele tokenów typu. W tym temacie pokazano jak dołączyć wielu tokenów tego samego typu w komunikacie klienta.  
+- W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, token wiadomość tylko jeden zawartej klienta dla dowolnego typu. Teraz komunikatów klienta może zawierać wiele tokenów typu. W tym temacie pokazano jak dołączyć wielu tokenów tego samego typu w komunikacie klienta.  
   
--   Należy pamiętać, że nie można skonfigurować usługi w ten sposób: usługa może zawierać tylko jeden token pomocniczy.  
+- Należy pamiętać, że nie można skonfigurować usługi w ten sposób: usługa może zawierać tylko jeden token pomocniczy.  
   
 ### <a name="to-use-multiple-security-tokens-of-the-same-type"></a>Aby użyć wielu tokenów zabezpieczeń tego samego typu  
   

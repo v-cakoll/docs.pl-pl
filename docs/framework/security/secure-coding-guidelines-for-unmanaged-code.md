@@ -10,11 +10,11 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951713"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu
 Kod biblioteki musi wywoływać kod niezarządzany (na przykład kodu natywnego interfejsów API, taką jak system Win32). Ponieważ oznacza to, że zewnętrzne obwodu zabezpieczeń dla kodu zarządzanego, właściwym Uwaga jest wymagana. Jeśli swój kod neutralnym poziomie bezpieczeństwa, zarówno kod, jak i wszelki kod, który ją wywołuje musi mieć niezarządzanych uprawnień kodu (<xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> określono flagę).  
@@ -25,9 +25,9 @@ Kod biblioteki musi wywoływać kod niezarządzany (na przykład kodu natywnego 
   
  Ponieważ dowolnego kodu zarządzanego, który zawiera ścieżkę kodu do kodu macierzystego potencjalnych celów dla złośliwego kodu, określania niezarządzanego kodu można go bezpiecznie używać i jak należy użyć wymaga rozwagą. Ogólnie rzecz biorąc kodem niezarządzanym powinno nigdy bezpośrednio uwidaczniać częściowo zaufanych wywołań. Istnieją dwa podstawowych zagadnień podczas oceny bezpieczeństwa użytkowania kodu niezarządzanego w bibliotekach, które są wywoływane przez częściowo zaufany kod:  
   
--   **Funkcje**. Niezarządzany interfejs API zapewnia funkcje, które nie zezwala na obiekty wywołujące do wykonywania operacji potencjalnie niebezpiecznych? Zabezpieczenia dostępu kodu używa uprawnień do wymuszenia dostępu do zasobów, dlatego należy rozważyć czy interfejs API korzysta z plików, interfejs użytkownika lub wątkowości, lub czy uwidacznia on informacje chronione. Jeśli tak jest, kod zarządzany, zawijanie go musi popytu niezbędne uprawnienia przed zezwoleniem na jego ma zostać nawiązane. Ponadto gdy nie są chronione przez uprawnienia, dostęp do pamięci musi być ograniczone do ścisłe zasady bezpieczeństwa.  
+- **Funkcje**. Niezarządzany interfejs API zapewnia funkcje, które nie zezwala na obiekty wywołujące do wykonywania operacji potencjalnie niebezpiecznych? Zabezpieczenia dostępu kodu używa uprawnień do wymuszenia dostępu do zasobów, dlatego należy rozważyć czy interfejs API korzysta z plików, interfejs użytkownika lub wątkowości, lub czy uwidacznia on informacje chronione. Jeśli tak jest, kod zarządzany, zawijanie go musi popytu niezbędne uprawnienia przed zezwoleniem na jego ma zostać nawiązane. Ponadto gdy nie są chronione przez uprawnienia, dostęp do pamięci musi być ograniczone do ścisłe zasady bezpieczeństwa.  
   
--   **Sprawdzanie parametrów**. Typowe przebiegów ataku nieoczekiwany parametry, aby widoczne metod kodu niezarządzanego interfejsu API w celu podjęcia próby spowoduje ich działają poza specyfikacji. Przy użyciu indeksu spoza zakresu przekroczenia buforu lub wartości przesunięcia są jednym z typowych przykładów ten rodzaj ataku, są wszystkie parametry, które mogą wykorzystać usterki w kodzie podstawowym. W związku z tym nawet jeśli kodu niezarządzanego interfejsu API jest funkcjonalnie bezpieczne (po niezbędne wymagania) dla częściowo zaufanego obiektów wywołujących, zarządzane kodu musi również wyboru parametr ważności wyczerpująco, aby upewnić się, że nie wywołuje niepożądanych możliwe od złośliwego kodu za pomocą zarządzanych Kod otoki warstwy.  
+- **Sprawdzanie parametrów**. Typowe przebiegów ataku nieoczekiwany parametry, aby widoczne metod kodu niezarządzanego interfejsu API w celu podjęcia próby spowoduje ich działają poza specyfikacji. Przy użyciu indeksu spoza zakresu przekroczenia buforu lub wartości przesunięcia są jednym z typowych przykładów ten rodzaj ataku, są wszystkie parametry, które mogą wykorzystać usterki w kodzie podstawowym. W związku z tym nawet jeśli kodu niezarządzanego interfejsu API jest funkcjonalnie bezpieczne (po niezbędne wymagania) dla częściowo zaufanego obiektów wywołujących, zarządzane kodu musi również wyboru parametr ważności wyczerpująco, aby upewnić się, że nie wywołuje niepożądanych możliwe od złośliwego kodu za pomocą zarządzanych Kod otoki warstwy.  
   
 ## <a name="using-suppressunmanagedcodesecurityattribute"></a>Korzystanie z SuppressUnmanagedCodeSecurityAttribute  
  Jest aspektem wydajności potwierdzające i następnie wywoływania niezarządzanego kodu. Za każde wywołanie systemu zabezpieczeń automatycznie zażąda uprawnień kodu niezarządzanego, wynikiem przeszukiwania stosu każdorazowo. Jeśli potwierdzenia i natychmiast wywoływać kod niezarządzany, przejście przez stos może być całkowicie nieprzydatna: składa się z Twojego assert i wywołania kodu niezarządzanego.  
@@ -36,11 +36,11 @@ Kod biblioteki musi wywoływać kod niezarządzany (na przykład kodu natywnego 
   
  Jeśli używasz **SuppressUnmanagedCodeSecurityAttribute**, sprawdź następujące kwestie:  
   
--   Wprowadź punkt wejścia do kodu niezarządzanego wewnętrznych lub w inny sposób niedostępny poza kodem.  
+- Wprowadź punkt wejścia do kodu niezarządzanego wewnętrznych lub w inny sposób niedostępny poza kodem.  
   
--   Każde wywołanie do kodu niezarządzanego jest potencjalnym lukę w zabezpieczeniach. Upewnij się, że Twój kod nie jest portal dla złośliwego kodu pośrednio wywołania kodu niezarządzanego i unikanie sprawdzanie zabezpieczeń. Wymaga uprawnień, jeśli to stosowne.  
+- Każde wywołanie do kodu niezarządzanego jest potencjalnym lukę w zabezpieczeniach. Upewnij się, że Twój kod nie jest portal dla złośliwego kodu pośrednio wywołania kodu niezarządzanego i unikanie sprawdzanie zabezpieczeń. Wymaga uprawnień, jeśli to stosowne.  
   
--   Użyj konwencji nazewnictwa, aby jawnie identyfikować podczas tworzenia niebezpiecznych ścieżkę do kodu niezarządzanego, zgodnie z opisem w dalszej części tego artykułu...  
+- Użyj konwencji nazewnictwa, aby jawnie identyfikować podczas tworzenia niebezpiecznych ścieżkę do kodu niezarządzanego, zgodnie z opisem w dalszej części tego artykułu...  
   
 ## <a name="naming-convention-for-unmanaged-code-methods"></a>Konwencje nazewnictwa dla metod kodu niezarządzanego  
  Konwencja przydatne i zdecydowanie zalecane została ustanowiona dla nazw metod kodu niezarządzanego. Wszystkie metody niezarządzanego kodu są podzielone na trzy kategorie: **bezpieczne**, **natywnych**, i **niebezpieczne**. Tych słów kluczowych mogą służyć jako nazwy klas, w których zdefiniowano różne rodzaje punkty wejścia kodu niezarządzanego. W kodzie źródłowym, te słowa kluczowe należy dodać do nazwy klasy, podobnie jak w `Safe.GetTimeOfDay`, `Native.Xyz`, lub `Unsafe.DangerousAPI`, na przykład. Każda z tych słów kluczowych zawiera informacje o zabezpieczeniach przydatny dla deweloperów korzystających z tej klasy, zgodnie z opisem w poniższej tabeli.  

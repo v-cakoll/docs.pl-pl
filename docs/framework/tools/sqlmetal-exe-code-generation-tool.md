@@ -10,20 +10,20 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919805"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Narzędzie generowania kodu)
 Narzędzie wiersza polecenia SqlMetal generuje kod i mapowanie dla [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] składnika [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Stosując opisane w dalszej części tego tematu opcje, można za pomocą programu SqlMetal wykonać kilka różnych akcji, takich jak:  
   
--   Na podstawie bazy danych — generowanie kodu źródłowego i atrybutów mapowania lub pliku mapowania.  
+- Na podstawie bazy danych — generowanie kodu źródłowego i atrybutów mapowania lub pliku mapowania.  
   
--   Na podstawie bazy danych — generowanie pliku języka Intermediate Database Markup Language (dbml) na potrzeby dostosowywania.  
+- Na podstawie bazy danych — generowanie pliku języka Intermediate Database Markup Language (dbml) na potrzeby dostosowywania.  
   
--   Na podstawie pliku dbml — generowanie kodu i atrybutów mapowania lub pliku mapowania.  
+- Na podstawie pliku dbml — generowanie kodu i atrybutów mapowania lub pliku mapowania.  
   
  To narzędzie jest instalowane automatycznie z programem Visual Studio. Domyślnie plik znajduje się w `drive`: \Program Files\Microsoft SDKs\Windows\v`n.nn`\bin. Jeśli nie zostanie zainstalowany program Visual Studio, można także uzyskać plik SQLMetal, pobierając [zestawu Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
@@ -88,9 +88,9 @@ sqlmetal [options] [<input file>]
 ## <a name="remarks"></a>Uwagi  
  Działanie programu SqlMetal w rzeczywistości obejmuje wykonanie dwóch kroków:  
   
--   Wyodrębnienie metadanych bazy danych do pliku dbml.  
+- Wyodrębnienie metadanych bazy danych do pliku dbml.  
   
--   Wygenerowanie pliku wyjściowego z kodem.  
+- Wygenerowanie pliku wyjściowego z kodem.  
   
      Za pomocą odpowiednich opcji wiersza polecenia, można wygenerować kod źródłowy języka Visual Basic lub C#, lub można utworzyć plik mapowania XML.  
   
@@ -100,9 +100,9 @@ sqlmetal [options] [<input file>]
   
  [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] zgłasza wyjątek, jeśli spełnione są co najmniej jeden z następujących warunków:  
   
--   Program SqlMetal próbuje wyodrębnić procedurę składowaną, którą sam wywołuje.  
+- Program SqlMetal próbuje wyodrębnić procedurę składowaną, którą sam wywołuje.  
   
--   Poziom zagnieżdżenia procedury składowanej, funkcji lub widoku przekracza 32.  
+- Poziom zagnieżdżenia procedury składowanej, funkcji lub widoku przekracza 32.  
   
      Program SqlMetal przechwytuje ten wyjątek i zgłasza go jako ostrzeżenie.  
   

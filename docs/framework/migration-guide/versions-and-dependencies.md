@@ -11,8 +11,8 @@ ms.openlocfilehash: 61ccb7e23d8bc5fb73298b1448fe8bdec163ee2c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868948"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Wersje programu .NET framework i zależności
 Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka wspólnego (CLR), biblioteki klas bazowych i inne zarządzane biblioteki. W tym temacie opisano kluczowe funkcje programu .NET Framework według wersji, podano informacje o bazowych wersjach środowiska CLR i skojarzonych środowiskach deweloperskich oraz zidentyfikowano wersje, które są instalowane przez system operacyjny Windows.  
@@ -56,9 +56,9 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Określanie wartości docelowej i uruchamianie aplikacji .NET Framework w wersji 4.5 lub nowszy  
  .NET framework 4.5 jest aktualizację w miejscu, która zastępuje program .NET Framework 4 na komputerze i podobnie, .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 i 4.8 aktualizacji w miejscu do .NET Framework 4.5, co oznacza, że korzystają z tego samego środowiska uruchomieniowego wersja, ale wersje zestawów są aktualizowane i obejmują nowe typy i elementy członkowskie. Po zainstalowaniu jednej z tych aktualizacji aplikacje programu .NET Framework 4, .NET Framework 4.5, .NET Framework 4.6 lub .NET Framework 4.7 powinny nadal działać bez konieczności ponownej kompilacji. Jednak odwrotna zależność nie istnieje. Firma Microsoft nie zaleca się uruchamiania aplikacji przeznaczonych nowszej wersji programu .NET Framework w starszej wersji programu .NET Framework. Na przykład firma Microsoft nie zaleca się uruchamianie aplikacji docelowych .NET Framework 4.6 na .NET Framework 4.5. Należy przestrzegać następujących wytycznych:  
   
--   W programie Visual Studio, możesz wybrać .NET Framework 4.5 jako platformę docelową dla projektu (spowoduje to ustawienie <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> właściwość) do skompilowania projektu jako zestawu .NET Framework 4.5 lub plik wykonywalny. Ten zestaw lub plik wykonywalny można następnie używane na dowolnym komputerze, który ma [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 lub 4.8 zainstalowane.  
+- W programie Visual Studio, możesz wybrać .NET Framework 4.5 jako platformę docelową dla projektu (spowoduje to ustawienie <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> właściwość) do skompilowania projektu jako zestawu .NET Framework 4.5 lub plik wykonywalny. Ten zestaw lub plik wykonywalny można następnie używane na dowolnym komputerze, który ma [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 lub 4.8 zainstalowane.  
   
--   W programie Visual Studio, możesz wybrać jako platformę docelową dla projektu programu .NET Framework 4.5.1 (to ustawienie <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> właściwość) do skompilowania projektu jako zestawu .NET Framework 4.5.1 lub plik wykonywalny. Ten zestaw lub plik wykonywalny można uruchamiać tylko na komputerach, które mają programu .NET Framework 4.5.1 lub nowszej wersji programu .NET Framework zainstalowana. Plik wykonywalny, który obiektów docelowych programu .NET Framework 4.5.1 zostanie zablokowany na komputerze, który ma tylko starszą wersję programu .NET Framework, takich jak .NET Framework 4.5, zainstalowane, a użytkownik będzie monitowany, aby zainstalować program .NET Framework 4.5.1. Ponadto zestawów programu .NET Framework 4.5.1 nie należy wywoływać z aplikacji, który jest przeznaczony dla starszej wersji programu .NET Framework, takich jak .NET Framework 4.5.  
+- W programie Visual Studio, możesz wybrać jako platformę docelową dla projektu programu .NET Framework 4.5.1 (to ustawienie <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> właściwość) do skompilowania projektu jako zestawu .NET Framework 4.5.1 lub plik wykonywalny. Ten zestaw lub plik wykonywalny można uruchamiać tylko na komputerach, które mają programu .NET Framework 4.5.1 lub nowszej wersji programu .NET Framework zainstalowana. Plik wykonywalny, który obiektów docelowych programu .NET Framework 4.5.1 zostanie zablokowany na komputerze, który ma tylko starszą wersję programu .NET Framework, takich jak .NET Framework 4.5, zainstalowane, a użytkownik będzie monitowany, aby zainstalować program .NET Framework 4.5.1. Ponadto zestawów programu .NET Framework 4.5.1 nie należy wywoływać z aplikacji, który jest przeznaczony dla starszej wersji programu .NET Framework, takich jak .NET Framework 4.5.  
   
      .NET framework 4.5.1 i .NET Framework 4.5, są używane tylko jako przykłady. Ta zasada ma zastosowanie do wszystkich aplikacji przeznaczonych nowszej wersji programu .NET Framework niż ten, który został zainstalowany w systemie, na którym jest uruchomiony.  
   
@@ -72,13 +72,13 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
   
 ## <a name="next-steps"></a>Następne kroki  
   
--   Jeśli jesteś nowym użytkownikiem programu .NET Framework, zobacz [Przegląd](../../../docs/framework/get-started/overview.md) wprowadzenie do kluczowych pojęć i funkcji.  
+- Jeśli jesteś nowym użytkownikiem programu .NET Framework, zobacz [Przegląd](../../../docs/framework/get-started/overview.md) wprowadzenie do kluczowych pojęć i funkcji.  
   
--   Nowe funkcje i ulepszenia w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego wydania punktowe, zobacz [What's New in .NET Framework](../../../docs/framework/whats-new/index.md).  
+- Nowe funkcje i ulepszenia w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego wydania punktowe, zobacz [What's New in .NET Framework](../../../docs/framework/whats-new/index.md).  
   
--   Aby uzyskać informacje dotyczące migracji aplikacji z programu .NET Framework 4, aby [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego wydania punktowe, zobacz [Przewodnik po migracji](index.md).  
+- Aby uzyskać informacje dotyczące migracji aplikacji z programu .NET Framework 4, aby [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego wydania punktowe, zobacz [Przewodnik po migracji](index.md).  
   
--   Aby uzyskać informacje dotyczące ustalania, które wersje lub aktualizacje są instalowane na komputerze, zobacz [jak: Określanie, które wersje programu .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md) i [jak: Określanie, które aktualizacje programu .NET Framework są zainstalowane](how-to-determine-which-net-framework-updates-are-installed.md).  
+- Aby uzyskać informacje dotyczące ustalania, które wersje lub aktualizacje są instalowane na komputerze, zobacz [jak: Określanie, które wersje programu .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md) i [jak: Określanie, które aktualizacje programu .NET Framework są zainstalowane](how-to-determine-which-net-framework-updates-are-installed.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

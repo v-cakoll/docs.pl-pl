@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
 ms.openlocfilehash: 49e7d6768d8739bba94c9e8d38bcc582c8bd6e4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902905"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>Instrukcje: Reprezentacja tabel jako klas
 Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> atrybutu, aby określić klasę jako klasę jednostki skojarzonej z tabelą bazy danych.  
   
 ### <a name="to-map-a-class-to-a-database-table"></a>Aby zamapować klasę do tabeli bazy danych  
   
--   Dodaj <xref:System.Data.Linq.Mapping.TableAttribute> atrybutu deklaracji klasy.  
+- Dodaj <xref:System.Data.Linq.Mapping.TableAttribute> atrybutu deklaracji klasy.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod ustanawia `Customer` jak klasa jednostki, która jest skojarzona z `Customers` tabeli bazy danych.  

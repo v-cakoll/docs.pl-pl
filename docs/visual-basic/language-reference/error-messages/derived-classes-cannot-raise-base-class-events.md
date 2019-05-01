@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
 ms.openlocfilehash: 0e9acf4b3e71295655c15ae9b1c80852c9aca8df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803574"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>Klasy pochodne nie mogą wywoływać zdarzeń klasy bazowej
 Zdarzenie może zostać wywołane jedynie z deklaracji miejsca, w którym jest zdeklarowana. W związku z tym klasy nie mogą wywoływać zdarzeń z żadną inną klasę, nawet jeśli jest on z którego pochodzi.  
@@ -21,7 +21,7 @@ Zdarzenie może zostać wywołane jedynie z deklaracji miejsca, w którym jest z
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Przenieś `Event` instrukcji lub `RaiseEvent` instrukcji, dzięki czemu są one w tej samej klasie.  
+- Przenieś `Event` instrukcji lub `RaiseEvent` instrukcji, dzięki czemu są one w tej samej klasie.  
   
 ## <a name="see-also"></a>Zobacz także
 

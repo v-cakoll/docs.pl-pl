@@ -12,14 +12,14 @@ ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5ce0d4ac2b95dc4d51e785e3a00026f56c13d2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921384"
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>Przekazywanie adresu URI do środowiska wykonawczego systemu Windows
-Metod środowiska wykonawczego Windows akceptuje tylko bezwzględne identyfikatorów URI. Jeśli przekażesz względny identyfikator URI do [!INCLUDE[wrt](../../../includes/wrt-md.md)] metody <xref:System.ArgumentException> wyjątku. Oto Dlaczego: kiedy używać [!INCLUDE[wrt](../../../includes/wrt-md.md)] w kodzie .NET Framework <xref:Windows.Foundation.Uri?displayProperty=nameWithType> klasa jest wyświetlany jako <xref:System.Uri?displayProperty=nameWithType> w technologii Intellisense. <xref:System.Uri?displayProperty=nameWithType> Klasa umożliwia względne identyfikatory URI, ale <xref:Windows.Foundation.Uri?displayProperty=nameWithType> klasy nie jest. To samo dotyczy metod udostępnianych w [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników. Jeśli składnik udostępnia metodę, która przyjmuje identyfikator URI, podpis w kodzie zawiera <xref:System.Uri?displayProperty=nameWithType>. Jednak użytkownikom składnika podpis zawiera <xref:Windows.Foundation.Uri?displayProperty=nameWithType>. Identyfikator URI, który jest przekazywany do składnika musi być bezwzględnym identyfikatorem URI.  
+Metod środowiska wykonawczego Windows akceptuje tylko bezwzględne identyfikatorów URI. Jeśli przekażesz względny identyfikator URI do [!INCLUDE[wrt](../../../includes/wrt-md.md)] metody <xref:System.ArgumentException> wyjątku. Oto Dlaczego: Kiedy używasz [!INCLUDE[wrt](../../../includes/wrt-md.md)] w kodzie .NET Framework <xref:Windows.Foundation.Uri?displayProperty=nameWithType> klasa jest wyświetlany jako <xref:System.Uri?displayProperty=nameWithType> w technologii Intellisense. <xref:System.Uri?displayProperty=nameWithType> Klasa umożliwia względne identyfikatory URI, ale <xref:Windows.Foundation.Uri?displayProperty=nameWithType> klasy nie jest. To samo dotyczy metod udostępnianych w [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników. Jeśli składnik udostępnia metodę, która przyjmuje identyfikator URI, podpis w kodzie zawiera <xref:System.Uri?displayProperty=nameWithType>. Jednak użytkownikom składnika podpis zawiera <xref:Windows.Foundation.Uri?displayProperty=nameWithType>. Identyfikator URI, który jest przekazywany do składnika musi być bezwzględnym identyfikatorem URI.  
   
 W tym temacie pokazano, jak wykrywać bezwzględny identyfikator URI i jak go utworzyć przy odwoływaniu się do zasobu w pakiecie aplikacji.  
   

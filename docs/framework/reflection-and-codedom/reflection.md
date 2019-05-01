@@ -24,11 +24,11 @@ ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793097"
 ---
 # <a name="reflection-in-the-net-framework"></a>Odbicie w oprogramowaniu .NET Framework
 Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji na temat załadować [zestawy](../app-domains/assemblies-in-the-common-language-runtime.md) i typy zdefiniowane w nich, takich jak [klasy](../../standard/base-types/common-type-system.md#classes), [interfejsów](../../standard/base-types/common-type-system.md#interfaces), i [typy wartości](../../csharp/language-reference/keywords/value-types.md). Można również używać odbicia do tworzenia wystąpień typów w czasie wykonywania, a także wywołania i uzyskiwać do nich dostęp. Tematy dotyczące konkretnych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego omówienia.
@@ -37,23 +37,23 @@ Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?disp
   
  [Zestawy](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) zawierać moduły, moduły zawierają typy, a typy elementów członkowskich. Odbicie zawiera obiekty, które hermetyzują zestawy, moduły i typy. Za pomocą odbicia do dynamicznego utworzenia wystąpienia typu, powiązania typu z istniejącego obiektu lub uzyskania typu z istniejącego obiektu. Następnie można wywołać metody typu lub dostęp do jego pola i właściwości. Typowe zastosowania odbicia obejmują następujące czynności:  
   
--   Użyj <xref:System.Reflection.Assembly> do definiowania i ładować zestawy, ładowanie modułów, które są wymienione w manifeście zestawu, a następnie znajdź typu z tego zestawu i utworzyć wystąpienie.  
+- Użyj <xref:System.Reflection.Assembly> do definiowania i ładować zestawy, ładowanie modułów, które są wymienione w manifeście zestawu, a następnie znajdź typu z tego zestawu i utworzyć wystąpienie.  
   
--   Użyj <xref:System.Reflection.Module> aby odkryć informacje, takie jak zestaw, który zawiera moduł i klasy w module. Można również uzyskać wszystkie metody globalne lub innych metod określone, nieglobalnych, zdefiniowane w module.  
+- Użyj <xref:System.Reflection.Module> aby odkryć informacje, takie jak zestaw, który zawiera moduł i klasy w module. Można również uzyskać wszystkie metody globalne lub innych metod określone, nieglobalnych, zdefiniowane w module.  
   
--   Użyj <xref:System.Reflection.ConstructorInfo> Aby znaleźć informacje, takie jak nazwa, parametrów, modyfikatorach dostępu (takich jak `public` lub `private`) i szczegółów implementacji (takie jak `abstract` lub `virtual`) konstruktora. Użyj <xref:System.Type.GetConstructors%2A> lub <xref:System.Type.GetConstructor%2A> metody <xref:System.Type> do wywołania określonego konstruktora.  
+- Użyj <xref:System.Reflection.ConstructorInfo> Aby znaleźć informacje, takie jak nazwa, parametrów, modyfikatorach dostępu (takich jak `public` lub `private`) i szczegółów implementacji (takie jak `abstract` lub `virtual`) konstruktora. Użyj <xref:System.Type.GetConstructors%2A> lub <xref:System.Type.GetConstructor%2A> metody <xref:System.Type> do wywołania określonego konstruktora.  
   
--   Użyj <xref:System.Reflection.MethodInfo> Aby znaleźć informacje, takie jak nazwa, zwracany typ i parametry, modyfikatory dostępu (takich jak `public` lub `private`) i szczegółów implementacji (takie jak `abstract` lub `virtual`) metody. Użyj <xref:System.Type.GetMethods%2A> lub <xref:System.Type.GetMethod%2A> metody <xref:System.Type> do wywołania określonej metody.  
+- Użyj <xref:System.Reflection.MethodInfo> Aby znaleźć informacje, takie jak nazwa, zwracany typ i parametry, modyfikatory dostępu (takich jak `public` lub `private`) i szczegółów implementacji (takie jak `abstract` lub `virtual`) metody. Użyj <xref:System.Type.GetMethods%2A> lub <xref:System.Type.GetMethod%2A> metody <xref:System.Type> do wywołania określonej metody.  
   
--   Użyj <xref:System.Reflection.FieldInfo> Aby znaleźć informacje, takie jak nazwa, modyfikatorach dostępu (takich jak `public` lub `private`) i szczegółów implementacji (takie jak `static`) pola, a także pobierania lub ustawiania wartości pól.  
+- Użyj <xref:System.Reflection.FieldInfo> Aby znaleźć informacje, takie jak nazwa, modyfikatorach dostępu (takich jak `public` lub `private`) i szczegółów implementacji (takie jak `static`) pola, a także pobierania lub ustawiania wartości pól.  
   
--   Użyj <xref:System.Reflection.EventInfo> odkryć informacje, takie jak nazwa, typ danych program obsługi zdarzeń, atrybutów niestandardowych, deklarowanie typów i odbitych typu zdarzenia, a także dodawanie lub usuwanie programów obsługi zdarzeń.  
+- Użyj <xref:System.Reflection.EventInfo> odkryć informacje, takie jak nazwa, typ danych program obsługi zdarzeń, atrybutów niestandardowych, deklarowanie typów i odbitych typu zdarzenia, a także dodawanie lub usuwanie programów obsługi zdarzeń.  
   
--   Użyj <xref:System.Reflection.PropertyInfo> Aby znaleźć informacje, takie jak nazwa, typ danych, deklarowania typu, odzwierciedlone typu i tylko do odczytu lub zapisu stanu właściwości, a także pobierania lub ustawiania wartości właściwości.  
+- Użyj <xref:System.Reflection.PropertyInfo> Aby znaleźć informacje, takie jak nazwa, typ danych, deklarowania typu, odzwierciedlone typu i tylko do odczytu lub zapisu stanu właściwości, a także pobierania lub ustawiania wartości właściwości.  
   
--   Użyj <xref:System.Reflection.ParameterInfo> aby odkryć informacje, takie jak nazwa parametru, typ danych, czy parametr wejściowy lub parametru wyjściowego i pozycja parametru w podpisie metody.  
+- Użyj <xref:System.Reflection.ParameterInfo> aby odkryć informacje, takie jak nazwa parametru, typ danych, czy parametr wejściowy lub parametru wyjściowego i pozycja parametru w podpisie metody.  
   
--   Użyj <xref:System.Reflection.CustomAttributeData> do wykrywania informacji na temat atrybutów niestandardowych, gdy pracujesz w kontekstu reflection-only domeny aplikacji. <xref:System.Reflection.CustomAttributeData> można zbadać atrybutów bez tworzenia wystąpienia.  
+- Użyj <xref:System.Reflection.CustomAttributeData> do wykrywania informacji na temat atrybutów niestandardowych, gdy pracujesz w kontekstu reflection-only domeny aplikacji. <xref:System.Reflection.CustomAttributeData> można zbadać atrybutów bez tworzenia wystąpienia.  
   
  Klasy <xref:System.Reflection.Emit> przestrzeń nazw zapewnia formą specjalistyczne odbicia, która umożliwia tworzenie typów w czasie wykonywania.  
   

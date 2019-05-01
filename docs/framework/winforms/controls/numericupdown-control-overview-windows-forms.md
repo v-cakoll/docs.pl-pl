@@ -9,11 +9,11 @@ helpviewer_keywords:
 - spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
 ms.openlocfilehash: 218eb685e546acac76a18450612a1601ab87276b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61805765"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown — Informacje o formancie [Formularze systemu Windows]
 <xref:System.Windows.Forms.NumericUpDown> Kontrolka wygląda kombinacją pole tekstowe oraz pary strzałki, które użytkownik może kliknąć, aby dopasować wartość. Wyświetla i ustawia wartość liczbową jednej z listy stałą wartością numeryczną opcji kontrolki. Użytkownik może zwiększyć i zmniejszyć liczbę, klikając pozycję w górę i w dół strzałki, naciskając klawisze strzałek w górę i w dół lub wpisując liczbę w polu tekstowym formantu. Klikając przycisk Strzałka w górę przenosi liczbę kierunku maksymalną; klikając przycisk strzałki w dół przenosi liczbę kierunku minimum.  

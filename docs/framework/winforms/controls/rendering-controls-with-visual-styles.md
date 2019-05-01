@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
 ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903438"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderowanie formantów przy użyciu stylów wizualnych
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zapewnia obsługę renderowania kontrolek i innych użytkowników Windows elementów interfejsu (UI), przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują. W tym temacie omówiono kilka poziomów pomocy technicznej w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla formantów renderowania i inne elementy interfejsu użytkownika przy użyciu bieżącego stylu wizualnego systemu operacyjnego.  
@@ -27,27 +27,27 @@ ms.locfileid: "59146773"
   
  Niektóre z tych klas są przeznaczone do rysowania pokrewnej kontrolki, niezależnie od tego, czy są dostępne style wizualne. Po włączeniu funkcji stylów wizualnych następnie składowych klasy narysuje pokrewnej kontrolki przy użyciu stylów wizualnych; Wyłączenie funkcji stylów wizualnych składowych klasy będzie narysuj kontrolkę w stylu klasycznym Windows. W ramach tych zajęć, obejmują:  
   
--   <xref:System.Windows.Forms.ButtonRenderer>  
+- <xref:System.Windows.Forms.ButtonRenderer>  
   
--   <xref:System.Windows.Forms.CheckBoxRenderer>  
+- <xref:System.Windows.Forms.CheckBoxRenderer>  
   
--   <xref:System.Windows.Forms.GroupBoxRenderer>  
+- <xref:System.Windows.Forms.GroupBoxRenderer>  
   
--   <xref:System.Windows.Forms.RadioButtonRenderer>  
+- <xref:System.Windows.Forms.RadioButtonRenderer>  
   
  Style wizualne są dostępne, gdy ich elementy członkowskie spowoduje zgłoszenie wyjątku, wyłączenie funkcji stylów wizualnych innych klas tylko rysować pokrewnej kontrolki. W ramach tych zajęć, obejmują:  
   
--   <xref:System.Windows.Forms.ComboBoxRenderer>  
+- <xref:System.Windows.Forms.ComboBoxRenderer>  
   
--   <xref:System.Windows.Forms.ProgressBarRenderer>  
+- <xref:System.Windows.Forms.ProgressBarRenderer>  
   
--   <xref:System.Windows.Forms.ScrollBarRenderer>  
+- <xref:System.Windows.Forms.ScrollBarRenderer>  
   
--   <xref:System.Windows.Forms.TabRenderer>  
+- <xref:System.Windows.Forms.TabRenderer>  
   
--   <xref:System.Windows.Forms.TextBoxRenderer>  
+- <xref:System.Windows.Forms.TextBoxRenderer>  
   
--   <xref:System.Windows.Forms.TrackBarRenderer>  
+- <xref:System.Windows.Forms.TrackBarRenderer>  
   
  Aby uzyskać więcej informacji na temat korzystania z tych klas do rysowania kontrolki, zobacz [jak: Używanie klasy renderowania formantu](how-to-use-a-control-rendering-class.md).  
   

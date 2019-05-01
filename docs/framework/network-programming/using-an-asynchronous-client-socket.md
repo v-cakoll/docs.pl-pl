@@ -18,11 +18,11 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
 ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796919"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Używanie asynchronicznego gniazda klienta
 Asynchronicznego gniazda klienta nie wstrzymuje aplikacji podczas oczekiwania na zakończenie operacji sieciowych. Zamiast tego używa standardowego modelu programowania asynchronicznego środowiska .NET Framework do przetwarzania połączenia sieciowego w jednym wątku, podczas gdy aplikacja będzie działać w oryginalnym wątku. Asynchronicznego gniazda są odpowiednie dla aplikacji, które intensywnie korzystają z sieci lub które nie może czekać na operacje sieciowe, które należy wykonać przed kontynuowaniem.  

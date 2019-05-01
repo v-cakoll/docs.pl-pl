@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792817"
 ---
 # <a name="claims-based-identity-model"></a>Model tożsamości oparty na oświadczeniach
 W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użytkownika jest reprezentowana w aplikacji jako zestaw oświadczeń. Jednym oświadczeniem może być nazwa użytkownika, a innym adres e-mail. Chodzi o to, że zewnętrzny system tożsamości jest skonfigurowany do podawania aplikacji wszystkiego, co musi wiedzieć o użytkowniku przy każdym wysyłanym przez niego żądaniu, a przy tym o kryptograficzne zapewnianie, że dane o tożsamości, które otrzymujesz, pochodzą z zaufanego źródła.  
   
  W ramach tego modelu logowanie jednokrotne jest znacznie łatwiejsze do osiągnięcia, a aplikacja przestaje być odpowiedzialna za następujące zadania:  
   
--   uwierzytelnianie użytkowników;  
+- uwierzytelnianie użytkowników;  
   
--   przechowywanie kont użytkowników i haseł;  
+- przechowywanie kont użytkowników i haseł;  
   
--   wywoływanie katalogów przedsiębiorstwa w celu wyszukania szczegółów dotyczących tożsamości użytkownika;  
+- wywoływanie katalogów przedsiębiorstwa w celu wyszukania szczegółów dotyczących tożsamości użytkownika;  
   
--   integracja z systemami tożsamości z innych platform lub firm.  
+- integracja z systemami tożsamości z innych platform lub firm.  
   
  W tym modelu aplikacja podejmuje decyzje dotyczące tożsamości na podstawie oświadczeń dostarczonych przez system, który uwierzytelnił użytkownika. Może to być cokolwiek — od prostej personalizacji aplikacji za pomocą imienia użytkownika do autoryzacji użytkownika w celu umożliwienia mu dostępu do ważniejszych funkcji i zasobów aplikacji.  
   
  Ten temat zawiera następujące informacje:  
   
--   [Wprowadzenie do tożsamości opartej na oświadczeniach](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Wprowadzenie do tożsamości opartej na oświadczeniach](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Podstawowy scenariusz dla modelu tożsamości opartej na oświadczeniach](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Podstawowy scenariusz dla modelu tożsamości opartej na oświadczeniach](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Wprowadzenie do tożsamości opartej na oświadczeniach  

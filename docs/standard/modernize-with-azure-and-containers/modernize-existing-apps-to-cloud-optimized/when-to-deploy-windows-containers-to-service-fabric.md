@@ -1,25 +1,25 @@
 ---
-title: Kiedy należy wdrażać kontenery Windows do usługi Service Fabric
+title: Kiedy należy wdrażać kontenery systemu Windows w usłudze Service Fabric
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Kiedy należy wdrażać kontenery Windows do usługi Service Fabric
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973653"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Kiedy należy wdrażać kontenery Windows do usługi Service Fabric
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Kiedy należy wdrażać kontenery systemu Windows w usłudze Service Fabric
 
 Aplikacje, które są oparte na Windows kontenery szybko będą musieli używać platformy, które jeszcze bardziej przemieścić się z maszyn wirtualnych IaaS. Są to zwiększona skalowalność zautomatyzowane i wysokiej skalowalności i uzyskać znaczne ulepszenia w środowisku pełnego zarządzania, w przypadku wdrożeń uaktualnienia, przechowywanie wersji, wycofywanie zmian oraz monitorowanie kondycji. Tych celów można osiągnąć za pomocą programu orchestrator w usłudze Azure Service Fabric dostępnych w chmurze Microsoft Azure, ale również w środowisku lokalnym lub nawet w innej chmurze.
 
 W wielu organizacjach są podnoszenia i przesunięcie istniejące aplikacje monolityczne do kontenerów dwóch powodów:
 
--   Obniżenie kosztów, albo z powodu konsolidacji i usuwania istniejącego sprzętu lub uruchamianie aplikacji na zwiększenie gęstości.
+- Obniżenie kosztów, albo z powodu konsolidacji i usuwania istniejącego sprzętu lub uruchamianie aplikacji na zwiększenie gęstości.
 
--   Kontrakt spójne wdrażanie, między środowiskami deweloperskim i operacji.
+- Kontrakt spójne wdrażanie, między środowiskami deweloperskim i operacji.
 
 Należy wykonać redukcję kosztów jest zrozumiałe i jest prawdopodobne, że posiadać wszystkie organizacje są łączone w celu. Spójne wdrażanie jest trudniejsze do oceny, ale jest równie jako ważne. Kontrakt spójne wdrażanie mówi, że deweloperzy mogą skorzystać z technologii, która odpowiada ich, a zespół operacyjny pobiera jeden sposób wdrażać aplikacje oraz zarządzać nimi. Niniejsza Umowa uwalnia posiadające operacje przeciwdziałania złożoność wielu różnych technologii lub wymuszanie deweloperom pracę tylko w przypadku niektórych technologii. Zasadniczo każda aplikacja jest konteneryzowana w obrazie niezależna wdrożenia.
 

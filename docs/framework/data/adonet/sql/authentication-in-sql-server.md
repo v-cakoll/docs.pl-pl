@@ -3,18 +3,18 @@ title: Uwierzytelnianie w programie SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879020"
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows i w trybie mieszanym.  
   
--   Uwierzytelnianie Windows jest ustawieniem domyślnym i jest często określane jako zabezpieczenia zintegrowane ponieważ ten model zabezpieczeń programu SQL Server jest ściśle zintegrowany z programem Windows. Określone konta użytkowników i grup Windows są zaufane do logowania do programu SQL Server. Windows użytkowników, którzy już zostali uwierzytelnieni jest konieczne przedstawić dodatkowych poświadczeń.  
+- Uwierzytelnianie Windows jest ustawieniem domyślnym i jest często określane jako zabezpieczenia zintegrowane ponieważ ten model zabezpieczeń programu SQL Server jest ściśle zintegrowany z programem Windows. Określone konta użytkowników i grup Windows są zaufane do logowania do programu SQL Server. Windows użytkowników, którzy już zostali uwierzytelnieni jest konieczne przedstawić dodatkowych poświadczeń.  
   
--   Tryb mieszany obsługuje uwierzytelnianie za pomocą zarówno Windows, jak i przez program SQL Server. Pary nazwy i hasła użytkowników są przechowywane w programie SQL Server.  
+- Tryb mieszany obsługuje uwierzytelnianie za pomocą zarówno Windows, jak i przez program SQL Server. Pary nazwy i hasła użytkowników są przechowywane w programie SQL Server.  
   
 > [!IMPORTANT]
 >  Zaleca się korzystania z uwierzytelniania Windows wszędzie tam, gdzie to możliwe. Uwierzytelnianie Windows przy użyciu szeregu szyfrowanych komunikatów do uwierzytelniania użytkowników w programie SQL Server. Podczas logowania do programu SQL Server są używane, nazwy logowania programu SQL Server i zaszyfrowane hasła są przekazywane za pośrednictwem sieci, co sprawia, że są ich mniej bezpieczna opcja.  
@@ -31,19 +31,19 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows 
 ## <a name="authentication-scenarios"></a>Scenariusze uwierzytelniania  
  Uwierzytelnianie Windows jest zwykle najlepszym wyborem w następujących sytuacjach:  
   
--   Jest kontrolerem domeny.  
+- Jest kontrolerem domeny.  
   
--   Aplikacji i bazy danych znajdują się na tym samym komputerze.  
+- Aplikacji i bazy danych znajdują się na tym samym komputerze.  
   
--   Używasz wystąpienia programu SQL Server Express lub LocalDB.  
+- Używasz wystąpienia programu SQL Server Express lub LocalDB.  
   
  Logowania do programu SQL Server są często używane w następujących sytuacjach:  
   
--   Jeśli masz grupy roboczej.  
+- Jeśli masz grupy roboczej.  
   
--   Łączenie użytkowników z innej, niezaufanej domeny.  
+- Łączenie użytkowników z innej, niezaufanej domeny.  
   
--   Aplikacje internetowe, takie jak [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Aplikacje internetowe, takie jak [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
 >  Określanie uwierzytelniania Windows nie wyłączać logowania programu SQL Server. Użyj polecenia ALTER LOGIN Wyłącz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcję, aby wyłączyć logowania programu SQL Server w uprawnieniach.  
@@ -51,11 +51,11 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows 
 ## <a name="login-types"></a>Typy logowania  
  Program SQL Server obsługuje trzy typy danych logowania:  
   
--   Lokalne konto użytkownika Windows lub konto domeny zaufanej. Program SQL Server opiera się na Windows do uwierzytelniania kont użytkowników Windows.  
+- Lokalne konto użytkownika Windows lub konto domeny zaufanej. Program SQL Server opiera się na Windows do uwierzytelniania kont użytkowników Windows.  
   
--   Grupa Windows. Udzielanie dostępu do grupy Windows udziela dostępu do wszystkich logowań użytkowników Windows, które są członkami grupy.  
+- Grupa Windows. Udzielanie dostępu do grupy Windows udziela dostępu do wszystkich logowań użytkowników Windows, które są członkami grupy.  
   
--   Dane logowania programu SQL Server. SQL Server przechowuje nazwy użytkownika i wartość skrótu hasła w bazie danych master przy użyciu metody uwierzytelniania wewnętrznego, aby sprawdzić prób logowania.  
+- Dane logowania programu SQL Server. SQL Server przechowuje nazwy użytkownika i wartość skrótu hasła w bazie danych master przy użyciu metody uwierzytelniania wewnętrznego, aby sprawdzić prób logowania.  
   
 > [!NOTE]
 >  SQL Server udostępnia logowania utworzone na podstawie certyfikaty lub klucze asymetryczne, które są używane tylko w przypadku podpisywania kodu. One nie można nawiązać połączenia z programem SQL Server.  

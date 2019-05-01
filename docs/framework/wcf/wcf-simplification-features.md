@@ -3,11 +3,11 @@ title: Funkcje upraszczania programu WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
 ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791186"
 ---
 # <a name="wcf-simplification-features"></a>Funkcje upraszczania programu WCF
 

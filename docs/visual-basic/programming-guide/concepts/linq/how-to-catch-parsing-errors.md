@@ -3,11 +3,11 @@ title: 'Instrukcje: CATCH, analizowanie błędów (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
 ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855640"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a>Instrukcje: CATCH, analizowanie błędów (Visual Basic)
 W tym temacie pokazano, jak wykryć XML źle sformułowana lub jest nieprawidłowy.  

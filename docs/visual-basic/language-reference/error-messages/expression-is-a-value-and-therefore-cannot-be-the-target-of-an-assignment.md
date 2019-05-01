@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
 ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802612"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Wyrażenie jest wartością i dlatego nie może być elementem docelowym przypisania
 Instrukcja próbuje przypisać wartość wyrażenia. W czasie wykonywania, można przypisać wartości tylko do zapisu zmiennej, właściwości lub elementu tablicy. W poniższym przykładzie pokazano, jak ten błąd może wystąpić.  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Jeśli instrukcja przypisuje wartość do wyrażenia, Zamień wyrażenia pojedynczej zmiennej zapisywalny, właściwości lub elementu tablicy.  
+- Jeśli instrukcja przypisuje wartość do wyrażenia, Zamień wyrażenia pojedynczej zmiennej zapisywalny, właściwości lub elementu tablicy.  
   
--   Jeśli instrukcja sprawia, że pośredni dostęp za pośrednictwem typu wartości (zwykle struktura), należy utworzyć zmienną typu wartości.  
+- Jeśli instrukcja sprawia, że pośredni dostęp za pośrednictwem typu wartości (zwykle struktura), należy utworzyć zmienną typu wartości.  
   
--   Przypisz odpowiednią strukturę (lub innego typu wartości) do zmiennej.  
+- Przypisz odpowiednią strukturę (lub innego typu wartości) do zmiennej.  
   
--   Umożliwia dostęp do właściwości, aby przypisać wartość zmiennej.  
+- Umożliwia dostęp do właściwości, aby przypisać wartość zmiennej.  
   
 ## <a name="see-also"></a>Zobacz także
 

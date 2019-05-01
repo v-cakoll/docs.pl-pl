@@ -3,11 +3,11 @@ title: Niezawodna korelacja dwukierunkowa
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856611"
 ---
 # <a name="durable-duplex-correlation"></a>Niezawodna korelacja dwukierunkowa
 Niezawodna korelacja dwukierunkowa, znany także jako wywołanie zwrotne korelacji jest przydatne, gdy usługi przepływu pracy istnieje wymaganie, aby wysłać wywołanie zwrotne do początkowego obiektu wywołującego. W odróżnieniu od dupleks WCF wywołania zwrotnego może się zdarzyć w dowolnym momencie w przyszłości i nie jest związany z tego samego kanału lub trwania kanału. Jedynym wymaganiem jest, że obiekt wywołujący ma aktywny punkt końcowy nasłuchiwać komunikatów wywołania zwrotnego. Dzięki temu dwie usługi przepływu pracy do komunikowania się z konwersacji długotrwałych. Ten temat zawiera omówienie niezawodna korelacja dwukierunkowa.  
@@ -16,7 +16,7 @@ Niezawodna korelacja dwukierunkowa, znany także jako wywołanie zwrotne korelac
  Niezawodna korelacja dwukierunkowa, te dwie usługi korzystać z obsługą kontekstu powiązania, obsługującej dwukierunkowe operacje, takie jak <xref:System.ServiceModel.NetTcpContextBinding> lub <xref:System.ServiceModel.WSHttpContextBinding>. Wywołujący rejestrów usługi <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> dla żądanego powiązania na kliencie <xref:System.ServiceModel.Endpoint>. Usługa odbierająca odbiera tych danych w wywołaniu początkową, a następnie używa go samodzielnie <xref:System.ServiceModel.Endpoint> w <xref:System.ServiceModel.Activities.Send> działania, która wywołuje tę funkcję do wywoływania usługi. W tym przykładzie dwie usługi komunikują się ze sobą. Pierwsza usługa wywołuje metodę dla drugiej usługi, a następnie czeka na odpowiedź. Nazwa metody wywołania zwrotnego wie, drugi usługi, ale punktu końcowego usługi, który implementuje ta metoda nie jest znany w czasie projektowania.  
   
 > [!NOTE]
-> Niezawodna komunikacja dwukierunkowa może zawierać tylko używane podczas <xref:System.ServiceModel.Channels.AddressingVersion> punktu końcowego jest konfigurowana <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Jeśli nie jest dostępna, a następnie <xref:System.InvalidOperationException> wyjątek z następującym komunikatem: "wiadomość zawiera nagłówek Kontekst wywołania zwrotnego z odwołania do punktu końcowego dla [standard](http://schemas.xmlsoap.org/ws/2004/08/addressing). Kontekst wywołania zwrotnego być przesyłany tylko w przypadku, gdy wersja adresowania mogła być skonfigurowano adresowania "WSAddressing10".
+> Niezawodna komunikacja dwukierunkowa może zawierać tylko używane podczas <xref:System.ServiceModel.Channels.AddressingVersion> punktu końcowego jest konfigurowana <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Jeśli nie jest dostępna, a następnie <xref:System.InvalidOperationException> wyjątek z następującym komunikatem: "Wiadomość zawiera nagłówek Kontekst wywołania zwrotnego z odwołania do punktu końcowego dla [standard](http://schemas.xmlsoap.org/ws/2004/08/addressing). Kontekst wywołania zwrotnego być przesyłany tylko w przypadku, gdy wersja adresowania mogła być skonfigurowano adresowania "WSAddressing10".
   
  W poniższym przykładzie przepływu pracy jest hostowana usługa, która tworzy wywołanie zwrotne <xref:System.ServiceModel.Endpoint> przy użyciu <xref:System.ServiceModel.WSHttpContextBinding>.  
   

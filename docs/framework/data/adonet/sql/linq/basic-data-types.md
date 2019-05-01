@@ -3,11 +3,11 @@ title: Typy danych podstawowych
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
 ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903373"
 ---
 # <a name="basic-data-types"></a>Typy danych podstawowych
 Ponieważ zapytania LINQ to SQL przełożyć na instrukcji języka Transact-SQL przed są one wykonywane w programie Microsoft SQL Server. LINQ do SQL obsługuje wiele wbudowanych funkcji wykonującej programu SQL Server dla podstawowych typów danych.  
@@ -18,9 +18,9 @@ Ponieważ zapytania LINQ to SQL przełożyć na instrukcji języka Transact-SQL 
 ## <a name="equality-operators"></a>Operatory równości  
  LINQ do SQL obsługuje następujące operatory równości na podstawowych typów danych w LINQ do kwerendy SQL:  
   
--   Równe i Operator nierówności: Operatory równości i nierówności są obsługiwane w przypadku numeryczne, <xref:System.Boolean>, <xref:System.DateTime>, i <xref:System.TimeSpan> typów. Aby uzyskać więcej informacji na temat operatorów Visual Basic `=` i `<>`, zobacz [operatory porównania](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Aby uzyskać więcej informacji na temat C# operatory porównania `==` i `!=`, zobacz [Operatory równości](~/docs/csharp/language-reference/operators/equality-operators.md).
+- Równe i Operator nierówności: Operatory równości i nierówności są obsługiwane w przypadku numeryczne, <xref:System.Boolean>, <xref:System.DateTime>, i <xref:System.TimeSpan> typów. Aby uzyskać więcej informacji na temat operatorów Visual Basic `=` i `<>`, zobacz [operatory porównania](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Aby uzyskać więcej informacji na temat C# operatory porównania `==` i `!=`, zobacz [Operatory równości](~/docs/csharp/language-reference/operators/equality-operators.md).
   
--   Is — operator: `IS` Operator ma obsługiwanych tłumaczeń, gdy jest używane mapowanie dziedziczenia. Może służyć zamiast bezpośrednio testować kolumna dyskryminatora można określić, czy obiekt jest określonego typu i jest tłumaczona na sprawdzenie kolumna dyskryminatora. Aby uzyskać więcej informacji na temat języka Visual Basic i C# jest operatorów, zobacz [operatora Is](~/docs/visual-basic/language-reference/operators/is-operator.md) i [jest](~/docs/csharp/language-reference/keywords/is.md).  
+- Is — operator: `IS` Operator ma obsługiwanych tłumaczeń, gdy jest używane mapowanie dziedziczenia. Może służyć zamiast bezpośrednio testować kolumna dyskryminatora można określić, czy obiekt jest określonego typu i jest tłumaczona na sprawdzenie kolumna dyskryminatora. Aby uzyskać więcej informacji na temat języka Visual Basic i C# jest operatorów, zobacz [operatora Is](~/docs/visual-basic/language-reference/operators/is-operator.md) i [jest](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

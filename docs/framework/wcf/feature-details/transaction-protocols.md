@@ -3,11 +3,11 @@ title: Protokoły transakcji
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
 ms.openlocfilehash: 3f4824ac6098f33b7bde4f29d3e0950783dfd213
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918895"
 ---
 # <a name="transaction-protocols"></a>Protokoły transakcji
 Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transaction i WS-koordynacji protokoły.  
@@ -45,13 +45,13 @@ Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transactio
   
  Ilustracja i tabela przedstawiają cztery klasy wiadomości z punktu widzenia zabezpieczeń:  
   
--   Aktywacja wiadomości (CreateCoordinationContext CreateCoordinationContextResponse).  
+- Aktywacja wiadomości (CreateCoordinationContext CreateCoordinationContextResponse).  
   
--   Rejestracja wiadomości (Zarejestruj się i RegisterResponse)  
+- Rejestracja wiadomości (Zarejestruj się i RegisterResponse)  
   
--   Komunikaty protokołu (przygotowywanie, wycofywanie, zatwierdzania, Aborted i tak dalej).  
+- Komunikaty protokołu (przygotowywanie, wycofywanie, zatwierdzania, Aborted i tak dalej).  
   
--   Komunikaty aplikacji.  
+- Komunikaty aplikacji.  
   
  Pierwszej klasy trzy wiadomości są traktowane jako komunikaty Menedżera transakcji, a ich konfiguracja powiązania jest opisana w "Aplikacji wiadomości programu Exchange" w dalszej części tego tematu. Czwarty klasę wiadomości jest komunikatów aplikacji i zostało opisane w sekcji "Przykłady komunikatu" w dalszej części tego tematu. W tej sekcji opisano powiązania protokołu używany dla każdej z tych klas przez usługę WCF.  
   
@@ -80,9 +80,9 @@ Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transactio
 #### <a name="https-transport-configuration"></a>Konfiguracja transportu HTTPS  
  Certyfikaty X.509 są używane do ustalenia tożsamości menedżera transakcji. Wymagane jest uwierzytelnienie klienta/serwera i klienta/serwera autoryzacji zostanie pozostawiony jako szczegół implementacji:  
   
--   R1111: Certyfikaty X.509 przedstawione przez sieć musi mieć nazwę podmiotu, który pasuje do w pełni kwalifikowana nazwa domeny (FQDN) komputera źródłowego.  
+- R1111: Certyfikaty X.509 przedstawione przez sieć musi mieć nazwę podmiotu, który pasuje do w pełni kwalifikowana nazwa domeny (FQDN) komputera źródłowego.  
   
--   B1112: DNS musi działać każda para odbiorcy nadawcy w systemie kontroli nazwy podmiotu X.509 zakończyło się sukcesem.  
+- B1112: DNS musi działać każda para odbiorcy nadawcy w systemie kontroli nazwy podmiotu X.509 zakończyło się sukcesem.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Aktywacja i powiązań konfiguracji rejestracji  
  Usługi WCF wymaga dwukierunkowego powiązania żądanie/nietypizowana odpowiedź z korelacją za pośrednictwem protokołu HTTPS. (Aby uzyskać więcej informacji na temat korelacji i opisy wzorców żądanie/nietypizowana odpowiedź wiadomości programu exchange, zobacz WS-Atomic Transaction, sekcja 8).  
@@ -105,9 +105,9 @@ Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transactio
   
  Specyfikacja WS-Atomic Transaction, sekcja 8 opisano dalsze szczegółowe informacje dotyczące korelacji i wzorców wymiany komunikatów.  
   
--   R1222: Odebrane `CreateCoordinationContext`, należy wygenerować koordynator `SecurityContextToken` z skojarzony klucz tajny `STx`. Ten token jest zwracany w `t:IssuedTokens` nagłówka następujące specyfikację WS-Trust.  
+- R1222: Odebrane `CreateCoordinationContext`, należy wygenerować koordynator `SecurityContextToken` z skojarzony klucz tajny `STx`. Ten token jest zwracany w `t:IssuedTokens` nagłówka następujące specyfikację WS-Trust.  
   
--   R1223: Jeśli aktywacja odbywa się w ramach istniejącego kontekstu koordynacji, `t:IssuedTokens` nagłówek o `SecurityContextToken` skojarzony z istniejącym kontekście musi przepływać ze `CreateCoordinationContext` wiadomości.  
+- R1223: Jeśli aktywacja odbywa się w ramach istniejącego kontekstu koordynacji, `t:IssuedTokens` nagłówek o `SecurityContextToken` skojarzony z istniejącym kontekście musi przepływać ze `CreateCoordinationContext` wiadomości.  
   
  Nowy `t:IssuedTokens` musi zostać wygenerowany nagłówek do dołączania do wychodzącej `wscoor:CreateCoordinationContextResponse` wiadomości.  
   
@@ -128,9 +128,9 @@ Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transactio
 ## <a name="application-message-exchange"></a>Wymiana komunikatów w aplikacji  
  Aplikacje są bezpłatne korzystanie z dowolnego określonego powiązania dla wiadomości w aplikacji do aplikacji, tak długo, jak wiązanie spełnia następujące wymagania dotyczące zabezpieczeń:  
   
--   R2001: Komunikaty aplikacji do aplikacji musi przepływać `t:IssuedTokens` nagłówka wraz z `CoordinationContext` w nagłówku komunikatu.  
+- R2001: Komunikaty aplikacji do aplikacji musi przepływać `t:IssuedTokens` nagłówka wraz z `CoordinationContext` w nagłówku komunikatu.  
   
--   R2002: Integralności i poufności `t:IssuedToken` musi zostać podana.  
+- R2002: Integralności i poufności `t:IssuedToken` musi zostać podana.  
   
  `CoordinationContext` Nagłówek zawiera `wscoor:Identifier`. Podczas gdy definicja `xsd:AnyURI` umożliwia korzystanie z identyfikatorów URI względne i bezwzględne WCF obsługuje tylko `wscoor:Identifiers`, które są bezwzględne identyfikatorów URI.  
   

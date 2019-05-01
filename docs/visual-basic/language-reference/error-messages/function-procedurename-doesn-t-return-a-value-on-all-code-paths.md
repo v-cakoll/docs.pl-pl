@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802381"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu
 Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu. Czy nie brakuje instrukcji "Return"?  
@@ -21,11 +21,11 @@ Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu
   
  Może zwracać wartość z zakresu od `Function` procedury w dowolnym z następujących sposobów:  
   
--   Zawiera wartości w [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Zawiera wartości w [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
--   Przypisz wartość do `Function` procedury nazwę, a następnie wykonaj `Exit Function` instrukcji.  
+- Przypisz wartość do `Function` procedury nazwę, a następnie wykonaj `Exit Function` instrukcji.  
   
--   Przypisz wartość do `Function` procedury nazwę, a następnie wykonaj `End Function` instrukcji.  
+- Przypisz wartość do `Function` procedury nazwę, a następnie wykonaj `End Function` instrukcji.  
   
  Jeśli kontrola przechodzi do `Exit Function` lub `End Function` i nie przypisano żadnej wartości do nazwy procedury, procedura zwraca wartość domyślną typu danych zwrotnych. Aby uzyskać więcej informacji, zobacz 'Zachowanie' w [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md).  
   
@@ -35,7 +35,7 @@ Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Sprawdź logikę przepływu sterowania i upewnij się, że przypisanie wartości przed każdej instrukcji, który powoduje, że wynik.  
+- Sprawdź logikę przepływu sterowania i upewnij się, że przypisanie wartości przed każdej instrukcji, który powoduje, że wynik.  
   
      Ułatwia to zagwarantować, każdy zwracany z procedury zwraca wartość, jeśli zawsze używasz `Return` instrukcji. Jeśli to zrobisz, ostatnią instrukcję przed `End Function` powinien być `Return` instrukcji.  
   

@@ -3,11 +3,11 @@ title: System.TimeSpan Methods
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
 ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917439"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan, metody
 Element członkowski obsługę <xref:System.TimeSpan?displayProperty=nameWithType> zależy od wersji .NET Framework i programu Microsoft SQL Server, którego używasz.  

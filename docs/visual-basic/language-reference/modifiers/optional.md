@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920669"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Określa, czy argumentu procedury, można pominąć, jeśli procedura jest wywoływana.  
@@ -25,13 +25,13 @@ Określa, czy argumentu procedury, można pominąć, jeśli procedura jest wywo�
   
  `Optional` Modyfikator mogą być używane w tych kontekstach:  
   
--   [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  Podczas wywoływania procedury z lub bez parametrów opcjonalnych, istnieje możliwość przekazywania argumentów według pozycji i według nazwy. Aby uzyskać więcej informacji, zobacz [przekazywanie argumentów według pozycji i według nazwy](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  

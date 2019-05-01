@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
 ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913890"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Instrukcje: Określanie kontekstu zabezpieczeń dla usług
 Domyślnie usługi uruchamiane w kontekście zabezpieczeń inny niż zalogowany użytkownik. Usługi uruchamiane w kontekście domyślnego konta systemu o nazwie `LocalSystem`, która umożliwi im różne przywileje dostępu do zasobów systemowych, nie użytkownik. Możesz zmienić to zachowanie, aby określić inne konto użytkownika na którym jest uruchamiany z usługą.  
   
  Ustaw kontekst zabezpieczeń, manipulowanie <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> właściwości dla procesu, w którym usługa jest uruchamiana. Ta właściwość umożliwia ustawianie usługi do zestawu obejmującego cztery typy konta:  
   
--   `User`, która sprawia, że system wyświetla monit o podanie prawidłowej nazwy użytkownika i hasła, gdy usługa jest zainstalowana i działa w kontekście konta określonego przez pojedynczego użytkownika w sieci.  
+- `User`, która sprawia, że system wyświetla monit o podanie prawidłowej nazwy użytkownika i hasła, gdy usługa jest zainstalowana i działa w kontekście konta określonego przez pojedynczego użytkownika w sieci.  
   
--   `LocalService`, które są uruchamiane w kontekście konta, który działa jako użytkownik bez uprawnień na komputerze lokalnym i przedstawia poświadczenia anonimowe każdemu zdalnemu serwerowi;  
+- `LocalService`, które są uruchamiane w kontekście konta, który działa jako użytkownik bez uprawnień na komputerze lokalnym i przedstawia poświadczenia anonimowe każdemu zdalnemu serwerowi;  
   
--   `LocalSystem`, które są uruchamiane w kontekście konta, które zapewnia szerokie uprawnienia lokalnego i przedstawia poświadczenia komputera każdemu zdalnemu serwerowi;  
+- `LocalSystem`, które są uruchamiane w kontekście konta, które zapewnia szerokie uprawnienia lokalnego i przedstawia poświadczenia komputera każdemu zdalnemu serwerowi;  
   
--   `NetworkService`, które są uruchamiane w kontekście konta, który działa jako użytkownik bez uprawnień na komputerze lokalnym, a poświadczenia komputera każdemu zdalnemu serwerowi przedstawia.  
+- `NetworkService`, które są uruchamiane w kontekście konta, który działa jako użytkownik bez uprawnień na komputerze lokalnym, a poświadczenia komputera każdemu zdalnemu serwerowi przedstawia.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceProcess.ServiceAccount> wyliczenia.  
   

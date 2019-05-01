@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
 ms.openlocfilehash: e7151fd85c7e3988051ed87a60acc2b53a8af646
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878699"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>Przykłady składni wyrażeń zapytania: Operatory agregacji (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, i <xref:System.Linq.Enumerable.Sum%2A> metod do wykonywania zapytań <xref:System.Data.DataSet> i agregowanie danych przy użyciu składni wyrażeń zapytania.  
@@ -46,7 +46,7 @@ Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerabl
  [!code-csharp[DP LINQ to DataSet Examples#AverageElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#averageelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#AverageElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#averageelements_mq)]  
   
-## <a name="count"></a>Licznik  
+## <a name="count"></a>Count  
   
 ### <a name="example"></a>Przykład  
  W tym przykładzie użyto <xref:System.Linq.Enumerable.Count%2A> zwrócić listę skontaktuj się z identyfikatorów i jak wiele zamówień, każdy ma.  

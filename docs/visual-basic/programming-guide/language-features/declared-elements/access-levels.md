@@ -15,11 +15,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
 ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828103"
 ---
 # <a name="access-levels-in-visual-basic"></a>Poziomy dostępu w Visual Basic
 *Poziom dostępu* zadeklarowanych elementów jest w zakresie możliwości dostępu do niego, oznacza to, jaki kod ma uprawnienia do jego odczytu lub zapisanie w nim. Jest to ustalane nie tylko, jak zadeklarować elementu, ale z poziomem dostępu do kontenera elementu. Kod, który nie może uzyskać dostępu zawierającego element nie może uzyskać dostępu do dowolnego z jego zawartych elementów, nawet te zadeklarowane jako `Public`. Na przykład `Public` zmienną `Private` struktury jest możliwy z wewnątrz klasy, która zawiera strukturę, ale nie z spoza tej klasy.  

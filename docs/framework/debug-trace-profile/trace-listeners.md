@@ -17,28 +17,28 @@ ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35aec3a311680e398d9f2bba94bf4c9a274c8a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873824"
 ---
 # <a name="trace-listeners"></a>Obiekty nasłuchujące śledzenia
 Korzystając z **śledzenia**, **debugowania** i <xref:System.Diagnostics.TraceSource>, musi mieć mechanizm do gromadzenia i rejestrowania wiadomości, które są wysyłane. Komunikaty śledzenia są odbierane przez *odbiorników*. Odbiornik ma na celu zbierania, przechowywania i komunikatów śledzenia, które trasy. Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takie jak dziennik, okno lub PLiku tekstowego.  
   
  Odbiorniki są dostępne dla **debugowania**, **śledzenia**, i <xref:System.Diagnostics.TraceSource> klasy, z których każdy może wysyłać dane wyjściowe do wielu obiektów odbiornika. Często używanych wstępnie zdefiniowanych obiektów nasłuchujących są następujące:  
   
--   A <xref:System.Diagnostics.TextWriterTraceListener> przekierowuje dane wyjściowe do wystąpienia <xref:System.IO.TextWriter> klasy lub miejscem <xref:System.IO.Stream> klasy. Go także zapisać konsoli lub w pliku, ponieważ są one <xref:System.IO.Stream> klasy.  
+- A <xref:System.Diagnostics.TextWriterTraceListener> przekierowuje dane wyjściowe do wystąpienia <xref:System.IO.TextWriter> klasy lub miejscem <xref:System.IO.Stream> klasy. Go także zapisać konsoli lub w pliku, ponieważ są one <xref:System.IO.Stream> klasy.  
   
--   <xref:System.Diagnostics.EventLogTraceListener> Przekierowuje dane wyjściowe do dziennika zdarzeń.  
+- <xref:System.Diagnostics.EventLogTraceListener> Przekierowuje dane wyjściowe do dziennika zdarzeń.  
   
--   A <xref:System.Diagnostics.DefaultTraceListener> emituje **zapisu** i **WriteLine** komunikatów **OutputDebugString** i **Debugger.Log** metody. W programie Visual Studio to powoduje, że komunikaty debugowania pojawią się w oknie danych wyjściowych. **Się nie powieść** , jak i nieudane **Asercja** wiadomości również emisji do **OutputDebugString** interfejsu Windows API i **Debugger.Log** metody i przyczynę, komunikat pole, aby być wyświetlane. To zachowanie jest zachowaniem domyślnym **debugowania** i **śledzenia** wiadomości, ponieważ **DefaultTraceListener** jest automatycznie uwzględnione w każdym `Listeners` zbieranie i jest tylko odbiornik automatycznie dołączane.  
+- A <xref:System.Diagnostics.DefaultTraceListener> emituje **zapisu** i **WriteLine** komunikatów **OutputDebugString** i **Debugger.Log** metody. W programie Visual Studio to powoduje, że komunikaty debugowania pojawią się w oknie danych wyjściowych. **Się nie powieść** , jak i nieudane **Asercja** wiadomości również emisji do **OutputDebugString** interfejsu Windows API i **Debugger.Log** metody i przyczynę, komunikat pole, aby być wyświetlane. To zachowanie jest zachowaniem domyślnym **debugowania** i **śledzenia** wiadomości, ponieważ **DefaultTraceListener** jest automatycznie uwzględnione w każdym `Listeners` zbieranie i jest tylko odbiornik automatycznie dołączane.  
   
--   A <xref:System.Diagnostics.ConsoleTraceListener> kieruje śledzenia i debugowania dane wyjściowe do wyjścia standardowego lub Standardowy strumień błędów.  
+- A <xref:System.Diagnostics.ConsoleTraceListener> kieruje śledzenia i debugowania dane wyjściowe do wyjścia standardowego lub Standardowy strumień błędów.  
   
--   A <xref:System.Diagnostics.DelimitedListTraceListener> kieruje śledzenia i debugowania danych wyjściowych w składniku zapisywania tekstu, takich jak edytor strumienia lub do strumienia, takich jak strumienia pliku. Dane wyjściowe śledzenia znajduje się w format tekstu rozdzielanego, który używa ogranicznik określony przez <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> właściwości.  
+- A <xref:System.Diagnostics.DelimitedListTraceListener> kieruje śledzenia i debugowania danych wyjściowych w składniku zapisywania tekstu, takich jak edytor strumienia lub do strumienia, takich jak strumienia pliku. Dane wyjściowe śledzenia znajduje się w format tekstu rozdzielanego, który używa ogranicznik określony przez <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> właściwości.  
   
--   <xref:System.Diagnostics.XmlWriterTraceListener> Kieruje śledzenia lub dane wyjściowe debugowania jako dane zakodowane w formacie XML do <xref:System.IO.TextWriter> lub <xref:System.IO.Stream>, takich jak <xref:System.IO.FileStream>.  
+- <xref:System.Diagnostics.XmlWriterTraceListener> Kieruje śledzenia lub dane wyjściowe debugowania jako dane zakodowane w formacie XML do <xref:System.IO.TextWriter> lub <xref:System.IO.Stream>, takich jak <xref:System.IO.FileStream>.  
   
  Jeśli chcesz, aby wszystkie odbiornika oprócz <xref:System.Diagnostics.DefaultTraceListener> do odbierania **debugowania**, **śledzenia** i <xref:System.Diagnostics.TraceSource> danych wyjściowych, należy dodać go do `Listeners` kolekcji. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) i [jak: Użycie TraceSource i filtrów z obiektów nasłuchujących śledzenia](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md). Wszelkie odbiornik **odbiorników** kolekcji pobiera tymi samymi komunikatami ze śledzenia danych wyjściowych metody. Załóżmy na przykład, należy skonfigurować dwa odbiorniki: **TextWriterTraceListener** i **EventLogTraceListener**. Każdego odbiornika otrzymuje ten sam komunikat. **TextWriterTraceListener** będzie kierować dane wyjściowe do strumienia, a **EventLogTraceListener** będzie kierować dane wyjściowe do dziennika zdarzeń.  
   

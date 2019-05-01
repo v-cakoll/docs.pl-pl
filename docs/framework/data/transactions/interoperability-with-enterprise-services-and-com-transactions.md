@@ -3,11 +3,11 @@ title: Współdziałanie z usługami przedsiębiorstwa i transakcjami COM+
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793656"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Współdziałanie z usługami przedsiębiorstwa i transakcjami COM+
 <xref:System.Transactions> Przestrzeń nazw obsługuje współdziałanie obiektów transakcji utworzone za pomocą tej przestrzeni nazw i transakcje utworzone za pomocą modelu COM +.  
@@ -29,9 +29,9 @@ ms.locfileid: "59301909"
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> Określa następujące wymagania:  
   
--   Gdy <xref:System.Transactions.Transaction.Current%2A> jest zaznaczone, <xref:System.Transactions> powinien obsługiwać transakcji w kontekście COM +, jeśli wykryje, że jest uruchomiona w kontekście innej niż domyślny kontekst. Należy zauważyć, że domyślnego kontekstu nie może zawierać transakcję. Dlatego w domyślnym kontekście, nawet w przypadku <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, transakcji przechowywane w magazynie lokalnym wątek używany przez <xref:System.Transactions> jest zwracana dla <xref:System.Transactions.Transaction.Current%2A>.  
+- Gdy <xref:System.Transactions.Transaction.Current%2A> jest zaznaczone, <xref:System.Transactions> powinien obsługiwać transakcji w kontekście COM +, jeśli wykryje, że jest uruchomiona w kontekście innej niż domyślny kontekst. Należy zauważyć, że domyślnego kontekstu nie może zawierać transakcję. Dlatego w domyślnym kontekście, nawet w przypadku <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, transakcji przechowywane w magazynie lokalnym wątek używany przez <xref:System.Transactions> jest zwracana dla <xref:System.Transactions.Transaction.Current%2A>.  
   
--   Jeśli nowy <xref:System.Transactions.TransactionScope> obiekt zostanie utworzony i tworzenie występuje w kontekście innej niż domyślny kontekst transakcji dla bieżącego <xref:System.Transactions.TransactionScope> obiekt powinien być zostaną uwzględnione w modelu COM +. W takim przypadku <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> zachowuje się jak <xref:System.Transactions.EnterpriseServicesInteropOption.Full> w tym tworzy nowy kontekst COM +.  
+- Jeśli nowy <xref:System.Transactions.TransactionScope> obiekt zostanie utworzony i tworzenie występuje w kontekście innej niż domyślny kontekst transakcji dla bieżącego <xref:System.Transactions.TransactionScope> obiekt powinien być zostaną uwzględnione w modelu COM +. W takim przypadku <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> zachowuje się jak <xref:System.Transactions.EnterpriseServicesInteropOption.Full> w tym tworzy nowy kontekst COM +.  
   
  Ponadto gdy <xref:System.Transactions.Transaction.Current%2A> jest ustawiana w obu <xref:System.Transactions.EnterpriseServicesInteropOption.Full> i <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, obu tych trybów oznacza, że <xref:System.Transactions.Transaction.Current%2A> nie można ustawić bezpośrednio.  Dowolne próba ustawienia <xref:System.Transactions.Transaction.Current%2A> bezpośrednio w innych niż tworzenie <xref:System.Transactions.TransactionScope> powoduje <xref:System.InvalidOperationException>. <xref:System.Transactions.EnterpriseServicesInteropOption> Wartość wyliczenia jest dziedziczone przez nowe zakresy transakcji, które nie są określone jawnie wartość, która do użycia. Na przykład, jeśli tworzysz nową <xref:System.Transactions.TransactionScope> obiekt z <xref:System.Transactions.EnterpriseServicesInteropOption.Full>, a następnie utwórz drugi <xref:System.Transactions.TransactionScope> obiektu, ale nie należy określać <xref:System.Transactions.EnterpriseServicesInteropOption> wartość, drugi <xref:System.Transactions.TransactionScope> obiekt również ma <xref:System.Transactions.EnterpriseServicesInteropOption.Full>.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "59301909"
   
 1. <xref:System.Transactions.Transaction.Current%2A>jest sprawdzenie, czy jest transakcję. Tego wyboru powoduje:  
   
-    -   Sprawdź, czy jest zakresem.  
+    - Sprawdź, czy jest zakresem.  
   
-    -   Jeśli wartość z zakresu <xref:System.Transactions.EnterpriseServicesInteropOption> zaznaczono wyliczenia przekazany w czasie zakresu.  
+    - Jeśli wartość z zakresu <xref:System.Transactions.EnterpriseServicesInteropOption> zaznaczono wyliczenia przekazany w czasie zakresu.  
   
-    -   Jeśli <xref:System.Transactions.EnterpriseServicesInteropOption> ma ustawioną wartość wyliczenia <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, transakcji COM + (<xref:System.EnterpriseServices> transakcji) pierwszeństwo <xref:System.Transactions> transakcji w lokalnego magazynu zarządzanych wątków.  
+    - Jeśli <xref:System.Transactions.EnterpriseServicesInteropOption> ma ustawioną wartość wyliczenia <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, transakcji COM + (<xref:System.EnterpriseServices> transakcji) pierwszeństwo <xref:System.Transactions> transakcji w lokalnego magazynu zarządzanych wątków.  
   
          Jeśli wartość jest równa <xref:System.Transactions.EnterpriseServicesInteropOption.None>, <xref:System.Transactions> transakcji w lokalnego magazynu wątków zarządzanych pierwszeństwo.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "59301909"
   
 3. Jeśli nowa transakcja jest do utworzenia następujące wartości <xref:System.Transactions.EnterpriseServicesInteropOption> za:  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: utworzeniu transakcji skojarzony z kontekstem COM +.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: utworzeniu transakcji skojarzony z kontekstem COM +.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: <xref:System.Transactions> transakcja jest tworzona.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>: <xref:System.Transactions> transakcja jest tworzona.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: w przypadku kontekstu COM +, transakcji jest tworzony i dołączyć do kontekstu.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: w przypadku kontekstu COM +, transakcji jest tworzony i dołączyć do kontekstu.  
   
  W poniższej tabeli przedstawiono kontekstu usługi Enterprise (ES) i transakcyjnych zakres, który wymaga transakcji przy użyciu <xref:System.Transactions.EnterpriseServicesInteropOption> wyliczenia.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "59301909"
   
  W powyższej tabeli:  
   
--   ST oznacza, że zakres transakcji otoczenia jest zarządzane przez <xref:System.Transactions>, niezależne od dowolnego <xref:System.EnterpriseServices> w kontekście transakcji, które mogą być obecne.  
+- ST oznacza, że zakres transakcji otoczenia jest zarządzane przez <xref:System.Transactions>, niezależne od dowolnego <xref:System.EnterpriseServices> w kontekście transakcji, które mogą być obecne.  
   
--   ES oznacza, że zakres otoczenia transakcja jest taka sama jak <xref:System.EnterpriseServices> w kontekście transakcji.
+- ES oznacza, że zakres otoczenia transakcja jest taka sama jak <xref:System.EnterpriseServices> w kontekście transakcji.

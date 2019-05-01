@@ -10,11 +10,11 @@ helpviewer_keywords:
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 ms.openlocfilehash: ae780da7d6c6d45cb791333e5f0edcf0690f297b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989680"
 ---
 # <a name="ui-automation-events-overview"></a>Przegląd zdarzeń automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59183745"
   
  Następujące zdarzenia może być uruchamiany nawet wtedy, gdy stan interfejsu użytkownika nie został zmieniony.  
   
--   `AutomationPropertyChangedEvent` (w zależności od właściwości, które uległy zmianie)  
+- `AutomationPropertyChangedEvent` (w zależności od właściwości, które uległy zmianie)  
   
--   `ElementSelectedEvent`  
+- `ElementSelectedEvent`  
   
--   `InvalidatedEvent`  
+- `InvalidatedEvent`  
   
--   `TextChangedEvent`  
+- `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>Identyfikatory zdarzeń automatyzacji interfejsu użytkownika  

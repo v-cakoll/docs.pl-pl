@@ -3,11 +3,11 @@ title: Niestandardowe elementy formatujące komunikaty
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857977"
 ---
 # <a name="custom-message-formatters"></a>Niestandardowe elementy formatujące komunikaty
 Zawartość komunikatu jest często w formacie XML, który zwykle nie jest to wygodne format dla aplikacji. Aplikacje manipulowania obiektami, pobierania i ustawiania ich właściwości. Windows Communication Foundation (WCF) używa *kontraktu danych* przekonwertować <xref:System.ServiceModel.Channels.Message> obiektu do obiektu może z łatwością obsłużyć przez aplikację. Procesy te są nazywane serializacji i deserializacji. Należy pamiętać, że tych samych warunkach są używane do opisywania serializacji i deserializacji, wykonywane przez warstwy transportowej do i z formatu o komunikacji sieciowej komunikat, który jest procesem niepowiązanych.  

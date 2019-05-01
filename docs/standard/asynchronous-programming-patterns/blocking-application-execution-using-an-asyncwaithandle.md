@@ -16,18 +16,18 @@ ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d667135b815dc5d47ba5f7de8d237796a6fd6e10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870165"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Blokowanie wykonania aplikacji za pomocą właściwości AsyncWaitHandle
 Aplikacje, które nie mogą w dalszym ciągu wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej należy zablokować, aż do zakończenia operacji. Blokowanie wątku głównego aplikacji podczas oczekiwania na zakończenie operacji asynchronicznej, użyj jednej z następujących opcji:  
   
--   Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć**_OperationName_ metody. To podejście jest przedstawiona w tym temacie.  
+- Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć**_OperationName_ metody. To podejście jest przedstawiona w tym temacie.  
   
--   Wywołaj operację asynchroniczną **zakończenia**_OperationName_ metody. Aby uzyskać przykład demonstrujący takie podejście, zobacz [blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+- Wywołaj operację asynchroniczną **zakończenia**_OperationName_ metody. Aby uzyskać przykład demonstrujący takie podejście, zobacz [blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
  Aplikacje używające co najmniej jeden <xref:System.Threading.WaitHandle> obiektów, aby zablokować do czasu ukończenia operacji asynchronicznej zazwyczaj będzie wywoływać **rozpocząć**_OperationName_ metody, wykonać wszelkie prace, które można zrobić bez wyniki operacji, a następnie bloku, dopóki nie operacje asynchroniczne zostanie ukończone. Aplikacja może zablokować w ramach jednej operacji, wywołując jedną z <xref:System.Threading.WaitHandle.WaitOne%2A> metod za pomocą <xref:System.IAsyncResult.AsyncWaitHandle%2A>. Aby zablokować podczas oczekiwania na zbiór na zakończenie operacji asynchronicznej, przechowywania skojarzonego <xref:System.IAsyncResult.AsyncWaitHandle%2A> obiektów w tablicy i wywołanie jednej <xref:System.Threading.WaitHandle.WaitAll%2A> metody. Aby zablokować podczas oczekiwania na dowolny zbiór na zakończenie operacji asynchronicznej, przechowywania skojarzonego <xref:System.IAsyncResult.AsyncWaitHandle%2A> obiektów w tablicy i wywołanie jednej <xref:System.Threading.WaitHandle.WaitAny%2A> metody.  
   

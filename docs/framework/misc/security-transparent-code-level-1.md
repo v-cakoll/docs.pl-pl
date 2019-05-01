@@ -12,11 +12,11 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868761"
 ---
 # <a name="security-transparent-code-level-1"></a>Kod o przezroczystym poziomie bezpieczeństwa, poziom 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "59161073"
   
  Ten temat zawiera następujące sekcje:  
   
--   [Model przejrzystości poziomu 1](#the_level_1_transparency_model)  
+- [Model przejrzystości poziomu 1](#the_level_1_transparency_model)  
   
--   [Atrybuty przezroczystości](#transparency_attributes)  
+- [Atrybuty przezroczystości](#transparency_attributes)  
   
--   [Przykłady przezroczystości zabezpieczeń](#security_transparency_examples)  
+- [Przykłady przezroczystości zabezpieczeń](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Model przejrzystości poziomu 1  
@@ -40,11 +40,11 @@ ms.locfileid: "59161073"
   
  Możesz oznaczyć całego zestawu, niektóre klasy w zestawie lub niektóre metody w klasie jako zabezpieczenia przejrzysty. Kod o przezroczystym poziomie bezpieczeństwa nie podniesienia uprawnień. Ograniczenie to ma trzy skutki:  
   
--   Nie można wykonać kod o przezroczystym poziomie bezpieczeństwa <xref:System.Security.Permissions.SecurityAction.Assert> akcji.  
+- Nie można wykonać kod o przezroczystym poziomie bezpieczeństwa <xref:System.Security.Permissions.SecurityAction.Assert> akcji.  
   
--   Wszelkie zapotrzebowania na łącza będą spełnione przez kod o przezroczystym poziomie bezpieczeństwa staje się pełnego żądania.  
+- Wszelkie zapotrzebowania na łącza będą spełnione przez kod o przezroczystym poziomie bezpieczeństwa staje się pełnego żądania.  
   
--   Niebezpieczny kod (nieweryfikowalnego), które muszą być wykonywane w kod o przezroczystym poziomie bezpieczeństwa powoduje pełnego żądania dla <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnienia zabezpieczeń.  
+- Niebezpieczny kod (nieweryfikowalnego), które muszą być wykonywane w kod o przezroczystym poziomie bezpieczeństwa powoduje pełnego żądania dla <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnienia zabezpieczeń.  
   
  Te zasady są wymuszane podczas wykonywania przez środowisko uruchomieniowe języka wspólnego (CLR). Kod o przezroczystym poziomie bezpieczeństwa przekazuje wszystkie wymagania bezpieczeństwa kod, który ją wywołuje wywołujące. Żądania przepływać przez kod o przezroczystym poziomie bezpieczeństwa nie podniesienia uprawnień. Aplikacji niskiego zaufania wywołuje kod o przezroczystym poziomie bezpieczeństwa, powoduje, że zapotrzebowanie na wysokim poziomie uprawnień zapotrzebowanie przepływ niski zaufany kod i zakończyć się niepowodzeniem. Kod o przezroczystym poziomie bezpieczeństwa nie można zatrzymać żądania, ponieważ nie może wykonywać akcje potwierdzenia. Ten sam kod zabezpieczenia przejrzysty wywoływane z wyników pełni zaufany kod w pomyślnym żądanie.  
   

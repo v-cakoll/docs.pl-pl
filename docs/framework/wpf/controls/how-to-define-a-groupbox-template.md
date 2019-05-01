@@ -6,11 +6,11 @@ helpviewer_keywords:
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
 ms.openlocfilehash: dd53af87ec2d12b2ed0dcf2b23374d76e8f631a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910523"
 ---
 # <a name="how-to-define-a-groupbox-template"></a>Instrukcje: Definiowanie szablonu GroupBox
 W tym przykładzie pokazano, jak utworzyć szablon dla <xref:System.Windows.Controls.GroupBox> kontroli.  

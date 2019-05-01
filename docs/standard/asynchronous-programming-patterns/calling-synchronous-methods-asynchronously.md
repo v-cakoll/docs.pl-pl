@@ -23,11 +23,11 @@ ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870087"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Wywołanie metod synchronicznych w sposób asynchroniczny
 
@@ -45,13 +45,13 @@ ms.locfileid: "46702884"
 
 Przykłady kodu, w tym temacie ilustrują cztery typowe sposoby korzystania z `BeginInvoke` i `EndInvoke` wykonywanie wywołań asynchronicznych. Po wywołaniu `BeginInvoke` wykonasz następujące czynności:
 
--   Czy niektóre pracy, jak i następnie wywołać `EndInvoke` do bloku do czasu ukończenia wywołania.
+- Czy niektóre pracy, jak i następnie wywołać `EndInvoke` do bloku do czasu ukończenia wywołania.
 
--   Uzyskaj <xref:System.Threading.WaitHandle> przy użyciu <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> właściwości, należy zastosować jego <xref:System.Threading.WaitHandle.WaitOne%2A> metody Zablokuj wykonywanie aż do <xref:System.Threading.WaitHandle> jest sygnalizowane, a następnie wywołaj `EndInvoke`.
+- Uzyskaj <xref:System.Threading.WaitHandle> przy użyciu <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> właściwości, należy zastosować jego <xref:System.Threading.WaitHandle.WaitOne%2A> metody Zablokuj wykonywanie aż do <xref:System.Threading.WaitHandle> jest sygnalizowane, a następnie wywołaj `EndInvoke`.
 
--   Sondowania <xref:System.IAsyncResult> zwrócone przez `BeginInvoke` do określania, kiedy wywołanie asynchroniczne zostało ukończone, a następnie wywołaj `EndInvoke`.
+- Sondowania <xref:System.IAsyncResult> zwrócone przez `BeginInvoke` do określania, kiedy wywołanie asynchroniczne zostało ukończone, a następnie wywołaj `EndInvoke`.
 
--   Przekazywanie obiektu delegate dla metody wywołania zwrotnego do `BeginInvoke`. Metoda jest wykonywana na <xref:System.Threading.ThreadPool> wątków po zakończeniu wywołania asynchronicznego. Wywołania metody wywołania zwrotnego `EndInvoke`.
+- Przekazywanie obiektu delegate dla metody wywołania zwrotnego do `BeginInvoke`. Metoda jest wykonywana na <xref:System.Threading.ThreadPool> wątków po zakończeniu wywołania asynchronicznego. Wywołania metody wywołania zwrotnego `EndInvoke`.
 
 > [!IMPORTANT]
 > Niezależnie od tego, w których technika, należy zawsze wywołuj `EndInvoke` do ukończenia wywołania asynchronicznego.
@@ -101,11 +101,11 @@ Przykłady kodu, w tym temacie ilustrują cztery typowe sposoby korzystania z `B
 
  Uwagi na przykładzie:
 
--   `threadId` Parametru `TestMethod` jest `out` parametru ([`<Out>` `ByRef` w języku Visual Basic), więc jego wartość wejściowa nie jest nigdy używane przez `TestMethod`. Fikcyjny zmienna jest przekazywana do `BeginInvoke` wywołania. Jeśli `threadId` zostały parametr `ref` parametru (`ByRef` w języku Visual Basic), zmienna będzie miała być polem poziomie klasy, aby go można przekazać do obu `BeginInvoke` i `EndInvoke`.
+- `threadId` Parametru `TestMethod` jest `out` parametru ([`<Out>` `ByRef` w języku Visual Basic), więc jego wartość wejściowa nie jest nigdy używane przez `TestMethod`. Fikcyjny zmienna jest przekazywana do `BeginInvoke` wywołania. Jeśli `threadId` zostały parametr `ref` parametru (`ByRef` w języku Visual Basic), zmienna będzie miała być polem poziomie klasy, aby go można przekazać do obu `BeginInvoke` i `EndInvoke`.
 
--   Informacje o stanie, który jest przekazywany do `BeginInvoke` jest ciąg formatu, który korzysta z metody wywołania zwrotnego do sformatowania komunikatu wyjściowego. Ponieważ jest przekazywany jako typ <xref:System.Object>, informacje o stanie, należy zrzutować jego odpowiedniego typu, zanim będzie można używać.
+- Informacje o stanie, który jest przekazywany do `BeginInvoke` jest ciąg formatu, który korzysta z metody wywołania zwrotnego do sformatowania komunikatu wyjściowego. Ponieważ jest przekazywany jako typ <xref:System.Object>, informacje o stanie, należy zrzutować jego odpowiedniego typu, zanim będzie można używać.
 
--   Wywołanie zwrotne jest wykonywane na <xref:System.Threading.ThreadPool> wątku. <xref:System.Threading.ThreadPool> wątki są wątków w tle, które nie jest przechowywana aplikacja była uruchomiona, gdy kończy się w wątku głównym, więc nie wątku głównego przykładu w stan uśpienia wystarczająco długo na zakończenie wywołania zwrotnego.
+- Wywołanie zwrotne jest wykonywane na <xref:System.Threading.ThreadPool> wątku. <xref:System.Threading.ThreadPool> wątki są wątków w tle, które nie jest przechowywana aplikacja była uruchomiona, gdy kończy się w wątku głównym, więc nie wątku głównego przykładu w stan uśpienia wystarczająco długo na zakończenie wywołania zwrotnego.
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

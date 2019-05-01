@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
 ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971850"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code — Typ funkcji XAML
 Umożliwia umieszczanie kodu w ramach produkcji XAML. Taki kod może być kompilowane albo przez dowolnego implementacji procesora XAML, który kompiluje XAML lub po lewej stronie w środowisku produkcyjnym XAML do nowszych zastosowań, takich jak interpretacji przez środowisko uruchomieniowe.  
@@ -38,15 +38,15 @@ Umożliwia umieszczanie kodu w ramach produkcji XAML. Taki kod może być kompil
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
  Kod zadeklarowane wewnątrz `x:Code` WPF ma kilka znaczące ograniczenia:  
   
--   `x:Code` Dyrektywy element musi być natychmiastowe podrzędnym elementem głównym elementem produkcji XAML.  
+- `x:Code` Dyrektywy element musi być natychmiastowe podrzędnym elementem głównym elementem produkcji XAML.  
   
--   [x: Class — dyrektywa](x-class-directive.md) musi być podana w elemencie głównym nadrzędnej.  
+- [x: Class — dyrektywa](x-class-directive.md) musi być podana w elemencie głównym nadrzędnej.  
   
--   Kod umieszczony w `x:Code` są traktowani kompilacji w zakresie częściową klasą, która jest już utworzony dla tej strony XAML. W związku z tym cały kod, który zdefiniujesz musi być członków lub zmiennych tej klasy częściowej.  
+- Kod umieszczony w `x:Code` są traktowani kompilacji w zakresie częściową klasą, która jest już utworzony dla tej strony XAML. W związku z tym cały kod, który zdefiniujesz musi być członków lub zmiennych tej klasy częściowej.  
   
--   Nie można zdefiniować dodatkowe klasy, inne niż przez zagnieżdżanie klasy wewnątrz klasy częściowe (zagnieżdżanie jest dozwolone, ale nie jest typowym ponieważ klasy zagnieżdżone nie może być przywoływany w XAML). Przestrzeni nazw CLR innych niż przestrzeń nazw, która jest używana dla istniejącej klasy częściowe nie może być zdefiniowany ani dodawane do.  
+- Nie można zdefiniować dodatkowe klasy, inne niż przez zagnieżdżanie klasy wewnątrz klasy częściowe (zagnieżdżanie jest dozwolone, ale nie jest typowym ponieważ klasy zagnieżdżone nie może być przywoływany w XAML). Przestrzeni nazw CLR innych niż przestrzeń nazw, która jest używana dla istniejącej klasy częściowe nie może być zdefiniowany ani dodawane do.  
   
--   Odwołania do jednostek kodu poza przestrzeń nazw środowiska CLR klasy częściowej wszystkie muszą być w pełni kwalifikowana. Jeśli elementy członkowskie deklarowanej zastąpień do przesłonięcia elementów członkowskich klasy częściowej, to można określić za pomocą słowa kluczowego override specyficzny dla języka. W przypadku elementów członkowskich zadeklarowanych w `x:Code` zakres elementów członkowskich klasy częściowej utworzony poza XAML różne, w taki sposób, że kompilator zgłasza konfliktu, plik XAML nie można skompilować lub obciążenia.  
+- Odwołania do jednostek kodu poza przestrzeń nazw środowiska CLR klasy częściowej wszystkie muszą być w pełni kwalifikowana. Jeśli elementy członkowskie deklarowanej zastąpień do przesłonięcia elementów członkowskich klasy częściowej, to można określić za pomocą słowa kluczowego override specyficzny dla języka. W przypadku elementów członkowskich zadeklarowanych w `x:Code` zakres elementów członkowskich klasy częściowej utworzony poza XAML różne, w taki sposób, że kompilator zgłasza konfliktu, plik XAML nie można skompilować lub obciążenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

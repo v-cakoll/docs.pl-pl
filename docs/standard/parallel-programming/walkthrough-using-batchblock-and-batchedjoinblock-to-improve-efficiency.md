@@ -12,11 +12,11 @@ ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908638"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Przewodnik: Poprawa wydajności przy użyciu klas BatchBlock i BatchedJoinBlock
 Biblioteka przepływu danych TPL zapewnia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> klasy tak, że może odbierać i buforować dane z jednego lub kilku źródeł i następnie rozpropagować te buforowane dane jako jedną kolekcję. Ten mechanizm łączenia we wsady jest przydatny, podczas zbierania danych z co najmniej jednego źródła, a następnie przetwarzania wielu elementów danych jako zadania wsadowego. Na przykład rozważmy aplikację, która używa przepływu danych do wstawiania rekordów do bazy danych. Ta operacja może być bardziej skuteczna, jeśli wiele elementów jest wstawianych jednocześnie zamiast pojedynczo po kolei. W tym dokumencie opisano, jak używać <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> operacje wstawiania klasy, aby zwiększyć wydajność takiej bazy danych. Opisano również sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> klasa do przechwytywania zarówno wyników jak i wyjątków, które występują, gdy program czyta z bazy danych.
@@ -34,19 +34,19 @@ Biblioteka przepływu danych TPL zapewnia <xref:System.Threading.Tasks.Dataflow.
   
  Ten przewodnik zawiera następujące sekcje:  
   
--   [Tworzenie aplikacji konsoli](#creating)  
+- [Tworzenie aplikacji konsoli](#creating)  
   
--   [Definiowanie klasy pracownika](#employeeClass)  
+- [Definiowanie klasy pracownika](#employeeClass)  
   
--   [Definiowanie operacji w bazie danych pracownika](#operations)  
+- [Definiowanie operacji w bazie danych pracownika](#operations)  
   
--   [Dodawanie danych pracownika do bazy danych bez używania buforowania.](#nonBuffering)  
+- [Dodawanie danych pracownika do bazy danych bez używania buforowania.](#nonBuffering)  
   
--   [Używanie buforowania, aby dodać dane pracownika do bazy danych](#buffering)  
+- [Używanie buforowania, aby dodać dane pracownika do bazy danych](#buffering)  
   
--   [Używanie buforowanego połączenia do odczytu danych pracowników z bazy danych](#bufferedJoin)  
+- [Używanie buforowanego połączenia do odczytu danych pracowników z bazy danych](#bufferedJoin)  
   
--   [Kompletny przykład](#complete)  
+- [Kompletny przykład](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Tworzenie aplikacji konsoli  

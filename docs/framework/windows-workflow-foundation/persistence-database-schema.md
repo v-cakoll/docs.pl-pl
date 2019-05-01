@@ -3,11 +3,11 @@ title: Schemat bazy danych stanów trwałych
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
 ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864172"
 ---
 # <a name="persistence-database-schema"></a>Schemat bazy danych stanów trwałych
 W tym temacie opisano widoku publicznego obsługiwane przez Store wystąpienia przepływu pracy SQL.  

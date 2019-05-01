@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f613842c12b50b8a58aac1b71bf2f3c53aaf961f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914488"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>ICorProfilerCallback2::GarbageCollectionFinished — Metoda
 Powiadamia program profilujący, że wyrzucanie elementów bezużytecznych zostało ukończone, a wszystkie wywołania wyrzucania elementów bezużytecznych zostały wydane dla niego.  

@@ -3,11 +3,11 @@ title: Nieprawidłowa zawartość XElement i XDocument Objects2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907585"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Weryfikowanie zawartości obiektów XElement i XDocument
 W tym temacie opisano prawidłowe argumenty, które mogą być przekazywane do konstruktorów i metod, których używasz do dodawania zawartości do elementów i dokumentów.  
@@ -17,35 +17,35 @@ W tym temacie opisano prawidłowe argumenty, które mogą być przekazywane do k
   
  Podczas dodawania zawartość, proste, różne typy mogą być przekazywane do tej metody. Prawidłowe typy:  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   Dowolny typ, który implementuje `Object.ToString`.  
+- Dowolny typ, który implementuje `Object.ToString`.  
   
--   Dowolny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601>.  
+- Dowolny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601>.  
   
  Podczas dodawania zawartości złożonej, różnych typów można przekazany do tej metody:  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   Dowolny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601>  
+- Dowolny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601>  
   
  Jeśli obiekt implementuje interfejs <xref:System.Collections.Generic.IEnumerable%601>, są wyliczane kolekcji w obiekcie, a wszystkie elementy w kolekcji są dodawane. Jeśli kolekcja zawiera <xref:System.Xml.Linq.XNode> lub <xref:System.Xml.Linq.XAttribute> obiektów, każdy element w kolekcji zostanie dodany osobno. Jeśli kolekcja zawiera tekst (lub obiektów, które są konwertowane na tekst), tekst w kolekcji jest połączonych i dodać jako węzeł w jeden tekst.  
   
@@ -62,15 +62,15 @@ W tym temacie opisano prawidłowe argumenty, które mogą być przekazywane do k
   
  Nieprawidłowa zawartość dokumentu obejmuje następujące funkcje:  
   
--   Zero lub jeden <xref:System.Xml.Linq.XDocumentType> obiektów. Typy dokumentów musi występować przed elementem.  
+- Zero lub jeden <xref:System.Xml.Linq.XDocumentType> obiektów. Typy dokumentów musi występować przed elementem.  
   
--   Zero lub jeden element.  
+- Zero lub jeden element.  
   
--   Zero lub więcej komentarzy.  
+- Zero lub więcej komentarzy.  
   
--   Zero lub więcej instrukcji przetwarzania.  
+- Zero lub więcej instrukcji przetwarzania.  
   
--   Zero lub więcej węzły tekstowe, które zawierają tylko białe miejsca.  
+- Zero lub więcej węzły tekstowe, które zawierają tylko białe miejsca.  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Konstruktory i funkcje, które umożliwiają dodawanie zawartości  
  Następujące metody umożliwiają dodanie zawartość elementu podrzędnego do <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument>:  

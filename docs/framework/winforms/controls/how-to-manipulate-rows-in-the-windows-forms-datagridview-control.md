@@ -11,11 +11,11 @@ helpviewer_keywords:
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
 ms.openlocfilehash: 095efc7279a1dc6702aeeb5ec5d598dbdd8818b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913747"
 ---
 # <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>Instrukcje: manipulowanie wierszami w kontrolce DataGridView formularzy systemu Windows
 Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> wiersze, używając właściwości <xref:System.Windows.Forms.DataGridViewRow> klasy.  
@@ -28,7 +28,7 @@ Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Win
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

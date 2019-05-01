@@ -22,11 +22,11 @@ helpviewer_keywords:
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
 ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864498"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Operatory logiczne i bitowe w Visual Basic
 Operatory logiczne, porównanie `Boolean` wyrażeń i zwrócenia `Boolean` wynik. `And`, `Or`, `AndAlso`, `OrElse`, I `Xor` operatory są *binarne* ponieważ przyjmują dwa argumenty operacji, podczas gdy `Not` operator jest *jednoargumentowe* z powodu jeden argument operacji. Niektóre z tych operatorów można również wykonać operacje logiczne bitowe dla wartości całkowitych.  
@@ -72,13 +72,13 @@ Operatory logiczne, porównanie `Boolean` wyrażeń i zwrócenia `Boolean` wynik
   
  Poprzedni przykład ustawia wartość `x` 1. Dzieje się z następujących powodów:  
   
--   Wartości są traktowane jako dane binarne:  
+- Wartości są traktowane jako dane binarne:  
   
      3 w formacie binarnym = 011  
   
      5 w formacie binarnym = 101  
   
--   `And` Operator porównuje reprezentacji binarnych jedną pozycję binarny (bity) w danym momencie. Jeśli oba bity na określonej pozycji 1, 1 jest umieszczany w tym miejscu, w wyniku. Jeśli bit albo ma wartość 0, 0 jest umieszczany w tym miejscu, w wyniku. W powyższym przykładzie wynik działania jest prawidłowy w następujący sposób:  
+- `And` Operator porównuje reprezentacji binarnych jedną pozycję binarny (bity) w danym momencie. Jeśli oba bity na określonej pozycji 1, 1 jest umieszczany w tym miejscu, w wyniku. Jeśli bit albo ma wartość 0, 0 jest umieszczany w tym miejscu, w wyniku. W powyższym przykładzie wynik działania jest prawidłowy w następujący sposób:  
   
      011 (3 w formacie binarnym)  
   
@@ -86,7 +86,7 @@ Operatory logiczne, porównanie `Boolean` wyrażeń i zwrócenia `Boolean` wynik
   
      001 (wynik, w formacie binarnym)  
   
--   Wynik jest traktowany jako dziesiętne. Wartość 001 jest binarna reprezentacja 1, więc `x` = 1.  
+- Wynik jest traktowany jako dziesiętne. Wartość 001 jest binarna reprezentacja 1, więc `x` = 1.  
   
  Operatora testu koniunkcji `Or` operacji jest podobny, z tą różnicą, że 1 jest przypisana do bitu wyniku, jeśli jeden lub oba bitów w porównaniu jest 1. `Xor` przypisuje do bitu wyniku 1, jeśli dokładnie jeden stosunku liczby bitów (nie obie) ma wartość 1. `Not` przyjmuje jeden argument operacji i odwraca wszystkie bity, łącznie z bitem, przypisuje wartość do wyniku. Oznacza to, że dla podpisanej liczby dodatnie `Not` zawsze zwraca wartość ujemną i liczb ujemnych `Not` zawsze zwraca wartość dodatnią lub wartość zero.  
   

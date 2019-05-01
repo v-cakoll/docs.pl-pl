@@ -9,11 +9,11 @@ helpviewer_keywords:
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920117"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedura główna w Visual Basic
 Każda aplikacja w języku Visual Basic mogą zawierać procedury, nazywane `Main`. Ta procedura służy jako początkowy punkt i ogólna kontrola dla danej aplikacji. Wywołania środowiska .NET Framework swoje `Main` procedury po załadowaniu aplikacji i jest gotowy do przekazania do formantu. Jeśli tworzysz aplikację Windows Forms, należy napisać `Main` procedurę dla aplikacji działających w ich własnych.  
@@ -23,11 +23,11 @@ Każda aplikacja w języku Visual Basic mogą zawierać procedury, nazywane `Mai
 ## <a name="requirements-for-the-main-procedure"></a>Wymagania dotyczące procedury głównej  
  Plik, który jest uruchamiany na jego własnej (zwykle z rozszerzeniem .exe) musi zawierać `Main` procedury. Nie działa w jego własnej biblioteki (np. z rozszerzeniem .dll) i nie wymaga `Main` procedury. Wymagania dotyczące różnych typów projektów, że możesz tworzyć są następujące:  
   
--   Aplikacja konsolowa ich własnych i należy podać co najmniej jedną `Main` procedury. .  
+- Aplikacja konsolowa ich własnych i należy podać co najmniej jedną `Main` procedury. .  
   
--   Formularze Windows aplikacje uruchamiane w ich własnych. Jednak kompilator języka Visual Basic automatycznie generuje `Main` procedury w takich aplikacji, a nie trzeba napisać jeden.  
+- Formularze Windows aplikacje uruchamiane w ich własnych. Jednak kompilator języka Visual Basic automatycznie generuje `Main` procedury w takich aplikacji, a nie trzeba napisać jeden.  
   
--   Biblioteki klas nie wymagają `Main` procedury. Obejmują one bibliotek kontrolek Windows i biblioteki formantów sieci Web. Aplikacje sieci Web są wdrażane jako biblioteki klas.  
+- Biblioteki klas nie wymagają `Main` procedury. Obejmują one bibliotek kontrolek Windows i biblioteki formantów sieci Web. Aplikacje sieci Web są wdrażane jako biblioteki klas.  
   
 ## <a name="declaring-the-main-procedure"></a>Deklarowanie główne procedury  
  Istnieją cztery sposoby deklarowania `Main` procedury. Czy nie może przebierać argumenty i może zwracać wartość, czy nie.  
@@ -35,7 +35,7 @@ Każda aplikacja w języku Visual Basic mogą zawierać procedury, nazywane `Mai
 > [!NOTE]
 >  Jeśli zadeklarujesz `Main` w klasie, należy użyć `Shared` — słowo kluczowe. W module `Main` musi być `Shared`.  
   
--   Najprostszym sposobem jest, aby zadeklarować `Sub` procedury, która nie przyjmuje argumentów ani nie zwraca wartości.  
+- Najprostszym sposobem jest, aby zadeklarować `Sub` procedury, która nie przyjmuje argumentów ani nie zwraca wartości.  
   
     ```  
     Module mainModule  
@@ -47,7 +47,7 @@ Każda aplikacja w języku Visual Basic mogą zawierać procedury, nazywane `Mai
     End Module  
     ```  
   
--   `Main` może również zwracać `Integer` wartość, która używa systemu operacyjnego jako kod zakończenia programu. Inne programy można przetestować ten kod, sprawdzając wartość Windows ERRORLEVEL. Aby zwrócić kod wyjścia, należy zadeklarować `Main` jako `Function` procedury zamiast `Sub` procedury.  
+- `Main` może również zwracać `Integer` wartość, która używa systemu operacyjnego jako kod zakończenia programu. Inne programy można przetestować ten kod, sprawdzając wartość Windows ERRORLEVEL. Aby zwrócić kod wyjścia, należy zadeklarować `Main` jako `Function` procedury zamiast `Sub` procedury.  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ Każda aplikacja w języku Visual Basic mogą zawierać procedury, nazywane `Mai
     End Module  
     ```  
   
--   `Main` może to również przybrać `String` tablic jako argumentu. Każdego ciągu w tablicy zawiera jeden z argumentów wiersza polecenia używane do wywołania programu. Możesz wykonać różne akcje zależnie od ich wartości.  
+- `Main` może to również przybrać `String` tablic jako argumentu. Każdego ciągu w tablicy zawiera jeden z argumentów wiersza polecenia używane do wywołania programu. Możesz wykonać różne akcje zależnie od ich wartości.  
   
     ```  
     Module mainModule  
@@ -88,7 +88,7 @@ Każda aplikacja w języku Visual Basic mogą zawierać procedury, nazywane `Mai
     End Module  
     ```  
   
--   Można zadeklarować `Main` Sprawdź argumenty wiersza polecenia, ale zwraca kod zakończenia, w następujący sposób.  
+- Można zadeklarować `Main` Sprawdź argumenty wiersza polecenia, ale zwraca kod zakończenia, w następujący sposób.  
   
     ```  
     Module mainModule  

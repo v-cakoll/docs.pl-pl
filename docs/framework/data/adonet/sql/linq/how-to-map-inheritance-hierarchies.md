@@ -6,11 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 6f437b7f7ae6a414971edb497bc2c84c03674fe8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904049"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Instrukcje: Mapowanie hierarchii dziedziczenia
 Aby zaimplementować mapowanie dziedziczenia w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], należy określić atrybuty i właściwości atrybutów w klasie głównego hierarchii dziedziczenia zgodnie z opisem w poniższych krokach. Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do mapowanie hierarchii dziedziczenia. Zobacz [jak: Skonfigurować dziedziczenie za pomocą Projektanta obiektów relacyjnych](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  

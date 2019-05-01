@@ -9,41 +9,41 @@ ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872342"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Narzędzie do analizy kompozycji (Mefx)
-Narzędzie do analizy kompozycji (Mefx) jest aplikacją wiersza polecenia, która analizuje biblioteki (.dll) i pliki aplikacji (.exe) zawierający części Managed Extensibility Framework (MEF). Głównym celem Mefx ma umożliwiają deweloperom diagnozowanie błędów kompozycji w swoich aplikacjach MEF bez konieczności Dodaj kod śledzenia skomplikowane do samej aplikacji. Może być również przydatne do zrozumienia składniki Report Part z biblioteki udostępnione przez innych firm. W tym temacie opisano sposób użycia Mefx i znajdują się informacje na jego składni.  
+Narzędzie do analizy kompozycji (Mefx) jest aplikacją wiersza polecenia, który analizuje biblioteki (.dll) i pliki aplikacji (.exe), zawierający części Managed Extensibility Framework (MEF). Głównym celem Mefx jest umożliwiają deweloperom diagnozowanie błędów składu w swoich aplikacjach MEF nie wymaga, aby dodać kod śledzenia kłopotliwe do samej aplikacji. Również może być przydatne do zrozumienia składniki Report Part z biblioteki, dostarczone przez stronę trzecią. W tym temacie opisano sposób użycia Mefx i znajdują się informacje na jego składni.  
   
 <a name="getting_mefx"></a>   
-## <a name="getting-mefx"></a>Pobieranie Mefx  
+## <a name="getting-mefx"></a>Wprowadzenie Mefx  
  Mefx jest dostępna w witrynie GitHub pod [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0). Po prostu Pobierz i Rozpakuj narzędzie.  
   
 <a name="basic_syntax"></a>   
 ## <a name="basic-syntax"></a>Podstawowa składnia  
- Mefx jest wywoływana z poziomu wiersza polecenia w następującym formacie:  
+ Mefx jest wywoływane z poziomu wiersza polecenia w następującym formacie:  
   
 ```  
 mefx [files and directories] [action] [options]  
 ```  
   
- Pierwszy zestaw argumentów Określ pliki i katalogi, z którego można załadować części dla analizy. Określ plik z `/file:` przełącznika i katalog o `/directory:` przełącznika. Można określić wiele plików lub katalogów, jak pokazano w poniższym przykładzie:  
+ Pierwszy zestaw argumentów określić pliki i katalogi, z którego można załadować części do analizy. Określ plik z `/file:` przełącznika i katalog o `/directory:` przełącznika. Można określić wiele plików lub katalogów, jak pokazano w poniższym przykładzie:  
   
 ```  
 mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]  
 ```  
   
 > [!NOTE]
->  Każdy .dll lub .exe powinien można ładować tylko jeden raz. Jeśli plik został załadowany wiele razy, narzędzie może zwracać niepoprawne informacje.  
+>  Każdy plik .dll lub .exe powinien można ładować tylko jeden raz. Jeśli plik jest ładowany kilka razy, narzędzie może zwracać nieprawidłowe informacje.  
   
  Po listę plików i katalogów należy określić polecenia i opcje dla tego polecenia.  
   
 <a name="listing_available_parts"></a>   
 ## <a name="listing-available-parts"></a>Wyświetlanie listy dostępnych części  
- Użyj `/parts` akcji, aby wyświetlić listę wszystkich części zadeklarowany w plikach załadowane. Wynik jest to prosta lista nazw części.  
+ Użyj `/parts` akcji, aby wyświetlić listę wszystkich części zadeklarowane w plikach załadowane. Wynik jest prostą listę nazw.  
   
 ```  
 mefx /file:MyAddIn.dll /parts  
@@ -51,7 +51,7 @@ MyAddIn.AddIn
 MyAddIn.MemberPart  
 ```  
   
- Aby uzyskać więcej informacji na temat części, użyj `/verbose` opcji. Dane wyjściowe dodatkowe informacje dotyczące wszystkich dostępnych części. Aby uzyskać więcej informacji na temat jednej części, należy użyć `/type` akcji zamiast `/parts`.  
+ Aby uzyskać więcej informacji na temat poszczególnych użyj `/verbose` opcji. Dane wyjściowe dodatkowe informacje dotyczące wszystkich dostępnych części. Aby uzyskać więcej informacji na temat pojedynczą częścią, użyj `/type` akcji zamiast `/parts`.  
   
 ```  
 mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose  
@@ -61,20 +61,20 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
   
 <a name="listing_imports_and_exports"></a>   
 ## <a name="listing-imports-and-exports"></a>Wyświetlanie listy importu i eksportu  
- `/imports` i `/exports` akcje będzie zawierała listę wszystkich importowanych części i wszystkie części wyeksportowanego odpowiednio. Można również podać części, których importowania lub eksportowania określonego typu za pomocą `/importers` lub `/exporters` akcje.  
+ `/imports` i `/exports` akcji spowoduje wyświetlenie listy wszystkich importowanych części i wszystkie części wyeksportowanego odpowiednio. Można również podać części, które importowania lub eksportowania danego typu przy użyciu `/importers` lub `/exporters` akcji.  
   
 ```  
 mefx /file:MyAddIn.dll /importers:MyAddin.MemberPart  
 MyAddin.AddIn  
 ```  
   
- Można także zastosować `/verbose` opcję, aby te akcje.  
+ Można również zastosować `/verbose` opcję, aby te akcje.  
   
 <a name="finding_rejected_parts"></a>   
 ## <a name="finding-rejected-parts"></a>Znajdowanie odrzucone części  
- Po załadowaniu dostępne części, Mefx używa aparatu kompozycji MEF ich utworzenie. Elementy, które nie mogą być składane pomyślnie są określane jako *odrzucone*. Aby wyświetlić listę wszystkich odrzucone części, użyj `/rejected` akcji.  
+ Po załadowaniu dostępnych części Mefx używa aparat kompozycji MEF do ich tworzenia. Części, które nie mogą być pomyślnie składane są określane jako *odrzucone*. Aby wyświetlić listę wszystkich części odrzucone, należy użyć `/rejected` akcji.  
   
- Można użyć `/verbose` opcję z `/rejected` akcji, aby wydrukować szczegółowe informacje o odrzucone części. W poniższym przykładzie `ClassLibrary1` biblioteki DLL zawiera `AddIn` części, który importuje `MemberPart` i `ChainOne` części. `ChainOne` Importuje `ChainTwo`, ale `ChainTwo` nie istnieje. Oznacza to, że `ChainOne` zostaje odrzucona, co powoduje, że `AddIn` odrzucona.  
+ Możesz użyć `/verbose` z opcją `/rejected` akcji, aby wydrukować szczegółowe informacje o odrzucone części. W poniższym przykładzie `ClassLibrary1` Biblioteka DLL zawiera sekcję `AddIn` części, które importuje `MemberPart` i `ChainOne` części. `ChainOne` Importuje `ChainTwo`, ale `ChainTwo` nie istnieje. Oznacza to, że `ChainOne` została odrzucona, co powoduje, że `AddIn` odrzucona.  
   
 ```  
 mefx /file:ClassLibrary1.dll /rejected /verbose  
@@ -105,22 +105,22 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
    at Microsoft.ComponentModel.Composition.Diagnostics.CompositionInfo.AnalyzeImportDefinition(ExportProvider host, IEnumerable`1 availableParts, ImportDefinition id)  
 ```  
   
- Interesujące informacje znajdują się w `[Exception]` i `[Unsuitable]` wyników. `[Exception]` Wynik zawiera informacje o Dlaczego części został odrzucony. `[Unsuitable]` Wyników wskazuje na to, dlaczego części dopasowywania w przeciwnym razie nie można użyć do wypełnienia importu; w takim przypadku powodu części sam odrzucone importów Brak.  
+ Interesujące informacje znajdują się w `[Exception]` i `[Unsuitable]` wyników. `[Exception]` Wynik zawiera informacje dotyczące przyczyny część została odrzucona. `[Unsuitable]` Wynik wskazuje, dlaczego część dopasowywania w przeciwnym razie nie można użyć do wypełnienia import, w tym przypadku powodu tę część samego odrzucone Brak importów.  
   
 <a name="analyzing_primary_causes"></a>   
 ## <a name="analyzing-primary-causes"></a>Analizowanie podstawowy powoduje, że  
- Kilka fragmentów są połączone w łańcuchu zależności długie, problem obejmujące w dolnej części może spowodować całego łańcucha odrzucona. Diagnozowanie problemów może być trudne, ponieważ głównej przyczyny błędu nie jest zawsze widoczne. Aby ułatwić ten problem, można użyć `/causes` akcji, który próbuje odnaleźć przyczynę żadnych kaskadowych odrzucenia.  
+ Kilka elementów są połączone w łańcuchu zależności długie, problem z udziałem w dolnej części może spowodować cały łańcuch odrzucona. Diagnozowanie takich problemów może być trudne, ponieważ nie główną przyczynę niepowodzenia zawsze jest oczywiste. Aby pomóc w rozwiązaniu problemu, możesz użyć `/causes` akcji, która próbuje odnaleźć głównej przyczyny wszelkich kaskadowych odrzucenia.  
   
- Przy użyciu `/causes` działania w poprzednim przykładzie pojawi się lista tylko informacje o `ChainOne`, którego niewypełniony importu jest główną przyczynę odrzucenia `AddIn`. `/causes` Akcji mogą być używane w obu normalny i `/verbose` opcje.  
+ Za pomocą `/causes` akcji w poprzednim przykładzie zwróciłaby listę tylko informacje o `ChainOne`, którego niewypełnionym import jest główną przyczynę odrzucenia `AddIn`. `/causes` Akcji mogą być używane w obu normalnego i `/verbose` opcje.  
   
 > [!NOTE]
->  W większości przypadków Mefx będzie można zdiagnozować główną przyczynę awarii w kaskadowego. Jednak w przypadki, w której części są dodawane programowo do kontenera, przypadkach dotyczących hierarchiczna kontenery lub przypadków obejmujących niestandardowe `ExportProvider` implementacji, Mefx nie będzie można zdiagnozować przyczynę. Ogólnie rzecz biorąc opisany wcześniej przypadków należy unikać Jeśli to możliwe, ponieważ błędy są zazwyczaj trudne do diagnozowania.  
+>  W większości przypadków Mefx będzie mógł zdiagnozować jej główną przyczynę błędów kaskadowych. Jednak w przypadki, gdzie części są dodane programowo do kontenera, przypadków obejmujących hierarchiczne kontenerów lub przypadków obejmujących niestandardowe `ExportProvider` implementacji Mefx nie będzie przyczynę. Ogólnie rzecz biorąc opisany wcześniej przypadków należy unikać w przypadku, gdy jest to możliwe, błędy są zazwyczaj trudny do zdiagnozowania.  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>Białe listy  
- `/whitelist` Opcji można określić plik tekstowy, który zawiera elementy, które powinny być odrzucane. Nieoczekiwany odrzuceń zostaną następnie oflagowane. Może to być przydatne podczas analizowania biblioteki niekompletne lub podrzędne biblioteki, która nie ma niektórych zależności. `/whitelist` Opcję można zastosować do `/rejected` lub `/causes` akcje.  
+ `/whitelist` Opcji można określić plik tekstowy, który zawiera listę elementów, które powinny zostać odrzucone. Nieoczekiwany odrzuceń zostaną następnie oflagowane. Może to być przydatne podczas analizowania niekompletne biblioteki lub bibliotekę podrzędną, która nie ma niektórych zależności. `/whitelist` Opcji mogą być stosowane do `/rejected` lub `/causes` akcji.  
   
- Należy wziąć pod uwagę plik o nazwie test.txt, który zawiera tekst "ClassLibrary1.ChainOne". Po uruchomieniu `/rejected` akcji o `/whitelist` opcji w poprzednim przykładzie powoduje wygenerowanie następujących danych wyjściowych:  
+ Należy wziąć pod uwagę w pliku o nazwie jako, które zawiera tekst "ClassLibrary1.ChainOne". Po uruchomieniu `/rejected` akcji z `/whitelist` opcję poprzedni przykład generuje następujące wyniki:  
   
 ```  
 mefx /file:ClassLibrary1.dll /rejected /whitelist:test.txt  

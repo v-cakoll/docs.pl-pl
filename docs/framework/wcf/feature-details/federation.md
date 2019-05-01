@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
 ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856824"
 ---
 # <a name="federation"></a>Federacja
 Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także obsługę usług Windows Communication Foundation (WCF) wdrażanie architektury zabezpieczeń. Dla przykładowej aplikacji, która pokazuje federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -44,17 +44,17 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także 
   
  Zazwyczaj organizacji B wymaga, czy użytkownik z organizacji, A zapewniają pewną formę prawidłowe uwierzytelniania przed uzyskaniem dostępu do usługi. Ponadto organizacja może również wymagać, czy użytkownika można autoryzowany dostęp do określonego zasobu w danym. Jednym ze sposobów, aby rozwiązać ten problem i umożliwić użytkownikom w organizacji, A dostęp do zasobów w organizacji B jest następująca:  
   
--   Użytkownicy z organizacji, A Zarejestruj swoje poświadczenia (nazwę użytkownika i hasło) w organizacji B.  
+- Użytkownicy z organizacji, A Zarejestruj swoje poświadczenia (nazwę użytkownika i hasło) w organizacji B.  
   
--   Podczas uzyskiwania dostępu do zasobów użytkownicy z organizacji, A przedstawienia poświadczeń dla organizacji B i uwierzytelnieniu się przed uzyskaniem dostępu do zasobu.  
+- Podczas uzyskiwania dostępu do zasobów użytkownicy z organizacji, A przedstawienia poświadczeń dla organizacji B i uwierzytelnieniu się przed uzyskaniem dostępu do zasobu.  
   
  Takie podejście ma trzy istotne wady:  
   
--   Organizacja B ma zarządzania poświadczeniami dla użytkowników z organizacji, A oprócz zarządzania poświadczeń użytkowników lokalnych.  
+- Organizacja B ma zarządzania poświadczeniami dla użytkowników z organizacji, A oprócz zarządzania poświadczeń użytkowników lokalnych.  
   
--   Użytkownicy w organizacji, A trzeba utrzymywać dodatkowy zestaw poświadczeń (oznacza to, należy pamiętać, nazwę dodatkowego użytkownika i hasło) oprócz poświadczenia są zwykle są używane do uzyskania dostępu do zasobów organizacji A. To zwykle zachęca praktyka przy użyciu tej samej nazwy użytkownika i hasła w wielu lokacjach usługi, który jest miarą słabe zabezpieczeń.  
+- Użytkownicy w organizacji, A trzeba utrzymywać dodatkowy zestaw poświadczeń (oznacza to, należy pamiętać, nazwę dodatkowego użytkownika i hasło) oprócz poświadczenia są zwykle są używane do uzyskania dostępu do zasobów organizacji A. To zwykle zachęca praktyka przy użyciu tej samej nazwy użytkownika i hasła w wielu lokacjach usługi, który jest miarą słabe zabezpieczeń.  
   
--   Architektura nie skalowanie więcej organizacji dostrzegana zasobów w organizacji B jako jedna z wartości.  
+- Architektura nie skalowanie więcej organizacji dostrzegana zasobów w organizacji B jako jedna z wartości.  
   
  Podejście alternatywne adresy wady wspomniano wcześniej, jest mogą wykorzystać zabezpieczeń. W tym podejściu organizacji, A i B, ustanawiania relacji zaufania i stosować Usługa tokenu zabezpieczającego (STS) umożliwiające pośrednictwo o ustanowioną relację zaufania.  
   
@@ -76,13 +76,13 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także 
 ### <a name="phase-1-design-phase"></a>Faza 1: Fazy projektowania  
  W fazie projektowania, klient używa [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można odczytać zasad uwidacznia punkt końcowy usługi oraz w celu zbierania wymagania dotyczące uwierzytelniania i autoryzacji usługi. Odpowiednie serwery proxy, tak aby można było utworzyć następujący wzorzec komunikacji zabezpieczeń po stronie klienta:  
   
--   Uzyskiwanie tokenu zabezpieczającego z usługi STS w obszarze zaufania klienta.  
+- Uzyskiwanie tokenu zabezpieczającego z usługi STS w obszarze zaufania klienta.  
   
--   Przedstawia token usługi STS w obszarze relacji zaufania usługi.  
+- Przedstawia token usługi STS w obszarze relacji zaufania usługi.  
   
--   Uzyskiwanie tokenu zabezpieczającego z usługi STS w obszarze relacji zaufania usługi.  
+- Uzyskiwanie tokenu zabezpieczającego z usługi STS w obszarze relacji zaufania usługi.  
   
--   Przedstawia token do usługi w celu uzyskania dostępu do usługi.  
+- Przedstawia token do usługi w celu uzyskania dostępu do usługi.  
   
 ### <a name="phase-2-run-time-phase"></a>Faza 2: Fazy czasu wykonywania  
  Podczas fazy czasu wykonywania klient tworzy obiekt klasy klienta WCF i nawiązuje połączenie za pomocą klienta WCF. Podstawowej struktury usług WCF obsługuje opisanych powyżej kroków we wzorcu z federacyjnego zabezpieczenia komunikacji i umożliwia klientowi bezproblemowe korzystanie z usługi.  

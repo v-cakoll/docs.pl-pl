@@ -5,11 +5,11 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 036aa99c89790274628c40824be7e230d81850fe
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909857"
 ---
 # <a name="publishing-a-nuget-package"></a>Publikowanie pakietu NuGet
 
@@ -30,7 +30,7 @@ Pakiety NuGet są publikowane i używane z repozytoriów pakietów. NuGet.org na
 
 **ROZWAŻ ✔️** testowania w środowisku deweloperskim za pomocą lokalnego źródła danych lub MyGet. Sprawdź działa pakiet, a następnie opublikuj go w witrynie NuGet.org.
 
-## <a name="nugetorg-security"></a>Zabezpieczenia NuGet.org
+## <a name="nugetorg-security"></a>NuGet.org security
 
 Jest ważne, nieupoważnione osoby nie można uzyskać dostępu do konta NuGet i przekazać złośliwego wersję biblioteki. NuGet.org oferuje two-Factor Authentication uwierzytelnianie i powiadomień e-mail po opublikowaniu pakietu. Włączyć te funkcje po zalogowaniu w witrynie NuGet.org **ustawienia konta** strony.
 

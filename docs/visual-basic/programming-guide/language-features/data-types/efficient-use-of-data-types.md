@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907221"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Skuteczne stosowanie typów danych (Visual Basic)
 Niezadeklarowany zmienne i zmienne zadeklarowane bez typu danych są przypisywane `Object` typu danych. To ułatwia szybkie pisanie programów, ale może to spowodować ich pracę wolniej.  
@@ -26,11 +26,11 @@ Niezadeklarowany zmienne i zmienne zadeklarowane bez typu danych są przypisywan
 ## <a name="strong-typing"></a>Silne wpisywanie  
  Określenie typów danych dla wszystkich zmiennych jest znany jako *silne wpisywanie*. Za pomocą silne wpisywanie ma kilka zalet:  
   
--   Umożliwia obsługę funkcji IntelliSense dla zmiennych. Dzięki temu można zobaczyć ich właściwości i inne elementy członkowskie podczas wpisywania w kodzie.  
+- Umożliwia obsługę funkcji IntelliSense dla zmiennych. Dzięki temu można zobaczyć ich właściwości i inne elementy członkowskie podczas wpisywania w kodzie.  
   
--   Wykorzystuje ona sprawdzania typu kompilatora. To połowy instrukcji, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów, takich jak przepełnienia. Przechwytuje także wywołania metod, na obiektach, które nie obsługują je.  
+- Wykorzystuje ona sprawdzania typu kompilatora. To połowy instrukcji, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów, takich jak przepełnienia. Przechwytuje także wywołania metod, na obiektach, które nie obsługują je.  
   
--   Powoduje ona szybsze wykonywanie Twojego kodu.  
+- Powoduje ona szybsze wykonywanie Twojego kodu.  
   
 ## <a name="most-efficient-data-types"></a>Najbardziej wydajne typy danych  
  W przypadku zmiennych, które nigdy nie zawierają ułamki typy całkowite danych są bardziej wydajne niż nonintegral typów. W języku Visual Basic `Integer` i `UInteger` są najbardziej efektywny sposób typów liczbowych.  

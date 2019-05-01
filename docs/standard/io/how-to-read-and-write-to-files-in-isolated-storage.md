@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odczyt i zapis w plikach w wydzielonej pamięci masowej'
+title: 'Instrukcje: Odczyt i zapis w plikach w izolowanym magazynie'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,13 +19,13 @@ ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59a89aa354941b7ff22a125a980c2d9c75ac37ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947202"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Instrukcje: Odczyt i zapis w plikach w wydzielonej pamięci masowej
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Instrukcje: Odczyt i zapis w plikach w izolowanym magazynie
 Odczyt i zapis do pliku w izolowanym magazynie, użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> obiektu z czytnik strumienia (<xref:System.IO.StreamReader> obiekt) lub zapisywania do strumienia (<xref:System.IO.StreamWriter> obiektu).  
   
 ## <a name="example"></a>Przykład  

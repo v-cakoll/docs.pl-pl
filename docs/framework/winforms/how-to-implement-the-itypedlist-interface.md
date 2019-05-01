@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800860"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Instrukcje: Implementowanie interfejsu ITypedList
 Implementowanie <xref:System.ComponentModel.ITypedList> interfejsu, aby włączyć odnajdywanie schematu dla listy może być powiązana.  
@@ -35,7 +35,7 @@ Implementowanie <xref:System.ComponentModel.ITypedList> interfejsu, aby włączy
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
+- Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 

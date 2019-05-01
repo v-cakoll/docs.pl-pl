@@ -12,11 +12,11 @@ ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872927"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Instrukcje: Określanie, które poprawek i aktualizacji zabezpieczeń .NET Framework są zainstalowane
 

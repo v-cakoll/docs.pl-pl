@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
 ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913123"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Instrukcje: renderowanie elementu stylu wizualnego
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Przestrzeń nazw udostępnia <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> obiekty reprezentujące użytkownika Windows interfejsu (UI) elementy objęte stylów wizualnych. W tym temacie przedstawiono sposób użycia <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> klasy do renderowania <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> reprezentujący **Wyloguj** i **Shut Down** przyciski, menu Start.  
@@ -37,11 +37,11 @@ ms.locfileid: "59312400"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Niestandardowy formant pochodzące z <xref:System.Windows.Forms.Control> klasy.  
+- Niestandardowy formant pochodzące z <xref:System.Windows.Forms.Control> klasy.  
   
--   A <xref:System.Windows.Forms.Form> obsługujący kontrolki niestandardowej.  
+- A <xref:System.Windows.Forms.Form> obsługujący kontrolki niestandardowej.  
   
--   Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, i <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> przestrzeni nazw.  
+- Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, i <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
 

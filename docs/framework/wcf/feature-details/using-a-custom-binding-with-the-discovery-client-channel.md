@@ -3,11 +3,11 @@ title: Używanie powiązania niestandardowego z kanałem klienta odnajdywania
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
 ms.openlocfilehash: 6fe9370bb22ca424774fc8cb4566e0802bc06697
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918622"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Używanie powiązania niestandardowego z kanałem klienta odnajdywania
 Korzystając z niestandardowego powiązania za pomocą <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, należy zdefiniować <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> tworząca <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> wystąpień.  

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Korzystanie z potoków nazwanych do sieciowej komunikacji międzyprocesowej'
+title: 'Instrukcje: Stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,13 +18,13 @@ ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 608991878b49bf0bafe9ebf90dbfc8eaec69e0e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947137"
 ---
-# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Instrukcje: Korzystanie z potoków nazwanych do sieciowej komunikacji międzyprocesowej
+# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Instrukcje: Stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej
 Nazwane potoki zapewniają komunikację międzyprocesorową pomiędzy serwerem potoku i jednym lub kilkoma klientami potoku. Oferują one więcej funkcji niż potoki anonimowe, które zapewniają komunikację międzyprocesorową na komputerze lokalnym. Nazwane potoki obsługują komunikację pełnodupleksową przez sieć i wiele instancji serwera, komunikację opartą na komunikatach i personifikację klienta, co pozwala łączyć procesy z ich własnymi zestawami uprawnień na serwerach zdalnych.  
   
  Aby zaimplementować nazwane potoki, należy użyć klas <xref:System.IO.Pipes.NamedPipeServerStream> i <xref:System.IO.Pipes.NamedPipeClientStream>.  

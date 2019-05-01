@@ -3,11 +3,11 @@ title: Typowe kroki dotyczące korzystania z LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876980"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Typowe kroki dotyczące korzystania z LINQ to SQL
 Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, wykonaj czynności opisane w dalszej części tego tematu. Należy pamiętać, że wiele kroki są opcjonalne. Jest bardzo prawdopodobne, że można użyć modelu obiektów w stanie domyślnym.  
@@ -20,32 +20,32 @@ Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Wybierz narzędzia do tworzenia modelu.  
  Trzy narzędzia są dostępne do tworzenia modelu.  
   
--   W [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- W [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Projektant zawiera zaawansowanego interfejsu użytkownika do tworzenia modeli obiektów z istniejącej bazy danych. To narzędzie jest częścią środowiska IDE programu Visual Studio i najlepiej nadaje się dla małych i średnich baz danych.  
   
--   Narzędzia do generowania kodu SQLMetal  
+- Narzędzia do generowania kodu SQLMetal  
   
      To narzędzie wiersza polecenia oferuje nieco inny zestaw opcji dostępnych w [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Modelowanie dużych baz danych najlepiej odbywa się za pomocą tego narzędzia. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
--   Edytor kodu  
+- Edytor kodu  
   
      Za pomocą edytora kodu Visual Studio lub innego edytora, można napisać własny kod. Nie zaleca tego podejścia może być podatne na błędy, gdy masz istniejącą bazę danych i można użyć dowolnego [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] lub narzędzia SQLMetal. Jednak Edytor kodu może być przydatny w przypadku aktualizowania lub modyfikowania kodu, który został już wygenerowany przy użyciu innych narzędzi. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Wybierz typ kodu, które mają zostać wygenerowane.  
   
--   A C# lub plik kodu źródłowego języka Visual Basic dla opartych na atrybutach mapowania.  
+- A C# lub plik kodu źródłowego języka Visual Basic dla opartych na atrybutach mapowania.  
   
      Następnie dodasz tego pliku kodu w projekcie programu Visual Studio. Aby uzyskać więcej informacji, zobacz [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
--   Plik XML do mapowania zewnętrznych.  
+- Plik XML do mapowania zewnętrznych.  
   
      Za pomocą tej metody, można zachować metadanych mapowania poza swój kod aplikacji. Aby uzyskać więcej informacji, zobacz [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
     >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Nie obsługuje generowania zewnętrznych plików mapowania. Aby wdrożyć tę funkcję, należy użyć narzędzia SQLMetal.  
   
--   Za pomocą pliku DBML, którą można modyfikować, przed wygenerowaniem plik kodu końcowego.  
+- Za pomocą pliku DBML, którą można modyfikować, przed wygenerowaniem plik kodu końcowego.  
   
      Jest to zaawansowana funkcja.  
   

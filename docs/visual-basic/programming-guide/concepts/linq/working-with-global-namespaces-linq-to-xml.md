@@ -3,11 +3,11 @@ title: Praca z globalnymi przestrzeniami nazw (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
 ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908014"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Praca z globalnymi przestrzeniami nazw (LINQ to XML) (Visual Basic)
 Jedną z kluczowych funkcji literałów XML w Visual Basic jest możliwość zadeklarować przestrzeni nazw XML przy użyciu `Imports` instrukcji. Dzięki tej funkcji można zadeklarować przestrzeni nazw XML, który używa prefiksu lub można zadeklarować domyślnej przestrzeni nazw XML.  

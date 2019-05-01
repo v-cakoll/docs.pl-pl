@@ -3,11 +3,11 @@ title: Ujawnianie informacji
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972604"
 ---
 # <a name="information-disclosure"></a>Ujawnianie informacji
 Ujawnienie informacji umożliwia osobie atakującej uzyskanie cenne informacje o systemie. W związku z tym zawsze należy wziąć pod uwagę jakie informacje są przedstawiania i czy mogą być używane przez złośliwego użytkownika. Poniżej wymieniono ataków ujawnienie informacji możliwych i zapewnia środki zaradcze dla każdego.  
@@ -32,16 +32,16 @@ Ujawnienie informacji umożliwia osobie atakującej uzyskanie cenne informacje o
   
  Środki zaradcze są następujące:  
   
--   Odwołania do usług są rozpatrywane godne zaufania. Zajmujemy się zawsze wtedy, gdy transfer wystąpień odwołanie do usługi, aby upewnić się, że ich nie zostały naruszone.  
+- Odwołania do usług są rozpatrywane godne zaufania. Zajmujemy się zawsze wtedy, gdy transfer wystąpień odwołanie do usługi, aby upewnić się, że ich nie zostały naruszone.  
   
--   Niektóre aplikacje mogą prezentować interfejs użytkownika, który umożliwia interakcyjne ustanowienia relacji zaufania, na podstawie danych z danych referencyjnych i zaufania usługi sprawdzone przez hosta zdalnego. Usługi WCF udostępniają punkty rozszerzeń dla takiego obiektu, ale użytkownik musi zaimplementować je.  
+- Niektóre aplikacje mogą prezentować interfejs użytkownika, który umożliwia interakcyjne ustanowienia relacji zaufania, na podstawie danych z danych referencyjnych i zaufania usługi sprawdzone przez hosta zdalnego. Usługi WCF udostępniają punkty rozszerzeń dla takiego obiektu, ale użytkownik musi zaimplementować je.  
   
 ## <a name="ntlm"></a>NTLM  
  Domyślnie w środowisku domeny Windows uwierzytelniania Windows używa protokołu Kerberos do uwierzytelniania i autoryzacji użytkowników. Jeśli nie można użyć protokołu Kerberos jakiegoś powodu, NT LAN Manager (NTLM) jest używany jako rezerwowe. To zachowanie można wyłączyć, ustawiając <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> właściwość `false`. Problemy, które należy wiedzieć podczas umożliwiając NTLM obejmują:  
   
--   NTLM przedstawia nazwę użytkownika klienta. Jeśli nazwa użytkownika musi być poufny, wartość `AllowNTLM` właściwość wiązania `false`.  
+- NTLM przedstawia nazwę użytkownika klienta. Jeśli nazwa użytkownika musi być poufny, wartość `AllowNTLM` właściwość wiązania `false`.  
   
--   Uwierzytelnianie NTLM nie zapewnia uwierzytelniania serwera. W związku z tym klient nie upewnij się, że jego komunikuje się z odpowiednią usługę podczas uwierzytelniania NTLM jest używany jako protokół uwierzytelniania.  
+- Uwierzytelnianie NTLM nie zapewnia uwierzytelniania serwera. W związku z tym klient nie upewnij się, że jego komunikuje się z odpowiednią usługę podczas uwierzytelniania NTLM jest używany jako protokół uwierzytelniania.  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>Określanie poświadczeń klienta lub nieprawidłową tożsamość wymusza użycia uwierzytelniania NTLM  
  Podczas tworzenia klienta, określając poświadczeń klienta bez nazwy domeny lub określanie tożsamości nieprawidłowy serwer, powoduje, że NTLM, ma być używana zamiast protokołu Kerberos (Jeśli `AlllowNtlm` właściwość jest ustawiona na `true`). Ponieważ NTLM nie wykonuje uwierzytelniania serwera, informacji o potencjalnie może ujawnić.  

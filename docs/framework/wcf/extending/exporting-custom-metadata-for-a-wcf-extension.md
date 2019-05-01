@@ -3,11 +3,11 @@ title: Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia progra
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857964"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia programu WCF
 W Windows Communication Foundation (WCF), eksportowanie metadanych jest proces opisujące punkty końcowe usługi i wyświetlaniu je do reprezentacji równoległych, standardowe, której klienci mogą używać, aby zrozumieć sposób korzystania z usługi. Niestandardowych metadanych zawiera elementy XML, które nie można wyeksportować eksportera metadanych dostarczane przez system. Zazwyczaj zawiera elementy niestandardowe WSDL dla zachowania zdefiniowanych przez użytkownika i elementy powiązań asercji zasad dotyczących możliwości i wymagania dotyczące powiązania i kontrakty.  
@@ -28,9 +28,9 @@ W Windows Communication Foundation (WCF), eksportowanie metadanych jest proces o
 ## <a name="exporting-custom-wsdl-elements"></a>Eksportowanie elementów niestandardowych plików WSDL  
  Implementowanie <xref:System.ServiceModel.Description.IWsdlExportExtension> na zachowanie działania, zachowanie kontraktu, zachowanie punktu końcowego lub element powiązania (<xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, <xref:System.ServiceModel.Description.IEndpointBehavior>, lub <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> odpowiednio) i Wstaw zachowania lub elementy powiązania do Opis usługi, którą chcesz wyeksportować. (Aby uzyskać więcej informacji na temat zachowania wstawiania, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)). <xref:System.ServiceModel.Description.IWsdlExportExtension> Jest wywoływana dla każdego punktu końcowego i każdy punkt końcowy eksportuje kontrakt najpierw Jeśli nie zostały jeszcze wyeksportowane. W obu procesu eksportu mogą uczestniczyć w zależności od potrzeb:  
   
--   Użyj <xref:System.ServiceModel.Description.WsdlContractConversionContext> do modyfikowania wyeksportowanego metadanych w <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> metody.  
+- Użyj <xref:System.ServiceModel.Description.WsdlContractConversionContext> do modyfikowania wyeksportowanego metadanych w <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> metody.  
   
--   Użyj <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> do modyfikowania wyeksportowanego metadanych dla punktu końcowego w <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> metody.  
+- Użyj <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> do modyfikowania wyeksportowanego metadanych dla punktu końcowego w <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> metody.  
   
  <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> Metoda jest wywoływana we wszystkich <xref:System.ServiceModel.Description.IWsdlExportExtension> implementacji w <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> wystąpienie, które jest eksportowany.  <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> Metoda jest wywoływana we wszystkich <xref:System.ServiceModel.Description.IWsdlExportExtension> implementacji przy użyciu <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> wystąpienie, które jest eksportowany.  
   

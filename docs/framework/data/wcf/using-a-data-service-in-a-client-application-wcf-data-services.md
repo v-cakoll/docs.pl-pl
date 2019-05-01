@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875316"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Używanie usługi danych w aplikacji klienckiej (WCF Data Services)
 Uzyskaniem dostępu do usług, który udostępnia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kanału informacyjnego, podając identyfikator URI do przeglądarki sieci Web. Identyfikator URI dostarcza adres zasobu, a żądania są wysyłane do tych adresów na dostęp lub zmienić danych bazowych, który reprezentuje zasobu. Przeglądarka wydaje polecenie HTTP GET i zwraca żądany zasób jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -23,24 +23,24 @@ Uzyskaniem dostępu do usług, który udostępnia [!INCLUDE[ssODataFull](../../.
 ### <a name="http-actions"></a>Akcje HTTP  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje następujące akcje HTTP do wykonania, tworzenia, odczytu, aktualizowanie i usuwanie operacji na danych jednostki, które reprezentuje zaadresowane zasobów:  
   
--   **HTTP GET** — jest to domyślne działanie, gdy zasób jest dostępny z poziomu przeglądarki. Ładunek jest dostarczany w komunikacie żądania, i jest zwracany przez metodę odpowiedzi z ładunkiem, który zawiera żądane dane.  
+- **HTTP GET** — jest to domyślne działanie, gdy zasób jest dostępny z poziomu przeglądarki. Ładunek jest dostarczany w komunikacie żądania, i jest zwracany przez metodę odpowiedzi z ładunkiem, który zawiera żądane dane.  
   
--   **Żądania HTTP POST** -wstawia nowe dane jednostki do dostarczonego zasobu. Dane, które ma zostać wstawiony jest dostarczany w ładunku komunikatu żądania. Obciążenie komunikatu odpowiedzi zawiera dane dla nowo utworzonej jednostki. Obejmuje to wszystkie wartości klucza wygenerowany automatycznie. Nagłówek zawiera również identyfikator URI, odnoszący się do nowego zasobu jednostki.  
+- **Żądania HTTP POST** -wstawia nowe dane jednostki do dostarczonego zasobu. Dane, które ma zostać wstawiony jest dostarczany w ładunku komunikatu żądania. Obciążenie komunikatu odpowiedzi zawiera dane dla nowo utworzonej jednostki. Obejmuje to wszystkie wartości klucza wygenerowany automatycznie. Nagłówek zawiera również identyfikator URI, odnoszący się do nowego zasobu jednostki.  
   
--   **HTTP DELETE** -usuwa dane jednostki, która reprezentuje określonego zasobu. Ładunek nie jest obecny w komunikatów żądania lub odpowiedzi.  
+- **HTTP DELETE** -usuwa dane jednostki, która reprezentuje określonego zasobu. Ładunek nie jest obecny w komunikatów żądania lub odpowiedzi.  
   
--   **HTTP PUT** — zastępuje istniejące dane jednostki w żądany zasób z nowymi danymi, która jest dostarczana w ładunku komunikatu żądania.  
+- **HTTP PUT** — zastępuje istniejące dane jednostki w żądany zasób z nowymi danymi, która jest dostarczana w ładunku komunikatu żądania.  
   
--   **SCAL HTTP** — ze względu na nieefektywność wykonywania delete, insert w źródle danych, aby zmienić dane jednostki, a następnie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] wprowadza nową akcję scalania HTTP. Ładunek komunikatu żądania zawiera właściwości, które musi zostać zmienione w zasobie jednostki zaadresowane. Ponieważ scalania HTTP nie jest zdefiniowana w specyfikacji protokołu HTTP, może wymagać dodatkowego przetwarzania, aby skierować żądanie SCALENIA HTTP za pośrednictwem non -[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] pamiętać serwerów.  
+- **SCAL HTTP** — ze względu na nieefektywność wykonywania delete, insert w źródle danych, aby zmienić dane jednostki, a następnie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] wprowadza nową akcję scalania HTTP. Ładunek komunikatu żądania zawiera właściwości, które musi zostać zmienione w zasobie jednostki zaadresowane. Ponieważ scalania HTTP nie jest zdefiniowana w specyfikacji protokołu HTTP, może wymagać dodatkowego przetwarzania, aby skierować żądanie SCALENIA HTTP za pośrednictwem non -[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] pamiętać serwerów.  
   
  Aby uzyskać więcej informacji, zobacz [OData: Operacje](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Formaty ładunków  
  HTTP PUT, POST protokołu HTTP lub HTTP scalania żądania ładunku komunikatu żądania zawiera dane jednostki, które możesz wysłać do usługi danych. Zawartość ładunek, zależy od formatu danych wiadomości. Odpowiedzi HTTP do wszystkich akcji, z wyjątkiem usuwania, również zawierać takie ładunku. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje następujące formaty ładunków do uzyskiwania dostępu i zmieniającymi się danymi w usłudze:  
   
--   **Atom** — Kodowanie komunikatu opartych na języku XML, oznacza to zdefiniowane przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] jako rozszerzenie Atom publikowania protokół (AtomPub), aby umożliwić wymianę danych za pośrednictwem protokołu HTTP dla sieci Web źródła danych, transmisje podcast, strony typu wiki i funkcje internetowe oparte na języku XML. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** — Kodowanie komunikatu opartych na języku XML, oznacza to zdefiniowane przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] jako rozszerzenie Atom publikowania protokół (AtomPub), aby umożliwić wymianę danych za pośrednictwem protokołu HTTP dla sieci Web źródła danych, transmisje podcast, strony typu wiki i funkcje internetowe oparte na języku XML. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
--   **JSON** — JavaScript Object Notation (JSON) jest formatem wymiany uproszczone danych, który jest oparty na podzbiorze język programowania języka JavaScript. Aby uzyskać więcej informacji, zobacz [OData: JSON Format](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** — JavaScript Object Notation (JSON) jest formatem wymiany uproszczone danych, który jest oparty na podzbiorze język programowania języka JavaScript. Aby uzyskać więcej informacji, zobacz [OData: JSON Format](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
  Format komunikatu ładunku żądania w nagłówku komunikatu żądania HTTP. Aby uzyskać więcej informacji, zobacz [OData: Operacje](https://go.microsoft.com/fwlink/?LinkID=185792).  
   

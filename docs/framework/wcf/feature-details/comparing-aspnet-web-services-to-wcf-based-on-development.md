@@ -3,11 +3,11 @@ title: Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na p
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
 ms.openlocfilehash: e5d249514ecad7507235bb8bd354c80bdc17c5dc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857593"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na podstawie procesów programistycznych
 
@@ -420,7 +420,7 @@ Tylko usługi hostowane w usługach IIS i WAS i które są konfigurowane za poś
 
     Tej opcji można zapisać się z konieczności modyfikowania klientów, które są skonfigurowane do używania adresów URL plików usługi .asmx podczas modyfikowania usługi do użycia usług WCF.
 
-## <a name="client-development"></a>Programowanie klienta
+## <a name="client-development"></a>Tworzenie aplikacji klienckich
 
 Klienci usługi sieci Web platformy ASP.NET są generowane przy użyciu narzędzia wiersza polecenia WSDL.exe, który zawiera adres URL pliku .asmx jako dane wejściowe. Odpowiedniego narzędzia, które są dostarczane przez architekturę WCF jest [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Generuje moduł kodu o definicję kontraktu usługi, jak i definicja klasy klienta programu WCF. Generuje plik konfiguracji przy użyciu adresu i powiązania usługi.
 

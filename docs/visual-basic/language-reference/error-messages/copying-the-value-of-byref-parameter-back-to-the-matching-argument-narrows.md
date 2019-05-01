@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
 ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803860"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Kopiowanie wartości parametru "ByRef" "\<parametername >" powrotem do pasującego argumentu powoduje zawężenie z typu "\<typename1 >" na typ "\<typename2 >"
 Procedura jest wywoływana z argumentem, który rozszerza się na odpowiedni typ parametru. Ponadto jest zawężenie konwersji z parametru do argumentu.  
@@ -27,11 +27,11 @@ Procedura jest wywoływana z argumentem, który rozszerza się na odpowiedni typ
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Jeśli to możliwe należy użyć wywoływania argumentów tego samego typu jako parametr procedury, Visual Basic nie trzeba wykonać żadnych konwersji.  
+- Jeśli to możliwe należy użyć wywoływania argumentów tego samego typu jako parametr procedury, Visual Basic nie trzeba wykonać żadnych konwersji.  
   
--   Jeśli musisz wywołać procedurę z nieprawidłowym argumentem typu różni się od typu parametru, ale nie muszą zwracać wartość do wywołującego argumentu, zdefiniuj parametr jako [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) zamiast `ByRef`.  
+- Jeśli musisz wywołać procedurę z nieprawidłowym argumentem typu różni się od typu parametru, ale nie muszą zwracać wartość do wywołującego argumentu, zdefiniuj parametr jako [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) zamiast `ByRef`.  
   
--   Jeśli trzeba zwrócić wartości do wywoływania argumentów, definiowanie operatora konwersji zwrotny jako [Widening](../../../visual-basic/language-reference/modifiers/widening.md), jeśli to możliwe.  
+- Jeśli trzeba zwrócić wartości do wywoływania argumentów, definiowanie operatora konwersji zwrotny jako [Widening](../../../visual-basic/language-reference/modifiers/widening.md), jeśli to możliwe.  
   
 ## <a name="see-also"></a>Zobacz także
 

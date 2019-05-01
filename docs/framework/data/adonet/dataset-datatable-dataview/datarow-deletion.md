@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
 ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879869"
 ---
 # <a name="datarow-deletion"></a>Usuwanie elementu DataRow
 Istnieją dwie metody, które służy do usuwania <xref:System.Data.DataRow> obiektu z <xref:System.Data.DataTable> obiektu: **Usuń** metody <xref:System.Data.DataRowCollection> obiektu i <xref:System.Data.DataRow.Delete%2A> metody **DataRow**obiektu. Natomiast <xref:System.Data.DataRowCollection.Remove%2A> usuwa metoda **DataRow** z **kolekcji DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> metody oznacza tylko wiersz do usunięcia. Rzeczywiste usuwanie występuje, gdy aplikacja wywołuje **AcceptChanges** metody. Za pomocą <xref:System.Data.DataRow.Delete%2A>, można programowo sprawdzić wiersze, które zostały oznaczone do usunięcia przed ich faktycznego usuwania. Jeśli wiersz jest oznaczona do usunięcia, jego <xref:System.Data.DataRow.RowState%2A> właściwość jest ustawiona na <xref:System.Data.DataRow.Delete%2A>.  

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867145"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektu: Jak obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  
@@ -84,13 +84,13 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
 ### <a name="implementing-idisposable"></a>Implementowanie interfejsu IDisposable  
  Klasa, która implementuje <xref:System.IDisposable> interfejsu powinny zawierać te sekcje kodu:  
   
--   Pole do śledzenia czy obiekt został usunięty:  
+- Pole do śledzenia czy obiekt został usunięty:  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   Przeciążenia <xref:System.IDisposable.Dispose%2A> , zwalnia zasoby klasy. Ta metoda powinna być wywoływana przez <xref:System.IDisposable.Dispose%2A> i `Finalize` metody klasy bazowej:  
+- Przeciążenia <xref:System.IDisposable.Dispose%2A> , zwalnia zasoby klasy. Ta metoda powinna być wywoływana przez <xref:System.IDisposable.Dispose%2A> i `Finalize` metody klasy bazowej:  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
     End Sub  
     ```  
   
--   Implementacja <xref:System.IDisposable.Dispose%2A> zawierający następujący kod:  
+- Implementacja <xref:System.IDisposable.Dispose%2A> zawierający następujący kod:  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
     End Sub  
     ```  
   
--   Zastępowanie `Finalize` metodę, która zawiera następujący kod:  
+- Zastępowanie `Finalize` metodę, która zawiera następujący kod:  
   
     ```  
     Protected Overrides Sub Finalize()  

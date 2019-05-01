@@ -3,22 +3,22 @@ title: 'Instrukcje: Używanie filtrów'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972864"
 ---
 # <a name="how-to-use-filters"></a>Instrukcje: Używanie filtrów
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, który używa wielu filtrów. W tym przykładzie komunikaty są kierowane do dwie implementacje usługi Kalkulator, regularCalc i roundingCalc. Zarówno implementacje obsługują te same operacje; Jednak w jednej usłudze zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy ma być używany zaokrąglania wersję usługi; Jeśli brak preferencji Usługa bazy danych jest wyrażona wiadomość jest równoważone między obiema usługami. Operacje udostępniane przez obie te usługi są:  
   
--   Dodaj  
+- Dodaj  
   
--   Odejmowanie  
+- Odejmowanie  
   
--   Mnożenie  
+- Mnożenie  
   
--   Dzielenie  
+- Dzielenie  
   
  Ponieważ obie te usługi implementuje te same operacje, nie można użyć filtru akcji, ponieważ z akcją określoną w komunikacie nie jest unikatowa. Zamiast tego należy wykonać dodatkową pracę, aby upewnić się, że komunikaty są kierowane do odpowiednich punktów końcowych.  
   
@@ -137,10 +137,10 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
     > [!NOTE]
     >  Filtr PrefixEndpointAddress nie może oszacować nazwy hosta podczas wykonywania dopasowanie, ponieważ w jednym hoście mogą się odwoływać przy użyciu różnych nazw hostów, które mogą wszystkie prawidłowe metody odwoływania się do hosta z aplikacji klienckiej. Na przykład wszystkie poniższe może odnosić się do tego samego hosta:  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. Ostatni filtr musi obsługiwać routing komunikaty przychodzące w punkcie końcowym ogólnego bez niestandardowego nagłówka. W tym scenariuszu komunikaty powinny alternatywne między usługami regularCalc i roundingCalc. Aby obsługiwać routing "działanie okrężne" tych wiadomości, użyj niestandardowy filtr, który umożliwia jedno wystąpienie filtru do dopasowania dla każdego komunikatu przetworzone.  Poniżej definiuje dwa wystąpienia RoundRobinMessageFilter, które są zgrupowane razem do wskazania, że powinien alternatywny między sobą.  
   

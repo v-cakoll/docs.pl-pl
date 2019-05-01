@@ -20,11 +20,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902320"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "59112882"
   
  <xref:System.Windows.Forms.DataGridView> Kontroli obsługuje standardowe Windows Forms powiązanie modelu danych, więc powiąże wystąpień klas opisane na poniższej liście:  
   
--   Każda klasa implementująca <xref:System.Collections.IList> interfejsu, w tym tablice jednowymiarowe.  
+- Każda klasa implementująca <xref:System.Collections.IList> interfejsu, w tym tablice jednowymiarowe.  
   
--   Każda klasa implementująca <xref:System.ComponentModel.IListSource> interfejsu, takich jak <xref:System.Data.DataTable> i <xref:System.Data.DataSet> klasy.  
+- Każda klasa implementująca <xref:System.ComponentModel.IListSource> interfejsu, takich jak <xref:System.Data.DataTable> i <xref:System.Data.DataSet> klasy.  
   
--   Każda klasa implementująca <xref:System.ComponentModel.IBindingList> interfejsu, takich jak <xref:System.ComponentModel.BindingList%601> klasy.  
+- Każda klasa implementująca <xref:System.ComponentModel.IBindingList> interfejsu, takich jak <xref:System.ComponentModel.BindingList%601> klasy.  
   
--   Każda klasa implementująca <xref:System.ComponentModel.IBindingListView> interfejsu, takich jak <xref:System.Windows.Forms.BindingSource> klasy.  
+- Każda klasa implementująca <xref:System.ComponentModel.IBindingListView> interfejsu, takich jak <xref:System.Windows.Forms.BindingSource> klasy.  
   
  <xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje powiązanie danych właściwości publicznych zwracanych przez te interfejsy obiektów lub kolekcji właściwości zwróconej przez <xref:System.ComponentModel.ICustomTypeDescriptor> interfejsu, jeśli wdrażane na zwracanych obiektów.  
   

@@ -10,11 +10,11 @@ ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3b08154d1be7a8a5699682b3cee3faad4e384269
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908651"
 ---
 # <a name="task-parallel-library-tpl"></a>Biblioteka zadań równoległych (TPL)
 Biblioteka zadań równoległych (TPL) to zbiór typów publicznych i interfejsów API w <xref:System.Threading?displayProperty=nameWithType> i <xref:System.Threading.Tasks?displayProperty=nameWithType> przestrzeni nazw. Zadaniem biblioteki TPL jest zwiększenie produktywności deweloperów przez uproszczenie procesu dodawania równoległości i współbieżności do aplikacji. Biblioteka TPL skaluje stopień współbieżności dynamicznie, aby jak najefektywniej wykorzystać wszystkie dostępne procesory. Ponadto biblioteka TPL obsługuje podział pracy, planowanie wątków w <xref:System.Threading.ThreadPool>, obsługę anulowania, zarządzanie stanem i inne szczegóły niskiego poziomu. Za pomocą TPL można zmaksymalizować wydajność kodu przy jednoczesnym skoncentrowaniu się na pracy, którą program ma wykonać.  

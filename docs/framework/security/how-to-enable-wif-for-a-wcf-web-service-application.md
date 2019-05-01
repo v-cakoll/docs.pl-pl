@@ -7,38 +7,38 @@ ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940468"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Instrukcje: Włączanie programu WIF dla aplikacji usługi internetowej WCF
 ## <a name="applies-to"></a>Dotyczy:  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+- Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku służące do włączania środowiska WIF w usłudze internetowej WCF. Znajdują się tu również instrukcje testowania aplikacji pozwalające sprawdzić, czy usługa internetowa poprawnie przedstawia oświadczenia w trakcie działania aplikacji. Instruktaż nie zawiera szczegółowych instrukcji tworzenia usługi tokenów zabezpieczających (STS). Zamiast tego wykorzystuje deweloperską usługę STS wbudowaną w narzędziu Tożsamość i dostęp. Deweloperska usługa STS nie wykonuje faktycznego uwierzytelniania i jest przeznaczona tylko do celów testowych. Narzędzie Tożsamość i dostęp jest koniecznie do ukończenia całego instruktażu. Można go pobrać z następującej lokalizacji: [Narzędzie tożsamość i dostęp](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Spis treści  
   
--   Cele  
+- Cele  
   
--   Omówienie  
+- Omówienie  
   
--   Zestawienie czynności  
+- Zestawienie czynności  
   
--   Krok 1 — Utworzenie prostej usługi WCF  
+- Krok 1 — Utworzenie prostej usługi WCF  
   
--   Krok 2 — Utworzenie aplikacji klienckiej dla usługi WCF  
+- Krok 2 — Utworzenie aplikacji klienckiej dla usługi WCF  
   
--   Krok 3 — Przetestowanie rozwiązania  
+- Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="objectives"></a>Cele  
   
--   Utworzenie usługi WCF wymagającej wystawionych tokenów  
+- Utworzenie usługi WCF wymagającej wystawionych tokenów  
   
--   Utworzenie klienta WCF, który wymaga tokenu od usługi STS, po czym przekazuje go do usługi WCF  
+- Utworzenie klienta WCF, który wymaga tokenu od usługi STS, po czym przekazuje go do usługi WCF  
   
 ## <a name="overview"></a>Omówienie  
  Ten instruktaż ma pokazać, jak programista może używać funkcji federacyjnego uwierzytelniania podczas tworzenia usług WCF. Oto kilka najważniejszych zalet stosowania mechanizmu federacji w usługach WCF:  
@@ -55,11 +55,11 @@ ms.locfileid: "59977434"
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1 — Utworzenie prostej usługi WCF  
+- Krok 1 — Utworzenie prostej usługi WCF  
   
--   Krok 2 — Utworzenie aplikacji klienckiej dla usługi WCF  
+- Krok 2 — Utworzenie aplikacji klienckiej dla usługi WCF  
   
--   Krok 3 — Przetestowanie rozwiązania  
+- Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>Krok 1 — Utworzenie prostej usługi WCF  
  W tym kroku utworzysz nową usługę WCF, która wykorzystuje deweloperską usługę STS dołączoną do narzędzia Tożsamość i dostęp.  

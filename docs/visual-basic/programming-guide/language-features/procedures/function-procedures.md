@@ -10,11 +10,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
 ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864406"
 ---
 # <a name="function-procedures-visual-basic"></a>Procedury funkcji (Visual Basic)
 A `Function` procedura jest szereg instrukcji ujęta w `Function` i `End Function` instrukcji. `Function` Procedura wykonuje zadanie, a następnie przekazuje sterowanie do kodu wywołującego. Przekazuje sterowanie, również zwraca wartość do wywołującego kodu.  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>Zwracanie wartości  
  Wartość `Function` procedury wysyła Wstecz, aby kod wywołujący nosi nazwę wartość zwracaną. Procedura zwraca tę wartość w jeden z dwóch sposobów:  
   
--   Używa ona `Return` instrukcję, aby określić wartości zwracanej i zwraca kontrolę natychmiast program wywołujący. Ilustruje to poniższy przykład.  
+- Używa ona `Return` instrukcję, aby określić wartości zwracanej i zwraca kontrolę natychmiast program wywołujący. Ilustruje to poniższy przykład.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   Przypisuje wartość do jego własnej nazwy funkcji w jedną lub więcej instrukcji procedury. Formant powraca do program wywołujący, aż do `Exit Function` lub `End Function` instrukcja jest wykonywana. Ilustruje to poniższy przykład.  
+- Przypisuje wartość do jego własnej nazwy funkcji w jedną lub więcej instrukcji procedury. Formant powraca do program wywołujący, aż do `Exit Function` lub `End Function` instrukcja jest wykonywana. Ilustruje to poniższy przykład.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

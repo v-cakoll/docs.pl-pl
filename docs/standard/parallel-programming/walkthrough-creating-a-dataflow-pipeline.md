@@ -13,11 +13,11 @@ ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908703"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Przewodnik: Tworzenie potoku przepływu danych
 Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> metody do odbierania komunikatów ze źródła bloki, bloki komunikatów można też połączyć do formularza *potoku przepływu danych*. Potoku przepływu danych to zbiór składników, lub *bloków przepływu danych*, z których każdy wykonuje określone zadanie, które przyczynia się do ogólnego celu. Każdy blok przepływu danych w potoku przepływu danych wykonuje pracę, gdy odbiera wiadomości z innego bloku przepływu danych. Odpowiednio do tego jest do linii montażowej dla samochodów produkcji. Każdego pojazdu korzystał z linii montażowej, jedna stacja składa ramki, kolejny instaluje aparatu i tak dalej. Ponieważ do linii montażowej umożliwia wielu pojazdów do montażu w tym samym czasie, zapewnia większą przepustowość niż łączenie pojazdów kompletnych jednego naraz.

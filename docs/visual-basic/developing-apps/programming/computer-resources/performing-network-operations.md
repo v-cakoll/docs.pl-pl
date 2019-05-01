@@ -6,28 +6,28 @@ helpviewer_keywords:
 - My.Computer.Network object, tasks
 ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
 ms.openlocfilehash: 1bf4aed9d10aaf39bc94be24e3cf258318ca2b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921228"
 ---
 # <a name="performing-network-operations-visual-basic"></a>Przeprowadzanie operacji sieciowych (Visual Basic)
-W poniższych tabelach przedstawiono listę zadań skojarzonych z `My.Computer.Network` obiektu.  
+W poniższych tabelach listę zadań skojarzonych z `My.Computer.Network` obiektu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: przekazywanie pliku](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- Pokazuje, jak przekazać plik i zapisać go do zdalnej lokalizacji za pomocą `My.Computer.Network`.  
+ [Instrukcje: Przekaż plik](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ Pokazuje, jak przekazać plik i zapisz go do lokalizacji zdalnej za pomocą `My.Computer.Network`.  
   
- [Instrukcje: pobieranie pliku](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- Demonstracja pobierania pliku z lokalizacji zdalnej przy użyciu `My.Computer.Network`.  
+ [Instrukcje: Pobierz plik](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ Pokazuje, jak pobrać plik z lokalizacji zdalnej przy użyciu `My.Computer.Network`.  
   
- [Instrukcje: sprawdzanie stanu połączenia](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
- Pokazuje sposób określania, czy komputer ma działającego połączenia sieciowego.  
+ [Instrukcje: Sprawdzanie stanu połączenia](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ Pokazuje, jak ustalić, czy komputer ma działającego połączenia sieciowego.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:Microsoft.VisualBasic.Devices.Network>  
- Wyświetla listę metod, właściwości i zdarzeń do pracy z sieci.  
+ Zawiera listę metod, właściwości i zdarzenia dotyczące pracy z siecią.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
  W tym artykule opisano `DownloadFile` metody.  

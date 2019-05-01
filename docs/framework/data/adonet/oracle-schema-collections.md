@@ -3,11 +3,11 @@ title: Kolekcje schematów Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878478"
 ---
 # <a name="oracle-schema-collections"></a>Kolekcje schematów Oracle
 
@@ -56,7 +56,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |WŁAŚCICIEL|String|Właściciel tabeli, widoku lub klastra.|
 |TABLE_NAME|String|Tabela, widok lub nazwy klastra.|
 |COLUMN_NAME|String|Nazwa kolumny.|
-|ID|Wartość dziesiętna|Przeprowadzaj sekwencjonowanie numer kolumny, podczas tworzenia.|
+|Identyfikator|Wartość dziesiętna|Przeprowadzaj sekwencjonowanie numer kolumny, podczas tworzenia.|
 |TYP DANYCH|String|Typ danych kolumny.|
 |DŁUGOŚĆ|Wartość dziesiętna|Długość kolumny w bajtach.|
 |PRECYZJA|Wartość dziesiętna|Precyzja dziesiętna dla liczb typu danych; binarny dokładność dla typu danych ZMIENNOPRZECINKOWYCH, wartość null w przypadku innych typów danych.|
@@ -187,7 +187,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |NazwaKolumny|DataType|Opis|
 |----------------|--------------|-----------------|
 |NAZWA|String|Nazwa użytkownika.|
-|ID|Wartość dziesiętna|Numer identyfikacyjny użytkownika.|
+|Identyfikator|Wartość dziesiętna|Numer identyfikacyjny użytkownika.|
 |CREATEDATE|DataGodzina|Data utworzenia użytkownika.|
 
 ## <a name="views"></a>Widoki

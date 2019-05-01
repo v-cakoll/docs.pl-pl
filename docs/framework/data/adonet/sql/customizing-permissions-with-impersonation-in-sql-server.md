@@ -3,11 +3,11 @@ title: Dostosowywanie uprawnień personifikacji w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
 ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877907"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Dostosowywanie uprawnień personifikacji w programie SQL Server
 Wiele aplikacji używa procedur składowanych na dostęp do danych, opierając się na łańcucha własności, aby ograniczyć dostęp do tabel podstawowych. Można przyznać uprawnień wykonywanie procedur składowanych, odwoływanie lub odmówienia uprawnień do tabel podstawowych. SQL Server nie sprawdza uprawnienia obiektu wywołującego, jeśli procedura składowana i tabele mają tego samego właściciela. Jednak tworzenie łańcucha własności nie działa w przypadku obiektów mieć różnych właścicieli lub w przypadku dynamiczny język SQL.  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>Określając Kontekst wykonywania  
  Oprócz określenia użytkownika, można również użyć EXECUTE AS z dowolnymi z następujących słów kluczowych.  
   
--   OBIEKT WYWOŁUJĄCY. Trwa wykonywanie jako obiekt WYWOŁUJĄCY jest wartością domyślną; Jeśli żadna inna opcja jest określona, następnie procedura jest wykonywana w kontekście zabezpieczeń obiektu wywołującego.  
+- OBIEKT WYWOŁUJĄCY. Trwa wykonywanie jako obiekt WYWOŁUJĄCY jest wartością domyślną; Jeśli żadna inna opcja jest określona, następnie procedura jest wykonywana w kontekście zabezpieczeń obiektu wywołującego.  
   
--   WŁAŚCICIEL. Trwa wykonywanie jako właściciel wykonuje procedurę w kontekście właściciel. Jeśli procedura jest tworzona w schemacie własnością `dbo` lub procedura właściciel bazy danych będzie wykonywane z nieograniczonymi uprawnieniami.  
+- WŁAŚCICIEL. Trwa wykonywanie jako właściciel wykonuje procedurę w kontekście właściciel. Jeśli procedura jest tworzona w schemacie własnością `dbo` lub procedura właściciel bazy danych będzie wykonywane z nieograniczonymi uprawnieniami.  
   
--   SELF. Trwa wykonywanie jako samodzielna wykonywany w kontekście zabezpieczeń Twórcy procedury składowanej. Jest to równoważne Trwa wykonywanie jako określony użytkownik w przypadku, gdy określony użytkownik to osoba, utworzenie lub modyfikacja procedury.  
+- SELF. Trwa wykonywanie jako samodzielna wykonywany w kontekście zabezpieczeń Twórcy procedury składowanej. Jest to równoważne Trwa wykonywanie jako określony użytkownik w przypadku, gdy określony użytkownik to osoba, utworzenie lub modyfikacja procedury.  
   
 ## <a name="see-also"></a>Zobacz także
 

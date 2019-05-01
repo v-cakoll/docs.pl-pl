@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
 ms.openlocfilehash: 16f579a05236ba8977a071cb08068be8e98799f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921085"
 ---
 # <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>"\<membername >' nie może ujawnić typu"\<typename > "poza projektem za pomocą \<containertype >"\<containertypename > "
 Zmiennej, parametr procedury lub funkcji, zwracany jest widoczna poza jej kontenerem, ale jest zadeklarowany jako typ, który nie muszą być widoczne na zewnątrz kontenera.  
@@ -33,7 +33,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zmień poziom dostępu do zmiennej, parametr procedury lub funkcji, zwróć się do co najmniej tak restrykcyjne uprawnienia na poziomie dostępu do jego typu danych.  
+- Zmień poziom dostępu do zmiennej, parametr procedury lub funkcji, zwróć się do co najmniej tak restrykcyjne uprawnienia na poziomie dostępu do jego typu danych.  
   
 ## <a name="see-also"></a>Zobacz także
 

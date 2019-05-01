@@ -3,11 +3,11 @@ title: Przepływy transakcji do i z usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
 ms.openlocfilehash: 25ab4e415ce2cd6044cedef4841c1ba88254542e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857083"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Przepływy transakcji do i z usług przepływu pracy
 Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operacji usługowej, które staną się częścią otoczenia transakcji, należy umieścić <xref:System.ServiceModel.Activities.Receive> działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Wywołania przez <xref:System.ServiceModel.Activities.Send> lub <xref:System.ServiceModel.Activities.SendReply> działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> również zostaną wprowadzone w ramach transakcji otoczenia. Aplikacja kliencka przepływu pracy można utworzyć otoczenia transakcji przy użyciu <xref:System.Activities.Statements.TransactionScope> działania i wywoływać operacje usługi, za pomocą otoczenia transakcji. Ten temat przeprowadzi Cię przez tworzenie usługi przepływu pracy i klienta przepływu pracy, który uczestniczyć w transakcji.  
@@ -27,13 +27,13 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
   
 2. Dodaj nowy projekt biblioteki klas o nazwie `Common`. Dodaj odwołania do następujących zestawów:  
   
-    -   System.Activities.dll  
+    - System.Activities.dll  
   
-    -   System.ServiceModel.dll  
+    - System.ServiceModel.dll  
   
-    -   System.ServiceModel.Activities.dll  
+    - System.ServiceModel.Activities.dll  
   
-    -   System.Transactions.dll  
+    - System.Transactions.dll  
   
 3. Dodaj nową klasę o nazwie `PrintTransactionInfo` do `Common` projektu. Ta klasa jest pochodną <xref:System.Activities.NativeActivity> i przeciążenia <xref:System.Activities.NativeActivity.Execute%2A> metody.  
   
@@ -215,11 +215,11 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
   
 1. Dodaj nowy projekt aplikacji konsoli o nazwie `Service` do rozwiązania. Dodaj odwołania do następujących zestawów:  
   
-    1.  System.Activities.dll  
+    1. System.Activities.dll  
   
-    2.  System.ServiceModel.dll  
+    2. System.ServiceModel.dll  
   
-    3.  System.ServiceModel.Activities.dll  
+    3. System.ServiceModel.Activities.dll  
   
 2. Otwórz wygenerowany plik Program.cs i następujący kod:  
   

@@ -10,11 +10,11 @@ ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905973"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Przestarzałe funkcje hostingu środowiska CLR
 W tej sekcji opisano niezarządzane statyczne funkcje globalne, używane w starszych wersjach interfejsu API.  

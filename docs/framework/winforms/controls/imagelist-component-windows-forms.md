@@ -6,11 +6,11 @@ helpviewer_keywords:
 - image controls
 ms.assetid: 83b48634-782b-464d-9b7d-568dc6e0bef2
 ms.openlocfilehash: 61939c427a8a74ef85f269d9e8788d4c3c3b3035
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971157"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList — Składnik (Formularze systemu Windows)
 Formularze Windows `ImageList` składnik jest używany do przechowywania obrazów, które następnie mogą być wyświetlane przez formanty. Listy obrazów umożliwia pisanie kodu dla jednego, spójne katalog obrazów.  

@@ -5,11 +5,11 @@ ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866785"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Wyjątki środowiska uruchomieniowego w aplikacjach .NET Native
 Jest ważne przetestować kompilacji wydania aplikacji Universal Windows Platform na ich platformach docelowych, ponieważ konfiguracji debug i release całkowicie różnią się. Domyślnie korzysta z konfiguracji debugowania środowiska uruchomieniowego .NET Core do kompilowania aplikacji, ale konfiguracja wydania używa platformy .NET Native do kompilowania aplikacji do kodu macierzystego.  
@@ -24,11 +24,11 @@ Jest ważne przetestować kompilacji wydania aplikacji Universal Windows Platfor
   
  Podczas debugowania kompilacji wydania, które są kompilowane przy użyciu platformy .NET Native:  
   
--   Możesz użyć platformy .NET Native aparat debugowania, który różni się od normalnych .NET, narzędzia debugowania.  
+- Możesz użyć platformy .NET Native aparat debugowania, który różni się od normalnych .NET, narzędzia debugowania.  
   
--   Rozmiar plik wykonywalny zmniejsza się w miarę możliwości. Jednym ze sposobów .NET Native zmniejsza rozmiar pliku wykonywalnego jest znacznie przycinania komunikaty wyjątku środowiska uruchomieniowego, w temacie omówiono bardziej szczegółowo w [komunikaty o wyjątkach środowiska uruchomieniowego](#Messages) sekcji.  
+- Rozmiar plik wykonywalny zmniejsza się w miarę możliwości. Jednym ze sposobów .NET Native zmniejsza rozmiar pliku wykonywalnego jest znacznie przycinania komunikaty wyjątku środowiska uruchomieniowego, w temacie omówiono bardziej szczegółowo w [komunikaty o wyjątkach środowiska uruchomieniowego](#Messages) sekcji.  
   
--   Twój kod intensywnie jest zoptymalizowany. Oznacza to, że wbudowanie jest używana zawsze, gdy jest to możliwe. (Wbudowanie przenosi kod z procedur zewnętrznych do wywoływania procedury.)   Fakt, że .NET Native udostępnia wyspecjalizowane środowiska uruchomieniowego i implementuje agresywne wbudowanie wpływa na stos wywołań, który jest wyświetlany podczas debugowania.  Aby uzyskać więcej informacji, zobacz [stosu środowiska uruchomieniowego](#CallStack) sekcji.  
+- Twój kod intensywnie jest zoptymalizowany. Oznacza to, że wbudowanie jest używana zawsze, gdy jest to możliwe. (Wbudowanie przenosi kod z procedur zewnętrznych do wywoływania procedury.)   Fakt, że .NET Native udostępnia wyspecjalizowane środowiska uruchomieniowego i implementuje agresywne wbudowanie wpływa na stos wywołań, który jest wyświetlany podczas debugowania.  Aby uzyskać więcej informacji, zobacz [stosu środowiska uruchomieniowego](#CallStack) sekcji.  
   
 > [!NOTE]
 >  Można kontrolować, czy debug i release kompilacje są kompilowane przy użyciu łańcucha narzędzi .NET Native przez zaznaczenie lub usunięcie zaznaczenia **kompilacji z łańcucha narzędzi .NET Native** pole.   Należy jednak pamiętać, że Store Windows zawsze zostanie skompilowany w wersję produkcyjną aplikacji przy użyciu platformy .NET Native łańcucha narzędzi.  

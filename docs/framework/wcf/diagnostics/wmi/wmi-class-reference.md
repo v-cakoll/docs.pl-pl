@@ -3,17 +3,17 @@ title: Informacje o klasach WMI
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915661"
 ---
 # <a name="wmi-class-reference"></a>Informacje o klasach WMI
-Ta sekcja zawiera listę klas usługi WMI udostępniany przez dostawcę WMI usługi Windows Communication Foundation (WCF).  
+W tej sekcji przedstawiono klasy WMI udostępniany przez dostawcę WMI w Windows Communication Foundation (WCF).  
   
-## <a name="accessing-wmi-instances"></a>Uzyskiwanie dostępu do wystąpienia usługi WMI  
- Wszystkie klasy odwołanie do obiektu WMI na liście nie można bezpośrednio utworzyć wystąpienia, z wyjątkiem usługi, elementu AppDomain, kontrakt, ServiceAppDomain, ServiceToEndpointAssociation i punktu końcowego. Aby uzyskać dostęp do innych wystąpień, można uzyskać dostęp do właściwości klasy opisane powyżej najwyższego poziomu. Można na przykład dostęp do wystąpienia klasy TransportBindingElement z punktu końcowego wystąpienia -> -> BindingElements powiązania.  
+## <a name="accessing-wmi-instances"></a>Uzyskiwanie dostępu do wystąpień WMI  
+ Wszystkie klasy, które są wymienione w odwołaniu do obiektu WMI nie można bezpośrednio utworzyć wystąpienia, z wyjątkiem usługi, domeny aplikacji, kontraktu, ServiceAppDomain ServiceToEndpointAssociation i punktu końcowego. Dostępu do innych wystąpień, mogą uzyskać dostęp do właściwości klasy wymienione wcześniej najwyższego poziomu. Na przykład korzystasz z wystąpienia elementu TransportBindingElement z punktu końcowego wystąpienia -> -> elementy BindingElements powiązania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  

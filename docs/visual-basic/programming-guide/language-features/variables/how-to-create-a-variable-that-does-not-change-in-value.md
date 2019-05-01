@@ -6,22 +6,22 @@ helpviewer_keywords:
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
 ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938232"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Instrukcje: Tworzenie zmiennej, która nie zmienia wartości (Visual Basic)
 Pojęcie zmienną, która nie zmienia jej wartość może się wydawać sprzeczne. Istnieją sytuacje, gdy stała nie jest możliwe, ale warto mieć zmienną o stałej wartości. W takim przypadku można zdefiniować zmienną składową za pomocą [tylko do odczytu](../../../../visual-basic/language-reference/modifiers/readonly.md) — słowo kluczowe.  
   
  Nie można użyć [instrukcja Const](../../../../visual-basic/language-reference/statements/const-statement.md) zadeklarować i przypisać wartości stałej w następujących okolicznościach:  
   
--   `Const` Instrukcji nie akceptuje typu danych, którego chcesz użyć  
+- `Const` Instrukcji nie akceptuje typu danych, którego chcesz użyć  
   
--   Nie wiadomo, wartość w czasie kompilacji  
+- Nie wiadomo, wartość w czasie kompilacji  
   
--   Nie można obliczyć wartości stałej w czasie kompilacji  
+- Nie można obliczyć wartości stałej w czasie kompilacji  
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Aby utworzyć zmienną, która nie zmienia wartości  
   

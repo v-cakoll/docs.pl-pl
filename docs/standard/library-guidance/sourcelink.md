@@ -5,13 +5,13 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
 ms.openlocfilehash: 10596f589af7abee6ff7833ef25c606294337196
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910247"
 ---
-# <a name="source-link"></a>Link źródłowy
+# <a name="source-link"></a>Link do źródła
 
 Link źródłowy jest to technologia, która umożliwia debugowanie kodu źródłowego .NET zestawów z pakietu NuGet przez deweloperów. Link źródłowy jest wykonywany podczas tworzenia pakietu NuGet i osadza metadanych kontroli źródła wewnątrz zespołów i pakietu. Deweloperzy, którzy pobrać pakiet oraz mieć Linku źródłowego włączone w programie Visual Studio można wkroczyć do jego kod źródłowy. Link źródłowy udostępnia metadane kontroli źródła do utworzenia doskonałe środowisko debugowania.
 

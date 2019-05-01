@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879817"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Synchronizacja elementów DataSet i XmlDataDocument
 ADO.NET <xref:System.Data.DataSet> zapewnia relacyjnych reprezentację danych. Uzyskać dostęp do danych hierarchicznych można użyć klasy XML dostępnych w programie .NET Framework. W przeszłości te dwa reprezentacje danych zostały użyte oddzielnie. Jednak .NET Framework udostępnia w czasie rzeczywistym, synchronicznej relacyjne i hierarchiczne reprezentacje danych za pośrednictwem **DataSet** obiektu i <xref:System.Xml.XmlDataDocument> obiektu, odpowiednio.  
@@ -19,7 +19,7 @@ ADO.NET <xref:System.Data.DataSet> zapewnia relacyjnych reprezentację danych. U
   
  Istnieje kilka sposobów, które można synchronizować **DataSet** z **XmlDataDocument**. Można:  
   
--   Wypełnij **zestawu danych** danych i schematu (czyli relacyjnej struktury), a następnie synchronizować je za pomocą nowego **XmlDataDocument**. Dzięki temu hierarchiczny widok istniejących danych relacyjnych. Na przykład:  
+- Wypełnij **zestawu danych** danych i schematu (czyli relacyjnej struktury), a następnie synchronizować je za pomocą nowego **XmlDataDocument**. Dzięki temu hierarchiczny widok istniejących danych relacyjnych. Na przykład:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ ADO.NET <xref:System.Data.DataSet> zapewnia relacyjnych reprezentację danych. U
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   Wypełnij **zestawu danych** przy użyciu samego schematu (takie jak silnie typizowaną **zestawu danych**), zsynchronizować ją z **XmlDataDocument**, a następnie załadować  **XmlDataDocument** z dokumentu XML. Dzięki temu relacyjny widok istniejące dane hierarchiczne. Nazwy tabel i nazw kolumn w swojej **DataSet** schematu musi być zgodne z nazwami elementów XML, które chcesz zsynchronizować z. To dopasowanie jest rozróżniana wielkość liter.  
+- Wypełnij **zestawu danych** przy użyciu samego schematu (takie jak silnie typizowaną **zestawu danych**), zsynchronizować ją z **XmlDataDocument**, a następnie załadować  **XmlDataDocument** z dokumentu XML. Dzięki temu relacyjny widok istniejące dane hierarchiczne. Nazwy tabel i nazw kolumn w swojej **DataSet** schematu musi być zgodne z nazwami elementów XML, które chcesz zsynchronizować z. To dopasowanie jest rozróżniana wielkość liter.  
   
      Należy pamiętać, że schemat **DataSet** tylko musi być zgodna elementy XML, które chcesz udostępnić w danym widoku relacyjnych. W ten sposób może mieć bardzo dużych dokumentów XML i bardzo małych relacyjnych "okno" tego dokumentu. **XmlDataDocument** zachowuje całego dokumentu XML, nawet jeśli **DataSet** przedstawia tylko niewielką część. (Aby uzyskać szczegółowy przykład, zobacz [synchronizowanie elementu DataSet z elementem XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)  
   
@@ -63,7 +63,7 @@ ADO.NET <xref:System.Data.DataSet> zapewnia relacyjnych reprezentację danych. U
   
      Nie można załadować **XmlDataDocument** Jeśli jest zsynchronizowany z **DataSet** zawierający dane. zostanie zgłoszony wyjątek.  
   
--   Utwórz nową **XmlDataDocument** i załaduj go z dokumentu XML, a następnie przejść relacyjny widok danych przy użyciu **DataSet** właściwość **XmlDataDocument**. Należy ustawić schemat **DataSet** zanim będzie można wyświetlić dane w **XmlDataDocument** przy użyciu **zestawu danych**. Ponownie, nazwy tabel i kolumn nazwy w Twojej **DataSet** schematu musi być zgodne z nazwami elementów XML, które chcesz zsynchronizować z. To dopasowanie jest rozróżniana wielkość liter.  
+- Utwórz nową **XmlDataDocument** i załaduj go z dokumentu XML, a następnie przejść relacyjny widok danych przy użyciu **DataSet** właściwość **XmlDataDocument**. Należy ustawić schemat **DataSet** zanim będzie można wyświetlić dane w **XmlDataDocument** przy użyciu **zestawu danych**. Ponownie, nazwy tabel i kolumn nazwy w Twojej **DataSet** schematu musi być zgodne z nazwami elementów XML, które chcesz zsynchronizować z. To dopasowanie jest rozróżniana wielkość liter.  
   
      Poniższy przykład kodu pokazuje, jak uzyskać dostęp relacyjny widok danych w **XmlDataDocument**.  
   

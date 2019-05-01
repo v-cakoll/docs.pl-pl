@@ -3,11 +3,11 @@ title: Przekształcanie funkcjonalne kodu XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 62edd7adf425f8a36128497a6dae445a3e9cbfc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968483"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>Przekształcanie funkcjonalne kodu XML (Visual Basic)
 W tym temacie omówiono czyste Przekształcanie funkcjonalne podejście modyfikowanie dokumentów XML i zestawiono ze sobą przy użyciu podejścia proceduralnego.  
@@ -15,11 +15,11 @@ W tym temacie omówiono czyste Przekształcanie funkcjonalne podejście modyfiko
 ## <a name="modifying-an-xml-document"></a>Modyfikowanie dokumentu XML  
  Jednym z najbardziej typowych zadań związanych z programista XML jest Przekształcanie XML z jednego kształtu do innego. Kształt dokumentu XML jest strukturę dokumentu, w którym znajdują się następujące:  
   
--   Hierarchia, wyrażone w dokumencie.  
+- Hierarchia, wyrażone w dokumencie.  
   
--   Nazwy elementów i atrybutów.  
+- Nazwy elementów i atrybutów.  
   
--   Typy danych elementów i atrybutów.  
+- Typy danych elementów i atrybutów.  
   
  Ogólnie rzecz biorąc najbardziej skutecznym sposobem Przekształcanie XML z jednego kształtu do innego jest czyste Przekształcanie funkcjonalne. W tym podejściu zadań programisty podstawowy jest utworzenie przekształcenia, która jest stosowana do całego dokumentu XML (lub jeden lub więcej węzłów ściśle zdefiniowane). Przekształcanie funkcjonalne jest prawdopodobnie najłatwiejsze do kodu (po programistą są zaznajomieni z podejściem), daje najbardziej łatwego w utrzymaniu kod i jest często bardziej oszczędny niż alternatywnych metod.  
   

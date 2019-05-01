@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
 ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971158"
 ---
 # <a name="windows-in-wpf-applications"></a>Okna w aplikacjach WPF
 Użytkownicy wchodzić w interakcje z aplikacjami za pośrednictwem systemu windows. Podstawowym celem okna jest hostowanie i wyświetlania zawartości. Typ zawartości, że hosty okna zależy od typu danych, czy aplikacja działa przez, które obejmują nośnik, Extensible Application Markup Language (XAML) strony, strony sieci Web, dokumentów, tabel bazy danych i rekordów i informacje o systemie.  

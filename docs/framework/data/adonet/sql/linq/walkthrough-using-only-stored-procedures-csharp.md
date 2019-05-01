@@ -3,11 +3,11 @@ title: 'Przewodnik: Używanie tylko procedur składowanych (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
 ms.openlocfilehash: e5497c1c6bfe032ba272c911217adaa3bd7f4f4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876528"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Przewodnik: Używanie tylko procedur składowanych (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz do uzyskiwania dostępu do danych, wykonując procedury składowane tylko. To podejście jest często używana przez administratorów baz danych, aby ograniczyć sposób dostępu do magazynu danych.  
@@ -26,13 +26,13 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Ten przewodnik wymaga następujących elementów:  
   
--   W tym przewodniku używa dedykowanego folder ("c:\linqtest7") do przechowywania plików. Przed rozpoczęciem instruktażu, należy utworzyć ten folder.  
+- W tym przewodniku używa dedykowanego folder ("c:\linqtest7") do przechowywania plików. Przed rozpoczęciem instruktażu, należy utworzyć ten folder.  
   
--   Przykładowa bazy danych Northwind.  
+- Przykładowa bazy danych Northwind.  
   
      Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych, skopiuj plik northwnd.mdf do folderu c:\linqtest7.  
   
--   A C# plik kod wygenerowany z bazy danych Northwind.  
+- A C# plik kod wygenerowany z bazy danych Northwind.  
   
      Ten instruktaż został napisany za pomocą narzędzia SqlMetal za pomocą następującego polecenia:  
   
@@ -43,17 +43,17 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="overview"></a>Omówienie  
  Ten przewodnik składa się z sześciu głównych zadań:  
   
--   Konfigurowanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.  
+- Konfigurowanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.  
   
--   Trwa dodawanie zestawu System.Data.Linq do projektu.  
+- Trwa dodawanie zestawu System.Data.Linq do projektu.  
   
--   Dodawanie pliku kodu bazy danych do projektu.  
+- Dodawanie pliku kodu bazy danych do projektu.  
   
--   Tworzenie połączenia z bazą danych.  
+- Tworzenie połączenia z bazą danych.  
   
--   Konfigurowanie interfejsu użytkownika.  
+- Konfigurowanie interfejsu użytkownika.  
   
--   Uruchamianie i testowanie aplikacji.  
+- Uruchamianie i testowanie aplikacji.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Tworzenie składnika LINQ to SQL rozwiązanie  
  W tym pierwszym zadaniu tworzyć rozwiązania programu Visual Studio, który zawiera niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.  

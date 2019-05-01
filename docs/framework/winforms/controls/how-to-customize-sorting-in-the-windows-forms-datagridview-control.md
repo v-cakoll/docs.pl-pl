@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
 ms.openlocfilehash: 0e7dffa45dc8d3ac467129d44a7c73a8c4b4bfa2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904335"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Instrukcje: dostosowywanie sortowania w kontrolce DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Control oferuje automatyczne sortowanie, ale w zależności od potrzeb, może być konieczne dostosowanie operacjach sortowania. Na przykład umożliwia sortowanie programowe tworzenie alternatywny interfejs użytkownika (UI). Alternatywnie, można obsługiwać <xref:System.Windows.Forms.DataGridView.SortCompare> zdarzenia lub wywołanie `Sort(IComparer)` przeciążenia <xref:System.Windows.Forms.DataGridView.Sort%2A> metody sortowania funkcje i elastyczność, takich jak sortowanie wielu kolumn.  
@@ -42,7 +42,7 @@ ms.locfileid: "59192917"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Wymagaj tych przykładach:  
   
--   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
  Aby uzyskać informacje o tworzeniu tych przykładów z poziomu wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

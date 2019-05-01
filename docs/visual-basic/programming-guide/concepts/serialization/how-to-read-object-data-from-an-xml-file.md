@@ -3,11 +3,11 @@ title: 'Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907351"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)
 W tym przykładzie odczytuje dane obiektów, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.  
+- Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.  
   
--   Dane w pliku nie reprezentuje dane z klasy, która ma zostać przeprowadzona.  
+- Dane w pliku nie reprezentuje dane z klasy, która ma zostać przeprowadzona.  
   
--   Plik nie istnieje (<xref:System.IO.IOException>).  
+- Plik nie istnieje (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Zawsze sprawdzić dane wejściowe i nigdy nie deserializowanie danych z niezaufanego źródła. Ponownie utworzyć obiekt działa na komputerze lokalnym z uprawnieniami kod, który deserializacji go. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  

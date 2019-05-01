@@ -1,18 +1,18 @@
 ---
-title: Dane wyjściowe z klasy XslTransform
+title: Dane wyjściowe klasy XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b299f09f3dc47b5d136284d4d1d285f2e5aad5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950673"
 ---
-# <a name="outputs-from-an-xsltransform"></a>Dane wyjściowe z klasy XslTransform
+# <a name="outputs-from-an-xsltransform"></a>Dane wyjściowe klasy XslTransform
 Ponieważ arkusze stylów można określić przy użyciu formatu danych wyjściowych `<xsl:output>` instrukcję, określając `method` atrybutu w poniższej tabeli opisano format danych wyjściowych jest, gdy <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda służy do zapisywania danych wyjściowych i format danych wyjściowych zadeklarowany jako <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>.  
   
 > [!NOTE]
@@ -27,32 +27,32 @@ Ponieważ arkusze stylów można określić przy użyciu formatu danych wyjścio
 |method="text"|Tekst|  
   
 > [!NOTE]
->  Uwaga: `<xsl:output>` instrukcji jest ignorowana, gdy dane wyjściowe <xref:System.Xml.Xsl.XslTransform.Transform%2A> metodą jest <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter>.  
+>  Uwaga: `<xsl:output>` Instrukcji jest ignorowana, gdy dane wyjściowe <xref:System.Xml.Xsl.XslTransform.Transform%2A> metodą jest <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter>.  
   
  Następujące atrybuty są obsługiwane podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda danych wyjściowych jest <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>:  
   
--   encoding*  
+- encoding*  
   
--   Pomiń xml deklaracji  
+- omit-xml-declaration  
   
--   niezależne  
+- niezależne  
   
--   publiczna doctype  
+- doctype-public  
   
--   DOCTYPE system  
+- doctype-system  
   
--   elementy w przypadku sekcja CDATA  
+- cdata-section-elements  
   
--   wcięcie  
+- Zwiększ wcięcie  
   
     > [!NOTE]
     >  * kodowania. atrybut jest ignorowany podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda wysyła dane wyjściowe do <xref:System.IO.TextWriter>. Właściwość kodowania <xref:System.IO.TextWriter> zamian jest używana.  
   
  Następujący atrybut jest ignorowany podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda danych wyjściowych jest <xref:System.IO.Stream>:  
   
--   Wersja: wersja jest zawsze 1.0  
+- Wersja: wersja jest zawsze 1.0  
   
--   Typ nośnika: typ nośnika  
+- Typ nośnika: typ nośnika  
   
 ## <a name="escaping-special-characters"></a>Znaki specjalne wyjścia  
  `<xsl:text disable-output-escaping>` Tag jest używany do wskazania, czy znaki specjalne, należy wstawić do postaci XML (na przykład za pomocą `<&lt>` zamiast `"<"` symbol) lub po lewej stronie w obecnym stanie. `disable-output-escaping` Atrybut jest ignorowany podczas przekształcania w <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter> obiektu i nie ma wpływu na znaki specjalne.  

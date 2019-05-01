@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
 ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855923"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Grupowanie komunikatów z obsługą kolejek w ramach sesji
 Windows Communication Foundation (WCF) zapewnia sesji, która pozwala grupować zestaw komunikatów powiązane ze sobą do przetworzenia przez aplikację odbierającą jednego. Komunikaty, które są częścią sesji musi być częścią tej samej transakcji. Ponieważ wszystkie komunikaty są częścią tej samej transakcji, jeśli jeden komunikat zakończy się niepowodzeniem do przetworzenia całej sesji jest wycofywana. Sesje mają podobne zachowanie w odniesieniu do kolejki utraconych wiadomości i skażone kolejki. Czas wygaśnięcia (TTL) ustawiona w Zakolejkowane powiązanie skonfigurowane dla sesji jest stosowana do sesji jako całości. Jeśli tylko część wiadomości w sesji są wysyłane przed wygaśnięcia, podczas całej sesji jest umieszczana w kolejce wiadomości utraconych. Podobnie po wiadomości w sesji nie można wysyłać do aplikacji z kolejki aplikacji, podczas całej sesji jest umieszczany w kolejce skażone (jeśli jest dostępny).  

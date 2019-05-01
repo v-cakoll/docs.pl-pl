@@ -3,11 +3,11 @@ title: Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858325"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 
@@ -23,7 +23,7 @@ Tworzenia i wdrażania usług Windows Communication Foundation (WCF), który zna
 
 - Konfigurowanie usługi WCF.
 
-Aby uzyskać szczegółowy przewodnik dotyczący tworzenia usługi WCF hostowanej przez usługi IIS, zobacz [instrukcje: hostowanie usługi WCF w programie IIS](how-to-host-a-wcf-service-in-iis.md).
+Aby uzyskać szczegółowy przewodnik dotyczący tworzenia usługi WCF hostowanej przez usługi IIS, zobacz [jak: Hostowanie usługi WCF w programie IIS](how-to-host-a-wcf-service-in-iis.md).
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Upewnij się, że usługi IIS, ASP.NET i WCF poprawnie zainstalowany i zarejestrowany
 

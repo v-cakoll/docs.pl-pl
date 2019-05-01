@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037092"
 ---
 # <a name="commanding-overview"></a>Przegląd Polecenia
 <a name="introduction"></a> Polecenia jest mechanizm danych wejściowych w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępniającej dane wejściowe Obsługa na poziomie semantycznego więcej niż dane wejściowe z urządzenia. Przykłady poleceń **kopiowania**, **Wytnij**, i **Wklej** odnaleźć operacji na wielu aplikacji.  
@@ -27,15 +27,15 @@ ms.locfileid: "59139038"
   
  Ten temat zawiera następujące sekcje:  
   
--   [Co to są polecenia?](#commands_at_10000_feet)  
+- [Co to są polecenia?](#commands_at_10000_feet)  
   
--   [Przykład prostego polecenia na platformie WPF](#simple_command)  
+- [Przykład prostego polecenia na platformie WPF](#simple_command)  
   
--   [Cztery główne pojęcia dotyczące polecenia WPF](#Four_main_Concepts)  
+- [Cztery główne pojęcia dotyczące polecenia WPF](#Four_main_Concepts)  
   
--   [Biblioteka poleceń](#Command_Library)  
+- [Biblioteka poleceń](#Command_Library)  
   
--   [Tworzenie niestandardowych poleceń](#creating_commands)  
+- [Tworzenie niestandardowych poleceń](#creating_commands)  
   
 <a name="commands_at_10000_feet"></a>   
 ## <a name="what-are-commands"></a>Co to są polecenia?  
@@ -60,13 +60,13 @@ ms.locfileid: "59139038"
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Cztery główne pojęcia dotyczące polecenia WPF  
  Model trasowane polecenia w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] może zostać podzielony na cztery główne pojęcia: polecenie, źródło polecenia, element docelowy polecenia i powiązanie polecenia:  
   
--   *Polecenia* jest akcja do wykonania.  
+- *Polecenia* jest akcja do wykonania.  
   
--   *Źródło polecenia* jest obiekt, który wywołuje polecenie.  
+- *Źródło polecenia* jest obiekt, który wywołuje polecenie.  
   
--   *Elemencie docelowym polecenia* to polecenie jest wykonywane na obiekt.  
+- *Elemencie docelowym polecenia* to polecenie jest wykonywane na obiekt.  
   
--   *Polecenia powiązania* jest obiekt, który mapuje polecenia logikę do polecenia.  
+- *Polecenia powiązania* jest obiekt, który mapuje polecenia logikę do polecenia.  
   
  W poprzednim przykładzie <xref:System.Windows.Input.ApplicationCommands.Paste%2A> polecenia jest poleceniem, <xref:System.Windows.Controls.MenuItem> jest źródłem polecenia <xref:System.Windows.Controls.TextBox> jest miejscem docelowym polecenia i powiązanie polecenia jest dostarczana przez <xref:System.Windows.Controls.TextBox> kontroli.  Warto zauważyć, że nie zawsze jest przypadek, <xref:System.Windows.Input.CommandBinding> jest dostarczana przez formant który jest Klasa docelowa polecenia.  Bardzo często <xref:System.Windows.Input.CommandBinding> musi zostać utworzona przez dewelopera aplikacji lub <xref:System.Windows.Input.CommandBinding> może zostać dołączony do elementu nadrzędnego w elemencie docelowym polecenia.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "59139038"
   
  <xref:System.Windows.Input.ICommandSource> udostępnia trzy właściwości: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, i <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A> to polecenie do wykonania, gdy źródło polecenia zostanie wywołana.  
+- <xref:System.Windows.Input.ICommandSource.Command%2A> to polecenie do wykonania, gdy źródło polecenia zostanie wywołana.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> jest to obiekt, w którym można wykonać polecenia.  Warto zauważyć, że w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> właściwość <xref:System.Windows.Input.ICommandSource> dotyczy tylko kiedy <xref:System.Windows.Input.ICommand> jest <xref:System.Windows.Input.RoutedCommand>.  Jeśli <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> jest ustawiona na <xref:System.Windows.Input.ICommandSource> i odpowiednie polecenie nie jest <xref:System.Windows.Input.RoutedCommand>, jest ignorowana w elemencie docelowym polecenia. Jeśli <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nie jest ustawiony, element z fokusem klawiatury będą w elemencie docelowym polecenia.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> jest to obiekt, w którym można wykonać polecenia.  Warto zauważyć, że w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> właściwość <xref:System.Windows.Input.ICommandSource> dotyczy tylko kiedy <xref:System.Windows.Input.ICommand> jest <xref:System.Windows.Input.RoutedCommand>.  Jeśli <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> jest ustawiona na <xref:System.Windows.Input.ICommandSource> i odpowiednie polecenie nie jest <xref:System.Windows.Input.RoutedCommand>, jest ignorowana w elemencie docelowym polecenia. Jeśli <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nie jest ustawiony, element z fokusem klawiatury będą w elemencie docelowym polecenia.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Typ danych zdefiniowany przez użytkownika używany do przekazywania informacji do obsługi implementuje polecenie.  
+- <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Typ danych zdefiniowany przez użytkownika używany do przekazywania informacji do obsługi implementuje polecenie.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Klas, które implementują <xref:System.Windows.Input.ICommandSource> są <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink>, i <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, i <xref:System.Windows.Documents.Hyperlink> Wywołaj polecenie, po ich kliknięciu i moduł <xref:System.Windows.Input.InputBinding> wywołuje polecenie po <xref:System.Windows.Input.InputGesture> skojarzone z jest wykonywane.  
   

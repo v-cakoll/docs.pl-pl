@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017790"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Tworzenie formantu, którego wygląd można dostosować
 <a name="introduction"></a>
@@ -37,17 +37,17 @@ Niestandardowy formant NumericUpDown
   
  Ten temat zawiera następujące sekcje:  
   
--   [Wymagania wstępne](#prerequisites)  
+- [Wymagania wstępne](#prerequisites)  
   
--   [Części i stanów modelu](#parts_and_states_model)  
+- [Części i stanów modelu](#parts_and_states_model)  
   
--   [Definiowanie struktury wizualnej i zachowanie Visual kontrolki w ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
+- [Definiowanie struktury wizualnej i zachowanie Visual kontrolki w ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
   
--   [Przy użyciu części ControlTemplate w kodzie](#using_parts_of_the_controltemplate_in_code)  
+- [Przy użyciu części ControlTemplate w kodzie](#using_parts_of_the_controltemplate_in_code)  
   
--   [Zapewnianie kontrakt formantu](#providing_the_control_contract)  
+- [Zapewnianie kontrakt formantu](#providing_the_control_contract)  
   
--   [Kompletny przykład](#complete_example)  
+- [Kompletny przykład](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
@@ -60,11 +60,11 @@ Niestandardowy formant NumericUpDown
 ## <a name="parts-and-states-model"></a>Części i stanów modelu  
  Części i Stany model Określa, jak Definiowanie struktury wizualnej i zachowanie visual kontrolki. Aby skorzystać z części i stanów modelu, należy wykonać następujące:  
   
--   Definiowanie struktury wizualnej i zachowanie visual <xref:System.Windows.Controls.ControlTemplate> formantu.  
+- Definiowanie struktury wizualnej i zachowanie visual <xref:System.Windows.Controls.ControlTemplate> formantu.  
   
--   Należy wykonać niektóre najlepsze rozwiązania, podczas kontroli nad logika interakcji z części szablonu kontrolki.  
+- Należy wykonać niektóre najlepsze rozwiązania, podczas kontroli nad logika interakcji z części szablonu kontrolki.  
   
--   Podaj kontrakt formantu, aby określić, jakie powinny być uwzględnione w <xref:System.Windows.Controls.ControlTemplate>.  
+- Podaj kontrakt formantu, aby określić, jakie powinny być uwzględnione w <xref:System.Windows.Controls.ControlTemplate>.  
   
  Kiedy definiujesz struktury wizualnej i zachowanie visual <xref:System.Windows.Controls.ControlTemplate> kontrolki, autorzy aplikacji można zmienić struktury efektów wizualnych i wizualne zachowanie kontroli nad przez utworzenie nowego <xref:System.Windows.Controls.ControlTemplate> zamiast pisania kodu.   Należy podać autorów kontrakt formantu, który informuje aplikację, która <xref:System.Windows.FrameworkElement> obiektów i Stany powinien być zdefiniowany w <xref:System.Windows.Controls.ControlTemplate>. Należy przestrzegać najważniejsze wskazówki podczas interakcji z części w <xref:System.Windows.Controls.ControlTemplate> tak, aby formant poprawnie obsługuje niepełnego <xref:System.Windows.Controls.ControlTemplate>.  Jeśli wykonasz te trzy zasady, autorzy aplikacji będzie można utworzyć <xref:System.Windows.Controls.ControlTemplate> kontrolki po prostu równie łatwo, jak one można formantów dostarczane z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  W poniższej sekcji omówiono każdy z tych zaleceń szczegółowo.  
   
@@ -134,18 +134,18 @@ Niestandardowy formant NumericUpDown
   
  <xref:System.Windows.VisualStateManager.GoToState%2A> Metoda wykonuje logikę niezbędną do uruchamiania i zatrzymywania scenorysy odpowiednio. Kiedy wywołuje kontrolki <xref:System.Windows.VisualStateManager.GoToState%2A> zmiany jego stanu <xref:System.Windows.VisualStateManager> wykonuje następujące czynności:  
   
--   Jeśli <xref:System.Windows.VisualState> czy zamierza kontrolki ma <xref:System.Windows.Media.Animation.Storyboard>, rozpoczyna się scenorysu. Następnie, jeśli <xref:System.Windows.VisualState> że kontrolki pochodzi z ma <xref:System.Windows.Media.Animation.Storyboard>, kończy się scenorysu.  
+- Jeśli <xref:System.Windows.VisualState> czy zamierza kontrolki ma <xref:System.Windows.Media.Animation.Storyboard>, rozpoczyna się scenorysu. Następnie, jeśli <xref:System.Windows.VisualState> że kontrolki pochodzi z ma <xref:System.Windows.Media.Animation.Storyboard>, kończy się scenorysu.  
   
--   Jeśli formant znajduje się już w stanie, który jest określony, <xref:System.Windows.VisualStateManager.GoToState%2A> nie podejmuje żadnych działań i zwraca `true`.  
+- Jeśli formant znajduje się już w stanie, który jest określony, <xref:System.Windows.VisualStateManager.GoToState%2A> nie podejmuje żadnych działań i zwraca `true`.  
   
--   Jeśli stan, który jest określony, nie istnieje w <xref:System.Windows.Controls.ControlTemplate> z `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> nie podejmuje żadnych działań i zwraca `false`.  
+- Jeśli stan, który jest określony, nie istnieje w <xref:System.Windows.Controls.ControlTemplate> z `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> nie podejmuje żadnych działań i zwraca `false`.  
   
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>Najlepsze rozwiązania dotyczące pracy z VisualStateManager  
  Zaleca się wykonanie następujących czynności, aby zachować stany kontroli nad:  
   
--   Używaj właściwości, aby śledzić jego stan.  
+- Używaj właściwości, aby śledzić jego stan.  
   
--   Tworzenie metody pomocnika do przejścia między stanami.  
+- Tworzenie metody pomocnika do przejścia między stanami.  
   
  `NumericUpDown` Kontrolować używa jej `Value` właściwości w celu sprawdzenia, czy jest on `Positive` lub `Negative` stanu.  `NumericUpDown` Definiuje również kontroli `Focused` i `UnFocused` stany, które śledzi <xref:System.Windows.UIElement.IsFocused%2A> właściwości. Jeśli używasz stanów, które nie odpowiadają naturalnie właściwości formantu, można zdefiniować właściwości prywatnej do śledzenia stanu.  
   
@@ -160,11 +160,11 @@ Niestandardowy formant NumericUpDown
   
  Istnieją trzy typowe miejsca, gdzie mogą ulec zmianie stanu formantu:  
   
--   Gdy <xref:System.Windows.Controls.ControlTemplate> jest stosowany do <xref:System.Windows.Controls.Control>.  
+- Gdy <xref:System.Windows.Controls.ControlTemplate> jest stosowany do <xref:System.Windows.Controls.Control>.  
   
--   Podczas zmiany właściwości.  
+- Podczas zmiany właściwości.  
   
--   Gdy wystąpi zdarzenie.  
+- Gdy wystąpi zdarzenie.  
   
  W poniższych przykładach pokazano, aktualizowanie stanu `NumericUpDown` kontroli w tych przypadkach.  
   
@@ -189,33 +189,33 @@ Niestandardowy formant NumericUpDown
 ## <a name="providing-the-control-contract"></a>Zapewnianie kontrakt formantu  
  Należy podać kontrakt formantu, aby <xref:System.Windows.Controls.ControlTemplate> autorzy będzie wiadomo, jakie można umieścić w szablonie. Kontrakt formantu ma trzy elementy:  
   
--   Elementy wizualne, których używa logiki formantu.  
+- Elementy wizualne, których używa logiki formantu.  
   
--   Stany i grupy, której każdy stan kontrolki.  
+- Stany i grupy, której każdy stan kontrolki.  
   
--   Właściwości publiczne, które wizualnie wpływają na formant.  
+- Właściwości publiczne, które wizualnie wpływają na formant.  
   
  Osoba, która tworzy nową <xref:System.Windows.Controls.ControlTemplate> musi wiedzieć, jakie <xref:System.Windows.FrameworkElement> obiektów używa logiki formantu, jaki typ każdego obiektu jest i jakie jego nazwa jest. A <xref:System.Windows.Controls.ControlTemplate> autor musi także znać nazwę kontrolki mogą znajdować się w możliwe stany i które <xref:System.Windows.VisualStateGroup> jest.  
   
  Wracając do `NumericUpDown` oczekuje, że kontrolka przykład <xref:System.Windows.Controls.ControlTemplate> mieć następujące <xref:System.Windows.FrameworkElement> obiektów:  
   
--   A <xref:System.Windows.Controls.Primitives.RepeatButton> o nazwie `UpButton`.  
+- A <xref:System.Windows.Controls.Primitives.RepeatButton> o nazwie `UpButton`.  
   
--   Element <xref:System.Windows.Controls.Primitives.RepeatButton> o nazwie `DownButton.`  
+- Element <xref:System.Windows.Controls.Primitives.RepeatButton> o nazwie `DownButton.`  
   
  Formant może być w jednym z następujących stanów:  
   
--   W `ValueStates`<xref:System.Windows.VisualStateGroup>  
+- W `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Positive`  
+    - `Positive`  
   
-    -   `Negative`  
+    - `Negative`  
   
--   W `FocusStates`<xref:System.Windows.VisualStateGroup>  
+- W `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Focused`  
+    - `Focused`  
   
-    -   `Unfocused`  
+    - `Unfocused`  
   
  Umożliwiające określenie, co <xref:System.Windows.FrameworkElement> oczekuje, że kontrolka obiektów, należy użyć <xref:System.Windows.TemplatePartAttribute>, który określa nazwę i typ oczekiwany elementów.  Aby określić możliwe stany kontrolkę, należy użyć <xref:System.Windows.TemplateVisualStateAttribute>, który określa nazwę stanu, które <xref:System.Windows.VisualStateGroup> należy ona do.  Umieść <xref:System.Windows.TemplatePartAttribute> i <xref:System.Windows.TemplateVisualStateAttribute> w definicji klasy kontrolki.  
   

@@ -6,8 +6,8 @@ ms.openlocfilehash: 72068002572ff82d2f166ffdd79e455cec7a2961
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051432"
 ---
 # <a name="service-identity-sample"></a>Tożsamość usług — przykład
 Ta tożsamość usług — przykład pokazuje, jak ustawić tożsamość usługi. W czasie projektowania klient może pobrać tożsamości przy użyciu metadanych usługi, a następnie w czasie wykonywania klienta można uwierzytelnić tożsamości usługi. Pojęcie tożsamości usługi jest umożliwienie klienta do uwierzytelniania usługi przed wywołaniem dowolnej swojego działania, w tym samym ochrony klienta przed nieuwierzytelnione wywołania. Dla bezpiecznego połączenia usługi jest również uwierzytelniany poświadczeń klienta przed zezwoleniem na jego dostęp, ale nie jest celem tego przykładu. Zobacz przykłady w [klienta](../../../../docs/framework/wcf/samples/client.md) ukazują uwierzytelniania serwera.
@@ -17,11 +17,11 @@ Ta tożsamość usług — przykład pokazuje, jak ustawić tożsamość usługi
 
  Ten przykład ilustruje następujące funkcje:
 
--   Jak ustawić różne rodzaje tożsamości w różnych punktach końcowych usługi. Każdy typ tożsamości ma różne możliwości. Typ tożsamości do użycia zależy od typu poświadczeń zabezpieczeń używane na powiązanie punktu końcowego.
+- Jak ustawić różne rodzaje tożsamości w różnych punktach końcowych usługi. Każdy typ tożsamości ma różne możliwości. Typ tożsamości do użycia zależy od typu poświadczeń zabezpieczeń używane na powiązanie punktu końcowego.
 
--   Tożsamość albo można ustawić deklaratywnie w konfiguracji lub obowiązkowo w kodzie. Zazwyczaj zarówno klient, jak i usługi należy użyć konfiguracji do ustawiania tożsamości.
+- Tożsamość albo można ustawić deklaratywnie w konfiguracji lub obowiązkowo w kodzie. Zazwyczaj zarówno klient, jak i usługi należy użyć konfiguracji do ustawiania tożsamości.
 
--   Jak ustawić tożsamość niestandardowa na komputerze klienckim. Tożsamość niestandardowa jest zazwyczaj dostosowanie istniejącego typu tożsamości, która umożliwia klientowi zbadać inne oświadczenia informacjami poświadczenia do podejmowania decyzji dotyczących autoryzacji przed wywołaniem usługi.
+- Jak ustawić tożsamość niestandardowa na komputerze klienckim. Tożsamość niestandardowa jest zazwyczaj dostosowanie istniejącego typu tożsamości, która umożliwia klientowi zbadać inne oświadczenia informacjami poświadczenia do podejmowania decyzji dotyczących autoryzacji przed wywołaniem usługi.
 
     > [!NOTE]
     >  W tym przykładzie sprawdza, czy tożsamość określonego certyfikatu o nazwie identity.com i klucz RSA zawartych w tym certyfikacie. Korzystając z typów tożsamości certyfikatu i RSA w konfiguracji na komputerze klienckim, prosty sposób uzyskania tych wartości jest sprawdzanie WSDL usługi gdy te wartości są serializowane.
@@ -154,7 +154,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 ### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
--   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+- Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
     > [!NOTE]
     >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

@@ -3,11 +3,11 @@ title: Przykłady
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
 ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033413"
 ---
 # <a name="samples"></a>Przykłady
 Ten temat zawiera łącza do rozwiązań Visual Basic i C#, które zawierają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przykładowego kodu.  
@@ -21,11 +21,11 @@ Ten temat zawiera łącza do rozwiązań Visual Basic i C#, które zawierają [!
   
  Wykonaj następujące kroki, aby znaleźć dodatkowe przykłady [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu oraz aplikacji:  
   
--   Wyszukiwanie określonych problemów w witrynie Microsoft Docs.  
+- Wyszukiwanie określonych problemów w witrynie Microsoft Docs.  
   
--   Uczestniczyć w [LINQ Forum](https://go.microsoft.com/fwlink/?LinkId=76488), gdzie można omawiać bardziej złożonych tematów szczegółowo z ekspertami.  
+- Uczestniczyć w [LINQ Forum](https://go.microsoft.com/fwlink/?LinkId=76488), gdzie można omawiać bardziej złożonych tematów szczegółowo z ekspertami.  
   
--   Oficjalny dokument, który szczegółowo badać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologii, wraz z przykładami kodu Visual Basic i C#. Aby uzyskać więcej informacji, zobacz [LINQ to SQL: .NET Language-Integrated zapytania dla danych relacyjnych](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Oficjalny dokument, który szczegółowo badać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologii, wraz z przykładami kodu Visual Basic i C#. Aby uzyskać więcej informacji, zobacz [LINQ to SQL: .NET Language-Integrated zapytania dla danych relacyjnych](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Zobacz także
 

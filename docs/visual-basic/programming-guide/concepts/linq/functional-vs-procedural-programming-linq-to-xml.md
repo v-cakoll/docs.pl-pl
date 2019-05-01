@@ -3,30 +3,30 @@ title: Programowanie funkcjonalne a Proceduralne (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028398"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Programowanie funkcjonalne a Proceduralne (LINQ to XML) (Visual Basic)
 Istnieją różne rodzaje aplikacji XML:  
   
--   Niektóre aplikacje źródła dokumentów XML i tworzące nowe dokumenty XML znajdujących się w innym kształcie niż dokumentów źródłowych.  
+- Niektóre aplikacje źródła dokumentów XML i tworzące nowe dokumenty XML znajdujących się w innym kształcie niż dokumentów źródłowych.  
   
--   Niektóre aplikacje źródła dokumentów XML i tworzące dokumenty wynik w postaci zupełnie innego, takich jak pliki tekst HTML lub CSV.  
+- Niektóre aplikacje źródła dokumentów XML i tworzące dokumenty wynik w postaci zupełnie innego, takich jak pliki tekst HTML lub CSV.  
   
--   Niektóre aplikacje zająć dokumentów XML źródła i wstawiania rekordów do bazy danych.  
+- Niektóre aplikacje zająć dokumentów XML źródła i wstawiania rekordów do bazy danych.  
   
--   Niektóre aplikacje pobierają dane z innego źródła, takich jak bazy danych i tworzenie dokumentów XML z niego.  
+- Niektóre aplikacje pobierają dane z innego źródła, takich jak bazy danych i tworzenie dokumentów XML z niego.  
   
  Nie są to wszystkie typy aplikacji XML, ale są to reprezentatywny zestaw typów, funkcji, który musi zaimplementować programista XML.  
   
  W przypadku wszystkich tych rodzajów aplikacji istnieją dwie metody kontrastujące deweloper może potrwać:  
   
--   Konstrukcja funkcjonalna przy użyciu podejścia deklaratywnego.  
+- Konstrukcja funkcjonalna przy użyciu podejścia deklaratywnego.  
   
--   Za pomocą kod proceduralny modyfikowanie drzewa XML w pamięci.  
+- Za pomocą kod proceduralny modyfikowanie drzewa XML w pamięci.  
   
  LINQ to XML obsługuje oba podejścia.  
   

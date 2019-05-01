@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
 ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010361"
 ---
 # <a name="wpf-walkthroughs"></a>Wskazówki dotyczące WPF
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy. Dzięki temu są dobrym miejscem do śledzenia Rozpocznij poznawanie produktu lub obszar poszczególnych funkcji.  

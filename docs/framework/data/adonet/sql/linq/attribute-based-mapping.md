@@ -3,11 +3,11 @@ title: Mapowanie oparte na atrybutach
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032971"
 ---
 # <a name="attribute-based-mapping"></a>Mapowanie oparte na atrybutach
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje bazę danych programu SQL Server do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektowego przez albo stosowanie atrybutów lub przy użyciu pliku mapowanie zewnętrzne. W tym temacie opisano podejście oparte na atrybutach.  

@@ -3,11 +3,11 @@ title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
 ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051484"
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 Niniejszy przykład pokazuje, jak hostować aplikacje w Windows Process Activation Service (WAS), które są odczytywane z kolejki komunikatów. W tym przykładzie użyto `netMsmqBinding` i opiera się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji hostowanej w sieci Web w języku klienta i jest samodzielnie hostowana w konsoli, aby obserwować stan zamówienia zakupu przesłane dane wyjściowe.  
@@ -219,15 +219,15 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 2. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ponadto należy zainstalować składniki Aktywacja bez HTTP programu WCF:  
   
-    1.  Z **Start** menu, wybierz **Panelu sterowania**.  
+    1. Z **Start** menu, wybierz **Panelu sterowania**.  
   
-    2.  Wybierz **programy i funkcje**.  
+    2. Wybierz **programy i funkcje**.  
   
-    3.  Kliknij przycisk **Włącz lub wyłącz funkcje Windows**.  
+    3. Kliknij przycisk **Włącz lub wyłącz funkcje Windows**.  
   
-    4.  W obszarze **Podsumowanie funkcji**, kliknij przycisk **Dodaj funkcje**.  
+    4. W obszarze **Podsumowanie funkcji**, kliknij przycisk **Dodaj funkcje**.  
   
-    5.  Rozwiń **Microsoft .NET Framework 3.0** węzła i wyboru **Aktywacja bez HTTP programu Windows Communication Foundation** funkcji.  
+    5. Rozwiń **Microsoft .NET Framework 3.0** węzła i wyboru **Aktywacja bez HTTP programu Windows Communication Foundation** funkcji.  
   
 3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -235,21 +235,21 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 5. Domyślnie usługę Aktywacja usługi MSMQ jest uruchamiana jako usługa sieciowa. W związku z tym, kolejki, która jest używana do aktywowania aplikacji musi mieć odbieranie i Wybieranie uprawnień dla usługi sieci. To można dodać za pomocą programu MMC usługi kolejkowania komunikatów:  
   
-    1.  Z **Start** menu, kliknij przycisk **Uruchom**, a następnie wpisz `Compmgmt.msc` i naciśnij klawisz ENTER.  
+    1. Z **Start** menu, kliknij przycisk **Uruchom**, a następnie wpisz `Compmgmt.msc` i naciśnij klawisz ENTER.  
   
-    2.  W obszarze **usługi i aplikacje**, rozwiń węzeł **usługi kolejkowania komunikatów**.  
+    2. W obszarze **usługi i aplikacje**, rozwiń węzeł **usługi kolejkowania komunikatów**.  
   
-    3.  Kliknij przycisk **kolejki prywatne**.  
+    3. Kliknij przycisk **kolejki prywatne**.  
   
-    4.  Kliknij prawym przyciskiem myszy kolejki (servicemodelsamples/Service.svc), a następnie wybierz **właściwości**.  
+    4. Kliknij prawym przyciskiem myszy kolejki (servicemodelsamples/Service.svc), a następnie wybierz **właściwości**.  
   
-    5.  Na **zabezpieczeń** kliknij pozycję **Dodaj** zapewniają wgląd i otrzymać uprawnienie do usługi sieciowej.  
+    5. Na **zabezpieczeń** kliknij pozycję **Dodaj** zapewniają wgląd i otrzymać uprawnienie do usługi sieciowej.  
   
 6. Skonfiguruj Windows Process Activation Service (WAS) do obsługi aktywacji usługi MSMQ.  
   
      Dla wygody poniższe kroki są implementowane w pliku wsadowym, o nazwie AddMsmqSiteBinding.cmd znajduje się w katalogu próbki.  
   
-    1.  Aby zapewnić obsługę aktywacji net.msmq, domyślna witryna sieci Web musi zostać powiązana z protokołem net.msmq. Można to zrobić za pomocą appcmd.exe, który został zainstalowany przy użyciu [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zestaw narzędzi do zarządzania. Z wiersza polecenia o podniesionych uprawnień (administrator) uruchom następujące polecenie.  
+    1. Aby zapewnić obsługę aktywacji net.msmq, domyślna witryna sieci Web musi zostać powiązana z protokołem net.msmq. Można to zrobić za pomocą appcmd.exe, który został zainstalowany przy użyciu [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zestaw narzędzi do zarządzania. Z wiersza polecenia o podniesionych uprawnień (administrator) uruchom następujące polecenie.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -261,7 +261,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          To polecenie dodaje powiązanie witryny net.msmq do domyślnej witryny sieci Web.  
   
-    2.  Mimo że wszystkie aplikacje w ramach lokacji mają wspólne powiązanie net.msmq, każdej aplikacji można włączyć obsługę net.msmq indywidualnie. Aby włączyć net.msmq aplikacji /servicemodelsamples, uruchom następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
+    2. Mimo że wszystkie aplikacje w ramach lokacji mają wspólne powiązanie net.msmq, każdej aplikacji można włączyć obsługę net.msmq indywidualnie. Aby włączyć net.msmq aplikacji /servicemodelsamples, uruchom następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
@@ -284,7 +284,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Dla wygody poniższe kroki są implementowane w pliku wsadowym, o nazwie RemoveMsmqSiteBinding.cmd znajduje się w katalogu próbki:  
   
-    1.  Usuń net.msmq z listy włączone protokoły, uruchamiając następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
+    1. Usuń net.msmq z listy włączone protokoły, uruchamiając następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
@@ -293,7 +293,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  To polecenie jest pojedynczy wiersz tekstu.  
   
-    2.  Usuń powiązanie witryny net.msmq, uruchamiając następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
+    2. Usuń powiązanie witryny net.msmq, uruchamiając następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
@@ -330,17 +330,17 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Aby zmienić tożsamość, która działa procesu roboczego:  
   
-    1.  Uruchom Inetmgr.exe.  
+    1. Uruchom Inetmgr.exe.  
   
-    2.  W obszarze **pul aplikacji**, kliknij prawym przyciskiem myszy **puli AppPool** (zazwyczaj **DefaultAppPool**) i wybierz polecenie **ustawienia domyślne puli aplikacji...** .  
+    2. W obszarze **pul aplikacji**, kliknij prawym przyciskiem myszy **puli AppPool** (zazwyczaj **DefaultAppPool**) i wybierz polecenie **ustawienia domyślne puli aplikacji...** .  
   
-    3.  Zmień właściwości tożsamości do używania konta określonego użytkownika.  
+    3. Zmień właściwości tożsamości do używania konta określonego użytkownika.  
   
      Aby zmienić tożsamość, która jest uruchamiana usługa aktywacji:  
   
-    1.  Uruchom aplikację Services.msc.  
+    1. Uruchom aplikację Services.msc.  
   
-    2.  Kliknij prawym przyciskiem myszy **karty Net.MsmqListener**i wybierz polecenie **właściwości**.  
+    2. Kliknij prawym przyciskiem myszy **karty Net.MsmqListener**i wybierz polecenie **właściwości**.  
   
 4. Zmień konto w **logowania** kartę.  
   

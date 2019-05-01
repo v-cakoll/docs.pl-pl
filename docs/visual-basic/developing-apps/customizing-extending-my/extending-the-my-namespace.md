@@ -9,32 +9,32 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014222"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Rozszerzanie przestrzeni nazw My w Visual Basic
 `My` Przestrzeni nazw w języku Visual Basic udostępnia właściwości i metod, które umożliwiają użytkownikowi łatwo korzystać z możliwości programu .NET Framework. `My` Przestrzeni nazw upraszcza typowe problemy programowania, często zmniejszanie trudne do jednego wiersza kodu. Ponadto `My` przestrzeń nazw jest całkowicie rozszerzalny, dzięki czemu możesz dostosować zachowanie `My` i dodawanie nowych usług do swojej hierarchii w celu dostosowania do potrzeb konkretnej aplikacji. W tym temacie omówiono zarówno jak dostosować istniejący członkowie `My` przestrzeni nazw oraz sposób dodawania niestandardowych klas do `My` przestrzeni nazw.  
   
  **Zawartość tematów**  
   
--   [Dostosowywanie istniejących członków mojego Namespace](#customizing)  
+- [Dostosowywanie istniejących członków mojego Namespace](#customizing)  
   
--   [Dodawanie członków do mojego obiektów](#addingtoobjects)  
+- [Dodawanie członków do mojego obiektów](#addingtoobjects)  
   
--   [Dodawanie niestandardowych obiektów do mojego Namespace](#addingcustom)  
+- [Dodawanie niestandardowych obiektów do mojego Namespace](#addingcustom)  
   
--   [Dodawanie członków do mojego Namespace](#addingtonamespace)  
+- [Dodawanie członków do mojego Namespace](#addingtonamespace)  
   
--   [Dodawanie zdarzeń do niestandardowego Moje obiekty](#addingevents)  
+- [Dodawanie zdarzeń do niestandardowego Moje obiekty](#addingevents)  
   
--   [Wytyczne dotyczące projektowania](#design)  
+- [Wytyczne dotyczące projektowania](#design)  
   
--   [Projektowanie bibliotek klas dla mojego](#designing)  
+- [Projektowanie bibliotek klas dla mojego](#designing)  
   
--   [Pakowanie i wdrażanie rozszerzeń](#packaging)  
+- [Pakowanie i wdrażanie rozszerzeń](#packaging)  
   
 ## <a name="customizing"></a> Dostosowywanie istniejących członków mojego Namespace  
  `My` Przestrzeni nazw w Visual Basic ujawnia często używane informacje o aplikacji i komputera. Aby uzyskać pełną listę obiektów w `My` przestrzeni nazw, zobacz [Moje odwołanie](../../../visual-basic/language-reference/keywords/my-reference.md). Być może trzeba dostosować istniejący członkowie `My` przestrzeni nazw, dzięki czemu mogą lepiej odpowiadały potrzebom aplikacji. Wszystkie właściwości obiektu w `My` przestrzeni nazw, który nie jest tylko do odczytu można ustawić na wartość niestandardową.  
@@ -76,22 +76,22 @@ ms.locfileid: "58814164"
 ## <a name="design"></a> Wytyczne dotyczące projektowania  
  Podczas opracowywania rozszerzeń `My` przestrzeni nazw, skorzystaj z poniższych wskazówek w celu ułatwienia zminimalizowania kosztów konserwacji składniki rozszerzenia.  
   
--   **Zawiera tylko logiki rozszerzenia.** Logika objęte `My` rozszerzenie przestrzeni nazw powinien zawierać tylko kod, który jest potrzebny do udostępnienia wymaganej funkcjonalności w `My` przestrzeni nazw. Ponieważ rozszerzenia będą znajdować się w projektach użytkownika jako kod źródłowy, aktualizowanie składnika rozszerzenia ponosi kosztów utrzymania wysokiej i jeśli to możliwe należy unikać.  
+- **Zawiera tylko logiki rozszerzenia.** Logika objęte `My` rozszerzenie przestrzeni nazw powinien zawierać tylko kod, który jest potrzebny do udostępnienia wymaganej funkcjonalności w `My` przestrzeni nazw. Ponieważ rozszerzenia będą znajdować się w projektach użytkownika jako kod źródłowy, aktualizowanie składnika rozszerzenia ponosi kosztów utrzymania wysokiej i jeśli to możliwe należy unikać.  
   
--   **Minimalizuj założeń projektowych.** Podczas tworzenia usługi rozszerzeń `My` przestrzeni nazw, nie należy zakładać, zestaw odwołania, instrukcji imports na poziomie projektu lub Ustawienia kompilatora określonych (na przykład `Option Strict` wyłączone). Zamiast tego należy zminimalizować zależności i pełnej kwalifikacji wszystkich odwołań do typu przy użyciu `Global` — słowo kluczowe. Upewnij się również, że rozszerzenie kompiluje się przy użyciu `Option Strict` włączone, aby zminimalizować błędy w rozszerzeniu.  
+- **Minimalizuj założeń projektowych.** Podczas tworzenia usługi rozszerzeń `My` przestrzeni nazw, nie należy zakładać, zestaw odwołania, instrukcji imports na poziomie projektu lub Ustawienia kompilatora określonych (na przykład `Option Strict` wyłączone). Zamiast tego należy zminimalizować zależności i pełnej kwalifikacji wszystkich odwołań do typu przy użyciu `Global` — słowo kluczowe. Upewnij się również, że rozszerzenie kompiluje się przy użyciu `Option Strict` włączone, aby zminimalizować błędy w rozszerzeniu.  
   
--   **Izolowanie kod rozszerzenia.** Wprowadzenie do kodu w jednym pliku sprawia, że rozszerzenie łatwo można wdrożyć jako szablon elementu programu Visual Studio. Aby uzyskać więcej informacji zobacz "Pakowanie i wdrażanie rozszerzenia" w dalszej części tego tematu. Wprowadzenie do wszystkich `My` kod rozszerzenia przestrzeni nazw w jednym pliku lub oddzielnego folderu w projekcie pomoże użytkownikom znajdowanie `My` rozszerzenie przestrzeni nazw.  
+- **Izolowanie kod rozszerzenia.** Wprowadzenie do kodu w jednym pliku sprawia, że rozszerzenie łatwo można wdrożyć jako szablon elementu programu Visual Studio. Aby uzyskać więcej informacji zobacz "Pakowanie i wdrażanie rozszerzenia" w dalszej części tego tematu. Wprowadzenie do wszystkich `My` kod rozszerzenia przestrzeni nazw w jednym pliku lub oddzielnego folderu w projekcie pomoże użytkownikom znajdowanie `My` rozszerzenie przestrzeni nazw.  
   
 ## <a name="designing"></a> Projektowanie bibliotek klas dla mojego  
  Podobnie jak w przypadku większości modeli obiektów, niektóre wzorce projektowe działają poprawnie w `My` przestrzeni nazw, a inne nie. Podczas projektowania rozszerzenie `My` przestrzeni nazw, należy wziąć pod uwagę następujące zasady:  
   
--   **Metody bezstanowe.** Metody `My` przestrzeni nazw powinien zapewnić kompletne rozwiązanie do konkretnego zadania. Upewnij się, że wartości parametrów, które są przekazywane do metody zawierają wszystkie dane wejściowe wymagane do ukończenia danego zadania. Unikaj tworzenia metody, które zależą od poprzedniego stanu, takich jak otwieranie połączenia z zasobami.  
+- **Metody bezstanowe.** Metody `My` przestrzeni nazw powinien zapewnić kompletne rozwiązanie do konkretnego zadania. Upewnij się, że wartości parametrów, które są przekazywane do metody zawierają wszystkie dane wejściowe wymagane do ukończenia danego zadania. Unikaj tworzenia metody, które zależą od poprzedniego stanu, takich jak otwieranie połączenia z zasobami.  
   
--   **Globalnego wystąpienia.** Tylko stan, który jest zachowywany w `My` przestrzeni nazw jest globalna do projektu. Na przykład `My.Application.Info` hermetyzuje stan, który jest udostępniany w całej aplikacji.  
+- **Globalnego wystąpienia.** Tylko stan, który jest zachowywany w `My` przestrzeni nazw jest globalna do projektu. Na przykład `My.Application.Info` hermetyzuje stan, który jest udostępniany w całej aplikacji.  
   
--   **Typy proste parametrów.** Zachować ich prostotę, unikając typy złożone parametrów. Zamiast tego utworzyć metod, dla których albo braku parametrów wejściowych lub które wymagają prostych typów wejściowych, takich jak ciągi, typy pierwotne i tak dalej.  
+- **Typy proste parametrów.** Zachować ich prostotę, unikając typy złożone parametrów. Zamiast tego utworzyć metod, dla których albo braku parametrów wejściowych lub które wymagają prostych typów wejściowych, takich jak ciągi, typy pierwotne i tak dalej.  
   
--   **Metody fabryki.** Niektóre typy są zawsze trudne do utworzenia wystąpienia. Zapewnianie metodami factory jako rozszerzenia `My` przestrzeń nazw umożliwia łatwiejsze odkrycie i używanie typów, które należą do tej kategorii. Na przykład metoda fabryki, które działa dobrze `My.Computer.FileSystem.OpenTextFileReader`. Istnieje kilka typów usługi stream, dostępne w programie .NET Framework. Określając pliki tekstowe, w szczególności `OpenTextFileReader` pomaga użytkownikom zrozumieć, które strumienia do wykorzystania.  
+- **Metody fabryki.** Niektóre typy są zawsze trudne do utworzenia wystąpienia. Zapewnianie metodami factory jako rozszerzenia `My` przestrzeń nazw umożliwia łatwiejsze odkrycie i używanie typów, które należą do tej kategorii. Na przykład metoda fabryki, które działa dobrze `My.Computer.FileSystem.OpenTextFileReader`. Istnieje kilka typów usługi stream, dostępne w programie .NET Framework. Określając pliki tekstowe, w szczególności `OpenTextFileReader` pomaga użytkownikom zrozumieć, które strumienia do wykorzystania.  
   
  Te wytyczne nie wyklucza ogólnego projektowania dla bibliotek klas. Przeciwnie są one zaleceń, które są zoptymalizowane dla deweloperów, którzy są w języku Visual Basic i `My` przestrzeni nazw. Aby zasady ogólne projektowania do tworzenia biblioteki klas, zobacz [wytyczne dotyczące projektowania Framework](../../../standard/design-guidelines/index.md).  
   

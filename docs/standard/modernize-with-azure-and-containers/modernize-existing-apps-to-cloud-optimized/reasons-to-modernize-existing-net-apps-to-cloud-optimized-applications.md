@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012034"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 
@@ -33,13 +33,13 @@ Aby osiągnąć elastyczności, potrzebny jest zautomatyzowane procesy metodyki 
 
 Na poniższej liście opisano założenia głównego lub rozwiązania dla aplikacji zoptymalizowane pod kątem chmury. Należy zwrócić uwagę na to, że można przyjąć wszystkie lub tylko niektóre z tych zasad, w ramach podejścia progresywnego lub przyrostowej:
 
--   **Kontenery**. Kontenery zapewniają możliwość uwzględnienia zależności aplikacji przy użyciu samej aplikacji. Konteneryzacji znacznie zmniejsza liczbę problemów, które mogą wystąpić podczas wdrażania na środowisko produkcyjne lub testów w środowisku przejściowym. Ostatecznie kontenery zwiększyć elastyczność dostarczanie aplikacji.
+- **Kontenery**. Kontenery zapewniają możliwość uwzględnienia zależności aplikacji przy użyciu samej aplikacji. Konteneryzacji znacznie zmniejsza liczbę problemów, które mogą wystąpić podczas wdrażania na środowisko produkcyjne lub testów w środowisku przejściowym. Ostatecznie kontenery zwiększyć elastyczność dostarczanie aplikacji.
 
--   **Odporne na błędy i skalowalnej chmurze**. Chmura udostępnia to platforma, która jest zarządzane, elastyczne, skalowalne i odporne na błędy. Te właściwości mają zasadnicze znaczenie uzyskać ulepszenia kosztów i dostarczanie wysoce dostępnych i niezawodnych aplikacji w ciągłego dostarczania. Usługi zarządzane, takie jak zarządzanych baz danych zarządzanych jako usługi (CaaS) i magazynu zarządzanego jest podstawowych elementów złagodzenia kosztów konserwacji aplikacji w pamięci podręcznej.
+- **Odporne na błędy i skalowalnej chmurze**. Chmura udostępnia to platforma, która jest zarządzane, elastyczne, skalowalne i odporne na błędy. Te właściwości mają zasadnicze znaczenie uzyskać ulepszenia kosztów i dostarczanie wysoce dostępnych i niezawodnych aplikacji w ciągłego dostarczania. Usługi zarządzane, takie jak zarządzanych baz danych zarządzanych jako usługi (CaaS) i magazynu zarządzanego jest podstawowych elementów złagodzenia kosztów konserwacji aplikacji w pamięci podręcznej.
 
--   **Monitorowanie**. Nie może mieć niezawodnych aplikacji bez konieczności dobrym sposobem na wykrywanie i diagnozowanie wyjątków i problemów z wydajnością aplikacji. Musisz możliwość uzyskania praktycznych informacji dzięki zarządzaniu wydajnością aplikacji oraz błyskawicznej analizie.
+- **Monitorowanie**. Nie może mieć niezawodnych aplikacji bez konieczności dobrym sposobem na wykrywanie i diagnozowanie wyjątków i problemów z wydajnością aplikacji. Musisz możliwość uzyskania praktycznych informacji dzięki zarządzaniu wydajnością aplikacji oraz błyskawicznej analizie.
 
--   **DevOps kultury i ciągłe dostarczanie**. Wdrażanie metodyki DevOps wymaga zmiany kultury, w którym, zespoły nie będą działać w odosobnieniu niezależne. Potoki ciągłej integracji/ciągłego wdrażania są możliwe tylko wtedy, gdy większa współpraca między środowiskami deweloperskim i zespołów operacyjnych IT obsługiwane kontenerów i narzędzi ciągłej integracji/ciągłego wdrażania.
+- **DevOps kultury i ciągłe dostarczanie**. Wdrażanie metodyki DevOps wymaga zmiany kultury, w którym, zespoły nie będą działać w odosobnieniu niezależne. Potoki ciągłej integracji/ciągłego wdrażania są możliwe tylko wtedy, gdy większa współpraca między środowiskami deweloperskim i zespołów operacyjnych IT obsługiwane kontenerów i narzędzi ciągłej integracji/ciągłego wdrażania.
 
 Rysunek 4-2 pokazuje głównych filarach opcjonalne aplikacji zoptymalizowane pod kątem chmury. Więcej filary, które należy zaimplementować, lepszą Twoja aplikacja będzie zakończyło się sukcesem spełnia oczekiwania Twoich klientów.
 
@@ -55,13 +55,13 @@ Twoja organizacja można przyjąć stopniowo tych technologii i metod. Nie masz 
 
 Za pomocą konwersji istniejącej aplikacji do aplikacji zoptymalizowane pod kątem chmury (bez transformować i kodowanie), możesz uzyskać następujące korzyści:
 
--   **Obniżenia kosztów, ponieważ zarządzana infrastruktura jest obsługiwany przez dostawcę chmury**. Zoptymalizowane pod kątem chmury aplikacji uzyskać korzyści z chmury, za pomocą elastyczność out-of--box chmury, automatyczne skalowanie i wysoką dostępność. Korzyści dotyczą nie tylko funkcje obliczeniowe (maszyny wirtualne i kontenery), ale również są zależne od zasobów w chmurze, takich jak DBaaS, CaaS i infrastruktury aplikacji może pożądane.
+- **Obniżenia kosztów, ponieważ zarządzana infrastruktura jest obsługiwany przez dostawcę chmury**. Zoptymalizowane pod kątem chmury aplikacji uzyskać korzyści z chmury, za pomocą elastyczność out-of--box chmury, automatyczne skalowanie i wysoką dostępność. Korzyści dotyczą nie tylko funkcje obliczeniowe (maszyny wirtualne i kontenery), ale również są zależne od zasobów w chmurze, takich jak DBaaS, CaaS i infrastruktury aplikacji może pożądane.
 
--   **Odporne na błędy aplikacji i infrastruktury**. W przypadku migracji do chmury, musisz Obsługa przejściowych błędów; wystąpią błędy w chmurze. Ponadto sprzętu i infrastruktury chmury są "zastąpienia," co zwiększa możliwości przejściowy przestojów. W tym samym czasie możliwości chmury wewnętrzny i techniki tworzenia aplikacji, niektóre wdrożenia odporności i automatyzacja odzyskiwania, które ułatwiają znacznie sprawności po awarii w chmurze.
+- **Odporne na błędy aplikacji i infrastruktury**. W przypadku migracji do chmury, musisz Obsługa przejściowych błędów; wystąpią błędy w chmurze. Ponadto sprzętu i infrastruktury chmury są "zastąpienia," co zwiększa możliwości przejściowy przestojów. W tym samym czasie możliwości chmury wewnętrzny i techniki tworzenia aplikacji, niektóre wdrożenia odporności i automatyzacja odzyskiwania, które ułatwiają znacznie sprawności po awarii w chmurze.
 
--   **Lepszy wgląd w wydajność aplikacji**. Chmury, narzędzia do monitorowania takich jak Azure Application Insights zapewnia wizualizację dla zarządzania stanem, rejestrowanie i powiadomienia. Dzienniki inspekcji ułatwić aplikacji do debugowania i inspekcji podstawowe znaczenie dla aplikacji w chmurze w wiarygodne.
+- **Lepszy wgląd w wydajność aplikacji**. Chmury, narzędzia do monitorowania takich jak Azure Application Insights zapewnia wizualizację dla zarządzania stanem, rejestrowanie i powiadomienia. Dzienniki inspekcji ułatwić aplikacji do debugowania i inspekcji podstawowe znaczenie dla aplikacji w chmurze w wiarygodne.
 
--   **Przenośność aplikacji, w przypadku wdrożeń agile**. Kontenery (Linux lub Windows kontenery opartą na aparacie Docker) oferują najlepsze rozwiązanie do uniknięcia aplikacją zablokowane w chmurze. Za pomocą kontenerów, hostów platformy Docker i koordynatorów wielu chmur, można łatwo przenosić z jednego środowiska lub do innego w chmurze. Kontenery wyeliminować zajmowania się zwykle występujący w przypadku wdrożeń z dowolnym środowiskiem (etap/testowania/produkcji).
+- **Przenośność aplikacji, w przypadku wdrożeń agile**. Kontenery (Linux lub Windows kontenery opartą na aparacie Docker) oferują najlepsze rozwiązanie do uniknięcia aplikacją zablokowane w chmurze. Za pomocą kontenerów, hostów platformy Docker i koordynatorów wielu chmur, można łatwo przenosić z jednego środowiska lub do innego w chmurze. Kontenery wyeliminować zajmowania się zwykle występujący w przypadku wdrożeń z dowolnym środowiskiem (etap/testowania/produkcji).
 
 Wszystkie te korzyści zapewni redukcję kosztów klucza dla cyklu użytkowania Twojej aplikacji end-to-end.
 

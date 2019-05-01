@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032993"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
 Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końcowych. Podczas tworzenia aplikacji przy użyciu funkcji Windows Communication Foundation (WCF), wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika, lub może zażądać lub wysyłanie informacji przez Internet do witryny sieci Web. Technologii firmy Microsoft w przypadku osadzenia w aplikacji, technologia ta może mieć własną zachowanie, które mogą mieć wpływ na prywatność. Usługi WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy chce wysłać ją do nas.  
@@ -38,9 +38,9 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  Uwierzytelnianie jest wykonywane przez przekazywanie poświadczeń między klientami i usługami. Uwierzytelnianie można za pomocą zabezpieczeń na poziomie transportu lub za pośrednictwem protokołu SOAP wiadomości zabezpieczenia na poziomie, w następujący sposób:  
   
--   W ramach zabezpieczeń komunikatów protokołu SOAP uwierzytelnianie będzie przeprowadzane przy użyciu poświadczeń, takie jak nazwy użytkownika i hasła, certyfikaty X.509, bilety protokołu Kerberos i tokeny SAML, które mogą zawierać informacje osobiste, w zależności od wystawcy.  
+- W ramach zabezpieczeń komunikatów protokołu SOAP uwierzytelnianie będzie przeprowadzane przy użyciu poświadczeń, takie jak nazwy użytkownika i hasła, certyfikaty X.509, bilety protokołu Kerberos i tokeny SAML, które mogą zawierać informacje osobiste, w zależności od wystawcy.  
   
--   Za pomocą zabezpieczeń transportu, uwierzytelnianie odbywa się za pośrednictwem tradycyjnych transportu mechanizmów uwierzytelniania, takich jak schematy uwierzytelniania HTTP (Basic, Digest, Negotiate, zintegrowanej autoryzacji Windows, NTLM, None i anonimowych) i uwierzytelniania formularzy.  
+- Za pomocą zabezpieczeń transportu, uwierzytelnianie odbywa się za pośrednictwem tradycyjnych transportu mechanizmów uwierzytelniania, takich jak schematy uwierzytelniania HTTP (Basic, Digest, Negotiate, zintegrowanej autoryzacji Windows, NTLM, None i anonimowych) i uwierzytelniania formularzy.  
   
  Uwierzytelnianie może spowodować bezpiecznej sesji między komunikujące się punkty końcowe. Sesja jest identyfikowana przez identyfikator GUID, który trwa okres istnienia sesji zabezpieczeń. W poniższej tabeli przedstawiono, jakie są przechowywane i gdzie.  
   

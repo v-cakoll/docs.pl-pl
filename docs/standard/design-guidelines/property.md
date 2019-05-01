@@ -1,5 +1,5 @@
 ---
-title: Właściwości projektu
+title: Projekt właściwości
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: KrzysztofCwalina
 ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026321"
 ---
-# <a name="property-design"></a>Właściwości projektu
+# <a name="property-design"></a>Projekt właściwości
 Choć z technicznego punktu widzenia są bardzo podobne do metody właściwości są zupełnie różne pod względem scenariusze ich użycia. Powinny one widoczne, jako pola inteligentne. Mają one, składnia wywoływania pól i swobodne korzystanie z metod.  
   
  **✓ DO** utworzenie właściwości tylko do pobrania, jeśli element wywołujący nie ma być można zmienić wartości właściwości.  

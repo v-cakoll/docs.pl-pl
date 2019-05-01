@@ -3,20 +3,20 @@ title: 'Instrukcje: eksportowanie metadanych ze skompilowanego kodu usługi za p
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
 ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047341"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Instrukcje: eksportowanie metadanych ze skompilowanego kodu usługi za pomocą programu Svcutil.exe
 Svcutil.exe można wyeksportować metadane dotyczące usług, kontrakty i typów danych w skompilowanych zestawach w następujący sposób:  
   
--   Aby wyeksportować metadane dla wszystkich skompilowany kontraktów usług zbiór zestawów przy użyciu Svcutil.exe, określ zestawy jako parametry wejściowe. Jest to zachowanie domyślne.  
+- Aby wyeksportować metadane dla wszystkich skompilowany kontraktów usług zbiór zestawów przy użyciu Svcutil.exe, określ zestawy jako parametry wejściowe. Jest to zachowanie domyślne.  
   
--   Aby wyeksportować metadane usługi skompilowanych przy użyciu Svcutil.exe, należy określić zestaw usług lub zestawów jako parametry wejściowe. Należy użyć `/serviceName` opcję, aby wskazać nazwę konfiguracji usługi, którą chcesz wyeksportować. Svcutil.exe automatycznie ładuje plik konfiguracji dla określonego zestawu wykonywalnego.  
+- Aby wyeksportować metadane usługi skompilowanych przy użyciu Svcutil.exe, należy określić zestaw usług lub zestawów jako parametry wejściowe. Należy użyć `/serviceName` opcję, aby wskazać nazwę konfiguracji usługi, którą chcesz wyeksportować. Svcutil.exe automatycznie ładuje plik konfiguracji dla określonego zestawu wykonywalnego.  
   
--   Aby wyeksportować wszystkie typy kontraktu danych w obrębie zbioru zestawów, należy użyć `/dataContractOnly` opcji.  
+- Aby wyeksportować wszystkie typy kontraktu danych w obrębie zbioru zestawów, należy użyć `/dataContractOnly` opcji.  
   
 > [!NOTE]
 >  Użyj `/reference` możliwość określenia ścieżki do plików do żadnych zestawów zależnych.  

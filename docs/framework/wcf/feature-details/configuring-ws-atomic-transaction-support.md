@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
 ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048118"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Konfigurowanie obsługi protokołu WS-Atomic Transaction
 W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-AT) za pomocą narzędzia konfiguracji WS-AT.  
@@ -106,17 +106,17 @@ W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-A
   
 4. W **dane wartości** pole wprowadzania, wprowadź jedną z poniższych prawidłowych wartości, aby określić poziom śledzenia, aby włączyć.  
   
--   0: wyłączone  
+- 0: wyłączone  
   
--   1: krytyczne  
+- 1: krytyczne  
   
--   3: błąd. Jest to wartość domyślna  
+- 3: błąd. Jest to wartość domyślna  
   
--   7: ostrzeżenie  
+- 7: ostrzeżenie  
   
--   15: informacji  
+- 15: informacji  
   
--   31: pełne  
+- 31: pełne  
   
 ## <a name="see-also"></a>Zobacz także
 

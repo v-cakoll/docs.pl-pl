@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010543"
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
 <a name="introduction"></a> W tym temacie opisano sposób pracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności i opisuje pierwszeństwa, które cechy właściwości systemu zastosowania do skutecznego wartości właściwości.  
@@ -47,9 +47,9 @@ ms.locfileid: "59315689"
   
 4. **Właściwości szablonu TemplatedParent.** Element ma <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Jeśli został utworzony jako część szablonu ( <xref:System.Windows.Controls.ControlTemplate> lub <xref:System.Windows.DataTemplate>). Szczegółowe informacje na temat gdy ma to zastosowanie, [TemplatedParent](#templatedparent) w dalszej części tego tematu. W szablonie dotyczy następującej kolejności:  
   
-    1.  Wyzwalacze — od <xref:System.Windows.FrameworkElement.TemplatedParent%2A> szablonu.  
+    1. Wyzwalacze — od <xref:System.Windows.FrameworkElement.TemplatedParent%2A> szablonu.  
   
-    2.  Zestawy właściwości (zwykle za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutów) w <xref:System.Windows.FrameworkElement.TemplatedParent%2A> szablonu.  
+    2. Zestawy właściwości (zwykle za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutów) w <xref:System.Windows.FrameworkElement.TemplatedParent%2A> szablonu.  
   
 5. **Styl niejawny.** Ma zastosowanie tylko do `Style` właściwości. `Style` Właściwość jest wypełniana przez dowolny zasób stylu z kluczem, który jest zgodny z typem elementu. Że zasobu stylu muszą istnieć w stronę lub aplikacji; Wyszukiwanie zasób stylu niejawnego niemożliwa do tematów.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315689"
   
 9. **Styl domyślny (motyw).** Szczegółowe informacje na temat gdy ma to zastosowanie, a jak style motyw odnoszą się do szablonów w ramach stylów motywu, [domyślnych (motyw) stylów](#themestyles) w dalszej części tego tematu. W ramach domyślnego stylu mają zastosowanie następujące kolejność według priorytetu:  
   
-    1.  Aktywne Wyzwalacze w stylu motywu.  
+    1. Aktywne Wyzwalacze w stylu motywu.  
   
-    2.  Metody ustawiające w stylu motywu.  
+    2. Metody ustawiające w stylu motywu.  
   
 10. **Dziedziczenie.** Kilka właściwości zależności dziedziczy wartości elementu nadrzędnego do elementów podrzędnych taki sposób, że nie należy można ustawić szczegółowe informacje dotyczące każdego elementu w całej aplikacji. Aby uzyskać szczegółowe informacje, zobacz [dziedziczenie wartości właściwości](property-value-inheritance.md).  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315689"
 ## <a name="the-style-property"></a>Właściwości stylu  
  Kolejność wyszukiwania opisanej wcześniej ma zastosowanie do wszystkich właściwości możliwe zależności, z wyjątkiem jednego: <xref:System.Windows.FrameworkElement.Style%2A> właściwości. <xref:System.Windows.FrameworkElement.Style%2A> Właściwości są unikatowe w jej nie może sam być różne, więc elementy pierwszeństwo 5 do 8 nie mają zastosowania. Ponadto animowanie albo coercing — <xref:System.Windows.FrameworkElement.Style%2A> nie jest zalecane (i animowanie <xref:System.Windows.FrameworkElement.Style%2A> wymagałoby animacji niestandardowej klasy). Spowoduje to, że trzy sposoby, <xref:System.Windows.FrameworkElement.Style%2A> może być ustawiona właściwość:  
   
--   **Style jawne.** <xref:System.Windows.FrameworkElement.Style%2A> Zostaje ustalona bezpośrednio. W większości przypadków styl nie jest zdefiniowano w tekście, ale zamiast tego odwołuje się jako zasób, jawna klucza. W tym przypadku samej właściwości stylu działa tak, jakby był to lokalna wartość elementu pierwszeństwo 3.  
+- **Style jawne.** <xref:System.Windows.FrameworkElement.Style%2A> Zostaje ustalona bezpośrednio. W większości przypadków styl nie jest zdefiniowano w tekście, ale zamiast tego odwołuje się jako zasób, jawna klucza. W tym przypadku samej właściwości stylu działa tak, jakby był to lokalna wartość elementu pierwszeństwo 3.  
   
--   **Styl niejawny.** <xref:System.Windows.FrameworkElement.Style%2A> Nie ustawiono właściwości bezpośrednio. Jednak <xref:System.Windows.FrameworkElement.Style%2A> na pewien poziom w kolejności wyszukiwania zasobów (strony, aplikacji) istnieje i jest kluczem utworzonym na podstawie przy użyciu klucza zasobu, który jest zgodny z typem jest to styl ma zostać zastosowany do. W tym przypadku <xref:System.Windows.FrameworkElement.Style%2A> samej właściwości działa według pierwszeństwa, określone w sekwencji jako element 5. Ten stan może zostać wykryte przy użyciu <xref:System.Windows.DependencyPropertyHelper> względem <xref:System.Windows.FrameworkElement.Style%2A> właściwości i szuka <xref:System.Windows.BaseValueSource.ImplicitStyleReference> w wynikach.  
+- **Styl niejawny.** <xref:System.Windows.FrameworkElement.Style%2A> Nie ustawiono właściwości bezpośrednio. Jednak <xref:System.Windows.FrameworkElement.Style%2A> na pewien poziom w kolejności wyszukiwania zasobów (strony, aplikacji) istnieje i jest kluczem utworzonym na podstawie przy użyciu klucza zasobu, który jest zgodny z typem jest to styl ma zostać zastosowany do. W tym przypadku <xref:System.Windows.FrameworkElement.Style%2A> samej właściwości działa według pierwszeństwa, określone w sekwencji jako element 5. Ten stan może zostać wykryte przy użyciu <xref:System.Windows.DependencyPropertyHelper> względem <xref:System.Windows.FrameworkElement.Style%2A> właściwości i szuka <xref:System.Windows.BaseValueSource.ImplicitStyleReference> w wynikach.  
   
--   **Domyślny styl**, znane również jako **stylów kompozycji.** <xref:System.Windows.FrameworkElement.Style%2A> Właściwość nie jest ustawiony bezpośrednio, a w rzeczywistości zostanie odczytany jako `null` aż do czasu wykonywania. W tym przypadku styl pochodzi z wersji ewaluacyjnej motyw, który jest częścią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparatu prezentacji.  
+- **Domyślny styl**, znane również jako **stylów kompozycji.** <xref:System.Windows.FrameworkElement.Style%2A> Właściwość nie jest ustawiony bezpośrednio, a w rzeczywistości zostanie odczytany jako `null` aż do czasu wykonywania. W tym przypadku styl pochodzi z wersji ewaluacyjnej motyw, który jest częścią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparatu prezentacji.  
   
  Niejawna style nie znajduje się w motywy, typ musi odpowiadać dokładnie - `MyButton` `Button`— Klasa pochodna nie użyje niejawnie styl `Button`.  
   

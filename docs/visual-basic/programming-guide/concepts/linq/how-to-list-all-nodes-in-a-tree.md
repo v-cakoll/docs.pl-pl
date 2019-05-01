@@ -3,11 +3,11 @@ title: 'Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (Visual B
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021625"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (Visual Basic)
 Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być przydatne podczas nauki, dokładnie tak jak metoda lub właściwość ma wpływ na drzewie. Jedno z podejść do wyświetlania listy wszystkich węzłów w postaci tekstowej jest generowanie wyrażenia XPath, które dokładnie, zwłaszcza identyfikuje dowolny węzeł w drzewie.  

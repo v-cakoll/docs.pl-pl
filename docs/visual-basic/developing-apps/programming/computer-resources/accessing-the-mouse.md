@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 6d31a3d2-d860-459d-9d13-3aa192d62ba2
 ms.openlocfilehash: 0297df4ebfbbe718dd553b279ad62a6b30f0e7e4
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014313"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Uzyskiwanie dostępu do myszy (Visual Basic)
 `My.Computer.Mouse` Obiekt zapewnia sposób, aby znaleźć informacje o myszy komputera, np. w przypadku myszy istnieje, liczba przycisków myszy oraz szczegółowe informacje o kółka myszy.  

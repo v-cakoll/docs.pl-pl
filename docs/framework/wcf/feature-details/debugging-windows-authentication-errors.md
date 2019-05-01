@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048052"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfejs dostawcy obsługi zabezpieczeń (SSPI) obsługuje zabezpieczenia procesów. Po wystąpieniu błędów zabezpieczeń w warstwie interfejsu SSPI, są one udostępniane przez Windows Communication Foundation (WCF). Ten temat zawiera framework i zestaw pytań, aby łatwiej diagnozować błędy.  
@@ -45,13 +45,13 @@ Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfej
   
  W szczególności cztery typy kont obejmują:  
   
--   Użytkownik lokalny: Profil użytkownika tylko do maszyny. Na przykład: `MachineName\Administrator` lub `MachineName\ProfileName`.  
+- Użytkownik lokalny: Profil użytkownika tylko do maszyny. Na przykład: `MachineName\Administrator` lub `MachineName\ProfileName`.  
   
--   Local System: Wbudowane konto SYSTEM na komputerze, który nie jest przyłączony do domeny.  
+- Local System: Wbudowane konto SYSTEM na komputerze, który nie jest przyłączony do domeny.  
   
--   Użytkownik domeny: Konto użytkownika domeny Windows. Na przykład: `DomainName\ProfileName`.  
+- Użytkownik domeny: Konto użytkownika domeny Windows. Na przykład: `DomainName\ProfileName`.  
   
--   Komputer do domeny: Proces tożsamość komputera z uruchomioną na maszynie jest przyłączony do domeny Windows. Na przykład: `MachineName\Network Service`.  
+- Komputer do domeny: Proces tożsamość komputera z uruchomioną na maszynie jest przyłączony do domeny Windows. Na przykład: `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Poświadczenia usługi są przechwytywane podczas <xref:System.ServiceModel.ICommunicationObject.Open%2A> metody <xref:System.ServiceModel.ServiceHost> nosi nazwę klasy. Poświadczeń klienta jest do odczytu zawsze, gdy klient wysyła komunikat.  
@@ -85,15 +85,15 @@ Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfej
   
 2. Wymagaj negocjacji interfejsu SSPI:  
   
-    1.  Jeśli używasz standardowego powiązania zestawu `NegotiateServiceCredential` właściwość `true`.  
+    1. Jeśli używasz standardowego powiązania zestawu `NegotiateServiceCredential` właściwość `true`.  
   
-    2.  Jeśli używasz niestandardowego powiązania, ustaw `AuthenticationMode` atrybutu `Security` elementu `SspiNegotiated`.  
+    2. Jeśli używasz niestandardowego powiązania, ustaw `AuthenticationMode` atrybutu `Security` elementu `SspiNegotiated`.  
   
 3. Wymagaj negocjacji interfejsu SSPI do używania protokołu Kerberos, nie można przydzielać korzystanie z uwierzytelniania NTLM:  
   
-    1.  Wykonaj następujące czynności w kodzie za pomocą następującej instrukcji: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. Wykonaj następujące czynności w kodzie za pomocą następującej instrukcji: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2.  Lub możesz to zrobić w pliku konfiguracji, ustawienia `allowNtlm` atrybutu `false`. Ten atrybut jest zawarty w [ \<systemu windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. Lub możesz to zrobić w pliku konfiguracji, ustawienia `allowNtlm` atrybutu `false`. Ten atrybut jest zawarty w [ \<systemu windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>Protokół NTLM  
   

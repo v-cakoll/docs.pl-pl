@@ -3,11 +3,11 @@ title: Tworzenie długo działającej usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
 ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048143"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. Długotrwałe usług przepływu pracy może działać przez dłuższy czas. W pewnym momencie przepływu pracy może być bezczynny, oczekiwanie na kilku dodatkowych informacji. W takim przypadku przepływ pracy jest trwały do usługi SQL database i zostanie usunięty z pamięci. Po udostępnieniu dodatkowych informacji wystąpienia przepływu pracy jest ładowany do pamięci i kontynuuje wykonywanie.  W tym scenariuszu w przypadku wdrażania bardzo uproszczony system zamawiania.  Klient wysyła pierwszy komunikat do usługi przepływu pracy, aby rozpocząć kolejności. Zwraca identyfikator zamówienia dla klienta. W tym momencie Usługa przepływu pracy oczekuje na inny komunikat z klienta i przechodzi w stan bezczynności i jest umieszczone w bazie danych programu SQL Server.  Gdy klient wysyła następnej wiadomości w celu uporządkowania elementów, usługi przepływu pracy jest ładowany do pamięci i zakończeniu przetwarzania zamówienia. W przykładowym kodzie zwraca ciąg z informacją, że element został dodany do zamówienia. Przykładowy kod nie jest przeznaczona do rzeczywistej aplikacji w technologii, ale raczej prosty przykład ilustrujący długo działającej usługi przepływu pracy. W tym temacie założono, że wiesz, jak tworzyć projekty programu Visual Studio 2012 i rozwiązań.
@@ -43,11 +43,11 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
 3. W oknie dialogowym właściwości projektu zaznacz **Web** kartę.
 
-    1.  W obszarze **Akcja uruchamiania** wybierz **konkretnej strony** i określ `Service1.xamlx`.
+    1. W obszarze **Akcja uruchamiania** wybierz **konkretnej strony** i określ `Service1.xamlx`.
 
          ![Właściwości projektu usługi przepływu pracy w sieci Web](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "Tworzenie usługi przepływu pracy hostowana w sieci web — opcja określona strona")
 
-    2.  W obszarze **serwerów** wybierz **Użyj lokalnym serwerem sieci Web IIS**.
+    2. W obszarze **serwerów** wybierz **Użyj lokalnym serwerem sieci Web IIS**.
 
          ![Lokalne ustawienia serwera sieci Web](./media/creating-a-long-running-workflow-service/use-local-web-server.png "Tworzenie usługi przepływu pracy hostowana w sieci web — opcja użycia lokalnego serwera sieci Web usług IIS")
 
@@ -67,67 +67,67 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
 6. Przeciąganie i upuszczanie **ReceiveAndSendReply** szablon działania do **usługa Sekwencyjna** działania. Ten zbiór działań zostanie wyświetlony komunikat z klienta i wysyłać odpowiedzi ponownie.
 
-    1.  Wybierz **Receive** działanie i ustaw właściwości wyróżnione na poniższej ilustracji.
+    1. Wybierz **Receive** działanie i ustaw właściwości wyróżnione na poniższej ilustracji.
 
          ![Ustaw właściwości działania odbierania](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "ustawiania właściwości działania odbierania.")
 
          Właściwość DisplayName ustawia nazwę wyświetlaną dla działania odbierania w projektancie. Właściwości ServiceContractName i OperationName Określ nazwę kontraktu usługi i operacji, które są implementowane przez działanie Receive. Aby uzyskać więcej informacji o używaniu kontraktów w usługach przepływu pracy, zobacz [za pomocą kontraktów w przepływie pracy](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).
 
-    2.  Kliknij przycisk **zdefiniować...**  łącze w **ReceiveStartOrder** działania i ustaw właściwości pokazane na poniższej ilustracji.  Należy zauważyć, że **parametry** przycisk radiowy zostanie wybrany, parametr o nazwie `p_customerName` jest powiązany z `customerName` zmiennej. Pozwoli to na skonfigurowanie **Receive** działanie, aby odbierać dane i powiązać te dane do zmiennych lokalnych.
+    2. Kliknij przycisk **zdefiniować...**  łącze w **ReceiveStartOrder** działania i ustaw właściwości pokazane na poniższej ilustracji.  Należy zauważyć, że **parametry** przycisk radiowy zostanie wybrany, parametr o nazwie `p_customerName` jest powiązany z `customerName` zmiennej. Pozwoli to na skonfigurowanie **Receive** działanie, aby odbierać dane i powiązać te dane do zmiennych lokalnych.
 
          ![Ustawianie danych otrzymanych przez działanie Receive](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "ustawić właściwości dla danych otrzymywanych przez działanie Receive.")
 
-    3.  Wybierz **SendReplyToReceive** działanie i ustaw właściwość wyróżnione pokazano na poniższej ilustracji.
+    3. Wybierz **SendReplyToReceive** działanie i ustaw właściwość wyróżnione pokazano na poniższej ilustracji.
 
          ![Ustawianie właściwości działania SendReply](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
 
-    4.  Kliknij przycisk **zdefiniować...**  łącze w **SendReplyToStartOrder** działania i ustaw właściwości pokazane na poniższej ilustracji. Należy zauważyć, że **parametry** przycisk radiowy zostanie wybrany; parametr o nazwie `p_orderId` jest powiązany z `orderId` zmiennej. To ustawienie określa, że działanie SendReplyToStartOrder będzie zwracać wartość typu ciąg do obiektu wywołującego.
+    4. Kliknij przycisk **zdefiniować...**  łącze w **SendReplyToStartOrder** działania i ustaw właściwości pokazane na poniższej ilustracji. Należy zauważyć, że **parametry** przycisk radiowy zostanie wybrany; parametr o nazwie `p_orderId` jest powiązany z `orderId` zmiennej. To ustawienie określa, że działanie SendReplyToStartOrder będzie zwracać wartość typu ciąg do obiektu wywołującego.
 
          ![Konfigurowanie danych zawartości działania SendReply](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "ustawienia SetReplyToStartOrder działania.")
 
-    5.  Przeciągnij i upuść działanie Przypisz między **Receive** i **SendReply** działań i ustaw właściwości, jak pokazano na poniższej ilustracji:
+    5. Przeciągnij i upuść działanie Przypisz między **Receive** i **SendReply** działań i ustaw właściwości, jak pokazano na poniższej ilustracji:
 
          ![Dodawanie działania Przypisz](./media/creating-a-long-running-workflow-service/add-an-assign-activity.png "dodać działanie przypisania.")
 
          To może utworzy nowy identyfikator zamówienia, a następnie umieszcza wartość w zmiennej orderId.
 
-    6.  Wybierz **ReplyToStartOrder** działania. W oknie dialogowym właściwości kliknij przycisk wielokropka dla **CorrelationInitializers**. Wybierz **Dodaj inicjator** połączyć, wprowadź `orderIdHandle` w polu tekstowym inicjatora wybierz inicjatora korelacji zapytania dla typu korelacji, a następnie wybierz p_orderId w polu listy rozwijanej kwerendy XPATH. Te ustawienia są wyświetlane na poniższej ilustracji. Kliknij przycisk **OK**.  Korelacja między klientem a to wystąpienie usługi przepływu pracy jest inicjowana. Gdy wiadomość zawierającą ta kolejność jest odebranych identyfikator odbywa się z tym wystąpieniem usługi przepływu pracy.
+    6. Wybierz **ReplyToStartOrder** działania. W oknie dialogowym właściwości kliknij przycisk wielokropka dla **CorrelationInitializers**. Wybierz **Dodaj inicjator** połączyć, wprowadź `orderIdHandle` w polu tekstowym inicjatora wybierz inicjatora korelacji zapytania dla typu korelacji, a następnie wybierz p_orderId w polu listy rozwijanej kwerendy XPATH. Te ustawienia są wyświetlane na poniższej ilustracji. Kliknij przycisk **OK**.  Korelacja między klientem a to wystąpienie usługi przepływu pracy jest inicjowana. Gdy wiadomość zawierającą ta kolejność jest odebranych identyfikator odbywa się z tym wystąpieniem usługi przepływu pracy.
 
          ![Dodanie inicjatora korelacji](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Dodaj inicjator korelacji.")
 
 7. Przeciąganie i upuszczanie innego **ReceiveAndSendReply** działania na końcu przepływu pracy (poza **sekwencji** zawierający pierwszy **Receive** i  **SendReply** działań). Zostanie wyświetlony drugi komunikat wysyłany przez klienta i odpowiedzieć na.
 
-    1.  Wybierz **sekwencji** zawiera nowo dodanych **Receive** i **SendReply** działania i kliknij przycisk **zmienne** przycisku. Dodaj zmienną wyróżnione na poniższej ilustracji:
+    1. Wybierz **sekwencji** zawiera nowo dodanych **Receive** i **SendReply** działania i kliknij przycisk **zmienne** przycisku. Dodaj zmienną wyróżnione na poniższej ilustracji:
 
          ![Dodawanie nowych zmiennych](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "Dodaj zmienną identyfikator elementu.")
 
-    2.  Wybierz **Receive** działania i ustaw właściwości pokazane na poniższej ilustracji:
+    2. Wybierz **Receive** działania i ustaw właściwości pokazane na poniższej ilustracji:
 
          ![Ustaw właściwości działanie Receive](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "ustawiania właściwości działania odbierania.")
 
-    3.  Kliknij przycisk **zdefiniować...**  łącze w **ReceiveAddItem** działania i Dodaj parametry pokazano na poniższej ilustracji: umożliwia skonfigurowanie działania odbierania i akceptuje dwa parametry: identyfikator zamówienia i identyfikator elementu szeregowane.
+    3. Kliknij przycisk **zdefiniować...**  łącze w **ReceiveAddItem** działania i Dodaj parametry pokazano na poniższej ilustracji: umożliwia skonfigurowanie działania odbierania i akceptuje dwa parametry: identyfikator zamówienia i identyfikator elementu szeregowane.
 
          ![Określanie parametrów dla drugiego receive](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "skonfigurować działanie receive, aby otrzymać dwa parametry.")
 
-    4.  Kliknij przycisk **CorrelateOn** wielokropka przycisk, a następnie wprowadź `orderIdHandle`. W obszarze **kwerendy XPath**, kliknij strzałkę listy rozwijanej i wybierz `p_orderId`. Pozwoli to na skonfigurowanie korelacji w drugiej otrzymywać działania. Aby uzyskać więcej informacji na temat korelacji zobacz [korelacji](../../../../docs/framework/wcf/feature-details/correlation.md).
+    4. Kliknij przycisk **CorrelateOn** wielokropka przycisk, a następnie wprowadź `orderIdHandle`. W obszarze **kwerendy XPath**, kliknij strzałkę listy rozwijanej i wybierz `p_orderId`. Pozwoli to na skonfigurowanie korelacji w drugiej otrzymywać działania. Aby uzyskać więcej informacji na temat korelacji zobacz [korelacji](../../../../docs/framework/wcf/feature-details/correlation.md).
 
          ![Ustawienie właściwości CorrelatesOn](./media/creating-a-long-running-workflow-service/correlateson-setting.png "ustaw właściwość CorrelatesOn.")
 
-    5.  Przeciąganie i upuszczanie **Jeśli** działanie natychmiast po **ReceiveAddItem** działania. To działanie będzie działać tak jak if instrukcji.
+    5. Przeciąganie i upuszczanie **Jeśli** działanie natychmiast po **ReceiveAddItem** działania. To działanie będzie działać tak jak if instrukcji.
 
-        1.  Ustaw **warunek** właściwości `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
+        1. Ustaw **warunek** właściwości `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
-        2.  Przeciąganie i upuszczanie **przypisać** działania w celu **następnie** sekcji, a drugi do **Else** sekcji Ustaw właściwości **przypisać** działania, jak pokazano na poniższej ilustracji.
+        2. Przeciąganie i upuszczanie **przypisać** działania w celu **następnie** sekcji, a drugi do **Else** sekcji Ustaw właściwości **przypisać** działania, jak pokazano na poniższej ilustracji.
 
              ![Przypisywanie wynik wywołania usługi](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "Przypisz wynik wywołania usługi.")
 
              Jeśli warunek nie jest `true` **następnie** sekcji zostaną wykonane. Jeśli warunek nie jest `false` **Else** sekcji jest wykonywany.
 
-        3.  Wybierz **SendReplyToReceive** działania i ustaw **DisplayName** właściwość pokazano na poniższej ilustracji.
+        3. Wybierz **SendReplyToReceive** działania i ustaw **DisplayName** właściwość pokazano na poniższej ilustracji.
 
              ![Ustawianie właściwości działania SendReply](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "Ustaw SendReply właściwości działania.")
 
-        4.  Kliknij przycisk **zdefiniować...**  łącze w **SetReplyToAddItem** działania i skonfiguruj go tak, jak pokazano na poniższej ilustracji. Pozwoli to na skonfigurowanie **SendReplyToAddItem** działaniu zwracać wartość `orderResult` zmiennej.
+        4. Kliknij przycisk **zdefiniować...**  łącze w **SetReplyToAddItem** działania i skonfiguruj go tak, jak pokazano na poniższej ilustracji. Pozwoli to na skonfigurowanie **SendReplyToAddItem** działaniu zwracać wartość `orderResult` zmiennej.
 
              ![Ustawienie powiązania danych dla działania SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "ustaw właściwość SendReplyToAddItem działania.")
 
@@ -149,9 +149,9 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
 2. Dodaj odwołania do następujących zestawów, które mają `OrderClient` projektu
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.ServiceModel.Activities.dll
+    2. System.ServiceModel.Activities.dll
 
 3. Dodaj odwołanie do usługi przepływu pracy usługi i określ `OrderService` jak przestrzeń nazw.
 
@@ -190,7 +190,7 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
 6. Aby sprawdzić, trwałość usługi przepływu pracy, uruchom program SQL Server Management Studio, przechodząc do **Start** menu wybranie **wszystkie programy**, **Microsoft SQL Server 2008**, **Programu SQL Server Management Studio**.
 
-    1.  W okienku po lewej stronie ekranu należy rozwinąć, **baz danych**, **SQLPersistenceStore**, **widoków** i kliknij prawym przyciskiem myszy **System.Activities.DurableInstancing.Instances**  i wybierz **zaznacz 1000 pierwszych wierszy**. W **wyniki** okienko sprawdzić, zostanie wyświetlona co najmniej jedno wystąpienie na liście. Mogą istnieć inne wystąpienia z poprzednich przebiegów, jeśli wystąpił wyjątek podczas uruchamiania. Możesz usunąć istniejące wiersze, klikając prawym przyciskiem myszy **System.Activities.DurableInstancing.Instances** i wybierając polecenie **Edytuj pierwszych 200 wierszy**, naciskając klawisz **Execute** przycisku wybranie wszystkich wierszy w okienku wyników, a użycie **Usuń**.  Aby sprawdzić wystąpienia wyświetlana w bazie danych jest wystąpienie aplikacji, który został utworzony, sprawdź, widoku wystąpień jest pusta przed uruchomieniem klienta. Gdy klient jest uruchomiony ponownie uruchom zapytanie (zaznacz 1000 pierwszych wierszy) i sprawdź dodano nowe wystąpienie.
+    1. W okienku po lewej stronie ekranu należy rozwinąć, **baz danych**, **SQLPersistenceStore**, **widoków** i kliknij prawym przyciskiem myszy **System.Activities.DurableInstancing.Instances**  i wybierz **zaznacz 1000 pierwszych wierszy**. W **wyniki** okienko sprawdzić, zostanie wyświetlona co najmniej jedno wystąpienie na liście. Mogą istnieć inne wystąpienia z poprzednich przebiegów, jeśli wystąpił wyjątek podczas uruchamiania. Możesz usunąć istniejące wiersze, klikając prawym przyciskiem myszy **System.Activities.DurableInstancing.Instances** i wybierając polecenie **Edytuj pierwszych 200 wierszy**, naciskając klawisz **Execute** przycisku wybranie wszystkich wierszy w okienku wyników, a użycie **Usuń**.  Aby sprawdzić wystąpienia wyświetlana w bazie danych jest wystąpienie aplikacji, który został utworzony, sprawdź, widoku wystąpień jest pusta przed uruchomieniem klienta. Gdy klient jest uruchomiony ponownie uruchom zapytanie (zaznacz 1000 pierwszych wierszy) i sprawdź dodano nowe wystąpienie.
 
 7. Naciśnij klawisz enter, aby wysłać wiadomość elementu dodawanie do usługi przepływu pracy. Klient spowoduje wyświetlenie następującego tekstu:
 

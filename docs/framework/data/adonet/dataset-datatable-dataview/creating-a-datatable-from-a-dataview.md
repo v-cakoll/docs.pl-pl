@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034401"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Tworzenie elementu DataTable przy użyciu elementu DataView
 Gdy pobierane są dane ze źródła danych i wypełnione <xref:System.Data.DataTable> z danymi, możesz chcieć sortowanie, filtrowanie lub inny sposób ograniczyć zwracanych danych bez pobierania go ponownie. <xref:System.Data.DataView> Klasy sprawia, że jest to możliwe. Ponadto, jeśli musisz utworzyć nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView>, możesz użyć <xref:System.Data.DataView.ToTable%2A> metodę, aby skopiować wszystkie wiersze i kolumny lub podzbiór danych do nowego <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Metoda zapewnia przeciążeń:  
   
--   Tworzenie <xref:System.Data.DataTable> zawierający kolumny, które stanowią podzestaw kolumn w <xref:System.Data.DataView>.  
+- Tworzenie <xref:System.Data.DataTable> zawierający kolumny, które stanowią podzestaw kolumn w <xref:System.Data.DataView>.  
   
--   Tworzenie <xref:System.Data.DataTable> która zawiera tylko unikatowe wiersze z <xref:System.Data.DataView>, analogicznie do słowa kluczowego DISTINCT w języku Transact-SQL.  
+- Tworzenie <xref:System.Data.DataTable> która zawiera tylko unikatowe wiersze z <xref:System.Data.DataView>, analogicznie do słowa kluczowego DISTINCT w języku Transact-SQL.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład aplikacji konsoli tworzy <xref:System.Data.DataTable> zawierający dane z **Person.Contact** tabelę **AdventureWorks** przykładowej bazy danych. Następnie przykład tworzy posortowane i przefiltrowane <xref:System.Data.DataView> na podstawie <xref:System.Data.DataTable>. Po wyświetleniu zawartości <xref:System.Data.DataTable> i <xref:System.Data.DataView>, w przykładzie jest tworzony nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView> przez wywołanie metody <xref:System.Data.DataView.ToTable%2A> metody, wybierając tylko podzbiór dostępnych kolumn. Na koniec w przykładzie pokazano zawartość nowego <xref:System.Data.DataTable>.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
 ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013429"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Instrukcje: Wyświetlanie przycisków opcji w formancie MenuStrip (formularze Windows)
 Przyciski opcji, znany także jako przyciski radiowe są podobne do pola wyboru, z tą różnicą, że użytkownicy mogą wybrać tylko jedną na raz. Mimo że domyślnie <xref:System.Windows.Forms.ToolStripMenuItem> klasa nie zapewnia zachowanie przycisku opcji, klasa zapewnia zachowanie pola wyboru, które można dostosować, aby zaimplementować zachowanie przycisku opcji elementów menu w <xref:System.Windows.Forms.MenuStrip> kontroli.  
@@ -78,7 +78,7 @@ Przyciski opcji, znany także jako przyciski radiowe są podobne do pola wyboru,
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 

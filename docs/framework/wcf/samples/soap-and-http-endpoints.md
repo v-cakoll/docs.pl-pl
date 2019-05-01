@@ -3,11 +3,11 @@ title: Punkty końcowe protokołów SOAP i HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007823"
 ---
 # <a name="soap-and-http-endpoints"></a>Punkty końcowe protokołów SOAP i HTTP
 W tym przykładzie pokazano, jak zaimplementować usługę opartego na protokole RPC i udostępnić ją w formacie protokołu SOAP i format "Zwykłego starego kodu XML" (POX) za pomocą modelu programowania w sieci Web WCF. Zobacz [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki, aby uzyskać więcej informacji o wiązaniu HTTP dla usługi. Ten przykład koncentruje się na szczegółowe informacje, które odnoszą się do udostępniania tej samej usługi za pośrednictwem protokołu SOAP i HTTP z użyciem różnych powiązania.  
@@ -22,11 +22,11 @@ W tym przykładzie pokazano, jak zaimplementować usługę opartego na protokole
   
  Plik Web.config służy do konfigurowania usługi WCF z punktami końcowymi 3:  
   
--   Punkt końcowy ~/service.svc/mex, który udostępnia metadane usługi dla dostępu przez klientów opartej na protokole SOAP.  
+- Punkt końcowy ~/service.svc/mex, który udostępnia metadane usługi dla dostępu przez klientów opartej na protokole SOAP.  
   
--   Punkt końcowy ~/service.svc/http, która umożliwia klientom dostęp do usługi za pomocą powiązania protokołu HTTP.  
+- Punkt końcowy ~/service.svc/http, która umożliwia klientom dostęp do usługi za pomocą powiązania protokołu HTTP.  
   
--   Punkt końcowy ~/service.svc/soap, który umożliwia klientom dostęp do usługi za pośrednictwem powiązania protokołu HTTP przy użyciu protokołu SOAP.  
+- Punkt końcowy ~/service.svc/soap, który umożliwia klientom dostęp do usługi za pośrednictwem powiązania protokołu HTTP przy użyciu protokołu SOAP.  
   
  Punkt końcowy HTTP jest skonfigurowany przy użyciu <`webHttp`> Standardowy punkt końcowy, który ma `helpEnabled` równa `true`. Co w efekcie Usługa udostępnia stronę pomocy XHTML oparte na ~/service.svc/http/help używanego przez klientów opartych na protokole HTTP można uzyskiwać dostęp do usługi.  
   

@@ -3,11 +3,11 @@ title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033972"
 ---
 # <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -18,11 +18,11 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
 #### <a name="use-only-trusted-data-source-providers"></a>Użyj tylko zaufanego dostawcy źródła danych.  
  Aby komunikować się ze źródłem danych, dostawca, wykonaj następujące czynności:  
   
--   Odbieranie parametrów połączenia z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Odbieranie parametrów połączenia z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Wykonuje translację elementu drzewo poleceń do źródła danych zapytania natywnego języka.  
+- Wykonuje translację elementu drzewo poleceń do źródła danych zapytania natywnego języka.  
   
--   Możesz korzystać i zwrócić zestaw wyników.  
+- Możesz korzystać i zwrócić zestaw wyników.  
   
  Podczas operacji logowania informacje, które opiera się na hasło użytkownika jest przekazywany do serwera przy użyciu bibliotek sieciowych bazowego źródła danych. Złośliwe dostawcy można kradzież poświadczeń użytkownika, generowanie złośliwych zapytań i manipulować w zestawie wyników.  
   
@@ -32,19 +32,19 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
 #### <a name="secure-the-connection-string"></a>Bezpieczne połączenia.  
  Ochrona dostępu do źródła danych jest jednym z najważniejszych celów podczas zabezpieczania aplikacji. Parametry połączenia przedstawia informacje o potencjalnych luk w zabezpieczeniach, jeśli nie jest zabezpieczony, lub jest nieprawidłowo skonstruowany. Przechowują informacje o połączeniu w postaci zwykłego tekstu lub utrwalić ją w pamięci, istnieje ryzyko obniżania całego systemu. Poniżej przedstawiono zalecane metody zabezpieczania parametry połączenia:  
   
--   Uwierzytelnianie Windows ze źródłem danych programu SQL Server.  
+- Uwierzytelnianie Windows ze źródłem danych programu SQL Server.  
   
      Gdy połączenie ze źródłem danych programu SQL Server przy użyciu uwierzytelniania Windows, ciąg połączenia nie zawiera informacji logowania i hasło.  
   
--   Szyfrowanie przy użyciu konfiguracji chronionych sekcji pliku konfiguracji.  
+- Szyfrowanie przy użyciu konfiguracji chronionych sekcji pliku konfiguracji.  
   
      Program ASP.NET zapewnia funkcję o nazwie chronionych konfigurację, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Mimo że przeznaczony głównie dla platformy ASP.NET, umożliwia także konfiguracji chronionej do szyfrowania sekcjami plików konfiguracji w aplikacji Windows. Aby uzyskać szczegółowy opis nowych funkcji konfiguracji chronionej, zobacz [szyfrowania informacji przy użyciu chronione Konfiguracja](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
--   Store parametry połączenia w plikach konfiguracyjnych zabezpieczone.  
+- Store parametry połączenia w plikach konfiguracyjnych zabezpieczone.  
   
      Nigdy nie należy osadzić parametry połączenia w kodzie źródłowym. Parametry połączenia można przechowywać w plikach konfiguracji, więc nie trzeba ich osadzać w kodzie twojej aplikacji. Domyślnie Kreator modelu Entity Data Model przechowuje ciągi połączeń w pliku konfiguracyjnym aplikacji. Należy zabezpieczyć ten plik, aby zapobiegać nieautoryzowanemu dostępowi.  
   
--   Użyj Konstruktorzy parametrów połączeń podczas dynamicznego tworzenia połączeń.  
+- Użyj Konstruktorzy parametrów połączeń podczas dynamicznego tworzenia połączeń.  
   
      Jeśli musisz utworzyć parametry połączenia w czasie wykonywania, użyj <xref:System.Data.EntityClient.EntityConnectionStringBuilder> klasy. Ta klasa konstruktora ciągu zapobiega atakami polegającymi na iniekcji ciągu połączenia, sprawdzanie poprawności i anulowania zapewnianego element nieprawidłowe dane wejściowe. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Również korzystanie z klasy Konstruktor odpowiedni ciąg do konstruowania parametry połączenia źródła danych, który jest częścią [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] parametry połączenia. Aby uzyskać informacji na temat Konstruktorzy parametrów połączenia dla dostawcy ADO.NET, zobacz [Konstruktorzy parametrów połączeń](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
@@ -65,15 +65,15 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
 #### <a name="run-applications-with-the-minimum-permissions"></a>Uruchamianie aplikacji na minimalny poziom uprawnień.  
  Jeśli zezwolisz na zarządzanej aplikacji do uruchamiania przy użyciu uprawnień pełnego zaufania [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] nie ogranicza dostęp aplikacji do Twojego komputera. Może to umożliwić luki w zabezpieczeniach w aplikacji, aby naruszyć bezpieczeństwo całego systemu. Zabezpieczenia dostępu kodu i inne mechanizmy zabezpieczeń w [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], należy uruchomić aplikacje przy użyciu uprawnień częściowego zaufania i minimalny zestaw uprawnień, które są wymagane do włączenia aplikacji funkcji. Następujące uprawnienia dostępu kodu są minimalne uprawnienia użytkownika [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji potrzebom:  
   
--   <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> do otwierania plików określonych metadanych lub <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> do wyszukiwania plików metadanych katalogu.  
+- <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> do otwierania plików określonych metadanych lub <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> do wyszukiwania plików metadanych katalogu.  
   
--   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> do obsługi zapytań LINQ do zapytań jednostki.  
+- <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> do obsługi zapytań LINQ do zapytań jednostki.  
   
--   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> można zarejestrować w <xref:System.Transactions> <xref:System.Transactions.Transaction>.  
+- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> można zarejestrować w <xref:System.Transactions> <xref:System.Transactions.Transaction>.  
   
--   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> serializować wyjątków za pomocą <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
+- <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> serializować wyjątków za pomocą <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
   
--   Uprawnienia do otwierania połączenia z bazą danych i wykonywania poleceń dla bazy danych, takich jak <xref:System.Data.SqlClient.SqlClientPermission> dla bazy danych programu SQL Server.  
+- Uprawnienia do otwierania połączenia z bazą danych i wykonywania poleceń dla bazy danych, takich jak <xref:System.Data.SqlClient.SqlClientPermission> dla bazy danych programu SQL Server.  
   
  Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu i ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
@@ -94,31 +94,31 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
 #### <a name="prevent-sql-injection-attacks"></a>Uniemożliwić ataki przez wstrzyknięcie kodu SQL.  
  Aplikacje często akceptują dane wejściowe w zewnętrznych (z lub innego zewnętrznego agenta użytkownika) i wykonywać akcje w oparciu o te dane wejściowe. Wszystkie dane wejściowe, który bezpośrednio lub pośrednio pochodzi od użytkownika lub zewnętrznego agenta może mieć zawartości, która używa składni języka docelowego w celu wykonywania akcji nieautoryzowanego. Gdy język docelowy jest języka SQL (Structured Query), takich jak [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], manipulowania ten jest znany jako ataku polegającego na iniekcji SQL. Złośliwy użytkownik może wstrzyknąć poleceń bezpośrednio do zapytania i upuść tabeli bazy danych, i spowodować odmowę usługi lub w przeciwnym razie Zmień rodzaj wykonywanej operacji.  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)] ataki przez iniekcję kodu:  
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)] ataki przez iniekcję kodu:  
   
      Ataki przez iniekcję SQL mogą być wykonywane w [!INCLUDE[esql](../../../../../includes/esql-md.md)] poprzez dostarczenie złośliwych danych do wartości, które są używane w predykacie zapytania i w nazwach parametrów. Aby uniknąć ryzyka wstrzyknięcie kodu SQL, nigdy nie należy łączyć dane wejściowe użytkownika z [!INCLUDE[esql](../../../../../includes/esql-md.md)] tekst polecenia.  
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania akceptować wszędzie, gdzie parametry, że literały są akceptowane. Należy użyć sparametryzowanych zapytań zamiast iniekcji literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć użycie [metody konstruktora zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) bezpiecznie skonstruowanie jednostki SQL.  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ataki przez iniekcję kodu:  
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ataki przez iniekcję kodu:  
   
      Mimo że w kompozycją zapytań [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], odbywa się za pośrednictwem interfejsu API modelu obiektu. W odróżnieniu od [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań, [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] zapytania nie składają się przy użyciu manipulowanie ciągami lub łączenia i nie są one podatne na tradycyjnych ataki przez wstrzyknięcie kodu SQL.  
   
 #### <a name="prevent-very-large-result-sets"></a>Zapobiegaj bardzo dużych zestawów wyników.  
  Zestaw wyników bardzo dużych może spowodować systemów klienckich, aby zamknąć, jeżeli klient wykonuje operacje, które zużywają zasoby proporcjonalny do rozmiaru zestawu wyników. Nieoczekiwanie dużych zestawów danych może wystąpić w następujących warunkach:  
   
--   W zapytaniach dotyczących dużej bazy danych, które nie zawierają warunków odpowiedni filtr.  
+- W zapytaniach dotyczących dużej bazy danych, które nie zawierają warunków odpowiedni filtr.  
   
--   W zapytaniach, tworzyć sprzężenia Kartezjańskiego na serwerze.  
+- W zapytaniach, tworzyć sprzężenia Kartezjańskiego na serwerze.  
   
--   W zagnieżdżonej [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania.  
+- W zagnieżdżonej [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania.  
   
  Akceptując danych wejściowych użytkownika, należy się upewnić, że dane wejściowe nie może powodować zestawy wyników do wydają się większe niż co system może obsłużyć danych. Można również użyć <xref:System.Linq.Queryable.Take%2A> method in Class metoda [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] lub [LIMIT](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operatora w [!INCLUDE[esql](../../../../../includes/esql-md.md)] konieczność ograniczenia rozmiaru zestawu wyników.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Należy unikać zwracania wyników IQueryable, gdy Uwidaczniającą metody potencjalnie niezaufanych wywołujących.  
  Należy unikać cofania się <xref:System.Linq.IQueryable%601> typów z metod, które są dostępne do potencjalnie niezaufanych wywołujących z następujących powodów:  
   
--   Konsument kwerendę, która udostępnia <xref:System.Linq.IQueryable%601> typu można wywoływać metody na wynik, który ujawnić zabezpieczonych danych lub zwiększyć rozmiar zestawu wyników. Na przykład rozważmy następujący podpis metody:  
+- Konsument kwerendę, która udostępnia <xref:System.Linq.IQueryable%601> typu można wywoływać metody na wynik, który ujawnić zabezpieczonych danych lub zwiększyć rozmiar zestawu wyników. Na przykład rozważmy następujący podpis metody:  
   
     ```  
     public IQueryable<Customer> GetCustomer(int customerId)  
@@ -126,7 +126,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
      Konsument to zapytanie może wywołać `.Include("Orders")` na zwracanego `IQueryable<Customer>` do pobierania danych zapytania nie chcesz ujawniać. To można uniknąć, zmieniając typ zwracany metody <xref:System.Collections.Generic.IEnumerable%601> i wywołanie metody (takie jak `.ToList()`) który materializuje wyniki.  
   
--   Ponieważ <xref:System.Linq.IQueryable%601> zapytania są wykonywane, gdy wyników jest iterowana, odbiorcy kwerendę, która udostępnia <xref:System.Linq.IQueryable%601> typu może przechwytywać wyjątki, które są zgłaszane. Wyjątki mogą zawierać informacje, które nie są przeznaczone dla konsumentów.  
+- Ponieważ <xref:System.Linq.IQueryable%601> zapytania są wykonywane, gdy wyników jest iterowana, odbiorcy kwerendę, która udostępnia <xref:System.Linq.IQueryable%601> typu może przechwytywać wyjątki, które są zgłaszane. Wyjątki mogą zawierać informacje, które nie są przeznaczone dla konsumentów.  
   
 ## <a name="security-considerations-for-entities"></a>Uwagi dotyczące podmiotów zabezpieczeń  
  Podczas generowania i pracą z nimi przy użyciu typów jednostek, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń.  

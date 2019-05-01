@@ -3,11 +3,11 @@ title: Wprowadzenie do integracji środowiska CLR programu SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033881"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Wprowadzenie do integracji środowiska CLR programu SQL Server
 Środowisko uruchomieniowe języka wspólnego (CLR) to serce platformy Microsoft .NET Framework i oferuje środowisko wykonywania dla całego kodu .NET Framework. Kod, który jest uruchamiany w ramach środowiska CLR jest określany jako kod zarządzany. Środowisko CLR oferuje różnych funkcji i usług wymaganych do wykonania programu, w tym just-in-time (JIT) kompilacja, przydzielanie i zarządzanie pamięcią, wymuszanie bezpieczeństwo typów, obsługa wyjątków, zarządzanie wątkami i zabezpieczeń.  
@@ -20,7 +20,7 @@ ms.locfileid: "59336814"
   
  **SQL Server Books Online**  
   
--   [Omówienie integracji środowiska uruchomieniowego (języka wspólnego CLR) w usłudze wspólnego języka](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [Omówienie integracji środowiska uruchomieniowego (języka wspólnego CLR) w usłudze wspólnego języka](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>Włączanie integracji środowiska CLR  
  Typowych funkcji integracji środowiska uruchomieniowego (języka wspólnego CLR) języka jest wyłączona, domyślnie w programie Microsoft SQL Server, a musi być włączona, aby można było używać obiektów, które są implementowane przy użyciu integrację środowiska CLR. Aby włączyć integrację środowiska CLR przy użyciu języka Transact-SQL, użyj `clr enabled` opcji `sp_configure` procedurę składowaną, jak pokazano:  
@@ -38,7 +38,7 @@ GO
   
  **SQL Server Books Online**  
   
--   [Włączanie integracji środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
+- [Włączanie integracji środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>Wdrażanie zestawu CLR  
  Po metodach CLR zostały przetestowane i zweryfikowane na serwerze testowym, mogą być rozproszone na serwerach produkcyjnych przy użyciu skryptu wdrażania. Ręcznie lub za pomocą programu SQL Server Management Studio można wygenerować skryptu wdrażania. Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
@@ -54,7 +54,7 @@ GO
   
  **SQL Server Books Online**  
   
--   [Zabezpieczenia integracji CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
+- [Zabezpieczenia integracji CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>Debugowanie zestawu CLR  
  Microsoft SQL Server zapewnia obsługę debugowania języka Transact-SQL i obiekty wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) w bazie danych. Debugowanie działa w wielu językach: użytkownicy mogą Wkrocz bezproblemowo obiektów CLR z instrukcji Transact-SQL i na odwrót.  
@@ -63,7 +63,7 @@ GO
   
  **SQL Server Books Online**  
   
--   [Debugowanie obiektów bazy danych środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [Debugowanie obiektów bazy danych środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>Zobacz także
 

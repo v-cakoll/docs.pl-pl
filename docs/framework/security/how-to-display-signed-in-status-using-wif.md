@@ -5,51 +5,51 @@ ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940507"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Instrukcje: Wyświetlanie stanu zalogowania przy użyciu programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
  W tym temacie opisano sposób wyświetlania znak w stanie w aplikacji ASP.NET z włączoną obsługą programu WIF. Program WIF oferuje mechanizm do tworzenia Twojej aplikacji obsługujących oświadczenia i zarządzanie uwierzytelniania i autoryzacji dla zasobów aplikacji.  
   
 ## <a name="contents"></a>Spis treści  
   
--   Omówienie  
+- Omówienie  
   
--   Zestawienie czynności  
+- Zestawienie czynności  
   
--   Krok 1: Zainstaluj tożsamość i dostęp do rozszerzenia  
+- Krok 1: Zainstaluj tożsamość i dostęp do rozszerzenia  
   
--   Krok 2 — Tworzenie aplikacji jednostki uzależnionej strona ASP.NET  
+- Krok 2 — Tworzenie aplikacji jednostki uzależnionej strona ASP.NET  
   
--   Krok 3 — Włączanie lokalnej deweloperskiej usługi STS do uwierzytelniania kont użytkowników  
+- Krok 3 — Włączanie lokalnej deweloperskiej usługi STS do uwierzytelniania kont użytkowników  
   
--   Krok 4 — zmodyfikować aplikację ASP.NET w celu wyświetlania logowania w stan  
+- Krok 4 — zmodyfikować aplikację ASP.NET w celu wyświetlania logowania w stan  
   
--   Krok 5: Testowanie integracji między programu WIF i aplikacji ASP.NET  
+- Krok 5: Testowanie integracji między programu WIF i aplikacji ASP.NET  
   
 ## <a name="overview"></a>Omówienie  
  W tym temacie przedstawiono sposób tworzenia prostej aplikacji obsługującej oświadczenia, za pomocą programu WIF oraz jak łatwo wyświetlać, czy użytkownik jest zalogowany. Użyto lokalnej deweloperskiej usługi STS dołączoną tożsamości i dostępu rozszerzenie programu Visual Studio. Local Development STS jest przeznaczony dla środowisk testowych i programistycznych środowisku w celu zapewnienia to prosta metoda integrowania oświadczeń do aplikacji. Go nie należy używać w środowisku produkcyjnym, ponieważ nie wykonuje faktycznego uwierzytelniania i poświadczenia nie są wymagane. Jednak kodu imperatywnego w poniższych krokach jest taka sama dla aplikacji gotowych do produkcji rzeczywistego uwierzytelniania.  
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1: Zainstaluj tożsamość i dostęp do rozszerzenia  
+- Krok 1: Zainstaluj tożsamość i dostęp do rozszerzenia  
   
--   Krok 2 — Tworzenie aplikacji jednostki uzależnionej strona ASP.NET  
+- Krok 2 — Tworzenie aplikacji jednostki uzależnionej strona ASP.NET  
   
--   Krok 3 — Włączanie lokalnej deweloperskiej usługi STS do uwierzytelniania kont użytkowników  
+- Krok 3 — Włączanie lokalnej deweloperskiej usługi STS do uwierzytelniania kont użytkowników  
   
--   Krok 4 — zmodyfikować aplikację ASP.NET w celu wyświetlania logowania w stan  
+- Krok 4 — zmodyfikować aplikację ASP.NET w celu wyświetlania logowania w stan  
   
--   Krok 5: Testowanie integracji między programu WIF i aplikacji ASP.NET  
+- Krok 5: Testowanie integracji między programu WIF i aplikacji ASP.NET  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>Krok 1: Zainstaluj tożsamość i dostęp do rozszerzenia  
  W tym kroku opisano sposób konfigurowania rozszerzenia tożsamościami i dostępem do programu Visual Studio 2012. To rozszerzenie automatyzuje proces konfigurowania aplikacji do komunikowania się z punktami końcowymi usługi STS.  

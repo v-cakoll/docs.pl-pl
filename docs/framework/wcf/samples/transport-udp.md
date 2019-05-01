@@ -3,11 +3,11 @@ title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007724"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedynczej i multiemisji jako niestandardowy transportu Windows Communication Foundation (WCF). Przykład w tym artykule opisano zalecane procedury tworzenia niestandardowych transportu programu WCF, za pomocą struktura kanału i zgodnie z najlepszymi rozwiązaniami WCF. Kroki umożliwiające utworzenie niestandardowego transportu są następujące:  
@@ -32,15 +32,15 @@ Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedyn
 ## <a name="message-exchange-patterns"></a>Wzorce wymiany komunikatów  
  Pierwszym krokiem Pisanie niestandardowych transportu jest podjęcie decyzji, które wzorców wymiany komunikatów (MEPs) są wymagane dla transportu. Istnieją trzy MEPs do wyboru:  
   
--   Datagramów (IInputChannel/IOutputChannel)  
+- Datagramów (IInputChannel/IOutputChannel)  
   
      Korzystając z datagram MEP, klient wysyła komunikat "fire and forget" program exchange jest używany. Element zostanie wyzwolony i zapomnij programu exchange to taki, który wymaga potwierdzenia out-of-band skutecznej. Komunikat może zostać utracone podczas przesyłania i nigdy nie dotrzeć do usługi. Jeśli operacja wysyłania zakończy się pomyślnie po stronie klienta, nie gwarantuje to, że zdalny punkt końcowy otrzymał komunikat. Datagram jest elementem konstrukcyjnym podstawowych do obsługi komunikatów, możesz tworzyć własne protokołów na jego podstawie — w tym protokoły niezawodne i bezpieczne protokoły. Implementowanie kanały datagram klientów <xref:System.ServiceModel.Channels.IOutputChannel> implementuje interfejs i usługi kanały datagram <xref:System.ServiceModel.Channels.IInputChannel> interfejsu.  
   
--   Request-Response (IRequestChannel/IReplyChannel)  
+- Request-Response (IRequestChannel/IReplyChannel)  
   
      W tym MEP wiadomość jest wysyłana i odpowiedzi. Wzorzec składa się z pary odpowiedź na żądanie. Odpowiedź na żądanie wywołania przykłady zdalnych wywołań procedur (RPC) i przeglądarka pobiera. Ten wzorzec jest nazywany również półdupleks. W tym MEP zaimplementuj kanały klientów <xref:System.ServiceModel.Channels.IRequestChannel> i zaimplementować usługi kanały <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Duplex (IDuplexChannel)  
+- Duplex (IDuplexChannel)  
   
      Dwukierunkowe MEP umożliwia dowolną liczbę wiadomości wysłane przez klienta i odbieranie w dowolnej kolejności. Dwukierunkowego MEP przypomina rozmowy telefonicznej, gdzie każdy wyraz mowy jest komunikat. Obie strony może wysyłać i odbierać w tym MEP, interfejs implementowany przez kanały klient internetowy i usługa jest <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -52,17 +52,17 @@ Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedyn
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject i cyklem życia obiektu programu WCF  
  Usługi WCF ma typowe automatu stanów, który służy do zarządzania cyklem życia obiektów, takich jak <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, i <xref:System.ServiceModel.Channels.IChannelListener> służące do komunikacji. Istnieje pięć państw, w których może istnieć tych obiektów komunikacyjnych. Te stany są reprezentowane przez <xref:System.ServiceModel.CommunicationState> wyliczenie i są w następujący sposób:  
   
--   Utworzone: Jest to stan <xref:System.ServiceModel.ICommunicationObject> po raz pierwszy zostanie uruchomiony. Nie wejścia/wyjścia (We/Wy) występuje w tym stanie.  
+- Utworzone: Jest to stan <xref:System.ServiceModel.ICommunicationObject> po raz pierwszy zostanie uruchomiony. Nie wejścia/wyjścia (We/Wy) występuje w tym stanie.  
   
--   Otwieranie: Stan przejścia obiektów do tego, kiedy <xref:System.ServiceModel.ICommunicationObject.Open%2A> jest wywoływana. W tym momencie są wprowadzane niezmienialnych właściwości i rozpocząć wejścia/wyjścia. Ten proces przejścia jest prawidłowy tylko w stanie Created.  
+- Otwieranie: Stan przejścia obiektów do tego, kiedy <xref:System.ServiceModel.ICommunicationObject.Open%2A> jest wywoływana. W tym momencie są wprowadzane niezmienialnych właściwości i rozpocząć wejścia/wyjścia. Ten proces przejścia jest prawidłowy tylko w stanie Created.  
   
--   Otwarta: Obiekty przejście do tego stanu po zakończeniu procesu otwierania. Ten proces przejścia jest prawidłowy tylko w stanie otwarcia. W tym momencie obiekt jest w pełni użyteczne do przeniesienia.  
+- Otwarta: Obiekty przejście do tego stanu po zakończeniu procesu otwierania. Ten proces przejścia jest prawidłowy tylko w stanie otwarcia. W tym momencie obiekt jest w pełni użyteczne do przeniesienia.  
   
--   Zamknięcie: Stan przejścia obiektów do tego, kiedy <xref:System.ServiceModel.ICommunicationObject.Close%2A> jest wywoływana dla łagodne zamykanie. Ten proces przejścia jest prawidłowy tylko w stanie otwartym.  
+- Zamknięcie: Stan przejścia obiektów do tego, kiedy <xref:System.ServiceModel.ICommunicationObject.Close%2A> jest wywoływana dla łagodne zamykanie. Ten proces przejścia jest prawidłowy tylko w stanie otwartym.  
   
--   Zamknięte: W polu Zamknięto obiekty stanu nie są już można używać. Ogólnie rzecz biorąc większość konfiguracji jest nadal dostępne dla kontroli, ale nie można komunikować się. Ten stan jest odpowiednikiem zostanie usunięty.  
+- Zamknięte: W polu Zamknięto obiekty stanu nie są już można używać. Ogólnie rzecz biorąc większość konfiguracji jest nadal dostępne dla kontroli, ale nie można komunikować się. Ten stan jest odpowiednikiem zostanie usunięty.  
   
--   Wystąpił błąd: W stanie Faulted obiekty są dostępne do wglądu, ale można już używać. Gdy wystąpi błąd nieodwracalny, obiekt przechodzi w ten stan. Jedyne prawidłowe przejścia z tego stanu jest do `Closed` stanu.  
+- Wystąpił błąd: W stanie Faulted obiekty są dostępne do wglądu, ale można już używać. Gdy wystąpi błąd nieodwracalny, obiekt przechodzi w ten stan. Jedyne prawidłowe przejścia z tego stanu jest do `Closed` stanu.  
   
  Występują zdarzenia, które są aktywowane, dla każdego przejścia stanu. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Metodę można wywołać w dowolnym momencie i sprawia, że obiekt do którego nastąpi przejście od razu od bieżącego stanu w stanie zamkniętym. Wywoływanie <xref:System.ServiceModel.ICommunicationObject.Abort%2A> kończy się dowolnym niedokończona praca.  
   
@@ -70,13 +70,13 @@ Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedyn
 ## <a name="channel-factory-and-channel-listener"></a>Fabryka kanałów i odbiornika kanałów  
  Następnym krokiem w pisaniu niestandardowe transportu jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IChannelFactory> kanały klientów i z <xref:System.ServiceModel.Channels.IChannelListener> kanałach usługi. Warstwy kanału korzysta ze wzorca fabryki tworzenia kanałów. Usługi WCF zapewnia pomocnicy klasy bazowej dla tego procesu.  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject> Klasy implementuje <xref:System.ServiceModel.ICommunicationObject> oraz wymusza automatu stanów opisany wcześniej w kroku 2. 
+- <xref:System.ServiceModel.Channels.CommunicationObject> Klasy implementuje <xref:System.ServiceModel.ICommunicationObject> oraz wymusza automatu stanów opisany wcześniej w kroku 2. 
 
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> Klasy implementuje <xref:System.ServiceModel.Channels.CommunicationObject> i zapewnia ujednolicone klasa bazowa dla <xref:System.ServiceModel.Channels.ChannelFactoryBase> i <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Klasy działa w połączeniu z <xref:System.ServiceModel.Channels.ChannelBase>, która jest klasą bazową, która implementuje <xref:System.ServiceModel.Channels.IChannel>.  
+- <xref:System.ServiceModel.Channels.ChannelManagerBase> Klasy implementuje <xref:System.ServiceModel.Channels.CommunicationObject> i zapewnia ujednolicone klasa bazowa dla <xref:System.ServiceModel.Channels.ChannelFactoryBase> i <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Klasy działa w połączeniu z <xref:System.ServiceModel.Channels.ChannelBase>, która jest klasą bazową, która implementuje <xref:System.ServiceModel.Channels.IChannel>.  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase> Klasy implementuje <xref:System.ServiceModel.Channels.ChannelManagerBase> i <xref:System.ServiceModel.Channels.IChannelFactory> i konsoliduje `CreateChannel` przeciążeń w jednym `OnCreateChannel` metody abstrakcyjnej.  
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase> Klasy implementuje <xref:System.ServiceModel.Channels.ChannelManagerBase> i <xref:System.ServiceModel.Channels.IChannelFactory> i konsoliduje `CreateChannel` przeciążeń w jednym `OnCreateChannel` metody abstrakcyjnej.  
   
--   <xref:System.ServiceModel.Channels.ChannelListenerBase> Klasy implementuje <xref:System.ServiceModel.Channels.IChannelListener>. Ta odpowiada za zarządzanie stanem podstawowe.  
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> Klasy implementuje <xref:System.ServiceModel.Channels.IChannelListener>. Ta odpowiada za zarządzanie stanem podstawowe.  
   
  W tym przykładzie wdrożenie fabryki znajduje się w UdpChannelFactory.cs i implementacji odbiornik znajduje się w UdpChannelListener.cs. <xref:System.ServiceModel.Channels.IChannel> Implementacje są UdpOutputChannel.cs i UdpInputChannel.cs.  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Dodawanie standardowych powiązania  
  Nasz element powiązania może służyć w następujących dwóch sposobów:  
   
--   Za pośrednictwem powiązania niestandardowego: Powiązanie niestandardowe umożliwia użytkownikowi tworzenie własnych powiązania na podstawie dowolnego zestawu elementów wiązania.  
+- Za pośrednictwem powiązania niestandardowego: Powiązanie niestandardowe umożliwia użytkownikowi tworzenie własnych powiązania na podstawie dowolnego zestawu elementów wiązania.  
   
--   Za pomocą powiązania dostarczane przez system obejmuje to nasz element powiązania. WCF udostępnia wiele z tych powiązań zdefiniowanych przez system, takie jak `BasicHttpBinding`, `NetTcpBinding`, i `WsHttpBinding`. Każda z tych powiązań jest skojarzona z profilem dobrze zdefiniowane.  
+- Za pomocą powiązania dostarczane przez system obejmuje to nasz element powiązania. WCF udostępnia wiele z tych powiązań zdefiniowanych przez system, takie jak `BasicHttpBinding`, `NetTcpBinding`, i `WsHttpBinding`. Każda z tych powiązań jest skojarzona z profilem dobrze zdefiniowane.  
   
  Przykład implementuje powiązanie profilu w `SampleProfileUdpBinding`, która jest pochodną <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` Zawiera maksymalnie cztery elementy powiązania w niej: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, i `ReliableSessionBindingElement`.  
   

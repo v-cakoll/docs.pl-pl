@@ -3,11 +3,11 @@ title: Host usługi WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052615"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host usługi WCF (WcfSvcHost.exe)
 Host usług Windows Communication Foundation (WCF) (WcfSvcHost.exe) można uruchomić debugera programu Visual Studio (F5), aby automatycznie obsługiwać i przetestować usługę, w których zaimplementowano. Następnie można testować usługę za pomocą klienta Test WCF (WcfTestClient.exe) lub własnego klienta, aby znaleźć i naprawić wszelkie potencjalne błędy.  
@@ -72,32 +72,32 @@ Host usług Windows Communication Foundation (WCF) (WcfSvcHost.exe) można uruch
   
  **Host usługi WCF** okno główne zawiera dwa menu:  
   
--   **Plik**: Zawiera **Zamknij** i **zakończenia** poleceń. Po kliknięciu **Zamknij**, **Host usługi WCF** okno dialogowe zostanie zamknięte, ale usług w dalszym ciągu być obsługiwane. Po kliknięciu **zakończenia**, Host usługi WCF również zostanie zamknięta. Spowoduje to również zatrzymanie wszystkich hostowanych usług.  
+- **Plik**: Zawiera **Zamknij** i **zakończenia** poleceń. Po kliknięciu **Zamknij**, **Host usługi WCF** okno dialogowe zostanie zamknięte, ale usług w dalszym ciągu być obsługiwane. Po kliknięciu **zakończenia**, Host usługi WCF również zostanie zamknięta. Spowoduje to również zatrzymanie wszystkich hostowanych usług.  
   
--   **Pomoc**: Zawiera **o** polecenia, który zawiera informacje o wersji. Zawiera ona także **pomocy** polecenie, które można otworzyć pliku pomocy.  
+- **Pomoc**: Zawiera **o** polecenia, który zawiera informacje o wersji. Zawiera ona także **pomocy** polecenie, które można otworzyć pliku pomocy.  
   
  Głównym **Host usługi WCF** okno zawiera dwa obszary:  
   
--   Pierwszy obszar jest **usługi**. Zawiera listę, która zawiera podstawowe informacje o wszystkich usług. Następujące informacje:  
+- Pierwszy obszar jest **usługi**. Zawiera listę, która zawiera podstawowe informacje o wszystkich usług. Następujące informacje:  
   
-    -   **Usługa**: Wyświetla listę wszystkich usług.  
+    - **Usługa**: Wyświetla listę wszystkich usług.  
   
-    -   **Stan**: Wyświetla stan usługi. Prawidłowe wartości to "Uruchomiona", "Stopped" i "Error".  
+    - **Stan**: Wyświetla stan usługi. Prawidłowe wartości to "Uruchomiona", "Stopped" i "Error".  
   
-    -   **Adres metadanych**: Wyświetla adres metadanych usługi.  
+    - **Adres metadanych**: Wyświetla adres metadanych usługi.  
   
--   Drugi ma **dodatkowe informacje**. Wyświetla szczegółowy opis stan usługi, po wybraniu określonego wiersza usługi w **usługi** obszaru. Jeśli stan jest błąd, możesz wyświetlić pełną treść błędu na ekranie.  
+- Drugi ma **dodatkowe informacje**. Wyświetla szczegółowy opis stan usługi, po wybraniu określonego wiersza usługi w **usługi** obszaru. Jeśli stan jest błąd, możesz wyświetlić pełną treść błędu na ekranie.  
   
 ## <a name="stopping-wcf-service-host"></a>Zatrzymywanie hosta usługi WCF  
  Host usługi WCF można zamknąć następujące cztery sposoby:  
   
--   Zatrzymaj sesję debugowania w programie Visual Studio.  
+- Zatrzymaj sesję debugowania w programie Visual Studio.  
   
--   Wybierz **zakończenia** z **pliku** menu **Host usługi WCF** okna.  
+- Wybierz **zakończenia** z **pliku** menu **Host usługi WCF** okna.  
   
--   Wybierz **zakończenia** z menu kontekstowego w zasobniku Host usługi WCF w obszarze powiadomień systemu.  
+- Wybierz **zakończenia** z menu kontekstowego w zasobniku Host usługi WCF w obszarze powiadomień systemu.  
   
--   Jeśli jest używany, należy zamknąć klienta testowego WCF.  
+- Jeśli jest używany, należy zamknąć klienta testowego WCF.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Przy użyciu usługi hosta bez uprawnień administratora  
  Aby umożliwić użytkownikom bez uprawnień administratora do tworzenia usług WCF, (listę kontroli dostępu) jest tworzony dla przestrzeni nazw "http://+:8731/Design_Time_Addresses" podczas instalacji programu Visual Studio. Lista ACL jest równa (UI), która obejmuje wszystkie interaktywne użytkownicy zalogowani na maszynie. Administratorzy mogą dodawać lub usuwać użytkowników z tej listy ACL lub otwarcie dodatkowych portów. Ta lista ACL umożliwia użytkownikom używanie Host automatycznie usługi WCF (wcfSvcHost.exe) bez nadawania im uprawnień administratora.  

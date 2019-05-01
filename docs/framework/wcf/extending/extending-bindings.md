@@ -5,22 +5,22 @@ helpviewer_keywords:
 - extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
 ms.openlocfilehash: f631c5df13c5633c22ef1d7179a0b7d135797b3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967599"
 ---
 # <a name="extending-bindings"></a>Rozszerzanie powiązań
-Powiązania Określ transportu, kodowanie i protokół wymagane do połączenia z punktem końcowym. Rozszerzenia powiązania i powiązania niestandardowe implementowania niestandardowych komunikacji wymagane do obsługi funkcji aplikacji.  
+Powiązania określić transportu, kodowanie i protokół wymagane do połączenia z punktem końcowym. Rozszerzeń powiązania i powiązań niestandardowych implementacji niestandardowych komunikacji funkcje wymagane do obsługi funkcji aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Powiązania i elementy powiązań](../../../../docs/framework/wcf/extending/bindings-and-binding-elements.md)|Opis powiązania, elementy wiązania i sposób ich wykorzystania i rozszerzone.|  
-|[Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)|Informacje dotyczące używania <xref:System.ServiceModel.Channels.CustomBinding> klasy w celu utworzenia niestandardowego powiązania za pomocą elementów powiązania zdefiniowane przez system i innych firm.|  
-|[Tworzenie powiązań zdefiniowanych przez użytkownika](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)|Opisuje sposób tworzenia powiązania i elementy powiązań, które mogą być używane przez innych użytkowników.|  
+|[Powiązania i elementy powiązań](../../../../docs/framework/wcf/extending/bindings-and-binding-elements.md)|W tym artykule opisano powiązania, elementy powiązania i sposobu ich wykorzystania i rozszerzone.|  
+|[Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)|Opisuje sposób używania <xref:System.ServiceModel.Channels.CustomBinding> klasy w celu utworzenia niestandardowego powiązania za pomocą powiązania zdefiniowane przez system i innych elementów.|  
+|[Tworzenie powiązań zdefiniowanych przez użytkownika](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)|W tym artykule opisano sposób tworzenia powiązania i elementy powiązań, które mogą być używane przez inne osoby.|  
   
 ## <a name="reference"></a>Tematy pomocy  
   

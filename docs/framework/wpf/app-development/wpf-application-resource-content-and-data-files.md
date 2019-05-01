@@ -18,20 +18,20 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032256"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplikacje często są zależne od plików, które zawierają dane niewykonywalne, takich jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i audio. Windows Presentation Foundation (WPF) oferuje specjalne obsługę konfigurowania, identyfikowania i stosowania tych typów plików danych, które są wywoływane, pliki danych aplikacji. Ta obsługa dotyczy tego określonego zestawu typów plików danych aplikacji, w tym:  
   
--   **Pliki zasobów**: Pliki danych, które są kompilowane w plik wykonywalny lub biblioteka [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
+- **Pliki zasobów**: Pliki danych, które są kompilowane w plik wykonywalny lub biblioteka [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
   
--   **Pliki zawartości**: Autonomiczne pliki danych, których jawne skojarzenia z plikiem wykonywalnym [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
+- **Pliki zawartości**: Autonomiczne pliki danych, których jawne skojarzenia z plikiem wykonywalnym [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
   
--   **Witryna pochodzenia plików**: Autonomiczne pliki danych, które nie są skojarzone z plikiem wykonywalnym [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
+- **Witryna pochodzenia plików**: Autonomiczne pliki danych, które nie są skojarzone z plikiem wykonywalnym [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
   
  Jedną istotną różnicę się między tymi trzema typami plików jest, że pliki zasobów i pliki zawartości są określane w czasie kompilacji; zestaw ma jawne będzie o nich wiedział. Dla witryny pochodzenia plików, zespół może jednak zawierać nie znajomości na wszystkich lub niejawne informacji na temat za pomocą pakietu [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] odwołanie; w przypadku, nie ma żadnej gwarancji lokacji przywoływany plik pierwotny faktycznie istnieje.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59211929"
   
  Skorzystaj z zasobów plików, gdy:  
   
--   Nie potrzebujesz zaktualizować zawartość pliku zasobów, jest skompilowany w zestawie.  
+- Nie potrzebujesz zaktualizować zawartość pliku zasobów, jest skompilowany w zestawie.  
   
--   Celem jest uproszczenie złożoności dystrybucji aplikacji dzięki zmniejszeniu liczby zależnościach plików.  
+- Celem jest uproszczenie złożoności dystrybucji aplikacji dzięki zmniejszeniu liczby zależnościach plików.  
   
--   Musi być możliwy do zlokalizowania pliku danych aplikacji (zobacz [Przegląd lokalizacja i globalizacja WPF](../advanced/wpf-globalization-and-localization-overview.md)).  
+- Musi być możliwy do zlokalizowania pliku danych aplikacji (zobacz [Przegląd lokalizacja i globalizacja WPF](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
 >  Pliki zasobów, opisane w tej sekcji są inne niż pliki zasobów opisano w [zasoby XAML](../advanced/xaml-resources.md) i różni się od zasobów osadzony lub połączony opisanych w [zasobów zarządzania aplikacji (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -175,13 +175,13 @@ ms.locfileid: "59211929"
 ## <a name="site-of-origin-files"></a>Witryna pochodzenia plików  
  Pliki zasobów ma wyraźnej relacji z zestawów, które zostaną rozproszone obok, zgodnie z definicją <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>. Jednak istnieją konieczny może nawiązać albo niejawne lub nieistniejącą relację między zestawu i pliku danych aplikacji, w tym przypadku:  
   
--   Plik nie istnieje w czasie kompilacji.  
+- Plik nie istnieje w czasie kompilacji.  
   
--   Nie wiadomo, jakie pliki zestawu będzie wymagało do czasu wykonywania.  
+- Nie wiadomo, jakie pliki zestawu będzie wymagało do czasu wykonywania.  
   
--   Chcesz być w stanie zaktualizować pliki bez konieczności ponownego kompilowania zestawu, który jest skojarzony.  
+- Chcesz być w stanie zaktualizować pliki bez konieczności ponownego kompilowania zestawu, który jest skojarzony.  
   
--   Twoja aplikacja używa dużej ilości danych plików, takich jak audio i wideo, i chcesz tylko użytkowników, aby je pobrać, jeśli zdecydują się na.  
+- Twoja aplikacja używa dużej ilości danych plików, takich jak audio i wideo, i chcesz tylko użytkowników, aby je pobrać, jeśli zdecydują się na.  
   
  Istnieje możliwość ładowania tych typów plików przy użyciu tradycyjnych [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] systemów, takich jak schematy file:/// i http://.  
   

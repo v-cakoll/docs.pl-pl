@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
 ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032607"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Formułowanie połączeń i zapytań między produktami
 Poniższe przykłady pokazują, jak połączyć wyniki z wielu tabel.  

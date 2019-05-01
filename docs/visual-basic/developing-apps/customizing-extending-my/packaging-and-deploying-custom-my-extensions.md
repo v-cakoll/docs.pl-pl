@@ -7,15 +7,15 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014209"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Pakowanie i wdrażanie niestandardowych rozszerzeń My (Visual Basic)
 
-Visual Basic zapewnia łatwy sposób można wdrażać niestandardowe `My` rozszerzenia nazw przy użyciu szablonów programu Visual Studio. Jeśli tworzysz szablon projektu, dla którego Twoja `My` rozszerzenia są integralną częścią nowy typ projektu, możesz po prostu dołączyć niestandardowe `My` rozszerzenia kodu z projektem podczas eksportowania szablonu. Aby uzyskać więcej informacji na temat eksportowania szablonów projektu, zobacz [porady: Tworzenie szablonów projektów](/visualstudio/ide/how-to-create-project-templates).
+Visual Basic zapewnia łatwy sposób można wdrażać niestandardowe `My` rozszerzenia nazw przy użyciu szablonów programu Visual Studio. Jeśli tworzysz szablon projektu, dla którego Twoja `My` rozszerzenia są integralną częścią nowy typ projektu, możesz po prostu dołączyć niestandardowe `My` rozszerzenia kodu z projektem podczas eksportowania szablonu. Aby uzyskać więcej informacji na temat eksportowania szablonów projektu, zobacz [jak: Tworzenie szablonów projektów](/visualstudio/ide/how-to-create-project-templates).
 
 Jeśli niestandardowe `My` rozszerzenia znajduje się w pliku pojedynczego kodu, możesz wyeksportować plik jako szablon elementu, który użytkownicy mogą dodawać do dowolnego typu projektu języka Visual Basic. Następnie można dostosować szablon elementu, aby włączyć dodatkowe funkcje i działanie dla niestandardowych `My` rozszerzeń w projekcie Visual Basic. Te możliwości są następujące:
 
@@ -33,7 +33,7 @@ Pierwszym krokiem w tworzeniu pakietu wdrożeniowego dla niestandardowego `My` r
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Eksportuj Moje rozszerzenie przestrzeni nazw jako szablon elementu
 
-Po utworzeniu pliku z kodem, który zawiera Twoje `My` rozszerzenie przestrzeni nazw, możesz wyeksportować plik kodu jako szablonu elementu programu Visual Studio. Aby uzyskać instrukcje dotyczące sposobu eksportowania pliku jako szablon elementu programu Visual Studio, zobacz [porady: Tworzenie szablonów elementów](/visualstudio/ide/how-to-create-item-templates).
+Po utworzeniu pliku z kodem, który zawiera Twoje `My` rozszerzenie przestrzeni nazw, możesz wyeksportować plik kodu jako szablonu elementu programu Visual Studio. Aby uzyskać instrukcje dotyczące sposobu eksportowania pliku jako szablon elementu programu Visual Studio, zobacz [jak: Tworzenie szablonów elementu](/visualstudio/ide/how-to-create-item-templates).
 
 > [!NOTE]
 > Jeśli Twoje `My` rozszerzenie przestrzeni nazw ma zależność od określonego zestawu, można dostosować szablon elementu, aby automatycznie zainstalować swoje `My` rozszerzenie przestrzeni nazw, po dodaniu odwołania do tego zestawu. Co w efekcie można wykluczyć odwołanie do zestawu, eksportując plik kodu jako szablonu elementu programu Visual Studio.
@@ -60,8 +60,8 @@ Zawiera plik CustomData <`VBMyExtensionTemplate>` element, który zawiera atrybu
 
 |Atrybut|Opis|
 |---|---|
-|`ID`|Wymagane. Unikatowy identyfikator dla rozszerzenia. Jeśli rozszerzenie, które mają ten identyfikator został już dodany do projektu, użytkownik nie będzie monitowany ponownie dodać.|
-|`Version`|Wymagane. Numer wersji szablonu elementu.|
+|`ID`|Wymagana. Unikatowy identyfikator dla rozszerzenia. Jeśli rozszerzenie, które mają ten identyfikator został już dodany do projektu, użytkownik nie będzie monitowany ponownie dodać.|
+|`Version`|Wymagana. Numer wersji szablonu elementu.|
 |`AssemblyFullName`|Opcjonalna. Nazwa zestawu. Po dodaniu do projektu odwołanie do tego zestawu użytkownika zostanie wyświetlony monit Dodaj `My` rozszerzenia za pomocą tego szablonu elementu.|
 
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Dodaj \<CustomDataSignature > element pliku .vstemplate

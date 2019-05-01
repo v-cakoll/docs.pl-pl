@@ -3,11 +3,11 @@ title: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048289"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 Windows Communication Foundation (WCF) uwidacznia dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy Instrumentacji zarządzania Windows (WMI) WCF.  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) uwidacznia dane inspekcji usługi w czasi
   
      Ten skrypt programu PowerShell używa definicji języka SDDL (Security Descriptor), aby udzielić dostępu grupy wbudowane użytkowników do obszaru nazw WMI "główny/servicemodel". Określa następujące listy ACL:  
   
-    -   Wbudowanego konta administratora (BA) — już masz dostęp.  
+    - Wbudowanego konta administratora (BA) — już masz dostęp.  
   
-    -   (NS) — Usługa sieciowa ma już dostęp.  
+    - (NS) — Usługa sieciowa ma już dostęp.  
   
-    -   System lokalny (LS) - już masz dostęp.  
+    - System lokalny (LS) - już masz dostęp.  
   
-    -   Wbudowani użytkownicy — grupy, aby udzielić dostępu do.  
+    - Wbudowani użytkownicy — grupy, aby udzielić dostępu do.  
   
 #### <a name="to-grant-provider-registration-access"></a>Aby udzielić dostawcy dostępu rejestracji  
   

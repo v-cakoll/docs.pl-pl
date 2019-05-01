@@ -6,11 +6,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
 ms.openlocfilehash: f24ff05e48327c21c02eb92b07db17266f743a80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024615"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Instrukcje: Sprawdzanie poprawności ciągów reprezentujących daty lub godziny (Visual Basic)
 Poniższy kod ustawia przykład `Boolean` wartość, która wskazuje, czy ciąg reprezentuje prawidłowej daty i godziny.  

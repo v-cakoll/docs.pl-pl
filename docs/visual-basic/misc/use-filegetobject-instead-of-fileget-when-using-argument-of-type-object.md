@@ -3,11 +3,11 @@ title: Użyj "Filegetobject —" zamiast "FileGet", jeśli korzystasz z argument
 ms.date: 07/20/2015
 ms.assetid: 090b8088-895a-482a-9362-606596bac304
 ms.openlocfilehash: fdad64a4b35aa792c996d25a9fd72a9ce1126fbd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022548"
 ---
 # <a name="use-filegetobject-instead-of-fileget-when-using-argument-of-type-object"></a>Użyj "Filegetobject —" zamiast "FileGet", jeśli korzystasz z argumentu typu "Object"
 `FileGet` Metoda zawiera argument typu `Object`. `FileGetObject` powinny być używane zamiast `FileGet` Aby uniknąć niejednoznaczności.  

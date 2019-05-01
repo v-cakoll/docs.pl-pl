@@ -9,11 +9,11 @@ helpviewer_keywords:
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
 ms.openlocfilehash: 85de915f4dc9a79e0161411951062afbeb764513
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014469"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Uzyskiwanie dostępu do formularzy aplikacji (Visual Basic)
 `My.Forms` Obiekt zapewnia łatwy sposób uzyskać dostęp do wystąpienia każdego formularza Windows zadeklarowane w projekcie aplikacji. Można również użyć właściwości `My.Application` obiektu dostęp do ekranu powitalnego i formularza głównego aplikacji i Uzyskaj listę formularzy otwartych aplikacji.  

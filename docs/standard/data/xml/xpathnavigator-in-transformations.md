@@ -9,11 +9,11 @@ ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026743"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Klasa XPathNavigator w przekształceniach
 <xref:System.Xml.XPath.XPathNavigator> Klasy zapewnia dostęp losowy tylko do odczytu do danych i jest przeznaczony do użytku jako dane wejściowe rozszerzalny język arkusza stylów przekształcenia (XSLT). Jest wdrażana w <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, i <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> Opartą na modelu danych w sieci World Wide Web Consortium (W3C) zgodnie z opisem w sekcji 5 z zaleceniem XML Path Language (XPath).  
@@ -24,7 +24,7 @@ ms.locfileid: "46003987"
   
  <xref:System.Xml.XPath.XPathNavigator> Jest klasa na potrzeby Iterowanie fragmenty drzewa wynik. Poniższy przykład kodu tworzy wynikowego fragmentu drzewa w arkuszu stylów, wywołując funkcję z parametrem `fragment`, który zawiera kod XML.  
   
-## <a name="testxsl"></a>Test.xsl  
+## <a name="testxsl"></a>test.xsl  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -57,7 +57,7 @@ ms.locfileid: "46003987"
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a>Test.XML  
+## <a name="testxml"></a>test.xml  
   
 ```xml  
 <root>Some text</root>  

@@ -3,22 +3,22 @@ title: Przykład tabeli UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006450"
 ---
 # <a name="uritemplate-table-sample"></a>Przykład tabeli UriTemplate
 <xref:System.UriTemplateTable> Klasa udostępnia struktury tabeli asocjacyjnych słownika podobne do pracy z zestawem `UriTemplate` wystąpień. Określone Uniform Resource Identifier (URI) może zostać dopasowany efektywnie wszystkie szablony w tabeli i mogą być pobierane dane skojarzone z dopasowany szablon.  
   
  Niniejszy przykład pokazuje następujące kluczowe pojęcia związane z `UriTemplateTable` klasy:  
   
--   Składnia podczas tworzenia wystąpienia `UriTemplateTable`.  
+- Składnia podczas tworzenia wystąpienia `UriTemplateTable`.  
   
--   Wypełnianie `UriTemplateTable` zestaw par klucz/wartość.  
+- Wypełnianie `UriTemplateTable` zestaw par klucz/wartość.  
   
--   Dopasowywanie Release candidate URI względem tabeli przy użyciu <xref:System.UriTemplateTable.MatchSingle%2A>.  
+- Dopasowywanie Release candidate URI względem tabeli przy użyciu <xref:System.UriTemplateTable.MatchSingle%2A>.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   

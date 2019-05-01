@@ -3,11 +3,11 @@ title: Przykład integracji elementu SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
 ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007763"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Przykład integracji elementu SystemWebRouting
 W tym przykładzie przedstawiono warstwy obsługi integracji z klas w <xref:System.Web.Routing> przestrzeni nazw. Klasy w <xref:System.Web.Routing> przestrzeni nazw Zezwalaj aplikacji na używanie adresów URL, które nie odpowiadają bezpośrednio zasób fizyczny. Przy użyciu routingu w sieci Web umożliwia deweloperom tworzenie wirtualnych adresów dla protokołu HTTP, które następnie są mapowane z powrotem na rzeczywiste usługi WCF. Jest to przydatne, gdy usługa WCF muszą być obsługiwane bez konieczności fizyczny plik lub zasób lub usług muszą być dostępne z adresami URL, które nie zawierają plików, takich jak HTML lub .aspx. W tym przykładzie pokazano, jak wykorzystywać <xref:System.Web.Routing.RouteTable> klasy w celu utworzenia identyfikatorów URI wirtualnych mapowane na uruchamianie usługi zdefiniowane w pliku global.asax. 
@@ -58,13 +58,13 @@ W tym przykładzie może już być zainstalowany na tym komputerze. Przed kontyn
   
 3. Utwórz aplikację sieci Web w Menedżerze usług Internet Information Services (IIS).  
   
-    1.  Kliknij prawym przyciskiem myszy w Menedżerze usług IIS **domyślna witryna sieci Web** i wybierz **Dodawanie aplikacji**.  
+    1. Kliknij prawym przyciskiem myszy w Menedżerze usług IIS **domyślna witryna sieci Web** i wybierz **Dodawanie aplikacji**.  
   
-    2.  Aby uzyskać **alias**, wpisz `WebRoutingIntegration`.  
+    2. Aby uzyskać **alias**, wpisz `WebRoutingIntegration`.  
   
-    3.  Aby uzyskać **ścieżkę fizyczną**, wybierz folder usługi w projekcie.  
+    3. Aby uzyskać **ścieżkę fizyczną**, wybierz folder usługi w projekcie.  
   
-    4.  Naciśnij klawisz **OK**.  
+    4. Naciśnij klawisz **OK**.  
   
 4. Uruchom aplikację, klikając prawym przyciskiem myszy aplikację sieci Web i wybierając polecenie **Zarządzanie aplikacją** i następnie **Przeglądaj**.  
   

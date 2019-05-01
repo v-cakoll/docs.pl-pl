@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025460"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Typy konwerterów dla XAML — Omówienie
 Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z ciągu w znaczniku XAML, w szczególności obiekty wykresu obiektu. W programie .NET Framework XAML Services konwertera typów musi być klasą pochodzącą z <xref:System.ComponentModel.TypeConverter>. Niektóre konwertery również obsługuje XAML ścieżka zapisu i może służyć do serializacji obiektu do postaci ciągu w znacznikach serializacji. W tym temacie opisano, jak i kiedy są wywoływane konwerterów typów w XAML i zawiera porady, implementacja dla przesłonięć metod elementu <xref:System.ComponentModel.TypeConverter>.  
@@ -45,13 +45,13 @@ Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z
   
  <xref:System.ComponentModel.TypeConverter> definiuje cztery elementy członkowskie, które mają zastosowanie do konwersji na ciągi znaków i z ciągu w celu przetwarzania XAML:  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  Z tych składowych jest najważniejszą metodą <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>, która konwertuje ciąg wejściowy typ wymaganego obiektu. <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> Można zaimplementować metodę do konwertowania szerszego zakresu typów do typu miejsca docelowego konwertera. Dlatego może służyć do celów, które wykraczają poza XAML, takich jak Obsługa konwersji w czasie wykonywania. Jednak w przypadku użycia XAML, ścieżka kodu, która może przetwarzać <xref:System.String> dane wejściowe są ważne.  
   

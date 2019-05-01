@@ -3,11 +3,11 @@ title: Obsługa komunikatów zanieczyszczonych
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046445"
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył maksymalną liczbę prób dostarczenia do aplikacji. Ta sytuacja może wystąpić, gdy aplikacja w kolejce nie może przetworzyć komunikatu z powodu błędów. Aby spełniać wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty, w ramach transakcji. {Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, więc, że komunikat zostanie ponowiony w ramach nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może utknąć w pętli, odbierania i przerywanie ten sam komunikat, dopóki nie przekroczono maksymalną liczbę prób dostarczenia i wyniki Zarządzanie skażonymi komunikatami.  
@@ -19,27 +19,27 @@ A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył mak
 ## <a name="handling-poison-messages"></a>Obsługa wiadomości  
  W programie WCF Zarządzanie skażonymi komunikatami obsługi udostępnia mechanizm aplikacja odbierająca radzenia sobie z wiadomości, które nie mogą być wysyłane do aplikacji lub wiadomości, które są wysyłane do aplikacji, ale które nie mają być przetwarzane z powodu specyficznych dla aplikacji przyczyny. Obsługa skażonych komunikatów jest skonfigurowany za pomocą następujących właściwości we wszystkich dostępnych powiązania umieszczonych w kolejce:  
   
--   `ReceiveRetryCount`. Wartość całkowitą, która określa maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. Jest to wystarczające w przypadkach, gdzie natychmiastowe ponowienie próby rozwiązuje ten problem, takich jak z tymczasowego zakleszczenie w bazie danych.  
+- `ReceiveRetryCount`. Wartość całkowitą, która określa maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. Jest to wystarczające w przypadkach, gdzie natychmiastowe ponowienie próby rozwiązuje ten problem, takich jak z tymczasowego zakleszczenie w bazie danych.  
   
--   `MaxRetryCycles`. Wartość całkowitą, która określa maksymalną liczbę ponownych prób cyklów. Cykl składa się z przesyłania wiadomości z kolejki aplikacji, do podrzędnej kolejki ponawiania i po chwili można skonfigurować z kolejki podrzędnej ponownych prób do dostarczania ponownie w kolejce aplikacji. Wartość domyślna to 2. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], komunikat zostanie podjęta próba maksymalnie (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) razy. `MaxRetryCycles` jest ignorowana na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- `MaxRetryCycles`. Wartość całkowitą, która określa maksymalną liczbę ponownych prób cyklów. Cykl składa się z przesyłania wiadomości z kolejki aplikacji, do podrzędnej kolejki ponawiania i po chwili można skonfigurować z kolejki podrzędnej ponownych prób do dostarczania ponownie w kolejce aplikacji. Wartość domyślna to 2. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], komunikat zostanie podjęta próba maksymalnie (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) razy. `MaxRetryCycles` jest ignorowana na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. Czas opóźnienia między ponownych prób cyklów. Wartość domyślna to 30 minut. `MaxRetryCycles` i `RetryCycleDelay` razem zapewniają mechanizm, aby rozwiązać problem, w którym ponowienie próby po opóźnieniu okresowe rozwiąże problem. Na przykład obsługuje zablokowanego wiersza, ustaw w programie SQL Server do czasu zatwierdzenia transakcji.  
+- `RetryCycleDelay`. Czas opóźnienia między ponownych prób cyklów. Wartość domyślna to 30 minut. `MaxRetryCycles` i `RetryCycleDelay` razem zapewniają mechanizm, aby rozwiązać problem, w którym ponowienie próby po opóźnieniu okresowe rozwiąże problem. Na przykład obsługuje zablokowanego wiersza, ustaw w programie SQL Server do czasu zatwierdzenia transakcji.  
   
--   `ReceiveErrorHandling`. Wyliczenie, które wskazuje akcję do wykonania dla komunikatu, w którym wystąpiła awaria dostarczania po zostanie podjęta określona maksymalna liczba ponownych prób. Wartości może być usterka, listy, Odrzuć i przenieść. Opcja domyślna jest błędów.  
+- `ReceiveErrorHandling`. Wyliczenie, które wskazuje akcję do wykonania dla komunikatu, w którym wystąpiła awaria dostarczania po zostanie podjęta określona maksymalna liczba ponownych prób. Wartości może być usterka, listy, Odrzuć i przenieść. Opcja domyślna jest błędów.  
   
--   Fault. Ta opcja wysyła błędów do odbiornika, który spowodował `ServiceHost` do błędów. Komunikat przeznaczonego do usunięcia z kolejki aplikacji przez inny mechanizm zewnętrzny przed aplikacji mogą w dalszym ciągu przetwarzać komunikaty z kolejki.  
+- Fault. Ta opcja wysyła błędów do odbiornika, który spowodował `ServiceHost` do błędów. Komunikat przeznaczonego do usunięcia z kolejki aplikacji przez inny mechanizm zewnętrzny przed aplikacji mogą w dalszym ciągu przetwarzać komunikaty z kolejki.  
   
--   Upuść. Ta opcja umieszcza Zarządzanie skażonymi komunikatami, i, że komunikat nigdy nie jest dostarczony do aplikacji. Jeśli komunikat `TimeToLive` właściwość wygasła w tym momencie, a następnie może zostać wyświetlony komunikat w kolejce wiadomości utraconych nadawcy. W przeciwnym razie komunikat nie występować w dowolnym miejscu. Ta opcja oznacza, że użytkownik nie określił co należy zrobić, jeśli komunikat zostanie utracony.  
+- Upuść. Ta opcja umieszcza Zarządzanie skażonymi komunikatami, i, że komunikat nigdy nie jest dostarczony do aplikacji. Jeśli komunikat `TimeToLive` właściwość wygasła w tym momencie, a następnie może zostać wyświetlony komunikat w kolejce wiadomości utraconych nadawcy. W przeciwnym razie komunikat nie występować w dowolnym miejscu. Ta opcja oznacza, że użytkownik nie określił co należy zrobić, jeśli komunikat zostanie utracony.  
   
--   Odrzuć. Ta opcja jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. To powoduje, że usługi kolejkowania komunikatów (MSMQ) do odesłania negatywnego potwierdzenia do wysyłania menedżera kolejek, że aplikacja nie może odbierać wiadomości. Komunikat jest umieszczana w kolejce wiadomości utraconych Menedżer kolejki wysyłania.  
+- Odrzuć. Ta opcja jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. To powoduje, że usługi kolejkowania komunikatów (MSMQ) do odesłania negatywnego potwierdzenia do wysyłania menedżera kolejek, że aplikacja nie może odbierać wiadomości. Komunikat jest umieszczana w kolejce wiadomości utraconych Menedżer kolejki wysyłania.  
   
--   Przeniesienie. Ta opcja jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Powoduje to przeniesienie skażonych komunikatów do kolejki komunikatów poison do późniejszego przetwarzania przez aplikację do obsługi komunikatów poison. Kolejka komunikatów poison to kolejki podrzędnej kolejki aplikacji. Aplikacja Obsługa komunikatów poison może być usługi WCF, która odczytuje komunikaty z kolejki skażone. Skażone kolejki jest kolejki podrzędnej kolejki aplikacji i może zostać zlikwidowane jako net.msmq://\<*Nazwa maszyny*>/*applicationQueue*; skażone, gdzie  *Nazwa maszyny* to nazwa komputera, na którym znajduje się kolejka i *applicationQueue* jest nazwą kolejki specyficzne dla aplikacji.  
+- Przeniesienie. Ta opcja jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Powoduje to przeniesienie skażonych komunikatów do kolejki komunikatów poison do późniejszego przetwarzania przez aplikację do obsługi komunikatów poison. Kolejka komunikatów poison to kolejki podrzędnej kolejki aplikacji. Aplikacja Obsługa komunikatów poison może być usługi WCF, która odczytuje komunikaty z kolejki skażone. Skażone kolejki jest kolejki podrzędnej kolejki aplikacji i może zostać zlikwidowane jako net.msmq://\<*Nazwa maszyny*>/*applicationQueue*; skażone, gdzie  *Nazwa maszyny* to nazwa komputera, na którym znajduje się kolejka i *applicationQueue* jest nazwą kolejki specyficzne dla aplikacji.  
   
  Poniżej przedstawiono maksymalną liczbę prób dostarczenia komunikatu:  
   
--   ((ReceiveRetryCount+1) * (MaxRetryCycles + 1)) na [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+- ((ReceiveRetryCount+1) * (MaxRetryCycles + 1)) na [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
--   (ReceiveRetryCount + 1) na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- (ReceiveRetryCount + 1) na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 > [!NOTE]
 >  Brak ponownych prób są wprowadzane dla komunikatu, która jest dostarczana pomyślnie.  
@@ -52,9 +52,9 @@ A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył mak
   
  Usługi WCF oferuje dwa standardowe powiązania umieszczonych w kolejce:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innymi punktami końcowymi programu WCF z kolejki wykonywania.  
+- <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innymi punktami końcowymi programu WCF z kolejki wykonywania.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Powiązanie odpowiednie dla komunikacji z istniejącymi aplikacjami usługi kolejkowania komunikatów.  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Powiązanie odpowiednie dla komunikacji z istniejącymi aplikacjami usługi kolejkowania komunikatów.  
   
 > [!NOTE]
 >  Można zmienić właściwości w tych powiązań, w oparciu o wymagania usługi WCF. Całe Zarządzanie skażonymi komunikatami, mechanizm obsługi jest lokalny do aplikacji odbierającej. Ten proces jest niewidoczny dla aplikacji wysyłającej, chyba że aplikacja odbierająca ostatecznie zatrzymuje i wysyła negatywnego potwierdzenia do nadawcy. W takim przypadku wiadomość zostanie przeniesiona do kolejki utraconych wiadomości przez nadawcę.  
@@ -97,11 +97,11 @@ A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył mak
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 i Windows XP różnice  
  Jak wspomniano wcześniej, nie wszystkie ustawienia Obsługa komunikatów poison dotyczą [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Następujące kluczowe różnice między usługi kolejkowania komunikatów na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)], i [!INCLUDE[wv](../../../../includes/wv-md.md)] mają zastosowanie do obsługi komunikatów poison:  
   
--   Wiadomości usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podkolejkami, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują podkolejek. Podkolejki są używane w obsłudze poison komunikatów. Kolejki ponownych prób i skażone kolejki są podkolejkami do kolejki aplikacji, który jest tworzony na podstawie ustawień poison postępowanie. `MaxRetryCycles` Decyduje o ile ponów podkolejkami do utworzenia. W związku z tym podczas uruchamiania na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` są ignorowane i `ReceiveErrorHandling.Move` jest niedozwolone.  
+- Wiadomości usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podkolejkami, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują podkolejek. Podkolejki są używane w obsłudze poison komunikatów. Kolejki ponownych prób i skażone kolejki są podkolejkami do kolejki aplikacji, który jest tworzony na podstawie ustawień poison postępowanie. `MaxRetryCycles` Decyduje o ile ponów podkolejkami do utworzenia. W związku z tym podczas uruchamiania na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` są ignorowane i `ReceiveErrorHandling.Move` jest niedozwolone.  
   
--   Wiadomości usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje ujemne potwierdzenia, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują. Negatywnego potwierdzenia z Menedżera kolejki odbierającej powoduje, że Menedżer kolejki wysyłania umieścić odrzuconych komunikatów w kolejce wiadomości utraconych. W efekcie `ReceiveErrorHandling.Reject` nie jest dozwolona z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Wiadomości usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje ujemne potwierdzenia, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują. Negatywnego potwierdzenia z Menedżera kolejki odbierającej powoduje, że Menedżer kolejki wysyłania umieścić odrzuconych komunikatów w kolejce wiadomości utraconych. W efekcie `ReceiveErrorHandling.Reject` nie jest dozwolona z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Wiadomości usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podejmowana jest próba właściwości wiadomości, która utrzymuje liczbę razy dostarczanie komunikatów. Ta właściwość liczba przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Usługi WCF przechowuje licznik przerwań w pamięci, więc istnieje możliwość, że ta właściwość nie może zawierać dokładną wartość, gdy ten sam komunikat jest odczytywany przez więcej niż jednej usługi WCF w farmie.  
+- Wiadomości usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podejmowana jest próba właściwości wiadomości, która utrzymuje liczbę razy dostarczanie komunikatów. Ta właściwość liczba przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Usługi WCF przechowuje licznik przerwań w pamięci, więc istnieje możliwość, że ta właściwość nie może zawierać dokładną wartość, gdy ten sam komunikat jest odczytywany przez więcej niż jednej usługi WCF w farmie.  
   
 ## <a name="see-also"></a>Zobacz także
 

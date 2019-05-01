@@ -3,11 +3,11 @@ title: Opis uwierzytelniania HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918908"
 ---
 # <a name="understanding-http-authentication"></a>Opis uwierzytelniania HTTP
 Uwierzytelnianie to proces stwierdzić, czy klient jest uprawniona do dostępu do zasobu. Protokół HTTP obsługuje uwierzytelnianie jako środek negocjowania dostęp do bezpiecznych zasobów.  
@@ -29,11 +29,11 @@ Uwierzytelnianie to proces stwierdzić, czy klient jest uprawniona do dostępu d
 ## <a name="choosing-an-authentication-scheme"></a>Wybieranie schematu uwierzytelniania  
  Podczas wybierania potencjalnych schematów uwierzytelniania w przypadku serwera HTTP, kilka elementów, które należy rozważyć następujące:  
   
--   Należy rozważyć, czy zasób muszą być chronione. Za pomocą uwierzytelniania HTTP wymaga przesyłania większej ilości danych i ograniczyć współdziałania z klientami. Zezwalaj na dostęp anonimowy do zasobów, które nie muszą być chronione.  
+- Należy rozważyć, czy zasób muszą być chronione. Za pomocą uwierzytelniania HTTP wymaga przesyłania większej ilości danych i ograniczyć współdziałania z klientami. Zezwalaj na dostęp anonimowy do zasobów, które nie muszą być chronione.  
   
--   Jeśli zasób musi być chronione, należy wziąć pod uwagę schematy uwierzytelniania, które zapewniają wymaganego poziomu zabezpieczeń. Najsłabsza schemat uwierzytelniania standardowego omówionych w tym miejscu jest uwierzytelnianie podstawowe. Uwierzytelnianie podstawowe nie chroni poświadczenia użytkownika. Najsilniejszego schematu uwierzytelniania standardowego jest uwierzytelniania Negotiate, wynikiem protokołu Kerberos.  
+- Jeśli zasób musi być chronione, należy wziąć pod uwagę schematy uwierzytelniania, które zapewniają wymaganego poziomu zabezpieczeń. Najsłabsza schemat uwierzytelniania standardowego omówionych w tym miejscu jest uwierzytelnianie podstawowe. Uwierzytelnianie podstawowe nie chroni poświadczenia użytkownika. Najsilniejszego schematu uwierzytelniania standardowego jest uwierzytelniania Negotiate, wynikiem protokołu Kerberos.  
   
--   Serwer powinien nieobecne (w nagłówkach uwierzytelniania WWW) dowolny schemat, który nie jest przygotowana do akceptowania lub które nie odpowiednio zabezpieczyć chronionego zasobu. Klienci są swobodę wyboru między dowolnymi schematy uwierzytelniania, który przedstawia informacje o serwerze. Niektórych klientów wartość domyślna to schemat słabe uwierzytelnianie lub pierwszego schematu uwierzytelniania serwera na liście.  
+- Serwer powinien nieobecne (w nagłówkach uwierzytelniania WWW) dowolny schemat, który nie jest przygotowana do akceptowania lub które nie odpowiednio zabezpieczyć chronionego zasobu. Klienci są swobodę wyboru między dowolnymi schematy uwierzytelniania, który przedstawia informacje o serwerze. Niektórych klientów wartość domyślna to schemat słabe uwierzytelnianie lub pierwszego schematu uwierzytelniania serwera na liście.  
   
 ## <a name="see-also"></a>Zobacz także
 

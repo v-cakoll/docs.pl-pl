@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032347"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Przewodnik: hostowanie kontrolki Win32 w WPF
 Windows Presentation Foundation (WPF) zapewnia rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje w kodzie Win32, może być bardziej efektywne ponownie użyć przynajmniej część tego kodu w aplikacji WPF, a nie jego przepisania całkowicie. WPF zapewnia prosty mechanizm do obsługi oknie Win32, na stronie programu WPF.  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) zapewnia rozbudowane środowisko do tworze
   
 6. Obsługuj wybrane komunikaty wysyłane do okna hosta, takich jak powiadomienia z formantów podrzędnych. Istnieją dwa sposoby, aby to zrobić.  
   
-    -   Jeśli wolisz do obsługi wiadomości w klasie hostingu, Zastąp <xref:System.Windows.Interop.HwndHost.WndProc%2A> metody <xref:System.Windows.Interop.HwndHost> klasy.  
+    - Jeśli wolisz do obsługi wiadomości w klasie hostingu, Zastąp <xref:System.Windows.Interop.HwndHost.WndProc%2A> metody <xref:System.Windows.Interop.HwndHost> klasy.  
   
-    -   Jeśli chcesz mieć WPF obsługi komunikatów, obsługa <xref:System.Windows.Interop.HwndHost> klasy <xref:System.Windows.Interop.HwndHost.MessageHook> zdarzenia w swojej związanym z kodem. To zdarzenie występuje dla każdego komunikatu odebranego przez okno hostowanej. Jeśli ta opcja jest wybrana, nadal musisz przesłonić <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ale wystarczy tylko minimalne implementacji.  
+    - Jeśli chcesz mieć WPF obsługi komunikatów, obsługa <xref:System.Windows.Interop.HwndHost> klasy <xref:System.Windows.Interop.HwndHost.MessageHook> zdarzenia w swojej związanym z kodem. To zdarzenie występuje dla każdego komunikatu odebranego przez okno hostowanej. Jeśli ta opcja jest wybrana, nadal musisz przesłonić <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ale wystarczy tylko minimalne implementacji.  
   
 7. Zastąp <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> i <xref:System.Windows.Interop.HwndHost.WndProc%2A> metody <xref:System.Windows.Interop.HwndHost>. Konieczne jest przesłonięcie tych metod w celu zaspokojenia <xref:System.Windows.Interop.HwndHost> kontraktu, ale może być tylko konieczne podanie minimalny implementacji.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) zapewnia rozbudowane środowisko do tworze
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementowanie komunikacji między formantem i strony  
  Kontrolki można manipulować wysyłając komunikaty Windows. Kontrolki powiadamia, gdy użytkownik wchodzi w interakcję z nią przez wysłanie powiadomienia do okna hosta. [Hosting kontrolki ListBox Win32 w WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) przykład obejmuje interfejs użytkownika, który zawiera kilka przykładów jak to działa:  
   
--   Dołącz element do listy.  
+- Dołącz element do listy.  
   
--   Usuń wybrany element z listy  
+- Usuń wybrany element z listy  
   
--   Wyświetl tekst aktualnie wybranego elementu.  
+- Wyświetl tekst aktualnie wybranego elementu.  
   
--   Wyświetl liczbę elementów na liście.  
+- Wyświetl liczbę elementów na liście.  
   
  Użytkownik może również wybrać element w polu listy, klikając ją, tak samo, jak w przypadku konwencjonalnych aplikacji Win32. Dane wyświetlane aktualizowane wówczas, gdy użytkownik zmieni stan pola listy, wybierając, dodając lub dołączanie elementu.  
   

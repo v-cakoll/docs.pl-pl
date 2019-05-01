@@ -3,11 +3,11 @@ title: Przykład rozszerzeń z typowaniem luźnym
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006580"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Przykład rozszerzeń z typowaniem luźnym
 Modelu obiektu syndykacji programu zawiera, zaawansowana obsługa Praca z danymi rozszerzenia — informacje, które są obecne w kanał w reprezentacji XML, ale nie zostały jawnie udostępnianych przez klasy takie jak <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem>. W tym przykładzie przedstawiono podstawowe techniki do pracy z danymi rozszerzenia.  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  Ten dokument zawiera następujące elementy danych rozszerzenia:  
   
--   `myAttribute` Atrybutu `<feed>` elementu.  
+- `myAttribute` Atrybutu `<feed>` elementu.  
   
--   `<simpleString>` element.  
+- `<simpleString>` element.  
   
--   `<DataContractExtension>` element.  
+- `<DataContractExtension>` element.  
   
--   `<XmlSerializerExtension>` element.  
+- `<XmlSerializerExtension>` element.  
   
--   `<xElementExtension>` element.  
+- `<xElementExtension>` element.  
   
 ## <a name="writing-extension-data"></a>Zapisywanie danych rozszerzenia  
  Atrybut rozszerzenia są tworzone przez dodanie pozycji do <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> kolekcji, jak pokazano w poniższym przykładowym kodzie.  

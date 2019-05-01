@@ -3,11 +3,11 @@ title: Instrukcje dotyczące hostowania internetowej usługi informacyjnej
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954859"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instrukcje dotyczące hostowania internetowej usługi informacyjnej
 Aby uruchomić przykłady, które są hostowane przez Internetowe usługi informacyjne (IIS), upewnij się, że usługi IIS został poprawnie zainstalowany i działa.  
@@ -46,13 +46,13 @@ Aby uruchomić przykłady, które są hostowane przez Internetowe usługi inform
   
 8. Upewnij się, że wybrane są następujące elementy:  
   
-    1.  **Rozszerzalność architektury .NET**  
+    1. **Rozszerzalność architektury .NET**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **Rozszerzenia ISAPI**  
+    3. **Rozszerzenia ISAPI**  
   
-    4.  **Filtry ISAPI**  
+    4. **Filtry ISAPI**  
   
 9. W obszarze elementu etykietą **usługi World Wide Web**, rozwiń węzeł **wspólne funkcje Http**.  
   
@@ -104,13 +104,13 @@ Aby uruchomić przykłady, które są hostowane przez Internetowe usługi inform
   
 8. Upewnij się, że wybrane są następujące elementy:  
   
-    1.  **Rozszerzalność architektury .NET**  
+    1. **Rozszerzalność architektury .NET**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **Rozszerzenia ISAPI**  
+    3. **Rozszerzenia ISAPI**  
   
-    4.  **Filtry ISAPI**  
+    4. **Filtry ISAPI**  
   
 9. Rozwiń element etykietami **narzędzia zarządzania siecią Web**, a następnie wybierz pozycję **Konsola zarządzania usługami IIS**.  
   

@@ -3,11 +3,11 @@ title: Integracja buforowania platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002732"
 ---
 # <a name="aspnet-caching-integration"></a>Integracja buforowania platformy ASP.NET
 Niniejszy przykład pokazuje sposób wykorzystywania wyjściowej pamięci podręcznej platformy ASP.NET przy użyciu modelu programowania protokołu HTTP sieci WEB WCF. Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych platformy ASP.NET.  
@@ -34,11 +34,11 @@ Niniejszy przykład pokazuje sposób wykorzystywania wyjściowej pamięci podrę
 ## <a name="to-run-the-sample"></a>Aby uruchomić przykład  
  Przykład obejmuje trzy projekty:  
   
--   **Usługa**: Projekt aplikacji sieci Web, która obejmuje usługi HTTP programu WCF hostowanych w programie ASP.NET.  
+- **Usługa**: Projekt aplikacji sieci Web, która obejmuje usługi HTTP programu WCF hostowanych w programie ASP.NET.  
   
--   **Klient**: Projekt aplikacji konsoli, która sprawia, że wywołań do usługi.  
+- **Klient**: Projekt aplikacji konsoli, która sprawia, że wywołań do usługi.  
   
--   **Typowe**: Biblioteki udostępnionej, który zawiera typ klienta używany przez klienta i usługi.  
+- **Typowe**: Biblioteki udostępnionej, który zawiera typ klienta używany przez klienta i usługi.  
   
  Po uruchomieniu aplikacji konsolowej klienta klient wysyła żądania do usługi i zapisuje odpowiednie informacje z odpowiedzi w oknie konsoli.  
   

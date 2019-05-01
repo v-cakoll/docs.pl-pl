@@ -5,11 +5,11 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
 ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909795"
 ---
 # <a name="strong-naming"></a>Silne nazewnictwo
 

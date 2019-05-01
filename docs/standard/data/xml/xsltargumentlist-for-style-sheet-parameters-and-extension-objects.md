@@ -9,11 +9,11 @@ ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026612"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
 <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera rozszerzalny język arkusza stylów dla parametrów przekształcenia (XSLT) i obiekty rozszerzeń XSLT. Przy przekazywaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenie obiekty mogą być wywoływane z arkuszy stylów.  
@@ -25,13 +25,13 @@ ms.locfileid: "59322412"
   
  Poniżej przedstawiono zalety przekazywania obiektu, a nie przy użyciu osadzonych skryptów:  
   
--   Zapewnia lepszą hermetyzacji i ponowne użycie klas.  
+- Zapewnia lepszą hermetyzacji i ponowne użycie klas.  
   
--   Umożliwia arkusze stylów była mniejsza i będzie łatwiejszy w utrzymaniu.  
+- Umożliwia arkusze stylów była mniejsza i będzie łatwiejszy w utrzymaniu.  
   
--   Program obsługuje wywoływania metod w klasach należące do przestrzeni nazw, innym niż te zdefiniowane w zestawie obsługiwanych <xref:System> przestrzeni nazw.  
+- Program obsługuje wywoływania metod w klasach należące do przestrzeni nazw, innym niż te zdefiniowane w zestawie obsługiwanych <xref:System> przestrzeni nazw.  
   
--   Obsługuje przekazywanie fragmenty drzewa wynik do arkusza stylów z użyciem <xref:System.Xml.XPath.XPathNodeIterator>.  
+- Obsługuje przekazywanie fragmenty drzewa wynik do arkusza stylów z użyciem <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="xslt-style-sheet-parameters"></a>Parametry arkusza stylów XSLT  
  Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody. Kwalifikowana nazwa i identyfikator (URI nazw) są skojarzone z obiektem parametrów w tym czasie.  

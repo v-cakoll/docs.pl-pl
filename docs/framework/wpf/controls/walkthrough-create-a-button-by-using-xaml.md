@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024019"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Przewodnik: Tworzenie przycisku przy użyciu języka XAML
 Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do użycia w aplikacji Windows Presentation Foundation (WPF). W tym przewodniku używa szablonu i style w celu utworzenia zasobu dostosowany przycisk, który umożliwia oddzielenie logiki przycisk od deklaracji przycisku i ponowne użycie kodu. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -421,15 +421,15 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
 ## <a name="summary"></a>Podsumowanie  
  W tym przewodniku wykonywane są następujące Ćwiczenia:  
   
--   Docelowe <xref:System.Windows.Style> z typem obiektu (<xref:System.Windows.Controls.Button>).  
+- Docelowe <xref:System.Windows.Style> z typem obiektu (<xref:System.Windows.Controls.Button>).  
   
--   Podstawowe właściwości przycisków w całej aplikacji, używając kontrolowane <xref:System.Windows.Style>.  
+- Podstawowe właściwości przycisków w całej aplikacji, używając kontrolowane <xref:System.Windows.Style>.  
   
--   Utworzone zasoby, takie jak gradientów do użycia dla wartości właściwości <xref:System.Windows.Style> metod ustawiających.  
+- Utworzone zasoby, takie jak gradientów do użycia dla wartości właściwości <xref:System.Windows.Style> metod ustawiających.  
   
--   Dostosować wygląd przycisków w całej aplikacji, stosując szablon do przycisków.  
+- Dostosować wygląd przycisków w całej aplikacji, stosując szablon do przycisków.  
   
--   Dostosowywać zachowanie dla przycisków w odpowiedzi na działanie użytkownika (takie jak <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, i <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) które zawarte efektów animacji.  
+- Dostosowywać zachowanie dla przycisków w odpowiedzi na działanie użytkownika (takie jak <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, i <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) które zawarte efektów animacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

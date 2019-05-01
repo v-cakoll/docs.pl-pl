@@ -1,5 +1,5 @@
 ---
-title: Wybieranie pomiędzy DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo
+title: Wybieranie pomiędzy elementem DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026565"
 ---
-# <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Wybieranie pomiędzy DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo
+# <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Wybieranie pomiędzy elementem DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo
 
 Aplikacje platformy .NET, które używają informacji daty i godziny są bardzo zróżnicowane i tych informacji można użyć na kilka sposobów. Typowe zastosowania informacji daty i godziny obejmują co najmniej jeden z następujących czynności:
 

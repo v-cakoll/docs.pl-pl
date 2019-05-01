@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010035"
 ---
 # <a name="metafiles-in-gdi"></a>Metapliki w GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia <xref:System.Drawing.Imaging.Metafile> klasy, dzięki czemu mogą rejestrować i wyświetlanie metaplików. Metaplik, nazywany również obrazem wektora jest obraz, który jest przechowywany jako sekwencja rysowania poleceń i ustawień. Polecenia i ustawienia są rejestrowane w <xref:System.Drawing.Imaging.Metafile> obiektu, które mogą być przechowywane w pamięci lub zapisany do pliku lub strumienia.  
@@ -22,11 +22,11 @@ ms.locfileid: "59119863"
 ## <a name="metafile-formats"></a>Formaty metaplików  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można wyświetlić metapliki, które były przechowywane w następujących formatach:  
   
--   Windows metaplików (WMF)  
+- Windows metaplików (WMF)  
   
--   Rozszerzony metaplik (EMF)  
+- Rozszerzony metaplik (EMF)  
   
--   EMF+  
+- EMF+  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można rejestrować metapliki format EMF i EMF +, ale nie w formacie programu WMF.  
   

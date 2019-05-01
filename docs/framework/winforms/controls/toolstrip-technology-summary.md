@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009490"
 ---
 # <a name="toolstrip-technology-summary"></a>Podsumowanie informacji o technologii formantów ToolStrip
 Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które obsługują jego użycia.  
@@ -25,23 +25,23 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które 
 ## <a name="background"></a>Tło  
  Za pomocą `ToolStrip` kontrolki i ich skojarzonych klas, można utworzyć funkcji zaawansowanych narzędzi, który ma spójny i profesjonalny wygląd i zachowanie. `ToolStrip` Kontrolki i klasy oferują następujące udoskonalenia przez poprzednie kontrolki:  
   
--   Bardziej spójny model zdarzeń.  
+- Bardziej spójny model zdarzeń.  
   
--   Bardziej spójne zachowanie czasu projektowania, który zawiera listy zadań i edytory kolekcji elementów.  
+- Bardziej spójne zachowanie czasu projektowania, który zawiera listy zadań i edytory kolekcji elementów.  
   
--   Niestandardowe renderowanie z `ToolStripManager` i `ToolStripRenderer`.  
+- Niestandardowe renderowanie z `ToolStripManager` i `ToolStripRenderer`.  
   
--   Rafting (udostępnianie poziomą lub pionową miejsca w obszarze Narzędzia, gdy jest zadokowany) za pomocą wbudowanego `ToolStripContainer` i `ToolStripPanel`.  
+- Rafting (udostępnianie poziomą lub pionową miejsca w obszarze Narzędzia, gdy jest zadokowany) za pomocą wbudowanego `ToolStripContainer` i `ToolStripPanel`.  
   
--   W czasie projektowania i środowiska wykonawczego zmiany kolejności elementów mających <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> właściwości.  
+- W czasie projektowania i środowiska wykonawczego zmiany kolejności elementów mających <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> właściwości.  
   
--   Relokacja elementów, które mają menu przepełnienia z <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> właściwości.  
+- Relokacja elementów, które mają menu przepełnienia z <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> właściwości.  
   
--   Lokalizacja formantu całkowicie można skonfigurować za pomocą `ToolStripContainer`, `ToolStripPanel`, i `ToolStripContentPanel`.  
+- Lokalizacja formantu całkowicie można skonfigurować za pomocą `ToolStripContainer`, `ToolStripPanel`, i `ToolStripContentPanel`.  
   
--   Hosting `ToolStrip`, tradycyjnych lub niestandardowych formantów, za pomocą `ToolStripControlHost`.  
+- Hosting `ToolStrip`, tradycyjnych lub niestandardowych formantów, za pomocą `ToolStripControlHost`.  
   
--   Scalanie `ToolStrip` kontrolki przy użyciu `ToolStripPanel`.  
+- Scalanie `ToolStrip` kontrolki przy użyciu `ToolStripPanel`.  
   
  `ToolStrip` jest rozszerzalny klasę bazową dla `MenuStrip`, `ContextMenuStrip`, i `StatusStrip`. Kontrolki te są <xref:System.Windows.Forms.ToolStripItem> kontenerów, które dziedziczą wspólnego zachowania i obsługa zdarzeń rozszerzonych tak, aby każda implementacja zajmuje się zachowanie, które jest odpowiednie dla niego. Formanty, które wynikają z <xref:System.Windows.Forms.ToolStripItem> są wymienione w poniższej tabeli. Podstawa `ToolStrip` klasa obsługuje zdarzenia przeciągania i upuszczania dla tych formantów, dane wejściowe użytkownika i rysowania.  
   
@@ -63,26 +63,26 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które 
 ### <a name="task-dialog-boxes"></a>Okno dialogowe zadań  
  W programie Visual Studio kliknięcie tagu inteligentnego na formantu w Projektancie Wyświetla listę zadań wygodny dostęp do wielu często używanych poleceń.  
   
--   [MenuStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [ToolStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [ToolStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [ContextMenuStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [ContextMenuStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [StatusStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [StatusStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [ToolStripContainer — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [ToolStripContainer — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Edytory kolekcji elementów  
  W programie Visual Studio, po kliknięciu **Edytuj elementy** zadania listy lub kliknij prawym przyciskiem myszy formant, a następnie wybierz pozycję **Edytuj elementy** w menu skrótów edytora kolekcji dla formantu jest wyświetlany. Edytory kolekcji umożliwiają dodawanie, usuwanie i zmienić kolejność elementów, które zawierają kontrolki. Można również wyświetlanie i zmiana właściwości formantu i kontrolki elementów.  
   
--   [MenuStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [StatusStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [ContextMenuStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [Edytor kolekcji elementów ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [Edytor kolekcji elementów ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Hosting kontrolek  
  <xref:System.Windows.Forms.ToolStripControlHost> Klasa udostępnia wbudowane otoki <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, i <xref:System.Windows.Forms.ToolStripProgressBar> kontrolki. Możesz również hostować innych istniejących lub kontrolki COM w <xref:System.Windows.Forms.ToolStripControlHost>.  

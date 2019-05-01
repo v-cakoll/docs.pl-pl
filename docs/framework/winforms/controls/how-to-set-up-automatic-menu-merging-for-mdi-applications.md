@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
 ms.openlocfilehash: 33e07bb655d81c6a802ebdce871a2fed845a5c96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013026"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Instrukcje: konfigurowanie automatycznego scalania menu dla aplikacji MDI
 Poniższa procedura zawiera podstawowe kroki konfiguracji automatycznego scalenia w aplikacji interfejsu wielu dokumentów (MDI) za pomocą <xref:System.Windows.Forms.MenuStrip>.  

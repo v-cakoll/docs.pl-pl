@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022353"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Wprowadzenie do COM Interop (Visual Basic)
 Component Object Model (COM) umożliwia obiektu udostępnić swoje funkcje z innymi składnikami i umożliwia obsługę aplikacji. Gdy obiekty COM zostały podstawowe znaczenie dla Windows programowania przez wiele lat, aplikacje przeznaczone do środowisko uruchomieniowe języka wspólnego (CLR) oferują wiele zalet.  
@@ -28,15 +28,15 @@ Component Object Model (COM) umożliwia obiektu udostępnić swoje funkcje z inn
 ## <a name="type-libraries-and-assembly-manifests"></a>Manifesty zestawów i bibliotek typów  
  Biblioteki typów opis właściwości obiektów COM, takich jak nazwy elementów członkowskich i typy danych. Manifesty pełnią taką samą funkcję, aby uzyskać [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji. Ulepszenia obejmują następujące informacje:  
   
--   Tożsamość zestawu, wersji, kultury i podpisu cyfrowego.  
+- Tożsamość zestawu, wersji, kultury i podpisu cyfrowego.  
   
--   Pliki, które tworzą implementację zespołu.  
+- Pliki, które tworzą implementację zespołu.  
   
--   Typy i zasoby wchodzące w skład zestawu. W tym te, które są eksportowane z niego.  
+- Typy i zasoby wchodzące w skład zestawu. W tym te, które są eksportowane z niego.  
   
--   Zależności kompilacji od innych zestawów.  
+- Zależności kompilacji od innych zestawów.  
   
--   Uprawnienia wymagane dla zestawu, by działała poprawnie.  
+- Uprawnienia wymagane dla zestawu, by działała poprawnie.  
   
  Aby uzyskać więcej informacji na temat zestawów i manifesty, zobacz [zestawy na platformie .NET](../../../standard/assembly/index.md).  
   

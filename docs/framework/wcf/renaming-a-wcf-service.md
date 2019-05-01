@@ -3,21 +3,21 @@ title: Zmienianie nazwy usługi WCF
 ms.date: 03/30/2017
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
 ms.openlocfilehash: a215523b92757e3bde1dae2e50de22169020e870
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955145"
 ---
 # <a name="renaming-a-wcf-service"></a>Zmienianie nazwy usługi WCF
 W tym temacie opisano, jak można zmienić nazwy usługi Windows Communication Foundation (WCF).  
   
 ## <a name="renaming-a-wcf-service"></a>Zmienianie nazwy usługi WCF  
- Wykonaj poniższe kroki, aby zmienić nazwę usługi w szablonie usługi Windows Communication Foundation (WCF)  
+ Wykonaj poniższe kroki, aby zmienić nazwy usługi w szablonie usługi Windows Communication Foundation (WCF)  
   
--   Zmień nazwę klasy, która implementuje usługę.  
+- Zmień nazwę klasy, która implementuje usługę.  
   
--   W pliku konfiguracji usługi Zmień nazwę usługi na nową nazwę, którą wybrano, jak wskazano w poniższym przykładzie. Może to być plik konfiguracji pliku app.config lub web.config, w zależności od modelu hostingu.  
+- W pliku konfiguracji usługi należy zmienić nazwy usługi na nową nazwę, które zostały wybrane, jak wskazano w poniższym przykładzie. Plik konfiguracji może być plik app.config lub web.config, w zależności od modelu hostingu.  
   
 ```xml  
 <system.servicemodel>  
@@ -28,7 +28,7 @@ W tym temacie opisano, jak można zmienić nazwy usługi Windows Communication F
 </system.servicemodel>  
 ```  
   
--   Czy usługa jest webhosted, używa plik *.svc. Otwórz plik svc i zmodyfikować nazwę usługi, jak wskazano w poniższym przykładzie. Ten krok nie jest konieczne własnym obsługiwanych aplikacji, ponieważ nie ma żadnego pliku svc.  
+- Jeśli usługa jest webhosted, używa pliku *.svc. Otwórz plik svc i zmodyfikuj nazwę usługi, jak wskazano w poniższym przykładzie. Ten krok nie jest niezbędne do samodzielnie hostowanej aplikacji, ponieważ plik svc nie istnieje.  
   
 ```  
 <%@ ServiceHost Service="WcfService.NewName">  
@@ -36,11 +36,11 @@ W tym temacie opisano, jak można zmienić nazwy usługi Windows Communication F
   
 ## <a name="renaming-a-wcf-service-contract"></a>Zmiana nazwy kontraktu usługi WCF  
   
--   Wykonaj poniższe kroki, aby zmienić nazwę kontraktu usługi  
+- Wykonaj następujące kroki, aby zmienić nazwę kontraktu usługi  
   
--   Zmień nazwę kontraktu usługi.  
+- Zmień nazwę kontraktu usługi.  
   
--   W pliku konfiguracji usługi należy zmienić nazwę kontraktu usługi na nową nazwę, którą wybrano, jak wskazano w poniższym przykładzie. Może to być plik konfiguracji pliku app.config lub web.config, w zależności od modelu hostingu.  
+- W pliku konfiguracji usługi należy zmienić nazwy kontraktu usługi na nową nazwę, które zostały wybrane, jak wskazano w poniższym przykładzie. Plik konfiguracji może być plik app.config lub web.config, w zależności od modelu hostingu.  
   
 ```xml  
 <system.servicemodel>  

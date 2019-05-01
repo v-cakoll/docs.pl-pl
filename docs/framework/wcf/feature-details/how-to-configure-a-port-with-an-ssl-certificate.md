@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047969"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Instrukcje: konfigurowanie portu z certyfikatem SSL
 Podczas tworzenia własnego usługi Windows Communication Foundation (WCF) z <xref:System.ServiceModel.WSHttpBinding> zabezpieczenia transportu używa klasy, należy również skonfigurować port, za pomocą certyfikatu X.509. Jeśli nie tworzysz własne usługi, możesz hostować usługi w Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -27,15 +27,15 @@ Podczas tworzenia własnego usługi Windows Communication Foundation (WCF) z <xr
   
  W tym temacie opisano sposób wykonania kilku procedur:  
   
--   Określanie konfiguracji portu z bieżącego komputera.  
+- Określanie konfiguracji portu z bieżącego komputera.  
   
--   Pobieranie odcisku palca certyfikatu (wymagane dla dwóch poniższych procedur).  
+- Pobieranie odcisku palca certyfikatu (wymagane dla dwóch poniższych procedur).  
   
--   Powiązanie certyfikatu SSL z konfiguracji portów.  
+- Powiązanie certyfikatu SSL z konfiguracji portów.  
   
--   Powiązanie certyfikatu SSL z konfiguracji portów i obsługi certyfikatów klienta.  
+- Powiązanie certyfikatu SSL z konfiguracji portów i obsługi certyfikatów klienta.  
   
--   Usuwanie certyfikatu SSL z numeru portu.  
+- Usuwanie certyfikatu SSL z numeru portu.  
   
  Należy pamiętać, że modyfikowanie certyfikaty przechowywane na komputerze wymaga uprawnień administracyjnych.  
   
@@ -71,9 +71,9 @@ Podczas tworzenia własnego usługi Windows Communication Foundation (WCF) z <xr
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   **-I** przełącznik ma składnię `IP`:`port` i powoduje, że narzędzie, aby ustawić certyfikat z portem 8012 komputera. Opcjonalnie cztery zera, które poprzedzają numer można również zastąpić rzeczywistego adresu IP komputera.  
+    - **-I** przełącznik ma składnię `IP`:`port` i powoduje, że narzędzie, aby ustawić certyfikat z portem 8012 komputera. Opcjonalnie cztery zera, które poprzedzają numer można również zastąpić rzeczywistego adresu IP komputera.  
   
-    -   **-H** przełącznik określa odcisk palca certyfikatu.  
+    - **-H** przełącznik określa odcisk palca certyfikatu.  
   
 2. W [!INCLUDE[wv](../../../../includes/wv-md.md)], użyj narzędzia Netsh.exe, jak pokazano w poniższym przykładzie.  
   
@@ -81,11 +81,11 @@ Podczas tworzenia własnego usługi Windows Communication Foundation (WCF) z <xr
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   **Certhash** parametr określa odcisk palca certyfikatu.  
+    - **Certhash** parametr określa odcisk palca certyfikatu.  
   
-    -   **Ipport** parametr określa adres IP i port, a funkcje podobnie jak **-i** przełącznika narzędzia Httpcfg.exe opisem.  
+    - **Ipport** parametr określa adres IP i port, a funkcje podobnie jak **-i** przełącznika narzędzia Httpcfg.exe opisem.  
   
-    -   **Appid** parametru jest identyfikatorem GUID, który może służyć do identyfikowania będąca właścicielem aplikacji.  
+    - **Appid** parametru jest identyfikatorem GUID, który może służyć do identyfikowania będąca właścicielem aplikacji.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Powiąż certyfikat SSL na numer portu i obsługują certyfikaty klientów  
   

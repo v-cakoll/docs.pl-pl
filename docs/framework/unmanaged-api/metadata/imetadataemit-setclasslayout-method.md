@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050054"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout — Metoda
 Kończy układ pól dla klasy, która została zdefiniowana przez wcześniejsze wywołanie [definetypedef — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  Jednakże możesz zechcieć pola rozmieszczony zgodnie z rozmieszczenie niezarządzany kod używa. W takim przypadku wybierz Sekwencyjna lub jawnego układu i wywołania `SetClassLayout` do ukończenia układ pól:  
   
--   Sekwencyjne układu: Określ rozmiar pakowania. Pole jest wyrównany zgodnie z rozmiarem fizyczne lub rozmiar pakowania, niezależnie od wyników w mniejszych przesunięcie pola. Ustaw `rFieldOffsets` i `ulClassSize` do zera.  
+- Sekwencyjne układu: Określ rozmiar pakowania. Pole jest wyrównany zgodnie z rozmiarem fizyczne lub rozmiar pakowania, niezależnie od wyników w mniejszych przesunięcie pola. Ustaw `rFieldOffsets` i `ulClassSize` do zera.  
   
--   Jawnego układu: Określ przesunięcie każdego pola lub określić rozmiar klasy i rozmiarem pakowania.  
+- Jawnego układu: Określ przesunięcie każdego pola lub określić rozmiar klasy i rozmiarem pakowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

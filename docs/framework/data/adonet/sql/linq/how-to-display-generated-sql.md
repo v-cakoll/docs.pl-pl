@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
 ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033777"
 ---
 # <a name="how-to-display-generated-sql"></a>Instrukcje: Wyświetlanie wygenerowanego kodu SQL
 Można wyświetlić kodu SQL, generowany dla zapytań i przetwarzania przy użyciu zmiany <xref:System.Data.Linq.DataContext.Log%2A> właściwości. Takie podejście może być przydatne do zrozumienia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funkcjonalność i debugowania konkretnych problemów.  

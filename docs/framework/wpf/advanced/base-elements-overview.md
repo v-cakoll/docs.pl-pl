@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032061"
 ---
 # <a name="base-elements-overview"></a>Przegląd Elementy bazy
 Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] są uzyskiwane z czterech klas, które są często określane w [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] przesłać dokumenty będące klasy bazowej elementów. Te klasy są <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, i <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Klasa również odnosi się, ponieważ jest wspólna klasa bazowa obu <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.DependencyObject>, dziedziczą następujące funkcje:  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> obsługę i ogólne właściwości systemu.  
+- <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> obsługę i ogólne właściwości systemu.  
   
--   Możliwość używania właściwości zależności i dołączone właściwości, które są implementowane jako właściwości zależności.  
+- Możliwość używania właściwości zależności i dołączone właściwości, które są implementowane jako właściwości zależności.  
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.UIElement>, dziedziczą następujące funkcje oprócz tego są udostępniane przez <xref:System.Windows.DependencyObject>:  
   
--   Podstawowa pomoc techniczna dla wartości właściwości animowany. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
+- Podstawowa pomoc techniczna dla wartości właściwości animowany. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
--   Podstawowe dane wejściowe zdarzenia pomocy technicznej i sterująca pomocy technicznej. Aby uzyskać więcej informacji, zobacz [przegląd danych wejściowych](input-overview.md) i [polecenia Przegląd](commanding-overview.md).  
+- Podstawowe dane wejściowe zdarzenia pomocy technicznej i sterująca pomocy technicznej. Aby uzyskać więcej informacji, zobacz [przegląd danych wejściowych](input-overview.md) i [polecenia Przegląd](commanding-overview.md).  
   
--   Metody wirtualne, które może zostać zastąpiona w celu zawierają informacje, które system układu.  
+- Metody wirtualne, które może zostać zastąpiona w celu zawierają informacje, które system układu.  
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.FrameworkElement>, dziedziczą następujące funkcje oprócz tego są udostępniane przez <xref:System.Windows.UIElement>:  
   
--   Wsparcie dla scenorysów i stylów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style> i [Przegląd Scenorysy](../graphics-multimedia/storyboards-overview.md).  
+- Wsparcie dla scenorysów i stylów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style> i [Przegląd Scenorysy](../graphics-multimedia/storyboards-overview.md).  
   
--   Obsługa powiązań danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../data/data-binding-overview.md).  
+- Obsługa powiązań danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../data/data-binding-overview.md).  
   
--   Pomoc techniczna dla odwołania do zasobów dynamicznej. Aby uzyskać więcej informacji, zobacz [zasoby XAML](xaml-resources.md).  
+- Pomoc techniczna dla odwołania do zasobów dynamicznej. Aby uzyskać więcej informacji, zobacz [zasoby XAML](xaml-resources.md).  
   
--   Obsługa dziedziczenia wartości właściwości, a inne flagi w metadanych, które pomagają warunki raport o właściwościach framework usług, takich jak powiązania danych, stylów lub implementacji środowiska układu. Aby uzyskać więcej informacji, zobacz [metadane właściwości szablonu](framework-property-metadata.md).  
+- Obsługa dziedziczenia wartości właściwości, a inne flagi w metadanych, które pomagają warunki raport o właściwościach framework usług, takich jak powiązania danych, stylów lub implementacji środowiska układu. Aby uzyskać więcej informacji, zobacz [metadane właściwości szablonu](framework-property-metadata.md).  
   
--   Pojęcie drzewo logiczne. Aby uzyskać więcej informacji, zobacz [drzewa w WPF](trees-in-wpf.md).  
+- Pojęcie drzewo logiczne. Aby uzyskać więcej informacji, zobacz [drzewa w WPF](trees-in-wpf.md).  
   
--   Obsługa praktyczne wykonania poziomie struktury system układu WPF tym <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> przesłonięcie może wykryć, zmiany właściwości układu tego wpływu.  
+- Obsługa praktyczne wykonania poziomie struktury system układu WPF tym <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> przesłonięcie może wykryć, zmiany właściwości układu tego wpływu.  
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.ContentElement>, dziedziczą następujące funkcje oprócz tego są udostępniane przez <xref:System.Windows.DependencyObject>:  
   
--   Pomoc techniczna dla animacji. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
+- Pomoc techniczna dla animacji. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
--   Podstawowe dane wejściowe zdarzenia pomocy technicznej i sterująca pomocy technicznej. Aby uzyskać więcej informacji, zobacz [przegląd danych wejściowych](input-overview.md) i [polecenia Przegląd](commanding-overview.md).  
+- Podstawowe dane wejściowe zdarzenia pomocy technicznej i sterująca pomocy technicznej. Aby uzyskać więcej informacji, zobacz [przegląd danych wejściowych](input-overview.md) i [polecenia Przegląd](commanding-overview.md).  
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.FrameworkContentElement>, pobierz następujące funkcje oprócz tego są udostępniane przez <xref:System.Windows.ContentElement>:  
   
--   Wsparcie dla scenorysów i stylów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style> i [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
+- Wsparcie dla scenorysów i stylów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style> i [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
--   Obsługa powiązań danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../data/data-binding-overview.md).  
+- Obsługa powiązań danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../data/data-binding-overview.md).  
   
--   Pomoc techniczna dla odwołania do zasobów dynamicznej. Aby uzyskać więcej informacji, zobacz [zasoby XAML](xaml-resources.md).  
+- Pomoc techniczna dla odwołania do zasobów dynamicznej. Aby uzyskać więcej informacji, zobacz [zasoby XAML](xaml-resources.md).  
   
--   Obsługa dziedziczenia wartości właściwości, a inne flagi w metadanych, które pomagają warunki raport o właściwościach framework usług, takich jak powiązania danych, stylów lub implementacji środowiska układu. Aby uzyskać więcej informacji, zobacz [metadane właściwości szablonu](framework-property-metadata.md).  
+- Obsługa dziedziczenia wartości właściwości, a inne flagi w metadanych, które pomagają warunki raport o właściwościach framework usług, takich jak powiązania danych, stylów lub implementacji środowiska układu. Aby uzyskać więcej informacji, zobacz [metadane właściwości szablonu](framework-property-metadata.md).  
   
--   Nie dziedziczą, dostęp do modyfikacji systemu układu (takie jak <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Układ systemu implementacje są dostępne tylko na <xref:System.Windows.FrameworkElement>. Jednak dziedziczy <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> przesłonięcie może wykryć zmiany właściwości, które mają wpływ na układ i zgłoś je do dowolnej zawartości hostów.  
+- Nie dziedziczą, dostęp do modyfikacji systemu układu (takie jak <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Układ systemu implementacje są dostępne tylko na <xref:System.Windows.FrameworkElement>. Jednak dziedziczy <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> przesłonięcie może wykryć zmiany właściwości, które mają wpływ na układ i zgłoś je do dowolnej zawartości hostów.  
   
  Modele zawartości są opisane dla różnych klas. Model zawartości dla klasy jest jeden składnik to możliwe, należy rozważyć, jeśli chcesz znaleźć odpowiedniej klasy, aby dziedziczyć. Aby uzyskać więcej informacji, zobacz [Model zawartości WPF](../controls/wpf-content-model.md).  
   

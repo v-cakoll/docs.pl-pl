@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
 ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972682"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Instrukcje: używanie narzędzia konfiguracji modelu usług COM+
 Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które będą dostępne jako usługi sieci Web za pomocą narzędzia wiersza polecenia w konfiguracji modelu usług COM + (ComSvcConfig.exe).  
@@ -33,7 +33,7 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Aby dodać interfejs do zestawu interfejsów, które mają być widoczne jako usług sieci Web, przy użyciu trybu obsługi modelu COM +  
   
--   Uruchamianie przy użyciu ComSvcConfig `/install` i `/hosting:complus` opcji, jak pokazano w poniższym przykładzie.  
+- Uruchamianie przy użyciu ComSvcConfig `/install` i `/hosting:complus` opcji, jak pokazano w poniższym przykładzie.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
@@ -49,7 +49,7 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
   
 ### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Aby dodać tylko konkretnych metod z interfejsu do zestawu interfejsów, które mają być widoczne jako usług sieci Web, przy użyciu trybu obsługi modelu COM +  
   
--   Uruchamianie przy użyciu ComSvcConfig `/install` i `/hosting:complus` opcje nazewnictwa jawnych metod wymaganych, jak pokazano w poniższym przykładzie.  
+- Uruchamianie przy użyciu ComSvcConfig `/install` i `/hosting:complus` opcje nazewnictwa jawnych metod wymaganych, jak pokazano w poniższym przykładzie.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
@@ -59,7 +59,7 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a>Aby dodać interfejs do zestawu interfejsów, które mają być widoczne jako usług sieci Web, przy użyciu trybu hostingu w sieci Web  
   
--   Uruchamianie przy użyciu ComSvcConfig `/install` opcji i `/hosting:was` opcji, jak pokazano w poniższym przykładzie.  
+- Uruchamianie przy użyciu ComSvcConfig `/install` opcji i `/hosting:was` opcji, jak pokazano w poniższym przykładzie.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
@@ -73,7 +73,7 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
   
 ### <a name="to-remove-a-web-service-for-a-specified-interface"></a>Aby usunąć usługę sieci Web dla określonego interfejsu  
   
--   Uruchamianie przy użyciu ComSvcConfig `/uninstall` opcji, jak pokazano w poniższym przykładzie.  
+- Uruchamianie przy użyciu ComSvcConfig `/uninstall` opcji, jak pokazano w poniższym przykładzie.  
   
     ```  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
@@ -83,7 +83,7 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
   
 ### <a name="to-list-currently-exposed-interfaces"></a>Aby wyświetlić listę aktualnie interfejsów  
   
--   Uruchamianie przy użyciu ComSvcConfig `/list` opcji, jak pokazano w poniższym przykładzie.  
+- Uruchamianie przy użyciu ComSvcConfig `/list` opcji, jak pokazano w poniższym przykładzie.  
   
     ```  
     ComSvcConfig.exe /list  
@@ -93,7 +93,7 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
   
 ### <a name="to-list-specific-currently-exposed-interfaces"></a>Aby wyświetlić listę określonych aktualnie widoczne interfejsów  
   
--   Uruchamianie przy użyciu ComSvcConfig `/list` opcji, jak pokazano w poniższym przykładzie.  
+- Uruchamianie przy użyciu ComSvcConfig `/list` opcji, jak pokazano w poniższym przykładzie.  
   
     ```  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
@@ -103,7 +103,7 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
   
 ### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>Aby wyświetlić Pomoc na temat opcji, które mogą służyć za pomocą narzędzia  
   
--   Uruchamianie przy użyciu ComSvcConfig /? opcja, jak pokazano w poniższym przykładzie.  
+- Uruchamianie przy użyciu ComSvcConfig /? opcja, jak pokazano w poniższym przykładzie.  
   
     ```  
     ComSvcConfig.exe /?  

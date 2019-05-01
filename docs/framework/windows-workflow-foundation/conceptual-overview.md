@@ -1,18 +1,18 @@
 ---
-title: Omówienie pojęć dotyczących programu Windows Workflow
+title: Omówienie pojęć związanych z programem Windows Workflow
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], concepts
 - WF [WF], concepts
 ms.assetid: 2a5c0ac2-813f-4a7b-83ac-9e5cb85e0640
 ms.openlocfilehash: cc8a7afe661f823493761584155f4d4b3d472ae2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052823"
 ---
-# <a name="windows-workflow-conceptual-overview"></a>Omówienie pojęć dotyczących programu Windows Workflow
+# <a name="windows-workflow-conceptual-overview"></a>Omówienie pojęć związanych z programem Windows Workflow
 Ta sekcja zawiera zestaw tematów omawiających większych pojęcia za Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  

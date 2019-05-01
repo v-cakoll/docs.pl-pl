@@ -3,11 +3,11 @@ title: Mapowania typów środowiska SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037703"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowania typów środowiska SQL-CLR
 Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obiektów, które są jest wyrażone w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL tłumaczy języku zintegrowanym zapytania w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników programu LINQ to SQL tłumaczy wyniki z powrotem do obiektów, które może pracować w języku użytkownika, programowania.  
@@ -16,23 +16,23 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
   
  W tym temacie omówiono następujące kwestie:  
   
--   [Domyślny typ mapowania](#DefaultTypeMapping)  
+- [Domyślny typ mapowania](#DefaultTypeMapping)  
   
--   [Typ mapowania macierzy zachowania w czasie wykonywania](#BehaviorMatrix)  
+- [Typ mapowania macierzy zachowania w czasie wykonywania](#BehaviorMatrix)  
   
--   [Różnice zachowanie środowiska CLR i wykonywania instrukcji SQL.](#BehaviorDiffs)  
+- [Różnice zachowanie środowiska CLR i wykonywania instrukcji SQL.](#BehaviorDiffs)  
   
--   [Mapowanie wyliczenia](#EnumMapping)  
+- [Mapowanie wyliczenia](#EnumMapping)  
   
--   [Mapowanie liczbowe](#NumericMapping)  
+- [Mapowanie liczbowe](#NumericMapping)  
   
--   [Tekst i mapowania XML](#TextMapping)  
+- [Tekst i mapowania XML](#TextMapping)  
   
--   [Data i godzina mapowania](#DateMapping)  
+- [Data i godzina mapowania](#DateMapping)  
   
--   [Mapowanie binarne](#BinaryMapping)  
+- [Mapowanie binarne](#BinaryMapping)  
   
--   [Różne mapowania](#MiscMapping)  
+- [Różne mapowania](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Domyślny typ mapowania  
@@ -58,21 +58,21 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
   
  Na przykład poniżej przedstawiono niektóre różnice w zachowaniu między CLR i programu SQL Server:  
   
--   Program SQL Server inaczej niż dane typu równoważne zamówień niektóre typy danych w CLR. Na przykład dane programu SQL Server typu `UNIQUEIDENTIFIER` są porządkowane inaczej niż dane typu CLR <xref:System.Guid?displayProperty=nameWithType>.  
+- Program SQL Server inaczej niż dane typu równoważne zamówień niektóre typy danych w CLR. Na przykład dane programu SQL Server typu `UNIQUEIDENTIFIER` są porządkowane inaczej niż dane typu CLR <xref:System.Guid?displayProperty=nameWithType>.  
   
--   Program SQL Server obsługuje niektóre operacje porównania ciągu inaczej niż środowiska CLR. W programie SQL Server zachowanie porównania ciągu zależy od ustawienia sortowania na serwerze. Aby uzyskać więcej informacji, zobacz [Praca z ustawień sortowania](https://go.microsoft.com/fwlink/?LinkId=115330) w programie Microsoft SQL Server — książki Online.  
+- Program SQL Server obsługuje niektóre operacje porównania ciągu inaczej niż środowiska CLR. W programie SQL Server zachowanie porównania ciągu zależy od ustawienia sortowania na serwerze. Aby uzyskać więcej informacji, zobacz [Praca z ustawień sortowania](https://go.microsoft.com/fwlink/?LinkId=115330) w programie Microsoft SQL Server — książki Online.  
   
--   Program SQL Server może zwracać różne wartości dla niektórych funkcji zamapowanego niż środowiska CLR. Na przykład równości funkcji różnią się, ponieważ program SQL Server uwzględnia dwa ciągi równy, jeśli różnią się odstępu; Środowisko CLR uważa musiały być równe.  
+- Program SQL Server może zwracać różne wartości dla niektórych funkcji zamapowanego niż środowiska CLR. Na przykład równości funkcji różnią się, ponieważ program SQL Server uwzględnia dwa ciągi równy, jeśli różnią się odstępu; Środowisko CLR uważa musiały być równe.  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Mapowanie wyliczenia  
  LINQ do SQL obsługuje mapowanie środowiska CLR <xref:System.Enum?displayProperty=nameWithType> typu do typów programu SQL Server na dwa sposoby:  
   
--   Mapowanie na typy liczbowe języka SQL (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
+- Mapowanie na typy liczbowe języka SQL (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
   
      Podczas mapowania CLR <xref:System.Enum?displayProperty=nameWithType> typu do typu numerycznego SQL, możesz zamapować wartość całkowitą bazowego środowiska CLR <xref:System.Enum?displayProperty=nameWithType> wartość kolumny bazy danych programu SQL Server. Na przykład jeśli <xref:System.Enum?displayProperty=nameWithType> o nazwie `DaysOfWeek` zawiera element o nazwie `Tue` ze źródłową wartością całkowitą 3, ten element członkowski jest mapowany na wartość 3 dla bazy danych.  
   
--   Mapowania typów tekstu SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
+- Mapowania typów tekstu SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
   
      Podczas mapowania CLR <xref:System.Enum?displayProperty=nameWithType> typu do typu SQL, wartości bazy danych SQL jest mapowany do nazw środowiska CLR <xref:System.Enum?displayProperty=nameWithType> elementów członkowskich. Na przykład jeśli <xref:System.Enum?displayProperty=nameWithType> o nazwie `DaysOfWeek` zawiera element o nazwie `Tue` ze źródłową wartością całkowitą 3, ten element członkowski mapy do wartości bazy danych `Tue`.  
   
@@ -154,13 +154,13 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
 ### <a name="xml-types"></a>Typy XML  
  SQL Server `XML` — typ danych jest dostępna, począwszy od programu Microsoft SQL Server 2005. SQL Server można mapować `XML` typ danych ma <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument>, lub <xref:System.String>. Jeśli kolumna przechowuje fragmenty XML, które nie można odczytać na <xref:System.Xml.Linq.XElement>, kolumna musi być zamapowany na <xref:System.String> w celu uniknięcia błędów czasu wykonywania. Fragmenty XML, które muszą być zamapowane na <xref:System.String> obejmują następujące elementy:  
   
--   Sekwencja elementów XML  
+- Sekwencja elementów XML  
   
--   Atrybuty  
+- Atrybuty  
   
--   Publiczne identyfikatory (PI)  
+- Publiczne identyfikatory (PI)  
   
--   Komentarze  
+- Komentarze  
   
  Mimo że można mapować <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> do programu SQL Server, jak pokazano na [macierzy zachowanie czas uruchomienia mapowania typu](#BehaviorMatrix), <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metoda nie ma domyślnego programu SQL Server typu mapowania dla tych typów.  
   

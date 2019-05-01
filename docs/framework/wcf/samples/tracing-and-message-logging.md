@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007737"
 ---
 # <a name="tracing-and-message-logging"></a>Śledzenie i rejestrowanie komunikatów
 Niniejszy przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowy ślady i dzienniki komunikatów są wyświetlane przy użyciu [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -52,11 +52,11 @@ Niniejszy przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunika
   
  Istnieje możliwość rozszerzyć śledzenia, dostarczone przez ServiceModel, tworząc śledzenia działań użytkownika. Śledzenie aktywności użytkownika umożliwia użytkownikowi utworzenie śledzenia działań:  
   
--   Grupa śledzenia w logiczne jednostki pracy.  
+- Grupa śledzenia w logiczne jednostki pracy.  
   
--   Korelowanie działań przy użyciu transferu i propagacji.  
+- Korelowanie działań przy użyciu transferu i propagacji.  
   
--   Ogranicza koszty wydajności śledzenia WCF (na przykład koszt miejsca na dysku w pliku dziennika).  
+- Ogranicza koszty wydajności śledzenia WCF (na przykład koszt miejsca na dysku w pliku dziennika).  
   
  Aby uzyskać więcej informacji na temat śledzenia działań użytkownika, zobacz [rozszerzanie śledzenia](../../../../docs/framework/wcf/samples/extending-tracing.md) próbki.  
   

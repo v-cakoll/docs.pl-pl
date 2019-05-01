@@ -14,18 +14,18 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028255"
 ---
 # <a name="version-tolerant-serialization"></a>Serializacja z tolerancją wersji
 W wersji 1.0 i 1.1 programu .NET Framework tworzenie serializacji typów, które mogą być ponownie używane z jednej wersji aplikacji do następnego był problemy. Jeśli typ został zmodyfikowany przez dodanie pola dodatkowe, wystąpi następujących problemów:  
   
--   Starsze wersje aplikacji będzie zgłaszają wyjątki po pytania do nowych wersji stary typ do deserializacji.  
+- Starsze wersje aplikacji będzie zgłaszają wyjątki po pytania do nowych wersji stary typ do deserializacji.  
   
--   Nowsze wersje aplikacji będzie zgłaszają wyjątki, gdy podczas deserializacji starszych wersji typu z brakujących danych.  
+- Nowsze wersje aplikacji będzie zgłaszają wyjątki, gdy podczas deserializacji starszych wersji typu z brakujących danych.  
   
  Wersja na uszkodzenia serializacji (SRS) to zestaw funkcje wprowadzone w programie .NET Framework 2.0, który ułatwia, wraz z upływem czasu, aby zmodyfikować typów możliwych do serializacji. W szczególności funkcje SRS są włączone dla klasy, do której <xref:System.SerializableAttribute> zastosowano atrybut, w tym typów ogólnych. SRS sprawia, że można dodać nowe pola do tych klas bez przerywania zgodność z innymi wersjami tego typu. Pracy przykładowej aplikacji, zobacz [wersja na uszkodzenia przykład technologii serializacji](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md).  
   
@@ -36,11 +36,11 @@ W wersji 1.0 i 1.1 programu .NET Framework tworzenie serializacji typów, które
 ## <a name="feature-list"></a>Lista funkcji  
  Zestaw funkcji obejmuje następujące czynności:  
   
--   Tolerancja danych zewnętrznych lub nieoczekiwany. Dzięki temu nowszych wersji typu wysyłać dane do starszych wersji.  
+- Tolerancja danych zewnętrznych lub nieoczekiwany. Dzięki temu nowszych wersji typu wysyłać dane do starszych wersji.  
   
--   Tolerancja brakujących opcjonalnymi danymi. Dzięki temu starszych wersji wysyłać dane do nowszych wersji.  
+- Tolerancja brakujących opcjonalnymi danymi. Dzięki temu starszych wersji wysyłać dane do nowszych wersji.  
   
--   Serializacja wywołania zwrotne. Dzięki temu inteligentną domyślne ustawienie wartości w przypadkach, gdy jest Brak danych.  
+- Serializacja wywołania zwrotne. Dzięki temu inteligentną domyślne ustawienie wartości w przypadkach, gdy jest Brak danych.  
   
  Ponadto to funkcja do deklarowania, gdy zostało dodane nowe pole opcjonalne. Jest to <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> właściwości <xref:System.Runtime.Serialization.OptionalFieldAttribute> atrybutu.  
   
@@ -257,28 +257,28 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- Niektórzy użytkownicy może być konieczne do kontrolowania której klasy do serializacji i deserializacji, ponieważ wymagana jest nieco innej klasy w serwera i klienta. <xref:System.Runtime.Serialization.SerializationBinder>Klasa abstrakcyjna służy do kontroli rzeczywiste typy używane podczas serializacji i deserializacji.  Aby użyć tej klasy, należy wyprowadzić klasę z <xref:System.Runtime.Serialization.SerializationBinder> i zastąpić <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> i <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> metody. Aby uzyskać więcej informacji, zobacz [kontrolowanie serializacji i deserializacji za pomocą elementu SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
+ Niektórzy użytkownicy może być konieczne do kontrolowania której klasy do serializacji i deserializacji, ponieważ wymagana jest nieco innej klasy w serwera i klienta. <xref:System.Runtime.Serialization.SerializationBinder> Klasa abstrakcyjna służy do kontroli rzeczywiste typy używane podczas serializacji i deserializacji.  Aby użyć tej klasy, należy wyprowadzić klasę z <xref:System.Runtime.Serialization.SerializationBinder> i zastąpić <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> i <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> metody. Aby uzyskać więcej informacji, zobacz [kontrolowanie serializacji i deserializacji za pomocą elementu SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
   
 ## <a name="best-practices"></a>Najlepsze rozwiązania  
  W celu zapewnienia zachowania właściwej wersji, modyfikując typu od wersji należy wykonać następujące czynności:  
   
--   Nigdy nie należy usunąć pole serializacji.  
+- Nigdy nie należy usunąć pole serializacji.  
   
--   Nigdy nie stosuj <xref:System.NonSerializedAttribute> atrybutu do pola, jeśli ten atrybut nie została zastosowana do pola w poprzedniej wersji.  
+- Nigdy nie stosuj <xref:System.NonSerializedAttribute> atrybutu do pola, jeśli ten atrybut nie została zastosowana do pola w poprzedniej wersji.  
   
--   Nigdy nie można zmienić nazwy lub typu serializacji pola.  
+- Nigdy nie można zmienić nazwy lub typu serializacji pola.  
   
--   Podczas dodawania nowe pole serializacji, zastosuj **OptionalFieldAttribute** atrybutu.  
+- Podczas dodawania nowe pole serializacji, zastosuj **OptionalFieldAttribute** atrybutu.  
   
--   Podczas usuwania **NonSerializedAttribute** atrybutu z polem (które nie były możliwe do serializacji w poprzedniej wersji), zastosuj **OptionalFieldAttribute** atrybutu.  
+- Podczas usuwania **NonSerializedAttribute** atrybutu z polem (które nie były możliwe do serializacji w poprzedniej wersji), zastosuj **OptionalFieldAttribute** atrybutu.  
   
--   Dla wszystkich pól opcjonalne ustawienia zrozumiałe domyślne, o których przy użyciu wywołania zwrotne serializacji, chyba że 0 lub **null** jako akceptowane są wartości domyślne.  
+- Dla wszystkich pól opcjonalne ustawienia zrozumiałe domyślne, o których przy użyciu wywołania zwrotne serializacji, chyba że 0 lub **null** jako akceptowane są wartości domyślne.  
   
  W celu zapewnienia, że typem będzie zgodna z aparatów przyszłych serializacji, postępuj zgodnie z tymi wytycznymi dotyczącymi:  
   
--   Zawsze wartość **VersionAdded** właściwość **OptionalFieldAttribute** atrybutu prawidłowo.  
+- Zawsze wartość **VersionAdded** właściwość **OptionalFieldAttribute** atrybutu prawidłowo.  
   
--   Unikaj rozgałęziony przechowywania wersji.  
+- Unikaj rozgałęziony przechowywania wersji.  
   
 ## <a name="see-also"></a>Zobacz także
 

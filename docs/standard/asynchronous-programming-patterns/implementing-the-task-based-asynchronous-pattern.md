@@ -14,11 +14,11 @@ ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a218633ed607222fec3e46629a9bcd614c3d0610
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031190"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zadaniach
 Oparta na zadaniach asynchronicznej wzorca (TAP) można zaimplementować na trzy sposoby: za pomocą kompilatorów języków C# i Visual Basic w programie Visual Studio, ręcznie lub przy użyciu kombinacji metod kompilatora i manualnych. W poniższych sekcjach omówiono każdej metody szczegółowo. Można używać do implementowania asynchronicznych operacji powiązany obliczeniowych i czy/Wy — powiązane z wzorca TAP. [Obciążeń](#workloads) sekcji omówiono każdy rodzaj działania.

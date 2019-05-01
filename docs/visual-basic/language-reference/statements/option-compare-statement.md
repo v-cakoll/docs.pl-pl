@@ -19,11 +19,11 @@ helpviewer_keywords:
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024745"
 ---
 # <a name="option-compare-statement"></a>Option Compare — Instrukcja
 Deklaruje domyślną metodę porównywania do użycia podczas porównywania danych ciągu.  
@@ -75,7 +75,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Można ustawić opcji Option Compare, w wierszu polecenia  
   
--   Obejmują [/optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md) w — opcja kompilatora **vbc** polecenia.  
+- Obejmują [/optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md) w — opcja kompilatora **vbc** polecenia.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Option Compare` instrukcję, aby ustawić porównanie binarne jako domyślną metodę porównywania ciągów. Aby użyć tego kodu, usuń znaczniki komentarza `Option Compare Binary` instrukcji i umieścić go w górnej części pliku źródłowego.  

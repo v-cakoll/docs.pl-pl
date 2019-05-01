@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019086"
 ---
 # <a name="adorners-overview"></a>Przegląd Moduły indeksowania układu
 Moduły definiowania układu są specjalnym typem <xref:System.Windows.FrameworkElement>, który jest używany w celu zapewnienia podpowiedzi wizualne dla użytkownika. Wśród innych zastosowań moduły definiowania układu może służyć do dodawania funkcjonalności dojść do elementów lub podaj informacje o kontrolce stanie.  
@@ -23,13 +23,13 @@ Moduły definiowania układu są specjalnym typem <xref:System.Windows.Framework
   
  Typowe dla modułów definiowania układu zastosowań:  
   
--   Dodawanie funkcjonalności dojścia do <xref:System.Windows.UIElement> , dzięki którym użytkownika do manipulowania elementem w jakiś sposób (zmiana rozmiaru, obracanie, zmiana położenia itp.).  
+- Dodawanie funkcjonalności dojścia do <xref:System.Windows.UIElement> , dzięki którym użytkownika do manipulowania elementem w jakiś sposób (zmiana rozmiaru, obracanie, zmiana położenia itp.).  
   
--   Przekazać wizualną opinię, aby wskazać różne stany, lub w odpowiedzi na różne zdarzenia.  
+- Przekazać wizualną opinię, aby wskazać różne stany, lub w odpowiedzi na różne zdarzenia.  
   
--   Nakładki visual dekoracje na <xref:System.Windows.UIElement>.  
+- Nakładki visual dekoracje na <xref:System.Windows.UIElement>.  
   
--   Wizualnie maska lub zastąpić część lub całość <xref:System.Windows.UIElement>.  
+- Wizualnie maska lub zastąpić część lub całość <xref:System.Windows.UIElement>.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia podstawowe struktury adorning elementów wizualnych. W poniższej tabeli wymieniono podstawowe typy używane podczas adorning obiektów i ich przeznaczenie. Wykonaj kilka przykładów użycia.  
   

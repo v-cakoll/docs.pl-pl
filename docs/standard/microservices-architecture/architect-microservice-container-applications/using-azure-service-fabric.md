@@ -1,17 +1,17 @@
 ---
-title: Za pomocą usługi Azure Service Fabric
+title: Korzystanie z usługi Azure Service Fabric
 description: Dowiedz się, jakie modeli aplikacji usługi Azure Service Fabric, możesz użyć, oprócz tylko za pomocą do aranżacji kontenerów.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
 ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025799"
 ---
-# <a name="using-azure-service-fabric"></a>Za pomocą usługi Azure Service Fabric
+# <a name="using-azure-service-fabric"></a>Korzystanie z usługi Azure Service Fabric
 
 Usługa Azure Service Fabric, powstały od firmy Microsoft przejście od dostarczania produktów, pole, które były zazwyczaj monolitycznych w stylu, dostarczaniu usług. Środowisko tworzenia i obsługi dużych usług na dużą skalę, takich jak Azure SQL Database, Azure Cosmos DB, Azure Service Bus lub Cortany back-end, kształt usługi Service Fabric. Platforma ewoluował wraz z upływem czasu coraz więcej usług przyjęty go. Co ważniejsze usługi Service Fabric musiał uruchomić nie tylko na platformie Azure, ale także w autonomicznych wdrożeniach systemu Windows Server.
 

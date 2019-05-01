@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046921"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
 Windows Communication Foundation (WCF) zapewnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli już używasz logiki oparty na komponentach aplikacji hostowanej w modelu COM +, można użyć programu WCF do rozszerzenia Twojej istniejącej logiki, a nie po prostu go do. Typowym scenariuszem jest, gdy chcesz udostępnić istniejącej logiki biznesowej modelu COM + lub korporacyjnych usług za pośrednictwem usług sieci Web.  
   
  Gdy interfejs składnika COM + jest widoczny jako usługi sieci Web, Specyfikacja i umowy te usługi są określane przez automatyczne mapowanie, które jest wykonywane w czasie inicjowania aplikacji. Na poniższej liście przedstawiono modelu koncepcyjnego dla tego mapowania:  
   
--   Jedna usługa jest zdefiniowana dla każdej narażonych klasy COM.  
+- Jedna usługa jest zdefiniowana dla każdej narażonych klasy COM.  
   
--   Kontrakt usługi pochodzi bezpośrednio z definicji interfejsu wybranego składnika, z możliwością wyłączenia metody zdefiniowane w konfiguracji.  
+- Kontrakt usługi pochodzi bezpośrednio z definicji interfejsu wybranego składnika, z możliwością wyłączenia metody zdefiniowane w konfiguracji.  
   
--   Operacje w tej Umowy są uzyskiwane bezpośrednio z metod w definicji interfejsu składnika.  
+- Operacje w tej Umowy są uzyskiwane bezpośrednio z metod w definicji interfejsu składnika.  
   
--   Parametry te operacje są wyprowadzane bezpośrednio z typu współdziałania COM, który odnosi się do składnika parametrów metody.  
+- Parametry te operacje są wyprowadzane bezpośrednio z typu współdziałania COM, który odnosi się do składnika parametrów metody.  
   
  Domyślny adres i powiązania transportu dla usługi znajdują się w pliku konfiguracji usługi, ale są ponownie skonfigurowane jako wymagane.  
   
@@ -47,19 +47,19 @@ Windows Communication Foundation (WCF) zapewnia bogate środowisko tworzenia apl
 ## <a name="supported-interfaces"></a>Obsługiwanymi interfejsami  
  Istnieją pewne ograniczenia dotyczące typów interfejsów, które są dostępne jako usługę sieci Web. Następujące typy interfejsów nie są obsługiwane:  
   
--   Interfejsy, które przekazuj odwołania do obiektów jako parametrów - następujące podejście odwołanie do obiektu ograniczony zostanie omówione w sekcji ograniczoną obsługę odwołanie do obiektu.  
+- Interfejsy, które przekazuj odwołania do obiektów jako parametrów - następujące podejście odwołanie do obiektu ograniczony zostanie omówione w sekcji ograniczoną obsługę odwołanie do obiektu.  
   
--   Interfejsy, które przekazywania typów, które nie są zgodne z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] konwersje współdziałania COM.  
+- Interfejsy, które przekazywania typów, które nie są zgodne z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] konwersje współdziałania COM.  
   
--   Interfejsy na potrzeby aplikacji, które mają włączone w przypadku hostowania w modelu COM + Tworzenie pul aplikacji.  
+- Interfejsy na potrzeby aplikacji, które mają włączone w przypadku hostowania w modelu COM + Tworzenie pul aplikacji.  
   
--   Interfejsy składników, które są oznaczone jako prywatne do aplikacji.  
+- Interfejsy składników, które są oznaczone jako prywatne do aplikacji.  
   
--   Infrastruktura interfejsów modelu COM +.  
+- Infrastruktura interfejsów modelu COM +.  
   
--   Interfejsy z poziomu aplikacji systemu.  
+- Interfejsy z poziomu aplikacji systemu.  
   
--   Interfejsy ze składników usług dla przedsiębiorstw, które nie zostały dodane do globalnej pamięci podręcznej.  
+- Interfejsy ze składników usług dla przedsiębiorstw, które nie zostały dodane do globalnej pamięci podręcznej.  
   
 ### <a name="limited-object-reference-support"></a>Obsługa odwołań ograniczonych obiektów  
  Ponieważ liczba składników modelu COM + wdrożone za pomocą obiektów parametrów odwołania, na przykład zwraca obiekt zestawu rekordów ADO integracja modelu COM + zawiera ograniczoną obsługę parametrów odwołanie do obiektu. Obsługa jest ograniczona do obiektów, które implementują `IPersistStream` interfejsu COM. Obejmuje obiekty zestawu rekordów ADO i można zaimplementować dla obiektów COM z określonych aplikacji.  
@@ -76,15 +76,15 @@ Windows Communication Foundation (WCF) zapewnia bogate środowisko tworzenia apl
 ## <a name="selecting-the-hosting-mode"></a>Wybieranie trybu hostingu  
  COM + uwidacznia usług sieci Web na jeden z następujących trybów hostingu:  
   
--   COM+-hosted  
+- COM+-hosted  
   
      Usługa sieci Web jest hostowana w ramach aplikacji dedykowanego modelu COM + procesu serwera (Dllhost.exe). Ten tryb wymaga aplikacji, aby jawnie uruchomić przed może odbierać żądania usługi sieci Web. COM + opcji "Uruchom jako usługa NT" lub "Pozostaw uruchomiony podczas bezczynności" może służyć do uniemożliwić bezczynności zamknięcie aplikacji i usług. Ten tryb zapewnia usługi sieci Web i dostępu DCOM dla aplikacji serwera.  
   
--   Hostowane w sieci Web  
+- Hostowane w sieci Web  
   
      Usługa sieci Web jest hostowana w ramach procesu roboczego serwera sieci Web. Ten tryb nie wymaga modelu COM + na aktywny, po odebraniu początkowego żądania. Jeśli aplikacja nie jest aktywny, po odebraniu tego żądania, automatycznie została aktywowana przed rozpoczęciem przetwarzania żądania. W tym trybie również zapewnia usługi sieci Web i dostępu DCOM dla aplikacji serwera, ale powoduje, że przeskoku proces w przypadku żądań usług sieci Web. Wymaga to zazwyczaj kliencie, aby umożliwić personifikacji. W programie WCF, można to zrobić za pomocą <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość <xref:System.ServiceModel.Security.WindowsClientCredential> klasy, który jest dostępny jako właściwość ogólnego <xref:System.ServiceModel.ChannelFactory%601> klasy, jak również <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> wartość wyliczenia.  
   
--   Hostowane w sieci Web w procesie  
+- Hostowane w sieci Web w procesie  
   
      Usługa sieci Web i logiki aplikacji modelu COM + znajdują się w ramach procesu roboczego serwera sieci Web. Zapewnia to automatyczną aktywację w trybie hostowanej w sieci Web bez powodowania przeskoku proces w przypadku żądań usług sieci Web. Wadą jest to, że aplikacja serwera nie są dostępne za pośrednictwem modelu DCOM.  
   

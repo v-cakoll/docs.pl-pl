@@ -10,27 +10,27 @@ ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e78da65eb8ef7db6dd01c1c1d3d313ac8946431a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051198"
 ---
 # <a name="working-with-base-types-in-net"></a>Praca z typami podstawowymi na platformie .NET
-W tej sekcji opisano operacje typu podstawowego .NET, w tym formatowania, konwersja i typowych operacji.  
+W tej sekcji opisano operacje typu podstawowego .NET, w tym formatowania, konwersji i typowych operacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Konwersja typów w programie .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
- W tym artykule opisano, jak konwertować z jednego typu.  
+ Opisuje sposób konwertowania z jednego typu na inny.  
   
  [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
- Opisuje sposób formatowania ciągów za pomocą specyfikatory formatu ciągu.  
+ W tym artykule opisano sposób formatowania ciągów przy użyciu specyfikatorów formatu ciągu.  
   
  [Manipulowanie ciągami](../../../docs/standard/base-types/manipulating-strings.md)  
- Opisuje sposób modyfikowania i ciągi formatujące.  
+ Zawiera opis sposobu manipulowania i formatowania ciągów.  
   
  [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)  
- Opisuje sposób konwertowania ciągów na typy .NET Framework.  
+ W tym artykule opisano sposób konwertowania ciągów na typy .NET Framework.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [System typu wspólnego](../../../docs/standard/base-types/common-type-system.md)  

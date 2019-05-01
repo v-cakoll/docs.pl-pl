@@ -13,11 +13,11 @@ ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62015116"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Wstrzymywanie i przerywanie wątków
 
@@ -45,9 +45,9 @@ Najbardziej typowych sposobów do synchronizowania działania wątki są bloku i
   
  W przypadku oczekiwania zarządzanych oczekiwania, następnie <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> zarówno od razu wznawiania wątku. W przypadku oczekiwania niezarządzanych oczekiwania (na przykład, wywołanie Win32 przez wywołania platformy [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) funkcji), ani <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ani <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> może przejąć kontrolę nad wątku, dopóki przywraca lub wywołuje kod zarządzany. W kodzie zarządzanym zachowanie jest następujący:  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> Wznawia działanie wątku z dowolnym oczekiwania, mogą powodować i powoduje, że <xref:System.Threading.ThreadInterruptedException> zostanie wygenerowany w wątek docelowy.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> Wznawia działanie wątku z dowolnym oczekiwania, mogą powodować i powoduje, że <xref:System.Threading.ThreadInterruptedException> zostanie wygenerowany w wątek docelowy.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Wznawia działanie wątku z dowolnym oczekiwania, mogą powodować i powoduje, że <xref:System.Threading.ThreadAbortException> zostanie wygenerowany w wątku. Aby uzyskać więcej informacji, zobacz [niszczenie wątków](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Wznawia działanie wątku z dowolnym oczekiwania, mogą powodować i powoduje, że <xref:System.Threading.ThreadAbortException> zostanie wygenerowany w wątku. Aby uzyskać więcej informacji, zobacz [niszczenie wątków](../../../docs/standard/threading/destroying-threads.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

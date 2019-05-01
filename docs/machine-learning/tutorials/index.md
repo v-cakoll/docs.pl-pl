@@ -5,10 +5,10 @@ ms.custom: seodec18
 ms.date: 04/05/2019
 ms.openlocfilehash: 45534e196c2dc0cd1994445eeb482474b32aaa41
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019116"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>.NET usługi machine learning samouczków — strukturze ML.NET
 

@@ -3,11 +3,11 @@ title: 'Instrukcje: Kontrolowanie typu projekcji (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
 ms.openlocfilehash: dd09914a75a8d4b20ddf9ff452f046bf7671152f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051791"
 ---
 # <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Instrukcje: Kontrolowanie typu projekcji (Visual Basic)
 Projekcja polega na wykonanie jeden zestaw danych, jego filtrowania, zmiana jego kształtu i nawet zmianę jego typu. Wyrażenia zapytań większości przeprowadzić projekcji. Większość wyrażeń zapytania, przedstawione w tej sekcji zwrócić <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, można jednak sterować typ projekcji tworzyć kolekcje innych typów. W tym temacie pokazano, jak to zrobić.  

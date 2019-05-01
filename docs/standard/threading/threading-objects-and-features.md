@@ -9,11 +9,11 @@ ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f25609bc3c4dd829c66a1a4514b7f1121f9c0909
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940936"
 ---
 # <a name="threading-objects-and-features"></a>Wątkowość obiektów i funkcji
 

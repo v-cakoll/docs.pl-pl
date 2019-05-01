@@ -3,11 +3,11 @@ title: Modyfikatory (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
 ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051185"
 ---
 # <a name="modifiers-visual-basic"></a>Modyfikatory (Visual Basic)
 Tematy w tej części dokumentu Modyfikatory środowiska wykonawczego języka Visual Basic.  
@@ -63,11 +63,11 @@ Tematy w tej części dokumentu Modyfikatory środowiska wykonawczego języka Vi
   
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
- [Prywatny chroniony](../../../visual-basic/language-reference/modifiers/private-protected.md)  
+ [Private Protected](../../../visual-basic/language-reference/modifiers/private-protected.md)  
   
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
 
- [Chronione Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
+ [Protected Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   

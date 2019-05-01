@@ -14,11 +14,11 @@ ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051211"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański
 <xref:System.DateTime> i <xref:System.DateTimeOffset> typy pełnić ich kalendarza domyślnego kalendarza gregoriańskiego. Oznacza to, że wywołanie wartości daty i godziny `ToString` metoda Wyświetla reprezentację ciągu tego dnia i godzina w kalendarzu gregoriańskim, nawet jeśli ta data i godzina utworzenia przy użyciu innego kalendarza. Jest to zilustrowane w poniższym przykładzie, który używa dwa różne sposoby tworzenia wartości daty i godziny przy użyciu kalendarz perski, ale nadal wyświetlana tych wartości daty i godziny w kalendarzu gregoriańskim, gdy wywołuje <xref:System.DateTime.ToString%2A> metody. W tym przykładzie odzwierciedla dwie techniki często używane, ale niepoprawny do wyświetlania datę w określonym kalendarzu.  
@@ -51,19 +51,19 @@ ms.locfileid: "59313310"
   
 3. Dla każdego elementu daty i godziny, który chcesz wyświetlić, należy wywołać obiekt kalendarza `Get`... Metoda. Dostępne są następujące metody:  
   
-    -   <xref:System.Globalization.Calendar.GetYear%2A>, aby wyświetlać rok w kalendarzu odpowiednie.  
+    - <xref:System.Globalization.Calendar.GetYear%2A>, aby wyświetlać rok w kalendarzu odpowiednie.  
   
-    -   <xref:System.Globalization.Calendar.GetMonth%2A>, aby wyświetlić miesiąca w kalendarzu odpowiednie.  
+    - <xref:System.Globalization.Calendar.GetMonth%2A>, aby wyświetlić miesiąca w kalendarzu odpowiednie.  
   
-    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A>, aby wyświetlić numer dnia miesiąca w kalendarzu odpowiednie.  
+    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A>, aby wyświetlić numer dnia miesiąca w kalendarzu odpowiednie.  
   
-    -   <xref:System.Globalization.Calendar.GetHour%2A>, aby wyświetlić godzinę dnia w kalendarzu odpowiednie.  
+    - <xref:System.Globalization.Calendar.GetHour%2A>, aby wyświetlić godzinę dnia w kalendarzu odpowiednie.  
   
-    -   <xref:System.Globalization.Calendar.GetMinute%2A>, aby wyświetlić minuty w ciągu godziny w kalendarzu odpowiednie.  
+    - <xref:System.Globalization.Calendar.GetMinute%2A>, aby wyświetlić minuty w ciągu godziny w kalendarzu odpowiednie.  
   
-    -   <xref:System.Globalization.Calendar.GetSecond%2A>, aby wyświetlić sekund w ciągu minuty w kalendarzu odpowiednie.  
+    - <xref:System.Globalization.Calendar.GetSecond%2A>, aby wyświetlić sekund w ciągu minuty w kalendarzu odpowiednie.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> , do wyświetlenia milisekund w ciągu sekundy w kalendarzu odpowiednie.  
+    - <xref:System.Globalization.Calendar.GetMilliseconds%2A> , do wyświetlenia milisekund w ciągu sekundy w kalendarzu odpowiednie.  
   
 ## <a name="example"></a>Przykład  
  W przykładzie wyświetlono datę przy użyciu dwóch różnych kalendarzy. Wyświetla datę po zdefiniowaniu kalendarz Hidżry jako kalendarz domyślny kultury ar JO i wyświetla datę przy użyciu kalendarz perski, który nie jest obsługiwany przez kulturę fa-IR jako kalendarz opcjonalny.  
@@ -75,13 +75,13 @@ ms.locfileid: "59313310"
   
  W przykładzie zdefiniowano klasę użytkową wielokrotnego użytku kalendarza `CalendarUtility`, aby obsługiwać wiele szczegółów generowania ciąg reprezentujący datę przy użyciu określonego kalendarza. `CalendarUtility` Klasy ma następujące składowe:  
   
--   Którego pojedynczy parametr w to sparametryzowania konstruktora <xref:System.Globalization.Calendar> obiekt, w którym ma być reprezentowane wartość typu date. To jest przypisany do pola prywatnego klasy.  
+- Którego pojedynczy parametr w to sparametryzowania konstruktora <xref:System.Globalization.Calendar> obiekt, w którym ma być reprezentowane wartość typu date. To jest przypisany do pola prywatnego klasy.  
   
--   `CalendarExists`, metody prywatnej, która zwraca wartość logiczną wskazującą, czy kalendarz reprezentowany przez `CalendarUtility` obiekt jest obsługiwany przez <xref:System.Globalization.CultureInfo> obiekt, który jest przekazywany do metody jako parametr. Metoda zawija wywołanie do <xref:System.Array.Exists%2A?displayProperty=nameWithType> metody, która przekazuje <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> tablicy.  
+- `CalendarExists`, metody prywatnej, która zwraca wartość logiczną wskazującą, czy kalendarz reprezentowany przez `CalendarUtility` obiekt jest obsługiwany przez <xref:System.Globalization.CultureInfo> obiekt, który jest przekazywany do metody jako parametr. Metoda zawija wywołanie do <xref:System.Array.Exists%2A?displayProperty=nameWithType> metody, która przekazuje <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> tablicy.  
   
--   `HasSameName`, przypisany do metody prywatnej <xref:System.Predicate%601> delegata, który jest przekazywany jako parametr do <xref:System.Array.Exists%2A?displayProperty=nameWithType> metody. Każdy element członkowski tablicy jest przekazywany do metody, dopóki metoda zwraca `true`. Metoda określa, czy nazwa kalendarz opcjonalny jest taka sama jak kalendarz, reprezentowane przez `CalendarUtility` obiektu.  
+- `HasSameName`, przypisany do metody prywatnej <xref:System.Predicate%601> delegata, który jest przekazywany jako parametr do <xref:System.Array.Exists%2A?displayProperty=nameWithType> metody. Każdy element członkowski tablicy jest przekazywany do metody, dopóki metoda zwraca `true`. Metoda określa, czy nazwa kalendarz opcjonalny jest taka sama jak kalendarz, reprezentowane przez `CalendarUtility` obiektu.  
   
--   `DisplayDate`, przeciążona metoda publiczny, który jest przekazywany dwa parametry: albo <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości wyrażenia w kalendarzu, reprezentowane przez `CalendarUtility` obiektu; i kulturę, której reguły formatowania mają zostać użyte. Jego zachowanie w powrocie reprezentacją ciągu daty, zależy od tego, czy kalendarz docelowy jest obsługiwany przez kulturę, której reguły formatowania mają zostać użyte.  
+- `DisplayDate`, przeciążona metoda publiczny, który jest przekazywany dwa parametry: albo <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości wyrażenia w kalendarzu, reprezentowane przez `CalendarUtility` obiektu; i kulturę, której reguły formatowania mają zostać użyte. Jego zachowanie w powrocie reprezentacją ciągu daty, zależy od tego, czy kalendarz docelowy jest obsługiwany przez kulturę, której reguły formatowania mają zostać użyte.  
   
  Niezależnie od tego, kalendarz, użyty do utworzenia <xref:System.DateTime> lub <xref:System.DateTimeOffset> w tym przykładzie, że wartość jest zwykle wyrażona jako data gregoriańska wartość. Jest to spowodowane <xref:System.DateTime> i <xref:System.DateTimeOffset> typów nie zachowuje żadnych informacji kalendarza. Wewnętrznie są one reprezentowane jako liczbę znaczników, które upłynęły od północy 1 stycznia 0001. Interpretacja tego numeru, zależy od kalendarza. W przypadku większości kultur kalendarz domyślny jest kalendarz gregoriański.  
   

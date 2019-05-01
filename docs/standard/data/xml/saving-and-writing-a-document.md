@@ -1,5 +1,5 @@
 ---
-title: Zapisywanie i zapisywania dokumentu
+title: Zapisywanie dokumentu
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,28 +9,28 @@ ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83aad5d45dda1784069839662486f7dbcc307542
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027033"
 ---
-# <a name="saving-and-writing-a-document"></a>Zapisywanie i zapisywania dokumentu
+# <a name="saving-and-writing-a-document"></a>Zapisywanie dokumentu
 Podczas ładowania i Zapisz <xref:System.Xml.XmlDocument>, zapisany dokument może różnić się od oryginału, w następujący sposób:  
   
--   Jeśli <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> właściwość jest ustawiona na `true` przed <xref:System.Xml.XmlDocument.Save%2A> metoda jest wywoływana, biały znak w dokumencie są zachowywane w danych wyjściowych; Jeśli ta właściwość jest `false`, <xref:System.Xml.XmlDocument> automatycznie wcięcia danych wyjściowych.  
+- Jeśli <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> właściwość jest ustawiona na `true` przed <xref:System.Xml.XmlDocument.Save%2A> metoda jest wywoływana, biały znak w dokumencie są zachowywane w danych wyjściowych; Jeśli ta właściwość jest `false`, <xref:System.Xml.XmlDocument> automatycznie wcięcia danych wyjściowych.  
   
--   Wszelkie odstępy między atrybutami jest redukowana do pojedynczy znak.  
+- Wszelkie odstępy między atrybutami jest redukowana do pojedynczy znak.  
   
--   Odstępy między elementami została zmieniona. Istotnych białych są zachowywane i nie jest nieważny biały znak. Po zapisaniu dokumentu będą używać <xref:System.Xml.XmlTextWriter> **Indenting** tryb domyślnie starannego drukowanie danych wyjściowych, aby był bardziej czytelny.  
+- Odstępy między elementami została zmieniona. Istotnych białych są zachowywane i nie jest nieważny biały znak. Po zapisaniu dokumentu będą używać <xref:System.Xml.XmlTextWriter> **Indenting** tryb domyślnie starannego drukowanie danych wyjściowych, aby był bardziej czytelny.  
   
--   Znak cudzysłowu wokół wartości atrybutów zostanie zmieniony na podwójnego cudzysłowu w domyślnie. Możesz użyć <xref:System.Xml.XmlTextReader.QuoteChar%2A> właściwość <xref:System.Xml.XmlTextWriter> można ustawić znaku cudzysłowu podwójnego cudzysłowu lub pojedynczy cudzysłów.  
+- Znak cudzysłowu wokół wartości atrybutów zostanie zmieniony na podwójnego cudzysłowu w domyślnie. Możesz użyć <xref:System.Xml.XmlTextReader.QuoteChar%2A> właściwość <xref:System.Xml.XmlTextWriter> można ustawić znaku cudzysłowu podwójnego cudzysłowu lub pojedynczy cudzysłów.  
   
--   Domyślnie encje znaków numerycznych, takich jak `{` zostaną rozwinięte.  
+- Domyślnie encje znaków numerycznych, takich jak `{` zostaną rozwinięte.  
   
--   Znacznika kolejności bajtów w dokumencie wejściowym nie są zachowywane. UCS-2 jest zapisywany jako UTF-8, chyba że jawnie Utwórz deklaracji XML, który określa innego kodowania.  
+- Znacznika kolejności bajtów w dokumencie wejściowym nie są zachowywane. UCS-2 jest zapisywany jako UTF-8, chyba że jawnie Utwórz deklaracji XML, który określa innego kodowania.  
   
--   Jeśli chcesz zapisać <xref:System.Xml.XmlDocument> do pliku lub strumienia danych wyjściowych zapisywanych w jest taka sama jak zawartości dokumentu. Oznacza to, że <xref:System.Xml.XmlDeclaration> jest zapisywany tylko jeśli znajduje się w dokumencie i kodowanie używane podczas zapisywania na poziomie dokumentu jest tym samym kodowaniem podane w węźle deklaracji.  
+- Jeśli chcesz zapisać <xref:System.Xml.XmlDocument> do pliku lub strumienia danych wyjściowych zapisywanych w jest taka sama jak zawartości dokumentu. Oznacza to, że <xref:System.Xml.XmlDeclaration> jest zapisywany tylko jeśli znajduje się w dokumencie i kodowanie używane podczas zapisywania na poziomie dokumentu jest tym samym kodowaniem podane w węźle deklaracji.  
   
 ## <a name="writing-an-xmldeclaration"></a>Zapisywanie XmlDeclaration  
  <xref:System.Xml.XmlDocument> i <xref:System.Xml.XmlDeclaration> członkowie <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A>, i <xref:System.Xml.XmlNode.WriteTo%2A>, oprócz <xref:System.Xml.XmlDocument> metody <xref:System.Xml.XmlDocument.Save%2A> i <xref:System.Xml.XmlDocument.WriteContentTo%2A>, Utwórz deklarację XML.  

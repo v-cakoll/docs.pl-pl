@@ -5,22 +5,22 @@ helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
 ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046453"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Kolejki programu Windows Communication Foundation
 W tematach w tej sekcji omówiono Windows Communication Foundation (WCF), obsługa kolejek. Usługi WCF zapewnia obsługę usługi kolejkowania wiadomości, wykorzystaniem Microsoft usługi kolejkowania komunikatów (wcześniej znane jako usługi MSMQ) jako transportu i umożliwia obsługę następujących scenariuszy:  
   
--   Luźno powiązanych aplikacji. Wysyłanie aplikacje mogą wysyłać wiadomości do kolejki, bez znajomości czy aplikacja jest dostępne do przetwarzania wiadomości. Kolejka zapewnia niezależność przetwarzania, który umożliwia aplikacji wysyłającej wysyłać komunikaty do kolejki z szybkością, która nie zależy od szybkości aplikacje odbierające może przetwarzać komunikaty. Ogólna dostępność systemu zwiększa się podczas wysyłania wiadomości do kolejki jest nie ściśle powiązany przetwarzanie komunikatów.  
+- Luźno powiązanych aplikacji. Wysyłanie aplikacje mogą wysyłać wiadomości do kolejki, bez znajomości czy aplikacja jest dostępne do przetwarzania wiadomości. Kolejka zapewnia niezależność przetwarzania, który umożliwia aplikacji wysyłającej wysyłać komunikaty do kolejki z szybkością, która nie zależy od szybkości aplikacje odbierające może przetwarzać komunikaty. Ogólna dostępność systemu zwiększa się podczas wysyłania wiadomości do kolejki jest nie ściśle powiązany przetwarzanie komunikatów.  
   
--   Izolacja błędów. Aplikacje, wysyłanie i odbieranie komunikatów w kolejce może zakończyć się niepowodzeniem bez wpływu na siebie nawzajem. Jeśli na przykład, aplikacja zakończy się niepowodzeniem, wysyłanie aplikacja może kontynuować do wysyłania komunikatów do kolejki. Jeśli odbiorca jest ponownie uruchomiony, go przetwarzać komunikaty z kolejki. Izolacja błędów zwiększa ogólną niezawodność systemu i dostępności.  
+- Izolacja błędów. Aplikacje, wysyłanie i odbieranie komunikatów w kolejce może zakończyć się niepowodzeniem bez wpływu na siebie nawzajem. Jeśli na przykład, aplikacja zakończy się niepowodzeniem, wysyłanie aplikacja może kontynuować do wysyłania komunikatów do kolejki. Jeśli odbiorca jest ponownie uruchomiony, go przetwarzać komunikaty z kolejki. Izolacja błędów zwiększa ogólną niezawodność systemu i dostępności.  
   
--   Wyrównywanie obciążenia. Aplikacje wysyłające może spowodować przeciążenie aplikacje odbierające przy użyciu komunikatów. Kolejki mogą zarządzać stawki produkcji i zużycia niedopasowanych wiadomości, aby odbiorca nie przeciążeniu.  
+- Wyrównywanie obciążenia. Aplikacje wysyłające może spowodować przeciążenie aplikacje odbierające przy użyciu komunikatów. Kolejki mogą zarządzać stawki produkcji i zużycia niedopasowanych wiadomości, aby odbiorca nie przeciążeniu.  
   
--   Operacje odłączonych. Wysyłanie, odbieranie i przetwarzanie operacji może stać się rozłączona podczas komunikowania się za pośrednictwem sieci z dużym opóźnieniem lub ograniczoną dostępność sieci, takich jak w przypadku urządzeń przenośnych. Kolejki umożliwiają te operacje kontynuować, nawet gdy punkty końcowe są odłączone. Po ponownym ustanowieniu połączenia, kolejki przekazuje komunikaty odbierający aplikacji.  
+- Operacje odłączonych. Wysyłanie, odbieranie i przetwarzanie operacji może stać się rozłączona podczas komunikowania się za pośrednictwem sieci z dużym opóźnieniem lub ograniczoną dostępność sieci, takich jak w przypadku urządzeń przenośnych. Kolejki umożliwiają te operacje kontynuować, nawet gdy punkty końcowe są odłączone. Po ponownym ustanowieniu połączenia, kolejki przekazuje komunikaty odbierający aplikacji.  
   
  Funkcja kolejek w aplikacji WCF umożliwia standardowe powiązania, lub można utworzyć niestandardowego powiązania, jeśli jedno z powiązań standard nie spełnia wymagań. Aby uzyskać więcej informacji o odpowiednich powiązań standardowych i wybierz jedną, zobacz [jak: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

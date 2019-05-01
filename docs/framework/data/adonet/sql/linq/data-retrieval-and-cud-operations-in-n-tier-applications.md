@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037924"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Pobieranie danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)
 Podczas obiekty obiektów, takich jak klienci i zamówienia klienta za pośrednictwem sieci, te jednostki są odłączone od ich kontekstu danych. Kontekst danych śledzi już zmian lub ich skojarzenia z innymi obiektami. Nie jest to problem tak długo, jak klienci są tylko do odczytu danych. Jest również stosunkowo proste umożliwić klientom dodawanie nowych wierszy do bazy danych. Jednakże, jeśli aplikacja wymaga, aby klienci mogli aktualizować lub usuwać dane, następnie należy dołączyć jednostek do nowy kontekst danych przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Ponadto jeśli używasz kontroli optymistycznej współbieżności przy użyciu oryginalnych wartości, następnie należy również sposób zapewnienia bazy danych, jednostki i oryginalna jednostka zmodyfikowana. `Attach` Udostępniono metody umożliwiające umieść jednostek nowy kontekst danych po mają zostać odłączony.  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>Implementacja warstwy środkowej  
  Poniższy przykład pokazuje implementację metody interfejsu w warstwie środkowej. Poniżej przedstawiono dwa główne punkty, należy pamiętać:  
   
--   <xref:System.Data.Linq.DataContext> Jest zadeklarowana w zakresie metody.  
+- <xref:System.Data.Linq.DataContext> Jest zadeklarowana w zakresie metody.  
   
--   Metoda ta zwraca <xref:System.Collections.IEnumerable> zbiór rzeczywiste wyniki. Serializator wykona zapytanie, aby wysłać wyniki do warstwy klienta/prezentacji. Aby uzyskać dostęp do wyników zapytania lokalnie w środkowej warstwie, można wymusić wykonanie przez wywołanie metody `ToList` lub `ToArray` w zmiennej zapytania. Możesz powrócić do tej listy lub tablicy jako `IEnumerable`.  
+- Metoda ta zwraca <xref:System.Collections.IEnumerable> zbiór rzeczywiste wyniki. Serializator wykona zapytanie, aby wysłać wyniki do warstwy klienta/prezentacji. Aby uzyskać dostęp do wyników zapytania lokalnie w środkowej warstwie, można wymusić wykonanie przez wywołanie metody `ToList` lub `ToArray` w zmiennej zapytania. Możesz powrócić do tej listy lub tablicy jako `IEnumerable`.  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -210,11 +210,11 @@ public void DeleteOrder(Order order)
 ## <a name="updating-data"></a>Aktualizowanie danych  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługiwane są aktualizacje w tych scenariuszach obejmująca optymistycznej współbieżności:  
   
--   Na podstawie sygnatur czasowych lub numerów RowVersion optymistycznej współbieżności.  
+- Na podstawie sygnatur czasowych lub numerów RowVersion optymistycznej współbieżności.  
   
--   Optymistyczna współbieżność oparte na oryginalnych wartości podzbioru właściwości jednostki.  
+- Optymistyczna współbieżność oparte na oryginalnych wartości podzbioru właściwości jednostki.  
   
--   Optymistyczna współbieżność oparte na zakończenie jednostkach oryginalnego i modyfikacji.  
+- Optymistyczna współbieżność oparte na zakończenie jednostkach oryginalnego i modyfikacji.  
   
  Można również wykonać aktualizacji lub usuwania w jednostce wraz z jego relacji, na przykład klient i zbiór powiązane obiekty zamówienia. Po dokonaniu modyfikacji na komputerze klienckim do wykresu obiekty jednostki i ich podrzędnych (`EntitySet`) kolekcji i kontroli optymistycznej współbieżności wymagają oryginalnych wartości, klient musi podać te wartości początkowe dla każdej jednostki i <xref:System.Data.Linq.EntitySet%601> obiekt. Jeśli chcesz umożliwić klientom zestaw powiązanych aktualizacji, usunięcia i wstawienia w pojedynczym wywołaniu metody, musisz podać klienta sposób, aby wskazać typ operacji do wykonania dla każdej jednostki. W środkowej warstwie, następnie należy wywołać odpowiednie <xref:System.Data.Linq.ITable.Attach%2A> metody i następnie <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>, <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>, lub <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (bez `Attach`, do wstawienia) dla każdej jednostki przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Nie pobierać dane z bazy danych jako sposobu uzyskania oryginalnych wartości, przed podjęciem próby aktualizacji.  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>Elementy członkowskie oczekiwanej jednostki  
  Jak wspomniano wcześniej, tylko niektóre elementy członkowskie obiektu jednostki są wymagane, należy ustawić przed wywołaniem `Attach` metody. Elementy członkowskie jednostki, które są wymagane do skonfigurowania musi spełniać następujące kryteria:  
   
--   Być częścią tożsamości jednostki.  
+- Być częścią tożsamości jednostki.  
   
--   Można oczekiwać od tego, można zmodyfikować.  
+- Można oczekiwać od tego, można zmodyfikować.  
   
--   Mieć sygnaturę czasową lub jego <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> atrybut ustawiony wpisując oprócz `Never`.  
+- Mieć sygnaturę czasową lub jego <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> atrybut ustawiony wpisując oprócz `Never`.  
   
  Jeśli tabela używa wielu znacznika czasu lub wersji do kontroli optymistycznej współbieżności, należy ustawić te elementy Członkowskie przed wywołaniem <xref:System.Data.Linq.ITable.Attach%2A>. Element członkowski jest dedykowany do optymistycznej współbieżności, gdy sprawdzanie <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> właściwość jest ustawiona na wartość true dla atrybutu tej kolumny. Wszystkie żądane aktualizacje zostaną przesłane tylko wtedy, gdy wersja wartości liczby lub sygnatura czasowa są takie same, w bazie danych.  
   

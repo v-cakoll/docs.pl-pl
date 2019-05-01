@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047948"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: udostępnianie certyfikatów X.509 w architekturze WCF
 Aby udostępnić certyfikat X.509 do programu Windows Communication Foundation (WCF), kod aplikacji należy określić nazwę magazynu certyfikatów i lokalizacji. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X.509 w magazynie certyfikatów, WCF musi mieć uprawnienie, aby to zrobić. Domyślnie tylko właściciel i konto systemowe dostęp klucza prywatnego certyfikatu.  
@@ -23,7 +23,7 @@ Aby udostępnić certyfikat X.509 do programu Windows Communication Foundation (
   
 1. Należy podać konto, które WCF działa dostęp do odczytu do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509.  
   
-    1.  Ustal, czy WCF wymaga dostęp do odczytu do klucza prywatnego dla certyfikatu X.509.  
+    1. Ustal, czy WCF wymaga dostęp do odczytu do klucza prywatnego dla certyfikatu X.509.  
   
          W poniższej tabeli przedstawiono, czy klucz prywatny musi być dostępny w przypadku korzystania z certyfikatu X.509.  
   
@@ -32,16 +32,16 @@ Aby udostępnić certyfikat X.509 do programu Windows Communication Foundation (
         |Cyfrowego podpisywania wychodzących wiadomości protokołu SOAP.|Tak|  
         |Sprawdzanie podpisu dla ruchu przychodzącego komunikatu protokołu SOAP.|Nie|  
         |Szyfrowanie ruchu wychodzącego komunikatu protokołu SOAP.|Nie|  
-        |Odszyfrowywanie ruchu przychodzącego komunikatu protokołu SOAP.|Yes|  
+        |Odszyfrowywanie ruchu przychodzącego komunikatu protokołu SOAP.|Tak|  
   
-    2.  Określ lokalizację magazynu certyfikatów i nazwy, w którym przechowywany jest certyfikat.  
+    2. Określ lokalizację magazynu certyfikatów i nazwy, w którym przechowywany jest certyfikat.  
   
          Magazyn certyfikatów, w którym przechowywany jest certyfikat jest określona w kodzie aplikacji lub w konfiguracji. Na przykład w poniższym przykładzie określono, że certyfikat znajduje się w `CurrentUser` magazynie certyfikatów o nazwie `My`.  
   
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3.  Określić lokalizację klucza prywatnego dla certyfikatu na komputerze przy użyciu [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) narzędzia.  
+    3. Określić lokalizację klucza prywatnego dla certyfikatu na komputerze przy użyciu [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) narzędzia.  
   
          [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) narzędzie wymaga nazwę magazynu certyfikatów, lokalizacja magazynu certyfikatów i coś, który unikatowo identyfikuje certyfikat. Narzędzie akceptuje nazwa podmiotu certyfikatu lub jego odcisk palca jako unikatowy identyfikator. Aby uzyskać więcej informacji dotyczących sposobu ustalenia odcisku palca certyfikatu, zobacz [jak: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
@@ -51,7 +51,7 @@ Aby udostępnić certyfikat X.509 do programu Windows Communication Foundation (
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  Określ konto, na której działają usługi WCF.  
+    4. Określ konto, na której działają usługi WCF.  
   
          W poniższej tabeli przedstawiono konto, na którym uruchomiono usługi WCF w danym scenariuszu.  
   
@@ -62,7 +62,7 @@ Aby udostępnić certyfikat X.509 do programu Windows Communication Foundation (
         |Usługa, która znajduje się w usługach IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) lub usług IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|USŁUGA SIECIOWA|  
         |To znaczy usług hostowanych w usługach IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|W wartości clientauthtrustmode `<processModel>` elementu w pliku Machine.config. Domyślne konto to ASPNET.|  
   
-    5.  Przyznaj dostęp do odczytu do pliku, który zawiera klucz prywatny do konta, które WCF jest uruchamiany, za pomocą narzędzia takiego jak icacls.exe.  
+    5. Przyznaj dostęp do odczytu do pliku, który zawiera klucz prywatny do konta, które WCF jest uruchamiany, za pomocą narzędzia takiego jak icacls.exe.  
   
          Poniższy przykład kodu umożliwia edytowanie listy kontroli dostępu (DACL) określonego pliku do udzielania odczytu konta Usługa sieciowa (: R) dostępu do pliku.  
   

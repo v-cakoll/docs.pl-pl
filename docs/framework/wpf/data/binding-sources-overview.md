@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023783"
 ---
 # <a name="binding-sources-overview"></a>Przegląd Wiązanie źródeł
 W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, który można uzyskać danych z. W tym temacie omówiono typy obiektów, których można użyć jako źródło wiążące.  
@@ -42,13 +42,13 @@ W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, k
 ### <a name="other-characteristics"></a>Inne właściwości  
  Na poniższej liście przedstawiono inne ważne punkty, które należy zwrócić uwagę:  
   
--   Jeśli chcesz utworzyć obiekt w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], klasa musi mieć domyślnego konstruktora. W niektórych [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] języków, takich jak C#, Konstruktor domyślny może być utworzona.  
+- Jeśli chcesz utworzyć obiekt w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], klasa musi mieć domyślnego konstruktora. W niektórych [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] języków, takich jak C#, Konstruktor domyślny może być utworzona.  
   
--   Właściwości służy jako powiązania właściwości źródła powiązania musi być publicznymi właściwościami klasy. Interfejs jawnie zdefiniowanych właściwości nie są dostępne dla powiązania celów, ani nie może chronione, prywatne, wewnętrzne lub wirtualnych właściwości, które nie mają podstawowej implementacji.  
+- Właściwości służy jako powiązania właściwości źródła powiązania musi być publicznymi właściwościami klasy. Interfejs jawnie zdefiniowanych właściwości nie są dostępne dla powiązania celów, ani nie może chronione, prywatne, wewnętrzne lub wirtualnych właściwości, które nie mają podstawowej implementacji.  
   
--   Nie można powiązać pola publiczne.  
+- Nie można powiązać pola publiczne.  
   
--   Typ właściwości zadeklarowana w klasie jest typ, który jest przekazywany do powiązania. Typ ostatecznie używanym przez wiązanie zależy jednak od tego, jaki typ powiązania właściwości docelowej, a nie właściwości źródła powiązania. Istnieje następująca różnica w typie, można napisać konwerter służący do obsługi, jak właściwości niestandardowej początkowo jest przekazywany do powiązania. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Data.IValueConverter>.  
+- Typ właściwości zadeklarowana w klasie jest typ, który jest przekazywany do powiązania. Typ ostatecznie używanym przez wiązanie zależy jednak od tego, jaki typ powiązania właściwości docelowej, a nie właściwości źródła powiązania. Istnieje następująca różnica w typie, można napisać konwerter służący do obsługi, jak właściwości niestandardowej początkowo jest przekazywany do powiązania. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Data.IValueConverter>.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>Przy użyciu całe obiekty jako źródło wiążące  
@@ -75,16 +75,16 @@ W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, k
 |Typ właściwości<br /><br /> (wszystkie modyfikatory dostępu)|Właściwości dynamiczne obiektu|Właściwości dynamiczne obiektu|Właściwość CLR|Właściwość CLR|Właściwości zależności|Właściwości zależności|  
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**Poziom zaufania**|**Pełne zaufanie**|**Częściowej relacji zaufania**|**Pełne zaufanie**|**Częściowej relacji zaufania**|**Pełne zaufanie**|**Częściowej relacji zaufania**|  
-|Klasa publiczna|Yes|Yes|Yes|Yes|Yes|Tak|  
+|Klasa publiczna|Tak|Yes|Yes|Yes|Yes|Tak|  
 |Klasa niepubliczne|Tak|Nie|Yes|Nie|Yes|Tak|  
   
  W tej tabeli opisano następujące ważne kwestie dotyczące wymagania dotyczące uprawnień w powiązaniu danych:  
   
--   Aby uzyskać [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwości powiązania danych działa tak długo, jak długo silnik powiązania jest mogli korzystać z właściwości źródła powiązania przy użyciu odbicia. W przeciwnym razie aparat powiązania generuje ostrzeżenie, że nie można odnaleźć właściwości i używa rezerwowej wartość lub wartość domyślną, jeśli jest ona dostępna.  
+- Aby uzyskać [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwości powiązania danych działa tak długo, jak długo silnik powiązania jest mogli korzystać z właściwości źródła powiązania przy użyciu odbicia. W przeciwnym razie aparat powiązania generuje ostrzeżenie, że nie można odnaleźć właściwości i używa rezerwowej wartość lub wartość domyślną, jeśli jest ona dostępna.  
   
--   Można powiązać właściwości obiektów dynamicznych, które są zdefiniowane podczas kompilacji w czasie lub w czasie wykonywania.  
+- Można powiązać właściwości obiektów dynamicznych, które są zdefiniowane podczas kompilacji w czasie lub w czasie wykonywania.  
   
--   Zawsze można powiązać właściwości zależności.  
+- Zawsze można powiązać właściwości zależności.  
   
  Wymagane uprawnienia dla [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] powiązania jest podobny. W piaskownicy częściowego zaufania <xref:System.Windows.Data.XmlDataProvider> zakończy się niepowodzeniem, gdy nie ma uprawnień dostępu określone dane.  
   

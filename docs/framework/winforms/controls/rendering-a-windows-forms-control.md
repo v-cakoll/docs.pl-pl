@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012480"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Renderowanie formantu formularzy systemu Windows
 Renderowanie odnosi się do procesu tworzenia wizualnej reprezentacji na ekranie użytkownika. Formularze Windows używa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (nowe Windows biblioteki graficznej) do renderowania. Klasy zarządzane, które zapewniają dostęp do [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] znajdują się w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw i jego podobszary nazw.  
   
  Renderowanie kontrolki obejmuje następujące elementy:  
   
--   Rysowanie funkcje zapewniane przez klasę bazową <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- Rysowanie funkcje zapewniane przez klasę bazową <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
--   Istotne elementy [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] biblioteki funkcji graficznych.  
+- Istotne elementy [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] biblioteki funkcji graficznych.  
   
--   Geometria obszaru rysowania.  
+- Geometria obszaru rysowania.  
   
--   Procedura zwalnianie zasobów graficznych.  
+- Procedura zwalnianie zasobów graficznych.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>Rysowanie funkcje udostępniane przez kontrolkę  
  Klasa bazowa <xref:System.Windows.Forms.Control> udostępnia funkcje rysowania za pośrednictwem jego <xref:System.Windows.Forms.Control.Paint> zdarzeń. Kontrolki wywołuje <xref:System.Windows.Forms.Control.Paint> zdarzenie zawsze wtedy, gdy trzeba ją zaktualizować jego wyświetlania. Aby uzyskać więcej informacji o zdarzeniach w .NET Framework, zobacz [Handling and Raising Events](../../../standard/events/index.md).  

@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938168"
 ---
 # <a name="graphics-paths-in-gdi"></a>Ścieżki grafiki w GDI+
 Ścieżki są tworzone przez łączenie linii, prostokąty i krzywych proste. Jak pamiętamy z artykułu [Przegląd grafiki wektorowej](vector-graphics-overview.md) czy następujących podstawowych bloków konstrukcyjnych okazały się być najbardziej przydatne do rysowania obrazów:  
   
--   wiersze  
+- wiersze  
   
--   Prostokąty  
+- Prostokąty  
   
--   Wielokropek  
+- Wielokropek  
   
--   Łuki  
+- Łuki  
   
--   Wielokąty  
+- Wielokąty  
   
--   Krzywe kardynalne  
+- Krzywe kardynalne  
   
--   Krzywe Beziera  
+- Krzywe Beziera  
   
  W GDI + <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt umożliwia zbieranie sekwencję te bloki konstrukcyjne w pojedynczą jednostkę. Całą sekwencję linii, prostokątów, wielokąty i krzywych następnie mogą być wystawiane przy użyciu jednego wywołania do <xref:System.Drawing.Graphics.DrawPath%2A> metody <xref:System.Drawing.Graphics> klasy. Poniższa ilustracja przedstawia ścieżki tworzone przez połączenie linii, łuk, krzywej Beziera i kardynalnej krzywej składanej.  
   

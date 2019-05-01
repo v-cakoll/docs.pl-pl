@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użyj atrybutów oddzielających kolumny FlowDocument'
+title: 'Instrukcje: Używanie atrybutów oddzielających kolumny FlowDocument'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowDocument column-separating attributes
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - documents [WPF], FlowDocument column-separating attributes
 ms.assetid: c7a822f8-aeca-45bd-a258-2852ff28005c
 ms.openlocfilehash: 27491b21da587fa198061ba52d8daed5d3f28de3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032044"
 ---
-# <a name="how-to-use-flowdocument-column-separating-attributes"></a>Instrukcje: Użyj atrybutów oddzielających kolumny FlowDocument
+# <a name="how-to-use-flowdocument-column-separating-attributes"></a>Instrukcje: Używanie atrybutów oddzielających kolumny FlowDocument
 Ten przykład pokazuje, jak używać funkcji oddzielające kolumny <xref:System.Windows.Documents.FlowDocument>.  
   
 ## <a name="example"></a>Przykład  

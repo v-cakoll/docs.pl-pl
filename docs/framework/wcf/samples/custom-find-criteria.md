@@ -3,11 +3,11 @@ title: Niestandardowe kryteria znajdowania
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006372"
 ---
 # <a name="custom-find-criteria"></a>Niestandardowe kryteria znajdowania
 Niniejszy przykład pokazuje, jak utworzyć niestandardowy zakres dopasowanie przy użyciu logiki i jak wdrożyć usługę odnajdywania niestandardowych. Klienci używają niestandardowy zakres funkcji dopasowywania, aby dostosować i dalszych są oparte na funkcji Znajdź dostarczane przez system odnajdowania usługi WCF. Scenariusz, który opisano w tym przykładzie jest następująca:  
@@ -20,9 +20,9 @@ Niniejszy przykład pokazuje, jak utworzyć niestandardowy zakres dopasowanie pr
   
 ## <a name="demonstrates"></a>Demonstracje  
   
--   Tworzenie usługi odnajdywanie niestandardowe.  
+- Tworzenie usługi odnajdywanie niestandardowe.  
   
--   Implementowanie dopasowanie niestandardowy zakres przez algorytm.  
+- Implementowanie dopasowanie niestandardowy zakres przez algorytm.  
   
 ## <a name="discussion"></a>Dyskusja  
  Klient jest wyszukiwanie typu "Lub" spełniające kryteria. Usługa odpowiada ponownie, jeśli zakresy na jego punkty końcowe pasuje do żadnego z zakresów określonych przez klienta. W takim przypadku klient szuka usługi Kalkulator, które ma jakiekolwiek z zakresów na poniższej liście:  

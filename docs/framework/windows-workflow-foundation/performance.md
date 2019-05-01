@@ -1,15 +1,15 @@
 ---
-title: Windows Workflow Foundation 4 wydajności
+title: Wydajność programu Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007034"
 ---
-# <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 wydajności
+# <a name="windows-workflow-foundation-4-performance"></a>Wydajność programu Windows Workflow Foundation 4
 
  Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] obejmuje znaczne zmiany programu Windows Workflow Foundation (WF) przy użyciu dużych inwestycji w wydajności.  Ta nowa poprawka wprowadza znaczących zmian z poprzednich wersji [!INCLUDE[wf1](../../../includes/wf1-md.md)] dostarczonego jako część .NET Framework 3.0 i [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Została zmieniona od podstawowej w modelu programowania, środowiska uruchomieniowego i narzędzi znacznie zwiększyć wydajność i użyteczność. W tym temacie przedstawiono ważne właściwości działania tych zmian i porównuje je udostępnianych przez poprzednią wersję.
 
@@ -376,25 +376,25 @@ public class Workflow1 : Activity
 
  Należy pamiętać, że dostawcy stanów trwałych programu SQL WF4 wykonuje więcej pracy w warstwie bazy danych.  Bazy danych SQL może stać się wąskim gardłem tak ważne jest, aby monitorować istnieje użycie Procesora i dysku.  Należy uwzględnić następujące liczniki wydajności z SQL, bazy danych podczas testowania aplikacji przepływu pracy:
 
--   Dysk fizyczny\\czas odczytu z dysku %
+- Dysk fizyczny\\czas odczytu z dysku %
 
--   Dysk fizyczny\\czas dysku (%)
+- Dysk fizyczny\\czas dysku (%)
 
--   Dysk fizyczny\\czas zapisu dysku %
+- Dysk fizyczny\\czas zapisu dysku %
 
--   Dysk fizyczny\\% średni Długość kolejki dysku
+- Dysk fizyczny\\% średni Długość kolejki dysku
 
--   Dysk Fizyczny\średni Długość kolejki odczytu dysku
+- Dysk Fizyczny\średni Długość kolejki odczytu dysku
 
--   Dysk Fizyczny\średni Długość kolejki zapisu dysku
+- Dysk Fizyczny\średni Długość kolejki zapisu dysku
 
--   Długość kolejki dysku PhysicalDisk\Current
+- Długość kolejki dysku PhysicalDisk\Current
 
--   Informacje o procesorze\\czas procesora (%)
+- Informacje o procesorze\\czas procesora (%)
 
--   Czas oczekiwania zatrzaśnięcia SQLServer:Latches\Average (ms)
+- Czas oczekiwania zatrzaśnięcia SQLServer:Latches\Average (ms)
 
--   SQLServer:Latches\Latch Waits/sec
+- SQLServer:Latches\Latch Waits/sec
 
 ### <a name="tracking"></a>Śledzenie
  Śledzenie przepływu pracy może służyć do śledzenia postępu dla przepływu pracy.  Informacje, które są objęte zdarzeń śledzenia jest ustalany profilu śledzenia.  Bardziej złożone staje się profilu śledzenia śledzenia bardziej kosztowne.
@@ -407,13 +407,13 @@ public class Workflow1 : Activity
 
  Podejście za pomocą funkcji ETW śledzenia zamiast SQL korzyści:
 
--   Kolekcja zdarzenia śledzenia mogą być oddzielone do innego procesu.  Daje to większą elastyczność w jaki sposób są rejestrowane zdarzenia.
+- Kolekcja zdarzenia śledzenia mogą być oddzielone do innego procesu.  Daje to większą elastyczność w jaki sposób są rejestrowane zdarzenia.
 
--   Zdarzenia śledzenia ETW łatwo są połączone z zdarzenia WCF ETW lub innych dostawców ETW, takiego jak dostawca programu SQL Server lub jądra.
+- Zdarzenia śledzenia ETW łatwo są połączone z zdarzenia WCF ETW lub innych dostawców ETW, takiego jak dostawca programu SQL Server lub jądra.
 
--   Autorzy przepływu pracy nie trzeba zmienić przepływ pracy do lepszą współpracę z implementacją określonego śledzenia, takie jak Usługa śledzenia WF3 SQL trybie wsadowym.
+- Autorzy przepływu pracy nie trzeba zmienić przepływ pracy do lepszą współpracę z implementacją określonego śledzenia, takie jak Usługa śledzenia WF3 SQL trybie wsadowym.
 
--   Administrator może włączyć śledzenie lub wyłączyć bez odtwarzania procesu hosta.
+- Administrator może włączyć śledzenie lub wyłączyć bez odtwarzania procesu hosta.
 
  Korzyści w zakresie wydajności do śledzenia zdarzeń systemu Windows są dostarczane z systemem zwrotu.  Zdarzenia ETW mogą zostać utracone, jeśli system jest w dużym natężeniu zasobu.  Przetwarzanie zdarzeń nie jest przeznaczona do blokowania normalnego działania programu i dlatego nie ma żadnej gwarancji, wszystkie zdarzenia ETW zostanie emisji do subskrybentów.  To sprawia, że śledzenie zdarzeń systemu Windows idealne narzędzie do monitorowania kondycji, ale nie nadaje się do inspekcji.
 

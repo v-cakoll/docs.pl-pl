@@ -6,35 +6,35 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037040"
 ---
 # <a name="serialization"></a>Serializacja
 W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] możliwości serializacji. Sekcjach poniżej zawierają informacje dotyczące sposobu dodawania serializacji podczas generowania kodu w czasie projektowania i zachowania czasu wykonywania serializacji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] klasy.  
   
  Możesz dodać kod serializacji w czasie projektowania, przy użyciu jednej z następujących metod:  
   
--   W [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], zmień **tryb serializacji** właściwości **Unidirectional**.  
+- W [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], zmień **tryb serializacji** właściwości **Unidirectional**.  
   
--   W wierszu polecenia SQLMetal Dodaj **/serialization** opcji. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+- W wierszu polecenia SQLMetal Dodaj **/serialization** opcji. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Omówienie  
  Kod wygenerowany przez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] domyślnie udostępnia funkcje odroczonego ładowania. Odroczone ładowanie jest bardzo wygodne w warstwie pośredniej przezroczysty podczas ładowania danych na żądanie. Jednak jest kłopotliwy dla serializacji, ponieważ element serializujący wyzwala odroczonego ładowania, czy odroczonego ładowania jest przeznaczone. W efekcie gdy obiekt jest serializowana, jego zamknięcia przechodnie w obszarze wszystkie odwołania wychodzące Odrocz załadowanych jest serializowana.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Funkcji serializacji rozwiązuje ten problem, głównie za pośrednictwem dwóch mechanizmów:  
   
--   A <xref:System.Data.Linq.DataContext> tryb wyłączanie odroczonego ładowania (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.DataContext>.  
+- A <xref:System.Data.Linq.DataContext> tryb wyłączanie odroczonego ładowania (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.DataContext>.  
   
--   Przełącznik generowania kodu, aby wygenerować <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> i <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> atrybuty w wygenerowanym jednostek. Ten aspekt zachowanie odroczone ładowanie klas w obszarze serializacji, w tym podlega głównych części tego tematu.  
+- Przełącznik generowania kodu, aby wygenerować <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> i <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> atrybuty w wygenerowanym jednostek. Ten aspekt zachowanie odroczone ładowanie klas w obszarze serializacji, w tym podlega głównych części tego tematu.  
   
 ### <a name="definitions"></a>Definicje  
   
--   *Serializator DataContract*: Domyślny element serializujący używany przez składnik usług Windows Communication Framework (WCF) programu .NET Framework 3.0 lub nowszej wersji.  
+- *Serializator DataContract*: Domyślny element serializujący używany przez składnik usług Windows Communication Framework (WCF) programu .NET Framework 3.0 lub nowszej wersji.  
   
--   *Serializacja jednokierunkowe*: Wersja serializacji klasę, która zawiera tylko właściwość jednokierunkowe skojarzenia (w celu uniknięcia cyklu). Zgodnie z Konwencją właściwość po stronie nadrzędnej relacji klucza obcego podstawowy jest oznaczony do serializacji. Druga strona skojarzenia dwukierunkowe nie jest serializowana.  
+- *Serializacja jednokierunkowe*: Wersja serializacji klasę, która zawiera tylko właściwość jednokierunkowe skojarzenia (w celu uniknięcia cyklu). Zgodnie z Konwencją właściwość po stronie nadrzędnej relacji klucza obcego podstawowy jest oznaczony do serializacji. Druga strona skojarzenia dwukierunkowe nie jest serializowana.  
   
      Jednokierunkowe serializacji jest jedynym typem serializacji obsługiwane przez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   

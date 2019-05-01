@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032009"
 ---
 # <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu
 Windows Presentation Foundation (WPF) zapewnia niezawodny zestaw [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] , w tym tekst w aplikacji. Układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], takich jak <xref:System.Windows.Controls.TextBlock>, najbardziej typowe i ogólne elementy prezentacji tekstu. Rysowanie [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], takich jak <xref:System.Windows.Media.GlyphRunDrawing> i <xref:System.Windows.Media.FormattedText>, pozwalają na rysunkach, w tym tekstu sformatowanego. Najbardziej zaawansowane poziom [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera tekst extensible formatowania aparatu do kontrolowania każdy aspekt prezentacji tekstu, takie jak zarządzanie magazynem tekstu, zarządzania formatowania tekstu, uruchom i zarządzania osadzonego obiektu.  
@@ -55,11 +55,11 @@ Windows Presentation Foundation (WPF) zapewnia niezawodny zestaw [!INCLUDE[TLA#t
   
  Aby obsługiwać wirtualizację magazynu tekstu, w sklepie tekstu musi pochodzić od <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource> definiuje metodę, używanych przez program formatujący tekstu można pobrać przebiegów tekst z magazynu tekstu. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> jest używany w formatowaniu wiersza uruchamia metodę używaną przez program formatujący tekstu do pobierania tekstu. Wywołanie <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> wielokrotnie jest tworzone przez program formatujący tekstu, dopóki nie wystąpi jedno z następujących warunków:  
   
--   A <xref:System.Windows.Media.TextFormatting.TextEndOfLine> lub podklasa jest zwracana.  
+- A <xref:System.Windows.Media.TextFormatting.TextEndOfLine> lub podklasa jest zwracana.  
   
--   Skumulowana szerokość uruchomienia tekstu przekracza szerokość linii maksymalnej określonej w wywołanie do utworzenia elementu formatującego tekstu lub wywołanie elementu formatującego tekstu <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> metody.  
+- Skumulowana szerokość uruchomienia tekstu przekracza szerokość linii maksymalnej określonej w wywołanie do utworzenia elementu formatującego tekstu lub wywołanie elementu formatującego tekstu <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> metody.  
   
--   A [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] sekwencji nowy wiersz, takie jak "CF", "LF" lub "CRLF", jest zwracana.  
+- A [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] sekwencji nowy wiersz, takie jak "CF", "LF" lub "CRLF", jest zwracana.  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>Zapewnianie uruchomienia tekstu  

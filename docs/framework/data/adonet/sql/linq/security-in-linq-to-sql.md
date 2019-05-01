@@ -3,11 +3,11 @@ title: Zabezpieczenia w składniku LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037001"
 ---
 # <a name="security-in-linq-to-sql"></a>Zabezpieczenia w składniku LINQ to SQL
 Zagrożenia bezpieczeństwa są zawsze wtedy, gdy połączenie z bazą danych. Mimo że LINQ to SQL mogą obejmować niektóre nowe sposoby pracy z danymi w programie SQL Server nie zapewnia dodatkowe zabezpieczenia jakichkolwiek mechanizmów środowiska użytkownika.  
@@ -25,13 +25,13 @@ Zagrożenia bezpieczeństwa są zawsze wtedy, gdy połączenie z bazą danych. M
   
  W przypadku braku zintegrowane zabezpieczenia hasła w postaci zwykłego tekstu, będzie potrzebna w parametrach połączenia. Najlepszym sposobem zabezpieczania parametry połączenia, rosnąco ryzyka, jest następujący:  
   
--   Użyj zintegrowanych zabezpieczeń.  
+- Użyj zintegrowanych zabezpieczeń.  
   
--   Zabezpiecz parametrów połączenia przy użyciu haseł i zminimalizować przekazywanie wokół parametry połączenia.  
+- Zabezpiecz parametrów połączenia przy użyciu haseł i zminimalizować przekazywanie wokół parametry połączenia.  
   
--   Użyj <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> klasy zamiast parametrów połączenia, ponieważ ogranicza czas narażenia na zagrożenia. LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> klasy mogą być tworzone przy użyciu <xref:System.Data.SqlClient.SqlConnection>.  
+- Użyj <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> klasy zamiast parametrów połączenia, ponieważ ogranicza czas narażenia na zagrożenia. LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> klasy mogą być tworzone przy użyciu <xref:System.Data.SqlClient.SqlConnection>.  
   
--   Zminimalizować okresy istnienia i touch punktów dla wszystkich parametrów połączenia.  
+- Zminimalizować okresy istnienia i touch punktów dla wszystkich parametrów połączenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

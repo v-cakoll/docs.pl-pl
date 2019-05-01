@@ -9,11 +9,11 @@ ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6447cd37e4718093acfb3a0e2db053c13a027d3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62015146"
 ---
 # <a name="managed-threading"></a>Zarządzana wątkowość
 Czy jest tworzona dla komputerów z procesorem jeden lub kilka, ma aplikację w celu zapewnienia najbardziej elastyczny interakcji z użytkownikiem, nawet wtedy, gdy aplikacja wykonuje aktualnie inne prace. Przy użyciu wielu wątków wykonania jest jednym z najbardziej zaawansowanych sposobów prace nad aplikacją reagować na działania użytkownika i w tym samym czasie wykorzystanie procesora pomiędzy lub nawet w trakcie zdarzenia użytkownika. Gdy ten rudział przedstawia podstawowe pojęcia wątkowości, koncentruje się na zarządzanym pojęcia wielowątkowości i przy użyciu zarządzanych wątkach.  

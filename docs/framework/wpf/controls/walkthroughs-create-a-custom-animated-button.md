@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Tworzenie niestandardowego przycisku animowanego'
+title: 'Przewodniki: Tworzenie niestandardowego przycisku animowanego'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom animated buttons [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
 ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024472"
 ---
-# <a name="walkthroughs-create-a-custom-animated-button"></a>Wskazówki: Tworzenie niestandardowego przycisku animowanego
+# <a name="walkthroughs-create-a-custom-animated-button"></a>Przewodniki: Tworzenie niestandardowego przycisku animowanego
 Jak sugeruje nazwa, Windows Presentation Foundation (WPF) to idealne narzędzie do wprowadzania środowisk sformatowanego prezentacji dla klientów. Te przewodniki pokazują, jak dostosować wygląd i zachowanie przycisku (w tym animacji). To dostosowanie jest wykonywane przy użyciu stylów i szablonów, dzięki czemu można zastosować ten niestandardowy przycisk łatwo wszystkie przyciski w aplikacji. Na poniższej ilustracji przedstawiono dostosowany przycisk tworzone.  
   
  ![Dostosowany przycisk, który spowoduje utworzenie](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  

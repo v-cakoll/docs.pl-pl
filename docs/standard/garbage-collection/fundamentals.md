@@ -14,22 +14,22 @@ ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026281"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a> W środowisko uruchomieniowe języka wspólnego (CLR) wyrzucanie elementów bezużytecznych działa jako automatycznych Menadżer pamięci. Zapewnia następujące korzyści:  
   
--   Umożliwia projektowanie aplikacji bez konieczności zwalniania pamięci.  
+- Umożliwia projektowanie aplikacji bez konieczności zwalniania pamięci.  
   
--   Efektywnie przydziela obiekty na zarządzanej stercie.  
+- Efektywnie przydziela obiekty na zarządzanej stercie.  
   
--   Ponownie wzywa obiekty, które są już używane, czyści ich pamięci i utrzymuje dostępne dla przyszłej alokacji pamięci. Zarządzane obiekty automatycznie uzyskują czystą zawartość, więc ich konstruktory nie muszą inicjować wszystkich pól danych.  
+- Ponownie wzywa obiekty, które są już używane, czyści ich pamięci i utrzymuje dostępne dla przyszłej alokacji pamięci. Zarządzane obiekty automatycznie uzyskują czystą zawartość, więc ich konstruktory nie muszą inicjować wszystkich pól danych.  
   
--   Zapewnia bezpieczeństwo pamięci, upewniając się, że obiekt nie może korzystać zawartość innego obiektu.  
+- Zapewnia bezpieczeństwo pamięci, upewniając się, że obiekt nie może korzystać zawartość innego obiektu.  
   
  W tym temacie opisano podstawowe pojęcia dotyczące wyrzucania elementów bezużytecznych. 
  
@@ -37,25 +37,25 @@ ms.locfileid: "58826603"
 ## <a name="fundamentals-of-memory"></a>Podstawy pamięci  
  Na poniższej liście podsumowano ważne pojęcia dotyczące pamięci CLR.  
   
--   Każdy proces ma własną, oddzielną wirtualną przestrzeń adresową. Wszystkie procesy na tym samym komputerze udostępnianie tej samej pamięci fizycznej, a następnie Udostępnij plik stronicowania, jeśli taka istnieje.  
+- Każdy proces ma własną, oddzielną wirtualną przestrzeń adresową. Wszystkie procesy na tym samym komputerze udostępnianie tej samej pamięci fizycznej, a następnie Udostępnij plik stronicowania, jeśli taka istnieje.  
   
--   Domyślnie na komputerach 32-bitowych każdy proces ma tryb użytkownika 2 GB wirtualnej przestrzeni adresowej.  
+- Domyślnie na komputerach 32-bitowych każdy proces ma tryb użytkownika 2 GB wirtualnej przestrzeni adresowej.  
   
--   Jako Deweloper aplikacji pracujesz tylko z wirtualną przestrzenią adresową i nigdy nie manipulujesz pamięci fizycznej bezpośrednio. Moduł odśmiecania pamięci przydziela i zwalnia pamięć wirtualną dla Ciebie na stosie zarządzanym.  
+- Jako Deweloper aplikacji pracujesz tylko z wirtualną przestrzenią adresową i nigdy nie manipulujesz pamięci fizycznej bezpośrednio. Moduł odśmiecania pamięci przydziela i zwalnia pamięć wirtualną dla Ciebie na stosie zarządzanym.  
   
      Jeśli piszesz kod natywny używasz funkcji Win32 do pracy z wirtualnej przestrzeni adresowej. Te funkcje alokują i zwalniają pamięć wirtualną dla Ciebie natywnych sterty.  
   
--   Pamięć wirtualna może być w trzech stanach:  
+- Pamięć wirtualna może być w trzech stanach:  
   
-    -   Bezpłatnie. Blok pamięci nie ma odwołań do niej i jest dostępny do alokacji.  
+    - Bezpłatnie. Blok pamięci nie ma odwołań do niej i jest dostępny do alokacji.  
   
-    -   Zastrzeżone. Blok pamięci jest dostępny do użycia i nie można używać dla innych żądań alokacji. Nie można jednak przechowywać dane w tym bloku pamięci, dopóki nie zostanie zatwierdzony.  
+    - Zastrzeżone. Blok pamięci jest dostępny do użycia i nie można używać dla innych żądań alokacji. Nie można jednak przechowywać dane w tym bloku pamięci, dopóki nie zostanie zatwierdzony.  
   
-    -   Zatwierdzone. Blok pamięci jest przypisany do pamięci fizycznej.  
+    - Zatwierdzone. Blok pamięci jest przypisany do pamięci fizycznej.  
   
--   Można uzyskać fragmentację wirtualnej przestrzeni adresowej. Oznacza to, że istnieją wolne bloki, znane również jako dziury w przestrzeni adresowej. Gdy wymagana jest alokacja pamięci wirtualnej, Menedżer pamięci wirtualnej musi znaleźć pojedynczy wolny blok, który jest wystarczająco duży, aby spełnić to żądanie alokacji. Nawet jeśli użytkownik ma 2 GB wolnego miejsca, Alokacja wymagająca 2 GB zakończą się niepowodzeniem, chyba że wszystkie tego wolnego miejsca na dysku znajduje się w pojedynczym bloku adresu.  
+- Można uzyskać fragmentację wirtualnej przestrzeni adresowej. Oznacza to, że istnieją wolne bloki, znane również jako dziury w przestrzeni adresowej. Gdy wymagana jest alokacja pamięci wirtualnej, Menedżer pamięci wirtualnej musi znaleźć pojedynczy wolny blok, który jest wystarczająco duży, aby spełnić to żądanie alokacji. Nawet jeśli użytkownik ma 2 GB wolnego miejsca, Alokacja wymagająca 2 GB zakończą się niepowodzeniem, chyba że wszystkie tego wolnego miejsca na dysku znajduje się w pojedynczym bloku adresu.  
   
--   Jeśli zabraknie wirtualnej przestrzeni adresowej do zarezerwowania albo przestrzeni fizycznej, aby zatwierdzić, można uruchomić za mało pamięci.  
+- Jeśli zabraknie wirtualnej przestrzeni adresowej do zarezerwowania albo przestrzeni fizycznej, aby zatwierdzić, można uruchomić za mało pamięci.  
   
  Pliku stronicowania jest używany, nawet jeśli wykorzystanie pamięci fizycznej (to znaczy, że popyt na pamięć fizyczną) jest niska. Gdy wykorzystanie pamięci fizycznej jest wysokie, po raz pierwszy system operacyjny musi zwolnić miejsce w pamięci fizycznej w celu przechowywania danych i tworzy kopię zapasową niektórych danych, który znajduje się w pamięci fizycznej do pliku stronicowania. Czy dane nie są stronicowane, dopóki nie jest to potrzebne, więc istnieje możliwość napotkania stronicowania w sytuacji, gdy wykorzystanie pamięci fizycznej jest bardzo niskie. 
  
@@ -65,11 +65,11 @@ ms.locfileid: "58826603"
 ## <a name="conditions-for-a-garbage-collection"></a>Warunki dla wyrzucania elementów bezużytecznych  
  Wyrzucanie elementów bezużytecznych występuje, gdy jest spełniony jeden z następujących warunków:  
   
--   System ma mało pamięci fizycznej. Wykryto powiadomienia małej ilości pamięci z systemu operacyjnego lub brakiem pamięci wskazywany przez hosta.
+- System ma mało pamięci fizycznej. Wykryto powiadomienia małej ilości pamięci z systemu operacyjnego lub brakiem pamięci wskazywany przez hosta.
   
--   Pamięć, która jest używana przez alokowane obiekty na stosie zarządzanym przewyższa dopuszczalny próg. Wartość progowa jest stale dopasowywany w trakcie działania procesu.  
+- Pamięć, która jest używana przez alokowane obiekty na stosie zarządzanym przewyższa dopuszczalny próg. Wartość progowa jest stale dopasowywany w trakcie działania procesu.  
   
--   <xref:System.GC.Collect%2A?displayProperty=nameWithType> Metoda jest wywoływana. Prawie we wszystkich przypadkach nie trzeba wywołać tej metody, ponieważ moduł odśmiecania pamięci działa w sposób ciągły. Ta metoda jest używana głównie w unikalnych sytuacjach i testowania.  
+- <xref:System.GC.Collect%2A?displayProperty=nameWithType> Metoda jest wywoływana. Prawie we wszystkich przypadkach nie trzeba wywołać tej metody, ponieważ moduł odśmiecania pamięci działa w sposób ciągły. Ta metoda jest używana głównie w unikalnych sytuacjach i testowania.  
   
  [Powrót do początku](#top)  
   
@@ -100,15 +100,15 @@ ms.locfileid: "58826603"
 ## <a name="generations"></a>Generacje  
  Stos jest podzielony na generacje, więc może obsługiwać obiekty długo- i krótkotrwałe. Wyrzucanie elementów bezużytecznych występuje przede wszystkim z odzyskiwaniem krótkotrwałych obiektów, które zazwyczaj zajmują tylko niewielką część stosu. Dostępne są trzy generacje obiektów na stosie:  
   
--   **Generacji 0**. To jest najmłodsza generacja i zawiera obiekty krótkotrwałe. Przykładem obiektu krótkotrwałego jest zmienna tymczasowa. Wyrzucanie elementów bezużytecznych występuje najczęściej w tej generacji.  
+- **Generacji 0**. To jest najmłodsza generacja i zawiera obiekty krótkotrwałe. Przykładem obiektu krótkotrwałego jest zmienna tymczasowa. Wyrzucanie elementów bezużytecznych występuje najczęściej w tej generacji.  
   
      Nowo przydzielone obiekty tworzą nową generacji obiektów i są niejawną kolekcją kolekcji generacji 0, chyba że są to duże obiekty, w którym to przypadku przejdź na stertę dużego obiektu w kolekcji generacji 2.  
   
      Większość obiektów jest skierowanych do wyrzucania elementów bezużytecznych generacji 0 i nie przeżywa do następnej generacji.  
   
--   **Generacja 1**. Ta generacja zawiera obiekty krótkotrwałe i służy jako bufor między obiektami krótkotrwałe i długotrwałe.  
+- **Generacja 1**. Ta generacja zawiera obiekty krótkotrwałe i służy jako bufor między obiektami krótkotrwałe i długotrwałe.  
   
--   **2. generacji**. Ta generacja zawiera długotrwałe obiekty. Przykładem obiektu długotrwałego jest obiekt w aplikacji serwera, który zawiera dane statyczne, żywe czas trwania procesu.  
+- **2. generacji**. Ta generacja zawiera długotrwałe obiekty. Przykładem obiektu długotrwałego jest obiekt w aplikacji serwera, który zawiera dane statyczne, żywe czas trwania procesu.  
   
  Wyrzucanie elementów bezużytecznych odbywa się w konkretnych generacjach, jak pozwalają warunki. Zbieranie generacji oznacza zbieranie obiektów w tej generacji oraz młodszych generacjach. Wyrzucanie elementów bezużytecznych generacji 2 jest znany także jako pełne odśmiecanie, ponieważ odzyskuje wszystkie obiekty ze wszystkich pokoleń (to znaczy, wszystkie obiekty w zarządzanym stosie).  
   
@@ -141,11 +141,11 @@ ms.locfileid: "58826603"
 ## <a name="what-happens-during-a-garbage-collection"></a>Co się dzieje podczas wyrzucania elementów bezużytecznych  
  Wyrzucanie elementów bezużytecznych ma następujące etapy:  
   
--   Faza znakowania wyszukuje i tworzy listę wszystkich obiektów żywych.  
+- Faza znakowania wyszukuje i tworzy listę wszystkich obiektów żywych.  
   
--   Faza przemieszczania aktualizująca odwołania do obiektów, które zostaną skompaktowane.  
+- Faza przemieszczania aktualizująca odwołania do obiektów, które zostaną skompaktowane.  
   
--   Faza kompaktowania przejmująca miejsce zajmowane przez obiekty martwe i kompaktująca obiekty zachowywane. Faza kompaktowania przenosi obiekty, które przetrwały wyrzucanie elementów bezużytecznych w kierunku starszego końca segmentu.  
+- Faza kompaktowania przejmująca miejsce zajmowane przez obiekty martwe i kompaktująca obiekty zachowywane. Faza kompaktowania przenosi obiekty, które przetrwały wyrzucanie elementów bezużytecznych w kierunku starszego końca segmentu.  
   
      Ponieważ kolekcje geenracji 2 mogą zajmować wiele segmentów, do starszego segmentu można przenosić obiekty, które są promowane do generacji 2. Zarówno generacji 1 i pozostałości generacji 2 można przenieść do innego segmentu, ponieważ są one promowane do generacji 2.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "58826603"
   
  Wyrzucanie elementów bezużytecznych używa następujących informacji w celu ustalenia, czy obiekty są żywe:  
   
--   **Zmienne główne stosu**. Zmienne stosu dostarczane przez kompilator programu just-in-time (JIT) oraz walker stosu. Należy pamiętać, że optymalizacje JIT mogą wydłużać lub Skróć regiony kodu w ramach której stosu zmienne są zgłaszane do modułu odśmiecania pamięci.
+- **Zmienne główne stosu**. Zmienne stosu dostarczane przez kompilator programu just-in-time (JIT) oraz walker stosu. Należy pamiętać, że optymalizacje JIT mogą wydłużać lub Skróć regiony kodu w ramach której stosu zmienne są zgłaszane do modułu odśmiecania pamięci.
   
--   **Uchwyty wyrzucania elementów bezużytecznych**. Obsługuje, że wskazują obiekty zarządzane i które można przypisać przez kod użytkownika lub przez środowisko uruchomieniowe języka wspólnego.  
+- **Uchwyty wyrzucania elementów bezużytecznych**. Obsługuje, że wskazują obiekty zarządzane i które można przypisać przez kod użytkownika lub przez środowisko uruchomieniowe języka wspólnego.  
   
--   **Dane statyczne**. Obiekty statyczne w domenach aplikacji, które mogłyby odwoływać się do innych obiektów. Każda domena aplikacji śledzi informacje o swoich obiektach statycznych.  
+- **Dane statyczne**. Obiekty statyczne w domenach aplikacji, które mogłyby odwoływać się do innych obiektów. Każda domena aplikacji śledzi informacje o swoich obiektach statycznych.  
   
  Zanim rozpocznie się wyrzucanie elementów bezużytecznych, wszystkie zarządzane wątki są zawieszane, z wyjątkiem wątku, który wyzwolił wyrzucanie elementów bezużytecznych.  
   
@@ -182,13 +182,13 @@ Wątek, który wyzwala wyrzucanie elementów bezużytecznych
 ## <a name="workstation-and-server-garbage-collection"></a>Wyrzucanie elementów bezużytecznych stacji roboczych i serwera  
  Wyrzucanie elementów bezużytecznych samodzielnie się Dostraja i może pracować w wielu różnych scenariuszach. Można użyć ustawienia pliku konfiguracyjnego, aby ustawić typ wyrzucania elementów bezużytecznych bazujący na charakterystyce obciążenia. Środowisko CLR oferuje następujące typy operacji wyrzucania elementów bezużytecznych:  
   
--   Wyrzucanie elementów bezużytecznych dla stacji roboczych, dla wszystkich klienckich stacji roboczych i komputerów stacjonarnych. Jest to domyślne ustawienie dla [ \<gcserver — > element](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) w schemacie konfiguracji środowiska uruchomieniowego.  
+- Wyrzucanie elementów bezużytecznych dla stacji roboczych, dla wszystkich klienckich stacji roboczych i komputerów stacjonarnych. Jest to domyślne ustawienie dla [ \<gcserver — > element](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) w schemacie konfiguracji środowiska uruchomieniowego.  
   
      Wyrzucanie elementów bezużytecznych może być współbieżnych lub niewspółbieżnie. Współbieżne wyrzucanie elementów bezużytecznych umożliwia zarządzanym wątkom kontynuowanie operacji podczas wyrzucania elementów bezużytecznych.  
   
      Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne wyrzucanie elementów bezużytecznych.  
   
--   Wyrzucanie elementów bezużytecznych serwera, który jest przeznaczony dla aplikacji serwera wymagających wysokiej przepływności i skalowalności. Wyrzucanie elementów bezużytecznych serwera może być niewspółbieżne lub w tle.  
+- Wyrzucanie elementów bezużytecznych serwera, który jest przeznaczony dla aplikacji serwera wymagających wysokiej przepływności i skalowalności. Wyrzucanie elementów bezużytecznych serwera może być niewspółbieżne lub w tle.  
   
  Poniższa ilustracja przedstawia dedykowane wątki, które wykonują wyrzucania elementów bezużytecznych na serwerze.  
   
@@ -205,23 +205,23 @@ Wyrzucanie elementów bezużytecznych serwera
 ### <a name="comparing-workstation-and-server-garbage-collection"></a>Porównywanie wyrzucania elementów bezużytecznych stacji roboczych i serwera  
  Poniżej przedstawiono zagadnienia wielowątkowości i wydajności dotyczące wyrzucania elementów bezużytecznych dla stacji roboczych:  
   
--   Zbieranie odbywa się w wątku użytkownika, który wyzwolił wyrzucanie elementów bezużytecznych i pozostaje na tym samym priorytecie. Ponieważ wątki użytkownika zwykle działają przy normalnym priorytecie, moduł odśmiecania pamięci (który jest uruchamiany na wątku o normalnym priorytecie) musi rywalizować z innymi wątkami o czas Procesora.  
+- Zbieranie odbywa się w wątku użytkownika, który wyzwolił wyrzucanie elementów bezużytecznych i pozostaje na tym samym priorytecie. Ponieważ wątki użytkownika zwykle działają przy normalnym priorytecie, moduł odśmiecania pamięci (który jest uruchamiany na wątku o normalnym priorytecie) musi rywalizować z innymi wątkami o czas Procesora.  
   
      Wątki uruchamiające kod macierzysty nie zostają zawieszone.  
   
--   Wyrzucanie elementów bezużytecznych jest zawsze używana na komputerze, który ma tylko jeden procesor, bez względu na to [ \<gcserver — >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) ustawienie. Jeśli określisz wyrzucania elementów bezużytecznych dla serwera, środowisko CLR używa wyrzucania elementów bezużytecznych dla stacji roboczych ze współbieżnością wyłączoną.  
+- Wyrzucanie elementów bezużytecznych jest zawsze używana na komputerze, który ma tylko jeden procesor, bez względu na to [ \<gcserver — >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) ustawienie. Jeśli określisz wyrzucania elementów bezużytecznych dla serwera, środowisko CLR używa wyrzucania elementów bezużytecznych dla stacji roboczych ze współbieżnością wyłączoną.  
   
  Zagadnienia wielowątkowości i wydajności dotyczące wyrzucania elementów bezużytecznych dla serwera są następujące:  
   
--   Zbieranie odbywa się w wielu dedykowanych wątkach, które są uruchomione w `THREAD_PRIORITY_HIGHEST` poziom priorytetu.  
+- Zbieranie odbywa się w wielu dedykowanych wątkach, które są uruchomione w `THREAD_PRIORITY_HIGHEST` poziom priorytetu.  
   
--   Dedykowany wątek służący do wyrzucania elementów bezużytecznych oraz sterta są zapewniane dla każdego Procesora, a sterty są zbierane w tym samym czasie. Każdy stos zawiera stos małych obiektów i stos dużych obiektów i wszystkich stosów jest możliwy przez kod użytkownika. Obiekty na różnych stertach mogą odwoływać się do siebie nawzajem.  
+- Dedykowany wątek służący do wyrzucania elementów bezużytecznych oraz sterta są zapewniane dla każdego Procesora, a sterty są zbierane w tym samym czasie. Każdy stos zawiera stos małych obiektów i stos dużych obiektów i wszystkich stosów jest możliwy przez kod użytkownika. Obiekty na różnych stertach mogą odwoływać się do siebie nawzajem.  
   
--   Ponieważ wiele wątków wyrzucania elementów bezużytecznych współpracuje ze sobą, wyrzucanie elementów bezużytecznych serwera jest szybsze niż wyrzucanie elementów bezużytecznych na tej samej wielkości sterty.  
+- Ponieważ wiele wątków wyrzucania elementów bezużytecznych współpracuje ze sobą, wyrzucanie elementów bezużytecznych serwera jest szybsze niż wyrzucanie elementów bezużytecznych na tej samej wielkości sterty.  
   
--   Wyrzucanie elementów bezużytecznych serwera często ma segmenty o większych rozmiarach. Należy jednak pamiętać, że jest to tylko generalizacji: rozmiar segmentu jest specyficzne dla implementacji i może ulec zmianie. Powinien zawierać żadnych założeń o rozmiarze segmentów przydzielone przez moduł odśmiecania pamięci podczas dostosowywania aplikacji.  
+- Wyrzucanie elementów bezużytecznych serwera często ma segmenty o większych rozmiarach. Należy jednak pamiętać, że jest to tylko generalizacji: rozmiar segmentu jest specyficzne dla implementacji i może ulec zmianie. Powinien zawierać żadnych założeń o rozmiarze segmentów przydzielone przez moduł odśmiecania pamięci podczas dostosowywania aplikacji.  
   
--   Wyrzucanie elementów bezużytecznych serwera może znacznie obciążać zasoby. Na przykład jeśli masz 12 procesów uruchomionych na komputerze, który ma 4 procesory, nastąpi 48 wątków kolekcji dedykowanej pamięci Jeśli wszystkie używają wyrzucanie elementów bezużytecznych serwera. W sytuacji wysokiego obciążenia pamięci Jeśli wszystkie procesy zaczną wyrzucać wyrzucanie elementów bezużytecznych, wyrzucanie elementów bezużytecznych będzie miał 48 wątków do zaplanowania.  
+- Wyrzucanie elementów bezużytecznych serwera może znacznie obciążać zasoby. Na przykład jeśli masz 12 procesów uruchomionych na komputerze, który ma 4 procesory, nastąpi 48 wątków kolekcji dedykowanej pamięci Jeśli wszystkie używają wyrzucanie elementów bezużytecznych serwera. W sytuacji wysokiego obciążenia pamięci Jeśli wszystkie procesy zaczną wyrzucać wyrzucanie elementów bezużytecznych, wyrzucanie elementów bezużytecznych będzie miał 48 wątków do zaplanowania.  
   
  Jeśli korzystasz z setek wystąpień aplikacji, należy wziąć pod uwagę przy użyciu stacji roboczej wyrzucania elementów bezużytecznych z współbieżne wyrzucanie elementów bezużytecznych wyłączone. To spowoduje mniej przełączania kontekstu, co może zwiększyć wydajność.  
   

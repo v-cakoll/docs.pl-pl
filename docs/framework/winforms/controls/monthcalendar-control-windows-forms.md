@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calendars
 ms.assetid: 051c6518-e0ca-426b-855c-f9bf70972970
 ms.openlocfilehash: 589eb55e001441230da3f8a0c5652c2a3dccb829
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012753"
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar — Formant (Formularze systemu Windows)
 Formularze Windows `MonthCalendar` kontroli przedstawia intuicyjny interfejs graficzny służący do wyświetlania i ustawiania informacji o dacie. Kontrolka Wyświetla siatkę zawierający numerowane dni miesiąca, uporządkowane według kolumn poniżej dni tygodnia. Za pomocą przycisków strzałek po obu stronach podpis miesiąca możesz wybrać innego miesiąca. W odróżnieniu od podobny <xref:System.Windows.Forms.DateTimePicker> kontrolki, można wybrać zakres dat za pomocą tej kontrolki; jednak <xref:System.Windows.Forms.DateTimePicker> sterowanie umożliwia ustawianie czasu oraz daty.  

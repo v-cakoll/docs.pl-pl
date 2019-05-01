@@ -5,18 +5,18 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019402"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 
 > _"W chmurze użytkowników indywidualnych i małych firmach mogą przyciąganie ich palców i natychmiast skonfigurować usługi klasy korporacyjnej."_  
 > _-Roy Stephan_
 
-## <a name="vision"></a>Obraz
+## <a name="vision"></a>Wizja
 
 > *Twórz dobrze zaprojektowanego aplikacje ASP .NET Core lubisz, za pomocą programu Visual Studio lub wiersz polecenia dotnet i programu Visual Studio Code lub Edytor wybór.*
 

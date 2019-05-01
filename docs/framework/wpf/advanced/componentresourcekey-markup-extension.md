@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037755"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey — Rozszerzenie znaczników
 Definiuje i odwołuje się do kluczy dla zasobów, które zostały załadowane z zewnętrznych zestawów. Dzięki temu wyszukiwania zasobów określić typ docelowy w zestawie, a nie słownika zasobów jawne, w zestawie lub klasy.  
@@ -52,9 +52,9 @@ Definiuje i odwołuje się do kluczy dla zasobów, które zostały załadowane z
 ## <a name="remarks"></a>Uwagi  
  Jak widać w powyższym użyciach {`ComponentResourceKey`} użycie rozszerzenia znaczników znajduje się w dwóch miejscach:  
   
--   Definicja klucza w ciągu słownika zasobów motywu, zgodnie z informacjami od autora kontroli.  
+- Definicja klucza w ciągu słownika zasobów motywu, zgodnie z informacjami od autora kontroli.  
   
--   Podczas dostępu do zasobów motyw z zestawu, są retemplating kontrolki ale chcesz użyć wartości właściwości, które pochodzą z zasobów udostępnianych przez motywy formantu.  
+- Podczas dostępu do zasobów motyw z zestawu, są retemplating kontrolki ale chcesz użyć wartości właściwości, które pochodzą z zasobów udostępnianych przez motywy formantu.  
   
  Do odwoływania się do składnika zasobów, które pochodzą z motywów, ogólnie zaleca się używanie `{DynamicResource}` zamiast `{StaticResource}`. Jest to pokazane w użyciach. `{DynamicResource}` jest zalecane, ponieważ sam motyw mogą być zmieniane przez użytkownika. Jeśli chcesz, aby zasób składnika, który najlepiej pasuje do intencji Autor sterowania do obsługi motywu, należy włączyć użytkownikowi składnika zasobów się być dynamiczna również.  
   

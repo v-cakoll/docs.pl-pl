@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982452"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Ta tablica ma ustalony rozmiar lub jest tymczasowo zablokowana (Visual Basic)
 Ten błąd ma następujące możliwe przyczyny:  
   
--   Za pomocą `ReDim` Aby zmienić liczbę elementów tablicy o stałym rozmiarze.  
+- Za pomocą `ReDim` Aby zmienić liczbę elementów tablicy o stałym rozmiarze.  
   
--   Redimensioning tablic dynamicznych poziom modułu, w którym jeden element został przekazany jako argument do procedury. Jeśli element jest przekazywany, tablica jest zablokowane, aby uniemożliwić cofanie przydziału pamięci dla parametru odwołania w ramach procedury.  
+- Redimensioning tablic dynamicznych poziom modułu, w którym jeden element został przekazany jako argument do procedury. Jeśli element jest przekazywany, tablica jest zablokowane, aby uniemożliwić cofanie przydziału pamięci dla parametru odwołania w ramach procedury.  
   
--   Próba przypisania wartości do `Variant` zmienną, która zawiera tablicę, ale `Variant` jest obecnie zablokowany.  
+- Próba przypisania wartości do `Variant` zmienną, która zawiera tablicę, ale `Variant` jest obecnie zablokowany.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   

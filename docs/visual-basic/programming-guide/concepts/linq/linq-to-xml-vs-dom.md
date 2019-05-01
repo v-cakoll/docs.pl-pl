@@ -3,11 +3,11 @@ title: LINQ to XML a Modelu DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051497"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML a Modelu DOM (Visual Basic)
 W tej sekcji opisano niektóre podstawowe różnice między [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i bieżącej dominujący XML programowania interfejsu API, W3C Document Object Model (DOM).  
@@ -79,11 +79,11 @@ Dim contacts = _
 ## <a name="working-directly-with-xml-elements"></a>Praca bezpośrednio z elementów XML  
  Gdy program za pomocą XML zespół podstawowego jest zazwyczaj na elementy XML, a być może w atrybutach. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można pracować bezpośrednio z elementów XML oraz atrybuty. Można na przykład, wykonaj następujące czynności:  
   
--   Tworzenie elementów XML bez przy użyciu obiektu dokumentu w ogóle. Upraszcza to programowania, gdy trzeba pracować przy użyciu fragmentów drzew XML.  
+- Tworzenie elementów XML bez przy użyciu obiektu dokumentu w ogóle. Upraszcza to programowania, gdy trzeba pracować przy użyciu fragmentów drzew XML.  
   
--   Obciążenia `T:System.Xml.Linq.XElement` obiektów bezpośrednio z pliku XML.  
+- Obciążenia `T:System.Xml.Linq.XElement` obiektów bezpośrednio z pliku XML.  
   
--   Serializowanie `T:System.Xml.Linq.XElement` obiektów do pliku lub strumienia.  
+- Serializowanie `T:System.Xml.Linq.XElement` obiektów do pliku lub strumienia.  
   
  To porównać do modelu DOM W3C, w którym dokument XML jest używany jako kontener logiczny dla drzewa XML. W modelu DOM węzłów XML, w tym elementów i atrybutów, należy utworzyć w kontekście dokumentu XML. Poniżej przedstawiono fragment kodu, aby utworzyć element nazwy w modelu DOM:  
   

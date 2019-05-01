@@ -3,11 +3,11 @@ title: Używanie monikera programu WCF z klientami COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
 ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051614"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Używanie monikera programu WCF z klientami COM
 W tym przykładzie pokazano, jak użyć monikera programu Windows Communication Foundation (WCF) do integracji usług internetowych w środowiskach programistycznych opartych na modelu COM, takich jak Microsoft Office Visual Basic for Applications (VBA pakietu Office) lub Visual Basic 6.0. W tym przykładzie składa się z klienta Windows Script Host (VBS), obsługi klienta biblioteki (.dll) i usługi biblioteki (.dll), hostowanej przez Internetowe usługi informacyjne (IIS). Usługa jest usługą Kalkulator i klient modelu COM wywołuje operacji matematycznych — dodawania, odejmowania, mnożenia i dzielenia — w usłudze. Aktywność klienta jest widoczny w systemie windows okno komunikatu.  
@@ -43,11 +43,11 @@ public interface ICalculator
   
  W przykładzie pokazano trzech alternatywnych metod dla używanie monikera programu:  
   
--   Wpisane kontraktu — jest zarejestrowany jako typ widoczne COM na komputerze klienckim.  
+- Wpisane kontraktu — jest zarejestrowany jako typ widoczne COM na komputerze klienckim.  
   
--   WSDL kontraktu — jest dostarczany w formie dokumentu WSDL.  
+- WSDL kontraktu — jest dostarczany w formie dokumentu WSDL.  
   
--   Wymiany metadanych kontraktu — są pobierane w czasie wykonywania z punktu końcowego metadanych programu Exchange (MEX).  
+- Wymiany metadanych kontraktu — są pobierane w czasie wykonywania z punktu końcowego metadanych programu Exchange (MEX).  
   
 ## <a name="typed-contract"></a>Wpisane kontraktu  
  Aby użyć monikera programu przy użyciu umowy wpisane, odpowiednio opartego na atrybutach typy kontraktu usługi musi być zarejestrowana w modelu COM. Po pierwsze, klient musi zostać wygenerowany przy użyciu [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Uruchom następujące polecenie w wierszu polecenia w katalogu klienta można wygenerować typizowanego serwera proxy.  
@@ -87,11 +87,11 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  Określ parametry używane przez moniker:  
   
--   Adres punktu końcowego usługi.  
+- Adres punktu końcowego usługi.  
   
--   Wiązanie, którego powinien używać klient do łączenia z tego punktu końcowego. W tym przypadku wsHttpBinding zdefiniowanych w systemie jest używany, chociaż można zdefiniować powiązań niestandardowych w plikach konfiguracji klienta. Do użytku z hostem skryptów Windows niestandardowego powiązania jest zdefiniowana w pliku Cscript.exe.config, w tym samym katalogu co Cscript.exe.  
+- Wiązanie, którego powinien używać klient do łączenia z tego punktu końcowego. W tym przypadku wsHttpBinding zdefiniowanych w systemie jest używany, chociaż można zdefiniować powiązań niestandardowych w plikach konfiguracji klienta. Do użytku z hostem skryptów Windows niestandardowego powiązania jest zdefiniowana w pliku Cscript.exe.config, w tym samym katalogu co Cscript.exe.  
   
--   Typ kontraktu, który jest obsługiwany w punkcie końcowym. Jest to typ, który został wygenerowany i zarejestrowany powyżej. Ponieważ skrypt Visual Basic nie udostępnia silnie typizowane COM środowiska, należy określić identyfikator dla kontraktu. Jest to identyfikator GUID `interfaceID` z CalcProxy.tlb, które mogą być wyświetlane za pomocą narzędzi COM, takich jak OLE/COM Object Viewer (OleView.exe). W środowiskach silnie typizowane, takich jak Office VBA lub Visual Basic 6.0 Dodawanie jawnego odwołania do biblioteki typów, a następnie deklarowania typu obiektu serwera proxy można zamiast parametru kontraktu. To ten zapewnia obsługę technologii IntelliSense podczas tworzenia aplikacji klienckich.  
+- Typ kontraktu, który jest obsługiwany w punkcie końcowym. Jest to typ, który został wygenerowany i zarejestrowany powyżej. Ponieważ skrypt Visual Basic nie udostępnia silnie typizowane COM środowiska, należy określić identyfikator dla kontraktu. Jest to identyfikator GUID `interfaceID` z CalcProxy.tlb, które mogą być wyświetlane za pomocą narzędzi COM, takich jak OLE/COM Object Viewer (OleView.exe). W środowiskach silnie typizowane, takich jak Office VBA lub Visual Basic 6.0 Dodawanie jawnego odwołania do biblioteki typów, a następnie deklarowania typu obiektu serwera proxy można zamiast parametru kontraktu. To ten zapewnia obsługę technologii IntelliSense podczas tworzenia aplikacji klienckich.  
   
  Posiadanie skonstruowany wystąpienia serwera proxy przy użyciu monikera programu, aplikacja kliencka może wywoływać metody na serwerze proxy, co skutkuje infrastruktury monikera usługi wywoływania odpowiednich operacji usługi.  
   
@@ -127,13 +127,13 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  Określ parametry używane przez moniker:  
   
--   Adres punktu końcowego usługi.  
+- Adres punktu końcowego usługi.  
   
--   Wiązanie, którego powinien używać klient do połączenia z tego punktu końcowego i przestrzeni nazw, w którym to powiązanie jest zdefiniowany. W tym przypadku `wsHttpBinding_ICalculator` jest używany.  
+- Wiązanie, którego powinien używać klient do połączenia z tego punktu końcowego i przestrzeni nazw, w którym to powiązanie jest zdefiniowany. W tym przypadku `wsHttpBinding_ICalculator` jest używany.  
   
--   Języka WSDL, który definiuje kontrakt. W tym przypadku jest to ciąg, który został odczytany z pliku serviceWsdl.xml.  
+- Języka WSDL, który definiuje kontrakt. W tym przypadku jest to ciąg, który został odczytany z pliku serviceWsdl.xml.  
   
--   Nazwa i przestrzeni nazw kontraktu. Ten identyfikator jest wymagana, ponieważ WSDL może zawierać więcej niż jednego kontraktu.  
+- Nazwa i przestrzeni nazw kontraktu. Ten identyfikator jest wymagana, ponieważ WSDL może zawierać więcej niż jednego kontraktu.  
   
     > [!NOTE]
     >  Domyślnie usługi WCF generować oddzielne pliki WSDL dla każdej przestrzeni nazw, użycie. Są one połączone z użyciem konstrukcji importu WSDL. Ponieważ moniker oczekuje jednej definicji WSDL, jak pokazano w tym przykładzie Usługa należy użyć jednej przestrzeni nazw lub osobne pliki muszą zostać ręcznie połączone.  
@@ -165,13 +165,13 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  Określ parametry używane przez moniker:  
   
--   Adres punktu końcowego wymiany metadanych usługi.  
+- Adres punktu końcowego wymiany metadanych usługi.  
   
--   Adres punktu końcowego usługi.  
+- Adres punktu końcowego usługi.  
   
--   Wiązanie, którego powinien używać klient do połączenia z tego punktu końcowego i przestrzeni nazw, w którym to powiązanie jest zdefiniowany. W tym przypadku `wsHttpBinding_ICalculator` jest używany.  
+- Wiązanie, którego powinien używać klient do połączenia z tego punktu końcowego i przestrzeni nazw, w którym to powiązanie jest zdefiniowany. W tym przypadku `wsHttpBinding_ICalculator` jest używany.  
   
--   Nazwa i przestrzeni nazw kontraktu. Ten identyfikator jest wymagana, ponieważ WSDL może zawierać więcej niż jednego kontraktu.  
+- Nazwa i przestrzeni nazw kontraktu. Ten identyfikator jest wymagana, ponieważ WSDL może zawierać więcej niż jednego kontraktu.  
   
  Posiadanie skonstruowany wystąpienia serwera proxy przy użyciu monikera programu, aplikacja kliencka może wywoływać metody na serwerze proxy, co skutkuje infrastruktury monikera usługi wywoływania odpowiednich operacji usługi.  
   
@@ -235,4 +235,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
--   Ze względów bezpieczeństwa usuń definicję katalogu wirtualnego i uprawnienia udzielone w ramach kroków konfiguracji, po zakończeniu pracy z próbek.  
+- Ze względów bezpieczeństwa usuń definicję katalogu wirtualnego i uprawnienia udzielone w ramach kroków konfiguracji, po zakończeniu pracy z próbek.  

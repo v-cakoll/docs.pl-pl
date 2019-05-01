@@ -1,17 +1,17 @@
 ---
-title: Architektury zorientowanej na usługi
+title: Architektura zorientowana na usługi
 description: Dowiedz się, podstawowe różnice między mikrousług i architektury zorientowanej na usługi (SOA).
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
 ms.openlocfilehash: d19053d8296dbe75ac1e0ce037d6a713d9f5687c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025486"
 ---
-# <a name="service-oriented-architecture"></a>Architektury zorientowanej na usługi
+# <a name="service-oriented-architecture"></a>Architektura zorientowana na usługi
 
 Dotycząca architektury zorientowanej na usługi (SOA) był nadmiernego obciążenia termin i spowodował, że różne dla różnych osób. Jednak jako uniwersalność, SOA oznacza, że struktury aplikacji przez podzielenie go na wiele usług (najczęściej jako usługi HTTP), które mogą być klasyfikowane jako różnych typów, takich jak podsystemów lub warstwy.
 

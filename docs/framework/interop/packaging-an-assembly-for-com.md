@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdbbc169999a9faa2ac1c33c8573e51b76899b74
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032446"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Pakowanie zestawu dla modelu COM
 

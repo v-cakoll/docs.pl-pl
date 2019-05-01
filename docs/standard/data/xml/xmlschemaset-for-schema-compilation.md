@@ -9,11 +9,11 @@ ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026838"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>Klasa XmlSchemaSet na potrzeby kompilacji schematu
 W tym artykule opisano <xref:System.Xml.Schema.XmlSchemaSet>, pamięci podręcznej, gdzie schematów języka (XSD) definicji schematu XML mogą być przechowywane i zweryfikowane.  
@@ -37,9 +37,9 @@ W tym artykule opisano <xref:System.Xml.Schema.XmlSchemaSet>, pamięci podręczn
 ## <a name="migrating-to-the-xmlschemaset"></a>Migrowanie do element XmlSchemaSet  
  Poniższy przykład kodu Przewodnik po migracji do nowego <xref:System.Xml.Schema.XmlSchemaSet> przestarzałe klasy <xref:System.Xml.Schema.XmlSchemaCollection> klasy. Przykładowy kod przedstawia następujące główne różnice między dwoma klasami.  
   
--   W odróżnieniu od <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> metody <xref:System.Xml.Schema.XmlSchemaCollection> klasy, schematy nie są kompilowane podczas wywoływania <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> metody <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> Metody <xref:System.Xml.Schema.XmlSchemaSet> zostanie jawnie wywołany w przykładowym kodzie.  
+- W odróżnieniu od <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> metody <xref:System.Xml.Schema.XmlSchemaCollection> klasy, schematy nie są kompilowane podczas wywoływania <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> metody <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> Metody <xref:System.Xml.Schema.XmlSchemaSet> zostanie jawnie wywołany w przykładowym kodzie.  
   
--   Iterowanie <xref:System.Xml.Schema.XmlSchemaSet>, należy użyć <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> właściwość <xref:System.Xml.Schema.XmlSchemaSet>.  
+- Iterowanie <xref:System.Xml.Schema.XmlSchemaSet>, należy użyć <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> właściwość <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Oto przestarzała <xref:System.Xml.Schema.XmlSchemaCollection> przykładowy kod.  
   

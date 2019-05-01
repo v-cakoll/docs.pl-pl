@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Tab
 ms.assetid: f8be2732-836d-4e4d-85e2-73aa39479bf4
 ms.openlocfilehash: be562b3abd03bd7f166fdc29acaee3a447cd8f55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996597"
 ---
 # <a name="ui-automation-support-for-the-tab-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla formantów typu karta
 > [!NOTE]
@@ -62,7 +62,7 @@ ms.locfileid: "59192858"
   
 |Właściwości wzorzec/wzorzec kontrolki|Obsługa/wartość|Uwagi|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Tak|Wszystkie kontrolki karty musi obsługiwać wzorca wyboru.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Yes|Wszystkie kontrolki karty musi obsługiwać wzorca wyboru.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Prawda|Kontrolki karty zawsze wymagają, aby wybierać.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|Formanty karty są zawsze kontenerów pojedynczego wyboru.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Zależy od|Przewiń, w których wzorzec musi być obsługiwana w kontrolce karty ma elementy widget, które pozwalają na zbiór elementów karty do być przewijane za pośrednictwem.|  

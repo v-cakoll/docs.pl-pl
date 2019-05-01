@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
 ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011765"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Formanty do użycia w formularzach systemu Windows
 Oto alfabetycznym listę kontrolek i składników, których można użyć w formularzach Windows Forms. Oprócz formanty Windows Forms, opisanych w tej sekcji można dodać ActiveX i niestandardowych formantów do formularzy Windows Forms. Jeśli nie możesz znaleźć, formant, który należy wymienionych w tym miejscu, można również utworzyć własne. Aby uzyskać więcej informacji, zobacz [tworzenia kontrolek Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md). Aby uzyskać więcej informacji o wybieraniu formantu zobacz [formantów formularzy Windows za pomocą funkcji](windows-forms-controls-by-function.md).  

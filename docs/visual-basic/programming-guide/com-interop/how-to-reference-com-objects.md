@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022392"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Instrukcje: Obiekty odwołanie COM z Visual Basic
 W języku Visual Basic dodanie odwołania do obiektów COM, które mają bibliotek typów wymaga utworzenia zestawu międzyoperacyjnego dla biblioteki COM. Odwołania do elementów członkowskich obiektu COM są kierowane do zestawu międzyoperacyjnego, a następnie przekazywane do rzeczywistego obiektu COM. Odpowiedzi z obiektu COM są kierowane do zestawu międzyoperacyjnego i przekazywane do usługi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji.  
@@ -38,11 +38,11 @@ W języku Visual Basic dodanie odwołania do obiektów COM, które mają bibliot
   
 2. Wywołanie Tlbimp z wiersza polecenia, podając następujące informacje:  
   
-    -   Nazwa i lokalizacja pliku dll, który zawiera biblioteki typów  
+    - Nazwa i lokalizacja pliku dll, który zawiera biblioteki typów  
   
-    -   Nazwa i lokalizacja przestrzeni nazw, gdzie ma zostać umieszczony informacje  
+    - Nazwa i lokalizacja przestrzeni nazw, gdzie ma zostać umieszczony informacje  
   
-    -   Nazwy i lokalizacji docelowych zestawu międzyoperacyjnego  
+    - Nazwy i lokalizacji docelowych zestawu międzyoperacyjnego  
   
      Poniższy kod stanowi przykład:  
   

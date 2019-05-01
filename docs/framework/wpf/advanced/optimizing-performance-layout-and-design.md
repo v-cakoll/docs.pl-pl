@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050223"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optymalizacja wydajności: Układ i projekt
 Projekt usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji może mieć wpływ na jego wydajność, tworząc niepotrzebne koszty Obliczanie układu i sprawdzanie poprawności odwołania do obiektu. Konstrukcja obiektów, szczególnie w czasie wykonywania, może wpłynąć na charakterystykę wydajności aplikacji.  
@@ -26,25 +26,25 @@ Projekt usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-
   
  System układu wykonuje dwa przejścia dla każdego elementu podrzędnego w kolekcji: przebieg miary i przekazać Rozmieść. Każdy obiekt podrzędny zawiera własną implementację zgodnym z przesłoniętą <xref:System.Windows.UIElement.Measure%2A> i <xref:System.Windows.UIElement.Arrange%2A> metody, aby zapewnić zachowanie określonego układu. W najprostszym układ jest systemem cyklicznej, który prowadzi do bycia elementu o rozmiarze, umieszczony i rysowane na ekranie.  
   
--   Element podrzędny <xref:System.Windows.UIElement> obiektu rozpoczyna proces układ przez pierwszy jej podstawowe właściwości mierzone.  
+- Element podrzędny <xref:System.Windows.UIElement> obiektu rozpoczyna proces układ przez pierwszy jej podstawowe właściwości mierzone.  
   
--   Obiekt <xref:System.Windows.FrameworkElement> właściwości, które są powiązane z rozmiar, takich jak <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A>, są oceniane.  
+- Obiekt <xref:System.Windows.FrameworkElement> właściwości, które są powiązane z rozmiar, takich jak <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A>, są oceniane.  
   
--   <xref:System.Windows.Controls.Panel>— Logika charakterystyczna zostanie zastosowana, takich jak <xref:System.Windows.Controls.DockPanel.Dock%2A> właściwość <xref:System.Windows.Controls.DockPanel>, lub <xref:System.Windows.Controls.StackPanel.Orientation%2A> właściwość <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>— Logika charakterystyczna zostanie zastosowana, takich jak <xref:System.Windows.Controls.DockPanel.Dock%2A> właściwość <xref:System.Windows.Controls.DockPanel>, lub <xref:System.Windows.Controls.StackPanel.Orientation%2A> właściwość <xref:System.Windows.Controls.StackPanel>.  
   
--   Zawartość jest uporządkowane lub umieszczone po wszystkich obiektów podrzędnych zostały zmierzone.  
+- Zawartość jest uporządkowane lub umieszczone po wszystkich obiektów podrzędnych zostały zmierzone.  
   
--   Kolekcja obiektów podrzędnych jest rysowana na ekranie.  
+- Kolekcja obiektów podrzędnych jest rysowana na ekranie.  
   
  Proces — dostęp próbny układu zostanie wywołana ponownie, jeśli wystąpi dowolne z następujących czynności:  
   
--   Obiekt podrzędny zostanie dodany do kolekcji.  
+- Obiekt podrzędny zostanie dodany do kolekcji.  
   
--   Element <xref:System.Windows.FrameworkElement.LayoutTransform%2A> jest stosowany do obiektu podrzędnego.  
+- Element <xref:System.Windows.FrameworkElement.LayoutTransform%2A> jest stosowany do obiektu podrzędnego.  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A> Metoda jest wywoływana dla obiektu podrzędnego.  
+- <xref:System.Windows.UIElement.UpdateLayout%2A> Metoda jest wywoływana dla obiektu podrzędnego.  
   
--   Gdy wystąpi zmiana wartości właściwości zależności, który jest oznaczony za pomocą metadanych wpływających na miary lub Rozmieść przebiegów.  
+- Gdy wystąpi zmiana wartości właściwości zależności, który jest oznaczony za pomocą metadanych wpływających na miary lub Rozmieść przebiegów.  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Skorzystaj z panelu najbardziej efektywny sposób, jeśli jest to możliwe  
  Złożoności procesu układ jest bezpośrednio oparty na podstawie zachowania układ <xref:System.Windows.Controls.Panel>-pochodnych elementy, możesz użyć. Na przykład <xref:System.Windows.Controls.Grid> lub <xref:System.Windows.Controls.StackPanel> control oferuje znacznie więcej funkcji niż <xref:System.Windows.Controls.Canvas> kontroli. Cena za to zwiększenie większą funkcjonalność jest większa wzrost kosztów wydajności. Jednakże jeśli nie potrzebujesz funkcji, <xref:System.Windows.Controls.Grid> udostępnia kontrolki, należy użyć mniej kosztowne rozwiązania alternatywne, takiego jak <xref:System.Windows.Controls.Canvas> lub niestandardowy panel.  

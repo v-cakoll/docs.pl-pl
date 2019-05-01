@@ -1,14 +1,14 @@
 ---
-title: Użyj Zamknij i Przerwij, aby zwolnić zasoby klienta WCF
+title: Zwalnianie zasobów klienta programu WCF za pomocą poleceń Zamknij i Przerwij
 description: Dispose może zakończyć się niepowodzeniem i zgłaszają wyjątki, gdy sieć nie powiedzie się. Który może spowodować niepożądane zachowanie. Zamiast tego użyj Zamknij i Przerwij, aby zwolnić zasoby klienta, gdy sieć nie powiodło się.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
 ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007581"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Zamknij i przerwania zwolnienia zasobów bezpiecznie w przypadku, gdy połączenia sieciowe zostały odrzucone
 

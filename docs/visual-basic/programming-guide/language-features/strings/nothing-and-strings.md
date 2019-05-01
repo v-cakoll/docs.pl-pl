@@ -5,11 +5,11 @@ helpviewer_keywords:
 - strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
 ms.openlocfilehash: 5fbcf86261892e3eb8e43ee8eaa3728cd8e42ced
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032282"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Nothing i ciągi w Visual Basic
 Środowisko uruchomieniowe języka Visual Basic i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] oceny `Nothing` inaczej kiedy chodzi o ciągów.  

@@ -3,11 +3,11 @@ title: Konfigurowanie Internetowych usług informacyjnych 7.0 na potrzeby progra
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039770"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Konfigurowanie Internetowych usług informacyjnych 7.0 na potrzeby programu Windows Communication Foundation
 
@@ -22,11 +22,11 @@ Usług informacje internetowe (IIS) 7.0 ma modułowej, która umożliwia selekty
 
  Ta funkcja obejmuje następujące składniki podrzędne:
 
--   Środowisko .NET
+- Środowisko .NET
 
--   Interfejsy API konfiguracji
+- Interfejsy API konfiguracji
 
--   Model procesów
+- Model procesów
 
  Jeśli wybierzesz węzeł główny WAS, tylko **Model procesu** węzeł podrzędny jest zaznaczone domyślnie. Należy pamiętać, że tej instalacji tylko instalacja WAS, ponieważ nie jest obsługiwane dla serwera sieci Web.
 

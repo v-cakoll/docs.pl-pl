@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032360"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Buforowanie w klientach automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175828"
 ## <a name="retrieving-cached-properties"></a>Trwa pobieranie pamięci podręcznej właściwości  
  Właściwości pamięci podręcznej elementu można pobrać za pomocą następujących metod i właściwości.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  Wyjątek jest zgłaszany, jeśli Żądana właściwość nie znajduje się w pamięci podręcznej.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175828"
 ## <a name="retrieving-cached-control-patterns"></a>Trwa pobieranie pamięci podręcznej wzorce kontrolki  
  Wzorce kontroli pamięci podręcznej elementu można pobrać za pomocą następujących metod.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  Jeśli wzorzec nie znajduje się w pamięci podręcznej, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> zgłasza wyjątek, i <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> zwraca `false`.  
   

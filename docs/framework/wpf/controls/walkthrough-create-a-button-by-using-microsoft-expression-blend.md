@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018395"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Przewodnik: Tworzenie przycisku przy użyciu programu Microsoft Expression Blend
 Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dostosowany przycisk przy użyciu Microsoft Expression Blend.  
@@ -117,17 +117,17 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 10. **Wprowadź glassCube wygląda jak szkło:** Ustaw <xref:System.Windows.Shapes.Shape.Fill%2A> glassy wyglądzie przy użyciu gradientu liniowego, wynosi 75% nieprzezroczystych i przełącza między kolor biały i przezroczysty ponad 6 przybliżeniu równomiernie rozmieszczonych odstępach czasu. Jest to, co równa ograniczniki gradientu:  
   
-    -   Ogranicznik gradientu 1: Kolor biały z wartości alfa 75%  
+    - Ogranicznik gradientu 1: Kolor biały z wartości alfa 75%  
   
-    -   Ogranicznik gradientu 2: Przezroczyste  
+    - Ogranicznik gradientu 2: Przezroczyste  
   
-    -   Ogranicznik gradientu 3: Kolor biały z wartości alfa 75%  
+    - Ogranicznik gradientu 3: Kolor biały z wartości alfa 75%  
   
-    -   Ogranicznik gradientu 4: Przezroczyste  
+    - Ogranicznik gradientu 4: Przezroczyste  
   
-    -   Ogranicznik gradientu 5: Kolor biały z wartości alfa 75%  
+    - Ogranicznik gradientu 5: Kolor biały z wartości alfa 75%  
   
-    -   Ogranicznik gradientu 6: Przezroczyste  
+    - Ogranicznik gradientu 6: Przezroczyste  
   
      Spowoduje to utworzenie wygląd szkła "faliste".  
   
@@ -173,9 +173,9 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 6. **Utwórz wyzwalacz właściwości dla IsFocused:** Przy użyciu tej samej procedury jak w przypadku <xref:System.Windows.UIElement.IsMouseOver%2A> (patrz pierwszym krokiem w tej sekcji), utworzenia innego wyzwalacza właściwości dla <xref:System.Windows.UIElement.IsFocused%2A> właściwości. Gdy **wyzwalacza — nagrywanie jest włączone**, Dodaj następujące akcje do wyzwalacza:  
   
-    -   **glassCube** pobiera <xref:System.Windows.UIElement.Opacity%2A> 100%.  
+    - **glassCube** pobiera <xref:System.Windows.UIElement.Opacity%2A> 100%.  
   
-    -   **outerRectangle** pobiera <xref:System.Windows.Shapes.Shape.Stroke%2A> niestandardowe wyrażenie wartości "{dynamicresource — {x: Static SystemColors.HighlightBrushKey}}".  
+    - **outerRectangle** pobiera <xref:System.Windows.Shapes.Shape.Stroke%2A> niestandardowe wyrażenie wartości "{dynamicresource — {x: Static SystemColors.HighlightBrushKey}}".  
   
  Ostatni krok w tym przewodniku dodamy animacji do przycisku. Te animacje będą wyzwalane przez zdarzenia — w szczególności <xref:System.Windows.UIElement.MouseEnter> i <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia.  
   
@@ -208,19 +208,19 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 5. **Utwórz kolejny wyzwalacz zdarzenia i skojarzyć inną animację z nią:** Dodajmy jednej więcej animacji. Użyj podobnej procedury używane do utworzenia poprzedniej animacji wyzwalacz zdarzenia:  
   
-    1.  Utwórz nowy wyzwalacz zdarzenia, za pomocą <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
+    1. Utwórz nowy wyzwalacz zdarzenia, za pomocą <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
   
-    2.  Skojarz nowe osi czasu z <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
+    2. Skojarz nowe osi czasu z <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
   
      ![Jak utworzyć nową oś czasu](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  Dla tej osi czasu należy utworzyć dwóch klatki kluczowe — jedną na 0.0 sekund, a drugi na 0,3 sekund.  
+    1. Dla tej osi czasu należy utworzyć dwóch klatki kluczowe — jedną na 0.0 sekund, a drugi na 0,3 sekund.  
   
-    2.  Za pomocą ramki kluczowej na 0,3 sekund wyróżniony, ustaw **Obróć kąt Przekształcanie** do 360 stopni.  
+    2. Za pomocą ramki kluczowej na 0,3 sekund wyróżniony, ustaw **Obróć kąt Przekształcanie** do 360 stopni.  
   
      ![Jak utworzyć obrót — przekształcenie](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  Naciśnij klawisz F5, aby uruchomić aplikację. Kliknij przycisk. Należy zauważyć, że warstwy szkła uruchamia się wokół.  
+    1. Naciśnij klawisz F5, aby uruchomić aplikację. Kliknij przycisk. Należy zauważyć, że warstwy szkła uruchamia się wokół.  
   
 ## <a name="conclusion"></a>Wniosek  
  Dostosowany przycisk została ukończona. Zrobiono to przy użyciu szablonu przycisku, który został zastosowany do wszystkich przycisków w aplikacji. Jeśli pozostawisz szablonu tryb edycji (patrz poniższy rysunek) i utworzyć więcej przycisków, zostanie wyświetlony wyglądają i zachowują się jak przycisk niestandardowy, a nie jak przycisk domyślny.  
@@ -237,15 +237,15 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
  Podsumowując w trakcie dostosowywania szablonu przycisku wiesz jak wykonać następujące czynności w programie Microsoft Expression Blend:  
   
--   Dostosowywanie wyglądu formantu.  
+- Dostosowywanie wyglądu formantu.  
   
--   Ustaw wyzwalacze właściwości. Wyzwalacze właściwości są bardzo przydatne, ponieważ mogą być używane w większości obiektów, nie tylko formanty.  
+- Ustaw wyzwalacze właściwości. Wyzwalacze właściwości są bardzo przydatne, ponieważ mogą być używane w większości obiektów, nie tylko formanty.  
   
--   Ustaw wyzwalacze zdarzeń. Wyzwalacze zdarzeń są bardzo przydatne, ponieważ mogą być używane w większości obiektów, nie tylko formanty.  
+- Ustaw wyzwalacze zdarzeń. Wyzwalacze zdarzeń są bardzo przydatne, ponieważ mogą być używane w większości obiektów, nie tylko formanty.  
   
--   Tworzenie animacji.  
+- Tworzenie animacji.  
   
--   Różne: Tworzenie gradientów, Dodaj BitmapEffects, użyj przekształceń i ustaw podstawowe właściwości obiektów.  
+- Różne: Tworzenie gradientów, Dodaj BitmapEffects, użyj przekształceń i ustaw podstawowe właściwości obiektów.  
   
 ## <a name="see-also"></a>Zobacz także
 

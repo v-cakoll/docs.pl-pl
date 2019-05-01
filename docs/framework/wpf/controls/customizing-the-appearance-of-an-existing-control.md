@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017838"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
 <a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> określa struktury wizualnej i zachowanie visual kontrolki. Można dostosować wygląd kontrolki, zapewniając it nowej <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.Controls.ControlTemplate>, Zastąp wyglądu istniejącej kontrolki bez zmiany jego działanie. Na przykład, można zwiększyć przycisków w aplikacji round zamiast domyślnego prostokątnego kształtu, ale nadal zgłosi przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
@@ -64,11 +64,11 @@ Zaznacz pole wyboru, który używa szablonu kontrolki niestandardowej
   
  W tym przykładzie struktury efektów wizualnych składa się z następujących elementów:  
   
--   A <xref:System.Windows.Controls.Border> o nazwie `RootElement` służy jako szablon głównego <xref:System.Windows.FrameworkElement>.  
+- A <xref:System.Windows.Controls.Border> o nazwie `RootElement` służy jako szablon głównego <xref:System.Windows.FrameworkElement>.  
   
--   A <xref:System.Windows.Controls.Grid> czyli element podrzędny `RootElement`.  
+- A <xref:System.Windows.Controls.Grid> czyli element podrzędny `RootElement`.  
   
--   A <xref:System.Windows.Controls.ContentPresenter> wyświetlającą zawartości przycisku. <xref:System.Windows.Controls.ContentPresenter> Umożliwia dowolnego typu obiektu, który ma być wyświetlane.  
+- A <xref:System.Windows.Controls.ContentPresenter> wyświetlającą zawartości przycisku. <xref:System.Windows.Controls.ContentPresenter> Umożliwia dowolnego typu obiektu, który ma być wyświetlane.  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ Zaznacz pole wyboru, który używa szablonu kontrolki niestandardowej
   
  <xref:System.Windows.Controls.Control> Klasa definiuje kilka właściwości, które mogą być używane przez szablonu kontrolki, aby mieć wpływ na kontrolki, gdy są ustawione. Sposób, w jaki <xref:System.Windows.Controls.ControlTemplate> używa właściwości zależy od właściwości. <xref:System.Windows.Controls.ControlTemplate> Należy użyć właściwości w jednej z następujących sposobów:  
   
--   Element <xref:System.Windows.Controls.ControlTemplate> szablon wiąże się do właściwości.  
+- Element <xref:System.Windows.Controls.ControlTemplate> szablon wiąże się do właściwości.  
   
--   Element <xref:System.Windows.Controls.ControlTemplate> dziedziczy właściwości z elementem nadrzędnym <xref:System.Windows.FrameworkElement>.  
+- Element <xref:System.Windows.Controls.ControlTemplate> dziedziczy właściwości z elementem nadrzędnym <xref:System.Windows.FrameworkElement>.  
   
  Poniższa tabela zawiera listę właściwości wizualnego dziedziczone przez kontrolki z poziomu <xref:System.Windows.Controls.Control> klasy. Wskazuje także czy domyślny szablon kontrolki kontrolki używa wartości właściwość dziedziczona, lub jeśli musi być szablonu powiązane.  
   
@@ -167,11 +167,11 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
  Możesz określić ilość czasu potrzebnego animacji do bezproblemowego przejścia formantu z jednego stanu do innego, dodając <xref:System.Windows.VisualTransition> obiekty do <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.VisualTransition>, należy określić co najmniej jeden z następujących czynności:  
   
--   Czas przejścia między Stanami wystąpić.  
+- Czas przejścia między Stanami wystąpić.  
   
--   Dodatkowe zmiany wyglądu kontrolki, które występują w momencie przejścia.  
+- Dodatkowe zmiany wyglądu kontrolki, które występują w momencie przejścia.  
   
--   Które stany <xref:System.Windows.VisualTransition> jest stosowany do.  
+- Które stany <xref:System.Windows.VisualTransition> jest stosowany do.  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>Określanie czasu trwania przejścia  
  Można określić, jak długo trwa przejście przez ustawienie <xref:System.Windows.VisualTransition.GeneratedDuration%2A> właściwości. W poprzednim przykładzie przedstawiono <xref:System.Windows.VisualState> określająca, czy obramowanie przycisku staje się przezroczyste, po kliknięciu przycisku, ale animacji trwa zbyt długo, można zaobserwować, jeśli przycisk jest szybkie naciśnięcia, a. Możesz użyć <xref:System.Windows.VisualTransition> można określić ilość czasu zajmuje kontrolki, do którego nastąpi przejście do stanu po naciśnięciu. W poniższym przykładzie określono, że kontrolka ma jednej setnej części sekundy, aby przejść do stanu po naciśnięciu.  
@@ -201,13 +201,13 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
  W poniższym przykładzie przedstawiono <xref:System.Windows.VisualStateGroup> dla `CommonStates`. W przykładzie zdefiniowano <xref:System.Windows.VisualTransition> dla każdego z następujących przycisku przejścia.  
   
--   Aby `Pressed` stanu.  
+- Aby `Pressed` stanu.  
   
--   Aby `MouseOver` stanu.  
+- Aby `MouseOver` stanu.  
   
--   Z `Pressed` do stanu `MouseOver` stanu.  
+- Z `Pressed` do stanu `MouseOver` stanu.  
   
--   Z `MouseOver` do stanu `Normal` stanu.  
+- Z `MouseOver` do stanu `Normal` stanu.  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
  Kontrakt formantu ma trzy elementy:  
   
--   Elementy wizualne, których używa logiki formantu.  
+- Elementy wizualne, których używa logiki formantu.  
   
--   Stany i grupy, której każdy stan kontrolki.  
+- Stany i grupy, której każdy stan kontrolki.  
   
--   Właściwości publiczne, które wizualnie wpływają na formant.  
+- Właściwości publiczne, które wizualnie wpływają na formant.  
   
 ### <a name="visual-elements-in-the-control-contract"></a>Elementy wizualne w kontrakcie kontroli  
  Czasami od logiki formantu wchodzi w interakcję z <xref:System.Windows.FrameworkElement> w <xref:System.Windows.Controls.ControlTemplate>. Na przykład formant może obsługiwać zdarzenia z jednego z jego elementów. Gdy formant spodziewa się znaleźć określonego <xref:System.Windows.FrameworkElement> w <xref:System.Windows.Controls.ControlTemplate>, go, musi przekazać te informacje do <xref:System.Windows.Controls.ControlTemplate> autora. Kontrolka używa <xref:System.Windows.TemplatePartAttribute> do ich typ elementu, który jest oczekiwany, a co powinno być nazwa elementu. <xref:System.Windows.Controls.Button> Nie ma <xref:System.Windows.FrameworkElement> części w jej kontrakt formantu, ale inne formanty, takie jak <xref:System.Windows.Controls.ComboBox>, czy.  
@@ -250,9 +250,9 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
  Podczas tworzenia <xref:System.Windows.Controls.ControlTemplate>, często najłatwiej zaczynają się od istniejącej <xref:System.Windows.Controls.ControlTemplate> i wprowadzać zmiany. Możesz wykonać jedną z następujących czynności, aby zmienić istniejącego <xref:System.Windows.Controls.ControlTemplate>:  
   
--   Za pomocą projektanta, takich jak Expression Blend, która zapewnia graficzny interfejs użytkownika do tworzenia szablonów kontrolek. Aby uzyskać więcej informacji, zobacz [tworzenie stylów dla formantu obsługuje szablony](https://go.microsoft.com/fwlink/?LinkId=161153).  
+- Za pomocą projektanta, takich jak Expression Blend, która zapewnia graficzny interfejs użytkownika do tworzenia szablonów kontrolek. Aby uzyskać więcej informacji, zobacz [tworzenie stylów dla formantu obsługuje szablony](https://go.microsoft.com/fwlink/?LinkId=161153).  
   
--   Pobierz domyślny <xref:System.Windows.Controls.ControlTemplate> i go edytować. Aby znaleźć domyślne szablony kontrolek, które są dołączone [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [motywy WPF domyślne](https://go.microsoft.com/fwlink/?LinkID=158252).  
+- Pobierz domyślny <xref:System.Windows.Controls.ControlTemplate> i go edytować. Aby znaleźć domyślne szablony kontrolek, które są dołączone [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [motywy WPF domyślne](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Kompletny przykład  

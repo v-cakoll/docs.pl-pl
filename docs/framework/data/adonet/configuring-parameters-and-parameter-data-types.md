@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034557"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 
@@ -48,18 +48,18 @@ Typ danych parametru jest specyficzne dla [!INCLUDE[dnprdnshort](../../../../inc
 
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Typ dostawcy danych `Parameter` obiektu jest wnioskowany z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu `Value` z `Parameter` obiektu, albo z `DbType` z `Parameter` obiektu. W poniższej tabeli przedstawiono wywnioskowane `Parameter` typ oparty na obiekcie, który został przekazany jako `Parameter` wartość lub określone `DbType`.
 
-|Typ programu .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|Typu OracleType|
+|Typ programu .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boolean|Bitowe|Boolean|Bitowe|Byte|
+|<xref:System.Boolean>|Boolean|Bit|Boolean|Bit|Byte|
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|
 |byte[]|plików binarnych|VarBinary. To niejawna konwersja nie powiedzie się, jeśli tablica bajtów jest większy niż maksymalny rozmiar wartości typu VarBinary, czyli 8000 bajtów. Dla tablic bajtów jest większa niż 8000 bajtów, należy jawnie ustawić <xref:System.Data.SqlDbType>.|VarBinary|plików binarnych|nieprzetworzone|
 |<xref:System.Char>| |Wnioskowanie <xref:System.Data.SqlDbType> z char nie jest obsługiwane.|Char|Char|Byte|
 |<xref:System.DateTime>|DataGodzina|DataGodzina|DBTimeStamp|DataGodzina|DataGodzina|
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset programu SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z DateTimeOffset nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|||DataGodzina|
-|<xref:System.Decimal>|Wartość dziesiętna|Wartość dziesiętna|Wartość dziesiętna|Numeryczne|Wartość liczbowa|
-|<xref:System.Double>|Double|float|Podwójne|Podwójne|Double|
-|<xref:System.Single>|Single|Rzeczywiste|Single|Rzeczywiste|float|
-|<xref:System.Guid>|Identyfikator GUID|UniqueIdentifier|Identyfikator GUID|UniqueIdentifier|nieprzetworzone|
+|<xref:System.Decimal>|Wartość dziesiętna|Wartość dziesiętna|Wartość dziesiętna|Numeric|Wartość liczbowa|
+|<xref:System.Double>|Double|Float|Podwójne|Podwójne|Double|
+|<xref:System.Single>|Single|Rzeczywiste|Single|Rzeczywiste|Float|
+|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|nieprzetworzone|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|int|int|int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Wartość liczbowa|
@@ -68,13 +68,13 @@ Typ danych parametru jest specyficzne dla [!INCLUDE[dnprdnshort](../../../../inc
 |<xref:System.TimeSpan>|Godzina|Czas w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z przedziału czasu nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBTime|Godzina|DataGodzina|
 |<xref:System.UInt16>|UInt16|Wnioskowanie <xref:System.Data.SqlDbType> z UInt16 nie jest obsługiwane.|UnsignedSmallInt|int|UInt16|
 |<xref:System.UInt32>|UInt32|Wnioskowanie <xref:System.Data.SqlDbType> z UInt32 nie jest obsługiwane.|unsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|Wnioskowanie <xref:System.Data.SqlDbType> z UInt64 nie jest obsługiwane.|UnsignedBigInt|Numeryczne|Wartość liczbowa|
+|<xref:System.UInt64>|UInt64|Wnioskowanie <xref:System.Data.SqlDbType> z UInt64 nie jest obsługiwane.|UnsignedBigInt|Numeric|Wartość liczbowa|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Waluta|pieniędzy|Waluta|Wnioskowanie `OdbcType` z `Currency` nie jest obsługiwane.|Wartość liczbowa|
+||Waluta|money|Waluta|Wnioskowanie `OdbcType` z `Currency` nie jest obsługiwane.|Wartość liczbowa|
 ||Data|Data w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> od daty nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBDate|Data|DataGodzina|
 ||SByte|Wnioskowanie <xref:System.Data.SqlDbType> z SByte nie jest obsługiwane.|TinyInt|Wnioskowanie `OdbcType` z SByte nie jest obsługiwane.|SByte|
-||StringFixedLength|nChar|WChar|nChar|nChar|
+||StringFixedLength|NChar|WChar|NChar|NChar|
 ||Godzina|Czas w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> od czasu nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBTime|Godzina|DataGodzina|
 ||VarNumeric|Wnioskowanie <xref:System.Data.SqlDbType> z VarNumeric nie jest obsługiwane.|VarNumeric|Wnioskowanie `OdbcType` z VarNumeric nie jest obsługiwane.|Wartość liczbowa|
 |Typ zdefiniowany przez użytkownika (obiektu przy użyciu <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Obiekt lub ciąg, w zależności od dostawcy (SqlClient zawsze zwraca obiekt, Odbc zawsze zwraca wartość typu ciąg, a następnie zobaczyć albo dostawcy danych zarządzanych OleDb|SqlDbType.Udt Jeśli <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> jest obecna, w przeciwnym razie Variant|OleDbType.VarWChar (jeśli ma wartość null) OleDbType.Variant inaczej.|OdbcType.NVarChar|Nie jest obsługiwany|

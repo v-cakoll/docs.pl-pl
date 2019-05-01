@@ -1,5 +1,5 @@
 ---
-title: 'XSLT arkusza stylów skryptów przy użyciu < msxsl: script >'
+title: Wykonywanie skryptów arkusza stylów XSLT przy użyciu elementu <msxsl:script>
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,11 +9,11 @@ ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026643"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>XSLT skryptów przy użyciu arkusza stylów \<msxsl: script >
 <xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu.  

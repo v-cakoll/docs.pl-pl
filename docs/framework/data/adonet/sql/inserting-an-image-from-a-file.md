@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
 ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032425"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Wstawianie obrazu z pliku
 Możesz napisać duży obiekt binarny (BLOB) do bazy danych jako dane binarne lub znaków, w zależności od typu pola w źródle danych. Obiekt BLOB jest ogólny termin określający, który odwołuje się do `text`, `ntext`, i `image` typy danych, które zwykle zawierają dokumenty i obrazy.  

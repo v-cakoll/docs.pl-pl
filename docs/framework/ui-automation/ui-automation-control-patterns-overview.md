@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033088"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Wzorce formantów automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "59126363"
 ## <a name="ui-automation-control-pattern-components"></a>Składniki wzorzec kontrolki automatyzacji interfejsu użytkownika  
  Wzorce kontrolki obsługuje metody, właściwości, zdarzeń i relacje niezbędnej do zdefiniowania dyskretnych część funkcji dostępnych w formancie.  
   
--   Relacja między elementu automatyzacji interfejsu użytkownika i jego nadrzędne, podrzędne i równorzędne opisujący strukturę elementu w obrębie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.  
+- Relacja między elementu automatyzacji interfejsu użytkownika i jego nadrzędne, podrzędne i równorzędne opisujący strukturę elementu w obrębie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.  
   
--   Metody zezwolić klientom automatyzacji interfejsu użytkownika do manipulowania formantu.  
+- Metody zezwolić klientom automatyzacji interfejsu użytkownika do manipulowania formantu.  
   
--   Właściwości i zdarzenia zapewniają informacje o funkcjach wzorca kontrolki, a także informacje na temat stanu kontrolki.  
+- Właściwości i zdarzenia zapewniają informacje o funkcjach wzorca kontrolki, a także informacje na temat stanu kontrolki.  
   
  Wzorce kontrolki odnoszą się do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] jako interfejsy odnoszą się do [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] obiektów. W [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)], można tworzyć zapytania obiektu zadać, co interfejsy obsługuje, a następnie użyć tych interfejsów do dostępu do funkcjonalności. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], klienci automatyzacji interfejsu użytkownika można zadawać kontrolki, które określają wzorców problemu obsługuje, a następnie współdziałał z formantu za pomocą właściwości, metod, zdarzeń i struktury udostępnianych przez wzorców kontrolek obsługiwanych. Na przykład dla pola wielowierszowe Edytowanie dostawcy automatyzacji interfejsu użytkownika wdrożenia <xref:System.Windows.Automation.Provider.IScrollProvider>. Gdy klient wie, który <xref:System.Windows.Automation.AutomationElement> obsługuje <xref:System.Windows.Automation.ScrollPattern> — wzorzec kontrolki, jego można użyć właściwości, metod i zdarzeń udostępnianych przez tego wzorca kontrolki do manipulowania kontrolki lub dostęp do informacji na temat kontroli.  
   

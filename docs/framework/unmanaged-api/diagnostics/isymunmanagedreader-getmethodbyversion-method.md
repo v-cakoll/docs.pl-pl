@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4bc763d908156f3bbf8998c13073820686903f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986378"
 ---
-# <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="0a1e4-102">ISymUnmanagedReader::GetMethodByVersion — Metoda</span><span class="sxs-lookup"><span data-stu-id="0a1e4-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
-<span data-ttu-id="0a1e4-103">Pobiera metodę czytnika symboli podany token metody i numeru wersji edycji i kopiowania.</span><span class="sxs-lookup"><span data-stu-id="0a1e4-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="0a1e4-104">Numery wersji są liczone od 1 i są zwiększane, każdym razem, gdy metoda zostanie zmieniony w wyniku operacji Edytuj i kopiowania.</span><span class="sxs-lookup"><span data-stu-id="0a1e4-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  
+# <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="977d0-102">ISymUnmanagedReader::GetMethodByVersion — Metoda</span><span class="sxs-lookup"><span data-stu-id="977d0-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
+<span data-ttu-id="977d0-103">Pobiera metodę czytnika symboli podany token metody i numeru wersji edycji i kopiowania.</span><span class="sxs-lookup"><span data-stu-id="977d0-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="977d0-104">Numery wersji są liczone od 1 i są zwiększane, każdym razem, gdy metoda zostanie zmieniony w wyniku operacji Edytuj i kopiowania.</span><span class="sxs-lookup"><span data-stu-id="977d0-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a1e4-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="0a1e4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="977d0-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="977d0-105">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodByVersion (  
@@ -36,22 +36,22 @@ HRESULT GetMethodByVersion (
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a1e4-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="0a1e4-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="977d0-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="977d0-106">Parameters</span></span>  
  `token`  
- <span data-ttu-id="0a1e4-107">[in] Token metody.</span><span class="sxs-lookup"><span data-stu-id="0a1e4-107">[in] The method token.</span></span>  
+ <span data-ttu-id="977d0-107">[in] Token metody.</span><span class="sxs-lookup"><span data-stu-id="977d0-107">[in] The method token.</span></span>  
   
  `version`  
- <span data-ttu-id="0a1e4-108">[in] Wersja metody.</span><span class="sxs-lookup"><span data-stu-id="0a1e4-108">[in] The method version.</span></span>  
+ <span data-ttu-id="977d0-108">[in] Wersja metody.</span><span class="sxs-lookup"><span data-stu-id="977d0-108">[in] The method version.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="0a1e4-109">[out] Wskaźnik do interfejsu zwrócone.</span><span class="sxs-lookup"><span data-stu-id="0a1e4-109">[out] A pointer to the returned interface.</span></span>  
+ <span data-ttu-id="977d0-109">[out] Wskaźnik do interfejsu zwrócone.</span><span class="sxs-lookup"><span data-stu-id="977d0-109">[out] A pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0a1e4-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="0a1e4-110">Return Value</span></span>  
- <span data-ttu-id="0a1e4-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="0a1e4-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="977d0-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="977d0-110">Return Value</span></span>  
+ <span data-ttu-id="977d0-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="977d0-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a1e4-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0a1e4-112">Requirements</span></span>  
- <span data-ttu-id="0a1e4-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0a1e4-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="977d0-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="977d0-112">Requirements</span></span>  
+ <span data-ttu-id="977d0-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="977d0-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a1e4-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0a1e4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="977d0-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="977d0-114">See also</span></span>
 
-- [<span data-ttu-id="0a1e4-115">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="0a1e4-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="977d0-115">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="977d0-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

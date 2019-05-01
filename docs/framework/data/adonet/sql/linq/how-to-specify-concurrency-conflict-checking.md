@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: c2547fcb-58eb-4377-9948-1b8d76a0f3d7
 ms.openlocfilehash: 53d3ba6969705940c403795d3764c021f0829c64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033686"
 ---
-# <a name="how-to-specify-concurrency-conflict-checking"></a><span data-ttu-id="a92a1-102">Instrukcje: Określanie sprawdzania konfliktów współbieżności</span><span class="sxs-lookup"><span data-stu-id="a92a1-102">How to: Specify Concurrency-Conflict Checking</span></span>
-<span data-ttu-id="a92a1-103">Można określić kolumny bazy danych, które mają być sprawdzane pod kątem konfliktów współbieżności, gdy wywołujesz <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="a92a1-103">You can specify which columns of the database are to be checked for concurrency conflicts when you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span></span> <span data-ttu-id="a92a1-104">Aby uzyskać więcej informacji, zobacz [jak: Określ, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="a92a1-104">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
+# <a name="how-to-specify-concurrency-conflict-checking"></a><span data-ttu-id="ff8c8-102">Instrukcje: Określanie sprawdzania konfliktów współbieżności</span><span class="sxs-lookup"><span data-stu-id="ff8c8-102">How to: Specify Concurrency-Conflict Checking</span></span>
+<span data-ttu-id="ff8c8-103">Można określić kolumny bazy danych, które mają być sprawdzane pod kątem konfliktów współbieżności, gdy wywołujesz <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="ff8c8-103">You can specify which columns of the database are to be checked for concurrency conflicts when you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span></span> <span data-ttu-id="ff8c8-104">Aby uzyskać więcej informacji, zobacz [jak: Określ, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="ff8c8-104">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a92a1-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="a92a1-105">Example</span></span>  
- <span data-ttu-id="a92a1-106">Poniższy kod określa, że `HomePage` elementu członkowskiego nigdy nie powinny być badane podczas sprawdzania aktualizacji.</span><span class="sxs-lookup"><span data-stu-id="a92a1-106">The following code specifies that the `HomePage` member should never be tested during update checks.</span></span> <span data-ttu-id="a92a1-107">Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.</span><span class="sxs-lookup"><span data-stu-id="a92a1-107">For more information, see <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.</span></span>  
+## <a name="example"></a><span data-ttu-id="ff8c8-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="ff8c8-105">Example</span></span>  
+ <span data-ttu-id="ff8c8-106">Poniższy kod określa, że `HomePage` elementu członkowskiego nigdy nie powinny być badane podczas sprawdzania aktualizacji.</span><span class="sxs-lookup"><span data-stu-id="ff8c8-106">The following code specifies that the `HomePage` member should never be tested during update checks.</span></span> <span data-ttu-id="ff8c8-107">Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.</span><span class="sxs-lookup"><span data-stu-id="ff8c8-107">For more information, see <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.</span></span>  
   
  [!code-csharp[System.Data.Linq.Mapping.UpdateCheck#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.mapping.updatecheck/cs/northwind.cs#1)]
  [!code-vb[System.Data.Linq.Mapping.UpdateCheck#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.mapping.updatecheck/vb/northwind.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="a92a1-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a92a1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff8c8-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ff8c8-108">See also</span></span>
 
-- [<span data-ttu-id="a92a1-109">Model obiektu LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="a92a1-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [<span data-ttu-id="a92a1-110">Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu</span><span class="sxs-lookup"><span data-stu-id="a92a1-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [<span data-ttu-id="ff8c8-109">Model obiektu LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="ff8c8-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [<span data-ttu-id="ff8c8-110">Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu</span><span class="sxs-lookup"><span data-stu-id="ff8c8-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

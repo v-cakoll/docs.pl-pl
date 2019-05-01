@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
 ms.openlocfilehash: fae1513e7a7ead98318d907b220b7510758c9ffe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037612"
 ---
-# <a name="how-to-retrieve-member-conflict-information"></a><span data-ttu-id="dba2b-102">Instrukcje: Pobieranie informacji o konflikcie elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="dba2b-102">How to: Retrieve Member Conflict Information</span></span>
-<span data-ttu-id="dba2b-103">Możesz użyć <xref:System.Data.Linq.MemberChangeConflict> klasy do pobrania informacji o poszczególnych elementów członkowskich w konflikcie.</span><span class="sxs-lookup"><span data-stu-id="dba2b-103">You can use the <xref:System.Data.Linq.MemberChangeConflict> class to retrieve information about individual members in conflict.</span></span> <span data-ttu-id="dba2b-104">W tym samym kontekście możesz podać niestandardową obsługę konfliktu dla dowolnego elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="dba2b-104">In this same context you can provide for custom handling of the conflict for any member.</span></span> <span data-ttu-id="dba2b-105">Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="dba2b-105">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  
+# <a name="how-to-retrieve-member-conflict-information"></a><span data-ttu-id="c03df-102">Instrukcje: Pobieranie informacji o konflikcie elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="c03df-102">How to: Retrieve Member Conflict Information</span></span>
+<span data-ttu-id="c03df-103">Możesz użyć <xref:System.Data.Linq.MemberChangeConflict> klasy do pobrania informacji o poszczególnych elementów członkowskich w konflikcie.</span><span class="sxs-lookup"><span data-stu-id="c03df-103">You can use the <xref:System.Data.Linq.MemberChangeConflict> class to retrieve information about individual members in conflict.</span></span> <span data-ttu-id="c03df-104">W tym samym kontekście możesz podać niestandardową obsługę konfliktu dla dowolnego elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="c03df-104">In this same context you can provide for custom handling of the conflict for any member.</span></span> <span data-ttu-id="c03df-105">Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="c03df-105">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dba2b-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="dba2b-106">Example</span></span>  
- <span data-ttu-id="dba2b-107">Poniższy kod wykonuje iterację przez <xref:System.Data.Linq.ObjectChangeConflict> obiektów.</span><span class="sxs-lookup"><span data-stu-id="dba2b-107">The following code iterates through the <xref:System.Data.Linq.ObjectChangeConflict> objects.</span></span> <span data-ttu-id="dba2b-108">Dla każdego obiektu, następnie iteruje <xref:System.Data.Linq.MemberChangeConflict> obiektów.</span><span class="sxs-lookup"><span data-stu-id="dba2b-108">For each object, it then iterates through the <xref:System.Data.Linq.MemberChangeConflict> objects.</span></span>  
+## <a name="example"></a><span data-ttu-id="c03df-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="c03df-106">Example</span></span>  
+ <span data-ttu-id="c03df-107">Poniższy kod wykonuje iterację przez <xref:System.Data.Linq.ObjectChangeConflict> obiektów.</span><span class="sxs-lookup"><span data-stu-id="c03df-107">The following code iterates through the <xref:System.Data.Linq.ObjectChangeConflict> objects.</span></span> <span data-ttu-id="c03df-108">Dla każdego obiektu, następnie iteruje <xref:System.Data.Linq.MemberChangeConflict> obiektów.</span><span class="sxs-lookup"><span data-stu-id="c03df-108">For each object, it then iterates through the <xref:System.Data.Linq.MemberChangeConflict> objects.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="dba2b-109">Obejmują <xref:System.Reflection> zapewnić <xref:System.Data.Linq.MemberChangeConflict.Member%2A> informacji.</span><span class="sxs-lookup"><span data-stu-id="dba2b-109">Include <xref:System.Reflection> in order to provide <xref:System.Data.Linq.MemberChangeConflict.Member%2A> information.</span></span>  
+>  <span data-ttu-id="c03df-109">Obejmują <xref:System.Reflection> zapewnić <xref:System.Data.Linq.MemberChangeConflict.Member%2A> informacji.</span><span class="sxs-lookup"><span data-stu-id="c03df-109">Include <xref:System.Reflection> in order to provide <xref:System.Data.Linq.MemberChangeConflict.Member%2A> information.</span></span>  
   
  [!code-csharp[System.Data.Linq.MemberChangeConflict#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.memberchangeconflict/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.MemberChangeConflict#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.memberchangeconflict/vb/module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="dba2b-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dba2b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c03df-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c03df-110">See also</span></span>
 
-- [<span data-ttu-id="dba2b-111">Instrukcje: Zarządzanie konfliktami zmian</span><span class="sxs-lookup"><span data-stu-id="dba2b-111">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [<span data-ttu-id="c03df-111">Instrukcje: Zarządzanie konfliktami zmian</span><span class="sxs-lookup"><span data-stu-id="c03df-111">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

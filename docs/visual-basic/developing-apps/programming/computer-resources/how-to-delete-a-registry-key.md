@@ -12,43 +12,42 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
 ms.openlocfilehash: fdb61fee8a790000c53b6c9a0188999bc0cb09ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014374"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a><span data-ttu-id="b2e60-102">Instrukcje: Usuwanie klucza rejestru w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b2e60-102">How to: Delete a Registry Key in Visual Basic</span></span>
-<span data-ttu-id="b2e60-103"><xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> i <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> metody służy do usuwania kluczy rejestru.</span><span class="sxs-lookup"><span data-stu-id="b2e60-103">The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.</span></span>  
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a><span data-ttu-id="dae2d-102">Instrukcje: Usuwanie klucza rejestru w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dae2d-102">How to: Delete a Registry Key in Visual Basic</span></span>
+<span data-ttu-id="dae2d-103"><xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> i <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> metody służy do usuwania kluczy rejestru.</span><span class="sxs-lookup"><span data-stu-id="dae2d-103">The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.</span></span>  
   
-## <a name="procedure"></a><span data-ttu-id="b2e60-104">Procedura</span><span class="sxs-lookup"><span data-stu-id="b2e60-104">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="dae2d-104">Procedura</span><span class="sxs-lookup"><span data-stu-id="dae2d-104">Procedure</span></span>  
   
-#### <a name="to-delete-a-registry-key"></a><span data-ttu-id="b2e60-105">Aby usunąć klucz rejestru</span><span class="sxs-lookup"><span data-stu-id="b2e60-105">To delete a registry key</span></span>  
+#### <a name="to-delete-a-registry-key"></a><span data-ttu-id="dae2d-105">Aby usunąć klucz rejestru</span><span class="sxs-lookup"><span data-stu-id="dae2d-105">To delete a registry key</span></span>  
   
--   <span data-ttu-id="b2e60-106">Użyj `DeleteSubKey` metodę, aby usunąć klucza rejestru.</span><span class="sxs-lookup"><span data-stu-id="b2e60-106">Use the `DeleteSubKey` method to delete a registry key.</span></span> <span data-ttu-id="b2e60-107">W tym przykładzie usuwa klucz oprogramowania/TestApp w gałęzi CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="b2e60-107">This example deletes the key Software/TestApp in the CurrentUser hive.</span></span> <span data-ttu-id="b2e60-108">Możesz zmienić w kodzie na odpowiedni ciąg lub jego opierają się na informacjach dostarczonych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="b2e60-108">You can change this in the code to the appropriate string, or have it rely on user-supplied information.</span></span>  
+- <span data-ttu-id="dae2d-106">Użyj `DeleteSubKey` metodę, aby usunąć klucza rejestru.</span><span class="sxs-lookup"><span data-stu-id="dae2d-106">Use the `DeleteSubKey` method to delete a registry key.</span></span> <span data-ttu-id="dae2d-107">W tym przykładzie usuwa klucz oprogramowania/TestApp w gałęzi CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="dae2d-107">This example deletes the key Software/TestApp in the CurrentUser hive.</span></span> <span data-ttu-id="dae2d-108">Możesz zmienić w kodzie na odpowiedni ciąg lub jego opierają się na informacjach dostarczonych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="dae2d-108">You can change this in the code to the appropriate string, or have it rely on user-supplied information.</span></span>  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="b2e60-109">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="b2e60-109">Robust Programming</span></span>  
- <span data-ttu-id="b2e60-110">`DeleteSubKey` Metoda zwraca pusty ciąg, jeśli para klucza i wartości nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="b2e60-110">The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="dae2d-109">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="dae2d-109">Robust Programming</span></span>  
+ <span data-ttu-id="dae2d-110">`DeleteSubKey` Metoda zwraca pusty ciąg, jeśli para klucza i wartości nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="dae2d-110">The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.</span></span>  
   
- <span data-ttu-id="b2e60-111">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="b2e60-111">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="dae2d-111">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="dae2d-111">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="b2e60-112">Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="b2e60-112">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+- <span data-ttu-id="dae2d-112">Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="dae2d-112">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   <span data-ttu-id="b2e60-113">Użytkownik nie ma uprawnień do usuwania kluczy rejestru (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="b2e60-113">The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).</span></span>  
+- <span data-ttu-id="dae2d-113">Użytkownik nie ma uprawnień do usuwania kluczy rejestru (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="dae2d-113">The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).</span></span>  
   
--   <span data-ttu-id="b2e60-114">Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="b2e60-114">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
+- <span data-ttu-id="dae2d-114">Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="dae2d-114">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
   
--   <span data-ttu-id="b2e60-115">Klucz rejestru jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="b2e60-115">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
+- <span data-ttu-id="dae2d-115">Klucz rejestru jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="dae2d-115">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="b2e60-116">Zabezpieczenia.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b2e60-116">.NET Framework Security</span></span>  
- <span data-ttu-id="b2e60-117">Wywołania rejestru kończyć się niepowodzeniem, jeśli nie są przyznawane albo wystarczające uprawnienia środowiska wykonawczego (<xref:System.Security.Permissions.RegistryPermission>) lub jeśli użytkownik nie ma prawidłowy dostęp (zgodnie z ustaleniami listy ACL), tworzenia i zapisywania ustawień.</span><span class="sxs-lookup"><span data-stu-id="b2e60-117">Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings.</span></span> <span data-ttu-id="b2e60-118">Na przykład lokalnych aplikacji, które ma uprawnienia zabezpieczeń dostępu kodu ma uprawnienie systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="b2e60-118">For example, a local application that has the code access security permission might not have operating system permission.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="dae2d-116">Zabezpieczenia.NET Framework</span><span class="sxs-lookup"><span data-stu-id="dae2d-116">.NET Framework Security</span></span>  
+ <span data-ttu-id="dae2d-117">Wywołania rejestru kończyć się niepowodzeniem, jeśli nie są przyznawane albo wystarczające uprawnienia środowiska wykonawczego (<xref:System.Security.Permissions.RegistryPermission>) lub jeśli użytkownik nie ma prawidłowy dostęp (zgodnie z ustaleniami listy ACL), tworzenia i zapisywania ustawień.</span><span class="sxs-lookup"><span data-stu-id="dae2d-117">Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings.</span></span> <span data-ttu-id="dae2d-118">Na przykład lokalnych aplikacji, które ma uprawnienia zabezpieczeń dostępu kodu ma uprawnienie systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="dae2d-118">For example, a local application that has the code access security permission might not have operating system permission.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2e60-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b2e60-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dae2d-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dae2d-119">See also</span></span>
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
-- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>
-- [<span data-ttu-id="b2e60-120">Bezpieczeństwo i rejestr</span><span class="sxs-lookup"><span data-stu-id="b2e60-120">Security and the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
-- [<span data-ttu-id="b2e60-121">Odczytywanie z rejestru i zapisywanie w nim</span><span class="sxs-lookup"><span data-stu-id="b2e60-121">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [<span data-ttu-id="dae2d-120">Bezpieczeństwo i rejestr</span><span class="sxs-lookup"><span data-stu-id="dae2d-120">Security and the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
+- [<span data-ttu-id="dae2d-121">Odczytywanie z rejestru i zapisywanie w nim</span><span class="sxs-lookup"><span data-stu-id="dae2d-121">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

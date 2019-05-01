@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049482"
 ---
-# <a name="icorprofilerinfo4getrejitids-method"></a><span data-ttu-id="834d7-102">ICorProfilerInfo4::GetReJITIDs — Metoda</span><span class="sxs-lookup"><span data-stu-id="834d7-102">ICorProfilerInfo4::GetReJITIDs Method</span></span>
-<span data-ttu-id="834d7-103">Zwraca tablicę identyfikatorów, które identyfikują wszystkie ponownie skompilowana JIT wersje określonej funkcji, które nadal są przydzielane.</span><span class="sxs-lookup"><span data-stu-id="834d7-103">Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated.</span></span> <span data-ttu-id="834d7-104">Obejmuje to ponownie skompilowana JIT wersje funkcji, które następnie przywrócona, ale nie zostały jeszcze zwolnione (na przykład, gdy domeny aplikacji, która zawiera przywróconym funkcja jest nadal w użyciu).</span><span class="sxs-lookup"><span data-stu-id="834d7-104">This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).</span></span>  
+# <a name="icorprofilerinfo4getrejitids-method"></a><span data-ttu-id="26531-102">ICorProfilerInfo4::GetReJITIDs — Metoda</span><span class="sxs-lookup"><span data-stu-id="26531-102">ICorProfilerInfo4::GetReJITIDs Method</span></span>
+<span data-ttu-id="26531-103">Zwraca tablicę identyfikatorów, które identyfikują wszystkie ponownie skompilowana JIT wersje określonej funkcji, które nadal są przydzielane.</span><span class="sxs-lookup"><span data-stu-id="26531-103">Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated.</span></span> <span data-ttu-id="26531-104">Obejmuje to ponownie skompilowana JIT wersje funkcji, które następnie przywrócona, ale nie zostały jeszcze zwolnione (na przykład, gdy domeny aplikacji, która zawiera przywróconym funkcja jest nadal w użyciu).</span><span class="sxs-lookup"><span data-stu-id="26531-104">This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="834d7-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="834d7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="26531-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="26531-105">Syntax</span></span>  
   
 ```  
 HRESULT GetReJITIDs (  
@@ -37,33 +37,33 @@ HRESULT GetReJITIDs (
      [out, size_is(cReJitIds), length_is(*pcReJitIds)]   ReJITID        reJitIds[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="834d7-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="834d7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="26531-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="26531-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="834d7-107">[in] `FunctionID` Wystąpienia funkcji, do których chcesz wyliczyć wersji.</span><span class="sxs-lookup"><span data-stu-id="834d7-107">[in] The `FunctionID` of the function instance for which to enumerate versions.</span></span>  
+ <span data-ttu-id="26531-107">[in] `FunctionID` Wystąpienia funkcji, do których chcesz wyliczyć wersji.</span><span class="sxs-lookup"><span data-stu-id="26531-107">[in] The `FunctionID` of the function instance for which to enumerate versions.</span></span>  
   
  `cReJitIds`  
- <span data-ttu-id="834d7-108">[in] Liczba identyfikatorów ponownie skompilowana JIT, przydzielone w `reJitIds` tablicy.</span><span class="sxs-lookup"><span data-stu-id="834d7-108">[in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.</span></span>  
+ <span data-ttu-id="26531-108">[in] Liczba identyfikatorów ponownie skompilowana JIT, przydzielone w `reJitIds` tablicy.</span><span class="sxs-lookup"><span data-stu-id="26531-108">[in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.</span></span>  
   
  `pcReJitIds`  
- <span data-ttu-id="834d7-109">[out] Rzeczywista liczba identyfikatorów ponownie skompilowana JIT.</span><span class="sxs-lookup"><span data-stu-id="834d7-109">[out] The actual number of JIT-recompiled IDs.</span></span>  
+ <span data-ttu-id="26531-109">[out] Rzeczywista liczba identyfikatorów ponownie skompilowana JIT.</span><span class="sxs-lookup"><span data-stu-id="26531-109">[out] The actual number of JIT-recompiled IDs.</span></span>  
   
  `reJitIds`  
- <span data-ttu-id="834d7-110">[out] Tablica przydzielana przez obiekt wywołujący, który będzie zawierać identyfikatory ponownie skompilowana JIT dla określonej funkcji.</span><span class="sxs-lookup"><span data-stu-id="834d7-110">[out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.</span></span>  
+ <span data-ttu-id="26531-110">[out] Tablica przydzielana przez obiekt wywołujący, który będzie zawierać identyfikatory ponownie skompilowana JIT dla określonej funkcji.</span><span class="sxs-lookup"><span data-stu-id="26531-110">[out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="834d7-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="834d7-111">Remarks</span></span>  
- <span data-ttu-id="834d7-112">`GetReJITIDs` Wylicza aktywne identyfikatory ponownie skompilowana JIT dla wystąpienia danej funkcji.</span><span class="sxs-lookup"><span data-stu-id="834d7-112">`GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance.</span></span> <span data-ttu-id="834d7-113">Wynika z tego samego wzorca użycia, jak inne `ICorProfilerInfo` funkcje, które akceptują bufory przypisane do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="834d7-113">It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="26531-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="26531-111">Remarks</span></span>  
+ <span data-ttu-id="26531-112">`GetReJITIDs` Wylicza aktywne identyfikatory ponownie skompilowana JIT dla wystąpienia danej funkcji.</span><span class="sxs-lookup"><span data-stu-id="26531-112">`GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance.</span></span> <span data-ttu-id="26531-113">Wynika z tego samego wzorca użycia, jak inne `ICorProfilerInfo` funkcje, które akceptują bufory przypisane do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="26531-113">It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="834d7-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="834d7-114">Requirements</span></span>  
- <span data-ttu-id="834d7-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="834d7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="26531-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="26531-114">Requirements</span></span>  
+ <span data-ttu-id="26531-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26531-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="834d7-116">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="834d7-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="26531-116">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="26531-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="834d7-117">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="834d7-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="26531-117">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="26531-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="834d7-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="834d7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="26531-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26531-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="834d7-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="834d7-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26531-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="26531-119">See also</span></span>
 
-- [<span data-ttu-id="834d7-120">ICorProfilerInfo4, interfejs</span><span class="sxs-lookup"><span data-stu-id="834d7-120">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="834d7-121">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="834d7-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="834d7-122">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="834d7-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="26531-120">ICorProfilerInfo4, interfejs</span><span class="sxs-lookup"><span data-stu-id="26531-120">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="26531-121">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="26531-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="26531-122">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="26531-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

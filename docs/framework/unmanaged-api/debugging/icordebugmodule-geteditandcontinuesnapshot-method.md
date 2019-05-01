@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d3cf2947380a7d48a261faf1bbc24ec5773b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994880"
 ---
-# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="a5515-102">ICorDebugModule::GetEditAndContinueSnapshot — Metoda</span><span class="sxs-lookup"><span data-stu-id="a5515-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
-<span data-ttu-id="a5515-103">Przestarzałe.</span><span class="sxs-lookup"><span data-stu-id="a5515-103">Deprecated.</span></span>  
+# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="27636-102">ICorDebugModule::GetEditAndContinueSnapshot — Metoda</span><span class="sxs-lookup"><span data-stu-id="27636-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
+<span data-ttu-id="27636-103">Przestarzałe.</span><span class="sxs-lookup"><span data-stu-id="27636-103">Deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5515-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a5515-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27636-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="27636-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEditAndContinueSnapshot(  
@@ -35,11 +35,11 @@ HRESULT GetEditAndContinueSnapshot(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a5515-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a5515-105">Requirements</span></span>  
- <span data-ttu-id="a5515-106">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5515-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27636-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="27636-105">Requirements</span></span>  
+ <span data-ttu-id="27636-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27636-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5515-107">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a5515-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="27636-107">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="27636-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a5515-108">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5515-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="27636-108">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27636-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a5515-109">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5515-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="27636-109">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27636-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

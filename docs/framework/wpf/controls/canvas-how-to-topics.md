@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
 ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912525"
 ---
-# <a name="canvas-how-to-topics"></a><span data-ttu-id="3c635-102">Kanwa Tematy porad</span><span class="sxs-lookup"><span data-stu-id="3c635-102">Canvas How-to Topics</span></span>
-<span data-ttu-id="3c635-103">Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.Canvas> absolutnie pozycjonować elementy podrzędne elementu.</span><span class="sxs-lookup"><span data-stu-id="3c635-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
+# <a name="canvas-how-to-topics"></a><span data-ttu-id="acf49-102">Kanwa Tematy porad</span><span class="sxs-lookup"><span data-stu-id="acf49-102">Canvas How-to Topics</span></span>
+<span data-ttu-id="acf49-103">Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.Canvas> absolutnie pozycjonować elementy podrzędne elementu.</span><span class="sxs-lookup"><span data-stu-id="acf49-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3c635-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="3c635-104">In This Section</span></span>  
- [<span data-ttu-id="3c635-105">Zawijanie obramowania wokół zawartości kanwy</span><span class="sxs-lookup"><span data-stu-id="3c635-105">Wrap a Border Around the Content of a Canvas</span></span>](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [<span data-ttu-id="3c635-106">Pobieranie lub ustawianie właściwości ustawienia kanwy</span><span class="sxs-lookup"><span data-stu-id="3c635-106">Get or Set Canvas Positioning Properties</span></span>](how-to-get-or-set-canvas-positioning-properties.md)  
- [<span data-ttu-id="3c635-107">Tworzenie i używanie kanwy</span><span class="sxs-lookup"><span data-stu-id="3c635-107">Create and Use a Canvas</span></span>](how-to-create-and-use-a-canvas.md)  
- [<span data-ttu-id="3c635-108">Używanie załączonych właściwości kanwy do ustawiania położenia elementów podrzędnych</span><span class="sxs-lookup"><span data-stu-id="3c635-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [<span data-ttu-id="3c635-109">Zmienianie rozmiaru kanwy przy użyciu kciuka</span><span class="sxs-lookup"><span data-stu-id="3c635-109">Resize a Canvas by Using a Thumb</span></span>](how-to-resize-a-canvas-by-using-a-thumb.md)  
+## <a name="in-this-section"></a><span data-ttu-id="acf49-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="acf49-104">In This Section</span></span>  
+ [<span data-ttu-id="acf49-105">Zawijanie obramowania wokół zawartości kanwy</span><span class="sxs-lookup"><span data-stu-id="acf49-105">Wrap a Border Around the Content of a Canvas</span></span>](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [<span data-ttu-id="acf49-106">Pobieranie lub ustawianie właściwości ustawienia kanwy</span><span class="sxs-lookup"><span data-stu-id="acf49-106">Get or Set Canvas Positioning Properties</span></span>](how-to-get-or-set-canvas-positioning-properties.md)  
+ [<span data-ttu-id="acf49-107">Tworzenie i używanie kanwy</span><span class="sxs-lookup"><span data-stu-id="acf49-107">Create and Use a Canvas</span></span>](how-to-create-and-use-a-canvas.md)  
+ [<span data-ttu-id="acf49-108">Używanie załączonych właściwości kanwy do ustawiania położenia elementów podrzędnych</span><span class="sxs-lookup"><span data-stu-id="acf49-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [<span data-ttu-id="acf49-109">Zmienianie rozmiaru kanwy przy użyciu kciuka</span><span class="sxs-lookup"><span data-stu-id="acf49-109">Resize a Canvas by Using a Thumb</span></span>](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
-## <a name="reference"></a><span data-ttu-id="3c635-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="3c635-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="acf49-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="acf49-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -39,9 +39,9 @@ ms.locfileid: "57359396"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="3c635-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="3c635-111">Related Sections</span></span>  
- [<span data-ttu-id="3c635-112">Układ</span><span class="sxs-lookup"><span data-stu-id="3c635-112">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="acf49-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="acf49-111">Related Sections</span></span>  
+ [<span data-ttu-id="acf49-112">Układ</span><span class="sxs-lookup"><span data-stu-id="acf49-112">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="3c635-113">Przewodnik: Mój pierwszy aplikacji klasycznej WPF</span><span class="sxs-lookup"><span data-stu-id="3c635-113">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="acf49-113">Przewodnik: Mój pierwszy aplikacji klasycznej WPF</span><span class="sxs-lookup"><span data-stu-id="acf49-113">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="3c635-114">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="3c635-114">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="acf49-114">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="acf49-114">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

@@ -10,40 +10,40 @@ helpviewer_keywords:
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
 ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781345"
 ---
-# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a><span data-ttu-id="4fde0-102">Instrukcje: Wypełnianie kształtów wzorem kreskowanym</span><span class="sxs-lookup"><span data-stu-id="4fde0-102">How to: Fill a Shape with a Hatch Pattern</span></span>
-<span data-ttu-id="4fde0-103">Wzorem kreskowanym składa się z dwóch kolorów: jeden dla tła i jeden dla wierszy, które tworzą wzorzec nad tłem.</span><span class="sxs-lookup"><span data-stu-id="4fde0-103">A hatch pattern is made from two colors: one for the background and one for the lines that form the pattern over the background.</span></span> <span data-ttu-id="4fde0-104">Aby wypełnić kształt zamknięty wzorem kreskowanym, należy użyć <xref:System.Drawing.Drawing2D.HatchBrush> obiektu.</span><span class="sxs-lookup"><span data-stu-id="4fde0-104">To fill a closed shape with a hatch pattern, use a <xref:System.Drawing.Drawing2D.HatchBrush> object.</span></span> <span data-ttu-id="4fde0-105">Poniższy przykład pokazuje, jak wypełnić elipsę wzorem kreskowanym:</span><span class="sxs-lookup"><span data-stu-id="4fde0-105">The following example demonstrates how to fill an ellipse with a hatch pattern:</span></span>  
+# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a><span data-ttu-id="3e776-102">Instrukcje: Wypełnianie kształtów wzorem kreskowanym</span><span class="sxs-lookup"><span data-stu-id="3e776-102">How to: Fill a Shape with a Hatch Pattern</span></span>
+<span data-ttu-id="3e776-103">Wzorem kreskowanym składa się z dwóch kolorów: jeden dla tła i jeden dla wierszy, które tworzą wzorzec nad tłem.</span><span class="sxs-lookup"><span data-stu-id="3e776-103">A hatch pattern is made from two colors: one for the background and one for the lines that form the pattern over the background.</span></span> <span data-ttu-id="3e776-104">Aby wypełnić kształt zamknięty wzorem kreskowanym, należy użyć <xref:System.Drawing.Drawing2D.HatchBrush> obiektu.</span><span class="sxs-lookup"><span data-stu-id="3e776-104">To fill a closed shape with a hatch pattern, use a <xref:System.Drawing.Drawing2D.HatchBrush> object.</span></span> <span data-ttu-id="3e776-105">Poniższy przykład pokazuje, jak wypełnić elipsę wzorem kreskowanym:</span><span class="sxs-lookup"><span data-stu-id="3e776-105">The following example demonstrates how to fill an ellipse with a hatch pattern:</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4fde0-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="4fde0-106">Example</span></span>  
- <span data-ttu-id="4fde0-107"><xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Konstruktor przyjmuje trzy argumenty: Styl kreskowania, kolor linii kreskowania i kolor tła.</span><span class="sxs-lookup"><span data-stu-id="4fde0-107">The <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> constructor takes three arguments: the hatch style, the color of the hatch line, and the color of the background.</span></span> <span data-ttu-id="4fde0-108">Argument stylu kreskowania może być dowolną wartością z <xref:System.Drawing.Drawing2D.HatchStyle> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="4fde0-108">The hatch style argument can be any value from the <xref:System.Drawing.Drawing2D.HatchStyle> enumeration.</span></span> <span data-ttu-id="4fde0-109">Istnieje więcej niż 50 elementów w <xref:System.Drawing.Drawing2D.HatchStyle> wyliczenie; niektóre z tych elementów są wyświetlane na poniższej liście:</span><span class="sxs-lookup"><span data-stu-id="4fde0-109">There are more than fifty elements in the <xref:System.Drawing.Drawing2D.HatchStyle> enumeration; a few of those elements are shown in the following list:</span></span>  
+## <a name="example"></a><span data-ttu-id="3e776-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="3e776-106">Example</span></span>  
+ <span data-ttu-id="3e776-107"><xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Konstruktor przyjmuje trzy argumenty: Styl kreskowania, kolor linii kreskowania i kolor tła.</span><span class="sxs-lookup"><span data-stu-id="3e776-107">The <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> constructor takes three arguments: the hatch style, the color of the hatch line, and the color of the background.</span></span> <span data-ttu-id="3e776-108">Argument stylu kreskowania może być dowolną wartością z <xref:System.Drawing.Drawing2D.HatchStyle> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="3e776-108">The hatch style argument can be any value from the <xref:System.Drawing.Drawing2D.HatchStyle> enumeration.</span></span> <span data-ttu-id="3e776-109">Istnieje więcej niż 50 elementów w <xref:System.Drawing.Drawing2D.HatchStyle> wyliczenie; niektóre z tych elementów są wyświetlane na poniższej liście:</span><span class="sxs-lookup"><span data-stu-id="3e776-109">There are more than fifty elements in the <xref:System.Drawing.Drawing2D.HatchStyle> enumeration; a few of those elements are shown in the following list:</span></span>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
- <span data-ttu-id="4fde0-110">Poniższa ilustracja przedstawia wypełnioną elipsę.</span><span class="sxs-lookup"><span data-stu-id="4fde0-110">The following illustration shows the filled ellipse.</span></span>  
+ <span data-ttu-id="3e776-110">Poniższa ilustracja przedstawia wypełnioną elipsę.</span><span class="sxs-lookup"><span data-stu-id="3e776-110">The following illustration shows the filled ellipse.</span></span>  
   
- <span data-ttu-id="4fde0-111">![Hatch Pattern](./media/hatch1.png "hatch1")</span><span class="sxs-lookup"><span data-stu-id="4fde0-111">![Hatch Pattern](./media/hatch1.png "hatch1")</span></span>  
+ <span data-ttu-id="3e776-111">![Hatch Pattern](./media/hatch1.png "hatch1")</span><span class="sxs-lookup"><span data-stu-id="3e776-111">![Hatch Pattern](./media/hatch1.png "hatch1")</span></span>  
   
  [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4fde0-112">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="4fde0-112">Compiling the Code</span></span>  
- <span data-ttu-id="4fde0-113">Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="4fde0-113">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3e776-112">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="3e776-112">Compiling the Code</span></span>  
+ <span data-ttu-id="3e776-113">Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="3e776-113">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4fde0-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4fde0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e776-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3e776-114">See also</span></span>
 
-- [<span data-ttu-id="4fde0-115">Używanie pędzla do wypełniania kształtów</span><span class="sxs-lookup"><span data-stu-id="4fde0-115">Using a Brush to Fill Shapes</span></span>](using-a-brush-to-fill-shapes.md)
+- [<span data-ttu-id="3e776-115">Używanie pędzla do wypełniania kształtów</span><span class="sxs-lookup"><span data-stu-id="3e776-115">Using a Brush to Fill Shapes</span></span>](using-a-brush-to-fill-shapes.md)

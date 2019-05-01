@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055020"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
 Można użyć programu .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) projektu typu, aby upewnić się, że zasoby w bibliotekach klas są dostępne na wielu platformach. Ten typ projektu jest dostępny w programie Visual Studio 2012 i jest przeznaczony dla przenośny podzestaw biblioteki klas .NET Framework. Za pomocą [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] gwarantuje, że biblioteki są dostępne z aplikacji komputerowych, aplikacji Silverlight, aplikacji Windows Phone i [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.
@@ -61,7 +61,7 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
 |BornLength|12|
 |Hired|Data zatrudnienia|
 |HiredLength|12|
-|ID|ID|
+|Identyfikator|Identyfikator|
 |ID.Length|12|
 |Nazwa|Nazwa|
 |NameLength|25|
@@ -90,7 +90,7 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
 |BornLength|20|
 |Hired|Date embauché|
 |HiredLength|16|
-|ID|ID|
+|Identyfikator|Identyfikator|
 |Nazwa|Nom|
 |Tytuł|Base de données des employés|
 

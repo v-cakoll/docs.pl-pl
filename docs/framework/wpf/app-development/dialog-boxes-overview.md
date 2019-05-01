@@ -11,20 +11,20 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052264"
 ---
 # <a name="dialog-boxes-overview"></a>Przegląd okien dialogowych
 Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetlenie danych głównych, względem której aplikacja działa i uwidacznia funkcje przetwarzania tych danych za pośrednictwem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak pasek menu, paski narzędzi i pasków stanu. — Prosta aplikacja może również wyświetlić dodatkowe okna, wykonaj następujące czynności:  
   
--   Wyświetl szczegółowe informacje dla użytkowników.  
+- Wyświetl szczegółowe informacje dla użytkowników.  
   
--   Zbierz informacje od użytkowników.  
+- Zbierz informacje od użytkowników.  
   
--   Wyświetlanie i zbierania informacji.  
+- Wyświetlanie i zbierania informacji.  
   
  Tego rodzaju systemu windows, są znane jako *okna dialogowe*, istnieją dwa typy: modalne i niemodalne.  
   
@@ -122,27 +122,27 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 #### <a name="configuring-a-modal-dialog-box"></a>Konfigurowanie modalne okno dialogowe  
  Interfejs użytkownika dla typowych okno dialogowe obejmuje następujące funkcje:  
   
--   Różne formanty, które są wymagane, aby zebrać pożądane dane.  
+- Różne formanty, które są wymagane, aby zebrać pożądane dane.  
   
--   Wyświetlanie **OK** przycisku przez użytkowników, kliknij, aby zamknąć okno dialogowe, wróć do funkcji i kontynuować przetwarzanie.  
+- Wyświetlanie **OK** przycisku przez użytkowników, kliknij, aby zamknąć okno dialogowe, wróć do funkcji i kontynuować przetwarzanie.  
   
--   Wyświetlanie **anulować** przycisku, który użytkownicy kliknąć, aby zamknąć okno dialogowe i zatrzymać funkcji z dalszego przetwarzania.  
+- Wyświetlanie **anulować** przycisku, który użytkownicy kliknąć, aby zamknąć okno dialogowe i zatrzymać funkcji z dalszego przetwarzania.  
   
--   Wyświetlanie **Zamknij** przycisk na pasku tytułu.  
+- Wyświetlanie **Zamknij** przycisk na pasku tytułu.  
   
--   Wyświetlanie ikony.  
+- Wyświetlanie ikony.  
   
--   Wyświetlanie **Minimalizuj**, **Maksymalizuj**, i **przywrócić** przycisków.  
+- Wyświetlanie **Minimalizuj**, **Maksymalizuj**, i **przywrócić** przycisków.  
   
--   Wyświetlanie **systemu** menu Minimalizuj, Maksymalizuj, przywracania i zamknąć okno dialogowe.  
+- Wyświetlanie **systemu** menu Minimalizuj, Maksymalizuj, przywracania i zamknąć okno dialogowe.  
   
--   Otwieranie w górę i w środku okna, które są otwarte okno dialogowe.  
+- Otwieranie w górę i w środku okna, które są otwarte okno dialogowe.  
   
--   Okna dialogowe powinien być odpowiednio o zmiennym rozmiarze, gdzie to możliwe, tak aby uniemożliwić okna dialogowego za mały i udostępniać użytkownikom o rozmiarze przydatna, musisz ustawić zarówno domyślny, jak i co najmniej wymiarów.  
+- Okna dialogowe powinien być odpowiednio o zmiennym rozmiarze, gdzie to możliwe, tak aby uniemożliwić okna dialogowego za mały i udostępniać użytkownikom o rozmiarze przydatna, musisz ustawić zarówno domyślny, jak i co najmniej wymiarów.  
   
--   Naciśnięcie klawisza ESC powinna być skonfigurowana jako skrót klawiaturowy, który powoduje, że **anulować** naciśnięcia przycisku. Jest to osiągane przez ustawienie <xref:System.Windows.Controls.Button.IsCancel%2A> właściwość **anulować** przycisk, aby `true`.  
+- Naciśnięcie klawisza ESC powinna być skonfigurowana jako skrót klawiaturowy, który powoduje, że **anulować** naciśnięcia przycisku. Jest to osiągane przez ustawienie <xref:System.Windows.Controls.Button.IsCancel%2A> właściwość **anulować** przycisk, aby `true`.  
   
--   Naciśnięcie klawisza ENTER (lub RETURN) powinna być skonfigurowana jako skrót klawiaturowy, który powoduje, że **OK** naciśnięcia przycisku. Jest to osiągane przez ustawienie <xref:System.Windows.Controls.Button.IsDefault%2A> właściwość **OK** przycisk `true`.  
+- Naciśnięcie klawisza ENTER (lub RETURN) powinna być skonfigurowana jako skrót klawiaturowy, który powoduje, że **OK** naciśnięcia przycisku. Jest to osiągane przez ustawienie <xref:System.Windows.Controls.Button.IsDefault%2A> właściwość **OK** przycisk `true`.  
   
  Poniższy kod przedstawia tę konfigurację.  
   
@@ -183,13 +183,13 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 #### <a name="validating-user-provided-data"></a>Sprawdzanie poprawności danych wprowadzonych przez użytkownika  
  Gdy zostanie otwarte okno dialogowe, a użytkownik udostępnia wymaganych danych, okno dialogowe jest odpowiedzialny za zapewnienie, że podane dane są prawidłowe, z następujących powodów:  
   
--   Z punktu widzenia zabezpieczeń wszystkie dane wejściowe powinny być weryfikowane.  
+- Z punktu widzenia zabezpieczeń wszystkie dane wejściowe powinny być weryfikowane.  
   
--   Z punktu widzenia specyficzne dla domeny sprawdzanie poprawności danych zapobiega błędne dane przetwarzane przez kod, który potencjalnie może zgłaszać wyjątki.  
+- Z punktu widzenia specyficzne dla domeny sprawdzanie poprawności danych zapobiega błędne dane przetwarzane przez kod, który potencjalnie może zgłaszać wyjątki.  
   
--   Z punktu widzenia środowisko użytkownika okno dialogowe może pomóc użytkownikom, pokazując, dane, które wprowadzono jest nieprawidłowy.  
+- Z punktu widzenia środowisko użytkownika okno dialogowe może pomóc użytkownikom, pokazując, dane, które wprowadzono jest nieprawidłowy.  
   
--   Z punktu widzenia wydajności sprawdzania poprawności danych w aplikacji wielowarstwowej pozwala zmniejszyć liczbę wystąpień komunikacji dwustronnej między klientem i warstwy aplikacji, szczególnie w przypadku, gdy aplikacja składa się z usługami sieci Web lub na serwerze baz danych.  
+- Z punktu widzenia wydajności sprawdzania poprawności danych w aplikacji wielowarstwowej pozwala zmniejszyć liczbę wystąpień komunikacji dwustronnej między klientem i warstwy aplikacji, szczególnie w przypadku, gdy aplikacja składa się z usługami sieci Web lub na serwerze baz danych.  
   
  Aby sprawdzić poprawność powiązanej kontrolki w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], należy zdefiniować reguły sprawdzania poprawności i skojarzyć go z powiązania. Reguła poprawności jest klasę niestandardową, która pochodzi od klasy <xref:System.Windows.Controls.ValidationRule>. W poniższym przykładzie pokazano reguły sprawdzania poprawności `MarginValidationRule`, która sprawdza, czy jest wiązana wartość <xref:System.Double> i znajduje się w określonym zakresie.  
   
@@ -329,11 +329,11 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 #### <a name="closing-a-modeless-dialog-box"></a>Zamykanie niemodalnego okna dialogowego  
  Ponieważ <xref:System.Windows.Window.DialogResult%2A> musi być ustawiony, może zostać zamknięty niemodalnego okna dialogowego za pomocą systemu zapewniają mechanizmy, w tym następujące:  
   
--   Klikając **Zamknij** przycisk na pasku tytułu.  
+- Klikając **Zamknij** przycisk na pasku tytułu.  
   
--   Naciskając klawisze ALT + F4.  
+- Naciskając klawisze ALT + F4.  
   
--   Wybieranie **Zamknij** z **systemu** menu.  
+- Wybieranie **Zamknij** z **systemu** menu.  
   
  Alternatywnie, można wywołać kod <xref:System.Windows.Window.Close%2A> podczas **Zamknij** przycisku.  
   

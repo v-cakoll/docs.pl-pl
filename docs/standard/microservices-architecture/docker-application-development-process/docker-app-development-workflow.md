@@ -4,12 +4,12 @@ description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613372"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809148"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -181,7 +181,7 @@ Początkowy pliku Dockerfile może wyglądać mniej więcej tak:
  5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
- 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
+ 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
  9  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.Extensions.HealthChecks …
 10  COPY src/BuildingBlocks/EventBus/IntegrationEventLogEF/ …
 11  COPY src/BuildingBlocks/EventBus/EventBus/EventBus.csproj …
@@ -206,6 +206,7 @@ Początkowy pliku Dockerfile może wyglądać mniej więcej tak:
 
 A Oto szczegółowe informacje, wiersz po wierszu:
 
+<!-- markdownlint-disable MD029-->
 1. Rozpocząć etap za pomocą "małe" obrazu podstawowego tylko do środowiska uruchomieniowego, mu **podstawowy** dla odwołania.
 2. Tworzenie **App** katalogu na obrazie.
 3. Uwidocznić port **80**.
@@ -226,6 +227,7 @@ A Oto szczegółowe informacje, wiersz po wierszu:
 26. Zmień bieżący katalog na **App**
 27. Kopiuj **App** katalogu od etapu **publikowania** do bieżącego katalogu
 28. Definiowanie polecenia do uruchomienia po uruchomieniu kontenera.
+<!-- markdownlint-enable MD029-->
 
 Teraz Przyjrzyjmy się niektóre optymalizacje w celu zwiększenia wydajności całego procesu, oznacza to, w przypadku ramach aplikacji eShopOnContainers, około 22 minut lub dłużej tworzyć kompletne rozwiązanie w kontenerach systemu Linux.
 
@@ -233,7 +235,7 @@ Będziesz korzystać z platformy Docker warstwy pamięci podręcznej funkcji, kt
 
 Dlatego Skupmy się na **kompilacji** etapie linii 5 – 6 są prawie takie same, ale wiersze 7-17 różnią się dla każdej usługi w ramach aplikacji eShopOnContainers, więc można wykonać każdy jeden raz, jednak jeśli zmienisz linii 7-16, aby:
 
-```
+```Dockerfile
 COPY . .
 ```
 
@@ -245,7 +247,7 @@ Następnie możesz ją w taki sam dla każdej usługi może spowodować skopiowa
 
 Obejmuje dalej optymalizacji znaczące `restore` wykonano w wierszu 17, polecenia, który również jest inny dla każdej usługi w ramach aplikacji eShopOnContainers. Jeśli zmienisz tylko ten wiersz:
 
-```console
+```Dockerfile
 RUN dotnet restore
 ```
 
@@ -253,13 +255,13 @@ Będzie ona przywrócenia pakietów dla całego rozwiązania, ale następnie pon
 
 Jednak `dotnet restore` tylko działa w przypadku pojedynczego projektu lub pliku rozwiązania w folderze, więc realizacji tego jest nieco bardziej skomplikowane i o sposobie jego rozwiązania, bez pobierania do zbyt wiele szczegółów, to:
 
-1) Dodaj następujące wiersze do **.dockerignore**:
+1. Dodaj następujące wiersze do **.dockerignore**:
 
    - `*.sln`, aby ignorować wszystkie pliki rozwiązania w drzewie folderów głównych
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`, aby uwzględnić ten plik rozwiązania.
 
-2) Obejmują `/ignoreprojectextensions:.dcproj` argument `dotnet restore`, więc ignoruje także projektu docker-compose i przywrócenie tylko pakiety dla rozwiązania w ramach aplikacji eShopOnContainers ServicesAndWebApps.
+2. Obejmują `/ignoreprojectextensions:.dcproj` argument `dotnet restore`, więc ignoruje także projektu docker-compose i przywrócenie tylko pakiety dla rozwiązania w ramach aplikacji eShopOnContainers ServicesAndWebApps.
 
 Końcowe optymalizacji te rzeczy dzieją wierszu 20 jest nadmiarowa, jako wiersz 23 również tworzy aplikację i powróci do trybu, w zasadzie bezpośrednio po wierszu 20, dzięki czemu przechodzi innego polecenia czasochłonne.
 
@@ -542,7 +544,7 @@ Ponadto należy wykonać tylko raz w kroku 2 (Dodawanie obsługę platformy Dock
 - **Steve Lasker. Programowanie na platformie .NET platformy docker przy użyciu programu Visual Studio 2017** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
-## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Używanie poleceń programu PowerShell w pliku Dockerfile do konfigurowania kontenerów Windows 
+## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Używanie poleceń programu PowerShell w pliku Dockerfile do konfigurowania kontenerów Windows
 
 [Kontenery Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/index) umożliwiają konwertowanie istniejących aplikacji Windows obrazów platformy Docker i wdrożyć je przy użyciu tych samych narzędzi, jak w pozostałych ekosystemie Docker. Aby użyć kontenery Windows, możesz uruchomić poleceń programu PowerShell w pliku Dockerfile, jak pokazano w poniższym przykładzie:
 

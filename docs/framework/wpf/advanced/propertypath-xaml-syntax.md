@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053538"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath — Składnia XAML
 <xref:System.Windows.PropertyPath> Obiekt obsługuje złożone wbudowane [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] składnię ustawiania różne właściwości, które przyjmują <xref:System.Windows.PropertyPath> typ jako ich wartość. Ten temat dokumenty <xref:System.Windows.PropertyPath> składni, jakie mają zastosowanie do powiązania i animacji składni.  
@@ -69,11 +69,11 @@ ms.locfileid: "59122918"
   
  Nawiasy wskazują, że tę właściwość w <xref:System.Windows.PropertyPath> powinien być skonstruowany przy użyciu częściowe kwalifikacji. Można odnaleźć typu o odpowiednie mapowanie może używać przestrzeni nazw XML. `ownerType` Wyszukiwania typów, które [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesor ma dostęp, za pomocą <xref:System.Windows.Markup.XmlnsDefinitionAttribute> deklaracji w każdym zestawie. Większość aplikacji ma domyślny obszar nazw XML, mapowane na [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] przestrzeni nazw, dzięki czemu prefiks, który zazwyczaj jest tylko niezbędne dla niestandardowych typów lub typy w przeciwnym razie spoza tej przestrzeni nazw.  `propertyName` należy rozwiązać nazwę właściwości istniejących `ownerType`. Ta składnia jest zazwyczaj używana do jednej z następujących przypadkach:  
   
--   Ścieżka nie jest określona w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w stylu lub szablonu, który ma określony typ docelowy. Użycie kwalifikowanej zwykle nie jest prawidłowy w przypadku innych niż ten, ponieważ w przypadkach-style, nieszablonowe właściwość nie istnieje w wystąpieniu, nie typu.  
+- Ścieżka nie jest określona w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w stylu lub szablonu, który ma określony typ docelowy. Użycie kwalifikowanej zwykle nie jest prawidłowy w przypadku innych niż ten, ponieważ w przypadkach-style, nieszablonowe właściwość nie istnieje w wystąpieniu, nie typu.  
   
--   Właściwość jest dołączona właściwość.  
+- Właściwość jest dołączona właściwość.  
   
--   Dokonywane jest wiązanie właściwości statycznej.  
+- Dokonywane jest wiązanie właściwości statycznej.  
   
  Do użytku jako docelowego scenorysu, właściwość określona jako `propertyName` musi być <xref:System.Windows.DependencyProperty>.  
   
@@ -118,19 +118,19 @@ or
 ### <a name="escapes-for-property-path-strings"></a>Sekwencje ucieczki dla ciągów ścieżki właściwości  
  W przypadku niektórych obiektów biznesowych, mogą wystąpić przypadek, w którym ciąg ścieżki właściwości wymaga sekwencji ucieczki, aby można było poprawnie przeanalizować. Powinny być rzadkie, trzeba ucieczki, ponieważ wiele z tych znaków ma podobne problemy nazewnictwa interakcji w językach, które zazwyczaj będzie służyć do definiowania obiektem biznesowym.  
   
--   Wewnątrz indeksatorów ([]) znak daszka (^) specjalne następny znak.  
+- Wewnątrz indeksatorów ([]) znak daszka (^) specjalne następny znak.  
   
--   Musisz wyjść (przy użyciu jednostki XML) niektórych znaków, które są specjalne do definicji języka XML. Użyj `&` jako znak ucieczki dla znaku "&". Użyj `>` jako znak ucieczki dla tagu końcowego ">".  
+- Musisz wyjść (przy użyciu jednostki XML) niektórych znaków, które są specjalne do definicji języka XML. Użyj `&` jako znak ucieczki dla znaku "&". Użyj `>` jako znak ucieczki dla tagu końcowego ">".  
   
--   Należy wprowadzić (przy użyciu ukośnik odwrotny `\`) znaki, które są charakterystyczne dla WPF XAML zachowanie analizatora przetwarzania rozszerzenia znaczników.  
+- Należy wprowadzić (przy użyciu ukośnik odwrotny `\`) znaki, które są charakterystyczne dla WPF XAML zachowanie analizatora przetwarzania rozszerzenia znaczników.  
   
-    -   Ukośnik odwrotny (`\`) jest sam znak ucieczki.  
+    - Ukośnik odwrotny (`\`) jest sam znak ucieczki.  
   
-    -   Znak równości (`=`) oddziela nazwy właściwości od wartości właściwości.  
+    - Znak równości (`=`) oddziela nazwy właściwości od wartości właściwości.  
   
-    -   Przecinek (`,`) oddziela właściwości.  
+    - Przecinek (`,`) oddziela właściwości.  
   
-    -   Prawy nawias klamrowy (`}`) na końcu rozszerzeniem znacznika.  
+    - Prawy nawias klamrowy (`}`) na końcu rozszerzeniem znacznika.  
   
 > [!NOTE]
 >  Technicznie rzecz biorąc te sekwencje ucieczki działa w przypadku ścieżki właściwości scenorysu również są zwykle przechodzenie przez modele obiektów dla istniejących obiektów WPF — a anulowania zapewnianego element powinien być niepotrzebne.  

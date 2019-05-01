@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053703"
 ---
 # <a name="3-d-graphics-overview"></a>Przegląd Grafika 3-D
 <a name="introduction"></a> [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Funkcji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwia deweloperom rysowania, przekształcania i animować grafika 3-D w kodzie znaczników i procedur. Deweloperzy mogą łączyć [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] i [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] grafiki, tworzyć zaawansowane kontrolki, ilustrują złożonych danych i poszerz możliwości użytkownika środowisko interfejsu aplikacji. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Obsługa w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie ma na celu zapewnienie platformy programowania gier w pełni funkcjonalne. Ten temat zawiera omówienie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system grafiki.  
@@ -86,11 +86,11 @@ Perspektywy i prostopadły prognozy
   
  Zdefiniowanie powierzchni modelu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa <xref:System.Windows.Media.Media3D.Material> klasy abstrakcyjnej. Konkretnych podklas materiału określić pewne cechy wygląd powierzchni modelu, a także każda właściwość pędzla, do którego można przekazać SolidColorBrush, TileBrush lub VisualBrush.  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial> Określa, że pędzel zostaną zastosowane do modelu tak, jakby modelu zostały włączone rozproszenia. Za pomocą DiffuseMaterial najbardziej przypomina przy użyciu pędzli bezpośrednio na [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] modeli; powierzchni modelu nie odzwierciedlają światła, jak jednak shiny.  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> Określa, że pędzel zostaną zastosowane do modelu tak, jakby modelu zostały włączone rozproszenia. Za pomocą DiffuseMaterial najbardziej przypomina przy użyciu pędzli bezpośrednio na [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] modeli; powierzchni modelu nie odzwierciedlają światła, jak jednak shiny.  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial> Określa, że pędzel zostaną zastosowane do modelu tak, jakby powierzchni modelu zostały twardym lub shiny, umożliwiający Odbijanie światła. Stopień, w którym sugeruje tekstury odbijającą jakości lub "lśnienia", można ustawić, określając wartość dla <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> właściwości.  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> Określa, że pędzel zostaną zastosowane do modelu tak, jakby powierzchni modelu zostały twardym lub shiny, umożliwiający Odbijanie światła. Stopień, w którym sugeruje tekstury odbijającą jakości lub "lśnienia", można ustawić, określając wartość dla <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> właściwości.  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial> Pozwala określić, że tekstury, będzie stosowany, tak, jakby modelu zostały emitowania równy jasny kolor pędzla. To nie oznacza, że model światła; jednak będzie uczestniczyć inaczej w przesłanianie, niż gdyby teksturę za pomocą DiffuseMaterial lub SpecularMaterial.  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> Pozwala określić, że tekstury, będzie stosowany, tak, jakby modelu zostały emitowania równy jasny kolor pędzla. To nie oznacza, że model światła; jednak będzie uczestniczyć inaczej w przesłanianie, niż gdyby teksturę za pomocą DiffuseMaterial lub SpecularMaterial.  
   
  Aby uzyskać lepszą wydajność i powierzchnie, z <xref:System.Windows.Media.Media3D.GeometryModel3D> (te powierzchnie, które są poza widokiem, ponieważ są one w przeciwną stronę modelu z aparatu fotograficznego) są ubitych z sceny.  Aby określić <xref:System.Windows.Media.Media3D.Material> dotyczą odrzucanie tylnych modelu, takich jak płaszczyznę modelu zestawu <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> właściwości.  
   
@@ -111,13 +111,13 @@ Perspektywy i prostopadły prognozy
   
  Następujące kontrolki pochodzi z klasy bazowej <xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>: Udostępnia oświetleniem otoczenia, który świeci wszystkie obiekty w jednolity sposób niezależnie od ich lokalizacji i orientacji.  
+- <xref:System.Windows.Media.Media3D.AmbientLight>: Udostępnia oświetleniem otoczenia, który świeci wszystkie obiekty w jednolity sposób niezależnie od ich lokalizacji i orientacji.  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>: Świeci, takie jak odległości źródła światła.  Masz światła kierunkowego <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> określony jako Vector3D, ale nie określonej lokalizacji.  
+- <xref:System.Windows.Media.Media3D.DirectionalLight>: Świeci, takie jak odległości źródła światła.  Masz światła kierunkowego <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> określony jako Vector3D, ale nie określonej lokalizacji.  
   
--   <xref:System.Windows.Media.Media3D.PointLight>: Świeci, takich jak pobliskich źródła światła. PointLights stanowiska i rzutowania światła z tej pozycji. W zależności od ich pozycji i odległość względem światła podświetlonych obiektów w scenie. <xref:System.Windows.Media.Media3D.PointLightBase> udostępnia <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> właściwość, która określa odległość, po przekroczeniu których modeli będzie nie być podświetlenie światła. PointLight udostępnia również tłumienie właściwości, które określają, jak zmniejsza się intensywność światła odległości. Można określić stałe liniowej i drugiego stopnia interpolations dla tłumienie światła.  
+- <xref:System.Windows.Media.Media3D.PointLight>: Świeci, takich jak pobliskich źródła światła. PointLights stanowiska i rzutowania światła z tej pozycji. W zależności od ich pozycji i odległość względem światła podświetlonych obiektów w scenie. <xref:System.Windows.Media.Media3D.PointLightBase> udostępnia <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> właściwość, która określa odległość, po przekroczeniu których modeli będzie nie być podświetlenie światła. PointLight udostępnia również tłumienie właściwości, które określają, jak zmniejsza się intensywność światła odległości. Można określić stałe liniowej i drugiego stopnia interpolations dla tłumienie światła.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: dziedziczy <xref:System.Windows.Media.Media3D.PointLight>. W dniach oświetlenia, takich jak PointLight i położenie i kierunku. One projektu światła w kształcie stożek ustawionego <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> i <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> określonych w stopniach właściwości.  
+- <xref:System.Windows.Media.Media3D.SpotLight>: dziedziczy <xref:System.Windows.Media.Media3D.PointLight>. W dniach oświetlenia, takich jak PointLight i położenie i kierunku. One projektu światła w kształcie stożek ustawionego <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> i <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> określonych w stopniach właściwości.  
   
  Światła są <xref:System.Windows.Media.Media3D.Model3D> obiektów, dzięki czemu może przekształcić i animować właściwości światła, w tym pozycji, kolorów, kierunku i zakresu.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053525"
 ---
 # <a name="read-only-dependency-properties"></a>Właściwości zależności tylko do odczytu
 W tym temacie opisano właściwości zależności tylko do odczytu, w tym istniejących właściwości zależności tylko do odczytu i scenariuszy i techniki tworzenia właściwości niestandardowej zależności tylko do odczytu.  
@@ -31,11 +31,11 @@ W tym temacie opisano właściwości zależności tylko do odczytu, w tym istnie
   
  Większa część procesu tworzenia właściwości zależności tylko do odczytu jest taki sam, jak opisano w [niestandardowe właściwości zależności](custom-dependency-properties.md) i [implementować właściwość zależności](how-to-implement-a-dependency-property.md) tematów. Istnieją trzy ważne różnice:  
   
--   Podczas rejestrowania Twoja własność, wywołaj <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> metody zamiast normalnych <xref:System.Windows.DependencyProperty.Register%2A> metodę rejestracji właściwości.  
+- Podczas rejestrowania Twoja własność, wywołaj <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> metody zamiast normalnych <xref:System.Windows.DependencyProperty.Register%2A> metodę rejestracji właściwości.  
   
--   Podczas implementowania [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwość "otoki", upewnij się, że otoki zbyt nie zawiera implementacji zestawu, tak, aby w stanie tylko do odczytu dla otoki publiczny ma niezgodności należy udostępnić.  
+- Podczas implementowania [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwość "otoki", upewnij się, że otoki zbyt nie zawiera implementacji zestawu, tak, aby w stanie tylko do odczytu dla otoki publiczny ma niezgodności należy udostępnić.  
   
--   Obiekt zwrócony przez rejestrację tylko do odczytu jest <xref:System.Windows.DependencyPropertyKey> zamiast <xref:System.Windows.DependencyProperty>. Nadal należy przechowywać w tym polu jako członka, ale zazwyczaj można nie zwiększyłoby publicznej składowej typu.  
+- Obiekt zwrócony przez rejestrację tylko do odczytu jest <xref:System.Windows.DependencyPropertyKey> zamiast <xref:System.Windows.DependencyProperty>. Nadal należy przechowywać w tym polu jako członka, ale zazwyczaj można nie zwiększyłoby publicznej składowej typu.  
   
  Niezależnie od prywatnych pola lub wartość ma zapasowy swoje właściwości zależności tylko do odczytu oczywiście można pełni zapisywalny, za pomocą dowolną logikę wymaganą zdecydujesz się. Jednak jest to najprostszy sposób ustaw właściwość początkowo lub jako część logiki czasu wykonywania do korzystania z systemu właściwości [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], zamiast obejście system właściwości i ustawienia bezpośrednio do pola prywatnego pomocniczego. W szczególności, ma podpis <xref:System.Windows.DependencyObject.SetValue%2A> , które akceptuje parametr typu <xref:System.Windows.DependencyPropertyKey>. Jak i gdzie tę wartość ustawiono programowo w ramach logiki aplikacji będzie miało wpływ na sposób możesz ustawić dostęp na <xref:System.Windows.DependencyPropertyKey> tworzone podczas pierwszej rejestracji właściwość zależności. Jeśli obsługiwać tę logikę w klasie można wprowadzić prywatnej lub jeśli chcesz, należy ustawić z innych części zestawu można ustawić jego wewnętrznych. Jedno z podejść jest wywołanie <xref:System.Windows.DependencyObject.SetValue%2A> w ramach programu obsługi zdarzeń klasy istotne zdarzenia, informujący o wystąpienia klasy, który musi zostać zmienione wartości właściwości przechowywanej. Innym rozwiązaniem jest powiązanie właściwości zależności za pomocą sparowane <xref:System.Windows.PropertyChangedCallback> i <xref:System.Windows.CoerceValueCallback> wywołania zwrotne w ramach tych właściwości metadanych podczas rejestracji.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
 ms.openlocfilehash: b39b0a1487c9f250e32b13330f2f70b7e3c7c877
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032927"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>Licznik liczby elementów w sekwencji
 Użyj <xref:System.Linq.Enumerable.Count%2A> operator, aby określić liczbę elementów w sekwencji.  

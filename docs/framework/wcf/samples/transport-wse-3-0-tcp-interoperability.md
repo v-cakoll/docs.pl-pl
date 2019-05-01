@@ -3,11 +3,11 @@ title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032733"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
 Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demonstruje sposób implementacji dwukierunkowego sesji TCP jako niestandardowy transportu Windows Communication Foundation (WCF). Ilustruje też, jak można użyć rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi systemami wdrożone. Poniższe kroki pokazują jak utworzyć niestandardowe transport WCF:  
@@ -43,16 +43,16 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
   
  Podstawa `WseTcpDuplexSessionChannel` przyjęto założenie, że będzie ona otrzymywać połączone gniazdo. Klasa bazowa obsługuje zamykania gniazda. Istnieją trzy miejsca, z gniazda zamknięcia:  
   
--   OnAbort — Zamknij ungracefully gniazda (Zamknij twardych).  
+- OnAbort — Zamknij ungracefully gniazda (Zamknij twardych).  
   
--   Na [Begin] Zamknij — Zamknij gniazda bez problemu zmieniała (Zamknij nietrwałego).  
+- Na [Begin] Zamknij — Zamknij gniazda bez problemu zmieniała (Zamknij nietrwałego).  
   
--   sesji. CloseOutputSession — Zamknij strumień danych wychodzących (Zamknij połowa).  
+- sesji. CloseOutputSession — Zamknij strumień danych wychodzących (Zamknij połowa).  
   
 ## <a name="channel-factory"></a>Fabryka kanałów  
  Następnym krokiem w pisaniu warstwy transportowej TCP jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IChannelFactory> kanałów klienta.  
   
--   `WseTcpChannelFactory` pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Jest fabrykę, która zastępuje `OnCreateChannel` można tworzyć kanały klientów.  
+- `WseTcpChannelFactory` pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Jest fabrykę, która zastępuje `OnCreateChannel` można tworzyć kanały klientów.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` dodaje logikę do podstawy `WseTcpDuplexSessionChannel` nawiązać połączenia z serwerem TCP na `channel.Open` czasu. Nazwa hosta jest najpierw rozpoznać adres IP, jak pokazano w poniższym kodzie.  
+- `ClientWseTcpDuplexSessionChannel` dodaje logikę do podstawy `WseTcpDuplexSessionChannel` nawiązać połączenia z serwerem TCP na `channel.Open` czasu. Nazwa hosta jest najpierw rozpoznać adres IP, jak pokazano w poniższym kodzie.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   Następnie nazwa hosta jest podłączony do pierwszy dostępny adres IP w pętli, jak pokazano w poniższym kodzie.  
+- Następnie nazwa hosta jest podłączony do pierwszy dostępny adres IP w pętli, jak pokazano w poniższym kodzie.  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   W ramach umowy kanału, wszelkie specyficznego dla domeny wyjątki są opakowane, takich jak `SocketException` w <xref:System.ServiceModel.CommunicationException>.  
+- W ramach umowy kanału, wszelkie specyficznego dla domeny wyjątki są opakowane, takich jak `SocketException` w <xref:System.ServiceModel.CommunicationException>.  
   
 ## <a name="channel-listener"></a>Odbiornik kanału  
  Następnym krokiem w pisaniu warstwy transportowej TCP jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IChannelListener> do akceptowania kanałach serwera.  
   
--   `WseTcpChannelListener` pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > i zastąpienia podczas otwierania [Begin] i [Begin] Zamknij, aby kontrolować okres istnienia jego gniazdo. Na zdarzenia gniazdo jest tworzona do nasłuchiwania IP_ANY. Implementacje bardziej zaawansowanych można utworzyć drugi gniazda do nasłuchiwania protokołu IPv6, jak również. Można również zezwolić adresu IP, należy określić w nazwie hosta.  
+- `WseTcpChannelListener` pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > i zastąpienia podczas otwierania [Begin] i [Begin] Zamknij, aby kontrolować okres istnienia jego gniazdo. Na zdarzenia gniazdo jest tworzona do nasłuchiwania IP_ANY. Implementacje bardziej zaawansowanych można utworzyć drugi gniazda do nasłuchiwania protokołu IPv6, jak również. Można również zezwolić adresu IP, należy określić w nazwie hosta.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -179,18 +179,18 @@ Symbols:
   
 1. Po zainstalowaniu `TcpSyncStockService` przykładowy, wykonaj następujące czynności:  
   
-    1.  Otwórz `TcpSyncStockService` w programie Visual Studio (Uwaga zainstalowania przykładowej TcpSyncStockService z usługami WSE 3.0. Nie jest częścią tego przykładu kodu).  
+    1. Otwórz `TcpSyncStockService` w programie Visual Studio (Uwaga zainstalowania przykładowej TcpSyncStockService z usługami WSE 3.0. Nie jest częścią tego przykładu kodu).  
   
-    2.  Ustaw projekt StockService jako projekt startowy.  
+    2. Ustaw projekt StockService jako projekt startowy.  
   
-    3.  Otwórz StockService.cs w projekcie StockService i komentarz dla atrybutu [zasady] na `StockService` klasy. Powoduje to wyłączenie zabezpieczeń z próbki. Gdy WCF może współpracować z usługami WSE 3.0 bezpieczne punkty końcowe, zabezpieczeń jest wyłączona, aby zachować ten przykład koncentruje się na niestandardowej warstwy transportowej TCP.  
+    3. Otwórz StockService.cs w projekcie StockService i komentarz dla atrybutu [zasady] na `StockService` klasy. Powoduje to wyłączenie zabezpieczeń z próbki. Gdy WCF może współpracować z usługami WSE 3.0 bezpieczne punkty końcowe, zabezpieczeń jest wyłączona, aby zachować ten przykład koncentruje się na niestandardowej warstwy transportowej TCP.  
   
-    4.  Naciśnij klawisz F5, aby rozpocząć `TcpSyncStockService`. Usługa jest uruchamiana w nowym oknie konsoli.  
+    4. Naciśnij klawisz F5, aby rozpocząć `TcpSyncStockService`. Usługa jest uruchamiana w nowym oknie konsoli.  
   
-    5.  Otwórz w tym przykładzie transportu TCP w programie Visual Studio.  
+    5. Otwórz w tym przykładzie transportu TCP w programie Visual Studio.  
   
-    6.  Aktualizacja zmiennej "Nazwa hosta" w TestCode.cs do dopasowania uruchomiona Nazwa maszyny `TcpSyncStockService`.  
+    6. Aktualizacja zmiennej "Nazwa hosta" w TestCode.cs do dopasowania uruchomiona Nazwa maszyny `TcpSyncStockService`.  
   
-    7.  Naciśnij klawisz F5, aby uruchomić przykład transportu TCP.  
+    7. Naciśnij klawisz F5, aby uruchomić przykład transportu TCP.  
   
-    8.  Klient testowy transportu TCP rozpoczyna się w nowej konsoli. Klient żąda giełdowych z usługi i następnie wyświetla wyniki w oknie swojej konsoli.  
+    8. Klient testowy transportu TCP rozpoczyna się w nowej konsoli. Klient żąda giełdowych z usługi i następnie wyświetla wyniki w oknie swojej konsoli.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
 ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052225"
 ---
 # <a name="checkbox"></a>CheckBox
 Możesz użyć <xref:System.Windows.Controls.CheckBox> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aplikacji w taki sposób, aby przedstawić opcje, które użytkownik może zaznaczyć lub wyczyścić. Można użyć jednego pola wyboru, lub grupować dwóch lub więcej pól wyboru.  

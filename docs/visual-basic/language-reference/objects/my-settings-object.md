@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050314"
 ---
 # <a name="mysettings-object"></a>My.Settings — Obiekt
 Udostępnia właściwości i metody dostępu do ustawień aplikacji.  
@@ -25,13 +25,13 @@ Udostępnia właściwości i metody dostępu do ustawień aplikacji.
   
  Każde ustawienie ma **nazwę**, **typ**, **zakres** i **wartość**. Ustawienia te określają, jak właściwość dostępu do każdego ustawienia wyświetla się w obiekcie `My.Settings`:  
   
--   **Nazwa** Określa nazwę właściwości.  
+- **Nazwa** Określa nazwę właściwości.  
   
--   **Typ** Określa typ właściwości.  
+- **Typ** Określa typ właściwości.  
   
--   **Zakres** wskazuje, czy właściwość jest tylko do odczytu. Jeśli wartością jest **aplikacja**, właściwość jest tylko do odczytu. Jeśli wartością jest **użytkownik**, ta właściwość jest do odczytu i zapisu.  
+- **Zakres** wskazuje, czy właściwość jest tylko do odczytu. Jeśli wartością jest **aplikacja**, właściwość jest tylko do odczytu. Jeśli wartością jest **użytkownik**, ta właściwość jest do odczytu i zapisu.  
   
--   **Wartość** jest wartością domyślną właściwości.  
+- **Wartość** jest wartością domyślną właściwości.  
   
 ## <a name="methods"></a>Metody  
   

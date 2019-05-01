@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
 ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054448"
 ---
 # <a name="double-data-type-visual-basic"></a>Double — Typ danych (Visual Basic)
 Przechowuje podpisany IEEE 64-bitowych (8-bajtową) podwójnej precyzji liczb zmiennoprzecinkowych, z zakresu wartości od - 1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych i 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnich. Liczby o podwójnej precyzji przechowywać przybliżeniem liczbą rzeczywistą.  
@@ -36,11 +36,11 @@ Przechowuje podpisany IEEE 64-bitowych (8-bajtową) podwójnej precyzji liczb zm
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Dokładność.** Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać, że nie zawsze mają dokładne reprezentacji w pamięci. Może to spowodować nieoczekiwane wyniki z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Dokładność.** Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać, że nie zawsze mają dokładne reprezentacji w pamięci. Może to spowodować nieoczekiwane wyniki z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Końcowe zera.** Typy danych zmiennopozycyjnych nie ma żadnych wewnętrznej reprezentacji końcowe zero znaków. Na przykład ich nie dokonuje rozróżnienia między 4.2000 i 4.2. W związku z tym zerowego znakami nie są wyświetlane po wyświetleniu lub drukowania wartości zmiennoprzecinkowych.  
+- **Końcowe zera.** Typy danych zmiennopozycyjnych nie ma żadnych wewnętrznej reprezentacji końcowe zero znaków. Na przykład ich nie dokonuje rozróżnienia między 4.2000 i 4.2. W związku z tym zerowego znakami nie są wyświetlane po wyświetleniu lub drukowania wartości zmiennoprzecinkowych.  
   
--   **Znaki typu.** Dołączanie znaku typu literał `R` do literału wymusza `Double` typu danych. Na przykład, jeśli jest poprzedzony wartością całkowitą z zakresu `R`, wartość zostanie zmieniona na `Double`.  
+- **Znaki typu.** Dołączanie znaku typu literał `R` do literału wymusza `Double` typu danych. Na przykład, jeśli jest poprzedzony wartością całkowitą z zakresu `R`, wartość zostanie zmieniona na `Double`.  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
@@ -53,7 +53,7 @@ Przechowuje podpisany IEEE 64-bitowych (8-bajtową) podwójnej precyzji liczb zm
     Dim num# = 3  
     ```  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Double?displayProperty=nameWithType> struktury.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Double?displayProperty=nameWithType> struktury.  
   
 ## <a name="see-also"></a>Zobacz także
 

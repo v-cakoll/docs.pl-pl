@@ -13,11 +13,11 @@ ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000431"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Konfigurowanie środowiska profilowania
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59098185"
   
  Po rozpoczęciu procesu zarządzanego (aplikacji lub usługi), ładuje środowisko uruchomieniowe języka wspólnego (CLR). Po zainicjowaniu środowiska CLR, ocenia ono następujące dwie zmienne środowiskowe do określania, czy proces należy się połączyć program profilujący:  
   
--   COR_ENABLE_PROFILING: Środowisko CLR łączy do profilera tylko wtedy, gdy ta zmienna środowiskowa istnieje i jest ustawiona na 1.  
+- COR_ENABLE_PROFILING: Środowisko CLR łączy do profilera tylko wtedy, gdy ta zmienna środowiskowa istnieje i jest ustawiona na 1.  
   
--   COR_PROFILER: Jeśli COR_ENABLE_PROFILING sprawdzać przebiegów, CLR łączy się z programem profilującym, które ma identyfikator CLSID lub ProgID, które muszą być uprzednio przechowywane w rejestrze. Zmienna środowiskowa COR_PROFILER jest zdefiniowana jako ciąg znaków, jak pokazano w poniższych dwóch przykładach.  
+- COR_PROFILER: Jeśli COR_ENABLE_PROFILING sprawdzać przebiegów, CLR łączy się z programem profilującym, które ma identyfikator CLSID lub ProgID, które muszą być uprzednio przechowywane w rejestrze. Zmienna środowiskowa COR_PROFILER jest zdefiniowana jako ciąg znaków, jak pokazano w poniższych dwóch przykładach.  
   
     ```  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
@@ -45,23 +45,23 @@ ms.locfileid: "59098185"
 ## <a name="environment-variable-scope"></a>Zakres zmiennej środowiskowej.  
  Jak ustawić zmienne środowiskowe COR_ENABLE_PROFILING i COR_PROFILER określa zakres wpływu. Można ustawić te zmienne na jeden z następujących sposobów:  
   
--   Jeśli ustawisz zmienne w [icordebug::CreateProcess —](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) wywołanie, będą one dotyczyć tylko aplikacji, które są uruchomione w czasie. (Będą one również dotyczyć innych aplikacji, uruchomione przez tę aplikację, dziedziczy środowisko.)  
+- Jeśli ustawisz zmienne w [icordebug::CreateProcess —](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) wywołanie, będą one dotyczyć tylko aplikacji, które są uruchomione w czasie. (Będą one również dotyczyć innych aplikacji, uruchomione przez tę aplikację, dziedziczy środowisko.)  
   
--   Jeśli ustawisz zmienne w oknie wiersza polecenia, będą one dotyczyć wszystkich aplikacji, które są uruchamiane z tego okna.  
+- Jeśli ustawisz zmienne w oknie wiersza polecenia, będą one dotyczyć wszystkich aplikacji, które są uruchamiane z tego okna.  
   
--   Jeśli ustawisz zmienne na poziomie użytkownika, będą one dotyczyć wszystkich aplikacji, które są uruchamiane przy użyciu Eksploratora plików. Okno wiersza polecenia otwarte po ustawieniu zmiennych będzie miało te właściwości środowiska i dlatego będzie każda aplikacja uruchamiana z tego okna. Aby ustawić zmienne środowiskowe na poziomie użytkownika, kliknij prawym przyciskiem myszy **Mój komputer**, kliknij przycisk **właściwości**, kliknij przycisk **zaawansowane** kliknij pozycję **środowiska Zmienne**i Dodaj zmienne do **zmienne użytkownika** listy.  
+- Jeśli ustawisz zmienne na poziomie użytkownika, będą one dotyczyć wszystkich aplikacji, które są uruchamiane przy użyciu Eksploratora plików. Okno wiersza polecenia otwarte po ustawieniu zmiennych będzie miało te właściwości środowiska i dlatego będzie każda aplikacja uruchamiana z tego okna. Aby ustawić zmienne środowiskowe na poziomie użytkownika, kliknij prawym przyciskiem myszy **Mój komputer**, kliknij przycisk **właściwości**, kliknij przycisk **zaawansowane** kliknij pozycję **środowiska Zmienne**i Dodaj zmienne do **zmienne użytkownika** listy.  
   
--   Jeśli ustawisz zmienne na poziomie komputera, będą one dotyczyć wszystkich aplikacji, które są uruchomione na tym komputerze. Okno wiersza polecenia, które można otworzyć na tym komputerze będzie miało te właściwości środowiska i będzie więc każda aplikacja uruchamiana z tego okna. Oznacza to, że każdy proces zarządzany na tym komputerze rozpoczyna się od swojego programu profilującego. Aby ustawić zmienne środowiskowe na poziomie komputera, kliknij prawym przyciskiem myszy **Mój komputer**, kliknij przycisk **właściwości**, kliknij przycisk **zaawansowane** kliknij pozycję **środowiska Zmienne**, Dodaj zmienne do **zmiennych systemowych** listy, a następnie ponownie uruchom komputer. Po ponownym uruchomieniu komputera, zmienne będą dostępne systemowo.  
+- Jeśli ustawisz zmienne na poziomie komputera, będą one dotyczyć wszystkich aplikacji, które są uruchomione na tym komputerze. Okno wiersza polecenia, które można otworzyć na tym komputerze będzie miało te właściwości środowiska i będzie więc każda aplikacja uruchamiana z tego okna. Oznacza to, że każdy proces zarządzany na tym komputerze rozpoczyna się od swojego programu profilującego. Aby ustawić zmienne środowiskowe na poziomie komputera, kliknij prawym przyciskiem myszy **Mój komputer**, kliknij przycisk **właściwości**, kliknij przycisk **zaawansowane** kliknij pozycję **środowiska Zmienne**, Dodaj zmienne do **zmiennych systemowych** listy, a następnie ponownie uruchom komputer. Po ponownym uruchomieniu komputera, zmienne będą dostępne systemowo.  
   
  Czy profilowanie usługi Windows, należy ponownie uruchomić komputer po ustawieniu zmiennych środowiskowych i zarejestrowaniu programu profilującego DLL. Aby uzyskać więcej informacji dotyczących tych rozważań, zobacz sekcję [profilowanie usługi Windows](#windows_service).  
   
 ## <a name="additional-considerations"></a>Dodatkowe zagadnienia  
   
--   Implementuje klasy programu profilującego [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfejsów. W programie .NET Framework 2.0, program profilujący musi zaimplementować `ICorProfilerCallback2`. Jeśli nie, `ICorProfilerCallback2` nie zostanie załadowany.  
+- Implementuje klasy programu profilującego [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfejsów. W programie .NET Framework 2.0, program profilujący musi zaimplementować `ICorProfilerCallback2`. Jeśli nie, `ICorProfilerCallback2` nie zostanie załadowany.  
   
--   Tylko jeden profiler można profilować proces w tym samym czasie w danym środowisku. Można zarejestrować dwa różne profilowania w różnych środowiskach, ale każdy musi profilować oddzielnych procesach. Program profilujący musi zostać wdrożony jako serwera COM DLL, która jest mapowana do tej samej przestrzeni adresowej jako proces, która jest profilowana w procesie. Oznacza to, że profiler jest uruchamiany w procesie. .NET Framework nie obsługuje żadnego rodzaju serwera COM. Na przykład jeśli program profilujący chce monitorować aplikacje z komputera zdalnego, jego musi implementować agentów kolektora na każdym komputerze. Agenci będą grupowały wyniki i przekazywały je do centralnego komputera zbierania danych.  
+- Tylko jeden profiler można profilować proces w tym samym czasie w danym środowisku. Można zarejestrować dwa różne profilowania w różnych środowiskach, ale każdy musi profilować oddzielnych procesach. Program profilujący musi zostać wdrożony jako serwera COM DLL, która jest mapowana do tej samej przestrzeni adresowej jako proces, która jest profilowana w procesie. Oznacza to, że profiler jest uruchamiany w procesie. .NET Framework nie obsługuje żadnego rodzaju serwera COM. Na przykład jeśli program profilujący chce monitorować aplikacje z komputera zdalnego, jego musi implementować agentów kolektora na każdym komputerze. Agenci będą grupowały wyniki i przekazywały je do centralnego komputera zbierania danych.  
   
--   Ponieważ program profilujący jest obiektem COM, który jest tworzony w procesie, każda profilowana aplikacja posiada własną kopię programu profilującego. Dlatego wystąpienie pojedynczego profilera nie ma obsługi danych z wielu aplikacji. Jednak trzeba będzie dodać logikę do programu profilującego rejestrowania kodu, aby zapobiec pliku dziennika zastępuje z innych aplikacji profilowanych.  
+- Ponieważ program profilujący jest obiektem COM, który jest tworzony w procesie, każda profilowana aplikacja posiada własną kopię programu profilującego. Dlatego wystąpienie pojedynczego profilera nie ma obsługi danych z wielu aplikacji. Jednak trzeba będzie dodać logikę do programu profilującego rejestrowania kodu, aby zapobiec pliku dziennika zastępuje z innych aplikacji profilowanych.  
   
 ## <a name="initializing-the-profiler"></a>Inicjowanie Profiler  
  Gdy oba zmiennej środowiskowej zostały wykryte, CLR tworzy instancję programu profilującego w sposób podobny do COM `CoCreateInstance` funkcji. Program profilujący nie jest załadowany poprzez bezpośrednie wywołanie `CoCreateInstance`. W związku z tym, wywołanie `CoInitialize`, które wymaga utworzenia modelu wątku, jest unikane. Środowisko CLR następnie wywołuje [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) metodę w programie profiler. Podpis tej metody jest następujący.  

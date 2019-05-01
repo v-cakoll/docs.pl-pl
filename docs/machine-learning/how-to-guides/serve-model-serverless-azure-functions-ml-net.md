@@ -3,12 +3,12 @@ title: Wdrażanie modelu strukturze ML.NET do usługi Azure Functions
 description: Obsługiwać model analizy tonacji strukturze ML.NET uczenia maszynowego do przewidywania w Internecie przy użyciu usługi Azure Functions
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74b75af1963ed2ce23e732608c8f7b8ede8522ee
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330639"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808020"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>Instrukcje: Model w strukturze ML.NET użycie w usłudze Azure Functions
 
@@ -21,12 +21,12 @@ Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersj
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) za pomocą obciążenia "Programowanie dla wielu platform .NET Core" i "Programowanie na platformie Azure" zainstalowane. 
+- [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) za pomocą obciążenia "Programowanie dla wielu platform .NET Core" i "Programowanie na platformie Azure" zainstalowane.
 - [Narzędzia usługi Azure Functions](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - Program PowerShell
-- Wstępnie uczonego modelu. 
-    - Użyj [samouczek analizy tonacji w strukturze ML.NET](../tutorials/sentiment-analysis.md) do tworzenia własnego modelu.
-    - Pobierz ten [modelu uczenia maszynowego analizy tonacji wstępnie przeszkolonych](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
+- Wstępnie uczonego modelu.
+  - Użyj [samouczek analizy tonacji w strukturze ML.NET](../tutorials/sentiment-analysis.md) do tworzenia własnego modelu.
+  - Pobierz ten [modelu uczenia maszynowego analizy tonacji wstępnie przeszkolonych](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
 ## <a name="create-azure-functions-project"></a>Tworzenie projektu usługi Azure Functions
 
@@ -81,75 +81,74 @@ Musisz utworzyć niektóre klasy dla danych wejściowych i prognozy. Dodaj nową
 2. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy *DataModels* katalogu, a następnie wybierz **Dodaj > Nowy element**.
 3. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmień **nazwa** pole *SentimentData.cs*. Następnie wybierz **Dodaj** przycisku. *SentimentData.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujące za pomocą instrukcji na górze *SentimentData.cs*:
 
-```csharp
-using Microsoft.ML.Data;
-```
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
 
-Usuń istniejącą definicję klasy i Dodaj następujący kod do pliku SentimentData.cs:
+    Usuń istniejącą definicję klasy i Dodaj następujący kod do pliku SentimentData.cs:
 
-```csharp
-public class SentimentData
-{
-    [LoadColumn(0)]
-    public bool Label { get; set; }
-    [LoadColumn(1)]
-    public string Text { get; set; }
-}
-```
+    ```csharp
+    public class SentimentData
+    {
+        [LoadColumn(0)]
+        public bool Label { get; set; }
+        [LoadColumn(1)]
+        public string Text { get; set; }
+    }
+    ```
 
 4. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy *DataModels* katalogu, a następnie wybierz **Dodaj > Nowy element**.
 5. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmień **nazwa** pole *SentimentPrediction.cs*. Następnie wybierz **Dodaj** przycisku. *SentimentPrediction.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujące za pomocą instrukcji na górze *SentimentPrediction.cs*:
 
-```csharp
-using Microsoft.ML.Data;
-```
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
 
-Usuń istniejącą definicję klasy i Dodaj następujący kod do *SentimentPrediction.cs* pliku:
+    Usuń istniejącą definicję klasy i Dodaj następujący kod do *SentimentPrediction.cs* pliku:
 
-```csharp
-public class SentimentPrediction
-{
-    [ColumnName("PredictedLabel")]
-    public bool Prediction { get; set; }
-}
-```
+    ```csharp
+    public class SentimentPrediction
+    {
+        [ColumnName("PredictedLabel")]
+        public bool Prediction { get; set; }
+    }
+    ```
 
 ### <a name="add-prediction-logic"></a>Dodawanie logiki prognoz
 
 Zastąp istniejącą implementację programu *Uruchom* method in Class metoda *AnalyzeSentiment* klasy z następującym kodem:
 
 ```csharp
-    public static async Task<IActionResult> Run(
-        [HttpTrigger(AuthorizationLevel.Function,"post", Route = null)] HttpRequest req,
-        ILogger log)
+public static async Task<IActionResult> Run(
+    [HttpTrigger(AuthorizationLevel.Function,"post", Route = null)] HttpRequest req,
+    ILogger log)
+{
+    log.LogInformation("C# HTTP trigger function processed a request.");
+
+    //Create Context
+    MLContext mlContext = new MLContext();
+
+    //Load Model
+    using (var fs = File.OpenRead("MLModels/sentiment_model.zip"))
     {
-        log.LogInformation("C# HTTP trigger function processed a request.");
-
-        //Create Context
-        MLContext mlContext = new MLContext();
-
-        //Load Model
-        using (var fs = File.OpenRead("MLModels/sentiment_model.zip"))
-        {
-            model = mlContext.Model.Load(fs);
-        }
-
-        //Parse HTTP Request Body
-        string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-        SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
-
-        //Create Prediction Engine
-        PredictionEngine<SentimentData, SentimentPrediction> predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
-
-        //Make Prediction
-        SentimentPrediction prediction = predictionEngine.Predict(data);
-
-        //Convert prediction to string
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        //Return Prediction
-        return (ActionResult)new OkObjectResult(isToxic);
+        model = mlContext.Model.Load(fs);
     }
+
+    //Parse HTTP Request Body
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
+
+    //Create Prediction Engine
+    PredictionEngine<SentimentData, SentimentPrediction> predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
+
+    //Make Prediction
+    SentimentPrediction prediction = predictionEngine.Predict(data);
+
+    //Convert prediction to string
+    string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+    //Return Prediction
+    return (ActionResult)new OkObjectResult(isToxic);
 }
 ```
 
@@ -158,7 +157,7 @@ Zastąp istniejącą implementację programu *Uruchom* method in Class metoda *A
 Teraz, że wszystko zostało skonfigurowane, nadszedł czas na przetestowanie aplikacji:
 
 1. Uruchamianie aplikacji
-1. Otwórz program PowerShell, a następnie wprowadź kod w wierszu polecenia, gdzie jest to port aplikacja jest uruchomiona. Zazwyczaj port jest 7071. 
+1. Otwórz program PowerShell, a następnie wprowadź kod w wierszu polecenia, gdzie jest to port aplikacja jest uruchomiona. Zazwyczaj port jest 7071.
 
 ```powershell
 Invoke-RestMethod "http://localhost:<PORT>/api/AnalyzeSentiment" -Method Post -Body (@{Text="This is a very rude movie"} | ConvertTo-Json) -ContentType "application/json"

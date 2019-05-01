@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053447"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Umożliwia deweloperom do wyświetlenia, przekształcania i formatowanie obrazów.  
@@ -37,19 +37,19 @@ Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tl
   
  Istnieją dwa sposoby dostępu do [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], zarządzane i niezarządzane składnik. Niezarządzane składnik udostępnia następujące funkcje.  
   
--   Model rozszerzalności dla formatów obraz nowe lub chronione prawem własności.  
+- Model rozszerzalności dla formatów obraz nowe lub chronione prawem własności.  
   
--   Zwiększona wydajność i zabezpieczenia formatów obrazów natywnych w tym [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]i ikony (.ico).  
+- Zwiększona wydajność i zabezpieczenia formatów obrazów natywnych w tym [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]i ikony (.ico).  
   
--   Zachowywanie danych wysokiej głębokości bitów obrazu maksymalnie 8 bitów na kanał (32 bity na piksel).  
+- Zachowywanie danych wysokiej głębokości bitów obrazu maksymalnie 8 bitów na kanał (32 bity na piksel).  
   
--   Skalowanie obrazów bezpieczne, przycinanie i możliwość wymiany.  
+- Skalowanie obrazów bezpieczne, przycinanie i możliwość wymiany.  
   
--   Uproszczone zarządzanie kolorami.  
+- Uproszczone zarządzanie kolorami.  
   
--   Obsługa metadanych w pliku, zastrzeżonych.  
+- Obsługa metadanych w pliku, zastrzeżonych.  
   
--   Niezarządzane infrastruktury, aby zapewnić bezproblemową integrację obrazów z innymi korzysta z zarządzanego składnika [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] funkcje, takie jak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animacji i grafiki. Składnik zarządzany również korzysta z Windows Presentation Foundation (WPF) obrazowania kodera-dekodera rozszerzalności modelu, który umożliwia automatyczne rozpoznawanie nowych formatów obrazów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
+- Niezarządzane infrastruktury, aby zapewnić bezproblemową integrację obrazów z innymi korzysta z zarządzanego składnika [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] funkcje, takie jak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animacji i grafiki. Składnik zarządzany również korzysta z Windows Presentation Foundation (WPF) obrazowania kodera-dekodera rozszerzalności modelu, który umożliwia automatyczne rozpoznawanie nowych formatów obrazów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
   
  W większości zarządzanej [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] znajdują się w <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> przestrzeni nazw, chociaż kilka ważnych typów, takich jak <xref:System.Windows.Media.ImageBrush> i <xref:System.Windows.Media.ImageDrawing> znajdują się w <xref:System.Windows.Media?displayProperty=nameWithType> przestrzeni nazw i <xref:System.Windows.Controls.Image> znajduje się w <xref:System.Windows.Controls?displayProperty=nameWithType> przestrzeni nazw.  
   
@@ -132,13 +132,13 @@ Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tl
 #### <a name="stretching-images"></a>Rozciąganie obrazów  
  <xref:System.Windows.Controls.Image.Stretch%2A> Właściwość określa, jak obraz jest rozciągany tak do wypełnienia jego kontenera. <xref:System.Windows.Controls.Image.Stretch%2A> Właściwość akceptuje następujące wartości, zdefiniowane przez <xref:System.Windows.Media.Stretch> wyliczenia:  
   
--   <xref:System.Windows.Media.Stretch.None>: Obraz, który nie jest rozciągany tak, aby wypełnił obszar danych wyjściowych. Jeśli obraz, który jest większy niż obszar wyjściowy, do obszaru wyjściowego przycinania, co nie mieści się rysowania obrazu.  
+- <xref:System.Windows.Media.Stretch.None>: Obraz, który nie jest rozciągany tak, aby wypełnił obszar danych wyjściowych. Jeśli obraz, który jest większy niż obszar wyjściowy, do obszaru wyjściowego przycinania, co nie mieści się rysowania obrazu.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Obraz, który jest skalowany w celu dopasowania do obszaru wyjściowego. Ponieważ szerokość i wysokość obrazu są skalowane osobno, oryginalnym współczynnik proporcji obrazu mogą nie zostać zachowane. Oznacza to obraz, który może być zniekształcenia Aby całkowicie wypełnić kontenera danych wyjściowych.  
+- <xref:System.Windows.Media.Stretch.Fill>: Obraz, który jest skalowany w celu dopasowania do obszaru wyjściowego. Ponieważ szerokość i wysokość obrazu są skalowane osobno, oryginalnym współczynnik proporcji obrazu mogą nie zostać zachowane. Oznacza to obraz, który może być zniekształcenia Aby całkowicie wypełnić kontenera danych wyjściowych.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Obraz jest skalowana tak, aby całkowicie mieści się w obszarze danych wyjściowych. Współczynnik proporcji obrazu są zachowywane.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Obraz jest skalowana tak, aby całkowicie mieści się w obszarze danych wyjściowych. Współczynnik proporcji obrazu są zachowywane.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Obraz jest skalowana tak, aby całkowicie wypełnia obszar wyjściowy przy jednoczesnym zachowaniu oryginalny współczynnik proporcji obrazu.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Obraz jest skalowana tak, aby całkowicie wypełnia obszar wyjściowy przy jednoczesnym zachowaniu oryginalny współczynnik proporcji obrazu.  
   
  Następujący przykład dotyczy każdego z dostępnych <xref:System.Windows.Media.Stretch> wyliczenia do <xref:System.Windows.Controls.Image>.  
   

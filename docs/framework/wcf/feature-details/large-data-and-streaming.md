@@ -3,11 +3,11 @@ title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038613"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML zwykle jest zakodowane w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), połączone systemy, deweloperów i architektów są zazwyczaj zajmującym się ochroną zużycie o komunikacji sieciowej (lub rozmiar) komunikaty wysyłane między sieć i kodowanie oparte na tekście XML stanowi szczególne wyzwanie wydajny transfer danych binarnych.  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na
   
  Najbardziej typowym scenariuszem, w którym takiej zawartości dużych ilości danych, które Transfer odbywa się czy opłata za transfery danych binarnych obiekty, które:  
   
--   Nie można łatwo podzielić na sekwencję wiadomości.  
+- Nie można łatwo podzielić na sekwencję wiadomości.  
   
--   Musi być dostarczane w sposób terminowy.  
+- Musi być dostarczane w sposób terminowy.  
   
--   Nie są dostępne w całości po zainicjowaniu transferu.  
+- Nie są dostępne w całości po zainicjowaniu transferu.  
   
  W przypadku danych, który nie ma tych warunków ograniczających zazwyczaj lepiej jest wysyłać sekwencje komunikaty w zakresie sesji niż jeden dużych bloków komunikatów. Aby uzyskać więcej informacji zobacz sekcję "Przesyłanie strumieniowe danych" w dalszej części tego tematu.  
   
@@ -112,9 +112,9 @@ class MyData
   
  Korzystając z MTOM, poprzedni kontraktu danych jest serializowana zgodnie z następującymi zasadami:  
   
--   Jeśli `binaryBuffer` nie `null` i indywidualnie zawiera wystarczającej ilości danych, aby uzasadniać obciążenie o eksternalizację MTOM (nagłówków MIME i tak dalej) w porównaniu do formatu Base64 kodowania, dane są zewnętrznych i przenoszone z komunikatem w ramach MIME binarne. Jeśli próg nie zostanie przekroczony, dane są zakodowane jako Base64.  
+- Jeśli `binaryBuffer` nie `null` i indywidualnie zawiera wystarczającej ilości danych, aby uzasadniać obciążenie o eksternalizację MTOM (nagłówków MIME i tak dalej) w porównaniu do formatu Base64 kodowania, dane są zewnętrznych i przenoszone z komunikatem w ramach MIME binarne. Jeśli próg nie zostanie przekroczony, dane są zakodowane jako Base64.  
   
--   Ciąg (i wszystkich innych typów, które nie są binarne) zawsze jest przedstawiana jako ciąg w treści wiadomości, bez względu na rozmiar.  
+- Ciąg (i wszystkich innych typów, które nie są binarne) zawsze jest przedstawiana jako ciąg w treści wiadomości, bez względu na rozmiar.  
   
  Wpływ na kodowanie MTOM jest taka sama niezależnie od użycia kontrakt danych jawne, jak pokazano w powyższym przykładzie użyj listę parametrów w operacji, mają kontraktów danych zagnieżdżonych lub przeniesienia obiektu kontraktu danych wewnątrz kolekcji. Tablice typu byte nadają się zawsze do optymalizacji i są zoptymalizowane pod kątem, jeśli spełnione są progi optymalizacji.  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>Ograniczenia  
  Szereg istotnych funkcji WCF nie można użyć podczas przesyłania strumieniowego jest włączona:  
   
--   Nie można wykonać podpisów cyfrowych dla treści wiadomości, ponieważ wymagają one, obliczanie skrótu za pośrednictwem zawartość cały komunikat. W przypadku przesyłania strumieniowego zawartość nie jest w pełni dostępne, gdy nagłówki wiadomości są zbudowane i wysyłane i dlatego nie można obliczyć podpisu cyfrowego.  
+- Nie można wykonać podpisów cyfrowych dla treści wiadomości, ponieważ wymagają one, obliczanie skrótu za pośrednictwem zawartość cały komunikat. W przypadku przesyłania strumieniowego zawartość nie jest w pełni dostępne, gdy nagłówki wiadomości są zbudowane i wysyłane i dlatego nie można obliczyć podpisu cyfrowego.  
   
--   Szyfrowanie jest zależna od podpisów cyfrowych, aby sprawdzić, czy dane zostały odtworzone poprawnie.  
+- Szyfrowanie jest zależna od podpisów cyfrowych, aby sprawdzić, czy dane zostały odtworzone poprawnie.  
   
--   Niezawodne sesje musi buforu wysłanych komunikatów na kliencie ponowne dostarczenie pobiera utracony komunikat w przeniesieniu i muszą przechowywać wiadomości w usłudze przed przekazaniem ich do implementacji usługi, aby zachować kolejność komunikatów, w przypadku, gdy komunikaty są odbierane poza sekwencji.  
+- Niezawodne sesje musi buforu wysłanych komunikatów na kliencie ponowne dostarczenie pobiera utracony komunikat w przeniesieniu i muszą przechowywać wiadomości w usłudze przed przekazaniem ich do implementacji usługi, aby zachować kolejność komunikatów, w przypadku, gdy komunikaty są odbierane poza sekwencji.  
   
  Ze względu na te ograniczenia funkcjonalności można użyć tylko transportu zabezpieczeń opcje przesyłania strumieniowego i nie można włączyć w sesjach niezawodnych. Przesyłanie strumieniowe jest dostępna tylko w następujących powiązań zdefiniowanych przez system:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  Ponieważ podstawowy transport <xref:System.ServiceModel.NetTcpBinding> i <xref:System.ServiceModel.NetNamedPipeBinding> nieprzerwaną pracę niezawodne dostarczanie i opartego na połączeniach sesji pomocy technicznej, w odróżnieniu od protokołu HTTP, te dwa powiązania tylko minimalny zestaw dotyczy tych warunków ograniczających w praktyce.  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>Włączanie przesyłania strumieniowego  
  Aby umożliwić przesyłanie strumieniowe w następujący sposób:  
   
--   Wysyłanie i umożliwienia akceptowania żądań aplikacji w trybie przesyłania strumieniowego i zaakceptuj i zwracania odpowiedzi w tryb buforowany (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- Wysyłanie i umożliwienia akceptowania żądań aplikacji w trybie przesyłania strumieniowego i zaakceptuj i zwracania odpowiedzi w tryb buforowany (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
--   Wysyłanie i umożliwienia akceptowania żądań aplikacji w tryb buforowany i zaakceptuj i zwracania odpowiedzi w trybie przesyłane strumieniowo (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- Wysyłanie i umożliwienia akceptowania żądań aplikacji w tryb buforowany i zaakceptuj i zwracania odpowiedzi w trybie przesyłane strumieniowo (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
--   Wysyłanie i odbieranie żądań i odpowiedzi w trybie przesyłanej strumieniowo w obu kierunkach. (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- Wysyłanie i odbieranie żądań i odpowiedzi w trybie przesyłanej strumieniowo w obu kierunkach. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  Można wyłączyć, przesyłanie strumieniowe, ustawiając tryb transferu <xref:System.ServiceModel.TransferMode.Buffered>, co jest ustawieniem domyślnym na wszystkie powiązania. Poniższy kod pokazuje, jak ustawić tryb transferu w konfiguracji.  
   

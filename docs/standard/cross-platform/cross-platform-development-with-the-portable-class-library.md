@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055059"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Programowanie dla wielu platform przy użyciu biblioteki klas przenośnych
 
@@ -50,13 +50,13 @@ Jeśli chcesz przeprowadzić ocenę przenośność zestawy przed wprowadzić zmi
 
 Typy i elementy członkowskie, które są dostępne w projektach Portable Class Library zależy od kilku czynników zgodności:
 
--   Muszą one zostać udostępnione w lokalizacjach docelowych, które wybrano.
+- Muszą one zostać udostępnione w lokalizacjach docelowych, które wybrano.
 
--   Musi zachowywać się podobnie w tych lokalizacjach docelowych.
+- Musi zachowywać się podobnie w tych lokalizacjach docelowych.
 
--   Nie mogą być kandydatami do wycofania z użycia.
+- Nie mogą być kandydatami do wycofania z użycia.
 
--   Muszą mieć sens w środowisku przenośnym, zwłaszcza gdy pomocnicze elementy członkowskie nie są przenośne.
+- Muszą mieć sens w środowisku przenośnym, zwłaszcza gdy pomocnicze elementy członkowskie nie są przenośne.
 
 Jeśli członek jest obsługiwany, in Portable Class Library i wybrane elementy docelowe, pojawi się w projekcie w technologii IntelliSense. Należy jednak pamiętać, że interfejs API może być obsługiwana w Portable Class Library, ale czy można użyć interfejsu API zależy od celów wybierz.
 
@@ -78,9 +78,9 @@ Podczas tworzenia aplikacji Windows Universal odwołujący się do zestawu Porta
 
 Podczas wdrażania aplikacji .NET Framework, która odwołuje się do zestawu Portable Class Library, należy określić zależność od prawidłowej wersji programu .NET Framework. Określenie tej zależności gwarantuje, że wymagana wersja będzie instalowana wraz z aplikacją.
 
--   Aby utworzyć zależność z wdrożeniem ClickOnce: W **Eksploratora rozwiązań**, wybierz węzeł projektu dla projektu, który chcesz opublikować. (Jest to projekt, który odwołuje się do projektu Portable Class Library). Na pasku menu wybierz **projektu** > **właściwości**, a następnie wybierz **Publikuj** kartę. Na **Publikuj** wybierz **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework.
+- Aby utworzyć zależność z wdrożeniem ClickOnce: W **Eksploratora rozwiązań**, wybierz węzeł projektu dla projektu, który chcesz opublikować. (Jest to projekt, który odwołuje się do projektu Portable Class Library). Na pasku menu wybierz **projektu** > **właściwości**, a następnie wybierz **Publikuj** kartę. Na **Publikuj** wybierz **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework.
 
--   Aby utworzyć zależność z projektem Instalatora: W **Eksploratora rozwiązań**, wybierz projekt Instalatora. Na pasku menu wybierz **projektu** > **właściwości** > **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework.
+- Aby utworzyć zależność z projektem Instalatora: W **Eksploratora rozwiązań**, wybierz projekt Instalatora. Na pasku menu wybierz **projektu** > **właściwości** > **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework.
 
 Aby uzyskać więcej informacji na temat wdrażania aplikacji .NET Framework, zobacz [przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 

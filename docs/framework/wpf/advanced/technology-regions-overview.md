@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 911ba1474677f26a773ff63e958ba0ceedbefd0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 40ec8d033852bba5cb5ccb0739309cfe988a3ce5
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100980"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808399"
 ---
 # <a name="technology-regions-overview"></a>Przegląd Regiony technologiczne
 Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lub DirectX, należy udostępnić obszary renderowania w typowych okien najwyższego poziomu. W tym temacie opisano problemy, które mogą mieć wpływ na prezentacji i danych wejściowych dla aplikacji współdziałanie WPF.  
@@ -25,23 +25,23 @@ Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lu
 ### <a name="region-examples"></a>Przykłady regionu  
  Na poniższej ilustracji przedstawiono aplikację, która jest napisana [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Każda technologia używa swój własny zestaw oddzielnych, nienakładających pikseli, a nie ma żadnych problemów regionu.  
   
- ![Okno które nie ma problemów powietrznej](./media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
+ ![Przykład aplikacji, która jest napisana Win32, DirectX i WPF.](./media/technology-regions-overview/win32-directx-windows-presentation-foundation-application.png)  
   
  Załóżmy, że ta aplikacja używa pozycji wskaźnika myszy do tworzenia animacji podejmowanych w celu renderowania za pośrednictwem dowolnego z tych trzech regionach. Niezależnie od tego, która technologia była odpowiedzialna za animacji, sam technologia ta naruszyłoby region pozostałe dwa. Poniższa ilustracja przedstawia próby renderowania okrąg WPF nad obszarem Win32.  
   
- ![Diagram międzyoperacyjności](./media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
+ ![Podjęto próbę renderowania okrąg WPF nad obszarem Win32.](./media/technology-regions-overview/render-windows-presentation-foundation-circle-over-win32-region.png)  
   
  Naruszenie innego jest, Jeśli spróbujesz użyć przezroczystości/alfa mieszania między różnych technologii.  Na poniższej ilustracji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] narusza pole [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] i [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] regionów. Ponieważ pikseli, w tym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pola są półprzezroczyste, będą musieli się być własnością zarówno [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], który nie jest możliwe.  Dlatego jest to innego naruszenia i nie może zostać utworzony.  
   
- ![Diagram międzyoperacyjności](./media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
+ ![Diagram przedstawiający okno WPF, naruszenie regionów Win32 i DirectX.](./media/technology-regions-overview/windows-foundation-presentation-box-violate-win32-directx-region.png)  
   
  Poprzednie trzy przykłady używane prostokątnych regionów, ale możliwe są różne kształty.  Na przykład region może mieć dziury. Poniższa ilustracja przedstawia [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] regionie prostokątny dziury to rozmiar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] regionów, w połączeniu.  
   
- ![Diagram międzyoperacyjności](./media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
+ ![Diagram przedstawiający region Win32 z dziura prostokątny.](./media/technology-regions-overview/win32-region-rectangular-hole.png)  
   
  Regiony można też całkowicie nieprostokątne lub dowolnym kształcie describable przez [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] hrgn — (region).  
   
- ![Diagram międzyoperacyjności](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
+ ![Diagram przedstawiający nieprostokątne regionu.](./media/technology-regions-overview/nonrectangular-win32-region.png)  
   
 ## <a name="transparency-and-top-level-windows"></a>Przejrzystość i Windows najwyższego poziomu  
  Menedżer okien w Windows tylko naprawdę przetwarza [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] parametrów hWnd. W związku z tym co [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> jest właściwością HWND. <xref:System.Windows.Window> HWND należy przestrzegać zasad ogólnych dla dowolnego HWND. W tym HWND [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodu można zrobić, niezależnie od ogólnej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] pomocy technicznej. Ale w przypadku interakcji z innych parametrów hWnd na komputerze stacjonarnym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] należy przestrzegać [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] przetwarzaniem i renderowaniem reguły.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje okien przy użyciu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]— HRGNs okien i okien warstwowej dla alpha każdego piksela.  
@@ -54,11 +54,11 @@ Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lu
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] okna warstwowej mają różne możliwości w różnych systemach operacyjnych. Jest to spowodowane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] do renderowania, a windows warstwowej przede wszystkim zostały zaprojektowane dla [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] renderowania nie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] renderowania.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sprzęt obsługuje przyspieszoną warstwie systemu windows na [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] i nowszych. Sprzęt accelerated warstwie systemu windows na [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] potrzebujesz pomocy technicznej firmy [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)], dzięki czemu możliwości będą zależeć od wersji [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] na tym komputerze.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sprzęt obsługuje przyspieszoną warstwie systemu windows na [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] i nowszych. Sprzęt accelerated warstwie systemu windows na [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] potrzebujesz pomocy technicznej firmy [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)], dzięki czemu możliwości będą zależeć od wersji [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] na tym komputerze.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie obsługuje przezroczystość koloru kluczy, ponieważ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie może zagwarantować do renderowania dokładny kolor zażądano, szczególnie w przypadku renderowanie przyspieszane sprzętowo.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie obsługuje przezroczystość koloru kluczy, ponieważ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie może zagwarantować do renderowania dokładny kolor zażądano, szczególnie w przypadku renderowanie przyspieszane sprzętowo.  
   
--   Jeśli aplikacja jest uruchomiona [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], warstwie systemu windows, w górnej części [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] powierzchnie zmieniał kolor po [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] renderuje aplikacji.  (Sekwencji rzeczywiste renderowania jest to, że [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ukrywa okno warstwowej, następnie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] rysuje, a następnie [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] przywraca okna warstwowej).  Non -[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwowej windows również ma tego ograniczenia.  
+- Jeśli aplikacja jest uruchomiona [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], warstwie systemu windows, w górnej części [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] powierzchnie zmieniał kolor po [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] renderuje aplikacji.  (Sekwencji rzeczywiste renderowania jest to, że [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ukrywa okno warstwowej, następnie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] rysuje, a następnie [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] przywraca okna warstwowej).  Non -[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwowej windows również ma tego ograniczenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

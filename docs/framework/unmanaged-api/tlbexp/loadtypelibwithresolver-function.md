@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049339"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver — Funkcja
 Ładuje bibliotekę typów i korzysta z podanym [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) rozpoznać wszystkie biblioteki typu wewnętrznie odwołania.  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] A [wyliczenie REGKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flagi, które kontroluje sposób zrejestrowanej biblioteki typów. Jego możliwe wartości to:  
   
--   `REGKIND_DEFAULT`: Użyj domyślnego zachowania rejestracji.  
+- `REGKIND_DEFAULT`: Użyj domyślnego zachowania rejestracji.  
   
--   `REGKIND_REGISTER`: Zarejestruj tego typu biblioteki.  
+- `REGKIND_REGISTER`: Zarejestruj tego typu biblioteki.  
   
--   `REGKIND_NONE`: Nie rejestruj tej biblioteki typów.  
+- `REGKIND_NONE`: Nie rejestruj tej biblioteki typów.  
   
  `pTlbResolver`  
  [in] Wskaźnik do implementacji [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  

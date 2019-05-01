@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050500"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Korzystanie z przenośnej biblioteki klas w połączeniu z modelem Model-View-View Model
 Można użyć programu .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) implementacji wzorca Model-View-View Model (MVVM) i udostępnianie zestawów na wielu platformach.
@@ -32,27 +32,27 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
 ## <a name="classes-that-support-mvvm"></a>Klasy, które obsługują MVVM
  Jeśli platformą docelową jest program [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight lub Windows Phone 7.5 dla Twojego [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu, następujące klasy są dostępne do implementowania wzorca MVVM:
 
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> Klasa
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> Klasa
 
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> Klasa
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> Klasa
 
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> Klasa
+- <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> Klasa
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> Klasa
+- <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> Klasa
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> Klasa
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> Klasa
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> Klasa
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> Klasa
 
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> Klasa
+- <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> Klasa
 
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> Klasa
+- <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> Klasa
 
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> Klasa
+- <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> Klasa
 
--   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> Klasa
+- <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> Klasa
 
--   Wszystkie klasy w <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> przestrzeni nazw
+- Wszystkie klasy w <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> przestrzeni nazw
 
 ## <a name="implementing-mvvm"></a>Implementowanie MVVM
  Aby zaimplementować MVVM, zwykle tworzysz modelu i model widoku w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu, ponieważ [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu nie może odwoływać się do projektu nieprzenośnych. Model i widoku modelu może być w tym samym projekcie lub w oddzielnych projektów. Użycie oddzielnych projektów, Dodaj odwołanie z projektu modelu widoku projektu modelu.

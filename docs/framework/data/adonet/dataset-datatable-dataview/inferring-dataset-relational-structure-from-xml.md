@@ -3,11 +3,11 @@ title: Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
 ms.openlocfilehash: 9a9dc7d94728ea797a8930d3f77068fdd3ebfb5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034245"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML
 Relacyjnej struktury lub schematu z <xref:System.Data.DataSet> składa się z tabel, kolumn, ograniczeń i relacji. Podczas ładowania <xref:System.Data.DataSet> z pliku XML mogą być wstępnie zdefiniowane schematu lub mogą być tworzone, jawnie lub za pośrednictwem wnioskowania z pliku XML, trwa ładowanie. Aby uzyskać więcej informacji na temat ładowania schematu i zawartość <xref:System.Data.DataSet> z pliku XML, zobacz [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) i [podczas ładowania informacji schematu zestawu danych z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
 ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054903"
 ---
 # <a name="frame"></a>Klatka
 <xref:System.Windows.Controls.Frame> Kontrolka obsługuje nawigowania po zawartości w zawartości. <xref:System.Windows.Controls.Frame> może być obsługiwany przez element główny, takich jak <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, lub jako wyspie w drzewie zawartości, który należy do elementu głównego.  

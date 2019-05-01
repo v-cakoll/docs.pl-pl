@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 ms.openlocfilehash: b0d24027f00c4ab4ba49f4948a9f5488a2eff3fd
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054409"
 ---
 # <a name="integer-data-type-visual-basic"></a>Integer — typ danych (Visual Basic)
 Przechowuje 32-bitowe (4-bajtowe) liczby całkowite ze znakiem z zakresu wartości od -2 147 483,648 do 2 147 483 647.  
@@ -67,13 +67,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
 
--   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, pamiętaj, że `Integer` ma różną szerokość danych (16 bitów) w innych środowiskach. Jeśli przekazujesz 16-bitowy argument do takiego składnika, Zadeklaruj go jako `Short` zamiast `Integer` nowego kodu języka Visual Basic.  
+- **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, pamiętaj, że `Integer` ma różną szerokość danych (16 bitów) w innych środowiskach. Jeśli przekazujesz 16-bitowy argument do takiego składnika, Zadeklaruj go jako `Short` zamiast `Integer` nowego kodu języka Visual Basic.  
   
--   **Rozszerzanie.** `Integer` — Typ danych rozszerza się na `Long`, `Decimal`, `Single`, lub `Double`. Oznacza to, że możesz przekonwertować `Integer` do jednej z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzanie.** `Integer` — Typ danych rozszerza się na `Long`, `Decimal`, `Single`, lub `Double`. Oznacza to, że możesz przekonwertować `Integer` do jednej z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Znaki typu.** Dołączanie znaku typu literał `I` do literału wymusza `Integer` typu danych. Dołączanie znaku typu identyfikator `%` do jakiegokolwiek identyfikatora wymusza `Integer`.  
+- **Znaki typu.** Dołączanie znaku typu literał `I` do literału wymusza `Integer` typu danych. Dołączanie znaku typu identyfikator `%` do jakiegokolwiek identyfikatora wymusza `Integer`.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Int32?displayProperty=nameWithType> struktury.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Int32?displayProperty=nameWithType> struktury.  
   
 ## <a name="range"></a>Zakres
 

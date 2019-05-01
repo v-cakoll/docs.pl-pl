@@ -3,11 +3,11 @@ title: Zgodność funkcji zaufania częściowego
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039068"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Zgodność funkcji zaufania częściowego
 Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są projektowane na podstawie określonego zestawu scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
@@ -15,20 +15,20 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
 ## <a name="minimum-permission-requirements"></a>Wymagania dotyczące minimalnych uprawnień  
  Usługi WCF obsługuje podzbiór funkcji w aplikacjach działających w ramach jednej z następujących standardowych nazwanych zestawów uprawnień:  
   
--   Średnie uprawnienia zaufania  
+- Średnie uprawnienia zaufania  
   
--   Uprawnień strefy Internet  
+- Uprawnień strefy Internet  
   
  Podjęto próbę użycia usługi WCF w częściowo zaufanych aplikacji przy użyciu bardziej restrykcyjne uprawnienia mogą spowodować wystąpienie wyjątków zabezpieczeń w czasie wykonywania.  
   
 ## <a name="contracts"></a>Kontrakty  
  Kontrakty podlegają następującym ograniczeniom, podczas uruchamiania w częściowej relacji zaufania:  
   
--   Klasa usługi, która implementuje `[ServiceContract]` interfejs musi być `public` i `public` konstruktora. Jeśli definiuje `[OperationContract]` metod, muszą to być `public`. Jeśli zamiast tego implementuje `[ServiceContract]` interfejs, te implementacje metod może być jawne lub `private`pod warunkiem, że `[ServiceContract]` interfejs `public`.  
+- Klasa usługi, która implementuje `[ServiceContract]` interfejs musi być `public` i `public` konstruktora. Jeśli definiuje `[OperationContract]` metod, muszą to być `public`. Jeśli zamiast tego implementuje `[ServiceContract]` interfejs, te implementacje metod może być jawne lub `private`pod warunkiem, że `[ServiceContract]` interfejs `public`.  
   
--   Korzystając z `[ServiceKnownType]` atrybut, musi być określona metoda `public`.  
+- Korzystając z `[ServiceKnownType]` atrybut, musi być określona metoda `public`.  
   
--   `[MessageContract]` klasy i składowe mogą być `public`. Jeśli `[MessageContract]` klasa jest zdefiniowana w zestawie aplikacji może być `internal` i `internal` elementów członkowskich.  
+- `[MessageContract]` klasy i składowe mogą być `public`. Jeśli `[MessageContract]` klasa jest zdefiniowana w zestawie aplikacji może być `internal` i `internal` elementów członkowskich.  
   
 ## <a name="system-provided-bindings"></a>Wiązania dostarczane przez system  
  <xref:System.ServiceModel.BasicHttpBinding> i <xref:System.ServiceModel.WebHttpBinding> są w pełni obsługiwane w środowisku częściowej relacji zaufania. <xref:System.ServiceModel.WSHttpBinding> Jest obsługiwana w przypadku tylko tryb zabezpieczeń Transport.  
@@ -44,11 +44,11 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
 ### <a name="encoders"></a>Koderów  
  Następujące kodery są dozwolone:  
   
--   Koder tekstu (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
+- Koder tekstu (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
   
--   Kodera binarnego (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>).  
+- Kodera binarnego (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>).  
   
--   Koder komunikatów w sieci Web (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
+- Koder komunikatów w sieci Web (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
   
  Kodery komunikat transmisji optymalizacji mechanizm (MTOM) nie są obsługiwane.  
   
@@ -61,15 +61,15 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
 ## <a name="serialization"></a>Serializacja  
  Zarówno <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Xml.Serialization.XmlSerializer> są obsługiwane w środowisku częściowej relacji zaufania. Jednak użycie <xref:System.Runtime.Serialization.DataContractSerializer> podlega następujące warunki:  
   
--   Wszystkie możliwe do serializacji `[DataContract]` typy muszą być `public`.  
+- Wszystkie możliwe do serializacji `[DataContract]` typy muszą być `public`.  
   
--   Wszystkie możliwe do serializacji `[DataMember]` pól lub właściwości w `[DataContract]` typu muszą być publiczne i odczytu/zapisu. Serializacja i deserializacja [tylko do odczytu](https://go.microsoft.com/fwlink/?LinkID=98854) pola nie jest obsługiwana podczas uruchamiania usługi WCF w częściowo zaufanych aplikacji.  
+- Wszystkie możliwe do serializacji `[DataMember]` pól lub właściwości w `[DataContract]` typu muszą być publiczne i odczytu/zapisu. Serializacja i deserializacja [tylko do odczytu](https://go.microsoft.com/fwlink/?LinkID=98854) pola nie jest obsługiwana podczas uruchamiania usługi WCF w częściowo zaufanych aplikacji.  
   
--    `[Serializable]` /ISerializable model programowania nie jest obsługiwany w środowisku częściowej relacji zaufania.  
+-  `[Serializable]` /ISerializable model programowania nie jest obsługiwany w środowisku częściowej relacji zaufania.  
   
--   Znane typy, należy określić w kodzie lub konfiguracji poziomie komputera (machine.config). Znane typy nie może być określona w konfiguracji dodatku poziomu aplikacji ze względów bezpieczeństwa.  
+- Znane typy, należy określić w kodzie lub konfiguracji poziomie komputera (machine.config). Znane typy nie może być określona w konfiguracji dodatku poziomu aplikacji ze względów bezpieczeństwa.  
   
--   Typami, które implementują <xref:System.Runtime.Serialization.IObjectReference> zgłoszenie wyjątku w środowisku częściowo zaufany.  
+- Typami, które implementują <xref:System.Runtime.Serialization.IObjectReference> zgłoszenie wyjątku w środowisku częściowo zaufany.  
   
  Zobacz sekcję serializacji w [częściowego zaufania najlepszych rozwiązań](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) Aby uzyskać więcej informacji o zabezpieczeniach, używając <xref:System.Runtime.Serialization.DataContractSerializer> bezpiecznie w aplikacji częściowo zaufanej.  
   
@@ -88,9 +88,9 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
 ## <a name="enabling-common-behaviors-to-run"></a>Włączanie wspólny zbiór wykonywanych czynności do uruchomienia  
  Zachowania usługi lub punkt końcowy nie jest oznaczony atrybutem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu (APTCA), które są dodawane do [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcję pliku konfiguracji nie są uruchamiane, gdy aplikacja zostanie uruchomiona w częściowej relacji zaufania środowisko i żaden wyjątek jest zgłaszany w takiej sytuacji. Aby wymusić uruchomienie wspólny zbiór wykonywanych czynności, należy wykonać jedną z następujących opcji:  
   
--   Oznacz swoje wspólnego zachowania za pomocą <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu, dzięki czemu może działać w przypadku wdrażania jako częściowo zaufanych aplikacji. Należy pamiętać, że wpis rejestru można ustawić na komputerze, aby zapobiec oznaczone APTCA zestawy uruchamianie. .  
+- Oznacz swoje wspólnego zachowania za pomocą <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu, dzięki czemu może działać w przypadku wdrażania jako częściowo zaufanych aplikacji. Należy pamiętać, że wpis rejestru można ustawić na komputerze, aby zapobiec oznaczone APTCA zestawy uruchamianie. .  
   
--   Upewnij się, że jeśli aplikacja jest wdrażana jako w pełni zaufanych aplikacji, użytkownicy nie mogą modyfikować ustawienia zabezpieczeń dostępu kodu do uruchomienia aplikacji w środowisku częściowej relacji zaufania. Jeśli tak jest, więc, zachowanie nie działa i nie jest zgłaszany żaden wyjątek. Aby to zapewnić, zobacz **levelfinal** opcji za pomocą [Caspol.exe (narzędzie zasad zabezpieczeń dostępu kodu)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
+- Upewnij się, że jeśli aplikacja jest wdrażana jako w pełni zaufanych aplikacji, użytkownicy nie mogą modyfikować ustawienia zabezpieczeń dostępu kodu do uruchomienia aplikacji w środowisku częściowej relacji zaufania. Jeśli tak jest, więc, zachowanie nie działa i nie jest zgłaszany żaden wyjątek. Aby to zapewnić, zobacz **levelfinal** opcji za pomocą [Caspol.exe (narzędzie zasad zabezpieczeń dostępu kodu)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
  Na przykład wspólnego zachowania zobacz [jak: Blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
@@ -115,25 +115,25 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
   
  Źródła śledzenia obsługiwane są:  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, i <xref:System.IdentityModel.Tokens>.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, i <xref:System.IdentityModel.Tokens>.  
   
  Nie są obsługiwane następujące źródła śledzenia:  
   
--   CardSpace  
+- CardSpace  
   
--   <xref:System.IO.Log>  
+- <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  Następujące elementy członkowskie z <xref:System.Diagnostics.TraceOptions> wyliczenia nie należy określać:  
   
--   <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
   
  Jeśli śledzenie w środowisku częściowej relacji zaufania, upewnij się, że aplikacja ma wystarczające uprawnienia do przechowywania danych wyjściowych odbiornik śledzenia. Na przykład w przypadku korzystania z <xref:System.Diagnostics.TextWriterTraceListener> można zapisywać dane wyjściowe śledzenia do pliku tekstowego, sprawdź, czy aplikacja ma niezbędne FileIOPermission, które trzeba zapisać do pliku śledzenia.  
   
@@ -148,11 +148,11 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
   
  Następujące dodatkowe funkcje nie są włączone, podczas uruchamiania indigo2 w środowisku częściowej relacji zaufania:  
   
--   Instrumentacja zarządzania Windows (WMI)  
+- Instrumentacja zarządzania Windows (WMI)  
   
--   Rejestrowanie zdarzeń jest tylko częściowo włączona (zobacz Omówienie w **diagnostyki** sekcji).  
+- Rejestrowanie zdarzeń jest tylko częściowo włączona (zobacz Omówienie w **diagnostyki** sekcji).  
   
--   Liczniki wydajności  
+- Liczniki wydajności  
   
  Korzystanie z funkcji WCF, które nie są obsługiwane w środowisku częściowej relacji zaufania może spowodować wyjątków w czasie wykonywania.  
   

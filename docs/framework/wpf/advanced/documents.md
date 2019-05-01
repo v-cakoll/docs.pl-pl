@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
 ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052433"
 ---
 # <a name="documents"></a>Dokumenty
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawiera wszechstronny zestaw składników, które umożliwiają deweloperom tworzenie aplikacji za pomocą dokumentów zaawansowane funkcje i ulepszone czytanie. Oprócz rozszerzone możliwości i jakość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje również uproszczone zarządzanie infrastrukturą usługi pakowania dokumentu, zabezpieczeń i magazynu.  

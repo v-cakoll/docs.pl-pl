@@ -2,12 +2,12 @@
 title: Tworzenie usługi WCF z włączoną obsługą technologii AJAX i klienta ASP.NET w programie Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024613"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807880"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Instrukcje: Tworzenie usługi WCF z włączoną obsługą technologii AJAX i klienta ASP.NET korzystającego z tej usługi
 
@@ -77,15 +77,15 @@ W tym temacie pokazano, jak używać programu Visual Studio do tworzenia usługi
 
 4. Ponownie **źródła** wyświetlanie, Dodaj następujący kod między  **\<ScriptManager >** tagów, aby określić ścieżkę do usługi WCF:
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. Dodaj kod dla funkcji języka Javascript `Calculate()`. Umieść następujący kod w **head** części formularza sieci web:
+5. Dodaj kod dla funkcji języka Javascript `Calculate()`. Umieść następujący kod w **head** części formularza sieci web:
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {

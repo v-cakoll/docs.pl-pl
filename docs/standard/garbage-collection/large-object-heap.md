@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: d9fef3bfb070e5e87dd0f7f78e76af6e6e051967
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677183"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809631"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Stos dużych obiektów w systemach Windows
 
@@ -154,9 +154,9 @@ Te liczniki wydajności są zwykle dobry, pierwszym krokiem w badanie problemów
 
    Wyświetla bieżący rozmiar w bajtach, włącznie z wolnego miejsca LOH. Ten licznik jest aktualizowany na końcu wyrzucania elementów bezużytecznych, nie na każdej alokacji.
 
-Typowym sposobem Obejrzyj liczników wydajności to za pomocą Monitora wydajności (perfmon.exe). Użyj "Dodawanie liczników", aby dodać licznik interesujące dla procesów, które Cię interesują. Dane licznika wydajności można zapisać do pliku dziennika, jak pokazano na rysunku 4.
+Typowym sposobem Obejrzyj liczników wydajności to za pomocą Monitora wydajności (perfmon.exe). Użyj "Dodawanie liczników", aby dodać licznik interesujące dla procesów, które Cię interesują. Dane licznika wydajności można zapisać do pliku dziennika, jak pokazano na rysunku 4:
 
-![Rysunek 4: Dodawanie liczników wydajności.](media/loh/perfcounter.png)\
+![Screenshow, który pokazuje dodawania liczników wydajności.](media/large-object-heap/add-performance-counter.png)
 Rysunek 4: LOH po GC generacji 2
 
 Liczniki wydajności można również można wykonywać zapytania programowo. Wiele osób ich zbierania dzięki temu w ramach rutynowego procesu testowania. Gdy są dodatkowe liczniki wartościami, które są niezwykłe, używają innych oznacza, że aby uzyskać bardziej szczegółowe dane ułatwiające wykonywanie analiz.
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Wynik jest podobny do poniższego:
 
-![Rysunek 5: Badanie zdarzeń ETW za pomocą narzędzia PerfView](media/loh/perfview.png) rysunek 5: Zdarzenia ETW są wyświetlane, za pomocą narzędzia PerfView
+![Zrzut ekranu pokazujący zdarzenia ETW w PerfView.](media/large-object-heap/event-tracing-windows-perfview.png)
+Rysunek 5: Zdarzenia ETW są wyświetlane, za pomocą narzędzia PerfView
 
 Jak widać, wszystkie wykazów globalnych są operacje odzyskiwania pamięci generacji 2, a ich wszystkich wygenerowaniu przez AllocLarge, oznacza to, czy alokowanie dużego obiektu wyzwolenie tej GC. Wiemy, że te przydziały są tymczasowe ponieważ **% LOH przeżywalność** kolumny mówi 1%.
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 zbiera zdarzenia AllocationTick uruchamiane mniej więcej co 100 tysięcy warte alokacji. Innymi słowy zdarzenie jest generowane każdorazowo, gdy jest przydzielany dużego obiektu. Można następnie przyjrzymy się jeden z widoków alokacji sterty GC, pokazujące stosy wywołań, który przydzielony dużych obiektów:
 
-![Rysunek 6: Widok alokacji sterty GC](media/loh/perfview2.png)\
+![Zrzut ekranu przedstawiający widok sterty modułu odśmiecania pamięci.](media/large-object-heap/garbage-collector-heap.png)
 Rysunek 6: Widok alokacji sterty GC
 
 Jak widać, jest to bardzo prosty test, który po prostu przydziela dużych obiektów z jego `Main` metody.

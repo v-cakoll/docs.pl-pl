@@ -3,11 +3,11 @@ title: Federacja — przykład
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051915"
 ---
 # <a name="federation-sample"></a>Federacja — przykład
 Niniejszy przykład pokazuje zabezpieczeń.  
@@ -17,13 +17,13 @@ Niniejszy przykład pokazuje zabezpieczeń.
   
  Scenariusz składa się z 4 elementów:  
   
--   Usługa księgarni  
+- Usługa księgarni  
   
--   Księgarni usługi STS  
+- Księgarni usługi STS  
   
--   HomeRealm STS  
+- HomeRealm STS  
   
--   Księgarni klienta  
+- Księgarni klienta  
   
  Usługa księgarni obsługuje dwie operacje `BrowseBooks` i `BuyBook`. Zezwala na dostęp anonimowy do `BrowseBooks` operacja, ale wymaga dostępu uwierzytelnionego do dostępu `BuyBooks` operacji. Uwierzytelnianie mają postać token wystawiony przez usługę STS księgarni. Wskazuje plik konfiguracyjny usługi księgarni klientów przy użyciu usługi STS księgarni `wsFederationHttpBinding`.  
   

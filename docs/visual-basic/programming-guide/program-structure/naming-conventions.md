@@ -11,34 +11,34 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
 ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050379"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic — Konwencje nazewnictwa
 Nazwa elementu w aplikacji Visual Basic, musi być pierwszym znakiem tej nazwy, litery alfabetu lub znaku podkreślenia. Należy jednak pamiętać, że nazwy rozpoczynające się od znaku podkreślenia nie są zgodne z [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Poniższe sugestie dotyczą nazewnictwa.  
   
--   Rozpoczęcie każdego wyrazu oddzielne nazwę wielką literą, podobnie jak w `FindLastRecord` i `RedrawMyForm`.  
+- Rozpoczęcie każdego wyrazu oddzielne nazwę wielką literą, podobnie jak w `FindLastRecord` i `RedrawMyForm`.  
   
--   Rozpocznij nazwy funkcji i metody z zlecenie, podobnie jak w `InitNameArray` lub `CloseDialog`.  
+- Rozpocznij nazwy funkcji i metody z zlecenie, podobnie jak w `InitNameArray` lub `CloseDialog`.  
   
--   Rozpocznij klasy, struktury, moduł i nazwy właściwości zawierające rzeczownik, podobnie jak w `EmployeeName` lub `CarAccessory`.  
+- Rozpocznij klasy, struktury, moduł i nazwy właściwości zawierające rzeczownik, podobnie jak w `EmployeeName` lub `CarAccessory`.  
   
--   Rozpocznij interfejsu nazw z prefiksem "I", następuje rzeczownik lub frazy rzeczownik, takie jak `IComponent`, lub przymiotnikiem, opisujący zachowanie interfejsu, takie jak `IPersistable`. Nie używać znaku podkreślenia i skróty oszczędnie, ponieważ skróty może spowodować błąd.  
+- Rozpocznij interfejsu nazw z prefiksem "I", następuje rzeczownik lub frazy rzeczownik, takie jak `IComponent`, lub przymiotnikiem, opisujący zachowanie interfejsu, takie jak `IPersistable`. Nie używać znaku podkreślenia i skróty oszczędnie, ponieważ skróty może spowodować błąd.  
   
--   Nazwy programów obsługi zdarzeń zaczynać się od opisujące typ zdarzenia następuje rzeczownik "`EventHandler`"sufiksu, jak w"`MouseEventHandler`".  
+- Nazwy programów obsługi zdarzeń zaczynać się od opisujące typ zdarzenia następuje rzeczownik "`EventHandler`"sufiksu, jak w"`MouseEventHandler`".  
   
--   W polu nazwy klas argument zdarzeń zawierają "`EventArgs`" sufiks.  
+- W polu nazwy klas argument zdarzeń zawierają "`EventArgs`" sufiks.  
   
--   Jeśli zdarzenie utworzono według koncepcji "before" lub "after", użyj przyrostka, w chwili obecnej czasu teraźniejszego lub przeszłego, podobnie jak w "`ControlAdd`"or"`ControlAdded`".  
+- Jeśli zdarzenie utworzono według koncepcji "before" lub "after", użyj przyrostka, w chwili obecnej czasu teraźniejszego lub przeszłego, podobnie jak w "`ControlAdd`"or"`ControlAdded`".  
   
--   Długa lub często używanych terminów Użyj skrótów zapewnienie długości nazwy rozsądne, na przykład, "HTML", a nie "Formacie HTML". Ogólnie rzecz biorąc nazwy zmiennych, które są większe niż 32 znaki są trudne do odczytania na monitorze równa niskiej rozdzielczości. Ponadto upewnij się, że Twoje skróty są spójne w całej aplikacji. Losowo przełączania w projekcie między "HTML" i "Formacie HTML" można wprowadzać w błąd.  
+- Długa lub często używanych terminów Użyj skrótów zapewnienie długości nazwy rozsądne, na przykład, "HTML", a nie "Formacie HTML". Ogólnie rzecz biorąc nazwy zmiennych, które są większe niż 32 znaki są trudne do odczytania na monitorze równa niskiej rozdzielczości. Ponadto upewnij się, że Twoje skróty są spójne w całej aplikacji. Losowo przełączania w projekcie między "HTML" i "Formacie HTML" można wprowadzać w błąd.  
   
--   Unikaj używania nazw w zakresie wewnętrznym, które są takie same jak nazwy w zewnętrznym zakresie. Jeśli problem wchodzisz, mogą wystąpić błędy. Jeśli występuje konflikt między zmienną i słowo kluczowe o takiej samej nazwie, należy określić słowo kluczowe, poprzedzając je za pomocą biblioteki odpowiedniego typu. Na przykład, jeśli masz zmienną o nazwie `Date`, można użyć wewnętrznego `Date` funkcji tylko przez wywołanie metody <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
+- Unikaj używania nazw w zakresie wewnętrznym, które są takie same jak nazwy w zewnętrznym zakresie. Jeśli problem wchodzisz, mogą wystąpić błędy. Jeśli występuje konflikt między zmienną i słowo kluczowe o takiej samej nazwie, należy określić słowo kluczowe, poprzedzając je za pomocą biblioteki odpowiedniego typu. Na przykład, jeśli masz zmienną o nazwie `Date`, można użyć wewnętrznego `Date` funkcji tylko przez wywołanie metody <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

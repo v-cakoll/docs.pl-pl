@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
 ms.openlocfilehash: 85573099ec0a3f8a23c17bdf384c4c105f9157df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055137"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-if-statement"></a>Instrukcja nie może kończyć bloku poza instrukcją „If” wiersza
 Jeden wiersz `If` instrukcja zawiera kilka instrukcji oddzielone dwukropkiem (:), z których jedna jest `End` instrukcji w bloku kontroli, poza jednym wierszem `If`. Jeden wiersz `If` nie należy używać instrukcji `End If` instrukcji.  
@@ -21,7 +21,7 @@ Jeden wiersz `If` instrukcja zawiera kilka instrukcji oddzielone dwukropkiem (:)
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Przenieś jeden wiersz `If` instrukcji poza blok sterowania, który zawiera `End If` instrukcji.  
+- Przenieś jeden wiersz `If` instrukcji poza blok sterowania, który zawiera `End If` instrukcji.  
   
 ## <a name="see-also"></a>Zobacz także
 

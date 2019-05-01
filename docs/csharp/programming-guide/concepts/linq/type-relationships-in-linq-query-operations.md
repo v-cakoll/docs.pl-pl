@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307655"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63774007"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relacje typu w operacjach kwerend LINQ (C#)
 Aby efektywnie pisać zapytania, należy zrozumieć jak powiązane są ze sobą typy zmiennych w kompletnej operacji zapytania. Jeśli zrozumiesz te relacje będzie łatwiej pojmować [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] i przykłady kodu w dokumentacji. Ponadto zrozumiesz, co dzieje się, gdy zmienne są wpisywane niejawnie przy użyciu `var`.  
@@ -29,7 +29,7 @@ Aby efektywnie pisać zapytania, należy zrozumieć jak powiązane są ze sobą 
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Kwerendy, które nie przetwarzają dane źródłowe  
  Poniższa ilustracja przedstawia [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operację, która nie wykonuje transformacji danych zapytania. Źródło zawiera sekwencję ciągów i wynik zapytania jest również sekwencją ciągów.  
   
- ![Typy relacji danych, w zapytaniu programu LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![Diagram przedstawiający Relacja typów danych w zapytaniu programu LINQ.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. Argument typu źródła danych określa typ zmiennej zakresu.  
   
@@ -40,7 +40,7 @@ Aby efektywnie pisać zapytania, należy zrozumieć jak powiązane są ze sobą 
 ## <a name="queries-that-transform-the-source-data"></a>Zapytania, które przetwarzają dane źródłowe  
  Poniższa ilustracja przedstawia [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] operację, która wykonuje prostą transformację danych zapytania. Zapytanie pobiera sekwencję `Customer` obiektów jako dane wejściowe i wybiera jedynie `Name` właściwości w wyniku. Ponieważ `Name` jest ciągiem, tworzy zapytanie sekwencji ciągów jako dane wyjściowe.  
   
- ![Zapytanie, które przekształca typu danych](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![Diagram przedstawiający kwerendę, która przekształca typu danych.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. Argument typu źródła danych określa typ zmiennej zakresu.  
   
@@ -50,7 +50,7 @@ Aby efektywnie pisać zapytania, należy zrozumieć jak powiązane są ze sobą 
   
  Na poniższej ilustracji przedstawiono nieco bardziej skomplikowaną transformację. `select` Instrukcja zwraca typ anonimowy, który przechwytuje tylko dwa elementy członkowskie oryginalnego `Customer` obiektu.  
   
- ![Zapytanie, które przekształca typu danych](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![Diagram przedstawiający bardziej złożonego zapytania, który przekształca typu danych.](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. Argument typu źródła danych jest zawsze typem zmiennej zakresu w zapytaniu.  
   
@@ -61,7 +61,7 @@ Aby efektywnie pisać zapytania, należy zrozumieć jak powiązane są ze sobą 
 ## <a name="letting-the-compiler-infer-type-information"></a>Umożliwienie kompilatorowi wywnioskowania informacji o typie  
  Chociaż należy zrozumieć relacje typów w operacji zapytania, masz opcję, aby pozwolić kompilatorowi wykonanie całąj pracy za Ciebie. Słowo kluczowe [var](../../../../csharp/language-reference/keywords/var.md) mogą być używane dla dowolnej zmiennej lokalnej w operacji zapytania. Na poniższej ilustracji jest podobny do przykładu numer 2, który została omówiony wcześniej. Jednak kompilator dostarcza silnego typu dla każdej zmiennej w operacji zapytania.  
   
- ![Typ przepływu niejawnego wpisywania](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![Diagram pokazujący przepływ typu przy użyciu niejawnego wpisywania.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Aby uzyskać więcej informacji na temat `var`, zobacz [niejawnie wpisane zmienne lokalne](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

@@ -3,22 +3,22 @@ title: Elementy DataSet, DataTable i DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
 ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034297"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Elementy DataSet, DataTable i DataView
 ADO.NET <xref:System.Data.DataSet> jest reprezentacją rezydentnego zapewnia spójny model programowania relacyjnych niezależnie od źródła danych zawiera dane. A <xref:System.Data.DataSet> przedstawia kompletny zestaw danych w tym tabel, które zawierają, kolejność i Zachowaj dane, jak również relacje między tabelami.  
   
  Istnieją różne sposoby pracy z <xref:System.Data.DataSet>, które można stosować niezależnie lub razem. Można:  
   
--   Programowe tworzenie <xref:System.Data.DataTable>, <xref:System.Data.DataRelation>, i <xref:System.Data.Constraint> w ramach <xref:System.Data.DataSet> i wypełnianie tabel danymi.  
+- Programowe tworzenie <xref:System.Data.DataTable>, <xref:System.Data.DataRelation>, i <xref:System.Data.Constraint> w ramach <xref:System.Data.DataSet> i wypełnianie tabel danymi.  
   
--   Wypełnij <xref:System.Data.DataSet> z tabelami danych z istniejącego relacyjne źródła danych przy użyciu `DataAdapter`.  
+- Wypełnij <xref:System.Data.DataSet> z tabelami danych z istniejącego relacyjne źródła danych przy użyciu `DataAdapter`.  
   
--   Ładowanie i zachować <xref:System.Data.DataSet> zawartości za pomocą języka XML. Aby uzyskać więcej informacji, zobacz [za pomocą XML w zestawie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+- Ładowanie i zachować <xref:System.Data.DataSet> zawartości za pomocą języka XML. Aby uzyskać więcej informacji, zobacz [za pomocą XML w zestawie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
  Silnie typizowane <xref:System.Data.DataSet> również mogą być transportowane przy użyciu usługi sieci Web XML. Projekt <xref:System.Data.DataSet> to idealny do transportowania danych przy użyciu usług XML sieci Web. Aby uzyskać omówienie usług XML sieci Web, zobacz [Omówienie usług sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Na przykład używania <xref:System.Data.DataSet> z usługi sieci Web XML, zobacz [korzystanie z zestawu danych z usługi sieci Web XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md).  
   

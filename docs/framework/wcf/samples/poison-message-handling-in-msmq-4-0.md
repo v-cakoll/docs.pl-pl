@@ -3,11 +3,11 @@ title: Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052095"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 Niniejszy przykład pokazuje sposób wykonywania skażonych komunikatów w usłudze. Ten przykład jest oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W tym przykładzie użyto `netMsmqBinding`. Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.
@@ -27,13 +27,13 @@ Niniejszy przykład pokazuje sposób wykonywania skażonych komunikatów w usłu
 
  Gdy komunikat jest oznaczony jako intoksykowane, wiadomość została omówiona zgodnie z ustawieniami <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> wyliczenia. Zgodnie z możliwe wartości:
 
--   Odporność (ustawienie domyślne): Aby błędów odbiornik, a także hosta usługi.
+- Odporność (ustawienie domyślne): Aby błędów odbiornik, a także hosta usługi.
 
--   Upuść: Można usunąć wiadomości.
+- Upuść: Można usunąć wiadomości.
 
--   Przenieś: Przenoszenie wiadomości do podrzędnej kolejki Zarządzanie skażonymi komunikatami. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Przenieś: Przenoszenie wiadomości do podrzędnej kolejki Zarządzanie skażonymi komunikatami. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Odrzuć: Aby odrzucić wiadomości, wysyła komunikat do kolejki utraconych wiadomości przez nadawcę. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Odrzuć: Aby odrzucić wiadomości, wysyła komunikat do kolejki utraconych wiadomości przez nadawcę. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  Przykład demonstruje użycie `Move` dyspozycja dla Zarządzanie skażonymi komunikatami. `Move` powoduje, że komunikat, aby przejść do skażone kolejki podrzędnej.
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
 
-    1.  Otwórz Menedżera serwera w programie Visual Studio 2012.
+    1. Otwórz Menedżera serwera w programie Visual Studio 2012.
 
-    2.  Rozwiń **funkcji** kartę.
+    2. Rozwiń **funkcji** kartę.
 
-    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
+    3. Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
 
-    4.  Sprawdź **transakcyjna** pole.
+    4. Sprawdź **transakcyjna** pole.
 
-    5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
+    5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
 
 3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

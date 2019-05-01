@@ -8,51 +8,51 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
 ms.openlocfilehash: 25b9ff1e3a97acd69b6a885788dbc83ce19e71f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038327"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Instrukcje: Tworzenie kopii pliku w innym katalogu w Visual Basic
 `My.Computer.FileSystem.CopyFile` Metoda umożliwia skopiowanie plików. Parametry umożliwiają Nadpisz istniejące pliki, Zmień nazwę pliku, wyświetlić postęp operacji i umożliwia użytkownikowi anulować operację.  
   
 ### <a name="to-copy-a-text-file-to-another-folder"></a>Aby skopiować plik tekstowy do innego folderu  
   
--   Użyj `CopyFile` metodę, aby skopiować plik określenie pliku źródłowego i katalog docelowy. `overwrite` Parametr umożliwia określenie, czy zastąpić istniejące pliki. Poniższe przykłady kodu przedstawiają sposoby użycia `CopyFile`.  
+- Użyj `CopyFile` metodę, aby skopiować plik określenie pliku źródłowego i katalog docelowy. `overwrite` Parametr umożliwia określenie, czy zastąpić istniejące pliki. Poniższe przykłady kodu przedstawiają sposoby użycia `CopyFile`.  
   
      [!code-vb[VbFileIOMisc#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#24)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować zgłoszenie wyjątku:  
   
--   Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
   
--   System nie może pobrać ścieżki bezwzględnej (<xref:System.ArgumentException>).  
+- System nie może pobrać ścieżki bezwzględnej (<xref:System.ArgumentException>).  
   
--   Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Plik źródłowy jest nieprawidłowy lub nie istnieje (<xref:System.IO.FileNotFoundException>).  
+- Plik źródłowy jest nieprawidłowy lub nie istnieje (<xref:System.IO.FileNotFoundException>).  
   
--   Połączone ścieżka wskazuje na istniejący katalog (<xref:System.IO.IOException>).  
+- Połączone ścieżka wskazuje na istniejący katalog (<xref:System.IO.IOException>).  
   
--   Plik docelowy istnieje i `overwrite` ustawiono `False` (<xref:System.IO.IOException>).  
+- Plik docelowy istnieje i `overwrite` ustawiono `False` (<xref:System.IO.IOException>).  
   
--   Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.IO.IOException>).  
+- Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.IO.IOException>).  
   
--   Plik w folderze docelowym o takiej samej nazwie jest w użyciu (<xref:System.IO.IOException>).  
+- Plik w folderze docelowym o takiej samej nazwie jest w użyciu (<xref:System.IO.IOException>).  
   
--   Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
   
--   `ShowUI` ustawiono `True`, `onUserCancel` ustawiono `ThrowException`, a użytkownik anulował operację (<xref:System.OperationCanceledException>).  
+- `ShowUI` ustawiono `True`, `onUserCancel` ustawiono `ThrowException`, a użytkownik anulował operację (<xref:System.OperationCanceledException>).  
   
--   `ShowUI` ustawiono `True`, `onUserCancel` ustawiono `ThrowException`, i nieokreślony błąd We/Wy (<xref:System.OperationCanceledException>).  
+- `ShowUI` ustawiono `True`, `onUserCancel` ustawiono `ThrowException`, i nieokreślony błąd We/Wy (<xref:System.OperationCanceledException>).  
   
--   Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
--   Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).  
   
--   Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

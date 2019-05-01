@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 ms.openlocfilehash: a348fb7989a83ec9ee7903bd38896bedcf86ce3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050743"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów
 W tym temacie omówiono, za pomocą certyfikatów X.509 do uwierzytelniania klienta i serwera, korzystając z zabezpieczeń transportu. Aby uzyskać więcej informacji na temat X.509 certyfikatów Zobacz [klucz publiczny certyfikatu X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Certyfikaty muszą być wystawiane przez urząd certyfikacji, które są często wystawcy certyfikatów innych firm. W domenie systemu Windows Server Active Directory Certificate Services może służyć do wystawiania certyfikatów na komputerach klienckich w domenie. Aby uzyskać więcej informacji, zobacz [usług certyfikatów systemu Windows 2008 R2](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). W tym scenariuszu usługa jest hostowana w Internet Information Services (IIS), który jest skonfigurowany z Secure Sockets Layer (SSL). Usługa jest skonfigurowana za pomocą certyfikatu SSL (X.509) umożliwia klientom zweryfikować tożsamość serwera. Klient jest również skonfigurowany przy użyciu certyfikatu X.509, który umożliwia usłudze do zweryfikowania tożsamości klienta. Certyfikat serwera musi być zaufany przez klienta, a certyfikat klienta musi być zaufany przez serwer. Rzeczywiste mechanika jak usługa i klient sprawdza jego tożsamość wykracza poza zakres tego tematu. Aby uzyskać więcej informacji, zobacz [podpisu cyfrowego w witrynie Wikipedia](https://go.microsoft.com/fwlink/?LinkId=253157).  

@@ -3,11 +3,11 @@ title: Korzystanie z personifikacji z zabezpieczeniami transportu
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050678"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Korzystanie z personifikacji z zabezpieczeniami transportu
 *Personifikacja* to zdolność aplikacji serwera, na potrzeby tożsamości klienta. Jest to typowe dla usługi, aby podczas weryfikacji dostępu do zasobów należy używać personifikacji. Aplikacja zostanie uruchomiona przy użyciu konta usługi, ale gdy serwer akceptuje połączenia klienta, personifikuje klienta, tak, aby sprawdzanie uprawnień dostępu są wykonywane przy użyciu poświadczeń klienta. Zabezpieczenia transportu jest mechanizm przekazywania poświadczeń i zabezpieczenia komunikacji przy użyciu tych poświadczeń. W tym temacie opisano, za pomocą zabezpieczeń transportu w Windows Communication Foundation (WCF) z funkcją personifikacji. Aby uzyskać więcej informacji na temat personifikacji korzystanie z zabezpieczeń komunikatów, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -33,24 +33,24 @@ ms.locfileid: "59151440"
 ### <a name="named-pipe-transport"></a>O nazwie transportu potoku  
  Następujące elementy są używane za pomocą transportu nazwanego potoku:  
   
--   Transportu nazwanego potoku jest przeznaczony do użytku tylko na komputerze lokalnym. Transportu nazwanego potoku w programie WCF nie wyraźnie zezwala na połączenia między komputerami.  
+- Transportu nazwanego potoku jest przeznaczony do użytku tylko na komputerze lokalnym. Transportu nazwanego potoku w programie WCF nie wyraźnie zezwala na połączenia między komputerami.  
   
--   Nie można używać do potoków nazwanych `Impersonate` lub `Delegate` poziom personifikacji. Nazwany potok nie może wymusić gwarancji na komputerze, na tych poziomach personifikacji.  
+- Nie można używać do potoków nazwanych `Impersonate` lub `Delegate` poziom personifikacji. Nazwany potok nie może wymusić gwarancji na komputerze, na tych poziomach personifikacji.  
   
  Aby uzyskać więcej informacji na temat potoków nazwanych, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>HTTP Transport  
  Powiązania, które używają protokołu HTTP (<xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.BasicHttpBinding>) obsługują kilka schematy uwierzytelniania, jak wyjaśniono w [opis uwierzytelniania HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Personifikacja obsługiwany poziom zależy od schematu uwierzytelniania. Następujące elementy są używane przy użyciu protokołu http:  
   
--   `Anonymous` Schematu uwierzytelniania ignoruje personifikacji.  
+- `Anonymous` Schematu uwierzytelniania ignoruje personifikacji.  
   
--   `Basic` Schematu uwierzytelniania obsługuje tylko `Delegate` poziom. Uaktualniane są wszystkie niższe poziomy personifikacji.  
+- `Basic` Schematu uwierzytelniania obsługuje tylko `Delegate` poziom. Uaktualniane są wszystkie niższe poziomy personifikacji.  
   
--   `Digest` Schematu uwierzytelniania obsługuje tylko `Impersonate` i `Delegate` poziomów.  
+- `Digest` Schematu uwierzytelniania obsługuje tylko `Impersonate` i `Delegate` poziomów.  
   
--   `NTLM` Schematu uwierzytelniania, można wybierać bezpośrednio lub za pomocą negocjowania, obsługuje tylko `Delegate` poziomu na komputerze lokalnym.  
+- `NTLM` Schematu uwierzytelniania, można wybierać bezpośrednio lub za pomocą negocjowania, obsługuje tylko `Delegate` poziomu na komputerze lokalnym.  
   
--   Schemat uwierzytelniania Kerberos, który można wybierać wyłącznie przy użyciu negocjacji, może służyć o dowolnym poziomie personifikacji obsługiwane.  
+- Schemat uwierzytelniania Kerberos, który można wybierać wyłącznie przy użyciu negocjacji, może służyć o dowolnym poziomie personifikacji obsługiwane.  
   
  Aby uzyskać więcej informacji na temat protokołu HTTP, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   

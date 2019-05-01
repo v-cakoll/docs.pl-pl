@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951063"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 <a name="top"></a> Wycofywanie ma miejsce, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i aparat wyrażeń regularnych wraca do poprzedniego zapisanego stanu w celu kontynuowania jego wyszukiwane dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
@@ -35,13 +35,13 @@ ms.locfileid: "54615983"
   
  Ten temat zawiera następujące sekcje:  
   
--   [Porównanie liniowe bez wycofywania](#linear_comparison_without_backtracking)  
+- [Porównanie liniowe bez wycofywania](#linear_comparison_without_backtracking)  
   
--   [Wycofywanie z użyciem opcjonalnych kwantyfikatorów ani Alternacyjne konstrukcji](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [Wycofywanie z użyciem opcjonalnych kwantyfikatorów ani Alternacyjne konstrukcji](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [Wycofywanie z użyciem zagnieżdżonych opcjonalnych kwantyfikatorów](#backtracking_with_nested_optional_quantifiers)  
+- [Wycofywanie z użyciem zagnieżdżonych opcjonalnych kwantyfikatorów](#backtracking_with_nested_optional_quantifiers)  
   
--   [Sterowanie wycofywaniem](#controlling_backtracking)  
+- [Sterowanie wycofywaniem](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Porównanie liniowe bez wycofywania  
@@ -91,15 +91,15 @@ ms.locfileid: "54615983"
   
  W tym celu aparat wyrażeń regularnych używa wycofywania, tak jak opisano poniżej:  
   
--   Jest on zgodny `.*` (który dopasowuje zero, jeden lub więcej wystąpień dowolnego znaku) za pomocą cały ciąg wejściowy.  
+- Jest on zgodny `.*` (który dopasowuje zero, jeden lub więcej wystąpień dowolnego znaku) za pomocą cały ciąg wejściowy.  
   
--   Podejmuje próbę dopasowania znaku „e” we wzorcu wyrażenia regularnego. Jednak ciąg wejściowy nie zawiera już znaków, z którymi można by wykonać porównanie.  
+- Podejmuje próbę dopasowania znaku „e” we wzorcu wyrażenia regularnego. Jednak ciąg wejściowy nie zawiera już znaków, z którymi można by wykonać porównanie.  
   
--   Aparat wycofuje się więc do ostatniego pomyślnego dopasowania (Essential services are provided by regular expressions) i podejmuje próbę dopasowania litery „e” do kropki na końcu zdania. Nie można utworzyć takiego dopasowania.  
+- Aparat wycofuje się więc do ostatniego pomyślnego dopasowania (Essential services are provided by regular expressions) i podejmuje próbę dopasowania litery „e” do kropki na końcu zdania. Nie można utworzyć takiego dopasowania.  
   
--   Aparat kontynuuje wycofywanie do poprzedniego pomyślnego dopasowania po jednym znaku, aż wykryje, że pasującym podciągiem jest „Essential services are provided by regular expr”. Następnie porównuje znak „e” we wzorcu z drugą literą „e” w wyrazie „expressions” i znajduje dopasowanie.  
+- Aparat kontynuuje wycofywanie do poprzedniego pomyślnego dopasowania po jednym znaku, aż wykryje, że pasującym podciągiem jest „Essential services are provided by regular expr”. Następnie porównuje znak „e” we wzorcu z drugą literą „e” w wyrazie „expressions” i znajduje dopasowanie.  
   
--   Porównuje znak „s” we wzorcu z literą „s” występującą po dopasowanym znaku „e” (pierwsza litera „s” w wyrazie „expressions”). Dopasowanie jest wykonywane pomyślnie.  
+- Porównuje znak „s” we wzorcu z literą „s” występującą po dopasowanym znaku „e” (pierwsza litera „s” w wyrazie „expressions”). Dopasowanie jest wykonywane pomyślnie.  
   
  Gdy jest używane wycofywanie, wykonanie dopasowania wzorca wyrażenia regularnego do ciągu wejściowego składającego się z 55 znaków wymaga wykonania 67 operacji porównania. Ogólnie, jeśli wzorzec wyrażenia regularnego zawiera jedną konstrukcję zmiany lub jeden opcjonalny kwantyfikator, liczba operacji porównania wymaganych do wykonania dopasowania wzorca jest ponad dwa razy większa niż liczba znaków w ciągu wejściowym.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "54615983"
   
  Jak wynika z danych wyjściowych z przykładu, aparat wyrażeń regularnych potrzebuje prawie dwa razy więcej czasu na ustalenie, że ciąg wejściowy nie pasuje do wzorca, niż na zidentyfikowanie pasującego ciągu. Jest to spowodowane tym, że niepowodzenie tworzenia dopasowania zawsze jest scenariuszem najgorszego przypadku. Aparat wyrażeń regularnych musi użyć wyrażenia regularnego, aby sprawdzić wszystkie możliwe ścieżki w danych, zanim będzie mógł uznać, że nie można wykonać dopasowania, a zagnieżdżone nawiasy powodują powstanie wielu dodatkowych ścieżek w danych. Aparat wyrażeń regularnych dochodzi do wniosku, że drugi ciąg nie pasuje do wzorca, wykonując następujące czynności:  
   
--   Sprawdza, czy był na początku ciągu, a następnie dopasowuje pięć pierwszych znaków ciągu do wzorca `a+`. Następnie ustala, że w ciągu nie znajdują się dodatkowe grupy liter „a”. Na końcu sprawdza, czy znajduje się na końcu ciągu. W ciągu pozostał jeden dodatkowy znak, więc wykonywanie dopasowania kończy się niepowodzeniem. To nieudane dopasowanie wymaga wykonania 9 porównań. Aparat wyrażeń regularnych zapisuje też informacje o stanie swoich dopasowań znaku „a” (dopasowanie 1), znaków „aa” (dopasowanie 2), znaków „aaa” (dopasowanie 3) i znaków „aaaa” (dopasowanie 4).  
+- Sprawdza, czy był na początku ciągu, a następnie dopasowuje pięć pierwszych znaków ciągu do wzorca `a+`. Następnie ustala, że w ciągu nie znajdują się dodatkowe grupy liter „a”. Na końcu sprawdza, czy znajduje się na końcu ciągu. W ciągu pozostał jeden dodatkowy znak, więc wykonywanie dopasowania kończy się niepowodzeniem. To nieudane dopasowanie wymaga wykonania 9 porównań. Aparat wyrażeń regularnych zapisuje też informacje o stanie swoich dopasowań znaku „a” (dopasowanie 1), znaków „aa” (dopasowanie 2), znaków „aaa” (dopasowanie 3) i znaków „aaaa” (dopasowanie 4).  
   
--   Aparat powraca do uprzednio zapisanego dopasowania 4. Ustala, że istnieje jeden dodatkowy znak „a”, który można przypisać do dodatkowej przechwyconej grupy. Na końcu sprawdza, czy znajduje się na końcu ciągu. W ciągu pozostał jeden dodatkowy znak, więc wykonywanie dopasowania kończy się niepowodzeniem. To nieudane dopasowanie wymaga 4 porównania. Do tego momentu zostało wykonanych 13 porównań.  
+- Aparat powraca do uprzednio zapisanego dopasowania 4. Ustala, że istnieje jeden dodatkowy znak „a”, który można przypisać do dodatkowej przechwyconej grupy. Na końcu sprawdza, czy znajduje się na końcu ciągu. W ciągu pozostał jeden dodatkowy znak, więc wykonywanie dopasowania kończy się niepowodzeniem. To nieudane dopasowanie wymaga 4 porównania. Do tego momentu zostało wykonanych 13 porównań.  
   
--   Zwraca do uprzednio zapisanego dopasowania 3. Ustala, że istnieją dwa dodatkowe znaki „a”, które można przypisać do dodatkowej przechwyconej grupy. Jednak test końca ciągu kończy się niepowodzeniem. Następnie aparat wraca do dopasowania 3 i próbuje dopasować dwa dodatkowe znaki „a” w dwóch dodatkowych przechwyconych grupach. Test końca ciągu nadal kończy się niepowodzeniem. Te nieudane dopasowania wymagały wykonania 12 porównań. Jak dotąd wykonano łącznie 25 porównania.  
+- Zwraca do uprzednio zapisanego dopasowania 3. Ustala, że istnieją dwa dodatkowe znaki „a”, które można przypisać do dodatkowej przechwyconej grupy. Jednak test końca ciągu kończy się niepowodzeniem. Następnie aparat wraca do dopasowania 3 i próbuje dopasować dwa dodatkowe znaki „a” w dwóch dodatkowych przechwyconych grupach. Test końca ciągu nadal kończy się niepowodzeniem. Te nieudane dopasowania wymagały wykonania 12 porównań. Jak dotąd wykonano łącznie 25 porównania.  
   
  Porównywanie ciągu wejściowego z wyrażeniem regularnym w ten sposób będzie kontynuowane, dopóki aparat wyrażeń regularnych nie wypróbuje wszystkich możliwych kombinacji dopasowań, a następnie uzna, że nie istnieje dopasowanie. Z powodu użycia kwantyfikatorów zagnieżdżonych, to porównanie jest O (2<sup>n</sup>) lub operacją wykładniczą gdzie *n* jest to liczba znaków w ciągu wejściowym. Oznacza to, że w najgorszym przypadku ciąg wejściowy o długości 30 znaków będzie wymagał wykonania ok. 1 073 741 824 porównań, a ciąg wejściowy o długości 40 znaków będzie wymagał wykonania ok. 1 099 511 627 776 porównań. Gdy są używane ciągi o takiej lub większej długości, wykonanie metod opartych na wyrażeniach regularnych może trwać niezwykle długo, jeśli w przetwarzanych ciągach nie będą znajdować się dopasowania do wzorca wyrażenia regularnego.  
   

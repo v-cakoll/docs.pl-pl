@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 ms.openlocfilehash: ca6b028ef20095d6faeb125151772eedf1500fa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038730"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Niezabezpieczony klient internetowy i usługa
 Na poniższej ilustracji przedstawiono przykład publiczne, niezabezpieczony klient usługi Windows Communication Foundation (WCF) i usługi:  
@@ -30,9 +30,9 @@ Na poniższej ilustracji przedstawiono przykład publiczne, niezabezpieczony kli
 ## <a name="service"></a>Usługa  
  Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
+- Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
   
--   Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
+- Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
  Poniższy kod przedstawia sposób tworzenia punktu końcowego z żadnych zabezpieczeń. Domyślnie <xref:System.ServiceModel.BasicHttpBinding> została ustawiona na tryb zabezpieczeń <xref:System.ServiceModel.BasicHttpSecurityMode.None>.  
@@ -70,9 +70,9 @@ Na poniższej ilustracji przedstawiono przykład publiczne, niezabezpieczony kli
 ## <a name="client"></a>Klient  
  Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
+- Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
--   Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
+- Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

@@ -1,18 +1,18 @@
 ---
-title: Rozpoznawanie XSLT zewnętrznych arkuszy stylów i dokumentów
+title: Rozpoznawanie zewnętrznych arkuszy stylów i dokumentów XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027072"
 ---
-# <a name="resolving-external-xslt-style-sheets-and-documents"></a>Rozpoznawanie XSLT zewnętrznych arkuszy stylów i dokumentów
+# <a name="resolving-external-xslt-style-sheets-and-documents"></a>Rozpoznawanie zewnętrznych arkuszy stylów i dokumentów XSLT
 Istnieje kilka razy podczas przekształcania, gdy trzeba rozwiązać zasobów zewnętrznych.  
   
 > [!NOTE]
@@ -20,11 +20,11 @@ Istnieje kilka razy podczas przekształcania, gdy trzeba rozwiązać zasobów ze
   
  Istnieje kilka razy podczas przekształcania, gdy trzeba rozwiązać zasobów zewnętrznych:  
   
--   Podczas <xref:System.Xml.Xsl.XslTransform.Load%2A> zlokalizować zewnętrznym arkuszu stylów.  
+- Podczas <xref:System.Xml.Xsl.XslTransform.Load%2A> zlokalizować zewnętrznym arkuszu stylów.  
   
--   Podczas <xref:System.Xml.Xsl.XslTransform.Load%2A> do rozwiązania `<xsl:include>` lub `<xsl:import>` elementy znalezione w arkuszu stylów.  
+- Podczas <xref:System.Xml.Xsl.XslTransform.Load%2A> do rozwiązania `<xsl:include>` lub `<xsl:import>` elementy znalezione w arkuszu stylów.  
   
--   Podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> do rozwiązania `document()` funkcji.  
+- Podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> do rozwiązania `document()` funkcji.  
   
 ## <a name="using-the-xmlresolver-class"></a>Używanie klasy element XmlResolver  
  Jeśli uwierzytelnianie jest wymagane do dostępu do zasobu sieciowego, należy użyć <xref:System.Xml.Xsl.XslTransform.Load%2A> metody, które mają <xref:System.Xml.XmlResolver> parametr do przekazania <xref:System.Xml.XmlResolver> obiektu, który ma zbioru właściwości niezbędnych poświadczeń.  

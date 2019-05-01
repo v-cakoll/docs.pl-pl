@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f4a5911787fa5f72be1dcd15c67b3f132c3f1110
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62091679"
 ---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap pomyślnie konwertuje ikon PNG ramek na obiekty mapy bitowej
 

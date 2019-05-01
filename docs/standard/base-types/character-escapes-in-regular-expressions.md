@@ -19,18 +19,18 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950556"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Znaki specjalne w wyrażeniach regularnych
 Ukośnik odwrotny (\\) w wyrażeniu regularnym wskazuje jedną z następujących czynności:  
   
--   Znak, który po nim następuje jest znakiem specjalnym, jak pokazano w tabeli w poniższej sekcji. Na przykład `\b` jest kotwicę, która wskazuje, że dopasowanie wyrażenia regularnego ma się zacząć na granicy wyrazu `\t` reprezentuje kartę, a `\x020` reprezentuje spację.  
+- Znak, który po nim następuje jest znakiem specjalnym, jak pokazano w tabeli w poniższej sekcji. Na przykład `\b` jest kotwicę, która wskazuje, że dopasowanie wyrażenia regularnego ma się zacząć na granicy wyrazu `\t` reprezentuje kartę, a `\x020` reprezentuje spację.  
   
--   Znak, które w przeciwnym razie może być interpretowany jako konstrukcji języka o niezmienionym znaczeniu, które powinny być interpretowany literalnie. Na przykład nawias klamrowy (`{`) rozpoczyna się definicji kwantyfikator, ale ukośnikiem nawiasu klamrowego (`\{`) wskazuje, że aparat wyrażeń regularnych powinny odpowiadać nawiasu klamrowego. Podobnie, pojedynczy ukośnik odwrotny oznacza początek konstrukcji języka o zmienionym znaczeniu, ale dwa ukośniki odwrotne (`\\`) wskazują, że aparat wyrażeń regularnych powinny odpowiadać ukośnik odwrotny.  
+- Znak, które w przeciwnym razie może być interpretowany jako konstrukcji języka o niezmienionym znaczeniu, które powinny być interpretowany literalnie. Na przykład nawias klamrowy (`{`) rozpoczyna się definicji kwantyfikator, ale ukośnikiem nawiasu klamrowego (`\{`) wskazuje, że aparat wyrażeń regularnych powinny odpowiadać nawiasu klamrowego. Podobnie, pojedynczy ukośnik odwrotny oznacza początek konstrukcji języka o zmienionym znaczeniu, ale dwa ukośniki odwrotne (`\\`) wskazują, że aparat wyrażeń regularnych powinny odpowiadać ukośnik odwrotny.  
   
 > [!NOTE]
 >  Sekwencje ucieczki znaków są rozpoznawane we wzorcach wyrażeń regularnych, ale nie we wzorcach zamieniania.  

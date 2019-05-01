@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050769"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
 Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczącej korzystania z kolejek w Windows Communication Foundation (WCF).  
@@ -29,11 +29,11 @@ Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczące
   
  **ODP.:** Następujące funkcje są dostępne w usłudze MSMQ 4.0, ale nie w usłudze MSMQ 3.0:  
   
--   Niestandardowe kolejki utraconych wiadomości jest obsługiwana tylko w usłudze MSMQ 4.0.  
+- Niestandardowe kolejki utraconych wiadomości jest obsługiwana tylko w usłudze MSMQ 4.0.  
   
--   Usługa MSMQ 3.0 i 4.0 obsłużyć inaczej skażone komunikaty.  
+- Usługa MSMQ 3.0 i 4.0 obsłużyć inaczej skażone komunikaty.  
   
--   Tylko usługi MSMQ 4.0 obsługuje odczyt transakcyjne zdalny.  
+- Tylko usługi MSMQ 4.0 obsługuje odczyt transakcyjne zdalny.  
   
  Aby uzyskać więcej informacji, zobacz [różnice w funkcjach kolejkowania w Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
@@ -60,19 +60,19 @@ Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczące
   
  **ODP.:** Aby ustalić, odpowiedź na pytanie, pracować przy użyciu poniższej liście kontrolnej:  
   
--   Upewnij się, że wymagania kolejkę transakcyjną są zgodne z gwarancji określony. Należy zwrócić uwagę następujących zasad:  
+- Upewnij się, że wymagania kolejkę transakcyjną są zgodne z gwarancji określony. Należy zwrócić uwagę następujących zasad:  
   
-    -   Komunikaty można wysyłać trwałe (datagramy i sesji) za pomocą "dokładnie jednokrotne" gwarancji (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) tylko dla kolejek transakcyjnych.  
+    - Komunikaty można wysyłać trwałe (datagramy i sesji) za pomocą "dokładnie jednokrotne" gwarancji (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) tylko dla kolejek transakcyjnych.  
   
-    -   Możesz wysłać sesji tylko w przypadku zapewnienia "dokładnie jednokrotne".  
+    - Możesz wysłać sesji tylko w przypadku zapewnienia "dokładnie jednokrotne".  
   
-    -   Transakcja jest wymagany do odbierania komunikatów w sesji z kolejką transakcyjną.  
+    - Transakcja jest wymagany do odbierania komunikatów w sesji z kolejką transakcyjną.  
   
-    -   Możesz wysyłać lub odbierać lotnych lub trwałe wiadomości (tylko datagramy) z żadnych zapewnień (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) tylko do kolejki nietransakcyjnej.  
+    - Możesz wysyłać lub odbierać lotnych lub trwałe wiadomości (tylko datagramy) z żadnych zapewnień (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) tylko do kolejki nietransakcyjnej.  
   
--   Sprawdź kolejki utraconych wiadomości. Jeśli znajdziesz tam wiadomości, należy ustalić, dlaczego one nie zostały dostarczone.  
+- Sprawdź kolejki utraconych wiadomości. Jeśli znajdziesz tam wiadomości, należy ustalić, dlaczego one nie zostały dostarczone.  
   
--   Sprawdzanie kolejek wychodzących dla łączności lub odnoszący się problemy.  
+- Sprawdzanie kolejek wychodzących dla łączności lub odnoszący się problemy.  
   
  **PYT.:** Określony niestandardowy kolejki utraconych wiadomości, ale po uruchomieniu aplikacji nadawcy, pojawia się wyjątek, który nie znajduje się kolejka utraconych lub aplikacji wysyłającej nie ma uprawnienia do kolejki utraconych wiadomości. Dlaczego tak się dzieje?  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **ODP.:** Istnieją trzy możliwe przyczyny to:  
   
--   Jeśli jesteś w trybie domeny zdalne transacted otrzymywać wymaga dostępu do sieci transakcji Koordynator MSDTC (Microsoft Distributed). Możesz je włączyć za pomocą **Dodaj/Usuń składniki**.  
+- Jeśli jesteś w trybie domeny zdalne transacted otrzymywać wymaga dostępu do sieci transakcji Koordynator MSDTC (Microsoft Distributed). Możesz je włączyć za pomocą **Dodaj/Usuń składniki**.  
   
      ![Zrzut ekranu przedstawiający Włączanie sieci usługi DTC dostępu.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   Sprawdź tryb uwierzytelniania podczas komunikowania się z menedżerem transakcji. Jeśli jesteś w trybie grupy roboczej, należy wybrać "Uwierzytelnienie niewymagane". Jeśli jesteś w trybie domeny, należy wybrać "Wymagane uwierzytelnianie wzajemne".  
+- Sprawdź tryb uwierzytelniania podczas komunikowania się z menedżerem transakcji. Jeśli jesteś w trybie grupy roboczej, należy wybrać "Uwierzytelnienie niewymagane". Jeśli jesteś w trybie domeny, należy wybrać "Wymagane uwierzytelnianie wzajemne".  
   
      ![Enabling XA transactions](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   Upewnij się, że usługa MSDTC jest na liście wyjątków w **Zapora połączenia internetowego** ustawienia.  
+- Upewnij się, że usługa MSDTC jest na liście wyjątków w **Zapora połączenia internetowego** ustawienia.  
   
--   Upewnij się, że używasz [!INCLUDE[wv](../../../../includes/wv-md.md)]. Usługa MSMQ na [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje odczyt transakcyjne zdalny. Usługi MSMQ w starszych wersjach Windows nie obsługuje zdalnego odczytu transakcyjnego.  
+- Upewnij się, że używasz [!INCLUDE[wv](../../../../includes/wv-md.md)]. Usługa MSMQ na [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje odczyt transakcyjne zdalny. Usługi MSMQ w starszych wersjach Windows nie obsługuje zdalnego odczytu transakcyjnego.  
   
  **PYT.:** Gdy usługa czytania z kolejki jest usługą sieciową, na przykład w sieci Web hosta, dlaczego jest zgłaszany wyjątek odmowy dostępu jest wywoływane podczas czytania z kolejki?  
   

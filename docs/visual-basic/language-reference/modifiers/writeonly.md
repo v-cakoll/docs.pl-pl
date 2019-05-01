@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051822"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Określa, że właściwości mogą być zapisywane, ale nie do odczytu.  
@@ -34,15 +34,15 @@ Określa, że właściwości mogą być zapisywane, ale nie do odczytu.
 > [!IMPORTANT]
 >  Podczas definiowania i stosowania `WriteOnly` właściwość, należy wziąć pod uwagę następujące dodatkowe środki zabezpieczające:  
   
--   **Zastępowanie.** Jeśli właściwość jest składową klasy, zezwalała na domyślnie [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), a nie deklaruj `Overridable` lub `MustOverride`. Uniemożliwia to wprowadzanie niepożądany dostęp za pomocą zastąpienia przez klasę pochodną.  
+- **Zastępowanie.** Jeśli właściwość jest składową klasy, zezwalała na domyślnie [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), a nie deklaruj `Overridable` lub `MustOverride`. Uniemożliwia to wprowadzanie niepożądany dostęp za pomocą zastąpienia przez klasę pochodną.  
   
--   **Poziom dostępu.** Jeśli przytrzymasz właściwości poufnych danych w jednej lub więcej zmiennych je zadeklarować [prywatnej](../../../visual-basic/language-reference/modifiers/private.md) tak, aby żadnego innego kodu można uzyskiwać do nich dostęp.  
+- **Poziom dostępu.** Jeśli przytrzymasz właściwości poufnych danych w jednej lub więcej zmiennych je zadeklarować [prywatnej](../../../visual-basic/language-reference/modifiers/private.md) tak, aby żadnego innego kodu można uzyskiwać do nich dostęp.  
   
--   **Encryption.** Store wszystkie poufne dane w postaci zaszyfrowanej, a nie w postaci zwykłego tekstu. Jeśli złośliwy kod w jakiś sposób uzyskuje dostęp do tego obszaru pamięci, jest trudniejsze użyć danych. Szyfrowanie jest również przydatne, jeśli to konieczne do serializowania danych poufnych.  
+- **Encryption.** Store wszystkie poufne dane w postaci zaszyfrowanej, a nie w postaci zwykłego tekstu. Jeśli złośliwy kod w jakiś sposób uzyskuje dostęp do tego obszaru pamięci, jest trudniejsze użyć danych. Szyfrowanie jest również przydatne, jeśli to konieczne do serializowania danych poufnych.  
   
--   **Resetowanie.** Klasy, struktury lub modułu definiowania właściwość zostanie przerwany, zresetowanie danych poufnych do wartości domyślnych lub inne wartości bez znaczenia. Zapewnia dodatkową ochronę, gdy ten obszar pamięci jest zwalniana dla ogólnego dostępu.  
+- **Resetowanie.** Klasy, struktury lub modułu definiowania właściwość zostanie przerwany, zresetowanie danych poufnych do wartości domyślnych lub inne wartości bez znaczenia. Zapewnia dodatkową ochronę, gdy ten obszar pamięci jest zwalniana dla ogólnego dostępu.  
   
--   **Trwałość.** Nie są zachowywane poufnych danych, na przykład na dysku, jeśli można go uniknąć. Ponadto nie wpisuj poufnych danych do Schowka.  
+- **Trwałość.** Nie są zachowywane poufnych danych, na przykład na dysku, jeśli można go uniknąć. Ponadto nie wpisuj poufnych danych do Schowka.  
   
  `WriteOnly` Modyfikatora można używać w tym kontekście:  
   

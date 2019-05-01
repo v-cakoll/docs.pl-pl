@@ -8,11 +8,11 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048247"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
 W poniższych sekcjach wymieniono najlepsze rozwiązania, należy wziąć pod uwagę podczas tworzenia bezpiecznych aplikacji za pomocą usługi Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -26,11 +26,11 @@ W poniższych sekcjach wymieniono najlepsze rozwiązania, należy wziąć pod uw
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Użyj X509 certyfikatów zamiast protokołu NTLM  
  Usługi WCF oferuje dwa mechanizmy uwierzytelniania peer-to-peer: X509 certyfikatów (używanych przez kanał elementu równorzędnego) i uwierzytelnianie Windows, gdzie negocjacji interfejsu SSPI obniży z protokołu Kerberos, NTLM.  Uwierzytelnianie oparte na certyfikatach, za pomocą rozmiarów klucza 1024 bity lub więcej jest preferowany NTLM z kilku powodów:  
   
--   dostępność wzajemnego uwierzytelniania  
+- dostępność wzajemnego uwierzytelniania  
   
--   Użycie silniejszych algorytmów kryptograficznych, a  
+- Użycie silniejszych algorytmów kryptograficznych, a  
   
--   większa trudności przy użyciu przekazywane X509 poświadczeń.  
+- większa trudności przy użyciu przekazywane X509 poświadczeń.  
    
 ## <a name="always-revert-after-impersonation"></a>Zawsze wracają po personifikacji  
  Korzystając z interfejsów API pozwalających na korzystanie z personifikacji klienta, pamiętaj przywrócić oryginalną tożsamość. Na przykład w przypadku korzystania z <xref:System.Security.Principal.WindowsIdentity> i <xref:System.Security.Principal.WindowsImpersonationContext>, używaj języka C# `using` instrukcji lub Visual Basic`Using` instrukcji, jak pokazano w poniższym kodzie. <xref:System.Security.Principal.WindowsImpersonationContext> Klasy implementuje <xref:System.IDisposable> interfejsu i w związku z tym środowisko uruchomieniowe języka wspólnego (CLR) zostanie automatycznie przywrócona do oryginalnego tożsamości po opuszczeniu kod `using` bloku.  

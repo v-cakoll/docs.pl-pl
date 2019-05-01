@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053434"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Ograniczenia serializacji XamlWriter.Save
 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> Może służyć do serializacji zawartość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jako [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pliku. Istnieją jednak pewne ograniczenia istotne w dokładnie co to jest serializowana. W tym temacie opisano te ograniczenia i pewne ogólne zagadnienia.  
@@ -36,8 +36,8 @@ ms.locfileid: "59113285"
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Realistyczne scenariusze użycia xamlwriter.Save  
  Ograniczenia wymienione w tym miejscu są dość znaczną, nadal istnieją kilka odpowiednie scenariusze użycia <xref:System.Windows.Markup.XamlWriter.Save%2A> do serializacji.  
   
--   Wektor lub danych wyjściowych graficznego: Dane wyjściowe renderowanych obszar może służyć do odtworzenia tego samego wektor lub grafiki, gdy ponownie załadowany.  
+- Wektor lub danych wyjściowych graficznego: Dane wyjściowe renderowanych obszar może służyć do odtworzenia tego samego wektor lub grafiki, gdy ponownie załadowany.  
   
--   Rozbudowane dokumenty tekstowe i przepływ: Tekst i wszystkie element formatowania i elementu zawierania znajdujący się w nim zostaną zachowane w danych wyjściowych. Może to być przydatne w przypadku mechanizmy, które są w przybliżeniu funkcja Schowka.  
+- Rozbudowane dokumenty tekstowe i przepływ: Tekst i wszystkie element formatowania i elementu zawierania znajdujący się w nim zostaną zachowane w danych wyjściowych. Może to być przydatne w przypadku mechanizmy, które są w przybliżeniu funkcja Schowka.  
   
--   Zachowywanie danych obiektu biznesowych: Jeśli są przechowywane dane w niestandardowych elementach, takich jak [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane tak długo, jak obiekty firm wykonaj podstawowe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reguły, takie jak niestandardowe konstruktorów i konwersji wartości właściwości przez odwołanie, te obiekty firm mogą być perpetuated za pomocą serializacji.
+- Zachowywanie danych obiektu biznesowych: Jeśli są przechowywane dane w niestandardowych elementach, takich jak [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane tak długo, jak obiekty firm wykonaj podstawowe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reguły, takie jak niestandardowe konstruktorów i konwersji wartości właściwości przez odwołanie, te obiekty firm mogą być perpetuated za pomocą serializacji.

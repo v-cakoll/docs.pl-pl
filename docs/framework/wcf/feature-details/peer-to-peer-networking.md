@@ -3,11 +3,11 @@ title: Sieci równorzędne
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 ms.openlocfilehash: 388f6659602276cd3f356da2af63e4d31b5e22d6
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046409"
 ---
 # <a name="peer-to-peer-networking"></a>Sieci równorzędne
 Kanał elementu równorzędnego jest wielostronnej, peer-to-peer (P2P) technologię komunikacji w Windows Communication Foundation (WCF). Zapewnia bezpieczny i skalowalny oparta na komunikatach P2P kanał komunikacji dla deweloperów aplikacji. Jeden typowy przykład wielostronnej aplikację, która może być korzystne kanał elementu równorzędnego jest aplikacji współpracy, na przykład rozmowy, w przypadku, gdy grupa osób komunikować się z siebie nawzajem w sposób peer-to-peer, bez serwerów. Kanał elementu równorzędnego umożliwia współpracę P2P, dystrybucję zawartości, równoważenia obciążenia i rozproszone przetwarzanie dla scenariuszy firmowych i komercyjnych.  

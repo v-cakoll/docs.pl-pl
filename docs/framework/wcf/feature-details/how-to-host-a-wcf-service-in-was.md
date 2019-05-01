@@ -3,11 +3,11 @@ title: 'Instrukcje: hostowanie usługi WCF w usłudze WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039094"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Instrukcje: hostowanie usługi WCF w usłudze WAS
 W tym temacie wymieniono podstawowe kroki wymagane do utworzenia usługi aktywacji procesów Windows (znany także jako WAS) hostowanych usług Windows Communication Foundation (WCF). ZOSTAŁA nowa usługa aktywacji procesów, która jest uogólnienie funkcji Internet Information Services (IIS), które działają z protokołami protokołu HTTP. Usługi WCF używa interfejsu karty odbiornika do komunikowania się żądania aktywacji, które są odbierane za pośrednictwem protokołów innych niż HTTP obsługiwane przez architekturę WCF, takich jak TCP, nazwanych potoków i usługi kolejkowania komunikatów.  
@@ -19,19 +19,19 @@ W tym temacie wymieniono podstawowe kroki wymagane do utworzenia usługi aktywac
   
  Gdy usługa WCF jest hostowana w WAS, standardowe powiązania są używane w zwykły sposób. Jednak przy użyciu <xref:System.ServiceModel.NetTcpBinding> i <xref:System.ServiceModel.NetNamedPipeBinding> do skonfigurowania usługi hostowanej WAS, muszą być spełnione ograniczenie. Korzystając z różnych punktów końcowych tego samego transportu, ustawienia powiązania muszą odpowiadać na następujące siedem właściwości:  
   
--   ConnectionBufferSize  
+- ConnectionBufferSize  
   
--   ChannelInitializationTimeout  
+- ChannelInitializationTimeout  
   
--   MaxPendingConnections  
+- MaxPendingConnections  
   
--   MaxOutputDelay  
+- MaxOutputDelay  
   
--   MaxPendingAccepts  
+- MaxPendingAccepts  
   
--   ConnectionPoolSettings.IdleTimeout  
+- ConnectionPoolSettings.IdleTimeout  
   
--   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
+- ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
  W przeciwnym razie punkt końcowy, który jest inicjowany najpierw zawsze określi wartości tych właściwości i punktów końcowych, dodane później throw <xref:System.ServiceModel.ServiceActivationException> Jeśli te ustawienia są niezgodne.  
   

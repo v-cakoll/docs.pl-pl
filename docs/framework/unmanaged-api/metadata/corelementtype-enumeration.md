@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 581c5517144dbc94e16acb777b5c272b8390b212
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046015"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType, wyliczenie1
 Określa środowisko uruchomieniowe języka wspólnego <xref:System.Type>, modyfikatora typu lub informacje o typie w podpisie typ metadanych.  

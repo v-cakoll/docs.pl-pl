@@ -3,11 +3,11 @@ title: Specyfikacja manifestu dostawcy
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034007"
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono, jak dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -45,18 +45,18 @@ W tej sekcji omówiono, jak dostawca magazynu danych może obsługiwać typy i f
   
  Możesz napisać plik XML, który ma dwie sekcje:  
   
--   Lista typy dostawców, wyrażonych "EDM odpowiednikiem" typ magazynu lub funkcji. Typy Store mają odpowiednika typów EDM. Funkcje Store mają odpowiednie funkcje EDM. Na przykład varchar jest typem programu SQL Server, ale odpowiedni typ EDM jest ciągiem.  
+- Lista typy dostawców, wyrażonych "EDM odpowiednikiem" typ magazynu lub funkcji. Typy Store mają odpowiednika typów EDM. Funkcje Store mają odpowiednie funkcje EDM. Na przykład varchar jest typem programu SQL Server, ale odpowiedni typ EDM jest ciągiem.  
   
--   Lista funkcji obsługiwanych przez dostawcę, w których typy parametrów i zwrotu jest wyrażany w kategoriach EDM.  
+- Lista funkcji obsługiwanych przez dostawcę, w których typy parametrów i zwrotu jest wyrażany w kategoriach EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Pisanie dostawcy za pomocą asymetrycznych Typ mapowania  
  Podczas pisania dostawca magazynu danych dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], typ EDM do dostawcy mapowanie dla niektórych typów może się różnić od typu dostawcy do EDM mapowania. Na przykład niepowiązane PrimitiveTypeKind.String EDM mogą być mapowane do nvarchar(4000) na dostawcy, gdy nvarchar(4000) mapuje EDM PrimitiveTypeKind.String(MaxLength=4000).  
   
  Możesz napisać plik XML, który ma dwie sekcje:  
   
--   Lista typów dostawcy wyrażany w kategoriach EDM i zdefiniować mapowanie dla obu kierunku: EDM do dostawcy i dostawcy do EDM.  
+- Lista typów dostawcy wyrażany w kategoriach EDM i zdefiniować mapowanie dla obu kierunku: EDM do dostawcy i dostawcy do EDM.  
   
--   Lista funkcji obsługiwanych przez dostawcę, w których typy parametrów i zwrotu jest wyrażany w kategoriach EDM.  
+- Lista funkcji obsługiwanych przez dostawcę, w których typy parametrów i zwrotu jest wyrażany w kategoriach EDM.  
   
 ## <a name="provider-manifest-discoverability"></a>Odnajdowanie manifestu dostawcy  
  Manifest używany jest pośrednio w różnych typach składnika w jednostki usługi (na przykład narzędzia lub zapytanie), ale przechowywać więcej bezpośrednio wykorzystywane przez metadane za pomocą danych modułu ładującego metadanych.  
@@ -273,7 +273,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nazwa|String|Tak|n/d|Identyfikator/nazwę parametru.|  
-|Typ|String|Yes|n/d|Typ EDM parametru.|  
+|Typ|String|Tak|n/d|Typ EDM parametru.|  
 |Tryb|Parametr<br /><br /> Kierunek|Tak|n/d|Kierunek parametru:<br /><br /> -w<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Atrybut Namespace  

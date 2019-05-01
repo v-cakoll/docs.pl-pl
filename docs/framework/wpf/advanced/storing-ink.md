@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
 ms.openlocfilehash: 4089aa7942105c14eb628c75edb7f53ffacfaeb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053378"
 ---
 # <a name="storing-ink"></a>Przechowywanie atramentu
 <xref:System.Windows.Ink.StrokeCollection.Save%2A> Metody umożliwiają przechowywanie pisma odręcznego jako pisma odręcznego serializacji formatu (ISF). Konstruktory <xref:System.Windows.Ink.StrokeCollection> klasy umożliwiają odczytywanie danych pisma odręcznego.  

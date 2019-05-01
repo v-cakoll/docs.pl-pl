@@ -2,12 +2,12 @@
 title: Rozpoczynanie pracy z usługą F# w programie Visual Studio
 description: Dowiedz się, jak używać F# z programem Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331913"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808013"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Rozpoczynanie pracy z usługą F# w programie Visual Studio
 
@@ -25,7 +25,7 @@ Jednym z najprostszych projektów w programie Visual Studio jest aplikacji konso
 
 3. Wybierz opcję **.NET Core w aplikacji Konsolowej** lub **aplikacja Konsolowa**.
 
-3. Wybierz **OK** przycisk, aby utworzyć F# projektu!  Powinien zostać wyświetlony F# projekt w Eksploratorze rozwiązań.
+4. Wybierz **OK** przycisk, aby utworzyć F# projektu!  Powinien zostać wyświetlony F# projekt w Eksploratorze rozwiązań.
 
 ## <a name="writing-your-code"></a>Pisanie kodu
 
@@ -35,7 +35,7 @@ Zacznijmy napisanie kodu.  Upewnij się, że `Program.fs` plik jest otwarty, a n
 
 W poprzednim przykładzie kodu funkcji `square` zdefiniowano, który przyjmuje dane wejściowe o nazwie `x` i mnożona przez siebie.  Ponieważ F# używa [wnioskowanie o typie](../language-reference/type-inference.md), typ `x` nie muszą być określone.  F# Kompilator rozpoznaje typy, których mnożenie jest prawidłowy i przypisze typu `x` zależnie od `square` jest wywoływana.  Po umieszczeniu wskaźnika myszy nad `square`, powinny pojawić się następujące:
 
-```
+```fsharp
 val square: x:int -> int
 ```
 

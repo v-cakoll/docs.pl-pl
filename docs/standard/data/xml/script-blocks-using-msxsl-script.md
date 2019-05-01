@@ -1,5 +1,5 @@
 ---
-title: 'Skrypt bloki msxsl: Script'
+title: Bloki skryptów i element msxsl:script
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027007"
 ---
-# <a name="script-blocks-using-msxslscript"></a>Skrypt bloki msxsl: Script
+# <a name="script-blocks-using-msxslscript"></a>Bloki skryptów i element msxsl:script
 <xref:System.Xml.Xsl.XslCompiledTransform> Klasa obsługuje osadzonych skryptów przy użyciu `msxsl:script` elementu. Gdy arkusz stylów jest ładowany, wszystkie funkcje zdefiniowane są kompilowane do języka Microsoft intermediate language (MSIL) przez kod Document Object Model (CodeDOM) i są wykonywane w czasie wykonywania. Zestaw wygenerowany na podstawie bloku osadzonych skryptów jest oddzielony niż zestaw wygenerowany dla arkusza stylów.  
   
 ## <a name="enable-xslt-script"></a>Włącz skryptu XSLT  
@@ -71,11 +71,11 @@ ms.locfileid: "54565647"
 #### <a name="assemblies"></a>Zestawy  
  Następujące dwa zestawy są określone przez domyślny:  
   
--   PLik System.dll  
+- PLik System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   Pliku Microsoft.VisualBasic.dll (jeśli jest to język skryptów jest VB)  
+- Pliku Microsoft.VisualBasic.dll (jeśli jest to język skryptów jest VB)  
   
  Możesz zaimportować dodatkowe zestawy za pomocą `msxsl:assembly` elementu. W tym zestawie podczas kompilowania arkusza stylów. `msxsl:assembly` Element ma następującą definicję:  
   
@@ -94,21 +94,21 @@ ms.locfileid: "54565647"
 #### <a name="namespaces"></a>Namespaces  
  Następujące przestrzenie nazw są domyślnie dołączone:  
   
--   System  
+- System  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   Microsoft.VisualBasic (jeśli jest to język skryptów jest VB)  
+- Microsoft.VisualBasic (jeśli jest to język skryptów jest VB)  
   
  Można dodać obsługę dodatkowe przestrzenie nazw `namespace` atrybutu. Wartość atrybutu jest nazwa przestrzeni nazw.  
   

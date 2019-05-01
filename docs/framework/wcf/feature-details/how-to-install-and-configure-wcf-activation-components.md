@@ -5,18 +5,18 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039146"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF
 W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji procesów systemu Windows (znany także jako WAS) na [!INCLUDE[wv](../../../../includes/wv-md.md)] do hostowania usług Windows Communication Foundation (WCF) protokołów sieciowych usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano w krokach dla tej konfiguracji:  
   
--   Zainstalować (lub Potwierdź instalację) składników aktywacji programu WCF.  
+- Zainstalować (lub Potwierdź instalację) składników aktywacji programu WCF.  
   
--   Skonfiguruj WAS do obsługi protokołu innego niż HTTP. Poniższa procedura umożliwia skonfigurowanie [!INCLUDE[wv](../../../../includes/wv-md.md)] aktywacji TCP.  
+- Skonfiguruj WAS do obsługi protokołu innego niż HTTP. Poniższa procedura umożliwia skonfigurowanie [!INCLUDE[wv](../../../../includes/wv-md.md)] aktywacji TCP.  
   
  Gdy instalowanie i konfigurowanie usługi WAS, zobaczysz [jak: Hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) procedury utworzyć usługę WCF, która uwidacznia punkt końcowy protokołu HTTP, który wykorzystuje WAS.  
   
@@ -57,7 +57,7 @@ W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji proces
   
      Dla wygody następujące dwa kroki są implementowane w pliku wsadowym, o nazwie RemoveNetTcpSiteBinding.cmd znajduje się w katalogu próbki.  
   
-    1.  Usuń net.tcp z listy włączone protokoły, uruchamiając następujące polecenie w oknie wiersza polecenia uprawnień administratora.  
+    1. Usuń net.tcp z listy włączone protokoły, uruchamiając następujące polecenie w oknie wiersza polecenia uprawnień administratora.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -67,7 +67,7 @@ W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji proces
         > [!NOTE]
         >  To polecenie jest pojedynczy wiersz tekstu.  
   
-    2.  Usuń powiązanie witryny net.tcp, uruchamiając następujące polecenie w oknie wiersza polecenia z podwyższonym poziomem uprawnień:  
+    2. Usuń powiązanie witryny net.tcp, uruchamiając następujące polecenie w oknie wiersza polecenia z podwyższonym poziomem uprawnień:  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

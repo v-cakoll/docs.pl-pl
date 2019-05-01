@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038608"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez protokół Kerberos.  
@@ -28,17 +28,17 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 |Współdziałanie|Tak, WS-Security-Kerberos tokenu profilu zgodnych klientów|  
 |Uwierzytelnianie (serwer)|Wzajemne uwierzytelnianie serwera i klienta|  
 |Uwierzytelnianie (klient)|Wzajemne uwierzytelnianie serwera i klienta|  
-|Integralność|Tak|  
-|Poufność|Yes|  
+|Integralność|Yes|  
+|Poufność|Tak|  
 |Transport|HTTP|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Usługa  
  Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
+- Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
   
--   Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
+- Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
  Poniższy kod tworzy punkt końcowy usługi, która używa zabezpieczenia wiadomości. Ten kod powoduje wyłączenie negocjowania poświadczeń usługi i utworzenie tokenu kontekstu zabezpieczeń (SCT).  
@@ -95,9 +95,9 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 ## <a name="client"></a>Klient  
  Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
+- Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
--   Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
+- Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie i pobieranie elementów osobno z kolekcji BlockingCollection'
+title: 'Instrukcje: Dodawanie i pobieranie elementów osobno w ramach kolekcji BlockingCollection'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e24c6b5aa02e8bc7ca4bcbf2c69bffd06216962
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054292"
 ---
-# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Instrukcje: Dodawanie i pobieranie elementów osobno z kolekcji BlockingCollection
+# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Instrukcje: Dodawanie i pobieranie elementów osobno w ramach kolekcji BlockingCollection
 W tym przykładzie przedstawiono sposób dodawania i usuwania elementów z <xref:System.Collections.Concurrent.BlockingCollection%601> blokowania i sposób bez blokowania. Aby uzyskać więcej informacji na temat <xref:System.Collections.Concurrent.BlockingCollection%601>, zobacz [BlockingCollection — Przegląd](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
   
  Na przykład jak wyliczyć <xref:System.Collections.Concurrent.BlockingCollection%601> dopóki nie jest pusta i nie więcej elementy zostaną dodane, zobacz [jak: Używanie metody ForEach do usuwanie elementów blockingcollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).

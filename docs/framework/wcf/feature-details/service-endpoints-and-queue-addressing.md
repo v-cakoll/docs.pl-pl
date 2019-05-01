@@ -3,11 +3,11 @@ title: Punkty końcowe usługi i adresowanie kolejki
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050392"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
 W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z kolejki i sposobu mapowania punktów końcowych usługi do kolejek. Przypominamy Poniższa ilustracja przedstawia klasycznego wdrożenia aplikacji w kolejce usług Windows Communication Foundation (WCF).  
@@ -34,11 +34,11 @@ W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z k
   
  gdzie:  
   
--   \<*Nazwa hosta*> jest nazwą komputera, który jest hostem kolejka docelowa.  
+- \<*Nazwa hosta*> jest nazwą komputera, który jest hostem kolejka docelowa.  
   
--   [prywatnej] jest opcjonalna. Jest używany podczas adresowania kolejki docelowej, która jest kolejki prywatnej. Aby rozwiązać kolejka publiczna, nie można określać prywatnych. Należy pamiętać, że, w przeciwieństwie do ścieżki MSMQ "$" w formie identyfikatora URI usługi WCF.  
+- [prywatnej] jest opcjonalna. Jest używany podczas adresowania kolejki docelowej, która jest kolejki prywatnej. Aby rozwiązać kolejka publiczna, nie można określać prywatnych. Należy pamiętać, że, w przeciwieństwie do ścieżki MSMQ "$" w formie identyfikatora URI usługi WCF.  
   
--   \<*Nazwa kolejki*> jest nazwą kolejki. Nazwa kolejki może również dotyczyć kolejki podrzędnej. W efekcie \< *Nazwa kolejki*> = \< *nazwy z kolejki*> [; *podrzędne queue-name*].  
+- \<*Nazwa kolejki*> jest nazwą kolejki. Nazwa kolejki może również dotyczyć kolejki podrzędnej. W efekcie \< *Nazwa kolejki*> = \< *nazwy z kolejki*> [; *podrzędne queue-name*].  
   
  Przykład1: Aby rozwiązać kolejki prywatnej PurchaseOrders hostowanych na komputerze abc atadatum.com, identyfikator URI będzie mieć net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -51,9 +51,9 @@ W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z k
 ### <a name="multiple-contracts-in-a-queue"></a>Wiele kontraktów w kolejce  
  Wiadomości w kolejce można zaimplementować różnymi umowami. W tym przypadku jest istotne, jedną z następujących jest wartość true, aby pomyślnie odczytywać i przetwarzać komunikaty:  
   
--   Określ punkt końcowy usługi, która implementuje wszystkich umów. Jest to zalecane podejście.  
+- Określ punkt końcowy usługi, która implementuje wszystkich umów. Jest to zalecane podejście.  
   
--   Określ wiele punktów końcowych z różnymi umowami, ale upewnij się, że wszystkie punkty końcowe używać tego samego `NetMsmqBinding` obiektu. Dispatching logiki w modelu ServiceModel używa pompy komunikatów, która odczytuje komunikaty z kanał transportu do wysyłki ostatecznie demultipleksowanie komunikaty oparte na umowie do różnych punktów końcowych. "Pompy komunikatów" jest tworzony dla pary identyfikatora URI/wiązania nasłuchiwania. Adres kolejki jest używany jako identyfikator URI nasłuchiwania przez odbiornik umieszczonych w kolejce. Posiadanie wszystkich użycie punktów końcowych, tego samego obiektu powiązania gwarantuje, że pompa jednego komunikatu służy do odczytu komunikatu i cofnąć multipleksować do odpowiednich punktów końcowych na podstawie umowy.  
+- Określ wiele punktów końcowych z różnymi umowami, ale upewnij się, że wszystkie punkty końcowe używać tego samego `NetMsmqBinding` obiektu. Dispatching logiki w modelu ServiceModel używa pompy komunikatów, która odczytuje komunikaty z kanał transportu do wysyłki ostatecznie demultipleksowanie komunikaty oparte na umowie do różnych punktów końcowych. "Pompy komunikatów" jest tworzony dla pary identyfikatora URI/wiązania nasłuchiwania. Adres kolejki jest używany jako identyfikator URI nasłuchiwania przez odbiornik umieszczonych w kolejce. Posiadanie wszystkich użycie punktów końcowych, tego samego obiektu powiązania gwarantuje, że pompa jednego komunikatu służy do odczytu komunikatu i cofnąć multipleksować do odpowiednich punktów końcowych na podstawie umowy.  
   
 ### <a name="srmp-messaging"></a>SRMP komunikatów  
  Jak już wspomniano można użyć protokołu SRMP transferów kolejki do kolejki. Jest to często używane, podczas transportu HTTP przesyła wiadomości między kolejki transmisji i kolejki docelowej.  

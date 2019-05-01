@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
 ms.openlocfilehash: 704ca667a6d14ade7be0192e872f5e40791cb864
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053811"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Rozwiązywanie problemów związanych z odziedziczonymi programami obsługi zdarzeń w Visual Basic
 Ten temat zawiera listę typowych problemów, które wynikają z programami obsługi zdarzeń w składników odziedziczonych.  
@@ -22,11 +22,11 @@ Ten temat zawiera listę typowych problemów, które wynikają z programami obs�
   
 #### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Kod w obsłudze zdarzeń wykonuje się dwa razy dla każdego wywołania  
   
--   Program obsługi zdarzeń dziedziczonych nie może zawierać [obsługuje](../../../../visual-basic/language-reference/statements/handles-clause.md) klauzuli. Metoda w klasie bazowej jest już skojarzony ze zdarzeniem i nastąpi odpowiednio. Usuń `Handles` klauzuli od dziedziczonej metody.  
+- Program obsługi zdarzeń dziedziczonych nie może zawierać [obsługuje](../../../../visual-basic/language-reference/statements/handles-clause.md) klauzuli. Metoda w klasie bazowej jest już skojarzony ze zdarzeniem i nastąpi odpowiednio. Usuń `Handles` klauzuli od dziedziczonej metody.  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
--   Jeśli nie ma dziedziczonej metody `Handles` — słowo kluczowe, sprawdź, czy kod zawiera dodatkowy [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md) lub dodatkowe metody, które obsługują te same zdarzenia.  
+- Jeśli nie ma dziedziczonej metody `Handles` — słowo kluczowe, sprawdź, czy kod zawiera dodatkowy [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md) lub dodatkowe metody, które obsługują te same zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

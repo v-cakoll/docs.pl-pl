@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: dfc08d4623f124a41412907f5a118e8d9ee7833d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517775"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773881"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Tworzenie aplikacji klienckich programu .NET Framework (WCF Data Services — Szybki Start)
 
@@ -49,10 +49,10 @@ To jest ostatnim zadaniem tego przewodnika Szybki Start usług danych WCF. W ram
 
 3. W **Eksploratora rozwiązań** w obszarze **NorthwindClient**, otwórz stronę kodową dla pliku MainWindow.xaml i Dodaj następujący kod `using` — instrukcja (`Imports` w języku Visual Basic).
 
-     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
-     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
+    [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
+    [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
 
-3. Wstaw następujący kod, który wykonuje kwerendę usługi danych i wiąże wynik, który ma <xref:System.Data.Services.Client.DataServiceCollection%601> do `MainWindow` klasy:
+4. Wstaw następujący kod, który wykonuje kwerendę usługi danych i wiąże wynik, który ma <xref:System.Data.Services.Client.DataServiceCollection%601> do `MainWindow` klasy:
 
     > [!NOTE]
     > Należy zastąpić nazwę hosta `localhost:12345` za pomocą serwera i port, który jest hostem Twoje wystąpienie usługi danych Northwind.
@@ -60,7 +60,7 @@ To jest ostatnim zadaniem tego przewodnika Szybki Start usług danych WCF. W ram
      [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#querycode)]
      [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#querycode)]
 
-4. Wstaw następujący kod, który zapisuje zmiany w `MainWindow` klasy:
+5. Wstaw następujący kod, który zapisuje zmiany w `MainWindow` klasy:
 
      [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#savechanges)]
      [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#savechanges)]

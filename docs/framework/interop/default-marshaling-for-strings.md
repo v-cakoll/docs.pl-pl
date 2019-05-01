@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4433f05a76d389f6dda5afcfe898d942c4e7d05f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c07747c5100f6f7b7ee80b2e7e39d22362698e4
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978526"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807829"
 ---
 # <a name="default-marshaling-for-strings"></a>Organizowanie domyślne dotyczące ciągów
 
@@ -92,6 +92,7 @@ Poniższa tabela zawiera opcje marshaling dla ciągów, gdy organizowany jako ar
 |`UnmanagedType.BStr`|Styl modelu COM `BSTR` z prefiksem długości i znaków Unicode.|
 |`UnmanagedType.LPStr` (ustawienie domyślne)|Wskaźnik do tablicy znaków ANSI zakończony znakiem null.|
 |`UnmanagedType.LPTStr`|Wskaźnik do tablicą zakończoną znakiem null znaków zależnych od platformy.|
+|`UnmanagedType.LPUTF8Str`|Wskaźnik do tablicą zakończoną znakiem null UTF-8 zakodowanych znaków.|
 |`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończony wartością null.|
 |`UnmanagedType.TBStr`|Styl modelu COM `BSTR` z prefiksem długości i znaków zależnych od platformy.|
 |`VBByRefStr`|Wartość, która umożliwia Visual Basic .NET zmienić parametry w kod niezarządzany i mieć wyniki zostaną uwzględnione w kodzie zarządzanym. Ta wartość jest obsługiwana tylko w przypadku wywołania platformy. Jest to wartość domyślna w języku Visual Basic dla `ByVal` ciągów.|
@@ -110,6 +111,8 @@ class StringLibAPI
     [DllImport("StringLib.dll")]
     public static extern void PassLPTStr([MarshalAs(UnmanagedType.LPTStr)] string s);
     [DllImport("StringLib.dll")]
+    public static extern void PassLPUTF8Str([MarshalAs(UnmanagedType.LPUTF8Str)] string s);
+    [DllImport("StringLib.dll")]
     public static extern void PassBStr([MarshalAs(UnmanagedType.BStr)] string s);
     [DllImport("StringLib.dll")]
     public static extern void PassAnsiBStr([MarshalAs(UnmanagedType.AnsiBStr)] string s);
@@ -120,18 +123,20 @@ class StringLibAPI
 
 ```vb
 Class StringLibAPI
-    Public Declare Auto Sub PassLPStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.LPStr)> s As String)
-    Public Declare Auto Sub PassLPWStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.LPWStr)> s As String)
-    Public Declare Auto Sub PassLPTStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.LPTStr)> s As String)
-    Public Declare Auto Sub PassBStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.BStr)> s As String)
-    Public Declare Auto Sub PassAnsiBStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.AnsiBStr)> s As String)
-    Public Declare Auto Sub PassTBStr Lib "StringLib.dll" _
-        (<MarshalAs(UnmanagedType.TBStr)> s As String)
+    Public Declare Auto Sub PassLPStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.LPStr)> s As String)
+    Public Declare Auto Sub PassLPWStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.LPWStr)> s As String)
+    Public Declare Auto Sub PassLPTStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.LPTStr)> s As String)
+    Public Declare Auto Sub PassLPUTF8Str Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.LPUTF8Str)> s As String)
+    Public Declare Auto Sub PassBStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.BStr)> s As String)
+    Public Declare Auto Sub PassAnsiBStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.AnsiBStr)> s As String)
+    Public Declare Auto Sub PassTBStr Lib "StringLib.dll" (
+        <MarshalAs(UnmanagedType.TBStr)> s As String)
 End Class
 ```
 
@@ -144,6 +149,7 @@ Ciągi są prawidłowe elementy członkowskie struktur; jednak <xref:System.Text
 |`UnmanagedType.BStr`|Styl modelu COM `BSTR` z prefiksem długości i znaków Unicode.|
 |`UnmanagedType.LPStr` (ustawienie domyślne)|Wskaźnik do tablicy znaków ANSI zakończony znakiem null.|
 |`UnmanagedType.LPTStr`|Wskaźnik do tablicą zakończoną znakiem null znaków zależnych od platformy.|
+|`UnmanagedType.LPUTF8Str`|Wskaźnik do tablicą zakończoną znakiem null UTF-8 zakodowanych znaków.|
 |`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończony wartością null.|
 |`UnmanagedType.ByValTStr`|Tablica o stałej długości, znaków; Typ tablicy jest ustalany przez zestaw znaków zawierającą strukturę.|
 

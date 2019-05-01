@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053096"
 ---
 # <a name="wpf-brushes-overview"></a>Przegląd Pędzle WPF
 Wszystko, co jest widoczne na ekranie jest widoczny, ponieważ został on malowane przez pędzla. Na przykład jest używany pędzel opisujący tło przycisku, tekst pierwszego planu i wypełnienie kształtu. W tym temacie przedstawiono koncepcję malowanie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzle oraz przykłady. Pędzle umożliwia malowanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] obiektów ze wszystkim z proste, pełne kolory do złożonych zestawów wzorców i obrazy.  
@@ -131,9 +131,9 @@ Prostokąt malowane przy użyciu VisualBrush
 ## <a name="paint-using-predefined-and-system-brushes"></a>Malowanie przy użyciu wstępnie zdefiniowane i pędzli systemowych  
  Dla wygody Windows Presentation Foundation (WPF) zapewnia zestaw wstępnie zdefiniowanych i system pędzle, której można malować obiektów.  
   
--   Aby uzyskać listę dostępnych pędzle wstępnie zdefiniowanych, zobacz <xref:System.Windows.Media.Brushes> klasy. Przykład przedstawiający sposób użycia wstępnie zdefiniowanych pędzla, zobacz [Maluj obszar jednolitym kolorem](how-to-paint-an-area-with-a-solid-color.md).  
+- Aby uzyskać listę dostępnych pędzle wstępnie zdefiniowanych, zobacz <xref:System.Windows.Media.Brushes> klasy. Przykład przedstawiający sposób użycia wstępnie zdefiniowanych pędzla, zobacz [Maluj obszar jednolitym kolorem](how-to-paint-an-area-with-a-solid-color.md).  
   
--   Aby uzyskać listę pędzle dostępnej w systemie, zobacz <xref:System.Windows.SystemColors> klasy. Aby uzyskać przykład, zobacz [Maluj obszar pędzlem systemowym](how-to-paint-an-area-with-a-system-brush.md).  
+- Aby uzyskać listę pędzle dostępnej w systemie, zobacz <xref:System.Windows.SystemColors> klasy. Aby uzyskać przykład, zobacz [Maluj obszar pędzlem systemowym](how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Typowe funkcje pędzla  

@@ -3,11 +3,11 @@ title: 'Instrukcje: określanie poświadczeń zabezpieczeń kanału'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038873"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Instrukcje: określanie poświadczeń zabezpieczeń kanału
 Monikera programu Windows Communication Foundation (WCF) umożliwia aplikacji modelu COM do wywołania usługi WCF. Większość usług WCF wymaga klienta określić poświadczenia dla uwierzytelniania i autoryzacji. Podczas wywoływania usługi WCF z klienta programu WCF, te poświadczenia można określić w kodzie zarządzanym lub w pliku konfiguracji aplikacji. Podczas wywoływania usługi WCF z poziomu aplikacji modelu COM, można użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu, aby określić poświadczenia. W tym temacie przedstawiają różne sposoby, aby określić poświadczenia, za pomocą <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu.  

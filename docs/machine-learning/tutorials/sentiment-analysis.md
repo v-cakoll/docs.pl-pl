@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfik
 ms.date: 04/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 45e94e325fc4fbfaf1e71f7839d5083e44d5863e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b07668f19219040ea5a4dbfd7f175088f38357d
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973703"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808240"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -98,7 +98,7 @@ Klasa wejściowy zestaw danych `SentimentData`, ma `string` dla komentarza (`Sen
 |WOW... Pracowałem z tego miejsca.              |    1     |
 |Usługa była bardzo szybkie.              |    1     |
 
-`SentimentPrediction` Klasa prognozowania służy po szkoleń modelowych. Ma ona pojedynczy atrybut typu wartość logiczna (`Sentiment`) i `PredictedLabel` `ColumnName` atrybutu. `Label` Umożliwia tworzenie i uczenie modelu, a także używane z Podziel się z zestawu danych testowych do ewaluacji modelu. `PredictedLabel` Używany podczas prognoz i oceny. W wersji ewaluacyjnej są używane dane szkoleniowe, przewidywane wartości i modelu.
+`SentimentPrediction` Klasa prognozowania służy po szkoleń modelowych. Dziedziczy `SentimentData` do wyświetlania `SentimentText` z prognozy. `SentimentPrediction` zawiera pojedynczy atrybut typu wartość logiczna (`Sentiment`) i `PredictedLabel` `ColumnName` atrybutu. `Label` Umożliwia tworzenie i uczenie modelu, a także używane z Podziel się z zestawu danych testowych do ewaluacji modelu. `PredictedLabel` Używany podczas prognoz i oceny. W wersji ewaluacyjnej są używane dane szkoleniowe, przewidywane wartości i modelu.
 
 [Klasy MLContext](xref:Microsoft.ML.MLContext) to punkt początkowy dla wszystkich operacji w strukturze ML.NET oraz inicjowanie `mlContext` tworzy nowe środowisko strukturze ML.NET, które mogą być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Przypomina, model `DBContext` platformy Entity Framework.
 
@@ -348,11 +348,7 @@ Utwórz nagłówek dla prognoz, używając następującego kodu:
 
 [!code-csharp[OutputHeaders](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddInfoMessage "Display prediction outputs")]
 
-Przed wyświetleniem wyników, należy połączyć oryginalnym komentarzem z jego przewidywane tonacji za pomocą [Zip()](xref:System.Linq.Enumerable.Zip%2A) metody:
-
-[!code-csharp[BuildTuples](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#BuildSentimentPredictionPairs "Build the pairs of sentiment data and predictions")]
-
-Teraz, gdy `SentimentText` i `Sentiment` są łączone w klasie, wyświetlić wyniki:
+Ponieważ `SentimentPrediction` odziedziczone `SentimentData`, `Transform()` metoda wypełnione `SentimentText` z polami przewidywane. Zgodnie z procesu strukturze ML.NET przetwarza, każdy składnik dodaje kolumn i dzięki temu można łatwo wyświetlić wyniki:
 
 [!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayResults "Display the predictions")]
 

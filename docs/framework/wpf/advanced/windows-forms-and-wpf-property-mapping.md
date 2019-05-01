@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053135"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mapowanie właściwości Windows Forms i WPF
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] technologie mają dwa modele inną właściwość. *Mapowanie właściwości* obsługuje współdziałanie między dwoma architekturami i zapewnia następujące możliwości:  
   
--   Ułatwia Mapowanie właściwości istotne zmiany w środowisku hosta do obsługiwanego formantu lub elementu.  
+- Ułatwia Mapowanie właściwości istotne zmiany w środowisku hosta do obsługiwanego formantu lub elementu.  
   
--   Udostępnia domyślne Obsługa powszechnie mapowania najczęściej używanych właściwości.  
+- Udostępnia domyślne Obsługa powszechnie mapowania najczęściej używanych właściwości.  
   
--   Umożliwia łatwe usuwanie, zastępowanie i rozszerzanie właściwości domyślnych.  
+- Umożliwia łatwe usuwanie, zastępowanie i rozszerzanie właściwości domyślnych.  
   
--   Zapewnia automatycznego wykrywania i przekonwertowana na hostowanej formantu lub elementu zmiany wartości właściwości na hoście.  
+- Zapewnia automatycznego wykrywania i przekonwertowana na hostowanej formantu lub elementu zmiany wartości właściwości na hoście.  
   
 > [!NOTE]
 >  Zdarzenia zmiany właściwości nie są propagowane w górę kontrolka hostująca lub hierarchia elementów. Nie jest wykonywana Translacja właściwość, jeśli lokalna wartość właściwości nie zmienia się ze względu na ustawienie bezpośredniego, style, dziedziczenie, powiązania danych lub innych mechanizmów, które zmieniają wartości właściwości.  
@@ -54,66 +54,66 @@ ms.locfileid: "59088824"
 ## <a name="updates-to-parent-properties"></a>Aktualizacje właściwości nadrzędnej  
  Zmiany właściwości nadrzędnej większość spowodować powiadomień do kontroli podrzędny obiekt obsługiwany. Poniższa lista zawiera opis właściwości, które nie powodują powiadomienia, gdy zmienią się ich wartości.  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  Na przykład, jeśli zmienisz wartość <xref:System.Windows.Controls.Control.Background%2A> właściwość <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu <xref:System.Windows.Forms.Control.BackColor%2A> nie zmienia własności obsługiwanego formantu.  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>Mapowanie właściwości z formantu ElementHost  
  Następujące właściwości zapewniają powiadomienia o zmianie wbudowanych. Nie wywołuj <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> metody, gdy mapowanie tych właściwości:  
   
--   AutoSize  
+- AutoSize  
   
--   BackColor  
+- BackColor  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   Właściwości CausesValidation  
+- Właściwości CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   Kursor  
+- Kursor  
   
--   Dock  
+- Dock  
   
--   Enabled  
+- Enabled  
   
--   Czcionka  
+- Czcionka  
   
--   ForeColor  
+- ForeColor  
   
--   Lokalizacja  
+- Lokalizacja  
   
--   Margines  
+- Margines  
   
--   Dopełnienie  
+- Dopełnienie  
   
--   Nadrzędny  
+- Nadrzędny  
   
--   Region  
+- Region  
   
--   RightToLeft  
+- RightToLeft  
   
--   Rozmiar  
+- Rozmiar  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   Tekst  
+- Tekst  
   
--   Widoczne  
+- Widoczne  
   
  <xref:System.Windows.Forms.Integration.ElementHost> Kontroli tłumaczy domyślne [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] właściwości w celu ich [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odpowiedniki przy użyciu poniższej tabeli translacji.  
   

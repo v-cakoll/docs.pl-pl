@@ -9,24 +9,24 @@ ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032759"
 ---
 # <a name="specifying-an-entry-point"></a>Określanie punktu wejścia
 Punkt wejścia określa lokalizację funkcji w bibliotece DLL. W obrębie zarządzanego projektu, oryginalna nazwa lub porządkowy punkt wejścia docelowej funkcji określa tę funkcję wewnątrz międzyoperacyjnej granicy. Co więcej, możesz zmapować punkt wejścia do innej nazwy, efektywnie zmieniając nazwę funkcji.  
   
  Poniższa lista zawiera możliwe powody zmiany nazwy funkcji DLL:  
   
--   Aby uniknąć używania nazw funkcji API wrażliwych na wielkość liter  
+- Aby uniknąć używania nazw funkcji API wrażliwych na wielkość liter  
   
--   Aby postępować zgodnie z istniejącymi standardami nazewnictwa  
+- Aby postępować zgodnie z istniejącymi standardami nazewnictwa  
   
--   Aby pomieścić funkcje, które przyjmują różne typy danych (poprzez deklarację wielu wersji tej samej funkcji DLL)  
+- Aby pomieścić funkcje, które przyjmują różne typy danych (poprzez deklarację wielu wersji tej samej funkcji DLL)  
   
--   Aby uprościć używanie API, które zawierają wersje ANSI i Unicode  
+- Aby uprościć używanie API, które zawierają wersje ANSI i Unicode  
   
  Ten temat demonstruje, w jaki sposób zmienić nazwę funkcji DLL w kodzie zarządzanym.  
   

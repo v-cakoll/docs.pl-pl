@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 1721d32f8cdc9b6ea4b4732e38afa56a8a532600
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59234821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62091697"
 ---
 ### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>Właściwości DbParameter.Precision i DbParameter.Scale są teraz publicznymi wirtualnymi elementami członkowskimi
 

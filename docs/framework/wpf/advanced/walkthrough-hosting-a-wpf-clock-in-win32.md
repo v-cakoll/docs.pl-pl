@@ -1,19 +1,19 @@
 ---
-title: 'Przewodnik: Hosting zegara WPF w Win32'
+title: 'Przewodnik: hostowanie zegara WPF w Win32'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494951"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808038"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Przewodnik: Hosting zegara WPF w Win32
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Przewodnik: hostowanie zegara WPF w Win32
 
 Umieszczenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wewnątrz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji, używa <xref:System.Windows.Interop.HwndSource>, zapewniającą HWND, który zawiera Twoje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości. Najpierw należy utworzyć <xref:System.Windows.Interop.HwndSource>, nadając mu parametry, podobnie jak CreateWindow. A następnie poinformuj <xref:System.Windows.Interop.HwndSource> o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości, która ma wewnątrz niego. Na koniec Uzyskaj HWND z <xref:System.Windows.Interop.HwndSource>. W tym instruktażu pokazano, jak tworzyć mieszane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wewnątrz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikację, która reimplements systemu operacyjnego **właściwości daty i godziny** okna dialogowego.
 
@@ -29,11 +29,11 @@ Ten samouczek koncentruje się na ważnych kroków tworzenia współdziałanie a
 
 Na poniższym rysunku przedstawiono zamierzony produkt końcowy w części tego samouczka:
 
-![Okno dialogowe Właściwości daty i godziny](./media/interoparch06.PNG "InteropArch06")
+![Zrzut ekranu pokazujący okno dialogowe Właściwości daty i godziny.](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-Utwórz ponownie tego okna dialogowego, tworząc C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] projektu w [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]i przy użyciu edytora okien dialogowych, aby utworzyć następujące:
+Utwórz ponownie tego okna dialogowego, tworząc C++ projekt systemu Win32 w programie Visual Studio i przy użyciu edytora okien dialogowych, aby utworzyć następujące:
 
-![Okno dialogowe Właściwości daty i godziny](./media/interoparch07.PNG "InteropArch07")
+![Utworzone ponownie okno dialogowe Właściwości daty i godziny](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
 (Nie trzeba używać [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] używać <xref:System.Windows.Interop.HwndSource>, i nie trzeba używać języka C++ do pisania [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programów, ale jest dość typowy sposób przeprowadzenia i pozwala również na stopniowym wyjaśnienie samouczka).
 
@@ -229,7 +229,7 @@ A Oto towarzyszący kodem:
 
 Wynik końcowy wygląda następująco:
 
-![Okno dialogowe Właściwości daty i godziny](./media/interoparch08.PNG "InteropArch08")
+![Okno dialogowe Właściwości daty i godziny wynik końcowy](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 Aby porównać wynik końcowy Twojego kodu, który tego zrzutu ekranu, zobacz [przykład współdziałanie zegara Win32](https://go.microsoft.com/fwlink/?LinkID=160051).
 

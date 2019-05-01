@@ -8,11 +8,11 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
 ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053668"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Instrukcje: Sortowanie tablicy w języku Visual Basic
 Ten przykład deklaruje tablicę `String` obiektów o nazwie `zooAnimals`, wypełnia ją i następnie sortuje ją alfabetycznie.  
@@ -32,16 +32,16 @@ End Sub
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Dostęp do biblioteki Mscorlib.dll i <xref:System> przestrzeni nazw.  
+- Dostęp do biblioteki Mscorlib.dll i <xref:System> przestrzeni nazw.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Tablica jest pusta (<xref:System.ArgumentNullException> klasy)  
+- Tablica jest pusta (<xref:System.ArgumentNullException> klasy)  
   
--   Tablica ma charakter wielowymiarowy (<xref:System.RankException> klasy)  
+- Tablica ma charakter wielowymiarowy (<xref:System.RankException> klasy)  
   
--   Nie należy implementować jeden lub więcej elementów tablicy <xref:System.IComparable> interfejsu (<xref:System.InvalidOperationException> klasy)  
+- Nie należy implementować jeden lub więcej elementów tablicy <xref:System.IComparable> interfejsu (<xref:System.InvalidOperationException> klasy)  
   
 ## <a name="see-also"></a>Zobacz także
 

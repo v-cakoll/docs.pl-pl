@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
 ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038717"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Instrukcje: używanie dostawcy członkostwa platformy ASP.NET
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Dostawcy członkostwa jest funkcją, która umożliwia [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] deweloperom tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie unikatowych użytkowników kombinacji nazwy i hasła. Za pomocą tej funkcji każdy użytkownik może ustanowić konto w witrynie i logowanie za wyłączny dostęp do witryn i usług. Jest to w przeciwieństwie do zabezpieczeń Windows, która wymaga od użytkowników mają konta w domenie Windows. Zamiast tego można użyć każdemu użytkownikowi, który dostarcza swoje poświadczenia (kombinacja nazwy i hasła użytkownika), lokacji i jej usługi.  

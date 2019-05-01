@@ -6,11 +6,11 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032958"
 ---
 # <a name="printing-how-to-topics"></a>Drukowanie Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia poligrafii i dołączone do funkcji zarządzania drukowaniem systemu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oraz nowe [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ścieżka wydruku.  

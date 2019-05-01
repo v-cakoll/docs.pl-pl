@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050717"
 ---
 # <a name="transport-quotas"></a>Przydziały dla transportu
 Przydziały dla transportu to mechanizm zasad dotyczących decydowania, gdy połączenie jest korzystanie z zasobów. Przydział to stały limit, który uniemożliwia korzystanie z dodatkowych zasobów, po przekroczeniu wartości limitu przydziału. Przydziały dla transportu uniemożliwia złośliwym lub przypadkowe atakom typu odmowa usługi.  
@@ -19,11 +19,11 @@ Przydziały dla transportu to mechanizm zasad dotyczących decydowania, gdy poł
 ## <a name="types-of-transport-quotas"></a>Typy przydziały dla transportu  
  Transporty WCF są trzy typy przydziałów:  
   
--   *Limity czasu* eliminowanie atakom typu odmowa usługi, które zależą od zajmowania zasobów przez dłuższy czas.  
+- *Limity czasu* eliminowanie atakom typu odmowa usługi, które zależą od zajmowania zasobów przez dłuższy czas.  
   
--   *Limity przydziału pamięci* zapobiec jednego połączenia z wyczerpaniem pamięci systemowej i odmawianie usługi do innych połączeń.  
+- *Limity przydziału pamięci* zapobiec jednego połączenia z wyczerpaniem pamięci systemowej i odmawianie usługi do innych połączeń.  
   
--   *Limity rozmiaru kolekcji* powiązany zużycie zasobów, które pośrednio przydzielić pamięci lub w ograniczoną.  
+- *Limity rozmiaru kolekcji* powiązany zużycie zasobów, które pośrednio przydzielić pamięci lub w ograniczoną.  
   
 ## <a name="transport-quota-descriptions"></a>Opisy przydziału transportu  
  W tej sekcji opisano przydziały dla transportu dostępnych dla standardowego transportu WCF: HTTP (S), protokół TCP/IP i nazwanych potoków. Transporty niestandardowe mogą uwidocznić swoje własne konfigurowalne przydziały nie są uwzględnione na tej liście. Zapoznaj się z dokumentacją dla niestandardowych transportu dowiedzieć się o swoje limity przydziału.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053785"
 ---
 # <a name="visual-basic-language-features"></a>Funkcje języka Visual Basic
 Poniższe tematy prezentują i omówiono podstawowe składniki Visual Basic, obiektowy język programowania. Po utworzeniu interfejsu użytkownika dla aplikacji za pomocą formularzy i kontrolek, należy napisać kod, który definiuje zachowanie aplikacji. Podobnie jak w przypadku nowoczesnego języka programowania, Visual Basic obsługuje szereg typowych narzędzi programistycznych i elementy języka.  
@@ -38,7 +38,7 @@ Poniższe tematy prezentują i omówiono podstawowe składniki Visual Basic, obi
  [Zadeklarowane elementy](../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
  Obejmuje programowanie elementy można zadeklarować, ich nazwy i właściwości, i jak kompilator rozpoznaje odwołań do nich.  
   
- [Delegaci](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [Delegaty](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  Wprowadzenie do delegatów i jak są używane w języku Visual Basic.  
   
  [Wczesne i późne powiązania](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  

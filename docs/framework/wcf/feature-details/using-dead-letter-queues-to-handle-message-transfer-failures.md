@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050704"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem
 Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te komunikaty zakończone niepowodzeniem są rejestrowane w kolejce wiadomości utraconych. Dostarczanie nie powiodło się, może być spowodowany powodów, takich jak awarie sieci, usunięto kolejkę, pełną kolejkę, wystąpił błąd uwierzytelniania lub niepowodzenie dostarczać oprogramowanie na czas.  
@@ -30,18 +30,18 @@ Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te kom
   
  Powiązanie ma następujące właściwości kolejki utraconych wiadomości:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Odczytywanie komunikatów z kolejki utraconych wiadomości  
  Aplikacja, która odczytuje komunikaty z kolejki utraconych wiadomości jest podobny do usługi WCF, która odczytuje z kolejki usługi aplikacji, z wyjątkiem następujących niewielkich różnic:  
   
--   Odczytywanie komunikatów z kolejki utraconych wiadomości transakcyjnych systemu, jednolity identyfikator zasobów (URI) musi mieć postać: net.msmq://localhost/system$; DeadXact.  
+- Odczytywanie komunikatów z kolejki utraconych wiadomości transakcyjnych systemu, jednolity identyfikator zasobów (URI) musi mieć postać: net.msmq://localhost/system$; DeadXact.  
   
--   Odczytywanie komunikatów z kolejki utraconych wiadomości nietransakcyjnej systemu, identyfikator URI musi mieć postać: net.msmq://localhost/system$; utraconych wiadomości.  
+- Odczytywanie komunikatów z kolejki utraconych wiadomości nietransakcyjnej systemu, identyfikator URI musi mieć postać: net.msmq://localhost/system$; utraconych wiadomości.  
   
--   Odczytywanie komunikatów z kolejki utraconych wiadomości niestandardowych, identyfikator URI musi być formularza: net.msmq://localhost/private/\<*niestandardowe dlq nazwy*> gdzie *niestandardowe dlq nazwy* jest nazwa niestandardowa Kolejka utraconych wiadomości.  
+- Odczytywanie komunikatów z kolejki utraconych wiadomości niestandardowych, identyfikator URI musi być formularza: net.msmq://localhost/private/\<*niestandardowe dlq nazwy*> gdzie *niestandardowe dlq nazwy* jest nazwa niestandardowa Kolejka utraconych wiadomości.  
   
  Aby uzyskać więcej informacji na temat kolejek adres zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   

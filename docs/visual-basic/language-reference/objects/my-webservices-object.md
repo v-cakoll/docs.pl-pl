@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
 ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050293"
 ---
 # <a name="mywebservices-object"></a>My.WebServices — Obiekt
 Udostępnia właściwości do tworzenia i uzyskiwania dostępu do pojedynczego wystąpienia poszczególnych usług sieci Web XML odwołuje się do bieżącego projektu.  

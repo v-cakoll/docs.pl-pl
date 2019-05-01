@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051029"
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 <xref:System.Windows.Controls.Panel> elementy są składniki, które kontrolują renderowanie elementów — ich rozmiar i wymiarów, ich pozycji i rozmieszczenie ich zawartość elementu podrzędnego. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zawiera szereg wstępnie zdefiniowanych <xref:System.Windows.Controls.Panel> elementów, a także możliwość utworzenia niestandardowych <xref:System.Windows.Controls.Panel> elementów.  
   
  Ten temat zawiera następujące sekcje.  
   
--   [Klasa panelu](#Panels_view_from_10000_feet)  
+- [Klasa panelu](#Panels_view_from_10000_feet)  
   
--   [Panel elementu wspólnych elementów członkowskich](#Panels_declared_members)  
+- [Panel elementu wspólnych elementów członkowskich](#Panels_declared_members)  
   
--   [Elementy panelu pochodne](#Panels_derived_elements)  
+- [Elementy panelu pochodne](#Panels_derived_elements)  
   
--   [Panele interfejsu użytkownika](#Panels_main_UI_elements)  
+- [Panele interfejsu użytkownika](#Panels_main_UI_elements)  
   
--   [Panel zagnieżdżonych elementów](#Panels_nested_panel_elements)  
+- [Panel zagnieżdżonych elementów](#Panels_nested_panel_elements)  
   
--   [Elementy niestandardowe panelu](#Panels_custom_panel_elements)  
+- [Elementy niestandardowe panelu](#Panels_custom_panel_elements)  
   
--   [Obsługa lokalizacji/globalizacji](#Panels_global_localization)  
+- [Obsługa lokalizacji/globalizacji](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>Klasa panelu  
@@ -64,10 +64,10 @@ ms.locfileid: "59157875"
   
 |Nazwa elementu|Panel interfejsu użytkownika?|Opis|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|Yes|Definiuje obszar, w którym możesz jawnie pozycjonować elementy podrzędne współrzędnymi względem <xref:System.Windows.Controls.Canvas> obszaru.|  
+|<xref:System.Windows.Controls.Canvas>|Tak|Definiuje obszar, w którym możesz jawnie pozycjonować elementy podrzędne współrzędnymi względem <xref:System.Windows.Controls.Canvas> obszaru.|  
 |<xref:System.Windows.Controls.DockPanel>|Tak|Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub pionie, względem siebie.|  
 |<xref:System.Windows.Controls.Grid>|Tak|Definiuje elastyczny obszar siatki składający się z kolumnami i wierszami. Elementy podrzędne <xref:System.Windows.Controls.Grid> umieszczony dokładnie przy użyciu <xref:System.Windows.FrameworkElement.Margin%2A> właściwości.|  
-|<xref:System.Windows.Controls.StackPanel>|Tak|Rozmieszcza elementy podrzędne w jednej linii, która może być zorientowana poziomo czy pionowo.|  
+|<xref:System.Windows.Controls.StackPanel>|Yes|Rozmieszcza elementy podrzędne w jednej linii, która może być zorientowana poziomo czy pionowo.|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|Nie|Obsługuje układ przycisków karty w <xref:System.Windows.Controls.TabControl>.|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Nie|Organizuje zawartości w ramach <xref:System.Windows.Controls.ToolBar> kontroli.|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|Nie|<xref:System.Windows.Controls.Primitives.UniformGrid> Służy do Rozmieść elementy podrzędne w siatce, ze wszystkimi rozmiarami równy komórki.|  

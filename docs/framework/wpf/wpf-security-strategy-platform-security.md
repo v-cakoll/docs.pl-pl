@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfcc11c78ffc408de71c88e2c1c7b0522ffe3732
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212417"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808327"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jednocześnie również wykorzystuje funkcje zabezpieczeń, możliwości platformy, która zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy są łączone w celu zapewnienia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, ochronę w głębi, który próbuje uniknąć dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
   
- ![Ilustracja przedstawiająca zabezpieczenia WPF](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![Diagram pokazujący model zabezpieczeń WPF.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
  W pozostałej części tego tematu opisano funkcje, w każdym z tych warstw, które odnoszą się do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] specjalnie.  
 
@@ -39,9 +39,9 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  Oprócz ogólnego przeglądu i wzmocnienie Windows, istnieją trzy najważniejsze funkcje z [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] , omówimy w tym temacie:  
   
--   Kompilacji/GS  
+- Kompilacji/GS  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>/GS Compilation  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] zapewnia ochronę przez kompilację wiele bibliotek systemu core, wraz ze wszystkimi [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zależności, takie jak [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], aby ułatwić uniknięcie przepełnienia buforu. Jest to osiągane przy użyciu parametru/GS za pomocą kompilatora wiersza polecenia języka C/C++. Chociaż należy jawnie unikać przepełnienia buforu, kompilacji/GS zawiera przykład obrony głębokiej względem potencjalnych luk w zabezpieczeniach, które nieodwracalnie lub celowego tworzonych przez nich.  
@@ -66,9 +66,9 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  Jednym ze sposobów, aby chronić przed zagrożeniem bezpieczeństwa jest uruchomienie aplikacji z najmniejszą ilością uprawnień, które są wymagane. To jest znany jako zasadę najmniejszych uprawnień, a to funkcja core [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] systemu operacyjnego. Ta funkcja jest wywoływana kontroli konta użytkownika (UAC) i jest używany przez [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] funkcji Kontrola konta użytkownika na dwa sposoby klucza:  
   
--   Aby uruchamiać większość aplikacji przy użyciu uprawnień funkcji kontroli konta użytkownika domyślnie, nawet jeśli użytkownik jest administratorem; tylko te aplikacje, które są wymagane uprawnienia administratora zostanie uruchomione z uprawnieniami administratora. Aby uruchomić z uprawnieniami administracyjnymi, aplikacje muszą być jawnie oznaczone albo swoich aplikacji manifestu lub jako wpis w zasadach zabezpieczeń.  
+- Aby uruchamiać większość aplikacji przy użyciu uprawnień funkcji kontroli konta użytkownika domyślnie, nawet jeśli użytkownik jest administratorem; tylko te aplikacje, które są wymagane uprawnienia administratora zostanie uruchomione z uprawnieniami administratora. Aby uruchomić z uprawnieniami administracyjnymi, aplikacje muszą być jawnie oznaczone albo swoich aplikacji manifestu lub jako wpis w zasadach zabezpieczeń.  
   
--   Aby zapewnić zgodność z rozwiązaniami, takimi jak wirtualizacji. Na przykład wiele aplikacji próby zapisu ograniczeniami trafić C:\Program Files. W przypadku aplikacji wykonywanie w ramach kontroli konta użytkownika z lokalizacją użytkownika alternatywnych istnieje nie wymaga uprawnień administratora do zapisu. Dla aplikacji działających w ramach kontroli konta użytkownika C:\Program Files Wirtualizuje funkcji Kontrola konta użytkownika, tak, aby aplikacje, którzy wydaje się, że pisania do niego są faktycznie zapisu do lokalizacji alternatywnej, na użytkownika. Tego rodzaju pracy zgodności umożliwia uruchamianie wielu aplikacji, które wcześniej nie można uruchomić w funkcji kontroli konta użytkownika systemu operacyjnego.  
+- Aby zapewnić zgodność z rozwiązaniami, takimi jak wirtualizacji. Na przykład wiele aplikacji próby zapisu ograniczeniami trafić C:\Program Files. W przypadku aplikacji wykonywanie w ramach kontroli konta użytkownika z lokalizacją użytkownika alternatywnych istnieje nie wymaga uprawnień administratora do zapisu. Dla aplikacji działających w ramach kontroli konta użytkownika C:\Program Files Wirtualizuje funkcji Kontrola konta użytkownika, tak, aby aplikacje, którzy wydaje się, że pisania do niego są faktycznie zapisu do lokalizacji alternatywnej, na użytkownika. Tego rodzaju pracy zgodności umożliwia uruchamianie wielu aplikacji, które wcześniej nie można uruchomić w funkcji kontroli konta użytkownika systemu operacyjnego.  
   
 #### <a name="code-integrity-checks"></a>Sprawdzanie integralności kodu  
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] łączy w sobie lepiej sprawdzania integralności kodu w celu uniemożliwienia złośliwym kodem są wstrzykiwane do plików systemowych lub jądra w momencie uruchomienia/obciążenia. To wykracza poza ochrony plików systemowych.  
@@ -100,11 +100,11 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  Zarządzane aplikacje są kompilowane do firmy Microsoft Intermediate Language (MSIL). Gdy są wykonywane w aplikacji zarządzanej metody, jego MSIL jest kompilowane do kodu natywnego za pośrednictwem kompilacji just in Time (JIT). Kompilacja JIT obejmuje proces weryfikacji, który ma zastosowanie wielu reguł bezpieczeństwa i niezawodności, które upewnij się, że nie ma kodu:  
   
--   Naruszać kontraktów typu  
+- Naruszać kontraktów typu  
   
--   Wprowadzenie przepełnienia buforów  
+- Wprowadzenie przepełnienia buforów  
   
--   Bardzo popularny mają dostęp do pamięci.  
+- Bardzo popularny mają dostęp do pamięci.  
   
  Kod zarządzany, który nie jest zgodny z regułami weryfikacji jest niedozwolone są wykonywane, chyba że jest on uznawany za zaufany kod.  
   
@@ -116,29 +116,29 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  Zestaw uprawnień aplikacji zarządzanej jest udzielany przez [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] przy rozpoczęciu wykonywania jest znany jako zestaw uprawnień i jest określana przez dowody dostarczone przez aplikację. Aby uzyskać [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest dowód, który jest dostarczany aplikacji, lokalizacji lub strefy, z którego będą uruchamiane aplikacje. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] identyfikuje następujących stref:  
   
--   **Mój komputer**. Aplikacje uruchomione na komputerze klienta (w pełni zaufane).  
+- **Mój komputer**. Aplikacje uruchomione na komputerze klienta (w pełni zaufane).  
   
--   **Lokalny Intranet**. Aplikacje uruchamiane w sieci intranet. (W pewnym stopniu zaufany).  
+- **Lokalny Intranet**. Aplikacje uruchamiane w sieci intranet. (W pewnym stopniu zaufany).  
   
--   **Internet**. Aplikacje uruchomione z Internetu. (Najmniej zaufanej).  
+- **Internet**. Aplikacje uruchomione z Internetu. (Najmniej zaufanej).  
   
--   **Zaufane witryny**. Aplikacje identyfikowane przez użytkownika jako jest zaufana. (Najmniej zaufanej).  
+- **Zaufane witryny**. Aplikacje identyfikowane przez użytkownika jako jest zaufana. (Najmniej zaufanej).  
   
--   **Niezaufanych witryn**. Aplikacje, zidentyfikowane przez użytkownika jako jest niezaufany. (Niezaufanych).  
+- **Niezaufanych witryn**. Aplikacje, zidentyfikowane przez użytkownika jako jest niezaufany. (Niezaufanych).  
   
  Dla każdego z tych stref [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] udostępnia wstępnie zdefiniowanego zestawu uprawnień, który obejmuje uprawnienia odpowiadającego poziom zaufania związany z każdą. Należą do nich następujące elementy:  
   
--   **FullTrust**. W przypadku aplikacji, uruchomione z **Mój komputer** strefy. Wszystkie możliwe uprawnienia są przyznawane.  
+- **FullTrust**. W przypadku aplikacji, uruchomione z **Mój komputer** strefy. Wszystkie możliwe uprawnienia są przyznawane.  
   
--   **LocalIntranet**. W przypadku aplikacji, uruchomione z **lokalny Intranet** strefy. Podzbiór uprawnienia są przyznawane zapewniają umiarkowane dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, nieograniczony dostęp do interfejsu użytkownika, okna dialogowe pliku bez ograniczeń, ograniczone odbicia, ograniczony dostęp do zmiennych środowiskowych. Uprawnienia dla krytycznych zasobów, takich jak rejestru nie są dostarczane.  
+- **LocalIntranet**. W przypadku aplikacji, uruchomione z **lokalny Intranet** strefy. Podzbiór uprawnienia są przyznawane zapewniają umiarkowane dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, nieograniczony dostęp do interfejsu użytkownika, okna dialogowe pliku bez ograniczeń, ograniczone odbicia, ograniczony dostęp do zmiennych środowiskowych. Uprawnienia dla krytycznych zasobów, takich jak rejestru nie są dostarczane.  
   
--   **Internet**. W przypadku aplikacji, uruchomione z **Internet** lub **Zaufane witryny** strefy. Podzbiór uprawnienia udzielane pod warunkiem ograniczony dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, można otworzyć pliku tylko i ograniczenia interfejsu użytkownika. Zasadniczo to uprawnienie ustawia izoluje aplikacje z komputera klienckiego.  
+- **Internet**. W przypadku aplikacji, uruchomione z **Internet** lub **Zaufane witryny** strefy. Podzbiór uprawnienia udzielane pod warunkiem ograniczony dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, można otworzyć pliku tylko i ograniczenia interfejsu użytkownika. Zasadniczo to uprawnienie ustawia izoluje aplikacje z komputera klienckiego.  
   
  Aplikacje określone jako pochodzącej z **niezaufanych witryn** strefy są przyznawane żadne uprawnienia przez [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] wcale. W związku z tym zestawu wstępnie zdefiniowanych uprawnień nie istnieje dla nich.  
   
- Na poniższym rysunku przedstawiono relację między strefami, zestawy uprawnień, uprawnienia i zasoby.  
+ Na poniższym rysunku przedstawiono relację między strefami, zestawy uprawnień, uprawnienia i zasoby:  
   
- ![Zestawy uprawnień CAS](./media/caspermissionsets.png "CASPermissionSets")  
+ ![Diagram pokazujący zestawy uprawnień CAS.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
  Ograniczenia Internet strefy izolowanym stosuje się jednakowo do dowolnego kod, który [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] importuje z biblioteki systemu, w tym [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Gwarantuje to, że każdy bit kod jest zablokowane, nawet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Niestety, aby można było wykonać, [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] musi wykonać funkcje, które wymaga więcej uprawnień niż te, wynikające z piaskownicy zabezpieczeń strefy Internet.  
   
@@ -149,11 +149,11 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  Do wykonania tej operacji [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], podstawowe [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kod musi być wykonany więcej funkcji niż jest dostępne dla wywołania [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], w tym:  
   
--   Tworzenie uchwyt okna (hWnd) do renderowania  
+- Tworzenie uchwyt okna (hWnd) do renderowania  
   
--   Podczas wysyłania wiadomości  
+- Podczas wysyłania wiadomości  
   
--   Trwa ładowanie czcionki Tahoma  
+- Trwa ładowanie czcionki Tahoma  
   
  Z zabezpieczeń będzie krytycznego punktu widzenia, dzięki czemu bezpośredni dostęp do dowolnego z tych operacji z aplikacji w trybie piaskownicy.  
   
@@ -190,11 +190,11 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  Przed [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)], użytkownicy mogą podlegać dowolne z następujących czynności:  
   
--   Losowe menu podręczne dla systemu windows.  
+- Losowe menu podręczne dla systemu windows.  
   
--   Mylenie przekierowania skryptu.  
+- Mylenie przekierowania skryptu.  
   
--   Wiele okien dialogowych zabezpieczeń w niektórych witrynach sieci Web.  
+- Wiele okien dialogowych zabezpieczeń w niektórych witrynach sieci Web.  
   
  W niektórych przypadkach niezaufana witryn sieci Web może spróbować nakłonienia użytkowników fałszując instalacji [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] lub wielokrotnie Pokazywanie [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] instalacji okno dialogowe, nawet wtedy, gdy użytkownik mógł anulować go. Korzystając z tych metod, jest możliwe, że znaczna liczba użytkowników zostały zwiódł już, że niską decyzje, które spowodowały instalację aplikacji programów szpiegujących.  
   

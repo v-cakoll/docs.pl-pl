@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517849"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773933"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Instrukcje: Tworzenie usługi danych WCF działającej na serwerze IIS
 
@@ -23,9 +23,9 @@ W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usług
 > [!NOTE]
 > Aby utworzyć usługę danych Northwind, należy zainstalowano przykładowej bazy danych Northwind na komputerze lokalnym. Aby pobrać tej przykładowej bazy danych, zobacz stronę pobierania [przykładowych baz danych programu SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
- W tym temacie przedstawiono sposób tworzenia usługi danych przy użyciu dostawcy środowiska Entity Framework. Innych dostawców usług danych są dostępne. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
+W tym temacie przedstawiono sposób tworzenia usługi danych przy użyciu dostawcy środowiska Entity Framework. Innych dostawców usług danych są dostępne. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- Po utworzeniu usługi, musisz jawnie określić dostęp do zasobów usługi danych. Aby uzyskać więcej informacji, zobacz [jak: Zapewnianie dostępu do usługi danych](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+Po utworzeniu usługi, musisz jawnie określić dostęp do zasobów usługi danych. Aby uzyskać więcej informacji, zobacz [jak: Zapewnianie dostępu do usługi danych](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Utwórz aplikację sieci web ASP.NET, która działa na serwerze IIS
 
@@ -35,7 +35,7 @@ W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usług
 
 3. Wybierz **aplikacji sieci Web ASP.NET** szablonu.
 
-1. Wprowadź `NorthwindService` jako nazwę projektu.
+4. Wprowadź `NorthwindService` jako nazwę projektu.
 
 5. Kliknij przycisk **OK**.
 
@@ -47,13 +47,13 @@ W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usług
 
 9. W wierszu polecenia z uprawnieniami administratora wykonaj jedną z następujących poleceń (w zależności od systemu operacyjnego):
 
-    -   systemy 32-bitowe:
+    - systemy 32-bitowe:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   systemy 64-bitowe:
+    - systemy 64-bitowe:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usług
 
 10. W wierszu polecenia z uprawnieniami administratora wykonaj jedną z następujących poleceń (w zależności od systemu operacyjnego):
 
-    -   systemy 32-bitowe:
+    - systemy 32-bitowe:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   systemy 64-bitowe:
+    - systemy 64-bitowe:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usług
 
 5. Połączenia z bazą danych modelu danych, wykonując jedną z następujących czynności, a następnie kliknij przycisk **dalej**:
 
-    -   Jeśli nie masz połączenia z bazą danych już skonfigurowane, kliknij przycisk **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie połączeń bazy danych SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). To wystąpienie programu SQL Server musi mieć bazie danych Northwind dołączone.
+    - Jeśli nie masz połączenia z bazą danych już skonfigurowane, kliknij przycisk **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie połączeń bazy danych SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). To wystąpienie programu SQL Server musi mieć bazie danych Northwind dołączone.
 
          \- lub —
 
-    -   Jeśli masz już skonfigurowane do łączenia z bazą danych Northwind połączenia z bazą danych, wybierz połączenie z listy połączeń.
+    - Jeśli masz już skonfigurowane do łączenia z bazą danych Northwind połączenia z bazą danych, wybierz połączenie z listy połączeń.
 
 6. Na ostatniej stronie kreatora zaznacz pola wyboru dla wszystkich tabel w bazie danych, a następnie usuń zaznaczenie pól wyboru dla widoków i procedur składowanych.
 

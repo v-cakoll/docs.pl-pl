@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044138"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod — Metoda
 Tworzy definicję metody lub funkcja globalna o określonej sygnaturze i zwraca token do tej definicji metody.  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>Definiowanie metody dla funkcji PInvoke  
  Dla każdego z niezarządzanej funkcji można wywołać za pomocą usług PInvoke należy zdefiniować zarządzanych metodę, która reprezentuje funkcję docelowej niezarządzanych. Aby zdefiniować zarządzaną metodą, należy użyć `DefineMethod` niektórych parametrów niektórych wartości w zależności od sposobu, w którym jest używana funkcja PInvoke:  
   
--   Wartość true, PInvoke — obejmuje wywołania metody niezarządzanego zewnętrznej znajdującej się w niezarządzaną biblioteką DLL.  
+- Wartość true, PInvoke — obejmuje wywołania metody niezarządzanego zewnętrznej znajdującej się w niezarządzaną biblioteką DLL.  
   
--   Lokalne PInvoke — obejmuje wywołania metody natywnej niezarządzanych, osadzonego w bieżącym modułu zarządzanego.  
+- Lokalne PInvoke — obejmuje wywołania metody natywnej niezarządzanych, osadzonego w bieżącym modułu zarządzanego.  
   
  Ustawienia parametru są podane w poniższej tabeli.  
   

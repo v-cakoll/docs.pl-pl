@@ -2,12 +2,12 @@
 title: Zasady autoryzacji
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332679"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807977"
 ---
 # <a name="authorization-policy"></a>Zasady autoryzacji
 
@@ -18,17 +18,17 @@ Ten przykład demonstruje sposób implementacji zasad autoryzacji oświadczenia 
 
  Podsumowując, ten przykład pokazuje, jak:
 
--   Klient może zostać uwierzytelniony przy użyciu nazwy — hasło użytkownika.
+- Klient może zostać uwierzytelniony przy użyciu nazwy — hasło użytkownika.
 
--   Klient może zostać uwierzytelniony przy użyciu certyfikatu X.509.
+- Klient może zostać uwierzytelniony przy użyciu certyfikatu X.509.
 
--   Serwer sprawdza poprawność poświadczeń klienta względem niestandardowego `UsernamePassword` modułu sprawdzania poprawności.
+- Serwer sprawdza poprawność poświadczeń klienta względem niestandardowego `UsernamePassword` modułu sprawdzania poprawności.
 
--   Serwer jest uwierzytelniany przy użyciu certyfikatu X.509 serwera.
+- Serwer jest uwierzytelniany przy użyciu certyfikatu X.509 serwera.
 
--   Serwer może używać <xref:System.ServiceModel.ServiceAuthorizationManager> kontrolować dostęp do pewnych metod w usłudze.
+- Serwer może używać <xref:System.ServiceModel.ServiceAuthorizationManager> kontrolować dostęp do pewnych metod w usłudze.
 
--   Jak zaimplementować <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
+- Jak zaimplementować <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
 
 Usługa udostępnia dwa punkty końcowe dla komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Każdy punkt końcowy składa się z adresu, powiązanie i kontrakt. Jedno powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding` powiązania, który używa uwierzytelniania nazwy użytkownika protokołu WS-Security i klienta. Inne powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding` powiązania, który używa uwierzytelniania certyfikatu usługi WS-Security i klienta. [ \<Zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) Określa, czy poświadczenia użytkownika mają być używane do uwierzytelniania usługi. Certyfikat serwera musi zawierać taką samą wartość `SubjectName` właściwość jako `findValue` atrybutu w [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -397,9 +397,9 @@ Plik wsadowy Setup.bat jest dołączone do tego przykładu umożliwia skonfiguro
 
 Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji:
 
--   Tworzenie certyfikatu serwera.
+- Tworzenie certyfikatu serwera.
 
-     Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. % Zmienna % nazwa_serwera Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Wartość domyślna to hosta lokalnego.
+    Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. % Zmienna % nazwa_serwera Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Wartość domyślna to hosta lokalnego.
 
     ```
     echo ************
@@ -411,19 +411,19 @@ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
 
-     Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ certyfikaty, które są generowane przez Makecert.exe nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
+    Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ certyfikaty, które są generowane przez Makecert.exe nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Tworzenie certyfikatu klienta.
+- Tworzenie certyfikatu klienta.
 
-     Następujące wiersze z pliku wsadowego Setup.bat utworzenia certyfikatu klienta, który ma być używany. % Zmienna % nazwa_użytkownika Określa nazwę serwera. Ta wartość jest równa "test1", ponieważ jest to nazwa `IAuthorizationPolicy` szuka. Jeśli zmienisz wartość % nazwa_użytkownika należy zmienić odpowiednie wartości w `IAuthorizationPolicy.Evaluate` metody.
+    Następujące wiersze z pliku wsadowego Setup.bat utworzenia certyfikatu klienta, który ma być używany. % Zmienna % nazwa_użytkownika Określa nazwę serwera. Ta wartość jest równa "test1", ponieważ jest to nazwa `IAuthorizationPolicy` szuka. Jeśli zmienisz wartość % nazwa_użytkownika należy zmienić odpowiednie wartości w `IAuthorizationPolicy.Evaluate` metody.
 
-     Certyfikat jest przechowywany w magazynie użytkownika (osobistych), znajdujące się w lokalizacji magazynu CurrentUser.
+    Certyfikat jest przechowywany w magazynie użytkownika (osobistych), znajdujące się w lokalizacji magazynu CurrentUser.
 
     ```
     echo ************
@@ -432,9 +432,9 @@ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera.
+- Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera.
 
-     Następujące wiersze w pliku wsadowym Setup.bat skopiuj certyfikat klienta do magazynu osób zaufanych. Ten krok jest wymagany, ponieważ certyfikaty, które są generowane przez Makecert.exe nie niejawnie cieszą się zaufaniem systemu serwera. Jeśli masz już certyfikat, który jest ścieżką w zaufany certyfikat główny — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów serwera za pomocą certyfikatu klienta nie jest wymagane.
+    Następujące wiersze w pliku wsadowym Setup.bat skopiuj certyfikat klienta do magazynu osób zaufanych. Ten krok jest wymagany, ponieważ certyfikaty, które są generowane przez Makecert.exe nie niejawnie cieszą się zaufaniem systemu serwera. Jeśli masz już certyfikat, który jest ścieżką w zaufany certyfikat główny — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów serwera za pomocą certyfikatu klienta nie jest wymagane.
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -460,7 +460,7 @@ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki
 
 1. Uruchom Client.exe z *\client\bin*. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.
 
-  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach
 
@@ -474,7 +474,7 @@ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki
 
 5. Na serwerze, uruchom `setup.bat service` w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.
 
-   Uruchamianie `setup.bat` z `service` argument tworzy certyfikat usługi z w pełni kwalifikowana nazwa domeny komputera i eksportuje certyfikat usługi do pliku o nazwie *Service.cer*.
+    Uruchamianie `setup.bat` z `service` argument tworzy certyfikat usługi z w pełni kwalifikowana nazwa domeny komputera i eksportuje certyfikat usługi do pliku o nazwie *Service.cer*.
 
 6. Edytuj *Service.exe.config* aby odzwierciedlały nową nazwę certyfikatu (w `findValue` atrybutu w [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) który jest taka sama jak w pełni kwalifikowana nazwa domeny komputera. Również zmienić **computername** w \<usługi > /\<baseAddresses > element z hostem lokalnym do w pełni kwalifikowanej nazwy komputera usługi.
 
@@ -482,7 +482,7 @@ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki
 
 8. Na komputerze klienckim, należy uruchomić `setup.bat client` w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.
 
-   Uruchamianie `setup.bat` z `client` argument tworzy certyfikat klienta o nazwie **test1** i eksportuje certyfikat klienta do pliku o nazwie *Client.cer*.
+    Uruchamianie `setup.bat` z `client` argument tworzy certyfikat klienta o nazwie **test1** i eksportuje certyfikat klienta do pliku o nazwie *Client.cer*.
 
 9. W *Client.exe.config* pliku na komputerze klienckim, zmień wartość adresu punktu końcowego, aby dopasować nowy adres usługi. To zrobić przez zastąpienie **localhost** z w pełni kwalifikowana nazwa domeny serwera.
 
@@ -490,17 +490,17 @@ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki
 
 11. Na komputerze klienckim, należy uruchomić *ImportServiceCert.bat* w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.
 
-   Zaimportowany certyfikat usługi z pliku Service.cer do **CurrentUser - TrustedPeople** przechowywania.
+    Zaimportowany certyfikat usługi z pliku Service.cer do **CurrentUser - TrustedPeople** przechowywania.
 
 12. Na serwerze, uruchom *ImportClientCert.bat* w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.
 
-   Zaimportowany certyfikat klienta z pliku Client.cer do **LocalMachine - TrustedPeople** przechowywania.
+    Zaimportowany certyfikat klienta z pliku Client.cer do **LocalMachine - TrustedPeople** przechowywania.
 
 13. Na komputerze serwera uruchomić Service.exe z okna wiersza polecenia.
 
 14. Na komputerze klienckim, aby uruchomić Client.exe z okna wiersza polecenia.
 
-   Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+    Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>Wyczyść zasoby po ukończeniu próbki
 

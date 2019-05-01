@@ -3,11 +3,11 @@ title: Nieobsługiwane scenariusze
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050756"
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie zawiera implementacji protokołów uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym WCF nie obsługuje uruchamiania usługi za pomocą uwierzytelniania Windows na tej platformie. Inne mechanizmy uwierzytelniania, takich jak nazwy użytkownika/hasła i zintegrowane uwierzytelnianie HTTP/HTTPS są obsługiwane podczas uruchamiania usługi WCF w obszarze Windows XP Home Edition.  
@@ -20,13 +20,13 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP i tokenu pliku Cookie bezpiecznym kontekście włączone  
  Usługi WCF nie obsługuje personifikacji i <xref:System.InvalidOperationException> jest zgłaszany, gdy następujące warunki:  
   
--   System operacyjny jest [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- System operacyjny jest [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Tryb uwierzytelniania powoduje tożsamości Windows.  
+- Tryb uwierzytelniania powoduje tożsamości Windows.  
   
--   <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> Właściwość <xref:System.ServiceModel.OperationBehaviorAttribute> ustawiono <xref:System.ServiceModel.ImpersonationOption.Required>.  
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> Właściwość <xref:System.ServiceModel.OperationBehaviorAttribute> ustawiono <xref:System.ServiceModel.ImpersonationOption.Required>.  
   
--   Zostanie utworzony token kontekstu zabezpieczeń oparte na stanie (SCT) (domyślnie jest wyłączona tworzenia).  
+- Zostanie utworzony token kontekstu zabezpieczeń oparte na stanie (SCT) (domyślnie jest wyłączona tworzenia).  
   
  Oparte na stanie SCT można tworzyć tylko za pomocą niestandardowego powiązania. Aby uzyskać więcej informacji, zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) W kodzie, token jest włączona, tworząc elementu powiązania zabezpieczeń (albo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) przy użyciu <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> lub <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> metody i ustawienie `requireCancellation` parametr `false`. Parametr odnosi się do buforowania SCT. Ustawienie wartości `false` włącza funkcję SCT na podstawie ich stanu.  
   
@@ -68,18 +68,18 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
   
  Istnieją dwa sposoby, aby sprawdzić, czy certyfikatu używa dostawcy magazynu KLUCZY:  
   
--   Czy `p/invoke` z `CertGetCertificateContextProperty`i sprawdzić `dwProvType` na zwracanego `CertGetCertificateContextProperty`.  
+- Czy `p/invoke` z `CertGetCertificateContextProperty`i sprawdzić `dwProvType` na zwracanego `CertGetCertificateContextProperty`.  
   
--   Użyj `certutil` polecenia z wiersza polecenia do wykonywania zapytań certyfikatów. Aby uzyskać więcej informacji, zobacz [zadania narzędzia Certutil dotyczące rozwiązywania problemów z certyfikatami](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Użyj `certutil` polecenia z wiersza polecenia do wykonywania zapytań certyfikatów. Aby uzyskać więcej informacji, zobacz [zadania narzędzia Certutil dotyczące rozwiązywania problemów z certyfikatami](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Komunikat zabezpieczeń kończy się niepowodzeniem jeśli wymagane jest korzystanie z personifikacji aplikacji ASP.NET i zgodność platformy ASP.NET  
  Usługi WCF nie obsługuje następujących kombinacji ustawień, ponieważ mogą również uniemożliwiać uwierzytelnianie klienta występowaniu:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Personifikacja jest włączona. Odbywa się w pliku Web.config, ustawiając `impersonate` atrybut <`identity`> elementu `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Personifikacja jest włączona. Odbywa się w pliku Web.config, ustawiając `impersonate` atrybut <`identity`> elementu `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Tryb zgodności jest włączony, ustawiając `aspNetCompatibilityEnabled` atrybutu [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) do `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Tryb zgodności jest włączony, ustawiając `aspNetCompatibilityEnabled` atrybutu [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) do `true`.  
   
--   Komunikat tryb zabezpieczeń jest używany.  
+- Komunikat tryb zabezpieczeń jest używany.  
   
  Obejście polega na wyłączeniu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w trybie zgodności. Lub, jeśli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności jest wymagany, wyłącz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] personifikacji funkcji i zamiast tego należy używać personifikacji dostarczone do usług WCF. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   

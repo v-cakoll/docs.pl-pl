@@ -3,11 +3,11 @@ title: Przewodnik dotyczący współpracy protokołów usług sieci Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050353"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Przewodnik dotyczący współpracy protokołów usług sieci Web
 Windows Communication Foundation (WCF) implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawierają wiele opcji i punkty rozszerzalności w gestii implementujący. Ten temat zawiera listę protokołów usług sieci Web, który implementuje usługi WCF. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu, obsługiwane.  
@@ -76,29 +76,29 @@ Windows Communication Foundation (WCF) implementuje wiele protokołów usług si
   
  <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter>, I <xref:System.ServiceModel.Description.MetadataResolver> klasy zapewniają obsługę dla następujących specyfikacji metadanych:  
   
--   [XML Schema Part 1: Wydanie drugie struktury](https://go.microsoft.com/fwlink/?LinkId=3536)  
+- [XML Schema Part 1: Wydanie drugie struktury](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2: Typy danych, wydanie drugie](https://go.microsoft.com/fwlink/?LinkId=40138)  
+- [XML Schema Part 2: Typy danych, wydanie drugie](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
+- [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+- [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+- [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+- [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+- [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [WS Transfer uzyskać pobierania metadanych](https://go.microsoft.com/fwlink/?LinkId=96708)  
+- [WS Transfer uzyskać pobierania metadanych](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  Ponadto następujące profile współdziałanie są zaimplementowane w obszarach WCF:  
   
--   [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
+- [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [SOAP proste powiązanie 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
+- [SOAP proste powiązanie 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [Podstawowe zabezpieczeń profilu 1.0 pracy narzędzia Draft](https://go.microsoft.com/fwlink/?LinkId=96711)  
+- [Podstawowe zabezpieczeń profilu 1.0 pracy narzędzia Draft](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Zobacz także
 

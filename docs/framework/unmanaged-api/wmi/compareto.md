@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049274"
 ---
-# <a name="compareto-function"></a>Funkcja CompareTo
+# <a name="compareto-function"></a>CompareTo, funkcja
 
 Porównuje obiekt do innego obiektu zarządzania Windows.
 

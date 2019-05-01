@@ -5,22 +5,22 @@ f1_keywords:
 - vbrUseFilePutObject
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
 ms.openlocfilehash: 3d793151905c61ee12eccdfdb5e9567a4924bb35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022522"
 ---
 # <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a>Użyj "FilePutObject" zamiast "FilePut, jeśli korzystasz z argumentu typu"Object"
 `FilePut` Metoda zawiera argument typu `Object`. `FilePutObject` powinny być używane zamiast `FilePut` Aby uniknąć niejednoznaczności.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zastąp `FilePut` z `FilePutObject`.  
+- Zastąp `FilePut` z `FilePutObject`.  
   
--   Rzutowanie `Object` argument do bardziej określonego typu.  
+- Rzutowanie `Object` argument do bardziej określonego typu.  
   
--   Użyj funkcji dostępnych w `My.Computer.FileSystem` obiektu.  
+- Użyj funkcji dostępnych w `My.Computer.FileSystem` obiektu.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -13,8 +13,8 @@ ms.openlocfilehash: 4d051085bdba41b9784d3dd7f921189c1300daf0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052979"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>Instrukcje: dostosowywanie kolorów w aplikacjach ToolStrip
 Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> przy użyciu <xref:System.Windows.Forms.ToolStripProfessionalRenderer> klasy, aby używać kolorów niestandardowych.  
@@ -28,7 +28,7 @@ Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> przy u�
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

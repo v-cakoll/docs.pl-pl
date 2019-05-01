@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054331"
 ---
 # <a name="animation-overview"></a>Przegląd Animacja
 <a name="introduction"></a>
@@ -27,13 +27,13 @@ ms.locfileid: "59337737"
   
  Przypomina animacji na komputerze. Na przykład program, który sprawia, że Rysowanie prostokąta zanikanie poza widokiem mogą działać w następujący sposób.  
   
--   Program tworzy czasomierz.  
+- Program tworzy czasomierz.  
   
--   Program sprawdza timer w ustalonych odstępach czasu, aby zobaczyć, ile czasu upłynęło.  
+- Program sprawdza timer w ustalonych odstępach czasu, aby zobaczyć, ile czasu upłynęło.  
   
--   Każdorazowo, program sprawdza, czy czasomierz, oblicza bieżącą wartość nieprzezroczystości prostokąta, w oparciu o czas, jaki upłynął.  
+- Każdorazowo, program sprawdza, czy czasomierz, oblicza bieżącą wartość nieprzezroczystości prostokąta, w oparciu o czas, jaki upłynął.  
   
--   Program następnie aktualizuje prostokąt przy użyciu nowej wartości i ponownie rysuje go.  
+- Program następnie aktualizuje prostokąt przy użyciu nowej wartości i ponownie rysuje go.  
   
  Przed [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] deweloperzy musieli utworzyć i zarządzać ich własnych systemów czasu lub użyć niestandardowej biblioteki. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera system chronometrażu wydajne, która jest dostępna za pośrednictwem kodu zarządzanego i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i które głęboko zintegrowana [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji można łatwo animacji, formantów i innych obiektów graficznych.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59337737"
   
  Dla właściwości, aby mieć możliwości animacji musi spełniać następujące wymagania trzy:  
   
--   Musi być właściwość zależności.  
+- Musi być właściwość zależności.  
   
--   Musi on należeć do klasy, która dziedziczy po elemencie <xref:System.Windows.DependencyObject> i implementuje <xref:System.Windows.Media.Animation.IAnimatable> interfejsu.  
+- Musi on należeć do klasy, która dziedziczy po elemencie <xref:System.Windows.DependencyObject> i implementuje <xref:System.Windows.Media.Animation.IAnimatable> interfejsu.  
   
--   Musi być typem zgodne animacji dostępne. (Jeśli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie zapewnia go, możesz utworzyć swój własny. Zobacz [Przegląd niestandardowe animacje](custom-animations-overview.md).)  
+- Musi być typem zgodne animacji dostępne. (Jeśli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie zapewnia go, możesz utworzyć swój własny. Zobacz [Przegląd niestandardowe animacje](custom-animations-overview.md).)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wiele obiektów, które mają <xref:System.Windows.Media.Animation.IAnimatable> właściwości. Kontrolki, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TabControl>, a także <xref:System.Windows.Controls.Panel> i <xref:System.Windows.Shapes.Shape> obiekty dziedziczyć <xref:System.Windows.DependencyObject>. Większość jego właściwości są właściwości zależności.  
   
@@ -183,27 +183,27 @@ ms.locfileid: "59337737"
 ## <a name="animation-types"></a>Typy animacji  
  Animacje generować wartości właściwości, dlatego w różnych typach właściwości jest istnieją typy inną animację. Aby animować właściwości, która przyjmuje <xref:System.Double>, takich jak <xref:System.Windows.FrameworkElement.Width%2A> właściwości elementu, użyj animacji, która tworzy <xref:System.Double> wartości. Aby animować właściwości, która przyjmuje <xref:System.Windows.Point>, użyj animacji, która tworzy <xref:System.Windows.Point> wartości i tak dalej. Ze względu na liczbę różnych typach właściwości, istnieje kilka klas animacji w <xref:System.Windows.Media.Animation> przestrzeni nazw. Na szczęście oni zgodnie z ograniczeniami konwencji nazewnictwa, która ułatwia ich rozróżnienie:  
   
--   \<*Typ*> animacji  
+- \<*Typ*> animacji  
   
      Znane jako "Od/do/przez" lub "podstawowa" animacji, te animować między wartości początkowa i docelowy lub dodając wartość przesunięcia do swojej wartości początkowej.  
   
-    -   Aby określić wartość początkową, ustaw właściwość From animacji.  
+    - Aby określić wartość początkową, ustaw właściwość From animacji.  
   
-    -   Aby określić wartość końcową, ustaw właściwość na animacji.  
+    - Aby określić wartość końcową, ustaw właściwość na animacji.  
   
-    -   Aby określić wartość przesunięcia, ustaw właściwości przez animację.  
+    - Aby określić wartość przesunięcia, ustaw właściwości przez animację.  
   
      W przykładach w tym omówieniu użyć tych animacji, ponieważ są one najprostsze w użyciu. Animacje od/do/przez są opisane szczegółowo w temacie animacje — Przegląd From/To/By.  
   
--   \<*Type*>AnimationUsingKeyFrames  
+- \<*Type*>AnimationUsingKeyFrames  
   
      Klatek kluczowych animacji są bardziej wydajne niż animacji od/do/przez, ponieważ można określić dowolną liczbę wartości docelowych i nawet kontrolować metody ich interpolacji. Niektóre typy mogą być animowane tylko przy użyciu klatek kluczowych animacji. Klatek kluczowych animacji są szczegółowo opisane w [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md).  
   
--   \<*Type*>AnimationUsingPath  
+- \<*Type*>AnimationUsingPath  
   
      Animacje ścieżki umożliwiają być animowany wartości przy użyciu ścieżki geometrycznej.  
   
--   \<*Typ*> podstawy animacji  
+- \<*Typ*> podstawy animacji  
   
      Abstrakcyjna klasa, która podczas implementowania, animuje \< *typu*> wartość. Ta klasa służy jako klasa bazowa dla \< *typu*> animacji i \< *typu*> AnimationUsingKeyFrames klasy. Masz do czynienia bezpośrednio z tych klas, tylko wtedy, gdy chcesz utworzyć własne niestandardowe animacje. W przeciwnym razie użyj \< *typu*> animacji lub ramki kluczowej\<*typu*> animacji.  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59337737"
   
  Przypisywanie nazwę <xref:System.Windows.FrameworkElement> różni się od nazwy do przypisywania <xref:System.Windows.Freezable> obiektu. Większość formantów i panele elementów framework; Większość obiektów czysto graficzny, takich jak pędzle, transformacji i geometrii, są jednak obiektów freezable. Jeśli nie masz pewności, czy typ jest <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.Freezable>, można znaleźć **hierarchii dziedziczenia** sekcję dotyczącą go dokumentację.  
   
--   Aby <xref:System.Windows.FrameworkElement> obiektu docelowego animacji, możesz nadać mu nazwę, ustawiając jego <xref:System.Windows.FrameworkElement.Name%2A> właściwości. W kodzie, musisz również użyć <xref:System.Windows.FrameworkElement.RegisterName%2A> metodę, aby zarejestrować nazwę elementu ze stroną, do której należy.  
+- Aby <xref:System.Windows.FrameworkElement> obiektu docelowego animacji, możesz nadać mu nazwę, ustawiając jego <xref:System.Windows.FrameworkElement.Name%2A> właściwości. W kodzie, musisz również użyć <xref:System.Windows.FrameworkElement.RegisterName%2A> metodę, aby zarejestrować nazwę elementu ze stroną, do której należy.  
   
--   Zapewnienie <xref:System.Windows.Freezable> obiektu docelowego animacji w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz użyć [x: Name — dyrektywa](../../xaml-services/x-name-directive.md) do przypisz mu nazwy. W kodzie, możesz po prostu użyj <xref:System.Windows.FrameworkElement.RegisterName%2A> metodę, aby zarejestrować obiekt ze stroną, do której należy.  
+- Zapewnienie <xref:System.Windows.Freezable> obiektu docelowego animacji w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz użyć [x: Name — dyrektywa](../../xaml-services/x-name-directive.md) do przypisz mu nazwy. W kodzie, możesz po prostu użyj <xref:System.Windows.FrameworkElement.RegisterName%2A> metodę, aby zarejestrować obiekt ze stroną, do której należy.  
   
  W kolejnych sekcjach podać przykład nazewnictwa element [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kod. Aby uzyskać bardziej szczegółowe informacje dotyczące nazewnictwa i ustawianie elementów docelowych, zobacz [Przegląd Scenorysy](storyboards-overview.md).  
   
@@ -318,11 +318,11 @@ ms.locfileid: "59337737"
 ## <a name="animation-samples"></a>Przykłady animacji  
  Poniższe przykłady mogą pomóc rozpocząć dodawanie animacji do aplikacji.  
   
--   [Od, do i przez przykład wartości docelowej animacji](https://go.microsoft.com/fwlink/?LinkID=159988)  
+- [Od, do i przez przykład wartości docelowej animacji](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      Demonstruje różne od/do/przez ustawienia.  
   
--   [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)  
+- [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      Pokazuje różne sposoby kontrolowania zachowania chronometrażu animacji. W tym przykładzie również pokazuje jak danych powiązać wartości docelowej animacji.  
   

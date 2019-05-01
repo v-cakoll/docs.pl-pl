@@ -10,32 +10,32 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050617"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] są używane do identyfikowania i ładowanie plików na wiele sposobów, w tym następujące:  
   
--   Określanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do wyświetlenia po pierwszym uruchomieniu aplikacji.  
+- Określanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do wyświetlenia po pierwszym uruchomieniu aplikacji.  
   
--   Ładowanie obrazów.  
+- Ładowanie obrazów.  
   
--   Przejdź do strony.  
+- Przejdź do strony.  
   
--   Ładowanie plików danych innego niż plik wykonywalny.  
+- Ładowanie plików danych innego niż plik wykonywalny.  
   
  Ponadto [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] może służyć do identyfikowania i ładowanie plików z różnych miejsc, w tym następujące czynności:  
   
--   Bieżący zestaw.  
+- Bieżący zestaw.  
   
--   Przywoływanego zestawu.  
+- Przywoływanego zestawu.  
   
--   Lokalizacja względem zestawu.  
+- Lokalizacja względem zestawu.  
   
--   Witryna aplikacji pochodzenia.  
+- Witryna aplikacji pochodzenia.  
   
  Aby zapewnić spójny mechanizm identyfikacji i ładowania tych typów plików z tych lokalizacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] korzysta z możliwości rozszerzania usługi *pakowanie schematu URI*. Ten temat zawiera omówienie schematu, opisano, jak utworzyć pakiet [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] dla różnych scenariuszy, w tym artykule omówiono bezwzględnym i względnym [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] i [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] rozdzielczości, przed wyświetleniem sposób użycia pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] z obu znaczników i kod.  
 
@@ -59,15 +59,15 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  Pakiety i części są analogiczne do aplikacji i plików, w której aplikacja (pakiet) może zawierać jeden lub więcej plików (części), w tym:  
   
--   Pliki zasobów, które są kompilowane do zestawu lokalnego.  
+- Pliki zasobów, które są kompilowane do zestawu lokalnego.  
   
--   Pliki zasobów, które są kompilowane do przywoływanego zestawu.  
+- Pliki zasobów, które są kompilowane do przywoływanego zestawu.  
   
--   Pliki zasobów, które są kompilowane do zestawu odwołującego się.  
+- Pliki zasobów, które są kompilowane do zestawu odwołującego się.  
   
--   Pliki zawartości.  
+- Pliki zawartości.  
   
--   Witryna pochodzenia plików.  
+- Witryna pochodzenia plików.  
   
  Aby uzyskiwać dostęp do tych typów plików, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje dwa urzędy: aplikacja: / / / oraz siteoforigin: / / /. Aplikacja: / / / Urząd identyfikuje pliki danych aplikacji, które są znane w czasie kompilacji, w tym pliki zasobów i zawartości. Siteoforigin: / / / Urząd identyfikuje witrynę pochodzenia plików. Zakres każdego uprawnień jest wyświetlany na poniższej ilustracji.  
   
@@ -86,9 +86,9 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
 ### <a name="local-assembly-resource-file"></a>Plik zasobów zestawu lokalnego  
  Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zasobu pliku, który jest kompilowany do zestawu lokalnego używa następujących urzędu i ścieżki:  
   
--   **Urząd**: aplikacja: / / /.  
+- **Urząd**: aplikacja: / / /.  
   
--   **Ścieżka**: Nazwa pliku zasobów, w tym ścieżki względem katalogu głównego folderu projektu zestawu lokalnego.  
+- **Ścieżka**: Nazwa pliku zasobów, w tym ścieżki względem katalogu głównego folderu projektu zestawu lokalnego.  
   
  W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w katalogu głównym folderu projektu zestawu lokalnego.  
   
@@ -102,21 +102,21 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
 ### <a name="referenced-assembly-resource-file"></a>Plik zasobów zestawu odwołania  
  Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zasobu pliku, który jest skompilowany w zestawie odwołania używa następujących urzędu i ścieżki:  
   
--   **Urząd**: aplikacja: / / /.  
+- **Urząd**: aplikacja: / / /.  
   
--   **Ścieżka**: Nazwa pliku zasobu, który jest kompilowany do przywoływanego zestawu. Ścieżka musi być zgodna z następującym formatem:  
+- **Ścieżka**: Nazwa pliku zasobu, który jest kompilowany do przywoływanego zestawu. Ścieżka musi być zgodna z następującym formatem:  
   
      *AssemblyShortName*{*; Wersja*] {*; PublicKey*]; składnik /*ścieżki*  
   
-    -   **AssemblyShortName**: krótka nazwa dla przywoływanego zestawu.  
+    - **AssemblyShortName**: krótka nazwa dla przywoływanego zestawu.  
   
-    -   **; Wersja** [Opcjonalna]: wersja przywoływanego zestawu, który zawiera plik zasobów. To jest używany, gdy co najmniej dwóch zestawach o tej samej krótkiej nazwie są ładowane.  
+    - **; Wersja** [Opcjonalna]: wersja przywoływanego zestawu, który zawiera plik zasobów. To jest używany, gdy co najmniej dwóch zestawach o tej samej krótkiej nazwie są ładowane.  
   
-    -   **; PublicKey** [Opcjonalna]: klucz publiczny, który został użyty do podpisania przywoływanego zestawu. To jest używany, gdy co najmniej dwóch zestawach o tej samej krótkiej nazwie są ładowane.  
+    - **; PublicKey** [Opcjonalna]: klucz publiczny, który został użyty do podpisania przywoływanego zestawu. To jest używany, gdy co najmniej dwóch zestawach o tej samej krótkiej nazwie są ładowane.  
   
-    -   **; składnik**: Określa, że z lokalnego zestawu odwołuje się do zestawu są określone.  
+    - **; składnik**: Określa, że z lokalnego zestawu odwołuje się do zestawu są określone.  
   
-    -   **/ Ścieżka**: Nazwa pliku zasobów, w tym ścieżki względem katalogu głównego folderu projektu przywoływanego zestawu.  
+    - **/ Ścieżka**: Nazwa pliku zasobów, w tym ścieżki względem katalogu głównego folderu projektu przywoływanego zestawu.  
   
  W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku zasobu, który znajduje się w katalogu głównym folderu projektu przywoływanego zestawu.  
   
@@ -138,9 +138,9 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
 ## <a name="content-file-pack-uris"></a>Identyfikatory URI pakietu zawartości pliku  
  Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla następujących urzędu i ścieżka pliku zawartości:  
   
--   **Urząd**: aplikacja: / / /.  
+- **Urząd**: aplikacja: / / /.  
   
--   **Ścieżka**: Nazwa pliku zawartości, wraz ze ścieżką względną lokalizacji systemu plików w głównym zestawie pliku wykonywalnego aplikacji.  
+- **Ścieżka**: Nazwa pliku zawartości, wraz ze ścieżką względną lokalizacji systemu plików w głównym zestawie pliku wykonywalnego aplikacji.  
   
  W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zawartości pliku, znajdującego się w tym samym folderze co zestawu pliku wykonywalnego.  
   
@@ -157,9 +157,9 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
 ## <a name="site-of-origin-pack-uris"></a>Witryna pochodzenia identyfikatory URI z dodatkiem Service Pack  
  Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] witryny pochodzenia plik używa następujących urzędu i ścieżki:  
   
--   **Urząd**: siteoforigin: / / /.  
+- **Urząd**: siteoforigin: / / /.  
   
--   **Ścieżka**: Nazwa witryny pochodzenia pliku, w tym jego ścieżka względem lokalizacji, z której został uruchomiony zestawu pliku wykonywalnego.  
+- **Ścieżka**: Nazwa witryny pochodzenia pliku, w tym jego ścieżka względem lokalizacji, z której został uruchomiony zestawu pliku wykonywalnego.  
   
  W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] witryny pochodzenia pliku przechowywanego w lokalizacji, z którego uruchomiono zestawu pliku wykonywalnego.  
   
@@ -175,17 +175,17 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  Typy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki, które zwykle są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementy mają jedną z następujących jako ich elementu głównego:  
   
--   <xref:System.Windows.Window?displayProperty=nameWithType>  
+- <xref:System.Windows.Window?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
   
--   <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
+- <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
   
 <a name="Absolute_vs_Relative_Pack_URIs"></a>   
 ## <a name="absolute-vs-relative-pack-uris"></a>Bezwzględny programu vs. Pakiet względne identyfikatory URI  
@@ -246,11 +246,11 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] rozwiązania nie dotyczy [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] odwołujące się do następujących:  
   
--   Zawartość plików w przywoływanych zestawów: następujące typy plików nie są obsługiwane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+- Zawartość plików w przywoływanych zestawów: następujące typy plików nie są obsługiwane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
--   Osadzone pliki w przywoływanych zestawach: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] które identyfikują są unikatowe, ponieważ obejmują one nazwę przywoływanego zestawu i `;component` sufiks.  
+- Osadzone pliki w przywoływanych zestawach: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] które identyfikują są unikatowe, ponieważ obejmują one nazwę przywoływanego zestawu i `;component` sufiks.  
   
--   Witryna pochodzenia plików: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] które identyfikują są unikatowe, ponieważ są one tylko pliki, które można zidentyfikowane przez pakiet [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] zawierających siteoforigin: / / / urzędu.  
+- Witryna pochodzenia plików: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] które identyfikują są unikatowe, ponieważ są one tylko pliki, które można zidentyfikowane przez pakiet [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] zawierających siteoforigin: / / / urzędu.  
   
  Uproszczenie jednego, który pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] rozpoznawania umożliwia, jest dla kodu w pewnym stopniu niezależnie od lokalizacji plików zasobów i zawartości. Na przykład, jeśli masz plik zasobów w zestawie lokalnego, który jest konfigurowana ponownie do pliku zawartości pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla zasobu pozostają takie same, jak kod, który używa pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
@@ -258,17 +258,17 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
 ## <a name="programming-with-pack-uris"></a>Programowanie za pomocą identyfikatorów URI pakietu  
  Wiele [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] klasy implementuje właściwości, które można skonfigurować z dodatkiem Service pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], w tym:  
   
--   <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
   
  Te właściwości można ustawić zarówno z kodu znaczników i kodu. W tej sekcji przedstawiono podstawowe konstrukcje dla obu i następnie przedstawiono przykłady typowych scenariuszy.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052134"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Instrukcje: Dostęp do elementów członkowskich obiektu (Visual Basic)
 Jeśli masz zmienną obiektu, który odwołuje się do obiektu, często chcą pracować z członkami tego obiektu, takie jak metody, właściwości, pola i zdarzenia. Na przykład po utworzeniu nowego <xref:System.Windows.Forms.Form> obiektu, warto ustawić jej <xref:System.Windows.Forms.Control.Text%2A> właściwość lub wywołanie jego <xref:System.Windows.Forms.Control.Focus%2A> metody.  
@@ -20,7 +20,7 @@ Jeśli masz zmienną obiektu, który odwołuje się do obiektu, często chcą pr
   
 #### <a name="to-access-members-of-an-object"></a>Aby dostęp do elementów członkowskich obiektu  
   
--   Użyj operatora dostępu do elementu członkowskiego (`.`) między nazwą zmiennej obiektu i nazwę elementu członkowskiego.  
+- Użyj operatora dostępu do elementu członkowskiego (`.`) między nazwą zmiennej obiektu i nazwę elementu członkowskiego.  
   
     ```  
     currentText = newForm.Text  

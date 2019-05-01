@@ -4,12 +4,12 @@ description: Usługa Azure functions udostępnia funkcje bezserwerowe w wielu j�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145166"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807903"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -25,7 +25,7 @@ Aby uzyskać więcej informacji, zobacz [dokumentacji usługi Azure Functions](h
 
 Istnieją dwie wersje środowiska uruchomieniowego usługi Azure Functions: w wersji 1.x i 2.x. W wersji 1.x jest ogólnie dostępna (GA). Go obsługuje programowanie na platformie .NET z portalu lub maszyn Windows i programu .NET Framework. obsługuje 1.x C#, JavaScript, a F#, eksperymentalna Obsługa języka Python, PHP, TypeScript, Batch, Bash i programu PowerShell.
 
-W wersji 2.x jest w wersji zapoznawczej. On korzysta z platformy .NET Core i obsługuje wiele platform Windows, macOS i maszyn z systemem Linux. 2.x dodaje najwyższej jakości pomoc techniczna dla języka Java, ale jeszcze nie bezpośrednio obsługuje wszystkich języków eksperymentalnych. W wersji 2.x używa nowy model extensibility powiązania, który umożliwia korzystanie z rozszerzeń innych firm do korzystania z platformy, niezależnie od wersji powiązań, i usprawniony środowiska wykonawczego.
+[W wersji 2.x jest ogólnie dostępna teraz również](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). On korzysta z platformy .NET Core i obsługuje wiele platform Windows, macOS i maszyn z systemem Linux. 2.x dodaje najwyższej jakości pomoc techniczna dla języka Java, ale jeszcze nie bezpośrednio obsługuje wszystkich języków eksperymentalnych. W wersji 2.x używa nowy model extensibility powiązania, który umożliwia korzystanie z rozszerzeń innych firm do korzystania z platformy, niezależnie od wersji powiązań, i usprawniony środowiska wykonawczego.
 
 > **Jest to znany problem w 1.x z [obsługę przekierowywania powiązań](https://github.com/Azure/azure-functions-host/issues/992).** Ten problem dotyczy programowanie na platformie .NET. Dotyczy to projektów z zależnościami od bibliotek, które są nieco innej z bibliotek uwzględnione w środowisku uruchomieniowym. Zespół funkcji zobowiązał się do konkretnych postępy na problem. Zespół będzie dotyczyć przekierowania powiązań w 2.x, zanim usługa zostanie wprowadzona do ogólnej dostępności. Instrukcja oficjalne zespołu z sugerowanymi poprawkami i ich obejść jest dostępna tutaj: [Rozpoznawania zestawu w usłudze Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
@@ -44,7 +44,7 @@ Są obsługiwane następujące języki albo ogólnie rzecz biorąc dostępność
 |**Python**    |Eksperymentalne|         |
 |**PHP**       |Eksperymentalne|         |
 |**TypeScript**|Eksperymentalne|         |
-|**Usługi Batch**     |Eksperymentalne|         |
+|**Batch**     |Eksperymentalne|         |
 |**Bash**      |Eksperymentalne|         |
 |**Program PowerShell**|Eksperymentalne|         |
 

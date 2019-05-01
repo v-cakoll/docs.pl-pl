@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050665"
 ---
 # <a name="using-data-contracts"></a>Używanie kontraktów danych
 A *kontraktu danych* jest formalną umowę między usługą i klienta, który opisuje abstrakcyjnie danych wymienianych. Oznacza to, do komunikowania się, klienta i usługi nie muszą udostępniać te same typy tylko tych samych kontraktów danych. Dokładnie definiuje kontraktu danych, dla każdego parametr lub zwracany typ danych jest serializowana (przekształcane w XML) do wymiany.  
@@ -38,21 +38,21 @@ A *kontraktu danych* jest formalną umowę między usługą i klienta, który op
 ### <a name="notes"></a>Uwagi  
  Poniższe informacje o zapewniają kwestii do rozważenia podczas tworzenia kontraktów danych:  
   
--   <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> Atrybut jest tylko honorowane, gdy jest używana z typami nieoznaczone. Obejmuje to typy, które nie są oznaczone przy użyciu jednego z <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, lub <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutów lub oznaczony jako możliwy do serializacji w inny sposób (takie jak <xref:System.Xml.Serialization.IXmlSerializable>).  
+- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> Atrybut jest tylko honorowane, gdy jest używana z typami nieoznaczone. Obejmuje to typy, które nie są oznaczone przy użyciu jednego z <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, lub <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutów lub oznaczony jako możliwy do serializacji w inny sposób (takie jak <xref:System.Xml.Serialization.IXmlSerializable>).  
   
--   Można zastosować <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do pola i właściwości.  
+- Można zastosować <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do pola i właściwości.  
   
--   Poziomy ułatwień dostępu elementu członkowskiego (wewnętrznego, prywatnych, chronionych lub publicznego) nie wpływają na kontraktu danych w jakikolwiek sposób.  
+- Poziomy ułatwień dostępu elementu członkowskiego (wewnętrznego, prywatnych, chronionych lub publicznego) nie wpływają na kontraktu danych w jakikolwiek sposób.  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute> Atrybut jest ignorowany, jeśli zostanie zastosowany do statycznych elementów członkowskich.  
+- <xref:System.Runtime.Serialization.DataMemberAttribute> Atrybut jest ignorowany, jeśli zostanie zastosowany do statycznych elementów członkowskich.  
   
--   Podczas serializacji kod pobieraniem właściwości jest wywoływana dla elementów członkowskich danych właściwości można pobrać wartości właściwości, które mają być serializowane.  
+- Podczas serializacji kod pobieraniem właściwości jest wywoływana dla elementów członkowskich danych właściwości można pobrać wartości właściwości, które mają być serializowane.  
   
--   Podczas deserializacji niezainicjowanego obiektu utworzenia bez wywoływania żadnych konstruktorów typu. Następnie wszystkie elementy członkowskie danych są deserializacji.  
+- Podczas deserializacji niezainicjowanego obiektu utworzenia bez wywoływania żadnych konstruktorów typu. Następnie wszystkie elementy członkowskie danych są deserializacji.  
   
--   Podczas deserializacji kodu zestawu właściwości jest wywoływana dla elementów członkowskich danych właściwości można ustawić właściwości wartość deserializowany.  
+- Podczas deserializacji kodu zestawu właściwości jest wywoływana dla elementów członkowskich danych właściwości można ustawić właściwości wartość deserializowany.  
   
--   Dla kontraktu danych był prawidłowy musi być możliwe do serializacji wszystkich jego składowych danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+- Dla kontraktu danych był prawidłowy musi być możliwe do serializacji wszystkich jego składowych danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
      Typy ogólne są obsługiwane w taki sam sposób, jak typy ogólne. Istnieją specjalne wymagania dotyczące parametrów ogólnych. Na przykład rozważmy następujący typ.  
   

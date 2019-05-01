@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050552"
 ---
 # <a name="comments-in-code-visual-basic"></a>Komentarze w kodzie (Visual Basic)
 Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbol informuje kompilator języka Visual Basic, aby zignorować tekst następujący, lub *komentarz*. Komentarze to krótkie notatki wyjaśniające, dodane do kodu, aby ułatwić życie innym osobom, które go czytają.  
@@ -48,11 +48,11 @@ Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbo
   
  Należy pamiętać o następujących kwestiach:  
   
--   Każda ważna deklaracja zmiennej powinna być poprzedzona komentarzem opisującym użycie deklarowanej zmiennej.  
+- Każda ważna deklaracja zmiennej powinna być poprzedzona komentarzem opisującym użycie deklarowanej zmiennej.  
   
--   Zmienne, elementy sterujące i procedury powinno się nazywać na tyle jasno, żeby komentowanie było konieczne tylko w przypadku szczegółów złożonych implementacji.  
+- Zmienne, elementy sterujące i procedury powinno się nazywać na tyle jasno, żeby komentowanie było konieczne tylko w przypadku szczegółów złożonych implementacji.  
   
--   Komentarze nie mogą występować w tym samym wierszu, jeśli jest on kontynuowany w następnym.  
+- Komentarze nie mogą występować w tym samym wierszu, jeśli jest on kontynuowany w następnym.  
   
  Można dodawać lub usuwać symbole komentarza dla bloku kodu, zaznaczając jeden lub więcej wierszy kodu i wybierając **komentarz** (![przycisk komentarza Visual Basic w programie Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) i **Usuń komentarz**  (![Przycisk Usuń komentarz z Visual Basic w programie Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) przyciski na **Edytuj** paska narzędzi.  
   

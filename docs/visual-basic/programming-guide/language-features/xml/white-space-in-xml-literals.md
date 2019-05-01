@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054942"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Odstęp w literałach XML (Visual Basic)
 Kompilator Visual Basic zawiera znaki istotnych białych literał XML podczas tworzenia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektu. Znaki nieważny biały znak nie są włączone.  
@@ -18,11 +18,11 @@ Kompilator Visual Basic zawiera znaki istotnych białych literał XML podczas tw
 ## <a name="significant-and-insignificant-white-space"></a>Znaczące i nieznaczne biały  
  Białych znaków w literałach XML są znaczące tylko dla trzech obszarach:  
   
--   Gdy są one w wartości atrybutu.  
+- Gdy są one w wartości atrybutu.  
   
--   Gdy są one częścią zawartości tekstowej elementu i tekst zawiera również inne znaki.  
+- Gdy są one częścią zawartości tekstowej elementu i tekst zawiera również inne znaki.  
   
--   Gdy są one osadzone wyrażenia dla zawartości tekstowej elementu.  
+- Gdy są one osadzone wyrażenia dla zawartości tekstowej elementu.  
   
  W przeciwnym razie kompilator traktuje znaki odstępu jako nieważny i nie dołącza następnie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektu dla literału.  
   

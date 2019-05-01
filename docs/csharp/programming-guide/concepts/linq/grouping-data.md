@@ -2,19 +2,19 @@
 title: Grupowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583223"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807792"
 ---
 # <a name="grouping-data-c"></a>Grupowanie danych (C#)
 Grupowanie odnosi się do operacji umieszczania danych do grup, tak aby elementów w każdej grupie udostępniać wspólny atrybut.  
   
  Poniższa ilustracja przedstawia wyniki grupowania sekwencji znaków. Klucz dla każdej grupy jest znakiem.  
   
- ![Operacje LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![Diagram przedstawiający operacji grupowania LINQ.](./media/grouping-data/linq-group-operation.png)  
   
  Metody standardowego operatora zapytań, które grupują elementy danych są wymienione w poniższej sekcji.  
   

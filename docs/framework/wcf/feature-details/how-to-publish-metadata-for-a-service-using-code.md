@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
 ms.openlocfilehash: 870142724321629d6dbeccd4118b814283901776
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039133"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Instrukcje: publikowanie metadanych dla usługi przy użyciu kodu
 Jest to jedna z dwóch tematy porad, które mówią o Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu kodu.  

@@ -3,12 +3,12 @@ title: Co nowego w języku C# 7.0 — przewodnik po języku C#
 description: Zapoznaj się z omówieniem nowych funkcji w wersji 7.0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481304"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773918"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
@@ -194,7 +194,7 @@ Aby uzyskać więcej informacji, zobacz [ref — słowo kluczowe](../language-re
 
 ## <a name="local-functions"></a>Funkcje lokalne
 
-Wiele projektów dla klasy zawierają metody, które są wywoływane z tylko jedną lokalizację. Te dodatkowe metody prywatnej Zachowaj każdej metody niewielkiego i skupionego projektu. *Funkcje lokalne* umożliwiają deklarowanie metody w kontekście innej metody. Funkcje lokalne ułatwiają czytelnicy klasy, aby zobaczyć tylko wywołać metody lokalnej z kontekstu, w którym jest zadeklarowana.
+Wiele projektów dla klasy zawierają metody, które są wywoływane z tylko jedną lokalizację. Te dodatkowe metody prywatnej Zachowaj każdej metody niewielkiego i skupionego projektu. *Funkcje lokalne* umożliwiają deklarowanie metody w kontekście innej metody. Funkcje lokalne ułatwiają czytelnicy klasy wyświetlić tylko wywołać lokalnego metody z kontekstu, w którym jest zdeklarowana.
 
 Istnieją dwie typowe przypadki użycia dla funkcji lokalnych: metody iteratora publicznych i metod asynchronicznych publicznych. Oba rodzaje metod wygenerować kod, który zgłasza błędy nowsze niż programiści mogą oczekiwać. W metodzie iteratora wszelkie wyjątki pojawiają się tylko podczas wywoływania kodu, który wylicza zwracanej sekwencji. W metodach asynchronicznych wyjątków tylko obserwuje się kiedy zwracanego `Task` jest oczekiwane. W poniższym przykładzie pokazano oddzielający Walidacja parametru od implementacji iteratora, przy użyciu funkcji lokalnego:
 

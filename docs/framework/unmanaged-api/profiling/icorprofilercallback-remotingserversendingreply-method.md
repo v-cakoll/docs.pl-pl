@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 024b1f3f7e08dc21582789de7f3899e8e44d5e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041837"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply — Metoda
 Powiadamia program profilujący, że proces zakończył przetwarzanie żądania wywołania zdalnej metody i ma przesłanie odpowiedzi za pośrednictwem kanału.  
@@ -39,11 +39,11 @@ HRESULT RemotingServerSendingReply(
  `pCookie`  
  [in] Wskaźnik do identyfikatora GUID, które będą odpowiadać wartość podana w [icorprofilercallback::remotingclientreceivingreply —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) w tych warunkach:  
   
--   Pliki cookie identyfikatora GUID komunikacji zdalnej są aktywne.  
+- Pliki cookie identyfikatora GUID komunikacji zdalnej są aktywne.  
   
--   Kanał powiedzie się podczas przesyłania wiadomości.  
+- Kanał powiedzie się podczas przesyłania wiadomości.  
   
--   Identyfikator GUID pliki cookie są aktywne na proces po stronie klienta.  
+- Identyfikator GUID pliki cookie są aktywne na proces po stronie klienta.  
   
  Dzięki temu można łatwo parowanie wywołaniem funkcji zdalnych wywołań i Tworzenie stosu wywołań logicznych.  
   

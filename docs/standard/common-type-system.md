@@ -5,11 +5,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
 ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053200"
 ---
 # <a name="common-type-system--common-language-specification"></a>System typu wspólnego i specyfikacja Common Language Specification
 
@@ -21,10 +21,10 @@ Zacząć od początku, należy pamiętać, że implementacja .NET jest _niezale�
 
 Aby to zrobić w sposób niewidoczny dla użytkownika, musi istnieć typowym sposobem opisano wszystkie obsługiwane typy. Jest to, co odpowiada za to System typu wspólnego (CTS). Został on utworzony, aby wykonać kilka czynności:
 
-*   Ustanów umożliwiająca wykonanie wielu języków.
-*   Zapewnia model obiektowy umożliwiają wdrażanie różnych języków na implementacji .NET.
-*   Zdefiniuj zestaw reguł, które należy wykonać we wszystkich językach, jeśli chodzi o pracy z typami.
-*   Podaj bibliotekę, która zawiera podstawowe typy pierwotne, które są używane podczas tworzenia aplikacji (takich jak `Boolean`, `Byte`, `Char` itp.)
+* Ustanów umożliwiająca wykonanie wielu języków.
+* Zapewnia model obiektowy umożliwiają wdrażanie różnych języków na implementacji .NET.
+* Zdefiniuj zestaw reguł, które należy wykonać we wszystkich językach, jeśli chodzi o pracy z typami.
+* Podaj bibliotekę, która zawiera podstawowe typy pierwotne, które są używane podczas tworzenia aplikacji (takich jak `Boolean`, `Byte`, `Char` itp.)
 
 CTS definiuje dwa główne rodzaje typów, które powinny być obsługiwane: typy odwołań i wartości. Ich nazwy wskazują ich definicje.
 
@@ -34,11 +34,11 @@ Typy wartości są i na odwrót, w których obiekty są reprezentowane przez ich
 
 CTS definiuje kilka kategorii typów, z których każdy z ich określonych semantyki i użycia:
 
-*   Klasy
-*   Struktury
-*   Wyliczenia
-*   Interfejsy
-*   Delegaty
+* Klasy
+* Struktury
+* Wyliczenia
+* Interfejsy
+* Delegaty
 
 CTS definiuje również inne właściwości typów, takich jak modyfikatorów dostępu, co to są elementami członkowskimi prawidłowego typu, jak dziedziczenie i przeciążenie działa i tak dalej. Niestety, przechodząc bardziej szczegółowo omówiono żadnego z tych wykracza poza zakres artykułu wprowadzające, takich jak to, ale można zapoznać się [więcej zasobów](#more-resources) sekcji na końcu łącza do bardziej szczegółowej zawartości, która obejmuje następujące tematy.
 
@@ -52,5 +52,5 @@ Należy zapoznać się dokumenty w [więcej zasobów](#more-resources) sekcji po
 
 ## <a name="more-resources"></a>Inne zasoby
 
-*   [System typu wspólnego](./base-types/common-type-system.md)
-*   [Specyfikacja Common Language Specification](language-independence-and-language-independent-components.md)
+* [System typu wspólnego](./base-types/common-type-system.md)
+* [Specyfikacja Common Language Specification](language-independence-and-language-independent-components.md)

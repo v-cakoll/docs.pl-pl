@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054366"
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system układu. Zrozumienie, jak i kiedy układ obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Ten temat zawiera następujące sekcje:  
   
--   [Element blokujących pola](#LayoutSystem_BoundingBox)  
+- [Element blokujących pola](#LayoutSystem_BoundingBox)  
   
--   [System układu](#LayoutSystem_Overview)  
+- [System układu](#LayoutSystem_Overview)  
   
--   [Mierzenie i rozmieszczanie elementów podrzędnych](#LayoutSystem_Measure_Arrange)  
+- [Mierzenie i rozmieszczanie elementów podrzędnych](#LayoutSystem_Measure_Arrange)  
   
--   [Elementy panelu i zachowania niestandardowego układu](#LayoutSystem_PanelsCustom)  
+- [Elementy panelu i zachowania niestandardowego układu](#LayoutSystem_PanelsCustom)  
   
--   [Zagadnienia dotyczące wydajności układu](#LayoutSystem_Performance)  
+- [Zagadnienia dotyczące wydajności układu](#LayoutSystem_Performance)  
   
--   [Renderowanie podrzędnych pikseli i zaokrąglania układu](#LayoutSystem_LayoutRounding)  
+- [Renderowanie podrzędnych pikseli i zaokrąglania układu](#LayoutSystem_LayoutRounding)  
   
--   [Jaka jest przyszłość](#LayoutSystem_whatsnext)  
+- [Jaka jest przyszłość](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Element blokujących pola  
@@ -120,19 +120,19 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 ## <a name="layout-performance-considerations"></a>Zagadnienia dotyczące wydajności układu  
  Układ jest proces cyklicznego. Każdy element podrzędny <xref:System.Windows.Controls.Panel.Children%2A> przetwarzane kolekcji podczas każdego wywołania systemu układów. W rezultacie wyzwalania system układu należy unikać podczas nie jest konieczne. Następujące zagadnienia dotyczące może pomóc Ci osiągnąć lepszą wydajność.  
   
--   Należy pamiętać o zmianie wartości właściwości, które wymusi aktualizacji cyklicznej przez system układu.  
+- Należy pamiętać o zmianie wartości właściwości, które wymusi aktualizacji cyklicznej przez system układu.  
   
      Właściwości zależności, których wartości może spowodować, że system układu można zainicjować są oznaczone przy użyciu flag publicznych. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> i <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> zapewnia wskazówki przydatne do właściwości, które wymusi zmiany wartości cyklicznej aktualizacji przez system układu. Ogólnie rzecz biorąc, powinien mieć żadnych właściwości, która może mieć wpływ na rozmiar elementu obwiedni <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flagi jest ustawiona na wartość true. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](dependency-properties-overview.md).  
   
--   Jeśli to możliwe, użyj <xref:System.Windows.UIElement.RenderTransform%2A> zamiast <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Jeśli to możliwe, użyj <xref:System.Windows.UIElement.RenderTransform%2A> zamiast <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> może być bardzo przydatny sposób wpływają na zawartość [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Jednak jeśli efekt przekształcenia ma wpływ na położenie innych elementów, najlepiej jest używać <xref:System.Windows.UIElement.RenderTransform%2A> zamiast tego, ponieważ <xref:System.Windows.UIElement.RenderTransform%2A> nie wywoła system układu. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> stosuje przekształcenia i wymusza układ cyklicznych aktualizacji konta dla nowej pozycji danego elementu.  
   
--   Unikaj niepotrzebnych wywołania <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Unikaj niepotrzebnych wywołania <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      <xref:System.Windows.UIElement.UpdateLayout%2A> Metoda wymusza aktualizację układu cyklicznego i często jest to konieczne. Chyba że masz pewność, że pełnej aktualizacji jest wymagany, polegają na system układu, aby wywołać tę metodę dla Ciebie.  
   
--   Podczas pracy z dużą <xref:System.Windows.Controls.Panel.Children%2A> kolekcji, należy rozważyć użycie <xref:System.Windows.Controls.VirtualizingStackPanel> zamiast zwykłych <xref:System.Windows.Controls.StackPanel>.  
+- Podczas pracy z dużą <xref:System.Windows.Controls.Panel.Children%2A> kolekcji, należy rozważyć użycie <xref:System.Windows.Controls.VirtualizingStackPanel> zamiast zwykłych <xref:System.Windows.Controls.StackPanel>.  
   
      Dzięki wirtualizacji kolekcji podrzędnej <xref:System.Windows.Controls.VirtualizingStackPanel> przechowuje tylko obiekty w pamięci, które są obecnie w ramach elementu nadrzędnego okienka ekranu. W rezultacie znacznie zwiększona wydajność w większości scenariuszy.  
   

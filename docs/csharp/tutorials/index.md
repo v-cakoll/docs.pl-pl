@@ -2,12 +2,12 @@
 title: Samouczki języka C#
 description: Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214445"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773900"
 ---
 # <a name="c-tutorials"></a>Samouczki języka C#
 
@@ -50,6 +50,7 @@ Wprowadzających samouczków po lekcji Witaj, świecie są dostępne w środowis
 * [Typy dopuszczające wartości null odwołań](nullable-reference-types.md): Pokazuje sposób użycia typy dopuszczające wartości null odwołanie do wyrażenia zgodne z zamiarami użytkownika dla odwołania o wartości null.
 * [Aktualizowanie projektu, aby użyć Nullable typy odwołań](upgrade-to-nullable-references.md): pokazano techniki, aby uaktualnić istniejący projekt, aby użyć typów referencyjnych dopuszczającego wartość null.
 * [Rozszerz możliwości danych za pomocą dopasowywania do wzorca](pattern-matching.md): Pokazuje, jak na potrzeby dopasowywania do wzorca rozszerzać typów poza ich podstawowych funkcji.
+* [Praca z sekwencji danych przy użyciu indeksów i zakresy](ranges-indexes.md): Pokazuje nowe wygodnej składni do uzyskiwania dostępu do pojedynczych elementów lub zakresy kontenera sekwencyjnego danych.
 
 ## <a name="general-tutorials"></a>Samouczki ogólne
 

@@ -16,36 +16,36 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025811"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 <a name="Top"></a> Klasa znaków definiuje zestaw znaków, z którego każdy jeden może wystąpić w ciągu wejściowym, aby dopasowanie zakończyło się sukcesem. Język wyrażeń regularnych w programie .NET obsługuje następujące klasy znaków:  
   
--   Grupy znaków pozytywnych. Znak w ciągu wejściowym musi odpowiadać jednemu ze znaków z określonego zestawu znaków. Aby uzyskać więcej informacji, zobacz [grupa znaków pozytywnych](#PositiveGroup).  
+- Grupy znaków pozytywnych. Znak w ciągu wejściowym musi odpowiadać jednemu ze znaków z określonego zestawu znaków. Aby uzyskać więcej informacji, zobacz [grupa znaków pozytywnych](#PositiveGroup).  
   
--   Grupy znaków negatywnych. Znak w ciągu wejściowym nie może odpowiadać żadnemu ze znaków z określonego zestawu znaków. Aby uzyskać więcej informacji, zobacz [grupa znaków negatywnych](#NegativeGroup).  
+- Grupy znaków negatywnych. Znak w ciągu wejściowym nie może odpowiadać żadnemu ze znaków z określonego zestawu znaków. Aby uzyskać więcej informacji, zobacz [grupa znaków negatywnych](#NegativeGroup).  
   
--   Dowolny znak. `.` (Kropka) znak w wyrażeniu regularnym jest znak symbolu wieloznacznego, który dopasowuje dowolny znak z wyjątkiem `\n`. Aby uzyskać więcej informacji, zobacz [dowolny znak](#AnyCharacter).  
+- Dowolny znak. `.` (Kropka) znak w wyrażeniu regularnym jest znak symbolu wieloznacznego, który dopasowuje dowolny znak z wyjątkiem `\n`. Aby uzyskać więcej informacji, zobacz [dowolny znak](#AnyCharacter).  
   
--   Ogólna kategoria Unicode lub blok nazwany. Aby dopasowanie zakończyło się sukcesem, znak w ciągu wejściowym musi być elementem członkowskim określonej kategorii Unicode lub musi należeć do ciągłego zakresu znaków Unicode. Aby uzyskać więcej informacji, zobacz [kategoria Unicode lub blok Unicode](#CategoryOrBlock).  
+- Ogólna kategoria Unicode lub blok nazwany. Aby dopasowanie zakończyło się sukcesem, znak w ciągu wejściowym musi być elementem członkowskim określonej kategorii Unicode lub musi należeć do ciągłego zakresu znaków Unicode. Aby uzyskać więcej informacji, zobacz [kategoria Unicode lub blok Unicode](#CategoryOrBlock).  
   
--   Negatywna ogólna kategoria Unicode lub blok nazwany. Aby dopasowanie zakończyło się sukcesem, znak w ciągu wejściowym nie może być elementem członkowskim określonej kategorii Unicode, ani nie może należeć do ciągłego zakresu znaków Unicode. Aby uzyskać więcej informacji, zobacz [negatywna kategoria Unicode lub blok Unicode](#NegativeCategoryOrBlock).  
+- Negatywna ogólna kategoria Unicode lub blok nazwany. Aby dopasowanie zakończyło się sukcesem, znak w ciągu wejściowym nie może być elementem członkowskim określonej kategorii Unicode, ani nie może należeć do ciągłego zakresu znaków Unicode. Aby uzyskać więcej informacji, zobacz [negatywna kategoria Unicode lub blok Unicode](#NegativeCategoryOrBlock).  
   
--   Znak słowa. Znak w ciągu wejściowym może należeć do dowolnej kategorii Unicode, która jest odpowiednia dla znaków w wyrazach. Aby uzyskać więcej informacji, zobacz [znak słowa](#WordCharacter).  
+- Znak słowa. Znak w ciągu wejściowym może należeć do dowolnej kategorii Unicode, która jest odpowiednia dla znaków w wyrazach. Aby uzyskać więcej informacji, zobacz [znak słowa](#WordCharacter).  
   
--   Znak niebędący znakiem słowa. Znak w ciągu wejściowym może należeć do dowolnej kategorii Unicode, która nie jest znakiem słowa. Aby uzyskać więcej informacji, zobacz [inne niż znak niebędący znakiem słowa](#NonWordCharacter).  
+- Znak niebędący znakiem słowa. Znak w ciągu wejściowym może należeć do dowolnej kategorii Unicode, która nie jest znakiem słowa. Aby uzyskać więcej informacji, zobacz [inne niż znak niebędący znakiem słowa](#NonWordCharacter).  
   
--   Znak odstępu. Znak w ciągu wejściowym może być dowolnym znakiem separatora Unicode, a także dowolnym ze znaków kontrolnych. Aby uzyskać więcej informacji, zobacz [biały znak](#WhitespaceCharacter).  
+- Znak odstępu. Znak w ciągu wejściowym może być dowolnym znakiem separatora Unicode, a także dowolnym ze znaków kontrolnych. Aby uzyskać więcej informacji, zobacz [biały znak](#WhitespaceCharacter).  
   
--   Znak niebędący odstępem. Znak w ciągu wejściowym może być dowolnym znakiem, który nie jest znakiem odstępu. Aby uzyskać więcej informacji, zobacz [inne niż biały znak](#NonWhitespaceCharacter).  
+- Znak niebędący odstępem. Znak w ciągu wejściowym może być dowolnym znakiem, który nie jest znakiem odstępu. Aby uzyskać więcej informacji, zobacz [inne niż biały znak](#NonWhitespaceCharacter).  
   
--   Cyfra dziesiętna. Znak w ciągu wejściowym może być dowolnym ze znaków klasyfikowanych jako cyfry dziesiętne Unicode. Aby uzyskać więcej informacji, zobacz [znak cyfry dziesiętnej](#DigitCharacter).  
+- Cyfra dziesiętna. Znak w ciągu wejściowym może być dowolnym ze znaków klasyfikowanych jako cyfry dziesiętne Unicode. Aby uzyskać więcej informacji, zobacz [znak cyfry dziesiętnej](#DigitCharacter).  
   
--   Cyfra niebędąca cyfrą dziesiętną. Znak w ciągu wejściowym może być dowolnym znakiem innym niż cyfra dziesiętna Unicode. Aby uzyskać więcej informacji, zobacz [znak cyfry dziesiętnej](#NonDigitCharacter).  
+- Cyfra niebędąca cyfrą dziesiętną. Znak w ciągu wejściowym może być dowolnym znakiem innym niż cyfra dziesiętna Unicode. Aby uzyskać więcej informacji, zobacz [znak cyfry dziesiętnej](#NonDigitCharacter).  
   
  .NET obsługuje wyrażenia odejmowania klas znaków, co pozwala na zdefiniowanie zestawu znaków jako wyniku wykluczenia jednej klasy znaków z innej klasy znaków. Aby uzyskać więcej informacji, zobacz [odejmowania klas znaków](#CharacterClassSubtraction).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622952"
 ## <a name="any-character-"></a>Dowolny znak:  
  Znak kropki (.) dopasowuje dowolny znak z wyjątkiem `\n` (znak nowego wiersza, \u000A) z następującymi dwoma kwalifikacjami:  
   
--   Jeśli wzorzec wyrażenia regularnego jest modyfikowany przez <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcji, lub jeśli część wzorca, który zawiera `.` klasy znaków jest modyfikowany przez `s` opcji `.` dopasowuje dowolny znak. Aby uzyskać więcej informacji, zobacz [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
+- Jeśli wzorzec wyrażenia regularnego jest modyfikowany przez <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcji, lub jeśli część wzorca, który zawiera `.` klasy znaków jest modyfikowany przez `s` opcji `.` dopasowuje dowolny znak. Aby uzyskać więcej informacji, zobacz [Opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
      W poniższym przykładzie pokazano odmienne zachowanie `.` klasy znaków, domyślnie, a także z <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcji. Wyrażenie regularne `^.+` rozpoczyna się od początku ciągu i dopasowuje każdy znak. Domyślnie dopasowanie kończy się na końcu pierwszego wiersza; wzorzec wyrażenia regularnego pasuje do znaku powrotu karetki `\r` lub \u000D, ale nie jest zgodny `\n`. Ponieważ <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcji interpretuje cały ciąg wejściowy jako jeden wiersz, więc dopasowuje każdy znak w ciągu wejściowym, łącznie z `\n`.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54622952"
 > [!NOTE]
 >  Dopasowuje dowolny znak z wyjątkiem `\n`, `.` Klasa znaków dopasowuje również `\r` (znak powrotu karetki, \u000D).  
   
--   W grupie znaków pozytywnych lub negatywnych kropka jest traktowana jako znak kropki literału, a nie jako klasa znaków. Aby uzyskać więcej informacji, zobacz [grupa znaków pozytywnych](#PositiveGroup) i [grupa znaków negatywnych](#NegativeGroup) we wcześniejszej części tego tematu. Poniższy przykład stanowi ilustrację, definiując wyrażenie regularne, która zawiera znak kropki (`.`) zarówno jako klasę znaków, jak i jako członek grupy znaków pozytywnych. Wyrażenie regularne `\b.*[.?!;:](\s|\z)` rozpoczyna na granicy wyrazu, dopasowuje dowolny znak, aż do napotkania jednego z pięciu znaków interpunkcyjnych, w tym kropki, a następnie dopasowuje znak odstępu lub koniec ciągu.  
+- W grupie znaków pozytywnych lub negatywnych kropka jest traktowana jako znak kropki literału, a nie jako klasa znaków. Aby uzyskać więcej informacji, zobacz [grupa znaków pozytywnych](#PositiveGroup) i [grupa znaków negatywnych](#NegativeGroup) we wcześniejszej części tego tematu. Poniższy przykład stanowi ilustrację, definiując wyrażenie regularne, która zawiera znak kropki (`.`) zarówno jako klasę znaków, jak i jako członek grupy znaków pozytywnych. Wyrażenie regularne `\b.*[.?!;:](\s|\z)` rozpoczyna na granicy wyrazu, dopasowuje dowolny znak, aż do napotkania jednego z pięciu znaków interpunkcyjnych, w tym kropki, a następnie dopasowuje znak odstępu lub koniec ciągu.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
 ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053252"
 ---
 # <a name="merged-resource-dictionaries"></a>Połączone słowniki zasobów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów obsługują funkcję słownika scalonych zasobów. Ta funkcja udostępnia sposób definiowania zasobów część [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji poza skompilowana klasa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji. Następnie mogą udostępniać zasoby w aplikacjach i są również więcej wygodnie izolowane dla lokalizacji.  

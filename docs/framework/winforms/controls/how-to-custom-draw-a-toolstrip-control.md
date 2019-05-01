@@ -17,20 +17,20 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052992"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Instrukcje: niestandardowy rysunek kontrolki ToolStrip
 <xref:System.Windows.Forms.ToolStrip> Kontrolki skojarzone renderowania klasy (związane z malowaniem) dysponować następującymi elementami:  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> udostępnia wygląd i rodzaj systemu operacyjnego.  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> udostępnia wygląd i rodzaj systemu operacyjnego.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> udostępnia wygląd i styl pakietu Microsoft Office.  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> udostępnia wygląd i styl pakietu Microsoft Office.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> jest abstrakcyjna klasa bazowa dla innych klas dwóch renderowania.  
+- <xref:System.Windows.Forms.ToolStripRenderer> jest abstrakcyjna klasa bazowa dla innych klas dwóch renderowania.  
   
  Do niestandardowego rysowania (określana także jako rysowanie przez właściciela) <xref:System.Windows.Forms.ToolStrip>, można zastąpić jedną z klas programu renderującego i zmienić aspektów logiki renderowania.  
   
@@ -38,20 +38,20 @@ ms.locfileid: "59311048"
   
 ### <a name="to-switch-between-the-provided-renderers"></a>Aby przełączać się między podane renderowania  
   
--   Ustaw <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> właściwości <xref:System.Windows.Forms.ToolStripRenderMode> wartość, która ma.  
+- Ustaw <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> właściwości <xref:System.Windows.Forms.ToolStripRenderMode> wartość, która ma.  
   
      Za pomocą <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, statycznej <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> określa modułu renderowania dla aplikacji. Inne wartości <xref:System.Windows.Forms.ToolStripRenderMode> są <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, i <xref:System.Windows.Forms.ToolStripRenderMode.System>.  
   
 ### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>Aby zmienić program Microsoft Office — styl obramowania bezpośrednio  
   
--   Zastąp <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ale nie wywołuj klasy bazowej.  
+- Zastąp <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ale nie wywołuj klasy bazowej.  
   
 > [!NOTE]
 >  Dostępna jest wersja tej metody dla <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, i <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
 ### <a name="to-change-the-professionalcolortable"></a>Aby zmienić professionalcolortable —  
   
--   Zastąp <xref:System.Windows.Forms.ProfessionalColorTable> i zmienić kolory mają.  
+- Zastąp <xref:System.Windows.Forms.ProfessionalColorTable> i zmienić kolory mają.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -115,11 +115,11 @@ ms.locfileid: "59311048"
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Aby wyłączyć kolory Microsoft Office dla całej aplikacji  
   
--   Ustaw <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> do `false`.  
+- Ustaw <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> do `false`.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Aby wyłączyć kolory Microsoft Office dla jednego formantu ToolStrip  
   
--   Użyj kodu, podobnie jak w poniższym przykładzie kodu.  
+- Użyj kodu, podobnie jak w poniższym przykładzie kodu.  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  

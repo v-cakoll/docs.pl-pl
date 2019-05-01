@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 79cc59eb8de513f547a8fd87db8c95dd9af37375
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672462"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63774030"
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#)
 
@@ -88,7 +88,7 @@ gdzie *expr* jest wyrażeniem, które daje w wyniku wystąpienia określonego ty
 
 Począwszy od C# 7.1, *expr* może mieć typ kompilacji, zdefiniowane przez parametr typu ogólnego i ograniczenia. 
 
-Jeśli *expr* jest `true` i `is` jest używana z `if` instrukcji, *nazwa_zmiennej* przypisano i ma zakres lokalny w ramach `if` tylko instrukcji.
+Jeśli *expr* jest `true` i `is` jest używana z `if` instrukcji *nazwa_zmiennej* jest przypisywane w ramach `if` tylko instrukcji. Zakres *nazwa_zmiennej* pochodzi z `is` wyrażenia na końcu otaczający blok `if` instrukcji. Za pomocą *nazwa_zmiennej* w dowolnej innej lokalizacji generuje błąd w czasie kompilacji do użytku w zmiennej, która nie została przypisana.
 
 W poniższym przykładzie użyto `is` wpisz wzór do implementacji typu <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> metody.
 

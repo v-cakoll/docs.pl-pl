@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
 ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053421"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Udostępnianie pętli komunikatów pomiędzy Win32 i WPF
 W tym temacie opisano sposób implementacji pętlę komunikatów do współpracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], przy użyciu istniejących komunikatów narażenia pętli w <xref:System.Windows.Threading.Dispatcher> lub poprzez utworzenie pętli oddzielną wiadomość na [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] obok współdziałanie kodu.  
@@ -29,26 +29,26 @@ W tym temacie opisano sposób implementacji pętlę komunikatów do współpracy
 ## <a name="writing-message-loops"></a>Zapisywanie pętli komunikatów  
  Oto lista kontrolna <xref:System.Windows.Interop.ComponentDispatcher> składowe, które będą używane, jeśli piszesz własnego pętli komunikatów:  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: wywołać ten element, aby wskazać, że wątek modalne pętli komunikatów dla usługi.  
+- <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: wywołać ten element, aby wskazać, że wątek modalne pętli komunikatów dla usługi.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>: ten element, aby wskazać, że wątek został przywrócony na nonmodal wywołać pętli komunikatów dla usługi.  
+- <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>: ten element, aby wskazać, że wątek został przywrócony na nonmodal wywołać pętli komunikatów dla usługi.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>: Twoje pętli komunikatów powinna wywołać ten element, aby wskazać, że <xref:System.Windows.Interop.ComponentDispatcher> powinny wywoływać <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> zdarzeń. <xref:System.Windows.Interop.ComponentDispatcher> nie zgłosi <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> Jeśli <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> jest `true`, ale pętli komunikatów może wywołać <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> nawet wtedy, gdy <xref:System.Windows.Interop.ComponentDispatcher> nie może odpowiadać na znajduje się w stan modalny.  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>: Twoje pętli komunikatów powinna wywołać ten element, aby wskazać, że <xref:System.Windows.Interop.ComponentDispatcher> powinny wywoływać <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> zdarzeń. <xref:System.Windows.Interop.ComponentDispatcher> nie zgłosi <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> Jeśli <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> jest `true`, ale pętli komunikatów może wywołać <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> nawet wtedy, gdy <xref:System.Windows.Interop.ComponentDispatcher> nie może odpowiadać na znajduje się w stan modalny.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: Twoje pętli komunikatów powinna wywołać ten element, aby wskazać, że nowa wiadomość jest dostępna. Zwracana wartość wskazuje, czy odbiornik do <xref:System.Windows.Interop.ComponentDispatcher> zdarzenie obsługi wiadomości. Jeśli <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> zwraca `true` (obsługiwane) Dyspozytor nie powinny nic robić dalej z komunikatem. Jeśli wartość zwracana jest `false`, Dyspozytor oczekuje się, aby wywołać [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcja `TranslateMessage`, następnie wywołać `DispatchMessage`.  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: Twoje pętli komunikatów powinna wywołać ten element, aby wskazać, że nowa wiadomość jest dostępna. Zwracana wartość wskazuje, czy odbiornik do <xref:System.Windows.Interop.ComponentDispatcher> zdarzenie obsługi wiadomości. Jeśli <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> zwraca `true` (obsługiwane) Dyspozytor nie powinny nic robić dalej z komunikatem. Jeśli wartość zwracana jest `false`, Dyspozytor oczekuje się, aby wywołać [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcja `TranslateMessage`, następnie wywołać `DispatchMessage`.  
   
 ## <a name="using-componentdispatcher-and-existing-message-handling"></a>Za pomocą ComponentDispatcher oraz istniejące Obsługa komunikatów  
  Oto lista kontrolna <xref:System.Windows.Interop.ComponentDispatcher> elementów członkowskich będzie używać, jeśli użytkownik korzysta z używaniem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pętli komunikatów.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: zwraca, czy aplikacja stała się modalne (np. pętli komunikatów modalnych zostało wypchnięte). <xref:System.Windows.Interop.ComponentDispatcher> można śledzić ten stan, ponieważ klasa przechowuje liczbę <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> i <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> wywołania z pętli komunikatów.  
+- <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: zwraca, czy aplikacja stała się modalne (np. pętli komunikatów modalnych zostało wypchnięte). <xref:System.Windows.Interop.ComponentDispatcher> można śledzić ten stan, ponieważ klasa przechowuje liczbę <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> i <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> wywołania z pętli komunikatów.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> i <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> zdarzenia obowiązują standardowe reguły delegowanie wywołań. Delegaty są wywoływane w nieokreślonej kolejności, a wszystkie obiekty delegowane są wywoływane, nawet wtedy, gdy pierwszy z nich oznacza komunikat jako obsługiwane.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> i <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> zdarzenia obowiązują standardowe reguły delegowanie wywołań. Delegaty są wywoływane w nieokreślonej kolejności, a wszystkie obiekty delegowane są wywoływane, nawet wtedy, gdy pierwszy z nich oznacza komunikat jako obsługiwane.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: wskazuje odpowiednie i efektywne czas bezczynności (%) przetwarzania (nie ma żadnych oczekujących komunikatów dla wątku). <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> nie zostaną wywołane Jeśli wątek jest modalnych.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: wskazuje odpowiednie i efektywne czas bezczynności (%) przetwarzania (nie ma żadnych oczekujących komunikatów dla wątku). <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> nie zostaną wywołane Jeśli wątek jest modalnych.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: wywoływane dla wszystkich wiadomości, które przetwarza "pompy komunikatów".  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: wywoływane dla wszystkich wiadomości, które przetwarza "pompy komunikatów".  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: wywoływane dla wszystkich wiadomości, które nie były obsługiwane podczas <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: wywoływane dla wszystkich wiadomości, które nie były obsługiwane podczas <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>.  
   
  Komunikat jest uznawany za obsługiwany Jeżeli po <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> zdarzeń lub <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> zdarzeń, `handled` parametr przekazywany przez odwołanie w danych zdarzenia jest `true`. Programy obsługi zdarzeń należy zignorować ten komunikat, jeśli `handled` jest `true`, ponieważ oznacza to, że najpierw obsługiwane innego programu obsługi wiadomości. Programy obsługi zdarzeń do obu zdarzeń może modyfikować komunikat. Dyspozytor powinien wysyłać komunikat zmodyfikowany i nie oryginalnej wiadomości bez zmian. <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> jest dostarczane do wszystkich obiektów nasłuchujących, ale zamiar architektury jest to, że tylko najwyższego poziomu okna zawierającego HWND, jaką komunikaty docelowych należy wywołać kod w odpowiedzi na wiadomość.  
   

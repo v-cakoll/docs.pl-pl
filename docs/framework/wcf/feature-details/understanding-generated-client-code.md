@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
 ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050691"
 ---
 # <a name="understanding-generated-client-code"></a>Opis wygenerowanego kodu klienta
 [Narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generuje kod klienta i pliku konfiguracji aplikacji klienta do użycia podczas tworzenia aplikacji klienckich. Ten temat zawiera przewodnik po przykładach wygenerowanego kodu dla scenariuszy umowy usług w warstwie standardowa. Aby uzyskać więcej informacji dotyczących tworzenia aplikacji klienckiej, za pomocą wygenerowanego kodu, zobacz [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -20,15 +20,15 @@ ms.locfileid: "59189162"
   
  Ponieważ Svcutil.exe ma kilka opcji, które modyfikują informacje o typie wygenerowanym, w tym temacie nie omówiono wszystkich scenariuszy. Jednak następujące zadania standard obejmują lokalizowanie wygenerowanego kodu:  
   
--   Identyfikowanie interfejsy kontraktu usługi.  
+- Identyfikowanie interfejsy kontraktu usługi.  
   
--   Identyfikowanie Klasa klienta programu WCF.  
+- Identyfikowanie Klasa klienta programu WCF.  
   
--   Identyfikowanie typów danych.  
+- Identyfikowanie typów danych.  
   
--   Identyfikowanie kontrakty wywołania zwrotnego dla usługi dwukierunkowe.  
+- Identyfikowanie kontrakty wywołania zwrotnego dla usługi dwukierunkowe.  
   
--   Identyfikowanie interfejsu kanału kontraktu usługi pomocnika.  
+- Identyfikowanie interfejsu kanału kontraktu usługi pomocnika.  
   
 ### <a name="finding-service-contract-interfaces"></a>Interfejsy kontraktu usługi wyszukiwania  
  Aby zlokalizować interfejsów, które modelują kontraktów usług, wyszukaj interfejsów, które są oznaczone <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> atrybutu. Często ten atrybut może być trudne do zlokalizowania z szybkiego odczytu z powodu obecności innych atrybutów i jawne właściwości ustawione dla samego atrybutu. Należy pamiętać, że interfejs kontrakt usługi i interfejsu umowy klienta są dwa różne typy. Poniższy przykład kodu pokazuje kontrakt usługi.  

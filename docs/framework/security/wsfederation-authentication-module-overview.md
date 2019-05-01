@@ -3,20 +3,20 @@ title: Omówienie modułu uwierzytelniania WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c64bbfc868268fea77d2d17317bfea43aa413b3f
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310255"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808249"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Omówienie modułu uwierzytelniania WSFederation
 Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjnego w aplikacjach ASP.NET, za pośrednictwem modułu uwierzytelniania WS-Federated (WS-Rozproszona). Ten temat pomoże zrozumieć, jak federacyjnego działania uwierzytelniania i jak z niej korzystać.  
   
 ### <a name="overview-of-federated-authentication"></a>Przegląd uwierzytelniania federacyjnego  
- Uwierzytelnianie federacyjne umożliwia usługa tokenu zabezpieczającego (STS) w jednej domenie zaufania, aby podać informacje uwierzytelniania do usługi STS w innej domenie zaufania, gdy istnieje relacja zaufania między tymi dwiema domenami. Na przykład jest wyświetlany na poniższej ilustracji.  
+ Uwierzytelnianie federacyjne umożliwia usługa tokenu zabezpieczającego (STS) w jednej domenie zaufania, aby podać informacje uwierzytelniania do usługi STS w innej domenie zaufania, gdy istnieje relacja zaufania między tymi dwiema domenami. Na przykład jest wyświetlany na poniższej ilustracji:  
   
- ![Scenariusz uwierzytelniania federacyjnego](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
+ ![Diagram przedstawiający Scenariusz uwierzytelniania federacyjnego.](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Klient w domenie zaufania firmy Fabrikam wysyła żądanie do aplikacji w domenie Contoso zaufania jednostki uzależnionej strona (RP).  
   
@@ -50,7 +50,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
   
  Na poniższym diagramie przedstawiono ogólny przepływ informacji w przypadku przekierowania pasywnym. Żądanie jest automatycznie przekierowywane za pośrednictwem usługi STS, aby ustanowić poświadczeń bez strony logowania:  
   
- ![Diagram chronometrażu dla logowania&#45;się przy użyciu przekierowania pasywnym](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![Diagram przedstawiający Zaloguj się przy użyciu przekierowania pasywnym.](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  Na poniższym diagramie przedstawiono bardziej szczegółowo na co się stanie po użytkownik został uwierzytelniony do usługi STS i ich tokeny zabezpieczające są przetwarzane przez <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>:  
   
@@ -63,9 +63,9 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
 ### <a name="events"></a>Zdarzenia  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>, a ich klasy nadrzędnej <xref:System.IdentityModel.Services.HttpModuleBase>, wywoływanie zdarzeń na różnych etapach cyklu przetwarzania żądania HTTP. Może obsługiwać te zdarzenia w `global.asax` pliku swoje [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji.  
   
--   Infrastruktury ASP.NET wywołuje moduł <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> metoda można zainicjować modułu.  
+- Infrastruktury ASP.NET wywołuje moduł <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> metoda można zainicjować modułu.  
   
--   <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> Zdarzenie jest zgłaszane w przypadku infrastruktury ASP.NET wywołuje <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> metoda po raz pierwszy na jeden z modułów aplikacji, które wynikają z <xref:System.IdentityModel.Services.HttpModuleBase>. Ta metoda uzyskuje dostęp do statycznego <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> właściwość, która powoduje, że konfiguracja, należy załadować z pliku Web.config. To zdarzenie jest inicjowane tylko przy pierwszym uzyskaniu dostępu do tej właściwości. <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Obiekt, który jest inicjowany z konfiguracji jest możliwy za pośrednictwem <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> właściwość w obsłudze zdarzeń. To zdarzenie służy do modyfikowania konfiguracji przed jej zastosowaniem do wszystkich modułów. Możesz dodać program obsługi dla tego zdarzenia w przypadku metody Application_Start:  
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> Zdarzenie jest zgłaszane w przypadku infrastruktury ASP.NET wywołuje <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> metoda po raz pierwszy na jeden z modułów aplikacji, które wynikają z <xref:System.IdentityModel.Services.HttpModuleBase>. Ta metoda uzyskuje dostęp do statycznego <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> właściwość, która powoduje, że konfiguracja, należy załadować z pliku Web.config. To zdarzenie jest inicjowane tylko przy pierwszym uzyskaniu dostępu do tej właściwości. <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Obiekt, który jest inicjowany z konfiguracji jest możliwy za pośrednictwem <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> właściwość w obsłudze zdarzeń. To zdarzenie służy do modyfikowania konfiguracji przed jej zastosowaniem do wszystkich modułów. Możesz dodać program obsługi dla tego zdarzenia w przypadku metody Application_Start:  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -76,19 +76,19 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
   
      Zastępuje każdy moduł <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> i <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType> metody abstrakcyjne. Pierwsza z tych metod dodaje programy obsługi zdarzeń potoku platformy ASP.NET, które mają znaczenie w odniesieniu do modułu. W większości przypadków wystarczy modułu domyślną implementację. Drugi z tych metod inicjuje właściwości modułu z jego <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType> właściwości. (Jest kopii konfiguracji, który został wcześniej załadowany). Należy przesłonić tę metodę drugi, jeśli chcesz obsługiwać inicjowanie nowe właściwości z konfiguracji w klasach, które wynikają z <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> lub <xref:System.IdentityModel.Services.SessionAuthenticationModule>. W takiej sytuacji będzie trzeba będzie również dziedziczyć obiekty odpowiedniej konfiguracji w celu obsługi właściwości konfiguracji dodano; na przykład z <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>, lub <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>.  
   
--   Rozproszona WS zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> zdarzenie, kiedy przechwytuje on token zabezpieczający, który został wystawiony przez usługę STS.  
+- Rozproszona WS zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> zdarzenie, kiedy przechwytuje on token zabezpieczający, który został wystawiony przez usługę STS.  
   
--   Rozproszona WS zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> zdarzenie po jego zweryfikowaniu.  
+- Rozproszona WS zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> zdarzenie po jego zweryfikowaniu.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> Zgłasza <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> zdarzenia podczas tworzenia tokenu zabezpieczenia sesji dla użytkownika.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> Zgłasza <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> zdarzenia podczas tworzenia tokenu zabezpieczenia sesji dla użytkownika.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> Zgłasza <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> zdarzenie, kiedy przechwytuje on kolejne żądania z pliku cookie, który zawiera token zabezpieczający sesji.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> Zgłasza <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> zdarzenie, kiedy przechwytuje on kolejne żądania z pliku cookie, który zawiera token zabezpieczający sesji.  
   
--   Zanim Rozproszona WS przekierowuje użytkownika do wystawcy, zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> zdarzeń. Żądanie logowania usługi WS-Federation jest dostępna za pośrednictwem <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> właściwość <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> przekazany w zdarzeniu. Można zmodyfikować żądanie przed wysłaniem ten z wystawcą.  
+- Zanim Rozproszona WS przekierowuje użytkownika do wystawcy, zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> zdarzeń. Żądanie logowania usługi WS-Federation jest dostępna za pośrednictwem <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> właściwość <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> przekazany w zdarzeniu. Można zmodyfikować żądanie przed wysłaniem ten z wystawcą.  
   
--   Rozproszona WS zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> zdarzenie, kiedy plik cookie są pomyślnie zapisywane, a użytkownik jest zalogowany.  
+- Rozproszona WS zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> zdarzenie, kiedy plik cookie są pomyślnie zapisywane, a użytkownik jest zalogowany.  
   
--   Rozproszona WS zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> zdarzeń jeden raz w każdym sesji jako sesji jest zamykana w dół dla każdego użytkownika. Nie jest inicjowane, jeśli sesja jest zamknięty po stronie klienta (na przykład poprzez usunięcie pliku cookie sesji). W środowisku logowania jednokrotnego usługi STS IP mogą poprosić o każdej jednostki Uzależnionej, aby się wylogować, zbyt. To spowoduje również zgłosić to zdarzenie, za pomocą <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> równa `true`.  
+- Rozproszona WS zgłasza <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> zdarzeń jeden raz w każdym sesji jako sesji jest zamykana w dół dla każdego użytkownika. Nie jest inicjowane, jeśli sesja jest zamknięty po stronie klienta (na przykład poprzez usunięcie pliku cookie sesji). W środowisku logowania jednokrotnego usługi STS IP mogą poprosić o każdej jednostki Uzależnionej, aby się wylogować, zbyt. To spowoduje również zgłosić to zdarzenie, za pomocą <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> równa `true`.  
   
 > [!NOTE]
 >  Nie należy używać <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> właściwości podczas wszystkie zdarzenia wygenerowane przez <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> lub <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Jest to spowodowane <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> ustawiono po zakończeniu procesu uwierzytelniania, podczas gdy zdarzenia są wywoływane podczas procesu uwierzytelniania.  

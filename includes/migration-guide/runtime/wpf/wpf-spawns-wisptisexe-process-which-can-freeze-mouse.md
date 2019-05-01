@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: cbd599f7467c3b360bbe1c76a65abfdb840a1530
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60118758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62091693"
 ---
 ### <a name="wpf-spawns-a-wisptisexe-process-which-can-freeze-the-mouse"></a>WPF spowoduje utworzenie proces wisptis.exe, który można zablokować myszy
 

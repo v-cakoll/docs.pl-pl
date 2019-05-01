@@ -3,11 +3,11 @@ title: 'Instrukcje: Pobieranie wartości atrybutu (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
 ms.openlocfilehash: 7cdd3e1f3e4c15d99511e944fd9bc2faac17dc5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054462"
 ---
 # <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Instrukcje: Pobieranie wartości atrybutu (LINQ to XML) (Visual Basic)
 W tym temacie przedstawiono sposób uzyskania wartości atrybutów. Istnieją dwa sposoby: Można rzutować <xref:System.Xml.Linq.XAttribute> żądany typ; operator jawnej konwersji następnie konwertuje zawartość element lub atrybut do określonego typu. Alternatywnie, można użyć <xref:System.Xml.Linq.XAttribute.Value%2A> właściwości. Jednak zazwyczaj lepszym rozwiązaniem jest rzutowanie. Jeśli możesz rzutować atrybutu typu dopuszczającego wartość null, kod jest prostszy do zapisania podczas pobierania wartości atrybutu, który może być lub może nie istnieć. Aby zapoznać się z przykładami korzystania z tej techniki, zobacz [jak: Pobieranie wartości elementu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  

@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053109"
 ---
 # <a name="table-overview"></a>Przegląd Tabela
 <xref:System.Windows.Documents.Table> jest element poziomu bloku, który obsługuje oparte na siatce prezentacji zawartości dokumentu przepływu. Elastyczność tego elementu sprawia, że bardzo przydatne, ale także stanowi bardziej skomplikowane, aby zrozumieć i zastosować poprawnie.  
   
  Ten temat zawiera następujące sekcje.  
   
--   [Podstawowe informacje dotyczące tabeli](#table_basics)  
+- [Podstawowe informacje dotyczące tabeli](#table_basics)  
   
--   [W jaki sposób innej tabeli, a następnie siatki?](#table_vs_Grid)  
+- [W jaki sposób innej tabeli, a następnie siatki?](#table_vs_Grid)  
   
--   [Struktura tabeli podstawowej](#basic_table_structure)  
+- [Struktura tabeli podstawowej](#basic_table_structure)  
   
--   [Tabela zawierania](#table_containment)  
+- [Tabela zawierania](#table_containment)  
   
--   [Grupowań wierszy](#row_groupings)  
+- [Grupowań wierszy](#row_groupings)  
   
--   [Pierwszeństwo renderowania w tle](#rendering_precedence)  
+- [Pierwszeństwo renderowania w tle](#rendering_precedence)  
   
--   [Łączenie wierszy lub kolumn](#spanning_rows_or_columns)  
+- [Łączenie wierszy lub kolumn](#spanning_rows_or_columns)  
   
--   [Tworzenie tabeli przy użyciu kodu](#building_a_table_with_code)  
+- [Tworzenie tabeli przy użyciu kodu](#building_a_table_with_code)  
   
--   [Tematy pokrewne] 
+- [Tematy pokrewne] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>Podstawowe informacje dotyczące tabeli  
@@ -50,15 +50,15 @@ ms.locfileid: "59317665"
 ### <a name="basic-table-structure"></a>Struktura tabeli podstawowej  
  <xref:System.Windows.Documents.Table> zapewnia prezentację na podstawie siatki składający się z kolumn (reprezentowane przez <xref:System.Windows.Documents.TableColumn> elementy) i wiersze (reprezentowane przez <xref:System.Windows.Documents.TableRow> elementów). <xref:System.Windows.Documents.TableColumn> elementy nie jest hostem zawartości; określają one po prostu, kolumn i właściwości kolumn. <xref:System.Windows.Documents.TableRow> elementy muszą być hostowane w <xref:System.Windows.Documents.TableRowGroup> element, który definiuje grupowanie wierszy w tabeli. <xref:System.Windows.Documents.TableCell> elementy, które zawierają rzeczywistej zawartości, które mają zostać wyświetlone w tabeli, musi być hostowany w <xref:System.Windows.Documents.TableRow> elementu. <xref:System.Windows.Documents.TableCell> może zawierać tylko elementy, które wynikają z <xref:System.Windows.Documents.Block>.  Elementy prawidłowy element podrzędny dla <xref:System.Windows.Documents.TableCell> obejmują.  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> elementy nie mogą bezpośrednio hostem zawartości tekstowej. Aby uzyskać więcej informacji o regułach zawierania dla przepływu, takich jak elementy zawartości <xref:System.Windows.Documents.TableCell>, zobacz [Przegląd dokumentu przepływu](flow-document-overview.md).  
@@ -78,19 +78,19 @@ ms.locfileid: "59317665"
 ### <a name="table-containment"></a>Tabela zawierania  
  <xref:System.Windows.Documents.Table> pochodzi od klasy <xref:System.Windows.Documents.Block> element i stosuje reguły wspólnej <xref:System.Windows.Documents.Block> na poziomie elementów.  Element <xref:System.Windows.Documents.Table> elementu mogą znajdować się według dowolnej z następujących elementów:  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>Grupowań wierszy  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050366"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Praca z translatorami adresów sieciowych i zaporami
 Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otworzyć ścieżki komunikacji. Pakiety są filtrowane, kierowane, analizowane i przekształcone zarówno na komputerach punktu końcowego, jak i pośredniego maszyn w sieci. Translacje adresów sieciowych (NAT) i zapory są typowe przykłady pośrednich aplikacji, które mogą uczestniczyć w komunikacji sieciowej.  
@@ -45,11 +45,11 @@ Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otwo
   
  Typowe topologii dla aplikacji klienckich i serwerowych jest klientów znajdujących się poza NAT bez Teredo przy użyciu tylko wychodzącego zapory i serwera, który jest staną się dostępne bezpośrednio z zaporą silne. W tym scenariuszu, warstwy transportowej TCP z dwukierunkowego MEP i protokół transportu HTTP za pomocą żądanie odpowiedź MEP działa poprawnie. Typowe topologii dla aplikacji peer-to-peer jest zarówno punkty końcowe poza translatorami adresów sieciowych i zaporami. W tym scenariuszu i w scenariuszach, gdzie jest nieznany topologią i konfiguracją sieci należy wziąć pod uwagę następujące zalecenia:  
   
--   Nie należy używać podwójnego transportów. Podwójna transportu otwiera więcej połączeń, co zmniejsza prawdopodobieństwo pomyślnie połączenie.  
+- Nie należy używać podwójnego transportów. Podwójna transportu otwiera więcej połączeń, co zmniejsza prawdopodobieństwo pomyślnie połączenie.  
   
--   Obsługuje ustanowienia kanały wstecz za pośrednictwem zainicjowanego połączenia. Przy użyciu zwrotnego kanałów, takich jak dwukierunkowego protokołu TCP, zostanie otwarty mniejszą liczbę połączeń, co zwiększa prawdopodobieństwo łączenia się pomyślnie.  
+- Obsługuje ustanowienia kanały wstecz za pośrednictwem zainicjowanego połączenia. Przy użyciu zwrotnego kanałów, takich jak dwukierunkowego protokołu TCP, zostanie otwarty mniejszą liczbę połączeń, co zwiększa prawdopodobieństwo łączenia się pomyślnie.  
   
--   Stosować dostępne usługi rejestrowania punktów końcowych lub przekazywania ruchu. Za pomocą globalnie dostępne połączenia usługi, takie jak serwer Teredo, znacznie zwiększa prawdopodobieństwo pomyślnie nawiązywania topologii sieci jest restrykcyjne lub nieznany.  
+- Stosować dostępne usługi rejestrowania punktów końcowych lub przekazywania ruchu. Za pomocą globalnie dostępne połączenia usługi, takie jak serwer Teredo, znacznie zwiększa prawdopodobieństwo pomyślnie nawiązywania topologii sieci jest restrykcyjne lub nieznany.  
   
  Następujące tabele badania, jednokierunkowe, żądanie odpowiedź i dwukierunkowego MEPs i standardowy protokół TCP, TCP za pomocą protokołu Teredo, i służy do transportu HTTP standardowych i podwójna w programie WCF.  
   

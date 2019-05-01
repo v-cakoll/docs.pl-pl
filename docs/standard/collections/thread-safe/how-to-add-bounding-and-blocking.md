@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie do kolekcji funkcji blokujących i ograniczających'
+title: 'Instrukcje: Dodawanie funkcji blokujących i ograniczających do kolekcji'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,13 +8,13 @@ ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3f52d1067a8aa907c8f1cf8b550eec82d1133b3f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46699057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052121"
 ---
-# <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Porady: dodawanie do kolekcji funkcji blokujących i ograniczających
+# <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Instrukcje: Dodawanie funkcji blokujących i ograniczających do kolekcji
 W tym przykładzie przedstawiono sposób dodawania funkcji blokujących i do klasy kolekcji niestandardowej implementując <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> interfejsu w klasie, a następnie przy użyciu wystąpienia klasy jako mechanizm wewnętrzny magazyn dla <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Aby uzyskać więcej informacji na temat blokujących i ograniczających zobacz [BlockingCollection — Przegląd](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
   
 ## <a name="example"></a>Przykład  

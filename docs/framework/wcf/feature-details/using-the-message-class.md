@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
 ms.openlocfilehash: d9b1c1242fe2686a66e41b777f904a71898159ea
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050652"
 ---
 # <a name="using-the-message-class"></a>Używanie klasy Message
 <xref:System.ServiceModel.Channels.Message> Klasy jest niezbędne do programu Windows Communication Foundation (WCF). Cała komunikacja między klientami i usługami ostatecznie powoduje <xref:System.ServiceModel.Channels.Message> wysyłanych i odbieranych wystąpień.  
   
  Nie będzie zazwyczaj korzystają ze <xref:System.ServiceModel.Channels.Message> klasy bezpośrednio. Zamiast tego WCF service model konstrukcji, takie jak kontrakty danych, kontrakty komunikatów i kontrakty operacji są używane do opisywania wiadomości przychodzących i wychodzących. Jednak w niektórych zaawansowanych scenariuszy można programować za pomocą <xref:System.ServiceModel.Channels.Message> klasy bezpośrednio. Na przykład możesz chcieć użyć <xref:System.ServiceModel.Channels.Message> klasy:  
   
--   Gdy będziesz potrzebować alternatywny sposób tworzenia wychodzącego treść wiadomości (na przykład tworzenia komunikatu bezpośrednio z pliku na dysku) zamiast serializacji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów.  
+- Gdy będziesz potrzebować alternatywny sposób tworzenia wychodzącego treść wiadomości (na przykład tworzenia komunikatu bezpośrednio z pliku na dysku) zamiast serializacji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów.  
   
--   Gdy będziesz potrzebować alternatywny sposób za pomocą wiadomości przychodzące (na przykład, jeśli chcesz zastosować transformacji XSLT do nieprzetworzonej zawartości XML) zamiast deserializacji do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów.  
+- Gdy będziesz potrzebować alternatywny sposób za pomocą wiadomości przychodzące (na przykład, jeśli chcesz zastosować transformacji XSLT do nieprzetworzonej zawartości XML) zamiast deserializacji do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów.  
   
--   Gdy zachodzi potrzeba obsługi wiadomości w sposób ogólny, niezależnie od tego, treść wiadomości (na przykład, kiedy routing lub przesyłanie dalej komunikatów podczas kompilowania router, moduł równoważenia obciążenia lub publikowania-subskrypcji systemu).  
+- Gdy zachodzi potrzeba obsługi wiadomości w sposób ogólny, niezależnie od tego, treść wiadomości (na przykład, kiedy routing lub przesyłanie dalej komunikatów podczas kompilowania router, moduł równoważenia obciążenia lub publikowania-subskrypcji systemu).  
   
  Przed rozpoczęciem korzystania z <xref:System.ServiceModel.Channels.Message> klasy, zapoznaj się z architekturą transferu danych WCF w [omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
@@ -30,11 +30,11 @@ ms.locfileid: "58409604"
 ## <a name="using-the-message-class-in-operations"></a>Używanie klasy Message w operacjach  
  Możesz użyć <xref:System.ServiceModel.Channels.Message> operacją, zwracana wartość operacji i / lub klasy jako parametr wejściowy. Jeśli <xref:System.ServiceModel.Channels.Message> służy dowolne miejsce w przypadku operacji, obowiązują następujące ograniczenia:  
   
--   Operacja nie może zawierać żadnych `out` lub `ref` parametrów.  
+- Operacja nie może zawierać żadnych `out` lub `ref` parametrów.  
   
--   Nie może istnieć więcej niż jeden `input` parametru. Jeśli parametr jest obecna, musi to być wiadomość lub typ kontraktu komunikatu.  
+- Nie może istnieć więcej niż jeden `input` parametru. Jeśli parametr jest obecna, musi to być wiadomość lub typ kontraktu komunikatu.  
   
--   Zwracany typ musi być albo `void`, `Message`, lub typ kontraktu komunikatu.  
+- Zwracany typ musi być albo `void`, `Message`, lub typ kontraktu komunikatu.  
   
  Poniższy przykład kodu zawiera kontrakt prawidłową operacją.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "58409604"
 ## <a name="extracting-message-body-data"></a>Wyodrębnianie danych treści komunikatu  
  `Message` Klasy obsługuje wiele sposobów wyodrębnianie informacji z jego treści. Te można podzielić na następujące kategorie:  
   
--   Pobieranie treści cały komunikat zapisywane tylko raz do edytora XML. Jest to określane jako *zapisania komunikatu*.  
+- Pobieranie treści cały komunikat zapisywane tylko raz do edytora XML. Jest to określane jako *zapisania komunikatu*.  
   
--   W treści wiadomości, pobieranie odczytującego XML. Dzięki temu można później przechodzi do komunikat o treści —-eliminujemy zgodnie z potrzebami. Jest to określane jako *czytania wiadomości*.  
+- W treści wiadomości, pobieranie odczytującego XML. Dzięki temu można później przechodzi do komunikat o treści —-eliminujemy zgodnie z potrzebami. Jest to określane jako *czytania wiadomości*.  
   
--   Cała wiadomość, łącznie z jej treści mogą być kopiowane do buforów w pamięci z <xref:System.ServiceModel.Channels.MessageBuffer> typu. Jest to określane jako *kopiowanie komunikat*.  
+- Cała wiadomość, łącznie z jej treści mogą być kopiowane do buforów w pamięci z <xref:System.ServiceModel.Channels.MessageBuffer> typu. Jest to określane jako *kopiowanie komunikat*.  
   
  Można uzyskać dostęp do treści `Message` tylko raz, niezależnie od tego, jak jest on dostępny. Obiekt komunikatu ma `State` właściwość, która jest początkowo ustawiona Created. Metody dostępu trzy opisane na powyższej liście Ustaw stan Written, Odczyt i skopiowanych, odpowiednio. Ponadto `Close` metody można ustawić stanu na zamknięty, treść wiadomości nie są już wymagane. Treść komunikatu jest możliwy tylko w stanie Created, a nie istnieje sposób, aby powrócić do stanu utworzone po zmianie stanu.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "58409604"
   
  Dwie metody pomocnika dodatkowe zapisać niektórych początkowe znaczniki elementu SOAP. Te metody nie uzyskać dostępu do treści wiadomości, a więc nie zmieniają stan komunikatu. Należą do nich następujące elementy:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> na przykład zapisuje elementu body start `<soap:Body>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> na przykład zapisuje elementu body start `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> Zapisuje element koperty początkowy, na przykład `<soap:Envelope>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> Zapisuje element koperty początkowy, na przykład `<soap:Envelope>`.  
   
  Aby napisać końcowego odpowiednie tagi elementów, należy wywołać `WriteEndElement` na odpowiednie edytora XML. Te metody są rzadko wywoływane bezpośrednio.  
   
@@ -138,15 +138,15 @@ ms.locfileid: "58409604"
 ## <a name="accessing-other-message-parts"></a>Uzyskiwanie dostępu do innych części wiadomości  
  Różne właściwości znajdują się na dostęp do informacji o wiadomości, innej niż jego zawartość treści. Jednak te nie może być wywoływana po zamknięciu komunikatu:  
   
--   <xref:System.ServiceModel.Channels.Message.Headers%2A> Właściwość reprezentuje nagłówki wiadomości. Zobacz sekcję "Praca z nagłówkami" w dalszej części tego tematu.  
+- <xref:System.ServiceModel.Channels.Message.Headers%2A> Właściwość reprezentuje nagłówki wiadomości. Zobacz sekcję "Praca z nagłówkami" w dalszej części tego tematu.  
   
--   <xref:System.ServiceModel.Channels.Message.Properties%2A> Właściwość reprezentuje właściwości wiadomości, które są fragmentów danych o nazwie w załączniku do wiadomości, która nie jest ogólnie Pobierz emitowane po wysłaniu wiadomości. Zobacz sekcję "Praca z właściwości" w dalszej części tego tematu.  
+- <xref:System.ServiceModel.Channels.Message.Properties%2A> Właściwość reprezentuje właściwości wiadomości, które są fragmentów danych o nazwie w załączniku do wiadomości, która nie jest ogólnie Pobierz emitowane po wysłaniu wiadomości. Zobacz sekcję "Praca z właściwości" w dalszej części tego tematu.  
   
--   <xref:System.ServiceModel.Channels.Message.Version%2A> Właściwość wskazuje wersję protokołu SOAP i WS-Addressing skojarzonych z wiadomością lub `None` wyłączenie protokołu SOAP.  
+- <xref:System.ServiceModel.Channels.Message.Version%2A> Właściwość wskazuje wersję protokołu SOAP i WS-Addressing skojarzonych z wiadomością lub `None` wyłączenie protokołu SOAP.  
   
--   <xref:System.ServiceModel.Channels.Message.IsFault%2A> Właściwość zwraca `true` Jeśli komunikat jest komunikatem błędu protokołu SOAP.  
+- <xref:System.ServiceModel.Channels.Message.IsFault%2A> Właściwość zwraca `true` Jeśli komunikat jest komunikatem błędu protokołu SOAP.  
   
--   <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> Właściwość zwraca `true` Jeśli komunikat jest pusty.  
+- <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> Właściwość zwraca `true` Jeśli komunikat jest pusty.  
   
  Możesz użyć <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> metody dostępu określony atrybut na element otoki treści (na przykład `<soap:Body>`) identyfikowane przez nazwę określonego i przestrzeni nazw. Jeśli nie ma takiego atrybutu, `null` jest zwracana. Ta metoda może być wywoływana tylko wtedy, gdy `Message` jest w stanie Created (Jeśli treść komunikatu nie uzyska dostępu).  
   

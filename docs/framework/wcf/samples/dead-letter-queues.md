@@ -3,11 +3,11 @@ title: Kolejki utraconych komunikatów
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051965"
 ---
 # <a name="dead-letter-queues"></a>Kolejki utraconych komunikatów
 W tym przykładzie pokazano, jak obsługiwać i przetwarzać komunikaty, które dostarczania nie powiodło się. Jest on oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W tym przykładzie użyto `netMsmqBinding` powiązania. Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.
@@ -24,15 +24,15 @@ W tym przykładzie pokazano, jak obsługiwać i przetwarzać komunikaty, które 
 
  Kolejki utraconych wiadomości w `NetMsmqBinding` wiązanie danych jest wyrażona w następujących właściwościach:
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Właściwość wyrażenia rodzaju kolejki utraconych wiadomości wymagane przez klienta. To wyliczenie ma następujące wartości:
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Właściwość wyrażenia rodzaju kolejki utraconych wiadomości wymagane przez klienta. To wyliczenie ma następujące wartości:
 
--   `None`: Kolejka utraconych wiadomości jest wymagane przez klienta.
+- `None`: Kolejka utraconych wiadomości jest wymagane przez klienta.
 
--   `System`: Kolejka utraconych wiadomości systemu jest używany do przechowywania utracone wiadomości. Kolejka utraconych wiadomości systemu jest współużytkowana przez wszystkie aplikacje uruchomione na komputerze.
+- `System`: Kolejka utraconych wiadomości systemu jest używany do przechowywania utracone wiadomości. Kolejka utraconych wiadomości systemu jest współużytkowana przez wszystkie aplikacje uruchomione na komputerze.
 
--   `Custom`: Niestandardowe kolejki wiadomości utraconych określony za pomocą <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> właściwość jest używana do przechowywania utracone wiadomości. Ta funkcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Służy to, gdy aplikacja musi używać własnej kolejki utraconych wiadomości zamiast udostępnianie innym aplikacjom działającym na tym samym komputerze.
+- `Custom`: Niestandardowe kolejki wiadomości utraconych określony za pomocą <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> właściwość jest używana do przechowywania utracone wiadomości. Ta funkcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Służy to, gdy aplikacja musi używać własnej kolejki utraconych wiadomości zamiast udostępnianie innym aplikacjom działającym na tym samym komputerze.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Właściwość do określonej kolejki do użycia jako kolejki utraconych wiadomości express. Ta opcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Właściwość do określonej kolejki do użycia jako kolejki utraconych wiadomości express. Ta opcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  W tym przykładzie klient wysyła komunikaty zbiorczo do usługi z zakresu transakcji i określa arbitralnie niska wartość "time-to-live" dla tych wiadomości (około 2 sekund). Klient określa również niestandardowych kolejki utraconych wiadomości do użycia można umieścić w kolejce komunikatów, które wygasły.
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
 
-    1.  Otwórz Menedżera serwera w programie Visual Studio 2012.
+    1. Otwórz Menedżera serwera w programie Visual Studio 2012.
 
-    2.  Rozwiń **funkcji** kartę.
+    2. Rozwiń **funkcji** kartę.
 
-    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
+    3. Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
 
-    4.  Sprawdź **transakcyjna** pole.
+    4. Sprawdź **transakcyjna** pole.
 
-    5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
+    5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
 
 3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

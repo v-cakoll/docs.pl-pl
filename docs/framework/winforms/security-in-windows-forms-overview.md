@@ -9,11 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801052"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
 Przed wydaniem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], cały kod uruchomiony na koncie użytkownika na komputerze miał tych samych praw i uprawnień dostępu do zasobów, których użytkownik komputera. Na przykład jeśli użytkownik był dozwolony dostęp do systemu plików, kod zezwolono na dostęp do systemu plików; Jeśli użytkownik zezwolono na dostęp do bazy danych, kod mógł uzyskiwać dostęp do tej bazy. Mimo że te prawa lub uprawnienia można zaakceptować dla kodu w plikach wykonywalnych, który użytkownik jawnie zainstalowany na komputerze lokalnym, nie może być możliwa do kod potencjalnie złośliwy, pochodzące z Internetu lub lokalny Intranet. Ten kod nie należy uzyskiwać dostęp do zasobów komputera użytkownika bez uprawnień.  

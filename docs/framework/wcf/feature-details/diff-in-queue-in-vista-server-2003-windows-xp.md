@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
 ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039731"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP
 Ten temat zawiera podsumowanie różnic w funkcji kolejek usługi Windows Communication Foundation (WCF) między [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -26,11 +26,11 @@ Ten temat zawiera podsumowanie różnic w funkcji kolejek usługi Windows Commun
   
  Podstawowe różnice między usługi kolejkowania komunikatów (MSMQ) na [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] istotne dla obsługi skażone obejmują następujące elementy:  
   
--   Usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podkolejkami, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują podkolejek. Podkolejki są używane w obsłudze poison komunikatów. Kolejki ponownych prób i skażone kolejki są podkolejkami do kolejki aplikacji, który jest tworzony na podstawie ustawień poison postępowanie. `MaxRetryCycles` Decyduje o ile ponów podkolejkami do utworzenia. W związku z tym podczas uruchamiania na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` są ignorowane i `ReceiveErrorHandling.Move` jest niedozwolone.  
+- Usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podkolejkami, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują podkolejek. Podkolejki są używane w obsłudze poison komunikatów. Kolejki ponownych prób i skażone kolejki są podkolejkami do kolejki aplikacji, który jest tworzony na podstawie ustawień poison postępowanie. `MaxRetryCycles` Decyduje o ile ponów podkolejkami do utworzenia. W związku z tym podczas uruchamiania na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` są ignorowane i `ReceiveErrorHandling.Move` jest niedozwolone.  
   
--   Usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje ujemne potwierdzenia, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują. Negatywnego potwierdzenia z Menedżera kolejki odbierającej powoduje, że Menedżer kolejki wysyłania umieścić odrzuconych komunikatów w kolejce wiadomości utraconych. W efekcie `ReceiveErrorHandling.Reject` nie jest dozwolona z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje ujemne potwierdzenia, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują. Negatywnego potwierdzenia z Menedżera kolejki odbierającej powoduje, że Menedżer kolejki wysyłania umieścić odrzuconych komunikatów w kolejce wiadomości utraconych. W efekcie `ReceiveErrorHandling.Reject` nie jest dozwolona z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Usługa MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podejmowana jest próba właściwości wiadomości, która utrzymuje liczbę razy dostarczanie komunikatów. Ta właściwość liczba przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF przechowuje licznik przerwań w pamięci, dzięki czemu jest możliwe, że ta właściwość nie może zawierać dokładną wartość, gdy ten sam komunikat jest odczytywany przez więcej niż jednej usługi WCF w ramach farmy sieci Web.  
+- Usługa MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podejmowana jest próba właściwości wiadomości, która utrzymuje liczbę razy dostarczanie komunikatów. Ta właściwość liczba przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF przechowuje licznik przerwań w pamięci, dzięki czemu jest możliwe, że ta właściwość nie może zawierać dokładną wartość, gdy ten sam komunikat jest odczytywany przez więcej niż jednej usługi WCF w ramach farmy sieci Web.  
   
 ## <a name="remote-transactional-read"></a>Zdalne odczytu transakcyjnego  
  Usługa MSMQ na [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje zdalnego transakcyjne operacje odczytu. Dzięki temu aplikacja, która odczytuje z kolejki hostowane na komputerze, który różni się od komputera, na którym jest hostowany kolejki. Zapewnia to możliwość farmy usług odczytu z kolejki centralnej, co zwiększa ogólną przepustowość systemu. Gwarantuje również, że jeśli wystąpi błąd podczas odczytywania i przetwarzania wiadomości, wycofanie transakcji i komunikat pozostaje w kolejce do późniejszego przetwarzania.  

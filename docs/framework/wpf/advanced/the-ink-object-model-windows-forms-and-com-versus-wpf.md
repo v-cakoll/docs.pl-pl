@@ -1,5 +1,5 @@
 ---
-title: 'Model obiektu atramentowego: Windows Forms i COM a WPF'
+title: 'Model obiektów pisma odręcznego: Windows Forms i COM a WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
 ms.openlocfilehash: 68003943041fe0ba405eff1236c43a8e7e9c2b71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051679"
 ---
-# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Model obiektu atramentowego: Windows Forms i COM a WPF
+# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Model obiektów pisma odręcznego: Windows Forms i COM a WPF
 
 Istnieją zasadniczo trzech platformach, które obsługują cyfrowy atrament: platforma typu Tablet PC Windows Forms, platformy Tablet PC COM i platformy Windows Presentation Foundation (WPF).  Udział platformy Windows Forms i COM, model obiektów programu podobne, ale obiekt model na potrzeby [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] platformy różni się znacznie.  W tym temacie omówiono różnice w ogólne, tak aby deweloperów, które działały w jeden obiekt modelu mogą lepiej zrozumieć innych.  
   

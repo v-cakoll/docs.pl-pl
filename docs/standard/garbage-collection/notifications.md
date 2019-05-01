@@ -12,11 +12,11 @@ ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026201"
 ---
 # <a name="garbage-collection-notifications"></a>Powiadomienia dotyczące odzyskiwania pamięci
 Istnieją sytuacje, w których pełne wyrzucanie elementów bezużytecznych (czyli kolekcji generacji 2) przez środowisko uruchomieniowe języka wspólnego może niekorzystnie wpłynąć na wydajność. Może to być problem szczególnie z serwerów, które przetwarzają duże ilości żądań; w tym przypadku długo wyrzucania elementów bezużytecznych może powodować limit czasu żądania. Aby zapobiec pełnego występowaniu krytyczny okres, możesz otrzymać, pełne odśmiecanie zbliża się do, a następnie podjęcia działania, aby przekierować obciążenie do innego wystąpienia serwera. Można również wywołać kolekcję użytkownika, pod warunkiem, że bieżące wystąpienie serwera nie jest konieczne przetwarzanie żądań.  
@@ -28,26 +28,26 @@ Istnieją sytuacje, w których pełne wyrzucanie elementów bezużytecznych (czy
   
  Aby określić, gdy zgłoszono powiadomienie, należy użyć <xref:System.GC.WaitForFullGCApproach%2A> i <xref:System.GC.WaitForFullGCComplete%2A> metody. Zazwyczaj można użyć tych metod w `while` pętli stale uzyskać <xref:System.GCNotificationStatus> wyliczenie, który pokazuje stan powiadomienia. Jeśli ta wartość jest <xref:System.GCNotificationStatus.Succeeded>, wykonasz następujące czynności:  
   
--   W odpowiedzi na powiadomienia otrzymane z <xref:System.GC.WaitForFullGCApproach%2A> metody, można przekierować obciążenia, a kolekcja prawdopodobnie occurs, samodzielnie.  
+- W odpowiedzi na powiadomienia otrzymane z <xref:System.GC.WaitForFullGCApproach%2A> metody, można przekierować obciążenia, a kolekcja prawdopodobnie occurs, samodzielnie.  
   
--   W odpowiedzi na powiadomienia otrzymane z <xref:System.GC.WaitForFullGCComplete%2A> metody, aby włączyć bieżące wystąpienie serwera dostępne do przetwarzania żądań ponownie. Można także gromadzić informacje. Na przykład, można użyć <xref:System.GC.CollectionCount%2A> metody do rejestrowania wielu kolekcji.  
+- W odpowiedzi na powiadomienia otrzymane z <xref:System.GC.WaitForFullGCComplete%2A> metody, aby włączyć bieżące wystąpienie serwera dostępne do przetwarzania żądań ponownie. Można także gromadzić informacje. Na przykład, można użyć <xref:System.GC.CollectionCount%2A> metody do rejestrowania wielu kolekcji.  
   
  <xref:System.GC.WaitForFullGCApproach%2A> i <xref:System.GC.WaitForFullGCComplete%2A> metody są zaprojektowane do wspólnej pracy. Przy użyciu jednej bez innych może wygenerować wyniki nieokreślony.  
   
 ## <a name="full-garbage-collection"></a>Pełne wyrzucanie elementów bezużytecznych  
  Środowisko uruchomieniowe powoduje pełne odśmiecanie, w przypadku spełnienia dowolnego z następujących scenariuszy:  
   
--   Za mało pamięci został podniesiony do generacji 2, aby spowodować, że następny kolekcji generacji 2.  
+- Za mało pamięci został podniesiony do generacji 2, aby spowodować, że następny kolekcji generacji 2.  
   
--   Za mało pamięci został podniesiony do sterty dużych obiektów, aby spowodować, że następny kolekcji generacji 2.  
+- Za mało pamięci został podniesiony do sterty dużych obiektów, aby spowodować, że następny kolekcji generacji 2.  
   
--   Kolekcja elementów w generacji 1 jest przekazany do kolekcji generacji 2 z powodu innych czynników.  
+- Kolekcja elementów w generacji 1 jest przekazany do kolekcji generacji 2 z powodu innych czynników.  
   
  Progi w <xref:System.GC.RegisterForFullGCNotification%2A> metoda stosowana w pierwszych dwóch scenariuszy. Jednak w pierwszym scenariuszu możesz nie zawsze będzie otrzymywać powiadomienia w czasie proporcjonalna do wartości progowe, które określisz dwóch powodów:  
   
--   Środowisko wykonawcze nie sprawdza każdą alokację obiektu mały (ze względu na wydajność).  
+- Środowisko wykonawcze nie sprawdza każdą alokację obiektu mały (ze względu na wydajność).  
   
--   Tylko generacji 1 kolekcji przyczyniają się do pamięci w generacji 2.  
+- Tylko generacji 1 kolekcji przyczyniają się do pamięci w generacji 2.  
   
  Trzeci scenariusz przyczynia się również do niedokładność po użytkownik otrzyma powiadomienie. Mimo że nie ma gwarancji, to okazać się przydatny sposób łagodzenia skutków nieodpowiednim pełne wyrzucanie elementów bezużytecznych przez przekierowywanie żądań, w tym czasie lub wykonuje kolekcję samodzielnie, gdy są spełnione lepiej.  
   
@@ -70,7 +70,7 @@ Istnieją sytuacje, w których pełne wyrzucanie elementów bezużytecznych (czy
   
  <xref:System.GC.WaitForFullGCApproach%2A> i <xref:System.GC.WaitForFullGCComplete%2A> metody wywołania ich odpowiednich metod obsługi zdarzeń w użytkownika, gdy zostanie wywołane przez powiadomienie:  
   
--   `OnFullGCApproachNotify`  
+- `OnFullGCApproachNotify`  
   
      Ta metoda wywołuje `RedirectRequests` metody użytkownika, która powoduje, że serwer usługi kolejkowania żądanie wstrzymania wysyłania żądań do serwera. Jest to symulowane przez ustawienie zmiennej poziomu klasa `bAllocate` do `false` nowych obiektów są przydzielone.  
   
@@ -78,7 +78,7 @@ Istnieją sytuacje, w których pełne wyrzucanie elementów bezużytecznych (czy
   
      Na koniec wyrzucania elementów bezużytecznych jest wywołane, ponieważ obciążenie jest światła.  
   
--   `OnFullGCCompleteNotify`  
+- `OnFullGCCompleteNotify`  
   
      Ta metoda wywołuje metodę użytkownika `AcceptRequests` wznowić, akceptując żądania, ponieważ serwer nie jest już się pełne wyrzucanie elementów bezużytecznych. Ta akcja jest symulowane przez ustawienie `bAllocate` zmienną `true` tak, aby wznowić obiekty dodawane do <xref:System.Collections.Generic.List%601> kolekcji.  
   

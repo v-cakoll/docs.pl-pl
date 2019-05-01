@@ -3,11 +3,11 @@ title: Nauka przez przewodniki
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033538"
 ---
 # <a name="learning-by-walkthroughs"></a>Nauka przez przewodniki
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera wskazówki dotyczące kilku. W tym temacie rozwiązuje problemy ogólne wskazówki (w tym Rozwiązywanie problemów) i zawiera łącza do kilku klasy podstawowej wskazówki umożliwiające uzyskiwanie informacji o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -30,20 +30,20 @@ ms.locfileid: "59329313"
 ## <a name="general"></a>Ogólne  
  Poniższe informacje ogólnie rzecz biorąc odnoszą się do tych przewodników:  
   
--   Środowisko: Każdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Instruktaż korzysta z programu Visual Studio jako jego zintegrowanego środowiska programistycznego (IDE).  
+- Środowisko: Każdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Instruktaż korzysta z programu Visual Studio jako jego zintegrowanego środowiska programistycznego (IDE).  
   
--   Aparaty SQL: Te przewodniki są zapisywane do zaimplementowania za pomocą programu SQL Server Express. Jeśli nie masz programu SQL Server Express, można pobrać bezpłatnie. Aby uzyskać więcej informacji, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Aparaty SQL: Te przewodniki są zapisywane do zaimplementowania za pomocą programu SQL Server Express. Jeśli nie masz programu SQL Server Express, można pobrać bezpłatnie. Aby uzyskać więcej informacji, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wskazówki dotyczące Użyj nazwy pliku jako parametry połączenia. Po prostu określenie nazwy pliku jest wygodne, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia użytkownikom programu SQL Server Express. Zawsze należy zwrócić uwagę na problemy z zabezpieczeniami. Aby uzyskać więcej informacji, zobacz [zabezpieczeń w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wskazówki dotyczące zwykle wymagają przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wskazówki dotyczące zwykle wymagają przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Polecenia menu, widocznych na wskazówki i okien dialogowych mogą różnić się od tych opisanych w pomocy, w zależności od ustawień aktywnych lub wersji programu Visual Studio. Aby zmienić swoje ustawienia, kliknij przycisk **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+- Polecenia menu, widocznych na wskazówki i okien dialogowych mogą różnić się od tych opisanych w pomocy, w zależności od ustawień aktywnych lub wersji programu Visual Studio. Aby zmienić swoje ustawienia, kliknij przycisk **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
--   Aby uzyskać wskazówki dotyczące scenariuszy wielowarstwowych serwer musi znajdować się na komputerze, który różni się od komputerze deweloperskim, a musi mieć odpowiednie uprawnienia dostępu do serwera.  
+- Aby uzyskać wskazówki dotyczące scenariuszy wielowarstwowych serwer musi znajdować się na komputerze, który różni się od komputerze deweloperskim, a musi mieć odpowiednie uprawnienia dostępu do serwera.  
   
--   Nazwa klasy, która zazwyczaj reprezentuje tabeli zamówienia w bazie danych Northwind jest `[Order]`. Anulowanie jest wymagane, ponieważ `Order` jest słowem kluczowym w języku Visual Basic.  
+- Nazwa klasy, która zazwyczaj reprezentuje tabeli zamówienia w bazie danych Northwind jest `[Order]`. Anulowanie jest wymagane, ponieważ `Order` jest słowem kluczowym w języku Visual Basic.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
  Mogą wystąpić błędy czasu wykonywania, ponieważ nie masz wystarczających uprawnień dostępu do baz danych używanych w tych przewodników. Zobacz poniższe kroki, aby pomóc w rozwiązaniu typowych problemów.  

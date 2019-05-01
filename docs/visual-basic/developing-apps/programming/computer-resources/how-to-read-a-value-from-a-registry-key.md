@@ -9,11 +9,11 @@ helpviewer_keywords:
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
 ms.openlocfilehash: bc71dd2e3a78454236b2f6f30c2d51aa596e5b8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013988"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Instrukcje: Odczytywanie wartości z klucza rejestru w Visual Basic
 `GetValue` Metody `My.Computer.Registry` obiekt może służyć do odczytywania wartości w rejestrze systemu Windows.  
@@ -26,7 +26,7 @@ ms.locfileid: "58840188"
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>Aby odczytać wartości z klucza rejestru  
   
--   Użyj `GetValue` metody, określając ścieżkę i nazwę) można odczytać wartości z klucza rejestru. Poniższy przykład odczytuje wartość `Name` z `HKEY_CURRENT_USER\Software\MyApp` i wyświetla go w oknie komunikatu.  
+- Użyj `GetValue` metody, określając ścieżkę i nazwę) można odczytać wartości z klucza rejestru. Poniższy przykład odczytuje wartość `Name` z `HKEY_CURRENT_USER\Software\MyApp` i wyświetla go w oknie komunikatu.  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
@@ -34,7 +34,7 @@ ms.locfileid: "58840188"
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Aby określić, czy wartość istnieje w kluczu rejestru  
   
--   Użyj `GetValue` metodę, aby pobrać wartość. Poniższy kod sprawdza, czy wartość istnieje i zwraca komunikat, jeśli nie jest.  
+- Użyj `GetValue` metodę, aby pobrać wartość. Poniższy kod sprawdza, czy wartość istnieje i zwraca komunikat, jeśli nie jest.  
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "58840188"
   
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).  
+- Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Użytkownik nie ma uprawnień do odczytu klucze rejestru (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma uprawnień do odczytu klucze rejestru (<xref:System.Security.SecurityException>).  
   
--   Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).  
+- Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Aby uruchomić ten proces, zestaw wymaga poziom uprawnień przyznanych przez <xref:System.Security.Permissions.RegistryPermission> klasy. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek ze względu na niewystarczające uprawnienia. Podobnie użytkownik musi mieć prawidłowe listy ACL dla tworzenia zmiennej czy zapisujemy do ustawienia. Na przykład lokalnych aplikacji, które ma uprawnienia zabezpieczeń dostępu kodu ma uprawnienie systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../../../framework/misc/code-access-security-basics.md).  

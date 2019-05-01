@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
 ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864468"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Macierzysta przeglądarka WPF wsparcia API hostingu
 Hosting [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aplikacji w przeglądarkach sieci Web jest zapewniana przez serwer aktywnego dokumentu (znany także jako obiekt DocObject) zarejestrowanych hosta WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] bezpośrednio można aktywować i integracja z aktywnego dokumentu. Do hostowania aplikacji XBAP i utracić wprowadzone dokumenty XAML w przeglądarkach Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] udostępnia wtyczkę NPAPI, podobnie Środowisko hostingu, do [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] serwera aktywnego dokumentu jako [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] jest. Jednak praktyczne najprościej obsługi aplikacji XBAP i XAML dokumenty w innych przeglądarkach, a aplikacje autonomiczne to formant przeglądarka sieci Web programu Internet Explorer. Formant przeglądarki sieci Web zawiera złożone środowiska hostingu serwera aktywnego dokumentu, ale umożliwia ona obsługiwać dostosowywania i rozszerzania środowiska i komunikują się bezpośrednio z bieżącego obiektu aktywnego dokumentu.  

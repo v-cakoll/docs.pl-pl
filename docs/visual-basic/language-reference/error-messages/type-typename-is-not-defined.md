@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
 ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032100"
 ---
 # <a name="type-typename-is-not-defined"></a>Typ "\<typename >' nie jest zdefiniowana
 Wykonywanie instrukcji wprowadził odwołanie do typu, który nie został zdefiniowany. Można zdefiniować typ w instrukcji deklaracji takich jak `Enum`, `Structure`, `Class`, lub `Interface`.  
@@ -21,15 +21,15 @@ Wykonywanie instrukcji wprowadził odwołanie do typu, który nie został zdefin
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Upewnij się, że w definicji typu i odwołanie, zarówno używają tej samej pisowni.  
+- Upewnij się, że w definicji typu i odwołanie, zarówno używają tej samej pisowni.  
   
--   Upewnij się, że definicji typu jest dostępny do odwołania. Na przykład, jeśli typ znajduje się w innym module i został zadeklarowany `Private`, Przenieś definicji typu modułu odwołujący się lub Zadeklaruj go `Public`.  
+- Upewnij się, że definicji typu jest dostępny do odwołania. Na przykład, jeśli typ znajduje się w innym module i został zadeklarowany `Private`, Przenieś definicji typu modułu odwołujący się lub Zadeklaruj go `Public`.  
   
--   Upewnij się, że obszar nazw tego typu nie jest ponownie zdefiniować w obrębie projektu. Jeśli tak jest, należy użyć `Global` — słowo kluczowe pełnej nazwy typu. Na przykład, jeśli projektu definiuje obszar nazw o nazwie `System`, <xref:System.Object?displayProperty=nameWithType> typu nie można uzyskać dostępu, chyba że jest to w pełni kwalifikowaną nazwą zawierającą `Global` — słowo kluczowe: `Global.System.Object`.  
+- Upewnij się, że obszar nazw tego typu nie jest ponownie zdefiniować w obrębie projektu. Jeśli tak jest, należy użyć `Global` — słowo kluczowe pełnej nazwy typu. Na przykład, jeśli projektu definiuje obszar nazw o nazwie `System`, <xref:System.Object?displayProperty=nameWithType> typu nie można uzyskać dostępu, chyba że jest to w pełni kwalifikowaną nazwą zawierającą `Global` — słowo kluczowe: `Global.System.Object`.  
   
--   Jeśli typ jest zdefiniowany, ale obiekt biblioteki lub bibliotekę typów, w którym jest zdefiniowany, nie jest zarejestrowany w Visual Basic, kliknij kolejno pozycje **Dodaj odwołanie** na **projektu** menu, a następnie wybierz odpowiedni obiekt biblioteki lub bibliotekę typów.  
+- Jeśli typ jest zdefiniowany, ale obiekt biblioteki lub bibliotekę typów, w którym jest zdefiniowany, nie jest zarejestrowany w Visual Basic, kliknij kolejno pozycje **Dodaj odwołanie** na **projektu** menu, a następnie wybierz odpowiedni obiekt biblioteki lub bibliotekę typów.  
   
--   Upewnij się, że typ w zestawie, który jest częścią profilu docelowej platformy .NET Framework. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z celem błędy programu .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
+- Upewnij się, że typ w zestawie, który jest częścią profilu docelowej platformy .NET Framework. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z celem błędy programu .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
 ## <a name="see-also"></a>Zobacz także
 

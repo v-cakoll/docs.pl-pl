@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
 ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009318"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar — Informacje o formancie
 <xref:System.Windows.Forms.ToolStripProgressBar> Łączy rafting i renderowanie funkcje wszystkich <xref:System.Windows.Forms.ToolStrip> kontrolek z jego typowe funkcje śledzenia procesu. A <xref:System.Windows.Forms.ToolStripProgressBar> najbardziej zwykle jest hostowana przez <xref:System.Windows.Forms.StatusStrip>, a w mniejszym stopniu często przez <xref:System.Windows.Forms.ToolStrip>.  

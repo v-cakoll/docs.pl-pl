@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
 ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038457"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Odnajdywanie wartości minimalnej w sekwencji numerycznej
 Użyj <xref:System.Linq.Enumerable.Min%2A> operator, aby zwrócić wartość minimalna z sekwencji wartości liczbowych.  

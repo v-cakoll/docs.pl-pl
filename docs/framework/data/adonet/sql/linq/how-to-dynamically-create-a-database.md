@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877269"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Instrukcje: Dynamiczne tworzenie bazy danych
 W składniku LINQ to SQL na model obiektów jest mapowany w relacyjnej bazie danych. Mapowanie jest włączane przy użyciu opartych na atrybutach mapowania lub pliku mapowania zewnętrznych do opisania struktury relacyjnej bazy danych. W obu przypadkach jest za mało informacji na temat relacyjnej bazy danych, możesz utworzyć nowe wystąpienie bazy danych przy użyciu <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody.  
@@ -19,9 +19,9 @@ W składniku LINQ to SQL na model obiektów jest mapowany w relacyjnej bazie dan
   
  Możesz użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody w dowolnej liczbie scenariuszy, zwłaszcza, jeśli dostawca znanych danych, takich jak Microsoft SQL Server 2008 jest dostępny. Typowe scenariusze obejmują następujące czynności:  
   
--   Tworzysz aplikację, która automatycznie instaluje się w systemie klienta.  
+- Tworzysz aplikację, która automatycznie instaluje się w systemie klienta.  
   
--   Tworzysz aplikację kliencką, która wymaga lokalnej bazy danych można zapisać stanu offline.  
+- Tworzysz aplikację kliencką, która wymaga lokalnej bazy danych można zapisać stanu offline.  
   
  Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody z programem SQL Server przy użyciu pliku MDF lub nazwę katalogu, w zależności od parametrów połączenia. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] używa parametrów połączenia Aby zdefiniować utworzenie bazy danych i bazy danych na serwer, który ma zostać utworzony.  
   

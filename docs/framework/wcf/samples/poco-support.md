@@ -3,11 +3,11 @@ title: Obsługa obiektów POCO
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
 ms.openlocfilehash: 86ade3a6b045f6f7c57e4a95936b4f1574b51ff0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008023"
 ---
 # <a name="poco-support"></a>Obsługa obiektów POCO
 Niniejszy przykład pokazuje obsługę serializacji typów nieoznaczone. oznacza to typów, do których nie zostały zastosowane atrybutów serializacji, czasami określane jako typy zwykłe stare CLR obiektu (— POCO). <xref:System.Runtime.Serialization.DataContractSerializer> Wnioskuje kontraktu danych dla wszystkich publicznych nieoznaczone typy, które mają domyślnego konstruktora. Kontrakty danych umożliwia przekazanie ze strukturą danych do i z usługi. Aby uzyskać więcej informacji na temat nieoznaczone typy zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  

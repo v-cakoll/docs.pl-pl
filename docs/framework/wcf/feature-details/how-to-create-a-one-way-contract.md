@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
 ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039408"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Instrukcje: tworzenie kontraktu jednokierunkowego
 W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używają kontraktu jednokierunkowego. Takie metody wywoływanie operacji usługi Windows Communication Foundation (WCF) od klienta, ale nie oczekuje na odpowiedź. Ten typ kontraktu można, na przykład do publikowania liczbę subskrybentów powiadomień. Tworząc kontraktu dwukierunkowego (dwukierunkowej), umożliwiająca klientów i serwerów komunikować się ze sobą niezależnie, aby albo może zainicjować wywołania do innego, mogą używać kontraktów jednokierunkowych. Umożliwia to w szczególności serwera do wykonywania jednokierunkowe wywołań do klienta, który klient można traktować jako zdarzenia. Aby uzyskać szczegółowe informacje na temat określania metody jednokierunkowe zobacz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwości i <xref:System.ServiceModel.OperationContractAttribute> klasy.  

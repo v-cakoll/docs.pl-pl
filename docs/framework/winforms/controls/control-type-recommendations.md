@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
 ms.openlocfilehash: 5dc734997917af7ec4a20a6c12ae04825507c7ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011544"
 ---
 # <a name="control-type-recommendations"></a>Zalecenia dotyczące typu formantu
 Zapewnia .NET Framework power opracowanie i wdrożenie nowych kontrolek. Oprócz kontrolki użytkownika znanych teraz znajdziesz się możliwość zapisywania niestandardowych formantów, które narysowania własne, a nawet mogą rozszerzać funkcjonalność istniejących kontrolek poprzez dziedziczenie. Przy wyborze rozwiązania, jakiego typu formantu, aby utworzyć może być mylące. W tej sekcji przedstawiono różnice między różnymi typami kontrolek, z którego może dziedziczyć i zapewnia uwagi dotyczące wpisz, aby wybrać projekt.  
@@ -25,59 +25,59 @@ Zapewnia .NET Framework power opracowanie i wdrożenie nowych kontrolek. Oprócz
   
  Dziedziczenie z kontrolki formularzy Windows Forms, jeśli:  
   
--   Większość funkcji, których potrzebujesz już jest identyczna z istniejącej kontrolki Windows Forms.  
+- Większość funkcji, których potrzebujesz już jest identyczna z istniejącej kontrolki Windows Forms.  
   
--   Nie ma potrzeby niestandardowego interfejsu graficznego lub projektowania nowych graficznych fronton dla istniejącej kontrolki.  
+- Nie ma potrzeby niestandardowego interfejsu graficznego lub projektowania nowych graficznych fronton dla istniejącej kontrolki.  
   
 ## <a name="inheriting-from-the-usercontrol-class"></a>Dziedziczenie z klasy UserControl  
  Formant użytkownika to zbiór kontrolek formularzy Windows Forms umieszczane na wspólnym kontenerem. Zawiera wszystkie funkcje nieprzerwaną pracę związany z każdą z kontrolek Windows Forms i umożliwia selektywne udostępnianie i wiązania ich właściwości kontenera. Przykładem kontrolki użytkownika może być kontrolki utworzona w celu wyświetlenia danych adres klienta z bazy danych. Ten formant obejmuje kilka pól tekstowych do wyświetlenia każdego pola i formanty przycisków, aby poruszać się po rekordów. Selektywnie widoczne właściwości powiązania danych, a cały kontroli może spakowane i ponownie z aplikacji do aplikacji.  
   
  Dziedzicz <xref:System.Windows.Forms.UserControl> klasy, jeśli:  
   
--   Chcesz połączyć funkcje kilka kontrolek Windows Forms w pojedynczą jednostkę wielokrotnego użytku.  
+- Chcesz połączyć funkcje kilka kontrolek Windows Forms w pojedynczą jednostkę wielokrotnego użytku.  
   
 ## <a name="inheriting-from-the-control-class"></a>Dziedziczenie z klasy formantów  
  Innym sposobem, aby utworzyć formant jest utworzenie jednego znacznie od podstaw przez dziedziczenie z <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control> Klasy zawiera wszystkie podstawowe funkcje wymagane przez formanty (na przykład zdarzenia), ale funkcje specyficzne dla formantu lub interfejsu graficznego. Tworzenie formantu przez dziedziczenie z <xref:System.Windows.Forms.Control> klasy wymaga o wiele więcej myślenia i nakładu pracy niż dziedziczenie z kontrolki użytkownika lub istniejącej kontrolki Windows Forms. Autor trzeba napisać kod dla <xref:System.Windows.Forms.Control.OnPaint%2A> zdarzenia kontroli, jak również wszelki kod określonych funkcji, który jest potrzebny. Większa elastyczność jest dozwolone, jednak i możesz dostosować niestandardowego formantu do własnych potrzeb dokładnie. Przykład formantu niestandardowego jest formantem zegara powielającą wygląd i działanie zegar analogowy. Malowanie niestandardowe będą wywoływane w celu spowodować ręce zegar przenoszone w odpowiedzi na <xref:System.Windows.Forms.Timer.Tick> zdarzenia ze składnika wewnętrznego zegara.  
   
  Dziedzicz <xref:System.Windows.Forms.Control> klasy, jeśli:  
   
--   Chcesz zapewnić niestandardowy graficzną reprezentację kontrolki.  
+- Chcesz zapewnić niestandardowy graficzną reprezentację kontrolki.  
   
--   Musisz zaimplementować niestandardowy funkcji, która nie jest dostępna za pośrednictwem standardowych kontrolek.  
+- Musisz zaimplementować niestandardowy funkcji, która nie jest dostępna za pośrednictwem standardowych kontrolek.  
   
--   [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+- [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
--   [Przewodnik: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
+- [Przewodnik: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
--   [Instrukcje: Dostarczanie mapy bitowej przybornika dla formantu](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+- [Instrukcje: Dostarczanie mapy bitowej przybornika dla formantu](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [Instrukcje: Dziedzicz Windows istniejących formantów formularzy](how-to-inherit-from-existing-windows-forms-controls.md)  
+- [Instrukcje: Dziedzicz Windows istniejących formantów formularzy](how-to-inherit-from-existing-windows-forms-controls.md)  
   
--   [Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+- [Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
--   [Instrukcje: Dziedziczenie z klasy formantów](how-to-inherit-from-the-control-class.md)  
+- [Instrukcje: Dziedziczenie z klasy formantów](how-to-inherit-from-the-control-class.md)  
   
--   [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+- [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Instrukcje: Wyrównywanie formantu z krawędziami formularzy w czasie projektowania](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+- [Instrukcje: Wyrównywanie formantu z krawędziami formularzy w czasie projektowania](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
--   [Instrukcje: Dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)  
+- [Instrukcje: Dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms](how-to-author-controls-for-windows-forms.md)  
+- [Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms](how-to-author-controls-for-windows-forms.md)  
   
--   [Instrukcje: Formanty złożone autora](how-to-author-composite-controls.md)  
+- [Instrukcje: Formanty złożone autora](how-to-author-composite-controls.md)  
   
--   [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md)  
+- [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md)  
   
--   [Instrukcje: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
+- [Instrukcje: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>Zobacz także
 

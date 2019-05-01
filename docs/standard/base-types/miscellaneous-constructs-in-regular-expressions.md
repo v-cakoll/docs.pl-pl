@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025083"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Inne konstrukcje w wyrażeniach regularnych
 Wyrażenia regularne w .NET obejmują trzy konstrukcji językowych różne. Jeden pozwala włączyć lub wyłączyć określonego opcje dopasowania w środku wzorca wyrażenia regularnego. Dwóch pozostałych pozwala na uwzględnianie komentarzy w wyrażeniu regularnym.  
@@ -42,7 +42,7 @@ Wyrażenia regularne w .NET obejmują trzy konstrukcji językowych różne. Jede
  Wszelkie zmiany w opcje wyrażeń regularnych zdefiniowane przez `(?imnsx-imnsx)` konstruowania pozostają w mocy aż do zakończenia otaczającego grupy.  
   
 > [!NOTE]
->  `(?imnsx-imnsx:` *Podwyrażenie* `)` konstrukcja grupująca zapewnia identyczne funkcje podwyrażenia. Aby uzyskać więcej informacji, zobacz [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  `(?imnsx-imnsx:` *Podwyrażenie* `)` konstrukcja grupująca zapewnia identyczne funkcje podwyrażenia. Aby uzyskać więcej informacji, zobacz [Konstrukcje grupujące](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  W poniższym przykładzie użyto `i`, `n`, i `x` opcje umożliwiające ignorowanie wielkości liter i jawne przechwytywania i ignoruje biały znak we wzorcu wyrażenia regularnego w trakcie wykonywania wyrażenia regularnego.  
   

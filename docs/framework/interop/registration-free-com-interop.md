@@ -13,20 +13,20 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872576"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
 Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Windows do przechowywania informacji o zestawie. Zamiast rejestrowanie składników na komputerze podczas wdrażania, utworzysz plik manifestu Win32 stylu w czasie projektowania, które zawierają informacje dotyczące powiązania i aktywacji. Te pliki manifestu, zamiast kluczy rejestru, bezpośrednie aktywacji obiektu.  
   
  Przy użyciu aktywacji bez rejestracji dla zestawów zamiast rejestrowania ich podczas wdrażania ma dwie zalety:  
   
--   Można kontrolować, którą wersję biblioteki DLL jest aktywowany, gdy więcej niż jedna wersja jest zainstalowana na komputerze.  
+- Można kontrolować, którą wersję biblioteki DLL jest aktywowany, gdy więcej niż jedna wersja jest zainstalowana na komputerze.  
   
--   Użytkownicy końcowi można użyć polecenia XCOPY lub FTP można skopiować aplikacji do odpowiedniego katalogu na komputerze. Aplikacja może następnie uruchamiana z tego katalogu.  
+- Użytkownicy końcowi można użyć polecenia XCOPY lub FTP można skopiować aplikacji do odpowiedniego katalogu na komputerze. Aplikacja może następnie uruchamiana z tego katalogu.  
   
  W tej sekcji opisano dwa typy służące do współdziałania z modelem COM bez rejestrowania manifesty: manifestów aplikacji i składników. Te manifesty są plikami XML. Manifest aplikacji, który jest tworzony przez dewelopera aplikacji, zawiera metadane opisujące zestawów i zależności zestawu. Manifestu składnika, utworzonych przez dewelopera składnik zawiera informacje, w przeciwnym razie znajduje się w rejestrze systemu Windows.  
   

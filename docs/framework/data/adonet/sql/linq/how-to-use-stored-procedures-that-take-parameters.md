@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033616"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Instrukcje: Używanie procedur składowanych, które przyjmują parametry
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje parametry wyjściowe można odwoływać się do parametrów, a dla typów wartości deklaruje parametr jako dopuszczającego wartość null.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801715"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Instrukcje: Nawigowanie po danych w formularzach Windows Forms
 W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwiej można powiązać <xref:System.Windows.Forms.BindingSource> składnik do źródła danych, a następnie kontrolki powiązania <xref:System.Windows.Forms.BindingSource>. Można następnie użyć metody wbudowanej nawigacji na <xref:System.Windows.Forms.BindingSource> takich <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> i <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Przy użyciu tych metod skoryguje <xref:System.Windows.Forms.BindingSource.Position%2A> i <xref:System.Windows.Forms.BindingSource.Current%2A> właściwości <xref:System.Windows.Forms.BindingSource> odpowiednio. Można również znaleźć element i ustaw go jako bieżący element ustawiając <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości.  

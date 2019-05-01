@@ -40,11 +40,11 @@ ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025967"
 ---
 # <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
 
@@ -52,17 +52,17 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
   
  Typy .NET to podstawę, na które .NET są tworzone aplikacje, składników i formantów. Implementacje platformy .NET zawierają typy, które wykonują następujące funkcje:  
   
--   Reprezentuje podstawowych typów danych i wyjątki.  
+- Reprezentuje podstawowych typów danych i wyjątki.  
   
--   Hermetyzuj struktur danych.  
+- Hermetyzuj struktur danych.  
   
--   Operacje We/Wy.  
+- Operacje We/Wy.  
   
--   Uzyskiwanie dostępu do informacji o typach załadowane.  
+- Uzyskiwanie dostępu do informacji o typach załadowane.  
   
--   Wywołaj kontrolę bezpieczeństwa .NET Framework.  
+- Wywołaj kontrolę bezpieczeństwa .NET Framework.  
   
--   Zapewnia dostęp do danych, rozbudowane GUI po stronie klienta i kontrolowane przez serwer, po stronie klienta graficznego interfejsu użytkownika.  
+- Zapewnia dostęp do danych, rozbudowane GUI po stronie klienta i kontrolowane przez serwer, po stronie klienta graficznego interfejsu użytkownika.  
   
  .NET zapewnia bogaty zestaw interfejsów, a także abstrakcyjne i konkretnych klas (nieabstrakcyjna). Możesz używać konkretnych klas, ponieważ jest lub w wielu przypadkach, dziedziczyć po ich własnych klas. Aby użyć funkcjonalności interfejsu, możesz utworzyć klasę, która implementuje interfejs lub wyprowadzić klasę z jednej z klas platformy .NET, które implementuje interfejs.  
   
@@ -86,7 +86,7 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
   
  Poniższa tabela zawiera listę typów podstawowych, że .NET dostarcza krótko opisano każdy typ i oznacza odpowiedni typ w języku Visual Basic C#, C++, i F#.  
   
-|Kategoria|Nazwa klasy|Opis|Typ danych w języku Visual Basic|Typ danych w języku C#|C + +/ interfejsu wiersza polecenia — typ danych|F#Typ danych|  
+|Kategoria|Nazwa klasy|Opis|Typ danych w języku Visual Basic|Typ danych w języku C#|C++/ Interfejs wiersza polecenia typ danych|F#Typ danych|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Liczba całkowita|<xref:System.Byte>|8-bitowa liczba całkowita bez znaku.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8-bitową całkowita.<br /><br /> Niezgodne ze specyfikacją CLS.|**SByte**|**sbyte**|**char**<br /> —lub—<br /> **podpisana** **char**|**sbyte**|  

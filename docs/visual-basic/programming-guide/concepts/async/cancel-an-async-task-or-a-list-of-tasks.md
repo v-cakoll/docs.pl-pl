@@ -3,11 +3,11 @@ title: Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
 ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022067"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 Można skonfigurować przycisk, który służy do anulowania aplikacji asynchronicznej, jeśli nie chcesz czekać na zakończenie jego działania. Postępując zgodnie z przykładami w tym temacie, można dodać przycisk anulowania do aplikacji, która pobiera zawartość jednej witryny sieci Web lub listę witryn sieci Web.  
@@ -67,14 +67,14 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
   
 3. Utwórz następujące zmiany w zdarzeniu Obsługa **Start** przycisku `startButton_Click`.  
   
-    -   Utwórz wystąpienie `CancellationTokenSource`, `cts`.  
+    - Utwórz wystąpienie `CancellationTokenSource`, `cts`.  
   
         ```vb  
         ' ***Instantiate the CancellationTokenSource.  
         cts = New CancellationTokenSource()  
         ```  
   
-    -   W wywołaniu `AccessTheWebAsync`, które pobiera zawartość określonej witryny sieci Web, wysyłanie <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> właściwość `cts` jako argument. `Token` Właściwość propaguje komunikat, czy zażądano anulowania. Dodaj blok catch, który wyświetla komunikat, jeśli użytkownik anuluje operację pobierania. Poniższy kod pokazuje zmiany.  
+    - W wywołaniu `AccessTheWebAsync`, które pobiera zawartość określonej witryny sieci Web, wysyłanie <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> właściwość `cts` jako argument. `Token` Właściwość propaguje komunikat, czy zażądano anulowania. Dodaj blok catch, który wyświetla komunikat, jeśli użytkownik anuluje operację pobierania. Poniższy kod pokazuje zmiany.  
   
         ```vb  
         Try  

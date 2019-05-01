@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021537"
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
 Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować prezentację danych. Formanty WPF posiada wbudowanej funkcji obsługującej Dostosowywanie prezentacji danych. W tym temacie najpierw pokazano, jak zdefiniować <xref:System.Windows.DataTemplate> i następnie wprowadza inne funkcje szablonów dane, takie jak wybór szablony na podstawie logiki niestandardowej i pomoc techniczna dotycząca wyświetlania danych hierarchicznych.  

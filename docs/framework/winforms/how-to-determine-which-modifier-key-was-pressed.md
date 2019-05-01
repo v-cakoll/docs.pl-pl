@@ -25,11 +25,11 @@ helpviewer_keywords:
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
 ms.openlocfilehash: 571af49cdf82b876cfb72a7c7636874c8d155fb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803145"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Instrukcje: Określanie, który klawisz modyfikujący został naciśnięty
 Gdy tworzysz aplikację, która akceptuje naciśnięcia klawiszy przez użytkownika, można również monitorować klawisze modyfikujące, takie jak klawiszy SHIFT, ALT i CTRL. Po naciśnięciu klawisza modyfikującego w połączeniu z innych kluczy lub za pomocą kliknięć myszą, aplikacja może reagować odpowiednio. Na przykład jeśli jest wciśnięty literę S, po prostu może to spowodować "s" była wyświetlana na ekranie, ale jeśli naciskania klawiszy CTRL + S, mogą zostać zapisane bieżącego dokumentu. Jeśli możesz obsługiwać <xref:System.Windows.Forms.Control.KeyDown> zdarzenia <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> właściwość <xref:System.Windows.Forms.KeyEventArgs> odebrane przez zdarzenie kod obsługi wyjątku określa są naciśnięte klawisze modyfikujące, które. Alternatywnie <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> właściwość <xref:System.Windows.Forms.KeyEventArgs> określa znak, który został naciśnięty również wszelkie klawisze modyfikujące w połączeniu z bitowe OR. Jednak jeśli obsługujesz <xref:System.Windows.Forms.Control.KeyPress> zdarzenia lub zdarzenia myszy, program obsługi zdarzeń nie otrzymuje tych informacji. W takim przypadku należy użyć <xref:System.Windows.Forms.Control.ModifierKeys%2A> właściwość <xref:System.Windows.Forms.Control> klasy. W obu przypadkach należy wykonać bitowe AND odpowiednie <xref:System.Windows.Forms.Keys> wartości i wartości, które testujesz. <xref:System.Windows.Forms.Keys> Wyliczenie oferuje odmiany każdego klawisz modyfikujący, więc jest ważne, aby przeprowadzić operatora testu koniunkcji i przy użyciu poprawnej wartości. Na przykład klawisz SHIFT jest reprezentowany przez <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> i <xref:System.Windows.Forms.Keys.LShiftKey> poprawnej wartości, aby przetestować SHIFT, ponieważ klawisz modyfikujący <xref:System.Windows.Forms.Keys.Shift>. Podobnie, aby klawisz CTRL i ALT jako modyfikatory można przetestować używać <xref:System.Windows.Forms.Keys.Control> i <xref:System.Windows.Forms.Keys.Alt> wartości, odpowiednio.  
@@ -39,7 +39,7 @@ Gdy tworzysz aplikację, która akceptuje naciśnięcia klawiszy przez użytkown
   
 ### <a name="to-determine-which-modifier-key-was-pressed"></a>Aby ustalić, który klawisz modyfikujący został naciśnięty  
   
--   Użyj operatora testu koniunkcji `AND` operator <xref:System.Windows.Forms.Control.ModifierKeys%2A> właściwości i wartości <xref:System.Windows.Forms.Keys> wyliczeniu, aby ustalić, czy jest wciśnięty klawisz modyfikujący określonej. Poniższy przykład kodu pokazuje, jak ustalić, czy w ramach zostanie naciśnięty klawisz SHIFT <xref:System.Windows.Forms.Control.KeyPress> programu obsługi zdarzeń.  
+- Użyj operatora testu koniunkcji `AND` operator <xref:System.Windows.Forms.Control.ModifierKeys%2A> właściwości i wartości <xref:System.Windows.Forms.Keys> wyliczeniu, aby ustalić, czy jest wciśnięty klawisz modyfikujący określonej. Poniższy przykład kodu pokazuje, jak ustalić, czy w ramach zostanie naciśnięty klawisz SHIFT <xref:System.Windows.Forms.Control.KeyPress> programu obsługi zdarzeń.  
   
      [!code-cpp[System.Windows.Forms.DetermineModifierKey#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]

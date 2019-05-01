@@ -3,22 +3,22 @@ title: 'Instrukcje: wdrażanie serwera proxy odnajdywania'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000912"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Instrukcje: wdrażanie serwera proxy odnajdywania
 W tym temacie opisano sposób wdrażania serwera proxy odnajdywania. Aby uzyskać więcej informacji na temat funkcji odnajdywania w Windows Communication Foundation (WCF), zobacz [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Odnajdowanie serwera proxy można zaimplementować, tworząc klasę, która rozszerza <xref:System.ServiceModel.Discovery.DiscoveryProxy> klasy abstrakcyjnej. Istnieje szereg innych klas pomocy technicznej zdefiniowane i używane w tym przykładzie. `OnResolveAsyncResult`, `OnFindAsyncResult`, i `AsyncResult`. Te klasy implementuje <xref:System.IAsyncResult> interfejsu. Aby uzyskać więcej informacji na temat <xref:System.IAsyncResult> zobacz [interfejsu System.IAsyncResult](xref:System.IAsyncResult).
 
  Implementowanie serwera proxy odnajdywania został podzielony na trzy główne fragmenty tego tematu:
 
--   Definiowanie klasy, która zawiera magazyn danych i rozszerza abstrakcyjnej <xref:System.ServiceModel.Discovery.DiscoveryProxy> klasy.
+- Definiowanie klasy, która zawiera magazyn danych i rozszerza abstrakcyjnej <xref:System.ServiceModel.Discovery.DiscoveryProxy> klasy.
 
--   Implementowanie Pomocnika `AsyncResult` klasy.
+- Implementowanie Pomocnika `AsyncResult` klasy.
 
--   Hosta serwera Proxy odnajdywania.
+- Hosta serwera Proxy odnajdywania.
 
 ### <a name="to-create-a-new-console-application-project"></a>Aby utworzyć nowy projekt aplikacji konsoli
 
@@ -28,9 +28,9 @@ W tym temacie opisano sposób wdrażania serwera proxy odnajdywania. Aby uzyska�
 
 3. Dodaj następujące odwołania do projektu
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.Servicemodel.Discovery.dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     >  Upewnij się, że odwołujesz się w wersji 4.0 lub nowszego z tych zestawów.

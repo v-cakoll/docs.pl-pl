@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
 ms.openlocfilehash: 5e967c1bbe54095cc11e48b014600158da7fe6a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011687"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows
 `DataGridView` Kontroli można łatwo zdefiniować podstawowego wyglądu komórek i formatowania wyświetlania wartości komórek. Można zdefiniować wygląd i formatowanie style pojedyncze komórki, komórki w określonych kolumn i wierszy lub wszystkie komórki w formancie przez ustawienie właściwości `DataGridViewCellStyle` obiekty dostępne za pośrednictwem różnych `DataGridView` właściwości formantu. Ponadto można modyfikować te style dynamicznie na podstawie czynników, takich jak wartość komórki obsługi `CellFormatting` zdarzeń.  

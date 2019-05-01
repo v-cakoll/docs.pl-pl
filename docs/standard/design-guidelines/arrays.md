@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: KrzysztofCwalina
 ms.openlocfilehash: dd30cdee0440553a9f955f0b3f4ee420e938b9ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864120"
 ---
 # <a name="arrays"></a>Tablice
 **✓ DO** preferowane przy użyciu kolekcji za pośrednictwem tablic w publicznych interfejsach API. [Kolekcje](../../../docs/standard/design-guidelines/guidelines-for-collections.md) sekcja zawiera szczegółowe informacje o tym, jak dokonać wyboru między kolekcje i tablice.  

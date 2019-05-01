@@ -11,11 +11,11 @@ helpviewer_keywords:
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
 ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032204"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Przegląd Wyrównanie, marginesy i wypełnienia
 <xref:System.Windows.FrameworkElement> Klasa udostępnia kilka właściwości, które są używane do dokładnie pozycjonować elementy podrzędne. W tym temacie omówiono cztery najważniejsze właściwości: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Efekty te właściwości są ważne, aby dowiedzieć się, ponieważ stanowią podstawę do kontrolowania położenie elementów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  

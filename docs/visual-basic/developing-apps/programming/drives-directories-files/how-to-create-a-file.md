@@ -6,11 +6,11 @@ helpviewer_keywords:
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038067"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Instrukcje: Utwórz plik w języku Visual Basic
 W tym przykładzie tworzy pusty plik tekstowy w określonej ścieżki przy użyciu <xref:System.IO.File.Create%2A> method in Class metoda <xref:System.IO.File> klasy.  
@@ -26,17 +26,17 @@ W tym przykładzie tworzy pusty plik tekstowy w określonej ścieżki przy użyc
   
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nazwa ścieżki jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko spacją (<xref:System.ArgumentException>).  
+- Nazwa ścieżki jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko spacją (<xref:System.ArgumentException>).  
   
--   Ścieżka jest tylko do odczytu (<xref:System.IO.IOException>).  
+- Ścieżka jest tylko do odczytu (<xref:System.IO.IOException>).  
   
--   Nazwa ścieżki jest `Nothing` (<xref:System.ArgumentNullException>).  
+- Nazwa ścieżki jest `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException>).  
+- Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException>).  
   
--   Ścieżka jest nieprawidłowa (<xref:System.IO.DirectoryNotFoundException>).  
+- Ścieżka jest nieprawidłowa (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException>).  
+- Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  A <xref:System.Security.SecurityException> mogą być generowane w środowisku częściowego zaufania.  

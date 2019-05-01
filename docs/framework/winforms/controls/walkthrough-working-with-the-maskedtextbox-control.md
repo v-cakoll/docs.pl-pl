@@ -12,20 +12,20 @@ helpviewer_keywords:
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
 ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792148"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Przewodnik: praca z kontrolką MaskedTextBox
 Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Inicjowanie <xref:System.Windows.Forms.MaskedTextBox> kontroli  
+- Inicjowanie <xref:System.Windows.Forms.MaskedTextBox> kontroli  
   
--   Za pomocą <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> program obsługi zdarzeń, aby ostrzec użytkownika, jeśli znak nie jest zgodny z maską  
+- Za pomocą <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> program obsługi zdarzeń, aby ostrzec użytkownika, jeśli znak nie jest zgodny z maską  
   
--   Przypisywanie typu <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> właściwości i za pomocą <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> program obsługi zdarzeń, aby ostrzec użytkownika, gdy wartości są próby przekazania jest nieprawidłowy dla typu  
+- Przypisywanie typu <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> właściwości i za pomocą <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> program obsługi zdarzeń, aby ostrzec użytkownika, gdy wartości są próby przekazania jest nieprawidłowy dla typu  
   
 ## <a name="creating-the-project-and-adding-a-control"></a>Tworzenie projektu i dodawanie kontrolki  
   

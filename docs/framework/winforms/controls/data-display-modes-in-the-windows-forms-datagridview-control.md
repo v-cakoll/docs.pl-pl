@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
 ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011439"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Kontrolki mogą wyświetlać dane w trzech różnych trybach: powiązanej niepowiązanych i wirtualnych. Wybierz najbardziej odpowiedni tryb, w zależności od wymagań.  

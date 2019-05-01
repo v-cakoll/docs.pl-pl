@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954092"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
 
@@ -45,13 +45,13 @@ Podstawowy odczytywania węzła pętli badanie strumień węzłów XAML składa 
 
 - Na podstawie którego <xref:System.Xaml.XamlNodeType> zostanie zgłoszony jako bieżącego węzła lub bieżącego rekordu wywołać jedną z następujących czynności, aby uzyskać informacje na temat zawartość węzła:
 
-    - Dla <xref:System.Xaml.XamlXmlReader.NodeType%2A> z <xref:System.Xaml.XamlNodeType.StartMember> lub <xref:System.Xaml.XamlNodeType.EndMember>, wywołaj <xref:System.Xaml.XamlXmlReader.Member%2A> uzyskać <xref:System.Xaml.XamlMember> informacji na temat członka. Należy zauważyć, że składowa może być <xref:System.Xaml.XamlDirective>, a zatem niekoniecznie jest konwencjonalne członkowski zdefiniowany typ poprzedniego obiektu. Na przykład `x:Name` zastosowane do obiektu, który pojawia się jako członek XAML gdzie <xref:System.Xaml.XamlMember.IsDirective%2A> ma wartość true i <xref:System.Xaml.XamlMember.Name%2A> elementu członkowskiego jest `Name`, z innymi właściwościami, co oznacza, że ta dyrektywa w przestrzeni nazw XAML języka XAML.
+  - Dla <xref:System.Xaml.XamlXmlReader.NodeType%2A> z <xref:System.Xaml.XamlNodeType.StartMember> lub <xref:System.Xaml.XamlNodeType.EndMember>, wywołaj <xref:System.Xaml.XamlXmlReader.Member%2A> uzyskać <xref:System.Xaml.XamlMember> informacji na temat członka. Należy zauważyć, że składowa może być <xref:System.Xaml.XamlDirective>, a zatem niekoniecznie jest konwencjonalne członkowski zdefiniowany typ poprzedniego obiektu. Na przykład `x:Name` zastosowane do obiektu, który pojawia się jako członek XAML gdzie <xref:System.Xaml.XamlMember.IsDirective%2A> ma wartość true i <xref:System.Xaml.XamlMember.Name%2A> elementu członkowskiego jest `Name`, z innymi właściwościami, co oznacza, że ta dyrektywa w przestrzeni nazw XAML języka XAML.
 
-    - Dla <xref:System.Xaml.XamlXmlReader.NodeType%2A> z <xref:System.Xaml.XamlNodeType.StartObject> lub <xref:System.Xaml.XamlNodeType.EndObject>, wywołaj <xref:System.Xaml.XamlXmlReader.Type%2A> uzyskać <xref:System.Xaml.XamlType> informacje dotyczące obiektu.
+  - Dla <xref:System.Xaml.XamlXmlReader.NodeType%2A> z <xref:System.Xaml.XamlNodeType.StartObject> lub <xref:System.Xaml.XamlNodeType.EndObject>, wywołaj <xref:System.Xaml.XamlXmlReader.Type%2A> uzyskać <xref:System.Xaml.XamlType> informacje dotyczące obiektu.
 
-    - Aby uzyskać <xref:System.Xaml.XamlXmlReader.NodeType%2A> z <xref:System.Xaml.XamlNodeType.Value>, wywołaj <xref:System.Xaml.XamlXmlReader.Value%2A>. Węzeł to wartość tylko wtedy, gdy jest Najprostszym wyrażeniem wartość dla elementu członkowskiego lub tekst inicjowania obiektu (jednak należy pamiętać o zachowanie konwersji typu zgodnie z opisem w następnej sekcji tego tematu).
+  - Aby uzyskać <xref:System.Xaml.XamlXmlReader.NodeType%2A> z <xref:System.Xaml.XamlNodeType.Value>, wywołaj <xref:System.Xaml.XamlXmlReader.Value%2A>. Węzeł to wartość tylko wtedy, gdy jest Najprostszym wyrażeniem wartość dla elementu członkowskiego lub tekst inicjowania obiektu (jednak należy pamiętać o zachowanie konwersji typu zgodnie z opisem w następnej sekcji tego tematu).
 
-    - Dla <xref:System.Xaml.XamlXmlReader.NodeType%2A> z <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, wywołaj <xref:System.Xaml.XamlXmlReader.Namespace%2A> można uzyskać informacji dotyczących przestrzeni nazw węzła obszaru nazw.
+  - Dla <xref:System.Xaml.XamlXmlReader.NodeType%2A> z <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, wywołaj <xref:System.Xaml.XamlXmlReader.Namespace%2A> można uzyskać informacji dotyczących przestrzeni nazw węzła obszaru nazw.
 
 - Wywołaj <xref:System.Xaml.XamlXmlReader.Read%2A> Przejdź czytnika XAML do następnego węzła w strumień węzłów XAML i powtórz kroki ponownie.
 
@@ -140,15 +140,15 @@ W strumień węzłów XAML możesz polegać na następujące zachowanie:
 
 - A `Value` węzeł reprezentuje sama wartość; nie ma żadnych "wartość końcowa panelu". Może być stosowana tylko przez `EndMember`.
 
-    - XAML tekst inicjowanie obiektu może być używany przez konstrukcja nie powoduje w strukturze wartość obiektu. Zamiast tego węzła dedykowanych składowej dla elementu członkowskiego o nazwie `_Initialization` zostanie utworzony. a ten węzeł elementu członkowskiego zawiera wartość ciągu inicjującego. Jeśli istnieje, `_Initialization` zawsze jest to pierwszy `StartMember`. `_Initialization` może być kwalifikowana w niektórych reprezentacje usług XAML z namescope XAML języka XAML, które informuje, że `_Initialization` nie jest zdefiniowany właściwością przy tworzeniu kopii typów.
+  - XAML tekst inicjowanie obiektu może być używany przez konstrukcja nie powoduje w strukturze wartość obiektu. Zamiast tego węzła dedykowanych składowej dla elementu członkowskiego o nazwie `_Initialization` zostanie utworzony. a ten węzeł elementu członkowskiego zawiera wartość ciągu inicjującego. Jeśli istnieje, `_Initialization` zawsze jest to pierwszy `StartMember`. `_Initialization` może być kwalifikowana w niektórych reprezentacje usług XAML z namescope XAML języka XAML, które informuje, że `_Initialization` nie jest zdefiniowany właściwością przy tworzeniu kopii typów.
 
-    - Kombinacja wartość elementu członkowskiego reprezentuje ustawienia wartości atrybutów. Po pewnym czasie prawdopodobnie istnieje konwerter wartości związane z przetwarzaniem tę wartość, a wartość to zwykły ciąg znaków. Jednakże, nie jest oceniany, dopóki zapisywania obiektu XAML przetwarza strumień tego węzła. Moduł zapisywania obiektów XAML ma niezbędne kontekst schematu XAML, mapowania systemu typów i innych pomocy technicznej potrzebnych do konwersji wartości.
+  - Kombinacja wartość elementu członkowskiego reprezentuje ustawienia wartości atrybutów. Po pewnym czasie prawdopodobnie istnieje konwerter wartości związane z przetwarzaniem tę wartość, a wartość to zwykły ciąg znaków. Jednakże, nie jest oceniany, dopóki zapisywania obiektu XAML przetwarza strumień tego węzła. Moduł zapisywania obiektów XAML ma niezbędne kontekst schematu XAML, mapowania systemu typów i innych pomocy technicznej potrzebnych do konwersji wartości.
 
 - `EndMember` Węzła może następować `StartMember` węzła dla kolejnych elementów członkowskich lub przez `EndObject` węzła właściciela elementu członkowskiego.
 
 - `EndObject` Węzła może następować `EndMember` węzła. Może również występować przez `StartObject` węzła w przypadkach, w których obiekty są elementami równorzędnymi, w kolekcji elementów. Lub może być stosowana przez `Namespace` węzła, który ma zastosowanie do przyszłych `StartObject`.
 
-    - Przypadku unikatowy zamykać strumień cały węzeł `EndObject` z katalogu głównego nie następuje niczego; czytnik jest teraz końca pliku i <xref:System.Xaml.XamlReader.Read%2A> zwraca `false`.
+  - Przypadku unikatowy zamykać strumień cały węzeł `EndObject` z katalogu głównego nie następuje niczego; czytnik jest teraz końca pliku i <xref:System.Xaml.XamlReader.Read%2A> zwraca `false`.
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

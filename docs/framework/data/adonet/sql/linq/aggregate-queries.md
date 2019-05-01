@@ -3,24 +3,24 @@ title: Zapytania zagregowane
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
 ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032555"
 ---
 # <a name="aggregate-queries"></a>Zapytania zagregowane
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje `Average`, `Count`, `Max`, `Min`, i `Sum` operatorów agregacji. Należy zwrócić uwagę na następujące cechy operatory agregacji w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   Zapytania zagregowane są wykonywane natychmiast.  
+- Zapytania zagregowane są wykonywane natychmiast.  
   
      Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
--   Zapytania zagregowane zwykle zwracają liczbę zamiast kolekcji.  
+- Zapytania zagregowane zwykle zwracają liczbę zamiast kolekcji.  
   
      Aby uzyskać więcej informacji, zobacz [operacje agregacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
--   Nie można wywołać wartości zagregowanych dla typów anonimowych.  
+- Nie można wywołać wartości zagregowanych dla typów anonimowych.  
   
  W przykładach w następujących tematach pochodzi z przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
 ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796984"
 ---
 # <a name="char-data-type-visual-basic"></a>Char — Typ danych (Visual Basic)
 Wskazuje niepodpisanego kodu (2-bajtowych) 16-bitowych blokady z zakresu od 0 do 65 535. Każdy *punktem kodu*, lub kod znaku reprezentuje pojedynczy znak Unicode.  
@@ -47,15 +47,15 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Liczby ujemne.** `Char` jest typ bez znaku, a nie może reprezentować wartość ujemną. W każdym przypadku, nie należy używać `Char` do przechowywania wartości liczbowych.  
+- **Liczby ujemne.** `Char` jest typ bez znaku, a nie może reprezentować wartość ujemną. W każdym przypadku, nie należy używać `Char` do przechowywania wartości liczbowych.  
   
--   **Uwagi dotyczące współdziałania.** Jeśli interfejs ze składnikami programu .NET Framework na przykład obiektami automatyzacji lub COM, pamiętaj, że znaki — typy mają różną szerokość danych (8 bitów) w innych środowiskach. Jeśli przekażesz 8-bitowy argument do takiego składnika, Zadeklaruj go jako `Byte` zamiast `Char` nowego kodu języka Visual Basic.  
+- **Uwagi dotyczące współdziałania.** Jeśli interfejs ze składnikami programu .NET Framework na przykład obiektami automatyzacji lub COM, pamiętaj, że znaki — typy mają różną szerokość danych (8 bitów) w innych środowiskach. Jeśli przekażesz 8-bitowy argument do takiego składnika, Zadeklaruj go jako `Byte` zamiast `Char` nowego kodu języka Visual Basic.  
   
--   **Rozszerzanie.** `Char` — Typ danych rozszerza się na `String`. Oznacza to, że możesz przekonwertować `Char` do `String` i nie będzie występować <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzanie.** `Char` — Typ danych rozszerza się na `String`. Oznacza to, że możesz przekonwertować `Char` do `String` i nie będzie występować <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Znaki typu.** Dołączanie znaku typu literał `C` na ciąg pojedynczych znaków literału wymusza `Char` typu danych. `Char` nie ma identyfikatora typ znaku.  
+- **Znaki typu.** Dołączanie znaku typu literał `C` na ciąg pojedynczych znaków literału wymusza `Char` typu danych. `Char` nie ma identyfikatora typ znaku.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Char?displayProperty=nameWithType> struktury.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Char?displayProperty=nameWithType> struktury.  
   
 ## <a name="see-also"></a>Zobacz także
 

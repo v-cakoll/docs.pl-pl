@@ -3,11 +3,11 @@ title: Funkcje Serwera SQL i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037185"
 ---
 # <a name="sql-server-features-and-adonet"></a>Funkcje Serwera SQL i ADO.NET
 W tematach w tej sekcji omówiono funkcje w programie SQL Server, które są przeznaczone do tworzenia aplikacji bazy danych za pomocą platformy ADO.NET.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047012"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami modelu COM
 Windows Communication Foundation (WCF) zapewnia dewelopera kodu zarządzanego przy użyciu bogate środowisko tworzenia połączonych aplikacji. Jednak jeśli masz znaczne inwestycje w niezarządzanym kodzie opartym na modelu COM i nie chcesz migrować, można nadal zintegrować usług sieci Web WCF bezpośrednio do istniejącego kodu przy użyciu monikera programu WCF. Moniker usługi może służyć w środowiskach programistycznych szeroki zakres COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) zapewnia dewelopera kodu zarządzanego pr
   
  Wspólnych innych WCF klientów, gdy używanie monikera programu aplikacje, określ adres, powiązania i umowy do komunikowania się z usługą. Kontrakt można określić w jednym z następujących sposobów:  
   
--   Wpisane kontraktu — jest zarejestrowany jako typ widoczne COM na komputerze klienckim.  
+- Wpisane kontraktu — jest zarejestrowany jako typ widoczne COM na komputerze klienckim.  
   
--   WSDL kontraktu — jest dostarczany w formie dokumentu WSDL.  
+- WSDL kontraktu — jest dostarczany w formie dokumentu WSDL.  
   
--   MEX kontraktu — są pobierane w czasie wykonywania z punktu końcowego metadanych programu Exchange (MEX).  
+- MEX kontraktu — są pobierane w czasie wykonywania z punktu końcowego metadanych programu Exchange (MEX).  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>Parametrów obsługiwanych przez monikera usługi  
  W poniższej tabeli przedstawiono parametry, które są obsługiwane przez monikera programu.  

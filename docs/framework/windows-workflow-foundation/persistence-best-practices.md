@@ -1,15 +1,15 @@
 ---
-title: Najlepsze rozwiązania trwałości
+title: Najlepsze rozwiązania w zakresie stanów trwałych
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
 ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005631"
 ---
-# <a name="persistence-best-practices"></a>Najlepsze rozwiązania trwałości
+# <a name="persistence-best-practices"></a>Najlepsze rozwiązania w zakresie stanów trwałych
 W tym dokumencie opisano najlepsze rozwiązania dotyczące projektowania przepływu pracy i konfiguracji związanych z trwałość przepływu pracy.  
   
 ## <a name="design-and-implementation-of-durable-workflows"></a>Projektowanie i implementacja trwałe przepływy pracy  
@@ -26,22 +26,22 @@ W tym dokumencie opisano najlepsze rozwiązania dotyczące projektowania przepł
 ## <a name="configuration-of-scalability-parameters"></a>Konfiguracja parametrów skalowalności  
  Wymagania dotyczące skalowalności i wydajności, określić ustawienia z następujących parametrów:  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
+- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
   
  Te parametry należy ustawić następujący, zgodnie z bieżącego scenariusza.  
   
-### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Scenariusz: Małą liczbą wystąpień przepływu pracy, które wymagają czas odpowiedzi optymalne  
+### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Scenariusz: Niewielką liczbę wystąpień przepływu pracy, wymagających czasu odpowiedzi optymalne  
  W tym scenariuszu wszystkie wystąpienia przepływu pracy powinna pozostać załadowany, gdy przejdą w stan bezczynności. Ustaw <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> na dużą wartość. Użyj tego ustawienia uniemożliwia wystąpienie przepływu pracy przenoszenie między komputerami. Użyj tego ustawienia, tylko wtedy, gdy spełnione są co najmniej jeden z następujących czynności:  
   
--   Wystąpienie przepływu pracy otrzymuje jedną wiadomość w okresie swojego istnienia.  
+- Wystąpienie przepływu pracy otrzymuje jedną wiadomość w okresie swojego istnienia.  
   
--   Wszystkie wystąpienia przepływu pracy jest uruchamiany na komputerze  
+- Wszystkie wystąpienia przepływu pracy jest uruchamiany na komputerze  
   
--   Wszystkie komunikaty, które są odbierane przez wystąpienie przepływu pracy są odbierane przez tego samego komputera.  
+- Wszystkie komunikaty, które są odbierane przez wystąpienie przepływu pracy są odbierane przez tego samego komputera.  
   
  Użyj <xref:System.Activities.Statements.Persist> działania lub zestawu <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> na 0, aby włączyć odzyskiwanie wystąpienia przepływu pracy po awarii usługi hosta lub komputera.  
   

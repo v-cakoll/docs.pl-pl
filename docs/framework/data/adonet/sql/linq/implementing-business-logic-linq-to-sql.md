@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
 ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033569"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementowanie logiki biznesowej (LINQ to SQL)
 Termin "logikę biznesową" w tym temacie odnosi się do żadnych reguł niestandardowych lub testów sprawdzania poprawności, które są stosowane do danych, przed jego wstawione, zaktualizowane lub usunięte z bazy danych. Logika biznesowa jest również czasami określane jako "reguł biznesowych" lub "Logika domeny". W aplikacjach n warstwowych zazwyczaj służy jako logiczne warstwy tak, aby można było jej modyfikować niezależnie od warstwy prezentacji lub warstwy dostępu do danych. Logika biznesowa może być wywoływany przez warstwę dostępu do danych, przed lub po nim żadnych aktualizacji, wstawiania lub usuwania danych w bazie danych.  

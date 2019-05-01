@@ -3,11 +3,11 @@ title: Integrowanie składników transakcyjnych usług dla przedsiębiorstw
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047038"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrowanie składników transakcyjnych usług dla przedsiębiorstw
 Windows Communication Foundation (WCF) zapewnia mechanizm automatycznego w celu integracji z usługami przedsiębiorstwa (zobacz [współdziałanie z aplikacjami COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Jednak możesz elastyczność do tworzenia usług korzystających z wewnętrznie składników transakcyjnych obsługiwany w ramach usług dla przedsiębiorstw. Ponieważ funkcja transakcji WCF jest oparta na <xref:System.Transactions> infrastruktury, proces integracji usług dla przedsiębiorstw z usługą WCF jest identyczna jak do określania współdziałanie <xref:System.Transactions> i usług dla przedsiębiorstw, co zostało opisane w [Współdziałanie z usługami przedsiębiorstwa i transakcjami COM +](https://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -17,9 +17,9 @@ Windows Communication Foundation (WCF) zapewnia mechanizm automatycznego w celu 
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>Integrowanie usług dla przedsiębiorstw z operacji usługi  
  Poniższy przykład demonstruje operacji z dozwolone przepływu transakcji, która tworzy <xref:System.Transactions.TransactionScope> z <xref:System.Transactions.EnterpriseServicesInteropOption.Full> opcji. W tym scenariuszu mają zastosowanie następujące warunki:  
   
--   Jeśli klient przepływu transakcji, działań, włącznie z wywołania do składnika usług dla przedsiębiorstw jest wykonywana w zakresie danej transakcji. Za pomocą <xref:System.Transactions.EnterpriseServicesInteropOption.Full> gwarantuje, że transakcja jest zsynchronizowany z <xref:System.EnterpriseServices> kontekstu, co oznacza, że transakcja otoczenia <xref:System.Transactions> i <xref:System.EnterpriseServices> jest taka sama.  
+- Jeśli klient przepływu transakcji, działań, włącznie z wywołania do składnika usług dla przedsiębiorstw jest wykonywana w zakresie danej transakcji. Za pomocą <xref:System.Transactions.EnterpriseServicesInteropOption.Full> gwarantuje, że transakcja jest zsynchronizowany z <xref:System.EnterpriseServices> kontekstu, co oznacza, że transakcja otoczenia <xref:System.Transactions> i <xref:System.EnterpriseServices> jest taka sama.  
   
--   Jeśli klient nie przepływu transakcji, ustawienie <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> do `true` tworzy nowy zakres transakcji dla tej operacji. Podobnie za pomocą <xref:System.Transactions.EnterpriseServicesInteropOption.Full> gwarantuje, że operacji transakcji jest taki sam jak transakcji używana wewnątrz <xref:System.EnterpriseServices> kontekście składnika.  
+- Jeśli klient nie przepływu transakcji, ustawienie <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> do `true` tworzy nowy zakres transakcji dla tej operacji. Podobnie za pomocą <xref:System.Transactions.EnterpriseServicesInteropOption.Full> gwarantuje, że operacji transakcji jest taki sam jak transakcji używana wewnątrz <xref:System.EnterpriseServices> kontekście składnika.  
   
  Wszelkie wywołania dodatkową metodę również występować w zakresie tej samej operacji transakcji.  
   

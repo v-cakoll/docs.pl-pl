@@ -3,11 +3,11 @@ title: do — Powiązania w klasach
 description: Dowiedz się, jak używać F# "do" powiązanie w definicji klasy, która wykonuje akcje w przypadku, gdy obiekt jest konstruowany lub przy pierwszym użyciu typu.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904595"
 ---
 # <a name="do-bindings-in-classes"></a>do — Powiązania w klasach
 

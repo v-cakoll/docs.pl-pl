@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032478"
 ---
 # <a name="handling-null-values"></a>Obsługa wartości Null
 Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie jest nieznany lub Brak. Wartość null nie jest ciągiem pustym (dla typów danych znaku lub daty/godziny) ani wartość zero (w przypadku liczbowych typów danych). Specyfikacji ANSI SQL-92 z informacją o wartości null musi być taka sama dla wszystkich typów danych, tak, aby spójną wszystkie wartości null. <xref:System.Data.SqlTypes> Przestrzeń nazw zawiera semantyka wartości null, implementując <xref:System.Data.SqlTypes.INullable> interfejsu. Typy wszystkich danych w <xref:System.Data.SqlTypes> ma swój własny `IsNull` właściwości i `Null` wartość, którą można przypisać do wystąpienia tego typu danych.  
@@ -21,11 +21,11 @@ Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie
 ## <a name="nulls-and-three-valued-logic"></a>Wartości null i zwracającej trzech logiki  
  Dopuszczających wartości null w definicjach kolumny wprowadza przechowywanymi w trzech logikę w aplikacji. Porównanie może służyć do oceny na jeden z trzech warunków:  
   
--   Prawda  
+- Prawda  
   
--   False  
+- False  
   
--   Nieznany  
+- Nieznany  
   
  Ponieważ wartość null jest traktowana jako Nieznany, nie są uwzględniane równy dwie wartości null w porównaniu do siebie nawzajem. W wyrażeniach przy użyciu operatorów arytmetycznych, jeśli dowolny z argumentów ma wartość null, wynik ma wartość null w także.  
   

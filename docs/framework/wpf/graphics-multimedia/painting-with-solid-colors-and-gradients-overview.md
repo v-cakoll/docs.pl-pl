@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009464"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Przegląd Malowanie jednolitymi kolorami i gradientami
 W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, i <xref:System.Windows.Media.RadialGradientBrush> obiektów malowanie jednolitymi kolorami, użyciu gradientów liniowych i użyciu gradientów promieniowych.  
@@ -27,15 +27,15 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>Za pomocą SolidColorBrush w "XAML"  
  Można malować obszar jednolitym kolorem w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj jednej z następujących opcji.  
   
--   Wybierz wstępnie zdefiniowany jednolitego koloru pędzla według nazwy.  Na przykład można ustawić przycisku <xref:System.Windows.Controls.Control.Background%2A> "Red" lub "MediumBlue".  Aby uzyskać listę innych wstępnie zdefiniowanych pędzle pełnego koloru, zobacz statycznej właściwości <xref:System.Windows.Media.Brushes> klasy. Oto przykład.  
+- Wybierz wstępnie zdefiniowany jednolitego koloru pędzla według nazwy.  Na przykład można ustawić przycisku <xref:System.Windows.Controls.Control.Background%2A> "Red" lub "MediumBlue".  Aby uzyskać listę innych wstępnie zdefiniowanych pędzle pełnego koloru, zobacz statycznej właściwości <xref:System.Windows.Media.Brushes> klasy. Oto przykład.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Wybierz kolor z palety kolorów 32-bitowych, określając ilości czerwony, zielony i niebieski, aby połączyć w jednym jednolitego koloru.  Określanie kolor z palety 32-bitowy format jest "*#rrggbb*", gdzie *rr* jest dwucyfrową liczbą szesnastkową, określając względna ilość czerwony, *gg* Określa kolor zielony, a *bb* określa ilość niebieski.  Ponadto można określić kolor jako "#*aarrggbb*" gdzie *aa* Określa *alfa* wartość lub Przezroczystość koloru. Takie podejście umożliwia tworzenie kolorów, które są częściowo przezroczyste.  W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> jest ustawiony na czerwony całkowicie nieprzezroczysty, przy użyciu notacji szesnastkowej.  
+- Wybierz kolor z palety kolorów 32-bitowych, określając ilości czerwony, zielony i niebieski, aby połączyć w jednym jednolitego koloru.  Określanie kolor z palety 32-bitowy format jest "*#rrggbb*", gdzie *rr* jest dwucyfrową liczbą szesnastkową, określając względna ilość czerwony, *gg* Określa kolor zielony, a *bb* określa ilość niebieski.  Ponadto można określić kolor jako "#*aarrggbb*" gdzie *aa* Określa *alfa* wartość lub Przezroczystość koloru. Takie podejście umożliwia tworzenie kolorów, które są częściowo przezroczyste.  W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> jest ustawiony na czerwony całkowicie nieprzezroczysty, przy użyciu notacji szesnastkowej.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Składnia znacznika właściwości można użyć do opisania <xref:System.Windows.Media.SolidColorBrush>. Ta składnia jest bardziej szczegółowy, ale można określić dodatkowe ustawienia, takie jak przezroczystość pędzla. W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> właściwości dwóch <xref:System.Windows.Controls.Button> elementy są ustawione na całkowicie nieprzezroczysty czerwony. Kolor pędzla pierwszy opisano przy użyciu nazwy wstępnie zdefiniowany kolor. Kolor pędzla drugi opisano przy użyciu notacji szesnastkowej.  
+- Składnia znacznika właściwości można użyć do opisania <xref:System.Windows.Media.SolidColorBrush>. Ta składnia jest bardziej szczegółowy, ale można określić dodatkowe ustawienia, takie jak przezroczystość pędzla. W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> właściwości dwóch <xref:System.Windows.Controls.Button> elementy są ustawione na całkowicie nieprzezroczysty czerwony. Kolor pędzla pierwszy opisano przy użyciu nazwy wstępnie zdefiniowany kolor. Kolor pędzla drugi opisano przy użyciu notacji szesnastkowej.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Malowanie przy użyciu SolidColorBrush w kodzie  
  Aby Maluj obszar jednolitym kolorem w kodzie, użyj jednego z następujących opcji.  
   
--   Użyj jednej z wstępnie zdefiniowanych pędzle, dostarczone przez <xref:System.Windows.Media.Brushes> klasy. W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> ustawiono <xref:System.Windows.Media.Brushes.Red%2A>.  
+- Użyj jednej z wstępnie zdefiniowanych pędzle, dostarczone przez <xref:System.Windows.Media.Brushes> klasy. W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> ustawiono <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Tworzenie <xref:System.Windows.Media.SolidColorBrush> i ustaw jego <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość za pomocą <xref:System.Windows.Media.Color> struktury. Możesz użyć wstępnie zdefiniowany kolor na podstawie <xref:System.Windows.Media.Colors> klasy albo możesz utworzyć <xref:System.Windows.Media.Color> przy użyciu statycznych <xref:System.Windows.Media.Color.FromArgb%2A> metody.  
+- Tworzenie <xref:System.Windows.Media.SolidColorBrush> i ustaw jego <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość za pomocą <xref:System.Windows.Media.Color> struktury. Możesz użyć wstępnie zdefiniowany kolor na podstawie <xref:System.Windows.Media.Colors> klasy albo możesz utworzyć <xref:System.Windows.Media.Color> przy użyciu statycznych <xref:System.Windows.Media.Color.FromArgb%2A> metody.  
   
      Poniższy przykład pokazuje, jak ustawić <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość <xref:System.Windows.Media.SolidColorBrush> przy użyciu wstępnie zdefiniowany kolor.  
   
@@ -81,9 +81,9 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush
   
  <xref:System.Windows.Media.GradientStop> Jest podstawowym budulcem pędzla gradientu.  Określa gradientu <xref:System.Windows.Media.GradientStop.Color%2A> na <xref:System.Windows.Media.GradientStop.Offset%2A> wzdłuż osi gradientu.  
   
--   Zatrzymania gradientu <xref:System.Windows.Media.GradientStop.Color%2A> właściwość określa kolor zatrzymania gradientu. Kolor może ustawić przy użyciu wstępnie zdefiniowany kolor (dostarczonych przez <xref:System.Windows.Media.Colors> klasy) albo określając ScRGB lub ARGB wartości. W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz skorzystać z notacji szesnastkowej opisujący kolor. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.Color> struktury.  
+- Zatrzymania gradientu <xref:System.Windows.Media.GradientStop.Color%2A> właściwość określa kolor zatrzymania gradientu. Kolor może ustawić przy użyciu wstępnie zdefiniowany kolor (dostarczonych przez <xref:System.Windows.Media.Colors> klasy) albo określając ScRGB lub ARGB wartości. W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz skorzystać z notacji szesnastkowej opisujący kolor. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.Color> struktury.  
   
--   Zatrzymania gradientu <xref:System.Windows.Media.GradientStop.Offset%2A> właściwość określa położenie koloru zatrzymania gradientu na osi gradientu. Przesunięcie jest <xref:System.Double> , zakresu od 0 do 1. Im bliżej zatrzymania gradientu wartość przesunięcia jest 0, im bliżej kolor na początek gradientu. Im bliżej gradientu wartość przesunięcia jest 1, im bliżej jest kolor końcowy gradientu.  
+- Zatrzymania gradientu <xref:System.Windows.Media.GradientStop.Offset%2A> właściwość określa położenie koloru zatrzymania gradientu na osi gradientu. Przesunięcie jest <xref:System.Double> , zakresu od 0 do 1. Im bliżej zatrzymania gradientu wartość przesunięcia jest 0, im bliżej kolor na początek gradientu. Im bliżej gradientu wartość przesunięcia jest 1, im bliżej jest kolor końcowy gradientu.  
   
  Kolor każdego punktu między ograniczniki gradientu jest liniowo interpolowane pod postacią połączenia kolor określony przy użyciu dwóch blokujących ograniczniki gradientu. Następująca ilustracja wyróżnia ograniczniki gradientu w poprzednim przykładzie. Okręgów oznaczyć położenie ograniczniki gradientu i linię przerywaną, co pokazuje gradientu osi.  
   

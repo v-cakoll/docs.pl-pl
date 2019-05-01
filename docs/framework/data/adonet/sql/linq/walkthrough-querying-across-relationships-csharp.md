@@ -3,11 +3,11 @@ title: 'Przewodnik: Wykonywanie zapytań w relacjach (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
 ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033400"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Przewodnik: Wykonywanie zapytań w relacjach (C#)
 W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *skojarzenia* do reprezentowania relacji klucza obcego w bazie danych.  
@@ -22,18 +22,18 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
 ## <a name="overview"></a>Omówienie  
  Ten przewodnik składa się z trzech głównych zadań:  
   
--   Dodawanie klasy jednostki do reprezentowania tabeli Orders z przykładowej bazy danych Northwind.  
+- Dodawanie klasy jednostki do reprezentowania tabeli Orders z przykładowej bazy danych Northwind.  
   
--   Uzupełniające adnotacje do `Customer` klasy w celu zwiększenia relacji między `Customer` i `Order` klasy.  
+- Uzupełniające adnotacje do `Customer` klasy w celu zwiększenia relacji między `Customer` i `Order` klasy.  
   
--   Tworzenie i uruchamianie zapytań, aby przetestować uzyskiwanie `Order` informacji przy użyciu `Customer` klasy.  
+- Tworzenie i uruchamianie zapytań, aby przetestować uzyskiwanie `Order` informacji przy użyciu `Customer` klasy.  
   
 ## <a name="mapping-relationships-across-tables"></a>Mapowanie relacji między tabelami  
  Po `Customer` definicji klasy, należy utworzyć `Order` jednostki definicji klasy, która zawiera następujący kod, który wskazuje, że `Order.Customer` odnosi się jako klucz obcy, aby `Customer.CustomerID`.  
   
 #### <a name="to-add-the-order-entity-class"></a>Aby dodać klasę jednostki zamówienia  
   
--   Wpisz lub wklej następujący kod po `Customer` klasy:  
+- Wpisz lub wklej następujący kod po `Customer` klasy:  
   
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
@@ -42,7 +42,7 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
   
 #### <a name="to-annotate-the-customer-class"></a>Dodawać adnotacje do klasy odbiorcy  
   
--   Wpisz lub wklej następujący kod do `Customer` klasy:  
+- Wpisz lub wklej następujący kod do `Customer` klasy:  
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   

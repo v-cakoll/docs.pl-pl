@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033231"
 ---
 # <a name="accessibility-best-practices"></a>Najlepsze praktyki dotyczące ułatwień dostępu
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074238"
   
  Aplikacje powinny oferują następujące interfejsy klawiatury:  
   
--   tabulatorów dla wszystkich kontrolek, które użytkownik może wchodzić w interakcje, takie jak przyciski, łączy i pola listy  
+- tabulatorów dla wszystkich kontrolek, które użytkownik może wchodzić w interakcje, takie jak przyciski, łączy i pola listy  
   
--   kolejność tabulacji logiczne  
+- kolejność tabulacji logiczne  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>Pokaż fokus klawiatury  
@@ -90,11 +90,11 @@ ms.locfileid: "59074238"
   
  Aplikacje należy wykonać następujące czynności z fokusem klawiatury:  
   
--   jeden element zawsze powinien mieć fokus klawiatury  
+- jeden element zawsze powinien mieć fokus klawiatury  
   
--   fokus klawiatury powinno być widoczne i oczywisty  
+- fokus klawiatury powinno być widoczne i oczywisty  
   
--   wybrane opcje i/lub elementy ukierunkowanych powinien być wizualnie wyróżniony  
+- wybrane opcje i/lub elementy ukierunkowanych powinien być wizualnie wyróżniony  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Obsługa standardów nawigacji i schematy nawigacji zaawansowane  
@@ -102,11 +102,11 @@ ms.locfileid: "59074238"
   
  Aplikacje powinny oferują następujące interfejsy klawiatury:  
   
--   klawisze skrótów i klawisze dostępu podkreślony dla wszystkich poleceń menu i kontrolek  
+- klawisze skrótów i klawisze dostępu podkreślony dla wszystkich poleceń menu i kontrolek  
   
--   skróty klawiaturowe do ważne linki  
+- skróty klawiaturowe do ważne linki  
   
--   wszystkie elementy menu mają klucz dostępu; wszystkie przyciski mieć klawiszy skrótów, wszystkie polecenia klawisza skrótu.  
+- wszystkie elementy menu mają klucz dostępu; wszystkie przyciski mieć klawiszy skrótów, wszystkie polecenia klawisza skrótu.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Nie pozwól myszy lokalizacji kolidować z klawiatury  

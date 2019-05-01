@@ -3,11 +3,11 @@ title: Zachowanie debugowania usług
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: bfed164093e10c070b24832cf5a3be362ad3bc56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007919"
 ---
 # <a name="service-debug-behavior"></a>Zachowanie debugowania usług
 Niniejszy przykład pokazuje, jak można skonfigurować ustawienia zachowanie debugowania usług. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. W tym przykładzie jawnie definiuje zachowanie debugowania usług w pliku konfiguracji. Ponadto możesz obowiązkowo w kodzie.  
@@ -33,12 +33,12 @@ Niniejszy przykład pokazuje, jak można skonfigurować ustawienia zachowanie de
   
  [\<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) jest elementem konfiguracji, który umożliwia zmianę właściwości zachowanie debugowania usług. Użytkownik może modyfikować tego zachowania do osiągnięcia następujących czynności:  
   
--   Dzięki temu zwracanej każdy wyjątek, który jest zgłaszany przez kod aplikacji, nawet jeśli wyjątek nie jest zadeklarowany za pomocą usługi <xref:System.ServiceModel.FaultContractAttribute>. Odbywa się przez ustawienie `includeExceptionDetailInFaults` do `true`. To ustawienie jest przydatne podczas debugowania przypadków, gdy serwer jest zgłaszanie nieoczekiwany wyjątek.  
+- Dzięki temu zwracanej każdy wyjątek, który jest zgłaszany przez kod aplikacji, nawet jeśli wyjątek nie jest zadeklarowany za pomocą usługi <xref:System.ServiceModel.FaultContractAttribute>. Odbywa się przez ustawienie `includeExceptionDetailInFaults` do `true`. To ustawienie jest przydatne podczas debugowania przypadków, gdy serwer jest zgłaszanie nieoczekiwany wyjątek.  
   
     > [!IMPORTANT]
     >  Nie jest bezpieczne, aby włączyć to ustawienie w środowisku produkcyjnym. Serwer nieoczekiwany wyjątek może mieć pewne informacje, które nie są przeznaczone dla klienta i dlatego ustawienie `includeExceptionDetailsInFaults` do `true` może prowadzić do przecieków informacji.  
   
--   [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) również pozwala użytkownikowi na włączanie lub wyłączanie strony pomocy. Każda usługa Opcjonalnie można ujawnić stronę pomocy, który zawiera informacje dotyczące usługi, w tym punkt końcowy, aby uzyskać WSDL usługi. To może być włączona `httpHelpPageEnabled` do `true`. Dzięki temu strony pomocy do zwrócenia na żądanie GET do podstawowego adresu usługi. Ten adres można zmienić przez ustawienie innego atrybutu `httpHelpPageUrl`. Umożliwia to bezpieczne przy użyciu protokołu HTTPS zamiast protokołu HTTP. Można to zrobić, ustawiając `httpsHelpPageEnabled` i `httpsHelpPageUrl`.  
+- [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) również pozwala użytkownikowi na włączanie lub wyłączanie strony pomocy. Każda usługa Opcjonalnie można ujawnić stronę pomocy, który zawiera informacje dotyczące usługi, w tym punkt końcowy, aby uzyskać WSDL usługi. To może być włączona `httpHelpPageEnabled` do `true`. Dzięki temu strony pomocy do zwrócenia na żądanie GET do podstawowego adresu usługi. Ten adres można zmienić przez ustawienie innego atrybutu `httpHelpPageUrl`. Umożliwia to bezpieczne przy użyciu protokołu HTTPS zamiast protokołu HTTP. Można to zrobić, ustawiając `httpsHelpPageEnabled` i `httpsHelpPageUrl`.  
   
  Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Pierwsze trzy operacje (dodawania, odejmowania i mnożenia) musi zakończyć się sukcesem. Ostatnia operacja ("dzielenie") kończy się niepowodzeniem z dzielenia przez zero wyjątek.  
   

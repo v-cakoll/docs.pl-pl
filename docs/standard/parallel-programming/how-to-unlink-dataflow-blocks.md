@@ -13,11 +13,11 @@ ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018921"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Instrukcje: Rozłączanie bloków przepływu danych
 Ten dokument zawiera opis sposobu odłączania docelowej bloku przepływu danych ze źródła.
@@ -39,7 +39,7 @@ Ten dokument zawiera opis sposobu odłączania docelowej bloku przepływu danych
   
  Visual C#  
   
- **CSC.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.cs**  
   
  Visual Basic  
   

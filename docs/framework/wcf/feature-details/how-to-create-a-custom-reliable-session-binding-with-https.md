@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Tworzenie niestandardowych wiązań niezawodnej sesji za pomocą protokołu HTTPS'
+title: 'Instrukcje: tworzenie niestandardowych wiązań niezawodnej sesji za pomocą protokołu HTTPS'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
 ms.openlocfilehash: f39325829cf4b548482a6a570a5aa1fd65e61a1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039536"
 ---
-# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Instrukcje: Tworzenie niestandardowych wiązań niezawodnej sesji za pomocą protokołu HTTPS
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Instrukcje: tworzenie niestandardowych wiązań niezawodnej sesji za pomocą protokołu HTTPS
 
 W tym temacie przedstawiono korzystanie z zabezpieczeń transportu protokołu Secure Sockets Layer (SSL) przy użyciu niezawodnej sesji. Aby użyć niezawodnej sesji za pośrednictwem protokołu HTTPS, należy utworzyć niestandardowe powiązanie, które korzysta z niezawodnej sesji i transportu HTTPS. Niezawodna sesja zostanie włączone, obowiązkowo przy użyciu kodu lub deklaratywnie w pliku konfiguracji. Ta procedura wykorzystuje pliki konfiguracji klienta i usługi, aby umożliwić niezawodnej sesji i [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) elementu.
 

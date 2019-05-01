@@ -10,11 +10,11 @@ helpviewer_keywords:
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
 ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000977"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Instrukcje: Wykrywanie momentu zmiany tekstu w kontrolce TextBox
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> zdarzenia w celu wykonania metody zawsze wtedy, gdy tekst w <xref:System.Windows.Controls.TextBox> kontrolki została zmieniona.  

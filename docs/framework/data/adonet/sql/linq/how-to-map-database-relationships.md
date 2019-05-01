@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033725"
 ---
 # <a name="how-to-map-database-relationships"></a>Instrukcje: Mapowanie relacji w bazie danych
 Możesz zakodować jako właściwość odwołuje się w klasie jednostki relacji między danymi, które będą zawsze takie same. W bazie danych Northwind na przykład, ponieważ klienci zwykle składanie zamówień, istnieje relacja zawsze w modelu od klientów i zamówienia.  
@@ -22,11 +22,11 @@ Możesz zakodować jako właściwość odwołuje się w klasie jednostki relacji
   
  Większość relacje są jeden do wielu, tak jak w przykładzie w dalszej części tego tematu. Może również reprezentować relacji jeden do jednego i wiele do wielu w następujący sposób:  
   
--   Jeden do jednego: Reprezentuje tego rodzaju relacji, umieszczając <xref:System.Data.Linq.EntitySet%601> po obu stronach.  
+- Jeden do jednego: Reprezentuje tego rodzaju relacji, umieszczając <xref:System.Data.Linq.EntitySet%601> po obu stronach.  
   
      Na przykład, rozważmy `Customer` - `SecurityCode` relacji, utworzony kod zabezpieczeń klienta nie zostanie znaleziony w `Customer` tabeli i może mieć dostęp tylko upoważnione osoby.  
   
--   Wiele do wielu: W relacji wiele do wielu, klucz podstawowy w tabeli linku (o nazwie *Rozgałęzienie* tabeli) często jest tworzony przez złożonego klucze obce w dwóch tabelach.  
+- Wiele do wielu: W relacji wiele do wielu, klucz podstawowy w tabeli linku (o nazwie *Rozgałęzienie* tabeli) często jest tworzony przez złożonego klucze obce w dwóch tabelach.  
   
      Na przykład, rozważmy `Employee` - `Project` relacji wiele do wielu utworzone za pomocą tabela łączy `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wymaga, że takiej relacji jest modelowane przy użyciu trzech klas: `Employee`, `Project`, i `EmployeeProject`. W tym przypadku zmiana relacji między `Employee` i `Project` może okazać się wymagają aktualizacji klucza podstawowego `EmployeeProject`. Jednak ta sytuacja jest najlepiej formę usunięcie istniejącej `EmployeeProject` i utworzenie nowego `EmployeeProject`.  
   

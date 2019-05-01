@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007133"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Przewodnik: mapowanie właściwości przy użyciu kontrolki WindowsFormsHost
 
@@ -21,17 +21,17 @@ W tym instruktażu dowiesz się, jak używać <xref:System.Windows.Forms.Integra
 
 Zadania zilustrowane w tym przewodniku obejmują:
 
--   Tworzenie projektu.
+- Tworzenie projektu.
 
--   Definiowanie układów aplikacji.
+- Definiowanie układów aplikacji.
 
--   Definiowanie nowego mapowania właściwości.
+- Definiowanie nowego mapowania właściwości.
 
--   Usuwanie mapowania właściwości domyślnej.
+- Usuwanie mapowania właściwości domyślnej.
 
--   Zastępowanie domyślnego mapowania właściwości.
+- Zastępowanie domyślnego mapowania właściwości.
 
--   Rozszerzanie domyślnego mapowania właściwości.
+- Rozszerzanie domyślnego mapowania właściwości.
 
 Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [Mapowanie właściwości przy użyciu przykładu elementu WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
 
@@ -41,7 +41,7 @@ Po zakończeniu będzie można mapować [!INCLUDE[TLA2#tla_winclient](../../../.
 
 Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>Tworzenie i konfigurowanie projektu
 
@@ -76,7 +76,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 ### <a name="to-define-a-new-property-mapping"></a>Aby zdefiniować nowe mapowanie właściwości
 
--   Skopiuj następujący kod do definicji `Window1` klasy.
+- Skopiuj następujący kod do definicji `Window1` klasy.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ Usuń mapowanie właściwości domyślne przez wywołanie metody <xref:System.Wi
 
 ### <a name="to-remove-a-default-property-mapping"></a>Aby usunąć mapowanie właściwości domyślne
 
--   Skopiuj następujący kod do definicji `Window1` klasy.
+- Skopiuj następujący kod do definicji `Window1` klasy.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ Zastąp domyślne mapowanie właściwości przez usunięcie domyślnego mapowani
 
 ### <a name="to-replace-a-default-property-mapping"></a>Aby zastąpić domyślne mapowanie właściwości
 
--   Skopiuj następujący kod do definicji `Window1` klasy.
+- Skopiuj następujący kod do definicji `Window1` klasy.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ Możesz użyć domyślnego mapowania właściwości i rozszerzać go za pomocą 
 
 ### <a name="to-extend-a-default-property-mapping"></a>Aby rozszerzyć domyślne mapowanie właściwości
 
--   Skopiuj następujący kod do definicji `Window1` klasy.
+- Skopiuj następujący kod do definicji `Window1` klasy.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ Konfigurowanie mapowań właściwości przez wywołanie metody opisany wcześnie
 
      `WindowLoaded` Metodę uchwytów <xref:System.Windows.FrameworkElement.Loaded> zdarzeń i wykonuje następujące inicjowanie.
 
-    -   Tworzy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> kontroli.
+    - Tworzy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> kontroli.
 
-    -   Wywołuje metody, które są zdefiniowane we wcześniejszej części przewodnika do skonfigurowania mapowania właściwości.
+    - Wywołuje metody, które są zdefiniowane we wcześniejszej części przewodnika do skonfigurowania mapowania właściwości.
 
-    -   Przypisuje wartości początkowe, aby mapowanych właściwości.
+    - Przypisuje wartości początkowe, aby mapowanych właściwości.
 
 2. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Kliknij pole wyboru, aby zobaczyć efekt <xref:System.Windows.FrameworkElement.FlowDirection%2A> mapowania. Po kliknięciu pola wyboru, układ odwraca orientacji lewa prawa.
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
 ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009074"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Formanty formularzy systemu Windows używane do obsługi opcji list
 Można dodać różne formanty do formularza Windows, jeśli chcesz zapewnić użytkownikom listę opcji do wyboru. Zależności od tego, ile chcesz ograniczyć użytkowników do wprowadzania, można dodać <xref:System.Windows.Forms.ListBox> kontroli <xref:System.Windows.Forms.ComboBox> kontroli, lub <xref:System.Windows.Forms.CheckedListBox> kontroli. Użyj następujących linków, aby określić, które określają, które najlepiej odpowiada Twoim potrzebom.  

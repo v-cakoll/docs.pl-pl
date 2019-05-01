@@ -7,11 +7,11 @@ helpviewer_keywords:
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
 ms.openlocfilehash: 2919e8d4c1af858973ff3d2b58b4d3bc4f925527
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018072"
 ---
 # <a name="xmlserializer-element"></a>\<xmlSerializer> Element
 Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSerializer> jest wykonywane.  

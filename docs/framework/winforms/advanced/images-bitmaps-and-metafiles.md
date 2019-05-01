@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
 ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003941"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Obrazy, mapy bitowe i metapliki
 `Image` Klasa jest abstrakcyjna klasa bazowa, która zapewnia metody do pracy z obrazów rastrowych (mapy bitowe) i wektor obrazy (metapliki). `Bitmap` Klasy i <xref:System.Drawing.Imaging.Metafile> zarówno dziedziczyć z klasy `Image` klasy. `Bitmap` Klasa rozszerza możliwości `Image` klasy, zapewniając dodatkowe metody do ładowania, zapisywania i manipulowania obrazów rastrowych. <xref:System.Drawing.Imaging.Metafile> Klasa rozszerza możliwości `Image` klasy, zapewniając dodatkowe metody dla nagrywania i sprawdzając obrazy wektorowe.  

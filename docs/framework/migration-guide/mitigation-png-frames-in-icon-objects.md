@@ -5,11 +5,11 @@ ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 575d77524e567ba55f7cd9222d690fcee25d3f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871361"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Środki zaradcze: PNG ramki w obiektach ikony
 Począwszy od programu .NET Framework 4.6 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> metoda konwertuje pomyślnie ikon PNG ramek do <xref:System.Drawing.Bitmap> obiektów.  

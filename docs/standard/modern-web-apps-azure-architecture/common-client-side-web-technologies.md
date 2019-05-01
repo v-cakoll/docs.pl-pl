@@ -1,17 +1,17 @@
 ---
-title: Typowe technologie sieci web po stronie klienta
+title: Typowe technologie internetowe po stronie klienta
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Typowe technologie sieci web po stronie klienta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 36bb18d21740f406d33306c212195fa5dbb25ee1
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019463"
 ---
-# <a name="common-client-side-web-technologies"></a>Typowe technologie sieci web po stronie klienta
+# <a name="common-client-side-web-technologies"></a>Typowe technologie internetowe po stronie klienta
 
 > "Witryny sieci Web powinna wyglądać wewnątrz i out".  
 > _— Paul Cookson_

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013884"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)
 W poniższej tabeli wymieniono klasy często używane dla .NET Framework w pliku we/wy, podzielone na kategorie klas we/wy pliku klasy służące do tworzenia strumieni i klas używanych do odczytu i zapisu do strumieni.  

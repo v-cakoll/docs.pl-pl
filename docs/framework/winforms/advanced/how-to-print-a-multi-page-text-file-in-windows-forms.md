@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
 ms.openlocfilehash: b17ddcb22f3e1b7dc181e977a0227db5490b66fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003915"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Instrukcje: Wyświetlanie podglądu wydruku w aplikacjach formularzy systemu Windows
 Jest to często stosowane w aplikacjach Windows do drukowania tekstu. <xref:System.Drawing.Graphics> Klasa dostarcza metody do rysowania obiektów (grafiki lub tekst) do urządzenia, takich jak ekranu lub drukarki.  
@@ -54,11 +54,11 @@ Jest to często stosowane w aplikacjach Windows do drukowania tekstu. <xref:Syst
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Plik tekstowy o nazwie testPage.txt zawierający tekst, aby wydrukować, znajduje się w folderze głównym dysku C:\\. Edytuj kod, aby wydrukować inny plik.  
+- Plik tekstowy o nazwie testPage.txt zawierający tekst, aby wydrukować, znajduje się w folderze głównym dysku C:\\. Edytuj kod, aby wydrukować inny plik.  
   
--   Odwołania do systemu, przestrzeń nazw System.Windows.Forms, System.Drawing zestawów.  
+- Odwołania do systemu, przestrzeń nazw System.Windows.Forms, System.Drawing zestawów.  
   
--   Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
+- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
 

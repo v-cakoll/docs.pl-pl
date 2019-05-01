@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4eeecc22db5786f66b3d484b521989e71817d8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995127"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection — Metoda
 Powiadamia debuger zmieniono zestaw zadań skojarzonych z określonego połączenia.  
@@ -46,9 +46,9 @@ HRESULT ChangeConnection (
 ## <a name="remarks"></a>Uwagi  
  A `ChangeConnection` wywołanie zwrotne, które będą uruchamiane w jednym z następujących przypadkach:  
   
--   Gdy debuger dołącza do procesu, który zawiera połączenia. W takim wypadku środowisko uruchomieniowe wygeneruje i wysyłania [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) zdarzeń i `ChangeConnection` zdarzeń dla każdego połączenia w procesie. A `ChangeConnection` zdarzenie jest generowane dla każdego istniejącego połączenia, niezależnie od tego, czy został zmieniony od chwili utworzenia tego połączenia zestawu zadań.  
+- Gdy debuger dołącza do procesu, który zawiera połączenia. W takim wypadku środowisko uruchomieniowe wygeneruje i wysyłania [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) zdarzeń i `ChangeConnection` zdarzeń dla każdego połączenia w procesie. A `ChangeConnection` zdarzenie jest generowane dla każdego istniejącego połączenia, niezależnie od tego, czy został zmieniony od chwili utworzenia tego połączenia zestawu zadań.  
   
--   Gdy host wywołuje [iclrdebugmanager::setconnectiontasks —](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) w [interfejs API hostingu](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Gdy host wywołuje [iclrdebugmanager::setconnectiontasks —](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) w [interfejs API hostingu](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
  Debuger powinien skanować wszystkie wątki w procesie, aby wczytać nowych zmian.  
   

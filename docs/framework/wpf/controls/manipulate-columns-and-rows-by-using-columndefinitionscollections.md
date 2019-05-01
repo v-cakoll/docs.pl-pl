@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: bfc7160a-45f2-4e17-9961-df414dfb13c5
 ms.openlocfilehash: f316cced076223edba1d39c9cfb21b9a504b9eee
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017673"
 ---
 # <a name="how-to-manipulate-columns-and-rows-by-using-columndefinitionscollections-and-rowdefinitionscollections"></a>Instrukcje: Zarządzanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections
 W tym przykładzie pokazano, jak używać metod w <xref:System.Windows.Controls.ColumnDefinitionCollection> i <xref:System.Windows.Controls.RowDefinitionCollection> klasy do wykonywania akcji, takich jak dodawanie, wyczyszczenia lub zliczanie zawartość wierszy lub kolumn. Można na przykład <xref:System.Windows.Controls.ColumnDefinitionCollection.Add%2A>, <xref:System.Windows.Controls.ColumnDefinitionCollection.Clear%2A>, lub <xref:System.Windows.Controls.ColumnDefinitionCollection.Count%2A> elementy, które są objęte <xref:System.Windows.Controls.ColumnDefinition> lub <xref:System.Windows.Controls.RowDefinition>.  

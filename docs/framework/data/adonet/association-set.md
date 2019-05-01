@@ -3,11 +3,11 @@ title: zestaw skojarzeń
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034605"
 ---
 # <a name="association-set"></a>zestaw skojarzeń
 *Zestaw skojarzeń* to logiczny kontener przeznaczony do [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) wystąpień tego samego typu. Zestaw skojarzeń nie jest konstrukcja; modelowania danych oznacza to, że nie opisano strukturę danych lub relacje. Zamiast tego zestaw skojarzeń zapewnia konstrukcję w środowisku hostingu lub magazynu (np. środowisko uruchomieniowe języka wspólnego lub bazą danych programu SQL Server) do wystąpień skojarzenia grupy mogą być mapowane do magazynu danych.  
@@ -16,11 +16,11 @@ ms.locfileid: "59204487"
   
  Definicja zestawu skojarzeń zawiera następujące informacje:  
   
--   Nazwa zestawu skojarzenia. (Wymagane)  
+- Nazwa zestawu skojarzenia. (Wymagane)  
   
--   Skojarzenia, które będzie zawierać wystąpień. (Wymagane)  
+- Skojarzenia, które będzie zawierać wystąpień. (Wymagane)  
   
--   Dwa [kończy się zestawu skojarzeń](../../../../docs/framework/data/adonet/association-set-end.md).  
+- Dwa [kończy się zestawu skojarzeń](../../../../docs/framework/data/adonet/association-set-end.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `PublishedBy`, i `WrittenBy`. Mimo że informacji na temat zestawów skojarzenie nie jest przekazywany w diagramie, następny diagram pokazuje przykład zestawów skojarzeń i zestawy jednostek, w oparciu o ten model.  

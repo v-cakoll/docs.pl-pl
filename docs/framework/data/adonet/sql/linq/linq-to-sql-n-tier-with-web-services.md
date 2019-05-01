@@ -3,11 +3,11 @@ title: N-warstwowa LINQ to SQL z użyciem usług internetowych
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033543"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-warstwowa LINQ to SQL z użyciem usług internetowych
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przeznaczone dla użycia w warstwie środkowej luźno powiązane warstwie dostępu do danych (DAL) takich jak usługi sieci Web. Jeśli Warstwa prezentacji jest to strona sieci Web platformy ASP.NET, a następnie używasz <xref:System.Web.UI.WebControls.LinqDataSource> formant serwera do zarządzania przesyłaniem danych między interfejsu użytkownika sieci Web i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w warstwie środkowej. Jeśli Warstwa prezentacji nie jest to strona programu ASP.NET, następnie warstwy środkowej i warstwy prezentacji należy wykonać wykonania dodatkowych czynności, aby zarządzać serializacji i deserializacji obiektu danych.  

@@ -1,17 +1,17 @@
 ---
-title: Jak wygląda aplikacjom natywnym dla chmury?
+title: A może natywne aplikacje w chmurze?
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Jak wygląda aplikacjom natywnym dla chmury?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012129"
 ---
-# <a name="what-about-cloud-native-applications"></a>Jak wygląda aplikacjom natywnym dla chmury?
+# <a name="what-about-cloud-native-applications"></a>A może natywne aplikacje w chmurze?
 
 Mimo że [natywnych dla chmury](https://azure.microsoft.com/overview/cloudnative/) aplikacje nie są głównym celem tego przewodnika, warto rozumieć ten poziom dojrzałości modernizacji i odróżnienia go od aplikacjami optymalizowanymi pod kątem chmury.
 

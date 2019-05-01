@@ -3,11 +3,11 @@ title: Proces zakupów firmowych
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
 ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005397"
 ---
 # <a name="corporate-purchase-process"></a>Proces zakupów firmowych
 W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania dla procesu zakupu propozycji (RFP) na podstawie z automatycznego najlepszym wyborem propozycji. Łączy ona <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i niestandardowe działanie, aby utworzyć przepływ pracy, który reprezentuje proces.
@@ -16,27 +16,27 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
 
 ## <a name="requirements"></a>Wymagania
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>Demonstracje
 
--   Działania niestandardowe.
+- Działania niestandardowe.
 
--   Kompozycja działań.
+- Kompozycja działań.
 
--   Zakładki.
+- Zakładki.
 
--   Trwałość.
+- Trwałość.
 
--   Trwałość informatycznych.
+- Trwałość informatycznych.
 
--   Śledzenie.
+- Śledzenie.
 
--   Do śledzenia.
+- Do śledzenia.
 
--   Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w różnych klientów ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web i aplikacji formularzy WinForms).
+- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w różnych klientów ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web i aplikacji formularzy WinForms).
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
@@ -52,21 +52,21 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
   
 1. Pracownik firmy X tworzy żądanie propozycji (RFP).  
   
-    1.  Typy pracowników RFP tytuł i opis.  
+    1. Typy pracowników RFP tytuł i opis.  
   
-    2.  Pracownik wybiera dostawców, które chce zaprosić do przesyłania propozycji.  
+    2. Pracownik wybiera dostawców, które chce zaprosić do przesyłania propozycji.  
   
 2. Pracownik przesyła propozycji.  
   
-    1.  Tworzone jest wystąpienie przepływu pracy.  
+    1. Tworzone jest wystąpienie przepływu pracy.  
   
-    2.  Przepływ pracy czeka, aż wszyscy dostawcy do przedstawienia ich propozycji.  
+    2. Przepływ pracy czeka, aż wszyscy dostawcy do przedstawienia ich propozycji.  
   
 3. Po otrzymaniu wszystkich propozycji przepływ pracy wykonuje iterację przez wszystkie odebrane propozycje i wybiera najlepszą z nich.  
   
-    1.  Każdy dostawca ma reputację (w tym przykładzie są przechowywane na liście reputację w VendorRepository.cs).  
+    1. Każdy dostawca ma reputację (w tym przykładzie są przechowywane na liście reputację w VendorRepository.cs).  
   
-    2.  Łączna wartość propozycji jest określana przez (wartość wpisana w przez dostawcę) * (Dostawca w zarejestrowany reputacji) / 100.  
+    2. Łączna wartość propozycji jest określana przez (wartość wpisana w przez dostawcę) * (Dostawca w zarejestrowany reputacji) / 100.  
   
 4. Oryginalny osoby żądającej widoczne przesłane propozycji. Najlepszą propozycję są prezentowane w specjalnej sekcji w raporcie.  
   
@@ -155,20 +155,20 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
   
 ### <a name="web-client-options"></a>Opcje klienta sieci Web  
   
--   **Utwórz nowy RFP**: Tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
+- **Utwórz nowy RFP**: Tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
   
--   **Odśwież**: Odświeża listę aktywnych i RFPs zostało zakończone w głównym oknie.  
+- **Odśwież**: Odświeża listę aktywnych i RFPs zostało zakończone w głównym oknie.  
   
--   **Widok**: Zostanie wyświetlona zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.).  
+- **Widok**: Zostanie wyświetlona zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.).  
   
--   Wyświetl jako: Użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.  
+- Wyświetl jako: Użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.  
   
 ### <a name="winforms-client-options"></a>Opcje klienta WinForms  
   
--   **Utwórz RFP**: Tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
+- **Utwórz RFP**: Tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
   
--   **Odśwież**: Odświeża listę aktywnych i RFPs zostało zakończone w głównym oknie.  
+- **Odśwież**: Odświeża listę aktywnych i RFPs zostało zakończone w głównym oknie.  
   
--   **Wyświetl RFP**: Zostanie wyświetlona zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.)  
+- **Wyświetl RFP**: Zostanie wyświetlona zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.)  
   
--   **Połącz się jako**: Użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.
+- **Połącz się jako**: Użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.

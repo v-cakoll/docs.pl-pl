@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
 ms.openlocfilehash: 5e2676a0880092a78405fe5dafa0469161b85610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863639"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Instrukcje: Pobieranie wartości z właściwości (Visual Basic)
 Możesz pobrać wartości właściwości, łącznie z nazwą właściwości w wyrażeniu.  

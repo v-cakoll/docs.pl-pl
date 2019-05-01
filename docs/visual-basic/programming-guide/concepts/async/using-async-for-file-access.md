@@ -3,26 +3,26 @@ title: Użycie Async do uzyskiwania dostępu do plików (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
 ms.openlocfilehash: 0b2b95f1e4f9bc120acdad606b0f15503285057a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829533"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Użycie Async do uzyskiwania dostępu do plików (Visual Basic)
 Funkcja Async dostępu do plików. Za pomocą funkcji asynchronicznych, można wywoływać do metod asynchronicznych bez za pomocą wywołania zwrotne lub podział swój kod w wielu metod lub wyrażenia lambda. Aby synchroniczny kod asynchroniczny, możesz po prostu Wywołaj metodę asynchroniczną zamiast metody synchronicznej i dodać kilka słów kluczowych w kodzie.  
   
  Należy rozważyć następujące przyczyny Dodawanie asynchroniczności do wywołania dostępu do pliku:  
   
--   Asynchroniczność sprawia, że interfejsu użytkownika aplikacji zwiększyć szybkość reakcji, ponieważ wątek interfejsu użytkownika, który uruchamia operację można wykonywać inne zadania. Jeśli kod muszą być wykonywane w wątku interfejsu użytkownika, trwa zbyt długo (np. więcej niż 50 MS), interfejs użytkownika może zawieszać się we/wy zakończenie i wątku interfejsu użytkownika jest ponownie przetwarzanie klawiatury i myszy zdarzenia wejściowe i inne.  
+- Asynchroniczność sprawia, że interfejsu użytkownika aplikacji zwiększyć szybkość reakcji, ponieważ wątek interfejsu użytkownika, który uruchamia operację można wykonywać inne zadania. Jeśli kod muszą być wykonywane w wątku interfejsu użytkownika, trwa zbyt długo (np. więcej niż 50 MS), interfejs użytkownika może zawieszać się we/wy zakończenie i wątku interfejsu użytkownika jest ponownie przetwarzanie klawiatury i myszy zdarzenia wejściowe i inne.  
   
--   Asynchroniczność zwiększa skalowalność platformy ASP.NET i innych aplikacji opartych na serwerze, redukując potrzebę dla wątków. Jeśli aplikacja korzysta z dedykowanego wątku na odpowiedzi i tysiące żądań, które są aktualnie obsługiwane jednocześnie, prościej i skuteczniej niż wątki są wymagane. Operacje asynchroniczne często trzeba użyć wątku podczas oczekiwania. Oni korzystać z istniejącego wątku zakończenia operacji We/Wy krótko po zakończeniu.  
+- Asynchroniczność zwiększa skalowalność platformy ASP.NET i innych aplikacji opartych na serwerze, redukując potrzebę dla wątków. Jeśli aplikacja korzysta z dedykowanego wątku na odpowiedzi i tysiące żądań, które są aktualnie obsługiwane jednocześnie, prościej i skuteczniej niż wątki są wymagane. Operacje asynchroniczne często trzeba użyć wątku podczas oczekiwania. Oni korzystać z istniejącego wątku zakończenia operacji We/Wy krótko po zakończeniu.  
   
--   Opóźnienie operacji dostępu do pliku może być bardzo niska, w ramach bieżących warunków, ale opóźnienie może znacznie zwiększyć w przyszłości. Na przykład pliku mogą być przenoszone do serwera, który jest na całym świecie.  
+- Opóźnienie operacji dostępu do pliku może być bardzo niska, w ramach bieżących warunków, ale opóźnienie może znacznie zwiększyć w przyszłości. Na przykład pliku mogą być przenoszone do serwera, który jest na całym świecie.  
   
--   Dodano obciążenie związane z użyciem funkcji asynchronicznej jest mała.  
+- Dodano obciążenie związane z użyciem funkcji asynchronicznej jest mała.  
   
--   Łatwo można uruchomić zadania asynchroniczne równolegle.  
+- Łatwo można uruchomić zadania asynchroniczne równolegle.  
   
 ## <a name="running-the-examples"></a>Uruchamianie przykładów  
  Aby uruchomić przykłady w tym temacie, można utworzyć **aplikacji WPF** lub **aplikacja interfejsu Windows Forms** , a następnie dodaj **przycisk**. W przycisku `Click` zdarzeń, dodaj wywołanie do pierwszej metody w każdym przykładzie.  

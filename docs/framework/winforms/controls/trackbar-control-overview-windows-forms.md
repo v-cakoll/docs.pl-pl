@@ -9,11 +9,11 @@ helpviewer_keywords:
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
 ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009269"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.TrackBar> kontroli (czasami nazywane "suwaka") jest używany do przechodzenia między dużymi ilościami informacji lub wizualnie dostosowywania liczbowych ustawienie. <xref:System.Windows.Forms.TrackBar> Kontrolka ma dwie części: mówi, znany także jako suwaka i znaczników. Przycisku suwaka jest częścią, którą można dostosować. Jego pozycja odpowiada <xref:System.Windows.Forms.TrackBar.Value%2A> właściwości. Znaczniki są wskaźniki wizualne, które są rozmieszczone w regularnych odstępach czasu. Przenosi pasek śledzenia w przyrostach, które określają i być wyrównane w poziomie lub pionie. Pasek śledzenia może na przykład użyć, aby kontrolować częstotliwość lub myszy migania kursora dla systemu.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857158"
 ---
 # <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych
 W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów dotyczących użycia usług. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy obsługi wersji kontraktu danych. Pełny przegląd i wskazówki wersji przetestowanego rozwiązania ze szczegółami, zobacz [najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -34,13 +34,13 @@ W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów 
   
  Niektóre zmiany modyfikują przesyłane dane, ale może lub nie mogą być istotne. Zawsze są istotne następujące zmiany:  
   
--   Zmiana <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> lub <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> wartość kontraktu danych.  
+- Zmiana <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> lub <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> wartość kontraktu danych.  
   
--   Zmiana kolejności elementów członkowskich danych za pomocą <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+- Zmiana kolejności elementów członkowskich danych za pomocą <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
--   Zmiana nazwy składowej danych.  
+- Zmiana nazwy składowej danych.  
   
--   Zmiana kontraktu danych składowej danych. Na przykład zmieniając typ element członkowski danych z liczbą całkowitą na ciąg lub typem za pomocą kontraktu danych o nazwie "Klient" do typu kontraktu danych o nazwie "Person".  
+- Zmiana kontraktu danych składowej danych. Na przykład zmieniając typ element członkowski danych z liczbą całkowitą na ciąg lub typem za pomocą kontraktu danych o nazwie "Klient" do typu kontraktu danych o nazwie "Person".  
   
  Możliwe są również następujące zmiany.  
   
@@ -90,9 +90,9 @@ W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów 
 ## <a name="omitted-default-values"></a>Wartości domyślne pominięty  
  Jest możliwe (ale nie jest to zalecane) można ustawić `EmitDefaultValue` właściwości w atrybucie DataMemberAttribute na `false`, zgodnie z opisem w [domyślne wartości elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Jeśli to ustawienie jest `false`, składowa danych nie będzie emitowany, jeśli jest ustawiona na wartość domyślną (zazwyczaj wartość null lub zero). To nie jest zgodny z wymaganych składowych danych w różnych wersjach na dwa sposoby:  
   
--   Kontrakt danych element członkowski danych, który jest wymagany w jednej wersji nie może odbierać domyślne (wartość null lub zero) danych z innej wersji, w którym element członkowski danych ma `EmitDefaultValue` równa `false`.  
+- Kontrakt danych element członkowski danych, który jest wymagany w jednej wersji nie może odbierać domyślne (wartość null lub zero) danych z innej wersji, w którym element członkowski danych ma `EmitDefaultValue` równa `false`.  
   
--   Element członkowski danych wymagane, który ma `EmitDefaultValue` równa `false` nie można używać do wykonywania serializacji domyślnej (wartość null lub zero) wartość, ale mogą odbierać wartość przy deserializacji. Spowoduje to utworzenie problemu Pełna zgodnooć wersji (dane mogą być odczytywane w, ale następnie nie może być zapisany tych samych danych). W związku z tym jeśli `IsRequired` jest `true` i `EmitDefaultValue` jest `false` w jednej wersji tej samej kombinacji stosuje się do wszystkich innych wersji taki sposób, że nie ma wersji kontraktu danych może wyprodukować wartość, która nie spowoduje komunikację dwustronną.  
+- Element członkowski danych wymagane, który ma `EmitDefaultValue` równa `false` nie można używać do wykonywania serializacji domyślnej (wartość null lub zero) wartość, ale mogą odbierać wartość przy deserializacji. Spowoduje to utworzenie problemu Pełna zgodnooć wersji (dane mogą być odczytywane w, ale następnie nie może być zapisany tych samych danych). W związku z tym jeśli `IsRequired` jest `true` i `EmitDefaultValue` jest `false` w jednej wersji tej samej kombinacji stosuje się do wszystkich innych wersji taki sposób, że nie ma wersji kontraktu danych może wyprodukować wartość, która nie spowoduje komunikację dwustronną.  
   
 ## <a name="schema-considerations"></a>Zagadnienia dotyczące schematu  
  Objaśnienia dotyczące schematu, które są generowane dla typów kontraktu danych, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  

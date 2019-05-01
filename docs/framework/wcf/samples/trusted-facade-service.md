@@ -3,11 +3,11 @@ title: Zaufana usługa fasady
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007698"
 ---
 # <a name="trusted-facade-service"></a>Zaufana usługa fasady
 Ten przykładowy scenariusz pokazuje, jak przepływ informacji o tożsamości wywołującego z jednej usługi do innego za pomocą usługi Windows Communication Foundation (WCF) infrastruktura zabezpieczeń.  
@@ -16,11 +16,11 @@ Ten przykładowy scenariusz pokazuje, jak przepływ informacji o tożsamości wy
   
  W tym przykładzie składa się z następujących składników:  
   
--   Kalkulator klienta  
+- Kalkulator klienta  
   
--   Usługa fasady Kalkulator  
+- Usługa fasady Kalkulator  
   
--   Kalkulator usługi zaplecza  
+- Kalkulator usługi zaplecza  
   
  Usługa fasady jest odpowiedzialna za weryfikowanie żądania i uwierzytelniania obiektu wywołującego. Po pomyślnym uwierzytelnieniu i sprawdzania poprawności przesyła żądanie do usługi zaplecza przy użyciu kanału komunikacyjnego kontrolowany w sieci obwodowej z siecią wewnętrzną. Jako część żądania przekazywane usługa fasady zawiera informacje o tożsamości elementu wywołującego, tak aby usługi wewnętrznej bazy danych można użyć tych informacji w zakresie przetwarzania. Tożsamość obiektu wywołującego jest przesyłane przy użyciu `Username` tokenu zabezpieczającego w komunikacie `Security` nagłówka. W przykładzie użyto infrastruktura zabezpieczeń programu WCF do przesyłania i wyodrębnić te informacje z `Security` nagłówka.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  Poniżej zawiera krótkie omówienie różnych sekcji w plikach wsadowych.  
   
--   Tworzenie certyfikatu serwera.  
+- Tworzenie certyfikatu serwera.  
   
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      `%SERVER_NAME%` Zmienna Określa nazwę serwera — wartość domyślna to hosta lokalnego. Certyfikat jest przechowywany w magazynie LocalMachine.  
   
--   Instalowanie usługi fasady certyfikat do magazynu zaufanych certyfikatów klienta.  
+- Instalowanie usługi fasady certyfikat do magazynu zaufanych certyfikatów klienta.  
   
      Następujący wiersz kopiuje usługa fasady certyfikat w magazynie zaufanych osób klienta. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
   

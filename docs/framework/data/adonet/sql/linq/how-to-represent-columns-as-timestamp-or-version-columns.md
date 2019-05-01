@@ -3,11 +3,11 @@ title: 'Instrukcje: Reprezentacja kolumn jako kolumn znacznika czasu lub wersji'
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
 ms.openlocfilehash: db73bf4880d8f5556247f7b037fca24b0ddc56d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037742"
 ---
 # <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>Instrukcje: Reprezentacja kolumn jako kolumn znacznika czasu lub wersji
 Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby wyznaczyć reprezentująca kolumnę w bazie danych, który zawiera numery wersji lub sygnatur czasowych bazy danych do pola lub właściwości.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032386"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224471"
   
  Zarejestrowano dostawców zaimplementowany w kodzie przez klienta za pomocą <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Ta metoda przyjmuje jako argument tablicę <xref:System.Windows.Automation.ClientSideProviderDescription> struktur, z których każdy określa następujące właściwości:  
   
--   Funkcja wywołania zwrotnego, która tworzy obiekt dostawcy.  
+- Funkcja wywołania zwrotnego, która tworzy obiekt dostawcy.  
   
--   Nazwa klasy kontrolki, które będą obsługiwać dostawcę.  
+- Nazwa klasy kontrolki, które będą obsługiwać dostawcę.  
   
--   Nazwa obrazu aplikacji (zwykle Pełna nazwa pliku wykonywalnego), która posłuży dostawcy.  
+- Nazwa obrazu aplikacji (zwykle Pełna nazwa pliku wykonywalnego), która posłuży dostawcy.  
   
--   Flagi określające, jak nazwa klasy jest dopasowywana klas okien w aplikacji docelowej.  
+- Flagi określające, jak nazwa klasy jest dopasowywana klas okien w aplikacji docelowej.  
   
  Ostatnie dwa parametry są opcjonalne. Klient może określić nazwę obrazu aplikacji docelowej, gdy chce korzystać z różnych dostawców dla różnych aplikacji. Na przykład, klient może używać jednego dostawcę dla [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrolka widoku w znanych aplikacji, która obsługuje wzorzec wielu widoku, a druga podobne kontrolki w innej aplikacji znane, która nie ma listy.  
   

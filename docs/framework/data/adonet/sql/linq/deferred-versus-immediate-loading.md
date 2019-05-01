@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
 ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032464"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Odroczone a bezpośrednie ładowanie
 Po wykonaniu zapytania dotyczącego obiektu, możesz pobrać faktycznie tylko żądanego obiektu. *Powiązane* obiekty nie są automatycznie pobrać w tym samym czasie. (Aby uzyskać więcej informacji, zobacz [zapytań w relacjach](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Nie widzisz, że fakt, że obiekty powiązane nie są już załadowane, ponieważ próba dostępu do nich generuje żądanie, która pobiera je.  
@@ -29,9 +29,9 @@ Po wykonaniu zapytania dotyczącego obiektu, możesz pobrać faktycznie tylko ż
   
  Co naprawdę potrzebne jest sposobem pobrania zestawu powiązanych obiektów w tym samym czasie. Zestaw jest nakreślonego części wykres, dzięki czemu można będzie nigdy nie być pobierania więcej lub mniej niż niezbędne do zamierzonego użycia. W tym celu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia <xref:System.Data.Linq.DataLoadOptions> dla bezpośrednie ładowanie region modelu obiektu. Metody obejmują:  
   
--   <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Metody, można od razu załadować dane powiązane z głównym celem.  
+- <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Metody, można od razu załadować dane powiązane z głównym celem.  
   
--   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Metod w celu Filtruj obiekty pobranych dla określonej relacji.  
+- <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Metod w celu Filtruj obiekty pobranych dla określonej relacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

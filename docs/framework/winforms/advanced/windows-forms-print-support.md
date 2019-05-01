@@ -9,11 +9,11 @@ helpviewer_keywords:
 - printing [Windows Forms], print support
 ms.assetid: a4a2960c-eb70-48e2-b641-cfb222704e46
 ms.openlocfilehash: 8e008f2cb4b2f32cdba676e68d9fd790530e2b06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011856"
 ---
 # <a name="windows-forms-print-support"></a>Obsługa drukowania w formularzach systemu Windows
 Drukowanie w formularzach Windows Forms składa się przede wszystkim za pomocą [PrintDocument, składnik](../controls/printdocument-component-windows-forms.md) składnik, aby umożliwić użytkownikowi drukowanie i [PrintPreviewDialog, kontrolka](../controls/printpreviewdialog-control-windows-forms.md) kontroli [PrintDialog Składnik](../controls/printdialog-component-windows-forms.md) i [PageSetupDialog, składnik](../controls/pagesetupdialog-component-windows-forms.md) składniki zapewnienie znanego interfejsu graficznego użytkownikom zapoznanie się z systemu operacyjnego Windows.  

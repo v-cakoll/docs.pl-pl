@@ -6,11 +6,11 @@ ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026769"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Compiler (xsltc.exe)
 Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Arkusz stylów skompilowanego można następnie przekazać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody. Nie można wygenerować zestawy podpisane za pomocą xsltc.exe.  

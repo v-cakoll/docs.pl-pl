@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
 ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880051"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generowanie silnie typizowanych elementów DataSet
 Biorąc pod uwagę schematu XML, który jest zgodny z języka definicji schematu XML (XSD) standard, możesz wygenerować silnie typizowaną <xref:System.Data.DataSet> korzystania z narzędzia XSD.exe dołączonym [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  

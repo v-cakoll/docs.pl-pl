@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
 ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013507"
 ---
 # <a name="sub-expression-visual-basic"></a>Sub — Wyrażenie (Visual Basic)
 Deklaruje parametry i kod, który definiuje procedurę wyrażenia lambda.  
@@ -40,17 +40,17 @@ End Sub
 ## <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda  
  Składnia wyrażenia lambda przypomina w przypadku standardowe procedury. Różnice są następujące:  
   
--   Wyrażenie lambda nie ma nazwy.  
+- Wyrażenie lambda nie ma nazwy.  
   
--   Wyrażenie lambda nie może mieć modyfikatora, takich jak `Overloads` lub `Overrides`.  
+- Wyrażenie lambda nie może mieć modyfikatora, takich jak `Overloads` lub `Overrides`.  
   
--   Treść wyrażenia lambda w pojedynczej linii musi być instrukcja nie wyrażenia. Treść może składać się po wywołaniu procedury sub, ale nie po wywołaniu procedury function.  
+- Treść wyrażenia lambda w pojedynczej linii musi być instrukcja nie wyrażenia. Treść może składać się po wywołaniu procedury sub, ale nie po wywołaniu procedury function.  
   
--   W wyrażeniu lambda albo wszystkie parametry muszą określono można wywnioskować typów danych lub wszystkich parametrów.  
+- W wyrażeniu lambda albo wszystkie parametry muszą określono można wywnioskować typów danych lub wszystkich parametrów.  
   
--   Opcjonalne i `ParamArray` parametry są niedozwolone w wyrażeniach lambda.  
+- Opcjonalne i `ParamArray` parametry są niedozwolone w wyrażeniach lambda.  
   
--   Parametry ogólne są niedozwolone w wyrażeniach lambda.  
+- Parametry ogólne są niedozwolone w wyrażeniach lambda.  
   
 ## <a name="example"></a>Przykład  
  Oto przykład wyrażenie lambda, która zapisuje wartości do konsoli. W przykładzie pokazano oba jeden wiersz i wielowierszowe składnia wyrażenia lambda do procedurę. Aby uzyskać więcej przykładów, zobacz [wyrażeń Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  

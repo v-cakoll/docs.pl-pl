@@ -14,11 +14,11 @@ ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792904"
 ---
 # <a name="resources-in-net-apps"></a>Zasoby w aplikacjach .NET
 Niemal każda aplikacja jakości produkcyjnej ma korzystać z zasobów. Zasób to wszelkie dane niewykonywalne, które są logicznie wdrażane za pomocą aplikacji. Zasób może być wyświetlany w aplikacji jako komunikaty o błędach lub jako część interfejsu użytkownika. Zasoby mogą zawierać dane w wielu formach, takich jak ciągi, obrazy i obiekty utrwalone. (Do zapisywania obiektów utrwalonego pliku zasobów, obiekty muszą podlegać serializacji.) Przechowywanie danych w pliku zasobów umożliwia zmianę danych bez konieczności ponownego kompilowania całej aplikacji. On również pozwala na przechowywanie danych w jednej lokalizacji i eliminuje konieczność łączenia się z zakodowanych danych przechowywanych w wielu lokalizacjach.  
@@ -43,23 +43,23 @@ Możesz również dostosować zasoby aplikacji dla określonych kultur. Dzięki 
 ## <a name="retrieving-resources"></a>Pobieranie zasobów  
  W czasie wykonywania aplikacja ładuje odpowiednie zlokalizowane zasoby na podstawie na wątek, w oparciu o kultury określonej parametrem <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> właściwości. Wartość tej właściwości jest tworzony w następujący sposób:  
   
--   Bezpośrednie przypisanie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje zlokalizowanej kultury do <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> właściwości.  
+- Bezpośrednie przypisanie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje zlokalizowanej kultury do <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> właściwości.  
   
--   Jeśli nie przypisano jawnie kultury, pobierając domyślnie wątku interfejsu użytkownika kultury z <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> właściwości.  
+- Jeśli nie przypisano jawnie kultury, pobierając domyślnie wątku interfejsu użytkownika kultury z <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> właściwości.  
   
--   Jeśli wątek domyślna kultura interfejsu użytkownika nie jest jawnie przypisana, pobierając kultury dla bieżącego użytkownika na komputerze lokalnym. Implementacje platformy .NET w systemie Windows należy to zrobić, wywołując Windows [ `GetUserDefaultUILanguage` ](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) funkcji.  
+- Jeśli wątek domyślna kultura interfejsu użytkownika nie jest jawnie przypisana, pobierając kultury dla bieżącego użytkownika na komputerze lokalnym. Implementacje platformy .NET w systemie Windows należy to zrobić, wywołując Windows [ `GetUserDefaultUILanguage` ](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) funkcji.  
   
  Aby uzyskać więcej informacji na temat Ustawianie bieżącej kultury interfejsu użytkownika, zobacz <xref:System.Globalization.CultureInfo> i <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> odwoływać się do strony.  
   
  Następnie można pobrać zasobów dla bieżącej kultury interfejsu użytkownika lub dla określonej kultury, za pomocą <xref:System.Resources.ResourceManager?displayProperty=nameWithType> klasy. Mimo że <xref:System.Resources.ResourceManager> klasy jest najczęściej używana do pobierania zasobów, <xref:System.Resources?displayProperty=nameWithType> przestrzeń nazw zawiera dodatkowe typy, których można użyć w celu pobierania zasobów. Należą do nich następujące elementy:  
   
--   <xref:System.Resources.ResourceReader> Klasy, która umożliwia wyliczanie zasoby osadzone w zestawie lub przechowywane w pliku binarnego Resources autonomicznych. Może to być przydatne, gdy nie znasz dokładne nazwy zasobów, które są dostępne w czasie wykonywania.  
+- <xref:System.Resources.ResourceReader> Klasy, która umożliwia wyliczanie zasoby osadzone w zestawie lub przechowywane w pliku binarnego Resources autonomicznych. Może to być przydatne, gdy nie znasz dokładne nazwy zasobów, które są dostępne w czasie wykonywania.  
   
--   <xref:System.Resources.ResXResourceReader> Klasy, która umożliwia pobieranie zasobów z pliku XML (resx).  
+- <xref:System.Resources.ResXResourceReader> Klasy, która umożliwia pobieranie zasobów z pliku XML (resx).  
   
--   <xref:System.Resources.ResourceSet> Klasy, która umożliwia pobieranie zasobów określonej kultury bez obserwowania rezerwowego reguły. Zasoby mogą być przechowywane w zestawie lub autonomiczny plik binarny Resources. Możesz również tworzyć <xref:System.Resources.IResourceReader> implementację, która pozwala na użycie <xref:System.Resources.ResourceSet> klasy do pobrania zasobów z innego źródła.  
+- <xref:System.Resources.ResourceSet> Klasy, która umożliwia pobieranie zasobów określonej kultury bez obserwowania rezerwowego reguły. Zasoby mogą być przechowywane w zestawie lub autonomiczny plik binarny Resources. Możesz również tworzyć <xref:System.Resources.IResourceReader> implementację, która pozwala na użycie <xref:System.Resources.ResourceSet> klasy do pobrania zasobów z innego źródła.  
   
--   <xref:System.Resources.ResXResourceSet> Klasy, która umożliwia pobieranie wszystkich elementów w pliku XML, zasób do pamięci.  
+- <xref:System.Resources.ResXResourceSet> Klasy, która umożliwia pobieranie wszystkich elementów w pliku XML, zasób do pamięci.  
   
 ## <a name="see-also"></a>Zobacz także
 

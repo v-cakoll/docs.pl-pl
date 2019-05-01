@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
 ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012896"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.ListBox> kontrolka Wyświetla listę, z którego użytkownik może wybrać co najmniej jeden element. Jeśli łączna liczba elementów przekracza liczbę, która może być wyświetlana, pasek przewijania jest automatycznie dodawany do <xref:System.Windows.Forms.ListBox> kontroli. Gdy <xref:System.Windows.Forms.ListBox.MultiColumn%2A> właściwość jest ustawiona na `true`, elementy w polu listy są wyświetlane w wielu kolumnach i zostanie wyświetlony pasek przewijania poziomego. Gdy <xref:System.Windows.Forms.ListBox.MultiColumn%2A> właściwość jest ustawiona na `false`, elementy w polu listy są wyświetlane w jednej kolumnie, i zostanie wyświetlony pasek przewijania pionowego. Gdy <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> ustawiono `true`, niezależnie od liczby elementów zostanie wyświetlony pasek przewijania. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Właściwość określa, ile elementów listy można wybrać w danym momencie.  

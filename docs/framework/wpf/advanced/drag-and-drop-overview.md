@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051640"
 ---
 # <a name="drag-and-drop-overview"></a>Przegląd Przeciąganie i upuszczanie
 Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Przeciągnij i upuść często odnosi się do metody transferu danych, która polega na użyciu myszy (lub inne urządzenie wskazujące) zaznacz jeden lub więcej obiektów, przeciągając obiekty za pośrednictwem niektórych żądanego miejsca docelowego w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]i upuszczając je.  
@@ -41,11 +41,11 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
 ## <a name="data-transfer"></a>Transfer danych  
  Przeciągnij i upuść jest częścią obszaru bardziej ogólnych transferu danych. Transfer danych obejmuje operacje przeciągania i upuszczania oraz kopiowania i wklejania. Operacja przeciągania i upuszczania jest analogiczne do operacji kopiowania i wklejania lub Wytnij i Wklej, używany do przesyłania danych z jednego obiektu lub aplikacji do innej przy użyciu schowka systemowego. Wymagaj oba rodzaje operacji:  
   
--   Obiekt źródłowy, który zawiera dane.  
+- Obiekt źródłowy, który zawiera dane.  
   
--   Sposób do tymczasowego przechowywania przeniesionych danych.  
+- Sposób do tymczasowego przechowywania przeniesionych danych.  
   
--   Obiekt docelowy, który odbiera dane.  
+- Obiekt docelowy, który odbiera dane.  
   
  W ramach operacji kopiowania i wklejania schowka systemowego jest używana do tymczasowego przechowywania przeniesionych danych; w ramach operacji przeciągania i upuszczania <xref:System.Windows.DataObject> służy do przechowywania danych. Model obiektu danych składa się z jednego lub więcej par <xref:System.Object> zawiera dane rzeczywiste i odpowiedni identyfikator format danych.  
   
@@ -94,31 +94,31 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
   
  Aby zaimplementować podstawowe przeciągania i upuszczania, wykonasz następujące zadania:  
   
--   Określ element, który ma być źródła przeciągania. Źródła przeciągania może być <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement>.  
+- Określ element, który ma być źródła przeciągania. Źródła przeciągania może być <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement>.  
   
--   Utwórz procedurę obsługi zdarzeń na elementem źródłowym przeciągania, która zainicjuje operację przeciągania i upuszczania. Zdarzenie jest zazwyczaj <xref:System.Windows.UIElement.MouseMove> zdarzeń.  
+- Utwórz procedurę obsługi zdarzeń na elementem źródłowym przeciągania, która zainicjuje operację przeciągania i upuszczania. Zdarzenie jest zazwyczaj <xref:System.Windows.UIElement.MouseMove> zdarzeń.  
   
--   W obsłudze zdarzeń źródła przeciągania, należy wywołać <xref:System.Windows.DragDrop.DoDragDrop%2A> metodę, aby zainicjować operację przeciągania i upuszczania. W <xref:System.Windows.DragDrop.DoDragDrop%2A> wywołań, określ źródła przeciągania, transfer danych i dozwolone efekty.  
+- W obsłudze zdarzeń źródła przeciągania, należy wywołać <xref:System.Windows.DragDrop.DoDragDrop%2A> metodę, aby zainicjować operację przeciągania i upuszczania. W <xref:System.Windows.DragDrop.DoDragDrop%2A> wywołań, określ źródła przeciągania, transfer danych i dozwolone efekty.  
   
--   Określ element, który ma być miejsca docelowego. Miejsca docelowego może być <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement>.  
+- Określ element, który ma być miejsca docelowego. Miejsca docelowego może być <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement>.  
   
--   Na element docelowy upuszczania ustaw <xref:System.Windows.UIElement.AllowDrop%2A> właściwość `true`.  
+- Na element docelowy upuszczania ustaw <xref:System.Windows.UIElement.AllowDrop%2A> właściwość `true`.  
   
--   Element docelowy upuszczania tworzenia <xref:System.Windows.DragDrop.Drop> program obsługi zdarzeń do przetwarzania elementów usuniętych danych.  
+- Element docelowy upuszczania tworzenia <xref:System.Windows.DragDrop.Drop> program obsługi zdarzeń do przetwarzania elementów usuniętych danych.  
   
--   W <xref:System.Windows.DragDrop.Drop> procedura obsługi zdarzeń, wyodrębnianie danych z <xref:System.Windows.DragEventArgs> przy użyciu <xref:System.Windows.DataObject.GetDataPresent%2A> i <xref:System.Windows.DataObject.GetData%2A> metody.  
+- W <xref:System.Windows.DragDrop.Drop> procedura obsługi zdarzeń, wyodrębnianie danych z <xref:System.Windows.DragEventArgs> przy użyciu <xref:System.Windows.DataObject.GetDataPresent%2A> i <xref:System.Windows.DataObject.GetData%2A> metody.  
   
--   W <xref:System.Windows.DragDrop.Drop> procedura obsługi zdarzeń, korzystać z danych można wykonać żądanej operacji przeciągania i upuszczania.  
+- W <xref:System.Windows.DragDrop.Drop> procedura obsługi zdarzeń, korzystać z danych można wykonać żądanej operacji przeciągania i upuszczania.  
   
  Możesz zwiększyć implementacji przeciągania i upuszczania, tworząc niestandardowe <xref:System.Windows.DataObject> i obsługi opcjonalne przeciągnij źródłowej i docelowej zdarzenia docelowy, jak pokazano w następujących zadań:  
   
--   Transfer danych niestandardowych lub wielu elementów danych, należy utworzyć <xref:System.Windows.DataObject> do przekazania do <xref:System.Windows.DragDrop.DoDragDrop%2A> metody.  
+- Transfer danych niestandardowych lub wielu elementów danych, należy utworzyć <xref:System.Windows.DataObject> do przekazania do <xref:System.Windows.DragDrop.DoDragDrop%2A> metody.  
   
--   Aby wykonać dodatkowe akcje podczas przeciągania, obsługi <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver>, i <xref:System.Windows.DragDrop.DragLeave> zdarzenia na element docelowy upuszczania.  
+- Aby wykonać dodatkowe akcje podczas przeciągania, obsługi <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver>, i <xref:System.Windows.DragDrop.DragLeave> zdarzenia na element docelowy upuszczania.  
   
--   Aby zmienić wygląd wskaźnika myszy, obsługi <xref:System.Windows.DragDrop.GiveFeedback> zdarzenie w systemie źródłowym przeciągania.  
+- Aby zmienić wygląd wskaźnika myszy, obsługi <xref:System.Windows.DragDrop.GiveFeedback> zdarzenie w systemie źródłowym przeciągania.  
   
--   Aby zmienić sposób operacji przeciągania i upuszczania zostanie anulowane, obsługi <xref:System.Windows.DragDrop.QueryContinueDrag> zdarzenie w systemie źródłowym przeciągania.  
+- Aby zmienić sposób operacji przeciągania i upuszczania zostanie anulowane, obsługi <xref:System.Windows.DragDrop.QueryContinueDrag> zdarzenie w systemie źródłowym przeciągania.  
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Przykład przeciągnij i upuść  
@@ -129,13 +129,13 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Włączanie element jako Element źródłowy przeciągania  
  Obiekt, który jest źródłem przeciągania jest odpowiedzialny za:  
   
--   Identyfikowanie sytuacji przeciągania.  
+- Identyfikowanie sytuacji przeciągania.  
   
--   Inicjowanie operacji przeciągania i upuszczania.  
+- Inicjowanie operacji przeciągania i upuszczania.  
   
--   Identyfikowanie przekazywanych danych.  
+- Identyfikowanie przekazywanych danych.  
   
--   Określanie efekty, które może mieć na przeniesione dane operacji przeciągania i upuszczania.  
+- Określanie efekty, które może mieć na przeniesione dane operacji przeciągania i upuszczania.  
   
  Elementem źródłowym przeciągania może również dawać opinie użytkowników dotyczące dozwolonych akcji (przenieść, skopiuj none) i anulować operację przeciągania i upuszczania, na podstawie danych wejściowych użytkownika dodatkowe, takie jak naciśnięcie klawisza ESC podczas przeciągania.  
   
@@ -146,11 +146,11 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
   
  Wewnątrz <xref:System.Windows.UIElement.MouseMove> programu obsługi zdarzeń, wywołanie <xref:System.Windows.DragDrop.DoDragDrop%2A> metodę, aby zainicjować operację przeciągania i upuszczania. <xref:System.Windows.DragDrop.DoDragDrop%2A> Metoda przyjmuje trzy parametry:  
   
--   `dragSource` — Odwołanie do obiektu zależności, który jest źródłem przeniesionych danych. Zazwyczaj jest to źródło <xref:System.Windows.UIElement.MouseMove> zdarzeń.  
+- `dragSource` — Odwołanie do obiektu zależności, który jest źródłem przeniesionych danych. Zazwyczaj jest to źródło <xref:System.Windows.UIElement.MouseMove> zdarzeń.  
   
--   `data` -Obiekt, który zawiera przeniesione dane, zapakowane w <xref:System.Windows.DataObject>.  
+- `data` -Obiekt, który zawiera przeniesione dane, zapakowane w <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` -Jedno z <xref:System.Windows.DragDropEffects> wartości wyliczenia, które określa dozwolone efekty operacji przeciągania i upuszczania.  
+- `allowedEffects` -Jedno z <xref:System.Windows.DragDropEffects> wartości wyliczenia, które określa dozwolone efekty operacji przeciągania i upuszczania.  
   
  Mogą być przekazywane dowolnego obiektu podlegającego serializacji `data` parametru. Jeśli dane nie jest już opakowana w <xref:System.Windows.DataObject>, zostanie zawinięta automatycznie w nowym <xref:System.Windows.DataObject>. Aby przekazać wiele elementów danych, należy utworzyć <xref:System.Windows.DataObject> samodzielnie i przekazać ją do <xref:System.Windows.DragDrop.DoDragDrop%2A> metody. Aby uzyskać więcej informacji, zobacz [dane i obiekty danych](data-and-data-objects.md).  
   
@@ -171,13 +171,13 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Włączanie element jako Element docelowy upuszczania  
  Obiekt, który jest miejsca docelowego jest odpowiedzialny za:  
   
--   Określenie, czy jest prawidłowe miejsca docelowego.  
+- Określenie, czy jest prawidłowe miejsca docelowego.  
   
--   Podczas przeciągania go przez przez element docelowy i odpowiada do źródła przeciągania.  
+- Podczas przeciągania go przez przez element docelowy i odpowiada do źródła przeciągania.  
   
--   Sprawdzanie, czy przeniesionych danych jest w formacie, który może zostać wyświetlony.  
+- Sprawdzanie, czy przeniesionych danych jest w formacie, który może zostać wyświetlony.  
   
--   Przetwarzanie danych porzucone.  
+- Przetwarzanie danych porzucone.  
   
  Aby określić, czy element jest miejsca docelowego, możesz ustawić jej <xref:System.Windows.UIElement.AllowDrop%2A> właściwość `true`. Docelowego upuszczania następnie zostanie wygenerowany w elemencie, tak aby mógł je obsłużyć. Podczas operacji przeciągania i upuszczania w element docelowy upuszczania ma miejsce następująca sekwencja zdarzeń:  
   

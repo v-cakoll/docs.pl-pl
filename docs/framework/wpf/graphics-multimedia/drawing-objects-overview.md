@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020480"
 ---
 # <a name="drawing-objects-overview"></a>Przegląd Rysowanie obiektów
 W tym temacie przedstawiono <xref:System.Windows.Media.Drawing> obiektów oraz opisano, jak za ich pomocą efektywnie Rysowanie kształtów, mapy bitowe, tekstu i media. Użyj <xref:System.Windows.Media.Drawing> obiektów podczas tworzenia obiektu clipart malować <xref:System.Windows.Media.DrawingBrush>, lub użyj <xref:System.Windows.Media.Visual> obiektów.  
@@ -23,25 +23,25 @@ W tym temacie przedstawiono <xref:System.Windows.Media.Drawing> obiektów oraz o
 ## <a name="what-is-a-drawing-object"></a>Co to jest obiekt rysowania?  
  A <xref:System.Windows.Media.Drawing> obiekt w tym artykule opisano widoczne zawartości, takiej jak kształt, mapy bitowej, wideo lub wiersza tekstu. Różne rodzaje rysunki opis różnych typów zawartości. Oto lista różne rodzaje Rysowanie obiektów.  
   
--   <xref:System.Windows.Media.GeometryDrawing> — Rysuje kształt.  
+- <xref:System.Windows.Media.GeometryDrawing> — Rysuje kształt.  
   
--   <xref:System.Windows.Media.ImageDrawing> — Rysuje obraz.  
+- <xref:System.Windows.Media.ImageDrawing> — Rysuje obraz.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> — Rysuje tekst.  
+- <xref:System.Windows.Media.GlyphRunDrawing> — Rysuje tekst.  
   
--   <xref:System.Windows.Media.VideoDrawing> — Odtwarza plik audio lub wideo.  
+- <xref:System.Windows.Media.VideoDrawing> — Odtwarza plik audio lub wideo.  
   
--   <xref:System.Windows.Media.DrawingGroup> — Rysuje inne rysunki. Aby połączyć inne rysunki w jeden złożony, należy użyć rysowania grupy.  
+- <xref:System.Windows.Media.DrawingGroup> — Rysuje inne rysunki. Aby połączyć inne rysunki w jeden złożony, należy użyć rysowania grupy.  
   
  <xref:System.Windows.Media.Drawing> obiekty są uniwersalne; istnieje wiele sposobów, możesz użyć <xref:System.Windows.Media.Drawing> obiektu.  
   
--   Wyświetl jako obraz przy użyciu <xref:System.Windows.Media.DrawingImage> i <xref:System.Windows.Controls.Image> kontroli.  
+- Wyświetl jako obraz przy użyciu <xref:System.Windows.Media.DrawingImage> i <xref:System.Windows.Controls.Image> kontroli.  
   
--   Można ją za pomocą <xref:System.Windows.Media.DrawingBrush> namalować obiektu, takie jak <xref:System.Windows.Controls.Page.Background%2A> z <xref:System.Windows.Controls.Page>.  
+- Można ją za pomocą <xref:System.Windows.Media.DrawingBrush> namalować obiektu, takie jak <xref:System.Windows.Controls.Page.Background%2A> z <xref:System.Windows.Controls.Page>.  
   
--   Służy do opisywania wygląd <xref:System.Windows.Media.DrawingVisual>.  
+- Służy do opisywania wygląd <xref:System.Windows.Media.DrawingVisual>.  
   
--   Służy do wyliczenia zawartości <xref:System.Windows.Media.Visual>.  
+- Służy do wyliczenia zawartości <xref:System.Windows.Media.Visual>.  
   
  WPF zapewnia inne typy obiektów, które są zdolne do rysowania kształtów, mapy bitowe, tekstu i media. Na przykład, można również użyć <xref:System.Windows.Shapes.Shape> obiekty do rysowania kształtów, a <xref:System.Windows.Controls.MediaElement> kontroli udostępnia inny sposób dodać wideo do swojej aplikacji. Dlatego kiedy należy używać <xref:System.Windows.Media.Drawing> obiektów? Gdy pochodzących z poziomu funkcji framework korzyści w wydajności lub gdy potrzebujesz <xref:System.Windows.Freezable> funkcji. Ponieważ <xref:System.Windows.Media.Drawing> obiektów nie obsługują [układ](../advanced/layout.md), dane wejściowe i skoncentrować się, zapewniają korzyści wydajności, które były idealne do opisywania tła, clipart oraz Rysowanie niskiego poziomu <xref:System.Windows.Media.Visual> obiektów.  
   

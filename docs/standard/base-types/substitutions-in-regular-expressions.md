@@ -16,11 +16,11 @@ ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025057"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Podstawienia w wyrażeniach regularnych
 <a name="Top"></a> Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach zamieniania. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zamieniania są dostarczane do przeciążeń <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, która ma `replacement` parametru i <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metody. Te metody zamieniają dopasowany wzorzec z wzorcem, który jest definiowany przez `replacement` parametru.  
@@ -33,7 +33,7 @@ ms.locfileid: "54030161"
 |`${` *Nazwa* `}`|Zawiera ostatni podciąg dopasowany przez nazwaną grupę, który jest wyznaczone przez `(?<` *nazwa* `> )` w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie nazwanej grupy](#Named).|  
 |`$$`|Zawiera pojedynczy literał „$” w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie symbolu "$"](#DollarSign).|  
 |`$&`|Zawiera kopię całego dopasowania w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie całego dopasowania](#EntireMatch).|  
-|``$` ``|Zawiera cały tekst ciągu wejściowego przed dopasowaniem w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu przed dopasowaniem](#BeforeMatch).|  
+|``$` ``| Zawiera cały tekst ciągu wejściowego przed dopasowaniem w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu przed dopasowaniem](#BeforeMatch).|  
 |`$'`|Zawiera cały tekst ciągu wejściowego po dopasowaniu w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu po dopasowaniu](#AfterMatch).|  
 |`$+`|Zawiera ostatnią grupę przechwyconą w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie ostatniej przechwyconej grupy](#LastGroup).|  
 |`$_`|Zawiera cały ciąg wejściowy w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie całego ciągu wejściowego](#EntireString).|  
@@ -153,7 +153,7 @@ ms.locfileid: "54030161"
   
 |Dopasowanie|Pozycja|Ciąg przed dopasowaniem|Ciąg wynikowy|  
 |-----------|--------------|-------------------------|-------------------|  
-|1|2|aa|AA**aa**bb2cc3dd4ee5|  
+|1|2|aa|aa**aa**bb2cc3dd4ee5|  
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
@@ -174,7 +174,7 @@ ms.locfileid: "54030161"
   
 |Dopasowanie|Pozycja|Ciąg po dopasowaniu|Ciąg wynikowy|  
 |-----------|--------------|------------------------|-------------------|  
-|1|2|bb2cc3dd4ee5|AA**bb2cc3dd4ee5**bb2cc3dd4ee5|  
+|1|2|bb2cc3dd4ee5|aa**bb2cc3dd4ee5**bb2cc3dd4ee5|  
 |2|5|cc3dd4ee5|aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5|  
 |3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
 |4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5|  

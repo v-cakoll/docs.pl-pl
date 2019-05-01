@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
 ms.openlocfilehash: ea7dbc4f760a446440cb7291413d69b1202f80e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033842"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Dodawanie logiki biznesowej przy użyciu metod częściowych
 Można dostosować Visual Basic i C# wygenerowany kod w swojej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektów za pomocą *metod częściowych*. Kod, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generuje definiuje podpisów w ramach jednej metody częściowej. Jeśli chcesz wdrożyć metodę, można dodać własne metody częściowej. Jeśli nie dodasz Twojej własnej implementacji, kompilator odrzuca podpis metod częściowych i wywołania metody domyślną, w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

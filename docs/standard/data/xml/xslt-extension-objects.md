@@ -6,20 +6,20 @@ ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026682"
 ---
 # <a name="xslt-extension-objects"></a>Obiekty rozszerzeń XSLT
 Obiekty rozszerzeń są używane do rozszerzania funkcji arkuszy stylów. Obiekty rozszerzeń są obsługiwane przez <xref:System.Xml.Xsl.XsltArgumentList> klasy.  
   
  Poniżej przedstawiono zalety korzystania z obiektu rozszerzenia zamiast osadzonych skryptów:  
   
--   Zapewnia lepszą hermetyzacji i ponowne użycie klas.  
+- Zapewnia lepszą hermetyzacji i ponowne użycie klas.  
   
--   Umożliwia arkusze stylów była mniejsza i będzie łatwiejszy w utrzymaniu.  
+- Umożliwia arkusze stylów była mniejsza i będzie łatwiejszy w utrzymaniu.  
   
  Obiekty rozszerzeń XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektu rozszerzenia, w tym czasie.  
   

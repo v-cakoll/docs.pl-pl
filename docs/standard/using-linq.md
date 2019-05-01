@@ -7,11 +7,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860620"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -103,15 +103,15 @@ Tak wymaga to pytanie, **należy po prostu użyć składni zapytania?**
 
 Odpowiedź na to pytanie jest **tak** Jeśli...
 
-*   Istniejącej bazy kodu już używa składni zapytania
-*   Należy do zakresu zmiennych w ciągu zapytania z powodu złożoności
-*   Preferuj składnia zapytania i jej nie będzie niekorzystnie wpłynąć na bazie kodu
+* Istniejącej bazy kodu już używa składni zapytania
+* Należy do zakresu zmiennych w ciągu zapytania z powodu złożoności
+* Preferuj składnia zapytania i jej nie będzie niekorzystnie wpłynąć na bazie kodu
 
 Odpowiedź na to pytanie jest **nie** Jeśli...
 
-*   Istniejącej bazy kodu już używa składni interfejsu API
-*   Użytkownik nie ma potrzeby do zakresu zmiennych w ciągu zapytania
-*   Preferuj składni interfejsu API i jego nie będzie niekorzystnie wpłynąć na bazie kodu
+* Istniejącej bazy kodu już używa składni interfejsu API
+* Użytkownik nie ma potrzeby do zakresu zmiennych w ciągu zapytania
+* Preferuj składni interfejsu API i jego nie będzie niekorzystnie wpłynąć na bazie kodu
 
 ## <a name="essential-samples"></a>Podstawowe przykłady
 
@@ -119,7 +119,7 @@ Aby naprawdę pełną listę przykładów LINQ, odwiedź stronę [101 przykład�
 
 Poniżej przedstawiono szybki pokaz niektórych podstawowych rodzajów LINQ. To jest w żaden sposób nie wszechstronne LINQ zapewnia znacznie więcej funkcji niż co jest pokazywane w tym miejscu.
 
-*   Masła i chleb - `Where`, `Select`, i `Aggregate`:
+* Masła i chleb - `Where`, `Select`, i `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Spłaszczanie listę list:
+* Spłaszczanie listę list:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   Związek między dwoma zestawami (przy użyciu niestandardowych komparator):
+* Związek między dwoma zestawami (przy użyciu niestandardowych komparator):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   Część wspólną między dwoma zestawami:
+* Część wspólną między dwoma zestawami:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Określanie kolejności:
+* Określanie kolejności:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Na koniec bardziej zaawansowany przykład: Określanie, czy wartości właściwości z dwóch wystąpień tego samego typu są równe (Borrowed i zmodyfikowane od [ten wpis w witrynie StackOverflow](https://stackoverflow.com/a/844855)):
+* Na koniec bardziej zaawansowany przykład: Określanie, czy wartości właściwości z dwóch wystąpień tego samego typu są równe (Borrowed i zmodyfikowane od [ten wpis w witrynie StackOverflow](https://stackoverflow.com/a/844855)):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ Równoległego zadania zależne od Procesora CPU, które mogą być łatwo wyra�
 
 ## <a name="further-resources"></a>Dalsze zasoby:
 
-*   [101 przykładów LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/), Plac zabaw dla środowiska i wykonywanie zapytań w bazie danych aparat C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), e-book, prezentującą implementacji LINQ do obiektów
+* [101 przykładów LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), Plac zabaw dla środowiska i wykonywanie zapytań w bazie danych aparat C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), e-book, prezentującą implementacji LINQ do obiektów

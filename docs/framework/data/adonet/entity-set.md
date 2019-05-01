@@ -3,11 +3,11 @@ title: zestaw jednostek
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
 ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033959"
 ---
 # <a name="entity-set"></a>zestaw jednostek
 *Zestaw jednostek* to kontener logiczny dla wystąpień [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) i wystąpień dowolnego typu opracowane z tego typu jednostki. (Aby uzyskać informacji na temat typów pochodnych, zobacz [modelu danych jednostki: Dziedziczenie](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Relacja między typem encji i zestaw jednostek jest analogiczna do relację wiersz tabeli w relacyjnej bazie danych: Np. wiersz typ jednostki opisujący strukturę danych i jak tabela, zestaw jednostek zawiera wystąpień danego struktury. Zestaw jednostek nie jest konstrukcja; modelowania danych nie opisano w strukturze danych. Zamiast tego zestaw jednostek zapewnia konstrukcję w środowisku hostingu lub magazynu (np. środowisko uruchomieniowe języka wspólnego lub bazą danych programu SQL Server) do wystąpienia typu jednostki grupy, dzięki czemu mogą być mapowane do magazynu danych.  
@@ -16,11 +16,11 @@ ms.locfileid: "59126623"
   
  Dla wystąpienia typu jednostki, która istnieje w zestawie jednostek, wymaga spełnienia następujących warunków:  
   
--   Typ wystąpienia jest taki sam jak typ jednostki, na którym jest oparty ten zestaw jednostki lub typ wystąpienia jest podtypem typu jednostki.  
+- Typ wystąpienia jest taki sam jak typ jednostki, na którym jest oparty ten zestaw jednostki lub typ wystąpienia jest podtypem typu jednostki.  
   
--   [Klucz jednostki](../../../../docs/framework/data/adonet/entity-key.md) wystąpienie jest unikatowa w obrębie zestawu jednostek.  
+- [Klucz jednostki](../../../../docs/framework/data/adonet/entity-key.md) wystąpienie jest unikatowa w obrębie zestawu jednostek.  
   
--   Wystąpienie nie istnieje w innym zestawie jednostek.  
+- Wystąpienie nie istnieje w innym zestawie jednostek.  
   
     > [!NOTE]
     >  Wiele zestawów jednostek można zdefiniować przy użyciu tego samego typu jednostki, ale wystąpienie typu danej jednostki może istnieć tylko w jednej jednostce zestawie.  

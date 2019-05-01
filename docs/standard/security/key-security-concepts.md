@@ -14,55 +14,55 @@ ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018622"
 ---
 # <a name="key-security-concepts"></a>Główne pojęcia dotyczące zabezpieczeń
-Microsoft .NET Framework zapewnia oparte na rolach zabezpieczeń mających na celu adres problemy z zabezpieczeniami dotyczące kodu przenośnego i zapewnienie obsługi, który umożliwia ustalenie, użytkownicy są upoważnione na.  
+Microsoft .NET Framework oferuje opartej na rolach zabezpieczeń, ułatwiających adresu z punktu widzenia bezpieczeństwa kod aplikacji mobilnych i świadczenia pomocy technicznej, umożliwiająca składników ustalić, użytkownicy są autoryzowane w celu.  
   
-## <a name="type-safety-and-security"></a>Typ bezpieczeństwa i zabezpieczeń  
- Bezpieczny kod uzyskuje dostęp do lokalizacji pamięci, który jest upoważniony do dostępu. (Dla tej dyskusji zabezpieczeń w szczególności odwołuje się do pamięci typu bezpieczeństwa i nie należy mylić z typu bezpieczeństwa w szerszym zakresie.) Na przykład bezpieczny kod nie można odczytać wartości z pól prywatnych innego obiektu. Uzyskuje dostęp do typów tylko w sposób wyraźnie określone, dozwolony.  
+## <a name="type-safety-and-security"></a>Zabezpieczenia i ochrona typu  
+ Kod bezpiecznego typu uzyskuje dostęp do lokalizacji pamięci, który jest upoważniony do dostępu. (Dla tej dyskusji, bezpieczeństwo typów specjalnie odwołuje się do bezpieczeństwa typu pamięci i nie należy mylić z bezpieczeństwem typu w szerszym zakresie.) Na przykład kod bezpiecznego typu nie można odczytać wartości z prywatnych pól innego obiektu. Uzyskuje dostęp do typów wyłącznie na wyraźnie określone, dozwolone sposoby.  
   
- Podczas just in time (JIT) kompilacji proces weryfikacji opcjonalne sprawdza, czy metadane i języku pośrednim firmy Microsoft (MSIL) z metodę, aby skompilować JIT do kodu macierzystego maszyny, aby sprawdzić, czy są one bezpieczne typu. Ten proces jest pomijane, jeśli kod ma uprawnienie do pominięcia weryfikacji. Aby uzyskać więcej informacji o weryfikacji, zobacz [proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md).  
+ Podczas just-in-time (JIT) kompilacja, opcjonalny proces weryfikacji analizuje metadane i język Microsoft intermediate language (MSIL) metody, aby być skompilowana JIT w macierzystym kodzie maszynowym, aby zweryfikować, że są bezpieczne dla typów. Ten proces jest pomijany, jeśli kod ma uprawnienie pomijania weryfikacji. Aby uzyskać więcej informacji na temat weryfikacji, zobacz [Managed Execution Process](../../../docs/standard/managed-execution-process.md).  
   
- Weryfikacji zabezpieczeń nie jest wymagane do uruchomienia kodu zarządzanego, bezpieczeństwo typów odgrywa kluczową role w zestawie izolacji i wymuszanie zabezpieczeń. Jeśli kod jest typu bezpieczne, środowisko uruchomieniowe języka wspólnego całkowicie można odizolować zestawy od siebie. Izolacja gwarantuje, że zestawy nie może mieć niekorzystny wpływ na siebie i zwiększa niezawodność aplikacji. Bezpieczne składniki mogą wykonywać bezpiecznie w ramach tego samego procesu, nawet jeśli są zaufane na różnych poziomach. Gdy kodu nie jest typem bezpieczne, może wystąpić niepożądane skutki uboczne. Na przykład środowisko uruchomieniowe nie mogą uniemożliwiać kodu zarządzanego z wywołania do kodu macierzystego (niezarządzany) i wykonywanie operacji złośliwe. Jeśli kod jest typu bezpieczne, mechanizmu wymuszania zabezpieczeń środowiska uruchomieniowego zapewnia że go nie dostęp do kodu macierzystego, chyba że ma uprawnienia. Cały kod, który nie jest typem bezpieczne musi mieć przyznaną <xref:System.Security.Permissions.SecurityPermission> z elementu członkowskiego wyliczenia przekazany <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> do uruchomienia.  
+ Chociaż potwierdzenie bezpieczeństwa typu nie jest obowiązkowe, aby uruchomić kod zarządzany, bezpieczeństwo typów odgrywa kluczową rolę w izolacji zestawu oraz wzmacnianiu zabezpieczeń. Gdy kod jest bezpiecznym typem, środowisko uruchomieniowe języka wspólnego może całkowicie odizolować zestawy od siebie nawzajem. Izolacja pomaga upewnić się, że zestawy nie może mieć negatywny wpływ na siebie nawzajem i zwiększać niezawodności aplikacji. Składniki typu palety można wykonać bezpiecznie w tym samym procesie, nawet jeśli są one zaufane na różnych poziomach. Jeżeli kod nie jest bezpiecznym typem, mogą wystąpić niepożądane skutki uboczne. Na przykład środowisko uruchomieniowe nie może uniemożliwić kodu zarządzanego z wywołaniem do kodu natywnego (niezarządzanego) i wykonaniu złośliwych operacji. Gdy kod jest bezpiecznym typem, mechanizm wymuszania zabezpieczenia środowiska wykonawczego gwarantuje, że jej nie dostępu do kodu macierzystego, chyba że ma uprawnienia, aby to zrobić. Cały kod, który nie jest typem bezpiecznym musiał otrzymać <xref:System.Security.Permissions.SecurityPermission> z elementem członkowskim wyliczenia przekazany <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> do uruchomienia.  
   
  Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../../docs/framework/misc/code-access-security-basics.md).  
   
 ## <a name="principal"></a>Główne  
- Podmiot zabezpieczeń reprezentuje tożsamość i rolę użytkownika i działa w imieniu użytkownika. Zabezpieczenia oparte na rolach w programie .NET Framework obsługuje trzy rodzaje podmiotów zabezpieczeń:  
+ Podmiot zabezpieczeń reprezentuje tożsamość i rolę użytkownika i działa w imieniu użytkownika. Oparta na rolach zabezpieczeń w programie .NET Framework obsługuje trzy rodzaje jednostek:  
   
--   Ogólny podmiotów reprezentują użytkowników i role, które istnieją niezależnie od użytkowników systemu Windows i ról.  
+- Ogólne jednostki reprezentują użytkowników i ról, które istnieją niezależnie od Windows użytkownikami i rolami.  
   
--   Podmioty zabezpieczeń systemu Windows reprezentują użytkowników systemu Windows i ich role (lub ich grupy systemu Windows). Podmiot zabezpieczeń systemu Windows mogą personifikować innego użytkownika, co oznacza, że podmiot zabezpieczeń może dostępu do zasobu w imieniu użytkownika podczas przedstawiania tożsamości, która należy do tego użytkownika.  
+- Windows podmiotów zabezpieczeń reprezentuje użytkowników Windows i ich ról (lub ich grupy Windows). Podmiot zabezpieczeń Windows mogą personifikować innego użytkownika, co oznacza że podmiot zabezpieczeń może uzyskiwać dostęp do zasobów w imieniu użytkownika, podczas zaprezentowanie tożsamości, która należy do tego użytkownika.  
   
--   Niestandardowe podmiotów zabezpieczeń mogą zostać zdefiniowane przez aplikację w dowolny sposób, który jest wymagany dla tej konkretnej aplikacji. Można rozszerzają podstawowe pojęcie tożsamości podmiotu i ról.  
+- Jednostki niestandardowe mogą być definiowane przez aplikację w jakikolwiek sposób, który jest wymagany dla określonej aplikacji. Mogą one rozszerzać podstawowe pojęcie tożsamości podmiotu zabezpieczeń i role.  
   
  Aby uzyskać więcej informacji, zobacz [podmiot zabezpieczeń i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md).  
   
 ## <a name="authentication"></a>Uwierzytelnianie  
- Uwierzytelnianie to proces odnajdywania i weryfikowania tożsamości podmiot zabezpieczeń, sprawdzając poświadczenia użytkownika i sprawdzanie poprawności poświadczeń dla niektórych urzędu. Dane uzyskane podczas uwierzytelniania jest użyteczne bezpośrednio w kodzie. Umożliwia także zabezpieczenia oparte na rolach .NET Framework uwierzytelnić bieżącego użytkownika i określenia, czy zezwalać tego podmiotu zabezpieczeń dostępu kodu do. Zobacz przeciążeń <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> metody przykłady tego, jak uwierzytelniać podmiot zabezpieczeń dla określonych ról. Na przykład można użyć <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> przeciążenia, aby określić, czy bieżący użytkownik jest członkiem grupy Administratorzy.  
+ Uwierzytelnianie to proces odnajdywania i weryfikowania tożsamości podmiotu zabezpieczeń, sprawdzając poświadczenia użytkownika i sprawdzanie poprawności tych poświadczeń względem niektórych urzędu. Informacje uzyskane podczas uwierzytelniania nadaje się bezpośrednio w kodzie. Umożliwia także .NET Framework oparta na rolach zabezpieczeń do uwierzytelniania bieżącego użytkownika i do ustalenia, czy należy zezwolić tego obiektu głównego dostęp do Twojego kodu. Zobacz przeciążenia <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> metoda przykładów dotyczących sposobów uwierzytelniania podmiotu zabezpieczeń dla określonych ról. Na przykład, można użyć <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> przeciążenia do ustalenia, czy bieżący użytkownik jest członkiem grupy Administratorzy.  
   
- Różnych mechanizmów uwierzytelniania używanych dzisiaj, z których wiele może być używany z zabezpieczeń opartych na rolach .NET Framework. Niektóre z najczęściej używane mechanizmów są podstawowe, szyfrowane, Passport, system operacyjny (na przykład protokołu NTLM lub Kerberos) lub mechanizmów zdefiniowanym przez aplikację.  
+ Różnych mechanizmów uwierzytelniania są obecnie używane, z których wiele mogą być używane z zabezpieczeń opartych na roli platformy .NET Framework. Niektóre z najczęściej używanych mechanizmów są podstawowe, szyfrowane, usługi Passport, system operacyjny (na przykład protokołu NTLM lub Kerberos) lub mechanizmów zdefiniowanych przez aplikację.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład wymaga aktywny podmiot zabezpieczeń administratora. `name` Parametr jest `null`, dzięki czemu każdy użytkownik, który jest administratorem, aby przekazać żądanie.  
+ Poniższy przykład wymaga aktywny podmiot zabezpieczeń administratora. `name` Parametr jest `null`, co pozwala każdy użytkownik, który jest administratorem, aby przekazać żądanie.  
   
 > [!NOTE]
->  W systemie Windows Vista kontroli konta użytkownika (UAC) określa uprawnienia użytkownika. Jeśli jesteś członkiem wbudowanej grupy Administratorzy, masz przypisane dwa tokeny dostępu w czasie wykonywania: token dostępu użytkownika standardowego i token dostępu administratora. Domyślnie jesteś w roli użytkownika standardowego. Do wykonania kodu, musisz być administratorem, musi najpierw podwyższenie Twoje uprawnienia od użytkownika standardowego do administratora. Można to zrobić, podczas uruchamiania aplikacji przez kliknięcie prawym przyciskiem myszy ikonę aplikacji i wskazujący, że chcesz uruchomić jako administrator.  
+>  W systemie Windows Vista kontroli konta użytkownika (UAC) określa uprawnienia użytkownika. Jeśli jesteś członkiem wbudowanej grupy Administratorzy, masz przypisane dwa tokeny dostępu w czasie wykonywania: token dostępu użytkownika standardowego i token dostępu administratora. Domyślnie jesteś w roli użytkownika standardowego. Do wykonania kodu, musisz być administratorem, musisz najpierw podwyższenie swoje uprawnienia z użytkownika standardowego do administratora. Można to zrobić, po uruchomieniu aplikacji, kliknij prawym przyciskiem myszy ikonę aplikacji i wskazujący, że chcesz uruchomić jako administrator.  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]
  [!code-vb[Classic PrincipalPermission Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/VB/source.vb#1)]  
   
- W poniższym przykładzie pokazano sposób określania tożsamości podmiotu zabezpieczeń i dostępne do principal role. Aplikacja, w tym przykładzie może być aby upewnić się, że bieżący użytkownik jest w roli, możesz zezwolić na korzystanie z aplikacji.  
+ Poniższy przykład pokazuje, jak określić tożsamości podmiotu zabezpieczeń i role, które są dostępne dla podmiotu zabezpieczeń. Aplikacja w tym przykładzie, może być upewnij się, że bieżący użytkownik jest w roli, którą umożliwiający korzystanie z aplikacji.  
   
  [!code-cpp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CPP/source.cpp#1)]
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
 ## <a name="authorization"></a>Autoryzacja  
- Autoryzacja jest proces określania, czy podmiot zabezpieczeń może wykonać żądanej akcji. Występuje po uwierzytelnieniu i używa informacji o tożsamości podmiotu i ról do ustalenia podmiot zabezpieczeń mogą uzyskiwać dostęp do zasobów. Zabezpieczenia oparte na rolach .NET Framework służy do implementowania autoryzacji.
+ Autoryzacja to proces określania, czy podmiot zabezpieczeń może wykonać żądanej akcji. Autoryzacja następuje po uwierzytelnieniu i używa informacji o tożsamości podmiotu zabezpieczeń i role, aby określić, jakie zasoby mogą uzyskiwać dostęp do podmiotu zabezpieczeń. Zabezpieczenia oparte na roli platformy .NET Framework służy do implementowania autoryzacji.

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034479"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z elementu DataSet w usłudze internetowej XML
 <xref:System.Data.DataSet> Została zaprojektowana z projektem bez połączenia, w części w celu ułatwienia wygodne transportu danych za pośrednictwem Internetu. **DataSet** jest "serializacji", może być określony jako dane wejściowe lub dane wyjściowe z usług XML sieci Web bez pisania dodatkowe wymagane do przesyłania strumieniowego zawartości **DataSet** z usługi XML sieci Web do klientów i z powrotem. **DataSet** niejawnie konwertowane na strumień XML przy użyciu formatu w formacie DiffGram, wysyłane przez sieć i następnie odtworzone strumień XML jako **DataSet** po stronie odbiorczej. Zapewnia to bardzo prosty i elastyczny metody przesyłania i zwraca dane relacyjne przy użyciu usług XML sieci Web. Aby uzyskać więcej informacji na temat formatu w formacie DiffGram zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  

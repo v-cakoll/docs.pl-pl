@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032243"
 ---
 # <a name="attached-properties-overview"></a>Przegląd Właściwości dołączone
 
@@ -46,11 +46,11 @@ W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 
 Chociaż dołączone właściwości można ustawić dla dowolnego obiektu, który nie automatycznie oznacza to, ustawiając właściwość będzie rezultatów materialne lub że wartość nigdy nie będzie używany przez inny obiekt. Ogólnie rzecz biorąc dołączone właściwości mają tak, aby obiekty pochodzące z różnorodnych hierarchie możliwe klas lub relacji logicznych można każdego raportu typowych informacji z typu, które definiują dołączona właściwość. Typ, który definiuje dołączona właściwość zazwyczaj następuje po jednej z tych modeli:
 
--   Typ, który definiuje dołączona właściwość zaprojektowano tak, aby można go z elementu nadrzędnego, elementy, które spowoduje ustawienie wartości dla właściwości dołączone. Następnie typ iteruje po jego obiektów podrzędnych za pomocą logika wewnętrzna względem niektórych elementów struktury drzewa obiektów, uzyskuje wartości i działa na te wartości w jakikolwiek sposób.
+- Typ, który definiuje dołączona właściwość zaprojektowano tak, aby można go z elementu nadrzędnego, elementy, które spowoduje ustawienie wartości dla właściwości dołączone. Następnie typ iteruje po jego obiektów podrzędnych za pomocą logika wewnętrzna względem niektórych elementów struktury drzewa obiektów, uzyskuje wartości i działa na te wartości w jakikolwiek sposób.
 
--   Typ, który definiuje dołączona właściwość będzie służyć jako element podrzędny dla wielu elementów nadrzędnych możliwe i modele zawartości.
+- Typ, który definiuje dołączona właściwość będzie służyć jako element podrzędny dla wielu elementów nadrzędnych możliwe i modele zawartości.
 
--   Typ, który definiuje dołączona właściwość reprezentuje usługę. Inne typy Ustaw wartości dołączona właściwość. Następnie gdy element i ustaw właściwość jest oceniany w kontekście usługi, dołączonej właściwości wartości są uzyskiwane za pośrednictwem logika wewnętrzna klasy usługi.
+- Typ, który definiuje dołączona właściwość reprezentuje usługę. Inne typy Ustaw wartości dołączona właściwość. Następnie gdy element i ustaw właściwość jest oceniany w kontekście usługi, dołączonej właściwości wartości są uzyskiwane za pośrednictwem logika wewnętrzna klasy usługi.
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Przykładem zdefiniowanych przez nadrzędne dołączoną właściwość
 
@@ -102,9 +102,9 @@ Podpis dla **Get_PropertyName_** metody dostępu muszą być:
 
 `public static object GetPropertyName(object target)`
 
--   `target` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> metoda typów jako parametr <xref:System.Windows.UIElement>, ponieważ dołączona właściwość jest przeznaczona tylko do nelze nastavit <xref:System.Windows.UIElement> wystąpień.
+- `target` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> metoda typów jako parametr <xref:System.Windows.UIElement>, ponieważ dołączona właściwość jest przeznaczona tylko do nelze nastavit <xref:System.Windows.UIElement> wystąpień.
 
--   Zwracana wartość można określić jako bardziej określonego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.GetDock%2A> metoda typów jako <xref:System.Windows.Controls.Dock>, ponieważ wartość można ustawić tylko do tego wyliczenia.
+- Zwracana wartość można określić jako bardziej określonego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.GetDock%2A> metoda typów jako <xref:System.Windows.Controls.Dock>, ponieważ wartość można ustawić tylko do tego wyliczenia.
 
 #### <a name="the-set-accessor"></a>Metody dostępu Set
 
@@ -112,9 +112,9 @@ Podpis dla **Set_PropertyName_** metody dostępu muszą być:
 
 `public static void SetPropertyName(object target, object value)`
 
--   `target` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.SetDock%2A> metoda typów jako <xref:System.Windows.UIElement>, ponieważ dołączona właściwość jest przeznaczona tylko do nelze nastavit <xref:System.Windows.UIElement> wystąpień.
+- `target` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.SetDock%2A> metoda typów jako <xref:System.Windows.UIElement>, ponieważ dołączona właściwość jest przeznaczona tylko do nelze nastavit <xref:System.Windows.UIElement> wystąpień.
 
--   `value` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.SetDock%2A> metoda typów jako <xref:System.Windows.Controls.Dock>, ponieważ wartość można ustawić tylko do tego wyliczenia. Pamiętaj, że wartość ta metoda ma pochodzących z modułu ładującego XAML, po napotkaniu usługi dołączonej właściwości użycia dołączonej właściwości w znaczniku w danych wejściowych. Te dane wejściowe to wartość określona jako wartość atrybutu XAML w znacznikach. W związku z tym musi istnieć konwersji typów, wartość serializatora lub obsługa rozszerzenia znaczników dla typu, którego używasz, takie, że odpowiedni typ można tworzyć na podstawie wartości atrybutu (co ostatecznie to klient jest po prostu określonym ciągiem).
+- `value` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.SetDock%2A> metoda typów jako <xref:System.Windows.Controls.Dock>, ponieważ wartość można ustawić tylko do tego wyliczenia. Pamiętaj, że wartość ta metoda ma pochodzących z modułu ładującego XAML, po napotkaniu usługi dołączonej właściwości użycia dołączonej właściwości w znaczniku w danych wejściowych. Te dane wejściowe to wartość określona jako wartość atrybutu XAML w znacznikach. W związku z tym musi istnieć konwersji typów, wartość serializatora lub obsługa rozszerzenia znaczników dla typu, którego używasz, takie, że odpowiedni typ można tworzyć na podstawie wartości atrybutu (co ostatecznie to klient jest po prostu określonym ciągiem).
 
 W poniższym przykładzie pokazano rejestrację właściwości zależności (przy użyciu <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metody), jak również **Get_PropertyName_** i **Set_PropertyName_** metod dostępu. W tym przykładzie nazwa dołączonych właściwości jest `IsBubbleSource`. W związku z tym, musi nosić nazwę metody dostępu `GetIsBubbleSource` i `SetIsBubbleSource`.
 
@@ -125,21 +125,21 @@ W poniższym przykładzie pokazano rejestrację właściwości zależności (prz
 
 WPF definiuje kilka [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] , są przeznaczone do dostarczania informacji dotyczących właściwości dołączone procesy odbicia i typowi użytkownicy odbicia i właściwość informacje, takie jak projektantów. Ponieważ dołączonych właściwości Typ nieograniczonego zakresu uprawnień, projektantów muszą mieć możliwość uniknąć przytłaczająca użytkownikom globalną listę wszystkich dołączonych właściwości, które są zdefiniowane w implementacji określonej technologii, która używa XAML. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] Tego WPF definiuje dla dołączonych właściwości może służyć do określania zakresu w sytuacjach, w którym dołączonych właściwości powinny być wyświetlane w taki sposób, w oknie właściwości. Można rozważyć zastosowanie również te atrybuty dla własnego niestandardowego dołączone właściwości. Cel i składnię [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] opisano na stronach odpowiednie odwołania:
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## Dowiedz się więcej na temat dołączone właściwości <a name="more"></a>
 
--   Aby uzyskać więcej informacji na temat tworzenia dołączoną właściwość, zobacz [rejestrowanie dołączonych właściwości](how-to-register-an-attached-property.md).
+- Aby uzyskać więcej informacji na temat tworzenia dołączoną właściwość, zobacz [rejestrowanie dołączonych właściwości](how-to-register-an-attached-property.md).
 
--   Zobacz więcej zaawansowanych scenariuszy użycia dla właściwości zależności i dołączonych właściwości [niestandardowe właściwości zależności](custom-dependency-properties.md).
+- Zobacz więcej zaawansowanych scenariuszy użycia dla właściwości zależności i dołączonych właściwości [niestandardowe właściwości zależności](custom-dependency-properties.md).
 
--   Możesz także zarejestrować właściwość dołączonej właściwości, jak i właściwość zależności, ale nadal następnie udostępnić implementacje "otoki". W tym przypadku właściwość można ustawić w tym elemencie lub dowolnego elementu przy użyciu XAML dołączonych właściwości składni. Na przykład właściwość o odpowiedni scenariusz użycia zarówno standardowe, jak i dołączonych <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
+- Możesz także zarejestrować właściwość dołączonej właściwości, jak i właściwość zależności, ale nadal następnie udostępnić implementacje "otoki". W tym przypadku właściwość można ustawić w tym elemencie lub dowolnego elementu przy użyciu XAML dołączonych właściwości składni. Na przykład właściwość o odpowiedni scenariusz użycia zarówno standardowe, jak i dołączonych <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Zobacz także
 

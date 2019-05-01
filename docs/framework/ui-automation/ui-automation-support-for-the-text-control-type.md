@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996557"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu tekst
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103782"
   
  Kontrolki tekstu może służyć wyłącznie jako etykieta lub jako tekst statyczny w formularzu. Ponadto mogą być zawarte w obrębie struktury Odp.:  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   Element danych  
+- Element danych  
   
  Kontrolki tekstu może nie być w widoku zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, ponieważ często wyświetlany jest tekst za pomocą `NameProperty` innej kontrolki. Na przykład tekst, który jest używany jako etykieta kontrolki pola kombi jest dostępna za pośrednictwem formantu `NameProperty` wartość. Ponieważ formant pola kombi znajduje się w zawartości widoku drzewa automatyzacji interfejsu użytkownika, nie jest konieczne do kontrolki tekstu, który ma być. Kontrolki tekstowe zawsze będzie miała 0 elementów podrzędnych w widoku zawartości  
   

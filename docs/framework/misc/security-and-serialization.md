@@ -13,11 +13,11 @@ ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868839"
 ---
 # <a name="security-and-serialization"></a>Zabezpieczenia i serializacja
 Ponieważ serializacji może pozwalać na inny kod wyświetlić lub zmodyfikować dane wystąpienia obiektu, która mogłaby być niedostępna, specjalne uprawnienie jest wymagane wykonywanie serializacji kodu: <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> określono flagę. W obszarze domyślne zasady to uprawnienie nie zostanie podany, do pobieranych przez Internet lub z intranetu kod; to uprawnienie udziela się tylko kod na komputerze lokalnym.  
@@ -28,7 +28,7 @@ Ponieważ serializacji może pozwalać na inny kod wyświetlić lub zmodyfikowa�
   
  <xref:System.Runtime.Serialization.ISerializable> Interfejsu jest przeznaczony do użytku tylko przez infrastrukturę serializacji. Jednak jeśli bez ochrony, jego potencjalnie zwalniać poufne informacje. Jeśli podasz niestandardowej serializacji implementując **ISerializable**, upewnij się, należy wykonać następujące środki ostrożności:  
   
--   <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> Metody powinny być jawnie zabezpieczone przez wymagających **SecurityPermission** z **SerializationFormatter** uprawnienie określono lub przez upewniając się, że nie liter informacje o zwolnieniu z danymi wyjściowymi metody. Na przykład:  
+- <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> Metody powinny być jawnie zabezpieczone przez wymagających **SecurityPermission** z **SerializationFormatter** uprawnienie określono lub przez upewniając się, że nie liter informacje o zwolnieniu z danymi wyjściowymi metody. Na przykład:  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -45,7 +45,7 @@ Ponieważ serializacji może pozwalać na inny kod wyświetlić lub zmodyfikowa�
     }  
     ```  
   
--   Specjalnych konstruktora, używanych na potrzeby serializowania również należy wykonać dokładne sprawdzenie poprawności danych wejściowych i powinna być chroniona lub prywatnej, aby chronić przed niewłaściwym użyciem przez złośliwy kod. Powinien on wymuszać samą kontroli bezpieczeństwa i uprawnienia wymagane do uzyskania wystąpienia takich klasy za pomocą innych środków, takich jak jawne utworzenie klasy lub pośrednio ją przy użyciu pewnego rodzaju fabryki.  
+- Specjalnych konstruktora, używanych na potrzeby serializowania również należy wykonać dokładne sprawdzenie poprawności danych wejściowych i powinna być chroniona lub prywatnej, aby chronić przed niewłaściwym użyciem przez złośliwy kod. Powinien on wymuszać samą kontroli bezpieczeństwa i uprawnienia wymagane do uzyskania wystąpienia takich klasy za pomocą innych środków, takich jak jawne utworzenie klasy lub pośrednio ją przy użyciu pewnego rodzaju fabryki.  
   
 ## <a name="see-also"></a>Zobacz także
 

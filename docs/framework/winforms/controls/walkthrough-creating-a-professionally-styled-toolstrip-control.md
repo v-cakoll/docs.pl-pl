@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
 ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009100"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Przewodnik: tworzenie profesjonalnej kontrolki ToolStrip
 Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profesjonalny wygląd i zachowanie, pisząc własne klasy pochodzącej od <xref:System.Windows.Forms.ToolStripProfessionalRenderer> typu.  
   
  W tym instruktażu przedstawiono sposób użycia <xref:System.Windows.Forms.ToolStrip> formantów, aby utworzyć formant złożony, który przypomina **okienka nawigacji** udostępniane przez Microsoft Outlook®. Następujące zadania są przedstawione w niniejszym przewodniku:  
   
--   Tworzenie projektu Biblioteka formantów Windows.  
+- Tworzenie projektu Biblioteka formantów Windows.  
   
--   Projektowanie kontrolki StackView.  
+- Projektowanie kontrolki StackView.  
   
--   Implementowanie niestandardowego modułu renderowania.  
+- Implementowanie niestandardowego modułu renderowania.  
   
  Gdy skończysz, konieczne będzie formantu wielokrotnego niestandardowe klienta za pomocą profesjonalny wygląd kontrolki Microsoft Office® XP.  
   
@@ -38,7 +38,7 @@ Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profes
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Aby ukończyć ten przewodnik, potrzebne są:  
   
--   Wystarczające uprawnienia, aby można było utworzyć i uruchomić projekty aplikacji Windows Forms na komputerze, w którym jest zainstalowany program Visual Studio.  
+- Wystarczające uprawnienia, aby można było utworzyć i uruchomić projekty aplikacji Windows Forms na komputerze, w którym jest zainstalowany program Visual Studio.  
   
 ## <a name="creating-a-windows-control-library-project"></a>Tworzenie projektu biblioteki kontrolek Windows  
  Pierwszym krokiem jest, aby utworzyć projekt Biblioteka formantów.  
@@ -178,11 +178,11 @@ Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profes
 ## <a name="next-steps"></a>Następne kroki  
  W tym instruktażu utworzono kontrolkę wielokrotnego niestandardowe klienta profesjonalny wygląd kontrolki Office XP. Możesz użyć <xref:System.Windows.Forms.ToolStrip> rodziny formantów do innych celów:  
   
--   Tworzenie menu skrótów dla formantów z <xref:System.Windows.Forms.ContextMenuStrip>. Aby uzyskać więcej informacji, zobacz [— informacje o składniku ContextMenu](contextmenu-component-overview-windows-forms.md).  
+- Tworzenie menu skrótów dla formantów z <xref:System.Windows.Forms.ContextMenuStrip>. Aby uzyskać więcej informacji, zobacz [— informacje o składniku ContextMenu](contextmenu-component-overview-windows-forms.md).  
   
--   Tworzenie formularza z automatycznie wypełnione standardowe menu. Aby uzyskać więcej informacji, zobacz [instruktażu: Zapewnianie elementów Menu standardowego dla formularza](walkthrough-providing-standard-menu-items-to-a-form.md).  
+- Tworzenie formularza z automatycznie wypełnione standardowe menu. Aby uzyskać więcej informacji, zobacz [instruktażu: Zapewnianie elementów Menu standardowego dla formularza](walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Tworzenie wielu formularza interfejsu (MDI) dokumentu z dokowanie <xref:System.Windows.Forms.ToolStrip> kontrolki. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie formularza MDI za pomocą scalania Menu i formantów ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+- Tworzenie wielu formularza interfejsu (MDI) dokumentu z dokowanie <xref:System.Windows.Forms.ToolStrip> kontrolki. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie formularza MDI za pomocą scalania Menu i formantów ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

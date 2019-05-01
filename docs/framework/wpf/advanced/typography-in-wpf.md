@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031320"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują poprawy jakości i wydajności renderowania tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii obsługi rozszerzonego tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
@@ -45,39 +45,39 @@ Tekst z antialiasingu kierunku y ClearType
 ## <a name="enhanced-international-text-support"></a>Obsługa rozszerzonego tekstu międzynarodowych  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia obsługę rozszerzonych tekst międzynarodowy, podając następujące funkcje:  
   
--   Automatyczne — interlinia we wszystkich systemach piśmie, przy użyciu adaptacyjne miary.  
+- Automatyczne — interlinia we wszystkich systemach piśmie, przy użyciu adaptacyjne miary.  
   
--   Obsługi szerokiej gamy międzynarodowych tekstu. Aby uzyskać więcej informacji, zobacz [globalizacja dla WPF](globalization-for-wpf.md).  
+- Obsługi szerokiej gamy międzynarodowych tekstu. Aby uzyskać więcej informacji, zobacz [globalizacja dla WPF](globalization-for-wpf.md).  
   
--   Dzielenie wierszy z przewodnikiem języka, dzielenie wyrazów i uzasadnienie.  
+- Dzielenie wierszy z przewodnikiem języka, dzielenie wyrazów i uzasadnienie.  
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>Obsługa czcionek rozszerzone  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia obsługę rozszerzonych czcionki, podając następujące funkcje:  
   
--   Unicode dla całego tekstu. Zachowanie czcionki i zaznaczenia nie są już wymagać charset lub stronę kodową.  
+- Unicode dla całego tekstu. Zachowanie czcionki i zaznaczenia nie są już wymagać charset lub stronę kodową.  
   
--   Zachowanie czcionka jest niezależne od ustawień globalnych, takich jak ustawienia regionalne systemu.  
+- Zachowanie czcionka jest niezależne od ustawień globalnych, takich jak ustawienia regionalne systemu.  
   
--   Oddzielne <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, i <xref:System.Windows.FontStyle> typów do definiowania <xref:System.Windows.Media.FontFamily>. Zapewnia to większą elastyczność niż w [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] programowania, w których atrybut typu wartość logiczna kombinacji kursywę i pogrubienie są używane do definiowania rodzinę czcionek.  
+- Oddzielne <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, i <xref:System.Windows.FontStyle> typów do definiowania <xref:System.Windows.Media.FontFamily>. Zapewnia to większą elastyczność niż w [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] programowania, w których atrybut typu wartość logiczna kombinacji kursywę i pogrubienie są używane do definiowania rodzinę czcionek.  
   
--   Zapisywanie kierunek (w poziomie i w pionie) obsługiwane niezależnie od nazwę czcionki.  
+- Zapisywanie kierunek (w poziomie i w pionie) obsługiwane niezależnie od nazwę czcionki.  
   
--   Łączenie czcionek i czcionka fallback na przenośnym [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] plików, przy użyciu technologii złożonego czcionki. Czcionki umożliwiają konstrukcji wielojęzyczny czcionek używanej do próby spośród całego zakresu. Czcionki udostępniają mechanizm, który pozwala uniknąć wyświetlania Brak symbole. Aby uzyskać więcej informacji, zobacz uwagi w <xref:System.Windows.Media.FontFamily> klasy.  
+- Łączenie czcionek i czcionka fallback na przenośnym [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] plików, przy użyciu technologii złożonego czcionki. Czcionki umożliwiają konstrukcji wielojęzyczny czcionek używanej do próby spośród całego zakresu. Czcionki udostępniają mechanizm, który pozwala uniknąć wyświetlania Brak symbole. Aby uzyskać więcej informacji, zobacz uwagi w <xref:System.Windows.Media.FontFamily> klasy.  
   
--   Międzynarodowe czcionki, utworzony na podstawie złożonego czcionek, za pomocą grupy czcionek w jednym języku. Zapisuje to koszty zasobów podczas tworzenia czcionki dla wielu języków.  
+- Międzynarodowe czcionki, utworzony na podstawie złożonego czcionek, za pomocą grupy czcionek w jednym języku. Zapisuje to koszty zasobów podczas tworzenia czcionki dla wielu języków.  
   
--   Czcionki osadzony w dokumencie, zapewniając w ten sposób przenoszenia dokumentu. Aby uzyskać więcej informacji, zobacz uwagi w <xref:System.Windows.Media.FontFamily> klasy.  
+- Czcionki osadzony w dokumencie, zapewniając w ten sposób przenoszenia dokumentu. Aby uzyskać więcej informacji, zobacz uwagi w <xref:System.Windows.Media.FontFamily> klasy.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Nowy tekst interfejsy programowania aplikacji (API)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera kilka tekst [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] dla deweloperów do użycia podczas łącznie z tekstem w swoich aplikacjach. Te [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] są podzielone na trzy kategorie:  
   
--   **Układ i interfejsu użytkownika**. Wspólny tekst kontrolki do [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
+- **Układ i interfejsu użytkownika**. Wspólny tekst kontrolki do [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
--   **Uproszczone rysowania tekstu**. Można rysować tekst bezpośrednio do obiektów.  
+- **Uproszczone rysowania tekstu**. Można rysować tekst bezpośrednio do obiektów.  
   
--   **Zaawansowane formatowanie tekstu**. Pozwala na implementowanie aparatu niestandardowego tekstu.  
+- **Zaawansowane formatowanie tekstu**. Pozwala na implementowanie aparatu niestandardowego tekstu.  
   
 ### <a name="layout-and-user-interface"></a>Układ i interfejsu użytkownika  
  Na najwyższym poziomie funkcjonalności, tekst [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zapewnić wspólnego [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrolki, takie jak <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, i <xref:System.Windows.Controls.TextBox>. Te elementy sterujące udostępniają podstawowe [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów w obrębie aplikacji i oferty w prosty sposób obecne i wchodzić w interakcje z tekstem. Określa, takich jak <xref:System.Windows.Controls.RichTextBox> i <xref:System.Windows.Controls.PasswordBox> Włącz bardziej zaawansowany lub wyspecjalizowane obsługi tekstu. Takie jak klasy i <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, i <xref:System.Windows.Documents.TextPointer> Włącz manipulacja tekstem przydatne. Te [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy sterujące udostępniają właściwości <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, i <xref:System.Windows.Controls.Control.FontStyle%2A>, które umożliwiają kontrolowanie czcionki, który jest używany do renderowania tekstu.  

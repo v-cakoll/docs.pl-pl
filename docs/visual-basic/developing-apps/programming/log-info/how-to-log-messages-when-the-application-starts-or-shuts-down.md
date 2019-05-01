@@ -10,11 +10,11 @@ helpviewer_keywords:
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
 ms.openlocfilehash: 8fc7b441c6e19d70ceefa3422cf9823007280b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052498"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Instrukcje: Komunikaty dziennika podczas uruchamiania aplikacji lub zamknięciu (Visual Basic)
 Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informacji o zdarzeniach występujących w aplikacji. W tym przykładzie pokazano, jak używać `My.Application.Log.WriteEntry` metody z `Startup` i `Shutdown` zdarzenia do zapisania informacji śledzenia.  

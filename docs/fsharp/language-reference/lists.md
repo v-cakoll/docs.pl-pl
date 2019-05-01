@@ -3,11 +3,11 @@ title: Listy
 description: Dowiedz się więcej o F# listy uporządkowanej, niezmienne szeregu elementów tego samego typu.
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904127"
 ---
 # <a name="lists"></a>Listy
 

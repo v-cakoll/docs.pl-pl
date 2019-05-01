@@ -9,11 +9,11 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011583"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Formanty z wbudowaną obsługą rysowania przez właściciela
 Rysowanie w formularzach Windows, który jest znany także jako rysowanie niestandardowe, przez właściciela to technika zmiany wyglądu niektórych kontrolek.  
@@ -38,27 +38,27 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Następujące formy Windows kontrolki Rysowanie we wszystkich wersjach programu .NET Framework przez właściciela pomocy technicznej:  
   
--   <xref:System.Windows.Forms.ListBox>  
+- <xref:System.Windows.Forms.ListBox>  
   
--   <xref:System.Windows.Forms.ComboBox>  
+- <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem> (używane przez <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu>)  
+- <xref:System.Windows.Forms.MenuItem> (używane przez <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu>)  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
  Następujące elementy sterujące obsługuje tylko Rysowanie przez właściciela [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
   
--   <xref:System.Windows.Forms.ToolTip>  
+- <xref:System.Windows.Forms.ToolTip>  
   
--   <xref:System.Windows.Forms.ListView>  
+- <xref:System.Windows.Forms.ListView>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  Następujące elementy sterujące obsługuje Rysowanie przez właściciela i są nowe w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
   
--   <xref:System.Windows.Forms.DataGridView>  
+- <xref:System.Windows.Forms.DataGridView>  
   
--   <xref:System.Windows.Forms.ToolStrip>  
+- <xref:System.Windows.Forms.ToolStrip>  
   
  Poniższe sekcje zawierają dodatkowe szczegóły dla każdego z tych kontrolek.  
   
@@ -74,19 +74,19 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy:  
   
--   <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+- [Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>Składnik element MenuItem  
  <xref:System.Windows.Forms.MenuItem> Składnika reprezentuje pojedynczy element menu w <xref:System.Windows.Forms.MainMenu> lub <xref:System.Windows.Forms.ContextMenu> składnika.  
@@ -95,11 +95,11 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
   
--   <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>TabControl — Formant  
  <xref:System.Windows.Forms.TabControl> Control umożliwia rysowanie poszczególnych kart w formancie. Rysowanie przez właściciela ma wpływ na kartach. <xref:System.Windows.Forms.TabPage> nie wpływają na zawartość.  
@@ -108,9 +108,9 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
   
--   <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>ToolTip — Składnik  
  <xref:System.Windows.Forms.ToolTip> Składnika umożliwia rysowania całego etykietki narzędzia, gdy jest on wyświetlany.  
@@ -119,11 +119,11 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
   
--   <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>ListView — Formant  
  <xref:System.Windows.Forms.ListView> Control umożliwia rysowanie pojedynczych elementów podrzędnych i nagłówków kolumn w formancie.  
@@ -136,13 +136,13 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
   
--   <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>TreeView — Formant  
  <xref:System.Windows.Forms.TreeView> Control umożliwia rysowanie poszczególnych węzłów w formancie.  
@@ -153,9 +153,9 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy odniesienia:  
   
--   <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>DataGridView — Formant  
  <xref:System.Windows.Forms.DataGridView> Control umożliwia rysowanie pojedynczych komórek i wierszy w formancie.  
@@ -166,15 +166,15 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy:  
   
--   <xref:System.Windows.Forms.DataGridView.CellPainting>  
+- <xref:System.Windows.Forms.DataGridView.CellPainting>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Instrukcje: Dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [Instrukcje: Dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Instrukcje: Dostosowywanie wyglądu wierszy w kontrolce DataGridView formularzy Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [Instrukcje: Dostosowywanie wyglądu wierszy w kontrolce DataGridView formularzy Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip — Formant  
  <xref:System.Windows.Forms.ToolStrip> i formanty pochodne umożliwiają dostosowanie każdego aspektu wyglądu ich.  
@@ -183,11 +183,11 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
  Aby uzyskać więcej informacji, wraz z przykładami kodu zobacz następujące tematy:  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>  
+- <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Instrukcje: Tworzenie i ustawienie niestandardowego modułu renderowania dla formantu ToolStrip w formularzach Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+- [Instrukcje: Tworzenie i ustawienie niestandardowego modułu renderowania dla formantu ToolStrip w formularzach Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Instrukcje: Rysowanie niestandardowego formantu ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
+- [Instrukcje: Rysowanie niestandardowego formantu ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

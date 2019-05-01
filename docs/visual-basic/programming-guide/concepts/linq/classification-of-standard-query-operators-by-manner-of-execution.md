@@ -3,11 +3,11 @@ title: Klasyfikacja standardowych operatorów zapytań w oparciu o sposób dzia�
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
 ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021768"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (Visual Basic)
 LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonania w jednym z dwa główne sposoby: odejścia. Operatory zapytań, które używają odroczonego wykonania można dodatkowo podzielić na dwie kategorie: przesyłanie strumieniowe i obsługiwane strumieniowo. Jeśli wiesz, jak wykonać operatory inne zapytanie, jego może ułatwić zrozumienie wyników, które otrzymasz od określonego zapytania. Jest to szczególnie istotne, jeśli zmienia się ze źródłem danych lub jeśli tworzysz kwerendy na podstawie innego zapytania. W tym temacie klasyfikuje standardowych operatorów zapytań zgodnie z ich sposób działania.  

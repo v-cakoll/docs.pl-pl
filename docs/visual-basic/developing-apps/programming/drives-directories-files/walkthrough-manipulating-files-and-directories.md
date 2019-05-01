@@ -16,11 +16,11 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052524"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Przewodnik: Manipulowanie plikami i katalogami w Visual Basic
 Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją opisuje sposób tworzenia mała aplikacja, która zawiera listę i sprawdza, czy pliki tekstowe, w katalogu. Dla każdego pliku zaznaczony tekst aplikacji zawiera atrybuty pliku i pierwszego wiersza zawartości. Istnieje możliwość zapisywania informacji w pliku dziennika.  

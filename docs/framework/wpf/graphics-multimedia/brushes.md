@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
 ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020260"
 ---
 # <a name="brushes"></a>Pędzle
 W poniższych tematach opisano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzle "namalować" zawartość do ekranu  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
 ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013962"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Instrukcje: Wyświetlanie dostępnych portów seryjnych w Visual Basic
 W tym temacie opisano sposób użycia `My.Computer.Ports` Aby wyświetlić dostępne porty szeregowe komputera w języku Visual Basic.  
@@ -31,11 +31,11 @@ W tym temacie opisano sposób użycia `My.Computer.Ports` Aby wyświetlić dost�
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołanie projektu do pliku System.Windows.Forms.dll.  
+- Odwołanie projektu do pliku System.Windows.Forms.dll.  
   
--   Dostęp do elementów członkowskich <xref:System.Windows.Forms> przestrzeni nazw. Dodaj `Imports` instrukcji, jeśli użytkownik są nie pełni kwalifikujących się nazwy elementów członkowskich w kodzie. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Dostęp do elementów członkowskich <xref:System.Windows.Forms> przestrzeni nazw. Dodaj `Imports` instrukcji, jeśli użytkownik są nie pełni kwalifikujących się nazwy elementów członkowskich w kodzie. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
--   Mających formularza <xref:System.Windows.Forms.ListBox> formantu o nazwie `ListBox1`.  
+- Mających formularza <xref:System.Windows.Forms.ListBox> formantu o nazwie `ListBox1`.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Nie trzeba używać <xref:System.Windows.Forms.ListBox> formantu, aby wyświetlić nazwy dostępnych portu szeregowego. Zamiast tego można użyć <xref:System.Windows.Forms.ComboBox> lub inny formant. Jeśli aplikacja nie wymaga odpowiedź od użytkownika, możesz użyć <xref:System.Windows.Forms.TextBox> formantu, aby wyświetlić informacje.  

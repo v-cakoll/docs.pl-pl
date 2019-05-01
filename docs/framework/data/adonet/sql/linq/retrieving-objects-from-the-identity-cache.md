@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033478"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Pobieranie obiektów z pamięci podręcznej tożsamości
 W tym temacie opisano rodzaje LINQ do zapytań SQL, które zwracają obiekt z pamięci podręcznej tożsamości zarządzanych przez <xref:System.Data.Linq.DataContext>.  
@@ -24,39 +24,39 @@ W tym temacie opisano rodzaje LINQ do zapytań SQL, które zwracają obiekt z pa
   
  Zapytanie musi mieć jedną z następujących form ogólne, aby pobrać obiekt z pamięci podręcznej tożsamości:  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
  W tych formularzach ogólne `Function1`, `Function2`, i `predicate` są zdefiniowane w następujący sposób.  
   
  `Function1` może być dowolny z następujących czynności:  
   
--   <xref:System.Linq.Queryable.Where%2A>  
+- <xref:System.Linq.Queryable.Where%2A>  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  `Function2` może być dowolny z następujących czynności:  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  `predicate` musi być wyrażeniem, w której właściwość klucza podstawowego obiektu jest ustawiony na wartość stałą. Jeśli obiekt ma zdefiniowany przez więcej niż jedną właściwość klucza podstawowego, każda właściwość klucza podstawowego musi być równa wartości stałej. Poniżej przedstawiono przykłady formularza `predicate` należy wykonać:  
   
--   `c => c.PK == constant_value`  
+- `c => c.PK == constant_value`  
   
--   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
+- `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod zawiera przykłady typów LINQ do zapytań SQL, które pobierają obiekt z pamięci podręcznej tożsamości.  

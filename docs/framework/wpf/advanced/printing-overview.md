@@ -16,11 +16,11 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051263"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu Windows Presentation Foundation (WPF) mają bogaty zestaw nowych Zarządzanie systemem drukowania i wydruku [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Za pomocą [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych rozszerzeń systemu drukowania są również dostępne dla programistów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperzy korzystający z niezarządzanego kodu. W ramach tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku.  
@@ -43,21 +43,21 @@ Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu
   
  Korzyści wynikające z [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżka wydruku jest znaczna i obejmują:  
   
--   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] Obsługa drukowania  
+- [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] Obsługa drukowania  
   
--   Macierzysta obsługa Profile zaawansowane kolorów, które obejmują 32 bitów na kanał, CMYK, o nazwie kolory, n farby i natywną obsługę przejrzystości i gradientów.  
+- Macierzysta obsługa Profile zaawansowane kolorów, które obejmują 32 bitów na kanał, CMYK, o nazwie kolory, n farby i natywną obsługę przejrzystości i gradientów.  
   
--   Zwiększona wydajność wydruku dla obu .NET Framework i [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] na podstawie aplikacji.  
+- Zwiększona wydajność wydruku dla obu .NET Framework i [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] na podstawie aplikacji.  
   
--   Standardem branżowym [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] formatu.  
+- Standardem branżowym [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] formatu.  
   
  W przypadku podstawowych scenariuszy wydruku a proste i intuicyjne [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] dostępnej za pomocą pojedynczego punktu wejścia do przesłania interfejsu, konfiguracji i zadania użytkownika. W przypadku zaawansowanych scenariuszy dodatkowa pomoc techniczna jest dodawany do [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dostosowywania (lub nie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] na wszystkich), synchroniczna lub asynchroniczna drukowanie i batch możliwość drukowania. Obie udostępniają Obsługa drukowania w trybie pełnej lub częściowej relacji zaufania.  
   
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] zaprojektowano pod kątem rozszerzalności na uwadze. Za pomocą strukturę rozszerzalności, funkcje i możliwości mogą być dodawane do [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] w sposób moduły. Rozszerzalność funkcje obejmują:  
   
--   Drukowanie schematu. Schemat publicznej jest regularnie aktualizowana, a także umożliwia szybkie rozszerzenie możliwości urządzenia. (Zobacz **PrintTicket — i printcapabilities —** poniżej.)  
+- Drukowanie schematu. Schemat publicznej jest regularnie aktualizowana, a także umożliwia szybkie rozszerzenie możliwości urządzenia. (Zobacz **PrintTicket — i printcapabilities —** poniżej.)  
   
--   Potok rozszerzonego filtru. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Potoku filtru (XPSDrv) sterownika drukarki zaprojektowano tak, aby włączyć drukowanie bezpośrednie i skalowalne [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów. Aby uzyskać więcej informacji, zobacz [sterowników drukarek XPSDrv](/windows-hardware/drivers/print/xpsdrv-printer-drivers). 
+- Potok rozszerzonego filtru. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Potoku filtru (XPSDrv) sterownika drukarki zaprojektowano tak, aby włączyć drukowanie bezpośrednie i skalowalne [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów. Aby uzyskać więcej informacji, zobacz [sterowników drukarek XPSDrv](/windows-hardware/drivers/print/xpsdrv-printer-drivers). 
   
 ### <a name="print-path-architecture"></a>Ścieżka wydruku architektury  
  Podczas gdy obie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] i obsługę aplikacji programu .NET Framework [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] i używać w aplikacjach Windows Forms [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] do [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] konwersji, aby można było utworzyć [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sformatowaną zawartość dla [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]sterownika drukarki (XPSDrv). Te aplikacje nie są wymagane do użycia [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżka wydruku i mogą w dalszym ciągu używać [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] na podstawie drukowania. Jednak większość [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] funkcje i rozszerzenia są dostępne tylko dla aplikacji przeznaczonych dla [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżka wydruku.  
@@ -110,7 +110,7 @@ Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu
 
 W przypadku aplikacji, które nie wymagają [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] funkcji lub pomocy technicznej, bieżący [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ścieżka wydruku pozostaje bez zmian.  
   
--   Aby uzyskać dodatkowe materiały dotyczące [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] drukować ścieżki i różnych [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] opcje konwersji, zobacz [Microsoft XPS dokumentu konwerter (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-) i [sterowników drukarek XPSDrv](/windows-hardware/drivers/print/xpsdrv-printer-drivers).  
+- Aby uzyskać dodatkowe materiały dotyczące [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] drukować ścieżki i różnych [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] opcje konwersji, zobacz [Microsoft XPS dokumentu konwerter (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-) i [sterowników drukarek XPSDrv](/windows-hardware/drivers/print/xpsdrv-printer-drivers).  
   
 <a name="XPS_Driver_Model_intro"></a>   
 ## <a name="xpsdrv-driver-model"></a>Model sterownika XPSDrv  
@@ -120,19 +120,19 @@ W przypadku aplikacji, które nie wymagają [!INCLUDE[TLA2#tla_metro](../../../.
   
  Rozmiary plików buforu zwykle są mniejsze, gdy używasz [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumenty, których platformą docelową [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sterownika drukarki (XPSDrv) w porównaniu z ich [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] odpowiedniki; istnieją jednak wyjątki:  
   
--   Grafiki wektorowej, który jest bardzo złożonych, wielowarstwowych lub nieefektywnie napisane może być większy niż mapy bitowej wersji tego samego pliku graficznego.  
+- Grafiki wektorowej, który jest bardzo złożonych, wielowarstwowych lub nieefektywnie napisane może być większy niż mapy bitowej wersji tego samego pliku graficznego.  
   
--   Do wyświetlania ekranu pliki XPS osadzania czcionek urządzenia, a także czcionek oparte na komputerze; natomiast plików buforu interfejsu GDI nie osadzaj czcionek urządzenia. Ale podzbiory (patrz poniżej) są oba rodzaje czcionek i sterowniki drukarki można usunąć czcionki urządzenia przed przekazaniem go do drukarki.  
+- Do wyświetlania ekranu pliki XPS osadzania czcionek urządzenia, a także czcionek oparte na komputerze; natomiast plików buforu interfejsu GDI nie osadzaj czcionek urządzenia. Ale podzbiory (patrz poniżej) są oba rodzaje czcionek i sterowniki drukarki można usunąć czcionki urządzenia przed przekazaniem go do drukarki.  
   
  Zmniejszanie rozmiaru buforu jest wykonywane przy użyciu kilku mechanizmów:  
   
--   **Korzystanie z podzbiorów czcionek**. Tylko znaki używane w dokumencie rzeczywistych są przechowywane w [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] pliku.  
+- **Korzystanie z podzbiorów czcionek**. Tylko znaki używane w dokumencie rzeczywistych są przechowywane w [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] pliku.  
   
--   **Zaawansowana obsługa grafiki**. Natywna obsługa podstawowych przejrzystości i gradientu pozwala uniknąć rasteryzacji zawartość [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dokumentu.  
+- **Zaawansowana obsługa grafiki**. Natywna obsługa podstawowych przejrzystości i gradientu pozwala uniknąć rasteryzacji zawartość [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dokumentu.  
   
--   **Identyfikowanie wspólnych zasobów**. Zasoby, które są używane wielokrotnie (takich jak obraz, który reprezentuje logo firmy), są traktowane jako zasobów udostępnionych i są ładowane tylko raz.  
+- **Identyfikowanie wspólnych zasobów**. Zasoby, które są używane wielokrotnie (takich jak obraz, który reprezentuje logo firmy), są traktowane jako zasobów udostępnionych i są ładowane tylko raz.  
   
--   **Kompresji ZIP**. Wszystkie [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów Użyj kompresji ZIP.  
+- **Kompresji ZIP**. Wszystkie [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów Użyj kompresji ZIP.  
   
 ## <a name="see-also"></a>Zobacz także
 

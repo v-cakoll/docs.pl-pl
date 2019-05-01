@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
 ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008970"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Instrukcje: Tworzenie kontrolki powiązanej oraz formatowanie wyświetlanych danych
 Za pomocą powiązanie danych formularzy Windows, możesz sformatować dane wyświetlane w kontrolce powiązanych z danymi za pomocą **formatowanie i zaawansowane powiązanie** okno dialogowe.  
@@ -46,7 +46,7 @@ Za pomocą powiązanie danych formularzy Windows, możesz sformatować dane wyś
     |Typ formatu|Opcja formatowania|  
     |-----------------|-----------------------|  
     |Bez formatowania|Brak opcji.|  
-    |Numeryczne|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|  
+    |Numeric|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|  
     |Waluta|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|  
     |Data i godzina|Wybierz sposób wyświetlania daty i godziny, wybierając jeden z elementów w **typu** pola wyboru.|  
     |naukowe|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002173"
 ---
 # <a name="storyboards-overview"></a>Przegląd Scenorysy
 W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyboard> obiekty do organizowania i stosowanie animacji. Opis interaktywnie manipulowania <xref:System.Windows.Media.Animation.Storyboard> obiektów i opisuje właściwość pośrednich, przeznaczone dla składni.  
@@ -29,11 +29,11 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
   
  Element <xref:System.Windows.Media.Animation.Storyboard> jest typem kontenera osi czasu, który dostarcza informacje określania wartości docelowej dla osi czasu zawiera. Scenorysu może zawierać dowolny typ <xref:System.Windows.Media.Animation.Timeline>, w tym innych kontenerów osie czasu i animacji. <xref:System.Windows.Media.Animation.Storyboard> obiekty umożliwiają łączenie osi czasu, które mają wpływ na różne obiekty i właściwości w drzewie jedną oś czasu, co ułatwia organizowanie i kontrolowania zachowania chronometrażu złożonych. Na przykład załóżmy, że chcesz, aby przycisk, który wykona te trzy rzeczy.  
   
--   Rozwijaj i zmienić kolor, gdy użytkownik wybierze przycisk.  
+- Rozwijaj i zmienić kolor, gdy użytkownik wybierze przycisk.  
   
--   Zmniejszanie natychmiast, a następnie przejść do jego oryginalny rozmiar po kliknięciu.  
+- Zmniejszanie natychmiast, a następnie przejść do jego oryginalny rozmiar po kliknięciu.  
   
--   Zmniejszanie i stopniowe do 50 procent krycia, gdy zostanie ona wyłączona.  
+- Zmniejszanie i stopniowe do 50 procent krycia, gdy zostanie ona wyłączona.  
   
  W tym przypadku masz wiele zestawów animacji, które są stosowane do tego samego obiektu, a ma być odtwarzany w różnym czasie, zależy od stanu przycisku. <xref:System.Windows.Media.Animation.Storyboard> obiekty umożliwiają organizowanie animacji i zastosować je w grupach na co najmniej jeden obiekt.  
   
@@ -43,11 +43,11 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
   
  Na przykład można użyć <xref:System.Windows.Media.Animation.Storyboard> wykonać następujące czynności:  
   
--   Animowanie <xref:System.Windows.Media.SolidColorBrush> (inne niż framework element), który maluje tło przycisku (typ <xref:System.Windows.FrameworkElement>),  
+- Animowanie <xref:System.Windows.Media.SolidColorBrush> (inne niż framework element), który maluje tło przycisku (typ <xref:System.Windows.FrameworkElement>),  
   
--   Animowanie <xref:System.Windows.Media.SolidColorBrush> (inne niż framework element), który maluje wypełnienie <xref:System.Windows.Media.GeometryDrawing> (inne niż framework element) wyświetlana przy użyciu <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
+- Animowanie <xref:System.Windows.Media.SolidColorBrush> (inne niż framework element), który maluje wypełnienie <xref:System.Windows.Media.GeometryDrawing> (inne niż framework element) wyświetlana przy użyciu <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
   
--   W kodzie, animować <xref:System.Windows.Media.SolidColorBrush> zadeklarowane przez klasę, która zawiera również <xref:System.Windows.FrameworkElement>, jeśli <xref:System.Windows.Media.SolidColorBrush> zarejestrowane nazwy, <xref:System.Windows.FrameworkElement>.  
+- W kodzie, animować <xref:System.Windows.Media.SolidColorBrush> zadeklarowane przez klasę, która zawiera również <xref:System.Windows.FrameworkElement>, jeśli <xref:System.Windows.Media.SolidColorBrush> zarejestrowane nazwy, <xref:System.Windows.FrameworkElement>.  
   
  Jednak nie można użyć <xref:System.Windows.Media.Animation.Storyboard> animować <xref:System.Windows.Media.SolidColorBrush> nie zarejestrował takiej samej nazwy <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>, lub nie był używany do ustawiania właściwości z <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>.  
   
@@ -63,8 +63,8 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> i <xref:System.Windows.EventTrigger>|Yes|Yes|Yes|Yes|[Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> i właściwości <xref:System.Windows.Trigger>|Nie|Yes|Yes|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Yes|Yes|Yes|[Instrukcje: Wyzwalanie animacji w przypadku zmiany danych](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — Metoda|Yes|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Yes|Yes|Tak|[Instrukcje: Wyzwalanie animacji w przypadku zmiany danych](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — Metoda|Tak|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.Storyboard> animować <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> elementu i <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> używany do rysowania, które <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -140,9 +140,9 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
   
  Gdzie  
   
--   *ElementPropertyName* jest właściwość <xref:System.Windows.FrameworkElement> który <xref:System.Windows.Freezable> służy do ustawiania, i  
+- *ElementPropertyName* jest właściwość <xref:System.Windows.FrameworkElement> który <xref:System.Windows.Freezable> służy do ustawiania, i  
   
--   *FreezablePropertyName* jest właściwość <xref:System.Windows.Freezable> animować.  
+- *FreezablePropertyName* jest właściwość <xref:System.Windows.Freezable> animować.  
   
  Poniższy kod pokazuje, jak animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> używane do ustawiania  
   
@@ -186,9 +186,9 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
   
  Gdzie  
   
--   *OwnerPropertyArrayIndex* jest indeksem <xref:System.Windows.DependencyProperty> tablicę, która zawiera identyfikator <xref:System.Windows.FrameworkElement> właściwości obiektu, <xref:System.Windows.Freezable> służy do ustawiania, i  
+- *OwnerPropertyArrayIndex* jest indeksem <xref:System.Windows.DependencyProperty> tablicę, która zawiera identyfikator <xref:System.Windows.FrameworkElement> właściwości obiektu, <xref:System.Windows.Freezable> służy do ustawiania, i  
   
--   *FreezablePropertyArrayIndex* jest indeksem <xref:System.Windows.DependencyProperty> tablicy, która zawiera identyfikator właściwości do obiektu docelowego.  
+- *FreezablePropertyArrayIndex* jest indeksem <xref:System.Windows.DependencyProperty> tablicy, która zawiera identyfikator właściwości do obiektu docelowego.  
   
  W poniższym przykładzie przedstawiono <xref:System.Windows.PropertyPath.Path%2A> , będzie towarzyszyć <xref:System.Windows.PropertyPath.PathParameters%2A> zdefiniowane w poprzednim przykładzie.
   
@@ -225,17 +225,17 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Kontrolowanie interaktywnie scenorysu w XAML  
  Aby rozpocząć scenorysu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], możesz użyć <xref:System.Windows.Media.Animation.BeginStoryboard> wyzwalanie akcji. <xref:System.Windows.Media.Animation.BeginStoryboard> dystrybuuje animacji do obiektów i właściwości, animować i uruchamia scenorysu. (Aby uzyskać szczegółowe informacje o tym procesie, zobacz [Animacja i System chronometrażu w — Przegląd](animation-and-timing-system-overview.md).) Jeśli nadasz <xref:System.Windows.Media.Animation.BeginStoryboard> nazwę, określając jego <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> właściwości, możesz obejrzeć sterowane scenorysu. Możesz następnie interaktywnie kontrolować scenorys po uruchomieniu. Oto lista czynności scenorysu musi używać przy użyciu wyzwalaczy zdarzeń, aby kontrolować scenorys.  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: Wstrzymuje scenorysu.  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>: Wstrzymuje scenorysu.  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Wznawia działanie wstrzymanej scenorysu.  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Wznawia działanie wstrzymanej scenorysu.  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Zmienia szybkość scenorysu.  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Zmienia szybkość scenorysu.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Przesuwa scenorysu do końca okresu wypełnienia, jeśli taki istnieje.  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Przesuwa scenorysu do końca okresu wypełnienia, jeśli taki istnieje.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Zatrzymuje scenorysu.  
+- <xref:System.Windows.Media.Animation.StopStoryboard>: Zatrzymuje scenorysu.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Usuwa scenorysu.  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Usuwa scenorysu.  
   
  W poniższym przykładzie sterowane scenorysu akcji są używane do interaktywnie kontrolować scenorys.  
   
@@ -247,17 +247,17 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
   
  Na poniższej liście przedstawiono metody, które mogą służyć do manipulowania <xref:System.Windows.Media.Animation.Storyboard> po jego uruchomieniu:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
   
  Zaletą używania tych metod jest, że nie trzeba tworzyć <xref:System.Windows.Trigger> lub <xref:System.Windows.TriggerAction> obiektów; po prostu potrzebujesz odwołania do kontrolowania <xref:System.Windows.Media.Animation.Storyboard> należy modyfikować.  
   
@@ -272,13 +272,13 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
 ## <a name="animate-in-a-style"></a>Animuj w stylu  
  Możesz użyć <xref:System.Windows.Media.Animation.Storyboard> obiektów, aby zdefiniować animacje w <xref:System.Windows.Style>. Animowanie za pomocą <xref:System.Windows.Media.Animation.Storyboard> w <xref:System.Windows.Style> jest podobne do <xref:System.Windows.Media.Animation.Storyboard> w innym miejscu, z wyjątkiem trzy:  
   
--   Nie określaj <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; <xref:System.Windows.Media.Animation.Storyboard> zawsze jest przeznaczony dla elementu, do którego <xref:System.Windows.Style> jest stosowany. Do obiektu docelowego <xref:System.Windows.Freezable> obiektów, należy użyć pośrednich określania wartości docelowej. Aby uzyskać więcej informacji na temat pośrednich przeznaczonych dla zobacz [przeznaczonych dla pośredniego](#pathsyntaxforchangeable) sekcji.  
+- Nie określaj <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; <xref:System.Windows.Media.Animation.Storyboard> zawsze jest przeznaczony dla elementu, do którego <xref:System.Windows.Style> jest stosowany. Do obiektu docelowego <xref:System.Windows.Freezable> obiektów, należy użyć pośrednich określania wartości docelowej. Aby uzyskać więcej informacji na temat pośrednich przeznaczonych dla zobacz [przeznaczonych dla pośredniego](#pathsyntaxforchangeable) sekcji.  
   
--   Nie można określić <xref:System.Windows.EventTrigger.SourceName%2A> dla <xref:System.Windows.EventTrigger> lub <xref:System.Windows.Trigger>.  
+- Nie można określić <xref:System.Windows.EventTrigger.SourceName%2A> dla <xref:System.Windows.EventTrigger> lub <xref:System.Windows.Trigger>.  
   
--   Nie można użyć wyrażenia wiązania odwołania lub danych dynamicznych zasobów można ustawić <xref:System.Windows.Media.Animation.Storyboard> lub wartości właściwości animacji. To dlatego, że wszystko wewnątrz <xref:System.Windows.Style> musi być metodą o bezpiecznych wątkach, i system chronometrażu musi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> obiektów, aby były one metodą o bezpiecznych wątkach. Element <xref:System.Windows.Media.Animation.Storyboard> nie można zablokować, jeśli on lub jego podrzędnych osi czasu zawiera zasób dynamiczny odwołania lub danych wyrażenia wiązania. Aby uzyskać więcej informacji o zamrażanie i inne <xref:System.Windows.Freezable> funkcje, zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md).  
+- Nie można użyć wyrażenia wiązania odwołania lub danych dynamicznych zasobów można ustawić <xref:System.Windows.Media.Animation.Storyboard> lub wartości właściwości animacji. To dlatego, że wszystko wewnątrz <xref:System.Windows.Style> musi być metodą o bezpiecznych wątkach, i system chronometrażu musi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> obiektów, aby były one metodą o bezpiecznych wątkach. Element <xref:System.Windows.Media.Animation.Storyboard> nie można zablokować, jeśli on lub jego podrzędnych osi czasu zawiera zasób dynamiczny odwołania lub danych wyrażenia wiązania. Aby uzyskać więcej informacji o zamrażanie i inne <xref:System.Windows.Freezable> funkcje, zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md).  
   
--   W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], nie można zadeklarować obsługę zdarzeń dla <xref:System.Windows.Media.Animation.Storyboard> lub zdarzenia animacji.  
+- W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], nie można zadeklarować obsługę zdarzeń dla <xref:System.Windows.Media.Animation.Storyboard> lub zdarzenia animacji.  
   
  Na przykład przedstawiający sposób definiowania scenorysu w stylu zobacz [Animuj w stylu](how-to-animate-in-a-style.md) przykład.  
   
@@ -286,13 +286,13 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
 ## <a name="animate-in-a-controltemplate"></a>Animuj w ControlTemplate  
  Możesz użyć <xref:System.Windows.Media.Animation.Storyboard> obiektów, aby zdefiniować animacje w <xref:System.Windows.Controls.ControlTemplate>. Animowanie za pomocą <xref:System.Windows.Media.Animation.Storyboard> w <xref:System.Windows.Controls.ControlTemplate> jest podobne do <xref:System.Windows.Media.Animation.Storyboard> w innym miejscu, z wyjątkiem dwóch następujących sytuacji:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Mogą odwoływać się tylko do obiektów podrzędnych <xref:System.Windows.Controls.ControlTemplate>. Jeśli <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> nie zostanie określony, animacji jest przeznaczony dla elementu, do którego <xref:System.Windows.Controls.ControlTemplate> jest stosowany.  
+- <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Mogą odwoływać się tylko do obiektów podrzędnych <xref:System.Windows.Controls.ControlTemplate>. Jeśli <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> nie zostanie określony, animacji jest przeznaczony dla elementu, do którego <xref:System.Windows.Controls.ControlTemplate> jest stosowany.  
   
--   <xref:System.Windows.EventTrigger.SourceName%2A> Dla <xref:System.Windows.EventTrigger> lub <xref:System.Windows.Trigger> mogą odwoływać się tylko do obiektów podrzędnych <xref:System.Windows.Controls.ControlTemplate>.  
+- <xref:System.Windows.EventTrigger.SourceName%2A> Dla <xref:System.Windows.EventTrigger> lub <xref:System.Windows.Trigger> mogą odwoływać się tylko do obiektów podrzędnych <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Nie można użyć wyrażenia wiązania odwołania lub danych dynamicznych zasobów można ustawić <xref:System.Windows.Media.Animation.Storyboard> lub wartości właściwości animacji. To dlatego, że wszystko wewnątrz <xref:System.Windows.Controls.ControlTemplate> musi być metodą o bezpiecznych wątkach, i system chronometrażu musi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> obiektów, aby były one metodą o bezpiecznych wątkach. Element <xref:System.Windows.Media.Animation.Storyboard> nie można zablokować, jeśli on lub jego podrzędnych osi czasu zawiera zasób dynamiczny odwołania lub danych wyrażenia wiązania. Aby uzyskać więcej informacji o zamrażanie i inne <xref:System.Windows.Freezable> funkcje, zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md).  
+- Nie można użyć wyrażenia wiązania odwołania lub danych dynamicznych zasobów można ustawić <xref:System.Windows.Media.Animation.Storyboard> lub wartości właściwości animacji. To dlatego, że wszystko wewnątrz <xref:System.Windows.Controls.ControlTemplate> musi być metodą o bezpiecznych wątkach, i system chronometrażu musi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> obiektów, aby były one metodą o bezpiecznych wątkach. Element <xref:System.Windows.Media.Animation.Storyboard> nie można zablokować, jeśli on lub jego podrzędnych osi czasu zawiera zasób dynamiczny odwołania lub danych wyrażenia wiązania. Aby uzyskać więcej informacji o zamrażanie i inne <xref:System.Windows.Freezable> funkcje, zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md).  
   
--   W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], nie można zadeklarować obsługę zdarzeń dla <xref:System.Windows.Media.Animation.Storyboard> lub zdarzenia animacji.  
+- W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], nie można zadeklarować obsługę zdarzeń dla <xref:System.Windows.Media.Animation.Storyboard> lub zdarzenia animacji.  
   
  Aby uzyskać przykład pokazujący sposób definiowania scenorysu w <xref:System.Windows.Controls.ControlTemplate>, zobacz [Animuj w ControlTemplate](how-to-animate-in-a-controltemplate.md) przykład.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
 ms.openlocfilehash: 1d003df87327e14a6cbd65222f86c3dc4df169ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024485"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Przewodnik: Szyfrowanie i odszyfrowywanie ciągów w Visual Basic
 W tym instruktażu dowiesz się, jak używać <xref:System.Security.Cryptography.DESCryptoServiceProvider> klasy szyfrowanie i odszyfrowywanie ciągów za pomocą wersji dostawcy usług kryptograficznych Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algorytmu. Pierwszym krokiem jest utworzyć klasę otoki prostą, która hermetyzuje algorytmu 3DES i przechowuje zaszyfrowane dane jako ciąg zakodowany base-64. Następnie tej otoki służy do bezpiecznego przechowywania prywatnych danych użytkowników w pliku tekstowym dostępny publicznie.  

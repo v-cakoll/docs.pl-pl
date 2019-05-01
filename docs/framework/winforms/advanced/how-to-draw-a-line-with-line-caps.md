@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
 ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004205"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Instrukcje: Rysowanie linii z zakończeniem linii
 Możesz narysować początek lub koniec wiersza w jednym z kilku kształtów wywoływana z zakończeniem linii. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] obsługuje kilka zakończeniem linii, takich jak round, kwadratowy, romb i grotu strzałki.  
@@ -32,7 +32,7 @@ Możesz narysować początek lub koniec wiersza w jednym z kilku kształtów wyw
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Tworzenie formularza Windows i obsłużyć formularza <xref:System.Windows.Forms.Control.Paint> zdarzeń. Wklej przykładowy kod do <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń, przekazując `e` jako <xref:System.Windows.Forms.PaintEventArgs>.  
+- Tworzenie formularza Windows i obsłużyć formularza <xref:System.Windows.Forms.Control.Paint> zdarzeń. Wklej przykładowy kod do <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń, przekazując `e` jako <xref:System.Windows.Forms.PaintEventArgs>.  
   
 ## <a name="see-also"></a>Zobacz także
 

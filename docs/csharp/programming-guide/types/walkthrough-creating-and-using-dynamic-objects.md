@@ -10,11 +10,11 @@ helpviewer_keywords:
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61974808"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Przewodnik: Tworzenie obiektów dynamicznych i posługiwanie się nimi (C# i Visual Basic)
 
@@ -28,9 +28,9 @@ Obiekty dynamiczne udostępnianie składowych, takich jak właściwości i metod
   
  W tym instruktażu wykonasz następujące zadania:  
   
--   Utwórz niestandardowy obiekt, który dynamicznie udostępnia zawartość pliku tekstowego jako właściwości obiektu.  
+- Utwórz niestandardowy obiekt, który dynamicznie udostępnia zawartość pliku tekstowego jako właściwości obiektu.  
   
--   Utwórz projekt, który używa `IronPython` biblioteki.  
+- Utwórz projekt, który używa `IronPython` biblioteki.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
 

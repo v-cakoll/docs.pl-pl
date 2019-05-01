@@ -3,11 +3,11 @@ title: Mieszanie protokołów zaufania w scenariuszach obejmujących federację
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
 ms.openlocfilehash: ce5c3a1875d84d98068dcc78d8346a88bc0b28f3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046695"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Mieszanie protokołów zaufania w scenariuszach obejmujących federację
 Mogą istnieć scenariusze, w których federacyjnego klienci komunikują się z usługą i Usługa tokenu zabezpieczającego (STS), które nie mają tę samą wersję zaufania. Usługa może zawierać WSDL `RequestSecurityTokenTemplate` potwierdzenia z elementami WS-Trust, które są w różnych wersjach niż usługi STS. W takich przypadkach klienta usługi Windows Communication Foundation (WCF) konwertuje elementy WS-Trust otrzymane od `RequestSecurityTokenTemplate` do dopasowania usługi STS zaufania wersji. Usługi WCF obsługuje wersje niedopasowanych zaufania tylko standardowe powiązania. Wszystkie parametry algorytmu standard, które są rozpoznawane przez architekturę WCF są częścią standardowych powiązania. W tym temacie opisano zachowanie WCF za pomocą różnych ustawień zaufania między usługą i Usługa tokenu Zabezpieczającego.  
@@ -15,17 +15,17 @@ Mogą istnieć scenariusze, w których federacyjnego klienci komunikują się z 
 ## <a name="rp-feb-2005-and-sts-feb-2005"></a>Jednostki Uzależnionej lut 2005 i STS lut 2005  
  WSDL dla jednostki uzależnionej strona (RP) zawiera następujące elementy w ramach `RequestSecurityTokenTemplate` sekcji:  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
  Plik konfiguracji klienta zawiera listę parametrów.  
   
@@ -34,19 +34,19 @@ Mogą istnieć scenariusze, w których federacyjnego klienci komunikują się z 
 ## <a name="rp-trust-13-and-sts-trust-13"></a>Zaufania jednostki Uzależnionej 1.3 i usługi STS Trust 1.3  
  WSDL dla jednostki Uzależnionej zawiera następujące elementy w ramach `RequestSecurityTokenTemplate` sekcji:  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
--   `KeyWrapAlgorithm`  
+- `KeyWrapAlgorithm`  
   
  Plik konfiguracji klienta zawiera `secondaryParameters` element, który otacza parametrów określonych przez jednostkę Uzależnioną.  
   
@@ -55,17 +55,17 @@ Mogą istnieć scenariusze, w których federacyjnego klienci komunikują się z 
 ## <a name="rp-trust-feb-2005-and-sts-trust-13"></a>Zaufania jednostki Uzależnionej lut 2005 i STS Trust 1.3  
  WSDL dla jednostki Uzależnionej zawiera następujące elementy w `RequestSecurityTokenTemplate` sekcji:  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
  Plik konfiguracji klienta zawiera listę parametrów.  
   
@@ -73,28 +73,28 @@ Mogą istnieć scenariusze, w których federacyjnego klienci komunikują się z 
   
  Uchwyty WCF `KeyType`, `KeySize`, i `TokenType` elementy w następujący sposób:  
   
--   Pobieranie pliku WSDL, utworzyć powiązanie i przypisać `KeyType`, `KeySize`, i `TokenType` z parametrów jednostki Uzależnionej. Następnie zostanie wygenerowany plik konfiguracji klienta.  
+- Pobieranie pliku WSDL, utworzyć powiązanie i przypisać `KeyType`, `KeySize`, i `TokenType` z parametrów jednostki Uzależnionej. Następnie zostanie wygenerowany plik konfiguracji klienta.  
   
--   Klienta można teraz zmienić żadnych parametrów w pliku konfiguracji.  
+- Klienta można teraz zmienić żadnych parametrów w pliku konfiguracji.  
   
--   Podczas wykonywania programu WCF kopiuje wszystkie parametry określoną `AdditionalTokenParameters` sekcji w pliku konfiguracji klienta, z wyjątkiem `KeyType`, `KeySize` i `TokenType`, ponieważ te parametry są rozliczane w pliku konfiguracji Generowanie.  
+- Podczas wykonywania programu WCF kopiuje wszystkie parametry określoną `AdditionalTokenParameters` sekcji w pliku konfiguracji klienta, z wyjątkiem `KeyType`, `KeySize` i `TokenType`, ponieważ te parametry są rozliczane w pliku konfiguracji Generowanie.  
   
 ## <a name="rp-trust-13-and-sts-trust-feb-2005"></a>Zaufania jednostki Uzależnionej 1.3 i zaufanie usługi STS lut 2005  
  WSDL dla jednostki Uzależnionej zawiera następujące elementy w `RequestSecurityTokenTemplate` sekcji:  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
--   `KeyWrapAlgorithm`  
+- `KeyWrapAlgorithm`  
   
  Plik konfiguracji klienta zawiera `secondaryParamters` element, który otacza parametrów określonych przez jednostkę Uzależnioną.  
   

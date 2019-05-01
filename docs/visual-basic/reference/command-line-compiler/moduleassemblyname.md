@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793903"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Określa nazwę zestawu, który będzie należeć tego modułu.  
@@ -33,9 +33,9 @@ Określa nazwę zestawu, który będzie należeć tego modułu.
   
  `-moduleassemblyname` Opcja jest potrzebna tylko wtedy, gdy spełnione są poniższe warunki:  
   
--   Typ danych w module musi mieć dostęp do `Friend` typu w zestawie odwołania.  
+- Typ danych w module musi mieć dostęp do `Friend` typu w zestawie odwołania.  
   
--   Przywoływany zestaw przyznał prawa dostępu do zestawu friend do zestawu, do którego zostanie skompilowany moduł.  
+- Przywoływany zestaw przyznał prawa dostępu do zestawu friend do zestawu, do którego zostanie skompilowany moduł.  
   
  Aby uzyskać więcej informacji na temat tworzenia modułu, zobacz [/TARGET (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Aby uzyskać więcej informacji na temat przyjaznych zestawów, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
   

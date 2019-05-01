@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048277"
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
 Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń związanych z zabezpieczeniami (Powodzenie, Niepowodzenie lub obie) za pomocą funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można zbadać za pomocą Podglądu zdarzeń.  
@@ -21,9 +21,9 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
 ## <a name="audit-level-and-behavior"></a>Poziom inspekcji i zachowania  
  Istnieją dwa poziomy inspekcji zabezpieczeń:  
   
--   Poziom autoryzacji usługi, w którym obiekt wywołujący jest autoryzowany.  
+- Poziom autoryzacji usługi, w którym obiekt wywołujący jest autoryzowany.  
   
--   Poziom komunikatu, w którym WCF sprawdza poprawność wiadomości, a obiekt wywołujący uwierzytelnia.  
+- Poziom komunikatu, w którym WCF sprawdza poprawność wiadomości, a obiekt wywołujący uwierzytelnia.  
   
  Możesz sprawdzić zarówno inspekcji poziomy powodzenie lub niepowodzenie, który jest znany jako *inspekcji zachowanie*.  
   

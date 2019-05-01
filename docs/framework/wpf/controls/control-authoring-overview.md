@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017686"
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
 Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] model kontroli znacząco zmniejsza potrzebę tworzenia nowego formantu. Jednak w niektórych przypadkach może być nadal należy utworzyć formant niestandardowy. W tym temacie omówiono funkcje, które zminimalizować potrzebę tworzenia formantu niestandardowego i innej kontrolki tworzenia modeli w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Również w tym temacie pokazano, jak utworzyć nowy formant.  
@@ -22,18 +22,18 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 ## <a name="alternatives-to-writing-a-new-control"></a>Alternatywy dla zapisywania nowego formantu  
  W przeszłości Jeśli chcesz uzyskać dostosowane środowisko z istniejącej kontrolki ograniczały użytkowników do zmiany standardowe właściwości kontrolki, takie jak kolor tła, szerokość obramowania i rozmiar czcionki. Dalej rozszerzać wygląd i zachowanie kontrolki poza tych wstępnie zdefiniowanych parametrów, należy utworzyć nowy formant, zwykle przez dziedziczenie z istniejącej kontrolki i zastąpienie metody, które są odpowiedzialne za narysowanie formantu.  Mimo że nadal jest opcją, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] umożliwia użytkownikowi dostosowywanie istniejących kontrolek przy użyciu rozbudowanych model zawartości, style, szablonów i wyzwalacze. Poniższa lista zawiera przykłady, jak te funkcje mogą być używane w taki sposób, aby tworzyć niestandardowe i spójne środowiska bez konieczności tworzenia nowego formantu.  
   
--   **Sformatowana zawartość.** Wiele standardowych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty obsługują sformatowanej zawartości. Na przykład właściwość content <xref:System.Windows.Controls.Button> typu <xref:System.Object>, więc teoretycznie niczego mogą być wyświetlane na <xref:System.Windows.Controls.Button>.  Aby wyświetlić obraz i tekst przycisku, można dodać obraz i <xref:System.Windows.Controls.TextBlock> do <xref:System.Windows.Controls.StackPanel> i przypisać <xref:System.Windows.Controls.StackPanel> do <xref:System.Windows.Controls.ContentControl.Content%2A> właściwości. Ponieważ formanty można wyświetlić [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy wizualne i dowolne dane, jest mniej wymagane, aby utworzyć nową kontrolkę lub zmodyfikować istniejącą kontrolkę do obsługi złożonych wizualizacji. Aby uzyskać więcej informacji na temat modelu zawartości dla <xref:System.Windows.Controls.Button> i innej zawartości modeli w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [Model zawartości WPF](wpf-content-model.md).  
+- **Sformatowana zawartość.** Wiele standardowych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty obsługują sformatowanej zawartości. Na przykład właściwość content <xref:System.Windows.Controls.Button> typu <xref:System.Object>, więc teoretycznie niczego mogą być wyświetlane na <xref:System.Windows.Controls.Button>.  Aby wyświetlić obraz i tekst przycisku, można dodać obraz i <xref:System.Windows.Controls.TextBlock> do <xref:System.Windows.Controls.StackPanel> i przypisać <xref:System.Windows.Controls.StackPanel> do <xref:System.Windows.Controls.ContentControl.Content%2A> właściwości. Ponieważ formanty można wyświetlić [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy wizualne i dowolne dane, jest mniej wymagane, aby utworzyć nową kontrolkę lub zmodyfikować istniejącą kontrolkę do obsługi złożonych wizualizacji. Aby uzyskać więcej informacji na temat modelu zawartości dla <xref:System.Windows.Controls.Button> i innej zawartości modeli w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [Model zawartości WPF](wpf-content-model.md).  
   
--   **Style.** A <xref:System.Windows.Style> to zbiór wartości, które reprezentują właściwości formantu. Przy użyciu stylów, można utworzyć wielokrotnego użytku reprezentacja kontroli żądany wygląd i zachowanie, bez konieczności pisania nowego formantu. Załóżmy na przykład chcesz wyświetlić wszystkie swoje <xref:System.Windows.Controls.TextBlock> kontrolki ma czerwony, Arial czcionki o rozmiarze czcionki 14. Można utworzyć styl jako zasób i odpowiednio ustawić odpowiednie właściwości. Następnie każdy <xref:System.Windows.Controls.TextBlock> sytuacja: dodajesz do Twojej aplikacji będą mieć tego samego wygląd.  
+- **Style.** A <xref:System.Windows.Style> to zbiór wartości, które reprezentują właściwości formantu. Przy użyciu stylów, można utworzyć wielokrotnego użytku reprezentacja kontroli żądany wygląd i zachowanie, bez konieczności pisania nowego formantu. Załóżmy na przykład chcesz wyświetlić wszystkie swoje <xref:System.Windows.Controls.TextBlock> kontrolki ma czerwony, Arial czcionki o rozmiarze czcionki 14. Można utworzyć styl jako zasób i odpowiednio ustawić odpowiednie właściwości. Następnie każdy <xref:System.Windows.Controls.TextBlock> sytuacja: dodajesz do Twojej aplikacji będą mieć tego samego wygląd.  
   
--   **Szablony danych.** A <xref:System.Windows.DataTemplate> pozwala dostosować sposób wyświetlania danych w formancie. Na przykład <xref:System.Windows.DataTemplate> może służyć do określenia, jak dane są wyświetlane w <xref:System.Windows.Controls.ListBox>.  Aby na przykład, zobacz [Przegląd Szablonowanie danych](../data/data-templating-overview.md).  Oprócz Dostosowywanie wyglądu danych <xref:System.Windows.DataTemplate> może zawierać elementy interfejsu użytkownika, który zapewnia dużą elastyczność w niestandardowych interfejsów użytkownika.  Na przykład za pomocą <xref:System.Windows.DataTemplate>, możesz utworzyć <xref:System.Windows.Controls.ComboBox> , w której każdy element zawiera pole wyboru.  
+- **Szablony danych.** A <xref:System.Windows.DataTemplate> pozwala dostosować sposób wyświetlania danych w formancie. Na przykład <xref:System.Windows.DataTemplate> może służyć do określenia, jak dane są wyświetlane w <xref:System.Windows.Controls.ListBox>.  Aby na przykład, zobacz [Przegląd Szablonowanie danych](../data/data-templating-overview.md).  Oprócz Dostosowywanie wyglądu danych <xref:System.Windows.DataTemplate> może zawierać elementy interfejsu użytkownika, który zapewnia dużą elastyczność w niestandardowych interfejsów użytkownika.  Na przykład za pomocą <xref:System.Windows.DataTemplate>, możesz utworzyć <xref:System.Windows.Controls.ComboBox> , w której każdy element zawiera pole wyboru.  
   
--   **Szablony kontrolek.** Wiele kontrolek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] użyj <xref:System.Windows.Controls.ControlTemplate> do zdefiniowania kontrolki struktury i wygląd, który oddziela wyglądu formantu z funkcji kontroli. Znacznie można zmienić wygląd kontrolki poprzez zmianę definicji jego <xref:System.Windows.Controls.ControlTemplate>.  Na przykład załóżmy, że chcesz, aby formant, który wygląda jak sygnalizatora. Ten formant ma prosty interfejs użytkownika i funkcje.  Kontrolka jest trzy koła, tylko jeden z nich może być włączone w danym momencie. Po niektórych odbicie, należy być może należy pamiętać, że <xref:System.Windows.Controls.RadioButton> oferuje funkcje tylko jeden zaznaczony w danym momencie, ale domyślny wygląd <xref:System.Windows.Controls.RadioButton> nothing wygląda światła na sygnalizatora.  Ponieważ <xref:System.Windows.Controls.RadioButton> używa szablonu kontrolki do definiowania jego wygląd można łatwo zmienić definicję <xref:System.Windows.Controls.ControlTemplate> zgodnie z wymaganiami, kontrolki i używaj przycisków radiowych umożliwia Twojej sygnalizatora.  
+- **Szablony kontrolek.** Wiele kontrolek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] użyj <xref:System.Windows.Controls.ControlTemplate> do zdefiniowania kontrolki struktury i wygląd, który oddziela wyglądu formantu z funkcji kontroli. Znacznie można zmienić wygląd kontrolki poprzez zmianę definicji jego <xref:System.Windows.Controls.ControlTemplate>.  Na przykład załóżmy, że chcesz, aby formant, który wygląda jak sygnalizatora. Ten formant ma prosty interfejs użytkownika i funkcje.  Kontrolka jest trzy koła, tylko jeden z nich może być włączone w danym momencie. Po niektórych odbicie, należy być może należy pamiętać, że <xref:System.Windows.Controls.RadioButton> oferuje funkcje tylko jeden zaznaczony w danym momencie, ale domyślny wygląd <xref:System.Windows.Controls.RadioButton> nothing wygląda światła na sygnalizatora.  Ponieważ <xref:System.Windows.Controls.RadioButton> używa szablonu kontrolki do definiowania jego wygląd można łatwo zmienić definicję <xref:System.Windows.Controls.ControlTemplate> zgodnie z wymaganiami, kontrolki i używaj przycisków radiowych umożliwia Twojej sygnalizatora.  
   
     > [!NOTE]
     >  Mimo że <xref:System.Windows.Controls.RadioButton> służy <xref:System.Windows.DataTemplate>, <xref:System.Windows.DataTemplate> nie wystarcza, w tym przykładzie.  <xref:System.Windows.DataTemplate> Definiuje wygląd elementów zawartości formantu. W przypadku właściwości <xref:System.Windows.Controls.RadioButton>, zawartość jest, niezależnie od rodzaju pojawia się po prawej stronie koła, która wskazuje, czy <xref:System.Windows.Controls.RadioButton> jest zaznaczone.  W przykładzie sygnalizatora przycisku radiowego musi mieć po prostu być circle, który może "dostarczone." Ponieważ wygląd potrzebę sygnalizatora jest więc inny niż domyślny wygląd <xref:System.Windows.Controls.RadioButton>, należy go ponownie zdefiniować <xref:System.Windows.Controls.ControlTemplate>.  Ogólnie rzecz biorąc <xref:System.Windows.DataTemplate> służy do definiowania zawartości lub danych kontrolkę i a <xref:System.Windows.Controls.ControlTemplate> służy do definiowania struktury formantu.  
   
--   **Wyzwalacze.** A <xref:System.Windows.Trigger> dynamicznie zmieniać wygląd i zachowanie kontrolki bez tworzenia nowego formantu. Załóżmy na przykład, posiadasz wiele <xref:System.Windows.Controls.ListBox> formantów w aplikacji i elementy w każdym <xref:System.Windows.Controls.ListBox> jest pogrubiony i czerwony, gdy są zaznaczone. Twoje pierwsze instinct może być utworzyć klasę, która dziedziczy po elemencie <xref:System.Windows.Controls.ListBox> i zastąpić <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> metodę, aby zmienić wygląd wybranego elementu, ale lepszym rozwiązaniem jest dodanie wyzwalacza do styl <xref:System.Windows.Controls.ListBoxItem> zmienia się wygląd wybrany element. Wyzwalacz umożliwia zmianę wartości właściwości lub podjąć działania w oparciu o wartość właściwości. <xref:System.Windows.EventTrigger> Umożliwia akcje, kiedy wystąpi zdarzenie.  
+- **Wyzwalacze.** A <xref:System.Windows.Trigger> dynamicznie zmieniać wygląd i zachowanie kontrolki bez tworzenia nowego formantu. Załóżmy na przykład, posiadasz wiele <xref:System.Windows.Controls.ListBox> formantów w aplikacji i elementy w każdym <xref:System.Windows.Controls.ListBox> jest pogrubiony i czerwony, gdy są zaznaczone. Twoje pierwsze instinct może być utworzyć klasę, która dziedziczy po elemencie <xref:System.Windows.Controls.ListBox> i zastąpić <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> metodę, aby zmienić wygląd wybranego elementu, ale lepszym rozwiązaniem jest dodanie wyzwalacza do styl <xref:System.Windows.Controls.ListBoxItem> zmienia się wygląd wybrany element. Wyzwalacz umożliwia zmianę wartości właściwości lub podjąć działania w oparciu o wartość właściwości. <xref:System.Windows.EventTrigger> Umożliwia akcje, kiedy wystąpi zdarzenie.  
   
  Aby uzyskać więcej informacji na temat style, szablonów i wyzwalaczy, zobacz [Tworzenie szablonów i stylów](styling-and-templating.md).  
   
@@ -51,11 +51,11 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 #### <a name="benefits-of-deriving-from-usercontrol"></a>Korzyści wynikające z elementu UserControl  
  Należy wziąć pod uwagę pochodząca od <xref:System.Windows.Controls.UserControl> wszystkie następujące zastosowania:  
   
--   Chcesz skompilować Twoją kontrolą, podobnie jak sposób kompilowania aplikacji.  
+- Chcesz skompilować Twoją kontrolą, podobnie jak sposób kompilowania aplikacji.  
   
--   Formant składa się tylko z istniejących składników.  
+- Formant składa się tylko z istniejących składników.  
   
--   Nie potrzebujesz do obsługi złożonych dostosowań.  
+- Nie potrzebujesz do obsługi złożonych dostosowań.  
   
 ### <a name="deriving-from-control"></a>Wyprowadzanie z formantu  
  Wyprowadzanie z <xref:System.Windows.Controls.Control> klasa jest model wykorzystywany przez większość istniejących [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki. Podczas tworzenia kontrolki dziedziczy <xref:System.Windows.Controls.Control> klasy, należy zdefiniować wygląd przy użyciu szablonów. W ten sposób można oddzielić logikę operacyjne od wizualnej reprezentacji. Można także zapewnić oddzielenie interfejsu użytkownika i logiki przy użyciu poleceń i powiązań zamiast zdarzenia i unikanie odwołujący się elementów w <xref:System.Windows.Controls.ControlTemplate> zawsze, gdy jest to możliwe.  Jeśli interfejs użytkownika i logikę kontrolki są prawidłowo odłączony, kontrolki użytkownika można ponownie zdefiniować formantu <xref:System.Windows.Controls.ControlTemplate> do dostosowania jego wyglądu. Chociaż tworzenie niestandardowego <xref:System.Windows.Controls.Control> nie jest tak proste, jak tworzenie <xref:System.Windows.Controls.UserControl>, niestandardowe <xref:System.Windows.Controls.Control> zapewnia większą elastyczność.  
@@ -63,9 +63,9 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 #### <a name="benefits-of-deriving-from-control"></a>Korzyści wynikające z formantu  
  Należy wziąć pod uwagę pochodząca od <xref:System.Windows.Controls.Control> zamiast <xref:System.Windows.Controls.UserControl> klasy, jeśli dowolny z następujących warunków:  
   
--   Należy zdefiniować wygląd kontrolki dawać możliwość dostosowania za pośrednictwem <xref:System.Windows.Controls.ControlTemplate>.  
+- Należy zdefiniować wygląd kontrolki dawać możliwość dostosowania za pośrednictwem <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Chcesz, aby Twoją kontrolą w celu obsługi różnych kompozycji.  
+- Chcesz, aby Twoją kontrolą w celu obsługi różnych kompozycji.  
   
 ### <a name="deriving-from-frameworkelement"></a>Wyprowadzanie z elementu FrameworkElement  
  Formanty, które wynikają z <xref:System.Windows.Controls.UserControl> lub <xref:System.Windows.Controls.Control> opierają się na tworzenie istniejące elementy. W wielu sytuacjach jest to dopuszczalne rozwiązanie, ponieważ każdy obiekt, który dziedziczy z <xref:System.Windows.FrameworkElement> mogą znajdować się w <xref:System.Windows.Controls.ControlTemplate>. Istnieją jednak czasy, kiedy wygląd formantu wymaga więcej niż funkcje kompozycji prosty element. W tych scenariuszach bazowanie składnika na <xref:System.Windows.FrameworkElement> jest najlepszym wyborem.  
@@ -75,11 +75,11 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Korzyści wynikające z elementu FrameworkElement  
  Należy wziąć pod uwagę pochodząca od <xref:System.Windows.FrameworkElement> Jeśli dowolny z następujących warunków:  
   
--   Chcesz mieć ścisłą kontrolę nad wyglądu kontrolki poza dostarczanych przez prosty element kompozycji.  
+- Chcesz mieć ścisłą kontrolę nad wyglądu kontrolki poza dostarczanych przez prosty element kompozycji.  
   
--   Należy zdefiniować wygląd kontrolki, definiując logikę renderowania.  
+- Należy zdefiniować wygląd kontrolki, definiując logikę renderowania.  
   
--   Chcesz na nowe sposoby, wykraczający poza to, co można zrobić za pomocą narzędzia compose istniejące elementy <xref:System.Windows.Controls.UserControl> i <xref:System.Windows.Controls.Control>.  
+- Chcesz na nowe sposoby, wykraczający poza to, co można zrobić za pomocą narzędzia compose istniejące elementy <xref:System.Windows.Controls.UserControl> i <xref:System.Windows.Controls.Control>.  
   
 <a name="control_authoring_basics"></a>   
 ## <a name="control-authoring-basics"></a>Podstawowe informacje dotyczące tworzenia kontrolki  
@@ -88,33 +88,33 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 ### <a name="use-dependency-properties"></a>Użyj właściwości zależności  
  Gdy właściwość jest właściwością zależności, możliwe jest wykonanie następujących czynności:  
   
--   Ustaw właściwość w stylu.  
+- Ustaw właściwość w stylu.  
   
--   Powiąż właściwości ze źródłem danych.  
+- Powiąż właściwości ze źródłem danych.  
   
--   Użyj dynamicznych zasobów jako wartość właściwości.  
+- Użyj dynamicznych zasobów jako wartość właściwości.  
   
--   Animowanie właściwości.  
+- Animowanie właściwości.  
   
  Jeśli chcesz, aby właściwość Twoją kontrolą w celu zapewnienia obsługi tej funkcji, należy zaimplementować go jako właściwość zależności. W poniższym przykładzie zdefiniowano właściwość zależności, o nazwie `Value` , wykonując następujące czynności:  
   
--   Zdefiniuj <xref:System.Windows.DependencyProperty> identyfikatora o nazwie `ValueProperty` jako `public` `static` `readonly` pola.  
+- Zdefiniuj <xref:System.Windows.DependencyProperty> identyfikatora o nazwie `ValueProperty` jako `public` `static` `readonly` pola.  
   
--   Zarejestruj nazwy właściwości w systemie właściwości przez wywołanie metody <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, aby określić następujące czynności:  
+- Zarejestruj nazwy właściwości w systemie właściwości przez wywołanie metody <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, aby określić następujące czynności:  
   
-    -   Nazwa właściwości.  
+    - Nazwa właściwości.  
   
-    -   Typ właściwości.  
+    - Typ właściwości.  
   
-    -   Typ, który jest właścicielem właściwości.  
+    - Typ, który jest właścicielem właściwości.  
   
-    -   Metadane dla właściwości. Metadane zawierają wartość domyślną właściwości <xref:System.Windows.CoerceValueCallback> i <xref:System.Windows.PropertyChangedCallback>.  
+    - Metadane dla właściwości. Metadane zawierają wartość domyślną właściwości <xref:System.Windows.CoerceValueCallback> i <xref:System.Windows.PropertyChangedCallback>.  
   
--   Zdefiniuj [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwość o nazwie `Value`, który ma taką samą nazwę, które jest używane do rejestrowania właściwości zależności poprzez implementację właściwości `get` i `set` metod dostępu. Należy pamiętać, że `get` i `set` wywoływać tylko metody dostępu <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> odpowiednio. Zalecane jest, że metody dostępu właściwości zależności nie zawierają dodatkowej logiki, ponieważ klienci i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można pominąć metody dostępu i wywołania <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Na przykład, gdy właściwość jest powiązana z danych źródłowych, właściwości `set` dostępu nie zostanie wywołana.  Zamiast opcji dodawania dodatkową logikę do pobierania i ustaw metody dostępu, użyj <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, i <xref:System.Windows.PropertyChangedCallback> delegatów odpowiadanie na lub sprawdź wartość, gdy zmienia się.  Aby uzyskać więcej informacji na temat tych wywołań zwrotnych, zobacz [zależność wartości wywołania zwrotnego i walidacji](../advanced/dependency-property-callbacks-and-validation.md).  
+- Zdefiniuj [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwość o nazwie `Value`, który ma taką samą nazwę, które jest używane do rejestrowania właściwości zależności poprzez implementację właściwości `get` i `set` metod dostępu. Należy pamiętać, że `get` i `set` wywoływać tylko metody dostępu <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> odpowiednio. Zalecane jest, że metody dostępu właściwości zależności nie zawierają dodatkowej logiki, ponieważ klienci i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można pominąć metody dostępu i wywołania <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Na przykład, gdy właściwość jest powiązana z danych źródłowych, właściwości `set` dostępu nie zostanie wywołana.  Zamiast opcji dodawania dodatkową logikę do pobierania i ustaw metody dostępu, użyj <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, i <xref:System.Windows.PropertyChangedCallback> delegatów odpowiadanie na lub sprawdź wartość, gdy zmienia się.  Aby uzyskać więcej informacji na temat tych wywołań zwrotnych, zobacz [zależność wartości wywołania zwrotnego i walidacji](../advanced/dependency-property-callbacks-and-validation.md).  
   
--   Zdefiniuj metodę <xref:System.Windows.CoerceValueCallback> o nazwie `CoerceValue`. `CoerceValue` zapewnia, że `Value` jest większa lub równa `MinValue` i mniejsza niż lub równa `MaxValue`.  
+- Zdefiniuj metodę <xref:System.Windows.CoerceValueCallback> o nazwie `CoerceValue`. `CoerceValue` zapewnia, że `Value` jest większa lub równa `MinValue` i mniejsza niż lub równa `MaxValue`.  
   
--   Zdefiniuj metodę <xref:System.Windows.PropertyChangedCallback>o nazwie `OnValueChanged`. `OnValueChanged` Tworzy <xref:System.Windows.RoutedPropertyChangedEventArgs%601> obiektu i przygotowuje podnieść `ValueChanged` zdarzenia trasowanego. Zdarzenia trasowane zostały omówione w następnej sekcji.  
+- Zdefiniuj metodę <xref:System.Windows.PropertyChangedCallback>o nazwie `OnValueChanged`. `OnValueChanged` Tworzy <xref:System.Windows.RoutedPropertyChangedEventArgs%601> obiektu i przygotowuje podnieść `ValueChanged` zdarzenia trasowanego. Zdarzenia trasowane zostały omówione w następnej sekcji.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -124,29 +124,29 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 ### <a name="use-routed-events"></a>Użyj zdarzenia trasowanego  
  Podobnie jak zależności właściwości rozszerzają pojęcie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwości z dodatkowymi funkcjami, zdarzenia trasowane rozszerzają pojęcie standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzenia. Podczas tworzenia nowego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki, jest również dobrym rozwiązaniem do zaimplementowania zdarzenia jako zdarzenia trasowane, ponieważ zdarzenia trasowanego obsługuje następujące zachowanie:  
   
--   Zdarzenia mogą być obsługiwane na element nadrzędny wielu kontrolek. Jeśli zdarzenie jest propagacja zdarzeń, jednego nadrzędnego w drzewie elementów mogą subskrybować zdarzenia. Następnie autorzy aplikacji można użyć jednego programu obsługi w celu zareagowania na zdarzenie wielu kontrolek. Na przykład, jeśli formant jest częścią każdego elementu w <xref:System.Windows.Controls.ListBox> (ponieważ jest on uwzględniony w <xref:System.Windows.DataTemplate>), Deweloper aplikacji można zdefiniować program obsługi zdarzeń dla zdarzenia kontroli nad <xref:System.Windows.Controls.ListBox>. Zawsze, gdy wystąpi zdarzenie na wszystkich formantów, nosi nazwę programu obsługi zdarzeń.  
+- Zdarzenia mogą być obsługiwane na element nadrzędny wielu kontrolek. Jeśli zdarzenie jest propagacja zdarzeń, jednego nadrzędnego w drzewie elementów mogą subskrybować zdarzenia. Następnie autorzy aplikacji można użyć jednego programu obsługi w celu zareagowania na zdarzenie wielu kontrolek. Na przykład, jeśli formant jest częścią każdego elementu w <xref:System.Windows.Controls.ListBox> (ponieważ jest on uwzględniony w <xref:System.Windows.DataTemplate>), Deweloper aplikacji można zdefiniować program obsługi zdarzeń dla zdarzenia kontroli nad <xref:System.Windows.Controls.ListBox>. Zawsze, gdy wystąpi zdarzenie na wszystkich formantów, nosi nazwę programu obsługi zdarzeń.  
   
--   Zdarzenia trasowane mogą być używane w <xref:System.Windows.EventSetter>, które umożliwia deweloperom aplikacji określenie program obsługi zdarzenia w stylu.  
+- Zdarzenia trasowane mogą być używane w <xref:System.Windows.EventSetter>, które umożliwia deweloperom aplikacji określenie program obsługi zdarzenia w stylu.  
   
--   Zdarzenia trasowane mogą być używane w <xref:System.Windows.EventTrigger>, która jest przydatne w przypadku animowanie właściwości przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
+- Zdarzenia trasowane mogą być używane w <xref:System.Windows.EventTrigger>, która jest przydatne w przypadku animowanie właściwości przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
  W poniższym przykładzie zdefiniowano zdarzenia trasowanego, wykonując następujące czynności:  
   
--   Zdefiniuj <xref:System.Windows.RoutedEvent> identyfikatora o nazwie `ValueChangedEvent` jako `public` `static` `readonly` pola.  
+- Zdefiniuj <xref:System.Windows.RoutedEvent> identyfikatora o nazwie `ValueChangedEvent` jako `public` `static` `readonly` pola.  
   
--   Rejestrowanie zdarzeń trasowanych przez wywołanie metody <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> metody. W przykładzie określono następujące informacje, kiedy wywołuje <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
+- Rejestrowanie zdarzeń trasowanych przez wywołanie metody <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> metody. W przykładzie określono następujące informacje, kiedy wywołuje <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
   
-    -   Nazwa zdarzenia jest `ValueChanged`.  
+    - Nazwa zdarzenia jest `ValueChanged`.  
   
-    -   Strategia routingu jest <xref:System.Windows.RoutingStrategy.Bubble>, co oznacza, że program obsługi zdarzeń w źródle (obiekt, który wywołuje zdarzenie) jest wywoływana najpierw, a następnie procedury obsługi zdarzeń na elementy nadrzędne źródło są nazywane kolejno, począwszy od programu obsługi zdarzeń na najbliższą element nadrzędny.  
+    - Strategia routingu jest <xref:System.Windows.RoutingStrategy.Bubble>, co oznacza, że program obsługi zdarzeń w źródle (obiekt, który wywołuje zdarzenie) jest wywoływana najpierw, a następnie procedury obsługi zdarzeń na elementy nadrzędne źródło są nazywane kolejno, począwszy od programu obsługi zdarzeń na najbliższą element nadrzędny.  
   
-    -   Typem obsługi zdarzeń jest <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, zbudowany z <xref:System.Decimal> typu.  
+    - Typem obsługi zdarzeń jest <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, zbudowany z <xref:System.Decimal> typu.  
   
-    -   Jest właścicielem typ zdarzenia `NumericUpDown`.  
+    - Jest właścicielem typ zdarzenia `NumericUpDown`.  
   
--   Zadeklaruj zdarzenie publiczne o nazwie `ValueChanged` i zawiera deklaracjach metod dostępu zdarzeń. Przykład wywołuje <xref:System.Windows.UIElement.AddHandler%2A> w `add` deklaracji metody dostępu i <xref:System.Windows.UIElement.RemoveHandler%2A> w `remove` deklaracji metody dostępu do użycia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń usług.  
+- Zadeklaruj zdarzenie publiczne o nazwie `ValueChanged` i zawiera deklaracjach metod dostępu zdarzeń. Przykład wywołuje <xref:System.Windows.UIElement.AddHandler%2A> w `add` deklaracji metody dostępu i <xref:System.Windows.UIElement.RemoveHandler%2A> w `remove` deklaracji metody dostępu do użycia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń usług.  
   
--   Utwórz metodę chroniony, wirtualny o nazwie `OnValueChanged` która zgłasza `ValueChanged` zdarzeń.  
+- Utwórz metodę chroniony, wirtualny o nazwie `OnValueChanged` która zgłasza `ValueChanged` zdarzeń.  
   
  [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
  [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
@@ -178,11 +178,11 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 #### <a name="attached-properties"></a>Dołączone właściwości  
  Należy zaimplementować dołączone właściwości kontrolek niestandardowych, korzystając z następujących wskazówek:  
   
--   Masz `public` `static` `readonly` <xref:System.Windows.DependencyProperty> formularza *PropertyName* `Property` , tworzenia przy użyciu <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metody. Nazwa właściwości, który jest przekazywany do <xref:System.Windows.DependencyProperty.RegisterAttached%2A> musi odpowiadać *PropertyName*.  
+- Masz `public` `static` `readonly` <xref:System.Windows.DependencyProperty> formularza *PropertyName* `Property` , tworzenia przy użyciu <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metody. Nazwa właściwości, który jest przekazywany do <xref:System.Windows.DependencyProperty.RegisterAttached%2A> musi odpowiadać *PropertyName*.  
   
--   Implementowanie parę `public` `static` CLR metody o nazwie `Set` *PropertyName* i `Get` *PropertyName*. Obie metody powinna obsługiwać klasę pochodną <xref:System.Windows.DependencyProperty> jako swojego pierwszego argumentu. `Set` *PropertyName* metoda akceptuje także argumentem, którego typ jest zgodny z typem danych zarejestrowanych dla właściwości. `Get` *PropertyName* metoda powinna zwrócić wartość tego samego typu. Jeśli `Set` *PropertyName* Brak metoda, właściwość jest oznaczona jako tylko do odczytu.  
+- Implementowanie parę `public` `static` CLR metody o nazwie `Set` *PropertyName* i `Get` *PropertyName*. Obie metody powinna obsługiwać klasę pochodną <xref:System.Windows.DependencyProperty> jako swojego pierwszego argumentu. `Set` *PropertyName* metoda akceptuje także argumentem, którego typ jest zgodny z typem danych zarejestrowanych dla właściwości. `Get` *PropertyName* metoda powinna zwrócić wartość tego samego typu. Jeśli `Set` *PropertyName* Brak metoda, właściwość jest oznaczona jako tylko do odczytu.  
   
--   `Set` *PropertyName* i `Get` *PropertyName* musi kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> metod w zależności docelowego obiektu odpowiednio. Projektanci mogą uzyskiwać dostęp do dołączona właściwość wywoływania przez otoki metody lub wybierając bezpośrednie wywołanie do obiektu docelowego zależności.  
+- `Set` *PropertyName* i `Get` *PropertyName* musi kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> metod w zależności docelowego obiektu odpowiednio. Projektanci mogą uzyskiwać dostęp do dołączona właściwość wywoływania przez otoki metody lub wybierając bezpośrednie wywołanie do obiektu docelowego zależności.  
   
  Aby uzyskać więcej informacji na temat dołączone właściwości, zobacz [Przegląd właściwości dołączonych](../advanced/attached-properties-overview.md).  
   

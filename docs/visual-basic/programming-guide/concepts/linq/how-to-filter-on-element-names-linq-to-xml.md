@@ -3,11 +3,11 @@ title: 'Instrukcje: Filtrowanie nazw elementów (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
 ms.openlocfilehash: 868647ba9536886ea84fa10d94738ff0f29d8f02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037079"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Instrukcje: Filtrowanie nazw elementów (LINQ to XML) (Visual Basic)
 Wywołanie jednej z metod, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, możesz przefiltrować listę według nazwy elementu.  
@@ -36,19 +36,19 @@ ProductName:Baby Monitor
   
  Metody, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> kolekcje postępuj zgodnie z tym samym wzorcem. Ich podpisy są podobne do <xref:System.Xml.Linq.XContainer.Elements%2A> i <xref:System.Xml.Linq.XContainer.Descendants%2A>. Oto Pełna lista metod, które mają podobne podpisy metod:  
   
--   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
+- <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  

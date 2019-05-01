@@ -3,11 +3,11 @@ title: Przykład serializacji kodu JSON ze słabą kontrolą typów
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006359"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Przykład serializacji kodu JSON ze słabą kontrolą typów
 Podczas serializacji typu zdefiniowanego przez użytkownika, do danego formatu, lub deserializację formatu do typu zdefiniowanego przez użytkownika, to danego typu zdefiniowane przez użytkownika muszą być dostępne zarówno usługi, jak i klienta. Zazwyczaj można to osiągnąć, <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do tych typów zdefiniowanych przez użytkownika i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest stosowany do ich elementów członkowskich. Ten mechanizm również stosowana, gdy praca z obiektami JavaScript Object Notation (JSON), zgodnie z opisem w temacie [jak: Serializowanie i Deserializowanie danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  

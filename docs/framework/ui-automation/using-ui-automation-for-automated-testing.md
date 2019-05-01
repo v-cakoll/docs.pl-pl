@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033153"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych
 > [!NOTE]
@@ -61,15 +61,15 @@ ms.locfileid: "59183979"
 ### <a name="programmatic-access"></a>Dostęp programowy  
  Dostęp programowy umożliwia naśladowania przy użyciu kodu, dowolnego interakcji i środowisko udostępnianych przez tradycyjną mysz i klawiatura, danych wejściowych. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Umożliwia dostęp programowy za pośrednictwem pięć składników:  
   
--   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Drzewa ułatwia nawigację struktury [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Drzewo została stworzona z kolekcji hWnd firmy. Aby uzyskać więcej informacji, zobacz [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Drzewa ułatwia nawigację struktury [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Drzewo została stworzona z kolekcji hWnd firmy. Aby uzyskać więcej informacji, zobacz [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
   
--   Po elementach automatyzacji są poszczególne składniki w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Mogą one często bardziej szczegółowe niż hWnd. Aby uzyskać więcej informacji, zobacz [Przegląd typów kontroli automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
+- Po elementach automatyzacji są poszczególne składniki w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Mogą one często bardziej szczegółowe niż hWnd. Aby uzyskać więcej informacji, zobacz [Przegląd typów kontroli automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
   
--   Właściwości automatyzacji zawierają szczegółowe informacje o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementów. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+- Właściwości automatyzacji zawierają szczegółowe informacje o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementów. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
--   Wzorce kontrolki zdefiniować danego aspekt funkcjonalności formantu. może składać się z właściwości, metody, zdarzenia i informacje o strukturze. Aby uzyskać więcej informacji, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+- Wzorce kontrolki zdefiniować danego aspekt funkcjonalności formantu. może składać się z właściwości, metody, zdarzenia i informacje o strukturze. Aby uzyskać więcej informacji, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
--   Właściwości zdarzeń automatyzacji zapewniają powiadomienia o zdarzeniach i informacji. Aby uzyskać więcej informacji, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+- Właściwości zdarzeń automatyzacji zapewniają powiadomienia o zdarzeniach i informacji. Aby uzyskać więcej informacji, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
 <a name="Key_properties_critical_to_test_automation"></a>   
 ### <a name="key-properties-for-test-automation"></a>Właściwości klucza do automatyzacji testów  
@@ -103,9 +103,9 @@ ms.locfileid: "59183979"
 ## <a name="related-tools-and-technologies"></a>Pokrewne narzędzia i technologie  
  Istnieje wiele powiązanych narzędzi i technologii, które obsługują testy zautomatyzowane za pomocą [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
--   Jest Inspect.exe [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] aplikacji, który może służyć do zbierania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacje o dostawcy i klienta programowanie i debugowanie. Inspect.exe znajduje się w [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
+- Jest Inspect.exe [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] aplikacji, który może służyć do zbierania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacje o dostawcy i klienta programowanie i debugowanie. Inspect.exe znajduje się w [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
   
--   Udostępnia MSAABridge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacje [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] klientów. Podstawowym celem mostkowanie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] do [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] jest umożliwienie istniejące [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] klientom możliwość interakcji z dowolnej platformy, które ma zaimplementowany [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+- Udostępnia MSAABridge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacje [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] klientów. Podstawowym celem mostkowanie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] do [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] jest umożliwienie istniejące [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] klientom możliwość interakcji z dowolnej platformy, które ma zaimplementowany [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Security"></a>   
 ## <a name="security"></a>Zabezpieczenia  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037134"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Ładowanie odroczonej zawartości (WCF Data Services)
 Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ogranicza ilość danych zwracanych przez zapytanie. Jednak należy jawnie załadować dodatkowych danych, w tym powiązanych jednostek, dane odpowiedzi stronicowane i strumieni danych binarnych, od usługi danych, gdy jest to konieczne. W tym temacie opisano, jak ładowanie odroczonej zawartości do aplikacji.  
@@ -22,14 +22,14 @@ Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ogranicza
 ## <a name="related-entities"></a>Pokrewne jednostki  
  Podczas wykonywania zapytania, zwracane są tylko jednostki w zestawie jednostek zaadresowane. Na przykład, jeśli zapytanie względem usługi danych Northwind zwraca `Customers` jednostek domyślnie powiązane `Orders` jednostki nie są zwracane, mimo że istnieje relacja między `Customers` i `Orders`. Ponadto jeśli stronicowanie zostało włączone w usłudze danych, należy jawnie załadować stron kolejnych danych z usługi. Istnieją dwa sposoby ładowanie powiązanych jednostek:  
   
--   **Wczesne ładowanie**: Możesz użyć `$expand` opcji zapytania żądania, że zapytanie zwraca jednostki, które są powiązane przez skojarzenie go z jednostką ustawić żądanego zapytania. Użyj <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody <xref:System.Data.Services.Client.DataServiceQuery%601> dodać `$expand` opcję, aby zapytanie, które są wysyłane do usługi danych. Możesz poprosić o wielu powiązanych jednostek zestawy, oddzielając je przecinkami, jak w poniższym przykładzie. Wszystkie jednostki, żądane przez zapytania są zwracane w pojedynczą odpowiedź. Poniższy przykład zwraca `Order_Details` i `Customers` wraz z `Orders` zestaw jednostek:  
+- **Wczesne ładowanie**: Możesz użyć `$expand` opcji zapytania żądania, że zapytanie zwraca jednostki, które są powiązane przez skojarzenie go z jednostką ustawić żądanego zapytania. Użyj <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metody <xref:System.Data.Services.Client.DataServiceQuery%601> dodać `$expand` opcję, aby zapytanie, które są wysyłane do usługi danych. Możesz poprosić o wielu powiązanych jednostek zestawy, oddzielając je przecinkami, jak w poniższym przykładzie. Wszystkie jednostki, żądane przez zapytania są zwracane w pojedynczą odpowiedź. Poniższy przykład zwraca `Order_Details` i `Customers` wraz z `Orders` zestaw jednostek:  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ogranicza do 12 liczbę zestawy jednostek, które mogły zostać uwzględnione w ramach pojedynczego zapytania przy użyciu `$expand` opcji zapytania.  
   
--   **Jawne ładowanie**: Możesz wywołać <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienia by jawnie ładować powiązanych jednostek. Każde wywołanie <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metoda tworzy oddzielne żądanie do usługi danych. Poniższy przykład jawnie ładuje `Order_Details` dla `Orders` jednostki:  
+- **Jawne ładowanie**: Możesz wywołać <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienia by jawnie ładować powiązanych jednostek. Każde wywołanie <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metoda tworzy oddzielne żądanie do usługi danych. Poniższy przykład jawnie ładuje `Order_Details` dla `Orders` jednostki:  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
 ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034526"
 ---
 # <a name="adding-datarelations"></a>Dodawanie elementów DataRelation
 W <xref:System.Data.DataSet> z wieloma <xref:System.Data.DataTable> obiektów, można użyć <xref:System.Data.DataRelation> obiektów do powiązania z jednej tabeli do innej, aby poruszać się po w tabelach i zwracanie podrzędnej lub nadrzędnej wierszy z tabeli powiązanej.  

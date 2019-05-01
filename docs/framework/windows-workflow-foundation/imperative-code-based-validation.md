@@ -1,15 +1,15 @@
 ---
-title: Imperatywne sprawdzanie poprawności, które są oparte na kodzie
+title: Walidacja oparta na kodzie imperatywnym
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
 ms.openlocfilehash: 333e1e200825dd1fc8ed750abbecbb309da66663
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009776"
 ---
-# <a name="imperative-code-based-validation"></a>Imperatywne sprawdzanie poprawności, które są oparte na kodzie
+# <a name="imperative-code-based-validation"></a>Walidacja oparta na kodzie imperatywnym
 
 Imperatywne sprawdzanie poprawności, które są oparte na kodzie zapewnia prostą metodę dla działania w celu udostępnienia weryfikacji o sobie i jest dostępny dla działań, które wynikają z <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, i <xref:System.Activities.NativeActivity>. Kod sprawdzania poprawności, który określa żadnych ostrzeżeń ani błędów sprawdzania poprawności jest dodawany do działania.  
   

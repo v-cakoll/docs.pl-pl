@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030380"
 ---
 # <a name="multimedia-overview"></a>Przegląd Multimedia
 Multimediów funkcje w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwiają integrowanie audio i wideo w aplikacje w celu poprawienia środowiska użytkownika. W tym temacie przedstawiono funkcje multimedialne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -37,11 +37,11 @@ Multimediów funkcje w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ### <a name="independent-mode"></a>Niezależnie od trybu  
  W trybie niezależne zawartości multimedialnej dysków odtwarzania multimediów. Niezależnie od trybu umożliwia następujące opcje:  
   
--   Nośnika <xref:System.Uri> można określić bezpośrednio.  
+- Nośnika <xref:System.Uri> można określić bezpośrednio.  
   
--   Odtwarzanie multimediów, mogą być kontrolowane bezpośrednio.  
+- Odtwarzanie multimediów, mogą być kontrolowane bezpośrednio.  
   
--   Nośnika <xref:System.Windows.Controls.MediaElement.Position%2A> i <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> można zmodyfikować właściwości.  
+- Nośnika <xref:System.Windows.Controls.MediaElement.Position%2A> i <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> można zmodyfikować właściwości.  
   
  Nośnik jest ładowany przez dowolnego z tych ustawień <xref:System.Windows.Controls.MediaElement> obiektu <xref:System.Windows.Controls.MediaElement.Source%2A> właściwości lub przez wywołanie <xref:System.Windows.Media.MediaPlayer> obiektu <xref:System.Windows.Media.MediaPlayer.Open%2A> metody.  
   
@@ -52,11 +52,11 @@ Multimediów funkcje w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ### <a name="clock-mode"></a>Tryb zegara  
  W trybie zegara <xref:System.Windows.Media.MediaTimeline> odtwarzania multimediów dysków. Tryb zegara ma następującą charakterystykę:  
   
--   Nośnika <xref:System.Uri> jest pośrednio ustawiona za pomocą <xref:System.Windows.Media.MediaTimeline>.  
+- Nośnika <xref:System.Uri> jest pośrednio ustawiona za pomocą <xref:System.Windows.Media.MediaTimeline>.  
   
--   Odtwarzanie multimediów mogą być kontrolowane przez zegara. Nie można używać metod kontroli do obiektu multimedialnego.  
+- Odtwarzanie multimediów mogą być kontrolowane przez zegara. Nie można używać metod kontroli do obiektu multimedialnego.  
   
--   Nośnik jest ładowany przez ustawienie <xref:System.Windows.Media.MediaTimeline> obiektu <xref:System.Windows.Media.MediaTimeline.Source%2A> właściwość, tworzenie zegar z osi czasu i przypisywanie zegara do obiektu multimedialnego. Nośnik jest również ładowana w ten sposób podczas <xref:System.Windows.Media.MediaTimeline> wewnątrz <xref:System.Windows.Media.Animation.Storyboard> cele <xref:System.Windows.Controls.MediaElement>.  
+- Nośnik jest ładowany przez ustawienie <xref:System.Windows.Media.MediaTimeline> obiektu <xref:System.Windows.Media.MediaTimeline.Source%2A> właściwość, tworzenie zegar z osi czasu i przypisywanie zegara do obiektu multimedialnego. Nośnik jest również ładowana w ten sposób podczas <xref:System.Windows.Media.MediaTimeline> wewnątrz <xref:System.Windows.Media.Animation.Storyboard> cele <xref:System.Windows.Controls.MediaElement>.  
   
  Aby kontrolować odtwarzanie multimediów w trybie zegara <xref:System.Windows.Media.Animation.ClockController> należy używać metod kontroli. A <xref:System.Windows.Media.Animation.ClockController> są uzyskiwane z <xref:System.Windows.Media.Animation.ClockController> właściwość <xref:System.Windows.Media.MediaClock>. Jeśli spróbujesz użyć metody kontroli albo <xref:System.Windows.Controls.MediaElement> lub <xref:System.Windows.Media.MediaPlayer> obiektu w trybie zegara <xref:System.InvalidOperationException> zostanie zgłoszony.  
   

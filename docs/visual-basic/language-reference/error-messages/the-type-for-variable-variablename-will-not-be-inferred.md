@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013650"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Typ zmiennej "\<nazwa_zmiennej >' nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym
 Typ zmiennej "\<nazwa_zmiennej >' nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym. Zmień nazwę "\<nazwa_zmiennej >", lub użyj w pełni kwalifikowana nazwa (na przykład "Me.variablename" lub "MyBase.variablename").  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>Aby rozwiązać tego ostrzeżenia  
   
--   Zmienna sterująca pętli należy lokalnych, zmieniając jej nazwę na identyfikator, który nie jest również nazwę pola klasy.  
+- Zmienna sterująca pętli należy lokalnych, zmieniając jej nazwę na identyfikator, który nie jest również nazwę pola klasy.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Wyjaśnienie, że zmienna sterująca pętli wiąże pola klasy przez dodanie przedrostka `Me.` do nazwy zmiennej.  
+- Wyjaśnienie, że zmienna sterująca pętli wiąże pola klasy przez dodanie przedrostka `Me.` do nazwy zmiennej.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   Zamiast polegania na wnioskowanie o typie lokalnym, użyj `As` klauzuli, aby określić typ zmienna sterująca pętli.  
+- Zamiast polegania na wnioskowanie o typie lokalnym, użyj `As` klauzuli, aby określić typ zmienna sterująca pętli.  
   
     ```  
     For Index As Integer = 1 To 10  

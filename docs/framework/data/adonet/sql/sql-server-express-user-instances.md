@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876281"
 ---
 # <a name="sql-server-express-user-instances"></a>Wystąpienia użytkownika programu SQL Server Express
 Microsoft SQL Server Express Edition, (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, który jest dostępny tylko w przypadku używania dostawcy danych .NET Framework dla programu SQL Server (`SqlClient`). Wystąpienia użytkownika jest osobnego wystąpienia programu SQL Server Express aparatu bazy danych generowanych przez wystąpienie nadrzędne. Wystąpienia użytkownika umożliwiają użytkownikom niebędącym administratorami na swoich komputerach lokalnych do dołączenia i nawiązać połączenie z SQL Server Express bazy danych. Każde wystąpienie jest uruchamiany w kontekście zabezpieczeń użytkownika, na podstawie jednego wystąpienia na użytkownika.  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  Należy pamiętać o następujących dotyczących przykładowe parametry połączenia, pokazano poniżej:  
   
--   `Data Source` — Słowo kluczowe odwołuje się do wystąpienie programu SQL Server Express, który generuje wystąpienia użytkownika. Wystąpienie domyślne to. \sqlexpress.  
+- `Data Source` — Słowo kluczowe odwołuje się do wystąpienie programu SQL Server Express, który generuje wystąpienia użytkownika. Wystąpienie domyślne to. \sqlexpress.  
   
--   `Integrated Security` ustawiono `true`. Aby połączyć się z wystąpieniem użytkownika, jest wymagane; uwierzytelnianie Windows Logowania do programu SQL Server nie są obsługiwane.  
+- `Integrated Security` ustawiono `true`. Aby połączyć się z wystąpieniem użytkownika, jest wymagane; uwierzytelnianie Windows Logowania do programu SQL Server nie są obsługiwane.  
   
--   `User Instance` Ustawiono `true`, która wywołuje wystąpienia użytkownika. (Wartość domyślna to `false`.)  
+- `User Instance` Ustawiono `true`, która wywołuje wystąpienia użytkownika. (Wartość domyślna to `false`.)  
   
--   `AttachDbFileName` Słowo kluczowe parametrów połączenia jest używany do dołączania plików podstawowej bazy danych (.mdf), który musi zawierać pełną nazwę ścieżki. `AttachDbFileName` również odpowiada "rozszerzonych właściwości" i "początkowa nazwa pliku" klucze w ramach <xref:System.Data.SqlClient.SqlConnection> parametry połączenia.  
+- `AttachDbFileName` Słowo kluczowe parametrów połączenia jest używany do dołączania plików podstawowej bazy danych (.mdf), który musi zawierać pełną nazwę ścieżki. `AttachDbFileName` również odpowiada "rozszerzonych właściwości" i "początkowa nazwa pliku" klucze w ramach <xref:System.Data.SqlClient.SqlConnection> parametry połączenia.  
   
--   `|DataDirectory|` Ciąg podstawienia ujęty w symbole potoku odwołuje się do katalogu danych aplikacji, Otwieranie połączenia i udostępnia ścieżkę względną wskazującą lokalizację pliki mdf i ldf bazy danych i dziennika. Jeśli chcesz zlokalizować te pliki w innym miejscu, należy podać pełną ścieżkę do plików.  
+- `|DataDirectory|` Ciąg podstawienia ujęty w symbole potoku odwołuje się do katalogu danych aplikacji, Otwieranie połączenia i udostępnia ścieżkę względną wskazującą lokalizację pliki mdf i ldf bazy danych i dziennika. Jeśli chcesz zlokalizować te pliki w innym miejscu, należy podać pełną ścieżkę do plików.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  Scenariusze wystąpienia użytkownika:  
   
--   Dowolnej aplikacji pojedynczego użytkownika, których udostępnianie danych nie jest wymagane.  
+- Dowolnej aplikacji pojedynczego użytkownika, których udostępnianie danych nie jest wymagane.  
   
--   Wdrożenie ClickOnce. .NET Framework 2.0 (lub nowszą) i SQL Server Express są już zainstalowane na komputerze docelowym, pakiet instalacyjny pobrane w wyniku akcji ClickOnce można instalować i posługują się użytkownicy inni niż administrator. Należy pamiętać, że dla administrator musi zainstalować programu SQL Server Express, jeżeli jest to część instalacji. Aby uzyskać więcej informacji, zobacz [wdrażania ClickOnce Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- Wdrożenie ClickOnce. .NET Framework 2.0 (lub nowszą) i SQL Server Express są już zainstalowane na komputerze docelowym, pakiet instalacyjny pobrane w wyniku akcji ClickOnce można instalować i posługują się użytkownicy inni niż administrator. Należy pamiętać, że dla administrator musi zainstalować programu SQL Server Express, jeżeli jest to część instalacji. Aby uzyskać więcej informacji, zobacz [wdrażania ClickOnce Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
--   W wersji dedykowanej przy użyciu uwierzytelniania Windows hostingu platformy ASP.NET. Pojedyncze wystąpienie programu SQL Server Express, mogą być hostowane w sieci intranet. Aplikacja nawiązuje połączenie, za pomocą konta Windows ASPNET, nie za pomocą personifikacji. Wystąpienia użytkownika nie powinien służyć do innych firm lub udostępnione hostingu scenariuszach, gdzie wszystkie aplikacje będą współużytkują to samo wystąpienie użytkownika i nie jest już pozostać odizolowane od siebie nawzajem.  
+- W wersji dedykowanej przy użyciu uwierzytelniania Windows hostingu platformy ASP.NET. Pojedyncze wystąpienie programu SQL Server Express, mogą być hostowane w sieci intranet. Aplikacja nawiązuje połączenie, za pomocą konta Windows ASPNET, nie za pomocą personifikacji. Wystąpienia użytkownika nie powinien służyć do innych firm lub udostępnione hostingu scenariuszach, gdzie wszystkie aplikacje będą współużytkują to samo wystąpienie użytkownika i nie jest już pozostać odizolowane od siebie nawzajem.  
   
 ## <a name="see-also"></a>Zobacz także
 

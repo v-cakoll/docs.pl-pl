@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902333"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Instrukcje: tworzenie niestandardowych zasad autoryzacji
 Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obsługuje model na podstawie oświadczeń autoryzacji. Wyodrębnione z tokenów, opcjonalnie przetwarzane przez niestandardowych zasad autoryzacji i następnie umieszczać w oświadczeń <xref:System.IdentityModel.Policy.AuthorizationContext> , następnie można zbadać do podejmowania decyzji dotyczących autoryzacji. Zasady niestandardowe może służyć do przekształcania oświadczeń przychodzących tokenów oświadczeń oczekiwane przez aplikację. W ten sposób warstwy aplikacji mogą być izolowane dane na różne oświadczenia, obsługiwane przez różne typy tokenów, które obsługuje usługi WCF. W tym temacie pokazano, jak zaimplementować niestandardowych zasad autoryzacji oraz sposób dodawania tej zasady do kolekcji zasad używanych przez usługę.  

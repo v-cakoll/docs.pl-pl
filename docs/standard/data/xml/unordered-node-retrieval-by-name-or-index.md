@@ -1,5 +1,5 @@
 ---
-title: Pobieranie nieuporządkowanych węzłów według nazwy lub indeksu
+title: Pobieranie nieuporządkowanych węzłów na podstawie nazwy lub indeksu
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,20 +9,20 @@ ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026877"
 ---
-# <a name="unordered-node-retrieval-by-name-or-index"></a>Pobieranie nieuporządkowanych węzłów według nazwy lub indeksu
+# <a name="unordered-node-retrieval-by-name-or-index"></a>Pobieranie nieuporządkowanych węzłów na podstawie nazwy lub indeksu
 **XmlNamedNodeMap** opisano w specyfikacji World Wide Web Consortium (W3C) jako NamedNodeMap i jest wymagany do obsługi nieuporządkowaną zestaw węzłów z możliwością odwołanie węzły według ich nazwy lub indeksu. Jedynym sposobem, że masz dostęp do **XmlNamedNodeMap** jest, gdy **XmlNamedNodeMap** jest zwracany przez metodę lub właściwość. Istnieją trzy metody lub właściwości, które zwracają **XmlNamedNodeMap**:  
   
--   XmlElement.Attributes  
+- XmlElement.Attributes  
   
--   XmlDocumentType.Entities  
+- XmlDocumentType.Entities  
   
--   XmlDocumentType.Notations  
+- XmlDocumentType.Notations  
   
  Na przykład **XmlDocumentType.Entities** właściwości pobiera kolekcję **XmlEntity** węzłów zadeklarowane w deklaracji typu dokumentu. Ta kolekcja jest zwracana jako **XmlNamedNodeMap**, i można wykonać iterację kolekcji przy użyciu **liczba** właściwości i wyświetlanie informacji o jednostkach. Na przykład iteracja **XmlNamedNodeMap**, zobacz <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   

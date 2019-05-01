@@ -3,11 +3,11 @@ title: Omówienie modelu fabryki
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
 ms.openlocfilehash: 3b1d438ce5a7dbb22772d6c5dc97f196b3263d38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879102"
 ---
 # <a name="factory-model-overview"></a>Omówienie modelu fabryki
 ADO.NET w wersji 2.0 wprowadzono nowe klasy bazowe w <xref:System.Data.Common> przestrzeni nazw. Klasy bazowe są abstrakcyjne, co oznacza, że ich nie można bezpośrednio utworzyć wystąpienia. Obejmują one <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand>, i <xref:System.Data.Common.DbDataAdapter> i są udostępniane przez dostawcę danych .NET Framework, takich jak <xref:System.Data.SqlClient> i <xref:System.Data.OleDb>. Dodawanie klas bazowych upraszcza dodano funkcję dostawcy danych .NET Framework bez konieczności tworzenia nowych interfejsów.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008476"
 ---
 # <a name="opacity-masks-overview"></a>Przegląd Masek krycia
 Maski krycia umożliwiać wykonywanie części elementu lub visual przezroczyste lub częściowo przezroczyste. Aby utworzyć maski krycia, należy zastosować <xref:System.Windows.Media.Brush> do <xref:System.Windows.UIElement.OpacityMask%2A> właściwość elementu lub <xref:System.Windows.Media.Visual>.  Pędzel jest mapowany na element "lub" visual, a wartość nieprzezroczystości każdego piksela pędzla służy do określania wynikowy nieprzezroczystość każdego piksela odpowiedniego elementu lub visual.  
@@ -36,21 +36,21 @@ Przykład maskowania krycia
 ## <a name="creating-an-opacity-mask"></a>Tworzenie maski krycia  
  Aby utworzyć maski krycia, należy utworzyć <xref:System.Windows.Media.Brush> i zastosować je do <xref:System.Windows.UIElement.OpacityMask%2A> właściwość elementu lub wizualizacji. Można użyć dowolnego typu <xref:System.Windows.Media.Brush> jako maski nieprzezroczystości.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Umożliwia elementu lub visual fade z widoku.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Umożliwia elementu lub visual fade z widoku.  
   
      Na poniższej ilustracji przedstawiono <xref:System.Windows.Media.LinearGradientBrush> używany jako maski nieprzezroczystości.  
   
      ![Obiekt o nieprzezroczystości LinearGradientBrush](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 Przykład maskowania nieprzezroczystości LinearGradientBrush  
   
--   <xref:System.Windows.Media.ImageBrush>: Pozwala utworzyć tekstury i efekty krawędzi nietrwałego lub przerwana.  
+- <xref:System.Windows.Media.ImageBrush>: Pozwala utworzyć tekstury i efekty krawędzi nietrwałego lub przerwana.  
   
      Na poniższej ilustracji przedstawiono <xref:System.Windows.Media.ImageBrush> używany jako maski nieprzezroczystości.  
   
      ![Obiekt, który ma maski krycia ImageBrush](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 Przykład maskowania nieprzezroczystości LinearGradientBrush  
   
--   <xref:System.Windows.Media.DrawingBrush>: Używane do tworzenia złożonych maski krycia z wzorców kształtów, obrazy i gradientów.  
+- <xref:System.Windows.Media.DrawingBrush>: Używane do tworzenia złożonych maski krycia z wzorców kształtów, obrazy i gradientów.  
   
      Na poniższej ilustracji przedstawiono <xref:System.Windows.Media.DrawingBrush> używany jako maski nieprzezroczystości.  
   

@@ -3,11 +3,11 @@ title: Kanał dzielący na fragmenty
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002381"
 ---
 # <a name="chunking-channel"></a>Kanał dzielący na fragmenty
 Podczas wysyłania dużych komunikatów za pomocą usługi Windows Communication Foundation (WCF), często jest pożądane, aby ograniczyć ilość pamięci używana do buforowania te komunikaty. Jedno z możliwych rozwiązań jest przesyłanie strumieniowe treść wiadomości (przy założeniu, że duża część danych znajduje się w treści). Jednak niektóre protokoły wymagają buforowanie cały komunikat. Niezawodna obsługa komunikatów i zabezpieczenia są dwa takie przykłady. Inne możliwe rozwiązanie jest dzielenia dużych wiadomość na mniejsze wiadomości o nazwie fragmentów, Wyślij jednym fragmencie tych fragmentów w danym momencie i odtworzenia dużych komunikatów po stronie odbierającej. Sama aplikacja może wykonać tego segmentu i cofnąć segmentu lub użyć niestandardowy kanał to zrobić. Segmentu przykład kanału pokazuje, jak niestandardowego protokołu lub warstwowej kanału może służyć do segmentu i cofnąć segmentu arbitralnie dużych komunikatów.  
@@ -240,30 +240,30 @@ interface ITestService
   
  Kilka szczegóły warte odnotowania:  
   
--   Wyślij pierwszego wywołania `ThrowIfDisposedOrNotOpened` zapewnienie `CommunicationState` jest otwarty.  
+- Wyślij pierwszego wywołania `ThrowIfDisposedOrNotOpened` zapewnienie `CommunicationState` jest otwarty.  
   
--   Wysyłanie są synchronizowane, dzięki czemu mogą być wysyłane tylko jedna wiadomość na raz dla każdej sesji. Brak `ManualResetEvent` o nazwie `sendingDone` , jest resetowany po wysłaniu fragmentaryczne wiadomości. Wysłany komunikat fragmentów zakończenia tego zdarzenia jest ustawiona. Metoda wysyłania czeka dla tego zdarzenia, należy ustawić przed ponowną próbą wysłania wychodzących wiadomości.  
+- Wysyłanie są synchronizowane, dzięki czemu mogą być wysyłane tylko jedna wiadomość na raz dla każdej sesji. Brak `ManualResetEvent` o nazwie `sendingDone` , jest resetowany po wysłaniu fragmentaryczne wiadomości. Wysłany komunikat fragmentów zakończenia tego zdarzenia jest ustawiona. Metoda wysyłania czeka dla tego zdarzenia, należy ustawić przed ponowną próbą wysłania wychodzących wiadomości.  
   
--   Wyślij blokad `CommunicationObject.ThisLock` zapobiegające synchronizacji zmian stanu podczas wysyłania. Zobacz <xref:System.ServiceModel.Channels.CommunicationObject> dokumentacji, aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.CommunicationObject> stanów i stan maszyny.  
+- Wyślij blokad `CommunicationObject.ThisLock` zapobiegające synchronizacji zmian stanu podczas wysyłania. Zobacz <xref:System.ServiceModel.Channels.CommunicationObject> dokumentacji, aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.CommunicationObject> stanów i stan maszyny.  
   
--   Limit czasu, przekazana do wysyłania służy jako limit czasu operacji wysyłania całego, która obejmuje rozsyłanie wszystkich fragmentów.  
+- Limit czasu, przekazana do wysyłania służy jako limit czasu operacji wysyłania całego, która obejmuje rozsyłanie wszystkich fragmentów.  
   
--   Niestandardowy <xref:System.Xml.XmlDictionaryWriter> projekt został wybrany w celu uniknięcia buforowanie całej treści oryginalnej wiadomości. Gdybyśmy wybrali, aby uzyskać <xref:System.Xml.XmlDictionaryReader> w treści przy użyciu `message.GetReaderAtBodyContents` całej treści będą buforowane. Zamiast tego oferujemy niestandardowego <xref:System.Xml.XmlDictionaryWriter> przekazana do `message.WriteBodyContents`. Jak wiadomość wywołania WriteBase64 w edytorze, moduł zapisujący pakietów się fragmentów do wiadomości i wysyła je za pomocą wewnętrznego kanału. Bloki WriteBase64 do momentu wysłania jest fragmentów.  
+- Niestandardowy <xref:System.Xml.XmlDictionaryWriter> projekt został wybrany w celu uniknięcia buforowanie całej treści oryginalnej wiadomości. Gdybyśmy wybrali, aby uzyskać <xref:System.Xml.XmlDictionaryReader> w treści przy użyciu `message.GetReaderAtBodyContents` całej treści będą buforowane. Zamiast tego oferujemy niestandardowego <xref:System.Xml.XmlDictionaryWriter> przekazana do `message.WriteBodyContents`. Jak wiadomość wywołania WriteBase64 w edytorze, moduł zapisujący pakietów się fragmentów do wiadomości i wysyła je za pomocą wewnętrznego kanału. Bloki WriteBase64 do momentu wysłania jest fragmentów.  
   
 ## <a name="implementing-the-receive-operation"></a>Implementowanie operacji odbioru  
  Na wysokim poziomie operacji odbierania najpierw sprawdza, czy przychodzące wiadomości nie jest `null` oraz że jej działaniem jest `ChunkingAction`. Jeśli nie spełnia kryteriów obu, zwracany jest komunikat niezmienione Receive. W przeciwnym razie Receive tworzy nową `ChunkingReader` i nowy `ChunkingMessage` otaczający go (przez wywołanie metody `GetNewChunkingMessage`). Przed zwróceniem przez nowych `ChunkingMessage`, Receive korzysta z puli wątków do wykonywania `ReceiveChunkLoop`, która wywołuje metodę `innerChannel.Receive` w pętli i zdejmowania rąk fragmentach, aby `ChunkingReader` aż do zakończenia fragmentów wiadomość zostaje odebrana lub zostanie osiągnięty limit czasu odbioru.  
   
  Kilka szczegóły warte odnotowania:  
   
--   Takie jak wysyłanie, odbieranie połączeń pierwszy `ThrowIfDisposedOrNotOepned` zapewnienie `CommunicationState` jest otwarty.  
+- Takie jak wysyłanie, odbieranie połączeń pierwszy `ThrowIfDisposedOrNotOepned` zapewnienie `CommunicationState` jest otwarty.  
   
--   Wyświetlany jest również synchronizowane, tak że tylko jeden komunikat może zostać odebrany w czasie z sesji. Jest to szczególnie ważne, ponieważ po otrzymaniu komunikatu fragmentów start wszystkie kolejne Odebrane komunikaty powinny być fragmentów w ramach tej nowej sekwencji fragmentów, do momentu zakończenia fragmentów wiadomość zostaje odebrana. Odbieranie nie ściągają komunikaty z kanału wewnętrzny, otrzymanie wszystkich fragmentów, do których należą do wiadomości, obecnie cofnąć jest podzielony. W tym celu odbierania używa `ManualResetEvent` o nazwie `currentMessageCompleted`, która ma wartość, gdy komunikat fragmentów zakończenia jest odbierany i zresetować po odebraniu nowej wiadomości fragmentów rozpoczęcia.  
+- Wyświetlany jest również synchronizowane, tak że tylko jeden komunikat może zostać odebrany w czasie z sesji. Jest to szczególnie ważne, ponieważ po otrzymaniu komunikatu fragmentów start wszystkie kolejne Odebrane komunikaty powinny być fragmentów w ramach tej nowej sekwencji fragmentów, do momentu zakończenia fragmentów wiadomość zostaje odebrana. Odbieranie nie ściągają komunikaty z kanału wewnętrzny, otrzymanie wszystkich fragmentów, do których należą do wiadomości, obecnie cofnąć jest podzielony. W tym celu odbierania używa `ManualResetEvent` o nazwie `currentMessageCompleted`, która ma wartość, gdy komunikat fragmentów zakończenia jest odbierany i zresetować po odebraniu nowej wiadomości fragmentów rozpoczęcia.  
   
--   W przeciwieństwie do wysłania Receive nie uniemożliwia zsynchronizowane stanami podczas odbierania. Na przykład Zamknij można wywołać podczas odbierania i czeka, aż do ukończenia oczekujących odbieranie oryginalnego komunikatu lub określona wartość limitu czasu zostanie osiągnięty.  
+- W przeciwieństwie do wysłania Receive nie uniemożliwia zsynchronizowane stanami podczas odbierania. Na przykład Zamknij można wywołać podczas odbierania i czeka, aż do ukończenia oczekujących odbieranie oryginalnego komunikatu lub określona wartość limitu czasu zostanie osiągnięty.  
   
--   Limit czasu, przekazana do odbierania jest używany, podobnie jak limit czasu dla całego otrzymują operacji, która obejmuje dostęp do wszystkich fragmentów.  
+- Limit czasu, przekazana do odbierania jest używany, podobnie jak limit czasu dla całego otrzymują operacji, która obejmuje dostęp do wszystkich fragmentów.  
   
--   Jeśli warstwy, która zużywa komunikat zużywa treść komunikatu z szybkością niższa niż stopa wiadomości przychodzących fragmentów, `ChunkingReader` buforuje te fragmenty przychodzących do limitu określonego przez `ChunkingBindingElement.MaxBufferedChunks`. Po osiągnięciu tego limitu nie ma więcej fragmentów są pobierane z niższej warstwie, aż do buforowanego fragmentów jest używany lub zostanie osiągnięty limit czasu odbioru.  
+- Jeśli warstwy, która zużywa komunikat zużywa treść komunikatu z szybkością niższa niż stopa wiadomości przychodzących fragmentów, `ChunkingReader` buforuje te fragmenty przychodzących do limitu określonego przez `ChunkingBindingElement.MaxBufferedChunks`. Po osiągnięciu tego limitu nie ma więcej fragmentów są pobierane z niższej warstwie, aż do buforowanego fragmentów jest używany lub zostanie osiągnięty limit czasu odbioru.  
   
 ## <a name="communicationobject-overrides"></a>CommunicationObject zastąpień  
   

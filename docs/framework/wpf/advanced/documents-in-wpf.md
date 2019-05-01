@@ -11,11 +11,11 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051666"
 ---
 # <a name="documents-in-wpf"></a>Dokumenty w WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje szeroką gamę funkcji dokumentu, które umożliwiają tworzenie zawartości o wysokiej wierności, która została zaprojektowana jako łatwiej uzyskuje się dostęp i odczytu niż w poprzednich generacji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Oprócz rozszerzone możliwości i jakość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] również udostępnia zintegrowane usługi do wyświetlania dokumentu, pakowania i zabezpieczeń. Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typów dokumentów i pakowania w usłudze dokumentu.  
@@ -61,11 +61,11 @@ ms.locfileid: "59313960"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Architektura pakietu służy jako podstawa wielu kluczowych technologii:  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dokumenty odpowiadające [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+- [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dokumenty odpowiadające [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
   
--   Microsoft Office "12" otwartych dokumentach formatu XML (.docx).  
+- Microsoft Office "12" otwartych dokumentach formatu XML (.docx).  
   
--   Formaty magazynu niestandardowego do projektu aplikacji.  
+- Formaty magazynu niestandardowego do projektu aplikacji.  
   
  Tworzenie pakietów interfejsów API w oparciu <xref:System.Windows.Xps.Packaging.XpsDocument> specjalnie do przechowywania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stałej zawartości dokumentów. <xref:System.Windows.Xps.Packaging.XpsDocument> Jest niezależny dokument, który można otworzyć w przeglądarce, wyświetlana w <xref:System.Windows.Controls.DocumentViewer> kontrolę, kierowane do buforu wydruku lub w danych wyjściowych bezpośrednio do [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-zgodnych drukarek.  
   
@@ -99,11 +99,11 @@ ms.locfileid: "59313960"
 #### <a name="packagerelationships"></a>PackageRelationships  
  Element <xref:System.IO.Packaging.PackageRelationship> ("relacji") udostępnia mechanizm do kojarzenia dodatkowych informacji z pakietu lub części w pakiecie. Relacja to funkcji poziomie pakietu, który można skojarzyć dodatkowe informacje z częścią bez modyfikowania zawartości części rzeczywiste. Wstawianie nowych danych bezpośrednio do zawartości części zazwyczaj nie jest praktyczne w wielu przypadkach:  
   
--   Rzeczywisty typ części i jego zawartość schematu jest nieznany.  
+- Rzeczywisty typ części i jego zawartość schematu jest nieznany.  
   
--   Nawet wtedy, gdy znany, schemat zawartości może nie umożliwiają dodawania nowych informacji.  
+- Nawet wtedy, gdy znany, schemat zawartości może nie umożliwiają dodawania nowych informacji.  
   
--   Części mogą być cyfrowo podpisana lub zaszyfrowana i ograniczenia żadnych modyfikacji.  
+- Części mogą być cyfrowo podpisana lub zaszyfrowana i ograniczenia żadnych modyfikacji.  
   
  Relacje pakietu umożliwiają wykrywalny dodawania i skojarzyć dodatkowe informacje z poszczególnymi częściami lub cały pakiet. Pakiet relacje są używane dwie podstawowe funkcje:  
   
@@ -125,13 +125,13 @@ ms.locfileid: "59313960"
 ## <a name="xps-documents"></a>Dokumenty XPS  
  [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dokument jest pakiet zawierający co najmniej jeden stałej dokumentów, wraz z wszystkich zasobów i wszystkie informacje wymagane do renderowania.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] jest również natywnych [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] format pliku buforu wydruku.  <xref:System.Windows.Xps.Packaging.XpsDocument> Są przechowywane w standardowych ZIP zestawu danych i może zawierać kombinację XML i binarny składników, takich jak pliki obrazów i czcionki. [PackageRelationships](#PackageRelationships) są używane do definiowania zależności między zawartości i zasobów potrzebnych do w pełni renderowania dokumentu.  <xref:System.Windows.Xps.Packaging.XpsDocument> Konstrukcja umożliwia rozwiązanie jednego dokumentu o wysokiej jakości, które obsługuje wielu zastosowań:  
   
--   Do czytania, zapisywania i przechowywania stałej dokumentu zawartości i zasobów w postaci jednego, przenośne i łatwo dystrybuować pliku.  
+- Do czytania, zapisywania i przechowywania stałej dokumentu zawartości i zasobów w postaci jednego, przenośne i łatwo dystrybuować pliku.  
   
--   Wyświetlanie dokumentów za pomocą [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] aplikacji Podgląd.  
+- Wyświetlanie dokumentów za pomocą [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] aplikacji Podgląd.  
   
--   Wyprowadzanie dokumentów w macierzystym buforu wydruku danych wyjściowych format [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
+- Wyprowadzanie dokumentów w macierzystym buforu wydruku danych wyjściowych format [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
   
--   Routing bezpośrednio do dokumentów [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-zgodnych drukarek.  
+- Routing bezpośrednio do dokumentów [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-zgodnych drukarek.  
   
 ## <a name="see-also"></a>Zobacz także
 

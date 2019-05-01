@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f663f5134cf34bf9beb66da20bbb5886baff5415
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987431"
 ---
 # <a name="icordebugstepperstepout-method"></a>ICorDebugStepper::StepOut — Metoda
-Powoduje to ICorDebugStepper — aby pojedynczy krok za pomocą jego zawierającego wątku i do wykonania podczas bieżącej ramki zwraca sterowania do wywoływania ramki.  
+Powoduje to ICorDebugStepper — do pojedynczego kroku za pośrednictwem jego zawierającego wątku i ukończone, gdy bieżące ramce przekazuje sterowanie do wywoływania ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,14 +34,14 @@ HRESULT StepOut ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- A `StepOut` operacja zostanie wykonana po powrocie zwykle z bieżącej ramki do wywoływania ramki.  
+ A `StepOut` operacja zakończy się po zwróceniu zwykle z bieżącej ramki do wywoływania ramki.  
   
- Jeśli `StepOut` jest wywoływane, gdy za pomocą kodu niezarządzanego kroku ukończy po powrocie z do zarządzanego kodu, który wywołuje ona bieżącej ramki.  
+ Jeśli `StepOut` jest wywoływana, gdy w kodzie niezarządzane, ten krok zostanie ukończone, gdy bieżące ramce powraca do kodu zarządzanego, który ją wywołuje.  
   
- W programie .NET Framework w wersji 2.0, nie używaj `StepOut` z STOP_UNMANAGED Flaga ponieważ zakończy się niepowodzeniem. (Użyj [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) można ustawić flagi wykonywanie krok po kroku.) Międzyoperacyjne debugery musi Wyjdź do kodu natywnego samodzielnie.  
+ W programie .NET Framework 2.0, nie należy używać `StepOut` z STOP_UNMANAGED flagą zestawu, ponieważ kończy się niepowodzeniem. (Użyj [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) można ustawić flagi do przechodzenia.) Debugery międzyoperacyjny musi Wyjdź do kodu macierzystego samodzielnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

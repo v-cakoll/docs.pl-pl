@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033465"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zwracanie lub pomijanie elementów w sekwencji
 Użyj <xref:System.Linq.Queryable.Take%2A> operatora zwracają danej liczby elementów w sekwencji, a następnie pominąć resztę.  
@@ -22,9 +22,9 @@ Użyj <xref:System.Linq.Queryable.Take%2A> operatora zwracają danej liczby elem
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wykonuje translację <xref:System.Linq.Queryable.Skip%2A> przy użyciu podzapytania SQL `NOT EXISTS` klauzuli. Tłumaczenie ma następujące ograniczenia:  
   
--   Argument musi być ustawiony. Multisets nie są obsługiwane, nawet wtedy, gdy określona.  
+- Argument musi być ustawiony. Multisets nie są obsługiwane, nawet wtedy, gdy określona.  
   
--   Wygenerowane zapytanie może być znacznie bardziej skomplikowane niż zapytanie wygenerowane dla podstawowego zapytania, na którym <xref:System.Linq.Queryable.Skip%2A> jest stosowany. Taki poziom złożoności może spowodować spadek wydajności lub nawet limitu czasu.  
+- Wygenerowane zapytanie może być znacznie bardziej skomplikowane niż zapytanie wygenerowane dla podstawowego zapytania, na którym <xref:System.Linq.Queryable.Skip%2A> jest stosowany. Taki poziom złożoności może spowodować spadek wydajności lub nawet limitu czasu.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Take` zaznacz pierwsze pięć `Employees` zatrudnienia. Należy zauważyć, że kolekcja jest najpierw posortowane według `HireDate`.  

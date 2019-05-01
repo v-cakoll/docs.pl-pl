@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
 ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014179"
 ---
 # <a name="development-with-my-visual-basic"></a>Rozwój za pomocą My (Visual Basic)
 Visual Basic oferuje nowe funkcje do szybkiego opracowywania aplikacji, które zwiększają produktywność i łatwość użycia, dostarczając zasilania. Jedną z następujących funkcji o nazwie `My`, zapewnia dostęp do informacji i domyślnego wystąpienia obiektów, które odnoszą się do aplikacji i jej środowiska wykonawczego. Te informacje są zorganizowane w formacie, który jest identyfikowana za pomocą funkcji IntelliSense i logicznie nakreślonego zgodnie z użycia.  

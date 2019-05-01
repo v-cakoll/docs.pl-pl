@@ -3,11 +3,11 @@ title: Propagacja
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971382"
 ---
 # <a name="propagation"></a>Propagacja
 W tym temacie opisano Propagacja działania w modelu śledzenia usług Windows Communication Foundation (WCF).  
@@ -26,11 +26,11 @@ W tym temacie opisano Propagacja działania w modelu śledzenia usług Windows C
 ## <a name="propagation-definition"></a>Propagacji definicji  
  GAId M działania jest propagowana do działania N, jeśli wszystkie następujące warunki zastosowania.  
   
--   N jest tworzony z powodu M  
+- N jest tworzony z powodu M  
   
--   Wiadomo gAId firmy M, N  
+- Wiadomo gAId firmy M, N  
   
--   GAId firmy N jest równy gAId firmy M.  
+- GAId firmy N jest równy gAId firmy M.  
   
  GAId są propagowane przez identyfikator nagłówka wiadomości, jak pokazano w poniższym schematu XML.  
   

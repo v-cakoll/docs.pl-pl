@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031307"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Wprowadzenie do obiektu GlyphRun i elementu glifu
 W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:System.Windows.Documents.Glyphs> elementu.  
@@ -27,13 +27,13 @@ W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:Syste
   
 2. Scenariusze drukowania.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] jako urządzenie języka drukarki.  
+    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] jako urządzenie języka drukarki.  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
-    -   Poprzednie sterowniki drukarki, dane wyjściowe z [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] aplikacjom stałym formacie.  
+    - Poprzednie sterowniki drukarki, dane wyjściowe z [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] aplikacjom stałym formacie.  
   
-    -   Format buforu wydruku.  
+    - Format buforu wydruku.  
   
 3. Reprezentacja dokumentu ustalonym formacie, w tym klientów we wcześniejszych wersjach programu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i innych urządzeń komputerowych.  
   
@@ -67,15 +67,15 @@ W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:Syste
 ### <a name="indices-property"></a>Właściwość indeksów  
  <xref:System.Windows.Documents.Glyphs.Indices%2A> Właściwość ma postać ciągu specyfikacji symbolu. W przypadku, gdy sekwencja symbole tworzy pojedynczy klaster, specyfikacja pierwszym symbolem w klastrze jest poprzedzony przez specyfikację ile symbole i ile punkty kodowe są łączone w celu utworzenia klastra. <xref:System.Windows.Documents.Glyphs.Indices%2A> Właściwości są zbierane w jeden ciąg następujące właściwości.  
   
--   Indeksy glifów  
+- Indeksy glifów  
   
--   Symbol wcześniejszym szerokości  
+- Symbol wcześniejszym szerokości  
   
--   Łącząc wektorów załącznika glifów  
+- Łącząc wektorów załącznika glifów  
   
--   Mapowanie klastra z punktów kod symbole  
+- Mapowanie klastra z punktów kod symbole  
   
--   Flagi glifów  
+- Flagi glifów  
   
  Każda specyfikacja symbolu ma następującą postać.  
   

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043224"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember — Metoda
 Tworzy odwołanie do określonego elementu członkowskiego typu lub moduł, który jest zdefiniowane poza bieżącym zakresie i definiuje token dla tego odwołania.  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  Ogólnie rzecz biorąc, zanim użyjesz `DefineImportMember` metody, należy utworzyć, w bieżącym zakresie, odwołanie do typu lub odwołania do modułu docelowy element członkowski klasy nadrzędnej, interfejs lub moduł. Token metadanych dla tego odwołania jest następnie przekazywany w `tkParent` argumentu. Nie trzeba utworzyć odwołanie do elementu nadrzędnego elementu członkowskiego docelowy, jeśli będzie można rozwiązać w dalszej części, kompilator lub konsolidator. Podsumowując:  
   
--   Jeśli docelowy element członkowski jest ona polem ani metodą, użyj jednej [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) lub [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) metodę, aby utworzyć odwołanie do typu, w bieżącym zakresie dla klasy nadrzędnej lub interfejs nadrzędny tego elementu.  
+- Jeśli docelowy element członkowski jest ona polem ani metodą, użyj jednej [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) lub [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) metodę, aby utworzyć odwołanie do typu, w bieżącym zakresie dla klasy nadrzędnej lub interfejs nadrzędny tego elementu.  
   
--   Jeśli docelowy element członkowski, zmienna lub globalnego funkcją globalną (czyli nie jest członkiem klasy lub interfejsu), użyj [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) metodę w celu utworzenia odwołania do modułu w bieżącym zakresie i dla nadrzędnego elementu członkowskiego Moduł.  
+- Jeśli docelowy element członkowski, zmienna lub globalnego funkcją globalną (czyli nie jest członkiem klasy lub interfejsu), użyj [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) metodę w celu utworzenia odwołania do modułu w bieżącym zakresie i dla nadrzędnego elementu członkowskiego Moduł.  
   
--   Jeśli nadrzędny docelowy element członkowski zostanie rozwiązany później przez kompilator lub konsolidator, należy przekazać `mdTokenNil` w `tkParent`. Jest jedyny scenariusz, w którym ma to zastosowanie, gdy funkcja globalna lub zmienna globalna jest importowany z pliku .obj, który ostatecznie zostanie połączony do bieżącego modułu i metadane, scalone.  
+- Jeśli nadrzędny docelowy element członkowski zostanie rozwiązany później przez kompilator lub konsolidator, należy przekazać `mdTokenNil` w `tkParent`. Jest jedyny scenariusz, w którym ma to zastosowanie, gdy funkcja globalna lub zmienna globalna jest importowany z pliku .obj, który ostatecznie zostanie połączony do bieżącego modułu i metadane, scalone.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031255"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Przechwycenie danych z pisaka
 <xref:System.Windows.Input.StylusPlugIns> Architektura zapewnia mechanizm implementowania kontrolę niskiego poziomu nad <xref:System.Windows.Input.Stylus> dane wejściowe i tworzenia cyfrowy atrament <xref:System.Windows.Ink.Stroke> obiektów. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasa udostępnia mechanizm do implementowania niestandardowe zachowanie i zastosować je do strumienia danych pochodzących z urządzeń pióra, aby uzyskać optymalną wydajność.  
   
  Ten temat zawiera następujące podsekcje:  
   
--   [Architektura](#Architecture)  
+- [Architektura](#Architecture)  
   
--   [Implementowanie dodatków plug-in pióra](#ImplementingStylusPlugins)  
+- [Implementowanie dodatków plug-in pióra](#ImplementingStylusPlugins)  
   
--   [Dodawanie wtyczkę z elementem InkCanvas](#AddingYourPluginToAnInkCanvas)  
+- [Dodawanie wtyczkę z elementem InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
--   [Podsumowanie](#Conclusion)  
+- [Podsumowanie](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architektura  

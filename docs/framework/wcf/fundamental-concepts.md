@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929600"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
 Ten dokument zawiera ogólny widok architektury usług Windows Communication Foundation (WCF). Jej celem jest zrozumienie podstawowych pojęć i jak one współdziałają ze sobą. Aby uzyskać samouczek dotyczący tworzenia najprostszym wersję usługi i klienta WCF, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md). Programowanie WCF można znaleźć [programowanie WCF Basic](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -34,11 +34,11 @@ Ten dokument zawiera ogólny widok architektury usług Windows Communication Fou
   
  Innego wymaganego elementu w stosie komunikacji jest kodowania, które określa sposób formatowania dowolnego z podanym komunikatem. Usługi WCF zapewnia formie następującego kodowania:  
   
--   Kodowanie, interoperacyjne kodowania tekstu.  
+- Kodowanie, interoperacyjne kodowania tekstu.  
   
--   Komunikat transmisji optymalizacji mechanizm (MTOM) kodowanie, czyli sposób interoperacyjny efektywne wysyłanie danych binarnych bez struktury, do i z usługi.  
+- Komunikat transmisji optymalizacji mechanizm (MTOM) kodowanie, czyli sposób interoperacyjny efektywne wysyłanie danych binarnych bez struktury, do i z usługi.  
   
--   Binarny kodowanie transferu wydajne.  
+- Binarny kodowanie transferu wydajne.  
   
  Mechanizmy bardziej kodowania (na przykład kompresji kodowanie) można dodać za pomocą punktów wbudowane rozszerzenia programu WCF.  
   

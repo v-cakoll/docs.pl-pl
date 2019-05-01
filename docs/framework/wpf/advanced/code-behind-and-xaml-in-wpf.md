@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010673"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Związane z kodem i XAML w WPF
 <a name="introduction"></a> Związane z kodem to termin używany do opisania kod, który jest sprzężony z obiektów zdefiniowanych przez kod znaczników, gdy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strona jest kompilowana do znaczników. W tym temacie opisano wymagania związane z kodem, a także mechanizm alternatywny wbudowanego kodu dla kodu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Ten temat zawiera następujące sekcje:  
   
--   [Wymagania wstępne](#Prerequisites)  
+- [Wymagania wstępne](#Prerequisites)  
   
--   [Związane z kodem i języka XAML](#codebehind_and_the_xaml_language)  
+- [Związane z kodem i języka XAML](#codebehind_and_the_xaml_language)  
   
--   [Związane z kodem, program obsługi zdarzeń i klasy częściowej wymagania na platformie WPF](#Code_behind__Event_Handler__and_Partial_Class)  
+- [Związane z kodem, program obsługi zdarzeń i klasy częściowej wymagania na platformie WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x: Code](#x_Code)  
+- [x: Code](#x_Code)  
   
--   [Ograniczenia dotyczące kodu wbudowanego](#Inline_Code_Limitations)  
+- [Ograniczenia dotyczące kodu wbudowanego](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
@@ -38,15 +38,15 @@ ms.locfileid: "59088578"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Związane z kodem, program obsługi zdarzeń i klasy częściowej wymagania na platformie WPF  
   
--   Klasy częściowej musi pochodzić od typu, która będzie tworzyć kopię elementu głównego.  
+- Klasy częściowej musi pochodzić od typu, która będzie tworzyć kopię elementu głównego.  
   
--   Należy pamiętać, że w obszarze domyślne zachowanie akcji kompilacji kompilacji znaczników puste tworzenia elementów pochodnych w definicji klasy częściowej stronie związanym z kodem. Wynik zakłada główny strony zapasowy typ jako podstawę do klasy częściowej, nawet jeśli nie określono. Jednakże opierając się na to zachowanie nie jest najlepszym rozwiązaniem.  
+- Należy pamiętać, że w obszarze domyślne zachowanie akcji kompilacji kompilacji znaczników puste tworzenia elementów pochodnych w definicji klasy częściowej stronie związanym z kodem. Wynik zakłada główny strony zapasowy typ jako podstawę do klasy częściowej, nawet jeśli nie określono. Jednakże opierając się na to zachowanie nie jest najlepszym rozwiązaniem.  
   
--   Programy obsługi zdarzeń, napisany w związanym z kodem musi mieć metody wystąpień i nie może być metod statycznych. Te metody musi być zdefiniowany przez częściowe klasy w przestrzeni nazw CLR identyfikowane przez `x:Class`. Nie kwalifikujesz się do nazwy program obsługi zdarzeń w celu poinstruowania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora do wyszukania program obsługi zdarzeń dla zdarzenia połączeń w zakresie innej klasy.  
+- Programy obsługi zdarzeń, napisany w związanym z kodem musi mieć metody wystąpień i nie może być metod statycznych. Te metody musi być zdefiniowany przez częściowe klasy w przestrzeni nazw CLR identyfikowane przez `x:Class`. Nie kwalifikujesz się do nazwy program obsługi zdarzeń w celu poinstruowania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora do wyszukania program obsługi zdarzeń dla zdarzenia połączeń w zakresie innej klasy.  
   
--   Program obsługi musi odpowiadać delegata odpowiedniego zdarzenia w systemie typów zapasowy.  
+- Program obsługi musi odpowiadać delegata odpowiedniego zdarzenia w systemie typów zapasowy.  
   
--   W przypadku języka Microsoft Visual Basic w szczególności można użyć określonego języka `Handles` — słowo kluczowe, aby skojarzyć obsługi z wystąpień i zdarzenia w deklaracji program obsługi, zamiast dołączać obsługi za pomocą atrybutów w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jednak ta technika mają pewne ograniczenia, ponieważ `Handles` — słowo kluczowe nie obsługuje wszystkich określonych funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system zdarzeń, takie jak niektóre kierowane scenariuszy zdarzenia lub dołączone zdarzenia. Aby uzyskać więcej informacji, zobacz [Visual Basic i obsługa zdarzeń WPF](visual-basic-and-wpf-event-handling.md).  
+- W przypadku języka Microsoft Visual Basic w szczególności można użyć określonego języka `Handles` — słowo kluczowe, aby skojarzyć obsługi z wystąpień i zdarzenia w deklaracji program obsługi, zamiast dołączać obsługi za pomocą atrybutów w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jednak ta technika mają pewne ograniczenia, ponieważ `Handles` — słowo kluczowe nie obsługuje wszystkich określonych funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system zdarzeń, takie jak niektóre kierowane scenariuszy zdarzenia lub dołączone zdarzenia. Aby uzyskać więcej informacji, zobacz [Visual Basic i obsługa zdarzeń WPF](visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x: Code  

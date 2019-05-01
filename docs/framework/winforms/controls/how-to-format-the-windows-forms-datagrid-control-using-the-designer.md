@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013377"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: formatowanie kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333577"
   
  Istnieją trzy podstawowe aspekty formatowania <xref:System.Windows.Forms.DataGrid> sterowania:  
   
--   Można ustawić właściwości, aby ustanowić domyślnego stylu, w którym dane są wyświetlane.  
+- Można ustawić właściwości, aby ustanowić domyślnego stylu, w którym dane są wyświetlane.  
   
--   Z tego podstawowego można następnie dostosować sposób wyświetlania niektórych tabel w czasie wykonywania.  
+- Z tego podstawowego można następnie dostosować sposób wyświetlania niektórych tabel w czasie wykonywania.  
   
--   Na koniec można zmodyfikować kolumny, które są wyświetlane w siatce danych, a także kolory i inne formatowania, które są wyświetlane.  
+- Na koniec można zmodyfikować kolumny, które są wyświetlane w siatce danych, a także kolory i inne formatowania, które są wyświetlane.  
   
  Na etapie wstępnym w formatowaniu siatce danych, można ustawić właściwości <xref:System.Windows.Forms.DataGrid> sam. Te opcje kolor i format tworzą podstawowy, z którego można następnie wprowadzić zmiany w zależności od danych w tabelach i wyświetlane kolumny.  
   

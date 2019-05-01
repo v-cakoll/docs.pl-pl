@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c44f3e369ac64773811a6aea74756783dedd2fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994763"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue — Metoda
 Pobiera wartość argumentu lub zmiennej lokalnej, która jest przechowywana w określonej lokalizacji pamięci dla tej ramki natywne.  

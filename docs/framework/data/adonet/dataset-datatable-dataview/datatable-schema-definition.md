@@ -3,11 +3,11 @@ title: Definicja schematu elementu DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034349"
 ---
 # <a name="datatable-schema-definition"></a>Definicja schematu elementu DataTable
 Schemat lub struktura tabeli jest reprezentowany przez kolumn i ograniczeń. Należy zdefiniować schemat <xref:System.Data.DataTable> przy użyciu <xref:System.Data.DataColumn> obiektów także <xref:System.Data.ForeignKeyConstraint> i <xref:System.Data.UniqueConstraint> obiektów. Kolumny w tabeli można zamapować do kolumny w źródle danych, zawierać obliczone wartości w wyrażeniach, automatycznie zwiększyć ich wartości lub wartości klucza podstawowego.  

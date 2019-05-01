@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024693"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Wpływ kultury na ciągi w Visual Basic
 Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przeprowadzenie ciąg konwersje i porównań.  
@@ -29,9 +29,9 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
   
  `Str` (Konwertuje liczb na ciągi znaków) i `Val` funkcji (konwertuje ciągi na liczby) należy używać informacji o kulturze aplikacji podczas konwersji między ciągi i liczby. Zamiast tego mogą rozpoznać tylko kropki (.) jako separator dziesiętny prawidłowy. Kulturalnie obsługujących podobne produkty z tych funkcji są następujące:  
   
--   **Konwersje, które używają bieżącej kultury.** `CStr` i `Format` funkcji konwertuje liczbę na ciąg i `CDbl` i `CInt` funkcji konwertuje ciąg na liczbę.  
+- **Konwersje, które używają bieżącej kultury.** `CStr` i `Format` funkcji konwertuje liczbę na ciąg i `CDbl` i `CInt` funkcji konwertuje ciąg na liczbę.  
   
--   **Konwersje, które używają określonej kultury.** Każdy obiekt numer ma `ToString(IFormatProvider)` metodę, która konwertuje liczbę na ciąg i `Parse(String, IFormatProvider)` metodę, która konwertuje ciąg na liczbę. Na przykład `Double` typ zapewnia <xref:System.Double.ToString%28System.IFormatProvider%29> i <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> metody.  
+- **Konwersje, które używają określonej kultury.** Każdy obiekt numer ma `ToString(IFormatProvider)` metodę, która konwertuje liczbę na ciąg i `Parse(String, IFormatProvider)` metodę, która konwertuje ciąg na liczbę. Na przykład `Double` typ zapewnia <xref:System.Double.ToString%28System.IFormatProvider%29> i <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> metody.  
   
  Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Conversion.Str%2A> i <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
@@ -52,9 +52,9 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
 ## <a name="comparing-strings"></a>Porównywanie ciągów  
  Istnieją dwie ważne sytuacje, w których porównania ciągów są wymagane:  
   
--   **Sortowanie danych w celu wyświetlenia użytkownikowi.** Użyj operacji opartych na bieżącej kultury, aby posortować ciągi, odpowiednio.  
+- **Sortowanie danych w celu wyświetlenia użytkownikowi.** Użyj operacji opartych na bieżącej kultury, aby posortować ciągi, odpowiednio.  
   
--   **Określanie, jeśli dwa ciągi wewnętrznych aplikacji dokładnie odpowiadać (zwykle ze względów bezpieczeństwa).** Użyj operacji, które nie brać pod uwagę bieżącej kultury.  
+- **Określanie, jeśli dwa ciągi wewnętrznych aplikacji dokładnie odpowiadać (zwykle ze względów bezpieczeństwa).** Użyj operacji, które nie brać pod uwagę bieżącej kultury.  
   
  Można wykonać obu rodzajów porównań, za pomocą Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> funkcji. Określ opcjonalne `Compare` argumentem do sterowania typ porównania: `Text` dla większości danych wejściowych i wyjściowych `Binary` określania dokładne dopasowania.  
   

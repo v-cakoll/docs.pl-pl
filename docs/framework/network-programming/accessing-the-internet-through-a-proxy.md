@@ -13,24 +13,24 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033179"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Dostęp do Internetu za pośrednictwem serwera proxy
 Jeśli Twoja witryna wymaga serwera proxy, aby uzyskać dostęp do Internetu, należy skonfigurować wystąpienie serwera proxy, aby umożliwić aplikacji do komunikowania się z serwera proxy sieci Web.  
   
  Ta sekcja zawiera następujące tematy:  
   
--   [Konfiguracja serwera proxy](../../../docs/framework/network-programming/proxy-configuration.md)  
+- [Konfiguracja serwera proxy](../../../docs/framework/network-programming/proxy-configuration.md)  
   
--   [Automatyczne wykrywanie serwera proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
+- [Automatyczne wykrywanie serwera proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
   
--   [Instrukcje: Włącz używanie serwera Proxy do komunikacji z Internetem przez element WebRequest](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [Instrukcje: Włącz używanie serwera Proxy do komunikacji z Internetem przez element WebRequest](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [Instrukcje: Zastąp wyboru globalnego serwera Proxy](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+- [Instrukcje: Zastąp wyboru globalnego serwera Proxy](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,11 +3,11 @@ title: Projektanci niestandardowych elementów złożonych — prezenter element
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005241"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 <xref:System.Activities.Presentation.WorkflowItemPresenter> Typ klucza w WF projektanta modelu programowania umożliwiający tworzenie "strefy listy" gdzie można umieścić dowolne działanie. W tym przykładzie przedstawiono sposób tworzenia projektanta działań, który uwypukli najistotniejsze takiej "listy strefy."
@@ -16,18 +16,18 @@ ms.locfileid: "59311126"
 
 ## <a name="demonstrates"></a>Demonstracje
 
--   Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
--   Rejestrowanie niestandardowego projektanta, przy użyciu magazynu metadanych.
+- Rejestrowanie niestandardowego projektanta, przy użyciu magazynu metadanych.
 
--   Programowania rehostowanym przybornika w sposób deklaratywny i obowiązkowo.
+- Programowania rehostowanym przybornika w sposób deklaratywny i obowiązkowo.
 
 ## <a name="sample-details"></a>Przykład szczegółów
  W tym przykładzie kod:
 
--   Niestandardowego projektanta działań zaprojektowano pod kątem `SimpleNativeActivity` klasy.
+- Niestandardowego projektanta działań zaprojektowano pod kątem `SimpleNativeActivity` klasy.
 
--   Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Tworzenie niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"

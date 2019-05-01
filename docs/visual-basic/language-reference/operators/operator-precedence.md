@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013533"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Kolejność wykonywania działań (Visual Basic)
 Po wystąpieniu kilka operacji w wyrażeniach, każda część jest obliczane i rozwiązane w określonej kolejności, o nazwie *pierwszeństwo operatorów*.  
@@ -27,13 +27,13 @@ Po wystąpieniu kilka operacji w wyrażeniach, każda część jest obliczane i 
 ## <a name="precedence-rules"></a>Reguły pierwszeństwa  
  Gdy wyrażeń zawiera operatory z więcej niż jednej kategorii, ocenia się je zgodnie z następującymi zasadami:  
   
--   Operatory arytmetyczne i łączenia mają kolejność pierwszeństwa, opisane w poniższej sekcji, a wszystkie mają wyższy priorytet niż porównania, logiczne i bitowe operatory.  
+- Operatory arytmetyczne i łączenia mają kolejność pierwszeństwa, opisane w poniższej sekcji, a wszystkie mają wyższy priorytet niż porównania, logiczne i bitowe operatory.  
   
--   Wszystkie operatory porównania mają równe pierwszeństwo, a wszystkie mają wyższy priorytet niż operatory logiczne i bitowe, ale niższy priorytet niż operatory arytmetyczne i łączenia.  
+- Wszystkie operatory porównania mają równe pierwszeństwo, a wszystkie mają wyższy priorytet niż operatory logiczne i bitowe, ale niższy priorytet niż operatory arytmetyczne i łączenia.  
   
--   Operatory logiczne i bitowe mają kolejność pierwszeństwa, opisane w poniższej sekcji, a wszystkie mają niższy priorytet niż operacje arytmetyczne, łączenie i operatory porównania.  
+- Operatory logiczne i bitowe mają kolejność pierwszeństwa, opisane w poniższej sekcji, a wszystkie mają niższy priorytet niż operacje arytmetyczne, łączenie i operatory porównania.  
   
--   Operatory o równe pierwszeństwo, są obliczane od lewej do prawej w kolejności, w jakiej występują w wyrażeniu.  
+- Operatory o równe pierwszeństwo, są obliczane od lewej do prawej w kolejności, w jakiej występują w wyrażeniu.  
   
 ## <a name="precedence-order"></a>Kolejność pierwszeństwa  
  Operatory są obliczane w następującej kolejności:  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875735"
 ---
 # <a name="securing-wcf-data-services"></a>Zabezpieczanie usług danych WCF
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywania, wdrażania i uruchamiania aplikacji i usług danych WCF usług tego dostępu, które obsługują Open Data Protocol (OData). Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych aplikacji .NET Framework.  
@@ -82,15 +82,15 @@ OData jest oparta na protokole HTTP. W komunikacie HTTP nagłówek może zawiera
 ### <a name="custom-hosting-requirements"></a>Niestandardowe wymagania hostingu  
  Domyślnie usługi danych WCF jest tworzona jako aplikację ASP.NET hostowane w usługach IIS. Pozwala to usłudze danych na korzystanie z zachowań związanych z zabezpieczeniami zaimplementowanych na tej platformie. Można zdefiniować usług danych WCF, które są obsługiwane przez hosta niestandardowego. Aby uzyskać więcej informacji, zobacz [Hosting usługi danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md). Składniki i platforma hostująca usługę danych muszą zapewnić następujące zachowania związane z zabezpieczeniami, aby zapobiec atakom na usługę danych:  
   
--   Ogranicz długość identyfikatora URI akceptowanego w żądaniu usługi danych dla wszystkich możliwych operacji.  
+- Ogranicz długość identyfikatora URI akceptowanego w żądaniu usługi danych dla wszystkich możliwych operacji.  
   
--   Ogranicz rozmiar przychodzących i wychodzących komunikatów HTTP.  
+- Ogranicz rozmiar przychodzących i wychodzących komunikatów HTTP.  
   
--   Ogranicz łączną liczbę zaległych żądań w danym momencie.  
+- Ogranicz łączną liczbę zaległych żądań w danym momencie.  
   
--   Ogranicz rozmiar nagłówków HTTP i ich wartości i umożliwiają dostęp usługi danych WCF do danych w nagłówkach.  
+- Ogranicz rozmiar nagłówków HTTP i ich wartości i umożliwiają dostęp usługi danych WCF do danych w nagłówkach.  
   
--   Wykrywaj i odpieraj znane ataki, takie jak TCP SYN i ataki przez powtórzenie komunikatu.  
+- Wykrywaj i odpieraj znane ataki, takie jak TCP SYN i ataki przez powtórzenie komunikatu.  
   
 ### <a name="values-are-not-further-encoded"></a>Wartości nie są już kodowane  
  Wartości właściwości wysyłanych do usługi danych nie są już kodowane przez środowisko uruchomieniowe usługi danych WCF. Jeśli na przykład właściwość ciągu jednostki zawiera sformatowaną zawartość HTML, znaczniki nie są kodowane w formacie HTML przez usługę danych. Ponadto usługa danych nie koduje już wartości właściwości w odpowiedzi. Biblioteka klienta również nie przeprowadza dodatkowego kodowania.  
@@ -98,17 +98,17 @@ OData jest oparta na protokole HTTP. W komunikacie HTTP nagłówek może zawiera
 ### <a name="considerations-for-client-applications"></a>Uwagi dotyczące aplikacji klienta  
  Następujące zagadnienia dotyczące zabezpieczeń dotyczą aplikacjom dostęp do usługi OData za pomocą klienta usługi danych WCF:  
   
--   Biblioteka klienta zakłada, że protokoły używane w celu uzyskania dostępu do usługi danych zapewniają odpowiedni poziom zabezpieczeń.  
+- Biblioteka klienta zakłada, że protokoły używane w celu uzyskania dostępu do usługi danych zapewniają odpowiedni poziom zabezpieczeń.  
   
--   Biblioteka klienta używa wszystkich wartości domyślnych dla limitów czasu i opcji analizy podstawowych stosów transportu zapewnianych przez platformę.  
+- Biblioteka klienta używa wszystkich wartości domyślnych dla limitów czasu i opcji analizy podstawowych stosów transportu zapewnianych przez platformę.  
   
--   Biblioteka klienta nie odczytuje żadnych ustawień z plików konfiguracji aplikacji.  
+- Biblioteka klienta nie odczytuje żadnych ustawień z plików konfiguracji aplikacji.  
   
--   Biblioteka klienta nie implementuje żadnych mechanizmów dostępu między domenami. W zamian opiera się na mechanizmach zapewnianych przez podstawowy stos HTTP.  
+- Biblioteka klienta nie implementuje żadnych mechanizmów dostępu między domenami. W zamian opiera się na mechanizmach zapewnianych przez podstawowy stos HTTP.  
   
--   Biblioteka klienta nie ma żadnych elementów interfejsu użytkownika i nigdy nie próbuje wyświetlać ani renderować danych, które odbiera lub wysyła.  
+- Biblioteka klienta nie ma żadnych elementów interfejsu użytkownika i nigdy nie próbuje wyświetlać ani renderować danych, które odbiera lub wysyła.  
   
--   Firma Microsoft zaleca, aby aplikacje klienta zawsze weryfikowały dane wprowadzone przez użytkownika, a także akceptowane dane pochodzące z niezaufanych usług.  
+- Firma Microsoft zaleca, aby aplikacje klienta zawsze weryfikowały dane wprowadzone przez użytkownika, a także akceptowane dane pochodzące z niezaufanych usług.  
   
 ## <a name="see-also"></a>Zobacz także
 

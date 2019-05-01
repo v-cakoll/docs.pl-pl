@@ -10,24 +10,24 @@ helpviewer_keywords:
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
 ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857171"
 ---
 # <a name="data-contract-known-types"></a>Znane typy kontraktów danych
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Klasy pozwala na określenie z wyprzedzeniem, typy, które należy wziąć pod uwagę podczas deserializacji. Aby uzyskać przykład pracy, zobacz [znane typy](../../../../docs/framework/wcf/samples/known-types.md) przykład.  
   
  Zwykle podczas przekazywania parametrów i zwracanych wartości między klientem a usługą, oba punkty końcowe współdziel kontraktów danych danych przekazywanych. Jednak to nie jest wymagane w następujących okolicznościach:  
   
--   Kontrakt przesłanych danych jest tworzony na podstawie umowy oczekiwanych danych. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą dziedziczenie w [równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). W takim przypadku przesyłanych danych ma te same dane Umowę zgodnie z oczekiwaniami, odbieranie punktu końcowego.  
+- Kontrakt przesłanych danych jest tworzony na podstawie umowy oczekiwanych danych. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą dziedziczenie w [równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). W takim przypadku przesyłanych danych ma te same dane Umowę zgodnie z oczekiwaniami, odbieranie punktu końcowego.  
   
--   Deklarowany typ informacji przekazywanych jest interfejs, w przeciwieństwie do klasy, struktury lub wyliczenia. W związku z tym go nie może być znane z wyprzedzeniem typu czy implementuje interfejs są faktycznie przesyłane i w związku z tym, odbieranie punktu końcowego ustalić wcześniej kontraktu danych dla przesyłanych danych.  
+- Deklarowany typ informacji przekazywanych jest interfejs, w przeciwieństwie do klasy, struktury lub wyliczenia. W związku z tym go nie może być znane z wyprzedzeniem typu czy implementuje interfejs są faktycznie przesyłane i w związku z tym, odbieranie punktu końcowego ustalić wcześniej kontraktu danych dla przesyłanych danych.  
   
--   Deklarowany typ informacji przekazywanych jest <xref:System.Object>. Ponieważ każdy typ dziedziczy z <xref:System.Object>i go nie może być znane z wyprzedzeniem typy są faktycznie przesyłane, odbieranie punkt końcowy nie może ustalić z wyprzedzeniem kontraktu danych dla przesyłanych danych. To jest szczególnym przypadkiem pierwszego elementu: Co kontraktu danych pochodzi z domyślnej umowy puste dane, który jest generowany dla <xref:System.Object>.  
+- Deklarowany typ informacji przekazywanych jest <xref:System.Object>. Ponieważ każdy typ dziedziczy z <xref:System.Object>i go nie może być znane z wyprzedzeniem typy są faktycznie przesyłane, odbieranie punkt końcowy nie może ustalić z wyprzedzeniem kontraktu danych dla przesyłanych danych. To jest szczególnym przypadkiem pierwszego elementu: Co kontraktu danych pochodzi z domyślnej umowy puste dane, który jest generowany dla <xref:System.Object>.  
   
--   Niektóre typy, które obejmują [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, mieć elementy członkowskie, które należą do jednej z trzech powyższych kategorii. Na przykład <xref:System.Collections.Hashtable> używa <xref:System.Object> przechowywanie rzeczywistych obiektów w tablicy skrótów. Podczas serializacji tych typów, po stronie odbierającej nie może ustalić z wyprzedzeniem kontraktu danych dla tych członków.  
+- Niektóre typy, które obejmują [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, mieć elementy członkowskie, które należą do jednej z trzech powyższych kategorii. Na przykład <xref:System.Collections.Hashtable> używa <xref:System.Object> przechowywanie rzeczywistych obiektów w tablicy skrótów. Podczas serializacji tych typów, po stronie odbierającej nie może ustalić z wyprzedzeniem kontraktu danych dla tych członków.  
   
 ## <a name="the-knowntypeattribute-class"></a>Klasa KnownTypeAttribute  
  Dane odebrane na odbieranie punktu końcowego, środowisko wykonawcze programu WCF próbuje zdeserializowanie danych do wystąpienia typu wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR). Typ, który zostanie uruchomiony do deserializacji jest wybierany sprawdzając pierwszego komunikatu przychodzącego do ustalenia danych umowę które treści wiadomości są zgodne. Następnie aparat deserializacji próbuje odnaleźć typu CLR, który implementuje kontraktu danych, zgodny z treści wiadomości. Zestaw typów Release candidate, które umożliwiają aparatu deserializacji w trakcie tego procesu jest określany jako zestaw Deserializator "znanych typów."  

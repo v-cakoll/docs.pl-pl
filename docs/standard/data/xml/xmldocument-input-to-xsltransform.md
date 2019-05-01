@@ -1,5 +1,5 @@
 ---
-title: Dane wejściowe obiektu XmlDocument klasy xsltransform
+title: Dane wejściowe obiektu XmlDocument klasy XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5349b6476e204606fb1ec63144a1fccb0677d9d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026832"
 ---
-# <a name="xmldocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDocument klasy xsltransform
+# <a name="xmldocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDocument klasy XslTransform
 <xref:System.Xml.XmlDocument> Klasa oferuje funkcje edycji dokumentu XML. Jeśli plik XML musi edytowanie lub zmodyfikowany przed wysłaniem do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody ładowanie kodu XML do <xref:System.Xml.XmlDocument>, edytować i wyślij go do <xref:System.Xml.Xsl.XslTransform>.  
   
 > [!NOTE]

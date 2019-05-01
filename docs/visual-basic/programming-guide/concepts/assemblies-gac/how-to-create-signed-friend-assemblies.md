@@ -3,11 +3,11 @@ title: 'Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022275"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (Visual Basic)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o silnych nazwach. Oba zestawy muszą silnej nazwy. Mimo że oba zestawy w tym przykładzie użyć tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
@@ -18,15 +18,15 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
   
 2. Za pomocą następującej sekwencji poleceń narzędzie silnych nazw do wygenerowania pliku klucza i wyświetlić swój klucz publiczny. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
-    1.  Wygeneruj klucz silnej nazwy dla tego przykładu i zapisz go w pliku FriendAssemblies.snk:  
+    1. Wygeneruj klucz silnej nazwy dla tego przykładu i zapisz go w pliku FriendAssemblies.snk:  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Wyodrębnij klucz publiczny z FriendAssemblies.snk i umieścić go w FriendAssemblies.publickey:  
+    2. Wyodrębnij klucz publiczny z FriendAssemblies.snk i umieścić go w FriendAssemblies.publickey:  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Wyświetl klucz publiczny, przechowywane w pliku FriendAssemblies.publickey:  
+    3. Wyświetl klucz publiczny, przechowywane w pliku FriendAssemblies.publickey:  
   
          `sn -tp FriendAssemblies.publickey`  
   

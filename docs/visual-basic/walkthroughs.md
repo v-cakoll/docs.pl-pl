@@ -8,11 +8,11 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021157"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Język Visual Basic — Wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  
@@ -77,5 +77,5 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  [Przechowywanie obiektu w języku Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Pokazuje sposób tworzenia prostego obiektu i zachować jego dane do pliku.  
   
- [Przewodnik: Wcześniejsze testowanie obsługi przy użyciu użycia funkcji generowania na podstawie](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
+ [Przewodnik: Wcześniejsze testowanie obsługi przy użyciu funkcji generowania na podstawie sposobu użycia](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Pokazuje, jak wczesnego testowania programowania, w którym najpierw pisanie testów jednostkowych i następnie napisać kod źródłowy, aby testy powiodło się.

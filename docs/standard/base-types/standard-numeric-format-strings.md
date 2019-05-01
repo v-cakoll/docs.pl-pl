@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811871"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
 Ciągi standardowych formatów liczb służą do formatowania popularnych typów liczbowych. Ciąg standardowego formatu liczb ma postać `Axx`, gdzie:  
   
--   `A` nosi nazwę jednego znaku alfabetycznego *specyfikatora formatu*. Dowolny ciąg formatu liczb, który zawiera więcej niż jeden znak alfabetyczny, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu liczb. Aby uzyskać więcej informacji, zobacz [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- `A` nosi nazwę jednego znaku alfabetycznego *specyfikatora formatu*. Dowolny ciąg formatu liczb, który zawiera więcej niż jeden znak alfabetyczny, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu liczb. Aby uzyskać więcej informacji, zobacz [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` jest opcjonalną liczbą całkowitą o nazwie *Specyfikator dokładności*. Specyfikator dokładności ma zakres od 0 do 99 i wpływa na liczbę cyfr w wyniku. Należy pamiętać, że Specyfikator dokładności określa liczbę cyfr w ciągu reprezentującym liczbę. Nie zaokrągla samej liczby. Aby wykonać operację zaokrąglenia, użyj <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, lub <xref:System.Math.Round%2A?displayProperty=nameWithType> metody.  
+- `xx` jest opcjonalną liczbą całkowitą o nazwie *Specyfikator dokładności*. Specyfikator dokładności ma zakres od 0 do 99 i wpływa na liczbę cyfr w wyniku. Należy pamiętać, że Specyfikator dokładności określa liczbę cyfr w ciągu reprezentującym liczbę. Nie zaokrągla samej liczby. Aby wykonać operację zaokrąglenia, użyj <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, lub <xref:System.Math.Round%2A?displayProperty=nameWithType> metody.  
   
     Gdy *Specyfikator dokładności* formantów liczba cyfr dziesiętnych w ciągu wynikowym, ciąg wynikowy odzwierciedla liczbę, która jest zaokrąglana do stałego wyniku najbardziej zbliżona nieskończenie dokładny wynik. Jeśli istnieją dwa jednakowo blisko stałego wyniki:
     - **W programie .NET Framework i .NET Core do platformy .NET Core 2.0**, środowisko uruchomieniowe wybiera wynik z większą najmniej znaczącą cyfrę (czyli używania <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
@@ -73,13 +73,13 @@ Ciągi standardowego formatu liczb są obsługiwane przez:
 
 Ciąg standardowego formatu liczb może służyć do definiowania formatowania wartości liczbowej na jeden z dwóch sposobów:  
   
--   Może być przekazywany do przeciążenia `ToString` metody, która ma `format` parametru. Poniższy przykład formatuje wartość numeryczną jako ciąg waluty w bieżącej kultury (w tym przypadku kultury en US).  
+- Może być przekazywany do przeciążenia `ToString` metody, która ma `format` parametru. Poniższy przykład formatuje wartość numeryczną jako ciąg waluty w bieżącej kultury (w tym przypadku kultury en US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Może być podany jako `formatString` argumentów w elemencie formatu używangoe z takich metod jako <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md). W poniższym przykładzie element formatu jest używany do wstawienia wartości waluty w ciągu.  
+- Może być podany jako `formatString` argumentów w elemencie formatu używangoe z takich metod jako <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md). W poniższym przykładzie element formatu jest używany do wstawienia wartości waluty w ciągu.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Może być podany jako `formatString` argumentów w elemencie wyrażenie interpolowane w ciągu interpolowanym. Aby uzyskać więcej informacji, zobacz [Interpolacja ciągów](../../csharp/language-reference/tokens/interpolated.md) temat w dokumentacji języka C# lub [ciągi interpolowane](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) tematu w odwołanie w Visual Basic.  
+- Może być podany jako `formatString` argumentów w elemencie wyrażenie interpolowane w ciągu interpolowanym. Aby uzyskać więcej informacji, zobacz [Interpolacja ciągów](../../csharp/language-reference/tokens/interpolated.md) temat w dokumentacji języka C# lub [ciągi interpolowane](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) tematu w odwołanie w Visual Basic.  
   
  Poniższe sekcje zawierają szczegółowe informacje o poszczególnych ciągach standardowego formatu liczb.  
   

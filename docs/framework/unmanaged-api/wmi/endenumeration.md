@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65904da9efea90d31960d71ae0da8c81dffeccf1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000470"
 ---
-# <a name="endenumeration-function"></a>Funkcja EndEnumeration
+# <a name="endenumeration-function"></a>EndEnumeration, funkcja
 
 Kończy sekwencji wyliczenie pracę z wywołaniem [funkcja Beingenumeration](beginenumeration.md).
 

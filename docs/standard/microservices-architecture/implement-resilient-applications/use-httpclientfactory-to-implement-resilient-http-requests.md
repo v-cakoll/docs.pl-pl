@@ -1,17 +1,17 @@
 ---
-title: Użyj HttpClientFactory do zaimplementowania odporne na błędy żądań HTTP
+title: Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 description: Dowiedz się, jak używać HttpClientFactory dostępne od platformy .NET Core 2.1, do tworzenia `HttpClient` wystąpień, dzięki czemu można korzystać w aplikacjach.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
 ms.openlocfilehash: a55181e787b5c94e13d3945a5d97a12fed61e927
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020221"
 ---
-# <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Użyj HttpClientFactory do zaimplementowania odporne na błędy żądań HTTP
+# <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 
 `HttpClientFactory` to ceniona fabryki, dostępne od platformy .NET Core 2.1, do tworzenia <xref:System.Net.Http.HttpClient> wystąpienia ma być używany w aplikacjach.
 

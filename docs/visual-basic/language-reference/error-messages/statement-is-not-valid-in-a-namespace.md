@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
 ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013728"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>Instrukcja nie jest prawidłowa w przestrzeni nazw
 Wykonywanie instrukcji nie może występować na poziomie przestrzeni nazw. Deklaracje tylko dozwolone na poziomie przestrzeni nazw są modułu, interfejsu, klasy, delegowanego, wyliczenia i deklaracje struktur.  
@@ -21,7 +21,7 @@ Wykonywanie instrukcji nie może występować na poziomie przestrzeni nazw. Dekl
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Przenieś instrukcję do lokalizacji w ramach modułu, klasy, interfejsu, struktury, wyliczenia lub definicji delegata.  
+- Przenieś instrukcję do lokalizacji w ramach modułu, klasy, interfejsu, struktury, wyliczenia lub definicji delegata.  
   
 ## <a name="see-also"></a>Zobacz także
 

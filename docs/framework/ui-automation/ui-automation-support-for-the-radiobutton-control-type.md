@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
 ms.openlocfilehash: b437e19b10b534ce1c1dfae8ef0cca083cac2d61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996713"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu RadioButton
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "59149571"
   
 |Właściwość wzorzec wzorzec/formantu|Obsługa/wartość|Uwagi|  
 |-----------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Yes|Wszystkie kontrolki przycisku radiowego musi obsługiwać wzorzec SelectionItem, aby włączyć się do wybrania.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Tak|Wszystkie kontrolki przycisku radiowego musi obsługiwać wzorzec SelectionItem, aby włączyć się do wybrania.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Zobacz uwagi.|`SelectionContainerProperty` Zawsze muszą być wypełnione, tak aby klientów automatyzacji interfejsu użytkownika można określić, jakie inne przyciski radiowe w określonym kontekście odnoszą się do siebie nawzajem.  Aby uzyskać [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] wersję przycisk radiowy, ta właściwość nie będą obsługiwane, ponieważ nie jest możliwe uzyskać te informacje z tej struktury starszej wersji.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|nigdy nie|Przycisk radiowy nie może przechodzić przez jego stan, po został ustawiony.  Przycisk radiowy nigdy nie muszą obsługiwać tego wzorca.|  
   

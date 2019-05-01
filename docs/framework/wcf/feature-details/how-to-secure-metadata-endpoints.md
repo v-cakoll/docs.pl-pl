@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 ms.openlocfilehash: 8481048dd31652a69f9284a44145bd4abfed89bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047571"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Instrukcje: bezpieczne punkty końcowe metadanych
 Metadane usługi mogą zawierać poufne informacje, o swojej aplikacji, w której złośliwy użytkownik może używać. Osoby korzystające z usługi może wymagać mechanizm bezpiecznego uzyskiwania metadanych dotyczących usługi. W związku z tym czasami jest niezbędne do opublikowania przy użyciu bezpiecznego punktu końcowego metadanych.  
@@ -88,9 +88,9 @@ Metadane usługi mogą zawierać poufne informacje, o swojej aplikacji, w które
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Przykład kodu używa następujących przestrzeni nazw:  
   
--   <xref:System.ServiceModel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Zobacz także
 

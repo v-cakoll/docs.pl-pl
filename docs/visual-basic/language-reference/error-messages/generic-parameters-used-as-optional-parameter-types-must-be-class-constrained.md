@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
 ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802333"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>Parametry ogólne używane jako typy parametrów opcjonalnych muszą być ograniczone przez klasę
 Procedura jest zadeklarowana z opcjonalnym parametrem, który korzysta z parametrem typu, który nie jest ograniczony do być typem referencyjnym.  
@@ -25,7 +25,7 @@ Procedura jest zadeklarowana z opcjonalnym parametrem, który korzysta z paramet
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Ograniczenia parametru typu do akceptowania tylko typem referencyjnym lub nie jest używana dla parametru opcjonalnego.  
+- Ograniczenia parametru typu do akceptowania tylko typem referencyjnym lub nie jest używana dla parametru opcjonalnego.  
   
 ## <a name="see-also"></a>Zobacz także
 

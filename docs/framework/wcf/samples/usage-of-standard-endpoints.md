@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006341"
 ---
 # <a name="usage-of-standard-endpoints"></a>Użycie standardowych punktów końcowych
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. Włączanie wielu projektów do uruchomienia.
 
-    1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy rozwiązanie standardowych punktów końcowych, a następnie wybierz **właściwości**.
+    1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy rozwiązanie standardowych punktów końcowych, a następnie wybierz **właściwości**.
 
-    2.  W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.
+    2. W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.
 
-    3.  Przenieś projektu usługi na początku listy, za pomocą **akcji** równa **Start**.
+    3. Przenieś projektu usługi na początku listy, za pomocą **akcji** równa **Start**.
 
-    4.  Przejściem projekt klienta po projektu usługi również **akcji** równa **Start**.
+    4. Przejściem projekt klienta po projektu usługi również **akcji** równa **Start**.
 
          To ustawienie określa, że projekt klienta jest wykonywane po projektu usługi.
 

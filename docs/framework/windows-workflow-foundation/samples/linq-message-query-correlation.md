@@ -6,8 +6,8 @@ ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004929"
 ---
 # <a name="linq-message-query-correlation"></a>Korelacja zapytania komunikatów LINQ
 W tym przykładzie pokazano, jak zrobić korelacja oparta na zawartości, przy użyciu niestandardowego <xref:System.ServiceModel.Dispatcher.MessageQuery> wdrożenia, a nie dostarczane przez system <xref:System.ServiceModel.XPathMessageQuery>.  
@@ -28,11 +28,11 @@ W tym przykładzie pokazano, jak zrobić korelacja oparta na zawartości, przy u
   
 2. Po dodaniu listy ACL adresu URL, wykonaj następujące kroki.  
   
-    1.  Skompiluj rozwiązanie.  
+    1. Skompiluj rozwiązanie.  
   
-    2.  Ustawianie wielu projektów uruchamiania, kliknij prawym przyciskiem myszy rozwiązanie i wybierając **Ustaw projekty startowe**. Dodaj **usługi** i **klienta** (w tej kolejności) jako wiele projektów uruchamiania.  
+    2. Ustawianie wielu projektów uruchamiania, kliknij prawym przyciskiem myszy rozwiązanie i wybierając **Ustaw projekty startowe**. Dodaj **usługi** i **klienta** (w tej kolejności) jako wiele projektów uruchamiania.  
   
-    3.  Uruchom aplikację. W konsoli klienta zawiera przepływu pracy, wysyłanie zamówienie i odbieranie identyfikator zamówienia zakupu oraz później potwierdzania zamówienia. Przedział czasu usługi pokaże przetwarzanych żądań.  
+    3. Uruchom aplikację. W konsoli klienta zawiera przepływu pracy, wysyłanie zamówienie i odbieranie identyfikator zamówienia zakupu oraz później potwierdzania zamówienia. Przedział czasu usługi pokaże przetwarzanych żądań.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

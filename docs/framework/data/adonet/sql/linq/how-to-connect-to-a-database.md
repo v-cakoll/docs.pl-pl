@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
 ms.openlocfilehash: f04726bc12fdfbca530ee5533d5b8969addf962e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037846"
 ---
 # <a name="how-to-connect-to-a-database"></a>Instrukcje: Łączenie z bazą danych
 <xref:System.Data.Linq.DataContext> Jest głównym kanał za pomocą którego możesz nawiązać połączenie z bazą danych, pobieranie obiektów z niej i przesyłanie zmian do niej powrót po. Możesz użyć <xref:System.Data.Linq.DataContext> tak samo jak używasz [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. W rzeczywistości <xref:System.Data.Linq.DataContext> jest inicjowany za pomocą połączenia lub parametry połączenia, które dostarczasz. Aby uzyskać więcej informacji, zobacz [metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  

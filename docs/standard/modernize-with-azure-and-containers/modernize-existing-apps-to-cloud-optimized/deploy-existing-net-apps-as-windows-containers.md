@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
 ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61812060"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 
@@ -39,13 +39,13 @@ W kontenerach Windows jest w pełni zautomatyzowane proces pakowania aplikacji. 
 
 W wielu organizacjach są konteneryzowania istniejącej aplikacji monolitycznych z następujących powodów:
 
--   **Elastyczność dzięki ulepszone wdrażanie wersji**. Kontenery oferują umowy spójne wdrażanie, między środowiskami deweloperskim i operacji. Podczas używania kontenerów nie słyszysz deweloperów powiedzieć, "działa na komputerze, dlaczego w środowisku produkcyjnym?" One można powiedzieć "Działa jako kontener, dzięki czemu będzie ona uruchamiana w środowisku produkcyjnym." Spakowanej aplikacji ze wszystkimi jej zależnościami, można wykonać w dowolnym środowisku obsługiwanych opartych na kontenerach. Sposób, w jaki jest przeznaczona do uruchamiania w wszystkich celów wdrożenia (deweloperskie, QA, przejściowego i produkcji), będzie działać. Kontenery wyeliminować większość frictions łączącymi się z jednego etapu do następnego, co znacznie zwiększa wdrożenia, i może to być szybsze dostarczanie.
+- **Elastyczność dzięki ulepszone wdrażanie wersji**. Kontenery oferują umowy spójne wdrażanie, między środowiskami deweloperskim i operacji. Podczas używania kontenerów nie słyszysz deweloperów powiedzieć, "działa na komputerze, dlaczego w środowisku produkcyjnym?" One można powiedzieć "Działa jako kontener, dzięki czemu będzie ona uruchamiana w środowisku produkcyjnym." Spakowanej aplikacji ze wszystkimi jej zależnościami, można wykonać w dowolnym środowisku obsługiwanych opartych na kontenerach. Sposób, w jaki jest przeznaczona do uruchamiania w wszystkich celów wdrożenia (deweloperskie, QA, przejściowego i produkcji), będzie działać. Kontenery wyeliminować większość frictions łączącymi się z jednego etapu do następnego, co znacznie zwiększa wdrożenia, i może to być szybsze dostarczanie.
 
--   **Obniżenie kosztów**. Kontenery prowadzić do obniżenia kosztów, albo poprzez konsolidacji i usunięcie istniejącego sprzętu lub uruchamianie aplikacji na zwiększenie gęstości jednostkę sprzętu.
+- **Obniżenie kosztów**. Kontenery prowadzić do obniżenia kosztów, albo poprzez konsolidacji i usunięcie istniejącego sprzętu lub uruchamianie aplikacji na zwiększenie gęstości jednostkę sprzętu.
 
--   **Przenośność**. Kontenery są moduły i przenośnych. Kontenery platformy docker są obsługiwane na dowolnej systemu operacyjnego Linux i Windows, w dowolnej głównych chmurze publicznej (Microsoft Azure, Amazon AWS, Google, IBM) oraz w lokalnych i prywatnych środowiskach chmury hybrydowej.
+- **Przenośność**. Kontenery są moduły i przenośnych. Kontenery platformy docker są obsługiwane na dowolnej systemu operacyjnego Linux i Windows, w dowolnej głównych chmurze publicznej (Microsoft Azure, Amazon AWS, Google, IBM) oraz w lokalnych i prywatnych środowiskach chmury hybrydowej.
 
--   **Kontrolka**. Kontenery oferują elastyczne i bezpieczne środowisko, które są kontrolowane na poziomie kontenera. Kontener można zabezpieczony, izolowane i nawet ograniczony przez ustawienia ograniczenia zasad wykonywania w kontenerze. Zgodnie z opisem w sekcji o kontenerach Windows Windows Server 2016 i funkcji Hyper-V kontenery oferują enterprise dodatkowe opcje pomocy technicznej.
+- **Kontrolka**. Kontenery oferują elastyczne i bezpieczne środowisko, które są kontrolowane na poziomie kontenera. Kontener można zabezpieczony, izolowane i nawet ograniczony przez ustawienia ograniczenia zasad wykonywania w kontenerze. Zgodnie z opisem w sekcji o kontenerach Windows Windows Server 2016 i funkcji Hyper-V kontenery oferują enterprise dodatkowe opcje pomocy technicznej.
 
 Znaczne ulepszenia dotyczące elastyczności, przenoszenia i kontroli ostatecznie prowadzić do obniżenia kosztów, gdy używać kontenerów do tworzenia i konserwowania aplikacji.
 
@@ -123,15 +123,15 @@ Uruchamianie kontenera na Windows z użyciem lub bez izolacji funkcji Hyper-V je
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Dokumentacja usługi kontenerów Windows**
+- **Dokumentacja usługi kontenerów Windows**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/>
 
--   **Podstawowe informacje dotyczące kontenerów Windows**
+- **Podstawowe informacje dotyczące kontenerów Windows**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
--   **Grafika informacyjna: Firma Microsoft i kontenery**
+- **Grafika informacyjna: Firma Microsoft i kontenery**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -145,18 +145,18 @@ Jednak Jeśli zastanawiasz się nad środowisko wdrażania w środowisku produkc
 > **Rysunek 4 — 7.5.** Ekosystem kontenera na platformie Azure
 
 W ekosystemie kontenera na platformie Azure, następujące produkty obsługę kontenerów, które są uważane za infrastrukturę:
--   **Usługa Azure Container Instances (ACI)**
--   **Usługa Azure Virtual Machines** (z obsługą kontenera)
--   **Usługa Azure Virtual Machine Scale Sets** (z obsługą kontenera)
+- **Usługa Azure Container Instances (ACI)**
+- **Usługa Azure Virtual Machines** (z obsługą kontenera)
+- **Usługa Azure Virtual Machine Scale Sets** (z obsługą kontenera)
 
 Z tych trzech usługa ACI zapewnia ogromne korzyści jest fakt, że nie trzeba utrzymywać podstawowego systemu operacyjnego nie konieczności uaktualnianie/poprawianie, itp., ale ACI nadal znajduje się na poziomie infrastruktury, jak lepiej wyjaśniono w kolejnych sekcjach tego podręcznika.
 
 Dostępne są następujące produkty z obsługi kontenerów platformy Azure, które są w tym samym czasie więcej umieszczony w modelu PaaS (platforma jako usługa), poziom:
 
--   **Usługa Azure App Service**
--   **Azure Kubernetes Service (AKS i usługi ACS)**
--   **Azure Service Fabric** 
--   **Azure Batch** 
+- **Usługa Azure App Service**
+- **Azure Kubernetes Service (AKS i usługi ACS)**
+- **Azure Service Fabric** 
+- **Azure Batch** 
 
 Następnie usługi Azure Container Registry to rejestr kontenera skalowalne wysokiej hostowanych na platformie Azure, korzystających z wszystkie poprzednie produkty podczas rejestrowania i wdrażania obrazów kontenerów niestandardowych.
 

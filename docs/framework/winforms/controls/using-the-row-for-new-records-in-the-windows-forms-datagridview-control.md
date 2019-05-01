@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009178"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows
 Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplikacji, często można zapewnić użytkownikom możliwość dodawania nowych wierszy danych w magazynie danych. <xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje tę funkcję, zapewniając wiersza dla nowych rekordów, który jest zawsze wyświetlany jako ostatni wiersz. Jest ona oznaczona symbolem gwiazdki (*) w jej nagłówku wiersza. W poniższych sekcjach omówiono niektóre czynności, należy rozważyć, gdy program za pomocą wiersza dla nowych rekordów jest włączona.  
@@ -29,9 +29,9 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplik
 ## <a name="the-rows-collection"></a>Kolekcja wierszy  
  Wiersz dla nowych rekordów jest zawarty w <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji ale zachowuje się inaczej w dwóch aspektach:  
   
--   Nie można usunąć wiersza dla nowych rekordów z <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji programowo. <xref:System.InvalidOperationException> Jest generowany, jeśli to jest podejmowana próba. Użytkownik nie może również usunąć wiersza dla nowych rekordów. <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Metoda nie powoduje usunięcia tego wiersza z <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji.  
+- Nie można usunąć wiersza dla nowych rekordów z <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji programowo. <xref:System.InvalidOperationException> Jest generowany, jeśli to jest podejmowana próba. Użytkownik nie może również usunąć wiersza dla nowych rekordów. <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Metoda nie powoduje usunięcia tego wiersza z <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji.  
   
--   Można dodać nie wiersz po wierszu dla nowych rekordów. <xref:System.InvalidOperationException> Jest wywoływane, jeśli ta próba zostanie podjęta. W rezultacie wiersza dla nowych rekordów jest zawsze ostatni wiersz w <xref:System.Windows.Forms.DataGridView> kontroli. Metody na <xref:System.Windows.Forms.DataGridViewRowCollection> , dodawanie wierszy —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, i <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— wszystkie wywołania metod wstawiania wewnętrznie po wiersza dla nowych rekordów jest obecny.  
+- Można dodać nie wiersz po wierszu dla nowych rekordów. <xref:System.InvalidOperationException> Jest wywoływane, jeśli ta próba zostanie podjęta. W rezultacie wiersza dla nowych rekordów jest zawsze ostatni wiersz w <xref:System.Windows.Forms.DataGridView> kontroli. Metody na <xref:System.Windows.Forms.DataGridViewRowCollection> , dodawanie wierszy —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, i <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— wszystkie wywołania metod wstawiania wewnętrznie po wiersza dla nowych rekordów jest obecny.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Dostosowywanie Visual wiersza dla nowych rekordów  
  Po utworzeniu wiersza dla nowych rekordów opiera się na wiersza określonego przez <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> właściwości. Wszystkie style komórki, które nie zostały określone dla tego wiersza są dziedziczone z innych właściwości. Aby uzyskać więcej informacji na temat dziedziczenie stylów komórki, zobacz [style komórki w formancie DataGridView formularzy Windows](cell-styles-in-the-windows-forms-datagridview-control.md).  

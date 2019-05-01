@@ -15,11 +15,11 @@ ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875007"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -39,11 +39,11 @@ Domyślnie modelu wątkowości dla głównego wątku aplikacji konsoli języka V
 
 Możliwe jest, to zdarzenie MDA błędnie zostanie uaktywniony, gdy są spełnione wszystkie następujące warunki:
 
--   Aplikacja tworzy składników COM z wątków STA bezpośrednio lub pośrednio za pośrednictwem biblioteki.
+- Aplikacja tworzy składników COM z wątków STA bezpośrednio lub pośrednio za pośrednictwem biblioteki.
 
--   Aplikacja została zatrzymana w debugerze, a użytkownik nadal aplikacji lub wykonana operacja kroku.
+- Aplikacja została zatrzymana w debugerze, a użytkownik nadal aplikacji lub wykonana operacja kroku.
 
--   Debugowanie niezarządzane nie jest włączona.
+- Debugowanie niezarządzane nie jest włączona.
 
 Aby określić, jeśli zdarzenie MDA jest aktywowane błędnie, wyłącz wszystkie punkty przerwania, uruchom ponownie aplikację i zezwolenia na jego uruchomienie bez zatrzymywania. Jeśli zdarzenie MDA nie został aktywowany, prawdopodobnie początkowej aktywacji została wartość false. W takim przypadku należy wyłączyć MDA, aby uniknąć zakłócenia w sesji debugowania.
 

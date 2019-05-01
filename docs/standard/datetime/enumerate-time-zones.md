@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wykazywanie stref czasowych na komputerze'
+title: 'Instrukcje: Wyliczanie stref czasowych na komputerze'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908677"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Instrukcje: Wykazywanie stref czasowych na komputerze
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Instrukcje: Wyliczanie stref czasowych na komputerze
 
 Działają z wyznaczonym strefy czasowej wymaga, aby dowiedzieć się, że strefa czasowa dostępna w systemie. Systemów operacyjnych Windows XP i Windows Vista te informacje są przechowywane w rejestrze. Jednak mimo że łączna liczba stref czasowych, które istnieją na całym świecie jest duża, Rejestr zawiera informacje na temat tylko ich podzestaw ich. Ponadto rejestr, sama jest dynamiczne struktury, których zawartość mogą ulec zmianie zamierzone i przypadkowych. W rezultacie aplikacji nie zawsze zakładaj, że to daną strefę czasową zdefiniowane i dostępne w systemie. Pierwszym krokiem dla wielu aplikacji, które korzystają z aplikacji informacje o strefie czasowej jest ustalenie, czy wymagane stref czasowych są dostępne w systemie lokalnym lub aby nadać użytkownikowi listę stref czasowych, które można wybierać. Wymaga to, że aplikacja wyliczanie stref czasowych zdefiniowanych w systemie lokalnym.
 

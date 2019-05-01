@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026422"
 ---
 # <a name="extension-methods"></a>Metody rozszerzeń
 Metody rozszerzenia są funkcją języka, umożliwiająca metody statyczne, które można wywoływać za pomocą składni wywołania metody wystąpienia. Te metody musi mieć co najmniej jeden parametr, który reprezentuje wystąpienie, którego metoda jest używana w ramach operacji.  
@@ -22,9 +22,9 @@ Metody rozszerzenia są funkcją języka, umożliwiająca metody statyczne, któ
   
  **✓ CONSIDER** przy użyciu metod rozszerzenia w jednym z następujących scenariuszy:  
   
--   Zapewnienie pomocy funkcji, które dotyczą każdej implementacji interfejsu, w przypadku funkcji mogą być napisane pod kątem interfejsu core. Jest to spowodowane konkretnych implementacji, w przeciwnym razie nie można przypisać do interfejsów. Na przykład `LINQ to Objects` operatory są implementowane jako metody rozszerzenia dla wszystkich <xref:System.Collections.Generic.IEnumerable%601> typów. W związku z dowolnego `IEnumerable<>` implementacja jest włączane automatycznie LINQ.  
+- Zapewnienie pomocy funkcji, które dotyczą każdej implementacji interfejsu, w przypadku funkcji mogą być napisane pod kątem interfejsu core. Jest to spowodowane konkretnych implementacji, w przeciwnym razie nie można przypisać do interfejsów. Na przykład `LINQ to Objects` operatory są implementowane jako metody rozszerzenia dla wszystkich <xref:System.Collections.Generic.IEnumerable%601> typów. W związku z dowolnego `IEnumerable<>` implementacja jest włączane automatycznie LINQ.  
   
--   Gdy metoda wystąpienia spowodowałoby to powstanie zależności pewnego typu, ale takie zależności zaburzyłaby reguły zarządzania zależności. Na przykład zależność od <xref:System.String> do <xref:System.Uri?displayProperty=nameWithType> prawdopodobnie nie jest pożądane, a tym samym `String.ToUri()` metodę wystąpienia, zwracając `System.Uri` będzie niewłaściwy projekt z punktu widzenia zarządzania zależności. Metody statyczne rozszerzenie `Uri.ToUri(this string str)` zwracanie `System.Uri` będzie znacznie lepiej projektu.  
+- Gdy metoda wystąpienia spowodowałoby to powstanie zależności pewnego typu, ale takie zależności zaburzyłaby reguły zarządzania zależności. Na przykład zależność od <xref:System.String> do <xref:System.Uri?displayProperty=nameWithType> prawdopodobnie nie jest pożądane, a tym samym `String.ToUri()` metodę wystąpienia, zwracając `System.Uri` będzie niewłaściwy projekt z punktu widzenia zarządzania zależności. Metody statyczne rozszerzenie `Uri.ToUri(this string str)` zwracanie `System.Uri` będzie znacznie lepiej projektu.  
   
  **X AVOID** definiowanie metody rozszerzenia na <xref:System.Object?displayProperty=nameWithType>.  
   

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020273"
 ---
 # <a name="animation-tips-and-tricks"></a>Porady i triki animacyjne
 Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kilka porad i wskazówek, które mogą ułatwić animacji działać lepiej i pozwala zaoszczędzić Rozczarowanie.  
@@ -41,11 +41,11 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
   
  Aby uzyskać <xref:System.Windows.Media.Animation.Timeline> celu odzwierciedlenia zmian, jego zegara musi być ponownie wygenerowany i używany do zastępowania wcześniej utworzonej zegara. Zegary nie są generowane dla Ciebie automatycznie. Poniżej przedstawiono kilka sposobów, aby zastosować zmiany osi czasu:  
   
--   Jeśli jest na osi czasu, lub należy do <xref:System.Windows.Media.Animation.Storyboard>, możesz przekształcić ją odzwierciedlenia zmian przez ponowne wprowadzenie jego za pomocą scenorysu <xref:System.Windows.Media.Animation.BeginStoryboard> lub <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metody. Ma to również ponowne uruchomienie animacji efektem ubocznym. W kodzie, można użyć <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metodę scenorysu z powrotem do jego poprzedniej pozycji.  
+- Jeśli jest na osi czasu, lub należy do <xref:System.Windows.Media.Animation.Storyboard>, możesz przekształcić ją odzwierciedlenia zmian przez ponowne wprowadzenie jego za pomocą scenorysu <xref:System.Windows.Media.Animation.BeginStoryboard> lub <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metody. Ma to również ponowne uruchomienie animacji efektem ubocznym. W kodzie, można użyć <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metodę scenorysu z powrotem do jego poprzedniej pozycji.  
   
--   Jeśli animacji są stosowane bezpośrednio do właściwości przy użyciu <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metody, wywołanie <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> ponownie metodą i przekaż go animacji, który został zmodyfikowany.  
+- Jeśli animacji są stosowane bezpośrednio do właściwości przy użyciu <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metody, wywołanie <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> ponownie metodą i przekaż go animacji, który został zmodyfikowany.  
   
--   Pracując bezpośrednio na poziomie zegara utworzyć i zastosować nowy zestaw zegary i używać ich w celu zastąpienia poprzedniego zestawu wygenerowanego zegary.  
+- Pracując bezpośrednio na poziomie zegara utworzyć i zastosować nowy zestaw zegary i używać ich w celu zastąpienia poprzedniego zestawu wygenerowanego zegary.  
   
  Aby uzyskać więcej informacji na temat osie czasu i zegary zobacz [Animacja i System chronometrażu w — Przegląd](animation-and-timing-system-overview.md).  
   
@@ -105,13 +105,13 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
   
  Istnieją różne sposoby, aby usunąć animacji. Następujące techniki może służyć do usunięcia animacji, należących do <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Aby usunąć <xref:System.Windows.Media.Animation.Storyboard> wprowadzenie wyzwalacz zdarzenia, zobacz [jak: Usuń Scenorys](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+- Aby usunąć <xref:System.Windows.Media.Animation.Storyboard> wprowadzenie wyzwalacz zdarzenia, zobacz [jak: Usuń Scenorys](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
--   Aby użyć kodu, aby usunąć <xref:System.Windows.Media.Animation.Storyboard>, zobacz <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> metody.  
+- Aby użyć kodu, aby usunąć <xref:System.Windows.Media.Animation.Storyboard>, zobacz <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> metody.  
   
  Technika dalej, mogą być używane niezależnie od tego, jak animacja została uruchomiona.  
   
--   Aby usunąć animacji z określoną właściwość, należy użyć <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> metody. Określa właściwość, jest animowany podczas pierwszego parametru i `null` jako drugiego. Spowoduje to usunięcie wszystkie zegary animacji z właściwości.  
+- Aby usunąć animacji z określoną właściwość, należy użyć <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> metody. Określa właściwość, jest animowany podczas pierwszego parametru i `null` jako drugiego. Spowoduje to usunięcie wszystkie zegary animacji z właściwości.  
   
  Aby uzyskać więcej informacji na temat różnych sposobów, aby animować właściwości, zobacz [Przegląd techniki animacji właściwości](property-animation-techniques-overview.md).  
   
@@ -120,9 +120,9 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
   
  Aby uniknąć problemów z wydajnością, po zastosowaniu dużej liczby zegary przy użyciu <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, tworzenie zegary należy usunąć z animowanych właściwości po ich zakończeniu. Istnieje kilka sposobów, aby usunąć zegara.  
   
--   Aby usunąć wszystkie zegary z właściwością, należy użyć <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> lub <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> metoda obiekt animowany. Określa właściwość, jest animowany podczas pierwszego parametru i `null` jako drugiego. Spowoduje to usunięcie wszystkie zegary animacji z właściwości.  
+- Aby usunąć wszystkie zegary z właściwością, należy użyć <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> lub <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> metoda obiekt animowany. Określa właściwość, jest animowany podczas pierwszego parametru i `null` jako drugiego. Spowoduje to usunięcie wszystkie zegary animacji z właściwości.  
   
--   Aby usunąć określony <xref:System.Windows.Media.Animation.AnimationClock> z listy zegary, użyj <xref:System.Windows.Media.Animation.Clock.Controller%2A> właściwość <xref:System.Windows.Media.Animation.AnimationClock> można pobrać <xref:System.Windows.Media.Animation.ClockController>, następnie wywołać <xref:System.Windows.Media.Animation.ClockController.Remove%2A> metody <xref:System.Windows.Media.Animation.ClockController>. Jest to zazwyczaj wykonywane <xref:System.Windows.Media.Animation.Clock.Completed> program obsługi zdarzeń dla zegara. Należy pamiętać, że tylko zegary głównego można kontrolować, <xref:System.Windows.Media.Animation.ClockController>; <xref:System.Windows.Media.Animation.Clock.Controller%2A> zwróci właściwość zegara podrzędnych `null`. Należy zauważyć, że <xref:System.Windows.Media.Animation.Clock.Completed> zdarzenie nie zostanie wywołana, jeśli efektywnym czasem trwania zegara jest nieskończona.  W takim przypadku użytkownik musi określić, kiedy wywołać metodę <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+- Aby usunąć określony <xref:System.Windows.Media.Animation.AnimationClock> z listy zegary, użyj <xref:System.Windows.Media.Animation.Clock.Controller%2A> właściwość <xref:System.Windows.Media.Animation.AnimationClock> można pobrać <xref:System.Windows.Media.Animation.ClockController>, następnie wywołać <xref:System.Windows.Media.Animation.ClockController.Remove%2A> metody <xref:System.Windows.Media.Animation.ClockController>. Jest to zazwyczaj wykonywane <xref:System.Windows.Media.Animation.Clock.Completed> program obsługi zdarzeń dla zegara. Należy pamiętać, że tylko zegary głównego można kontrolować, <xref:System.Windows.Media.Animation.ClockController>; <xref:System.Windows.Media.Animation.Clock.Controller%2A> zwróci właściwość zegara podrzędnych `null`. Należy zauważyć, że <xref:System.Windows.Media.Animation.Clock.Completed> zdarzenie nie zostanie wywołana, jeśli efektywnym czasem trwania zegara jest nieskończona.  W takim przypadku użytkownik musi określić, kiedy wywołać metodę <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
   
  Jest to głównie problemu dla animacji na obiekty, które mają długi okres istnienia.  Gdy obiekt jest bezużyteczne, jego zegary również zostanie odłączona i wyrzucania.  
   

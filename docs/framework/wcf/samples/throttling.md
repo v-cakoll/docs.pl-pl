@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: d41270d63d188443207c78a3c55b469e2bd7b482
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006309"
 ---
 # <a name="throttling"></a>Dławienie
 Przykładowe ograniczania demonstruje użycie ograniczania kontrolki. Formanty ograniczania przepływności ogranicza liczbę równoczesnych wywołań, wystąpienia lub sesji, aby uniknąć nadmiernego zużycia zasobów. Zachowanie funkcji ograniczania przepływności jest określony w ustawieniach pliku konfiguracji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora.  

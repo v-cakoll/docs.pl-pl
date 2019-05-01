@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
 ms.openlocfilehash: ad63f622aae55cb4175eddc93ab5e086965a8fe8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011787"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator — Informacje o formancie [Formularze systemu Windows]
 Możesz użyć <xref:System.Windows.Forms.BindingNavigator> formantu, aby utworzyć standardowe oznacza, że dla użytkowników wyszukać i zmiany danych w formularzu Windows. Często używane <xref:System.Windows.Forms.BindingNavigator> z <xref:System.Windows.Forms.BindingSource> składnika, aby umożliwić użytkownikom przechodzenie między rekordów danych na formularzu i interakcję z rekordami.  

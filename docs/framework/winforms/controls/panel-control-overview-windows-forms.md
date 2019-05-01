@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012688"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel — Informacje o formancie (Formularze systemu Windows)
 Windows Forms <xref:System.Windows.Forms.Panel> formantów służą do zapewniania do zidentyfikowania grupowanie dla innych kontrolek. Zazwyczaj używasz paneli, pozwalające na dalszy podział formularza za pomocą funkcji. Na przykład masz formularza zamówienia, określający korespondencyjny opcje, takie jak które przelewy operatora do użycia. Grupowanie wszystkie opcje w panelu zapewnia logiczną oznak wizualnych aktywacji. Na projekt czas wszystkich kontrolek, które mogą zostać przeniesione łatwo — przy przenoszeniu <xref:System.Windows.Forms.Panel> kontrolować, wszystkie jego zawartych w nim formantów, Przenieś zbyt. Kontrolki zgrupowane w panelu jest możliwy za pośrednictwem jego <xref:System.Windows.Forms.Control.Controls%2A> właściwości. Ta właściwość zwraca kolekcję <xref:System.Windows.Forms.Control> wystąpienia, więc zazwyczaj konieczne będzie rzutowania kontrolki pobrać ten sposób dla określonego typu.  

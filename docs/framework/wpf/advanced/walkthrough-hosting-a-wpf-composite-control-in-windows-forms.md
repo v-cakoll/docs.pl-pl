@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052550"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej efektywne rozszerzyć istniejącą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , a nie do jego przepisania od podstaw. Jest to typowy scenariusz, gdy chcesz osadzić jedną lub większą liczbę opcji implementowane za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji Windows Forms. Aby uzyskać więcej informacji na temat dostosowywania kontrolek WPF, zobacz [niestandardowe Dostosowywanie formantu](../controls/control-customization.md).  
@@ -20,9 +20,9 @@ ms.locfileid: "59322839"
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Implementowanie złożonego formantu WPF.  
+- Implementowanie złożonego formantu WPF.  
   
--   Wdrażanie aplikacji hosta Windows Forms.  
+- Wdrażanie aplikacji hosta Windows Forms.  
   
  Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [Hosting złożonego formantu WPF w Windows Forms przykładzie](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
@@ -54,13 +54,13 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
  Projekt powinien mieć odwołania do następujących systemowych bibliotek DLL. Jeśli dowolny z tych bibliotek DLL nie są włączone domyślnie, należy je dodać do projektu.  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   System  
+- System  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>Tworzenie interfejsu użytkownika  
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Dla złożonego formantu jest implementowane za pomocą [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Złożonej kontrolki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] składa się z pięciu <xref:System.Windows.Controls.TextBox> elementów. Każdy <xref:System.Windows.Controls.TextBox> element ma skojarzony <xref:System.Windows.Controls.TextBlock> element, który służy jako etykieta. Istnieją dwa <xref:System.Windows.Controls.Button> elementy u dołu **OK** i **anulować**. Po kliknięciu przycisku albo kontrolki wywołuje zdarzenie niestandardowe do zwracania informacji do hosta.  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>Inicjowanie kontrolki  
  Poniższy kod implementuje kilka podstawowych zadań:  
   
--   Deklaruje zdarzenie prywatne, `OnButtonClick`i jego skojarzone delegata `MyControlEventHandler`.  
+- Deklaruje zdarzenie prywatne, `OnButtonClick`i jego skojarzone delegata `MyControlEventHandler`.  
   
--   Tworzy kilka prywatnej zmienne globalne, które przechowują dane użytkownika. Te dane są prezentowane za pomocą odpowiednich właściwości.  
+- Tworzy kilka prywatnej zmienne globalne, które przechowują dane użytkownika. Te dane są prezentowane za pomocą odpowiednich właściwości.  
   
--   Implementuje obsługi `Init`, dla formantu <xref:System.Windows.FrameworkElement.Loaded> zdarzeń. Ten program obsługi inicjuje zmienne globalne przez przypisywanie ich do wartości określonych w MyControl1.xaml. Aby to zrobić, używa <xref:System.Windows.FrameworkElement.Name%2A> przypisane do typowej <xref:System.Windows.Controls.TextBlock> elementu `nameLabel`, aby uzyskać dostęp ustawienia właściwości tego elementu.  
+- Implementuje obsługi `Init`, dla formantu <xref:System.Windows.FrameworkElement.Loaded> zdarzeń. Ten program obsługi inicjuje zmienne globalne przez przypisywanie ich do wartości określonych w MyControl1.xaml. Aby to zrobić, używa <xref:System.Windows.FrameworkElement.Name%2A> przypisane do typowej <xref:System.Windows.Controls.TextBlock> elementu `nameLabel`, aby uzyskać dostęp ustawienia właściwości tego elementu.  
   
  Usuń istniejące Konstruktor i Dodaj następujący kod, aby Twoje `MyControl1` klasy.  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>Przyciski obsługi zdarzenia kliknięcia  
  Użytkownik wskazuje, że zakończenia zadania wprowadzanie danych przez kliknięcie dowolnej **OK** przycisk lub **anulować** przycisku. Przyciski używać tego samego <xref:System.Windows.Controls.Primitives.ButtonBase.Click> programu obsługi zdarzeń `ButtonClicked`. Przyciski mają nazwy `btnOK` lub `btnCancel`, umożliwiającej program obsługi określić, której przycisk został kliknięty, sprawdzając wartość `sender` argumentu. Program obsługi wykonuje następujące czynności:  
   
--   Tworzy `MyControlEventArgs` obiekt, który zawiera dane z <xref:System.Windows.Controls.TextBox> elementów.  
+- Tworzy `MyControlEventArgs` obiekt, który zawiera dane z <xref:System.Windows.Controls.TextBox> elementów.  
   
--   Jeśli użytkownik kliknął element **anulować** przycisk zestawy `MyControlEventArgs` obiektu `IsOK` właściwość `false`.  
+- Jeśli użytkownik kliknął element **anulować** przycisk zestawy `MyControlEventArgs` obiektu `IsOK` właściwość `false`.  
   
--   Wywołuje `OnButtonClick` zdarzenie, które wskazuje na hoście, że zostanie zakończone i przekazuje kopii zebranych danych.  
+- Wywołuje `OnButtonClick` zdarzenie, które wskazuje na hoście, że zostanie zakończone i przekazuje kopii zebranych danych.  
   
  Dodaj następujący kod, aby Twoje `MyControl1` klasy po `Init` metody.  
   
@@ -209,15 +209,15 @@ Na poniższej ilustracji przedstawiono złożonego formantu WPF hostowany w apli
   
 4. Dodaj odwołania do następujących zestawów.  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>Implementowanie interfejsu użytkownika dla aplikacji  
  W interfejsie użytkownika dla aplikacji Windows formularza zawiera kilka formantów do interakcji z złożonego formantu WPF.  
@@ -296,9 +296,9 @@ Na poniższej ilustracji przedstawiono złożonego formantu WPF hostowany w apli
   
  Pozostałe dwa wiersze w `Form1_Load` metoda dołączyć obsługi do dwóch zdarzeń formantów:  
   
--   `OnButtonClick` To zdarzenie niestandardowe, które jest wywoływane przez złożonej kontrolki, gdy użytkownik kliknie **OK** lub **anulować** przycisku. Obsługi zdarzeń uzyskania odpowiedzi użytkownika i zbierać dowolne dane, określonej przez użytkownika.  
+- `OnButtonClick` To zdarzenie niestandardowe, które jest wywoływane przez złożonej kontrolki, gdy użytkownik kliknie **OK** lub **anulować** przycisku. Obsługi zdarzeń uzyskania odpowiedzi użytkownika i zbierać dowolne dane, określonej przez użytkownika.  
   
--   <xref:System.Windows.FrameworkElement.Loaded> To zdarzenie standardowe, który jest wywoływany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolować znajduje się w pełni załadowane. Zdarzenie jest używane w tym miejscu ponieważ przykład musi zainicjować wiele zmiennych globalnych przy użyciu właściwości z formantu. W czasie w postaci <xref:System.Windows.Forms.Form.Load> zdarzenie, formant nie jest w pełni załadowany i te wartości są nadal równa `null`. Musisz czekać do momentu formantu <xref:System.Windows.FrameworkElement.Loaded> wystąpi zdarzenie, aby korzystać z tych właściwości.  
+- <xref:System.Windows.FrameworkElement.Loaded> To zdarzenie standardowe, który jest wywoływany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolować znajduje się w pełni załadowane. Zdarzenie jest używane w tym miejscu ponieważ przykład musi zainicjować wiele zmiennych globalnych przy użyciu właściwości z formantu. W czasie w postaci <xref:System.Windows.Forms.Form.Load> zdarzenie, formant nie jest w pełni załadowany i te wartości są nadal równa `null`. Musisz czekać do momentu formantu <xref:System.Windows.FrameworkElement.Loaded> wystąpi zdarzenie, aby korzystać z tych właściwości.  
   
  <xref:System.Windows.FrameworkElement.Loaded> Program obsługi zdarzeń jest wyświetlany w poprzednim kodzie. `OnButtonClick` Obsługi została omówiona w następnej sekcji.  
   

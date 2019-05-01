@@ -20,11 +20,11 @@ helpviewer_keywords:
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
 ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012701"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog — Składnik (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.PageSetupDialog> składnik to wstępnie skonfigurowane okno dialogowe umożliwia określanie szczegółów strony do drukowania w aplikacji systemu Windows. Użycie go w aplikacji opartych na Windows jako proste rozwiązanie dla użytkowników, aby ustawić preferencje strony audytów Konfigurowanie własnego okno dialogowe. Możesz umożliwić użytkownikom ustawić obramowanie i korekty margines, nagłówki i stopki i pionowym, a orientacji poziomej. Opierając się na standardowych okien dialogowych Windows, możesz tworzyć aplikacje, w których podstawowych funkcji jest natychmiast dobrze znanym użytkownikom.  

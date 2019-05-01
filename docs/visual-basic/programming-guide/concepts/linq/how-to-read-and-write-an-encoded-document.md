@@ -3,11 +3,11 @@ title: 'Instrukcje: Odczytywanie i zapisywanie zakodowanego dokumentu (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
 ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008879"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Instrukcje: Odczytywanie i zapisywanie zakodowanego dokumentu (Visual Basic)
 Aby utworzyć zakodowanego dokumentu XML, należy dodać <xref:System.Xml.Linq.XDeclaration> do drzewa XML ustawienie Kodowanie do nazwy strony odpowiedni kod.  

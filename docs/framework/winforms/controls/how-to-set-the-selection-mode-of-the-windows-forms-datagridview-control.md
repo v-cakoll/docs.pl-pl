@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
 ms.openlocfilehash: 2e430dfb170943178f6db27c0bd2c1ef0f972882
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013117"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy systemu Windows
 Poniższy przykład kodu demonstruje sposób konfigurowania <xref:System.Windows.Forms.DataGridView> kontroli tak, aby kliknięcie dowolnym miejscu w wierszu automatycznie wybiera cały wiersz, i tak aby tylko jeden wiersz jednocześnie można wybrać.  
@@ -26,9 +26,9 @@ Poniższy przykład kodu demonstruje sposób konfigurowania <xref:System.Windows
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
   
--   Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
+- Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
   
 ## <a name="see-also"></a>Zobacz także
 

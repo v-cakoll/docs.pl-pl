@@ -21,11 +21,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b95625cfe17b36c0244e6780a08dcf50ce50763d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985819"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess — Funkcja
 Zamyka bieżący proces niezarządzany.  

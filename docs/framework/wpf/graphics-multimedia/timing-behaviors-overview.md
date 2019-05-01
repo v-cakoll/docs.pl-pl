@@ -6,11 +6,11 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002342"
 ---
 # <a name="timing-behaviors-overview"></a>Przegląd Zachowania chronometrażu
 W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.Windows.Media.Animation.Timeline> obiektów.  
@@ -106,9 +106,9 @@ W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.W
   
  Poniższy przykład tworzy <xref:System.Windows.Media.Animation.Storyboard> ma dwa podrzędnych <xref:System.Windows.Media.Animation.DoubleAnimation> obiektów. Zarówno <xref:System.Windows.Media.Animation.DoubleAnimation> Animowanie obiektów <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> z zakresu od 0 do 100. <xref:System.Windows.Shapes.Rectangle> Elementy mają inne niż animowane <xref:System.Windows.FrameworkElement.Width%2A> wartości 500 [pikselach niezależnych od urządzenia].  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Właściwości pierwszego <xref:System.Windows.Media.Animation.DoubleAnimation> ustawiono <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, wartością domyślną. W rezultacie szerokość prostokąta pozostaje na 100 po <xref:System.Windows.Media.Animation.DoubleAnimation> kończy.  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Właściwości pierwszego <xref:System.Windows.Media.Animation.DoubleAnimation> ustawiono <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, wartością domyślną. W rezultacie szerokość prostokąta pozostaje na 100 po <xref:System.Windows.Media.Animation.DoubleAnimation> kończy.  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Właściwość drugiej <xref:System.Windows.Media.Animation.DoubleAnimation> ustawiono <xref:System.Windows.Media.Animation.FillBehavior.Stop>. W rezultacie <xref:System.Windows.FrameworkElement.Width%2A> drugiego <xref:System.Windows.Shapes.Rectangle> powraca do 500 po <xref:System.Windows.Media.Animation.DoubleAnimation> kończy.  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Właściwość drugiej <xref:System.Windows.Media.Animation.DoubleAnimation> ustawiono <xref:System.Windows.Media.Animation.FillBehavior.Stop>. W rezultacie <xref:System.Windows.FrameworkElement.Width%2A> drugiego <xref:System.Windows.Shapes.Rectangle> powraca do 500 po <xref:System.Windows.Media.Animation.DoubleAnimation> kończy.  
   
  [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
@@ -116,11 +116,11 @@ W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.W
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Właściwości określające prędkość w osi czasu  
  <xref:System.Windows.Media.Animation.Timeline> Klasa udostępnia trzy właściwości do określenia jej szybkość działania:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> — Umożliwia określenie tego kursu, względem jego elementu nadrzędnego, w którym czasu w miarę dla <xref:System.Windows.Media.Animation.Timeline>. Wartości jest większa niż jeden przyspieszenie <xref:System.Windows.Media.Animation.Timeline> i jej podrzędne <xref:System.Windows.Media.Animation.Timeline> obiektów; wartości z zakresu od zera do jednego spowolnić jej. Wartość 1 oznacza, że <xref:System.Windows.Media.Animation.Timeline> realizowany przy użyciu stawki stosowanej jako klasy nadrzędnej. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Ustawienie na osi czasu w kontenerze ma wpływ na wszystkie jego podrzędny <xref:System.Windows.Media.Animation.Timeline> także obiekty.  
+- <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> — Umożliwia określenie tego kursu, względem jego elementu nadrzędnego, w którym czasu w miarę dla <xref:System.Windows.Media.Animation.Timeline>. Wartości jest większa niż jeden przyspieszenie <xref:System.Windows.Media.Animation.Timeline> i jej podrzędne <xref:System.Windows.Media.Animation.Timeline> obiektów; wartości z zakresu od zera do jednego spowolnić jej. Wartość 1 oznacza, że <xref:System.Windows.Media.Animation.Timeline> realizowany przy użyciu stawki stosowanej jako klasy nadrzędnej. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Ustawienie na osi czasu w kontenerze ma wpływ na wszystkie jego podrzędny <xref:System.Windows.Media.Animation.Timeline> także obiekty.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego przyspieszenia. Aby uzyskać przykład, zobacz [jak: Przyspieszanie lub zwalnianie animacji](how-to-accelerate-or-decelerate-an-animation.md). 
+- <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego przyspieszenia. Aby uzyskać przykład, zobacz [jak: Przyspieszanie lub zwalnianie animacji](how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego spowolnienie. Aby uzyskać przykład, zobacz [jak: Przyspieszanie lub zwalnianie animacji](how-to-accelerate-or-decelerate-an-animation.md).  
+- <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego spowolnienie. Aby uzyskać przykład, zobacz [jak: Przyspieszanie lub zwalnianie animacji](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

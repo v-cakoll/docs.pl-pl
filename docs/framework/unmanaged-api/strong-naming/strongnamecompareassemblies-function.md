@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000327"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies — Funkcja
 Określa, czy dwa zestawy różnią się tylko ich podpisy silnej nazwy.  
@@ -48,11 +48,11 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Jeden z następujących wartości:  
   
--   `SN_CMP_DIFFERENT` (0) — określa, że zestawy zawierają różne dane.  
+- `SN_CMP_DIFFERENT` (0) — określa, że zestawy zawierają różne dane.  
   
--   `SN_CMP_IDENTICAL` (1) — określa, że zestawy są dokładnie takie same, łącznie z ich podpisy i sumy kontrolnej.  
+- `SN_CMP_IDENTICAL` (1) — określa, że zestawy są dokładnie takie same, łącznie z ich podpisy i sumy kontrolnej.  
   
--   `SN_CMP_SIGONLY` (2) — określa, że zestawy różnią się jedynie podpisu i sum kontrolnych.  
+- `SN_CMP_SIGONLY` (2) — określa, że zestawy różnią się jedynie podpisu i sum kontrolnych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  `true` Po pomyślnym zakończeniu; w przeciwnym razie `false`.  

@@ -3,22 +3,22 @@ title: Przykład dyspozytora tabeli UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
 ms.openlocfilehash: 800765c6b01e49b730414132ac64ab8eed3e9e5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007576"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Przykład dyspozytora tabeli UriTemplate
 <xref:System.UriTemplateTable> Klasa udostępnia struktury tabeli asocjacyjnych słownika podobne do pracy z zestawem <xref:System.UriTemplate> wystąpień. W tym przykładzie przedstawiono podstawowe aparatu dispatching utworzone przy użyciu `UriTemplateTable`, typowy scenariusz użycia dla `UriTemplateTable` klasy.  
   
  Niniejszy przykład pokazuje następujące kluczowe pojęcia związane z `UriTemplateTable` klasy:  
   
--   Kojarzenie obiektów delegowanych z `UriTemplates` w `UriTemplateTable`.  
+- Kojarzenie obiektów delegowanych z `UriTemplates` w `UriTemplateTable`.  
   
--   Za pomocą <xref:System.UriTemplateTable.MatchSingle%2A> uzyskać prawidłowe procedury obsługi delegata dla określonego identyfikatora URI.  
+- Za pomocą <xref:System.UriTemplateTable.MatchSingle%2A> uzyskać prawidłowe procedury obsługi delegata dla określonego identyfikatora URI.  
   
--   Wywołanie delegata obsługi do przetwarzania żądania.  
+- Wywołanie delegata obsługi do przetwarzania żądania.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   

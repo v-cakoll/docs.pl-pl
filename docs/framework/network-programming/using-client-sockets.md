@@ -17,11 +17,11 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796789"
 ---
 # <a name="using-client-sockets"></a>Używanie gniazd klientów
 Przed rozpoczęciem konwersacji za pośrednictwem <xref:System.Net.Sockets.Socket>, należy utworzyć potok danych między aplikacją i urządzenie zdalne. Mimo że istnieją inne rodziny adresów sieciowych i protokołów, w tym przykładzie pokazano, jak utworzyć połączenie TCP/IP do usługi zdalnej.  

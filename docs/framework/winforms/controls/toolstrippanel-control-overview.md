@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
 ms.openlocfilehash: 694cb88807f718a1f3122ae8cd9d7d4af4e576e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009373"
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel — Informacje o formancie
 A <xref:System.Windows.Forms.ToolStripPanel> zapewnia pojedynczy obszar rozmieszczania i rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.StatusStrip> kontrolki. Wiele <xref:System.Windows.Forms.ToolStrip> formantów stosu w pionie lub w poziomie w zależności od <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> z <xref:System.Windows.Forms.ToolStripPanel>.  

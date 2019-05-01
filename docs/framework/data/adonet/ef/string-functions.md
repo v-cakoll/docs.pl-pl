@@ -3,11 +3,11 @@ title: Funkcje ciągów
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879125"
 ---
 # <a name="string-functions"></a>Funkcje ciągów
 .NET Framework Data Provider for SQL Server (SqlClient) zapewnia `String` funkcje, które wykonują operacje na danych wejściowych `String` i zwracają `String` lub wynik wartość liczbową. Te funkcje są w przestrzeni nazw SqlServer, który jest dostępny, gdy używasz SqlClient. Właściwość przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, który prefiks jest używany przez tego dostawcę dla określonego konstrukcji, takich jak typy i funkcje.  

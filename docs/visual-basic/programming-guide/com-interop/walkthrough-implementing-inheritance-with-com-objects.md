@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022327"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Przewodnik: Wdrażanie dziedziczenia z obiektami COM (Visual Basic)
 Utworzeniu klasy pochodnej klasy Visual Basic z `Public` klas obiektów COM, nawet te, utworzone we wcześniejszych wersjach programu Visual Basic. Właściwości i metody klasy dziedziczone z obiektów COM mogą być zastąpione lub przeciążone, podobnie jak właściwości i metody inne klasy bazowej można zastąpić lub przeciążone. Dziedziczenie z obiektami COM jest przydatne, jeśli masz istniejące biblioteki klas, które nie chcesz ponownie skompilować.  
@@ -125,9 +125,9 @@ Utworzeniu klasy pochodnej klasy Visual Basic z `Public` klas obiektów COM, naw
   
  Właściwości i metody dziedziczone z klasy COM można przesłonić, co oznacza, że można zadeklarować lokalnego właściwości lub metody, która zastępuje właściwość lub dziedziczone z klasy bazowej COM. Reguły zastępowania dziedziczonych właściwości modelu COM są podobne do reguł zastępowanie innych właściwości i metod z następującymi wyjątkami:  
   
--   Jeśli zastąpisz każda właściwość lub metoda odziedziczoną z klasy COM muszą przesłaniać wszystkie odziedziczone właściwości i metody.  
+- Jeśli zastąpisz każda właściwość lub metoda odziedziczoną z klasy COM muszą przesłaniać wszystkie odziedziczone właściwości i metody.  
   
--   Właściwości, które używają `ByRef` parametrów nie może być zastąpiona.  
+- Właściwości, które używają `ByRef` parametrów nie może być zastąpiona.  
   
 ## <a name="see-also"></a>Zobacz także
 

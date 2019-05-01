@@ -3,22 +3,22 @@ title: Niestandardowa publikacja WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990590"
 ---
 # <a name="custom-wsdl-publication"></a>Niestandardowa publikacja WSDL
 Niniejszy przykład pokazuje, jak:  
   
--   Implementowanie <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> na niestandardowy <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> atrybutu, aby wyeksportować właściwości atrybutu jako adnotacje WSDL.  
+- Implementowanie <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> na niestandardowy <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> atrybutu, aby wyeksportować właściwości atrybutu jako adnotacje WSDL.  
   
--   Implementowanie <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> można zaimportować niestandardowych adnotacje WSDL.  
+- Implementowanie <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> można zaimportować niestandardowych adnotacje WSDL.  
   
--   Implementowanie <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> i <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> na niestandardowy umowę zachowanie i zachowanie niestandardowe operacji, odpowiednio, zapis adnotacji importowany jako komentarze w CodeDom dla importowanych kontraktu i operacji.  
+- Implementowanie <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> i <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> na niestandardowy umowę zachowanie i zachowanie niestandardowe operacji, odpowiednio, zapis adnotacji importowany jako komentarze w CodeDom dla importowanych kontraktu i operacji.  
   
--   Użyj <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> można pobrać pliku WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> można zaimportować pliku WSDL, przy użyciu niestandardowych importerów WSDL i <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> do generowania kodu klienta usługi Windows Communication Foundation (WCF) z adnotacjami WSDL jako / / / i ''' komentarzy w języku C# i Visual Podstawowe.  
+- Użyj <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> można pobrać pliku WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> można zaimportować pliku WSDL, przy użyciu niestandardowych importerów WSDL i <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> do generowania kodu klienta usługi Windows Communication Foundation (WCF) z adnotacjami WSDL jako / / / i ''' komentarzy w języku C# i Visual Podstawowe.  
   
 > [!NOTE]
 >  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  

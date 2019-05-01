@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
 ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004288"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Instrukcje: Rysowanie linii wypełnionej teksturą
 Zamiast Rysowanie linii za pomocą jednolitego koloru, można narysować linię z teksturą. Rysowanie linii i krzywych teksturą, należy utworzyć <xref:System.Drawing.TextureBrush> obiektu i przekaż go <xref:System.Drawing.TextureBrush> obiekt <xref:System.Drawing.Pen.%23ctor%2A> konstruktora. Mapy bitowej skojarzone z pędzla tekstury jest używany do kafelka na płaszczyźnie (niewidocznie), a gdy Pióro rysuje linię lub krzywą, pociągnięcia pióra odkrywa niektórych pikseli tekstury fragmentacji.  

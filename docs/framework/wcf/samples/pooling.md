@@ -3,11 +3,11 @@ title: Buforowanie
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
 ms.openlocfilehash: f4df661ad5d831158da55fe3890805ccc5cd695f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007971"
 ---
 # <a name="pooling"></a>Buforowanie
 Niniejszy przykład pokazuje, jak rozszerzyć Windows Communication Foundation (WCF) do obsługi buforowanie obiektu. W przykładzie pokazano, jak utworzyć atrybut, który przypomina składniowo i semantycznie `ObjectPoolingAttribute` atrybutu funkcjonalność usług dla przedsiębiorstw. Buforowanie obiektu może zapewnić znaczne zwiększenie wydajności na wydajność aplikacji. Jednak jeśli nie jest poprawnie użyty może mieć odwrotny efekt. Buforowanie obiektu pomaga zmniejszyć koszty ponowne utworzenie często używanych obiektów, które wymagają rozbudowane inicjowania. Jednak jeśli wywołanie metody do obiektu puli zajmuje znaczną ilość czasu na ukończenie, buforowanie obiektu kolejki dodatkowych żądań tak szybko, jak Osiągnięto maksymalny rozmiar puli. Ten sposób może nie obsługiwać żądania tworzenia obiektu zgłaszając wyjątek limitu czasu.  
@@ -24,11 +24,11 @@ Niniejszy przykład pokazuje, jak rozszerzyć Windows Communication Foundation (
 ## <a name="the-iinstanceprovider"></a>The IInstanceProvider  
  W programie WCF, Dyspozytor tworzy wystąpienia klasy usługi za pomocą <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, który implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejsu. Ten interfejs zawiera trzy metody:  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Po umieszczeniu wywołania funkcji wysyłania komunikatu <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> metodę, aby utworzyć wystąpienie klasy usługi przetworzyć komunikatu. Częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Na przykład jeśli <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.InstanceContextMode.PerCall> nowe wystąpienie klasy usługi zostanie utworzona przetworzenie każdego komunikatu przychodzący, więc <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> jest wywoływana w momencie nadejścia wiadomości.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Po umieszczeniu wywołania funkcji wysyłania komunikatu <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> metodę, aby utworzyć wystąpienie klasy usługi przetworzyć komunikatu. Częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Na przykład jeśli <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.InstanceContextMode.PerCall> nowe wystąpienie klasy usługi zostanie utworzona przetworzenie każdego komunikatu przychodzący, więc <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> jest wywoływana w momencie nadejścia wiadomości.  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>: Może to być taka sama jak Poprzednia metoda, z wyjątkiem wywoływane po żadnego argumentu dla wiadomości.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>: Może to być taka sama jak Poprzednia metoda, z wyjątkiem wywoływane po żadnego argumentu dla wiadomości.  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Po upływie okresu istnienia wystąpienia usługi, wywołania dyspozytora <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> metody. Podobnie jak w przypadku dla <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> metody częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Po upływie okresu istnienia wystąpienia usługi, wywołania dyspozytora <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> metody. Podobnie jak w przypadku dla <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> metody częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości.  
   
 ## <a name="the-object-pool"></a>Pula obiektów  
  Niestandardowy <xref:System.ServiceModel.Dispatcher.IInstanceProvider> implementacja udostępnia wymaganego obiektu buforowanie semantyki dla usługi. Ten przykład ma `ObjectPoolingInstanceProvider` typ, który zawiera niestandardową implementację <xref:System.ServiceModel.Dispatcher.IInstanceProvider> do umieszczenia w puli. Gdy `Dispatcher` wywołania <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> metody, zamiast tworzenia nowego wystąpienia, implementacja niestandardowa szuka istniejący obiekt w puli w pamięci. Jeśli jest dostępny, jest zwracany. W przeciwnym razie zostanie utworzony nowy obiekt. Wykonania na `GetInstance` przedstawiono w poniższym przykładowym kodzie.  
@@ -85,27 +85,27 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
 ## <a name="adding-the-behavior"></a>Dodawanie zachowania  
  Rozszerzenia dyspozytorów warstwy są podłączone, wykonując następujące zachowania:  
   
--   Zachowania usługi. Umożliwiają one do dostosowywania środowiska uruchomieniowego całą usługę.  
+- Zachowania usługi. Umożliwiają one do dostosowywania środowiska uruchomieniowego całą usługę.  
   
--   Zachowania punktu końcowego. Umożliwiają one do dostosowywania punktów końcowych usługi, w szczególności kanału i wysyłający punktu końcowego.  
+- Zachowania punktu końcowego. Umożliwiają one do dostosowywania punktów końcowych usługi, w szczególności kanału i wysyłający punktu końcowego.  
   
--   Zachowania kontraktu. Umożliwiają one do dostosowania obu <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy na kliencie i usługę, odpowiednio.  
+- Zachowania kontraktu. Umożliwiają one do dostosowania obu <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy na kliencie i usługę, odpowiednio.  
   
  Na potrzeby buforowania rozszerzenie obiektu zachowanie usługi, musi zostać utworzona. Zachowania usług są tworzone przez zaimplementowanie <xref:System.ServiceModel.Description.IServiceBehavior> interfejsu. Istnieje kilka sposobów, aby uświadomić modelu usługi niestandardowe zachowania:  
   
--   Za pomocą atrybutu niestandardowego.  
+- Za pomocą atrybutu niestandardowego.  
   
--   Obowiązkowo dodanie go do kolekcji zachowań opisu usługi.  
+- Obowiązkowo dodanie go do kolekcji zachowań opisu usługi.  
   
--   Rozszerzenie pliku konfiguracji.  
+- Rozszerzenie pliku konfiguracji.  
   
  Ta próbka używa atrybutu niestandardowego. Gdy <xref:System.ServiceModel.ServiceHost> jest konstruowany poszczególne atrybuty, są używane w definicji typu usługi i zachowania dostępne są dodawane do kolekcji zachowań opisu usługi.  
   
  Interfejs <xref:System.ServiceModel.Description.IServiceBehavior> zawiera trzy metody — <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>, i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> Metoda służy do zapewnienia, że zachowanie może być stosowana w usłudze. W tym przykładzie wdrożenia gwarantuje, że usługa nie jest skonfigurowana za pomocą <xref:System.ServiceModel.InstanceContextMode.Single>. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> Metoda służy do konfigurowania usługi powiązania. Nie jest wymagane w tym scenariuszu. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> Służy do konfigurowania dyspozytorów tej usługi. Ta metoda jest wywoływana przez architekturę WCF podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. Następujące parametry są przekazywane do tej metody:  
   
--   `Description`: Ten argument zawiera opis usługi dla całej usługi. To może służyć do opisu danych dotyczących punktów końcowych usługi, kontrakty, powiązania i inne dane inspekcji.  
+- `Description`: Ten argument zawiera opis usługi dla całej usługi. To może służyć do opisu danych dotyczących punktów końcowych usługi, kontrakty, powiązania i inne dane inspekcji.  
   
--   `ServiceHostBase`: Ten argument zawiera <xref:System.ServiceModel.ServiceHostBase> , jest obecnie inicjowany.  
+- `ServiceHostBase`: Ten argument zawiera <xref:System.ServiceModel.ServiceHostBase> , jest obecnie inicjowany.  
   
  W niestandardowej <xref:System.ServiceModel.Description.IServiceBehavior> implementacji nowe wystąpienie elementu `ObjectPoolingInstanceProvider` jest tworzone i przypisane do <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwość w każdym <xref:System.ServiceModel.Dispatcher.DispatchRuntime> w ServiceHostBase.  
   

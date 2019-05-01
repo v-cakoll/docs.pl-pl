@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
 ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011206"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików
 Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] ma obszar po lewej stronie okna dialogowego pod tytułem **Ulubione łącza**. Ten obszar nosi nazwę niestandardowych miejsc. <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> klasy umożliwiają dodanie folderów do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji.  
@@ -24,7 +24,7 @@ Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhex
   
 ### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Aby Dodawanie niestandardowego miejsca do okna dialogowego obsługi plików  
   
--   Dodaj ścieżkę identyfikatora GUID znanych folderów lub <xref:System.Windows.Forms.FileDialogCustomPlace> obiekt <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji okna dialogowego.  
+- Dodaj ścieżkę identyfikatora GUID znanych folderów lub <xref:System.Windows.Forms.FileDialogCustomPlace> obiekt <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji okna dialogowego.  
   
      Poniższy przykład kodu pokazuje, jak dodać ścieżkę:  
   

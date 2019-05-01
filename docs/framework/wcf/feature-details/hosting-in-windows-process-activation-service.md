@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039380"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
 Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesów dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF do użycia protokołów HTTP i protokołów innych niż HTTP, np. Net.TCP, w środowisku macierzystym, który obsługuje aktywację w oparciu o wiadomości i oferuje możliwość hostowania wielu aplikacji na danym komputerze.  
@@ -18,13 +18,13 @@ Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia
   
  Model procesów WAS udostępnia kilka funkcji, które umożliwiają aplikacjom hostowane w sposób, to bardziej niezawodne, łatwiejsze w obsłudze i efektywnie, używa zasobów:  
   
--   Aktywacja oparta na komunikat, aplikacji i proces roboczy procesu aplikacji uruchamiają i zatrzymują dynamicznie, w odpowiedzi na przychodzące elementów roboczych, pojawiające się przy użyciu protokołu HTTP i protokołów sieciowych protokołu HTTP.  
+- Aktywacja oparta na komunikat, aplikacji i proces roboczy procesu aplikacji uruchamiają i zatrzymują dynamicznie, w odpowiedzi na przychodzące elementów roboczych, pojawiające się przy użyciu protokołu HTTP i protokołów sieciowych protokołu HTTP.  
   
--   Niezawodna aplikacja i odtwarzanie procesów roboczych do utrzymania kondycji uruchomionych aplikacji.  
+- Niezawodna aplikacja i odtwarzanie procesów roboczych do utrzymania kondycji uruchomionych aplikacji.  
   
--   Konfiguracja aplikacji scentralizowane i zarządzanie.  
+- Konfiguracja aplikacji scentralizowane i zarządzanie.  
   
--   Umożliwia aplikacjom móc korzystać z modelu procesów usług IIS bez konieczności wdrażania śladu pełnej instalacji usług IIS.  
+- Umożliwia aplikacjom móc korzystać z modelu procesów usług IIS bez konieczności wdrażania śladu pełnej instalacji usług IIS.  
   
  Aby uzyskać więcej informacji na temat funkcji WAS zobacz [IIS 7.0 Beta: Usługi IIS 7.0 w sieci Web administracji](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   

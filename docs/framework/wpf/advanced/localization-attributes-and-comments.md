@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036234"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalizacja atrybutów i komentarzy
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarzy są właściwościami, wewnątrz [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod źródłowy, dostarczone przez deweloperów, które zapewniają reguły i wskazówki dla lokalizacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarzy zawierają dwa zestawy danych: atrybuty przeglądu możliwości lokalizacji i komentarze w dowolnej lokalizacji. Możliwości zlokalizowania atrybuty są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacji interfejsu API, aby wskazać, które zasoby mają być lokalizowany. Wszystkie informacje, które aplikacja chce, aby uwzględnić znajdują się w dowolnej postaci komentarze.  
@@ -27,11 +27,11 @@ ms.locfileid: "59301857"
   
 3. Wartości, które mogą być przypisane są następujące:  
   
-    -   **Brak** — zarówno komentarzy i atrybutów pozostają w zestawie i generowany jest ten sam plik.  
+    - **Brak** — zarówno komentarzy i atrybutów pozostają w zestawie i generowany jest ten sam plik.  
   
-    -   **CommentsOnly** — usuwa tylko komentarze z zestawu i umieszcza je w oddzielnym LocFile.  
+    - **CommentsOnly** — usuwa tylko komentarze z zestawu i umieszcza je w oddzielnym LocFile.  
   
-    -   **Wszystkie** — usuwa komentarzy i atrybutów z zestawu i umieszczane zarówno w oddzielnych LocFile.  
+    - **Wszystkie** — usuwa komentarzy i atrybutów z zestawu i umieszczane zarówno w oddzielnych LocFile.  
   
 4. Gdy lokalizowalne zasoby są wyodrębniane z [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], atrybuty możliwości zlokalizowania są przestrzegane przez [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] lokalizacji interfejsu API.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59301857"
   
  Istnieją trzy typy atrybutów:  
   
--   **Kategoria**. Określa, czy wartość powinna być można modyfikować za pomocą narzędzia lokalizatorowi. Zobacz <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Kategoria**. Określa, czy wartość powinna być można modyfikować za pomocą narzędzia lokalizatorowi. Zobacz <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Czytelność**. Określa, czy narzędzie lokalizatorowi należy odczytać (i wyświetlić) wartość. Zobacz <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Czytelność**. Określa, czy narzędzie lokalizatorowi należy odczytać (i wyświetlić) wartość. Zobacz <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Modifiability**. Określa, czy narzędzie lokalizatorowi zezwala na wartość ma zostać zmodyfikowana. Zobacz <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Modifiability**. Określa, czy narzędzie lokalizatorowi zezwala na wartość ma zostać zmodyfikowana. Zobacz <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
  Te atrybuty można określić w dowolnej kolejności, rozdzielonych spacją. W przypadku, gdy określono zduplikowane atrybuty, wartość ostatniego atrybutu zostaną przesłonięte poprzedniej wersji portalu. Na przykład Localization.Attributes = "Niemodyfikowalnych modyfikowalnymi" Ustawia Modifiability do Modifiable, ponieważ jest ostatnią wartość.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
 ms.openlocfilehash: 453dc05a8715d3ab096c0bdd5ed75d601bf1b181
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014391"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Uzyskiwanie dostępu do usług sieci Web aplikacji (Visual Basic)
 `My.WebServices` Obiekt zawiera wystąpienie każdą usługę sieci Web, które odwołuje się do bieżącego projektu. Każde wystąpienie jest tworzone na żądanie. Dostęp do usługi sieci Web za pomocą właściwości `My.WebServices` obiektu. Nazwa właściwości jest taka sama jak nazwa usługi sieci Web, który uzyskuje dostęp do właściwości. Każda klasa, która dziedziczy z <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> to usługa sieci Web.  

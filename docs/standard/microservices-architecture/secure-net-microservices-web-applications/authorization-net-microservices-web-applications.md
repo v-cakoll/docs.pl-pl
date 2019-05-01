@@ -1,17 +1,17 @@
 ---
-title: Informacje o autoryzacji w aplikacji sieci web i mikrousługi platformy .NET
+title: Informacje o autoryzacji w mikrousługach .NET i aplikacjach internetowych
 description: Zabezpieczenia w Mikrousługach .NET i aplikacji sieci Web — zapoznaj się z omówieniem opcji głównego autoryzacji w aplikacji platformy ASP.NET Core — opartej na rolach i oparte na zasadach.
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
 ms.openlocfilehash: 36cd8eaf7ffe78a29762398044dc1803adc1b200
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019506"
 ---
-# <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informacje o autoryzacji w aplikacji sieci web i mikrousługi platformy .NET
+# <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informacje o autoryzacji w mikrousługach .NET i aplikacjach internetowych
 
 Po uwierzytelnieniu interfejsów API sieci Web programu ASP.NET Core konieczne Autoryzowanie dostępu. Ten proces umożliwia usłudze się interfejsów API, niektórzy użytkownicy uwierzytelnieni, ale nie dla wszystkich. [Autoryzacja](/aspnet/core/security/authorization/introduction) mogą być oparte na rolach użytkowników lub na podstawie zasad niestandardowych, która może obejmować kontrolę opartą na oświadczeniach lub inne algorytmy heurystyczne.
 

@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020312"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Nowości w WPF w wersji 4.5
 <a name="introduction"></a> Ten temat zawiera informacje o nowych i ulepszonych funkcji w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w wersji 4.5.  
   
  Ten temat zawiera następujące sekcje:  
   
--   [Formantu wstążki](#ribbon_control)  
+- [Formantu wstążki](#ribbon_control)  
   
--   [Zwiększona wydajność podczas wyświetlania dużych zestawów zgrupowanych danych](#grouped_virtualization)  
+- [Zwiększona wydajność podczas wyświetlania dużych zestawów zgrupowanych danych](#grouped_virtualization)  
   
--   [Nowe funkcje VirtualizingPanel](#VirtualizingPanel)  
+- [Nowe funkcje VirtualizingPanel](#VirtualizingPanel)  
   
--   [Powiązanie z właściwościami statycznymi](#static_properties)  
+- [Powiązanie z właściwościami statycznymi](#static_properties)  
   
--   [Uzyskiwanie dostępu do kolekcji w wątkach bez interfejsu użytkownika](#xthread_access)  
+- [Uzyskiwanie dostępu do kolekcji w wątkach bez interfejsu użytkownika](#xthread_access)  
   
--   [Synchroniczne i asynchroniczne sprawdzanie poprawności danych](#INotifyDataErrorInfo)  
+- [Synchroniczne i asynchroniczne sprawdzanie poprawności danych](#INotifyDataErrorInfo)  
   
--   [Automatyczne aktualizowanie źródło powiązania danych](#delay)  
+- [Automatyczne aktualizowanie źródło powiązania danych](#delay)  
   
--   [Wiązać z typami ICustomTypeProvider tej implementacji](#ICustomTypeProvider)  
+- [Wiązać z typami ICustomTypeProvider tej implementacji](#ICustomTypeProvider)  
   
--   [Trwa pobieranie informacji o wiązaniach danych z wyrażenia wiązania](#binding_state)  
+- [Trwa pobieranie informacji o wiązaniach danych z wyrażenia wiązania](#binding_state)  
   
--   [Sprawdzanie prawidłowego obiektu DataContext](#DisconnectedSource)  
+- [Sprawdzanie prawidłowego obiektu DataContext](#DisconnectedSource)  
   
--   [Zmiana położenia danych, jak zmieniają się dane wartości (kształtowanie na bieżąco)](#live_shaping)  
+- [Zmiana położenia danych, jak zmieniają się dane wartości (kształtowanie na bieżąco)](#live_shaping)  
   
--   [Ulepszona obsługa ustanawiania słabe odwołanie do zdarzenia](#weak_event_pattern)  
+- [Ulepszona obsługa ustanawiania słabe odwołanie do zdarzenia](#weak_event_pattern)  
   
--   [Nowe metody dla klasy dyspozytora](#async)  
+- [Nowe metody dla klasy dyspozytora](#async)  
   
--   [Rozszerzenia znaczników dla zdarzeń](#events_markup_extenions)  
+- [Rozszerzenia znaczników dla zdarzeń](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>Formantu wstążki  
@@ -64,9 +64,9 @@ ms.locfileid: "59325829"
 ## <a name="binding-to-static-properties"></a>Powiązanie z właściwościami statycznymi  
  Właściwości statyczne służy jako źródło powiązania danych. Aparat powiązania danych rozpoznaje po zmianie wartości właściwości, jeśli statyczne zdarzenie jest zgłaszane.  Na przykład jeśli klasa `SomeClass` definiuje statyczne właściwość o nazwie `MyProperty`, `SomeClass` można zdefiniować zdarzeń statycznych, który jest wywołane, gdy wartość `MyProperty` zmiany.  Zdarzenia statyczne można użyć jednej z następujących podpisów.  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  Uwaga w pierwszym przypadku klasa udostępnia zdarzeń statycznych o nazwie *PropertyName* `Changed` , który przekazuje <xref:System.EventArgs> do narzędzia obsługi zdarzeń.  W drugim przypadku klasa udostępnia zdarzeń statycznych o nazwie `StaticPropertyChanged` , który przekazuje <xref:System.ComponentModel.PropertyChangedEventArgs> do narzędzia obsługi zdarzeń. Klasa, która implementuje właściwość statyczną można wybrać wywoływanie powiadomień o zmianie właściwości przy użyciu jednej z metod.  
   

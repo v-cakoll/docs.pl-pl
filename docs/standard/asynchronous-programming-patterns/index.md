@@ -9,11 +9,11 @@ ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d76aef201fead37923a65cfeead16638b09842
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031177"
 ---
 # <a name="asynchronous-programming-patterns"></a>Wzorce programowania asynchronicznego
 
@@ -71,5 +71,5 @@ public class MyClass
 
 - [Asynchroniczne szczegółowo](../async-in-depth.md)
 - [Programowanie asynchroniczne w języku C#](~/docs/csharp/async.md)
-- [Programowanie asynchroniczne w języku F #](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Async — Programowanie wF#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

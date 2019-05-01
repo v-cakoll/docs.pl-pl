@@ -3,11 +3,11 @@ title: Opcje interakcyjne F#
 description: Więcej informacji na temat opcji wiersza polecenia obsługiwane przez F# Interactive, fsi.exe.
 ms.date: 05/16/2016
 ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996804"
 ---
 # <a name="f-interactive-options"></a>Opcje interakcyjne F#
 
@@ -37,9 +37,9 @@ Gdzie są wyświetlane w F# opcji Interactive argumentów, elementy listy są od
 |**-codepage:&lt;int&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
 |**--consolecolors**[**+**&#124;**-**]|Dane wyjściowe, ostrzeżenia i komunikaty o błędach są oznaczone kolorem.|
 |**--crossoptimize**[**+**&#124;**-**]|Włącza lub wyłącza optymalizacje między modułami.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debugowania:**[**pełną**&#124;**pdbonly**&#124;**przenośne**&#124;**osadzonego**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**pełne**&#124;**pdbonly**&#124;**przenośne**&#124;**osadzone**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
 |**— Zdefiniuj:&lt;ciągu&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
-|**--deterministyczne**[**+**&#124;**-**]|Tworzy zestaw deterministyczny (w tym identyfikator GUID wersji modułu i sygnaturę czasową).|
+|**--deterministic**[**+**&#124;**-**]|Tworzy zestaw deterministyczny (w tym identyfikator GUID wersji modułu i sygnaturę czasową).|
 |**--exec**|Powoduje, że F# interaktywnego, aby zakończyło po ładowaniu plików lub uruchamiania pliku skryptu podanego w wierszu polecenia.|
 |**--fullpaths**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
 |**--gui**[**+**&#124;**-**]|Włącza lub wyłącza pętlę zdarzeń Windows Forms. Wartość domyślna jest ustawiona.|
@@ -51,7 +51,7 @@ Gdzie są wyświetlane w F# opcji Interactive argumentów, elementy listy są od
 |**nologo —**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
 |**-nowarn:&lt;ostrzeżenie listy&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
 |**--optimize**[**+**&#124;**-**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
-|**preferreduilang —:&lt;lang&gt;**| Określa nazwę preferowanego języka wyjściowego kultury (na przykład, es-ES, ja-JP). |
+|**--preferreduilang:&lt;lang&gt;**| Określa nazwę preferowanego języka wyjściowego kultury (na przykład, es-ES, ja-JP). |
 |**--quiet**|Pomiń F# Interactive danych wyjściowych do **stdout** strumienia.|
 |**--quotations-debug**|Określa, że dodatkowe informacje dotyczące debugowania powinny być emitowane dla wyrażeń, które są uzyskiwane z F# literałów oferty i odbitych definicje. Informacje debugowania są dodawane do atrybutów niestandardowych F# węzła drzewa wyrażeń. Zobacz [kodu ofert](code-quotations.md) i [Expr.customattributes —](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
 |**--readline**[**+**&#124;**-**]|Włącz lub wyłącz zakończenie karty w trybie interaktywnym.|
@@ -59,7 +59,7 @@ Gdzie są wyświetlane w F# opcji Interactive argumentów, elementy listy są od
 |**--shadowcopyreferences**[**+**&#124;**-**]|Zapobiega odwołań z blokowany przez F# procesu interaktywnego.|
 |**--simpleresolution**|Usuwa odwołania do zestawów za pomocą reguł opartych na katalog, a nie rozdzielczości MSBuild.|
 |**--tailcalls**[**+**&#124;**-**]|Włącza lub wyłącza korzystanie z fragmentarycznej instrukcji IL, co powoduje, że ramek stosu, można użyć ponownie dla funkcji cyklicznych. Ta opcja jest domyślnie włączona.|
-|**--targetprofile:&lt;ciągu&gt;**|Określa profil platformy docelowej tego zestawu. Prawidłowe wartości to mscorlib, netcore lub netstandard.  Wartość domyślna to mscorlib.|
+|**--targetprofile:&lt;string&gt;**|Określa profil platformy docelowej tego zestawu. Prawidłowe wartości to mscorlib, netcore lub netstandard.  Wartość domyślna to mscorlib.|
 |**— Użyj:&lt;nazwy pliku&gt;**|Informuje interpreter używania danego pliku podczas uruchamiania jako początkowych danych wejściowych.|
 |**--utf8output**|Tak samo jak opcja kompilatora fsc.exe. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
 |**— Ostrzeżenie:&lt;poziom ostrzeżeń&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013754"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Wymagane odwołanie do zestawu "\<assemblyidentity >" z typem "\<typename >", ale nie można odnaleźć pasującego odwołania z powodu niejednoznaczności między projektami\<projectname1 > "i"\< projectname2 > "
 Wyrażenia o typie, takich jak klasy, struktury, interfejsu, wyliczenie lub delegata, który jest zdefiniowany poza projektem. Jednak masz odwołania do więcej niż jeden zestaw definiujący ten typ projektu.  

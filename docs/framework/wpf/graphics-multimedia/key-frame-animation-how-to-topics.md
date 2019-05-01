@@ -8,37 +8,37 @@ helpviewer_keywords:
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
 ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785648"
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="6d761-102">Animacja kluczowych klatek Tematy Pomocy</span><span class="sxs-lookup"><span data-stu-id="6d761-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="6d761-103">Tematy w tej sekcji pokazują, jak animować więcej niż dwie wartości właściwości i interpolacji do sterowania za pomocą klatek kluczowych animacji.</span><span class="sxs-lookup"><span data-stu-id="6d761-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="e128b-102">Animacja kluczowych klatek Tematy Pomocy</span><span class="sxs-lookup"><span data-stu-id="e128b-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="e128b-103">Tematy w tej sekcji pokazują, jak animować więcej niż dwie wartości właściwości i interpolacji do sterowania za pomocą klatek kluczowych animacji.</span><span class="sxs-lookup"><span data-stu-id="e128b-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6d761-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="6d761-104">In This Section</span></span>  
- [<span data-ttu-id="6d761-105">Animowanie obiektu przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-106">Animowanie elementu boolean przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-107">Animowanie elementu double przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-108">Animowanie elementu Matrix przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-109">Animowanie punktu przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-110">Animowanie geometrii prostokąta przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-111">Animowanie ciągu przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-112">Animowanie koloru przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-113">Animowanie zmian rozmiaru przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-114">Animowanie grubości obramowania przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="6d761-115">Kontrolowanie chronometrażu animacji klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="6d761-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e128b-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="e128b-104">In This Section</span></span>  
+ [<span data-ttu-id="e128b-105">Animowanie obiektu przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-106">Animowanie elementu boolean przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-107">Animowanie elementu double przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-108">Animowanie elementu Matrix przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-109">Animowanie punktu przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-110">Animowanie geometrii prostokąta przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-111">Animowanie ciągu przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-112">Animowanie koloru przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-113">Animowanie zmian rozmiaru przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-114">Animowanie grubości obramowania przy użyciu klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="e128b-115">Kontrolowanie chronometrażu animacji klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="e128b-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="6d761-116">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="6d761-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e128b-116">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="e128b-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="6d761-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6d761-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e128b-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e128b-117">See also</span></span>
 
-- [<span data-ttu-id="6d761-118">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="6d761-118">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="6d761-119">Animacja — przegląd</span><span class="sxs-lookup"><span data-stu-id="6d761-119">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="6d761-120">Animacje kluczowych klatek — przegląd</span><span class="sxs-lookup"><span data-stu-id="6d761-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="e128b-118">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="e128b-118">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="e128b-119">Animacja — przegląd</span><span class="sxs-lookup"><span data-stu-id="e128b-119">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="e128b-120">Animacje kluczowych klatek — przegląd</span><span class="sxs-lookup"><span data-stu-id="e128b-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

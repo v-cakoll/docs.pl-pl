@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 42c695d8-ee28-49d4-80fd-fc71e9be7f29
 ms.openlocfilehash: 54f20a4b8c6e6fcc190257fcf5de4374415d68b4
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771062"
 ---
-# <a name="how-to-handle-the-scrollchanged-event"></a><span data-ttu-id="46bde-102">Instrukcje: Obsługa zdarzenia ScrollChanged</span><span class="sxs-lookup"><span data-stu-id="46bde-102">How to: Handle the ScrollChanged Event</span></span>
-## <a name="example"></a><span data-ttu-id="46bde-103">Przykład</span><span class="sxs-lookup"><span data-stu-id="46bde-103">Example</span></span>  
- <span data-ttu-id="46bde-104">W tym przykładzie pokazano, jak obsługiwać <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> zdarzenia <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="46bde-104">This example shows how to handle the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event of a <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
+# <a name="how-to-handle-the-scrollchanged-event"></a><span data-ttu-id="7bf21-102">Instrukcje: Obsługa zdarzenia ScrollChanged</span><span class="sxs-lookup"><span data-stu-id="7bf21-102">How to: Handle the ScrollChanged Event</span></span>
+## <a name="example"></a><span data-ttu-id="7bf21-103">Przykład</span><span class="sxs-lookup"><span data-stu-id="7bf21-103">Example</span></span>  
+ <span data-ttu-id="7bf21-104">W tym przykładzie pokazano, jak obsługiwać <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> zdarzenia <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="7bf21-104">This example shows how to handle the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event of a <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
   
- <span data-ttu-id="46bde-105">A <xref:System.Windows.Documents.FlowDocument> element z <xref:System.Windows.Documents.Paragraph> części jest zdefiniowany w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="46bde-105">A <xref:System.Windows.Documents.FlowDocument> element with <xref:System.Windows.Documents.Paragraph> parts is defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="46bde-106">Gdy <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> zdarzenie występuje z powodu interakcji z użytkownikiem, program obsługi jest wywoływany i tekst jest zapisany do <xref:System.Windows.Controls.TextBlock> wskazująca, że wystąpiło zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="46bde-106">When the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event occurs due to user interaction, a handler is invoked, and text is written to a <xref:System.Windows.Controls.TextBlock> indicating that the event has occurred.</span></span>  
+ <span data-ttu-id="7bf21-105">A <xref:System.Windows.Documents.FlowDocument> element z <xref:System.Windows.Documents.Paragraph> części jest zdefiniowany w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7bf21-105">A <xref:System.Windows.Documents.FlowDocument> element with <xref:System.Windows.Documents.Paragraph> parts is defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="7bf21-106">Gdy <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> zdarzenie występuje z powodu interakcji z użytkownikiem, program obsługi jest wywoływany i tekst jest zapisany do <xref:System.Windows.Controls.TextBlock> wskazująca, że wystąpiło zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="7bf21-106">When the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event occurs due to user interaction, a handler is invoked, and text is written to a <xref:System.Windows.Controls.TextBlock> indicating that the event has occurred.</span></span>  
   
  [!code-xaml[scrollchangedeventargsLayout#1](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#1)]  
 [!code-xaml[scrollchangedeventargsLayout#2](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#2)]  
@@ -27,7 +27,7 @@ ms.locfileid: "59974165"
  [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
  [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="46bde-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="46bde-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7bf21-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7bf21-107">See also</span></span>
 
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.ScrollViewer.ScrollChanged>

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: 5ddb23a6-7813-4058-b59d-29ff3341638c
 ms.openlocfilehash: 57473d0a22bc7441e4c32506f57f402bab963c2d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771075"
 ---
-# <a name="digital-ink-overviews"></a><span data-ttu-id="efd98-102">Przeglądy Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="efd98-102">Digital Ink Overviews</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="efd98-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="efd98-103">In This Section</span></span>  
- [<span data-ttu-id="efd98-104">Wprowadzenie do użycia atramentu</span><span class="sxs-lookup"><span data-stu-id="efd98-104">Getting Started with Ink</span></span>](getting-started-with-ink.md)  
-  [<span data-ttu-id="efd98-105">Zbieranie atramentu</span><span class="sxs-lookup"><span data-stu-id="efd98-105">Collecting Ink</span></span>](collecting-ink.md)  
-  [<span data-ttu-id="efd98-106">Rozpoznawanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="efd98-106">Handwriting Recognition</span></span>](handwriting-recognition.md)  
-  [<span data-ttu-id="efd98-107">Przechowywanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="efd98-107">Storing Ink</span></span>](storing-ink.md)  
-  [<span data-ttu-id="efd98-108">Model obiektu atramentowego: Windows Forms i COM a WPF</span><span class="sxs-lookup"><span data-stu-id="efd98-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [<span data-ttu-id="efd98-109">Zaawansowana obsługa pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="efd98-109">Advanced Ink Handling</span></span>](advanced-ink-handling.md)
+# <a name="digital-ink-overviews"></a><span data-ttu-id="bbd4e-102">Przeglądy Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="bbd4e-102">Digital Ink Overviews</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="bbd4e-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="bbd4e-103">In This Section</span></span>  
+ [<span data-ttu-id="bbd4e-104">Wprowadzenie do użycia atramentu</span><span class="sxs-lookup"><span data-stu-id="bbd4e-104">Getting Started with Ink</span></span>](getting-started-with-ink.md)  
+  [<span data-ttu-id="bbd4e-105">Zbieranie atramentu</span><span class="sxs-lookup"><span data-stu-id="bbd4e-105">Collecting Ink</span></span>](collecting-ink.md)  
+  [<span data-ttu-id="bbd4e-106">Rozpoznawanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="bbd4e-106">Handwriting Recognition</span></span>](handwriting-recognition.md)  
+  [<span data-ttu-id="bbd4e-107">Przechowywanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="bbd4e-107">Storing Ink</span></span>](storing-ink.md)  
+  [<span data-ttu-id="bbd4e-108">Model obiektu atramentowego: Windows Forms i COM a WPF</span><span class="sxs-lookup"><span data-stu-id="bbd4e-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [<span data-ttu-id="bbd4e-109">Zaawansowana obsługa pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="bbd4e-109">Advanced Ink Handling</span></span>](advanced-ink-handling.md)

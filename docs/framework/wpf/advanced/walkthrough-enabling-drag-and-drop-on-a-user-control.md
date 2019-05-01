@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778955"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Przewodnik: włączanie przeciągania i upuszczania w kontrolce użytkownika
 
@@ -23,13 +23,13 @@ W tym przewodniku utworzysz niestandardowego WPF <xref:System.Windows.Controls.U
 
 W instruktażu przedstawiono następujące zagadnienia:
 
--   Tworzenie niestandardowej kontrolki użytkownika.
+- Tworzenie niestandardowej kontrolki użytkownika.
 
--   Włącz do źródła przeciągnij formant użytkownika.
+- Włącz do źródła przeciągnij formant użytkownika.
 
--   Włącz kontrolkę użytkownika do miejsca docelowego.
+- Włącz kontrolkę użytkownika do miejsca docelowego.
 
--   Włączanie panelu na odbieranie danych z kontrolki użytkownika.
+- Włączanie panelu na odbieranie danych z kontrolki użytkownika.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -108,17 +108,17 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
      To <xref:System.Windows.UIElement.OnMouseMove%2A> zastąpienie wykonuje następujące zadania:
 
-    -   Sprawdza, czy naciśnięciu lewego przycisku myszy, gdy wskaźnik myszy porusza się.
+    - Sprawdza, czy naciśnięciu lewego przycisku myszy, gdy wskaźnik myszy porusza się.
 
-    -   Pakiety danych okrąg do <xref:System.Windows.DataObject>. W takim przypadku kontrolka okrąg pakietów trzy elementy danych; ciąg reprezentujący jego kolor wypełnienia, Podwójna reprezentacja jego wysokości i swoją kopię.
+    - Pakiety danych okrąg do <xref:System.Windows.DataObject>. W takim przypadku kontrolka okrąg pakietów trzy elementy danych; ciąg reprezentujący jego kolor wypełnienia, Podwójna reprezentacja jego wysokości i swoją kopię.
 
-    -   Wywołuje statyczną <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> metodę, aby zainicjować operację przeciągania i upuszczania. Przekaż następujące trzy parametry, aby <xref:System.Windows.DragDrop.DoDragDrop%2A> metody:
+    - Wywołuje statyczną <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> metodę, aby zainicjować operację przeciągania i upuszczania. Przekaż następujące trzy parametry, aby <xref:System.Windows.DragDrop.DoDragDrop%2A> metody:
 
-        -   `dragSource` — Odwołanie do tego formantu.
+        - `dragSource` — Odwołanie do tego formantu.
 
-        -   `data` — <xref:System.Windows.DataObject> Utworzony w poprzednim kodzie.
+        - `data` — <xref:System.Windows.DataObject> Utworzony w poprzednim kodzie.
 
-        -   `allowedEffects` Dozwolone operacje przeciągania i upuszczania, które są <xref:System.Windows.DragDropEffects.Copy> lub <xref:System.Windows.DragDropEffects.Move>.
+        - `allowedEffects` Dozwolone operacje przeciągania i upuszczania, które są <xref:System.Windows.DragDropEffects.Copy> lub <xref:System.Windows.DragDropEffects.Move>.
 
 3. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.
 
@@ -143,9 +143,9 @@ Domyślnie kursor zmieni się podczas operacji przeciągania i upuszczania, aby 
 
      To <xref:System.Windows.UIElement.OnGiveFeedback%2A> zastąpienie wykonuje następujące zadania:
 
-    -   Sprawdza, czy <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> wartości, które są ustawiane w element docelowy upuszczania <xref:System.Windows.UIElement.DragOver> programu obsługi zdarzeń.
+    - Sprawdza, czy <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> wartości, które są ustawiane w element docelowy upuszczania <xref:System.Windows.UIElement.DragOver> programu obsługi zdarzeń.
 
-    -   Ustawia kursor niestandardowych, na podstawie <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> wartości. Kursor jest przeznaczona do przekazać wizualną opinię użytkownikowi o będzie mieć wpływ, jaki usunięcie danych.
+    - Ustawia kursor niestandardowych, na podstawie <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> wartości. Kursor jest przeznaczona do przekazać wizualną opinię użytkownikowi o będzie mieć wpływ, jaki usunięcie danych.
 
 3. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.
 
@@ -181,15 +181,15 @@ Domyślnie kursor zmieni się podczas operacji przeciągania i upuszczania, aby 
 
      To <xref:System.Windows.UIElement.OnDrop%2A> zastąpienie wykonuje następujące zadania:
 
-    -   Używa <xref:System.Windows.DataObject.GetDataPresent%2A> metodę sprawdzania, czy przeciąganego danych zawiera obiekt ciągu.
+    - Używa <xref:System.Windows.DataObject.GetDataPresent%2A> metodę sprawdzania, czy przeciąganego danych zawiera obiekt ciągu.
 
-    -   Używa <xref:System.Windows.DataObject.GetData%2A> metodę, aby wyodrębnić dane ciągu, jeśli jest obecny.
+    - Używa <xref:System.Windows.DataObject.GetData%2A> metodę, aby wyodrębnić dane ciągu, jeśli jest obecny.
 
-    -   Używa <xref:System.Windows.Media.BrushConverter> próbował przekonwertować ciąg do <xref:System.Windows.Media.Brush>.
+    - Używa <xref:System.Windows.Media.BrushConverter> próbował przekonwertować ciąg do <xref:System.Windows.Media.Brush>.
 
-    -   Jeśli konwersja się powiedzie, ma zastosowanie pędzla, który ma <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Ellipse> zapewniający interfejsu użytkownika formantu okrąg.
+    - Jeśli konwersja się powiedzie, ma zastosowanie pędzla, który ma <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Ellipse> zapewniający interfejsu użytkownika formantu okrąg.
 
-    -   Znaczniki <xref:System.Windows.UIElement.Drop> zdarzeń jako obsługiwane. Zdarzenie upuszczania należy oznaczyć jako obsłużony, dzięki czemu inne elementy, które odbierają to zdarzenie wiadomo, kontrolki użytkownika okrąg obsługiwania go.
+    - Znaczniki <xref:System.Windows.UIElement.Drop> zdarzeń jako obsługiwane. Zdarzenie upuszczania należy oznaczyć jako obsłużony, dzięki czemu inne elementy, które odbierają to zdarzenie wiadomo, kontrolki użytkownika okrąg obsługiwania go.
 
 3. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.
 
@@ -222,11 +222,11 @@ Po danych jest przeciągany nad kontrolki użytkownika koła, formant powinien P
 
      To <xref:System.Windows.UIElement.OnDragOver%2A> zastąpienie wykonuje następujące zadania:
 
-    -   Zestawy <xref:System.Windows.DragEventArgs.Effects%2A> właściwość <xref:System.Windows.DragDropEffects.None>.
+    - Zestawy <xref:System.Windows.DragEventArgs.Effects%2A> właściwość <xref:System.Windows.DragDropEffects.None>.
 
-    -   Wykonuje ten sam testów, które są wykonywane w ramach <xref:System.Windows.UIElement.OnDrop%2A> metodę pozwala ustalić, czy okrąg kontrolki użytkownika można przetwarzać dane przeciąganego.
+    - Wykonuje ten sam testów, które są wykonywane w ramach <xref:System.Windows.UIElement.OnDrop%2A> metodę pozwala ustalić, czy okrąg kontrolki użytkownika można przetwarzać dane przeciąganego.
 
-    -   Jeśli kontrolka użytkownika może przetwarzać dane, ustawia <xref:System.Windows.DragEventArgs.Effects%2A> właściwości <xref:System.Windows.DragDropEffects.Copy> lub <xref:System.Windows.DragDropEffects.Move>.
+    - Jeśli kontrolka użytkownika może przetwarzać dane, ustawia <xref:System.Windows.DragEventArgs.Effects%2A> właściwości <xref:System.Windows.DragDropEffects.Copy> lub <xref:System.Windows.DragDropEffects.Move>.
 
 3. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.
 
@@ -252,11 +252,11 @@ Po danych jest przeciągany nad kontrolki użytkownika koła, formant powinien P
 
      To <xref:System.Windows.UIElement.OnDragEnter%2A> zastąpienie wykonuje następujące zadania:
 
-    -   Zapisuje <xref:System.Windows.Shapes.Shape.Fill%2A> właściwość <xref:System.Windows.Shapes.Ellipse> w `_previousFill` zmiennej.
+    - Zapisuje <xref:System.Windows.Shapes.Shape.Fill%2A> właściwość <xref:System.Windows.Shapes.Ellipse> w `_previousFill` zmiennej.
 
-    -   Wykonuje ten sam testów, które są wykonywane w ramach <xref:System.Windows.UIElement.OnDrop%2A> metodę pozwala ustalić, czy dane mogą być konwertowane na <xref:System.Windows.Media.Brush>.
+    - Wykonuje ten sam testów, które są wykonywane w ramach <xref:System.Windows.UIElement.OnDrop%2A> metodę pozwala ustalić, czy dane mogą być konwertowane na <xref:System.Windows.Media.Brush>.
 
-    -   Jeśli danych jest konwertowany na prawidłowym <xref:System.Windows.Media.Brush>, stosuje ją do <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Ellipse>.
+    - Jeśli danych jest konwertowany na prawidłowym <xref:System.Windows.Media.Brush>, stosuje ją do <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Ellipse>.
 
 4. Dodaj następujący kod <xref:System.Windows.UIElement.OnDragLeave%2A> należy przesłonić, aby zapewnić obsługę klasy dla <xref:System.Windows.UIElement.DragLeave> zdarzeń.
 
@@ -265,7 +265,7 @@ Po danych jest przeciągany nad kontrolki użytkownika koła, formant powinien P
 
      To <xref:System.Windows.UIElement.OnDragLeave%2A> zastąpienie wykonuje następujące zadania:
 
-    -   Stosuje <xref:System.Windows.Media.Brush> zapisane w `_previousFill` zmienną <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Ellipse> zapewniający interfejsu użytkownika formantu użytkownika okrąg.
+    - Stosuje <xref:System.Windows.Media.Brush> zapisane w `_previousFill` zmienną <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Ellipse> zapewniający interfejsu użytkownika formantu użytkownika okrąg.
 
 5. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.
 
@@ -296,11 +296,11 @@ W tej sekcji możesz włączyć paneli, które hostowanie kontrolki użytkownika
 
      To <xref:System.Windows.UIElement.DragOver> program obsługi zdarzeń wykonuje następujące zadania:
 
-    -   Sprawdza, czy przeciąganego danych zawiera dane "Object", która została spakowana w <xref:System.Windows.DataObject> przez funkcję Kontrola użytkownika okrąg i przekazywane w wywołaniu <xref:System.Windows.DragDrop.DoDragDrop%2A>.
+    - Sprawdza, czy przeciąganego danych zawiera dane "Object", która została spakowana w <xref:System.Windows.DataObject> przez funkcję Kontrola użytkownika okrąg i przekazywane w wywołaniu <xref:System.Windows.DragDrop.DoDragDrop%2A>.
 
-    -   Jeśli dane "Object" jest obecna, sprawdza czy **Ctrl** naciśnięcia klawisza.
+    - Jeśli dane "Object" jest obecna, sprawdza czy **Ctrl** naciśnięcia klawisza.
 
-    -   Jeśli **Ctrl** zostanie naciśnięty klawisz, zestawy <xref:System.Windows.DragEventArgs.Effects%2A> właściwość <xref:System.Windows.DragDropEffects.Copy>. W przeciwnym wypadku ustaw <xref:System.Windows.DragEventArgs.Effects%2A> właściwość <xref:System.Windows.DragDropEffects.Move>.
+    - Jeśli **Ctrl** zostanie naciśnięty klawisz, zestawy <xref:System.Windows.DragEventArgs.Effects%2A> właściwość <xref:System.Windows.DragDropEffects.Copy>. W przeciwnym wypadku ustaw <xref:System.Windows.DragEventArgs.Effects%2A> właściwość <xref:System.Windows.DragDropEffects.Move>.
 
 5. Dodaj następujący kod do <xref:System.Windows.UIElement.Drop> programu obsługi zdarzeń.
 
@@ -309,15 +309,15 @@ W tej sekcji możesz włączyć paneli, które hostowanie kontrolki użytkownika
 
      To <xref:System.Windows.UIElement.Drop> program obsługi zdarzeń wykonuje następujące zadania:
 
-    -   Sprawdza, czy <xref:System.Windows.UIElement.Drop> zdarzenie jest już obsługiwane. Na przykład po przerwaniu koła na innym koło, które obsługuje <xref:System.Windows.UIElement.Drop> zdarzenia mają być panel, który zawiera koła, również go obsłużyć.
+    - Sprawdza, czy <xref:System.Windows.UIElement.Drop> zdarzenie jest już obsługiwane. Na przykład po przerwaniu koła na innym koło, które obsługuje <xref:System.Windows.UIElement.Drop> zdarzenia mają być panel, który zawiera koła, również go obsłużyć.
 
-    -   Jeśli <xref:System.Windows.UIElement.Drop> zdarzeń nie jest obsługiwany, sprawdza czy **Ctrl** naciśnięcia klawisza.
+    - Jeśli <xref:System.Windows.UIElement.Drop> zdarzeń nie jest obsługiwany, sprawdza czy **Ctrl** naciśnięcia klawisza.
 
-    -   Jeśli **Ctrl** naciśnięciu klawisza, gdy <xref:System.Windows.UIElement.Drop> się stanie, sprawia, że kopia okręgu kontroli i dodać go do <xref:System.Windows.Controls.Panel.Children%2A> zbiór <xref:System.Windows.Controls.StackPanel>.
+    - Jeśli **Ctrl** naciśnięciu klawisza, gdy <xref:System.Windows.UIElement.Drop> się stanie, sprawia, że kopia okręgu kontroli i dodać go do <xref:System.Windows.Controls.Panel.Children%2A> zbiór <xref:System.Windows.Controls.StackPanel>.
 
-    -   Jeśli **Ctrl** nie jest wciśnięty klawisz przenosi koło z <xref:System.Windows.Controls.Panel.Children%2A> zbiór jego nadrzędnego panelu <xref:System.Windows.Controls.Panel.Children%2A> zbiór panel, który został upuszczony.
+    - Jeśli **Ctrl** nie jest wciśnięty klawisz przenosi koło z <xref:System.Windows.Controls.Panel.Children%2A> zbiór jego nadrzędnego panelu <xref:System.Windows.Controls.Panel.Children%2A> zbiór panel, który został upuszczony.
 
-    -   Zestawy <xref:System.Windows.DragEventArgs.Effects%2A> właściwości, aby powiadomić <xref:System.Windows.DragDrop.DoDragDrop%2A> metoda czy wykonano operację przenoszenia lub kopiowania.
+    - Zestawy <xref:System.Windows.DragEventArgs.Effects%2A> właściwości, aby powiadomić <xref:System.Windows.DragDrop.DoDragDrop%2A> metoda czy wykonano operację przenoszenia lub kopiowania.
 
 6. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.
 

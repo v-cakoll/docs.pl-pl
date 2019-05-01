@@ -3,11 +3,11 @@ title: Kontrola drzewa działań
 ms.date: 03/30/2017
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
 ms.openlocfilehash: 014795b79b3536b387096e4de64266e26649da21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774148"
 ---
 # <a name="activity-tree-inspection"></a>Kontrola drzewa działań
 Kontrola drzewa działań jest używany przez autorów aplikacji przepływu pracy do wglądu w przepływach pracy obsługiwanych przez aplikację. Za pomocą <xref:System.Activities.WorkflowInspectionServices>, przepływy pracy mogą być wyszukiwane podrzędny określonego działania, poszczególne działania mogą być wyliczane ich właściwości i metadanych środowiska wykonawczego, działania mogą być buforowane w określonym czasie. Ten temat zawiera omówienie <xref:System.Activities.WorkflowInspectionServices> i jak z niej korzystać, aby sprawdzić działanie drzewa.  

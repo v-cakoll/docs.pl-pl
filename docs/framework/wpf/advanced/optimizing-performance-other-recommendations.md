@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773103"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optymalizacja wydajności: Inne zalecenia
 <a name="introduction"></a> Ten temat zawiera zalecenia dotyczące wydajności, oprócz tych objętych tematy w [optymalizowania wydajności aplikacji WPF](optimizing-wpf-application-performance.md) sekcji.  
   
  Ten temat zawiera następujące sekcje:  
   
--   [Nieprzezroczystość na pędzle i przezroczystość elementów](#Opacity)  
+- [Nieprzezroczystość na pędzle i przezroczystość elementów](#Opacity)  
   
--   [Nawigacja do obiektu](#Navigation_Objects)  
+- [Nawigacja do obiektu](#Navigation_Objects)  
   
--   [Test na dużych powierzchni 3D trafienia](#Hit_Testing)  
+- [Test na dużych powierzchni 3D trafienia](#Hit_Testing)  
   
--   [Zdarzenie CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
+- [Zdarzenie CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
   
--   [Unikaj używania scrollbarvisibility — = Auto](#Avoid_Using_ScrollBarVisibility)  
+- [Unikaj używania scrollbarvisibility — = Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [Konfigurowanie usługi pamięci podręcznej czcionki skrócić czas uruchamiania](#FontCache)  
+- [Konfigurowanie usługi pamięci podręcznej czcionki skrócić czas uruchamiania](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Nieprzezroczystość na pędzle i przezroczystość elementów  

@@ -7,11 +7,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772648"
 ---
 # <a name="net-class-libraries"></a>Biblioteki klas platformy .NET
 
@@ -19,9 +19,9 @@ Biblioteki klas są [biblioteki udostępnionej](https://en.wikipedia.org/wiki/Li
 
 Istnieją trzy typy biblioteki klas, które są dostępne:
 
-*   **Specyficzne dla platformy** bibliotek klas mają dostęp do wszystkich interfejsów API w danej platformy (na przykład, .NET Framework, Xamarin iOS), ale można używać tylko przy użyciu aplikacji i bibliotek przeznaczonych do danej platformy.
-*   **Przenośne** biblioteki klas, mają dostęp do podzestawu interfejsów API i mogą być używane przez aplikacje i bibliotek przeznaczonych do wielu platform.
-*   **.NET standard** bibliotek klas jest łączenie koncepcji specyficzne dla platformy, przenośne biblioteki w jednym modelu, który zapewnia najlepsze cechy obu.
+* **Specyficzne dla platformy** bibliotek klas mają dostęp do wszystkich interfejsów API w danej platformy (na przykład, .NET Framework, Xamarin iOS), ale można używać tylko przy użyciu aplikacji i bibliotek przeznaczonych do danej platformy.
+* **Przenośne** biblioteki klas, mają dostęp do podzestawu interfejsów API i mogą być używane przez aplikacje i bibliotek przeznaczonych do wielu platform.
+* **.NET standard** bibliotek klas jest łączenie koncepcji specyficzne dla platformy, przenośne biblioteki w jednym modelu, który zapewnia najlepsze cechy obu.
 
 ## <a name="platform-specific-class-libraries"></a>Biblioteki klas specyficznych dla platformy
 

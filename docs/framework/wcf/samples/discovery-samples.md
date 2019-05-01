@@ -3,11 +3,11 @@ title: Odnajdywanie (przykłady)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
 ms.openlocfilehash: bf01e3fec15ddae0d0901b3c2dc91d3d6109fc97
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772921"
 ---
 # <a name="discovery-samples"></a>Odnajdywanie (przykłady)
 Ta sekcja zawiera przykłady związane z funkcji odnajdywania.  

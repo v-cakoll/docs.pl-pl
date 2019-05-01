@@ -3,11 +3,11 @@ title: Przestarzałe typy w programie Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
 ms.openlocfilehash: d41bf147cd079a3d6d3714da5595732de3dcb7de
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774052"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Przestarzałe typy w programie Windows Workflow Foundation
 W .NET 4 zespołu przepływu pracy zwolnione wszystkich nowych aparatu przepływu pracy w <xref:System.Activities> przestrzeni nazw. Wersja programu .NET 4.5 w wersji Beta firma Microsoft oznaczanie większość typów w "WF 3" <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, i <xref:System.Workflow.Runtime> przestrzeni nazw jako przestarzałe.  
@@ -15,19 +15,19 @@ W .NET 4 zespołu przepływu pracy zwolnione wszystkich nowych aparatu przepływ
 ## <a name="obsolete-namespaces-and-tools"></a>Przestarzałe przestrzenie nazw i narzędzia  
  Następujące zestawy mają jeden lub więcej typów publicznych, które staną się przestarzałe:  
   
--   System.Workflow.Activities.dll  
+- System.Workflow.Activities.dll  
   
--   System.Workflow.ComponentModel.dll  
+- System.Workflow.ComponentModel.dll  
   
--   System.Workflow.Runtime.dll  
+- System.Workflow.Runtime.dll  
   
--   System.WorkflowServices.dll  
+- System.WorkflowServices.dll  
   
--   Microsoft.Workflow.DebugController.dll  
+- Microsoft.Workflow.DebugController.dll  
   
--   Microsoft.Workflow.Compiler.exe  
+- Microsoft.Workflow.Compiler.exe  
   
--   WFC.exe  
+- Wfc.exe  
   
  W rezultacie klienci, którzy używają przestarzałych API 3 WF będą napotykać ostrzeżenia kompilacji za pomocą komunikatu podobnego do następującego:  
   

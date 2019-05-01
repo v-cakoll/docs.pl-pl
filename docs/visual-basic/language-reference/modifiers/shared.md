@@ -12,11 +12,11 @@ helpviewer_keywords:
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
 ms.openlocfilehash: 12c81a9a0651088a348afeaff3b71935d289da53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778745"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzonych z klasy lub struktury w dużych, a nie przy użyciu określonego wystąpienia klasy lub struktury.  
@@ -30,25 +30,25 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzony
   
 ## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Możesz użyć `Shared` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji `Shared` element musi być klasą lub strukturą i nie może być plikiem źródłowym, przestrzeń nazw lub procedury.  
+- **Kontekst deklaracji.** Możesz użyć `Shared` tylko na poziomie modułu. Oznacza to, że kontekst deklaracji `Shared` element musi być klasą lub strukturą i nie może być plikiem źródłowym, przestrzeń nazw lub procedury.  
   
--   **Modyfikatory połączone.** Nie można określić `Shared` wraz z [zastępuje](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), lub [ Statyczne](../../../visual-basic/language-reference/modifiers/static.md) w tej samej deklaracji.  
+- **Modyfikatory połączone.** Nie można określić `Shared` wraz z [zastępuje](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), lub [ Statyczne](../../../visual-basic/language-reference/modifiers/static.md) w tej samej deklaracji.  
   
--   **Uzyskiwanie dostępu do.** Możesz uzyskać dostęp udostępnionego elementu kwalifikując jego nazwą klasy lub struktury, a nie nazwę zmiennej konkretnego wystąpienia swojej klasy lub struktury. Nawet nie trzeba utworzyć wystąpienia klasy lub struktury dostęp do jego udostępnionych elementów członkowskich.  
+- **Uzyskiwanie dostępu do.** Możesz uzyskać dostęp udostępnionego elementu kwalifikując jego nazwą klasy lub struktury, a nie nazwę zmiennej konkretnego wystąpienia swojej klasy lub struktury. Nawet nie trzeba utworzyć wystąpienia klasy lub struktury dostęp do jego udostępnionych elementów członkowskich.  
   
      Poniższy przykład wywołuje procedury udostępnianej <xref:System.Double.IsNaN%2A> udostępnianych przez <xref:System.Double> struktury.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **Niejawne udostępniania.** Nie można użyć `Shared` modyfikator w [instrukcja Const](../../../visual-basic/language-reference/statements/const-statement.md), ale stałe są niejawnie. Podobnie nie można zadeklarować członek modułem lub interfejsem `Shared`, ale niejawnie są one udostępniane.  
+- **Niejawne udostępniania.** Nie można użyć `Shared` modyfikator w [instrukcja Const](../../../visual-basic/language-reference/statements/const-statement.md), ale stałe są niejawnie. Podobnie nie można zadeklarować członek modułem lub interfejsem `Shared`, ale niejawnie są one udostępniane.  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Storage.** Udostępniona zmienna lub zdarzenia są przechowywane w pamięci tylko raz, niezależnie od tego, ile lub kilka wystąpień tworzenia swojej klasy lub struktury. Podobnie procedury udostępnianej lub właściwość zawiera tylko jeden zestaw zmiennych lokalnych.  
+- **Storage.** Udostępniona zmienna lub zdarzenia są przechowywane w pamięci tylko raz, niezależnie od tego, ile lub kilka wystąpień tworzenia swojej klasy lub struktury. Podobnie procedury udostępnianej lub właściwość zawiera tylko jeden zestaw zmiennych lokalnych.  
   
--   **Dostęp za pośrednictwem zmiennej wystąpienia.** Użytkownik może uzyskać dostęp do udostępnionego elementu kwalifikując nazwę zmiennej, która zawiera określone wystąpienie jego klasy lub struktury. Mimo że to zazwyczaj działa zgodnie z oczekiwaniami, kompilator generuje komunikat ostrzegawczy i sprawia, że dostęp za pośrednictwem nazwy klasy lub struktury, zamiast zmiennej.  
+- **Dostęp za pośrednictwem zmiennej wystąpienia.** Użytkownik może uzyskać dostęp do udostępnionego elementu kwalifikując nazwę zmiennej, która zawiera określone wystąpienie jego klasy lub struktury. Mimo że to zazwyczaj działa zgodnie z oczekiwaniami, kompilator generuje komunikat ostrzegawczy i sprawia, że dostęp za pośrednictwem nazwy klasy lub struktury, zamiast zmiennej.  
   
--   **Uzyskiwanie dostępu do przy użyciu wyrażenia wystąpienia.** Jeśli uzyskujesz dostęp do udostępnionego elementu za pomocą wyrażenia, która zwraca wystąpienie jego klasy lub struktury, kompilator sprawia, że dostęp za pośrednictwem nazwy klasy lub struktury, zamiast obliczając wartość wyrażenia. Daje nieoczekiwane wyniki, jeśli Twoim zamiarem wyrażenie które ma wykonywać inne czynności, a także zwracanie wystąpienia. Ilustruje to poniższy przykład.  
+- **Uzyskiwanie dostępu do przy użyciu wyrażenia wystąpienia.** Jeśli uzyskujesz dostęp do udostępnionego elementu za pomocą wyrażenia, która zwraca wystąpienie jego klasy lub struktury, kompilator sprawia, że dostęp za pośrednictwem nazwy klasy lub struktury, zamiast obliczając wartość wyrażenia. Daje nieoczekiwane wyniki, jeśli Twoim zamiarem wyrażenie które ma wykonywać inne czynności, a także zwracanie wystąpienia. Ilustruje to poniższy przykład.  
   
     ```vb
     Sub main()  

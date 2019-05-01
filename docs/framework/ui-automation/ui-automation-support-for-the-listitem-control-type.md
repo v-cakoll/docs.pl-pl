@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
 ms.openlocfilehash: c2cc96e575dc85459cf55e30d3cbe54bfb158b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783080"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu ListItem
 > [!NOTE]

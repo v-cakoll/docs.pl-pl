@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775039"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply — Metoda
 Powiadamia program profilujący po stronie serwera część wywołanie komunikacji zdalnej została zakończona i klient otrzymuje teraz i wkrótce do przetwarzania odpowiedzi.  
@@ -39,11 +39,11 @@ HRESULT RemotingClientReceivingReply(
  `pCookie`  
  [in] Wartość, która będzie odpowiadać za pomocą wartość podana w [icorprofilercallback::remotingserversendingreply —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) w tych warunkach:  
   
--   Pliki cookie identyfikatora GUID komunikacji zdalnej są aktywne.  
+- Pliki cookie identyfikatora GUID komunikacji zdalnej są aktywne.  
   
--   Kanał powiedzie się podczas przesyłania wiadomości.  
+- Kanał powiedzie się podczas przesyłania wiadomości.  
   
--   Identyfikator GUID pliki cookie są aktywne na proces po stronie serwera.  
+- Identyfikator GUID pliki cookie są aktywne na proces po stronie serwera.  
   
  Dzięki temu można łatwo parowanie wywołaniem funkcji zdalnych wywołań.  
   

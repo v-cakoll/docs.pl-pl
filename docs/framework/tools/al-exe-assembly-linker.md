@@ -10,11 +10,11 @@ ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780058"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Konsolidator zestawów)
 
@@ -37,7 +37,7 @@ al sources options
 
 Można określić co najmniej jeden z następujących `sources`.
 
-| Źródło | Opis |
+| Source | Opis |
 | ------ | ----------- |
 |`file`[,`target`]|Kopiuje zawartość `file` (moduł) do pliku o nazwie określonej przez `target`. Po skopiowaniu *Al.exe* kompiluje `target` do zestawu.|
 |**/ embed [zasób]:** `file`[,`name`[,`private`]]|Osadza zasób określony przez `file` na obrazie, który zawiera manifest zestawu; *Al.exe* kopiuje zawartość `file` do obrazu przenośnego pliku wykonywalnego (PE).<br /><br /> `name` Parametr jest wewnętrznym identyfikatorem zasobu. Domyślnie zasoby w zestawie są publiczne (widoczne dla innych zestawów). Określanie `private` sprawi, że zasób nie są widoczne dla innych zestawów.<br /><br /> Jeśli `file` jest plikiem zasobów .NET Framework, utworzonym na przykład przez [Resource File Generator (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, jest dostępny za pomocą elementów członkowskich w <xref:System.Resources>. Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>. W przypadku wszystkich innych zasobów, użyj `GetManifestResource`* metody <xref:System.Reflection.Assembly> dostępu do zasobu w czasie wykonywania.<br /><br /> Jeśli tylko pliki zasobów są przekazywane do *Al.exe*, plik wyjściowy jest satelickim zestawem zasobów.|

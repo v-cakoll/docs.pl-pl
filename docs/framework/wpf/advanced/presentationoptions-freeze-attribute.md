@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
 ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772843"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze — Atrybut
 Zestawy <xref:System.Windows.Freezable.IsFrozen%2A> do stanu `true` na zawierający <xref:System.Windows.Freezable> elementu. Domyślne zachowanie dla <xref:System.Windows.Freezable> bez `PresentationOptions:Freeze` określony atrybut jest to, że <xref:System.Windows.Freezable.IsFrozen%2A> jest `false` na czas ładowania, w zależności od ogólnego <xref:System.Windows.Freezable> zachowanie w czasie wykonywania.  

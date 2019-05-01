@@ -13,11 +13,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784140"
 ---
 # <a name="namespace-statement"></a>Namespace — Instrukcja
 Deklaruje nazwę przestrzeni nazw i powoduje, że kod źródłowy znajdujący się w deklaracji jest kompilowany w obrębie tej przestrzeni nazw.  

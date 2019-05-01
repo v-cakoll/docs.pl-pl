@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
 ms.openlocfilehash: 75d118ee2bd4918c3a936cb341864ddc5315726b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778641"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 Określa, że co najmniej jednej zmiennej zadeklarowanej składowej odnoszą się do wystąpienia klasy, które może wywoływać zdarzenia.  
@@ -28,7 +28,7 @@ Określa, że co najmniej jednej zmiennej zadeklarowanej składowej odnoszą si�
   
 ## <a name="rules"></a>reguły  
   
--   **Typy elementów.** Musisz zadeklarować `WithEvents` zmienne jako zmienne do obiektu, dzięki czemu mogą akceptować klasy wystąpień. Jednak nie można zadeklarować je jako `Object`. Musisz je zadeklarować jako określonej klasy, które może wywoływać zdarzenia.  
+- **Typy elementów.** Musisz zadeklarować `WithEvents` zmienne jako zmienne do obiektu, dzięki czemu mogą akceptować klasy wystąpień. Jednak nie można zadeklarować je jako `Object`. Musisz je zadeklarować jako określonej klasy, które może wywoływać zdarzenia.  
   
  `WithEvents` Modyfikatora można używać w tym kontekście: [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

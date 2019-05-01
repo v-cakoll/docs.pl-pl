@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63d4b885b6968b800bc965a9be1ec6b795a42220
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771504"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies — Metoda
 Określa, czy dwa zestawy różnią się tylko ich podpisy silnej nazwy.  
@@ -47,11 +47,11 @@ HRESULT StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Jeden z następujących wartości:  
   
--   `SN_CMP_DIFFERENT` (0) — określa, że zestawy zawierają różne dane.  
+- `SN_CMP_DIFFERENT` (0) — określa, że zestawy zawierają różne dane.  
   
--   `SN_CMP_IDENTICAL` (1) — określa, że zestawy są dokładnie takie same, łącznie z ich podpisy i sumy kontrolnej.  
+- `SN_CMP_IDENTICAL` (1) — określa, że zestawy są dokładnie takie same, łącznie z ich podpisy i sumy kontrolnej.  
   
--   `SN_CMP_SIGONLY` (2) — określa, że zestawy różnią się jedynie podpisu i sum kontrolnych.  
+- `SN_CMP_SIGONLY` (2) — określa, że zestawy różnią się jedynie podpisu i sum kontrolnych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  

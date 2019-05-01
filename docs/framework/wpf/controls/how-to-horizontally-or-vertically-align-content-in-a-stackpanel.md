@@ -10,11 +10,11 @@ helpviewer_keywords:
 - aligning [WPF], content
 ms.assetid: c1e8f962-72c8-4e7a-8670-7a2d7e021791
 ms.openlocfilehash: 03348aa0eb5b6c1791c27683c1c6c6a5d4a8a9d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771036"
 ---
 # <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>Instrukcje: Wyrównywanie w poziomie lub w pionie zawartości w kontrolce StackPanel
 W tym przykładzie pokazano, jak dostosować <xref:System.Windows.Controls.StackPanel.Orientation%2A> zawartości w ramach <xref:System.Windows.Controls.StackPanel> elementu, a także, jak dostosować <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> z zawartość elementu podrzędnego.  

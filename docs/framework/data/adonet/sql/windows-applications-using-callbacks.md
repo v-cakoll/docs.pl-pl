@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
 ms.openlocfilehash: 1efb30581642faba3e839357ef9d6f8d6c8869e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780162"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplikacje systemu Windows z wykorzystaniem wywołania zwrotnego
 W większości przypadków przetwarzania asynchronicznego, dla których chcesz rozpocząć operację bazy danych i kontynuować uruchamianie innych procesów bez oczekiwania na zakończenie operacji bazy danych. Jednak wiele scenariuszy wymagają robi, po zakończeniu operacji bazy danych. W aplikacji Windows na przykład może chcesz delegować długotrwałej operacji do wątku w tle, podczas gdy wątek interfejsu użytkownika ciągle reagować. Jednak po ukończeniu operacji bazy danych chcesz użyć wyniki do wypełnienia formularza. Tego rodzaju scenariusza najlepiej jest implementowane za pomocą wywołania zwrotnego.  

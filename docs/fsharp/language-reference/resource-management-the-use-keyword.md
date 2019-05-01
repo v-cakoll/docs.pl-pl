@@ -3,17 +3,17 @@ title: 'Zarządzanie zasobami: Use — słowo kluczowe'
 description: Dowiedz się więcej o F# — słowo kluczowe "use" i "using" funkcji, która może kontrolować, inicjowanie i zwolnienia zasobów.
 ms.date: 05/16/2016
 ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770490"
 ---
 # <a name="resource-management-the-use-keyword"></a>Zarządzanie zasobami: Use — słowo kluczowe
 
 W tym temacie opisano słowa kluczowego `use` i `using` funkcji, która może kontrolować, inicjowanie i zwolnienia zasobów.
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>Zasoby
 
 Termin *zasobów* jest używana w więcej niż jeden sposób. Tak, zasobów mogą zawierać dane, które używa aplikacji, takich jak ciągi, grafiki i podobne, ale w tym kontekście *zasobów* odwołuje się do oprogramowania lub systemu operacyjnego zasoby, takie jak konteksty urządzenia grafiki, dojścia do plików, użycia sieci bazy danych i połączenia, obiektów współbieżności, takich jak dojścia oczekiwania i tak dalej. Korzystanie z tych zasobów przez aplikacje obejmuje pozyskiwanie zasobów z system operacyjny lub inne dostawcy zasobów, a następnie w nowszej wersji zasobu, do puli, dzięki czemu można przekazać do innej aplikacji. Problemy występują, gdy aplikacje nie zwalnia wspólnej puli zasobów.
 

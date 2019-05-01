@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774871"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego "\<assembly1 >" z powodu pośredniego odwołania do tego zestawu z zestawu "\<assembly2 >"
 Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego "\<assembly1 >" z powodu pośredniego odwołania do tego zestawu z zestawu "\<assembly2 >". Rozważ zmianę właściwości "Embed Interop Types" na jednym z zestawów.  
@@ -27,9 +27,9 @@ Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego "\<assembly1 >" z
   
 ### <a name="to-address-this-warning"></a>Aby rozwiązać tego ostrzeżenia  
   
--   Aby osadzić typu międzyoperacyjnego informacje dla obu zestawów, należy ustawić `Embed Interop Types` właściwość wszystkie odwołania do assembly1 do `True`.  
+- Aby osadzić typu międzyoperacyjnego informacje dla obu zestawów, należy ustawić `Embed Interop Types` właściwość wszystkie odwołania do assembly1 do `True`.  
   
--   Aby usunąć to ostrzeżenie, można ustawić `Embed Interop Types` właściwość assembly1 do `False`. W tym przypadku typu międzyoperacyjnego informacje są udostępniane przez podstawowego zestawu międzyoperacyjnego (PIA).  
+- Aby usunąć to ostrzeżenie, można ustawić `Embed Interop Types` właściwość assembly1 do `False`. W tym przypadku typu międzyoperacyjnego informacje są udostępniane przez podstawowego zestawu międzyoperacyjnego (PIA).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,11 +3,11 @@ title: 'Instrukcje: Wyszukiwanie elementów potomnych o określonej nazwie eleme
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
 ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780500"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Instrukcje: Wyszukiwanie elementów potomnych o określonej nazwie elementu (Visual Basic)
 Czasami chcesz znaleźć wszystkie elementy podrzędne o określonej nazwie. Można napisać kod, aby wykonać iterację przez wszystkie elementy podrzędne, ale jest łatwiejszy w obsłudze <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  

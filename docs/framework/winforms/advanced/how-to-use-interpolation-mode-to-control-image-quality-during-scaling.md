@@ -10,24 +10,24 @@ helpviewer_keywords:
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
 ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778972"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Instrukcje: Używanie trybu interpolacji do sterowania jakością obrazu w czasie skalowania
 Tryb interpolacji <xref:System.Drawing.Graphics> obiekt ma wpływ na sposób [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] obrazów w skali (odcinkach i zmniejsza). <xref:System.Drawing.Drawing2D.InterpolationMode> Wyliczenie definiuje kilka trybów interpolacji, niektóre z nich są wyświetlane na poniższej liście:  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
  Obraz jest rozciągany tak, każdego piksela oryginalnego obrazu, musi być zmapowany do grupy pikseli większy obraz. Aby zmniejszyć obrazu, grup pikseli, oryginalnym obrazie musi być zamapowany na jednym pikseli w mniejszym obrazem. Skuteczność algorytmy, które wykonują te mapowania określa jakość skalowany obraz. Algorytmy, które powoduje, że wyższej jakości skalowanych zwykle wymagają więcej czasu na przetwarzanie. Z powyższej listy <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> jest tryb najniższej jakości i <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> jest tryb najwyższej jakości.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
 ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784192"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface — Instrukcja (Visual Basic)
 Deklaruje nazwę interfejsu i wprowadza definicje elementów członkowskich, które obejmuje interfejs.  
@@ -67,31 +67,31 @@ End Interface
   
 ## <a name="rules"></a>reguły  
   
--   **Zagnieżdżanie interfejsów.** Można zdefiniować jeden interfejs w innym. Wywoływany jest interfejs zewnętrzny *zawierający interfejs*, i wywoływany jest interfejs wewnętrzny *zagnieżdżonego interfejsu*.  
+- **Zagnieżdżanie interfejsów.** Można zdefiniować jeden interfejs w innym. Wywoływany jest interfejs zewnętrzny *zawierający interfejs*, i wywoływany jest interfejs wewnętrzny *zagnieżdżonego interfejsu*.  
   
--   **Deklaracja składowej.** Kiedy Deklarujesz właściwość lub procedura jako składową interfejsu, jest definiowana tylko *podpisu* właściwość lub procedurę. Obejmuje to typ elementu (właściwość lub procedura), jego parametry i typy parametrów i jego typem zwracanym. W związku z tym definicji elementu członkowskiego wykorzystuje tylko jeden wiersz kodu i kończący oświadczeń `End Function` lub `End Property` nie są prawidłowe w interfejsie.  
+- **Deklaracja składowej.** Kiedy Deklarujesz właściwość lub procedura jako składową interfejsu, jest definiowana tylko *podpisu* właściwość lub procedurę. Obejmuje to typ elementu (właściwość lub procedura), jego parametry i typy parametrów i jego typem zwracanym. W związku z tym definicji elementu członkowskiego wykorzystuje tylko jeden wiersz kodu i kończący oświadczeń `End Function` lub `End Property` nie są prawidłowe w interfejsie.  
   
      Natomiast gdy zdefiniujesz wyliczenie lub struktury, lub zagnieżdżona klasa lub interfejs jest konieczne uwzględnienie ich składowych danych.  
   
--   **Element członkowski modyfikatorów.** Nie można użyć dowolnego modyfikatorów dostępu podczas definiowania elementów członkowskich w module nie można określić [Shared](../../../visual-basic/language-reference/modifiers/shared.md) lub dowolnym modyfikator procedury, z wyjątkiem [przeciążenia](../../../visual-basic/language-reference/modifiers/overloads.md). Można zadeklarować dowolnego elementu członkowskiego z [cieni](../../../visual-basic/language-reference/modifiers/shadows.md), można użyć [domyślne](../../../visual-basic/language-reference/modifiers/default.md) podczas definiowania właściwość także [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md) lub [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **Element członkowski modyfikatorów.** Nie można użyć dowolnego modyfikatorów dostępu podczas definiowania elementów członkowskich w module nie można określić [Shared](../../../visual-basic/language-reference/modifiers/shared.md) lub dowolnym modyfikator procedury, z wyjątkiem [przeciążenia](../../../visual-basic/language-reference/modifiers/overloads.md). Można zadeklarować dowolnego elementu członkowskiego z [cieni](../../../visual-basic/language-reference/modifiers/shadows.md), można użyć [domyślne](../../../visual-basic/language-reference/modifiers/default.md) podczas definiowania właściwość także [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md) lub [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
--   **Dziedziczenie.** Jeśli korzysta z interfejsu [dziedziczy instrukcję](../../../visual-basic/language-reference/statements/inherits-statement.md), można określić jeden lub więcej podstawowych interfejsów. Dwa interfejsy mogą dziedziczyć, nawet wtedy, gdy każda definiują element członkowski o takiej samej nazwie. Jeśli to zrobisz, więc w kodzie implementującym musi być określona elementu członkowskiego, który implementuje kwantyfikacja nazwy.  
+- **Dziedziczenie.** Jeśli korzysta z interfejsu [dziedziczy instrukcję](../../../visual-basic/language-reference/statements/inherits-statement.md), można określić jeden lub więcej podstawowych interfejsów. Dwa interfejsy mogą dziedziczyć, nawet wtedy, gdy każda definiują element członkowski o takiej samej nazwie. Jeśli to zrobisz, więc w kodzie implementującym musi być określona elementu członkowskiego, który implementuje kwantyfikacja nazwy.  
   
      Interfejs nie może dziedziczyć z innego interfejsu z bardziej restrykcyjny poziom dostępu. Na przykład `Public` interfejs nie może dziedziczyć `Friend` interfejsu.  
   
      Interfejs nie może dziedziczyć z interfejsu w nim zagnieżdżony.  
   
--   **Implementacja.** Gdy klasa używa [implementuje](../../../visual-basic/language-reference/statements/implements-clause.md) instrukcję, aby zaimplementować ten interfejs musi implementować, każdy element członkowski zdefiniowany w interfejsie. Ponadto każdy podpis w kodzie implementującym musi dokładnie odpowiadać odpowiedni podpis, które są zdefiniowane w tym interfejsie. Nazwa elementu członkowskiego w kodzie implementującym nie ma jednak jest zgodna z nazwą elementu członkowskiego, zgodnie z definicją w interfejsie.  
+- **Implementacja.** Gdy klasa używa [implementuje](../../../visual-basic/language-reference/statements/implements-clause.md) instrukcję, aby zaimplementować ten interfejs musi implementować, każdy element członkowski zdefiniowany w interfejsie. Ponadto każdy podpis w kodzie implementującym musi dokładnie odpowiadać odpowiedni podpis, które są zdefiniowane w tym interfejsie. Nazwa elementu członkowskiego w kodzie implementującym nie ma jednak jest zgodna z nazwą elementu członkowskiego, zgodnie z definicją w interfejsie.  
   
      Gdy klasa implementuje procedurę, nie może go wyznaczyć procedurze jako `Shared`.  
   
--   **Właściwość domyślna.** Interfejs można określić co najwyżej jedną właściwość jako jego *właściwość domyślna*, mogą być przywoływane bez użycia nazwy właściwości. Określ taką właściwość deklarując ją za pomocą [domyślne](../../../visual-basic/language-reference/modifiers/default.md) modyfikator.  
+- **Właściwość domyślna.** Interfejs można określić co najwyżej jedną właściwość jako jego *właściwość domyślna*, mogą być przywoływane bez użycia nazwy właściwości. Określ taką właściwość deklarując ją za pomocą [domyślne](../../../visual-basic/language-reference/modifiers/default.md) modyfikator.  
   
      Należy zauważyć, że oznacza to, że interfejs można zdefiniować właściwość domyślną tylko wtedy, gdy brak dziedziczy.  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Poziom dostępu.** Wszyscy członkowie interfejsu niejawnie ma [publicznych](../../../visual-basic/language-reference/modifiers/public.md) dostępu. Nie można użyć dowolnego modyfikator dostępu, podczas definiowania członka. Jednak klasy implementującej interfejs może zadeklarować poziom dostępu dla każdego członka zaimplementowane.  
+- **Poziom dostępu.** Wszyscy członkowie interfejsu niejawnie ma [publicznych](../../../visual-basic/language-reference/modifiers/public.md) dostępu. Nie można użyć dowolnego modyfikator dostępu, podczas definiowania członka. Jednak klasy implementującej interfejs może zadeklarować poziom dostępu dla każdego członka zaimplementowane.  
   
      Jeśli wystąpienie klasy jest przypisany do zmiennej, poziom dostępu członków może zależeć od tego, czy typ danych zmiennej jest podstawowym interfejsu lub klasy implementującej. Ilustruje to poniższy przykład.  
   
@@ -99,11 +99,11 @@ End Interface
   
      Jeśli uzyskujesz dostęp do członków klasy za pomocą `varAsInterface`, wszystkie one mają dostęp publiczny. Jednak jeśli uzyskujesz dostęp do członków przy użyciu `varAsClass`, `Sub` procedury `doSomething` ma dostęp prywatny.  
   
--   **Zakres.** Interfejs jest w zakresie przestrzeni nazw, klasy, struktury lub modułu.  
+- **Zakres.** Interfejs jest w zakresie przestrzeni nazw, klasy, struktury lub modułu.  
   
      Zakres każdego członka interfejsu jest cały interfejs.  
   
--   **Okres istnienia.** Interfejs nie ma własnego okresu istnienia, podobnie jak jego członków. Gdy klasa implementuje interfejs i obiekt jest tworzona jako wystąpienie że klasy, obiekt ma okres istnienia aplikacji, w którym jest uruchomiony. Aby uzyskać więcej informacji, zobacz "Okres istnienia" w artykule [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md).  
+- **Okres istnienia.** Interfejs nie ma własnego okresu istnienia, podobnie jak jego członków. Gdy klasa implementuje interfejs i obiekt jest tworzona jako wystąpienie że klasy, obiekt ma okres istnienia aplikacji, w którym jest uruchomiony. Aby uzyskać więcej informacji, zobacz "Okres istnienia" w artykule [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Interface` instrukcji, aby zdefiniować interfejs o nazwie `thisInterface`, muszą być zaimplementowane przy użyciu `Property` instrukcji i `Function` instrukcji.  

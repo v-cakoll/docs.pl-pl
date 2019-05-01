@@ -3,26 +3,26 @@ title: 3328 — ClientFormatterDeserializeReplyStart
 ms.date: 03/30/2017
 ms.assetid: 3e8cb064-3052-481e-8a81-3e311d9ce138
 ms.openlocfilehash: 46c9ba51fa0f13ba6c924ad77b1240db0798a3ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781631"
 ---
 # <a name="3328---clientformatterdeserializereplystart"></a>3328 — ClientFormatterDeserializeReplyStart
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|3328|  
-|Słowa kluczowe|ServiceModel|  
+|Identyfikator|3328|  
+|słowa kluczowe|ServiceModel|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany, gdy klient rozpoczął deserializowanie komunikatu odpowiedzi.  
+ To zdarzenie jest emitowane, gdy klient uruchomiony podczas deserializacji komunikatu odpowiedzi.  
   
 ## <a name="message"></a>Komunikat  
- Klient rozpoczął deserializowanie komunikatu odpowiedzi.  
+ Klient uruchomiony podczas deserializacji komunikatu odpowiedzi.  
   
 ## <a name="details"></a>Szczegóły

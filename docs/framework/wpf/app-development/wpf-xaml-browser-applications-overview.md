@@ -11,11 +11,11 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785883"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
@@ -23,15 +23,15 @@ ms.locfileid: "59320135"
   
  Ten temat zawiera następujące sekcje:  
   
--   [Tworzenie nowej aplikacji przeglądarki XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
+- [Tworzenie nowej aplikacji przeglądarki XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
   
--   [Wdrażania XBAP](#deploying_a_xbap)  
+- [Wdrażania XBAP](#deploying_a_xbap)  
   
--   [Podczas komunikowania się ze stroną sieci Web hosta](#communicating_with_the_host_web_page)  
+- [Podczas komunikowania się ze stroną sieci Web hosta](#communicating_with_the_host_web_page)  
   
--   [XBAP Security Considerations](#xbap_security_considerations)  
+- [XBAP Security Considerations](#xbap_security_considerations)  
   
--   [Zagadnienia związane z wydajnością XBAP początek godziny](#xbap_start_time_performance_considerations)  
+- [Zagadnienia związane z wydajnością XBAP początek godziny](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Tworzenie nowej aplikacji przeglądarki XAML (XBAP)  
@@ -131,17 +131,17 @@ ms.locfileid: "59320135"
   
  Kiedy używasz <xref:System.Windows.Controls.WebBrowser> kontrolki w aplikacji WPF tworzy wewnętrznie macierzystym formancie WebBrowser ActiveX. Gdy aplikacja jest XBAP częściowego zaufania, w programie Internet Explorer, formant ActiveX jest uruchamiany w dedykowanym wątku proces programu Internet Explorer. W związku z tym obowiązują następujące ograniczenia:  
   
--   <xref:System.Windows.Controls.WebBrowser> Kontrolki powinien zapewniać zachowanie podobne do przeglądarce hosta, w tym ograniczenia zabezpieczeń. Niektóre z tych ograniczeń zabezpieczeń mogą być kontrolowane przez ustawienia zabezpieczeń programu Internet Explorer. Aby uzyskać więcej informacji, zobacz [zabezpieczeń](../security-wpf.md).  
+- <xref:System.Windows.Controls.WebBrowser> Kontrolki powinien zapewniać zachowanie podobne do przeglądarce hosta, w tym ograniczenia zabezpieczeń. Niektóre z tych ograniczeń zabezpieczeń mogą być kontrolowane przez ustawienia zabezpieczeń programu Internet Explorer. Aby uzyskać więcej informacji, zobacz [zabezpieczeń](../security-wpf.md).  
   
--   Wyjątek jest generowany, gdy XBAP jest załadowany międzydomenowe na stronie HTML.  
+- Wyjątek jest generowany, gdy XBAP jest załadowany międzydomenowe na stronie HTML.  
   
--   Dane wejściowe są w oddzielnym wątku z WPF <xref:System.Windows.Controls.WebBrowser>, dlatego nie można przechwytywać dane wejściowe z klawiatury i nie jest udostępniony stan edytora IME.  
+- Dane wejściowe są w oddzielnym wątku z WPF <xref:System.Windows.Controls.WebBrowser>, dlatego nie można przechwytywać dane wejściowe z klawiatury i nie jest udostępniony stan edytora IME.  
   
--   Kolejność nawigacji lub termin może się różnić z powodu formantu ActiveX, uruchomiony w innym wątku. Na przykład przechodząc do strony jest nie zawsze anulowane przez uruchomienie kolejnego żądania nawigacji.  
+- Kolejność nawigacji lub termin może się różnić z powodu formantu ActiveX, uruchomiony w innym wątku. Na przykład przechodząc do strony jest nie zawsze anulowane przez uruchomienie kolejnego żądania nawigacji.  
   
--   Niestandardowy formant ActiveX może mieć problemy z komunikacją, ponieważ aplikacja WPF działa w oddzielnym wątku.  
+- Niestandardowy formant ActiveX może mieć problemy z komunikacją, ponieważ aplikacja WPF działa w oddzielnym wątku.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> nie uzyskać zgłaszane, ponieważ <xref:System.Windows.Interop.HwndHost> nie podklasy okna uruchomionego w innym wątku lub procesu.  
+- <xref:System.Windows.Interop.HwndHost.MessageHook> nie uzyskać zgłaszane, ponieważ <xref:System.Windows.Interop.HwndHost> nie podklasy okna uruchomionego w innym wątku lub procesu.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Tworzenie XBAP pełnego zaufania  
  Jeśli Twoje XBAP wymaga pełnego zaufania, można zmienić projekt tak, aby włączyć te uprawnienia. W poniższych krokach opisano sposób włączania pełnego zaufania:  
@@ -152,9 +152,9 @@ ms.locfileid: "59320135"
   
  To ustawienie powoduje następujące zmiany:  
   
--   W pliku projektu `<TargetZone>` wartość elementu jest zmieniana na `Custom`.  
+- W pliku projektu `<TargetZone>` wartość elementu jest zmieniana na `Custom`.  
   
--   W manifeście aplikacji (app.manifest) `Unrestricted="true"` jest dodawany atrybut "<xref:System.Security.PermissionSet> elementu.  
+- W manifeście aplikacji (app.manifest) `Unrestricted="true"` jest dodawany atrybut "<xref:System.Security.PermissionSet> elementu.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

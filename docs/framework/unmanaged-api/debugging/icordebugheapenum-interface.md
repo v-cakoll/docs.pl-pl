@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79ef77e52e14fede9949121e7ec4575d10b820c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775586"
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum — Interfejs
 Dostarcza moduł wyliczający dla obiektów na zarządzanej stercie. Ten interfejs jest podklasą icordebugenum — interfejs.  

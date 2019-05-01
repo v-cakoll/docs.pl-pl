@@ -3,11 +3,11 @@ title: 'Instrukcje: wyłączanie szyfrowania podpisów cyfrowych'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
 ms.openlocfilehash: e2fd2a058e636ebf398f9d0c71a93788ccd7dfa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773194"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>Instrukcje: wyłączanie szyfrowania podpisów cyfrowych
 Domyślnie wiadomość jest podpisany i podpisu cyfrowego są szyfrowane. Jest to kontrolowane przez tworzenie niestandardowego powiązania za pomocą wystąpienia <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> i ustawienie `MessageProtectionOrder` właściwości każdej klasy, aby <xref:System.ServiceModel.Security.MessageProtectionOrder> wartość wyliczenia. Wartość domyślna to <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Ten proces zużywa do 30 procent więcej czasu niż po prostu podpisywania i szyfrowania oparte na całkowity rozmiar komunikatu (mniejszy komunikat o błędzie, tym większy wpływ na wydajność). Wyłączanie szyfrowania podpisów, jednak mogą umożliwić osobie atakującej do odgadnięcia treści komunikatu. Jest to możliwe, ponieważ element podpis zawiera skrótu zwykły tekst każdej części podpisanych wiadomości. Na przykład mimo, że treść komunikatu jest domyślne szyfrowanie przekazywanego materiału, niezaszyfrowane podpis zawiera skrótu przed szyfrowania treści wiadomości. Jeśli zestaw możliwych wartości dla części podpisane i zaszyfrowane jest mały, osoba atakująca może być zawartość, analizując wartość skrótu. Szyfrowanie podpis zmniejsza zagrożenie tego ataku.  

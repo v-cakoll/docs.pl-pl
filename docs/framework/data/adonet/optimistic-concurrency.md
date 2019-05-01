@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
 ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772011"
 ---
 # <a name="optimistic-concurrency"></a>Optymistyczna współbieżność
 W środowisku wielodostępnym, istnieją dwa modele aktualizacji danych w bazie danych: optymistycznej współbieżności i pesymistycznej współbieżności. <xref:System.Data.DataSet> Obiektu jest przeznaczona do zachęcać do stosowania funkcji optymistycznej współbieżności dla długotrwałych działań, takich jak dane usług zdalnych i wchodzenie w interakcje z danymi.  

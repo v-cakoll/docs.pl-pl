@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779044"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Instrukcje: Stosowanie trybu składania do sterowania przenikaniem alfa
 Mogą wystąpić sytuacje, gdy chcesz utworzyć poza ekranem mapy bitowej, która ma następujące cechy:  
   
--   Kolory mają wartości alfa, które są mniej niż 255.  
+- Kolory mają wartości alfa, które są mniej niż 255.  
   
--   Kolory nie są alfa połączeniu ze sobą, jak tworzenie mapy bitowej.  
+- Kolory nie są alfa połączeniu ze sobą, jak tworzenie mapy bitowej.  
   
--   Podczas wyświetlania mapy bitowej Zakończono kolorów w mapie bitowej są przenikaniem za pomocą kolorów tła na urządzenia wyświetlającego alfa.  
+- Podczas wyświetlania mapy bitowej Zakończono kolorów w mapie bitowej są przenikaniem za pomocą kolorów tła na urządzenia wyświetlającego alfa.  
   
  Aby utworzyć mapę bitową, należy utworzyć pusty <xref:System.Drawing.Bitmap> obiektu, a następnie utworzyć <xref:System.Drawing.Graphics> obiektu oparte na tej mapy bitowej. Ustawianie trybu składania <xref:System.Drawing.Graphics> obiekt <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   

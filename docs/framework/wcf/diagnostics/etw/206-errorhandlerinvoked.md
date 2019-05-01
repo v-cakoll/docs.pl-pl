@@ -3,27 +3,27 @@ title: 206 — ErrorHandlerInvoked
 ms.date: 03/30/2017
 ms.assetid: 97340f4d-4e09-4e42-a17a-982b3868dbcf
 ms.openlocfilehash: 40a92d77c57728249569a854eab8767ff371bca2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781930"
 ---
 # <a name="206---errorhandlerinvoked"></a>206 — ErrorHandlerInvoked
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|206|  
-|Słowa kluczowe|Rozwiązywanie problemów, ServiceModel|  
+|Identyfikator|206|  
+|słowa kluczowe|Rozwiązywanie problemów, modelu ServiceModel|  
 |Poziom|Informacje|  
 |Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany po `ErrorHandler` umożliwieniu do obsługi wyjątku, który wystąpił podczas operacji usługi.  
+ To zdarzenie jest emitowane po `ErrorHandler` umożliwieniu może obsłużyć wyjątek, który wystąpił podczas operacji usługi.  
   
 ## <a name="message"></a>Komunikat  
- Dyspozytor wywołał obiekt ErrorHandler typu "%1" za pomocą wyjątku typu '%3'. Obsłużony błąd == "%2".  
+ Dyspozytor wywoływane ErrorHandler typu "%1" z powodu wyjątku typu "%3". ErrorHandled == "%2".  
   
 ## <a name="details"></a>Szczegóły  
   
@@ -31,6 +31,6 @@ ms.locfileid: "33458822"
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|Imię i nazwisko CLR typu wywołanej `ErrorHandler`.|  
 |Obsługiwane|`xs:unsignedByte`|`true` Jeśli program obsługi błędów obsługi błędu, w przeciwnym razie `false`.|  
-|ExceptionTypeName|`xs:string`|Element FullName CLR wyjątku, który został już obsługiwany.|  
-|HostReference|`xs:string`|W przypadku usług hostowanych w sieci Web to pole unikatowo identyfikuje usługę w hierarchii sieci Web. Jego format jest zdefiniowany jako "Ścieżka wirtualna aplikacji Nazwa witryny sieci Web&#124;ścieżki wirtualnej usługi&#124;ServiceName". Przykład: "Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
-|Domeny aplikacji|`xs:string`|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|ExceptionTypeName|`xs:string`|Pełna nazwa CLR wyjątku, który został jest obsługiwany.|  
+|HostReference|`xs:string`|W przypadku usług hostowanych w sieci Web to pole jednoznacznie identyfikuje usługę w hierarchii w sieci Web. Jego format jest zdefiniowany jako "Ścieżka wirtualna aplikacji Nazwa witryny sieci Web&#124;ścieżka wirtualna usługi&#124;ServiceName". Przykład: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
+|AppDomain|`xs:string`|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

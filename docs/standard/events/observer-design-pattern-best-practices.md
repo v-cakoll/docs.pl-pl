@@ -9,11 +9,11 @@ ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770399"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Wzorzec projektowy obserwatora — Najlepsze praktyki
 W .NET Framework po wzorcu projektowania obserwatora są zaimplementowane jako zestaw interfejsów. <xref:System.IObservable%601?displayProperty=nameWithType> Interfejs reprezentuje dostawcy danych, który jest również odpowiedzialny za zapewnienie <xref:System.IDisposable> implementację, która umożliwia obserwatorów zrezygnować z powiadomień. <xref:System.IObserver%601?displayProperty=nameWithType> Interfejs reprezentuje obserwatora. W tym temacie opisano najlepsze rozwiązania, które deweloperzy powinni stosować podczas implementowania po wzorcu projektowania obserwatora, za pomocą tych interfejsów.  
@@ -31,11 +31,11 @@ W .NET Framework po wzorcu projektowania obserwatora są zaimplementowane jako z
   
  Dostawca należy stosować następujące najlepsze rozwiązania, podczas obsługi wyjątków i wywoływać metodę <xref:System.IObserver%601.OnError%2A> metody:  
   
--   Dostawca musi obsługiwać własne wyjątki, jeśli ma żadnych szczególnych wymagań.  
+- Dostawca musi obsługiwać własne wyjątki, jeśli ma żadnych szczególnych wymagań.  
   
--   Dostawca powinien oczekuje ani nie wymaga, że obserwatorów obsługi wyjątków w żadnym określonym.  
+- Dostawca powinien oczekuje ani nie wymaga, że obserwatorów obsługi wyjątków w żadnym określonym.  
   
--   Dostawca powinien wywoływać <xref:System.IObserver%601.OnError%2A> metodą podczas obsługi wyjątku, który obniża możliwości na potrzeby udostępniania aktualizacji. Informacji na temat wyjątków może być przekazywany do obserwatora. W innych przypadkach nie ma potrzeby powiadomić obserwatorów wyjątek.  
+- Dostawca powinien wywoływać <xref:System.IObserver%601.OnError%2A> metodą podczas obsługi wyjątku, który obniża możliwości na potrzeby udostępniania aktualizacji. Informacji na temat wyjątków może być przekazywany do obserwatora. W innych przypadkach nie ma potrzeby powiadomić obserwatorów wyjątek.  
   
  Raz wywołania dostawcy <xref:System.IObserver%601.OnError%2A> lub <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> metody powinny istnieć żadne dalsze powiadomienia, a dostawca swoją subskrypcję możesz cofnąć jego obserwatorów. Jednak obserwatorzy również anulować subskrypcję samodzielnie w dowolnym momencie, w tym przed i po otrzymaniu <xref:System.IObserver%601.OnError%2A> lub <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> powiadomień. Wzorzec projektowy obserwatora nie określa, czy przez dostawcę lub obserwatora jest odpowiedzialny za anulowania subskrypcji; w związku z tym, istnieje możliwość, że oba podjąć próbę anulowania subskrypcji. Zazwyczaj gdy obserwatorów subskrypcję, są usuwane z kolekcji subskrybentów. W przypadku aplikacji jednowątkowe <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacji należy upewnić się, że odwołanie do obiektu jest prawidłowa i czy obiekt jest elementem członkowskim kolekcji subskrybentów przed próbą usunięcia go. W aplikacji wielowątkowych, kolekcję wątków obiektu, takie jak <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> obiektu, powinien być używany.  
   
@@ -44,9 +44,9 @@ W .NET Framework po wzorcu projektowania obserwatora są zaimplementowane jako z
   
  Obserwator należy stosować następujące najlepsze rozwiązania, podczas odpowiadania na <xref:System.IObserver%601.OnError%2A> wywołania metody od dostawcy:  
   
--   Obserwator nie powinna zgłaszać wyjątków z jego implementacji interfejsu, takich jak <xref:System.IObserver%601.OnNext%2A> lub <xref:System.IObserver%601.OnError%2A>. Jednak jeśli obserwatora zgłaszają wyjątki, należy oczekiwać te wyjątki, aby nieobsłużony.  
+- Obserwator nie powinna zgłaszać wyjątków z jego implementacji interfejsu, takich jak <xref:System.IObserver%601.OnNext%2A> lub <xref:System.IObserver%601.OnError%2A>. Jednak jeśli obserwatora zgłaszają wyjątki, należy oczekiwać te wyjątki, aby nieobsłużony.  
   
--   Aby zachować stos wywołań, obserwatora, który chce throw <xref:System.Exception> obiektu, który został przekazany do jego <xref:System.IObserver%601.OnError%2A> metoda powinna zawijać wyjątek, zanim zostanie on zgłoszony. Obiekt wyjątku standardowa stosuje się do tego celu.  
+- Aby zachować stos wywołań, obserwatora, który chce throw <xref:System.Exception> obiektu, który został przekazany do jego <xref:System.IObserver%601.OnError%2A> metoda powinna zawijać wyjątek, zanim zostanie on zgłoszony. Obiekt wyjątku standardowa stosuje się do tego celu.  
   
 ## <a name="additional-best-practices"></a>Dodatkowe wskazówki  
  Podjęto próbę wyrejestrować w <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> metody może spowodować odwołanie o wartości null. Dlatego zaleca się, należy unikać tej praktyką.  

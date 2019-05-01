@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785726"
 ---
 # <a name="images"></a>Obrazy
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia wbudowaną obsługę wielu formatów obrazów, renderowania obrazów o dużej wierności i rozszerzalność kodera-dekodera.  

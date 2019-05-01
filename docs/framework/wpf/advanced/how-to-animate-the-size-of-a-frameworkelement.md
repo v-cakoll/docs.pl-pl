@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Animuj rozmiar FrameworkElement'
+title: 'Instrukcje: Animowanie rozmiaru elementu FrameworkElement'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], FrameworkElement size
 - FrameworkElement [WPF], animating size of
 ms.assetid: d4cd5a13-c20d-4a6f-a2ba-14f2c9ce4cef
 ms.openlocfilehash: d1995deec5ab2c9bf405911af43b4d242d599119
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776912"
 ---
-# <a name="how-to-animate-the-size-of-a-frameworkelement"></a>Instrukcje: Animuj rozmiar FrameworkElement
+# <a name="how-to-animate-the-size-of-a-frameworkelement"></a>Instrukcje: Animowanie rozmiaru elementu FrameworkElement
 Aby animować rozmiar <xref:System.Windows.FrameworkElement>, albo można animować jego <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości lub użycie animowanych <xref:System.Windows.Media.ScaleTransform>.  
   
  W poniższym przykładzie animuje rozmiar dwa przyciski, za pomocą tych dwóch metod. Jeden przycisk zmiany rozmiaru, animowanie jego <xref:System.Windows.FrameworkElement.Width%2A> właściwości, a drugi jest poddany zmianie rozmiaru przez animowanie <xref:System.Windows.Media.ScaleTransform> stosowane do jego <xref:System.Windows.UIElement.RenderTransform%2A> właściwości. Każdy przycisk zawiera jakiś tekst. Początkowo tekstu pojawi się taka sama w obu przycisków, ale jako przycisków zmieniany jest rozmiar tekstu w drugi przycisk staje się zakłócona.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
 ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772180"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modyfikowanie danych za pomocą obiektu DbDataAdapter
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> Metody <xref:System.Data.Common.DbProviderFactory> zapewnia obiekt <xref:System.Data.Common.DbDataAdapter> obiekt, który jest silnie typizowaną do podstawowego dostawcy danych określony w momencie tworzenia fabryka. Następnie można użyć <xref:System.Data.Common.DbCommandBuilder> do tworzenia poleceń do wstawiania, aktualizowania i usuwania danych z <xref:System.Data.DataSet> ze źródłem danych.  

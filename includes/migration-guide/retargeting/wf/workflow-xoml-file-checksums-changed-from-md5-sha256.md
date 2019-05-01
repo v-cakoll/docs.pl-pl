@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f59c9f048bb3cd3f425e36b931302258fcf693f5
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59982251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644562"
 ---
 ### <a name="workflow-xoml-file-checksums-changed-from-md5-to-sha256"></a>Przepływ pracy XOML plik sum kontrolnych zmieniła się z MD5 SHA256
 

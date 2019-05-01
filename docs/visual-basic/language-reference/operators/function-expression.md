@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778537"
 ---
 # <a name="function-expression-visual-basic"></a>Function — Wyrażenie (Visual Basic)
 Deklaruje parametry i kod, który definiuje wyrażenie lambda funkcji.  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda  
  Składnia wyrażenia lambda przypomina w przypadku standardowej funkcji. Różnice są następujące:  
   
--   Wyrażenie lambda nie ma nazwy.  
+- Wyrażenie lambda nie ma nazwy.  
   
--   Wyrażenia lambda nie może mieć modyfikatorów, takich jak `Overloads` lub `Overrides`.  
+- Wyrażenia lambda nie może mieć modyfikatorów, takich jak `Overloads` lub `Overrides`.  
   
--   Nie należy używać wyrażeń lambda `As` klauzuli do wyznaczenia zwracany typ funkcji. Zamiast tego typ jest wnioskowany z wartość, która daje w wyniku treść wyrażenia lambda jeden wiersz lub wartość zwracana wyrażenia lambda wielowierszowe. Na przykład, jeśli treść wyrażenia lambda jednowierszowego jest `Where cust.City = "London"`, jego typem zwracanym jest `Boolean`.  
+- Nie należy używać wyrażeń lambda `As` klauzuli do wyznaczenia zwracany typ funkcji. Zamiast tego typ jest wnioskowany z wartość, która daje w wyniku treść wyrażenia lambda jeden wiersz lub wartość zwracana wyrażenia lambda wielowierszowe. Na przykład, jeśli treść wyrażenia lambda jednowierszowego jest `Where cust.City = "London"`, jego typem zwracanym jest `Boolean`.  
   
--   Treść wyrażenia lambda w pojedynczej linii musi być wyrażeniem, nie instrukcję. Treść może obejmować wywołania procedurę function, ale nie po wywołaniu procedury sub.  
+- Treść wyrażenia lambda w pojedynczej linii musi być wyrażeniem, nie instrukcję. Treść może obejmować wywołania procedurę function, ale nie po wywołaniu procedury sub.  
   
--   Musi mieć określony albo wszystkie parametry można wywnioskować typów danych lub wszystkich.  
+- Musi mieć określony albo wszystkie parametry można wywnioskować typów danych lub wszystkich.  
   
--   Parametry opcjonalne i Paramarray nie są dozwolone.  
+- Parametry opcjonalne i Paramarray nie są dozwolone.  
   
--   Parametry ogólne nie są dozwolone.  
+- Parametry ogólne nie są dozwolone.  
   
 ## <a name="example"></a>Przykład  
  W poniższych przykładach pokazano dwa sposoby tworzenia wyrażeń lambda proste. Używa pierwszego `Dim` Podaj nazwę dla tej funkcji. Aby wywołać funkcję, Wyślij w wartości parametru.  

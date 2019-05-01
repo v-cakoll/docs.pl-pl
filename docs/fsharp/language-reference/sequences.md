@@ -3,11 +3,11 @@ title: Sekwencje
 description: Dowiedz się, jak używać F# sekwencji znaków, w przypadku dużych, uporządkowany zbiór danych, ale nie zawsze będziesz korzystać ze wszystkich elementów.
 ms.date: 02/19/2019
 ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770477"
 ---
 # <a name="sequences"></a>Sekwencje
 

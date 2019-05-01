@@ -1,5 +1,5 @@
 ---
-title: Pobieranie uporządkowanych węzłów za pomocą indeksu
+title: Pobieranie uporządkowanych węzłów na podstawie indeksu
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,22 +9,22 @@ ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773382"
 ---
-# <a name="ordered-node-retrieval-by-index"></a>Pobieranie uporządkowanych węzłów za pomocą indeksu
+# <a name="ordered-node-retrieval-by-index"></a>Pobieranie uporządkowanych węzłów na podstawie indeksu
 World Wide Web Consortium (W3C) XML Document Object Model (DOM) opisano również wstawienia, która ma zdolność do obsługi uporządkowaną listę węzłów, w przeciwieństwie do zestawu nieuporządkowanego obsługiwane przez **XmlNamedNodeMap**. Wstawienia programu Microsoft .NET Framework jest nazywany **XmlNodeList**. Metody i właściwości, które zwracają **XmlNodeList** są:  
   
--   XmlNode.ChildNodes  
+- XmlNode.ChildNodes  
   
--   XmlDocument.GetElementsByTagName  
+- XmlDocument.GetElementsByTagName  
   
--   XmlElement.GetElementsByTagName  
+- XmlElement.GetElementsByTagName  
   
--   XmlNode.SelectNodes  
+- XmlNode.SelectNodes  
   
  **XmlNodeList** ma **liczba** właściwość, która może służyć do pisania pętli do wykonywania iteracji węzłów **XmlNodeList**, jak pokazano w następującym przykładzie kodu:  
   

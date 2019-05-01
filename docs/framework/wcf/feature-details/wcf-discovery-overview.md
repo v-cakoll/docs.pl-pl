@@ -3,11 +3,11 @@ title: Omówienie odnajdywania WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784257"
 ---
 # <a name="wcf-discovery-overview"></a>Omówienie odnajdywania WCF
 API odnajdywania udostępniają jednolity model programowania do opublikowania dynamiczne i odnajdywania usług sieci Web przy użyciu protokołu WS Discovery. Te interfejsy API umożliwiają services, aby publikować z nimi i klientów w celu znalezienia opublikowanych usług. Gdy usługa jest wykrywalne, usługa ma możliwość wysyłania komunikatów Anons, a także nasłuchiwania i odpowiadania na żądania odnajdywania. Wykrywalny usług można wysłać wiadomości powitania poinformować ich przybycia w sieci i Bye komunikaty, aby poinformować o ich wyjścia z sieci. Aby znaleźć usługi, klienci wysyłają `Probe` żądanie, które zawiera określone kryteria, takich jak typ kontraktu usługi, słowa kluczowe i zakresu w sieci. Usługi odbierać `Probe` żądania i określić, czy spełniają kryteria. Jeśli usługa jest zgodny, odpowie, wysyłając `ProbeMatch` wiadomość do klienta przy użyciu informacji niezbędnych do kontaktu z usługą. Klienci mogą również wysyłać `Resolve` żądań, które pozwalają znaleźć usług, które uległy zmianie adresu punktu końcowego. Zgodnych usług odpowiadanie na `Resolve` żądań, wysyłając `ResolveMatch` wiadomość do klienta.  
@@ -15,11 +15,11 @@ API odnajdywania udostępniają jednolity model programowania do opublikowania d
 ## <a name="ad-hoc-and-managed-modes"></a>Tryby zarządzanych i Ad-Hoc  
  Interfejs API Discovery obsługuje dwa różne tryby: Zarządzana i Ad-Hoc. Zarządzany tryb ma centralny serwer o nazwie serwera proxy odnajdywania, która przechowuje informacje o dostępnych usługach. Serwera proxy odnajdywania można wypełnić przy użyciu informacji o usługach różne sposoby. Na przykład services wysłać komunikaty anonsów podczas uruchamiania serwera proxy odnajdywania lub serwer proxy może odczytywać dane z bazy danych lub plik konfiguracji, aby ustalić, jakie usługi są dostępne. Jak jest wypełniana serwera proxy odnajdywania zależy wyłącznie od dewelopera. Klienci używają serwera proxy odnajdywania można pobrać informacji o dostępnych usługach. Gdy klient wyszukuje usługa go wysyła `Probe` wiadomość do serwera proxy odnajdywania i serwer proxy Określa, czy spełniają dowolnej usługi bez informacji o usługa korzysta z klienta. W przypadku dopasowania wysyła serwera proxy odnajdywania `ProbeMatch` odpowiedź z powrotem do klienta. Klient może, skontaktuj się z usługi bezpośrednio przy użyciu usługi informacje zwrócone z serwera proxy. Zasady kluczy za zarządzany tryb jest, że żądań odnajdywania są wysyłane w sposób emisji pojedynczej na jeden urząd, serwera proxy odnajdywania. .NET Framework zawiera najważniejsze składniki, które pozwalają na tworzenie własnego serwera proxy. Klienci i usługi mogą zlokalizować serwer proxy przy użyciu wielu metod:  
   
--   Serwer proxy mogą odpowiadać na komunikaty ad hoc.  
+- Serwer proxy mogą odpowiadać na komunikaty ad hoc.  
   
--   Serwer proxy może wysyłać wiadomości ogłoszenie podczas uruchamiania.  
+- Serwer proxy może wysyłać wiadomości ogłoszenie podczas uruchamiania.  
   
--   Klienci i usługi mogą być napisane do wyszukiwania określonego dobrze znanego punktu końcowego.  
+- Klienci i usługi mogą być napisane do wyszukiwania określonego dobrze znanego punktu końcowego.  
   
  W trybie Ad-Hoc nie ma żadnych centralny serwer. Wszystkie komunikaty odnajdywania, takie jak Anonse usługi i żądania klientów są wysyłane w sposób multiemisji. Domyślnie .NET Framework obsługuje odnajdywania Ad-Hoc za pośrednictwem protokołu UDP. Na przykład jeśli usługa jest skonfigurowana do wysyłania anons Hello przy uruchamianiu, wysyła je za pośrednictwem adresu dobrze znanej i multiemisji przy użyciu protokołu UDP. Klienci będą musieli aktywnie nasłuchuje ogłoszenia i odpowiednio je przetwarzać. Gdy klient wysyła `Probe` wiadomości usługi są wysyłane za pośrednictwem sieci przy użyciu multiemisji protokołu. Każda usługa, która odbiera żądanie określa, czy jest zgodna z kryteriami `Probe` komunikat i odpowiada bezpośrednio do klienta z `ProbeMatch` komunikat, jeśli usługa spełnia kryteria określone we `Probe` wiadomości.  
   

@@ -3,11 +3,11 @@ title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
 ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783152"
 ---
 # <a name="reliablesession"></a>\<reliableSession >
 Definiuje ustawienie dla WS-Reliable Messaging. Gdy ten element jest dodawany do niestandardowego powiązania, dokładnie obsługuje wynikowy kanału — gdy gwarancje dostarczenia.  

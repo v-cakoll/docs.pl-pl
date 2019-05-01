@@ -5,11 +5,11 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
 ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772609"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework dla aplikacji serwerowych
 
@@ -40,7 +40,7 @@ Jeśli wymagania w zakresie aplikacji (usługa sieci web) / do uruchamiania na w
 
 .NET core obsługuje systemów operacyjnych wymienionych jako deweloperskiej stacji roboczej. Program Visual Studio udostępnia zintegrowane środowisko programowania (IDE) dla Windows i macOS. Można również użyć programu Visual Studio Code, który jest uruchamiany w systemach macOS, Linux i Windows. Visual Studio Code obsługuje platformę .NET Core, w tym funkcji IntelliSense i debugowania. Większość edytorów innych firm, takich jak Sublime Emacs i VI, pracy z platformą .NET Core. Tych innych edytorów uzyskać funkcji IntelliSense w edytorze za pomocą [technologię Omnisharp](https://www.omnisharp.net/). Można także uniknąć dowolnego edytora kodu i bezpośrednio przy użyciu [narzędzi interfejsu wiersza polecenia platformy .NET Core](../core/tools/index.md), która jest dostępna dla wszystkich obsługiwanych platform.
 
-### <a name="microservices-architecture"></a>Architektura Mikrousług
+### <a name="microservices-architecture"></a>Architektura mikrousług
 
 Architektura mikrousług umożliwia mieszanina technologii granicę usługi. Proporcje tej mieszanki technologii umożliwia stopniowe poszukująca programu .NET Core dla nowych mikrousług, współpracy z innymi mikrousług lub usługami. Na przykład można łączyć mikrousług lub usług, przygotowane w programie .NET Framework, Java, Ruby lub inne technologie monolitycznego.
 

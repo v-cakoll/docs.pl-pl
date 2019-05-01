@@ -1,33 +1,33 @@
 ---
-title: 4208 - RetryingSqlCommandDueToSqlError
+title: 4208 — RetryingSqlCommandDueToSqlError
 ms.date: 03/30/2017
 ms.assetid: a8e6483a-a6e4-4bbf-82ec-cd8b6e711aad
 ms.openlocfilehash: a97336f12ccfe041b79328bcb48f4e7214a05b63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774299"
 ---
-# <a name="4208---retryingsqlcommandduetosqlerror"></a>4208 - RetryingSqlCommandDueToSqlError
+# <a name="4208---retryingsqlcommandduetosqlerror"></a>4208 — RetryingSqlCommandDueToSqlError
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|4208|  
-|Słowa kluczowe|WFInstanceStore|  
+|Identyfikator|4208|  
+|słowa kluczowe|WFInstanceStore|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- Wskazuje, że dostawca SQL jest ponownych prób wykonania polecenia SQL z powodu błędu SQL.  
+ Wskazuje, że dostawcy bazy danych SQL jest ponowieniem uruchomienia polecenia SQL z powodu błędu SQL.  
   
 ## <a name="message"></a>Komunikat  
- Ponownych prób wykonania polecenia SQL z powodu błędu SQL numer %1.  
+ Ponawianie próby za pomocą polecenia SQL ze względu na %1. numer błędu SQL.  
   
 ## <a name="details"></a>Szczegóły  
   
 |Nazwa elementu danych|Typ elementu danych|Opis|  
 |--------------------|--------------------|-----------------|  
-|Numer_błędu|xs:String|Numer błędu SQL.|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|ErrorNumber|xs:String|Numer błędu SQL.|  
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

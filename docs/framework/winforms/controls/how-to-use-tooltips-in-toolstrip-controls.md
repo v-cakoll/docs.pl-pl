@@ -7,18 +7,18 @@ helpviewer_keywords:
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
 ms.openlocfilehash: ffaf859fafc87131de525f7bf2f52db421a208c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785752"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Instrukcje: użycie elementu ToolTips w kontrolkach ToolStrip
 Możesz wyświetlić <xref:System.Windows.Forms.ToolTip> dla <xref:System.Windows.Forms.ToolStrip> kontrolkę, która przez ustawienie jego <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> właściwość `true`.  
   
 ### <a name="to-display-a-tooltip"></a>Aby wyświetlić etykietkę narzędzia  
   
--   Ustaw <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> właściwości formantu, aby `true`.  
+- Ustaw <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> właściwości formantu, aby `true`.  
   
      Wartość domyślna <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> jest `true`i wartość domyślną <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> jest `false`.  
   

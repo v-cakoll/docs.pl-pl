@@ -2,14 +2,14 @@
 title: Wprowadzenie do programowania funkcyjnego w F#
 description: Poznaj podstawy programowania funkcyjnego w F#.
 ms.date: 10/29/2018
-ms.openlocfilehash: d4a9bb0cd826b41aca96e12e2bcb5aab80c18eb4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
+ms.openlocfilehash: 84022e58c0f17b9e9875402c653c31e494e940da
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25863841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772791"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>Wprowadzenie do programowania funkcyjnego w F# #
+# <a name="introduction-to-functional-programming-in-f"></a>Wprowadzenie do programowania funkcyjnego w F\#
 
 Programowanie funkcjonalne jest stylu programowania, która kładzie nacisk na korzystanie z funkcji i niezmienialnymi danymi. Jest wpisane programowania funkcjonalnego, podczas programowania funkcjonalnego jest połączony z typów statycznych, takich jak za pomocą F#. Ogólnie rzecz biorąc następujące pojęcia są wyróżniono w programowaniu funkcjonalności:
 
@@ -99,7 +99,7 @@ Jest specjalnym typem `unit`, który jest używany, gdy nie ma nic do zwrócenia
 
 ```fsharp
 let printString (str: string) =
-    printfn "String is: %s" s
+    printfn "String is: %s" str
 ```
 
 Podpis wygląda następująco:
@@ -161,90 +161,15 @@ let addOneToValue x =
     x + 1
 ```
 
-Chociaż ta funkcja nie zależy od wartości globalnej, zapisuje wartość `x` danych wyjściowych programu. Mimo że nie ma natury błąd w ten sposób, to oznacza, że funkcja nie jest czysty.
+Chociaż ta funkcja nie zależy od wartości globalnej, zapisuje wartość `x` danych wyjściowych programu. Mimo że nie ma natury błąd w ten sposób, to oznacza, że funkcja nie jest czysty. Jeśli innej części programu, który jest zależna od coś zewnętrznego do programu, takie jak bufor wyjściowy następnie wywołaniu tej funkcji może mieć wpływ na tę część programu.
 
-Usuwanie `printfn` Instrukcja finally sprawia, że funkcja czystego:
+Usuwanie `printfn` instrukcji sprawia, że funkcja jest czysty:
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-Chociaż ta funkcja nie jest z natury _lepsze_ niż poprzednia wersja z `printfn` instrukcji zagwarantować wszystkie ta funkcja nie jest zwrócona wartość. To wywołanie funkcji raz lub 1 MLD razy będą nadal powodować tak samo: po prostu produkcji wartości. To występowanie jest przydatne w programowania funkcjonalnego, zgodnie z jego oznacza, że wszelkie czystą funkcję referentially przezroczysty.
-
-### <a name="referential-transparency"></a>Przezroczystość referencyjnej
-
-Przezroczystość referencyjnej jest właściwością wyrażeń i funkcji. Wyrażenie do zachowania przejrzystości referentially musi mieć możliwość zastąpione ich wartość wynikowa bez zmiany zachowania tego programu. Wszystkie czyste funkcje są referentially przezroczyste.
-
-Podobnie jak w przypadku czystych funkcji może być przydatne jest myśleć o przezroczystości referencyjną z punktu widzenia matematyczne. W wyrażeniu matematycznym `y = f(x)`, `f(x)` może być zastąpiony w wyniku funkcji i nadal będzie równa `y`. Ta zasada obowiązuje jednakowo do zachowania więzów programowania funkcjonalnego.
-
-Należy wziąć pod uwagę podczas wywoływania uprzednio zdefiniowany `addOneIfOdd` funkcji dwa razy:
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 = addOneIffOdd 1 // Produces 2
-let res2 = addOneIffOdd 2 // Produces 2
-```
-
-Firma Microsoft można zastąpić każde wywołanie funkcji treści funkcji, zastępując argument `input` poszczególne wartości:
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 =
-    let result =
-        if isOdd 1 then
-            1 + 1
-        else
-            1
-
-    result
-let res2 =
-    let result =
-        if isOdd 2 then
-            2 + 1
-        else
-            2
-
-    result
-```
-
-Zarówno `res1` i `res2` mają taką samą wartość, tak jakby została wywołana funkcja wskazująca, że `addOneIfOdd` jest referentially niewidoczny!
-
-Ponadto funkcja nie musi być czysty również być referentially przezroczysty. Należy wziąć pod uwagę poprzednią definicję `addOneTovalue`:
-
-```fsharp
-let addOneToValue x = 
-    printfn "x is %d" x
-    x + 1
-```
-
-Każde wywołanie tej funkcji można również zastąpić jej treści i tych samych czynności nastąpi każdorazowo:
-
-* Wartość przed dodaniem do, wydrukowaniu w danych wyjściowych
-* Wartość długości od 1 do niego dodana
-
-Podczas programowania w F#, jest często referencyjną przezroczystości, będący celem, a nie czystości. Jednak jest nadal dobrą praktyką, aby zapisać czystych funkcji, kiedy tylko można.
+Chociaż ta funkcja nie jest z natury _lepsze_ niż poprzednia wersja z `printfn` instrukcji zagwarantować wszystkie ta funkcja nie jest zwrócona wartość. Wywołanie tej funkcji dowolną liczbę razy daje ten sam wynik: po prostu tworzy wartość. Przewidywalność podane przez czystości sytuacji niełatwo jest wielu programistów funkcjonalności Dokładamy wszelkich starań, aby uzyskać.
 
 ### <a name="immutability"></a>Niezmienność
 

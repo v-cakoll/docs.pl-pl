@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778823"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Przewodnik: tworzenie pierwszej aplikacji dotykowej
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia aplikacjom odpowiadanie na touch. Na przykład możesz wchodzić w interakcje z aplikacją przy użyciu jednej lub więcej palców urządzenia dotykowe, takiego jak ekranu dotykowego, w tym przewodniku tworzy aplikację, która umożliwia użytkownikowi przenoszenie, zmienianie rozmiaru lub Obracanie pojedynczego obiektu za pomocą dotyku.  
@@ -23,9 +23,9 @@ ms.locfileid: "59326986"
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   Program Visual Studio.  
+- Program Visual Studio.  
   
--   Urządzenie, które akceptuje dotykowym, takich jak ekranu dotykowego, który obsługuje Windows Touch.  
+- Urządzenie, które akceptuje dotykowym, takich jak ekranu dotykowego, który obsługuje Windows Touch.  
   
  Ponadto powinien mieć podstawową wiedzę na temat sposobu tworzenia aplikacji w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zwłaszcza jak subskrybować i obsługiwać zdarzenia. Aby uzyskać więcej informacji, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326986"
 ## <a name="testing-the-application"></a>Testowanie aplikacji
  Aby przetestować aplikację, wypróbuj następujące operacje. Należy pamiętać, że można zrobić więcej niż jedną z następujących czynności w tym samym czasie.
 
--   Aby przenieść <xref:System.Windows.Shapes.Rectangle>, umieść palcem w <xref:System.Windows.Shapes.Rectangle> i przesuń palcem na ekranie.
+- Aby przenieść <xref:System.Windows.Shapes.Rectangle>, umieść palcem w <xref:System.Windows.Shapes.Rectangle> i przesuń palcem na ekranie.
 
--   Aby zmienić rozmiar <xref:System.Windows.Shapes.Rectangle>, umieść dwóch palców w <xref:System.Windows.Shapes.Rectangle> i przenieść palców, razem lub oddalone od siebie nawzajem.
+- Aby zmienić rozmiar <xref:System.Windows.Shapes.Rectangle>, umieść dwóch palców w <xref:System.Windows.Shapes.Rectangle> i przenieść palców, razem lub oddalone od siebie nawzajem.
 
--   Aby obrócić <xref:System.Windows.Shapes.Rectangle>, umieść dwóch palców w <xref:System.Windows.Shapes.Rectangle> i Obróć palców wokół siebie nawzajem.
+- Aby obrócić <xref:System.Windows.Shapes.Rectangle>, umieść dwóch palców w <xref:System.Windows.Shapes.Rectangle> i Obróć palców wokół siebie nawzajem.
 
  Aby spowodować bezwładności, szybko podnieść palców od ekranu podczas wykonywania poprzednich manipulacji. <xref:System.Windows.Shapes.Rectangle> Będą nadal przenieść, zmienić rozmiar lub Obróć przez kilka sekund, zanim przestanie.
 

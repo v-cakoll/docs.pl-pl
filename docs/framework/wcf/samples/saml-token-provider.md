@@ -3,32 +3,32 @@ title: Dostawca tokenów SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787507"
 ---
 # <a name="saml-token-provider"></a>Dostawca tokenów SAML
 Ten przykład demonstruje sposób implementacji niestandardowego klienta Dostawca tokenów SAML. Dostawca tokenu w Windows Communication Foundation (WCF) jest używany dla podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z domyślny dostawca tokenu Menedżera poświadczeń. Usługi WCF jest również dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:
 
--   Jeśli masz Magazyn poświadczeń, który te dostawcy tokenów nie może działać z.
+- Jeśli masz Magazyn poświadczeń, który te dostawcy tokenów nie może działać z.
 
--   Jeśli chcesz udostępnić własny niestandardowy mechanizm przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje, na kiedy struktura klienta WCF przy użyciu poświadczeń.
+- Jeśli chcesz udostępnić własny niestandardowy mechanizm przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje, na kiedy struktura klienta WCF przy użyciu poświadczeń.
 
--   Jeśli tworzysz niestandardowy token.
+- Jeśli tworzysz niestandardowy token.
 
  Niniejszy przykład pokazuje sposób tworzenia niestandardowego dostawcę tokenów, który umożliwia tokenu SAML uzyskany z poza szablonem klienta WCF, który ma być używany.
 
  Aby podsumować, w przykładzie pokazano poniżej:
 
--   Jak można skonfigurować klienta przy użyciu niestandardowego dostawcy tokenów.
+- Jak można skonfigurować klienta przy użyciu niestandardowego dostawcy tokenów.
 
--   Jak tokenu SAML mogą być przekazywane poświadczenia niestandardowego klienta.
+- Jak tokenu SAML mogą być przekazywane poświadczenia niestandardowego klienta.
 
--   Jak struktura klienta programu WCF zapewnia SAML token.
+- Jak struktura klienta programu WCF zapewnia SAML token.
 
--   Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 serwera.
+- Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 serwera.
 
  Usługa udostępnia dwa punkty końcowe dla komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Każdy punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego `wsFederationHttpBinding`, która używa zabezpieczenia komunikatów. Jeden punkt końcowy oczekuje klienta do uwierzytelniania za pomocą tokenu SAML, które używa klucza symetrycznego dowód, podczas gdy druga oczekuje klienta do uwierzytelniania przy użyciu tokenu SAML, która używa klucza asymetrycznego dowód. Usługa konfiguruje również certyfikat usługi przy użyciu `serviceCredentials` zachowanie. `serviceCredentials` Zachowanie umożliwia skonfigurowanie certyfikatu usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi, a także zapewnienia ochrony wiadomości. Następująca konfiguracja odwołuje się do certyfikatu "localhost" zainstalowany podczas instalacji przykładowej zgodnie z opisem w instrukcje instalacji, na końcu tego tematu. `serviceCredentials` Zachowanie umożliwia również konfigurowanie certyfikatów, które są zaufane, aby zarejestrować tokeny SAML. Następująca konfiguracja odwołuje się do certyfikatu "Alicja" instalowane w ramach przykładu.
 
@@ -303,7 +303,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta Dostawc
 
  Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.
 
--   Tworzenie certyfikatu serwera:
+- Tworzenie certyfikatu serwera:
 
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Wartość domyślna, w tym pliku wsadowego to localhost.
 
@@ -319,7 +319,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta Dostawc
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
 
      Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 
@@ -327,7 +327,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta Dostawc
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Tworzenie certyfikatu wystawcy.
+- Tworzenie certyfikatu wystawcy.
 
      Następujące wiersze z pliku wsadowego Setup.bat Utwórz certyfikat wystawca ma być używany. `%USER_NAME%` Zmiennej określa nazwę wystawcy. Zmień tę wartość, aby określić nazwę wystawcy. Wartość domyślna, w tym pliku wsadowego to Alicji.
 
@@ -343,7 +343,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta Dostawc
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu wystawcy do magazynu zaufanych certyfikatów serwera.
+- Instalowanie certyfikatu wystawcy do magazynu zaufanych certyfikatów serwera.
 
      Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów serwera za pomocą certyfikatu wystawcy nie jest wymagane.
 

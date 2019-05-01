@@ -3,11 +3,11 @@ title: Działań dotyczących komunikatów — usługi WCF
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
 ms.openlocfilehash: 7670a6694e15f0a9e25152102d6237ef1ed60941
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771439"
 ---
 # <a name="messaging-activities"></a>Działania dotyczące komunikatów
 

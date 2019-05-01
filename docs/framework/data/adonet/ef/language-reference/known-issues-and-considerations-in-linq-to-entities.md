@@ -6,28 +6,28 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780545"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Znane problemy i zagadnienia dotyczące składnika LINQ to Entities
 Ta sekcja zawiera informacje o znanych problemach z [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania.  
   
--   [Nie można buforować LINQ zapytań](#LINQQueriesThatAreNotCached)  
+- [Nie można buforować LINQ zapytań](#LINQQueriesThatAreNotCached)  
   
--   [Kolejność utraty informacji](#OrderingInfoLost)  
+- [Kolejność utraty informacji](#OrderingInfoLost)  
   
--   [Liczb całkowitych bez znaku, nie jest obsługiwane](#UnsignedIntsUnsupported)  
+- [Liczb całkowitych bez znaku, nie jest obsługiwane](#UnsignedIntsUnsupported)  
   
--   [Błędy konwersji typu](#TypeConversionErrors)  
+- [Błędy konwersji typu](#TypeConversionErrors)  
   
--   [Odwoływanie się do zmiennych nieskalarnego nieobsługiwane](#RefNonScalarClosures)  
+- [Odwoływanie się do zmiennych nieskalarnego nieobsługiwane](#RefNonScalarClosures)  
   
--   [Zapytania zagnieżdżone może zakończyć się niepowodzeniem z programem SQL Server 2000](#NestedQueriesSQL2000)  
+- [Zapytania zagnieżdżone może zakończyć się niepowodzeniem z programem SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [Wyświetlanie na typ anonimowy](#ProjectToAnonymousType)  
+- [Wyświetlanie na typ anonimowy](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Nie można buforować LINQ zapytań  

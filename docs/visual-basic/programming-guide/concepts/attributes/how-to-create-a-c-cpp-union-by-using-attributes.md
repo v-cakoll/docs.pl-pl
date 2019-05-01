@@ -3,11 +3,11 @@ title: 'Instrukcje: Tworzenie Unii C-C++ za pomocą atrybutów (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789093"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Instrukcje: Tworzenie złożenia C/C++ za pomocą atrybutów (Visual Basic)
 Za pomocą atrybutów można dostosować, jak struktury są ułożone w pamięci. Na przykład można utworzyć, co jest nazywane Unia w języku C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` i `FieldOffset` atrybutów.  

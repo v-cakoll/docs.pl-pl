@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778862"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Instrukcje: Stosowanie modyfikatorów i właściwości „GenerateMember"
 Po umieszczeniu składnika w formularzu Windows dwie właściwości są dostarczane przez środowisko projektowania: `GenerateMember` i `Modifiers`. `GenerateMember` Właściwość określa, kiedy Windows Forms Designer generuje zmienną składową dla składnika. `Modifiers` Właściwość jest modyfikator dostępu przypisane do tej zmiennej elementu członkowskiego. Jeśli wartość `GenerateMember` właściwość `false`, wartość `Modifiers` właściwość nie ma wpływu.  

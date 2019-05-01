@@ -7,11 +7,11 @@ helpviewer_keywords:
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
 ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770711"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Instrukcje: Zmienianie rozmiaru wierszy przy użyciu GridSplitter
 W tym przykładzie pokazano, jak używać poziomej <xref:System.Windows.Controls.GridSplitter> Redystrybucja odstęp między dwa wiersze w <xref:System.Windows.Controls.Grid> bez konieczności zmieniania wymiary <xref:System.Windows.Controls.Grid>.  

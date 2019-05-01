@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777458"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport — Interfejs
 Zawiera metody służące do importowania i manipulowanie nimi istniejące metadane z plików przenośnych plików wykonywalnych (PE) lub innego źródła, takich jak biblioteka typów lub dane binarne autonomicznej, czasu wykonywania metadanych.  
@@ -96,13 +96,13 @@ Zawiera metody służące do importowania i manipulowanie nimi istniejące metad
 ## <a name="remarks"></a>Uwagi  
  Projekt `IMetaDataImport` interfejsu zasadniczo mają być wykorzystywane przez narzędzia i usługi, które będą importowanie informacji o typie (na przykład, narzędzia programistyczne) i zarządzaniu nim wdrożone składniki (na przykład rozpoznawanie/aktywacji usługi). Metody w `IMetaDataImport` można podzielić na następujące kategorie zadań:  
   
--   Wyliczanie kolekcji elementów w zakresie metadanych.  
+- Wyliczanie kolekcji elementów w zakresie metadanych.  
   
--   Znajdowanie elementu, który ma określony zbiór właściwości.  
+- Znajdowanie elementu, który ma określony zbiór właściwości.  
   
--   Pobieranie właściwości określonego elementu.  
+- Pobieranie właściwości określonego elementu.  
   
--   Metody Get zostały zaprojektowane specjalnie do zwrócenia pojedynczej wartości właściwości elementu metadanych. Gdy właściwość jest odwołaniem do innego elementu, zwracany jest token dla tego elementu. Dowolny typ danych wejściowych wskaźnik może mieć wartość NULL, aby wskazać, że określonej wartości nie jest wymagany. Aby uzyskać właściwości, które są zasadniczo kolekcji obiektów (na przykład zbiór interfejsów, które implementuje klasa), należy użyć metod wyliczenia.  
+- Metody Get zostały zaprojektowane specjalnie do zwrócenia pojedynczej wartości właściwości elementu metadanych. Gdy właściwość jest odwołaniem do innego elementu, zwracany jest token dla tego elementu. Dowolny typ danych wejściowych wskaźnik może mieć wartość NULL, aby wskazać, że określonej wartości nie jest wymagany. Aby uzyskać właściwości, które są zasadniczo kolekcji obiektów (na przykład zbiór interfejsów, które implementuje klasa), należy użyć metod wyliczenia.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

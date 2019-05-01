@@ -3,11 +3,11 @@ title: Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
 ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784322"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te aplikacje są projektowane na podstawie interfejsem ekranie dotykowym. .NET framework 4.5 umożliwia aplikacji Windows Store do wywołania usługi WCF.  

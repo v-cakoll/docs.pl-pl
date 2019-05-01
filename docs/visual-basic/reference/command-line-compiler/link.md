@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: d8451a028def44ec7d5b629a1c0749321684e4d2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789041"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Powoduje, że kompilator udostępnia informacje o typie modelu COM w określonych zestawach do projektu, który obecnie kompilacja.  
@@ -49,9 +49,9 @@ Powoduje, że kompilator udostępnia informacje o typie modelu COM w określonyc
   
  Jeśli łączysz się do zestawu COM (Assembly A) która sama odwołuje się do innego zestawu modelu COM (Assembly B), musisz również link do zestawu B, jeśli jest spełniony jeden z następujących czynności:  
   
--   Typ z zestawu A dziedziczy z typu lub implementuje interfejs z zestawu B.  
+- Typ z zestawu A dziedziczy z typu lub implementuje interfejs z zestawu B.  
   
--   Pola, właściwości, zdarzenia lub metody, która ma typ lub parametr typu zwracanego z zestawu B zostanie wywołana.  
+- Pola, właściwości, zdarzenia lub metody, która ma typ lub parametr typu zwracanego z zestawu B zostanie wywołana.  
   
  Użyj [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) określić katalog, w którym znajduje się co najmniej jeden z odwołania do zestawów.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787416"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Nie można zapisać do pliku wyjściowego "\<nazwa pliku >": \<błąd >
 Wystąpił problem podczas tworzenia pliku.  
@@ -21,9 +21,9 @@ Wystąpił problem podczas tworzenia pliku.
   
  Typowe sytuacje, gdy plik jest otwarty w trybie wyłączności są następujące:  
   
--   Aplikacja jest już uruchomiona i korzystania z jego plików. Aby rozwiązać ten problem, upewnij się, że aplikacja nie jest uruchomiony.  
+- Aplikacja jest już uruchomiona i korzystania z jego plików. Aby rozwiązać ten problem, upewnij się, że aplikacja nie jest uruchomiony.  
   
--   Plik został otwarty w innej aplikacji. Aby rozwiązać ten problem, upewnij się, że żadna inna aplikacja uzyskuje dostęp do plików. Nie zawsze jest oczywiste która aplikacja uzyskuje dostęp do plików. w takim przypadku ponowne uruchomienie komputera może być Najprostszym sposobem, aby zakończyć tę aplikację.  
+- Plik został otwarty w innej aplikacji. Aby rozwiązać ten problem, upewnij się, że żadna inna aplikacja uzyskuje dostęp do plików. Nie zawsze jest oczywiste która aplikacja uzyskuje dostęp do plików. w takim przypadku ponowne uruchomienie komputera może być Najprostszym sposobem, aby zakończyć tę aplikację.  
   
  Jeśli jeszcze jeden z plików wyjściowych projektu jest oznaczony jako tylko do odczytu, ten wyjątek zostanie zgłoszony.  
   

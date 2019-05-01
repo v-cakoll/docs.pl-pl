@@ -10,11 +10,11 @@ helpviewer_keywords:
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
 ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773158"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optymalizacja wydajności: Wykorzystanie możliwości sprzętu
 Wewnętrznej architekturze programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma renderowania dwa potoki, sprzętu i oprogramowania. Ten temat zawiera informacje o tych potoków renderowania ułatwiające podejmowanie decyzji dotyczących optymalizacji wydajności aplikacji.  
@@ -34,23 +34,23 @@ Wewnętrznej architekturze programu [!INCLUDE[TLA2#tla_winclient](../../../../in
   
  Dostępne są następujące funkcje, możliwości sprzętu graficznego i że mają największy wpływ na poziom warstwy renderowania:  
   
--   **Pamięć RAM wideo** określa ilość pamięci wideo na sprzęt graficzny, rozmiar i liczba buforów, które mogą służyć do składania grafiki.  
+- **Pamięć RAM wideo** określa ilość pamięci wideo na sprzęt graficzny, rozmiar i liczba buforów, które mogą służyć do składania grafiki.  
   
--   **Program do cieniowania pikseli** program do cieniowania pikseli jest funkcja, która oblicza wpływ na podstawie każdego piksela GPU. W zależności od rozwiązania wyświetlanych grafiki może być kilka milionów piksele, które muszą być przetworzone w każdej klatce wyświetlania.  
+- **Program do cieniowania pikseli** program do cieniowania pikseli jest funkcja, która oblicza wpływ na podstawie każdego piksela GPU. W zależności od rozwiązania wyświetlanych grafiki może być kilka milionów piksele, które muszą być przetworzone w każdej klatce wyświetlania.  
   
--   **Program do cieniowania wierzchołków** program do cieniowania wierzchołków jest funkcja, która wykonuje operacje matematyczne na danych wierzchołka obiektu GPU.  
+- **Program do cieniowania wierzchołków** program do cieniowania wierzchołków jest funkcja, która wykonuje operacje matematyczne na danych wierzchołka obiektu GPU.  
   
--   **Obsługa multitekstur** multitekstur pomocy technicznej, który odwołuje się do możliwość stosowania co najmniej dwóch odrębnych tekstury podczas mieszania operacji na obiekcie grafiki 3D. Stopień multitexture pomocy technicznej jest określana przez liczbę jednostek multitexture na sprzęt graficzny.  
+- **Obsługa multitekstur** multitekstur pomocy technicznej, który odwołuje się do możliwość stosowania co najmniej dwóch odrębnych tekstury podczas mieszania operacji na obiekcie grafiki 3D. Stopień multitexture pomocy technicznej jest określana przez liczbę jednostek multitexture na sprzęt graficzny.  
   
  Program do cieniowania pikseli, program do cieniowania wierzchołków i multitexture funkcje, które są używane do definiowania określonego [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] poziomy wersji, które z kolei są używane do definiowania warstwy renderowania różnią w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Funkcje, możliwości sprzętu graficznego i określić możliwości renderowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] System definiuje trzy poziomy renderowania:  
   
--   **Renderowanie warstwy 0** nie przyspieszania sprzętowego grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziom wersji jest niższy niż w wersji 7.0.  
+- **Renderowanie warstwy 0** nie przyspieszania sprzętowego grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziom wersji jest niższy niż w wersji 7.0.  
   
--   **Renderowanie warstwy 1** przyspieszanie sprzętowe częściowe grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziomie wersji jest większa lub równa wersji 7.0, i **mniejszym** niż wersja 9.0.  
+- **Renderowanie warstwy 1** przyspieszanie sprzętowe częściowe grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziomie wersji jest większa lub równa wersji 7.0, i **mniejszym** niż wersja 9.0.  
   
--   **Renderowanie warstwy 2** większość funkcji grafiki używał przyspieszania sprzętowego grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziomie wersji jest większa lub równa wersji 9.0.  
+- **Renderowanie warstwy 2** większość funkcji grafiki używał przyspieszania sprzętowego grafiki. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Poziomie wersji jest większa lub równa wersji 9.0.  
   
  Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowanie warstw, zobacz [warstwy renderowania grafiki](graphics-rendering-tiers.md).  
   

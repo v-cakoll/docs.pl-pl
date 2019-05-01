@@ -3,11 +3,11 @@ title: 'Usługa: Odbiorniki kanałów i kanały'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771458"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Usługa: Odbiorniki kanałów i kanały
 

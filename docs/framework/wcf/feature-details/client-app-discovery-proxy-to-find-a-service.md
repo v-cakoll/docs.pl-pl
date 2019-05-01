@@ -3,11 +3,11 @@ title: 'Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy uży
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784270"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania
 Ten temat jest trzeci trzy tematy, które w tym artykule omówiono sposób wdrażania serwera proxy odnajdywania. W poprzednim temacie [jak: Implementowanie Odnajdywanej usługi rejestrowanej za pomocą serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), zaimplementowana usługa WCF, która rejestruje się za pomocą serwera proxy odnajdywania. W tym temacie utworzysz klienta WCF, który używa serwera proxy odnajdywania można znaleźć usługi WCF.  
@@ -18,9 +18,9 @@ Ten temat jest trzeci trzy tematy, które w tym artykule omówiono sposób wdra�
   
 2. Dodaj odwołania do następujących zestawów:  
   
-    1.  System.ServiceModel  
+    1. System.ServiceModel  
   
-    2.  System.ServiceModel.Discovery  
+    2. System.ServiceModel.Discovery  
   
 3. Dodaj GeneratedClient.cs znalezione w dolnej części tego tematu, aby projekt.  
   

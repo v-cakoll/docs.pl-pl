@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778849"
 ---
 # <a name="how-to-validate-application-settings"></a>Instrukcje: Walidacja ustawień aplikacji
 W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim zostaną utrwalone.  
@@ -34,11 +34,11 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
   
  Program obsługi zdarzeń zazwyczaj wykonuje jedną z następujących czynności w przypadku wykrycia nieprawidłową wartość:  
   
--   Automatycznie dostarczy wartość wiadomo, że są poprawne, np. wartością domyślną.  
+- Automatycznie dostarczy wartość wiadomo, że są poprawne, np. wartością domyślną.  
   
--   Ponownie wysyła zapytanie do użytkownika o kodzie serwera, aby uzyskać informacje.  
+- Ponownie wysyła zapytanie do użytkownika o kodzie serwera, aby uzyskać informacje.  
   
--   Zdarzenia wywoływane przed wykonaniem skojarzonych z nimi działań, takich jak <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> i <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, używa <xref:System.ComponentModel.CancelEventArgs> argumentu, aby anulować operację.  
+- Zdarzenia wywoływane przed wykonaniem skojarzonych z nimi działań, takich jak <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> i <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, używa <xref:System.ComponentModel.CancelEventArgs> argumentu, aby anulować operację.  
   
  Aby uzyskać więcej informacji na temat obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../event-handlers-overview-windows-forms.md).  
   
@@ -46,9 +46,9 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
   
 ### <a name="to-obtain-the-application-settings-object"></a>Aby uzyskać obiekt ustawień aplikacji  
   
--   Uzyskaj odwołanie do obiektu ustawień aplikacji (wystąpienia otoki), wykonując jedną z następujących elementów punktowanej:  
+- Uzyskaj odwołanie do obiektu ustawień aplikacji (wystąpienia otoki), wykonując jedną z następujących elementów punktowanej:  
   
-    -   Jeśli utworzono ustawień za pomocą okna dialogowego Ustawienia aplikacji programu Visual Studio w **Edytor właściwości**, mogą pobrać obiekt ustawienia domyślne, które są generowane dla języka przy użyciu następującego wyrażenia.  
+    - Jeśli utworzono ustawień za pomocą okna dialogowego Ustawienia aplikacji programu Visual Studio w **Edytor właściwości**, mogą pobrać obiekt ustawienia domyślne, które są generowane dla języka przy użyciu następującego wyrażenia.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
   
          —lub—  
   
-    -   Jeśli jesteś programistą języka Visual Basic i utworzyć ustawienia aplikacji przy użyciu projektanta projektu, można pobrać ustawienia za pomocą [My.Settings — obiekt](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
+    - Jeśli jesteś programistą języka Visual Basic i utworzyć ustawienia aplikacji przy użyciu projektanta projektu, można pobrać ustawienia za pomocą [My.Settings — obiekt](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
          —lub—  
   
-    -   W przypadku utworzenia ustawień przy pochodząca od <xref:System.Configuration.ApplicationSettingsBase> bezpośrednio, należy ręcznie utworzyć wystąpienia klasy.  
+    - W przypadku utworzenia ustawień przy pochodząca od <xref:System.Configuration.ApplicationSettingsBase> bezpośrednio, należy ręcznie utworzyć wystąpienia klasy.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

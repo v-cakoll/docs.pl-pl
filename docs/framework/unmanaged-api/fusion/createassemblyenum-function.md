@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0c5dabd4145098941e9e8a7e36fa3215c26713d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771881"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum — Funkcja
 Pobiera wskaźnik do [iassemblyenum —](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) wystąpienie, które można wyliczyć obiektów w zestawie z określonym [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  

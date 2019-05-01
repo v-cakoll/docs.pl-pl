@@ -8,11 +8,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
 ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772882"
 ---
 # <a name="preview-events"></a>Podgląd zdarzeń
 Podgląd zdarzeń, tzw. tunelowanie zdarzeń, są zdarzenia trasowane, gdzie kierunek trasy, przybliżone ilości tych danych z katalogu głównego aplikacji do elementu, który spowodował zdarzenie i jest zgłaszana jako źródło danych zdarzenia. Nie wszystkie scenariusze zdarzenie obsługi lub wymagania Podgląd zdarzeń; w tym temacie opisano sytuacje, gdzie Podgląd zdarzeń istnieją, jak aplikacje lub składniki powinny obsługiwać je i przypadkach, gdy tworzenie zdarzenia (wersja zapoznawcza) w niestandardowych składnikami lub klasami jest odpowiednie.  

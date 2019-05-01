@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: cc151886cfe449de4f5fe81e24a3b3d77d8a4638
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59982233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783254"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-48"></a>Ulepszenia ułatwień dostępu w kontrolkach formularzy Windows Forms dla 4,8 platformy .NET
 

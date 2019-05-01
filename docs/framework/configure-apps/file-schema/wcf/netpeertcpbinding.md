@@ -5,11 +5,11 @@ helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
 ms.openlocfilehash: b35e2f365e82291d3f8b827850fdebfe8fa2237d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780370"
 ---
 # <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 Definiuje powiązanie dla równorzędnego kanału określonych dla obsługi wiadomości TCP.  

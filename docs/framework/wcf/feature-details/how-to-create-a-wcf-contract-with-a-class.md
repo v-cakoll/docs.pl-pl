@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
 ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787585"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Instrukcje: Tworzenie kontraktu programu Windows Communication Foundation za pomocą klasy
 Jest preferowany sposób tworzenia kontraktu usługi Windows Communication Foundation (WCF) przy użyciu interfejsu. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie kontraktu usługi](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Tutaj alternatywne, schemat jest utworzyć klasę, a następnie zastosować <xref:System.ServiceModel.ServiceContractAttribute> bezpośrednio do klasy atrybutu i <xref:System.ServiceModel.OperationContractAttribute> atrybut do każdej metody w klasie, które są dostępne w ramach umowy.  

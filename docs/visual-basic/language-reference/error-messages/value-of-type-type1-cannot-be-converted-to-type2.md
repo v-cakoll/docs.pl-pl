@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
 ms.openlocfilehash: c8480c6fab2bff931950ebc21d0a8affe3c41c66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774819"
 ---
 # <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>Wartości typu „type1” nie można przekonwertować na „type2”.
 Nie można przekonwertować wartości typu 'type1' na 'Typ2'. Właściwość "Value" umożliwia uzyskać wartość ciągu pierwszego elementu obiektu "\<parentElement >".  
@@ -23,7 +23,7 @@ Nie można przekonwertować wartości typu 'type1' na 'Typ2'. Właściwość "Va
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Użyj `Value` właściwość literał XML, aby odwoływać się do jej wartość jako `String`. Użyj `CType` funkcji, inny typ funkcji konwersji lub <xref:System.Convert> klasy, aby rzutować wartość jako określonego typu.  
+- Użyj `Value` właściwość literał XML, aby odwoływać się do jej wartość jako `String`. Użyj `CType` funkcji, inny typ funkcji konwersji lub <xref:System.Convert> klasy, aby rzutować wartość jako określonego typu.  
   
 ## <a name="see-also"></a>Zobacz także
 

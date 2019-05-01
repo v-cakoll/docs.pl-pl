@@ -9,11 +9,11 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770880"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid
 <xref:System.Windows.Controls.DataGrid> Control umożliwia wykonywanie walidacji na poziomie komórki i wierszy. Z weryfikacją poziomie komórki sprawdzania poprawności poszczególnych właściwości powiązany obiekt danych po użytkownik aktualizuje wartość. Z weryfikacją na poziomie wiersza Sprawdź wszystkie dane obiektów po użytkownik zatwierdzenia zmian w wierszu. Można również przekazać niestandardowe wizualną opinię błędy sprawdzania poprawności lub użyć domyślnej wizualną opinię, <xref:System.Windows.Controls.DataGrid> zawiera formant.  
@@ -22,7 +22,7 @@ ms.locfileid: "59305960"
   
 ### <a name="to-validate-individual-cell-values"></a>Aby sprawdzić poprawność wartości poszczególnych komórek  
   
--   Określ jedną lub więcej reguł sprawdzania poprawności w powiązaniu używane z kolumną. Jest to podobne do sprawdzania poprawności danych w kontrolkach prosty, zgodnie z opisem w [Przegląd wiązanie danych](../data/data-binding-overview.md).  
+- Określ jedną lub więcej reguł sprawdzania poprawności w powiązaniu używane z kolumną. Jest to podobne do sprawdzania poprawności danych w kontrolkach prosty, zgodnie z opisem w [Przegląd wiązanie danych](../data/data-binding-overview.md).  
   
      W poniższym przykładzie przedstawiono <xref:System.Windows.Controls.DataGrid> formantu o cztery kolumny powiązane z różnymi właściwościami obiektu biznesowego. Określ trzy kolumny <xref:System.Windows.Controls.ExceptionValidationRule> , ustawiając <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> właściwość `true`.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59305960"
   
 ### <a name="to-customize-cell-validation-feedback"></a>Aby dostosować komórki sprawdzania poprawności opinii  
   
--   W kolumnie ustaw <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> właściwości stylu właściwe dla kolumny w formancie edycji. Ponieważ formanty edycji są tworzone w czasie wykonywania, nie można użyć <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> dołączona właściwość, jak w przypadku prostych kontrolek.  
+- W kolumnie ustaw <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> właściwości stylu właściwe dla kolumny w formancie edycji. Ponieważ formanty edycji są tworzone w czasie wykonywania, nie można użyć <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> dołączona właściwość, jak w przypadku prostych kontrolek.  
   
      Poniższy przykład aktualizuje poprzedniego przykładu, dodając stylu błędu współużytkowane przez trzy kolumny przy użyciu reguł sprawdzania poprawności. Gdy użytkownik wprowadza wartość jest nieprawidłowa, styl zmienia kolor tła komórek i dodaje etykietkę narzędzia. Zwróć uwagę na użycie wyzwalacza, aby ustalić, czy jest to błąd sprawdzania poprawności. Jest to wymagane, ponieważ obecnie nie ma błędów dedykowanych szablonu dla komórek.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59305960"
   
 ### <a name="to-customize-row-validation-feedback"></a>Aby dostosować wiersz sprawdzania poprawności opinii  
   
--   Ustaw <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> właściwości. Ta właściwość umożliwia dostosowanie opinii walidacji wiersza dla poszczególnych <xref:System.Windows.Controls.DataGrid> kontrolki. Może również wpływać na wiele formantów, za pomocą styl niejawny wierszy można ustawić <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> właściwości.  
+- Ustaw <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> właściwości. Ta właściwość umożliwia dostosowanie opinii walidacji wiersza dla poszczególnych <xref:System.Windows.Controls.DataGrid> kontrolki. Może również wpływać na wiele formantów, za pomocą styl niejawny wierszy można ustawić <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> właściwości.  
   
      Poniższy przykład zastępuje domyślny wiersz sprawdzania poprawności opinii bardziej widoczny wskaźnik. Po użytkownik wprowadzi nieprawidłową wartość, w nagłówku wiersza pojawi się czerwone kółko z białym znakiem wykrzyknika. Operacja wykonywana dla wierszy i komórek błędy sprawdzania poprawności. Komunikat o błędzie skojarzony jest wyświetlany w etykietce narzędzia.  
   
@@ -73,17 +73,17 @@ ms.locfileid: "59305960"
   
  Aby przetestować sprawdzania poprawności, spróbuj wykonać następujące czynności:  
   
--   W kolumnie Identyfikator kursu wprowadź wartość nie jest liczbą całkowitą.  
+- W kolumnie Identyfikator kursu wprowadź wartość nie jest liczbą całkowitą.  
   
--   W kolumnie daty zakończenia wprowadź datę, która jest wcześniejsza niż data rozpoczęcia.  
+- W kolumnie daty zakończenia wprowadź datę, która jest wcześniejsza niż data rozpoczęcia.  
   
--   Usuń wartość w identyfikator kursu, Data rozpoczęcia lub datę zakończenia.  
+- Usuń wartość w identyfikator kursu, Data rozpoczęcia lub datę zakończenia.  
   
--   Aby cofnąć to wartość nieprawidłowa komórka, umieść kursor w komórce i naciśnij klawisz ESC.  
+- Aby cofnąć to wartość nieprawidłowa komórka, umieść kursor w komórce i naciśnij klawisz ESC.  
   
--   Aby cofnąć zmiany dla całego wiersza po bieżącej komórki w trybie edycji, naciśnij dwa razy klawisz ESC.  
+- Aby cofnąć zmiany dla całego wiersza po bieżącej komórki w trybie edycji, naciśnij dwa razy klawisz ESC.  
   
--   Gdy wystąpi błąd sprawdzania poprawności, przesuń wskaźnik myszy nad wskaźnikiem w nagłówku wiersza, aby wyświetlić komunikat o błędzie skojarzony.  
+- Gdy wystąpi błąd sprawdzania poprawności, przesuń wskaźnik myszy nad wskaźnikiem w nagłówku wiersza, aby wyświetlić komunikat o błędzie skojarzony.  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  

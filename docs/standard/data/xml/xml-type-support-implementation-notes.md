@@ -1,18 +1,18 @@
 ---
-title: Uwagi dotyczące implementacji pomocy technicznej od typu w XML
+title: Obsługiwane typy XML — uwagi dotyczące implementacji
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778758"
 ---
-# <a name="xml-type-support-implementation-notes"></a>Uwagi dotyczące implementacji pomocy technicznej od typu w XML
+# <a name="xml-type-support-implementation-notes"></a>Obsługiwane typy XML — uwagi dotyczące implementacji
 W tym temacie opisano niektóre szczegóły implementacji, które ma pod uwagę.  
   
 ## <a name="list-mappings"></a>Lista mapowań  
@@ -34,7 +34,7 @@ W tym temacie opisano niektóre szczegóły implementacji, które ma pod uwagę.
   
  <xref:System.TimeSpan> Klasa nie obsługuje częściowe porządkowanie. Zamiast tego wybiera określoną liczbę dni w przypadku 1 rok i miesiąc; 365 dni lub 30 dni odpowiednio.  
   
- Aby uzyskać więcej informacji na temat `xs:duration` typu, zobacz W3C [XML schematu część 2: zalecenie typy danych](https://www.w3.org/TR/xmlschema-2/).
+ Aby uzyskać więcej informacji na temat `xs:duration` typu, zobacz W3C [XML schematu część 2: Typy danych zalecenie](https://www.w3.org/TR/xmlschema-2/).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs: Time, typy daty gregoriańskiego i System.DateTime  
  Gdy `xs:time` wartość jest mapowany na <xref:System.DateTime> obiektu, <xref:System.DateTime.MinValue> pole jest używane do zainicjowania właściwości daty <xref:System.DateTime> obiektu (takich jak <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, i <xref:System.DateTime.Day%2A>) do najmniejszej możliwej <xref:System.DateTime> wartość.  

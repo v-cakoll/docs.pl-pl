@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771023"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Instrukcje: Ustawianie obiektu Freezable w obiekt tylko do odczytu
 W tym przykładzie pokazano, jak wprowadzić <xref:System.Windows.Freezable> tylko do odczytu przez wywołanie jego <xref:System.Windows.Freezable.Freeze%2A> metody.  
   
  Nie można zablokować <xref:System.Windows.Freezable> obiektu, jeśli jeden z następujących warunków jest `true` dotyczących obiektu:  
   
--   Ma ona animowane lub powiązania danych właściwości.  
+- Ma ona animowane lub powiązania danych właściwości.  
   
--   Posiada właściwości, które są ustawiane przez zasób dynamiczny. Aby uzyskać więcej informacji o zasobach dynamicznej, zobacz [zasoby XAML](xaml-resources.md).  
+- Posiada właściwości, które są ustawiane przez zasób dynamiczny. Aby uzyskać więcej informacji o zasobach dynamicznej, zobacz [zasoby XAML](xaml-resources.md).  
   
--   Zawiera on <xref:System.Windows.Freezable> obiekty podrzędne, które nie mogą być zablokowane.  
+- Zawiera on <xref:System.Windows.Freezable> obiekty podrzędne, które nie mogą być zablokowane.  
   
  Jeśli te warunki są `false` dla Twojego <xref:System.Windows.Freezable> obiektu, a nie zamierzasz go zmodyfikować, należy wziąć pod uwagę zawiesza się on do korzyści w zakresie wydajności.  
   

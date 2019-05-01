@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: KrzysztofCwalina
 ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778797"
 ---
 # <a name="unsealed-classes"></a>Niezapieczętowane klasy
 Zapieczętowane klasy nie może być dziedziczona z i zapobiegają one rozszerzalności. Z kolei klas, które mogą być dziedziczone z są nazywane niezapieczętowane klasy.  

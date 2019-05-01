@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: fe5303a3-b76e-4643-aafb-51419032b47b
 ms.openlocfilehash: 8504bb1ec70de188033b2b092bbb66cf9da3dc11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770776"
 ---
 # <a name="how-to-remove-all-adorners-from-an-element"></a>Instrukcje: Usuwanie wszystkich modułów definiowania układów z elementu
 W tym przykładzie pokazano, jak programowo usunąć wszystkie moduły definiowania układów z określonym <xref:System.Windows.UIElement>.  

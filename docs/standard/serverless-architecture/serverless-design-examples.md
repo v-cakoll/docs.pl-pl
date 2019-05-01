@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784440"
 ---
-# <a name="serverless-design-examples"></a>Przykłady z projektu bez użycia serwera
+# <a name="serverless-design-examples"></a>Przykłady projektów bezserwerowych
 
 Istnieje wiele wzorców projektowych, które istnieją dla bez użycia serwera. Ta sekcja zawiera kilka typowych scenariuszy korzystających z bez użycia serwera. Co to wszystkie przykłady mają wspólną podstawowe połączenie zdarzenie wyzwalacza i logiki biznesowej.
 
@@ -85,7 +85,7 @@ Bramy interfejsu API zapewnia jeden punkt wejścia dla klientów, a następnie i
 * [Wzorzec określania źródła zdarzeń](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 * [Implementowanie wzorca wyłącznika](../microservices-architecture/implement-resilient-applications/implement-circuit-breaker-pattern.md)
 * [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Usługa Service Bus](https://docs.microsoft.com/azure/service-bus)
+* [Service Bus](https://docs.microsoft.com/azure/service-bus)
 * [Praca ze zmianą Obsługa kanału informacyjnego w usłudze Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
 ms.openlocfilehash: 618fc88a2ca92ec911a3fbd82de580403d924430
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774845"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>Użycie zmiennej iteracyjnej w wyrażeniu lambda może spowodować nieoczekiwane wyniki
 Użycie zmiennej iteracyjnej w wyrażeniu lambda może spowodować nieoczekiwane wyniki. Zamiast tego należy utworzyć zmienną lokalną, w ramach pętli i przypisać jej wartość zmiennej iteracji.  
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Przypisz wartość zmiennej iteracyjnej do zmiennej lokalnej, a następnie użyć zmiennej lokalnej w wyrażeniu lambda.  
+- Przypisz wartość zmiennej iteracyjnej do zmiennej lokalnej, a następnie użyć zmiennej lokalnej w wyrażeniu lambda.  
   
 ```vb  
 Module Module1  

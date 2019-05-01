@@ -3,11 +3,11 @@ title: Charakterystyka funkcji programu Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773711"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Charakterystyka funkcji programu Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ A `BestPriceFinder` usługi wywołuje wiele usług linii lotniczych, można znal
 
 - Przykłady dla <xref:System.ServiceModel.WorkflowServiceHost> można znaleźć w następujących sekcjach:
 
-    - [Wykonanie](./samples/execution.md)
+  - [Wykonanie](./samples/execution.md)
 
-    - Aplikacja: [Zarządzanie wstrzymanymi wystąpieniami](./samples/suspended-instance-management.md)
+  - Aplikacja: [Zarządzanie wstrzymanymi wystąpieniami](./samples/suspended-instance-management.md)
 
 - [Przegląd hostowania usług przepływu pracy](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ Korelacja jest jedna z następujących czynności:
 
 - Przykład korelacji używane do grupowania wiadomości razem jest korelacji "żądanie-odpowiedź", który umożliwia grupowanie komunikatów.
 
-    - Na <xref:System.ServiceModel.Activities.Receive> działania, kliknij pozycję <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> właściwości i dodać <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> przy użyciu CorrelationHandle utworzony w pierwszym kroku powyżej.
+  - Na <xref:System.ServiceModel.Activities.Receive> działania, kliknij pozycję <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> właściwości i dodać <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> przy użyciu CorrelationHandle utworzony w pierwszym kroku powyżej.
 
-    - Utwórz <xref:System.ServiceModel.Activities.SendReply> działanie, klikając prawym przyciskiem myszy <xref:System.ServiceModel.Activities.Receive> i klikając przycisk "Utwórz SendReply". Wklej go do pracy po <xref:System.ServiceModel.Activities.Receive> działania.
+  - Utwórz <xref:System.ServiceModel.Activities.SendReply> działanie, klikając prawym przyciskiem myszy <xref:System.ServiceModel.Activities.Receive> i klikając przycisk "Utwórz SendReply". Wklej go do pracy po <xref:System.ServiceModel.Activities.Receive> działania.
 
 - Przykładem mapowania elementu danych na wystąpienie usługi jest oparte na zawartości korelacji, który mapuje element danych (na przykład identyfikator zamówienia) wystąpienia określonego przepływu pracy.
 
-    - Dla każdego działania, obsługi komunikatów, kliknij `CorrelationInitializers` właściwości i dodać <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> przy użyciu <xref:System.ServiceModel.Activities.CorrelationHandle> zmiennej utworzonej powyżej. Kliknij dwukrotnie żądaną właściwość w komunikacie (np. OrderID) z menu rozwijanego. Ustaw `CorrelatesWith` właściwość <xref:System.ServiceModel.Activities.CorrelationHandle> zmiennej powyżej.
+  - Dla każdego działania, obsługi komunikatów, kliknij `CorrelationInitializers` właściwości i dodać <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> przy użyciu <xref:System.ServiceModel.Activities.CorrelationHandle> zmiennej utworzonej powyżej. Kliknij dwukrotnie żądaną właściwość w komunikacie (np. OrderID) z menu rozwijanego. Ustaw `CorrelatesWith` właściwość <xref:System.ServiceModel.Activities.CorrelationHandle> zmiennej powyżej.
 
 - [Dokumentacja koncepcyjna korelacji](../wcf/feature-details/correlation.md)
 
@@ -131,9 +131,9 @@ W .NET 3.5 wystąpiły pewne ograniczenia w projekcie znanych typów:
 
 - Przykłady:
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Scenariusze programu rozpoznawania nazw kontraktu danych
 
@@ -151,25 +151,25 @@ Schemat blokowy jest dobrze znanego modelu do reprezentowania wizualnie problem�
 
 - Funkcja schemat blokowy wykorzystuje następujące klasy:
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - Przykłady:
 
-    - [Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Proces zatrudniania](./samples/hiring-process.md)
+  - [Proces zatrudniania](./samples/hiring-process.md)
 
 - Dokumentacja projektanta:
 
-    - [Projektanci działań Flowchart](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Projektanci działań Flowchart](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>Schemat blokowy scenariuszy
 
@@ -197,15 +197,15 @@ Działań proceduralnych udostępniają mechanizm przepływu sterowania sekwency
 
 - Przykłady:
 
-    - [Proces zatrudniania](./samples/hiring-process.md)
+  - [Proces zatrudniania](./samples/hiring-process.md)
 
-    - [Proces zakupów firmowych](./samples/corporate-purchase-process.md)
+  - [Proces zakupów firmowych](./samples/corporate-purchase-process.md)
 
 - Dokumentacja projektanta:
 
-    - [Parallel, projektant działań](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Parallel, projektant działań](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > Projektant działań](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > Projektant działań](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Scenariusze działań proceduralnych
 
@@ -347,7 +347,7 @@ Projektant nie chce punktów końcowych twardych kodu, ponieważ jest nieznany, 
 
 4. Dokumentacja koncepcyjna: [Kontrola i śledzenie przepływu pracy](workflow-tracking-and-tracing.md)
 
-## <a name="sql-workflow-instance-store"></a>Store wystąpienia przepływu pracy SQL
+## <a name="sql-workflow-instance-store"></a>Magazyn wystąpień przepływu pracy SQL
 
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Jest implementacją magazyn wystąpienia oparte na programie SQL Server. Magazyn wystąpień przechowuje stan uruchomionego wystąpienia oraz wszystkie dane niezbędne do ładowania i wznowić tego wystąpienia. Host usługi powoduje, że magazyn wystąpienia ma być zapisany stan wystąpienia, jeśli przepływ pracy będzie się powtarzać, a następnie go powoduje, że magazyn wystąpienia można załadować stanu wystąpienia, po umieszczeniu komunikatu dla tego wystąpienia lub wygasa działanie opóźnienia.
 

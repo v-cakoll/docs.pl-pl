@@ -17,11 +17,11 @@ helpviewer_keywords:
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
 ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776636"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Instrukcje: Tworzenie dekoracji tekstu
 A <xref:System.Windows.TextDecoration> obiekt jest ornamentacji visual, można dodać do tekstu. Istnieją cztery typy dekoracje tekstu: podkreślenie, linii bazowej, przekreślenia i nadkreślenia. Poniższy przykład przedstawia lokalizacje dekoracje tekstu względem tekstu.  

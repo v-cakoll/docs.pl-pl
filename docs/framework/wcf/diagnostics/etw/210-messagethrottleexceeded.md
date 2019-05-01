@@ -3,33 +3,33 @@ title: 210 — MessageThrottleExceeded
 ms.date: 03/30/2017
 ms.assetid: 24ca08ea-c11c-4753-946e-98aa820f8711
 ms.openlocfilehash: 7ba5948b36642085ef44661b3d580e7f1c4102cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781889"
 ---
 # <a name="210---messagethrottleexceeded"></a>210 — MessageThrottleExceeded
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|210|  
-|Słowa kluczowe|EndToEndMonitoring HealthMonitoring, rozwiązywania problemów, ServiceModel|  
+|Identyfikator|210|  
+|słowa kluczowe|EndToEndMonitoring HealthMonitoring, rozwiązywania problemów, modelu ServiceModel|  
 |Poziom|Ostrzeżenie|  
 |Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany, gdy dla jednego z trzech głównych usługi zostały przekroczone limity. Należy pamiętać, że to zdarzenie tylko wysyłanego początkowo przekroczenia limitu ograniczania przepustowości. Na przykład, jeśli limit przepustnicy dla jednoczesnych wywołań jest 10, 11 równoczesnych wyniki wywołania `MessageThrottleExceeded` zdarzeń. W innym przypadku nie powoduje wywołanie 12. Ponadto aby uniknąć strumienia zdarzeń zakłócenia, działanie, które znajduje się wokół limit nie powoduje inne zdarzenie. W tym przykładzie Jeśli kilka wywołania zakończone następnie jest 9 współbieżnych wywołań. Jeśli następnie dwóch kolejnych wywołań wejść, bieżąca wartość jest ponownie 11. Nie powoduje to inne zdarzenie. Gdy bieżąca wartość znajduje się do 70 procent limit przepustnicy zdarzenia jest emitowany wskazujący, że ma spowolnić działanie. Przyszłe działania, która przekracza limit wyników w innym `MessageThrottleExceeded` zdarzenia, które są emitowane. W tym przykładzie, jeśli liczba równoczesnych wywołań spadnie do 7, a następnie ponownie osiągnie 11 i innego `MessageThrottleExceeded` jest emitowany zdarzeń.  
+ To zdarzenie jest emitowane, gdy dla jednej usługi trzy główne ograniczenia został przekroczony. Należy pamiętać, to zdarzenie tylko jest emitowane początkowo przekroczenia ograniczenie przepustowości. Na przykład, jeśli ograniczenie przepustowości współbieżnych wywołań to 10, 11 współbieżnych wyniki wywołania `MessageThrottleExceeded` zdarzeń. Wywołanie 12 nie powoduje inne zdarzenie. Ponadto aby uniknąć strumienia zdarzeń generujące dużo alertów, działania, który unosi się wokół granicy nie powoduje inne zdarzenie. W tym przykładzie wykonaj kilka wywołań następnie czy 9 równoczesnych wywołań. Jeśli później więcej wywołań w dwóch przychodzą, bieżąca wartość to ponownie 11. Nie powoduje w innym przypadku. Gdy bieżąca wartość znajduje się do 70 procent ograniczenie przepustowości zdarzenia są emitowane wskazującą, czy ma spowolnić działanie. Kolejnego działania, która przekracza limit wyników w innym `MessageThrottleExceeded` zdarzeń jest emitowane. W tym przykładzie, jeśli liczby współbieżnych wywołań znajduje się do 7, a następnie ponownie osiągnie 11 i innego `MessageThrottleExceeded` zdarzenia są emitowane.  
   
 ## <a name="message"></a>Komunikat  
- Osiągnięto limit przepustnicy "%1" z "%2".  
+ Osiągnięto limit przepustowości "%1" z "%2".  
   
 ## <a name="details"></a>Szczegóły  
   
 |Nazwa elementu danych|Typ elementu danych|Opis|  
 |--------------------|--------------------|-----------------|  
 |Nazwa ograniczenia|`xs:string`|Nazwa ograniczenia, który został przekroczony. Albo `MaxConcurrentCalls`, `MaxConcurrentInstances`, lub `MaxConcurrentSessions`,|  
-|Limit|`xs:long`|Aktualnie skonfigurowany limit przepustnicy.|  
-|HostReference|`xs:string`|W przypadku usług hostowanych w sieci Web to pole unikatowo identyfikuje usługę w hierarchii sieci Web. Jego format jest zdefiniowany jako "Ścieżka wirtualna aplikacji Nazwa witryny sieci Web&#124;ścieżki wirtualnej usługi&#124;ServiceName". Przykład: "Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
-|Domeny aplikacji|`xs:string`|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|Limit|`xs:long`|Aktualnie skonfigurowany limit przepustowości.|  
+|HostReference|`xs:string`|W przypadku usług hostowanych w sieci Web to pole jednoznacznie identyfikuje usługę w hierarchii w sieci Web. Jego format jest zdefiniowany jako "Ścieżka wirtualna aplikacji Nazwa witryny sieci Web&#124;ścieżka wirtualna usługi&#124;ServiceName". Przykład: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
+|AppDomain|`xs:string`|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

@@ -1,32 +1,32 @@
 ---
-title: 4207 - MaximumRetriesExceededForSqlCommand
+title: 4207 — MaximumRetriesExceededForSqlCommand
 ms.date: 03/30/2017
 ms.assetid: 8c8bee26-9ad4-4e01-bd16-0e1fd510fb6b
 ms.openlocfilehash: b763e087d8ead2bcc0fadd1d0223ae1bd58c9fd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774312"
 ---
-# <a name="4207---maximumretriesexceededforsqlcommand"></a>4207 - MaximumRetriesExceededForSqlCommand
+# <a name="4207---maximumretriesexceededforsqlcommand"></a>4207 — MaximumRetriesExceededForSqlCommand
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|4207|  
-|Słowa kluczowe|Limit przydziału, WFInstanceStore|  
+|Identyfikator|4207|  
+|słowa kluczowe|Limit przydziału, WFInstanceStore|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- Wskazuje, że dostawca SQL przerywa ponownych prób wykonania polecenia SQL jako maksymalną liczbę ponownych prób, które mogły zostać wykonane.  
+ Wskazuje, że dostawcy bazy danych SQL rezygnacji ponowieniem uruchomienia polecenia SQL, ponieważ wykonano maksymalną liczbę ponownych prób.  
   
 ## <a name="message"></a>Komunikat  
- Zwiększanie liczby ponownych polecenia SQL jako maksymalną liczbę ponownych prób mogły zostać wykonane.  
+ Wykonano rezygnacji ponowieniem uruchomienia polecenia SQL jako maksymalną liczbę ponownych prób.  
   
 ## <a name="details"></a>Szczegóły  
   
 |Nazwa elementu danych|Typ elementu danych|Opis|  
 |--------------------|--------------------|-----------------|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773236"
 ---
 # <a name="packaging-fonts-with-applications"></a>Pakowanie czcionek z aplikacjami
 Ten temat zawiera omówienie sposobów z czcionkami pakietu przy użyciu usługi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -158,17 +158,17 @@ Ten temat zawiera omówienie sposobów z czcionkami pakietu przy użyciu usługi
 ## <a name="limitations-on-font-usage"></a>Ograniczenia dotyczące użycia czcionki  
  Na poniższej liście opisano również kilka ograniczeń na tworzenie pakietów i używanie czcionek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji:  
   
--   **Osadzanie bity uprawnień czcionek:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji sprawdź lub nie wymuszają żadnych osadzanie bity uprawnień czcionek. Zobacz [czcionki Introduction_to_Packing](#introduction_to_packaging_fonts) sekcji, aby uzyskać więcej informacji.  
+- **Osadzanie bity uprawnień czcionek:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji sprawdź lub nie wymuszają żadnych osadzanie bity uprawnień czcionek. Zobacz [czcionki Introduction_to_Packing](#introduction_to_packaging_fonts) sekcji, aby uzyskać więcej informacji.  
   
--   **Witryna pochodzenia czcionki:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje nie zezwalają na odwołanie czcionki do protokołu http lub ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Witryna pochodzenia czcionki:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje nie zezwalają na odwołanie czcionki do protokołu http lub ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **Bezwzględny identyfikator URI przy użyciu pakietu: notacji:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje nie pozwalają na tworzenie <xref:System.Windows.Media.FontFamily> programowo przy użyciu "pakietu:" jako część bezwzględną [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] odwołań do czcionki. Na przykład `"pack://application:,,,/resources/#Pericles Light"` jest odwołaniem nieprawidłowa czcionka.  
+- **Bezwzględny identyfikator URI przy użyciu pakietu: notacji:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje nie pozwalają na tworzenie <xref:System.Windows.Media.FontFamily> programowo przy użyciu "pakietu:" jako część bezwzględną [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] odwołań do czcionki. Na przykład `"pack://application:,,,/resources/#Pericles Light"` jest odwołaniem nieprawidłowa czcionka.  
   
--   **Osadzanie czcionki automatyczne:** W czasie projektowania nie jest obsługiwane podczas wyszukiwania aplikacji używanie czcionek i automatycznie osadzania czcionek w aplikacji zasobów.  
+- **Osadzanie czcionki automatyczne:** W czasie projektowania nie jest obsługiwane podczas wyszukiwania aplikacji używanie czcionek i automatycznie osadzania czcionek w aplikacji zasobów.  
   
--   **Czcionka podzbiory:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje nie obsługują tworzenia podzestawy czcionki-fixed dokumentów.  
+- **Czcionka podzbiory:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje nie obsługują tworzenia podzestawy czcionki-fixed dokumentów.  
   
--   W przypadkach, w przypadku nieprawidłowego odwołania, aplikacja powróci przy użyciu dostępnej czcionki.  
+- W przypadkach, w przypadku nieprawidłowego odwołania, aplikacja powróci przy użyciu dostępnej czcionki.  
   
 ## <a name="see-also"></a>Zobacz także
 

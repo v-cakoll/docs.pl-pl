@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778784"
 ---
 # <a name="choosing-between-class-and-struct"></a>Wybieranie między klasą i strukturą
 Jednym z decyzji projektowych podstawowe twarzy każdego Projektant framework jest czy zaprojektować typu jako klasę (typ odwołania) lub struct (typu wartości). Dobre zrozumienie różnic w zachowaniu typy odwołań i typy wartości jest sprawą kluczową podczas wprowadzania tego wyboru.  
@@ -39,13 +39,13 @@ Jednym z decyzji projektowych podstawowe twarzy każdego Projektant framework je
   
  **X AVOID** definiowania struktury, chyba że typ ma wszystkie następujące właściwości:  
   
--   Logicznie reprezentuje pojedynczą wartość, podobnie jak typy pierwotne (`int`, `double`itp.).  
+- Logicznie reprezentuje pojedynczą wartość, podobnie jak typy pierwotne (`int`, `double`itp.).  
   
--   Ma rozmiar wystąpienia w obszarze 16 bajtów.  
+- Ma rozmiar wystąpienia w obszarze 16 bajtów.  
   
--   Jest on niezmienny.  
+- Jest on niezmienny.  
   
--   Nie będzie można go opakować często.  
+- Nie będzie można go opakować często.  
   
  We wszystkich innych przypadkach należy zdefiniować typów jako klasy.  
   

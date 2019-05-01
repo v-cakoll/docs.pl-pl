@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
 ms.openlocfilehash: 3846c59712cec6003c35f336714041544dec94b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777250"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Rysowanie linii i kształtów za pomocą pióra
 Użyj [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` obiektów, aby narysować segmenty linii, krzywych i przedstawiono kształtów. W tej sekcji *wiersza* odwołuje się do dowolnego z tych opcji, chyba że określono oznacza segment linii. Ustaw właściwości piórem do kontrolowania kolor, szerokość, wyrównania i styl linii za pomocą tego pióra.  

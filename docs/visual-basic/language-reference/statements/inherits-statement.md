@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784205"
 ---
 # <a name="inherits-statement"></a>Inherits — Instrukcja
 Powoduje, że bieżącą klasę lub interfejs dziedziczy atrybuty, zmiennych, właściwości, procedur i zdarzeń z innej klasy lub zestawu interfejsów.  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>reguły  
   
--   **Dziedziczenie klas.** Jeśli korzysta z klasy `Inherits` instrukcji, można określić tylko jedną klasę bazową.  
+- **Dziedziczenie klas.** Jeśli korzysta z klasy `Inherits` instrukcji, można określić tylko jedną klasę bazową.  
   
      Klasa nie może też dziedziczyć z klasy w niej zagnieżdżonej.  
   
--   **Interfejs dziedziczenia.** Jeśli korzysta z interfejsu `Inherits` instrukcji, można określić jeden lub więcej podstawowych interfejsów. Dwa interfejsy mogą dziedziczyć, nawet wtedy, gdy każda definiują element członkowski o takiej samej nazwie. Jeśli to zrobisz, więc w kodzie implementującym musi być określona elementu członkowskiego, który implementuje kwantyfikacja nazwy.  
+- **Interfejs dziedziczenia.** Jeśli korzysta z interfejsu `Inherits` instrukcji, można określić jeden lub więcej podstawowych interfejsów. Dwa interfejsy mogą dziedziczyć, nawet wtedy, gdy każda definiują element członkowski o takiej samej nazwie. Jeśli to zrobisz, więc w kodzie implementującym musi być określona elementu członkowskiego, który implementuje kwantyfikacja nazwy.  
   
      Interfejs nie może dziedziczyć z innego interfejsu z bardziej restrykcyjny poziom dostępu. Na przykład `Public` interfejs nie może dziedziczyć `Friend` interfejsu.  
   

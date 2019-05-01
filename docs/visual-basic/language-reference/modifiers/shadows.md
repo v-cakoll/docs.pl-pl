@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778732"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 Określa, że zadeklarowany element programistyczny ponownie deklaruje i ukrywa element o identycznej nazwie, lub zestaw przeciążonych elementów w klasie bazowej.  
@@ -28,19 +28,19 @@ Określa, że zadeklarowany element programistyczny ponownie deklaruje i ukrywa 
   
 ## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Możesz użyć `Shadows` tylko na poziomie klasy. Oznacza to, że kontekst deklaracji `Shadows` element musi być klasą i nie może być plik źródłowy, przestrzeń nazw, interfejsu, moduł, struktura lub procedury.  
+- **Kontekst deklaracji.** Możesz użyć `Shadows` tylko na poziomie klasy. Oznacza to, że kontekst deklaracji `Shadows` element musi być klasą i nie może być plik źródłowy, przestrzeń nazw, interfejsu, moduł, struktura lub procedury.  
   
      Można zadeklarować tylko jeden element przesłaniania w instrukcji jednej deklaracji.  
   
--   **Modyfikatory połączone.** Nie można określić `Shadows` wraz z `Overloads`, `Overrides`, lub `Static` w tej samej deklaracji.  
+- **Modyfikatory połączone.** Nie można określić `Shadows` wraz z `Overloads`, `Overrides`, lub `Static` w tej samej deklaracji.  
   
--   **Typy elementów.** Można w tle dowolnego typu element zadeklarowany za pomocą dowolnego typu. Jeśli użytkownik w tle, właściwość lub procedura z inną właściwość lub procedura, parametry oraz zwracany typ musi odpowiadać znajdującymi się na właściwości klasy bazowej lub procedury.  
+- **Typy elementów.** Można w tle dowolnego typu element zadeklarowany za pomocą dowolnego typu. Jeśli użytkownik w tle, właściwość lub procedura z inną właściwość lub procedura, parametry oraz zwracany typ musi odpowiadać znajdującymi się na właściwości klasy bazowej lub procedury.  
   
--   **Uzyskiwanie dostępu do.** Element zasłonięte w klasie bazowej niedostępności zwykle od w klasie pochodnej, która przesłania go. Jednak mają zastosowanie następujące kwestie.  
+- **Uzyskiwanie dostępu do.** Element zasłonięte w klasie bazowej niedostępności zwykle od w klasie pochodnej, która przesłania go. Jednak mają zastosowanie następujące kwestie.  
   
-    -   Jeśli element przesłaniania nie jest dostępne z kodu, odwołując się do niego, odwołanie zostaje rozpoznany tekst z cieniem elementu. Na przykład jeśli `Private` element zasłania elementu klasy podstawowej, kod, który nie ma uprawnień dostępu do `Private` element uzyskuje dostęp do elementu klasy podstawowej zamiast tego.  
+    - Jeśli element przesłaniania nie jest dostępne z kodu, odwołując się do niego, odwołanie zostaje rozpoznany tekst z cieniem elementu. Na przykład jeśli `Private` element zasłania elementu klasy podstawowej, kod, który nie ma uprawnień dostępu do `Private` element uzyskuje dostęp do elementu klasy podstawowej zamiast tego.  
   
-    -   Jeśli w tle elementu możesz uzyskiwać dostęp element zasłonięte przez obiekt, który zadeklarowane z typem klasy bazowej. Możesz również do niego dostęp za pośrednictwem `MyBase`.  
+    - Jeśli w tle elementu możesz uzyskiwać dostęp element zasłonięte przez obiekt, który zadeklarowane z typem klasy bazowej. Możesz również do niego dostęp za pośrednictwem `MyBase`.  
   
  `Shadows` Modyfikator mogą być używane w tych kontekstach:  
   

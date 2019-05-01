@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
 ms.openlocfilehash: 38863cbfe457afd923c3c8238d8c12b4d451c67f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773090"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding
 Niektóre usługi może wymagać poświadczeń federacyjnych, ale nie obsługują bezpiecznej sesji. W takiej sytuacji należy wyłączyć funkcję bezpiecznej sesji. W odróżnieniu od <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding> klasa nie umożliwia wyłączanie bezpiecznej sesji podczas komunikacji z usługą. Zamiast tego należy utworzyć niestandardowego powiązania, który zastępuje ustawienia bezpiecznej sesji za pomocą narzędzi bootstrap.  
@@ -40,7 +40,7 @@ Niektóre usługi może wymagać poświadczeń federacyjnych, ale nie obsługuj�
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Aby skompilować przykład kodu, Utwórz projekt, który odwołuje się do zestawu System.ServiceModel.dll.  
+- Aby skompilować przykład kodu, Utwórz projekt, który odwołuje się do zestawu System.ServiceModel.dll.  
   
 ## <a name="see-also"></a>Zobacz także
 

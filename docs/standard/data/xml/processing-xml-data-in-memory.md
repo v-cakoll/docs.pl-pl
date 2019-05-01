@@ -6,11 +6,11 @@ ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1a4587838180896b52bb79d447ed7ede3e22d1a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770425"
 ---
 # <a name="processing-xml-data-in-memory"></a>Przetwarzanie danych XML w pamięci
 Microsoft .NET Framework zawiera trzy modele związane z przetwarzaniem danych XML: <xref:System.Xml.XmlDocument> klasy <xref:System.Xml.XPath.XPathDocument> klasy i [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) i [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  

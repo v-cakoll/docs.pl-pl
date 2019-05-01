@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771896"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost — Interfejs
 Oferuje funkcje podobne do tego elementu [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interfejsu podany w .NET Framework w wersji 1, z następującymi zmianami:  
   
--   Dodanie [sethostcontrol —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) metodę, aby ustawić interfejs kontrolki hosta.  
+- Dodanie [sethostcontrol —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) metodę, aby ustawić interfejs kontrolki hosta.  
   
--   Pominięcie niektórych metod dostarczonych przez `ICorRuntimeHost`.  
+- Pominięcie niektórych metod dostarczonych przez `ICorRuntimeHost`.  
   
 ## <a name="methods"></a>Metody  
   

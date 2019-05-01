@@ -3,11 +3,11 @@ title: Kolekcje schematów OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771998"
 ---
 # <a name="ole-db-schema-collections"></a>Kolekcje schematów OLE DB
 W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
@@ -15,17 +15,17 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Dostawca programu Microsoft SQL Server OLE DB  
  Sterownik firmy Microsoft SQL Server OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
--   Tabele  
+- Tabele  
   
--   Kolumny  
+- Kolumny  
   
--   Procedury  
+- Procedury  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Wykaz  
+- Wykaz  
   
--   Indeksy  
+- Indeksy  
   
 ### <a name="tables"></a>Tabele  
   
@@ -154,19 +154,19 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 ## <a name="microsoft-oracle-ole-db-provider"></a>Dostawca programu Microsoft Oracle OLE DB  
  Sterownik firmy Microsoft Oracle OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
--   Tabele  
+- Tabele  
   
--   Kolumny  
+- Kolumny  
   
--   Procedury  
+- Procedury  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Widoki  
+- Widoki  
   
--   Indeksy  
+- Indeksy  
   
 ### <a name="tables"></a>Tabele  
   
@@ -297,15 +297,15 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB Provider  
  Sterownik firmy Microsoft Jet OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
--   Tabele  
+- Tabele  
   
--   Kolumny  
+- Kolumny  
   
--   Procedury  
+- Procedury  
   
--   Widoki  
+- Widoki  
   
--   Indeksy  
+- Indeksy  
   
 ### <a name="tables"></a>Tabele  
   

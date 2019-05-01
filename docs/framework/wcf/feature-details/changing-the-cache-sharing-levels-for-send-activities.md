@@ -3,11 +3,11 @@ title: Zmienianie poziomów współużytkowania pamięci podręcznej dla działa
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784296"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> Rozszerzenie umożliwia dostosowywania pamięci podręcznej udostępnianie poziomy, ustawienia pamięci podręcznej fabryki kanału i ustawień kanału pamięci podręcznej dla przepływów pracy, który wysyła wiadomości do punktów końcowych usługi za pomocą <xref:System.ServiceModel.Activities.Send> działań dotyczących komunikatów. Te przepływy pracy są zwykle przepływy pracy klienta, ale mogą być również usługi przepływu pracy, które znajdują się w <xref:System.ServiceModel.WorkflowServiceHost>. Zawiera pamięci podręcznej fabryki kanału pamięci podręcznej <xref:System.ServiceModel.ChannelFactory%601> obiektów. Pamięci podręcznej kanału zawiera kanały pamięci podręcznej.  
@@ -20,11 +20,11 @@ ms.locfileid: "53127059"
   
  Oto różnych pamięci podręcznej udostępnianie poziomy dostępne dla <xref:System.ServiceModel.Activities.Send> działania w przepływie pracy oraz ich zalecane użycie:  
   
--   **Hostowanie poziom**: Na hoście, poziomu udostępniania pamięć podręczna jest dostępna tylko dla wystąpienia przepływu pracy, hostowana w hosta usługi przepływu pracy. Pamięć podręczna również mogą być współużytkowane między hostami usługi przepływu pracy w pamięci podręcznej całego procesu.  
+- **Hostowanie poziom**: Na hoście, poziomu udostępniania pamięć podręczna jest dostępna tylko dla wystąpienia przepływu pracy, hostowana w hosta usługi przepływu pracy. Pamięć podręczna również mogą być współużytkowane między hostami usługi przepływu pracy w pamięci podręcznej całego procesu.  
   
--   **Wystąpienie poziomu**: W wystąpieniu, poziomu udostępniania, pamięć podręczna jest dostępna dla wystąpienia określonego przepływu pracy, w okresie swojego istnienia, ale pamięci podręcznej nie jest dostępna dla innych wystąpień przepływu pracy.  
+- **Wystąpienie poziomu**: W wystąpieniu, poziomu udostępniania, pamięć podręczna jest dostępna dla wystąpienia określonego przepływu pracy, w okresie swojego istnienia, ale pamięci podręcznej nie jest dostępna dla innych wystąpień przepływu pracy.  
   
--   **Brak pamięci podręcznej**: Pamięć podręczna jest domyślnie wyłączona w przypadku przepływu pracy, który używa punktów końcowych zdefiniowanych w konfiguracji. Zalecane jest także zachowywać pamięci podręcznej wyłączone w tym przypadku, ponieważ jej włączeniu, może być niebezpieczne. Na przykład w przypadku określenia innej tożsamości (inne poświadczenia lub korzystanie z personifikacji) jest wymagana dla każdego wysyłania.  
+- **Brak pamięci podręcznej**: Pamięć podręczna jest domyślnie wyłączona w przypadku przepływu pracy, który używa punktów końcowych zdefiniowanych w konfiguracji. Zalecane jest także zachowywać pamięci podręcznej wyłączone w tym przypadku, ponieważ jej włączeniu, może być niebezpieczne. Na przykład w przypadku określenia innej tożsamości (inne poświadczenia lub korzystanie z personifikacji) jest wymagana dla każdego wysyłania.  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Zmienianie poziomu udostępniania dla przepływu pracy klienta pamięci podręcznej  
  Aby ustawić pamięci podręcznej udostępnianie w przepływie pracy klienta, należy dodać wystąpienia <xref:System.ServiceModel.Activities.SendMessageChannelCache> klasy jako rozszerzenie dla żądanej grupy wystąpień przepływu pracy. Powoduje to udostępnianie pamięci podręcznej przez wszystkie wystąpienia przepływu pracy. W poniższych przykładach kodu pokazano, jak wykonać te kroki.  
@@ -90,7 +90,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
   
 |Ustawienia|LeaseTimeout (min)|IdleTimeout (min)|MaxItemsInCache|  
 |-|-|-|-|  
-|Domyślne pamięci podręcznej|Wartość TimeSpan.MaxValue|2|16|  
+|Domyślne pamięci podręcznej|TimeSpan.MaxValue|2|16|  
 |Domyślna pamięci podręcznej kanału|5|2|16|  
   
  Aby dostosować ustawienia pamięci podręcznej pamięci podręcznej i kanał fabryki, utworzyć <xref:System.ServiceModel.Activities.SendMessageChannelCache> klasy za pomocą sparametryzowanego konstruktora <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> i przekazać nowe wystąpienie klasy <xref:System.ServiceModel.Activities.ChannelCacheSettings> przy użyciu niestandardowej wartości do poszczególnych `factorySettings` i `channelSettings` Parametry. Następnie dodaj nowe wystąpienie tej klasy jako rozszerzenie do hosta usługi przepływu pracy i wystąpienia przepływu pracy. W poniższym przykładzie kodu pokazano, jak wykonać te kroki dla wystąpienia przepływu pracy.  

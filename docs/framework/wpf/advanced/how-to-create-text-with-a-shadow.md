@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz tekst z cieniem'
+title: 'Instrukcje: Tworzenie tekstu z cieniem'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], shadow effects
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
 ms.openlocfilehash: a2225e297dbc0b5f9d49799cb34eb5539746e62e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776849"
 ---
-# <a name="how-to-create-text-with-a-shadow"></a>Instrukcje: Utwórz tekst z cieniem
+# <a name="how-to-create-text-with-a-shadow"></a>Instrukcje: Tworzenie tekstu z cieniem
 Przykłady w tej sekcji pokazano, jak utworzyć efekt dla tekstu wyświetlanego w tle.  
   
 ## <a name="example"></a>Przykład  

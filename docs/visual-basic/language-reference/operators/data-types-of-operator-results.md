@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778563"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Typy danych wyników operatora (Visual Basic)
 Visual Basic Określa typ danych wyniku operacji na podstawie typów danych operandu. W niektórych przypadkach może to być typ danych z większego zakresu niż jeden z operandów.  
@@ -22,21 +22,21 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 ## <a name="data-type-ranges"></a>Zakresy typu danych  
  Zakresy typów odpowiednie dane w kolejności od najmniejszej do największej, są następujące:  
   
--   [Wartość logiczna](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — dwa możliwe wartości  
+- [Wartość logiczna](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — dwa możliwe wartości  
   
--   [SByte —](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [bajtów](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 wartości całkowitych  
+- [SByte —](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [bajtów](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 wartości całkowitych  
   
--   [Krótki](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65 536 (6.5... E + 4) możliwych wartości całkowitych  
+- [Krótki](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65 536 (6.5... E + 4) możliwych wartości całkowitych  
   
--   [Liczba całkowita](../../../visual-basic/language-reference/data-types/integer-data-type.md), [uinteger —](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4 294 967 296 (4.2... E + 9) możliwych wartości całkowitych  
+- [Liczba całkowita](../../../visual-basic/language-reference/data-types/integer-data-type.md), [uinteger —](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4 294 967 296 (4.2... E + 9) możliwych wartości całkowitych  
   
--   [Długi](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) możliwych wartości całkowitych  
+- [Długi](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) możliwych wartości całkowitych  
   
--   [Dziesiętna](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1,5... E + 29 możliwych wartości całkowitych, maksymalny zakres 7,9... E + 28 (wartość bezwzględna)  
+- [Dziesiętna](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1,5... E + 29 możliwych wartości całkowitych, maksymalny zakres 7,9... E + 28 (wartość bezwzględna)  
   
--   [Pojedynczy](../../../visual-basic/language-reference/data-types/single-data-type.md) — zakresu maksymalnego 3.4... E + 38 (wartość bezwzględna)  
+- [Pojedynczy](../../../visual-basic/language-reference/data-types/single-data-type.md) — zakresu maksymalnego 3.4... E + 38 (wartość bezwzględna)  
   
--   [Podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md) — zakresu maksymalnego 1.7... E + 308 (wartość bezwzględna)  
+- [Podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md) — zakresu maksymalnego 1.7... E + 308 (wartość bezwzględna)  
   
  Aby uzyskać więcej informacji na temat typów danych języka Visual Basic, zobacz [typy danych](../../../visual-basic/language-reference/data-types/index.md).  
   
@@ -68,11 +68,11 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 ## <a name="integer-arithmetic"></a>Operacje arytmetyczne liczba całkowita  
  Typ danych wyniku operacji liczby całkowitej, zależy od typy danych argumentów. Ogólnie rzecz biorąc Visual Basic używa następujących zasad do określania typu danych:  
   
--   Jeśli oba operandy operatora binarnego mają taki sam typ danych, wynik ma ten typ danych. Wyjątek stanowi `Boolean`, który jest zmuszony do `Short`.  
+- Jeśli oba operandy operatora binarnego mają taki sam typ danych, wynik ma ten typ danych. Wyjątek stanowi `Boolean`, który jest zmuszony do `Short`.  
   
--   Jeśli operand bez znaku, należy za pomocą podpisanego operand, wynik ma typ ze znakiem z co najmniej tak dużej zakresu jako jeden z operandów.  
+- Jeśli operand bez znaku, należy za pomocą podpisanego operand, wynik ma typ ze znakiem z co najmniej tak dużej zakresu jako jeden z operandów.  
   
--   W przeciwnym razie wynik zazwyczaj ma większe z dwóch typów danych argumentu operacji.  
+- W przeciwnym razie wynik zazwyczaj ma większe z dwóch typów danych argumentu operacji.  
   
  Należy pamiętać, że typ danych wyniku nie może być taka sama jak albo typ danych argumentu operacji.  
   

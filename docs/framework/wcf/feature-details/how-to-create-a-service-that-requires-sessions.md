@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
 ms.openlocfilehash: 53b6c809103a2a32d544b8317164a5fa3aa81596
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787637"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Instrukcje: tworzenie usługi, która wymaga użycia sesji
 Sesje, Tworzenie udostępnionego stanu między co najmniej dwa punkty końcowe, które umożliwia przydatnych funkcji, takich jak wywołania zwrotne z wieloma przeskokami zabezpieczeń i skojarzenia między klientami a wystąpieniami usługi. Aby uzyskać więcej informacji o sesji w aplikacji Windows Communication Foundation (WCF), zobacz [przy użyciu sesji](../../../../docs/framework/wcf/using-sessions.md).  
@@ -21,11 +21,11 @@ Sesje, Tworzenie udostępnionego stanu między co najmniej dwa punkty końcowe, 
   
 2. Modyfikowanie <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> określa kontrakt, ustawiając <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> właściwości albo:  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Jeśli ten kontrakt musi być uruchamiane w ramach sesji.  
+    - <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Jeśli ten kontrakt musi być uruchamiane w ramach sesji.  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Jeśli ten kontrakt mogą być uruchamiane w ramach sesji.  
+    - <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Jeśli ten kontrakt mogą być uruchamiane w ramach sesji.  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Jeśli nie wolno uruchamiać tej Umowy w ramach sesji.  
+    - <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Jeśli nie wolno uruchamiać tej Umowy w ramach sesji.  
   
 3. Konfigurowanie punktu końcowego usługi do użycia powiązanie, które obsługuje sesji. W poniższym przykładzie konfiguracji prezentuje sposób użycia <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, które obsługuje WS`-`ReliableMessaging sesji.  
   

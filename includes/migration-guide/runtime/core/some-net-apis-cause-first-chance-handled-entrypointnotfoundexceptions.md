@@ -3,8 +3,8 @@ ms.openlocfilehash: b23f06ec5b27fbd7976a4b62ba6105c607eaee39
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59982114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664317"
 ---
 ### <a name="some-net-apis-cause-first-chance-handled-entrypointnotfoundexceptions"></a>EntryPointNotFoundExceptions niektórych interfejsów API platformy .NET Przyczyna pierwszej szansy (obsługiwane)
 

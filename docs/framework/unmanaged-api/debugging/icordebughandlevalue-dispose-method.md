@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9114799b87d39333ff9da66429dc1ea99ec2131c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775703"
 ---
 # <a name="icordebughandlevaluedispose-method"></a>ICorDebugHandleValue::Dispose — Metoda
-Zwalnia dojście odwołuje się ten obiekt ICorDebugHandleValue bez jawnego zwolnienia wskaźnika interfejsu.  
+Zwalnia dojście odwołuje się ten obiekt icordebughandlevalue — bez jawnie zwalniania wskaźnika interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ HRESULT Dispose ();
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

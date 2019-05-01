@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
 ms.openlocfilehash: 88e13fcd03c6a10cf1450cec90f9ca60aedc3eb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778719"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 Modyfikator dostępu elementu członkowskiego, który określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie swojej klasy lub z klasy pochodnej.  
@@ -30,15 +30,15 @@ Modyfikator dostępu elementu członkowskiego, który określa, że co najmniej 
   
 ## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Możesz użyć `Protected` tylko na poziomie klasy. Oznacza to, że kontekst deklaracji `Protected` element musi być klasą i nie może być plik źródłowy, przestrzeń nazw, interfejsu, moduł, struktura lub procedury.  
+- **Kontekst deklaracji.** Możesz użyć `Protected` tylko na poziomie klasy. Oznacza to, że kontekst deklaracji `Protected` element musi być klasą i nie może być plik źródłowy, przestrzeń nazw, interfejsu, moduł, struktura lub procedury.  
 
 ## <a name="behavior"></a>Zachowanie  
   
--   **Poziom dostępu.** Cały kod w klasie mogą uzyskać dostęp do jego elementów. Kod w dowolną klasę pochodzącą z klasy bazowej może uzyskać dostęp do wszystkich `Protected` elementów klasy bazowej. Ta zasada obowiązuje dla wszystkich pokoleń pochodnym. Oznacza to, że dostęp do klasy `Protected` elementy klasę bazową klasy bazowej i tak dalej.  
+- **Poziom dostępu.** Cały kod w klasie mogą uzyskać dostęp do jego elementów. Kod w dowolną klasę pochodzącą z klasy bazowej może uzyskać dostęp do wszystkich `Protected` elementów klasy bazowej. Ta zasada obowiązuje dla wszystkich pokoleń pochodnym. Oznacza to, że dostęp do klasy `Protected` elementy klasę bazową klasy bazowej i tak dalej.  
   
      Chronionego dostępu nie jest nadzbiorem lub podzbiór dostęp zaprzyjaźniony.  
   
--   **Modyfikatory dostępu.** Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. Dla porównania modyfikatory dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Modyfikatory dostępu.** Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. Dla porównania modyfikatory dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Protected` Modyfikator mogą być używane w tych kontekstach:  
   

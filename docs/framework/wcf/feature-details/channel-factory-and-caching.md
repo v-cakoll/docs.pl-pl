@@ -3,22 +3,22 @@ title: Fabryka kanałów i buforowanie
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784309"
 ---
 # <a name="channel-factory-and-caching"></a>Fabryka kanałów i buforowanie
 Aplikacje klienta WCF <xref:System.ServiceModel.ChannelFactory%601> klasy, aby utworzyć kanał komunikacji z usługą WCF.  Tworzenie <xref:System.ServiceModel.ChannelFactory%601> wystąpień powoduje pewne nadmiarowe obciążenie, ponieważ obejmuje ona następujące operacje:  
   
--   Konstruowanie <xref:System.ServiceModel.Description.ContractDescription> drzewa  
+- Konstruowanie <xref:System.ServiceModel.Description.ContractDescription> drzewa  
   
--   Odzwierciedlenie wszystkich wymaganych typów CLR  
+- Odzwierciedlenie wszystkich wymaganych typów CLR  
   
--   Konstruowanie stosu kanału  
+- Konstruowanie stosu kanału  
   
--   Usuwanie zasobów  
+- Usuwanie zasobów  
   
  Aby zminimalizować ten narzut, WCF może buforować fabryki kanałów, korzystając z serwera proxy klienta WCF.  
   

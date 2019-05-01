@@ -11,11 +11,11 @@ helpviewer_keywords:
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
 ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771491"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) składnika wyświetlane układ, rozmiar papieru i inne opcje układu strony użytkownika do danego dokumentu.  

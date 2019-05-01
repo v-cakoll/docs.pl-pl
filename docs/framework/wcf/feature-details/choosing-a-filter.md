@@ -3,11 +3,11 @@ title: Wybieranie filtra
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784465"
 ---
 # <a name="choosing-a-filter"></a>Wybieranie filtra
 Podczas konfigurowania usługi routingu, należy wybrać filtry komunikatów i ich konfigurowania pod kątem umożliwiają dokładne dopasowania przed komunikatami, które otrzymujesz. Jeśli filtry, które możesz wybrać są zbyt szerokie w swoich dopasowań lub są niepoprawnie skonfigurowane, komunikaty są kierowane niepoprawnie. Jeśli filtry są zbyt restrykcyjne, możesz nie mieć dostępnych tras prawidłowy dla niektórych komunikatów.  

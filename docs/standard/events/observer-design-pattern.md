@@ -15,11 +15,11 @@ ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770386"
 ---
 # <a name="observer-design-pattern"></a>Wzorzec projektowy obserwatora
 Wzorzec projektowy obserwatora umożliwia subskrybentom zarejestrowanie i otrzymywanie powiadomienia od dostawcy. Jest ona odpowiednia dla wszystkich scenariuszy, które wymaga powiadomień wypychanych na podstawie. Definiuje wzorzec *dostawcy* (znany także jako *podmiotu* lub *obserwowalnymi*) i zero, co najmniej jeden *obserwatorów*. Obserwatorzy zarejestrowanie dostawcy i zawsze wtedy, gdy wstępnie zdefiniowanego warunku zdarzenia lub zmianę stanu występuje, dostawca automatycznie powiadamia, wszystkich obserwatorów przez wywołania ich metod. W tym wywołaniu metody dostawcy mogą także podać bieżące informacje o stanie do obserwatorów. W .NET Framework, wzorzec projektowy obserwatora jest stosowany przez zaimplementowanie ogólnego <xref:System.IObservable%601?displayProperty=nameWithType> i <xref:System.IObserver%601?displayProperty=nameWithType> interfejsów. Parametr typu ogólnego reprezentuje typ, który dostarcza informacji powiadomień.  
@@ -29,21 +29,21 @@ Wzorzec projektowy obserwatora umożliwia subskrybentom zarejestrowanie i otrzym
   
  Implementacja wzorca wymaga, należy dostarczyć następujące elementy:  
   
--   Dostawca lub temat, który jest obiektem, która wysyła powiadomienia do obserwatorów. Dostawca to klasa lub struktura, która implementuje <xref:System.IObservable%601> interfejsu. Dostawca musi implementować jedną metodę <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, która jest wywoływana przez obserwatorów, które chcesz otrzymywać powiadomienia od dostawcy.  
+- Dostawca lub temat, który jest obiektem, która wysyła powiadomienia do obserwatorów. Dostawca to klasa lub struktura, która implementuje <xref:System.IObservable%601> interfejsu. Dostawca musi implementować jedną metodę <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, która jest wywoływana przez obserwatorów, które chcesz otrzymywać powiadomienia od dostawcy.  
   
--   Obserwatora, który jest obiektem, który odbiera powiadomienia od dostawcy. Obserwator jest klasa lub struktura, która implementuje <xref:System.IObserver%601> interfejsu. Obserwator musi implementować trzy metody, które są wywoływane przez dostawcę:  
+- Obserwatora, który jest obiektem, który odbiera powiadomienia od dostawcy. Obserwator jest klasa lub struktura, która implementuje <xref:System.IObserver%601> interfejsu. Obserwator musi implementować trzy metody, które są wywoływane przez dostawcę:  
   
-    -   <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, który dostarcza obserwatora przy użyciu nowych lub bieżące informacje.  
+    - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, który dostarcza obserwatora przy użyciu nowych lub bieżące informacje.  
   
-    -   <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, która informuje obserwatora, który wystąpił błąd.  
+    - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, która informuje obserwatora, który wystąpił błąd.  
   
-    -   <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, co oznacza, że dostawca zakończył wysyłanie powiadomień.  
+    - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, co oznacza, że dostawca zakończył wysyłanie powiadomień.  
   
--   Mechanizm, który umożliwia dostawcy do śledzenia obserwatorów. Zwykle, dostawca używa obiektu kontenera, takich jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> obiekt, do przechowywania odwołań do <xref:System.IObserver%601> implementacji, które subskrybuje powiadomienia. W tym celu za pomocą kontenera magazynu umożliwia dostawcy w celu obsługi zero do nieograniczonej liczby obserwatorów. Nie zdefiniowano kolejność, w którym obserwatorów otrzymywać powiadomienia o; Dostawca jest bezpłatna, można użyć dowolnej metody, aby określić kolejność.  
+- Mechanizm, który umożliwia dostawcy do śledzenia obserwatorów. Zwykle, dostawca używa obiektu kontenera, takich jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> obiekt, do przechowywania odwołań do <xref:System.IObserver%601> implementacji, które subskrybuje powiadomienia. W tym celu za pomocą kontenera magazynu umożliwia dostawcy w celu obsługi zero do nieograniczonej liczby obserwatorów. Nie zdefiniowano kolejność, w którym obserwatorów otrzymywać powiadomienia o; Dostawca jest bezpłatna, można użyć dowolnej metody, aby określić kolejność.  
   
--   <xref:System.IDisposable> Implementację, która umożliwia dostawcy, po zakończeniu powiadomienia, Usuń obserwatorów. Obserwatorzy otrzymywać odwołanie do <xref:System.IDisposable> implementację z <xref:System.IObservable%601.Subscribe%2A> metody, dzięki czemu można również wywołać <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> metodę, aby anulować subskrypcję, zanim dostawcy zakończył wysyłanie powiadomień.  
+- <xref:System.IDisposable> Implementację, która umożliwia dostawcy, po zakończeniu powiadomienia, Usuń obserwatorów. Obserwatorzy otrzymywać odwołanie do <xref:System.IDisposable> implementację z <xref:System.IObservable%601.Subscribe%2A> metody, dzięki czemu można również wywołać <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> metodę, aby anulować subskrypcję, zanim dostawcy zakończył wysyłanie powiadomień.  
   
--   Obiekt, który zawiera dane, które dostawca wysyła do jego obserwatorów. Typ tego obiektu odnosi się do parametru typu ogólnego <xref:System.IObservable%601> i <xref:System.IObserver%601> interfejsów. Mimo że ten obiekt może być taka sama jak <xref:System.IObservable%601> implementacji najczęściej jest to typ oddzielne.  
+- Obiekt, który zawiera dane, które dostawca wysyła do jego obserwatorów. Typ tego obiektu odnosi się do parametru typu ogólnego <xref:System.IObservable%601> i <xref:System.IObserver%601> interfejsów. Mimo że ten obiekt może być taka sama jak <xref:System.IObservable%601> implementacji najczęściej jest to typ oddzielne.  
   
 > [!NOTE]
 >  Oprócz wykonywania po wzorcu projektowania obserwatora, może być zainteresowany Eksplorowanie bibliotek, które zostały utworzone przy użyciu <xref:System.IObservable%601> i <xref:System.IObserver%601> interfejsów. Na przykład [Reactive Extensions dla platformy .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) składają się z zestawu metod rozszerzeń i operatorów standardowej kolejności LINQ do obsługi asynchronicznego programowania.  
@@ -56,9 +56,9 @@ Wzorzec projektowy obserwatora umożliwia subskrybentom zarejestrowanie i otrzym
   
  A `BaggageHandler` klasa jest odpowiedzialna za odbieranie informacji o nadchodzących lotów i bagażu oświadczenia karuzeli. Wewnętrznie obsługuje dwie kolekcje:  
   
--   `observers` -Kolekcję klientów, którzy będą otrzymywać aktualne informacje.  
+- `observers` -Kolekcję klientów, którzy będą otrzymywać aktualne informacje.  
   
--   `flights` -Zbiór lotów i ich przypisanej karuzeli.  
+- `flights` -Zbiór lotów i ich przypisanej karuzeli.  
   
  Obie kolekcje są reprezentowane przez ogólny <xref:System.Collections.Generic.List%601> obiektów, które są tworzone w `BaggageHandler` konstruktora klasy. Kod źródłowy `BaggageHandler` klasy przedstawiono w poniższym przykładzie.  
   

@@ -3,11 +3,11 @@ title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
 ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771862"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 .NET Framework Data Provider for Oracle obsługuje programu Oracle **REF CURSOR** typu danych. Przy użyciu dostawcy danych do pracy z Oracle REF CURSOR, należy rozważyć następujące zachowania.  
@@ -15,19 +15,19 @@ ms.locfileid: "59213171"
 > [!NOTE]
 >  Niektóre zachowania różnią się od dostawcy Microsoft OLE DB dla Oracle (MSDAORA i).  
   
--   Ze względu na wydajność Data Provider Pro Oracle nie jest automatycznie powiązana **REF CURSOR** typy danych, podobnie jak MSDAORA i, chyba że jawnie określisz je.  
+- Ze względu na wydajność Data Provider Pro Oracle nie jest automatycznie powiązana **REF CURSOR** typy danych, podobnie jak MSDAORA i, chyba że jawnie określisz je.  
   
--   Dostawca danych nie obsługuje żadnych sekwencje unikowe ODBC, w tym znak ucieczki {resultset} używane do określania parametrów REF CURSOR.  
+- Dostawca danych nie obsługuje żadnych sekwencje unikowe ODBC, w tym znak ucieczki {resultset} używane do określania parametrów REF CURSOR.  
   
--   Aby wykonać procedurę składowaną, która zwraca kursora REF CURSOR, należy zdefiniować parametry w <xref:System.Data.OracleClient.OracleParameterCollection> z <xref:System.Data.OracleClient.OracleType> z **kursora** i <xref:System.Data.OracleClient.OracleParameter.Direction%2A> z **dane wyjściowe**. Dostawca danych obsługuje powiązanie kursora REF CURSOR jako parametry wyjściowe tylko. Dostawca nie obsługuje kursora REF CURSOR jako parametry wejściowe.  
+- Aby wykonać procedurę składowaną, która zwraca kursora REF CURSOR, należy zdefiniować parametry w <xref:System.Data.OracleClient.OracleParameterCollection> z <xref:System.Data.OracleClient.OracleType> z **kursora** i <xref:System.Data.OracleClient.OracleParameter.Direction%2A> z **dane wyjściowe**. Dostawca danych obsługuje powiązanie kursora REF CURSOR jako parametry wyjściowe tylko. Dostawca nie obsługuje kursora REF CURSOR jako parametry wejściowe.  
   
--   Uzyskiwanie <xref:System.Data.OracleClient.OracleDataReader> z parametru wartość nie jest obsługiwana. Wartości są typu <xref:System.DBNull> po wykonaniu polecenia.  
+- Uzyskiwanie <xref:System.Data.OracleClient.OracleDataReader> z parametru wartość nie jest obsługiwana. Wartości są typu <xref:System.DBNull> po wykonaniu polecenia.  
   
--   Tylko **commandbehavior ustawiono** wartości wyliczenia, która współdziała z kursora REF CURSOR (na przykład w przypadku, gdy wywołanie <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) jest **metody**; pozostałe są ignorowane.  
+- Tylko **commandbehavior ustawiono** wartości wyliczenia, która współdziała z kursora REF CURSOR (na przykład w przypadku, gdy wywołanie <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) jest **metody**; pozostałe są ignorowane.  
   
--   Kolejność kursora REF CURSOR w **Element OracleDataReader** zależy od rzędu kilku parametrów w **OracleParameterCollection**. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> Właściwość jest ignorowana.  
+- Kolejność kursora REF CURSOR w **Element OracleDataReader** zależy od rzędu kilku parametrów w **OracleParameterCollection**. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> Właściwość jest ignorowana.  
   
--   PL/SQL **tabeli** typ danych nie jest obsługiwany. Jednak kursora REF CURSOR są bardziej wydajne. Jeśli musisz użyć **tabeli** typ danych, należy użyć z MSDAORA i dostawcy OLE DB .NET danych.  
+- PL/SQL **tabeli** typ danych nie jest obsługiwany. Jednak kursora REF CURSOR są bardziej wydajne. Jeśli musisz użyć **tabeli** typ danych, należy użyć z MSDAORA i dostawcy OLE DB .NET danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przykłady REF CURSOR](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  

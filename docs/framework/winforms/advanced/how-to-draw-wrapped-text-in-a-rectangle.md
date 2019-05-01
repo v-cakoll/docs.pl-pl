@@ -10,11 +10,11 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781403"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Instrukcje: Rysowanie zawiniętego tekstu w prostokącie
 Zawijanie tekstu w prostokącie można rysować za pomocą <xref:System.Drawing.Graphics.DrawString%2A> przeciążone metody <xref:System.Drawing.Graphics> klasy, która przyjmuje <xref:System.Drawing.Rectangle> lub <xref:System.Drawing.RectangleF> parametru. Ponadto <xref:System.Drawing.Brush> i <xref:System.Drawing.Font>.  
@@ -42,7 +42,7 @@ Zawijanie tekstu w prostokącie można rysować za pomocą <xref:System.Drawing.
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Wymagaj poprzednich przykładach:  
   
--   <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
+- <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz także
 

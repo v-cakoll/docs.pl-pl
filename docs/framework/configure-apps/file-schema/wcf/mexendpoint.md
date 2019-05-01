@@ -3,11 +3,11 @@ title: <mexEndpoint>
 ms.date: 03/30/2017
 ms.assetid: c9823060-0a5d-4f9d-99d4-4d113b758247
 ms.openlocfilehash: 8fffcc05d5f53f719efce182083fbf103b1230ff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772479"
 ---
 # <a name="mexendpoint"></a>\<mexEndpoint>
 Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem IMetadataExchange. Ponieważ wszystkie punkty końcowe wymiany metadanych określić IMetadataExchange jako ich kontraktu, możesz użyć tego standardowego punktu, zamiast definiować po jednym dla siebie.  

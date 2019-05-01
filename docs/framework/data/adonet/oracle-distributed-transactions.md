@@ -3,11 +3,11 @@ title: Transakcje rozproszone Oracle
 ms.date: 03/30/2017
 ms.assetid: c340ca81-ef79-402f-b204-c5156b890fe5
 ms.openlocfilehash: 4af1c98818f1929850c5ae78892c64993a93d4d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771959"
 ---
 # <a name="oracle-distributed-transactions"></a>Transakcje rozproszone Oracle
 <xref:System.Data.OracleClient.OracleConnection> Obiektu pozyskuje automatycznie w ramach istniejącej transakcji rozproszonej, gdy ustali, że jest aktywna transakcja. Rejestracja automatyczna transakcja występuje, gdy połączenie jest otwarte lub pobierane z puli połączeń. Funkcja automatycznego rejestracji w istniejących transakcji można wyłączyć, określając  

@@ -3,11 +3,11 @@ title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771972"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 .NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleBFile> klasę, która zostanie użyta do pracy z bazą danych Oracle <xref:System.Data.OracleClient.OracleType.BFile> typu danych.  
@@ -16,11 +16,11 @@ ms.locfileid: "59304470"
   
  Pozostałe właściwości **BPLIK** typu danych, które odróżnia go od **LOB** typ danych to że:  
   
--   Zawiera dane bez określonej struktury.  
+- Zawiera dane bez określonej struktury.  
   
--   Obsługuje segmentu po stronie serwera.  
+- Obsługuje segmentu po stronie serwera.  
   
--   Zastosowań odwoływać się do kopiowania semantyki. Na przykład, jeśli operacja kopiowania na **BPLIK**, tylko **BPLIK** Lokalizator (jest to odwołanie do pliku) są kopiowane. Dane w pliku nie jest kopiowany.  
+- Zastosowań odwoływać się do kopiowania semantyki. Na przykład, jeśli operacja kopiowania na **BPLIK**, tylko **BPLIK** Lokalizator (jest to odwołanie do pliku) są kopiowane. Dane w pliku nie jest kopiowany.  
   
  **BPLIK** typu danych, należy użyć do odwoływania się do obiektów LOB, które są duże i dlatego nie jest to praktyczne do przechowywania w bazie danych. Większe koszty komunikacji, serwerów i klientów jest zaangażowana w przypadku korzystania z **BPLIK** typu danych w porównaniu z **LOB** typu danych. Jest bardziej wydajne, aby uzyskać dostęp do **BPLIK** Jeśli potrzebujesz uzyskać niewielką ilość danych. Jest bardziej efektywne i uzyskać dostęp do obiektów LOB rezydentne bazy danych, gdy trzeba uzyskać cały obiekt.  
   

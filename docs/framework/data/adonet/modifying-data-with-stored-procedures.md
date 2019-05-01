@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
 ms.openlocfilehash: 7dfd4f07ba0a0473975d87c7cd166635473344a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772102"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modyfikowanie danych za pomocą procedur składowanych
 Procedury składowane może akceptować dane jako parametry wejściowe i mogą zwracać dane jako parametry wyjściowe, zestawów danych lub zwracanych wartości. Poniższy przykład ilustruje sposób ADO.NET wysyła i odbiera dane wejściowe parametrów wyjściowych parametry i zwracane wartości. Przykład Wstawia nowy rekord w tabeli, w których kolumna klucza podstawowego jest kolumną tożsamości w bazie danych programu SQL Server.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
 ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801884"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Pierwsza instrukcja tego elementu "Sub New" musi być jawnym wywołaniem elementu "MyBase.New" lub "MyClass.New", ponieważ "\<constructorname >" w klasie bazowej\<baseclassname > "z"\<derivedclassname > "jest oznaczony jako przestarzały:"\< komunikat o błędzie > "
 Konstruktor klasy nie jawnie wywołać konstruktora klasy bazowej i Konstruktor niejawne klasy bazowej jest oznaczona za pomocą <xref:System.ObsoleteAttribute> atrybut i dyrektywy traktowanie jej jako błąd.  

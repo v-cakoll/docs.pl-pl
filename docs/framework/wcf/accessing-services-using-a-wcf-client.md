@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782437"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta WCF
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Wiele wyjątków wygenerowanych przez klienta programu WCF są spowodowane przez wyjątek w usłudze. Przedstawiono kilka przykładów:
 
--   <xref:System.Net.Sockets.SocketException>: Istniejące połączenie zostało zamknięte przez hosta zdalnego.
+- <xref:System.Net.Sockets.SocketException>: Istniejące połączenie zostało zamknięte przez hosta zdalnego.
 
--   <xref:System.ServiceModel.CommunicationException>: Połączenie podstawowe zostało nieoczekiwanie zamknięte.
+- <xref:System.ServiceModel.CommunicationException>: Połączenie podstawowe zostało nieoczekiwanie zamknięte.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Połączenie gniazda zostało przerwane. Może to być spowodowane błędnym przetwarzaniem komunikatu, limit czasu odbioru przekroczenia przez hosta zdalnego lub podstawowym problemem z zasobami sieciowymi.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: Połączenie gniazda zostało przerwane. Może to być spowodowane błędnym przetwarzaniem komunikatu, limit czasu odbioru przekroczenia przez hosta zdalnego lub podstawowym problemem z zasobami sieciowymi.
 
 Po wystąpieniu tego rodzaju wyjątków, najlepszym sposobem rozwiązania tego problemu jest włączone jest śledzenie po stronie usługi i określić, jakie wyjątek wystąpił brak. Aby uzyskać więcej informacji na temat śledzenia, zobacz [śledzenia](../../../docs/framework/wcf/diagnostics/tracing/index.md) i [przy użyciu śledzenia do Rozwiązywanie problemów aplikacji](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 

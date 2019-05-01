@@ -3,11 +3,11 @@ title: Ochrona informacji o połączeniu
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
 ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878933"
 ---
 # <a name="protecting-connection-information"></a>Ochrona informacji o połączeniu
 Ochrona dostępu do źródła danych jest jednym z najważniejszych celów podczas zabezpieczania aplikacji. Parametry połączenia przedstawia informacje o potencjalnych luk w zabezpieczeniach, jeśli nie jest zabezpieczony. Przechowywanie informacji o połączeniu w postaci zwykłego tekstu lub utrwalanie go w pamięci ryzyko obniżania całego systemu. Parametry połączenia osadzone w kodzie źródłowym, może zostać odczytany przy użyciu [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić składnię języka Microsoft intermediate language (MSIL) w skompilowanym zestawie.  

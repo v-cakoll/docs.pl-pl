@@ -3,24 +3,24 @@ title: Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
 ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879596"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnieżdżone wewnątrz siebie nawzajem. W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące <xref:System.Data.DataSet>:  
   
--   Jedną tabelę dla każdego z typów złożonych (nadrzędnych i podrzędnych).  
+- Jedną tabelę dla każdego z typów złożonych (nadrzędnych i podrzędnych).  
   
--   Jeśli nie ograniczenia unique znajduje się na element nadrzędny, co dodatkowe kolumny klucza podstawowego dla definicji tabeli o nazwie *TableName*_identyfikator gdzie *TableName* jest nazwą tabeli nadrzędnej.  
+- Jeśli nie ograniczenia unique znajduje się na element nadrzędny, co dodatkowe kolumny klucza podstawowego dla definicji tabeli o nazwie *TableName*_identyfikator gdzie *TableName* jest nazwą tabeli nadrzędnej.  
   
--   Ograniczenia klucza podstawowego w tabeli nadrzędnej identyfikowanie dodatkową kolumnę jako klucz podstawowy (przez ustawienie **IsPrimaryKey** właściwości **True**). Ograniczenie o nazwie ograniczenie\# gdzie \# to 1, 2, 3 i tak dalej. Na przykład domyślna nazwa pierwszego ograniczenia jest Constraint1.  
+- Ograniczenia klucza podstawowego w tabeli nadrzędnej identyfikowanie dodatkową kolumnę jako klucz podstawowy (przez ustawienie **IsPrimaryKey** właściwości **True**). Ograniczenie o nazwie ograniczenie\# gdzie \# to 1, 2, 3 i tak dalej. Na przykład domyślna nazwa pierwszego ograniczenia jest Constraint1.  
   
--   Ograniczenia klucza obcego dla tabeli podrzędnej identyfikuje dodatkową kolumnę jako klucz obcy odwołujące się do klucza podstawowego tabeli nadrzędnej. Ograniczenie o nazwie *ParentTable_ChildTable* gdzie *ParentTable* jest nazwą tabeli nadrzędnej i *ChildTable* jest nazwą tabeli podrzędnej.  
+- Ograniczenia klucza obcego dla tabeli podrzędnej identyfikuje dodatkową kolumnę jako klucz obcy odwołujące się do klucza podstawowego tabeli nadrzędnej. Ograniczenie o nazwie *ParentTable_ChildTable* gdzie *ParentTable* jest nazwą tabeli nadrzędnej i *ChildTable* jest nazwą tabeli podrzędnej.  
   
--   Relacje danych między tabelami nadrzędnymi i podrzędnymi.  
+- Relacje danych między tabelami nadrzędnymi i podrzędnymi.  
   
  Poniższy przykład przedstawia schematu gdzie **OrderDetail** jest elementem podrzędnym **kolejności**.  
   
@@ -56,14 +56,14 @@ Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnie�
   
  Proces mapowania schematu XML tworzy następujące **zestawu danych**:  
   
--   **Kolejności** i **OrderDetail** tabeli.  
+- **Kolejności** i **OrderDetail** tabeli.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Ograniczenia unique wobec **kolejności** tabeli. Należy pamiętać, że **IsPrimaryKey** właściwość jest ustawiona na **True**.  
+- Ograniczenia unique wobec **kolejności** tabeli. Należy pamiętać, że **IsPrimaryKey** właściwość jest ustawiona na **True**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnie�
     IsPrimaryKey: True  
     ```  
   
--   Ograniczenie klucza obcego w **OrderDetail** tabeli.  
+- Ograniczenie klucza obcego w **OrderDetail** tabeli.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnie�
     RelatedColumns: Order_Id   
     ```  
   
--   Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .  
+- Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .  
   
     ```  
     ParentTable: Order  

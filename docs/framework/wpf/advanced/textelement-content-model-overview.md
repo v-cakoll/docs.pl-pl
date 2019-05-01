@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981880"
 ---
 # <a name="textelement-content-model-overview"></a>Przegląd Model zawartości TextElement
 Ten przegląd model zawartości w tym artykule opisano obsługiwane zawartość <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Klasa jest typem <xref:System.Windows.Documents.TextElement>. Model zawartości w tym artykule opisano obiekty/elementy mogą być zawarte w innym. W tym omówieniu przedstawiono podsumowanie model zawartości używane dla obiektów pochodzących od <xref:System.Windows.Documents.TextElement>. Aby uzyskać więcej informacji, zobacz [Przegląd dokumentu przepływu](flow-document-overview.md).  
@@ -57,11 +57,11 @@ Ten przegląd model zawartości w tym artykule opisano obsługiwane zawartość 
 ## <a name="working-with-textelement-content-programmatically"></a>Praca z zawartości TextElement programowe  
  Zawartość <xref:System.Windows.Documents.TextElement> jest tworzone przez kolekcje, a tym samym programowo manipulowanie zawartością <xref:System.Windows.Documents.TextElement> obiektów odbywa się dzięki współpracy z tymi kolekcjami. Istnieją trzy różne kolekcje posługują się <xref:System.Windows.Documents.TextElement> -klas pochodnych:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Reprezentuje kolekcję <xref:System.Windows.Documents.Inline> elementów. <xref:System.Windows.Documents.InlineCollection> definiuje zawartość elementu podrzędnego dopuszczalny rozmiar <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, i <xref:System.Windows.Controls.TextBlock> elementów.  
+- <xref:System.Windows.Documents.InlineCollection>: Reprezentuje kolekcję <xref:System.Windows.Documents.Inline> elementów. <xref:System.Windows.Documents.InlineCollection> definiuje zawartość elementu podrzędnego dopuszczalny rozmiar <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, i <xref:System.Windows.Controls.TextBlock> elementów.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Reprezentuje kolekcję <xref:System.Windows.Documents.Block> elementów. <xref:System.Windows.Documents.BlockCollection> definiuje zawartość elementu podrzędnego dopuszczalny rozmiar <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, i <xref:System.Windows.Documents.Figure> elementów.  
+- <xref:System.Windows.Documents.BlockCollection>: Reprezentuje kolekcję <xref:System.Windows.Documents.Block> elementów. <xref:System.Windows.Documents.BlockCollection> definiuje zawartość elementu podrzędnego dopuszczalny rozmiar <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, i <xref:System.Windows.Documents.Figure> elementów.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: Elementu zawartości przepływu, który reprezentuje określonego elementu zawartości uporządkowane i nieuporządkowane <xref:System.Windows.Documents.List>.  
+- <xref:System.Windows.Documents.ListItemCollection>: Elementu zawartości przepływu, który reprezentuje określonego elementu zawartości uporządkowane i nieuporządkowane <xref:System.Windows.Documents.List>.  
   
  Możesz manipulować (Dodawanie lub usuwanie elementów) w tych kolekcjach, za pomocą odpowiednich właściwości **Inlines**, **bloki**, i **ListItems**. W poniższych przykładach pokazano, jak i manipulować zawartością zakresu przy użyciu **Inlines** właściwości.  
   

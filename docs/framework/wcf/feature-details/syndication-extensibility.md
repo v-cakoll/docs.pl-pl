@@ -3,24 +3,24 @@ title: Rozszerzalność syndykacji
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
 ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915567"
 ---
 # <a name="syndication-extensibility"></a>Rozszerzalność syndykacji
 Syndykacja interfejs API umożliwiający niezależny od formatu model programowania, który umożliwia syndykowany zawartość do zapisania podczas transmisji w różnych formatach. Abstrakcyjny model danych zawiera następujące klasy:  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  W ramach tych zajęć mapować ściśle konstrukcje specyfikacją Atom 1.0, mimo że niektóre nazwy są różne.  
   
@@ -32,17 +32,17 @@ Syndykacja interfejs API umożliwiający niezależny od formatu model programowa
 ## <a name="deriving-a-new-class"></a>Nowa Klasa pochodząca  
  Nowa klasa może pochodzić z dowolnego z istniejącej klasy abstrakcyjnej danych w modelu. W tym podczas wdrażania aplikacji, w którym większość źródeł danych, którą pracujesz z ma określonego rozszerzenia. W tym temacie zawierają większość źródeł, w których działa program z `MyExtension` rozszerzenia. Aby zapewnić lepszą obsługę programowania, wykonaj następujące czynności:  
   
--   Utwórz klasę do przechowywania danych rozszerzenia. W takim przypadku należy utworzyć klasę o nazwie MyExtension.  
+- Utwórz klasę do przechowywania danych rozszerzenia. W takim przypadku należy utworzyć klasę o nazwie MyExtension.  
   
--   Pochodną klasę o nazwie MyExtensionItem z <xref:System.ServiceModel.Syndication.SyndicationItem> do udostępnienia właściwość typu MyExtension do celów programowania.  
+- Pochodną klasę o nazwie MyExtensionItem z <xref:System.ServiceModel.Syndication.SyndicationItem> do udostępnienia właściwość typu MyExtension do celów programowania.  
   
--   Zastąp <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> w klasie MyExtensionItem w celu utworzenia wystąpienia nowego wystąpienia MyExtension została przeczytana MyExtension.  
+- Zastąp <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> w klasie MyExtensionItem w celu utworzenia wystąpienia nowego wystąpienia MyExtension została przeczytana MyExtension.  
   
--   Zastąp <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> w klasie MyExtensionItem w celu zapisywania zawartości właściwość MyExtension do usługi składnika zapisywania XML.  
+- Zastąp <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> w klasie MyExtensionItem w celu zapisywania zawartości właściwość MyExtension do usługi składnika zapisywania XML.  
   
--   Pochodną klasę o nazwie MyExtensionFeed z <xref:System.ServiceModel.Syndication.SyndicationFeed>.  
+- Pochodną klasę o nazwie MyExtensionFeed z <xref:System.ServiceModel.Syndication.SyndicationFeed>.  
   
--   Zastąp <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> w klasie MyExtensionFeed w celu utworzenia wystąpienia MyExtensionItem zamiast domyślnego <xref:System.ServiceModel.Syndication.SyndicationItem>. Szereg metod są zdefiniowane w <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem> , można utworzyć <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, i <xref:System.ServiceModel.Syndication.SyndicationPerson> obiektów (na przykład <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, i <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Wszystkie z nich może zostać zastąpiona w celu utworzenie klasy pochodnej niestandardowej.  
+- Zastąp <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> w klasie MyExtensionFeed w celu utworzenia wystąpienia MyExtensionItem zamiast domyślnego <xref:System.ServiceModel.Syndication.SyndicationItem>. Szereg metod są zdefiniowane w <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem> , można utworzyć <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, i <xref:System.ServiceModel.Syndication.SyndicationPerson> obiektów (na przykład <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, i <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Wszystkie z nich może zostać zastąpiona w celu utworzenie klasy pochodnej niestandardowej.  
   
 ## <a name="see-also"></a>Zobacz także
 

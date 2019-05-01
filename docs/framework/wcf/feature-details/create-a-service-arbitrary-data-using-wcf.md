@@ -3,11 +3,11 @@ title: 'Instrukcje: tworzenie usługi przyjmującej dowolne dane w modelu progra
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
 ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857336"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Instrukcje: tworzenie usługi przyjmującej dowolne dane w modelu programowania REST programu WCF
 Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacja usługi musi zwracać dane w formacie nieobsługiwane byWCF. W tym temacie omówiono, aby utworzyć usługę, która odbiera dowolne dane za pomocą modelu programowania REST programu WCF.  
@@ -191,7 +191,7 @@ namespace ReceiveRawData
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Podczas kompilowania kodu odwołanie System.ServiceModel.dll i System.ServiceModel.Web.dll  
+- Podczas kompilowania kodu odwołanie System.ServiceModel.dll i System.ServiceModel.Web.dll  
   
 ## <a name="see-also"></a>Zobacz także
 

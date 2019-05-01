@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877685"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Włączanie wielu aktywnych zestawów wyników
 Wiele aktywnych zestawów wyników (MARS) jest funkcją, która współdziała z programem SQL Server, aby umożliwić wykonywanie wielu instancji na pojedyncze połączenie. Po włączeniu MARS do użytku z programem SQL Server każdego obiektu polecenia używane dodaje sesji połączenia.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Środowisko wykonawcze usługi batch obejmuje następujące składniki:  
   
--   Ustawianie opcji (na przykład ANSI_NULLS DATE_FORMAT, języka, wartość parametru TEXTSIZE)  
+- Ustawianie opcji (na przykład ANSI_NULLS DATE_FORMAT, języka, wartość parametru TEXTSIZE)  
   
--   Kontekst zabezpieczeń (rola użytkownika/aplikacji)  
+- Kontekst zabezpieczeń (rola użytkownika/aplikacji)  
   
--   Kontekst bazy danych (bieżącej bazy danych)  
+- Kontekst bazy danych (bieżącej bazy danych)  
   
--   Zmienne stanu wykonywania (na przykład @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- Zmienne stanu wykonywania (na przykład @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   Tabele tymczasowe najwyższego poziomu  
+- Tabele tymczasowe najwyższego poziomu  
   
  Za pomocą usług MARS domyślne środowisko wykonywania jest skojarzona z połączeniem. Co nową partię, który rozpoczyna wykonywanie w ramach danego połączenia otrzymuje kopię środowiska domyślnego. Zawsze, gdy kod jest wykonywany w danej partii, wszystkie zmiany wprowadzone w środowisku są ograniczone do określonej usługi batch. Po zakończeniu wykonywania, ustawienia wykonywania są kopiowane do środowiska domyślnego. W przypadku jednej partii wystawianie kilka poleceń do wykonania po kolei w ramach tej samej transakcji semantyka są takie same, jak udostępniany przez połączeń obejmujących starszych klientów lub serwerów.  
   

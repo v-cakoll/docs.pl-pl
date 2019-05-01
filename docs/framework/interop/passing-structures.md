@@ -10,11 +10,11 @@ ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8e35a09bd3348d5f53c662cf6e0ee9fec733d88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872654"
 ---
 # <a name="passing-structures"></a>Przekazywanie struktur
 Wiele funkcji niezarządzanych oczekuje przekazania jako parametr do funkcji elementów członkowskich struktury (typy zdefiniowane przez użytkownika w języku Visual Basic) lub elementów członkowskich klas, które są zdefiniowane w kodzie zarządzanym. Podczas wywołania przekazywanie struktury lub klasy do kodu niezarządzanego za pomocą platformy, należy podać dodatkowe informacje, aby zachować oryginalny układ i wyrównania. W tym temacie przedstawiono <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, który służy do definiowania typów sformatowany. Zarządzane struktur i klas, możesz wybrać z zachowaniami przewidywalne układu dostarczanych przez **LayoutKind** wyliczenia.  
@@ -29,11 +29,11 @@ Wiele funkcji niezarządzanych oczekuje przekazania jako parametr do funkcji ele
   
  W tabeli opisano następujące wytyczne dla deklaracji wywołania platformy:  
   
--   Struktura przekazywany przez wartość, gdy niezarządzanej funkcji zapotrzebowania na pośrednie nie jest używana.  
+- Struktura przekazywany przez wartość, gdy niezarządzanej funkcji zapotrzebowania na pośrednie nie jest używana.  
   
--   Użyj przekazywany przez odwołanie struktury lub klasy przekazywany przez wartość, gdy zapotrzebowania na jeden poziom pośredni w funkcji niezarządzanej.  
+- Użyj przekazywany przez odwołanie struktury lub klasy przekazywany przez wartość, gdy zapotrzebowania na jeden poziom pośredni w funkcji niezarządzanej.  
   
--   Używanie klasy przekazywany przez odwołanie, gdy niezarządzanej funkcji zapotrzebowania na dwóch poziomach operatorów pośrednich.  
+- Używanie klasy przekazywany przez odwołanie, gdy niezarządzanej funkcji zapotrzebowania na dwóch poziomach operatorów pośrednich.  
   
 ## <a name="declaring-and-passing-structures"></a>Deklarowanie i przekazywanie struktur  
  Poniższy przykład pokazuje jak zdefiniować `Point` i `Rect` struktury w kodzie zarządzanym i przekazywania typów jako parametr do **PtInRect** funkcji w pliku User32.dll. **PtInRect** ma następujący podpis niezarządzanych:  
@@ -180,6 +180,5 @@ public class TestPlatformInvoke
 ## <a name="see-also"></a>Zobacz także
 
 - [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
-- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

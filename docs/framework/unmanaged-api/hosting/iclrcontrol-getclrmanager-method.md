@@ -21,8 +21,8 @@ ms.openlocfilehash: 09079c8847b7cb995d97a4577d03982602bbadfa
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969900"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager — Metoda
 Pobiera wskaźnik interfejsu do wystąpienia dowolnego typu menedżera, która hosta można użyć do konfigurowania środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -40,19 +40,19 @@ HRESULT GetCLRManager (
  `riid`  
  [in] `IID` Typu Menedżera do zwrócenia. Następujące `IID` wartości są obsługiwane.  
   
--   IID_ICLRDebugManager: Określa, że `ppObject` będzie mieć typ [iclrdebugmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md).  
+- IID_ICLRDebugManager: Określa, że `ppObject` będzie mieć typ [iclrdebugmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md).  
   
--   IID_ICLRErrorReportingManager: Określa, że `ppObject` będzie mieć typ [iclrerrorreportingmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md).  
+- IID_ICLRErrorReportingManager: Określa, że `ppObject` będzie mieć typ [iclrerrorreportingmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md).  
   
--   IID_ICLRGCManager: Określa, że `ppObject` będzie mieć typ [iclrgcmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).  
+- IID_ICLRGCManager: Określa, że `ppObject` będzie mieć typ [iclrgcmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).  
   
--   IID_ICLRHostProtectionManager: Określa, że `ppObject` będzie mieć typ [iclrhostprotectionmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md).  
+- IID_ICLRHostProtectionManager: Określa, że `ppObject` będzie mieć typ [iclrhostprotectionmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md).  
   
--   IID_ICLROnEventManager: Określa, że `ppObject` będzie mieć typ [iclroneventmanager —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md).  
+- IID_ICLROnEventManager: Określa, że `ppObject` będzie mieć typ [iclroneventmanager —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md).  
   
--   IID_ICLRPolicyManager: Określa, że `ppObject` będzie mieć typ [iclrpolicymanager —](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).  
+- IID_ICLRPolicyManager: Określa, że `ppObject` będzie mieć typ [iclrpolicymanager —](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).  
   
--   IID_ICLRTaskManager: Określa, że `ppObject` będzie mieć typ [iclrtaskmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md).  
+- IID_ICLRTaskManager: Określa, że `ppObject` będzie mieć typ [iclrtaskmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md).  
   
  `ppObject`  
  [out] Wskaźnik interfejsu do żądanej menedżera lub wartość null, jeśli typ Menedżera nieprawidłowy otrzymał żądanie.  

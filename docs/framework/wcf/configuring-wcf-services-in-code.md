@@ -3,11 +3,11 @@ title: Konfigurowanie usług WCF w kodzie
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779759"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie
 Windows Communication Foundation (WCF) umożliwia deweloperom konfigurowanie usług za pomocą plików konfiguracji lub kodu.  Pliki konfiguracyjne są przydatne, gdy usługa musi zostać skonfigurowane po wdrożeniu. Korzystając z plików konfiguracji, specjalistów IT wystarczy zaktualizować plik konfiguracji, nie ponownej kompilacji jest wymagana. Pliki konfiguracyjne, może jednak być złożone i trudne w utrzymaniu. Brak obsługi debugowania plików konfiguracji i elementy konfiguracji odwołują się nazwy, co sprawia, że pliki konfiguracji tworzenia podatne na błędy i trudne. WCF umożliwia również skonfigurowanie usługi w kodzie. We wcześniejszych wersjach, konfigurowanie usług WCF (4.0 i starszych) w kodzie jest łatwe w scenariuszach Self-Hosted <xref:System.ServiceModel.ServiceHost> klasa dozwolona można skonfigurować punkty końcowe i zachowania przed wywołaniem ServiceHost.Open. W scenariuszach hostowanych w sieci web, ale nie masz bezpośredni dostęp do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować sieci web hostowanych usług, które są wymagane do utworzenia `System.ServiceModel.ServiceHostFactory` utworzonego <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać wszelkie wymagane konfiguracji. Począwszy od .NET 4.5 programu WCF zapewnia łatwiejszy sposób skonfigurować zarówno może być samodzielnie hostowane i sieci web hostowanej usługi w kodzie.  

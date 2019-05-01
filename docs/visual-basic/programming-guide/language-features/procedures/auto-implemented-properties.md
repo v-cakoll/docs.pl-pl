@@ -10,11 +10,11 @@ helpviewer_keywords:
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
 ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864316"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Właściwości zaimplementowane automatycznie (Visual Basic)
 *Właściwości zaimplementowane automatycznie* umożliwiają szybko określić właściwość klasy bez konieczności pisania kodu w celu `Get` i `Set` właściwości. Podczas pisania kodu dotyczący automatycznie implementowanej właściwości, kompilator Visual Basic automatycznie tworzy pole prywatne do przechowania zmiennej właściwość, oprócz tworzenia skojarzonego `Get` i `Set` procedur.  
@@ -52,13 +52,13 @@ End Class
   
  Pole zapasowe ma również następujące cechy:  
   
--   Modyfikator dostępu dla pola pomocniczego jest zawsze `Private`nawet wtedy, gdy samej właściwości ma poziom dostępu do różnych, takich jak `Public`.  
+- Modyfikator dostępu dla pola pomocniczego jest zawsze `Private`nawet wtedy, gdy samej właściwości ma poziom dostępu do różnych, takich jak `Public`.  
   
--   Jeśli właściwość jest oznaczona jako `Shared`, pole zapasowe również jest udostępniony.  
+- Jeśli właściwość jest oznaczona jako `Shared`, pole zapasowe również jest udostępniony.  
   
--   Atrybuty określone dla właściwości nie dotyczą pola pomocniczego.  
+- Atrybuty określone dla właściwości nie dotyczą pola pomocniczego.  
   
--   Pole zapasowe jest możliwy z kodu w klasie i narzędzia debugowania, takich jak okna czujki. Jednak pole zapasowe nie są wyświetlane na liście uzupełniania IntelliSense programu word.  
+- Pole zapasowe jest możliwy z kodu w klasie i narzędzia debugowania, takich jak okna czujki. Jednak pole zapasowe nie są wyświetlane na liście uzupełniania IntelliSense programu word.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Inicjowanie automatycznie implementowana właściwość  
  Dowolne wyrażenie, który może służyć do inicjowania pola jest prawidłowy dla automatycznie implementowanej właściwości inicjowania. Podczas inicjowania automatycznie implementowana właściwość wyrażenie jest obliczane i przekazywane do `Set` procedury dla właściwości. W poniższych przykładach kodu pokazano niektóre automatycznie implementowanych właściwości, które zawierają wartości początkowe.  
@@ -78,17 +78,17 @@ End Class
   
  Należy użyć składni definicji właściwości rozszerzonej, jeśli chcesz wykonać jedną z następujących czynności:  
   
--   Dodaj kod, aby `Get` lub `Set` procedury właściwości, takie jak kod do sprawdzania poprawności wartości przychodzących w `Set` procedury. Na przykład możesz chcieć sprawdzić, czy ciąg, który reprezentuje numer telefonu zawiera wymaganą liczbę cyfr, przed ustawieniem właściwości.  
+- Dodaj kod, aby `Get` lub `Set` procedury właściwości, takie jak kod do sprawdzania poprawności wartości przychodzących w `Set` procedury. Na przykład możesz chcieć sprawdzić, czy ciąg, który reprezentuje numer telefonu zawiera wymaganą liczbę cyfr, przed ustawieniem właściwości.  
   
--   Określ inną ułatwienia dostępu dla `Get` i `Set` procedury. Na przykład możesz chcieć wprowadzić `Set` procedury `Private` i `Get` procedury `Public`.  
+- Określ inną ułatwienia dostępu dla `Get` i `Set` procedury. Na przykład możesz chcieć wprowadzić `Set` procedury `Private` i `Get` procedury `Public`.  
   
--   Tworzenie właściwości, które są `WriteOnly`.  
+- Tworzenie właściwości, które są `WriteOnly`.  
   
--   Korzystanie z właściwości sparametryzowane (w tym `Default` właściwości). Należy zadeklarować właściwość rozszerzona w celu określenia parametru dla właściwości lub wymagają podania dodatkowych parametrów dla `Set` procedury.  
+- Korzystanie z właściwości sparametryzowane (w tym `Default` właściwości). Należy zadeklarować właściwość rozszerzona w celu określenia parametru dla właściwości lub wymagają podania dodatkowych parametrów dla `Set` procedury.  
   
--   Umieść atrybut na pole zapasowe lub zmień poziom dostępu do pola pomocniczego.  
+- Umieść atrybut na pole zapasowe lub zmień poziom dostępu do pola pomocniczego.  
   
--   Podaj komentarze XML dla pola pomocniczego.  
+- Podaj komentarze XML dla pola pomocniczego.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Rozszerzanie właściwości zaimplementowane automatycznie  
  Jeśli trzeba przekonwertować automatycznie implementowana właściwość rozszerzona właściwość, która zawiera `Get` lub `Set` procedury, Edytor kodu Visual Basic automatycznie wygenerować `Get` i `Set` procedur i `End Property`instrukcji dla właściwości. Kod jest generowany, jeżeli umieścisz kursor w następującym pustym wierszu `Property` instrukcji, wpisz `G` (dla `Get`) lub `S` (dla `Set`) i naciśnij klawisz ENTER. Edytor kodu Visual Basic automatycznie generuje `Get` lub `Set` procedury dla właściwości tylko do odczytu i tylko do zapisu, po naciśnięciu klawisza ENTER na końcu `Property` instrukcji.  

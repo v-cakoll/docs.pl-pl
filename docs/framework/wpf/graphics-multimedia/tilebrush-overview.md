@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973753"
 ---
 # <a name="tilebrush-overview"></a>TileBrush — Przegląd
 <xref:System.Windows.Media.TileBrush> obiekty umożliwiają z dużym stopniem kontrolę nad jak obszar jest malowane z obrazem, <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>. W tym temacie opisano sposób użycia <xref:System.Windows.Media.TileBrush> funkcje, aby uzyskać większą kontrolę nad jak <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, lub <xref:System.Windows.Media.VisualBrush> Malowanie obszaru.  
@@ -40,11 +40,11 @@ Składniki TileBrush z TileMode kafelka
 ## <a name="brush-content"></a>Zawartość pędzla  
  Istnieją trzy różne rodzaje <xref:System.Windows.Media.TileBrush> i maluje każdej z innym typem zawartości.  
   
--   Jeśli jest pędzel <xref:System.Windows.Media.ImageBrush>, ta zawartość jest obrazem <xref:System.Windows.Media.ImageBrush.ImageSource%2A> właściwość określa zawartości <xref:System.Windows.Media.ImageBrush>.  
+- Jeśli jest pędzel <xref:System.Windows.Media.ImageBrush>, ta zawartość jest obrazem <xref:System.Windows.Media.ImageBrush.ImageSource%2A> właściwość określa zawartości <xref:System.Windows.Media.ImageBrush>.  
   
--   Jeśli jest pędzel <xref:System.Windows.Media.DrawingBrush>, ta zawartość jest rysowania. <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Właściwość określa zawartości <xref:System.Windows.Media.DrawingBrush>.  
+- Jeśli jest pędzel <xref:System.Windows.Media.DrawingBrush>, ta zawartość jest rysowania. <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Właściwość określa zawartości <xref:System.Windows.Media.DrawingBrush>.  
   
--   Jeśli jest pędzel <xref:System.Windows.Media.VisualBrush>, ta zawartość jest wizualizacji. <xref:System.Windows.Media.VisualBrush.Visual%2A> Właściwość określa zawartości <xref:System.Windows.Media.VisualBrush>.  
+- Jeśli jest pędzel <xref:System.Windows.Media.VisualBrush>, ta zawartość jest wizualizacji. <xref:System.Windows.Media.VisualBrush.Visual%2A> Właściwość określa zawartości <xref:System.Windows.Media.VisualBrush>.  
   
  Można określić położenie i wymiary <xref:System.Windows.Media.TileBrush> zawartości przy użyciu <xref:System.Windows.Media.TileBrush.Viewbox%2A> właściwości, mimo że często, aby pozostawić <xref:System.Windows.Media.TileBrush.Viewbox%2A> ustawiony na wartość domyślną. Domyślnie <xref:System.Windows.Media.TileBrush.Viewbox%2A> jest skonfigurowany do całkowicie zawierają zawartość pędzla. Aby uzyskać więcej informacji o konfigurowaniu <xref:System.Windows.Controls.Viewbox>, zobacz <xref:System.Windows.Controls.Viewbox> stronę właściwości.  
   
@@ -52,13 +52,13 @@ Składniki TileBrush z TileMode kafelka
 ## <a name="the-base-tile"></a>Podstawowy Kafelek  
  A <xref:System.Windows.Media.TileBrush> projektów jego zawartość na podstawowy Kafelek. <xref:System.Windows.Media.TileBrush.Stretch%2A> Właściwości kontrolki jak <xref:System.Windows.Media.TileBrush> zawartości jest rozciągany tak, aby wypełnić podstawowy Kafelek. <xref:System.Windows.Media.TileBrush.Stretch%2A> Właściwość akceptuje następujące wartości, zdefiniowane przez <xref:System.Windows.Media.Stretch> wyliczenia:  
   
--   <xref:System.Windows.Media.Stretch.None>: Pędzel zawartość nie jest rozciągana do wypełnienia kafelka.  
+- <xref:System.Windows.Media.Stretch.None>: Pędzel zawartość nie jest rozciągana do wypełnienia kafelka.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Pędzel zawartość jest skalowana do rozmiaru kafelka. Ponieważ wysokość i szerokość zawartość jest skalowana niezależnie, oryginalny współczynnik proporcji zawartości mogą nie zostać zachowane. Oznacza to, że zawartość pędzla może zniekształcenia Aby całkowicie wypełnić kafelka dane wyjściowe.  
+- <xref:System.Windows.Media.Stretch.Fill>: Pędzel zawartość jest skalowana do rozmiaru kafelka. Ponieważ wysokość i szerokość zawartość jest skalowana niezależnie, oryginalny współczynnik proporcji zawartości mogą nie zostać zachowane. Oznacza to, że zawartość pędzla może zniekształcenia Aby całkowicie wypełnić kafelka dane wyjściowe.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Pędzel zawartość jest skalowana tak, aby zmieścił się całkowicie we fragmencie. Zawartość proporcje są zachowywane.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Pędzel zawartość jest skalowana tak, aby zmieścił się całkowicie we fragmencie. Zawartość proporcje są zachowywane.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Pędzel zawartość jest skalowana tak, aby całkowicie wypełnia obszar wyjściowy przy jednoczesnym zapewnieniu właściwej zawartości oryginalnego współczynnika proporcji.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Pędzel zawartość jest skalowana tak, aby całkowicie wypełnia obszar wyjściowy przy jednoczesnym zapewnieniu właściwej zawartości oryginalnego współczynnika proporcji.  
   
  Na poniższym obrazie przedstawiono poszczególne <xref:System.Windows.Media.TileBrush.Stretch%2A> ustawienia.  
   
@@ -99,15 +99,15 @@ Składniki TileBrush z TileMode kafelka
 ### <a name="tiling-behavior"></a>Zachowanie fragmentacji  
  A <xref:System.Windows.Media.TileBrush> generuje wzorzec fragmentacji, podczas jego podstawowy Kafelek nie wypełnia całkowicie obszaru wyjściowego i tryb fragmentacji innych następnie <xref:System.Windows.Media.TileMode.None> jest określony. Gdy Kafelek pędzla kafelków nie wypełnia całkowicie obszaru wyjściowego jego <xref:System.Windows.Media.TileBrush.TileMode%2A> właściwość określa, czy powinny zostać zduplikowane podstawowy Kafelek, aby wypełnił obszar danych wyjściowych, a jeśli tak, jak podstawowy Kafelek powinny zostać zduplikowane. <xref:System.Windows.Media.TileBrush.TileMode%2A> Właściwość akceptuje następujące wartości, zdefiniowane przez <xref:System.Windows.Media.TileMode> wyliczenia:  
   
--   <xref:System.Windows.Media.TileMode.None>: Podstawowy Kafelek jest rysowane.  
+- <xref:System.Windows.Media.TileMode.None>: Podstawowy Kafelek jest rysowane.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Podstawowy Kafelek jest rysowana, a pozostałe obszar zostanie wypełniony przez powtarzanie podstawowy Kafelek taki sposób, że prawą krawędzią jeden Kafelek jest przyległa do lewej krawędzi następnego i podobnie dla dołu i od góry.  
+- <xref:System.Windows.Media.TileMode.Tile>: Podstawowy Kafelek jest rysowana, a pozostałe obszar zostanie wypełniony przez powtarzanie podstawowy Kafelek taki sposób, że prawą krawędzią jeden Kafelek jest przyległa do lewej krawędzi następnego i podobnie dla dołu i od góry.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Taka sama jak <xref:System.Windows.Media.TileMode.Tile>, ale kolumn alternatywnego Kafelki są przerzucane poziomo.  
+- <xref:System.Windows.Media.TileMode.FlipX>: Taka sama jak <xref:System.Windows.Media.TileMode.Tile>, ale kolumn alternatywnego Kafelki są przerzucane poziomo.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Taka sama jak <xref:System.Windows.Media.TileMode.Tile>, ale naprzemienne wiersze Kafelki są przerzucane w pionie.  
+- <xref:System.Windows.Media.TileMode.FlipY>: Taka sama jak <xref:System.Windows.Media.TileMode.Tile>, ale naprzemienne wiersze Kafelki są przerzucane w pionie.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Kombinacji <xref:System.Windows.Media.TileMode.FlipX> i <xref:System.Windows.Media.TileMode.FlipY>.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: Kombinacji <xref:System.Windows.Media.TileMode.FlipX> i <xref:System.Windows.Media.TileMode.FlipY>.  
   
  Na poniższym obrazie przedstawiono tryby różnych fragmentacji.  
   

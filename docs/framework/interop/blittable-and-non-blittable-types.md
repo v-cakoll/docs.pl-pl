@@ -8,11 +8,11 @@ ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873590"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Typy kopiowalne i niekopiowalne
 Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych i niezarządzanych i nie wymagają specjalnej obsługi, organizator międzyoperacyjny. Te typy są nazywane *kopiowalnymi* , ponieważ nie wymaga konwersji, gdy są one przekazywane między kodu zarządzanego i niezarządzanego.  
@@ -21,35 +21,35 @@ Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych
   
  Następujące typy z <xref:System> nazw są typy danych kopiowalnych:  
   
--   <xref:System.Byte?displayProperty=nameWithType>  
+- <xref:System.Byte?displayProperty=nameWithType>  
   
--   <xref:System.SByte?displayProperty=nameWithType>  
+- <xref:System.SByte?displayProperty=nameWithType>  
   
--   <xref:System.Int16?displayProperty=nameWithType>  
+- <xref:System.Int16?displayProperty=nameWithType>  
   
--   <xref:System.UInt16?displayProperty=nameWithType>  
+- <xref:System.UInt16?displayProperty=nameWithType>  
   
--   <xref:System.Int32?displayProperty=nameWithType>  
+- <xref:System.Int32?displayProperty=nameWithType>  
   
--   <xref:System.UInt32?displayProperty=nameWithType>  
+- <xref:System.UInt32?displayProperty=nameWithType>  
   
--   <xref:System.Int64?displayProperty=nameWithType>  
+- <xref:System.Int64?displayProperty=nameWithType>  
   
--   <xref:System.UInt64?displayProperty=nameWithType>  
+- <xref:System.UInt64?displayProperty=nameWithType>  
   
--   <xref:System.IntPtr?displayProperty=nameWithType>  
+- <xref:System.IntPtr?displayProperty=nameWithType>  
   
--   <xref:System.UIntPtr?displayProperty=nameWithType>  
+- <xref:System.UIntPtr?displayProperty=nameWithType>  
   
--   <xref:System.Single?displayProperty=nameWithType>  
+- <xref:System.Single?displayProperty=nameWithType>  
   
--   <xref:System.Double?displayProperty=nameWithType>  
+- <xref:System.Double?displayProperty=nameWithType>  
   
  Typy danych kopiowalnych są również następujące typy złożone:  
   
--   Tablice jednowymiarowe typów danych kopiowalnych, takich jak tablica liczb całkowitych. Typ, który zawiera zmienną tablicy typów danych kopiowalnych nie jest jednak sam danych kopiowalnych.  
+- Tablice jednowymiarowe typów danych kopiowalnych, takich jak tablica liczb całkowitych. Typ, który zawiera zmienną tablicy typów danych kopiowalnych nie jest jednak sam danych kopiowalnych.  
   
--   Typy sformatowanej wartości, które zawierają typy danych kopiowalnych tylko (i klasy, jeśli są one organizowane jak sformatowane typy). Aby uzyskać więcej informacji na temat typów sformatowaną wartość zobacz [domyślny marshaling dla typów wartości](default-marshaling-behavior.md#default-marshaling-for-value-types).  
+- Typy sformatowanej wartości, które zawierają typy danych kopiowalnych tylko (i klasy, jeśli są one organizowane jak sformatowane typy). Aby uzyskać więcej informacji na temat typów sformatowaną wartość zobacz [domyślny marshaling dla typów wartości](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Odwołania do obiektu nie są danych kopiowalnych. Obejmuje to tablica odniesień do obiektów, które danych kopiowalnych samodzielnie. Na przykład można zdefiniować strukturę danych kopiowalnych, ale nie można zdefiniować typ danych kopiowalnych, który zawiera szereg odwołań do tych struktur.  
   

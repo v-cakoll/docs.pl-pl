@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914073"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Instrukcje: Debugowanie aplikacji usług systemu Windows
 Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a nie z poziomu programu Visual Studio. Z tego powodu debugowanie usługi jest tak proste jak debugowanie innych typów aplikacji Visual Studio. Aby debugować usługę, należy uruchomić usługę i następnie dołączyć debuger do procesu, w którym jest uruchomiony. Następnie można debugować aplikację za pomocą wszystkich standardowych funkcji debugowania programu Visual Studio.  

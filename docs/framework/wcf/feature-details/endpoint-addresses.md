@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856638"
 ---
 # <a name="endpoint-addresses"></a>Adresy punktów końcowych
 Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zlokalizować i zidentyfikować punkt końcowy. Ten adres składa się przede wszystkim z zasobów identyfikator URI (Uniform), który określa położenie punktu końcowego. Adres punktu końcowego jest reprezentowana w modelu programowania Windows Communication Foundation (WCF) przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera opcjonalny <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiany wiadomości z nim i zestaw opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, które definiują innych nagłówków protokołu SOAP, wymagane w celu dotarcia do usługi. Opcjonalne nagłówki zapewnić dodatkowe i bardziej szczegółowe informacje dotyczące adresowania do identyfikacji lub interakcji z punktu końcowego usługi. Adres punktu końcowego jest reprezentowany w sieci jako odwołanie WS-Addressing punktu końcowego (EPR).  
@@ -19,13 +19,13 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
 ## <a name="uri-structure-of-an-address"></a>Identyfikator URI struktury adresu  
  Adres URI dla większości transportu ma cztery części. Na przykład czterech części identyfikatora URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` może być wyszczególnione w następujący sposób:  
   
--   Schemat: `http:`
+- Schemat: `http:`
   
--   Maszyny: `www.fabrikam.com`  
+- Maszyny: `www.fabrikam.com`  
   
--   (opcjonalnie) Port: 322  
+- (opcjonalnie) Port: 322  
   
--   Path: /mathservice.svc/secureEndpoint  
+- Path: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definiowanie adres usługi  
  Adres punktu końcowego usługi można określić obowiązkowo za pomocą kodu lub deklaratywne za pomocą konfiguracji. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie sporządzana. Ogólnie rzecz biorąc lepiej jest punkty końcowe usługi przy użyciu konfiguracji zamiast kodu. Zachowanie powiązania i adresowanie z kodu pozwala zmienić bez konieczności ponownego kompilowania lub ponownego wdrażania aplikacji.  
@@ -46,9 +46,9 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
   
  Poniższy przykład przedstawia składniki, które mogą być obecne w powiązaniu usługi IIS:  
   
--   Protokół powiązania: HTTP  
+- Protokół powiązania: HTTP  
   
--   Informacje o powiązaniu: Adres IP, portu i nagłówka hosta  
+- Informacje o powiązaniu: Adres IP, portu i nagłówka hosta  
   
  Usługi IIS można określić wiele powiązań dla każdej lokacji, co skutkuje z wieloma adresami podstawowymi dla każdego schematu. Przed [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF nie obsługują wielu adresów dla schematu i, jeśli zostały określone, zgłosił <xref:System.ArgumentException> podczas aktywacji.  
   
@@ -100,15 +100,15 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
 ## <a name="extending-addressing-in-wcf-services"></a>Rozszerzanie adresowania w usługach WCF  
  Domyślne adresowania modelu usług WCF używa adres URI punktu końcowego w następujących celach:  
   
--   Aby określić usługi adresu nasłuchiwania, lokalizacji, w jakim punkt końcowy będzie nasłuchiwać pod kątem wiadomości,  
+- Aby określić usługi adresu nasłuchiwania, lokalizacji, w jakim punkt końcowy będzie nasłuchiwać pod kątem wiadomości,  
   
--   Aby określić filtr adresu protokołu SOAP, adres punktu końcowego oczekuje jako nagłówek SOAP.  
+- Aby określić filtr adresu protokołu SOAP, adres punktu końcowego oczekuje jako nagłówek SOAP.  
   
  Wartości dla każdej z tych celów można określić osobno, dzięki czemu kilka rozszerzeń adresowania tego obejmują scenariusze przydatne:  
   
--   Pośredników SOAP: wiadomości wysłane przez klienta przechodzi przez jeden lub więcej dodatkowych usług, które przetworzyć komunikatu przed osiągnięciem przez nią miejsca przeznaczenia. Pośredników SOAP można wykonywać różne zadania, takie jak weryfikacja buforowania, routingu, równoważenia obciążenia lub schemat dla wiadomości. W tym scenariuszu odbywa się przez wysyłanie komunikatów do osobnych adresów fizycznych (`via`) który jest przeznaczony dla pośrednie, a nie po prostu adres logiczny (`wsa:To`) który jest przeznaczony dla docelowego ultimate.  
+- Pośredników SOAP: wiadomości wysłane przez klienta przechodzi przez jeden lub więcej dodatkowych usług, które przetworzyć komunikatu przed osiągnięciem przez nią miejsca przeznaczenia. Pośredników SOAP można wykonywać różne zadania, takie jak weryfikacja buforowania, routingu, równoważenia obciążenia lub schemat dla wiadomości. W tym scenariuszu odbywa się przez wysyłanie komunikatów do osobnych adresów fizycznych (`via`) który jest przeznaczony dla pośrednie, a nie po prostu adres logiczny (`wsa:To`) który jest przeznaczony dla docelowego ultimate.  
   
--   Nasłuchiwania adres punktu końcowego jest prywatny identyfikator URI i jest ustawiona na wartość inną niż jego `listenURI` właściwości.  
+- Nasłuchiwania adres punktu końcowego jest prywatny identyfikator URI i jest ustawiona na wartość inną niż jego `listenURI` właściwości.  
   
  Transport adresu, który `via` Określa lokalizację, do którego wiadomość początkowo powinny być wysyłane na drodze do zdalny adres określoną przez `to` parametru, w której znajduje się usługa. W większości scenariuszy Internetu `via` identyfikatora URI jest taka sama jak <xref:System.ServiceModel.EndpointAddress.Uri%2A> właściwość końcowe `to` adres usługi. Rozróżnienie tylko te dwa adresy, gdy należy wykonać ręczne trasowanie.  
   
@@ -117,9 +117,9 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
   
  Można zdefiniować nagłówki niestandardowe adresów na dwa sposoby — przy użyciu kodu lub konfiguracji:  
   
--   W kodzie, należy utworzyć niestandardowy adres nagłówki przy użyciu <xref:System.ServiceModel.Channels.AddressHeader> klasy, a następnie używany do budowy <xref:System.ServiceModel.EndpointAddress>.  
+- W kodzie, należy utworzyć niestandardowy adres nagłówki przy użyciu <xref:System.ServiceModel.Channels.AddressHeader> klasy, a następnie używany do budowy <xref:System.ServiceModel.EndpointAddress>.  
   
--   W konfiguracji niestandardowej [ \<nagłówki >](../../configure-apps/file-schema/wcf/headers.md) są określane jako elementy podrzędne [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu.  
+- W konfiguracji niestandardowej [ \<nagłówki >](../../configure-apps/file-schema/wcf/headers.md) są określane jako elementy podrzędne [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu.  
   
  Konfiguracja jest zazwyczaj kod, jako umożliwia zmienianie nagłówków po wdrożeniu.  
   
@@ -128,9 +128,9 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
   
  Można określić niestandardowego adresu nasłuchiwania, za pomocą kodu lub konfiguracji:  
   
--   W kodzie, należy określić niestandardowe adresu nasłuchiwania, dodając <xref:System.ServiceModel.Description.ClientViaBehavior> klasy kolekcji zachowanie punktu końcowego.  
+- W kodzie, należy określić niestandardowe adresu nasłuchiwania, dodając <xref:System.ServiceModel.Description.ClientViaBehavior> klasy kolekcji zachowanie punktu końcowego.  
   
--   W konfiguracji, należy określić niestandardowe adresu nasłuchiwania z `ListenUri` atrybut usługi [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) elementu.  
+- W konfiguracji, należy określić niestandardowe adresu nasłuchiwania z `ListenUri` atrybut usługi [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) elementu.  
   
 ### <a name="custom-soap-address-filter"></a>Filtr adresów niestandardowego protokołu SOAP  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> Jest używany w połączeniu ze wszystkimi <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, aby zdefiniować punkt końcowy protokołu SOAP adres filtru (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Domyślnie ten filtr sprawdza, czy wiadomości przychodzące ma `To` nagłówka wiadomości, odpowiadającą punktowi przez identyfikator URI i czy wszystkie nagłówki wymaganego punktu końcowego w wiadomości.  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792837"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autoryzacja oparta na oświadczeniach przy użyciu programu WIF
 W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów może uzyskać dostęp uwierzytelniona tożsamość i jakie operacje może wykonywać w odniesieniu do tych zasobów. Niewłaściwa lub słaba autoryzacja może doprowadzić do ujawnienia informacji i nieuprawnionej modyfikacji danych. W tym temacie opisano dostępne sposoby zaimplementowania autoryzacji dla aplikacji i usług internetowych programu ASP.NET obsługujących oświadczenia, za pomocą programu Windows Identity Foundation (WIF) i usługi tokenu zabezpieczającego (STS), na przykład usługi kontroli dostępu (ACS) systemu Microsoft Azure.  
@@ -25,13 +25,13 @@ W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów mo�
 ### <a name="iprincipalisinrole-method"></a>Metoda IPrincipal.IsInRole  
  Aby zaimplementować podejście RBAC w aplikacjach obsługujących oświadczenia, należy użyć **IsInRole()** method in Class metoda **IPrinicpal** interfejsu, tak samo, jak w innych — aplikacji obsługujących oświadczenia. Istnieje kilka sposobów użycia **IsInRole()** metody:  
   
--   Jawne wywołanie **IPrincipal.IsInRole("Administrator")**. W tym podejściu wynik jest wartością logiczną. Należy go używać w instrukcjach warunkowych. Można go użyć w dowolny sposób i w dowolnym miejscu w kodzie.  
+- Jawne wywołanie **IPrincipal.IsInRole("Administrator")**. W tym podejściu wynik jest wartością logiczną. Należy go używać w instrukcjach warunkowych. Można go użyć w dowolny sposób i w dowolnym miejscu w kodzie.  
   
--   Za pomocą żądania zabezpieczeń **PrincipalPermission.Demand()**. W tym podejściu wynik jest wyjątkiem w przypadku, gdy wymóg nie jest spełniony. Powinno ono pasować do stosowanej strategii obsługi wyjątków. Zgłaszanie wyjątków jest znacznie bardziej kosztowne z punktu widzenia wydajności w porównaniu do zwracania atrybut typu wartość logiczna. Można go użyć w dowolnym miejscu w kodzie.  
+- Za pomocą żądania zabezpieczeń **PrincipalPermission.Demand()**. W tym podejściu wynik jest wyjątkiem w przypadku, gdy wymóg nie jest spełniony. Powinno ono pasować do stosowanej strategii obsługi wyjątków. Zgłaszanie wyjątków jest znacznie bardziej kosztowne z punktu widzenia wydajności w porównaniu do zwracania atrybut typu wartość logiczna. Można go użyć w dowolnym miejscu w kodzie.  
   
--   Użycie atrybutów deklaratywnych **[PrincipalPermission (SecurityAction.Demand, Role = "Administrator")]**. To podejście jest nazywane deklaratywnym, ponieważ jest używane do dekorowania metod. Nie można go używać w blokach kodu wewnątrz implementacji metody. Wynik jest wyjątkiem w przypadku, gdy wymóg nie jest spełniony. Należy upewnić się, że to podejście pasuje do stosowanej strategii obsługi wyjątków.  
+- Użycie atrybutów deklaratywnych **[PrincipalPermission (SecurityAction.Demand, Role = "Administrator")]**. To podejście jest nazywane deklaratywnym, ponieważ jest używane do dekorowania metod. Nie można go używać w blokach kodu wewnątrz implementacji metody. Wynik jest wyjątkiem w przypadku, gdy wymóg nie jest spełniony. Należy upewnić się, że to podejście pasuje do stosowanej strategii obsługi wyjątków.  
   
--   Za pomocą Autoryzacja adresów URL, za pomocą  **\<autoryzacji >** sekcji **web.config**. To podejście jest odpowiednie w przypadku zarządzania autoryzacją na poziomie adresu URL. Jest to najbardziej zgrubny poziom spośród dotychczas wymienionych. Zaletą tego podejścia jest to, że zmiany są dokonywane w pliku konfiguracji, co oznacza, że nie trzeba kompilować kodu w celu skorzystania ze zmiany.  
+- Za pomocą Autoryzacja adresów URL, za pomocą  **\<autoryzacji >** sekcji **web.config**. To podejście jest odpowiednie w przypadku zarządzania autoryzacją na poziomie adresu URL. Jest to najbardziej zgrubny poziom spośród dotychczas wymienionych. Zaletą tego podejścia jest to, że zmiany są dokonywane w pliku konfiguracji, co oznacza, że nie trzeba kompilować kodu w celu skorzystania ze zmiany.  
   
 ### <a name="expressing-roles-as-claims"></a>Wyrażanie ról jako oświadczeń  
  Gdy **IsInRole()** metoda jest wywoływana, jest sprawdzenie, czy bieżący użytkownik ma tę rolę. W aplikacjach obsługujących oświadczenia rola jest wyrażana przez typ oświadczenia roli, który powinien być dostępny w tokenie. Typ oświadczenia roli jest wyrażany za pomocą następującego identyfikatora URI:  
@@ -40,11 +40,11 @@ W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów mo�
   
  Istnieje kilka sposobów wzbogacenia tokenu o typ oświadczenia roli:  
   
--   **Podczas wystawiania tokenu**. Gdy użytkownik jest uwierzytelniany, oświadczenie roli mogą być wystawiane przez usługę STS dostawcy tożsamości lub dostawcy federacyjnego takich jak Windows Azure Access Control Service (ACS).  
+- **Podczas wystawiania tokenu**. Gdy użytkownik jest uwierzytelniany, oświadczenie roli mogą być wystawiane przez usługę STS dostawcy tożsamości lub dostawcy federacyjnego takich jak Windows Azure Access Control Service (ACS).  
   
--   **Przekształcenie dowolnych oświadczeń w oświadczenia typu roli za pomocą ClaimsAuthenticationManager**. ClaimsAuthenticationManager jest składnikiem, który wchodzi w skład programu WIF. Pozwala na przechwytywanie żądań, gdy uruchamiają one aplikację, sprawdzanie tokenów i przekształcanie ich przez dodawanie, zmienianie lub usuwanie oświadczeń. Aby uzyskać więcej informacji o sposobie używania składnika ClaimsAuthenticationManager do przekształcania oświadczeń, zobacz [How to: Implementowanie roli na podstawie kontroli dostępu (RBAC) w aplikacji ASP.NET pamiętać oświadczenia, za pomocą programu WIF i usługi ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+- **Przekształcenie dowolnych oświadczeń w oświadczenia typu roli za pomocą ClaimsAuthenticationManager**. ClaimsAuthenticationManager jest składnikiem, który wchodzi w skład programu WIF. Pozwala na przechwytywanie żądań, gdy uruchamiają one aplikację, sprawdzanie tokenów i przekształcanie ich przez dodawanie, zmienianie lub usuwanie oświadczeń. Aby uzyskać więcej informacji o sposobie używania składnika ClaimsAuthenticationManager do przekształcania oświadczeń, zobacz [How to: Implementowanie roli na podstawie kontroli dostępu (RBAC) w aplikacji ASP.NET pamiętać oświadczenia, za pomocą programu WIF i usługi ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
--   **Zmapowanie dowolnych oświadczeń na typ roli przy użyciu sekcji konfiguracji samlSecurityTokenRequirement**— podejście deklaratywne, w którym przekształcenie oświadczeń jest wykonywane przy użyciu tylko konfiguracji i bez kodowania jest wymagana.  
+- **Zmapowanie dowolnych oświadczeń na typ roli przy użyciu sekcji konfiguracji samlSecurityTokenRequirement**— podejście deklaratywne, w którym przekształcenie oświadczeń jest wykonywane przy użyciu tylko konfiguracji i bez kodowania jest wymagana.  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>Autoryzacja oparta na oświadczeniach  

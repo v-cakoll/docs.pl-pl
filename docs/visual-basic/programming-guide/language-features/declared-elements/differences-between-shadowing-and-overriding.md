@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827947"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Różnice pomiędzy przesłanianiem i zastępowaniem (Visual Basic)
 Podczas definiowania klasy, która dziedziczy z klasy bazowej, czasami trzeba na nowo zdefiniować co najmniej jeden z elementów klasy podstawowej w klasie pochodnej. Przesłanianiem i zastępowaniem są dostępne w tym celu.  
@@ -41,15 +41,15 @@ Podczas definiowania klasy, która dziedziczy z klasy bazowej, czasami trzeba na
 ## <a name="guidelines"></a>Wytyczne dotyczące  
  Zwykle używana, zastępowanie w następujących przypadkach:  
   
--   Definiujesz polimorficznych klas pochodnych.  
+- Definiujesz polimorficznych klas pochodnych.  
   
--   Chcesz, aby bezpieczeństwa mające kompilatora wymusić typ elementu identyczne i sekwencja wywoływania.  
+- Chcesz, aby bezpieczeństwa mające kompilatora wymusić typ elementu identyczne i sekwencja wywoływania.  
   
  Zwykle używana, przesłanianie w następujących przypadkach:  
   
--   Przewiduje się, że klasę bazową mogą zostać zmodyfikowane i zdefiniuj elementu za pomocą tej samej nazwie jako należy do Ciebie.  
+- Przewiduje się, że klasę bazową mogą zostać zmodyfikowane i zdefiniuj elementu za pomocą tej samej nazwie jako należy do Ciebie.  
   
--   Możesz korzystać ze swobody zmieniając typ elementu lub sekwencja wywoływania.  
+- Możesz korzystać ze swobody zmieniając typ elementu lub sekwencja wywoływania.  
   
 ## <a name="see-also"></a>Zobacz także
 

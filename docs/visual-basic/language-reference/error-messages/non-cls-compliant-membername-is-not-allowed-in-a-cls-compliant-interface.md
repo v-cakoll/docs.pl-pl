@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
 ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918206"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Non zgodne ze specyfikacją CLS \<membername > jest niedozwolone w interfejsie zgodnym ze specyfikacją CLS
 Właściwość, procedura lub zdarzenie w interfejsie jest oznaczony jako `<CLSCompliant(True)>` po interfejsie, sama jest oznaczony jako `<CLSCompliant(False)>` lub nie jest oznaczona.  
@@ -29,11 +29,11 @@ Właściwość, procedura lub zdarzenie w interfejsie jest oznaczony jako `<CLSC
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Wymagaj zgodności ze specyfikacją CLS i mają kontrolę nad interfejsu kodu źródłowego, oznaczyć interfejsu `<CLSCompliant(True)>` Jeśli wszystkie jej składowe są zgodne.  
+- Wymagaj zgodności ze specyfikacją CLS i mają kontrolę nad interfejsu kodu źródłowego, oznaczyć interfejsu `<CLSCompliant(True)>` Jeśli wszystkie jej składowe są zgodne.  
   
--   Jeśli wymagają zgodności ze specyfikacją CLS i nie mają kontrolę nad interfejsu kodu źródłowego lub nie kwalifikuje się jako zgodne, należy zdefiniować tego elementu członkowskiego, w ramach innego interfejsu.  
+- Jeśli wymagają zgodności ze specyfikacją CLS i nie mają kontrolę nad interfejsu kodu źródłowego lub nie kwalifikuje się jako zgodne, należy zdefiniować tego elementu członkowskiego, w ramach innego interfejsu.  
   
--   Jeśli wymagana jest pozostawienie tego elementu członkowskiego w interfejsie bieżącej, Usuń <xref:System.CLSCompliantAttribute> z jego definicji lub oznaczyć go jako `<CLSCompliant(False)>`.  
+- Jeśli wymagana jest pozostawienie tego elementu członkowskiego w interfejsie bieżącej, Usuń <xref:System.CLSCompliantAttribute> z jego definicji lub oznaczyć go jako `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Zobacz także
 

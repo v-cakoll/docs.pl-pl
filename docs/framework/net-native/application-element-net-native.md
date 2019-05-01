@@ -5,11 +5,11 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868611"
 ---
 # <a name="application-element-net-native"></a>\<Aplikacja > (architektura .NET Native)
 Służy jako kontener dla całej aplikacji, typy i składowe typu, którego metadanych dotyczących odbicia w czasie wykonywania oraz będzie miało zastosowanie zasad odbicia środowiska uruchomieniowego do wszystkich elementów programu w aplikacji.  
@@ -81,9 +81,9 @@ Służy jako kontener dla całej aplikacji, typy i składowe typu, którego meta
   
  `<Application>` Elementu mogą być używane w jeden z dwóch sposobów:  
   
--   Jako kontener, aby zdefiniować elementy programu, w których metadanych jest potrzebnych w czasie wykonywania. W tym przypadku `<Application>` elementu nie wymagają żadnych atrybutów. W czasie kompilacji narzędzia kompilatora wyszukiwać wszystkie biblioteki, w tym podstawowe biblioteki .NET Framework, dla elementów programu identyfikowane przez elementy podrzędne `<Application>` elementu. Z kolei narzędzia kompilatora wyszukiwanie tylko w bibliotece, które są oznaczane [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element dla elementów programu identyfikowane przez elementy podrzędne [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md).  
+- Jako kontener, aby zdefiniować elementy programu, w których metadanych jest potrzebnych w czasie wykonywania. W tym przypadku `<Application>` elementu nie wymagają żadnych atrybutów. W czasie kompilacji narzędzia kompilatora wyszukiwać wszystkie biblioteki, w tym podstawowe biblioteki .NET Framework, dla elementów programu identyfikowane przez elementy podrzędne `<Application>` elementu. Z kolei narzędzia kompilatora wyszukiwanie tylko w bibliotece, które są oznaczane [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element dla elementów programu identyfikowane przez elementy podrzędne [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md).  
   
--   Jako element, który ustawia zasady dla całej aplikacji odbicia, serializacja i współdziałania. Atrybuty `<Application>` element Definiowanie zasad całej aplikacji, które mogą zostać zastąpione przez elementy podrzędne, zdefiniowane przez `<Application>` lub [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementu.  
+- Jako element, który ustawia zasady dla całej aplikacji odbicia, serializacja i współdziałania. Atrybuty `<Application>` element Definiowanie zasad całej aplikacji, które mogą zostać zastąpione przez elementy podrzędne, zdefiniowane przez `<Application>` lub [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementu.  
   
 ## <a name="see-also"></a>Zobacz także
 

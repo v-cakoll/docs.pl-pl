@@ -3,11 +3,11 @@ title: Czym język Entity SQL różni się od języka Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774754"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Czym język Entity SQL różni się od języka Transact-SQL
 W tym temacie opisano różnice między [!INCLUDE[esql](../../../../../../includes/esql-md.md)] i [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -20,15 +20,15 @@ W tym temacie opisano różnice między [!INCLUDE[esql](../../../../../../includ
 ## <a name="support-for-collections"></a>Obsługa kolekcji  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traktuje kolekcji jako obiekty najwyższej jakości. Na przykład:  
   
--   Wyrażenia kolekcji są prawidłowe w `from` klauzuli.  
+- Wyrażenia kolekcji są prawidłowe w `from` klauzuli.  
   
--   `in` i `exists` podzapytań mają został uogólniony, aby zezwolić na wszystkie kolekcje.  
+- `in` i `exists` podzapytań mają został uogólniony, aby zezwolić na wszystkie kolekcje.  
   
      Podzapytania jest jeden rodzaj kolekcji. `e1 in e2` i `exists(e)` są [!INCLUDE[esql](../../../../../../includes/esql-md.md)] konstrukcji wykonywać te operacje.  
   
--   Ustawić operacje, takie jak `union`, `intersect`, i `except`, teraz działają w kolekcjach.  
+- Ustawić operacje, takie jak `union`, `intersect`, i `except`, teraz działają w kolekcjach.  
   
--   Sprzężenia działają w kolekcjach.  
+- Sprzężenia działają w kolekcjach.  
   
 ## <a name="support-for-expressions"></a>Obsługa wyrażeń  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ma podzapytań (tabele) i wyrażenia (wiersze i kolumny).  

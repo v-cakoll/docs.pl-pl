@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
 ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879830"
 ---
 # <a name="datarows-and-datarowviews"></a>Elementy DataRow i DataRowView
 A <xref:System.Data.DataView> udostępnia wyliczalny zbiór <xref:System.Data.DataRowView> obiektów. **DataRowView** obiektów Uwidacznianie wartości jako tablice obiektów, które są indeksowane według nazwy lub odwołania porządkowego kolumny w tabeli podstawowej. Możesz uzyskać dostęp <xref:System.Data.DataRow> , jest uwidaczniany przez **DataRowView** przy użyciu <xref:System.Data.DataRowView.Row%2A> właściwość **DataRowView**.  

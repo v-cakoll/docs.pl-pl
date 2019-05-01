@@ -11,11 +11,11 @@ ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919740"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (narzędzie optymalizacji sterowania zarządzanym profilem)
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>Przy użyciu Mpgo.exe z Visual Studio  
  Mpgo.exe można uruchomić z programu Visual Studio (zapoznaj się z artykułem [jak: Specify Build Events (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) z następującymi zastrzeżeniami:  
   
--   Nie można używać ścieżek w cudzysłowie ze znakami ukośnika na końcu, ponieważ makra Visual Studio również domyślnie używają końcowych ukośników. (Na przykład `–OutDir "C:\Output Folder\"` jest nieprawidłowy.) Aby obejść to ograniczenie, można pominąć końcowy ukośnik. (Na przykład użyć `-OutDir "$(OutDir)\"` zamiast.)  
+- Nie można używać ścieżek w cudzysłowie ze znakami ukośnika na końcu, ponieważ makra Visual Studio również domyślnie używają końcowych ukośników. (Na przykład `–OutDir "C:\Output Folder\"` jest nieprawidłowy.) Aby obejść to ograniczenie, można pominąć końcowy ukośnik. (Na przykład użyć `-OutDir "$(OutDir)\"` zamiast.)  
   
--   Domyślnie program Mpgo.exe nie znajduje się w ścieżce kompilacji programu Visual Studio. Możesz dodać ścieżkę do programu Visual Studio lub podać pełną ścieżkę w wierszu polecenia Mpgo. Można użyć dowolnego `–Scenario` lub `–Import` parametru w zdarzeniu po kompilacji w programie Visual Studio. Jednak typowy proces jest użycie `–Scenario` jeden raz z deweloperem polecenia wiersza dla programu Visual Studio, a następnie użyj `–Import` do zaktualizowania zoptymalizowanych zestawów po każdej kompilacji; na przykład: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+- Domyślnie program Mpgo.exe nie znajduje się w ścieżce kompilacji programu Visual Studio. Możesz dodać ścieżkę do programu Visual Studio lub podać pełną ścieżkę w wierszu polecenia Mpgo. Można użyć dowolnego `–Scenario` lub `–Import` parametru w zdarzeniu po kompilacji w programie Visual Studio. Jednak typowy proces jest użycie `–Scenario` jeden raz z deweloperem polecenia wiersza dla programu Visual Studio, a następnie użyj `–Import` do zaktualizowania zoptymalizowanych zestawów po każdej kompilacji; na przykład: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Przykłady  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
 ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908131"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Rozwiązywanie problemów związanych z tablicami (Visual Basic)
 Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpić podczas pracy z tablicami.  
@@ -22,7 +22,7 @@ Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpi�
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Błędy kompilacji deklarowania i inicjowania tablicy  
  Błędy kompilacji mogą wynikać z nieporozumienia reguły deklarowania, tworzenia i inicjowania tablic. Najbardziej typowe przyczyny błędów są następujące:  
   
--   Dostarczanie [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) klauzuli po określeniu długości wymiarów w deklaracji zmiennej tablicy. Następujące wiersze kodu pokazują nieprawidłowe deklarację tego typu.  
+- Dostarczanie [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) klauzuli po określeniu długości wymiarów w deklaracji zmiennej tablicy. Następujące wiersze kodu pokazują nieprawidłowe deklarację tego typu.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpi�
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Określenie długości wymiarów dla więcej niż najwyższego poziomu tablicy nieregularnej tablicy. Następujący wiersz kodu zawiera nieprawidłowy deklaracja tego typu.  
+- Określenie długości wymiarów dla więcej niż najwyższego poziomu tablicy nieregularnej tablicy. Następujący wiersz kodu zawiera nieprawidłowy deklaracja tego typu.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   Pominięcie `New` — słowo kluczowe podczas określania wartości elementu. Następujący wiersz kodu zawiera nieprawidłowy deklaracja tego typu.  
+- Pominięcie `New` — słowo kluczowe podczas określania wartości elementu. Następujący wiersz kodu zawiera nieprawidłowy deklaracja tego typu.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   Dostarczanie `New` klauzuli bez nawiasów klamrowych (`{}`). Następujące wiersze kodu pokazują nieprawidłowe deklarację tego typu.  
+- Dostarczanie `New` klauzuli bez nawiasów klamrowych (`{}`). Następujące wiersze kodu pokazują nieprawidłowe deklarację tego typu.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

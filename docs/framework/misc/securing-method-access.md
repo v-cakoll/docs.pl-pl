@@ -13,11 +13,11 @@ ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868969"
 ---
 # <a name="securing-method-access"></a>Zabezpieczanie dostępu metody
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "59166182"
   
  Zarządzane kodu oferuje kilka sposobów, aby ograniczyć dostęp do metody:  
   
--   Ograniczenie zakresu ułatwień dostępu do klasy, zestaw lub klasach pochodnych, jeśli może być zaufane. Jest to najprostszy sposób, aby ograniczyć dostęp do metody. Należy zauważyć, że ogólnie rzecz biorąc, klasy pochodne może być mniej wiarygodny niż klasa, z którego pochodzą one od, chociaż w niektórych przypadkach współużytkują one tożsamości klasy nadrzędnej. W szczególności są rozpoznawane przez relację zaufania z słowa kluczowego **chronione**, które nie jest koniecznie używane w kontekście zabezpieczeń.  
+- Ograniczenie zakresu ułatwień dostępu do klasy, zestaw lub klasach pochodnych, jeśli może być zaufane. Jest to najprostszy sposób, aby ograniczyć dostęp do metody. Należy zauważyć, że ogólnie rzecz biorąc, klasy pochodne może być mniej wiarygodny niż klasa, z którego pochodzą one od, chociaż w niektórych przypadkach współużytkują one tożsamości klasy nadrzędnej. W szczególności są rozpoznawane przez relację zaufania z słowa kluczowego **chronione**, które nie jest koniecznie używane w kontekście zabezpieczeń.  
   
--   Ograniczyć dostęp do metody wywołań określonej tożsamości — zasadniczo dowolnego określonego [dowód](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (silnej nazwy, wydawcy, strefy i tak dalej) wybierz.  
+- Ograniczyć dostęp do metody wywołań określonej tożsamości — zasadniczo dowolnego określonego [dowód](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (silnej nazwy, wydawcy, strefy i tak dalej) wybierz.  
   
--   Ograniczyć dostęp do metody dla kodu wywołującego, niezależnie od uprawnień, możesz wybrać.  
+- Ograniczyć dostęp do metody dla kodu wywołującego, niezależnie od uprawnień, możesz wybrać.  
   
  Podobnie zabezpieczenia deklaratywne pozwala na kontrolowanie dziedziczenia klas. Możesz użyć **InheritanceDemand** wykonać następujące czynności:  
   
--   Wymagaj klasy pochodne, aby mieć uprawnienie lub określonej tożsamości.  
+- Wymagaj klasy pochodne, aby mieć uprawnienie lub określonej tożsamości.  
   
--   Wymagaj klas pochodnych, które zastępują konkretnych metod do określonej tożsamości lub uprawnień.  
+- Wymagaj klas pochodnych, które zastępują konkretnych metod do określonej tożsamości lub uprawnień.  
   
  Poniższy przykład pokazuje, jak chronić klasę publiczną ograniczony dostęp poprzez wymaganie, aby obiekty wywołujące były podpisane przy użyciu określonej silnej nazwy. W tym przykładzie użyto <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> z **żądanie** dla silnej nazwy. Oparta na zadaniach informacji na temat podpisać zestaw silną nazwą, zobacz [tworzenie i zestawy Using Strong-Named](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
 ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792213"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Przewodnik: zapewnianie elementów menu standardowego dla formularza
 Możesz podać standardowe menu formularzy przy użyciu <xref:System.Windows.Forms.MenuStrip> kontroli.  
   
  W tym instruktażu przedstawiono sposób użycia <xref:System.Windows.Forms.MenuStrip> formantu, aby utworzyć standardowe menu. Formularz również reaguje, gdy użytkownik wybierze element menu. Następujące zadania są przedstawione w niniejszym przewodniku:  
   
--   Tworzenie projektu Windows Forms.  
+- Tworzenie projektu Windows Forms.  
   
--   Tworzenie standardowego menu.  
+- Tworzenie standardowego menu.  
   
--   Tworzenie <xref:System.Windows.Forms.StatusStrip> kontroli.  
+- Tworzenie <xref:System.Windows.Forms.StatusStrip> kontroli.  
   
--   Obsługa wyboru elementu menu.  
+- Obsługa wyboru elementu menu.  
   
  Po zakończeniu będziesz mieć formularza przy użyciu standardowego menu, które wyświetla zaznaczenia elementów menu w <xref:System.Windows.Forms.StatusStrip> kontroli.  
   
@@ -40,7 +40,7 @@ Możesz podać standardowe menu formularzy przy użyciu <xref:System.Windows.For
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Aby ukończyć ten przewodnik, potrzebne są:  
   
--   Wystarczające uprawnienia, aby można było utworzyć i uruchomić projekty aplikacji Windows Forms na komputerze, w którym jest zainstalowany program Visual Studio.  
+- Wystarczające uprawnienia, aby można było utworzyć i uruchomić projekty aplikacji Windows Forms na komputerze, w którym jest zainstalowany program Visual Studio.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest tworzenie projektu i konfigurowanie formularza.  
@@ -113,11 +113,11 @@ Możesz podać standardowe menu formularzy przy użyciu <xref:System.Windows.For
 ## <a name="next-steps"></a>Następne kroki  
  W tym instruktażu utworzono formularza standardowe menu. Możesz użyć <xref:System.Windows.Forms.ToolStrip> rodziny formantów do innych celów:  
   
--   Tworzenie menu skrótów dla formantów z <xref:System.Windows.Forms.ContextMenuStrip>. Aby uzyskać więcej informacji, zobacz [— informacje o składniku ContextMenu](contextmenu-component-overview-windows-forms.md).  
+- Tworzenie menu skrótów dla formantów z <xref:System.Windows.Forms.ContextMenuStrip>. Aby uzyskać więcej informacji, zobacz [— informacje o składniku ContextMenu](contextmenu-component-overview-windows-forms.md).  
   
--   Tworzenie wielu formularza interfejsu (MDI) dokumentu z dokowanie <xref:System.Windows.Forms.ToolStrip> kontrolki. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie formularza MDI za pomocą scalania Menu i formantami ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+- Tworzenie wielu formularza interfejsu (MDI) dokumentu z dokowanie <xref:System.Windows.Forms.ToolStrip> kontrolki. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie formularza MDI za pomocą scalania Menu i formantami ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
--   Nadaj swojej <xref:System.Windows.Forms.ToolStrip> profesjonalny wygląd kontrolki. Aby uzyskać więcej informacji, zobacz [jak: Ustawienie modułu renderowania ToolStrip dla aplikacji](how-to-set-the-toolstrip-renderer-for-an-application.md).  
+- Nadaj swojej <xref:System.Windows.Forms.ToolStrip> profesjonalny wygląd kontrolki. Aby uzyskać więcej informacji, zobacz [jak: Ustawienie modułu renderowania ToolStrip dla aplikacji](how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

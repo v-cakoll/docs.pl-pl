@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907650"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Instrukcje: Deklarowanie wyliczeń (Visual Basic)
 Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Nie można zadeklarować wyliczenie wewnątrz metody. Aby określić odpowiedni poziom dostępu, użyj `Private`, `Protected`, `Friend`, lub `Public`.  
@@ -38,7 +38,7 @@ Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Ni
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Aby zadeklarować wyliczenie jako jawnego typu  
   
--   Określ typ wyliczenia przy użyciu `As` klauzuli, jak pokazano w poniższym przykładzie.  
+- Określ typ wyliczenia przy użyciu `As` klauzuli, jak pokazano w poniższym przykładzie.  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   

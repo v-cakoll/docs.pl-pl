@@ -3,11 +3,11 @@ title: Rozwiązywanie problemów
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917641"
 ---
 # <a name="troubleshooting"></a>Rozwiązywanie problemów
 Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w swojej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji i oferuje sugestie, aby uniknąć lub w przeciwnym razie ograniczenia wpływu tych problemów.  
@@ -31,9 +31,9 @@ Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w s
 ## <a name="cascade-delete"></a>Usuwanie kaskadowe  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje ani nie rozpoznają operations usuwanie kaskadowe. Aby usunąć wiersz w tabeli, która ma ograniczenia względem go, należy wykonać jedną z następujących czynności:  
   
--   Ustaw `ON DELETE CASCADE` reguły w ograniczenie klucza obcego w bazie danych.  
+- Ustaw `ON DELETE CASCADE` reguły w ograniczenie klucza obcego w bazie danych.  
   
--   Użyj własnego kodu, aby najpierw usunąć obiekty podrzędne, które uniemożliwiają usunięcie obiektu nadrzędnego.  
+- Użyj własnego kodu, aby najpierw usunąć obiekty podrzędne, które uniemożliwiają usunięcie obiektu nadrzędnego.  
   
  W przeciwnym razie <xref:System.Data.SqlClient.SqlException> jest zgłaszany wyjątek.  
   
@@ -42,11 +42,11 @@ Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w s
 ## <a name="expression-not-queryable"></a>Wyrażenie nie umożliwia zadawania zapytań  
  Jeśli zostanie wyświetlony, "wyrażenie [wyrażenie] jest nie umożliwia zadawania zapytań; czy nie brakuje odwołania do zestawu?" błąd, upewnij się, z następujących czynności:  
   
--   Aplikacja jest przeznaczony dla [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- Aplikacja jest przeznaczony dla [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
   
--   Odwołania do `System.Core.dll` i `System.Data.Linq.dll`.  
+- Odwołania do `System.Core.dll` i `System.Data.Linq.dll`.  
   
--   Masz `Imports` (Visual Basic) lub `using` — dyrektywa (C#) dla <xref:System.Linq> i <xref:System.Data.Linq>.  
+- Masz `Imports` (Visual Basic) lub `using` — dyrektywa (C#) dla <xref:System.Linq> i <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  W trakcie debugowania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu, może przechodzić przez relacji jednostek. Ten sposób zapewniają te elementy w pamięci podręcznej i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uzyska informacje o ich obecności. Jeśli zostanie podjęta próba wykonania <xref:System.Data.Linq.Table%601.Attach%2A> lub <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> lub podobnej metody, która tworzy wiele wierszy, które mają ten sam klucz <xref:System.Data.Linq.DuplicateKeyException> zgłaszany.  

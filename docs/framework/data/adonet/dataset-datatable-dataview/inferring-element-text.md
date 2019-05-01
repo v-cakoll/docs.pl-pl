@@ -3,11 +3,11 @@ title: Wnioskowanie tekstu elementu
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879635"
 ---
 # <a name="inferring-element-text"></a>Wnioskowanie tekstu elementu
 Jeśli element zawiera tekst, a nie ma żadnych elementów podrzędnych, aby był wywnioskowany, ponieważ tabele takie jak (elementy przy użyciu atrybutów) lub powtarzalne elementy nową kolumnę o nazwie **TableName_Text** zostaną dodane do tabeli, która jest wnioskowany dla elementu. Tekst zawarty w elemencie zostaną dodane do wiersza w tabeli i przechowywane w nowej kolumnie. **ColumnMapping** właściwości nowej kolumny, która będzie równa **MappingType.SimpleContent**.  

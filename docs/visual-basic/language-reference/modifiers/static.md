@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
 ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781189"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 Określa co najmniej jeden zadeklarowany zmienne lokalne są nadal istnieć i zachowywać swoje ostatnie wartości po zakończeniu procedury, w którym są one zgłoszone.  
@@ -22,13 +22,13 @@ Określa co najmniej jeden zadeklarowany zmienne lokalne są nadal istnieć i za
   
 ## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Możesz użyć `Static` tylko w zmiennych lokalnych. Oznacza to, że kontekst deklaracji `Static` zmienna musi być procedurą lub blokiem w procedurze, a nie może być plikiem źródłowym, przestrzeń nazw, klasy, struktury lub modułu.  
+- **Kontekst deklaracji.** Możesz użyć `Static` tylko w zmiennych lokalnych. Oznacza to, że kontekst deklaracji `Static` zmienna musi być procedurą lub blokiem w procedurze, a nie może być plikiem źródłowym, przestrzeń nazw, klasy, struktury lub modułu.  
   
      Nie można użyć `Static` wewnątrz procedury struktury.  
   
--   Typy danych `Static` nie można wywnioskować zmiennych lokalnych. Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- Typy danych `Static` nie można wywnioskować zmiennych lokalnych. Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
--   **Modyfikatory połączone.** Nie można określić `Static` wraz z `ReadOnly`, `Shadows`, lub `Shared` w tej samej deklaracji.  
+- **Modyfikatory połączone.** Nie można określić `Static` wraz z `ReadOnly`, `Shadows`, lub `Shared` w tej samej deklaracji.  
   
 ## <a name="behavior"></a>Zachowanie  
  Kiedy Deklarujesz zmienną statyczną w `Shared` procedura, tylko jedna kopia zmienna statyczna jest dostępna dla całej aplikacji. Należy wywołać `Shared` nazwę procedury przy użyciu klasy, nie zmienną, która wskazuje na wystąpienie klasy.  

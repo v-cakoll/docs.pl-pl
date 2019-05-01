@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785024"
 ---
 # <a name="designing-and-implementing-services"></a>Projektowanie i implementowanie usług
 W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług WCF. Kontrakt usługi określa punkt końcowy komunikuje na zewnątrz. Na poziomie bardziej konkretne takie jak żądanie/nietypizowana odpowiedź, jednokierunkowe i dwukierunkowego jest poufności informacji na temat zestawu specyficzne komunikaty dotyczące podzielone na podstawowe wiadomości programu exchange wzorców (MEPs). Kontrakt usługi to zestaw logicznie powiązanych wymianę komunikatów, operacja usługi czy exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście akceptują jeden komunikat (tak, aby obiekt wywołujący może poinformować o powitania) i może być lub może nie zwrócić komunikat (w zależności od grzecznościowy operacji).  
@@ -19,22 +19,22 @@ W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług
 ## <a name="overview"></a>Omówienie  
  Ten temat zawiera wysokiego poziomu orientację koncepcyjnej, aby projektowanie i Implementowanie usług WCF. Tematy podrzędne zapewniają bardziej szczegółowe informacje o szczegółowe informacje na temat projektowania i implementacji. Przed projektowanie i wdrażanie aplikacji WCF, zaleca się że:  
   
--   Zrozumieć, jakie kontraktu usługi, jak to działa i jak ją utworzyć.  
+- Zrozumieć, jakie kontraktu usługi, jak to działa i jak ją utworzyć.  
   
--   Zrozumienie, że kontraktów stanu minimalne wymagania konfiguracji środowiska uruchomieniowego lub środowisko hostingu mogą nie obsługiwać.  
+- Zrozumienie, że kontraktów stanu minimalne wymagania konfiguracji środowiska uruchomieniowego lub środowisko hostingu mogą nie obsługiwać.  
   
 ## <a name="service-contracts"></a>Kontrakty usług  
  Kontrakt usługi określa:  
   
--   Przedstawia kontrakt operacji.  
+- Przedstawia kontrakt operacji.  
   
--   Podpis operacje pod kątem komunikatów wymienianych.  
+- Podpis operacje pod kątem komunikatów wymienianych.  
   
--   Typy danych tych komunikatów.  
+- Typy danych tych komunikatów.  
   
--   Lokalizacja operacji.  
+- Lokalizacja operacji.  
   
--   Określonych protokołów i formatów serializacji, które są używane do obsługi pomyślnej komunikacji z usługą.  
+- Określonych protokołów i formatów serializacji, które są używane do obsługi pomyślnej komunikacji z usługą.  
   
  Na przykład może być kontrakt zamówienia zakupu `CreateOrder` operacji, który akceptuje dane wejściowe informacji o zamówieniach typów i zwraca informacje o powodzeniu lub niepowodzeniu, tym identyfikator zamówienia. Może także mieć `GetOrderStatus` operacji, która akceptuje identyfikator zamówienia i zwraca informacje o stanie zamówienia. Określ tego rodzaju kontraktu usługi:  
   

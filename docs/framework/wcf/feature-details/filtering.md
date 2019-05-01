@@ -3,11 +3,11 @@ title: Filtrowanie
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856703"
 ---
 # <a name="filtering"></a>Filtrowanie
 Windows Communication Foundation (WCF) systemu filtrowania umożliwia deklaratywne filtry dopasowanie wiadomości i podejmowania decyzji operacyjne. Filtry można użyć, aby określić, co należy zrobić z komunikatem, sprawdzając część komunikatu. Proces kolejkowania, na przykład, można użyć zapytania XPath 1.0 do sprawdzenia elementu priority znanych nagłówka w celu ustalenia, czy można przenieść komunikatu z przodu kolejki.  
@@ -36,9 +36,9 @@ Windows Communication Foundation (WCF) systemu filtrowania umożliwia deklaratyw
 ### <a name="endpoint-address-filters"></a>Filtry adresu punktu końcowego  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> Filtry wiadomości oraz buforów komunikatów, na podstawie adresu punktu końcowego reprezentowane w ich kolekcję nagłówków. Wiadomości do przekazania filtr muszą być spełnione następujące warunki:  
   
--   Filtru adresu identyfikator (URI) musi być taka sama jak w wiadomości do nagłówka.  
+- Filtru adresu identyfikator (URI) musi być taka sama jak w wiadomości do nagłówka.  
   
--   Każdy parametr punkt końcowy adres filtru (`address.Headers` kolekcji) musi odnaleźć nagłówka komunikatu do mapowania na. Dodatkowe nagłówki wiadomości lub buforu komunikatów są akceptowalne dla dopasowanie, aby pozostać `true`.  
+- Każdy parametr punkt końcowy adres filtru (`address.Headers` kolekcji) musi odnaleźć nagłówka komunikatu do mapowania na. Dodatkowe nagłówki wiadomości lub buforu komunikatów są akceptowalne dla dopasowanie, aby pozostać `true`.  
   
 ### <a name="prefix-endpoint-address-filters"></a>Prefiks filtry adres punktu końcowego  
   
@@ -79,9 +79,9 @@ Windows Communication Foundation (WCF) systemu filtrowania umożliwia deklaratyw
 ### <a name="de-multiplexing"></a>Usuń zaznaczenie pola Multipleksowanie  
  Jeśli wiele punktów końcowych rozdysponować z tej samej `ServiceListener` wyłączyć sieć, jedynym sposobem, aby cofnąć multipleksować wiadomości i ustalić, czy należą one do pewnych adres punktu końcowego, jest użycie <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s, która wybierz wiadomości kierunku zarejestrowanych punkty końcowe według wykonywane jest wyszukiwanie informacji przechowywanych w nagłówkach. Te filtry te komunikaty, które przekazują mają wszystkie niezbędne nagłówki, które odnoszą się do obu:  
   
--   Identyfikator URI w `EndpointAddress`.  
+- Identyfikator URI w `EndpointAddress`.  
   
--   Pozostałe parametry punktu końcowego w `EndpointAddress` określonej <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+- Pozostałe parametry punktu końcowego w `EndpointAddress` określonej <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
 ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794709"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Instrukcje: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika (Visual Basic)
 Można ukryć zmiennej przez *przesłanianie* go, oznacza to poprzez zmianę definicji go ze zmienną o takiej samej nazwie. Można w tle zmienną, którą chcesz ukryć na dwa sposoby:  
   
--   **Cieniowania przez zakres.** Można go cienia przez zakres przez redeclaring go wewnątrz Podobszar regionu zawierającego zmienną, którą chcesz ukryć.  
+- **Cieniowania przez zakres.** Można go cienia przez zakres przez redeclaring go wewnątrz Podobszar regionu zawierającego zmienną, którą chcesz ukryć.  
   
--   **Przesłanianie poprzez dziedziczenie.** Jeśli nie zdefiniowano zmiennej, którą chcesz ukryć na poziomie klasy, można cień go poprzez dziedziczenie przez redeclaring ją za pomocą [cieni](../../../../visual-basic/language-reference/modifiers/shadows.md) — słowo kluczowe w klasie pochodnej.  
+- **Przesłanianie poprzez dziedziczenie.** Jeśli nie zdefiniowano zmiennej, którą chcesz ukryć na poziomie klasy, można cień go poprzez dziedziczenie przez redeclaring ją za pomocą [cieni](../../../../visual-basic/language-reference/modifiers/shadows.md) — słowo kluczowe w klasie pochodnej.  
   
 ## <a name="two-ways-to-hide-a-variable"></a>Ukrywanie zmiennej na dwa sposoby  
   

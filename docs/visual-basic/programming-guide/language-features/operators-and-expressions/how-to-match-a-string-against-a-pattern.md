@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
 ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864705"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Instrukcje: Dopasowanie ciągu do wzorca (Visual Basic)
 Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) spełnia wzorzec, wówczas można użyć [takich jak Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -29,7 +29,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Aby dopasować znak w wyrażeniu ciąg względem określonego znaku  
   
--   Umieść znaków specyficznych bezpośrednio w ciągu wzorca. Niektóre znaki specjalne, muszą być ujęte w nawiasy kwadratowe (`[ ]`). Aby uzyskać więcej informacji, zobacz [takich jak Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
+- Umieść znaków specyficznych bezpośrednio w ciągu wzorca. Niektóre znaki specjalne, muszą być ujęte w nawiasy kwadratowe (`[ ]`). Aby uzyskać więcej informacji, zobacz [takich jak Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
      Poniższy przykład sprawdza czy `myString` składa się dokładnie z jednego znaku `H`.  
   
@@ -37,7 +37,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Aby dopasować znak w wyrażeniu ciąg z symbolem wieloznacznym  
   
--   Umieść znak zapytania (`?`) w ciągu wzorca. Dowolny prawidłowy znak, w tym miejscu sprawia, że udane dopasowanie.  
+- Umieść znak zapytania (`?`) w ciągu wzorca. Dowolny prawidłowy znak, w tym miejscu sprawia, że udane dopasowanie.  
   
      Poniższy przykład sprawdza czy `myString` składa się z jednego znaku `W` następuje dokładnie dwa znaki żadnych wartości.  
   
@@ -45,7 +45,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Aby dopasować znak w wyrażeniu ciąg z listą znaków  
   
--   Umieść nawiasy kwadratowe (`[ ]`) w ciągu wzorca, znajduje się wewnątrz nawiasów, umieść listę znaków. Nie należy oddzielić znaków za pomocą przecinków lub wszelkich innych separatorów. Dowolny pojedynczy znak na liście sprawia, że udane dopasowanie.  
+- Umieść nawiasy kwadratowe (`[ ]`) w ciągu wzorca, znajduje się wewnątrz nawiasów, umieść listę znaków. Nie należy oddzielić znaków za pomocą przecinków lub wszelkich innych separatorów. Dowolny pojedynczy znak na liście sprawia, że udane dopasowanie.  
   
      Poniższy przykład sprawdza czy `myString` składa się z dowolnym prawidłowym znakiem następuje z dokładnie jednym ze znaków `A`, `C`, lub `E`.  
   
@@ -55,7 +55,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Aby dopasować znak w wyrażeniu ciąg z zakresu znaków  
   
--   Umieść nawiasy kwadratowe (`[ ]`) w ciągu wzorca oraz w nawiasie umieścić najmniejsza i największa znaki w zakresie rozdzielonych łącznikiem (`–`). Dowolny pojedynczy znak w zakresie sprawia, że udane dopasowanie.  
+- Umieść nawiasy kwadratowe (`[ ]`) w ciągu wzorca oraz w nawiasie umieścić najmniejsza i największa znaki w zakresie rozdzielonych łącznikiem (`–`). Dowolny pojedynczy znak w zakresie sprawia, że udane dopasowanie.  
   
      Poniższy przykład sprawdza czy `myString` składa się ze znaków `num` następuje z dokładnie jednym ze znaków `i`, `j`, `k`, `l`, `m`, lub `n`.  
   

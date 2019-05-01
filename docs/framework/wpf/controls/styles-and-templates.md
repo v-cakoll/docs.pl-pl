@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
 ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790913"
 ---
 # <a name="styles-and-templates"></a>Style i szablony
 Tworzenie szablonów i stylów Windows Presentation Foundation (WPF) odwoływać się do zestawu funkcji (style, szablony, wyzwalaczy i scenorysów), które umożliwiają aplikacji, dokumentu lub Projektant interfejsu użytkownika można tworzyć wizualnie atrakcyjne aplikacje, a także o Zapewnij standaryzację w szczególności zwróć uwagę na ich produktów.  

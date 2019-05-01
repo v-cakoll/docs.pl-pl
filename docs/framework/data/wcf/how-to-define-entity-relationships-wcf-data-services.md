@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
 ms.openlocfilehash: 3bd2293f02e77ab2db5c3ba245596021e08b04c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875904"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>Instrukcje: Definiowanie relacji jednostek (WCF Data Services)
 Po dodaniu nowej jednostki w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], nie są automatycznie definiowane relacje między nimi i powiązanych jednostek. Można tworzyć i zmieniać relacje między wystąpieniami jednostki i biblioteki klienta odzwierciedlenia tych zmian w usłudze data service. Aby uzyskać więcej informacji, zobacz [aktualizacja usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

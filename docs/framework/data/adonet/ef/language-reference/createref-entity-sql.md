@@ -3,11 +3,11 @@ title: CREATEREF (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
 ms.openlocfilehash: 6ae4712fb280418ad8cf17cd68a7bbcd9cf3b8a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785284"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (jednostka SQL)
 Fabricates odwołania do jednostki w obiekcie entityset.  

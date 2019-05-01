@@ -11,11 +11,11 @@ ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872849"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -469,17 +469,17 @@ public class Mod : SimpleCalculator.IOperation
 
  Należy pamiętać, tej w kolejności dla kontraktu dopasować, <xref:System.ComponentModel.Composition.ExportAttribute> atrybut musi mieć taki sam typ co <xref:System.ComponentModel.Composition.ImportAttribute>.
 
- Skompiluj i uruchom projekt. Przetestuj nowy operator Mod (%).
+ Skompiluj i uruchom projekt. Testowanie nowych dzielenie modulo (%) operator.
 
 <a name="conclusion"></a>
 ## <a name="conclusion"></a>Wniosek
  W tym temacie opisano podstawowe pojęcia dotyczące środowiska MEF.
 
--   Części, katalogi i kontener kompozycji
+- Części, katalogi i kontener kompozycji
 
      Części i kontener kompozycji są podstawowe bloki konstrukcyjne aplikacji MEF. Część jest dowolnego obiektu, który importuje i eksportuje wartość, w tym sam. Wykaz zawiera zbiór składniki Report Part z określonego źródła. Pojemnik składu używa części, dostarczone przez katalog do utworzenia, wiązanie importu do eksportu.
 
--   Przywozu i wywozu
+- Przywozu i wywozu
 
      Przywozu i wywozu są sposób za pomocą którego komunikacji między składnikami. Importowania składnika określa na potrzeby określonej wartości lub obiekt, a z eksportową określa dostępność wartość. Każdej operacji importowania jest dopasowany do listy eksporty za pomocą jego kontraktu.
 

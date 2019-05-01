@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912577"
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źródła śledzenia emitowanie danych śledzenia i zestaw poziomów śledzenia, śledzenie aktywności zestawu oraz propagacji do obsługi śledzenia end-to-end korelacji i ustawić detektorów śledzenia do dostępu do danych śledzenia.  
@@ -22,9 +22,9 @@ W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źród�
 ## <a name="enabling-tracing"></a>Włączenie debugowania  
  Windows Communication Foundation (WCF) wyświetla następujące dane śledzenia diagnostycznego:  
   
--   Śledzenie procesu punktów kontrolnych, dotyczące wszystkich składników aplikacji, takich jak wywołania operacji kodu, wyjątki, ostrzeżenia i inne zdarzenia przetwarzania.  
+- Śledzenie procesu punktów kontrolnych, dotyczące wszystkich składników aplikacji, takich jak wywołania operacji kodu, wyjątki, ostrzeżenia i inne zdarzenia przetwarzania.  
   
--   Zdarzenia błędu Windows działa funkcja śledzenia. Zobacz [rejestrowania zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+- Zdarzenia błędu Windows działa funkcja śledzenia. Zobacz [rejestrowania zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
  Śledzenie programu WCF jest wbudowana w górnej części <xref:System.Diagnostics>. Aby użyć śledzenia, należy zdefiniować źródła śledzenia w pliku konfiguracji lub w kodzie. Usługi WCF definiuje źródła śledzenia dla każdego zestawu WCF. `System.ServiceModel` Źródła śledzenia jest najbardziej ogólnym źródła śledzenia WCF i rejestruje przetwarzania punkty kontrolne w stos komunikacji WCF z wprowadzania opuszczania transportu do wprowadzania/wyłączanych kod użytkownika. `System.ServiceModel.MessageLogging` Źródła śledzenia rejestruje wszystkie komunikaty, które będą działać przez system.  
   
@@ -58,19 +58,19 @@ W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źród�
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Konfigurowanie źródła śledzenia emitowanie danych śledzenia  
  Usługi WCF definiuje źródła śledzenia dla każdego zestawu. Dane śledzenia generowane w zestawie uzyskują odbiorników zdefiniowane dla tego źródła. Następujące źródła śledzenia są zdefiniowane:  
   
--   System.ServiceModel: Rejestruje wszystkie etapy przetwarzania WCF, zawsze, gdy odczyt konfiguracji, komunikat jest przetwarzany transportu, zabezpieczeń, przetwarzanie, komunikat jest wysyłany w kodzie użytkownika i tak dalej.  
+- System.ServiceModel: Rejestruje wszystkie etapy przetwarzania WCF, zawsze, gdy odczyt konfiguracji, komunikat jest przetwarzany transportu, zabezpieczeń, przetwarzanie, komunikat jest wysyłany w kodzie użytkownika i tak dalej.  
   
--   System.ServiceModel.MessageLogging: Rejestruje wszystkie komunikaty, które będą działać przez system.  
+- System.ServiceModel.MessageLogging: Rejestruje wszystkie komunikaty, które będą działać przez system.  
   
--   System.IdentityModel.  
+- System.IdentityModel.  
   
--   System.ServiceModel.Activation.  
+- System.ServiceModel.Activation.  
   
--   System.IO.Log: Rejestrowanie interfejsu .NET Framework do wspólnego Log File System (CLFS).  
+- System.IO.Log: Rejestrowanie interfejsu .NET Framework do wspólnego Log File System (CLFS).  
   
--   System.Runtime.Serialization: Dzienniki, gdy obiekty są odczytywane lub zapisywane.  
+- System.Runtime.Serialization: Dzienniki, gdy obiekty są odczytywane lub zapisywane.  
   
--   CardSpace.  
+- CardSpace.  
   
  Każde źródło śledzenia, aby użyć tego samego odbiornika (współużytkowane), można skonfigurować, jak wskazano w poniższym przykładzie konfiguracji.  
   

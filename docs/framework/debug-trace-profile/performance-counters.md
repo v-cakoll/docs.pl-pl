@@ -9,30 +9,30 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874475"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Liczniki wydajności w oprogramowaniu .NET Framework
 Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
--   [Liczniki wydajności wyjątków](#exception)  
+- [Liczniki wydajności wyjątków](#exception)  
   
--   [Liczniki wydajności międzyoperacyjności](#interop)  
+- [Liczniki wydajności międzyoperacyjności](#interop)  
   
--   [Liczniki wydajności JIT](#jit)  
+- [Liczniki wydajności JIT](#jit)  
   
--   [Ładowanie liczników wydajności](#loading)  
+- [Ładowanie liczników wydajności](#loading)  
   
--   [Liczniki wydajności blokady i wątku](#lockthread)  
+- [Liczniki wydajności blokady i wątku](#lockthread)  
   
--   [Liczniki wydajności pamięci](#memory)  
+- [Liczniki wydajności pamięci](#memory)  
   
--   [Liczniki wydajności funkcji sieciowych](#networking)  
+- [Liczniki wydajności funkcji sieciowych](#networking)  
   
--   [Liczniki wydajności zabezpieczeń](#security)  
+- [Liczniki wydajności zabezpieczeń](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>Liczniki wydajności wyjątków  
@@ -161,21 +161,21 @@ Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Perf
   
  Istnieje kilka rodzajów liczniki wydajności obsługiwanych funkcji sieciowych:  
   
--   Liczniki zdarzeń, które mierzą liczbę przypadków, gdy niektóre zdarzenia.  
+- Liczniki zdarzeń, które mierzą liczbę przypadków, gdy niektóre zdarzenia.  
   
--   Liczniki danych, które mierzą ilość danych wysyłanych lub odbieranych.  
+- Liczniki danych, które mierzą ilość danych wysyłanych lub odbieranych.  
   
--   Czas trwania liczniki, które mierzą procesy jak długo różne potrwać. Czas, w którym są mierzone na obiektach każdego interwału (zwykle w ciągu kilku sekund) po pochodzą z różnych stanów.  
+- Czas trwania liczniki, które mierzą procesy jak długo różne potrwać. Czas, w którym są mierzone na obiektach każdego interwału (zwykle w ciągu kilku sekund) po pochodzą z różnych stanów.  
   
--   Liczniki dla interwału, mierzących liczbę obiektów, które wykorzystują określonego przejścia dla interwału (zwykle na sekundę).  
+- Liczniki dla interwału, mierzących liczbę obiektów, które wykorzystują określonego przejścia dla interwału (zwykle na sekundę).  
   
  Następujące liczniki wydajności funkcji sieciowych dla zdarzeń:  
   
--   **Ustanowionych połączeń**  
+- **Ustanowionych połączeń**  
   
--   **Odebrane datagramy**  
+- **Odebrane datagramy**  
   
--   **Wysłane datagramy**  
+- **Wysłane datagramy**  
   
  Te liczniki wydajności zawierają liczby, od momentu uruchomienia procesu. Liczbę <xref:System.Net.Sockets.Socket> ustanowionych połączeń zawiera jawne <xref:System.Net.Sockets.Socket> metoda wywołuje przez aplikację dla połączenia gniazda strumienia, który został ustanowiony również jako wewnętrzne wywołania innych klas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>, i <xref:System.Net.Sockets.TcpClient>, na przykład) do <xref:System.Net.Sockets.Socket> klasy  
   
@@ -183,33 +183,33 @@ Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Perf
   
  Liczniki wydajności funkcji sieciowych dla danych są następujące:  
   
--   **Odebrane bajty**  
+- **Odebrane bajty**  
   
--   **Bajty wysłane**  
+- **Bajty wysłane**  
   
  Liczniki powyżej Podaj liczbę bajtów, od momentu uruchomienia procesu.  
   
  Istnieją dwa liczniki czas trwania, które mierzą się, jak długo <xref:System.Net.HttpWebRequest> obiektów dopuszczone albo ich całe życie cykl lub po prostu część go:  
   
--   **HttpWebRequest średni okres istnienia**  
+- **HttpWebRequest średni okres istnienia**  
   
--   **HttpWebRequest Średni czas oczekiwania**  
+- **HttpWebRequest Średni czas oczekiwania**  
   
  Dla **średni okres istnienia HttpWebRequest** licznik okres istnienia większość <xref:System.Net.HttpWebRequest> obiektów zawsze zaczyna się od czasu utworzenia obiektu, aż do czasu, który w strumieniu odpowiedzi jest zamknięty przez aplikację. Istnieją dwa przypadki nietypowe:  
   
--   Jeśli aplikacja nigdy nie wywołuje <xref:System.Net.HttpWebRequest.GetResponse%2A> lub <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> metody, a następnie okres istnienia <xref:System.Net.HttpWebRequest> obiektu jest ignorowana.  
+- Jeśli aplikacja nigdy nie wywołuje <xref:System.Net.HttpWebRequest.GetResponse%2A> lub <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> metody, a następnie okres istnienia <xref:System.Net.HttpWebRequest> obiektu jest ignorowana.  
   
--   Jeśli <xref:System.Net.HttpWebRequest> obiektu zgłasza <xref:System.Net.WebException> podczas wywoływania <xref:System.Net.HttpWebRequest.GetResponse%2A> lub <xref:System.Net.HttpWebRequest.EndGetResponse%2A> metod, okres istnienia kończy się, gdy wyjątek jest zgłaszany. Z technicznego punktu widzenia zasadniczy strumień odpowiedzi także jest zamknięty w tym momencie (w strumieniu odpowiedzi zwrócone do użytkownika jest naprawdę strumień pamięci, zawierający kopię w strumieniu odpowiedzi).  
+- Jeśli <xref:System.Net.HttpWebRequest> obiektu zgłasza <xref:System.Net.WebException> podczas wywoływania <xref:System.Net.HttpWebRequest.GetResponse%2A> lub <xref:System.Net.HttpWebRequest.EndGetResponse%2A> metod, okres istnienia kończy się, gdy wyjątek jest zgłaszany. Z technicznego punktu widzenia zasadniczy strumień odpowiedzi także jest zamknięty w tym momencie (w strumieniu odpowiedzi zwrócone do użytkownika jest naprawdę strumień pamięci, zawierający kopię w strumieniu odpowiedzi).  
   
  Istnieją cztery liczniki, które śledzą pewnych <xref:System.Net.HttpWebRequest> obiektu problemy dla interwału. Te liczniki wydajności mogą pomóc deweloperom aplikacji i administratorów i działu pomocy technicznej lepiej zrozumieć, jakie <xref:System.Net.HttpWebRequest> robią obiektów. Następujące liczniki:  
   
--   **HttpWebRequests utworzone na sekundę**  
+- **HttpWebRequests utworzone na sekundę**  
   
--   **HttpWebRequests Queued/sec**  
+- **HttpWebRequests Queued/sec**  
   
--   **Przerwano HttpWebRequests na sekundę**  
+- **Przerwano HttpWebRequests na sekundę**  
   
--   **HttpWebRequests nie powiodło się na sekundę**  
+- **HttpWebRequests nie powiodło się na sekundę**  
   
  Dla **Aborted HttpWebRequests na sekundę** licznik, wewnętrzny wywołania <xref:System.Net.HttpWebRequest.Abort%2A> są również uwzględniane. Te wewnętrzne wywołania są zazwyczaj spowodowane przekroczenia limitu czasu, aplikacja może być konieczne mierzenie.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  Liczniki wydajności funkcji sieciowych są wymienione w dwie kategorie:  
   
--   ".NET CLR sieci" - oryginalnego liczniki wydajności, które są wprowadzone w .NET Framework w wersji 2 i obsługiwane w systemie .NET Framework w wersji 2 lub nowszy.  
+- ".NET CLR sieci" - oryginalnego liczniki wydajności, które są wprowadzone w .NET Framework w wersji 2 i obsługiwane w systemie .NET Framework w wersji 2 lub nowszy.  
   
--   ".NET CLR sieci 4.0.0.0" - wszystkie powyższe gniazda liczników i nowe liczniki wydajności, które są obsługiwane w systemie .NET Framework w wersji 4 lub nowszy. Te nowe liczniki Podaj informacje o wydajności na <xref:System.Net.HttpWebRequest> obiektów.  
+- ".NET CLR sieci 4.0.0.0" - wszystkie powyższe gniazda liczników i nowe liczniki wydajności, które są obsługiwane w systemie .NET Framework w wersji 4 lub nowszy. Te nowe liczniki Podaj informacje o wydajności na <xref:System.Net.HttpWebRequest> obiektów.  
   
  Aby uzyskać więcej informacji na temat dostęp i zarządzanie liczników wydajności w aplikacji, zobacz [liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   

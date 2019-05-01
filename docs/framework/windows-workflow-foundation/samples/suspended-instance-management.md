@@ -3,11 +3,11 @@ title: Zarządzanie wstrzymanymi wystąpieniami
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
 ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785908"
 ---
 # <a name="suspended-instance-management"></a>Zarządzanie wstrzymanymi wystąpieniami
 Niniejszy przykład pokazuje, jak zarządzać wystąpienia przepływu pracy, które zostało zawieszone.  Domyślna akcja dla <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> jest `AbandonAndSuspend`. Oznacza to, że domyślnie nieobsługiwanych wyjątków zgłoszonych z wystąpienia przepływu pracy hostowane w <xref:System.ServiceModel.WorkflowServiceHost> spowoduje wystąpienie Aby zostać usunięty z pamięci (porzucone) i trwałość/utrwalona wersję wystąpienia został oznaczony jako zawieszone. Wystąpienie Wstrzymany przepływ pracy nie będzie działać, dopóki nie zostało zawieszenia.
@@ -26,41 +26,41 @@ Niniejszy przykład pokazuje, jak zarządzać wystąpienia przepływu pracy, kt�
 
 1. Ten przykładowy skrypt wymaga włączenia następujących składników Windows:
 
-    1.  Microsoft Message Queues (MSMQ) Server
+    1. Microsoft Message Queues (MSMQ) Server
 
-    2.  SQL Server Express
+    2. SQL Server Express
 
 2. Konfigurowanie bazy danych programu SQL Server.
 
-    1.  Z wiersza polecenia programu Visual Studio 2010 należy uruchomić "plik setup.cmd" z katalogu przykładowe SuspendedInstanceManagement, który wykonuje następujące czynności:
+    1. Z wiersza polecenia programu Visual Studio 2010 należy uruchomić "plik setup.cmd" z katalogu przykładowe SuspendedInstanceManagement, który wykonuje następujące czynności:
 
-        1.  Tworzy bazę danych trwałości za pomocą programu SQL Server Express. Jeśli baza danych stanów trwałych już istnieje, a następnie jest porzucona i utworzona ponownie
+        1. Tworzy bazę danych trwałości za pomocą programu SQL Server Express. Jeśli baza danych stanów trwałych już istnieje, a następnie jest porzucona i utworzona ponownie
 
-        2.  Konfiguruje bazę danych do stanu trwałego.
+        2. Konfiguruje bazę danych do stanu trwałego.
 
-        3.  Dodaje IIS APPPOOL\DefaultAppPool i NT AUTHORITY\Network Service do roli InstanceStoreUsers, która została określona podczas konfigurowania bazy danych dla trwałości.
+        3. Dodaje IIS APPPOOL\DefaultAppPool i NT AUTHORITY\Network Service do roli InstanceStoreUsers, która została określona podczas konfigurowania bazy danych dla trwałości.
 
 3. Konfigurowanie usługi kolejki.
 
-    1.  W programie Visual Studio 2010, kliknij prawym przyciskiem myszy **SampleWorkflowApp** projektu, a następnie kliknij przycisk **Ustaw jako projekt startowy**.
+    1. W programie Visual Studio 2010, kliknij prawym przyciskiem myszy **SampleWorkflowApp** projektu, a następnie kliknij przycisk **Ustaw jako projekt startowy**.
 
-    2.  Kompilowanie i uruchamianie SampleWorkflowApp, naciskając klawisz **F5**. Spowoduje to utworzenie wymaganych kolejki.
+    2. Kompilowanie i uruchamianie SampleWorkflowApp, naciskając klawisz **F5**. Spowoduje to utworzenie wymaganych kolejki.
 
-    3.  Naciśnij klawisz **Enter** przestanie SampleWorkflowApp.
+    3. Naciśnij klawisz **Enter** przestanie SampleWorkflowApp.
 
-    4.  Otwórz konsolę Zarządzanie komputerem, uruchamiając Compmgmt.msc z poziomu wiersza polecenia.
+    4. Otwórz konsolę Zarządzanie komputerem, uruchamiając Compmgmt.msc z poziomu wiersza polecenia.
 
-    5.  Rozwiń **usługi i aplikacje**, **usługi kolejkowania komunikatów**, **kolejki prywatne**.
+    5. Rozwiń **usługi i aplikacje**, **usługi kolejkowania komunikatów**, **kolejki prywatne**.
 
-    6.  Kliknij prawym przyciskiem myszy **ReceiveTx** kolejki, a następnie wybierz pozycję **właściwości**.
+    6. Kliknij prawym przyciskiem myszy **ReceiveTx** kolejki, a następnie wybierz pozycję **właściwości**.
 
-    7.  Wybierz **zabezpieczeń** kartę i umożliwiają **wszyscy** musi mieć uprawnienia do **odbieranie wiadomości**, **wglądu do wiadomości**, i  **Wyślij wiadomość**.
+    7. Wybierz **zabezpieczeń** kartę i umożliwiają **wszyscy** musi mieć uprawnienia do **odbieranie wiadomości**, **wglądu do wiadomości**, i  **Wyślij wiadomość**.
 
 4. Teraz uruchom przykład.
 
-    1.  W programie Visual Studio 2010, SampleWorkflowApp project należy ponownie uruchomić bez debugowania, naciskając klawisz **kombinację klawiszy Ctrl + F5**. Dwa adresy punktów końcowych, które będą wypisywane w oknie konsoli: jeden dla punktu końcowego aplikacji i następnie inne z <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Wystąpienie przepływu pracy zostanie utworzony i śledzenia rekordów dla tego wystąpienia zostaną wyświetlone w oknie konsoli. Wystąpienie przepływu pracy spowoduje zgłoszenie wyjątku powoduje wystąpienie aby je zawieszać i zostało przerwane.
+    1. W programie Visual Studio 2010, SampleWorkflowApp project należy ponownie uruchomić bez debugowania, naciskając klawisz **kombinację klawiszy Ctrl + F5**. Dwa adresy punktów końcowych, które będą wypisywane w oknie konsoli: jeden dla punktu końcowego aplikacji i następnie inne z <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Wystąpienie przepływu pracy zostanie utworzony i śledzenia rekordów dla tego wystąpienia zostaną wyświetlone w oknie konsoli. Wystąpienie przepływu pracy spowoduje zgłoszenie wyjątku powoduje wystąpienie aby je zawieszać i zostało przerwane.
 
-    2.  Narzędzie wiersza polecenia, następnie może służyć do podejmowania dalszych działań na dowolnym z tych wystąpień. Składnia służąca do argumentów wiersza polecenia jest następujący:
+    2. Narzędzie wiersza polecenia, następnie może służyć do podejmowania dalszych działań na dowolnym z tych wystąpień. Składnia służąca do argumentów wiersza polecenia jest następujący:
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 

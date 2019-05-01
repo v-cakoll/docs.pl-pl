@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791862"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedury własności (Visual Basic)
 Procedury właściwości jest szereg instrukcji, które manipulowania właściwości niestandardowych dla modułu, klasy lub struktury. Procedury własności są również nazywane *Akcesory właściwości*.  
   
  Visual Basic zawiera następujące procedury właściwości:  
   
--   A `Get` procedura zwraca wartość właściwości. Jest ona wywoływana, gdy uzyskujesz dostęp do właściwości w wyrażeniu.  
+- A `Get` procedura zwraca wartość właściwości. Jest ona wywoływana, gdy uzyskujesz dostęp do właściwości w wyrażeniu.  
   
--   A `Set` procedury ustawia właściwość na wartość, w tym odwołanie do obiektu. Jest ona wywoływana podczas przypisywania wartości do właściwości.  
+- A `Set` procedury ustawia właściwość na wartość, w tym odwołanie do obiektu. Jest ona wywoływana podczas przypisywania wartości do właściwości.  
   
  Zazwyczaj definiowanie procedury właściwości w parach, za pomocą `Get` i `Set` instrukcji, ale można zdefiniować tych procedurach, tylko, jeśli właściwość jest tylko do odczytu ([instrukcja Get](../../../../visual-basic/language-reference/statements/get-statement.md)) lub tylko do zapisu ([zestawu Instrukcja](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   

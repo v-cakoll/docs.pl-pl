@@ -12,11 +12,11 @@ ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779902"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Podgląd dziennika powiązań zasobów)
 Podgląd dziennika powiązań zestawów wyświetla szczegóły dotyczące powiązań zestawu. Te informacje pomagają zdiagnozować, dlaczego .NET Framework nie może zlokalizować zestawu w czasie wykonywania. Te błędy są zazwyczaj wynikiem wdrożenia zestawu w nieprawidłowej lokalizacji, obrazu macierzystego, który przestał być prawidłowy lub niezgodności numerów wersji lub kultur. Błąd wykonywalnych języka wspólnego do zlokalizowania zestawu zwykle pojawia się jako <xref:System.TypeLoadException> w aplikacji.  
@@ -51,17 +51,17 @@ fuslogvw
   
      W narzędziu są wyświetlane następujące szczegółowe informacje o błędzie wybranego powiązania:  
   
-    -   Konkretna przyczyna niepowodzenia powiązania, taka jak „nie odnaleziono pliku” lub „niezgodność wersji”.  
+    - Konkretna przyczyna niepowodzenia powiązania, taka jak „nie odnaleziono pliku” lub „niezgodność wersji”.  
   
-    -   Informacje o aplikacji, która zainicjowała powiązanie, w tym jej nazwa, katalog główny aplikacji (AppBase) i opis prywatnej ścieżki wyszukiwania, jeśli taka istnieje.  
+    - Informacje o aplikacji, która zainicjowała powiązanie, w tym jej nazwa, katalog główny aplikacji (AppBase) i opis prywatnej ścieżki wyszukiwania, jeśli taka istnieje.  
   
-    -   Tożsamość zestawu, którego szuka narzędzie.  
+    - Tożsamość zestawu, którego szuka narzędzie.  
   
-    -   Opis dowolnych zastosowanych polityk wersji Aplikacji, Wydawcy lub Administratora.  
+    - Opis dowolnych zastosowanych polityk wersji Aplikacji, Wydawcy lub Administratora.  
   
-    -   Czy zestaw został znaleziony w [globalnej pamięci podręcznej](../../../docs/framework/app-domains/gac.md).  
+    - Czy zestaw został znaleziony w [globalnej pamięci podręcznej](../../../docs/framework/app-domains/gac.md).  
   
-    -   Lista wszystkich badających adresów URL.  
+    - Lista wszystkich badających adresów URL.  
   
  Następujący przykładowy wpis dziennika zawiera szczegółowe informacje na temat nieudanych powiązań zestawu.  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Aby usunąć wszystkie wpisy z dziennika  
   
--   Kliknij przycisk **Usuń wszystkie** przycisku.  
+- Kliknij przycisk **Usuń wszystkie** przycisku.  
   
 ### <a name="to-refresh-the-user-interface"></a>Aby odświeżyć interfejs użytkownika  
   
--   Kliknij przycisk **Odśwież** przycisku. Przeglądarka nie wykrywa automatycznie nowych wpisów dziennika, kiedy jest uruchomiona. Należy użyć **Odśwież** przycisk umożliwiający ich wyświetlenie.  
+- Kliknij przycisk **Odśwież** przycisku. Przeglądarka nie wykrywa automatycznie nowych wpisów dziennika, kiedy jest uruchomiona. Należy użyć **Odśwież** przycisk umożliwiający ich wyświetlenie.  
   
 ### <a name="to-change-the-log-settings"></a>Aby zmienić ustawienia dziennika  
   
--   Kliknij przycisk **ustawienia** przycisk, aby otworzyć **ustawienia dziennika** okna dialogowego.  
+- Kliknij przycisk **ustawienia** przycisk, aby otworzyć **ustawienia dziennika** okna dialogowego.  
   
 ### <a name="to-view-the-about-dialog"></a>Aby wyświetlić okno dialogowe Informacje  
   
--   Kliknij przycisk **o** przycisku.  
+- Kliknij przycisk **o** przycisku.  
   
 ## <a name="binding-logs-for-native-images"></a>Dzienniki powiązań dla obrazów macierzystych  
  Domyślnie Fuslogvw.exe rejestruje normalne żądania powiązania zestawów. Alternatywnie można rejestrować powiązania zestawów dla obrazów macierzystych, które zostały utworzone przy użyciu [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>Aby rejestrować powiązania zestawów dla obrazów macierzystych  
   
--   W **kategorie dziennika** grupy, wybierz opcję **obrazy natywne** przycisku opcji.  
+- W **kategorie dziennika** grupy, wybierz opcję **obrazy natywne** przycisku opcji.  
   
  Następujący dziennik pokazuje błąd spowodowany przez zależność, która nie istniała, kiedy obraz macierzysty został utworzony dla aplikacji. Jeżeli zależności w czasie wykonywania różnią się od zależności po uruchomieniu Ngen.exe, powiązanie z obrazem macierzystym jest niedozwolone.  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>Aby wyłączyć rejestrowanie  
   
--   Wybierz **dziennika wyłączone** przycisku opcji.  Należy zauważyć, że ta opcja jest domyślnie zaznaczona.  
+- Wybierz **dziennika wyłączone** przycisku opcji.  Należy zauważyć, że ta opcja jest domyślnie zaznaczona.  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>Aby rejestrować powiązania zestawu w wyjątkach  
   
--   Wybierz **Rejestruj w tekście wyjątku** przycisku opcji. Tylko najmniej szczegółowe informacje dziennika łączenia są rejestrowane w tekście wyjątku. Aby wyświetlić pełne informacje, użyj jednego z innych ustawień.  
+- Wybierz **Rejestruj w tekście wyjątku** przycisku opcji. Tylko najmniej szczegółowe informacje dziennika łączenia są rejestrowane w tekście wyjątku. Aby wyświetlić pełne informacje, użyj jednego z innych ustawień.  
   
      Zobacz Ważne informacje dotyczące zestawów, które są ładowane, jako niezależne od domeny.  
   
 #### <a name="to-log-assembly-bind-failures"></a>Aby rejestrować błędy powiązania zestawów  
   
--   Wybierz **błędy powiązania dziennika na dysku** przycisku opcji.  
+- Wybierz **błędy powiązania dziennika na dysku** przycisku opcji.  
   
      Zobacz Ważne informacje dotyczące zestawów, które są ładowane, jako niezależne od domeny.  
   
 #### <a name="to-log-all-assembly-binds"></a>Aby rejestrować wszystkie powiązania zestawów  
   
--   Wybierz **Zaloguj się na dysku wszystkie powiązania** przycisku opcji.  
+- Wybierz **Zaloguj się na dysku wszystkie powiązania** przycisku opcji.  
   
      Zobacz Ważne informacje dotyczące zestawów, które są ładowane, jako niezależne od domeny.  
   

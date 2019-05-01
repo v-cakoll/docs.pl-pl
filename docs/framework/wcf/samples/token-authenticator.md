@@ -3,30 +3,30 @@ title: Wystawca uwierzytelnienia tokenów
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779174"
 ---
 # <a name="token-authenticator"></a>Wystawca uwierzytelnienia tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego wystawcy uwierzytelniania tokenu. Wystawcy uwierzytelnienia tokenu w Windows Communication Foundation (WCF) służy do sprawdzania poprawności tokenu użytego komunikatem, weryfikowanie, czy jest spójny i uwierzytelniania tożsamości skojarzonych z tokenem.
 
  Niestandardowe uwierzytelnienia tokenu są przydatne w wielu przypadkach, takich jak:
 
--   Jeśli chcesz przesłonić domyślny mechanizm uwierzytelniania, skojarzone z tokenem.
+- Jeśli chcesz przesłonić domyślny mechanizm uwierzytelniania, skojarzone z tokenem.
 
--   Kiedy tworzysz niestandardowy token.
+- Kiedy tworzysz niestandardowy token.
 
  W tym przykładzie pokazano poniżej:
 
--   Jak klienta można uwierzytelniać za pomocą pary nazwy użytkownika i hasła.
+- Jak klienta można uwierzytelniać za pomocą pary nazwy użytkownika i hasła.
 
--   Jak serwer może sprawdzić poprawności poświadczeń klienta przy użyciu niestandardowego wystawcy uwierzytelniania tokenu.
+- Jak serwer może sprawdzić poprawności poświadczeń klienta przy użyciu niestandardowego wystawcy uwierzytelniania tokenu.
 
--   Jak kod usługi WCF wiąże się przy użyciu niestandardowego wystawcy uwierzytelniania tokenu.
+- Jak kod usługi WCF wiąże się przy użyciu niestandardowego wystawcy uwierzytelniania tokenu.
 
--   W jaki sposób serwer może zostać uwierzytelniony przy użyciu certyfikatu X.509 serwera.
+- W jaki sposób serwer może zostać uwierzytelniony przy użyciu certyfikatu X.509 serwera.
 
  Niniejszy przykład pokazuje również, jak tożsamości elementu wywołującego jest dostępny z WCF po zakończeniu procesu niestandardowe uwierzytelnianie przy użyciu tokenów.
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.
 
--   Tworzenie certyfikatu serwera.
+- Tworzenie certyfikatu serwera.
 
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Domyślnie ten plik wsadowy jest localhost.
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
 
      Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 

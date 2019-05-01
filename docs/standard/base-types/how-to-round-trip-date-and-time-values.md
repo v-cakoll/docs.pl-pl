@@ -15,11 +15,11 @@ ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860714"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Instrukcje: Obustronne wartości daty i godziny
 W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznacznej identyfikacji pojedynczego punktu w czasie. W tym temacie pokazano, jak zapisywanie i przywracanie <xref:System.DateTime> wartość <xref:System.DateTimeOffset> wartości i wartości daty i godziny, z czasem strefy, aby wartość przywróconej identyfikuje tym samym czasie jako zapisaną wartość.  
@@ -83,21 +83,21 @@ W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznac
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Wymagaj tych przykładach:  
   
--   Czy następujących przestrzeni nazw można zaimportować za pomocą języka C# `using` instrukcji lub Visual Basic `Imports` instrukcji:  
+- Czy następujących przestrzeni nazw można zaimportować za pomocą języka C# `using` instrukcji lub Visual Basic `Imports` instrukcji:  
   
-    -   <xref:System> (Tylko język C#).  
+    - <xref:System> (Tylko język C#).  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    - <xref:System.Globalization?displayProperty=nameWithType>.  
   
-    -   <xref:System.IO?displayProperty=nameWithType>.  
+    - <xref:System.IO?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
   
--   Odwołanie do biblioteki System.Core.dll.  
+- Odwołanie do biblioteki System.Core.dll.  
   
--   Przykład kodowych innych niż `DateInTimeZone` klasy, powinny być uwzględnione w klasie lub module języka Visual Basic, opakowane w metodach i wywoływane z `Main` metody.  
+- Przykład kodowych innych niż `DateInTimeZone` klasy, powinny być uwzględnione w klasie lub module języka Visual Basic, opakowane w metodach i wywoływane z `Main` metody.  
   
 ## <a name="see-also"></a>Zobacz także
 

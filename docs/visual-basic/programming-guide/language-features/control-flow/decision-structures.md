@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907010"
 ---
 # <a name="decision-structures-visual-basic"></a>Struktury decyzji (Visual Basic)
 Visual Basic umożliwia warunki badania i wykonywać różne operacje, w zależności od wyników tego testu. Możesz sprawdzić warunku jest wartość true lub false dla różnych wartości wyrażenia lub różne wyjątki generowane, gdy wykonać serię instrukcji.  
@@ -26,13 +26,13 @@ Visual Basic umożliwia warunki badania i wykonywać różne operacje, w zależn
 ## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
  `If...Then...Else` konstrukcje umożliwiają testowanie dla co najmniej jeden warunek i uruchomić jedną lub więcej instrukcji w zależności od każdego warunku. Można przetestować warunki i akcje w następujący sposób:  
   
--   Uruchomić jedną lub więcej instrukcji, jeśli warunek jest `True`  
+- Uruchomić jedną lub więcej instrukcji, jeśli warunek jest `True`  
   
--   Uruchomić jedną lub więcej instrukcji, jeśli warunek jest `False`  
+- Uruchomić jedną lub więcej instrukcji, jeśli warunek jest `False`  
   
--   Uruchamianie niektórych instrukcji, jeśli warunek jest `True` i innym osobom, gdy jest `False`  
+- Uruchamianie niektórych instrukcji, jeśli warunek jest `True` i innym osobom, gdy jest `False`  
   
--   Dodatkowe warunki badania, w przypadku warunku wstępnego `False`  
+- Dodatkowe warunki badania, w przypadku warunku wstępnego `False`  
   
  Struktura kontrolki, która oferuje wszystkie powyższe możliwości jest [Jeśli... Następnie... Else — instrukcja](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Można użyć wersji jednowierszowego, jeśli masz tylko jeden test i jednej instrukcji do uruchomienia. W przypadku bardziej złożonego zestawu warunków i akcji można użyć wersji wielu linii.  
   

@@ -9,11 +9,11 @@ ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873236"
 ---
 # <a name="interop-marshaling"></a>Organizowanie międzyoperacyjne
 <a name="top"></a> Marshaling międzyoperacyjny decyduje o tym, jak dane są przekazywane w metodzie argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania. Marshaling międzyoperacyjny jest czynnością środowiska wykonawczego, wykonywane przez usługę organizowania wykonywalnych języka wspólnego.  
@@ -24,23 +24,23 @@ ms.locfileid: "57677217"
   
  Ten przegląd zawiera następujące sekcje:  
   
--   [Wywołanie platformy i modele międzyoperacyjnego modelu COM](#platform_invoke_and_com_interop_models)  
+- [Wywołanie platformy i modele międzyoperacyjnego modelu COM](#platform_invoke_and_com_interop_models)  
   
--   [Marshaling i Apartamentach COM](#marshaling_and_com_apartments)  
+- [Marshaling i Apartamentach COM](#marshaling_and_com_apartments)  
   
--   [Kierowanie wywołań zdalnych](#marshaling_remote_calls)  
+- [Kierowanie wywołań zdalnych](#marshaling_remote_calls)  
   
--   [Tematy pokrewne](#related_topics)  
+- [Tematy pokrewne](#related_topics)  
   
--   [Dokumentacja](#reference)  
+- [Dokumentacja](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Wywołanie platformy i modele międzyoperacyjnego modelu COM  
  Środowisko uruchomieniowe języka wspólnego zawiera dwa mechanizmy współdziałanie z kodem niezarządzanym:  
   
--   Wywołanie platformy, które umożliwia kodowi zarządzanemu wywoływania funkcji wyeksportowanych z biblioteką niezarządzaną.  
+- Wywołanie platformy, które umożliwia kodowi zarządzanemu wywoływania funkcji wyeksportowanych z biblioteką niezarządzaną.  
   
--   Usługa międzyoperacyjna modelu COM, który umożliwia interakcję z obiektami Component Object Model (COM) za pośrednictwem interfejsów kodu zarządzanego.  
+- Usługa międzyoperacyjna modelu COM, który umożliwia interakcję z obiektami Component Object Model (COM) za pośrednictwem interfejsów kodu zarządzanego.  
   
  Wywołanie obie platformy i COM międzyoperacyjny Użyj marshaling międzyoperacyjny dokładnie przenoszenie argumenty metody między obiekt wywołujący i obiekt wywoływany i z powrotem, jeśli wymagane. Jak pokazano na poniższej ilustracji, wywołania platformy przepływy wywołanie metody z kodu zarządzanego do kodu niezarządzanego i nigdy nie inny sposób, chyba że [funkcji wywołania zwrotnego](callback-functions.md) są zaangażowani. Mimo że wywołanie platformy wywołania mogą przepływać tylko z kodu zarządzanego do kodu niezarządzanego, dane mogą przepływać w obu kierunkach, jako parametry wejściowe i wyjściowe. Wywołań metod międzyoperacyjnego modelu COM może przepływać w obu kierunkach.  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677217"
   
  Dla typu apartment między organizowanie, należy wykonać następujące:  
   
--   Zaakceptuj obciążenie szeregowanie między apartamentu, który jest widoczne tylko wtedy, gdy istnieje wiele wywołań przez granicę. Należy zarejestrować biblioteki typów składnika modelu COM dla wywołań do pomyślnie przekroczenia granic typu apartment.  
+- Zaakceptuj obciążenie szeregowanie między apartamentu, który jest widoczne tylko wtedy, gdy istnieje wiele wywołań przez granicę. Należy zarejestrować biblioteki typów składnika modelu COM dla wywołań do pomyślnie przekroczenia granic typu apartment.  
   
--   Zmiany głównego wątku, ustawiając wątku klienta STA i MTA. Na przykład jeśli Twoja C# klient wywołuje wiele składników STA COM, możesz uniknąć apartamentu między organizowanie, ustawiając wątku głównego w komórce jednowątkowej  
+- Zmiany głównego wątku, ustawiając wątku klienta STA i MTA. Na przykład jeśli Twoja C# klient wywołuje wiele składników STA COM, możesz uniknąć apartamentu między organizowanie, ustawiając wątku głównego w komórce jednowątkowej  
   
     > [!NOTE]
     >  Gdy wątek C# klienta jest ustawiona na STA, wywołania składników MTA COM będzie wymagać między apartamentu marshaling.  
@@ -101,9 +101,9 @@ ms.locfileid: "57677217"
 ## <a name="marshaling-remote-calls"></a>Kierowanie wywołań zdalnych  
  Podobnie jak w przypadku wielu apartamentu organizowanie, kierowanie modelu COM jest zaangażowana w każdym wywołaniu między kodem zarządzanym i niezarządzanym zawsze wtedy, gdy obiekty znajdują się w osobnych procesach. Na przykład:  
   
--   Klient modelu COM, który wywołuje serwerów zarządzanych na zdalnym hoście używa rozproszonych (DCOM).  
+- Klient modelu COM, który wywołuje serwerów zarządzanych na zdalnym hoście używa rozproszonych (DCOM).  
   
--   Klient zarządzany, który wywołuje serwer COM, na zdalnym hoście używa protokołu DCOM.  
+- Klient zarządzany, który wywołuje serwer COM, na zdalnym hoście używa protokołu DCOM.  
   
  Na poniższej ilustracji przedstawiono marshaling międzyoperacyjny jak i kierowanie modelu COM zapewniają kanałów komunikacyjnych granice procesu i hosta.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677217"
   
  Na tej ilustracji:  
   
--   Niezarządzany klient pobiera odwołanie do obiektu COM z obiektu zarządzanego, która pobiera odwołanie z hosta zdalnego. Mechanizm komunikacji zdalnej jest model DCOM.  
+- Niezarządzany klient pobiera odwołanie do obiektu COM z obiektu zarządzanego, która pobiera odwołanie z hosta zdalnego. Mechanizm komunikacji zdalnej jest model DCOM.  
   
--   Klient zarządzany pobiera odwołanie do zarządzanego obiektu z obiektu COM, który pobiera odwołanie z hosta zdalnego. Mechanizm komunikacji zdalnej jest model DCOM.  
+- Klient zarządzany pobiera odwołanie do zarządzanego obiektu z obiektu COM, który pobiera odwołanie z hosta zdalnego. Mechanizm komunikacji zdalnej jest model DCOM.  
   
     > [!NOTE]
     >  Musi być zarejestrowana wyeksportowanej biblioteki typów z serwerów zarządzanych.  

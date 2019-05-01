@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
 ms.openlocfilehash: 01659205f271b089fe4e8aa87cf7a8c44e7a4000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918167"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Liczba indeksów przekracza liczbę wymiarów tablicy indeksowanej
 Liczba indeksów, które umożliwiają dostęp do elementu tablicy musi być dokładnie taki sam jak rangę tablicy, czyli liczbę wymiarów zadeklarowany dla niego.  
@@ -21,7 +21,7 @@ Liczba indeksów, które umożliwiają dostęp do elementu tablicy musi być dok
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Usuń indeksy dolne z odwołaniem do tablicy, aż łączna liczba indeksów dolnych jest równa rangę tablicy. Na przykład:  
+- Usuń indeksy dolne z odwołaniem do tablicy, aż łączna liczba indeksów dolnych jest równa rangę tablicy. Na przykład:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  

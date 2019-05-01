@@ -3,24 +3,24 @@ title: Atrybuty wspólne (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794033"
 ---
 # <a name="common-attributes-visual-basic"></a>Atrybuty wspólne (Visual Basic)
 W tym temacie opisano atrybuty, które są najczęściej używane w programach Visual Basic.  
   
--   [Atrybuty globalne](#Global)  
+- [Atrybuty globalne](#Global)  
   
--   [Atrybut przestarzałe](#Obsolete)  
+- [Atrybut przestarzałe](#Obsolete)  
   
--   [Atrybut Conditional](#Conditional)  
+- [Atrybut Conditional](#Conditional)  
   
--   [Caller — atrybuty informacji](#CallerInfo)  
+- [Caller — atrybuty informacji](#CallerInfo)  
   
--   [Atrybuty Visual Basic](#VB)  
+- [Atrybuty Visual Basic](#VB)  
   
 ## <a name="Global"></a> Atrybuty globalne  
  Większość atrybuty są stosowane do elementów języka, takich jak klasy lub metody; Jednak niektóre atrybuty są globalne — odnoszą się do całego zestawu lub modułu. Na przykład <xref:System.Reflection.AssemblyVersionAttribute> atrybut może służyć do osadzania informacje o wersji w zespół, takich jak to:  
@@ -33,11 +33,11 @@ W tym temacie opisano atrybuty, które są najczęściej używane w programach V
   
  Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Można je podzielić na następujące kategorie:  
   
--   Atrybuty tożsamości zestawu  
+- Atrybuty tożsamości zestawu  
   
--   Atrybuty informacyjne  
+- Atrybuty informacyjne  
   
--   Atrybuty manifestu zestawu  
+- Atrybuty manifestu zestawu  
   
 ### <a name="assembly-identity-attributes"></a>Atrybuty tożsamości zestawu  
  Trzy atrybuty (silną nazwą, jeśli ma to zastosowanie) określają tożsamość zestawu: nazwę, wersję i kulturę. Te atrybuty tworzą pełną nazwę zestawu i są wymagane, gdy można się odwoływać w kodzie. Można ustawić wersję i kulturę przy użyciu atrybutów zestawu. Jednak nazwa ma wartość przez kompilator programu Visual Studio IDE w [informacje o zestawie — okno dialogowe](/visualstudio/ide/reference/assembly-information-dialog-box), lub Assembly Linker (Al.exe), po utworzeniu zestawu w oparciu o plik, który zawiera manifest zestawu. <xref:System.Reflection.AssemblyFlagsAttribute> Atrybut określa, czy wiele kopii zestawu mogą współistnieć.  

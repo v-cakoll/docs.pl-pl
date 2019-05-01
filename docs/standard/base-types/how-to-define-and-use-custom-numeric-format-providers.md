@@ -18,20 +18,20 @@ ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861069"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia szeroką kontrolę nad reprezentację ciągu wartości liczbowych. Obsługuje następujące funkcje dostosowywania format wartości liczbowe:  
   
--   Ciągi standardowego formatu liczb, które zawierają zestaw wstępnie zdefiniowanych formatów do konwertowania liczb na jego reprezentację ciągu. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma `format` parametru. Aby uzyskać więcej informacji, zobacz [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Ciągi standardowego formatu liczb, które zawierają zestaw wstępnie zdefiniowanych formatów do konwertowania liczb na jego reprezentację ciągu. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma `format` parametru. Aby uzyskać więcej informacji, zobacz [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
--   Ciągi niestandardowego formatu liczb, które zawierają zestaw symboli, które można łączyć, aby zdefiniować specyfikatory niestandardowego formatu liczb. One można również za pomocą wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma `format` parametru. Aby uzyskać więcej informacji, zobacz [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Ciągi niestandardowego formatu liczb, które zawierają zestaw symboli, które można łączyć, aby zdefiniować specyfikatory niestandardowego formatu liczb. One można również za pomocą wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma `format` parametru. Aby uzyskać więcej informacji, zobacz [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   Niestandardowe <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.NumberFormatInfo> obiektów, które zdefiniować symbole i formatowanie wzorców służącego do wyświetlania ciągów reprezentujących wartości numeryczne. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Int32.ToString%2A>, która ma `provider` parametru. Zazwyczaj `provider` parametr jest używany do określenia formatowanie specyficzne dla kultury.  
+- Niestandardowe <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.NumberFormatInfo> obiektów, które zdefiniować symbole i formatowanie wzorców służącego do wyświetlania ciągów reprezentujących wartości numeryczne. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Int32.ToString%2A>, która ma `provider` parametru. Zazwyczaj `provider` parametr jest używany do określenia formatowanie specyficzne dla kultury.  
   
  W niektórych przypadkach (na przykład gdy aplikacji musi wyświetlić numer konta sformatowane, numer identyfikacyjny lub kod pocztowy) tych trzech metod nie mają zastosowania. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Oferuje również możliwość definiowania formatowania obiektu, który nie jest ani <xref:System.Globalization.CultureInfo> ani <xref:System.Globalization.NumberFormatInfo> obiektu, aby określić sposób formatowania wartości liczbowej. Ten temat zawiera szczegółowe instrukcje dotyczące wdrażania takiego obiektu i przedstawiono przykład formatowania numerów telefonów.  
   
@@ -41,21 +41,21 @@ ms.locfileid: "59318380"
   
 2. Implementowanie <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. <xref:System.IFormatProvider.GetFormat%2A> jest metodą wywołania zwrotnego, metoda formatowania (takie jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda) wywołuje w celu pobrania obiektu, który jest faktycznie odpowiedzialny za wykonanie, niestandardowe formatowanie. Typowa implementacja metody <xref:System.IFormatProvider.GetFormat%2A> wykonuje następujące czynności:  
   
-    1.  Określa, czy <xref:System.Type> przekazano obiekt jako metoda parametr reprezentuje <xref:System.ICustomFormatter> interfejsu.  
+    1. Określa, czy <xref:System.Type> przekazano obiekt jako metoda parametr reprezentuje <xref:System.ICustomFormatter> interfejsu.  
   
-    2.  Jeśli parametr reprezentują <xref:System.ICustomFormatter> interfejsu <xref:System.IFormatProvider.GetFormat%2A> zwraca obiekt, który implementuje <xref:System.ICustomFormatter> interfejs, który jest odpowiedzialny za zapewnienie niestandardowe formatowanie. Zazwyczaj obiektów formatowania niestandardowych zwraca samą siebie.  
+    2. Jeśli parametr reprezentują <xref:System.ICustomFormatter> interfejsu <xref:System.IFormatProvider.GetFormat%2A> zwraca obiekt, który implementuje <xref:System.ICustomFormatter> interfejs, który jest odpowiedzialny za zapewnienie niestandardowe formatowanie. Zazwyczaj obiektów formatowania niestandardowych zwraca samą siebie.  
   
-    3.  Jeśli parametr nie reprezentuje <xref:System.ICustomFormatter> interfejsu <xref:System.IFormatProvider.GetFormat%2A> zwraca `null`.  
+    3. Jeśli parametr nie reprezentuje <xref:System.ICustomFormatter> interfejsu <xref:System.IFormatProvider.GetFormat%2A> zwraca `null`.  
   
 3. Implementowanie <xref:System.ICustomFormatter.Format%2A> metody. Ta metoda jest wywoływana <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody i jest odpowiedzialna za zwrócenie ciąg reprezentujący liczbę. Implementacja metody zwykle obejmuje następujące czynności:  
   
-    1.  Opcjonalnie, upewnij się, że metoda rzeczywiście jest przeznaczona do świadczenia usług formatowania, sprawdzając `provider` parametru. Obiekty, które implementują zarówno formatowania <xref:System.IFormatProvider> i <xref:System.ICustomFormatter>, wiąże się to testowanie `provider` parametr dla porównania z bieżącym obiektem formatowania.  
+    1. Opcjonalnie, upewnij się, że metoda rzeczywiście jest przeznaczona do świadczenia usług formatowania, sprawdzając `provider` parametru. Obiekty, które implementują zarówno formatowania <xref:System.IFormatProvider> i <xref:System.ICustomFormatter>, wiąże się to testowanie `provider` parametr dla porównania z bieżącym obiektem formatowania.  
   
-    2.  Ustal, czy obiekt formatowania powinien obsługiwać specyfikatorów formatu niestandardowego. (Na przykład, specyfikator formatu "N" może wskazywać, że numer telefonu w Stanach Zjednoczonych, powinien być danych wyjściowych w formacie NANP, i "I" może wskazywać dane wyjściowe w formacie ITU-T E.123 zalecenia.) Jeśli używane są specyfikatorów formatu, metoda powinna obsługiwać specyfikator formatu określone. Jest przekazywany do metody w `format` parametru. Jeśli specyfikator nie jest obecna, wartość `format` parametr <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Ustal, czy obiekt formatowania powinien obsługiwać specyfikatorów formatu niestandardowego. (Na przykład, specyfikator formatu "N" może wskazywać, że numer telefonu w Stanach Zjednoczonych, powinien być danych wyjściowych w formacie NANP, i "I" może wskazywać dane wyjściowe w formacie ITU-T E.123 zalecenia.) Jeśli używane są specyfikatorów formatu, metoda powinna obsługiwać specyfikator formatu określone. Jest przekazywany do metody w `format` parametru. Jeśli specyfikator nie jest obecna, wartość `format` parametr <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-    3.  Pobierz wartość liczbową przekazywany do metody jako `arg` parametru. Wykonywać dowolne operacje są wymagane, aby przekonwertować go na jego reprezentację ciągu.  
+    3. Pobierz wartość liczbową przekazywany do metody jako `arg` parametru. Wykonywać dowolne operacje są wymagane, aby przekonwertować go na jego reprezentację ciągu.  
   
-    4.  Zwraca reprezentację ciągu `arg` parametru.  
+    4. Zwraca reprezentację ciągu `arg` parametru.  
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Aby użyć obiektów niestandardowych formatowania liczbowego  
   

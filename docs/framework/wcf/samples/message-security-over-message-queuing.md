@@ -3,11 +3,11 @@ title: Zabezpieczenia komunikatów w ramach kolejkowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989818"
 ---
 # <a name="message-security-over-message-queuing"></a>Zabezpieczenia komunikatów w ramach kolejkowania komunikatów
 Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania certyfikatu X.509v3 dla klienta i wymaga uwierzytelnienia serwera za pomocą certyfikatu X.509v3 serwera za pośrednictwem usługi MSMQ. Komunikat zabezpieczeń jest czasem korzystniejsze, aby upewnić się, że komunikaty w magazynie usługi MSMQ pozostają zaszyfrowane i aplikacji można wykonać swoje własne uwierzytelniania wiadomości.
@@ -20,15 +20,15 @@ Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z pro
 
 2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
 
-    1.  Otwórz Menedżera serwera w programie Visual Studio 2012.
+    1. Otwórz Menedżera serwera w programie Visual Studio 2012.
 
-    2.  Rozwiń **funkcji** kartę.
+    2. Rozwiń **funkcji** kartę.
 
-    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
+    3. Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
 
-    4.  Sprawdź **transakcyjna** pole.
+    4. Sprawdź **transakcyjna** pole.
 
-    5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
+    5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
 
 3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
@@ -77,7 +77,7 @@ Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z pro
   
 ### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
--   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+- Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
     > [!NOTE]
     >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
@@ -287,7 +287,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 ## <a name="comments"></a>Komentarze
 
--   Tworzenie certyfikatu klienta.
+- Tworzenie certyfikatu klienta.
 
      Następujący wiersz w pliku wsadowym tworzy certyfikat klienta. Podana nazwa klienta jest używany w nazwie podmiotu certyfikatu, utworzony. Certyfikat jest przechowywany w `My` przechowywać `CurrentUser` lokalizacji magazynu.
 
@@ -298,7 +298,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera.
+- Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera.
 
      Następujący wiersz w kopii pliku wsadowego certyfikat klienta do serwera TrustedPeople przechowywać tak, aby istotne zaufania lub decyzji dotyczących zaufania nie mogą być serwera. Certyfikat zainstalowany w magazynie TrustedPeople, aby być uważany za zaufany przez usługę Windows Communication Foundation (WCF), tryb walidacji certyfikatu klienta musi być równa `PeerOrChainTrust` lub `PeerTrust` wartość. Zobacz poprzedni przykład konfiguracji usługi, aby dowiedzieć się, jak można to zrobić przy użyciu pliku konfiguracji.
 
@@ -309,7 +309,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Tworzenie certyfikatu serwera.
+- Tworzenie certyfikatu serwera.
 
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany:
 
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      % Zmienna % nazwa_serwera Określa nazwę serwera. Certyfikat jest przechowywany w magazynie LocalMachine. Jeśli instalacyjny plik wsadowy jest uruchamiany z nieprawidłowym argumentem usługi (takie jak `setup.bat service`) nazwa_serwera % zawiera w pełni kwalifikowana nazwa domeny komputera. W przeciwnym razie jego wartość domyślna to hosta lokalnego
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
 
      Następujący wiersz kopiuje certyfikatu serwera w magazynie zaufanych osób klienta. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 

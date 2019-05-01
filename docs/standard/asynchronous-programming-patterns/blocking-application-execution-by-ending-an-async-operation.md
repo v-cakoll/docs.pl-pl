@@ -14,18 +14,18 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 63ecff45e39f3d3813d3f817a2cc55c6c35f5b3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870178"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej
 Aplikacje, które nie mogą w dalszym ciągu wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej należy zablokować, aż do zakończenia operacji. Blokowanie wątku głównego aplikacji podczas oczekiwania na zakończenie operacji asynchronicznej, użyj jednej z następujących opcji:  
   
--   Wywoływanie operacji asynchronicznych **zakończenia**_OperationName_ metody. To podejście jest przedstawiona w tym temacie.  
+- Wywoływanie operacji asynchronicznych **zakończenia**_OperationName_ metody. To podejście jest przedstawiona w tym temacie.  
   
--   Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć**_OperationName_ metody. Aby uzyskać przykład demonstrujący takie podejście, zobacz [blokowania aplikacji wykonywania za pomocą właściwości AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć**_OperationName_ metody. Aby uzyskać przykład demonstrujący takie podejście, zobacz [blokowania aplikacji wykonywania za pomocą właściwości AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
  Aplikacje, które używają **zakończenia**_OperationName_ zazwyczaj wywoła metodę, aby zablokować do czasu ukończenia operacji asynchronicznej **rozpocząć**  _OperationName_ metody, wykonać wszelkie prace, które może odbywać się bez wyników operacji, a następnie wywołaj **zakończenia**_OperationName_.  
   

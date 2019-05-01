@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
 ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857184"
 ---
 # <a name="data-contract-schema-reference"></a>Odwołanie do schematu kontraktu danych
 W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref:System.Runtime.Serialization.DataContractSerializer> do opisania wspólnego języka wspólnego (CLR) typy serializacji XML.  
@@ -24,19 +24,19 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 ### <a name="support-levels"></a>Poziomy pomocy technicznej  
  `DataContractSerializer` Zawiera następujące poziomy pomocy technicznej dla danej funkcji schematu XML:  
   
--   **Obsługiwane**. Brak jawnego mapowania z tej funkcji CLR typy atrybutów (lub obu tych) przy użyciu `DataContractSerializer`.  
+- **Obsługiwane**. Brak jawnego mapowania z tej funkcji CLR typy atrybutów (lub obu tych) przy użyciu `DataContractSerializer`.  
   
--   **Ignorowane**. Funkcja jest dozwolona w schematach importowane przez `DataContractSerializer`, ale nie ma wpływu na generowanie kodu.  
+- **Ignorowane**. Funkcja jest dozwolona w schematach importowane przez `DataContractSerializer`, ale nie ma wpływu na generowanie kodu.  
   
--   **Dostęp zabroniony**. `DataContractSerializer` Nie obsługuje importowania schematu za pomocą funkcji. Na przykład Svcutil.exe, podczas uzyskiwania dostępu do WSDL ze schematem, który używa takich funkcji przełączy się <xref:System.Xml.Serialization.XmlSerializer> zamiast tego. Jest to domyślnie.  
+- **Dostęp zabroniony**. `DataContractSerializer` Nie obsługuje importowania schematu za pomocą funkcji. Na przykład Svcutil.exe, podczas uzyskiwania dostępu do WSDL ze schematem, który używa takich funkcji przełączy się <xref:System.Xml.Serialization.XmlSerializer> zamiast tego. Jest to domyślnie.  
   
 ## <a name="general-information"></a>Informacje ogólne  
   
--   Przestrzeń nazw schematu jest opisany w [schematu XML](https://go.microsoft.com/fwlink/?LinkId=95475). Prefiks "xs" jest używany w tym dokumencie.  
+- Przestrzeń nazw schematu jest opisany w [schematu XML](https://go.microsoft.com/fwlink/?LinkId=95475). Prefiks "xs" jest używany w tym dokumencie.  
   
--   Wszelkie atrybuty z przestrzeni nazw bez schematu są ignorowane.  
+- Wszelkie atrybuty z przestrzeni nazw bez schematu są ignorowane.  
   
--   Wszystkie adnotacje (z wyjątkiem tych opisanych w tym dokumencie) są ignorowane.  
+- Wszystkie adnotacje (z wyjątkiem tych opisanych w tym dokumencie) są ignorowane.  
   
 ### <a name="xsschema-attributes"></a>\<xs:schema>: attributes  
   
@@ -120,11 +120,11 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 ### <a name="general-information"></a>Informacje ogólne  
  `<xs:element>` może wystąpić w następujących okolicznościach:  
   
--   Może wystąpić w `<xs:sequence>`, która opisuje element członkowski danych kontraktu regularnych danych (bez kolekcji). W tym przypadku `maxOccurs` atrybut musi mieć wartość 1. (Wartość 0 nie jest dozwolona).  
+- Może wystąpić w `<xs:sequence>`, która opisuje element członkowski danych kontraktu regularnych danych (bez kolekcji). W tym przypadku `maxOccurs` atrybut musi mieć wartość 1. (Wartość 0 nie jest dozwolona).  
   
--   Może wystąpić w `<xs:sequence>`, która opisuje składowa danych klasy kontraktu danych kolekcji. W tym przypadku `maxOccurs` atrybut musi być większa niż 1 lub "niepowiązanego".  
+- Może wystąpić w `<xs:sequence>`, która opisuje składowa danych klasy kontraktu danych kolekcji. W tym przypadku `maxOccurs` atrybut musi być większa niż 1 lub "niepowiązanego".  
   
--   Może wystąpić w `<xs:schema>` jako globalny Element deklaracji (e).  
+- Może wystąpić w `<xs:schema>` jako globalny Element deklaracji (e).  
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<elementu xs: element > maxOccurs = 1, w ramach \<użyto w nim wartości > (elementy członkowskie danych)  
   
@@ -144,17 +144,17 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<elementu xs: element > za pomocą elementu maxOccurs > 1 w ramach \<użyto w nim wartości > (kolekcji)  
   
--   Mapuje <xref:System.Runtime.Serialization.CollectionDataContractAttribute>.  
+- Mapuje <xref:System.Runtime.Serialization.CollectionDataContractAttribute>.  
   
--   Typy kolekcji tylko jednego elementu xs: element jest dozwolony w ramach użyto w nim wartości.  
+- Typy kolekcji tylko jednego elementu xs: element jest dozwolony w ramach użyto w nim wartości.  
   
  Kolekcje mogą być następujące:  
   
--   Kolekcje regularnie (na przykład, tablice).  
+- Kolekcje regularnie (na przykład, tablice).  
   
--   Kolekcje słownika (mapowanie jedną wartość na inny; na przykład <xref:System.Collections.Hashtable>).  
+- Kolekcje słownika (mapowanie jedną wartość na inny; na przykład <xref:System.Collections.Hashtable>).  
   
--   Jedyną różnicą między słownik i tablicę typu pary klucz/wartość jest w wygenerowanym modelu programowania. Istnieje mechanizm adnotację schematu, który może służyć do wskazywania danego typu kolekcji słownika.  
+- Jedyną różnicą między słownik i tablicę typu pary klucz/wartość jest w wygenerowanym modelu programowania. Istnieje mechanizm adnotację schematu, który może służyć do wskazywania danego typu kolekcji słownika.  
   
  Reguły dotyczące `ref`, `block`, `default`, `fixed`, `form`, i `id` atrybuty są takie same jak w przypadku innych kolekcji. Inne atrybuty obejmuje występujące w poniższej tabeli.  
   
@@ -168,13 +168,13 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
   
 ### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<elementu xs: element > w ramach \<xs:schema > deklaracji elementu globalnego  
   
--   Globalny Element deklaracji (Jściowa) jako typ w schemacie, ma taką samą nazwę i przestrzeń nazw lub definiujący typu anonimowego wewnątrz siebie, jest nazywany ma zostać skojarzony z typem.  
+- Globalny Element deklaracji (Jściowa) jako typ w schemacie, ma taką samą nazwę i przestrzeń nazw lub definiujący typu anonimowego wewnątrz siebie, jest nazywany ma zostać skojarzony z typem.  
   
--   Eksport schematu: GEDs skojarzone są generowane dla każdego wygenerowanego typu proste i złożone.  
+- Eksport schematu: GEDs skojarzone są generowane dla każdego wygenerowanego typu proste i złożone.  
   
--   Serializacji/deserializacji: GEDs skojarzone są używane jako elementy główne dla typu.  
+- Serializacji/deserializacji: GEDs skojarzone są używane jako elementy główne dla typu.  
   
--   Importowanie schematu: skojarzone GEDs nie są wymagane i są ignorowane, jeśli używają następujących reguł (o ile nie mogą definiować typy).  
+- Importowanie schematu: skojarzone GEDs nie są wymagane i są ignorowane, jeśli używają następujących reguł (o ile nie mogą definiować typy).  
   
 |Atrybut|Schemat|  
 |---------------|------------|  
@@ -202,11 +202,11 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
   
  \* Korzystając z `simpleType` i `complexType,` mapowania dla typów anonimowych jest tak samo nieanonimowym typów, z tą różnicą, że nie ma żadnych umów anonimowych danych, więc kontrakt danych o podanej nazwie zostanie utworzony, z użyciem nazwy wygenerowanej pochodzi od nazwy elementu. Na poniższej liście są następujące reguły dla typów anonimowych:  
   
--   Szczegóły implementacji usługi WCF: Jeśli `xs:element` nazwa nie zawiera kropek, typu anonimowego mapuje do typu wewnętrznego typu kontraktu danych zewnętrznych. Jeśli nazwa zawiera kropek, wynikowy typ kontraktu danych jest niezależne (nie wewnętrznego typu).  
+- Szczegóły implementacji usługi WCF: Jeśli `xs:element` nazwa nie zawiera kropek, typu anonimowego mapuje do typu wewnętrznego typu kontraktu danych zewnętrznych. Jeśli nazwa zawiera kropek, wynikowy typ kontraktu danych jest niezależne (nie wewnętrznego typu).  
   
--   Nazwa kontraktu wygenerowane dane typu wewnętrznego jest nazwie kontraktu danych typu zewnętrznego, następnie kropkę i nazwę elementu i ciągu "Type".  
+- Nazwa kontraktu wygenerowane dane typu wewnętrznego jest nazwie kontraktu danych typu zewnętrznego, następnie kropkę i nazwę elementu i ciągu "Type".  
   
--   Jeśli kontraktu danych o takiej nazwie już istnieje, nazwa jest unikatowa, dodając "1", "2", "3", i tak dalej do momentu utworzenia unikatowej nazwy.  
+- Jeśli kontraktu danych o takiej nazwie już istnieje, nazwa jest unikatowa, dodając "1", "2", "3", i tak dalej do momentu utworzenia unikatowej nazwy.  
   
 ## <a name="simple-types---xssimpletype"></a>Typy proste — \<xs:simpleType >  
   
@@ -228,11 +228,11 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
   
 ### <a name="xsrestriction"></a>\<xs:restriction>  
   
--   Ograniczenia typu złożonego są obsługiwane tylko dla podstawowego = "`xs:anyType`".  
+- Ograniczenia typu złożonego są obsługiwane tylko dla podstawowego = "`xs:anyType`".  
   
--   Ograniczenia typu prostego `xs:string` nie mają żadnych ograniczeń aspekty inne niż `xs:enumeration` są mapowane na wyliczenie kontraktów danych.  
+- Ograniczenia typu prostego `xs:string` nie mają żadnych ograniczeń aspekty inne niż `xs:enumeration` są mapowane na wyliczenie kontraktów danych.  
   
--   Wszystkie inne ograniczenia typu prostego są mapowane na typy, które ograniczają one. Na przykład ograniczenia `xs:int` mapuje na liczbę całkowitą, podobnie jak `xs:int` sam przeprowadza. Aby uzyskać więcej informacji na temat mapowania typów pierwotnych Zobacz typ/element mapowania.  
+- Wszystkie inne ograniczenia typu prostego są mapowane na typy, które ograniczają one. Na przykład ograniczenia `xs:int` mapuje na liczbę całkowitą, podobnie jak `xs:int` sam przeprowadza. Aby uzyskać więcej informacji na temat mapowania typów pierwotnych Zobacz typ/element mapowania.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs:restriction >: atrybuty  
   
@@ -464,9 +464,9 @@ public class Employee : Person
   
  Jeśli typ pochodny zawiera element o takiej samej nazwie jako element w typie podstawowym, deklaracja zduplikowany element mapuje element członkowski danych o nazwie, który jest generowany, aby była unikatowa. Dodatnia liczba całkowita liczby są dodawane do nazwy elementu członkowskiego danych ("Członek1", "członek2" itd.) aż do znalezienia unikatową nazwę. Z drugiej strony:  
   
--   Gdy kontrakt danych pochodnych ma element członkowski danych o tej samej nazwie i typie jako element członkowski danych w kontrakt danych podstawowych `DataContractSerializer` generuje ten odpowiadający mu element w typie pochodnym.  
+- Gdy kontrakt danych pochodnych ma element członkowski danych o tej samej nazwie i typie jako element członkowski danych w kontrakt danych podstawowych `DataContractSerializer` generuje ten odpowiadający mu element w typie pochodnym.  
   
--   Jeśli element członkowski danych o takiej samej nazwie jak element członkowski danych w kontraktu danych podstawowych, ale jest innego typu kontraktu danych pochodnych `DataContractSerializer` Importuje schemat z elementem typu `xs:anyType` zarówno w typie podstawowym, jak i w deklaracji typu pochodnego. Oryginalna nazwa typu jest zachowywana w `xs:annotations/xs:appInfo/ser:ActualType/@Name`.  
+- Jeśli element członkowski danych o takiej samej nazwie jak element członkowski danych w kontraktu danych podstawowych, ale jest innego typu kontraktu danych pochodnych `DataContractSerializer` Importuje schemat z elementem typu `xs:anyType` zarówno w typie podstawowym, jak i w deklaracji typu pochodnego. Oryginalna nazwa typu jest zachowywana w `xs:annotations/xs:appInfo/ser:ActualType/@Name`.  
   
  Obu wariantów może prowadzić do schematu o niejednoznaczne modelu zawartości, który zależy od kolejności elementów członkowskich odpowiednich danych.  
   
@@ -609,11 +609,11 @@ public class Employee : Person
   
  Należy można zauważyć następujące czynności:  
   
--   `ser:char` został wprowadzony do reprezentowania znaków Unicode typu <xref:System.Char>.  
+- `ser:char` został wprowadzony do reprezentowania znaków Unicode typu <xref:System.Char>.  
   
--   `valuespace` z `xs:duration` jest ograniczona do uporządkowany zestaw, dzięki czemu mogą być mapowane na <xref:System.TimeSpan>.  
+- `valuespace` z `xs:duration` jest ograniczona do uporządkowany zestaw, dzięki czemu mogą być mapowane na <xref:System.TimeSpan>.  
   
--   `FactoryType` jest używany w schematach wyeksportowane z typów, które są uzyskiwane z <xref:System.Runtime.Serialization.ISerializable>.  
+- `FactoryType` jest używany w schematach wyeksportowane z typów, które są uzyskiwane z <xref:System.Runtime.Serialization.ISerializable>.  
   
 ## <a name="importing-non-datacontract-schemas"></a>Importowanie schematów innych niż typ  
  `DataContractSerializer` ma `ImportXmlTypes` opcję, aby umożliwić Importowanie schematów, które nie są zgodne z `DataContractSerializer` profilu XSD (zobacz <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> właściwości). Ustawienie tej opcji na `true` umożliwia przyjmowanie niezgodnych typów schematu i mapowania ich na następującą implementacją <xref:System.Xml.Serialization.IXmlSerializable> zawijania tablicę <xref:System.Xml.XmlNode> (różni się tylko nazwę klasy).  

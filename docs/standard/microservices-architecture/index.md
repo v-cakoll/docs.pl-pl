@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
 ms.openlocfilehash: 8497f5cbd15fae6e289791393ea779833be27be6
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818309"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET
 
@@ -57,7 +57,7 @@ Ten przewodnik koncentruje się na cykl życia aplikacji, infrastruktury DevOps 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Kontenerowych nimi cykl życia aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi** (do pobrania Książka elektroniczna)  
+- **Kontenerowych nimi cykl życia aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi** (do pobrania Książka elektroniczna)  
     <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien używać tego przewodnika

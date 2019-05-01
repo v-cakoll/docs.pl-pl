@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
 ms.openlocfilehash: 33298fd9840630fbfd6f7f9d883cc2397a459843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921410"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Operacje związane z portem w oprogramowaniu .NET Framework przeprowadzane za pomocą Visual Basic
 Możesz uzyskać dostęp portów szeregowych na komputerze za pośrednictwem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klas w <xref:System.IO.Ports?displayProperty=nameWithType> przestrzeni nazw. Najważniejsze klasy <xref:System.IO.Ports.SerialPort>, zapewnia ramy pozwalające synchroniczne i oparte na zdarzeniach operacji We/Wy, dostępu stanom pin i podziału i dostęp do właściwości sterownika szeregowe. Mogą być ujęte w <xref:System.IO.Stream> obiekt, za pośrednictwem <xref:System.IO.Ports.SerialPort.BaseStream> właściwości. Zawijanie <xref:System.IO.Ports.SerialPort> w <xref:System.IO.Stream> obiekt umożliwia portu szeregowego dostępu do klasy, które używają strumieni. Przestrzeń nazw zawiera wyliczenia, które ułatwiają kontrolę nad portów szeregowych.  

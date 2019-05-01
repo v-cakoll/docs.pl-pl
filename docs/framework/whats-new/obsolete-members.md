@@ -10,81 +10,81 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914397"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w .NET Framework
 
 W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są przestarzałe w programie .NET Framework 4.5 i nowsze wersje, uporządkowane według zestawu. Użyj poniższych linków, aby zobaczyć listę przestarzali członkowie i zalecanych rozwiązań alternatywnych, w każdym zestawie. W tym artykule nie ma elementów członkowskich przestarzałe typy. Aby uzyskać listę przestarzałych typów, zobacz [przestarzałe typy](obsolete-types.md).  
   
--   [Przestarzali członkowie w zestawy systemowe](#SystemMembers)  
+- [Przestarzali członkowie w zestawy systemowe](#SystemMembers)  
   
-    -   [mscorlib.dll](#mscorlib)  
+    - [mscorlib.dll](#mscorlib)  
   
-    -   [PresentationCore.dll](#PresentationCore)  
+    - [PresentationCore.dll](#PresentationCore)  
   
-    -   [PresentationFramework.dll](#PresFW)  
+    - [PresentationFramework.dll](#PresFW)  
   
-    -   [System.Activities.dll](#Act)  
+    - [System.Activities.dll](#Act)  
   
-    -   [System.Activities.Presentation.dll](#ActPres)  
+    - [System.Activities.Presentation.dll](#ActPres)  
   
-    -   [System.Core.dll](#core)  
+    - [System.Core.dll](#core)  
   
-    -   [System.Data.dll](#data)  
+    - [System.Data.dll](#data)  
   
-    -   [System.Data.Entity.dll](#entity)  
+    - [System.Data.Entity.dll](#entity)  
   
-    -   [System.Data.OracleClient.dll](#oracleclient)  
+    - [System.Data.OracleClient.dll](#oracleclient)  
   
-    -   [System.Design.dll](#design)  
+    - [System.Design.dll](#design)  
   
-    -   [System.dll](#system)  
+    - [System.dll](#system)  
   
-    -   [System.Drawing.dll](#drawing)  
+    - [System.Drawing.dll](#drawing)  
   
-    -   [System.Messaging.dll](#messaging)  
+    - [System.Messaging.dll](#messaging)  
   
-    -   [System.ServiceModel.dll](#servicemodel)  
+    - [System.ServiceModel.dll](#servicemodel)  
   
-    -   [System.ServiceModel.Discovery.dll](#smDisc)  
+    - [System.ServiceModel.Discovery.dll](#smDisc)  
   
-    -   [System.Web.DataVisualization.dll](#datavisualization)  
+    - [System.Web.DataVisualization.dll](#datavisualization)  
   
-    -   [System.Web.dll](#web)  
+    - [System.Web.dll](#web)  
   
-    -   [System.Web.DynamicData.dll](#dynamicdata)  
+    - [System.Web.DynamicData.dll](#dynamicdata)  
   
-    -   [System.Web.Extensions.dll](#extensions)  
+    - [System.Web.Extensions.dll](#extensions)  
   
-    -   [System.Web.Services.dll](#services)  
+    - [System.Web.Services.dll](#services)  
   
-    -   [System.Windows.Forms.dll](#forms)  
+    - [System.Windows.Forms.dll](#forms)  
   
-    -   [System.Xaml.dll](#xaml)  
+    - [System.Xaml.dll](#xaml)  
   
-    -   [System.Xml.dll](#xml)  
+    - [System.Xml.dll](#xml)  
   
--   [Przestarzali członkowie w zestawach firmy Microsoft](#MicrosoftMembers)  
+- [Przestarzali członkowie w zestawach firmy Microsoft](#MicrosoftMembers)  
   
-    -   [IEHost.dll i IEExec.exe](#IEHost)  
+    - [IEHost.dll i IEExec.exe](#IEHost)  
   
-    -   [ISymWrapper.dll](#isymwrapper)  
+    - [ISymWrapper.dll](#isymwrapper)  
   
-    -   [Microsoft.Build.Conversion.v4.0.dll](#conversion)  
+    - [Microsoft.Build.Conversion.v4.0.dll](#conversion)  
   
-    -   [Microsoft.Build.Engine.dll](#engine)  
+    - [Microsoft.Build.Engine.dll](#engine)  
   
-    -   [Microsoft.Build.Framework.dll](#BuildFW)  
+    - [Microsoft.Build.Framework.dll](#BuildFW)  
   
-    -   [Microsoft.Build.Utilities.v4.0.dll](#BuildUtil4)  
+    - [Microsoft.Build.Utilities.v4.0.dll](#BuildUtil4)  
   
-    -   [Microsoft.Data.Entity.Build.Tasks.dll](#data_entity_tasks)  
+    - [Microsoft.Data.Entity.Build.Tasks.dll](#data_entity_tasks)  
   
-    -   [Microsoft.VisualBasic.dll](#visualbasic)  
+    - [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
 ## <a name="obsolete-members-in-system-assemblies"></a>Przestarzali członkowie w zestawy systemowe  

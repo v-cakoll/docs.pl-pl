@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
 ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921280"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Wyrażenia lambda nie są prawidłowe w pierwszym wyrażeniu instrukcji „Select Case"
 Nie można użyć wyrażenia lambda wyrażenia testu w `Select Case` instrukcji. Definicje Wyrażenie lambda zwraca funkcje i wyrażenia testu `Select Case` instrukcja musi być typem danych podstawowych.  
@@ -29,9 +29,9 @@ Nie można użyć wyrażenia lambda wyrażenia testu w `Select Case` instrukcji.
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Sprawdź swój kod, aby określić, czy innej konstrukcji warunkowych, takich jak `If...Then...Else` instrukcji, będzie działać dla Ciebie.  
+- Sprawdź swój kod, aby określić, czy innej konstrukcji warunkowych, takich jak `If...Then...Else` instrukcji, będzie działać dla Ciebie.  
   
--   Może być przeznaczone do wywołania funkcji, jak pokazano w poniższym kodzie:  
+- Może być przeznaczone do wywołania funkcji, jak pokazano w poniższym kodzie:  
   
 ```vb  
 Dim num? As Integer  

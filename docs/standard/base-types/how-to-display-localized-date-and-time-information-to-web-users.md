@@ -16,11 +16,11 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855482"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, operacje analizy i formatowanie wartości daty i godziny, nie należy polegać na format domyślny (czyli w większości przypadków format kultury lokalnego serwera sieci Web) podczas interakcji z użytkownikiem. Zamiast tego formularzy sieci Web, Obsługa daty i godziny ciągi wprowadzane przez użytkownika, które należy przeanalizować ciągi przy użyciu preferowanej kultury użytkownika. Podobnie dane daty i godziny, powinna być wyświetlana dla użytkownika w formacie, który jest zgodny z kultury użytkownika. W tym temacie pokazano, jak to zrobić.  
@@ -35,9 +35,9 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
   
 4. Wywołaj opcję `TryParse` lub `Parse` metody <xref:System.DateTime> lub <xref:System.DateTimeOffset> typu próby konwersji. Używanie przeciążenia `TryParse` lub `Parse` metody z `provider` parametru i przekazywać je w jednej z następujących pozycji:  
   
-    -   <xref:System.Globalization.CultureInfo> Obiekt utworzony w kroku 3.  
+    - <xref:System.Globalization.CultureInfo> Obiekt utworzony w kroku 3.  
   
-    -   <xref:System.Globalization.DateTimeFormatInfo> Obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> właściwość <xref:System.Globalization.CultureInfo> obiekt utworzony w kroku 3.  
+    - <xref:System.Globalization.DateTimeFormatInfo> Obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> właściwość <xref:System.Globalization.CultureInfo> obiekt utworzony w kroku 3.  
   
 5. Jeśli konwersja nie powiedzie się, powtórz kroki od 2 do 4 dla każdego pozostałego elementu w tablicy ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwości.  
   
@@ -65,9 +65,9 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
   
 10. Wywołaj opcję <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> lub <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType> metodę, aby przekonwertować datę i godzinę żądanie użytkownika <xref:System.DateTime> wartość. Użyj przeciążenia metody `provider` parametru i przekazywać je w jednej z następujących pozycji:  
   
-    -   <xref:System.Globalization.CultureInfo> Obiekt utworzony w kroku 8.  
+    - <xref:System.Globalization.CultureInfo> Obiekt utworzony w kroku 8.  
   
-    -   <xref:System.Globalization.DateTimeFormatInfo> Obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> właściwość <xref:System.Globalization.CultureInfo> obiekt utworzony w kroku 8.  
+    - <xref:System.Globalization.DateTimeFormatInfo> Obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> właściwość <xref:System.Globalization.CultureInfo> obiekt utworzony w kroku 8.  
   
 11. W przypadku niepowodzenia operacji analizy w kroku 10 przejdź do kroku 13. W przeciwnym razie wywołanie <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType> metodę, aby przekonwertować ciąg reprezentujący przesunięcia strefy czasowej użytkownika na liczbę całkowitą.  
   
@@ -100,13 +100,13 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Aby skompilować ten kod, Utwórz [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony sieci Web bez związanym z kodem. Następnie skopiuj przykład do strony sieci Web, dzięki czemu zastępuje istniejący kod. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Strony sieci Web może zawierać następujących formantów:  
   
--   A <xref:System.Web.UI.WebControls.Label> formant, który nie ma odwołania w kodzie. Ustaw jego <xref:System.Web.UI.WebControls.TextBox.Text%2A> właściwość "Wprowadź liczbę:".  
+- A <xref:System.Web.UI.WebControls.Label> formant, który nie ma odwołania w kodzie. Ustaw jego <xref:System.Web.UI.WebControls.TextBox.Text%2A> właściwość "Wprowadź liczbę:".  
   
--   A <xref:System.Web.UI.WebControls.TextBox> formantu o nazwie `DateString`.  
+- A <xref:System.Web.UI.WebControls.TextBox> formantu o nazwie `DateString`.  
   
--   A <xref:System.Web.UI.WebControls.Button> formantu o nazwie `OKButton`. Ustaw jego <xref:System.Web.UI.WebControls.Button.Text%2A> właściwość "OK".  
+- A <xref:System.Web.UI.WebControls.Button> formantu o nazwie `OKButton`. Ustaw jego <xref:System.Web.UI.WebControls.Button.Text%2A> właściwość "OK".  
   
--   A <xref:System.Web.UI.WebControls.HiddenField> formantu o nazwie `DateInfo`.  
+- A <xref:System.Web.UI.WebControls.HiddenField> formantu o nazwie `DateInfo`.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Aby uniemożliwić użytkownikowi wprowadzanie skryptów do strumienia HTML, dane wejściowe użytkownika powinno nigdy nie można bezpośrednio powtarzane w odpowiedzi z serwera. Zamiast tego powinien być kodowany za pomocą <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> metody.  

@@ -3,22 +3,22 @@ title: Generowanie klienta programu WCF na podstawie metadanych usługi
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
 ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856001"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generowanie klienta programu WCF na podstawie metadanych usługi
 W tym temacie opisano sposób użycia różnych przełączników w Svcutil.exe do generowania klientów z dokumentów metadanych.  
   
  Dokumenty metadanych mogą znajdować się na trwałego magazynu lub pobierana w trybie online. Pobieranie online jest zgodna z protokołu WS-MetadataExchange lub protokołu odnajdowania firmy Microsoft (NAJDYWANIA). Svcutil.exe generuje następujące żądania metadanych równocześnie do pobierania metadanych:  
   
--   Żądanie usługi WS-MetadataExchange (MEX) podany adres.  
+- Żądanie usługi WS-MetadataExchange (MEX) podany adres.  
   
--   Żądanie MEX podany adres z `/mex` dołączane.  
+- Żądanie MEX podany adres z `/mex` dołączane.  
   
--   Żądanie DISCO (przy użyciu [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) z usług sieci Web platformy ASP.NET) na podany adres.  
+- Żądanie DISCO (przy użyciu [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) z usług sieci Web platformy ASP.NET) na podany adres.  
   
  Svcutil.exe generuje klienta oparty na sieci Web Services Description Language (WSDL) lub zasad pliku otrzymanych z usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika z "\@", a następnie dodając w pełni kwalifikowaną nazwą domeny (FQDN). Jednak dla użytkowników, którzy zarejestrowali się w usłudze Active Directory, ten format nie jest prawidłowy, i nazwę UPN, która generuje narzędzie powoduje awarię w uwierzytelnianiu Kerberos z następujący komunikat o błędzie: **Próba logowania nie powiodła się.** Aby rozwiązać ten problem, należy ręcznie rozwiązać pliku klienta, który wygenerował narzędzie.  
   

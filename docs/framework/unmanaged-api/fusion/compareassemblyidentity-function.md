@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914527"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity — Funkcja
 Porównuje dwa tożsamości zestawu do ustalenia, czy są równoważne.  
@@ -65,11 +65,11 @@ STDAPI CompareAssemblyIdentity (
 ## <a name="remarks"></a>Uwagi  
  `CompareAssemblyIdentity` sprawdza, czy `pwzAssemblyIdentity1` i `pwzAssemblyIdentity2` są równoważne. `pfEquivalent` ustawiono `true` w jednej lub więcej z następujących warunków:  
   
--   Tożsamości dwóch zestawów są równoważne. Dla zestawów o silnej nazwie równoważności wymaga nazwy zestawu, wersji, token klucza publicznego i kultury być identyczne. Po prostu nazwane zestawy równoważności wymaga dopasowania nazwy zestawu i kultury.  
+- Tożsamości dwóch zestawów są równoważne. Dla zestawów o silnej nazwie równoważności wymaga nazwy zestawu, wersji, token klucza publicznego i kultury być identyczne. Po prostu nazwane zestawy równoważności wymaga dopasowania nazwy zestawu i kultury.  
   
--   Zarówno tożsamości zestawu odnoszą się do zestawów, korzystających z programu .NET Framework. Zwraca ten warunek `true` nawet wtedy, gdy numery wersji zestawu nie są zgodne.  
+- Zarówno tożsamości zestawu odnoszą się do zestawów, korzystających z programu .NET Framework. Zwraca ten warunek `true` nawet wtedy, gdy numery wersji zestawu nie są zgodne.  
   
--   Dwa zestawy nie są zarządzane zestawy, ale `fUnified1` lub `fUnified2` została ustawiona na `true`.  
+- Dwa zestawy nie są zarządzane zestawy, ale `fUnified1` lub `fUnified2` została ustawiona na `true`.  
   
  `fUnified` Flaga wskazuje, że wszystkie numery wersji do numeru wersji zestawu o silnej nazwie są uważane za równoważne do zestawu o silnej nazwie. Na przykład jeśli wartość `pwzAssemblyIndentity1` jest "MyAssembly, wersji = 3.0.0.0, culture = neutral, publicKeyToken =..." i wartość `fUnified1` jest `true`, oznacza to, że wszystkie wersje MyAssembly z wersji 0.0.0.0 do 3.0.0.0 powinny być traktowane jako równoważne. W takim przypadku jeśli `pwzAssemblyIndentity2` odwołuje się do tego samego zestawu co `pwzAssemblyIndentity1`, z tą różnicą, że ma niższy numer wersji `pfEquivalent` jest równa `true`. Jeśli `pwzAssemblyIdentity2` odwołuje się do wyższy numer wersji `pfEquivalent` ustawiono `true` tylko wtedy, gdy wartość `fUnified2` jest `true`.  
   

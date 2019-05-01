@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
 ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911069"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Instrukcje: Zmienianie wyrównania w poziomie kolumny w kontrolce ListView
 Domyślnie zawartość każdej kolumny w <xref:System.Windows.Controls.ListViewItem> jest wyrównany do lewej. Można zmienić wyrównanie każdej kolumny, zapewniając <xref:System.Windows.DataTemplate> i ustawienie <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> właściwości w elemencie <xref:System.Windows.DataTemplate>. W tym temacie przedstawiono sposób <xref:System.Windows.Controls.ListView> Wyrównuje zawartość domyślnie i jak zmienić wyrównanie jedna kolumna w <xref:System.Windows.Controls.ListView>.  

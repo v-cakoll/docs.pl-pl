@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
 ms.openlocfilehash: 7c7f1fef5d1fa575cd6d3bfdb7e6cbbea79ade28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878810"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Pole ogólne i metody SetField (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] udostępnia metody rozszerzenia dla <xref:System.Data.DataRow> klasy do uzyskiwania dostępu do wartości kolumny: <xref:System.Data.DataRowExtensions.Field%2A> metody i <xref:System.Data.DataRowExtensions.SetField%2A> metody. Te metody zapewnienia łatwiejszego dostępu do wartości w kolumnie dla deweloperów, szczególnie w odniesieniu do wartości null. <xref:System.Data.DataSet> Używa <xref:System.DBNull.Value> do reprezentowania wartości null, podczas gdy [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] używa obsługi typu dopuszczającego wartość null, wprowadzona w [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Przy użyciu istniejących metody dostępu do kolumny w <xref:System.Data.DataRow> wymaga rzutować zwracany obiekt do odpowiedniego typu. Jeśli określonego pola w <xref:System.Data.DataRow> może mieć wartość null, musi jawnie sprawdzenie, czy wartość null, ponieważ zwracanie <xref:System.DBNull.Value> i niejawnie rzutowania go na inny typ zgłasza <xref:System.InvalidCastException>. W poniższym przykładzie Jeśli <xref:System.Data.DataRow.IsNull%2A> metoda nie została użyta pod kątem wartości null, jeśli zwrócony przez indeksator będzie zgłoszony wyjątek <xref:System.DBNull.Value> próbuję rzutować go na <xref:System.String>.  

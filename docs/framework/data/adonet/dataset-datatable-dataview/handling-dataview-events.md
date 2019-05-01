@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
 ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880038"
 ---
 # <a name="handling-dataview-events"></a>Obsługa zdarzeń elementu DataView
 Możesz użyć <xref:System.Data.DataView.ListChanged> zdarzenia <xref:System.Data.DataView> do określenia, czy widok zostały zaktualizowane. Aktualizacje, które zgłaszają zdarzenia obejmują dodawanie, usuwanie lub modyfikowanie wiersza w tabeli podstawowej; Dodawanie lub usuwanie kolumn do schematu tabeli podstawowej; i zmiany w relacji nadrzędnej lub podrzędnej. **ListChanged** zdarzeń również powiadamia użytkownika, jeśli lista wierszy wyświetlanych zmienił się znacznie ze względu na stosowanie nowych kolejność sortowania lub filtrowania.  

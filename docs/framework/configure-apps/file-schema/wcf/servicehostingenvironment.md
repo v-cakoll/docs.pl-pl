@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788404"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Ten element definiuje typ, który usługę hostingu środowiskowego dla danego transportu. Jeśli ten element jest pusta, używany jest domyślny typ. Ten element należy używać tylko w aplikacji lub pliki konfiguracji na poziomie maszyny.  
@@ -63,25 +63,25 @@ Ten element definiuje typ, który usługę hostingu środowiskowego dla danego t
 ## <a name="remarks"></a>Uwagi  
  Domyślnie wykonywania side-by-side za pomocą platformy ASP.NET w hostowanej domen aplikacji (AppDomain) usług WCF. Mimo że program WCF i platformy ASP.NET mogą współistnieć w tej samej domenie aplikacji, usługi WCF żądania nie są przetwarzane przez potok HTTP platformy ASP.NET domyślnie. W rezultacie kilka elementów w aplikacji platformy ASP.NET nie są dostępne do usług WCF. Należą do nich  
   
--   ASP.NET, plik lub adres URL autoryzacji  
+- ASP.NET, plik lub adres URL autoryzacji  
   
--   Personifikacji aplikacji ASP.NET  
+- Personifikacji aplikacji ASP.NET  
   
--   Stan sesji na podstawie plików cookie  
+- Stan sesji na podstawie plików cookie  
   
--   HttpContext.Current  
+- HttpContext.Current  
   
--   Rozszerzalność potoku za pomocą niestandardowych HttpModule  
+- Rozszerzalność potoku za pomocą niestandardowych HttpModule  
   
  Jeśli usług WCF muszą działać w kontekście platformy ASP.NET i komunikować się tylko za pośrednictwem protokołu HTTP, można użyć tryb zgodności ASP.NET dla usługi WCF. Ten tryb jest włączona podczas `aspNetCompatibilityEnabled` ma ustawioną wartość atrybutu `true` na poziomie aplikacji. Implementacji usługi należy zadeklarować możliwość uruchamiania w trybie zgodności za pomocą <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> klasy. Po włączeniu trybu zgodności  
   
--   Autoryzacji programu ASP.NET, plik lub adres URL jest wymuszana przed autoryzacji usługi WCF. Decyzja o autoryzacji opiera się na poziomie transportu tożsamości żądania. Tożsamości na poziomie wiadomości są ignorowane.  
+- Autoryzacji programu ASP.NET, plik lub adres URL jest wymuszana przed autoryzacji usługi WCF. Decyzja o autoryzacji opiera się na poziomie transportu tożsamości żądania. Tożsamości na poziomie wiadomości są ignorowane.  
   
--   Rozpocznij operacji usługi WCF do wykonania w kontekście personifikacji platformy ASP.NET. Jeśli personifikacji aplikacji ASP.NET i WCF personifikacji są włączone dla określonej usługi, stosuje kontekstu personifikacji WCF.  
+- Rozpocznij operacji usługi WCF do wykonania w kontekście personifikacji platformy ASP.NET. Jeśli personifikacji aplikacji ASP.NET i WCF personifikacji są włączone dla określonej usługi, stosuje kontekstu personifikacji WCF.  
   
--   HttpContext.Current można używać na kod usługi WCF i usługi mają zablokowaną możliwość uwidaczniania punktów końcowych protokołu HTTP.  
+- HttpContext.Current można używać na kod usługi WCF i usługi mają zablokowaną możliwość uwidaczniania punktów końcowych protokołu HTTP.  
   
--   Usługi WCF żądania są przetwarzane przez potoku ASP.NET. Elementy HttpModule, które zostały skonfigurowane do działania na przychodzące żądania może również przetwarzanie żądań usługi WCF. Obejmują one składniki platformy ASP.NET (np. <xref:System.Web.SessionState.SessionStateModule>), a także moduły niestandardowe innych firm.  
+- Usługi WCF żądania są przetwarzane przez potoku ASP.NET. Elementy HttpModule, które zostały skonfigurowane do działania na przychodzące żądania może również przetwarzanie żądań usługi WCF. Obejmują one składniki platformy ASP.NET (np. <xref:System.Web.SessionState.SessionStateModule>), a także moduły niestandardowe innych firm.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu pokazuje, jak włączyć tryb zgodności ASP.  

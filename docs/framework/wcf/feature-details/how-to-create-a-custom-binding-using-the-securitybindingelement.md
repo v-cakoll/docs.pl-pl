@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787858"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement
 Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane przez system, które można skonfigurować, ale nie zapewniają pełną elastyczność podczas konfigurowania wszystkich opcji zabezpieczeń, które obsługuje usługi WCF. W tym temacie pokazano, jak utworzyć niestandardowego powiązania bezpośrednio z poziomu powiązania poszczególnych elementów i opisano niektóre ustawienia zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane pr
   
  Dodatkowe klasy są używane, gdy została podana zabezpieczeń na poziomie transportu:  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>Wymagane elementów wiązania  
  Istnieją dużą liczbę elementów możliwe powiązanie, które mogą być połączone w powiązaniu. Nie wszystkie te kombinacje są prawidłowe. W tej sekcji opisano wymagane elementy, które muszą być obecne w powiązaniu zabezpieczeń.  
   
  Nieprawidłowy zabezpieczeń powiązania zależą od wielu czynników, w tym następujące:  
   
--   Tryb zabezpieczeń.  
+- Tryb zabezpieczeń.  
   
--   Protokół transportowy.  
+- Protokół transportowy.  
   
--   Wymiany komunikatów (MEP) określone w umowie.  
+- Wymiany komunikatów (MEP) określone w umowie.  
   
  W poniższej tabeli przedstawiono konfiguracje prawidłowego powiązania elementu stosu dla każdej kombinacji poprzedniego czynników. Należy pamiętać, że są one minimalnych wymagań. Możesz dodać dodatkowe elementy do powiązania, np. komunikat o kodowanie elementy wiązania, elementy powiązania transakcji i inne elementy wiązania.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Twórz połączone geometrie'
+title: 'Instrukcje: Tworzenie połączonej geometrii'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - combining geometries [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - geometries [WPF], combining
 ms.assetid: 54c3277c-6b6e-4b25-91be-fda0bbc706b4
 ms.openlocfilehash: c5ebe87abd4c2cf70f8fa17f1fcc773293f3ad27
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910108"
 ---
-# <a name="how-to-create-a-combined-geometry"></a>Instrukcje: Twórz połączone geometrie
+# <a name="how-to-create-a-combined-geometry"></a>Instrukcje: Tworzenie połączonej geometrii
 W tym przykładzie pokazano, jak połączyć geometrii. Aby połączyć dwa geometrii, należy użyć <xref:System.Windows.Media.CombinedGeometry> obiektu. Ustaw jego <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> i <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> właściwości za pomocą dwóch geometrii, łączyć, a następnie ustaw <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> właściwość, która określa, jak geometrii będą połączone ze sobą, aby `Union`, `Intersect`, `Exclude`, lub `Xor`.  
   
  Aby utworzyć geometrii złożonego z co najmniej dwóch geometrii, użyj <xref:System.Windows.Media.GeometryGroup>.  

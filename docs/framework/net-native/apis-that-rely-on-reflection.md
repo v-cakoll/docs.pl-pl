@@ -5,11 +5,11 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868982"
 ---
 # <a name="apis-that-rely-on-reflection"></a>Interfejsy API, które działają na podstawie odbicia
 W niektórych przypadkach użycie odbicia w kodzie nie jest oczywisty, a więc [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi nie przechowują metadane, które są potrzebne w czasie wykonywania. W tym temacie omówiono niektóre typowe interfejsów API lub typowe wzorce programowania, które nie są traktowane jako część interfejs API odbicia, ale opierają się na podstawie odbicia, aby zostać pomyślnie uruchomiony. Jeśli będziesz ich używać w kodzie źródłowym, można dodać informacji o nich dyrektyw środowiska uruchomieniowego (. rd.xml) plików nie zgłaszają wywołań do tych interfejsów API [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątku lub innych wyjątków w czasie wykonywania.  
@@ -51,11 +51,11 @@ App1.AppClass`1<System.Int32>.
   
  Pomyślnie uruchomić ten kod wymaga kilku elementów metadanych:  
   
--   `Browse` metadane dla typu do wywołania metody.  
+- `Browse` metadane dla typu do wywołania metody.  
   
--   `Browse` metadane dla metody, którą chcesz się połączyć.  Jeśli jest to metoda publiczna, dodając publicznych `Browse` metadane dla typu zawierającego zawierają metody, zbyt.  
+- `Browse` metadane dla metody, którą chcesz się połączyć.  Jeśli jest to metoda publiczna, dodając publicznych `Browse` metadane dla typu zawierającego zawierają metody, zbyt.  
   
--   Dynamiczne metadane dla metody ma zostać wywołana, tak aby delegat wywołania odbicia nie są usuwane przez [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi. W przypadku brakujących metody dynamiczne metadane następujący wyjątek jest generowany, gdy <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> metoda jest wywoływana:  
+- Dynamiczne metadane dla metody ma zostać wywołana, tak aby delegat wywołania odbicia nie są usuwane przez [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi. W przypadku brakujących metody dynamiczne metadane następujący wyjątek jest generowany, gdy <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> metoda jest wywoływana:  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

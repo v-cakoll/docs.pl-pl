@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776223"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Instrukcje: Wykrywanie, czy zadanie drukowania może zostać zrealizowane o tej porze dnia
 Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład, aby zarezerwować drukarki do wyłącznego użytku określony dział po 17: 00. Takim wydziale musi innej kolejki drukarki niż innych działów obsługi użycia. Kolejka dla innych działów będzie miał ustawienie będzie niedostępna po 17: 00, podczas gdy kolejka dla działu favored mógł zostać ustawiony jako dostępny przez cały czas.  
@@ -41,9 +41,9 @@ Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właści
   
  **ReportQueueAndJobAvailability** metoda rozpoczyna się od sprawdzenia, aby sprawdzić, czy kolejka lub zadanie drukowania jest niedostępny w tej chwili. Jeśli którąś z tych funkcji jest niedostępny, następnie sprawdza, czy sprawdzić, czy kolejka niedostępny. Jeśli nie jest dostępna, metoda zgłasza, ten fakt i czasu, gdy kolejka stanie się ponownie dostępne. Następnie sprawdza zadania i jeśli jest niedostępna, raportuje następnym razem gdy span ją podczas drukowania. Na koniec metody raporty Najwcześniejsza godzina, kiedy zadanie można wydrukować. Jest to po następujące dwa razy.  
   
--   Czas, kiedy kolejki wydruku obok jest dostępny.  
+- Czas, kiedy kolejki wydruku obok jest dostępny.  
   
--   Czas, kiedy zadanie drukowania obok jest dostępny.  
+- Czas, kiedy zadanie drukowania obok jest dostępny.  
   
  Podczas zgłaszania porach dnia, <xref:System.DateTime.ToShortTimeString%2A> metoda również jest wywoływana, ponieważ ta metoda powoduje pominięcie lat, miesięcy i dni z danych wyjściowych. Nie można ograniczyć dostępności kolejki wydruku lub zadania drukowania do konkretnego lat, miesięcy i dni.  
   

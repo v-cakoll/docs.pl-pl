@@ -5,11 +5,11 @@ ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 342c3ce59ad80c9a60f2a2b69b30f77ff0549415
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875124"
 ---
 # <a name="mitigation-path-colon-checks"></a>Środki zaradcze: Ścieżka dwukropek kontroli
 Począwszy od aplikacji, których platformą docelową [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], wprowadzono szereg zmian obsługuje wcześniej nieobsługiwanych ścieżek, (zarówno pod względem długość i formatu). W szczególności sprawdza, czy składnia separator odpowiedniego dysku (dwukropek) wprowadzono bardziej poprawny.  
@@ -20,11 +20,11 @@ Począwszy od aplikacji, których platformą docelową [!INCLUDE[net_v462](../..
 ## <a name="mitigation"></a>Ograniczenie  
  Aby obejść ten problem wcześniej akceptowalną ścieżką, która nie jest już obsługiwany przez <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> i <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> metod, wykonasz następujące czynności:  
   
--   Ręcznie usuń schemat z adresu URL. Na przykład usunąć `file://` z adresu URL.  
+- Ręcznie usuń schemat z adresu URL. Na przykład usunąć `file://` z adresu URL.  
   
--   Przekaż identyfikator URI do <xref:System.Uri> konstruktora i pobrać wartość <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> właściwości.  
+- Przekaż identyfikator URI do <xref:System.Uri> konstruktora i pobrać wartość <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> właściwości.  
   
--   Zrezygnować z nowych normalizacji ścieżki, ustawiając `Switch.System.IO.UseLegacyPathHandling` <xref:System.AppContext> przełączyć się do `true`.  
+- Zrezygnować z nowych normalizacji ścieżki, ustawiając `Switch.System.IO.UseLegacyPathHandling` <xref:System.AppContext> przełączyć się do `true`.  
   
     ```xml  
     <runtime>  

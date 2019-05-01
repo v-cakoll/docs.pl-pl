@@ -18,26 +18,26 @@ ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919701"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generator pliku zasobów)
 Generator plików zasobów (Resgen.exe) konwertuje pliki tekstowe (txt lub restext) i pliki zasobów w formacie XML (resx) na pliki binarne (resources) środowiska uruchomieniowego języka wspólnego, które można osadzić w binarnym pliku wykonywalnym środowiska uruchomieniowego lub zestawie satelickim. (Zobacz [tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
   
  Program Resgen.exe to uniwersalne narzędzie do konwersji zasobów, które wykonuje następujące zadania:  
   
--   Konwertuje pliki txt lub restext na pliki resx lub resources. (Format plików restext jest identyczny z formatem plików txt. Jednak rozszerzenie restext pomaga łatwiej zidentyfikować pliki tekstowe, które zawierają definicje zasobów).  
+- Konwertuje pliki txt lub restext na pliki resx lub resources. (Format plików restext jest identyczny z formatem plików txt. Jednak rozszerzenie restext pomaga łatwiej zidentyfikować pliki tekstowe, które zawierają definicje zasobów).  
   
--   Konwertuje pliki resources na pliki tekstowe lub resx.  
+- Konwertuje pliki resources na pliki tekstowe lub resx.  
   
--   Konwertuje pliki resx na pliki tekstowe lub resources.  
+- Konwertuje pliki resx na pliki tekstowe lub resources.  
   
--   Wyodrębnia zasoby w postaci ciągów z zestawu do pliku resw, który jest odpowiedni do użytku w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
+- Wyodrębnia zasoby w postaci ciągów z zestawu do pliku resw, który jest odpowiedni do użytku w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
   
--   Tworzy silnie typizowaną klasę, która zapewnia dostęp do poszczególnych zasobów o nazwie i do <xref:System.Resources.ResourceManager> wystąpienia.  
+- Tworzy silnie typizowaną klasę, która zapewnia dostęp do poszczególnych zasobów o nazwie i do <xref:System.Resources.ResourceManager> wystąpienia.  
   
  Jeśli działanie programu Resgen.exe kończy się niepowodzeniem z dowolnej przyczyny, zwracaną wartością jest -1.  
   
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>Wykonywanie określonych zadań w programie Resgen.exe  
  Resgen.exe można użyć na różne sposoby: Aby skompilować plik zasobów na podstawie tekstu lub opartego na języku XML do pliku binarnego, do konwersji między typami plików zasobów, a także aby wygenerować klasę, która otacza <xref:System.Resources.ResourceManager> funkcji i zapewnia dostęp do zasobów. Ta sekcja zawiera szczegółowe informacje dotyczące każdego zadania:  
   
--   [Kompilowanie zasobów do pliku binarnego](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [Kompilowanie zasobów do pliku binarnego](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [Konwertowanie między typami plików zasobów](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [Konwertowanie między typami plików zasobów](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [Kompilowanie lub konwertowanie wielu plików](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [Kompilowanie lub konwertowanie wielu plików](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Eksportowanie zasobów do pliku resw](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [Eksportowanie zasobów do pliku resw](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [Warunkowe kompilowanie zasobów](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [Warunkowe kompilowanie zasobów](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [Generowanie silnie Typizowanej klasy zasobów](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [Generowanie silnie Typizowanej klasy zasobów](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>Kompilowanie zasobów do pliku binarnego  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>Konwertowanie między typami plików zasobów  
  Oprócz kompilowania plików zasobów w formacie tekstowym lub XML do plików binarnych resources, program Resgen.exe może przekonwertować dowolny obsługiwany typ pliku na dowolny inny obsługiwany typ. Oznacza to, że można wykonywać następujące konwersje:  
   
--   Pliki txt i restext na pliki resx.  
+- Pliki txt i restext na pliki resx.  
   
--   Pliki resx na pliki txt i restext.  
+- Pliki resx na pliki txt i restext.  
   
--   Pliki resources na pliki txt i restext.  
+- Pliki resources na pliki txt i restext.  
   
--   Pliki resources na pliki resx.  
+- Pliki resources na pliki resx.  
   
  Składnia jest taka sama, jak pokazana w poprzedniej sekcji.  
   
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  Silnie typizowana klasa zasobów ma następujące składowe:  
   
--   Konstruktor bez parametrów, którego można użyć do utworzenia wystąpienia silnie typizowanej klasy zasobów.  
+- Konstruktor bez parametrów, którego można użyć do utworzenia wystąpienia silnie typizowanej klasy zasobów.  
   
--   A `static` (C#) lub `Shared` (Visual Basic) i tylko do odczytu `ResourceManager` właściwość, która zwraca <xref:System.Resources.ResourceManager> wystąpienia, która zarządza silnie typizowanych zasobów.  
+- A `static` (C#) lub `Shared` (Visual Basic) i tylko do odczytu `ResourceManager` właściwość, która zwraca <xref:System.Resources.ResourceManager> wystąpienia, która zarządza silnie typizowanych zasobów.  
   
--   Statyczna `Culture` właściwość, która pozwala na ustawienie kultury używanej do pobierania zasobów. Domyślnie, jej wartość jest `null`, co oznacza, że jest używana bieżąca kultura interfejsu użytkownika.  
+- Statyczna `Culture` właściwość, która pozwala na ustawienie kultury używanej do pobierania zasobów. Domyślnie, jej wartość jest `null`, co oznacza, że jest używana bieżąca kultura interfejsu użytkownika.  
   
--   Jeden `static` (C#) lub `Shared` (Visual Basic) i właściwość tylko do odczytu dla każdego zasobu w pliku Resources. Nazwa właściwości to nazwa zasobu.  
+- Jeden `static` (C#) lub `Shared` (Visual Basic) i właściwość tylko do odczytu dla każdego zasobu w pliku Resources. Nazwa właściwości to nazwa zasobu.  
   
  Na przykład poniższe polecenie kompiluje plik zasobów o nazwie StringResources.txt do pliku StringResources.resources i generuje klasę o nazwie `StringResources` w źródle języka Visual Basic code plik o nazwie StringResources.vb, która może służyć do dostępu do zasobu Menedżer.  
   

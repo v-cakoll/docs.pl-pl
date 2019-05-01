@@ -13,20 +13,20 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908027"
 ---
 # <a name="array-conversions-visual-basic"></a>Konwersje tablic (Visual Basic)
 Typ tablicy można przekonwertować na typ innej tablicy, pod warunkiem spełnienia następujących warunków:  
   
--   **Ranga równe.** Rangę dwie tablice muszą być takie same, oznacza to, musi mieć taką samą liczbę wymiarów. Jednak nie długości wymiarów odpowiedniej muszą być takie same.  
+- **Ranga równe.** Rangę dwie tablice muszą być takie same, oznacza to, musi mieć taką samą liczbę wymiarów. Jednak nie długości wymiarów odpowiedniej muszą być takie same.  
   
--   **Typ danych elementu.** Typy danych elementów obu tablicach muszą być typami odwołań. Nie można przekonwertować `Integer` tablicy do `Long` tablicy, a nawet z `Object` tablicy, ponieważ uczestniczy typ co najmniej jedną wartość. Aby uzyskać więcej informacji, zobacz [typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Typ danych elementu.** Typy danych elementów obu tablicach muszą być typami odwołań. Nie można przekonwertować `Integer` tablicy do `Long` tablicy, a nawet z `Object` tablicy, ponieważ uczestniczy typ co najmniej jedną wartość. Aby uzyskać więcej informacji, zobacz [typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Przetwarzania.** Konwersja, albo zwężająca lub poszerzająca, musi być możliwe między typami elementu dwóch tablic. Przykładem, który zakończy się niepowodzeniem to wymaganie jest próba konwersji między `String` tablicy i tablicę klasę pochodną <xref:System.Attribute?displayProperty=nameWithType>. Te dwa typy wspólnym nic i bez konwersji dowolnego rodzaju istnieje między nimi.  
+- **Przetwarzania.** Konwersja, albo zwężająca lub poszerzająca, musi być możliwe między typami elementu dwóch tablic. Przykładem, który zakończy się niepowodzeniem to wymaganie jest próba konwersji między `String` tablicy i tablicę klasę pochodną <xref:System.Attribute?displayProperty=nameWithType>. Te dwa typy wspólnym nic i bez konwersji dowolnego rodzaju istnieje między nimi.  
   
  Konwersja typu tablicy do innej jest zwężająca lub poszerzająca w zależności od tego, czy zwężająca lub poszerzająca konwersji odpowiednich elementów. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   

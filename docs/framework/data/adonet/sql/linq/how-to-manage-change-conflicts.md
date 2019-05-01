@@ -1,42 +1,42 @@
 ---
-title: 'Porady: Zarządzanie konfliktów zmian'
+title: 'Instrukcje: Zarządzanie konfliktami zmian'
 ms.date: 03/30/2017
 ms.assetid: cd292c51-a3d1-4c6f-8d8e-04323c36054e
 ms.openlocfilehash: 7858dc304d281dfb99755d83eec19b421f63d2ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903386"
 ---
-# <a name="how-to-manage-change-conflicts"></a>Porady: Zarządzanie konfliktów zmian
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zawiera kolekcję interfejsów API, aby ułatwić odnajdywanie, oceny i rozwiązywanie konfliktów współbieżności.  
+# <a name="how-to-manage-change-conflicts"></a>Instrukcje: Zarządzanie konfliktami zmian
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia to zbiór interfejsów API, aby pomóc odkryć, oceny i rozwiązywanie konfliktów współbieżności.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: Wykrywanie i rozwiązywanie powodujących konflikt przesłań](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
- Opisuje sposób wykrywania i rozwiązywania konfliktów współbieżności.  
+ W tym artykule opisano, jak wykrywać i rozwiązywać konflikty współbieżności.  
   
- [Instrukcje: Określanie, kiedy są zgłaszane wyjątki współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
- Opisuje sposób określić, kiedy użytkownik powinien mieć świadomość konfliktom współbieżności.  
+ [Instrukcje: Określ, czy są zgłaszane wyjątki współbieżności podczas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
+ W tym artykule opisano sposób określić, kiedy powinien zostać poinformowany o konfliktów współbieżności.  
   
- [Instrukcje: Określanie, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
- Opisuje sposób atrybutu elementy członkowskie, aby określić, czy są one sprawdzane pod kątem konfliktom współbieżności.  
+ [Instrukcje: Określ, której członkami są sprawdzane pod kątem konfliktów współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
+ Opisuje sposób atrybutu członków, aby określić, czy są one sprawdzane pod kątem konfliktów współbieżności.  
   
  [Instrukcje: Pobieranie informacji o konflikcie jednostki](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
- Opisuje sposób zebrać informacje o konfliktach jednostki.  
+ Opis sposobów gromadzenia informacji o konflikcie jednostki.  
   
  [Instrukcje: Pobieranie informacji o konflikcie elementu członkowskiego](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)  
- Opisuje sposób zebrać informacje dotyczące wystąpił konflikt elementu członkowskiego.  
+ Opis sposobów gromadzenia informacji o konflikcie elementu członkowskiego.  
   
  [Instrukcje: Rozwiązywanie konfliktów, zachowując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
- Opisuje sposób zastępowania bieżących wartości z wartościami bazy danych.  
+ Opisuje sposób zastąpienie bieżących wartości z wartościami bazy danych.  
   
  [Instrukcje: Rozwiązywanie konfliktów, zastępując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
- Opisuje sposób zachować bieżące wartości przez zastąpienie wartości bazy danych.  
+ Opisuje sposób zachować bieżące wartości, zastępując wartości bazy danych.  
   
  [Instrukcje: Rozwiązywanie konfliktów, scalając wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  
- Opisuje sposób rozwiązania konfliktu przez scalenie bazy danych i bieżące wartości.  
+ Opisano, jak rozwiązać konflikt, scalanie bazy danych oraz ich bieżących wartości.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Optymistyczna współbieżność: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
- Opisano terminy, które dotyczą optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+ [Optymistyczna współbieżność: omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ Opisano terminy, które są stosowane do optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

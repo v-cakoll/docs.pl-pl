@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792694"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete — Metoda
 Powiadamia środowisko uruchomieniowe języka wspólnego (CLR) stanu żądania We/Wy, który został wykonany przy użyciu wywołania [ihostiocompletionmanager::BIND —](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) metody.  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in] Wartość HRESULT, która wskazuje stan operacji wiązania.  
   
--   S_OK wskazuje, że operacja została ukończona pomyślnie.  
+- S_OK wskazuje, że operacja została ukończona pomyślnie.  
   
--   HOST_E_INTERRUPTED wskazuje, że wywołanie zakończone przed ukończeniem.  
+- HOST_E_INTERRUPTED wskazuje, że wywołanie zakończone przed ukończeniem.  
   
--   E_FAIL wskazuje, że wystąpił nieznany, nieodwracalny, poważnej awarii.  
+- E_FAIL wskazuje, że wystąpił nieznany, nieodwracalny, poważnej awarii.  
   
  `NumberOfBytesTransferred`  
  [in] Liczba bajtów przesłanych podczas przetwarzania żądania We/Wy.  

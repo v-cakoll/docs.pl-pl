@@ -13,22 +13,22 @@ ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 798fcacab5bd74dbd6569a68a3b598c0bb63a0a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872641"
 ---
 # <a name="specifying-a-character-set"></a>Określanie zestawu znaków
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Pole kontroluje kierowanie ciągu i określa, jak wywołanie platformy znajduje nazwy funkcji w bibliotece DLL. W tym temacie opisano obie zachowania.  
   
  Niektóre interfejsy API wyeksportować dwie wersje funkcji, które przyjmują argumenty typu string: wąskiego (ANSI) i dwubajtowych (Unicode). Interfejs API Windows, na przykład zawiera następujące nazwy punktu wejścia dla **MessageBox** funkcji:  
   
--   **MessageBoxA**  
+- **MessageBoxA**  
   
      Zawiera formatowanie ANSI 1-bajtowych wartości znakowych rozróżnianych na podstawie "A", po której dołączany do wybranej nazwy punktu wejścia. Wywołania **MessageBoxA** zawsze przeprowadzanie marshalingu ciągów w formacie ANSI.  
   
--   **MessageBoxW**  
+- **MessageBoxW**  
   
      Zawiera formatowanie 2-bajtowych wartości znakowych Unicode, rozróżnianych na podstawie "W" dołączany do wybranej nazwy punktu wejścia. Wywołania **MessageBoxW** zawsze przeprowadzanie marshalingu ciągów w formacie Unicode.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59087745"
   
  <xref:System.Runtime.InteropServices.CharSet.Ansi> (wartość domyślna)  
   
--   Ciąg marshalingu  
+- Ciąg marshalingu  
   
      Wywołanie platformy marshals ciągi z ich formatu zarządzanych (Unicode) na ANSI format.  
   
--   Dopasowywanie nazw  
+- Dopasowywanie nazw  
   
      Gdy <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> pole jest `true`, ponieważ jest on domyślnie [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], wyszukuje tylko należy określić nazwę wywołania platformy. Na przykład, jeśli określisz **MessageBox**, wyszukuje wywołania platformy **MessageBox** i kończy się niepowodzeniem, gdy nie można odnaleźć dokładnej pisowni.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "59087745"
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
--   Ciąg marshalingu  
+- Ciąg marshalingu  
   
      Wywołanie platformy ciągi kopie z ich formatu zarządzanych (Unicode) do formatu Unicode.  
   
--   Dopasowywanie nazw  
+- Dopasowywanie nazw  
   
      Gdy `ExactSpelling` pole jest `true`, ponieważ jest on domyślnie [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], wyszukuje tylko należy określić nazwę wywołania platformy. Na przykład, jeśli określisz **MessageBox**, wyszukuje wywołania platformy **MessageBox** i kończy się niepowodzeniem, jeśli nie może zlokalizować dokładnej pisowni.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59087745"
   
  <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
--   Wywołanie platformy wybiera między ANSI i Unicode formaty w czasie wykonywania, oparte na platformie docelowej.  
+- Wywołanie platformy wybiera między ANSI i Unicode formaty w czasie wykonywania, oparte na platformie docelowej.  
   
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Określanie zestawu znaków w języku Visual Basic  
  Poniższy przykład deklaruje **MessageBox** funkcja trzy razy, każdorazowo przy użyciu różnych zachowanie zestawu znaków. Można określić zachowanie zestawu znaków w języku Visual Basic, dodając **Ansi**, **Unicode**, lub **automatycznie** — słowo kluczowe do instrukcji deklaracji.  

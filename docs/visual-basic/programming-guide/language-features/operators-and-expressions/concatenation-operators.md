@@ -10,11 +10,11 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
 ms.openlocfilehash: 124f0ca0cd01d7fd218fd89dfb78e70fe8aad9e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864941"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operatory łączenia w Visual Basic
 Concatenation — operatory Dołącz do wielu ciągów w jeden ciąg. Istnieją dwa operatory łączenia, `+` i `&`. Zarówno przeprowadzenie operacji łączenia podstawowe, jak w poniższym przykładzie pokazano.  

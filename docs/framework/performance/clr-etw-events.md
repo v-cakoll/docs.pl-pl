@@ -9,18 +9,18 @@ ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788014"
 ---
 # <a name="clr-etw-events"></a>Zdarzenia ETW CLR
 W tematach w tej sekcji opisano śledzenie zdarzeń systemu Windows (ETW) zdarzenia. Każde zdarzenie ma skojarzone słowo kluczowe i poziomu, które są opisane w [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) tematu. Środowisko CLR ma dwóch dostawców na potrzeby zdarzeń:  
   
--   Dostawca środowiska uruchomieniowego wywołuje zdarzenia, w zależności od tego, które są włączone słów kluczowych (kategorie zdarzeń). Identyfikator GUID dostawcy środowiska uruchomieniowego CLR to e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
+- Dostawca środowiska uruchomieniowego wywołuje zdarzenia, w zależności od tego, które są włączone słów kluczowych (kategorie zdarzeń). Identyfikator GUID dostawcy środowiska uruchomieniowego CLR to e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
--   Dostawca podsumowań, który ma zastosowań specjalnych. Identyfikator GUID dostawcy podsumowań CLR jest a669021c-c450-4609-a035-5af59af4df18.  
+- Dostawca podsumowań, który ma zastosowań specjalnych. Identyfikator GUID dostawcy podsumowań CLR jest a669021c-c450-4609-a035-5af59af4df18.  
   
  Aby uzyskać więcej informacji na temat dostawców zobacz [dostawcy ETW CLR](../../../docs/framework/performance/clr-etw-providers.md).  
   

@@ -12,11 +12,11 @@ ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873174"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże się do zestawów, które składają się na aplikację. Domyślnie środowisko uruchomieniowe podejmuje próbę powiązania z dokładną wersją zestawu, który aplikacja została skompilowana przy użyciu. To zachowanie domyślne można przesłonić, ustawień pliku konfiguracji.  
@@ -51,11 +51,11 @@ Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć
   
 4. [Sondy dla zestawu](#step4) wykonując następujące czynności:  
   
-    1.  Jeśli zasady konfiguracji i wydawca nie wpływają na pierwotne odniesienie, a żądania powiązania został utworzony przy użyciu <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metody, środowisko uruchomieniowe sprawdza, czy wskazówki dotyczące lokalizacji.  
+    1. Jeśli zasady konfiguracji i wydawca nie wpływają na pierwotne odniesienie, a żądania powiązania został utworzony przy użyciu <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metody, środowisko uruchomieniowe sprawdza, czy wskazówki dotyczące lokalizacji.  
   
-    2.  Jeśli baza kodu znajduje się w plikach konfiguracji, środowisko uruchomieniowe sprawdza tylko w tej lokalizacji. Jeśli sonda nie powiedzie się, środowisko wykonawcze określa, że żądania powiązania nie powiodło się, a nie inne sondowanie występuje.  
+    2. Jeśli baza kodu znajduje się w plikach konfiguracji, środowisko uruchomieniowe sprawdza tylko w tej lokalizacji. Jeśli sonda nie powiedzie się, środowisko wykonawcze określa, że żądania powiązania nie powiodło się, a nie inne sondowanie występuje.  
   
-    3.  Sondy dla zestawu przy użyciu algorytmów heurystycznych opisanego w [sondowania, sekcja](#step4). Jeśli zestaw nie zostanie znaleziony po badania, środowisko uruchomieniowe zażąda Instalatora Windows, aby zapewnić zestawu. Jest to zabezpieczenie jako funkcja instalacji na żądanie.  
+    3. Sondy dla zestawu przy użyciu algorytmów heurystycznych opisanego w [sondowania, sekcja](#step4). Jeśli zestaw nie zostanie znaleziony po badania, środowisko uruchomieniowe zażąda Instalatora Windows, aby zapewnić zestawu. Jest to zabezpieczenie jako funkcja instalacji na żądanie.  
   
         > [!NOTE]
         >  Wersja sprawdzania pod kątem zestawy bez silnej nazwy nie jest ani środowisko uruchomieniowe sprawdza w globalnej pamięci podręcznej zestawy bez silnej nazwy.  
@@ -64,11 +64,11 @@ Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć
 ## <a name="step-1-examining-the-configuration-files"></a>Krok 1. Przeglądanie plików konfiguracji  
  Zachowanie powiązań zestawów, można skonfigurować na różnych poziomach w oparciu o trzy pliki XML:  
   
--   Plik konfiguracji aplikacji.  
+- Plik konfiguracji aplikacji.  
   
--   Plik zasad wydawcy.  
+- Plik zasad wydawcy.  
   
--   Plik konfiguracji komputera.  
+- Plik konfiguracji komputera.  
   
  Te pliki, postępuj zgodnie z tej samej składni i podać informacje takie jak przekierowania, lokalizację kodu, powiązań i powiązania tryby dla danego zestawów. Każdy plik konfiguracji może zawierać [ \<assemblyBinding > element](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) który przekierowuje proces wiązania. Elementy podrzędne [ \<assemblyBinding > element](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) obejmują [ \<dependentAssembly > element](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Elementy podrzędne [ \<dependentAssembly > element](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) obejmują [ \<assemblyIdentity > element](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [ \<bindingRedirect > element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)i [ \<codeBase > element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>Lokalizowanie zestawów za pomocą sondowania  
  W przypadku nie [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elementu w pliku konfiguracyjnym aplikacji, środowisko uruchomieniowe sondy dla zestawu przy użyciu czterech kryteriów:  
   
--   Podstawy aplikacji, czyli lokalizację katalogu głównego, w którym aplikacja jest wykonywana.  
+- Podstawy aplikacji, czyli lokalizację katalogu głównego, w którym aplikacja jest wykonywana.  
   
--   Kultura, co jest atrybut kultury przywoływanego zestawu.  
+- Kultura, co jest atrybut kultury przywoływanego zestawu.  
   
--   Nazwa, która jest nazwą przywoływanego zestawu.  
+- Nazwa, która jest nazwą przywoływanego zestawu.  
   
--   `privatePath` Atrybutu [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element, który jest zdefiniowany przez użytkownika lista podkatalogach lokalizację katalogu głównego. Tę lokalizację można określić w pliku konfiguracji aplikacji i przy użyciu kodu zarządzanego <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> właściwości domeny aplikacji. Po określeniu w kodzie zarządzanym kodzie zarządzanym `privatePath` jest sondowany najpierw, a następnie ścieżka określona w pliku konfiguracyjnym aplikacji.  
+- `privatePath` Atrybutu [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element, który jest zdefiniowany przez użytkownika lista podkatalogach lokalizację katalogu głównego. Tę lokalizację można określić w pliku konfiguracji aplikacji i przy użyciu kodu zarządzanego <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> właściwości domeny aplikacji. Po określeniu w kodzie zarządzanym kodzie zarządzanym `privatePath` jest sondowany najpierw, a następnie ścieżka określona w pliku konfiguracyjnym aplikacji.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Sondowanie podstawy aplikacji i katalogów kultury  
  Środowisko uruchomieniowe zawsze rozpoczyna się, sondowanie w podstawowym aplikacji, który może być adresem URL lub katalogu głównego aplikacji na komputerze. Jeśli przywoływany zestaw nie znajduje się w aplikacji, a podano nie informacji o kulturze, środowisko uruchomieniowe przeszukuje podkatalogów z nazwą zestawu. Katalogi sondowany obejmują:  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>Sondowanie przykłady  
  Biorąc pod uwagę następujące informacje:  
   
--   Nazwa zestawu odwołania: myAssembly  
+- Nazwa zestawu odwołania: myAssembly  
   
--   Katalog główny aplikacji: `http://www.code.microsoft.com`  
+- Katalog główny aplikacji: `http://www.code.microsoft.com`  
   
--   [\<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) określa element w pliku konfiguracyjnym: pojemnika  
+- [\<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) określa element w pliku konfiguracyjnym: pojemnika  
   
--   Kultura: Niemcy  
+- Kultura: Niemcy  
   
  Środowisko uruchomieniowe sondy następujące adresy URL:  
   

@@ -3,11 +3,11 @@ title: Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876095"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) o wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do programu SQL Server 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności zobacz dokumentację SQL Server — książki Online.  
@@ -21,9 +21,9 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
   
  Następujące właściwości zostały dodane do SqlClient w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  Programowe można zmodyfikować te słowa kluczowe parametrów połączenia przy użyciu:  
   
@@ -45,17 +45,17 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
   
  Aby połączyć się z serwerem w grupie dostępności lub wystąpienia klastra trybu Failover programu SQL Server 2012, użyj następujących wytycznych:  
   
--   Użyj `MultiSubnetFailover` właściwości połączenia podczas nawiązywania połączenia z jednej podsieci lub wiele podsieci; poprawi wydajność ich obu.  
+- Użyj `MultiSubnetFailover` właściwości połączenia podczas nawiązywania połączenia z jednej podsieci lub wiele podsieci; poprawi wydajność ich obu.  
   
--   Aby połączyć z grupy dostępności, należy określić odbiornika grupy dostępności grupy dostępności jako serwera w ciągu połączenia.  
+- Aby połączyć z grupy dostępności, należy określić odbiornika grupy dostępności grupy dostępności jako serwera w ciągu połączenia.  
   
--   Łączenie z serwerem SQL skojarzone z więcej niż 64 adresami IP wystąpienia spowoduje, że błąd połączenia.  
+- Łączenie z serwerem SQL skojarzone z więcej niż 64 adresami IP wystąpienia spowoduje, że błąd połączenia.  
   
--   Zachowanie aplikacji, która używa `MultiSubnetFailover` właściwości połączenia nie ma wpływu na podstawie typu uwierzytelniania: Uwierzytelnianie programu SQL Server, uwierzytelnianie Kerberos lub uwierzytelniania Windows.  
+- Zachowanie aplikacji, która używa `MultiSubnetFailover` właściwości połączenia nie ma wpływu na podstawie typu uwierzytelniania: Uwierzytelnianie programu SQL Server, uwierzytelnianie Kerberos lub uwierzytelniania Windows.  
   
--   Zwiększ wartość `Connect Timeout` do uwzględnienia czasu pracy awaryjnej i zmniejszyć próby połączenia w aplikacji.  
+- Zwiększ wartość `Connect Timeout` do uwzględnienia czasu pracy awaryjnej i zmniejszyć próby połączenia w aplikacji.  
   
--   Transakcje rozproszone nie są obsługiwane.  
+- Transakcje rozproszone nie są obsługiwane.  
   
  Jeśli routing tylko do odczytu nie jest włączone, nawiązywania połączenia z lokalizacji pomocniczej repliki zakończy się niepowodzeniem w następujących sytuacjach:  
   

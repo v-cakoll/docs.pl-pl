@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], glossary
 ms.assetid: 39cd36f4-8a28-4d0b-a830-98d55c9d30ae
 ms.openlocfilehash: cbd5ce06698400152460af0706761d9855b43e12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929539"
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Słownik programu Windows Communication Foundation dla platformy .NET Framework 4.5
 

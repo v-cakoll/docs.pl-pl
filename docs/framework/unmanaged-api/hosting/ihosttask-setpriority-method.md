@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5382341a8c0c6455438af9e8c476348ab2467a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789509"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority — Metoda
 Na poziomie żądania, czy host zmienić priorytet wątku dla zadania, reprezentowane przez bieżącą [ihosttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia.  
@@ -53,19 +53,19 @@ HRESULT SetPriority (
 ## <a name="remarks"></a>Uwagi  
  Wątki są przyznane przetwarzania czasu przy użyciu działania okrężnego systemu, w którym jest częściowo oparte na poziom priorytetu wątku. `SetPriority` Umożliwia środowisku CLR ustawić ten poziom priorytetu wątku dla bieżącego zadania. Następujące `newPriority` wartości są obsługiwane.  
   
--   THREAD_PRIORITY_ABOVE_NORMAL  
+- THREAD_PRIORITY_ABOVE_NORMAL  
   
--   THREAD_PRIORITY_BELOW_NORMAL  
+- THREAD_PRIORITY_BELOW_NORMAL  
   
--   THREAD_PRIORITY_HIGHEST  
+- THREAD_PRIORITY_HIGHEST  
   
--   THREAD_PRIORITY_IDLE  
+- THREAD_PRIORITY_IDLE  
   
--   THREAD_PRIORITY_LOWEST  
+- THREAD_PRIORITY_LOWEST  
   
--   THREAD_PRIORITY_NORMAL  
+- THREAD_PRIORITY_NORMAL  
   
--   THREAD_PRIORITY_TIME_CRITICAL  
+- THREAD_PRIORITY_TIME_CRITICAL  
   
  CLR wywołuje `SetPriority` po wartości <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> jest modyfikowany przez kod użytkownika. Hosta można zdefiniować własne algorytmów do przypisywania priorytetu wątku i jest bezpłatna do zignorowania tego żądania.  
   

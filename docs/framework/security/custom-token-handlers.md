@@ -7,8 +7,8 @@ ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792772"
 ---
 # <a name="custom-token-handlers"></a>Niestandardowe programy obsługi tokenów
 W tym temacie omówiono programy obsługi tokenów programu WIF i jak są one używane do przetwarzania tokenów. Temat obejmuje także, co jest potrzebne utworzyć niestandardowe programy obsługi tokenów dla tokenu typów, które nie są obsługiwane w WIF domyślnie.  
@@ -19,23 +19,23 @@ W tym temacie omówiono programy obsługi tokenów programu WIF i jak są one u�
 ## <a name="built-in-security-token-handlers-in-wif"></a>Programy obsługi tokenów zabezpieczeń wbudowanych w program WIF  
  Program WIF 4.5 zawiera dziewięć klasy programu obsługi tokenów zabezpieczeń, które wynikają z abstrakcyjna klasa bazowa <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
   
--   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
 ## <a name="adding-a-custom-token-handler"></a>Dodawanie programu obsługi tokenów niestandardowych  
  Niektóre typy tokenów, takich jak proste tokenów sieci Web (SWT) i tokenów Web JSON (JWT) nie mają wbudowane programy obsługi tokenów, dostarczone przez programu WIF. Te typy tokenów i inne osoby, które nie mają wbudowanej obsługi należy wykonać następujące kroki, aby utworzyć niestandardowy program obsługi tokena.  
@@ -46,17 +46,17 @@ W tym temacie omówiono programy obsługi tokenów programu WIF i jak są one u�
   
 2. Zastąpić następujące metody i podaj Twojej własnej implementacji:  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
 3. Dodaj odwołanie do nowego niestandardowego programu obsługi tokenów w *Web.config* lub *App.config* plików w ramach  **\<system.identityModel >** sekcji, która ma zastosowanie do programu WIF. Na przykład, następujące znaczniki konfiguracji Określa nowy token programu obsługi o nazwie **MyCustomTokenHandler** które znajdują się na **CustomToken** przestrzeni nazw.  
   

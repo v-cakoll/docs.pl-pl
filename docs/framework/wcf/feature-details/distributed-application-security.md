@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856547"
 ---
 # <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
 Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na trzy główne obszary funkcjonalne: transfer zabezpieczeń, kontroli dostępu i inspekcji. Bezpieczeństwie transferu zapewnia integralność, poufności i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: zabezpieczenia, zabezpieczenia komunikatów transportu lub `TransportWithMessageCredential`.  
@@ -20,11 +20,11 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na tr
 ## <a name="transfer-security-scenarios"></a>Scenariusze zabezpieczeń transferu  
  Typowe scenariusze, korzystających z usługi WCF bezpieczeństwie transferu obejmują:  
   
--   Bezpiecznego transferu za pomocą Windows. Klient WCF i usługi są wdrażane w Windows (lub w domenie w lesie Windows). Komunikaty zawierają dane osobowe, więc wymagane jest miedzy innymi wzajemnego uwierzytelniania klienta i usługi, integralność komunikatów i poufność komunikatów. Ponadto wymagany jest dowód, określonej transakcji wystąpił, na przykład odbiorcy wiadomości powinien rejestrować informacje o podpisie.  
+- Bezpiecznego transferu za pomocą Windows. Klient WCF i usługi są wdrażane w Windows (lub w domenie w lesie Windows). Komunikaty zawierają dane osobowe, więc wymagane jest miedzy innymi wzajemnego uwierzytelniania klienta i usługi, integralność komunikatów i poufność komunikatów. Ponadto wymagany jest dowód, określonej transakcji wystąpił, na przykład odbiorcy wiadomości powinien rejestrować informacje o podpisie.  
   
--   Bezpiecznego transferu za pomocą `UserName` i HTTPS. Klient WCF i usługi muszą zostać opracowany, aby działały w Internecie. Poświadczenia klienta uwierzytelniania względem bazy danych par nazwa/hasło użytkownika. Usługa jest wdrażana na adres HTTPS, przy użyciu zaufanego certyfikatu Secure Sockets Layer (SSL). Ponieważ komunikaty przesyłane za pośrednictwem Internetu, klienta i usługi potrzebne uwierzytelniali się wzajemnie i poufności i integralności wiadomości muszą zostać zachowane podczas transferu.  
+- Bezpiecznego transferu za pomocą `UserName` i HTTPS. Klient WCF i usługi muszą zostać opracowany, aby działały w Internecie. Poświadczenia klienta uwierzytelniania względem bazy danych par nazwa/hasło użytkownika. Usługa jest wdrażana na adres HTTPS, przy użyciu zaufanego certyfikatu Secure Sockets Layer (SSL). Ponieważ komunikaty przesyłane za pośrednictwem Internetu, klienta i usługi potrzebne uwierzytelniali się wzajemnie i poufności i integralności wiadomości muszą zostać zachowane podczas transferu.  
   
--   Bezpiecznego transferu za pomocą certyfikatów. Klienta WCF i usługi muszą być tworzone do pracy za pośrednictwem publicznej sieci internet. Klienta i usługi mają certyfikaty, które mogą służyć do zabezpieczenia wiadomości. Klient i usługa używać Internetu komunikują się ze sobą i wykonywanie transakcji o wysokiej wartości, które wymagają integralność wiadomości, poufności i wzajemnego uwierzytelniania.  
+- Bezpiecznego transferu za pomocą certyfikatów. Klienta WCF i usługi muszą być tworzone do pracy za pośrednictwem publicznej sieci internet. Klienta i usługi mają certyfikaty, które mogą służyć do zabezpieczenia wiadomości. Klient i usługa używać Internetu komunikują się ze sobą i wykonywanie transakcji o wysokiej wartości, które wymagają integralność wiadomości, poufności i wzajemnego uwierzytelniania.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Integralność, poufności i uwierzytelniania  
  Trzy funkcje — integralności, poufność i uwierzytelnianie — są ze sobą nazywane bezpieczeństwie transferu. Bezpieczeństwie transferu zawiera funkcje, które pomogą zminimalizować zagrożenia aplikacji rozproszonej. W poniższej tabeli krótko opisano trzy funkcje, które składają się na bezpieczeństwie transferu.  

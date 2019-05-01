@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855130"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Instrukcje: Dostęp do usługi WSE 3.0 za pomocą klienta programu WCF
 Klienci Windows Communication Foundation (WCF) są protokół sieciowy niskiego poziomu zgodnego z sieci Web usługi rozszerzeń (programu WSE) 3.0 dla usług programu Microsoft .NET, gdy klienci WCF są skonfigurowane do korzystania z sierpnia 2004 wersję specyfikacji WS-Addressing. Jednak usługi WSE 3.0 nie obsługują metadanych protokołu exchange (MEX), dlatego podczas korzystania [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do utworzenia klasy klienta WCF, ustawienia zabezpieczeń nie są stosowane do wygenerowany Klient usługi WCF. W związku z tym, należy określić ustawienia zabezpieczeń, usługa programu WSE 3.0 wymaga po wygenerowaniu klienta platformy WCF.  
@@ -29,21 +29,21 @@ Klienci Windows Communication Foundation (WCF) są protokół sieciowy niskiego 
   
      Następujące klasy jest częścią [współdziałanie z usługami WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) próbki:  
   
-    1.  Utwórz klasę pochodną od klasy <xref:System.ServiceModel.Channels.Binding>.  
+    1. Utwórz klasę pochodną od klasy <xref:System.ServiceModel.Channels.Binding>.  
   
          Poniższy przykład kodu tworzy klasę o nazwie `WseHttpBinding` który pochodzi od klasy <xref:System.ServiceModel.Channels.Binding> klasy.  
   
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
   
-    2.  Dodaj właściwości do klasy, określające potwierdzenie gotowej do użycia programu WSE używane przez usługi WSE, czy pochodne klucze są wymagane, czy bezpiecznych sesji są używane, czy wymagane są potwierdzenia podpisu i ustawienia ochrony wiadomości. W programu WSE 3.0, gotową do użycia potwierdzenia określa wymagania dotyczące zabezpieczeń dla klienta lub usługi sieci Web — podobnie jak tryb uwierzytelniania powiązania programu WCF.  
+    2. Dodaj właściwości do klasy, określające potwierdzenie gotowej do użycia programu WSE używane przez usługi WSE, czy pochodne klucze są wymagane, czy bezpiecznych sesji są używane, czy wymagane są potwierdzenia podpisu i ustawienia ochrony wiadomości. W programu WSE 3.0, gotową do użycia potwierdzenia określa wymagania dotyczące zabezpieczeń dla klienta lub usługi sieci Web — podobnie jak tryb uwierzytelniania powiązania programu WCF.  
   
          Poniższy przykład kodu przedstawia `SecurityAssertion`, `RequireDerivedKeys`, `EstablishSecurityContext`, i `MessageProtectionOrder` właściwości, które określają WSE gotowej do użycia potwierdzenia, czy pochodne klucze są wymagane, czy bezpiecznych sesji są używane, czy podpis potwierdzenia są wymagane i ustawienia ochrony wiadomości, odpowiednio.  
   
          [!code-csharp[c_WCFClientToWSEService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#3)]
          [!code-vb[c_WCFClientToWSEService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#3)]  
   
-    3.  Zastąp <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> metodę, aby ustawić właściwości powiązania.  
+    3. Zastąp <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> metodę, aby ustawić właściwości powiązania.  
   
          Poniższy przykład kodu określa transportu, kodowania wiadomości i ustawienia ochrony wiadomości przez pobranie wartości `SecurityAssertion` i `MessageProtectionOrder` właściwości.  
   

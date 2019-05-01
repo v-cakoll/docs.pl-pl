@@ -13,11 +13,11 @@ ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7c2956a222a47cea36abbc2f21da2d7e2061e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793162"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Instrukcje: Podłączanie delegata za pomocą odbicia
 Gdy używasz odbicia można załadować i uruchomić zestawów, nie można używać funkcji języka, takich jak C# `+=` operatora lub Visual Basic [AddHandler — instrukcja](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do podłączania zdarzeń. Poniższe procedury pokazują, jak dołączyć istniejącą metodę do zdarzenia przez pobranie wszystkich typów wymaganych przez odbicie, a także jak utworzyć metodę dynamiczną za pomocą odbicia emisji i podłączyć ją do zdarzenia.  
@@ -107,11 +107,11 @@ Gdy używasz odbicia można załadować i uruchomić zestawów, nie można używ
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
+- Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
   
--   Nie odwołania do zestawu dodatkowe są wymagane do kompilowania z wiersza polecenia. W programie Visual Studio możesz dodać odwołanie do pliku System.Windows.Forms.dll, ponieważ w tym przykładzie jest to aplikacja konsoli.  
+- Nie odwołania do zestawu dodatkowe są wymagane do kompilowania z wiersza polecenia. W programie Visual Studio możesz dodać odwołanie do pliku System.Windows.Forms.dll, ponieważ w tym przykładzie jest to aplikacja konsoli.  
   
--   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
+- Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,11 +3,11 @@ title: Włączanie dostępu między bazami danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
 ms.openlocfilehash: 70b4b7b55311bfc5dba1b537a603e0d15d7f3d9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877698"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Włączanie dostępu między bazami danych w programie SQL Server
 Tworzenie łańcucha własności między bazami danych występuje, gdy procedura w jednej bazie danych jest zależna od obiektów w innej bazie danych. Łańcucha własności między bazami danych działa w taki sam sposób jak łańcucha własności, w ramach pojedynczej bazy danych, z tą różnicą, że łańcucha własności nieprzerwany wymaga, że wszyscy właściciele obiektu są mapowane do tego samego konta logowania. Jeśli obiekt źródłowy w źródłowej bazie danych i obiektów docelowych w docelowych baz danych są własnością tego samego konta logowania, programu SQL Server nie sprawdza uprawnienia do obiektów docelowych.  
@@ -15,9 +15,9 @@ Tworzenie łańcucha własności między bazami danych występuje, gdy procedura
 ## <a name="off-by-default"></a>Funkcja domyślnie wyłączona  
  Własność łańcucha w bazach danych jest domyślnie wyłączona. Firma Microsoft zaleca wyłączenie łańcucha własności między bazami danych, ponieważ prezentuje następujące niebezpieczeństwa:  
   
--   Właściciele i członkowie bazy danych `db_ddladmin` lub `db_owners` ról bazy danych można tworzyć obiekty, które są własnością innych użytkowników. Te obiekty mogą potencjalnie kierować obiektów w innych bazach danych. Oznacza to, że jeśli włączysz tworzenie łańcucha własności między bazami danych, należy pełnego zaufania, tych użytkowników, danych we wszystkich bazach danych.  
+- Właściciele i członkowie bazy danych `db_ddladmin` lub `db_owners` ról bazy danych można tworzyć obiekty, które są własnością innych użytkowników. Te obiekty mogą potencjalnie kierować obiektów w innych bazach danych. Oznacza to, że jeśli włączysz tworzenie łańcucha własności między bazami danych, należy pełnego zaufania, tych użytkowników, danych we wszystkich bazach danych.  
   
--   Użytkownicy mający uprawnienie Tworzenie bazy danych można tworzyć nowe bazy danych i dołączanie istniejących baz danych. Jeśli włączono tworzenie łańcucha własności między bazami danych tych użytkowników może uzyskać dostęp do obiektów w innych bazach danych, które mogą nie mieć uprawnień z bazy danych nowo utworzone lub dołączone, które tworzą.  
+- Użytkownicy mający uprawnienie Tworzenie bazy danych można tworzyć nowe bazy danych i dołączanie istniejących baz danych. Jeśli włączono tworzenie łańcucha własności między bazami danych tych użytkowników może uzyskać dostęp do obiektów w innych bazach danych, które mogą nie mieć uprawnień z bazy danych nowo utworzone lub dołączone, które tworzą.  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>Włączanie łańcucha własności między bazami danych  
  Tworzenie łańcucha własności między bazami danych należy włączyć tylko w środowiskach, w którym można w pełni zaufane wysoce uprzywilejowanych użytkowników. Można skonfigurować podczas instalacji dla wszystkich baz danych lub selektywnie dla określonych baz danych przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] polecenia `sp_configure` i `ALTER DATABASE`.  

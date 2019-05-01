@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791907"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parametry i argumenty procedur (Visual Basic)
 W większości przypadków procedura potrzebuje pewnych informacji o sytuacjach, w których została wywołana. Procedura, która wykonuje zadania powtórzonych lub udostępnione używa różne informacje dla każdego wywołania. Ten zawiera zmienne, stałe i wyrażeń, które przekazujesz do procedury, gdy wywołujesz ją.  
@@ -49,11 +49,11 @@ W większości przypadków procedura potrzebuje pewnych informacji o sytuacjach,
   
  Jeśli kod wywołujący oczekuje, że takie jak podać argument o typie danych innym niż odpowiadającego mu parametru `Byte` do `String` parametru, wykonaj jedną z następujących czynności:  
   
--   Podaj tylko argumenty z typami danych, które mogą zostać poszerzone do do typu parametru.  
+- Podaj tylko argumenty z typami danych, które mogą zostać poszerzone do do typu parametru.  
   
--   Ustaw `Option Strict Off` umożliwia niejawne konwersje zawężające; lub  
+- Ustaw `Option Strict Off` umożliwia niejawne konwersje zawężające; lub  
   
--   Użyj słowa kluczowego konwersji można jawnie przekonwertować na typ danych.  
+- Użyj słowa kluczowego konwersji można jawnie przekonwertować na typ danych.  
   
 ### <a name="type-parameters"></a>Parametry typów  
  A *ogólna procedura* definiuje także co najmniej jeden *parametry typu* oprócz normalnych parametry. Ogólna procedura pozwala kod wywołujący, aby przekazać zawsze wywołuje procedurę, dzięki czemu można dostosować, typy danych do wymagań poszczególnych wywołań różnych typów danych. Zobacz [procedury ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  

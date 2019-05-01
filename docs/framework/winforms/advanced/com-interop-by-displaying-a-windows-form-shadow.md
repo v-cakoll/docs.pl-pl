@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
 ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779096"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Instrukcje: Obsługa międzyoperacyjności w modelu COM za pomocą wyświetlania formularzy systemu Windows przy użyciu metody ShowDialog
 Można rozwiązać problemy ze współdziałaniem Component Object Model (COM) przez wyświetlanie formularza Windows na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pętli komunikatów, która została utworzona przy użyciu <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> metody.  
   
  Aby działać poprawnie z modelu COM aplikacji klienckiej formularza, należy uruchom go na pętli komunikatów Windows Forms. Aby to zrobić, użyj jednej z następujących metod:  
   
--   Użyj <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> metodę w celu wyświetlenia formularza Windows;  
+- Użyj <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> metodę w celu wyświetlenia formularza Windows;  
   
--   Wyświetlania każdego formularza Windows w oddzielnym wątku. Aby uzyskać więcej informacji, zobacz [jak: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza Windows w jego własnym wątku](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Wyświetlania każdego formularza Windows w oddzielnym wątku. Aby uzyskać więcej informacji, zobacz [jak: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza Windows w jego własnym wątku](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="procedure"></a>Procedura  
  Za pomocą <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> metoda może być Najprostszym sposobem wyświetlania formularza na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pętli komunikatów, ponieważ wszystkie podejścia wymaga co najmniej kod w celu zaimplementowania.  
@@ -35,7 +35,7 @@ Można rozwiązać problemy ze współdziałaniem Component Object Model (COM) p
   
 #### <a name="to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Do obsługi COM interop poprzez wyświetlanie formularza systemu windows za pomocą ShowDialog — metoda  
   
--   Zastąp wszystkie wywołania do <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> metody za pomocą wywołania <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> method in Class metoda swoje [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] składnika.  
+- Zastąp wszystkie wywołania do <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> metody za pomocą wywołania <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> method in Class metoda swoje [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] składnika.  
   
 ## <a name="see-also"></a>Zobacz także
 

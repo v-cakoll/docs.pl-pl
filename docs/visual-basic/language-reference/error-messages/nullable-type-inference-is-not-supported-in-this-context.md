@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
 ms.openlocfilehash: 9f7f878649d8b96f050b56d5b878eb3d67e027ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918225"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Wnioskowanie typu zerowalnego nie jest obsługiwane w tym kontekście
 Typy wartości i struktury można zadeklarować dopuszczającego wartość null.  
@@ -34,7 +34,7 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Użyj `As` klauzulę, aby zadeklarować zmienną jako dopuszczającego wartość null.  
+- Użyj `As` klauzulę, aby zadeklarować zmienną jako dopuszczającego wartość null.  
   
 ## <a name="see-also"></a>Zobacz także
 

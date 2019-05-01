@@ -7,11 +7,11 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804016"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Instrukcje: Upraszczanie animacji przy użyciu podrzędnych osi czasu
 W tym przykładzie pokazano, jak uprościć animacje przy użyciu podrzędnych <xref:System.Windows.Media.Animation.ParallelTimeline> obiektów. A <xref:System.Windows.Media.Animation.Storyboard> jest typem <xref:System.Windows.Media.Animation.Timeline> zawierające informacje określania wartości docelowej dla osi czasu zawiera. Użyj <xref:System.Windows.Media.Animation.Storyboard> umożliwia określanie wartości docelowej informacji, w tym informacje o obiekcie i właściwości osi czasu.  

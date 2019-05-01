@@ -3,11 +3,11 @@ title: 'Pola jawne: Val — słowo kluczowe'
 description: Dowiedz się więcej o F# słowo kluczowe "val", które jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez inicjowania typu.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904920"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Pola jawne: Val — słowo kluczowe
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863704"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Instrukcje: Definiowanie parametru dla procedury (Visual Basic)
 A *parametru* umożliwia kod wywołujący, aby przekazać wartości do procedury, gdy wywoływanych przez nią. Możesz zadeklarować każdego parametru dla procedury taki sam sposób, jak zadeklarować zmienną, określając jej nazwę i typ danych. Możesz również określić mechanizm przekazywania, i czy parametr jest opcjonalny.  
@@ -46,11 +46,11 @@ A *parametru* umożliwia kod wywołujący, aby przekazać wartości do procedury
   
      Określanie typów danych dla wszystkich elementów programowania jest znany jako *silne wpisywanie*. Po ustawieniu `Option Strict On`, Visual Basic wymusza silne wpisywanie. Jest to zdecydowanie zalecane, z następujących powodów:  
   
-    -   Umożliwia obsługę funkcji IntelliSense dla zmiennych i parametrów. Dzięki temu można zobaczyć ich właściwości i inne elementy członkowskie podczas wpisywania w kodzie.  
+    - Umożliwia obsługę funkcji IntelliSense dla zmiennych i parametrów. Dzięki temu można zobaczyć ich właściwości i inne elementy członkowskie podczas wpisywania w kodzie.  
   
-    -   Umożliwia kompilatorowi wykonywanie sprawdzania typu. Dzięki temu catch, instrukcje, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów, takich jak przepełnienia. Przechwytuje także wywołania metod, na obiektach, które nie obsługują je.  
+    - Umożliwia kompilatorowi wykonywanie sprawdzania typu. Dzięki temu catch, instrukcje, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów, takich jak przepełnienia. Przechwytuje także wywołania metod, na obiektach, które nie obsługują je.  
   
-    -   Powoduje ona szybsze wykonywanie Twojego kodu. Co dzieje się, jeśli nie określisz typ danych dla elementu programistycznego, kompilator Visual Basic przypisuje mu `Object` typu. Skompilowany kod może być konieczne konwersji do i z powrotem między `Object` a innymi typami danych, które powoduje zmniejszenie wydajności.  
+    - Powoduje ona szybsze wykonywanie Twojego kodu. Co dzieje się, jeśli nie określisz typ danych dla elementu programistycznego, kompilator Visual Basic przypisuje mu `Object` typu. Skompilowany kod może być konieczne konwersji do i z powrotem między `Object` a innymi typami danych, które powoduje zmniejszenie wydajności.  
   
 ## <a name="see-also"></a>Zobacz także
 

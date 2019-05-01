@@ -9,22 +9,22 @@ helpviewer_keywords:
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
 ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910185"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Instrukcje: Tworzenie sceny 3D
 Ten przykład przedstawia sposób tworzenia obiektu 3-D przypominającą prostego arkusz papieru, który został obrócony. A <xref:System.Windows.Controls.Viewport3D> wraz z następujące składniki zostaną użyte do utworzenia tego prostego sceny 3D:  
   
--   Aparat jest tworzony przy użyciu <xref:System.Windows.Media.Media3D.PerspectiveCamera>. Aparat fotograficzny Określa, jaka część Scena 3-w jest możliwy do wyświetlenia.  
+- Aparat jest tworzony przy użyciu <xref:System.Windows.Media.Media3D.PerspectiveCamera>. Aparat fotograficzny Określa, jaka część Scena 3-w jest możliwy do wyświetlenia.  
   
--   Siatka jest tworzone w celu określenia kształt obiektu 3-w (arkusz papieru) przy użyciu <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> właściwość <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+- Siatka jest tworzone w celu określenia kształt obiektu 3-w (arkusz papieru) przy użyciu <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> właściwość <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   
--   Materiał jest określony, będzie wyświetlana na powierzchni obiektu (gradientu liniowego w tym przykładzie), przy użyciu <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> właściwość <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+- Materiał jest określony, będzie wyświetlana na powierzchni obiektu (gradientu liniowego w tym przykładzie), przy użyciu <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> właściwość <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   
--   Zostanie utworzona przykuć uwagę na obiekt przy użyciu światła <xref:System.Windows.Media.Media3D.DirectionalLight>.  
+- Zostanie utworzona przykuć uwagę na obiekt przy użyciu światła <xref:System.Windows.Media.Media3D.DirectionalLight>.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod pokazuje, jak utworzyć scenę 3-D w XAML.  

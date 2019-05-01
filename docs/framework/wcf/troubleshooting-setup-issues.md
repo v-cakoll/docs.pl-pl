@@ -3,11 +3,11 @@ title: Rozwiązywanie problemów dotyczących konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
 ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791537"
 ---
 # <a name="troubleshooting-setup-issues"></a>Rozwiązywanie problemów dotyczących konfiguracji
 W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Foundation (WCF), skonfigurować problemów.  
@@ -15,15 +15,15 @@ W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Founda
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Niektóre klucze rejestru systemu Windows Communication Foundation nie są naprawiona przez wykonanie operacji naprawy MSI na .NET Framework 3.0  
  Jeśli usuniesz żadnego z następujących kluczy rejestru:  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelOperation 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelOperation 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelEndpoint 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelEndpoint 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
  Klucze nie są ponownie tworzone po uruchomieniu naprawy za pomocą Instalatora programu .NET Framework 3.0 uruchomionego z **Dodaj/Usuń programy** aplet **Panelu sterowania**. Aby ponownie utworzyć te klucze poprawnie, użytkownik musi odinstalowanie i ponowne zainstalowanie programu .NET Framework 3.0.  
   

@@ -3,11 +3,11 @@ title: Opracowywanie kanałów
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 ms.openlocfilehash: 44fb0da52c60b900c41b7b497861c12ed72d8ffc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858068"
 ---
 # <a name="developing-channels"></a>Opracowywanie kanałów
 Tworzenie kanału protokołu lub transportu, który może służyć za pomocą Windows Communication Foundation (WCF) w warstwie aplikacji wymaga wykonania kilku czynności. W tym temacie opisano kroki i kieruje użytkownika do określonych tematów, aby uzyskać więcej informacji. Aby poznać model kanału i różne typy, które są wymienione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md). Transport kompletny przykładowy kanału, [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

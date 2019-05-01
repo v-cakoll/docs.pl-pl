@@ -14,11 +14,11 @@ ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54c3eb734184adf5168607cfc8bcbf6c17ea493a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860649"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Instrukcje: Uzupełnianie liczby zerami wiodącymi
 

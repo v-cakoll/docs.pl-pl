@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
 ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903165"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> wiersze, kolumny i nagłówki można zmienić rozmiar wyniku wiele różnych wystąpień. W poniższej tabeli przedstawiono te wystąpienia.  
@@ -46,13 +46,13 @@ ms.locfileid: "59197844"
 ## <a name="resizing-with-the-mouse"></a>Zmiana rozmiaru za pomocą myszy  
  Domyślnie użytkownicy mogą zmieniać rozmiar wiersze, kolumny i nagłówki, które nie korzystają z Tryb automatycznej zmiany rozmiaru na podstawie wartości komórek. Aby uniemożliwić użytkownikom zmianę rozmiaru za pomocą innych metod, takich jak tryb wypełniania kolumny, ustawić jedną lub więcej z następujących <xref:System.Windows.Forms.DataGridView> właściwości:  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  Użytkownik może również uniemożliwić użytkownikom zmiany rozmiaru poszczególnych wierszy lub kolumn, ustawiając ich <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> właściwości. Domyślnie <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> wartość właściwości jest oparta na <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> wartości właściwości dla kolumn i <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> wartości właściwości dla wierszy. Jeśli jawnie ustawić <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> do <xref:System.Windows.Forms.DataGridViewTriState.True> lub <xref:System.Windows.Forms.DataGridViewTriState.False>, jednak zastąpienia określonej wartości, wartość kontrolki jest dla tego wiersza lub kolumny. Ustaw <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> do <xref:System.Windows.Forms.DataGridViewTriState.NotSet> do przywrócenia dziedziczenia.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "59197844"
   
  Aby skonfigurować tryb zmiany rozmiaru, nagłówki i wiersze i kolumny, które nie zastępują wartości kontrolki, należy ustawić co najmniej jeden z następujących <xref:System.Windows.Forms.DataGridView> właściwości:  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  Aby przesłonić kontrolki tryb zmiany rozmiaru kolumn dla poszczególnych kolumn, ustaw jego <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> właściwości na wartość inną niż <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>. Tryb zmiany rozmiaru kolumny faktycznie jest określana przez jego <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> właściwości. Wartość tej właściwości zależy od kolumny <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> wartość właściwości, chyba że ta wartość jest <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, w którym to przypadku formantu <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> wartość jest dziedziczona.  
   
@@ -93,27 +93,27 @@ ms.locfileid: "59197844"
 ## <a name="programmatic-resizing"></a>Programowe zmienianie rozmiaru  
  Po wyłączeniu automatycznej zmiany rozmiaru programowo ustawić dokładnie szerokość lub wysokość wierszy, kolumny lub wiersze nagłówków za pośrednictwem następujących właściwości:  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  Możesz też programowo zmienić rozmiar wiersze, kolumny i nagłówków w celu dopasowania do ich zawartości przy użyciu następujących metod:  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  Tych metod będzie rozmiar wierszy, kolumny lub nagłówki raz zamiast konfigurowania ich do zmiany rozmiaru ciągłe. Nowe rozmiary są automatycznie obliczane, aby wyświetlić całą zawartość komórki bez przycinania. Podczas programowego zmiany rozmiaru kolumn, które mają <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> wartości właściwości <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, jednak obliczeniowe szerokości na podstawie zawartości są używane do proporcjonalnie dopasować kolumny <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości właściwości i szerokości kolumn faktycznie następnie obliczana te nowe proporcje tak, aby wszystkie kolumny wypełnienia obszaru wyświetlania dostępne kontrolki.  
   

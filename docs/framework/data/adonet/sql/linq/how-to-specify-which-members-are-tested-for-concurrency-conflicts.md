@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
 ms.openlocfilehash: 9a1b4ab2dc28c569473eddbf50b96d10298d8d3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902736"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Instrukcje: Określanie, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności
 Zastosuj jedną z trzech typów wyliczeniowych do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby określić, które elementy członkowskie, które mają być uwzględniane w ramach aktualizacji sprawdza, czy wykrywanie konfliktów optymistycznej współbieżności.  

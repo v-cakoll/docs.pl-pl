@@ -13,11 +13,11 @@ ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793253"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Instrukcje: Definiowanie typu ogólnego przy użyciu emisji odbicia
 W tym temacie pokazano, jak utworzyć prosty typ ogólny z dwoma parametrami typu, jak zastosować ograniczenia klasy, interfejsu, ograniczenia i ograniczenia specjalne do parametrów typu oraz sposobu tworzenia elementów członkowskich, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.  
@@ -129,11 +129,11 @@ W tym temacie pokazano, jak utworzyć prosty typ ogólny z dwoma parametrami typ
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
+- Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
   
--   Nie odwołania do zestawu dodatkowe są wymagane.  
+- Nie odwołania do zestawu dodatkowe są wymagane.  
   
--   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
+- Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
 

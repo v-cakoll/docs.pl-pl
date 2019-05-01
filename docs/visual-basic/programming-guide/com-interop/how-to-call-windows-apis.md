@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
 ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818719"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Instrukcje: Wywoływanie Windows API (Visual Basic)
 W tym przykładzie definiuje i wywołuje `MessageBox` funkcji w bibliotece user32.dll i następnie przekazuje ciąg do niego.  
@@ -23,16 +23,16 @@ W tym przykładzie definiuje i wywołuje `MessageBox` funkcji w bibliotece user3
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołanie do <xref:System> przestrzeni nazw.  
+- Odwołanie do <xref:System> przestrzeni nazw.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Metoda nie jest statyczna, jest abstrakcyjny lub został wcześniej zdefiniowany. Typ elementu nadrzędnego jest interfejsem lub długość *nazwa* lub *Nazwa_pliku_dll* wynosi zero. (<xref:System.ArgumentException>)  
+- Metoda nie jest statyczna, jest abstrakcyjny lub został wcześniej zdefiniowany. Typ elementu nadrzędnego jest interfejsem lub długość *nazwa* lub *Nazwa_pliku_dll* wynosi zero. (<xref:System.ArgumentException>)  
   
--   *Nazwa* lub *Nazwa_pliku_dll* jest `Nothing`. (<xref:System.ArgumentNullException>)  
+- *Nazwa* lub *Nazwa_pliku_dll* jest `Nothing`. (<xref:System.ArgumentNullException>)  
   
--   Typ zawierający poprzednio utworzono za pomocą `CreateType`. (<xref:System.InvalidOperationException>)  
+- Typ zawierający poprzednio utworzono za pomocą `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Zobacz także
 

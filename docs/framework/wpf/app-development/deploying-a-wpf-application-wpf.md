@@ -6,11 +6,11 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981557"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
 Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] a .NET Framework zawierają kilka technologie wdrażania. Technologie wdrażania, które jest używane do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja jest zależna od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrożenia i jak są używane w połączeniu z wymagań związanych z wdrażaniem każdego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typu aplikacji.  
@@ -19,21 +19,21 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
 ## <a name="deployment-technologies"></a>Technologie wdrażania  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i .NET Framework zawiera kilka technologii wdrożenia, w tym:  
   
--   Umożliwia wdrażanie XCopy.  
+- Umożliwia wdrażanie XCopy.  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] wdrożenie.  
+- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] wdrożenie.  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] wdrożenie.  
+- [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] wdrożenie.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Umożliwia wdrażanie XCopy  
  Umożliwia wdrażanie XCopy odnosi się do korzystania z programu wiersza polecenia XCopy, aby skopiować pliki z jednej lokalizacji do innej. Umożliwia wdrażanie XCopy jest odpowiednie w następujących okolicznościach:  
   
--   Aplikacja jest niezależna. Nie trzeba ją zaktualizować klienta do uruchomienia.  
+- Aplikacja jest niezależna. Nie trzeba ją zaktualizować klienta do uruchomienia.  
   
--   Pliki aplikacji należy przenieść z jednej lokalizacji do innej, takich jak z lokalizacji kompilacji (dysk lokalny, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] udziału plików i tak dalej) do lokalizacji publikowania (witryny sieci Web [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] udziału plików i tak dalej).  
+- Pliki aplikacji należy przenieść z jednej lokalizacji do innej, takich jak z lokalizacji kompilacji (dysk lokalny, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] udziału plików i tak dalej) do lokalizacji publikowania (witryny sieci Web [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] udziału plików i tak dalej).  
   
--   Aplikacja nie wymaga integracji powłoki (skrótu w menu Start, ikony pulpitu i tak dalej).  
+- Aplikacja nie wymaga integracji powłoki (skrótu w menu Start, ikony pulpitu i tak dalej).  
   
  Chociaż XCopy nadaje się do prostych wdrożeń, jest ograniczona w przypadku bardziej złożonych możliwości wdrażania wymagane. W szczególności za pomocą polecenia XCopy często wiąże się obciążenie do tworzenia, wykonywania i utrzymywania skrypty do zarządzania wdrożeniem w niezawodny sposób. Ponadto polecenia XCopy nie obsługuje przechowywania wersji, Odinstalowywanie lub wycofywania.  
   
@@ -49,15 +49,15 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
 ### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Umożliwia wdrażanie aplikacji internetowych dla innych aplikacji. Aplikacje są publikowane i wdrażane z serwerów sieci Web lub pliku. Mimo że [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] nie obsługuje pełnej gamy klienta funkcji [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]— czy zainstalowane aplikacje, obsługuje ona podzestaw, który obejmuje następujące elementy:  
   
--   Integracja z Start menu i programy w Panelu sterowania.  
+- Integracja z Start menu i programy w Panelu sterowania.  
   
--   Przechowywanie wersji, wycofywania i odinstalowywania.  
+- Przechowywanie wersji, wycofywania i odinstalowywania.  
   
--   Tryb instalacji w trybie online, który zawsze uruchamia aplikację w lokalizacji wdrożenia.  
+- Tryb instalacji w trybie online, który zawsze uruchamia aplikację w lokalizacji wdrożenia.  
   
--   Automatyczne aktualizowanie, gdy wydawane są nowe wersje.  
+- Automatyczne aktualizowanie, gdy wydawane są nowe wersje.  
   
--   Rejestrowanie rozszerzeń nazw plików.  
+- Rejestrowanie rozszerzeń nazw plików.  
   
  Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
@@ -65,11 +65,11 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
 ## <a name="deploying-wpf-applications"></a>Wdrażanie aplikacji WPF  
  Opcji wdrażania dla [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji są zależne od typu aplikacji. Z punktu widzenia wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dostępne są trzy typy znaczące aplikacji:  
   
--   Aplikacje autonomiczne.  
+- Aplikacje autonomiczne.  
   
--   Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji.  
+- Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Wdrażanie aplikacji autonomicznych  
@@ -89,11 +89,11 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
 ### <a name="deploying-xaml-browser-applications"></a>Deploying XAML Browser Applications  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] są skompilowanymi aplikacji, które wymagają następujących trzech plików do wdrożenia:  
   
--   *ApplicationName*.exe: Plik zestawu pliku wykonywalnego aplikacji.  
+- *ApplicationName*.exe: Plik zestawu pliku wykonywalnego aplikacji.  
   
--   *ApplicationName*XBAP: Manifest wdrożenia.  
+- *ApplicationName*XBAP: Manifest wdrożenia.  
   
--   *ApplicationName*. exe.manifest: Manifest aplikacji.  
+- *ApplicationName*. exe.manifest: Manifest aplikacji.  
   
 > [!NOTE]
 >  Aby uzyskać więcej informacji na temat manifesty wdrażania i aplikacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  

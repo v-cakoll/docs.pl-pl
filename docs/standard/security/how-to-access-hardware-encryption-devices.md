@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795205"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Instrukcje: Dostęp do sprzętowych urządzeń szyfrujących
 Możesz użyć <xref:System.Security.Cryptography.CspParameters> klasy, aby dostęp do sprzętowych urządzeń szyfrujących. Na przykład można użyć tej klasy można zintegrować aplikację z karty inteligentnej, sprzęt generator liczb losowych lub z implementacją sprzętu określonego algorytmu kryptograficznego.  
@@ -54,8 +54,8 @@ Możesz użyć <xref:System.Security.Cryptography.CspParameters> klasy, aby dost
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Obejmują <xref:System> i <xref:System.Security.Cryptography> przestrzeni nazw.  
+- Obejmują <xref:System> i <xref:System.Security.Cryptography> przestrzeni nazw.  
   
--   Konieczne jest posiadanie czytnik kart inteligentnych i sterowniki zainstalowane na tym komputerze.  
+- Konieczne jest posiadanie czytnik kart inteligentnych i sterowniki zainstalowane na tym komputerze.  
   
--   Należy zainicjować <xref:System.Security.Cryptography.CspParameters> przy użyciu informacji specyficznych dla czytnika kart.  Więcej informacji na ten temat można znaleźć w dokumentacji czytnika kart.
+- Należy zainicjować <xref:System.Security.Cryptography.CspParameters> przy użyciu informacji specyficznych dla czytnika kart.  Więcej informacji na ten temat można znaleźć w dokumentacji czytnika kart.

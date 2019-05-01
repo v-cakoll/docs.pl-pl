@@ -3,11 +3,11 @@ title: Stany obiektów i śledzenie zmian
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794397"
 ---
 # <a name="object-states-and-change-tracking"></a>Stany obiektów i śledzenie zmian
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiekty zawsze wziąć udział w niektórych *stanu*. Na przykład, gdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tworzy nowy obiekt, obiekt jest w `Unchanged` stanu. Nowy obiekt, który samodzielnie tworzenia jest nieznany <xref:System.Data.Linq.DataContext> i znajduje się w `Untracked` stanu. Po pomyślnym wykonaniu <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, wszystkie obiekty znane [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] znajdują się w `Unchanged` stanu. (Jednym wyjątek jest reprezentowany przez te, które zostały pomyślnie usunięte z bazy danych, które znajdują się w `Deleted` stanu i nienadające się do użytku w tym <xref:System.Data.Linq.DataContext> wystąpienia.)  
@@ -38,11 +38,11 @@ ms.locfileid: "59191158"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wykonuje następujące przetwarzania, gdy obiekt zostanie usunięty (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) z jego tabeli:  
   
--   Gdy <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana, `DELETE` operacja została wykonana dla tego obiektu.  
+- Gdy <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana, `DELETE` operacja została wykonana dla tego obiektu.  
   
--   Usunięcie nie są propagowane do powiązanych obiektów, niezależnie od tego, czy są one załadowane. W szczególności obiekty powiązane nie są ładowane do aktualizacji właściwości relacji.  
+- Usunięcie nie są propagowane do powiązanych obiektów, niezależnie od tego, czy są one załadowane. W szczególności obiekty powiązane nie są ładowane do aktualizacji właściwości relacji.  
   
--   Po pomyślnym wykonaniu <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, obiekty są ustawione na `Deleted` stanu. W rezultacie nie można użyć obiektu lub jego `id` , <xref:System.Data.Linq.DataContext>. Wewnętrznej pamięci podręcznej, obsługiwane przez <xref:System.Data.Linq.DataContext> wystąpienia nie powoduje usunięcia obiektów, które są pobierane lub dodać jako nowy, mimo zostały usunięte obiekty w bazie danych.  
+- Po pomyślnym wykonaniu <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, obiekty są ustawione na `Deleted` stanu. W rezultacie nie można użyć obiektu lub jego `id` , <xref:System.Data.Linq.DataContext>. Wewnętrznej pamięci podręcznej, obsługiwane przez <xref:System.Data.Linq.DataContext> wystąpienia nie powoduje usunięcia obiektów, które są pobierane lub dodać jako nowy, mimo zostały usunięte obiekty w bazie danych.  
   
  Możesz wywołać <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> tylko na obiekcie śledzone przez <xref:System.Data.Linq.DataContext>. Aby uzyskać `Untracked` obiektu, należy wywołać <xref:System.Data.Linq.Table%601.Attach%2A> przed wywołaniem <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>. Wywoływanie <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> na `Untracked` obiektu zgłasza wyjątek.  
   

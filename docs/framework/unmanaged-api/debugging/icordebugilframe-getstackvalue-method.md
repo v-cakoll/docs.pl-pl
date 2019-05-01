@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 859abdd713fb19bbb3698d0da72cbff33cfbc6fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995590"
 ---
 # <a name="icordebugilframegetstackvalue-method"></a>ICorDebugILFrame::GetStackValue — Metoda
 Ta metoda nie została zaimplementowana.  

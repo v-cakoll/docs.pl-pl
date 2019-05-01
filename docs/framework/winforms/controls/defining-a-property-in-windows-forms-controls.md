@@ -9,20 +9,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
 ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780656"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definiowanie właściwości formantów formularzy systemu Windows
 Aby zapoznać się z omówieniem właściwości, zobacz [Przegląd właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Istnieje kilka istotnych kwestii, definiując właściwość:  
   
--   Należy najpierw zastosować atrybutów do właściwości, jaką zdefiniujesz. Atrybuty określają, jak projektant powinien być wyświetlany właściwości. Aby uzyskać więcej informacji, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
+- Należy najpierw zastosować atrybutów do właściwości, jaką zdefiniujesz. Atrybuty określają, jak projektant powinien być wyświetlany właściwości. Aby uzyskać więcej informacji, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
--   Jeśli zmiana wartości właściwości dotyczy wyświetlania kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> — metoda (dziedziczący kontroli nad <xref:System.Windows.Forms.Control>) z `set` metody dostępu. <xref:System.Windows.Forms.Control.Invalidate%2A> z kolei wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A> metody, która odrysowuje formantu. Wiele wywołań <xref:System.Windows.Forms.Control.Invalidate%2A> powoduje, jednokrotnego wywołania <xref:System.Windows.Forms.Control.OnPaint%2A> w celu zwiększenia wydajności.  
+- Jeśli zmiana wartości właściwości dotyczy wyświetlania kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> — metoda (dziedziczący kontroli nad <xref:System.Windows.Forms.Control>) z `set` metody dostępu. <xref:System.Windows.Forms.Control.Invalidate%2A> z kolei wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A> metody, która odrysowuje formantu. Wiele wywołań <xref:System.Windows.Forms.Control.Invalidate%2A> powoduje, jednokrotnego wywołania <xref:System.Windows.Forms.Control.OnPaint%2A> w celu zwiększenia wydajności.  
   
--   Biblioteka klas .NET Framework zapewnia konwerterów typów standardowe typy danych, takich jak liczby całkowite, liczby dziesiętne, wartości logicznych i innych. Celem konwertera typów jest zwykle zapewniają wartość ciągu konwersja (dane ciągu na inne typy danych). Standardowe typy danych są skojarzone z konwertery typu domyślnego, które konwertują wartości do ciągów i ciągów na typy danych. Jeśli zdefiniowano właściwość niestandardową (oznacza to, niestandardowe) typu danych, należy zastosować atrybut określający konwertera typów do skojarzenia z tej właściwości. Atrybut umożliwia również skojarzyć niestandardowego edytora typów interfejsu użytkownika z właściwością. Edytor typów interfejsu użytkownika udostępnia interfejs użytkownika do edycji właściwości lub typu danych. Selektor kolorów jest przykład edytora typów interfejsu użytkownika. Przykłady atrybutów znajdują się na końcu tego tematu.  
+- Biblioteka klas .NET Framework zapewnia konwerterów typów standardowe typy danych, takich jak liczby całkowite, liczby dziesiętne, wartości logicznych i innych. Celem konwertera typów jest zwykle zapewniają wartość ciągu konwersja (dane ciągu na inne typy danych). Standardowe typy danych są skojarzone z konwertery typu domyślnego, które konwertują wartości do ciągów i ciągów na typy danych. Jeśli zdefiniowano właściwość niestandardową (oznacza to, niestandardowe) typu danych, należy zastosować atrybut określający konwertera typów do skojarzenia z tej właściwości. Atrybut umożliwia również skojarzyć niestandardowego edytora typów interfejsu użytkownika z właściwością. Edytor typów interfejsu użytkownika udostępnia interfejs użytkownika do edycji właściwości lub typu danych. Selektor kolorów jest przykład edytora typów interfejsu użytkownika. Przykłady atrybutów znajdują się na końcu tego tematu.  
   
     > [!NOTE]
     >  Jeśli konwertera typów lub Edytor typów interfejsu użytkownika nie są dostępne dla właściwości niestandardowej, można zaimplementować jeden zgodnie z opisem w [rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  

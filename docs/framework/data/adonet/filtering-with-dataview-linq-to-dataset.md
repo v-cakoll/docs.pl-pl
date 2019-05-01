@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878829"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrowanie za pomocą widoku danych (LINQ to DataSet)
 Możliwość filtrowania danych przy użyciu określonych kryteriów, a następnie prezentować dane do klienta za pomocą kontrolki interfejsu użytkownika jest istotnym elementem powiązanie danych. <xref:System.Data.DataView> oferuje kilka sposobów, aby filtrować dane i zwracanie podzbiorów danych wiersze spełniające kryteria filtru określonego. Oprócz parametrów na podstawie funkcji filtrowania <xref:System.Data.DataView> udostępnia również możliwość używania [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażeń do kryteriów filtrowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia pozwalają znacznie bardziej złożone i zaawansowane operacje filtrowania niż filtrowania opartego na ciąg.  
   
  Istnieją dwa sposoby, aby odfiltrować dane przy użyciu <xref:System.Data.DataView>:  
   
--   Tworzenie <xref:System.Data.DataView> z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania, w której klauzula.  
+- Tworzenie <xref:System.Data.DataView> z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania, w której klauzula.  
   
--   Korzystając z istniejących, oparte na ciągach filtrowania możliwości <xref:System.Data.DataView>.  
+- Korzystając z istniejących, oparte na ciągach filtrowania możliwości <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Tworzenie widoku danych zapytania z informacjami filtrowania  
  A <xref:System.Data.DataView> obiektu można tworzyć na podstawie [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania. Jeśli kwerenda zawiera `Where` klauzuli <xref:System.Data.DataView> są tworzone za pomocą filtrowania informacji z zapytania. Wyrażenie w `Where` jest używana do określenia, które wiersze danych, które zostaną uwzględnione w <xref:System.Data.DataView>, i jest podstawą dla filtru.  
@@ -76,9 +76,9 @@ Możliwość filtrowania danych przy użyciu określonych kryteriów, a następn
 ## <a name="clearing-the-filter"></a>Trwa czyszczenie filtru  
  Filtr na <xref:System.Data.DataView> może być obsadzona po filtrowania została ustawiona za pomocą <xref:System.Data.DataView.RowFilter%2A> właściwości. Filtr na <xref:System.Data.DataView> można wyczyścić na dwa sposoby:  
   
--   Ustaw <xref:System.Data.DataView.RowFilter%2A> właściwość `null`.  
+- Ustaw <xref:System.Data.DataView.RowFilter%2A> właściwość `null`.  
   
--   Ustaw <xref:System.Data.DataView.RowFilter%2A> właściwości na pusty ciąg.  
+- Ustaw <xref:System.Data.DataView.RowFilter%2A> właściwości na pusty ciąg.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład tworzy <xref:System.Data.DataView> w wyniku zapytania i następnie czyści filtr, ustawiając <xref:System.Data.DataView.RowFilter%2A> właściwości `null`:  

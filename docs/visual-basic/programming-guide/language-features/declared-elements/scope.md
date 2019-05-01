@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917842"
 ---
 # <a name="scope-in-visual-basic"></a>Zakres w Visual Basic
 *Zakres* zadeklarowanych elementów to zbiór cały kod, który może odwoływać się do niego bez kwalifikowania nazwy i udostępniając je za pośrednictwem [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Element może mieć zakresu w jednej z następujących poziomach:  
@@ -37,11 +37,11 @@ ms.locfileid: "58823548"
 ## <a name="specifying-scope-and-defining-variables"></a>Określanie zakresu i definiowanie zmiennych  
  W przypadku deklarowania należy określić zakres elementu. Zakres może zależeć od następujących czynników:  
   
--   Region (bloku, procedury, modułu, klasy lub struktury), w którym można zadeklarować elementu  
+- Region (bloku, procedury, modułu, klasy lub struktury), w którym można zadeklarować elementu  
   
--   Przestrzeń nazw zawiera deklaracji elementu  
+- Przestrzeń nazw zawiera deklaracji elementu  
   
--   Poziom dostępu, który deklaruje dla elementu  
+- Poziom dostępu, który deklaruje dla elementu  
   
  Należy dopilnować, podczas definiowania zmiennych o tej samej nazwie, ale inny zakres, ponieważ w ten sposób może prowadzić do nieoczekiwanych wyników. Aby uzyskać więcej informacji, zobacz [Odwołania do zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
@@ -51,21 +51,21 @@ ms.locfileid: "58823548"
 ### <a name="block-scope"></a>Zasięg bloku  
  Blok to zbiór instrukcji ujętych w ramach inicjowanie i kończenie instrukcji deklaracji, takie jak następujące:  
   
--   `Do` i `Loop`  
+- `Do` i `Loop`  
   
--   `For` [`Each`] i `Next`  
+- `For` [`Each`] i `Next`  
   
--   `If` i `End If`  
+- `If` i `End If`  
   
--   `Select` i `End Select`  
+- `Select` i `End Select`  
   
--   `SyncLock` i `End SyncLock`  
+- `SyncLock` i `End SyncLock`  
   
--   `Try` i `End Try`  
+- `Try` i `End Try`  
   
--   `While` i `End While`  
+- `While` i `End While`  
   
--   `With` i `End With`  
+- `With` i `End With`  
   
  Jeśli deklarowaniu zmiennej w bloku, możesz użyć go tylko w ramach tego bloku. W poniższym przykładzie zakres zmiennej liczby całkowitej `cube` to blok między `If` i `End If`, i nie mogą odwoływać się do `cube` podczas wykonywania przekazuje poza blokiem.  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>Korzyści wynikające z zmiennych lokalnych  
  Zmienne lokalne są dobrym wyborem dla dowolnych obliczeń tymczasowe z następujących powodów:  
   
--   **Unikanie konfliktu nazw.** Nazwy zmiennych lokalnych nie są podatne na konflikt. Na przykład można utworzyć kilka różnych procedur zawierającego zmienną o nazwie `intTemp`. Tak długo, jak każdy `intTemp` jest zadeklarowana jako zmienna lokalna każdej procedury rozpoznaje tylko własną wersję programu `intTemp`. Wszelkie jednej procedury można zmienić wartość w swojej lokalnej `intTemp` bez wywierania wpływu na `intTemp` zmiennych w innych procedur.  
+- **Unikanie konfliktu nazw.** Nazwy zmiennych lokalnych nie są podatne na konflikt. Na przykład można utworzyć kilka różnych procedur zawierającego zmienną o nazwie `intTemp`. Tak długo, jak każdy `intTemp` jest zadeklarowana jako zmienna lokalna każdej procedury rozpoznaje tylko własną wersję programu `intTemp`. Wszelkie jednej procedury można zmienić wartość w swojej lokalnej `intTemp` bez wywierania wpływu na `intTemp` zmiennych w innych procedur.  
   
--   **Zużycie pamięci.** Zmienne lokalne wykorzystywać pamięć tylko w przypadku, gdy ich procedura jest uruchomiona. Ich pamięci jest zwalniany, gdy procedura zwraca do wywołującego kodu. Z drugiej strony [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) i [statyczne](../../../../visual-basic/language-reference/modifiers/static.md) zmienne zużywają zasoby pamięci, dopóki aplikacja przestaje działać, więc używane tylko wtedy, gdy jest to konieczne. *Zmienne wystąpienia* używa pamięci nadal istnieje, ich wystąpienia, co sprawia, że ich mniej wydajne niż zmiennych lokalnych, ale potencjalnie bardziej efektywne niż `Shared` lub `Static` zmiennych.  
+- **Zużycie pamięci.** Zmienne lokalne wykorzystywać pamięć tylko w przypadku, gdy ich procedura jest uruchomiona. Ich pamięci jest zwalniany, gdy procedura zwraca do wywołującego kodu. Z drugiej strony [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) i [statyczne](../../../../visual-basic/language-reference/modifiers/static.md) zmienne zużywają zasoby pamięci, dopóki aplikacja przestaje działać, więc używane tylko wtedy, gdy jest to konieczne. *Zmienne wystąpienia* używa pamięci nadal istnieje, ich wystąpienia, co sprawia, że ich mniej wydajne niż zmiennych lokalnych, ale potencjalnie bardziej efektywne niż `Shared` lub `Static` zmiennych.  
   
 ### <a name="minimizing-scope"></a>Minimalizując zakres  
  Ogólnie rzecz biorąc, deklarując dowolną zmienną lub stałą ona dobrą praktyką programowania jest zapewnienie zakres jak to możliwe (zakres bloku jest najmniejsza). To pomaga zachować pamięci i minimalizuje ryzyko swój kod, błędnie odwołujące się do niewłaściwej zmiennej. Podobnie, należy zadeklarować zmienną [statyczne](../../../../visual-basic/language-reference/modifiers/static.md) tylko kiedy jest niezbędne w celu zachowania jego wartość z zakresu od wywołania procedur.  

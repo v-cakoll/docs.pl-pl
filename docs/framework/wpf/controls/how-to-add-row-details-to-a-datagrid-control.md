@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
 ms.openlocfilehash: d5b6539f3d379088528b9654861267988b6fc69b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911397"
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Instrukcje: dodawanie szczegółów wiersza do kontrolki DataGrid
 Korzystając z <xref:System.Windows.Controls.DataGrid> kontrolki, prezentacji danych można dostosować, dodając sekcji Szczegóły wiersza. Dodawanie sekcji Szczegóły wiersza umożliwiają grupowanie niektóre dane w szablonie, który jest opcjonalnie widoczny czy zwinięty. Na przykład można dodać szczegóły wiersza do <xref:System.Windows.Controls.DataGrid> przedstawiające tylko podsumowanie danych dla każdego wiersza w <xref:System.Windows.Controls.DataGrid>, ale zabezpieczeniem więcej pól danych, gdy użytkownik wybierze wiersz. Zdefiniuj szablon dla sekcji Szczegóły wiersza w <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> właściwości. Na poniższej ilustracji przedstawiono przykład sekcji szczegółów wiersza.  

@@ -3,11 +3,11 @@ title: 'Instrukcje: Filtrowanie atrybutu (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
 ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855501"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Filtrowanie atrybutu (XPath-LINQ to XML) (Visual Basic)
 W tym temacie pokazano, jak można pobrać elementów podrzędnych o określonej nazwie i z atrybutem z określoną wartością.  

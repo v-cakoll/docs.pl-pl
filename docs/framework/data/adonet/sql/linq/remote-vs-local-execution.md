@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877126"
 ---
 # <a name="remote-vs-local-execution"></a>Zdalne a lokalne wykonanie
 Możesz zdecydować się na wykonywanie zapytań albo zdalnie (oznacza to, że aparat bazy danych wykonuje zapytanie względem bazy danych) lub lokalnie ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wykonuje zapytanie względem lokalnej pamięci podręcznej).  
@@ -23,18 +23,18 @@ Możesz zdecydować się na wykonywanie zapytań albo zdalnie (oznacza to, że a
   
  Jeśli baza danych zawiera tysiące wierszy zamówienia, czy chcesz pobrać je wszystkie do przetworzenia przechowywanego. W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.EntitySet%601> klasy implementuje <xref:System.Linq.IQueryable> interfejsu. To podejście zapewnia, że takich zapytań może być wykonywane zdalnie. Przepływ dwie główne korzyści z tej techniki:  
   
--   Zbędne dane nie są pobierane.  
+- Zbędne dane nie są pobierane.  
   
--   Zapytania wykonywane przez aparat bazy danych jest często bardziej efektywne z powodu indeksy bazy danych.  
+- Zapytania wykonywane przez aparat bazy danych jest często bardziej efektywne z powodu indeksy bazy danych.  
   
 ## <a name="local-execution"></a>lokalne wykonanie  
  W innych sytuacjach możesz chcieć mieć kompletny zestaw powiązanych jednostek w lokalnej pamięci podręcznej. W tym celu <xref:System.Data.Linq.EntitySet%601> zapewnia <xref:System.Data.Linq.EntitySet%601.Load%2A> metodę, aby jawnie załadować wszystkie elementy członkowskie <xref:System.Data.Linq.EntitySet%601>.  
   
  Jeśli <xref:System.Data.Linq.EntitySet%601> jest już załadowany, kolejne zapytania są wykonywane lokalnie. Takie podejście pomaga na dwa sposoby:  
   
--   Jeśli kompletny zestaw musi używać lokalnie lub wiele razy, możesz uniknąć zapytań zdalnych i skojarzone opóźnienia.  
+- Jeśli kompletny zestaw musi używać lokalnie lub wiele razy, możesz uniknąć zapytań zdalnych i skojarzone opóźnienia.  
   
--   Jednostki może być Zserializowany jako całą jednostkę.  
+- Jednostki może być Zserializowany jako całą jednostkę.  
   
  Poniższy fragment kodu ilustruje sposób lokalnego wykonania można uzyskać:  
   

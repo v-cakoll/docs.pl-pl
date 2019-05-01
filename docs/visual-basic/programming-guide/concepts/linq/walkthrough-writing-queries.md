@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907611"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Przewodnik: Pisanie zapytań w języku Visual Basic
 W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do zapisywania [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeniach zapytań. Przewodnik pokazuje, jak tworzyć zapytania na liście obiektów dla uczniów, jak uruchamiać zapytania i sposobu ich modyfikacji. Kilka funkcji, w tym inicjatorów obiektów, wnioskowanie o typie lokalnym i typy anonimowe dołączyć do nich zapytania.  
@@ -40,14 +40,14 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 #### <a name="to-add-the-data-source"></a>Aby dodać źródło danych  
   
--   Zdefiniuj `Student` klasy i tworzenie listy wystąpień klasy.  
+- Zdefiniuj `Student` klasy i tworzenie listy wystąpień klasy.  
   
     > [!IMPORTANT]
     >  Kod niezbędnej do zdefiniowania `Student` klasy i tworzenie listy używane w instruktażu przykłady znajduje się w [jak: Utwórz listę elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Można skopiować go w tym miejscu i wklej go do projektu. Nowy kod zastępuje kodu, które wystąpiły podczas tworzenia projektu.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Aby dodać nowego studenta do listy studentów  
   
--   Postępuj zgodnie ze wzorcem w `getStudents` metodę, aby dodać inne wystąpienie `Student` klasy do listy. Dodawanie student zostaną wprowadzone do inicjatorów obiektów. Aby uzyskać więcej informacji, zobacz [inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+- Postępuj zgodnie ze wzorcem w `getStudents` metodę, aby dodać inne wystąpienie `Student` klasy do listy. Dodawanie student zostaną wprowadzone do inicjatorów obiektów. Aby uzyskać więcej informacji, zobacz [inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Utwórz kwerendę  
  Po wykonaniu zapytania dodane w tej sekcji tworzy listę uczniów, w której akademickich pozycję umieszcza je w dziesięciu najlepszych. Ponieważ zapytanie wybiera pełne `Student` obiekt typu wyniku zapytania za każdym razem jest `IEnumerable(Of Student)`. Jednak zapytania zwykle nie określono typu w definicji zapytania. Zamiast tego kompilator używa wnioskowanie o typie lokalnym można ustalić typu. Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Zmienna zakresu zapytania, `currentStudent`, służy jako punkt odniesienia do każdego `Student` wystąpienia w źródle, `students`, zapewniając dostęp do właściwości każdego obiektu w `students`.  

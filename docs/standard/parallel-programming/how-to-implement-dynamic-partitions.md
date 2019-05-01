@@ -11,11 +11,11 @@ ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 792488e53ffb7f870e21fdd1ad3ef94bf0303b1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811556"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>Instrukcje: Implementowanie partycji dynamicznych
 Poniższy przykład pokazuje, jak zaimplementować niestandardowy <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> które implementuje dynamiczne partycjonowanie i mogą być używane z niektórych przeciążenia <xref:System.Threading.Tasks.Parallel.ForEach%2A> z PLINQ.  

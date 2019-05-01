@@ -10,11 +10,11 @@ ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868995"
 ---
 # <a name="security-and-remoting-considerations"></a>Zagadnienia dotyczące zabezpieczeń internetowych i zdalnego dostępu
 Wywołaniem funkcji zdalnych pozwala skonfigurować przezroczyste wywoływaniu między domenami aplikacji, procesy lub komputerów. Jednak przeszukiwania stosu zabezpieczeń dostępu kodu nie może przekraczać granice procesu i maszynowo lub (dotyczy ona między domenami aplikacji tego samego procesu).  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
 ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914160"
 ---
 # <a name="how-to-create-windows-services"></a>Instrukcje: Tworzenie usług systemu Windows
 Podczas tworzenia usługi można użyć szablonu projektu programu Visual Studio o nazwie **usługi Windows**. Ten szablon automatycznie wykonuje znaczną część pracy za Ciebie, odwołując się do odpowiednich klas i przestrzenie nazw, konfigurując ustawienia dziedziczenia z klasy bazowej dla usług oraz zastępując kilka metod prawdopodobnie chcesz zastąpić.  
@@ -21,11 +21,11 @@ Podczas tworzenia usługi można użyć szablonu projektu programu Visual Studio
   
  Jako minimum Aby utworzyć usługę funkcjonalną należy:  
   
--   Ustaw <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwości.  
+- Ustaw <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwości.  
   
--   Utwórz niezbędne pliki instalacyjne dla aplikacji usługi.  
+- Utwórz niezbędne pliki instalacyjne dla aplikacji usługi.  
   
--   Zastąpienia i określ kod <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metody dostosowania sposobów, w którym działa usługa.  
+- Zastąpienia i określ kod <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metody dostosowania sposobów, w którym działa usługa.  
   
 ### <a name="to-create-a-windows-service-application"></a>Aby utworzyć aplikację Windows Service  
   

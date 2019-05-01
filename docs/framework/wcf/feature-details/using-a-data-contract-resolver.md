@@ -3,11 +3,11 @@ title: Używanie mechanizmu rozpoznawania kontraktów danych
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
 ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918570"
 ---
 # <a name="using-a-data-contract-resolver"></a>Używanie mechanizmu rozpoznawania kontraktów danych
 Mechanizmu rozpoznawania kontraktów danych umożliwia dynamicznie konfigurować znane typy. Znane typy są wymagane, gdy serializacji lub deserializacji typu nie jest oczekiwany przez kontraktu danych. Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Statycznie zwykle są określone znane typy. Oznacza to, czy trzeba znać możliwych typów operacji może pojawić się podczas wykonywania operacji. Istnieją scenariusze, w których nie jest to prawdą, i możliwość dynamicznie określić znanych typów jest ważne.  

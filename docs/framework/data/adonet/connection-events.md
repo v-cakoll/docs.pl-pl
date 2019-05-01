@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
 ms.openlocfilehash: a71758781511f18ddf5451feaf0d308af1b4a652
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879934"
 ---
 # <a name="connection-events"></a>Zdarzenia połączenia
 Wszystkie dostawcy danych .NET Framework mają **połączenia** obiekty o dwa zdarzenia, które można pobrać komunikaty informacyjne ze źródła danych lub do określenia, czy stan **połączenia** ma zmienione. W poniższej tabeli opisano zdarzenia **połączenia** obiektu.  

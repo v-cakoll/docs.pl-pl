@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791433"
 ---
 # <a name="understanding-protection-level"></a>Omówienie poziomów ochrony
 `ProtectionLevel` Właściwość znajduje się na wiele różnych klas, takie jak <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> klasy. Właściwość kontroluje, jak jest chroniona część (lub całość) wiadomości. W tym temacie opisano funkcję Windows Communication Foundation (WCF) i jak działa.  
@@ -26,33 +26,33 @@ ms.locfileid: "59096052"
 ## <a name="basics"></a>Podstawy  
  Aby zrozumieć funkcję poziomu ochrony, mają zastosowanie następujące instrukcje podstawowe:  
   
--   Trzy podstawowe poziomy ochrony istnieją dla dowolnej części wiadomości. Właściwości (wszędzie tam, gdzie występuje) jest ustawiona na jedną z <xref:System.Net.Security.ProtectionLevel> wartości wyliczenia. Rosnąco ochrony, ulepszenia obejmują:  
+- Trzy podstawowe poziomy ochrony istnieją dla dowolnej części wiadomości. Właściwości (wszędzie tam, gdzie występuje) jest ustawiona na jedną z <xref:System.Net.Security.ProtectionLevel> wartości wyliczenia. Rosnąco ochrony, ulepszenia obejmują:  
   
-    -   `None`.  
+    - `None`.  
   
-    -   `Sign`. Część chroniony jest podpisany cyfrowo. Dzięki temu wykrywanie wszelkie manipulowanie część chronionej wiadomości.  
+    - `Sign`. Część chroniony jest podpisany cyfrowo. Dzięki temu wykrywanie wszelkie manipulowanie część chronionej wiadomości.  
   
-    -   `EncryptAndSign`. Część wiadomości jest szyfrowany do zapewnienia poufności, zanim jest podpisany.  
+    - `EncryptAndSign`. Część wiadomości jest szyfrowany do zapewnienia poufności, zanim jest podpisany.  
   
--   Możesz ustawić wymagania dotyczące ochrony tylko w przypadku *dane aplikacji* za pomocą tej funkcji. Na przykład nagłówków WS-Addressing dane infrastruktury i, w związku z tym, nie dotyczy `ProtectionLevel`.  
+- Możesz ustawić wymagania dotyczące ochrony tylko w przypadku *dane aplikacji* za pomocą tej funkcji. Na przykład nagłówków WS-Addressing dane infrastruktury i, w związku z tym, nie dotyczy `ProtectionLevel`.  
   
--   Gdy tryb zabezpieczeń jest ustawiony na `Transport`, cała wiadomość jest chroniona przez mechanizm transportu. W związku z tym ustawienie poziomu ochrony oddzielnych dla różnych części komunikatu nie ma znaczenia.  
+- Gdy tryb zabezpieczeń jest ustawiony na `Transport`, cała wiadomość jest chroniona przez mechanizm transportu. W związku z tym ustawienie poziomu ochrony oddzielnych dla różnych części komunikatu nie ma znaczenia.  
   
--   `ProtectionLevel` Sposób dla deweloperów ustawić *minimalny poziom* , powiązania musi być zgodne. Po wdrożeniu usługi faktycznego wiązania określony w konfiguracji może być lub może nie obsługiwać minimalny poziom. Na przykład domyślnie <xref:System.ServiceModel.BasicHttpBinding> klasy nie dostarcza zabezpieczeń (mimo że można ją włączyć). W związku z tym, za pomocą za pomocą kontraktu, który ma dowolnym ustawienie inne niż `None` spowoduje zgłoszenie wyjątku.  
+- `ProtectionLevel` Sposób dla deweloperów ustawić *minimalny poziom* , powiązania musi być zgodne. Po wdrożeniu usługi faktycznego wiązania określony w konfiguracji może być lub może nie obsługiwać minimalny poziom. Na przykład domyślnie <xref:System.ServiceModel.BasicHttpBinding> klasy nie dostarcza zabezpieczeń (mimo że można ją włączyć). W związku z tym, za pomocą za pomocą kontraktu, który ma dowolnym ustawienie inne niż `None` spowoduje zgłoszenie wyjątku.  
   
--   Jeśli usługa wymaga, aby minimum `ProtectionLevel` dla wszystkich wiadomości jest `Sign`, klient (może być utworzona przez technologii WCF bez) można szyfrowanie i podpisywanie wszystkich wiadomości (czyli jest większa niż minimalna wymagana). W tym przypadku WCF nie spowoduje zgłoszenie wyjątku, ponieważ klient ma więcej niż wartość minimalna gotowe. Należy jednak pamiętać, że aplikacji WCF (usług lub klientów) nie nadmiernie zabezpieczy część wiadomości, jeśli jest to możliwe, ale będą musiały spełniać minimalny poziom. Należy również zauważyć, że podczas korzystania `Transport` jako tryb zabezpieczeń transport może nadmiernie zabezpieczenia strumienia komunikatów ponieważ natury nie może zabezpieczyć na bardziej szczegółowym poziomie.  
+- Jeśli usługa wymaga, aby minimum `ProtectionLevel` dla wszystkich wiadomości jest `Sign`, klient (może być utworzona przez technologii WCF bez) można szyfrowanie i podpisywanie wszystkich wiadomości (czyli jest większa niż minimalna wymagana). W tym przypadku WCF nie spowoduje zgłoszenie wyjątku, ponieważ klient ma więcej niż wartość minimalna gotowe. Należy jednak pamiętać, że aplikacji WCF (usług lub klientów) nie nadmiernie zabezpieczy część wiadomości, jeśli jest to możliwe, ale będą musiały spełniać minimalny poziom. Należy również zauważyć, że podczas korzystania `Transport` jako tryb zabezpieczeń transport może nadmiernie zabezpieczenia strumienia komunikatów ponieważ natury nie może zabezpieczyć na bardziej szczegółowym poziomie.  
   
--   Jeśli ustawisz `ProtectionLevel` jawnie na wartość `Sign` lub `EncryptAndSign`, konieczne jest użycie powiązanie z włączonymi zabezpieczeniami lub zostanie zgłoszony wyjątek.  
+- Jeśli ustawisz `ProtectionLevel` jawnie na wartość `Sign` lub `EncryptAndSign`, konieczne jest użycie powiązanie z włączonymi zabezpieczeniami lub zostanie zgłoszony wyjątek.  
   
--   Po wybraniu powiązanie, które zapewnia bezpieczeństwo i nie należy ustawiać `ProtectionLevel` właściwość dowolne miejsce na kontrakt wszystkich aplikacji, danych zostanie zaszyfrowana i podpisana.  
+- Po wybraniu powiązanie, które zapewnia bezpieczeństwo i nie należy ustawiać `ProtectionLevel` właściwość dowolne miejsce na kontrakt wszystkich aplikacji, danych zostanie zaszyfrowana i podpisana.  
   
--   W przypadku wybrania powiązania, który nie ma włączoną obsługą zabezpieczeń (na przykład `BasicHttpBinding` klasa ma domyślnie wyłączone zabezpieczeń), a `ProtectionLevel` nie jest jawnie określona, a następnie żadne dane aplikacji będą chronione.  
+- W przypadku wybrania powiązania, który nie ma włączoną obsługą zabezpieczeń (na przykład `BasicHttpBinding` klasa ma domyślnie wyłączone zabezpieczeń), a `ProtectionLevel` nie jest jawnie określona, a następnie żadne dane aplikacji będą chronione.  
   
--   Jeśli używasz powiązanie, które mają zastosowanie zabezpieczeń na poziomie transportu, wszystkie dane aplikacji zostanie zabezpieczone zgodnie z możliwości transportu.  
+- Jeśli używasz powiązanie, które mają zastosowanie zabezpieczeń na poziomie transportu, wszystkie dane aplikacji zostanie zabezpieczone zgodnie z możliwości transportu.  
   
--   Jeśli używasz powiązanie, które mają zastosowanie zabezpieczeń na poziomie komunikatu, dane aplikacji zostanie zabezpieczone zgodnie z poziomów ochrony, ustaw w umowie. Jeśli nie określisz poziom ochrony, a następnie wszystkie dane aplikacji w komunikatach zostanie zaszyfrowana i podpisana.  
+- Jeśli używasz powiązanie, które mają zastosowanie zabezpieczeń na poziomie komunikatu, dane aplikacji zostanie zabezpieczone zgodnie z poziomów ochrony, ustaw w umowie. Jeśli nie określisz poziom ochrony, a następnie wszystkie dane aplikacji w komunikatach zostanie zaszyfrowana i podpisana.  
   
--   `ProtectionLevel` Można ustawić na różnych poziomach zakresu. Brak hierarchii skojarzone z zakresu, które wyjaśniono w następnej sekcji.  
+- `ProtectionLevel` Można ustawić na różnych poziomach zakresu. Brak hierarchii skojarzone z zakresu, które wyjaśniono w następnej sekcji.  
   
 ## <a name="scoping"></a>Wyznaczanie zakresu  
  Ustawienie `ProtectionLevel` na najwyższym poziomie interfejsu API ustawia poziom na wszystkich poziomach poniżej. Jeśli `ProtectionLevel` jest ustawiona na inną wartość na niższym poziomie, wszystkie interfejsy API poniżej, poziom w hierarchii spowoduje zresetowanie teraz nowy poziom (interfejsy API powyżej, ale nadal będzie miało wpływ na najwyższym poziomie). Hierarchia jest w następujący sposób. Atrybuty na tym samym poziomie są elementami równorzędnymi.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
 ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800142"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Wprowadzanie z klawiatury w aplikacjach formularzy systemu Windows
 W formularzach Windows Forms dane wejściowe użytkownika są wysyłane do aplikacji w postaci komunikatów Windows. Szereg możliwym do zastąpienia metody przetwarzania tych komunikatów w aplikacji formularza i kontrolować poziom. Te metody otrzymują komunikaty klawiatury i myszy, ich wywoływać zdarzenia, które mogą być obsługiwane, aby uzyskać informacje na temat myszy lub klawiatury danych wejściowych. W wielu przypadkach aplikacje Windows Forms będzie można przetworzyć wszystkie dane wejściowe użytkownika poprzez obsługi tych zdarzeń. W innych przypadkach aplikacja może być konieczne zastąpienie jednej z metod, które przetwarzają komunikaty, aby przechwycić określonej wiadomości, zanim aplikacja, formularza lub formantu odebrał.  

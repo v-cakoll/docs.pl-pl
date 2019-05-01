@@ -13,8 +13,8 @@ ms.openlocfilehash: 9dda2cf99bdd3152e234bec4a143a7ab5ebd4cae
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870204"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Zgodność wersji w programie .NET Framework
 
@@ -51,7 +51,7 @@ W praktyce tę zgodność można zaburzyć przez niekonsekwentne zmiany w .NET F
 
 Jeśli aplikacja lub składnik nie działa zgodnie z oczekiwaniami w .NET Framework 4.5 (w tym jego wydania punktowe, .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 lub 4.8), użyj poniższych list kontrolnych:
 
--  Jeśli aplikacja została opracowana działają w dowolnej wersji programu .NET Framework, począwszy od programu .NET Framework 4.0, zobacz [zgodność aplikacji w programie .NET Framework](application-compatibility.md) do wygenerowania listy zmian między wersjami usługi wersję docelową .NET Framework i wersja, na którym uruchomiona jest aplikacja.
+- Jeśli aplikacja została opracowana działają w dowolnej wersji programu .NET Framework, począwszy od programu .NET Framework 4.0, zobacz [zgodność aplikacji w programie .NET Framework](application-compatibility.md) do wygenerowania listy zmian między wersjami usługi wersję docelową .NET Framework i wersja, na którym uruchomiona jest aplikacja.
 
 - Jeśli masz aplikację .NET Framework 3.5, zobacz też [zagadnienia dotyczące migracji programu .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
 

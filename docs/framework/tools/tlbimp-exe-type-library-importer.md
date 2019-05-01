@@ -13,11 +13,11 @@ ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919454"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importer biblioteki typów)
 Importer biblioteki typów konwertuje definicje typów znalezione w bibliotece typów modelu COM do równoważnych definicji w zestawie środowiska uruchomieniowego języka wspólnego. Wyjściem programu Tlbimp.exe jest plik binarny (zestaw) zawierający metadane środowiska wykonawczego dla typów zdefiniowanych w oryginalnej biblioteki typów. Można sprawdzić ten plik za pomocą narzędzi takich jak [Ildasm.exe](ildasm-exe-il-disassembler.md).  

@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 452071e9726a95b4b3d9bb9cefe720d39bbc3e0c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950374"
 ---
 # <a name="compose-streams"></a>Tworzenie strumieni
 A *magazyn zapasowy* się na nośniku, na przykład dysk lub pamięć. Każdy magazyn zapasowy różnych implementuje własne strumienia jako implementacja <xref:System.IO.Stream> klasy. 

@@ -3,11 +3,11 @@ title: Identyfikatory (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774663"
 ---
 # <a name="identifiers-entity-sql"></a>Identyfikatory (jednostka SQL)
 Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do reprezentowania aliasy wyrażenie zapytania, odwołań do zmiennych, właściwości obiektów, funkcji i tak dalej. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera dwa rodzaje identyfikatorów: proste identyfikatory oraz identyfikatory w cudzysłowach.  
@@ -20,15 +20,15 @@ Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md
   
  Cytowanego identyfikatora nie może zawierać następujących znaków:  
   
--   Newline.  
+- Newline.  
   
--   Znaki powrotu karetki.  
+- Znaki powrotu karetki.  
   
--   Karty.  
+- Karty.  
   
--   Backspace.  
+- Backspace.  
   
--   Dodatkowe nawiasy kwadratowe (oznacza to, że nawiasy kwadratowe wewnątrz nawiasów kwadratowych, które odróżnić identyfikator).  
+- Dodatkowe nawiasy kwadratowe (oznacza to, że nawiasy kwadratowe wewnątrz nawiasów kwadratowych, które odróżnić identyfikator).  
   
  Podane identyfikator może zawierać znaków Unicode.  
   
@@ -53,13 +53,13 @@ Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md
 ## <a name="aliasing-rules"></a>Zasady aliasowania  
  Firma Microsoft zaleca, określając aliasów w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania zawsze wtedy, gdy potrzebne, w tym następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] konstrukcji:  
   
--   Pola konstruktorze wierszy.  
+- Pola konstruktorze wierszy.  
   
--   Elementy w klauzuli FROM w wyrażeniu zapytania.  
+- Elementy w klauzuli FROM w wyrażeniu zapytania.  
   
--   Elementy w klauzuli SELECT w wyrażeniu zapytania.  
+- Elementy w klauzuli SELECT w wyrażeniu zapytania.  
   
--   Elementy w klauzuli GROUP BY w wyrażeniu zapytania.  
+- Elementy w klauzuli GROUP BY w wyrażeniu zapytania.  
   
 ### <a name="valid-aliases"></a>Prawidłowe aliasy  
  Prawidłowe aliasy w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prostym identyfikatorem lub cytowanego identyfikatora.  
@@ -67,9 +67,9 @@ Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md
 ### <a name="alias-generation"></a>Alias Generation  
  Jeśli brak aliasu jest określona w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wyrażeniu, zapytania [!INCLUDE[esql](../../../../../../includes/esql-md.md)] spróbuje wygenerować aliasem, na podstawie następujących reguł proste:  
   
--   Wyrażenia zapytania (w przypadku którego aliasu jest nieokreślony) w przypadku prostego lub cytowanego identyfikatora, ten identyfikator jest używany jako alias. Na przykład, `ROW(a, [b])` staje się `ROW(a AS a, [b] AS [b])`.  
+- Wyrażenia zapytania (w przypadku którego aliasu jest nieokreślony) w przypadku prostego lub cytowanego identyfikatora, ten identyfikator jest używany jako alias. Na przykład, `ROW(a, [b])` staje się `ROW(a AS a, [b] AS [b])`.  
   
--   Jeśli wyrażenie kwerendy jest bardziej złożonych wyrażeń, ale ostatni składnik to wyrażenie kwerendy jest prostym identyfikatorem, że identyfikator jest używany jako alias. Na przykład, `ROW(a.a1, b.[b1])` staje się `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+- Jeśli wyrażenie kwerendy jest bardziej złożonych wyrażeń, ale ostatni składnik to wyrażenie kwerendy jest prostym identyfikatorem, że identyfikator jest używany jako alias. Na przykład, `ROW(a.a1, b.[b1])` staje się `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
   
  Zaleca się, czy należy używać niejawne Tworzenie aliasów Jeśli chcesz później użyć nazwę aliasu. W dowolnym momencie konflikt aliasy (niejawny lub jawny) lub czy powtarza się w tym samym zakresie, nastąpi błąd kompilacji. Niejawne alias zostaną spełnione kompilacji, nawet jeśli dostępny jest aliasem jawnych lub niejawnych o takiej samej nazwie.  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  Poniżej przedstawiono dodatkowe uwagi dotyczące zakresów:  
   
--   Na liście wybierz można wprowadzać nowe nazwy do zakresu, w kolejności. Wyrażenia projekcji po prawej stronie może odnosić się do nazwy przewidywany po lewej stronie.  
+- Na liście wybierz można wprowadzać nowe nazwy do zakresu, w kolejności. Wyrażenia projekcji po prawej stronie może odnosić się do nazwy przewidywany po lewej stronie.  
   
--   Klauzula ORDER BY mogą odwoływać się do określonych na liście wybierz nazwami (aliasami).  
+- Klauzula ORDER BY mogą odwoływać się do określonych na liście wybierz nazwami (aliasami).  
   
--   Kolejność obliczania klauzule wewnątrz wyrażenia wybierz określa kolejność, w wprowadzenie nazwy do zakresu. Klauzula FROM jest stosowana jako pierwsza, a następnie klauzuli WHERE, klauzula GROUP BY, klauzula HAVING, klauzuli SELECT, a na końcu klauzuli ORDER BY.  
+- Kolejność obliczania klauzule wewnątrz wyrażenia wybierz określa kolejność, w wprowadzenie nazwy do zakresu. Klauzula FROM jest stosowana jako pierwsza, a następnie klauzuli WHERE, klauzula GROUP BY, klauzula HAVING, klauzuli SELECT, a na końcu klauzuli ORDER BY.  
   
 ### <a name="aggregate-handling"></a>Obsługa agregacji  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje dwa rodzaje wartości zagregowane: agregacje związanych z kolekcjami i oparte na grupach agregacji. Agregacje opartego na kolekcji są preferowane konstrukcję w [!INCLUDE[esql](../../../../../../includes/esql-md.md)], i oparte na grupach wartości zagregowane są obsługiwane w przypadku zgodność bazy danych SQL.  

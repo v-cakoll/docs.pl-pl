@@ -13,8 +13,8 @@ ms.openlocfilehash: 81ca3721d33688d320ee553e32202617fe01aa5e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914215"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Co to jest przestarzała w bibliotece klas programu .NET Framework
 
@@ -37,11 +37,11 @@ Nawet wtedy, gdy kompilacja generuje błąd zamiast komunikat ostrzegawczy <xref
 
 Podczas uaktualniania i ponownie skompilować istniejący kod, za pomocą przestarzałego typu lub elementu członkowskiego, który generuje ostrzeżenie kompilatora w aplikacji jest idealnie dopuszczalne. Jednakże należy zapoznać się z komunikatem ostrzegawczym kompilatora, aby ustalić, czy należy zmienić kod aplikacji. Jeśli komunikat nie wskazuje odpowiedniego alternatywnego, powinny wykonaj jedną z następujących czynności:
 
--   Zmień swój kod, usuwając użycie typu lub elementu członkowskiego, jeśli jest to możliwe.
+- Zmień swój kod, usuwając użycie typu lub elementu członkowskiego, jeśli jest to możliwe.
 
      —lub—
 
--   Przejrzyj dokumentację dla tego obszaru technologii określić, jak reagować na amortyzacja.
+- Przejrzyj dokumentację dla tego obszaru technologii określić, jak reagować na amortyzacja.
 
 Może nie chcesz ponownie skompilować istniejący kod w nowszej wersji programu .NET Framework. Zamiast tego można określić wersji programu .NET Framework, względem którego istniejącą skompilowany kod działa. Na przykład załóżmy, że masz aplikację o nazwie app1.exe, który został skompilowany [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], ale chcesz, aby uruchamiać aplikację [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Wymagane jest wykonanie następujących kroków:
 

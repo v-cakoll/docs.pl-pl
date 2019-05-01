@@ -13,11 +13,11 @@ ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909142"
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
 Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i modyfikowane jako kolekcję. Możesz użyć <xref:System.Array?displayProperty=nameWithType> klasy lub klas w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable przestrzenie nazw, do dodawania, usuwania i modyfikowania poszczególnych elementów lub szereg elementów w kolekcji.  
@@ -30,17 +30,17 @@ Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i mod
 ## <a name="common-collection-features"></a>Typowe funkcje zbioru  
  Wszystkie kolekcje zawierają metody dodawania, usuwania i znajdowanie elementów w kolekcji. Ponadto wszystkie kolekcje bezpośrednio lub pośrednio implementują <xref:System.Collections.ICollection> interfejsu lub <xref:System.Collections.Generic.ICollection%601> interfejsu udostępniać te funkcje:  
   
--   **Umożliwia wyliczenie kolekcji**  
+- **Umożliwia wyliczenie kolekcji**  
   
      Kolekcje .NET framework albo wdrożyć <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> można włączyć kolekcji należy powtórzyć za pośrednictwem. Moduł wyliczający można traktować jako ruchome wskaźnik do dowolnego elementu w kolekcji. [Foreach w](../../csharp/language-reference/keywords/foreach-in.md) instrukcji i [For Each... Następna instrukcja](../../visual-basic/language-reference/statements/for-each-next-statement.md) Użyj modułu wyliczającego udostępnianych przez <xref:System.Collections.IEnumerable.GetEnumerator%2A> metody i Ukryj złożoność manipulowanie moduł wyliczający. Ponadto dowolnej kolekcji implementującej <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> jest uważany za *typ odpytywalny* i może być odpytywana za pomocą LINQ. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych. Zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętli i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Zapytania LINQ można również zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [wprowadzenie do zapytań LINQ () C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md), i [podstawowe operacje zapytań (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
--   **Możliwość kopiowania zawartości kolekcji do tablicy**  
+- **Możliwość kopiowania zawartości kolekcji do tablicy**  
   
      Wszystkie kolekcje mogą być kopiowane do tablicy przy użyciu **CopyTo** metody; jednak kolejność elementów w nowej tablicy opiera się na sekwencję, w której są zwracane przez moduł wyliczający. Tablica wynikowa jest zawsze jednowymiarowe z dolną granicę równą zero.  
   
  Ponadto wiele klas kolekcji zawiera następujące funkcje:  
   
--   **Właściwości pojemności i liczba**  
+- **Właściwości pojemności i liczba**  
   
      Pojemność kolekcji jest liczba elementów, jakie mogą one zawierać. Liczba kolekcji jest liczba elementów, które zawiera. Niektórych kolekcjach ukryć pojemność, liczby lub obu.  
   
@@ -48,11 +48,11 @@ Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i mod
   
      Element <xref:System.Collections.BitArray> jest przypadkiem szczególnym; pojemność jest taka sama jak jego długość jest taka sama jak jego liczbę.  
   
--   **Spójne dolna granica**  
+- **Spójne dolna granica**  
   
      Dolna granica kolekcji jest indeksem jej pierwszego elementu. Indeksowane wszystkie kolekcje w programie <xref:System.Collections> przestrzenie nazw mają dolną granicę równą zero, co oznacza są indeksowane przez 0. <xref:System.Array> ma dolną granicę równą zero, domyślnie, ale różnych dolną granicę można zdefiniować podczas tworzenia wystąpienia obiektu **tablicy** przy użyciu <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
   
--   **Synchronizacja dla dostępu przez wiele wątków** (<xref:System.Collections> tylko klasy).  
+- **Synchronizacja dla dostępu przez wiele wątków** (<xref:System.Collections> tylko klasy).  
   
      Typy nieuniwersalne kolekcji, w <xref:System.Collections> przestrzeń nazw zapewnia pewne bezpieczeństwo wątkowe za pomocą synchronizacji; zazwyczaj są udostępniane za pośrednictwem <xref:System.Collections.ICollection.SyncRoot%2A> i <xref:System.Collections.ICollection.IsSynchronized%2A> elementów członkowskich. Te kolekcje nie są wątkowo domyślnie. Jeśli potrzebujesz skalowalne i wydajne wielowątkowych dostęp do kolekcji, użyj jednej z klas w <xref:System.Collections.Concurrent> przestrzeni nazw lub należy wziąć pod uwagę przy użyciu kolekcji niezmienialnych. Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../docs/standard/collections/thread-safe/index.md).  
   

@@ -8,11 +8,11 @@ ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5c0087412a53177a7c43df838266f6d896c1bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875459"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Środki zaradcze: Sprawdzanie poprawności schematu XML
 W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], sprawdzanie poprawności schematu XSD wykryje naruszenie ograniczenia unique, jeśli jest używany klucz złożony i jeden klucz jest pusty.  
@@ -23,9 +23,9 @@ W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], sprawdzanie poprawności
 ## <a name="mitigation"></a>Ograniczenie  
  Czy wykrył błąd walidacji schematu, jeśli klucza złożonego ma jeden z pustym kluczem jest funkcją można skonfigurować:  
   
--   Począwszy od aplikacji, których platformą docelową [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], wykrywanie błąd walidacji schematu jest domyślnie włączona; jednak istnieje możliwość zrezygnować z niego tak, aby nie zostanie wykryty błąd walidacji schematu.  
+- Począwszy od aplikacji, których platformą docelową [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], wykrywanie błąd walidacji schematu jest domyślnie włączona; jednak istnieje możliwość zrezygnować z niego tak, aby nie zostanie wykryty błąd walidacji schematu.  
   
--   W aplikacjach uruchamianych w ramach [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] , ale docelowa [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] i wcześniejszych wersjach, błąd walidacji schematu nie zostanie wykryty domyślnie; jednak istnieje możliwość zoptymalizowany pod kątem do niego, dzięki czemu zostanie wykryty błąd walidacji schematu.  
+- W aplikacjach uruchamianych w ramach [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] , ale docelowa [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] i wcześniejszych wersjach, błąd walidacji schematu nie zostanie wykryty domyślnie; jednak istnieje możliwość zoptymalizowany pod kątem do niego, dzięki czemu zostanie wykryty błąd walidacji schematu.  
   
  To zachowanie można skonfigurować za pomocą <xref:System.AppContext> klasy do definiowania wartości `System.Xml.IgnoreEmptyKeySequences` przełącznika. Ponieważ przełącznik na wartość domyślna to `false` (pusty sekwencji klawiszy nie są ignorowane), aplikacje, których platformą docelową [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] można zrezygnować z zachowaniem przy użyciu następującego kodu, aby ustawić wartość przełącznika `true`:  
   

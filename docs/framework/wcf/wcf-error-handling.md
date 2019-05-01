@@ -3,11 +3,11 @@ title: Obsługa błędów programu WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791225"
 ---
 # <a name="wcf-error-handling"></a>Obsługa błędów programu WCF
 Błędy napotykane przez aplikację WCF należeć do jednej z trzech grup:  
@@ -26,13 +26,13 @@ Błędy napotykane przez aplikację WCF należeć do jednej z trzech grup:
   
  Obsługa błędów w WCF odbywa się co najmniej jeden z następujących czynności:  
   
--   Bezpośrednio obsługi wyjątku. Jest to wykonywane tylko dla komunikacji i błędy kanału/serwera proxy.  
+- Bezpośrednio obsługi wyjątku. Jest to wykonywane tylko dla komunikacji i błędy kanału/serwera proxy.  
   
--   Używanie kontraktów błędów  
+- Używanie kontraktów błędów  
   
--   Implementowanie <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsu  
+- Implementowanie <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsu  
   
--   Obsługa <xref:System.ServiceModel.ServiceHost> zdarzenia  
+- Obsługa <xref:System.ServiceModel.ServiceHost> zdarzenia  
   
 ## <a name="fault-contracts"></a>Kontrakty błędów  
  Kontrakty błędów umożliwiają definiowanie błędów, które mogą wystąpić podczas operacji usługi na platformie sposób niezależny. Domyślnie wszystkie wyjątki zgłaszane z w ramach operacji usługi zostanie zwrócony do klienta jako <xref:System.ServiceModel.FaultException> obiektu. <xref:System.ServiceModel.FaultException> Obiektu będzie zawierać informacje bardzo mała. Informacje wysyłane do klienta, definiując kontrakt błędu i zwraca błąd, ponieważ możesz kontrolować <xref:System.ServiceModel.FaultException%601>. Aby uzyskać więcej informacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

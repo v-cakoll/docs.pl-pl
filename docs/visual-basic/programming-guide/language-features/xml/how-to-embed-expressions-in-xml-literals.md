@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
 ms.openlocfilehash: 31e79a8787978ffab2e35cd2827b80a8f1ed843e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861364"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Instrukcje: Osadzanie wyrażeń w literałach XML (Visual Basic)
 Literały XML można połączyć z wyrażenia osadzone, aby utworzyć dokumentu XML, fragment lub element, który zawiera zawartość tworzony w czasie wykonywania. W poniższych przykładach pokazano sposób użycia wyrażenia osadzone w celu wypełnienia zawartości elementu i atrybuty nazwy elementów w czasie wykonywania.  
@@ -23,7 +23,7 @@ Literały XML można połączyć z wyrażenia osadzone, aby utworzyć dokumentu 
   
 #### <a name="to-insert-text-as-element-content"></a>Aby wstawić tekst jako element zawartości  
   
--   Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `contactName` zmiennej między elementami nazwa otwierający i zamykający.  
+- Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `contactName` zmiennej między elementami nazwa otwierający i zamykający.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -37,7 +37,7 @@ Literały XML można połączyć z wyrażenia osadzone, aby utworzyć dokumentu 
   
 #### <a name="to-insert-text-as-an-attribute-value"></a>Aby wstawić tekst jako wartość atrybutu  
   
--   Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `phoneType` zmiennej jako wartości `type` atrybutu.  
+- Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `phoneType` zmiennej jako wartości `type` atrybutu.  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -51,7 +51,7 @@ Literały XML można połączyć z wyrażenia osadzone, aby utworzyć dokumentu 
   
 #### <a name="to-insert-text-for-an-element-name"></a>Aby wstawić tekst dla nazwy elementu  
   
--   Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `elementName` zmiennej jako nazwę elementu.  
+- Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `elementName` zmiennej jako nazwę elementu.  
   
      Podczas tworzenia elementów za pomocą tej techniki, należy zamknąć je za pomocą \</ > tag.  
   

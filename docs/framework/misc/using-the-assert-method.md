@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869018"
 ---
 # <a name="using-the-assert-method"></a>Korzystanie z metody Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073731"
   
  Na poniższej ilustracji przedstawiono, co się stanie, gdy używasz **Asercja**. Załóżmy, że następujące instrukcje są spełnione dotyczące zestawów A, B, C, E i f. i uprawnienia P1 i P1A:  
   
--   P1A reprezentuje uprawnienie do odczytu plików txt na dysku C.  
+- P1A reprezentuje uprawnienie do odczytu plików txt na dysku C.  
   
--   P1 reprezentuje uprawnienie do odczytu wszystkich plików na dysku C.  
+- P1 reprezentuje uprawnienie do odczytu wszystkich plików na dysku C.  
   
--   To P1 i P1A **FileIOPermission** typów i P1A jest podzbiorem P1.  
+- To P1 i P1A **FileIOPermission** typów i P1A jest podzbiorem P1.  
   
--   Zestawy E i f. przyznano uprawnienie P1A.  
+- Zestawy E i f. przyznano uprawnienie P1A.  
   
--   Zestaw C ma uprawnienia P1.  
+- Zestaw C ma uprawnienia P1.  
   
--   Zestawy, A i B ma odpowiednie uprawnienia P1A ani P1.  
+- Zestawy, A i B ma odpowiednie uprawnienia P1A ani P1.  
   
--   Metoda A znajduje się w zestawie A, metoda B jest zawarty w zestawie B i tak dalej.  
+- Metoda A znajduje się w zestawie A, metoda B jest zawarty w zestawie B i tak dalej.  
   
  ![Diagram pokazujący zestawy metody Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

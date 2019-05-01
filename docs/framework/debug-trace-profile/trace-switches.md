@@ -15,11 +15,11 @@ ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873863"
 ---
 # <a name="trace-switches"></a>Przełączniki śledzenia
 Przełączniki śledzenia umożliwiają włączać, wyłączać i filtrować dane wyjściowe śledzenia. Są to obiekty, które istnieją w kodzie i zewnętrznie można skonfigurować za pomocą pliku Config. Istnieją trzy typy przełączników śledzenia w programie .NET Framework: <xref:System.Diagnostics.BooleanSwitch> klasy <xref:System.Diagnostics.TraceSwitch> klasy, a <xref:System.Diagnostics.SourceSwitch> klasy. <xref:System.Diagnostics.BooleanSwitch> Klasa działa jako przełącznik, włączenie lub wyłączenie szereg instrukcji śledzenia. <xref:System.Diagnostics.TraceSwitch> i <xref:System.Diagnostics.SourceSwitch> klasy umożliwiają włączenie przełącznikiem śledzenia dla poziomu śledzenia określonego tak, aby <xref:System.Diagnostics.Trace> lub <xref:System.Diagnostics.TraceSource> komunikaty określonego dla tego poziomu i na wszystkich poziomach poniżej są wyświetlane. Jeśli wyłączysz przełącznika, nie pojawią się komunikaty śledzenia. Te klasy dziedziczyć abstrakcyjnej (**MustInherit**) klasy **przełącznika**, jak powinna żadnych przełączników opracowane przez użytkownika.  
@@ -33,13 +33,13 @@ Przełączniki śledzenia umożliwiają włączać, wyłączać i filtrować dan
 ## <a name="trace-levels"></a>Poziom śledzenia  
  Kiedy używasz **TraceSwitch**, istnieją dodatkowe zagadnienia. A **TraceSwitch** obiekt ma cztery właściwości, które zwracają **logiczna** wartość wskazującą, czy przełącznik jest równa co najmniej określonego poziomu:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  Poziomy umożliwiają ograniczenie ilości informacji śledzenia, otrzymany tylko te informacje, które są wymagane w celu rozwiązania problemu. Możesz określić poziom szczegółowości, żądane dane wyjściowe śledzenia przez i konfigurowanie przełączników śledzenia na poziomie śledzenia odpowiednie. Możesz otrzymywać komunikaty o błędach, komunikatów ostrzegawczych, komunikaty informacyjne, komunikaty pełne śledzenie lub żaden komunikat w ogóle.  
   

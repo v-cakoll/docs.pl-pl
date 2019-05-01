@@ -10,20 +10,20 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
 ms.openlocfilehash: c8df3d57e5a6ff1f0021381db189025719808641
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876515"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Instrukcje: Wykonywanie zapytań usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia wykonywanie zapytań usługi danych z aplikacji klienta opartego na programie .NET Framework przy użyciu klas usługi danych wygenerowanego klienta. Zapytania można wykonywać przy użyciu jednej z następujących metod:  
   
--   Wykonywanie zapytania LINQ względem nazwany <xref:System.Data.Services.Client.DataServiceQuery%601> uzyskany z <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` narzędzie generuje.  
+- Wykonywanie zapytania LINQ względem nazwany <xref:System.Data.Services.Client.DataServiceQuery%601> uzyskany z <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` narzędzie generuje.  
   
--   Niejawnie, wyliczając przez nazwany <xref:System.Data.Services.Client.DataServiceQuery%601> uzyskany z <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` narzędzie generuje.  
+- Niejawnie, wyliczając przez nazwany <xref:System.Data.Services.Client.DataServiceQuery%601> uzyskany z <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` narzędzie generuje.  
   
--   Jawnie, przez wywołanie metody <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> metody <xref:System.Data.Services.Client.DataServiceQuery%601>, lub <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> metodę dla operacji asynchronicznych.  
+- Jawnie, przez wywołanie metody <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> metody <xref:System.Data.Services.Client.DataServiceQuery%601>, lub <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> metodę dla operacji asynchronicznych.  
   
  Aby uzyskać więcej informacji, zobacz [zapytań usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   

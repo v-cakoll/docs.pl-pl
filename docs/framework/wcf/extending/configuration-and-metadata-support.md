@@ -3,11 +3,11 @@ title: Konfiguracja i obsługa metadanych
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
 ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858367"
 ---
 # <a name="configuration-and-metadata-support"></a>Konfiguracja i obsługa metadanych
 W tym temacie opisano sposób włączania obsługi konfiguracji i metadanych dla powiązania i elementy powiązań.  
@@ -15,13 +15,13 @@ W tym temacie opisano sposób włączania obsługi konfiguracji i metadanych dla
 ## <a name="overview-of-configuration-and-metadata"></a>Omówienie konfiguracji i metadanych  
  W tym temacie omówiono czynności, które są elementy opcjonalne, 1, 2 i 4 w [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md) listy zadań.  
   
--   Włączanie obsługę element powiązania w pliku konfiguracji.  
+- Włączanie obsługę element powiązania w pliku konfiguracji.  
   
--   Włączanie obsługi plików konfiguracji dla powiązania.  
+- Włączanie obsługi plików konfiguracji dla powiązania.  
   
--   Eksportowanie WSDL i zasady potwierdzenia dla elementu powiązania.  
+- Eksportowanie WSDL i zasady potwierdzenia dla elementu powiązania.  
   
--   Identyfikowanie potwierdzenia WSDL i zasady, aby wstawić i skonfiguruj powiązania lub element powiązania.  
+- Identyfikowanie potwierdzenia WSDL i zasady, aby wstawić i skonfiguruj powiązania lub element powiązania.  
   
  Aby uzyskać informacji na temat tworzenia powiązań zdefiniowanych przez użytkownika i elementy powiązań, zobacz [powiązania Creating User-Defined](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) i [Tworzenie elementu BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)odpowiednio.  
   

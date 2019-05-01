@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793682"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementowanie transakcji niejawnej przy użyciu zakresu transakcji
 <xref:System.Transactions.TransactionScope> Klasa udostępnia prosty sposób zaznaczania bloku kodu jako udział w transakcji, bez konieczności interakcji z transakcja. Zakres transakcji można wybrać i automatycznie zarządzać otoczenia transakcji. Z powodu jej łatwość użycia i wydajności zalecane jest, że używasz <xref:System.Transactions.TransactionScope> klasy podczas projektowania aplikacji transakcji.  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  Element <xref:System.Transactions.TransactionScope> obiekt zawiera trzy pozycje:  
   
--   Dołącz do otoczenia transakcji lub Utwórz nową, jeśli nie istnieje.  
+- Dołącz do otoczenia transakcji lub Utwórz nową, jeśli nie istnieje.  
   
--   Można nowego zakresu głównego, oznacza to, że uruchomić nowej transakcji i skonfigurować danej transakcji można nowej transakcji otoczenia w zakresie własnej.  
+- Można nowego zakresu głównego, oznacza to, że uruchomić nowej transakcji i skonfigurować danej transakcji można nowej transakcji otoczenia w zakresie własnej.  
   
--   Nie w ogóle brać udział w transakcji. Z tego względu nie ma żadnej otoczenia transakcji.  
+- Nie w ogóle brać udział w transakcji. Z tego względu nie ma żadnej otoczenia transakcji.  
   
  Jeśli zakres jest utworzone za pomocą elementów <xref:System.Transactions.TransactionScopeOption.Required>i transakcja otoczenia jest obecna, zakres sprzężenia danej transakcji. Jeśli z drugiej strony, nie ma żadnej transakcji otoczenia, następnie zakres tworzy nową transakcję i stają się zakres głównego. Jest to wartość domyślna. Gdy <xref:System.Transactions.TransactionScopeOption.Required> jest używany, kod w zakresie nie jest konieczne działają inaczej, czy jest to główny lub po prostu dołączenie do otoczenia transakcji. Powinna ona działać tak samo w obu przypadkach.  
   
@@ -90,9 +90,9 @@ void SomeMethod()
 |Wymagane|Nie|Nowa transakcja (będzie główny)|  
 |Wymagane nowe|Nie|Nowa transakcja (będzie główny)|  
 |Pomiń|Nie|Nie transakcji|  
-|Wymagane|Yes|Otoczenia transakcji|  
-|Wymagane nowe|Tak|Nowa transakcja (będzie główny)|  
-|Pomiń|Tak|Nie transakcji|  
+|Wymagane|Tak|Otoczenia transakcji|  
+|Wymagane nowe|Yes|Nowa transakcja (będzie główny)|  
+|Pomiń|Yes|Nie transakcji|  
   
  Gdy <xref:System.Transactions.TransactionScope> obiektu sprzężenia istniejącej transakcji otoczenia, usuwania obiektu zakres nie może kończyć się transakcji, chyba że zakres przerywa transakcję. Jeśli otoczenia transakcji został utworzony przez zakres głównego, tylko wtedy, gdy zakres główny jest usunięty, nie <xref:System.Transactions.CommittableTransaction.Commit%2A> jest wywoływana w transakcji. Jeśli transakcja została utworzona ręcznie, zakończenia transakcji, gdy jest to zostało przerwane lub przydzielonej przez jej twórcę.  
   

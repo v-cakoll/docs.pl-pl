@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864328"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operatory i wyrażenia w Visual Basic
 *Operator* jest element kodu, który wykonuje operację na elementy kodu, które zawierają wartości. Elementy wartości obejmują zmienne, stałe, literały, właściwości, zwraca z `Function` i `Operator` procedur i wyrażeń.  
@@ -25,13 +25,13 @@ ms.locfileid: "59073653"
 ## <a name="types-of-operators"></a>Typy operatorów  
  Visual Basic oferuje następujące operatory:  
   
--   [Operatory arytmetyczne](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) wykonywanie obliczeń dobrze znanych na wartości liczbowe, łącznie z ich wzorców bitowe przesunięcie.  
+- [Operatory arytmetyczne](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) wykonywanie obliczeń dobrze znanych na wartości liczbowe, łącznie z ich wzorców bitowe przesunięcie.  
   
--   [Operatory porównania](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) porównać dwa wyrażenia i zwraca `Boolean` wartość reprezentująca wynik porównania.  
+- [Operatory porównania](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) porównać dwa wyrażenia i zwraca `Boolean` wartość reprezentująca wynik porównania.  
   
--   [Concatenation — operatory](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) Dołącz do wielu ciągów w jeden ciąg.  
+- [Concatenation — operatory](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) Dołącz do wielu ciągów w jeden ciąg.  
   
--   [Logiczne i bitowe operatory w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) połączyć `Boolean` lub wartości liczbowych i zwracają wynik o ten sam typ danych jako wartości.  
+- [Logiczne i bitowe operatory w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) połączyć `Boolean` lub wartości liczbowych i zwracają wynik o ten sam typ danych jako wartości.  
   
  Elementy wartości, które są połączone z operatorem są nazywane *operandy* tego operatora. Operatory w połączeniu z wyrażenia formularza elementów wartości, z wyjątkiem operatora przypisania, który stanowi *instrukcji*. Aby uzyskać więcej informacji, zobacz [instrukcji](../../../../visual-basic/programming-guide/language-features/statements.md).  
   

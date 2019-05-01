@@ -5,11 +5,11 @@ helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
 ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921956"
 ---
 # <a name="load-balancing"></a>Równoważenie obciążenia
 Jednym ze sposobów, aby zwiększyć jej pojemność aplikacji Windows Communication Foundation (WCF) jest Skaluj je automatycznie przez wdrażanie ich do farmy serwerów z równoważeniem obciążenia. Aplikacji WCF może być równoważone za pomocą standardowych równoważenia technik, w tym oprogramowania równoważenia obciążenia, takich jak Windows Równoważenie obciążenia sieciowego, a także oparte na sprzęcie równoważenia urządzenia.  
@@ -82,9 +82,9 @@ Jednym ze sposobów, aby zwiększyć jej pojemność aplikacji Windows Communica
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Równoważenie obciążenia za pomocą powiązania WSHttp i powiązanie WSDualHttp  
  Zarówno <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.WSDualHttpBinding> może być ze zrównoważonym obciążeniem przy użyciu technik równoważenia obciążenia HTTP, pod warunkiem kilka modyfikacje są dokonywane na domyślne powiązania konfiguracji.  
   
--   Wyłącz ustanawiania kontekstu zabezpieczeń: można to osiągnąć przez ustawienie <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwość <xref:System.ServiceModel.WSHttpBinding> do `false`. Alternatywnie, jeśli sesje zabezpieczeń są wymagane, jest możliwość użycia sesji zabezpieczeń stanową, zgodnie z opisem w [Secure sesje](../../../docs/framework/wcf/feature-details/secure-sessions.md) tematu. Sesje zabezpieczeń stanową włączyć usługi jest zachowywana bezstanowe cały stan sesji zabezpieczeń są przesyłane z każdym żądaniem jako część tokenu zabezpieczającego ochrony. Należy pamiętać, że aby włączyć sesji zabezpieczeń stanową, trzeba użyć <xref:System.ServiceModel.Channels.CustomBinding> lub zdefiniowany przez użytkownika <xref:System.ServiceModel.Channels.Binding> jako niezbędną konfigurację ustawienia nie są widoczne na <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.WSDualHttpBinding> są dostarczane przez system.  
+- Wyłącz ustanawiania kontekstu zabezpieczeń: można to osiągnąć przez ustawienie <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwość <xref:System.ServiceModel.WSHttpBinding> do `false`. Alternatywnie, jeśli sesje zabezpieczeń są wymagane, jest możliwość użycia sesji zabezpieczeń stanową, zgodnie z opisem w [Secure sesje](../../../docs/framework/wcf/feature-details/secure-sessions.md) tematu. Sesje zabezpieczeń stanową włączyć usługi jest zachowywana bezstanowe cały stan sesji zabezpieczeń są przesyłane z każdym żądaniem jako część tokenu zabezpieczającego ochrony. Należy pamiętać, że aby włączyć sesji zabezpieczeń stanową, trzeba użyć <xref:System.ServiceModel.Channels.CustomBinding> lub zdefiniowany przez użytkownika <xref:System.ServiceModel.Channels.Binding> jako niezbędną konfigurację ustawienia nie są widoczne na <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.WSDualHttpBinding> są dostarczane przez system.  
   
--   Nie używaj niezawodnych sesji. Ta funkcja jest domyślnie wyłączona.  
+- Nie używaj niezawodnych sesji. Ta funkcja jest domyślnie wyłączona.  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>Powiązanie Net.TCP równoważenia obciążenia  
  <xref:System.ServiceModel.NetTcpBinding> Może być ze zrównoważonym obciążeniem technik równoważenia obciążenia dla warstwy IP. Jednak <xref:System.ServiceModel.NetTcpBinding> pul połączeń TCP domyślnie, aby zmniejszyć czas oczekiwania na połączenie. Jest to optymalizacji, które będzie zakłócać podstawowy mechanizm równoważenia obciążenia. Wartość podstawowa konfiguracja optymalizacji <xref:System.ServiceModel.NetTcpBinding> jest limit czasu dzierżawy, który jest częścią ustawienia puli połączeń. Pula połączeń powoduje, że połączeń klientów z stają się skojarzona z określonych serwerów w farmie. Jak okres istnienia tych połączeń można zwiększyć (współczynnik kontrolowane przez ustawienie limitu czasu dzierżawy), dystrybucji obciążenia na różnych serwerach w farmie staje się niezrównoważone. W wyniku średnią wywołać wzrostu czasu. Tak, korzystając z <xref:System.ServiceModel.NetTcpBinding> w scenariuszach ze zrównoważonym obciążeniem, należy rozważyć zmniejszenie domyślny limit czasu dzierżawy, używanym przez wiązanie. Limit czasu dzierżawy 30 sekund jest uzasadnione punkt początkowy dla scenariuszy z równoważeniem obciążenia, mimo że wartość optymalną jest zależne od aplikacji. Aby uzyskać więcej informacji na temat limitu czasu dzierżawy kanału i innych przydziały dla transportu, zobacz [przydziały dla transportu](../../../docs/framework/wcf/feature-details/transport-quotas.md).  

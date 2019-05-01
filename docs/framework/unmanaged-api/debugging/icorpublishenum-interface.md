@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1eac0b9fe252e476f8ff781f2181a203886d3beb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993541"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum — Interfejs
 Służy jako abstrakcyjny interfejs podstawowy dla wyliczenia, które są używane w publikowanie informacji o procesach i domen aplikacji.  
@@ -38,9 +38,9 @@ Służy jako abstrakcyjny interfejs podstawowy dla wyliczenia, które są używa
 ## <a name="remarks"></a>Uwagi  
  Następujące moduły wyliczające pochodzić od `ICorPublishEnum`:  
   
--   [Icorpublishappdomainenum —](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
+- [Icorpublishappdomainenum —](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
   
--   [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
+- [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

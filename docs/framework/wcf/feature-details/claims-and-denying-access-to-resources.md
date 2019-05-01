@@ -5,11 +5,11 @@ helpviewer_keywords:
 - claims [WCF], denying access to resources
 ms.assetid: 145ebb41-680e-4256-b14c-1efb4af1e982
 ms.openlocfilehash: 4f48c59090579f4b451f615bb792a4dcb73f6df5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857599"
 ---
 # <a name="claims-and-denying-access-to-resources"></a>Oświadczenia i odmawianie dostępu do zasobów
 Windows Communication Foundation (WCF) obsługuje mechanizm autoryzacji opartej na oświadczeniach. A także zezwalanie na dostęp do zasobów na podstawie obecności oświadczenia, systemy często zezwoli na dostęp do zasobów na podstawie obecności oświadczenia. Należy sprawdzić takich systemów <xref:System.IdentityModel.Policy.AuthorizationContext> oświadczeń, których wynikiem dostępu przed szuka oświadczenia, których wynikiem dostęp jest dozwolony.  

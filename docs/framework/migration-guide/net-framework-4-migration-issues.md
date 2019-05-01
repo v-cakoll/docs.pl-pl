@@ -8,11 +8,11 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871166"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemy podczas migracji programu .NET Framework 4
 

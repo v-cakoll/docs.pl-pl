@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
 ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921735"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Instrukcje: Malowanie obszaru za pomocą wideo
 Ten przykład pokazuje, jak malować obszar za pomocą nośnika. Jednym ze sposobów Maluj obszar za pomocą nośnika jest użycie <xref:System.Windows.Controls.MediaElement> wraz z <xref:System.Windows.Media.VisualBrush>. Użyj <xref:System.Windows.Controls.MediaElement> do ładowania i odtwarzania nośnika i użyj go, aby ustawić <xref:System.Windows.Media.VisualBrush.Visual%2A> właściwość <xref:System.Windows.Media.VisualBrush>. Następnie można użyć <xref:System.Windows.Media.VisualBrush> można malować obszar za pomocą załadowane nośniki.  

@@ -13,11 +13,11 @@ ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909752"
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
 <a name="introduction"></a> Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
@@ -58,9 +58,9 @@ ms.locfileid: "59336151"
 ## <a name="compiling-msil-to-native-code"></a>Kompilowanie MSIL do kodu natywnego  
  Przed uruchomieniem języka Microsoft intermediate language (MSIL), muszą być skompilowane dla środowiska uruchomieniowego języka wspólnego do kodu natywnego dla architektura komputera docelowego. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Udostępnia wykonaj tę konwersję na dwa sposoby:  
   
--   Kompilator just-in-time (JIT) .NET Framework.  
+- Kompilator just-in-time (JIT) .NET Framework.  
   
--   .NET Framework [Ngen.exe (Generator obrazu natywnego)](../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+- .NET Framework [Ngen.exe (Generator obrazu natywnego)](../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Kompilacja za pomocą kompilatora JIT  
  Kompilacja JIT konwertuje MSIL do kodu macierzystego na żądanie na czas, kiedy zawartość zestawu są ładowane i wykonywane uruchomienia aplikacji. Ponieważ środowisko uruchomieniowe języka wspólnego zawiera kompilator JIT dla każdej obsługiwanej architektury Procesora, deweloperzy mogą tworzyć zestaw zestawy MSIL, które mogą być kompilowany dokładnie na czas i działają na różnych komputerach przy użyciu architektury na innym komputerze. Jednak jeśli zarządzany kod wywołuje natywnych interfejsów API specyficznych dla platformy lub biblioteki klas specyficznych dla platformy, będzie uruchomić tylko w tym systemie operacyjnym.  
@@ -70,22 +70,22 @@ ms.locfileid: "59336151"
 ### <a name="install-time-code-generation-using-ngenexe"></a>Generowanie kodu w czasie instalacji za pomocą NGen.exe  
  Ponieważ kompilator JIT konwertuje MSIL zestawu do kodu macierzystego, podczas gdy poszczególne są wywoływane metody zdefiniowane w tym zestawie, ma to wpływ na wydajność niekorzystnie w czasie wykonywania. W większości przypadków to dopuszczalne obniżone wydajności. Co ważniejsze kod wygenerowany przez kompilator JIT jest powiązany do procesu, który wyzwolił kompilacji. Nie może być współużytkowana przez wiele procesów. Aby zezwolić na wygenerowany kod w celu udostępnienia w wielu wywołań aplikacji lub w wielu wiele procesów, które współużytkują zbiór zestawów, środowisko uruchomieniowe języka wspólnego obsługuje kompilację ahead of time. W tym trybie kompilację ahead of time używa [Ngen.exe (Generator obrazu natywnego)](../../docs/framework/tools/ngen-exe-native-image-generator.md) przekonwertować MSIL zestawy do natywnego kodu znacznie takie jak kompilator JIT wykonuje. Jednak działanie programu Ngen.exe różni się od kompilator JIT na trzy sposoby:  
   
--   Wykonuje konwersję w języku MSIL do kodu macierzystego, przed uruchomieniem aplikacji zamiast, gdy aplikacja jest uruchomiona.  
+- Wykonuje konwersję w języku MSIL do kodu macierzystego, przed uruchomieniem aplikacji zamiast, gdy aplikacja jest uruchomiona.  
   
--   Kompiluje, aby cały zespół w czasie, zamiast jednej metody w danym momencie.  
+- Kompiluje, aby cały zespół w czasie, zamiast jednej metody w danym momencie.  
   
--   Kod wygenerowany w pamięci podręcznej obrazów natywnych utrzymuje jako plik na dysku.  
+- Kod wygenerowany w pamięci podręcznej obrazów natywnych utrzymuje jako plik na dysku.  
   
 ### <a name="code-verification"></a>Kod weryfikacyjny  
  Jako część swojej kompilacji do kodu macierzystego kod MSIL musi pomyślnie przejść proces weryfikacji, chyba że administrator ustanowił zasady zabezpieczeń, które umożliwia kodu pomijania weryfikacji. Weryfikacji sprawdza, czy MSIL i metadanych, aby dowiedzieć się, czy kod jest bezpieczne dla typów, co oznacza, że uzyskuje dostęp do lokalizacji pamięci, który jest upoważniony do dostępu. Bezpieczeństwo typów pomaga wyizolować obiekty od siebie oraz chronić je przed przypadkowym lub złośliwym uszkodzenia. Zapewnia również zapewnienie, że ograniczeń zabezpieczeń dotyczących kodu można wymusić niezawodnie.  
   
  Środowisko uruchomieniowe opiera się na fakt, że następujące instrukcje są spełnione dla kodu, który jest weryfikowalny pod kątem bezpieczeństwa typów:  
   
--   Odwołanie do typu, jest ściśle zgodna z typem, do którego nastąpiło odwołanie.  
+- Odwołanie do typu, jest ściśle zgodna z typem, do którego nastąpiło odwołanie.  
   
--   Jedyne operacje odpowiednio zdefiniowane są wywoływane na obiekcie.  
+- Jedyne operacje odpowiednio zdefiniowane są wywoływane na obiekcie.  
   
--   Tożsamości są na tym, co się podaje.  
+- Tożsamości są na tym, co się podaje.  
   
  W procesie weryfikacji kodu MSIL jest badany w celu podjęcia próby potwierdzić, że kod może dostęp do lokalizacji pamięci i wywoływać metody tylko przy użyciu właściwie zdefiniowanych typów. Na przykład kod nie może dopuścić do pola obiektu były dostępne w taki sposób, który umożliwia lokalizacji pamięci można przepełnienie. Ponadto weryfikacji sprawdza kod w celu ustalenia, czy kod w języku MSIL został poprawnie wygenerowany, ponieważ niepoprawne MSIL może prowadzić do naruszenia zasad bezpieczeństwa typu. Proces weryfikacji przekazuje wyraźnie określonych kod bezpiecznego typu i przekazuje kod jest bezpiecznym typem. Jednak niektóre kod bezpiecznego typu nie może zostać przekazany weryfikacji z powodu ograniczenia procesu weryfikacji i niektórych języków zgodnie z projektem nie tworzą sprawdzalnie bezpieczny kod. Jeśli kod bezpiecznego typu jest wymagany przez zasady zabezpieczeń, ale kod nie zostały spełnione weryfikacji, wyjątek jest generowany, gdy kod jest uruchamiany.  
   

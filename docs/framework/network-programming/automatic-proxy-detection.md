@@ -15,11 +15,11 @@ helpviewer_keywords:
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
 ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866824"
 ---
 # <a name="automatic-proxy-detection"></a>Automatyczne wykrywanie serwera proxy
 Automatyczne wykrywanie serwera proxy jest procesem, za pomocą którego serwer proxy sieci Web jest identyfikowane przez system i używane do wysyłania żądania w imieniu klienta. Ta funkcja jest również znana jako funkcja autowykrywania serwera Proxy sieci Web (WPAD). Gdy automatyczne wykrywanie serwera proxy jest włączone, system próbuje zlokalizować skryptu konfiguracji serwera proxy, która jest odpowiedzialna za zwrócenie zestaw serwerów proxy, które mogą być używane dla żądania. Jeśli zostanie znaleziony skryptu konfiguracji serwera proxy, skrypt pobrany, skompilowany i uruchom na komputerze lokalnym, jeśli informacje o serwerze proxy, strumienia żądania lub odpowiedzi jest uzyskiwany na żądanie, który używa <xref:System.Net.WebProxy> wystąpienia.  

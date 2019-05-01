@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
 ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879908"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>Metody AcceptChanges i RejectChanges
 Po sprawdzeniu dokładności zmian wprowadzonych w danych w <xref:System.Data.DataTable>, możesz zaakceptować zmiany, używając <xref:System.Data.DataRow.AcceptChanges%2A> metody <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, lub <xref:System.Data.DataSet>, który ustawi **bieżącego** wiersza wartości, które mają być **oryginalnego** wartości i ustawi **RowState** właściwości **Unchanged**. Akceptowanie lub odrzucanie zmian czyści jakąkolwiek **RowError** informacji i zestawy **HasErrors** właściwości **false**. Akceptowanie lub odrzucanie zmian może również wpływać na aktualizowanie danych w źródle danych. Aby uzyskać więcej informacji, zobacz [aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  

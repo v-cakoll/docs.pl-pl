@@ -11,34 +11,34 @@ ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908768"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection — Przegląd
 <xref:System.Collections.Concurrent.BlockingCollection%601> jest klasą wątkowo kolekcji, która oferuje następujące funkcje:  
   
--   Implementacja wzorca producent — konsument.  
+- Implementacja wzorca producent — konsument.  
   
--   Równocześnie Dodawanie i pobieranie elementów z wielu wątków.  
+- Równocześnie Dodawanie i pobieranie elementów z wielu wątków.  
   
--   Opcjonalne maksymalnej pojemności.  
+- Opcjonalne maksymalnej pojemności.  
   
--   Operacje wstawiania i usuwania, które zablokować, jeśli kolekcja jest pusta lub pełne.  
+- Operacje wstawiania i usuwania, które zablokować, jeśli kolekcja jest pusta lub pełne.  
   
--   Wstawiania i usuwania "try" operacje nie należy blokować lub Blokuj, aż w wybranym okresie.  
+- Wstawiania i usuwania "try" operacje nie należy blokować lub Blokuj, aż w wybranym okresie.  
   
--   Hermetyzuje dowolny typ kolekcji, który implementuje <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
+- Hermetyzuje dowolny typ kolekcji, który implementuje <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
   
--   Unieważnieniu przy użyciu tokenów anulowania.  
+- Unieważnieniu przy użyciu tokenów anulowania.  
   
--   Dwa rodzaje wyliczenie z `foreach` (`For Each` w języku Visual Basic):  
+- Dwa rodzaje wyliczenie z `foreach` (`For Each` w języku Visual Basic):  
   
-    1.  Wyliczenie tylko do odczytu.  
+    1. Wyliczenie tylko do odczytu.  
   
-    2.  Wyliczenie, które usuwa elementy, jak wyliczane są.  
+    2. Wyliczenie, które usuwa elementy, jak wyliczane są.  
   
 ## <a name="bounding-and-blocking-support"></a>Blokujących i ograniczających pomocy technicznej  
  <xref:System.Collections.Concurrent.BlockingCollection%601> obsługuje blokujących i ograniczających. Blokujących oznacza, że można ustawić maksymalną pojemność kolekcji. Blokujących jest ważne w niektórych scenariuszach, ponieważ pozwala na sterowanie maksymalny rozmiar kolekcji w pamięci i uniemożliwia tworzenie wątków przeniesienie zbyt daleko wcześniej konsumencki wątków.  

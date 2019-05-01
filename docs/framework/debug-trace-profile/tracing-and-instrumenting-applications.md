@@ -16,24 +16,24 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876151"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Śledzenie i instrumentacja aplikacji
 Śledzenie jest sposobem monitorowania wykonywanie aplikacji, gdy jest on uruchomiony. Możesz dodać Instrumentacji śledzenia i debugowania aplikacji .NET Framework, Opracuj go, gdy zarówno podczas opracowywania aplikacji, jak i po jej wdrożeniu, można użyć tego instrumentacji. Możesz użyć <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> klasy do rejestrowania informacji o błędach oraz wykonywania aplikacji w dzienniki, pliki tekstowe lub innych urządzeń do późniejszej analizy.  
   
  Termin *Instrumentacji* odwołuje się do możliwości monitorowania lub mierzyć poziom wydajności produktu i diagnozowanie błędów. W programowaniu, oznacza to, możliwości aplikacji, aby dołączyć:  
   
--   **Śledzenie kodu** -odbiera komunikaty informacyjne dotyczące wykonywania aplikacji w czasie wykonywania.  
+- **Śledzenie kodu** -odbiera komunikaty informacyjne dotyczące wykonywania aplikacji w czasie wykonywania.  
   
--   **Debugowanie** — śledzenie i naprawia błędy programowania aplikacji w fazie projektowania. Aby uzyskać więcej informacji, zobacz [debugowanie](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Debugowanie** — śledzenie i naprawia błędy programowania aplikacji w fazie projektowania. Aby uzyskać więcej informacji, zobacz [debugowanie](/visualstudio/debugger/debugging-in-visual-studio).  
   
--   **Liczniki wydajności** — składniki, które pozwalają śledzić wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+- **Liczniki wydajności** — składniki, które pozwalają śledzić wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
--   **Dzienniki zdarzeń** — składniki, które pozwalają otrzymujesz i śledzisz istotnych zdarzeń podczas wykonywania aplikacji. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.EventLog> klasy.  
+- **Dzienniki zdarzeń** — składniki, które pozwalają otrzymujesz i śledzisz istotnych zdarzeń podczas wykonywania aplikacji. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.EventLog> klasy.  
   
  Instrumentacji aplikacji, umieszczając instrukcji śledzenia w lokalizacjach strategicznych w kodzie jest szczególnie przydatne w przypadku aplikacji rozproszonych. Za pomocą instrukcji śledzenia możliwe jest instrumentowanie aplikacji nie tylko do wyświetlania informacji w przypadku, gdy coś pójdzie źle, ale także do monitorowania, jak działa aplikacja.  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. Kompilowanie aplikacji na kod wykonywalny przy użyciu jednej z następujących procedur:  
   
-    -   Użyj **kompilacji** menu wraz z **debugowania** strony **stron właściwości** okno dialogowe w **Eksploratora rozwiązań**. Użyj tego ustawienia podczas kompilowania w programie Visual Studio.  
+    - Użyj **kompilacji** menu wraz z **debugowania** strony **stron właściwości** okno dialogowe w **Eksploratora rozwiązań**. Użyj tego ustawienia podczas kompilowania w programie Visual Studio.  
   
          \- lub —  
   
-    -   Użyj **śledzenia** i **debugowania** dyrektywy kompilatora wiersza polecenia metody kompilowania. Aby uzyskać więcej informacji, zobacz [kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Użyj tego ustawienia podczas kompilowania z wiersza polecenia.  
+    - Użyj **śledzenia** i **debugowania** dyrektywy kompilatora wiersza polecenia metody kompilowania. Aby uzyskać więcej informacji, zobacz [kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Użyj tego ustawienia podczas kompilowania z wiersza polecenia.  
   
 7. Jeśli wystąpi problem w czasie wykonywania, włącz przełącznik odpowiednie śledzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   

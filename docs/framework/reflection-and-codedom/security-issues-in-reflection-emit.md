@@ -14,20 +14,20 @@ ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793211"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemy związane z zabezpieczeniami w emisji odbicia
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia trzy sposoby, aby emitować Microsoft pośredniego language (MSIL), każdy z własną problemy z zabezpieczeniami:  
   
--   [Dynamicznych zestawów](#Dynamic_Assemblies)  
+- [Dynamicznych zestawów](#Dynamic_Assemblies)  
   
--   [Anonimowo obsługiwane metody dynamiczne](#Anonymously_Hosted_Dynamic_Methods)  
+- [Anonimowo obsługiwane metody dynamiczne](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [Metody dynamiczne są skojarzone z istniejących zestawów](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [Metody dynamiczne są skojarzone z istniejących zestawów](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  Niezależnie od tego, w sposób generowania kodu dynamiczne wykonywania wygenerowany kod wymaga uprawnień, które są wymagane przez używane typy i metody, które korzysta z wygenerowanego kodu.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074524"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Generowanie zestawów dynamicznych z częściowo zaufanego kodu  
  Należy wziąć pod uwagę warunków, w których zestaw z uprawnieniami do Internetu można wygenerować przemijający zestaw dynamiczny i wykonać jego kod:  
   
--   Zestaw dynamiczny używa tylko typy publiczne i innych zestawów.  
+- Zestaw dynamiczny używa tylko typy publiczne i innych zestawów.  
   
--   Uprawnienia wymagane przez tych typów i elementów członkowskich znajdują się w przydzielonym zestawie częściowo zaufanym zestawem.  
+- Uprawnienia wymagane przez tych typów i elementów członkowskich znajdują się w przydzielonym zestawie częściowo zaufanym zestawem.  
   
--   Zestaw nie jest zapisywana na dysku.  
+- Zestaw nie jest zapisywana na dysku.  
   
--   Debugowanie symbole nie są generowane. (`Internet` i `LocalIntranet` zestawy uprawnień nie ma wystarczających uprawnień.)  
+- Debugowanie symbole nie są generowane. (`Internet` i `LocalIntranet` zestawy uprawnień nie ma wystarczających uprawnień.)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>Anonimowo hostowane metody dynamiczne  
@@ -70,9 +70,9 @@ ms.locfileid: "59074524"
   
  Domeny aplikacji pozwala na on, anonimowo obsługiwane metody dynamiczne można pominąć kontrole widoczność JIT, z zastrzeżeniem następujące ograniczenia: Niepublicznych typy i składowe, które uzyskują dostęp anonimowo obsługiwana metoda dynamiczna musi być w zestawach, którego grant zestawy są równe lub podzestawy zestaw uprawnień emitowanie stosu wywołań. Ta ograniczona zdolność do pominięcia widoczności JIT sprawdza, czy jest włączone, jeśli domena aplikacji daje <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi.  
   
--   Jeśli metoda używa tylko typy publiczne i elementy członkowskie, podczas konstruowania są wymagane żadne uprawnienia.  
+- Jeśli metoda używa tylko typy publiczne i elementy członkowskie, podczas konstruowania są wymagane żadne uprawnienia.  
   
--   Jeśli określisz, że sprawdzenie widoczność JIT ma być pomijana, żądanie, w tym, gdy metoda jest konstruowany obejmuje <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagę i zestaw uprawnień zestawu, który zawiera niepubliczna składowa, który jest dostępny.  
+- Jeśli określisz, że sprawdzenie widoczność JIT ma być pomijana, żądanie, w tym, gdy metoda jest konstruowany obejmuje <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagę i zestaw uprawnień zestawu, który zawiera niepubliczna składowa, który jest dostępny.  
   
  Ponieważ zestaw uprawnień niepubliczna składowa jest brana pod uwagę, częściowo zaufany kod, któremu udzielono <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> nie podniesienia jego uprawnień, wykonując niepubliczne elementy członkowskie zaufanych zestawów.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074524"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Generowanie anonimowo obsługiwanych metod dynamicznych z częściowo zaufanego kodu  
  Należy wziąć pod uwagę warunków, w których zestawu z uprawnieniami do Internetu można wygenerować anonimowo obsługiwana metoda dynamiczna i uruchomić go:  
   
--   Metoda dynamiczna używa tylko typy publiczne i elementy członkowskie. Jeśli jego zestawu uprawnień obejmuje <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, może użyć niepublicznych typy i elementy członkowskie dowolnego zestawu, którego przydział zestawu jest równy lub podzbiór, zestaw uprawnień emitujące zgromadzenia.  
+- Metoda dynamiczna używa tylko typy publiczne i elementy członkowskie. Jeśli jego zestawu uprawnień obejmuje <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, może użyć niepublicznych typy i elementy członkowskie dowolnego zestawu, którego przydział zestawu jest równy lub podzbiór, zestaw uprawnień emitujące zgromadzenia.  
   
--   Uprawnienia, które są wymagane przez wszystkie typy i elementy członkowskie używane przez metodę dynamiczną znajdują się w przydzielonym zestawie częściowo zaufanym zestawem.  
+- Uprawnienia, które są wymagane przez wszystkie typy i elementy członkowskie używane przez metodę dynamiczną znajdują się w przydzielonym zestawie częściowo zaufanym zestawem.  
   
 > [!NOTE]
 >  Metody dynamiczne nie obsługują symbole debugowania.  
@@ -96,21 +96,21 @@ ms.locfileid: "59074524"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Metody dynamiczne są skojarzone z istniejących zestawów  
  Aby skojarzyć metodę dynamiczną z typu lub modułu w istniejącego zestawu, można użyć dowolnego z <xref:System.Reflection.Emit.DynamicMethod> konstruktorów, które określają skojarzony typ lub modułu. Uprawnienia, które są wymagane do wywołania tych konstruktorów różnią się, ponieważ skojarzyć metodę dynamiczną z istniejącego typu lub modułu udostępnia metodę dynamiczną niepublicznych typy i elementy członkowskie:  
   
--   Metoda dynamiczna, która jest skojarzona z typem ma dostęp do wszystkich elementów członkowskich tego typu, a nawet prywatne składowe, i do wszystkich wewnętrznych typów i elementów członkowskich w zestawie, który zawiera skojarzony typ.  
+- Metoda dynamiczna, która jest skojarzona z typem ma dostęp do wszystkich elementów członkowskich tego typu, a nawet prywatne składowe, i do wszystkich wewnętrznych typów i elementów członkowskich w zestawie, który zawiera skojarzony typ.  
   
--   Metoda dynamiczna, która jest skojarzona z modułu ma dostęp do wszystkich `internal` typów i elementów członkowskich (`Friend` w języku Visual Basic `assembly` w typowych metadanych środowiska wykonawczego języka) w module.  
+- Metoda dynamiczna, która jest skojarzona z modułu ma dostęp do wszystkich `internal` typów i elementów członkowskich (`Friend` w języku Visual Basic `assembly` w typowych metadanych środowiska wykonawczego języka) w module.  
   
  Ponadto można użyć konstruktora, który określa, że zdolności do pominięcia widoczności kontroli kompilatora JIT. To daje dostęp metodę dynamiczną do wszystkich typów i elementów członkowskich w wszystkich zestawów, niezależnie od tego poziomu dostępu.  
   
  Uprawnienia wymagane przez Konstruktor zależeć na dostęp, ile zdecydujesz się Nadaj swojej metody dynamicznej:  
   
--   Jeśli metoda używa tylko typy publiczne i elementy członkowskie i należy ją skojarzyć z swój własny typ lub własny moduł, nie są wymagane żadne uprawnienia.  
+- Jeśli metoda używa tylko typy publiczne i elementy członkowskie i należy ją skojarzyć z swój własny typ lub własny moduł, nie są wymagane żadne uprawnienia.  
   
--   Jeśli określisz, że należy pominąć kontrole widoczność JIT, Konstruktor zażąda <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi.  
+- Jeśli określisz, że należy pominąć kontrole widoczność JIT, Konstruktor zażąda <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi.  
   
--   Jeśli metoda dynamiczna jest skojarzona z innym typem, nawet inny typ w zestawie z własnego konstruktora zapotrzebowania <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagę i <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> flagi.  
+- Jeśli metoda dynamiczna jest skojarzona z innym typem, nawet inny typ w zestawie z własnego konstruktora zapotrzebowania <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagę i <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> flagi.  
   
--   Jeśli metoda dynamiczna jest skojarzona z typem lub moduł w innym zestawie, Konstruktor zapotrzebowania na dwie rzeczy: <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flaga, a zestaw uprawnień zestawu, który zawiera inny moduł. Oznacza to, że stosu wywołań musi zawierać wszystkie uprawnienia w przydzielonym zestawie modułu docelowego, a także <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+- Jeśli metoda dynamiczna jest skojarzona z typem lub moduł w innym zestawie, Konstruktor zapotrzebowania na dwie rzeczy: <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flaga, a zestaw uprawnień zestawu, który zawiera inny moduł. Oznacza to, że stosu wywołań musi zawierać wszystkie uprawnienia w przydzielonym zestawie modułu docelowego, a także <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Zgodności z poprzednimi wersjami, jeśli żądanie dla elementu docelowego zestaw uprawnień oraz <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> zakończy się niepowodzeniem, wymagań Konstruktor <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> flagi.  
@@ -126,13 +126,13 @@ ms.locfileid: "59074524"
   
  Należy wziąć pod uwagę warunków, w których zestaw z uprawnieniami do Internetu można generować metodę dynamiczną i uruchomić go:  
   
--   Metoda dynamiczna jest skojarzony z modułu lub typu, który emituje go lub jego zestawu uprawnień obejmuje <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> i jest skojarzona z modułu w zestawie, do którego przyznania zestaw jest równy lub podzbiór, zestaw uprawnień emitujące zgromadzenia.  
+- Metoda dynamiczna jest skojarzony z modułu lub typu, który emituje go lub jego zestawu uprawnień obejmuje <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> i jest skojarzona z modułu w zestawie, do którego przyznania zestaw jest równy lub podzbiór, zestaw uprawnień emitujące zgromadzenia.  
   
--   Metoda dynamiczna używa tylko typy publiczne i elementy członkowskie. Jeśli jego zestawu uprawnień obejmuje <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> i jest skojarzona z modułu w zestawie, do którego przydział zestawu jest równy lub podzbiór, zestaw uprawnień zestawu emitującego, można użyć, typy i składowe oznaczone `internal` (`Friend` w języku Visual Basic `assembly`w typowych metadanych środowiska wykonawczego języka) w module skojarzone.  
+- Metoda dynamiczna używa tylko typy publiczne i elementy członkowskie. Jeśli jego zestawu uprawnień obejmuje <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> i jest skojarzona z modułu w zestawie, do którego przydział zestawu jest równy lub podzbiór, zestaw uprawnień zestawu emitującego, można użyć, typy i składowe oznaczone `internal` (`Friend` w języku Visual Basic `assembly`w typowych metadanych środowiska wykonawczego języka) w module skojarzone.  
   
--   Uprawnienia wymagane przez wszystkie typy i elementy członkowskie, używane przez metodę dynamiczną, znajdują się w przydzielonym zestawie częściowo zaufanym zestawem.  
+- Uprawnienia wymagane przez wszystkie typy i elementy członkowskie, używane przez metodę dynamiczną, znajdują się w przydzielonym zestawie częściowo zaufanym zestawem.  
   
--   Metoda dynamiczna nie powoduje pominięcia widoczności JIT.  
+- Metoda dynamiczna nie powoduje pominięcia widoczności JIT.  
   
 > [!NOTE]
 >  Metody dynamiczne nie obsługują symbole debugowania.  

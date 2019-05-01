@@ -11,11 +11,11 @@ ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908989"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potencjalne pułapki związane z równoległością danych i zadań
 W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> może zapewnić znaczne ulepszenia wydajności za pośrednictwem zwykłych sekwencyjne pętli. Jednak pracy zrównoleglić pętlę wprowadza złożoności, który może prowadzić do problemów, które sekwencyjnego kodu nie są jako wspólne lub nie zostaną napotkane w ogóle. W tym temacie wymieniono niektóre rozwiązania, aby uniknąć podczas pisania pętli równoległych.  
@@ -31,11 +31,11 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
   
  Najbardziej typowym scenariuszem, w których nadmiernego przetwarzania równoległego może wystąpić znajduje się w pętli zagnieżdżonych. W większości przypadków najlepiej jest równoległe przetwarzanie tylko zewnętrzna pętla, chyba że zastosować co najmniej jeden z następujących warunków:  
   
--   Wiadomo, że wewnętrzną pętlę być bardzo długie.  
+- Wiadomo, że wewnętrzną pętlę być bardzo długie.  
   
--   Kosztowne obliczenia są wykonywane na każde zamówienie. (Operacja pokazano w przykładzie nie jest kosztowna).  
+- Kosztowne obliczenia są wykonywane na każde zamówienie. (Operacja pokazano w przykładzie nie jest kosztowna).  
   
--   System docelowy jest znana wystarczającej liczby procesorów, którą należy obsługiwać liczbę wątków, które zostaną wygenerowane przez zrównoleglić zapytanie na `cust.Orders`.  
+- System docelowy jest znana wystarczającej liczby procesorów, którą należy obsługiwać liczbę wątków, które zostaną wygenerowane przez zrównoleglić zapytanie na `cust.Orders`.  
   
  We wszystkich przypadkach najlepszym sposobem określenia kształtu optymalne zapytania jest do testowania i miar.  
   

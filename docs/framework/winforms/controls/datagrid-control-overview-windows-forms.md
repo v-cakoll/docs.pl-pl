@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904453"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304741"
   
  Źródła danych prawidłowe <xref:System.Windows.Forms.DataGrid> obejmują:  
   
--   <xref:System.Data.DataTable> Klasa  
+- <xref:System.Data.DataTable> Klasa  
   
--   <xref:System.Data.DataView> Klasa  
+- <xref:System.Data.DataView> Klasa  
   
--   <xref:System.Data.DataSet> Klasa  
+- <xref:System.Data.DataSet> Klasa  
   
--   <xref:System.Data.DataViewManager> Klasa  
+- <xref:System.Data.DataViewManager> Klasa  
   
  Jeśli źródłem jest zestaw danych, zestaw danych może być w formie lub obiektu przekazanego do formularza przez usługi sieci Web XML. Możesz powiązać typizowany lub nietypizowany zestawów danych.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304741"
   
  Następujące struktury można powiązać, jeśli ich elementy udostępnianie właściwości publicznej:  
   
--   Dowolny składnik, który implementuje <xref:System.Collections.IList> interfejsu. W tym tablice jednego wymiaru.  
+- Dowolny składnik, który implementuje <xref:System.Collections.IList> interfejsu. W tym tablice jednego wymiaru.  
   
--   Dowolny składnik, który implementuje <xref:System.ComponentModel.IListSource> interfejsu.  
+- Dowolny składnik, który implementuje <xref:System.ComponentModel.IListSource> interfejsu.  
   
--   Dowolny składnik, który implementuje <xref:System.ComponentModel.IBindingList> interfejsu.  
+- Dowolny składnik, który implementuje <xref:System.ComponentModel.IBindingList> interfejsu.  
   
  Aby uzyskać więcej informacji na temat źródeł danych, zobacz [źródła danych obsługiwane przez formularze Windows](../data-sources-supported-by-windows-forms.md).  
   

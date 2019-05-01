@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
 ms.openlocfilehash: a4f74e48cfdd5c0bc0f745d0f32eb39442f5bd83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906766"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>Instrukcje: Grupowanie związanych wartości stałych razem (Visual Basic)
 Wyliczenie to najlepszy sposób, aby zgrupować pokrewnych stałych. Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Aby uzyskać więcej informacji, zobacz [jak: Deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  

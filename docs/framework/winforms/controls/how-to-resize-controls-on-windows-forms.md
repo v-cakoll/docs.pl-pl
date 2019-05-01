@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
 ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913111"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Instrukcje: zmienianie rozmiaru kontrolek na formularzach systemu Windows
 Możesz zmienić rozmiar poszczególnych formantów, a rozmiar można zmieniać wiele formantów tego samego lub innego rodzaju, takich jak <xref:System.Windows.Forms.Button> i <xref:System.Windows.Forms.GroupBox> kontrolki.  

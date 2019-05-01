@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
 ms.openlocfilehash: 63597145e96b04affc5f0e80e05a56b3fdf27278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907039"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Instrukcje: Iterowanie za pomocą wyliczania w Visual Basic
 Wyliczenia zapewniają wygodny sposób pracy z zestawami pokrewnych stałych i skojarzyć wartości stałych o nazwach. Do iteracji, za pomocą wyliczania, można go przenieść do tablicy przy użyciu <xref:System.Enum.GetValues%2A> metody. Można również wykonać iterację przy użyciu wyliczenia `For...Each` instrukcji, za pomocą <xref:System.Enum.GetNames%2A> lub <xref:System.Enum.GetValues%2A> metodę, aby uzyskać wartość ciągu lub liczbowe.  
   
 ### <a name="to-iterate-through-an-enumeration"></a>Do iteracji przez wyliczenie  
   
--   Deklarowanie tablicy i przekonwertować ją za pomocą wyliczenia <xref:System.Enum.GetValues%2A> metoda przed przekazaniem tablicy, jak będą inne zmienne. Poniższy przykład wyświetla każdy element członkowski wyliczenia <xref:Microsoft.VisualBasic.FirstDayOfWeek> jako iteruje wyliczenia.  
+- Deklarowanie tablicy i przekonwertować ją za pomocą wyliczenia <xref:System.Enum.GetValues%2A> metoda przed przekazaniem tablicy, jak będą inne zmienne. Poniższy przykład wyświetla każdy element członkowski wyliczenia <xref:Microsoft.VisualBasic.FirstDayOfWeek> jako iteruje wyliczenia.  
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   

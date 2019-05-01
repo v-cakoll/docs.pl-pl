@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
 ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800805"
 ---
 # <a name="how-to-resize-windows-forms"></a>Instrukcje: Zmienianie rozmiarów formularzy Windows Forms
 Rozmiar formularza Windows można określić na kilka sposobów. Można zmienić wysokość i szerokość formularza programowo, ustawiając nową wartość dla <xref:System.Windows.Forms.Form.Size%2A> właściwości lub dostosować <xref:System.Windows.Forms.Control.Height%2A> lub <xref:System.Windows.Forms.Control.Width%2A> właściwości indywidualnie. Jeśli używasz programu Visual Studio, możesz zmienić rozmiar przy użyciu programu Windows Forms Designer. Zobacz też [jak: Zmiana rozmiaru formularzy Windows za pomocą projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).  
   
 ### <a name="to-resize-a-form-programmatically"></a>Aby programowo zmienić rozmiar formularza  
   
--   Określ rozmiar formularza w czasie wykonywania, ustawiając <xref:System.Windows.Forms.Form.Size%2A> właściwości formularza.  
+- Określ rozmiar formularza w czasie wykonywania, ustawiając <xref:System.Windows.Forms.Form.Size%2A> właściwości formularza.  
   
      Poniższy przykład kodu pokazuje rozmiar formularza, równa 100 x 100 pikseli.  
   
@@ -39,7 +39,7 @@ Rozmiar formularza Windows można określić na kilka sposobów. Można zmienić
   
 ### <a name="to-change-form-width-and-height-programmatically"></a>Aby programowo zmienić wysokość i szerokość formularza  
   
--   Po <xref:System.Windows.Forms.Form.Size%2A> jest zdefiniowany, zmienić za pomocą formularza wysokość lub szerokość <xref:System.Windows.Forms.Control.Width%2A> lub <xref:System.Windows.Forms.Control.Height%2A> właściwości.  
+- Po <xref:System.Windows.Forms.Form.Size%2A> jest zdefiniowany, zmienić za pomocą formularza wysokość lub szerokość <xref:System.Windows.Forms.Control.Width%2A> lub <xref:System.Windows.Forms.Control.Height%2A> właściwości.  
   
      Poniższy przykład kodu pokazuje szerokość formularza, wartość 300 pikseli od lewej krawędzi formularza, natomiast wysokość pozostają stałe.  
   
@@ -75,7 +75,7 @@ Rozmiar formularza Windows można określić na kilka sposobów. Można zmienić
   
 ### <a name="to-change-form-size-by-increments-programmatically"></a>Aby zmienić rozmiar formularza krokami programowe  
   
--   Aby zwiększyć rozmiar formularza, ustaw <xref:System.Drawing.Size.Width%2A> i <xref:System.Drawing.Size.Height%2A> właściwości.  
+- Aby zwiększyć rozmiar formularza, ustaw <xref:System.Drawing.Size.Width%2A> i <xref:System.Drawing.Size.Height%2A> właściwości.  
   
      Poniższy przykład kodu pokazuje szerokość formularza ustawiona na 200 pikseli szerszy niż bieżące ustawienie.  
   

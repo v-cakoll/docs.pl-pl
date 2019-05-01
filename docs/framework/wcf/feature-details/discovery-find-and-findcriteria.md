@@ -3,11 +3,11 @@ title: Odnajdywanie — znajdowanie i kryteria znajdowania
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856521"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Odnajdywanie — znajdowanie i kryteria znajdowania
 Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi przy użyciu protokołu WS Discovery ProbeMatch komunikatów. Aby uzyskać więcej informacji na temat odnajdywania wiadomości zobacz [specyfikacji WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -20,21 +20,21 @@ Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć si�
   
  Kryteria wyszukiwania, obejmują:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> — Opcjonalne. Nazwa kontraktu usługi wyszukane i kryteria zwykle używana podczas wyszukiwania dla usługi. Jeżeli określono więcej niż jedną nazwę kontraktu, Odpowiedz tylko punkty końcowe usługi dopasowanie wszystkich umów. Należy pamiętać, że w programie WCF punkt końcowy może obsługiwać tylko jednego kontraktu.  
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> — Opcjonalne. Nazwa kontraktu usługi wyszukane i kryteria zwykle używana podczas wyszukiwania dla usługi. Jeżeli określono więcej niż jedną nazwę kontraktu, Odpowiedz tylko punkty końcowe usługi dopasowanie wszystkich umów. Należy pamiętać, że w programie WCF punkt końcowy może obsługiwać tylko jednego kontraktu.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> — Opcjonalne. Zakresy są bezwzględne identyfikatory URI, które służą do kategoryzowania indywidualnych punktów końcowych usługi. Można skorzystać z tej w scenariuszach, gdzie wiele punktów końcowych udostępnić ten sam kontrakt i chcesz sposobem wyszukiwania dla podzbioru punktów końcowych. Jeżeli określono więcej niż jednego zakresu, Odpowiedz tylko punkty końcowe usługi dopasowanie wszystkich zakresów.  
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> — Opcjonalne. Zakresy są bezwzględne identyfikatory URI, które służą do kategoryzowania indywidualnych punktów końcowych usługi. Można skorzystać z tej w scenariuszach, gdzie wiele punktów końcowych udostępnić ten sam kontrakt i chcesz sposobem wyszukiwania dla podzbioru punktów końcowych. Jeżeli określono więcej niż jednego zakresu, Odpowiedz tylko punkty końcowe usługi dopasowanie wszystkich zakresów.  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> -Określa algorytm dopasowania do użycia podczas dopasowywania zakresów w wiadomości sondy z tym punktem końcowym. Istnieje pięć obsługiwanych reguł dopasowania w zakresie:  
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> -Określa algorytm dopasowania do użycia podczas dopasowywania zakresów w wiadomości sondy z tym punktem końcowym. Istnieje pięć obsługiwanych reguł dopasowania w zakresie:  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> uwzględniana wielkość liter podstawowego ciągu porównania.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> uwzględniana wielkość liter podstawowego ciągu porównania.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> Dopasowuje przez segmenty oddzielone "/". Wyszukiwanie `http://contoso/building1` jest zgodny z zakresem usługi `http://contoso/building/floor1`. Należy zauważyć, że nie jest zgodny `http://contoso/building100` ponieważ ostatnie dwa segmenty nie są zgodne.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> Dopasowuje przez segmenty oddzielone "/". Wyszukiwanie `http://contoso/building1` jest zgodny z zakresem usługi `http://contoso/building/floor1`. Należy zauważyć, że nie jest zgodny `http://contoso/building100` ponieważ ostatnie dwa segmenty nie są zgodne.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> Dopasowuje zakresy segmentami przy użyciu adresu URL protokołu LDAP.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> Dopasowuje zakresy segmentami przy użyciu adresu URL protokołu LDAP.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> Dopasowuje dokładnie za pomocą ciągu identyfikatora UUID zakresów.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> Dopasowuje dokładnie za pomocą ciągu identyfikatora UUID zakresów.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> zastępuje tylko te usługi, które nie określają zakres.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> zastępuje tylko te usługi, które nie określają zakres.  
   
      Jeśli nie określono regułę dopasowania w zakresie, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> jest używany.  
   

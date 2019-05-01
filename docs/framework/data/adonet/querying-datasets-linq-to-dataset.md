@@ -3,11 +3,11 @@ title: Podczas badania zestawów danych (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
 ms.openlocfilehash: a1c316811ce08141999bcec4c9c8504f86c2e285
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878686"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>Podczas badania zestawów danych (LINQ to DataSet)
 Po <xref:System.Data.DataSet> obiektu została wypełniona danymi, można rozpocząć, badając ją. Formułowanie zapytania z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] jest podobne do [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] względem innych [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]— włączone źródeł danych. Należy jednak pamiętać, że gdy używasz [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytań <xref:System.Data.DataSet> obiektu jest wykonywane zapytanie wyliczenie <xref:System.Data.DataRow> obiekty, zamiast wyliczenie typu niestandardowego. Oznacza to, że można użyć dowolnego z elementów członkowskich <xref:System.Data.DataRow> klasy w swojej [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania. Dzięki temu można tworzyć zaawansowane, złożone zapytania.  

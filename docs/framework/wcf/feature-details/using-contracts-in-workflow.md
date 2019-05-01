@@ -3,11 +3,11 @@ title: Używanie kontraktów w przepływie pracy
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918544"
 ---
 # <a name="using-contracts-in-workflow"></a>Używanie kontraktów w przepływie pracy
 Podczas wdrażania usługi, należy zdefiniować liczbę zamówień, które opisują usługi i dane, które wysyła i odbiera. Dane są reprezentowane jako kontraktów danych i kontrakty komunikatów; usługi WCF i przepływu pracy Użyj definicje kontraktu danych kontraktu i komunikat jako część opisy usług. Sama usługa udostępnia metadane (w formie WSDL), w celu opisania działania usługi. W programie WCF kontraktów usług i kontrakty operacji definiują usługi i operacje, które obsługuje. Jednak w usłudze przepływu pracy, umowy te są częścią procesu biznesowego. są one widoczne w metadanych w procesie nazywanym wnioskowania kontraktu.  
@@ -17,15 +17,15 @@ Podczas wdrażania usługi, należy zdefiniować liczbę zamówień, które opis
   
  <xref:System.ServiceModel.Activities.Receive> Działanie  
   
--   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
+- <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
--   <xref:System.ServiceModel.Activities.Receive.OperationName%2A>
+- <xref:System.ServiceModel.Activities.Receive.OperationName%2A>
   
--   <xref:System.ServiceModel.Activities.Receive.Action%2A>   
+- <xref:System.ServiceModel.Activities.Receive.Action%2A>   
  
  <xref:System.ServiceModel.Activities.SendReply> Działanie  
   
--   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
+- <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
   
  <xref:System.ServiceModel.Activities.TransactedReceiveScope> Działanie  
   

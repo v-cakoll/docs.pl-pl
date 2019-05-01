@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
 ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955171"
 ---
 # <a name="reliable-services"></a>Niezawodne usługi
 Kolejki i sesje niezawodne są funkcje Windows Communication Foundation (WCF), które implementują niezawodną obsługę komunikatów. W tym temacie opisano niezawodne funkcje komunikatów WCF.  
@@ -22,15 +22,15 @@ Kolejki i sesje niezawodne są funkcje Windows Communication Foundation (WCF), k
   
  Niezawodna obsługa komunikatów wykonuje następujące funkcje:  
   
--   Przesyła gwarancji dla komunikatów wysyłanych ze źródła do miejsca docelowego, niezależnie od awarii przenoszenia lub transportu wiadomości.  
+- Przesyła gwarancji dla komunikatów wysyłanych ze źródła do miejsca docelowego, niezależnie od awarii przenoszenia lub transportu wiadomości.  
   
--   Oddziela źródło i miejsce docelowe, od siebie nawzajem. Dzięki temu można niezależnie od awarii i odzyskiwania źródło i miejsce docelowe, jak również transferu niezawodne i dostarczanie wiadomości, nawet wtedy, gdy źródłowy lub docelowy jest niedostępny.  
+- Oddziela źródło i miejsce docelowe, od siebie nawzajem. Dzięki temu można niezależnie od awarii i odzyskiwania źródło i miejsce docelowe, jak również transferu niezawodne i dostarczanie wiadomości, nawet wtedy, gdy źródłowy lub docelowy jest niedostępny.  
   
  Niezawodna obsługa komunikatów jest dostarczany często kosztem duże opóźnienie. *Opóźnienie* to czas potrzebny do miejsca docelowego ze źródła wiadomości. Usługi WCF, w związku z tym, zawiera następujące typy niezawodną obsługę komunikatów:  
   
--   [Niezawodne sesje](../../../docs/framework/wcf/feature-details/reliable-sessions.md), która zapewnia niezawodne przesyłanie bez ponoszenia kosztów duże opóźnienie.  
+- [Niezawodne sesje](../../../docs/framework/wcf/feature-details/reliable-sessions.md), która zapewnia niezawodne przesyłanie bez ponoszenia kosztów duże opóźnienie.  
   
--   [Kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), które oferuje niezawodny transferu i separacji między źródłową i docelową.  
+- [Kolejki programu WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), które oferuje niezawodny transferu i separacji między źródłową i docelową.  
   
 ## <a name="reliable-sessions"></a>Niezawodne sesje  
  Niezawodne sesje zapewniają end-to-end niezawodne przesyłanie wiadomości między źródłem i miejsca docelowego przy użyciu protokołu elementy usługi WS-Reliable Messaging, niezależnie od liczby i typu pośredników, których punkty końcowe komunikatów (źródłowy i docelowy). Dotyczy to również wszelkich pośredników transportu, które nie korzystają z protokołu SOAP (na przykład serwera proxy HTTP) lub pośredników, które używają protokołu SOAP (na przykład opartego na protokole SOAP routery lub mostków), które są wymagane dla komunikatów przepływ między punktami końcowymi. Niezawodne sesje okno transfer w pamięci na awarie poziom komunikatu protokołu SOAP maski i ponownie ustanowić połączenia w przypadku błędów transportu.  

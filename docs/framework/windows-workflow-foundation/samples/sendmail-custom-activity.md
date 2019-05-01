@@ -3,11 +3,11 @@ title: Niestandardowe działanie SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785947"
 ---
 # <a name="sendmail-custom-activity"></a>Niestandardowe działanie SendMail
 W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.AsyncCodeActivity> do wysyłania wiadomości e-mail przy użyciu protokołu SMTP do użycia w aplikacji przepływu pracy. Niestandardowe działanie korzysta z możliwości <xref:System.Net.Mail.SmtpClient> asynchroniczne wysyłanie wiadomości e-mail i Wyślij wiadomość e-mail z uwierzytelnianiem. Umożliwia także niektóre funkcje użytkowników końcowych, takich jak przetestować tryb zastępowania tokenu, Szablony plików i przetestować ścieżki docelowej.  
@@ -21,7 +21,7 @@ W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która poc
 |EnableSsl|bool|Określa, czy <xref:System.Net.Mail.SmtpClient> używa protokołu Secure Sockets Layer (SSL) do szyfrowania połączenia.|  
 |UserName|String|Nazwa użytkownika, aby ustawić poświadczenia, aby uwierzytelnić nadawcę <xref:System.Net.Mail.SmtpClient.Credentials%2A> właściwości.|  
 |Hasło|String|Hasło, aby ustawić poświadczenia, aby uwierzytelnić nadawcę <xref:System.Net.Mail.SmtpClient.Credentials%2A> właściwości.|  
-|Podmiot|<xref:System.Activities.InArgument%601>\<ciąg >|Temat wiadomości.|  
+|Subject|<xref:System.Activities.InArgument%601>\<ciąg >|Temat wiadomości.|  
 |Treść|<xref:System.Activities.InArgument%601>\<ciąg >|Treść wiadomości.|  
 |Załączniki|<xref:System.Activities.InArgument%601>\<ciąg >|Kolekcja załącznika używany do przechowywania danych dołączone do tej wiadomości e-mail.|  
 |Z|<xref:System.Net.Mail.MailAddress>|Adres początkowy dla tej wiadomości e-mail.|  
@@ -107,13 +107,13 @@ new SendMail
   
  Aby uzyskać więcej informacji na temat konfigurowania serwera SMTP zobacz poniższe linki.  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Konfigurowanie usługi SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [Konfigurowanie usługi SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: Konfigurowanie wiadomości E-Mail SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: Konfigurowanie wiadomości E-Mail SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Jak zainstalować usługę SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Jak zainstalować usługę SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Emulatory SMTP udostępniane przez inne firmy są dostępne do pobrania.  
   

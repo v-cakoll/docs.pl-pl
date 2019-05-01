@@ -3,11 +3,11 @@ title: Pobieranie tekstu akapitów (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
 ms.openlocfilehash: bc6035c7d894d30b1441dd35925c233e02d35163
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787026"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Pobieranie tekstu akapitów (Visual Basic)
 W tym przykładzie opiera się na poprzednim przykładzie [pobieranie akapitów i ich stylów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). W tym przykładzie nowe pobiera tekst każdego akapitu jako ciąg.  
@@ -139,7 +139,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Następne kroki  
  W kolejnym przykładzie pokazano sposób użycia metody rozszerzenia, zamiast <xref:System.Linq.Enumerable.Aggregate%2A>, aby łączenie wielu ciągów w jeden ciąg.  
   
--   [Refaktoryzacja przy użyciu metody rozszerzenia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Refaktoryzacja przy użyciu metody rozszerzenia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

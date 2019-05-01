@@ -3,11 +3,11 @@ title: Skompilowane statycznie zapytania (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
 ms.openlocfilehash: ff708dd14d27b34be797f1630dabe27a56c5a219
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908339"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Skompilowane statycznie zapytania (LINQ to XML) (Visual Basic)
 Jedną z najważniejszych wydajności korzyści programu LINQ to XML, w przeciwieństwie do <xref:System.Xml.XmlDocument>, jest statycznie są zapytania w LINQ to XML kompilowane, dlatego należy interpretować zapytania XPath w czasie wykonywania. Ta funkcja jest wbudowana w LINQ to XML, dzięki czemu nie trzeba wykonać dodatkowe kroki, aby z niej korzystać, ale warto zrozumieć różnicę, wybierając między te dwie technologie. W tym temacie opisano różnicę.  
@@ -79,13 +79,13 @@ reader.Close()
   
  Jednak <xref:System.Xml.XmlDocument> podejście zazwyczaj nie wykonuje oraz LINQ to XML, ponieważ <xref:System.Xml.XmlNode.SelectNodes%2A> metody należy wykonać następujące czynności wewnętrznie za każdym razem, gdy jest to:  
   
--   Analizuje ciąg, który zawiera wyrażenie XPath podzielenie ciągu na tokeny.  
+- Analizuje ciąg, który zawiera wyrażenie XPath podzielenie ciągu na tokeny.  
   
--   Sprawdza poprawność tokenów, aby upewnić się, że wyrażenie XPath jest nieprawidłowy.  
+- Sprawdza poprawność tokenów, aby upewnić się, że wyrażenie XPath jest nieprawidłowy.  
   
--   Tłumaczy je wyrażenia do drzewa wyrażenie wewnętrznego.  
+- Tłumaczy je wyrażenia do drzewa wyrażenie wewnętrznego.  
   
--   Iterację węzłów, odpowiednio Wybieranie węzłów do zestawu wyników na podstawie oceny wyrażenia.  
+- Iterację węzłów, odpowiednio Wybieranie węzłów do zestawu wyników na podstawie oceny wyrażenia.  
   
  Jest to znacznie więcej niż pracy wykonanej przez odpowiednie zapytaniu składnika LINQ to XML. Różnica dotyczącego wydajności różni się dla różnych typów kwerend, ale w ogólne LINQ to XML zapytania są mniej pracy i w związku z tym mają lepszą wydajność, niż oceny wyrażeń XPath przy użyciu <xref:System.Xml.XmlDocument>.  
   

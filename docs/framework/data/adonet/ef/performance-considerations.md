@@ -3,11 +3,11 @@ title: Zagadnienia dotyczące wydajności (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879401"
 ---
 # <a name="performance-considerations-entity-framework"></a>Zagadnienia dotyczące wydajności (Entity Framework)
 W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zapewnia pewne kwestie dotyczące poprawy wydajności aplikacji platformy Entity Framework.  
@@ -55,12 +55,12 @@ W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zap
 #### <a name="query-complexity"></a>Złożoności zapytania  
  Zapytania wymagające dużej liczby sprzężeń za pomocą poleceń, które są wykonywane względem źródła danych lub dużej ilości danych zwracanych może mieć wpływ na wydajność, w następujący sposób:  
   
--   Zapytania względem modelu koncepcyjnego, które wydają się proste może spowodować wykonanie bardziej złożone zapytania względem źródła danych. Taka sytuacja może wystąpić, ponieważ zapytanie do modelu koncepcyjnego Entity Framework przekłada się na równoważne zapytania względem źródła danych. Gdy pojedynczej jednostki modelu koncepcyjnego mapuje do więcej niż jednej tabeli w źródle danych, lub gdy relacji między jednostkami jest mapowany na tabelę sprzężenia, polecenie zapytania wykonywane zapytania do źródła danych może wymagać sprzężenia jeden lub więcej.  
+- Zapytania względem modelu koncepcyjnego, które wydają się proste może spowodować wykonanie bardziej złożone zapytania względem źródła danych. Taka sytuacja może wystąpić, ponieważ zapytanie do modelu koncepcyjnego Entity Framework przekłada się na równoważne zapytania względem źródła danych. Gdy pojedynczej jednostki modelu koncepcyjnego mapuje do więcej niż jednej tabeli w źródle danych, lub gdy relacji między jednostkami jest mapowany na tabelę sprzężenia, polecenie zapytania wykonywane zapytania do źródła danych może wymagać sprzężenia jeden lub więcej.  
   
     > [!NOTE]
     >  Użyj <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> metody <xref:System.Data.Objects.ObjectQuery%601> lub <xref:System.Data.EntityClient.EntityCommand> klasy, aby wyświetlić polecenia, które są wykonywane względem źródła danych dla danego zapytania. Aby uzyskać więcej informacji, zobacz [jak: Wyświetl polecenia Store](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100)).  
   
--   Zagnieżdżonych zapytań jednostki SQL może tworzyć sprzężenia, na serwerze i może zwrócić dużą liczbę wierszy.  
+- Zagnieżdżonych zapytań jednostki SQL może tworzyć sprzężenia, na serwerze i może zwrócić dużą liczbę wierszy.  
   
      Oto przykład zagnieżdżonych zapytania w klauzuli projekcji:  
   
@@ -72,7 +72,7 @@ W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zap
   
      Ponadto takich zapytań może spowodować potoku zapytania do generowania jednego zapytania zduplikowanie obiektów na zapytań zagnieżdżonej. W związku z tym pojedynczej kolumny mogą być zduplikowane wiele razy. W niektórych baz danych, w tym program SQL Server może to spowodować tabeli bazy danych TempDB, aby bardzo duża, co może zmniejszyć wydajność serwera. Należy zachować ostrożność podczas wykonywania zapytań zagnieżdżonej.  
   
--   Wszelkie zapytania, które zwracają dużej ilości danych może spowodować obniżenie wydajności, jeśli klient wykonuje operacje, które zużywają zasoby, które w sposób, który jest proporcjonalny do rozmiaru zestawu wyników. W takich przypadkach należy rozważyć ograniczenie ilości danych zwróconych przez zapytanie. Aby uzyskać więcej informacji, zobacz [jak: Wyniki strony za pomocą kwerendy](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
+- Wszelkie zapytania, które zwracają dużej ilości danych może spowodować obniżenie wydajności, jeśli klient wykonuje operacje, które zużywają zasoby, które w sposób, który jest proporcjonalny do rozmiaru zestawu wyników. W takich przypadkach należy rozważyć ograniczenie ilości danych zwróconych przez zapytanie. Aby uzyskać więcej informacji, zobacz [jak: Wyniki strony za pomocą kwerendy](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
   
  Dowolne polecenia generowane automatycznie przez program Entity Framework może być bardziej skomplikowane niż podobnych poleceniach napisany jawnie przez dewelopera bazy danych. Jeśli potrzebujesz jawną kontrolę nad tym polecenia wykonywane względem źródła danych, należy wziąć pod uwagę definiujący mapowanie do procedury składowanej lub funkcji zwracającej tabelę.  
   
@@ -114,9 +114,9 @@ W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zap
 ### <a name="distributed-transactions"></a>Transakcje rozproszone  
  Operacje w transakcji jawnej, które wymagają zasoby, które są zarządzane przez Koordynator transakcji rozproszonych (DTC) będzie znacznie bardziej kosztowne niż podobna operacja, która nie wymaga usługi DTC. Podwyższanie poziomu do usługi DTC mają miejsce w następujących sytuacjach:  
   
--   Transakcji jawnej przy użyciu operacji względem bazy danych programu SQL Server 2000 lub innego źródła danych, która zawsze podwyższanie poziomu jawnych transakcji usługi DTC.  
+- Transakcji jawnej przy użyciu operacji względem bazy danych programu SQL Server 2000 lub innego źródła danych, która zawsze podwyższanie poziomu jawnych transakcji usługi DTC.  
   
--   Transakcji jawnej przy użyciu operacji względem programu SQL Server 2005, gdy połączenie jest zarządzana przy użyciu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Dzieje się tak, ponieważ program SQL Server 2005 podwyższa poziom usługi DTC zawsze wtedy, gdy połączenie jest zamknięte i otwarcia w pojedynczą transakcję, co jest zachowaniem domyślnym [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ta promocja usługi DTC nie występuje, gdy za pomocą programu SQL Server 2008. Aby uniknąć tej promocji, podczas korzystania z programu SQL Server 2005, należy jawnie otwierać i zamykać połączenia w ramach transakcji. Aby uzyskać więcej informacji, zobacz [zarządzania połączeniami i transakcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
+- Transakcji jawnej przy użyciu operacji względem programu SQL Server 2005, gdy połączenie jest zarządzana przy użyciu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Dzieje się tak, ponieważ program SQL Server 2005 podwyższa poziom usługi DTC zawsze wtedy, gdy połączenie jest zamknięte i otwarcia w pojedynczą transakcję, co jest zachowaniem domyślnym [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ta promocja usługi DTC nie występuje, gdy za pomocą programu SQL Server 2008. Aby uniknąć tej promocji, podczas korzystania z programu SQL Server 2005, należy jawnie otwierać i zamykać połączenia w ramach transakcji. Aby uzyskać więcej informacji, zobacz [zarządzania połączeniami i transakcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
  Transakcji jawnej jest używany, gdy co najmniej jednej operacji są wykonywane w <xref:System.Transactions> transakcji. Aby uzyskać więcej informacji, zobacz [zarządzania połączeniami i transakcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
@@ -147,11 +147,11 @@ W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zap
 ## <a name="performance-data"></a>Dane wydajności  
  Niektóre dane dotyczące wydajności programu Entity Framework jest opublikowany w następujące wpisy na [blog zespołu programu ADO.NET](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Eksplorowanie wydajności programu ADO.NET Entity Framework — część 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [Eksplorowanie wydajności programu ADO.NET Entity Framework — część 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Eksplorowanie wydajność ADO.NET Entity Framework — część 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [Eksplorowanie wydajność ADO.NET Entity Framework — część 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework Performance Comparison](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework Performance Comparison](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Zobacz także
 

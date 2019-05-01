@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795008"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Przewodnik: Tworzenie aplikacji kryptograficznej
 W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przykłady kodu są przeznaczone dla aplikacji Windows Forms. Ta aplikacja nie przedstawiono tu scenariusze ze świata rzeczywistego, takich jak za pomocą kart inteligentnych. Zamiast tego przedstawiono podstawowe informacje dotyczące szyfrowania i odszyfrowywania.  
   
  W tym instruktażu wykorzystano poniższe wskazówki dotyczące szyfrowania:  
   
--   Użyj <xref:System.Security.Cryptography.RijndaelManaged> klasy algorytm symetryczny, do szyfrowania i odszyfrowywania danych za pomocą jego automatycznie generowanych <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> i <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
+- Użyj <xref:System.Security.Cryptography.RijndaelManaged> klasy algorytm symetryczny, do szyfrowania i odszyfrowywania danych za pomocą jego automatycznie generowanych <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> i <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
   
--   Użyj <xref:System.Security.Cryptography.RSACryptoServiceProvider>, algorytmu asymetrycznego, do szyfrowania i odszyfrowywania klawisz, aby dane zaszyfrowane przy <xref:System.Security.Cryptography.RijndaelManaged>. Asymetryczne algorytmy najlepiej sprawdzają się dla mniejszych ilości danych, takich jak klucz.  
+- Użyj <xref:System.Security.Cryptography.RSACryptoServiceProvider>, algorytmu asymetrycznego, do szyfrowania i odszyfrowywania klawisz, aby dane zaszyfrowane przy <xref:System.Security.Cryptography.RijndaelManaged>. Asymetryczne algorytmy najlepiej sprawdzają się dla mniejszych ilości danych, takich jak klucz.  
   
     > [!NOTE]
     >  Aby chronić dane na komputerze, zamiast wymieniać zaszyfrowaną zawartość innym osobom, należy rozważyć użycie <xref:System.Security.Cryptography.ProtectedData> lub <xref:System.Security.Cryptography.ProtectedMemory> klasy.  
@@ -48,7 +48,7 @@ W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przy
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   Odwołuje się do <xref:System.IO> i <xref:System.Security.Cryptography> przestrzeni nazw.  
+- Odwołuje się do <xref:System.IO> i <xref:System.Security.Cryptography> przestrzeni nazw.  
   
 ## <a name="creating-a-windows-forms-application"></a>Tworzenie aplikacji Windows Forms  
  Większość przykładów kodu w tym przewodniku są przeznaczone do można programy obsługi zdarzeń dla przycisku kontrolki. W poniższej tabeli wymieniono kontrole wymagane dla przykładowej aplikacji i ich wymagane nazwy zgodne z przykładami kodu.  
@@ -100,15 +100,15 @@ W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przy
   
  Pakietu szyfrowania posługuje się następującym formatem:  
   
--   Długość klucza, bajty 0 – 3  
+- Długość klucza, bajty 0 – 3  
   
--   Długość IV, w bajtach 4 – 7  
+- Długość IV, w bajtach 4 – 7  
   
--   Zaszyfrowany klucz  
+- Zaszyfrowany klucz  
   
--   IV  
+- IV  
   
--   Zaszyfrowanego tekstu  
+- Zaszyfrowanego tekstu  
   
  Długości klucza i IV służy do określenia punktów początkowej i długości wszystkich części pakietu szyfrowania, które następnie mogą być używane do odszyfrowywania pliku.  
   

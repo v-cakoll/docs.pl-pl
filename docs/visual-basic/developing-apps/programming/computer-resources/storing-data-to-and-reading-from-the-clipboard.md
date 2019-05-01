@@ -10,11 +10,11 @@ helpviewer_keywords:
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
 ms.openlocfilehash: 19d0fcafb76c40a00939de59968dfaf2e6bd683c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921306"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Zapisywanie danych i odczytywania ze Schowka (Visual Basic)
 Schowek może służyć do przechowywania danych, takich jak tekst i obrazy. Ponieważ Schowek jest współużytkowany przez wszystkie aktywne procesy, może służyć do przesyłania danych między nimi. `My.Computer.Clipboard` Pozwala łatwo uzyskiwać dostęp do Schowka, a także odczytywanie i zapisywanie do niego.  

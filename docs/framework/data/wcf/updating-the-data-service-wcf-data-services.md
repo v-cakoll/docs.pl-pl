@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876112"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualizacja usługi danych (WCF Data Services)
 Kiedy używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienckiej z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, biblioteka tłumaczy wpisy w źródle danych do wystąpień klas usługi danych klienta. Tych klas usługi danych są śledzone za pomocą <xref:System.Data.Services.Client.DataServiceContext> do której <xref:System.Data.Services.Client.DataServiceQuery%601> należy. Klient śledzi zmiany jednostki, które możesz zgłaszać za pomocą metod na <xref:System.Data.Services.Client.DataServiceContext>. Te metody umożliwiają klienta śledzić dodanych i usuniętych jednostek, a także zmiany wprowadzone do wartości właściwości lub relacji między wystąpieniami jednostki. Zmiany śledzone są wysyłane do usługi danych jako operacje oparte na protokole REST, po wywołaniu <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody.  
@@ -54,13 +54,13 @@ Kiedy używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibli
   
  Podczas podłączania obiektów obowiązują następujące zastrzeżenia:  
   
--   Obiekt jest dołączony w <xref:System.Data.Services.Client.EntityStates.Unchanged> stanu.  
+- Obiekt jest dołączony w <xref:System.Data.Services.Client.EntityStates.Unchanged> stanu.  
   
--   Gdy obiekt jest dołączony, obiekty, które są powiązane z przyłączonego obiektu nie są również dołączone.  
+- Gdy obiekt jest dołączony, obiekty, które są powiązane z przyłączonego obiektu nie są również dołączone.  
   
--   Nie można dołączyć obiektu, jeśli jednostka jest już śledzony przez kontekst.  
+- Nie można dołączyć obiektu, jeśli jednostka jest już śledzony przez kontekst.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> Przeciążenia metody, która przyjmuje `etag` parametr jest używany podczas dołączania do obiektu jednostki, przedstawiający otrzymany wraz z wartością tagu eTag. Ta wartość elementu eTag jest następnie użytych do sprawdzenia współbieżności po zapisaniu zmian przyłączonego obiektu.  
+- <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> Przeciążenia metody, która przyjmuje `etag` parametr jest używany podczas dołączania do obiektu jednostki, przedstawiający otrzymany wraz z wartością tagu eTag. Ta wartość elementu eTag jest następnie użytych do sprawdzenia współbieżności po zapisaniu zmian przyłączonego obiektu.  
   
  Aby uzyskać więcej informacji, zobacz [jak: Dołączanie istniejącej jednostki do obiektu DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
   

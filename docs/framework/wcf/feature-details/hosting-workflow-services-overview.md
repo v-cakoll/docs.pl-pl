@@ -3,11 +3,11 @@ title: Przegląd hostowania usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
 ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855897"
 ---
 # <a name="hosting-workflow-services-overview"></a>Przegląd hostowania usług przepływu pracy
 Musi być hostowany usług przepływu pracy do wykonania. <xref:System.ServiceModel.WorkflowServiceHost> Jest hostem out-of--box przepływu pracy, który obsługuje wiele wystąpień, konfiguracji i komunikatów WCF (mimo że przepływy pracy nie są wymagane do obsługi komunikatów można hostować).  Integruje się również z trwałości, śledzenia i kontrolowania wystąpienia za pomocą zestawu zachowania usługi.  Podobnie jak w przypadku firmy WCF <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> mogą być samodzielnie hostowane w dowolnej aplikacji zarządzanej .NET lub sieci web hostowanych (w formacie .xamlx) w usługach IIS / WAS.  Tematy w tej sekcji opisano sposób hostowanie usługi przepływu pracy.  
@@ -25,7 +25,7 @@ Musi być hostowany usług przepływu pracy do wykonania. <xref:System.ServiceMo
  [Punkt końcowy kontroli przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
  W tym artykule opisano, jak zdefiniować punkt końcowy, który służy do tworzenia wystąpienia przepływu pracy.
   
- [Instrukcje: hostowanie usługi przepływu pracy przy użyciu rozwiązania AppFabric w systemie Windows Server](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
+ [Instrukcje: Hostowanie usługi przepływu pracy przy użyciu rozwiązania Windows Server AppFabric](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
  Pokazuje, jak do hostowania istniejącej usługi przepływu pracy w AppFabric w systemie Windows Server.  
   
  [Konfigurowanie elementu WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)  

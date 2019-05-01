@@ -8,19 +8,19 @@ ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875748"
 ---
 # <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
 
 Otoki Component Object Model (COM) można utworzyć za pomocą funkcji Visual Studio 2005 lub narzędzi programu .NET Framework, Tlbimp.exe i Regasm.exe. Obie metody wygenerować dwa typy otok COM:
 
--   A [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) z biblioteki typów, aby uruchomić obiektów COM w kodzie zarządzanym.
+- A [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) z biblioteki typów, aby uruchomić obiektów COM w kodzie zarządzanym.
 
--   A [wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md) za pomocą ustawień rejestru wymagane do uruchamiania zarządzanego obiektu w aplikacji natywnej.
+- A [wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md) za pomocą ustawień rejestru wymagane do uruchamiania zarządzanego obiektu w aplikacji natywnej.
 
 W programie Visual Studio 2005 można dodać otoki COM jako odwołanie do projektu.
 
@@ -45,7 +45,7 @@ Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Możesz rozpocz�
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć wywoływana otoka środowiska uruchomieniowego przy użyciu narzędzi programu .NET Framework  
   
--   Uruchom [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) narzędzia.  
+- Uruchom [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) narzędzia.  
   
  To narzędzie tworzy zestaw, który zawiera metadane środowiska wykonawczego dla typów zdefiniowanych w oryginalnej biblioteki typów.  
   

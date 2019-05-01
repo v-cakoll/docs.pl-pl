@@ -5,11 +5,11 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785011"
 ---
 # <a name="configuring-message-logging"></a>Konfigurowanie rejestrowania komunikatów
 W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla różnych scenariuszy.  
@@ -83,11 +83,11 @@ W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla 
 ### <a name="other-options"></a>Inne opcje  
  Oprócz poziomów rejestrowania użytkownik może określić następujące opcje:  
   
--   Zaloguj się cały komunikat (`logEntireMessage` atrybutu): Ta wartość określa, czy cały komunikat (nagłówek i treść wiadomości) jest rejestrowane. Wartość domyślna to `false`, co oznacza, że zostanie zarejestrowany tylko nagłówek. To ustawienie ma wpływ na usług i mechanizm transportu poziomów rejestrowania komunikatów...  
+- Zaloguj się cały komunikat (`logEntireMessage` atrybutu): Ta wartość określa, czy cały komunikat (nagłówek i treść wiadomości) jest rejestrowane. Wartość domyślna to `false`, co oznacza, że zostanie zarejestrowany tylko nagłówek. To ustawienie ma wpływ na usług i mechanizm transportu poziomów rejestrowania komunikatów...  
   
--   Maksymalna liczba komunikatów do zarejestrowania (`maxMessagesToLog` atrybutu): Ta wartość określa maksymalną liczbę wiadomości rejestrowaną w dzienniku. Wszystkie komunikaty (usługa transportu i źle sformułowane komunikaty) liczy się do tego przydziału. Po osiągnięciu limitu przydziału śledzenia jest emitowane, a nie dodatkowe komunikat jest rejestrowany. Wartość domyślna to 10000.  
+- Maksymalna liczba komunikatów do zarejestrowania (`maxMessagesToLog` atrybutu): Ta wartość określa maksymalną liczbę wiadomości rejestrowaną w dzienniku. Wszystkie komunikaty (usługa transportu i źle sformułowane komunikaty) liczy się do tego przydziału. Po osiągnięciu limitu przydziału śledzenia jest emitowane, a nie dodatkowe komunikat jest rejestrowany. Wartość domyślna to 10000.  
   
--   Maksymalny rozmiar komunikatu do dziennika (`maxSizeOfMessageToLog` atrybutu): Ta wartość określa maksymalny rozmiar wiadomości rejestrowaną w dzienniku w bajtach. Komunikaty, które przekraczają limit rozmiaru nie jest zalogowany, a żadnych innych czynności jest wykonywane dla tego komunikatu. To ustawienie ma wpływ na wszystkie poziomy śledzenia. Jeśli ServiceModel śledzenia jest włączona, poziom śledzenia ostrzeżenie jest emitowane na pierwszy punkt rejestrowania (ServiceModelSend * lub TransportReceive) do powiadamiania użytkownika. Wartością domyślną dla transportu i na poziomie komunikatów usługi to 256 KB, wartością domyślną dla źle sformułowane komunikaty jest 4K.  
+- Maksymalny rozmiar komunikatu do dziennika (`maxSizeOfMessageToLog` atrybutu): Ta wartość określa maksymalny rozmiar wiadomości rejestrowaną w dzienniku w bajtach. Komunikaty, które przekraczają limit rozmiaru nie jest zalogowany, a żadnych innych czynności jest wykonywane dla tego komunikatu. To ustawienie ma wpływ na wszystkie poziomy śledzenia. Jeśli ServiceModel śledzenia jest włączona, poziom śledzenia ostrzeżenie jest emitowane na pierwszy punkt rejestrowania (ServiceModelSend * lub TransportReceive) do powiadamiania użytkownika. Wartością domyślną dla transportu i na poziomie komunikatów usługi to 256 KB, wartością domyślną dla źle sformułowane komunikaty jest 4K.  
   
     > [!CAUTION]
     >  Rozmiar komunikatu, który jest kolumną obliczaną, aby porównać `maxSizeOfMessageToLog` jest rozmiar wiadomości w pamięci, przed serializacji. Ten rozmiar może się różnić od rzeczywistej długości ciąg komunikatu który jest rejestrowany, a w wielu przypadkach jest większy niż rzeczywisty rozmiar. W rezultacie komunikaty nie mogą być rejestrowane. Użytkownik może uwzględnić, określając ten fakt `maxSizeOfMessageToLog` atrybut był większy niż rozmiar oczekiwanego komunikatu w 10%. Ponadto, jeśli wadliwe komunikaty są rejestrowane, rzeczywista ilość miejsca na dysku wykorzystywane przez dzienników komunikatów może być maksymalnie 5 razy większy niż wartość określoną przez `maxSizeOfMessageToLog`.  

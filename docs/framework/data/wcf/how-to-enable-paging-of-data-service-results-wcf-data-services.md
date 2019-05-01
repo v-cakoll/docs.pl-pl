@@ -8,11 +8,11 @@ helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
 ms.openlocfilehash: edc150d118153849dd84eb40f1443d842c7d346d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875891"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Instrukcje: Włączanie stronicowania wyników usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia ograniczenie liczby jednostek zwróconych przez zapytanie usługi danych. Limity strony są definiowane w metodzie, która jest wywoływana, gdy usługa zostanie zainicjowana i mogą być ustawione osobno dla każdego zestawu jednostek.  
@@ -23,7 +23,7 @@ ms.locfileid: "59517841"
   
 ### <a name="how-to-enable-paging-of-returned-customers-and-orders-entity-sets"></a>Jak włączyć stronicowania zwracane zestawy jednostek klienci i zamówienia  
   
--   W kodzie dla usługi danych, Zastąp kod symbolu zastępczego `InitializeService` funkcji następującym kodem:  
+- W kodzie dla usługi danych, Zastąp kod symbolu zastępczego `InitializeService` funkcji następującym kodem:  
   
      [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigpaging)]
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigpaging)]  

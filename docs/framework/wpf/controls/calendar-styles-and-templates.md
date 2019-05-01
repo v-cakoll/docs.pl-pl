@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
 ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912447"
 ---
 # <a name="calendar-styles-and-templates"></a>Style i szablony kalendarza
 W tym temacie opisano, style i szablony <xref:System.Windows.Controls.Calendar> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

@@ -12,25 +12,25 @@ ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e932b3af0b952fa88d33df453917cb11c3ceed33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908859"
 ---
 # <a name="sorted-collection-types"></a>Sortowane typów kolekcji
 <xref:System.Collections.SortedList?displayProperty=nameWithType> Klasy <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> klasy generycznej i <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> ogólnej klasy są podobne do <xref:System.Collections.Hashtable> klasy i <xref:System.Collections.Generic.Dictionary%602> ogólnej klasy, implementują <xref:System.Collections.IDictionary> interfejs, ale obsługa ich elementy w sortowaniu kolejność według klucza, a nie mają O(1) wstawiania i pobieranie charakterystycznych dla tabel skrótów. Trzy klasy wspólnym kilka funkcji:  
   
--   Implementowanie wszystkich trzech klasach <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejsu. Dwie klasy ogólne także implementować <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> interfejs generyczny.  
+- Implementowanie wszystkich trzech klasach <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejsu. Dwie klasy ogólne także implementować <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> interfejs generyczny.  
   
--   Każdy element jest pary klucz/wartość do celów wyliczenia.  
+- Każdy element jest pary klucz/wartość do celów wyliczenia.  
   
     > [!NOTE]
     >  Nongeneric <xref:System.Collections.SortedList> klasy zwraca <xref:System.Collections.DictionaryEntry> obiekty podczas wyliczone, mimo że zwraca dwa typy rodzajowe <xref:System.Collections.Generic.KeyValuePair%602> obiektów.  
   
--   Elementy są sortowane według <xref:System.Collections.IComparer?displayProperty=nameWithType> implementacji (dla nongeneric <xref:System.Collections.SortedList>) lub <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementacji (w przypadku dwóch klas ogólnych).  
+- Elementy są sortowane według <xref:System.Collections.IComparer?displayProperty=nameWithType> implementacji (dla nongeneric <xref:System.Collections.SortedList>) lub <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementacji (w przypadku dwóch klas ogólnych).  
   
--   Każda klasa zawiera właściwości, które zwracają kolekcje zawierające tylko kluczy lub tylko wartości.  
+- Każda klasa zawiera właściwości, które zwracają kolekcje zawierające tylko kluczy lub tylko wartości.  
   
  W poniższej tabeli wymieniono niektóre różnice między dwoma klasami posortowanej listy i <xref:System.Collections.Generic.SortedDictionary%602> klasy.  
   

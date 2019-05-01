@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794316"
 ---
 # <a name="serialization-guidelines"></a>Wskazówki dotyczące serializacji
 Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podczas projektowania interfejs API serializacji.  
@@ -32,22 +32,22 @@ Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podcza
   
 ## <a name="guidelines"></a>Wytyczne dotyczące  
   
--   Zastanowić serializacji podczas projektowania nowych typów.  
+- Zastanowić serializacji podczas projektowania nowych typów.  
   
      Serializacji jest ważna projektowania dla dowolnego typu, ponieważ programy może być wymagane do utrwalenia lub przesłania wystąpienie typu.  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Wybór technologii serializacji prawo do pomocy technicznej  
  Dla dowolnego typu może obsługiwać none, co najmniej jedną z technologii serializacji.  
   
--   Obsługa ROZWAŻ *kontraktu danych serializacji* w przypadku wystąpienia tego typu może być konieczne może być utrwalone lub używany w usługach sieci Web.  
+- Obsługa ROZWAŻ *kontraktu danych serializacji* w przypadku wystąpienia tego typu może być konieczne może być utrwalone lub używany w usługach sieci Web.  
   
--   Obsługa ROZWAŻ *serializacji XML* zamiast lub oprócz danych serializacji umowy, jeśli potrzebujesz większej kontroli nad formatem XML, który jest generowany, gdy typ jest serializowana.  
+- Obsługa ROZWAŻ *serializacji XML* zamiast lub oprócz danych serializacji umowy, jeśli potrzebujesz większej kontroli nad formatem XML, który jest generowany, gdy typ jest serializowana.  
   
      Może to być konieczne w niektórych scenariuszach współpracy, w którym należy użyć konstrukcji XML, który nie jest obsługiwany przez danych serializacji umowy, na przykład do tworzenia atrybutów XML.  
   
--   Obsługa ROZWAŻ *czasu wykonywania serializacji* w przypadku wystąpienia tego typu muszą przechodzić granic wywołaniem funkcji zdalnych .NET.  
+- Obsługa ROZWAŻ *czasu wykonywania serializacji* w przypadku wystąpienia tego typu muszą przechodzić granic wywołaniem funkcji zdalnych .NET.  
   
--   UNIKAJ obsługi czasu wykonywania serializacji lub serializacji XML tylko dla trwałości głównej przyczyny. Zamiast tego użyć serializacji kontrakt danych  
+- UNIKAJ obsługi czasu wykonywania serializacji lub serializacji XML tylko dla trwałości głównej przyczyny. Zamiast tego użyć serializacji kontrakt danych  
   
 #### <a name="supporting-data-contract-serialization"></a>Pomocniczych serializacji kontrakt danych  
  Typy może obsługiwać serializacji kontrakt danych przez zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> do typu i <xref:System.Runtime.Serialization.DataMemberAttribute> do elementów członkowskich (pola i właściwości) tego typu.  

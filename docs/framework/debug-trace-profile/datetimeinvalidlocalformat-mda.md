@@ -15,11 +15,11 @@ ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 380334dbe9b91ea369de6cbe58686a9a74254c2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874669"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 `dateTimeInvalidLocalFormat` Zdarzenie MDA jest aktywowane podczas <xref:System.DateTime> wystąpienie, które są przechowywane jako uniwersalny czas koordynowany (UTC) jest formatowana przy użyciu formatu, który jest przeznaczony do użycia tylko w przypadku lokalnego <xref:System.DateTime> wystąpień. To zdarzenie MDA nie została aktywowana, nie określono tego parametru lub domyślna <xref:System.DateTime> wystąpień.  

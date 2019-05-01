@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792642"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap — Metoda
 Ustawia mapę kodu dla określonej funkcji przy użyciu określonego wpisy mapy intermediate language (MSIL) firmy Microsoft.  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  Debuger założy, że każdy stare przesunięcie odwołuje się do MSIL w kodzie MSIL oryginalne, niezmodyfikowanego i że każdy nowy przesunięcie odwołuje się do przesunięcia MSIL kodem nowe, instrumentowanych. Mapa powinny być sortowane w kolejności rosnącej. Do przechodzenia, aby zapewnić prawidłowe działanie, należy przestrzegać następujących wytycznych:  
   
--   Nie zmieniają kolejności instrumentowanych kod MSIL.  
+- Nie zmieniają kolejności instrumentowanych kod MSIL.  
   
--   Nie usuwaj oryginalnego kodu MSIL.  
+- Nie usuwaj oryginalnego kodu MSIL.  
   
--   Zawierać wpisy dla wszystkich punktów sekwencji z plik bazy danych (PDB) programu w mapie. Mapa nie interpolacji Brak wpisów. Tak biorąc pod uwagę poniższe mapy:  
+- Zawierać wpisy dla wszystkich punktów sekwencji z plik bazy danych (PDB) programu w mapie. Mapa nie interpolacji Brak wpisów. Tak biorąc pod uwagę poniższe mapy:  
   
      (0 stare, 0 nowe)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 stare, 20 nowych)  
   
-    -   Stary przesunięcia 0, 1, 2, 3 lub 4 zostanie zamapowane do nowego przesunięciu 0.  
+    - Stary przesunięcia 0, 1, 2, 3 lub 4 zostanie zamapowane do nowego przesunięciu 0.  
   
-    -   Przesunięcie stare 5, 6, 7 lub 8 zostaną odwzorowane na nowe przesunięcie 10.  
+    - Przesunięcie stare 5, 6, 7 lub 8 zostaną odwzorowane na nowe przesunięcie 10.  
   
-    -   Stary przesunięcie 9 lub nowszą zostaną odwzorowane na nowe przesunięcie 20.  
+    - Stary przesunięcie 9 lub nowszą zostaną odwzorowane na nowe przesunięcie 20.  
   
-    -   Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostaną zmapowane do starego przesunięciu 0.  
+    - Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostaną zmapowane do starego przesunięciu 0.  
   
-    -   Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zamapowane do starego przesunięcia 5.  
+    - Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zamapowane do starego przesunięcia 5.  
   
-    -   Nowe przesunięcie 20 lub nowszej zostanie zamapowane do starego przesunięcia 9.  
+    - Nowe przesunięcie 20 lub nowszej zostanie zamapowane do starego przesunięcia 9.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

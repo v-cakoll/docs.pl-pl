@@ -20,11 +20,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827161"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Rozszerzanie i zwężanie konwersji (Visual Basic)
 Ważną kwestią za pomocą konwersji typu jest, czy wynik konwersji znajduje się w zakresie docelowego typu danych.  
@@ -68,15 +68,15 @@ Ważną kwestią za pomocą konwersji typu jest, czy wynik konwersji znajduje si
 ## <a name="narrowing-conversions"></a>Konwersje zawężające  
  Standardowe konwersje zawężające obejmują:  
   
--   Zwrotny instrukcjami konwersje rozszerzające w poprzednim tabeli (z tą różnicą, że każdy typ rozszerza się do samego siebie)  
+- Zwrotny instrukcjami konwersje rozszerzające w poprzednim tabeli (z tą różnicą, że każdy typ rozszerza się do samego siebie)  
   
--   Konwersje w dowolnym kierunku, między [logiczna](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) i dowolnego typu liczbowego  
+- Konwersje w dowolnym kierunku, między [logiczna](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) i dowolnego typu liczbowego  
   
--   Konwersje z dowolnego typu liczbowego na dowolny typ wyliczany (`Enum`)  
+- Konwersje z dowolnego typu liczbowego na dowolny typ wyliczany (`Enum`)  
   
--   Konwersje w dowolnym kierunku, między [ciąg](../../../../visual-basic/language-reference/data-types/string-data-type.md) i dowolnego typu liczbowego `Boolean`, lub [daty](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- Konwersje w dowolnym kierunku, między [ciąg](../../../../visual-basic/language-reference/data-types/string-data-type.md) i dowolnego typu liczbowego `Boolean`, lub [daty](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   Konwersje z typu danych lub obiekt typu do typu, który pochodzi z niego  
+- Konwersje z typu danych lub obiekt typu do typu, który pochodzi z niego  
   
  Konwersje zawężające nie zawsze sukces w czasie wykonywania i może zakończyć się niepowodzeniem lub pociągnąć za sobą utratę danych. Błąd występuje, jeśli docelowy typ danych nie może odbierać konwertowana wartość. Na przykład konwersja liczbowa może spowodować przepełnienie. Kompilator nie pozwalają na wykonywać konwersje zawężające niejawnie, chyba że [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) ustawia typ sprawdzania przełącznik `Off`.  
   
@@ -89,9 +89,9 @@ Ważną kwestią za pomocą konwersji typu jest, czy wynik konwersji znajduje si
 ## <a name="exceptions-during-conversion"></a>Wyjątki podczas konwertowania  
  Ponieważ konwersje rozszerzające zawsze powiedzie się, nie zgłaszają wyjątków. Konwersje zawężające, gdy zakończą się niepowodzeniem, najczęściej wyrzucić następujące:  
   
--   <xref:System.InvalidCastException> — Jeśli konwersja nie jest zdefiniowana między dwoma typami  
+- <xref:System.InvalidCastException> — Jeśli konwersja nie jest zdefiniowana między dwoma typami  
   
--   <xref:System.OverflowException> — (tylko typy całkowite) Jeśli przekonwertowana wartość jest zbyt duża dla typu docelowego  
+- <xref:System.OverflowException> — (tylko typy całkowite) Jeśli przekonwertowana wartość jest zbyt duża dla typu docelowego  
   
  Jeśli zdefiniowano klasy lub struktury [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md) ma pełnić rolę operatora konwersji do i z tej klasy lub struktury, która `CType` można zgłoszenie każdego wyjątku, które uzna za stosowne. Ponadto, który `CType` może wywoływać funkcje języka Visual Basic lub [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody, które z kolei może wywoływać różnych wyjątków.  
   

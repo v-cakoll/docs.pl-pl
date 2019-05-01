@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
 ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971226"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider — Informacje o składniku (Formularze systemu Windows)
 Formularze Windows [HelpProvider](helpprovider-component-windows-forms.md) składnik jest używany do kojarzenia pomocy HTML 1.x pliku pomocy (plik chm z HTML Help Workshop, lub do pliku .htm) za pomocą aplikacji Windows. Możesz podać pomoc na wiele sposobów:  
   
--   Podaj pomocy kontekstowej dla kontrolek na formularzach Windows Forms.  
+- Podaj pomocy kontekstowej dla kontrolek na formularzach Windows Forms.  
   
--   Zapewniają pomoc kontekstowa w szczególności okno dialogowe lub określonych kontrolek w oknie dialogowym.  
+- Zapewniają pomoc kontekstowa w szczególności okno dialogowe lub określonych kontrolek w oknie dialogowym.  
   
--   Otwórz plik pomocy do określonych obszarów, takich jak strony głównej w spisie treści, indeksu lub funkcję wyszukiwania.  
+- Otwórz plik pomocy do określonych obszarów, takich jak strony głównej w spisie treści, indeksu lub funkcję wyszukiwania.  
   
 ## <a name="using-the-help-provider"></a>Za pomocą dostawcy pomocy  
  Dodawanie <xref:System.Windows.Forms.HelpProvider> składnik do formularza Windows umożliwia inne kontrolki na formularzu, należy udostępnić właściwości pomocy <xref:System.Windows.Forms.HelpProvider> składnika. Dzięki temu można zapewnić pomoc dla formantów w formularzu Windows. Można skojarzyć z pliku Pomocy <xref:System.Windows.Forms.HelpProvider> za pomocą składnika <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> właściwości. Należy określić typ pomocy udostępniane przez wywołanie metody <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> i podając wartość z zakresu od <xref:System.Windows.Forms.HelpNavigator> wyliczenie dla określonego formantu. Podasz — słowo kluczowe lub tematu pomocy, wywołując <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> metody.  

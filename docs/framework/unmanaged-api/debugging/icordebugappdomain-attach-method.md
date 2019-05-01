@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a290ca162e5ab71b4184d166bcd00f1d0217cb94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785180"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach — Metoda
 Dołącza debuger do domeny aplikacji.  
@@ -34,10 +34,10 @@ HRESULT Attach ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger musi być dołączony do domeny aplikacji na odbieranie zdarzeń i włączyć debugowanie stron domeny aplikacji.  
+ Debuger musi być dołączony do domeny aplikacji, aby odbierać zdarzenia i włączyć debugowanie stron domeny aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

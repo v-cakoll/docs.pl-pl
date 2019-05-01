@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792200"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Przewodnik: wdrażanie formularza korzystającego z operacji w tle
 Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytkownika (UI) przestanie odpowiadać lub "zawiesza się," można użyć <xref:System.ComponentModel.BackgroundWorker> klasy do wykonywania operacji na inny wątek.  
@@ -29,13 +29,13 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie aplikacji z systemem Windows  
+- Tworzenie aplikacji z systemem Windows  
   
--   Tworzenie <xref:System.ComponentModel.BackgroundWorker> w formularzu  
+- Tworzenie <xref:System.ComponentModel.BackgroundWorker> w formularzu  
   
--   Dodawanie obsługi zdarzeń asynchronicznych  
+- Dodawanie obsługi zdarzeń asynchronicznych  
   
--   Dodawanie raportowania postępu i obsługę anulowania  
+- Dodawanie raportowania postępu i obsługę anulowania  
   
  Aby uzyskać pełną listę kod używany w tym przykładzie, zobacz [jak: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
@@ -68,7 +68,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>Aby utworzyć BackgroundWorker za pomocą projektanta  
   
--   Z **składniki** karcie **przybornika**, przeciągnij <xref:System.ComponentModel.BackgroundWorker> na formularz.  
+- Z **składniki** karcie **przybornika**, przeciągnij <xref:System.ComponentModel.BackgroundWorker> na formularz.  
   
 ## <a name="adding-asynchronous-event-handlers"></a>Dodawanie obsługi zdarzeń asynchronicznych  
  Teraz można przystąpić do dodania obsługi zdarzeń dla <xref:System.ComponentModel.BackgroundWorker> zdarzeń asynchronicznych składnika. Czasochłonne operacji, która jest uruchamiana w tle, który oblicza Fibonacci liczb, jest wywoływana za pomocą jednej z tych programów obsługi zdarzeń.  
@@ -145,7 +145,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 #### <a name="to-test-your-project"></a>Aby przetestować projekt  
   
--   Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.  
+- Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.  
   
      Obliczenie jest uruchomiona w tle, zobaczysz <xref:System.Windows.Forms.ProgressBar> Wyświetlanie postępu obliczeń w kierunku ukończenia. Możesz również anulować oczekujące operacje.  
   
@@ -154,11 +154,11 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
 ## <a name="next-steps"></a>Następne kroki  
  Teraz, że udało Ci się wdrożyć formularz, który używa <xref:System.ComponentModel.BackgroundWorker> składnik do wykonywania obliczeń w tle, możesz zapoznać się z innych możliwości dla asynchronicznych operacji:  
   
--   Używanych jest wiele <xref:System.ComponentModel.BackgroundWorker> obiektów dla kilku operacji jednoczesnych.  
+- Używanych jest wiele <xref:System.ComponentModel.BackgroundWorker> obiektów dla kilku operacji jednoczesnych.  
   
--   Do debugowania aplikacji wielowątkowych, zobacz [jak: Korzystanie z okna wątków](/visualstudio/debugger/how-to-use-the-threads-window).  
+- Do debugowania aplikacji wielowątkowych, zobacz [jak: Korzystanie z okna wątków](/visualstudio/debugger/how-to-use-the-threads-window).  
   
--   Implementowanie własnego składnika, który obsługuje model programowania asynchronicznego. Aby uzyskać więcej informacji, zobacz [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+- Implementowanie własnego składnika, który obsługuje model programowania asynchronicznego. Aby uzyskać więcej informacji, zobacz [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
     > [!CAUTION]
     >  Korzystając z wielowątkowością jakiegokolwiek rodzaju, możesz potencjalnie się narazić na bardzo poważne i złożone usterek. Zapoznaj się z [zarządzana wątkowość najlepsze](../../../standard/threading/managed-threading-best-practices.md) przed zaimplementowaniem dowolne rozwiązanie, który używa wielowątkowości.  

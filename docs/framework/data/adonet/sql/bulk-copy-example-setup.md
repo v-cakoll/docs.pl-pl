@@ -3,11 +3,11 @@ title: Konfiguracja przykładu kopiowania zbiorczego
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
 ms.openlocfilehash: 6244afff348edbde46fdfda7481910aca2b25939
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878660"
 ---
 # <a name="bulk-copy-example-setup"></a>Konfiguracja przykładu kopiowania zbiorczego
 <xref:System.Data.SqlClient.SqlBulkCopy> Klasa może być używana w celu zapisania danych tylko do tabel programu SQL Server. Przykłady kodu, przedstawione w tym temacie Użyj przykładowej bazy danych programu SQL Server **AdventureWorks**. Aby uniknąć, zmieniając istniejące tabele przykłady kodu zapisu danych do tabel, które należy najpierw utworzyć.  

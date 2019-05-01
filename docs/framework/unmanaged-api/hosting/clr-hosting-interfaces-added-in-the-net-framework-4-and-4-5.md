@@ -9,22 +9,22 @@ ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e9086502968fb9046237e77b76b4038a9f32f4ef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778017"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5
 W tej sekcji opisano niezarządzane interfejsy hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]i nowsze wersje w swoich aplikacjach. Te interfejsy dostarczać metody do hosta skonfigurować i załadowania środowiska uruchomieniowego do procesu.  
   
  Począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], hostingu wszystkie interfejsy mają następującą charakterystykę:  
   
--   Używają Zarządzanie okresem istnienia (`AddRef` i `Release`), hermetyzacji (niejawne context) i `QueryInterface` z modelu COM.  
+- Używają Zarządzanie okresem istnienia (`AddRef` i `Release`), hermetyzacji (niejawne context) i `QueryInterface` z modelu COM.  
   
--   Istnieje nie należy używać typów modelu COM takich jak `BSTR`, `SAFEARRAY`, lub `VARIANT`.  
+- Istnieje nie należy używać typów modelu COM takich jak `BSTR`, `SAFEARRAY`, lub `VARIANT`.  
   
--   Nie ma żadnych modeli typu apartment, agregacji ani rejestru aktywacji używanego przez [funkcja CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
+- Nie ma żadnych modeli typu apartment, agregacji ani rejestru aktywacji używanego przez [funkcja CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ICLRAppDomainResourceMonitor, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
 ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902229"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Instrukcje: ustawianie i zwracanie wartości liczbowych za pomocą kontrolki NumericUpDown formularzy systemu Windows
 Wartość liczbowa formularzy Windows Forms <xref:System.Windows.Forms.NumericUpDown> kontrolki jest określany przez jego <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwości. Możesz tworzyć testów warunkowych wartości kontrolki podobnie jak w przypadku wszystkich innych właściwości. Gdy <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwość jest ustawiona, możesz je dostosować bezpośrednio przez napisanie kodu, aby wykonywać operacje na nim lub może wywołać <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> i <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> metody.  
@@ -55,7 +55,7 @@ Wartość liczbowa formularzy Windows Forms <xref:System.Windows.Forms.NumericUp
   
 ### <a name="to-return-the-numeric-value"></a>Aby zwrócić wartość liczbową  
   
--   Dostęp do <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwości w kodzie.  
+- Dostęp do <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwości w kodzie.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  

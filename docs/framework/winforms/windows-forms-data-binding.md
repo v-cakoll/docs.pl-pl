@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
 ms.openlocfilehash: ed456807137e8cf7594bc50eb0eebb67b88e6b40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800116"
 ---
 # <a name="windows-forms-data-binding"></a>Powiązywanie danych formularzy systemu Windows
 Powiązanie danych w formularzach Windows Forms zapewnia sposób wyświetlania i zmiany informacji ze źródła danych w kontrolkach w formularzu. Możesz powiązać zarówno źródeł danych tradycyjnych, jak i praktycznie dowolne strukturę, która zawiera dane.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9d98a7be-b110-4edb-8eba-bed10f250b6d
 ms.openlocfilehash: 10c74ede8d490bf96a9d0855889669bdc2628b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785362"
 ---
 # <a name="constant-expressions"></a>Wyrażenia stałe
 Wyrażenie stałe składa się z wartością stałą. Wartości stałe bezpośrednio są konwertowane na stałe polecenia drzewa wyrażeń, bez tłumaczenia na komputerze klienckim. Obejmuje to stała wartość wyrażenia. W związku z tym, zachowanie źródła danych można się spodziewać dla wszystkich wyrażeń obejmujących stałe. Może to spowodować, że zachowanie, które różni się od zachowania CLR.  

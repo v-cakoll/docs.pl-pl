@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konfigurowanie aplikacji do obsługi w programie .NET Framework 4 lub nowszy'
+title: 'Instrukcje: konfiguracja aplikacji do obsługi programu .NET Framework w wersji 4 lub nowszej'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
@@ -8,11 +8,11 @@ ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 40c19dc21bb2262ca1f23573cb89f764e4cd2627
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872693"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Instrukcje: Konfiguracja aplikacji do obsługi platformy .NET Framework 4 lub nowszy
 

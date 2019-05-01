@@ -12,11 +12,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904270"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Instrukcje: zmienianie wyglądu składnika TabControl formularzy systemu Windows
 Można zmienić wygląd karty w formularzach Windows Forms za pomocą właściwości <xref:System.Windows.Forms.TabControl> i <xref:System.Windows.Forms.TabPage> obiektów, które składają się na poszczególnych kartach formantu. Przez ustawienie tych właściwości, można wyświetlanie obrazów na kartach, wyświetlanie kart w pionie zamiast w poziomie, wyświetlić wiele wierszy kart i włączyć lub wyłączyć karty programowo.  
@@ -43,7 +43,7 @@ Można zmienić wygląd karty w formularzach Windows Forms za pomocą właściwo
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Aby rozmieścić karty boku kontrolki  
   
--   Ustaw <xref:System.Windows.Forms.TabControl.Alignment%2A> właściwość <xref:System.Windows.Forms.TabControl> do <xref:System.Windows.Forms.TabAlignment.Left> lub <xref:System.Windows.Forms.TabAlignment.Right>.  
+- Ustaw <xref:System.Windows.Forms.TabControl.Alignment%2A> właściwość <xref:System.Windows.Forms.TabControl> do <xref:System.Windows.Forms.TabAlignment.Left> lub <xref:System.Windows.Forms.TabAlignment.Right>.  
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Aby programowo włączyć lub wyłączyć wszystkie kontrolki na karcie  
   
@@ -63,7 +63,7 @@ Można zmienić wygląd karty w formularzach Windows Forms za pomocą właściwo
   
 ### <a name="to-display-tabs-as-buttons"></a>Aby wyświetlić karty przyciski  
   
--   Ustaw <xref:System.Windows.Forms.TabControl.Appearance%2A> właściwość <xref:System.Windows.Forms.TabControl> do <xref:System.Windows.Forms.TabAppearance.Buttons> lub <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
+- Ustaw <xref:System.Windows.Forms.TabControl.Appearance%2A> właściwość <xref:System.Windows.Forms.TabControl> do <xref:System.Windows.Forms.TabAppearance.Buttons> lub <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>Zobacz także
 

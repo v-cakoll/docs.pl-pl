@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861234"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takie jak pliki lub bazy danych. Te wskazówki pochodzą ponowne napisanie kompilatory C# i Visual Basic w kodzie zarządzanym, a w tym artykule przedstawiono kilka przykładów rzeczywistych z kompilatorem C#. 
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  W tym artykule omówiono, jak należy pamiętać o objawy wąskich gardeł wydajności, które mogą wpływać na czas reakcji aplikacji, szczególnie w przypadku dużych systemów i systemów, które przetwarzają duże ilości danych. Typowe sprawcami obejmują pakowania, działań na ciągach, LINQ i lambda, buforowania w metodach asynchronicznych, buforowanie bez rozmiar limit lub usuwania zasad, nieodpowiednie użycie słowniki i przekazywanie wokół struktury. Należy pamiętać, cztery fakty dostrojenia aplikacji:  
   
--   Nie przedwcześnie Optymalizuj — produktywności i dostrajanie aplikacji, gdy zauważać problemy. 
+- Nie przedwcześnie Optymalizuj — produktywności i dostrajanie aplikacji, gdy zauważać problemy. 
   
--   Profile nie leży — jesteś zgadywania, jeśli nie pomiarowego. 
+- Profile nie leży — jesteś zgadywania, jeśli nie pomiarowego. 
   
--   Dobre narzędzia zależy od — Pobierz narzędzia PerfView i wypróbuj jej działanie. 
+- Dobre narzędzia zależy od — Pobierz narzędzia PerfView i wypróbuj jej działanie. 
   
--   To wszystko o alokacji — oznacza to, gdzie zespół platformy kompilatora poświęcony większość czasu poprawę wydajności nowych kompilatory. 
+- To wszystko o alokacji — oznacza to, gdzie zespół platformy kompilatora poświęcony większość czasu poprawę wydajności nowych kompilatory. 
   
 ## <a name="see-also"></a>Zobacz także
 

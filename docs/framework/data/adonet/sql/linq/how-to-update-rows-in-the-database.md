@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
 ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902944"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>Instrukcje: Aktualizowanie wierszy w bazie danych
 Możesz zaktualizować wierszy w bazie danych, zmieniając wartości elementów członkowskich obiektów skojarzonych z [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> kolekcji, a następnie przesyłanie zmian do bazy danych. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy zmiany w środowisku SQL odpowiednie `UPDATE` poleceń.  

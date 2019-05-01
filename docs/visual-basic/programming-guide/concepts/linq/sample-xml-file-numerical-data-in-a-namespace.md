@@ -3,11 +3,11 @@ title: 'Przykładowy plik XML: Dane liczbowe w {1 & gt'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
 ms.openlocfilehash: 09954798615954d238273b3d4ed71b5ff475394f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786974"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Przykładowy plik XML: dane liczbowe w przestrzeni nazw
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera dane liczbowe, sumowanie, średniej i grupowania. Kod XML jest w przestrzeni nazw.  

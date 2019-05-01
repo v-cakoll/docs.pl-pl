@@ -12,22 +12,22 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913734"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Instrukcje: Modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania (formularze Windows)
 Jeśli używasz formularzy Windows <xref:System.Windows.Forms.PictureBox> formantu w formularzu, można ustawić <xref:System.Windows.Forms.PictureBox.SizeMode%2A> właściwości na niej w celu:  
   
--   Wyrównanie obrazu lewy górny róg za pomocą lewego górnego rogu kontrolki  
+- Wyrównanie obrazu lewy górny róg za pomocą lewego górnego rogu kontrolki  
   
--   Wyśrodkuj obraz w kontrolce  
+- Wyśrodkuj obraz w kontrolce  
   
--   Dopasuj rozmiar formantu, aby dopasować go do jego wyświetlania  
+- Dopasuj rozmiar formantu, aby dopasować go do jego wyświetlania  
   
--   Rozciąganie dowolnego obrazu wyświetla do rozmiaru formantu  
+- Rozciąganie dowolnego obrazu wyświetla do rozmiaru formantu  
   
  Rozciąganie obrazu (szczególnie jeden format mapy bitowej) może spowodować utratę jakości obrazu. Metapliki, które listy instrukcji grafiki rysowanie obrazów w czasie wykonywania, są lepiej dostosowane do rozciągania niż Mapy bitowe mają rozmiar.  
   

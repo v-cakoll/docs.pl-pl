@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
 ms.openlocfilehash: acc732f72e9dae0796da78cdbb8ef4666ae9791a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870282"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decydowanie o czasie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach
 Asynchroniczny wzorzec oparty na zdarzeniach dostarczają wzorzec publikowania zachowanie asynchroniczne klasy. Wraz z wprowadzeniem tego wzorca [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiuje dwa wzorce do udostępniania zachowanie asynchroniczne: asynchroniczny wzorzec oparty na <xref:System.IAsyncResult?displayProperty=nameWithType> interfejsu i wzorzec oparty na zdarzeniach. W tym temacie opisano, gdy jest ona odpowiednia dla można zaimplementować obu wzorców.  
@@ -33,36 +33,36 @@ Asynchroniczny wzorzec oparty na zdarzeniach dostarczają wzorzec publikowania z
 ## <a name="guidelines"></a>Wytyczne dotyczące  
  Na poniższej liście opisano wytyczne podczas należy zaimplementować wzorzec asynchroniczny oparty na zdarzeniach:  
   
--   Użyj wzorca opartego na zdarzeniach jako domyślny interfejs API do udostępnienia asynchronicznego zachowanie dla swojej klasy.  
+- Użyj wzorca opartego na zdarzeniach jako domyślny interfejs API do udostępnienia asynchronicznego zachowanie dla swojej klasy.  
   
--   Nie ujawniaj <xref:System.IAsyncResult> wzorca, gdy klasa jest używany głównie w aplikacji klienckiej, na przykład Windows Forms.  
+- Nie ujawniaj <xref:System.IAsyncResult> wzorca, gdy klasa jest używany głównie w aplikacji klienckiej, na przykład Windows Forms.  
   
--   Tylko udostępnianie <xref:System.IAsyncResult> wzorca, gdy konieczne jest spełnienie wymagań. Na przykład, zgodność z istniejącym interfejsem API mogą wymagać do udostępnienia <xref:System.IAsyncResult> wzorca.  
+- Tylko udostępnianie <xref:System.IAsyncResult> wzorca, gdy konieczne jest spełnienie wymagań. Na przykład, zgodność z istniejącym interfejsem API mogą wymagać do udostępnienia <xref:System.IAsyncResult> wzorca.  
   
--   Nie ujawniaj <xref:System.IAsyncResult> wzorzec bez narażania również wzorzec oparty na zdarzeniach.  
+- Nie ujawniaj <xref:System.IAsyncResult> wzorzec bez narażania również wzorzec oparty na zdarzeniach.  
   
--   Jeśli musisz ujawnić <xref:System.IAsyncResult> wzorca, w tym celu jako zaawansowana opcja. Na przykład, jeśli użytkownik generuje obiekt serwera proxy, generowanie wzorzec oparty na zdarzeniach domyślnie z opcją do generowania <xref:System.IAsyncResult> wzorca.  
+- Jeśli musisz ujawnić <xref:System.IAsyncResult> wzorca, w tym celu jako zaawansowana opcja. Na przykład, jeśli użytkownik generuje obiekt serwera proxy, generowanie wzorzec oparty na zdarzeniach domyślnie z opcją do generowania <xref:System.IAsyncResult> wzorca.  
   
--   Tworzenie implementacji wzorca opartego na zdarzeniach w swojej <xref:System.IAsyncResult> implementacji wzorca.  
+- Tworzenie implementacji wzorca opartego na zdarzeniach w swojej <xref:System.IAsyncResult> implementacji wzorca.  
   
--   Należy unikać udostępnianie wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorca na tej samej klasy. Udostępnić wzorzec oparty na zdarzeniach w klasach "na wyższym poziomie" i <xref:System.IAsyncResult> wzorca na "obniżyć poziom" klasy. Na przykład porównać wzorzec oparty na zdarzeniach na <xref:System.Net.WebClient> składnika za pomocą <xref:System.IAsyncResult> wzorca na <xref:System.Web.HttpRequest> klasy.  
+- Należy unikać udostępnianie wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorca na tej samej klasy. Udostępnić wzorzec oparty na zdarzeniach w klasach "na wyższym poziomie" i <xref:System.IAsyncResult> wzorca na "obniżyć poziom" klasy. Na przykład porównać wzorzec oparty na zdarzeniach na <xref:System.Net.WebClient> składnika za pomocą <xref:System.IAsyncResult> wzorca na <xref:System.Web.HttpRequest> klasy.  
   
-    -   Udostępnić wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorca na tej samej klasy, gdy wymaga zgodności. Na przykład, jeśli już zostały wydane interfejsu API, który używa <xref:System.IAsyncResult> wzorzec, należy zachować <xref:System.IAsyncResult> wzorca dla zgodności z poprzednimi wersjami.  
+    - Udostępnić wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorca na tej samej klasy, gdy wymaga zgodności. Na przykład, jeśli już zostały wydane interfejsu API, który używa <xref:System.IAsyncResult> wzorzec, należy zachować <xref:System.IAsyncResult> wzorca dla zgodności z poprzednimi wersjami.  
   
-    -   Udostępnić wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorca na tej samej klasy, jeśli wynikowy złożoność modelu obiektu przewyższa korzyści oddzielenie implementacji. Zaleca się uwidocznić obu wzorców dotyczących jednej klasy niż Aby uniknąć ujawnienia wzorzec oparty na zdarzeniach.  
+    - Udostępnić wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorca na tej samej klasy, jeśli wynikowy złożoność modelu obiektu przewyższa korzyści oddzielenie implementacji. Zaleca się uwidocznić obu wzorców dotyczących jednej klasy niż Aby uniknąć ujawnienia wzorzec oparty na zdarzeniach.  
   
-    -   Jeśli musisz ujawnić wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorzec dotyczących jednej klasy, użyj <xref:System.ComponentModel.EditorBrowsableAttribute> równa <xref:System.ComponentModel.EditorBrowsableState.Advanced> do oznaczania <xref:System.IAsyncResult> implementacji wzorca jako funkcja zaawansowana. Oznacza to, aby środowiska projektowe, takie jak Visual Studio technologii IntelliSense, aby nie wyświetlać <xref:System.IAsyncResult> właściwości i metody. Te właściwości i metody są nadal w pełni użyteczne, ale Deweloper pracy za pomocą funkcji IntelliSense zawiera bardziej zrozumiały widok interfejsu API.  
+    - Jeśli musisz ujawnić wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorzec dotyczących jednej klasy, użyj <xref:System.ComponentModel.EditorBrowsableAttribute> równa <xref:System.ComponentModel.EditorBrowsableState.Advanced> do oznaczania <xref:System.IAsyncResult> implementacji wzorca jako funkcja zaawansowana. Oznacza to, aby środowiska projektowe, takie jak Visual Studio technologii IntelliSense, aby nie wyświetlać <xref:System.IAsyncResult> właściwości i metody. Te właściwości i metody są nadal w pełni użyteczne, ale Deweloper pracy za pomocą funkcji IntelliSense zawiera bardziej zrozumiały widok interfejsu API.  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Kryteria udostępnianie wzorzec IAsyncResult oprócz wzorzec oparty na zdarzeniach  
  Gdy wzorzec asynchroniczny oparty na zdarzeniach ma wiele zalet w scenariuszach wymienionych wcześniej, ma pewne wady, które powinny być świadome Jeśli wydajność jest z najważniejszych wymagań.  
   
  Istnieją trzy scenariusze, w których nie opisano kwestii wzorzec oparty na zdarzeniach, jak również <xref:System.IAsyncResult> wzorca:  
   
--   Poczekaj na jednym blokowania <xref:System.IAsyncResult>  
+- Poczekaj na jednym blokowania <xref:System.IAsyncResult>  
   
--   Blokowanie oczekiwania na wielu <xref:System.IAsyncResult> obiektów  
+- Blokowanie oczekiwania na wielu <xref:System.IAsyncResult> obiektów  
   
--   Sondowanie na ukończenie <xref:System.IAsyncResult>  
+- Sondowanie na ukończenie <xref:System.IAsyncResult>  
   
  Można scenariuszy za pomocą wzorca opartego na zdarzeniach, ale jest bardziej skomplikowane niż użycie <xref:System.IAsyncResult> wzorca.  
   
@@ -72,13 +72,13 @@ Asynchroniczny wzorzec oparty na zdarzeniach dostarczają wzorzec publikowania z
   
  Na poniższej liście przedstawiono kilka zaleceń, które należy wykonać, jeśli użytkownik zdecyduje się użyć <xref:System.IAsyncResult> wzorca:  
   
--   Tylko udostępnianie <xref:System.IAsyncResult> wzorca, gdy potrzebujesz specjalnie obsługę <xref:System.Threading.WaitHandle> lub <xref:System.IAsyncResult> obiektów.  
+- Tylko udostępnianie <xref:System.IAsyncResult> wzorca, gdy potrzebujesz specjalnie obsługę <xref:System.Threading.WaitHandle> lub <xref:System.IAsyncResult> obiektów.  
   
--   Tylko udostępnianie <xref:System.IAsyncResult> wzorca, gdy masz istniejących interfejsów API, który używa <xref:System.IAsyncResult> wzorca.  
+- Tylko udostępnianie <xref:System.IAsyncResult> wzorca, gdy masz istniejących interfejsów API, który używa <xref:System.IAsyncResult> wzorca.  
   
--   W przypadku istniejącego interfejsu API na podstawie <xref:System.IAsyncResult> wzorca, należy wziąć pod uwagę także udostępnianie wzorzec oparty na zdarzeniach w swojej następnej wersji.  
+- W przypadku istniejącego interfejsu API na podstawie <xref:System.IAsyncResult> wzorca, należy wziąć pod uwagę także udostępnianie wzorzec oparty na zdarzeniach w swojej następnej wersji.  
   
--   Tylko udostępnianie <xref:System.IAsyncResult> wzorca, jeśli masz wymagania o wysokiej wydajności, które upewnieniu się, nie mogą zostać spełnione przez wzorzec oparty na zdarzeniach, ale mogą zostać spełnione przez <xref:System.IAsyncResult> wzorca.  
+- Tylko udostępnianie <xref:System.IAsyncResult> wzorca, jeśli masz wymagania o wysokiej wydajności, które upewnieniu się, nie mogą zostać spełnione przez wzorzec oparty na zdarzeniach, ale mogą zostać spełnione przez <xref:System.IAsyncResult> wzorca.  
   
 ## <a name="see-also"></a>Zobacz także
 

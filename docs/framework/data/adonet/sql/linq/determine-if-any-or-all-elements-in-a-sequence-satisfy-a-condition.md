@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
 ms.openlocfilehash: c1bc8e18f2e3b0c67b98713e67fc261649a6a0e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877373"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>Określanie, czy niektóre lub wszystkie elementy w sekwencji spełniają warunek
 <xref:System.Linq.Enumerable.All%2A> Operator zwraca `true` Jeśli wszystkie elementy w sekwencji spełniają warunek.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966975"
 ---
 # <a name="how-keyboard-input-works"></a>Działanie wprowadzania z klawiatury
 Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarzeń klawiatury w odpowiedzi na wiadomości Windows. Większość aplikacji Windows Forms przetwarzać dane wejściowe z klawiatury wyłącznie przez obsługi zdarzenia klawiatury. Jednak musisz zrozumieć, jak komunikaty klawiatury współdziałać, dzięki czemu można zaimplementować bardziej zaawansowane scenariusze wejście klawiatury, przechwytuje kluczy, zanim dotrą formantu. W tym temacie opisano typy danych klucza, formularze Windows rozpoznaje i omówiono sposób kierowania komunikaty klawiatury. Aby uzyskać informacji na temat zdarzeń klawiatury, zobacz [zdarzenia klawiatury przy użyciu](using-keyboard-events.md).  

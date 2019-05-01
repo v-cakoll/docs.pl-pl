@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913214"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Instrukcje: dostarczanie mapy bitowej przybornika dla kontrolki
 Jeśli chcesz mieć specjalną ikonę kontrolki są wyświetlane w **przybornika**, należy określić określonego obrazu, za pomocą <xref:System.Drawing.ToolboxBitmapAttribute>. Ta klasa jest *atrybutu*, specjalny rodzaj klasy, można dołączyć do innych klas. Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty Przegląd (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) dla języka Visual Basic lub [atrybuty (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) dla języka C#.  

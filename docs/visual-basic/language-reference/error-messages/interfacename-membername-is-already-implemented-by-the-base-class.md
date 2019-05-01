@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
 ms.openlocfilehash: 64bd7771820c2a4073350b7a5189d3a32c4775be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921332"
 ---
 # <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>"\<interfacename >. \<membername > "został już zaimplementowany przez klasę bazową\<baseclassname >". Ponowną implementację elementu \<typ > zakłada, że
 Właściwość, procedura lub zdarzenia w klasie pochodnej używa `Implements` klauzulę określania składowej interfejsu, który został już zaimplementowany w klasie bazowej.  
@@ -25,9 +25,9 @@ Właściwość, procedura lub zdarzenia w klasie pochodnej używa `Implements` k
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Jeśli planujesz ponownie składowej interfejsu, nie musisz podejmować żadnych działań. Kod w klasie pochodnej uzyskuje dostęp do składowej reimplemented chyba że używasz `MyBase` — słowo kluczowe do dostępu do implementacji klasy podstawowej.  
+- Jeśli planujesz ponownie składowej interfejsu, nie musisz podejmować żadnych działań. Kod w klasie pochodnej uzyskuje dostęp do składowej reimplemented chyba że używasz `MyBase` — słowo kluczowe do dostępu do implementacji klasy podstawowej.  
   
--   Jeśli nie zamierzasz ponownie składowej interfejsu, Usuń `Implements` klauzuli z deklaracji właściwość, procedura lub zdarzenie.  
+- Jeśli nie zamierzasz ponownie składowej interfejsu, Usuń `Implements` klauzuli z deklaracji właściwość, procedura lub zdarzenie.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: XmlSchemaCollection Schema Compilation
+title: Kompilacja schematu a klasa XmlSchemaCollection
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3d47fa4d4ef7a55182dd27aa6f64542fec1fa99c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776041"
 ---
-# <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection Schema Compilation
+# <a name="xmlschemacollection-schema-compilation"></a>Kompilacja schematu a klasa XmlSchemaCollection
 **Użyciu klasy XmlSchemaCollection** pamięci podręcznej lub biblioteki, gdzie danych XML (XDR) i schematu XML schematów języka (XSD) definicji mogą być przechowywane i zweryfikowane. **Użyciu klasy XmlSchemaCollection** zwiększa wydajność, buforowanie schematów w pamięci, a nie dostępu do nich z pliku lub adres URL.  
   
 > [!NOTE]

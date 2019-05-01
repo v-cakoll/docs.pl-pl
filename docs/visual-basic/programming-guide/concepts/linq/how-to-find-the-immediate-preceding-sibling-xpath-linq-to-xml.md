@@ -3,11 +3,11 @@ title: 'Instrukcje: Znajdowanie bezpośrednio poprzednich elementów równorzęd
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
 ms.openlocfilehash: ca3602a24b80d9002a639d9a319a731541aeb2df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855000"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie bezpośrednio poprzednich elementów równorzędnych (XPath-LINQ to XML) (Visual Basic)
 Czasami trzeba znajdowanie bezpośrednio poprzednich elementów równorzędnych węzła. Ze względu na różnice w semantyce pozycyjne predykatów dla osi poprzedni element równorzędny w wyrażenie XPath, w przeciwieństwie do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], jest to jedna z bardziej interesujące porównania.  

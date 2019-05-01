@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
 ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779148"
 ---
 # <a name="application-settings-for-windows-forms"></a>Ustawienia aplikacji dla formularzy systemu Windows
 Funkcja ustawienia aplikacji Windows Forms ułatwia tworzenie i przechowywanie i Obsługa niestandardowych aplikacji i preferencji użytkowników na komputerze klienckim. Za pomocą ustawień aplikacji można przechowywać nie tylko dane aplikacji, takie jak parametry połączenia bazy danych, ale również dane specyficzne dla użytkownika, takie jak położenie paska narzędzi i ostatnio używane listy.  

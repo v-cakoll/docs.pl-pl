@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
 ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791771"
 ---
 # <a name="add"></a>\<add>
 Programu obsługi tokenów zabezpieczeń określone są dodawane do kolekcji programu obsługi tokenów.  

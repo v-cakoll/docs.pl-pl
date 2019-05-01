@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
 ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910536"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Instrukcje: Znajdowanie elementu TreeViewItem w kontrolce TreeView
 <xref:System.Windows.Controls.TreeView> Kontrola zapewnia wygodny sposób prezentują dane hierarchiczne. Jeśli Twoje <xref:System.Windows.Controls.TreeView> jest powiązana ze źródłem danych <xref:System.Windows.Controls.TreeView.SelectedItem%2A> właściwość zapewnia wygodny sposób na szybkie pobranie obiektu wybranych danych. Zazwyczaj najlepiej pracować z obiektu źródłowego danych, ale czasami konieczne może być programowe Zmienianie danych zawierające <xref:System.Windows.Controls.TreeViewItem>. Na przykład, konieczne może być programowo rozwiń <xref:System.Windows.Controls.TreeViewItem>, lub wybierz inny element w <xref:System.Windows.Controls.TreeView>.  

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
 ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875163"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka klienta umożliwia pobieranie i aktualizację danych binarnych pochodzących ze [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w jednym z następujących sposobów:  
   
--   Jako typ pierwotny właściwość jednostki. Jest to zalecana metoda do pracy z danymi binarnymi małych obiektów, które można łatwo załadować do pamięci. W tym przypadku właściwość binarna jest właściwość jednostki udostępnianych przez model danych i usługi danych serializuje dane binarne jako binarne XML zakodowany base-64 w komunikacie odpowiedzi.  
+- Jako typ pierwotny właściwość jednostki. Jest to zalecana metoda do pracy z danymi binarnymi małych obiektów, które można łatwo załadować do pamięci. W tym przypadku właściwość binarna jest właściwość jednostki udostępnianych przez model danych i usługi danych serializuje dane binarne jako binarne XML zakodowany base-64 w komunikacie odpowiedzi.  
   
--   Jako strumień osobny zasób binarny. Jest to zalecana metoda uzyskiwania dostępu do oraz zmiana dane dużych obiektów binarnych (BLOB), który może reprezentować fotografii, wideo lub dowolnego typu dane binarne zakodowane.  
+- Jako strumień osobny zasób binarny. Jest to zalecana metoda uzyskiwania dostępu do oraz zmiana dane dużych obiektów binarnych (BLOB), który może reprezentować fotografii, wideo lub dowolnego typu dane binarne zakodowane.  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementuje, przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP, zgodnie z definicją w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Dane binarne ten mechanizm jest traktowany jako zasób nośnika, który jest oddzielony od ale powiązanych z jednostką, która nosi nazwę wpisu łącza nośnika. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

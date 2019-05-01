@@ -16,11 +16,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
 ms.openlocfilehash: d08974a929a723d4037300f9d72ae03c072d47fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827960"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Operatory porównania w Visual Basic
 Operatory porównania porównać dwa wyrażenia i zwraca `Boolean` wartość, która reprezentuje relację ich wartości. Brak operatory porównywania wartości liczbowych, operatory porównywania ciągów i operatory porównywania obiektów. Wszystkie trzy typy operatorów zostały omówione w niniejszym dokumencie.  

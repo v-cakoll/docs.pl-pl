@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972461"
 ---
 # <a name="message-security-user-name"></a>Nazwa użytkownika zabezpieczeń komunikatów
 Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania nazwy użytkownika dla klienta i wymaga uwierzytelnienia serwera za pomocą certyfikatu X.509v3 serwera. Wszystkie komunikaty aplikacji między klientem i serwerem są podpisane i szyfrowane. Domyślnie, nazwa użytkownika i hasło podane przez klienta są używane do logowania się do prawidłowego konta Windows. Ten przykład jest oparty na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). W tym przykładzie składa się z konsoli programu klienckiego (Client.exe) i Biblioteka usługi (Service.dll) hostowanej przez Internetowe usługi informacyjne (IIS). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".  
@@ -19,9 +19,9 @@ Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z pro
   
  Niniejszy przykład pokazuje, również:  
   
--   Domyślne mapowania konta Windows tak, aby autoryzacji dodatkowe, które mogą być wykonywane.  
+- Domyślne mapowania konta Windows tak, aby autoryzacji dodatkowe, które mogą być wykonywane.  
   
--   Jak uzyskać dostęp do informacji o tożsamości wywołującego z kodem usługi.  
+- Jak uzyskać dostęp do informacji o tożsamości wywołującego z kodem usługi.  
   
  Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, która jest zdefiniowana za pomocą pliku konfiguracji Web.config. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), którego wartość domyślna to korzystanie z zabezpieczeń komunikatów. W tym przykładzie ustawia standard [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) do korzystania z uwierzytelniania nazwy użytkownika klienta. Zachowanie Określa, czy poświadczenia użytkownika mają być używane do uwierzytelniania usługi. Certyfikat serwera musi zawierać taką samą wartość w polu Nazwa podmiotu jako `findValue` atrybutu w [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -147,7 +147,7 @@ Press <ENTER> to terminate client.
   
  Poniżej zawiera krótkie omówienie różnych sekcji w plikach wsadowych.  
   
--   Utworzenie certyfikatu serwera  
+- Utworzenie certyfikatu serwera  
   
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany.  
   
@@ -163,7 +163,7 @@ Press <ENTER> to terminate client.
   
      % Zmienna % nazwa_serwera Określa nazwę serwera. Certyfikat jest przechowywany w magazynie LocalMachine. Jeśli plik wsadowy Setup.bat jest uruchamiany z nieprawidłowym argumentem usługi (takie jak `setup.bat service`) nazwa_serwera % zawiera w pełni kwalifikowana nazwa domeny komputera.  W przeciwnym razie wartość domyślna hosta lokalnego.  
   
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta  
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta  
   
      Następujący wiersz kopiuje certyfikatu serwera w magazynie zaufanych osób klienta. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
   
@@ -171,7 +171,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Przyznawanie uprawnień do klucza prywatnego certyfikatu  
+- Przyznawanie uprawnień do klucza prywatnego certyfikatu  
   
      Następujące wiersze w pliku wsadowym Setup.bat upewnij certyfikatu serwera, przechowywane w magazynie LocalMachine dostępny [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proces roboczy.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
--   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+- Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
     > [!NOTE]
     >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

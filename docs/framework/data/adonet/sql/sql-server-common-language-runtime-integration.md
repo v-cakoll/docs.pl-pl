@@ -3,11 +3,11 @@ title: Integracja aparatu plików wykonywalnych języka wspólnego z programem S
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876346"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integracja aparatu plików wykonywalnych języka wspólnego z programem SQL Server
 SQL Server 2005 wprowadzono integrację składnika wspólnego języka wspólnego (CLR) programu .NET Framework dla programu Microsoft Windows. Oznacza to, że można napisać procedury składowane, wyzwalacze, typy zdefiniowane przez użytkownika, funkcje zdefiniowane przez użytkownika, agregacje zdefiniowane przez użytkownika i przesyłania strumieniowego funkcji z wartościami przechowywanymi w tabeli przy użyciu dowolnego języka .NET Framework, w tym programu Microsoft Visual Basic .NET i Microsoft Visual C#. <xref:Microsoft.SqlServer.Server> Przestrzeń nazw zawiera zestaw nowych interfejsów programowania aplikacji (API), aby kod zarządzany może wchodzić w interakcje ze środowiskiem programu Microsoft SQL Server.  

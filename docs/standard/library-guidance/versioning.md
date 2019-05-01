@@ -5,17 +5,17 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
 ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909779"
 ---
-# <a name="versioning"></a>Obsługa wersji
+# <a name="versioning"></a>Przechowywanie wersji
 
 Biblioteka oprogramowania rzadko zakończeniu w wersji 1.0. Dobre bibliotek z czasem ewoluować, dodawanie funkcji, naprawianie błędów i poprawę wydajności. Należy pamiętać, że można zwolnić nowe wersje biblioteki .NET, zapewniając dodatkową wartość z każdą wersją, bez przerywania istniejących użytkowników.
 
-## <a name="breaking-changes"></a>Zmiany powodujące niezgodność
+## <a name="breaking-changes"></a>Fundamentalne zmiany
 
 Aby uzyskać informacje na temat przełomowych zmian między wersjami obsługi, zobacz [istotne zmiany w](./breaking-changes.md).
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
 ms.openlocfilehash: 0d1aee4650ea29083348af482e445011289e9581
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794969"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Atrybuty kontrolujące serializację XML
 Można zastosować atrybuty w poniższej tabeli do klas i składowych klasy do kontrolowania sposobu, w którym <xref:System.Xml.Serialization.XmlSerializer> serializuje i deserializuje wystąpienia klasy. Aby dowiedzieć się, jak te atrybuty kontrolować serializacji XML, zobacz [kontrolowanie atrybutów za pomocą serializacji XML](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  

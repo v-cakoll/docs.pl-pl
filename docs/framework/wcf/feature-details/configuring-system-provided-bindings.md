@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857418"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurowanie powiązań dostarczanych przez system
 Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i określają, jak połączyć się z punktem końcowym. Powiązania składają się z elementów, które określają, jak kanałów Windows Communication Foundation (WCF) są warstwowe się zapewnienie funkcji na wymaganą komunikację. Powiązanie zawiera trzy rodzaje elementów:  
   
--   Elementy powiązania kanału protokołu, które określają zabezpieczeń, niezawodności, ustawieniach przepływu kontekstu lub protokołów zdefiniowanych przez użytkownika za pomocą wiadomości, które są wysyłane do punktu końcowego.  
+- Elementy powiązania kanału protokołu, które określają zabezpieczeń, niezawodności, ustawieniach przepływu kontekstu lub protokołów zdefiniowanych przez użytkownika za pomocą wiadomości, które są wysyłane do punktu końcowego.  
   
--   Kanał elementy powiązania transportu, które określają podstawową transport protokół do użycia podczas wysyłania wiadomości do punktu końcowego, na przykład, TCP lub HTTP.  
+- Kanał elementy powiązania transportu, które określają podstawową transport protokół do użycia podczas wysyłania wiadomości do punktu końcowego, na przykład, TCP lub HTTP.  
   
--   Elementy powiązania, które określają kodowanie o komunikacji sieciowej na potrzeby wiadomości, które są wysyłane do punktu końcowego, na przykład, text/XML, binarne, kodowania komunikatu lub komunikat transmisji optymalizacji mechanizm (MTOM).  
+- Elementy powiązania, które określają kodowanie o komunikacji sieciowej na potrzeby wiadomości, które są wysyłane do punktu końcowego, na przykład, text/XML, binarne, kodowania komunikatu lub komunikat transmisji optymalizacji mechanizm (MTOM).  
   
  W tym temacie przedstawiono wszystkie powiązania dostarczane przez system Windows Communication Foundation (WCF). Jeśli nie spełnia żadnego z tych dokładnych wymaganiach dla aplikacji, można utworzyć powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding> klasy. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
@@ -56,11 +56,11 @@ Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i 
 |<xref:System.ServiceModel.BasicHttpBinding>|1.1 profilu podstawowego|(Brak), mieszane transportu, wiadomości,|Brak, (Brak)|(Brak)|n/d|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Brak, Transport, (komunikat) mieszane|(Brak), Transport, niezawodnej sesji|Tak (Brak)|n/d|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|Brak, Transport, (komunikat) mieszane|(Brak), Transport, niezawodnej sesji|Tak (Brak)|n/d|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Brak (komunikat)|(Niezawodnej sesji)|Tak (Brak)|Yes|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Brak (komunikat)|(Niezawodnej sesji)|Tak (Brak)|Tak|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Brak (komunikat) mieszane|(Brak), niezawodnej sesji|Tak (Brak)|Nie|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Brak (komunikat) mieszane|(Brak), niezawodnej sesji|Tak (Brak)|Nie|  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|Brak, (transportu), wiadomości,<br /><br /> Mieszane|Sesja niezawodna (transportu)|Tak (Brak)|Yes|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Brak,<br /><br /> (Transportu)|Brak (transportu)|Tak (Brak)|Tak|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Brak,<br /><br /> (Transportu)|Brak (transportu)|Tak (Brak)|Yes|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Brak, komunikat (transportu), zarówno|(Brak)|Tak (Brak)|Nie|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Elementu równorzędnego|Mieszane None, komunikat (transportu)|(Brak)|(Brak)|Tak|  
 |<xref:System.ServiceModel.WebHttpBinding>|.Net|None, Transport, TransportCredentialOnly|(Brak)|(Brak)|n/d|  

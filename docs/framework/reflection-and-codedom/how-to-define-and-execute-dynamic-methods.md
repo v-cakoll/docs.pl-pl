@@ -12,11 +12,11 @@ ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793240"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Instrukcje: Definiowanie i wykonywanie metod dynamicznych
 Poniższe procedury pokazują, jak zdefiniować i wykonać prostą metodę dynamiczną i metodę dynamiczną, która jest powiązana z wystąpienia klasy. Aby uzyskać więcej informacji na temat metod dynamicznych, zobacz <xref:System.Reflection.Emit.DynamicMethod> klasy i [odbicia emitowanie dynamicznych scenariusze metod](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
@@ -116,11 +116,11 @@ Poniższe procedury pokazują, jak zdefiniować i wykonać prostą metodę dynam
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
+- Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
   
--   Nie odwołania do zestawu dodatkowe są wymagane.  
+- Nie odwołania do zestawu dodatkowe są wymagane.  
   
--   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
+- Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
 

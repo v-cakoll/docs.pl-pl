@@ -3,82 +3,82 @@ title: Narzędzia
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780747"
 ---
 # <a name="tools"></a>Narzędzia
-W tym temacie wymieniono wszystkie wyjątki generowane przez narzędzia Windows Communication Foundation (WCF).  
+Ten temat zawiera listę wszystkich wyjątków generowanych przez narzędzia Windows Communication Foundation (WCF).  
   
-## <a name="exception-list"></a>Listy wyjątków  
+## <a name="exception-list"></a>Lista wyjątków  
   
 |Kod zasobu|Ciąg zasobu|  
 |-------------------|---------------------|  
 |ParametersTarget|\<enum>|  
 |ParametersToolConfig|\<configFile>|  
-|ErrInvalidPath|Określony jest nieprawidłową ścieżkę. Sprawdź właściwość określonego argumentu.|  
+|ErrInvalidPath|Określony jest nieprawidłową ścieżką. Sprawdź określony argument.|  
 |ParametersReference|\<Ścieżka pliku >|  
-|WrnCannotLoadConfigFileForValidation|Wystąpił błąd podczas przetwarzania pliku konfiguracji z określonej lokalizacji. Nie można sprawdzić poprawności usług, które są zdefiniowane w tym pliku konfiguracji.|  
-|MoreHelp|Aby uzyskać pomoc wpisz "svcutil" z określonymi argumentami.|  
-|HelpMergeConfig|Powoduje, że wygenerowany konfiguracji do scalenia do istniejącego pliku zamiast zastępowanie istniejącego pliku.|  
+|WrnCannotLoadConfigFileForValidation|Wystąpił błąd podczas przetwarzania pliku konfiguracji z określonej lokalizacji. Nie można zweryfikować usług, które są zdefiniowane w tym pliku konfiguracji.|  
+|MoreHelp|Aby uzyskać dodatkową pomoc wpisz "svcutil /" z określonymi argumentami.|  
+|HelpMergeConfig|Powoduje, że wygenerowaną konfigurację do scalenia do istniejącego pliku zamiast nadpisywać istniejący plik.|  
 |ErrCannotWriteFile|Nie można zapisać do pliku wyjściowego.|  
-|ErrInvalidNamespaceArgument|Określona wartość nieprawidłowa został przekazany do określonej opcji. Określ rozdzielaną przecinkami docelowej przestrzeni nazw i para przestrzeni nazw CLR.|  
+|ErrInvalidNamespaceArgument|Określona nieprawidłowa wartość został przekazany do określoną opcję. Określ rozdzielaną przecinkami docelowego obszaru nazw i pary nazw środowiska CLR.|  
 |HelpImportXmlType|Konfiguruje serializator DataContract do importowania typów innych niż typ jako typów IXmlSerializable.|  
-|ErrExclusiveOptionsSpecified|Nie można użyć określonej opcji, gdy określono określona opcja.|  
-|WrnHttpGetFailed|Błąd pobrania HTTP z określonym identyfikatorem URI.|  
+|ErrExclusiveOptionsSpecified|Nie można użyć określonej opcji, gdy określono określoną opcję.|  
+|WrnHttpGetFailed|Błąd Pobierz HTTP przy użyciu określonego identyfikatora URI.|  
 |ErrInputFileNotAssemblyOrMetadata|Nie ma pliku w określonej lokalizacji odczytać za pomocą określonego argumentu wejściowego pliku XML metadanych lub prawidłowy zestaw.|  
 |WrnUnknownMetadataFound|Nie można zapisać dokumentu Nierozpoznane metadane określonego typu.|  
-|ErrDirectoryContainsInvalidCharacters|Określona wartość nieprawidłowa został przekazany do określonej opcji. Określony znak jest niedozwolone w ścieżce.|  
-|WrnCannotResolveServiceForValidation|Nie można załadować usługi za pomocą określonego configName. Aby sprawdzić poprawność usługi, podaj zarówno zestaw zawierający typ usługi, jak i plik wykonywalny z konfiguracją dla tej usługi.|  
+|ErrDirectoryContainsInvalidCharacters|Określona nieprawidłowa wartość został przekazany do określoną opcję. Określony znak jest niedozwolona w ścieżce.|  
+|WrnCannotResolveServiceForValidation|Nie można załadować usługi za pomocą określonego configName. Aby sprawdzić działanie usługi, należy podać zarówno zestaw, który zawiera typ usługi, jak i plik wykonywalny z konfiguracją dla tej usługi.|  
 |ErrUnexpectedValue|Określona opcja nie obsługuje żadnych wartości.|  
 |#InvalidArg|Określony zawiera nieprawidłowy argument.|  
-|ParametersExcludeType|\<Typ >|  
-|HelpXmlSerializer|Generowanie typów danych, które używają XmlSerializer do serializacji i deserializacji.|  
+|ParametersExcludeType|\<type>|  
+|HelpXmlSerializer|Generuj typy danych używające serializatora XmlSerializer w ramach serializacji i deserializacji.|  
 |#|---------------------------------------------------------------------------------------------------------------------=|  
 |ErrUnexpectedError|Wystąpił błąd w narzędziu.|  
-|HelpNologo|Komunikat o prawach autorskich oraz transparent zostało pominięte.|  
-|ErrInputConflictsWithTarget|Typ wejściowy odczytu z określonego nie jest obsługiwana z opcją określonego równa określonej wartości.|  
-|WrnCannotLoadServiceForExport|Wystąpił błąd podczas ładowania typu usługi do wyeksportowania.|  
+|HelpNologo|Nie jest wyświetlany komunikat o prawach autorskich i baneru.|  
+|ErrInputConflictsWithTarget|Odczyt wejścia z określonego typu nie jest obsługiwany z określoną opcję równa określonej wartości.|  
+|WrnCannotLoadServiceForExport|Wystąpił błąd podczas ładowania typ usługi do wyeksportowania.|  
 |HelpMetadataDownloadCategory|-= POBIERANIE METADANYCH =-|  
-|WrnNoServiceContractTypes|Nie można wygenerować typy XmlSerializer dla określonego zestawu. Nie znaleziono żadnych typów kontraktu usługi.|  
-|WrnCouldNotLoadTypesFromReferenceAssemblyAt|Wystąpił błąd podczas ładowania typów w zestawie, do którego został załadowany z określonego. Niektóre typy w zestawie nie może zostać załadowany i nie są dostępne do narzędzia.|  
-|ErrDirectoryPointsToAFile|Określona wartość nieprawidłowa został przekazany do określonej opcji. Określona wartość jest ścieżka do pliku.|  
+|WrnNoServiceContractTypes|Nie można wygenerować typy elementu XmlSerializer dla określonego zestawu. Nie znaleziono żadnych typów kontraktu usługi.|  
+|WrnCouldNotLoadTypesFromReferenceAssemblyAt|Wystąpił błąd podczas ładowania typów w zestawie, który został załadowany z określonego. Niektóre typy w zestawie nie może zostać załadowany i nie są dostępne do narzędzia.|  
+|ErrDirectoryPointsToAFile|Określona nieprawidłowa wartość został przekazany do określoną opcję. Określona wartość jest ścieżka do pliku.|  
 |Błąd|Błąd:|  
-|ErrDuplicateReferenceValues|Określony zestaw został załadowany, dwukrotnie przy użyciu określonej opcji. Zestawu może być tylko odwołanie jednokrotnie.|  
-|WrnNoXmlSerializerOperationBehavior|Nie można wygenerować XmlSerializer dla określonego zestawu. Nie kontraktu usługi w zestawie ma operację, podając XmlSerializerOperationBehavior.|  
+|ErrDuplicateReferenceValues|Określony zestaw został załadowany, dwa razy, używając określoną opcję. Zestawu może być tylko odwołania jeden raz.|  
+|WrnNoXmlSerializerOperationBehavior|Nie można wygenerować elementu XmlSerializer dla określonego zestawu. Nie kontraktu usługi w zestawie ma operację, używając XmlSerializerOperationBehavior.|  
 |ErrCannotCreateDirectory|Nie można utworzyć określonego katalogu.|  
 |ErrCouldNotLoadTypesFromAssemblyAt|Nie można załadować żadnych typów w określonym zestawie.|  
 |ErrUnknownSwitch|Określony przełącznik jest nierozpoznaną opcję.|  
-|logo|Logo narzędzia jest "Microsoft® narzędzia modelu usług metadanych" z wersją.|  
-|NoCodeWasGenerated|Nie wygenerowano kodu.<br /><br /> Jeśli chcesz wygenerować klient, może to być spowodowane dokumentów metadanych nie zawiera żadnych prawidłowych umów lub usług<br /><br /> lub ponieważ wszystkie kontrakty/usługi zostały odnalezione w zestawy referencyjne występują. Sprawdź wszystkich dokumentów metadanych został przekazany do narzędzia.|  
-|WrnUnableToLoadContractForSGen|Wystąpił błąd podczas ładowania typu kontraktu. Nie można wygenerować typu XmlSerializer dla tego kontraktu. Określony typ i szczegóły.|  
-|WrnOptionConflictsWithInput|Nie można użyć określonej opcji z wielu zestawów wejściowych. Określona opcja została zignorowana.|  
+|Logo|Logo narzędzia jest "Narzędzia firmy Microsoft® Service Model metadanych" wersją.|  
+|NoCodeWasGenerated|Wygenerowano żadnego kodu.<br /><br /> Jeśli próbowano wygenerować klienta, może to być spowodowane przez dokumenty metadanych nie zawiera żadnych prawidłowych kontraktów lub usług<br /><br /> lub, ponieważ wszystkie kontrakty/usługi zostały odnalezione jako istniejące w zestawach referencyjnych. Sprawdź przekazano wszystkie dokumenty metadanych do narzędzia.|  
+|WrnUnableToLoadContractForSGen|Wystąpił błąd podczas ładowania typu kontraktu. Nie można wygenerować typu elementu XmlSerializer dla tego kontraktu. Określony typ i szczegółowe informacje.|  
+|WrnOptionConflictsWithInput|Nie można używać określoną opcję z wielu zestawów danych wejściowych. Określona opcja jest ignorowana.|  
 |ErrUnableToImportMetadata|Wystąpił błąd krytyczny podczas próby zaimportowania metadanych.|  
-|ErrInvalidSerializer|Określona opcja przekazano wartość serializator jest nieprawidłowy. Określono obsługiwanych serializatorów.|  
+|ErrInvalidSerializer|Nieprawidłowa wartość serializatora został przekazany do określoną opcję. Obsługiwane serializatory są określone.|  
 |SavingDownloadedMetadata|Zapisywanie metadanych pobranych plików...|  
-|WrnNoConfigForServices|Żaden zestawów przekazany nie był pliki wykonywalne z pliku konfiguracji lub Brak konfiguracji usług plików znajdujących się o nazwie określonej konfiguracji.|  
-|ErrInputConflictsWithOption|Nie można użyć danych wejściowych z określonego do odczytu z opcją określony, ponieważ ich pociąga za sobą różne tryby pracy narzędzia.|  
+|WrnNoConfigForServices|Brak zestawów przekazywane były pliki wykonywalne z pliku konfiguracji lub brak usług pliki znajdujące się w konfiguracji o nazwie określonej konfiguracji.|  
+|ErrInputConflictsWithOption|Dane wejściowe odczytane z określonego nie można używać z określoną opcję, ponieważ oznaczają inne tryby działania narzędzia.|  
 |ErrUnableToExportEndpoints|Wystąpił błąd podczas eksportowania określonego typu.|  
-|ErrInputSchemaParseError|Wystąpił błąd analizy schemat XML podczas odczytywania określonego. Sprawdź, czy plik XML jest poprawnie sformułowany i prawidłowe.|  
-|ErrInputPolicyParseError|Podczas odczytywania określonego wystąpił błąd podczas analizowania WS-Policy. Sprawdź, czy plik XML jest poprawnie sformułowany i prawidłowe.|  
-|ErrUnableToLoadReferenceType|Wystąpił błąd podczas ładowania typu kontraktu do którego istnieje odwołanie. Ten typ określony jest ignorowana.|  
-|WrnCannotLoadServiceForValidation|Wystąpił błąd podczas ładowania usługi do sprawdzenia poprawności. Określony typ i szczegóły.|  
+|ErrInputSchemaParseError|Wystąpił błąd analizy schematu XML podczas odczytu określonego. Sprawdź, czy kod XML jest dobrze sformułowany i prawidłowy.|  
+|ErrInputPolicyParseError|Wystąpił błąd analizy zasad WS podczas odczytu określonego. Sprawdź, czy kod XML jest dobrze sformułowany i prawidłowy.|  
+|ErrUnableToLoadReferenceType|Wystąpił błąd podczas ładowania typu odwołania kontraktu. Ten określony typ jest ignorowane.|  
+|WrnCannotLoadServiceForValidation|Wystąpił błąd podczas ładowania usługi, który ma zostać zweryfikowana. Określony typ i szczegółowe informacje.|  
 |HelpCodeGenerationCategory|-= GENEROWANIE KODU =-|  
-|RetreivingMetadataWithMexAndDisco|Próba pobrania metadanych z określonego za pomocą usługi WS-Metadata Exchange lub DISCO.|  
+|RetreivingMetadataWithMexAndDisco|Próba pobrania metadanych z określonego za pomocą usługi WS-Metadata Exchange lub NAJDYWANIA.|  
 |ErrGeneralSchemaValidation|Wystąpił błąd podczas weryfikacji schematów XML, które zostały wygenerowane podczas eksportowania.|  
 |ParametersDirectory|\<directory>|  
-|ErrCannotLoadSpecifiedType|Typ nie może być załadowany dla określonej wartości, który został przekazany do określonej opcji. Upewnij się, że tego typu należy do zestawu został określony przy użyciu określonej opcji.|  
-|ErrOptionModeConflict|Określona opcja nie można używać z określona opcja, ponieważ ich oznacza dane wyjściowe różnych typów.|  
+|ErrCannotLoadSpecifiedType|Brak typu mogą zostać załadowane dla określonej wartości, który został przekazany do określoną opcję. Upewnij się, czy zestawu, do której należy ten typ jest określony, przy użyciu określonej opcji.|  
+|ErrOptionModeConflict|Nie można używać określoną opcję z określoną opcję, ponieważ oznaczają inne typy wyjściowe.|  
 |ErrIsNotAnAssembly|Nie można załadować określonego zestawu. Sprawdź, czy ten plik jest zestawem .NET.|  
-|ErrInputConflictsWithMode|Dane wejściowe z określonego do odczytu jest niespójny z innymi opcjami.|  
-|ErrDuplicateValuePassedToTypeArg|Określona wartość został przekazany do określoną opcję wiele razy. Każdy typ można określić tylko raz.|  
-|ErrInputEPRFileParseError|Nie można odczytać odwołania do punktu końcowego z określonego. Sprawdź, czy plik XML jest poprawnie sformułowany i prawidłowe.|  
-|ErrCouldNotCreateCodeProvider|Nie można utworzyć dostawcy kodu dla określonej wartości, który został przekazany do /{1} argumentu. Sprawdź dostawcę kodu jest poprawnie zainstalowana i skonfigurowana.|  
-|ErrPathTooLongDirOnly|Wynikowe określona ścieżka jest za długa. Przejrzyj określonego argumentu.|  
-|HelpDataContractSerializer|Generowanie typów danych, które używają serializator DataContract do serializacji i deserializacji.|  
-|ErrUnableToExportEndpoint|Wystąpił błąd podczas eksportowania Nazwa punktu końcowego określona w określonej przestrzeni nazw w znaleziono w pliku konfiguracyjnym załadowany dla zestawu typu określonej usługi.|  
+|ErrInputConflictsWithMode|Dane wejściowe odczytane z określonego jest niespójny z innymi opcjami.|  
+|ErrDuplicateValuePassedToTypeArg|Określona wartość została przekazana do opcji/określony wiele razy. Każdy typ można określić tylko raz.|  
+|ErrInputEPRFileParseError|Nie można odczytać odwołania do punktu końcowego z określonego. Sprawdź, czy kod XML jest dobrze sformułowany i prawidłowy.|  
+|ErrCouldNotCreateCodeProvider|Nie można utworzyć dostawcy kodu dla określonej wartości, która została przekazana /{1} argumentu. Sprawdź, czy zainstalowano i skonfigurowano dostawcy kodu.|  
+|ErrPathTooLongDirOnly|Wynikowe określona ścieżka jest za długa. Przejrzyj określony argument.|  
+|HelpDataContractSerializer|Generuj typy danych używające serializatora DataContract do serializacji i deserializacji.|  
+|ErrUnableToExportEndpoint|Wystąpił błąd podczas eksportowania z nazwą wskazany punkt końcowy w określonej przestrzeni nazw w określonym typie znalezione w pliku konfiguracyjnym ładowane do zestawu.|  
 |HelpUsage1|Wyświetla Pomoc użycia.|  
 |HelpUsage2|Wyświetla Pomoc użycia.|  
 |HelpUsage3|Wyświetla Pomoc użycia.|  
@@ -86,63 +86,63 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez narzędzia Windows 
 |HelpUsage5|Wyświetla Pomoc użycia.|  
 |ErrDirectoryNotFound|Nie można odnaleźć określonego katalogu. Sprawdź, czy katalog istnieje i czy masz odpowiednie uprawnienia do jego odczytu.|  
 |ErrUnableToLoadFile|Nie można odczytać określonego pliku.|  
-|ErrNoFilesFound|Określona ścieżka wejściowa nie można znaleźć wszystkie istniejące pliki.|  
+|ErrNoFilesFound|Określona ścieżka wejściowa nie wydaje się odwoływać do żadnych istniejących plików.|  
 |ParametersConfig|\<configFile>|  
-|ErrDirectoryInsteadOfFile|Określona ścieżka wejściowa wydaje się być katalogiem. Dane wejściowe muszą być adresy URL lub ścieżki pliku.|  
-|HelpConfig|Powoduje, że narzędzia do generowania pliku konfiguracji o podanej nazwie. Domyślne: output.config.|  
+|ErrDirectoryInsteadOfFile|Określona ścieżka wejściowa wydaje się być katalogiem. Dane wejściowe muszą być adresami URL lub ścieżkami do plików.|  
+|HelpConfig|Powoduje, że narzędzia, aby wygenerować plik konfiguracji o podanej nazwie. Domyślne: output.config.|  
 |ErrSingleUseSwitch|Nie można określić opcji określony wiele razy.|  
 |Ostrzeżenie|Ostrzeżenie:|  
-|WrnAmbiguousServiceConfig|Odnaleziono wiele konfiguracji usługi o nazwie określonej konfiguracji, są określone następujące zestawy.|  
-|ErrInvalidInputPath|Określona ścieżka wejściowa nie można znaleźć wszystkie istniejące pliki i prawdopodobnie nie jest prawidłowym identyfikatorem URI.|  
-|ErrUnableToLoadInputs|Wystąpił błąd podczas odczytywania metadanych załadowany.|  
-|GeneratingSerializer|Trwa generowanie serializatorów XML...|  
-|HelpToolConfig|Plik konfiguracji niestandardowej do użycia zamiast pliku konfiguracji aplikacji. To umożliwia zmianę konfiguracji metadanych lub zarejestrować bez modyfikacji pliku konfiguracji narzędzia konfiguracji rozszerzenia.|  
-|ErrValidateInvalidUse|Określona opcja nie można używać z określoną opcję.|  
-|WrnWSMExFailed|Błąd WS-Metadata Exchange określonego identyfikatora URI.|  
+|WrnAmbiguousServiceConfig|Znaleziono wiele konfiguracji usługi o nazwie określonej konfiguracji następujące zestawy są określone.|  
+|ErrInvalidInputPath|Określona ścieżka wejściowa nie wydaje się odwoływać do żadnych istniejących plików i prawdopodobnie nie jest prawidłowym identyfikatorem URI.|  
+|ErrUnableToLoadInputs|Wystąpił błąd podczas odczytu załadowanych metadanych.|  
+|GeneratingSerializer|Trwa generowanie serializatory XML...|  
+|HelpToolConfig|Plik konfiguracji niestandardowej, należy użyć zamiast pliku konfiguracji aplikacji. To można zmienić konfigurację metadanych lub zarejestruj rozszerzenia konfiguracji bez zmiany pliku konfiguracji tego narzędzia.|  
+|ErrValidateInvalidUse|Nie można używać określoną opcję z określoną opcję.|  
+|WrnWSMExFailed|Wystąpił błąd podczas wymiany protokołu WS-Metadata przy użyciu określonego identyfikatora URI.|  
 |HelpNoconfig|Nie generują konfiguracji.|  
-|HelpCodeGenerationDescription|Określony może spowodować wygenerowanie usługi kontrakty, klientów i typy danych dokumentów metadanych.|  
-|HelpTargetMetadata|Metadane w danych wyjściowych. Jeśli dane wejściowe jest adres URL, Svcutil.exe metadanych jest zapisywany na dysku i nie powoduje generowania kodu. Jeśli dane wejściowe jest jeden lub więcej zestawów, Svcutil.exe generuje metadanych z typów w zestawach.|  
-|ErrAmbiguousOptionModeConflict|Określona opcja koliduje z innymi opcjami. Przeglądanie tego użycia narzędzia.|  
-|ErrNotLanguageOrCodeDomType|Określona wartość, który został przekazany do określonego argumentu nie odpowiada zdefiniowanych języka i nie można załadować jako typu CLR w pełni kwalifikowana.|  
-|ErrUnableToUniquifyFilename|Nie można utworzyć pliku wyjściowego. Zbyt wiele plików tworzonych z określonym prefiksem.|  
-|ErrCannotCreateFile|Nie można utworzyć określony plik wyjściowy.|  
-|ErrExpectedValue|Określona opcja wymaga określenia wartości.|  
-|ErrCannotDisambiguateSpecifiedTypes|Więcej niż jeden typ o takiej samej nazwie istnieje w zestawie zestawów występujących w odwołaniach. Umożliwia rozróżnianie między określonych typów określona opcja kwalifikowana nazwa zestawu.|  
-|RetreivingMetadataWithMexOnly|Próba pobrania metadanych z określonej lokalizacji za pomocą usługi WS-Metadata Exchange. Ten adres URL nie obsługuje DISCO.|  
-|ErrInvalidTarget|Określony element docelowy jest nieprawidłowy, gdy określona za pomocą określonej opcji. Obsługiwane elementy docelowe zostały określone.|  
-|ErrPathTooLong|Wynikowe ścieżka jest za długa. Przejrzyj określonych argumentów.|  
+|HelpCodeGenerationDescription|Określony może generować usługi kontrakty, klientów i typy danych z dokumentów metadanych.|  
+|HelpTargetMetadata|Metadane wyjściowe. Jeśli dane wejściowe jest adres URL, Svcutil.exe zapisuje metadane na dysku i nie generuje kodu. Jeśli dane wejściowe są jeden lub więcej zestawów, Svcutil.exe generuje metadanych z typów w zestawach.|  
+|ErrAmbiguousOptionModeConflict|Określona opcja konflikty z innymi opcjami. Sprawdź sposób korzystania z narzędzia.|  
+|ErrNotLanguageOrCodeDomType|Określona wartość, która została przekazana do określonego argumentu nie reprezentuje zdefiniowanego języka i nie można załadować jako w pełni kwalifikowanego typu CLR.|  
+|ErrUnableToUniquifyFilename|Nie można utworzyć nazwy pliku wyjściowego. Zbyt wiele plików jest tworzonych za pomocą określonego prefiksu.|  
+|ErrCannotCreateFile|Nie można utworzyć pliku określonym produktem wyjściowym.|  
+|ErrExpectedValue|Określona opcja wymaga, należy określić wartość.|  
+|ErrCannotDisambiguateSpecifiedTypes|Istnieje więcej niż jeden typ o takiej samej nazwie w zbiorze przywoływanych zestawów. Użyj nazw kwalifikowanych dla zestawu rozróżnienie między określonych typów określonej opcji.|  
+|RetreivingMetadataWithMexOnly|Próba pobrania metadanych z określonej lokalizacji za pomocą usługi WS-Metadata Exchange. Ten adres URL nie obsługuje NAJDYWANIA.|  
+|ErrInvalidTarget|Określony obiekt docelowy jest nieprawidłowy, gdy określona za pomocą określoną opcję. Obsługiwane obiekty docelowe są określone.|  
+|ErrPathTooLong|Ścieżka wynikowa jest za długa. Przejrzyj określonych argumentów.|  
 |HelpCommonOptionsCategory|-= TYPOWE OPCJE =-|  
 |ParametersServiceName|\<serviceConfigName>|  
-|ErrNoValidInputFilesSpecified|Nie prawidłowy określono plików wejściowych. Określ dokumentów metadanych lub zestawu plików.|  
+|ErrNoValidInputFilesSpecified|Nie określono prawidłowych plików wejściowych. Określ dokumentów metadanych lub zestawu plików.|  
 |ParametersLanguage|\<język >|  
-|ErrUnableToLoadMetadataDocument|Wystąpił błąd podczas odczytywania metadanych z jednego z załadować dokumentów. Identyfikator dokumentu jest określona.|  
-|ErrConflictingInputs|Określony argument wejściowy jest w konflikcie z określony, ponieważ ich pociąga za sobą różne tryby pracy narzędzia.|  
-|WrnUnableToLoadContractForValidation|Wystąpił błąd podczas ładowania typu kontraktu. Określony typ i szczegóły.|  
-|WrnAttributeReflectionErrors|Atrybut odbicia nie powiodło się dla niektórych typów w zestawie, które zostały załadowane z określonego. Sprawdź, czy ten można załadować zestawu z tej lokalizacji z uprawnieniami prawa zabezpieczeń.|  
+|ErrUnableToLoadMetadataDocument|Wystąpił błąd podczas odczytywania metadanych z jednego z załadowanych dokumentów. Określono identyfikator dokumentu.|  
+|ErrConflictingInputs|Określony argument wejściowy wystąpił konflikt między określony, ponieważ oznaczają inne tryby działania narzędzia.|  
+|WrnUnableToLoadContractForValidation|Wystąpił błąd podczas ładowania typu kontraktu. Określony typ i szczegółowe informacje.|  
+|WrnAttributeReflectionErrors|Atrybut odbicia nie powiodła się dla niektórych typów w zestawie, które zostały załadowane z określonego. Sprawdź, czy tego zestawu można załadować z tej lokalizacji z uprawnieniami zabezpieczeń prawo.|  
 |HelpMetadataExportCategory|-= EKSPORTOWANIE METADANYCH =-|  
-|HelpValidationCategory|-= WERYFIKACJA USŁUG =-|  
+|HelpValidationCategory|-= WALIDACJA USŁUG =-|  
 |ValidationError|Błąd sprawdzania poprawności:|  
-|GeneratingFiles|Generowanie plików...|  
-|ErrCannotSpecifyMultipleMappingsForNamespace|Nieprawidłowa wartość została przekazana do określonej opcji. Określony docelowy obszar nazw nie można zamapować na wiele nazw CLR określone.|  
-|ErrCouldNotLoadReferenceAssemblyAt|Nie można załadować zestawu określonego odwołania.|  
-|ParametersOut|\<Plik >|  
-|NoCodeWasGeneratedSuggestDCOnly|Aby wygenerować kontraktów na podstawie schematów, opcja określony.|  
+|GeneratingFiles|Trwa generowanie plików...|  
+|ErrCannotSpecifyMultipleMappingsForNamespace|Nieprawidłowa wartość został przekazany do określoną opcję. Nie można zamapować określonego docelowego obszaru nazw na wiele przestrzeni nazw CLR, jak określono.|  
+|ErrCouldNotLoadReferenceAssemblyAt|Nie można załadować zestawu określone odwołanie.|  
+|ParametersOut|\<file>|  
+|NoCodeWasGeneratedSuggestDCOnly|Aby generować kontrakty od schematów, użyj określoną opcję.|  
 |ErrUnableToLoadInputConfig|Nie można załadować określonego pliku konfiguracji.|  
-|ErrUnexpectedDelimiter|Nieprawidłowy argument ogranicznikiem (":" lub "=") nie można uruchomić opcji.|  
+|ErrUnexpectedDelimiter|Nieprawidłowy argument ogranicznika (":" lub "=") nie można uruchomić opcji.|  
 |ErrMergeConfigUsedWithoutConfig|Nie można użyć opcji określony bez określenia określoną opcję.|  
-|ErrUnableToExportContract|Wystąpił błąd podczas eksportowania umowy z określonego typu.|  
-|GeneratingMetadata|Generowanie plików metadanych...|  
+|ErrUnableToExportContract|Wystąpił błąd podczas eksportowania kontrakt załadowanych z określonego typu.|  
+|GeneratingMetadata|Trwa generowanie plików metadanych...|  
 |ErrNotCodeDomType|Określony typ, który został przekazany do określony argument nie jest określony klasy pochodnej.|  
-|WrnNoTypeForServices|Brak zestawów, które zostały przekazane typów zawartych w niej usługi o nazwie określonej konfiguracji.|  
+|WrnNoTypeForServices|Brak zestawów, które zostały przekazane typy zawarte usługi o nazwie określonej konfiguracji.|  
 |ErrAssemblyLoadFailed|Nie można załadować określonego pliku zestawu. Aby uzyskać więcej informacji, sprawdź FusionLogs.|  
-|NoMetadataWasGenerated|Nie wygenerowano żadnych plików metadanych. Żaden kontrakt usługi zostały wyeksportowane.<br /><br /> Aby wyeksportować usługi, należy użyć określonej opcji. Aby wyeksportować kontraktów danych, należy określić opcję.|  
-|WrnCannotResolveServiceForExport|Nie można załadować usługi za pomocą określonego configName. Aby wyeksportować usługi, należy podać zestaw zawierający typ usługi, jak i plik wykonywalny z konfiguracją dla tej usługi.|  
-|ParametersCollectionType|\<Typ >|  
-|ErrOptionConflictsWithTarget|Użyj określonej opcji nie jest obsługiwana z opcją określonego równa określonej wartości.|  
-|ErrCodegenError|Wystąpił błąd podczas generowania kodu w określonym języku.<br /><br /> Język nie obsługuje wszystkie elementy kodu generowany. Należy użyć innego języka.|  
-|ErrInputWsdlParseError|Podczas odczytywania określonego wystąpił podczas WSDL błąd analizy. Sprawdź, czy plik XML jest poprawnie sformułowany i prawidłowe.|  
+|NoMetadataWasGenerated|Nie wygenerowano żadnych plików metadanych. Wyeksportowano nie kontraktów usług.<br /><br /> Aby wyeksportować usługi, należy użyć określoną opcję. Aby wyeksportować kontraktów danych, określ opcję.|  
+|WrnCannotResolveServiceForExport|Nie można załadować usługi za pomocą określonego configName. Aby wyeksportować usługi, należy podać zestaw, który zawiera typ usługi, jak i plik wykonywalny z konfiguracją dla tej usługi.|  
+|ParametersCollectionType|\<type>|  
+|ErrOptionConflictsWithTarget|Korzystanie z określonej opcji nie jest obsługiwana z określoną opcję równa określonej wartości.|  
+|ErrCodegenError|Wystąpił błąd podczas generowania kodu w wybranym języku.<br /><br /> Język nie obsługuje wszystkie elementy kodu są generowane. Powinien być używany inny język.|  
+|ErrInputWsdlParseError|Wystąpił błąd analizy WSDL podczas odczytu określonego. Sprawdź, czy kod XML jest dobrze sformułowany i prawidłowy.|  
 |ErrCouldNotCreateInstance|Nie można utworzyć wystąpienia określonego typu, który został przekazany do określonego argumentu.|  
 |ParametersNamespace|\<ciąg, ciąg >|  
-|HelpNostdlib|Nie odwołuj się do bibliotek standardowych (domyślnie mscorlib.dll i system.servicemodel.dll odwołują.)|  
-|WrnCannotLoadConfigFileForExport|Wystąpił błąd podczas przetwarzania pliku konfiguracji, który został załadowany z określonego. Nie można załadować usługi, które są zdefiniowane w tym pliku konfiguracji.|  
+|HelpNostdlib|Nie odwołuj się do standardowych bibliotek (domyślnie mscorlib.dll i system.servicemodel.dll są przywoływane.)|  
+|WrnCannotLoadConfigFileForExport|Wystąpił błąd podczas przetwarzania pliku konfiguracji, który został załadowany z określonego. Nie można załadować usług, które są zdefiniowane w tym pliku konfiguracji.|  
 |WrnUnableToLoadContractForExport|Wystąpił błąd podczas ładowania typu kontraktu. Nie można wyeksportować tego określonego typu.|

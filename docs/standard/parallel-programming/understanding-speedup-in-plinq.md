@@ -11,11 +11,11 @@ ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908664"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Ogólne informacje o przyspieszeniach w PLINQ
 Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ do zapytań obiekt, wykonując delegatów zapytania równolegle na komputerach z wielordzeniowymi procesorami. Program PLINQ sprawdza się najlepiej, gdy przetwarzania każdego elementu w kolekcji źródłowej jest niezależne, bez udostępnionego stanu związane między poszczególnych obiektów delegowanych. Operacje takie są wspólne w składniku LINQ do obiektów i PLINQ i są często nazywane "*delightfully równoległe*" ponieważ one nadają się łatwo do planowania w wielu wątkach. Jednak nie wszystkie kwerendy składać się z samych operacji delightfully równoległych; w większości przypadków zapytanie obejmuje niektóre operatory, albo nie może być przeprowadzana równolegle lub który spowolnić wykonywanie równoległe. A nawet w przypadku zapytań, które są całkowicie delightfully równoległego, PLINQ musi nadal partycji źródła danych harmonogramu pracy nad wątków i zazwyczaj scalać wyniki po wykonaniu kwerendy. Wszystkie te operacje dodawania obliczeniową koszty przetwarzania równoległego; te koszty, dodawanie funkcji przetwarzania równoległego, są nazywane *obciążenie*. Aby uzyskać optymalną wydajność w zapytaniu PLINQ, celem jest maksymalne części, które są delightfully równoległe i zminimalizować części, które wymagają narzutu. Ten artykuł zawiera informacje, dzięki którym można tworzyć zapytania PLINQ, które są najbardziej efektywne podczas nadal reaguje poprawne wyniki.  
@@ -74,15 +74,15 @@ Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ do zapytań 
   
  Na poniższej liście opisano kształty zapytanie PLINQ domyślnie będą wykonywane w trybie sekwencyjnego:  
   
--   Zapytania, które zawierają Select, Where, indeksowane indeksowanych SelectMany lub klauzuli ElementAt po operatorze sortowania lub filtrowania, który został usunięty lub przestawiać, oryginalnym indeksów.  
+- Zapytania, które zawierają Select, Where, indeksowane indeksowanych SelectMany lub klauzuli ElementAt po operatorze sortowania lub filtrowania, który został usunięty lub przestawiać, oryginalnym indeksów.  
   
--   Zapytania zawierające Pomiń Take, takewhile —, skipwhile — operator i której indeksów w sekwencji źródłowej nie są w kolejności, oryginalnym.  
+- Zapytania zawierające Pomiń Take, takewhile —, skipwhile — operator i której indeksów w sekwencji źródłowej nie są w kolejności, oryginalnym.  
   
--   Zapytania, które zawierają Zip lub SequenceEquals, chyba że jest to jedno ze źródeł danych i inne źródła danych jest można indeksować zamówiony indeksu (czyli tablicy lub IList(T)).  
+- Zapytania, które zawierają Zip lub SequenceEquals, chyba że jest to jedno ze źródeł danych i inne źródła danych jest można indeksować zamówiony indeksu (czyli tablicy lub IList(T)).  
   
--   Zapytania, które zawierają Concat, chyba że zostanie zastosowany do źródeł danych można indeksować.  
+- Zapytania, które zawierają Concat, chyba że zostanie zastosowany do źródeł danych można indeksować.  
   
--   Zapytania, które zawierają odwrócić, chyba że stosowane do źródła danych można indeksować.  
+- Zapytania, które zawierają odwrócić, chyba że stosowane do źródła danych można indeksować.  
   
 ## <a name="see-also"></a>Zobacz także
 

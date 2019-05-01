@@ -3,11 +3,11 @@ title: Klonowanie a Trwa dołączanie (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
 ms.openlocfilehash: 59ffedfdbb2820683f1e6cc232154688f5c29fc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789106"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Klonowanie a Trwa dołączanie (Visual Basic)
 Podczas dodawania <xref:System.Xml.Linq.XNode> (w tym <xref:System.Xml.Linq.XElement>) lub <xref:System.Xml.Linq.XAttribute> obiekty do nowego drzewa, w przypadku nowej zawartości nie ma elementu nadrzędnego, obiekty, po prostu są dołączone do drzewa XML. Jeśli już nowej zawartości jest elementem nadrzędnym i jest częścią innego drzewa XML, został sklonowany nowej zawartości. Nowo sklonowanego zawartość jest następnie dołączany do drzewa XML.  

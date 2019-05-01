@@ -17,18 +17,18 @@ ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811715"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu jest używany do definiowania tekstowej reprezentacji wartości daty i godziny. Ciągu formatu daty i godziny, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako niestandardowy ciąg daty i godziny formatu; Aby uzyskać więcej informacji, zobacz [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Ciągu formatu standardowego lub niestandardowego można używać na dwa sposoby:  
   
--   Aby zdefiniować ciąg będący wynikiem operacji formatowania.  
+- Aby zdefiniować ciąg będący wynikiem operacji formatowania.  
   
--   Aby zdefiniować tekstową reprezentację wartości daty i godziny, który może zostać przekonwertowany na <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości podczas operacji analizy.  
+- Aby zdefiniować tekstową reprezentację wartości daty i godziny, który może zostać przekonwertowany na <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości podczas operacji analizy.  
 
 > [!TIP]
 >  Możesz pobrać [narzędzie do formatowania](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), aplikację, która umożliwia zastosowanie formatu ciągów liczbowego lub daty i godziny, wartości oraz wyświetlenie ciągu wynikowego.  
@@ -63,17 +63,17 @@ Standardowy format daty i ciągi formatu czasu mogą być używane z obu <xref:S
   
  Jeśli ciąg formatu standardowego w operacji formatowania jest mapowany na ciąg formatu niestandardowego danej kultury, aplikacja może definiować określoną kulturę, której ciągi formatu niestandardowego są używane na jeden z poniższych sposobów:  
   
--   Można użyć domyślnej (bieżącej) kultury. W poniższym przykładzie data jest wyświetlana przy użyciu formatu daty krótkiej dla bieżącej kultury. Bieżącą kulturą jest w tym przypadku kultura en-US.  
+- Można użyć domyślnej (bieżącej) kultury. W poniższym przykładzie data jest wyświetlana przy użyciu formatu daty krótkiej dla bieżącej kultury. Bieżącą kulturą jest w tym przypadku kultura en-US.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   Możesz przekazać <xref:System.Globalization.CultureInfo> obiekt reprezentujący kulturę, której formatowanie ma być używany do metody, która ma <xref:System.IFormatProvider> parametru. W poniższym przykładzie data jest wyświetlana przy użyciu formatu daty krótkiej dla kultury pt-BR.  
+- Możesz przekazać <xref:System.Globalization.CultureInfo> obiekt reprezentujący kulturę, której formatowanie ma być używany do metody, która ma <xref:System.IFormatProvider> parametru. W poniższym przykładzie data jest wyświetlana przy użyciu formatu daty krótkiej dla kultury pt-BR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   Możesz przekazać <xref:System.Globalization.DateTimeFormatInfo> obiekt, który dostarcza informacje o formatowaniu do metody, która ma <xref:System.IFormatProvider> parametru. Poniższy przykład wyświetla datę przy użyciu formatu daty krótkiej z <xref:System.Globalization.DateTimeFormatInfo> obiektu dla kultury hr-HR.  
+- Możesz przekazać <xref:System.Globalization.DateTimeFormatInfo> obiekt, który dostarcza informacje o formatowaniu do metody, która ma <xref:System.IFormatProvider> parametru. Poniższy przykład wyświetla datę przy użyciu formatu daty krótkiej z <xref:System.Globalization.DateTimeFormatInfo> obiektu dla kultury hr-HR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -249,11 +249,11 @@ Standardowy format daty i ciągi formatu czasu mogą być używane z obu <xref:S
   
  Specyfikator formatu standardowego "O" lub "o" (oraz "yyyy '-' MM'-'dd'T' HH': 'mm':'ss '." Ciąg formatu niestandardowego fffffffK") korzysta z trzech sposobów, które ISO 8601 reprezentuje informacje o strefie czasowej, aby zachować <xref:System.DateTime.Kind%2A> właściwość <xref:System.DateTime> wartości:  
   
--   Składnik strefy czasowej <xref:System.DateTimeKind.Local?displayProperty=nameWithType> wartości daty i godziny jest przesunięta względem czasu UTC (na przykład +01: 00, -07:00). Wszystkie <xref:System.DateTimeOffset> wartości również są przedstawiane w tym formacie.  
+- Składnik strefy czasowej <xref:System.DateTimeKind.Local?displayProperty=nameWithType> wartości daty i godziny jest przesunięta względem czasu UTC (na przykład +01: 00, -07:00). Wszystkie <xref:System.DateTimeOffset> wartości również są przedstawiane w tym formacie.  
   
--   Składnik strefy czasowej <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> korzysta z wartości daty i godziny "Z" (która zawiera zero przesunięcie) do reprezentowania UTC.  
+- Składnik strefy czasowej <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> korzysta z wartości daty i godziny "Z" (która zawiera zero przesunięcie) do reprezentowania UTC.  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> wartości daty i godziny nie ma żadnych informacji o strefie czasowej.  
+- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> wartości daty i godziny nie ma żadnych informacji o strefie czasowej.  
   
  Ponieważ specyfikator formatu standardowego "O" lub "o" jest zgodny ze standardem międzynarodowym, formatowania lub analizowania operacji, która zawsze używa specyfikator używana Niezmienna kultura i kalendarz gregoriański.  
   

@@ -12,11 +12,11 @@ ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 628790bb8229dc519589c122235f07a38ba57c1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791578"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
 `raceOnRCWCleanup` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko uruchomieniowe języka wspólnego (CLR) wykryje, że [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) jest używany, gdy wykonywane jest wywołanie, aby zwolnić go przy użyciu polecenia takiego jak <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>metody.  

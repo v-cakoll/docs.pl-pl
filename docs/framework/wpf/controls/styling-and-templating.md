@@ -16,11 +16,11 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791369"
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Tworzenie szablonów i stylów odnoszą się do zestawu funkcji (style, szablony, wyzwalaczy i scenorysów), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualnie atrakcyjne i utworzyć spójny wygląd swojego produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji, aplikacji, silne modelu Tworzenie szablonów i stylów jest niezbędne w celu umożliwienia obsługi i udostępnianie pojawienia się wewnątrz i pomiędzy aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia tego modelu.  

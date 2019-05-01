@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
 ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779135"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Krzywe kardynalne w GDI+
 Krzywa kardynalna jest sekwencją poszczególnych krzywych przyłączone do formularza większych krzywej. Krzywej składanej jest określona przez tablicę punktów i parametrem napięcie. Krzywa kardynalna płynnie przechodzi przez każdy punkt w tablicy; istnieją nie ostre rogi i nie nagłych zmian w szczelność krzywej. Poniższa ilustracja przedstawia zestaw punktów i kardynalna, który przechodzi przez każdy punkt w zestawie.  

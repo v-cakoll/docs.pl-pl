@@ -12,11 +12,11 @@ helpviewer_keywords:
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
 ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864685"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Instrukcje: Obliczanie wartości liczbowych (Visual Basic)
 Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyrażenia liczbowego* to wyrażenie, które zawiera literały, stałe i zmienne reprezentujące wartości liczbowe i operatory, które działają w tych wartości.  
@@ -25,7 +25,7 @@ Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyraż
   
 #### <a name="to-calculate-a-numeric-value"></a>Obliczanie wartości liczbowych  
   
--   Połącz co najmniej jeden literały numeryczne, stałe i zmienne w wyrażenia liczbowego. Poniższy przykład pokazuje niektóre prawidłowe wyrażenia liczbowego.  
+- Połącz co najmniej jeden literały numeryczne, stałe i zmienne w wyrażenia liczbowego. Poniższy przykład pokazuje niektóre prawidłowe wyrażenia liczbowego.  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyraż
   
 #### <a name="to-store-a-numeric-value"></a>Do przechowywania wartości liczbowych  
   
--   Aby przypisać wartość reprezentowane przez wyrażenie liczbowe do zmiennej, tak jak pokazano w poniższym przykładzie, można użyć instrukcji przypisania.  
+- Aby przypisać wartość reprezentowane przez wyrażenie liczbowe do zmiennej, tak jak pokazano w poniższym przykładzie, można użyć instrukcji przypisania.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyraż
   
 #### <a name="to-override-normal-operator-precedence"></a>Do zastępowania normalnego kolejność wykonywania działań  
   
--   Użyj nawiasów, aby ująć operacje, które mają zostać wykonane jako pierwsze. Poniższy przykład przedstawia dwa różne wyniki przy użyciu tych samych argumentów i operatorów.  
+- Użyj nawiasów, aby ująć operacje, które mają zostać wykonane jako pierwsze. Poniższy przykład przedstawia dwa różne wyniki przy użyciu tych samych argumentów i operatorów.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

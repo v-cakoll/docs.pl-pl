@@ -7,11 +7,11 @@ helpviewer_keywords:
 - GridView controls [WPF], grouping items
 ms.assetid: eebef25b-ddc6-424e-a66d-ea228d1bf33d
 ms.openlocfilehash: b3dd6891976a942b299c87fca25e430e9ee59a51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910276"
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Instrukcje: Grupowanie elementów w kontrolce ListView z implementacją GridView
 W tym przykładzie przedstawiono sposób wyświetlania grup elementów na liście <xref:System.Windows.Controls.GridView> tryb widoku <xref:System.Windows.Controls.ListView> kontroli.  

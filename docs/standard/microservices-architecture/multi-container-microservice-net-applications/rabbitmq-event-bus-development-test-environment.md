@@ -1,17 +1,17 @@
 ---
-title: Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ środowiska deweloperskie lub testowe
+title: Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Używanie oprogramowania RabbitMQ na implementowanie magistrali zdarzeń komunikatów dla zdarzeń integracji dla środowiska deweloperskie lub testowe.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
 ms.openlocfilehash: 2bcd3491c58884653cd6c119753696019151bfed
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864273"
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ środowiska deweloperskie lub testowe
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 
 Firma Microsoft należy zacząć od informujący o tym, że jeśli utworzysz usługi magistrali niestandardowe zdarzenie oparte na RabbitMQ uruchomione w kontenerze, tak jak w ramach aplikacji eShopOnContainers aplikacji, należy jej używać tylko w przypadku Twojego środowiska projektowania i testowania. Nie należy używać go w środowisku produkcyjnym, chyba że tworzysz go jako część gotowe do produkcji usługi Service bus. Magistrali proste zdarzenia niestandardowego może brakować wiele gotowych do produkcji istotnych funkcji, do których ma komercyjnej usługi Service bus.
 

@@ -8,11 +8,11 @@ ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
 ms.openlocfilehash: 9a7cdd0b9e5bd12d5730d92f39c2432bdc84a18e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795034"
 ---
 # <a name="basic-serialization"></a>Serializacja podstawowa
 

@@ -3,11 +3,11 @@ title: N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
 ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794501"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL
 Można utworzyć aplikacji n warstwowa lub wielowarstwowa, które używają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Zazwyczaj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kontekst danych, klas jednostek i logiki budowa zapytania znajdują się w warstwie środkowej jako warstwa dostępu do danych (DAL). Logika biznesowa i trwałe dane mogą być implementowane całkowicie w klasy częściowe i metody jednostek i kontekst danych, lub może być implementowana w osobnych klas.
@@ -21,13 +21,13 @@ Można utworzyć aplikacji n warstwowa lub wielowarstwowa, które używają [!IN
 ## <a name="additional-resources"></a>Dodatkowe zasoby
  Aby uzyskać więcej informacji o sposobie wdrażania aplikacji n warstwowej, które używają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], zobacz następujące tematy:
 
--   [N-warstwowa LINQ to SQL z użyciem ASP.NET](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
+- [N-warstwowa LINQ to SQL z użyciem ASP.NET](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
 
--   [N-warstwowa LINQ to SQL z użyciem usług internetowych](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
+- [N-warstwowa LINQ to SQL z użyciem usług internetowych](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
 
--   [Implementowanie N-warstwowej logiki biznesowej](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
+- [Implementowanie N-warstwowej logiki biznesowej](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
 
--   [Pobieranie danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
+- [Pobieranie danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
 
  Aby uzyskać więcej informacji na temat aplikacji n warstwowych, które używają zestawów danych ADO.NET, zobacz [Praca z zestawami danych w aplikacjach n warstwowych](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
 

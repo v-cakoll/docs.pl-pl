@@ -3,11 +3,11 @@ title: Expressions1
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
 ms.openlocfilehash: 7643279c2db5608c028e0a1213802ab609a2d347
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773649"
 ---
 # <a name="expressions"></a>Wyrażenia
 Wyrażenie Windows Workflow Foundation (WF) są wszystkie działania, które zwraca wynik. Wszystkie działania wyrażenie dziedziczyć pośrednio <xref:System.Activities.Activity%601>, który zawiera <xref:System.Activities.OutArgument> właściwość o nazwie <xref:System.Activities.Activity%601.Result%2A> jako wartość zwracaną przez działanie. [!INCLUDE[wf1](../../../includes/wf1-md.md)] jest dostarczany z szerokiej gamy wyrażenia działań z prostego, takie jak te <xref:System.Activities.Expressions.VariableValue%601> i <xref:System.Activities.Expressions.VariableReference%601>, które zapewniają dostęp do zmiennej jeden przepływ pracy za pomocą operatora działań złożonych działań takich jak <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> i <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> tę ofertę dostęp do pełnego zakresu języka Visual Basic w celu uzyskania wyniku. Wyrażenie dodatkowe działania mogą być tworzone przez pochodząca od <xref:System.Activities.CodeActivity%601> lub <xref:System.Activities.NativeActivity%601>.  

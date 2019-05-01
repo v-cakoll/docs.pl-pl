@@ -14,11 +14,11 @@ helpviewer_keywords:
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
 ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783941"
 ---
 # <a name="rem-statement-visual-basic"></a>REM — Instrukcja (Visual Basic)
 Używane, aby uwzględnić uwagi wyjaśniające w kodzie źródłowym programu.  

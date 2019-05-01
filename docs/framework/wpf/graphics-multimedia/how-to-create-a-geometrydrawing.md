@@ -8,11 +8,11 @@ helpviewer_keywords:
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
 ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904959"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>Instrukcje: Tworzenie elementu GeometryDrawing
 W tym przykładzie pokazano, jak utworzyć i wyświetlić <xref:System.Windows.Media.GeometryDrawing>. A <xref:System.Windows.Media.GeometryDrawing> pozwala na tworzenie kształt z wypełnieniem lecz konspektu, kojarząc <xref:System.Windows.Media.Pen> i <xref:System.Windows.Media.Brush> z <xref:System.Windows.Media.Geometry>. <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> Opisujący strukturę kształtu <xref:System.Windows.Media.GeometryDrawing.Brush%2A> opisuje wypełnienie kształtu i <xref:System.Windows.Media.GeometryDrawing.Pen%2A> opisuje kontur figury.  

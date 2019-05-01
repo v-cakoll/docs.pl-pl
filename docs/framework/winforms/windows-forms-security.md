@@ -10,11 +10,11 @@ helpviewer_keywords:
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
 ms.openlocfilehash: f64d5ef2e9bb0e977b4c007e8c5109ac0c331a84
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799375"
 ---
 # <a name="windows-forms-security"></a>Zabezpieczenia formularzy systemu Windows
 Formularze Windows oferuje model zabezpieczeń, który jest oparty na kodzie (zabezpieczeń ustawionych poziomów dla kodu, niezależnie od użytkownika, uruchamiając kod). Jest to oprócz schematów zabezpieczeń, które mogą być spełnione już na komputerze. Mogą to być te w przeglądarce (na przykład na podstawie strefy zabezpieczeń dostępnych w programie Internet Explorer) lub systemu operacyjnego (na przykład opartego na poświadczeniu zabezpieczenia systemu Windows NT).  

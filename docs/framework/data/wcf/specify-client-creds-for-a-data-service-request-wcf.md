@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
 ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875587"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Instrukcje: Określanie poświadczeń klienta usługi danych żądania (WCF Data Services)
 Domyślnie biblioteka klienta nie podaje poświadczeń, wysyłając żądanie do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi. Jednak można określić, że poświadczenia wysyłane do uwierzytelniania żądań do usługi danych przez przesłanie <xref:System.Net.NetworkCredential> dla <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> właściwość <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [zabezpieczania usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). W przykładzie w tym temacie przedstawiono sposób jawnie podać poświadczenia, które są używane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta podczas żądania danych z usługi danych.  
@@ -44,11 +44,11 @@ Domyślnie biblioteka klienta nie podaje poświadczeń, wysyłając żądanie do
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Następujące zagadnienia dotyczące zabezpieczeń dotyczą na przykład w tym temacie:  
   
--   Aby sprawdzić, czy działają poświadczenia podane w tym przykładzie, Usługa danych Northwind musi używać schematu uwierzytelniania innego niż dostęp anonimowy. W przeciwnym razie witryna sieci Web usługi danych nie będzie żądać poświadczeń.  
+- Aby sprawdzić, czy działają poświadczenia podane w tym przykładzie, Usługa danych Northwind musi używać schematu uwierzytelniania innego niż dostęp anonimowy. W przeciwnym razie witryna sieci Web usługi danych nie będzie żądać poświadczeń.  
   
--   Poświadczenia użytkownika powinno się żądać tylko wtedy podczas wykonywania i nie powinny być buforowane. Zawsze muszą być bezpiecznie przechowywane poświadczenia.  
+- Poświadczenia użytkownika powinno się żądać tylko wtedy podczas wykonywania i nie powinny być buforowane. Zawsze muszą być bezpiecznie przechowywane poświadczenia.  
   
--   Wysyłane podstawowe i uwierzytelnianie szyfrowane dane nie są szyfrowane, dzięki czemu dane są widoczne przez osobę atakującą. Ponadto poświadczenia uwierzytelniania podstawowego (nazwa użytkownika i hasło) są wysyłane jako zwykły tekst i mogą zostać przechwycone.  
+- Wysyłane podstawowe i uwierzytelnianie szyfrowane dane nie są szyfrowane, dzięki czemu dane są widoczne przez osobę atakującą. Ponadto poświadczenia uwierzytelniania podstawowego (nazwa użytkownika i hasło) są wysyłane jako zwykły tekst i mogą zostać przechwycone.  
   
  Aby uzyskać więcej informacji, zobacz [zabezpieczania usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   

@@ -16,11 +16,11 @@ ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 72e5f1e72d3ce7ec954d61216bbac2e0e1b5a428
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795125"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Instrukcje: Odszyfrowywanie elementów XML za pomocą certyfikatów X.509
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do szyfrowania i odszyfrowywania elementu w dokumencie XML.  Szyfrowanie XML to standardowy sposób wymiany ani nie przechowują zaszyfrowane dane XML, nie martwiąc się o łatwo odczytywanych danych.  Aby uzyskać więcej informacji na temat standardowych szyfrowanie XML, zobacz specyfikację World Wide Web Consortium (W3C) dla szyfrowanie XML znajdujący się w <https://www.w3.org/TR/xmldsig-core/>.  
@@ -70,9 +70,9 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Aby skompilować ten przykład, należy dołączyć odwołanie do `System.Security.dll`.  
+- Aby skompilować ten przykład, należy dołączyć odwołanie do `System.Security.dll`.  
   
--   Uwzględnić następujące przestrzenie nazw: <xref:System.Xml>, <xref:System.Security.Cryptography>, i <xref:System.Security.Cryptography.Xml>.  
+- Uwzględnić następujące przestrzenie nazw: <xref:System.Xml>, <xref:System.Security.Cryptography>, i <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Certyfikat X.509 używany w tym przykładzie jest tylko do celów testowych.  Aplikacje, należy użyć certyfikatu X.509, który jest generowany przez zaufany urząd certyfikacji lub użycia certyfikatu wygenerowanego przez program Microsoft Windows Certificate Server.  

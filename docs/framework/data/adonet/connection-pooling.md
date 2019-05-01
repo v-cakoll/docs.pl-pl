@@ -3,11 +3,11 @@ title: Pula połączeń
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 4cba53993489f51ed39ac52bff4fa252beb9aafd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880024"
 ---
 # <a name="connection-pooling"></a>Pula połączeń
 Łączenie ze źródłem danych może zająć dużo czasu. Aby zminimalizować koszty otwarcia połączeń, ADO.NET wykorzystuje technikę optymalizacji, o nazwie *buforowanie połączeń*, które minimalizuje koszty wielokrotnym otwieraniem i zamykaniem połączeń. Pula połączeń różni się dla dostawcy danych .NET Framework.  

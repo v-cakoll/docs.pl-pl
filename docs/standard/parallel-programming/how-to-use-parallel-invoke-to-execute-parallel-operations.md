@@ -1,5 +1,5 @@
 ---
-title: 'Porady: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych'
+title: 'Instrukcje: Wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0192e12c86b21eb126293bbd220e093b334768b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797101"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Porady: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Instrukcje: Wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke
 
 W tym przykładzie pokazano, jak zrównoleglić operacje przy użyciu <xref:System.Threading.Tasks.Parallel.Invoke%2A> w bibliotece zadań równoległych. Trzy operacje są wykonywane na udostępnione źródło danych. Ponieważ żadne operacje modyfikuje źródła, mogą być wykonywane równolegle w prosty sposób.
 
@@ -41,5 +41,5 @@ Skopiuj i Wklej cały przykład w projekcie programu Microsoft Visual Studio i n
 ## <a name="see-also"></a>Zobacz także
 
 - [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
-- [Instrukcje: anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+- [Instrukcje: Anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
 - [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

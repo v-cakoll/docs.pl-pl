@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
 ms.openlocfilehash: ca52b725f5fad4b591b95bf6a6dd778c7a72d235
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875407"
 ---
 # <a name="wcf-data-services-overview"></a>Omówienie usług danych WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia tworzenie i użycie usług data services dla sieci Web lub w sieci intranet przy użyciu [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Umożliwia udostępnianie danych jako zasoby, które są adresowane przez identyfikatory URI. Dzięki temu można uzyskać dostęp i zmian danych przy użyciu semantyki REST representational state transfer (), specjalnie standardowych poleceń HTTP z GET PUT, POST i usuwania. Ten temat zawiera omówienie wzorców i praktyk, zdefiniowane przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] i również urządzeń, które są dostarczane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z zalet [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] w aplikacjach opartych na programie .NET Framework.  

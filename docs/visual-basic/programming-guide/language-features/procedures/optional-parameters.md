@@ -13,20 +13,20 @@ helpviewer_keywords:
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
 ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791966"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parametry opcjonalne (Visual Basic)
 Możesz określić, że parametr procedury jest opcjonalny i nie trzeba do niego przekazywać żadnego argumentu w momencie wywołania procedury. *Następujące parametry opcjonalne* są wskazywane przez `Optional` — słowo kluczowe w definicji procedury. Mają zastosowanie następujące zasady:  
   
--   Każdy parametr opcjonalny w definicji procedury musi określać wartość domyślną.  
+- Każdy parametr opcjonalny w definicji procedury musi określać wartość domyślną.  
   
--   Wartość domyślna dla opcjonalnego parametru musi być wyrażeniem stałym.  
+- Wartość domyślna dla opcjonalnego parametru musi być wyrażeniem stałym.  
   
--   Każdy parametr występujący w definicji procedury po opcjonalnym parametrze również musi być opcjonalny.  
+- Każdy parametr występujący w definicji procedury po opcjonalnym parametrze również musi być opcjonalny.  
   
  Deklaracja procedury z opcjonalnym parametrem ma następującą składnię:  
   

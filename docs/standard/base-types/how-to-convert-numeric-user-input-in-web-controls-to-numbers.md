@@ -16,11 +16,11 @@ ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860636"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika na liczby w kontrolkach internetowych
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, użytkownicy można wpisać dane liczbowe do <xref:System.Web.UI.WebControls.TextBox> formantu w niemal nieograniczoną liczbę formatów. W rezultacie jest bardzo ważne określić ustawienia regionalne i kultury użytkownika strony sieci Web. Podczas analizy danych wejściowych użytkownika, można użyć konwencji formatowania, zdefiniowane przez użytkownika ustawień regionalnych i kultur.  
@@ -35,9 +35,9 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
   
 4. Wywołaj opcję `TryParse` lub `Parse` wejściowych do metody typu liczbowego, który chcesz przekonwertować użytkownika. Używanie przeciążenia `TryParse` lub `Parse` metody z `provider` parametru i przekazywać je w jednej z następujących pozycji:  
   
-    -   <xref:System.Globalization.CultureInfo> Obiekt utworzony w kroku 3.  
+    - <xref:System.Globalization.CultureInfo> Obiekt utworzony w kroku 3.  
   
-    -   <xref:System.Globalization.NumberFormatInfo> Obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.NumberFormat%2A> właściwość <xref:System.Globalization.CultureInfo> obiekt utworzony w kroku 3.  
+    - <xref:System.Globalization.NumberFormatInfo> Obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.NumberFormat%2A> właściwość <xref:System.Globalization.CultureInfo> obiekt utworzony w kroku 3.  
   
 5. Jeśli konwersja nie powiedzie się, powtórz kroki od 2 do 4 dla każdego pozostałego elementu w tablicy ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwości.  
   
@@ -60,11 +60,11 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Aby skompilować kod, skopiuj go do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] osobna strona kodu, tak aby znajdował zastępuje istniejący kod. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Strony sieci Web może zawierać następujących formantów:  
   
--   A <xref:System.Web.UI.WebControls.Label> formant, który nie ma odwołania w kodzie. Ustaw jego <xref:System.Web.UI.WebControls.TextBox.Text%2A> właściwość "Wprowadź liczbę:".  
+- A <xref:System.Web.UI.WebControls.Label> formant, który nie ma odwołania w kodzie. Ustaw jego <xref:System.Web.UI.WebControls.TextBox.Text%2A> właściwość "Wprowadź liczbę:".  
   
--   A <xref:System.Web.UI.WebControls.TextBox> formantu o nazwie `NumericString`.  
+- A <xref:System.Web.UI.WebControls.TextBox> formantu o nazwie `NumericString`.  
   
--   A <xref:System.Web.UI.WebControls.Button> formantu o nazwie `OKButton`. Ustaw jego <xref:System.Web.UI.WebControls.Button.Text%2A> właściwość "OK".  
+- A <xref:System.Web.UI.WebControls.Button> formantu o nazwie `OKButton`. Ustaw jego <xref:System.Web.UI.WebControls.Button.Text%2A> właściwość "OK".  
   
  Zmień nazwę klasy z `NumericUserInput` na nazwę klasy, która jest zdefiniowana przez `Inherits` atrybutu [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony `Page` dyrektywy. Zmień nazwę `NumericInput` odwołanie do nazwy zdefiniowane przez obiekt `id` atrybutu [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony `form` tagu.  
   

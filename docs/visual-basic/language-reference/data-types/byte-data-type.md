@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 ms.openlocfilehash: 217778a21fb9f231f448436ca5a68c42e5837566
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797010"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte — typ danych (Visual Basic)
 Przechowuje 8-bitowa (1-bajtowe) liczb całkowitych bez znaku z zakresu wartości z zakresu od 0 do 255.
@@ -48,15 +48,15 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
 
--   **Liczby ujemne.** Ponieważ `Byte` jest typ bez znaku, go nie może reprezentować wartość ujemną. Jeśli używasz jednoargumentowego znaku minusa (`-`) operatora na wyrażenie obliczane do typu `Byte`, Visual Basic konwertuje wyrażenie które ma `Short` pierwszy.
+- **Liczby ujemne.** Ponieważ `Byte` jest typ bez znaku, go nie może reprezentować wartość ujemną. Jeśli używasz jednoargumentowego znaku minusa (`-`) operatora na wyrażenie obliczane do typu `Byte`, Visual Basic konwertuje wyrażenie które ma `Short` pierwszy.
   
--   **Konwersje formatu.** W przypadku języka Visual Basic odczytuje lub zapisuje pliki lub wywoływanych przez nią bibliotek DLL, metod i właściwości, może automatycznie konwertować między formatami danych. Dane binarne przechowywane w `Byte` zmienne i tablice są zachowywane w trakcie takie konwersje formatu. Nie należy używać `String` zmiennej dla danych binarnych, ponieważ jego zawartość, mogą zostać uszkodzone podczas konwersji między formatami ANSI i Unicode.
+- **Konwersje formatu.** W przypadku języka Visual Basic odczytuje lub zapisuje pliki lub wywoływanych przez nią bibliotek DLL, metod i właściwości, może automatycznie konwertować między formatami danych. Dane binarne przechowywane w `Byte` zmienne i tablice są zachowywane w trakcie takie konwersje formatu. Nie należy używać `String` zmiennej dla danych binarnych, ponieważ jego zawartość, mogą zostać uszkodzone podczas konwersji między formatami ANSI i Unicode.
 
--   **Rozszerzanie.** `Byte` — Typ danych rozszerza się na `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, lub `Double`. Oznacza to, że możesz przekonwertować `Byte` do dowolnego z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.
+- **Rozszerzanie.** `Byte` — Typ danych rozszerza się na `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, lub `Double`. Oznacza to, że możesz przekonwertować `Byte` do dowolnego z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.
   
--   **Znaki typu.** `Byte` nie ma znak literalny typu lub znak typu identyfikator.
+- **Znaki typu.** `Byte` nie ma znak literalny typu lub znak typu identyfikator.
 
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Byte?displayProperty=nameWithType> struktury.
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Byte?displayProperty=nameWithType> struktury.
 
 ## <a name="example"></a>Przykład
 

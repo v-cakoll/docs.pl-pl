@@ -16,11 +16,11 @@ ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874188"
 ---
 # <a name="reentrancy-mda"></a>wielobieżność MDA
 `reentrancy` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy podejmowana jest próba przejścia z natywnego do zarządzanego kodu w przypadkach, gdzie wcześniejsze przełącznika z kodu zarządzanego do natywnego nie było wykonywane za pośrednictwem przejścia.  

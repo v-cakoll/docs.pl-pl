@@ -3,11 +3,11 @@ title: 'Instrukcje: Łączenie zapytań LINQ z wyrażeniami regularnymi (Visual 
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
 ms.openlocfilehash: da693b682e9b44970f167c030f6803f8dc6d2d36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855039"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Instrukcje: Łączenie zapytań LINQ z wyrażeniami regularnymi (Visual Basic)
 W tym przykładzie pokazano, jak używać <xref:System.Text.RegularExpressions.Regex> klasy w celu utworzenia wyrażenia regularnego do dopasowania bardziej złożone w ciągów tekstowych. Zapytania LINQ można łatwo filtrować dane według dokładnie pliki, które chcesz przeszukać z wyrażeniem regularnym i kształtów wyników.  

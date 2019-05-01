@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Calendar
 ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
 ms.openlocfilehash: 747e1112046b6882b1a3bef0c1bfdb25f0e83f53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787988"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla formantów typu kalendarz
 > [!NOTE]
@@ -56,10 +56,10 @@ ms.locfileid: "59149763"
   
 |Właściwości wzorzec/wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Yes|Ponieważ dni w miesiącu to elementy, które można go znaleźć przestrzennie kontrolki kalendarza zawsze obsługuje wzorca siatki.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Tak|Ponieważ dni w miesiącu to elementy, które można go znaleźć przestrzennie kontrolki kalendarza zawsze obsługuje wzorca siatki.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Zależy od|Formanty kalendarza większość obsługuje Przerzucanie widoku przez stronę. Wzorzec przewijania jest zalecane w celu obsługi nawigacji stronicowania.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Zależy od|Formanty kalendarza większość zachować określonego dnia, miesiąca lub roku jako zaznaczenia elementu podrzędnego. Niektóre kalendarze i są wielokrotnego wyboru, a inne tylko pojedynczego wyboru.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Tak|Formant kalendarza ma zawsze nagłówka w ramach jego poddrzewa dni tygodnia, więc wzorzec tabeli muszą być obsługiwane.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Yes|Formant kalendarza ma zawsze nagłówka w ramach jego poddrzewa dni tygodnia, więc wzorzec tabeli muszą być obsługiwane.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Nie|Value — wzorzec kontrolki nie jest konieczne dla kontrolki kalendarza, ponieważ nie można ustawić wartości bezpośrednio w kontrolce. Jeśli określonej daty jest skojarzona z kontrolką, należy podać informacje przez wzorca kontrolki wyboru.|  
   
 <a name="Required_UI_Automation_Events"></a>   

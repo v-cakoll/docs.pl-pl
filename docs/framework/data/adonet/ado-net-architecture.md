@@ -3,11 +3,11 @@ title: Architektura ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880090"
 ---
 # <a name="adonet-architecture"></a>Architektura ADO.NET
 Przetwarzanie danych tradycyjnie opierało się głównie na modelu opartego na połączeniach, dwuwarstwowy. Jak przetwarzanie danych coraz większym stopniu korzysta z architektury wielowarstwowej, programistów przełączenie się do odłączonego podejście, aby zapewnić lepszą skalowalność dla swoich aplikacji.  
@@ -29,13 +29,13 @@ Architektura ADO.NET
 ### <a name="choosing-a-datareader-or-a-dataset"></a>Wybieranie elementu DataReader lub zestawu danych  
  Gdy zdecydujesz, czy aplikacja powinna używać `DataReader` (zobacz [podczas pobierania danych przy użyciu elementu DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) lub `DataSet` (zobacz [DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), należy wziąć pod uwagę typ Funkcja wymaganych przez aplikację. Użyj `DataSet` wykonać następujące czynności:  
   
--   Dzięki czemu można przekształcać je w pamięci podręcznej dane lokalnie w aplikacji. Jeśli wymagane jest tylko do odczytu wyników zapytania, `DataReader` jest lepszym rozwiązaniem.  
+- Dzięki czemu można przekształcać je w pamięci podręcznej dane lokalnie w aplikacji. Jeśli wymagane jest tylko do odczytu wyników zapytania, `DataReader` jest lepszym rozwiązaniem.  
   
--   Zdalne danych między warstwami lub usługi sieci Web XML.  
+- Zdalne danych między warstwami lub usługi sieci Web XML.  
   
--   Wchodzić w interakcje z danymi dynamicznie takich jak powiązanie z kontrolką formularzy Windows lub łącząc i powiązane dane z wielu źródeł.  
+- Wchodzić w interakcje z danymi dynamicznie takich jak powiązanie z kontrolką formularzy Windows lub łącząc i powiązane dane z wielu źródeł.  
   
--   Należy przeprowadzić rozległe przetwarzanie danych bez konieczności otwarte połączenie źródła danych, co zwalnia połączenia, który będzie używany przez innych klientów.  
+- Należy przeprowadzić rozległe przetwarzanie danych bez konieczności otwarte połączenie źródła danych, co zwalnia połączenia, który będzie używany przez innych klientów.  
   
  Jeśli nie jest wymagane funkcje udostępniane przez `DataSet`, może poprawić wydajność aplikacji przy użyciu `DataReader` zwrócić dane w sposób tylko do przodu, tylko do odczytu. Mimo że `DataAdapter` używa `DataReader` do wypełnienia zawartość `DataSet` (zobacz [wypełnianie zestawu danych z elementu DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), za pomocą `DataReader`, może zwiększyć wydajność, ponieważ zapisze pamięci może być używane przez `DataSet`i uniknąć przetwarzania, który jest wymagany, aby utworzyć i wypełnić zawartość `DataSet`.  
   

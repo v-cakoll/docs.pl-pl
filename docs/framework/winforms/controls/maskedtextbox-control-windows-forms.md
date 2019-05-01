@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
 ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780643"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox — Formant (Formularze systemu Windows)
 Ten temat zawiera łącza do innych osób o `MaskedTextBox` kontroli.  

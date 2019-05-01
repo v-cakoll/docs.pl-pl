@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792135"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser — Informacje o formancie
 <xref:System.Windows.Forms.WebBrowser> Control oferuje zarządzany otok dla formantu WebBrowser ActiveX. Zarządzana otoka służy do wyświetlania stron sieci Web w aplikacjach Windows Forms klienta. Możesz użyć <xref:System.Windows.Forms.WebBrowser> kontrolki duplikowały funkcji przeglądania programu Internet Explorer lub aplikacji można wyłączyć domyślna funkcjonalność programu Internet Explorer i formant jest używany jako prosty przeglądarki dokumentów HTML. Umożliwia także formantu do dodawania elementów interfejsu użytkownika opartego na DHTML do formularza i ukryć fakt, że są hostowane na platformie <xref:System.Windows.Forms.WebBrowser> kontroli. Takie podejście umożliwia bezproblemowe łączenie formantów sieci Web za pomocą kontrolek Windows Forms w jednej aplikacji.  

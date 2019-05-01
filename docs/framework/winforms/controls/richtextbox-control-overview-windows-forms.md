@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902502"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant jest używany do wyświetlania, wprowadzania i manipulowanie formatowanie tekstu. <xref:System.Windows.Forms.RichTextBox> Kontroli działanie jest <xref:System.Windows.Forms.TextBox> kontroli jest, ale można również wyświetlać czcionki, kolory i łącza; ładowanie z pliku; tekstu i obrazów osadzonych i znaleźć określonych znaków. <xref:System.Windows.Forms.RichTextBox> Kontroli zazwyczaj służy do zapewnienia manipulacja tekstem i wyświetlić funkcje podobne do aplikacji edytora tekstów, takiego jak Microsoft Word. Podobnie jak <xref:System.Windows.Forms.TextBox> kontroli <xref:System.Windows.Forms.RichTextBox> formant może wyświetlić paski przewijania; ale w przeciwieństwie do <xref:System.Windows.Forms.TextBox> formant, ustawienie domyślne jest do wyświetlenia zarówno poziome i pionowe paski przewijania, zgodnie z potrzebami i ma ustawienia dodatkowe paska przewijania.  

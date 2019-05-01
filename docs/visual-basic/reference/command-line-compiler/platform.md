@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788911"
 ---
 # <a name="-platform-visual-basic"></a>-platformy (Visual Basic)
 Określa, którą platformy wersję środowiska uruchomieniowego języka wspólnego (CLR) można uruchomić pliku wyjściowego.  
@@ -38,31 +38,31 @@ Określa, którą platformy wersję środowiska uruchomieniowego języka wspóln
   
  Ogólnie rzecz biorąc zestawów .NET Framework, napisany w języku Visual Basic uruchomi się takie same, niezależnie od platformy. Jednakże istnieją przypadki, które zachowują się inaczej, na różnych platformach. Następujące typowe przypadki są:  
   
--   Struktury, które zawierają składowe, które zmiany rozmiaru, w zależności od platformy, takie jak dowolny typ wskaźnika.  
+- Struktury, które zawierają składowe, które zmiany rozmiaru, w zależności od platformy, takie jak dowolny typ wskaźnika.  
   
--   Arytmetyczny wskaźnik, obejmującą stałych rozmiarach.  
+- Arytmetyczny wskaźnik, obejmującą stałych rozmiarach.  
   
--   Nieprawidłowa platforma wywołania lub deklaracji COM, które używają `Integer` dla dojścia, zamiast <xref:System.IntPtr>.  
+- Nieprawidłowa platforma wywołania lub deklaracji COM, które używają `Integer` dla dojścia, zamiast <xref:System.IntPtr>.  
   
--   Rzutowanie <xref:System.IntPtr> do `Integer`.  
+- Rzutowanie <xref:System.IntPtr> do `Integer`.  
   
--   Za pomocą platformy wywołania lub Usługa międzyoperacyjna modelu COM ze składnikami, które nie istnieją na wszystkich platformach.  
+- Za pomocą platformy wywołania lub Usługa międzyoperacyjna modelu COM ze składnikami, które nie istnieją na wszystkich platformach.  
   
  **— Platforma** opcji ograniczą niektóre problemy, jeśli wiesz, że wprowadzono założenia dotyczące architektury, kod będzie działał na. W szczególności:  
   
--   Jeśli zdecydujesz się na docelowe platformy 64-bitowej, a aplikacja jest uruchamiana na komputerze 32-bitowym, komunikat o błędzie jest znacznie wcześniej i bardziej celem problem niż błąd występujący bez korzystania z tego przełącznika.  
+- Jeśli zdecydujesz się na docelowe platformy 64-bitowej, a aplikacja jest uruchamiana na komputerze 32-bitowym, komunikat o błędzie jest znacznie wcześniej i bardziej celem problem niż błąd występujący bez korzystania z tego przełącznika.  
   
--   Jeśli ustawisz `x86` flagi opcję i później uruchomieniu aplikacji na komputerze 64-bitowym, aplikacja zostanie uruchomiona w ramach podsystemu WOW zamiast działające natywnie.  
+- Jeśli ustawisz `x86` flagi opcję i później uruchomieniu aplikacji na komputerze 64-bitowym, aplikacja zostanie uruchomiona w ramach podsystemu WOW zamiast działające natywnie.  
   
  W 64-bitowym systemie operacyjnym Windows:  
   
--   Zestawy skompilowane z `-platform:x86` zostanie wykonana w 32-bitowe środowisko CLR, uruchamianie w emulatorze WOW64.  
+- Zestawy skompilowane z `-platform:x86` zostanie wykonana w 32-bitowe środowisko CLR, uruchamianie w emulatorze WOW64.  
   
--   Pliki wykonywalne skompilowany przy użyciu `-platform:anycpu` zostanie wykonana w 64-bitowe środowisko CLR.  
+- Pliki wykonywalne skompilowany przy użyciu `-platform:anycpu` zostanie wykonana w 64-bitowe środowisko CLR.  
   
--   Biblioteki DLL są kompilowane przy użyciu `-platform:anycpu` zostaną wykonane zgodnie z tym samym CLR jako proces, do którego on ładowany.  
+- Biblioteki DLL są kompilowane przy użyciu `-platform:anycpu` zostaną wykonane zgodnie z tym samym CLR jako proces, do którego on ładowany.  
   
--   Pliki wykonywalne, które są kompilowane przy użyciu `-platform:anycpu32bitpreferred` zostanie wykonana w 32-bitowe środowisko CLR.  
+- Pliki wykonywalne, które są kompilowane przy użyciu `-platform:anycpu32bitpreferred` zostanie wykonana w 32-bitowe środowisko CLR.  
   
  Aby uzyskać więcej informacji o sposobie tworzenia aplikacji do uruchamiania w 64-bitowej wersji systemu Windows, zobacz [aplikacji 64-bitowych](../../../framework/64-bit-apps.md).  
   

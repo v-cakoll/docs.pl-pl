@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 051b5f47db05301f3a3326a2cc4cc5cf5c8b1ec2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790003"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest — Metoda
 Emituje końcowego manifestu. Po zaimportowaniu wszystkich innych plików i ustawieniu wszystkich opcji, należy wywołać tę metodę. Nie wywołuj tej metody dla modułów niepowiązanej.  

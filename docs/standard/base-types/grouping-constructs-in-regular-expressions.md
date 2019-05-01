@@ -16,22 +16,22 @@ ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789275"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechwytywane podciągi ciągu wejściowego. Można użyć konstrukcji grupowania, wykonaj następujące czynności:  
   
--   Dopasowuje Wyrażenie cząstkowe powtarzające się w ciągu wejściowym.  
+- Dopasowuje Wyrażenie cząstkowe powtarzające się w ciągu wejściowym.  
   
--   Zastosować kwantyfikator do podwyrażenia, który ma wiele elementów języka wyrażeń regularnych. Aby uzyskać więcej informacji na temat Kwantyfikatory zobacz [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+- Zastosować kwantyfikator do podwyrażenia, który ma wiele elementów języka wyrażeń regularnych. Aby uzyskać więcej informacji na temat Kwantyfikatory zobacz [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Dołączyć ciąg, który jest zwracany przez wyrażenie cząstkowe <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> i <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metody.  
+- Dołączyć ciąg, który jest zwracany przez wyrażenie cząstkowe <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> i <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metody.  
   
--   Pobierz poszczególne podwyrażenia z <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości i przetwarzać je oddzielnie od dopasowany tekst jako całości.  
+- Pobierz poszczególne podwyrażenia z <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości i przetwarzać je oddzielnie od dopasowany tekst jako całości.  
   
  W poniższej tabeli wymieniono konstrukcje grupujące obsługiwane przez aparat wyrażeń regularnych platformy .NET i wskazuje, czy są one przechwytywania lub nieprzechwytujące.  
   
@@ -63,13 +63,13 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechw
   
  Aby uzyskać dostęp przechwyconych grupach na cztery sposoby:  
   
--   Za pomocą dopasowywania wstecznego skonstruować w wyrażeniu regularnym. Dopasowane Podwyrażenie o której mowa w tym samym wyrażeniu regularnym przy użyciu składni `\` *numer*, gdzie *numer* jest numerem porządkowym przechwyconego podwyrażenia.  
+- Za pomocą dopasowywania wstecznego skonstruować w wyrażeniu regularnym. Dopasowane Podwyrażenie o której mowa w tym samym wyrażeniu regularnym przy użyciu składni `\` *numer*, gdzie *numer* jest numerem porządkowym przechwyconego podwyrażenia.  
   
--   Za pomocą nazwane dopasowanie wsteczne skonstruować w wyrażeniu regularnym. Dopasowane Podwyrażenie o której mowa w tym samym wyrażeniu regularnym przy użyciu składni `\k<` *nazwa*`>`, gdzie *nazwa* to nazwa grupy przechwytywania, lub `\k<` *numer*`>`, gdzie *numer* jest numerem porządkowym grupy przechwytywania. Grupa przechwytywania ma domyślną nazwę, która jest taka sama na odpowiadającą mu liczbę porządkową. Aby uzyskać więcej informacji, zobacz [o nazwie dopasowane podwyrażenia](#named_matched_subexpression) w dalszej części tego tematu.  
+- Za pomocą nazwane dopasowanie wsteczne skonstruować w wyrażeniu regularnym. Dopasowane Podwyrażenie o której mowa w tym samym wyrażeniu regularnym przy użyciu składni `\k<` *nazwa*`>`, gdzie *nazwa* to nazwa grupy przechwytywania, lub `\k<` *numer*`>`, gdzie *numer* jest numerem porządkowym grupy przechwytywania. Grupa przechwytywania ma domyślną nazwę, która jest taka sama na odpowiadającą mu liczbę porządkową. Aby uzyskać więcej informacji, zobacz [o nazwie dopasowane podwyrażenia](#named_matched_subexpression) w dalszej części tego tematu.  
   
--   Za pomocą `$` *numer* sekwencji zastąpienia w <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> wywołania metody, gdzie *numer* jest numerem porządkowym przechwyconego podwyrażenia.  
+- Za pomocą `$` *numer* sekwencji zastąpienia w <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> wywołania metody, gdzie *numer* jest numerem porządkowym przechwyconego podwyrażenia.  
   
--   Programowo, za pomocą <xref:System.Text.RegularExpressions.GroupCollection> obiektu zwróconego przez <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości. Element członkowski w pozycji zero w kolekcji reprezentuje dopasowanie całego wyrażenia regularnego. Każdy członek kolejnych reprezentuje dopasowane Podwyrażenie. Aby uzyskać więcej informacji, zobacz [Grouping Constructs i obiekty wyrażeń regularnych](#Objects) sekcji.  
+- Programowo, za pomocą <xref:System.Text.RegularExpressions.GroupCollection> obiektu zwróconego przez <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości. Element członkowski w pozycji zero w kolekcji reprezentuje dopasowanie całego wyrażenia regularnego. Każdy członek kolejnych reprezentuje dopasowane Podwyrażenie. Aby uzyskać więcej informacji, zobacz [Grouping Constructs i obiekty wyrażeń regularnych](#Objects) sekcji.  
   
  W poniższym przykładzie pokazano wyrażenie regularne, który identyfikuje zduplikowane wyrazy w tekście. Wzorzec wyrażenia regularnego dwie grupy przechwytywania reprezentują dwa wystąpienia zduplikowane programu word. Drugie wystąpienie ciągu są przechwytywane do zgłaszania jego pozycję początkową w ciągu wejściowym.  
   
@@ -112,17 +112,17 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechw
   
  Nazwane przechwyconych grupach można uzyskać dostęp, w następujący sposób:  
   
--   Za pomocą nazwane dopasowanie wsteczne skonstruować w wyrażeniu regularnym. Dopasowane Podwyrażenie o której mowa w tym samym wyrażeniu regularnym przy użyciu składni `\k<` *nazwa*`>`, gdzie *nazwa* nazywa się przechwyconego podwyrażenia.  
+- Za pomocą nazwane dopasowanie wsteczne skonstruować w wyrażeniu regularnym. Dopasowane Podwyrażenie o której mowa w tym samym wyrażeniu regularnym przy użyciu składni `\k<` *nazwa*`>`, gdzie *nazwa* nazywa się przechwyconego podwyrażenia.  
   
--   Za pomocą dopasowywania wstecznego skonstruować w wyrażeniu regularnym. Dopasowane Podwyrażenie o której mowa w tym samym wyrażeniu regularnym przy użyciu składni `\` *numer*, gdzie *numer* jest numerem porządkowym przechwyconego podwyrażenia. O nazwie dopasowane podwyrażenia są numerowane kolejno od lewej do prawej po dopasowane podwyrażenia.  
+- Za pomocą dopasowywania wstecznego skonstruować w wyrażeniu regularnym. Dopasowane Podwyrażenie o której mowa w tym samym wyrażeniu regularnym przy użyciu składni `\` *numer*, gdzie *numer* jest numerem porządkowym przechwyconego podwyrażenia. O nazwie dopasowane podwyrażenia są numerowane kolejno od lewej do prawej po dopasowane podwyrażenia.  
   
--   Przy użyciu `${` *nazwa* `}` sekwencji zastąpienia w <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> wywołania metody, gdzie *nazwa* nazywa się przechwyconego podwyrażenia.  
+- Przy użyciu `${` *nazwa* `}` sekwencji zastąpienia w <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> wywołania metody, gdzie *nazwa* nazywa się przechwyconego podwyrażenia.  
   
--   Za pomocą `$` *numer* sekwencji zastąpienia w <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> wywołania metody, gdzie *numer* jest numerem porządkowym przechwyconego podwyrażenia.  
+- Za pomocą `$` *numer* sekwencji zastąpienia w <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> wywołania metody, gdzie *numer* jest numerem porządkowym przechwyconego podwyrażenia.  
   
--   Programowo, za pomocą <xref:System.Text.RegularExpressions.GroupCollection> obiektu zwróconego przez <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości. Element członkowski w pozycji zero w kolekcji reprezentuje dopasowanie całego wyrażenia regularnego. Każdy członek kolejnych reprezentuje dopasowane Podwyrażenie. Nazwane przechwyconej grupy są przechowywane w kolekcji po numerowane przechwyconych grupach.  
+- Programowo, za pomocą <xref:System.Text.RegularExpressions.GroupCollection> obiektu zwróconego przez <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości. Element członkowski w pozycji zero w kolekcji reprezentuje dopasowanie całego wyrażenia regularnego. Każdy członek kolejnych reprezentuje dopasowane Podwyrażenie. Nazwane przechwyconej grupy są przechowywane w kolekcji po numerowane przechwyconych grupach.  
   
--   Programowo, podając nazwę Podwyrażenie do <xref:System.Text.RegularExpressions.GroupCollection> indeksatora obiektu (w języku C#) lub jego <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> właściwości (Visual Basic).  
+- Programowo, podając nazwę Podwyrażenie do <xref:System.Text.RegularExpressions.GroupCollection> indeksatora obiektu (w języku C#) lub jego <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> właściwości (Visual Basic).  
   
  Wzorzec wyrażenia regularnego proste ilustruje sposób ponumerowane (bez nazwy) i nazwanych grup mogą być przywoływane programowo lub za pomocą składni języka wyrażeń regularnych. Wyrażenie regularne `((?<One>abc)\d+)?(?<Two>xyz)(.*)` generuje następujące przechwytywania grupy według numeru i według nazwy. Pierwsza grupa (liczba 0) przechwytywania zawsze odwołuje się do całego wzorca.  
   
@@ -446,11 +446,11 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechw
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Konstrukty grupujące i obiekty wyrażeń regularnych  
  Podciągi, które są dopasowane przez grupę przechwytywania wyrażenia regularnego są reprezentowane przez <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> obiektów, które mogą być pobierane z <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> obiektu, który jest zwracany przez <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości. <xref:System.Text.RegularExpressions.GroupCollection> Obiektu jest wypełniana w następujący sposób:  
   
--   Pierwszy <xref:System.Text.RegularExpressions.Group> obiektu w kolekcji (object o indeksie zero) reprezentuje całego dopasowania.  
+- Pierwszy <xref:System.Text.RegularExpressions.Group> obiektu w kolekcji (object o indeksie zero) reprezentuje całego dopasowania.  
   
--   Zestaw następnego <xref:System.Text.RegularExpressions.Group> obiekty reprezentują nienazwane grupy przechwytywania (numerowana). Pojawiają się w kolejności, w której są zdefiniowane w wyrażeniu regularnym, od lewej do prawej. Indeks wartości tych grup w zakresie od 1 do liczby nienazwane przechwytywania grup w kolekcji. (Indeks określonej grupy jest równoważne z jej numerowane odwołanie wsteczne. Aby uzyskać więcej informacji dotyczących dopasowywania wstecznego, zobacz [konstrukcje dopasowywania wstecznego](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
+- Zestaw następnego <xref:System.Text.RegularExpressions.Group> obiekty reprezentują nienazwane grupy przechwytywania (numerowana). Pojawiają się w kolejności, w której są zdefiniowane w wyrażeniu regularnym, od lewej do prawej. Indeks wartości tych grup w zakresie od 1 do liczby nienazwane przechwytywania grup w kolekcji. (Indeks określonej grupy jest równoważne z jej numerowane odwołanie wsteczne. Aby uzyskać więcej informacji dotyczących dopasowywania wstecznego, zobacz [konstrukcje dopasowywania wstecznego](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
   
--   Ostatni zestaw <xref:System.Text.RegularExpressions.Group> obiekty reprezentują nazwanych grup przechwytywania. Pojawiają się w kolejności, w której są zdefiniowane w wyrażeniu regularnym, od lewej do prawej. Wartość indeksu pierwszego nazwanej grupy przechwytywania jest większa o jeden od indeksu ostatniej nienazwanej grupy przechwytywania. W przypadku nie nienazwane przechwytywania grup w wyrażeniu regularnym, wartość indeksu pierwszego nazwanej grupy przechwytywania jest jeden.  
+- Ostatni zestaw <xref:System.Text.RegularExpressions.Group> obiekty reprezentują nazwanych grup przechwytywania. Pojawiają się w kolejności, w której są zdefiniowane w wyrażeniu regularnym, od lewej do prawej. Wartość indeksu pierwszego nazwanej grupy przechwytywania jest większa o jeden od indeksu ostatniej nienazwanej grupy przechwytywania. W przypadku nie nienazwane przechwytywania grup w wyrażeniu regularnym, wartość indeksu pierwszego nazwanej grupy przechwytywania jest jeden.  
   
  W przypadku zastosowania kwantyfikator do grupy przechwytywania, odpowiedni <xref:System.Text.RegularExpressions.Group> obiektu <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>, i <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> właściwości odzwierciedlają ostatni podciąg, która jest przechwytywana przez grupę przechwytywania. Możesz pobrać kompletny zestaw podciągi, które są przechwytywane według grup, które mają Kwantyfikatory z <xref:System.Text.RegularExpressions.CaptureCollection> obiektu, który jest zwracany przez <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> właściwości.  
   

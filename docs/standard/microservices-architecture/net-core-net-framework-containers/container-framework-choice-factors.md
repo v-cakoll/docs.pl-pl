@@ -5,13 +5,13 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
 ms.openlocfilehash: 8044e3064ac372750c174d8b47c3f7a63d6bbd0b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864094"
 ---
-# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabela decyzji: .NET Framework na potrzeby platformy Docker
+# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabela decyzji: korzystanie z programu .NET Framework z platformą Docker
 
 W poniższej tabeli decyzji podsumowano, czy ma być używany program .NET Framework lub .NET Core. Należy pamiętać, że dla kontenerów systemu Linux, należy opartych na systemie Linux hostów platformy Docker (maszyn wirtualnych lub serwerach) i dla kontenerów Windows należy systemu Windows Server na podstawie hostów platformy Docker (maszyn wirtualnych lub serwerach).
 

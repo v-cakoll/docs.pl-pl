@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: ab446319a9e0ef295387d0d6768e813a158939c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783867"
 ---
 # <a name="structure-statement"></a>Structure — Instrukcja
 Deklaruje nazwę struktury i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje struktura.  
@@ -61,32 +61,32 @@ End Structure
   
 ## <a name="rules"></a>reguły  
   
--   **Zagnieżdżanie.** Można zdefiniować jedną strukturę wewnątrz innej. Struktura zewnętrzna jest nazywana *strukturą zawierającą*, a struktura wewnętrzna — *strukturą zagnieżdżoną*. Jednak nie można uzyskać dostępu do składowych struktury zagnieżdżonej za pośrednictwem struktury zawierającej. Zamiast tego należy zadeklarować zmienną typu danych struktury zagnieżdżonej.  
+- **Zagnieżdżanie.** Można zdefiniować jedną strukturę wewnątrz innej. Struktura zewnętrzna jest nazywana *strukturą zawierającą*, a struktura wewnętrzna — *strukturą zagnieżdżoną*. Jednak nie można uzyskać dostępu do składowych struktury zagnieżdżonej za pośrednictwem struktury zawierającej. Zamiast tego należy zadeklarować zmienną typu danych struktury zagnieżdżonej.  
   
--   **Deklaracja składowej.** Musisz zadeklarować każdą składową struktury. Składowa struktury nie może być typu [Protected](../../../visual-basic/language-reference/modifiers/protected.md) ani `Protected Friend`, ponieważ nic nie może dziedziczyć ze struktury. Sama struktura może być jednak typu `Protected` lub `Protected Friend`.  
+- **Deklaracja składowej.** Musisz zadeklarować każdą składową struktury. Składowa struktury nie może być typu [Protected](../../../visual-basic/language-reference/modifiers/protected.md) ani `Protected Friend`, ponieważ nic nie może dziedziczyć ze struktury. Sama struktura może być jednak typu `Protected` lub `Protected Friend`.  
   
      Można zadeklarować nieudostępnione zmienne lub nieudostępnione niestandardowe zdarzenia w strukturze lub nie deklarować ich wcale. Nie mogą istnieć tylko stałe, właściwości i procedury, nawet jeśli niektóre z nich są nieudostępnione.  
   
--   **Inicjowanie.** Nie można zainicjować wartości żadnej składowej danych nieudostępnionych struktury w części jej deklaracji. Musisz zainicjować składową danych za pomocą konstruktora sparametryzowanego struktury lub przypisać wartość do składowej po utworzeniu wystąpienia struktury.  
+- **Inicjowanie.** Nie można zainicjować wartości żadnej składowej danych nieudostępnionych struktury w części jej deklaracji. Musisz zainicjować składową danych za pomocą konstruktora sparametryzowanego struktury lub przypisać wartość do składowej po utworzeniu wystąpienia struktury.  
   
--   **Dziedziczenie.** Struktura nie może dziedziczyć z typu innego niż <xref:System.ValueType>, z którego dziedziczą wszystkie struktury. W szczególności jedna struktura nie może dziedziczyć z innej.  
+- **Dziedziczenie.** Struktura nie może dziedziczyć z typu innego niż <xref:System.ValueType>, z którego dziedziczą wszystkie struktury. W szczególności jedna struktura nie może dziedziczyć z innej.  
   
      Nie można użyć [instrukcji Inherits ](../../../visual-basic/language-reference/statements/inherits-statement.md) w definicji struktury, nawet do określenia typu <xref:System.ValueType>.  
   
--   **Implementacja.** Jeśli struktura używa [instrukcji Implements](../../../visual-basic/language-reference/statements/implements-statement.md), musisz zaimplementować każdą składową zdefiniowaną przez każdy interfejs określony w elemencie `interfacenames`.  
+- **Implementacja.** Jeśli struktura używa [instrukcji Implements](../../../visual-basic/language-reference/statements/implements-statement.md), musisz zaimplementować każdą składową zdefiniowaną przez każdy interfejs określony w elemencie `interfacenames`.  
   
--   **Właściwość domyślna.** Struktura może wskazać co najwyżej jedną właściwość jako jego *właściwość domyślną* za pomocą modyfikatora [Default](../../../visual-basic/language-reference/modifiers/default.md). Aby uzyskać więcej informacji, zobacz [Default](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Właściwość domyślna.** Struktura może wskazać co najwyżej jedną właściwość jako jego *właściwość domyślną* za pomocą modyfikatora [Default](../../../visual-basic/language-reference/modifiers/default.md). Aby uzyskać więcej informacji, zobacz [Default](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Poziom dostępu.** W ramach struktury można zadeklarować każdą składową z własnym poziomem dostępu. Domyślnie wszystkie składowe struktury mają dostęp typu [Public](../../../visual-basic/language-reference/modifiers/public.md). Należy pamiętać, że jeśli struktura ma bardziej ograniczony poziom dostępu, automatycznie ogranicza to dostęp do jej składowych, nawet jeśli dostosujesz ich poziomy dostępu za pomocą modyfikatorów dostępu.
+- **Poziom dostępu.** W ramach struktury można zadeklarować każdą składową z własnym poziomem dostępu. Domyślnie wszystkie składowe struktury mają dostęp typu [Public](../../../visual-basic/language-reference/modifiers/public.md). Należy pamiętać, że jeśli struktura ma bardziej ograniczony poziom dostępu, automatycznie ogranicza to dostęp do jej składowych, nawet jeśli dostosujesz ich poziomy dostępu za pomocą modyfikatorów dostępu.
   
   
--   **Zakres.** Struktura jest w zakresie zawierającej ją przestrzeni nazw, klasy, struktury lub modułu.  
+- **Zakres.** Struktura jest w zakresie zawierającej ją przestrzeni nazw, klasy, struktury lub modułu.  
   
      Zakresem każdej składowej struktury jest cała struktura.  
   
--   **Okres istnienia.** Sama struktura nie ma okresu istnienia. Ale każde wystąpienie struktury ma okres istnienia niezależny od innych wystąpień.  
+- **Okres istnienia.** Sama struktura nie ma okresu istnienia. Ale każde wystąpienie struktury ma okres istnienia niezależny od innych wystąpień.  
   
      Okres istnienia wystąpienia rozpoczyna się w momencie jej utworzenia przez klauzulę [operatora New](../../../visual-basic/language-reference/operators/new-operator.md). Kończy się po zakończeniu okresu istnienia zmiennej, która odpowiada za zakończenie.
   
@@ -95,11 +95,11 @@ End Structure
   
      Składowe struktury mają okresy istnienia zależne od tego, jak i gdzie są zadeklarowane. Aby uzyskać więcej informacji, zobacz "Okres istnienia" w artykule [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md).  
   
--   **Kwalifikacja.** Kod spoza struktury musi kwalifikować nazwę składowej z nazwą tej struktury.  
+- **Kwalifikacja.** Kod spoza struktury musi kwalifikować nazwę składowej z nazwą tej struktury.  
   
      Jeśli kod wewnątrz struktury zagnieżdżonej wykonuje niekwalifikowane odwołanie do elementu programistycznego, program Visual Basic wyszukuje element najpierw w strukturze zagnieżdżonej, następnie w strukturze zawierającej i tak dalej do najbardziej zewnętrznego elementu zawierającego. Aby uzyskać więcej informacji, zobacz [Odwołania do zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
--   **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć łącznego zużycia pamięci przez strukturę, dodając do siebie nominalne alokacje magazynu jej składowych. Ponadto nie można bezpiecznie założyć, że kolejność magazynowania w pamięci jest taka sama jak kolejność deklaracji. Jeśli musisz kontrolować układ magazynu struktury, możesz zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> w instrukcji `Structure`.  
+- **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć łącznego zużycia pamięci przez strukturę, dodając do siebie nominalne alokacje magazynu jej składowych. Ponadto nie można bezpiecznie założyć, że kolejność magazynowania w pamięci jest taka sama jak kolejność deklaracji. Jeśli musisz kontrolować układ magazynu struktury, możesz zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> w instrukcji `Structure`.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto instrukcji `Structure` do zdefiniowania zestawu powiązanych danych dla pracownika. Widoczne jest użycie składowych `Public`, `Friend` i `Private` w celu odzwierciedlenia charakteru elementów danych. Przedstawione są także składowe procedury, właściwości i zdarzenia.  

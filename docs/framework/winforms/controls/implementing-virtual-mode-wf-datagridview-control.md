@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973774"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows
 Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych w <xref:System.Windows.Forms.DataGridView> kontrolki, można ustawić <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwość `true` i jawnie zarządzać kontrolki interakcji z jej magazynem danych. Dzięki temu można dostosowywać wydajność kontrolki w tej sytuacji.  
@@ -112,16 +112,16 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
   
 #### <a name="to-test-the-form"></a>Aby przetestować formularz  
   
--   Skompilować i uruchomić aplikację.  
+- Skompilować i uruchomić aplikację.  
   
      Zostanie wyświetlony <xref:System.Windows.Forms.DataGridView> kontroli wypełniane przy użyciu trzech rekordów klientów. Można zmodyfikować wartości wielu komórek w wierszu, a następnie naciśnij klawisz ESC, dwa razy w trybie edycji, a po poza trybem edycji, aby przywrócić cały wiersz do ich oryginalnych wartości. Podczas modyfikowania, dodawanie lub usuwanie wierszy w kontrolce `Customer` zmodyfikowane, dodane lub usunięte również obiekty w magazynie danych.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Ta aplikacja zapewnia podstawową wiedzę na temat zdarzeń musi obsługiwać na implementowanie trybu wirtualnego w <xref:System.Windows.Forms.DataGridView> kontroli. Możesz ulepszyć to podstawowa aplikacja na różne sposoby:  
   
--   Implementowanie magazyn danych, który przechowuje wartości z zewnętrznej bazy danych. Pamięć podręczną należy pobrać i odrzucić wartości zgodnie z potrzebami, tak aby zawierała tylko co jest potrzebne do wyświetlenia podczas korzystania z małą ilością pamięci na komputerze klienckim.  
+- Implementowanie magazyn danych, który przechowuje wartości z zewnętrznej bazy danych. Pamięć podręczną należy pobrać i odrzucić wartości zgodnie z potrzebami, tak aby zawierała tylko co jest potrzebne do wyświetlenia podczas korzystania z małą ilością pamięci na komputerze klienckim.  
   
--   Dostosuj wydajność magazynu danych, w zależności od wymagań. Na przykład możesz chcieć kompensacji wolne połączenia sieciowe, a nie ograniczenia ilości pamięci w komputerze klienckim, używając większy rozmiar pamięci podręcznej i minimalizuje liczbę zapytań do bazy danych.  
+- Dostosuj wydajność magazynu danych, w zależności od wymagań. Na przykład możesz chcieć kompensacji wolne połączenia sieciowe, a nie ograniczenia ilości pamięci w komputerze klienckim, używając większy rozmiar pamięci podręcznej i minimalizuje liczbę zapytań do bazy danych.  
   
  Aby uzyskać więcej informacji na temat buforowania wartości z zewnętrznej bazy danych, zobacz [jak: Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w Windows formantu DataGridView formularzy](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   

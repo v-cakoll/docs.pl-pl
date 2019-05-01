@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781007"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Wprowadzenie do LINQ w Visual Basic
 Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic i dostarcza proste oraz wydajne narzędzia podczas pracy z danymi wszelkiego rodzaju. Zamiast wysyłania kwerendy do bazy danych w celu przetworzenia lub posługiwanie się różną składnią kwerendy dla każdego typu danych, które przeszukujesz, LINQ wprowadza kwerendy jako część języka Visual Basic. Używa zunifikowaną składnię, bez względu na typ danych.  
@@ -182,11 +182,11 @@ Można użyć dodatkowych funkcji zapytania LINQ, wywołując elementy wyliczaln
 ## <a name="visual-basic-features-that-support-linq"></a>Funkcje Visual Basic obsługujące LINQ  
  Visual Basic obejmuje inne zauważalne cechy, które upewnij korzystanie z LINQ jest proste i zmniejszyć ilość kodu, który trzeba napisać, aby wykonać zapytania LINQ. Należą do nich między innymi:  
   
--   **Typy anonimowe**, które umożliwiają tworzenie nowego typu opartego na wynikach zapytania.  
+- **Typy anonimowe**, które umożliwiają tworzenie nowego typu opartego na wynikach zapytania.  
   
--   **Niejawnie wpisane zmienne**, które umożliwiają odroczenie określania typu i umożliwiają kompilator wywnioskować typ bazując na wyniku zapytania.  
+- **Niejawnie wpisane zmienne**, które umożliwiają odroczenie określania typu i umożliwiają kompilator wywnioskować typ bazując na wyniku zapytania.  
   
--   **Metody rozszerzenia**, które pozwalają rozszerzyć istniejący typ własnymi metodami bez modyfikowania samego typu.  
+- **Metody rozszerzenia**, które pozwalają rozszerzyć istniejący typ własnymi metodami bez modyfikowania samego typu.  
   
  Aby uzyskać więcej informacji, zobacz [Visual Basic funkcji czy obsługa LINQ](../../concepts/linq/features-that-support-linq.md).  
   

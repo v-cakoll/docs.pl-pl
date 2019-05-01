@@ -7,61 +7,61 @@ helpviewer_keywords:
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
 ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856542"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Punkty końcowe: adresy, wiązania i kontrakty
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punktów końcowych* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji oferowanych przez usługę WCF.  
   
  Każdy punkt końcowy składa się z czterech właściwości:  
   
--   Adres, który wskazuje, gdzie można znaleźć punktu końcowego.  
+- Adres, który wskazuje, gdzie można znaleźć punktu końcowego.  
   
--   Wiązanie, który określa, jak klient może komunikować się z punktem końcowym.  
+- Wiązanie, który określa, jak klient może komunikować się z punktem końcowym.  
   
--   Kontrakt określa operacje dostępne.  
+- Kontrakt określa operacje dostępne.  
   
--   Zestaw zachowań, które określają szczegółów implementacji lokalnego punktu końcowego.  
+- Zestaw zachowań, które określają szczegółów implementacji lokalnego punktu końcowego.  
   
  W tym temacie omówiono tej struktury punktu końcowego i wyjaśniono, jak jest reprezentowana w modelu obiektu programu WCF.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Struktura punktu końcowego  
  Każdy punkt końcowy składa się z następujących czynności:  
   
--   Adres: Adres jednoznacznie identyfikuje punkt końcowy i informuje o potencjalnych klientów usługi, w którym znajduje się. Jest reprezentowana w modelu obiektu programu WCF za <xref:System.ServiceModel.EndpointAddress> klasy. <xref:System.ServiceModel.EndpointAddress> Klasa zawiera:  
+- Adres: Adres jednoznacznie identyfikuje punkt końcowy i informuje o potencjalnych klientów usługi, w którym znajduje się. Jest reprezentowana w modelu obiektu programu WCF za <xref:System.ServiceModel.EndpointAddress> klasy. <xref:System.ServiceModel.EndpointAddress> Klasa zawiera:  
   
-    -   A <xref:System.ServiceModel.EndpointAddress.Uri%2A> właściwość, która reprezentuje adres usługi.  
+    - A <xref:System.ServiceModel.EndpointAddress.Uri%2A> właściwość, która reprezentuje adres usługi.  
   
-    -   <xref:System.ServiceModel.EndpointAddress.Identity%2A> Właściwość, która reprezentuje kolekcję nagłówków opcjonalną wiadomość, jak i tożsamości zabezpieczeń usługi. Nagłówki wiadomości opcjonalne są używane do zapewnienia dodatkowych i bardziej szczegółowe informacje dotyczące adresowania, aby zidentyfikować lub nawiązać kontakt z punktem końcowym.  
+    - <xref:System.ServiceModel.EndpointAddress.Identity%2A> Właściwość, która reprezentuje kolekcję nagłówków opcjonalną wiadomość, jak i tożsamości zabezpieczeń usługi. Nagłówki wiadomości opcjonalne są używane do zapewnienia dodatkowych i bardziej szczegółowe informacje dotyczące adresowania, aby zidentyfikować lub nawiązać kontakt z punktem końcowym.  
   
      Aby uzyskać więcej informacji, zobacz [Określanie adresu punktu końcowego](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   Powiązanie: Powiązanie Określa, jak komunikować się z punktem końcowym. Możliwości obejmują:  
+- Powiązanie: Powiązanie Określa, jak komunikować się z punktem końcowym. Możliwości obejmują:  
   
-    -   Protokół transportu do użycia (na przykład, TCP lub HTTP).  
+    - Protokół transportu do użycia (na przykład, TCP lub HTTP).  
   
-    -   Szyfrowanie do użycia dla wiadomości (na przykład tekst lub dane binarne).  
+    - Szyfrowanie do użycia dla wiadomości (na przykład tekst lub dane binarne).  
   
-    -   Niezbędne wymagania w zakresie zabezpieczeń (na przykład protokołu SSL lub protokołu SOAP wiadomości zabezpieczeń).  
+    - Niezbędne wymagania w zakresie zabezpieczeń (na przykład protokołu SSL lub protokołu SOAP wiadomości zabezpieczeń).  
   
      Aby uzyskać więcej informacji, zobacz [omówienie powiązań WCF](../../../../docs/framework/wcf/bindings-overview.md). Powiązanie jest reprezentowana w modelu obiektu programu WCF przez abstrakcyjna klasa bazowa <xref:System.ServiceModel.Channels.Binding>. W przypadku większości scenariuszy użytkownicy mogą użyć jednego z powiązań dostarczanych przez system. Aby uzyskać więcej informacji, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
--   Zamówień: Kontrakt opisano, jakie funkcje uwidacznia punkt końcowy, do klienta. Kontrakt określa:  
+- Zamówień: Kontrakt opisano, jakie funkcje uwidacznia punkt końcowy, do klienta. Kontrakt określa:  
   
-    -   Jakie operacje mogą być wywoływane przez klienta.  
+    - Jakie operacje mogą być wywoływane przez klienta.  
   
-    -   Formularz wiadomości.  
+    - Formularz wiadomości.  
   
-    -   Typ parametry wejściowe i dane wymagane do wywołania operacji.  
+    - Typ parametry wejściowe i dane wymagane do wywołania operacji.  
   
-    -   Jakiego typu Przetwarzanie lub odpowiedzi wiadomości klienta można się spodziewać.  
+    - Jakiego typu Przetwarzanie lub odpowiedzi wiadomości klienta można się spodziewać.  
   
      Aby uzyskać więcej informacji na temat definiowania kontrakt zobacz [projektowanie kontraktów usług](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Zachowania: Aby dostosować zachowanie lokalny punkt końcowy usługi, można użyć zachowań punktu końcowego. Zachowań punktu końcowego to osiągnąć przez uczestnictwem w procesie tworzenia WCFruntime. Na przykład zachowanie punktu końcowego <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> właściwość, która pozwala na określenie na adres nasłuchiwania inny niż adres protokołu SOAP lub Web Services Description Language (WSDL). Aby uzyskać więcej informacji, zobacz [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+- Zachowania: Aby dostosować zachowanie lokalny punkt końcowy usługi, można użyć zachowań punktu końcowego. Zachowań punktu końcowego to osiągnąć przez uczestnictwem w procesie tworzenia WCFruntime. Na przykład zachowanie punktu końcowego <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> właściwość, która pozwala na określenie na adres nasłuchiwania inny niż adres protokołu SOAP lub Web Services Description Language (WSDL). Aby uzyskać więcej informacji, zobacz [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definiowanie punktów końcowych  
  Można określić punktu końcowego usługi obowiązkowo za pomocą kodu lub w sposób deklaratywny przy użyciu konfiguracji. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie punktu końcowego usługi w konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) i [jak: Tworzenie punktu końcowego usługi w kodzie](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  

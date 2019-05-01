@@ -9,11 +9,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
 ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781293"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Instrukcje: Wypełnianie kształtów jednolitym kolorem
 Wypełnianie kształtów jednolitym kolorem, należy utworzyć <xref:System.Drawing.SolidBrush> obiektu, a następnie przekaż go <xref:System.Drawing.SolidBrush> obiektu jako argumentu do jednej z metod wypełnienia <xref:System.Drawing.Graphics> klasy. Poniższy przykład pokazuje, jak można wypełnić elipsę kolorem czerwonym.  

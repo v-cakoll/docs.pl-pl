@@ -11,18 +11,18 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
 ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802339"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Instrukcje: Modyfikowanie sygnału z klawiatury do kontrolki standardowej
 Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzonych z klawiatury. Korzystanie z klucza odwołuje się do obsługi klucza w ramach metody lub procedury obsługi zdarzeń, tak, aby inne metody i zdarzenia dalszych szczegółów kolejka komunikatów nie mają wartości klucza. Zmodyfikowanie klucza odwołuje się do modyfikowania wartości klucza, tak aby metody i procedury obsługi zdarzeń dalszych szczegółów kolejki komunikatów odbierać różne wartości klucza. W tym temacie przedstawiono sposób wykonywania tych zadań.  
   
 ### <a name="to-consume-a-key"></a>Korzystanie z klucza  
   
--   W <xref:System.Windows.Forms.Control.KeyPress> ustawić programu obsługi zdarzeń <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> właściwość <xref:System.Windows.Forms.KeyPressEventArgs> klasy `true`.  
+- W <xref:System.Windows.Forms.Control.KeyPress> ustawić programu obsługi zdarzeń <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> właściwość <xref:System.Windows.Forms.KeyPressEventArgs> klasy `true`.  
   
      —lub—  
   
@@ -38,7 +38,7 @@ Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzo
   
 ### <a name="to-modify-a-standard-character-key"></a>Aby zmodyfikować klucz znaków standardowych  
   
--   W <xref:System.Windows.Forms.Control.KeyPress> ustawić programu obsługi zdarzeń <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> właściwość <xref:System.Windows.Forms.KeyPressEventArgs> klasy wartość nowy klucz znaków.  
+- W <xref:System.Windows.Forms.Control.KeyPress> ustawić programu obsługi zdarzeń <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> właściwość <xref:System.Windows.Forms.KeyPressEventArgs> klasy wartość nowy klucz znaków.  
   
      Poniższy przykład to fragment `switch` instrukcji, która modyfikuje "B", "A" i "b", "a". Należy pamiętać, że <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> właściwość <xref:System.Windows.Forms.KeyPressEventArgs> parametr ma wartość `false`, dzięki czemu nowe wartości klucza są propagowane do innych metod i zdarzeń w kolejce komunikatów.  
   
@@ -47,7 +47,7 @@ Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzo
   
 ### <a name="to-modify-a-noncharacter-key"></a>Aby zmodyfikować nieznakowe klucz  
   
--   Zastąpienie <xref:System.Windows.Forms.Control> metody, która przetwarza wiadomości Windows wykrywanie przetłumaczyła lub WM_SYSKEYDOWN wiadomości i ustawić <xref:System.Windows.Forms.Message.WParam%2A> właściwość <xref:System.Windows.Forms.Message> parametr <xref:System.Windows.Forms.Keys> wartość, która reprezentuje nowy klucz nieznakowe.  
+- Zastąpienie <xref:System.Windows.Forms.Control> metody, która przetwarza wiadomości Windows wykrywanie przetłumaczyła lub WM_SYSKEYDOWN wiadomości i ustawić <xref:System.Windows.Forms.Message.WParam%2A> właściwość <xref:System.Windows.Forms.Message> parametr <xref:System.Windows.Forms.Keys> wartość, która reprezentuje nowy klucz nieznakowe.  
   
      Poniższy przykład kodu demonstruje sposób zastąpienia <xref:System.Windows.Forms.Control.PreProcessMessage%2A> metodę formantu do wykrywania klucze F1, za pomocą F9 i zmodyfikować wszelkie F3 naciśnięcie klawisza F1 — do. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.Control> metod, które można przesłonić, aby przechwycić komunikaty klawiatury, zobacz [dane wejściowe użytkownika w aplikacji Windows Forms](user-input-in-a-windows-forms-application.md) i [sposób działania wejście klawiatury](how-keyboard-input-works.md).  
   
@@ -63,7 +63,7 @@ Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzo
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

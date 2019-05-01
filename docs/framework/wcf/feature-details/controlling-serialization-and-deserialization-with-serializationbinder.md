@@ -3,11 +3,11 @@ title: Kontrolowanie serializacji i deserializacji za pomocą elementu Serializa
 ms.date: 03/30/2017
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
 ms.openlocfilehash: cb2476b55a965e326e492c3c0b77f0be65b2b290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857262"
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>Kontrolowanie serializacji i deserializacji za pomocą elementu SerializationBinder
 Podczas serializacji element formatujący przesyła informacje wymagane do utworzenia wystąpienia obiektu poprawnego typu i wersji. Informacje te obejmują zazwyczaj Pełna nazwa typu i nazwy zestawu obiektu. Domyślnie deserializacji używa tych informacji w celu utworzenia wystąpienia obiektu identyczne. Niektórzy użytkownicy może być konieczne do kontrolowania której klasy do serializacji i deserializacji, albo ponieważ oryginalnej klasy nie może istnieć na komputerze wykonywania deserializacji, oryginalnym klasy przeniósł między zestawami, lub w nieco innej klasy serwer i klienta. Aby uzyskać więcej informacji, zobacz [użycia wiążącego serializacji](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).  

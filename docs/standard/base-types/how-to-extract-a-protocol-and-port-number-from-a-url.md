@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyodrębnianie protokółu i numeru portu z adresu URL'
+title: 'Instrukcje: Wyodrębnianie protokołu i numeru portu z adresu URL'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a08e97b02e2f60422132e97e2f3f7d4d2d5b8ec4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860974"
 ---
-# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Porady: wyodrębnianie protokółu i numeru portu z adresu URL
+# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Instrukcje: Wyodrębnianie protokołu i numeru portu z adresu URL
 Poniższy przykład wyodrębnia protokół i numer portu z adresu URL.  
   
 ## <a name="example"></a>Przykład  

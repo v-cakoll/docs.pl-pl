@@ -3,11 +3,11 @@ title: 'Instrukcje: Debugowanie zestawów wyników zapytania (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
 ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855689"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Instrukcje: Debugowanie zestawów wyników zapytania (Visual Basic)
 Jedną z najbardziej typowych problemów podczas wykonywania zapytań dotyczących drzew XML jest, że jeśli drzewa XML ma domyślny obszar nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie znajdowały się w przestrzeni nazw.  

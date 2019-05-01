@@ -20,11 +20,11 @@ ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811816"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan
 <a name="Top"></a> Standardowa <xref:System.TimeSpan> Ciąg formatujący używa pojedynczego specyfikatora formatu w celu zdefiniowania tekstowa reprezentacja <xref:System.TimeSpan> wartość będącą wynikiem operacji formatowania. Dowolny ciąg formatu, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako niestandardowy <xref:System.TimeSpan> ciąg formatu. Aby uzyskać więcej informacji, zobacz [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  

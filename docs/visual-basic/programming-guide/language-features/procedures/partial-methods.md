@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791940"
 ---
 # <a name="partial-methods-visual-basic"></a>Metody częściowe (Visual Basic)
 Metody częściowe umożliwiają deweloperom Wstawianie niestandardowej logiki do kodu. Zazwyczaj ten kod jest częścią klasy wygenerowany przez projektanta. Metody częściowe są zdefiniowane w częściowej klasie, który jest tworzony przez generator kodu, a często są one używane do powiadomienie, że coś, co zostało zmienione. Umożliwiają one dla deweloperów określić zachowanie niestandardowe w odpowiedzi na zmiany.  
@@ -33,11 +33,11 @@ End Sub
   
  Definicja musi spełniać następujące warunki:  
   
--   Metoda musi być `Sub`, a nie `Function`.  
+- Metoda musi być `Sub`, a nie `Function`.  
   
--   Treść metody musi być puste.  
+- Treść metody musi być puste.  
   
--   Modyfikator dostępu musi być `Private`.  
+- Modyfikator dostępu musi być `Private`.  
   
 ## <a name="implementation"></a>Implementacja  
  Implementacja składa się przede wszystkim wypełnianie w treści metody częściowej. Implementacja zwykle znajduje się w osobnej klasy częściowej z definicji i są zapisywane przez dewelopera, który chce rozszerzyć wygenerowanego kodu.  

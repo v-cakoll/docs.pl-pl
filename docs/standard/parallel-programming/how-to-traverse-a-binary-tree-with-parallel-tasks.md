@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przenoszenie drzewa binarnego z zadaniami równoległymi'
+title: 'Instrukcje: Przenoszenie drzewa binarnego z zadaniami równoległymi'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8fd937d6ce2edf0c47fce78d48a90ec1aa409eef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797153"
 ---
-# <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Porady: przenoszenie drzewa binarnego z zadaniami równoległymi
+# <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Instrukcje: Przenoszenie drzewa binarnego z zadaniami równoległymi
 Poniższy przykład przedstawia dwa sposoby, w których zadań równoległych może służyć do przechodzenia struktury drzewa danych. Tworzenie drzewa, sama zostanie pozostawiony w charakterze ćwiczenia.  
   
 ## <a name="example"></a>Przykład  

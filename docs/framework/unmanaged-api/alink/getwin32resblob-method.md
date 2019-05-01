@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789795"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob — Metoda
 Pobiera obiekt blob zasobów Win32. Wywołaj tę metodę po ustawieniu opcji zestawu.  

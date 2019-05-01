@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858081"
 ---
 # <a name="best-practices-for-queued-communication"></a>Najlepsze rozwiązania dotyczące komunikacji z obsługą kolejek
 Ten temat zawiera zalecane praktyki dotyczące komunikacji z obsługą kolejek w Windows Communication Foundation (WCF). W poniższych sekcjach omówiono zalecane praktyki z punktu widzenia scenariusza.  
@@ -48,11 +48,11 @@ Ten temat zawiera zalecane praktyki dotyczące komunikacji z obsługą kolejek w
 ## <a name="achieving-high-throughput"></a>Uzyskanie wysokiej przepływności  
  Aby osiągnąć wysoką przepływność w jednym punkcie końcowym, użyj następującego polecenia:  
   
--   Wykonany, przetwarzanie wsadowe. Transakcyjnego przetwarzania wsadowego gwarantuje, że wiele komunikatów mogą być odczytywane w ramach jednej transakcji. Powoduje to zoptymalizowanie zatwierdzeń transakcji, zwiększa ogólną wydajność. Koszt przetwarzanie wsadowe jest to, że jeśli wystąpi awaria w pojedynczym komunikacie w ramach partii, a następnie całą partię zostanie wycofana i komunikaty muszą być przetworzone pojedynczo, dopóki nie jest bezpieczne partii ponownie. W większości przypadków skażone komunikaty są rzadkie, więc przetwarzania wsadowego jest preferowany sposób, aby zwiększyć wydajność systemu, zwłaszcza w przypadku innych menedżerów zasobów, które uczestniczą w transakcji. Aby uzyskać więcej informacji, zobacz [tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Wykonany, przetwarzanie wsadowe. Transakcyjnego przetwarzania wsadowego gwarantuje, że wiele komunikatów mogą być odczytywane w ramach jednej transakcji. Powoduje to zoptymalizowanie zatwierdzeń transakcji, zwiększa ogólną wydajność. Koszt przetwarzanie wsadowe jest to, że jeśli wystąpi awaria w pojedynczym komunikacie w ramach partii, a następnie całą partię zostanie wycofana i komunikaty muszą być przetworzone pojedynczo, dopóki nie jest bezpieczne partii ponownie. W większości przypadków skażone komunikaty są rzadkie, więc przetwarzania wsadowego jest preferowany sposób, aby zwiększyć wydajność systemu, zwłaszcza w przypadku innych menedżerów zasobów, które uczestniczą w transakcji. Aby uzyskać więcej informacji, zobacz [tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Współbieżność. Współbieżność zwiększa przepustowość, ale współbieżności będzie także miała wpływ rywalizacji o zasoby do udostępnionych zasobów. Aby uzyskać więcej informacji, zobacz [współbieżności](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Współbieżność. Współbieżność zwiększa przepustowość, ale współbieżności będzie także miała wpływ rywalizacji o zasoby do udostępnionych zasobów. Aby uzyskać więcej informacji, zobacz [współbieżności](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   Ograniczanie przepustowości. Aby uzyskać optymalną wydajność ograniczać liczbę komunikatów w potoku dyspozytora. Na przykład jak to zrobić, zobacz [ograniczania](../../../../docs/framework/wcf/samples/throttling.md).  
+- Ograniczanie przepustowości. Aby uzyskać optymalną wydajność ograniczać liczbę komunikatów w potoku dyspozytora. Na przykład jak to zrobić, zobacz [ograniczania](../../../../docs/framework/wcf/samples/throttling.md).  
   
  Korzystając z dzielenia na partie, należy pamiętać, że współbieżności i ograniczania przepustowości przełożyć na partie współbieżnych.  
   
@@ -75,11 +75,11 @@ Ten temat zawiera zalecane praktyki dotyczące komunikacji z obsługą kolejek w
   
  Korzystając z `MsmqIntegrationBinding`, należy pamiętać o następujących kwestiach:  
   
--   Treść wiadomości WCF nie jest taka sama jak treść wiadomości usługi MSMQ. Podczas wysyłania wiadomości WCF przy użyciu Zakolejkowane powiązanie, treść wiadomości WCF znajduje się wewnątrz wiadomości usługi MSMQ. Infrastruktura usługi MSMQ jest oblivious do tych dodatkowych informacji; jego widzi tylko wiadomości usługi MSMQ.  
+- Treść wiadomości WCF nie jest taka sama jak treść wiadomości usługi MSMQ. Podczas wysyłania wiadomości WCF przy użyciu Zakolejkowane powiązanie, treść wiadomości WCF znajduje się wewnątrz wiadomości usługi MSMQ. Infrastruktura usługi MSMQ jest oblivious do tych dodatkowych informacji; jego widzi tylko wiadomości usługi MSMQ.  
   
--   `MsmqIntegrationBinding` obsługuje serializację popularnych typów. Na podstawie typu serializacji, typ treści komunikatu ogólny, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, przyjmuje parametry innego typu. Na przykład <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> wymaga `MsmqMessage\<byte[]>` i <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> wymaga `MsmqMessage<Stream>`.  
+- `MsmqIntegrationBinding` obsługuje serializację popularnych typów. Na podstawie typu serializacji, typ treści komunikatu ogólny, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, przyjmuje parametry innego typu. Na przykład <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> wymaga `MsmqMessage\<byte[]>` i <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> wymaga `MsmqMessage<Stream>`.  
   
--   Serializacji XML można określić przy użyciu znanego typu `KnownTypes` atrybutu na [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element, który jest następnie używany do określenia sposobu deserializacji komunikatu XML.  
+- Serializacji XML można określić przy użyciu znanego typu `KnownTypes` atrybutu na [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element, który jest następnie używany do określenia sposobu deserializacji komunikatu XML.  
   
 ## <a name="see-also"></a>Zobacz także
 

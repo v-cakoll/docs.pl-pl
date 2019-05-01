@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858029"
 ---
 # <a name="data-contract-surrogates"></a>Surogaty kontraktu danych
 Kontrakt danych *zastępczy* jest funkcją zaawansowaną utworzonych na podstawie modelu kontraktu danych. Ta funkcja jest przeznaczony do zastosowania w przypadku dostosowywania typu i podstawienia w sytuacjach, w którym użytkownicy chcą zmienić, jak typ jest serializowana, zdeserializowany lub przewidywanych do metadanych. Sytuacje, gdzie mogą być używane zastępczy jest, gdy kontrakt danych nie została określona dla typu, pola i właściwości nie są oznaczone za pomocą <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu lub użytkownicy chcą dynamiczne tworzenie odmiany schematu.  
@@ -37,13 +37,13 @@ Kontrakt danych *zastępczy* jest funkcją zaawansowaną utworzonych na podstawi
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   Na serializacji, mapowanie zwracanego przez tę metodę jest następnie używana do przekształcania oryginalnego wystąpienia surrogated wystąpienia przez wywołanie metody <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> metody.  
+- Na serializacji, mapowanie zwracanego przez tę metodę jest następnie używana do przekształcania oryginalnego wystąpienia surrogated wystąpienia przez wywołanie metody <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> metody.  
   
--   Na deserializacji mapowania zwracanego przez tę metodę jest używany przez element serializujący do deserializacji do wystąpienia typu zastępczego. Następnie wywołuje <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> do przekształcania surrogated wystąpienia wystąpienie oryginalnego typu.  
+- Na deserializacji mapowania zwracanego przez tę metodę jest używany przez element serializujący do deserializacji do wystąpienia typu zastępczego. Następnie wywołuje <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> do przekształcania surrogated wystąpienia wystąpienie oryginalnego typu.  
   
--   Podczas eksportowania typ zastępczy zwracanego przez tę metodę jest odzwierciedlana można pobrać kontraktu danych do użycia podczas generowania metadanych.  
+- Podczas eksportowania typ zastępczy zwracanego przez tę metodę jest odzwierciedlana można pobrać kontraktu danych do użycia podczas generowania metadanych.  
   
--   Przy imporcie typ początkowej jest zmieniany na typ zastępczy, który jest odzwierciedlana można pobrać kontraktu danych dla celów, takich jak odwołujące się do pomocy technicznej.  
+- Przy imporcie typ początkowej jest zmieniany na typ zastępczy, który jest odzwierciedlana można pobrać kontraktu danych dla celów, takich jak odwołujące się do pomocy technicznej.  
   
  <xref:System.Type> Parametr jest typem obiektu, które jest serializowana, po deserializacji, zaimportowanych lub wyeksportowany. <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> Metoda musi zwracać typ danych wejściowych, jeśli surogatu nie obsługuje tego typu. W przeciwnym razie Zwróć odpowiedni typ surrogated. Jeśli istnieje kilka typów zastępczych, można zdefiniować wiele mapowań, w przypadku tej metody.  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791954"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameter — Tablice (Visual Basic)
 Zwykle nie można wywołać procedury z więcej argumentów niż określa deklaracja procedury. Jeśli potrzebujesz nieokreśloną liczbę argumentów, można zadeklarować *tablicy parametrów*, co pozwala procedurę, aby zaakceptować tablicy wartości parametru. Nie trzeba znać liczbę elementów w tablicy parametrów podczas definiowania procedury. Rozmiar tablicy jest określana indywidualnie przy każdym wywołaniu procedury.  
@@ -23,22 +23,22 @@ Zwykle nie można wywołać procedury z więcej argumentów niż określa deklar
 ## <a name="declaring-a-paramarray"></a>Deklarowanie ParamArray  
  Możesz użyć [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) — słowo kluczowe do oznaczania tablicy parametrów na liście parametrów. Mają zastosowanie następujące zasady:  
   
--   Procedurę można zdefiniować tylko jedna Tablica parametrów i musi być ostatnim parametrem w definicji procedury.  
+- Procedurę można zdefiniować tylko jedna Tablica parametrów i musi być ostatnim parametrem w definicji procedury.  
   
--   Tablica parametrów musi być przekazywany przez wartość. Jest dobrą praktyką, aby jawnie dołączyć znak programowania [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) — słowo kluczowe w definicji procedury.  
+- Tablica parametrów musi być przekazywany przez wartość. Jest dobrą praktyką, aby jawnie dołączyć znak programowania [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) — słowo kluczowe w definicji procedury.  
   
--   Tablica parametrów jest automatycznie opcjonalne. Jego wartość domyślna to puste Jednowymiarowa tablica typu elementu tablicy parametrów.  
+- Tablica parametrów jest automatycznie opcjonalne. Jego wartość domyślna to puste Jednowymiarowa tablica typu elementu tablicy parametrów.  
   
--   Wszystkie parametry z poprzednich tablicy parametrów musi być wymagane. Tablica parametrów musi być tylko opcjonalny parametr.  
+- Wszystkie parametry z poprzednich tablicy parametrów musi być wymagane. Tablica parametrów musi być tylko opcjonalny parametr.  
   
 ## <a name="calling-a-paramarray"></a>Wywoływanie ParamArray  
  Po wywołaniu procedury, która definiuje tablicy parametrów, należy podać argument w jednym z następujących sposobów:  
   
--   Nothing — oznacza to, możesz pominąć [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argumentu. W tym przypadku pusta tablica jest przekazywany do procedury. Można również przekazać [nic](../../../../visual-basic/language-reference/nothing.md) — słowo kluczowe, w tym samym celu.  
+- Nothing — oznacza to, możesz pominąć [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argumentu. W tym przypadku pusta tablica jest przekazywany do procedury. Można również przekazać [nic](../../../../visual-basic/language-reference/nothing.md) — słowo kluczowe, w tym samym celu.  
   
--   Lista dowolną liczbę argumentów, oddzielonych przecinkami. Typ danych każdego argumentu musi być niejawnie konwertowane na `ParamArray` typ elementu.  
+- Lista dowolną liczbę argumentów, oddzielonych przecinkami. Typ danych każdego argumentu musi być niejawnie konwertowane na `ParamArray` typ elementu.  
   
--   Tablica z tego samego typu elementu jako typ elementu tablicy parametrów.  
+- Tablica z tego samego typu elementu jako typ elementu tablicy parametrów.  
   
  We wszystkich przypadkach kodu w ramach procedury traktuje tablicy parametrów jako tablicę jednowymiarową za pomocą elementów tego samego typu danych, co `ParamArray` typu danych.  
   

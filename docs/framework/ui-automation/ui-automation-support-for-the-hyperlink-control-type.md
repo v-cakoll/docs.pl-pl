@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 ms.openlocfilehash: e239919426297d879a9ac90928481b554157e7e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785219"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla formantów typu hiperłącze
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "59186280"
   
 |Właściwości wzorzec/wzorzec kontrolki|Obsługa/wartość|Uwagi|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Tak|Wszystkie formanty hyperlink musi obsługiwać wzorzec Invoke.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Yes|Wszystkie formanty hyperlink musi obsługiwać wzorzec Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Formanty hiperłącza powinien obsługiwać wzorca kontrolki wartości, gdy ten link zawiera informacje, które są użyteczne i zrozumiały dla użytkownika.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Na przykład:`"https://www...."`|Adres URL w Internecie lub intranecie adresie jest przykładem hiperłącze, które zawierają informacje, które jest zrozumiały dla użytkownika. Programowe łącza, jednak jest istotny tylko do aplikacji i nie jest zalecane dla właściwości Value.|  
   

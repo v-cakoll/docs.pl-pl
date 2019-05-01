@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
 ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857626"
 ---
 # <a name="contracts"></a>Kontrakty
 W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług Windows Communication Foundation (WCF). Kontrakt usługi określa punkt końcowy komunikuje na zewnątrz. Na poziomie bardziej konkretne takie jak żądanie/nietypizowana odpowiedź, jednokierunkowe i dwukierunkowego jest poufności informacji na temat zestawu specyficzne komunikaty dotyczące podzielone na podstawowe wiadomości programu exchange wzorców (MEPs). Kontrakt usługi to zestaw logicznie powiązanych wymianę komunikatów, operacja usługi czy exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście akceptują jeden komunikat (tak, aby obiekt wywołujący może poinformować o powitania) i może być lub może nie zwrócić komunikat (w zależności od grzecznościowy operacji).  
@@ -21,32 +21,32 @@ W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług
 ## <a name="overview"></a>Omówienie  
  Ten temat zawiera ogólne koncepcyjne orientacji w pakiecie projektowanie i Implementowanie usług WCF. Tematy podrzędne zawierają bardziej szczegółowe informacje na temat szczegółowe informacje na temat projektowania i implementacji. Przed projektowanie i wdrażanie aplikacji WCF, zaleca się że:  
   
--   Zrozumieć, jakie kontraktu usługi, jak to działa i jak ją utworzyć.  
+- Zrozumieć, jakie kontraktu usługi, jak to działa i jak ją utworzyć.  
   
--   Zrozumienie, że kontraktów stanu minimalne wymagania mogą nie obsługiwać takiej konfiguracji czasu wykonywania lub środowisko hostingu.  
+- Zrozumienie, że kontraktów stanu minimalne wymagania mogą nie obsługiwać takiej konfiguracji czasu wykonywania lub środowisko hostingu.  
   
 ## <a name="service-contracts"></a>Kontrakty usług  
  Kontrakt usługi jest instrukcję, która zawiera informacje na temat:  
   
--   Grupowanie operacji w usłudze.  
+- Grupowanie operacji w usłudze.  
   
--   Podpis operacje pod kątem komunikatów wymienianych.  
+- Podpis operacje pod kątem komunikatów wymienianych.  
   
--   Typy danych tych komunikatów.  
+- Typy danych tych komunikatów.  
   
--   Lokalizacja operacji.  
+- Lokalizacja operacji.  
   
--   Określonych protokołów i formatów serializacji, które są używane do obsługi pomyślnej komunikacji z usługą.  
+- Określonych protokołów i formatów serializacji, które są używane do obsługi pomyślnej komunikacji z usługą.  
   
  Na przykład może być kontrakt zamówienia zakupu `CreateOrder` operacji, który akceptuje dane wejściowe informacji o zamówieniach typów i zwraca informacje o powodzeniu lub niepowodzeniu, tym identyfikator zamówienia. Może także mieć `GetOrderStatus` operacji, która akceptuje identyfikator zamówienia i zwraca informacje o stanie zamówienia. Określ tego rodzaju kontraktu usługi:  
   
--   Kontrakt zamówienia zakupu składa się z `CreateOrder` i `GetOrderStatus` operacji.  
+- Kontrakt zamówienia zakupu składa się z `CreateOrder` i `GetOrderStatus` operacji.  
   
--   Czy operacje mają określone komunikaty wejściowe i wyjściowe komunikaty.  
+- Czy operacje mają określone komunikaty wejściowe i wyjściowe komunikaty.  
   
--   Dane, które może wykonywać te komunikaty.  
+- Dane, które może wykonywać te komunikaty.  
   
--   Podzielone na kategorie instrukcji dotyczących infrastruktury komunikacji konieczne pomyślnie przetwarzania komunikatów. Na przykład, obejmują one czy i jakie rodzaje zabezpieczeń są wymagane do nawiązania komunikacji pomyślnie.  
+- Podzielone na kategorie instrukcji dotyczących infrastruktury komunikacji konieczne pomyślnie przetwarzania komunikatów. Na przykład, obejmują one czy i jakie rodzaje zabezpieczeń są wymagane do nawiązania komunikacji pomyślnie.  
   
  W celu przekazania tego rodzaju informacje do aplikacji na innych platformach (w tym platformy firmy Microsoft), kontraktów usług XML są publicznie wyrażone w standardowych formatów XML, takie jak [Web Services Description Language (WSDL)](https://go.microsoft.com/fwlink/?LinkId=87004) i [schematu XML (XSD)](https://go.microsoft.com/fwlink/?LinkId=87005), między innymi. Deweloperów na wielu platformach, można użyć tych informacji zamówienia publicznego do tworzenia aplikacji, które mogą się komunikować z usługą, zarówno ponieważ rozumieją języka specyfikacji, a te języki są ustalono, aby umożliwić współdziałanie poprzez opisanie publicznych formularzy, formatów i protokołów obsługiwanych przez usługę. Aby uzyskać więcej informacji na temat usługi WCF obsługi tego rodzaju informacje, zobacz [metadanych](../../../../docs/framework/wcf/feature-details/metadata.md).  
   

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775872"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
 .NET Framework, za pomocą plików konfiguracji zapewnia deweloperom i administratorom kontrolę i elastyczność nad aplikacjami sposób uruchamiania. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, mogą uzyskiwać dostęp do których chronionych zasobów aplikacji, których wersji zestawów aplikacja będzie używać i gdzie znajdują się zdalne aplikacje i obiekty. Deweloperzy mogą umieścić ustawienia w plikach konfiguracyjnych, eliminując konieczność rekompilacji aplikacji za każdym razem, gdy zmieni się ustawienie. W tej sekcji opisano, co może być skonfigurowane i dlaczego Konfigurowanie aplikacji mogą być przydatne.  
@@ -66,7 +66,7 @@ ms.locfileid: "59147111"
   
  Nazwa i lokalizacja pliku konfiguracji aplikacji są zależne od hosta aplikacji, który może być jednym z następujących:  
   
--   Aplikacja obsługiwana za pomocą pliku wykonywalnego.  
+- Aplikacja obsługiwana za pomocą pliku wykonywalnego.  
   
      Te aplikacje mają dwa pliki konfiguracji: źródłowy plik konfiguracji, który deweloper modyfikuje podczas prac projektowych, oraz plik wyjściowy, który jest dystrybuowany wraz z aplikacją.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59147111"
   
      Program Visual Studio automatycznie kopiuje źródłowy plik konfiguracji do katalogu, w którym znajduje się skompilowany zestaw, w celu utworzenia wyjściowego pliku konfiguracji, który będzie wdrażany wraz z aplikacją. W niektórych przypadkach program Visual Studio może zmodyfikować wyjściowy plik konfiguracji; Aby uzyskać więcej informacji, zobacz [przekierowanie wersji zestawu na poziomie aplikacji](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) części [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md) artykułu.  
   
--   Aplikacja obsługiwana w programie ASP.NET.  
+- Aplikacja obsługiwana w programie ASP.NET.  
   
      Aby uzyskać więcej informacji na temat plików konfiguracyjnych programu ASP.NET, zobacz [ustawienia konfiguracji programu ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
--   Aplikacja obsługiwana w programie Internet Explorer.  
+- Aplikacja obsługiwana w programie Internet Explorer.  
   
      Jeśli aplikacja obsługiwana w programie Internet Explorer ma plik konfiguracji, lokalizacja tego pliku jest określona w `<link>` tagu przy użyciu następującej składni:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59147111"
   
  Pliki konfiguracji zabezpieczeń znajdują się w następujących lokalizacjach:  
   
--   Plik konfiguracji zasad przedsiębiorstwa: %*runtime-install-path*%\Config\Enterprisesec.config  
+- Plik konfiguracji zasad przedsiębiorstwa: %*runtime-install-path*%\Config\Enterprisesec.config  
   
--   Plik konfiguracji zasad komputera: %*runtime-install-path*%\Config\Security.config  
+- Plik konfiguracji zasad komputera: %*runtime-install-path*%\Config\Security.config  
   
--   Plik konfiguracji zasad użytkownika: %USERPROFILE%\Application aplikacji\microsoft\clr security config\v*xx.xx*\Security.config  
+- Plik konfiguracji zasad użytkownika: %USERPROFILE%\Application aplikacji\microsoft\clr security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: Lokalizowanie zestawów za pomocą DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  

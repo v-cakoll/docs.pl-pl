@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
 ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877672"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Wykrywanie zmian za pomocą elementu SqlDependency
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
 ms.openlocfilehash: a9f74f025af6dfc5737ea9f4971f68c5ad913e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793461"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Przetwarzanie wsadowe operacji (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Obsługuje wsadowe przetwarzanie żądań [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi. Aby uzyskać więcej informacji, zobacz [OData: Przetwarzanie wsadowe](https://go.microsoft.com/fwlink/?LinkId=186075). W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], każda operacja, która używa <xref:System.Data.Services.Client.DataServiceContext>, takich jak wykonywanie zapytania lub zapisywania zmian, wyniki w oddzielnym żądaniu wysyłanych do usługi danych. W celu utrzymania logiczne zakres rodzaje operacji, można jawnie zdefiniować operacyjnej partii. Zapewnia to, że wszystkie operacje w partii są wysyłane do usługi danych w ramach pojedynczego żądania HTTP, korzystanie z serwera przetwarzania niepodzielne operacje i zmniejsza liczbę rund do usługi danych.  

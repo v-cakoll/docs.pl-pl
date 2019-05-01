@@ -3,11 +3,11 @@ title: LINQ i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
 ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878748"
 ---
 # <a name="linq-and-adonet"></a>LINQ i ADO.NET
 Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstw logiki i prezentacji firm (np. Visual C# lub Visual Basic) i język zapytań do interakcji z bazą danych (takich jak [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). To wymaga programista ma być biegły w kilku językach zaczęła obowiązywać, a także powoduje niezgodności języka w środowisku programistycznym. Na przykład aplikację, która używa danych dostęp do interfejsu API do wykonania zapytania względem bazy danych określa zapytanie jako literał ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzane pod kątem błędów, takich jak nieprawidłową składnię lub tego, czy kolumny lub wiersze, które odwołuje się faktycznie istnieje. Istnieje żaden typ weryfikacji parametry zapytania i nie `IntelliSense` obsługuje albo.  

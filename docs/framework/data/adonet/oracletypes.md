@@ -3,11 +3,11 @@ title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
 ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878426"
 ---
 # <a name="oracletypes"></a>OracleTypes
 .NET Framework Data Provider for Oracle obejmuje kilka struktur, które można użyć do pracy z typami danych Oracle. Obejmują one <xref:System.Data.OracleClient.OracleNumber> i <xref:System.Data.OracleClient.OracleString>.  
@@ -17,9 +17,9 @@ ms.locfileid: "59212313"
   
  W poniższych C# przykładach:  
   
--   Tworzenie tabeli bazy danych Oracle i załaduj go z danymi.  
+- Tworzenie tabeli bazy danych Oracle i załaduj go z danymi.  
   
--   Użyj <xref:System.Data.OracleClient.OracleDataReader> do uzyskania dostępu do danych i korzystać z kilku <xref:System.Data.OracleClient.OracleType> struktur, aby wyświetlić dane.  
+- Użyj <xref:System.Data.OracleClient.OracleDataReader> do uzyskania dostępu do danych i korzystać z kilku <xref:System.Data.OracleClient.OracleType> struktur, aby wyświetlić dane.  
   
 ## <a name="creating-an-oracle-table"></a>Tworzenie tabeli programu Oracle  
  W tym przykładzie tworzy tabelę bazy danych Oracle i ładuje je z danymi. W tym przykładzie należy uruchomić przed uruchomieniem w następnym przykładzie.  

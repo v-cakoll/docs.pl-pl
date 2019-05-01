@@ -5,11 +5,11 @@ ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fbde11672dc17f80a45defc0a55bcf841e83c324
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871682"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Środki zaradcze: Deserializacja obiektów między domenami aplikacji
 W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby domen aplikacji z różnymi bazami aplikacji, próba deserializacji obiektów w logicznym kontekście wywołań między różnymi domenami aplikacji zgłasza wyjątek.  
@@ -27,13 +27,13 @@ W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby dome
   
 5. Jeśli system konfiguracji nie został jeszcze zainicjowany, musi on zakończyć proces inicjacji. Oznacza to, między innymi, że środowisko wykonawcze musi utworzyć stabilną ścieżkę dla systemu konfiguracji, co wykonuje w następujący sposób:  
   
-    1.  Szuka dowodu dla domeny aplikacji innej niż domyślna.  
+    1. Szuka dowodu dla domeny aplikacji innej niż domyślna.  
   
-    2.  Próbuje obliczyć dowód dla domeny aplikacji innej niż domyślna na podstawie domyślnej domeny aplikacji.  
+    2. Próbuje obliczyć dowód dla domeny aplikacji innej niż domyślna na podstawie domyślnej domeny aplikacji.  
   
-    3.  Wywołanie w celu uzyskania dowodu dla domyślnej domeny aplikacji wyzwala międzyaplikacyjne wywołanie domeny z domeny aplikacji innej niż domyślna do domyślnej domeny aplikacji.  
+    3. Wywołanie w celu uzyskania dowodu dla domyślnej domeny aplikacji wyzwala międzyaplikacyjne wywołanie domeny z domeny aplikacji innej niż domyślna do domyślnej domeny aplikacji.  
   
-    4.  Zgodnie z częścią kontraktu domeny międzyaplikacyjnej w .NET Framework, zawartość logicznego kontekstu wywołań musiała być skierowana poza granice domeny aplikacji.  
+    4. Zgodnie z częścią kontraktu domeny międzyaplikacyjnej w .NET Framework, zawartość logicznego kontekstu wywołań musiała być skierowana poza granice domeny aplikacji.  
   
 6. Ponieważ typy znajdujące się w logicznym kontekście wywołań nie mogą być rozpoznane w domyślnej domenie aplikacji, zgłaszany jest wyjątek.  
   

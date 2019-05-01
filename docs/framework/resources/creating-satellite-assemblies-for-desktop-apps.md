@@ -26,11 +26,11 @@ ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793051"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwiają one aplikację, aby wyświetlić ciągi, obrazy i inne dane w przez użytkownika języka i kultury, a także do dostarczania danych alternatywnego, jeśli nie są dostępne zasoby dotyczące języka przez użytkownika lub kultury. .NET Framework wykorzystuje model Gwiazda — w celu zlokalizowania i pobrania zlokalizowanych zasobów. Piasta to główny zestaw, który zawiera niemożliwe do zlokalizowania kodu wykonywalnego i zasoby dla jednej kultury, które jest wywoływane zero lub kultury domyślnej. Domyślną kulturę używaną jest rezerwowego kulturą aplikacji; jest używany, gdy nie zlokalizowane zasoby są dostępne. Możesz użyć <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby wyznaczyć kultury aplikacji domyślnej kultury. Każdej szprysze nawiązuje połączenie z zestawem satelickim, który zawiera zasoby dla pojedynczej zlokalizowanej kultury, ale nie zawiera żadnego kodu. Ponieważ zestawy satelickie nie są częścią zestawu głównego, można łatwo zaktualizować lub zastąpić zasoby, które odpowiadają określonej kultury bez zastępowania głównym zestawie aplikacji.  
@@ -41,16 +41,16 @@ Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwi
 ## <a name="satellite-assembly-name-and-location"></a>Nazwa zestawu satelickiego i lokalizacji  
  Wymaga model — Gwiazda umieść zasoby w określonych lokalizacjach, dzięki czemu mogą być łatwo znajduje się i używane. Jeśli to zrobisz nie kompilacji i nazwy zasobów, zgodnie z oczekiwaniami lub nie należy umieszczać je w odpowiednich lokalizacjach, środowisko uruchomieniowe języka wspólnego nie będzie można je znaleźć i zamiast tego użyj zasobów kultury domyślnej. Menedżer zasobów .NET Framework, reprezentowane przez <xref:System.Resources.ResourceManager> obiektów, zostanie użyta automatycznie uzyskiwać dostęp do zlokalizowanych zasobów. Resource Manager wymaga następujących elementów:  
   
--   Pojedynczy satelicki musi zawierać wszystkie zasoby dla określonej kultury. Innymi słowy należy skompilować wiele plików txt lub resx w jednym binarnego pliku Resources.  
+- Pojedynczy satelicki musi zawierać wszystkie zasoby dla określonej kultury. Innymi słowy należy skompilować wiele plików txt lub resx w jednym binarnego pliku Resources.  
   
--   Musi istnieć oddzielnym podkatalogu w katalogu aplikacji dla każdej zlokalizowanej kultury, przechowujący zasoby w tej kulturze. Nazwę podkatalogu musi być taka sama jak nazwa kultury. Alternatywnie można przechowywać swoje zestawy satelickie w globalnej pamięci podręcznej. W takim przypadku składnik informacji kultury silna nazwa zestawu musi wskazywać jego kultury. (Zobacz [instalowanie zestawów satelickich w globalnej pamięci podręcznej zestawów](#SN) w dalszej części tego tematu.)  
+- Musi istnieć oddzielnym podkatalogu w katalogu aplikacji dla każdej zlokalizowanej kultury, przechowujący zasoby w tej kulturze. Nazwę podkatalogu musi być taka sama jak nazwa kultury. Alternatywnie można przechowywać swoje zestawy satelickie w globalnej pamięci podręcznej. W takim przypadku składnik informacji kultury silna nazwa zestawu musi wskazywać jego kultury. (Zobacz [instalowanie zestawów satelickich w globalnej pamięci podręcznej zestawów](#SN) w dalszej części tego tematu.)  
   
     > [!NOTE]
     >  Jeśli aplikacja zawiera zasoby podhodowli, umieść każdy przeszczepiania w oddzielnym podkatalogu w katalogu aplikacji. Nie należy umieszczać podhodowli podkatalogów w katalogu ich główne kultury.  
   
--   Zestawu satelickiego musi mieć taką samą nazwę jak aplikacja, a musi używać rozszerzenia nazwy pliku ". resources.dll". Na przykład jeśli aplikacja nosi nazwę Example.exe, nazwę każdego zestawu satelickiego powinna być Example.resources.dll. Należy pamiętać, że nazwa zestawu satelickiego nie wskazuje kulturę plików zasobów. Jednak zestawu satelickiego pojawia się w katalogu, który określa kulturę.  
+- Zestawu satelickiego musi mieć taką samą nazwę jak aplikacja, a musi używać rozszerzenia nazwy pliku ". resources.dll". Na przykład jeśli aplikacja nosi nazwę Example.exe, nazwę każdego zestawu satelickiego powinna być Example.resources.dll. Należy pamiętać, że nazwa zestawu satelickiego nie wskazuje kulturę plików zasobów. Jednak zestawu satelickiego pojawia się w katalogu, który określa kulturę.  
   
--   Informacje na temat kultury zestawu satelickiego muszą być zawarte w metadanych zestawu. Aby przechować nazwę kultury w metadanych zestawu satelickiego, należy określić `/culture` opcji, gdy używasz [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) Osadzanie zasobów w zestawie satelickim.  
+- Informacje na temat kultury zestawu satelickiego muszą być zawarte w metadanych zestawu. Aby przechować nazwę kultury w metadanych zestawu satelickiego, należy określić `/culture` opcji, gdy używasz [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) Osadzanie zasobów w zestawie satelickim.  
   
  Na poniższej ilustracji przedstawiono przykład struktury i lokalizacji wymaganiami katalogu dla aplikacji, które nie jest instalowany w [globalnej pamięci podręcznej](../../../docs/framework/app-domains/gac.md). Elementy z rozszerzeniami txt i Resources nie będą dostarczane wraz z ostatnim aplikacji. Są to pliki zasobów pośredniego, używany do tworzenia zestawów zasobów satelickich końcowego. W tym przykładzie można zastąpić pliki resx na pliki txt. Aby uzyskać więcej informacji, zobacz [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. Dodanie obsługi dodatkowych kultur (en US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
   
-    -   Do obsługi en US lub kultury angielski (Stany Zjednoczone), Utwórz plik zasobów o nazwie Greeting.en US.resx lub Greeting.en US.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `HelloString` którego wartością jest "Witaj świecie!"  
+    - Do obsługi en US lub kultury angielski (Stany Zjednoczone), Utwórz plik zasobów o nazwie Greeting.en US.resx lub Greeting.en US.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `HelloString` którego wartością jest "Witaj świecie!"  
   
-    -   Na potrzeby obsługi, fr-FR lub kultury francuski (Francja), Utwórz plik zasobów o nazwie Greeting.fr-FR.resx lub Greeting.fr FR.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `HelloString` którego wartością jest "Salut w całości le monde!"  
+    - Na potrzeby obsługi, fr-FR lub kultury francuski (Francja), Utwórz plik zasobów o nazwie Greeting.fr-FR.resx lub Greeting.fr FR.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `HelloString` którego wartością jest "Salut w całości le monde!"  
   
-    -   Na potrzeby obsługi, ru-RU lub kultury rosyjski (Rosja), Utwórz plik zasobów o nazwie Greeting.ru RU.resx lub Greeting.ru RU.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `HelloString` którego wartością jest "Всем привет!"  
+    - Na potrzeby obsługi, ru-RU lub kultury rosyjski (Rosja), Utwórz plik zasobów o nazwie Greeting.ru RU.resx lub Greeting.ru RU.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `HelloString` którego wartością jest "Всем привет!"  
   
 4. Użyj [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) skompilować każdego tekstowym lub XML pliku zasobu do binarnego pliku Resources. Dane wyjściowe to zbiór plików, które mają taką samą nazwę pliku głównego, jak pliki resx lub .txt, ale z rozszerzeniem Resources. Po utworzeniu przykładu z programu Visual Studio, proces kompilacji odbywa się automatycznie. Jeśli nie używasz programu Visual Studio, uruchom następujące polecenia do kompilowania plików resx na pliki Resources:  
   
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. Dodanie obsługi dodatkowych kultur (kultury en US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
   
-    -   Aby obsługiwać "en US" lub kultury angielski (Stany Zjednoczone), Utwórz plik zasobów o nazwie Strings.en US.resx lub Strings.en US.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `Greeting` którego wartością jest "Hello!".  
+    - Aby obsługiwać "en US" lub kultury angielski (Stany Zjednoczone), Utwórz plik zasobów o nazwie Strings.en US.resx lub Strings.en US.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `Greeting` którego wartością jest "Hello!".  
   
-    -   Aby obsługiwać "fr-FR" lub kultury francuski (Francja), Utwórz plik zasobów o nazwie Strings.fr-FR.resx lub Strings.fr FR.txt i przechowywanych w niej pojedynczego ciągu o nazwie `Greeting` którego wartością jest "Bon jour!"  
+    - Aby obsługiwać "fr-FR" lub kultury francuski (Francja), Utwórz plik zasobów o nazwie Strings.fr-FR.resx lub Strings.fr FR.txt i przechowywanych w niej pojedynczego ciągu o nazwie `Greeting` którego wartością jest "Bon jour!"  
   
-    -   Aby obsługiwać "ru-RU" lub kultury rosyjski (Rosja), Utwórz plik zasobów o nazwie Strings.ru RU.resx lub Strings.ru RU.txt i przechowywanych w niej pojedynczego ciągu o nazwie `Greeting` którego wartością jest "Привет!"  
+    - Aby obsługiwać "ru-RU" lub kultury rosyjski (Rosja), Utwórz plik zasobów o nazwie Strings.ru RU.resx lub Strings.ru RU.txt i przechowywanych w niej pojedynczego ciągu o nazwie `Greeting` którego wartością jest "Привет!"  
   
 6. Użyj [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) skompilować każdego tekstowym lub XML pliku zasobu do binarnego pliku Resources. Dane wyjściowe to zbiór plików, które mają taką samą nazwę pliku głównego, jak pliki resx lub .txt, ale z rozszerzeniem Resources. Po utworzeniu przykładu z programu Visual Studio, proces kompilacji odbywa się automatycznie. Jeśli nie używasz programu Visual Studio, uruchom następujące polecenie do kompilowania plików resx na pliki Resources:  
   

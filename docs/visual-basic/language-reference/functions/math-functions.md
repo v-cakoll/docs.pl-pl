@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
 ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801351"
 ---
 # <a name="math-functions-visual-basic"></a>Funkcje matematyczne (Visual Basic)
 Metody <xref:System.Math?displayProperty=nameWithType> klasy dostarczają trygonometrycznych logarytmicznej i inne typowe funkcje matematyczne.  

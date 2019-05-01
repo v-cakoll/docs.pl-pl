@@ -3,11 +3,11 @@ title: Wyjątki zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780864"
 ---
 # <a name="security-exceptions"></a>Wyjątki zabezpieczeń
 Ten temat zawiera listę wszystkich wyjątków zabezpieczeń.  
@@ -29,8 +29,8 @@ Ten temat zawiera listę wszystkich wyjątków zabezpieczeń.
 |CachedNegotiationStateQuotaReached|Usługa nie może w pamięci podręcznej stanu negocjacji zgodnie z określoną pojemność został osiągnięty. Ponów żądanie.|  
 |CacheQuotaReached|Nie można dodać elementu. Maksymalny rozmiar pamięci podręcznej jest określony.|  
 |CannotDetermineSPNBasedOnAddress|Klient nie może określić, że nazwa główna usługi na podstawie tożsamości z adresu określonego obiektu docelowego na potrzeby SspiNegotiation/Kerberos. Tożsamość adresu docelowego musi być tożsamością UPN (jak domena_abc\\\alice) lub tożsamością SPN (jak host/komputer1).|  
-|CannotFindCert|Nie można odnaleźć certyfikatu X.509 przy użyciu określonych kryteriów wyszukiwania: StoreName StoreLocation, FindType, FindValue.|  
-|CannotFindCertForTarget|Nie można odnaleźć certyfikatu X.509 przy użyciu określonych kryteriów wyszukiwania: StoreName, StoreLocation, FindType FindValue dla określonego celu.|  
+|CannotFindCert|Nie można odnaleźć certyfikatu X.509 przy użyciu określonych kryteriów wyszukiwania: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCertForTarget|Nie można odnaleźć certyfikatu X.509 przy użyciu określonych kryteriów wyszukiwania: StoreName, StoreLocation, FindType, FindValue dla określonego celu.|  
 |CannotFindCorrelationStateForApplyingSecurity|Nie można odnaleźć stanu korelacji stosowania zabezpieczeń do odpowiedzi na odpowiadający.|  
 |CannotFindNegotiationState|Nie można odnaleźć stanu negocjacji dla określonego kontekstu.|  
 |CannotFindSecuritySession|Nie można odnaleźć sesji zabezpieczeń o określonym identyfikatorze.|  
@@ -55,8 +55,8 @@ Ten temat zawiera listę wszystkich wyjątków zabezpieczeń.
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Eksport zasad zabezpieczeń nie powiodło się. Powiązanie zawiera element AsymmetricSecurityBindingElement i element powiązania transportu bezpieczne. Eksportowanie zasad dla takiego powiązania nie jest obsługiwana.|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|Eksport zasad zabezpieczeń nie powiodło się. Powiązanie zawiera element SymmetricSecurityBindingElement i element powiązania transportu bezpieczne. Eksportowanie zasad dla takiego powiązania nie jest obsługiwana.|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|Eksport zasad zabezpieczeń nie powiodło się. Wiązanie zawiera TransportSecurityBindingElement, ale żaden element powiązania transportu implementującego ITransportTokenAssertionProvider. Eksportowanie zasad dla takiego powiązania nie jest obsługiwana. Upewnij się, że powiązanie element powiązania transportu implementuje interfejs ITransportTokenAssertionProvider.|  
-|FoundMultipleCerts|Znaleziono wiele certyfikatów X.509 przy użyciu określonych kryteriów wyszukiwania: StoreName StoreLocation, FindType, FindValue. Podaj dokładniejszą wartość wyszukiwania.|  
-|FoundMultipleCertsForTarget|Znaleziono wiele certyfikatów X.509 przy użyciu określonych kryteriów wyszukiwania: StoreName, StoreLocation, FindType FindValue dla określonego celu. Podaj dokładniejszą wartość wyszukiwania.|  
+|FoundMultipleCerts|Znaleziono wiele certyfikatów X.509 przy użyciu określonych kryteriów wyszukiwania: StoreName, StoreLocation, FindType, FindValue. Podaj dokładniejszą wartość wyszukiwania.|  
+|FoundMultipleCertsForTarget|Znaleziono wiele certyfikatów X.509 przy użyciu określonych kryteriów wyszukiwania: StoreName, StoreLocation, FindType, FindValue dla określonego celu. Podaj dokładniejszą wartość wyszukiwania.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|Element SecurityVersion.WSSecurityJan2004 nie obsługuje nagłówka odszyfrowywania. Użyj SecurityVersion.WsSecurityXXX2005 i nowsze wersje lub zaszyfrować cały komunikat za pomocą zabezpieczeń transportu.|  
 |IdentityCheckFailedForIncomingMessage|Nie można sprawdzić tożsamości komunikatu przychodzącego. Oczekiwaną tożsamość jest określona dla docelowego punktu końcowego.|  
 |IdentityCheckFailedForOutgoingMessage|Nie można sprawdzić tożsamości komunikatu wychodzącego. Oczekiwaną tożsamość jest określona dla docelowego punktu końcowego.|  

@@ -3,11 +3,11 @@ title: 'Instrukcje: Wykonywanie przekształceń strumieniowych dużych dokument�
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
 ms.openlocfilehash: 8761f5fbf4e6137c1ae6b202b6717579c6f78d4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789132"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Instrukcje: Wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)
 Czasami trzeba Przekształcanie dużych plików XML i pisania aplikacji, więc, że zużycie pamięci aplikacji jest przewidywalne. Jeśli zostanie podjęta próba wypełnianie drzewa XML z bardzo dużego pliku XML, wykorzystanie pamięci będzie proporcjonalny do rozmiaru pliku (oznacza to, że nadmierne). W związku z tym należy zamiast tego użyj technika przesyłania strumieniowego.  

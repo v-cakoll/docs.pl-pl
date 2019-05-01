@@ -3,11 +3,11 @@ title: Szablony programu Visual Studio na potrzeby programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780669"
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
 Szablony programu Visual Studio Windows Communication Foundation (WCF) są wstępnie zdefiniowane szablony projektów i elementów, które w programie Visual Studio umożliwia szybkie tworzenie usług WCF i otaczającego aplikacji.  
@@ -20,11 +20,11 @@ Szablony programu Visual Studio Windows Communication Foundation (WCF) są wstę
   
  Podczas tworzenia nowego projektu przy użyciu **usługi WCF** szablon nowego projektu automatycznie uwzględnia następujące trzy pliki:  
   
--   Plik kontraktu usługi (IService1.cs lub IService1.vb). Plik kontraktu usługi jest interfejs, który został zastosowany atrybuty usługi WCF. Ten plik zawiera definicję prostą usługę, aby pokazać sposób definiowania usługi oraz operacje oparte o parametry i przykładowych kontraktu danych proste. Jest to domyślny plik wyświetlany w edytorze kodu, po utworzeniu projektu usługi WCF.  
+- Plik kontraktu usługi (IService1.cs lub IService1.vb). Plik kontraktu usługi jest interfejs, który został zastosowany atrybuty usługi WCF. Ten plik zawiera definicję prostą usługę, aby pokazać sposób definiowania usługi oraz operacje oparte o parametry i przykładowych kontraktu danych proste. Jest to domyślny plik wyświetlany w edytorze kodu, po utworzeniu projektu usługi WCF.  
   
--   Plik implementacji usługi (Service1.cs lub Service1.vb). Plik implementacji usługi implementuje kontrakt zdefiniowany w pliku kontraktu usługi.  
+- Plik implementacji usługi (Service1.cs lub Service1.vb). Plik implementacji usługi implementuje kontrakt zdefiniowany w pliku kontraktu usługi.  
   
--   Plik konfiguracji aplikacji (App.config). Plik konfiguracyjny zawiera podstawowe elementy modelu usług WCF za pomocą bezpiecznego powiązania protokołu HTTP. Ponadto zawiera punkt końcowy usługi i umożliwia wymiany metadanych.  
+- Plik konfiguracji aplikacji (App.config). Plik konfiguracyjny zawiera podstawowe elementy modelu usług WCF za pomocą bezpiecznego powiązania protokołu HTTP. Ponadto zawiera punkt końcowy usługi i umożliwia wymiany metadanych.  
   
 > [!NOTE]
 >  Program Visual Studio jest skonfigurowana do rozpoznać pliku App.config jako plik konfiguracyjny dla projektu, po uruchomieniu przy użyciu [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), która jest domyślna konfiguracja. Jeśli na serwerze biblioteki usługi w pliku wykonywalnym, należy przenieść kod konfiguracji do pliku konfiguracyjnego pliku wykonywalnego, jak pliki konfiguracji dla bibliotek DLL nie są prawidłowe.  
@@ -34,13 +34,13 @@ Szablony programu Visual Studio Windows Communication Foundation (WCF) są wstę
   
  Podczas tworzenia nowego projektu przy użyciu **usługi aplikacji sieci Web WCF** szablonu projektu obejmuje cztery następujące pliki:  
   
--   Host usługi plików (plik service1.svc).  
+- Host usługi plików (plik service1.svc).  
   
--   Plik kontraktu usługi (IService1.cs lub IService1.vb).  
+- Plik kontraktu usługi (IService1.cs lub IService1.vb).  
   
--   Plik implementacji usługi (Service1.svc.cs lub Service1.svc.vb).  
+- Plik implementacji usługi (Service1.svc.cs lub Service1.svc.vb).  
   
--   Plik konfiguracji sieci Web (Web.config).  
+- Plik konfiguracji sieci Web (Web.config).  
   
  Szablon automatycznie tworzy witrynę sieci Web (do wdrożenia dla katalogu wirtualnego) i hostuje usługę w nim.  
   

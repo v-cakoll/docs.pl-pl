@@ -9,11 +9,11 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872056"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Zgodność aplikacji w programie .NET Framework
 
@@ -42,11 +42,11 @@ Diagnostyka zgodności platformy .NET są analizatory bazujących na programie R
 
 Każde wydanie obejmuje następujące informacje:
 
--   Opis co zmieniło się od poprzedniej wersji.
+- Opis co zmieniło się od poprzedniej wersji.
 
--   Wpływ zmiany na klientów i tego, czy wszystkie rozwiązania są dostępne w celu zachowania zgodności między wersjami.
+- Wpływ zmiany na klientów i tego, czy wszystkie rozwiązania są dostępne w celu zachowania zgodności między wersjami.
 
--   Ocena jak ważne jest zmiana. Problem ze zgodnością aplikacji są podzielone na następujące kategorie:
+- Ocena jak ważne jest zmiana. Problem ze zgodnością aplikacji są podzielone na następujące kategorie:
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ Każde wydanie obejmuje następujące informacje:
     |Przypadek krawędzi|Zmiana, który wpływa na aplikacje bardzo specyficzny, nietypowych scenariuszy.|
     |Przezroczyste|Zmiana nie wpływa na dewelopera aplikacji lub użytkownika.|
 
--   Wersja wskazuje, kiedy zmiany po raz pierwszy występuje w ramach. Niektóre ze zmian wprowadzonych w określonej wersji i przywrócić w nowszej wersji; wskazane jest także.
+- Wersja wskazuje, kiedy zmiany po raz pierwszy występuje w ramach. Niektóre ze zmian wprowadzonych w określonej wersji i przywrócić w nowszej wersji; wskazane jest także.
 
--   Typ zmiany:
+- Typ zmiany:
 
     |   |   |
     |---|---|
     |Przekierowanie|Zmiana wpływa na aplikacje, które są ponownie kompilowane pod kątem nowych wersji programu .NET Framework.|
     |Środowisko uruchomieniowe|Zmiana wpływa na istniejącej aplikacji, który jest przeznaczony dla poprzednich wersji programu .NET Framework, ale działa w nowszej wersji.|
 
--   Dotyczy interfejsów API, jeśli istnieje.
+- Dotyczy interfejsów API, jeśli istnieje.
 
--   Identyfikatory dostępne diagnostyki
+- Identyfikatory dostępne diagnostyki
 
 ## <a name="usage"></a>Użycie
 Aby rozpocząć, wybierz typ zmiany zgodności poniżej:

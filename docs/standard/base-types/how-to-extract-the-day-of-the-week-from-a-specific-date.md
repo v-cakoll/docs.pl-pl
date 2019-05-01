@@ -25,11 +25,11 @@ ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861078"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty
 .NET Framework ułatwia ustalenie porządkowe dzień tygodnia dla określonej daty i wyświetlić nazwę zlokalizowanej dzień tygodnia dla określonej daty. Wartość wyliczana, który wskazuje dzień tygodnia odpowiadający określonej daty jest dostępne z <xref:System.DateTime.DayOfWeek%2A> lub <xref:System.DateTimeOffset.DayOfWeek%2A> właściwości. Pobieranie nazwy dnia tygodnia jest operacją formatowania, które mogą być wykonywane przez wywołanie metody formatowania, takie jak wartości daty i godziny `ToString` metody lub <xref:System.String.Format%2A?displayProperty=nameWithType> metody. W tym temacie przedstawiono sposób wykonywania tych operacji formatowania.  
@@ -53,12 +53,12 @@ ms.locfileid: "59327766"
   
 2. Można wyodrębnić nazwy dnia tygodnia bieżącej kultury lub określonej kultury:  
   
-    1.  Aby wyodrębnić nazwy dnia tygodnia bieżącej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> metodę wystąpienia, a następnie przekazać ten ciąg "ddd" jako `format` parametru. W poniższym przykładzie pokazano wywołanie metody <xref:System.DateTime.ToString%28System.String%29> metody.  
+    1. Aby wyodrębnić nazwy dnia tygodnia bieżącej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> metodę wystąpienia, a następnie przekazać ten ciąg "ddd" jako `format` parametru. W poniższym przykładzie pokazano wywołanie metody <xref:System.DateTime.ToString%28System.String%29> metody.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2.  Aby wyodrębnić nazwy dnia tygodnia dla określonej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metodę wystąpienia. Przekaż ciąg "ddd" jako `format` parametru. Przekazać parametr <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, który reprezentuje kulturę, której nazwa dnia tygodnia do pobrania jako `provider` parametru. Poniższy kod ilustruje wywołanie <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> przy użyciu metody <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje kultury fr-FR.  
+    2. Aby wyodrębnić nazwy dnia tygodnia dla określonej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metodę wystąpienia. Przekaż ciąg "ddd" jako `format` parametru. Przekazać parametr <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, który reprezentuje kulturę, której nazwa dnia tygodnia do pobrania jako `provider` parametru. Poniższy kod ilustruje wywołanie <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> przy użyciu metody <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje kultury fr-FR.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
@@ -69,12 +69,12 @@ ms.locfileid: "59327766"
   
 2. Można wyodrębnić Pełna nazwa dnia tygodnia bieżącej kultury lub określonej kultury:  
   
-    1.  Aby wyodrębnić nazwy dnia tygodnia bieżącej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> metodę wystąpienia, a następnie przekazać ten ciąg "dddd" jako `format` parametru. W poniższym przykładzie pokazano wywołanie metody <xref:System.DateTime.ToString%28System.String%29> metody.  
+    1. Aby wyodrębnić nazwy dnia tygodnia bieżącej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> metodę wystąpienia, a następnie przekazać ten ciąg "dddd" jako `format` parametru. W poniższym przykładzie pokazano wywołanie metody <xref:System.DateTime.ToString%28System.String%29> metody.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2.  Aby wyodrębnić nazwy dnia tygodnia dla określonej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metodę wystąpienia. Przekaż ciąg "dddd" jako `format` parametru. Przekazać parametr <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, który reprezentuje kulturę, której nazwa dnia tygodnia do pobrania jako `provider` parametru. Poniższy kod ilustruje wywołanie <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> przy użyciu metody <xref:System.Globalization.CultureInfo> obiektu, który reprezentuje kulturę, es-ES.  
+    2. Aby wyodrębnić nazwy dnia tygodnia dla określonej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metodę wystąpienia. Przekaż ciąg "dddd" jako `format` parametru. Przekazać parametr <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, który reprezentuje kulturę, której nazwa dnia tygodnia do pobrania jako `provider` parametru. Poniższy kod ilustruje wywołanie <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> przy użyciu metody <xref:System.Globalization.CultureInfo> obiektu, który reprezentuje kulturę, es-ES.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
@@ -87,9 +87,9 @@ ms.locfileid: "59327766"
   
  Poszczególne języki oferują funkcje, która duplikuje lub uzupełniają funkcje udostępniane przez [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Na przykład Visual Basic obejmuje dwa takie funkcje:  
   
--   `Weekday`, która zwraca numer, który wskazuje dzień tygodnia z określonej daty. Traktuje wartości porządkowej pierwszy dzień tygodnia, aby być jednym z nich, podczas gdy <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> właściwość traktuje wynosić zero.  
+- `Weekday`, która zwraca numer, który wskazuje dzień tygodnia z określonej daty. Traktuje wartości porządkowej pierwszy dzień tygodnia, aby być jednym z nich, podczas gdy <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> właściwość traktuje wynosić zero.  
   
--   `WeekdayName`, która zwraca nazwę tygodnia w bieżącej kultury, która odpowiada numerowi danego dnia tygodnia.  
+- `WeekdayName`, która zwraca nazwę tygodnia w bieżącej kultury, która odpowiada numerowi danego dnia tygodnia.  
   
  Poniższy przykład ilustruje użycie języka Visual Basic `Weekday` i `WeekdayName` funkcji.  
   

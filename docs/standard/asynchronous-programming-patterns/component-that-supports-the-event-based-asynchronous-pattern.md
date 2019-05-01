@@ -19,11 +19,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
 ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869996"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie zauważalnego opóźnienia, należy wziąć pod uwagę nadając mu funkcje asynchroniczne z zastosowaniem [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -34,19 +34,19 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie składnika  
+- Tworzenie składnika  
   
--   Definiowanie zdarzenia asynchroniczne publiczne i delegatów  
+- Definiowanie zdarzenia asynchroniczne publiczne i delegatów  
   
--   Definiowanie obiektów delegowanych prywatne  
+- Definiowanie obiektów delegowanych prywatne  
   
--   Implementowanie zdarzenia publiczne  
+- Implementowanie zdarzenia publiczne  
   
--   Implementacja metody ukończenia  
+- Implementacja metody ukończenia  
   
--   Implementacja metody pracownika  
+- Implementacja metody pracownika  
   
--   Implementowanie Start oraz Anuluj metod  
+- Implementowanie Start oraz Anuluj metod  
   
  Aby skopiować kod, w tym temacie na jednej liście, zobacz [jak: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
@@ -55,7 +55,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
 #### <a name="to-create-the-component"></a>Aby utworzyć składnika  
   
--   Utwórz klasę o nazwie `PrimeNumberCalculator` tej, która dziedziczy <xref:System.ComponentModel.Component>.  
+- Utwórz klasę o nazwie `PrimeNumberCalculator` tej, która dziedziczy <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definiowanie zdarzenia asynchroniczne publiczne i delegatów  
  Składnik komunikuje się klientów przy użyciu zdarzeń. _MethodName_**Ukończono** alerty zdarzeń informujące o klientach do wykonania zadanie asynchroniczne, a _MethodName_**ProgressChanged**zdarzeń informuje klientów postęp zadania asynchronicznego.  
@@ -87,7 +87,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
 #### <a name="to-test-your-component"></a>Aby przetestować składnika  
   
--   Skompiluj składnika.  
+- Skompiluj składnika.  
   
      Otrzymasz dwa ostrzeżenia kompilatora:  
   
@@ -148,7 +148,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
 #### <a name="to-complete-an-asynchronous-operation"></a>Aby ukończyć operację asynchroniczną:  
   
--   Implementuje metody ukończenia. Trwa sześć parametrów, których używa, aby wypełnić `CalculatePrimeCompletedEventArgs` , jest zwracana do klienta za pomocą klienta programu `CalculatePrimeCompletedEventHandler`. Usuwa token identyfikator zadania klienta z wewnętrznego zbioru, a kończy się ona istnienia operację asynchroniczną z wywołaniem <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> Kieruje wywołania wątku lub kontekstu, który jest odpowiedni dla modelu aplikacji.  
+- Implementuje metody ukończenia. Trwa sześć parametrów, których używa, aby wypełnić `CalculatePrimeCompletedEventArgs` , jest zwracana do klienta za pomocą klienta programu `CalculatePrimeCompletedEventHandler`. Usuwa token identyfikator zadania klienta z wewnętrznego zbioru, a kończy się ona istnienia operację asynchroniczną z wywołaniem <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> Kieruje wywołania wątku lub kontekstu, który jest odpowiedni dla modelu aplikacji.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
 #### <a name="to-test-your-component"></a>Aby przetestować składnika  
   
--   Skompiluj składnika.  
+- Skompiluj składnika.  
   
      Zostanie wyświetlony jeden ostrzeżenia kompilatora:  
   
@@ -212,7 +212,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
 #### <a name="to-test-your-component"></a>Aby przetestować składnika  
   
--   Skompiluj składnika.  
+- Skompiluj składnika.  
   
      Wszystkie opcje, które pozostają do zapisania są metody, aby uruchomić i anulowania operacji asynchronicznych, `CalculatePrimeAsync` i `CancelAsync`.  
   
@@ -238,7 +238,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
 #### <a name="to-test-your-component"></a>Aby przetestować składnika  
   
--   Skompiluj składnika.  
+- Skompiluj składnika.  
   
  `PrimeNumberCalculator` Jest teraz gotowy do użycia.  
   

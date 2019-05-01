@@ -10,11 +10,11 @@ helpviewer_keywords:
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
 ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906987"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Stałe zdefiniowane przez użytkownika (Visual Basic)
 Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, który nie jest zmieniany. Stałe przechowywać wartości, które jak wskazuje nazwa, pozostają stałe w trakcie wykonywania aplikacji. Można użyć stałe, które są definiowane przez formanty lub składników, którymi pracujesz, lub możesz utworzyć swój własny. Stałe utworzone samodzielnie są określane jako *zdefiniowanych przez użytkownika*.  
@@ -37,13 +37,13 @@ Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, któr
 ## <a name="scope-of-user-defined-constants"></a>Zakres stałe zdefiniowane przez użytkownika  
  A `Const` zakres instrukcji jest taka sama, jak Zmienna zadeklarowana w tej samej lokalizacji. Należy określić zakres, w dowolnym z następujących sposobów:  
   
--   Aby utworzyć stałą, że istnieje tylko w obrębie procedury, należy zadeklarować ją w ramach tej procedury.  
+- Aby utworzyć stałą, że istnieje tylko w obrębie procedury, należy zadeklarować ją w ramach tej procedury.  
   
--   Aby utworzyć stałej dostępności, do wszystkich procedur w obrębie klasy, ale nie do kodu poza ten moduł, należy zadeklarować ją w sekcji deklaracji klasy.  
+- Aby utworzyć stałej dostępności, do wszystkich procedur w obrębie klasy, ale nie do kodu poza ten moduł, należy zadeklarować ją w sekcji deklaracji klasy.  
   
--   Aby utworzyć stałą, która jest dostępna, do wszystkich elementów członkowskich zestawu, ale nie do klientów poza zestawu, Zadeklaruj go przy użyciu `Friend` — słowo kluczowe w sekcji deklaracji klasy.  
+- Aby utworzyć stałą, która jest dostępna, do wszystkich elementów członkowskich zestawu, ale nie do klientów poza zestawu, Zadeklaruj go przy użyciu `Friend` — słowo kluczowe w sekcji deklaracji klasy.  
   
--   Aby utworzyć stałą dostępne w całej aplikacji, Zadeklaruj go przy użyciu `Public` — słowo kluczowe w deklaracjach sekcji klasy.  
+- Aby utworzyć stałą dostępne w całej aplikacji, Zadeklaruj go przy użyciu `Public` — słowo kluczowe w deklaracjach sekcji klasy.  
   
  Aby uzyskać więcej informacji, zobacz [jak: Deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   

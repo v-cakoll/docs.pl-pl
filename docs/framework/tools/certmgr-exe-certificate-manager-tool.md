@@ -16,11 +16,11 @@ ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779941"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Menedżer certyfikatów)
 Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listami zaufania certyfikatów (CTL) oraz listami odwołania certyfikatów (CRL).  
@@ -75,13 +75,13 @@ Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listam
 ## <a name="remarks"></a>Uwagi  
  Program Certmgr.exe wykonuje następujące podstawowe funkcje:  
   
--   Wyświetla na konsoli certyfikaty oraz listy CTL i CRL.  
+- Wyświetla na konsoli certyfikaty oraz listy CTL i CRL.  
   
--   Dodaje certyfikaty oraz listy CTL i CRL do magazynu certyfikatów.  
+- Dodaje certyfikaty oraz listy CTL i CRL do magazynu certyfikatów.  
   
--   Usuwa certyfikaty oraz listy CTL i CRL z magazynu certyfikatów.  
+- Usuwa certyfikaty oraz listy CTL i CRL z magazynu certyfikatów.  
   
--   Zapisuje certyfikat X.509, listę CTL lub CRL z magazynu certyfikatów w pliku.  
+- Zapisuje certyfikat X.509, listę CTL lub CRL z magazynu certyfikatów w pliku.  
   
  Certmgr.exe działa z dwoma typami magazynów certyfikatów: **StoreFile** i magazynem systemowym. Nie jest konieczne określanie typu magazynu certyfikatów; program Certmgr.exe może zidentyfikować typ magazynu i wykonać odpowiednie operacje.  
   

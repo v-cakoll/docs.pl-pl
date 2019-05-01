@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869671"
 ---
 # <a name="value-types-and-reference-types"></a>Typy wartości i odwołań
 W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfikacji. Typy danych Visual Basic mogą być klasyfikowane według tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnik do danych. Jeśli przechowuje swoje własne dane *typu wartości*; Jeśli przechowuje wskaźnik do danych w pamięci jest *odwołania do typu*.  
@@ -23,13 +23,13 @@ W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfi
 ## <a name="value-types"></a>Typy wartości  
  Typ danych jest *typu wartości* Jeśli przechowuje dane w obrębie własnej alokacji pamięci. Typy wartości są następujące:  
   
--   Wszystkie typy danych numerycznych  
+- Wszystkie typy danych numerycznych  
   
--   `Boolean`, `Char`, i `Date`  
+- `Boolean`, `Char`, i `Date`  
   
--   Wszystkie struktury, nawet jeśli ich elementy członkowskie są typami odwołań  
+- Wszystkie struktury, nawet jeśli ich elementy członkowskie są typami odwołań  
   
--   Wyliczenia, ponieważ jego typ podstawowy jest zawsze `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, lub `ULong`  
+- Wyliczenia, ponieważ jego typ podstawowy jest zawsze `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, lub `ULong`  
   
  Co struktura jest typem wartości, nawet wtedy, gdy zawiera on elementy członkowskie typu odwołania. Z tego powodu wartość typy takie jak `Char` i `Integer` są implementowane przez struktury .NET Framework.  
   
@@ -38,13 +38,13 @@ W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfi
 ## <a name="reference-types"></a>Typy odwołań  
  A *odwołania do typu* zawiera wskaźnik do innej lokalizacji w pamięci, która przechowuje dane. Typy odwołań są następujące:  
   
--   `String`  
+- `String`  
   
--   Wszystkie tablice, nawet jeśli ich elementy są typami wartości  
+- Wszystkie tablice, nawet jeśli ich elementy są typami wartości  
   
--   Klasa typów, takich jak <xref:System.Windows.Forms.Form>  
+- Klasa typów, takich jak <xref:System.Windows.Forms.Form>  
   
--   Delegaty  
+- Delegaty  
   
  Klasa jest *odwołania do typu*. Z tego powodu typy odwołań takich jak `Object` i `String` są obsługiwane przez [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy. Należy pamiętać, że każda tablica typu odwołania, nawet jeśli jego członkowie są typami wartości.  
   
@@ -57,15 +57,15 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="elements-that-are-not-types"></a>Elementy, które nie są typami  
  Następujące elementy programowania nie kwalifikują się jako typów, ponieważ nie można określić dowolny z nich jako element zadeklarowany typ danych:  
   
--   Namespaces  
+- Namespaces  
   
--   Moduły  
+- Moduły  
   
--   Zdarzenia  
+- Zdarzenia  
   
--   Właściwości i procedury  
+- Właściwości i procedury  
   
--   Zmienne, stałe i pola  
+- Zmienne, stałe i pola  
   
 ## <a name="working-with-the-object-data-type"></a>Praca z typem danych obiektu  
  Można przypisać do zmiennej typu odwołania lub typu wartościowego `Object` typu danych. `Object` Zawsze zmienna przechowuje wskaźnik do danych, nigdy nie dane. Jednak jeśli przypisujesz typ wartości do `Object` zmiennej działa tak, jakby posiada własnych danych. Aby uzyskać więcej informacji, zobacz [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md).  

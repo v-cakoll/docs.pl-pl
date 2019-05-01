@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858458"
 ---
 # <a name="endpoint-creation-overview"></a>Przegląd tworzenia punktów końcowych
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punktów końcowych* usługi. Punkty końcowe zapewniają klientom dostęp do funkcji, która oferuje usługi WCF. W tej sekcji opisuje strukturę punktu końcowego i opisano sposób definiowania punktu końcowego w konfiguracji i w kodzie.  
@@ -20,11 +20,11 @@ Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się 
 ## <a name="the-structure-of-an-endpoint"></a>Struktura punktu końcowego  
  Każdy punkt końcowy zawiera adres który wskazuje, gdzie można znaleźć punktu końcowego, powiązanie, które określa, jak klient może komunikować się z punktem końcowym i kontraktu, który identyfikuje dostępne metody.  
   
--   **Adres**. Adres jednoznacznie identyfikuje punkt końcowy i informuje o potencjalnych klientów, w którym znajduje się usługa. Jest reprezentowana w modelu obiektu programu WCF za <xref:System.ServiceModel.EndpointAddress> adresu, który zawiera jednolity identyfikator zasobów (URI) i właściwości adresu, które obejmują tożsamość, niektóre elementy sieci Web Services Description Language (WSDL) oraz zbiór opcjonalne nagłówki. Opcjonalne nagłówki zawierają dodatkowe szczegółowe informacje adresowania, aby zidentyfikować lub nawiązać kontakt z punktem końcowym. Aby uzyskać więcej informacji, zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+- **Adres**. Adres jednoznacznie identyfikuje punkt końcowy i informuje o potencjalnych klientów, w którym znajduje się usługa. Jest reprezentowana w modelu obiektu programu WCF za <xref:System.ServiceModel.EndpointAddress> adresu, który zawiera jednolity identyfikator zasobów (URI) i właściwości adresu, które obejmują tożsamość, niektóre elementy sieci Web Services Description Language (WSDL) oraz zbiór opcjonalne nagłówki. Opcjonalne nagłówki zawierają dodatkowe szczegółowe informacje adresowania, aby zidentyfikować lub nawiązać kontakt z punktem końcowym. Aby uzyskać więcej informacji, zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Powiązanie**. Powiązanie Określa, jak komunikować się z punktem końcowym. Powiązanie Określa, jak punkt końcowy komunikuje się z świat, w tym protokół transportu (na przykład, TCP lub HTTP), które kodowanie do użycia dla wiadomości (na przykład tekst lub dane binarne), a wymagania zabezpieczeń, które są niezbędne (dla przykład Secure Sockets Layer [SSL] lub zabezpieczeń wiadomości protokołu SOAP). Aby uzyskać więcej informacji, zobacz [przy użyciu powiązania do konfigurowania usług i klientów](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+- **Powiązanie**. Powiązanie Określa, jak komunikować się z punktem końcowym. Powiązanie Określa, jak punkt końcowy komunikuje się z świat, w tym protokół transportu (na przykład, TCP lub HTTP), które kodowanie do użycia dla wiadomości (na przykład tekst lub dane binarne), a wymagania zabezpieczeń, które są niezbędne (dla przykład Secure Sockets Layer [SSL] lub zabezpieczeń wiadomości protokołu SOAP). Aby uzyskać więcej informacji, zobacz [przy użyciu powiązania do konfigurowania usług i klientów](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Kontrakt usługi**. Kontrakt usługi opisano, jakie funkcje uwidacznia punkt końcowy, do klienta. Kontrakt określa operacje, które klient może wywołać, formularz wiadomości i typ parametrów wejściowych lub dane wymagane do wywołania operacji i rodzaju przetwarzania lub komunikat odpowiedzi, których można oczekiwać, że klient. Podstawowe wiadomości programu exchange wzorców (MEPs) odpowiadają trzy podstawowe typy kontraktów: datagramów (jednokierunkowe), żądanie/nietypizowana odpowiedź i dupleks (dwukierunkowe). Kontrakt usługi można również używać kontraktów danych i komunikatów wymaga konkretnych typów danych i formaty wiadomości, podczas którego uzyskiwany jest dostęp. Aby uzyskać więcej informacji na temat Definiowanie kontraktu usługi, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md). Należy pamiętać o tym, czy klient może być wymagane do implementowania kontraktu zdefiniowane przez usługę, o nazwie kontrakt wywołania zwrotnego do odbierania komunikatów z usługi w MEP dwukierunkowego. Aby uzyskać więcej informacji, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+- **Kontrakt usługi**. Kontrakt usługi opisano, jakie funkcje uwidacznia punkt końcowy, do klienta. Kontrakt określa operacje, które klient może wywołać, formularz wiadomości i typ parametrów wejściowych lub dane wymagane do wywołania operacji i rodzaju przetwarzania lub komunikat odpowiedzi, których można oczekiwać, że klient. Podstawowe wiadomości programu exchange wzorców (MEPs) odpowiadają trzy podstawowe typy kontraktów: datagramów (jednokierunkowe), żądanie/nietypizowana odpowiedź i dupleks (dwukierunkowe). Kontrakt usługi można również używać kontraktów danych i komunikatów wymaga konkretnych typów danych i formaty wiadomości, podczas którego uzyskiwany jest dostęp. Aby uzyskać więcej informacji na temat Definiowanie kontraktu usługi, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md). Należy pamiętać o tym, czy klient może być wymagane do implementowania kontraktu zdefiniowane przez usługę, o nazwie kontrakt wywołania zwrotnego do odbierania komunikatów z usługi w MEP dwukierunkowego. Aby uzyskać więcej informacji, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  Obowiązkowo przy użyciu kodu lub deklaratywne przy użyciu konfiguracji można określić punktu końcowego usługi. Jeśli nie określono żadnych punktów końcowych następnie środowisko wykonawcze zapewnia domyślne punkty końcowe, dodając jeden domyślny punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej implementowane przez usługę. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie sporządzana. Ogólnie rzecz biorąc lepiej jest punkty końcowe usługi przy użyciu konfiguracji zamiast kodu. Zachowanie powiązania i adresowanie z kodu pozwala zmienić bez konieczności ponownego kompilowania i ponownego wdrażania aplikacji.  
   
@@ -34,13 +34,13 @@ Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się 
 ## <a name="defining-endpoints-in-code"></a>Definiowanie punktów końcowych w kodzie  
  Poniższy przykład ilustruje sposób określania punktu końcowego w kodzie za pomocą następujących czynności:  
   
--   Definiowanie kontraktu w celu `IEcho` typ usługi, który akceptuje nazwy i echa z odpowiedzią innego użytkownika "Hello \<name >!".  
+- Definiowanie kontraktu w celu `IEcho` typ usługi, który akceptuje nazwy i echa z odpowiedzią innego użytkownika "Hello \<name >!".  
   
--   Implementowanie `Echo` usługi typu zdefiniowanego przez `IEcho` kontraktu.  
+- Implementowanie `Echo` usługi typu zdefiniowanego przez `IEcho` kontraktu.  
   
--   Określ adres punktu końcowego `http://localhost:8000/Echo` dla usługi.  
+- Określ adres punktu końcowego `http://localhost:8000/Echo` dla usługi.  
   
--   Konfigurowanie `Echo` usługi przy użyciu <xref:System.ServiceModel.WSHttpBinding> powiązania.  
+- Konfigurowanie `Echo` usługi przy użyciu <xref:System.ServiceModel.WSHttpBinding> powiązania.  
   
 ```csharp  
 Namespace Echo  

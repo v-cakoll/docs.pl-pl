@@ -3,20 +3,20 @@ title: Sekwencje Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878454"
 ---
 # <a name="oracle-sequences"></a>Sekwencje Oracle
 .NET Framework Data Provider for Oracle zapewnia obsługę pobierania wartości generowanych przez serwer Oracle sekwencja klucza po wykonaniu operacji wstawienia przy użyciu <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
  SQL Server i Oracle obsługuje tworzenie automatycznego przyrostu o wartości kolumn, które mogą być oznaczone jako klucze podstawowe. Te wartości są generowane przez serwer w miarę dodawania wierszy do tabeli. W programie SQL Server Ustaw właściwości tożsamości kolumny; Oracle, należy utworzyć sekwencję. Różnica między kolumn automatycznego przyrostu w programie SQL Server i sekwencje Oracle jest to, że:  
   
--   W programie SQL Server Oznacz kolumnę jako kolumny automatycznego przyrostu i programu SQL Server automatycznie generuje nowe wartości dla kolumny, gdy wstawić nowy wiersz.  
+- W programie SQL Server Oznacz kolumnę jako kolumny automatycznego przyrostu i programu SQL Server automatycznie generuje nowe wartości dla kolumny, gdy wstawić nowy wiersz.  
   
--   Oracle utworzeniem sekwencji można wygenerować nowe wartości dla kolumny w tabeli, ale nie ma żadnego bezpośredniego połączenia między sekwencji i tabeli lub kolumny. Sekwencja Oracle jest obiektem, takich jak tabeli lub procedury składowanej.  
+- Oracle utworzeniem sekwencji można wygenerować nowe wartości dla kolumny w tabeli, ale nie ma żadnego bezpośredniego połączenia między sekwencji i tabeli lub kolumny. Sekwencja Oracle jest obiektem, takich jak tabeli lub procedury składowanej.  
   
  Po utworzeniu sekwencji w bazie danych Oracle, można zdefiniować jej wartość początkową i przyrost między jego wartości. Możesz także zbadać sekwencję dla nowych wartości przed przesłaniem nowych wierszy. Oznacza to, że Twój kod może rozpoznać wartości klucza dla nowych wierszy, przed wstawiania do bazy danych.  
   

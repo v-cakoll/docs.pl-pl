@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
 ms.openlocfilehash: c78cc682c0776bfb0ce09dec7ba1ff8cab504285
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857145"
 ---
 # <a name="data-member-order"></a>Kolejność elementów członkowskich danych
 W niektórych aplikacjach warto wiedzieć, kolejność, w którym są wysyłane dane z różnych składowych danych, lub powinien być otrzymane (na przykład kolejność, w którym dane są wyświetlane w serializacji XML). Czasami może być konieczna zmiana tej kolejności. W tym temacie opisano reguły sortowania.  
@@ -20,11 +20,11 @@ W niektórych aplikacjach warto wiedzieć, kolejność, w którym są wysyłane 
 ## <a name="basic-rules"></a>Podstawowe zasady  
  Podstawowe reguły do ustalania kolejności danych obejmują:  
   
--   Typ kontraktu danych jest częścią hierarchii dziedziczenia, elementy członkowskie danych z jej typów podstawowych są zawsze pierwszy w kolejności.  
+- Typ kontraktu danych jest częścią hierarchii dziedziczenia, elementy członkowskie danych z jej typów podstawowych są zawsze pierwszy w kolejności.  
   
--   Następnie w kolejności należą do bieżącego typu danych, które nie mają <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut, w kolejności alfabetycznej.  
+- Następnie w kolejności należą do bieżącego typu danych, które nie mają <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut, w kolejności alfabetycznej.  
   
--   Następnie są elementy członkowskie danych, które mają <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut. Te są uporządkowane według wartości `Order` właściwość pierwszy i następnie alfabetycznie, jeśli istnieje więcej niż jeden element członkowski określonej `Order` wartość. Wartości kolejności może zostać pominięta.  
+- Następnie są elementy członkowskie danych, które mają <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut. Te są uporządkowane według wartości `Order` właściwość pierwszy i następnie alfabetycznie, jeśli istnieje więcej niż jeden element członkowski określonej `Order` wartość. Wartości kolejności może zostać pominięta.  
   
  Kolejności alfabetycznej zostanie nawiązane, wywołując <xref:System.String.CompareOrdinal%2A> metody.  
   

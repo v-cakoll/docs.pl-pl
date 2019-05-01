@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791238"
 ---
 # <a name="wcf-client-overview"></a>Przegląd klienta programu WCF
 W tej sekcji opisano działanie aplikacji klienckich, jak konfigurować, tworzenie i używanie klienta programu Windows Communication Foundation (WCF) oraz sposób zabezpieczania aplikacji klienckich.  
@@ -30,15 +30,15 @@ W tej sekcji opisano działanie aplikacji klienckich, jak konfigurować, tworzen
   
  W poniższych sekcjach omówiono te kroki i podaj krótkie instrukcje na następujące zagadnienia:  
   
--   Obsługa błędów.  
+- Obsługa błędów.  
   
--   Konfigurowanie i Zabezpieczanie klientów.  
+- Konfigurowanie i Zabezpieczanie klientów.  
   
--   Tworzenie obiektów wywołania zwrotnego dla usługi dwukierunkowe.  
+- Tworzenie obiektów wywołania zwrotnego dla usługi dwukierunkowe.  
   
--   Asynchroniczne wywoływanie usługi.  
+- Asynchroniczne wywoływanie usługi.  
   
--   Wywoływanie usług za pomocą klienta kanałów.  
+- Wywoływanie usług za pomocą klienta kanałów.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Uzyskaj kontraktu usługi, powiązań i adresów  
  W programie WCF usług i klientów modelu zamówień za pomocą atrybutów zarządzanych, interfejsy i metody. Aby połączyć się z usługą w aplikacji klienckiej, należy uzyskać informacje o typie dla kontraktu usługi. Zazwyczaj można to zrobić za pomocą [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), co spowoduje pobranie metadanych z usługi, konwertuje go na plik kodu źródłowego zarządzanych w wybranym języku i tworzy klienta plik konfiguracji aplikacji umożliwiają skonfigurowanie obiektu klienta programu WCF. Na przykład, jeśli zamierzasz utworzyć obiekt klienta WCF do wywoływania `MyCalculatorService`, a wiadomo, że metadane dla tej usługi zostanie opublikowana w `http://computerName/MyCalculatorService/Service.svc?wsdl`, a następnie poniższy przykład kodu pokazuje sposób użycia Svcutil.exe w celu uzyskania `ClientCode.vb` pliku, który zawiera kontrakt usługi w kodzie zarządzanym.  
@@ -146,11 +146,11 @@ End Interface
   
  Klienci usługi dwukierunkowe musi:  
   
--   Implementowanie klasy kontrakt wywołania zwrotnego.  
+- Implementowanie klasy kontrakt wywołania zwrotnego.  
   
--   Tworzenie wystąpienia klasy implementacji kontrakt wywołania zwrotnego i użyć go do utworzenia <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> obiekt, który zostanie przekazany do konstruktora klienta programu WCF.  
+- Tworzenie wystąpienia klasy implementacji kontrakt wywołania zwrotnego i użyć go do utworzenia <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> obiekt, który zostanie przekazany do konstruktora klienta programu WCF.  
   
--   Wywoływanie operacji i obsługi operacji wywołania zwrotne.  
+- Wywoływanie operacji i obsługi operacji wywołania zwrotne.  
   
  Dwukierunkowe funkcje obiektów klienta WCF, takich jak ich odpowiedniki obsługującej, z wyjątkiem eksponowanie funkcje niezbędne do obsługi wywołań zwrotnych, w tym konfiguracją usługi wywołania zwrotnego.  
   

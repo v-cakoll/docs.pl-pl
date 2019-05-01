@@ -3,11 +3,11 @@ title: 'Pętle: while...do — Wyrażenie'
 description: Zobacz jak podczas... zrobić wyrażenie jest używany do wykonywania iteracji wykonywanie (pętli), gdy spełniony jest warunek określony test.
 ms.date: 05/16/2016
 ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904023"
 ---
 # <a name="loops-whiledo-expression"></a>Pętle: while...do — Wyrażenie
 
@@ -41,5 +41,5 @@ Found a 10!
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
-- [Pętle: `for...in` Wyrażenie](loops-for-in-expression.md)
-- [Pętle: `for...to` Wyrażenie](loops-for-to-expression.md)
+- [Pętle: `for...in` Expression](loops-for-in-expression.md)
+- [Pętle: `for...to` Expression](loops-for-to-expression.md)

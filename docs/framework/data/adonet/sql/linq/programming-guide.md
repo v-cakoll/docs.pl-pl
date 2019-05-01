@@ -3,11 +3,11 @@ title: Przewodnik programowania
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
 ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794462"
 ---
 # <a name="programming-guide"></a>Przewodnik programowania
 Ta sekcja zawiera informacje o sposobie tworzenia i używania usługi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów. Jeśli używasz programu Visual Studio umożliwia również [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do wykonywania wielu spośród tych samych zadań.  

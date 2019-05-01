@@ -12,11 +12,11 @@ helpviewer_keywords:
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
 ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794696"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Instrukcje: Ukrywanie dziedziczonej zmiennej (Visual Basic)
 Klasa pochodna dziedziczy wszystkie definicje klasy bazowej. Jeśli chcesz zdefiniować zmienną przy użyciu tej samej nazwie jako element klasy podstawowej, można ukryć, lub *w tle*, ten element klasy bazowej podczas definiowania zmiennej w klasie pochodnej. Jeśli to zrobisz, kod w klasie pochodnej uzyskuje dostęp do zmiennej, chyba że jawnie pomija mechanizm przesłaniania.  

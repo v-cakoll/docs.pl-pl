@@ -3,11 +3,11 @@ title: property
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
 ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879047"
 ---
 # <a name="property"></a>property
 *Właściwości* są podstawowymi blokami konstrukcyjnymi miejsc z [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) i [typy złożone](../../../../docs/framework/data/adonet/complex-type.md). Właściwości definiują kształt i charakterystyki danych, która będzie zawierać wystąpienia typu jednostki lub typ złożony. Właściwości w modelu koncepcyjnym są analogiczne do właściwości zdefiniowane w klasie. W ten sam sposób, że właściwości w klasie określenia kształtu elementu klasy i zawierają informacje o obiektach właściwości w modelu koncepcyjnym określenia kształtu typu jednostki i zawierają informacje na temat wystąpień typu jednostki.  
@@ -17,11 +17,11 @@ ms.locfileid: "59181652"
   
  Definicja właściwości zawiera następujące informacje:  
   
--   Nazwa właściwości. (Wymagane)  
+- Nazwa właściwości. (Wymagane)  
   
--   Typ właściwości. (Wymagane)  
+- Typ właściwości. (Wymagane)  
   
--   Zbiór [aspektami](../../../../docs/framework/data/adonet/facet.md). (opcjonalnie)  
+- Zbiór [aspektami](../../../../docs/framework/data/adonet/facet.md). (opcjonalnie)  
   
  Właściwość może zawierać danych pierwotnych (na przykład ciąg, liczba całkowita lub wartość logiczna) lub dane strukturalne (takie jak typ złożony). Pierwotny typ właściwości są również nazywane właściwości skalarne. Aby uzyskać więcej informacji, zobacz [modelu danych jednostki: Pierwotne typy danych](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   

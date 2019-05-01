@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791979"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedury operatorów (Visual Basic)
 Procedury operatora to szereg instrukcji, które definiują zachowanie standardowego operatora (takie jak `*`, `<>`, lub `And`) dla klasy lub struktury, które zostały zdefiniowane. Jest to również nazywane *przeciążenia operatora*.  
@@ -31,13 +31,13 @@ Procedury operatora to szereg instrukcji, które definiują zachowanie standardo
 ## <a name="types-of-operator-procedure"></a>Typy procedury operatora  
  Procedury operatora może być jednym z następujących typów:  
   
--   Definicja operatora jednoargumentowego, gdy argument jest typu klasy lub struktury.  
+- Definicja operatora jednoargumentowego, gdy argument jest typu klasy lub struktury.  
   
--   Definicja operatora binarnego, gdzie jest co najmniej jeden z argumentów typu klasy lub struktury.  
+- Definicja operatora binarnego, gdzie jest co najmniej jeden z argumentów typu klasy lub struktury.  
   
--   Definicja operatora konwersji, gdy argument jest typu klasy lub struktury.  
+- Definicja operatora konwersji, gdy argument jest typu klasy lub struktury.  
   
--   Definicja operatora konwersji, która zwraca typ klasy lub struktury.  
+- Definicja operatora konwersji, która zwraca typ klasy lub struktury.  
   
  Operatory konwersji są zawsze jednoargumentowy i zawsze używaj `CType` jako operator jest definiowany.  
   

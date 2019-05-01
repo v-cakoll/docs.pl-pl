@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 5850d55023849fdc797ec0cb5464495179dcbb61
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59982147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640108"
 ---
 ### <a name="tls-1x-by-default-passes-the-schsendauxrecord-flag-to-the-underlying-schannel-api"></a>TLS 1.x domyślnie przekazuje flagę SCH_SEND_AUX_RECORD podstawowego interfejsu API kanału SCHANNEL
 

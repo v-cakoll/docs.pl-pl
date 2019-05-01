@@ -8,30 +8,30 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874279"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Włączanie debugowania dołączania JIT
 Debugowania dołączania JIT jest wyrażenie używane do opisywania dołączanie debugera do procesu, gdy wystąpią błędy lub mogą być wyzwalane przez określone metody lub funkcji.  
   
  Debugowania dołączania JIT jest używany w następujących warunkach błędów:  
   
--   Nieobsługiwane wyjątki (w kodzie natywnych i zarządzanych).  
+- Nieobsługiwane wyjątki (w kodzie natywnych i zarządzanych).  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> Metoda lub [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) — funkcja (Windows 7 rodzina).  
+- <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> Metoda lub [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) — funkcja (Windows 7 rodzina).  
   
--   Błędy krytyczne środowiska uruchomieniowego.  
+- Błędy krytyczne środowiska uruchomieniowego.  
   
  Debugowania dołączania JIT jest również wyzwalany przez wywołania do następujących metod i funkcji:  
   
--   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> Metoda.  
+- <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> Metoda.  
   
--   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> Metoda.  
+- <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> Metoda.  
   
--   [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) — funkcja (Win32).  
+- [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) — funkcja (Win32).  
   
  Przed [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework podane klucze rejestru oddzielne, aby kontrolować zachowanie natywnych i zarządzanych debugerów. Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], kontrolki są konsolidowane w kluczu rejestru pojedynczego: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Wartości, które można ustawić dla tego klucza określają, czy debuger jest wywoływany, a jeśli tak, czy jest wywoływana z okna dialogowego wymaga interakcji użytkownika. Aby uzyskać informacji o ustawieniu tego klucza rejestru, zobacz [Konfigurowanie automatycznego debugowania](https://go.microsoft.com/fwlink/?LinkId=181767).  
   

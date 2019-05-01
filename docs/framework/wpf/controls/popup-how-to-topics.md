@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
 ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770581"
 ---
 # <a name="popup-how-to-topics"></a>Okno podręczne Tematy porad
 Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.Primitives.Popup> sterowania do wyświetlania zawartości w oddzielnym oknie, który pojawia się za pośrednictwem bieżącego okna aplikacji.  

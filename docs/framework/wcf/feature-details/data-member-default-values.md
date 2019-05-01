@@ -12,8 +12,8 @@ ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857119"
 ---
 # <a name="data-member-default-values"></a>Domyślne wartości elementów członkowskich danych
 W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy mają koncepcji *wartości domyślne*. Na przykład dla dowolnego typu odwołania, wartość domyślna to `null`, a typ liczby całkowitej wynosi zero. Należy co pewien czas pominięto element członkowski danych z serializowanych danych, gdy jest ustawiona na wartość domyślną. Ponieważ element członkowski ma wartość domyślną, wartość rzeczywistą nie muszą podlegać serializacji; ma to zalety wydajności.  
@@ -50,9 +50,9 @@ W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy mają ko
 ### <a name="schema-representation"></a>Reprezentacja schematu  
  Szczegółowe informacje o reprezentacji schematu języka (XSD) definicji schematu XML składowych danych podczas `EmitDefaultValue` właściwość jest ustawiona na `false` zostały omówione w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Jednakże Oto krótki przegląd:  
   
--   Gdy <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ustawiono `false`, jest reprezentowana w schemacie jako adnotacja określonych do programu Windows Communication Foundation (WCF). Nie ma interoperacyjne możliwości do reprezentowania tych informacji. W szczególności atrybutu "default" w schemacie nie jest używany w tym celu `minOccurs` atrybutu, dotyczy tylko przez <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ustawienie i `nillable` atrybut dotyczy tylko typu składowej danych.  
+- Gdy <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ustawiono `false`, jest reprezentowana w schemacie jako adnotacja określonych do programu Windows Communication Foundation (WCF). Nie ma interoperacyjne możliwości do reprezentowania tych informacji. W szczególności atrybutu "default" w schemacie nie jest używany w tym celu `minOccurs` atrybutu, dotyczy tylko przez <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ustawienie i `nillable` atrybut dotyczy tylko typu składowej danych.  
   
--   Nie ma wartości rzeczywistych do użycia w schemacie. Jest odbieranie punkt końcowy, aby odpowiednio interpretacji brakującego elementu.  
+- Nie ma wartości rzeczywistych do użycia w schemacie. Jest odbieranie punkt końcowy, aby odpowiednio interpretacji brakującego elementu.  
   
  Podczas importowania schematu <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> zostaje automatycznie ustalona `false` zawsze, gdy adnotacji specyficzne dla usługi WCF wymienionych wcześniej wykrycia. Jest również ustawiona na `false` dla typów odwołań, które mają `nillable` właściwością `false` do obsługi scenariuszy określonych współdziałanie, często występujących podczas używania [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web.  
   

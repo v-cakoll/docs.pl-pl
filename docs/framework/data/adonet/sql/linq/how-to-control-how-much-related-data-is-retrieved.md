@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
 ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904478"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>Instrukcje: Kontrolowanie, ile jest pobieranych powiązanych danych
 Użyj <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> metodę, aby określić, które dane powiązane z głównym docelowej mają zostać pobrane w tym samym czasie. Na przykład, jeśli wiesz, konieczne będą informacje dotyczące zamówień klientów, można użyć <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> aby upewnić się, że informacje o kolejności są pobierane w tym samym czasie jako informacje o kliencie. To podejście powoduje tylko jeden podróży do bazy danych dla obu zestawów informacji.  

@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
 ms.openlocfilehash: 4b0646c2ad45a86691b86b1dd5f112f598ee2dfd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788742"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Instrukcje: Projekt wyników zapytania (WCF Data Services)
 Projekcja zapewnia mechanizm, aby zmniejszyć ilość danych zwracanych przez zapytanie, określając, że zwracane są tylko niektóre właściwości jednostki w odpowiedzi. Można przeprowadzić projekcji na wynikach [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zapytania przy użyciu `$select` opcji zapytania lub za pomocą [wybierz](~/docs/csharp/language-reference/keywords/select-clause.md) klauzuli ([wybierz](~/docs/visual-basic/language-reference/queries/select-clause.md) w języku Visual Basic) w zapytaniu programu LINQ. Aby uzyskać więcej informacji, zobacz [zapytań usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

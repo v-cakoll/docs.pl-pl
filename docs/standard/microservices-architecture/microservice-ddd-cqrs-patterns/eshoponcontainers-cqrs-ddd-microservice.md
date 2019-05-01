@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
 ms.openlocfilehash: fc8c27c25fb6d07207586eb65d5ac9cc543bcc1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818004"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Stosowanie podejścia CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
 

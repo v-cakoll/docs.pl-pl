@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
 ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790731"
 ---
 # <a name="tooltip-overview"></a>ToolTip — Przegląd
 Etykietka narzędzia jest niewielkie okno podręczne, który pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>. W tym temacie przedstawiono etykietkę narzędzia i w tym artykule omówiono sposób tworzenia i dostosować zawartość etykietki narzędzia.  
@@ -24,9 +24,9 @@ Etykietka narzędzia jest niewielkie okno podręczne, który pojawia się po zat
   
  Zawartość etykietka narzędzia może zawierać jeden lub więcej wierszy tekstu, obrazów, kształtów lub innych zawartości wizualnej. Należy zdefiniować etykietkę narzędzia dla kontrolki, ustawiając jedną z następujących właściwości do zawartości etykietki narzędzia.  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
  Właściwości, których używasz zależy od tego, czy formant, który definiuje etykietki narzędzia, o których dziedziczy <xref:System.Windows.FrameworkContentElement> lub <xref:System.Windows.FrameworkElement> klasy.  
   

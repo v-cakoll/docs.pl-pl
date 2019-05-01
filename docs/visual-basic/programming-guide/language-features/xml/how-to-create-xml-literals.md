@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775911"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Instrukcje: Tworzenie literałów XML (Visual Basic)
 Można utworzyć dokumentu XML, fragment lub element bezpośrednio w kodzie za pomocą literał XML. Przykłady w tym temacie pokazują, jak utworzyć element XML, który ma trzy elementy podrzędne i tworzenie dokumentu XML.  
@@ -18,7 +18,7 @@ Można utworzyć dokumentu XML, fragment lub element bezpośrednio w kodzie za p
   
 ### <a name="to-create-an-xml-element"></a>Aby utworzyć XML element  
   
--   Utwórz w tekście XML przy użyciu składni literał XML, która jest taka sama jak rzeczywista składni XML.  
+- Utwórz w tekście XML przy użyciu składni literał XML, która jest taka sama jak rzeczywista składni XML.  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
@@ -36,7 +36,7 @@ Można utworzyć dokumentu XML, fragment lub element bezpośrednio w kodzie za p
   
 ### <a name="to-create-an-xml-document"></a>Aby utworzyć dokumentu XML  
   
--   Utwórz w tekście dokumentu XML. Poniższy kod tworzy dokument XML, który ma składni literału, deklaracja XML, instrukcję przetwarzania, komentarz i element, który zawiera inny element.  
+- Utwórz w tekście dokumentu XML. Poniższy kod tworzy dokument XML, który ma składni literału, deklaracja XML, instrukcję przetwarzania, komentarz i element, który zawiera inny element.  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   

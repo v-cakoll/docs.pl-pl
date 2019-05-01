@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
 ms.openlocfilehash: 0be7dcbefb23d2f2b283ac498f3b0ea43278f2d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875842"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>Instrukcje: Ładowanie stronicowanych wyników (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Włącza usługę danych ograniczyć liczbę jednostek, które są zwracane w pojedynczym źródle danych odpowiedzi. W takim przypadku końcowy wpis w źródle danych zawiera łącze do następnej strony danych. Identyfikator URI dla następnej strony danych można uzyskać przez wywołanie <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> metody <xref:System.Data.Services.Client.QueryOperationResponse%601>, który jest zwracany, gdy <xref:System.Data.Services.Client.DataServiceQuery%601> jest wykonywany. Identyfikator URI, reprezentowane przez ten obiekt jest następnie używana do ładowania następnej strony wyników. Aby uzyskać więcej informacji, zobacz [ładowanie zawartości odroczone](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  

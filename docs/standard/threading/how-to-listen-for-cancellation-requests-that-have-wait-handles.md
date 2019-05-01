@@ -1,5 +1,5 @@
 ---
-title: 'Porady: nasłuchiwanie żądań anulowania z dojściami oczekiwania'
+title: 'Instrukcje: Nasłuchiwanie żądań anulowania z dojściami oczekiwania'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1c8bfea5fc55bafbaa30d3b74edf60b674ef75c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925947"
 ---
-# <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Porady: nasłuchiwanie żądań anulowania z dojściami oczekiwania
+# <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Instrukcje: Nasłuchiwanie żądań anulowania z dojściami oczekiwania
 Jeśli metoda jest zablokowane, ponieważ trwa oczekiwanie na zdarzenie ma być zasygnalizowany, nie mogą sprawdzić wartość tokenu anulowania i reagować w odpowiednim czasie. Pierwszy przykład pokazuje, jak rozwiązać ten problem, podczas pracy ze zdarzeniami takich jak <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> , nie obsługują natywnie w ramach ujednoliconego anulowania. Drugi przykład przedstawia podejście usprawnić, który używa <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, który obsługuje unified anulowania.  
   
 > [!NOTE]

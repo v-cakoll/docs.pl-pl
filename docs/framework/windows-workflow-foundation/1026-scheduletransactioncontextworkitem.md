@@ -1,29 +1,29 @@
 ---
-title: 1026 - ScheduleTransactionContextWorkItem
+title: 1026 — ScheduleTransactionContextWorkItem
 ms.date: 03/30/2017
 ms.assetid: 0d5f86ba-ec21-4129-a726-5432e425384c
 ms.openlocfilehash: 6d0b43208f86c52e8863d4415a64466b0531832c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924634"
 ---
-# <a name="1026---scheduletransactioncontextworkitem"></a>1026 - ScheduleTransactionContextWorkItem
+# <a name="1026---scheduletransactioncontextworkitem"></a>1026 — ScheduleTransactionContextWorkItem
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|1026|  
-|Słowa kluczowe|WFRuntime|  
+|Identyfikator|1026|  
+|słowa kluczowe|WFRuntime|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- Wskazuje, że zaplanowano element roboczy TransactionContextWorkItem.  
+ Wskazuje, że TransactionContextWorkItem została zaplanowana.  
   
 ## <a name="message"></a>Komunikat  
- Zaplanowano element roboczy TransactionContextWorkItem dla działania %1, nazwa wyświetlana: %2, identyfikator wystąpienia: '%3'.  
+ TransactionContextWorkItem została zaplanowana dla działania "%1", DisplayName: "%2", InstanceId: "%3".  
   
 ## <a name="details"></a>Szczegóły  
   
@@ -31,5 +31,5 @@ ms.locfileid: "33510286"
 |--------------------|--------------------|-----------------|  
 |Działanie|xs:String|Nazwa typu działania.|  
 |Nazwa wyświetlana|xs:String|Nazwa wyświetlana działania.|  
-|Identyfikator wystąpienia|xs:String|Identyfikator wystąpienia działania.|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|InstanceId|xs:String|Identyfikator wystąpienia działania.|  
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

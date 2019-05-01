@@ -11,11 +11,11 @@ ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a4667d78fdf91a3e62c22d88c7cbe9effaae57d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923373"
 ---
 # <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Instrukcje: Używanie tablic kolekcji blokujących w potoku
 Poniższy przykład pokazuje, jak używać tablic <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> obiektów za pomocą metod statycznych, takich jak <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> i <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A> do zaimplementowania szybkie i elastyczne transfer danych między składnikami.  

@@ -11,11 +11,11 @@ ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933786"
 ---
 # <a name="security-and-user-input"></a>Zabezpieczenia i dane użytkownika
 Dane użytkownika, który jest dowolny rodzaj danych wejściowych z żądania sieci Web lub adresu URL, dane wejściowe do formantów w aplikacji Microsoft Windows Forms i tak dalej, mogą negatywnie wpłynąć na kod, ponieważ często używane dane bezpośrednio jako parametry, aby wywołać inny kod. Ta sytuacja jest odpowiednikiem złośliwego kodu, wywoływanie kodu z parametrami dziwne, a ten sam ostrożności. Dane wejściowe użytkownika jest faktycznie trudniejsze bezpieczne ponieważ nie ramek stosu śledzenia obecność potencjalnie niezaufanych danych.  
@@ -24,39 +24,39 @@ Dane użytkownika, który jest dowolny rodzaj danych wejściowych z żądania si
   
  Oto kilka istotnych kwestii dotyczących danych użytkownika:  
   
--   Wszystkie dane użytkownika w odpowiedzi serwer działa w kontekście serwera lokacji na komputerze klienckim. Jeśli serwer sieci Web pobiera dane użytkownika i wstawia ją zwróconej stronie internetowej, na przykład może obejmować  **\<script >** tagu i uruchom tak, jakby z serwera.  
+- Wszystkie dane użytkownika w odpowiedzi serwer działa w kontekście serwera lokacji na komputerze klienckim. Jeśli serwer sieci Web pobiera dane użytkownika i wstawia ją zwróconej stronie internetowej, na przykład może obejmować  **\<script >** tagu i uruchom tak, jakby z serwera.  
   
--   Należy pamiętać, że klient może żądać dowolnego adresu URL.  
+- Należy pamiętać, że klient może żądać dowolnego adresu URL.  
   
--   Należy wziąć pod uwagę trudne lub nieprawidłowe ścieżki:  
+- Należy wziąć pod uwagę trudne lub nieprawidłowe ścieżki:  
   
-    -   .. \, bardzo długich ścieżek.  
+    - .. \, bardzo długich ścieżek.  
   
-    -   Użycie symboli wieloznacznych (*).  
+    - Użycie symboli wieloznacznych (*).  
   
-    -   Rozszerzenie token (token %).  
+    - Rozszerzenie token (token %).  
   
-    -   Otrzymano nieoczekiwany rodzaje ścieżek przy użyciu specjalnego znaczenia.  
+    - Otrzymano nieoczekiwany rodzaje ścieżek przy użyciu specjalnego znaczenia.  
   
-    -   Alternatywne nazwy strumienia systemu plików, takich jak `filename::$DATA`.  
+    - Alternatywne nazwy strumienia systemu plików, takich jak `filename::$DATA`.  
   
-    -   Krótki wersje nazw plików, takich jak `longfi~1` dla `longfilename`.  
+    - Krótki wersje nazw plików, takich jak `longfi~1` dla `longfilename`.  
   
--   Należy pamiętać, że Eval(userdata) można nic robić.  
+- Należy pamiętać, że Eval(userdata) można nic robić.  
   
--   Uważaj, późnego wiązania na nazwę, która zawiera dane użytkownika.  
+- Uważaj, późnego wiązania na nazwę, która zawiera dane użytkownika.  
   
--   Jeśli masz do czynienia z danych w sieci Web, należy wziąć pod uwagę różne rodzaje sekwencje ucieczki, które są dozwolone w tym:  
+- Jeśli masz do czynienia z danych w sieci Web, należy wziąć pod uwagę różne rodzaje sekwencje ucieczki, które są dozwolone w tym:  
   
-    -   Szesnastkowe sekwencje ucieczki (% nn).  
+    - Szesnastkowe sekwencje ucieczki (% nn).  
   
-    -   Sekwencje ucieczki Unicode (% nnn).  
+    - Sekwencje ucieczki Unicode (% nnn).  
   
-    -   Przedłużoną anuluje UTF-8 (% nn % nn).  
+    - Przedłużoną anuluje UTF-8 (% nn % nn).  
   
-    -   Anuluje Double (% nn staje się mmnn %, gdzie % mm jest znak ucieczki "%").  
+    - Anuluje Double (% nn staje się mmnn %, gdzie % mm jest znak ucieczki "%").  
   
--   Uważaj, nazw użytkowników, które może mieć więcej niż jeden kanoniczny format. Na przykład często używają obu moja_domena\\*username* formularza lub *username* @mydomain.example.com formularza.  
+- Uważaj, nazw użytkowników, które może mieć więcej niż jeden kanoniczny format. Na przykład często używają obu moja_domena\\*username* formularza lub *username* @mydomain.example.com formularza.  
   
 ## <a name="see-also"></a>Zobacz także
 

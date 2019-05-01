@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML'
+title: 'Instrukcje: zastępowanie zakodowanej serializacji XML protokołu SOAP'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
 ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922593"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>Instrukcje: zastępowanie zakodowanej serializacji XML protokołu SOAP
 
 Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces jest podobny do procesu dla zastępowanie standardowych serializacji XML. Aby uzyskać informacje o zastępowanie standardowych serializacji XML, zobacz [jak: Określ nazwę elementu alternatywny Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
@@ -20,7 +20,7 @@ Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces 
 
 1. Utworzenie wystąpienia <xref:System.Xml.Serialization.SoapAttributeOverrides> klasy.
 
-2. Utwórz `SoapAttributes` dla każdego członka klasy, który jest deserializowana.
+2. Utwórz `SoapAttributes` dla każdej składowej klasy, która jest deserializowana.
 
 3. Utworzenie wystąpienia co najmniej jeden z atrybutów, które wpływa na serializacji XML, odpowiednio do elementu członkowskiego serializowanego. Aby uzyskać więcej informacji zobacz "Atrybuty czy kontroli kodowany protokołu SOAP serializacji".
 

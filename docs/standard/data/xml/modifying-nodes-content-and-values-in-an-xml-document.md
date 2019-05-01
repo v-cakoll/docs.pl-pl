@@ -6,24 +6,24 @@ ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924114"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modyfikowanie węzłów, zawartości i wartości w dokumencie XML
 Istnieje wiele sposobów, można zmodyfikować węzłów i zawartości w dokumencie. Można:  
   
--   Zmień wartość węzłów przy użyciu <xref:System.Xml.XmlNode.Value%2A> właściwości.  
+- Zmień wartość węzłów przy użyciu <xref:System.Xml.XmlNode.Value%2A> właściwości.  
   
--   Zmodyfikuj cały zestaw węzłów, zastępując węzły nowe węzły. Odbywa się przy użyciu <xref:System.Xml.XmlNode.InnerXml%2A> właściwości.  
+- Zmodyfikuj cały zestaw węzłów, zastępując węzły nowe węzły. Odbywa się przy użyciu <xref:System.Xml.XmlNode.InnerXml%2A> właściwości.  
   
--   Zamień istniejące węzły nowych węzłów przy użyciu <xref:System.Xml.XmlNode.RemoveChild%2A> metody.  
+- Zamień istniejące węzły nowych węzłów przy użyciu <xref:System.Xml.XmlNode.RemoveChild%2A> metody.  
   
--   Dodaj dodatkowe znaki do węzłów, które dziedziczą z <xref:System.Xml.XmlCharacterData> przy użyciu <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A>, lub <xref:System.Xml.XmlCharacterData.ReplaceData%2A> metody.  
+- Dodaj dodatkowe znaki do węzłów, które dziedziczą z <xref:System.Xml.XmlCharacterData> przy użyciu <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A>, lub <xref:System.Xml.XmlCharacterData.ReplaceData%2A> metody.  
   
--   Modyfikowanie zawartości, usuwając szeroką gamę znaków, przy użyciu <xref:System.Xml.XmlCharacterData.DeleteData%2A> metody w ramach typów węzłów, które dziedziczą z <xref:System.Xml.XmlCharacterData>.  
+- Modyfikowanie zawartości, usuwając szeroką gamę znaków, przy użyciu <xref:System.Xml.XmlCharacterData.DeleteData%2A> metody w ramach typów węzłów, które dziedziczą z <xref:System.Xml.XmlCharacterData>.  
   
  Proste techniki, w przypadku zmiany wartości węzła jest użycie `node.Value = "new value";`. W poniższej tabeli wymieniono typy węzłów, które pracuje tego jednego wiersza kodu, i dokładnie dane dla tego typu węzła jest zmieniany.  
   

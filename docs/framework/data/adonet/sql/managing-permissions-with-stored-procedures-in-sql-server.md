@@ -3,11 +3,11 @@ title: Zarządzanie uprawnieniami za pomocą procedur składowanych w programie 
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 ms.openlocfilehash: 0688157b45892cacb73f858dffb93836da9fc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923126"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server
 Jedną z metod tworzenia wielu wierszy obrony wokół bazy danych jest do wdrożenia dostępu do wszystkich danych przy użyciu procedur składowanych i funkcji zdefiniowanych przez użytkownika. Odwoływanie lub odmówić uprawnień wszystkich podstawowych obiektów, takich jak tabele i Udziel uprawnień wykonywanie procedur składowanych. Spowoduje to skutecznie utworzenie obwodu zabezpieczeń wokół obiektów danych i bazy danych.  
@@ -15,19 +15,19 @@ Jedną z metod tworzenia wielu wierszy obrony wokół bazy danych jest do wdroż
 ## <a name="stored-procedure-benefits"></a>Procedura składowana korzyści  
  Procedury składowane zapewnia następujące korzyści:  
   
--   Można hermetyzować reguł biznesowych i logiki danych, dzięki czemu użytkownicy mogą uzyskiwać dostęp do danych i obiektów tylko w sposób, który ma deweloperów i administratorów baz danych.  
+- Można hermetyzować reguł biznesowych i logiki danych, dzięki czemu użytkownicy mogą uzyskiwać dostęp do danych i obiektów tylko w sposób, który ma deweloperów i administratorów baz danych.  
   
--   Sparametryzowanej procedury składowane, które sprawdzają poprawność wszystkich danych wejściowych użytkownika może służyć do udaremnić ataki przez wstrzyknięcie kodu SQL. Jeśli używasz dynamiczny język SQL, pamiętaj zdefiniować parametry poleceń, a nigdy nie dołączaj parametru wartości bezpośrednio do ciągu zapytania.  
+- Sparametryzowanej procedury składowane, które sprawdzają poprawność wszystkich danych wejściowych użytkownika może służyć do udaremnić ataki przez wstrzyknięcie kodu SQL. Jeśli używasz dynamiczny język SQL, pamiętaj zdefiniować parametry poleceń, a nigdy nie dołączaj parametru wartości bezpośrednio do ciągu zapytania.  
   
--   Może być niedozwolona ad-hoc modyfikacji zapytania i danych. Uniemożliwia to użytkownikom złośliwie przypadkowo zniszczenie danych lub wykonywaniem zapytań, które obniżają wydajność na serwerze lub w sieci.  
+- Może być niedozwolona ad-hoc modyfikacji zapytania i danych. Uniemożliwia to użytkownikom złośliwie przypadkowo zniszczenie danych lub wykonywaniem zapytań, które obniżają wydajność na serwerze lub w sieci.  
   
--   Błędy mogą być obsługiwane w kodzie procedury nie został przekazany bezpośrednio do aplikacji klienckich. Zapobiega to komunikaty o błędach zwracanych, które może pomóc w badania ataków. Rejestrowanie błędów i obsługiwać je na serwerze.  
+- Błędy mogą być obsługiwane w kodzie procedury nie został przekazany bezpośrednio do aplikacji klienckich. Zapobiega to komunikaty o błędach zwracanych, które może pomóc w badania ataków. Rejestrowanie błędów i obsługiwać je na serwerze.  
   
--   Procedury składowane można zapisywane jeden raz i używane przez wiele aplikacji.  
+- Procedury składowane można zapisywane jeden raz i używane przez wiele aplikacji.  
   
--   Aplikacje klienckie nie trzeba nic wiedzieć o podstawowej struktury danych. Procedura składowana kod, można zmienić bez konieczności wprowadzania zmian w aplikacjach klienckich, tak długo, jak zmiany nie wpływają na listy parametrów lub zwracane typy danych.  
+- Aplikacje klienckie nie trzeba nic wiedzieć o podstawowej struktury danych. Procedura składowana kod, można zmienić bez konieczności wprowadzania zmian w aplikacjach klienckich, tak długo, jak zmiany nie wpływają na listy parametrów lub zwracane typy danych.  
   
--   Procedury składowane można zmniejszyć ruch sieciowy, łącząc wiele operacji do wywołania jednej procedury.  
+- Procedury składowane można zmniejszyć ruch sieciowy, łącząc wiele operacji do wywołania jednej procedury.  
   
 ## <a name="stored-procedure-execution"></a>Wykonywanie procedury składowanej  
  Przechowywane procedury Wykorzystaj własności łańcucha zapewnienie dostępu do danych, dzięki czemu użytkownicy nie muszą mieć jawne uprawnienia do dostępu do obiektów bazy danych. Łańcucha własności istnieje, gdy obiektów mających dostęp do sekwencyjnego sobą należą do tego samego użytkownika. Na przykład wywołać procedurę składowaną innych procedur składowanych lub procedury składowanej mogą uzyskiwać dostęp do wielu tabel. Jeśli wszystkie obiekty w łańcuchu wykonywania mają tego samego właściciela, a następnie programu SQL Server sprawdza tylko uprawnień wykonywanie do obiektu wywołującego, nie uprawnienia obiektu wywołującego od innych obiektów. W związku z tym należy udzielić tylko uprawnienia wykonywania na procedurach przechowywanych; można odwołać lub odmówić wszystkie uprawnienia wobec tabel podstawowych.  
@@ -35,19 +35,19 @@ Jedną z metod tworzenia wielu wierszy obrony wokół bazy danych jest do wdroż
 ## <a name="best-practices"></a>Najlepsze praktyki  
  Po prostu pisania procedur składowanych nie jest wystarczająco dużo, aby odpowiednio zabezpieczenia aplikacji. Należy również rozważyć następujące potencjalnych luk w zabezpieczeniach.  
   
--   Udziel uprawnień wykonywanie procedur składowanych do ról bazy danych, które chcesz mieć możliwość dostępu do danych.  
+- Udziel uprawnień wykonywanie procedur składowanych do ról bazy danych, które chcesz mieć możliwość dostępu do danych.  
   
--   Odwoływanie lub Odrzuć wszystkie uprawnienia w tabelach dla wszystkich ról i użytkowników w bazie danych, w tym `public` roli. Wszyscy użytkownicy dziedziczą uprawnienia z publicznej. W związku z tym odmawia uprawnienia do `public` oznacza, że tylko właściciele i `sysadmin` członkowie mają dostęp; wszyscy inni użytkownicy będą mogli dziedziczą uprawnienia z członkostwa w innych ról.  
+- Odwoływanie lub Odrzuć wszystkie uprawnienia w tabelach dla wszystkich ról i użytkowników w bazie danych, w tym `public` roli. Wszyscy użytkownicy dziedziczą uprawnienia z publicznej. W związku z tym odmawia uprawnienia do `public` oznacza, że tylko właściciele i `sysadmin` członkowie mają dostęp; wszyscy inni użytkownicy będą mogli dziedziczą uprawnienia z członkostwa w innych ról.  
   
--   Nie należy dodawać użytkowników lub ról, aby `sysadmin` lub `db_owner` ról. Administratorzy systemu i właścicieli bazy danych można uzyskać dostęp do wszystkich obiektów bazy danych.  
+- Nie należy dodawać użytkowników lub ról, aby `sysadmin` lub `db_owner` ról. Administratorzy systemu i właścicieli bazy danych można uzyskać dostęp do wszystkich obiektów bazy danych.  
   
--   Wyłącz `guest` konta. Uniemożliwi to użytkownicy anonimowi połączenie z bazą danych. Konto gościa jest domyślnie wyłączona, w nowych baz danych.  
+- Wyłącz `guest` konta. Uniemożliwi to użytkownicy anonimowi połączenie z bazą danych. Konto gościa jest domyślnie wyłączona, w nowych baz danych.  
   
--   Implementowanie błędu dziennika i obsługi błędów.  
+- Implementowanie błędu dziennika i obsługi błędów.  
   
--   Utwórz sparametryzowanej procedury składowane, które sprawdzają poprawność wszystkich danych wejściowych użytkownika. Wszystkie dane wejściowe użytkownika należy traktować jako niezaufane.  
+- Utwórz sparametryzowanej procedury składowane, które sprawdzają poprawność wszystkich danych wejściowych użytkownika. Wszystkie dane wejściowe użytkownika należy traktować jako niezaufane.  
   
--   Należy unikać dynamiczny język SQL, chyba że jest to absolutnie konieczne. Funkcja QUOTENAME() języka Transact-SQL do ograniczania wartości ciągu i wprowadzić dowolne wystąpienie ogranicznika w ciągu wejściowym.  
+- Należy unikać dynamiczny język SQL, chyba że jest to absolutnie konieczne. Funkcja QUOTENAME() języka Transact-SQL do ograniczania wartości ciągu i wprowadzić dowolne wystąpienie ogranicznika w ciągu wejściowym.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  Aby uzyskać więcej informacji zobacz następujące zasoby.  

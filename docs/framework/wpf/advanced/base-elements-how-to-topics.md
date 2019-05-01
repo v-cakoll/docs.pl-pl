@@ -7,11 +7,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
 ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926467"
 ---
 # <a name="base-elements-how-to-topics"></a>Elementy bazy Tematy porad
 Tematy w tej sekcji opisano sposób korzystania z czterech podstawowych elementów WPF: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, i <xref:System.Windows.FrameworkContentElement>.  

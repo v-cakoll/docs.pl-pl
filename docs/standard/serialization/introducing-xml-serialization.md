@@ -13,11 +13,11 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
 ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933695"
 ---
 # <a name="introducing-xml-serialization"></a>Wprowadzenie do serializacji XML
 
@@ -28,8 +28,7 @@ Serializacji to proces konwersji obiektu do formularza, który można łatwo prz
 > [!NOTE]
 > Serializacji XML nie konwertuje metody, indeksatory, prywatnych pola lub właściwości tylko do odczytu (z wyjątkiem kolekcji tylko do odczytu). Do serializacji obiektu wszystkie pola i właściwości, zarówno publiczne, jak i prywatnych, użyj <xref:System.Runtime.Serialization.DataContractSerializer> zamiast serializacji XML.
 
- Klasa centralnej w serializacji XML jest <xref:System.Xml.Serialization.XmlSerializer> klasy i najważniejszych metod w tej klasie są **Serialize** i **Deserialize** metody. 
-  <xref:System.Xml.Serialization.XmlSerializer> Tworzy PLiki C# i kompiluje je na PLiki z rozszerzeniem dll do wykonania tej serializacji. W programie .NET Framework 2.0 [narzędzie generatora serializatora XML (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) jest przeznaczona do generowania te zestawy serializacji z góry na wdrożony z aplikacją i zwiększeniu wydajności uruchamiania. Strumień XML generowanych przez **XmlSerializer** jest zgodne z konsorcjum World Wide Web (W3C) [język definicji schematu XML (XSD) 1.0 zalecenia](https://www.w3.org/TR/xslt). Ponadto generowane typy danych są zgodne z dokumentu zatytułowanej "XML schematu część 2: Typy danych."
+ Klasa centralnej w serializacji XML jest <xref:System.Xml.Serialization.XmlSerializer> klasy i najważniejszych metod w tej klasie są **Serialize** i **Deserialize** metody. <xref:System.Xml.Serialization.XmlSerializer> Tworzy PLiki C# i kompiluje je na PLiki z rozszerzeniem dll do wykonania tej serializacji. W programie .NET Framework 2.0 [narzędzie generatora serializatora XML (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) jest przeznaczona do generowania te zestawy serializacji z góry na wdrożony z aplikacją i zwiększeniu wydajności uruchamiania. Strumień XML generowanych przez **XmlSerializer** jest zgodne z konsorcjum World Wide Web (W3C) [język definicji schematu XML (XSD) 1.0 zalecenia](https://www.w3.org/TR/xslt). Ponadto generowane typy danych są zgodne z dokumentu zatytułowanej "XML schematu część 2: Typy danych."
 
  Dane w obiekty opisano przy użyciu narzędzi programistycznych języka, takich jak klasy, pola, właściwości, typy pierwotne, tablice i XML nawet osadzone w formie **XmlElement** lub **XmlAttribute**obiektów. Istnieje możliwość tworzenia własnych klas oznaczona z atrybutów, lub za pomocą narzędzia definicji schematu XML można wygenerować klas na podstawie istniejącego schematu XML.
 

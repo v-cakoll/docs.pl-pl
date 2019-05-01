@@ -1,17 +1,17 @@
 ---
-title: Droga do nowoczesne aplikacje oparte na kontenerach
+title: Droga do nowoczesnych aplikacji opartych na kontenerach
 description: Dowiedz się, że platformy Docker, kontenery i architektury Mikrousług nie są jednego rozwiązania. W tym miejscu znajdziesz niektóre odwołania, które pomogą w podjęciu decyzji.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
 ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922619"
 ---
-# <a name="road-to-modern-applications-based-on-containers"></a>Droga do nowoczesne aplikacje oparte na kontenerach
+# <a name="road-to-modern-applications-based-on-containers"></a>Droga do nowoczesnych aplikacji opartych na kontenerach
 
 Prawdopodobnie czytasz ten podręcznik, ponieważ planowane jest tworzenie nowych aplikacji lub ocenianych wpływ przy użyciu platformy Docker, kontenery i nowych metod, takich jak Mikrousługi w Twojej firmie.
 

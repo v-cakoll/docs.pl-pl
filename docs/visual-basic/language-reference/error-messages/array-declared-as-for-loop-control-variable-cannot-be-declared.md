@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
 ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935385"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>Tablica zadeklarowana jako zmienna sterująca pętli for nie może być zadeklarowana z rozmiarem początkowym
 A `For Each` pętli używa tablicy jako jego *elementu* Zmienna iteracji, ale inicjuje tej tablicy.  
@@ -31,7 +31,7 @@ For Each listElement(1) As Integer In arrayList
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Usuń inicjowania z deklaracji *elementu* Zmienna iteracji.  
+- Usuń inicjowania z deklaracji *elementu* Zmienna iteracji.  
   
 ## <a name="see-also"></a>Zobacz także
 

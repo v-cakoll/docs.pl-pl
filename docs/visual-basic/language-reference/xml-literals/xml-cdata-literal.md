@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938635"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Literał CDATA XML (Visual Basic)
 Literał reprezentujący <xref:System.Xml.Linq.XCData> obiektu.  
@@ -40,9 +40,9 @@ Literał reprezentujący <xref:System.Xml.Linq.XCData> obiektu.
 ## <a name="remarks"></a>Uwagi  
  Sekcje XML CDATA zawierają nieprzetworzony tekst, które powinny być włączone, lecz nie analizować za pomocą XML, który go zawiera. Sekcja XML CDATA może zawierać dowolny tekst. Obejmuje to zarezerwowanych znaków XML. Sekcja XML CDATA kończy się wraz z sekwencji "]] >". Oznacza to następujące kwestie:  
   
--   Nie można użyć wyrażenia osadzone w literał CDATA XML, ponieważ ograniczniki osadzone wyrażenia są prawidłowa zawartość XML CDATA.  
+- Nie można użyć wyrażenia osadzone w literał CDATA XML, ponieważ ograniczniki osadzone wyrażenia są prawidłowa zawartość XML CDATA.  
   
--   Nie można zagnieżdżać sekcji XML CDATA, ponieważ `content` nie może zawierać wartość "]] >".  
+- Nie można zagnieżdżać sekcji XML CDATA, ponieważ `content` nie może zawierać wartość "]] >".  
   
  Możesz przypisać literał CDATA XML do zmiennej lub ją dołączyć literał elementu XML.  
   

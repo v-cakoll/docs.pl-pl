@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933851"
 ---
 # <a name="how-to-use-data-protection"></a>Instrukcje: Stosowanie ochrony danych
 .NET Framework zapewnia dostęp do ochrony danych interfejsu API (DPAPI), co pozwala na szyfrowanie danych, korzystając z informacji z bieżącego konta użytkownika lub komputera.  Korzystając z interfejsu DPAPI złagodzić się trudne problem jawnie generowania i przechowywania klucza kryptograficznego.  
@@ -62,9 +62,9 @@ ms.locfileid: "59771845"
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Odwołanie do `System.Security.dll`.  
+- Odwołanie do `System.Security.dll`.  
   
--   Obejmują <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography>, i <xref:System.Text> przestrzeni nazw.  
+- Obejmują <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography>, i <xref:System.Text> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
 

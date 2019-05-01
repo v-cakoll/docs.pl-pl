@@ -27,36 +27,36 @@ ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925739"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Konwersja typów w programie .NET Framework
 <a name="top"></a> Każda wartość ma skojarzony typ definiujący atrybuty, takie jak ilość miejsca przydzielonego dla wartości, zakres możliwych wartości, które może mieć i elementy członkowskie udostępniane. Wiele wartości można wyrazić za pomocą co najmniej dwóch typów. Na przykład wartość 4 może być wyrażona jako liczba całkowita lub wartość zmiennoprzecinkowa. Konwersja typu tworzy wartość nowego typu, która jest równoważna wartości starego typu, ale nie zawsze powoduje zachowanie tożsamości (dokładnej wartości) oryginalnego obiektu.  
   
  Program .NET Framework automatycznie obsługuje następujące konwersje:  
   
--   Konwersja z klasy pochodnej do klasy bazowej. Oznacza to, na przykład, że wystąpienia klasy lub struktury mogą być konwertowane na <xref:System.Object> wystąpienia.  Ta konwersja wymaga operatora rzutowania lub konwersji.  
+- Konwersja z klasy pochodnej do klasy bazowej. Oznacza to, na przykład, że wystąpienia klasy lub struktury mogą być konwertowane na <xref:System.Object> wystąpienia.  Ta konwersja wymaga operatora rzutowania lub konwersji.  
   
--   Konwersja z klasy bazowej z powrotem do oryginalnej klasy pochodnej. W języku C# ta konwersja wymaga operatora rzutowania. W języku Visual Basic wymaga `CType` operator Jeśli `Option Strict` znajduje się na.  
+- Konwersja z klasy bazowej z powrotem do oryginalnej klasy pochodnej. W języku C# ta konwersja wymaga operatora rzutowania. W języku Visual Basic wymaga `CType` operator Jeśli `Option Strict` znajduje się na.  
   
--   Konwersja z typu, który implementuje interfejs do obiektu interfejsu, który reprezentuje ten interfejs. Ta konwersja wymaga operatora rzutowania lub konwersji.  
+- Konwersja z typu, który implementuje interfejs do obiektu interfejsu, który reprezentuje ten interfejs. Ta konwersja wymaga operatora rzutowania lub konwersji.  
   
--   Konwersja obiektu interfejsu z powrotem do oryginalnego typu, który implementuje ten interfejs.  W języku C# ta konwersja wymaga operatora rzutowania. W języku Visual Basic wymaga `CType` operator Jeśli `Option Strict` znajduje się na.  
+- Konwersja obiektu interfejsu z powrotem do oryginalnego typu, który implementuje ten interfejs.  W języku C# ta konwersja wymaga operatora rzutowania. W języku Visual Basic wymaga `CType` operator Jeśli `Option Strict` znajduje się na.  
   
  Oprócz tych automatycznej konwersji [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] udostępnia kilka funkcji obsługujących konwersję typów niestandardowych. Należą do nich między innymi:  
   
--   `Implicit` Operatora, który definiuje dostępne rozszerzające konwersje między typami. Aby uzyskać więcej informacji, zobacz [niejawna konwersja za pomocą operatora Implicit](#implicit_conversion_with_the_implicit_operator) sekcji.  
+- `Implicit` Operatora, który definiuje dostępne rozszerzające konwersje między typami. Aby uzyskać więcej informacji, zobacz [niejawna konwersja za pomocą operatora Implicit](#implicit_conversion_with_the_implicit_operator) sekcji.  
   
--   `Explicit` Operatora, który definiuje dostępne zawężające konwersje między typami. Aby uzyskać więcej informacji, zobacz [jawna konwersja za pomocą operatora Explicit](#explicit_conversion_with_the_explicit_operator) sekcji.  
+- `Explicit` Operatora, który definiuje dostępne zawężające konwersje między typami. Aby uzyskać więcej informacji, zobacz [jawna konwersja za pomocą operatora Explicit](#explicit_conversion_with_the_explicit_operator) sekcji.  
   
--   <xref:System.IConvertible> Interfejs, który definiuje konwersji do każdego z typów podstawowych danych .NET Framework. Aby uzyskać więcej informacji, zobacz [interfejs IConvertible](#the_iconvertible_interface) sekcji.  
+- <xref:System.IConvertible> Interfejs, który definiuje konwersji do każdego z typów podstawowych danych .NET Framework. Aby uzyskać więcej informacji, zobacz [interfejs IConvertible](#the_iconvertible_interface) sekcji.  
   
--   <xref:System.Convert> Klasy, która udostępnia zestaw metod, które implementują metody w <xref:System.IConvertible> interfejsu. Aby uzyskać więcej informacji, zobacz [klasa Convert](#Convert) sekcji.  
+- <xref:System.Convert> Klasy, która udostępnia zestaw metod, które implementują metody w <xref:System.IConvertible> interfejsu. Aby uzyskać więcej informacji, zobacz [klasa Convert](#Convert) sekcji.  
   
--   <xref:System.ComponentModel.TypeConverter> Klasy, która jest klasą bazową, można rozszerzać w celu obsługi konwersji określonego typu do jakichkolwiek innych typów. Aby uzyskać więcej informacji, zobacz [klasa TypeConverter](#the_typeconverter_class) sekcji.  
+- <xref:System.ComponentModel.TypeConverter> Klasy, która jest klasą bazową, można rozszerzać w celu obsługi konwersji określonego typu do jakichkolwiek innych typów. Aby uzyskać więcej informacji, zobacz [klasa TypeConverter](#the_typeconverter_class) sekcji.  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>Niejawna konwersja za pomocą operatora Implicit  
@@ -129,11 +129,11 @@ ms.locfileid: "54659764"
 ## <a name="the-iconvertible-interface"></a>Interfejs IConvertible  
  Do obsługi konwersji dowolnego typu do wspólnego język podstawowy typ środowiska uruchomieniowego, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zapewnia <xref:System.IConvertible> interfejsu. Typ implementujący musi dostarczyć następujące elementy:  
   
--   Metoda, która zwraca <xref:System.TypeCode> typu implementującego.  
+- Metoda, która zwraca <xref:System.TypeCode> typu implementującego.  
   
--   Typ metody konwersji implementujący każdego wspólnego typu podstawowego środowiska uruchomieniowego języka (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>i tak dalej).  
+- Typ metody konwersji implementujący każdego wspólnego typu podstawowego środowiska uruchomieniowego języka (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>i tak dalej).  
   
--   Uogólnioną metodę konwersji służącą do konwertowania wystąpienia typu implementującego na inny określony typ. Konwersje, które nie są obsługiwane powinno zgłosić <xref:System.InvalidCastException>.  
+- Uogólnioną metodę konwersji służącą do konwertowania wystąpienia typu implementującego na inny określony typ. Konwersje, które nie są obsługiwane powinno zgłosić <xref:System.InvalidCastException>.  
   
  Każdy wspólnego język podstawowy typ środowiska uruchomieniowego (czyli <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.String>, <xref:System.UInt16>, <xref:System.UInt32>, i <xref:System.UInt64>), a także <xref:System.DBNull> i <xref:System.Enum> typy, implementują <xref:System.IConvertible> interfejsu. Te są jednak jawne implementacje interfejsu; metodę konwersji można wywołać tylko za pośrednictwem <xref:System.IConvertible> zmiennej interfejsu, co ilustruje poniższy przykład. Ten przykład konwertuje <xref:System.Int32> wartość odpowiadającą jej <xref:System.Char> wartość.  
   

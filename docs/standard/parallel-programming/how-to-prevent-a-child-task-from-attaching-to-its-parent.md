@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapobiec łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym'
+title: 'Instrukcje: Zapobieganie łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7506a57e29b7942bd06141baa2d2b048ed998214
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937439"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Instrukcje: Zapobiec łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Instrukcje: Zapobieganie łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym
 Ten dokument przedstawia sposób zapobiec łączeniu zadania podrzędnego z zadaniem do zadania nadrzędnego. Zapobieganie zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym jest przydatne w przypadku, gdy wywołujesz składnik, który jest zapisywany przez stronę trzecią i używa również zadania. Na przykład składnikiem innej firmy, który używa <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcję, aby utworzyć <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> obiektu może spowodować problemy w kodzie, gdy jest długotrwałe lub zwraca nieobsługiwany wyjątek.  
   
 ## <a name="example"></a>Przykład  
@@ -33,7 +33,7 @@ Ten dokument przedstawia sposób zapobiec łączeniu zadania podrzędnego z zada
   
  Visual C#  
   
- **CSC.exe DenyChildAttach.cs**  
+ **csc.exe DenyChildAttach.cs**  
   
  Visual Basic  
   

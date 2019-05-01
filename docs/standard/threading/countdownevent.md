@@ -11,11 +11,11 @@ ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d3825ef73a6ec312ff51d1bddf5360f3de6cc69
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926662"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> jest elementem synchronizacji, który odblokowuje wątków oczekujących, po przeprowadzeniu sygnalizowane, ile razy. <xref:System.Threading.CountdownEvent> jest przeznaczona dla scenariuszy, w których w przeciwnym razie trzeba byłoby użyć <xref:System.Threading.ManualResetEvent> lub <xref:System.Threading.ManualResetEventSlim> i ręcznie dekrementacyjne zmienną przed sygnalizacja zdarzenie. Na przykład w scenariuszu rozwidlenia/scalania, po prostu utworzeniem <xref:System.Threading.CountdownEvent> zawierający sygnału liczbę 5, a następnie rozpoczęcia pięć elementów roboczych w wątku puli i mieć każdego wywołania elementu roboczego <xref:System.Threading.CountdownEvent.Signal%2A> po zakończeniu. Każde wywołanie <xref:System.Threading.CountdownEvent.Signal%2A> zmniejsza sygnał liczba o 1. W głównym wątku, wywołanie <xref:System.Threading.CountdownEvent.Wait%2A> blokuje, dopóki liczba sygnałów wynosi zero.  
@@ -25,13 +25,13 @@ ms.locfileid: "55758924"
   
  <xref:System.Threading.CountdownEvent> ma te dodatkowe funkcje:  
   
--   Przy użyciu tokenów anulowania można anulować operacji oczekiwania.  
+- Przy użyciu tokenów anulowania można anulować operacji oczekiwania.  
   
--   Po utworzeniu wystąpienia można zwiększyć jego Liczba sygnałów.  
+- Po utworzeniu wystąpienia można zwiększyć jego Liczba sygnałów.  
   
--   Wystąpienia mogą zostać ponownie użyte po <xref:System.Threading.CountdownEvent.Wait%2A> został zwrócony przez wywołanie metody <xref:System.Threading.CountdownEvent.Reset%2A> metody.  
+- Wystąpienia mogą zostać ponownie użyte po <xref:System.Threading.CountdownEvent.Wait%2A> został zwrócony przez wywołanie metody <xref:System.Threading.CountdownEvent.Reset%2A> metody.  
   
--   Udostępnianie wystąpień <xref:System.Threading.WaitHandle> integrację z innymi API synchronizacji .NET Framework takich jak <xref:System.Threading.WaitHandle.WaitAll%2A>.  
+- Udostępnianie wystąpień <xref:System.Threading.WaitHandle> integrację z innymi API synchronizacji .NET Framework takich jak <xref:System.Threading.WaitHandle.WaitAll%2A>.  
   
 ## <a name="basic-usage"></a>Podstawowe użycia  
  Poniższy przykład pokazuje sposób użycia <xref:System.Threading.CountdownEvent> z <xref:System.Threading.ThreadPool> elementów roboczych.  

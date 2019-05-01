@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929847"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje cyfrowego certyfikatu X.509 oraz sposobu ich używania w programie WCF i zawiera łącza do tematów, opisano te pojęcia dalsze lub które pokazują sposób wykonywania typowych zadań przy użyciu programu WCF i certyfikatów.  
@@ -29,27 +29,27 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
 ## <a name="certificate-stores"></a>Magazyny certyfikatów  
  Certyfikaty znajdują się w magazynach. Dwie lokalizacje magazynu głównych istnieją, które są podzielone na magazynach podrzędnych. Jeśli jesteś administratorem na komputerze, możesz wyświetlić obie magazynów głównych przy użyciu narzędzia przystawki programu MMC. Użytkownicy niebędący administratorami mogą wyświetlać tylko bieżącego magazynu użytkownika.  
   
--   **Magazynu komputer lokalny**. Zawiera certyfikaty uzyskiwał dostęp do maszyny procesów, takich jak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Użyj tej lokalizacji można przechowywać certyfikaty uwierzytelniania serwera wobec klientów.  
+- **Magazynu komputer lokalny**. Zawiera certyfikaty uzyskiwał dostęp do maszyny procesów, takich jak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Użyj tej lokalizacji można przechowywać certyfikaty uwierzytelniania serwera wobec klientów.  
   
--   **Bieżący magazyn użytkownika**. Interaktywne aplikacje zwykle umieść tutaj certyfikaty dla bieżącego użytkownika komputera. Jeśli tworzysz aplikację kliencką, to zwykle umieszczane są certyfikaty, które przeprowadzają uwierzytelnianie użytkownika do usługi.  
+- **Bieżący magazyn użytkownika**. Interaktywne aplikacje zwykle umieść tutaj certyfikaty dla bieżącego użytkownika komputera. Jeśli tworzysz aplikację kliencką, to zwykle umieszczane są certyfikaty, które przeprowadzają uwierzytelnianie użytkownika do usługi.  
   
  Te dwa magazyny są podzielone na magazynach podrzędnych. Najważniejsze z nich podczas programowania, korzystając z usługi WCF obejmują:  
   
--   **Zaufane główne urzędy certyfikacji**. Certyfikaty można użyć w tym magazynie, aby utworzyć łańcuch certyfikatów, które można prześledzić do certyfikatu urzędu certyfikacji, w tym magazynie.  
+- **Zaufane główne urzędy certyfikacji**. Certyfikaty można użyć w tym magazynie, aby utworzyć łańcuch certyfikatów, które można prześledzić do certyfikatu urzędu certyfikacji, w tym magazynie.  
   
     > [!IMPORTANT]
     >  Komputerze lokalnym domyślnie ufa wszystkich certyfikatów, umieszczane w tym magazynie nawet, jeśli certyfikat nie pochodzi z zaufanego firm urzędu certyfikacji. Z tego powodu nie należy umieszczać żadnych certyfikatów do tego magazynu chyba, że w pełni ufasz wystawcy i konsekwencje.  
   
--   **Osobiste**. Ten magazyn jest używany dla certyfikatów skojarzonych z użytkownikiem komputerze. Zazwyczaj ten magazyn jest używany do certyfikatów wystawianych przez jeden z certyfikatów urzędów certyfikacji w magazynie zaufanych głównych urzędów certyfikacji. Alternatywnie tutaj certyfikat może być własnym wystawiony i zaufane przez aplikację.  
+- **Osobiste**. Ten magazyn jest używany dla certyfikatów skojarzonych z użytkownikiem komputerze. Zazwyczaj ten magazyn jest używany do certyfikatów wystawianych przez jeden z certyfikatów urzędów certyfikacji w magazynie zaufanych głównych urzędów certyfikacji. Alternatywnie tutaj certyfikat może być własnym wystawiony i zaufane przez aplikację.  
   
  Aby uzyskać więcej informacji na temat magazynów certyfikatów Zobacz [magazynów certyfikatów](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Wybieranie Store  
  Wybieranie miejsce przechowywania certyfikatu zależy od sposobu i czasu uruchomienia usługi lub klienta. Obowiązują następujące reguły ogólne:  
   
--   Jeśli usługa WCF jest hostowana w użyciu usługi Windows **komputera lokalnego** przechowywania. Należy pamiętać, że wymagane są uprawnienia administratora, aby zainstalować certyfikaty w magazynie komputera lokalnego.  
+- Jeśli usługa WCF jest hostowana w użyciu usługi Windows **komputera lokalnego** przechowywania. Należy pamiętać, że wymagane są uprawnienia administratora, aby zainstalować certyfikaty w magazynie komputera lokalnego.  
   
--   Jeśli usługi lub klienta jest aplikacja, która jest uruchamiana na koncie użytkownika, użyj **bieżącego użytkownika** przechowywania.  
+- Jeśli usługi lub klienta jest aplikacja, która jest uruchamiana na koncie użytkownika, użyj **bieżącego użytkownika** przechowywania.  
   
 ### <a name="accessing-stores"></a>Uzyskiwanie dostępu do magazynów  
  Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak foldery na komputerze. Podczas tworzenia usługi hostowanej przez Internetowe usługi informacyjne (IIS) [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proces jest uruchamiany w ramach [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] konta. Konto musi mieć dostęp do magazynu który zawiera certyfikaty używane przez usługę. Każdy z magazynów głównych jest chroniony za pomocą domyślnej listy dostępu, ale listy mogą być modyfikowane. Jeśli utworzysz rolę oddzielne dostępu do magazynu, należy przyznać uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak zmodyfikować listę dostępu za pomocą narzędzia WinHttpCertConfig.exe, zobacz [jak: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Aby uzyskać więcej informacji o korzystaniu z certyfikatów klienta z programem IIS, zobacz [sposób wywoływania usługi sieci Web przy użyciu certyfikatu klienta do uwierzytelniania w aplikacji internetowej ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
@@ -74,11 +74,11 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
   
  Można również ustawić właściwości, za pomocą konfiguracji. Następujące elementy są używane do określania tryb weryfikacji:  
   
--   [\<Uwierzytelnianie >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<Uwierzytelnianie >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Uwierzytelnianie niestandardowe  
  `CertificateValidationMode` Właściwość umożliwia także dostosować sposób uwierzytelniania certyfikatów. Domyślnie ustawiono poziom `ChainTrust`. Aby użyć <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> wartości, należy także ustawić `CustomCertificateValidatorType` atrybutu do zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć niestandardowego modułu weryfikacji, musi dziedziczyć abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.  

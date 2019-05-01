@@ -3,19 +3,19 @@ title: 'Instrukcje: Wyszukiwanie elementu o określonym elemencie podrzędnym (V
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
 ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780604"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a><span data-ttu-id="5a2f0-102">Instrukcje: Wyszukiwanie elementu o określonym elemencie podrzędnym (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a2f0-102">How to: Find an Element with a Specific Child Element (Visual Basic)</span></span>
-<span data-ttu-id="5a2f0-103">W tym temacie pokazano, jak można znaleźć określonego elementu, który ma element podrzędny z określoną wartością.</span><span class="sxs-lookup"><span data-stu-id="5a2f0-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a><span data-ttu-id="a20b4-102">Instrukcje: Wyszukiwanie elementu o określonym elemencie podrzędnym (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a20b4-102">How to: Find an Element with a Specific Child Element (Visual Basic)</span></span>
+<span data-ttu-id="a20b4-103">W tym temacie pokazano, jak można znaleźć określonego elementu, który ma element podrzędny z określoną wartością.</span><span class="sxs-lookup"><span data-stu-id="a20b4-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5a2f0-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="5a2f0-104">Example</span></span>  
- <span data-ttu-id="5a2f0-105">W przykładzie są znajdowane `Test` element, który ma `CommandLine` elementu podrzędnego z wartością "Examp2.EXE".</span><span class="sxs-lookup"><span data-stu-id="5a2f0-105">The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".</span></span>  
+## <a name="example"></a><span data-ttu-id="a20b4-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="a20b4-104">Example</span></span>  
+ <span data-ttu-id="a20b4-105">W przykładzie są znajdowane `Test` element, który ma `CommandLine` elementu podrzędnego z wartością "Examp2.EXE".</span><span class="sxs-lookup"><span data-stu-id="a20b4-105">The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".</span></span>  
   
- <span data-ttu-id="5a2f0-106">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Konfiguracja testowa (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5a2f0-106">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="a20b4-106">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Konfiguracja testowa (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a20b4-106">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -28,19 +28,19 @@ For Each el as XElement In tests
 Next  
 ```  
   
- <span data-ttu-id="5a2f0-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="5a2f0-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="a20b4-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="a20b4-107">This code produces the following output:</span></span>  
   
 ```  
 0002  
 0006  
 ```  
   
- <span data-ttu-id="5a2f0-108">Należy zauważyć, że w tym przykładzie użyto [właściwości osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)i [właściwość wartości XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span><span class="sxs-lookup"><span data-stu-id="5a2f0-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
+ <span data-ttu-id="a20b4-108">Należy zauważyć, że w tym przykładzie użyto [właściwości osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)i [właściwość wartości XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span><span class="sxs-lookup"><span data-stu-id="a20b4-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5a2f0-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="5a2f0-109">Example</span></span>  
- <span data-ttu-id="5a2f0-110">Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="5a2f0-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="5a2f0-111">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="5a2f0-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="a20b4-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="a20b4-109">Example</span></span>  
+ <span data-ttu-id="a20b4-110">Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="a20b4-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="a20b4-111">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="a20b4-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="5a2f0-112">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Konfiguracja testowa w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="5a2f0-112">This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="a20b4-112">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Konfiguracja testowa w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="a20b4-112">This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -59,17 +59,17 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="5a2f0-113">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="5a2f0-113">This code produces the following output:</span></span>  
+ <span data-ttu-id="a20b4-113">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="a20b4-113">This code produces the following output:</span></span>  
   
 ```  
 0002  
 0006  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5a2f0-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5a2f0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a20b4-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a20b4-114">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [<span data-ttu-id="5a2f0-115">Podstawowe zapytania (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a2f0-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [<span data-ttu-id="5a2f0-116">Omówienie operatorów standardowej kwerendy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a2f0-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="5a2f0-117">Operacje rzutowania (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a2f0-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="a20b4-115">Podstawowe zapytania (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a20b4-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="a20b4-116">Omówienie operatorów standardowej kwerendy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a20b4-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="a20b4-117">Operacje rzutowania (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a20b4-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

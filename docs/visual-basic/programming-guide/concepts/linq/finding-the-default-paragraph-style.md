@@ -3,25 +3,25 @@ title: Znajdowanie domyślnego stylu akapitu (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
 ms.openlocfilehash: 0694c9144e44e4a5de262f97581eb18943937243
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931316"
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a><span data-ttu-id="c8d56-102">Znajdowanie domyślnego stylu akapitu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8d56-102">Finding the Default Paragraph Style (Visual Basic)</span></span>
-<span data-ttu-id="c8d56-103">Pierwsze zadanie w manipulowanie informacje przedstawione w samouczku dokumentu WordprocessingML jest znajdowanie domyślnego stylu akapitów w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="c8d56-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
+# <a name="finding-the-default-paragraph-style-visual-basic"></a><span data-ttu-id="709a3-102">Znajdowanie domyślnego stylu akapitu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="709a3-102">Finding the Default Paragraph Style (Visual Basic)</span></span>
+<span data-ttu-id="709a3-103">Pierwsze zadanie w manipulowanie informacje przedstawione w samouczku dokumentu WordprocessingML jest znajdowanie domyślnego stylu akapitów w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="709a3-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8d56-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="c8d56-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="709a3-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="709a3-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="c8d56-105">Opis</span><span class="sxs-lookup"><span data-stu-id="c8d56-105">Description</span></span>  
- <span data-ttu-id="c8d56-106">Poniższy przykład spowoduje otwarcie dokumentu Office Open XML WordprocessingML, znajduje dokument i styl części pakietu, a następnie wykonuje zapytanie, które znajdzie domyślną nazwę stylu.</span><span class="sxs-lookup"><span data-stu-id="c8d56-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="c8d56-107">Dla informacji na temat pakietów dokumentu Office Open XML i części składają się one z [szczegóły dla dokumentów pakietu Office Open XML WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span><span class="sxs-lookup"><span data-stu-id="c8d56-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
+### <a name="description"></a><span data-ttu-id="709a3-105">Opis</span><span class="sxs-lookup"><span data-stu-id="709a3-105">Description</span></span>  
+ <span data-ttu-id="709a3-106">Poniższy przykład spowoduje otwarcie dokumentu Office Open XML WordprocessingML, znajduje dokument i styl części pakietu, a następnie wykonuje zapytanie, które znajdzie domyślną nazwę stylu.</span><span class="sxs-lookup"><span data-stu-id="709a3-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="709a3-107">Dla informacji na temat pakietów dokumentu Office Open XML i części składają się one z [szczegóły dla dokumentów pakietu Office Open XML WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span><span class="sxs-lookup"><span data-stu-id="709a3-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
   
- <span data-ttu-id="c8d56-108">Zapytanie znajdzie węzła o nazwie `w:style` zawierającego atrybut o nazwie `w:type` z wartością "akapitu", a także ma atrybut o nazwie `w:default` z wartością "1".</span><span class="sxs-lookup"><span data-stu-id="c8d56-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="c8d56-109">Ponieważ będzie istniało tylko jeden węzeł XML za pomocą tych atrybutów, zapytanie używa <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operatora do przekonwertowania kolekcji na wzorzec singleton.</span><span class="sxs-lookup"><span data-stu-id="c8d56-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="c8d56-110">Następnie pobiera wartość atrybutu o nazwie `w:styleId`.</span><span class="sxs-lookup"><span data-stu-id="c8d56-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
+ <span data-ttu-id="709a3-108">Zapytanie znajdzie węzła o nazwie `w:style` zawierającego atrybut o nazwie `w:type` z wartością "akapitu", a także ma atrybut o nazwie `w:default` z wartością "1".</span><span class="sxs-lookup"><span data-stu-id="709a3-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="709a3-109">Ponieważ będzie istniało tylko jeden węzeł XML za pomocą tych atrybutów, zapytanie używa <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operatora do przekonwertowania kolekcji na wzorzec singleton.</span><span class="sxs-lookup"><span data-stu-id="709a3-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="709a3-110">Następnie pobiera wartość atrybutu o nazwie `w:styleId`.</span><span class="sxs-lookup"><span data-stu-id="709a3-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
   
- <span data-ttu-id="c8d56-111">W tym przykładzie użyto klasy z zestawu WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="c8d56-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="c8d56-112">Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="c8d56-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="709a3-111">W tym przykładzie użyto klasy z zestawu WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="709a3-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="709a3-112">Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="709a3-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="c8d56-113">Kod</span><span class="sxs-lookup"><span data-stu-id="c8d56-113">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="709a3-113">Kod</span><span class="sxs-lookup"><span data-stu-id="709a3-113">Code</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -79,18 +79,18 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="c8d56-114">Komentarze</span><span class="sxs-lookup"><span data-stu-id="c8d56-114">Comments</span></span>  
- <span data-ttu-id="c8d56-115">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="c8d56-115">This example produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="709a3-114">Komentarze</span><span class="sxs-lookup"><span data-stu-id="709a3-114">Comments</span></span>  
+ <span data-ttu-id="709a3-115">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="709a3-115">This example produces the following output:</span></span>  
   
 ```  
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="c8d56-116">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="c8d56-116">Next Steps</span></span>  
- <span data-ttu-id="c8d56-117">W następnym przykładzie utworzysz podobne zapytanie, które umożliwia znalezienie wszystkich akapitów w dokumencie i ich stylów:</span><span class="sxs-lookup"><span data-stu-id="c8d56-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="709a3-116">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="709a3-116">Next Steps</span></span>  
+ <span data-ttu-id="709a3-117">W następnym przykładzie utworzysz podobne zapytanie, które umożliwia znalezienie wszystkich akapitów w dokumencie i ich stylów:</span><span class="sxs-lookup"><span data-stu-id="709a3-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
   
--   [<span data-ttu-id="c8d56-118">Pobieranie akapitów i ich stylów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8d56-118">Retrieving the Paragraphs and Their Styles (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [<span data-ttu-id="709a3-118">Pobieranie akapitów i ich stylów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="709a3-118">Retrieving the Paragraphs and Their Styles (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c8d56-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c8d56-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="709a3-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="709a3-119">See also</span></span>
 
-- [<span data-ttu-id="c8d56-120">Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8d56-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="709a3-120">Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="709a3-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

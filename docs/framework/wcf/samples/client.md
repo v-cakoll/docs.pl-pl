@@ -3,33 +3,33 @@ title: Klient
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
 ms.openlocfilehash: e3a4852ba467f9c334157555ed9c2ffc2ff33f0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943965"
 ---
-# <a name="client"></a><span data-ttu-id="6b62c-102">Klient</span><span class="sxs-lookup"><span data-stu-id="6b62c-102">Client</span></span>
-<span data-ttu-id="6b62c-103">Ta sekcja zawiera przykłady pokazujące, aplikacje klienckie usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="6b62c-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  
+# <a name="client"></a><span data-ttu-id="8bc12-102">Klient</span><span class="sxs-lookup"><span data-stu-id="8bc12-102">Client</span></span>
+<span data-ttu-id="8bc12-103">Ta sekcja zawiera przykłady pokazujące, aplikacje klienckie usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="8bc12-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6b62c-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="6b62c-104">In This Section</span></span>  
- [<span data-ttu-id="6b62c-105">Współdziałanie klienta</span><span class="sxs-lookup"><span data-stu-id="6b62c-105">Client Interoperability</span></span>](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- <span data-ttu-id="6b62c-106">Pokazuje współdziałania między usług WCF i innych technologii.</span><span class="sxs-lookup"><span data-stu-id="6b62c-106">Demonstrates interoperability between WCF and other technologies.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8bc12-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="8bc12-104">In This Section</span></span>  
+ [<span data-ttu-id="8bc12-105">Współdziałanie klienta</span><span class="sxs-lookup"><span data-stu-id="8bc12-105">Client Interoperability</span></span>](../../../../docs/framework/wcf/samples/client-interoperability.md)  
+ <span data-ttu-id="8bc12-106">Pokazuje współdziałania między usług WCF i innych technologii.</span><span class="sxs-lookup"><span data-stu-id="8bc12-106">Demonstrates interoperability between WCF and other technologies.</span></span>  
   
- [<span data-ttu-id="6b62c-107">Nagłówki adresów</span><span class="sxs-lookup"><span data-stu-id="6b62c-107">Address Headers</span></span>](../../../../docs/framework/wcf/samples/address-headers.md)  
- <span data-ttu-id="6b62c-108">Pokazuje, jak klienci parametry można przekazać odwołanie do usługi przy użyciu usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="6b62c-108">Demonstrates how clients can pass reference parameters to a service using WCF.</span></span>  
+ [<span data-ttu-id="8bc12-107">Nagłówki adresów</span><span class="sxs-lookup"><span data-stu-id="8bc12-107">Address Headers</span></span>](../../../../docs/framework/wcf/samples/address-headers.md)  
+ <span data-ttu-id="8bc12-108">Pokazuje, jak klienci parametry można przekazać odwołanie do usługi przy użyciu usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="8bc12-108">Demonstrates how clients can pass reference parameters to a service using WCF.</span></span>  
   
- [<span data-ttu-id="6b62c-109">Fabryka kanałów</span><span class="sxs-lookup"><span data-stu-id="6b62c-109">Channel Factory</span></span>](../../../../docs/framework/wcf/samples/channel-factory.md)  
- <span data-ttu-id="6b62c-110">Pokazuje, jak utworzyć aplikację kliencką kanału o <xref:System.ServiceModel.ChannelFactory> klasy zamiast wygenerowanego klienta.</span><span class="sxs-lookup"><span data-stu-id="6b62c-110">Demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span>  
+ [<span data-ttu-id="8bc12-109">Fabryka kanałów</span><span class="sxs-lookup"><span data-stu-id="8bc12-109">Channel Factory</span></span>](../../../../docs/framework/wcf/samples/channel-factory.md)  
+ <span data-ttu-id="8bc12-110">Pokazuje, jak utworzyć aplikację kliencką kanału o <xref:System.ServiceModel.ChannelFactory> klasy zamiast wygenerowanego klienta.</span><span class="sxs-lookup"><span data-stu-id="8bc12-110">Demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span>  
   
- [<span data-ttu-id="6b62c-111">Oczekiwane wyjątki</span><span class="sxs-lookup"><span data-stu-id="6b62c-111">Expected Exceptions</span></span>](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
- <span data-ttu-id="6b62c-112">Pokazuje, jak przechwytywać wyjątki oczekiwane, korzystając z klient z typowaniem.</span><span class="sxs-lookup"><span data-stu-id="6b62c-112">Demonstrates how to catch expected exceptions when using a typed client.</span></span>  
+ [<span data-ttu-id="8bc12-111">Oczekiwane wyjątki</span><span class="sxs-lookup"><span data-stu-id="8bc12-111">Expected Exceptions</span></span>](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ <span data-ttu-id="8bc12-112">Pokazuje, jak przechwytywać wyjątki oczekiwane, korzystając z klient z typowaniem.</span><span class="sxs-lookup"><span data-stu-id="8bc12-112">Demonstrates how to catch expected exceptions when using a typed client.</span></span>  
   
- [<span data-ttu-id="6b62c-113">Pobieranie metadanych</span><span class="sxs-lookup"><span data-stu-id="6b62c-113">Retrieve Metadata</span></span>](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
- <span data-ttu-id="6b62c-114">Demonstruje sposób implementacji klienta, który dynamicznie pobiera metadane z usługi, aby wybrać punkt końcowy, za pomocą którego do komunikowania się.</span><span class="sxs-lookup"><span data-stu-id="6b62c-114">Demonstrates how to implement a client that dynamically retrieves metadata from a service to choose an endpoint with which to communicate.</span></span>  
+ [<span data-ttu-id="8bc12-113">Pobieranie metadanych</span><span class="sxs-lookup"><span data-stu-id="8bc12-113">Retrieve Metadata</span></span>](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ <span data-ttu-id="8bc12-114">Demonstruje sposób implementacji klienta, który dynamicznie pobiera metadane z usługi, aby wybrać punkt końcowy, za pomocą którego do komunikowania się.</span><span class="sxs-lookup"><span data-stu-id="8bc12-114">Demonstrates how to implement a client that dynamically retrieves metadata from a service to choose an endpoint with which to communicate.</span></span>  
   
- [<span data-ttu-id="6b62c-115">Użyj Zamknij i Przerwij, aby zwolnić zasoby klienta WCF</span><span class="sxs-lookup"><span data-stu-id="6b62c-115">Use Close and Abort to release WCF client resources</span></span>](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)  
- <span data-ttu-id="6b62c-116">Pokazuje, jak nie należy używać C# "" instrukcję using do automatycznego czyszczenia zasobów, korzystając z klient z typowaniem.</span><span class="sxs-lookup"><span data-stu-id="6b62c-116">Demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span>  
+ [<span data-ttu-id="8bc12-115">Użyj Zamknij i Przerwij, aby zwolnić zasoby klienta WCF</span><span class="sxs-lookup"><span data-stu-id="8bc12-115">Use Close and Abort to release WCF client resources</span></span>](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)  
+ <span data-ttu-id="8bc12-116">Pokazuje, jak nie należy używać C# "" instrukcję using do automatycznego czyszczenia zasobów, korzystając z klient z typowaniem.</span><span class="sxs-lookup"><span data-stu-id="8bc12-116">Demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span>  
   
- [<span data-ttu-id="6b62c-117">Klient z typowaniem</span><span class="sxs-lookup"><span data-stu-id="6b62c-117">Typed Client</span></span>](../../../../docs/framework/wcf/samples/typed-client.md)  
- <span data-ttu-id="6b62c-118">Pokazuje, jak można uzyskać informacji z klient z typowaniem generowane przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="6b62c-118">Demonstrates how to obtain information from a typed client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>
+ [<span data-ttu-id="8bc12-117">Klient z typowaniem</span><span class="sxs-lookup"><span data-stu-id="8bc12-117">Typed Client</span></span>](../../../../docs/framework/wcf/samples/typed-client.md)  
+ <span data-ttu-id="8bc12-118">Pokazuje, jak można uzyskać informacji z klient z typowaniem generowane przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="8bc12-118">Demonstrates how to obtain information from a typed client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>

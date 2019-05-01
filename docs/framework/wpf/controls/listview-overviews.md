@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
 ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932581"
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="1ffa1-102">ListViewprzeglądy</span><span class="sxs-lookup"><span data-stu-id="1ffa1-102">ListView Overviews</span></span>
-<span data-ttu-id="1ffa1-103">Tematy w tej sekcji pokazano, jak używać <xref:System.Windows.Controls.ListView> kontroli.</span><span class="sxs-lookup"><span data-stu-id="1ffa1-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="6ffa7-102">ListViewprzeglądy</span><span class="sxs-lookup"><span data-stu-id="6ffa7-102">ListView Overviews</span></span>
+<span data-ttu-id="6ffa7-103">Tematy w tej sekcji pokazano, jak używać <xref:System.Windows.Controls.ListView> kontroli.</span><span class="sxs-lookup"><span data-stu-id="6ffa7-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1ffa1-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="1ffa1-104">In This Section</span></span>  
- [<span data-ttu-id="1ffa1-105">ListView — omówienie</span><span class="sxs-lookup"><span data-stu-id="1ffa1-105">ListView Overview</span></span>](listview-overview.md)  
- [<span data-ttu-id="1ffa1-106">GridView — omówienie</span><span class="sxs-lookup"><span data-stu-id="1ffa1-106">GridView Overview</span></span>](gridview-overview.md)  
- [<span data-ttu-id="1ffa1-107">GridView — style i szablony nagłówków kolumn — omówienie</span><span class="sxs-lookup"><span data-stu-id="1ffa1-107">GridView Column Header Styles and Templates Overview</span></span>](gridview-column-header-styles-and-templates-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6ffa7-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="6ffa7-104">In This Section</span></span>  
+ [<span data-ttu-id="6ffa7-105">ListView — omówienie</span><span class="sxs-lookup"><span data-stu-id="6ffa7-105">ListView Overview</span></span>](listview-overview.md)  
+ [<span data-ttu-id="6ffa7-106">GridView — omówienie</span><span class="sxs-lookup"><span data-stu-id="6ffa7-106">GridView Overview</span></span>](gridview-overview.md)  
+ [<span data-ttu-id="6ffa7-107">GridView — style i szablony nagłówków kolumn — omówienie</span><span class="sxs-lookup"><span data-stu-id="6ffa7-107">GridView Column Header Styles and Templates Overview</span></span>](gridview-column-header-styles-and-templates-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="1ffa1-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="1ffa1-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6ffa7-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="6ffa7-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="1ffa1-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="1ffa1-109">Related Sections</span></span>  
- [<span data-ttu-id="1ffa1-110">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="1ffa1-110">How-to Topics</span></span>](listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="6ffa7-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="6ffa7-109">Related Sections</span></span>  
+ [<span data-ttu-id="6ffa7-110">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="6ffa7-110">How-to Topics</span></span>](listview-how-to-topics.md)

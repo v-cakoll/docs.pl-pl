@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59bfc6785d3ad195e219afc323b7fdb513d8fefc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949061"
 ---
-# <a name="setassemblyfile2-method"></a><span data-ttu-id="49ee4-102">SetAssemblyFile2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="49ee4-102">SetAssemblyFile2 Method</span></span>
-<span data-ttu-id="49ee4-103">Określa nazwę i opcje dla nowego zestawu.</span><span class="sxs-lookup"><span data-stu-id="49ee4-103">Sets the name of and options for a new assembly.</span></span> <span data-ttu-id="49ee4-104">Ta metoda zostanie wywołana podczas tworzenia modułów niepowiązanych.</span><span class="sxs-lookup"><span data-stu-id="49ee4-104">Do not call this method when you produce unbound modules.</span></span>  
+# <a name="setassemblyfile2-method"></a><span data-ttu-id="61da9-102">SetAssemblyFile2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="61da9-102">SetAssemblyFile2 Method</span></span>
+<span data-ttu-id="61da9-103">Określa nazwę i opcje dla nowego zestawu.</span><span class="sxs-lookup"><span data-stu-id="61da9-103">Sets the name of and options for a new assembly.</span></span> <span data-ttu-id="61da9-104">Ta metoda zostanie wywołana podczas tworzenia modułów niepowiązanych.</span><span class="sxs-lookup"><span data-stu-id="61da9-104">Do not call this method when you produce unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49ee4-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="49ee4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61da9-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="61da9-105">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyFile2(  
@@ -37,27 +37,27 @@ HRESULT SetAssemblyFile2(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49ee4-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="49ee4-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61da9-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="61da9-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="49ee4-107">Nazwa pliku manifestu.</span><span class="sxs-lookup"><span data-stu-id="49ee4-107">Name of manifest file.</span></span>  
+ <span data-ttu-id="61da9-107">Nazwa pliku manifestu.</span><span class="sxs-lookup"><span data-stu-id="61da9-107">Name of manifest file.</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="49ee4-108">[Imetadataemit2 — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfejsu dla tego pliku.</span><span class="sxs-lookup"><span data-stu-id="49ee4-108">[IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface for this file.</span></span>  
+ <span data-ttu-id="61da9-108">[Imetadataemit2 — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfejsu dla tego pliku.</span><span class="sxs-lookup"><span data-stu-id="61da9-108">[IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface for this file.</span></span>  
   
  `afFlags`  
- <span data-ttu-id="49ee4-109">Opcje reprezentowany przez [assemblyflags — wyliczenie](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="49ee4-109">Options represented by [AssemblyFlags Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span></span>  
+ <span data-ttu-id="61da9-109">Opcje reprezentowany przez [assemblyflags — wyliczenie](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="61da9-109">Options represented by [AssemblyFlags Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span></span>  
   
  `pAssemblyID`  
- <span data-ttu-id="49ee4-110">Otrzymuje unikatowy identyfikator dla zestawu podczas konstruowania.</span><span class="sxs-lookup"><span data-stu-id="49ee4-110">Receives unique ID for the assembly being constructed.</span></span>  
+ <span data-ttu-id="61da9-110">Otrzymuje unikatowy identyfikator dla zestawu podczas konstruowania.</span><span class="sxs-lookup"><span data-stu-id="61da9-110">Receives unique ID for the assembly being constructed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="49ee4-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="49ee4-111">Return Value</span></span>  
- <span data-ttu-id="49ee4-112">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="49ee4-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="61da9-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="61da9-111">Return Value</span></span>  
+ <span data-ttu-id="61da9-112">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="61da9-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49ee4-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="49ee4-113">Requirements</span></span>  
- <span data-ttu-id="49ee4-114">Wymaga alink.h.</span><span class="sxs-lookup"><span data-stu-id="49ee4-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61da9-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="61da9-113">Requirements</span></span>  
+ <span data-ttu-id="61da9-114">Wymaga alink.h.</span><span class="sxs-lookup"><span data-stu-id="61da9-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49ee4-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="49ee4-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61da9-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="61da9-115">See also</span></span>
 
-- [<span data-ttu-id="49ee4-116">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="49ee4-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="49ee4-117">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="49ee4-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="49ee4-118">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="49ee4-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="61da9-116">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="61da9-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="61da9-117">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="61da9-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="61da9-118">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="61da9-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

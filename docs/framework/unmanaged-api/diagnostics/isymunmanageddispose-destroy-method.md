@@ -18,27 +18,27 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 51d2f0aedffdd88974a8184954ecbb9a231b70c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939948"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="45653-102">ISymUnmanagedDispose::Destroy — Metoda</span><span class="sxs-lookup"><span data-stu-id="45653-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="45653-103">Powoduje, że obiekt jest zwolnienie wszystkich odwołań wewnętrznego i zwraca błąd na dowolne wywołania metody kolejne.</span><span class="sxs-lookup"><span data-stu-id="45653-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="9f377-102">ISymUnmanagedDispose::Destroy — Metoda</span><span class="sxs-lookup"><span data-stu-id="9f377-102">ISymUnmanagedDispose::Destroy Method</span></span>
+<span data-ttu-id="9f377-103">Powoduje, że obiekt jest zwolnienie wszystkich odwołań wewnętrznego i zwraca błąd na dowolne wywołania metody kolejne.</span><span class="sxs-lookup"><span data-stu-id="9f377-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45653-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="45653-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f377-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9f377-104">Syntax</span></span>  
   
 ```  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="45653-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="45653-105">Return Value</span></span>  
- <span data-ttu-id="45653-106">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="45653-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9f377-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="9f377-105">Return Value</span></span>  
+ <span data-ttu-id="9f377-106">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="9f377-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="45653-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="45653-107">Requirements</span></span>  
- <span data-ttu-id="45653-108">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="45653-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f377-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9f377-107">Requirements</span></span>  
+ <span data-ttu-id="9f377-108">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9f377-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45653-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="45653-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f377-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9f377-109">See also</span></span>
 
-- [<span data-ttu-id="45653-110">ISymUnmanagedDispose, interfejs</span><span class="sxs-lookup"><span data-stu-id="45653-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+- [<span data-ttu-id="9f377-110">ISymUnmanagedDispose, interfejs</span><span class="sxs-lookup"><span data-stu-id="9f377-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

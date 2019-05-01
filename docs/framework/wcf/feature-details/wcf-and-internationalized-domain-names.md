@@ -3,19 +3,19 @@ title: Architektura WCF i międzynarodowe nazwy domen
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
 ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932525"
 ---
-# <a name="wcf-and-internationalized-domain-names"></a><span data-ttu-id="0927d-102">Architektura WCF i międzynarodowe nazwy domen</span><span class="sxs-lookup"><span data-stu-id="0927d-102">WCF and Internationalized Domain Names</span></span>
-<span data-ttu-id="0927d-103">Dodano obsługę do obsługi usług WCF za pomocą nazw międzynarodowych domen (IDN).</span><span class="sxs-lookup"><span data-stu-id="0927d-103">Support has been added to allow for WCF services with Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="0927d-104">Międzynarodowa nazwa domeny jest nazwa domeny, który zawiera znaki spoza zestawu ASCII.</span><span class="sxs-lookup"><span data-stu-id="0927d-104">An internationalized domain name is a domain name that contains non-ASCII characters.</span></span> <span data-ttu-id="0927d-105">Ta obsługa obejmuje możliwość hostowanie usługi WCF przy użyciu nazwy IDN i klienta programu WCF na komunikowanie się z usługą sieci web o nazwie IDN.</span><span class="sxs-lookup"><span data-stu-id="0927d-105">This support includes both the ability to host a WCF service with an IDN name and a WCF client to talk to a web service with an IDN name.</span></span>  
+# <a name="wcf-and-internationalized-domain-names"></a><span data-ttu-id="7e5d8-102">Architektura WCF i międzynarodowe nazwy domen</span><span class="sxs-lookup"><span data-stu-id="7e5d8-102">WCF and Internationalized Domain Names</span></span>
+<span data-ttu-id="7e5d8-103">Dodano obsługę do obsługi usług WCF za pomocą nazw międzynarodowych domen (IDN).</span><span class="sxs-lookup"><span data-stu-id="7e5d8-103">Support has been added to allow for WCF services with Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="7e5d8-104">Międzynarodowa nazwa domeny jest nazwa domeny, który zawiera znaki spoza zestawu ASCII.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-104">An internationalized domain name is a domain name that contains non-ASCII characters.</span></span> <span data-ttu-id="7e5d8-105">Ta obsługa obejmuje możliwość hostowanie usługi WCF przy użyciu nazwy IDN i klienta programu WCF na komunikowanie się z usługą sieci web o nazwie IDN.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-105">This support includes both the ability to host a WCF service with an IDN name and a WCF client to talk to a web service with an IDN name.</span></span>  
   
-## <a name="systemuri-and-idn"></a><span data-ttu-id="0927d-106">System.Uri i IDN</span><span class="sxs-lookup"><span data-stu-id="0927d-106">System.Uri and IDN</span></span>  
- <span data-ttu-id="0927d-107"><xref:System.Uri> ma dwie właściwości <xref:System.Uri.Host%2A> i <xref:System.Uri.DnsSafeHost%2A>.</span><span class="sxs-lookup"><span data-stu-id="0927d-107"><xref:System.Uri> has two properties <xref:System.Uri.Host%2A> and <xref:System.Uri.DnsSafeHost%2A>.</span></span> <span data-ttu-id="0927d-108">Te właściwości zawierają wartości Unicode lub Punycode, w zależności od ustawień konfiguracji IDN.</span><span class="sxs-lookup"><span data-stu-id="0927d-108">These properties contain Unicode or Punycode values depending upon the IDN configuration settings.</span></span>  
+## <a name="systemuri-and-idn"></a><span data-ttu-id="7e5d8-106">System.Uri i IDN</span><span class="sxs-lookup"><span data-stu-id="7e5d8-106">System.Uri and IDN</span></span>  
+ <span data-ttu-id="7e5d8-107"><xref:System.Uri> ma dwie właściwości <xref:System.Uri.Host%2A> i <xref:System.Uri.DnsSafeHost%2A>.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-107"><xref:System.Uri> has two properties <xref:System.Uri.Host%2A> and <xref:System.Uri.DnsSafeHost%2A>.</span></span> <span data-ttu-id="7e5d8-108">Te właściwości zawierają wartości Unicode lub Punycode, w zależności od ustawień konfiguracji IDN.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-108">These properties contain Unicode or Punycode values depending upon the IDN configuration settings.</span></span>  
   
- <span data-ttu-id="0927d-109">IDN jest włączone w pliku konfiguracji aplikacji przy użyciu następujący kod XML</span><span class="sxs-lookup"><span data-stu-id="0927d-109">IDN is enabled in an application’s configuration file using the following XML</span></span>  
+ <span data-ttu-id="7e5d8-109">IDN jest włączone w pliku konfiguracji aplikacji przy użyciu następujący kod XML</span><span class="sxs-lookup"><span data-stu-id="7e5d8-109">IDN is enabled in an application’s configuration file using the following XML</span></span>  
   
 ```xml  
 <configuration>  
@@ -25,22 +25,22 @@ ms.locfileid: "59335384"
 </configuration>  
 ```  
   
- <span data-ttu-id="0927d-110">\<Idn > element zawiera atrybut włączony, którą można ustawić na jeden z następujących wartości:</span><span class="sxs-lookup"><span data-stu-id="0927d-110">The \<idn> element contains the enabled attribute which can be set to one of the following values:</span></span>  
+ <span data-ttu-id="7e5d8-110">\<Idn > element zawiera atrybut włączony, którą można ustawić na jeden z następujących wartości:</span><span class="sxs-lookup"><span data-stu-id="7e5d8-110">The \<idn> element contains the enabled attribute which can be set to one of the following values:</span></span>  
   
-1. <span data-ttu-id="0927d-111">"None"</span><span class="sxs-lookup"><span data-stu-id="0927d-111">"None"</span></span>  
+1. <span data-ttu-id="7e5d8-111">"None"</span><span class="sxs-lookup"><span data-stu-id="7e5d8-111">"None"</span></span>  
   
-2. <span data-ttu-id="0927d-112">"AllExceptIntranet"</span><span class="sxs-lookup"><span data-stu-id="0927d-112">"AllExceptIntranet"</span></span>  
+2. <span data-ttu-id="7e5d8-112">"AllExceptIntranet"</span><span class="sxs-lookup"><span data-stu-id="7e5d8-112">"AllExceptIntranet"</span></span>  
   
-3. <span data-ttu-id="0927d-113">"Wszystkie"</span><span class="sxs-lookup"><span data-stu-id="0927d-113">"All"</span></span>  
+3. <span data-ttu-id="7e5d8-113">"Wszystkie"</span><span class="sxs-lookup"><span data-stu-id="7e5d8-113">"All"</span></span>  
   
- <span data-ttu-id="0927d-114">Gdy ustawienie IDN ma wartość "None", nie konwersje są wykonywane przez Uri.Host lub Uri.DnsSafeHost.</span><span class="sxs-lookup"><span data-stu-id="0927d-114">When the IDN setting is set to "None", no conversions are performed by Uri.Host or Uri.DnsSafeHost.</span></span> <span data-ttu-id="0927d-115">Jeśli ustawienie IDN jest równa "All", identyfikator uri. Host pozostaje Unicode i identyfikatora uri. DnsSafeHost jest konwertowana na ciąg Punycode.</span><span class="sxs-lookup"><span data-stu-id="0927d-115">When the IDN setting is set to "All", uri.Host remains Unicode and uri.DnsSafeHost is converted to Punycode.</span></span> <span data-ttu-id="0927d-116">Jeśli ustawienie IDN, jest równa "AllExceptIntranet", identyfikator uri. DnsSafeHost jest konwertowana na ciąg Punycode w przypadku adresów internetowych i pozostaje Unicode dla adresów w sieci intranet.</span><span class="sxs-lookup"><span data-stu-id="0927d-116">When the IDN setting is set to "AllExceptIntranet", uri.DnsSafeHost is converted to Punycode for internet addresses, and remains Unicode for intranet addresses.</span></span> <span data-ttu-id="0927d-117">To ustawienie jest ważne dla poprawnego rozpoznawania nazw DNS.</span><span class="sxs-lookup"><span data-stu-id="0927d-117">This setting is important for correct DNS name resolution.</span></span> <span data-ttu-id="0927d-118">Należy pamiętać, że to ustawienie nie jest wymagane do skonfigurowania dla systemu Windows 8 i nowszych wersji.</span><span class="sxs-lookup"><span data-stu-id="0927d-118">Note this setting is not required to be configured for Windows 8 and newer versions.</span></span>  
-  
-> [!WARNING]
->  <span data-ttu-id="0927d-119">Powinno nigdy trwale kodować adresu przy użyciu Punycode.</span><span class="sxs-lookup"><span data-stu-id="0927d-119">You should never hard-code an address using Punycode.</span></span> <span data-ttu-id="0927d-120">Usługi WCF przekonwertuje go na podstawie ustawień konfiguracji, które należy zastosować.</span><span class="sxs-lookup"><span data-stu-id="0927d-120">WCF will convert it for you based on the configuration settings you apply.</span></span>  
+ <span data-ttu-id="7e5d8-114">Gdy ustawienie IDN ma wartość "None", nie konwersje są wykonywane przez Uri.Host lub Uri.DnsSafeHost.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-114">When the IDN setting is set to "None", no conversions are performed by Uri.Host or Uri.DnsSafeHost.</span></span> <span data-ttu-id="7e5d8-115">Jeśli ustawienie IDN jest równa "All", identyfikator uri. Host pozostaje Unicode i identyfikatora uri. DnsSafeHost jest konwertowana na ciąg Punycode.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-115">When the IDN setting is set to "All", uri.Host remains Unicode and uri.DnsSafeHost is converted to Punycode.</span></span> <span data-ttu-id="7e5d8-116">Jeśli ustawienie IDN, jest równa "AllExceptIntranet", identyfikator uri. DnsSafeHost jest konwertowana na ciąg Punycode w przypadku adresów internetowych i pozostaje Unicode dla adresów w sieci intranet.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-116">When the IDN setting is set to "AllExceptIntranet", uri.DnsSafeHost is converted to Punycode for internet addresses, and remains Unicode for intranet addresses.</span></span> <span data-ttu-id="7e5d8-117">To ustawienie jest ważne dla poprawnego rozpoznawania nazw DNS.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-117">This setting is important for correct DNS name resolution.</span></span> <span data-ttu-id="7e5d8-118">Należy pamiętać, że to ustawienie nie jest wymagane do skonfigurowania dla systemu Windows 8 i nowszych wersji.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-118">Note this setting is not required to be configured for Windows 8 and newer versions.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="0927d-121">Podczas dodawania znaków Unicode do applicationHost.exe.config, Zapisz plik przy użyciu kodowania UTF-8.</span><span class="sxs-lookup"><span data-stu-id="0927d-121">When adding Unicode characters to applicationHost.exe.config, save the file using the UTF-8 encoding.</span></span>  
+>  <span data-ttu-id="7e5d8-119">Powinno nigdy trwale kodować adresu przy użyciu Punycode.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-119">You should never hard-code an address using Punycode.</span></span> <span data-ttu-id="7e5d8-120">Usługi WCF przekonwertuje go na podstawie ustawień konfiguracji, które należy zastosować.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-120">WCF will convert it for you based on the configuration settings you apply.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0927d-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0927d-122">See also</span></span>
+> [!WARNING]
+>  <span data-ttu-id="7e5d8-121">Podczas dodawania znaków Unicode do applicationHost.exe.config, Zapisz plik przy użyciu kodowania UTF-8.</span><span class="sxs-lookup"><span data-stu-id="7e5d8-121">When adding Unicode characters to applicationHost.exe.config, save the file using the UTF-8 encoding.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="7e5d8-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7e5d8-122">See also</span></span>
 
 - <xref:System.Uri?displayProperty=nameWithType>

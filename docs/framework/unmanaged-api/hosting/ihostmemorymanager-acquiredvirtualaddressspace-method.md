@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4675c34bfe8d1d79c184c43e5f7f5dd3a03be6a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935671"
 ---
-# <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a><span data-ttu-id="b99f5-102">IHostMemoryManager::AcquiredVirtualAddressSpace — Metoda</span><span class="sxs-lookup"><span data-stu-id="b99f5-102">IHostMemoryManager::AcquiredVirtualAddressSpace Method</span></span>
-<span data-ttu-id="b99f5-103">Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) uzyskała określonego pamięci systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="b99f5-103">Notifies the host that the common language runtime (CLR) has acquired the specified memory from the operating system.</span></span>  
+# <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a><span data-ttu-id="66efb-102">IHostMemoryManager::AcquiredVirtualAddressSpace — Metoda</span><span class="sxs-lookup"><span data-stu-id="66efb-102">IHostMemoryManager::AcquiredVirtualAddressSpace Method</span></span>
+<span data-ttu-id="66efb-103">Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) uzyskała określonego pamięci systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="66efb-103">Notifies the host that the common language runtime (CLR) has acquired the specified memory from the operating system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b99f5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b99f5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66efb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="66efb-104">Syntax</span></span>  
   
 ```  
 HRESULT AcquiredVirtualAddressSpace(  
@@ -36,25 +36,25 @@ HRESULT AcquiredVirtualAddressSpace(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b99f5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b99f5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="66efb-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="66efb-105">Parameters</span></span>  
  `startAddress`  
- <span data-ttu-id="b99f5-106">[in] Początkowy adres pamięci.</span><span class="sxs-lookup"><span data-stu-id="b99f5-106">[in] The starting address of the memory.</span></span>  
+ <span data-ttu-id="66efb-106">[in] Początkowy adres pamięci.</span><span class="sxs-lookup"><span data-stu-id="66efb-106">[in] The starting address of the memory.</span></span>  
   
  `size`  
- <span data-ttu-id="b99f5-107">[in] Rozmiar w bajtach pamięci.</span><span class="sxs-lookup"><span data-stu-id="b99f5-107">[in] The size, in bytes, of the memory.</span></span>  
+ <span data-ttu-id="66efb-107">[in] Rozmiar w bajtach pamięci.</span><span class="sxs-lookup"><span data-stu-id="66efb-107">[in] The size, in bytes, of the memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b99f5-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b99f5-108">Remarks</span></span>  
- <span data-ttu-id="b99f5-109">`AcquiredVirtualAddressSpace` Metoda jest metodą wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji macierzystej.</span><span class="sxs-lookup"><span data-stu-id="b99f5-109">The `AcquiredVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="b99f5-110">Jest ona wywoływana przez środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="b99f5-110">It is called by the CLR.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66efb-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="66efb-108">Remarks</span></span>  
+ <span data-ttu-id="66efb-109">`AcquiredVirtualAddressSpace` Metoda jest metodą wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji macierzystej.</span><span class="sxs-lookup"><span data-stu-id="66efb-109">The `AcquiredVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="66efb-110">Jest ona wywoływana przez środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="66efb-110">It is called by the CLR.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b99f5-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b99f5-111">Requirements</span></span>  
- <span data-ttu-id="b99f5-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b99f5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66efb-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="66efb-111">Requirements</span></span>  
+ <span data-ttu-id="66efb-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66efb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b99f5-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b99f5-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="66efb-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="66efb-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b99f5-114">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b99f5-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="66efb-114">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="66efb-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b99f5-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b99f5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="66efb-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66efb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b99f5-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b99f5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66efb-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="66efb-116">See also</span></span>
 
-- [<span data-ttu-id="b99f5-117">IHostMemoryManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="b99f5-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="66efb-117">IHostMemoryManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="66efb-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

@@ -1,1 +1,9 @@
-<span data-ttu-id="78c7f-101">Identyfikator URI</span><span class="sxs-lookup"><span data-stu-id="78c7f-101">URI</span></span>
+---
+ms.openlocfilehash: cb371c93c5aa0e62198efd303ae2c17474416d1a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696854"
+---
+<span data-ttu-id="aa68e-101">Identyfikator URI</span><span class="sxs-lookup"><span data-stu-id="aa68e-101">URI</span></span>

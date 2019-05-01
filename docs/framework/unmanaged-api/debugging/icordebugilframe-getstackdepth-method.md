@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 670c6af66802c8badc5dba9d414427a13a1b815c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988627"
 ---
-# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="321d7-102">ICorDebugILFrame::GetStackDepth — Metoda</span><span class="sxs-lookup"><span data-stu-id="321d7-102">ICorDebugILFrame::GetStackDepth Method</span></span>
-<span data-ttu-id="321d7-103">Ta metoda nie została zaimplementowana.</span><span class="sxs-lookup"><span data-stu-id="321d7-103">This method has not been implemented.</span></span>  
+# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="b88bd-102">ICorDebugILFrame::GetStackDepth — Metoda</span><span class="sxs-lookup"><span data-stu-id="b88bd-102">ICorDebugILFrame::GetStackDepth Method</span></span>
+<span data-ttu-id="b88bd-103">Ta metoda nie została zaimplementowana.</span><span class="sxs-lookup"><span data-stu-id="b88bd-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="321d7-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="321d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b88bd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b88bd-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackDepth (  
@@ -35,5 +35,5 @@ HRESULT GetStackDepth (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="321d7-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="321d7-105">Requirements</span></span>  
- <span data-ttu-id="321d7-106">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="321d7-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="b88bd-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b88bd-105">Requirements</span></span>  
+ <span data-ttu-id="b88bd-106">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b88bd-106">**Header:** CorDebug.idl, CorDebug.h</span></span>

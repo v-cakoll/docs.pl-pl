@@ -3,25 +3,25 @@ title: System.String, metody
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
 ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876658"
 ---
-# <a name="systemstring-methods"></a><span data-ttu-id="7b154-102">System.String, metody</span><span class="sxs-lookup"><span data-stu-id="7b154-102">System.String Methods</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="7b154-103">nie obsługuje następujących <xref:System.String> metody.</span><span class="sxs-lookup"><span data-stu-id="7b154-103">does not support the following <xref:System.String> methods.</span></span>  
+# <a name="systemstring-methods"></a><span data-ttu-id="1ed67-102">System.String, metody</span><span class="sxs-lookup"><span data-stu-id="1ed67-102">System.String Methods</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="1ed67-103">nie obsługuje następujących <xref:System.String> metody.</span><span class="sxs-lookup"><span data-stu-id="1ed67-103">does not support the following <xref:System.String> methods.</span></span>  
   
-## <a name="unsupported-systemstring-methods-in-general"></a><span data-ttu-id="7b154-104">Ogólnie rzecz biorąc nieobsługiwany metody System.String</span><span class="sxs-lookup"><span data-stu-id="7b154-104">Unsupported System.String Methods in General</span></span>  
- <span data-ttu-id="7b154-105">Nieobsługiwana <xref:System.String> metody ogólne:</span><span class="sxs-lookup"><span data-stu-id="7b154-105">Unsupported <xref:System.String> methods in general:</span></span>  
+## <a name="unsupported-systemstring-methods-in-general"></a><span data-ttu-id="1ed67-104">Ogólnie rzecz biorąc nieobsługiwany metody System.String</span><span class="sxs-lookup"><span data-stu-id="1ed67-104">Unsupported System.String Methods in General</span></span>  
+ <span data-ttu-id="1ed67-105">Nieobsługiwana <xref:System.String> metody ogólne:</span><span class="sxs-lookup"><span data-stu-id="1ed67-105">Unsupported <xref:System.String> methods in general:</span></span>  
   
--   <span data-ttu-id="7b154-106">Przeciążenia kultury (metody, które przyjmują `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).</span><span class="sxs-lookup"><span data-stu-id="7b154-106">Culture-aware overloads (methods that take a `CultureInfo` / `StringComparison` / `IFormatProvider`).</span></span>  
+- <span data-ttu-id="1ed67-106">Przeciążenia kultury (metody, które przyjmują `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).</span><span class="sxs-lookup"><span data-stu-id="1ed67-106">Culture-aware overloads (methods that take a `CultureInfo` / `StringComparison` / `IFormatProvider`).</span></span>  
   
--   <span data-ttu-id="7b154-107">Metody, które dopiero po lub utworzyć `char` tablicy.</span><span class="sxs-lookup"><span data-stu-id="7b154-107">Methods that take or produce a `char` array.</span></span>  
+- <span data-ttu-id="1ed67-107">Metody, które dopiero po lub utworzyć `char` tablicy.</span><span class="sxs-lookup"><span data-stu-id="1ed67-107">Methods that take or produce a `char` array.</span></span>  
   
-## <a name="unsupported-systemstring-static-methods"></a><span data-ttu-id="7b154-108">Nieobsługiwany System.String statyczne metody</span><span class="sxs-lookup"><span data-stu-id="7b154-108">Unsupported System.String Static Methods</span></span>  
+## <a name="unsupported-systemstring-static-methods"></a><span data-ttu-id="1ed67-108">Nieobsługiwany System.String statyczne metody</span><span class="sxs-lookup"><span data-stu-id="1ed67-108">Unsupported System.String Static Methods</span></span>  
   
-|<span data-ttu-id="7b154-109">Nieobsługiwany System.String statyczne metody</span><span class="sxs-lookup"><span data-stu-id="7b154-109">Unsupported System.String Static Methods</span></span>|  
+|<span data-ttu-id="1ed67-109">Nieobsługiwany System.String statyczne metody</span><span class="sxs-lookup"><span data-stu-id="1ed67-109">Unsupported System.String Static Methods</span></span>|  
 |----------------------------------------------|  
 |<xref:System.String.Copy%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>|  
@@ -34,9 +34,9 @@ ms.locfileid: "59160501"
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|  
 |<xref:System.String.Join%2A?displayProperty=nameWithType>|  
   
-## <a name="unsupported-systemstring-non-static-methods"></a><span data-ttu-id="7b154-110">Nieobsługiwana System.String metod niestatycznych</span><span class="sxs-lookup"><span data-stu-id="7b154-110">Unsupported System.String Non-static Methods</span></span>  
+## <a name="unsupported-systemstring-non-static-methods"></a><span data-ttu-id="1ed67-110">Nieobsługiwana System.String metod niestatycznych</span><span class="sxs-lookup"><span data-stu-id="1ed67-110">Unsupported System.String Non-static Methods</span></span>  
   
-|<span data-ttu-id="7b154-111">Nieobsługiwana System.String metod niestatycznych</span><span class="sxs-lookup"><span data-stu-id="7b154-111">Unsupported System.String Non-static Methods</span></span>|  
+|<span data-ttu-id="1ed67-111">Nieobsługiwana System.String metod niestatycznych</span><span class="sxs-lookup"><span data-stu-id="1ed67-111">Unsupported System.String Non-static Methods</span></span>|  
 |---------------------------------------------------|  
 |<xref:System.String.IndexOfAny%28System.Char%5B%5D%29?displayProperty=nameWithType>|  
 |<xref:System.String.Split%2A?displayProperty=nameWithType>|  
@@ -45,16 +45,16 @@ ms.locfileid: "59160501"
 |<xref:System.String.TrimEnd%28System.Char%5B%5D%29?displayProperty=nameWithType>|  
 |<xref:System.String.TrimStart%28System.Char%5B%5D%29?displayProperty=nameWithType>|  
   
-## <a name="differences-from-net"></a><span data-ttu-id="7b154-112">Różnice z platformy .NET</span><span class="sxs-lookup"><span data-stu-id="7b154-112">Differences from .NET</span></span>  
+## <a name="differences-from-net"></a><span data-ttu-id="1ed67-112">Różnice z platformy .NET</span><span class="sxs-lookup"><span data-stu-id="1ed67-112">Differences from .NET</span></span>  
   
--   <span data-ttu-id="7b154-113">Zapytania nie uwzględniać sortowania programu SQL Server, które mogą obowiązywać na serwerze i będzie stanowić porównania wrażliwość na ustawienia kulturowe, bez uwzględniania wielkości liter domyślnie.</span><span class="sxs-lookup"><span data-stu-id="7b154-113">Queries do not account for SQL Server collations that might be in effect on the server, and therefore will provide culture-sensitive, case-insensitive comparisons by default.</span></span> <span data-ttu-id="7b154-114">To zachowanie różni się od domyślnej, semantyka liter programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7b154-114">This behavior differs from the default, case-sensitive semantics of the .NET Framework.</span></span>  
+- <span data-ttu-id="1ed67-113">Zapytania nie uwzględniać sortowania programu SQL Server, które mogą obowiązywać na serwerze i będzie stanowić porównania wrażliwość na ustawienia kulturowe, bez uwzględniania wielkości liter domyślnie.</span><span class="sxs-lookup"><span data-stu-id="1ed67-113">Queries do not account for SQL Server collations that might be in effect on the server, and therefore will provide culture-sensitive, case-insensitive comparisons by default.</span></span> <span data-ttu-id="1ed67-114">To zachowanie różni się od domyślnej, semantyka liter programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1ed67-114">This behavior differs from the default, case-sensitive semantics of the .NET Framework.</span></span>  
   
--   <span data-ttu-id="7b154-115">Gdy `LastIndexOf` jest zwraca wartość 0, ciągiem `NULL` lub znaleziono pozycji to 0.</span><span class="sxs-lookup"><span data-stu-id="7b154-115">When `LastIndexOf` returns 0, either the string is `NULL` or the found position is 0.</span></span>  
+- <span data-ttu-id="1ed67-115">Gdy `LastIndexOf` jest zwraca wartość 0, ciągiem `NULL` lub znaleziono pozycji to 0.</span><span class="sxs-lookup"><span data-stu-id="1ed67-115">When `LastIndexOf` returns 0, either the string is `NULL` or the found position is 0.</span></span>  
   
--   <span data-ttu-id="7b154-116">Nieoczekiwane wyniki mogą być zwracane z łączenia lub inne operacje na ciągi o stałej długości (`CHAR`, `NCHAR`), ponieważ te typy mają automatycznie dopełnienie stosowane w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="7b154-116">Unexpected results might be returned from concatenation or other operations on fixed-length strings (`CHAR`, `NCHAR`), because these types automatically have padding applied in the database.</span></span>  
+- <span data-ttu-id="1ed67-116">Nieoczekiwane wyniki mogą być zwracane z łączenia lub inne operacje na ciągi o stałej długości (`CHAR`, `NCHAR`), ponieważ te typy mają automatycznie dopełnienie stosowane w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="1ed67-116">Unexpected results might be returned from concatenation or other operations on fixed-length strings (`CHAR`, `NCHAR`), because these types automatically have padding applied in the database.</span></span>  
   
--   <span data-ttu-id="7b154-117">Ponieważ wiele metod, takich jak `Replace`, `ToLower`, `ToUpper`i indeksatora znaków, ma nie prawidłowe tłumaczenia `TEXT` lub `NTEXT` kolumn i XML, `SqlExceptions` wystąpić, jeśli zwykle translacji.</span><span class="sxs-lookup"><span data-stu-id="7b154-117">Because many methods, such as `Replace`, `ToLower`, `ToUpper`, and the character indexer, have no valid translation for `TEXT` or `NTEXT` columns and XML, `SqlExceptions` occur if translated normally.</span></span> <span data-ttu-id="7b154-118">To zachowanie jest uważany za akceptowalne dla tych typów.</span><span class="sxs-lookup"><span data-stu-id="7b154-118">This behavior is considered acceptable for these types.</span></span> <span data-ttu-id="7b154-119">Jednak wszystkie operacje na ciągach musi odpowiadać wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) semantyki dla `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, i `NVARCHAR(max)`.</span><span class="sxs-lookup"><span data-stu-id="7b154-119">However, all string operations must match common language runtime (CLR) semantics for `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, and `NVARCHAR(max)`.</span></span>  
+- <span data-ttu-id="1ed67-117">Ponieważ wiele metod, takich jak `Replace`, `ToLower`, `ToUpper`i indeksatora znaków, ma nie prawidłowe tłumaczenia `TEXT` lub `NTEXT` kolumn i XML, `SqlExceptions` wystąpić, jeśli zwykle translacji.</span><span class="sxs-lookup"><span data-stu-id="1ed67-117">Because many methods, such as `Replace`, `ToLower`, `ToUpper`, and the character indexer, have no valid translation for `TEXT` or `NTEXT` columns and XML, `SqlExceptions` occur if translated normally.</span></span> <span data-ttu-id="1ed67-118">To zachowanie jest uważany za akceptowalne dla tych typów.</span><span class="sxs-lookup"><span data-stu-id="1ed67-118">This behavior is considered acceptable for these types.</span></span> <span data-ttu-id="1ed67-119">Jednak wszystkie operacje na ciągach musi odpowiadać wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) semantyki dla `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, i `NVARCHAR(max)`.</span><span class="sxs-lookup"><span data-stu-id="1ed67-119">However, all string operations must match common language runtime (CLR) semantics for `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, and `NVARCHAR(max)`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b154-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7b154-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ed67-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1ed67-120">See also</span></span>
 
-- [<span data-ttu-id="7b154-121">Typy danych i funkcje</span><span class="sxs-lookup"><span data-stu-id="7b154-121">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [<span data-ttu-id="1ed67-121">Typy danych i funkcje</span><span class="sxs-lookup"><span data-stu-id="1ed67-121">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

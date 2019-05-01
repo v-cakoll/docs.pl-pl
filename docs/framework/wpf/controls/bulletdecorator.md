@@ -8,18 +8,18 @@ helpviewer_keywords:
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
 ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052667"
 ---
-# <a name="bulletdecorator"></a><span data-ttu-id="04672-102">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="04672-102">BulletDecorator</span></span>
-<span data-ttu-id="04672-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> ma dwie właściwości zawartości: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> i <xref:System.Windows.Controls.Decorator.Child%2A>.</span><span class="sxs-lookup"><span data-stu-id="04672-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> has two content properties: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> and <xref:System.Windows.Controls.Decorator.Child%2A>.</span></span> <span data-ttu-id="04672-104"><xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Definiuje właściwość <xref:System.Windows.UIElement> do użycia jako punktor.</span><span class="sxs-lookup"><span data-stu-id="04672-104">The <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> property defines the <xref:System.Windows.UIElement> to use as a bullet.</span></span> <span data-ttu-id="04672-105"><xref:System.Windows.Controls.Decorator.Child%2A> Definiuje właściwość <xref:System.Windows.UIElement> wyrównane, wizualnie punktor.</span><span class="sxs-lookup"><span data-stu-id="04672-105">The <xref:System.Windows.Controls.Decorator.Child%2A> property defines a <xref:System.Windows.UIElement> that visually aligns with the bullet.</span></span>  
+# <a name="bulletdecorator"></a><span data-ttu-id="c801b-102">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="c801b-102">BulletDecorator</span></span>
+<span data-ttu-id="c801b-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> ma dwie właściwości zawartości: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> i <xref:System.Windows.Controls.Decorator.Child%2A>.</span><span class="sxs-lookup"><span data-stu-id="c801b-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> has two content properties: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> and <xref:System.Windows.Controls.Decorator.Child%2A>.</span></span> <span data-ttu-id="c801b-104"><xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Definiuje właściwość <xref:System.Windows.UIElement> do użycia jako punktor.</span><span class="sxs-lookup"><span data-stu-id="c801b-104">The <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> property defines the <xref:System.Windows.UIElement> to use as a bullet.</span></span> <span data-ttu-id="c801b-105"><xref:System.Windows.Controls.Decorator.Child%2A> Definiuje właściwość <xref:System.Windows.UIElement> wyrównane, wizualnie punktor.</span><span class="sxs-lookup"><span data-stu-id="c801b-105">The <xref:System.Windows.Controls.Decorator.Child%2A> property defines a <xref:System.Windows.UIElement> that visually aligns with the bullet.</span></span>  
   
- <span data-ttu-id="04672-106">Na poniższej ilustracji przedstawiono przykłady formantów, które używają <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span><span class="sxs-lookup"><span data-stu-id="04672-106">The following illustration shows examples of controls that use a <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span></span>  
+ <span data-ttu-id="c801b-106">Na poniższej ilustracji przedstawiono przykłady formantów, które używają <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span><span class="sxs-lookup"><span data-stu-id="c801b-106">The following illustration shows examples of controls that use a <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span></span>  
   
  ![Przykład pola wyboru, przycisk radiowy wyśrodkowywania i dekoratora punktor pole tekstowe.](./media/bulletdecorator/three-bullet-decorators.png)  
   
-## <a name="reference"></a><span data-ttu-id="04672-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="04672-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c801b-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="c801b-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

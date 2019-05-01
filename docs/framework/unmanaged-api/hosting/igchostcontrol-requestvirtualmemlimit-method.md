@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 948b18832ccfc5e0fc2e42ee58e6444a581de260
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968275"
 ---
-# <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="fbeeb-102">IGCHostControl::RequestVirtualMemLimit — Metoda</span><span class="sxs-lookup"><span data-stu-id="fbeeb-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
-<span data-ttu-id="fbeeb-103">Żąda hosta, aby zmienić limity pamięci wirtualnej.</span><span class="sxs-lookup"><span data-stu-id="fbeeb-103">Requests the host to change the limits of virtual memory.</span></span>  
+# <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="8f2d1-102">IGCHostControl::RequestVirtualMemLimit — Metoda</span><span class="sxs-lookup"><span data-stu-id="8f2d1-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
+<span data-ttu-id="8f2d1-103">Żąda hosta, aby zmienić limity pamięci wirtualnej.</span><span class="sxs-lookup"><span data-stu-id="8f2d1-103">Requests the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fbeeb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fbeeb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f2d1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8f2d1-104">Syntax</span></span>  
   
 ```  
 HRESULT RequestVirtualMemLimit (  
@@ -36,22 +36,22 @@ HRESULT RequestVirtualMemLimit (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fbeeb-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fbeeb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f2d1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8f2d1-105">Parameters</span></span>  
  `sztMaxVirtualMemMB`  
- <span data-ttu-id="fbeeb-106">[in] Żądany rozmiar pamięci do przydzielenia.</span><span class="sxs-lookup"><span data-stu-id="fbeeb-106">[in] The requested size of memory to be allocated.</span></span>  
+ <span data-ttu-id="8f2d1-106">[in] Żądany rozmiar pamięci do przydzielenia.</span><span class="sxs-lookup"><span data-stu-id="8f2d1-106">[in] The requested size of memory to be allocated.</span></span>  
   
  `psztNewMaxVirtualMemMB`  
- <span data-ttu-id="fbeeb-107">[out w] Wskaźnik do rzeczywistego rozmiaru pamięci przydzielonej.</span><span class="sxs-lookup"><span data-stu-id="fbeeb-107">[in, out] A pointer to the actual size of memory allocated.</span></span>  
+ <span data-ttu-id="8f2d1-107">[out w] Wskaźnik do rzeczywistego rozmiaru pamięci przydzielonej.</span><span class="sxs-lookup"><span data-stu-id="8f2d1-107">[in, out] A pointer to the actual size of memory allocated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fbeeb-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fbeeb-108">Requirements</span></span>  
- <span data-ttu-id="fbeeb-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fbeeb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f2d1-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8f2d1-108">Requirements</span></span>  
+ <span data-ttu-id="8f2d1-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f2d1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fbeeb-110">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fbeeb-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8f2d1-110">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8f2d1-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fbeeb-111">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fbeeb-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8f2d1-111">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8f2d1-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fbeeb-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fbeeb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8f2d1-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f2d1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fbeeb-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fbeeb-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f2d1-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8f2d1-113">See also</span></span>
 
-- [<span data-ttu-id="fbeeb-114">IGCHostControl, interfejs</span><span class="sxs-lookup"><span data-stu-id="fbeeb-114">IGCHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+- [<span data-ttu-id="8f2d1-114">IGCHostControl, interfejs</span><span class="sxs-lookup"><span data-stu-id="8f2d1-114">IGCHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)

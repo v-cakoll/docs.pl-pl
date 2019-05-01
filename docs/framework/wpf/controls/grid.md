@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Grid control [WPF]
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
 ms.openlocfilehash: c0be95d84aa1b4b8b05e623f9012664de1a401a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054890"
 ---
-# <a name="grid"></a><span data-ttu-id="a4cc0-102">Siatka</span><span class="sxs-lookup"><span data-stu-id="a4cc0-102">Grid</span></span>
-<span data-ttu-id="a4cc0-103"><xref:System.Windows.Controls.Grid> Element jest używany w celu precyzyjnego rozmieszczenia zawartości w wiersze i kolumny.</span><span class="sxs-lookup"><span data-stu-id="a4cc0-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
+# <a name="grid"></a><span data-ttu-id="60b5b-102">Siatka</span><span class="sxs-lookup"><span data-stu-id="60b5b-102">Grid</span></span>
+<span data-ttu-id="60b5b-103"><xref:System.Windows.Controls.Grid> Element jest używany w celu precyzyjnego rozmieszczenia zawartości w wiersze i kolumny.</span><span class="sxs-lookup"><span data-stu-id="60b5b-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a4cc0-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="a4cc0-104">In This Section</span></span>  
- [<span data-ttu-id="a4cc0-105">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="a4cc0-105">How-to Topics</span></span>](grid-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="60b5b-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="60b5b-104">In This Section</span></span>  
+ [<span data-ttu-id="60b5b-105">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="60b5b-105">How-to Topics</span></span>](grid-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a4cc0-106">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="a4cc0-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="60b5b-106">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="60b5b-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "57352142"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="a4cc0-107">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="a4cc0-107">Related Sections</span></span>  
- [<span data-ttu-id="a4cc0-108">Układ</span><span class="sxs-lookup"><span data-stu-id="a4cc0-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="60b5b-107">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="60b5b-107">Related Sections</span></span>  
+ [<span data-ttu-id="60b5b-108">Układ</span><span class="sxs-lookup"><span data-stu-id="60b5b-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="a4cc0-109">Przewodnik: Mój pierwszy aplikacji klasycznej WPF</span><span class="sxs-lookup"><span data-stu-id="a4cc0-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="60b5b-109">Przewodnik: Mój pierwszy aplikacji klasycznej WPF</span><span class="sxs-lookup"><span data-stu-id="60b5b-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="a4cc0-110">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="a4cc0-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="60b5b-110">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="60b5b-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

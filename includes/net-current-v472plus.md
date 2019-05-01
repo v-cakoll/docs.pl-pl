@@ -1,1 +1,9 @@
-<span data-ttu-id="cd05c-101">Dostępne od 4.7.2</span><span class="sxs-lookup"><span data-stu-id="cd05c-101">Available since 4.7.2</span></span>
+---
+ms.openlocfilehash: a37405063121aca68eb57fe5415795993d751ec0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703597"
+---
+<span data-ttu-id="6aa89-101">Dostępne od 4.7.2</span><span class="sxs-lookup"><span data-stu-id="6aa89-101">Available since 4.7.2</span></span>

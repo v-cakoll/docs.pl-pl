@@ -1,1 +1,9 @@
-<span data-ttu-id="3cc3b-101">.NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="3cc3b-101">.NET Framework 4.6.2</span></span>
+---
+ms.openlocfilehash: f25b78827aa18ea2e9da4fe808081804da34cc15
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871513"
+---
+<span data-ttu-id="4a8ea-101">.NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="4a8ea-101">.NET Framework 4.6.2</span></span>

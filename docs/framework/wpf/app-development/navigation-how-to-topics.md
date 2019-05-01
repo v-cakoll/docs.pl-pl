@@ -7,22 +7,22 @@ helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
 ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981698"
 ---
-# <a name="navigation-how-to-topics"></a><span data-ttu-id="53a8d-102">Nawigacja Tematy porad</span><span class="sxs-lookup"><span data-stu-id="53a8d-102">Navigation How-to Topics</span></span>
-<span data-ttu-id="53a8d-103">W następujących tematach opisano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nawigacji.</span><span class="sxs-lookup"><span data-stu-id="53a8d-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
+# <a name="navigation-how-to-topics"></a><span data-ttu-id="4f8f6-102">Nawigacja Tematy porad</span><span class="sxs-lookup"><span data-stu-id="4f8f6-102">Navigation How-to Topics</span></span>
+<span data-ttu-id="4f8f6-103">W następujących tematach opisano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nawigacji.</span><span class="sxs-lookup"><span data-stu-id="4f8f6-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="53a8d-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="53a8d-104">In This Section</span></span>  
- [<span data-ttu-id="53a8d-105">Wywoływanie funkcji strony</span><span class="sxs-lookup"><span data-stu-id="53a8d-105">Call a Page Function</span></span>](how-to-call-a-page-function.md)  
-  [<span data-ttu-id="53a8d-106">Pobieranie wartości zwracanej funkcji strony</span><span class="sxs-lookup"><span data-stu-id="53a8d-106">Get the Return Value of a Page Function</span></span>](how-to-get-the-return-value-of-a-page-function.md)  
-  [<span data-ttu-id="53a8d-107">Poruszanie się w przód i wstecz w historii nawigacji</span><span class="sxs-lookup"><span data-stu-id="53a8d-107">Navigate Forward or Back Through Navigation History</span></span>](how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [<span data-ttu-id="53a8d-108">Powrót z funkcji strony</span><span class="sxs-lookup"><span data-stu-id="53a8d-108">Return from a Page Function</span></span>](how-to-return-from-a-page-function.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4f8f6-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="4f8f6-104">In This Section</span></span>  
+ [<span data-ttu-id="4f8f6-105">Wywoływanie funkcji strony</span><span class="sxs-lookup"><span data-stu-id="4f8f6-105">Call a Page Function</span></span>](how-to-call-a-page-function.md)  
+  [<span data-ttu-id="4f8f6-106">Pobieranie wartości zwracanej funkcji strony</span><span class="sxs-lookup"><span data-stu-id="4f8f6-106">Get the Return Value of a Page Function</span></span>](how-to-get-the-return-value-of-a-page-function.md)  
+  [<span data-ttu-id="4f8f6-107">Poruszanie się w przód i wstecz w historii nawigacji</span><span class="sxs-lookup"><span data-stu-id="4f8f6-107">Navigate Forward or Back Through Navigation History</span></span>](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [<span data-ttu-id="4f8f6-108">Powrót z funkcji strony</span><span class="sxs-lookup"><span data-stu-id="4f8f6-108">Return from a Page Function</span></span>](how-to-return-from-a-page-function.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="53a8d-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="53a8d-109">Related Sections</span></span>  
- [<span data-ttu-id="53a8d-110">Nawigacja — omówienie</span><span class="sxs-lookup"><span data-stu-id="53a8d-110">Navigation Overview</span></span>](navigation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="4f8f6-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="4f8f6-109">Related Sections</span></span>  
+ [<span data-ttu-id="4f8f6-110">Nawigacja — omówienie</span><span class="sxs-lookup"><span data-stu-id="4f8f6-110">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="53a8d-111">Strukturyzowana nawigacja — omówienie</span><span class="sxs-lookup"><span data-stu-id="53a8d-111">Structured Navigation Overview</span></span>](structured-navigation-overview.md)
+ [<span data-ttu-id="4f8f6-111">Strukturyzowana nawigacja — omówienie</span><span class="sxs-lookup"><span data-stu-id="4f8f6-111">Structured Navigation Overview</span></span>](structured-navigation-overview.md)

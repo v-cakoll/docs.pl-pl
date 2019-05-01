@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
 ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911537"
 ---
-# <a name="grid-how-to-topics"></a><span data-ttu-id="95847-102">Siatka Tematy porad</span><span class="sxs-lookup"><span data-stu-id="95847-102">Grid How-to Topics</span></span>
-<span data-ttu-id="95847-103">Tematy w tej sekcji opisano sposób położenie elementów za pomocą <xref:System.Windows.Controls.Grid> elementu.</span><span class="sxs-lookup"><span data-stu-id="95847-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="grid-how-to-topics"></a><span data-ttu-id="7a861-102">Siatka Tematy porad</span><span class="sxs-lookup"><span data-stu-id="7a861-102">Grid How-to Topics</span></span>
+<span data-ttu-id="7a861-103">Tematy w tej sekcji opisano sposób położenie elementów za pomocą <xref:System.Windows.Controls.Grid> elementu.</span><span class="sxs-lookup"><span data-stu-id="7a861-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="95847-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="95847-104">In This Section</span></span>  
- [<span data-ttu-id="95847-105">Tworzenie standardowego okna dialogowego interfejsu użytkownika przy użyciu siatki</span><span class="sxs-lookup"><span data-stu-id="95847-105">Build a Standard UI Dialog Box by Using Grid</span></span>](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [<span data-ttu-id="95847-106">Tworzenie siatki złożonej</span><span class="sxs-lookup"><span data-stu-id="95847-106">Create a Complex Grid</span></span>](how-to-create-a-complex-grid.md)  
- [<span data-ttu-id="95847-107">Tworzenie elementu siatki</span><span class="sxs-lookup"><span data-stu-id="95847-107">Create a Grid Element</span></span>](how-to-create-a-grid-element.md)  
- [<span data-ttu-id="95847-108">Tworzenie i używanie obiektu GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="95847-108">Create and Use a GridLengthConverter Object</span></span>](how-to-create-and-use-a-gridlengthconverter-object.md)  
- [<span data-ttu-id="95847-109">Zarządzanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections</span><span class="sxs-lookup"><span data-stu-id="95847-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [<span data-ttu-id="95847-110">Ustawianie położenia elementów podrzędnych siatki</span><span class="sxs-lookup"><span data-stu-id="95847-110">Position the Child Elements of a Grid</span></span>](how-to-position-the-child-elements-of-a-grid.md)  
- [<span data-ttu-id="95847-111">Udostępnianie właściwości ustalania rozmiaru między siatkami</span><span class="sxs-lookup"><span data-stu-id="95847-111">Share Sizing Properties Between Grids</span></span>](how-to-share-sizing-properties-between-grids.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7a861-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="7a861-104">In This Section</span></span>  
+ [<span data-ttu-id="7a861-105">Tworzenie standardowego okna dialogowego interfejsu użytkownika przy użyciu siatki</span><span class="sxs-lookup"><span data-stu-id="7a861-105">Build a Standard UI Dialog Box by Using Grid</span></span>](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [<span data-ttu-id="7a861-106">Tworzenie siatki złożonej</span><span class="sxs-lookup"><span data-stu-id="7a861-106">Create a Complex Grid</span></span>](how-to-create-a-complex-grid.md)  
+ [<span data-ttu-id="7a861-107">Tworzenie elementu siatki</span><span class="sxs-lookup"><span data-stu-id="7a861-107">Create a Grid Element</span></span>](how-to-create-a-grid-element.md)  
+ [<span data-ttu-id="7a861-108">Tworzenie i używanie obiektu GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="7a861-108">Create and Use a GridLengthConverter Object</span></span>](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [<span data-ttu-id="7a861-109">Zarządzanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections</span><span class="sxs-lookup"><span data-stu-id="7a861-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [<span data-ttu-id="7a861-110">Ustawianie położenia elementów podrzędnych siatki</span><span class="sxs-lookup"><span data-stu-id="7a861-110">Position the Child Elements of a Grid</span></span>](how-to-position-the-child-elements-of-a-grid.md)  
+ [<span data-ttu-id="7a861-111">Udostępnianie właściwości ustalania rozmiaru między siatkami</span><span class="sxs-lookup"><span data-stu-id="7a861-111">Share Sizing Properties Between Grids</span></span>](how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a><span data-ttu-id="95847-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="95847-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7a861-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="7a861-112">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -41,9 +41,9 @@ ms.locfileid: "57377680"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="95847-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="95847-113">Related Sections</span></span>  
- [<span data-ttu-id="95847-114">Układ</span><span class="sxs-lookup"><span data-stu-id="95847-114">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="7a861-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="7a861-113">Related Sections</span></span>  
+ [<span data-ttu-id="7a861-114">Układ</span><span class="sxs-lookup"><span data-stu-id="7a861-114">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="95847-115">Przewodnik: Mój pierwszy aplikacji klasycznej WPF</span><span class="sxs-lookup"><span data-stu-id="95847-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="7a861-115">Przewodnik: Mój pierwszy aplikacji klasycznej WPF</span><span class="sxs-lookup"><span data-stu-id="7a861-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="95847-116">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="95847-116">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="7a861-116">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="7a861-116">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7f4794fb0383435f828626497036ad3458df2173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995335"
 ---
-# <a name="icordebugmanagedcallbackcontrolctrap-method"></a><span data-ttu-id="8a6a7-102">ICorDebugManagedCallback::ControlCTrap — Metoda</span><span class="sxs-lookup"><span data-stu-id="8a6a7-102">ICorDebugManagedCallback::ControlCTrap Method</span></span>
-<span data-ttu-id="8a6a7-103">Powiadamia debugera, CTRL + C jest zablokował w procesie, który jest debugowany.</span><span class="sxs-lookup"><span data-stu-id="8a6a7-103">Notifies the debugger that a CTRL+C is trapped in the process that is being debugged.</span></span>  
+# <a name="icordebugmanagedcallbackcontrolctrap-method"></a><span data-ttu-id="d04c4-102">ICorDebugManagedCallback::ControlCTrap — Metoda</span><span class="sxs-lookup"><span data-stu-id="d04c4-102">ICorDebugManagedCallback::ControlCTrap Method</span></span>
+<span data-ttu-id="d04c4-103">Powiadamia debugera, CTRL + C jest zablokował w procesie, który jest debugowany.</span><span class="sxs-lookup"><span data-stu-id="d04c4-103">Notifies the debugger that a CTRL+C is trapped in the process that is being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a6a7-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8a6a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d04c4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d04c4-104">Syntax</span></span>  
   
 ```  
 HRESULT ControlCTrap (  
@@ -35,29 +35,29 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8a6a7-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8a6a7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d04c4-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d04c4-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="8a6a7-106">[in] Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces, w którym jest zablokował klawisze CTRL + C.</span><span class="sxs-lookup"><span data-stu-id="8a6a7-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the CTRL+C is trapped.</span></span>  
+ <span data-ttu-id="d04c4-106">[in] Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces, w którym jest zablokował klawisze CTRL + C.</span><span class="sxs-lookup"><span data-stu-id="d04c4-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the CTRL+C is trapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8a6a7-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="8a6a7-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d04c4-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="d04c4-107">Return Value</span></span>  
   
-|<span data-ttu-id="8a6a7-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8a6a7-108">HRESULT</span></span>|<span data-ttu-id="8a6a7-109">Opis</span><span class="sxs-lookup"><span data-stu-id="8a6a7-109">Description</span></span>|  
+|<span data-ttu-id="d04c4-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d04c4-108">HRESULT</span></span>|<span data-ttu-id="d04c4-109">Opis</span><span class="sxs-lookup"><span data-stu-id="d04c4-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8a6a7-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="8a6a7-110">S_OK</span></span>|<span data-ttu-id="8a6a7-111">Debuger będzie obsługiwać pułapki klawisze CTRL + C.</span><span class="sxs-lookup"><span data-stu-id="8a6a7-111">The debugger will handle the CTRL+C trap.</span></span>|  
-|<span data-ttu-id="8a6a7-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="8a6a7-112">S_FALSE</span></span>|<span data-ttu-id="8a6a7-113">Debuger nie będzie obsługiwać pułapki klawisze CTRL + C.</span><span class="sxs-lookup"><span data-stu-id="8a6a7-113">The debugger will not handle the CTRL+C trap.</span></span>|  
+|<span data-ttu-id="d04c4-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="d04c4-110">S_OK</span></span>|<span data-ttu-id="d04c4-111">Debuger będzie obsługiwać pułapki klawisze CTRL + C.</span><span class="sxs-lookup"><span data-stu-id="d04c4-111">The debugger will handle the CTRL+C trap.</span></span>|  
+|<span data-ttu-id="d04c4-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="d04c4-112">S_FALSE</span></span>|<span data-ttu-id="d04c4-113">Debuger nie będzie obsługiwać pułapki klawisze CTRL + C.</span><span class="sxs-lookup"><span data-stu-id="d04c4-113">The debugger will not handle the CTRL+C trap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8a6a7-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8a6a7-114">Remarks</span></span>  
- <span data-ttu-id="8a6a7-115">Wszystkie domeny aplikacji w ramach procesu zostaną zatrzymane dla tego wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="8a6a7-115">All application domains within the process are stopped for this callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d04c4-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d04c4-114">Remarks</span></span>  
+ <span data-ttu-id="d04c4-115">Wszystkie domeny aplikacji w ramach procesu zostaną zatrzymane dla tego wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="d04c4-115">All application domains within the process are stopped for this callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8a6a7-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8a6a7-116">Requirements</span></span>  
- <span data-ttu-id="8a6a7-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a6a7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d04c4-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d04c4-116">Requirements</span></span>  
+ <span data-ttu-id="d04c4-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d04c4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a6a7-118">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8a6a7-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d04c4-118">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d04c4-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8a6a7-119">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a6a7-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d04c4-119">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d04c4-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8a6a7-120">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a6a7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d04c4-120">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d04c4-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a6a7-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8a6a7-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d04c4-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d04c4-121">See also</span></span>
 
-- [<span data-ttu-id="8a6a7-122">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="8a6a7-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="d04c4-122">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="d04c4-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

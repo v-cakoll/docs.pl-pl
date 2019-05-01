@@ -3,24 +3,24 @@ title: 'Instrukcje: Reprezentacja kolumn jako wygenerowanych w bazie danych'
 ms.date: 03/30/2017
 ms.assetid: 6524b8a6-e5d2-4a3b-8e08-beafc4a84fd2
 ms.openlocfilehash: 2803697c668a8e1dbbeb426ea41b64878f70c145
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903490"
 ---
-# <a name="how-to-represent-columns-as-database-generated"></a><span data-ttu-id="efda1-102">Instrukcje: Reprezentacja kolumn jako wygenerowanych w bazie danych</span><span class="sxs-lookup"><span data-stu-id="efda1-102">How to: Represent Columns as Database-Generated</span></span>
-<span data-ttu-id="efda1-103">Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby wyznaczyć reprezentujący kolumnę wygenerowanych w bazie danych do pola lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="efda1-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> property on the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to designate a field or property as representing a database-generated column.</span></span>  
+# <a name="how-to-represent-columns-as-database-generated"></a><span data-ttu-id="54787-102">Instrukcje: Reprezentacja kolumn jako wygenerowanych w bazie danych</span><span class="sxs-lookup"><span data-stu-id="54787-102">How to: Represent Columns as Database-Generated</span></span>
+<span data-ttu-id="54787-103">Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby wyznaczyć reprezentujący kolumnę wygenerowanych w bazie danych do pola lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="54787-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> property on the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to designate a field or property as representing a database-generated column.</span></span>  
   
- <span data-ttu-id="efda1-104">Aby uzyskać przykłady kodu, zobacz <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.</span><span class="sxs-lookup"><span data-stu-id="efda1-104">For code examples, see <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.</span></span>  
+ <span data-ttu-id="54787-104">Aby uzyskać przykłady kodu, zobacz <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.</span><span class="sxs-lookup"><span data-stu-id="54787-104">For code examples, see <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.</span></span>  
   
-### <a name="to-designate-a-field-or-property-as-representing-a-database-generated-column"></a><span data-ttu-id="efda1-105">Aby wyznaczyć pole lub właściwość jako kolumnę wygenerowanych w bazie danych</span><span class="sxs-lookup"><span data-stu-id="efda1-105">To designate a field or property as representing a database-generated column</span></span>  
+### <a name="to-designate-a-field-or-property-as-representing-a-database-generated-column"></a><span data-ttu-id="54787-105">Aby wyznaczyć pole lub właściwość jako kolumnę wygenerowanych w bazie danych</span><span class="sxs-lookup"><span data-stu-id="54787-105">To designate a field or property as representing a database-generated column</span></span>  
   
-1. <span data-ttu-id="efda1-106">Dodaj <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu.</span><span class="sxs-lookup"><span data-stu-id="efda1-106">Add the <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
+1. <span data-ttu-id="54787-106">Dodaj <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu.</span><span class="sxs-lookup"><span data-stu-id="54787-106">Add the <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
   
-2. <span data-ttu-id="efda1-107">Ustaw wartość właściwości `true`.</span><span class="sxs-lookup"><span data-stu-id="efda1-107">Set the property value to `true`.</span></span>  
+2. <span data-ttu-id="54787-107">Ustaw wartość właściwości `true`.</span><span class="sxs-lookup"><span data-stu-id="54787-107">Set the property value to `true`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efda1-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="efda1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54787-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="54787-108">See also</span></span>
 
-- [<span data-ttu-id="efda1-109">Model obiektu LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="efda1-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [<span data-ttu-id="efda1-110">Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu</span><span class="sxs-lookup"><span data-stu-id="efda1-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [<span data-ttu-id="54787-109">Model obiektu LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="54787-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [<span data-ttu-id="54787-110">Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu</span><span class="sxs-lookup"><span data-stu-id="54787-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

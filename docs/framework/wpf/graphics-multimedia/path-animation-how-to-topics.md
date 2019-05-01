@@ -8,30 +8,30 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
 ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973696"
 ---
-# <a name="path-animation-how-to-topics"></a><span data-ttu-id="62437-102">Animacja ścieżki Tematy Pomocy</span><span class="sxs-lookup"><span data-stu-id="62437-102">Path Animation How-to Topics</span></span>
-<span data-ttu-id="62437-103">Tematy w tej sekcji pokazują, jak animować obiekt na ścieżce.</span><span class="sxs-lookup"><span data-stu-id="62437-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
+# <a name="path-animation-how-to-topics"></a><span data-ttu-id="5ccec-102">Animacja ścieżki Tematy Pomocy</span><span class="sxs-lookup"><span data-stu-id="5ccec-102">Path Animation How-to Topics</span></span>
+<span data-ttu-id="5ccec-103">Tematy w tej sekcji pokazują, jak animować obiekt na ścieżce.</span><span class="sxs-lookup"><span data-stu-id="5ccec-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="62437-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="62437-104">In This Section</span></span>  
- [<span data-ttu-id="62437-105">Animowanie obiektu na ścieżce (animacja double)</span><span class="sxs-lookup"><span data-stu-id="62437-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
- [<span data-ttu-id="62437-106">Animowanie obiektu na ścieżce (animacja punktu)</span><span class="sxs-lookup"><span data-stu-id="62437-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
- [<span data-ttu-id="62437-107">Animowanie obiektu na ścieżce (animacja Matrix)</span><span class="sxs-lookup"><span data-stu-id="62437-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [<span data-ttu-id="62437-108">Animowanie obiektu na ścieżce (animacja matrycy akumulacją przesunięcia)</span><span class="sxs-lookup"><span data-stu-id="62437-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [<span data-ttu-id="62437-109">Obracanie obiektu przy użyciu ścieżki geometrycznej (animacja Matrix)</span><span class="sxs-lookup"><span data-stu-id="62437-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [<span data-ttu-id="62437-110">Obracanie obiektu przy użyciu ścieżki geometrycznej</span><span class="sxs-lookup"><span data-stu-id="62437-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5ccec-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="5ccec-104">In This Section</span></span>  
+ [<span data-ttu-id="5ccec-105">Animowanie obiektu na ścieżce (animacja double)</span><span class="sxs-lookup"><span data-stu-id="5ccec-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [<span data-ttu-id="5ccec-106">Animowanie obiektu na ścieżce (animacja punktu)</span><span class="sxs-lookup"><span data-stu-id="5ccec-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [<span data-ttu-id="5ccec-107">Animowanie obiektu na ścieżce (animacja Matrix)</span><span class="sxs-lookup"><span data-stu-id="5ccec-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [<span data-ttu-id="5ccec-108">Animowanie obiektu na ścieżce (animacja matrycy akumulacją przesunięcia)</span><span class="sxs-lookup"><span data-stu-id="5ccec-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [<span data-ttu-id="5ccec-109">Obracanie obiektu przy użyciu ścieżki geometrycznej (animacja Matrix)</span><span class="sxs-lookup"><span data-stu-id="5ccec-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [<span data-ttu-id="5ccec-110">Obracanie obiektu przy użyciu ścieżki geometrycznej</span><span class="sxs-lookup"><span data-stu-id="5ccec-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
-## <a name="reference"></a><span data-ttu-id="62437-111">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="62437-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5ccec-111">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="5ccec-111">Reference</span></span>  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a><span data-ttu-id="62437-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="62437-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ccec-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5ccec-112">See also</span></span>
 
-- [<span data-ttu-id="62437-113">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="62437-113">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="62437-114">Animacja — przegląd</span><span class="sxs-lookup"><span data-stu-id="62437-114">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="62437-115">Animacje kluczowych klatek — przegląd</span><span class="sxs-lookup"><span data-stu-id="62437-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="5ccec-113">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="5ccec-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="5ccec-114">Animacja — przegląd</span><span class="sxs-lookup"><span data-stu-id="5ccec-114">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="5ccec-115">Animacje kluczowych klatek — przegląd</span><span class="sxs-lookup"><span data-stu-id="5ccec-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

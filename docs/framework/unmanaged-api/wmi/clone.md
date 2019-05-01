@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf9cca10a580af7991889de6993e931347fc27ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968158"
 ---
-# <a name="clone-function"></a><span data-ttu-id="79424-103">Clone, funkcja</span><span class="sxs-lookup"><span data-stu-id="79424-103">Clone function</span></span>
-<span data-ttu-id="79424-104">Zwraca nowy obiekt, który jest kompletny klonowania bieżącego obiektu.</span><span class="sxs-lookup"><span data-stu-id="79424-104">Returns a new object that is a complete clone of the current object.</span></span>   
+# <a name="clone-function"></a><span data-ttu-id="ab4cf-103">Clone, funkcja</span><span class="sxs-lookup"><span data-stu-id="ab4cf-103">Clone function</span></span>
+<span data-ttu-id="ab4cf-104">Zwraca nowy obiekt, który jest kompletny klonowania bieżącego obiektu.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-104">Returns a new object that is a complete clone of the current object.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="79424-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="79424-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab4cf-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="ab4cf-105">Syntax</span></span>  
   
 ```  
 HRESULT Clone (
@@ -38,41 +38,41 @@ HRESULT Clone (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="79424-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="79424-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ab4cf-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="ab4cf-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="79424-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="79424-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="ab4cf-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="79424-108">[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="79424-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="ab4cf-108">[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `ppCopy`  
-<span data-ttu-id="79424-109">[out] Nowy obiekt, który jest kompletna pojedynczy z `ptr`.</span><span class="sxs-lookup"><span data-stu-id="79424-109">[out] A new object that is a complete lone of `ptr`.</span></span> <span data-ttu-id="79424-110">Ten argument nie może być `null` jeżeli otrzyma kopię bieżącego obiektu.</span><span class="sxs-lookup"><span data-stu-id="79424-110">This argument cannot be `null` if it receives the copy of the current object.</span></span>
+<span data-ttu-id="ab4cf-109">[out] Nowy obiekt, który jest kompletna pojedynczy z `ptr`.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-109">[out] A new object that is a complete lone of `ptr`.</span></span> <span data-ttu-id="ab4cf-110">Ten argument nie może być `null` jeżeli otrzyma kopię bieżącego obiektu.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-110">This argument cannot be `null` if it receives the copy of the current object.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="79424-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="79424-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ab4cf-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ab4cf-111">Return value</span></span>
 
-<span data-ttu-id="79424-112">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="79424-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="ab4cf-112">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="ab4cf-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="79424-113">Stała</span><span class="sxs-lookup"><span data-stu-id="79424-113">Constant</span></span>  |<span data-ttu-id="79424-114">Wartość</span><span class="sxs-lookup"><span data-stu-id="79424-114">Value</span></span>  |<span data-ttu-id="79424-115">Opis</span><span class="sxs-lookup"><span data-stu-id="79424-115">Description</span></span>  |
+|<span data-ttu-id="ab4cf-113">Stała</span><span class="sxs-lookup"><span data-stu-id="ab4cf-113">Constant</span></span>  |<span data-ttu-id="ab4cf-114">Wartość</span><span class="sxs-lookup"><span data-stu-id="ab4cf-114">Value</span></span>  |<span data-ttu-id="ab4cf-115">Opis</span><span class="sxs-lookup"><span data-stu-id="ab4cf-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | <span data-ttu-id="79424-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="79424-116">0x80041001</span></span> | <span data-ttu-id="79424-117">Wystąpił błąd ogólny.</span><span class="sxs-lookup"><span data-stu-id="79424-117">There has been a general failure.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="79424-118">0x80041008</span><span class="sxs-lookup"><span data-stu-id="79424-118">0x80041008</span></span> | <span data-ttu-id="79424-119">`null` został określony jako parametr, a nie jest dozwolone w tym użycie.</span><span class="sxs-lookup"><span data-stu-id="79424-119">`null` was specified as a parameter, and it is not legal in this usage.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="79424-120">0x80041006</span><span class="sxs-lookup"><span data-stu-id="79424-120">0x80041006</span></span> | <span data-ttu-id="79424-121">Nie ma wystarczającej ilości pamięci jest dostępny w celu sklonowania obiektu.</span><span class="sxs-lookup"><span data-stu-id="79424-121">Not enough memory is available to clone the object.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="79424-122">0</span><span class="sxs-lookup"><span data-stu-id="79424-122">0</span></span> | <span data-ttu-id="79424-123">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="79424-123">The function call was successful.</span></span>  |
+| `WBEM_E_FAILED` | <span data-ttu-id="ab4cf-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="ab4cf-116">0x80041001</span></span> | <span data-ttu-id="ab4cf-117">Wystąpił błąd ogólny.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-117">There has been a general failure.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="ab4cf-118">0x80041008</span><span class="sxs-lookup"><span data-stu-id="ab4cf-118">0x80041008</span></span> | <span data-ttu-id="ab4cf-119">`null` został określony jako parametr, a nie jest dozwolone w tym użycie.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-119">`null` was specified as a parameter, and it is not legal in this usage.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="ab4cf-120">0x80041006</span><span class="sxs-lookup"><span data-stu-id="ab4cf-120">0x80041006</span></span> | <span data-ttu-id="ab4cf-121">Nie ma wystarczającej ilości pamięci jest dostępny w celu sklonowania obiektu.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-121">Not enough memory is available to clone the object.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="ab4cf-122">0</span><span class="sxs-lookup"><span data-stu-id="ab4cf-122">0</span></span> | <span data-ttu-id="ab4cf-123">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-123">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="79424-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="79424-124">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ab4cf-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ab4cf-124">Remarks</span></span>
 
-<span data-ttu-id="79424-125">Ta funkcja zawija wywołanie do [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) metody.</span><span class="sxs-lookup"><span data-stu-id="79424-125">This function wraps a call to the [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) method.</span></span>
+<span data-ttu-id="ab4cf-125">Ta funkcja zawija wywołanie do [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) metody.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-125">This function wraps a call to the [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) method.</span></span>
 
-<span data-ttu-id="79424-126">Sklonowany obiekt jest obiektem COM, który ma liczebności referencyjnej równej 1.</span><span class="sxs-lookup"><span data-stu-id="79424-126">The cloned object is a COM object that has a reference count of 1.</span></span>
+<span data-ttu-id="ab4cf-126">Sklonowany obiekt jest obiektem COM, który ma liczebności referencyjnej równej 1.</span><span class="sxs-lookup"><span data-stu-id="ab4cf-126">The cloned object is a COM object that has a reference count of 1.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="79424-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="79424-127">Requirements</span></span>  
- <span data-ttu-id="79424-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79424-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab4cf-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ab4cf-127">Requirements</span></span>  
+ <span data-ttu-id="ab4cf-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab4cf-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79424-129">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="79424-129">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="ab4cf-129">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ab4cf-129">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="79424-130">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="79424-130">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="ab4cf-130">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ab4cf-130">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79424-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="79424-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab4cf-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ab4cf-131">See also</span></span>
 
-- [<span data-ttu-id="79424-132">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="79424-132">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="ab4cf-132">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="ab4cf-132">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

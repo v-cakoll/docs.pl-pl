@@ -3,11 +3,11 @@ title: Omówienie rozszerzonej ochrony uwierzytelniania
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856729"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Omówienie rozszerzonej ochrony uwierzytelniania
 Rozszerzona ochrona uwierzytelniania pomaga w ochronie przed ataków typu man-in--middle (MITM) ataków, w których osoba atakująca przechwytuje poświadczenia klienta i przekazuje je do serwera.  
@@ -24,11 +24,11 @@ Rozszerzona ochrona uwierzytelniania pomaga w ochronie przed ataków typu man-in
   
  Serwer może mieć następujące poziomy ochrony:  
   
--   Brak. Odbywa się nie sprawdzenia poprawności powiązania kanału. Jest to zachowanie w procentach wszystkich serwerów, które nie zostały zaktualizowane.  
+- Brak. Odbywa się nie sprawdzenia poprawności powiązania kanału. Jest to zachowanie w procentach wszystkich serwerów, które nie zostały zaktualizowane.  
   
--   Partial. Wszyscy klienci, które zostały zaktualizowane, musisz podać informacje o powiązaniu kanału do serwera. Klienci, którzy nie zostały zaktualizowane nie trzeba to zrobić. Jest to opcja pośredniego, umożliwiający zgodności aplikacji.  
+- Partial. Wszyscy klienci, które zostały zaktualizowane, musisz podać informacje o powiązaniu kanału do serwera. Klienci, którzy nie zostały zaktualizowane nie trzeba to zrobić. Jest to opcja pośredniego, umożliwiający zgodności aplikacji.  
   
--   Pełna. Wszyscy klienci, musisz podać informacje o powiązaniu do kanału. Serwer odrzuca żądania uwierzytelniania od klientów, które to robi.  
+- Pełna. Wszyscy klienci, musisz podać informacje o powiązaniu do kanału. Serwer odrzuca żądania uwierzytelniania od klientów, które to robi.  
   
  Aby uzyskać więcej informacji zobacz przykład Win7 CBT/rozszerzonej ochrony.  
   

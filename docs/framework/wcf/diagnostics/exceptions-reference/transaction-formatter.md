@@ -3,11 +3,11 @@ title: Element formatujący transakcji
 ms.date: 03/30/2017
 ms.assetid: 727b3f1c-fffa-4753-bc76-713e331c631a
 ms.openlocfilehash: 99e4a993cbce32d87188d44197502909af62cf93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777276"
 ---
 # <a name="transaction-formatter"></a>Element formatujący transakcji
 Ten temat zawiera listę wszystkich wyjątków generowanych przez element formatujący transakcji.  
@@ -16,8 +16,8 @@ Ten temat zawiera listę wszystkich wyjątków generowanych przez element format
   
 |Kod zasobu|Ciąg zasobu|  
 |-------------------|---------------------|  
-|TMCommunicationError|Wystąpił błąd podczas komunikowania się z menedżerem transakcji rozproszonych.|  
-|WhereaboutsNoHostName|Informacje o lokalizacji usługi MSDTC nie zawiera nazwę hosta.|  
-|WhereaboutsReadFailed|Nie można zdeserializować informacji o lokalizacji usługi MSDTC.|  
-|WhereaboutsSignatureMissing|Informacje o lokalizacji usługi MSDTC brakuje podpisu standardowe miejsce.|  
+|TMCommunicationError|Wystąpił błąd podczas komunikowania się z menedżerem transakcji rozproszonej.|  
+|WhereaboutsNoHostName|Informacje o lokalizacji usługi MSDTC nie zawiera nazwy hosta.|  
+|WhereaboutsReadFailed|Nie można deserializować informacji o lokalizacji usługi MSDTC.|  
+|WhereaboutsSignatureMissing|Podpis lokalizacji brakowało informacji o lokalizacji usługi MSDTC.|  
 |WsatUriCreationFailed|Nie można utworzyć adresu usługi rejestracji z informacji o lokalizacji usługi MSDTC.|

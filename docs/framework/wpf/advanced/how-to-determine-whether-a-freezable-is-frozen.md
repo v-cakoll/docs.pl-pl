@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
 ms.openlocfilehash: 6a63862d35f2c40289ea6445eb3dab8a2abe4a61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776236"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Instrukcje: Określanie, czy obiekt Freezable jest zamrożony
 W tym przykładzie pokazano, jak ustalić, czy <xref:System.Windows.Freezable> obiektu jest zablokowane. Jeśli spróbujesz zmodyfikować zamrożone <xref:System.Windows.Freezable> obiekt, w wyniku weryfikacji zgłasza wyjątek <xref:System.InvalidOperationException>. Aby uniknąć, zostanie zgłoszony wyjątek, należy użyć <xref:System.Windows.Freezable.IsFrozen%2A> właściwość <xref:System.Windows.Freezable> obiektu, aby ustalić, czy jest zablokowane.  

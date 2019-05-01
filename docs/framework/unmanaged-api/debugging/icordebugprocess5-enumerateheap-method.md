@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b404b7762e085eb44f0bd3b448fcee9eab9a3c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948788"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap — Metoda
 Pobiera moduł wyliczający dla obiektów na stosie zarządzanym.  

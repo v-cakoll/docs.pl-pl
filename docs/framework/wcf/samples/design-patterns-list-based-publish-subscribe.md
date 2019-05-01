@@ -3,11 +3,11 @@ title: 'Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773064"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście
 W tym przykładzie pokazano wzorzec listy publikowanie/subskrybowanie oparte na zaimplementowane jako program Windows Communication Foundation (WCF).  
@@ -130,23 +130,23 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Skonfiguruj komputer usługi:  
   
-    1.  Na komputerze usługi należy utworzyć katalog wirtualny o nazwie ServiceModelSamples. Zadanie wsadowe pliku Setupvroot.bat z [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) może służyć do tworzenia katalogu na dysku i katalogu wirtualnego.  
+    1. Na komputerze usługi należy utworzyć katalog wirtualny o nazwie ServiceModelSamples. Zadanie wsadowe pliku Setupvroot.bat z [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) może służyć do tworzenia katalogu na dysku i katalogu wirtualnego.  
   
-    2.  Skopiuj pliki programu usługi z %SystemDrive%\Inetpub\wwwroot\servicemodelsamples ServiceModelSamples katalogu wirtualnego na maszynie usługi. Pamiętaj uwzględnić pliki w katalogu \bin.  
+    2. Skopiuj pliki programu usługi z %SystemDrive%\Inetpub\wwwroot\servicemodelsamples ServiceModelSamples katalogu wirtualnego na maszynie usługi. Pamiętaj uwzględnić pliki w katalogu \bin.  
   
-    3.  Test, aby uzyskać dostęp do usługi z komputera klienckiego za pomocą przeglądarki.  
+    3. Test, aby uzyskać dostęp do usługi z komputera klienckiego za pomocą przeglądarki.  
   
 2. Konfigurowanie komputerów klienckich:  
   
-    1.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerach klienckich.  
+    1. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerach klienckich.  
   
-    2.  W każdym pliku konfiguracji klienta należy zmienić wartość adresu definicji punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszystkie odwołania do "localhost" w pełni kwalifikowaną nazwę domeny w adresie.  
+    2. W każdym pliku konfiguracji klienta należy zmienić wartość adresu definicji punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszystkie odwołania do "localhost" w pełni kwalifikowaną nazwę domeny w adresie.  
   
 3. Skonfiguruj maszyny źródła danych:  
   
-    1.  Skopiuj pliki programu źródła danych z folderu \datasource\bin\ w folderze specyficzny dla języka na maszynie źródłowej danych.  
+    1. Skopiuj pliki programu źródła danych z folderu \datasource\bin\ w folderze specyficzny dla języka na maszynie źródłowej danych.  
   
-    2.  W pliku konfiguracji źródła danych Zmień wartość adresu definicji punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszystkie odwołania do "localhost" w pełni kwalifikowaną nazwę domeny w adresie.  
+    2. W pliku konfiguracji źródła danych Zmień wartość adresu definicji punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszystkie odwołania do "localhost" w pełni kwalifikowaną nazwę domeny w adresie.  
   
 4. Na komputerach klienckich należy uruchomić Client.exe z poziomu wiersza polecenia.  
   

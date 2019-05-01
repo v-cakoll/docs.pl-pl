@@ -3,11 +3,11 @@ title: Zalecane ustawienia śledzenia i rejestrowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
 ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779733"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Zalecane ustawienia śledzenia i rejestrowania komunikatów
 W tym temacie opisano zalecane śledzenia i ustawienia rejestrowania komunikatów dla różnych środowisk operacyjnych.  

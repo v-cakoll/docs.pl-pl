@@ -5,11 +5,11 @@ ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
 ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945372"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Pamięcią automatyczną zarządzania i wyrzucania elementów kolekcji.
 

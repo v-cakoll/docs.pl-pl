@@ -10,11 +10,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
 ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781280"
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>Instrukcje: Wypełnianie kształtów teksturą obrazu
 Możesz wypełnić kształt zamknięty tekstury za pomocą <xref:System.Drawing.Image> klasy i <xref:System.Drawing.TextureBrush> klasy.  

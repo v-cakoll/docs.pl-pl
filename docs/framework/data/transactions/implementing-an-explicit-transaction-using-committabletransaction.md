@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793721"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementowanie transakcji jawnej przy użyciu CommitableTransaction
 <xref:System.Transactions.CommittableTransaction> Klasy zapewnia sposób jawny dla aplikacji używać transakcji, w przeciwieństwie do używania <xref:System.Transactions.TransactionScope> niejawnie klasy. Jest to przydatne w przypadku aplikacji, które chcą korzystać z tej samej transakcji w wielu wywołań funkcji lub wielu wywołań wątku. W odróżnieniu od <xref:System.Transactions.TransactionScope> klasy, Edytor aplikacji musi wywołać specjalnie <xref:System.Transactions.CommittableTransaction.Commit%2A> i <xref:System.Transactions.Transaction.Rollback%2A> metody w celu zatwierdzenia lub przerwania transakcji.  
@@ -22,9 +22,9 @@ ms.locfileid: "59105420"
   
  Należy zwrócić uwagę następujących typów podczas pracy z <xref:System.Transactions.CommittableTransaction> klasy,  
   
--   Tworzenie <xref:System.Transactions.CommittableTransaction> transakcji nie ustawiono otoczenia transakcji. Należy w szczególności wartości i zresetować otoczenia transakcji, aby upewnić się, że menedżerów zasobów działają w kontekście transakcji po prawej, w razie potrzeby. Jest sposobem ustawienia bieżącej transakcji otoczenia przez ustawienie statycznego <xref:System.Transactions.Transaction.Current%2A> dla właściwości globalnym <xref:System.Transactions.Transaction> obiektu.  
+- Tworzenie <xref:System.Transactions.CommittableTransaction> transakcji nie ustawiono otoczenia transakcji. Należy w szczególności wartości i zresetować otoczenia transakcji, aby upewnić się, że menedżerów zasobów działają w kontekście transakcji po prawej, w razie potrzeby. Jest sposobem ustawienia bieżącej transakcji otoczenia przez ustawienie statycznego <xref:System.Transactions.Transaction.Current%2A> dla właściwości globalnym <xref:System.Transactions.Transaction> obiektu.  
   
--   Element <xref:System.Transactions.CommittableTransaction> obiektu nie może być używany ponownie. Po <xref:System.Transactions.CommittableTransaction> obiektu została przekazana lub wycofana, nie może być używana ponownie w transakcji. Oznacza to, że nie można ustawić jako bieżący kontekst transakcji otoczenia.  
+- Element <xref:System.Transactions.CommittableTransaction> obiektu nie może być używany ponownie. Po <xref:System.Transactions.CommittableTransaction> obiektu została przekazana lub wycofana, nie może być używana ponownie w transakcji. Oznacza to, że nie można ustawić jako bieżący kontekst transakcji otoczenia.  
   
 ## <a name="creating-a-committabletransaction"></a>Tworzenie CommittableTransaction  
  Poniższy przykład tworzy nowy <xref:System.Transactions.CommittableTransaction> i zatwierdzeń go.  

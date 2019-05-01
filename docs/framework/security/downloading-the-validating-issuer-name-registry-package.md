@@ -3,17 +3,17 @@ title: Pobieranie pakietu sprawdzania poprawności rejestru nazwy dostawcy
 ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
 ms.openlocfilehash: 833a0722fdd27df4e488ed7fac99444c6d9b8905
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940585"
 ---
 # <a name="download-the-validating-issuer-name-registry-package"></a>Pobieranie pakietu sprawdzania poprawności rejestru nazwy wystawcy
 
 W tym temacie omówiono sposób pobierania i wykorzystywania rejestru nazwy wystawcy sprawdzania poprawności (VINR) w projekcie.
 
-Rozszerzenie VINR jest dostępne jako pakiet NuGet, który dodaje niezbędne zespoły i odwołania do projektu. Jeśli nie masz jeszcze zainstalowanego Menedżera NuGet, przejdź do strony [nuget.org](https://nuget.org) go zainstalować. Można zobaczyć historię wersji rozszerzenia odwiedzając jego stronę na NuGet: [Microsoft Validating Issuer Name Registry dla narzędzia NuGet](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
+Rozszerzenie VINR jest dostępne jako pakiet NuGet, który dodaje niezbędne zespoły i odwołania do projektu. Jeśli nie masz jeszcze zainstalowanego Menedżera NuGet, przejdź do strony [nuget.org](https://nuget.org) go zainstalować. Można wyświetlić historię wersji rozszerzenia odwiedzając jego stronę na NuGet: [Microsoft, sprawdzanie poprawności rejestru nazwy wystawcy dla narzędzia NuGet](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
 
 ## <a name="use-the-package-manager-gui"></a>Użyj Menedżera pakietów GUI
 

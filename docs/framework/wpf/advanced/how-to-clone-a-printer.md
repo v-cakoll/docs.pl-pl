@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
 ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776548"
 ---
 # <a name="how-to-clone-a-printer"></a>Instrukcje: Klonowanie drukarki
 Większość firm w pewnym momencie kupić wiele drukarek tego samego modelu. Zazwyczaj te wszystkie są instalowane przy użyciu ustawień konfiguracyjnych niemal identyczne. Instalowanie poszczególnych drukarki może być czasochłonne i podatne. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Przestrzeni nazw i <xref:System.Printing.PrintServer.InstallPrintQueue%2A> klasy, które są udostępniane za pomocą programu Microsoft .NET Framework umożliwia natychmiastowe zainstalować dowolną liczbę dodatkowych kolejek drukowania, które są klonowane z istniejącej kolejki wydruku.  
@@ -28,9 +28,9 @@ Większość firm w pewnym momencie kupić wiele drukarek tego samego modelu. Za
   
 2. Tworzenie <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> z <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> z <xref:System.Printing.PrintQueue>. <xref:System.Collections.DictionaryEntry.Value%2A> Właściwości każdego wpisu, w tym słowniku jest obiektem, jednego z typów pochodnych typu <xref:System.Printing.IndexedProperties.PrintProperty>. Istnieją dwa sposoby, aby ustawić wartość wpisu w tym słowniku.  
   
-    -   Użyj słownika **Usuń** i <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> metody Usuń wpis, a następnie dodaj go ponownie z wymaganą wartość.  
+    - Użyj słownika **Usuń** i <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> metody Usuń wpis, a następnie dodaj go ponownie z wymaganą wartość.  
   
-    -   Użyj słownika <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> metody.  
+    - Użyj słownika <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> metody.  
   
      W poniższym przykładzie przedstawiono w obu kierunkach.  
   

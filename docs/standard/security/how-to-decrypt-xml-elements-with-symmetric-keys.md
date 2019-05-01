@@ -16,11 +16,11 @@ ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795138"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby zaszyfrować element w dokumencie XML.  Szyfrowanie XML umożliwia przechowywania lub transportu poufnych kod XML, nie martwiąc się o łatwo odczytywanych danych.  Ten przykład kodu odszyfrowuje — element XML przy użyciu algorytmu Advanced Encryption Standard (AES), nazywany także Rijndael.  
@@ -72,9 +72,9 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Aby skompilować ten przykład, należy dołączyć odwołanie do `System.Security.dll`.  
+- Aby skompilować ten przykład, należy dołączyć odwołanie do `System.Security.dll`.  
   
--   Uwzględnić następujące przestrzenie nazw: <xref:System.Xml>, <xref:System.Security.Cryptography>, i <xref:System.Security.Cryptography.Xml>.  
+- Uwzględnić następujące przestrzenie nazw: <xref:System.Xml>, <xref:System.Security.Cryptography>, i <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Nigdy nie przechowują klucza kryptograficznego w postaci zwykłego tekstu lub przenieść klucz między maszynami w postaci zwykłego tekstu.  

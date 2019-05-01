@@ -10,11 +10,11 @@ helpviewer_keywords:
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
 ms.openlocfilehash: e440cf49b8b16051361650f9659dc6006c2e7b56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789249"
 ---
 # <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Instrukcje: Animowanie koloru lub nieprzezroczystości elementu SolidColorBrush
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> i <xref:System.Windows.Media.Brush.Opacity%2A> z <xref:System.Windows.Media.SolidColorBrush>.  
@@ -22,11 +22,11 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.SolidColor
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto trzy animacji, aby animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> i <xref:System.Windows.Media.Brush.Opacity%2A> z <xref:System.Windows.Media.SolidColorBrush>.  
   
--   Pierwszy animacji <xref:System.Windows.Media.Animation.ColorAnimation>, zmienia kolor pędzla do <xref:System.Windows.Media.Colors.Gray%2A> gdy wskaźnik myszy zostanie przesunięty prostokąta.  
+- Pierwszy animacji <xref:System.Windows.Media.Animation.ColorAnimation>, zmienia kolor pędzla do <xref:System.Windows.Media.Colors.Gray%2A> gdy wskaźnik myszy zostanie przesunięty prostokąta.  
   
--   Dalej animacji innego <xref:System.Windows.Media.Animation.ColorAnimation>, zmienia kolor pędzla do <xref:System.Windows.Media.Colors.Orange%2A> gdy wskaźnik myszy opuszcza prostokąta.  
+- Dalej animacji innego <xref:System.Windows.Media.Animation.ColorAnimation>, zmienia kolor pędzla do <xref:System.Windows.Media.Colors.Orange%2A> gdy wskaźnik myszy opuszcza prostokąta.  
   
--   Końcowe animacji <xref:System.Windows.Media.Animation.DoubleAnimation>, zmienia przezroczystość pędzla 0,0 po naciśnięciu lewego przycisku myszy.  
+- Końcowe animacji <xref:System.Windows.Media.Animation.DoubleAnimation>, zmienia przezroczystość pędzla 0,0 po naciśnięciu lewego przycisku myszy.  
   
  [!code-csharp[brushanimations_snip#SolidColorBrushAnimationExample](~/samples/snippets/csharp/VS_Snippets_Wpf/brushanimations_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushanimationexample)]  
   

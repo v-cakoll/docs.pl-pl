@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
 ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776483"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Instrukcje: Tworzenie elementu RoutedCommand
 W tym przykładzie pokazano, jak utworzyć niestandardową <xref:System.Windows.Input.RoutedCommand> i jak implementować polecenia niestandardowego przez utworzenie <xref:System.Windows.Input.ExecutedRoutedEventHandler> i <xref:System.Windows.Input.CanExecuteRoutedEventHandler> i dołączania ich do <xref:System.Windows.Input.CommandBinding>.  Aby uzyskać więcej informacji na temat polecenia, zobacz [polecenia Przegląd](commanding-overview.md).  

@@ -1,17 +1,17 @@
 ---
-title: Kroki w przepływie pracy DevOps zewnętrznej pętli dla aplikacji platformy Docker
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+title: Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
+description: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795382"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Tworzenie potoków ciągłej integracji/ciągłego Dostarczania w usłudze Azure Services DevOps dla aplikacji .NET Core 2.0 na kontenerach i wdrażania w klastrze Kubernetes
+# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Tworzenie potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services dla aplikacji .NET Core 2.0 na kontenerach i wdrażanie w klastrze Kubernetes
 
 Rysunek 5-12 widać scenariusza DevOps end-to-end, obejmujące zarządzania kodem, kompilacja kodu, tworzenie obrazów platformy Docker, obrazów platformy Docker, Wypchnij do rejestru platformy Docker, a na koniec wdrożenia w klastrze Kubernetes na platformie Azure.
 

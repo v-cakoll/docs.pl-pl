@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
 ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941326"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Instrukcje: grupowanie kontrolek za pomocą kontrolki GroupBox formularzy systemu Windows
 Windows Forms <xref:System.Windows.Forms.GroupBox> formantów służą do grupowania innych kontrolek. Istnieją trzy powody do formantów grupy:  
   
--   Aby utworzyć wizualne grupowanie elementów powiązanych formularza dla interfejsu użytkownika wyraźne.  
+- Aby utworzyć wizualne grupowanie elementów powiązanych formularza dla interfejsu użytkownika wyraźne.  
   
--   Aby utworzyć programowe grupowanie (of przyciski radiowe, na przykład).  
+- Aby utworzyć programowe grupowanie (of przyciski radiowe, na przykład).  
   
--   Przenoszenia kontrolek jako jednostka, w czasie projektowania.  
+- Przenoszenia kontrolek jako jednostka, w czasie projektowania.  
   
 ### <a name="to-create-a-group-of-controls"></a>Aby utworzyć grupę kontrolek  
   

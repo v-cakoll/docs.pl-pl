@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946747"
 ---
 # <a name="application-settings-architecture"></a>Architektura ustawień aplikacji
 W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje zaawansowanych funkcji architektury, takich jak ustawienia pogrupowanych i klucze ustawienia.  
@@ -24,15 +24,15 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
 ## <a name="defining-settings"></a>Definiowanie ustawień  
  Architektura ustawień aplikacji jest używany w obu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i Windows Forms i zawiera wiele klas bazowych, które są udostępniane w obu środowiskach. Najważniejsze jest <xref:System.Configuration.SettingsBase>, która zapewnia dostęp do ustawień za pomocą kolekcji, a także metody niskiego poziomu ładowania i zapisywania ustawień. Każde środowisko implementuje własne klasy pochodzącej od <xref:System.Configuration.SettingsBase> umożliwiają korzystanie z funkcji dodatkowych ustawień dla tego środowiska. W aplikacji opartej na formularzach Windows, wszystkie ustawienia aplikacji musi być zdefiniowana w klasę pochodną <xref:System.Configuration.ApplicationSettingsBase> klasy, która dodaje następujące funkcje do klasy bazowej:  
   
--   Ładowanie wyższego poziomu i zapisywanie operacji  
+- Ładowanie wyższego poziomu i zapisywanie operacji  
   
--   Obsługa ustawień zakresu użytkownika  
+- Obsługa ustawień zakresu użytkownika  
   
--   Przywracanie ustawień użytkownika do wstępnie zdefiniowanych ustawień domyślnych  
+- Przywracanie ustawień użytkownika do wstępnie zdefiniowanych ustawień domyślnych  
   
--   Uaktualnianie ustawień z poprzedniej wersji aplikacji  
+- Uaktualnianie ustawień z poprzedniej wersji aplikacji  
   
--   Weryfikowanie ustawień, zanim zostaną one zmienione lub przed ich zapisaniem  
+- Weryfikowanie ustawień, zanim zostaną one zmienione lub przed ich zapisaniem  
   
  Ustawienia można opisać za pomocą numeru atrybuty zdefiniowane w ramach <xref:System.Configuration> przestrzeni nazw; te ustawienia zostały opisane w [atrybuty ustawień aplikacji](application-settings-attributes.md). Podczas definiowania ustawienie, należy zastosować go z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, która opisuje, czy ustawienie dotyczy całej aplikacji, lub po prostu bieżącego użytkownika.  
   
@@ -46,11 +46,11 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
   
  System konfiguracyjny, który pierwotnie został wydany przy użyciu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obsługuje, podając dane konfiguracji statycznej aplikacji za pomocą komputera lokalnego pliku machine.config lub w ramach `app.`pliku exe.config, który można wdrożyć za pomocą Twoja aplikacja. <xref:System.Configuration.LocalFileSettingsProvider> Klasa rozszerza ten macierzystą obsługę w następujący sposób:  
   
--   Ustawienia w zakresie aplikacji mogą być przechowywane w dowolnym pliku machine.config lub `app.`exe.config plików. Machine.config zawsze jest tylko do odczytu, podczas `app`. exe.config jest ograniczony przez zagadnienia dotyczące zabezpieczeń tylko do odczytu dla większości aplikacji.  
+- Ustawienia w zakresie aplikacji mogą być przechowywane w dowolnym pliku machine.config lub `app.`exe.config plików. Machine.config zawsze jest tylko do odczytu, podczas `app`. exe.config jest ograniczony przez zagadnienia dotyczące zabezpieczeń tylko do odczytu dla większości aplikacji.  
   
--   Ustawienia z zakresu użytkownika mogą być przechowywane w `app`. exe.config plików, w którym to przypadku będą one traktowane jako statyczne ustawienia domyślne.  
+- Ustawienia z zakresu użytkownika mogą być przechowywane w `app`. exe.config plików, w którym to przypadku będą one traktowane jako statyczne ustawienia domyślne.  
   
--   Inne niż domyślne ustawień zakresu użytkownika są przechowywane w nowym pliku *użytkownika*.config, gdzie *użytkownika* to nazwa użytkownika osoby, w trakcie wykonywania aplikacji. Można określić jako domyślną dla ustawień z zakresu użytkownika za pomocą <xref:System.Configuration.DefaultSettingValueAttribute>. Ponieważ ustawienia z zakresu użytkownika często zmieniać podczas wykonywania aplikacji `user`.config jest zawsze odczytu/zapisu.  
+- Inne niż domyślne ustawień zakresu użytkownika są przechowywane w nowym pliku *użytkownika*.config, gdzie *użytkownika* to nazwa użytkownika osoby, w trakcie wykonywania aplikacji. Można określić jako domyślną dla ustawień z zakresu użytkownika za pomocą <xref:System.Configuration.DefaultSettingValueAttribute>. Ponieważ ustawienia z zakresu użytkownika często zmieniać podczas wykonywania aplikacji `user`.config jest zawsze odczytu/zapisu.  
   
  Wszystkie pliki konfiguracji trzy ustawienia są przechowywane w formacie XML. Element XML najwyższego poziomu dla ustawień o zakresie aplikacji jest `<appSettings>`, podczas gdy `<userSettings>` służy do ustawienia z zakresu użytkownika. `app`. Plik exe.config, który zawiera ustawienia z zakresu aplikacji i ustawień domyślnych ustawień zakresu użytkownika będzie wyglądać następująco:  
   

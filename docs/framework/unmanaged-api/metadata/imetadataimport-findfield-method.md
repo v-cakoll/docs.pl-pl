@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 88cd08b4290739808079bc8ecb713a5c5ea96584
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777900"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField — Metoda
 Pobiera wskaźnik do FieldDef tokenu dla pola, który jest ujęty w określonym <xref:System.Type> i ma określoną sygnaturą nazwy i metadane.  

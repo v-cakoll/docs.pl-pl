@@ -3,11 +3,11 @@ title: Token niestandardowy
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
 ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855052"
 ---
 # <a name="custom-token"></a>Token niestandardowy
 Niniejszy przykład pokazuje, jak dodać niestandardową implementację tokenu w aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` można bezpiecznie przekazać informacje o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowane przy użyciu elementu powiązania zabezpieczeń symetryczne, wraz z treści wiadomości i innych nagłówków wiadomości. Jest to przydatne w przypadkach, gdzie wbudowany tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczającego niestandardowe z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".
@@ -17,13 +17,13 @@ Niniejszy przykład pokazuje, jak dodać niestandardową implementację tokenu w
 
  Aby podsumować, w przykładzie pokazano poniżej:
 
--   Jak klient może przekazać token zabezpieczający niestandardowego do usługi.
+- Jak klient może przekazać token zabezpieczający niestandardowego do usługi.
 
--   Jak usługa korzystać i sprawdzanie poprawności tokenu zabezpieczającego niestandardowych.
+- Jak usługa korzystać i sprawdzanie poprawności tokenu zabezpieczającego niestandardowych.
 
--   Jak kod usługi WCF można uzyskać informacje na temat tokenów zabezpieczających odebrane, wraz z tokenem zabezpieczeń niestandardowych.
+- Jak kod usługi WCF można uzyskać informacje na temat tokenów zabezpieczających odebrane, wraz z tokenem zabezpieczeń niestandardowych.
 
--   Jak certyfikat X.509 umożliwia ochronę klucz symetryczny, używany do szyfrowania wiadomości i podpis.
+- Jak certyfikat X.509 umożliwia ochronę klucz symetryczny, używany do szyfrowania wiadomości i podpis.
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>Uwierzytelnianie klienta przy użyciu tokenu zabezpieczającego niestandardowe
  Usługa udostępnia pojedynczy punkt końcowy, który programowo jest tworzony przy użyciu `BindingHelper` i `EchoServiceHost` klasy. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane z niestandardowego powiązania za pomocą `SymmetricSecurityBindingElement` i `HttpTransportBindingElement`. W tym przykładzie ustawia `SymmetricSecurityBindingElement` do użycia certyfikatu X.509 usługi ochrony klucza symetrycznego podczas przesyłania i przekazać niestandardową `CreditCardToken` w nagłówku wiadomości WS-Security jako token zabezpieczający podpisane i zaszyfrowane. Zachowanie Określa poświadczenia usługi, które mają być używane do uwierzytelniania klienta, a także informacje o certyfikacie X.509.
@@ -543,7 +543,7 @@ string GetCallerCreditCardNumber()
 
  Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.
 
--   Tworzenie certyfikatu serwera:
+- Tworzenie certyfikatu serwera:
 
      Następujące wiersze z `Setup.bat` plik wsadowy utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Domyślnie ten plik wsadowy jest localhost. Jeśli zmienisz `%SERVER_NAME%` zmiennych, musisz przejść przez pliki Client.cs i Service.cs i Zamień wszystkie wystąpienia elementu localhost nazwę serwera, którego używasz w skrypt Setup.bat jest.
 
@@ -559,7 +559,7 @@ string GetCallerCreditCardNumber()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
 
      Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 
@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Aby włączyć dostęp do klucza prywatnego certyfikatu z usług hostowanych przez usługi IIS, konto użytkownika, na którym uruchomiono proces hostowanych przez usługi IIS musi otrzymać odpowiednie uprawnienia dla klucza prywatnego. Jest to realizowane przez ostatnie kroki skrypt Setup.bat jest.
+- Aby włączyć dostęp do klucza prywatnego certyfikatu z usług hostowanych przez usługi IIS, konto użytkownika, na którym uruchomiono proces hostowanych przez usługi IIS musi otrzymać odpowiednie uprawnienia dla klucza prywatnego. Jest to realizowane przez ostatnie kroki skrypt Setup.bat jest.
 
     ```
     echo ************

@@ -13,11 +13,11 @@ ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 681c0f1f918c8991ed2544189488d1ea25547834
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935398"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Instrukcje: Określanie harmonogramu zadań w bloku przepływu danych
 W tym dokumencie pokazano, jak skojarzyć harmonogram zadań szczególnych, korzystając z przepływu danych w aplikacji. W przykładzie użyto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> klasy w aplikacji Windows Forms do wyświetlenia, gdy czytnik zadania są aktywne i podczas zadania zapisywania jest aktywny. Korzysta również <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> metodę umożliwiającą włączenie bloku przepływu danych do uruchamiania w wątku interfejsu użytkownika.

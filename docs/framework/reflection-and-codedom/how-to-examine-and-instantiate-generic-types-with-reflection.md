@@ -12,11 +12,11 @@ ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793227"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Instrukcje: Badanie i tworzenie wystąpień typów ogólnych za pomocą odbicia
 Informacje o typach ogólnych jest uzyskane w ten sam sposób jak informacje o innych typach:, sprawdzając <xref:System.Type> obiekt, który reprezentuje typ ogólny. Główna różnica polega na tym, typu ogólnego zawiera listę <xref:System.Type> obiekty reprezentujące jego parametrów typu rodzajowego. Pierwsza procedura w tej sekcji sprawdza typów ogólnych.  
@@ -117,11 +117,11 @@ Informacje o typach ogólnych jest uzyskane w ten sam sposób jak informacje o i
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
+- Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
   
--   Nie odwołania do zestawu dodatkowe są wymagane.  
+- Nie odwołania do zestawu dodatkowe są wymagane.  
   
--   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
+- Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
 

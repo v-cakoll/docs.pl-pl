@@ -11,11 +11,11 @@ ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 448712561f1531a055ac141db9825581525c779c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948940"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>Funkcja _AxlGetIssuerPublicKeyHash
 Pobiera Skrót SHA-1 klucza publicznego skojarzonego z kluczem prywatnym, który jest używany do podpisywania określonego certyfikatu.  

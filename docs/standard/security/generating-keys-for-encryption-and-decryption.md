@@ -17,11 +17,11 @@ ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795216"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generowanie kluczy szyfrowania i odszyfrowywania
 Tworzenie i zarządzanie kluczami jest ważną częścią procesu szyfrowania. Symetryczne algorytmy wymaga utworzenia klucza i wektor inicjowania (IV). Klucz musi trzymane w tajemnicy każdy, kto powinien nie odszyfrowania danych. IV nie muszą być wpisu tajnego, ale powinna zostać zmieniona dla każdej sesji. Asymetryczne algorytmy wymagają utworzenia klucza publicznego i prywatnego klucza. Klucz publiczny mogą być ujawniane dla każdego, kto, gdy klucz prywatny musi znane tylko przez strony, która spowoduje odszyfrowanie dane zaszyfrowane przy użyciu klucza publicznego. W tej sekcji opisano sposób generowania i zarządzania kluczami symetrycznego i asymetrycznych algorytmów.  
@@ -64,9 +64,9 @@ tdes.GenerateKey();
   
  Pary kluczy publiczny/prywatny jest generowany, gdy tworzone jest nowe wystąpienie klasy algorytmu asymetrycznego. Po utworzeniu nowe wystąpienie klasy informacje o kluczu można wyodrębnić przy użyciu jednej z dwóch metod:  
   
--   <xref:System.Security.Cryptography.RSA.ToXmlString%2A> Metody, która zwraca informacje o kluczu Reprezentacja XML.  
+- <xref:System.Security.Cryptography.RSA.ToXmlString%2A> Metody, która zwraca informacje o kluczu Reprezentacja XML.  
   
--   <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> Metody, która zwraca <xref:System.Security.Cryptography.RSAParameters> strukturę, która przechowuje informacje o kluczu.  
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> Metody, która zwraca <xref:System.Security.Cryptography.RSAParameters> strukturę, która przechowuje informacje o kluczu.  
   
  Obie metody zaakceptuj wartość logiczna, która wskazuje, czy zwracać tylko informacje o kluczu publicznym lub w celu zwrócenia zarówno klucz publiczny, jak i informacje klucza prywatnego. **RSACryptoServiceProvider** klasy mogą być inicjowane na wartość **RSAParameters** struktury za pomocą <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> metody.  
   

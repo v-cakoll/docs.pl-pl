@@ -3,11 +3,11 @@ title: Formatowanie kodu HTTP dla sieci Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935476"
 ---
 # <a name="wcf-web-http-formatting"></a>Formatowanie kodu HTTP dla sieci Web WCF
 Model programowania protokołu HTTP sieci Web WCF umożliwia dynamiczne określanie najlepszy format dla operacji usługi do zwrócenia w odpowiedzi. Obsługiwane są dwie metody, określając odpowiedni format: automatyczne i jawne.  
@@ -125,15 +125,15 @@ public class Service : IService
   
  Jeśli potrzebujesz do obsługi formatów innych niż JSON lub XML, zdefiniuj operacji ma typ zwracany <xref:System.ServiceModel.Channels.Message>. W kodzie operacji ustala odpowiedni format można użyć, a następnie utwórz <xref:System.ServiceModel.Channels.Message> obiektu przy użyciu jednej z następujących metod:  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  Każda z tych metod przyjmuje zawartości i tworzy komunikat z odpowiednim formacie. `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` Metoda może służyć do uzyskania listy formatów preferowane przez klienta w kolejności malejących preferencji. Poniższy przykład pokazuje, jak używać `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` do określenia formatu do użycia, a następnie używa odpowiednie utworzyć metodę odpowiedzi w celu utworzenia komunikatu odpowiedzi.  
   

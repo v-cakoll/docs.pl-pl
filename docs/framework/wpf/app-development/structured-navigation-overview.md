@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788833"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i przejście przez hiperłącza. Struktura stron i sposoby, w którym ich można nawigować, zgodnie z definicją hiperłącza, jest określany jako topologia nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które nawigowania w dokumentach. Na potrzeby takich aplikacji użytkownik może przejść z jednej strony do innej strony bez dowolnej stronie znajomości o innych.  
@@ -25,15 +25,15 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
 ## <a name="structured-navigation"></a>Strukturyzowana Nawigacja  
  Gdy jedna strona wywołuje innej strony w strukturyzowana Nawigacja, wymagane są niektóre lub wszystkie z następujących problemów:  
   
--   Strony wywołania powoduje przejście do strony o nazwie, opcjonalnie przekazując parametrów wymaganych przez stronę o nazwie.  
+- Strony wywołania powoduje przejście do strony o nazwie, opcjonalnie przekazując parametrów wymaganych przez stronę o nazwie.  
   
--   Stronę o nazwie po ukończeniu przez użytkownika, za pomocą strony wywołania zwraca specjalnie do wywoływania strony, opcjonalnie:  
+- Stronę o nazwie po ukończeniu przez użytkownika, za pomocą strony wywołania zwraca specjalnie do wywoływania strony, opcjonalnie:  
   
-    -   Zwraca informacje o stanie, który opisuje sposób wywoływania strony zostało zakończone (na przykład, czy użytkownik nacisnął przycisk OK lub przycisk Anuluj).  
+    - Zwraca informacje o stanie, który opisuje sposób wywoływania strony zostało zakończone (na przykład, czy użytkownik nacisnął przycisk OK lub przycisk Anuluj).  
   
-    -   Zwracanie danych zebranych od użytkownika (na przykład nowe szczegóły pracowników).  
+    - Zwracanie danych zebranych od użytkownika (na przykład nowe szczegóły pracowników).  
   
--   Po powrocie do strony o nazwie wywoływania strony strony o nazwie zostanie usunięty z historii przeglądania do izolowania jedno wystąpienie o nazwie strony z innego.  
+- Po powrocie do strony o nazwie wywoływania strony strony o nazwie zostanie usunięty z historii przeglądania do izolowania jedno wystąpienie o nazwie strony z innego.  
   
  Te zachowania są zilustrowane w poniższym rysunku:  
   
@@ -115,17 +115,17 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
   
  Nie jest wymagane w celu przekazania parametrów do strony o nazwie. Zamiast tego można wykonać następujące czynności:  
   
--   Ze strony wywołania:  
+- Ze strony wywołania:  
   
-    1.  Wystąpienia o nazwie <xref:System.Windows.Navigation.PageFunction%601> przy użyciu domyślnego konstruktora.  
+    1. Wystąpienia o nazwie <xref:System.Windows.Navigation.PageFunction%601> przy użyciu domyślnego konstruktora.  
   
-    2.  Store parametrów w <xref:System.Windows.Application.Properties%2A>.  
+    2. Store parametrów w <xref:System.Windows.Application.Properties%2A>.  
   
-    3.  Przechodzenie do wywoływanego <xref:System.Windows.Navigation.PageFunction%601>.  
+    3. Przechodzenie do wywoływanego <xref:System.Windows.Navigation.PageFunction%601>.  
   
--   Z o nazwie <xref:System.Windows.Navigation.PageFunction%601>:  
+- Z o nazwie <xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   Pobrać i używać parametrów przechowywanych w <xref:System.Windows.Application.Properties%2A>.  
+    - Pobrać i używać parametrów przechowywanych w <xref:System.Windows.Application.Properties%2A>.  
   
  Jednak ponieważ pojawi się wkrótce, nadal konieczne użyjesz kodu do tworzenia instancji i przejdź do strony o nazwie do zbierania danych zwracanych przez stronę o nazwie. Z tego powodu <xref:System.Windows.Navigation.PageFunction%601> musi znajdować się aktywny; w przeciwnym razie, przy następnym przejściu do sekcji <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tworzy <xref:System.Windows.Navigation.PageFunction%601> przy użyciu domyślnego konstruktora.  
   

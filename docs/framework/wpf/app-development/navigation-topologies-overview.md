@@ -10,11 +10,11 @@ helpviewer_keywords:
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
 ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794683"
 ---
 # <a name="navigation-topologies-overview"></a>Przegląd Topologia nawigacji
 <a name="introduction"></a> W tym omówieniu przedstawiono wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Następnie opisano trzy popularne topologie nawigacji, z przykładami.  
@@ -24,15 +24,15 @@ ms.locfileid: "59230866"
   
  Ten temat zawiera następujące sekcje:  
   
--   [Topologie nawigacji](#Navigation_Topologies)  
+- [Topologie nawigacji](#Navigation_Topologies)  
   
--   [Topologie strukturyzowana Nawigacja](#Structured_Navigation_Topologies)  
+- [Topologie strukturyzowana Nawigacja](#Structured_Navigation_Topologies)  
   
--   [Nawigacja za pośrednictwem stały liniowa topologia](#Navigation_over_a_Fixed_Linear_Topology)  
+- [Nawigacja za pośrednictwem stały liniowa topologia](#Navigation_over_a_Fixed_Linear_Topology)  
   
--   [Dynamicznej nawigacji nad stały hierarchiczna topologia](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
+- [Dynamicznej nawigacji nad stały hierarchiczna topologia](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
   
--   [Nawigacja w dynamicznie generowanym topologii](#Navigation_over_a_Dynamically_Generated_Topology)  
+- [Nawigacja w dynamicznie generowanym topologii](#Navigation_over_a_Dynamically_Generated_Topology)  
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologie nawigacji  
@@ -52,9 +52,9 @@ ms.locfileid: "59230866"
 ## <a name="structured-navigation-topologies"></a>Topologie strukturyzowana Nawigacja  
  Istnieją dwa ogólne typy topologie nawigacji:  
   
--   **Stała topologia**: zdefiniowany w czasie kompilacji i nie zmienia się w czasie wykonywania. Naprawiono topologii są przydatne do nawigacji za pomocą stałych sekwencji stron w kolejności liniowy lub hierarchiczny.  
+- **Stała topologia**: zdefiniowany w czasie kompilacji i nie zmienia się w czasie wykonywania. Naprawiono topologii są przydatne do nawigacji za pomocą stałych sekwencji stron w kolejności liniowy lub hierarchiczny.  
   
--   **Dynamiczne topologii**: zdefiniowany w czasie wykonywania, w oparciu o dane wejściowe, które są zbierane od użytkownika, aplikacji lub systemu. Dynamiczne topologii są przydatne, gdy strony można nawigować w różnych sekwencji.  
+- **Dynamiczne topologii**: zdefiniowany w czasie wykonywania, w oparciu o dane wejściowe, które są zbierane od użytkownika, aplikacji lub systemu. Dynamiczne topologii są przydatne, gdy strony można nawigować w różnych sekwencji.  
   
  Chociaż istnieje możliwość utworzenia topologie nawigacji za pomocą stron, przykłady funkcji strony należy użyć w sytuacji, ponieważ zapewniają dodatkową pomoc, która upraszcza obsługę przekazywanie i zwracanie danych na stronach topologii.  
   
@@ -66,21 +66,21 @@ ms.locfileid: "59230866"
   
  Następujące typowe zachowania do nawigowania w stałym liniowa topologia:  
   
--   Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
+- Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
   
--   Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
+- Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
   
--   Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
+- Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
   
--   Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
+- Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
   
--   Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
+- Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
   
--   Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
+- Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
   
--   Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
+- Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
   
--   Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
+- Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Dynamicznej nawigacji nad stały hierarchiczna topologia  
@@ -94,23 +94,23 @@ ms.locfileid: "59230866"
   
  Mimo że sekwencji, w którym są przejście stron w strukturze hierarchicznej stałej jest określana w czasie wykonywania, środowisko użytkownika jest taki sam jak środowiska użytkownika dla stałych liniowa topologia:  
   
--   Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
+- Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
   
--   Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
+- Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
   
--   Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
+- Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
   
--   Użytkownicy mogą zmienić sekwencję nawigacji, jeśli ich poruszanie się wstecz arkusza.  
+- Użytkownicy mogą zmienić sekwencję nawigacji, jeśli ich poruszanie się wstecz arkusza.  
   
--   Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
+- Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
   
--   Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
+- Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
   
--   Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
+- Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
   
--   Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
+- Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
   
--   Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
+- Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Nawigacja w dynamicznie generowanym topologii  
@@ -124,21 +124,21 @@ ms.locfileid: "59230866"
   
  Sekwencję nawigacji jest określany jako dynamicznie generowanym topologii. Dla użytkownika jako przy użyciu innych topologie nawigacji środowisko użytkownika jest taka sama jak w przypadku poprzedniego topologii:  
   
--   Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
+- Przechodząc ze strony wywołania do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]— mniej <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagane, ponieważ wywołujący strony można bezpośrednio wywoływać pierwszej stronie kreatora. Przy użyciu strony uruchamiania, jednak można uprościć inicjowanie kreatora, szczególnie w przypadku, gdy inicjalizacja jest złożony.  
   
--   Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
+- Użytkownicy mogą przejść między stronami, korzystając z tyłu i do przodu przycisków (lub hiperłącza).  
   
--   Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
+- Użytkownicy mogą przejść między stronami przy użyciu arkusza.  
   
--   Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
+- Użytkownikom można anulować kreatora z dowolnej strony kreatora, naciskając przycisk Anuluj.  
   
--   Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
+- Użytkownicy mogą zaakceptować kreatora na ostatniej stronie kreatora, naciskając przycisk Zakończ.  
   
--   Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
+- Jeśli Kreator zostanie anulowane, Kreator zwraca odpowiedni wynik i nie zwraca żadnych danych.  
   
--   Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
+- Jeśli użytkownik zaakceptuje kreatora, Kreator zwraca odpowiedni wynik i zwraca dane zebrane.  
   
--   Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
+- Po ukończeniu pracy kreatora (zaakceptowane lub anulowane), stron, które obejmuje kreatora są usuwane z dziennika. Dzięki temu każde wystąpienie Kreatora izolowane, zapobiegając potencjalnych danych lub nieprawidłowości stanu.  
   
 ## <a name="see-also"></a>Zobacz także
 

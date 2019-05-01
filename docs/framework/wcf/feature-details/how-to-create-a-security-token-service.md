@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787676"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Instrukcje: tworzenie usługi tokenów zabezpieczeń
 Usługa tokenu zabezpieczającego implementuje protokół zdefiniowane w specyfikacji WS-Trust. Protokół ten definiuje formaty wiadomości i wzorców wymiany wiadomości dla wystawiającego certyfikaty, odnawiania, anulowanie i sprawdzanie poprawności tokenów zabezpieczających. Usługa tokenu zabezpieczającego danego zawiera co najmniej jedną z tych funkcji. W tym temacie wygląda najbardziej typowy scenariusz: Implementowanie wystawiania tokenu.  
@@ -24,61 +24,61 @@ Usługa tokenu zabezpieczającego implementuje protokół zdefiniowane w specyfi
 ### <a name="request-message-structure"></a>Struktura komunikatu żądania  
  Struktura komunikatu żądania problem zwykle składa się z następujących elementów:  
   
--   Żądanie wpisz identyfikator URI o wartości `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
+- Żądanie wpisz identyfikator URI o wartości `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Typ tokenu identyfikatora URI. Tokeny zabezpieczeń potwierdzenia Markup Language (SAML) 1.1, wartość tego identyfikatora URI jest `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
+- Typ tokenu identyfikatora URI. Tokeny zabezpieczeń potwierdzenia Markup Language (SAML) 1.1, wartość tego identyfikatora URI jest `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
--   Wartość rozmiaru klucza, która wskazuje liczbę bitów w kluczu, który ma zostać skojarzony z wystawiony token.  
+- Wartość rozmiaru klucza, która wskazuje liczbę bitów w kluczu, który ma zostać skojarzony z wystawiony token.  
   
--   Typ klucza identyfikatora URI. Klucze symetryczne, wartość tego identyfikatora URI jest `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
+- Typ klucza identyfikatora URI. Klucze symetryczne, wartość tego identyfikatora URI jest `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Ponadto kilka innych elementów mogą być obecne:  
   
--   Materiał klucza dostarczonych przez klienta.  
+- Materiał klucza dostarczonych przez klienta.  
   
--   Informacje o zakresie, który wskazuje Usługa docelowa, która wystawiony token będą używane z.  
+- Informacje o zakresie, który wskazuje Usługa docelowa, która wystawiony token będą używane z.  
   
  Usługa tokenu zabezpieczającego używa tych informacji w komunikacie żądania problem podczas jego tworzy komunikat odpowiedzi na problem.  
   
 ## <a name="response-message-structure"></a>Struktura komunikat odpowiedzi  
  Struktura komunikat odpowiedzi problem zwykle składa się z następujących elementów;  
   
--   Token zabezpieczeń, na przykład potwierdzenia języka SAML 1.1.  
+- Token zabezpieczeń, na przykład potwierdzenia języka SAML 1.1.  
   
--   Token potwierdzenia skojarzone z tokenem zabezpieczeń. Dla kluczy symetrycznych to często zaszyfrowanej formie materiału klucza.  
+- Token potwierdzenia skojarzone z tokenem zabezpieczeń. Dla kluczy symetrycznych to często zaszyfrowanej formie materiału klucza.  
   
--   Odwołania do tokenu zabezpieczeń. Zazwyczaj usługa tokenu zabezpieczającego zwraca odwołania, które mogą być używane podczas wystawiony token, który pojawia się w kolejnych wiadomością wysłaną przez klienta, a drugi, można użyć, gdy token nie znajduje się w kolejnych komunikatów.  
+- Odwołania do tokenu zabezpieczeń. Zazwyczaj usługa tokenu zabezpieczającego zwraca odwołania, które mogą być używane podczas wystawiony token, który pojawia się w kolejnych wiadomością wysłaną przez klienta, a drugi, można użyć, gdy token nie znajduje się w kolejnych komunikatów.  
   
  Ponadto kilka innych elementów mogą być obecne:  
   
--   Materiał klucza, dostarczone przez usługę tokenu zabezpieczającego.  
+- Materiał klucza, dostarczone przez usługę tokenu zabezpieczającego.  
   
--   Algorytm potrzebnych do obliczenia klucza współużytkowanego.  
+- Algorytm potrzebnych do obliczenia klucza współużytkowanego.  
   
--   Okres istnienia informacje dla wystawiony token.  
+- Okres istnienia informacje dla wystawiony token.  
   
 ## <a name="processing-request-messages"></a>Przetwarzanie komunikatów żądań  
  Usługa tokenu zabezpieczającego przetwarza żądanie problem, sprawdzając różnych rodzajów komunikatu żądania i zapewnienie, że może to wystawić tokenu, który spełnia żądanie. Przed jego tworzy token został wystawiony, usługę tokenu zabezpieczającego muszą określić następujące czynności:  
   
--   Żądanie jest naprawdę żądania token został wystawiony.  
+- Żądanie jest naprawdę żądania token został wystawiony.  
   
--   Usługa tokenu zabezpieczającego obsługuje żądanego typu tokenu.  
+- Usługa tokenu zabezpieczającego obsługuje żądanego typu tokenu.  
   
--   Żądający jest uprawniony do utworzenia żądania.  
+- Żądający jest uprawniony do utworzenia żądania.  
   
--   Usługa tokenu zabezpieczającego można spełniają oczekiwań żądającego względem materiału klucza.  
+- Usługa tokenu zabezpieczającego można spełniają oczekiwań żądającego względem materiału klucza.  
   
  Dwie kluczowe części konstruowanie token są określania, jakie klucza do podpisywania tokenu z i jakie klucz w celu zaszyfrowania klucza wstępnego za pomocą. Token musi być podpisany, dzięki czemu gdy klient przedstawia token do docelowej usługi, że usługa może określić, że token został wystawiony przez usługę tokenu zabezpieczającego, które uzna. Materiał klucza musi być szyfrowane w taki sposób, że Usługa docelowa może odszyfrować tego materiału klucza.  
   
  Podpisywanie potwierdzenie SAML obejmuje utworzenie <xref:System.IdentityModel.Tokens.SigningCredentials> wystąpienia. Konstruktor dla tej klasy wykonuje następujące czynności:  
   
--   A <xref:System.IdentityModel.Tokens.SecurityKey> klucz używany do podpisywania dla asercji SAML.  
+- A <xref:System.IdentityModel.Tokens.SecurityKey> klucz używany do podpisywania dla asercji SAML.  
   
--   Ciąg identyfikujący algorytm podpisu, który ma być używany.  
+- Ciąg identyfikujący algorytm podpisu, który ma być używany.  
   
--   Ciąg identyfikujący algorytm tworzenia skrótu.  
+- Ciąg identyfikujący algorytm tworzenia skrótu.  
   
--   Opcjonalnie <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> określający klucz używany do podpisywania potwierdzenia.  
+- Opcjonalnie <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> określający klucz używany do podpisywania potwierdzenia.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  

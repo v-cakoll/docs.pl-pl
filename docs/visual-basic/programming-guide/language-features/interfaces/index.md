@@ -8,24 +8,24 @@ helpviewer_keywords:
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775937"
 ---
 # <a name="interfaces-visual-basic"></a>Interfejsy (Visual Basic)
 *Interfejsy* zdefiniować właściwości, metody i zdarzenia, które można zaimplementować klasy. Interfejsy umożliwiają definiowanie funkcji jako mniejszym grupom ściśle powiązanych właściwości, metod i zdarzeń; Zmniejsza to problemów ze zgodnością, ponieważ możesz tworzyć rozszerzone implementacji interfejsów sieci bez narażenia istniejącego kodu. Opracowując implementacji i dodatkowe interfejsy, można dodać nowe funkcje w dowolnym momencie.  
   
  Istnieje kilka innych powodów dlaczego warto używać interfejsów zamiast dziedziczenia klasy:  
   
--   Interfejsy są bardziej odpowiednie do sytuacji, w których aplikacje wymagają, że wiele prawdopodobnie niezwiązanych ze sobą typy obiektów, które umożliwiają korzystanie z niektórych funkcji.  
+- Interfejsy są bardziej odpowiednie do sytuacji, w których aplikacje wymagają, że wiele prawdopodobnie niezwiązanych ze sobą typy obiektów, które umożliwiają korzystanie z niektórych funkcji.  
   
--   Interfejsy są bardziej elastyczne niż klas bazowych, ponieważ możesz zdefiniować pojedynczej implementacji, które można zaimplementować wiele interfejsów.  
+- Interfejsy są bardziej elastyczne niż klas bazowych, ponieważ możesz zdefiniować pojedynczej implementacji, które można zaimplementować wiele interfejsów.  
   
--   Interfejsy są lepsze w sytuacjach, w których nie trzeba dziedziczyć implementacji klasy podstawowej.  
+- Interfejsy są lepsze w sytuacjach, w których nie trzeba dziedziczyć implementacji klasy podstawowej.  
   
--   Interfejsy są przydatne, gdy nie można użyć dziedziczenia klas. Na przykład struktury nie może dziedziczyć z klasy, ale mogące implementować interfejsy.  
+- Interfejsy są przydatne, gdy nie można użyć dziedziczenia klas. Na przykład struktury nie może dziedziczyć z klasy, ale mogące implementować interfejsy.  
   
 ## <a name="declaring-interfaces"></a>Deklarowanie interfejsów  
  Definicje interfejsu są ujęte w `Interface` i `End Interface` instrukcji. Następujące `Interface` instrukcji, można dodać opcjonalny `Inherits` instrukcję, która zawiera jeden lub więcej dziedziczonych interfejsów. `Inherits` Instrukcji musi poprzedzać wszystkie inne instrukcje w deklaracji z wyjątkiem komentarzy. Pozostałe instrukcje w definicji interfejsu powinny być `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`, i `Enum` instrukcji. Interfejsy nie mogą zawierać kod implementacji ani instrukcje związane z kodu realizacji, takie jak `End Sub` lub `End Property`.  

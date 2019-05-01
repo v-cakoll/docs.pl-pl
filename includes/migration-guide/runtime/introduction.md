@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3dc8f9f33ef4f1979fa1f777f18ffe328d44a96b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763883"
+---
 ## <a name="introduction"></a>Wprowadzenie
 Zmiany środowiska uruchomieniowego wpływają na wszystkie aplikacje, które działają na platformie .NET Framework nie został wcześniej skompilowany, które używają poszczególnych funkcji.
 

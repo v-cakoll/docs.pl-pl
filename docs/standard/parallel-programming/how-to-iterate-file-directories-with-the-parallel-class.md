@@ -11,11 +11,11 @@ ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c1ec270159430434adc074f1fa6ca92ec3c4a455
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781215"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Instrukcje: Iteracja katalogów plików przy użyciu klas równoległych
 W wielu przypadkach, iteracja po plikach jest operacją, która może zostać łatwo zrównoleglona. Temat [jak: Iteracja katalogów plików przy użyciu PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) pokazuje najprostszy sposób wykonania tego zadania dla wielu scenariuszy. Jednak mogą pojawić się komplikacje, gdy w kodzie trzeba sobie poradzić z wieloma rodzajami wyjątków, które mogą zostać zgłoszone podczas dostępu do systemu plików. W poniższym przykładzie pokazano jedno z podejść do problemu. Użyto w nim iteracji opartej na stosie, aby przejść przez wszystkie pliki i foldery w określonym katalogu, co umożliwia przechwytywanie i obsługę różnych wyjątków w kodzie. Oczywiście sposób obsługi wyjątków zależy od dewelopera.  

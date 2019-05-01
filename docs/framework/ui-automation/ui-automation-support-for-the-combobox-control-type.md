@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
 ms.openlocfilehash: 7e458d95f81893d61bcf19f7fe611e3424f27e37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785440"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu ComboBox
 > [!NOTE]
@@ -57,8 +57,8 @@ ms.locfileid: "59126740"
   
 |— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Tak|Kontrolka pola kombi musi zawsze zawierać przycisk listy rozwijanej, aby pola kombi.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Yes|Wyświetla bieżące zaznaczenie w polu kombi. Ta funkcja jest delegowane do pola listy poniżej pola kombi.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Yes|Kontrolka pola kombi musi zawsze zawierać przycisk listy rozwijanej, aby pola kombi.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Tak|Wyświetla bieżące zaznaczenie w polu kombi. Ta funkcja jest delegowane do pola listy poniżej pola kombi.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Jeśli pole kombi ma możliwość korzystania z wartości dowolnego tekstu, wzorca wartości muszą być obsługiwane. Ten wzorzec umożliwia programowe Ustawianie zawartość ciągu w polu kombi. Jeśli wzorzec wartość nie jest obsługiwana, oznacza to, czy użytkownik musi dokonać wyboru z listy elementów w poddrzewie pola kombi.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|nigdy nie|Wzorzec przewijania nigdy nie jest obsługiwana w polu kombi bezpośrednio. Jest ona obsługiwana przewinięciu zawartych w polu kombi pola listy. Może być obsługiwany, tylko gdy pola listy jest widoczne na ekranie.|  
   

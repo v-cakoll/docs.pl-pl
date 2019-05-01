@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 277e7e57ae01128039c3a280158110acde3363a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944550"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd — Metoda
 Scala do bieżącego zakresu zakresy metadanych określone przez co najmniej jeden poprzedniego wywołania [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -41,25 +41,25 @@ HRESULT MergeEnd ();
   
  Scalenie stosują się następujące warunki specjalne:  
   
--   Identyfikator wersji modułu (identyfikatorem MVID) nigdy nie jest importowany, ponieważ jest on unikatowy dla metadanych w zakresie importowania.  
+- Identyfikator wersji modułu (identyfikatorem MVID) nigdy nie jest importowany, ponieważ jest on unikatowy dla metadanych w zakresie importowania.  
   
--   Nie istniejących właściwości całego modułu zostaną zastąpione.  
+- Nie istniejących właściwości całego modułu zostaną zastąpione.  
   
      Jeśli moduł właściwości zostały skonfigurowane dla bieżącego zakresu, zostaną zaimportowane żadnych właściwości modułu. Jednakże jeśli nie ustawiono właściwości modułu w bieżącym zakresie, zaimportowaniu tylko raz, po ich pierwszym napotkaniu. Jeśli te właściwości modułu wystąpi ponownie, są one duplikaty. Jeśli są porównywane wartości wszystkich właściwości modułu (z wyjątkiem identyfikatora MVID) i duplikaty nie zostaną znalezione, zgłaszany jest błąd.  
   
--   Aby uzyskać definicje typów (`TypeDef`), bez duplikatów są scalane w bieżącym zakresie. `TypeDef` obiekty są sprawdzane duplikatów w odniesieniu do każdego *obiektu w pełni kwalifikowana nazwa* + *GUID* + *numer wersji*. Jeśli są zgodne na nazwę lub identyfikator GUID i inne elementy są różne, zgłaszany jest błąd. W przeciwnym razie, jeśli wszystkie trzy elementy są zgodne, `MergeEnd` wykonuje sprawdzenie pobieżną, aby upewnić się, wpisy są rzeczywiście duplikaty; w przeciwnym razie występuje błąd. To sprawdzenie pobieżną szuka:  
+- Aby uzyskać definicje typów (`TypeDef`), bez duplikatów są scalane w bieżącym zakresie. `TypeDef` obiekty są sprawdzane duplikatów w odniesieniu do każdego *obiektu w pełni kwalifikowana nazwa* + *GUID* + *numer wersji*. Jeśli są zgodne na nazwę lub identyfikator GUID i inne elementy są różne, zgłaszany jest błąd. W przeciwnym razie, jeśli wszystkie trzy elementy są zgodne, `MergeEnd` wykonuje sprawdzenie pobieżną, aby upewnić się, wpisy są rzeczywiście duplikaty; w przeciwnym razie występuje błąd. To sprawdzenie pobieżną szuka:  
   
-    -   Ten sam element członkowski deklaracji, pojawiają się w tej samej kolejności. Elementy członkowskie, które są oznaczane jako `mdPrivateScope` (zobacz [cormethodattr —](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) wyliczenie) nie są uwzględnione w tym wyboru; są one scalane specjalnie.  
+    - Ten sam element członkowski deklaracji, pojawiają się w tej samej kolejności. Elementy członkowskie, które są oznaczane jako `mdPrivateScope` (zobacz [cormethodattr —](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) wyliczenie) nie są uwzględnione w tym wyboru; są one scalane specjalnie.  
   
-    -   Taki sam układ klasy.  
+    - Taki sam układ klasy.  
   
      Oznacza to, że `TypeDef` obiektu muszą zawsze być spójnie i w pełni zdefiniowana w każdym zakresie metadanych w której jest zadeklarowana; jeśli jego implementacji elementu członkowskiego (dla klasy) są rozmieszczone w wielu jednostkach kompilacji, pełna definicja zakłada się, że obecny w każdym zakresie, a nie przyrostowa każdego zakresu. Na przykład jeśli nazwy parametrów są istotne dla kontraktu, ich musi być emitowane taki sam sposób do każdego zakresu; Jeśli nie są istotne, nie należy ich wydane do metadanych.  
   
      Wyjątkiem jest to, że `TypeDef` obiekt może mieć przyrostowe składowe oznaczone jako `mdPrivateScope`. Po wystąpieniu, `MergeEnd` przyrostowo dodaje je do bieżącego zakresu, bez względu na duplikaty. Ponieważ kompilator rozpoznaje zakres prywatnych, kompilator musi być odpowiedzialne za wymuszanie stosowania zasad.  
   
--   Względnych adresów wirtualnych (RVA) nie są importowane lub scalić; kompilator powinien ponownie wyemitować tych informacji.  
+- Względnych adresów wirtualnych (RVA) nie są importowane lub scalić; kompilator powinien ponownie wyemitować tych informacji.  
   
--   Atrybuty niestandardowe są scalane, tylko wtedy, gdy jest scalany elementu, do której są dołączone. Na przykład niestandardowe atrybuty powiązane z klasą zostaną scalone, po pierwszym napotkaniu klasy. Jeśli atrybutów niestandardowych, które są skojarzone z `TypeDef` lub `MemberDef` jest specyficzne dla jednostki kompilacji (takich jak sygnatura czasowa kompilacji elementu członkowskiego), nie są one scalane i zależy od kompilator, aby usunąć lub zaktualizować takie metadane.  
+- Atrybuty niestandardowe są scalane, tylko wtedy, gdy jest scalany elementu, do której są dołączone. Na przykład niestandardowe atrybuty powiązane z klasą zostaną scalone, po pierwszym napotkaniu klasy. Jeśli atrybutów niestandardowych, które są skojarzone z `TypeDef` lub `MemberDef` jest specyficzne dla jednostki kompilacji (takich jak sygnatura czasowa kompilacji elementu członkowskiego), nie są one scalane i zależy od kompilator, aby usunąć lub zaktualizować takie metadane.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797530"
 ---
 # <a name="administration-and-diagnostics"></a>Administracja i diagnostyka
 Windows Communication Foundation (WCF) zapewnia bogaty zestaw funkcji, które mogą ułatwić monitorowanie różnych etapach cyklu życia aplikacji. Na przykład można użyć konfiguracji do skonfigurowania usług i klientów we wdrożeniu. Usługi WCF zawierają duży zestaw liczników wydajności, aby ułatwić mierzyć wydajność aplikacji. Usługa WCF umożliwia również dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy Instrumentacji zarządzania Windows (WMI) WCF. Podczas ulegnie awarii lub rozpoczyna się nieprawidłowo działających aplikacji, można użyć w dzienniku zdarzeń, aby zobaczyć, czy ma żadnych znaczących wystąpił. Aby zobaczyć, jakie zdarzenia są występuje end-to-end w aplikacji, można użyć rejestrowania komunikatów i śledzenia. Funkcje te pomagają zarówno deweloperów i specjalistów IT, aby rozwiązywać problemy z aplikacją usługi WCF, gdy go nie zachowuje się poprawnie.  
@@ -25,17 +25,17 @@ Windows Communication Foundation (WCF) zapewnia bogaty zestaw funkcji, które mo
 ## <a name="diagnostics-features-provided-by-wcf"></a>Funkcje diagnostyczne przez architekturę WCF  
  Usługi WCF udostępnia następujące funkcje diagnostyki:  
   
--   Śledzenie end-To-End udostępnia dane instrumentacji dla rozwiązywania problemów z aplikacją, bez korzystania z debugera. Usługi WCF danych wyjściowych danych śledzenia dla procesu punktów kontrolnych, a także komunikaty o błędach. Może to obejmować otwarcie fabryki kanałów lub wysyłania i odbierania wiadomości przez hosta usługi. Śledzenie można włączyć dla uruchomionej aplikacji, aby monitorować jej postęp. Aby uzyskać więcej informacji, zobacz [śledzenie](../../../../docs/framework/wcf/diagnostics/tracing/index.md) tematu. Aby dowiedzieć się, jak można użyć z funkcji śledzenia podczas debugowania aplikacji, zobacz [przy użyciu śledzenia do Rozwiązywanie problemów aplikacji](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md) tematu.  
+- Śledzenie end-To-End udostępnia dane instrumentacji dla rozwiązywania problemów z aplikacją, bez korzystania z debugera. Usługi WCF danych wyjściowych danych śledzenia dla procesu punktów kontrolnych, a także komunikaty o błędach. Może to obejmować otwarcie fabryki kanałów lub wysyłania i odbierania wiadomości przez hosta usługi. Śledzenie można włączyć dla uruchomionej aplikacji, aby monitorować jej postęp. Aby uzyskać więcej informacji, zobacz [śledzenie](../../../../docs/framework/wcf/diagnostics/tracing/index.md) tematu. Aby dowiedzieć się, jak można użyć z funkcji śledzenia podczas debugowania aplikacji, zobacz [przy użyciu śledzenia do Rozwiązywanie problemów aplikacji](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md) tematu.  
   
--   Rejestrowanie komunikatów pozwala sprawdzić wygląd komunikatów przed i po transmisji. Aby uzyskać więcej informacji, zobacz [rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md) tematu.  
+- Rejestrowanie komunikatów pozwala sprawdzić wygląd komunikatów przed i po transmisji. Aby uzyskać więcej informacji, zobacz [rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md) tematu.  
   
--   Śledzenie zdarzeń zapisuje zdarzenia w dzienniku zdarzeń wszystkie poważne problemy. Możesz następnie Podglądzie zdarzeń, aby sprawdzić wszelkie nieprawidłowości. Aby uzyskać więcej informacji, zobacz [rejestrowania zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md) tematu.  
+- Śledzenie zdarzeń zapisuje zdarzenia w dzienniku zdarzeń wszystkie poważne problemy. Możesz następnie Podglądzie zdarzeń, aby sprawdzić wszelkie nieprawidłowości. Aby uzyskać więcej informacji, zobacz [rejestrowania zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md) tematu.  
   
--   Liczniki wydajności udostępniane za pośrednictwem Monitora wydajności pozwalają monitorować aplikację i kondycji systemu. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md) tematu.  
+- Liczniki wydajności udostępniane za pośrednictwem Monitora wydajności pozwalają monitorować aplikację i kondycji systemu. Aby uzyskać więcej informacji, zobacz [liczniki wydajności](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md) tematu.  
   
--   <xref:System.ServiceModel.Configuration> Przestrzeni nazw można ładować pliki konfiguracyjne i skonfiguruj punkt końcowy usługi lub klienta. Podczas aktualizacji należy wdrożyć na wielu komputerach, można użyć modelu obiektów do skryptu zmian do wielu aplikacji. Alternatywnie, można użyć [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) Aby edytować ustawienia konfiguracji, za pomocą Kreatora graficznego interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [konfigurowania aplikacji](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md) tematu.  
+- <xref:System.ServiceModel.Configuration> Przestrzeni nazw można ładować pliki konfiguracyjne i skonfiguruj punkt końcowy usługi lub klienta. Podczas aktualizacji należy wdrożyć na wielu komputerach, można użyć modelu obiektów do skryptu zmian do wielu aplikacji. Alternatywnie, można użyć [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) Aby edytować ustawienia konfiguracji, za pomocą Kreatora graficznego interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [konfigurowania aplikacji](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md) tematu.  
   
--   WMI umożliwia dowiedzieć się, które usługi nasłuchują na maszynie, powiązania, które są używane. Aby uzyskać więcej informacji, zobacz [przy użyciu Instrumentacji zarządzania Windows Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md) tematu.  
+- WMI umożliwia dowiedzieć się, które usługi nasłuchują na maszynie, powiązania, które są używane. Aby uzyskać więcej informacji, zobacz [przy użyciu Instrumentacji zarządzania Windows Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md) tematu.  
   
  Usługi WCF zawiera także kilka narzędzi graficzny interfejs użytkownika i wiersza polecenia, aby ułatwić umożliwiające tworzenie, wdrażanie i zarządzanie aplikacjami usługi WCF. Aby uzyskać więcej informacji, zobacz [narzędzia programu Windows Communication Foundation](../../../../docs/framework/wcf/tools.md). Na przykład, można użyć [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) można tworzyć i edytować ustawienia konfiguracji programu WCF za pomocą kreatora, a nie bezpośrednio edycji XML. Można również użyć [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) do wyświetlania, grupy i filtrować komunikaty śledzenia, dzięki czemu możesz zdiagnozować, naprawy i sprawdź problemów w przypadku usług WCF.  
   

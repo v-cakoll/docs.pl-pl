@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
 ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791672"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Schemat konfiguracji programu Windows Identity Foundation
 Tematy w tej sekcji zawierają informacje dotyczące schematu konfiguracji Windows Identity Foundation (WIF). Można także skonfigurować aplikację do korzystania z programu WIF za pośrednictwem klasy udostępnianych przez platformę. W ramach tych zajęć zostały wymienione w sekcji, które są traktowane odpowiednie elementy w schemacie. Poniższej przedstawiono podstawowe XML tag struktury udostępnianych przez schemat konfiguracji programu WIF. Atrybuty są pomijane. Wyróżnione komentarze wskazują główne składniki schematu.  

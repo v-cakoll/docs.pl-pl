@@ -1,15 +1,15 @@
 ---
-title: 'Wyrażenia lambda: Fun — słowo kluczowe'
+title: 'Lambda Expressions: Fun — słowo kluczowe'
 description: Dowiedz się, jak używać F# — słowo kluczowe "fun", aby zdefiniować wyrażenia lambda jest funkcją anonimową.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6ad15173bb8643bff330e3ca3823cba5d43ad445
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941027"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>Wyrażenia lambda: Fun — słowo kluczowe (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda Expressions: Fun — słowo kluczowe (F#)
 
 `fun` — Słowo kluczowe jest używane do definiowania Wyrażenie lambda, oznacza to, że funkcja anonimowa.
 

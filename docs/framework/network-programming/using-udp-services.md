@@ -19,10 +19,10 @@ helpviewer_keywords:
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 ms.openlocfilehash: 397c51501ac333d6df699064b3fe82920bc38152
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788105"
 ---
 # <a name="using-udp-services"></a>Stosowanie usług UDP
 <xref:System.Net.Sockets.UdpClient> Klasy komunikuje się z usługami sieciowymi przy użyciu protokołu UDP. Właściwości i metod <xref:System.Net.Sockets.UdpClient> klasy abstrakcyjnej szczegółowe informacje o tworzeniu <xref:System.Net.Sockets.Socket> dla żądania i odbierania danych przy użyciu protokołu UDP.

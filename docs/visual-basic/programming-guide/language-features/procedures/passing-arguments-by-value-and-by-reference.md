@@ -10,11 +10,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
 ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791927"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Przekazywanie argumentów według wartości i według odwołania (Visual Basic)
 W języku Visual Basic można przekazać argument do procedury *według wartości* lub *przez odwołanie*. Jest to nazywane *mechanizm przekazywania*, i określa, czy procedurę można zmodyfikować elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Deklaracja procedury określa mechanizm przekazywania dla każdego parametru, określając [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe.  
@@ -22,22 +22,22 @@ W języku Visual Basic można przekazać argument do procedury *według wartośc
 ## <a name="distinctions"></a>Różnice  
  Podczas przekazywania argumentów do procedury, należy pamiętać o kilku różnych różnice, które współdziałają ze sobą:  
   
--   Czy jest podstawowym elementem programowania, modyfikowalnymi i niemodyfikowalnymi  
+- Czy jest podstawowym elementem programowania, modyfikowalnymi i niemodyfikowalnymi  
   
--   Czy z samym argumentem jest modyfikowalnymi i niemodyfikowalnymi  
+- Czy z samym argumentem jest modyfikowalnymi i niemodyfikowalnymi  
   
--   Czy argument jest przekazywany przez wartość lub przez odwołanie  
+- Czy argument jest przekazywany przez wartość lub przez odwołanie  
   
--   Czy typ danych argumentu, który jest typem wartości lub typem referencyjnym  
+- Czy typ danych argumentu, który jest typem wartości lub typem referencyjnym  
   
  Aby uzyskać więcej informacji, zobacz [różnice między modyfikowalnymi i niemodyfikowalnymi argumenty](./differences-between-modifiable-and-nonmodifiable-arguments.md) i [różnice pomiędzy przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
 ## <a name="choice-of-passing-mechanism"></a>Wybór mechanizm przekazywania  
  Wybierz mechanizm przekazywania dokładnie dla każdego argumentu.  
   
--   **Ochrona**. Wybierając między mechanizmy dwóch przekazywania, najbardziej istotna jest narażenie wywołaniem zmienne, aby zmienić. Zaletą przekazywaniem argumentu `ByRef` jest procedura może zwracać wartość do wywołującego kodu za pomocą tego argumentu. Zaletą przekazywaniem argumentu `ByVal` jest chroni zmienną, przed zmianami przez procedurę.  
+- **Ochrona**. Wybierając między mechanizmy dwóch przekazywania, najbardziej istotna jest narażenie wywołaniem zmienne, aby zmienić. Zaletą przekazywaniem argumentu `ByRef` jest procedura może zwracać wartość do wywołującego kodu za pomocą tego argumentu. Zaletą przekazywaniem argumentu `ByVal` jest chroni zmienną, przed zmianami przez procedurę.  
   
--   **Wydajność**. Mimo że mechanizm przekazywania może mieć wpływ na wydajność kodu, różnica polega na zwykle nieistotne. Jedynym wyjątkiem jest typ wartości przekazane `ByVal`. W tym przypadku języka Visual Basic kopiuje zawartość danych całej argumentu. W związku z tym, dla typu duża wartość, takie jak struktury, może być bardziej efektywne w celu przekazania jej `ByRef`.  
+- **Wydajność**. Mimo że mechanizm przekazywania może mieć wpływ na wydajność kodu, różnica polega na zwykle nieistotne. Jedynym wyjątkiem jest typ wartości przekazane `ByVal`. W tym przypadku języka Visual Basic kopiuje zawartość danych całej argumentu. W związku z tym, dla typu duża wartość, takie jak struktury, może być bardziej efektywne w celu przekazania jej `ByRef`.  
   
      Dla typów referencyjnych tylko wskaźnik do danych jest skopiowany (cztery bajty na platformach 32-bitowych, 8 bajtów na platformach 64-bitowych). W związku z tym, można przekazać argumenty typu `String` lub `Object` według wartości bez szkody wydajności.  
   
@@ -50,15 +50,15 @@ W języku Visual Basic można przekazać argument do procedury *według wartośc
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Gdy do przekazywania argumentu przez wartość  
   
--   W przypadku wywoływania elementu kodu bazowego argument jest elementem niemodyfikowalnymi, Zadeklaruj odpowiadającego mu parametru [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Brak kodu można zmienić wartości elementu niemodyfikowalnymi.  
+- W przypadku wywoływania elementu kodu bazowego argument jest elementem niemodyfikowalnymi, Zadeklaruj odpowiadającego mu parametru [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Brak kodu można zmienić wartości elementu niemodyfikowalnymi.  
   
--   Jeśli element podstawowy jest modyfikowalny, ale nie chcesz, aby procedury, aby można było zmienić jego wartość, Zadeklaruj parametr `ByVal`. Kod wywołujący można zmienić wartość elementu można modyfikować, przekazać przez wartość.  
+- Jeśli element podstawowy jest modyfikowalny, ale nie chcesz, aby procedury, aby można było zmienić jego wartość, Zadeklaruj parametr `ByVal`. Kod wywołujący można zmienić wartość elementu można modyfikować, przekazać przez wartość.  
   
 ## <a name="when-to-pass-an-argument-by-reference"></a>Kiedy należy przekazywać argumentów przez odwołanie  
   
--   Jeśli procedura ma oryginalnych trzeba zmieniać element podstawowy w wywoływanym kodzie, należy zadeklarować odpowiadającego mu parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- Jeśli procedura ma oryginalnych trzeba zmieniać element podstawowy w wywoływanym kodzie, należy zadeklarować odpowiadającego mu parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
   
--   Jeśli prawidłowe wykonanie kodu jest zależna od procedury, zmieniając element podstawowy w wywoływanym kodzie, Zadeklaruj parametr `ByRef`. W przypadku przekazania według wartości lub kod wywołujący zastępuje `ByRef` przekazywanie mechanizm umieszczając argument w nawiasach, po wywołaniu procedury może dawać nieoczekiwane wyniki.  
+- Jeśli prawidłowe wykonanie kodu jest zależna od procedury, zmieniając element podstawowy w wywoływanym kodzie, Zadeklaruj parametr `ByRef`. W przypadku przekazania według wartości lub kod wywołujący zastępuje `ByRef` przekazywanie mechanizm umieszczając argument w nawiasach, po wywołaniu procedury może dawać nieoczekiwane wyniki.  
   
 ## <a name="example"></a>Przykład  
   

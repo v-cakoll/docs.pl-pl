@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787871"
 ---
 # <a name="how-to-create-a-secure-session"></a>Instrukcje: tworzenie bezpiecznej sesji
 Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) powiązania powiązania dostarczane przez system w Windows Communication Foundation (WCF) automatycznie używać bezpiecznych sesji po włączeniu zabezpieczenia wiadomości.  
@@ -21,7 +21,7 @@ Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/confi
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Aby określić, że usługa używa bezpiecznej sesji przy użyciu jednej z powiązań dostarczanych przez system  
   
--   Skonfiguruj usługę do używania powiązania dostarczane przez system, które obsługuje zabezpieczenia wiadomości.  
+- Skonfiguruj usługę do używania powiązania dostarczane przez system, które obsługuje zabezpieczenia wiadomości.  
   
      Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) powiązania, kiedy powiązania dostarczane przez system są skonfigurowane do używania zabezpieczeń wiadomości, WCF, automatycznie używa bezpiecznych sesji. W poniższej tabeli wymieniono powiązania dostarczane przez system, które obsługują zabezpieczenia komunikatów i tego, czy zabezpieczenia wiadomości są domyślnego mechanizmu zabezpieczeń.  
   
@@ -30,7 +30,7 @@ Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/confi
     |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Nie|  
     |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Tak|  
     |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Yes|  
-    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Tak|  
+    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Yes|  
     |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Nie|  
     |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Nie|  
   
@@ -58,7 +58,7 @@ Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/confi
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Aby określić, że usługa używa bezpiecznej sesji przy użyciu niestandardowego powiązania  
   
--   Tworzenie niestandardowego powiązania, który określa, że komunikaty protokołu SOAP są chronione przez bezpiecznej sesji.  
+- Tworzenie niestandardowego powiązania, który określa, że komunikaty protokołu SOAP są chronione przez bezpiecznej sesji.  
   
      Aby uzyskać więcej informacji na temat tworzenia niestandardowego powiązania, zobacz [jak: Dostosuj powiązania dostarczane przez System](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   

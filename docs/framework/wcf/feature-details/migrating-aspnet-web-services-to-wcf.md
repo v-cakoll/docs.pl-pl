@@ -3,11 +3,11 @@ title: Migrowanie usług sieci Web na platformie ASP.NET do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948099"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrowanie usług sieci Web na platformie ASP.NET do programu WCF
 Program ASP.NET udostępnia narzędzia i biblioteki klas .NET Framework do tworzenia usług sieci Web, a także funkcje służące do hostingu usług w ramach usługi Internet Information Services (IIS). Windows Communication Foundation (WCF) udostępnia biblioteki klas .NET Framework, narzędzia i hostingu funkcje służące do włączania jednostek oprogramowania do komunikowania się za pomocą protokołów, w tym używanych przez usługi sieci Web.  Migrowanie usług sieci Web ASP.NET do programu WCF umożliwia aplikacjom korzystanie z zalet nowych funkcji i ulepszeń, które są unikatowe dla usługi WCF.  
@@ -22,13 +22,13 @@ Program ASP.NET udostępnia narzędzia i biblioteki klas .NET Framework do tworz
   
  Podane tych potencjalnych korzyści WCF względem programu ASP.NET w sieci Web usługi, jeśli są używane lub są biorąc pod uwagę przy użyciu usług sieci Web programu ASP.NET, masz kilka opcji:  
   
--   W dalszym ciągu używać usług sieci Web platformy ASP.NET i przyznano korzyści proffered przez architekturę WCF.  
+- W dalszym ciągu używać usług sieci Web platformy ASP.NET i przyznano korzyści proffered przez architekturę WCF.  
   
--   Nadal korzystać z usług sieci Web platformy ASP.NET zamiarem przyjęcie WCF na pewien czas w przyszłości. Tematy w tej sekcji wyjaśniono, jak zmaksymalizować perspektyw będzie mógł korzystać z nowych aplikacji usługi sieci Web platformy ASP.NET razem z aplikacji tworzonych w przyszłości WCF. Tematy w tej sekcji opisano również sposób tworzenia nowej sieci Web platformy ASP.NET usług tak, aby ułatwić ich migrację do programu WCF. Jednak jeśli ważne jest zabezpieczenie usługi lub gwarancje niezawodności lub transakcji są wymagane, czy niestandardowe zarządzanie usługą będą musiały być skonstruowany, a następnie jest lepszym rozwiązaniem, aby wdrożyć usługę WCF. Usługi WCF jest przeznaczona dla dokładnie takich scenariuszy.  
+- Nadal korzystać z usług sieci Web platformy ASP.NET zamiarem przyjęcie WCF na pewien czas w przyszłości. Tematy w tej sekcji wyjaśniono, jak zmaksymalizować perspektyw będzie mógł korzystać z nowych aplikacji usługi sieci Web platformy ASP.NET razem z aplikacji tworzonych w przyszłości WCF. Tematy w tej sekcji opisano również sposób tworzenia nowej sieci Web platformy ASP.NET usług tak, aby ułatwić ich migrację do programu WCF. Jednak jeśli ważne jest zabezpieczenie usługi lub gwarancje niezawodności lub transakcji są wymagane, czy niestandardowe zarządzanie usługą będą musiały być skonstruowany, a następnie jest lepszym rozwiązaniem, aby wdrożyć usługę WCF. Usługi WCF jest przeznaczona dla dokładnie takich scenariuszy.  
   
--   Przyjęcie WCF w nowych wdrożeniach przerywając Obsługa istniejącej aplikacji usług sieci Web platformy ASP.NET. Ten wybór jest bardzo prawdopodobne optymalny. Zalety usługi WCF, jego daje podczas spare koszt modyfikowania istniejących aplikacji z niego korzystać. W tym scenariuszu nowych aplikacji WCF mogą współistnieć z istniejącymi aplikacjami ASP.NET. Nowe aplikacje WCF będzie można używać istniejących usług sieci Web platformy ASP.NET i WCF może służyć do programu nowe możliwości operacyjne do istniejących aplikacji ASP.NET na podstawie tryb zgodności WCF ASP.NET.  
+- Przyjęcie WCF w nowych wdrożeniach przerywając Obsługa istniejącej aplikacji usług sieci Web platformy ASP.NET. Ten wybór jest bardzo prawdopodobne optymalny. Zalety usługi WCF, jego daje podczas spare koszt modyfikowania istniejących aplikacji z niego korzystać. W tym scenariuszu nowych aplikacji WCF mogą współistnieć z istniejącymi aplikacjami ASP.NET. Nowe aplikacje WCF będzie można używać istniejących usług sieci Web platformy ASP.NET i WCF może służyć do programu nowe możliwości operacyjne do istniejących aplikacji ASP.NET na podstawie tryb zgodności WCF ASP.NET.  
   
--   Przyjmij WCF i Migrowanie istniejących aplikacji usługi sieci Web platformy ASP.NET do programu WCF. Można wybrać tę opcję, aby ulepszyć istniejące aplikacje przy użyciu funkcji oferowanych przez architekturę WCF lub do odtworzenia działania istniejących usług sieci Web platformy ASP.NET w nowe, bardziej zaawansowanych aplikacji WCF.  
+- Przyjmij WCF i Migrowanie istniejących aplikacji usługi sieci Web platformy ASP.NET do programu WCF. Można wybrać tę opcję, aby ulepszyć istniejące aplikacje przy użyciu funkcji oferowanych przez architekturę WCF lub do odtworzenia działania istniejących usług sieci Web platformy ASP.NET w nowe, bardziej zaawansowanych aplikacji WCF.  
   
 > [!NOTE]
 >  Należy uważać, jeśli usługa WCF jest hostowana przez usługi IIS został odinstalowany 5.x i platformy ASP.NET. Gdy usługa WCF jest hostowana przez usługi IIS można ich żądać 5.x, kod usługi, w przypadku odinstalowania programu ASP.NET. Po odinstalowaniu programu ASP.NET w systemie operacyjnym, które są uruchomione usługi IIS 5.x i WCF zostanie odinstalowany, plik z rozszerzeniem .svc jest traktowane jako plik tekstowy i jego zawartość, łącznie z dowolnego kodu źródłowego, jest zwracany do zleceniodawcy.  

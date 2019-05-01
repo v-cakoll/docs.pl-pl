@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da6321e50082c3f73477b8187cc5bf671655df21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943398"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames — funkcja
 

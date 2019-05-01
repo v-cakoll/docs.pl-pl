@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949607"
 ---
 # <a name="sending-and-receiving-faults"></a>Wysyłanie i odbieranie błędów
 Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a w przypadku dwukierunkowego od klienta do usługi w sposób interoperacyjny. Zazwyczaj usługa definiuje zawartość błędów niestandardowych i określa, jakie operacje można przywrócić je. (Aby uzyskać więcej informacji, zobacz [definiowanie i określanie błędów](../../../docs/framework/wcf/defining-and-specifying-faults.md).) W tym temacie omówiono, jak usługi lub klienta dwukierunkowego może wysyłać te błędy Jeśli nastąpiła odpowiadającego warunku błędu i jak klient lub aplikacja usługi obsługuje te błędy. Aby uzyskać omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,9 +47,9 @@ Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a 
 ## <a name="handling-faults"></a>Obsługa błędów  
  Klienci WCF błędach SOAP, które występują podczas komunikacji, które mają znaczenie w odniesieniu do aplikacji klienckich są zgłaszane jako zarządzane wyjątki. Dostępnych jest wiele wyjątków, które mogą wystąpić podczas wykonywania programu, aplikacje za pomocą modelu programowania klienta WCF można oczekiwać, że obsłużyć wyjątki następujących dwóch typów komunikacji w wyniku.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  <xref:System.TimeoutException> obiekty są zgłaszane, gdy operacja przekracza określony limit czasu.  
   
@@ -81,13 +81,13 @@ Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a 
   
  Zazwyczaj kanały obiektu klienta są zamknięte w jednej z następujących sposobów:  
   
--   Gdy obiekt klienta WCF zostanie odtworzony.  
+- Gdy obiekt klienta WCF zostanie odtworzony.  
   
--   Kiedy aplikacja kliencka wywołuje <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
+- Kiedy aplikacja kliencka wywołuje <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
--   Kiedy aplikacja kliencka wywołuje <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
+- Kiedy aplikacja kliencka wywołuje <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
   
--   Kiedy aplikacja kliencka wywołuje operacją, jest operacją powodujący zakończenie sesji.  
+- Kiedy aplikacja kliencka wywołuje operacją, jest operacją powodujący zakończenie sesji.  
   
  We wszystkich przypadkach zamknięcie kanału powoduje, że kanał, aby zamknąć bazowego kanały, które może wysyłać komunikaty do obsługi złożonych funkcji na poziomie aplikacji. Na przykład gdy kontrakt wymaga użycia sesji powiązanie podejmuje próbę ustanowienia sesji przez wymianę wiadomości z kanału usługi, dopóki nie zostanie utworzona sesja. Podczas zamykania kanał podstawowego kanału sesji powiadamia usługę, sesja zostanie zakończona. W tym przypadku Jeśli kanał już została przerwana, zamknięta, lub w przeciwnym razie nie nadaje się (na przykład, gdy kabel sieciowy jest odłączony), kanału klienta nie informuje o kanału usługi, który sesja zostanie zakończona, i może spowodować wyjątek.  
   

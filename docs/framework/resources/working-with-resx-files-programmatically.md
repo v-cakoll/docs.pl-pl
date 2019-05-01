@@ -11,11 +11,11 @@ ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18a8748c3175ec7e251116f478069d313ab28d7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792785"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Praca programistyczna z plikami .resx
 Ponieważ pliki zasobów (.resx) XML musi zawierać dobrze zdefiniowanych XML, w tym nagłówek, który musi być zgodny ze schematem określonego następuje dane w pary nazwa/wartość może się okazać, że ręcznego tworzenia tych plików jest podatne na błędy. Jako alternatywę pliki resx można utworzyć programowo, przy użyciu typów i elementów członkowskich w bibliotece klas programu .NET. Biblioteki klas platformy .NET umożliwia również pobrać zasoby, które są przechowywane w plikach resx. W tym temacie wyjaśniono, jak można używać typów i członków w <xref:System.Resources> przestrzeni nazw do pracy z plikami .resx.

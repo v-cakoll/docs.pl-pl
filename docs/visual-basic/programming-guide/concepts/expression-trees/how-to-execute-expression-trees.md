@@ -3,11 +3,11 @@ title: 'Instrukcje: Wykonywanie drzew wyrażeń (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
 ms.openlocfilehash: cccb0b301e1da6d82c616d56604ad46dfde83e2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787182"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Instrukcje: Wykonywanie drzew wyrażeń (Visual Basic)
 W tym temacie przedstawiono sposób wykonywania drzewo wyrażenia. Wykonywanie drzewa wyrażenie może zwrócić wartość lub go, że po prostu wykonać akcja, taka jak wywołanie metody.  
@@ -44,9 +44,9 @@ MsgBox(result)
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Dodaj odwołanie do biblioteki System.Core.dll, jeśli nie jest wywoływany.  
+- Dodaj odwołanie do biblioteki System.Core.dll, jeśli nie jest wywoływany.  
   
--   Obejmują System.Linq.Expressions przestrzeni nazw.  
+- Obejmują System.Linq.Expressions przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
 

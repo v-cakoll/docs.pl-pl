@@ -10,11 +10,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
 ms.openlocfilehash: 47aff0ae4d75ef83fd72bc0dc381963a7b496ec6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61806564"
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown — Formant (Formularze systemu Windows)
 Formularze Windows `NumericUpDown` kontrolka wygląda kombinacją pole tekstowe oraz pary strzałki, które użytkownik może kliknąć, aby dopasować wartość. Kontrolka Wyświetla i ustawia wartość liczbową jednej z listy dostępnych opcji. Użytkownik może zwiększyć i zmniejszyć liczbę, przez kliknięcie przycisków w górę i w dół, naciskając klawisze strzałek w górę i w dół lub wpisując liczbę. Klikając przycisk Strzałka w górę przenosi wartość kierunku maksymalną; klikając przycisk strzałki w dół przenosi pozycji do minimum. To na przykład gdy ten rodzaj kontroli mogą być przydatne dla formantu woluminu na odtwarzacz muzyczny. Liczbowe up-down — formanty są używane w niektórych aplikacjach Panelu sterowania Windows.  

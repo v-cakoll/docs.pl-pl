@@ -3,11 +3,11 @@ title: Odbicie (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
 ms.openlocfilehash: d2ad8957d308aa98935c862ec1864b6682be904b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783529"
 ---
 # <a name="reflection-visual-basic"></a>Odbicie (Visual Basic)
 Odbicie udostępnia obiekty (typu <xref:System.Type>) opisują zestawów, modułów i typów. Można używać odbicia do dynamicznego utworzenia wystąpienia typu, powiązania typu z istniejącym obiektem lub uzyskania typu z istniejącego obiektu i wywoływania jego metody lub dostępu do jego pola i właściwości. Jeśli używasz atrybutów w kodzie, odbicie umożliwia dostęp do nich. Aby uzyskać więcej informacji, zobacz [atrybuty](../../../standard/attributes/index.md).  
@@ -40,26 +40,26 @@ System.Console.WriteLine(info)
 ## <a name="reflection-overview"></a>Omówienie odbicia  
  Odbicie jest przydatne w następujących sytuacjach:  
   
--   Jeśli masz dostęp do atrybutów w metadanych programu. Aby uzyskać więcej informacji, zobacz [pobieranie informacji przechowywanych w atrybutach](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
+- Jeśli masz dostęp do atrybutów w metadanych programu. Aby uzyskać więcej informacji, zobacz [pobieranie informacji przechowywanych w atrybutach](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
--   Badanie i tworzenie wystąpień typów w zestawie.  
+- Badanie i tworzenie wystąpień typów w zestawie.  
   
--   Do tworzenia nowych typów w czasie wykonywania. Używanie klas w <xref:System.Reflection.Emit>.  
+- Do tworzenia nowych typów w czasie wykonywania. Używanie klas w <xref:System.Reflection.Emit>.  
   
--   Do wykonywania późne powiązania, uzyskiwanie dostępu do metody na typach tworzony w czasie wykonywania. Zobacz temat [dynamiczne ładowanie i przy użyciu typów](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
+- Do wykonywania późne powiązania, uzyskiwanie dostępu do metody na typach tworzony w czasie wykonywania. Zobacz temat [dynamiczne ładowanie i przy użyciu typów](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Informacje dodatkowe:  
   
--   [Odbicie](../../../framework/reflection-and-codedom/reflection.md)  
+- [Odbicie](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Wyświetlanie informacji o typie](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [Wyświetlanie informacji o typie](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [Odbicie i typy ogólne](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [Odbicie i typy ogólne](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit>  
+- <xref:System.Reflection.Emit>  
   
--   [Pobieranie informacji przechowywanych w atrybutach](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Pobieranie informacji przechowywanych w atrybutach](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784114"
 ---
 # <a name="option-infer-statement"></a>Option Infer — Instrukcja
 Umożliwia użycie wnioskowania o typie lokalnym w zadeklarowania zmiennych.  
@@ -73,7 +73,7 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Aby ustawić Option Infer w wierszu polecenia  
   
--   Obejmują [/optioninfer —](../../../visual-basic/reference/command-line-compiler/optioninfer.md) w — opcja kompilatora **vbc** polecenia.  
+- Obejmują [/optioninfer —](../../../visual-basic/reference/command-line-compiler/optioninfer.md) w — opcja kompilatora **vbc** polecenia.  
   
 ## <a name="default-data-types-and-values"></a>Dane domyślne typy i wartości  
  W poniższej tabeli opisano wyniki różnych kombinacji określania typu danych i inicjatora w `Dim` instrukcji.  
@@ -81,7 +81,7 @@ Option Infer { On | Off }
 |Określony typ danych?|Inicjatora określona?|Przykład|Wynik|  
 |---|---|---|---|  
 |Nie|Nie|`Dim qty`|Jeśli `Option Strict` jest wyłączone (domyślnie), zmienna jest ustawiana `Nothing`.<br /><br /> Jeśli `Option Strict` jest włączona, wystąpi błąd kompilacji.|  
-|Nie|Tak|`Dim qty = 5`|Jeśli `Option Infer` znajduje się na (ustawienie domyślne), zmienna przyjmuje dane typu inicjatora. Zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest wyłączone, zmienna ma typ danych `Object`.<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest włączona, wystąpi błąd kompilacji.|  
+|Nie|Yes|`Dim qty = 5`|Jeśli `Option Infer` znajduje się na (ustawienie domyślne), zmienna przyjmuje dane typu inicjatora. Zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest wyłączone, zmienna ma typ danych `Object`.<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest włączona, wystąpi błąd kompilacji.|  
 |Tak|Nie|`Dim qty As Integer`|Zmienna jest ustawiana na wartość domyślną dla typu danych. Aby uzyskać więcej informacji, zobacz [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
 |Tak|Yes|`Dim qty  As Integer = 5`|Jeśli typ danych Inicjator nie jest konwertowany na określony typ danych, wystąpi błąd kompilacji.|  
   

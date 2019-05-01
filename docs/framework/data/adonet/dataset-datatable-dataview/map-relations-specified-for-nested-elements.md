@@ -3,11 +3,11 @@ title: Mapowanie relacji określonych dla zagnieżdżonych elementów
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785388"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Mapowanie relacji określonych dla zagnieżdżonych elementów
 Schemat może zawierać **msdata:Relationship** adnotacji, aby jawnie określić mapowanie między dowolne dwa elementy w schemacie. Dwa elementy, które są określone w **msdata:Relationship** może być zagnieżdżona w schemacie, ale nie trzeba być. Proces mapowania używa **msdata:Relationship** w schemacie, aby wygenerować podstawowy klucz/relacji klucza obcego między dwiema kolumnami.  
@@ -54,14 +54,14 @@ Schemat może zawierać **msdata:Relationship** adnotacji, aby jawnie określić
   
  Proces mapowania schematu XML tworzy następujące <xref:System.Data.DataSet>:  
   
--   **Kolejności** i **OrderDetail** tabeli.  
+- **Kolejności** i **OrderDetail** tabeli.  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .  
+- Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .  
   
     ```  
     ParentTable: Order  

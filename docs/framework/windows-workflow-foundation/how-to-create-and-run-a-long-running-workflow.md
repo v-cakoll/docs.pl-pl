@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773421"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Instrukcje: Tworzenie i uruchamianie długotrwałego przepływu pracy
 Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w środowisku uruchomieniowym zostaną zachowane, a następnie zwolnij bezczynności przepływy pracy z bazą danych. Kroki opisane w [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md) przedstawiono podstawowe informacje dotyczące przepływu pracy hostingu, za pomocą aplikacji konsoli. Przykłady zostały przedstawione począwszy od przepływów pracy, przepływ pracy cyklu życia obsługi i wznawianie zakładek. W celu przedstawienia skutecznie trwałość przepływu pracy, wymagane jest bardziej złożone hosta przepływu pracy, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy. Ten krok, w tym samouczku przedstawiono sposób tworzenia hosta formularzy Windows, aplikacji, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy, trwałość przepływu pracy i stanowi podstawę dla zaawansowanych funkcji, takich jak śledzenie i przechowywania wersji, które są przedstawione w kolejnych krokach samouczka.  
@@ -23,25 +23,25 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
 ## <a name="in-this-topic"></a>W tym temacie:  
   
--   [Aby utworzyć bazę danych stanów trwałych](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [Aby utworzyć bazę danych stanów trwałych](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [Można dodać odwołania do zestawów DurableInstancing](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [Można dodać odwołania do zestawów DurableInstancing](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [Aby utworzyć formularz hosta przepływu pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [Aby utworzyć formularz hosta przepływu pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Aby dodać właściwości i metody pomocnicze formularza](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [Aby dodać właściwości i metody pomocnicze formularza](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [Aby skonfigurować Magazyn wystąpień przepływu pracy cyklu życia obsługi i rozszerzenia](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [Aby skonfigurować Magazyn wystąpień przepływu pracy cyklu życia obsługi i rozszerzenia](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Aby włączyć uruchamianie i wznawianie wielu typów przepływu pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [Aby włączyć uruchamianie i wznawianie wielu typów przepływu pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Aby uruchomić nowy przepływ pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [Aby uruchomić nowy przepływ pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [Aby wznowić przepływ pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [Aby wznowić przepływ pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [Aby zakończyć przepływ pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+- [Aby zakończyć przepływ pracy](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Aby skompilować i uruchomić aplikację](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [Aby skompilować i uruchomić aplikację](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Aby utworzyć bazę danych stanów trwałych  
   
@@ -54,9 +54,9 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
      Wybierz następujące dwa pliki, a następnie kliknij przycisk **Otwórz**.  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    - SqlWorkflowInstanceStoreLogic.sql  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    - SqlWorkflowInstanceStoreSchema.sql  
   
 3. Wybierz **SqlWorkflowInstanceStoreSchema.sql** z **okna** menu. Upewnij się, że **WF45GettingStartedTutorial** wybrano **baz danych dostępności** listy rozwijanej i wybierz polecenie **Execute** z **zapytania**menu.  
   

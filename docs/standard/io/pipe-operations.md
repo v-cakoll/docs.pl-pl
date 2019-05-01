@@ -11,16 +11,16 @@ ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ba3690b6642601fd7d777e3ae1d1e34684e3b1dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947059"
 ---
 # <a name="pipe-operations-in-net"></a>Operacje potokowe w programie .NET
 Potoki zapewniają środki do komunikacji międzyprocesowej. Istnieją dwa rodzaje potoków:  
   
--   Anonimowe potoki.  
+- Anonimowe potoki.  
   
      Anonimowe potoki zapewniają komunikację międzyprocesorową na komputerze lokalnym. Anonimowe potoki wymagają mniejsze obciążenie niż nazwane potoki, ale oferują ograniczonej liczbie usług. Anonimowe potoki są jednokierunkowe i nie można używać za pośrednictwem sieci. Obsługują tylko jeden serwer wystąpienie. Anonimowe potoki są przydatne do komunikacji między wątkami lub między procesami nadrzędnymi i podrzędnymi, gdzie uchwyty potoku mogą być łatwo przekazywane do procesu podrzędnego podczas jego tworzenia.  
   
@@ -28,7 +28,7 @@ Potoki zapewniają środki do komunikacji międzyprocesowej. Istnieją dwa rodza
   
      Zobacz [jak: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
   
--   Nazwane potoki.  
+- Nazwane potoki.  
   
      Nazwane potoki zapewniają komunikację międzyprocesorową pomiędzy serwerem potoku i jednym lub kilkoma klientami potoku. Nazwane potoki mogą być jednokierunkowe lub dwukierunkowego. One obsługi komunikacji typu oparta na komunikatach i umożliwić wielu klientów jednocześnie nawiązać proces serwera, korzystając z tej samej nazwy potoku. Nazwane potoki obsługują także personifikacji, która pozwala łączyć procesy z ich własnych uprawnień na serwerach zdalnych.  
   

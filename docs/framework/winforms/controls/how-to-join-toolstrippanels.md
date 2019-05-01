@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
 ms.openlocfilehash: f73c13c4aac1abef70a2ceb0a30c3e46d8664748
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941105"
 ---
 # <a name="how-to-join-toolstrippanels"></a>Instrukcje: łączenie ToolStripPanels
 Możesz dołączyć <xref:System.Windows.Forms.ToolStrip> mające na celu <xref:System.Windows.Forms.ToolStripPanel> w czasie wykonywania, który zapewnia elastyczność aplikacji interfejsu wielu dokumentów (MDI).  
@@ -27,7 +27,7 @@ Możesz dołączyć <xref:System.Windows.Forms.ToolStrip> mające na celu <xref:
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856716"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegowanie i personifikacja za pomocą programu WCF
 *Personifikacja* jest typową techniką, której usługi użyć do ograniczenia dostępu klienta do zasobów w domenie usługi. Zasobów domeny usługi może być zasoby maszyny, takie jak pliki lokalne (dokona personifikacji) lub zasobów na innej maszynie, na przykład do udziału plików (delegowania). Dla przykładowej aplikacji, zobacz [Personifikowanie klienta](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Na przykład jak używać personifikacji zobacz [jak: Personifikowanie klienta w usłudze](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,22 +37,22 @@ ms.locfileid: "59345524"
 ### <a name="cached-token-impersonation"></a>Buforowany Token personifikacji  
  Możesz wykonać pamięci podręcznej tokenu personifikacji z następujących czynności:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, i <xref:System.ServiceModel.NetTcpBinding> przy użyciu poświadczeń klienta Windows.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, i <xref:System.ServiceModel.NetTcpBinding> przy użyciu poświadczeń klienta Windows.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> za pomocą <xref:System.ServiceModel.BasicHttpSecurityMode> równa <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> poświadczenia lub innych Powiązanie standardowe, gdzie klient przedstawia poświadczenie nazwy użytkownika, że usługa może mapować do prawidłowego konta Windows.  
+- <xref:System.ServiceModel.BasicHttpBinding> za pomocą <xref:System.ServiceModel.BasicHttpSecurityMode> równa <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> poświadczenia lub innych Powiązanie standardowe, gdzie klient przedstawia poświadczenie nazwy użytkownika, że usługa może mapować do prawidłowego konta Windows.  
   
--   Wszelkie <xref:System.ServiceModel.Channels.CustomBinding> , który używa poświadczeń klienta Windows za pomocą `requireCancellation` równa `true`. (Właściwość jest dostępna w następujących klas: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>, i <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Jeśli bezpiecznej konwersacji jest używany w wiązaniu, musi mieć również `requireCancellation` właściwością `true`.  
+- Wszelkie <xref:System.ServiceModel.Channels.CustomBinding> , który używa poświadczeń klienta Windows za pomocą `requireCancellation` równa `true`. (Właściwość jest dostępna w następujących klas: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>, i <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Jeśli bezpiecznej konwersacji jest używany w wiązaniu, musi mieć również `requireCancellation` właściwością `true`.  
   
--   Wszelkie <xref:System.ServiceModel.Channels.CustomBinding> gdzie klient przedstawia poświadczenie nazwy użytkownika. Jeśli bezpiecznej konwersacji jest używany w wiązaniu, musi mieć również `requireCancellation` właściwością `true`.  
+- Wszelkie <xref:System.ServiceModel.Channels.CustomBinding> gdzie klient przedstawia poświadczenie nazwy użytkownika. Jeśli bezpiecznej konwersacji jest używany w wiązaniu, musi mieć również `requireCancellation` właściwością `true`.  
   
 ### <a name="s4u-based-impersonation"></a>Na podstawie S4U personifikacji  
  Można wykonywać na podstawie S4U personifikacji z następujących czynności:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, i <xref:System.ServiceModel.NetTcpBinding> przy użyciu poświadczeń klienta certyfikatu, który usługi można mapować do prawidłowego konta Windows.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, i <xref:System.ServiceModel.NetTcpBinding> przy użyciu poświadczeń klienta certyfikatu, który usługi można mapować do prawidłowego konta Windows.  
   
--   Wszelkie <xref:System.ServiceModel.Channels.CustomBinding> , który używa poświadczeń klienta Windows za pomocą `requireCancellation` właściwością `false`.  
+- Wszelkie <xref:System.ServiceModel.Channels.CustomBinding> , który używa poświadczeń klienta Windows za pomocą `requireCancellation` właściwością `false`.  
   
--   Wszelkie <xref:System.ServiceModel.Channels.CustomBinding> które używa nazwy użytkownika lub poświadczeń klienta Windows i bezpiecznej konwersacji z `requireCancellation` właściwością `false`.  
+- Wszelkie <xref:System.ServiceModel.Channels.CustomBinding> które używa nazwy użytkownika lub poświadczeń klienta Windows i bezpiecznej konwersacji z `requireCancellation` właściwością `false`.  
   
  Zakres, do którego usługa może personifikować klienta zależy od uprawnień, który przechowuje konto usługi, podczas prób personifikacji, typ personifikacji używane i prawdopodobnie stopnia personifikacji, który pozwala na kliencie.  
   
@@ -116,10 +116,10 @@ ms.locfileid: "59345524"
 |Anonimowe|Tak|n/d|Personifikacja|  
 |Anonimowe|Nie|n/d|Identyfikacja|  
 |Identyfikacja|n/d|n/d|Identyfikacja|  
-|Personifikacja|Tak|n/d|Personifikacja|  
+|Personifikacja|Yes|n/d|Personifikacja|  
 |Personifikacja|Nie|n/d|Identyfikacja|  
-|Delegowanie|Tak|Tak|Delegowanie|  
-|Delegowanie|Yes|Nie|Personifikacja|  
+|Delegowanie|Tak|Yes|Delegowanie|  
+|Delegowanie|Tak|Nie|Personifikacja|  
 |Delegowanie|Nie|n/d|Identyfikacja|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Poziom personifikacji uzyskany z poświadczenia nazwy użytkownika i pamięci podręcznej tokenu personifikacji  
@@ -127,7 +127,7 @@ ms.locfileid: "59345524"
   
 |`AllowedImpersonationLevel`|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/d|Tak|Tak|Delegowanie|  
+|n/d|Yes|Tak|Delegowanie|  
 |n/d|Tak|Nie|Personifikacja|  
 |n/d|Nie|n/d|Identyfikacja|  
   
@@ -135,7 +135,7 @@ ms.locfileid: "59345524"
   
 |Usługa ma `SeTcbPrivilege`|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Tak|Tak|n/d|Personifikacja|  
+|Yes|Tak|n/d|Personifikacja|  
 |Tak|Nie|n/d|Identyfikacja|  
 |Nie|n/d|n/d|Identyfikacja|  
   
@@ -181,7 +181,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Nie|Nie|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Yes|Nie|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Yes|Tak|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Yes|Yes|  
   
  Poniższy przykład kodu pokazuje, jak używać delegowania.  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  Aby uzyskać bardziej szczegółowe instrukcje na temat konfigurowania ograniczonego delegowania zobacz następujące tematy w witrynie MSDN:  
   
--   [Rozwiązywanie problemów z delegowania protokołu Kerberos](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Rozwiązywanie problemów z delegowania protokołu Kerberos](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Protokół Kerberos przejścia i ograniczone delegowanie](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Protokół Kerberos przejścia i ograniczone delegowanie](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Zobacz także
 

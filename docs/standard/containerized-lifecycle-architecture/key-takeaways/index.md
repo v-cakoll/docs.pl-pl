@@ -1,17 +1,17 @@
 ---
-title: Najważniejsze wnioski
+title: Kluczowe kwestie do zapamiętania
 description: Przejrzyj najważniejsze wnioski przewodnik.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 092c182fd9246f4ded148302f6d49cbde24d27d0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785533"
 ---
-# <a name="key-takeaways"></a>Najważniejsze wnioski
+# <a name="key-takeaways"></a>Kluczowe kwestie do zapamiętania
 
 - Rozwiązań opartych na kontenerach zapewniają istotne korzyści oszczędności, ponieważ kontenery rozwiązywaniu problemów z wdrażaniem spowodowane przez błędy zależności w środowiskach produkcyjnych, znacznie zwiększając operacje operacji deweloperskich i produkcyjnych.
 

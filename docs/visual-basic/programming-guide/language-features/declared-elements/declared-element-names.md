@@ -24,11 +24,11 @@ helpviewer_keywords:
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828623"
 ---
 # <a name="declared-element-names-visual-basic"></a>Zadeklarowane nazwy elementów (Visual Basic)
 Każdy element zadeklarowany ma nazwę, nazywany również *identyfikator*, czyli kod używa się do niego.  
@@ -36,13 +36,13 @@ Każdy element zadeklarowany ma nazwę, nazywany również *identyfikator*, czyl
 ## <a name="rules"></a>reguły  
  Nazwa elementu w języku Visual Basic musi być zgodna z następującymi zasadami:  
   
--   Musi zaczynać się od litery lub znaku podkreślenia (`_`).  
+- Musi zaczynać się od litery lub znaku podkreślenia (`_`).  
   
--   Musi ona zawierać tylko znaki alfabetu, cyfry i znaki podkreślenia.  
+- Musi ona zawierać tylko znaki alfabetu, cyfry i znaki podkreślenia.  
   
--   Jeśli zaczyna się od znaku podkreślenia musi zawierać co najmniej jeden znak alfabetu lub cyfrę dziesiętną.  
+- Jeśli zaczyna się od znaku podkreślenia musi zawierać co najmniej jeden znak alfabetu lub cyfrę dziesiętną.  
   
--   Nie może być dłuższa niż 1023 znaków.  
+- Nie może być dłuższa niż 1023 znaków.  
   
  Limit długości 1023 znaków ma również zastosowanie do całego ciągu w pełni kwalifikowana nazwa, takich jak `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
@@ -75,9 +75,9 @@ Każdy element zadeklarowany ma nazwę, nazywany również *identyfikator*, czyl
   
  Ogólnie rzecz biorąc, należy używać nazwy wyjścia tylko wtedy, gdy:  
   
--   Kod został zmigrowany z poprzedniej wersji programu Visual Basic, który nie zarezerwować słowa kluczowego jako nazwy; lub  
+- Kod został zmigrowany z poprzedniej wersji programu Visual Basic, który nie zarezerwować słowa kluczowego jako nazwy; lub  
   
--   Pracujesz z kodu napisanego w innym języku, w którym dane słowo kluczowe nie jest zarezerwowana.  
+- Pracujesz z kodu napisanego w innym języku, w którym dane słowo kluczowe nie jest zarezerwowana.  
   
  W przeciwnym razie należy rozważyć, jeśli jego nazwa jest w konflikcie ze słowem kluczowym, zmiana nazwy elementu. Zintegrowane środowisko programistyczne (IDE) zapewnia prosty sposób, aby to zrobić. Aby uzyskać więcej informacji, zobacz [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
   

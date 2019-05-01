@@ -3,11 +3,11 @@ title: 'Instrukcje: Łączenie dwóch kolekcji (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 85689fa756ab20a4dcd054b70eb3003c767936ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778056"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Instrukcje: Łączenie dwóch kolekcji (LINQ to XML) (Visual Basic)
 Element lub atrybut w dokumencie XML czasami mogą odwoływać się do innego elementu lub atrybutu. Na przykład [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) dokument XML zawiera listę klientów i listę zamówień. Każdy `Customer` element zawiera `CustomerID` atrybutu. Każdy `Order` element zawiera `CustomerID` elementu. `CustomerID` Elementu w ramach każdego zamówienia odwołuje się do `CustomerID` atrybutu w klienta.  

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 1805c26f1eff46719f30de8a14ca6d35f01948a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640105"
 ---
 ### <a name="foreach-iterator-variable-is-now-scoped-within-the-iteration-so-closure-capturing-semantics-are-different-in-c5"></a>Zmienna sterująca instrukcji foreach jest teraz o określonym zakresie w iteracji, więc zamknięcia przechwytywania semantyka jest inny (w języku C# 5)
 

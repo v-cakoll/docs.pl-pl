@@ -3,32 +3,32 @@ title: Dostawca tokenów
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965662"
 ---
 # <a name="token-provider"></a>Dostawca tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego dostawcy tokenów. Dostawca tokenu w Windows Communication Foundation (WCF) jest używany dla podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z domyślny dostawca tokenu Menedżera poświadczeń. Usługi WCF jest również dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:
 
--   Jeśli masz Magazyn poświadczeń, który te dostawcy tokenów nie może działać z.
+- Jeśli masz Magazyn poświadczeń, który te dostawcy tokenów nie może działać z.
 
--   Jeśli chcesz udostępnić własny niestandardowy mechanizm przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje, na kiedy struktura klienta WCF przy użyciu poświadczeń.
+- Jeśli chcesz udostępnić własny niestandardowy mechanizm przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje, na kiedy struktura klienta WCF przy użyciu poświadczeń.
 
--   Jeśli tworzysz niestandardowy token.
+- Jeśli tworzysz niestandardowy token.
 
  Niniejszy przykład pokazuje sposób tworzenia niestandardowego dostawcę tokenów, który przekształca dane wejściowe od użytkownika w innym formacie.
 
  Aby podsumować, w przykładzie pokazano poniżej:
 
--   Jak klienta można uwierzytelniać za pomocą pary nazwy użytkownika i hasła.
+- Jak klienta można uwierzytelniać za pomocą pary nazwy użytkownika i hasła.
 
--   Jak można skonfigurować klienta przy użyciu niestandardowego dostawcy tokenów.
+- Jak można skonfigurować klienta przy użyciu niestandardowego dostawcy tokenów.
 
--   Jak serwer może sprawdzać poprawność poświadczeń klienta przy użyciu hasła za pomocą niestandardowego <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> który weryfikuje, czy nazwa użytkownika i hasło są zgodne.
+- Jak serwer może sprawdzać poprawność poświadczeń klienta przy użyciu hasła za pomocą niestandardowego <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> który weryfikuje, czy nazwa użytkownika i hasło są zgodne.
 
--   Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 serwera.
+- Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 serwera.
 
  Niniejszy przykład pokazuje również, jak tożsamości elementu wywołującego jest dostępny po zakończeniu procesu niestandardowe uwierzytelnianie przy użyciu tokenów.
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji:
 
--   Tworzenie certyfikatu serwera.
+- Tworzenie certyfikatu serwera.
 
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Wartość domyślna, w tym pliku wsadowego to localhost.
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
 
      Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 

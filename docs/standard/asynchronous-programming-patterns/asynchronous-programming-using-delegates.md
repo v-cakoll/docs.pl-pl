@@ -15,11 +15,11 @@ ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 41c9793900c3e7accd5463a19de10d1cb81afd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870126"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Programowanie asynchroniczne przy użyciu delegatów
 Delegaty umożliwiają wywołanie metody synchronicznej w sposób asynchroniczny. Podczas wywoływania delegata synchronicznie, `Invoke` metoda wywołuje metodę docelową bezpośrednio w bieżącym wątku. Jeśli `BeginInvoke` metoda jest wywoływana, środowisko uruchomieniowe języka wspólnego (CLR) kolejkuje żądanie i natychmiast zwraca do obiektu wywołującego. Metoda docelowy jest wywoływana asynchronicznie w wątku z puli wątków. Oryginalnego wątku, który przesłał żądanie, jest bezpłatne kontynuować wykonywanie równoległe przy użyciu metody docelowej. Jeśli metoda wywołania zwrotnego zostały określone w wywołaniu `BeginInvoke` , metody wywołania zwrotnego wywoływana jest metoda po zakończeniu metody docelowej. W przypadku metody wywołania zwrotnego `EndInvoke` metoda uzyskuje wartość zwracaną oraz wszelkie parametry wejścia/wyjścia lub tylko do danych wyjściowych. Jeśli zostanie określona żadna metoda wywołania zwrotnego, podczas wywoływania `BeginInvoke`, `EndInvoke` może być wywoływana z wątku, który wywołał `BeginInvoke`.  

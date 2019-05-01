@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b617e29e2df22b59114c8b978daa645de1cc6176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905271"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource — Metoda
 Tworzy `ManifestResource` struktury zawierającymi metadane dla określonego zasobu manifestu, a następnie zwraca token skojarzone metadane.  

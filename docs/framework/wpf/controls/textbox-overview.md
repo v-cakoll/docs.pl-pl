@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791004"
 ---
 # <a name="textbox-overview"></a>TextBox — Przegląd
 <xref:System.Windows.Controls.TextBox> Klasy pozwala do wyświetlania lub edycji niesformatowanego tekstu. Typowym zastosowaniem <xref:System.Windows.Controls.TextBox> jest edycji niesformatowanego tekstu w formularzu. Na przykład formularz z prośbą o nazwę użytkownika, numer telefonu etc użyje <xref:System.Windows.Controls.TextBox> kontrolki wprowadzania tekstu. W tym temacie przedstawiono <xref:System.Windows.Controls.TextBox> klasy i przykłady dotyczące używania go w obu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i C#.  
@@ -22,7 +22,7 @@ ms.locfileid: "59162649"
 |formant|Sprawdzanie pisowni w czasie rzeczywistym|Menu kontekstowe|Formatowanie poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (kont. + B)|<xref:System.Windows.Documents.FlowDocument> zawartość, taką jak obrazy, akapitów, tabelach itp.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Tak|Yes|Nie|Nie.|  
-|<xref:System.Windows.Controls.RichTextBox>|Tak|Yes|Tak (zobacz [RichTextBox — Przegląd](richtextbox-overview.md))|Tak (zobacz [RichTextBox — Przegląd](richtextbox-overview.md))|  
+|<xref:System.Windows.Controls.RichTextBox>|Tak|Tak|Tak (zobacz [RichTextBox — Przegląd](richtextbox-overview.md))|Tak (zobacz [RichTextBox — Przegląd](richtextbox-overview.md))|  
   
 > [!NOTE]
 >  Mimo że <xref:System.Windows.Controls.TextBox> ma obsługują formatowanie pokrewne edytowania poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> kont. + B, wiele podstawowych poleceń są obsługiwane przez oba formanty, takie jak <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Documents.EditingCommands>.  

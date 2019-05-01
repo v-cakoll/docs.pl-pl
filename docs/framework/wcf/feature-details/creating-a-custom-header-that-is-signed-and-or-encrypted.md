@@ -3,11 +3,11 @@ title: Tworzenie podpisanego i/lub zaszyfrowanego niestandardowego nagłówka
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
 ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857379"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Tworzenie podpisanego i/lub zaszyfrowanego niestandardowego nagłówka
 Podczas wywoływania usługi WCF nie przy użyciu klienta programu WCF czasami jest niezbędne do korzystania z niestandardowych nagłówków protokołu SOAP. W programie WCF, który uniemożliwia Nagłówki niestandardowe, które są podpisane i szyfrowane pracy z usługą WCF nie znajduje się błąd kanoniczną. Przyczyną problemu jest niepoprawna canonicalization domyślnych XML w przestrzeni nazw. Jest to tylko problemy podczas wywoływania usług innych niż WCF za pomocą Nagłówki niestandardowe, które są podpisane i/lub zaszyfrowanego.  Gdy usługa odbiera komunikat zawierający podpisanego i/lub zaszyfrowanego niestandardowego nagłówka nie może zweryfikować podpisu. To rozwiązanie pozwala uniknąć błędów canonicalization, umożliwia współdziałanie z usługami innych WCF, ale nie uniemożliwia współdziałanie z usługami WCF.  

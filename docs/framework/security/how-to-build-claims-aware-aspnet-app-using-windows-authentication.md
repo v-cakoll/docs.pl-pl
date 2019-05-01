@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940546"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania systemu Windows
 ## <a name="applies-to"></a>Dotyczy:  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia korzystającej z uwierzytelniania Windows. On również instrukcje testowania aplikacji pozwalające sprawdzić, czy są prezentowane oświadczenia, gdy użytkownik loguje się przy użyciu uwierzytelniania Windows.  
   
 ## <a name="contents"></a>Spis treści  
   
--   Cele  
+- Cele  
   
--   Omówienie  
+- Omówienie  
   
--   Zestawienie czynności  
+- Zestawienie czynności  
   
--   Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
+- Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
   
--   Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows  
+- Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows  
   
--   Krok 3 — Przetestowanie rozwiązania  
+- Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="objectives"></a>Cele  
   
--   Skonfigurować aplikację ASP.NET Web Forms pod kątem oświadczeń przy użyciu uwierzytelniania Windows  
+- Skonfigurować aplikację ASP.NET Web Forms pod kątem oświadczeń przy użyciu uwierzytelniania Windows  
   
--   Testowanie aplikacji formularzy sieci Web ASP.NET, aby zobaczyć, czy działa prawidłowo  
+- Testowanie aplikacji formularzy sieci Web ASP.NET, aby zobaczyć, czy działa prawidłowo  
   
 ## <a name="overview"></a>Omówienie  
  W .NET 4.5 WIF i jego autoryzacji opartej na oświadczeniach zostały uwzględnione w ramach Framework. Wcześniej, jeśli chce oświadczeń użytkownika ASP.NET należało do zainstalowania programu WIF, i następnie rzutowania interfejsy z podmiotem zabezpieczeń obiektów takich jak `Thread.CurrentPrincipal` lub `HttpContext.Current.User`. Obecnie oświadczeń są obsługiwane automatycznie przez te jednostki obiektów.  
@@ -47,11 +47,11 @@ ms.locfileid: "59767971"
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
+- Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
   
--   Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows  
+- Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows  
   
--   Krok 3 — Przetestowanie rozwiązania  
+- Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
  W tym kroku utworzysz nową aplikację ASP.NET Web Forms.  

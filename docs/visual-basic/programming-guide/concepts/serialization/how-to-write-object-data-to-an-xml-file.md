@@ -3,11 +3,11 @@ title: 'Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
 ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783503"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)
 Ten przykład Przepisuje obiekt z klasy do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
@@ -43,13 +43,13 @@ End Module
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.  
+- Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.  
   
--   Plik istnieje i jest tylko do odczytu (<xref:System.IO.IOException>).  
+- Plik istnieje i jest tylko do odczytu (<xref:System.IO.IOException>).  
   
--   Ścieżka jest zbyt długa (<xref:System.IO.PathTooLongException>).  
+- Ścieżka jest zbyt długa (<xref:System.IO.PathTooLongException>).  
   
--   Dysk jest pełny (<xref:System.IO.IOException>).  
+- Dysk jest pełny (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  W tym przykładzie tworzy nowy plik, jeśli go jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta aplikacja musi mieć `Create` dostępu do folderu. Jeśli plik już istnieje, aplikacja potrzebuje tylko `Write` dostępu, mniejsze uprawnienia. Jeśli to możliwe, bezpieczniej jest tworzyć plik podczas wdrożenia i udzielić `Read` dostępu do pojedynczego pliku, zamiast `Create` dostępu do folderu.  

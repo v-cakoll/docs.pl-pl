@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
 ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792187"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic
 Za pomocą Visual Basic można tworzyć zaawansowane Kontrolki niestandardowe za pomocą *dziedziczenia*. Poprzez dziedziczenie jest możliwe w celu tworzenia formantów, które zachować wszystkie związane funkcje standardowych kontrolek Windows Forms, ale również dołączać niestandardowe funkcje. W tym instruktażu utworzysz prostą odziedziczoną kontrolkę o nazwie `ValueButton`. Ten przycisk będzie dziedziczyć funkcji z formularzy Windows <xref:System.Windows.Forms.Button> kontrolować i udostępni właściwość niestandardową o nazwie `ButtonValue`.  

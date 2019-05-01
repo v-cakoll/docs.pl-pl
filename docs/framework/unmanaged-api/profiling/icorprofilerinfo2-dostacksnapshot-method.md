@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779824"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot — Metoda
 Przedstawia zarządzanych ramek na stosie dla określonego wątku, a następnie wysyła informacje do profilera za pośrednictwem wywołania zwrotnego.  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  Przeszukiwania stosu asynchronicznego łatwo może spowodować zakleszczenia lub dostępu do naruszenia, chyba, że należy przestrzegać następujących wytycznych:  
   
--   Po wstrzymaniu bezpośrednio wątków, należy pamiętać, że tylko wątku, który nigdy nie uruchomił kodu zarządzanego można wstrzymać inny wątek.  
+- Po wstrzymaniu bezpośrednio wątków, należy pamiętać, że tylko wątku, który nigdy nie uruchomił kodu zarządzanego można wstrzymać inny wątek.  
   
--   Zawsze należy zablokować w swojej [icorprofilercallback::threaddestroyed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) wywołania zwrotnego do czasu ukończenia przeszukiwania stosu dla wątku.  
+- Zawsze należy zablokować w swojej [icorprofilercallback::threaddestroyed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) wywołania zwrotnego do czasu ukończenia przeszukiwania stosu dla wątku.  
   
--   Blokady nie są przechowywane, gdy Twój program profilujący wywołania do funkcji CLR, która może wyzwalać wyrzucania elementów bezużytecznych. Oznacza to nie posiadają blokadę, jeśli wątek będący właścicielem może spowodować wywołanie, która wyzwala wyrzucanie elementów bezużytecznych.  
+- Blokady nie są przechowywane, gdy Twój program profilujący wywołania do funkcji CLR, która może wyzwalać wyrzucania elementów bezużytecznych. Oznacza to nie posiadają blokadę, jeśli wątek będący właścicielem może spowodować wywołanie, która wyzwala wyrzucanie elementów bezużytecznych.  
   
  Istnieje również ryzyko zakleszczenia Jeśli wywołasz `DoStackSnapshot` z wątku, który został utworzony swojego programu profilującego, dzięki czemu możesz zapoznać się z stosu wątku oddzielne docelowe. Wprowadza wątek został utworzony po raz pierwszy, niektóre `ICorProfilerInfo*` metody (w tym `DoStackSnapshot`), środowisko CLR będzie wykonywać inicjacje na wątek, specyficzne dla środowiska CLR dla tego wątku. Jeśli Twój program profilujący został wstrzymany wątek docelowy stosu, którego chcesz, aby zapoznać się z, a ten wątek docelowy stało się z właścicielem blokady wymagany do wykonania tego wątku inicjowania, nastąpi zakleszczenia. Aby uniknąć tego zakleszczenia, należy początkowej wywołać `DoStackSnapshot` z wątek utworzone przez program profilujący przeprowadzenie wątek docelowy oddzielny, ale nie zawiesić wątek docelowy, najpierw. To wywołanie początkowej zapewnia, wykonać inicjowania na wątek bez zakleszczenia. Jeśli `DoStackSnapshot` zakończy się pomyślnie i zgłasza co najmniej jedną ramką po tym momencie są one bezpieczne dla tego wątku utworzone przez program profilujący do wstrzymania dowolnego wątek docelowy i wywołanie `DoStackSnapshot` przeprowadzenie stosu ten wątek docelowy.  
   

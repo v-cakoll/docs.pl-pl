@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796133"
 ---
 # <a name="-vbruntime"></a>-vbruntime —
 Określa, czy kompilator powinien kompilować się bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic lub odwołanie do biblioteki środowiska uruchomieniowego określonych.  
@@ -50,35 +50,35 @@ Określa, czy kompilator powinien kompilować się bez odwołania do biblioteki 
   
  Następujące składniki środowiska uruchomieniowego są osadzone:  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions> Klasa  
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions> Klasa  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> — Metoda  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> — Metoda  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> — Metoda  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> — Metoda  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> — Metoda  
+- <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> — Metoda  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbBack> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbCr> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbLf> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbTab> Stałe  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Stałe  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Stałe  
   
--   Niektóre obiekty `My` typu  
+- Niektóre obiekty `My` typu  
   
  Jeśli kompilujesz przy użyciu `-vbruntime*` opcji, a kod odwołuje się do elementu członkowskiego z biblioteki środowiska uruchomieniowego Visual Basic, który nie jest osadzony z podstawowych funkcji, kompilator zwraca komunikat o błędzie wskazujący, że element członkowski nie jest dostępna.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803733"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Dostęp do właściwości domyślnej jest niejednoznaczny dla dziedziczonego członków\<defaultpropertyname > "interfejsu"\<interfacename1 > "i"\<defaultpropertyname > "interfejsu"\< interfacename2 > "
 Interfejs dziedziczy dwa interfejsy, z których każdy deklaruje domyślna właściwość o tej samej nazwie. Kompilator nie można rozpoznać dostępu do tej właściwości domyślnej bez kwalifikacji. Ilustruje to poniższy przykład.  
@@ -41,7 +41,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Należy unikać dziedziczy wszystkie elementy członkowskie o takiej samej nazwie. W poprzednim przykładzie Jeśli `testObj` nie trzeba wykonać jedną z elementów członkowskich, na przykład, `Iface2`, Zadeklaruj go w następujący sposób:  
+- Należy unikać dziedziczy wszystkie elementy członkowskie o takiej samej nazwie. W poprzednim przykładzie Jeśli `testObj` nie trzeba wykonać jedną z elementów członkowskich, na przykład, `Iface2`, Zadeklaruj go w następujący sposób:  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      —lub—  
   
--   Implementuje dziedziczącej interfejsu w klasie. Następnie można wdrożyć wszystkich właściwości dziedziczonych pod różnymi nazwami. Jednak tylko jeden z nich może być domyślną właściwość klasy implementującej. Ilustruje to poniższy przykład.  
+- Implementuje dziedziczącej interfejsu w klasie. Następnie można wdrożyć wszystkich właściwości dziedziczonych pod różnymi nazwami. Jednak tylko jeden z nich może być domyślną właściwość klasy implementującej. Ilustruje to poniższy przykład.  
   
     ```  
     Public Class useIface3  

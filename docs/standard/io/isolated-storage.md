@@ -21,11 +21,11 @@ ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 37d25ed142c31ae1e36385448b75a3a850aafa65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947228"
 ---
 # <a name="isolated-storage"></a>Izolowany magazyn
 <a name="top"></a> Aby uzyskać [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] aplikacji, wydzielona pamięć masowa jest mechanizm magazynu danych, który dostarcza izolację i bezpieczeństwo przez definiowanie ustandaryzowanych opcji kojarzenia kodu z zapisanymi danymi. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.

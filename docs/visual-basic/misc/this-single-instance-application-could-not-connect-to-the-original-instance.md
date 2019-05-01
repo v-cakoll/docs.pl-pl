@@ -5,18 +5,18 @@ f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
 ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942615"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Ta aplikacja o pojedynczym wystąpieniu nie można połączyć z oryginalnego wystąpienia
 Ta aplikacja o pojedynczym wystąpieniu nie może połączyć do oryginalnego wystąpienia. Niektóre z możliwych przyczyn tego problemu są następujące:  
   
--   Oryginalne wystąpienie przestał odpowiadać.  
+- Oryginalne wystąpienie przestał odpowiadać.  
   
--   Aplikacja nie ma uprawnień do tworzenia obiektów jądra. Aby uzyskać więcej informacji na temat jądra obiektów, zobacz [muteksy](../../standard/threading/mutexes.md).  
+- Aplikacja nie ma uprawnień do tworzenia obiektów jądra. Aby uzyskać więcej informacji na temat jądra obiektów, zobacz [muteksy](../../standard/threading/mutexes.md).  
   
      Nazwa podstawowa dla obiektów jądra pochodzi z łączenia identyfikator GUID, główny numer wersji i pomocniczy numer wersji zestawu. Na przykład może być nazwa podstawowa `3639f15d-9547-43da-8145-60da347829915.1`.  
   

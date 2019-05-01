@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
 ms.openlocfilehash: 3c04892fc0f1ec89b1b6555c60231ecf968a1345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779928"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -22,13 +22,13 @@ ms.locfileid: "59149425"
   
  W tym temacie przedstawiono sposób wykonywania następujących zadań:  
   
--   Znajdź formant, który dopasowuje warunki określonej właściwości przy zalet widoku kontrolnym [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa dla aplikacji docelowej.  
+- Znajdź formant, który dopasowuje warunki określonej właściwości przy zalet widoku kontrolnym [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa dla aplikacji docelowej.  
   
--   Utwórz <xref:System.Windows.Automation.AutomationElement> dla każdego formantu.  
+- Utwórz <xref:System.Windows.Automation.AutomationElement> dla każdego formantu.  
   
--   Uzyskaj <xref:System.Windows.Automation.InvokePattern> obiektu za pomocą dowolnego [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] znaleziony element, który obsługuje <xref:System.Windows.Automation.InvokePattern> — wzorzec kontrolki.  
+- Uzyskaj <xref:System.Windows.Automation.InvokePattern> obiektu za pomocą dowolnego [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] znaleziony element, który obsługuje <xref:System.Windows.Automation.InvokePattern> — wzorzec kontrolki.  
   
--   Użyj <xref:System.Windows.Automation.InvokePattern.Invoke%2A> do wywołania kontrolki z obsługi zdarzeń klienta.  
+- Użyj <xref:System.Windows.Automation.InvokePattern.Invoke%2A> do wywołania kontrolki z obsługi zdarzeń klienta.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> metody <xref:System.Windows.Automation.AutomationElement> klasy do generowania <xref:System.Windows.Automation.InvokePattern> obiektu i wywoływanie kontrolki przy użyciu <xref:System.Windows.Automation.InvokePattern.Invoke%2A> metody.  

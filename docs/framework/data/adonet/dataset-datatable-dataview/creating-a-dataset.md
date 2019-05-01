@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
 ms.openlocfilehash: d2d17056e6dcd29ef9b5c5e8c3024a32fce32bd5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879882"
 ---
 # <a name="creating-a-dataset"></a>Tworzenie elementu DataSet
 Utwórz wystąpienie <xref:System.Data.DataSet> przez wywołanie metody <xref:System.Data.DataSet> konstruktora. Opcjonalnie można określić argument nazwy. Jeśli nie określisz nazwę <xref:System.Data.DataSet>, nazwa jest równa "NewDataSet".  

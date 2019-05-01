@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
 ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791511"
 ---
 # <a name="system-provided-bindings"></a>powiązania dostarczane przez system
 
@@ -34,7 +34,7 @@ Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i 
 
 Polecenia następujących powiązania są dostarczane z programem WCF:
 
-|Powiązanie|Element konfiguracji|Opis|
+|Wiązanie|Element konfiguracji|Opis|
 |-------------|---------------------------|-----------------|
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md)|Powiązania, który jest odpowiedni do komunikowania się z usługami internetowymi zgodny profilu WS-Basic, na przykład usługi sieci Web platformy ASP.NET (ASMX)-na podstawie usług. To powiązanie korzysta z protokołu HTTP jako transportu i text/XML jako domyślne kodowanie komunikatu.|
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów na usługę non-duplex.|
@@ -55,7 +55,7 @@ Polecenia następujących powiązania są dostarczane z programem WCF:
 
  W poniższej tabeli przedstawiono funkcje każdego powiązania dostarczane przez system. Powiązania znajdują się w kolumnach tabeli; funkcje są wymienione w wiersze i opisano w drugiej tabeli. Poniższa tabela zawiera klucz, wiązanie skrótów używanych. Aby wybrać powiązanie, określić kolumnę, która spełnia wszystkie funkcje wiersza, których potrzebujesz.
 
-|Powiązanie|Współdziałanie|Zabezpieczenia (ustawienie domyślne)|Sesja<br />(Domyślnie)|Transakcje|Dupleks|Kodowania (ustawienie domyślne)|Przesyłanie strumieniowe<br />(Domyślnie)|
+|Wiązanie|Współdziałanie|Zabezpieczenia (ustawienie domyślne)|Sesja<br />(Domyślnie)|Transakcje|Dupleks|Kodowania (ustawienie domyślne)|Przesyłanie strumieniowe<br />(Domyślnie)|
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|
 |<xref:System.ServiceModel.BasicHttpBinding>|1.1 profilu podstawowego|(Brak), mieszane transportu, wiadomości,|(Brak)|(Brak)|n/d|Tekst (MTOM)|Tak<br />(buforowanej)|
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Mieszane transportu, (komunikat)|(Brak), niezawodnej sesji, sesja zabezpieczeń|Tak (Brak)|n/d|(Tekst), MTOM|Nie|
@@ -66,10 +66,10 @@ Polecenia następujących powiązania są dostarczane z programem WCF:
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transportu), wiadomości, None, mieszanego|(Transportu), niezawodnej sesji, sesja zabezpieczeń|Tak (Brak)|Tak|plików binarnych|Tak<br />(buforowanej)|
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transportu), Brak|Brak (transportu)|Tak (Brak)|Tak|plików binarnych|Tak<br />(buforowanej)|
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Komunikat (transportu), Brak|(Brak), transportu|Brak (tak)|Nie|plików binarnych|Nie|
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Elementu równorzędnego|(Transportu)|(Brak)|(Brak)|Tak||Nie|
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Elementu równorzędnego|(Transportu)|(Brak)|(Brak)|Yes||Nie|
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|Usługa MSMQ|(Transportu)|(Brak)|Brak (tak)|n/d|n/d|Nie|
-|<xref:System.ServiceModel.BasicHttpContextBinding>|1.1 profilu podstawowego|(Brak), mieszane transportu, wiadomości,|(Brak)|(Brak)|n/d|Tekst (MTOM)|Tak<br />(buforowanej)|
-|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transportu), wiadomości, None, mieszanego|(Transportu), niezawodnej sesji, sesja zabezpieczeń|Tak (Brak)|Tak|plików binarnych|Tak<br />(buforowanej)|
+|<xref:System.ServiceModel.BasicHttpContextBinding>|1.1 profilu podstawowego|(Brak), mieszane transportu, wiadomości,|(Brak)|(Brak)|n/d|Tekst (MTOM)|Yes<br />(buforowanej)|
+|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transportu), wiadomości, None, mieszanego|(Transportu), niezawodnej sesji, sesja zabezpieczeń|Tak (Brak)|Tak|plików binarnych|Yes<br />(buforowanej)|
 |<xref:System.ServiceModel.WSHttpContextBinding>|WS|Mieszane transportu, (komunikat)|(Brak), niezawodnej sesji, sesja zabezpieczeń|Tak (Brak)|n/d|Tekst (MTOM)|Nie|
 |<xref:System.ServiceModel.UdpBinding> <br /><br /> **Uwaga:**  Można osiągnąć współdziałanie, implementując standard Specyfikacja SOAP-over-UDP, która implementuje tego powiązania.|.NET|(Brak)|(Brak)|(Brak)|n/d|(Tekst)|Nie|
 

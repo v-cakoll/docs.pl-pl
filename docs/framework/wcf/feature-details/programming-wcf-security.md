@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946682"
 ---
 # <a name="programming-wcf-security"></a>Programowanie zabezpieczeń WCF
 W tym temacie opisano podstawowe zadania programowania, służące do tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF). W tym temacie omówiono uwierzytelniania, poufności i integralności, nazywane zbiorczo *transferu zabezpieczeń*. W tym temacie nie omówiono autoryzacji (kontrola dostępu do zasobów lub usług); Aby uzyskać informacje dotyczące autoryzacji, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -33,17 +33,17 @@ W tym temacie opisano podstawowe zadania programowania, służące do tworzenia 
   
      Dostępne są trzy opcje:  
   
-    1.  `Transport`  
+    1. `Transport`  
   
          Zabezpieczenia transportu jest zależna od mechanizm, który używa powiązania, który wybrano. Na przykład, jeśli używasz `WSHttpBinding` mechanizmu zabezpieczeń jest Secure Sockets Layer (SSL) (również mechanizm dla protokołu HTTPS). Ogólnie rzecz biorąc główną zaletą zabezpieczeń transportu jest zapewnia dobre przepływność niezależnie od tego, które transportu używasz. Jednakże ma dwa ograniczenia: Pierwsza to, że mechanizm transportu Określa typ poświadczenia używane do uwierzytelnienia użytkownika. Wadą jest tylko wtedy, gdy usługa musi współdziałać z innymi usługami, wymagających różne rodzaje poświadczeń. Drugą jest wartość, ponieważ nie zastosowano zabezpieczenia na poziomie komunikatu, są implementowane w sposób przeskoku przeskoku zamiast end-to-end. To ograniczenie ostatnim jest problemem, tylko wtedy, gdy ścieżka wiadomości między klientem a usługą zawiera pośredników. Aby uzyskać więcej informacji na temat które transportu do użycia, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać więcej informacji na temat za pomocą zabezpieczeń transportu zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
-    2.  `Message`  
+    2. `Message`  
   
          Zabezpieczenia komunikatów oznacza, że każdy komunikat zawiera niezbędne nagłówki i zabezpieczanie danych w celu przechowywania wiadomości. Ponieważ różni się w skład nagłówki może zawierać dowolną liczbę poświadczeń. To staje się czynnikiem, czy możesz się współdziałanie z innymi usługami zapotrzebowania typu poświadczenie, które nie udostępniają mechanizm transportu, czy komunikat może być używany z więcej niż jedna usługa, gdzie każda usługa wymaga typu różnych poświadczeń.  
   
          Aby uzyskać więcej informacji, zobacz [zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
-    3.  `TransportWithMessageCredential`  
+    3. `TransportWithMessageCredential`  
   
          Ten wybór korzysta z warstwy transportowej do bezpiecznego transferu komunikatów, podczas każdej wiadomości zawiera bogaty poświadczenia muszą innych usług. To połączenie zalet wydajności zabezpieczenia transportu z zalet zaawansowanych poświadczenia zabezpieczeń wiadomości. Ta opcja jest dostępna w następujących powiązań: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding>, i <xref:System.ServiceModel.WSHttpBinding>.  
   
@@ -56,19 +56,19 @@ W tym temacie opisano podstawowe zadania programowania, służące do tworzenia 
 ## <a name="setting-the-client-credential-type"></a>Ustawianie typu poświadczeń klienta  
  Wybieranie typu poświadczeń klienta zgodnie z potrzebami. Aby uzyskać więcej informacji, zobacz [Wybieranie typu poświadczeń](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Dostępne są następujące typy poświadczeń klienta:  
   
--   `Windows`  
+- `Windows`  
   
--   `Certificate`  
+- `Certificate`  
   
--   `Digest`  
+- `Digest`  
   
--   `Basic`  
+- `Basic`  
   
--   `UserName`  
+- `UserName`  
   
--   `NTLM`  
+- `NTLM`  
   
--   `IssuedToken`  
+- `IssuedToken`  
   
  W zależności od tego, jak ustawić tryb należy ustawić typ poświadczeń. Na przykład, jeśli wybrano `wsHttpBinding`i ustawiono tryb "Message", a następnie można również ustawić `clientCredentialType` atrybut elementu komunikatu do jednej z następujących wartości: `None`, `Windows`, `UserName`, `Certificate` , a `IssuedToken`, jak pokazano w poniższym przykładzie konfiguracji.  
   

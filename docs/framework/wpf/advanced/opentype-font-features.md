@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773984"
 ---
 # <a name="opentype-font-features"></a>OpenType funkcje czcionki
 
@@ -26,15 +26,15 @@ W tym temacie omówiono niektóre kluczowe funkcje [!INCLUDE[TLA#tla_opentype](.
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Format czcionek dotyczy następujących problemów dla deweloperów:  
   
--   Szerszy Obsługa wielu platform.  
+- Szerszy Obsługa wielu platform.  
   
--   Lepsza obsługa zestawów znaków międzynarodowych.  
+- Lepsza obsługa zestawów znaków międzynarodowych.  
   
--   Lepsza ochrona danych czcionki.  
+- Lepsza ochrona danych czcionki.  
   
--   Mniejsze pliki dokonanie dystrybucji czcionki bardziej wydajne.  
+- Mniejsze pliki dokonanie dystrybucji czcionki bardziej wydajne.  
   
--   Szerszy Obsługa formantu związane z typografią zaawansowanego.  
+- Szerszy Obsługa formantu związane z typografią zaawansowanego.  
   
 > [!NOTE]
 >  Zestaw Windows SDK zawiera zestaw przykładowych [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek, które można używać z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Czcionki te zapewniają większość funkcji przedstawionych w dalszej części tego tematu. Aby uzyskać więcej informacji, zobacz [przykład pakietu czcionek OpenType](sample-opentype-font-pack.md).  
@@ -44,11 +44,11 @@ W tym temacie omówiono niektóre kluczowe funkcje [!INCLUDE[TLA#tla_opentype](.
 ### <a name="advanced-typographic-extensions"></a>Zaawansowane rozszerzenia związane z typografią  
  Zaawansowane związane z typografią tabel ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tabele układu) rozszerzają funkcjonalność czcionek z oboma [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] lub CFF konturów. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Układ czcionki zawierają dodatkowe informacje, które rozszerza możliwości czcionek w celu obsługi międzynarodowej typografii wysokiej jakości. Większość [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki uwidaczniać tylko podzbiór całkowitej [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] dostępne funkcje. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki zapewniają następujące funkcje.  
   
--   Zaawansowane mapowanie między znaki i symbole, które obsługują ligatur, pozycyjne, zastępcy i innych podstawienia czcionki.  
+- Zaawansowane mapowanie między znaki i symbole, które obsługują ligatur, pozycyjne, zastępcy i innych podstawienia czcionki.  
   
--   Obsługa dwuwymiarową załącznika pozycjonowanie i symboli.  
+- Obsługa dwuwymiarową załącznika pozycjonowanie i symboli.  
   
--   Jawne skryptu i język informacje w czcionki, więc aplikacja przetwarzanie tekstu można odpowiednio dostosować jego zachowanie.  
+- Jawne skryptu i język informacje w czcionki, więc aplikacja przetwarzanie tekstu można odpowiednio dostosować jego zachowanie.  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Tabele są opisane bardziej szczegółowo w ["Czcionki pliku tabele"](https://www.microsoft.com/typography/otspec/otff.htm) części [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] specyfikacji.  
   
@@ -120,13 +120,13 @@ W tym temacie omówiono niektóre kluczowe funkcje [!INCLUDE[TLA#tla_opentype](.
 ## <a name="ligatures"></a>Ligatur  
  Ligatury są co najmniej dwóch symbole, utworzonych w jednym symbol, aby można było utworzyć bardziej czytelne i atrakcyjność tekstu. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki obsługuje cztery rodzaje ligatur:  
   
--   **Ligatury**. Zaprojektowana w celu zwiększenia czytelności. Ligatury obejmują "fi", "mazowieckie" i "ff".  
+- **Ligatury**. Zaprojektowana w celu zwiększenia czytelności. Ligatury obejmują "fi", "mazowieckie" i "ff".  
   
--   **Kontekstowe ligatur**. Zaprojektowana, aby zwiększyć czytelność, zapewniając lepszy zachowanie między znakami, które tworzą ligatury.  
+- **Kontekstowe ligatur**. Zaprojektowana, aby zwiększyć czytelność, zapewniając lepszy zachowanie między znakami, które tworzą ligatury.  
   
--   **Ligatury**. Przeznaczony do ozdobnych i nie są specjalnie zaprojektowane dla czytelności.  
+- **Ligatury**. Przeznaczony do ozdobnych i nie są specjalnie zaprojektowane dla czytelności.  
   
--   **Ligatur historycznych**. Zaprojektowana jako historycznych i nie są specjalnie zaprojektowane dla czytelności.  
+- **Ligatur historycznych**. Zaprojektowana jako historycznych i nie są specjalnie zaprojektowane dla czytelności.  
   
  Następujący tekst Wyświetla standardowe ligatury symbole dla czcionki Perykles.  
   

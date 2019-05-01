@@ -3,11 +3,11 @@ title: Przykłady zapytań oparte na metodzie (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 9419bd664a0e918b1ed40e5d468d01cf724f054d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772304"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Przykłady zapytań oparte na metodzie (LINQ to DataSet)
 Ta sekcja zawiera LINQ do zestawu danych, programowaniu przykłady w składni zapytania oparte na metodzie, które używają standardowych operatorów zapytań. <xref:System.Data.DataSet> Używanego w tych przykładach jest wypełniana przy użyciu `FillDataSet` metody, która została określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) lub [standardowe operatory zapytań — Przegląd (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

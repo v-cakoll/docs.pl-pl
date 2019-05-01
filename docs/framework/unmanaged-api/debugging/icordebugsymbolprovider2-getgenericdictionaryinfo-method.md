@@ -5,11 +5,11 @@ ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944652"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Metoda ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 Pobiera mapę generyczny słownik.  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  Mapa zawiera dwie sekcje najwyższego poziomu:  
   
--   A [katalogu](#Directory) zawierający względnych adresów wirtualnych (RVA) słowników wszystkie zawarte w tej mapie.  
+- A [katalogu](#Directory) zawierający względnych adresów wirtualnych (RVA) słowników wszystkie zawarte w tej mapie.  
   
--   -Bajtami [sterty](#Heap) zawierający informacje dotyczące tworzenia wystąpienia obiektu. Rozpoczyna się natychmiast po ostatni wpis katalogu.  
+- -Bajtami [sterty](#Heap) zawierający informacje dotyczące tworzenia wystąpienia obiektu. Rozpoczyna się natychmiast po ostatni wpis katalogu.  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>Katalog  
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  Część katalogu mapy generyczny słownik ma następującą strukturę:  
   
--   Pierwsze 4 bajty zawiera liczbę pozycji słownika (oznacza to, że liczba względnych adresów wirtualnych w słowniku). Firma Microsoft będzie odnosił się do tej wartości jako *N*. Jeśli ustawiono bit wysokiej, wpisy są sortowane według względny adres wirtualny, w kolejności rosnącej.  
+- Pierwsze 4 bajty zawiera liczbę pozycji słownika (oznacza to, że liczba względnych adresów wirtualnych w słowniku). Firma Microsoft będzie odnosił się do tej wartości jako *N*. Jeśli ustawiono bit wysokiej, wpisy są sortowane według względny adres wirtualny, w kolejności rosnącej.  
   
--   *N* postępuj zgodnie z wpisy w katalogu. Każdy wpis składa się z 8 bajtów w dwa segmenty 4-bajtowych:  
+- *N* postępuj zgodnie z wpisy w katalogu. Każdy wpis składa się z 8 bajtów w dwa segmenty 4-bajtowych:  
   
-    -   Bajty 0 – 3: ADRES RVA; względny adres wirtualny słownika.  
+    - Bajty 0 – 3: ADRES RVA; względny adres wirtualny słownika.  
   
-    -   Bajty 4 – 7: Przesunięcie; przesunięcie względem początku sterty.  
+    - Bajty 4 – 7: Przesunięcie; przesunięcie względem początku sterty.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>Sterty  
@@ -63,11 +63,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  Format dla każdego elementu informacji podczas tworzenia wystąpienia na stosie jest następujący:  
   
--   Długość tego elementu informacji podczas tworzenia wystąpienia w bajtach Format skompresowanych metadanych ECMA. Wartość nie obejmuje to informacje o długości.  
+- Długość tego elementu informacji podczas tworzenia wystąpienia w bajtach Format skompresowanych metadanych ECMA. Wartość nie obejmuje to informacje o długości.  
   
--   Liczba typów ogólnych podczas tworzenia wystąpienia lub *T*, format skompresowanych metadanych ECMA.  
+- Liczba typów ogólnych podczas tworzenia wystąpienia lub *T*, format skompresowanych metadanych ECMA.  
   
--   *T* typów, w każdym reprezentowane w formacie podpisu typu ECMA.  
+- *T* typów, w każdym reprezentowane w formacie podpisu typu ECMA.  
   
  Włączenie długość dla każdego elementu sterty umożliwia proste sortowanie sekcji katalogu bez wywierania wpływu na stosie.  
   

@@ -3,11 +3,11 @@ title: Zakres domyślnych przestrzeni nazw w języku Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
 ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786805"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Zakres domyślnych przestrzeni nazw w języku Visual Basic
 Domyślne obszary nazw, reprezentowany w drzewie XML nie są uwzględnione w zakresie zapytania. Jeśli masz plik XML, który znajduje się w domyślnej przestrzeni nazw, nadal należy zadeklarować <xref:System.Xml.Linq.XNamespace> zmienną i łączą je z nazwą lokalną, można utworzyć kwalifikowane nazwy ma być używany w zapytaniu.  

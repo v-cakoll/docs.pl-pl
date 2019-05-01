@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857093"
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości lub są przetwarzane bardzo wolno.  
@@ -19,22 +19,22 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
   
  Środki zaradcze obejmują:  
   
--   Pochodzi od <xref:System.Xml.NameTable> klasy i wymuszanie przydziałów maksymalny rozmiar. (Nie może uniemożliwić korzystanie z <xref:System.Xml.NameTable> lub przełączyć <xref:System.Xml.NameTable> gdy jest pełny.)  
+- Pochodzi od <xref:System.Xml.NameTable> klasy i wymuszanie przydziałów maksymalny rozmiar. (Nie może uniemożliwić korzystanie z <xref:System.Xml.NameTable> lub przełączyć <xref:System.Xml.NameTable> gdy jest pełny.)  
   
--   Unikaj używania właściwości wymienionych — zamiast tego użyj <xref:System.Xml.XmlReader.MoveToAttribute%2A> metody z <xref:System.Xml.XmlReader.IsStartElement%2A> metody w miarę możliwości; tych metod nie zwracać ciągi i dlatego uniknąć problemu przepełnienie <xref:System.Xml.NameTable> kolekcji.  
+- Unikaj używania właściwości wymienionych — zamiast tego użyj <xref:System.Xml.XmlReader.MoveToAttribute%2A> metody z <xref:System.Xml.XmlReader.IsStartElement%2A> metody w miarę możliwości; tych metod nie zwracać ciągi i dlatego uniknąć problemu przepełnienie <xref:System.Xml.NameTable> kolekcji.  
   
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Złośliwy klient wysyła żądania nadmierne licencji usługi  
  Złośliwego klienta bombards usługi za pomocą żądania nadmierne licencji, może spowodować serwer do użycia zbyt dużej ilości pamięci.  
   
  Środki zaradcze: Użyj następujących właściwości <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> klasy:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: Określa maksymalną liczbę ograniczone czasowo `SecurityContextToken`s, który serwer buforuje po `SPNego` lub `SSL` negocjacji.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: Określa maksymalną liczbę ograniczone czasowo `SecurityContextToken`s, który serwer buforuje po `SPNego` lub `SSL` negocjacji.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: Określa okres istnienia `SecurityContextTokens` , problemy z serwera następujące `SPNego` lub `SSL` negocjacji. Pamięci podręczne serwera `SecurityContextToken`s, w tym okresie czasu.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: Określa okres istnienia `SecurityContextTokens` , problemy z serwera następujące `SPNego` lub `SSL` negocjacji. Pamięci podręczne serwera `SecurityContextToken`s, w tym okresie czasu.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: Określa maksymalną liczbę bezpiecznych konwersacji, które są ustalane na serwerze, ale żadne komunikaty aplikacji przetworzonych. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem na klienta, ale nigdy z nich korzystać.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: Określa maksymalną liczbę bezpiecznych konwersacji, które są ustalane na serwerze, ale żadne komunikaty aplikacji przetworzonych. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem na klienta, ale nigdy z nich korzystać.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: Określa maksymalny czas, usługa utrzymuje bezpiecznej konwersacji aktywność bez otrzymania komunikatu aplikacji od klienta na potrzeby konwersacji. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem na klienta, ale nigdy z nich korzystać.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: Określa maksymalny czas, usługa utrzymuje bezpiecznej konwersacji aktywność bez otrzymania komunikatu aplikacji od klienta na potrzeby konwersacji. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem na klienta, ale nigdy z nich korzystać.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding lub podwójne powiązań niestandardowych wymagają uwierzytelniania klienta  
  Domyślnie <xref:System.ServiceModel.WSDualHttpBinding> ma włączoną obsługą zabezpieczeń. Możliwe jest, że jeśli uwierzytelnianie klienta jest jednak wyłączona przez ustawienie <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> właściwości <xref:System.ServiceModel.MessageCredentialType.None>, złośliwy użytkownik może spowodować "odmowa usługi" w usłudze trzeci. Taka sytuacja może wystąpić, ponieważ złośliwego klienta można kierować usługi by wysłać strumień komunikatów do innych usług.  

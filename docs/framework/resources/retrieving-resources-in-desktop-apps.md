@@ -21,11 +21,11 @@ ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793025"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 Podczas pracy z zlokalizowane zasoby w aplikacjach pulpitu .NET Framework, należy najlepiej pakietów zasobów dla kultury neutralnej lub domyślne przy użyciu zestawu głównego i utworzyć zestaw satelicki osobne dla każdego języka lub kultury, którą obsługuje aplikacja. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do zasobów o nazwie. Jeśli nie chcesz osadzić zasobów w głównym zestawie i zestawy satelickie, można również przejść binarnych plików Resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików Resources](#from_file) później w tym artykuł.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) w Centrum deweloperów Windows.  
@@ -34,9 +34,9 @@ Podczas pracy z zlokalizowane zasoby w aplikacjach pulpitu .NET Framework, nale�
 ## <a name="retrieving-resources-from-assemblies"></a>Pobieranie zasobów z zestawów  
  <xref:System.Resources.ResourceManager> Klasy zapewnia dostęp do zasobów w czasie wykonywania. Możesz użyć <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> metodę, aby pobranie zasobów ciągu i <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> lub <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> metody do pobierania zasobów niebędących ciągami. Każda metoda charakteryzuje się dwa przeciążenia:  
   
--   Przeciążenie, którego pojedynczego parametru jest ciąg zawierający nazwę zasobu. Metoda podejmuje próbę pobrania zasobu na potrzeby bieżącej kultury wątku. Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>, i <xref:System.Resources.ResourceManager.GetStream%28System.String%29> metody.  
+- Przeciążenie, którego pojedynczego parametru jest ciąg zawierający nazwę zasobu. Metoda podejmuje próbę pobrania zasobu na potrzeby bieżącej kultury wątku. Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>, i <xref:System.Resources.ResourceManager.GetStream%28System.String%29> metody.  
   
--   Przeciążenia, które zawiera dwa parametry: ciąg zawierający nazwę zasobu oraz a <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje kulturę, w której zasób jest do pobrania. Jeśli zasób dla kultury nie można odnaleźć, usługi resource manager używa rezerwowej reguł można pobrać odpowiedni zasób. Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, i <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> metody.  
+- Przeciążenia, które zawiera dwa parametry: ciąg zawierający nazwę zasobu oraz a <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje kulturę, w której zasób jest do pobrania. Jeśli zasób dla kultury nie można odnaleźć, usługi resource manager używa rezerwowej reguł można pobrać odpowiedni zasób. Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, i <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> metody.  
   
  Menedżer zasobów używa procesu bazowego zasobu do kontrolowania, jak aplikacja pobiera zasoby specyficzne dla kultury. Aby uzyskać więcej informacji, zobacz sekcję "Zasobów rezerwowych procesu" w [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby uzyskać informacje o uruchamianiu <xref:System.Resources.ResourceManager> obiektów, zobacz sekcję "Utworzenie wystąpienia obiektu ResourceManager" w <xref:System.Resources.ResourceManager> temat poświęcony klasie.  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
 ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792265"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Przewodnik: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows
 Można często wyświetlić dane tabelaryczne, która nie pochodzi z bazy danych. Na przykład można wyświetlić zawartości dwuwymiarową tablicę ciągów. <xref:System.Windows.Forms.DataGridView> Klasy umożliwia łatwe i dużym stopniu dostosowywane do wyświetlania danych bez powiązania ze źródłem danych. W tym instruktażu pokazano, jak wypełnić <xref:System.Windows.Forms.DataGridView> sterowania i zarządzania nimi dodawania i usuwania wierszy w trybie "niepowiązanych". Domyślnie użytkownik może dodawać nowe wiersze. Aby zapobiec wierszy, ustawianie <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> właściwość `false`.  
@@ -75,22 +75,22 @@ Można często wyświetlić dane tabelaryczne, która nie pochodzi z bazy danych
   
 #### <a name="to-test-the-form"></a>Aby przetestować formularz  
   
--   Naciśnij klawisz F5, aby uruchomić aplikację.  
+- Naciśnij klawisz F5, aby uruchomić aplikację.  
   
      Zostanie wyświetlony <xref:System.Windows.Forms.DataGridView> kontrolkę wyświetlającą utworów muzycznych na liście `PopulateDataGridView`. Można dodawać nowe wiersze z **Dodaj wiersz** przycisku, na które można usunąć wybranych wierszy z **Usuń wiersz** przycisku. Niezwiązane <xref:System.Windows.Forms.DataGridView> kontroli jest magazynem danych i jego dane są niezależne od dowolnego źródła zewnętrznego, takie jak <xref:System.Data.DataSet> lub tablicy.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Ta aplikacja zapewnia podstawową wiedzę na temat <xref:System.Windows.Forms.DataGridView> funkcje formantu. Można dostosować wygląd i zachowanie <xref:System.Windows.Forms.DataGridView> kontroli na kilka sposobów:  
   
--   Zmienianie stylów obramowania i nagłówek. Aby uzyskać więcej informacji, zobacz [jak: Zmiana obramowania i formantu DataGridView formularzy style linii siatki w Windows](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Zmienianie stylów obramowania i nagłówek. Aby uzyskać więcej informacji, zobacz [jak: Zmiana obramowania i formantu DataGridView formularzy style linii siatki w Windows](change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Włączać lub ograniczać danych wprowadzonych przez użytkownika <xref:System.Windows.Forms.DataGridView> kontroli. Aby uzyskać więcej informacji, zobacz [jak: Zapobieganie dodawaniu i usuwaniu w Windows formantu DataGridView formularzy](prevent-row-addition-and-deletion-datagridview.md), i [jak: Określanie kolumn jako tylko do odczytu w Windows formantu DataGridView formularzy](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Włączać lub ograniczać danych wprowadzonych przez użytkownika <xref:System.Windows.Forms.DataGridView> kontroli. Aby uzyskać więcej informacji, zobacz [jak: Zapobieganie dodawaniu i usuwaniu w Windows formantu DataGridView formularzy](prevent-row-addition-and-deletion-datagridview.md), i [jak: Określanie kolumn jako tylko do odczytu w Windows formantu DataGridView formularzy](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Sprawdź dane wejściowe użytkownika błędy związane z bazy danych. Aby uzyskać więcej informacji, zobacz [instruktażu: Obsługa błędów występujących podczas wprowadzania danych w Windows formantu DataGridView formularzy](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+- Sprawdź dane wejściowe użytkownika błędy związane z bazy danych. Aby uzyskać więcej informacji, zobacz [instruktażu: Obsługa błędów występujących podczas wprowadzania danych w Windows formantu DataGridView formularzy](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
--   Obsłużyć bardzo dużych zestawów danych przy użyciu trybu wirtualnego. Aby uzyskać więcej informacji, zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](implementing-virtual-mode-wf-datagridview-control.md).  
+- Obsłużyć bardzo dużych zestawów danych przy użyciu trybu wirtualnego. Aby uzyskać więcej informacji, zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Dostosowywanie wyglądu komórek. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy Windows](customize-the-appearance-of-cells-in-the-datagrid.md) i [jak: Ustawianie domyślnych stylów komórki dla formantu DataGridView formularzy Windows](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+- Dostosowywanie wyglądu komórek. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy Windows](customize-the-appearance-of-cells-in-the-datagrid.md) i [jak: Ustawianie domyślnych stylów komórki dla formantu DataGridView formularzy Windows](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,11 +3,11 @@ title: Przechowywanie wersji usługi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949789"
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
 Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia usługi (i punktów końcowych, które udostępniają) może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniających się potrzeb biznesowych, wymagań dotyczących technologii informacji, lub inne rozwiązania problemy. Każda zmiana wprowadza nową wersję usługi. W tym temacie wyjaśniono, jak należy wziąć pod uwagę przechowywanie wersji w Windows Communication Foundation (WCF).  
@@ -15,13 +15,13 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
 ## <a name="four-categories-of-service-changes"></a>Cztery kategorie zmianami w usłudze  
  Zmiany usług, które mogą być wymagane, można podzielić na cztery kategorie:  
   
--   Zmiany umowy: Na przykład operacji, które mogą być dodawane lub element danych w komunikacie może być dodane lub zmienione.  
+- Zmiany umowy: Na przykład operacji, które mogą być dodawane lub element danych w komunikacie może być dodane lub zmienione.  
   
--   Zmian adresów: Na przykład usługa zostaje przeniesiony do innej lokalizacji, gdzie punkty końcowe mają nowe adresy.  
+- Zmian adresów: Na przykład usługa zostaje przeniesiony do innej lokalizacji, gdzie punkty końcowe mają nowe adresy.  
   
--   Powiązanie zmiany: Na przykład zmienia mechanizmu zabezpieczeń lub zmienić jego ustawienia.  
+- Powiązanie zmiany: Na przykład zmienia mechanizmu zabezpieczeń lub zmienić jego ustawienia.  
   
--   Zmiany w implementacji: Na przykład, gdy implementację metody wewnętrznego zmiany.  
+- Zmiany w implementacji: Na przykład, gdy implementację metody wewnętrznego zmiany.  
   
  Niektóre z tych zmian są nazywane "złamanie", a inne są "nierozdzielające." Zmiana jest *nierozdzielający* Jeśli wszystkie komunikaty, które mogłyby zostały przetworzone pomyślnie w poprzedniej wersji pomyślnie przetworzonych w nowej wersji. Każda zmiana, który nie spełnia warunku jest *istotne* zmiany.  
   
@@ -43,9 +43,9 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
 ### <a name="strict-versioning"></a>Przechowywanie wersji Strict  
  W wielu scenariuszach podczas zmiany wersji jest to problem dla deweloperów usługi ma kontrolę nad klientów i w związku z tym nie może wprowadzać założeń dotyczących jak będzie reagować na zmiany w komunikacie lub schemat XML. W takich przypadkach musisz gwarantować, że nowe wiadomości zostanie przeprowadzona Weryfikacja względem schematu stare dwóch powodów:  
   
--   Starych klientów opracowano przy założeniu, że schemat nie ulegnie zmianie. One może zakończyć się niepowodzeniem do przetwarzania komunikatów, które nigdy nie zostały zaprojektowane dla.  
+- Starych klientów opracowano przy założeniu, że schemat nie ulegnie zmianie. One może zakończyć się niepowodzeniem do przetwarzania komunikatów, które nigdy nie zostały zaprojektowane dla.  
   
--   Stary klientów mogą wykonać sprawdzanie poprawności schematu rzeczywiste względem schematu stare przed próbą nawet przetwarzania komunikatów.  
+- Stary klientów mogą wykonać sprawdzanie poprawności schematu rzeczywiste względem schematu stare przed próbą nawet przetwarzania komunikatów.  
   
  W takich scenariuszach zaleca traktować istniejących kontraktów danych jako niezmienialny i tworzenie nowych, unikatowych XML kwalifikowane nazwy. Deweloper usługi będzie następnie dodać nowych metod do istniejącej umowy serwisowej lub tworzenie nowego kontraktu usługi przy użyciu metody, które używają nowego kontraktu danych.  
   
@@ -63,9 +63,9 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Rozróżniania kontraktu danych i typów .NET  
  .NET klasy lub struktury może być przekazywany jako kontraktu danych, stosując <xref:System.Runtime.Serialization.DataContractAttribute> do klasy atrybutu. Typ architektury .NET i jej prognozy kontraktu danych to dwa odrębne jest ważna. Istnieje możliwość mają różne typy .NET o tej samej projekcji kontraktu danych. Różnica ta jest szczególnie przydatna w umożliwia zmianę typu .NET, przy zachowaniu umowy prognozowanych danych, w tym samym zachowuje zgodność z istniejącymi klientami, nawet w sensie ograniczeniami Word. Istnieją dwie rzeczy, które należy zawsze zachować wykonywania tego rozróżnienia między kontraktu danych i typ .NET:  
   
--   Określ <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> i <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. Należy zawsze podać nazwę i przestrzeń nazw usługi kontraktu danych, aby zapobiec nazwę danego typu .NET i przestrzeni nazw przed przypadkowym w kontrakcie. Dzięki temu, jeśli później zdecydujesz się zmienić z obszaru nazw .NET lub wpisz nazwę, kontrakt usługi danych pozostaje taki sam.  
+- Określ <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> i <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. Należy zawsze podać nazwę i przestrzeń nazw usługi kontraktu danych, aby zapobiec nazwę danego typu .NET i przestrzeni nazw przed przypadkowym w kontrakcie. Dzięki temu, jeśli później zdecydujesz się zmienić z obszaru nazw .NET lub wpisz nazwę, kontrakt usługi danych pozostaje taki sam.  
   
--   Określ <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Należy zawsze podać nazwę usługi składowych danych, aby uniemożliwić spowodują ujawnienie w kontrakcie nazwę użytkownika platformy .NET. Dzięki temu, jeśli później zdecydujesz się zmienić nazwę elementu członkowskiego .NET, usługi kontraktu danych pozostaje taki sam.  
+- Określ <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Należy zawsze podać nazwę usługi składowych danych, aby uniemożliwić spowodują ujawnienie w kontrakcie nazwę użytkownika platformy .NET. Dzięki temu, jeśli później zdecydujesz się zmienić nazwę elementu członkowskiego .NET, usługi kontraktu danych pozostaje taki sam.  
   
 ### <a name="changing-or-removing-members"></a>Zmienianie lub usuwanie członków  
  Zmienianie nazwy lub typu danych elementu członkowskiego lub usuwanie elementów członkowskich danych jest istotną zmianę, nawet wtedy, gdy łagodnymi versioning jest dozwolone. Jeśli jest to konieczne, należy utworzyć nowego kontraktu danych.  

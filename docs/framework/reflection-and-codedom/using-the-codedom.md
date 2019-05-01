@@ -23,20 +23,20 @@ ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792980"
 ---
 # <a name="using-the-codedom"></a>Używanie modelu CodeDOM
 CodeDOM zawiera typy, które reprezentują wiele typowych elementów kodu źródłowego. Można zaprojektować program, który tworzy model kodu źródłowego za pomocą elementów CodeDOM, aby zamontować wykresu obiektu. Wykres tego obiektu może być renderowany jako kod źródłowy za pomocą generatora kodu CodeDOM dla obsługiwanego języka programowania. CodeDOM może również skompilować kod źródłowy do zestawu binarnego.  
   
  Jedne z typowych zastosowań CodeDom obejmują:  
   
--   Generowanie kodu szablonu: generowanie kodu dla programu ASP.NET, serwerów proxy klienta usług XML sieci Web, kreatorów kodu, projektantów lub innych mechanizmów emitujących kod.  
+- Generowanie kodu szablonu: generowanie kodu dla programu ASP.NET, serwerów proxy klienta usług XML sieci Web, kreatorów kodu, projektantów lub innych mechanizmów emitujących kod.  
   
--   Dynamiczna kompilacja: wspieranie kompilacji kodu w jednym lub wielu języków.  
+- Dynamiczna kompilacja: wspieranie kompilacji kodu w jednym lub wielu języków.  
   
 ## <a name="building-a-codedom-graph"></a>Tworzenie wykresu CodeDOM  
  <xref:System.CodeDom> Przestrzeń nazw zawiera klasy do reprezentowania logicznej struktury kodu źródłowego, niezależnie od składni języka.  

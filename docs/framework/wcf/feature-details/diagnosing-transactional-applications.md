@@ -3,11 +3,11 @@ title: Diagnozowanie aplikacji transakcyjnych
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856742"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnozowanie aplikacji transakcyjnych
 W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy użyciu funkcji diagnostyki i zarządzania usługi Windows Communication Foundation (WCF).  
@@ -87,15 +87,15 @@ W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy uż
 ## <a name="tracing"></a>Śledzenie  
  Ślady umożliwiają monitorowanie i analizowanie błędów w aplikacji transakcyjnych. Można włączyć śledzenie z użyciem następujących sposobów:  
   
--   Standardowe śledzenia WCF  
+- Standardowe śledzenia WCF  
   
      Tego rodzaju śledzenia jest taka sama jak śledzenie dowolnej aplikacji WCF. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Śledzenie WS-AtomicTransaction  
+- Śledzenie WS-AtomicTransaction  
   
      Śledzenie WS-AtomicTransaction można włączyć za pomocą [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Takie śledzenie zapewnia wgląd w stan transakcji i uczestników w systemie. Umożliwia również wewnętrznego śledzenia Model usług, można ustawić `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` klucz rejestru prawidłową wartością <xref:System.Diagnostics.SourceLevels> wyliczenia. Można włączyć rejestrowanie w taki sam sposób jak inne aplikacje WCF komunikatów.  
   
--   `System.Transactions` Śledzenie  
+- `System.Transactions` Śledzenie  
   
      Podczas korzystania z protokołu OleTransactions, komunikatach protokołów nie może być śledzony. Obsługa śledzenia <xref:System.Transactions> zapewnia infrastrukturę (które wykorzystuje OleTransactions) pozwala użytkownikom na wyświetlanie zdarzeń, które nastąpiły w transakcji. Aby włączyć śledzenie dla <xref:System.Transactions> aplikacji, zawrzyj następujący kod w `App.config` pliku konfiguracji.  
   

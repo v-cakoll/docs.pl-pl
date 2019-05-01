@@ -3,11 +3,11 @@ title: <transport> dla <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
 ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788352"
 ---
 # <a name="transport-of-netnamedpipebinding"></a>\<transport > z \<netNamedPipeBinding >
 Określa ustawienia zabezpieczenia transportu nazwanego potoku.  

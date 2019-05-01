@@ -3,24 +3,24 @@ title: 1401 — CloseTimeout
 ms.date: 03/30/2017
 ms.assetid: 612c7292-999e-4c3e-97f3-87b0ef0c2739
 ms.openlocfilehash: 4dd61bb4b6cec9e1489e6451a25c639fd518fedf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782359"
 ---
 # <a name="1401---closetimeout"></a>1401 — CloseTimeout
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|1401|  
-|Słowa kluczowe|ServiceModel|  
+|Identyfikator|1401|  
+|słowa kluczowe|ServiceModel|  
 |Poziom|Błąd|  
 |Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany po upływie limitu czasu.  
+ To zdarzenie jest emitowane przekroczenia limitu czasu.  
   
 ## <a name="message"></a>Komunikat  
  1%  

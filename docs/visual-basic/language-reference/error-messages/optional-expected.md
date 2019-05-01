@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
 ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946591"
 ---
 # <a name="optional-expected"></a>Oczekiwano instrukcji „Optional”
 Opcjonalny argument w deklaracji procedury następuje wymaganego argumentu. Każdy argument po opcjonalnym również musi być opcjonalny.  

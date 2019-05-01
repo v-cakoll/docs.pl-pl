@@ -14,20 +14,20 @@ ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947085"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Instrukcje: Zapisywanie tekstu do pliku
 W tym temacie przedstawiono różne sposoby zapisywanie tekstu do pliku dla aplikacji platformy .NET. 
 
 Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:  
   
--   <xref:System.IO.StreamWriter> zawiera metody do zapisu do pliku synchronicznie (<xref:System.IO.StreamWriter.Write%2A> i <xref:System.IO.TextWriter.WriteLine%2A>) lub asynchronicznie (<xref:System.IO.StreamWriter.WriteAsync%2A> i <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
+- <xref:System.IO.StreamWriter> zawiera metody do zapisu do pliku synchronicznie (<xref:System.IO.StreamWriter.Write%2A> i <xref:System.IO.TextWriter.WriteLine%2A>) lub asynchronicznie (<xref:System.IO.StreamWriter.WriteAsync%2A> i <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
   
--   <xref:System.IO.File> udostępnia metody statyczne do zapisywanie tekstu do pliku, taką jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub dołączyć tekst do pliku, taką jak <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A>, i <xref:System.IO.File.AppendText%2A>.  
+- <xref:System.IO.File> udostępnia metody statyczne do zapisywanie tekstu do pliku, taką jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub dołączyć tekst do pliku, taką jak <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A>, i <xref:System.IO.File.AppendText%2A>.  
   
 - <xref:System.IO.Path> Służy do ciągów zawierających informacje o ścieżce pliku lub katalogu. Zawiera on <xref:System.IO.Path.Combine%2A> metody i, w programie .NET Core 2.1 i nowsze, <xref:System.IO.Path.Join%2A> i <xref:System.IO.Path.TryJoin%2A> metod, które umożliwiają łączenie ciągów, aby zbudować ścieżki pliku lub katalogu.
 

@@ -15,11 +15,11 @@ ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949191"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>Atrybuty ochrony hosta i programowanie SQL Server
 Możliwość załadowanie i wykonanie kodu zarządzanego hosta programu SQL Server wymaga spełniających wymagania dotyczące zabezpieczeń dostępu kodu i ochrona zasobów hosta hostów.  Wymagania dotyczące zabezpieczeń dostępu kodu są określone przez jeden z trzech zestawów uprawnień programu SQL Server: BEZPIECZNY dostęp do zewnętrznych lub UNSAFE. Wykonywanie kodu w SEJFIE lub zestawy uprawnień dostępu zewnętrznego należy unikać niektórych typów ani elementów członkowskich, które mają <xref:System.Security.Permissions.HostProtectionAttribute> zastosowany. <xref:System.Security.Permissions.HostProtectionAttribute> Nie jest uprawnienia zabezpieczeń jak gwarancje niezawodności w identyfikuje konkretny kod tworzy typy lub metody, że host może nie zezwalać.  Korzystanie z <xref:System.Security.Permissions.HostProtectionAttribute> wymusza modelu programowania, która pomaga chronić stabilności hosta.  
@@ -27,11 +27,11 @@ Możliwość załadowanie i wykonanie kodu zarządzanego hosta programu SQL Serv
 ## <a name="host-protection-attributes"></a>Atrybuty ochrony hosta  
  Atrybuty ochrony hosta określić typy lub elementy członkowskie, które nie mieści się model programowania hosta i reprezentują następujące poziomy zwiększa niezawodność zagrożenia:  
   
--   W przeciwnym razie są niegroźne.  
+- W przeciwnym razie są niegroźne.  
   
--   Może spowodować destabilization kodu zarządzanego serwera użytkownika.  
+- Może spowodować destabilization kodu zarządzanego serwera użytkownika.  
   
--   Może spowodować destabilization z sam proces serwera.  
+- Może spowodować destabilization z sam proces serwera.  
   
  Program SQL Server nie zezwala na korzystanie z typu lub elementu członkowskiego, który ma <xref:System.Security.Permissions.HostProtectionAttribute> określający <xref:System.Security.Permissions.HostProtectionResource> wartość <xref:System.Security.Permissions.HostProtectionResource.SharedState>, <xref:System.Security.Permissions.HostProtectionResource.Synchronization>, <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort>, lub <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>. Zapobiega to zestawy z wywołania elementów członkowskich, które Włączanie udostępniania stanu, przeprowadzić synchronizację, mogą spowodować wyciek zasobów na zakończenie i wpływa na integralność procesu programu SQL Server.  
   
@@ -59,8 +59,8 @@ Możliwość załadowanie i wykonanie kodu zarządzanego hosta programu SQL Serv
 |--------------------|----------|----------------------|------------|  
 |Zabezpieczenia dostępu kodu|Tylko do wykonywania|Wykonywanie i uzyskać dostęp do zasobów zewnętrznych|Bez ograniczeń|  
 |Ograniczenia dotyczące modelu programowania|Yes|Tak|Brak ograniczeń|  
-|Możliwość weryfikacji wymagań|Yes|Yes|Nie|  
-|Wywoływanie kodu natywnego|Nie|Nie|Tak|  
+|Możliwość weryfikacji wymagań|Tak|Yes|Nie|  
+|Wywoływanie kodu natywnego|Nie|Nie|Yes|  
   
  BEZPIECZNE jest najbardziej niezawodną i bezpieczną trybu z ograniczeniami skojarzone zakresie dozwolonych modelu programowania. BEZPIECZNY kod ma wysoką niezawodność i funkcje zabezpieczeń. Zestawy bezpieczne podane są wystarczające uprawnienia, aby uruchomić, wykonywanie obliczeń i mają dostęp do lokalnej bazy danych. BEZPIECZNE zestawy muszą być i wpisz bezpieczne i nie mogą wywoływać kod niezarządzany.  
   

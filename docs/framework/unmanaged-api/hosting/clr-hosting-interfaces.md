@@ -9,32 +9,32 @@ ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789665"
 ---
 # <a name="clr-hosting-interfaces"></a>Interfejsy hostingu środowiska CLR
-W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach. Informacje odnoszą się do platformy .NET Framework w wersji 2.0 lub nowszy. Te interfejsy Włącz hosta do kontrolowania wielu aspektów więcej czasu wykonywania niż w wersji 1.0, 1.1 i podaj znacznie większego integrację środowiska CLR i model wykonania hosta.  
+W tej sekcji opisano interfejsy, które niezarządzane hosty służy do integrowania środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach. Informacje odnoszą się do wersji programu .NET Framework 2.0 i nowszych wersjach. Te interfejsy Włącz hosta kontrolują wiele aspektów więcej obsługi niż w wersji 1.0 i 1.1 i zapewnia znacznie ściślejszą integrację środowiska CLR i modelu wykonywania hosta.  
   
- W programie .NET Framework w wersji 1.0, 1.1 obsługi włączone niezarządzane hosta można załadować środowiska CLR do procesu, konfigurowanie niektórych ustawień i otrzymywanie powiadomień o zdarzeniach. Jednak ogólnie rzecz biorąc, hosta i środowiska CLR został uruchomiony niezależnie w tym procesie. .NET Framework w wersji 2.0 i nowszych wersji nowe warstwy abstrakcji umożliwiają hosta zapewniają wiele zasobów oferowanych przez typów w zestawie Win32 i rozszerzyć zestaw funkcji, które można skonfigurować hosta.  
+ W .NET Framework w wersji 1.0 i 1.1 modelu hostingu włączono niezarządzany host do ładowania CLR do procesu, aby skonfigurować niektóre ustawienia i otrzymywać powiadomienia o zdarzeniach. Jednak ogólnie rzecz biorąc, hosta i CLR został uruchomiony niezależnie w tym procesie. W .NET Framework w wersji 2.0 i nowszych wersjach nowe warstwy abstrakcji umożliwiają hosta zapewniają wiele zasobów oferowanych przez typy w zestawie Win32 i rozszerzaj zestaw funkcji, które można skonfigurować hosta.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [IActionOnCLREvent, interfejs](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
- Udostępnia metody, która wykonuje wywołanie zwrotne zarejestrowane zdarzenia.  
+ Dostarcza metodę, która wykonuje wywołanie zwrotne zarejestrowane zdarzenia.  
   
  [IApartmentCallback, interfejs](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)  
- Udostępnia metody do tworzenia wywołań zwrotnych w apartamencie.  
+ Udostępnia metody do tworzenia wywołań zwrotnych w ramach typu apartment.  
   
  [IAppDomainBinding, interfejs](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)  
- Udostępnia metody dla konfiguracji środowiska wykonawczego.  
+ Udostępnia metody dla konfiguracji czasu wykonywania.  
   
  [ICatalogServices, interfejs](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-interface.md)  
- Udostępnia metody dla skatalogowania usług. (Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie).  
+ Udostępnia metody do katalogowania usług. (Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie).  
   
  [ICLRAssemblyIdentityManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- Udostępnia metody, które obsługują komunikację między hostem i informacje o zestawach środowiska CLR.  
+ Udostępnia metody, które obsługują komunikację między hostem a środowisko CLR, informacje o zestawach.  
   
  [ICLRAssemblyReferenceList, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
  Zarządza listę zestawów, które są ładowane przez środowisko CLR, a nie przez hosta.  
@@ -43,152 +43,152 @@ W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć
  Udostępnia metody dla hosta w celu uzyskania dostępu do i skonfigurować różne aspekty środowiska CLR.  
   
  [ICLRDebugManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- Udostępnia metody umożliwiające hosta do skojarzenia z identyfikatorem i przyjazną nazwę zestawu zadań.  
+ Udostępnia metody umożliwiające hosta skojarzyć zestaw zadań z identyfikatorem i przyjazną nazwę.  
   
  [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- Udostępnia metody, które umożliwiają hosta skonfigurować zrzuty stosu niestandardowych dla usługi raportowania błędów.  
+ Udostępnia metody umożliwiające hosta do skonfigurowania zrzutów stosu niestandardowych dla usługi raportowania błędów.  
   
  [ICLRGCManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)  
- Udostępnia metody umożliwiające hosta do interakcji z system CLR czyszczenia pamięci.  
+ Udostępnia metody umożliwiające hosta do interakcji z systemem zbierania odśmiecania pamięci CLR.  
   
  [ICLRHostBindingPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)  
- Udostępnia metody dla hosta ocenić i komunikować się zmiany informacji o zasadach dla zestawów.  
+ Udostępnia metody dla hosta ocenić i komunikują się zmian w informacje o zasadach dla zestawów.  
   
  [ICLRHostProtectionManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- Umożliwia hosta blokowanie określonych klas zarządzanych, metody, właściwości i pola w programie częściowo zaufany kod.  
+ Umożliwia hosta zablokować określonych zarządzanych klas, metod, właściwości i pola z uruchomionych w kodzie częściowo zaufanym.  
   
  [ICLRIoCompletionManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- Implementuje metody wywołania zwrotnego, która umożliwia hosta powiadomiono CLR stan określonego żądań We/Wy.  
+ Implementuje metodę wywołania zwrotnego, umożliwiająca hosta powiadomić CLR stan określonego żądania We/Wy.  
   
  [ICLRMemoryNotificationCallback, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- Włącza hosta do warunków braku pamięci raportu w sposób podobny do środowiska Win32 `CreateMemoryResourceNotification` funkcji.  
+ Włącza hosta do warunków wykorzystanie pamięci raportu przy użyciu podejścia, podobnie jak w przypadku Win32 `CreateMemoryResourceNotification` funkcji.  
   
  [ICLROnEventManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
- Udostępnia metody umożliwiające hosta umożliwia rejestrowanie i wyrejestrowywanie wywołań zwrotnych dla zdarzenia środowiska CLR.  
+ Udostępnia metody umożliwiające hosta rejestrować i wyrejestrowywać wywołania zwrotne dla zdarzenia CLR.  
   
  [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- Udostępnia metody, które umożliwiają hosta określić zasady akcje do wykonania w przypadku awarii i przekroczeń limitu czasu.  
+ Udostępnia metody umożliwiające hosta określić zasady działań podejmowanych w przypadku awarii lub przekroczenia limitu czasu.  
   
  [ICLRProbingAssemblyEnum, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  
- Udostępnia metody umożliwiające hosta można uzyskać za pomocą zestawu tożsamości informacje, które są wewnętrzne dla środowiska CLR, bez konieczności tworzenia i zrozumienie tej tożsamości sondowania tożsamości zestawu.  
+ Udostępnia metody umożliwiające hosta można pobrać badania tożsamości zestawu przy użyciu zestawu tożsamości informacji wewnętrznych do środowiska CLR, bez konieczności tworzenia lub zrozumieć tej tożsamości.  
   
  [ICLRReferenceAssemblyEnum, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)  
- Udostępnia metody, które umożliwiają hosta do manipulowania zbiór zestawów odwołuje się do pliku lub strumienia za pomocą zestawu danych tożsamości, które jest wewnętrzna CLR, bez konieczności tworzenia i zrozumienie tych tożsamości.  
+ Udostępnia metody umożliwiające hosta do manipulowania zbiór zestawów, które odwołuje się do pliku lub strumienia przy użyciu danych tożsamości zestawu, które jest wewnętrznym CLR, bez konieczności tworzenia lub zrozumienie tych tożsamości.  
   
  [ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- Zapewnia funkcje podobne do [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md), z dodatkową metodę można ustawić interfejsu kontroli hosta.  
+ Oferuje funkcje podobne do [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md), przy użyciu dodatkowej metody do ustawiania interfejs kontrolki hosta.  
   
  [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- Udostępnia metody dla hosta, aby uzyskać informacje dotyczące zadań i wykrył zakleszczenie w jej wykonanie synchronizacji.  
+ Udostępnia metody dla hosta, aby uzyskać informacje o żądanych zadań i wykrył zakleszczenie w jego implementacja synchronizacji.  
   
  [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- Udostępnia metody umożliwiające hosta do wysyłania żądań CLR lub w celu udostępnienia powiadomień do środowiska CLR o skojarzonego zadania.  
+ Udostępnia metody umożliwiające hosta propozycji dotyczących środowiska CLR lub w celu udostępnienia powiadomienia do CLR o skojarzone zadanie.  
   
  [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- Udostępnia metody umożliwiające hosta do żądania jawnie, czy CLR utworzyć nowe zadanie, Pobierz aktualnie wykonywanego zadania i ustaw geograficzne języka i kultury dla zadania.  
+ Udostępnia metody umożliwiające hosta zażądać jawnie, środowisko CLR Utwórz nowe zadanie, Pobierz aktualnie wykonywane zadanie i ustawić geograficzne języka i kultury dla zadania.  
   
  [ICLRValidator, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)  
- Udostępnia metody dla sprawdzanie poprawności przenośne obrazy wykonywalne (PE) i raportowanie błędów sprawdzania poprawności.  
+ Udostępnia metody sprawdzania poprawności przenośnego pliku wykonywalnego obrazów (PE) i raportowanie błędów sprawdzania poprawności.  
   
  [ICorConfiguration, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)  
  Udostępnia metody do konfigurowania środowiska CLR.  
   
  [ICorThreadpool, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)  
- Udostępnia metody, aby uzyskać dostęp do puli wątków.  
+ Udostępnia metody do uzyskiwania dostępu do puli wątków.  
   
  [IDebuggerInfo, interfejs](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)  
  Udostępnia metody uzyskiwania informacji na temat stanu usług debugowania.  
   
  [IDebuggerThreadControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)  
- Udostępnia metody dla powiadamiania hosta o blokowania i odblokowywania wątków przez usług debugowania.  
+ Zawiera metody służące do powiadamiania hosta dotyczące blokowania i odblokowywania wątków przez usług debugowania.  
   
  [IGCHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)  
- Udostępnia metody uzyskiwania informacji na temat systemu czyszczenia pamięci oraz kontrolowanie niektórych aspektów wyrzucanie elementów bezużytecznych.  
+ Udostępnia metody uzyskiwania informacji na temat systemu czyszczenia pamięci oraz kontrolowanie niektóre aspekty wyrzucania elementów bezużytecznych.  
   
  [IGCHost2, interfejs](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)  
- Udostępnia [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) metodę, która umożliwia hosta ustawioną rozmiar segmentu kolekcji pamięci i maksymalny rozmiar generowania systemu czyszczenia pamięci zerowej wartości większej niż `DWORD`.  
+ Udostępnia [setgcstartuplimitsex —](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) metodę, która umożliwia hosta można skonfigurować rozmiaru segmentu kolekcji wyrzucania elementów i maksymalny rozmiar systemu czyszczenia pamięci generacji zero na wartości większej niż `DWORD`.  
   
  [IGCHostControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)  
- Udostępnia metody, która włącza moduł garbage collector na żądanie hosta, aby zmienić limit pamięci wirtualnej.  
+ Dostarcza metodę, która włącza moduł odśmiecania pamięci zażądać hosta, aby zmienić limity pamięci wirtualnej.  
   
  [IGCThreadControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)  
- Udostępnia metody do uczestnictwa w planowaniu wątków, które można zablokować dla wyrzucanie elementów bezużytecznych.  
+ Udostępnia metody do uczestnictwa w planowaniu wątki, które w przeciwnym razie zostałby zablokowany do wyrzucania elementów bezużytecznych.  
   
  [IHostAssemblyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- Udostępnia metody, które umożliwiają hosta określić zestawy zestawy, które powinny być załadowane przez środowisko CLR lub przez hosta.  
+ Udostępnia metody umożliwiające hosta określić zestawy zestawy, które powinny być załadowane przez środowisko CLR lub przez hosta.  
   
  [IHostAssemblyStore, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)  
  Udostępnia metody umożliwiające hosta można załadować zestawów i modułów, niezależnie od środowiska CLR.  
   
  [IHostAutoEvent, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- Udostępnia reprezentację automatyczne resetowanie zdarzenia implementowanego przez zdarzenie hosta.  
+ Udostępnia reprezentację zdarzenie z resetowaniem automatycznym implementowany przez hosta.  
   
  [IHostControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)  
- Udostępnia metody konfigurowania ładowania zestawów i określania, które hosting interfejsy obsługuje hosta.  
+ Udostępnia metody do konfigurowania ładowania zestawów i podczas określania, które hostingu interfejsów obsługuje hosta.  
   
  [IHostCrst, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)  
- Służy jako hosta reprezentację sekcja krytyczna dla wątków.  
+ Służy jako hosta reprezentacja sekcję krytyczną dla wątków.  
   
  [IHostGCManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
- Udostępnia metody, które powiadamiają o hoście zdarzenia mechanizmu kolekcji garbage zaimplementowana przez środowisko CLR.  
+ Udostępnia metody, które powiadamiają o hoście zdarzenia w mechanizmie kolekcji wyrzucania elementów, które są implementowane przez środowisko CLR.  
   
  [IHostIoCompletionManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
- Udostępnia metody umożliwiające CLR wchodzić w interakcje z portów We/Wy dostarczone przez hosta.  
+ Udostępnia metody, które włączyć integrację środowiska CLR do interakcji z portów We/Wy udostępniane przez hosta.  
   
  [IHostMalloc, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  
- Udostępnia metody dla środowiska CLR do żądania szczegółowych alokacji sterty za pośrednictwem hosta.  
+ Udostępnia metody dla środowiska CLR zażądać szczegółowych alokacji ze stosu za pośrednictwem hosta.  
   
  [IHostManualEvent, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- Udostępnia implementację hosta reprezentację zdarzeń resetowania ręcznego.  
+ Udostępnia implementację hosta reprezentacji zdarzenie resetowania ręcznego.  
   
  [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- Udostępnia metody dla środowiska CLR na wysyłanie żądań pamięci wirtualnej za pośrednictwem hosta, a nie przy użyciu standardowych funkcji Win32 w pamięci wirtualnej.  
+ Udostępnia metody dla środowiska CLR wysyłać żądania pamięci wirtualnej za pośrednictwem hosta, a nie przy użyciu standardowych funkcji Win32 w pamięci wirtualnej.  
   
  [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- Udostępnia metody, które powiadamiają o hoście akcje, które wykonuje CLR w przypadku liczby przerywa przekroczenia limitu czasu lub błędów.  
+ Udostępnia metody, które powiadamiają o hoście akcje, które środowisko CLR wykonuje się w przypadku programu przerywa przekroczenia limitu czasu lub niepowodzenia.  
   
  [IHostSecurityContext, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
- Umożliwia CLR zachować informacje kontekstu zabezpieczeń zaimplementowana przez hosta.  
+ Włącza środowisko CLR zachować informacje kontekstu zabezpieczeń implementowany przez hosta.  
   
  [IHostSecurityManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
- Udostępnia metody umożliwiające dostęp do i kontrolę nad wątku aktualnie wykonywane w kontekście zabezpieczeń.  
+ Udostępnia metody, które umożliwiają dostęp do i kontrolę nad kontekstu zabezpieczeń aktualnie wykonywany wątek.  
   
  [IHostSemaphore, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
- Udostępnia reprezentację semafora zaimplementowana przez hosta.  
+ Udostępnia reprezentację semafor implementowany przez hosta.  
   
  [IHostSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- Udostępnia metody dla CLR można utworzyć w nim elementów podstawowych synchronizacji przez wywołanie przez hosta, zamiast używać funkcji synchronizacji Win32.  
+ Udostępnia metody dla środowiska CLR do tworzenia podstawowych synchronizacji przez wywołanie przez hosta, zamiast korzystać z funkcji synchronizacji systemu Win32.  
   
  [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- Udostępnia metody umożliwiające CLR do komunikowania się z hosta do zarządzania zadaniami.  
+ Udostępnia metody, które włączyć integrację środowiska CLR do komunikowania się z hosta do zarządzania zadaniami.  
   
  [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- Udostępnia metody umożliwiające CLR do pracy z zadaniami za pośrednictwem hosta zamiast przy użyciu funkcji wątki lub włókna standardowy system operacyjny.  
+ Udostępnia metody, które włączyć integrację środowiska CLR do pracy z zadaniami za pośrednictwem hosta, zamiast korzystać z funkcji wątki lub włókna standardowy system operacyjny.  
   
  [IHostThreadPoolManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
- Udostępnia metody dla środowiska CLR do skonfigurowania puli wątków i do kolejki elementów roboczych w puli wątków.  
+ Udostępnia metody dla środowiska CLR, aby skonfigurować puli wątków i kolejki elementów roboczych w puli wątków.  
   
  [IManagedObject, interfejs](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)  
- Udostępnia metody umożliwiające sterowanie zarządzanego obiektu.  
+ Zawiera metody służące do sterowania zarządzanego obiektu.  
   
- "IObjectHandle"  
- Zapewnia metodę otwierania obiektów kierowanie przez wartości z pośrednie.  
+ Iobjecthandle "—"  
+ Zapewnia metodę Odkodowywanie obiektów marshal przez wartość pośredni.  
   
  [ITypeName, interfejs](../../../../docs/framework/unmanaged-api/hosting/itypename-interface.md)  
- Udostępnia metody uzyskiwania informacji na nazwę typu. (Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie).  
+ Udostępnia metody uzyskiwania informacji o nazwie typu. (Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie).  
   
  [ITypeNameBuilder, interfejs](../../../../docs/framework/unmanaged-api/hosting/itypenamebuilder-interface.md)  
  Udostępnia metody do tworzenia nazwy typu. (Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie).  
   
  [ITypeNameFactory, interfejs](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)  
- Udostępnia metody dla deconstructing nazwę typu. (Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie).  
+ Udostępnia metody dla dekonstrukcja nazwę typu. (Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie).  
   
- "IValidator"  
- Udostępnia metody dla sprawdzanie poprawności przenośne obrazy wykonywalne (PE) i raportowanie błędów sprawdzania poprawności.  
+ Ivalidator "—"  
+ Udostępnia metody sprawdzania poprawności przenośnego pliku wykonywalnego obrazów (PE) i raportowanie błędów sprawdzania poprawności.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- Zawiera tematy, które opisują interfejsy hostingu dostępne w programie .NET Framework w wersji 1.0, 1.1.  
+ Zawiera tematy, które opisują hostingu dostarczanych w .NET Framework w wersji 1.0 i 1.1.  
   
  [Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Zawiera tematy, które opisują interfejsy hostingu w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+ Zawiera tematy, które opisują hostingu dostarczanych w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].

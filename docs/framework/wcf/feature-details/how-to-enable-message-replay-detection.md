@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773077"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Instrukcje: włączanie wykrywania powtarzania komunikatu
 Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarza strumienia do jednego lub więcej stron. Chyba że skorygowane, komputery, które podlegają ataku przetworzy strumienia jako wiarygodnego wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówienia elementu.  
@@ -30,13 +30,13 @@ Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komun
   
 2. Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> właściwość, aby zwrócić odwołanie do <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> klasy i skonfiguruj następujące właściwości zgodnie z potrzebami:  
   
-    1.  `DetectReplay`. Wartość logiczna. To decyduje, czy klient powinien wykryć odtworzenie z serwera. Wartość domyślna to `true`.  
+    1. `DetectReplay`. Wartość logiczna. To decyduje, czy klient powinien wykryć odtworzenie z serwera. Wartość domyślna to `true`.  
   
-    2.  `MaxClockSkew`. A <xref:System.TimeSpan> wartość. Określa, ile czasu przesunięcia czasowego, mechanizm powtórzeń może tolerować między klientem a serwerem. Mechanizm zabezpieczeń sprawdza, czy czas sygnaturę wysyłane i określa, czy wysłano zbyt daleko w przeszłości. Wartość domyślna to 5 minut.  
+    2. `MaxClockSkew`. A <xref:System.TimeSpan> wartość. Określa, ile czasu przesunięcia czasowego, mechanizm powtórzeń może tolerować między klientem a serwerem. Mechanizm zabezpieczeń sprawdza, czy czas sygnaturę wysyłane i określa, czy wysłano zbyt daleko w przeszłości. Wartość domyślna to 5 minut.  
   
-    3.  `ReplayWindow`. A `TimeSpan` wartość. To decyduje, jak długo komunikat może na żywo w sieci po serwer wysyła on (za pośrednictwem pośredników) przed dotarciem do klienta. Klient śledzi podpisy komunikaty wysyłane w ramach najnowsze `ReplayWindow` na potrzeby wykrywania powtarzania.  
+    3. `ReplayWindow`. A `TimeSpan` wartość. To decyduje, jak długo komunikat może na żywo w sieci po serwer wysyła on (za pośrednictwem pośredników) przed dotarciem do klienta. Klient śledzi podpisy komunikaty wysyłane w ramach najnowsze `ReplayWindow` na potrzeby wykrywania powtarzania.  
   
-    4.  `ReplayCacheSize`. Wartość całkowitą. Klient przechowuje podpisów wiadomości w pamięci podręcznej. To ustawienie określa, ile podpisów, które mogą być przechowywane w pamięci podręcznej. Jeśli liczba wiadomości wysyłanych w ramach ostatniego okna powtarzania osiągnie limit pamięci podręcznej, nowe wiadomości są odrzucane, najstarsze podpisów pamięci podręcznej aż limitu czasu. Wartość domyślna wynosi 500 000.  
+    4. `ReplayCacheSize`. Wartość całkowitą. Klient przechowuje podpisów wiadomości w pamięci podręcznej. To ustawienie określa, ile podpisów, które mogą być przechowywane w pamięci podręcznej. Jeśli liczba wiadomości wysyłanych w ramach ostatniego okna powtarzania osiągnie limit pamięci podręcznej, nowe wiadomości są odrzucane, najstarsze podpisów pamięci podręcznej aż limitu czasu. Wartość domyślna wynosi 500 000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Aby kontrolować wykrywania powtarzania w usłudze przy użyciu kodu  
   
@@ -88,19 +88,19 @@ Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komun
   
  Jeśli nie używasz sesji bezpiecznej konwersacji, wykrywania powtarzania nie gwarantuje wykrywania odtworzenie w scenariuszach z farmami serwera i po ten proces zostanie odtworzony. Dotyczy to następujących powiązania dostarczane przez system:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>.  
+- <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   <xref:System.ServiceModel.WSHttpBinding> za pomocą <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwością `false`.  
+- <xref:System.ServiceModel.WSHttpBinding> za pomocą <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwością `false`.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Następujące przestrzenie nazw są wymagane, aby skompilować kod:  
+- Następujące przestrzenie nazw są wymagane, aby skompilować kod:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>Zobacz także
 

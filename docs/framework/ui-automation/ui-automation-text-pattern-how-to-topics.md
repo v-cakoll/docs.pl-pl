@@ -9,11 +9,11 @@ helpviewer_keywords:
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
 ms.openlocfilehash: b9489debb8d2dc9779bdc55b9333a94f3983e6b3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780955"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>Wzorce tekstu automatyzacji interfejsu użytkownika — Tematy porad
 > [!NOTE]

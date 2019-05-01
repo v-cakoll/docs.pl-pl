@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839569"
 ---
 # <a name="-bugreport"></a>-bugreport
 Tworzy plik, który można użyć, gdy plik jest raport o usterce.  
@@ -31,17 +31,17 @@ Tworzy plik, który można użyć, gdy plik jest raport o usterce.
 ## <a name="remarks"></a>Uwagi  
  Poniższe informacje są dodawane do `file`:  
   
--   Kopiowanie wszystkich plików kodu źródłowego w kompilacji.  
+- Kopiowanie wszystkich plików kodu źródłowego w kompilacji.  
   
--   Lista opcji kompilatora, używane w kompilacji.  
+- Lista opcji kompilatora, używane w kompilacji.  
   
--   Informacje o wersji dotyczące kompilatora, środowisko uruchomieniowe języka wspólnego i systemu operacyjnego.  
+- Informacje o wersji dotyczące kompilatora, środowisko uruchomieniowe języka wspólnego i systemu operacyjnego.  
   
--   Kompilator dane wyjściowe, jeśli istnieje.  
+- Kompilator dane wyjściowe, jeśli istnieje.  
   
--   Opis problemu, dla którego jest wyświetlany monit.  
+- Opis problemu, dla którego jest wyświetlany monit.  
   
--   Opis sposobu Twoim zdaniem ten problem należy ustalić, dla którego jest wyświetlany monit.  
+- Opis sposobu Twoim zdaniem ten problem należy ustalić, dla którego jest wyświetlany monit.  
   
  Ponieważ kopiowanie wszystkich plików kodu źródłowego jest uwzględniony w `file`, może zajść potrzeba odtworzenia kodu (podejrzanych) wada najkrótszej program możliwe.  
   

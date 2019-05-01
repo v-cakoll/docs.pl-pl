@@ -9,11 +9,11 @@ helpviewer_keywords:
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
 ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801767"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Instrukcje: Implementowanie interfejsu IListSource
 Implementowanie <xref:System.ComponentModel.IListSource> interfejsu do utworzenia możliwej do wiązania klasy, który nie implementuje <xref:System.Collections.IList> , ale zamiast tego zawiera listę z innej lokalizacji.  
@@ -36,7 +36,7 @@ Implementowanie <xref:System.ComponentModel.IListSource> interfejsu do utworzeni
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
+- Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 

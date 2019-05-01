@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777185"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Używanie ustawień aplikacji i ustawień użytkownika
 Począwszy od programu .NET Framework 2.0, można tworzyć i uzyskać dostęp do wartości, które są zachowywane między sesjami wykonywania aplikacji. Wartości te są nazywane *ustawienia*. Ustawienia mogą być reprezentowane preferencji użytkownika lub cenne informacje aplikacji musi używać. Na przykład może utworzyć szereg ustawień, których są przechowywane preferencje użytkownika dotyczące schemat kolorów aplikacji. Lub można przechowywać parametry połączenia, które określa bazę danych, używanych przez aplikację. Ustawienia Zezwalaj na monit zarówno utrwalić informacje, które mają kluczowe znaczenie dla aplikacji poza kodem i tworzyć profile, które przechowują Preferencje poszczególnych użytkowników.  

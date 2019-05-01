@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
 ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830365"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatory arytmetyczne w Visual Basic
 Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytmetyczne, które obejmują obliczanie wartości liczbowych, reprezentowane przez literały, zmienne, innych wyrażeń, funkcji i wywołania właściwości i stałe. Również sklasyfikowane za pomocą operatorów arytmetycznych są bit-shift — operatory, które działają na poziomie pojedynczych bitów operandu- and -shift ich wzorców bitowych do lewej lub prawej strony.  
@@ -70,13 +70,13 @@ Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytme
   
  Arytmetycznego przesunięcia nie są cykliczne, co oznacza, że bity przesunięte poza jednym końcu wynik nie są ponownie wprowadzone po drugiej stronie. Pozycje bitów zwolnione w wyniku przez zmianę są ustawione w następujący sposób:  
   
--   0 w przypadku arytmetyczne przesunięcie w lewo  
+- 0 w przypadku arytmetyczne przesunięcie w lewo  
   
--   0 w przypadku liczby dodatniej arytmetyczne przesunięcie w prawo  
+- 0 w przypadku liczby dodatniej arytmetyczne przesunięcie w prawo  
   
--   0 w przypadku arytmetyczne przesunięcie w prawo o typie danych bez znaku (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 0 w przypadku arytmetyczne przesunięcie w prawo o typie danych bez znaku (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
--   1 arytmetyczne przesunięcie w prawo liczby ujemnej (`SByte`, `Short`, `Integer`, lub `Long`)  
+- 1 arytmetyczne przesunięcie w prawo liczby ujemnej (`SByte`, `Short`, `Integer`, lub `Long`)  
   
  Poniższy przykład przenosi `Integer` wartości po lewej stronie i w prawo.  
   

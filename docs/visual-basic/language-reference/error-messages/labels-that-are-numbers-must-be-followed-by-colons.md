@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
 ms.openlocfilehash: 23d7faa82351ca36b132995495ee0ca4d2bcdfdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946656"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Po etykietach, które są liczbami, muszą następować dwukropki
 Numery wierszy są zgodne z regułami innymi rodzajami etykiety i musi zawierać dwukropka.  
@@ -21,7 +21,7 @@ Numery wierszy są zgodne z regułami innymi rodzajami etykiety i musi zawierać
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Umieść numer dwukropkiem na początku wiersza kodu. na przykład:  
+- Umieść numer dwukropkiem na początku wiersza kodu. na przykład:  
   
     ```  
     400:    X += 1  

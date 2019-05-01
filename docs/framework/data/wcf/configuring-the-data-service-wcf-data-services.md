@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: dec42a19f3e265f440ec03164ebc1ece9b6d5ce3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793500"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Konfigurowanie usługi danych (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można utworzyć usługi danych, które uwidaczniają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Dane w tych źródłach mogą pochodzić z różnych źródeł danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] korzysta z dostawców danych w celu ujawnienia tych danych jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Dostawcy te obejmują [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy, dostawcy odbicia i zestaw danych niestandardowych usług dostawcy interfejsów. Implementacja dostawcy definiuje model danych dla usługi. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -77,9 +77,9 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można u
 ## <a name="versioning-requirements"></a>Wymagania dotyczące przechowywania wersji  
  Następujące zachowania konfiguracji usługi danych wymaga wersji 2 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu lub nowszej wersji:  
   
--   Pomoc techniczna dla liczby żądań.  
+- Pomoc techniczna dla liczby żądań.  
   
--   Obsługa opcji zapytania $select projekcji.  
+- Obsługa opcji zapytania $select projekcji.  
   
  Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

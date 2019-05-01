@@ -3,11 +3,11 @@ title: Operowanie na danych w elemencie DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
 ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785427"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Operowanie na danych w elemencie DataTable
 Po utworzeniu <xref:System.Data.DataTable> w <xref:System.Data.DataSet>, można wykonać tego samego działania, które jak w przypadku tabeli w bazie danych. Możesz dodawać, wyświetlać, edytowania i usuwania danych w tabeli; można monitorować, błędów i zdarzeń; i można wyszukiwać dane w tabeli. Podczas modyfikowania danych w **DataTable**, możesz również sprawdzić czy zmiany są dokładne i określenia, czy programowo zaakceptować lub odrzucić zmiany.  

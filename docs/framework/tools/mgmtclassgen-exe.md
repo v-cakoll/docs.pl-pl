@@ -14,11 +14,11 @@ ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919909"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Zarządzanie generatorem silnie typizowanej klasy)
 Narzędzie Management Strongly Typed Class Generator umożliwia szybkie generowanie wcześnie powiązanych klas zarządzanych dla określonej klasy Instrumentacji zarządzania Windows (WMI). Wygenerowana klasa upraszcza kod, który trzeba napisać, aby uzyskać dostęp do wystąpienia klasy WMI.  
@@ -75,19 +75,19 @@ WMIClass [options]
   
  Podczas generowania klasy WMI należy zwrócić uwagę na następujące zachowania:  
   
--   Możliwe jest, że standardowa publiczna właściwość lub metoda będzie miała taką samą nazwę jak istniejąca właściwość lub metoda. Jeśli tak się zdarzy, narzędzie zmieni nazwę właściwości lub metody w generowanej klasie w celu uniknięcia konfliktu nazw.  
+- Możliwe jest, że standardowa publiczna właściwość lub metoda będzie miała taką samą nazwę jak istniejąca właściwość lub metoda. Jeśli tak się zdarzy, narzędzie zmieni nazwę właściwości lub metody w generowanej klasie w celu uniknięcia konfliktu nazw.  
   
--   Możliwe jest, że nazwa właściwości lub metody w generowanej klasie będzie słowem kluczowym w docelowym języku programowania. Jeśli tak się zdarzy, narzędzie zmieni nazwę właściwości lub metody w generowanej klasie w celu uniknięcia konfliktu nazw.  
+- Możliwe jest, że nazwa właściwości lub metody w generowanej klasie będzie słowem kluczowym w docelowym języku programowania. Jeśli tak się zdarzy, narzędzie zmieni nazwę właściwości lub metody w generowanej klasie w celu uniknięcia konfliktu nazw.  
   
--   W usłudze WMI kwalifikatory to modyfikatory zawierające informacje opisujące klasę, wystąpienie, właściwość lub metodę. Usługa WMI używa standardowych kwalifikatorów, takich jak **odczytu**, **zapisu**, i **klucz** do opisywania właściwości w generowanej klasie. Na przykład właściwość modyfikowana przez **odczytu** kwalifikator jest zdefiniowana tylko z właściwością **uzyskać** metody dostępu w generowanej klasie. Właściwość jest oznaczona za pomocą **odczytu** kwalifikator jest przeznaczony tylko do odczytu do **ustaw** dostępu nie jest zdefiniowany.  
+- W usłudze WMI kwalifikatory to modyfikatory zawierające informacje opisujące klasę, wystąpienie, właściwość lub metodę. Usługa WMI używa standardowych kwalifikatorów, takich jak **odczytu**, **zapisu**, i **klucz** do opisywania właściwości w generowanej klasie. Na przykład właściwość modyfikowana przez **odczytu** kwalifikator jest zdefiniowana tylko z właściwością **uzyskać** metody dostępu w generowanej klasie. Właściwość jest oznaczona za pomocą **odczytu** kwalifikator jest przeznaczony tylko do odczytu do **ustaw** dostępu nie jest zdefiniowany.  
   
--   Właściwość liczbowa może być modyfikowana przez **wartości** i **ValueMaps** kwalifikatorów, aby wskazać, że właściwość można ustawić tylko do określone dozwolone wartości. Jest generowane wyliczenie **wartości** i **ValueMaps** i właściwość jest mapowana do wyliczenia.  
+- Właściwość liczbowa może być modyfikowana przez **wartości** i **ValueMaps** kwalifikatorów, aby wskazać, że właściwość można ustawić tylko do określone dozwolone wartości. Jest generowane wyliczenie **wartości** i **ValueMaps** i właściwość jest mapowana do wyliczenia.  
   
--   Usługa WMI używa pojedynczego terminu w celu opisania klasy, która ma tylko jedno wystąpienie. Dlatego też konstruktor domyślny klasy pojedynczej będzie inicjował klasę wyłącznie do jednego wystąpienia.  
+- Usługa WMI używa pojedynczego terminu w celu opisania klasy, która ma tylko jedno wystąpienie. Dlatego też konstruktor domyślny klasy pojedynczej będzie inicjował klasę wyłącznie do jednego wystąpienia.  
   
--   Klasa WMI może mieć właściwości, które są obiektami. Podczas generowania silnie typizowanej klasy dla klasy WMI tego typu należy wziąć pod uwagę wygenerowanie silnie typizowanych klas dla typów właściwości osadzonych obiektów. Umożliwi to dostęp do osadzonych obiektów w silnie typizowany sposób. Należy zauważyć, że wygenerowany kod może nie być w stanie wykryć typu osadzonego obiektu. W takim przypadku w wygenerowanym kodzie zostanie utworzony komentarz powiadamiający o problemie. Następnie można zmodyfikować wygenerowany kod, tak aby właściwość miała typ innej generowanej klasy.  
+- Klasa WMI może mieć właściwości, które są obiektami. Podczas generowania silnie typizowanej klasy dla klasy WMI tego typu należy wziąć pod uwagę wygenerowanie silnie typizowanych klas dla typów właściwości osadzonych obiektów. Umożliwi to dostęp do osadzonych obiektów w silnie typizowany sposób. Należy zauważyć, że wygenerowany kod może nie być w stanie wykryć typu osadzonego obiektu. W takim przypadku w wygenerowanym kodzie zostanie utworzony komentarz powiadamiający o problemie. Następnie można zmodyfikować wygenerowany kod, tak aby właściwość miała typ innej generowanej klasy.  
   
--   W usłudze WMI wartość danych typu CIM_DATETIME może przedstawiać określoną datę i godzinę albo interwał czasu. Jeśli wartość danych przedstawia datę i godzinę, typem danych w generowanej klasie jest **daty/godziny**. Jeśli wartość danych przedstawia interwał czasu, typem danych w generowanej klasie jest **TimeSpan**.  
+- W usłudze WMI wartość danych typu CIM_DATETIME może przedstawiać określoną datę i godzinę albo interwał czasu. Jeśli wartość danych przedstawia datę i godzinę, typem danych w generowanej klasie jest **daty/godziny**. Jeśli wartość danych przedstawia interwał czasu, typem danych w generowanej klasie jest **TimeSpan**.  
   
  Alternatywnie można wygenerować silnie typizowaną klasę, używając rozszerzenia zarządzania Eksploratora serwera w programie Visual Studio .NET.  
   

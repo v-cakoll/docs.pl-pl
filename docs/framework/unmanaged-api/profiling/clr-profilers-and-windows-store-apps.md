@@ -1,5 +1,5 @@
 ---
-title: Profilery CLR i aplikacje Windows Store
+title: Profilery CLR i aplikacje sklepu Windows Store
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775105"
 ---
-# <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacje Windows Store
+# <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacje sklepu Windows Store
 
 W tym temacie opisano, co należy wziąć pod uwagę podczas pisania narzędzia diagnostyczne, które analizują zarządzany kod uruchomiony w aplikacji Windows Store. Zawiera także wskazówki do modyfikowania istniejących narzędzi do programowania, więc one nadal działały po uruchomieniu testów za aplikacje Windows Store. Aby zrozumieć te informacje, najlepiej, jeśli znasz wspólnego języka środowiska uruchomieniowego profilowania interfejsu API został już użyty ten interfejs API w narzędziem diagnostycznym, że działa prawidłowo dla aplikacji klasycznych Windows, a teraz interesują modyfikowanie narzędzie jest poprawnie uruchamiać aplikacje Windows Store.
 

@@ -20,11 +20,11 @@ ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ec5d42bd003f6fb6a79bbd71beb8c88efa4e84c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795112"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy asymetrycznych
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby zaszyfrować element w dokumencie XML.  Szyfrowanie XML to standardowy sposób wymiany ani nie przechowują zaszyfrowane dane XML, nie martwiąc się o łatwo odczytywanych danych.  Aby uzyskać więcej informacji na temat standardowych szyfrowanie XML, zobacz specyfikację World Wide Web Consortium (W3C) dla szyfrowanie XML znajdujący się w <https://www.w3.org/TR/xmldsig-core/>.  
@@ -131,9 +131,9 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Aby skompilować ten przykład, należy dołączyć odwołanie do `System.Security.dll`.  
+- Aby skompilować ten przykład, należy dołączyć odwołanie do `System.Security.dll`.  
   
--   Uwzględnić następujące przestrzenie nazw: <xref:System.Xml>, <xref:System.Security.Cryptography>, i <xref:System.Security.Cryptography.Xml>.  
+- Uwzględnić następujące przestrzenie nazw: <xref:System.Xml>, <xref:System.Security.Cryptography>, i <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Nigdy nie przechowują symetrycznego klucza kryptograficznego w postaci zwykłego tekstu lub przenieść klucz symetryczny między maszynami w postaci zwykłego tekstu.  Ponadto nigdy nie magazynu lub transfer klucza prywatnego pary kluczy asymetrycznych w postaci zwykłego tekstu.  Aby uzyskać więcej informacji na temat klucze szyfrowania symetrycznego i asymetrycznego zobacz [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  

@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie podstawowej, opartej na protokole HTTP usługi sieci Web programu WCF'
+title: 'Instrukcje: tworzenie podstawowej, opartej na protokole HTTP usługi internetowej programu WCF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
 ms.openlocfilehash: 1b76d21cb4f416aae76e7597ad16cfd45e5b7cad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779200"
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Instrukcje: Tworzenie podstawowej, opartej na protokole HTTP usługi sieci Web programu WCF
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Instrukcje: tworzenie podstawowej, opartej na protokole HTTP usługi internetowej programu WCF
 
 Windows Communication Foundation (WCF) pozwala utworzyć usługę, która uwidacznia punkt końcowy sieci Web. Punktów końcowych sieci Web wysyłać dane w formacie JSON lub XML, nie ma żadnych koperty protokołu SOAP. W tym temacie pokazano, jak można uwidocznić punkt końcowy.
 

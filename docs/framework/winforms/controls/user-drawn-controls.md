@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947956"
 ---
 # <a name="user-drawn-controls"></a>Formanty rysowane przez użytkownika
 .NET Framework umożliwia łatwe tworzenie własnych kontrolek. Można utworzyć kontrolkę użytkownika, który jest zestaw standardowych kontrolek powiązane przez kod, lub można zaprojektować kontrolki od podstaw w górę. Dziedziczenie umożliwia nawet utworzyć formant, który dziedziczy istniejący formant i dodać do jej nieodłączne funkcjonalność. Niezależnie od podejścia, możesz użyć programu .NET Framework zapewnia funkcje do rysowania niestandardowy interfejs graficzny dla dowolnego formantu, który tworzysz.  
   
  Malowanie kontrolki odbywa się przez wykonywanie kodu w formancie <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Pojedynczy argument <xref:System.Windows.Forms.Control.OnPaint%2A> metodą jest <xref:System.Windows.Forms.PaintEventArgs> obiektu, który zawiera wszystkie informacje i funkcje wymagane do renderowania kontrolki. <xref:System.Windows.Forms.PaintEventArgs> Zapewnia jako właściwości dwa obiekty jednostki, które będą używane w czasie renderowania kontrolki:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Obiekt - prostokąt, który reprezentuje część kontrolki, z którego będą pobierane. Może to być całą formantu lub część formantu w zależności od tego, jak kontrolka jest rysowana.  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Obiekt - prostokąt, który reprezentuje część kontrolki, z którego będą pobierane. Może to być całą formantu lub część formantu w zależności od tego, jak kontrolka jest rysowana.  
   
--   <xref:System.Drawing.Graphics> Obiekt - hermetyzuje kilka zorientowane na grafiki obiektów i metod, które udostępniają funkcje, które są niezbędne narysować swoją kontrolkę.  
+- <xref:System.Drawing.Graphics> Obiekt - hermetyzuje kilka zorientowane na grafiki obiektów i metod, które udostępniają funkcje, które są niezbędne narysować swoją kontrolkę.  
   
  Aby uzyskać więcej informacji na temat <xref:System.Drawing.Graphics> obiektu oraz sposób jej stosowania, patrz [jak: Tworzenie obiektów graficznych do rysowania](../advanced/how-to-create-graphics-objects-for-drawing.md).  
   

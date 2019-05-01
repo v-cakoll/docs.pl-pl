@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981373"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 W tym temacie opisano terminy, które są używane do opisywania elementy składni XAML. Te warunki są często stosowane w pozostałej części tej dokumentacji, zarówno dla dokumentacji WPF specjalnie i dla innych platform, które używają XAML lub włączane przez obsługę języka XAML na poziomie System.Xaml podstawowe pojęcia dotyczące XAML. W tym temacie omówiono w podstawowej terminologii opisanymi w temacie [Przegląd XAML (WPF)](xaml-overview-wpf.md).  
@@ -58,9 +58,9 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
 ## <a name="object-element-syntax"></a>Składnia elementu obiektu  
  *Składnia elementu obiektu* jest składnia znaczników XAML, która tworzy wystąpienie klasy CLR lub struktury przez zadeklarowanie — element XML. Ta składnia przypomina składnię innych języków znaczników, takich jak HTML. Składnia elementu obiektu, który rozpoczyna się od lewego nawiasu ostrego (\<), a następnie natychmiast Nazwa typu klasy lub struktury, które są tworzone. Zero lub więcej spacji po nazwie typu i zero lub więcej atrybutów może również być zadeklarowany w elemencie obiektu z jedną lub więcej spacji, oddzielając nazwy atrybutu = para "value". Na koniec jedną z następujących muszą być spełnione:  
   
--   Element i tagów muszą być zamknięte przez ukośnikiem (/) od razu następuje prawego nawiasu ostrego (>).  
+- Element i tagów muszą być zamknięte przez ukośnikiem (/) od razu następuje prawego nawiasu ostrego (>).  
   
--   Otwierający tag, należy wykonać prawego nawiasu ostrego (>). Inne elementy obiektu, elementy właściwości lub tekst wewnętrzny wykonać otwierający tag. Dokładnie zawartość może być zawarte w tym miejscu jest zwykle ograniczony przez model obiektów elementu. Odpowiednik tagu zamykającego elementu obiektu należy również objęte zagnieżdżanie właściwe i równoważyć z innych par tagu otwierającym i zamykającym.  
+- Otwierający tag, należy wykonać prawego nawiasu ostrego (>). Inne elementy obiektu, elementy właściwości lub tekst wewnętrzny wykonać otwierający tag. Dokładnie zawartość może być zawarte w tym miejscu jest zwykle ograniczony przez model obiektów elementu. Odpowiednik tagu zamykającego elementu obiektu należy również objęte zagnieżdżanie właściwe i równoważyć z innych par tagu otwierającym i zamykającym.  
   
  XAML jako implementowany przez .NET zawiera zestaw reguł, które elementy obiektu mapy na typy i atrybuty do właściwości lub zdarzenia i XAML przestrzeni nazw z przestrzeni nazw CLR, a także zestaw. Dla platformy WPF i .NET Framework XAML elementów obiektu mapowania [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] zestawów występujących w odwołaniu typów zgodnie z definicją w i atrybutów mapowania członków z tych typów. Gdy odwołujesz się do typu CLR w XAML, masz dostęp do dziedziczone składowe tego typu, jak również.  
   
@@ -154,11 +154,11 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
 ## <a name="collection-syntax"></a>Składnia kolekcji  
  Specyfikacja XAML wymaga implementacji procesora XAML, aby zidentyfikować właściwości, których typ wartości jest kolekcją. Ogólne implementacji procesora XAML na platformie .NET opiera się na kodzie zarządzanym i środowiska CLR i identyfikuje typy kolekcji za pomocą jednego z następujących czynności:  
   
--   Typ implementuje <xref:System.Collections.IList>.  
+- Typ implementuje <xref:System.Collections.IList>.  
   
--   Typ implementuje <xref:System.Collections.IDictionary>.  
+- Typ implementuje <xref:System.Collections.IDictionary>.  
   
--   Typ pochodzi z <xref:System.Array> (Aby uzyskać więcej informacji na temat tablic w XAML, zobacz [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md).)  
+- Typ pochodzi z <xref:System.Array> (Aby uzyskać więcej informacji na temat tablic w XAML, zobacz [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md).)  
   
  Jeśli typ właściwości to kolekcja, następnie typu wywnioskowanego kolekcji nie musi być określona w znaczników jako elementu obiektu. Zamiast tego elementów, które mają stać się elementów w kolekcji są określane jako jeden lub więcej elementów podrzędnych elementu właściwości. Każdego takiego elementu jest oceniany na obiekt podczas ładowania i dodawane do kolekcji, wywołując `Add` metody dorozumianych kolekcji. Na przykład <xref:System.Windows.Style.Triggers%2A> właściwość <xref:System.Windows.Style> przyjmuje typ kolekcji wyspecjalizowane <xref:System.Windows.TriggerCollection>, który implementuje <xref:System.Collections.IList>. Nie jest konieczne do utworzenia wystąpienia <xref:System.Windows.TriggerCollection> element obiektu w znaczniku. Zamiast tego należy określić co najmniej jedną <xref:System.Windows.Trigger> elementów jako elementów w obrębie `Style.Triggers` elementu właściwości, gdzie <xref:System.Windows.Trigger> (lub klasę pochodną) jest typu oczekiwanego typu elementu dla silnie typizowanym i niejawne <xref:System.Windows.TriggerCollection>.  
   
@@ -264,9 +264,9 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
  Dołączone właściwości użyj składni, która przypomina pozornie składni elementu właściwości, w tym również określić *typeName*. *propertyName* kombinacji. Istnieją dwie ważne różnice:  
   
--   Możesz użyć *typeName*. *propertyName* kombinacji nawet wtedy, gdy ustawienie dołączoną właściwość za pomocą składni atrybutów. Właściwości dołączone są tylko wówczas, gdy kwalifikowania nazwy właściwości jest wymagany w składni atrybutów.  
+- Możesz użyć *typeName*. *propertyName* kombinacji nawet wtedy, gdy ustawienie dołączoną właściwość za pomocą składni atrybutów. Właściwości dołączone są tylko wówczas, gdy kwalifikowania nazwy właściwości jest wymagany w składni atrybutów.  
   
--   Umożliwia także składni elementu właściwości przypadku dołączonych właściwości. Jednak w przypadku składni elementu typowe właściwości *typeName* określasz, jest elementem obiektu, który zawiera element właściwości. Jeśli odwołujesz się do dołączoną właściwość, a następnie *typeName* jest klasa, która definiuje dołączona właściwość nie zawierającego element obiektu.  
+- Umożliwia także składni elementu właściwości przypadku dołączonych właściwości. Jednak w przypadku składni elementu typowe właściwości *typeName* określasz, jest elementem obiektu, który zawiera element właściwości. Jeśli odwołujesz się do dołączoną właściwość, a następnie *typeName* jest klasa, która definiuje dołączona właściwość nie zawierającego element obiektu.  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Dołączone zdarzenia  

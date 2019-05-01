@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780071"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory i WSTrustChannel
 Jeśli znasz już za pomocą programu Windows Communication Foundation (WCF), wiesz, klienta programu WCF jest już pamiętać federacji. Konfigurując klienta programu WCF za pomocą <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowe powiązanie, aby umożliwić uwierzytelnianie Sfederowane z usługą.
@@ -25,7 +25,7 @@ Jeśli znasz już za pomocą programu Windows Communication Foundation (WCF), wi
 
 - Przy użyciu programu WIF samodzielnie uzyskać token z usługi STS, a następnie Włącz klienta programu WCF do uwierzytelniania za pomocą tego tokenu. Aby uzyskać więcej informacji, zobacz [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) próbki.
 
- Pierwszy scenariusz jest oczywista: WCF istniejący klienci będą nadal działać z jednostki uzależnionej stron programu WIF i usługi STS. W tym temacie omówiono dwa pozostałe scenariusze.
+ Pierwszy scenariusz jest oczywista: Istniejący klienci usługi WCF będą nadal działać z jednostki uzależnionej stron programu WIF i usługi STS. W tym temacie omówiono dwa pozostałe scenariusze.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Udoskonalanie istniejącego klienta programu WCF za pomocą ActAs / OnBehalfOf
 W typowy scenariusz delegowania tożsamości klient wywołuje usługi warstwy środkowej, która następnie wywołuje usługi zaplecza. Usługi warstwy środkowej działa jako lub działa w imieniu klienta.

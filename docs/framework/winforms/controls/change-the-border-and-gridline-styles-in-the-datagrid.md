@@ -12,11 +12,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
 ms.openlocfilehash: d24adb98c339f911d6bea0312bce4d4b4f198a61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939012"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Instrukcje: zmienianie stylów obramowania i linii siatki w kontrolce DataGridView formularzy systemu Windows
 Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można dostosować wygląd obramowania formantu i linie siatki, aby ulepszyć środowisko użytkownika. Możesz zmodyfikować kolor linii siatki i styl obramowania kontrolki, oprócz style obramowania komórek w kontrolce. Można także zastosować inną komórkę style obramowania dla zwykłych komórek, komórki nagłówka wiersza i komórki nagłówka kolumny.  
@@ -26,21 +26,21 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można dostosowa�
   
 ### <a name="to-change-the-gridline-color-programmatically"></a>Aby programowo zmienić kolor linii siatki  
   
--   Ustaw <xref:System.Windows.Forms.DataGridView.GridColor%2A> właściwości.  
+- Ustaw <xref:System.Windows.Forms.DataGridView.GridColor%2A> właściwości.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
 ### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Aby zmienić styl obramowania formantu DataGridView całego programowe  
   
--   Ustaw <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> jedną z właściwości <xref:System.Windows.Forms.BorderStyle> wartości wyliczenia.  
+- Ustaw <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> jedną z właściwości <xref:System.Windows.Forms.BorderStyle> wartości wyliczenia.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
 ### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Aby programowo zmienić styl komórek DataGridView  
   
--   Ustaw <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, i <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> właściwości.  
+- Ustaw <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, i <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> właściwości.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  
@@ -52,9 +52,9 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można dostosowa�
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
   
--   Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, i <xref:System.Drawing?displayProperty=nameWithType> zestawów.  
+- Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, i <xref:System.Drawing?displayProperty=nameWithType> zestawów.  
   
 ## <a name="see-also"></a>Zobacz także
 

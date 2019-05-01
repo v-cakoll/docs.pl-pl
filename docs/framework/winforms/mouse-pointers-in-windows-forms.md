@@ -10,11 +10,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
 ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800787"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Wskaźniki myszy w formularzach systemu Windows
 Wskaźnik myszy *wskaźnika*, który jest czasami nazywany kursora, jest mapę bitową, która określa punkt koncentracji uwagi na ekranie dla danych wejściowych użytkownika za pomocą myszy. Ten temat zawiera omówienie wskaźnik myszy w formularzach Windows Forms i opisuje kilka sposobów modyfikowania i sterowanie wskaźnikiem myszy.  

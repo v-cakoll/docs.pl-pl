@@ -18,11 +18,11 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 ms.openlocfilehash: 339f9c9d8b25f6deef4cc77f60c26b7b5d017ce0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796945"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Używanie synchronicznego gniazda klienta
 Synchronicznego gniazda klienta zawiesza program aplikacji podczas wykonywania operacji sieciowej. Synchronicznego gniazda nie są odpowiednie dla aplikacji, które intensywnie korzystają z sieci do ich działania, ale mogą one umożliwiać prosty dostęp do usług sieciowych dla innych aplikacji.  

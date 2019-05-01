@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796776"
 ---
 # <a name="using-secure-sockets-layer"></a>Używanie protokołu Secure Sockets Layer
 <xref:System.Net> Klasy korzystać protokół Secure Sockets Layer (SSL), aby szyfrować połączenia dla kilku protokołów sieciowych.  
@@ -60,7 +60,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.  
+- Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
 

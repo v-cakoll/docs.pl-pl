@@ -1,5 +1,5 @@
 ---
-title: Element członkowski — zalecenia dotyczące projektowania
+title: Składowa — zalecenia dotyczące projektowania
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: KrzysztofCwalina
 ms.openlocfilehash: d7023bbe59eb3590af47952a2fe24c5f40b3ca68
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945525"
 ---
-# <a name="member-design-guidelines"></a>Element członkowski — zalecenia dotyczące projektowania
+# <a name="member-design-guidelines"></a>Składowa — zalecenia dotyczące projektowania
 Metody, właściwości, zdarzenia, konstruktory i pola są nazywane zbiorczo elementów członkowskich. Elementy członkowskie są ostatecznie oznacza, że za pomocą którego funkcja framework jest widoczna dla użytkowników końcowych RAM.  
   
  Członkowie mogą być wirtualne lub niewirtualne, konkretny ani abstrakcyjne, statyczne lub wystąpienie i może mieć kilka różnych zakresów ułatwień dostępu. Takiej odmiany zapewnia niezwykłą wyrazistość, ale w tym samym czasie wymaga obsługi ze strony Projektant framework.  

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Uzyskaj przezroczystość lub półprzezroczystość elementu interfejsu użytkownika'
+title: 'Instrukcje: Uzyskiwanie przezroczystości lub półprzezroczystości elementu interfejsu użytkownika'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UIElements [WPF], transparency
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
 ms.openlocfilehash: 1de9a7e11fee241ecb71242e9808e77b7e5e63b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942873"
 ---
-# <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Instrukcje: Uzyskaj przezroczystość lub półprzezroczystość elementu interfejsu użytkownika
+# <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Instrukcje: Uzyskiwanie przezroczystości lub półprzezroczystości elementu interfejsu użytkownika
 W tym przykładzie pokazano, jak wprowadzić <xref:System.Windows.UIElement> przezroczystym lub półprzezroczystym. Do uczynienia elementu przezroczystym lub półprzezroczystym, ustaw jego <xref:System.Windows.UIElement.Opacity%2A> właściwości. Wartość `0.0` sprawia, że element jest całkowicie przezroczysty podczas wartość `1.0` sprawia, że element jest całkowicie nieprzezroczysty. Wartość `0.5` sprawia, że element 50% nieprzezroczystych i tak dalej. Element <xref:System.Windows.UIElement.Opacity%2A> ustawiono `1.0` domyślnie.  
   
 ## <a name="example"></a>Przykład  

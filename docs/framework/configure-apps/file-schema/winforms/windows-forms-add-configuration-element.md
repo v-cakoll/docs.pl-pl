@@ -8,11 +8,11 @@ ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775846"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms, Dodaj Element konfiguracji
 

@@ -14,22 +14,22 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830170"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Zadeklarowana charakterystyka elementów (Visual Basic)
 A *cechy* zadeklarowany element jest elementem tego elementu, który ma wpływ na sposób kod może korzystać z niego. Każdy element zadeklarowany ma co najmniej jeden z następujących właściwości, które są skojarzone z nią:  
   
--   *Typ danych* — może zawierać wartości elementu i jak przechowuje te wartości. Aby uzyskać więcej informacji, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Typ danych* — może zawierać wartości elementu i jak przechowuje te wartości. Aby uzyskać więcej informacji, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/index.md).  
   
--   *Okres istnienia* — okres czasu, przez który element jest dostępny do użytku. Aby uzyskać więcej informacji, zobacz [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Okres istnienia* — okres czasu, przez który element jest dostępny do użytku. Aby uzyskać więcej informacji, zobacz [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Zakres* — zestaw cały kod, który może odwoływać się do elementu bez kwalifikowania nazwy. Aby uzyskać więcej informacji, zobacz [jak: Kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Zakres* — zestaw cały kod, który może odwoływać się do elementu bez kwalifikowania nazwy. Aby uzyskać więcej informacji, zobacz [jak: Kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Poziom dostępu* — uprawnienia dla kod, aby użyć tego elementu. Aby uzyskać więcej informacji, zobacz [jak: Kontrolowanie dostępności zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Poziom dostępu* — uprawnienia dla kod, aby użyć tego elementu. Aby uzyskać więcej informacji, zobacz [jak: Kontrolowanie dostępności zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Właściwości elementów  
  W poniższej tabeli przedstawiono deklarowanych elementów i właściwości, które są stosowane do każdego z nich.  
@@ -38,18 +38,18 @@ A *cechy* zadeklarowany element jest elementem tego elementu, który ma wpływ n
 |-------------|---------------|--------------|------------------------|------------------|  
 |Zmienna|Tak|Yes|Yes|Tak|  
 |Stała|Tak|Nie|Yes|Tak|  
-|Wyliczenie|Tak|Nie|Yes|Yes|  
-|Struktura|Nie|Nie|Yes|Yes|  
-|Właściwość|Yes|Yes|Yes|Tak|  
+|Wyliczenie|Tak|Nie|Yes|Tak|  
+|Struktura|Nie|Nie|Yes|Tak|  
+|Właściwość|Tak|Yes|Yes|Tak|  
 |Metoda|Nie|Yes|Yes|Tak|  
-|Procedura (`Sub` lub `Function`)|Nie|Yes|Yes|Tak|  
+|Procedura (`Sub` lub `Function`)|Nie|Yes|Yes|Yes|  
 |Parametr procedury|Yes|Yes|Yes|Nie|  
-|Return — funkcja|Yes|Yes|Yes|Nie|  
-|Operator|Yes|Nie|Yes|Tak|  
+|Return — funkcja|Tak|Yes|Yes|Nie|  
+|Operator|Tak|Nie|Yes|Tak|  
 |Interface|Nie|Nie|Yes|Tak|  
-|Class|Nie|Nie|Yes|Yes|  
+|Class|Nie|Nie|Yes|Tak|  
 |Zdarzenie|Nie|Nie|Yes|Tak|  
-|Delegate|Nie|Nie|Yes|Yes|  
+|Delegate|Nie|Nie|Yes|Tak|  
   
  <sup>1</sup> zakres jest czasami określane jako *widoczność*.  
   

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938856"
 ---
 # <a name="xtype-markup-extension"></a>x:Type — Rozszerzenie znaczników
 Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla określonego typu XAML.  
@@ -71,11 +71,11 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 zapewnia dodatkową obsługę dla ogólnych typów i modyfikuje zachowanie funkcji `x:TypeArguments` i `x:Type` zapewnienie tej obsługi.  
   
--   `x:TypeArguments` i elementu skojarzonego obiektu dla wystąpienia obiektu ogólny może być w przypadku elementów innych niż katalog główny. Aby uzyskać więcej informacji, zobacz sekcję "XAML 2009" [x: typearguments — dyrektywa](x-typearguments-directive.md).  
+- `x:TypeArguments` i elementu skojarzonego obiektu dla wystąpienia obiektu ogólny może być w przypadku elementów innych niż katalog główny. Aby uzyskać więcej informacji, zobacz sekcję "XAML 2009" [x: typearguments — dyrektywa](x-typearguments-directive.md).  
   
--   XAML 2009 obsługuje składnię do określania ograniczenie typu ogólnego w znacznikach. To mogą być używane przez `x:TypeArguments`, `x:Type`, lub obu tych funkcji w połączeniu.  
+- XAML 2009 obsługuje składnię do określania ograniczenie typu ogólnego w znacznikach. To mogą być używane przez `x:TypeArguments`, `x:Type`, lub obu tych funkcji w połączeniu.  
   
--   Implementacja WPF XAML podczas przetwarzania XAML 2009 dla obciążenia dodaje również tej możliwości do zachowania konwersji niejawnego typu określone we właściwościach framework, które używają typu <xref:System.Type>.  
+- Implementacja WPF XAML podczas przetwarzania XAML 2009 dla obciążenia dodaje również tej możliwości do zachowania konwersji niejawnego typu określone we właściwościach framework, które używają typu <xref:System.Type>.  
   
  W środowisku WPF można użyć funkcji XAML 2009, ale tylko dla luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009.  
   

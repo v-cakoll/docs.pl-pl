@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856604"
 ---
 # <a name="data-transfer-architectural-overview"></a>Omówienie architektury transferu danych
 Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura obsługi komunikatów. Może odbierać komunikaty, je przetworzyć i wysyłać je do kodu użytkownika wykonywać dalszych akcji lub można skonstruować wiadomości z dane podane przez kod użytkownika i dostarczania ich do miejsca docelowego. W tym temacie, który jest przeznaczony dla zaawansowanych deweloperów, w tym artykule opisano architekturę do obsługi wiadomości i zawartymi danymi. Prostsze, zorientowane na zadania widoku sposób wysyłania i odbierania danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura 
 ### <a name="getting-data-from-a-message-body"></a>Pobieranie danych z treści wiadomości  
  Można wyodrębnić dane przechowywane w treści komunikatu w dwa sposoby:  
   
--   Treść cały komunikat w tym samym czasie można uzyskać przez wywołanie metody <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> metody i przekazywanie w edytora XML. Pełna treść jest zapisywany do tego składnika zapisywania. W tym samym czasie pobierania treści cały komunikat jest również nazywany *zapisania komunikatu*. Podczas wysyłania komunikatów pisania odbywa się przede wszystkim przez stos kanału — część stosu kanał będzie zwykle uzyskują dostęp do treści cały komunikat, Zakoduj je i wyślij ją.  
+- Treść cały komunikat w tym samym czasie można uzyskać przez wywołanie metody <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> metody i przekazywanie w edytora XML. Pełna treść jest zapisywany do tego składnika zapisywania. W tym samym czasie pobierania treści cały komunikat jest również nazywany *zapisania komunikatu*. Podczas wysyłania komunikatów pisania odbywa się przede wszystkim przez stos kanału — część stosu kanał będzie zwykle uzyskują dostęp do treści cały komunikat, Zakoduj je i wyślij ją.  
   
--   Innym sposobem, aby uzyskać informacje z treści wiadomości jest wywołanie <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> i Uzyskaj odczytujący XML. Treść komunikatu może zostać oceniony następnie sekwencyjnie, zgodnie z potrzebami przez wywołanie metody w czytniku. Wprowadzenie wiadomości treści —-eliminujemy jest również nazywany *czytania wiadomości*. Odczytanie komunikatu o jest używany głównie przez platformę usługi podczas odbierania komunikatów. Na przykład, gdy <xref:System.Runtime.Serialization.DataContractSerializer> jest używany, struktura usługi zostanie uzyskiwanie odczytującego XML treści i przekazać go do silnika deserializacji, który rozpocznie odczytywanie wiadomości —-elementów i utworzenie odpowiedniego wykresu obiektu.  
+- Innym sposobem, aby uzyskać informacje z treści wiadomości jest wywołanie <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> i Uzyskaj odczytujący XML. Treść komunikatu może zostać oceniony następnie sekwencyjnie, zgodnie z potrzebami przez wywołanie metody w czytniku. Wprowadzenie wiadomości treści —-eliminujemy jest również nazywany *czytania wiadomości*. Odczytanie komunikatu o jest używany głównie przez platformę usługi podczas odbierania komunikatów. Na przykład, gdy <xref:System.Runtime.Serialization.DataContractSerializer> jest używany, struktura usługi zostanie uzyskiwanie odczytującego XML treści i przekazać go do silnika deserializacji, który rozpocznie odczytywanie wiadomości —-elementów i utworzenie odpowiedniego wykresu obiektu.  
   
  Treść wiadomości mogą być pobierane tylko raz. Dzięki temu można pracować ze strumieniami tylko do przodu. Na przykład można napisać <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> zastąpienia, która odczytuje z <xref:System.IO.FileStream> i zwraca wyniki w postaci zestaw informacji XML. Nigdy nie należy do "tyłu" na początku pliku.  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura 
 ### <a name="the-istreamprovider-interface"></a>Interfejs element IStreamProvider  
  Podczas zapisywania wysyłanej wiadomości zawiera treść przesyłane strumieniowo do usługi składnika zapisywania XML, <xref:System.ServiceModel.Channels.Message> używa sekwencję wywołań, podobnie do poniższego w jego <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> implementacji:  
   
--   Należy zapisać wszystkie informacje niezbędne poprzedzających strumienia (na przykład otwierający XML tag).  
+- Należy zapisać wszystkie informacje niezbędne poprzedzających strumienia (na przykład otwierający XML tag).  
   
--   Napisz strumienia.  
+- Napisz strumienia.  
   
--   Napisz żadnych informacji po strumienia (na przykład zamykający XML tag).  
+- Napisz żadnych informacji po strumienia (na przykład zamykający XML tag).  
   
  Działa to również efektywnie integrowana z kodowania, które są podobne do tekstową Kodowanie XML. Jednak niektóre kodowania nie należy umieszczać informacje zestaw informacji XML (na przykład znaczników początkowych i końcowych elementów XML) wraz z danych zawartych w elementy. Na przykład kodowanie MTOM komunikat jest podzielony na wiele części. Jedną z części zawiera zestaw informacji XML, który może zawierać odwołania do innych części dla elementu rzeczywistej zawartości. Zestaw informacji XML jest zwykle mały w porównaniu do zawartości przesyłanej strumieniowo, dobrym pomysłem będzie buforować zestaw informacji, zapisać go, a następnie wpisz zawartość w taki sposób, w strumieniu. Oznacza to, że do czasu zamknięcia tagu elementu są zapisywane, strumień powinna nie został napisany jeszcze.  
   

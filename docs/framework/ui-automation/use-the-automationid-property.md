@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775748"
 ---
 # <a name="use-the-automationid-property"></a>Użyj właściwości AutomationID
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "59173098"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Należy użyć AutomationID unikatowe i wykrywalny, aby zlokalizować określonego elementu drzewa automatyzacji interfejsu użytkownika  
   
--   Użyj narzędzia takiego jak [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] do raportu <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> z [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] element zainteresowania. Ta wartość może następnie skopiowane i wklejone do aplikacji klienckiej, takich jak skrypt testu dla kolejnych testów automatycznych. Takie podejście zmniejsza i upraszcza kod wymagany do identyfikowania i lokalizowania elementu w czasie wykonywania.  
+- Użyj narzędzia takiego jak [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] do raportu <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> z [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] element zainteresowania. Ta wartość może następnie skopiowane i wklejone do aplikacji klienckiej, takich jak skrypt testu dla kolejnych testów automatycznych. Takie podejście zmniejsza i upraszcza kod wymagany do identyfikowania i lokalizowania elementu w czasie wykonywania.  
   
 > [!CAUTION]
 >  Ogólnie rzecz biorąc, należy spróbować uzyskać tylko bezpośrednie elementy podrzędne <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Wyszukaj elementy podrzędne mogą wykonać iterację setek lub nawet tysięcy elementów, które prawdopodobnie spowodowało przepełnienie stosu. Jeśli próbujesz uzyskać określony element na niższym poziomie, należy rozpocząć wyszukiwanie z okna aplikacji lub kontenerów na niższym poziomie.  
@@ -45,7 +45,7 @@ ms.locfileid: "59173098"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Użyj ścieżki trwały, aby powrócić do wcześniej zidentyfikowane obiektu AutomationElement  
   
--   Aplikacje klienckie, ze skryptów prosty test niezawodne rejestrowanie i narzędzia odtwarzania może wymagać dostępu do elementów, które się nie aktualnie wystąpienia, takie jak plik Otwórz okno dialogowe lub elementu menu i dlatego nie istnieją w drzewa automatyzacji interfejsu użytkownika. Te elementy mogą być tylko utworzone przez odtwarzanie, lub "odtwarzania", określonej kolejności akcji UI za pomocą właściwości automatyzacji interfejsu użytkownika, takie jak AutomationID, wzorców kontrolek i detektory zdarzenia.
+- Aplikacje klienckie, ze skryptów prosty test niezawodne rejestrowanie i narzędzia odtwarzania może wymagać dostępu do elementów, które się nie aktualnie wystąpienia, takie jak plik Otwórz okno dialogowe lub elementu menu i dlatego nie istnieją w drzewa automatyzacji interfejsu użytkownika. Te elementy mogą być tylko utworzone przez odtwarzanie, lub "odtwarzania", określonej kolejności akcji UI za pomocą właściwości automatyzacji interfejsu użytkownika, takie jak AutomationID, wzorców kontrolek i detektory zdarzenia.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -54,7 +54,7 @@ ms.locfileid: "59173098"
   
 #### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Użyj ścieżki względnej, aby powrócić do wcześniej zidentyfikowane obiektu AutomationElement  
   
--   W pewnych okolicznościach ponieważ AutomationID tylko musi być unikatowa wśród elementów równorzędnych, wiele elementy drzewa automatyzacji interfejsu użytkownika mogą mieć identycznych wartości właściwości AutomationID. W takich sytuacjach elementy można unikatowo zidentyfikować oparte na element nadrzędny i, jeśli to konieczne, nadrzędnych. Na przykład deweloperzy mogą korzystać pasek menu z wieloma elementami menu każdego z wiele podrzędnych elementów menu, w którym elementy podrzędne są identyfikowane przez sekwencyjnego AutomationID firmy takie jak "Item1 —", "Item2 —" i tak dalej. Każdy element menu może następnie jednoznacznie zidentyfikować przez jego AutomationID wraz z AutomationID jego elementu nadrzędnego i, jeśli to konieczne, jej nadrzędnych.  
+- W pewnych okolicznościach ponieważ AutomationID tylko musi być unikatowa wśród elementów równorzędnych, wiele elementy drzewa automatyzacji interfejsu użytkownika mogą mieć identycznych wartości właściwości AutomationID. W takich sytuacjach elementy można unikatowo zidentyfikować oparte na element nadrzędny i, jeśli to konieczne, nadrzędnych. Na przykład deweloperzy mogą korzystać pasek menu z wieloma elementami menu każdego z wiele podrzędnych elementów menu, w którym elementy podrzędne są identyfikowane przez sekwencyjnego AutomationID firmy takie jak "Item1 —", "Item2 —" i tak dalej. Każdy element menu może następnie jednoznacznie zidentyfikować przez jego AutomationID wraz z AutomationID jego elementu nadrzędnego i, jeśli to konieczne, jej nadrzędnych.  
   
 ## <a name="see-also"></a>Zobacz także
 

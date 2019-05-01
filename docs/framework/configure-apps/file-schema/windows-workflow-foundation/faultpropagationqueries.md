@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
 ms.openlocfilehash: 402b938913575adfa9125b981dc2913680f07b73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790159"
 ---
 # <a name="faultpropagationqueries"></a>\<faultPropagationQueries>
 Reprezentuje kolekcję zapytań, które są używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia. Należy użyć takiej kwerendy do śledzenia obsługi błędów występujących w ramach działania. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania błędów propagacji rekordów.  

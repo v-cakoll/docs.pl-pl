@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz efekt najazdu przy użyciu zdarzenia'
+title: 'Instrukcje: Tworzenie efektu najazdu przy użyciu zdarzeń'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
 ms.openlocfilehash: 87740a215136863199d962a2704cf691f27fc3bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776652"
 ---
-# <a name="how-to-create-a-rollover-effect-using-events"></a>Instrukcje: Utwórz efekt najazdu przy użyciu zdarzenia
+# <a name="how-to-create-a-rollover-effect-using-events"></a>Instrukcje: Tworzenie efektu najazdu przy użyciu zdarzeń
 Ten przykład przedstawia sposób zmienić kolor elementu, jak wskaźnik myszy wprowadza i pozostawia obszar zajmowany przez element.  
   
  W tym przykładzie składa się z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] oraz plik CodeBehind.  

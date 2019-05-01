@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949945"
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
 *Inicjalizacja z opóźnieniem* obiektu oznacza, że jego utworzenia jest odroczone do czasu jej pierwszym użyciu. (W tym temacie warunki *inicjowania z opóźnieniem* i *wystąpienia z opóźnieniem* oznaczają to samo.) Inicjalizacja z opóźnieniem służy głównie do zwiększenia wydajności, należy unikać marnotrawstwa obliczeń i zmniejszyć wymagania dotyczące pamięci programu. Poniżej przedstawiono najbardziej typowych scenariuszy:  
   
--   Gdy ma obiekt, który jest kosztowne, a program nie może używać. Na przykład załóżmy, że masz w pamięci `Customer` obiekt, który ma `Orders` właściwość, która zawiera dużą tablicę liczb `Order` obiekty, które zainicjowana, wymaga połączenia z bazą danych. Jeśli użytkownik nigdy nie prosi do wyświetlania zamówień lub użyć danych w obliczeń, następnie nie ma powodu ją utworzyć za pomocą pamięci systemowej lub cykli obliczeniowych. Za pomocą `Lazy<Orders>` do deklarowania `Orders` obiektu inicjowania z opóźnieniem, możesz uniknąć marnowania zasobów systemowych, jeśli obiekt nie jest używany.  
+- Gdy ma obiekt, który jest kosztowne, a program nie może używać. Na przykład załóżmy, że masz w pamięci `Customer` obiekt, który ma `Orders` właściwość, która zawiera dużą tablicę liczb `Order` obiekty, które zainicjowana, wymaga połączenia z bazą danych. Jeśli użytkownik nigdy nie prosi do wyświetlania zamówień lub użyć danych w obliczeń, następnie nie ma powodu ją utworzyć za pomocą pamięci systemowej lub cykli obliczeniowych. Za pomocą `Lazy<Orders>` do deklarowania `Orders` obiektu inicjowania z opóźnieniem, możesz uniknąć marnowania zasobów systemowych, jeśli obiekt nie jest używany.  
   
--   Gdy obiekt, która jest kosztowna utworzyć i mają być odroczone jej tworzenia, aż po innych kosztowne operacje zostały zakończone. Załóżmy na przykład, czy program ładuje kilka wystąpień obiektu po jego uruchomieniu, ale tylko niektóre z nich wymagane jest od razu. Aby zwiększyć wydajność uruchamiania programów, należy Opóźnienie inicjowania obiektów, które nie są wymagane, dopóki nie zostały utworzone wymagane obiekty.  
+- Gdy obiekt, która jest kosztowna utworzyć i mają być odroczone jej tworzenia, aż po innych kosztowne operacje zostały zakończone. Załóżmy na przykład, czy program ładuje kilka wystąpień obiektu po jego uruchomieniu, ale tylko niektóre z nich wymagane jest od razu. Aby zwiększyć wydajność uruchamiania programów, należy Opóźnienie inicjowania obiektów, które nie są wymagane, dopóki nie zostały utworzone wymagane obiekty.  
   
  Mimo że można napisać własny kod, aby wykonać inicjowania z opóźnieniem, firma Microsoft zaleca użycie <xref:System.Lazy%601> zamiast tego. <xref:System.Lazy%601> oraz jego powiązanych typów również obsługuje bezpieczeństwo wątków i zasady propagacji wyjątku spójne.  
   
@@ -101,11 +101,11 @@ ms.locfileid: "59182302"
 |Konstruktor|Tryb awaryjny wątku|Używa metody inicjującej|Wyjątki są buforowane.|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Nie|Nie|  
-|Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Tak|Tak|  
+|Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Yes|Yes|  
 |Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Nie|Nie|  
 |Lazy(T)(FUNC(T), atrybut typu wartość logiczna)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Yes|  
 |Lazy(T)(LazyThreadSafetyMode)|Określone przez użytkownika|Nie|Nie|  
-|Lazy(T)(Func(T), LazyThreadSafetyMode)|Określone przez użytkownika|Tak|Nie, gdy użytkownik poda <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; w przeciwnym razie tak.|  
+|Lazy(T)(Func(T), LazyThreadSafetyMode)|Określone przez użytkownika|Yes|Nie, gdy użytkownik poda <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; w przeciwnym razie tak.|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>Implementowanie właściwości inicjowany z opóźnieniem  
  Aby zaimplementować właściwości publicznej przy użyciu inicjowania z opóźnieniem, zdefiniuj do pola pomocniczego właściwości jako <xref:System.Lazy%601>i zwróć <xref:System.Lazy%601.Value%2A> właściwość `get` metody dostępu właściwości.  
@@ -128,11 +128,11 @@ ms.locfileid: "59182302"
   
  <xref:System.Threading.ThreadLocal%601> opakowuje jego obiekt w podobny sposób jak <xref:System.Lazy%601>, za pomocą tych podstawowych różnic:  
   
--   Każdy wątek inicjuje zmienną lokalną wątku, przy użyciu własnych danych prywatnego, który nie jest dostępny z innych wątków.  
+- Każdy wątek inicjuje zmienną lokalną wątku, przy użyciu własnych danych prywatnego, który nie jest dostępny z innych wątków.  
   
--   <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> Właściwość jest odczytu / zapisu i dowolną liczbę razy może być modyfikowany. Może to wpłynąć na Propagacja wyjątków, na przykład jeden `get` operacji może zgłosić wyjątek, ale następny może zostać pomyślnie zainicjowany wartość.  
+- <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> Właściwość jest odczytu / zapisu i dowolną liczbę razy może być modyfikowany. Może to wpłynąć na Propagacja wyjątków, na przykład jeden `get` operacji może zgłosić wyjątek, ale następny może zostać pomyślnie zainicjowany wartość.  
   
--   Jeśli nie podano żadnych delegata inicjowania, <xref:System.Threading.ThreadLocal%601> zainicjuje jego typ opakowany przy użyciu wartości domyślnej typu. W tym zakresie <xref:System.Threading.ThreadLocal%601> jest spójna z <xref:System.ThreadStaticAttribute> atrybutu.  
+- Jeśli nie podano żadnych delegata inicjowania, <xref:System.Threading.ThreadLocal%601> zainicjuje jego typ opakowany przy użyciu wartości domyślnej typu. W tym zakresie <xref:System.Threading.ThreadLocal%601> jest spójna z <xref:System.ThreadStaticAttribute> atrybutu.  
   
  W poniższym przykładzie pokazano, że każdy wątek, uzyskuje dostęp do `ThreadLocal<int>` wystąpienie zyskuje własną unikatową kopię danych.  
   

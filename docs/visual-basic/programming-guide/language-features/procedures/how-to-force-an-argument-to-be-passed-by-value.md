@@ -15,11 +15,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
 ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863626"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Instrukcje: Wymuszanie argumentu być przekazywany przez wartość (Visual Basic)
 Deklaracja procedury określa mechanizm przekazywania. Jeśli parametr jest zadeklarowana [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic oczekuje przekazywania odpowiadający argument odwołania. Dzięki temu procedurę, aby zmienić wartość elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Jeśli chcesz chronić element podstawowy względem takie zmiany, można zastąpić `ByRef` wywołać mechanizm przekazywania w procedurze, umieszczając nazwę argumentu w nawiasach. Te nawiasy w niniejszym dokumencie stanowią nawiasów otaczający listę argumentów w wywołaniu.  
@@ -28,9 +28,9 @@ Deklaracja procedury określa mechanizm przekazywania. Jeśli parametr jest zade
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>Aby wymusić argument jest przekazywany przez wartość  
   
--   Jeżeli zadeklarowano odpowiadającego mu parametru `ByVal` w procedurze jest konieczne wykonanie żadnych dodatkowych czynności. Visual Basic już oczekuje do przekazywania argumentu przez wartość.  
+- Jeżeli zadeklarowano odpowiadającego mu parametru `ByVal` w procedurze jest konieczne wykonanie żadnych dodatkowych czynności. Visual Basic już oczekuje do przekazywania argumentu przez wartość.  
   
--   Jeżeli zadeklarowano odpowiadającego mu parametru `ByRef` w procedurze, należy ująć argument w nawiasach w wywołaniu procedury.  
+- Jeżeli zadeklarowano odpowiadającego mu parametru `ByRef` w procedurze, należy ująć argument w nawiasach w wywołaniu procedury.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład zastępuje `ByRef` deklaracji parametru. W wywołaniu, która wymusza `ByVal`, należy pamiętać, dwa poziomy nawiasów.  

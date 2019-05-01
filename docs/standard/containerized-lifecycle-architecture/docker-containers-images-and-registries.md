@@ -1,17 +1,17 @@
 ---
-title: Kontenery platformy docker, obrazy i rejestry
+title: Kontenery, obrazy i rejestry platformy Docker
 description: Dowiedz się, kluczową rolę, że rejestrów odtworzyć ogólny w sposób platformy Docker, wdrażania aplikacji.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: e69490734a03cf58bf8534bc9e31110a11d44c58
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795326"
 ---
-# <a name="docker-containers-images-and-registries"></a>Kontenery platformy docker, obrazy i rejestry
+# <a name="docker-containers-images-and-registries"></a>Kontenery, obrazy i rejestry platformy Docker
 
 Korzystając z platformy Docker, tworzenie aplikacji lub usługi i pakietu on i jego zależności do obrazu kontenera. Obraz jest statyczny reprezentacja tych aplikacji lub usług i konfiguracji i zależności.
 

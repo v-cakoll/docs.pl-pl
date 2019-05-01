@@ -5,11 +5,11 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949620"
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa jakie tryb zabezpieczeń do użycia i określa, czy klient musi podać poświadczenia. Zabezpieczanie klienta, w związku z tym, proces jest prosty: metadane uzyskane z usługi (jeśli jest publikowany) oraz tworzyć klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia usługi bezpiecznego zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
@@ -71,7 +71,7 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
   
  Używany typ poświadczeń jest certyfikatu X.509. Możesz podać poświadczenia na dwa sposoby:  
   
--   Programując w kodzie klienta (przy użyciu `SetCertificate` metody).  
+- Programując w kodzie klienta (przy użyciu `SetCertificate` metody).  
   
  Dodając [ \<zachowania >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sekcję pliku konfiguracji dla klienta i za pomocą `clientCredentials` — element (pokazana poniżej).  
   

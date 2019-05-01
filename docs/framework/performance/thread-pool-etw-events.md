@@ -8,20 +8,20 @@ ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949165"
 ---
 # <a name="thread-pool-etw-events"></a>Zdarzenia ETW puli wątków
 <a name="top"></a> Te zdarzenia zbierać informacji na temat procesu roboczego i wątki We/Wy.  
   
  Istnieją dwie grupy zdarzenia puli wątków:  
   
--   [Zdarzenia puli wątków roboczych](#worker), które zawierają informacje o jak aplikacja korzysta z puli wątków i efekt obciążeń na kontroli współbieżności.  
+- [Zdarzenia puli wątków roboczych](#worker), które zawierają informacje o jak aplikacja korzysta z puli wątków i efekt obciążeń na kontroli współbieżności.  
   
--   [Zdarzenia puli wątków We/Wy](#io), które zawierają informacje o wątków We/Wy, które są tworzone wycofany, unretired lub przerwana w puli wątków.  
+- [Zdarzenia puli wątków We/Wy](#io), które zawierają informacje o wątków We/Wy, które są tworzone wycofany, unretired lub przerwana w puli wątków.  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>Zdarzenia puli wątków procesów roboczych  
@@ -148,7 +148,7 @@ ms.locfileid: "59119135"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Licznik|win:UInt64|Liczba wątków We/Wy, łącznie z nowo utworzonego wątku.|  
+|Count|win:UInt64|Liczba wątków We/Wy, łącznie z nowo utworzonego wątku.|  
 |NumRetired|win:UInt64|Liczba wątków roboczych wycofane.|  
 |ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59119135"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Licznik|win:UInt64|Liczba wątków We/Wy, które pozostało w puli wątków.|  
+|Count|win:UInt64|Liczba wątków We/Wy, które pozostało w puli wątków.|  
 |NumRetired|win:UInt64|Liczba wycofanych wątków We/Wy.|  
 |ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -190,7 +190,7 @@ ms.locfileid: "59119135"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Licznik|win:UInt64|Liczba operacji We/Wy wątków w puli wątków, w tym tego jednego.|  
+|Count|win:UInt64|Liczba operacji We/Wy wątków w puli wątków, w tym tego jednego.|  
 |NumRetired|win:UInt64|Liczba wycofanych wątków We/Wy.|  
 |ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -211,7 +211,7 @@ ms.locfileid: "59119135"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Licznik|win:UInt64|Liczba wątków We/Wy, które pozostało w puli wątków.|  
+|Count|win:UInt64|Liczba wątków We/Wy, które pozostało w puli wątków.|  
 |NumRetired|win:UInt64|Liczba wycofanych wątków We/Wy.|  
 |ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   

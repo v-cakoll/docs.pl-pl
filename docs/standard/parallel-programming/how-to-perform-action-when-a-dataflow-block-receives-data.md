@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wykonanie akcji, gdy blok przepływu danych odbiera dane'
+title: 'Instrukcje: Wykonywanie akcji w przypadku odebrania danych przez blok przepływu danych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937478"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Instrukcje: Wykonanie akcji, gdy blok przepływu danych odbiera dane
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Instrukcje: Wykonywanie akcji w przypadku odebrania danych przez blok przepływu danych
 *Wykonanie bloku przepływu danych* typy wywołanie delegata dostarczone przez użytkownika, po otrzymaniu danych. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, I <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> klasy są typami bloku przepływu danych wykonywania. Możesz użyć `delegate` — słowo kluczowe (`Sub` w języku Visual Basic), <xref:System.Action%601>, <xref:System.Func%602>, lub wyrażenie lambda, gdy zawierają funkcję pracy do wykonania bloku przepływu danych. W tym dokumencie opisano, jak używać <xref:System.Func%602> i wyrażenia lambda do wykonania akcji w blokach wykonywania.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "54221066"
   
  Visual C#  
   
- **CSC.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
   
  Visual Basic  
   

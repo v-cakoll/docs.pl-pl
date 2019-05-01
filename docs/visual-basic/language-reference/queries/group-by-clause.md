@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945330"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By — Klauzula (Visual Basic)
 Grupuje elementy wyników zapytań. Można również zastosowanie funkcji agregujących do każdej grupy. W operacji grupowania opiera się na co najmniej jeden klucz.  
@@ -31,19 +31,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>Części  
   
--   `listField1`, `listField2`  
+- `listField1`, `listField2`  
   
      Opcjonalna. Co najmniej jednego pola zmienna zapytania lub zmienne, które jawnie identyfikować pola, które mają zostać uwzględnione w wynikach zgrupowane. Jeśli nie określono żadnych pól, w wyniku pogrupowanych znajdują się wszystkie pola zmienna zapytania lub zmienne.  
   
--   `keyExp1`  
+- `keyExp1`  
   
      Wymagana. Wyrażenie identyfikujące klawisz, aby użyć do określenia grupy elementów. Można określić więcej niż jeden klucz w celu określenia klucza złożonego.  
   
--   `keyExp2`  
+- `keyExp2`  
   
      Opcjonalna. Co najmniej jeden klucz dodatkowe, które są połączone z `keyExp1` można utworzyć klucza złożonego.  
   
--   `aggregateList`  
+- `aggregateList`  
   
      Wymagana. Co najmniej jednego wyrażenia, które określają, jak te grupy są agregowane. Aby zidentyfikować nazwę elementu członkowskiego pogrupowane wyniki, należy użyć `Group` słowo kluczowe, które mogą znajdować się w jednej z następujących form:  
   

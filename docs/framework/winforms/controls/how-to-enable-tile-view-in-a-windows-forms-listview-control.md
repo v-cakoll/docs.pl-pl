@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
 ms.openlocfilehash: 14eb21fa0285275e510b865c5cee7d1fc82fd0fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941544"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Instrukcje: włączanie widoku Tile w kontrolce ListView formularzy systemu Windows
 Korzystając z funkcji widoku kafelków <xref:System.Windows.Forms.ListView> kontrolki, możesz podać visual równowagi między informacje graficzne i tekstowe. Tekstowe informacje wyświetlane dla elementu w widoku kafelków jest taka sama jak informacji o kolumnie zdefiniowane dla widoku szczegółów. Widoku kafelków działa w połączeniu z grupowania lub wstawiania funkcji znaku w <xref:System.Windows.Forms.ListView> kontroli.  
@@ -52,9 +52,9 @@ Korzystając z funkcji widoku kafelków <xref:System.Windows.Forms.ListView> kon
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
   
--   Plik ikony o nazwie book.ico w tym samym katalogu co plik wykonywalny.  
+- Plik ikony o nazwie book.ico w tym samym katalogu co plik wykonywalny.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779474"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pędzle i wypełnione kształty w GDI+
 Kształt zamknięty, takich jak prostokąta lub elipsy, składa się z konturem i wewnętrzne. Konspekt jest rysowany przy użyciu pióra i wewnętrznych jest wypełniany pędzla. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dostarcza kilka klas, pędzla do wypełniania wnętrza kształty zamknięte: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, i <xref:System.Drawing.Drawing2D.PathGradientBrush>. Wszystkie te klasy dziedziczy <xref:System.Drawing.Brush> klasy. Na poniższej ilustracji pokazuje prostokąt wypełnione pędzla i elipsy wypełnione przy użyciu kreskowania pędzla.  

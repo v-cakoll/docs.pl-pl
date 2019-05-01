@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
 ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856411"
 ---
 # <a name="elevation-of-privilege"></a>Podniesienie uprawnień
 *Podniesienie uprawnień* powstały na skutek zapewniając autoryzacji osoba atakująca uprawnień poza tymi początkowo udzielone. Na przykład osoba atakująca z zestawem uprawnień uprawnienia "tylko do odczytu" jakiś sposób podnosi poziom uprawnień zestawu do uwzględnienia "odczytu i zapisu."  
@@ -25,13 +25,13 @@ ms.locfileid: "59099992"
   
  Po nawiązaniu połączenia między klientem i serwerem oraz tożsamości klienta nie zmienia się, z wyjątkiem sytuacji: po otwarciu klienta WCF, jeśli spełnione są wszystkie następujące warunki:  
   
--   Procedury ustanawiania kontekstu zabezpieczeń (przy użyciu zabezpieczeń transport, sesji lub sesji zabezpieczeń wiadomości) jest wyłączany (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwość jest ustawiona na `false` przypadku zabezpieczenia wiadomości lub niezdolnych do ustanawiania zabezpieczeń transportu sesje są używane w przypadku zabezpieczeń transportu. Protokół HTTPS jest przykładem takiego transportu).  
+- Procedury ustanawiania kontekstu zabezpieczeń (przy użyciu zabezpieczeń transport, sesji lub sesji zabezpieczeń wiadomości) jest wyłączany (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwość jest ustawiona na `false` przypadku zabezpieczenia wiadomości lub niezdolnych do ustanawiania zabezpieczeń transportu sesje są używane w przypadku zabezpieczeń transportu. Protokół HTTPS jest przykładem takiego transportu).  
   
--   Korzystasz z uwierzytelniania Windows.  
+- Korzystasz z uwierzytelniania Windows.  
   
--   Nie używaj jawne poświadczenia.  
+- Nie używaj jawne poświadczenia.  
   
--   Wywołujesz usługi w obszarze spersonifikowanym kontekście zabezpieczeń.  
+- Wywołujesz usługi w obszarze spersonifikowanym kontekście zabezpieczeń.  
   
  Jeśli te warunki są spełnione, to tożsamość używana do uwierzytelniania klienta do usługi mogą ulec zmianie (może nie być personifikowanej tożsamości, ale tożsamość procesu zamiast) po otwarciu klienta platformy WCF. Dzieje się tak, ponieważ poświadczenia Windows używane do uwierzytelniania klienta do usługi są przesyłane za pomocą każdej wiadomości i poświadczeń używanych do uwierzytelniania są uzyskiwane z bieżącego wątku Windows tożsamości. Jeśli zmieni tożsamość Windows bieżącego wątku (na przykład, Personifikując inny obiekt wywołujący), poświadczeń, który jest dołączony do wiadomości i używany do uwierzytelniania klienta do usługi także mogą ulec zmianie.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "59099992"
   
  Dzieje się tak również podczas tworzenia powiązań niestandardowych przy użyciu jednej z następujących metod:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  Aby rozwiązać ten problem, zasady autoryzacji sprawdzić akcji i czas wygaśnięcia poszczególnych zasad autoryzacji.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59099992"
   
  Taka sytuacja może wystąpić w następujących okolicznościach:  
   
--   Klient podpisuje cyfrowo komunikat przy użyciu certyfikatu X.509 nie dołączy certyfikatu X.509 do wiadomości, a zamiast po prostu odwołuje się do certyfikatu, używając swojego identyfikatora klucza podmiotu.  
+- Klient podpisuje cyfrowo komunikat przy użyciu certyfikatu X.509 nie dołączy certyfikatu X.509 do wiadomości, a zamiast po prostu odwołuje się do certyfikatu, używając swojego identyfikatora klucza podmiotu.  
   
--   Komputer z usługą zawiera co najmniej dwóch certyfikatów przy użyciu tego samego klucza publicznego, ale mogą zawierać różne informacje.  
+- Komputer z usługą zawiera co najmniej dwóch certyfikatów przy użyciu tego samego klucza publicznego, ale mogą zawierać różne informacje.  
   
--   Usługa pobiera certyfikat, który pasuje do identyfikatora klucza podmiotu, ale nie jest ten, który klient jest przeznaczony do użycia. Gdy WCF odbiera komunikat i weryfikuje podpis, WCF mapuje informacje zawarte w niezamierzony certyfikatu X.509 do zestawu oświadczeń, które są różne i potencjalnie z podwyższonym poziomem uprawnień z oczekiwaniami klienta.  
+- Usługa pobiera certyfikat, który pasuje do identyfikatora klucza podmiotu, ale nie jest ten, który klient jest przeznaczony do użycia. Gdy WCF odbiera komunikat i weryfikuje podpis, WCF mapuje informacje zawarte w niezamierzony certyfikatu X.509 do zestawu oświadczeń, które są różne i potencjalnie z podwyższonym poziomem uprawnień z oczekiwaniami klienta.  
   
  Aby temu zaradzić, odwołanie X.509 certyfikatu inny sposób, na przykład za pomocą <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   

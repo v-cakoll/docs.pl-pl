@@ -1,5 +1,5 @@
 ---
-title: Obsługa automatyzacji interfejsu użytkownika dla formantów typu edycja
+title: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu edycja
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Edit
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
 ms.openlocfilehash: fd33fcc4193dd399c5139b009aaf0825d4ae50e7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785297"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu edycja
 
@@ -81,7 +81,7 @@ W poniższej tabeli przedstawiono wzorców kontrolek wymagane są obsługiwane p
 
 W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty edycji. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).
 
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Pomoc techniczna|Uwagi|
 |---------------------------------------------------------------------------------|-------------|-----------|
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Wymagane|Brak|
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Wymagane|Brak|

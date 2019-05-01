@@ -12,11 +12,11 @@ ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870048"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  Takie podejście do anulowania ma kilka zalet:
 
--   Można przekazać ten sam token odwołania do dowolnej liczby operacji synchronicznego i asynchronicznego.
+- Można przekazać ten sam token odwołania do dowolnej liczby operacji synchronicznego i asynchronicznego.
 
--   Tego samego żądania anulowania może proliferated do dowolnej liczby odbiorników.
+- Tego samego żądania anulowania może proliferated do dowolnej liczby odbiorników.
 
--   Deweloper asynchronicznego interfejsu API jest pełną kontrolę nad tego, czy można żądać anulowania i kiedy może obowiązywać.
+- Deweloper asynchronicznego interfejsu API jest pełną kontrolę nad tego, czy można żądać anulowania i kiedy może obowiązywać.
 
--   Kod, który wykorzystuje interfejs API może określić selektywnie wywołania asynchroniczne, które będzie propagowane żądań anulowania.
+- Kod, który wykorzystuje interfejs API może określić selektywnie wywołania asynchroniczne, które będzie propagowane żądań anulowania.
 
 ## <a name="monitoring-progress"></a>Postęp monitorowania
  Niektóre metody asynchronicznej uwidocznić postęp za pomocą interfejsu postępu, przekazywane do metody asynchronicznej.  Na przykład należy wziąć pod uwagę, że funkcja, która asynchronicznie pobiera ciągu tekstu, a po drodze zgłasza aktualizacji w toku, obejmujących procent do pobrania, które zostało ukończone w związku z tym daleko.  Taka metoda może być używane w aplikacji Windows Presentation Foundation (WPF) w następujący sposób:
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Możesz użyć <xref:System.Threading.Tasks.Task.WhenAny%2A> metoda asynchronicznie czekać na co najmniej jeden wiele operacji asynchronicznych w postaci zadania do wykonania.  Ta metoda służy cztery główne przypadki użycia:
 
--   Nadmiarowość: Operację wielokrotnie i wybierania odpowiedniego kończące się pierwszym (na przykład, kontaktując się z wielu usług sieci web giełdowych generujących jeden wynik i wybierania odpowiedniego kończące najszybsza).
+- Nadmiarowość:  Wykonuje operację wielokrotnie i wybierania odpowiedniego kończące się pierwszym (na przykład, kontaktując się z wielu usług sieci web giełdowych generujących jeden wynik i wybierania odpowiedniego kończące najszybsza).
 
--   Z przeplotem: Uruchamianie wielu operacji oczekiwania na wszystkich z nich, aby zakończyć, a ich przetwarzania, po ich zakończeniu.
+- Technologia:  Uruchamianie wielu operacji oczekiwania na wszystkich z nich, aby zakończyć, a ich przetwarzania, po ich zakończeniu.
 
--   Ograniczanie: Umożliwiając dodatkowych operacji w celu rozpoczęcia po zakończeniu przez inne osoby.  Jest to rozszerzenie interleaving scenariusza.
+- Ograniczanie:  Umożliwiając dodatkowych operacji w celu rozpoczęcia po zakończeniu przez inne osoby.  Jest to rozszerzenie interleaving scenariusza.
 
--   Wczesne podejmowano: na przykład operacji reprezentowany przez t1 zadania mogą być grupowane w <xref:System.Threading.Tasks.Task.WhenAny%2A> zadania za pomocą innej t2 zadań, a także możesz poczekać <xref:System.Threading.Tasks.Task.WhenAny%2A> zadania. Zadanie t2 może reprezentować limit czasu anulowania i/lub inne sygnał, który powoduje, że <xref:System.Threading.Tasks.Task.WhenAny%2A> zadań do wykonania przed zakończeniem t1.
+- Wczesne podejmowano:  Na przykład operacji reprezentowany przez t1 zadania mogą być grupowane w <xref:System.Threading.Tasks.Task.WhenAny%2A> zadania za pomocą innej t2 zadań, a także możesz poczekać <xref:System.Threading.Tasks.Task.WhenAny%2A> zadania. Zadanie t2 może reprezentować limit czasu anulowania i/lub inne sygnał, który powoduje, że <xref:System.Threading.Tasks.Task.WhenAny%2A> zadań do wykonania przed zakończeniem t1.
 
 #### <a name="redundancy"></a>Nadmiarowość
  Należy rozważyć przypadek, w której chcesz podjąć decyzję o tym, czy na kupowaniu akcji.  Istnieje kilka usług sieci web podstawowe zalecenia, którym ufasz, ale w zależności od obciążenia dziennego każda usługa może wystąpić powolnych w różnym czasie.  Możesz użyć <xref:System.Threading.Tasks.Task.WhenAny%2A> metody, aby otrzymać powiadomienie po zakończeniu każdej operacji:
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Ponadto nawet jeśli pierwsze zadanie zakończy się pomyślnie, kolejne zadania może zakończyć się niepowodzeniem.  W tym momencie masz kilka opcji związanych z wyjątkami: Możesz poczekać, aż uruchomionego zadania zostały wykonane, w którym to przypadku należy użyć <xref:System.Threading.Tasks.Task.WhenAll%2A> metody lub możesz zdecydować, czy wszystkie wyjątki są ważne i musi być zalogowany.  W tym celu można użyć kontynuacji, aby otrzymać powiadomienie, gdy zadania zostaną zakończone asynchronicznie:
+ Ponadto nawet jeśli pierwsze zadanie zakończy się pomyślnie, kolejne zadania może zakończyć się niepowodzeniem.  W tym momencie masz kilka opcji związanych z wyjątkami:  Możesz poczekać, aż uruchomionego zadania zostały wykonane, w którym to przypadku należy użyć <xref:System.Threading.Tasks.Task.WhenAll%2A> metody lub możesz zdecydować, czy wszystkie wyjątki są ważne i musi być zalogowany.  W tym celu można użyć kontynuacji, aby otrzymać powiadomienie, gdy zadania zostaną zakończone asynchronicznie:
 
 ```csharp
 foreach(Task recommendation in recommendations)

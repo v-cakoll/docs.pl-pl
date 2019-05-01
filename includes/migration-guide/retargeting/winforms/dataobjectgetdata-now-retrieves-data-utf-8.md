@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e39b4e85b47902babac7a22a93aa64c2f86ef01f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640073"
 ---
 ### <a name="dataobjectgetdata-now-retrieves-data-as-utf-8"></a>DataObject.GetData teraz pobiera dane w formacie UTF-8
 

@@ -3,20 +3,20 @@ title: Przegląd przepływu komunikatu
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797489"
 ---
 # <a name="message-flow-overview"></a>Przegląd przepływu komunikatu
 W rozproszonym systemie zawierający wzajemnie połączonych usług należy określić przyczynowego relacje między usługami. Jest ważne poznać różne składniki, które były częścią przepływu żądania w celu obsługi scenariuszy o kluczowym znaczeniu, takich jak kondycja, monitorowanie, rozwiązywanie problemów i główny ustalić przyczynę problemu. Aby włączyć korelacja różnych usług w programie .NET Framework 4 ślady Dodaliśmy obsługę funkcji za pomocą następujących funkcji:
 
--   Śledzenie analityczne: Wysoka wydajność i funkcję śledzenia niski poziom szczegółowości przy użyciu śledzenie zdarzeń dla Windows (ETW).
+- Śledzenie analityczne: Wysoka wydajność i funkcję śledzenia niski poziom szczegółowości przy użyciu śledzenie zdarzeń dla Windows (ETW).
 
--   Model działania end-to-end dla usług WCF/WF: Ta funkcja obsługuje korelacji śledzenia generowane przez <xref:System.ServiceModel> i <xref:System.Workflow.ComponentModel> przestrzeni nazw.
+- Model działania end-to-end dla usług WCF/WF: Ta funkcja obsługuje korelacji śledzenia generowane przez <xref:System.ServiceModel> i <xref:System.Workflow.ComponentModel> przestrzeni nazw.
 
--   ETW śledzenia dla WF: Ta funkcja używa rekordów śledzenia generowanych przez usługi WF, aby zapewnić wgląd w bieżący stan i postęp przepływu pracy.
+- ETW śledzenia dla WF: Ta funkcja używa rekordów śledzenia generowanych przez usługi WF, aby zapewnić wgląd w bieżący stan i postęp przepływu pracy.
 
  Błędy zalogowany śledzenia i śledzenia rekordów może służyć do znalezienia usterek kodu lub niepoprawnie uformowane wiadomości. Właściwość Identyfikator korelacji węzła w nagłówku komunikatu zdarzenia może służyć do określenia łagodne działanie. Aby włączyć śledzenia przepływu komunikatów za pomocą Identyfikatora działania, zobacz [Konfigurowanie śledzenia przepływu komunikatów](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). W tym temacie pokazano, jak włączyć śledzenie przepływu wiadomości w projekcie, utworzone w ramach samouczka Wprowadzenie.
 

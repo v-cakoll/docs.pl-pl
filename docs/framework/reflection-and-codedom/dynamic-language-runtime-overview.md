@@ -10,11 +10,11 @@ ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793380"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 
@@ -24,11 +24,11 @@ Języki dynamiczne można zidentyfikować typ obiektu w czasie wykonywania, nato
 
 Języki najbardziej dynamiczne zapewniają następujące korzyści dla deweloperów:
 
--   Możliwość używania pętlę błyskawicznych opinii (REPL lub odczytu oceny — Drukuj pętli). Dzięki temu można wprowadzić kilka instrukcji i natychmiast wykonać je, aby wyświetlić wyniki.
+- Możliwość używania pętlę błyskawicznych opinii (REPL lub odczytu oceny — Drukuj pętli). Dzięki temu można wprowadzić kilka instrukcji i natychmiast wykonać je, aby wyświetlić wyniki.
 
--   Obsługa dla rozwoju góra dół i bardziej tradycyjny rozwoju od dołu do góry. Na przykład korzystając z podejścia góra dół, można wywoływać funkcje, które nie są jeszcze zaimplementowane, a następnie dodać podstawowej implementacji, gdy ich potrzebujesz.
+- Obsługa dla rozwoju góra dół i bardziej tradycyjny rozwoju od dołu do góry. Na przykład korzystając z podejścia góra dół, można wywoływać funkcje, które nie są jeszcze zaimplementowane, a następnie dodać podstawowej implementacji, gdy ich potrzebujesz.
 
--   Łatwiejsze refaktoryzacji i kodu modyfikacji, ponieważ nie trzeba zmienić deklaracje typu statycznego w całym kodzie.
+- Łatwiejsze refaktoryzacji i kodu modyfikacji, ponieważ nie trzeba zmienić deklaracje typu statycznego w całym kodzie.
 
 Języki dynamiczne należy doskonałą językach skryptów. Klienci mogą łatwo rozbudowywać aplikacje utworzone przy użyciu języków dynamicznych nowe polecenia i funkcje. Języki dynamiczne są również często używane do tworzenia witryn sieci Web i test, wiązka, utrzymywanie farm serwerów, różne narzędzia do tworzenia i wykonywanie przekształceń danych.
 
@@ -51,9 +51,9 @@ Podobnie jak CLR DLR jest częścią programu .NET Framework i jest dostarczana 
 
 Przykłady opracowano na podstawie DLR języków są następujące:
 
--   IronPython. Dostępne jako oprogramowanie open source z [GitHub](https://github.com/IronLanguages/ironpython2) witryny sieci Web.
+- IronPython. Dostępne jako oprogramowanie open source z [GitHub](https://github.com/IronLanguages/ironpython2) witryny sieci Web.
 
--   IronRuby. Dostępne jako oprogramowanie open source z [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) witryny sieci Web.
+- IronRuby. Dostępne jako oprogramowanie open source z [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) witryny sieci Web.
 
 ## <a name="primary-dlr-advantages"></a>Podstawowe zalety DLR
  DLR zapewnia następujące korzyści.
@@ -80,11 +80,11 @@ Przykłady opracowano na podstawie DLR języków są następujące:
 
  DLR dodaje zestaw usług do środowiska CLR dla lepiej obsługuje języki dynamiczne. Te usługi są następujące:
 
--   Drzewa wyrażeń. DLR używa drzew wyrażeń, który reprezentuje semantykę języka. W tym celu DLR ma rozszerzone drzew wyrażeń LINQ do uwzględnienia przepływ sterowania, przypisywania i inne węzły modelowanie języka. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) lub [drzew wyrażeń (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
+- Drzewa wyrażeń. DLR używa drzew wyrażeń, który reprezentuje semantykę języka. W tym celu DLR ma rozszerzone drzew wyrażeń LINQ do uwzględnienia przepływ sterowania, przypisywania i inne węzły modelowanie języka. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) lub [drzew wyrażeń (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
--   Wywołaj buforowanie lokacji. A *witryny wywołania dynamicznego* to miejsce w kodzie, gdzie można wykonać operacji, takiej jak `a + b` lub `a.b()` obiektów dynamicznych. DLR buforuje charakterystyki `a` i `b` (zazwyczaj typy tych obiektów) i informacje na temat operacji. Jeśli taka operacja została wykonana wcześniej, DLR pobiera wszystkie niezbędne informacje z pamięci podręcznej na potrzeby szybkiego wysyłania.
+- Wywołaj buforowanie lokacji. A *witryny wywołania dynamicznego* to miejsce w kodzie, gdzie można wykonać operacji, takiej jak `a + b` lub `a.b()` obiektów dynamicznych. DLR buforuje charakterystyki `a` i `b` (zazwyczaj typy tych obiektów) i informacje na temat operacji. Jeśli taka operacja została wykonana wcześniej, DLR pobiera wszystkie niezbędne informacje z pamięci podręcznej na potrzeby szybkiego wysyłania.
 
--   Współdziałanie obiekt dynamiczny. DLR zawiera zestaw klas i interfejsów, które reprezentują obiektów dynamicznych i operacje i mogą być używane przez implementacji języka i autorzy bibliotekami dynamicznymi. Te klasy i interfejsy obejmują <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, i <xref:System.Dynamic.ExpandoObject>.
+- Współdziałanie obiekt dynamiczny. DLR zawiera zestaw klas i interfejsów, które reprezentują obiektów dynamicznych i operacje i mogą być używane przez implementacji języka i autorzy bibliotekami dynamicznymi. Te klasy i interfejsy obejmują <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, i <xref:System.Dynamic.ExpandoObject>.
 
 DLR używa integratorów wywołania do komunikowania się nie tylko przy użyciu programu .NET Framework, ale z innymi infrastruktur i usług, w tym programu Silverlight i modelu COM. Integratorów hermetyzacji semantykę języka i określ, jak wykonywać operacje w witrynie wywołania przy użyciu drzew wyrażeń. To umożliwia dynamiczne i statycznie wpisane języki, które umożliwiają DLR Udostępnianie biblioteki i uzyskać dostęp do wszystkich technologii, które obsługuje DLR.
 

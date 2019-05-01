@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Powiąż dane z InkCanvas'
+title: 'Instrukcje: Powiązywanie danych z elementem InkCanvas'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - InkCanvas [WPF], binding data to
 - binding data [WPF], to InkCanvas
 ms.assetid: 8d6b4d9e-ea7f-4412-ba83-3feccec5a515
 ms.openlocfilehash: 5d3fc0ed7b6176d7bc68bf20af42c311b5563908
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776470"
 ---
-# <a name="how-to-data-bind-to-an-inkcanvas"></a>Instrukcje: Powiąż dane z InkCanvas
+# <a name="how-to-data-bind-to-an-inkcanvas"></a>Instrukcje: Powiązywanie danych z elementem InkCanvas
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje jak powiązać <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwość <xref:System.Windows.Controls.InkCanvas> do innego <xref:System.Windows.Controls.InkCanvas>.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
 ms.openlocfilehash: 540765c09dceef583798ceaf1abf9f191f444697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773532"
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Ta sekcja zawiera zestaw tematów wskazówki, które służą jako wprowadzenie do programowania aplikacji Windows Workflow Foundation (WF). Zgodnie z instrukcjami opisanymi w tych tematach, utworzysz aplikację, która jest liczba gra odgadnięcia. Pierwszy temat, samouczek poprowadzi Cię przez kroki, aby utworzyć niestandardowe działania wymagane dla przepływu pracy. W drugiej części tematu te działania są łączone wraz z działań wbudowanych przepływu pracy do przepływu pracy schematu blokowego. W trzecim temacie aplikacji hosta jest skonfigurowany do uruchamiania przepływu pracy, a w ostatnim temacie wprowadzono trwałości. Każdy krok w ramach tego procesu zależy od poprzednie kroki, tak więc zaleca się zakończyć je w kolejności.  

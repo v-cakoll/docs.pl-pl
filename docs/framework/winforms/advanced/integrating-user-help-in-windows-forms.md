@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
 ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942925"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrowanie pomocy użytkownika z formularzami systemu Windows
 Istotne, ale często zapomina aspektów tworzenia aplikacji systemu Windows to system pomocy, jak jest to, gdzie użytkownicy mogą włączyć uzyskać pomoc w razie pomyłek. Formularze Windows obsługuje dwa różne typy pomocy, każdy podał [HelpProvider, składnik](../controls/helpprovider-component-windows-forms.md). Pierwsza polega na wskazuje użytkownika do pliku Pomocy HTML lub 1 pomocy HTML. *x* lub większą. Drugi może wyświetlać krótkie "Co to jest"-wpisz Help poszczególnych formantów; jest to szczególnie przydatne w oknach dialogowych. Oba rodzaje pomocy może służyć w tym samym formularzu.  

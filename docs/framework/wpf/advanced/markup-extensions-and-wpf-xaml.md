@@ -16,11 +16,11 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804588"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję — rozszerzenia znaczników dla XAML, w tym ich reguły składni, cel i model obiektów klasy, która jest podporządkowana narzędziu je. Rozszerzenia znaczników są ogólną funkcją języka XAML i implementacji .NET usług XAML. W tym temacie szczegółowo specjalnie do użytku w programie WPF XAML — rozszerzenia znaczników.  
@@ -41,13 +41,13 @@ W tym temacie przedstawiono koncepcję — rozszerzenia znaczników dla XAML, w 
 ## <a name="xaml-defined-markup-extensions"></a>Rozszerzenia znaczników zdefiniowane w XAML  
  Istnieją kilka rozszerzeń struktury znaczników, które nie są specyficzne dla implementacji WPF XAML, ale zamiast tego są w implementacji funkcji wewnętrznych lub funkcje XAML jako język. Te rozszerzenia znaczników są implementowane w zestawie System.Xaml jako część ogólnego usług .NET Framework XAML i znajdują się w przestrzeni nazw XAML dla języka XAML. Pod względem wspólne użycie znaczników, te rozszerzenia znaczników są zazwyczaj identyfikowane przez `x:` prefiks w użycia. <xref:System.Windows.Markup.MarkupExtension> Klasę bazową (również zdefiniowanej w System.Xaml) zawiera wzorzec, która powinna być używana wszystkie rozszerzenia znaczników, aby mogły być obsługiwane w XAML czytników i składników zapisywania XAML, w tym w WPF XAML.  
   
--   `x:Type` dostarcza <xref:System.Type> obiektu dla typu nazwanego. Ten obiekt jest używana najczęściej w — style i szablony. Aby uzyskać więcej informacji, zobacz [x: Type Markup Extension](../../xaml-services/x-type-markup-extension.md).  
+- `x:Type` dostarcza <xref:System.Type> obiektu dla typu nazwanego. Ten obiekt jest używana najczęściej w — style i szablony. Aby uzyskać więcej informacji, zobacz [x: Type Markup Extension](../../xaml-services/x-type-markup-extension.md).  
   
--   `x:Static` Tworzy wartości statyczne. Wartości pochodzą z jednostki kodu typ wartości, które nie są bezpośrednio typ wartości właściwości docelowych, ale mogą być obliczane do tego typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](../../xaml-services/x-static-markup-extension.md).  
+- `x:Static` Tworzy wartości statyczne. Wartości pochodzą z jednostki kodu typ wartości, które nie są bezpośrednio typ wartości właściwości docelowych, ale mogą być obliczane do tego typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](../../xaml-services/x-static-markup-extension.md).  
   
--   `x:Null` Określa `null` jako wartość właściwości i mogą być używane dla atrybutów lub wartości elementu właściwości. Aby uzyskać więcej informacji, zobacz [x: Null — rozszerzenie znaczników](../../xaml-services/x-null-markup-extension.md).  
+- `x:Null` Określa `null` jako wartość właściwości i mogą być używane dla atrybutów lub wartości elementu właściwości. Aby uzyskać więcej informacji, zobacz [x: Null — rozszerzenie znaczników](../../xaml-services/x-null-markup-extension.md).  
   
--   `x:Array` zapewnia obsługę tworzenia tablic ogólne w XAML składni w przypadkach, gdzie kolekcji pomoc techniczna świadczona przez elementy bazy WPF i modele kontroli celowo nie jest używana. Aby uzyskać więcej informacji, zobacz [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md).  
+- `x:Array` zapewnia obsługę tworzenia tablic ogólne w XAML składni w przypadkach, gdzie kolekcji pomoc techniczna świadczona przez elementy bazy WPF i modele kontroli celowo nie jest używana. Aby uzyskać więcej informacji, zobacz [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  `x:` Prefiks jest używany dla typowych mapowania przestrzeni nazw XAML wewnętrzne języka XAML, w elemencie głównym pliku XAML lub produkcji. Na przykład szablony programu Visual Studio dla aplikacji WPF zainicjować pliku XAML, za pomocą tego `x:` mapowania. Możesz wybrać inny token własne mapowania przestrzeni nazw XAML, ale ta dokumentacja przyjmie domyślną `x:` mapowanie jako sposób identyfikacji tych jednostek, które są zdefiniowane części przestrzeni nazw XAML dla języka XAML, w przeciwieństwie Aby WPF domyślny obszar nazw lub w innych przestrzeniach nazw XAML nie związane z określonym środowiskiem.  
@@ -56,19 +56,19 @@ W tym temacie przedstawiono koncepcję — rozszerzenia znaczników dla XAML, w 
 ## <a name="wpf-specific-markup-extensions"></a>Rozszerzenia znaczników charakterystyczne dla WPF  
  Najbardziej typowe rozszerzenia znaczników, używany w programowaniu WPF to te, które obsługuje odwołania do zasobów (`StaticResource` i `DynamicResource`) oraz te, które obsługuje powiązanie danych (`Binding`).  
   
--   `StaticResource` zawiera wartość dla właściwości, zastępując wartości zasobu już zdefiniowane. A `StaticResource` oceny ostatecznie jest wykonywane w czasie ładowania XAML i nie ma dostępu do wykresu obiektu w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [staticresource — rozszerzenie znaczników](staticresource-markup-extension.md).  
+- `StaticResource` zawiera wartość dla właściwości, zastępując wartości zasobu już zdefiniowane. A `StaticResource` oceny ostatecznie jest wykonywane w czasie ładowania XAML i nie ma dostępu do wykresu obiektu w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [staticresource — rozszerzenie znaczników](staticresource-markup-extension.md).  
   
--   `DynamicResource` zawiera wartość dla właściwości, opóźnienie tej wartości jako odwołanie do zasobu środowiska wykonawczego. Odwołanie do zasobu dynamicznego wymusza nowe wyszukiwanie każdym razem, że taki zasób jest dostępny i ma dostęp do wykresu obiektu w czasie wykonywania. Aby uzyskać dostęp, `DynamicResource` koncepcji jest obsługiwana przez właściwości zależności w systemie właściwości WPF i obliczone wyrażenia. W związku z tym można używać tylko `DynamicResource` dla obiektu docelowego właściwości zależności. Aby uzyskać więcej informacji, zobacz [dynamicresource — rozszerzenie znaczników](dynamicresource-markup-extension.md).  
+- `DynamicResource` zawiera wartość dla właściwości, opóźnienie tej wartości jako odwołanie do zasobu środowiska wykonawczego. Odwołanie do zasobu dynamicznego wymusza nowe wyszukiwanie każdym razem, że taki zasób jest dostępny i ma dostęp do wykresu obiektu w czasie wykonywania. Aby uzyskać dostęp, `DynamicResource` koncepcji jest obsługiwana przez właściwości zależności w systemie właściwości WPF i obliczone wyrażenia. W związku z tym można używać tylko `DynamicResource` dla obiektu docelowego właściwości zależności. Aby uzyskać więcej informacji, zobacz [dynamicresource — rozszerzenie znaczników](dynamicresource-markup-extension.md).  
   
--   `Binding` zawiera wartość dla właściwości, za pomocą kontekstu danych, która ma zastosowanie do obiektu nadrzędnego w czasie wykonywania powiązany z danymi. Tego rozszerzenia znacznika jest dość złożone, ponieważ umożliwia wbudowane istotne składnia określająca powiązanie danych. Aby uzyskać więcej informacji, zobacz [— rozszerzenie znaczników powiązania](binding-markup-extension.md).  
+- `Binding` zawiera wartość dla właściwości, za pomocą kontekstu danych, która ma zastosowanie do obiektu nadrzędnego w czasie wykonywania powiązany z danymi. Tego rozszerzenia znacznika jest dość złożone, ponieważ umożliwia wbudowane istotne składnia określająca powiązanie danych. Aby uzyskać więcej informacji, zobacz [— rozszerzenie znaczników powiązania](binding-markup-extension.md).  
   
--   `RelativeSource` zawiera informacje o źródle <xref:System.Windows.Data.Binding> , można przejść kilka możliwych relacji w drzewie obiektów czasu wykonywania. Zapewnia to wyspecjalizowane określania źródła dla powiązań, które są w szablonach wielokrotnego użytku lub tworzony kod bez pełnej znajomości otaczającego drzewa obiektów. Aby uzyskać więcej informacji, zobacz [RelativeSource, rozszerzenie znaczników](relativesource-markupextension.md).  
+- `RelativeSource` zawiera informacje o źródle <xref:System.Windows.Data.Binding> , można przejść kilka możliwych relacji w drzewie obiektów czasu wykonywania. Zapewnia to wyspecjalizowane określania źródła dla powiązań, które są w szablonach wielokrotnego użytku lub tworzony kod bez pełnej znajomości otaczającego drzewa obiektów. Aby uzyskać więcej informacji, zobacz [RelativeSource, rozszerzenie znaczników](relativesource-markupextension.md).  
   
--   `TemplateBinding` Umożliwia szablonu kontrolki użyć wartości dla właściwości oparte na szablonach, które pochodzą z zdefiniowana przez model obiektu właściwości klasy, która będzie używać szablonu. Innymi słowy właściwości wewnątrz definicji szablonu mają dostęp do kontekstu, który istnieje tylko po zastosowaniu szablonu. Aby uzyskać więcej informacji, zobacz [TemplateBinding Markup Extension](templatebinding-markup-extension.md). Aby uzyskać więcej informacji na temat praktyczne wykorzystanie `TemplateBinding`, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+- `TemplateBinding` Umożliwia szablonu kontrolki użyć wartości dla właściwości oparte na szablonach, które pochodzą z zdefiniowana przez model obiektu właściwości klasy, która będzie używać szablonu. Innymi słowy właściwości wewnątrz definicji szablonu mają dostęp do kontekstu, który istnieje tylko po zastosowaniu szablonu. Aby uzyskać więcej informacji, zobacz [TemplateBinding Markup Extension](templatebinding-markup-extension.md). Aby uzyskać więcej informacji na temat praktyczne wykorzystanie `TemplateBinding`, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
--   `ColorConvertedBitmap` obsługuje stosunkowo zaawansowanym scenariuszu przetwarzania obrazów. Aby uzyskać więcej informacji, zobacz [colorconvertedbitmap — rozszerzenie znaczników](colorconvertedbitmap-markup-extension.md).  
+- `ColorConvertedBitmap` obsługuje stosunkowo zaawansowanym scenariuszu przetwarzania obrazów. Aby uzyskać więcej informacji, zobacz [colorconvertedbitmap — rozszerzenie znaczników](colorconvertedbitmap-markup-extension.md).  
   
--   `ComponentResourceKey` i `ThemeDictionary` obsługuje aspektów wyszukiwania zasobów, szczególnie w przypadku zasobów i motywów, które są dostarczane z formantami niestandardowymi. Aby uzyskać więcej informacji, zobacz [componentresourcekey — rozszerzenie znaczników](componentresourcekey-markup-extension.md), [themedictionary — rozszerzenie znaczników](themedictionary-markup-extension.md), lub [omówienie tworzenia kontrolek](../controls/control-authoring-overview.md).  
+- `ComponentResourceKey` i `ThemeDictionary` obsługuje aspektów wyszukiwania zasobów, szczególnie w przypadku zasobów i motywów, które są dostarczane z formantami niestandardowymi. Aby uzyskać więcej informacji, zobacz [componentresourcekey — rozszerzenie znaczników](componentresourcekey-markup-extension.md), [themedictionary — rozszerzenie znaczników](themedictionary-markup-extension.md), lub [omówienie tworzenia kontrolek](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>* Rozszerzenie klasy  
@@ -83,18 +83,18 @@ W tym temacie przedstawiono koncepcję — rozszerzenia znaczników dla XAML, w 
 ### <a name="extension-class-interpretation-of-initialization-text"></a>Rozszerzenie klasy interpretacji inicjowania tekstu  
  Tokeny ciągu następujące rozszerzenie znaczników nazwy, a nadal mieszczą się w nawiasy klamrowe są interpretowane przez procesor XAML w jednym z następujących sposobów:  
   
--   Przecinek zawsze odzwierciedla separator lub ogranicznika oddzielne tokeny.  
+- Przecinek zawsze odzwierciedla separator lub ogranicznika oddzielne tokeny.  
   
--   Jeśli oddzielne tokeny rozdzielonych nie zawierają żadnych znaków równości, każdy token jest traktowany jako argument konstruktora. Każdy parametr konstruktora musi zostać podany jako typ oczekiwany przez ten podpis i w odpowiedniej kolejności, oczekiwany przez ten podpis.  
+- Jeśli oddzielne tokeny rozdzielonych nie zawierają żadnych znaków równości, każdy token jest traktowany jako argument konstruktora. Każdy parametr konstruktora musi zostać podany jako typ oczekiwany przez ten podpis i w odpowiedniej kolejności, oczekiwany przez ten podpis.  
   
     > [!NOTE]
     >  Procesor XAML musi wywołać konstruktora, który jest zgodna z liczbą argumentów liczby pary. Z tego powodu w przypadku wdrażania jako rozszerzenie znacznika niestandardowego nie udostępniają wiele konstruktorów z tej samej liczby argumentów. Zachowanie jak procesor XAML zachowuje się, jeśli istnieje więcej niż jedną ścieżkę Konstruktor rozszerzenia znaczników przy użyciu tego samego liczba parametrów nie jest zdefiniowany, ale powinien przewidywać procesora XAML będzie mógł zgłosić wyjątek użycia, jeśli ta sytuacja występuje w Definicje typu rozszerzenia znaczników.  
   
--   Jeśli poszczególne oddzielone tokeny zawierają znaki równości, a następnie procesora XAML najpierw wywołuje konstruktor domyślny dla rozszerzenia znaczników. Następnie w każdej pary nazwa =-wartość jest interpretowana jako nazwa właściwości, która istnieje na rozszerzenia znaczników i wartość do przypisania do właściwości.  
+- Jeśli poszczególne oddzielone tokeny zawierają znaki równości, a następnie procesora XAML najpierw wywołuje konstruktor domyślny dla rozszerzenia znaczników. Następnie w każdej pary nazwa =-wartość jest interpretowana jako nazwa właściwości, która istnieje na rozszerzenia znaczników i wartość do przypisania do właściwości.  
   
--   W przypadku równoległego wynik między zachowanie konstruktora i ustawienia zachowania rozszerzenia znaczników właściwości nie ma znaczenia, zachowanie, których używasz. To bardziej powszechne, użycia, aby użyć *właściwość*`=`*wartość* pary — rozszerzenia znaczników, które mają więcej niż jedną konfigurowalną właściwość, jeśli jest to jedyna, ponieważ dzięki niemu znaczników bardziej celowe i jesteś mniej prawdopodobne przypadkowo TRANSPONUJ parametry konstruktora. (Po określeniu właściwość = para kluczy, te właściwości mogą być w dowolnej kolejności.) Ponadto nie ma żadnej gwarancji, że rozszerzenie znaczników dostarcza parametr konstruktora, który ustawia każdego z jego właściwości można ustawić jeden. Na przykład <xref:System.Windows.Data.Binding> jest rozszerzeniem znacznika o wiele właściwości, które można za pomocą rozszerzenia w *właściwość*`=`*wartość* formularza, ale <xref:System.Windows.Data.Binding> obsługuje tylko dwa Konstruktory: domyślny konstruktor a, który ustawia ścieżkę początkowej.  
+- W przypadku równoległego wynik między zachowanie konstruktora i ustawienia zachowania rozszerzenia znaczników właściwości nie ma znaczenia, zachowanie, których używasz. To bardziej powszechne, użycia, aby użyć *właściwość*`=`*wartość* pary — rozszerzenia znaczników, które mają więcej niż jedną konfigurowalną właściwość, jeśli jest to jedyna, ponieważ dzięki niemu znaczników bardziej celowe i jesteś mniej prawdopodobne przypadkowo TRANSPONUJ parametry konstruktora. (Po określeniu właściwość = para kluczy, te właściwości mogą być w dowolnej kolejności.) Ponadto nie ma żadnej gwarancji, że rozszerzenie znaczników dostarcza parametr konstruktora, który ustawia każdego z jego właściwości można ustawić jeden. Na przykład <xref:System.Windows.Data.Binding> jest rozszerzeniem znacznika o wiele właściwości, które można za pomocą rozszerzenia w *właściwość*`=`*wartość* formularza, ale <xref:System.Windows.Data.Binding> obsługuje tylko dwa Konstruktory: domyślny konstruktor a, który ustawia ścieżkę początkowej.  
   
--   Literał przecinek nie można przekazać do rozszerzenia znacznika bez escapement.  
+- Literał przecinek nie można przekazać do rozszerzenia znacznika bez escapement.  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Sekwencje unikowe i rozszerzeń znaczników  

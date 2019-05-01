@@ -5,13 +5,13 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811835"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Kompilowanie odpornych usług gotowych do chmury: Obsługa przejściowych błędów w chmurze
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Tworzenie odpornych usług gotowych do pracy w chmurze: Obsługa przejściowych błędów w chmurze
 
 Odporność to zdolność do odzyskiwania po awarii i kontynuowania działania. Odporność to nie jest o unikanie błędów, ale akceptowanie fakt, że wystąpią błędy i następnie odpowiadać ich w sposób, który pozwala uniknąć przestoju lub utraty danych. Celem odporności jest przywrócenie aplikacji do stanu pełnej funkcjonalności po wystąpieniu awarii.
 
@@ -43,19 +43,19 @@ Aby dowiedzieć się, jak zaimplementować strategie dotyczące obsługi częśc
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Implementowanie odpornych na błędy komunikacji do obsługi częściowych niepowodzeń**
+- **Implementowanie odpornych na błędy komunikacji do obsługi częściowych niepowodzeń**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework odporności, a następnie spróbuj ponownie logika połączenia (w wersji 6 i nowsze)**
+- **Entity Framework odporności, a następnie spróbuj ponownie logika połączenia (w wersji 6 i nowsze)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **Blok obsługi błędów przejściowych w aplikacji**
+- **Blok obsługi błędów przejściowych w aplikacji**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **Biblioteki Polly odporne na błędy komunikacji HTTP**
+- **Biblioteki Polly odporne na błędy komunikacji HTTP**
 
     https://github.com/App-vNext/Polly
 

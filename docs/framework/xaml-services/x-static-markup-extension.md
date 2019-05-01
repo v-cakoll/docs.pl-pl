@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938944"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static — Rozszerzenie znaczników
 Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jest zdefiniowana w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— sposób zgodne. Właściwość statyczna, do którego istnieje odwołanie może służyć do zapewnienia wartości właściwości w XAML.  
@@ -38,10 +38,10 @@ Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jes
 
 Jednostki kodu, do którego odwołuje się musi mieć jedną z następujących czynności:  
   
--   — Stała  
--   Właściwość statyczna  
--   Pola  
--   Wartość wyliczenia
+- — Stała  
+- Właściwość statyczna  
+- Pola  
+- Wartość wyliczenia
 
 Określanie innej jednostki kodu, takich jak niestatycznej właściwości powoduje błąd w czasie kompilacji, jeśli XAML jest skompilowany kod znaczników lub wyjątek analizy w czasie ładowania XAML.  
 
@@ -74,11 +74,11 @@ W implementacji .NET Framework XAML Services obsługi dla tego rozszerzenia znac
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
  Domyślna przestrzeń nazw XAML, użyj dla programowania WPF nie zawiera wiele użytecznych właściwości statycznej, a większość użytecznych właściwości statycznej obsługuje takie jak konwerterów typów, które ułatwiają użycie bez konieczności `{x:Static}` . W przypadku statycznej właściwości możesz zamapować prefiksu dla przestrzeni nazw XAML, jeśli jest spełniony jeden z następujących czynności:  
   
--   Utworzono odwołanie do typu, który istnieje w WPF, ale nie jest częścią domyślnej przestrzeni nazw XAML dla WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Jest to dość typowy scenariusz używania `x:Static`. Na przykład, można na przykład `x:Static` odwołania za pomocą mapowania przestrzeni nazw XAML, aby <xref:System> zestaw przestrzeni nazw i mscorlib CLR aby odwołanie statyczne właściwości <xref:System.Environment> klasy.  
+- Utworzono odwołanie do typu, który istnieje w WPF, ale nie jest częścią domyślnej przestrzeni nazw XAML dla WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Jest to dość typowy scenariusz używania `x:Static`. Na przykład, można na przykład `x:Static` odwołania za pomocą mapowania przestrzeni nazw XAML, aby <xref:System> zestaw przestrzeni nazw i mscorlib CLR aby odwołanie statyczne właściwości <xref:System.Environment> klasy.  
   
--   Z niestandardowego zestawu odwołuje się do typu.  
+- Z niestandardowego zestawu odwołuje się do typu.  
   
--   Utworzono odwołanie do typu, który istnieje w zestawie WPF, jednak, że typ znajduje się w przestrzeni nazw CLR, który nie został zmapowany jako część domyślnej WPF XAML przestrzeni nazw. Mapowanie przestrzeni nazw CLR do domyślnej przestrzeni nazw XAML dla WPF odbywa się przez definicje w różnych zestawach WPF (Aby uzyskać więcej informacji dotyczących tej reguły, zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Zamapowane bez przestrzeni nazw CLR może istnieć, jeśli przestrzeń nazw CLR składa się głównie z definicji klas, które nie są zwykle przeznaczone dla XAML, takich jak <xref:System.Windows.Threading>.  
+- Utworzono odwołanie do typu, który istnieje w zestawie WPF, jednak, że typ znajduje się w przestrzeni nazw CLR, który nie został zmapowany jako część domyślnej WPF XAML przestrzeni nazw. Mapowanie przestrzeni nazw CLR do domyślnej przestrzeni nazw XAML dla WPF odbywa się przez definicje w różnych zestawach WPF (Aby uzyskać więcej informacji dotyczących tej reguły, zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Zamapowane bez przestrzeni nazw CLR może istnieć, jeśli przestrzeń nazw CLR składa się głównie z definicji klas, które nie są zwykle przeznaczone dla XAML, takich jak <xref:System.Windows.Threading>.  
   
  Aby uzyskać więcej informacji na temat korzystania z prefiksy i XAML w przestrzeni nazw dla WPF, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   

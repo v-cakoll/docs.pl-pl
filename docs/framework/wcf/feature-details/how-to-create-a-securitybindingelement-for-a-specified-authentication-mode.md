@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
 ms.openlocfilehash: e35df9a5dacc5f281af48cec292a09b291312119
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787663"
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>Instrukcje: tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania
 Windows Communication Foundation (WCF) udostępnia kilka tryby, według których klientów i usług uwierzytelniania ze sobą. Możesz utworzyć zabezpieczeń elementy powiązania dla tych trybów uwierzytelniania przy użyciu metody statycznej na <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy lub przy użyciu konfiguracji, jak pokazano w poniższym przykładzie.  

@@ -11,30 +11,30 @@ ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908846"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Programowanie asynchroniczne w TPL i standardowym .NET Framework
 Program .NET Framework zawiera następujące dwa standardowe wzorce do wykonywania operacji asynchronicznych I/O-granicę i powiązany obliczeniowych:  
   
--   Modelu programowania asynchronicznego (APM), w której operacje asynchroniczne są reprezentowane przez parę początek/koniec metody takie jak <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> i <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
+- Modelu programowania asynchronicznego (APM), w której operacje asynchroniczne są reprezentowane przez parę początek/koniec metody takie jak <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> i <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Oparte na zdarzeniach wzorca asynchronicznego (EAP), w której operacje asynchroniczne są reprezentowane przez parę metody lub zdarzenia, które noszą *OperationName*Async i *OperationName*ukończone, na przykład <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> i <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (EAP została wprowadzona w .NET Framework w wersji 2.0).  
+- Oparte na zdarzeniach wzorca asynchronicznego (EAP), w której operacje asynchroniczne są reprezentowane przez parę metody lub zdarzenia, które noszą *OperationName*Async i *OperationName*ukończone, na przykład <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> i <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (EAP została wprowadzona w .NET Framework w wersji 2.0).  
   
  Biblioteka zadań równoległych (TPL) może służyć w różny sposób w połączeniu z oboma wzorami asynchronicznymi. Należy udostępnić operacje zarówno APM, jak i EAP jako zadania dla konsumentów biblioteki lub udostępnić wzorców APM, ale ich wewnętrznego wdrażania za pomocą obiektów zadań. W obu przypadkach za pomocą obiektów zadań można uprościć kod i korzystać z zalet przydatne następujące funkcje:  
   
--   Rejestrowanie wywołań zwrotnych, w postaci kontynuacji zadań, w dowolnym momencie po uruchomieniu zadania.  
+- Rejestrowanie wywołań zwrotnych, w postaci kontynuacji zadań, w dowolnym momencie po uruchomieniu zadania.  
   
--   Koordynowanie wielu operacji, które są wykonywane w odpowiedzi na `Begin_` metody, używając <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> i <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> metod, lub <xref:System.Threading.Tasks.Task.WaitAll%2A> metody lub <xref:System.Threading.Tasks.Task.WaitAny%2A> metody.  
+- Koordynowanie wielu operacji, które są wykonywane w odpowiedzi na `Begin_` metody, używając <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> i <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> metod, lub <xref:System.Threading.Tasks.Task.WaitAll%2A> metody lub <xref:System.Threading.Tasks.Task.WaitAny%2A> metody.  
   
--   Hermetyzuj operacji asynchronicznych I/O-granicę i powiązany obliczeniowych w tym samym obiekcie zadania.  
+- Hermetyzuj operacji asynchronicznych I/O-granicę i powiązany obliczeniowych w tym samym obiekcie zadania.  
   
--   Monitorowanie stanu obiektu zadania.  
+- Monitorowanie stanu obiektu zadania.  
   
--   Kieruj stan operacji do obiektu zadania przy użyciu <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+- Kieruj stan operacji do obiektu zadania przy użyciu <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>Zawijanie operacje APM w zadaniu  
  Zarówno <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> i <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> klasy zapewniają kilka przeciążeń <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> metod, które pozwalają na hermetyzację parę APM początek/koniec metody w jednym <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> wystąpienia. Różne przeciążenia pomieścić wszystkie pary metoda początek/koniec mających od zera do trzech parametrów wejściowych.  
@@ -50,13 +50,13 @@ Program .NET Framework zawiera następujące dwa standardowe wzorce do wykonywan
   
  Pierwszy parametr jest <xref:System.Func%606> delegat, który pasuje do podpisu <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> metody. Drugi parametr jest <xref:System.Func%602> delegata, która przyjmuje <xref:System.IAsyncResult> i zwraca `TResult`. Ponieważ <xref:System.IO.FileStream.EndRead%2A> zwraca jako liczba całkowita, kompilator wnioskuje typ `TResult` jako <xref:System.Int32> i typ tworzonego zadania jako <xref:System.Threading.Tasks.Task>. Cztery ostatnie parametry są identyczne z tymi w <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> metody:  
   
--   Bufor do przechowywania danych plików.  
+- Bufor do przechowywania danych plików.  
   
--   Przesunięcie w buforze, od którego należy rozpocząć zapisywanie danych.  
+- Przesunięcie w buforze, od którego należy rozpocząć zapisywanie danych.  
   
--   Maksymalna ilość danych do odczytu z pliku.  
+- Maksymalna ilość danych do odczytu z pliku.  
   
--   Opcjonalnie obiekt, który przechowuje dane o stanie zdefiniowane przez użytkownika do przekazania do wywołania zwrotnego.  
+- Opcjonalnie obiekt, który przechowuje dane o stanie zdefiniowane przez użytkownika do przekazania do wywołania zwrotnego.  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>Za pomocą ContinueWith dla funkcji wywołania zwrotnego  
  Jeśli potrzebujesz dostępu do danych w pliku, a nie tylko liczbę bajtów, <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> metoda nie jest wystarczające. Zamiast tego należy użyć <xref:System.Threading.Tasks.Task>, którego `Result` właściwość zawiera dane pliku. Można to zrobić, dodając kontynuacja z oryginalnym zadaniem. Kontynuacja wykonuje pracę, która może być zwykle przeprowadzona przez <xref:System.AsyncCallback> delegować. Jest wywoływana po ukończeniu zadania poprzedzającego i bufor danych została wypełniona. ( <xref:System.IO.FileStream> Obiekt powinien zostać zamknięty przed zwróceniem.)  
@@ -104,7 +104,7 @@ Program .NET Framework zawiera następujące dwa standardowe wzorce do wykonywan
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Aby uzyskać pełniejszy przykład, który zawiera dodatkowe wyjątków i pokazuje, jak wywołać metodę z poziomu kodu klienta, zobacz [porady: zawijanie wzorów EAP w zadaniu](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Aby uzyskać pełniejszy przykład, który zawiera dodatkowe wyjątków i pokazuje, jak wywołać metodę z poziomu kodu klienta, zobacz [jak: OPAKOWYWANIE wzorców EAP w zadaniu](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Należy pamiętać, że dowolne zadanie, które jest tworzony przez <xref:System.Threading.Tasks.TaskCompletionSource%601> zostanie uruchomione przez tego TaskCompletionSource i, w związku z tym, kod użytkownika nie powinien wywoływać metodę uruchamiania dla tego zadania.  
   

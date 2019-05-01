@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
 ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777120"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Instrukcje: Dodawanie typu właściciela dla właściwości zależności
 W tym przykładzie przedstawiono sposób dodawania klasy jako właściciele właściwości zależności, zarejestrowany dla innego typu. Dzięki temu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] czytnika i system właściwości są rozpoznawać klasy jako właściciel dodatkowe właściwości. Dodawanie jako właściciel opcjonalnie umożliwia dodanie klasy do udostępnienia metadanych specyficznych dla typu.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857795"
 ---
 # <a name="bindings-and-security"></a>Wiązania i zabezpieczenia
 Powiązania dostarczane przez system, dołączone za pomocą programu Windows Communication Foundation (WCF) oferują szybki sposób program aplikacji WCF. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. W tym temacie pomaga wybrać odpowiednie powiązanie dla wymagania w zakresie zabezpieczeń.  
@@ -35,21 +35,21 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
  To powiązanie jest przeznaczony do użytku z użyciem wielu istniejących technologii, w tym następujące:  
   
--   Usługi sieci Web platformy ASP.NET (ASMX) w wersji 1.  
+- Usługi sieci Web platformy ASP.NET (ASMX) w wersji 1.  
   
--   Ulepszenia usługi (WSE) internetowych.  
+- Ulepszenia usługi (WSE) internetowych.  
   
--   Profil podstawowe, zgodnie z definicją w współdziałania usług sieci Web (WS-I) specyfikacji (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
+- Profil podstawowe, zgodnie z definicją w współdziałania usług sieci Web (WS-I) specyfikacji (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
--   Profil zabezpieczeń podstawowe, zgodnie z definicją w WS-I.  
+- Profil zabezpieczeń podstawowe, zgodnie z definicją w WS-I.  
   
  Domyślnie to powiązanie nie jest bezpieczny. Jest on zaprojektowany pod kątem współdziałania z usługami ASMX. Po włączeniu zabezpieczeń powiązania zaprojektowano z myślą bezproblemowe współdziałanie z mechanizmów zabezpieczeń Internet Information Services (IIS), takich jak uwierzytelnianie podstawowe, szyfrowane i zintegrowanych zabezpieczeń Windows. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). To powiązanie obsługuje następujące funkcje:  
   
--   Zabezpieczenia transportu HTTPS.  
+- Zabezpieczenia transportu HTTPS.  
   
--   Podstawowe uwierzytelnianie HTTP.  
+- Podstawowe uwierzytelnianie HTTP.  
   
--   WS-Security.  
+- WS-Security.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, i <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
@@ -58,11 +58,11 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
  Domyślnie to powiązanie implementuje specyfikacji WS-Security i umożliwia współdziałanie z usługami, które implementują WS-* specyfikacji. Obsługuje on następujące funkcje:  
   
--   Zabezpieczenia transportu HTTPS.  
+- Zabezpieczenia transportu HTTPS.  
   
--   WS-Security.  
+- WS-Security.  
   
--   Protokół HTTPS transportu ochrony za pomocą protokołu SOAP wiadomości poświadczeń zabezpieczeń w celu uwierzytelniania obiektu wywołującego.  
+- Protokół HTTPS transportu ochrony za pomocą protokołu SOAP wiadomości poświadczeń zabezpieczeń w celu uwierzytelniania obiektu wywołującego.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, i <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
@@ -71,23 +71,23 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
  To powiązanie jest przeznaczona do umożliwiają aplikacjom usługi duplex. To powiązanie implementuje specyfikacji WS-Security bezpieczeństwie transferu oparta na komunikatach. Zabezpieczenia transportu nie jest dostępna. Domyślnie udostępnia następujące funkcje:  
   
--   Implementuje usługi WS-Reliable Messaging niezawodności.  
+- Implementuje usługi WS-Reliable Messaging niezawodności.  
   
--   Implementuje usługi WS-Security do uwierzytelniania i bezpieczeństwie transferu.  
+- Implementuje usługi WS-Security do uwierzytelniania i bezpieczeństwie transferu.  
   
--   Korzysta z protokołu HTTP do dostarczania wiadomości.  
+- Korzysta z protokołu HTTP do dostarczania wiadomości.  
   
--   Używa kodowania komunikatu tekstu/XML.  
+- Używa kodowania komunikatu tekstu/XML.  
   
  Za pomocą WS-Security (zabezpieczenia warstwie wiadomości), wiązanie umożliwia skonfigurowanie następujących parametrów:  
   
--   Aby określić algorytm kryptograficzny pakiet algorytmów zabezpieczeń.  
+- Aby określić algorytm kryptograficzny pakiet algorytmów zabezpieczeń.  
   
--   Powiązanie następujące opcje:  
+- Powiązanie następujące opcje:  
   
-    -   Udostępnianie usługi poświadczenia dostępne poza pasmem po stronie klienta.  
+    - Udostępnianie usługi poświadczenia dostępne poza pasmem po stronie klienta.  
   
-    -   Dostarczanie poświadczeń usługi negocjowane z usługi w ramach instalacji kanału.  
+    - Dostarczanie poświadczeń usługi negocjowane z usługi w ramach instalacji kanału.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.WSDualHttpSecurity> i <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
@@ -96,21 +96,21 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
  To powiązanie jest zoptymalizowany pod kątem komunikacji między komputerami. Domyślnie ma następujące cechy:  
   
--   Implementuje zabezpieczeń warstwy transportowej.  
+- Implementuje zabezpieczeń warstwy transportowej.  
   
--   Wykorzystuje zabezpieczeń Windows do uwierzytelniania i bezpieczeństwie transferu.  
+- Wykorzystuje zabezpieczeń Windows do uwierzytelniania i bezpieczeństwie transferu.  
   
--   Używa protokołu TCP dla transportu.  
+- Używa protokołu TCP dla transportu.  
   
--   Implementuje kodowania komunikatu binarnego.  
+- Implementuje kodowania komunikatu binarnego.  
   
--   Implementuje usługi WS-Reliable Messaging.  
+- Implementuje usługi WS-Reliable Messaging.  
   
  Dostępne są następujące opcje:  
   
--   Zabezpieczenia warstwy komunikat (przy użyciu usługi WS-Security).  
+- Zabezpieczenia warstwy komunikat (przy użyciu usługi WS-Security).  
   
--   Transport security z poświadczeniami komunikatu — poufności i integralności udostępniane przez zabezpieczeń TLS (Transport Layer) za pośrednictwem protokołu TCP i poświadczenia autoryzacji dostarczonych przez WS-Security.  
+- Transport security z poświadczeniami komunikatu — poufności i integralności udostępniane przez zabezpieczeń TLS (Transport Layer) za pośrednictwem protokołu TCP i poświadczenia autoryzacji dostarczonych przez WS-Security.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, i <xref:System.ServiceModel.MessageCredentialType>.  
   
@@ -119,17 +119,17 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
  To powiązanie jest zoptymalizowany pod kątem komunikacji między procesami (zwykle w tym samym komputerze). Domyślnie to powiązanie ma następującą charakterystykę:  
   
--   Zastosowań transportu zabezpieczeń do uwierzytelniania i transferu komunikatów.  
+- Zastosowań transportu zabezpieczeń do uwierzytelniania i transferu komunikatów.  
   
--   Korzysta z nazwanych potoków do dostarczania wiadomości.  
+- Korzysta z nazwanych potoków do dostarczania wiadomości.  
   
--   Implementuje kodowania komunikatu binarnego.  
+- Implementuje kodowania komunikatu binarnego.  
   
--   Szyfrowanie i podpisywanie komunikatów.  
+- Szyfrowanie i podpisywanie komunikatów.  
   
  Dostępne są następujące opcje:  
   
--   Uwierzytelnianie przy użyciu zabezpieczeń Windows.  
+- Uwierzytelnianie przy użyciu zabezpieczeń Windows.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, i <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
@@ -140,9 +140,9 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
  Domyślnie to powiązanie korzysta z zabezpieczeń transportu i zawiera następujące właściwości zabezpieczeń:  
   
--   Zabezpieczeń może być wyłączona (Brak).  
+- Zabezpieczeń może być wyłączona (Brak).  
   
--   Zabezpieczenia transportu usługi MSMQ (transportu).  
+- Zabezpieczenia transportu usługi MSMQ (transportu).  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.NetMsmqSecurity> i <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
@@ -153,15 +153,15 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
  Domyślnie to powiązanie korzysta z zabezpieczeń transportu i zawiera następujące właściwości zabezpieczeń:  
   
--   Zabezpieczeń może być wyłączona (Brak).  
+- Zabezpieczeń może być wyłączona (Brak).  
   
--   Zabezpieczenia transportu usługi MSMQ (transportu).  
+- Zabezpieczenia transportu usługi MSMQ (transportu).  
   
--   Zabezpieczenia komunikatów opartego na protokole SOAP (komunikat).  
+- Zabezpieczenia komunikatów opartego na protokole SOAP (komunikat).  
   
--   Jednoczesne transportu i komunikat zabezpieczeń (oba).  
+- Jednoczesne transportu i komunikat zabezpieczeń (oba).  
   
--   Obsługiwane typy poświadczeń klienta: Brak, Windows, nazwa użytkownika, certyfikat, IssuedToken.  
+- Obsługiwane typy poświadczeń klienta: Brak, Windows, nazwa użytkownika, certyfikat, IssuedToken.  
   
  <xref:System.ServiceModel.MessageCredentialType.Certificate> Poświadczeń jest obsługiwana tylko wtedy, gdy tryb zabezpieczeń jest ustawiony na <xref:System.ServiceModel.NetMsmqSecurityMode.Both> lub <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   

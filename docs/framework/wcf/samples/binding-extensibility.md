@@ -1,21 +1,21 @@
 ---
-title: Rozszerzalność powiązań
+title: Rozszerzalność wiązań
 ms.date: 03/30/2017
 ms.assetid: cabdd583-ddf5-493e-9dba-c6c31cde8f65
 ms.openlocfilehash: af9736a1011c3de6e1add51e8a913745cfd6756d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944095"
 ---
-# <a name="binding-extensibility"></a>Rozszerzalność powiązań
+# <a name="binding-extensibility"></a>Rozszerzalność wiązań
 
-Ta sekcja zawiera przykłady ilustrujące niestandardowego powiązania w systemie Windows Communication Foundation (WCF).  
+Ta sekcja zawiera przykłady pokazujące, niestandardowego powiązania w Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  <xref:System.ServiceModel.NetHttpBinding>  
- Pokazuje, jak implementuje powiązania, które stosów <xref:System.ServiceModel.Channels.HttpTransportBindingElement> lub <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> nad <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>.  
+ Demonstruje sposób implementacji powiązanie, które stosów <xref:System.ServiceModel.Channels.HttpTransportBindingElement> lub <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> w górnej części <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>.  
   
  [WSStreamedHttpBinding](wsstreamedhttpbinding.md)  
- Przedstawia sposób tworzenia powiązania, które umożliwia obsługę przesyłania strumieniowego scenariuszy stosowania transportu HTTP.  
+ Pokazuje, jak można utworzyć powiązania, który jest przeznaczony do obsługi transmisji strumieniowej scenariuszy stosowania transportu HTTP.  

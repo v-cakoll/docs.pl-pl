@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: fa472b3a142f55f0cbdd83eabbbb00bddd9786d8
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61842029"
 ---
 ### <a name="minfreememorypercentagetoactiveservice-is-now-respected"></a>MinFreeMemoryPercentageToActiveService teraz jest zachowana.
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
 ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770568"
 ---
 # <a name="popup-overview"></a>Przegląd Okna podręczne
 <xref:System.Windows.Controls.Primitives.Popup> Kontroli zapewnia sposób wyświetlania zawartości w oddzielnym oknie, który pojawia się za pośrednictwem bieżącego okna aplikacji względem wyznaczonego współrzędne elementu lub ekranu. W tym temacie przedstawiono <xref:System.Windows.Controls.Primitives.Popup> kontroli i zawiera informacje dotyczące jego użycia.  
@@ -34,13 +34,13 @@ ms.locfileid: "59102781"
 ## <a name="controls-that-implement-a-popup"></a>Formanty, które implementują okna podręcznego  
  Możesz tworzyć <xref:System.Windows.Controls.Primitives.Popup> formanty do innych kontrolek. Następujące elementy sterujące zaimplementować <xref:System.Windows.Controls.Primitives.Popup> kontroli dla konkretnych zastosowań:  
   
--   <xref:System.Windows.Controls.ToolTip>. Jeśli chcesz utworzyć etykietka narzędzia elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [ToolTip — Przegląd](tooltip-overview.md).  
+- <xref:System.Windows.Controls.ToolTip>. Jeśli chcesz utworzyć etykietka narzędzia elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [ToolTip — Przegląd](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Aby utworzyć menu kontekstowe dla elementu, należy użyć <xref:System.Windows.Controls.ContextMenu> kontroli. Aby uzyskać więcej informacji, zobacz [ContextMenu — Przegląd](contextmenu-overview.md).  
+- <xref:System.Windows.Controls.ContextMenu>. Aby utworzyć menu kontekstowe dla elementu, należy użyć <xref:System.Windows.Controls.ContextMenu> kontroli. Aby uzyskać więcej informacji, zobacz [ContextMenu — Przegląd](contextmenu-overview.md).  
   
--   <xref:System.Windows.Controls.ComboBox>. Jeśli chcesz utworzyć kontrolkę wyboru zawierającej pole listy rozwijanej, która może być pokazane lub ukryte, użyj <xref:System.Windows.Controls.ComboBox> kontroli.  
+- <xref:System.Windows.Controls.ComboBox>. Jeśli chcesz utworzyć kontrolkę wyboru zawierającej pole listy rozwijanej, która może być pokazane lub ukryte, użyj <xref:System.Windows.Controls.ComboBox> kontroli.  
   
--   <xref:System.Windows.Controls.Expander>. Jeśli chcesz utworzyć kontrolkę wyświetlającą nagłówek o zwijany obszar, który wyświetla zawartość, należy użyć <xref:System.Windows.Controls.Expander> kontroli. Aby uzyskać więcej informacji, zobacz [Przegląd ekspander](expander-overview.md).  
+- <xref:System.Windows.Controls.Expander>. Jeśli chcesz utworzyć kontrolkę wyświetlającą nagłówek o zwijany obszar, który wyświetla zawartość, należy użyć <xref:System.Windows.Controls.Expander> kontroli. Aby uzyskać więcej informacji, zobacz [Przegląd ekspander](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Okno podręczne zachowania i wyglądu  

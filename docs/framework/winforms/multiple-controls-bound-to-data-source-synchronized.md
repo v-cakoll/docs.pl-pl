@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800780"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Instrukcje: Zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych
 Często pracując przy użyciu powiązania danych w formularzach Windows Forms, wielu formantów są powiązane z tego samego źródła danych. W niektórych przypadkach może być konieczne wykonać dodatkowe czynności, aby upewnić się, że powiązanych właściwości kontrolek pozostają zsynchronizowane ze sobą i źródła danych. Te kroki są niezbędne w dwóch sytuacjach:  
   
--   Jeśli źródło danych nie zawiera implementacji <xref:System.ComponentModel.IBindingList>i w związku z tym generowania <xref:System.ComponentModel.IBindingList.ListChanged> zdarzeń typu <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
+- Jeśli źródło danych nie zawiera implementacji <xref:System.ComponentModel.IBindingList>i w związku z tym generowania <xref:System.ComponentModel.IBindingList.ListChanged> zdarzeń typu <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
   
--   Jeśli źródło danych implementuje <xref:System.ComponentModel.IEditableObject>.  
+- Jeśli źródło danych implementuje <xref:System.ComponentModel.IEditableObject>.  
   
  W pierwszym przypadku można użyć <xref:System.Windows.Forms.BindingSource> można powiązać źródła danych do kontrolek. W tym ostatnim przypadku używasz <xref:System.Windows.Forms.BindingSource> i obsługiwać <xref:System.Windows.Forms.BindingSource.BindingComplete> zdarzenia i wywołania <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> dla powiązanego <xref:System.Windows.Forms.BindingManagerBase>.  
   
@@ -34,11 +34,11 @@ Często pracując przy użyciu powiązania danych w formularzach Windows Forms, 
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Poniższy przykład kodu wymaga  
+- Poniższy przykład kodu wymaga  
   
--   Odwołuje się do <xref:System>, <xref:System.Windows.Forms>, i <xref:System.Drawing> zestawów.  
+- Odwołuje się do <xref:System>, <xref:System.Windows.Forms>, i <xref:System.Drawing> zestawów.  
   
--   Formularz z <xref:System.Windows.Forms.Form.Load> obsługi zdarzenia i wywołania `InitializeControlsAndDataSource` metody w przykładzie z formularza <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
+- Formularz z <xref:System.Windows.Forms.Form.Load> obsługi zdarzenia i wywołania `InitializeControlsAndDataSource` metody w przykładzie z formularza <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
 

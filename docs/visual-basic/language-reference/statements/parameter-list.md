@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784010"
 ---
 # <a name="parameter-list-visual-basic"></a>Lista parametrów (Visual Basic)
 Określa parametry, których oczekuje procedury, gdy jest wywoływana. Wiele parametrów są oddzielone przecinkami. Poniżej przedstawiono składnię jeden parametr.  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>reguły  
   
--   **Nawiasy.** Jeśli określisz listę parametrów, należy ująć go w nawiasach. Jeśli nie ma żadnych parametrów, ale nadal używać nawiasów obejmujących pustej listy. Zwiększa to czytelność kodu przez wyjaśnienie, że element jest procedurą.  
+- **Nawiasy.** Jeśli określisz listę parametrów, należy ująć go w nawiasach. Jeśli nie ma żadnych parametrów, ale nadal używać nawiasów obejmujących pustej listy. Zwiększa to czytelność kodu przez wyjaśnienie, że element jest procedurą.  
   
--   **Parametry opcjonalne.** Jeśli używasz `Optional` modyfikator parametru, wszystkie kolejne parametry na liście musi być również opcjonalne i można zadeklarować za pomocą `Optional` modyfikator.  
+- **Parametry opcjonalne.** Jeśli używasz `Optional` modyfikator parametru, wszystkie kolejne parametry na liście musi być również opcjonalne i można zadeklarować za pomocą `Optional` modyfikator.  
   
      Należy podać co deklaracja parametru opcjonalnego `defaultvalue` klauzuli.  
   
      Aby uzyskać więcej informacji, zobacz [następujące parametry opcjonalne](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
   
--   **Tablice parametrów.** Należy określić `ByVal` dla `ParamArray` parametru.  
+- **Tablice parametrów.** Należy określić `ByVal` dla `ParamArray` parametru.  
   
      Nie można używać obu `Optional` i `ParamArray` liście parametrów.  
   
      Aby uzyskać więcej informacji, zobacz [Parameter — tablice](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
--   **Mechanizm przekazywania.** Domyślny mechanizm dla każdego argumentu jest `ByVal`, co oznacza procedury nie można zmienić podstawowego elementu zmiennej. Jednak jeśli element jest typem referencyjnym, procedury można zmodyfikować zawartość lub elementy członkowskie obiektu bazowego, mimo że nie można zastąpić, lub ponownie przypisać samego obiektu.  
+- **Mechanizm przekazywania.** Domyślny mechanizm dla każdego argumentu jest `ByVal`, co oznacza procedury nie można zmienić podstawowego elementu zmiennej. Jednak jeśli element jest typem referencyjnym, procedury można zmodyfikować zawartość lub elementy członkowskie obiektu bazowego, mimo że nie można zastąpić, lub ponownie przypisać samego obiektu.  
   
--   **Nazwy parametrów.** Jeśli typ danych parametru jest tablicą, postępuj zgodnie z `parametername` bezpośrednio przez nawiasy. Aby uzyskać więcej informacji na temat nazw parametrów, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Nazwy parametrów.** Jeśli typ danych parametru jest tablicą, postępuj zgodnie z `parametername` bezpośrednio przez nawiasy. Aby uzyskać więcej informacji na temat nazw parametrów, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono `Function` procedury, która definiuje dwa parametry.  

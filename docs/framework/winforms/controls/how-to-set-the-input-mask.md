@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912876"
 ---
 # <a name="how-to-set-the-input-mask"></a>Instrukcje: ustawienie maski wprowadzania
 Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, który obsługuje składni deklaratywnej akceptowanie lub odrzucanie dane wejściowe użytkownika. Ustawiając właściwość maski, można określić danych wejściowych użytkownika dozwolony bez konieczności pisania wszelkie logikę niestandardowego sprawdzania poprawności w aplikacji. Aby uzyskać więcej informacji, zobacz sekcję Uwagi <xref:System.Windows.Forms.MaskedTextBox> klasy.  
@@ -34,15 +34,15 @@ Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, 
   
 1. W **projektowania** widoku, wybierz opcję <xref:System.Windows.Forms.MaskedTextBox>.  
   
-    1.  Kliknij tag, aby otworzyć **zadania MaskedTextBox** panelu.  
+    1. Kliknij tag, aby otworzyć **zadania MaskedTextBox** panelu.  
   
-    2.  Kliknij przycisk **ustawienie maski**.  
+    2. Kliknij przycisk **ustawienie maski**.  
   
      \- lub —  
   
-    1.  W **właściwości** wybierz <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwości.  
+    1. W **właściwości** wybierz <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwości.  
   
-    2.  Kliknij przycisk wielokropka w kolumnie wartości właściwości.  
+    2. Kliknij przycisk wielokropka w kolumnie wartości właściwości.  
   
      **Maska wprowadzania** pojawi się okno dialogowe.  
   

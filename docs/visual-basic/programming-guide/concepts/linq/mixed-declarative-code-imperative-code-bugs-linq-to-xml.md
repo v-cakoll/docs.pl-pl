@@ -3,11 +3,11 @@ title: Mieszane błędy kod deklaratywny kodu i Imperatywnego (LINQ to XML) (Vis
 ms.date: 07/20/2015
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
 ms.openlocfilehash: e7b3b624bb91525d2cda9477c29291e25eba1b07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775989"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Mieszane błędy kodu deklaratywnego/Imperatywne (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera różne metody, które umożliwiają modyfikowanie drzewa XML bezpośrednio. Można dodać elementy, usuwanie elementów, zmienić zawartość elementu, dodawanie atrybutów i tak dalej. Ten interfejs programowania jest opisana w [modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Jeśli użytkownik są iteracji w jednej osi, takie jak <xref:System.Xml.Linq.XContainer.Elements%2A>i są modyfikowanie drzewa XML jako iterację osi, użytkownik może wystąpić pewne błędy otrzymano nieoczekiwany.  

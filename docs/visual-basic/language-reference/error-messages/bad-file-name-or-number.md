@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935229"
 ---
 # <a name="bad-file-name-or-number"></a>Zła nazwa lub numer pliku
 Wystąpił błąd podczas próby uzyskania dostępu do określonego pliku. Wśród możliwych przyczyn tego błędu są:  
   
--   Oświadczenie odnosi się do pliku przy użyciu nazwy pliku lub numeru, który nie został określony w `FileOpen` instrukcji lub która została określona w `FileOpen` instrukcji, jednak podano wartość następnie zamknięty.  
+- Oświadczenie odnosi się do pliku przy użyciu nazwy pliku lub numeru, który nie został określony w `FileOpen` instrukcji lub która została określona w `FileOpen` instrukcji, jednak podano wartość następnie zamknięty.  
   
--   Oświadczenie odnosi się do pliku z numerem, który znajduje się poza zakresem numerów plików.  
+- Oświadczenie odnosi się do pliku z numerem, który znajduje się poza zakresem numerów plików.  
   
--   Oświadczenie odnosi się do nazwy pliku lub numer, który jest nieprawidłowy.  
+- Oświadczenie odnosi się do nazwy pliku lub numer, który jest nieprawidłowy.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   

@@ -3,8 +3,8 @@ ms.openlocfilehash: 566a3e0455b30e901b09be88b4256ffe67bdc2b5
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664943"
 ---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>Dodaje stanów trwałych programu SQL przepływu pracy, klucz podstawowy klastrów i nie zezwalają na wartości null w niektórych kolumn
 

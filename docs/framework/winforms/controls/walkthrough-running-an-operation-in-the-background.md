@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792174"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Przewodnik: uruchamianie operacji w tle
 Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować opóźnienia w interfejsie użytkownika, możesz użyć <xref:System.ComponentModel.BackgroundWorker> klasy, aby uruchomić operację na inny wątek.  
@@ -96,9 +96,9 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować op�
   
 ## <a name="next-steps"></a>Następne kroki  
   
--   Implementowanie formularza, który zgłasza postępy pracy w trakcie wykonywania operacji asynchronicznej. Aby uzyskać więcej informacji, zobacz [jak: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md).  
+- Implementowanie formularza, który zgłasza postępy pracy w trakcie wykonywania operacji asynchronicznej. Aby uzyskać więcej informacji, zobacz [jak: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Implementuje klasę, która obsługuje wzorca asynchronicznego dla składników. Aby uzyskać więcej informacji, zobacz [implementacja wzorca asynchronicznego opartego na zdarzeniach](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+- Implementuje klasę, która obsługuje wzorca asynchronicznego dla składników. Aby uzyskać więcej informacji, zobacz [implementacja wzorca asynchronicznego opartego na zdarzeniach](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

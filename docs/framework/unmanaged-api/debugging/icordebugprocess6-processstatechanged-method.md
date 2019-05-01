@@ -5,11 +5,11 @@ ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a4dcee3b396d9533f3169db1ea54a6cdc6086c8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948593"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>Metoda ICorDebugProcess6::ProcessStateChanged
 Powiadamia [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) , proces jest uruchomiony.  

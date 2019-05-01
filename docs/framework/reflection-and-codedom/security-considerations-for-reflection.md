@@ -13,32 +13,32 @@ ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793149"
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członkowskich i dostęp do elementów członkowskich (czyli do wywołania metod i konstruktorów do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej). Użycie odbicia w celu uzyskania informacji na temat typów i elementów członkowskich nie jest ograniczona. Cały kod może używać odbicia do wykonywania następujących zadań:  
   
--   Wyliczanie typów i elementów członkowskich i zbadaj ich metadanych.  
+- Wyliczanie typów i elementów członkowskich i zbadaj ich metadanych.  
   
--   Wyliczanie i badania zestawów i modułów.  
+- Wyliczanie i badania zestawów i modułów.  
   
  Z drugiej strony, przy użyciu odbicia do dostępu do elementów członkowskich, podlega ograniczeniom. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]należy korzystać tylko z zaufanego kodu umożliwia dostęp do elementów członkowskich zabezpieczenia krytyczny odbicia. Ponadto tylko zaufanego kodu można użyć odbicia do połączenia niepubliczne elementy członkowskie, które nie będą dostępne dla kodu skompilowanego. Na koniec kod, który używa odbicia na uzyskiwanie dostępu do członka bezpieczny krytyczny musi mieć uprawnienia, niezależnie od wymagań bezpieczny krytyczny element członkowski, po prostu, podobnie jak w przypadku skompilowany kod.  
   
  Z zastrzeżeniem odpowiednie uprawnienia kod może użyć odbicia przeprowadzić następujące rodzaje dostępu:  
   
--   Dostęp do publicznych składowych, które nie są krytyczne dla bezpieczeństwa.  
+- Dostęp do publicznych składowych, które nie są krytyczne dla bezpieczeństwa.  
   
--   Członkowie niepubliczni dostępu, które będą dostępne dla kodzie skompilowanym, jeśli te elementy członkowskie nie są krytyczne dla bezpieczeństwa. Przykłady takich niepubliczne elementy członkowskie:  
+- Członkowie niepubliczni dostępu, które będą dostępne dla kodzie skompilowanym, jeśli te elementy członkowskie nie są krytyczne dla bezpieczeństwa. Przykłady takich niepubliczne elementy członkowskie:  
   
-    -   Chronione składowe klas bazowych kodu wywołującego. (W odbiciu, to nazywa się dostęp na poziomie rodziny.)  
+    - Chronione składowe klas bazowych kodu wywołującego. (W odbiciu, to nazywa się dostęp na poziomie rodziny.)  
   
-    -   `internal` elementy członkowskie (`Friend` elementów członkowskich w języku Visual Basic) w zestawie wywołującego kodu. (W odbiciu, to nazywa się dostęp na poziomie zestawu.)  
+    - `internal` elementy członkowskie (`Friend` elementów członkowskich w języku Visual Basic) w zestawie wywołującego kodu. (W odbiciu, to nazywa się dostęp na poziomie zestawu.)  
   
-    -   Prywatnych składowych innych wystąpień klasy, która zawiera kod wywołujący.  
+    - Prywatnych składowych innych wystąpień klasy, która zawiera kod wywołujący.  
   
  Na przykład kod uruchomiony w domenie aplikacji w trybie piaskownicy jest ograniczona do dostępu opisanego na tej liście, chyba, że domena aplikacji przyznaje dodatkowe uprawnienia.  
   
@@ -50,9 +50,9 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
 ## <a name="accessing-security-critical-members"></a>Uzyskiwanie dostępu do elementów krytycznych dla zabezpieczeń  
  Element członkowski jest krytyczne dla bezpieczeństwa, jeśli ma ona <xref:System.Security.SecurityCriticalAttribute>, jeśli należy do typu, który ma <xref:System.Security.SecurityCriticalAttribute>, lub jeśli znajduje się w zestawie zabezpieczenia krytyczny. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], zasady do uzyskiwania dostępu do zabezpieczenia krytyczny elementów członkowskich są następujące:  
   
--   Przezroczysty kod nie można użyć odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny, nawet jeśli kod jest w pełni zaufany. A <xref:System.MethodAccessException>, <xref:System.FieldAccessException>, lub <xref:System.TypeAccessException> zgłaszany.  
+- Przezroczysty kod nie można użyć odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny, nawet jeśli kod jest w pełni zaufany. A <xref:System.MethodAccessException>, <xref:System.FieldAccessException>, lub <xref:System.TypeAccessException> zgłaszany.  
   
--   Kod, który został uruchomiony z częściowej relacji zaufania jest traktowane jako przezroczyste.  
+- Kod, który został uruchomiony z częściowej relacji zaufania jest traktowane jako przezroczyste.  
   
  Te zasady są takie same, czy dostępne bezpośrednio przez skompilowany kod zabezpieczenia krytyczny elementu członkowskiego lub uzyskiwać dostęp przy użyciu odbicia.  
   
@@ -77,18 +77,18 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>Uzyskiwanie dostępu do elementów członkowskich, które są zwykle niedostępne.  
  Użycie odbicia w celu wywołania elementów członkowskich, które są niedostępne, zgodnie z regułami dostępność środowiska uruchomieniowego języka wspólnego, kod musi otrzymać jeden dwa uprawnienia:  
   
--   Aby umożliwić kodu do wywołania dowolnego niepubliczna składowa: kod musi mieć przyznane <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi.  
+- Aby umożliwić kodu do wywołania dowolnego niepubliczna składowa: kod musi mieć przyznane <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi.  
   
     > [!NOTE]
     >  Domyślnie zasady zabezpieczeń nie zezwala na tego uprawnienia, aby kod, który pochodzi z Internetu. To uprawnienie nigdy nie może być przyznany do kodu, który pochodzi z Internetu.  
   
--   Zezwalaj na kod do wywołania dowolnego niepubliczna składowa tak długo, jak zestaw uprawnień zestawu, który zawiera wywołanego elementu członkowskiego jest taka sama jak lub być podzbiorem wartości, zestaw uprawnień w zestawie, który zawiera wywoływanie kodu: Twój kod musi mieć przyznane <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi.  
+- Zezwalaj na kod do wywołania dowolnego niepubliczna składowa tak długo, jak zestaw uprawnień zestawu, który zawiera wywołanego elementu członkowskiego jest taka sama jak lub być podzbiorem wartości, zestaw uprawnień w zestawie, który zawiera wywoływanie kodu: Twój kod musi mieć przyznane <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi.  
   
  Załóżmy na przykład, można przyznać domeny aplikacji oraz uprawnienia Internet <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flaga, a następnie uruchom aplikację internetową za pomocą dwóch zestawów, A i B.  
   
--   Zestaw A umożliwia odbicia dostęp do prywatnych elementów członkowskich zestawu B, ponieważ zestaw uprawnień zestaw B nie zawiera żadnych uprawnień, które nie udzielono A.  
+- Zestaw A umożliwia odbicia dostęp do prywatnych elementów członkowskich zestawu B, ponieważ zestaw uprawnień zestaw B nie zawiera żadnych uprawnień, które nie udzielono A.  
   
--   Zestaw, A nie umożliwia dostęp do prywatnych elementów członkowskich odbicia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawy, takie jak mscorlib.dll, ponieważ biblioteka mscorlib.dll jest w pełni zaufany i dlatego ma uprawnienia, które nie zostały przyznane do zestawu A. Element <xref:System.MemberAccessException> jest zgłaszany, gdy zabezpieczenia dostępu kodu przedstawiono stosu w czasie wykonywania.  
+- Zestaw, A nie umożliwia dostęp do prywatnych elementów członkowskich odbicia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawy, takie jak mscorlib.dll, ponieważ biblioteka mscorlib.dll jest w pełni zaufany i dlatego ma uprawnienia, które nie zostały przyznane do zestawu A. Element <xref:System.MemberAccessException> jest zgłaszany, gdy zabezpieczenia dostępu kodu przedstawiono stosu w czasie wykonywania.  
   
 ## <a name="serialization"></a>Serializacja  
  Do serializacji <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> Flaga umożliwia pobieranie i ustawianie elementów członkowskich typów możliwych do serializacji, niezależnie od tego, w ułatwienia dostępu. To uprawnienie umożliwia kodu odnaleźć i zmienić prywatnego stanu wystąpienia. (Oprócz trwa odpowiednich uprawnień, należy określić typ [oznaczone](../../../docs/standard/attributes/applying-attributes.md) jako możliwy do serializacji w metadanych.)  
@@ -98,11 +98,11 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
 ## <a name="version-information"></a>Informacje o wersji  
   
--   Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], kod przezroczysty nie może używać odbicia w celu dostęp do elementów członkowskich zabezpieczenia krytyczny.  
+- Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], kod przezroczysty nie może używać odbicia w celu dostęp do elementów członkowskich zabezpieczenia krytyczny.  
   
--   <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flagi została wprowadzona w systemie [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Wcześniejszych wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi dla kodu, który używa odbicia, aby dostęp do elementów członkowskich niepublicznych. Jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flagi została wprowadzona w systemie [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Wcześniejszych wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi dla kodu, który używa odbicia, aby dostęp do elementów członkowskich niepublicznych. Jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
   
--   Począwszy od [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], przy użyciu odbicia w celu uzyskania informacji na temat niepublicznych typy i elementy członkowskie nie wymaga żadnych uprawnień. We wcześniejszych wersjach <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> flaga jest wymagana.  
+- Począwszy od [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], przy użyciu odbicia w celu uzyskania informacji na temat niepublicznych typy i elementy członkowskie nie wymaga żadnych uprawnień. We wcześniejszych wersjach <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> flaga jest wymagana.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938713"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Jednostki znaków XML i XAML
 XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W tym temacie opisano niektóre jednostki określonych znaków i ogólne uwagi dotyczące innych pojęć XML w XAML.  

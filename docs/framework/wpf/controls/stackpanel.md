@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
 ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791030"
 ---
 # <a name="stackpanel"></a>StackPanel
 <xref:System.Windows.Controls.StackPanel> Element jest używany do stosu elementy podrzędne w poziomie lub pionie.  

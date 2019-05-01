@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800129"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są prawidłowe, zanim aplikacja używa go. Może wymagać, że niektóre pola tekstowego jest o zerowej długości, że pole formatowane jako numer telefonu lub innego typu danych sformułowany lub czy ciąg zawiera niebezpiecznych znaków, które mogłyby zostać użyte w celu złamania zabezpieczeń bazy danych. Formularze Windows oferuje kilka sposobów umożliwiające sprawdzanie poprawności danych wejściowych w aplikacji.  
@@ -27,11 +27,11 @@ Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są
 ## <a name="event-driven-validation"></a>Weryfikacja oparte na zdarzeniach  
  Ma programowe pełnej kontroli nad weryfikacji, czy trzeba będzie wykonać sprawdzanie poprawności złożonych, należy użyć zdarzenia sprawdzania poprawności, wbudowane w większości kontrolek Windows Forms. Każdy formant, który akceptuje dane wejściowe użytkownika w dowolnej postaci ma <xref:System.Windows.Forms.Control.Validating> zdarzenia, które będzie wysyłane zawsze, gdy kontrolka wymaga sprawdzania poprawności danych. W <xref:System.Windows.Forms.Control.Validating> metody obsługi zdarzeń, można sprawdzić poprawność danych wejściowych na kilka sposobów użytkownika. Na przykład jeśli masz pole tekstowe, które mogą zawierać kod pocztowy, należy wykonać sprawdzanie poprawności w następujący sposób:  
   
--   Jeśli kod pocztowy musi należeć do konkretnej grupy kodów pocztowych, można wykonać porównania ciągów w danych wejściowych do sprawdzania poprawności danych wprowadzonych przez użytkownika. Na przykład jeśli kod pocztowy musi być w zestawie {10001 10002, 10003}, następnie umożliwia porównanie ciągów sprawdzania poprawności danych.  
+- Jeśli kod pocztowy musi należeć do konkretnej grupy kodów pocztowych, można wykonać porównania ciągów w danych wejściowych do sprawdzania poprawności danych wprowadzonych przez użytkownika. Na przykład jeśli kod pocztowy musi być w zestawie {10001 10002, 10003}, następnie umożliwia porównanie ciągów sprawdzania poprawności danych.  
   
--   Jeśli kod pocztowy musi znajdować się w określonej formy można użyć wyrażeń regularnych do sprawdzania poprawności danych wprowadzonych przez użytkownika. Na przykład, aby zweryfikować formularza `#####` lub `#####-####`, można użyć wyrażenia regularnego `^(\d{5})(-\d{4})?$`. Aby zweryfikować formularza `A#A #A#`, można użyć wyrażenia regularnego `[A-Z]\d[A-Z] \d[A-Z]\d`. Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz [wyrażeń regularnych programu .NET Framework](../../standard/base-types/regular-expressions.md) i [przykłady wyrażeń regularnych](../../standard/base-types/regular-expression-examples.md).  
+- Jeśli kod pocztowy musi znajdować się w określonej formy można użyć wyrażeń regularnych do sprawdzania poprawności danych wprowadzonych przez użytkownika. Na przykład, aby zweryfikować formularza `#####` lub `#####-####`, można użyć wyrażenia regularnego `^(\d{5})(-\d{4})?$`. Aby zweryfikować formularza `A#A #A#`, można użyć wyrażenia regularnego `[A-Z]\d[A-Z] \d[A-Z]\d`. Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz [wyrażeń regularnych programu .NET Framework](../../standard/base-types/regular-expressions.md) i [przykłady wyrażeń regularnych](../../standard/base-types/regular-expression-examples.md).  
   
--   Jeśli kod pocztowy musi być prawidłowy kod pocztowy w Stanach Zjednoczonych, można wywołać usługę sieci Web kod pocztowy i sprawdzanie poprawności danych wprowadzonych przez użytkownika.  
+- Jeśli kod pocztowy musi być prawidłowy kod pocztowy w Stanach Zjednoczonych, można wywołać usługę sieci Web kod pocztowy i sprawdzanie poprawności danych wprowadzonych przez użytkownika.  
   
  <xref:System.Windows.Forms.Control.Validating> Zdarzeń jest podany obiekt typu <xref:System.ComponentModel.CancelEventArgs>. Jeśli okaże się, że dane formantu są nieprawidłowe, możesz anulować <xref:System.Windows.Forms.Control.Validating> zdarzeń przez ustawienie dla tego obiektu <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość `true`. Jeśli nie ustawisz <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwości Windows Forms będzie założono tego sprawdzanie poprawności zakończyło się pomyślnie dla tej kontrolki i wywoływania <xref:System.Windows.Forms.Control.Validated> zdarzeń.  
   
@@ -58,11 +58,11 @@ Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są
 #### <a name="explicit-validation"></a>Jawne sprawdzania poprawności  
  Podejście jawne weryfikacji sprawdza poprawność danych w tym samym czasie. Możesz walidować dane w odpowiedzi na akcję użytkownika, takie jak kliknięcie przycisku Zapisz lub łącze do następnej. W przypadku akcji użytkownika jawne sprawdzania poprawności mogą być uruchamiane w jednym z następujących sposobów:  
   
--   Wywołaj <xref:System.Windows.Forms.ContainerControl.Validate%2A> można zweryfikować ostatni formant, aby utracić fokus.  
+- Wywołaj <xref:System.Windows.Forms.ContainerControl.Validate%2A> można zweryfikować ostatni formant, aby utracić fokus.  
   
--   Wywołaj <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> do sprawdzania poprawności wszystkich kontrolek podrzędnych w kontrolce formularza lub kontenera.  
+- Wywołaj <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> do sprawdzania poprawności wszystkich kontrolek podrzędnych w kontrolce formularza lub kontenera.  
   
--   Wywołanie niestandardowej metody sprawdzania poprawności danych w kontrolkach, ręcznie.  
+- Wywołanie niestandardowej metody sprawdzania poprawności danych w kontrolkach, ręcznie.  
   
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Formanty formularzy domyślne zachowanie weryfikacji niejawna systemu Windows  
  Różne formanty Windows Forms mają różne wartości domyślne dla ich <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> właściwości. W poniższej tabeli przedstawiono najbardziej typowe kontrolki i ich wartości domyślne.  
@@ -79,11 +79,11 @@ Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są
 ## <a name="closing-the-form-and-overriding-validation"></a>Zamyka formularz i zastępowanie sprawdzania poprawności  
  Formant przechowuje koncentracji uwagi, ponieważ zawartych w nim danych jest nieprawidłowa, jest niemożliwe zamknąć formularz nadrzędny w zwykły sposób:  
   
--   Klikając **Zamknij** przycisku.  
+- Klikając **Zamknij** przycisku.  
   
--   Wybierając **Zamknij** w **systemu** menu.  
+- Wybierając **Zamknij** w **systemu** menu.  
   
--   Przez wywołanie metody <xref:System.Windows.Forms.Form.Close%2A> metoda programowo.  
+- Przez wywołanie metody <xref:System.Windows.Forms.Form.Close%2A> metoda programowo.  
   
  Jednak w niektórych przypadkach możesz chcieć umożliwić użytkownikowi Zamknij formularz, niezależnie od tego, czy są prawidłowe wartości w formantach. Można zastąpić sprawdzania poprawności i zamknij formularz, która nadal zawiera nieprawidłowe dane, tworząc Obsługa formularza <xref:System.Windows.Forms.Form.Closing> zdarzeń. W tym przypadku, należy ustawić <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość `false`. Wymusza formularza, aby zamknąć. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   

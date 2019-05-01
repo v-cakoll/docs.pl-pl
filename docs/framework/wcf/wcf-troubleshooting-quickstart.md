@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780825"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie wymieniono znane problemy, których klienci mają wystąpiły podczas tworzenia usług WCF klientów i usług. Jeśli ten problem, który zostały przekroczone nie ma na tej liście, zalecamy Konfigurowanie śledzenia dla Twojej usługi. Spowoduje to wygenerowanie pliku śledzenia można wyświetlić w podglądzie pliku śledzenia i uzyskać szczegółowe informacje dotyczące wyjątków, które mogą mieć miejsce w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia zobacz: [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na temat przeglądarka plików śledzenia zobacz: [Usługa Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Moja usługa i klient świetnie współpracują, ale nie można pobrać ich pracę, gdy klient znajduje się na innym komputerze? Co się dzieje?  
  W zależności od wyjątek, może istnieć kilka problemów:  
   
--   Konieczne może się zmienić adresy punktów końcowych klienta na nazwę hosta, a nie "localhost".  
+- Konieczne może się zmienić adresy punktów końcowych klienta na nazwę hosta, a nie "localhost".  
   
--   Może być konieczne otwarcie portu do aplikacji. Aby uzyskać więcej informacji, zobacz [instrukcje dotyczące zapory](../../../docs/framework/wcf/samples/firewall-instructions.md) z przykładowych zestawach SDK.  
+- Może być konieczne otwarcie portu do aplikacji. Aby uzyskać więcej informacji, zobacz [instrukcje dotyczące zapory](../../../docs/framework/wcf/samples/firewall-instructions.md) z przykładowych zestawach SDK.  
   
--   W przypadku pozostałych możliwych problemów, zobacz temat przykłady [uruchamianie przykładów Windows Communication Foundation](./samples/running-the-samples.md).  
+- W przypadku pozostałych możliwych problemów, zobacz temat przykłady [uruchamianie przykładów Windows Communication Foundation](./samples/running-the-samples.md).  
   
--   Jeśli klient korzysta z poświadczeń Windows, a wyjątek stanowi <xref:System.ServiceModel.Security.SecurityNegotiationException>, konfigurowanie protokołu Kerberos w następujący sposób.  
+- Jeśli klient korzysta z poświadczeń Windows, a wyjątek stanowi <xref:System.ServiceModel.Security.SecurityNegotiationException>, konfigurowanie protokołu Kerberos w następujący sposób.  
   
-    1.  Dodaj poświadczenia tożsamości do elementu punktu końcowego w pliku App.config klienta:  
+    1. Dodaj poświadczenia tożsamości do elementu punktu końcowego w pliku App.config klienta:  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  Uruchom usługę samodzielnie hostowane na koncie systemu lub Usługa sieciowa. Można uruchomić to polecenie, aby utworzyć okno polecenia przy użyciu konta systemowego:  
+    2. Uruchom usługę samodzielnie hostowane na koncie systemu lub Usługa sieciowa. Można uruchomić to polecenie, aby utworzyć okno polecenia przy użyciu konta systemowego:  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  Hostowanie usługi w obszarze Internet Information Services (IIS), która domyślnie używa konta usługi głównej nazwy (usługi SPN).  
+    3. Hostowanie usługi w obszarze Internet Information Services (IIS), która domyślnie używa konta usługi głównej nazwy (usługi SPN).  
   
-    4.  Zarejestruj nowy SPN w domenie za pomocą narzędzia SetSPN. Należy pamiętać, że musisz być administratorem domeny, aby to zrobić.  
+    4. Zarejestruj nowy SPN w domenie za pomocą narzędzia SetSPN. Należy pamiętać, że musisz być administratorem domeny, aby to zrobić.  
   
  Aby uzyskać więcej informacji na temat protokołu Kerberos, zobacz [użyte pojęcia dotyczące zabezpieczeń dla programu WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) oraz:  
   
--   [Debugowanie błędów uwierzytelniania systemu Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Debugowanie błędów uwierzytelniania systemu Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Zarejestrowanie nazwy głównej usługi Kerberos za pomocą Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Zarejestrowanie nazwy głównej usługi Kerberos za pomocą Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Wyjaśniono protokołu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Wyjaśniono protokołu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Kiedy mogę zgłosić FaultException —\<wyjątku > w przypadku, gdy typ jest wyjątek, czy mogę otrzymać typem ogólnym FaultException — na komputerze klienckim i typu ogólnego. Co się dzieje?  
  Zdecydowanie zaleca się utworzenie własnych błąd niestandardowy typ danych i zadeklarować, że jako typ szczegółów w kontrakcie usługi błędów. Przyczyną jest fakt, że przy użyciu typów wyjątków dostarczane przez system:  
   
--   Tworzy zależność typu, która usuwa jeden z największych zalet aplikacji usługowych.  
+- Tworzy zależność typu, która usuwa jeden z największych zalet aplikacji usługowych.  
   
--   Nie zależą od wyjątki serializacji w sposób standardowy. Niektóre — takich jak <xref:System.Security.SecurityException>— może nie być możliwe do serializacji w ogóle.  
+- Nie zależą od wyjątki serializacji w sposób standardowy. Niektóre — takich jak <xref:System.Security.SecurityException>— może nie być możliwe do serializacji w ogóle.  
   
--   Przedstawia szczegóły wewnętrznej implementacji do klientów. Aby uzyskać więcej informacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+- Przedstawia szczegóły wewnętrznej implementacji do klientów. Aby uzyskać więcej informacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Jeśli debugujesz aplikację, jednak można serializować informacje o wyjątku i przywrócić go do klienta przy użyciu <xref:System.ServiceModel.Description.ServiceDebugBehavior> klasy.  
   

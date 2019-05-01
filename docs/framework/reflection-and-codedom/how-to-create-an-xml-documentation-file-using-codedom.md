@@ -12,11 +12,11 @@ ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793279"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Instrukcje: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM
 CodeDOM może służyć do tworzenia kodu, który generuje dokumentacji XML. Proces obejmuje tworzenie wykresu CodeDOM, który zawiera komentarze dokumentacji XML: generowanie kodu i kompilowania wygenerowanego kodu przy użyciu opcji kompilatora, który tworzy dane wyjściowe XML dokumentacji.  
@@ -77,7 +77,7 @@ CodeDOM może służyć do tworzenia kodu, który generuje dokumentacji XML. Pro
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Poniższy przykład kodu wymaga `FullTrust` zestawu uprawnień Wykonywanie pomyślnie.  
+- Poniższy przykład kodu wymaga `FullTrust` zestawu uprawnień Wykonywanie pomyślnie.  
   
 ## <a name="see-also"></a>Zobacz także
 

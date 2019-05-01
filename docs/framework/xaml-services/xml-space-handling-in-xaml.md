@@ -8,11 +8,11 @@ helpviewer_keywords:
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
 ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938726"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>xml:space — Obsługa w XAML
 `xml:space` Atrybut jest definiowany w języku XML atrybut deklarujący zachowanie przetwarzania odstępu w obrębie elementu obiektu. To zachowanie jest odpowiednie dla całej zawartości (tekst wewnętrzny) zawartych w elemencie gdzie `xml:space` jest zadeklarowana, a także zakresów do elementów podrzędnych.  

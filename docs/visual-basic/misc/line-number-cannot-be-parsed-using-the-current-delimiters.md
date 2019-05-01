@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
 ms.openlocfilehash: 776cf7ed231f63ec9ad4308305fe77d500a4fc1b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790549"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-delimiters"></a>Wiersz \<numer > nie można przeanalizować za pomocą bieżącego ograniczników
 Nie można przeanalizować określonego wiersza, ponieważ używa ona ograniczniki innych niż określone.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Dostosuj `Delimiters` co wiersz może zostać poprawnie zanalizowana, albo Wstaw kod obsługi wyjątków, aby umożliwić obsługę wiersza.  
+- Dostosuj `Delimiters` co wiersz może zostać poprawnie zanalizowana, albo Wstaw kod obsługi wyjątków, aby umożliwić obsługę wiersza.  
   
 ## <a name="see-also"></a>Zobacz także
 

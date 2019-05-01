@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
 ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982634"
 ---
 # <a name="xshared-attribute"></a>x:Shared — Atrybut
 Po ustawieniu `false`, modyfikuje zachowanie pobierania zasobów WPF żądania zasobu atrybutami Utwórz nowe wystąpienie dla każdego żądania zamiast udostępnianie tego samego wystąpienia dla wszystkich żądań.  
@@ -45,9 +45,9 @@ Po ustawieniu `false`, modyfikuje zachowanie pobierania zasobów WPF żądania z
   
  W środowisku WPF `x:Shared` obowiązuje tylko w następujących warunkach:  
   
--   <xref:System.Windows.ResourceDictionary> Zawiera elementy z `x:Shared` muszą być skompilowane. <xref:System.Windows.ResourceDictionary> Nie może być w ramach luźne XAML lub używany dla motywów.  
+- <xref:System.Windows.ResourceDictionary> Zawiera elementy z `x:Shared` muszą być skompilowane. <xref:System.Windows.ResourceDictionary> Nie może być w ramach luźne XAML lub używany dla motywów.  
   
--   <xref:System.Windows.ResourceDictionary> Zawiera elementy nie może być zagnieżdżony w innym <xref:System.Windows.ResourceDictionary>. Na przykład nie można użyć `x:Shared` dla elementów w <xref:System.Windows.ResourceDictionary> znajduje się w <xref:System.Windows.Style> jest już <xref:System.Windows.ResourceDictionary> elementu.  
+- <xref:System.Windows.ResourceDictionary> Zawiera elementy nie może być zagnieżdżony w innym <xref:System.Windows.ResourceDictionary>. Na przykład nie można użyć `x:Shared` dla elementów w <xref:System.Windows.ResourceDictionary> znajduje się w <xref:System.Windows.Style> jest już <xref:System.Windows.ResourceDictionary> elementu.  
   
 ## <a name="see-also"></a>Zobacz także
 

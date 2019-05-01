@@ -17,24 +17,24 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
 ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870269"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
 Aplikacje, które jednocześnie wykonywać wiele zadań, ale ciągle reagować na interakcję z użytkownikiem, często wymagają projektu, który korzysta z wielu wątków. <xref:System.Threading> Przestrzeń nazw zawiera wszystkie narzędzia niezbędne do utworzenia aplikacji wielowątkowych o wysokiej wydajności, ale za pomocą tych narzędzi skutecznie wymaga bogate doświadczenie z wielowątkowych inżynierii oprogramowania. W przypadku stosunkowo proste aplikacji wielowątkowych <xref:System.ComponentModel.BackgroundWorker> składnik udostępnia proste rozwiązanie. Dla bardziej zaawansowanych aplikacji asynchronicznych należy rozważyć zaimplementowanie klasę, która jest zgodna wzorca asynchronicznego opartego na zdarzeniach.  
   
  Asynchroniczny wzorzec oparty na zdarzeniach udostępnia zalety aplikacji wielowątkowych wiele skomplikowane problemy związane z wielowątkowych projektu są ukryte. Za pomocą klasy, która obsługuje ten wzorzec może umożliwiają:  
   
--   Wykonywać czasochłonne zadania, takie jak pliki do pobrania i operacji bazy danych "w tle" bez zakłócania pracy aplikacji.  
+- Wykonywać czasochłonne zadania, takie jak pliki do pobrania i operacji bazy danych "w tle" bez zakłócania pracy aplikacji.  
   
--   Wykonać wiele operacji równocześnie, otrzymywanie powiadomień po każdym zakończeniu.  
+- Wykonać wiele operacji równocześnie, otrzymywanie powiadomień po każdym zakończeniu.  
   
--   Oczekiwania na zasoby staną się dostępne bez konieczności zatrzymywania ("wiszące") aplikacji.  
+- Oczekiwania na zasoby staną się dostępne bez konieczności zatrzymywania ("wiszące") aplikacji.  
   
--   Komunikować się z oczekujących operacji asynchronicznych za pomocą znanego modelu zdarzeń i delegatów. Aby uzyskać więcej informacji na temat korzystania z programów obsługi zdarzeń i delegatów, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
+- Komunikować się z oczekujących operacji asynchronicznych za pomocą znanego modelu zdarzeń i delegatów. Aby uzyskać więcej informacji na temat korzystania z programów obsługi zdarzeń i delegatów, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
   
  Klasa obsługującego wzorzec asynchroniczny oparty na zdarzeniach będzie mieć co najmniej jedną metodę o nazwie _MethodName_**Async**. Te metody mogą dublować synchroniczne wersjach, które do tej samej operacji w bieżącym wątku. Klasa może mieć również _MethodName_**Ukończono** zdarzeń i może mieć _MethodName_**AsyncCancel** (lub po prostu  **CancelAsync**) metody.  
   

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781306"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Przewodnik: Nadawanie stylu zawartości WPF
 W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presentation Foundation (WPF) hostowanych w formularzu Windows.
 
  W tym przewodniku należy wykonać następujące zadania:
 
--   Utwórz projekt.
+- Utwórz projekt.
 
--   Utwórz typ formantu WPF.
+- Utwórz typ formantu WPF.
 
--   Zastosuj styl do kontrolki WPF.
+- Zastosuj styl do kontrolki WPF.
 
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -30,7 +30,7 @@ W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presenta
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest utworzenie projektu Windows Forms.  
@@ -40,7 +40,7 @@ W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presenta
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
--   Tworzenie nowego projektu aplikacji formularzy Windows w języku Visual Basic lub Visual C# o nazwie `StylingWpfContent`.  
+- Tworzenie nowego projektu aplikacji formularzy Windows w języku Visual Basic lub Visual C# o nazwie `StylingWpfContent`.  
   
 ## <a name="creating-the-wpf-control-types"></a>Tworzenie typów formantów WPF  
  Po dodaniu typu formantu WPF do projektu, można umieścić go w <xref:System.Windows.Forms.Integration.ElementHost> kontroli.  

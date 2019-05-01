@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966884"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Instrukcje: Tworzenie aplikacji Windows Forms z wiersza polecenia
 W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby utworzyć i uruchomić aplikację Windows Forms z wiersza polecenia. Brak kompleksową obsługę tych procedur w programie Visual Studio.  Zobacz też [instruktażu: Kontrolki hostingu Windows formularzy na platformie WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -44,11 +44,11 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby
   
 4. Dodaj `Main` metodę do klasy.  
   
-    1.  Zastosuj <xref:System.STAThreadAttribute> do języka C# `Main` metodę, aby określić aplikację Windows Forms jest jednowątkowym apartamentem. (Ten atrybut nie jest niezbędne w języku Visual Basic, ponieważ Windows forms aplikacji opracowanych przy użyciu języka Visual Basic modelu apartamentem jednowątkowym domyślnie).  
+    1. Zastosuj <xref:System.STAThreadAttribute> do języka C# `Main` metodę, aby określić aplikację Windows Forms jest jednowątkowym apartamentem. (Ten atrybut nie jest niezbędne w języku Visual Basic, ponieważ Windows forms aplikacji opracowanych przy użyciu języka Visual Basic modelu apartamentem jednowątkowym domyślnie).  
   
-    2.  Wywołaj <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> na stosowanie stylów systemu operacyjnego do Twojej aplikacji.  
+    2. Wywołaj <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> na stosowanie stylów systemu operacyjnego do Twojej aplikacji.  
   
-    3.  Utwórz wystąpienie obiektu do formularza i uruchom go.  
+    3. Utwórz wystąpienie obiektu do formularza i uruchom go.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby
   
 2. Skompiluj formularza.  
   
-    -   Jeśli używasz języka C#, wpisz: `csc form1.cs`  
+    - Jeśli używasz języka C#, wpisz: `csc form1.cs`  
   
          `-or-`  
   
-    -   Jeśli używasz języka Visual Basic, wpisz: `vbc form1.vb`  
+    - Jeśli używasz języka Visual Basic, wpisz: `vbc form1.vb`  
   
 3. W wierszu polecenia wpisz polecenie: `Form1.exe`  
   
@@ -111,7 +111,7 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Aby skompilować ten kod, postępuj zgodnie z instrukcjami procedury postępowania, które opisują sposób skompilować i uruchomić aplikację.  
+- Aby skompilować ten kod, postępuj zgodnie z instrukcjami procedury postępowania, które opisują sposób skompilować i uruchomić aplikację.  
   
 ## <a name="see-also"></a>Zobacz także
 

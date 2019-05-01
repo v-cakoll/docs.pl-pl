@@ -8,11 +8,11 @@ ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973397"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Struktury danych dla Programowania równoległego
 .NET Framework w wersji 4 wprowadza kilka nowych typów, które są przydatne do programowania równoległego, w tym zestaw klas kolekcji współbieżnych, podstawowych uproszczone synchronizacji i typów d inicjowania z opóźnieniem. Można użyć tych typów, zawierające kod aplikacji wielowątkowych, w tym w bibliotece równoległych zadań i PLINQ.  
@@ -48,9 +48,9 @@ ms.locfileid: "55479701"
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Instrukcje: Używanie struktury SpinLock do synchronizacji niskiego poziomu](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Instrukcje: Używanie struktury SpinLock do synchronizacji niskiego poziomu](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [Instrukcje: Synchronizacja jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Instrukcje: Synchronizacja jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Inicjalizacja z opóźnieniem klas  
  Przy użyciu inicjowania z opóźnieniem pamięci dla obiektu nie jest przydzielony, dopóki nie jest to konieczne. Inicjalizacja z opóźnieniem może zwiększyć wydajność przez rozłożenie przydziały obiektów równomiernie na okres istnienia programu. Można włączyć inicjowania z opóźnieniem dla dowolnego typu niestandardowego przez opakowywanie typ <xref:System.Lazy%601>.  

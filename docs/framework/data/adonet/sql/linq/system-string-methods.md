@@ -3,11 +3,11 @@ title: System.String, metody
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
 ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876658"
 ---
 # <a name="systemstring-methods"></a>System.String, metody
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje następujących <xref:System.String> metody.  
@@ -15,9 +15,9 @@ ms.locfileid: "59160501"
 ## <a name="unsupported-systemstring-methods-in-general"></a>Ogólnie rzecz biorąc nieobsługiwany metody System.String  
  Nieobsługiwana <xref:System.String> metody ogólne:  
   
--   Przeciążenia kultury (metody, które przyjmują `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Przeciążenia kultury (metody, które przyjmują `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
   
--   Metody, które dopiero po lub utworzyć `char` tablicy.  
+- Metody, które dopiero po lub utworzyć `char` tablicy.  
   
 ## <a name="unsupported-systemstring-static-methods"></a>Nieobsługiwany System.String statyczne metody  
   
@@ -47,13 +47,13 @@ ms.locfileid: "59160501"
   
 ## <a name="differences-from-net"></a>Różnice z platformy .NET  
   
--   Zapytania nie uwzględniać sortowania programu SQL Server, które mogą obowiązywać na serwerze i będzie stanowić porównania wrażliwość na ustawienia kulturowe, bez uwzględniania wielkości liter domyślnie. To zachowanie różni się od domyślnej, semantyka liter programu .NET Framework.  
+- Zapytania nie uwzględniać sortowania programu SQL Server, które mogą obowiązywać na serwerze i będzie stanowić porównania wrażliwość na ustawienia kulturowe, bez uwzględniania wielkości liter domyślnie. To zachowanie różni się od domyślnej, semantyka liter programu .NET Framework.  
   
--   Gdy `LastIndexOf` jest zwraca wartość 0, ciągiem `NULL` lub znaleziono pozycji to 0.  
+- Gdy `LastIndexOf` jest zwraca wartość 0, ciągiem `NULL` lub znaleziono pozycji to 0.  
   
--   Nieoczekiwane wyniki mogą być zwracane z łączenia lub inne operacje na ciągi o stałej długości (`CHAR`, `NCHAR`), ponieważ te typy mają automatycznie dopełnienie stosowane w bazie danych.  
+- Nieoczekiwane wyniki mogą być zwracane z łączenia lub inne operacje na ciągi o stałej długości (`CHAR`, `NCHAR`), ponieważ te typy mają automatycznie dopełnienie stosowane w bazie danych.  
   
--   Ponieważ wiele metod, takich jak `Replace`, `ToLower`, `ToUpper`i indeksatora znaków, ma nie prawidłowe tłumaczenia `TEXT` lub `NTEXT` kolumn i XML, `SqlExceptions` wystąpić, jeśli zwykle translacji. To zachowanie jest uważany za akceptowalne dla tych typów. Jednak wszystkie operacje na ciągach musi odpowiadać wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) semantyki dla `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, i `NVARCHAR(max)`.  
+- Ponieważ wiele metod, takich jak `Replace`, `ToLower`, `ToUpper`i indeksatora znaków, ma nie prawidłowe tłumaczenia `TEXT` lub `NTEXT` kolumn i XML, `SqlExceptions` wystąpić, jeśli zwykle translacji. To zachowanie jest uważany za akceptowalne dla tych typów. Jednak wszystkie operacje na ciągach musi odpowiadać wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) semantyki dla `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, i `NVARCHAR(max)`.  
   
 ## <a name="see-also"></a>Zobacz także
 

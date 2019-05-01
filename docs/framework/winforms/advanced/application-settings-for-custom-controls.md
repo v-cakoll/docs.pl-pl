@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
 ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960904"
 ---
 # <a name="application-settings-for-custom-controls"></a>Ustawienia aplikacji dotyczące kontrolek niestandardowych
 Należy wykonać niektóre zadania, aby zapewnić możliwość utrzymania ustawienia aplikacji, gdy kontrolki znajdują się w aplikacji innych firm Kontrolki niestandardowe.  

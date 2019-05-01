@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967040"
 ---
 # <a name="data-binding-and-windows-forms"></a>Wiązanie danych i formularze systemu Windows
 W formularzach Windows Forms można powiązać źródła danych nie jest po prostu tradycyjnych, ale także do niemal wszystkich struktury, która zawiera dane. Możesz powiązać tablicę wartości, które obliczania w czasie wykonywania, Odczyt z pliku lub pochodzić od wartości innych kontrolek.  
   
  Ponadto można powiązać dowolnej właściwości dowolną kontrolkę źródle danych. W powiązaniu danych tradycyjnych zwykle powiązanie właściwości wyświetlania — na przykład <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.TextBox> kontroli — do źródła danych. Za pomocą [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], możesz również możliwość ustawienia innych właściwości, za pośrednictwem powiązania także. Powiązanie można używać do wykonywania następujących zadań:  
   
--   Ustawianie grafiki kontrolkę typu obraz.  
+- Ustawianie grafiki kontrolkę typu obraz.  
   
--   Ustawianie koloru tła w co najmniej jedną kontrolkę.  
+- Ustawianie koloru tła w co najmniej jedną kontrolkę.  
   
--   Ustawianie rozmiaru formantów.  
+- Ustawianie rozmiaru formantów.  
   
  Powiązanie danych to zasadniczo automatyczny sposób ustawienia dowolnej właściwości dostępne środowiska wykonawczego dowolną kontrolkę w formularzu.  
   

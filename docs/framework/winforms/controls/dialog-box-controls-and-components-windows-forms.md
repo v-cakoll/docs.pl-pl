@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
 ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972279"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Formanty i składniki okien dialogowych (Formularze systemu Windows)
 Następujące kontrolek formularzy Windows Forms i składnikami przedstawiają standardowych oknach dialogowych. Skorzystaj z linków, aby uzyskać więcej informacji na temat funkcji dostępnych w każdym polu okna dialogowego.  

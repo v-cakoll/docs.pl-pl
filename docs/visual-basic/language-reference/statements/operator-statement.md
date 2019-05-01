@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784062"
 ---
 # <a name="operator-statement"></a>Operator — Instrukcja
 Deklaruje symbol operatora, argumenty operacji i kod, który definiuje procedurę operatora w klasie lub strukturze.  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>Dopasowane pary  
  Należy zdefiniować jako dopasowane pary niektórych operatorów. Jeśli zdefiniujesz albo operator takich pary, należy zdefiniować innych także. Dopasowane pary są następujące:  
   
--   `=` i `<>`  
+- `=` i `<>`  
   
--   `>` i `<`  
+- `>` i `<`  
   
--   `>=` i `<=`  
+- `>=` i `<=`  
   
--   `IsTrue` i `IsFalse`  
+- `IsTrue` i `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Ograniczenia dotyczące typu danych  
  Każdy operator, który zdefiniujesz muszą obejmować klasy lub struktury, w którym można zdefiniować. Oznacza to, że klasa lub struktura musi znajdować się w formie typu danych z następujących czynności:  
   
--   Argument operacji operatora jednoargumentowego.  
+- Argument operacji operatora jednoargumentowego.  
   
--   Co najmniej jeden z operandów operatora binarnego.  
+- Co najmniej jeden z operandów operatora binarnego.  
   
--   Argument lub zwracany typ operatora konwersji.  
+- Argument lub zwracany typ operatora konwersji.  
   
  Niektóre operatory mają dodatkowe dane, wpisz następujące ograniczenia:  
   
--   Jeśli zdefiniujesz `IsTrue` i `IsFalse` operatorów, muszą one zarówno zwracać `Boolean` typu.  
+- Jeśli zdefiniujesz `IsTrue` i `IsFalse` operatorów, muszą one zarówno zwracać `Boolean` typu.  
   
--   Jeśli zdefiniujesz `<<` i `>>` operatorów, muszą oni zarówno określić `Integer` wpisz `operandtype` z `operand2`.  
+- Jeśli zdefiniujesz `<<` i `>>` operatorów, muszą oni zarówno określić `Integer` wpisz `operandtype` z `operand2`.  
   
  Zwracany typ nie musi odpowiadać typowi jeden z operandów. Na przykład operator porównania takich jak `=` lub `<>` może zwrócić `Boolean` nawet jeśli żaden z operandów jest `Boolean`.  
   
@@ -144,11 +144,11 @@ End Operator
   
  Nie można zdefiniować `AndAlso` operator bezpośrednio z `Operator` instrukcji. Można jednak użyć `AndAlso` jeśli zostały spełnione następujące warunki:  
   
--   Zdefiniowano `And` na te same typy operand, którego chcesz użyć dla `AndAlso`.  
+- Zdefiniowano `And` na te same typy operand, którego chcesz użyć dla `AndAlso`.  
   
--   Definicja `And` zwraca ten sam typ co klasa lub struktura, w którym zdefiniowano go.  
+- Definicja `And` zwraca ten sam typ co klasa lub struktura, w którym zdefiniowano go.  
   
--   Zdefiniowano `IsFalse` operator dla klasy lub struktury, w którym zdefiniowano `And`.  
+- Zdefiniowano `IsFalse` operator dla klasy lub struktury, w którym zdefiniowano `And`.  
   
  Podobnie, można użyć `OrElse` Jeżeli posiadasz zdefiniowane `Or` na tych samych argumentów o zwracanym typie krawędzi klasy lub struktury, a zdefiniowano `IsTrue` dla klasy lub struktury.  
   
@@ -157,11 +157,11 @@ End Operator
   
  Jeśli zadeklarujesz procedury konwersji za `Widening`, kod procedury nie należy wygenerować zakończą się niepowodzeniem. Oznacza to, że:  
   
--   Zawsze musi zwracać prawidłowe wartości typu `type`.  
+- Zawsze musi zwracać prawidłowe wartości typu `type`.  
   
--   Musi on obsługiwać wszystkich możliwych wyjątków i inne warunki błędu.  
+- Musi on obsługiwać wszystkich możliwych wyjątków i inne warunki błędu.  
   
--   Jego musi obsługiwać żadnych zwraca błąd z procedury wywoływanych przez nią.  
+- Jego musi obsługiwać żadnych zwraca błąd z procedury wywoływanych przez nią.  
   
  Jeśli ma żadnych możliwość, że procedura Konwersja może się nie powieść lub jej może spowodować, że nieobsługiwany wyjątek, należy zadeklarować ją jako `Narrowing`.  
   

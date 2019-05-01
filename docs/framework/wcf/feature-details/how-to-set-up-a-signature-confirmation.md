@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
 ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972929"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Instrukcje: konfigurowanie potwierdzenia sygnatury
 *Potwierdzenie podpisu* jest mechanizm dla inicjatora wiadomości upewnić się, czy odebrano odpowiedź został wygenerowany w odpowiedzi na pierwotny komunikat nadawcy. Potwierdzenie podpisu jest zdefiniowana w specyfikacji WS-Security 1.1. Jeśli punkt końcowy obsługuje WS-Security w wersji 1.0, nie można użyć potwierdzenia podpisu.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994048"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains — Metoda
 Pobiera moduł wyliczający icordebugchainenum —, który zawiera wszystkie łańcuchów stosu, w tym obiekcie ICorDebugThread wskaźnika interfejsu.  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>Uwagi  
  Łańcuch stosu reprezentuje stosu wywołań fizycznych dla wątku. Następujące okoliczności Utwórz granicę łańcucha stosu:  
   
--   Zarządzane do niezarządzanego lub niezarządzane do zarządzanego przejście.  
+- Zarządzane do niezarządzanego lub niezarządzane do zarządzanego przejście.  
   
--   Przełączenie kontekstu.  
+- Przełączenie kontekstu.  
   
--   A debugera przejęcie kontroli nad wątku użytkownika.  
+- A debugera przejęcie kontroli nad wątku użytkownika.  
   
  W prostym przypadku wątku, który działa wyłącznie zarządzany kod w jednym kontekście odpowiednika będzie istnieć między wątkami i łańcuchów stosu.  
   

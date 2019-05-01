@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
 ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052914"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox — Przegląd
 <xref:System.Windows.Controls.RichTextBox> Control umożliwia wyświetlanie lub edytowanie zawartości przepływu, w tym akapitów, obrazy, tabele i. W tym temacie przedstawiono <xref:System.Windows.Controls.TextBox> klasy i przykłady dotyczące używania go w obu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i C#.  
@@ -25,7 +25,7 @@ ms.locfileid: "59162714"
 |formant|Sprawdzanie pisowni w czasie rzeczywistym|Menu kontekstowe|Formatowanie poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (kont. + B)|<xref:System.Windows.Documents.FlowDocument> zawartość, taką jak obrazy, akapitów, tabelach itp.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Tak|Yes|Nie|Nie.|  
-|<xref:System.Windows.Controls.RichTextBox>|Yes|Yes|Yes|Tak|  
+|<xref:System.Windows.Controls.RichTextBox>|Tak|Yes|Yes|Yes|  
   
  **Uwaga:** Mimo że <xref:System.Windows.Controls.TextBox> nie obsługuje powiązanych poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> kont. + B, wiele podstawowych poleceń są obsługiwane przez oba formanty, takie jak <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966922"
 ---
 # <a name="using-keyboard-events"></a>Używanie zdarzeń klawiatury
 Większość programów Windows Forms przetwarzać dane wejściowe z klawiatury dzięki obsłudze zdarzeń klawiatury. Ten temat zawiera omówienie zdarzenia klawiatury, w tym informacji o tym, kiedy należy używać każdego zdarzenia i dane, która jest dostarczana dla każdego zdarzenia.  Zobacz też [Przegląd obsługi zdarzeń (Windows Forms)](event-handlers-overview-windows-forms.md) i [Przegląd zdarzeń (systemu Windows Windows Forms)](events-overview-windows-forms.md).  
@@ -22,11 +22,11 @@ Większość programów Windows Forms przetwarzać dane wejściowe z klawiatury 
 ## <a name="keyboard-events"></a>Zdarzenia klawiatury  
  Formularze Windows oferuje dwa zdarzenia, które występują, gdy użytkownik naciśnie klawisz i jedno zdarzenie, kiedy użytkownik zwolni klawisz:  
   
--   <xref:System.Windows.Forms.Control.KeyDown> Po wystąpieniu zdarzenia  
+- <xref:System.Windows.Forms.Control.KeyDown> Po wystąpieniu zdarzenia  
   
--   <xref:System.Windows.Forms.Control.KeyPress> Zdarzenie, które mogą wystąpić wiele razy, gdy użytkownik przechowuje szczegółów tego samego klucza.  
+- <xref:System.Windows.Forms.Control.KeyPress> Zdarzenie, które mogą wystąpić wiele razy, gdy użytkownik przechowuje szczegółów tego samego klucza.  
   
--   <xref:System.Windows.Forms.Control.KeyUp> Zdarzenie występuje, gdy po użytkownik zwolni klawisz.  
+- <xref:System.Windows.Forms.Control.KeyUp> Zdarzenie występuje, gdy po użytkownik zwolni klawisz.  
   
  Po naciśnięciu klawisza formularzy Windows określa, które zdarzenie, aby zgłosić oparte na tego, czy komunikatu z klawiatury określa znakowy klucz lub klucz fizycznych. Aby uzyskać więcej informacji o znak i kluczach fizycznych, zobacz [sposób działania wejście klawiatury](how-keyboard-input-works.md).  
   

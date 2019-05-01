@@ -29,11 +29,11 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052732"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Presentation Foundation (WPF) za pośrednictwem systemu windows. Głównym celem okna jest do hostowania zawartości, która wizualizuje dane oraz umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemem windows w aplikacje autonomiczne.  
@@ -51,29 +51,29 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  *Obszaru nieklienckiego* okna jest implementowany przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i zawiera elementy okna, które są wspólne dla większości windows, w tym następujące czynności:  
   
--   Obramowanie.  
+- Obramowanie.  
   
--   Pasek tytułu.  
+- Pasek tytułu.  
   
--   Ikona.  
+- Ikona.  
   
--   Minimalizuj, Maksymalizuj i przywrócić przycisków.  
+- Minimalizuj, Maksymalizuj i przywrócić przycisków.  
   
--   Przycisk Zamknij.  
+- Przycisk Zamknij.  
   
--   Menu systemowe z elementami menu, które umożliwiają użytkownikom zminimalizować, zmaksymalizować, przywracania, przenoszenie, zmienianie rozmiaru i zamknąć okno.  
+- Menu systemowe z elementami menu, które umożliwiają użytkownikom zminimalizować, zmaksymalizować, przywracania, przenoszenie, zmienianie rozmiaru i zamknąć okno.  
   
  *Obszaru klienckiego* okna jest obszar w obrębie obszaru nieklienckiego okna i używanych przez deweloperów, aby dodać zawartość specyficzne dla aplikacji, takich jak paski menu i pasków narzędzi, formantów.  
   
  W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], okno jest hermetyzowany przez <xref:System.Windows.Window> klasę, która umożliwia wykonaj następujące czynności:  
   
--   Wyświetla okno.  
+- Wyświetla okno.  
   
--   Skonfiguruj rozmiarem, pozycją i wygląd okna.  
+- Skonfiguruj rozmiarem, pozycją i wygląd okna.  
   
--   Zawartość specyficzną dla aplikacji hosta.  
+- Zawartość specyficzną dla aplikacji hosta.  
   
--   Zarządzanie okresem istnienia okna.  
+- Zarządzanie okresem istnienia okna.  
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementowanie okna  
@@ -88,11 +88,11 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Aby włączyć [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku znaczników i pliku związanego z kodem pracy zespołowej, wymagane są następujące:  
   
--   W znaczniku `Window` element musi zawierać `x:Class` atrybutu. Podczas kompilowania aplikacji, istnienie `x:Class` w znaczniku pliku powoduje, że [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] utworzyć `partial` klasę pochodzącą od <xref:System.Windows.Window> i ma nazwę, która jest określona przez `x:Class` atrybutu. Wymaga to dodania [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] deklarację przestrzeni nazw dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] schematu ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Wygenerowany `partial` klasy implementuje `InitializeComponent` metody, która jest wywoływana, aby rejestrować zdarzenia i ustawić właściwości, które są implementowane w znacznikach.  
+- W znaczniku `Window` element musi zawierać `x:Class` atrybutu. Podczas kompilowania aplikacji, istnienie `x:Class` w znaczniku pliku powoduje, że [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] utworzyć `partial` klasę pochodzącą od <xref:System.Windows.Window> i ma nazwę, która jest określona przez `x:Class` atrybutu. Wymaga to dodania [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] deklarację przestrzeni nazw dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] schematu ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Wygenerowany `partial` klasy implementuje `InitializeComponent` metody, która jest wywoływana, aby rejestrować zdarzenia i ustawić właściwości, które są implementowane w znacznikach.  
   
--   Związane z kodem, klasy musi być `partial` klasy o takiej samej nazwie, który jest określony przez `x:Class` atrybutu w kodzie znaczników oraz jego musi pochodzić od klasy <xref:System.Windows.Window>. Dzięki temu pliku związanego z kodem, który ma zostać skojarzony z `partial` klasy, który jest generowany dla pliku znaczników Po skompilowaniu aplikację (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
+- Związane z kodem, klasy musi być `partial` klasy o takiej samej nazwie, który jest określony przez `x:Class` atrybutu w kodzie znaczników oraz jego musi pochodzić od klasy <xref:System.Windows.Window>. Dzięki temu pliku związanego z kodem, który ma zostać skojarzony z `partial` klasy, który jest generowany dla pliku znaczników Po skompilowaniu aplikację (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
   
--   W związanym z kodem <xref:System.Windows.Window> klasy należy zaimplementować konstruktora, który wywołuje `InitializeComponent` metody. `InitializeComponent` jest implementowana przez znaczniki użytkownika wygenerowany plik `partial` klasy, aby rejestrować zdarzenia i ustawić właściwości, które są zdefiniowane w znacznikach.  
+- W związanym z kodem <xref:System.Windows.Window> klasy należy zaimplementować konstruktora, który wywołuje `InitializeComponent` metody. `InitializeComponent` jest implementowana przez znaczniki użytkownika wygenerowany plik `partial` klasy, aby rejestrować zdarzenia i ustawić właściwości, które są zdefiniowane w znacznikach.  
   
 > [!NOTE]
 >  Po dodaniu nowego <xref:System.Windows.Window> do projektu przy użyciu [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], <xref:System.Windows.Window> jest implementowany przy użyciu znaczników i związane z kodem i zawiera niezbędną konfigurację, aby utworzyć skojarzenie między plikami znaczników i związane z kodem jako opisane w tym miejscu.  
@@ -108,9 +108,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurowanie definicji okna dla programu MSBuild  
  Określa sposób implementacji okna, jak została ona skonfigurowana do [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Okna, która jest zdefiniowana przy użyciu zarówno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i związane z kodem:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki znaczników są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementów.  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki znaczników są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementów.  
   
--   Pliki związane z kodem są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementów.  
+- Pliki związane z kodem są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementów.  
   
  Jest to pokazane w następującym [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] pliku projektu.  
   
@@ -163,9 +163,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 #### <a name="window-ownership"></a>Własność okna  
  Okno, który jest otwierany przy użyciu <xref:System.Windows.Window.Show%2A> metoda nie ma niejawnych relacji z okna, w której został utworzony; interakcji użytkowników z dowolnym z okien niezależnie od innych, co oznacza, że którekolwiek okno można wykonać następujące czynności:  
   
--   Zakrywała drugą (chyba że jeden z systemu windows ma jego <xref:System.Windows.Window.Topmost%2A> właściwością `true`).  
+- Zakrywała drugą (chyba że jeden z systemu windows ma jego <xref:System.Windows.Window.Topmost%2A> właściwością `true`).  
   
--   Można zminimalizować, w trybie zmaksymalizowanym i przywrócenie bez wpływu na drugi.  
+- Można zminimalizować, w trybie zmaksymalizowanym i przywrócenie bez wpływu na drugi.  
   
  Niektóre okna wymagają relacji z oknem, które otwiera je. Na przykład [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] aplikacja może otworzyć właściwości systemu windows i okien narzędzi, których typowe zachowanie ma na celu obejmują okna, w której zostały utworzone. Ponadto tych okien powinien zawsze zamknąć, zminimalizować, maksymalizacji i przywracania w połączeniu z okna, w której zostały utworzone. Takiej relacji można nawiązać, wprowadzając jedno okno *własnych* inny i odbywa się przez ustawienie <xref:System.Windows.Window.Owner%2A> właściwość *należące do okna* z odwołaniem do *właściciela okno*. Jest to pokazane w poniższym przykładzie.  
   
@@ -174,9 +174,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Po ustanowieniu własności:  
   
--   Należących do okna może odwoływać się okna jego właściciela, sprawdzając wartość jego <xref:System.Windows.Window.Owner%2A> właściwości.  
+- Należących do okna może odwoływać się okna jego właściciela, sprawdzając wartość jego <xref:System.Windows.Window.Owner%2A> właściwości.  
   
--   Okno właściciela może odnajdować wszystkich okien jest właścicielem, sprawdzając wartość jego <xref:System.Windows.Window.OwnedWindows%2A> właściwości.  
+- Okno właściciela może odnajdować wszystkich okien jest właścicielem, sprawdzając wartość jego <xref:System.Windows.Window.OwnedWindows%2A> właściwości.  
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>Zapobieganie aktywacji okna  
@@ -184,21 +184,21 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Jeśli aplikacja ma okno które nie powinny być aktywowany, gdy wyświetlany, możesz ustawić jej <xref:System.Windows.Window.ShowActivated%2A> właściwości `false` przed wywołaniem <xref:System.Windows.Window.Show%2A> metoda po raz pierwszy. W rezultacie:  
   
--   Okno nie jest aktywna.  
+- Okno nie jest aktywna.  
   
--   W oknie <xref:System.Windows.Window.Activated> zdarzenie jest zgłaszane w nie.  
+- W oknie <xref:System.Windows.Window.Activated> zdarzenie jest zgłaszane w nie.  
   
--   Obecnie aktywowane okno pozostaje aktywowane.  
+- Obecnie aktywowane okno pozostaje aktywowane.  
   
  Okno zostanie stają się aktywowane, jednak zaraz po użytkownik aktywuje go, klikając klienta lub obszaru nieklienckiego. W takim przypadku:  
   
--   Okno jest aktywowane.  
+- Okno jest aktywowane.  
   
--   W oknie <xref:System.Windows.Window.Activated> zdarzenie jest wywoływane.  
+- W oknie <xref:System.Windows.Window.Activated> zdarzenie jest wywoływane.  
   
--   Wcześniej aktywowane okno jest zdezaktywowane.  
+- Wcześniej aktywowane okno jest zdezaktywowane.  
   
--   W oknie <xref:System.Windows.Window.Deactivated> i <xref:System.Windows.Window.Activated> zdarzenia są wywoływane później, zgodnie z oczekiwaniami w odpowiedzi na działania użytkownika.  
+- W oknie <xref:System.Windows.Window.Deactivated> i <xref:System.Windows.Window.Activated> zdarzenia są wywoływane później, zgodnie z oczekiwaniami w odpowiedzi na działania użytkownika.  
   
 <a name="Window_Activation"></a>   
 ### <a name="window-activation"></a>Okno aktywacji  
@@ -227,21 +227,21 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 ### <a name="closing-a-window"></a>Zamknięcie okna  
  Czas życia okna uruchamia pochodzące-to-end, gdy użytkownik zamknie go. Okno może zostać zamknięty przy użyciu elementów w obszaru nieklienckiego, takie jak następujące:  
   
--   **Zamknij** elementu **systemu** menu.  
+- **Zamknij** elementu **systemu** menu.  
   
--   Naciskając klawisze ALT + F4.  
+- Naciskając klawisze ALT + F4.  
   
--   Naciśnięcie klawisza **Zamknij** przycisku.  
+- Naciśnięcie klawisza **Zamknij** przycisku.  
   
  Możesz podać dodatkowe mechanizmy obszaru klienta, aby zamknąć to okno, częściej stosowana, które są następujące:  
   
--   **Zakończenia** pozycja **pliku** menu, zwykle dla głównej aplikacji systemu windows.  
+- **Zakończenia** pozycja **pliku** menu, zwykle dla głównej aplikacji systemu windows.  
   
--   A **Zamknij** pozycja **pliku** menu, zazwyczaj w oknie drugą aplikację.  
+- A **Zamknij** pozycja **pliku** menu, zazwyczaj w oknie drugą aplikację.  
   
--   A **anulować** przycisk, zazwyczaj w modalne okno dialogowe.  
+- A **anulować** przycisk, zazwyczaj w modalne okno dialogowe.  
   
--   A **Zamknij** przycisk, zazwyczaj w niemodalnego okna dialogowego.  
+- A **Zamknij** przycisk, zazwyczaj w niemodalnego okna dialogowego.  
   
  Aby zamknąć okno w odpowiedzi na jeden z tych mechanizmów niestandardowe, należy wywołać <xref:System.Windows.Window.Close%2A> metody. Poniższy przykład implementuje możliwości, aby zamknąć okno, wybierając **zakończenia** na **pliku** menu.  
   
@@ -266,13 +266,13 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Gdy okno może być jawnie zamknięty przy użyciu mechanizmów udostępnianych w obszarach i bez klienta, okna może także zostać niejawnie zamknięty wyniku zachowanie w innych częściach aplikacji lub [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], w tym następujące czynności:  
   
--   Użytkownik wyloguje się lub kończy pracę Windows.  
+- Użytkownik wyloguje się lub kończy pracę Windows.  
   
--   Zamyka okno właściciela (zobacz <xref:System.Windows.Window.Owner%2A>).  
+- Zamyka okno właściciela (zobacz <xref:System.Windows.Window.Owner%2A>).  
   
--   Zamknięto okna głównego aplikacji i <xref:System.Windows.Application.ShutdownMode%2A> jest <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
+- Zamknięto okna głównego aplikacji i <xref:System.Windows.Application.ShutdownMode%2A> jest <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   <xref:System.Windows.Application.Shutdown%2A> jest wywoływana.  
+- <xref:System.Windows.Application.Shutdown%2A> jest wywoływana.  
   
 > [!NOTE]
 >  Nie można ponownie otworzyć okno, po jego zamknięciu.  
@@ -293,11 +293,11 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Można również określić początkową lokalizację <xref:System.Windows.Window> , gdy najpierw pojawia się przez ustawienie <xref:System.Windows.Window.WindowStartupLocation%2A> właściwości o jedną z następujących <xref:System.Windows.WindowStartupLocation> wartości wyliczenia:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (ustawienie domyślne)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (ustawienie domyślne)  
   
--   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
+- <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
--   <xref:System.Windows.WindowStartupLocation.Manual>  
+- <xref:System.Windows.WindowStartupLocation.Manual>  
   
  Jeśli lokalizacja uruchamiania jest określona jako <xref:System.Windows.WindowStartupLocation.Manual>i <xref:System.Windows.Window.Left%2A> i <xref:System.Windows.Window.Top%2A> nie ustawiono właściwości <xref:System.Windows.Window> poprosi Windows dla lokalizacji, które będą wyświetlane na.  
   
@@ -325,13 +325,13 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Jeśli chcesz, szerokość i wysokość okna do rozmiaru, która pasuje do rozmiaru okna zawartości, można użyć <xref:System.Windows.Window.SizeToContent%2A> właściwość, która ma następujące wartości:  
   
--   <xref:System.Windows.SizeToContent.Manual>. Brak wpływu (ustawienie domyślne).  
+- <xref:System.Windows.SizeToContent.Manual>. Brak wpływu (ustawienie domyślne).  
   
--   <xref:System.Windows.SizeToContent.Width>. Dopasuj do szerokości zawartości, która ma ten sam efekt jak ustawienie oba <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
+- <xref:System.Windows.SizeToContent.Width>. Dopasuj do szerokości zawartości, która ma ten sam efekt jak ustawienie oba <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
   
--   <xref:System.Windows.SizeToContent.Height>. Dopasuj do wysokości zawartości, która ma ten sam efekt jak ustawienie oba <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości elementu zawartości.  
+- <xref:System.Windows.SizeToContent.Height>. Dopasuj do wysokości zawartości, która ma ten sam efekt jak ustawienie oba <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości elementu zawartości.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. Dopasuj do zawartości szerokość i wysokość, który ma ten sam efekt jak ustawienie oba <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości elementu zawartości i ustawienie oba <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. Dopasuj do zawartości szerokość i wysokość, który ma ten sam efekt jak ustawienie oba <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości elementu zawartości i ustawienie oba <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
   
  Poniższy przykład pokazuje okno automatycznie rozmiarów do określonych jego zawartość w pionie i poziomie, przy pierwszym wyświetleniu.  
   
@@ -381,11 +381,11 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Stan okna można skonfigurować, ustawiając jego <xref:System.Windows.Window.WindowState%2A> właściwość, która może mieć jedną z następujących <xref:System.Windows.WindowState> wartości wyliczenia:  
   
--   <xref:System.Windows.WindowState.Normal> (ustawienie domyślne)  
+- <xref:System.Windows.WindowState.Normal> (ustawienie domyślne)  
   
--   <xref:System.Windows.WindowState.Maximized>  
+- <xref:System.Windows.WindowState.Maximized>  
   
--   <xref:System.Windows.WindowState.Minimized>  
+- <xref:System.Windows.WindowState.Minimized>  
   
  Poniższy przykład pokazuje, jak utworzyć okno które zostanie wyświetlone jako zmaksymalizowany po jego otwarciu.  
   
@@ -405,13 +405,13 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Można skonfigurować, jak okno zmienia rozmiar przez ustawienie jego <xref:System.Windows.Window.ResizeMode%2A> właściwość, która może być jedną z następujących <xref:System.Windows.ResizeMode> wartości wyliczenia:  
   
--   <xref:System.Windows.ResizeMode.NoResize>  
+- <xref:System.Windows.ResizeMode.NoResize>  
   
--   <xref:System.Windows.ResizeMode.CanMinimize>  
+- <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (ustawienie domyślne)  
+- <xref:System.Windows.ResizeMode.CanResize> (ustawienie domyślne)  
   
--   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
+- <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
  Podobnie jak w przypadku <xref:System.Windows.Window.WindowStyle%2A>, tryb zmiany rozmiaru okna jest mało prawdopodobne zmienić jego okres istnienia, oznacza to, czy będzie prawdopodobnie ustawisz go z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
   
@@ -425,13 +425,13 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Do kontrolowania, jaki typ obramowania okna pobiera, ustawia jego <xref:System.Windows.Window.WindowStyle%2A> właściwości przy użyciu jednego z następujących wartości <xref:System.Windows.WindowStyle> wyliczenia:  
   
--   <xref:System.Windows.WindowStyle.None>  
+- <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (ustawienie domyślne)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (ustawienie domyślne)  
   
--   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
+- <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
--   <xref:System.Windows.WindowStyle.ToolWindow>  
+- <xref:System.Windows.WindowStyle.ToolWindow>  
   
  Efekt te style okna ramowego zostały zilustrowane na poniższym rysunku:  
   

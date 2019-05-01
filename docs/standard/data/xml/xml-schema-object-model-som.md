@@ -1,37 +1,37 @@
 ---
-title: Model obiektu schematu XML (SOM)
+title: Model SOM (XML Schema Object Model)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 40a792f91ecd343684ff4c7921d6b21d25abecf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61958876"
 ---
-# <a name="xml-schema-object-model-som"></a>Model obiektu schematu XML (SOM)
-Schemat XML jest zaawansowaną i złożonych narzędzie do tworzenia i weryfikowania struktury w dokumentach XML zgodne. Podobnie jak danych modelowania relacyjnej bazy danych, schemat udostępnia sposób definiowania struktury dokumentów XML, określając elementy, które mogą być używane w dokumentów, a także struktury i typy, które tych elementów należy wykonać, aby obowiązywać określona t określonego schematu.  
+# <a name="xml-schema-object-model-som"></a>Model SOM (XML Schema Object Model)
+Schemat XML jest zaawansowanych i złożonych narzędzie służące do tworzenia i sprawdzania poprawności strukturę w dokumentach XML zgodne. Podobnie jak modelowanie danych w relacyjnej bazie danych, schemat umożliwia definiują strukturę dokumentów XML przez określenie elementów, które mogą być używane w dokumenty, oraz struktury i typy, które musi spełnić te elementy, aby obowiązywać tha t określonego schematu.  
   
- Model obiektu schematu (SOM) zawiera zestaw klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw, która pozwala na odczyt z pliku schematu lub programowane tworzenie schematu w pamięci. Schemat następnie można przejść wzdłuż, edytowania, kompilacji, sprawdzania poprawności lub zapisywane w pliku.  
+ Model obiektu schematu (SOM) zawiera zestaw klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw, dzięki czemu można odczytać schematu z pliku lub programowo utworzyć schemat w pamięci. Schemat można następnie te typy można przemierzać, edytowanie, skompilowany zweryfikowane i zapisywane w pliku.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- Opisuje modelu obiektu schematu (SOM) i funkcje i klasy, które zawiera.  
+ Opisuje Model obiektu schematu (SOM) i funkcje i klasy, które oferuje.  
   
  [Odczytywanie i zapisywanie schematów XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- Opisuje sposób odczytywania i zapisywania schematów XML z plików lub innych źródeł.  
+ W tym artykule opisano, jak odczytywanie i zapisywanie schematów XML z plików lub innych źródeł.  
   
  [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- Informacje dotyczące używania klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw do tworzenia XML schematów w pamięci.  
+ Opisuje sposób używania klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw, aby zbudować XML schematów w pamięci.  
   
  [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- Opisuje sposób przenoszenia schematu XML dostępu do elementy, atrybuty i przechowywane w SOM. typów  
+ W tym artykule opisano sposób przenoszenia schematu XML, dostęp do elementów, atrybutów i typy przechowywanych w SOM.  
   
  [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  Opisuje sposób edytowania schematu XML.  
   
  [Uwzględnianie lub importowanie schematów XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- Opisuje sposób uwzględniać lub importować inne schematy XML uzupełnienie Struktura schematu, która obejmuje lub importowane.
+ Opisuje sposób dołączania lub innych schematów XML, aby uzupełnić strukturę schematu, który zawiera lub importuje je zaimportować.

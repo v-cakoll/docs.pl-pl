@@ -10,11 +10,11 @@ helpviewer_keywords:
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
 ms.openlocfilehash: 8f29039185e7171d799543fb1d43e2fa460a97e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912362"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox — Style i szablony
 W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ComboBox> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

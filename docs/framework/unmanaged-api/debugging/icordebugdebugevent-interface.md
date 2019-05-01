@@ -5,11 +5,11 @@ ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 550cb6379ef0d5d17a3446b3f21120208b5a3dad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989173"
 ---
 # <a name="icordebugdebugevent-interface"></a>Interfejs ICorDebugDebugEvent
 Definiuje interfejs podstawowy, z którym wszystkie `ICorDebug` pochodzić zdarzeń debugowania.  
@@ -24,9 +24,9 @@ Definiuje interfejs podstawowy, z którym wszystkie `ICorDebug` pochodzić zdarz
 ## <a name="remarks"></a>Uwagi  
  Następujące interfejsy są pochodną `ICorDebugDebugEvent` interfejsu:  
   
--   [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
+- [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
   
--   [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
+- [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
   
 > [!NOTE]
 >  Interfejs jest tylko dostępne z architekturą .NET Native. Próba wywołania `QueryInterface` do pobrania wskaźnika interfejsu zwraca `E_NOINTERFACE` scenariuszach ICorDebug poza .NET Native.  

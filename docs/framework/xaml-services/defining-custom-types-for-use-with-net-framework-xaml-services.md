@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971954"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML
 Definiowanie typów niestandardowych, które są obiektami biznesowych lub typów, które nie są zależne od określonych platform, istnieją niektóre najlepsze rozwiązania dotyczące XAML, które możesz wykonać. Jeśli wykonujesz tych rozwiązań, usług programu .NET Framework XAML, a jego XAML czytników i składników zapisywania XAML może odnajdywać właściwości XAML danego typu i nadaj mu odpowiednią reprezentację w postaci strumienia węzłów XAML w systemie typu XAML. W tym temacie opisano najlepsze rozwiązania dotyczące definicji typu, definicje elementów członkowskich i przypisywanie CLR, typy lub członków.  
@@ -17,9 +17,9 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>Wzorce konstruktora i definicji typu dla XAML  
  Z myślą o uruchamianiu jako elementu obiektu w XAML, niestandardowej klasy musi spełniać następujące wymagania:  
   
--   Klasa niestandardowa musi być publiczna i musi uwidaczniać domyślnego (bezparametrowego) konstruktora publicznego. (Zobacz następujące sekcji uwag dotyczących struktury).  
+- Klasa niestandardowa musi być publiczna i musi uwidaczniać domyślnego (bezparametrowego) konstruktora publicznego. (Zobacz następujące sekcji uwag dotyczących struktury).  
   
--   Klasa niestandardowa nie może być klasą zagnieżdżoną. Dodatkowy "dot" w ścieżce pełnej nazwy sprawia, że dzielenie przestrzeń nazw klasy jest niejednoznaczne i zakłóca działanie innych funkcji XAML, takich jak dołączone właściwości.  
+- Klasa niestandardowa nie może być klasą zagnieżdżoną. Dodatkowy "dot" w ścieżce pełnej nazwy sprawia, że dzielenie przestrzeń nazw klasy jest niejednoznaczne i zakłóca działanie innych funkcji XAML, takich jak dołączone właściwości.  
   
  Jeśli obiekt może być utworzone jako elementu obiektu, utworzony obiekt wypełnić formularz elementu właściwości wszystkich właściwości, które przyjmują obiektu jako ich typu podstawowego.  
   
@@ -72,9 +72,9 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
   
  `public static object Get` *PropertyName* `(object`  `target` `)`  
   
--   `target` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Umożliwia to zakres użycia usługi można dołączyć elementu członkowskiego; użycia spoza zakresu zamierzony zgłosi Nieprawidłowe rzutowanie wyjątki, które następnie są udostępniane przez błąd analizy XAML. Nazwa parametru `target` nie jest to wymagane, ale nosi nazwę `target` zgodnie z Konwencją w większości implementacji.  
+- `target` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Umożliwia to zakres użycia usługi można dołączyć elementu członkowskiego; użycia spoza zakresu zamierzony zgłosi Nieprawidłowe rzutowanie wyjątki, które następnie są udostępniane przez błąd analizy XAML. Nazwa parametru `target` nie jest to wymagane, ale nosi nazwę `target` zgodnie z Konwencją w większości implementacji.  
   
--   Zwracana wartość można określić jako bardziej określonego typu w danej implementacji.  
+- Zwracana wartość można określić jako bardziej określonego typu w danej implementacji.  
   
  Do obsługi <xref:System.ComponentModel.TypeConverter> składnia tekstu włączone użycie atrybutu można dołączyć elementu członkowskiego, zastosuj <xref:System.ComponentModel.TypeConverterAttribute> do `Get` *PropertyName* metody dostępu. Stosowanie do `get` zamiast `set` może wydawać się nonintuitive; jednak ta Konwencja obsługuje pojęcie tylko do odczytu można dołączyć elementy członkowskie, które można serializować, która jest przydatne w scenariuszach projektanta.  
   
@@ -83,9 +83,9 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
   
  `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
--   `target` Obiektu można określić jako bardziej specyficznego typu w danej implementacji, z tej samej logiki i konsekwencje zgodnie z opisem w poprzedniej sekcji.  
+- `target` Obiektu można określić jako bardziej specyficznego typu w danej implementacji, z tej samej logiki i konsekwencje zgodnie z opisem w poprzedniej sekcji.  
   
--   `value` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji.  
+- `value` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji.  
   
  Pamiętaj, że wartość ta metoda ma dane wejściowe, pochodzące z użycia XAML, zwykle w formie atrybutu. Za pomocą formularza atrybutu musi być konwertera wartości obsługę składni tekstu i atrybutu na `Get` *PropertyName* metody dostępu.  
   

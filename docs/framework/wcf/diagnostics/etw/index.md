@@ -7,11 +7,11 @@ helpviewer_keywords:
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
 ms.openlocfilehash: cff13439995d8a90da15b7afa15723f21574e35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962048"
 ---
 # <a name="analytic-tracing-with-etw"></a>Śledzenie analityczne za pomocą funkcji ETW
 Śledzenie danych analitycznych usługi Windows Communication Foundation (WCF) oferuje możliwość przechwytywania informacji diagnostycznych podczas wykonywania usługi WCF. Zdarzenia śledzenia danych analitycznych programu WCF są emitowane w kluczowych punktach stos WCF, aby umożliwić Rozwiązywanie problemów z usług WCF w środowisku produkcyjnym. Śledzenie danych analitycznych do usługi WCF ma minimalny wpływ na wydajność serwera produktu obsługujący [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] usług WCF, ponieważ te zdarzenia są bardzo wydajny sposób emitowane do sesji zdarzeń śledzenia dla Windows (ETW).  

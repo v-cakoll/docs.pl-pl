@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
 ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956284"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows
 Mimo że formularze Windows zostały zoptymalizowane do kontrolek Windows Forms hosta, ale nadal używać kontrolki ActiveX. Podczas planowania aplikacji korzystającej z formantów ActiveX, należy pamiętać o następujących kwestiach:  
   
--   **Zabezpieczenia** w odniesieniu do zabezpieczeń dostępu kodu zostało ulepszone środowisko uruchomieniowe języka wspólnego. Aplikacje Windows Forms z można uruchomić w pełni zaufanym środowisku bez problemu i częściowo zaufanym środowisku z większością funkcji, które są dostępne. Kontrolek formularzy Windows Forms może być hostowana w przeglądarce nie kompilacji. Jednak formantów na formularzach Windows Forms nie może zastosować te ulepszenia zabezpieczeń. Uruchamianie formantu ActiveX wymaga uprawnień kodu niezarządzanego, która została ustawiona za pomocą <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> właściwości. Aby uzyskać więcej informacji dotyczących zabezpieczeń i uprawnień do kodu niezarządzanego, zobacz <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
+- **Zabezpieczenia** w odniesieniu do zabezpieczeń dostępu kodu zostało ulepszone środowisko uruchomieniowe języka wspólnego. Aplikacje Windows Forms z można uruchomić w pełni zaufanym środowisku bez problemu i częściowo zaufanym środowisku z większością funkcji, które są dostępne. Kontrolek formularzy Windows Forms może być hostowana w przeglądarce nie kompilacji. Jednak formantów na formularzach Windows Forms nie może zastosować te ulepszenia zabezpieczeń. Uruchamianie formantu ActiveX wymaga uprawnień kodu niezarządzanego, która została ustawiona za pomocą <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> właściwości. Aby uzyskać więcej informacji dotyczących zabezpieczeń i uprawnień do kodu niezarządzanego, zobacz <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
   
--   **Całkowity koszt posiadania** formantów ActiveX dodany do formularza Windows zostały wdrożone za pomocą formularza Windows w całości, która może znacznie wydłużyć rozmiar utworzone pliki. Ponadto za pomocą formantów na formularzach Windows Forms wymaga zapisywania w rejestrze. Jest to bardziej inwazyjne na komputerze użytkownika niż formanty Windows Forms, które nie wymagają tego.  
+- **Całkowity koszt posiadania** formantów ActiveX dodany do formularza Windows zostały wdrożone za pomocą formularza Windows w całości, która może znacznie wydłużyć rozmiar utworzone pliki. Ponadto za pomocą formantów na formularzach Windows Forms wymaga zapisywania w rejestrze. Jest to bardziej inwazyjne na komputerze użytkownika niż formanty Windows Forms, które nie wymagają tego.  
   
     > [!NOTE]
     >  Praca z ActiveX kontrolki wymaga użycia otokę międzyoperacyjne COM. Aby uzyskać więcej informacji, zobacz [współdziałanie COM w języku Visual Basic i Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  

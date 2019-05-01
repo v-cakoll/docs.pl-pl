@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
 ms.openlocfilehash: 00a2dae818091c20649deae79c093a61b6e93732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983258"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementacja wzorca formantu SelectionItem dla automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59183758"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki SelectionItem, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Formanty pojedynczego wyboru, które zarządzają formantów podrzędnych, które implementują <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, takich jak **rozdzielczość ekranu** suwak w **właściwości wyświetlania** okno dialogowe, należy zaimplementować <xref:System.Windows.Automation.Provider.ISelectionProvider>i ich elementy podrzędne należy zaimplementować obu <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> i <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Formanty pojedynczego wyboru, które zarządzają formantów podrzędnych, które implementują <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, takich jak **rozdzielczość ekranu** suwak w **właściwości wyświetlania** okno dialogowe, należy zaimplementować <xref:System.Windows.Automation.Provider.ISelectionProvider>i ich elementy podrzędne należy zaimplementować obu <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> i <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iselectionitemprovider"></a>Wymagane elementy ISelectionItemProvider  
@@ -38,7 +38,7 @@ ms.locfileid: "59183758"
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Zdarzenie|Wywoływane, gdy wybór w kontenerze zmienił się znacząco i wymaga wysłania więcej <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> i <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> zdarzeń, niż <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> pozwala na stałe.|  
   
--   Jeśli wynik <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, lub <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> jest jednego wybranego elementu <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> powinien być wywoływany; w przeciwnym razie Wyślij <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> odpowiednio.  
+- Jeśli wynik <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, lub <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> jest jednego wybranego elementu <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> powinien być wywoływany; w przeciwnym razie Wyślij <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> odpowiednio.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973306"
 ---
 # <a name="type-promotion-visual-basic"></a>Promocja typu (Visual Basic)
 Kiedy Deklarujesz element programowania w module, Visual Basic promuje jego zakres, do obszaru nazw, zawierającej moduł. Jest to nazywane *wpisz podwyższania poziomu*.  
@@ -54,9 +54,9 @@ Kiedy Deklarujesz element programowania w module, Visual Basic promuje jego zakr
 ## <a name="recommendations"></a>Zalecenia  
  Poniższe zalecenia reprezentują dobrą praktykę programistyczną.  
   
--   **Unikatowe nazwy.** Jeśli masz pełną kontrolę nad nazw elementów programowania, zawsze jest dobry pomysł, aby użyć wszędzie, gdzie unikatowe nazwy. Identyczne nazwy wymagają dodatkowych kwalifikacji i kod może być trudniejsze do odczytu. Również może prowadzić do powstawania błędów i nieoczekiwane wyniki.  
+- **Unikatowe nazwy.** Jeśli masz pełną kontrolę nad nazw elementów programowania, zawsze jest dobry pomysł, aby użyć wszędzie, gdzie unikatowe nazwy. Identyczne nazwy wymagają dodatkowych kwalifikacji i kod może być trudniejsze do odczytu. Również może prowadzić do powstawania błędów i nieoczekiwane wyniki.  
   
--   **Pełnej kwalifikacji.** Podczas pracy z modułów i innych elementów w tej samej przestrzeni nazw najbezpieczniejszy podejściem jest zawsze używać pełnej kwalifikacji dla wszystkich elementów programowania. Promocja typu jest bezcelowe członka modułu, ten element członkowski nie pełnej kwalifikacji można przypadkowo uzyskać dostępu do innego elementu programistycznego.  
+- **Pełnej kwalifikacji.** Podczas pracy z modułów i innych elementów w tej samej przestrzeni nazw najbezpieczniejszy podejściem jest zawsze używać pełnej kwalifikacji dla wszystkich elementów programowania. Promocja typu jest bezcelowe członka modułu, ten element członkowski nie pełnej kwalifikacji można przypadkowo uzyskać dostępu do innego elementu programistycznego.  
   
 ## <a name="see-also"></a>Zobacz także
 

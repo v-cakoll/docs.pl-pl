@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
 ms.openlocfilehash: d2e5dd761b2422f6d7e92e7bb97dbdf425b8fedf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966845"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Instrukcje: Zmienianie granic formularzy Windows Forms
 Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formularzy Windows. Zmieniając <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwości, można kontrolować zachowanie zmiany rozmiaru formularza. Ponadto, ustawienie <xref:System.Windows.Forms.Form.FormBorderStyle%2A> ma wpływ na sposób wyświetlania pasek podpisu oraz jakie przycisków może pojawić się na nim. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.FormBorderStyle>.  
@@ -24,7 +24,7 @@ Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formu
   
 ### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>Aby programowo ustawić styl obramowania formularzy Windows Forms  
   
--   Ustaw <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwość żądany styl. Poniższy przykład kodu ustawia styl obramowania w postaci `DlgBx1` do <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.  
+- Ustaw <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwość żądany styl. Poniższy przykład kodu ustawia styl obramowania w postaci `DlgBx1` do <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.  
   
     ```vb  
     DlgBx1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog  

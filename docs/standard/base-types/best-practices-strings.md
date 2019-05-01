@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950868"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 <a name="top"></a> .NET zapewnia rozbudowaną obsługę dla rozwoju zlokalizowane i uniwersalnych aplikacji i ułatwia zastosowanie Konwencji kultury bieżącej lub określonej kultury, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest to operacja wrażliwość na ustawienia kulturowe. Na przykład ciągów, które są używane wewnętrznie przez aplikację zwykle powinny być traktowane identycznie we wszystkich kulturach. Kiedy dane ciągu kulturalnie niezależne, takie jak XML tagów, HTML tagów, nazwy użytkowników, ścieżki do plików i nazwy obiektów systemowych są interpretowane tak, jakby były one zależne od kultury, kod aplikacji może być zastrzeżeniem subtelnych błędów, niską wydajnością i w niektórych przypadkach problemy z zabezpieczeniami.  
@@ -35,51 +35,51 @@ ms.locfileid: "53150982"
   
  Ten temat zawiera następujące sekcje:  
   
--   [Zalecenia dotyczące korzystania z ciągów](#recommendations_for_string_usage)  
+- [Zalecenia dotyczące korzystania z ciągów](#recommendations_for_string_usage)  
   
--   [Jawne określenie porównywania ciągów](#specifying_string_comparisons_explicitly)  
+- [Jawne określenie porównywania ciągów](#specifying_string_comparisons_explicitly)  
   
--   [Szczegóły dotyczące porównania ciągów](#the_details_of_string_comparison)  
+- [Szczegóły dotyczące porównania ciągów](#the_details_of_string_comparison)  
   
--   [Wybieranie elementu StringComparison dla wywołania metody](#choosing_a_stringcomparison_member_for_your_method_call)  
+- [Wybieranie elementu StringComparison dla wywołania metody](#choosing_a_stringcomparison_member_for_your_method_call)  
   
--   [Wspólne metody porównania ciągu w .NET](#common_string_comparison_methods_in_the_net_framework)  
+- [Wspólne metody porównania ciągu w .NET](#common_string_comparison_methods_in_the_net_framework)  
   
--   [Metody, które pośrednio wykonują porównywania ciągów](#methods_that_perform_string_comparison_indirectly)  
+- [Metody, które pośrednio wykonują porównywania ciągów](#methods_that_perform_string_comparison_indirectly)  
   
--   [Wyświetlanie i utrzymanie sformatowanych danych](#Formatted)  
+- [Wyświetlanie i utrzymanie sformatowanych danych](#Formatted)  
   
 <a name="recommendations_for_string_usage"></a>   
 ## <a name="recommendations-for-string-usage"></a>Zalecenia dotyczące korzystania z ciągów  
  Podczas tworzenia przy użyciu platformy .NET tych zaleceń proste korzystając z ciągami:  
   
--   Użyj przeciążeń, które jawnie określenie reguł porównania ciągu dla operacji na ciągach. Zazwyczaj polega to na wywołanie przeciążenia metody, które ma parametr typu <xref:System.StringComparison>.  
+- Użyj przeciążeń, które jawnie określenie reguł porównania ciągu dla operacji na ciągach. Zazwyczaj polega to na wywołanie przeciążenia metody, które ma parametr typu <xref:System.StringComparison>.  
   
--   Użyj <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> porównania jako domyślnym bezpieczne dopasowania ciągu niezależne od kultury.  
+- Użyj <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> porównania jako domyślnym bezpieczne dopasowania ciągu niezależne od kultury.  
   
--   Użyj porównania z wartością <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> zapewnienia lepszej wydajności.  
+- Użyj porównania z wartością <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> zapewnienia lepszej wydajności.  
   
--   Użyj operacji na ciągach, które są oparte na <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> podczas wyświetlania danych wyjściowych dla użytkownika.  
+- Użyj operacji na ciągach, które są oparte na <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> podczas wyświetlania danych wyjściowych dla użytkownika.  
   
--   Użyj nielingwistyczne <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> na podstawie wartości zamiast operacje na ciągach <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> gdy wynik porównania jest bez znaczenia językowo (symbolicznych, na przykład).  
+- Użyj nielingwistyczne <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> na podstawie wartości zamiast operacje na ciągach <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> gdy wynik porównania jest bez znaczenia językowo (symbolicznych, na przykład).  
   
--   Użyj <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> zamiast metody <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> metody, gdy NORMALIZUJ ciągi do porównania.  
+- Użyj <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> zamiast metody <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> metody, gdy NORMALIZUJ ciągi do porównania.  
   
--   Używanie przeciążenia <xref:System.String.Equals%2A?displayProperty=nameWithType> metodę, aby sprawdzić, czy dwa ciągi są równe.  
+- Używanie przeciążenia <xref:System.String.Equals%2A?displayProperty=nameWithType> metodę, aby sprawdzić, czy dwa ciągi są równe.  
   
--   Użyj <xref:System.String.Compare%2A?displayProperty=nameWithType> i <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metody sortowania ciągów nie pod kątem równości.  
+- Użyj <xref:System.String.Compare%2A?displayProperty=nameWithType> i <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metody sortowania ciągów nie pod kątem równości.  
   
--   Wrażliwość na ustawienia kulturowe formatowania używać do wyświetlania danych niebędących ciągami, takich jak liczb i dat, w interfejsie użytkownika. Użyj formatowania z kulturą niezmienną do utrwalenia danych innych niż ciąg w postaci ciągu.  
+- Wrażliwość na ustawienia kulturowe formatowania używać do wyświetlania danych niebędących ciągami, takich jak liczb i dat, w interfejsie użytkownika. Użyj formatowania z kulturą niezmienną do utrwalenia danych innych niż ciąg w postaci ciągu.  
   
  Korzystając z ciągów, należy unikać następujące rozwiązania:  
   
--   Nie należy używać przeciążenia, które nie obsługują jawnie lub niejawnie określenie reguł porównania ciągu dla operacji na ciągach.  
+- Nie należy używać przeciążenia, które nie obsługują jawnie lub niejawnie określenie reguł porównania ciągu dla operacji na ciągach.  
   
--   Nie używaj operacji na ciągach na podstawie <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> w większości przypadków. Jest jedną z pewnymi wyjątkami, gdy są utrwalanie językowo istotnych, ale kulturalnie niezależny od danych.  
+- Nie używaj operacji na ciągach na podstawie <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> w większości przypadków. Jest jedną z pewnymi wyjątkami, gdy są utrwalanie językowo istotnych, ale kulturalnie niezależny od danych.  
   
--   Nie używaj przeciążenia <xref:System.String.Compare%2A?displayProperty=nameWithType> lub <xref:System.String.CompareTo%2A> metody i testowania dla wartości zwracanej równą zero, aby sprawdzić, czy dwa ciągi są równe.  
+- Nie używaj przeciążenia <xref:System.String.Compare%2A?displayProperty=nameWithType> lub <xref:System.String.CompareTo%2A> metody i testowania dla wartości zwracanej równą zero, aby sprawdzić, czy dwa ciągi są równe.  
   
--   Nie używaj formatowania kultury można utrwalić dane liczbowe lub dane daty i godziny w postaci ciągu.  
+- Nie używaj formatowania kultury można utrwalić dane liczbowe lub dane daty i godziny w postaci ciągu.  
   
  [Powrót do początku](#top)  
   
@@ -98,17 +98,17 @@ ms.locfileid: "53150982"
   
  Na przykład <xref:System.String.IndexOf%2A> metody, która zwraca indeks podciągu w <xref:System.String> obiekt, który dopasowuje znak lub ciąg ma dziewięć przeciążeń:  
   
--   <xref:System.String.IndexOf%28System.Char%29>, <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29>, i <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>, domyślnie wyszukiwanie porządkowe (wielkość liter i niewrażliwość na ustawienia kulturowe) znaku w ciągu.  
+- <xref:System.String.IndexOf%28System.Char%29>, <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29>, i <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>, domyślnie wyszukiwanie porządkowe (wielkość liter i niewrażliwość na ustawienia kulturowe) znaku w ciągu.  
   
--   <xref:System.String.IndexOf%28System.String%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29>, i <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>, domyślnie wyszukuje liter i z uwzględnieniem wrażliwość na ustawienia kulturowe podciągu w ciągu.  
+- <xref:System.String.IndexOf%28System.String%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29>, i <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>, domyślnie wyszukuje liter i z uwzględnieniem wrażliwość na ustawienia kulturowe podciągu w ciągu.  
   
--   <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29>, i <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>, które zawierają parametr typu <xref:System.StringComparison> umożliwiająca postaci porównania, należy określić.  
+- <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29>, i <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>, które zawierają parametr typu <xref:System.StringComparison> umożliwiająca postaci porównania, należy określić.  
   
  Zaleca się, że wybrano przeciążenia, które nie używają wartości domyślnych, z następujących powodów:  
   
--   Niektóre przeciążenia przy użyciu parametrów domyślnych (te, które Wyszukaj <xref:System.Char> w wystąpieniu ciągu) wykonać porównanie porządkowe, podczas gdy inne osoby (te, które wyszukania ciągu w wystąpieniu ciągu) są zależne od kultury. Jest trudne do zapamiętania, wartość domyślna, która korzysta z metody i łatwo pomylić przeciążenia.  
+- Niektóre przeciążenia przy użyciu parametrów domyślnych (te, które Wyszukaj <xref:System.Char> w wystąpieniu ciągu) wykonać porównanie porządkowe, podczas gdy inne osoby (te, które wyszukania ciągu w wystąpieniu ciągu) są zależne od kultury. Jest trudne do zapamiętania, wartość domyślna, która korzysta z metody i łatwo pomylić przeciążenia.  
   
--   Celem kod, który opiera się na wartości domyślne dla wywołania metody nie jest jasne. W poniższym przykładzie, który opiera się na wartości domyślne, trudno wiedzieć, czy programista chciał faktycznie numeru porządkowego lub lingwistyczne porównanie dwóch ciągów lub czy wielkość różnica między `protocol` i "http" może spowodować, że test pod kątem równości Aby zwrócić `false`.  
+- Celem kod, który opiera się na wartości domyślne dla wywołania metody nie jest jasne. W poniższym przykładzie, który opiera się na wartości domyślne, trudno wiedzieć, czy programista chciał faktycznie numeru porządkowego lub lingwistyczne porównanie dwóch ciągów lub czy wielkość różnica między `protocol` i "http" może spowodować, że test pod kątem równości Aby zwrócić `false`.  
   
      [!code-csharp[Conceptual.Strings.BestPractices#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#1)]
      [!code-vb[Conceptual.Strings.BestPractices#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#1)]  
@@ -144,17 +144,17 @@ Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy
   
  Porównania, które używają bieżącej kultury semantyka są domyślne dla następujących metod:  
   
--   <xref:System.String.Compare%2A?displayProperty=nameWithType> przeciążenia, które nie zawierają <xref:System.StringComparison> parametru.  
+- <xref:System.String.Compare%2A?displayProperty=nameWithType> przeciążenia, które nie zawierają <xref:System.StringComparison> parametru.  
   
--   <xref:System.String.CompareTo%2A?displayProperty=nameWithType> przeciążenia.  
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> przeciążenia.  
   
--   Wartość domyślna <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> metody i <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> metody z `null` <xref:System.Globalization.CultureInfo> parametru.  
+- Wartość domyślna <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> metody i <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> metody z `null` <xref:System.Globalization.CultureInfo> parametru.  
   
--   Wartość domyślna <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> metody i <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> metody z `null` <xref:System.Globalization.CultureInfo> parametru.  
+- Wartość domyślna <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> metody i <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> metody z `null` <xref:System.Globalization.CultureInfo> parametru.  
   
--   <xref:System.String.IndexOf%2A?displayProperty=nameWithType> przeciążenia, które akceptują <xref:System.String> jako wyszukiwanie parametr i nie mają <xref:System.StringComparison> parametru.  
+- <xref:System.String.IndexOf%2A?displayProperty=nameWithType> przeciążenia, które akceptują <xref:System.String> jako wyszukiwanie parametr i nie mają <xref:System.StringComparison> parametru.  
   
--   <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> przeciążenia, które akceptują <xref:System.String> jako wyszukiwanie parametr i nie mają <xref:System.StringComparison> parametru.  
+- <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> przeciążenia, które akceptują <xref:System.String> jako wyszukiwanie parametr i nie mają <xref:System.StringComparison> parametru.  
   
  W każdym przypadku firma Microsoft zaleca wywołanie przeciążenia, które ma <xref:System.StringComparison> parametr, aby utworzyć przeznaczenie metody wywołania Wyczyść.  
   
@@ -240,7 +240,7 @@ Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Wybieranie elementu StringComparison (porównywania ciągów tekstowych) do metody wywołania  
  W poniższej tabeli przedstawiono mapowanie z ciągu semantycznego kontekstu do <xref:System.StringComparison> element członkowski wyliczenia.  
   
-|Dane|Zachowanie|Odpowiednie System.StringComparison<br /><br /> value|  
+|Dane|Zachowanie|Corresponding System.StringComparison<br /><br /> value|  
 |----------|--------------|-----------------------------------------------------|  
 |Wielkość liter identyfikatory wewnętrznego.<br /><br /> Wielkość liter identyfikatory standardów, takich jak XML i HTTP.<br /><br /> Wielkość liter ustawienia związane z zabezpieczeniami.|Identyfikator nielingwistyczne, gdzie dokładnie bajtów.|<xref:System.StringComparison.Ordinal>|  
 |Bez uwzględniania wielkości liter identyfikatory wewnętrznego.<br /><br /> Bez uwzględniania wielkości liter identyfikatory standardów, takich jak XML i HTTP.<br /><br /> Ścieżki plików.<br /><br /> Klucze i wartości rejestru.<br /><br /> Zmienne środowiskowe.<br /><br /> Identyfikatory zasobów (na przykład nazwy dojścia).<br /><br /> Bez uwzględniania wielkości liter ustawienia związane z zabezpieczeniami.|Identyfikator nielingwistyczne, w których przypadku nie ma znaczenia; szczególnie danych przechowywanych w większości usług systemu Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
@@ -307,17 +307,17 @@ Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>Metody, które pośrednio wykonują porównywania ciągu  
  Niektóre metody niebędących ciągami, mających porównywania ciągów jako użyj operacji centralnej <xref:System.StringComparer> typu. <xref:System.StringComparer> Klasa zawiera sześć właściwości statyczne, które zwracają <xref:System.StringComparer> wystąpienia, którego <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> metody wykonywania następujących rodzajów porównań ciągów:  
   
--   Porównania ciągów zależne od kultury, przy użyciu bieżącej kultury. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> właściwości.  
+- Porównania ciągów zależne od kultury, przy użyciu bieżącej kultury. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> właściwości.  
   
--   Porównania bez uwzględniania wielkości liter, przy użyciu bieżącej kultury. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> właściwości.  
+- Porównania bez uwzględniania wielkości liter, przy użyciu bieżącej kultury. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> właściwości.  
   
--   Za pomocą reguł porównywania word niezmiennej kultury niezależnych od kultury porównań. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> właściwości.  
+- Za pomocą reguł porównywania word niezmiennej kultury niezależnych od kultury porównań. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> właściwości.  
   
--   Porównania bez uwzględniania wielkości liter i niewrażliwość na ustawienia kulturowe, za pomocą reguł porównywania word niezmiennej kultury. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> właściwości.  
+- Porównania bez uwzględniania wielkości liter i niewrażliwość na ustawienia kulturowe, za pomocą reguł porównywania word niezmiennej kultury. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> właściwości.  
   
--   Porównanie porządkowe. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> właściwości.  
+- Porównanie porządkowe. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> właściwości.  
   
--   Porównanie porządkowe bez uwzględniania wielkości liter. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> właściwości.  
+- Porównanie porządkowe bez uwzględniania wielkości liter. To <xref:System.StringComparer> obiekt jest zwracany przez <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> właściwości.  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort i Array.BinarySearch  
  Domyślna interpretacja: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
@@ -353,11 +353,11 @@ Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy
   
  Jako dane binarne lub jak sformatowane dane, jednak można utrwalić danych innych niż ciąg. Jeśli użytkownik chce zapisać ją jak sformatowane dane, należy wywołać formatowania przeciążenia metody, która obejmuje `provider` parametru i przekaż go <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości. Niezmienna kultura zapewnia spójny format sformatowanych danych, który jest niezależny od kultury i maszyny. Z kolei utrwalanie danych, która jest formatowana przy użyciu kultury innej niż niezmiennej kultury ma kilka ograniczeń:  
   
--   Dane są prawdopodobnie bezużyteczne, jeśli jest pobierana w systemie, który ma inną kulturę, lub jeśli użytkownik bieżący system Bieżąca kultura jest zmieniana i podejmie próbę pobrania danych.  
+- Dane są prawdopodobnie bezużyteczne, jeśli jest pobierana w systemie, który ma inną kulturę, lub jeśli użytkownik bieżący system Bieżąca kultura jest zmieniana i podejmie próbę pobrania danych.  
   
--   Właściwości kultury na określonym komputerze może różnić się od wartości standardowych. W dowolnym momencie użytkownik może dostosować ustawienia wyświetlania zależne od kultury. W związku z tym sformatowanych danych, który jest zapisywany w systemie może nie można odczytać po użytkownik dostosowuje ustawienia kultury. Przenośność sformatowane dane na komputerach jest mogą być jeszcze bardziej ograniczona.  
+- Właściwości kultury na określonym komputerze może różnić się od wartości standardowych. W dowolnym momencie użytkownik może dostosować ustawienia wyświetlania zależne od kultury. W związku z tym sformatowanych danych, który jest zapisywany w systemie może nie można odczytać po użytkownik dostosowuje ustawienia kultury. Przenośność sformatowane dane na komputerach jest mogą być jeszcze bardziej ograniczona.  
   
--   Standardy międzynarodowe, regionalne lub krajowe, które określają sposób formatowania liczby lub daty i godziny, zmień wraz z upływem czasu, a te zmiany są włączone do aktualizacji systemu operacyjnego Windows. Gdy zmienią się konwencje formatowania danych, którą sformatowano przy użyciu poprzednich Konwencji nie będzie można odczytać.  
+- Standardy międzynarodowe, regionalne lub krajowe, które określają sposób formatowania liczby lub daty i godziny, zmień wraz z upływem czasu, a te zmiany są włączone do aktualizacji systemu operacyjnego Windows. Gdy zmienią się konwencje formatowania danych, którą sformatowano przy użyciu poprzednich Konwencji nie będzie można odczytać.  
   
  Poniższy przykład ilustruje przenośność ograniczone, będącą wynikiem przy użyciu formatowania kultury do utrwalenia danych. Przykład zapisuje tablicę wartości daty i godziny pliku. Są one formatowane przy użyciu konwencji kultury angielski (Stany Zjednoczone). Po jej zmian bieżącej kultury wątku na francuski (Szwajcaria), próbuje odczytać zapisane wartości przy użyciu konwencji formatowania bieżącej kultury. Próba odczytania dwa dane elementy zgłasza <xref:System.FormatException> wyjątek, a tablica daty teraz zawiera dwa niepoprawne elementy, które są równe <xref:System.DateTime.MinValue>.  
   

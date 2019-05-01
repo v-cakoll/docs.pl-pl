@@ -15,11 +15,11 @@ helpviewer_keywords:
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
 ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920617"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Wskazuje częściową definicję typu deklaracji typu.  
@@ -68,15 +68,15 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="best-practices"></a>Najlepsze praktyki  
   
--   W normalnych warunkach należy nie Podziel rozwój jednego typu na dwóch lub więcej deklaracji. W związku z tym, w większości przypadków nie trzeba `Partial` — słowo kluczowe.  
+- W normalnych warunkach należy nie Podziel rozwój jednego typu na dwóch lub więcej deklaracji. W związku z tym, w większości przypadków nie trzeba `Partial` — słowo kluczowe.  
   
--   Aby zwiększyć czytelność, powinien zawierać każdy częściowa deklaracja typu `Partial` — słowo kluczowe. Kompilator umożliwi co najwyżej jeden częściowa deklaracja pominięcie słowa kluczowego. Jeśli co najmniej dwóch Pomiń ją kompilator sygnalizuje błąd.  
+- Aby zwiększyć czytelność, powinien zawierać każdy częściowa deklaracja typu `Partial` — słowo kluczowe. Kompilator umożliwi co najwyżej jeden częściowa deklaracja pominięcie słowa kluczowego. Jeśli co najmniej dwóch Pomiń ją kompilator sygnalizuje błąd.  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Unia deklaracji.** Kompilator traktuje typ jako sumę wszystkich częściowe deklaracje. Każdy modyfikator z każdym częściowa definicja odnoszące się do całego typu, a każdy element członkowski z każdym częściowa definicja jest dostępna dla wszystkich typu.  
+- **Unia deklaracji.** Kompilator traktuje typ jako sumę wszystkich częściowe deklaracje. Każdy modyfikator z każdym częściowa definicja odnoszące się do całego typu, a każdy element członkowski z każdym częściowa definicja jest dostępna dla wszystkich typu.  
   
--   **Promocja typu nie jest dozwolona dla typów częściowych w modułach.** Jeśli częściowa definicja znajduje się wewnątrz modułu, promocji typu tego typu jest bezcelowe automatycznie. W takim przypadku zestaw definicje częściowe może spowodować nieoczekiwane wyniki, a nawet błędy kompilatora. Aby uzyskać więcej informacji, zobacz [promocja typu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+- **Promocja typu nie jest dozwolona dla typów częściowych w modułach.** Jeśli częściowa definicja znajduje się wewnątrz modułu, promocji typu tego typu jest bezcelowe automatycznie. W takim przypadku zestaw definicje częściowe może spowodować nieoczekiwane wyniki, a nawet błędy kompilatora. Aby uzyskać więcej informacji, zobacz [promocja typu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
      Kompilator scala definicje częściowe, tylko wtedy, gdy ich w pełni kwalifikowanej ścieżki są identyczne.  
   

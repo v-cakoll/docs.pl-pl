@@ -14,8 +14,8 @@ ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914851"
 ---
 # <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 
@@ -62,7 +62,7 @@ Możesz wybrać docelową .NET Framework 4.8 w programie Visual Studio 2012 lub 
 - [Klasy bazowe](#core48)
 - [Windows Communication Foundation (WCF)](#wcf48)
 - [Windows Presentation Foundation (WPF)](#wpf48)
-- [Środowisko uruchomieniowe języka wspólnego](#clr48) 
+- [Środowisko uruchomieniowe języka wspólnego](#clr48)
 
 Ulepszone ułatwień dostępu, który pozwala aplikacji zapewnić odpowiednie środowisko dla użytkowników technologii pomocniczej, w dalszym ciągu należy najważniejszy .NET Framework 4.8. Aby uzyskać informacji na temat ulepszenia ułatwień dostępu w programie .NET Framework 4,8, zobacz [What's new in ułatwień dostępu w programie .NET Framework](whats-new-in-accessibility.md).
 
@@ -79,7 +79,7 @@ Domyślnie w aplikacjach przeznaczonych dla platformy .NET Framework 4.8 następ
 - <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
 - <xref:System.Security.Cryptography.RijndaelManaged>
 - <xref:System.Security.Cryptography.RIPEMD160Managed>
-- <xref:System.Security.Cryptography.SHA256Managed> 
+- <xref:System.Security.Cryptography.SHA256Managed>
 
 Zamiast tego w ramach tych zajęć przekierować operacje kryptograficzne bibliotekę kryptografii systemu. Ta zmiana skutecznie usunięcie potencjalnie mylące różnica między środowisk deweloperskich i środowisk produkcyjnych i sprawia, że składnikami macierzystymi i składniki zarządzane działają na podstawie tych samych zasad kryptograficznych. Aplikacje, które są zależne od tych wyjątków można przywrócić poprzednie zachowanie przez ustawienie przełącznika AppContext `Switch.System.Security.Cryptography.UseLegacyFipsThrow` do `true`. Aby uzyskać więcej informacji, zobacz [klasy kryptografii zarządzane nie zgłaszają wyjątków CryptographyException w trybie FIPS](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode).
 
@@ -93,7 +93,7 @@ Począwszy od programu .NET Framework 4.5, używa zestawu clrcompression.dll [ZL
 
 **Wprowadzenie ServiceHealthBehavior**
 
-Kondycji punktów końcowych są powszechnie używane przez narzędzia do aranżacji do zarządzania usługami na podstawie stanu kondycji. Kontrole kondycji mogą być również używane przez narzędzia do monitorowania do śledzenia i udostępniania powiadomień o dostępności i wydajności usługi. 
+Kondycji punktów końcowych są powszechnie używane przez narzędzia do aranżacji do zarządzania usługami na podstawie stanu kondycji. Kontrole kondycji mogą być również używane przez narzędzia do monitorowania do śledzenia i udostępniania powiadomień o dostępności i wydajności usługi.
 
 **ServiceHealthBehavior** jest zachowanie usługi WCF, która rozszerza <xref:System.ServiceModel.Description.IServiceBehavior>.  Po dodaniu do <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> kolekcji, zachowanie usługi wykonuje następujące czynności:
 
@@ -106,15 +106,15 @@ Istnieją dwa sposoby, aby uwidocznić punkt końcowy kondycji i publikować inf
 - Za pomocą kodu. Na przykład:
 
   ```csharp
-  ServiceHost host = new ServiceHost(typeof(Service1), 
-                     new Uri("http://contoso:81/Service1")); 
+  ServiceHost host = new ServiceHost(typeof(Service1),
+                     new Uri("http://contoso:81/Service1"));
   ServiceHealthBehavior healthBehavior =
-      host.Description.Behaviors.Find<ServiceHealthBehavior>(); 
+      host.Description.Behaviors.Find<ServiceHealthBehavior>();
   if (healthBehavior == null)
-  { 
-     healthBehavior = new ServiceHealthBehavior(); 
-  } 
-   host.Description.Behaviors.Add(healthBehavior); 
+  {
+     healthBehavior = new ServiceHealthBehavior();
+  }
+   host.Description.Behaviors.Add(healthBehavior);
   ```
 
 - Za pomocą pliku konfiguracji. Na przykład:
@@ -137,7 +137,7 @@ Stan kondycji usługi mogą być przeszukiwane przy użyciu parametrów zapytani
 Parametry zapytania i przykłady:
 
 - OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
-  
+
   455 kod stanu HTTP odpowiedzi jest zwracana, gdy stan dyspozytorów kanał jest większy niż <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
 
 - OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
@@ -147,11 +147,11 @@ Parametry zapytania i przykłady:
 - OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
   Określa wartość procentową {1 – 100} wyzwalającego odpowiedź i kod odpowiedzi HTTP {200 – 599}. W tym przykładzie:
-  
+
     - Jeśli wynik jest większa niż 95%, zwracany jest kod odpowiedzi HTTP 500.
-    
+
     - Jeśli wartość procentowa lub od 70 do 95, zwracany jest 350.
-    
+
     - W przeciwnym wypadku jest zwracany 200.
 
 Stan kondycji usługi mogą być wyświetlane w formacie HTML, określając ciąg zapytania, takich jak `https://contoso:81/Service1?health` lub w formacie XML, określając ciąg zapytania, takich jak `https://contoso:81/Service1?health&Xml`. Ciąg zapytania, takich jak `https://contoso:81/Service1?health&NoContent` zwraca pusta strona HTML.
@@ -162,9 +162,9 @@ Stan kondycji usługi mogą być wyświetlane w formacie HTML, określając cią
 
 **Wysokiej rozdzielczości DPI ulepszenia**
 
-W .NET Framework 4,8 WPF dodaje obsługę świadomości DPI w wersji 2 — monitorowanie i Skalowanie DPI w trybie mieszanym. Zobacz [wysokiej rozdzielczości DPI aplikacji programowanie aplikacji klasycznych na Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) dodatkowe informacje o wysokiej rozdzielczości DPI rozwoju. 
+W .NET Framework 4,8 WPF dodaje obsługę świadomości DPI w wersji 2 — monitorowanie i Skalowanie DPI w trybie mieszanym. Zobacz [wysokiej rozdzielczości DPI aplikacji programowanie aplikacji klasycznych na Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) dodatkowe informacje o wysokiej rozdzielczości DPI rozwoju.
 
-.NET framework 4.8 poprawia wsparcie dla hostowanej współdziałanie parametrów hWnd i formularzy Windows w aplikacjach WPF wysokiej rozdzielczości DPI na platformach, które obsługują Skalowanie DPI w trybie mieszanym (począwszy od systemu Windows 10 kwietnia 2018 r. Zaktualizuj). Utworzenia hostowanej formantów parametrów hWnd lub formularzy Windows jako Skalowanie DPI w trybie mieszanym windows przez wywołanie metody [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) i [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), mogą być hostowane w Aplikacja WPF w wersji 2 — monitorowanie i są wielkości i odpowiednio. Takie hostowaną zawartość nie jest renderowany w macierzystym rozdzielczości DPI; Zamiast tego systemu operacyjnego jest skalowana hostowaną zawartość do odpowiedniego rozmiaru. Obsługa trybu świadomości DPI w wersji 2 — monitorowanie umożliwia także kontrolek WPF hostowane (czyli nadrzędny) w macierzystym okna aplikacji o dużej rozdzielczości. 
+.NET framework 4.8 poprawia wsparcie dla hostowanej współdziałanie parametrów hWnd i formularzy Windows w aplikacjach WPF wysokiej rozdzielczości DPI na platformach, które obsługują Skalowanie DPI w trybie mieszanym (począwszy od systemu Windows 10 kwietnia 2018 r. Zaktualizuj). Utworzenia hostowanej formantów parametrów hWnd lub formularzy Windows jako Skalowanie DPI w trybie mieszanym windows przez wywołanie metody [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) i [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), mogą być hostowane w Aplikacja WPF w wersji 2 — monitorowanie i są wielkości i odpowiednio. Takie hostowaną zawartość nie jest renderowany w macierzystym rozdzielczości DPI; Zamiast tego systemu operacyjnego jest skalowana hostowaną zawartość do odpowiedniego rozmiaru. Obsługa trybu świadomości DPI w wersji 2 — monitorowanie umożliwia także kontrolek WPF hostowane (czyli nadrzędny) w macierzystym okna aplikacji o dużej rozdzielczości.
 
 Aby włączyć obsługę skalowania w trybie mieszanym o wysokiej rozdzielczości, można ustawić następujące [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) zmienia pliku konfiguracji aplikacji:
 
@@ -180,11 +180,11 @@ Aby włączyć obsługę skalowania w trybie mieszanym o wysokiej rozdzielczośc
 
 Środowiska uruchomieniowego w .NET Framework 4.8 obejmuje następujące zmiany i udoskonalenia:
 
-**Ulepszenia kompilatora JIT**. Kompilator Just-in-time (JIT) w programie .NET Framework 4.8 opiera się na kompilator JIT w programie .NET Core 2.1. Wiele z optymalizacji i wszystkie poprawki wprowadzone w kompilatorze JIT programu .NET Core 2.1 znajdują się w kompilatorze JIT 4.8 programu .NET Framework. 
+**Ulepszenia kompilatora JIT**. Kompilator Just-in-time (JIT) w programie .NET Framework 4.8 opiera się na kompilator JIT w programie .NET Core 2.1. Wiele z optymalizacji i wszystkie poprawki wprowadzone w kompilatorze JIT programu .NET Core 2.1 znajdują się w kompilatorze JIT 4.8 programu .NET Framework.
 
 **Ulepszenia NGEN**. Środowisko uruchomieniowe ulepszono jego zarządzania pamięci dla [Native Image Generator](../tools/ngen-exe-native-image-generator.md) obrazy (NGEN), tak aby nie są zamapowane na podstawie obrazów NGEN dane rezydentny. Zmniejsza to prawdopodobieństwo umożliwiające ataki polegające na wykonanie dowolnego kodu, modyfikując pamięci, która zostanie wykonana.
 
-**Ochrony przed złośliwym oprogramowaniem, skanowanie w poszukiwaniu wszystkie zestawy**. W poprzednich wersjach programu .NET Framework środowisko uruchomieniowe skanuje wszystkie zestawy, ładowane z dysku przy użyciu usługi Windows Defender lub oprogramowania innych firm chroniące przed złośliwym kodem. Jednak zestawy ładowane z innych źródeł, takich jak przez <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> metody, nie są wykrywane i potencjalnie może zawierać wykryte złośliwe oprogramowanie. Począwszy od .NET Framework 4.8 uruchomiony w systemie Windows 10, środowisko uruchomieniowe wyzwala skanowanie przez rozwiązania chroniące przed złośliwym kodem, które implementują [interfejsu skanowanie ochrony przed złośliwym kodem (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).  
+**Ochrony przed złośliwym oprogramowaniem, skanowanie w poszukiwaniu wszystkie zestawy**. W poprzednich wersjach programu .NET Framework środowisko uruchomieniowe skanuje wszystkie zestawy, ładowane z dysku przy użyciu usługi Windows Defender lub oprogramowania innych firm chroniące przed złośliwym kodem. Jednak zestawy ładowane z innych źródeł, takich jak przez <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> metody, nie są wykrywane i potencjalnie może zawierać wykryte złośliwe oprogramowanie. Począwszy od .NET Framework 4.8 uruchomiony w systemie Windows 10, środowisko uruchomieniowe wyzwala skanowanie przez rozwiązania chroniące przed złośliwym kodem, które implementują [interfejsu skanowanie ochrony przed złośliwym kodem (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472" />
 

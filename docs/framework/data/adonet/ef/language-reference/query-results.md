@@ -6,32 +6,32 @@ dev_langs:
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
 ms.openlocfilehash: 70aa2ad6385ec4791b05b202dc5dc6d4fe9e57b9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797842"
 ---
 # <a name="query-results"></a>Wyniki zapytania
-Po [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania jest konwertować na drzewa polecenia i wykonywane, wyniki zapytania są zazwyczaj zwracane jako jedną z następujących:  
+Po [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania jest konwertowana na drzew poleceń i wykonywane, wyniki zapytania zwykle są zwracane jako jeden z następujących czynności:  
   
--   Kolekcja zero lub więcej obiektów typów jednostek lub dla projekcji typu złożonego w modelu koncepcyjnym.  
+- Kolekcja zero lub więcej obiektów typów jednostek lub złożonych typów w modelu koncepcyjnym projekcji.  
   
--   Typy CLR obsługiwane przez modelu koncepcyjnego.  
+- Obsługiwane przez model koncepcyjny typy CLR.  
   
--   Kolekcje wbudowane.  
+- Kolekcje wbudowane.  
   
--   Typy anonimowe.  
+- Typy anonimowe.  
   
- Zapytanie zostało wykonane w źródle danych, wyniki są zmaterializowany na typy CLR i zwracany do klienta. Wszystkie materialization obiektu jest wykonywane przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Błędów spowodowanych brakiem do mapowania między [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] i spowoduje, że wyjątki, aby zostać wygenerowany podczas materialization obiektu CLR.  
+ Gdy zapytanie zostało wykonane względem źródła danych, wyniki są zmaterializowanego na typy CLR i zwracany do klienta. Wszystkie materializacja obiektu odbywa się przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Wszelkie błędy, które wynikają z brakiem połączenia do mapowania miedzy [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] i środowiska CLR spowoduje, że wyjątki zostanie wygenerowany podczas materializacja obiektu.  
   
- Jeśli wykonanie kwerendy zwraca typów pierwotnych modelu koncepcyjnego, wyniki składają się z typów CLR, które są autonomiczne i jest odłączony od [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Jednak jeśli zapytanie zwraca kolekcję obiektów typów jednostek, reprezentowany przez <xref:System.Data.Objects.ObjectQuery%601>, te typy są śledzone przez obiekt kontekstu. Wszystkie zachowanie obiektu (na przykład kolekcje podrzędne i nadrzędne, śledzenia zmian polimorfizm i tak dalej) zostały zdefiniowane w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Te funkcje mogą być używane w jego pojemność, zgodnie z definicją w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
+ Jeśli wykonanie zapytania zwraca typów pierwotnych modelu koncepcyjnego, wyniki składają się z typów CLR, które są autonomiczne i jest odłączony od [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Jednakże, jeśli zapytanie zwraca kolekcję obiektów typów jednostek, reprezentowane przez <xref:System.Data.Objects.ObjectQuery%601>, te typy są śledzone przez obiekt kontekstu. Czy wszystkie zachowanie obiektu (na przykład kolekcje nadrzędny/podrzędny, śledzenia zmian, polimorfizm i tak dalej), zgodnie z definicją w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Ta funkcja może służyć w jego możliwości, zgodnie z definicją w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
   
- Typy struktur zwracane z zapytań (np. typy anonimowe i typy złożone dopuszczające wartości zerowe) mogą być `null` wartość. <xref:System.Data.Objects.DataClasses.EntityCollection%601> Właściwości zwróconą jednostkę również mogą być `null` wartość. Może to wynikać z projekcji właściwości kolekcji jednostki, która jest `null` wartość, na przykład wywołanie <xref:System.Linq.Queryable.FirstOrDefault%2A> na <xref:System.Data.Objects.ObjectQuery%601> który nie ma żadnych elementów.  
+ Struktura typy zwracane z zapytań (na przykład typy anonimowe i typy złożone dopuszczające wartości zerowe) mogą być `null` wartość. <xref:System.Data.Objects.DataClasses.EntityCollection%601> Również mogą być właściwość zwróconą jednostkę `null` wartość. Może to wynikać z projekcji kolekcji właściwości jednostki, która jest `null` wartości, takich jak wywoływanie <xref:System.Linq.Queryable.FirstOrDefault%2A> na <xref:System.Data.Objects.ObjectQuery%601> , nie ma żadnych elementów.  
   
- W niektórych sytuacjach zapytania mogą być wyświetlane do generowania zmaterializowanym wyniku podczas jej wykonywania, ale będzie można wykonać zapytania na serwerze i nigdy nie będzie można było zmaterializować obiekt jednostki w środowisku CLR. Może to powodować problemy, jeśli są zależnie od efektami ubocznymi materialization obiektu.  
+ W niektórych sytuacjach zapytanie, może pojawić się do generowania zmaterializowanych wynik podczas jego realizacji, ale będzie można wykonać zapytania na serwerze i obiekt jednostki nigdy nie będzie można zmaterializowanego w CLR. Może to powodować problemy, jeśli zależy efekty uboczne materializacja obiektu.  
   
- Poniższy przykład zawiera klasy niestandardowej `MyContact`, z `LastName` właściwości. Gdy `LastName` właściwość jest ustawiona, `count` zmiennej jest zwiększany. Jeśli można wykonywać następujące dwa zapytania, pierwsza kwerenda powoduje zwiększenie `count` podczas, gdy nie będzie drugiego zapytania. Wynika to z faktu w drugiej kwerendy `LastName` właściwości jest zaprojektowana z wyników i `MyContact` klasa jest tworzona nigdy, ponieważ nie jest wymagane do wykonania zapytania w magazynie.  
+ Poniższy przykład zawiera klasę niestandardową `MyContact`, za pomocą `LastName` właściwości. Gdy `LastName` ustawiono właściwość `count` zmiennej jest zwiększany. Jeśli dwa następujące zapytania są wykonywane, pierwsze zapytanie powoduje zwiększenie `count` podczas drugiego zapytania nie będą działać. Jest to spowodowane w drugiego zapytania `LastName` właściwość jest rzutowany na liście wyników i `MyContact` klasy nigdy nie utworzono, ponieważ nie jest wymagane do wykonania zapytania w sklepie.  
   
  [!code-csharp[DP L2E Materialization Example#MaterializationSideEffects](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Materialization Example/CS/Program.cs#materializationsideeffects)]
  [!code-vb[DP L2E Materialization Example#MaterializationSideEffects](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Materialization Example/VB/Module1.vb#materializationsideeffects)]  

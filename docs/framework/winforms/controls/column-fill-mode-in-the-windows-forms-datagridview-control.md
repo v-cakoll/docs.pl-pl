@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956289"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows
 W tryb wypełniania kolumny <xref:System.Windows.Forms.DataGridView> kontroli zmienia rozmiar kolumn automatycznie, tak aby zajmowały szerokość obszaru dostępny ekran. Kontrolka nie wyświetla poziomy pasek przewijania z wyjątkiem sytuacji, gdy jest konieczne zapewnienie szerokość każdej kolumny równa lub większa niż jego <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości właściwości.  
@@ -45,22 +45,22 @@ W tryb wypełniania kolumny <xref:System.Windows.Forms.DataGridView> kontroli zm
 ### <a name="comments"></a>Komentarze  
  Aby użyć tej aplikacji demonstracyjnych:  
   
--   Zmień rozmiar formularza. Sprawdź, jak kolumny zmienić ich szerokości, gdy zachowanie proporcji wskazywanym przez <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości właściwości.  
+- Zmień rozmiar formularza. Sprawdź, jak kolumny zmienić ich szerokości, gdy zachowanie proporcji wskazywanym przez <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> wartości właściwości.  
   
--   Zmień rozmiary kolumn, przeciągając separator kolumn za pomocą myszy. Sprawdź sposób, w jaki <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> zmiany wartości.  
+- Zmień rozmiary kolumn, przeciągając separator kolumn za pomocą myszy. Sprawdź sposób, w jaki <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> zmiany wartości.  
   
--   Zmiana <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości dla jednej kolumny, a następnie przeciągnij, aby zmienić rozmiar formularza. Sprawdź jak to zrobić, po dokonaniu małym, formularz <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> wartości nie odbywają się poniżej <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości.  
+- Zmiana <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości dla jednej kolumny, a następnie przeciągnij, aby zmienić rozmiar formularza. Sprawdź jak to zrobić, po dokonaniu małym, formularz <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> wartości nie odbywają się poniżej <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości.  
   
--   Zmiana <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości dla wszystkich kolumn dużą, tak, aby wartości połączone przekracza szerokość formantu. Sprawdź sposób wyświetlania poziomego paska przewijania.  
+- Zmiana <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości dla wszystkich kolumn dużą, tak, aby wartości połączone przekracza szerokość formantu. Sprawdź sposób wyświetlania poziomego paska przewijania.  
   
--   Zmiana <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> wartości dla niektórych kolumn. Obserwuj wpływ podczas zmiany rozmiaru kolumn lub w formularzu.  
+- Zmiana <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> wartości dla niektórych kolumn. Obserwuj wpływ podczas zmiany rozmiaru kolumn lub w formularzu.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
--   Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
+- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
 

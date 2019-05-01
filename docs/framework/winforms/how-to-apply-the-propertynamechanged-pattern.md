@@ -10,11 +10,11 @@ helpviewer_keywords:
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
 ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966819"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>Instrukcje: Stosowanie wzorca PropertyNameChanged
 Poniższy przykład kodu demonstruje sposób stosowania *PropertyName*wzorzec zmieniono formant niestandardowy. Zastosowanie tego wzorca, gdy implementują niestandardowe formanty, które są używane z aparatem powiązanie danych formularzy Windows.  
@@ -26,7 +26,7 @@ Poniższy przykład kodu demonstruje sposób stosowania *PropertyName*wzorzec zm
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Aby skompilować w poprzednim przykładzie kodu:  
   
--   Wklej kod do pliku kodu puste. Należy użyć niestandardowego formantu w formularzu Windows, który zawiera `Main` metody.  
+- Wklej kod do pliku kodu puste. Należy użyć niestandardowego formantu w formularzu Windows, który zawiera `Main` metody.  
   
 ## <a name="see-also"></a>Zobacz także
 

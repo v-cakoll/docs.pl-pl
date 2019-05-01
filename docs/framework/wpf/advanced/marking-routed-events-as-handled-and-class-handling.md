@@ -18,11 +18,11 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
 ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053876"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy
 Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w ramach danych zdarzenia. Obsługa zdarzenia skróci efektywne trasy. Obsługa klasy jest koncepcji programowania, który jest obsługiwany przez zdarzenia trasowane. Klasa program obsługi ma możliwość obsługi określonego zdarzenia trasowanego na poziomie klasy, za pomocą programu obsługi, które jest wywoływane przed jakakolwiek Obsługa wystąpienia na dowolne wystąpienie klasy.  
@@ -57,9 +57,9 @@ Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w 
   
  Na poziom głębiej niż trasy zdarzeń są również potencjalnie wiele funkcje obsługi klas na dowolne wystąpienie danej klasy. To jest ponieważ model obsługi klasy dla zdarzenia trasowane umożliwia wszystkich możliwych klas w hierarchii klas do każdego zarejestrować własne klasy programu obsługi dla każdego zdarzenia trasowane. Każdy program obsługi klasy jest dodawany do wewnętrznego magazynu, a gdy jest konstruowany trasy zdarzeń dla aplikacji, funkcje obsługi klas są wszystkie dodane do trasy zdarzeń. Funkcje obsługi klas są dodawane do trasy tak, aby najpierw zostanie wywołany uchwytu najbardziej pochodnego klasy i funkcje obsługi klas z każdym kolejnym klasy bazowej są wywoływane dalej. Ogólnie rzecz biorąc funkcje obsługi klas nie są zarejestrowane w taki sposób, że odpowiada one także zdarzenia trasowane, które już zostały oznaczone jako obsługiwane. W związku z tym ta klasa mechanizm obsługi umożliwia jedną z dwóch opcji:  
   
--   Klasy pochodne mogą uzupełniać Obsługa klasy, która jest dziedziczona z klasy bazowej przez dodanie obsługi, które nie są oznaczane zdarzenia trasowanego obsługiwane, ponieważ program obsługi klasy bazowej zostanie wywołany jakiś czas po obsługi klasy pochodnej.  
+- Klasy pochodne mogą uzupełniać Obsługa klasy, która jest dziedziczona z klasy bazowej przez dodanie obsługi, które nie są oznaczane zdarzenia trasowanego obsługiwane, ponieważ program obsługi klasy bazowej zostanie wywołany jakiś czas po obsługi klasy pochodnej.  
   
--   Klasy pochodne mogą zastąpić klasy obsługi z klasy bazowej, dodając klasy programu obsługi, oznaczający zdarzenia trasowanego obsługiwane. Należy zachować ostrożność w przypadku tej metody, ponieważ potencjalnie zmienią projektowania zamierzony kontrolki podstawowej w obszarach, takich jak wygląd, logika stanu, obsługi danych wejściowych i obsługa polecenia.  
+- Klasy pochodne mogą zastąpić klasy obsługi z klasy bazowej, dodając klasy programu obsługi, oznaczający zdarzenia trasowanego obsługiwane. Należy zachować ostrożność w przypadku tej metody, ponieważ potencjalnie zmienią projektowania zamierzony kontrolki podstawowej w obszarach, takich jak wygląd, logika stanu, obsługi danych wejściowych i obsługa polecenia.  
   
 <a name="Class_Handling_of_Routed_Events"></a>   
 ## <a name="class-handling-of-routed-events-by-control-base-classes"></a>Klasy obsługi zdarzeń trasowanych przez formant klas bazowych  

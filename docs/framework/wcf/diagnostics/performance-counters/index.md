@@ -5,11 +5,11 @@ helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916412"
 ---
 # <a name="wcf-performance-counters"></a>Liczniki wydajności programu WCF
 Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajności, aby ułatwić mierzyć wydajność aplikacji.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajnoś
   
  `performanceCounters` Atrybut można ustawić tak, aby włączyć liczniki wydajności dla określonego typu. Prawidłowe wartości to:  
   
--   Wszystkie: Wszystkie liczniki kategorii (ServiceModelService i ServiceModelEndpoint ServiceModelOperation) są włączone.  
+- Wszystkie: Wszystkie liczniki kategorii (ServiceModelService i ServiceModelEndpoint ServiceModelOperation) są włączone.  
   
--   ServiceOnly: Tylko liczniki kategorii ServiceModelService są włączone. Jest to wartość domyślna.  
+- ServiceOnly: Tylko liczniki kategorii ServiceModelService są włączone. Jest to wartość domyślna.  
   
--   Wyłączone: Liczniki wydajności modelu ServiceModel * są wyłączone.  
+- Wyłączone: Liczniki wydajności modelu ServiceModel * są wyłączone.  
   
  Jeśli chcesz włączyć liczniki wydajności dla wszystkich aplikacji WCF, ustawienia konfiguracji można umieścić w pliku Machine.config.  Zobacz **zwiększenie rozmiaru pamięci dla liczników wydajności** sekcji poniżej, aby uzyskać więcej informacji na temat konfigurowania wystarczającą ilość pamięci dla liczników wydajności na komputerze.  
   
@@ -63,11 +63,11 @@ config.Save();
   
  Można zmienić ilość pamięci licznika wydajności dla kategorii WCF w rejestrze. Aby to zrobić, należy dodać nową wartość DWORD o nazwie `FileMappingSize` do trzech następujących lokalizacji i ustaw ją na żądaną wartość w bajtach. Tak, aby te zmiany są wykonywane w życie, należy ponownie uruchomić maszynę.  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  Gdy dużą liczbę obiektów (na przykład ServiceHost) będą usuwane, ale oczekujące na zebranych elementów bezużytecznych `PrivateBytes` licznika wydajności będą rejestrować się wyjątkowo dużą liczbą. Aby rozwiązać ten problem, możesz dodać własne liczniki specyficzne dla aplikacji, lub użyj `performanceCounters` atrybutu, aby włączyć liczniki tylko poziomu usługi.  
   
@@ -76,11 +76,11 @@ config.Save();
   
  WMI umożliwia pobieranie nazwy wystąpienia licznika wydajności. Na przykład  
   
--   Nazwa wystąpienia licznika usługi można uzyskać za pomocą usługi WMI [usługi](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) właściwość "CounterInstanceName" instancji.  
+- Nazwa wystąpienia licznika usługi można uzyskać za pomocą usługi WMI [usługi](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) właściwość "CounterInstanceName" instancji.  
   
--   Nazwa wystąpienia licznika punktu końcowego można uzyskać za pomocą usługi WMI [punktu końcowego](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) właściwość "CounterInstanceName" instancji.  
+- Nazwa wystąpienia licznika punktu końcowego można uzyskać za pomocą usługi WMI [punktu końcowego](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) właściwość "CounterInstanceName" instancji.  
   
--   Nazwa wystąpienia licznika operacji można uzyskać za pomocą usługi WMI [punktu końcowego](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) metodę "GetOperationCounterInstanceName" instancji.  
+- Nazwa wystąpienia licznika operacji można uzyskać za pomocą usługi WMI [punktu końcowego](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) metodę "GetOperationCounterInstanceName" instancji.  
   
  Aby uzyskać więcej informacji na temat usługi WMI, zobacz [przy użyciu Instrumentacji zarządzania Windows Diagnostics](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
@@ -126,15 +126,15 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>Programowanie liczniki wydajności programu WCF  
  Kilka plików są instalowane w folderze instalacji zestawu SDK, tak aby programowy dostęp liczniki wydajności programu WCF. Te pliki są wymienione w następujący sposób.  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  Aby uzyskać więcej informacji na temat sposobu programowego dostępu do liczników, zobacz [Architektura programowania licznika wydajności](https://go.microsoft.com/fwlink/?LinkId=95179).  
   

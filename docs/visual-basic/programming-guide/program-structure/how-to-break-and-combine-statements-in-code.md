@@ -22,18 +22,18 @@ helpviewer_keywords:
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955626"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Instrukcje: Przerywanie i łączenie instrukcji w Code (Visual Basic)
 Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wymagają przewijanie w poziomie w edytorze kodu. Mimo że to nie ma wpływu na sposób działania kodu, jego utrudnia nikogo odczytać kodu znajdującego się na monitor. W takich przypadkach należy rozważyć podzielenie pojedynczej instrukcji długich na kilka wierszy.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Aby przerwać pojedynczej instrukcji wiele wierszy  
   
--   Użyj znaku kontynuacji wiersza, który jest znakiem podkreślenia (`_`), w momencie, dla której ma zostać na podział wiersza. Znak podkreślenia należy natychmiast poprzedzone spację i bezpośrednio po nim terminator wiersza (powrót karetki).  
+- Użyj znaku kontynuacji wiersza, który jest znakiem podkreślenia (`_`), w momencie, dla której ma zostać na podział wiersza. Znak podkreślenia należy natychmiast poprzedzone spację i bezpośrednio po nim terminator wiersza (powrót karetki).  
   
     > [!NOTE]
     >  W niektórych przypadkach Jeśli pominięto znak kontynuacji wiersza, kompilator Visual Basic będą nadal w następnym wierszu kodu niejawnie instrukcji. Aby uzyskać listę elementy składni, dla których można pominąć znak kontynuacji wiersza, zobacz "Niejawnej kontynuacji wiersza" w [instrukcji](../../../visual-basic/programming-guide/language-features/statements.md).  
@@ -54,7 +54,7 @@ Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wyma
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Aby umieścić użycie wielu instrukcji w tym samym wierszu  
   
--   Instrukcje należy oddzielić średnikiem (`:`), jak w poniższym przykładzie.  
+- Instrukcje należy oddzielić średnikiem (`:`), jak w poniższym przykładzie.  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

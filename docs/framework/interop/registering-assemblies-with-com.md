@@ -10,11 +10,11 @@ ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872602"
 ---
 # <a name="registering-assemblies-with-com"></a>Rejestrowanie zestawów do użycia z modelem COM
 Można uruchomić z wiersza polecenia narzędzia o nazwie [narzędzie rejestracji zestawów (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) Aby zarejestrować lub wyrejestrować zestawu do użycia w modelu COM. Regasm.exe dodaje informacje o klasie do rejestru systemowego dzięki klientów modelu COM za pomocą klasy .NET Framework w sposób niewidoczny dla użytkownika. <xref:System.Runtime.InteropServices.RegistrationServices> Klasa oferuje podobne funkcje.  
@@ -30,11 +30,11 @@ Można uruchomić z wiersza polecenia narzędzia o nazwie [narzędzie rejestracj
   
  W obszarze HKCR\CLSID\\{0000... 0000} klucz, wartość domyślna jest równa ProgID klasy, a zostaną dodane dwie nowe wartości o nazwie, klasy i zestawu. Środowisko uruchomieniowe odczytuje wartość zestawu z rejestru i przekazuje je do programu rozpoznawania nazw zestawów środowiska uruchomieniowego. Mechanizm rozpoznawania zestawów próbuje zlokalizować zestawu, w oparciu o informacje o zestawie, takie jak nazwa i numer wersji. W przypadku mechanizm rozpoznawania zestawów zlokalizowania zestawu zestaw musi należeć do jednej z następujących lokalizacji:  
   
--   Global assembly cache (musi być zestaw o silnej nazwie).  
+- Global assembly cache (musi być zestaw o silnej nazwie).  
   
--   W katalogu aplikacji. Zestawy, ładowane z ścieżce aplikacji są dostępne jedynie z tej aplikacji.  
+- W katalogu aplikacji. Zestawy, ładowane z ścieżce aplikacji są dostępne jedynie z tej aplikacji.  
   
--   Wzdłuż ścieżki pliku określony za pomocą **/ codebase** możliwość Regasm.exe.  
+- Wzdłuż ścieżki pliku określony za pomocą **/ codebase** możliwość Regasm.exe.  
   
  Regasm.exe tworzy również klucz InProcServer32 pod HKCR\CLSID\\{0000... 0000} klucz. Wartością domyślną dla klucza jest równa nazwy biblioteki DLL, która inicjuje środowiska uruchomieniowego języka wspólnego (Mscoree.dll).  
   

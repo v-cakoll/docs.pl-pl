@@ -6,10 +6,10 @@ ms.author: jekoritz
 ms.date: 01/18/2019
 ms.openlocfilehash: d1da6be56e14f72e17cf8fc9ba343ce148fe0931
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973514"
 ---
 # <a name="platform-invoke-pinvoke"></a>Wywołanie platformy (P/Invoke)
 
@@ -38,9 +38,9 @@ public class Program
 
 Poprzedni przykład jest proste, ale stażysta co jest potrzebne do wywoływania funkcji niezarządzanych z kodu zarządzanego. Rozważmy kroki przykładu:
 
-*   #1. wiersz zawiera za pomocą instrukcji for `System.Runtime.InteropServices` przestrzeni nazw, który zawiera wszystkie elementy, które są potrzebne.
-*   Wprowadza wiersza #7 `DllImport` atrybutu. Ten atrybut jest niezwykle istotne, ponieważ informuje, środowisko uruchomieniowe, należy go załadować niezarządzaną biblioteką DLL. Przekazany ciąg jest biblioteką DLL, funkcja naszym docelowym znajduje się w. Ponadto określa, które [zestaw znaków](./charset.md) na potrzeby kierowania ciągi. Ponadto określa, że ta funkcja wywołuje [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) i środowiska uruchomieniowego należy przechwytywać tego kodu błędu, dzięki czemu użytkownik może pobrać go za pomocą <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
-*   Wiersz #8 jest crux pracy P/Invoke. Definiuje metody zarządzanej, która ma **dokładnie tym samym podpisie** , niezarządzanych. Deklaracja ma nowe słowo kluczowe, które można zauważyć, `extern`informuje środowisko uruchomieniowe, to jest metody zewnętrznej oraz że po jej wywołaniu, środowisko wykonawcze powinno znajduje się w biblioteki DLL określonej w `DllImport` atrybutu.
+* #1. wiersz zawiera za pomocą instrukcji for `System.Runtime.InteropServices` przestrzeni nazw, który zawiera wszystkie elementy, które są potrzebne.
+* Wprowadza wiersza #7 `DllImport` atrybutu. Ten atrybut jest niezwykle istotne, ponieważ informuje, środowisko uruchomieniowe, należy go załadować niezarządzaną biblioteką DLL. Przekazany ciąg jest biblioteką DLL, funkcja naszym docelowym znajduje się w. Ponadto określa, które [zestaw znaków](./charset.md) na potrzeby kierowania ciągi. Ponadto określa, że ta funkcja wywołuje [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) i środowiska uruchomieniowego należy przechwytywać tego kodu błędu, dzięki czemu użytkownik może pobrać go za pomocą <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
+* Wiersz #8 jest crux pracy P/Invoke. Definiuje metody zarządzanej, która ma **dokładnie tym samym podpisie** , niezarządzanych. Deklaracja ma nowe słowo kluczowe, które można zauważyć, `extern`informuje środowisko uruchomieniowe, to jest metody zewnętrznej oraz że po jej wywołaniu, środowisko wykonawcze powinno znajduje się w biblioteki DLL określonej w `DllImport` atrybutu.
 
 Rest przykładu jest po prostu wywołania metody, tak jak każda inna metoda zarządzanych.
 
@@ -138,10 +138,10 @@ Pierwszy parametr jest wywołanie zwrotne. Wspomniane wywołanie zwrotne ma nast
 
 Teraz przejdźmy przykładu:
 
-*   Wiersz #9, w tym przykładzie definiuje delegata, która pasuje do oznaczenia wywołania zwrotnego z niezarządzanego kodu. Zwróć uwagę, jak typy LPARAM i HWND są reprezentowane za pomocą `IntPtr` w kodzie zarządzanym.
-*   Wprowadzenie wiersze #13 i #14 `EnumWindows` funkcji z biblioteki user32.dll.
-*   Wiersze #17-20 zaimplementować delegata. Na tym prostym przykładzie chcemy tylko się dane wyjściowe dojścia do konsoli.
-*   W wierszu #24 metody zewnętrznej jest na końcu, nazywana i przekazywana w delegacie.
+* Wiersz #9, w tym przykładzie definiuje delegata, która pasuje do oznaczenia wywołania zwrotnego z niezarządzanego kodu. Zwróć uwagę, jak typy LPARAM i HWND są reprezentowane za pomocą `IntPtr` w kodzie zarządzanym.
+* Wprowadzenie wiersze #13 i #14 `EnumWindows` funkcji z biblioteki user32.dll.
+* Wiersze #17-20 zaimplementować delegata. Na tym prostym przykładzie chcemy tylko się dane wyjściowe dojścia do konsoli.
+* W wierszu #24 metody zewnętrznej jest na końcu, nazywana i przekazywana w delegacie.
 
 Poniżej przedstawiono przykłady systemów Linux i macOS. Dla nich używamy `ftw` funkcja, która znajduje się w `libc`, biblioteki C. Ta funkcja jest używana na przechodzenie przez hierarchie katalogu i pobiera wskaźnik do funkcji jako jeden z jego parametrów. Funkcja wspomniane ma następujący podpis: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 

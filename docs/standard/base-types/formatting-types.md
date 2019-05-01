@@ -28,11 +28,11 @@ ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956107"
 ---
 # <a name="formatting-types-in-net"></a>Typy formatowania na platformie .NET
 <a name="Introduction"></a> Formatowanie jest procesem konwertowania instancji klasy, struktury lub wartości wyliczenia na jego reprezentację ciągu często tak, aby wynikowy ciąg znaków, które mogą być wyświetlane użytkownikom lub deserializowany w celu przywrócenia oryginalnego typu danych. Ta konwersja może stwarzać wiele wyzwań:  
@@ -122,7 +122,7 @@ ms.locfileid: "50189722"
 > [!WARNING]
 >  Zaczynając od [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] obejmuje <xref:Windows.Foundation.IStringable> interfejsu z jednej metody [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), który zapewnia domyślną obsługę formatowania. Jednak zaleca się że typy zarządzane nie implementowały `IStringable` interfejsu. Aby uzyskać więcej informacji, zobacz " [!INCLUDE[wrt](../../../includes/wrt-md.md)] i `IStringable` interfejsu" sekcji na <xref:System.Object.ToString%2A?displayProperty=nameWithType> odwołania do stron.  
   
- Ponieważ wszystkie typy inne niż interfejsy są pochodną <xref:System.Object>, ta funkcjonalność jest dostarczana automatycznie do niestandardowych klas lub struktur. Jednak funkcjonalność oferowana przez domyślną `ToString` metoda, jest ograniczona: mimo że identyfikuje typ, nie podaje żadnych informacji o instancji tego typu. Aby zapewnić reprezentację ciągu obiektu, który zawiera informacje dotyczące tego obiektu, konieczne jest przesłonięcie `ToString` metody.  
+ Ponieważ wszystkie typy inne niż interfejsy są pochodną <xref:System.Object>, ta funkcjonalność jest dostarczana automatycznie do niestandardowych klas lub struktur. Jednak funkcjonalność oferowana przez domyślną `ToString` metoda, jest ograniczona: Mimo że identyfikuje typ, nie podaje żadnych informacji o instancji tego typu. Aby zapewnić reprezentację ciągu obiektu, który zawiera informacje dotyczące tego obiektu, konieczne jest przesłonięcie `ToString` metody.  
   
 > [!NOTE]
 >  Struktury dziedziczą z <xref:System.ValueType>, który z kolei pochodzi od <xref:System.Object>. Mimo że <xref:System.ValueType> zastępuje <xref:System.Object.ToString%2A?displayProperty=nameWithType>, jego implementacja jest identyczna.  
@@ -231,7 +231,7 @@ ms.locfileid: "50189722"
 ### <a name="custom-format-strings"></a>Niestandardowe ciągi formatujące  
  Oprócz ciągów standardowego formatu .NET definiuje ciągi formatów niestandardowych dla zarówno wartości liczbowych, jak i wartości daty i godziny. Ciąg formatu niestandardowego składa się z jednego lub więcej specyfikatorów formatu niestandardowego, które definiują ciąg reprezentujący wartość. Na przykład niestandardowa data i godzina, o których formatu ciągu "rrrr/mm/dd hh:mm:ss.ffff t zzz" Konwertuje datę na jego reprezentację ciągu w postaci "2008/11/15 07:45:00.0000 P -08:00" dla kultury en US. Podobnie ciąg formatu niestandardowego "0000" konwertuje wartość całkowitą 12 na "0012". Aby uzyskać pełną listę ciągów formatów niestandardowych, zobacz [niestandardowych ciągów daty i godziny Format](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) i [liczbowe — niestandardowe ciągi formatujące](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
- Jeżeli ciąg formatu zawiera pojedynczy specyfikator formatu niestandardowego, specyfikator formatu powinien być poprzedzony symbolem procenta (%) aby uniknąć mylenia go przy użyciu specyfikatora formatu standardowego. Poniższy przykład używa specyfikator formatu niestandardowego "M" do wyświetlania jedno- lub dwucyfrową liczbę miesiąca z określonej daty.  
+ Jeżeli ciąg formatu zawiera pojedynczy specyfikator formatu niestandardowego, specyfikator formatu powinien być poprzedzony procentu (%) symbol, aby uniknąć mylenia go przy użyciu specyfikatora formatu standardowego. Poniższy przykład używa specyfikator formatu niestandardowego "M" do wyświetlania jedno- lub dwucyfrową liczbę miesiąca z określonej daty.  
   
  [!code-csharp[Conceptual.Formatting.Overview#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/singlecustom1.cs#8)]
  [!code-vb[Conceptual.Formatting.Overview#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/singlecustom1.vb#8)]  
@@ -313,7 +313,7 @@ ms.locfileid: "50189722"
   
 -   A <xref:System.Globalization.NumberFormatInfo> obiekt, który definiuje konwencje formatowania specyficzne dla kultury, ma być używany. Jego <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> metoda zwraca instancję samego siebie.  
   
- W poniższym przykładzie użyto <xref:System.Globalization.NumberFormatInfo> obiekty reprezentujące angielski (Stany Zjednoczone) i angielska (Zjednoczone Królestwo) oraz kultury neutralne francuska i Rosyjska w celu sformatowania liczby zmiennopozycyjnej.  
+ W poniższym przykładzie użyto <xref:System.Globalization.NumberFormatInfo> obiekty reprezentujące angielski (Stany Zjednoczone) i angielska (Wielka Brytania) oraz kultury neutralne francuska i Rosyjska w celu sformatowania liczby zmiennopozycyjnej.  
   
  [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
  [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]  
@@ -331,7 +331,7 @@ ms.locfileid: "50189722"
   
 -   A <xref:System.Globalization.DateTimeFormatInfo> obiekt, który definiuje konwencje formatowania specyficzne dla kultury, ma być używany. Jego <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> metoda zwraca instancję samego siebie.  
   
- W poniższym przykładzie użyto <xref:System.Globalization.DateTimeFormatInfo> obiekty reprezentujące angielski (Stany Zjednoczone) i angielska (Zjednoczone Królestwo) oraz kultury neutralne francuska i Rosyjska w celu sformatowania daty.  
+ W poniższym przykładzie użyto <xref:System.Globalization.DateTimeFormatInfo> obiekty reprezentujące angielski (Stany Zjednoczone) i angielska (Wielka Brytania) oraz kultury neutralne francuska i Rosyjska w celu sformatowania daty.  
   
  [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
  [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]  

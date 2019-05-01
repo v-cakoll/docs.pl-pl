@@ -8,11 +8,11 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
 ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960169"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Instrukcje: Kopiowanie plików z określonym wzorcem do katalogu w Visual Basic
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> Metoda zwraca zbiór ciągów reprezentujących nazwy ścieżek plików tylko do odczytu. Możesz użyć `wildCards` parametru do określenia określonego wzorca.  
@@ -43,19 +43,19 @@ ms.locfileid: "59310775"
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
   
--   Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Katalog nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
+- Katalog nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Punkty katalogu do istniejącego pliku (<xref:System.IO.IOException>).  
+- Punkty katalogu do istniejącego pliku (<xref:System.IO.IOException>).  
   
--   Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
--   Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
   
--   Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>). Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>). Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

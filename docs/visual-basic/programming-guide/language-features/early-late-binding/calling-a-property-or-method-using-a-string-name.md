@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
 ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973345"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Wywoływanie właściwości lub metody za pomocą nazwy ciągu (Visual Basic)
 W większości przypadków dostęp do właściwości i metod obiektu w czasie projektowania i napisać kod, aby je obsłużyć. Jednak w niektórych przypadkach użytkownik może nie wiedzieć o właściwości i metod obiektu z wyprzedzeniem lub po prostu chcesz elastyczność umożliwienie użytkownikowi końcowemu określić właściwości lub wykonywanie metod w czasie wykonywania.  

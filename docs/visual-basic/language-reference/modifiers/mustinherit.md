@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
 ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053941"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Określa, że klasa może być używana tylko jako klasa bazowa i że nie można utworzyć obiektu bezpośrednio z niej.  
@@ -29,9 +29,9 @@ Określa, że klasa może być używana tylko jako klasa bazowa i że nie można
   
 ## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Możesz użyć `MustInherit` tylko w `Class` instrukcji.  
+- **Kontekst deklaracji.** Możesz użyć `MustInherit` tylko w `Class` instrukcji.  
   
--   **Modyfikatory połączone.** Nie można określić `MustInherit` wraz z `NotInheritable` w tej samej deklaracji.  
+- **Modyfikatory połączone.** Nie można określić `MustInherit` wraz z `NotInheritable` w tej samej deklaracji.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład ilustruje wymuszonego dziedziczenia i zastępowania wymuszone. Klasa bazowa `shape` definiuje zmienną `acrossLine`. Klasy `circle` i `square` dziedziczyć `shape`. Dziedziczą definicji `acrossLine`, ale one należy zdefiniować funkcję `area` ponieważ to obliczenie jest inna dla każdego rodzaju kształtu.  

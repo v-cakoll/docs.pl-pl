@@ -6,11 +6,11 @@ ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 585a6e568bde6e6eca15477eaa10b5c91c91c5a4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61958915"
 ---
 # <a name="xml-processing-options"></a>Opcje przetwarzania XML
 Zobacz następujące tabele, aby uzyskać listę technologie firmy Microsoft, które służy do przetwarzania danych XML.  

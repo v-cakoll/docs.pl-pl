@@ -3,24 +3,24 @@ title: Omówienie atrybuty (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968054"
 ---
 # <a name="attributes-overview-visual-basic"></a>Omówienie atrybuty (Visual Basic)
 Atrybuty zawierają zaawansowaną metodą kojarzenia metadanych lub informacji deklaratywne, przy użyciu kodu (zestawy, typy, metody, właściwości i tak dalej). Po atrybutu jest skojarzony z jednostką program, ten atrybut można wykonywać zapytania w czasie wykonywania za pomocą technikę o nazwie *odbicia*. Aby uzyskać więcej informacji, zobacz [odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
  Atrybuty mają następujące właściwości:  
   
--   Atrybuty dodawania metadanych do programu. *Metadane* obejmuje informacje dotyczące typów zdefiniowanych w programie. Wszystkie zestawy .NET zawierają określony zestaw metadane opisujące typy i elementy członkowskie typu zdefiniowane w zestawie. Możesz dodać atrybuty niestandardowe, aby określić dodatkowe informacje, która jest wymagana. Aby uzyskać więcej informacji znajduje się pozycja [tworzenia atrybuty niestandardowe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
+- Atrybuty dodawania metadanych do programu. *Metadane* obejmuje informacje dotyczące typów zdefiniowanych w programie. Wszystkie zestawy .NET zawierają określony zestaw metadane opisujące typy i elementy członkowskie typu zdefiniowane w zestawie. Możesz dodać atrybuty niestandardowe, aby określić dodatkowe informacje, która jest wymagana. Aby uzyskać więcej informacji znajduje się pozycja [tworzenia atrybuty niestandardowe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
   
--   Jeden lub więcej atrybutów mogą dotyczyć całego zestawów, modułów lub mniejszych elementów programów, takich jak klasy i właściwości.  
+- Jeden lub więcej atrybutów mogą dotyczyć całego zestawów, modułów lub mniejszych elementów programów, takich jak klasy i właściwości.  
   
--   Atrybuty można zaakceptować argumentów w taki sam sposób jak metody i właściwości.  
+- Atrybuty można zaakceptować argumentów w taki sam sposób jak metody i właściwości.  
   
--   Program można sprawdzić swój własny metadanych lub metadanych w innych programach przy użyciu odbicia. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+- Program można sprawdzić swój własny metadanych lub metadanych w innych programach przy użyciu odbicia. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
 ## <a name="using-attributes"></a>Przy użyciu atrybutów  
  Atrybuty można umieścić w praktycznie dowolnej deklaracji, chociaż określony atrybut może ograniczyć typy deklaracji, na których jest on prawidłowy. W języku Visual Basic atrybut jest ujęty w nawiasy ostre (\< >). Musi znajdować się bezpośrednio przed elementem, do którego jest stosowana, w tym samym wierszu.  
@@ -107,40 +107,40 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>Najczęstsze zastosowania dla atrybutów  
  Poniższa lista zawiera kilka typowych zastosowań atrybutów w kodzie:  
   
--   Oznaczanie metod za pomocą `WebMethod` atrybutów w usługach sieci Web, aby wskazać, że metoda powinna być wywoływane za pośrednictwem protokołu SOAP. Aby uzyskać więcej informacji, zobacz <xref:System.Web.Services.WebMethodAttribute>.  
+- Oznaczanie metod za pomocą `WebMethod` atrybutów w usługach sieci Web, aby wskazać, że metoda powinna być wywoływane za pośrednictwem protokołu SOAP. Aby uzyskać więcej informacji, zobacz <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Opisujących sposób organizowania parametry metody podczas współpracy z kodu natywnego. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+- Opisujących sposób organizowania parametry metody podczas współpracy z kodu natywnego. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
--   Opisujących właściwości modelu COM dla klasy, metody i interfejsy.  
+- Opisujących właściwości modelu COM dla klasy, metody i interfejsy.  
   
--   Wywoływanie niezarządzanego kodu za pomocą <xref:System.Runtime.InteropServices.DllImportAttribute> klasy.  
+- Wywoływanie niezarządzanego kodu za pomocą <xref:System.Runtime.InteropServices.DllImportAttribute> klasy.  
   
--   Opisujące zestaw pod względem tytułu, wersji, opis lub znak towarowy.  
+- Opisujące zestaw pod względem tytułu, wersji, opis lub znak towarowy.  
   
--   Opisujących członków klasy do serializacji na potrzeby stanu trwałego.  
+- Opisujących członków klasy do serializacji na potrzeby stanu trwałego.  
   
--   Opisujących sposób mapowania między elementy członkowskie klasy i węzłów XML do serializacji XML.  
+- Opisujących sposób mapowania między elementy członkowskie klasy i węzłów XML do serializacji XML.  
   
--   Opisujących wymagania dotyczące zabezpieczeń dla metod.  
+- Opisujących wymagania dotyczące zabezpieczeń dla metod.  
   
--   Określanie właściwości używane do wymuszania zabezpieczeń.  
+- Określanie właściwości używane do wymuszania zabezpieczeń.  
   
--   Kontrolowanie optymalizacji przez kompilator just-in-time (JIT), dzięki czemu kod pozostaje ułatwia debugowanie.  
+- Kontrolowanie optymalizacji przez kompilator just-in-time (JIT), dzięki czemu kod pozostaje ułatwia debugowanie.  
   
--   Uzyskiwanie informacji o obiekcie wywołującym metodę.  
+- Uzyskiwanie informacji o obiekcie wywołującym metodę.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
--   [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
--   [Instrukcje: Tworzenie złożenia C/C++ za pomocą atrybutów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Instrukcje: Tworzenie złożenia C/C++ za pomocą atrybutów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [Atrybuty wspólne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
+- [Atrybuty wspólne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
--   [Informacje o wywołującym (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+- [Informacje o wywołującym (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

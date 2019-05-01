@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954265"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Typy konwerterów i rozszerzenia znaczników dla XAML
 Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających z systemów typu XAML i moduły zapisujące XAML można wygenerować składniki wykresu obiektu. Mimo że korzystają z niektórych właściwości, typy konwerterów i rozszerzenia znaczników są reprezentowane inaczej w strumień węzłów XAML. W tej dokumentacji zestawu, konwerterów typów, rozszerzenia znaczników i podobne konstrukcje są czasami nazywane zbiorczo konwertery wartości.  
@@ -22,13 +22,13 @@ Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających 
 ## <a name="value-converters"></a>Konwertery wartości  
  W XAML konwertery wartości są używane dla różnych scenariuszy. Na poniższej liście przedstawiono różne rodzaje konwertery wartości w XAML:  
   
--   Konwertera typów  
+- Konwertera typów  
   
--   Rozszerzenie znaczników  
+- Rozszerzenie znaczników  
   
--   Wartość serializatora  
+- Wartość serializatora  
   
--   Pokrewne klasy lub klasy pomocy technicznej, która udostępnia logikę do składni tekstu XAML  
+- Pokrewne klasy lub klasy pomocy technicznej, która udostępnia logikę do składni tekstu XAML  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Konwertery typu  

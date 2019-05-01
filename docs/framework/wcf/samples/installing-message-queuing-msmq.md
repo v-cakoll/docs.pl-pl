@@ -3,11 +3,11 @@ title: Instalowanie usługi kolejkowania komunikatów (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954950"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalowanie usługi kolejkowania komunikatów (MSMQ)
 Poniższe procedury pokazują, jak zainstalować usłudze MSMQ 4.0 i wersji 3.0.  
@@ -37,9 +37,9 @@ Poniższe procedury pokazują, jak zainstalować usłudze MSMQ 4.0 i wersji 3.0.
   
 3. Rozwiń węzeł serwera Microsoft kolejki komunikatów (MSMQ), rozwiń Microsoft kolejki komunikatów (MSMQ) Server Core, a następnie zaznacz pola wyboru dla następujących funkcji usługi kolejkowania komunikatów do zainstalowania:  
   
-    -   Usługa MSMQ domeny integracji usług Active Directory (na komputery przyłączone do domeny).  
+    - Usługa MSMQ domeny integracji usług Active Directory (na komputery przyłączone do domeny).  
   
-    -   Obsługa protokołu HTTP usługi MSMQ.  
+    - Obsługa protokołu HTTP usługi MSMQ.  
   
 4. Kliknij przycisk **OK**.  
   

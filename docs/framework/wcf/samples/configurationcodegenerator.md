@@ -3,11 +3,11 @@ title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
 ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943926"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator jest narzędziem, które można użyć do udostępnienia implementacji usługi niestandardowym kanale w celu system konfiguracji. Dzięki temu użytkownicy niestandardowy kanał skonfigurować kanał przy użyciu pliku config, zgodnie z ich konfigurowania, dostarczane przez system powiązań takich jak `NetTcpBinding` lub niestandardowego powiązania za pomocą `TcpTransportBindingElement`.  
@@ -42,9 +42,9 @@ ConfigurationCodeGenerator jest narzędziem, które można użyć do udostępnie
   
      Polecenie spowoduje wygenerowanie trzy pliki CS `BindingElement` (Jeśli określono / to: opcja), pięć plików .cs standardu `Binding` (Jeśli określono /sb: opcja) i pliku XML.  
   
-    1.  Jeśli użyto opcji /be jeden .cs pliki implementuje `BindingElementExtensionSection` dla danego elementu powiązania. Ten kod przedstawia swoje `BindingElement` do konfiguracji systemu, aby powiązań niestandardowych można użyć usługi elementu powiązania. Inne pliki mają klas, które reprezentują stałe i wartości domyślne. Pliki mają `//TODO` komentarze, aby przypomnieć Ci można zaktualizować wartości domyślne.  
+    1. Jeśli użyto opcji /be jeden .cs pliki implementuje `BindingElementExtensionSection` dla danego elementu powiązania. Ten kod przedstawia swoje `BindingElement` do konfiguracji systemu, aby powiązań niestandardowych można użyć usługi elementu powiązania. Inne pliki mają klas, które reprezentują stałe i wartości domyślne. Pliki mają `//TODO` komentarze, aby przypomnieć Ci można zaktualizować wartości domyślne.  
   
-    2.  Jeśli określono opcję /sb dwa pliki CS zaimplementować `StandardBindingElement` i `StandardBindingCollectionElement` odpowiednio, który udostępnia standardowy wiązania do systemu konfiguracji. Inne pliki mają klas, które reprezentują stałe i wartości domyślne. Pliki mają `//TODO` komentarze, aby przypomnieć Ci można zaktualizować wartości domyślne.  
+    2. Jeśli określono opcję /sb dwa pliki CS zaimplementować `StandardBindingElement` i `StandardBindingCollectionElement` odpowiednio, który udostępnia standardowy wiązania do systemu konfiguracji. Inne pliki mają klas, które reprezentują stałe i wartości domyślne. Pliki mają `//TODO` komentarze, aby przypomnieć Ci można zaktualizować wartości domyślne.  
   
          Jeśli określono /sb: opcja CodeToAddTo\<*YourStdBinding*> .cs zawiera kod, należy ręcznie dodać do klasy, która implementuje standardowe wiązania.  
   

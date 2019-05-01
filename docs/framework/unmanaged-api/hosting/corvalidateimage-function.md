@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985780"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage — Funkcja
 Sprawdza poprawność obrazów modułu zarządzanego i powiadamia moduł ładujący systemu operacyjnego po ich załadowaniu.  
@@ -53,23 +53,23 @@ STDAPI _CorValidateImage (
 ## <a name="remarks"></a>Uwagi  
  Windows XP i nowszych wersjach moduł ładujący systemu operacyjnego sprawdza, czy modułów zarządzanych, sprawdzając bit COM deskryptora katalogu, w nagłówku format (COFF) pliku obiektu wspólnego. Ustawionego bitu wskazuje modułu zarządzanego. Jeśli moduł ładujący wykryje modułu zarządzanego, ładuje MsCorEE.dll i wywołania `_CorValidateImage`, który wykonuje następujące czynności:  
   
--   Potwierdza, że obraz jest prawidłowy modułu zarządzanego.  
+- Potwierdza, że obraz jest prawidłowy modułu zarządzanego.  
   
--   Zmiany punktu wejścia w obrazie punktu wejścia w środowisku uruchomieniowym języka (wspólnego CLR).  
+- Zmiany punktu wejścia w obrazie punktu wejścia w środowisku uruchomieniowym języka (wspólnego CLR).  
   
--   Dla 64-bitowej wersji systemu Windows modyfikuje obrazu, który znajduje się w pamięci przez przekształcenie go z PE32 je typu PE32 + format.  
+- Dla 64-bitowej wersji systemu Windows modyfikuje obrazu, który znajduje się w pamięci przez przekształcenie go z PE32 je typu PE32 + format.  
   
--   Zwraca do modułu ładującego, gdy obrazy modułu zarządzanego są ładowane.  
+- Zwraca do modułu ładującego, gdy obrazy modułu zarządzanego są ładowane.  
   
  Obrazy wykonywalne, następnie wywołuje moduł ładujący systemu operacyjnego [_corexemain —](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) funkcji, niezależnie od tego, w punkcie wejścia określonym w pliku wykonywalnym. Biblioteka DLL zestawu obrazów, wywołuje moduł ładujący [_cordllmain —](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) funkcji.  
   
  `_CorExeMain` lub `_CorDllMain` wykonuje następujące czynności:  
   
--   Inicjuje środowisko CLR.  
+- Inicjuje środowisko CLR.  
   
--   Lokalizuje zarządzany punkt wejścia w nagłówku CLR zestawu.  
+- Lokalizuje zarządzany punkt wejścia w nagłówku CLR zestawu.  
   
--   Rozpoczyna wykonywanie.  
+- Rozpoczyna wykonywanie.  
   
  Wywołania modułu ładującego [_corimageunloading —](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) działają w przypadku zarządzanych obrazów modułu są usuwane z pamięci. Jednak ta funkcja nie wykonuje żadnych akcji; po prostu zwraca.  
   

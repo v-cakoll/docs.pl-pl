@@ -3,11 +3,11 @@ title: Iteratory (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966182"
 ---
 # <a name="iterators-visual-basic"></a>Iteratory (Visual Basic)
 *Iteratora* może służyć do kroku za pomocą kolekcji, takie jak listy i tablic.  
@@ -44,21 +44,21 @@ End Function
   
  **W tym temacie**  
   
--   [Prostego iteratora](#BKMK_SimpleIterator)  
+- [Prostego iteratora](#BKMK_SimpleIterator)  
   
--   [Tworzenie klasy kolekcji](#BKMK_CollectionClass)  
+- [Tworzenie klasy kolekcji](#BKMK_CollectionClass)  
   
--   [Bloki try](#BKMK_TryBlocks)  
+- [Bloki try](#BKMK_TryBlocks)  
   
--   [Metody anonimowe](#BKMK_AnonymousMethods)  
+- [Metody anonimowe](#BKMK_AnonymousMethods)  
   
--   [Iteratory przy użyciu listy ogólnej](#BKMK_GenericList)  
+- [Iteratory przy użyciu listy ogólnej](#BKMK_GenericList)  
   
--   [Informacje o składni](#BKMK_SyntaxInformation)  
+- [Informacje o składni](#BKMK_SyntaxInformation)  
   
--   [Implementacja techniczna](#BKMK_Technical)  
+- [Implementacja techniczna](#BKMK_Technical)  
   
--   [Użyj Iteratory](#BKMK_UseOfIterators)  
+- [Użyj Iteratory](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  Wszystkie przykłady w tym temacie, chyba że w przykładzie prostego iteratora, obejmują [Importy](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instrukcji dla `System.Collections` i `System.Collections.Generic` przestrzeni nazw.  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> Użyj Iteratory  
  Iteratory pozwalają zachować prostotę `For Each` pętli, gdy trzeba użyć złożonego kodu do wypełniania kolejność listy. Może to być przydatne, gdy chcesz wykonać następujące czynności:  
   
--   Zmodyfikuj listę sekwencji po pierwszym `For Each` iteracji w pętli.  
+- Zmodyfikuj listę sekwencji po pierwszym `For Each` iteracji w pętli.  
   
--   Nie pełni ładował dużej listy przed pierwszą iteracją z `For Each` pętli. Przykładem jest stronicowane pobierania załadować partii wierszy tabeli. Innym przykładem jest <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> metody, która implementuje Iteratory w ramach programu .NET Framework.  
+- Nie pełni ładował dużej listy przed pierwszą iteracją z `For Each` pętli. Przykładem jest stronicowane pobierania załadować partii wierszy tabeli. Innym przykładem jest <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> metody, która implementuje Iteratory w ramach programu .NET Framework.  
   
--   Hermetyzuj, tworzenie listy dla iteratorów. W metodzie iteratora można tworzyć listy i następnie uzyskanie każdy wynik w pętli.  
+- Hermetyzuj, tworzenie listy dla iteratorów. W metodzie iteratora można tworzyć listy i następnie uzyskanie każdy wynik w pętli.  
   
 ## <a name="see-also"></a>Zobacz także
 

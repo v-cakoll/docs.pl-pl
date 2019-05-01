@@ -3,26 +3,26 @@ title: 4001 — TransportListenerSessionsReceived
 ms.date: 03/30/2017
 ms.assetid: a2c7bb92-f02d-4947-98fd-247b0a55d814
 ms.openlocfilehash: 0855ff545a743c26b11c78e3e8af6e34d19d5461
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33465799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951362"
 ---
 # <a name="4001---transportlistenersessionsreceived"></a>4001 — TransportListenerSessionsReceived
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|4001|  
-|Słowa kluczowe|ActivationServices|  
+|Identyfikator|4001|  
+|słowa kluczowe|ActivationServices|  
 |Poziom|Pełny|  
 |Kanał|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany na sesję odbiornika transportu odbierania.  
+ To zdarzenie jest emitowane w sesji odbiornika transportu odbierania.  
   
 ## <a name="message"></a>Komunikat  
- Odebrano z za pośrednictwem "%1" sesję odbiornika transportu  
+ Sesja transportowa odbiornika, odebrania z "%1"  
   
 ## <a name="details"></a>Szczegóły

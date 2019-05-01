@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dekodowanie zadania zagnieżdżonego'
+title: 'Instrukcje: Odpakowywanie zadania zagnieżdżonego'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797127"
 ---
-# <a name="how-to-unwrap-a-nested-task"></a>Instrukcje: Dekodowanie zadania zagnieżdżonego
+# <a name="how-to-unwrap-a-nested-task"></a>Instrukcje: Odpakowywanie zadania zagnieżdżonego
 Może zwracać zadanie z metody, a następnie poczekaj lub kontynuować z tego zadania, jak pokazano w poniższym przykładzie:  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]

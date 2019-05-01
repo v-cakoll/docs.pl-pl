@@ -10,11 +10,11 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951960"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Weryfikowanie dokumentu XML w modelu DOM
 <xref:System.Xml.XmlDocument> Klasy XML w modelu DOM (Document Object) względem schematu XML definicji język (XSD) schematu lub dokumentu definicja typu (DTD) domyślnie weryfikują dane XML tylko sprawdza się, jest poprawnie sformułowany.  
@@ -56,9 +56,9 @@ ms.locfileid: "59298425"
   
  Rozważ następujące opcje podczas sprawdzania poprawności danych XML, zgodnie z ich załadowaniu do modelu DOM.  
   
--   W powyższym przykładzie <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> jest wywoływany przy każdym napotkaniu nieprawidłowego typu. Jeśli <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> nie jest ustawiony na temat weryfikacji <xref:System.Xml.XmlReader>, <xref:System.Xml.Schema.XmlSchemaValidationException> jest generowany, gdy <xref:System.Xml.XmlDocument.Load%2A> jest wywoływana, jeśli dowolny typ atrybutu lub elementu nie jest zgodny z odpowiedniego typu, określona w schemacie sprawdzania poprawności.  
+- W powyższym przykładzie <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> jest wywoływany przy każdym napotkaniu nieprawidłowego typu. Jeśli <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> nie jest ustawiony na temat weryfikacji <xref:System.Xml.XmlReader>, <xref:System.Xml.Schema.XmlSchemaValidationException> jest generowany, gdy <xref:System.Xml.XmlDocument.Load%2A> jest wywoływana, jeśli dowolny typ atrybutu lub elementu nie jest zgodny z odpowiedniego typu, określona w schemacie sprawdzania poprawności.  
   
--   Podczas ładowania dokumentu XML do <xref:System.Xml.XmlDocument> obiektu za pomocą skojarzonego schematu, który definiuje wartości domyślne <xref:System.Xml.XmlDocument> traktuje te ustawienia domyślne tak, jakby były one wyświetlane w dokumencie XML. Oznacza to, że <xref:System.Xml.XmlReader.IsEmptyElement%2A> właściwość zawsze zwraca `false` element, który został przyjmujące wartości domyślne ze schematu. Nawet jeśli w dokumencie XML został on zapisany jako pusty element.  
+- Podczas ładowania dokumentu XML do <xref:System.Xml.XmlDocument> obiektu za pomocą skojarzonego schematu, który definiuje wartości domyślne <xref:System.Xml.XmlDocument> traktuje te ustawienia domyślne tak, jakby były one wyświetlane w dokumencie XML. Oznacza to, że <xref:System.Xml.XmlReader.IsEmptyElement%2A> właściwość zawsze zwraca `false` element, który został przyjmujące wartości domyślne ze schematu. Nawet jeśli w dokumencie XML został on zapisany jako pusty element.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>Weryfikowanie dokumentu XML w modelu DOM  
  <xref:System.Xml.XmlDocument.Validate%2A> Metody <xref:System.Xml.XmlDocument> klasy sprawdza poprawność danych XML załadowane w modelu DOM względem schematów w <xref:System.Xml.XmlDocument> obiektu <xref:System.Xml.XmlDocument.Schemas%2A> właściwości. Po pomyślnej weryfikacji wartości domyślne schematu są stosowane wartości tekstowe są konwertowane na niepodzielne wartości zgodnie z potrzebami i informacje o typie jest skojarzone z elementami zweryfikowanych informacji. W rezultacie typizowanych danych XML zastępuje poprzednio bez typu danych XML.  

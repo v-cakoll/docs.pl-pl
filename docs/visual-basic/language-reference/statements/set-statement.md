@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783880"
 ---
 # <a name="set-statement-visual-basic"></a>Set — Instrukcja (Visual Basic)
 Deklaruje `Set` procedury właściwości używane do przypisywania wartości do właściwości.  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  Opcjonalnie na co najwyżej jeden z `Get` i `Set` instrukcje w tej właściwości. Może to być jeden z następujących elementów:  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>reguły  
   
--   **Mieszanymi poziomami dostępu.** Jeśli zamierzasz zdefiniować właściwości odczytu / zapisu, można opcjonalnie określić poziom dostępu do różnych dla dowolnego `Get` lub `Set` procedury, ale nie oba. Jeśli to zrobisz, procedura poziom dostępu musi być bardziej restrykcyjny niż poziom dostępu do właściwości. Na przykład, jeśli właściwość jest zadeklarowana `Friend`, można zadeklarować `Set` procedury `Private`, ale nie `Public`.  
+- **Mieszanymi poziomami dostępu.** Jeśli zamierzasz zdefiniować właściwości odczytu / zapisu, można opcjonalnie określić poziom dostępu do różnych dla dowolnego `Get` lub `Set` procedury, ale nie oba. Jeśli to zrobisz, procedura poziom dostępu musi być bardziej restrykcyjny niż poziom dostępu do właściwości. Na przykład, jeśli właściwość jest zadeklarowana `Friend`, można zadeklarować `Set` procedury `Private`, ale nie `Public`.  
   
      Jeśli definiujesz `WriteOnly` właściwości `Set` procedury reprezentuje cały właściwość. Nie można zadeklarować dostęp inny poziom `Set`, ponieważ, ustawić dwa poziomy dostępu dla właściwości.  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Zwracanie z procedury właściwości.** Gdy `Set` procedury zwraca do kodu wywołującego, wykonywanie jest kontynuowane po instrukcji, która podano wartość, która ma być przechowywany.  
+- **Zwracanie z procedury właściwości.** Gdy `Set` procedury zwraca do kodu wywołującego, wykonywanie jest kontynuowane po instrukcji, która podano wartość, która ma być przechowywany.  
   
      `Set` procedury własności może zwrócić przy użyciu [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md) lub [instrukcji zakończenia](../../../visual-basic/language-reference/statements/exit-statement.md).  
   

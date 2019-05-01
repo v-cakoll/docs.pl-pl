@@ -14,11 +14,11 @@ ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973462"
 ---
 # <a name="numerics-in-net"></a>Wartości numeryczne na platformie .NET
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
 ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953975"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Konteksty usług dostępne dla typów konwerterów i rozszerzeń znaczników
 Autorzy typów, które obsługują typów konwerterów i znaczników rozszerzenie użycia często muszą mieć informacje kontekstowe o którym użycia znajduje się w znaczniku lub w otaczających struktura grafu obiektów. Informacje mogą być wymagane, aby poprawnie konkretyzacji udostępnionego obiektu lub tak, aby odwołania do obiektu w istniejących obiektach na grafie obiektu jest możliwe. Korzystając z usług programu .NET Framework XAML, kontekst, który może być wymagane jest udostępniany jako serię interfejsy usługi. Odpytuje typu konwertera lub języka znaczników, rozszerzenie kod pomocy technicznej dla usługi za pomocą kontekstu dostawcy usług, który jest dostępny i przekazanych z <xref:System.Xaml.XamlObjectWriter> lub typów pokrewnych. Kontekst schematu XAML jest bezpośrednio dostępny za pośrednictwem jednej takiej usługi. W tym temacie opisano, jak uzyskać dostęp do konteksty usług z implementacji konwertera wartości i wyświetla zazwyczaj dostępnych usług i ich ról.  

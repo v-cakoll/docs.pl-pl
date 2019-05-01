@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959981"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Deklaracja zmiennej obiektu (Visual Basic)
 Instrukcji deklaracji normalne umożliwiają deklarowanie zmiennej obiektu. Dla typu danych, należy określić albo `Object` (czyli [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)) lub dokładniej klasy, z którego ma zostać utworzony obiekt.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>Korzyści wynikające z wczesne powiązania  
  Deklarowanie zmiennej obiektu jako określoną klasę zapewnia kilka korzyści:  
   
--   Kontrola typów automatyczne  
+- Kontrola typów automatyczne  
   
--   Zapewniony dostęp do wszystkich elementów członkowskich określonej klasy  
+- Zapewniony dostęp do wszystkich elementów członkowskich określonej klasy  
   
--   Obsługa Microsoft IntelliSense w edytorze kodu  
+- Obsługa Microsoft IntelliSense w edytorze kodu  
   
--   Lepszej czytelności kodu  
+- Lepszej czytelności kodu  
   
--   Mniej błędów w kodzie  
+- Mniej błędów w kodzie  
   
--   Błędy wyłapywane w czas kompilacji, a nie czasu wykonywania  
+- Błędy wyłapywane w czas kompilacji, a nie czasu wykonywania  
   
--   Szybsze wykonywanie kodu  
+- Szybsze wykonywanie kodu  
   
 ## <a name="access-to-object-variable-members"></a>Dostęp do obiektu zmiennych składowych  
  Gdy `Option Strict` włączeniu `On`, zmienna obiektu dostęp do metod i właściwości klasy, z którym trzeba je zadeklarować. Ilustruje to poniższy przykład.  

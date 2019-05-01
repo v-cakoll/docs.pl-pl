@@ -3,11 +3,11 @@ title: Wybieranie działania
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
 ms.openlocfilehash: b9ee6c06377760d27bc54d39c1d1f3ecf67ea0d8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909428"
 ---
 # <a name="pick-activity"></a>Wybieranie działania
 <xref:System.Activities.Statements.Pick> Działania upraszcza modelowania zestawu wyzwalaczy zdarzeń, następuje ich odpowiednie programy obsługi.  A <xref:System.Activities.Statements.Pick> aktywności zawiera zbiór <xref:System.Activities.Statements.PickBranch> działań, gdzie każdy <xref:System.Activities.Statements.PickBranch> jest powiązany między <xref:System.Activities.Statements.PickBranch.Trigger%2A> działania i <xref:System.Activities.Statements.PickBranch.Action%2A> działania.  W czasie wykonywania wyzwalaczy dla wszystkich oddziałów są wykonywane równolegle.  Po zakończeniu jeden wyzwalacz, następnie jest wykonywany swoje działania odpowiednie, a inne wyzwalacze są anulowane.  Zachowanie [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> działanie jest podobne do [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] <xref:System.Workflow.Activities.ListenActivity> działania.  

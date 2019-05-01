@@ -10,11 +10,11 @@ ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969315"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Optymalizacja udostępnionej usługi hostingu sieci Web
 Jeśli jesteś administratorem serwera, który jest współużytkowany przez kilka małych witryn sieci Web hostingu, można zoptymalizować wydajność i zwiększyć wydajność witryny, dodając następujące `gcTrimCommitOnLowMemory` ustawienie `runtime` węzeł w pliku konfigurację Aspnet.config na platformie .NET katalog:  

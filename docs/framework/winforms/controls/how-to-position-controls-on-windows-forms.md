@@ -16,11 +16,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913266"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Instrukcje: kontrolki pozycji na formularzach systemu Windows
 Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:System.Windows.Forms.Control.Location%2A> właściwości.  
@@ -30,7 +30,7 @@ Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:S
   
 ### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Aby ustalić położenie formantu na powierzchni projektowej projektanta Windows Forms  
   
--   Przeciągnij formant do odpowiedniej lokalizacji za pomocą myszy.  
+- Przeciągnij formant do odpowiedniej lokalizacji za pomocą myszy.  
   
     > [!NOTE]
     >  Wybierz kontrolkę i przenieś ją za pomocą strzałki kluczy, aby umieść ją na bardziej precyzyjne. Ponadto *linii przyciągania* ułatwienie umieszczenie kontrolki dokładnie w formularzu. Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
 ms.openlocfilehash: cd14a20920b11cb198cfc91fd9be6ef83ca05c17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957524"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>Implementacja wzorca formantu przełącznika automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,13 +25,13 @@ ms.locfileid: "59182159"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki przełącznika, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Formanty, które nie zachowują stan, gdy aktywowany, takie jak przyciski, przyciski paska narzędzi i hiperłączy, musi implementować <xref:System.Windows.Automation.Provider.IInvokeProvider> zamiast tego.  
+- Formanty, które nie zachowują stan, gdy aktywowany, takie jak przyciski, przyciski paska narzędzi i hiperłączy, musi implementować <xref:System.Windows.Automation.Provider.IInvokeProvider> zamiast tego.  
   
--   Kontrolki musi przechodzić przez jego <xref:System.Windows.Automation.ToggleState> w następującej kolejności: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> i, jeśli jest obsługiwany, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+- Kontrolki musi przechodzić przez jego <xref:System.Windows.Automation.ToggleState> w następującej kolejności: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> i, jeśli jest obsługiwany, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
   
--   <xref:System.Windows.Automation.TogglePattern> udostępnia metody SetState(newState) z powodu problemów z otaczającego bezpośrednie ustawienie pola wyboru trzy-stanowy bez okrągło jego odpowiedniego <xref:System.Windows.Automation.ToggleState> sekwencji.  
+- <xref:System.Windows.Automation.TogglePattern> udostępnia metody SetState(newState) z powodu problemów z otaczającego bezpośrednie ustawienie pola wyboru trzy-stanowy bez okrągło jego odpowiedniego <xref:System.Windows.Automation.ToggleState> sekwencji.  
   
--   RadioButton — formant nie implementuje <xref:System.Windows.Automation.Provider.IToggleProvider>, ponieważ nie jest zdolny okrągło jego stany prawidłowe.  
+- RadioButton — formant nie implementuje <xref:System.Windows.Automation.Provider.IToggleProvider>, ponieważ nie jest zdolny okrągło jego stany prawidłowe.  
   
 <a name="Required_Members_for_IToggleProvider"></a>   
 ## <a name="required-members-for-itoggleprovider"></a>Wymagane elementy IToggleProvider  

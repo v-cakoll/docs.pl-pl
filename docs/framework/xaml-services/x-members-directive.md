@@ -3,11 +3,11 @@ title: x:Members — dyrektywa
 ms.date: 03/30/2017
 ms.assetid: 155b393d-3b49-4c5a-8c9e-b3d9893af4e4
 ms.openlocfilehash: d23e6b459af932e0a6f69309f26a1cce70a9d256
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938895"
 ---
 # <a name="xmembers-directive"></a>x:Members — dyrektywa
 Zawiera zestaw elementów członkowskich, które są zdefiniowane w znaczniku, które stosuje się do x: Class elementu nadrzędnego.  

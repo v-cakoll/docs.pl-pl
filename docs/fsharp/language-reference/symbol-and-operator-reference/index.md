@@ -3,11 +3,11 @@ title: Odwołanie do symbolu i operatora
 description: Dowiedz się więcej o symboli i operatorów, które są używane w F# języka programowania.
 ms.date: 02/11/2019
 ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982746"
 ---
 # <a name="symbol-and-operator-reference"></a>Odwołanie do symbolu i operatora
 

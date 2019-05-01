@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783828"
 ---
 # <a name="synclock-statement"></a>SyncLock — Instrukcja
 Uzyskuje blokady na wyłączność dla bloku instrukcji, przed wykonaniem tego bloku.  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>reguły  
   
--   Podręcznik rozgałęziania. Nie można rozgałęzić do `SyncLock` uniemożliwiaj poza blokiem.  
+- Podręcznik rozgałęziania. Nie można rozgałęzić do `SyncLock` uniemożliwiaj poza blokiem.  
   
--   Wartość obiektu blokady. Wartość `lockobject` nie może być `Nothing`. Należy utworzyć obiekt blokady, zanim użyjesz go w `SyncLock` instrukcji.  
+- Wartość obiektu blokady. Wartość `lockobject` nie może być `Nothing`. Należy utworzyć obiekt blokady, zanim użyjesz go w `SyncLock` instrukcji.  
   
      Nie można zmienić wartość `lockobject` podczas wykonywania `SyncLock` bloku. Mechanizm wymaga, aby zablokować obiektu pozostają niezmienione.  
   
--   Nie można użyć [Await](../../../visual-basic/language-reference/operators/await-operator.md) operatora w `SyncLock` bloku.  
+- Nie można użyć [Await](../../../visual-basic/language-reference/operators/await-operator.md) operatora w `SyncLock` bloku.  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   Mechanizm. Gdy wątek osiągnie `SyncLock` instrukcji, ocenia `lockobject` wyrażenia i zawiesza wykonywanie, dopóki nie otrzymuje blokady na wyłączność w obiekcie zwracanym przez wyrażenie. Gdy inny wątek osiągnie `SyncLock` instrukcji, go nie uzyskania blokady do momentu pierwszego wątek `End SyncLock` instrukcji.  
+- Mechanizm. Gdy wątek osiągnie `SyncLock` instrukcji, ocenia `lockobject` wyrażenia i zawiesza wykonywanie, dopóki nie otrzymuje blokady na wyłączność w obiekcie zwracanym przez wyrażenie. Gdy inny wątek osiągnie `SyncLock` instrukcji, go nie uzyskania blokady do momentu pierwszego wątek `End SyncLock` instrukcji.  
   
--   Chronione dane. Jeśli `lockobject` jest `Shared` zmiennej blokady na wyłączność zapobiega wątku w żadnym wystąpieniu klasy wykonywania `SyncLock` blokowania podczas jego wykonywania innych wątków. Chroni to dane, które jest współużytkowana przez wszystkie wystąpienia.  
+- Chronione dane. Jeśli `lockobject` jest `Shared` zmiennej blokady na wyłączność zapobiega wątku w żadnym wystąpieniu klasy wykonywania `SyncLock` blokowania podczas jego wykonywania innych wątków. Chroni to dane, które jest współużytkowana przez wszystkie wystąpienia.  
   
      Jeśli `lockobject` jest zmienną instance (nie `Shared`), Blokada zapobiega wątku działającego w ramach bieżącego wystąpienia wykonania `SyncLock` bloku, w tym samym czasie jako inny wątek w tym samym wystąpieniu. Chroni to danych obsługiwanych przez poszczególne wystąpienia.  
   
--   Pozyskiwanie i wersji. A `SyncLock` blok, który zachowuje się jak `Try...Finally` konstrukcji, w którym `Try` bloku uzyskuje blokady na wyłączność w `lockobject` i `Finally` bloku zwalnia go. W związku z tym `SyncLock` bloku gwarantuje wydanie lock, niezależnie od tego, jak zamknąć blok. Ta zasada obowiązuje nawet w przypadku nieobsługiwanego wyjątku.  
+- Pozyskiwanie i wersji. A `SyncLock` blok, który zachowuje się jak `Try...Finally` konstrukcji, w którym `Try` bloku uzyskuje blokady na wyłączność w `lockobject` i `Finally` bloku zwalnia go. W związku z tym `SyncLock` bloku gwarantuje wydanie lock, niezależnie od tego, jak zamknąć blok. Ta zasada obowiązuje nawet w przypadku nieobsługiwanego wyjątku.  
   
--   Struktura wywołuje. `SyncLock` Blok uzyskuje i zwalnia blokady na wyłączność przez wywołanie metody `Enter` i `Exit` metody `Monitor` klasy w <xref:System.Threading> przestrzeni nazw.  
+- Struktura wywołuje. `SyncLock` Blok uzyskuje i zwalnia blokady na wyłączność przez wywołanie metody `Enter` i `Exit` metody `Monitor` klasy w <xref:System.Threading> przestrzeni nazw.  
   
 ## <a name="programming-practices"></a>Programowanie rozwiązań  
  `lockobject` Wyrażenia zawsze powinna być obiekt, który należy wyłącznie do swojej klasy. Należy zadeklarować `Private` zmiennej obiektu, aby chronić dane należące do bieżącego wystąpienia lub `Private Shared` zmiennej obiektu, aby chronić dane wspólne dla wszystkich wystąpień.  

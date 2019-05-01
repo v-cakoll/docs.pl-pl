@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
 ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054572"
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>Instrukcje: Tworzenie krzywej Beziera drugiego stopnia
 W tym przykładzie pokazano, jak utworzyć krzywą Beziera drugiego stopnia.  Aby utworzyć krzywą Beziera drugiego stopnia, użyj <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, i <xref:System.Windows.Media.QuadraticBezierSegment> klasy.  

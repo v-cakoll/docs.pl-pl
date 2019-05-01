@@ -3,20 +3,20 @@ title: Przegląd zabezpieczeń serwera SQL
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922203"
 ---
 # <a name="overview-of-sql-server-security"></a>Przegląd zabezpieczeń serwera SQL
 Strategii ochronę w głębi z nakładającymi się warstw zabezpieczeń, to najlepszy sposób na zagrożenia bezpieczeństwa licznika. SQL Server udostępnia architekturę zabezpieczeń, która umożliwia administratorów baz danych i deweloperom tworzenie aplikacji w bezpiecznej bazie danych i licznik zagrożenia. Każda wersja programu SQL Server zostały udoskonalone w poprzednich wersjach programu SQL Server wraz z wprowadzeniem nowych funkcji. Zabezpieczeń nie jest dostarczany w polu. Każda aplikacja jest unikatowa w jej wymagania dotyczące zabezpieczeń. Deweloperzy muszą poznać kombinację funkcji i funkcje są najbardziej odpowiednie do licznika znanymi zagrożeniami i przewidywać zagrożenia, które mogą się pojawić w przyszłości.  
   
  Wystąpienie programu SQL Server zawiera hierarchiczną kolekcję jednostek, rozpoczynając od serwera. Każdy serwer zawiera wiele baz danych, a każda baza danych zawiera kolekcję obiektów zabezpieczanych. Co zabezpieczanych programu SQL Server ma skojarzone *uprawnienia* , może zostać przydzielony *jednostki*, czyli pojedynczej, grupy lub proces udzielony dostęp do programu SQL Server. Struktura zabezpieczeń programu SQL Server zarządza dostępem do zabezpieczanych obiektów za pomocą *uwierzytelniania* i *autoryzacji*.  
   
--   Uwierzytelnianie to proces logowania do serwera SQL, podmiot zabezpieczeń za pomocą którego żąda dostępu, przesyłając poświadczenia, które ocenia serwera. Uwierzytelnianie ustala tożsamość użytkownika lub procesu uwierzytelniane.  
+- Uwierzytelnianie to proces logowania do serwera SQL, podmiot zabezpieczeń za pomocą którego żąda dostępu, przesyłając poświadczenia, które ocenia serwera. Uwierzytelnianie ustala tożsamość użytkownika lub procesu uwierzytelniane.  
   
--   Autoryzacja to proces określania, że zasoby zabezpieczanego podmiot zabezpieczeń mogą uzyskiwać dostęp do i jakie operacje są dozwolone dla tych zasobów.  
+- Autoryzacja to proces określania, że zasoby zabezpieczanego podmiot zabezpieczeń mogą uzyskiwać dostęp do i jakie operacje są dozwolone dla tych zasobów.  
   
  Tematy w tej sekcji opisano podstawy zabezpieczeń programu SQL Server, linków do pełną dokumentację w odpowiedniej wersji programu SQL Server — książki Online.  
   

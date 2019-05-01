@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972357"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Błędy czasu projektowania w narzędziu Projektant dla formularzy systemu Windows
 W tym temacie wyjaśniono znaczenie i użycie listy błędów podczas projektowania, który pojawia się w programie Microsoft Visual Studio, gdy Windows Forms Designer nie można załadować. Jeśli zostanie wyświetlona lista ten błąd, należy nie ich interpretacji jako błąd w projektancie, ale także jako pomoc do poprawiania błędów w kodzie.  
@@ -25,11 +25,11 @@ W tym temacie wyjaśniono znaczenie i użycie listy błędów podczas projektowa
   
  Można rozwinąć lub zwinąć do kategorii błędów, klikając nagłówek kategorii błędów lub przez kliknięcie przycisku cudzysłów ostrokątny rozwijania/zwijania. Po rozwinięciu do kategorii błędów, zostanie wyświetlony następujący dodatkowej pomocy:  
   
--   Wystąpienia tego błędu.  
+- Wystąpienia tego błędu.  
   
--   Pomoc dotycząca tego błędu.  
+- Pomoc dotycząca tego błędu.  
   
--   Posty na forum dotyczące tego błędu.  
+- Posty na forum dotyczące tego błędu.  
   
 ### <a name="instances-of-this-error"></a>Wystąpienia tego błędu  
  Dodatkową pomoc, listę wszystkich wystąpień błąd w bieżącym projekcie. Wiele błędów obejmują dokładną lokalizację, w następującym formacie: *[Nazwa projektu]* *[nazwa formularza]* wiersza:*[numer wiersza]* kolumny:*— kolumny numer*. **Przejdź do kodu** link umożliwia przejście do lokalizacji w kodzie, w którym występuje błąd.  
@@ -45,9 +45,9 @@ W tym temacie wyjaśniono znaczenie i użycie listy błędów podczas projektowa
 ### <a name="forum-posts-about-this-error"></a>Posty na forum dotyczące tego błędu  
  Dodatkową pomoc zawiera łącze do wpisy na forum MSDN dotyczące błędu. Fora są przeszukiwane w oparciu o ciąg komunikatu o błędzie. Możesz też spróbować przeszukiwanie forów następujące:  
   
--   [Forum projektanta programu Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Forum projektanta programu Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows Forms forów](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Windows Forms forów](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignoruj i Kontynuuj  
  Można zignorować warunek błędu i kontynuowania ładowania projektanta. Wybranie tej akcji może spowodować nieoczekiwane zachowanie. Na przykład formanty nie może występować na powierzchni projektowej.  

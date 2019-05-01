@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964258"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 Informacje o domenie aplikacji  
@@ -124,6 +124,6 @@ class AppDomainInfo
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957589"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager — Interfejs
 Udostępnia metody, które umożliwiają dostęp do i kontrolę nad kontekstu zabezpieczeń aktualnie wykonywany wątek.  
@@ -42,13 +42,13 @@ Udostępnia metody, które umożliwiają dostęp do i kontrolę nad kontekstu za
   
  Środowisko CLR obsługuje kontekstu wątków zarządzanych wewnętrznie. Wysyła zapytanie dotyczące procesu `IHostSecurityManager` w następujących sytuacjach:  
   
--   W wątku finalizatora podczas wykonywania finalizatora.  
+- W wątku finalizatora podczas wykonywania finalizatora.  
   
--   Podczas wykonywania konstruktora klasy i moduł.  
+- Podczas wykonywania konstruktora klasy i moduł.  
   
--   W punktach asynchroniczne w wątku roboczego, w wywołaniach [ihostthreadpoolmanager::QueueUserWorkItem —](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) metody.  
+- W punktach asynchroniczne w wątku roboczego, w wywołaniach [ihostthreadpoolmanager::QueueUserWorkItem —](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) metody.  
   
--   Obsługę portów zakończenia operacji We/Wy.  
+- Obsługę portów zakończenia operacji We/Wy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

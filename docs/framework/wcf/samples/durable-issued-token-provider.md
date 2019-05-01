@@ -3,11 +3,11 @@ title: Niezawodny dostawca wystawionych tokenów
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
 ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990213"
 ---
 # <a name="durable-issued-token-provider"></a>Niezawodny dostawca wystawionych tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostawca wystawionych tokenów.  
@@ -15,21 +15,21 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostaw
 ## <a name="discussion"></a>Dyskusja  
  Dostawca tokenu w Windows Communication Foundation (WCF) umożliwia podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:  
   
--   Jeśli masz Magazyn poświadczeń, który wbudowanego dostawcy tokenu nie może działać z.  
+- Jeśli masz Magazyn poświadczeń, który wbudowanego dostawcy tokenu nie może działać z.  
   
--   Jeśli chcesz udostępnić własny niestandardowy mechanizm przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje, na kiedy klient WCF przy użyciu poświadczeń.  
+- Jeśli chcesz udostępnić własny niestandardowy mechanizm przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje, na kiedy klient WCF przy użyciu poświadczeń.  
   
--   Jeśli tworzysz niestandardowy token.  
+- Jeśli tworzysz niestandardowy token.  
   
  Niniejszy przykład pokazuje sposób tworzenia niestandardowego dostawcy tokenu, który buforuje tokeny wystawione przez Usługa tokenu zabezpieczającego (STS).  
   
  Aby podsumować, w przykładzie pokazano poniżej:  
   
--   Jak można skonfigurować klienta przy użyciu niestandardowego dostawcy tokenów.  
+- Jak można skonfigurować klienta przy użyciu niestandardowego dostawcy tokenów.  
   
--   W jaki sposób wystawione tokeny mogą być buforowane i dostarczane do klienta platformy WCF.  
+- W jaki sposób wystawione tokeny mogą być buforowane i dostarczane do klienta platformy WCF.  
   
--   Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 serwera.  
+- Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 serwera.  
   
  W tym przykładzie składa się z konsoli programu klienckiego (Client.exe), program konsoli usługi tokenu zabezpieczeń (Securitytokenservice.exe) i program konsoli usługi (Service.exe). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź". Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia). Klient pobiera zabezpieczeń token z Usługa tokenu zabezpieczającego (STS) i sprawia, że żądań synchronicznych usługi dla operacji matematycznych danego i odpowiedzi usługi z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.  
   

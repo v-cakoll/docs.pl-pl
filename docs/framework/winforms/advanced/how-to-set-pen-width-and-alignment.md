@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967300"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Instrukcje: Ustawianie szerokości i wyrównania pióra
 Po utworzeniu <xref:System.Drawing.Pen>, szerokość pióra można podać jako jeden z argumentów do konstruktora. Możesz również zmienić szerokość z <xref:System.Drawing.Pen.Width%2A> właściwość <xref:System.Drawing.Pen> klasy.  
@@ -26,7 +26,7 @@ Po utworzeniu <xref:System.Drawing.Pen>, szerokość pióra można podać jako j
   
 ### <a name="to-vary-the-width-of-a-pen"></a>Aby zmienić jego szerokość pióra  
   
--   Ustaw wartość <xref:System.Drawing.Pen.Alignment%2A> właściwość <xref:System.Drawing.Drawing2D.PenAlignment.Center> (ustawienie domyślne) do określenia, czy pikseli z zielonym pióro zostanie tematyka koncentruje się na teoretycznych wiersza. Poniższa ilustracja przedstawia wynikowego wiersza.  
+- Ustaw wartość <xref:System.Drawing.Pen.Alignment%2A> właściwość <xref:System.Drawing.Drawing2D.PenAlignment.Center> (ustawienie domyślne) do określenia, czy pikseli z zielonym pióro zostanie tematyka koncentruje się na teoretycznych wiersza. Poniższa ilustracja przedstawia wynikowego wiersza.  
   
      ![Czarna linia alokowania elastycznego za pomocą Wyróżnij zielony.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ Po utworzeniu <xref:System.Drawing.Pen>, szerokość pióra można podać jako j
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>Aby zmienić wyrównania pióra  
   
--   Ustaw wartość <xref:System.Drawing.Pen.Alignment%2A> właściwości <xref:System.Drawing.Drawing2D.PenAlignment.Center> do określenia, czy pikseli narysować za pomocą pióra zielony będzie wyśrodkowana na krawędzi prostokąta.  
+- Ustaw wartość <xref:System.Drawing.Pen.Alignment%2A> właściwości <xref:System.Drawing.Drawing2D.PenAlignment.Center> do określenia, czy pikseli narysować za pomocą pióra zielony będzie wyśrodkowana na krawędzi prostokąta.  
   
      Na poniższej ilustracji przedstawiono wynikowe prostokąt:
   
@@ -48,7 +48,7 @@ Po utworzeniu <xref:System.Drawing.Pen>, szerokość pióra można podać jako j
   
 ### <a name="to-create-an-inset-pen"></a>Aby utworzyć wstawki pióra  
   
--   Zmienianie wyrównania pióra zielony, modyfikując trzecia instrukcja w powyższym przykładzie kodu w następujący sposób:  
+- Zmienianie wyrównania pióra zielony, modyfikując trzecia instrukcja w powyższym przykładzie kodu w następujący sposób:  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  

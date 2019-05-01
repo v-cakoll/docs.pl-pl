@@ -6,22 +6,22 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951596"
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
 <a name="introduction"></a> Windows Presentation Foundation (WPF) to struktura prezentacji, która może służyć do tworzenia następujących typów aplikacji:  
   
--   Aplikacje autonomiczne (tradycyjny styl [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplikacje tworzone w zestawach wykonywalnych, które są zainstalowane i uruchomienie z komputera klienta).  
+- Aplikacje autonomiczne (tradycyjny styl [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplikacje tworzone w zestawach wykonywalnych, które są zainstalowane i uruchomienie z komputera klienta).  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplikacje składające się z nawigacji strony, które są tworzone w zestawach wykonywalnych i hostowanych przez przeglądarki sieci Web, takich jak [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] lub Mozilla Firefox).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplikacje składające się z nawigacji strony, które są tworzone w zestawach wykonywalnych i hostowanych przez przeglądarki sieci Web, takich jak [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] lub Mozilla Firefox).  
   
--   Biblioteki Kontrolki niestandardowe (niewykonywalnej zestawów zawierających formanty wielokrotnego użytku).  
+- Biblioteki Kontrolki niestandardowe (niewykonywalnej zestawów zawierających formanty wielokrotnego użytku).  
   
--   Biblioteki klas (niewykonywalnej zestawów zawierających klasy wielokrotnego użytku).  
+- Biblioteki klas (niewykonywalnej zestawów zawierających klasy wielokrotnego użytku).  
   
 > [!NOTE]
 >  Używanie typów WPF w usłudze Windows jest zdecydowanie odradzane. Jeśli spróbujesz użyć tych funkcji w usłudze Windows może nie działają zgodnie z oczekiwaniami.  
@@ -32,21 +32,21 @@ ms.locfileid: "59211065"
 ## <a name="application-management"></a>Zarządzanie aplikacjami  
  Plik wykonywalny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje często wymagają podstawowy zestaw funkcji, który obejmuje następujące elementy:  
   
--   Tworzenie i zarządzanie nimi wspólnej infrastruktury aplikacji (w tym tworzenia metody punktu wejścia i pętlę komunikatów Windows, aby otrzymać systemu i komunikaty wejściowe).  
+- Tworzenie i zarządzanie nimi wspólnej infrastruktury aplikacji (w tym tworzenia metody punktu wejścia i pętlę komunikatów Windows, aby otrzymać systemu i komunikaty wejściowe).  
   
--   Śledzenie i interakcji z cyklu życia aplikacji.  
+- Śledzenie i interakcji z cyklu życia aplikacji.  
   
--   Trwa pobieranie i przetwarzanie parametry wiersza polecenia.  
+- Trwa pobieranie i przetwarzanie parametry wiersza polecenia.  
   
--   Udostępnianie właściwości zakresu aplikacji i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zasobów.  
+- Udostępnianie właściwości zakresu aplikacji i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zasobów.  
   
--   Wykrywanie i przetwarzanie nieobsługiwanych wyjątków.  
+- Wykrywanie i przetwarzanie nieobsługiwanych wyjątków.  
   
--   Zwracanie kodów zakończenia.  
+- Zwracanie kodów zakończenia.  
   
--   Zarządzanie systemem windows w aplikacje autonomiczne.  
+- Zarządzanie systemem windows w aplikacje autonomiczne.  
   
--   Śledzenie nawigacji w [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]i aplikacji autonomicznych przy użyciu systemu windows nawigacji i ramki.  
+- Śledzenie nawigacji w [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]i aplikacji autonomicznych przy użyciu systemu windows nawigacji i ramki.  
   
  Te możliwości są implementowane przez <xref:System.Windows.Application> klasy, która dodawanie do aplikacji przy użyciu *definicji aplikacji*.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "59211065"
 ## <a name="windows-and-dialog-boxes"></a>Windows i oknach dialogowych  
  Posługują się użytkownicy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji autonomicznych przy użyciu systemu windows. Okno ma na celu hostowanie zawartości aplikacji i ujawniać funkcjonalność aplikacji, umożliwiający użytkownikom na interakcję z zawartością. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], systemu windows są hermetyzowane przez <xref:System.Windows.Window> klasy, który obsługuje:  
   
--   Tworzenie i wyświetlanie systemu windows.  
+- Tworzenie i wyświetlanie systemu windows.  
   
--   Ustanawianie relacji okno właściciela/właścicielem.  
+- Ustanawianie relacji okno właściciela/właścicielem.  
   
--   Konfigurowanie wygląd okna (na przykład, rozmiar, lokalizację, ikony, tekst paska tytułu, obramowania).  
+- Konfigurowanie wygląd okna (na przykład, rozmiar, lokalizację, ikony, tekst paska tytułu, obramowania).  
   
--   Śledzenie i interakcji z okresem istnienia okna.  
+- Śledzenie i interakcji z okresem istnienia okna.  
   
  Aby uzyskać więcej informacji, zobacz [Przegląd Windows WPF](wpf-windows-overview.md).  
   
@@ -84,23 +84,23 @@ ms.locfileid: "59211065"
 ## <a name="navigation"></a>Nawigacja  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje nawigacji w stylu dla sieci Web za pomocą stron (<xref:System.Windows.Controls.Page>) i hiperłączy (<xref:System.Windows.Documents.Hyperlink>). Nawigacja mogą być implementowane w na różne sposoby, które obejmują następujące czynności:  
   
--   Strony autonomicznych, które znajdują się w przeglądarce sieci Web.  
+- Strony autonomicznych, które znajdują się w przeglądarce sieci Web.  
   
--   Strony są kompilowane do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] jest hostowana w przeglądarce sieci Web.  
+- Strony są kompilowane do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] jest hostowana w przeglądarce sieci Web.  
   
--   Strony kompilowane do aplikacji autonomicznej i pracujących na oknie nawigacji (<xref:System.Windows.Navigation.NavigationWindow>).  
+- Strony kompilowane do aplikacji autonomicznej i pracujących na oknie nawigacji (<xref:System.Windows.Navigation.NavigationWindow>).  
   
--   Stron, które są hostowane przez ramki (<xref:System.Windows.Controls.Frame>), może być hostowana na stronie autonomicznego lub strona skompilowane w ramach jednej [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] lub aplikacją.  
+- Stron, które są hostowane przez ramki (<xref:System.Windows.Controls.Frame>), może być hostowana na stronie autonomicznego lub strona skompilowane w ramach jednej [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] lub aplikacją.  
   
  Aby ułatwić nawigację, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wykonuje następujące czynności:  
   
--   <xref:System.Windows.Navigation.NavigationService>, aparat nawigacji udostępnione do przetwarzania żądań nawigacji, które jest używane przez <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, i [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] do obsługi nawigacji w obrębie aplikacji.  
+- <xref:System.Windows.Navigation.NavigationService>, aparat nawigacji udostępnione do przetwarzania żądań nawigacji, które jest używane przez <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, i [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] do obsługi nawigacji w obrębie aplikacji.  
   
--   Metody nawigacji do zainicjowania nawigacji.  
+- Metody nawigacji do zainicjowania nawigacji.  
   
--   Nawigacja zdarzenia do śledzenia i wchodzić w interakcje z okresem istnienia nawigacji.  
+- Nawigacja zdarzenia do śledzenia i wchodzić w interakcje z okresem istnienia nawigacji.  
   
--   Zapamiętywanie przy użyciu arkusza przeglądania do przodu i Wstecz, którego można się sprawdził i manipulować.  
+- Zapamiętywanie przy użyciu arkusza przeglądania do przodu i Wstecz, którego można się sprawdził i manipulować.  
   
  Aby uzyskać informacje, zobacz [Nawigacja — omówienie](navigation-overview.md).  
   

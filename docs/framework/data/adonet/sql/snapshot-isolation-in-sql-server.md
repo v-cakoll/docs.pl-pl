@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
 ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876359"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Izolacja migawki w programie SQL Server
 Izolacja migawki zwiększa współbieżności dla aplikacji OLTP.  
@@ -41,35 +41,35 @@ SET READ_COMMITTED_SNAPSHOT ON
   
  Cztery poziomy izolacji, zdefiniowane w normie SQL 92 były obsługiwane w wcześniejsze wersje programu SQL Server:  
   
--   READ UNCOMMITTED jest najmniej restrykcyjny poziom izolacji, ponieważ ignoruje ona blokad umieszczonych przez inne transakcje. Wykonywanie w obszarze odczytu NIEZATWIERDZONE transakcje można odczytać wartości zmodyfikowane dane, które nie zostały jeszcze zatwierdzone przez inne transakcje; są one nazywane "odczytów".  
+- READ UNCOMMITTED jest najmniej restrykcyjny poziom izolacji, ponieważ ignoruje ona blokad umieszczonych przez inne transakcje. Wykonywanie w obszarze odczytu NIEZATWIERDZONE transakcje można odczytać wartości zmodyfikowane dane, które nie zostały jeszcze zatwierdzone przez inne transakcje; są one nazywane "odczytów".  
   
--   READ COMMITTED jest domyślny poziom izolacji dla programu SQL Server. Uniemożliwia ona odczytów, określając, że instrukcji nie można odczytać wartości danych, które zostały zmodyfikowane, ale nie zostały jeszcze zatwierdzone przez inne transakcje. Inne transakcje nadal można modyfikować, wstawiania lub usuwania danych między wykonaniami pojedyncze instrukcje w ramach bieżącej transakcji,-powtarzalnego odczytu lub data "fantomu".  
+- READ COMMITTED jest domyślny poziom izolacji dla programu SQL Server. Uniemożliwia ona odczytów, określając, że instrukcji nie można odczytać wartości danych, które zostały zmodyfikowane, ale nie zostały jeszcze zatwierdzone przez inne transakcje. Inne transakcje nadal można modyfikować, wstawiania lub usuwania danych między wykonaniami pojedyncze instrukcje w ramach bieżącej transakcji,-powtarzalnego odczytu lub data "fantomu".  
   
--   REPEATABLE READ jest bardziej restrykcyjny poziom izolacji, niż READ COMMITTED. Jego obejmuje zatwierdzone odczytu, a ponadto określa, że żadne inne transakcje modyfikować lub usuwać dane, który został odczytany przez bieżącą transakcję do czasu zatwierdzenia bieżącej transakcji. Współbieżność jest niższy niż w przypadku odczytu zatwierdzone, ponieważ udostępnionego blokady odczytu danych są przechowywane na czas trwania transakcji, a nie zostały udostępnione na końcu każdej instrukcji.  
+- REPEATABLE READ jest bardziej restrykcyjny poziom izolacji, niż READ COMMITTED. Jego obejmuje zatwierdzone odczytu, a ponadto określa, że żadne inne transakcje modyfikować lub usuwać dane, który został odczytany przez bieżącą transakcję do czasu zatwierdzenia bieżącej transakcji. Współbieżność jest niższy niż w przypadku odczytu zatwierdzone, ponieważ udostępnionego blokady odczytu danych są przechowywane na czas trwania transakcji, a nie zostały udostępnione na końcu każdej instrukcji.  
   
--   Możliwy do SERIALIZACJI jest najbardziej restrykcyjny poziom izolacji, ponieważ umożliwia zablokowanie całych zakresów kluczy i posiada blokady do czasu ukończenia transakcji. On obejmuje odczyt POWTARZALNY i dodaje ograniczenie, które inne transakcje nie można wstawić nowe wiersze do zakresów, które zostały odczytane przez transakcję do czasu ukończenia transakcji.  
+- Możliwy do SERIALIZACJI jest najbardziej restrykcyjny poziom izolacji, ponieważ umożliwia zablokowanie całych zakresów kluczy i posiada blokady do czasu ukończenia transakcji. On obejmuje odczyt POWTARZALNY i dodaje ograniczenie, które inne transakcje nie można wstawić nowe wiersze do zakresów, które zostały odczytane przez transakcję do czasu ukończenia transakcji.  
   
  Aby uzyskać więcej informacji, zobacz [przewodnik przechowywania wersji wierszy i blokowanie transakcji](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Rozszerzeń poziomu izolacji migawki  
  SQL Server wprowadził rozszerzenia do poziomu izolacji SQL 92 z wprowadzeniem poziomie izolacji MIGAWKI i implementację dodatkowych READ COMMITTED. Poziom izolacji READ_COMMITTED_SNAPSHOT przezroczyste zastąpić READ COMMITTED dla wszystkich transakcji.  
   
--   Izolacja MIGAWKI Określa, czy dane odczytane wewnątrz transakcji nigdy nie będzie odzwierciedlać zmiany wprowadzone przez innych równoczesnych transakcji. Transakcja korzysta z wersji wierszy danych, znajdujące się po rozpoczęciu transakcji. Blokady nie są umieszczane w danych podczas jej odczytywania tak transakcji MIGAWKI nie blokują inne transakcje z zapisywania danych. Transakcje zapisu danych nie blokują transakcji migawki na podstawie odczytu danych. Musisz włączyć izolację migawki przez ustawienie opcji bazy danych ALLOW_SNAPSHOT_ISOLATION, aby można było go używać.  
+- Izolacja MIGAWKI Określa, czy dane odczytane wewnątrz transakcji nigdy nie będzie odzwierciedlać zmiany wprowadzone przez innych równoczesnych transakcji. Transakcja korzysta z wersji wierszy danych, znajdujące się po rozpoczęciu transakcji. Blokady nie są umieszczane w danych podczas jej odczytywania tak transakcji MIGAWKI nie blokują inne transakcje z zapisywania danych. Transakcje zapisu danych nie blokują transakcji migawki na podstawie odczytu danych. Musisz włączyć izolację migawki przez ustawienie opcji bazy danych ALLOW_SNAPSHOT_ISOLATION, aby można było go używać.  
   
--   Bazy danych READ_COMMITTED_SNAPSHOT określa zachowanie domyślne poziomu izolacji READ COMMITTED, gdy izolacja migawki jest włączona w bazie danych. Jeśli nie zostanie jawnie READ_COMMITTED_SNAPSHOT ON, READ COMMITTED jest stosowany do wszystkich transakcji niejawnej. Daje to samo jak opcja READ_COMMITTED_SNAPSHOT wyłączone (ustawienie domyślne). Gdy READ_COMMITTED_SNAPSHOT wyłączone są włączone, aparatu bazy danych używa udostępnionego blokady do wymuszania domyślny poziom izolacji. Jeśli bazy danych READ_COMMITTED_SNAPSHOT jest ustawiona na wartość ON, aparat bazy danych używa izolacji migawki i przechowywania wersji wierszy jako domyślne, zamiast używania blokad, aby chronić dane.  
+- Bazy danych READ_COMMITTED_SNAPSHOT określa zachowanie domyślne poziomu izolacji READ COMMITTED, gdy izolacja migawki jest włączona w bazie danych. Jeśli nie zostanie jawnie READ_COMMITTED_SNAPSHOT ON, READ COMMITTED jest stosowany do wszystkich transakcji niejawnej. Daje to samo jak opcja READ_COMMITTED_SNAPSHOT wyłączone (ustawienie domyślne). Gdy READ_COMMITTED_SNAPSHOT wyłączone są włączone, aparatu bazy danych używa udostępnionego blokady do wymuszania domyślny poziom izolacji. Jeśli bazy danych READ_COMMITTED_SNAPSHOT jest ustawiona na wartość ON, aparat bazy danych używa izolacji migawki i przechowywania wersji wierszy jako domyślne, zamiast używania blokad, aby chronić dane.  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Izolacja jak migawki i pracy przechowywania wersji wierszy  
  Gdy poziom izolacji SNAPSHOT jest włączona, każdorazowo zostanie zaktualizowany wiersz, aparatu bazy danych programu SQL Server przechowuje kopię oryginalnego wiersza w **bazy danych tempdb**i dodaje kolejny numer transakcji do wiersza. Poniżej przedstawiono sekwencję zdarzeń, który występuje:  
   
--   Nowa transakcja jest inicjowany, i ma przypisany numer sekwencyjny transakcji.  
+- Nowa transakcja jest inicjowany, i ma przypisany numer sekwencyjny transakcji.  
   
--   Aparat bazy danych odczytuje wiersz w ramach transakcji i pobiera wersję wiersza z **bazy danych tempdb** którego numer sekwencji jest najbliżej i mniejsza niż numer sekwencyjny transakcji.  
+- Aparat bazy danych odczytuje wiersz w ramach transakcji i pobiera wersję wiersza z **bazy danych tempdb** którego numer sekwencji jest najbliżej i mniejsza niż numer sekwencyjny transakcji.  
   
--   Aparat bazy danych sprawdza, czy numer sekwencyjny transakcji nie jest na liście numerów sekwencyjnych transakcji niezatwierdzonych transakcji aktywne po uruchomieniu transakcji migawki.  
+- Aparat bazy danych sprawdza, czy numer sekwencyjny transakcji nie jest na liście numerów sekwencyjnych transakcji niezatwierdzonych transakcji aktywne po uruchomieniu transakcji migawki.  
   
--   Transakcja odczytuje wersję wiersza od **bazy danych tempdb** było aktualne początku transakcji. Nie będą widoczne nowe wiersze wstawione po transakcja została uruchomiona, ponieważ te wartości liczbowe sekwencja będzie wyższa niż wartość numer sekwencyjny transakcji.  
+- Transakcja odczytuje wersję wiersza od **bazy danych tempdb** było aktualne początku transakcji. Nie będą widoczne nowe wiersze wstawione po transakcja została uruchomiona, ponieważ te wartości liczbowe sekwencja będzie wyższa niż wartość numer sekwencyjny transakcji.  
   
--   Bieżąca transakcja zostanie wyświetlony wierszy, które zostały usunięte po chwili rozpoczęcia transakcji, ponieważ będzie istniało wersji wierszy w **bazy danych tempdb** z niższą wartość numeru sekwencji.  
+- Bieżąca transakcja zostanie wyświetlony wierszy, które zostały usunięte po chwili rozpoczęcia transakcji, ponieważ będzie istniało wersji wierszy w **bazy danych tempdb** z niższą wartość numeru sekwencji.  
   
  Net izolacji migawki powoduje, że transakcji widzi wszystkie dane, jaka istniała na początku transakcji, bez uznania lub wprowadzania żadnych blokad na tabel podstawowych. Może to spowodować ulepszenia wydajności w sytuacjach, w przypadku, gdy ma rywalizacji.  
   
@@ -93,15 +93,15 @@ SqlTransaction sqlTran =
   
  Kod umożliwia nawiązanie **AdventureWorks** przykładowe bazy danych w programie SQL Server i tworzy tabelę o nazwie **TestSnapshot** i wstawia jeden wiersz danych. Kod używa instrukcji ALTER DATABASE języka Transact-SQL, aby włączyć funkcję izolacji migawki bazy danych, ale nie ustawia opcja READ_COMMITTED_SNAPSHOT, pozostawiając domyślne zachowanie poziomu izolacji READ COMMITTED obowiązywać. Kod następnie wykonuje następujące czynności:  
   
--   Rozpoczyna się, ale nie zostanie ukończone, sqlTransaction1, korzystającą z poziomu izolacji o wartości SERIALIZABLE uruchomić transakcji aktualizacji. Skutkuje to blokowania w tabeli.  
+- Rozpoczyna się, ale nie zostanie ukończone, sqlTransaction1, korzystającą z poziomu izolacji o wartości SERIALIZABLE uruchomić transakcji aktualizacji. Skutkuje to blokowania w tabeli.  
   
--   Otwiera drugie połączenie i inicjuje drugi transakcji przy użyciu poziomu izolacji MIGAWKI na odczytywanie danych w **TestSnapshot** tabeli. Ponieważ izolacja migawki jest włączona, ta transakcja może odczytywać dane, które istniały przed rozpoczęciem sqlTransaction1.  
+- Otwiera drugie połączenie i inicjuje drugi transakcji przy użyciu poziomu izolacji MIGAWKI na odczytywanie danych w **TestSnapshot** tabeli. Ponieważ izolacja migawki jest włączona, ta transakcja może odczytywać dane, które istniały przed rozpoczęciem sqlTransaction1.  
   
--   Otwiera trzecie połączenie i inicjuje transakcji przy użyciu poziomu izolacji COMMITTED odczytu spróbował odczytać dane w tabeli. W tym przypadku kod nie może odczytać dane ponieważ nie można odczytać ostatnie blokad umieszczone w tabeli w pierwszej transakcji i limit czasu. Ten sam wynik może wystąpić, jeśli poziomy izolacji POWTARZALNEGO odczytu i SERIALIZABLE zostały użyte, ponieważ te poziomy izolacji również nie można odczytać ostatnie blokad, umieszczane w pierwszej transakcji.  
+- Otwiera trzecie połączenie i inicjuje transakcji przy użyciu poziomu izolacji COMMITTED odczytu spróbował odczytać dane w tabeli. W tym przypadku kod nie może odczytać dane ponieważ nie można odczytać ostatnie blokad umieszczone w tabeli w pierwszej transakcji i limit czasu. Ten sam wynik może wystąpić, jeśli poziomy izolacji POWTARZALNEGO odczytu i SERIALIZABLE zostały użyte, ponieważ te poziomy izolacji również nie można odczytać ostatnie blokad, umieszczane w pierwszej transakcji.  
   
--   Otwiera połączenie czwarty i inicjuje transakcji przy użyciu poziomu izolacji odczyt NIEPRZEKAZANY wykonuje odczyt niezatwierdzonych wartości niezatwierdzone sqlTransaction1. Ta wartość faktycznie nigdy nie może istnieć w bazie danych, jeśli pierwszy transakcja nie została zatwierdzona.  
+- Otwiera połączenie czwarty i inicjuje transakcji przy użyciu poziomu izolacji odczyt NIEPRZEKAZANY wykonuje odczyt niezatwierdzonych wartości niezatwierdzone sqlTransaction1. Ta wartość faktycznie nigdy nie może istnieć w bazie danych, jeśli pierwszy transakcja nie została zatwierdzona.  
   
--   Powoduje wycofanie transakcji pierwszym i czyści, usuwając **TestSnapshot** izolacji dla migawki w tabeli i wyłączenie **AdventureWorks** bazy danych.  
+- Powoduje wycofanie transakcji pierwszym i czyści, usuwając **TestSnapshot** izolacji dla migawki w tabeli i wyłączenie **AdventureWorks** bazy danych.  
   
 > [!NOTE]
 >  W poniższych przykładach używane te same parametry połączenia z puli połączeń wyłączone. Połączenie w puli, zresetowanie jej poziom izolacji nie powoduje resetowania poziom izolacji na serwerze. Co w efekcie kolejne połączenia, które używają tej samej puli połączeń wewnętrzny rozpoczynać ich izolacji ustawionych poziomów do tej puli połączeń. Alternatywa wyłączenie buforowania połączeń jest ustawiony poziom izolacji jawnie dla każdego połączenia.  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano zachowanie izolacji migawki po zmodyfikowaniu danych. Kod wykonuje następujące czynności:  
   
--   Łączy się z **AdventureWorks** przykładowe bazy danych i umożliwia izolację MIGAWKI.  
+- Łączy się z **AdventureWorks** przykładowe bazy danych i umożliwia izolację MIGAWKI.  
   
--   Tworzy tabelę o nazwie **TestSnapshotUpdate** i wstawia trzy wiersze przykładowych danych.  
+- Tworzy tabelę o nazwie **TestSnapshotUpdate** i wstawia trzy wiersze przykładowych danych.  
   
--   Rozpoczyna się, ale nie zostanie ukończone, sqlTransaction1 przy użyciu izolacji MIGAWKI. Trzy wiersze danych są wybierane w transakcji.  
+- Rozpoczyna się, ale nie zostanie ukończone, sqlTransaction1 przy użyciu izolacji MIGAWKI. Trzy wiersze danych są wybierane w transakcji.  
   
--   Tworzy drugi **SqlConnection** do **AdventureWorks** i tworzy drugi transakcji przy użyciu poziomu izolacji READ COMMITTED zaktualizowanie wartości w jednym z wybranych w sqlTransaction1 wierszy.  
+- Tworzy drugi **SqlConnection** do **AdventureWorks** i tworzy drugi transakcji przy użyciu poziomu izolacji READ COMMITTED zaktualizowanie wartości w jednym z wybranych w sqlTransaction1 wierszy.  
   
--   SqlTransaction2 zatwierdzeń.  
+- SqlTransaction2 zatwierdzeń.  
   
--   Zwraca sqlTransaction1, że została już przydzielona sqlTransaction1 i próbuje zaktualizować tego samego wiersza. 3960 błąd i sqlTransaction1 zostanie wycofana automatycznie. **SqlException.Number** i **SqlException.Message** są wyświetlane w oknie konsoli.  
+- Zwraca sqlTransaction1, że została już przydzielona sqlTransaction1 i próbuje zaktualizować tego samego wiersza. 3960 błąd i sqlTransaction1 zostanie wycofana automatycznie. **SqlException.Number** i **SqlException.Message** są wyświetlane w oknie konsoli.  
   
--   Wykonuje kod czyszczenia, aby wyłączyć izolację migawki w **AdventureWorks** i Usuń **TestSnapshotUpdate** tabeli.  
+- Wykonuje kod czyszczenia, aby wyłączyć izolację migawki w **AdventureWorks** i Usuń **TestSnapshotUpdate** tabeli.  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  

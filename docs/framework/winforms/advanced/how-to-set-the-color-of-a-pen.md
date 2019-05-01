@@ -10,11 +10,11 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966879"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Instrukcje: Ustawianie koloru pióra
 W tym przykładzie zmienia kolor istniejących wcześniej <xref:System.Drawing.Pen> obiektu  
@@ -27,7 +27,7 @@ W tym przykładzie zmienia kolor istniejących wcześniej <xref:System.Drawing.P
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   A <xref:System.Drawing.Pen> obiektu o nazwie `myPen`.  
+- A <xref:System.Drawing.Pen> obiektu o nazwie `myPen`.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Należy wywołać <xref:System.Drawing.Pen.Dispose%2A> na obiektach, które zużywają zasoby systemowe (takie jak <xref:System.Drawing.Pen> obiektów) po zakończeniu korzystania z nich.  

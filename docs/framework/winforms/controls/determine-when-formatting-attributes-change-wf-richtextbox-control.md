@@ -12,11 +12,11 @@ helpviewer_keywords:
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
 ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972292"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Instrukcje: ustalenie, kiedy zmieniono atrybuty formatowania w kontrolce RichTextBox formularzy systemu Windows
 Typowym zastosowaniem formularzy Windows Forms <xref:System.Windows.Forms.RichTextBox> kontroli jest formatowanie tekstu za pomocą atrybutów, takich jak opcje czcionki lub style. Twoja aplikacja może potrzebować śledzić wszystkie zmiany wprowadzone w tekst na potrzeby wyświetlania paska narzędzi, tak jak w wielu aplikacjach edytora tekstów.  

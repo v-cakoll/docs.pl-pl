@@ -11,11 +11,11 @@ ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1e09f1464a5df751034639d8bc1cb5d79faacd0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966468"
 ---
 # <a name="barrier"></a>Bariera
 
@@ -44,13 +44,13 @@ A <xref:System.Threading.Barrier?displayProperty=nameWithType> jest elementem sy
 
  Bariery są szczególnie przydatne podczas wykonywania wielu faz wątki w pętli. Jeśli kod wymaga tylko jednego lub dwóch faz, rozważ użycie <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> obiekty z dowolnego rodzaju niejawne łączenia, w tym:  
   
--   <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
   
  Aby uzyskać więcej informacji, zobacz [tworzenie łańcuchów zadań przy użyciu zadań kontynuacji](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   

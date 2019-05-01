@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971941"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.TabControl> wyświetla wiele kart, takich jak separatorów w notesie lub etykiet w zestawie folderów w pliku cabinet zgłoszenia. Karty mogą zawierać obrazów i innych kontrolek. Formant karty do produkcji rodzaj okno dialogowe wielu stron, które pojawia się w wielu miejscach w systemie operacyjnym Windows, takich jak właściwości wyświetlania Panelu sterowania. Ponadto <xref:System.Windows.Forms.TabControl> może służyć do tworzenia stron właściwości, które są używane do ustawiania grupą powiązanych właściwości.  

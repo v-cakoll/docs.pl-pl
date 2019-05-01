@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 ms.openlocfilehash: a10255be140c7c86a435cca98cec5df7df82ffee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955496"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Przetwarzanie pliku XML (Visual Basic)
 Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje na temat tagów w kodzie, zobacz [tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md).) Ciąg Identyfikatora jednoznacznie identyfikuje konstrukcja. Programy, które przetwarzają pliku XML umożliwiają identyfikowanie odpowiedni ciąg Identyfikatora [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elementu metadanych/odbicia.  
@@ -18,9 +18,9 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, któ
   
  Kompilator stosuje następujące reguły podczas generowania ciągi identyfikatorów:  
   
--   Biały znak nie zostanie umieszczony w ciągu.  
+- Biały znak nie zostanie umieszczony w ciągu.  
   
--   Pierwsza część ciąg Identyfikatora określa rodzaj elementu członkowskiego są identyfikowane za pomocą pojedynczy znak z dwukropkiem. Używane są następujące typy elementu członkowskiego.  
+- Pierwsza część ciąg Identyfikatora określa rodzaj elementu członkowskiego są identyfikowane za pomocą pojedynczy znak z dwukropkiem. Używane są następujące typy elementu członkowskiego.  
   
 |Znak|Opis|  
 |---|---|  
@@ -32,9 +32,9 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, któ
 |E|Zdarzenie: `Event`|  
 |!|Ciąg błędu<br /><br /> Pozostała część ciągu zawiera informacje o tym błędzie. Kompilator języka Visual Basic generuje informacje o błędzie dla łączy, których nie można rozpoznać.|  
   
--   Druga część `String` jest w pełni kwalifikowana nazwa elementu, począwszy od głównego obszaru nazw. Nazwa elementu, jego typy otaczającej i przestrzeni nazw są oddzielone kropkami. Jeśli nazwa elementu zawiera kropek, są zastępowane przez znak numeru (#). Zakłada się, że żaden element ma znak liczby bezpośrednio w jego nazwę. Na przykład w pełni kwalifikowanej nazwy `String` będzie Konstruktor `System.String.#ctor`.  
+- Druga część `String` jest w pełni kwalifikowana nazwa elementu, począwszy od głównego obszaru nazw. Nazwa elementu, jego typy otaczającej i przestrzeni nazw są oddzielone kropkami. Jeśli nazwa elementu zawiera kropek, są zastępowane przez znak numeru (#). Zakłada się, że żaden element ma znak liczby bezpośrednio w jego nazwę. Na przykład w pełni kwalifikowanej nazwy `String` będzie Konstruktor `System.String.#ctor`.  
   
--   Dla właściwości i metod w przypadku argumentów dla metody, na liście argumentów w nawiasach jest zgodna. Jeśli nie ma żadnych argumentów, nawiasy nie są obecne. Argumenty są oddzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio jak został zakodowany w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] podpisu.  
+- Dla właściwości i metod w przypadku argumentów dla metody, na liście argumentów w nawiasach jest zgodna. Jeśli nie ma żadnych argumentów, nawiasy nie są obecne. Argumenty są oddzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio jak został zakodowany w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] podpisu.  
   
 ## <a name="example"></a>Przykład  
  W poniższym kodzie pokazano, jak identyfikator ciągi dla klasy i składowych są generowane.  

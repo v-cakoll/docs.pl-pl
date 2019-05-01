@@ -7,41 +7,42 @@ helpviewer_keywords:
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
 ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053681"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Instrukcje: Przypisywanie tablicy do innej tablicy (Visual Basic)
-Ponieważ tablice są obiektami, będziesz ich używać w instrukcji przypisania, podobnie jak inne typy obiektów. Zmienną tablicową mieści wskaźnik do danych stanowiące elementów tablicy i informacji Ranga i długość i przypisania kopiuje tylko ten wskaźnik.  
-  
-### <a name="to-assign-one-array-to-another-array"></a>Aby przypisać jednej tablicy do innej tablicy  
-  
-1. Upewnij się, że dwie tablice mają tę samą rangę (liczba wymiarów) i typy danych zgodne elementu.  
-  
-2. Używać instrukcji przypisania standardowych można przypisać tablica źródłowa do tablicy docelowej. Nie wykonuj obu nazwa tablicy za pomocą nawiasów.  
-  
-    ```  
-    Dim formArray() As System.Windows.Forms.Form  
-    Dim controlArray() As System.Windows.Forms.Control  
-    controlArray = formArray  
-    ```  
-  
- Podczas przypisywania tablicy do innej, obowiązują następujące reguły:  
-  
--   **Równe rangę.** Ranga tablicy docelowej (liczba wymiarów) musi być taka sama jak tablica źródłowa.  
-  
-     Podana rangę dwie tablice są równe, wymiary nie są równe. Liczba elementów w określonym wymiarze, które można zmienić podczas przypisywania.  
-  
--   **Typy elementów.** Musi mieć albo obu tablicach *odwołania do typu* elementów lub obu tablicach, musi mieć *typu wartości* elementów. Aby uzyskać więcej informacji, zobacz [typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
-  
-    -   Jeśli elementy typu wartości obu tablicach, typów danych elementów musi być dokładnie takie same. Jedynym wyjątkiem jest, którą można przypisać tablicę `Enum` elementów do tablicy typu podstawowego `Enum`.  
-  
-    -   Jeśli obu tablicach ma odwołanie do typu elementów, typ elementu źródłowego musi pochodzić od typu elementu docelowego. W przypadku dwóch tablic mają ten sam relację dziedziczenia jako ich elementy. Jest to nazywane *Kowariancja tablicy*.  
-  
- Kompilator zgłasza błąd, jeśli powyższe zasady są naruszone, na przykład jeśli typy danych nie są zgodne lub rangę są nierówne. Możesz dodać obsługę błędów do kodu w taki sposób, aby upewnić się, że tablice są zgodne, przed podjęciem próby wykonania przypisania. Można również użyć [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) — słowo kluczowe, jeśli chcesz uniknąć, zostanie zgłoszony wyjątek.  
-  
+
+Ponieważ tablice są obiektami, będziesz ich używać w instrukcji przypisania, podobnie jak inne typy obiektów. Zmienną tablicową mieści wskaźnik do danych stanowiące elementów tablicy i informacji Ranga i długość i przypisania kopiuje tylko ten wskaźnik.
+
+### <a name="to-assign-one-array-to-another-array"></a>Aby przypisać jednej tablicy do innej tablicy
+
+1. Upewnij się, że dwie tablice mają tę samą rangę (liczba wymiarów) i typy danych zgodne elementu.
+
+2. Używać instrukcji przypisania standardowych można przypisać tablica źródłowa do tablicy docelowej. Nie wykonuj obu nazwa tablicy za pomocą nawiasów.
+
+    ```vb
+    Dim formArray() As System.Windows.Forms.Form
+    Dim controlArray() As System.Windows.Forms.Control
+    controlArray = formArray
+    ```
+
+Podczas przypisywania tablicy do innej, obowiązują następujące reguły:
+
+- **Równe rangę.** Ranga tablicy docelowej (liczba wymiarów) musi być taka sama jak tablica źródłowa.
+
+  Podana rangę dwie tablice są równe, wymiary nie są równe. Liczba elementów w określonym wymiarze, które można zmienić podczas przypisywania.
+
+- **Typy elementów.** Musi mieć albo obu tablicach *odwołania do typu* elementów lub obu tablicach, musi mieć *typu wartości* elementów. Aby uzyskać więcej informacji, zobacz [typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+
+  - Jeśli elementy typu wartości obu tablicach, typów danych elementów musi być dokładnie takie same. Jedynym wyjątkiem jest, którą można przypisać tablicę `Enum` elementów do tablicy typu podstawowego `Enum`.
+
+  - Jeśli obu tablicach ma odwołanie do typu elementów, typ elementu źródłowego musi pochodzić od typu elementu docelowego. W przypadku dwóch tablic mają ten sam relację dziedziczenia jako ich elementy. Jest to nazywane *Kowariancja tablicy*.
+
+Kompilator zgłasza błąd, jeśli powyższe zasady są naruszone, na przykład jeśli typy danych nie są zgodne lub rangę są nierówne. Możesz dodać obsługę błędów do kodu w taki sposób, aby upewnić się, że tablice są zgodne, przed podjęciem próby wykonania przypisania. Można również użyć [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) — słowo kluczowe, jeśli chcesz uniknąć, zostanie zgłoszony wyjątek.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

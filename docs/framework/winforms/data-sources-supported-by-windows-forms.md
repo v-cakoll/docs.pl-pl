@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967092"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzystać z danych przechowywanych w bazach danych. Powiązanie danych formularzy Windows, umożliwia dostęp do danych z bazy danych, a także dane w innych strukturach, takich jak tablice i kolekcje, tak długo, jak niektóre minimalne wymagania zostały spełnione.  
@@ -47,15 +47,15 @@ Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzysta�
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] obiekty danych  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] zawiera szereg struktur danych odpowiednie dla wiązania. Każdy różni się w jego intensywniejsze i złożoności.  
   
--   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> jest istotne blokiem konstrukcyjnym <xref:System.Data.DataTable>, w tym, że w skład liczbę kolumn tabeli. Każdy <xref:System.Data.DataColumn> ma <xref:System.Data.DataColumn.DataType%2A> właściwość, która określa rodzaj danych zawierająca kolumny (na przykład utworzyć samochodów w tabeli opisujące samochodów). Użytkownik może prosty wiązania kontrolki (takie jak <xref:System.Windows.Forms.TextBox> kontrolki <xref:System.Windows.Forms.Control.Text%2A> właściwość) do kolumny w tabeli danych.  
+- <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> jest istotne blokiem konstrukcyjnym <xref:System.Data.DataTable>, w tym, że w skład liczbę kolumn tabeli. Każdy <xref:System.Data.DataColumn> ma <xref:System.Data.DataColumn.DataType%2A> właściwość, która określa rodzaj danych zawierająca kolumny (na przykład utworzyć samochodów w tabeli opisujące samochodów). Użytkownik może prosty wiązania kontrolki (takie jak <xref:System.Windows.Forms.TextBox> kontrolki <xref:System.Windows.Forms.Control.Text%2A> właściwość) do kolumny w tabeli danych.  
   
--   <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> trwa reprezentujący tabelę z wierszami i kolumnami, [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Tabela danych zawiera dwie kolekcje: <xref:System.Data.DataColumn>, reprezentujący kolumn danych w danej tabeli, (które określa rodzaje danych, które mogą być wprowadzane do tej tabeli), a <xref:System.Data.DataRow>, reprezentujący wierszy danych w danej tabeli. Użytkownik może złożone wiązania kontrolki do informacji zawartych w tabeli danych (np. powiązania <xref:System.Windows.Forms.DataGridView> kontrolki tabeli danych). Jednak gdy możesz powiązać <xref:System.Data.DataTable>, jest naprawdę powiązania do tabeli, widoku domyślnego.  
+- <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> trwa reprezentujący tabelę z wierszami i kolumnami, [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Tabela danych zawiera dwie kolekcje: <xref:System.Data.DataColumn>, reprezentujący kolumn danych w danej tabeli, (które określa rodzaje danych, które mogą być wprowadzane do tej tabeli), a <xref:System.Data.DataRow>, reprezentujący wierszy danych w danej tabeli. Użytkownik może złożone wiązania kontrolki do informacji zawartych w tabeli danych (np. powiązania <xref:System.Windows.Forms.DataGridView> kontrolki tabeli danych). Jednak gdy możesz powiązać <xref:System.Data.DataTable>, jest naprawdę powiązania do tabeli, widoku domyślnego.  
   
--   <xref:System.Data.DataView>. Element <xref:System.Data.DataView> jest dostosowany widok przedstawiający jednej tabeli danych, filtrowania lub sortowania. Widok danych to dane "snapshot" używana przez formanty powiązane z złożone. Możesz można prostego powiązania lub złożone wiązania danych w widoku danych, ale należy pamiętać, której dokonywane jest wiązanie na stałym "obraz" zamiast źródła danych zawsze przejrzyste i aktualizowanie danych.  
+- <xref:System.Data.DataView>. Element <xref:System.Data.DataView> jest dostosowany widok przedstawiający jednej tabeli danych, filtrowania lub sortowania. Widok danych to dane "snapshot" używana przez formanty powiązane z złożone. Możesz można prostego powiązania lub złożone wiązania danych w widoku danych, ale należy pamiętać, której dokonywane jest wiązanie na stałym "obraz" zamiast źródła danych zawsze przejrzyste i aktualizowanie danych.  
   
--   <xref:System.Data.DataSet>. Element <xref:System.Data.DataSet> jest zbiorem tabel, relacje i ograniczenia danych w bazie danych. Możesz prostego powiązania lub złożone wiązania danych w zestawie danych, ale należy pamiętać, której dokonywane jest wiązanie domyślną <xref:System.Data.DataViewManager> dla <xref:System.Data.DataSet> (zobacz następny punkt punkt).  
+- <xref:System.Data.DataSet>. Element <xref:System.Data.DataSet> jest zbiorem tabel, relacje i ograniczenia danych w bazie danych. Możesz prostego powiązania lub złożone wiązania danych w zestawie danych, ale należy pamiętać, której dokonywane jest wiązanie domyślną <xref:System.Data.DataViewManager> dla <xref:System.Data.DataSet> (zobacz następny punkt punkt).  
   
--   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> jest dostosowany widok przedstawiający całą <xref:System.Data.DataSet>, jest odpowiednikiem <xref:System.Data.DataView>, z relacjami uwzględniony, ale. Za pomocą <xref:System.Data.DataViewManager.DataViewSettings%2A> kolekcji, można ustawić domyślne filtry i opcje sortowania dla dowolnego widoków, <xref:System.Data.DataViewManager> ma dla danej tabeli.  
+- <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> jest dostosowany widok przedstawiający całą <xref:System.Data.DataSet>, jest odpowiednikiem <xref:System.Data.DataView>, z relacjami uwzględniony, ale. Za pomocą <xref:System.Data.DataViewManager.DataViewSettings%2A> kolekcji, można ustawić domyślne filtry i opcje sortowania dla dowolnego widoków, <xref:System.Data.DataViewManager> ma dla danej tabeli.  
   
 ## <a name="see-also"></a>Zobacz także
 

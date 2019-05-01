@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
 ms.openlocfilehash: 8b4eb7684e15ffd5b0b528771490ba66f3b7bb45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954443"
 ---
 # <a name="how-to-use-a-pen-to-draw-lines"></a>Instrukcje: Rysowanie linii za pomocą pióra
 Rysowanie linii, potrzebujesz <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu. <xref:System.Drawing.Graphics> Obiektu <xref:System.Drawing.Graphics.DrawLine%2A> metody i <xref:System.Drawing.Pen> obiekt przechowuje funkcji, takich jak kolor i szerokość linii.  

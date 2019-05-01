@@ -3,11 +3,11 @@ title: Omówienie sesji niezawodnych
 ms.date: 03/30/2017
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
 ms.openlocfilehash: 6dd90ef800daf236d77c419d48c0857ac2d78aa2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962660"
 ---
 # <a name="reliable-sessions-overview"></a>Omówienie sesji niezawodnych
 
@@ -75,9 +75,9 @@ W poniższej tabeli wymieniono typy kanałów sesji obsługiwany na serwerze, w 
 
 | Obsługiwane typy kanału niezawodnej sesji&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
-| `IInputSessionChannel`                          | Tak             | Yes                    | Yes              | Yes                     |
+| `IInputSessionChannel`                          | Yes             | Yes                    | Yes              | Yes                     |
 | `IReplySessionChannel`                          | Yes             | Yes                    | Nie               | Nie                      |
-| `IDuplexSessionChannel`                         | Nie              | Nie                     | Yes              | Tak                     |
+| `IDuplexSessionChannel`                         | Nie              | Nie                     | Yes              | Yes                     |
 
 &#8225;Typy obsługiwanym kanałem są dostępne dla ogólnej wartości `TChannel` wartość parametru, która została przekazana do <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> metody.
 

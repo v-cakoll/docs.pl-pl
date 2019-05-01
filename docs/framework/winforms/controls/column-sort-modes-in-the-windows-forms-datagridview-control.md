@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
 ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956224"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Tryb sortowania kolumn w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> kolumny mają trzy tryby sortowania. Tryb sortowania dla każdej kolumny jest określony za pomocą <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> właściwości kolumny, które można ustawić na jeden z następujących <xref:System.Windows.Forms.DataGridViewColumnSortMode> wartości wyliczenia.  

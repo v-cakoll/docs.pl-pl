@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967621"
 ---
 # <a name="extending-dispatchers"></a>Rozszerzanie dyspozytorów
 Dystrybucja jest odpowiedzialny za ściąganie komunikaty przychodzące poza podstawowym kanały, tłumaczenie je na wywołania metody w kodzie aplikacji i wyniki są wysyłane do obiektu wywołującego. Rozszerzenia dyspozytorów umożliwiają modyfikowanie tego przetwarzania.  Możesz zaimplementować wiadomości lub parametr inspektorzy inspekcja lub modyfikowanie zawartości wiadomości lub parametrów.  Możesz zmienić sposób komunikaty są kierowane do operacji lub podaj niektórych innych funkcji.  
@@ -40,37 +40,37 @@ Dystrybucja jest odpowiedzialny za ściąganie komunikaty przychodzące poza pod
 ## <a name="scenarios"></a>Scenariusze  
  Tam wiele możliwych przyczyn, aby rozszerzyć Dyspozytor:  
   
--   Niestandardowy komunikat sprawdzania poprawności. Użytkownicy mogą wymusić, czy komunikat jest prawidłowa dla niektórych schematu. Można to zrobić poprzez implementację interfejsów interceptor wiadomości. Aby uzyskać przykład, zobacz [inspektorzy komunikatów](../../../../docs/framework/wcf/samples/message-inspectors.md).  
+- Niestandardowy komunikat sprawdzania poprawności. Użytkownicy mogą wymusić, czy komunikat jest prawidłowa dla niektórych schematu. Można to zrobić poprzez implementację interfejsów interceptor wiadomości. Aby uzyskać przykład, zobacz [inspektorzy komunikatów](../../../../docs/framework/wcf/samples/message-inspectors.md).  
   
--   Rejestrowanie komunikatów niestandardowych. Użytkownicy mogą sprawdzić i rejestrować pewne zestaw komunikatów aplikacji, które przepływać za pośrednictwem punktu końcowego. Ponadto można to zrobić za pomocą interfejsów interceptor wiadomości.  
+- Rejestrowanie komunikatów niestandardowych. Użytkownicy mogą sprawdzić i rejestrować pewne zestaw komunikatów aplikacji, które przepływać za pośrednictwem punktu końcowego. Ponadto można to zrobić za pomocą interfejsów interceptor wiadomości.  
   
--   Niestandardowy komunikat przekształcenia. Użytkownicy mogą stosować przekształcenia niektórych do wiadomości w czasie wykonywania (na przykład w przypadku wersji). Można to osiągnąć, również z interfejsami interceptor wiadomości.  
+- Niestandardowy komunikat przekształcenia. Użytkownicy mogą stosować przekształcenia niektórych do wiadomości w czasie wykonywania (na przykład w przypadku wersji). Można to osiągnąć, również z interfejsami interceptor wiadomości.  
   
--   Niestandardowy Model danych. Użytkownicy mogą mieć modelu serializacji danych niż te obsługiwane domyślnie w programie WCF (to znaczy, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>oraz nieprzetworzone komunikaty). Można to zrobić, implementowanie interfejsów elementu formatującego wiadomości. Aby uzyskać przykład, zobacz [element formatujący operacji i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+- Niestandardowy Model danych. Użytkownicy mogą mieć modelu serializacji danych niż te obsługiwane domyślnie w programie WCF (to znaczy, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>oraz nieprzetworzone komunikaty). Można to zrobić, implementowanie interfejsów elementu formatującego wiadomości. Aby uzyskać przykład, zobacz [element formatujący operacji i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
--   Walidacja parametru niestandardowego. Użytkownicy mogą wymusić, że wpisane parametry są prawidłowe (w przeciwieństwie do XML). Można to zrobić przy użyciu Inspektora interfejsów parametru.  
+- Walidacja parametru niestandardowego. Użytkownicy mogą wymusić, że wpisane parametry są prawidłowe (w przeciwieństwie do XML). Można to zrobić przy użyciu Inspektora interfejsów parametru.  
   
--   Wywoływanie operacji niestandardowej. Użytkownicy mogą zaimplementować, wysyłki na coś innego niż akcji — na przykład elementu body lub właściwość niestandardową wiadomość. Można to zrobić za pomocą <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interfejsu. Aby uzyskać przykład, zobacz [element formatujący operacji i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+- Wywoływanie operacji niestandardowej. Użytkownicy mogą zaimplementować, wysyłki na coś innego niż akcji — na przykład elementu body lub właściwość niestandardową wiadomość. Można to zrobić za pomocą <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interfejsu. Aby uzyskać przykład, zobacz [element formatujący operacji i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
--   Obiekt, buforowanie. Użytkownicy mogą puli wystąpień a nie na poświęcaniu nową za każde wywołanie. Można to zaimplementować przy użyciu interfejsów dostawcy wystąpienia. Aby uzyskać przykład, zobacz [Pooling](../../../../docs/framework/wcf/samples/pooling.md).  
+- Obiekt, buforowanie. Użytkownicy mogą puli wystąpień a nie na poświęcaniu nową za każde wywołanie. Można to zaimplementować przy użyciu interfejsów dostawcy wystąpienia. Aby uzyskać przykład, zobacz [Pooling](../../../../docs/framework/wcf/samples/pooling.md).  
   
--   Wystąpienie dzierżawy. Użytkownicy mogą zaimplementować wzorzec dzierżawienia na przykład okres istnienia, podobnie jak w przypadku wywołaniem funkcji zdalnych .NET Framework. Można to zrobić przy użyciu interfejsów okresu istnienia wystąpienia kontekstu.  
+- Wystąpienie dzierżawy. Użytkownicy mogą zaimplementować wzorzec dzierżawienia na przykład okres istnienia, podobnie jak w przypadku wywołaniem funkcji zdalnych .NET Framework. Można to zrobić przy użyciu interfejsów okresu istnienia wystąpienia kontekstu.  
   
--   Obsługa błędów niestandardowych. Użytkownicy mogą kontrolować sposób zarówno lokalne błędy są przetwarzane i jak błędy są przekazywane do klientów. Można to zaimplementować przy użyciu <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsów.  
+- Obsługa błędów niestandardowych. Użytkownicy mogą kontrolować sposób zarówno lokalne błędy są przetwarzane i jak błędy są przekazywane do klientów. Można to zaimplementować przy użyciu <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsów.  
   
--   Autoryzacja niestandardowa zachowania. Użytkownicy mogą zaimplementować kontroli dostępu niestandardowych rozszerzanie elementów środowiska wykonawczego umowy lub operacji i dodając kontrole zabezpieczeń na podstawie tokenów w wiadomości. Można to osiągnąć przy użyciu przechwytujący lub parametr interceptor interfejsów. Aby uzyskać przykłady, zobacz [rozszerzalność zabezpieczeń](../../../../docs/framework/wcf/samples/security-extensibility.md).  
+- Autoryzacja niestandardowa zachowania. Użytkownicy mogą zaimplementować kontroli dostępu niestandardowych rozszerzanie elementów środowiska wykonawczego umowy lub operacji i dodając kontrole zabezpieczeń na podstawie tokenów w wiadomości. Można to osiągnąć przy użyciu przechwytujący lub parametr interceptor interfejsów. Aby uzyskać przykłady, zobacz [rozszerzalność zabezpieczeń](../../../../docs/framework/wcf/samples/security-extensibility.md).  
   
     > [!CAUTION]
     >  Ponieważ zmiany właściwości zabezpieczeń może naruszyć bezpieczeństwo aplikacji WCF, zdecydowanie zaleca się zmiany związane z zabezpieczeniami, ostrożnie podejmować i dokładnie przetestować przed wdrożeniem.  
   
--   WCF niestandardowe moduły środowiska uruchomieniowego. Można zainstalować poprawności niestandardowych, które zbadać usług, kontrakty i powiązania do wymuszania zasad klasy korporacyjnej w odniesieniu do aplikacji WCF. (Na przykład zobacz [jak: Blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
+- WCF niestandardowe moduły środowiska uruchomieniowego. Można zainstalować poprawności niestandardowych, które zbadać usług, kontrakty i powiązania do wymuszania zasad klasy korporacyjnej w odniesieniu do aplikacji WCF. (Na przykład zobacz [jak: Blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>Używanie klasy DispatchRuntime  
  Użyj <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy zmodyfikować zachowanie domyślne usługi lub poszczególnych punktu końcowego, lub wstawić obiekty, które implementują niestandardowe modyfikacje jedno lub oba z następujących procesów usługi (lub procesy klienta w przypadku klienta dupleks):  
   
--   Przekształcenie komunikatów przychodzących do obiektów i zwolnienie tych obiektów jako wywołania metod obiektu usługi.  
+- Przekształcenie komunikatów przychodzących do obiektów i zwolnienie tych obiektów jako wywołania metod obiektu usługi.  
   
--   Przekształcanie obiektów odebrana odpowiedź na wywołania operacji usługi do wiadomości wychodzących.  
+- Przekształcanie obiektów odebrana odpowiedź na wywołania operacji usługi do wiadomości wychodzących.  
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime> Umożliwia przechwytywanie i rozszerzyć Dyspozytor kanału lub punkt końcowy dla wszystkich komunikatów na określonej umowy, nawet wtedy, gdy wiadomość nie została rozpoznana. Po umieszczeniu komunikatu, który nie pasuje do żadnego zadeklarowane w umowie wywoływane jest operacji, zwracany przez <xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A> właściwości. Aby przechwycić lub rozszerzyć na wszystkie komunikaty dla określonej operacji, zobacz <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy.  
   
@@ -84,17 +84,17 @@ Dystrybucja jest odpowiedzialny za ściąganie komunikaty przychodzące poza pod
   
 4. Składniki związane z zabezpieczeniami można użyć następujących właściwości:  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Wskazuje, gdzie zdarzenia inspekcji są zapisywane.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Wskazuje, gdzie zdarzenia inspekcji są zapisywane.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Określa, czy usługa próbuje personifikować przy użyciu poświadczeń dostarczonych przez wiadomości przychodzącej.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Określa, czy usługa próbuje personifikować przy użyciu poświadczeń dostarczonych przez wiadomości przychodzącej.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Określa, czy komunikat pomyślne uwierzytelnianie zdarzenia są zapisywane w dzienniku zdarzeń określony przez <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Określa, czy komunikat pomyślne uwierzytelnianie zdarzenia są zapisywane w dzienniku zdarzeń określony przez <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> Formanty sposób, w jaki <xref:System.Threading.Thread.CurrentPrincipal%2A> właściwość jest ustawiona.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> Formanty sposób, w jaki <xref:System.Threading.Thread.CurrentPrincipal%2A> właściwość jest ustawiona.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Określa, jak odbywa się inspekcji zdarzeń autoryzacji.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Określa, jak odbywa się inspekcji zdarzeń autoryzacji.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Określa, czy pominąć Niekrytyczne wyjątki, które występują w procesie rejestracji.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Określa, czy pominąć Niekrytyczne wyjątki, które występują w procesie rejestracji.  
   
  Zazwyczaj rozszerzenia niestandardowe obiekty są przypisywane do <xref:System.ServiceModel.Dispatcher.DispatchRuntime> właściwości lub włożenia do kolekcji przez zachowanie usługi (obiekt, który implementuje <xref:System.ServiceModel.Description.IServiceBehavior>), zachowanie kontraktu (obiekt, który implementuje <xref:System.ServiceModel.Description.IContractBehavior>), lub punktu końcowego zachowanie (obiekt, który implementuje <xref:System.ServiceModel.Description.IEndpointBehavior>). Instalowanie obiektu zachowanie jest dodawana do odpowiedniej kolekcji zachowań, programowo lub poprzez implementację niestandardową <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> obiektu, aby włączyć zachowanie, które ma zostać wstawiony, przy użyciu pliku konfiguracji aplikacji.  
   
@@ -109,23 +109,23 @@ Dystrybucja jest odpowiedzialny za ściąganie komunikaty przychodzące poza pod
   
  Następujące właściwości kontrolować wykonywanie środowiska uruchomieniowego na poziomie operacji:  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A>, I <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> właściwości uzyskać odpowiednie wartości dla tej operacji.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A>, I <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> właściwości uzyskać odpowiednie wartości dla tej operacji.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> i <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> określić zachowanie transakcji.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> i <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> określić zachowanie transakcji.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> i <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> właściwości formantu okresu istnienia obiektu użytkownika usługi względem <xref:System.ServiceModel.InstanceContext>.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> i <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> właściwości formantu okresu istnienia obiektu użytkownika usługi względem <xref:System.ServiceModel.InstanceContext>.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>i <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> właściwości Włącz jawną kontrolę nad tym konwersja wiadomości na obiekty i komunikatów.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>i <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> właściwości Włącz jawną kontrolę nad tym konwersja wiadomości na obiekty i komunikatów.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> Właściwość określa poziom personifikacji operacji.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> Właściwość określa poziom personifikacji operacji.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> Właściwość wstawia rozszerzenia kontekstu niestandardowe wywołania operacji.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> Właściwość wstawia rozszerzenia kontekstu niestandardowe wywołania operacji.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> Właściwości kontrolki, gdy parametr obiekty są niszczone.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> Właściwości kontrolki, gdy parametr obiekty są niszczone.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> Właściwości, aby wstawić obiekt wywołujący niestandardowego.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> Właściwości, aby wstawić obiekt wywołujący niestandardowego.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> Właściwość umożliwia wstawianie Inspektor parametru niestandardowego, który umożliwia sprawdzanie lub modyfikowanie parametrów i wartości zwracane.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> Właściwość umożliwia wstawianie Inspektor parametru niestandardowego, który umożliwia sprawdzanie lub modyfikowanie parametrów i wartości zwracane.  
   
 ## <a name="see-also"></a>Zobacz także
 

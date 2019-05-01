@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784049"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit — Instrukcja (Visual Basic)
 Wymusza jawnej deklaracji wszystkich zmiennych w pliku lub zezwala na niejawne deklaracje zmiennych.  
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>Aby ustawić Option Explicit, w wierszu polecenia  
   
--   Obejmują [/optionexplicit —](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) w — opcja kompilatora **vbc** polecenia.  
+- Obejmują [/optionexplicit —](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) w — opcja kompilatora **vbc** polecenia.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Option Explicit` instrukcję, aby wymusić jawnej deklaracji wszystkich zmiennych. Podjęto próbę użycia niezadeklarowana zmienna powoduje błąd w czasie kompilacji.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
 ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917933"
 ---
 # <a name="lifetime-in-visual-basic"></a>Okres istnienia w Visual Basic
 *Okres istnienia* zadeklarowanych elementów to okres, podczas którego jest dostępny do użytku. Zmienne są tylko elementy, które mają okres istnienia. W tym celu kompilator traktuje parametry procedury, a funkcja zwraca jako specjalnych przypadków zmiennych. Okres istnienia zmiennej reprezentuje czas, w którym może zawierać wartości. Wartość można zmienić za pośrednictwem jego okres istnienia, ale zawsze zawiera niektóre wartości.  

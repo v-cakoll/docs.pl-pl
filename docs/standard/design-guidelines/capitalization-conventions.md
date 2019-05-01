@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966481"
 ---
 # <a name="capitalization-conventions"></a>Konwencje dotyczące wielkości liter
 Wskazówki zawarte w tym rozdziale układ w prosty sposób za pomocą sprawa, po zastosowaniu spójnie upewnij identyfikatory dla typów, elementów członkowskich i parametrów, łatwe do odczytania.  
@@ -23,9 +23,9 @@ Wskazówki zawarte w tym rozdziale układ w prosty sposób za pomocą sprawa, po
 ## <a name="capitalization-rules-for-identifiers"></a>Reguły wielkości liter dla identyfikatorów  
  Do odróżnienia słów w identyfikatorze, wielką pierwszą literę każdego wyrazu w identyfikatorze. Nie należy używać znaków podkreślenia do odróżnienia wyrazów, lub dla tej sprawy w dowolnym miejscu w identyfikatorach. Istnieją dwa sposoby odpowiednie na wielką identyfikatorów, w zależności od tego, użyj identyfikatora:  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelCasing  
+- camelCasing  
   
  Konwencja PascalCasing, umożliwiający wszystkie identyfikatory z wyjątkiem nazw parametrów powoduje rozpoczynanie pierwszego znaku wystąpień poszczególnych wyrazów (w tym akronimów za pośrednictwem dwóch liter o długości), jak pokazano w poniższych przykładach:  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 939f100e8ee386642a29c33827a8339caf0467b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967833"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst — Interfejs
 Służy jako hosta reprezentacja sekcję krytyczną dla wątków.  

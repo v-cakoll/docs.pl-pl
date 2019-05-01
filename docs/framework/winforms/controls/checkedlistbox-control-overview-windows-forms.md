@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956367"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.CheckedListBox> rozszerza formant <xref:System.Windows.Forms.ListBox> kontroli. Odbywa się prawie wszystko, że pole listy, a także można wyświetlić znacznik wyboru obok elementów na liście. Inne różnice między dwoma formantami są, że zaznaczone listy pola tylko do obsługi <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; i że zaznaczone pole wyboru pól listy może mieć tylko jeden element zaznaczone żadne. Pamiętaj, że wybrany element zostanie wyróżniona na formularzu, a nie jest taka sama jak zaznaczony element.  

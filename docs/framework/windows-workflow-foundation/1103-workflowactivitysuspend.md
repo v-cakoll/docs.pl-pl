@@ -1,33 +1,33 @@
 ---
-title: 1103 - WorkflowActivitySuspend
+title: 1103 — WorkflowActivitySuspend
 ms.date: 03/30/2017
 ms.assetid: b64e15c2-cb2c-4314-9074-ce2c6717232e
 ms.openlocfilehash: 4311bd8dc1c5e2c43bf21b411a4c52a7bfc7b230
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052784"
 ---
-# <a name="1103---workflowactivitysuspend"></a>1103 - WorkflowActivitySuspend
+# <a name="1103---workflowactivitysuspend"></a>1103 — WorkflowActivitySuspend
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|1103|  
-|Słowa kluczowe|WFRuntime|  
+|Identyfikator|1103|  
+|słowa kluczowe|WFRuntime|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
  Wskazuje, że działanie przepływu pracy zostało zawieszone.  
   
 ## <a name="message"></a>Komunikat  
- Obiekt WorkflowInstance o identyfikatorze: '%1' E2E działania  
+ WorkflowInstance Id: Aktivita E2E "%1"  
   
 ## <a name="details"></a>Szczegóły  
   
 |Nazwa elementu danych|Typ elementu danych|Opis|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|xs:String|Identyfikator wystąpienia przepływu pracy.|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

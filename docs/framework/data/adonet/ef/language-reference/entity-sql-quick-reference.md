@@ -3,11 +3,11 @@ title: Szybkie odwołanie do języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
 ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785258"
 ---
 # <a name="entity-sql-quick-reference"></a>Szybkie odwołanie do języka Entity SQL
 Ten temat zawiera krótki przewodnik po [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania. Zapytania w tym temacie są oparte na modelu sprzedaży AdventureWorks.  

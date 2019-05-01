@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956172"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.ComboBox> formant jest używany do wyświetlania danych w polu kombi z listy rozwijanej. Domyślnie <xref:System.Windows.Forms.ComboBox> formantu pojawia się z dwóch części: górną część jest pola tekstowego, który umożliwia użytkownikowi na typ elementu listy. Druga część jest pole listy, który wyświetla listę elementów, z których użytkownik może wybrać jeden. Aby uzyskać więcej informacji na temat innych style pola kombi, zobacz [kiedy należy używać Windows Forms ComboBox Instead of ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  

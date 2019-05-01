@@ -8,11 +8,11 @@ helpviewer_keywords:
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
 ms.openlocfilehash: e45de705eb25d58857239cc549125c524765aaa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960085"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Instrukcje: Kopiowanie katalogu do innego katalogu w Visual Basic
 Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę, aby kopiowanie katalogu do innego katalogu. Ta metoda kopiuje zawartość katalogu, a także sam katalog. Katalog docelowy nie istnieje, zostanie utworzony. Jeśli katalog o takiej samej nazwie istnieje w lokalizacji docelowej i `overwrite` ustawiono `False`, zawartość dwa katalogi zostaną scalone. Podczas operacji, można określić nową nazwę katalogu.  
@@ -21,7 +21,7 @@ Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę, a
   
 ### <a name="to-copy-a-directory-to-another-directory"></a>Można skopiować katalogu do innego katalogu  
   
--   Użyj `CopyDirectory` metody określania nazwy katalogu źródłowego i docelowego. Poniższy przykładowy kod kopiuje katalog o nazwie `TestDirectory1` do `TestDirectory2`, zastępując istniejące pliki.  
+- Użyj `CopyDirectory` metody określania nazwy katalogu źródłowego i docelowego. Poniższy przykładowy kod kopiuje katalog o nazwie `TestDirectory1` do `TestDirectory2`, zastępując istniejące pliki.  
   
      [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
@@ -30,35 +30,35 @@ Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę, a
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nowa nazwa określona dla katalogu zawiera dwukropek (:) lub ukośnikiem (\ lub /) (<xref:System.ArgumentException>).  
+- Nowa nazwa określona dla katalogu zawiera dwukropek (:) lub ukośnikiem (\ lub /) (<xref:System.ArgumentException>).  
   
--   Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
   
--   Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName` jest `Nothing` ani być pustym ciągiem (<xref:System.ArgumentNullException>)  
+- `destinationDirectoryName` jest `Nothing` ani być pustym ciągiem (<xref:System.ArgumentNullException>)  
   
--   Katalog źródłowy nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
+- Katalog źródłowy nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Katalog źródłowy jest katalogiem głównym (<xref:System.IO.IOException>).  
+- Katalog źródłowy jest katalogiem głównym (<xref:System.IO.IOException>).  
   
--   Połączone ścieżka wskazuje na istniejący plik (<xref:System.IO.IOException>).  
+- Połączone ścieżka wskazuje na istniejący plik (<xref:System.IO.IOException>).  
   
--   Ścieżka źródłowa i docelowa ścieżka są takie same (<xref:System.IO.IOException>).  
+- Ścieżka źródłowa i docelowa ścieżka są takie same (<xref:System.IO.IOException>).  
   
--   `ShowUI` ustawiono `UIOption.AllDialogs` użytkownik anuluje operację i nie można skopiować jeden lub więcej plików w katalogu (<xref:System.OperationCanceledException>).  
+- `ShowUI` ustawiono `UIOption.AllDialogs` użytkownik anuluje operację i nie można skopiować jeden lub więcej plików w katalogu (<xref:System.OperationCanceledException>).  
   
--   Ta operacja jest cykliczna (<xref:System.InvalidOperationException>).  
+- Ta operacja jest cykliczna (<xref:System.InvalidOperationException>).  
   
--   Ścieżka zawiera dwukropek (:) (<xref:System.NotSupportedException>).  
+- Ścieżka zawiera dwukropek (:) (<xref:System.NotSupportedException>).  
   
--   Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
--   Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
   
--   Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
--   Plik docelowy istnieje, ale nie są dostępne (<xref:System.UnauthorizedAccessException>).  
+- Plik docelowy istnieje, ale nie są dostępne (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

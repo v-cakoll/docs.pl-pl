@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
 ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052927"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime — Składnia XAML
 Niektóre kontrolki, takie jak <xref:System.Windows.Controls.Calendar> i <xref:System.Windows.Controls.DatePicker>, mają właściwości, które używają <xref:System.DateTime> typu. Chociaż zwykle określisz początkowej daty lub godziny dla tych formantów w kodem w czasie wykonywania, można określić początkową daty lub godziny w XAML. Analizator WPF XAML obsługuje analizowanie <xref:System.DateTime> wartości przy użyciu wbudowanych składni tekstu XAML. W tym temacie opisano specyfikę <xref:System.DateTime> XAML składnia tekstu.  

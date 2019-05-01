@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 ms.openlocfilehash: 6b5e0e4e0a14410c23833db6cc90d23e7959ad22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983271"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementacja wzorca formantu wyboru automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59087727"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki wyboru, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Określa, które implementują <xref:System.Windows.Automation.Provider.ISelectionProvider> zezwalają na jedną lub wiele podrzędnych elementów do wybrania. Na przykład pola listy, widokiem listy a widokiem drzewa obsługuje wiele zaznaczeń pola kombi, suwaka i Grupa przycisków radiowych wsparcie pojedynczego wyboru.  
+- Określa, które implementują <xref:System.Windows.Automation.Provider.ISelectionProvider> zezwalają na jedną lub wiele podrzędnych elementów do wybrania. Na przykład pola listy, widokiem listy a widokiem drzewa obsługuje wiele zaznaczeń pola kombi, suwaka i Grupa przycisków radiowych wsparcie pojedynczego wyboru.  
   
--   Formanty, które ma minimalne, maksymalne i ciągłego zakresu, takich jak **woluminu** kontrolki suwaka, powinny implementować <xref:System.Windows.Automation.Provider.IRangeValueProvider> zamiast <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
+- Formanty, które ma minimalne, maksymalne i ciągłego zakresu, takich jak **woluminu** kontrolki suwaka, powinny implementować <xref:System.Windows.Automation.Provider.IRangeValueProvider> zamiast <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
   
--   Formanty pojedynczego wyboru, które zarządzają formantów podrzędnych, które implementują <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, takich jak **rozdzielczość ekranu** suwak w **właściwości wyświetlania** okno dialogowe lub **kolorów Selektor** kontrolki wyboru z [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (przedstawionym poniżej), należy zaimplementować <xref:System.Windows.Automation.Provider.ISelectionProvider>; ich elementy podrzędne należy zaimplementować obu <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> i <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Formanty pojedynczego wyboru, które zarządzają formantów podrzędnych, które implementują <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, takich jak **rozdzielczość ekranu** suwak w **właściwości wyświetlania** okno dialogowe lub **kolorów Selektor** kontrolki wyboru z [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (przedstawionym poniżej), należy zaimplementować <xref:System.Windows.Automation.Provider.ISelectionProvider>; ich elementy podrzędne należy zaimplementować obu <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> i <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
  ![Selektor kolorów z żółtym wyróżnione. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Przykładowe mapowanie parametrów próbników kolorów  
   
--   Menu nie obsługują <xref:System.Windows.Automation.SelectionPattern>. Jeśli pracujesz z elementów menu, które zawierają zarówno grafiki i tekstu (takich jak **okienko podglądu** elementy w **widoku** menu [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]) i trzeba przekazać stanu, należy zaimplementować <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+- Menu nie obsługują <xref:System.Windows.Automation.SelectionPattern>. Jeśli pracujesz z elementów menu, które zawierają zarówno grafiki i tekstu (takich jak **okienko podglądu** elementy w **widoku** menu [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]) i trzeba przekazać stanu, należy zaimplementować <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>Wymagane elementy ISelectionProvider  

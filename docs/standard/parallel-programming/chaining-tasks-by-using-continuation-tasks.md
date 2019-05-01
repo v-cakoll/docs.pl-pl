@@ -11,32 +11,32 @@ ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973449"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowaniu asynchronicznym częste jest jedna operacja asynchroniczna po zakończeniu wywołuje drugą operację i przekazuje dane do niej. Tradycyjnie kontynuacji zostały wykonane przy użyciu metod wywołania zwrotnego. W bibliotece zadań równoległych taką samą funkcjonalność świadczą *zadań kontynuacji*. Zadanie kontynuacji (znane również jako kontynuacja) to asynchroniczne zadanie, które jest wywoływane przez inne zadanie, który jest znany jako *zadania poprzedzającego*, po jego zakończeniu.  
   
  Kontynuacje są stosunkowo łatwe w użyciu, ale mimo to wydajne i elastyczne. Możesz na przykład:  
   
--   Przekazywanie danych od zadania poprzedzającego do kontynuacji.  
+- Przekazywanie danych od zadania poprzedzającego do kontynuacji.  
   
--   Określ dokładne warunki, na jakich kontynuacja będzie się lub nie jest wywoływana.  
+- Określ dokładne warunki, na jakich kontynuacja będzie się lub nie jest wywoływana.  
   
--   Anuluj kontynuację albo przed jej rozpoczęciem albo w trakcie jest uruchomiona.  
+- Anuluj kontynuację albo przed jej rozpoczęciem albo w trakcie jest uruchomiona.  
   
--   Dostarczanie wskazówek na temat jak kontynuacja powinna zostać zaplanowana.  
+- Dostarczanie wskazówek na temat jak kontynuacja powinna zostać zaplanowana.  
   
--   Wywoływanie wielu kontynuacji z tego samego zadania poprzedzającego.  
+- Wywoływanie wielu kontynuacji z tego samego zadania poprzedzającego.  
   
--   Wywołanie jednej kontynuacji po ukończeniu wszystkich lub dowolnego jednego z wielu zadań poprzedzających.  
+- Wywołanie jednej kontynuacji po ukończeniu wszystkich lub dowolnego jednego z wielu zadań poprzedzających.  
   
--   Kontynuacje łańcucha kolejno do każdej dowolnej długości.  
+- Kontynuacje łańcucha kolejno do każdej dowolnej długości.  
   
--   Użyj kontynuacji, aby obsłużyć wyjątki wyrzucane przez element poprzedzający.  
+- Użyj kontynuacji, aby obsłużyć wyjątki wyrzucane przez element poprzedzający.  
   
 ## <a name="about-continuations"></a>Temat kontynuacji  
  Kontynuacja jest zadaniem, który jest tworzony w <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> stanu. Zostanie aktywowana automatycznie po ukończeniu jego zadania poprzedzającego lub zadania. Wywoływanie <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> na kontynuację w kodzie użytkownika zgłasza <xref:System.InvalidOperationException?displayProperty=nameWithType> wyjątku.  
@@ -85,11 +85,11 @@ W programowaniu asynchronicznym częste jest jedna operacja asynchroniczna po za
 ## <a name="canceling-a-continuation"></a>Anulowanie kontynuacji  
  <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> Utrzymania zostaje ustalona <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> w następujących sytuacjach:  
   
--   Wyniku weryfikacji zgłasza wyjątek <xref:System.OperationCanceledException> wyjątek w odpowiedzi na żądanie anulowania. Jak w przypadku dowolnego zadania, jeśli wyjątek zawiera ten sam token, który został przekazany do kontynuacji, jest ona traktowana jako potwierdzenie wspólnego anulowania.  
+- Wyniku weryfikacji zgłasza wyjątek <xref:System.OperationCanceledException> wyjątek w odpowiedzi na żądanie anulowania. Jak w przypadku dowolnego zadania, jeśli wyjątek zawiera ten sam token, który został przekazany do kontynuacji, jest ona traktowana jako potwierdzenie wspólnego anulowania.  
   
--   Kontynuacja jest przekazywany <xref:System.Threading.CancellationToken?displayProperty=nameWithType> którego <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość `true`. W takim przypadku kontynuacja nie uruchamia się i przechodzi do <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> stanu.  
+- Kontynuacja jest przekazywany <xref:System.Threading.CancellationToken?displayProperty=nameWithType> którego <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość `true`. W takim przypadku kontynuacja nie uruchamia się i przechodzi do <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> stanu.  
   
--   Kontynuacja nigdy nie działa, ponieważ warunek ustawiony jego <xref:System.Threading.Tasks.TaskContinuationOptions> argumentu nie zostało spełnione. Na przykład, jeśli zadanie poprzedzające przechodzi w stan <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> stanu, jego kontynuacja, która została przekazana <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> opcja nie będzie działać, ale zostanie zastąpiona usługą <xref:System.Threading.Tasks.TaskStatus.Canceled> stanu.  
+- Kontynuacja nigdy nie działa, ponieważ warunek ustawiony jego <xref:System.Threading.Tasks.TaskContinuationOptions> argumentu nie zostało spełnione. Na przykład, jeśli zadanie poprzedzające przechodzi w stan <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> stanu, jego kontynuacja, która została przekazana <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> opcja nie będzie działać, ale zostanie zastąpiona usługą <xref:System.Threading.Tasks.TaskStatus.Canceled> stanu.  
   
  Jeśli zadania i jego kontynuacja reprezentują dwie pierwsze części z tej samej operacji logicznej, można przekazać ten sam token odwołania do obu zadań, jak pokazano w poniższym przykładzie. Składa się z zadania poprzedzającego, która generuje listę liczb całkowitych, które są podzielna przez 33, która przekazuje do kontynuacji. Kontynuacja z kolei umożliwia wyświetlenie listy. Zadania poprzedzającego i kontynuacja Wstrzymanie aktualizacji regularnie losowych odstępach czasu. Ponadto <xref:System.Threading.Timer?displayProperty=nameWithType> obiektu jest używana do wykonywania `Elapsed` metoda po upływie 5 sekundowy limit czasu. Ten przykład wywołuje <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> metody, która powoduje, że aktualnie wykonywane zadanie wywołać <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> metody. Czy <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> metoda jest wywoływana, gdy zadanie poprzedzające lub jego kontynuacja jest wykonywany jest zależna od czasu trwania pauzy generowany losowo. Jeśli zadanie poprzedzające jest anulowane, kontynuacja nie zostanie uruchomiona. Jeśli zadanie poprzedzające nie zostało anulowane, tokenu nadal można do anulowania kontynuacji.  
   
@@ -133,12 +133,12 @@ W programowaniu asynchronicznym częste jest jedna operacja asynchroniczna po za
 ## <a name="handling-exceptions-thrown-from-continuations"></a>Obsługa wyjątków zgłaszanych z kontynuacji  
  Relacja kontynuacji poprzednika nie jest relacją nadrzędny podrzędny. Wyjątki generowane przez kontynuacje nie są propagowane do zadania poprzedzającego. W związku z tym obsłużyć wyjątki wyrzucane przez kontynuacja, jak możesz być je obsługiwał w dowolnym innym zadaniu, w następujący sposób:  
   
--   Możesz użyć <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>, lub <xref:System.Threading.Tasks.Task.WaitAny%2A> metody lub jego odpowiednika rodzajowego, aby czekać na kontynuację. Możesz poczekać na poprzednik i jego kontynuacje w tej samej `try` instrukcji, jak pokazano w poniższym przykładzie.  
+- Możesz użyć <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>, lub <xref:System.Threading.Tasks.Task.WaitAny%2A> metody lub jego odpowiednika rodzajowego, aby czekać na kontynuację. Możesz poczekać na poprzednik i jego kontynuacje w tej samej `try` instrukcji, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
      [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
--   Można użyć drugiej kontynuacji, aby obserwować <xref:System.Threading.Tasks.Task.Exception%2A> właściwości pierwszej kontynuacji. W poniższym przykładzie zadanie próbuje odczytać z pliku nie istnieje. Kontynuacja następnie wyświetla informacje o wyjątku w zadania poprzedzającego.  
+- Można użyć drugiej kontynuacji, aby obserwować <xref:System.Threading.Tasks.Task.Exception%2A> właściwości pierwszej kontynuacji. W poniższym przykładzie zadanie próbuje odczytać z pliku nie istnieje. Kontynuacja następnie wyświetla informacje o wyjątku w zadania poprzedzającego.  
   
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
@@ -150,7 +150,7 @@ W programowaniu asynchronicznym częste jest jedna operacja asynchroniczna po za
   
      Aby uzyskać więcej informacji, zobacz [wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
--   Jeśli kontynuacja jest dołączone zadanie podrzędne, który został utworzony przy użyciu <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> opcji, jej wyjątki będą propagowane przez nadrzędne z powrotem do wywołanego wątku, jak w przypadku innych dołączonych zadań podrzędnych. Aby uzyskać więcej informacji, zobacz [dołączone i odłączone zadania podrzędne](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+- Jeśli kontynuacja jest dołączone zadanie podrzędne, który został utworzony przy użyciu <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> opcji, jej wyjątki będą propagowane przez nadrzędne z powrotem do wywołanego wątku, jak w przypadku innych dołączonych zadań podrzędnych. Aby uzyskać więcej informacji, zobacz [dołączone i odłączone zadania podrzędne](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

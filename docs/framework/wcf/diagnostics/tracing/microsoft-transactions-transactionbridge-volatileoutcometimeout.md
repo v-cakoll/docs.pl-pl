@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 ms.date: 03/30/2017
 ms.assetid: 2dbe34c5-57c7-4b64-9257-63021911d03c
 ms.openlocfilehash: 22992b4dfad4b4867adda0fcbbd8ecc5eb67d87e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997610"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileoutcometimeout"></a>Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 Usługa protokołu WS-AT upłynął limit czasu oczekiwania na odpowiedź na komunikat o wyniku z uczestnika nietrwałego. Wyniku transakcji może być w stanie wątpliwości, jeśli zwróci uczestnika.  

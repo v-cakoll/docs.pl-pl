@@ -3,11 +3,11 @@ title: Definicje typów (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879557"
 ---
 # <a name="type-definitions-entity-sql"></a>Definicje typów (jednostka SQL)
 Definicja typu jest używana w instrukcji deklaracji elementu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcja w tekście.  
@@ -19,25 +19,25 @@ Definicja typu jest używana w instrukcji deklaracji elementu [!INCLUDE[esql](..
   
  Definicje typów może być:  
   
--   Typ identyfikatora (na przykład "Int32" lub "AdventureWorks.Order").  
+- Typ identyfikatora (na przykład "Int32" lub "AdventureWorks.Order").  
   
--   Słowo kluczowe `COLLECTION` następuje inną definicję typu w nawiasach "(na przykład Collection(AdventureWorks.Order)").  
+- Słowo kluczowe `COLLECTION` następuje inną definicję typu w nawiasach "(na przykład Collection(AdventureWorks.Order)").  
   
--   Słowo kluczowe wiersza, a następnie listę definicji właściwości w nawiasie (na przykład "Row(x AdventureWorks.Order)"). Definicje właściwości mają format, takie jak "`identifier type_definition`, `identifier type_definition`,...".  
+- Słowo kluczowe wiersza, a następnie listę definicji właściwości w nawiasie (na przykład "Row(x AdventureWorks.Order)"). Definicje właściwości mają format, takie jak "`identifier type_definition`, `identifier type_definition`,...".  
   
--   Słowo kluczowe REF, a następnie typ identyfikatora w nawiasie "(na przykład Ref(AdventureWorks.Order)"). Operator definicji typu REF wymaga typ jednostki jako argument. Typ pierwotny nie można określić jako argument.  
+- Słowo kluczowe REF, a następnie typ identyfikatora w nawiasie "(na przykład Ref(AdventureWorks.Order)"). Operator definicji typu REF wymaga typ jednostki jako argument. Typ pierwotny nie można określić jako argument.  
   
  Można także zagnieżdżać definicje typów (na przykład "kolekcji (Row(x Ref(AdventureWorks.Order)))").  
   
  Dostępne są opcje definicji typu:  
   
--   `IdentifierName supported_type`, lub  
+- `IdentifierName supported_type`, lub  
   
--   `IdentifierName` KOLEKCJA (`type_definition`), lub  
+- `IdentifierName` KOLEKCJA (`type_definition`), lub  
   
--   `IdentifierName` WIERSZ (`property_definition`), lub  
+- `IdentifierName` WIERSZ (`property_definition`), lub  
   
--   `IdentifierName` REF(`supported_entity_type`)  
+- `IdentifierName` REF(`supported_entity_type`)  
   
  Opcja definicji właściwości jest `IdentifierName type_definition`.  
   

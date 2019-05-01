@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956078"
 ---
 # <a name="constituent-controls"></a>Formanty składników
 Formanty, które tworzą kontrolkę użytkownika lub *formanty składników* są określane jako, są stosunkowo mało Jeśli chodzi o renderowania grafiki niestandardowych. Wszystkie kontrolki Windows Forms obsługiwać własne renderowania za pośrednictwem ich własnych <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Ponieważ ta metoda jest chroniona, nie jest dostępna dla deweloperów, a więc nie można zablokować wykonywanie, gdy kontrolka jest malowane. Nie oznacza to, jednak, że nie można dodać kod, aby wpłynąć na wygląd kontrolek składowych. Dodatkowe renderowania można osiągnąć przez dodanie obsługi zdarzeń. Załóżmy, że zostały tworzenia <xref:System.Windows.Forms.UserControl> za pomocą przycisku o nazwie `MyButton`. Jeśli chcieliby mieć dodatkowe renderowania poza została podana przez <xref:System.Web.UI.WebControls.Button>, można dodać kod do formantu użytkownika podobnego do następującego:  

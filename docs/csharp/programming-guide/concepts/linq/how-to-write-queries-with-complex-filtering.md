@@ -3,11 +3,11 @@ title: 'Instrukcje: Pisanie zapytań z zaawansowanym filtrowaniem (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
 ms.openlocfilehash: 847e50cf0c1cf91f8b731457d351bb0d01d725c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975159"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Instrukcje: Pisanie zapytań z zaawansowanym filtrowaniem (C#)
 Czasami chcesz zapisywać LINQ do XML zapytań za pomocą złożonych filtrów. Na przykład trzeba znaleźć wszystkie elementy, które ma element podrzędny o określonej nazwie i wartości. Ten temat zawiera przykładowy Pisanie zapytań z zaawansowanym filtrowaniem.  

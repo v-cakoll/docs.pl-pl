@@ -3,11 +3,11 @@ title: Zasady ochrony rozszerzonej
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990174"
 ---
 # <a name="extended-protection-policy"></a>Zasady ochrony rozszerzonej
 Rozszerzona ochrona jest inicjatywy zabezpieczeń, ochrony przed atakami typu man-in--middle (MITM). Ataki MITM to zagrożenie bezpieczeństwa, w którym MITM przyjmuje poświadczeń klienta i przekazuje je do serwera.  
@@ -34,9 +34,9 @@ Rozszerzona ochrona jest inicjatywy zabezpieczeń, ochrony przed atakami typu ma
   
 4. Ten przykładowy skrypt wymaga klienta do nawiązania bezpiecznego kanału z serwerem, dzięki czemu wymaga obecności certyfikatu serwera, które mogą być instalowane z Menedżera usług Internet Information Services (IIS).  
   
-    1.  Otwórz Menedżera usług IIS. Otwórz **certyfikaty serwera**, który pojawia się w **widok funkcji** karcie po wybraniu węzła głównego (nazwa komputera).  
+    1. Otwórz Menedżera usług IIS. Otwórz **certyfikaty serwera**, który pojawia się w **widok funkcji** karcie po wybraniu węzła głównego (nazwa komputera).  
   
-    2.  Na potrzeby testowania w tym przykładzie, należy utworzyć certyfikat z podpisem własnym. Jeśli chcesz, aby program Internet Explorer będzie wyświetlany monit o certyfikat nie jest bezpieczne, należy zainstalować certyfikat w magazynie zaufanego certyfikatu głównego urzędu.  
+    2. Na potrzeby testowania w tym przykładzie, należy utworzyć certyfikat z podpisem własnym. Jeśli chcesz, aby program Internet Explorer będzie wyświetlany monit o certyfikat nie jest bezpieczne, należy zainstalować certyfikat w magazynie zaufanego certyfikatu głównego urzędu.  
   
 5. Otwórz **akcje** okienko dla domyślnej witryny sieci Web. Kliknij przycisk **edytowanie witryny**, **powiązania**. Dodawanie protokół HTTPS jako typu Jeśli nie są jeszcze zainstalowane, numer portu 443. Przypisz certyfikat SSL utworzony w poprzednim kroku.  
   

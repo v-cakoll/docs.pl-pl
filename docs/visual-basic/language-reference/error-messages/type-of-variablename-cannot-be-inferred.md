@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052680"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Typ "\<nazwa_zmiennej >" nie można wywnioskować, ponieważ granice pętli i zmienna Step nie mogą zostać poszerzone do tego samego typu
 Zostały napisane `For...Next` pętli, w którym kompilator nie można wywnioskować typu danych dla zmienna sterująca pętli, ponieważ są spełnione następujące warunki:  
   
--   Typ danych zmienna sterująca pętli nie zostanie określony z `As` klauzuli.  
+- Typ danych zmienna sterująca pętli nie zostanie określony z `As` klauzuli.  
   
--   Granice pętli i zmienna zawiera co najmniej dwa typy danych.  
+- Granice pętli i zmienna zawiera co najmniej dwa typy danych.  
   
--   Nie standardowa występują konwersje między typami danych.  
+- Nie standardowa występują konwersje między typami danych.  
   
  W związku z tym kompilator nie można wywnioskować typu danych zmienna sterująca pętli.  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zmień typy granice pętli i zmienna zgodnie z potrzebami, tak, aby co najmniej jeden z nich to typ, który inne mogą zostać poszerzone do. W poprzednim przykładzie, należy zmienić typ `stepVar` do `Integer`.  
+- Zmień typy granice pętli i zmienna zgodnie z potrzebami, tak, aby co najmniej jeden z nich to typ, który inne mogą zostać poszerzone do. W poprzednim przykładzie, należy zmienić typ `stepVar` do `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Użyj funkcji konwersji jawnej konwertować granice pętli i zmienna na odpowiednie typy. W poprzednim przykładzie, należy zastosować `Val` funkcja `stepVar`.  
+- Użyj funkcji konwersji jawnej konwertować granice pętli i zmienna na odpowiednie typy. W poprzednim przykładzie, należy zastosować `Val` funkcja `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

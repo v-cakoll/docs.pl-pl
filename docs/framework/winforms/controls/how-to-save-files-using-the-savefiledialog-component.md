@@ -12,18 +12,18 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
 ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912928"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Instrukcje: zapisywanie plików za pomocą składnika SaveFileDialog
 <xref:System.Windows.Forms.SaveFileDialog> Składnik umożliwia użytkownikom Przeglądaj system plików i wybierz pliki do zapisania. Okno dialogowe zwraca ścieżkę i nazwę pliku, który został wybrany przez użytkownika w oknie dialogowym. Jednak należy napisać kod, aby faktycznie zapisywać pliki na dysku.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Aby zapisać plik za pomocą składnika SaveFileDialog  
   
--   Wyświetlanie **Zapisz plik** okno dialogowe i wywołania metody można zapisać pliku wybrana przez użytkownika.  
+- Wyświetlanie **Zapisz plik** okno dialogowe i wywołania metody można zapisać pliku wybrana przez użytkownika.  
   
      Użyj <xref:System.Windows.Forms.SaveFileDialog> składnika <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> metodę, aby zapisać plik. Ta metoda umożliwia <xref:System.IO.Stream> można zapisywać do obiektu.  
   

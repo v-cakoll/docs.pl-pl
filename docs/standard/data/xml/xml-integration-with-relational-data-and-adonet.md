@@ -6,22 +6,22 @@ ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959093"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integracja XML z danymi relacyjnymi i sterownikiem ADO.NET
 **XmlDataDocument** klasa jest klasy pochodnej **XmlDocument**i zawiera dane XML. Zaletą **XmlDataDocument** jest zapewnianie Most między danymi relacyjne i hierarchiczne. Jest **XmlDocument** może być powiązana z **DataSet** i obie klasy można synchronizować zmiany wprowadzone do danych znajdujących się w dwóch klas. **XmlDocument** , jest powiązany z **DataSet** umożliwia XML w celu integracji z danymi relacyjnymi i jest konieczne dane reprezentowane jako obu XML lub w formacie relacyjnym. Obie opcje, a nie być ograniczone do pojedynczego reprezentację danych.  
   
  Korzyści dostępnych danych w dwóch widoków są:  
   
--   Ze strukturą części dokumentu XML może być mapowane do zestawu danych, można efektywnie przechowywane, indeksowane i przeszukiwane.  
+- Ze strukturą części dokumentu XML może być mapowane do zestawu danych, można efektywnie przechowywane, indeksowane i przeszukiwane.  
   
--   Przekształcenia, weryfikacji i nawigacji może odbywać się wydajnie za pomocą modelu kursor nad dane XML, które są przechowywane w relationally. Czasami można to zrobić w bardziej efektywnie względem relacyjnej struktury niż Jeśli kod XML jest przechowywany w **XmlDocument** modelu.  
+- Przekształcenia, weryfikacji i nawigacji może odbywać się wydajnie za pomocą modelu kursor nad dane XML, które są przechowywane w relationally. Czasami można to zrobić w bardziej efektywnie względem relacyjnej struktury niż Jeśli kod XML jest przechowywany w **XmlDocument** modelu.  
   
--   **DataSet** można przechowywać fragment kodu XML. Oznacza to, że używasz **XPath** lub **XslTransform** do przechowywania do **zestawu danych** tylko tych elementów i atrybutów zainteresowania. Z tego miejsca zmian na mniejsze, przefiltrowane podzbiór danych, ze zmianami propagowanie danych większe w **XmlDataDocument**.  
+- **DataSet** można przechowywać fragment kodu XML. Oznacza to, że używasz **XPath** lub **XslTransform** do przechowywania do **zestawu danych** tylko tych elementów i atrybutów zainteresowania. Z tego miejsca zmian na mniejsze, przefiltrowane podzbiór danych, ze zmianami propagowanie danych większe w **XmlDataDocument**.  
   
  Można również uruchomić transformacji danych, który został załadowany do **DataSet** z programu SQL Server. Innym rozwiązaniem jest powiązanie WinForm zarządzanych styl klas .NET Framework i formanty formularza sieci Web **DataSet** , została wypełniona ze strumienia wejściowego XML.  
   

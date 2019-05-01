@@ -3,34 +3,34 @@ title: Usługa routingu
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991059"
 ---
 # <a name="routing-service"></a>Usługa routingu
 Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego jako router wiadomości. Podstawowe funkcje usług routingu jest możliwość przesyłania wiadomości, na podstawie zawartości wiadomości, co pozwala wiadomości były przekazywane do endpoint klienta, na podstawie wartości w wiadomości, w nagłówku lub w treści wiadomości.  
   
  <xref:System.ServiceModel.Routing.RoutingService> Jest implementowany jako usługi Windows Communication Foundation (WCF) w <xref:System.ServiceModel.Routing> przestrzeni nazw. Usługa routingu udostępnia jeden lub więcej punktów końcowych usługi, które odbierają wiadomości i następnie trasy każdy komunikat do punktów końcowych klienta na podstawie zawartości komunikatu. Usługa zapewnia następujące funkcje:  
   
--   Routing oparty na zawartość  
+- Routing oparty na zawartość  
   
-    -   Usługi agregacji  
+    - Usługi agregacji  
   
-    -   Przechowywanie wersji usługi  
+    - Przechowywanie wersji usługi  
   
-    -   Priorytet routingu  
+    - Priorytet routingu  
   
-    -   Dynamiczna konfiguracja  
+    - Dynamiczna konfiguracja  
   
--   Mostkowanie protokołu  
+- Mostkowanie protokołu  
   
--   Przetwarzanie protokołu SOAP  
+- Przetwarzanie protokołu SOAP  
   
--   Zaawansowana obsługa błędów  
+- Zaawansowana obsługa błędów  
   
--   Punkty końcowe kopii zapasowej  
+- Punkty końcowe kopii zapasowej  
   
  Jest możliwość tworzenia pośredniczące usługa, która wykonuje co najmniej jedną z tych celów, często takie wdrożenie jest powiązany z konkretnego scenariusza lub rozwiązania i nie można łatwo zastosować nowych aplikacji.  
   
@@ -48,13 +48,13 @@ Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego 
   
  Przez grupowanie komunikatów filtry do filtrowania tabel routingu logiki można skonstruować, który umożliwia obsługę wielu scenariuszy routingu, takich jak:  
   
--   Usługi agregacji  
+- Usługi agregacji  
   
--   Przechowywanie wersji usługi  
+- Przechowywanie wersji usługi  
   
--   Priorytet routingu  
+- Priorytet routingu  
   
--   Dynamiczna konfiguracja  
+- Dynamiczna konfiguracja  
   
  Aby uzyskać więcej informacji na informacje o filtrach wiadomości i tabel filtrów, zobacz [routingu wprowadzenie](../../../../docs/framework/wcf/feature-details/routing-introduction.md) i [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
@@ -97,13 +97,13 @@ Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego 
 ## <a name="streaming"></a>Przesyłanie strumieniowe  
  Usługa routingu może pomyślnie strumienia komunikatów, jeśli ustawisz powiązania do obsługi przesyłania strumieniowego.  Istnieją jednak niektóre warunki, na jakich komunikatów może być konieczne buforowane:  
   
--   Multiemisji (bufor do tworzenia kopii dodatkowych komunikatów)  
+- Multiemisji (bufor do tworzenia kopii dodatkowych komunikatów)  
   
--   Tryb failover (buforu w przypadku, gdy wiadomości musi być wysyłana do kopii zapasowej)  
+- Tryb failover (buforu w przypadku, gdy wiadomości musi być wysyłana do kopii zapasowej)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly ma wartość false (bufor do przedstawienia MessageFilterTable przy użyciu elementu MessageBuffer tak, aby sprawdzić filtry treści)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly ma wartość false (bufor do przedstawienia MessageFilterTable przy użyciu elementu MessageBuffer tak, aby sprawdzić filtry treści)  
   
--   Dynamiczna konfiguracja  
+- Dynamiczna konfiguracja  
   
 ## <a name="see-also"></a>Zobacz także
 

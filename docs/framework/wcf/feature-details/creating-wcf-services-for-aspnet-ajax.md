@@ -3,11 +3,11 @@ title: Tworzenie usług WCF w technologii AJAX na platformie ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
 ms.openlocfilehash: 1f98a27197115c56686d593105f438fee633f34a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857132"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Tworzenie usług WCF w technologii AJAX na platformie ASP.NET
 Microsoft ASP.NET AJAX umożliwia szybkie tworzenie strony sieci Web, które zawierają zaawansowany interfejs użytkownika przy użyciu elementów interfejsu użytkownika dynamiczne i dobrze znane. ASP.NET AJAX udostępnia biblioteki skryptu klienta, obejmujące przeglądarek ECMAScript (JavaScript) i dynamiczny technologii HTML (DHTML) i integruje się je z platform programistycznych opartych na serwerze programu ASP.NET 2.0. Za pomocą kodu ASP.NET AJAX, możesz poprawić środowisko użytkownika i wydajność aplikacji sieci Web.  
@@ -20,15 +20,15 @@ Microsoft ASP.NET AJAX umożliwia szybkie tworzenie strony sieci Web, które zaw
   
  Jeśli nie używasz szablony programu Visual Studio, istnieją dwa sposoby tworzenia punktu końcowego ASP.NET AJAX:  
   
--   Tworzenie punktu końcowego, bez używania żadnej konfiguracji przy użyciu aktywacji hosta dynamicznego. Jest to najbardziej podstawowa metoda, jeśli znasz system konfiguracji usługi WCF. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+- Tworzenie punktu końcowego, bez używania żadnej konfiguracji przy użyciu aktywacji hosta dynamicznego. Jest to najbardziej podstawowa metoda, jeśli znasz system konfiguracji usługi WCF. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
--   Dodaj punkt końcowy z włączoną obsługą technologii AJAX do usługi WCF, za pomocą konfiguracji. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
+- Dodaj punkt końcowy z włączoną obsługą technologii AJAX do usługi WCF, za pomocą konfiguracji. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
   
  Model programowania sieci Web, które są opisane w [Programming Overview modelu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md) może być używany z usługami ASP.NET AJAX. W szczególności:  
   
--   Możesz użyć <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutów, aby wybrać zleceń HTTP GET i POST protokołu HTTP. Jeśli są prawidłowo wykorzystywane to znacznie poprawić wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [jak: Wybieranie między żądania HTTP POST i HTTP GET żądań dla punktów końcowych AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).  
+- Możesz użyć <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutów, aby wybrać zleceń HTTP GET i POST protokołu HTTP. Jeśli są prawidłowo wykorzystywane to znacznie poprawić wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [jak: Wybieranie między żądania HTTP POST i HTTP GET żądań dla punktów końcowych AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).  
   
--   Możesz użyć <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> i <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> właściwości, aby spowodować, że usługi zwrócić dane XML zamiast domyślnego języka JavaScript Object Notation (JSON). W ten sposób za pomocą programu ASP.NET AJAX framework powoduje, że klient JavaScript otrzymać obiekt modelu DOM języka XML.  
+- Możesz użyć <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> i <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> właściwości, aby spowodować, że usługi zwrócić dane XML zamiast domyślnego języka JavaScript Object Notation (JSON). W ten sposób za pomocą programu ASP.NET AJAX framework powoduje, że klient JavaScript otrzymać obiekt modelu DOM języka XML.  
   
     > [!WARNING]
     >  Operacja musi Ustaw typ zawartości tekstu/xml, aby to działało. W przeciwnym razie klienta JavaScript zostanie wyświetlony ciąg zawierający XML zamiast obiektu modelu DOM języka XML.  
@@ -47,13 +47,13 @@ Microsoft ASP.NET AJAX umożliwia szybkie tworzenie strony sieci Web, które zaw
     }  
     ```  
   
--   Nie inne właściwości w <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybuty można zmienić, jeśli wymagana jest zgodność z ASP.NET AJAX. Inne aspekty w sieci Web w modelu programowania można tak długo, jak nie naruszenia konwencji wywoływania ASP.NET AJAX.  
+- Nie inne właściwości w <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybuty można zmienić, jeśli wymagana jest zgodność z ASP.NET AJAX. Inne aspekty w sieci Web w modelu programowania można tak długo, jak nie naruszenia konwencji wywoływania ASP.NET AJAX.  
   
  Bardziej zaawansowanych scenariuszy wymagają zrozumienie niektóre dodatkowe szczegóły Obsługa technologii AJAX w programie WCF:  
   
--   Aby dowiedzieć się, jak dane są przesyłane między klientem strony AJAX i usługi WCF przy użyciu języka JavaScript oraz szczegółowe informacje w sposób mapowania typów programu .NET Framework do typów języka JavaScript, zobacz [obsługi formatu JSON oraz inne formaty transferu danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).  
+- Aby dowiedzieć się, jak dane są przesyłane między klientem strony AJAX i usługi WCF przy użyciu języka JavaScript oraz szczegółowe informacje w sposób mapowania typów programu .NET Framework do typów języka JavaScript, zobacz [obsługi formatu JSON oraz inne formaty transferu danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).  
   
--   Aby móc korzystać z funkcji programu ASP.NET, na przykład uwierzytelniania opartego na adresach URL i uzyskiwania dostępu do informacji o sesji programu ASP.NET, warto włączyć tryb zgodności ASP.NET za pomocą konfiguracji.  
+- Aby móc korzystać z funkcji programu ASP.NET, na przykład uwierzytelniania opartego na adresach URL i uzyskiwania dostępu do informacji o sesji programu ASP.NET, warto włączyć tryb zgodności ASP.NET za pomocą konfiguracji.  
   
  Punktów końcowych AJAX w programie WCF nawet może być używane bez framework ASP.NET AJAX. Wymaga zrozumienia architektury pomocy technicznej Obsługa technologii AJAX w programie WCF. Omówienie tej architektury, zobacz [programowania modelu obiektu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Dla przykładu kodu, demonstrując tej metody, zobacz [usługa AJAX z formatami JSON i XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   

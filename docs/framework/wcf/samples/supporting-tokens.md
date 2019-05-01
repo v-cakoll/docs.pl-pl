@@ -6,8 +6,8 @@ ms.openlocfilehash: 5f2b1500f54f8ade3c4924e3eb22cd022c6800c0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965623"
 ---
 # <a name="supporting-tokens"></a>Obsługa tokenów
 Przykładowe tokenów pomocniczych pokazuje, jak dodać dodatkowe tokeny na komunikat, który korzysta z protokołu WS-Security. W przykładzie dodano tokenu zabezpieczeń binarnych X.509, oprócz nazwy użytkownika tokenu zabezpieczającego. Token jest przekazywany w nagłówku wiadomości WS-Security od klienta do usługi i część komunikatu jest podpisany przy użyciu klucza prywatnego skojarzonego z tokenem zabezpieczającym X.509 potwierdzenie posiadania certyfikatu X.509 do odbiorcy. Jest to przydatne w przypadku, gdy istnieje wymóg posiadania wielu oświadczeń skojarzonych z wiadomością uwierzytelniania lub autoryzacji nadawcy. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".
@@ -15,11 +15,11 @@ Przykładowe tokenów pomocniczych pokazuje, jak dodać dodatkowe tokeny na komu
 ## <a name="demonstrates"></a>Demonstracje
  W przykładzie pokazano:
 
--   Jak klient może przekazać tokeny zabezpieczające dodatkowe usługi.
+- Jak klient może przekazać tokeny zabezpieczające dodatkowe usługi.
 
--   Jak serwera można uzyskać dostęp do oświadczenia skojarzone z tokenów zabezpieczających dodatkowe.
+- Jak serwera można uzyskać dostęp do oświadczenia skojarzone z tokenów zabezpieczających dodatkowe.
 
--   Jak certyfikat X.509 umożliwia ochronę klucz symetryczny, używany do szyfrowania wiadomości i podpis.
+- Jak certyfikat X.509 umożliwia ochronę klucz symetryczny, używany do szyfrowania wiadomości i podpis.
 
 > [!NOTE]
 >  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.
@@ -461,7 +461,7 @@ iisreset
   
 ##### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
--   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+- Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
 > [!NOTE]
 >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykłady WCF, które używają certyfikatów na maszynach, pamiętaj wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

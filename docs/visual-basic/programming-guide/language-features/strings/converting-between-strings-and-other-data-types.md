@@ -8,24 +8,24 @@ helpviewer_keywords:
 - string conversion [Visual Basic], Visual Basic
 ms.assetid: 06085ed5-191d-4930-8fbc-da63930da400
 ms.openlocfilehash: dbd563b01fc7c3afbfc558a277f17a4318f5c634
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054071"
 ---
 # <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Konwertowanie pomiędzy ciągami a innymi typami danych w Visual Basic
 W tej sekcji opisano sposób konwertowania ciągów na inne typy danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Konwertowanie tablicy bajtów w ciąg w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)  
- Jak przekonwertować bajtów z tablicy bajtowej na ciąg.  
+ [Instrukcje: Konwertuj tablicę bajtów na ciąg w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)  
+ Jak konwertować bajtów z tablicy bajtów na ciąg.  
   
- [Porady: Konwertowanie ciągów na tablicę bajtów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)  
+ [Instrukcje: Konwertowanie ciągów na tablice bajtów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)  
  Jak przekonwertować ciąg na tablicę bajtów.  
   
  [Instrukcje: Tworzenie ciągu z tablicy wartości znaków](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-a-string-from-an-array-of-char-values.md)  
- Jak utworzyć ciągu "abcd" z poszczególnych znaków.  
+ Jak utworzyć ciągu "abcd" z pojedynczych znaków.  
   
- [Instrukcje: Konwertowanie ciągów szesnastkowych na liczby](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-hexadecimal-strings-to-numbers.md)  
- Jak przekonwertować ciąg szesnastkowy na liczbę całkowitą.
+ [Instrukcje: Konwertowanie ciągów szestnastkowych na numery](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-hexadecimal-strings-to-numbers.md)  
+ Jak przekonwertować ciągu szesnastkowego na liczbę całkowitą.

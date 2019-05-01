@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d45c5b09358430535438734b38e5dce5d1bcdd3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789503"
 ---
 # <a name="ihosttaskstart-method"></a>IHostTask::Start — Metoda
 Żądania, że host move — zadanie, reprezentowane przez bieżącą [ihosttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia wstrzymane do stanu na żywo, w którym można wykonywać kodu.  

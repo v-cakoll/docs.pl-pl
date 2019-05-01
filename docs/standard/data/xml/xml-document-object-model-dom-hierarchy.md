@@ -1,32 +1,32 @@
 ---
-title: Hierarchia Model (DOM) obiektu dokumentu XML
+title: Hierarchia modelu DOM (XML Document Object Model)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef2b5b200f95cdfac9b08a33c328c1dfb797e59e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959210"
 ---
-# <a name="xml-document-object-model-dom-hierarchy"></a>Hierarchia Model (DOM) obiektu dokumentu XML
+# <a name="xml-document-object-model-dom-hierarchy"></a>Hierarchia modelu DOM (XML Document Object Model)
 Na poniższej ilustracji przedstawiono hierarchii klas dla XML Document Object Model (DOM), za pomocą sieci World Wide Web Consortium (W3C) nadaj nazwę w nawiasach wraz z nazwą klasy, gdzie jest to stosowne.  
   
- ![Model obiektu dokumentu XML &#40;DOM&#41; hierarchii](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![XML Document Object Model &#40;DOM&#41; hierarchy](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 Hierarchia XML modelu DOM (Document Object)  
   
  Następujące klasy nie dziedziczą **XmlNode**:  
   
--   **XmlImplementation**  
+- **XmlImplementation**  
   
--   **XmlNamedNodeMap**  
+- **XmlNamedNodeMap**  
   
--   **XmlNodeList**  
+- **XmlNodeList**  
   
--   **Klasy XmlNodeChangedEventArgs**  
+- **XmlNodeChangedEventArgs**  
   
  **XmlImplementation** klasa jest używana w celu utworzenia dokumentu XML. Aby uzyskać więcej informacji, zobacz [Tworzenie dokumentu XML](../../../../docs/standard/data/xml/xml-document-creation.md).  
   

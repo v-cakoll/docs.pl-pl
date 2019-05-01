@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973202"
 ---
 # <a name="events-visual-basic"></a>Zdarzenia (Visual Basic)
 Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które są wykonywane w kolejności, w rzeczywistości większość programów są oparte na zdarzeniach — czyli przepływem wykonania jest określana przez zewnętrzne wystąpienia o nazwie *zdarzenia*.  
@@ -53,11 +53,11 @@ Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które 
   
  `WithEvents` Instrukcji i `Handles` klauzuli są często najlepszym wyborem dla procedury obsługi zdarzeń, ponieważ używają składni deklaratywnej ułatwia obsługę zdarzeń dla kodu, odczytywania i debugowania. Należy jednak pamiętać o następujących ograniczeniach stosowania `WithEvents` zmiennych:  
   
--   Nie można użyć `WithEvents` zmiennej jako zmienną obiektu. Oznacza to, że nie można zadeklarować jako `Object`— należy określić nazwę klasy, kiedy Deklarujesz zmienną.  
+- Nie można użyć `WithEvents` zmiennej jako zmienną obiektu. Oznacza to, że nie można zadeklarować jako `Object`— należy określić nazwę klasy, kiedy Deklarujesz zmienną.  
   
--   Ponieważ zdarzenia udostępnionego nie są związane z wystąpień klasy, nie można użyć `WithEvents` deklaratywne obsługi zdarzeń udostępnionych. Podobnie nie można użyć `WithEvents` lub `Handles` do obsługi zdarzeń z `Structure`. W obu przypadkach można użyć `AddHandler` instrukcję, aby obsługiwać te wydarzenia.  
+- Ponieważ zdarzenia udostępnionego nie są związane z wystąpień klasy, nie można użyć `WithEvents` deklaratywne obsługi zdarzeń udostępnionych. Podobnie nie można użyć `WithEvents` lub `Handles` do obsługi zdarzeń z `Structure`. W obu przypadkach można użyć `AddHandler` instrukcję, aby obsługiwać te wydarzenia.  
   
--   Nie można utworzyć tablic `WithEvents` zmiennych.  
+- Nie można utworzyć tablic `WithEvents` zmiennych.  
   
  `WithEvents` Zmienne umożliwiają jedną procedurą obsługi zdarzeń do obsługi co najmniej jeden rodzaj zdarzeń lub jeden lub więcej programów obsługi zdarzeń do obsługi tego samego typu zdarzenia.  
   
@@ -91,7 +91,7 @@ Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które 
   
 ### <a name="to-handle-events-from-a-base-class"></a>Do obsługi zdarzeń z klasy bazowej  
   
--   Zadeklaruj program obsługi zdarzeń w klasie pochodnej, dodając `Handles MyBase.` *eventname* instrukcję, aby wiersz deklaracja procedury obsługi zdarzeń, gdzie *eventname* nazywa się zdarzenie w Klasa bazowa, które obsługujesz. Na przykład:  
+- Zadeklaruj program obsługi zdarzeń w klasie pochodnej, dodając `Handles MyBase.` *eventname* instrukcję, aby wiersz deklaracja procedury obsługi zdarzeń, gdzie *eventname* nazywa się zdarzenie w Klasa bazowa, które obsługujesz. Na przykład:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

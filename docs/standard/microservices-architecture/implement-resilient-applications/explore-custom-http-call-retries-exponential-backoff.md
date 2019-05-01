@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
 ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938661"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Zapoznaj się z niestandardowych ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
 ms.openlocfilehash: d36d30dd336bbe50b192b10a6a60d2c7e382adb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981958"
 ---
 # <a name="resources-and-code"></a>Zasoby i kod
 W tym omówieniu koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów można uzyskać dostępu do lub utworzone przy użyciu kodu zamiast [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] składni. Aby uzyskać więcej informacji na temat użycia zasobów ogólnych i zasobów z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] perspektywy składni, zobacz [zasoby XAML](xaml-resources.md).  

@@ -3,11 +3,11 @@ title: 'Szczegóły usługi CustomPeerResolverService: Rejestracje klienta'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
 ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972552"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Szczegóły usługi CustomPeerResolverService: Rejestracje klienta
 Każdy węzeł w siatce publikuje swoje informacje o punkcie końcowym usługi rozpoznawania nazw za pośrednictwem `Register` funkcji. Usługa rozpoznawania nazw przechowuje te informacje jako rekord rejestracji. Ten rekord zawiera unikatowy identyfikator (identyfikator), a informacje o punkcie końcowym (PeerNodeAddress) dla węzła.  
@@ -26,9 +26,9 @@ Każdy węzeł w siatce publikuje swoje informacje o punkcie końcowym usługi r
   
  Aby zaimplementować usługi rozpoznawania nazw, należy napisać funkcję obsługi do usuwania przestarzałych rejestracji rekordów. Istnieje kilka sposobów, aby to zrobić:  
   
--   **Okresowej konserwacji**: Należy skonfigurować czasomierz go okresowo i przechodzą przez swoim magazynem danych, aby usunąć stare rekordy. <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> Korzysta z tej metody.  
+- **Okresowej konserwacji**: Należy skonfigurować czasomierz go okresowo i przechodzą przez swoim magazynem danych, aby usunąć stare rekordy. <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> Korzysta z tej metody.  
   
--   **Usuwanie pasywnym**: Zamiast aktywnie wyszukiwanie starych rekordów w regularnych odstępach czasu, można zidentyfikować i usuwania starych rekordów, gdy usługa działa już inna funkcja. To może spowodować spowolnienie czas odpowiedzi na żądania od klientów programu rozpoznawania nazw, ale eliminuje to potrzebę czasomierza i bardziej wydajne, jeśli kilka węzły są oczekiwane, aby pozostawić bez wywoływania `Unregister`.  
+- **Usuwanie pasywnym**: Zamiast aktywnie wyszukiwanie starych rekordów w regularnych odstępach czasu, można zidentyfikować i usuwania starych rekordów, gdy usługa działa już inna funkcja. To może spowodować spowolnienie czas odpowiedzi na żądania od klientów programu rozpoznawania nazw, ale eliminuje to potrzebę czasomierza i bardziej wydajne, jeśli kilka węzły są oczekiwane, aby pozostawić bez wywoływania `Unregister`.  
   
 ## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime i odświeżanie  
  Gdy węzeł rejestruje się za pomocą usługi rozpoznawania nazw, otrzymuje <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> obiektu z usługi. Ten obiekt zawiera `RegistrationLifetime` właściwości, które wskazuje na węzeł, czas, jaki ma przed rejestracją wygaśnie i zostanie usunięty w usłudze rozpoznawania nazw. Jeśli na przykład `RegistrationLifetime` to 2 minuty, węzeł musi wywołać `Refresh` w mniej niż 2 minut zapewnienie rekord pozostaje od nowa i nie zostanie usunięta. Po odebraniu usługi rozpoznawania nazw `Refresh` żądań wyszukuje rekord i resetuje czas wygaśnięcia. Odśwież zwraca <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> obiekt z `RegistrationLifetime` właściwości.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
 ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918710"
 ---
 # <a name="trusted-subsystem"></a>Zaufany podsystem
 Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci. Usługi sieci Web zostały zaprojektowane, tak że dostęp do dodatkowych zasobów (np. baz danych lub inne usługi sieci Web) są hermetyzowane w logice biznesowej usługi sieci Web. Te zasoby muszą być chronione przed nieautoryzowanym dostępem. Poniższa ilustracja przedstawia proces zaufany podsystem.  
@@ -35,7 +35,7 @@ Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci
 |Współdziałanie|Windows Communication Foundation (WCF) tylko.|  
 |Uwierzytelniania (usługa)|Usługa tokenu zabezpieczającego uwierzytelnia i autoryzuje klientów.|  
 |Uwierzytelnianie (klient)|Zaufany podsystem uwierzytelnia klienta i zasobów uwierzytelnia usługi zaufany podsystem.|  
-|Integralność|Yes|  
+|Integralność|Tak|  
 |Poufność|Tak|  
 |Transport|Protokół HTTP między klientem a usługą zaufany podsystem.<br /><br /> NET. TCP między usługą zaufany podsystem i zasobów (usłudze zaplecza).|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  

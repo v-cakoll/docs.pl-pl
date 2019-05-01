@@ -17,11 +17,11 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 ms.openlocfilehash: 4d93b1e40371b00f9d1ff69ec31ad0983beb493f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971733"
 ---
 # <a name="uinteger-data-type"></a>UInteger — Typ danych
 
@@ -66,17 +66,17 @@ Dim number = &H_0FAC_14D7ui
 
  `UInteger` i `Integer` typy danych zapewnić optymalną wydajność na 32-bitowym procesorze, ponieważ mniejszych typów całkowitych (`UShort`, `Short`, `Byte`, i `SByte`), nawet jeśli korzystają z mniejszą liczbą bitów, zajmują więcej czasu Ładowanie, przechowywania i pobierania.  
   
--   **Liczby ujemne.** Ponieważ `UInteger` jest typ bez znaku, go nie może reprezentować wartość ujemną. Jeśli używasz jednoargumentowego znaku minusa (`-`) operatora na wyrażenie obliczane do typu `UInteger`, Visual Basic konwertuje wyrażenie które ma `Long` pierwszy.  
+- **Liczby ujemne.** Ponieważ `UInteger` jest typ bez znaku, go nie może reprezentować wartość ujemną. Jeśli używasz jednoargumentowego znaku minusa (`-`) operatora na wyrażenie obliczane do typu `UInteger`, Visual Basic konwertuje wyrażenie które ma `Long` pierwszy.  
   
--   **CLS Compliance.** `UInteger` Typem danych nie jest częścią [specyfikacja Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie mogą korzystać z składnik, który korzysta z niego.
+- **CLS Compliance.** `UInteger` Typem danych nie jest częścią [specyfikacja Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie mogą korzystać z składnik, który korzysta z niego.
   
--   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać, takich jak wpisywany `uint` mogą mieć różną szerokość danych (16 bitów) w innych środowiskach. Jeśli przekazujesz 16-bitowy argument do takiego składnika, Zadeklaruj go jako `UShort` zamiast `UInteger` w zarządzanym kodzie języka Visual Basic.  
+- **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać, takich jak wpisywany `uint` mogą mieć różną szerokość danych (16 bitów) w innych środowiskach. Jeśli przekazujesz 16-bitowy argument do takiego składnika, Zadeklaruj go jako `UShort` zamiast `UInteger` w zarządzanym kodzie języka Visual Basic.  
   
--   **Rozszerzanie.** `UInteger` — Typ danych rozszerza się na `Long`, `ULong`, `Decimal`, `Single`, i `Double`. Oznacza to, że możesz przekonwertować `UInteger` do dowolnego z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzanie.** `UInteger` — Typ danych rozszerza się na `Long`, `ULong`, `Decimal`, `Single`, i `Double`. Oznacza to, że możesz przekonwertować `UInteger` do dowolnego z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Znaki typu.** Dołącza znaki literalne `UI` do literału wymusza `UInteger` typu danych. `UInteger` nie ma identyfikatora typ znaku.  
+- **Znaki typu.** Dołącza znaki literalne `UI` do literału wymusza `UInteger` typu danych. `UInteger` nie ma identyfikatora typ znaku.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.UInt32?displayProperty=nameWithType> struktury.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.UInt32?displayProperty=nameWithType> struktury.  
   
 ## <a name="see-also"></a>Zobacz także
 

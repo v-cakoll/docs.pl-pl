@@ -10,11 +10,11 @@ ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0b4727ead8abb9b3618f8b9dda8f7a9eb4b2321f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968145"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Wnioskowanie schematów na podstawie dokumentów XML
 W tym temacie opisano sposób użycia <xref:System.Xml.Schema.XmlSchemaInference> klasy zostać wywnioskowany schemat języka (XSD) definicji schematu XML struktury dokumentu XML.  

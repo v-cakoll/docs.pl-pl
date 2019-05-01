@@ -3,11 +3,11 @@ title: Wyświetlanie dzienników komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964401"
 ---
 # <a name="viewing-message-logs"></a>Wyświetlanie dzienników komunikatów
 W tym temacie opisano, jak można wyświetlić dzienniki komunikatów.  
@@ -29,9 +29,9 @@ W tym temacie opisano, jak można wyświetlić dzienniki komunikatów.
   
  Aby rozwiązać ten problem, można użyć jednego z następujących metod.  
   
--   Wyświetlać tylko dwa z trzech dzienników komunikatów w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w dowolnym momencie.  
+- Wyświetlać tylko dwa z trzech dzienników komunikatów w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w dowolnym momencie.  
   
--   Czy należy wyświetlać wszystkie trzy dzienniki w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w tym samym czasie można zmodyfikować usługi przekazywania przez utworzenie nowego <xref:System.ServiceModel.Channels.Message> wystąpienia. To wystąpienie powinno być kopią treści komunikatu przychodzącego, a także wszystkie nagłówki z wyjątkiem `ActivityId` i `Action` nagłówków. Poniższy przykład kodu pokazuje, jak to zrobić.  
+- Czy należy wyświetlać wszystkie trzy dzienniki w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w tym samym czasie można zmodyfikować usługi przekazywania przez utworzenie nowego <xref:System.ServiceModel.Channels.Message> wystąpienia. To wystąpienie powinno być kopią treści komunikatu przychodzącego, a także wszystkie nagłówki z wyjątkiem `ActivityId` i `Action` nagłówków. Poniższy przykład kodu pokazuje, jak to zrobić.  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Wyjątkowych przypadkach komunikat niedokładne rejestrowanie zawartości  
  W następujących warunkach rejestrowane komunikaty mogą nie być dokładnie reprezentacja strumień oktetu się na łączu.  
   
--   Dla BasicHttpBinding, koperty nagłówki są rejestrowane dla przychodzących komunikatów w / adresowania/Brak przestrzeni nazw.  
+- Dla BasicHttpBinding, koperty nagłówki są rejestrowane dla przychodzących komunikatów w / adresowania/Brak przestrzeni nazw.  
   
--   Może się nie zgadzać białych znaków.  
+- Może się nie zgadzać białych znaków.  
   
--   Dla wiadomości przychodzących pustych elementów może być reprezentowany inaczej. Na przykład \<tagu >\</tagu > zamiast \<tagu / >  
+- Dla wiadomości przychodzących pustych elementów może być reprezentowany inaczej. Na przykład \<tagu >\</tagu > zamiast \<tagu / >  
   
--   Kiedy znane rejestrowanie dane osobowe jest wyłączone przez domyślne lub enableLoggingKnownPii jawne ustawienie = "true".  
+- Kiedy znane rejestrowanie dane osobowe jest wyłączone przez domyślne lub enableLoggingKnownPii jawne ustawienie = "true".  
   
--   Kodowanie jest włączona dla przekształcania w formacie UTF-8.  
+- Kodowanie jest włączona dla przekształcania w formacie UTF-8.  
   
 ## <a name="see-also"></a>Zobacz także
 

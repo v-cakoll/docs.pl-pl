@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
 ms.openlocfilehash: 8fdb702a03d4cfe17954d48215c4a16a3bdbcc82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925674"
 ---
 # <a name="object-required-visual-basic"></a>Wymagany obiekt (Visual Basic)
 Odwołania do właściwości i metod często wymagają kwalifikatora jawne obiektu. Jest to takiej sytuacji.  

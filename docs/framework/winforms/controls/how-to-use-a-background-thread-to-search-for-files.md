@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785856"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Instrukcje: użycie wątku w tle do wyszukiwania plików
 <xref:System.ComponentModel.BackgroundWorker> Składnika zastępuje i dodaje funkcjonalność do <xref:System.Threading> przestrzeni nazw; jednakże <xref:System.Threading> przestrzeń nazw została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [BackgroundWorker, składnik — omówienie](backgroundworker-component-overview.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "59157793"
   
  Poniższy przykład (`DirectorySearcher`) pokazuje wielowątkowego formant Windows Forms, który używa wątku w tle do wyszukiwania rekursywnie katalog dla plików pasujących do określonego ciągu wyszukiwania, a następnie wypełni pola listy z wynikami wyszukiwania. Kluczowe założenia przedstawionymi w przykładzie są następujące:  
   
--   `DirectorySearcher` uruchamia nowy wątek, aby wykonać wyszukiwanie. Wątek `ThreadProcedure` metodę, która z kolei wywołuje Pomocnika `RecurseDirectory` metody w celu rzeczywistego wyszukiwania i wypełnienia pola listy. Wypełnianie pola listy wymaga jednak wywołania międzywątkowe, zgodnie z opisem w dwóch następnych wypunktowanej.  
+- `DirectorySearcher` uruchamia nowy wątek, aby wykonać wyszukiwanie. Wątek `ThreadProcedure` metodę, która z kolei wywołuje Pomocnika `RecurseDirectory` metody w celu rzeczywistego wyszukiwania i wypełnienia pola listy. Wypełnianie pola listy wymaga jednak wywołania międzywątkowe, zgodnie z opisem w dwóch następnych wypunktowanej.  
   
--   `DirectorySearcher` definiuje `AddFiles` metodę, aby dodać pliki do pola listy; jednak `RecurseDirectory` nie można bezpośrednio wywołać `AddFiles` ponieważ `AddFiles` można wykonać tylko w wątku STA., utworzony `DirectorySearcher`.  
+- `DirectorySearcher` definiuje `AddFiles` metodę, aby dodać pliki do pola listy; jednak `RecurseDirectory` nie można bezpośrednio wywołać `AddFiles` ponieważ `AddFiles` można wykonać tylko w wątku STA., utworzony `DirectorySearcher`.  
   
--   Jedynym sposobem `RecurseDirectory` może wywołać `AddFiles` jest za pośrednictwem wywołania międzywątkowe — oznacza to, przez wywołanie <xref:System.Windows.Forms.Control.Invoke%2A> lub <xref:System.Windows.Forms.Control.BeginInvoke%2A> do organizowania `AddFiles` do tworzenia wątku `DirectorySearcher`. `RecurseDirectory` używa <xref:System.Windows.Forms.Control.BeginInvoke%2A> tak, aby wywołanie może się asynchronicznie.  
+- Jedynym sposobem `RecurseDirectory` może wywołać `AddFiles` jest za pośrednictwem wywołania międzywątkowe — oznacza to, przez wywołanie <xref:System.Windows.Forms.Control.Invoke%2A> lub <xref:System.Windows.Forms.Control.BeginInvoke%2A> do organizowania `AddFiles` do tworzenia wątku `DirectorySearcher`. `RecurseDirectory` używa <xref:System.Windows.Forms.Control.BeginInvoke%2A> tak, aby wywołanie może się asynchronicznie.  
   
--   Marshaling metody wymaga wielokrotność wskaźnika funkcji lub wywołania zwrotnego. Jest to realizowane przy użyciu delegatów w programie .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> Delegat przyjmuje jako argument. `DirectorySearcher` w związku z tym definiuje delegata (`FileListDelegate`), wiąże `AddFiles` do wystąpienia `FileListDelegate` w Konstruktorze i przekazuje ten delegat wystąpienia do <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` definiuje również delegata zdarzenia, który jest organizowana po zakończeniu wyszukiwania.  
+- Marshaling metody wymaga wielokrotność wskaźnika funkcji lub wywołania zwrotnego. Jest to realizowane przy użyciu delegatów w programie .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> Delegat przyjmuje jako argument. `DirectorySearcher` w związku z tym definiuje delegata (`FileListDelegate`), wiąże `AddFiles` do wystąpienia `FileListDelegate` w Konstruktorze i przekazuje ten delegat wystąpienia do <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` definiuje również delegata zdarzenia, który jest organizowana po zakończeniu wyszukiwania.  
   
 ```vb  
 Option Strict  

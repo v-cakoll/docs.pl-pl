@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928612"
 ---
 # <a name="introduction-to-extensibility"></a>Wprowadzenie do rozszerzalności
 Model aplikacji Windows Communication Foundation (WCF) jest przeznaczony do rozwiązywania większa część wymagania dotyczące komunikacji z dowolnej aplikacji rozproszonej. Jednak zawsze są scenariusze, które nie obsługują modelu aplikacji domyślnej i implementacje dostarczane przez system. Model rozszerzalności programu WCF jest przeznaczony do obsługi scenariuszy niestandardowych, dzięki któremu można zmodyfikować zachowanie systemu na każdym poziomie, nawet do punktu zamiany modelu całej aplikacji. W tym temacie opisano różne obszary rozszerzenia i wskazuje, aby uzyskać więcej informacji na temat każdego.  
@@ -19,11 +19,11 @@ Model aplikacji Windows Communication Foundation (WCF) jest przeznaczony do rozw
 ## <a name="areas-to-extend"></a>Obszary, aby rozszerzyć  
  Możesz rozszerzyć:  
   
--   Czas wykonywania aplikacji. Spowoduje to rozszerzenie, wysyłanie i przetwarzanie komunikatów dla aplikacji. Ten obszar zawiera również rozszerzenie systemu zabezpieczeń, system metadanych, system serializacji i powiązania i powiązania elementy, które połączyć aplikację z podstawowym systemie kanału.  
+- Czas wykonywania aplikacji. Spowoduje to rozszerzenie, wysyłanie i przetwarzanie komunikatów dla aplikacji. Ten obszar zawiera również rozszerzenie systemu zabezpieczeń, system metadanych, system serializacji i powiązania i powiązania elementy, które połączyć aplikację z podstawowym systemie kanału.  
   
--   Kanał i kanał w czasie wykonywania. Spowoduje to rozszerzenie system, który działa na poziomie komunikatu protokołu transportu, zapewniając i kodowanie pomocy technicznej.  
+- Kanał i kanał w czasie wykonywania. Spowoduje to rozszerzenie system, który działa na poziomie komunikatu protokołu transportu, zapewniając i kodowanie pomocy technicznej.  
   
--   Środowisko uruchomieniowe hosta. Spowoduje to rozszerzenie relacji hostingu domeny aplikacji w środowisku uruchomieniowym kanału i aplikacji.  
+- Środowisko uruchomieniowe hosta. Spowoduje to rozszerzenie relacji hostingu domeny aplikacji w środowisku uruchomieniowym kanału i aplikacji.  
   
 ### <a name="extending-the-application-runtime"></a>Rozszerzanie środowiska uruchomieniowego aplikacji  
  W aplikacji WCF jest rozróżnienie między wiadomości, które są przeznaczone do odpowiednich kanałów i komunikaty, które są przeznaczone dla samej aplikacji. Kanał wiadomości obsługuje niektóre funkcje związane z kanału, takie jak ustanawianie bezpiecznej konwersacji lub ustanawiania niezawodnych sesji. Te komunikaty nie są dostępne do środowiska uruchomieniowego aplikacji; są przetwarzane przed jest zaangażowana w warstwie aplikacji.  

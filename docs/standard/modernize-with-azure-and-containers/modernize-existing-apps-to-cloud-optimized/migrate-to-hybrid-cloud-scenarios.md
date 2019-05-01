@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936734"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Scenariusze migracji do chmury hybrydowej
 
@@ -33,9 +33,9 @@ Rysunek 4 — 13 przedstawiono omówienie platformy chmury hybrydowej, które fi
 
 Usługa Azure Stack jest oferowana w dwóch opcji wdrażania, stosownie do potrzeb:
 
--   Zintegrowane systemy usługi Azure Stack
+- Zintegrowane systemy usługi Azure Stack
 
--   Zestaw Azure Stack Development Kit
+- Zestaw Azure Stack Development Kit
 
 ### <a name="azure-stack-integrated-systems"></a>Zintegrowane systemy usługi Azure Stack
 
@@ -47,23 +47,23 @@ Microsoft Azure Stack Development Kit jest wdrożenia z pojedynczym węzłem us�
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Chmury hybrydowej platformy Azure**
+- **Chmury hybrydowej platformy Azure**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Konta usługi Active Directory dla Windows kontenery**
+- **Konta usługi Active Directory dla Windows kontenery**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **Utwórz kontener z obsługą usługi Active Directory**
+- **Utwórz kontener z obsługą usługi Active Directory**
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Licencjonowanie korzyści użycia hybrydowego platformy Azure**
+- **Licencjonowanie korzyści użycia hybrydowego platformy Azure**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

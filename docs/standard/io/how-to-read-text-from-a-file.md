@@ -15,11 +15,11 @@ ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7330c209ce6514459d3ab1dd58dc1c80b1978a56
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947111"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Instrukcje: Odczytywanie tekstu z pliku
 W poniższych przykładach pokazano, jak odczytać tekst synchronicznie i asynchronicznie z pliku tekstowego przy użyciu platformy .NET dla aplikacji komputerowych. W obu przykładach podczas tworzenia wystąpienia klasy <xref:System.IO.StreamReader> należy dostarczyć względną lub bezwzględną ścieżkę do pliku. 

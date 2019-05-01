@@ -11,11 +11,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seadec18
 ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936815"
 ---
 # <a name="basic-string-operations-in-net"></a>Podstawowe operacje na ciągach w programie .NET
 Aplikacje często odpowiadają użytkownikom tworząc wiadomości, w oparciu o dane wejściowe użytkownika. Na przykład nie jest niczym niezwykłym dla witryn sieci Web odpowiedzieć na nowo zalogowanego użytkownika przy użyciu wyspecjalizowanego powitanie, które zawiera nazwy użytkownika. Kilka metod w <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy umożliwiają dynamicznie utworzyć niestandardowe ciągi do wyświetlenia w interfejsie użytkownika. Te metody także pomóc wykonywać podstawowe operacje na ciągach takich jak tworzenie nowych ciągów w tablice bajtów, porównywania wartości ciągów i modyfikowanie istniejących ciągów.  
@@ -39,7 +39,7 @@ Aplikacje często odpowiadają użytkownikom tworząc wiadomości, w oparciu o d
  [Używanie klasy StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
  W tym artykule opisano sposób tworzenia i modyfikowania obiektów dynamicznych parametrów za pomocą <xref:System.Text.StringBuilder> klasy.  
   
- [Jak: Wykonywania podstawowych działań na ciągach](../../../docs/standard/base-types/basic-manipulations.md)  
+ [Instrukcje: Wykonywania podstawowych działań na ciągach](../../../docs/standard/base-types/basic-manipulations.md)  
  Zademonstrowano użycie podstawowe operacje na ciągach.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

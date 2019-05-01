@@ -3,11 +3,11 @@ title: WSDL i zasady
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
 ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929665"
 ---
 # <a name="wsdl-and-policy"></a>WSDL i zasady
 W tym temacie omówiono WSDL Windows Communication Foundation (WCF) 1.1, szczegóły implementacji protokołu WS-Policy i WS-PolicyAttachment, a także dodatkowe potwierdzenia WS-Policy i rozszerzenia WSDL 1.1 wprowadzone przez architekturę WCF.  

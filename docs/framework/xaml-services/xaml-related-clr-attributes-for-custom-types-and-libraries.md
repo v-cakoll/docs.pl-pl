@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938765"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek
 W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka wspólnego CLR) języka, które są definiowane przez .NET Framework XAML Services. Omówiono także inne atrybuty CLR zdefiniowane w programie .NET Framework, które mają scenariusz związane z XAML dla aplikacji do zespołów lub typów. Przypisywanie zestawy, typy lub elementy członkowskie z tych atrybutów CLR udostępnia informacje o systemie typu XAML powiązane z typami. Dane mają charakter-klient XAML, który używa usług programu .NET Framework XAML dla przetwarzania strumienia węzłów XAML bezpośrednio lub za pośrednictwem dedykowanej czytniki XAML i moduły zapisujące XAML.  
@@ -90,9 +90,9 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  **Argumenty:** Obsługuje dwa rodzaje autorstwa:  
   
--   Ciąg, który określa nazwę właściwości typu opartego na atrybutach.  
+- Ciąg, który określa nazwę właściwości typu opartego na atrybutach.  
   
--   Ciąg, który określa nazwę właściwości i a <xref:System.Type> dla typu, który definiuje właściwość o nazwie. Ta forma jest do określania elementu członkowskiego można dołączyć jako właściwość namescope XAML.  
+- Ciąg, który określa nazwę właściwości i a <xref:System.Type> dla typu, który definiuje właściwość o nazwie. Ta forma jest do określania elementu członkowskiego można dołączyć jako właściwość namescope XAML.  
   
  <xref:System.Windows.Markup.NameScopePropertyAttribute> Określa właściwość, która zawiera wartość namescope XAML dla klasy opartego na atrybutach. Właściwość namescope XAML powinien odwoływać się do obiektu, który implementuje <xref:System.Windows.Markup.INameScope> i przechowuje rzeczywiste namescope XAML, jego magazynu i jego zachowanie.  
   
@@ -219,9 +219,9 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  **Argumenty:**  
   
--   Ciąg, który określa identyfikator przestrzeni nazw XAML do uwzględnienia.  
+- Ciąg, który określa identyfikator przestrzeni nazw XAML do uwzględnienia.  
   
--   Ciąg, który określa identyfikator przestrzeni nazw XAML, który można uwzględnienia przestrzeń nazw XAML z poprzednim argumentu.  
+- Ciąg, który określa identyfikator przestrzeni nazw XAML, który można uwzględnienia przestrzeń nazw XAML z poprzednim argumentu.  
   
  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> Określa, że przestrzeń nazw XAML może włączony przez innej przestrzeni nazw XAML. Zazwyczaj jest oznaczany subsuming przestrzeń nazw XAML w uprzednio zdefiniowanej <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. Ta technika może być używane do obsługi wersji XAML słownictwa używanego w bibliotece i aby był zgodny z wcześniej zdefiniowanego znaczników względem wcześniej słownictwa numerów wersji.  
   
@@ -230,40 +230,40 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  **Argumenty:**  
   
--   Ciąg, który określa identyfikator przestrzeni nazw XAML, aby zdefiniować.  
+- Ciąg, który określa identyfikator przestrzeni nazw XAML, aby zdefiniować.  
   
--   Ciąg, który nazwy przestrzeni nazw CLR. Przestrzeń nazw środowiska CLR, należy zdefiniować typy publiczne w swoim zestawie, i co najmniej jeden z typów przestrzeni nazw CLR powinien być przeznaczone do użycia XAML.  
+- Ciąg, który nazwy przestrzeni nazw CLR. Przestrzeń nazw środowiska CLR, należy zdefiniować typy publiczne w swoim zestawie, i co najmniej jeden z typów przestrzeni nazw CLR powinien być przeznaczone do użycia XAML.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Określa mapowanie na zasadzie na zestawie między przestrzeni nazw XAML i przestrzeń nazw środowiska CLR, która jest następnie używany do rozpoznawania typu przez moduł zapisujący obiektu XAML i kontekst schematu XAML.  
   
  Więcej niż jeden <xref:System.Windows.Markup.XmlnsDefinitionAttribute> może odnosić się do zestawu. Może to zostać zrobione w jakiejkolwiek kombinacji następujących przyczyn:  
   
--   Projekt Biblioteka zawiera wiele przestrzeni nazw CLR dla logicznej organizacji dostęp do interfejsu API środowiska wykonawczego; Jednakże chcesz, aby wszystkie typy w tych obszarach nazw jako XAML można używać, odwołując się do tej samej przestrzeni nazw XAML. W takim przypadku należy zastosować kilka <xref:System.Windows.Markup.XmlnsDefinitionAttribute> atrybuty, korzystając z tych samych <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> wartość, ale o innej <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> wartości. Jest to szczególnie przydatne w przypadku definiowania mapowań dla przestrzeni nazw XAML, który zamierza być domyślna przestrzeń nazw XAML wspólnej wykorzystania sieci framework lub aplikację.  
+- Projekt Biblioteka zawiera wiele przestrzeni nazw CLR dla logicznej organizacji dostęp do interfejsu API środowiska wykonawczego; Jednakże chcesz, aby wszystkie typy w tych obszarach nazw jako XAML można używać, odwołując się do tej samej przestrzeni nazw XAML. W takim przypadku należy zastosować kilka <xref:System.Windows.Markup.XmlnsDefinitionAttribute> atrybuty, korzystając z tych samych <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> wartość, ale o innej <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> wartości. Jest to szczególnie przydatne w przypadku definiowania mapowań dla przestrzeni nazw XAML, który zamierza być domyślna przestrzeń nazw XAML wspólnej wykorzystania sieci framework lub aplikację.  
   
--   Projekt Biblioteka zawiera wiele przestrzeni nazw CLR i chcesz, aby oddzielenie użycia typów w tych przestrzeni nazw CLR zamierzonego przestrzeń nazw XAML.  
+- Projekt Biblioteka zawiera wiele przestrzeni nazw CLR i chcesz, aby oddzielenie użycia typów w tych przestrzeni nazw CLR zamierzonego przestrzeń nazw XAML.  
   
--   Definiowanie przestrzeni nazw CLR w zestawie i chcesz, aby być dostępne przez więcej niż jednej przestrzeni nazw XAML. W tym scenariuszu występuje, gdy znajdują się pomocne vocabularies wiele z tą samą bazą kodu.  
+- Definiowanie przestrzeni nazw CLR w zestawie i chcesz, aby być dostępne przez więcej niż jednej przestrzeni nazw XAML. W tym scenariuszu występuje, gdy znajdują się pomocne vocabularies wiele z tą samą bazą kodu.  
   
--   Obsługa języka XAML definiuje się w przestrzeni nazw CLR. W tym przypadku <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> . wartość powinna być `http://schemas.microsoft.com/winfx/2006/xaml`.  
+- Obsługa języka XAML definiuje się w przestrzeni nazw CLR. W tym przypadku <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> . wartość powinna być `http://schemas.microsoft.com/winfx/2006/xaml`.  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **Dokumentacja:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
  **Argumenty:**  
   
--   Ciąg, który określa identyfikator przestrzeni nazw XAML.  
+- Ciąg, który określa identyfikator przestrzeni nazw XAML.  
   
--   Ciąg, który określa zalecaną prefiks.  
+- Ciąg, który określa zalecaną prefiks.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Określa prefiks zalecane dla przestrzeni nazw XAML. Prefiks jest przydatne podczas pisania elementów i atrybutów w pliku XAML, który jest serializowany przez usług .NET Framework XAML <xref:System.Xaml.XamlXmlWriter>, lub gdy biblioteki wykonawcze XAML korzysta z środowisko projektowania, który ma XAML funkcje edycji.  
   
  Więcej niż jeden <xref:System.Windows.Markup.XmlnsPrefixAttribute> może odnosić się do zestawu. Może to zostać zrobione w jakiejkolwiek kombinacji następujących przyczyn:  
   
--   Zestaw definiuje typy dla więcej niż jednej przestrzeni nazw XAML. W takim przypadku należy zdefiniować prefiksu różne wartości dla każdej przestrzeni nazw XAML.  
+- Zestaw definiuje typy dla więcej niż jednej przestrzeni nazw XAML. W takim przypadku należy zdefiniować prefiksu różne wartości dla każdej przestrzeni nazw XAML.  
   
--   Wiele vocabularies znajdują się pomocne i używać różnych prefiksów dla każdego słownictwa i przestrzeń nazw XAML.  
+- Wiele vocabularies znajdują się pomocne i używać różnych prefiksów dla każdego słownictwa i przestrzeń nazw XAML.  
   
--   Możesz zdefiniować obsługę języka XAML w zestawie, a <xref:System.Windows.Markup.XmlnsDefinitionAttribute> dla `http://schemas.microsoft.com/winfx/2006/xaml`. W tym przypadku zwykle powinny podwyższania poziomu prefiks `x`.  
+- Możesz zdefiniować obsługę języka XAML w zestawie, a <xref:System.Windows.Markup.XmlnsDefinitionAttribute> dla `http://schemas.microsoft.com/winfx/2006/xaml`. W tym przypadku zwykle powinny podwyższania poziomu prefiks `x`.  
   
 > [!NOTE]
 >  .NET framework XAML Services definiuje również atrybut związane z XAML <xref:System.Windows.Markup.RootNamespaceAttribute>. Ten atrybut jest atrybut poziomu zestawu Obsługa systemów projektów i nie jest to istotne dla niestandardowych typów XAML.  

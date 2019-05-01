@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
 ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941053"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Instrukcje: ładowanie dźwięku asynchronicznie w formularzu systemu Windows
 Poniższy przykład kodu asynchronicznego ładuje dźwięku z adresu URL i jest odtwarzany w nowym wątku.  
@@ -26,9 +26,9 @@ Poniższy przykład kodu asynchronicznego ładuje dźwięku z adresu URL i jest 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
   
--   Zastąp nazwę pliku `"http://www.tailspintoys.com/sounds/stop.wav"` z prawidłową nazwą pliku.  
+- Zastąp nazwę pliku `"http://www.tailspintoys.com/sounds/stop.wav"` z prawidłową nazwą pliku.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
@@ -37,17 +37,17 @@ Poniższy przykład kodu asynchronicznego ładuje dźwięku z adresu URL i jest 
   
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nazwa ścieżki jest nieprawidłowo sformułowany. Na przykład zawiera znaki, które są nieprawidłowe lub jest tylko spacją (<xref:System.ArgumentException> klasy).  
+- Nazwa ścieżki jest nieprawidłowo sformułowany. Na przykład zawiera znaki, które są nieprawidłowe lub jest tylko spacją (<xref:System.ArgumentException> klasy).  
   
--   Ścieżka jest tylko do odczytu (<xref:System.IO.IOException> klasy).  
+- Ścieżka jest tylko do odczytu (<xref:System.IO.IOException> klasy).  
   
--   Nazwa ścieżki jest `Nothing` (<xref:System.ArgumentNullException> klasy).  
+- Nazwa ścieżki jest `Nothing` (<xref:System.ArgumentNullException> klasy).  
   
--   Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException> klasy).  
+- Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException> klasy).  
   
--   Ścieżka nie jest prawidłowa (<xref:System.IO.DirectoryNotFoundException> klasy).  
+- Ścieżka nie jest prawidłowa (<xref:System.IO.DirectoryNotFoundException> klasy).  
   
--   Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException> klasy).  
+- Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException> klasy).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik `Form1.vb` może nie być plikiem źródłowym programu Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  

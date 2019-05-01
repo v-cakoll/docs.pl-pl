@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
 ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787624"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>Instrukcje: tworzenie usługi przy użyciu interfejsu kontraktu
 Jest to preferowany sposób tworzenie kontraktu programu Windows Communication Foundation (WCF) przy użyciu interfejsu. Ten kontrakt Określa, kolekcji i struktury komunikaty wymagane operacje dostępu do oferty usługi. Ten interfejs definiuje typy wejściowe i wyjściowe, stosując <xref:System.ServiceModel.ServiceContractAttribute> klasy interfejsu i <xref:System.ServiceModel.OperationContractAttribute> klasy do metod, które chcesz udostępnić.  

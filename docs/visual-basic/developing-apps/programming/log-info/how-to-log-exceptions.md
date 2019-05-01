@@ -6,11 +6,11 @@ helpviewer_keywords:
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
 ms.openlocfilehash: 53bf93a326123ddb1e26ef5964fa057148505116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934384"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Instrukcje: Rejestruje wyjątki w języku Visual Basic
 Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informacji o wyjątkach, które występują w aplikacji. Te przykłady pokazują, jak używać `My.Application.Log.WriteException` metody do rejestrowania wyjątków, które można jawnie przechwycić i wyjątki, które są nieobsługiwane.  

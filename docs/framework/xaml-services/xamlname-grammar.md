@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
 ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938752"
 ---
 # <a name="xamlname-grammar"></a>XamlName — Gramatyka
 Xamlname — gramatyka jest określone gramatyki, która jest zdefiniowana w specyfikacji języka XAML [MS-XAML], który jest przedstawiony tutaj dla wygody.  

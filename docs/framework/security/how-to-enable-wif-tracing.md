@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940455"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Instrukcje: Włączanie śledzenia programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące włączania śledzenia programu WIF w aplikacji ASP.NET. Tu również instrukcje testowania aplikacji, aby sprawdzić, czy odbiornik śledzenia i dzienników są poprawne. Instruktaż nie zawiera szczegółowych instrukcji tworzenia usługi tokenów zabezpieczających (STS). Zamiast tego wykorzystuje deweloperską usługę STS wbudowaną w narzędziu Tożsamość i dostęp. Deweloperska usługa STS nie wykonuje faktycznego uwierzytelniania i jest przeznaczona tylko do celów testowych. Narzędzie Tożsamość i dostęp jest koniecznie do ukończenia całego instruktażu. Można go pobrać z następującej lokalizacji: [Narzędzie tożsamość i dostęp](https://go.microsoft.com/fwlink/?LinkID=245849)  
@@ -25,30 +25,30 @@ ms.locfileid: "59769037"
   
 ## <a name="contents"></a>Spis treści  
   
--   Cele  
+- Cele  
   
--   Omówienie  
+- Omówienie  
   
--   Zestawienie czynności  
+- Zestawienie czynności  
   
--   Krok 1 — Tworzenie prostych aplikacji ASP.NET Web Forms i włączyć śledzenie  
+- Krok 1 — Tworzenie prostych aplikacji ASP.NET Web Forms i włączyć śledzenie  
   
--   Krok 2 — przetestowanie rozwiązania  
+- Krok 2 — przetestowanie rozwiązania  
   
 ## <a name="objectives"></a>Cele  
   
--   Utwórz prostą aplikację platformy ASP.NET, który używa programu WIF i deweloperskiej usługi STS z narzędzie tożsamość i dostęp  
+- Utwórz prostą aplikację platformy ASP.NET, który używa programu WIF i deweloperskiej usługi STS z narzędzie tożsamość i dostęp  
   
--   Włącz śledzenie i sprawdź, czy działa ona  
+- Włącz śledzenie i sprawdź, czy działa ona  
   
 ## <a name="overview"></a>Omówienie  
  Śledzenie umożliwia debugowanie i rozwiązywanie problemów z wielu typów problemów za pomocą programu WIF, łącznie z tokenów, plików cookie, oświadczeń i komunikaty protokołu. Śledzenia programu WIF jest podobny do śledzenia WCF; na przykład można wybrać poziom szczegółowości śledzenia, aby wyświetlić wszystko — od krytycznych wiadomości o wszystkie komunikaty. Dane śledzenia programu WIF, mogą być generowane w **.xml** plików lub **.svclog** pliki, które można przeglądać przy użyciu narzędzia podglądu śledzenia usługi. To narzędzie znajduje się w **bin** katalogu zestawu Windows SDK ścieżka instalacji na komputerze, na przykład: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1 — Tworzenie prostych aplikacji ASP.NET Web Forms i włączyć śledzenie  
+- Krok 1 — Tworzenie prostych aplikacji ASP.NET Web Forms i włączyć śledzenie  
   
--   Krok 2 — przetestowanie rozwiązania  
+- Krok 2 — przetestowanie rozwiązania  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a>Krok 1 — Tworzenie prostych aplikacji ASP.NET Web Forms i włączyć śledzenie  
  W tym kroku utworzysz nowej aplikacji ASP.NET Web Forms i zmodyfikować *Web.config* plik, aby umożliwić śledzenie.  

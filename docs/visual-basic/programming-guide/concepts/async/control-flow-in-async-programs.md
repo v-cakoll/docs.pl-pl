@@ -3,11 +3,11 @@ title: Przepływ sterowania w programach Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
 ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923672"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Przepływ sterowania w programach Async (Visual Basic)
 Pozwala pisać i łatwiej utrzymać asynchroniczne programy za pomocą `Async` i `Await` słów kluczowych. Jednak wyniki mogą Cię zaskoczyć, jeśli nie rozumiesz sposobu działania programu. W tym temacie omówiono, którą przepływ sterowania za pośrednictwem prostego programu asynchronicznego aby pokazać, kiedy sterowania przechodzi od jednej metody do innej i jakie informacje są przesyłane za każdym razem.  
@@ -19,9 +19,9 @@ Pozwala pisać i łatwiej utrzymać asynchroniczne programy za pomocą `Async` i
   
  W poniższym przykładzie użyto metody asynchronicznej, aby pobrać zawartość określonej witryny sieci Web jako ciąg i wyświetlić długość ciągu. Przykład zawiera następujących dwóch metod.  
   
--   `startButton_Click`, która wywołuje metodę `AccessTheWebAsync` i wyświetla wynik.  
+- `startButton_Click`, która wywołuje metodę `AccessTheWebAsync` i wyświetla wynik.  
   
--   `AccessTheWebAsync`, który pobiera zawartość witryny sieci Web jako ciąg i zwraca długość ciągu. `AccessTheWebAsync` używa asynchronicznej <xref:System.Net.Http.HttpClient> metody <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, aby pobrać zawartość.  
+- `AccessTheWebAsync`, który pobiera zawartość witryny sieci Web jako ciąg i zwraca długość ciągu. `AccessTheWebAsync` używa asynchronicznej <xref:System.Net.Http.HttpClient> metody <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, aby pobrać zawartość.  
   
  Ponumerowane wyświetlanych wierszy pojawiających się w strategiczny punktach w całym programie, aby lepiej zrozumieć, jak działa program i wyjaśnić, co się dzieje w każdym punkcie, który jest oznaczony. Wyświetlane wiersze są oznaczone etykietami od "ONE"do "sześć." Etykiety reprezentują kolejność, w jakiej program osiąga te wiersze kodu.  
   

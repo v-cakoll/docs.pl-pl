@@ -13,11 +13,11 @@ ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937093"
 ---
 # <a name="accessing-custom-attributes"></a>Uzyskiwanie dostępu do atrybutów niestandardowych
 Po atrybuty zostały skojarzone z elementami program, odbicie może służyć do kwerendy ich istnienie i wartości. W .NET Framework w wersji 1.0 i 1.1 atrybuty niestandardowe są badane w kontekście wykonywania. .NET Framework w wersji 2.0 zapewnia nowy kontekst obciążenia kontekstu reflection-only, którego można użyć, aby sprawdzić kod, którego nie można załadować do wykonania.  

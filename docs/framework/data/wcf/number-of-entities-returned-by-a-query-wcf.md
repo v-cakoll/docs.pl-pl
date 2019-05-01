@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
 ms.openlocfilehash: f723d91dd30817f6e15be11dd1bc1432a5939647
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774637"
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Instrukcje: Określenie liczby jednostek zwróconych przez zapytanie (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można określić liczbę jednostek, które znajdują się w zestaw określony przez identyfikator URI zapytania jednostek. Ta liczba może być uwzględnione wraz z wyników kwerendy lub jako wartość całkowitą. Aby uzyskać więcej informacji, zobacz [zapytań usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

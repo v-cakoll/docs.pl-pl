@@ -1,5 +1,5 @@
 ---
-title: 'Porady: nasłuchiwanie żądań anulowania za pomocą sondowania'
+title: 'Instrukcje: Nasłuchiwanie żądań anulowania za pomocą sondowania'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926025"
 ---
-# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Porady: nasłuchiwanie żądań anulowania za pomocą sondowania
+# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Instrukcje: Nasłuchiwanie żądań anulowania za pomocą sondowania
 Poniższy przykład pokazuje jeden ze sposobów, kod użytkownika można sondować token anulowania w regularnych odstępach czasu, aby zobaczyć, czy zażądano anulowania z wątku wywoływania. W tym przykładzie użyto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> typu, ale w tym samym wzorcem dotyczy operacji asynchronicznych utworzone bezpośrednio przez <xref:System.Threading.ThreadPool?displayProperty=nameWithType> typu lub <xref:System.Threading.Thread?displayProperty=nameWithType> typu.  
   
 ## <a name="example"></a>Przykład  

@@ -1,15 +1,15 @@
 ---
-title: Powiązanie niestandardowych właściwości działań z kontrolką projektanta
+title: Wiązanie niestandardowych właściwości działań z kontrolką projektanta
 ms.date: 03/30/2017
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
 ms.openlocfilehash: 142a9eb273a98d3a2d83a1239d6d7c891d5cc305
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945902"
 ---
-# <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Powiązanie niestandardowych właściwości działań z kontrolką projektanta
+# <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Wiązanie niestandardowych właściwości działań z kontrolką projektanta
 
 Powiązywanie projektanta kontrolkę pola tekstowego argument działania jest dość prosta; powiązanie z kontrolką projektanta złożonych (np. pola kombi) z argument działania stwarza trudności, jednak. W tym temacie omówiono, jak powiązać argument działania do kontrolki pola kombi na niestandardowego projektanta działań.
 

@@ -3,11 +3,11 @@ title: Obsługa błędów protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935489"
 ---
 # <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF
 Obsługa błędów protokołu HTTP sieci Web Windows Communication Foundation (WCF) pozwala zwrócić błędy z usług WCF Web HTTP, które określić kod stanu HTTP i zwraca szczegóły błędu przy użyciu tego samego formatu co operacji (na przykład XML lub JSON).  
@@ -39,11 +39,11 @@ Public string Operation2()
   
  Powyższy kod zwraca odpowiedź HTTP z kodem stanu zabronione i treści, która zawiera wystąpienie `MyErrorDetails` obiektu. Format `MyErrorDetails` obiektu jest określana przez:  
   
--   Wartość `ResponseFormat` parametru <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutu wskazanego w operacji usługi.  
+- Wartość `ResponseFormat` parametru <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutu wskazanego w operacji usługi.  
   
--   Wartość <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
+- Wartość <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
   
--   Wartość <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> właściwości, uzyskując dostęp do <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
+- Wartość <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> właściwości, uzyskując dostęp do <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
  Aby uzyskać więcej informacji na temat wpływu tych wartości na formatowanie operacji, zobacz [WCF Web HTTP formatowanie](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   

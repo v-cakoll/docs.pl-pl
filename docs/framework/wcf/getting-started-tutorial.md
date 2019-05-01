@@ -8,11 +8,11 @@ helpviewer_keywords:
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929548"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Samouczek: Rozpoczynanie pracy z aplikacjami Windows Communication Foundation
 Poniższą sekwencję samouczki zawierają wprowadzenie do Windows Communication Foundation (WCF) środowisko programowania. Pracy przy użyciu tych samouczków, w kolejności zapewni wprowadzające zrozumienia czynności wymagane do tworzenia aplikacji WCF. Po zakończeniu będziesz mieć uruchomioną usługę WCF i klienta WCF, który wywołuje usługę. 

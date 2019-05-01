@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 92353cfc2d9ce39074bf43937b5673ff51e34822
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939428"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion — Metoda
 Pobiera określoną wersję określonego dokumentu. Wersja dokumentu rozpoczyna się od 1 i jest zwiększana za każdym razem, dokument jest aktualizowany za pomocą [updatesymbolstore —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) metody. Jeśli `pbCurrent` parametr jest `true`, to jest najnowsza wersja dokumentu.  

@@ -3,11 +3,11 @@ title: Moduł weryfikacji certyfikatów X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949919"
 ---
 # <a name="x509-certificate-validator"></a>Moduł weryfikacji certyfikatów X.509
 Niniejszy przykład pokazuje, jak zaimplementować niestandardowy moduł weryfikacji certyfikatów X.509. Jest to przydatne w przypadkach, gdy żadna z wbudowanych metod walidacji certyfikatu X.509 jest odpowiednia dla wymagań aplikacji. Niniejszy przykład pokazuje usługi, która ma niestandardowy moduł sprawdzania poprawności, który akceptuje własnym wystawionych certyfikatów. Klient używa takiego certyfikatu do uwierzytelnienia w usłudze.
@@ -16,11 +16,11 @@ Niniejszy przykład pokazuje, jak zaimplementować niestandardowy moduł weryfik
 
  W podsumowaniu Niniejszy przykład pokazuje, jak:
 
--   Klient może zostać uwierzytelniony przy użyciu certyfikatu X.509.
+- Klient może zostać uwierzytelniony przy użyciu certyfikatu X.509.
 
--   Serwer sprawdza poprawność poświadczeń klienta względem X509CertificateValidator niestandardowych.
+- Serwer sprawdza poprawność poświadczeń klienta względem X509CertificateValidator niestandardowych.
 
--   Serwer jest uwierzytelniany przy użyciu certyfikatu X.509 serwera.
+- Serwer jest uwierzytelniany przy użyciu certyfikatu X.509 serwera.
 
  Usługa udostępnia jeden punkt końcowy do komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding` , domyślnie używane są `WSSecurity` i uwierzytelnianie certyfikatu klienta. Zachowanie usługi Określa tryb niestandardowego sprawdzania poprawności certyfikatów X.509 klienta wraz z typu klasy modułu sprawdzania poprawności. Zachowanie określa również certyfikat serwera za pomocą elementu serviceCertificate. Certyfikat serwera musi zawierać taką samą wartość `SubjectName` jako `findValue` w [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -254,7 +254,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
  Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji:
 
--   Tworzenie certyfikatu serwera:
+- Tworzenie certyfikatu serwera:
 
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. % Zmienna % nazwa_serwera Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Wartość domyślna to hosta lokalnego.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:
 
      Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 
@@ -276,7 +276,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Tworzenie certyfikatu klienta:
+- Tworzenie certyfikatu klienta:
 
      Następujące wiersze z pliku wsadowego Setup.bat utworzenia certyfikatu klienta, który ma być używany. % Zmienna % nazwa_użytkownika Określa nazwę klienta. Ta wartość jest równa "test1", ponieważ jest to nazwa, którą wyszukuje kodu klienta. Jeśli zmienisz wartość % nazwa_użytkownika należy zmienić odpowiednie wartości w pliku źródłowym Client.cs i ponownie skompilować klienta.
 
@@ -292,7 +292,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera:
+- Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera:
 
      Następujące wiersze w pliku wsadowym Setup.bat skopiuj certyfikat klienta do magazynu osób zaufanych. Ten krok jest wymagany, ponieważ certyfikaty generowaną przez Makecert.exe nie niejawnie cieszą się zaufaniem systemu serwera. Jeśli masz już certyfikat, który jest ścieżką w zaufany certyfikat główny — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów serwera za pomocą certyfikatu klienta nie jest wymagane.
 

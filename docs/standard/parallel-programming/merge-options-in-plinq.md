@@ -11,11 +11,11 @@ ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06f772b8d26ec87519efdaae7b621f3fd2d321c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946955"
 ---
 # <a name="merge-options-in-plinq"></a>Opcje scalania w PLINQ
 Gdy zapytanie jest wykonywany jako równoległego, PLINQ partycje sekwencji źródłowej wiele wątków może pracować na różnych częściach współbieżnie, zazwyczaj w oddzielnych wątkach. Jeśli wyniki mają być używane w jednym wątku, na przykład w `foreach` (`For Each` w języku Visual Basic) w pętli, a następnie wyniki z każdego wątku muszą być scalone jednej sekwencji. Rodzaj scalania, który wykonuje PLINQ jest zależna od operatorów, które są obecne w zapytaniu. Na przykład operatory, które nakładają nowe zamówienie na wynikach musi buforu wszystkie elementy ze wszystkich wątków. Z punktu widzenia zużywającym wątku (jest to również w przypadku użytkowników aplikacji) pełni buforowane zapytanie może działać zauważalne okres czasu, tworzy jej pierwszego wyniku. Inne operatory domyślnie są częściowo buforowane; dają one ich wyniki w partiach. Jeden operator <xref:System.Linq.ParallelEnumerable.ForAll%2A> nie jest buforowana domyślnie. Natychmiast daje wszystkie elementy ze wszystkich wątków.  
@@ -32,15 +32,15 @@ Gdy zapytanie jest wykonywany jako równoległego, PLINQ partycje sekwencji źr�
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
  <xref:System.Linq.ParallelMergeOptions> Wyliczenie zawiera następujące opcje, które określają kształtów obsługiwane zapytania, jak uzyskane jest końcowych danych wyjściowych zapytania, gdy wyniki są używane w jednym wątku:  
   
--   `Not Buffered`  
+- `Not Buffered`  
   
      <xref:System.Linq.ParallelMergeOptions.NotBuffered> Opcja powoduje, że każdy element przetwarzania będą zwracane z każdego wątku, tak szybko, jak są wytwarzane. To zachowanie jest odpowiednikiem "przesyłanie strumieniowe" dane wyjściowe. Jeśli <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operator jest obecne w zapytaniu `NotBuffered` zachowuje kolejność elementów źródła. Mimo że `NotBuffered` rozpoczyna się reaguje wyniki, jak są one dostępne, całkowity czas, aby wygenerować wszystkie wyniki mogą nadal być dłuższa niż przy użyciu jednej z innych opcji scalania.  
   
--   `Auto Buffered`  
+- `Auto Buffered`  
   
      <xref:System.Linq.ParallelMergeOptions.AutoBuffered> Opcja powoduje, że zapytanie, aby zebrać elementy do buforu i okresowo uzyskanie zawartość buforu w całości zużywającym wątku. Jest to analogiczne do otrzymania danych źródłowych w "fragmentów" zamiast "przesyłania strumieniowego" zachowanie `NotBuffered`. `AutoBuffered` może to trwać dłużej niż `NotBuffered` udostępnić pierwszego elementu w zużywającym wątku. Rozmiar buforu i dokładne zachowanie otrzymania nie są konfigurowalne i mogą się różnić, w zależności od różnych czynników, które odnoszą się do zapytania.  
   
--   `FullyBuffered`  
+- `FullyBuffered`  
   
      <xref:System.Linq.ParallelMergeOptions.FullyBuffered> Opcja powoduje, że całe zapytanie, aby być buforowane, przed dowolne elementy są uzyskane dane wyjściowe. Gdy używasz tej opcji, może to trwać dłużej przed pierwszym elementem jest dostępna w zużywającym wątku, ale pełnych wyników może być jeszcze przedstawiony szybciej niż przy użyciu innych opcji.  
   

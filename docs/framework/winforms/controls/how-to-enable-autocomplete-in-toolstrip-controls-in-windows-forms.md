@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
 ms.openlocfilehash: d7919bf87444ef6c4a64ee236356e762da14853f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941482"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Instrukcje: Włączanie funkcji AutoComplete w formantach ToolStrip w formularzach Windows Forms
 Poniższa procedura łączy <xref:System.Windows.Forms.ToolStripLabel> z <xref:System.Windows.Forms.ToolStripComboBox> który można upuszczać w dół do wyświetlenia listy elementów, takich jak ostatnio odwiedzane witryny sieci Web. Jeśli użytkownik wpisze znak, który pasuje do pierwszego znaku, jednego z elementów na liście, element natychmiast jest wyświetlany.  

@@ -3,11 +3,11 @@ title: Protokoły obsługi komunikatów
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948125"
 ---
 # <a name="messaging-protocols"></a>Protokoły obsługi komunikatów
 
@@ -26,7 +26,7 @@ W tym temacie omówiono szczegóły implementacji programu WCF dla następujący
 Specyfikacja/dokumentu:
 
 - [XML](https://www.w3.org/TR/REC-xml)
-- [PROTOKOŁU SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
+- [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [SOAP 1.2 Core](https://www.w3.org/TR/soap12-part1/)
 - [WS-Addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
 - [Eliminowanie Core 1.0 - usług sieci Web W3C](https://www.w3.org/TR/2006/REC-ws-addr-core-20060509)
@@ -51,14 +51,14 @@ Następujące obszary nazw XML i skojarzone prefiksy są używane w tym temacie:
 |------------|---------------------------------------------------|
 | s11 | `http://schemas.xmlsoap.org/soap/envelope` |
 | s12 |`http://www.w3.org/2003/05/soap-envelope` |
-| Aplikacja wsa |`http://www.w3.org/2004/08/addressing` |
+| wsa |`http://www.w3.org/2004/08/addressing` |
 | wsam |`http://www.w3.org/2007/05/addressing/metadata` |
 | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` |
 | wsa10 |`http://www.w3.org/2005/08/addressing` |
 | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
-| XOP |`http://www.w3.org/2004/08/xop/include` |
+| xop |`http://www.w3.org/2004/08/xop/include` |
 | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
-| punkt dystrybucji |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>Protokołu SOAP 1.1 i SOAP 1.2
 
@@ -80,7 +80,7 @@ Takie warstwie przetwarzania umożliwia oddzielenie warstwy infrastruktury i apl
 
 - B1112: Emituje WCF `mustUnderstand` wartości 0 i 1 dla wersji SOAP 1.1 i SOAP 1.2 koperty protokołu SOAP. Usługi WCF akceptuje miejsce całą wartość `xs:boolean` dla `mustUnderstand` nagłówka (0, 1, `false`, `true`)
 
-#### <a name="soap-faults"></a>Błędy protokołu SOAP
+#### <a name="soap-faults"></a>SOAP Faults
 Oto lista SOAP WCF określonych błędów implementacji.
 
 - B2121: Usługi WCF zwraca następujące kody błędów protokołu SOAP 1.1: `s11:mustUnderstand`, `s11:Client`, i `s11:Server`.

@@ -21,28 +21,28 @@ ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947160"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do wydzielonej pamięci masowej zawsze jest ograniczony do użytkownika, który go utworzył. Wdrożenie tego typu izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, który rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod, gdy jest otwierany magazyn. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować, że tożsamość bieżącego użytkownika, aby zmienić dynamicznie.  
   
  Dostęp do wydzielonej pamięci masowej jest także ograniczona zgodnie z tożsamością skojarzonego z domeny i zestawu aplikacji lub z samego zestawu. Środowisko uruchomieniowe uzyskuje tych tożsamości w następujący sposób:  
   
--   Tożsamość domeny reprezentuje dowód aplikacji, w przypadku aplikacji sieci web może być pełny adres URL. Kod, hostowany przez powłokę tożsamość domeny może opierać się na ścieżce katalogu aplikacji. Na przykład jeśli plik wykonywalny jest uruchomiony przy użyciu ścieżki C:\Office\MyApp.exe, tożsamość domeny będzie C:\Office\MyApp.exe.  
+- Tożsamość domeny reprezentuje dowód aplikacji, w przypadku aplikacji sieci web może być pełny adres URL. Kod, hostowany przez powłokę tożsamość domeny może opierać się na ścieżce katalogu aplikacji. Na przykład jeśli plik wykonywalny jest uruchomiony przy użyciu ścieżki C:\Office\MyApp.exe, tożsamość domeny będzie C:\Office\MyApp.exe.  
   
--   Tożsamość zestawu jest dowód zestawu. Obiekt może pochodzić z kryptograficznych podpis cyfrowy, który może być zestawu [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md), wydawca oprogramowania zestawu lub jego tożsamość adresu URL. Jeśli zestaw ma silną nazwę i tożsamość wydawcy oprogramowania, używana jest tożsamość wydawcy oprogramowania. Jeśli zestaw pochodzi z Internetu i bez znaku, tożsamość adresu URL jest używana. Aby uzyskać więcej informacji na temat zestawów i silnych nazw, zobacz [programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+- Tożsamość zestawu jest dowód zestawu. Obiekt może pochodzić z kryptograficznych podpis cyfrowy, który może być zestawu [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md), wydawca oprogramowania zestawu lub jego tożsamość adresu URL. Jeśli zestaw ma silną nazwę i tożsamość wydawcy oprogramowania, używana jest tożsamość wydawcy oprogramowania. Jeśli zestaw pochodzi z Internetu i bez znaku, tożsamość adresu URL jest używana. Aby uzyskać więcej informacji na temat zestawów i silnych nazw, zobacz [programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md).  
   
--   Przenieś magazynach mobilnych z użytkownikiem, który ma profil użytkownika mobilnego. Pliki są zapisywane w katalogu sieciowego i zostaną pobrane na dowolnym komputerze logują użytkownika. Aby uzyskać więcej informacji na temat profilów użytkowników mobilnych, zobacz <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Przenieś magazynach mobilnych z użytkownikiem, który ma profil użytkownika mobilnego. Pliki są zapisywane w katalogu sieciowego i zostaną pobrane na dowolnym komputerze logują użytkownika. Aby uzyskać więcej informacji na temat profilów użytkowników mobilnych, zobacz <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
  Łącząc pojęcia dotyczące użytkownika, domeny i tożsamość zestawu, wydzielonej pamięci masowej można odizolować dane w następujący sposób, z których każdy ma własny scenariusze użycia:  
   
--   [Izolacja według użytkownika i zestawu](#UserAssembly)  
+- [Izolacja według użytkownika i zestawu](#UserAssembly)  
   
--   [Izolacja według użytkownika, domeny i zestawu](#UserDomainAssembly)  
+- [Izolacja według użytkownika, domeny i zestawu](#UserDomainAssembly)  
   
  Jedną z tych izolacji można łączyć z profilu użytkownika mobilnego. Aby uzyskać więcej informacji, zobacz sekcję [izolowany magazyn i Roaming](#Roaming).  
   

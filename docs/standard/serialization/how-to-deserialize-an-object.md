@@ -9,11 +9,11 @@ helpviewer_keywords:
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
 ms.openlocfilehash: 53b4a3e3848c1aa92bfa9fbd80bb031125257fc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922723"
 ---
 # <a name="how-to-deserialize-an-object"></a>Instrukcje: deserializowanie obiektu
 Podczas deserializacji obiektu, format transportu Określa, czy zostanie utworzony obiekt PLiku lub strumienia. Po transport format jest określony, można wywołać <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> lub <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metod, zgodnie z potrzebami.  

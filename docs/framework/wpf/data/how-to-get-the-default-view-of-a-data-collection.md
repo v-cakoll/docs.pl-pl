@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
 ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931527"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Instrukcje: Pobieranie widoku domyślnego kolekcji danych
 Widoki zezwala na tej samej kolekcji danych do wyświetlenia na różne sposoby, w zależności od tego, czy sortowanie, filtrowanie lub kryteria grupowania. Każda kolekcja ma jeden udostępnionego widok domyślny, jest używany jako źródło faktycznego wiązania, gdy powiązanie Określa kolekcję jako źródło. Ten przykład pokazuje, jak pobrać domyślny widok kolekcji.  

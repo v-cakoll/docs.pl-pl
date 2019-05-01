@@ -14,8 +14,8 @@ ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937921"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Instrukcje: Tworzenie gradientu liniowego
 GDI + zapewnia poziomej, pionowej i ukośne gradienty liniowe. Domyślnie w przypadku gradientu liniowego zmienia kolor równomiernie. Można jednak dostosować gradientu liniowego, tak, aby zmienia kolor w sposób obsługuje technologię niejednolitego.  
@@ -35,7 +35,7 @@ Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gr
   
 ### <a name="to-use-horizontal-linear-gradients"></a>Aby użyć poziomy gradientów liniowych  
   
--   Przekaż nieprzezroczyste niebieski czerwonego i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  
+- Przekaż nieprzezroczyste niebieski czerwonego i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
@@ -60,7 +60,7 @@ Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gr
 
 ### <a name="to-customize-linear-gradients"></a>Aby dostosować gradienty liniowe  
   
--   Przekaż nieprzezroczyste red czarne i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  
+- Przekaż nieprzezroczyste red czarne i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
@@ -75,7 +75,7 @@ Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gr
   
 ### <a name="to-create-diagonal-linear-gradients"></a>Aby utworzyć w użyciu gradientów liniowych  
   
--   Przekaż nieprzezroczyste zielonego nieprzezroczyste i w kolorze niebieskim jako argument trzecia i czwarta, odpowiednio.  
+- Przekaż nieprzezroczyste zielonego nieprzezroczyste i w kolorze niebieskim jako argument trzecia i czwarta, odpowiednio.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  

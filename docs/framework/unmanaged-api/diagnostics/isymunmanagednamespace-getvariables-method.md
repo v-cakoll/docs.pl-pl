@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939493"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables — Metoda
 Zwraca wszystkie zmienne zdefiniowane w zakresie globalnym w ramach tej przestrzeni nazw.  

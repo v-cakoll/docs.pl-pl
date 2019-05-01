@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
 ms.openlocfilehash: fb6411efc190dce335422369a8d2bbff564b9523
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938219"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Instrukcje: Deklarowanie zmiennej obiektu i przydzielanie obiektu do niego w języku Visual Basic
 Zadeklaruj zmienną [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md) , określając `As Object` w [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Przypisz obiekt takiej zmiennej, umieszczając obiekt po znaku równości (`=`) w klauzuli instrukcji lub inicjowania przypisania.  
@@ -32,11 +32,11 @@ Dim thisObject As Object= "This is an Object"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołanie do <xref:System> przestrzeni nazw.  
+- Odwołanie do <xref:System> przestrzeni nazw.  
   
--   Klasy, struktury lub modułu, w której chcesz umieścić `Dim` instrukcji.  
+- Klasy, struktury lub modułu, w której chcesz umieścić `Dim` instrukcji.  
   
--   Procedura, w której chcesz umieścić w instrukcji przypisania.  
+- Procedura, w której chcesz umieścić w instrukcji przypisania.  
   
 ## <a name="see-also"></a>Zobacz także
 

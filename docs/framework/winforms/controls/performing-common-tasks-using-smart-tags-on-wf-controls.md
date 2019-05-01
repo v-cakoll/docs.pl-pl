@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932603"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Przewodnik: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy systemu Windows
 Podczas przygotowywania formularzy i kontrolek dla aplikacji Windows Forms, istnieje wiele zadań, które należy wykonać wielokrotnie. Oto niektóre z często wykonywanych zadań, które można napotkać:  
   
--   Dodawanie lub usuwanie karty na <xref:System.Windows.Forms.TabControl>.  
+- Dodawanie lub usuwanie karty na <xref:System.Windows.Forms.TabControl>.  
   
--   Dokowanie formantu do elementu nadrzędnego.  
+- Dokowanie formantu do elementu nadrzędnego.  
   
--   Zmiana orientacji <xref:System.Windows.Forms.SplitContainer> kontroli.  
+- Zmiana orientacji <xref:System.Windows.Forms.SplitContainer> kontroli.  
   
  Aby przyspieszyć rozwój, wiele kontrolek oferują tagów inteligentnych, które są menu kontekstowe, które pozwalają wykonywać typowe zadania, takie jak te przy użyciu pojedynczego gestu w czasie projektowania. Zadania te są nazywane *zleceń tagów inteligentnych*.  
   
@@ -28,11 +28,11 @@ Podczas przygotowywania formularzy i kontrolek dla aplikacji Windows Forms, istn
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu Windows Forms  
+- Tworzenie projektu Windows Forms  
   
--   Za pomocą tagów inteligentnych  
+- Za pomocą tagów inteligentnych  
   
--   Włączanie i wyłączanie tagi inteligentne  
+- Włączanie i wyłączanie tagi inteligentne  
   
  Gdy skończysz, masz zrozumienia rolę odgrywaną przez te funkcje ważne układu.  
   

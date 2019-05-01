@@ -5,11 +5,11 @@ ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 518c6ec99e4062bf8432809d3472baa395017da3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948627"
 ---
 # <a name="icordebugprocess6-interface"></a>Interfejs ICorDebugProcess6
 Rozszerza logicznie icordebugprocess — interfejs, aby włączyć funkcje, takie jak dekodowanie zdarzenia debugowania zarządzanego, które są kodowane w zdarzeń debugowania natywnych wyjątków oraz wirtualnego modułu dzielenia.  

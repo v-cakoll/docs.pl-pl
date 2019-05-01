@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
 ms.openlocfilehash: 2149cac7fb15052c2602ef20a6684696730aae1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941521"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Instrukcje: edytowanie rzędów i kolumn w kontrolce TableLayoutPanel
 Można użyć edytora kolekcji <xref:System.Windows.Forms.TableLayoutPanel> kontrolę, wywoływana **Style kolumn i wierszy** okno dialogowe Edytuj wiersze i kolumny kontrolki.  

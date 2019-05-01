@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
 ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934124"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aktualizowanie danych w źródle danych
 Instrukcje SQL, które modyfikują dane (takie jak INSERT, UPDATE lub DELETE) zwraca wiersze. Podobnie wiele procedur składowanych wykonaj akcję, ale nie zwracać wiersze. Do wykonywania poleceń, które nie zwrócą wierszy, należy utworzyć **polecenia** obiektu za pomocą odpowiedniego polecenia SQL i **połączenia**, wraz ze wszystkimi wymagane **parametry**. Wykonanie polecenia za pomocą **ExecuteNonQuery** metody **polecenia** obiektu.  

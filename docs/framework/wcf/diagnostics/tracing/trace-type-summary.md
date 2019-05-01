@@ -3,14 +3,14 @@ title: Podsumowanie typu śledzenia
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
 ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925154"
 ---
 # <a name="trace-type-summary"></a>Podsumowanie typu śledzenia
-[Źródło poziomy](https://go.microsoft.com/fwlink/?LinkID=94943) definiuje różne poziomy śledzenia: krytyczny, błąd, ostrzeżenie, informacje i pełne informacje, jak również tak jak opisano w `ActivityTracing` flagi, które włącza/wyłącza dane wyjściowe śledzenia zdarzenia transferu granic i działania.  
+[Źródło poziomy](https://go.microsoft.com/fwlink/?LinkID=94943) definiuje różne poziomy śledzenia: Krytyczny błąd, ostrzeżenie, informacje i pełne informacje, jak również tak jak opisano w `ActivityTracing` flagi, które włącza/wyłącza dane wyjściowe śledzenia zdarzenia transferu granic i działania.  
   
  Możesz również przejrzeć [opcją TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) dla typów danych śledzenia, które mogą być emitowane przez <xref:System.Diagnostics>.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "43512541"
   
  Oznacza to, że działanie musi spełniać następujące warunki.  
   
--   Musi zaczynać się i Zatrzymaj odpowiednio przez uruchamianie i zatrzymywanie danych śledzenia  
+- Musi zaczynać się i Zatrzymaj odpowiednio przez uruchamianie i zatrzymywanie danych śledzenia  
   
--   Musi on mieć śledzenia transferu, bezpośrednio poprzedzających śledzenia wstrzymania lub wznowienia  
+- Musi on mieć śledzenia transferu, bezpośrednio poprzedzających śledzenia wstrzymania lub wznowienia  
   
--   Nie może mieć żadnych śladów między śledzenia wstrzymywanie i wznawianie, jeśli istnieją takie ślady  
+- Nie może mieć żadnych śladów między śledzenia wstrzymywanie i wznawianie, jeśli istnieją takie ślady  
   
--   Tak długo, jak poprzednie warunki zostały spełnione może mieć żadnych i jak najwięcej ślady krytyczne/błędu/ostrzeżenia/informacji/Verbose/Transfer  
+- Tak długo, jak poprzednie warunki zostały spełnione może mieć żadnych i jak najwięcej ślady krytyczne/błędu/ostrzeżenia/informacji/Verbose/Transfer  
   
  Oto wyrażeń regularnych, które definiuje działania idealnym rozwiązaniem w zakresie globalnym  
   

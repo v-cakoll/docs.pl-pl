@@ -3,11 +3,11 @@ title: Rozpoczynanie pracy z usługą F# w programie Visual Studio dla komputer�
 description: Dowiedz się, jak używać F# z programem Visual Studio dla komputerów Mac.
 ms.date: 07/03/2018
 ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949724"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Rozpoczynanie pracy z usługą F# w programie Visual Studio dla komputerów Mac
 

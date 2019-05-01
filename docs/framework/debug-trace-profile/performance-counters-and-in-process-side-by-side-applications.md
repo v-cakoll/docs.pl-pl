@@ -13,48 +13,48 @@ ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775859"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Liczniki wydajności i wewnątrzprocesowe, równoczesne aplikacje
-Korzystanie z Monitora wydajności (Perfmon.exe), jest możliwe do odróżnienia liczników wydajności na podstawie na środowiska wykonawczego. W tym temacie opisano zmiany rejestru wymagane do włączenia tej funkcji.  
+Korzystanie z Monitora wydajności (Perfmon.exe), istnieje możliwość rozróżnienia liczników wydajności na podstawie poszczególnych środowiska uruchomieniowego. W tym temacie opisano zmiany rejestru wymagane do włączenia tej funkcji.  
   
-## <a name="the-default-behavior"></a>Domyślne zachowanie  
- Domyślnie Monitor wydajności Wyświetla liczniki wydajności na podstawie określonych aplikacji. Istnieją dwa scenariusze, w których jest to powodować problemy:  
+## <a name="the-default-behavior"></a>Zachowanie domyślne  
+ Domyślnie Monitor wydajności Wyświetla liczniki wydajności na podstawie poszczególnych aplikacji. Istnieją dwa scenariusze, w których stanowi to:  
   
--   Podczas monitorowania dwóch aplikacji, które mają taką samą nazwę. Na przykład, jeśli obie aplikacje są nazywane myapp.exe, zostanie wyświetlony jeden jako **moja_aplikacja** i inne, **moja_aplikacja #1** w **wystąpienia** kolumny. W tym przypadku jest trudne do dopasowania licznik wydajności do określonej aplikacji. Nie jest jasne, czy dane są zbierane dla **moja_aplikacja #1** odwołuje się do myapp.exe pierwszy lub drugi myapp.exe.  
+- Gdy monitorujesz dwie aplikacje, które mają taką samą nazwę. Na przykład, jeśli obie aplikacje są nazywane myapp.exe, zostanie wyświetlony jeden jako **myapp** i innych **myapp nr 1** w **wystąpienia** kolumny. W tym przypadku jest trudne dopasować, licznik wydajności do określonej aplikacji. Nie jest jasne, czy dane są zbierane dla **myapp nr 1** odwołuje się do myapp.exe pierwszej lub drugiej myapp.exe.  
   
--   Jeśli aplikacja używa wielu wystąpień środowiska CLR. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Obsługuje scenariusze hostingu side-by-side wewnątrzprocesowe; oznacza to, jednego procesu lub aplikacji można załadować wiele wystąpień środowiska CLR. Jeśli pojedynczej aplikacji o nazwie obciążeń myapp.exe dwa wystąpienia środowiska wykonawczego, domyślnie zostanie one określony w **wystąpienia** jako kolumny **moja_aplikacja** i **moja_aplikacja #1**. W takim przypadku nie jest jasne, czy **moja_aplikacja** i **moja_aplikacja #1** odnosić się do dwóch aplikacji o takiej samej nazwie lub do tej samej aplikacji z dwóch środowisk uruchomieniowych. Jeśli wiele aplikacji o takiej samej nazwie załadować wiele środowisk uruchomieniowych, niejednoznaczności jest jeszcze bardziej znaczące.  
+- Jeśli aplikacja korzysta z wielu wystąpień środowiska uruchomieniowego języka wspólnego. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Obsługuje scenariusze hostingu side-by-side wewnątrzprocesowe; oznacza to, pojedynczego procesu lub aplikacji można załadować wiele wystąpień środowiska uruchomieniowego języka wspólnego. Jeśli pojedynczej aplikacji o nazwie obciążeń myapp.exe dwóch wystąpień środowiska uruchomieniowego, domyślnie, zostaną one oznaczone w **wystąpienia** jako kolumny **myapp** i **myapp nr 1**. W tym przypadku nie jest jasne czy **myapp** i **myapp nr 1** odnosić się do dwóch aplikacji o takiej samej nazwie lub tej samej aplikacji za pomocą dwóch środowisk uruchomieniowych. Jeśli wiele aplikacji o takiej samej nazwie można załadować wielu modułów wykonawczych niejednoznaczności jest jeszcze bardziej.  
   
- Można ustawić klucz rejestru, aby usunąć tę niejednoznaczność. W przypadku aplikacji utworzony przy użyciu [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], tej zmiany rejestru dodaje identyfikator procesu, następuje identyfikator wystąpienia środowiska uruchomieniowego na nazwę aplikacji w **wystąpienia** kolumny. Zamiast *aplikacji* lub *aplikacji*#1 aplikacja jest teraz identyfikowane jako *aplikacji*_`p`*processID* \_ `r` *runtimeID* w **wystąpienia** kolumny. Jeśli aplikacja została opracowana za pomocą poprzedniej wersji środowiska CLR, to wystąpienie jest reprezentowany jako *aplikacji\_*`p`*processID* pod warunkiem, że [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] jest zainstalowany.  
+ Można ustawić klucz rejestru, aby wyeliminować tę niejednoznaczność. Dla aplikacji utworzonych za pomocą [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], zmiany w rejestrze dodaje identyfikator procesu, następuje identyfikator wystąpienia środowiska uruchomieniowego do nazwy aplikacji w **wystąpienia** kolumny. Zamiast *aplikacji* lub *aplikacji*#1 aplikację teraz jest identyfikowany jako *aplikacji*_`p`*processID* \_ `r` *runtimeID* w **wystąpienia** kolumny. Jeśli aplikacja została opracowana przy użyciu poprzedniej wersji środowiska uruchomieniowego języka wspólnego, tego wystąpienia jest reprezentowany jako *aplikacji\_*`p`*processID* pod warunkiem, że [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] jest zainstalowany.  
   
-## <a name="performance-counters-for-in-process-side-by-side-applications"></a>Liczniki wydajności dla aplikacji Side-by-Side w procesie  
- Do obsługi liczniki wydajności dla wielu wspólnego języka środowiska uruchomieniowego wersji, które znajdują się w jednej aplikacji, należy zmienić klucz rejestru pojedynczego ustawienie, jak pokazano w poniższej tabeli.  
+## <a name="performance-counters-for-in-process-side-by-side-applications"></a>Liczniki wydajności dla-Process Side-by-Side aplikacji  
+ Aby obsłużyć liczniki wydajności dla wielu typowych języka wersje środowiska uruchomieniowego, które znajdują się w jednej aplikacji, możesz zmienić klucz rejestru jednego ustawienia, jak pokazano w poniższej tabeli.  
   
 |||  
 |-|-|  
-|Nazwa klucza|HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\. NETFramework\Performance|  
+|Nazwa klucza|HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\.NETFramework\Performance|  
 |Nazwa wartości|ProcessNameFormat|  
 |Typ wartości|REG_DWORD|  
 |Wartość|1 (0x00000001)|  
   
- Wartość 0 dla `ProcessNameFormat` wskazuje, że jest włączona domyślnie; będący Perfmon.exe wyświetla liczniki wydajności na podstawie określonych aplikacji. Gdy ta wartość jest ustawiona na 1, Perfmon.exe pozwala odróżnić od siebie wiele wersji aplikacji i zawiera liczników wydajności na podstawie na środowiska wykonawczego. Wszystkie inne wartości `ProcessNameFormat` ustawienie klucza rejestru jest nieobsługiwane i zarezerwowane do użytku w przyszłości.  
+ Wartość 0 dla `ProcessNameFormat` wskazuje, że zachowanie domyślne jest włączone; będącego, Perfmon.exe wyświetla liczniki wydajności na podstawie poszczególnych aplikacji. Gdy ta wartość jest ustawiona na 1, Perfmon.exe pozwala odróżnić od siebie wiele wersji aplikacji i oferuje liczniki wydajności na podstawie poszczególnych środowiska uruchomieniowego. Dowolna inna wartość, aby uzyskać `ProcessNameFormat` ustawienie klucza rejestru nie jest wspierana i zarezerwowane dla przyszłego użytku.  
   
- Po zaktualizowaniu `ProcessNameFormat` klucza rejestru ustawienie, musisz ponownie uruchomić Perfmon.exe lub innym klientom liczników wydajności, aby nowa funkcja nazewnictwa wystąpienia działa prawidłowo.  
+ Po zaktualizowaniu `ProcessNameFormat` klucza rejestru ustawienia, należy ponownie uruchomić Perfmon.exe lub innych klientów, liczników wydajności, aby nowa funkcja nazewnictwa wystąpienia działa prawidłowo.  
   
- Poniższy przykład przedstawia sposób zmiany `ProcessNameFormat` wartość programowo.  
+ Poniższy przykład pokazuje, jak zmienić `ProcessNameFormat` wartość programowo.  
   
  [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
  [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
- Po wprowadzeniu tej zmiany w rejestrze Perfmon.exe wyświetla nazwy aplikacji przeznaczonych [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] jako *aplikacji*_`p`*processID* \_ `r` *runtimeID*, gdzie *aplikacji* jest nazwa aplikacji, *processID* jest identyfikatora procesu aplikacji, a  *runtimeID* jest identyfikatorem środowiska uruchomieniowego języka wspólnego. Na przykład jeśli aplikacja o nazwie obciążeń myapp.exe dwa wystąpienia środowisko uruchomieniowe języka wspólnego, Perfmon.exe może zidentyfikować jedno wystąpienie jako myapp_p1416_r10, a drugi jako myapp_p3160_r10. Identyfikator środowiska uruchomieniowego tylko pozwala odróżnić od siebie środowisk uruchomieniowych w ramach procesu; nie ma innych informacji dotyczących środowiska uruchomieniowego. (Na przykład identyfikator działania ma relacja wersji lub wersji środowiska uruchomieniowego).  
+ Po wprowadzeniu tej zmiany w rejestrze, Perfmon.exe wyświetla nazwy aplikacji przeznaczonych [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] jako *aplikacji*_`p`*processID* \_ `r` *runtimeID*, gdzie *aplikacji* to nazwa aplikacji, *processID* jest identyfikator procesu aplikacji, a  *runtimeID* jest identyfikatorem środowiska uruchomieniowego języka wspólnego. Na przykład jeśli aplikacja o nazwie obciążeń myapp.exe dwa wystąpienia środowiska uruchomieniowego języka wspólnego, Perfmon.exe może zidentyfikować jednego wystąpienia jako myapp_p1416_r10, a drugi jako myapp_p3160_r10. Identyfikator środowiska uruchomieniowego tylko pozwala odróżnić od siebie środowiska uruchomieniowe w ramach procesu; nie obejmuje wszystkie inne informacje dotyczące środowiska uruchomieniowego. (Na przykład identyfikator środowiska uruchomieniowego ma nie relacji do wersji lub wersji środowiska uruchomieniowego).  
   
- Jeśli [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] jest zainstalowany, zmiany w rejestrze również wpływa na aplikacje, które zostały opracowane za pomocą wcześniejszych wersji programu .NET Framework. Są one wyświetlane w Perfmon.exe jako *application_*`p`*processID*, gdzie *aplikacji* to nazwa aplikacji i *processID* jest identyfikatorem procesu. Na przykład jeśli liczniki wydajności z dwóch aplikacji o nazwie myapp.exe są monitorowane, co może być wyświetlany jako myapp_p23900, a drugi jako myapp_p24908.  
+ Jeśli [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] jest zainstalowany, zmiany w rejestrze również ma wpływ na aplikacje, które zostały opracowane we wcześniejszych wersjach programu .NET Framework. Będą one widoczne w Perfmon.exe jako *application_*`p`*processID*, gdzie *aplikacji* to nazwa aplikacji i *processID* to identyfikator procesu. Na przykład jeśli dwie aplikacje o nazwie myapp.exe liczniki wydajności są monitorowane, jeden może być widoczne jako myapp_p23900, a drugi jako myapp_p24908.  
   
 > [!NOTE]
->  Identyfikator procesu eliminuje niejednoznaczności rozpoznawania dwóch aplikacji o takiej samej nazwie, korzystających z wcześniejszych wersji środowiska uruchomieniowego. Identyfikator środowiska uruchomieniowego nie jest wymagana w poprzednich wersjach, ponieważ poprzednie wersje środowiska CLR nie obsługują side-by-side scenariuszy.  
+>  Identyfikator procesu, który eliminuje niejednoznaczności rozpoznawania dwie aplikacje o takiej samej nazwie, które używają starszych wersji środowiska uruchomieniowego. Identyfikator środowiska uruchomieniowego nie jest wymagany dla poprzednich wersji, ponieważ poprzednie wersje środowiska uruchomieniowego języka wspólnego nie obsługują scenariusze side-by-side.  
   
- Jeśli [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] nie istnieje lub została odinstalowana, ustawienie klucza rejestru nie ma wpływu. Oznacza to, że dwie aplikacje o tej samej nazwie będą nadal wyświetlane w Perfmon.exe jako *aplikacji* i *aplikacji #1* (na przykład jako **moja_aplikacja** i **moja_aplikacja #1**).
+ Jeśli [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] nie istnieje lub został odinstalowany, ustawiając klucz rejestru nie ma wpływu. Oznacza to, że dwie aplikacje o takiej samej nazwie będą w dalszym ciągu są wyświetlane w Perfmon.exe jako *aplikacji* i *aplikacji nr 1* (na przykład, jako **myapp** i **myapp nr 1**).

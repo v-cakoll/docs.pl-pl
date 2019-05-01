@@ -7,11 +7,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945421"
 ---
 # <a name="framework-libraries"></a>Biblioteki Framework
 
@@ -41,23 +41,23 @@ BCL udostępnia najbardziej podstawowe typy i funkcje narzędzia i są podstawą
 
 .NET zawiera zestaw struktur danych, które są narzędzie baz niemal wszystkich aplikacji .NET. To są kolekcjami przede wszystkim, ale także innych typów.
 
-*   <xref:System.Array> -Reprezentuje tablicę obiektów silnie typy, które mogą być udostępniane przez indeks. Ma stały rozmiar, na jego konstrukcji.
-*   <xref:System.Collections.Generic.List%601> -Reprezentuje silnie typizowaną listę obiektów, które mogą być udostępniane przez indeks. Automatycznie zmiany rozmiaru zgodnie z potrzebami.
-*   <xref:System.Collections.Generic.Dictionary%602> -Reprezentuje kolekcję wartości, które są indeksowane według klucza. Wartości są dostępne za pośrednictwem klucza. Automatycznie zmiany rozmiaru zgodnie z potrzebami.
-*   <xref:System.Uri> -Zawiera reprezentację obiektu jednolity identyfikator zasobów (URI) oraz łatwy dostęp do elementów identyfikatorów URI.
-*   <xref:System.DateTime> -Reprezentuje moment w czasie, zwykle wyrażona jako datę i godzinę.
+* <xref:System.Array> -Reprezentuje tablicę obiektów silnie typy, które mogą być udostępniane przez indeks. Ma stały rozmiar, na jego konstrukcji.
+* <xref:System.Collections.Generic.List%601> -Reprezentuje silnie typizowaną listę obiektów, które mogą być udostępniane przez indeks. Automatycznie zmiany rozmiaru zgodnie z potrzebami.
+* <xref:System.Collections.Generic.Dictionary%602> -Reprezentuje kolekcję wartości, które są indeksowane według klucza. Wartości są dostępne za pośrednictwem klucza. Automatycznie zmiany rozmiaru zgodnie z potrzebami.
+* <xref:System.Uri> -Zawiera reprezentację obiektu jednolity identyfikator zasobów (URI) oraz łatwy dostęp do elementów identyfikatorów URI.
+* <xref:System.DateTime> -Reprezentuje moment w czasie, zwykle wyrażona jako datę i godzinę.
 
 ## <a name="utility-apis"></a>Narzędzia interfejsów API
 
 .NET zawiera zbiór narzędzia interfejsów API, które udostępniają funkcje wiele istotnych zadań.
 
-*   <xref:System.Net.Http.HttpClient> -Interfejs API do wysyłania żądań HTTP i odbierania odpowiedzi HTTP z zasobu zidentyfikowanego z użyciem identyfikatora URI.
-*   <xref:System.Xml.Linq.XDocument> -Interfejs API, ładowanie i wykonywanie zapytań względem dokumentów XML za pomocą LINQ.
-*   <xref:System.IO.StreamReader> -Interfejs API, do odczytywania plików. 
-*   <xref:System.IO.StreamWriter> -Interfejs API, do zapisywania plików.
+* <xref:System.Net.Http.HttpClient> -Interfejs API do wysyłania żądań HTTP i odbierania odpowiedzi HTTP z zasobu zidentyfikowanego z użyciem identyfikatora URI.
+* <xref:System.Xml.Linq.XDocument> -Interfejs API, ładowanie i wykonywanie zapytań względem dokumentów XML za pomocą LINQ.
+* <xref:System.IO.StreamReader> -Interfejs API, do odczytywania plików. 
+* <xref:System.IO.StreamWriter> -Interfejs API, do zapisywania plików.
 
 ## <a name="app-model-apis"></a>Interfejsy API modelu aplikacji
 
 Istnieje wiele modeli aplikacji, które mogą służyć za pomocą platformy .NET, dostarczone przez kilka przedsiębiorstw.
 
-*   [ASP.NET](https://www.asp.net) — udostępnia platformę internetową do tworzenia witryn sieci Web i usług. Obsługiwana na Windows, Linux i macOS (w zależności od wersji programu ASP.NET).
+* [ASP.NET](https://www.asp.net) — udostępnia platformę internetową do tworzenia witryn sieci Web i usług. Obsługiwana na Windows, Linux i macOS (w zależności od wersji programu ASP.NET).

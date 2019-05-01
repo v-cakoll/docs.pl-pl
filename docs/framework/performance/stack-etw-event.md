@@ -8,11 +8,11 @@ ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a7cba2bd1dd5b83e29c7a6c192a1a7e5e2d33ecc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949152"
 ---
 # <a name="stack-etw-event"></a>Zdarzenie ETW stosu
 Zdarzenie stosu powinny służyć w połączeniu z innymi zdarzeniami można wygenerować ślady stosu, po wydarzenie jest podniesione. Jest on rejestrowane, gdy jest włączony dostawca środowiska uruchomieniowego. To wydarzenie bardzo wysokiej częstotliwości, ponieważ jest zgłaszany w każdym przypadku, gdy inne zdarzenie środowiska wykonawczego jest wywoływane. Z tego powodu zaleca się używać tego wydarzenia z ostrożnością.  

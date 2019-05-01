@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
 ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947813"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Instrukcje: Ustalanie, czy strona jest hostowana w przeglądarce
 W tym przykładzie pokazano, jak ustalić, czy <xref:System.Windows.Controls.Page> znajduje się w przeglądarce.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a4d2c2bd28640d0ac7124f8e0864e9e72fb1eb9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935632"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi — funkcja
 Zwraca moduł wyliczający dla wszystkich klas, które spełniają kryteria określonego zaznaczenia.

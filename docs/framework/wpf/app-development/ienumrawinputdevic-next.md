@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
 ms.openlocfilehash: 05867af48b64cd1898b13fa055859c8cc0367c8c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949581"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
 Wylicza następnego `celt` [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice) struktury na liście modułu wyliczającego, zwracając je w `rgelt` wraz z liczbą rzeczywiste elementy wyliczenia `pceltFetched`.  

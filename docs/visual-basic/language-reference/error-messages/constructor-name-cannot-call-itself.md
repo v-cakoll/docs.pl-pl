@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
 ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936698"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>Konstruktor "\<name >' nie może wywołać sam siebie
 A `Sub New` procedury w klasie lub strukturze wywołuje sam siebie.  

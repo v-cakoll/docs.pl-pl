@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
 ms.openlocfilehash: f7b0c3a6edbe0b950195306fa66287ff9b209bfe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935281"
 ---
 # <a name="bad-dll-calling-convention"></a>Nieprawidłowa konwencja wywoływania biblioteki DLL
 Argumenty przekazane do biblioteki dołączanej (dynamicznie DLL) musi dokładnie odpowiadać ich z oczekiwanymi przez procedura. Konwencje wywoływania zajmuje się numer, typ i kolejność argumentów. Program może wywołania procedury w bibliotekę DLL, która jest przekazywana nieprawidłowego typu lub liczbę argumentów.  

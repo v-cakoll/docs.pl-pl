@@ -8,11 +8,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
 ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938986"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button — Informacje o formancie (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.Button> kontrolki pozwala użytkownikowi na kliknij go, aby wykonać akcję. Po kliknięciu przycisku wygląda, jakby on wypychania i wydania. Zawsze, gdy użytkownik kliknie przycisk <xref:System.Windows.Forms.Control.Click> zostanie wywołana procedura obsługi zdarzeń. Umieść kod w <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń do wykonywania dowolnych akcji wybierzesz.  

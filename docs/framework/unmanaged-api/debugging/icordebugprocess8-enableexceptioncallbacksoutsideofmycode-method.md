@@ -7,11 +7,11 @@ ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08937e87b8bd2249b8608f8ec1ed1f7734961b3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948567"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode — metoda
 [Obsługiwane w [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] i nowszych wersjach]  
@@ -33,9 +33,9 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 ## <a name="remarks"></a>Uwagi  
  Jeśli wartość `enableExceptionsOutsideOfJMC` jest `false`:  
   
--   Wyjątek DEBUG_EXCEPTION_FIRST_CHANCE nie spowoduje wywołanie zwrotne do debugera.  
+- Wyjątek DEBUG_EXCEPTION_FIRST_CHANCE nie spowoduje wywołanie zwrotne do debugera.  
   
--   Wyjątek DEBUG_EXCEPTION_CATCH_HANDLER_FOUND nie powoduje wywołanie zwrotne do debugera w przypadku wyjątku, nigdy nie specjalne w kodzie użytkownika (oznacza to ścieżki ze źródła wyjątku do obsługi wyjątków nie zawiera metod oznaczonego jako JustMyCode lub JMC).  
+- Wyjątek DEBUG_EXCEPTION_CATCH_HANDLER_FOUND nie powoduje wywołanie zwrotne do debugera w przypadku wyjątku, nigdy nie specjalne w kodzie użytkownika (oznacza to ścieżki ze źródła wyjątku do obsługi wyjątków nie zawiera metod oznaczonego jako JustMyCode lub JMC).  
   
  Wartość domyślna `enableExceptionsOutsideOfJMC` jest `true`.  
   

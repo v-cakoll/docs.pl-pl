@@ -1,5 +1,5 @@
 ---
-title: Chronione elementy członkowskie
+title: Chronione składowe
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
 ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937400"
 ---
-# <a name="protected-members"></a>Chronione elementy członkowskie
+# <a name="protected-members"></a>Chronione składowe
 Chronione elementy członkowskie samodzielnie nie oferuje żadnych rozszerzeń, ale mogą robić więjsze rozszerzona funkcjonalność dzięki podklasy bardziej wydajne. One może służyć do udostępnienia Dostosowywanie zaawansowane opcje bez niepotrzebnego komplikowania kodu języka głównego interfejsu publicznego.  
   
  Projektanci Framework, należy być ostrożnym z chronionych elementów członkowskich, ponieważ nazwa "protected" można nadać fałszywe poczucie bezpieczeństwa. Każda osoba ma możliwość podklasy niezapieczętowane klasy i dostęp do chronionych elementów członkowskich, a więc ten sam bezpiecznego kodowania, używane do publicznych elementów członkowskich dotyczą chronionych elementów członkowskich.  

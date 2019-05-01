@@ -14,28 +14,28 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
 ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949516"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze rozwiązania dotyczące wyrażeń regularnych w programie .NET
 <a name="top"></a> Aparat wyrażeń regularnych w programie .NET jest to zaawansowane, w pełni funkcjonalne narzędzie, które przetwarza tekst oparty na dopasowania do wzorca zamiast porównywać i dopasowywać tekst dosłownie. W większości przypadków dopasowanie do wzorca przebiega szybko i skutecznie. Jednak w niektórych przypadkach aparat wyrażeń regularnych może okazać się bardzo wolny. W skrajnych przypadkach może nawet pozornie przestać odpowiadać, ponieważ przetwarza stosunkowo mało danych wejściowych w ciągu kilku godzin lub nawet dni.  
   
  W tym temacie przedstawiono kilka najlepszych rozwiązań, które deweloperzy mogą zaadoptować w celu osiągnięcia optymalnej wydajności przetwarzania własnych wyrażeń regularnych. Ten temat zawiera następujące sekcje:  
   
--   [Należy wziąć pod uwagę źródło danych wejściowych](#InputSource)  
+- [Należy wziąć pod uwagę źródło danych wejściowych](#InputSource)  
   
--   [Obsługa tworzenia wystąpienia obiektu odpowiednio](#ObjectInstantiation)  
+- [Obsługa tworzenia wystąpienia obiektu odpowiednio](#ObjectInstantiation)  
   
--   [Przejmowanie kontroli nad wycofywaniem](#Backtracking)  
+- [Przejmowanie kontroli nad wycofywaniem](#Backtracking)  
   
--   [Używanie wartości limitu czasu](#Timeouts)  
+- [Używanie wartości limitu czasu](#Timeouts)  
   
--   [Przechwytywanie tylko wtedy, gdy jest to konieczne](#Capture)  
+- [Przechwytywanie tylko wtedy, gdy jest to konieczne](#Capture)  
   
--   [Tematy pokrewne](#RelatedTopics)  
+- [Tematy pokrewne](#RelatedTopics)  
   
 <a name="InputSource"></a>   
 ## <a name="consider-the-input-source"></a>Wybieranie źródła danych wejściowych  
@@ -45,11 +45,11 @@ ms.locfileid: "53152815"
   
  Aby dopasować nieograniczone dane wejściowe, wyrażenie regularne musi być w stanie efektywnie obsłużyć trzy rodzaje tekstu:  
   
--   Tekst, który pasuje do wzorca wyrażenia regularnego.  
+- Tekst, który pasuje do wzorca wyrażenia regularnego.  
   
--   Tekst, który nie pasuje do wzorca wyrażenia regularnego.  
+- Tekst, który nie pasuje do wzorca wyrażenia regularnego.  
   
--   Tekst, który prawie pasuje do wzorca wyrażenia regularnego.  
+- Tekst, który prawie pasuje do wzorca wyrażenia regularnego.  
   
  Ostatni typ tekstu jest szczególnie problematyczny dla wyrażeń regularnych, które zostały napisane do obsługi ograniczonych danych wejściowych. Jeśli wyrażenie regularne opiera się również na rozbudowane [wycofywania](../../../docs/standard/base-types/backtracking-in-regular-expressions.md), aparat wyrażeń regularnych poświęcić dużej ilość czasu (w niektórych przypadkach wiele godzin lub dni) przetwarzanie pozornie niewielkiej tekstu.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "53152815"
   
  Aby rozwiązać ten problem, można wykonać następujące czynności:  
   
--   Podczas tworzenia wzorca należy uwzględnić wpływ wycofywania na wydajność aparatu wyrażeń regularnych, szczególnie jeśli wyrażenie regularne jest przeznaczone do przetwarzania nieograniczonych danych wejściowych. Aby uzyskać więcej informacji, zobacz [zająć przejmowanie kontroli nad wycofywaniem](#Backtracking) sekcji.  
+- Podczas tworzenia wzorca należy uwzględnić wpływ wycofywania na wydajność aparatu wyrażeń regularnych, szczególnie jeśli wyrażenie regularne jest przeznaczone do przetwarzania nieograniczonych danych wejściowych. Aby uzyskać więcej informacji, zobacz [zająć przejmowanie kontroli nad wycofywaniem](#Backtracking) sekcji.  
   
--   Wyrażenie regularne należy dokładnie sprawdzić, używając nieprawidłowych i niemal prawidłowych danych wejściowych, a także prawidłowych danych wejściowych. Aby losowo wygenerować danych wejściowych dla poszczególnych wyrażeń regularnych, możesz użyć [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/), czyli narzędzia do eksplorowania wyrażeń regularnych przez firmę Microsoft Research.  
+- Wyrażenie regularne należy dokładnie sprawdzić, używając nieprawidłowych i niemal prawidłowych danych wejściowych, a także prawidłowych danych wejściowych. Aby losowo wygenerować danych wejściowych dla poszczególnych wyrażeń regularnych, możesz użyć [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/), czyli narzędzia do eksplorowania wyrażeń regularnych przez firmę Microsoft Research.  
   
  [Powrót do początku](#top)  
   
@@ -82,13 +82,13 @@ ms.locfileid: "53152815"
   
  Można sprzęgnąć aparat wyrażeń regularnych z konkretnym wzorcem wyrażenia regularnego, a następnie użyć aparatu, aby dopasować tekst na kilka sposobów:  
   
--   Można wywołać statyczną metodę dopasowania do wzorca, taką jak <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>. Nie wymaga to tworzenia wystąpienia obiektu wyrażenia regularnego.  
+- Można wywołać statyczną metodę dopasowania do wzorca, taką jak <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>. Nie wymaga to tworzenia wystąpienia obiektu wyrażenia regularnego.  
   
--   Można utworzyć wystąpienie <xref:System.Text.RegularExpressions.Regex> obiektu i wywołać metodę wystąpienia do dopasowania do wzorca interpretowanego wyrażenia regularnego. Jest to domyślna metoda do tworzenia powiązania aparatu wyrażeń regularnych z wzorcem wyrażenia regularnego. Powoduje to podczas <xref:System.Text.RegularExpressions.Regex> jest tworzone wystąpienie obiektu bez `options` argument, który zawiera <xref:System.Text.RegularExpressions.RegexOptions.Compiled> flagi.  
+- Można utworzyć wystąpienie <xref:System.Text.RegularExpressions.Regex> obiektu i wywołać metodę wystąpienia do dopasowania do wzorca interpretowanego wyrażenia regularnego. Jest to domyślna metoda do tworzenia powiązania aparatu wyrażeń regularnych z wzorcem wyrażenia regularnego. Powoduje to podczas <xref:System.Text.RegularExpressions.Regex> jest tworzone wystąpienie obiektu bez `options` argument, który zawiera <xref:System.Text.RegularExpressions.RegexOptions.Compiled> flagi.  
   
--   Można utworzyć wystąpienie <xref:System.Text.RegularExpressions.Regex> obiektu i wywołać metodę wystąpienia do dopasowania do wzorca skompilowanego wyrażenia regularnego. Obiekty wyrażeń regularnych reprezentują skompilowane wzorce, gdy <xref:System.Text.RegularExpressions.Regex> jest tworzone wystąpienie obiektu za pomocą `options` argument, który zawiera <xref:System.Text.RegularExpressions.RegexOptions.Compiled> flagi.  
+- Można utworzyć wystąpienie <xref:System.Text.RegularExpressions.Regex> obiektu i wywołać metodę wystąpienia do dopasowania do wzorca skompilowanego wyrażenia regularnego. Obiekty wyrażeń regularnych reprezentują skompilowane wzorce, gdy <xref:System.Text.RegularExpressions.Regex> jest tworzone wystąpienie obiektu za pomocą `options` argument, który zawiera <xref:System.Text.RegularExpressions.RegexOptions.Compiled> flagi.  
   
--   Można utworzyć specjalny <xref:System.Text.RegularExpressions.Regex> obiekt, który jest ściśle sprzężony z określonym wzorcem wyrażenia regularnego, skompilować go i zapisać go do niezależnego zestawu. Można to zrobić, wywołując <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> metody.  
+- Można utworzyć specjalny <xref:System.Text.RegularExpressions.Regex> obiekt, który jest ściśle sprzężony z określonym wzorcem wyrażenia regularnego, skompilować go i zapisać go do niezależnego zestawu. Można to zrobić, wywołując <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> metody.  
   
  Sposób, w jaki są wywoływane metody dopasowywania wyrażeń regularnych, może mieć znaczący wpływ na działanie aplikacji. W poniższych sekcjach omówiono, kiedy używać wywołań metod statycznych oraz interpretowanych i skompilowanych wyrażeń regularnych, aby poprawić wydajność aplikacji.  
   
@@ -154,9 +154,9 @@ ms.locfileid: "53152815"
   
  Zaleca się, aby kompilować wyrażenia regularne do zestawu w następujących sytuacjach:  
   
--   Jeśli jesteś deweloperem składników, który chce utworzyć bibliotekę wyrażeń regularnych do wielokrotnego użytku.  
+- Jeśli jesteś deweloperem składników, który chce utworzyć bibliotekę wyrażeń regularnych do wielokrotnego użytku.  
   
--   Jeśli oczekujesz, że metody dopasowania do wzorca wyrażenia regularnego będą wywoływane nieokreśloną liczbę razy — od jednego lub dwóch wywołań do kilku tysięcy wywołań. W przeciwieństwie do skompilowanych lub interpretowanych wyrażeń regularnych, wyrażenia regularne, które są kompilowane do oddzielnych zestawów, oferują stałą wydajność bez względu na liczbę wywołań metody.  
+- Jeśli oczekujesz, że metody dopasowania do wzorca wyrażenia regularnego będą wywoływane nieokreśloną liczbę razy — od jednego lub dwóch wywołań do kilku tysięcy wywołań. W przeciwieństwie do skompilowanych lub interpretowanych wyrażeń regularnych, wyrażenia regularne, które są kompilowane do oddzielnych zestawów, oferują stałą wydajność bez względu na liczbę wywołań metody.  
   
  Jeśli skompilowane wyrażenia regularne są używane w celu optymalizacji wydajności, nie należy używać odbicia w celu utworzenia zestawu, załadowania aparatu wyrażeń regularnych i wykonania jego metod dopasowania do wzorca. Wymaga to unikania dynamicznego kompilowania wzorców wyrażeń regularnych i określenia wszelkich opcji dopasowania do wzorca (np. z uwzględnieniem wielkości liter) w czasie tworzenia zestawu. Wymaga to również odseparowania kodu, który tworzy zestaw, od kodu, który używa wyrażenia regularnego.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "53152815"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- Język wyrażeń regularnych w programie .NET zawiera następujące elementy języka, które można użyć w celu wyeliminowania kwantyfikatorów zagnieżdżonych. Aby uzyskać więcej informacji, zobacz [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Język wyrażeń regularnych w programie .NET zawiera następujące elementy języka, które można użyć w celu wyeliminowania kwantyfikatorów zagnieżdżonych. Aby uzyskać więcej informacji, zobacz [Konstrukcje grupujące](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 |Element języka|Opis|  
 |----------------------|-----------------|  
@@ -237,11 +237,11 @@ ms.locfileid: "53152815"
   
  Interwał limitu czasu wyrażenia regularnego określa czas, przez jaki aparat wyrażeń regularnych będzie szukał pojedynczego dopasowania, zanim zostanie przekroczony limit czasu. Domyślny interwał limitu czasu wynosi <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, co oznacza, że wyrażenie regularne będzie nie przekraczają limit czasu. Można zastąpić tę wartość i zdefiniować interwał limitu czasu w następujący sposób:  
   
--   Ustawiając wartość limitu czasu podczas tworzenia wystąpienia <xref:System.Text.RegularExpressions.Regex> obiektu przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> konstruktora.  
+- Ustawiając wartość limitu czasu podczas tworzenia wystąpienia <xref:System.Text.RegularExpressions.Regex> obiektu przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> konstruktora.  
   
--   Przez wywołanie statycznego dopasowania do wzorca metody, takie jak <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, który zawiera `matchTimeout` parametru.  
+- Przez wywołanie statycznego dopasowania do wzorca metody, takie jak <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, który zawiera `matchTimeout` parametru.  
   
--   Dla skompilowanych wyrażeń regularnych, które są tworzone przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> metoda, przez wywołanie konstruktora, który ma parametr typu <xref:System.TimeSpan>.  
+- Dla skompilowanych wyrażeń regularnych, które są tworzone przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> metoda, przez wywołanie konstruktora, który ma parametr typu <xref:System.TimeSpan>.  
   
  Jeśli zdefiniowano interwał limitu czasu i dopasowanie nie znajduje się na końcu tego interwału, metoda wyrażenia regularnego zgłasza <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> wyjątku. W obsłudze wyjątków można wybrać ponowienie próby dopasowywania z dłuższym interwałem limitu czasu, zrezygnować z próby dopasowania i założyć, że dopasowanie nie istnieje, lub zrezygnować z próby dopasowania i zarejestrować informacje o wyjątku na potrzeby późniejszej analizy.  
   
@@ -281,13 +281,13 @@ ms.locfileid: "53152815"
   
  Przechwytywanie można wyłączyć na jeden z poniższych sposobów:  
   
--   Użyj `(?:subexpression)` element języka. Ten element zapobiega przechwytywaniu dopasowanych podciągów w grupie, do której jest stosowany. Nie wyłącza przechwytywania podciągów w grupach zagnieżdżonych.  
+- Użyj `(?:subexpression)` element języka. Ten element zapobiega przechwytywaniu dopasowanych podciągów w grupie, do której jest stosowany. Nie wyłącza przechwytywania podciągów w grupach zagnieżdżonych.  
   
--   Użyj <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> opcji. Wyłącza wszystkie nienazwane lub niejawne przechwytywania we wzorcu wyrażenia regularnego. Tej opcji tylko podciągi, które pasują do nazwanych grup zdefiniowanych za `(?<name>subexpression)` elementu języka, które mogą być przechwytywane. <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> Flagi mogą być przekazywane do `options` parametru <xref:System.Text.RegularExpressions.Regex> konstruktora klasy lub `options` parametru <xref:System.Text.RegularExpressions.Regex> statycznej metody dopasowania.  
+- Użyj <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> opcji. Wyłącza wszystkie nienazwane lub niejawne przechwytywania we wzorcu wyrażenia regularnego. Tej opcji tylko podciągi, które pasują do nazwanych grup zdefiniowanych za `(?<name>subexpression)` elementu języka, które mogą być przechwytywane. <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> Flagi mogą być przekazywane do `options` parametru <xref:System.Text.RegularExpressions.Regex> konstruktora klasy lub `options` parametru <xref:System.Text.RegularExpressions.Regex> statycznej metody dopasowania.  
   
--   Użyj `n` opcji `(?imnsx)` element języka. Powoduje to wyłączenie wszystkich nienazwanych lub niejawnych przechwytywań od miejsca we wzorcu wyrażenia regularnego, w którym znajduje się ten element. Przechwytywania są wyłączone do końca wzorca lub do momentu `(-n)` opcji umożliwiającej nienazwane lub niejawne przechwytywania. Aby uzyskać więcej informacji, zobacz [różne konstrukcje](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
+- Użyj `n` opcji `(?imnsx)` element języka. Powoduje to wyłączenie wszystkich nienazwanych lub niejawnych przechwytywań od miejsca we wzorcu wyrażenia regularnego, w którym znajduje się ten element. Przechwytywania są wyłączone do końca wzorca lub do momentu `(-n)` opcji umożliwiającej nienazwane lub niejawne przechwytywania. Aby uzyskać więcej informacji, zobacz [różne konstrukcje](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Użyj `n` opcji `(?imnsx:subexpression)` element języka. Ta opcja wyłącza wszystkie nienazwane lub niejawne przechwytywania w obiekcie `subexpression`. Przechwytywania przez jakiekolwiek nienazwane lub niejawne zagnieżdżone grupy przechwytywania również są wyłączone.  
+- Użyj `n` opcji `(?imnsx:subexpression)` element języka. Ta opcja wyłącza wszystkie nienazwane lub niejawne przechwytywania w obiekcie `subexpression`. Przechwytywania przez jakiekolwiek nienazwane lub niejawne zagnieżdżone grupy przechwytywania również są wyłączone.  
   
  [Powrót do początku](#top)  
   

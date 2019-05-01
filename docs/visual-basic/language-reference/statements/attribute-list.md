@@ -6,11 +6,11 @@ helpviewer_keywords:
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
 ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945083"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista atrybutów (Visual Basic)
 Określa atrybuty, które mają zostać zastosowane do zadeklarowanego elementu programowania. Wiele atrybutów rozdziela się przecinkami. Poniżej przedstawiono składnię z jednym atrybutem.  
@@ -36,15 +36,15 @@ Określa atrybuty, które mają zostać zastosowane do zadeklarowanego elementu 
   
 ## <a name="rules"></a>reguły  
   
--   **Położenie.** Atrybuty można zastosować do większości zadeklarowanych elementów programistycznych. Aby zastosować jeden lub więcej atrybutów, umieść *blok atrybutu* na początku deklaracji elementu. Każdy wpis na liście atrybutów określa atrybut, który chcesz zastosować, oraz modyfikator i argumenty używane dla tego wywołania atrybutu.  
+- **Położenie.** Atrybuty można zastosować do większości zadeklarowanych elementów programistycznych. Aby zastosować jeden lub więcej atrybutów, umieść *blok atrybutu* na początku deklaracji elementu. Każdy wpis na liście atrybutów określa atrybut, który chcesz zastosować, oraz modyfikator i argumenty używane dla tego wywołania atrybutu.  
   
--   **Nawiasy.** Podając listę atrybutów, musisz ująć ją w nawiasy (`<` i `>`).  
+- **Nawiasy.** Podając listę atrybutów, musisz ująć ją w nawiasy (`<` i `>`).  
   
--   **Część deklaracji.** Atrybut musi być częścią deklaracji elementu, a nie oddzielną instrukcją. Można użyć sekwencji kontynuacji wiersza (`_`) do rozszerzenia instrukcji deklaracji na wiele wierszy kodu źródłowego.  
+- **Część deklaracji.** Atrybut musi być częścią deklaracji elementu, a nie oddzielną instrukcją. Można użyć sekwencji kontynuacji wiersza (`_`) do rozszerzenia instrukcji deklaracji na wiele wierszy kodu źródłowego.  
   
--   **Modyfikatory.** Modyfikator atrybutu (`Assembly` lub `Module`) jest wymagany dla każdego atrybutu zastosowanego do elementu programistycznego na początku pliku źródłowego. Modyfikatory atrybutu nie są dozwolone w przypadku atrybutów stosowanych do elementów, które nie znajdują się na początku pliku źródłowego.  
+- **Modyfikatory.** Modyfikator atrybutu (`Assembly` lub `Module`) jest wymagany dla każdego atrybutu zastosowanego do elementu programistycznego na początku pliku źródłowego. Modyfikatory atrybutu nie są dozwolone w przypadku atrybutów stosowanych do elementów, które nie znajdują się na początku pliku źródłowego.  
   
--   **Argumenty.** Wszystkie argumenty pozycyjne atrybutu muszą poprzedzać wszystkie inicjatory zmiennej lub właściwości.  
+- **Argumenty.** Wszystkie argumenty pozycyjne atrybutu muszą poprzedzać wszystkie inicjatory zmiennej lub właściwości.  
   
 ## <a name="example"></a>Przykład  
  W przykładzie poniżej atrybut <xref:System.Runtime.InteropServices.DllImportAttribute> został zastosowany dla definicji szkieletu procedury `Function`.  

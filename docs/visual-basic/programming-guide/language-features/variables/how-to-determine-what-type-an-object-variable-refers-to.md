@@ -7,11 +7,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
 ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938206"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Instrukcje: Wyznaczyć, jakiego typu odnosi się zmienna obiektu (Visual Basic)
 Zmienna obiektu zawiera wskaźnik do danych przechowywanych w różnych miejscach. Typ danych można zmienić w czasie wykonywania. W każdej chwili możesz użyć <xref:System.Type.GetTypeCode%2A> metodę pozwala ustalić bieżącego typu run-time lub [TypeOf — Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) można sprawdzić, czy bieżący typu run-time jest zgodny z określonym typem.  
@@ -37,7 +37,7 @@ Zmienna obiektu zawiera wskaźnik do danych przechowywanych w różnych miejscac
   
 ### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>Aby określić, czy obiekt jest zgodny z określonym typem Typ zmiennej  
   
--   Użyj `TypeOf` operatora w połączeniu z [operatora Is](../../../../visual-basic/language-reference/operators/is-operator.md) do testowania obiekt z `TypeOf`... `Is` wyrażenia.  
+- Użyj `TypeOf` operatora w połączeniu z [operatora Is](../../../../visual-basic/language-reference/operators/is-operator.md) do testowania obiekt z `TypeOf`... `Is` wyrażenia.  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  

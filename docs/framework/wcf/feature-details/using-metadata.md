@@ -3,11 +3,11 @@ title: Używanie metadanych
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 ms.openlocfilehash: 78005f68512e62c667b59c3cec5841a37723b973
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933623"
 ---
 # <a name="using-metadata"></a>Używanie metadanych
 Metadane usługi zawiera czytelnym opisu usługi. Metadane usługi zawiera opisy punktów końcowych usługi, powiązania, kontrakty, operacje i wiadomości. Metadane usługi służy do różnych celów, w tym automatycznego generowania klientowi korzystanie z usługi, implementowanie opis usługi i dynamiczne aktualizowanie powiązania dla klienta.  

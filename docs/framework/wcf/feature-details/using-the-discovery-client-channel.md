@@ -3,11 +3,11 @@ title: Używanie kanału klienta odnajdywania
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932695"
 ---
 # <a name="using-the-discovery-client-channel"></a>Używanie kanału klienta odnajdywania
 Podczas pisania aplikacji klienta WCF, musisz znać adres punktu końcowego usługi, którą wywołujesz. W wielu sytuacjach adres punktu końcowego usługi nie jest znana z wyprzedzeniem lub adres usługi zmienia się wraz z upływem czasu. Kanału klienta odnajdywania umożliwia pisanie aplikacji klienta WCF, opisano usługi, którą chcesz się połączyć, a kanału klienta automatycznie wysyła żądania sondowania. Gdy usługa odpowie, kanału klienta odnajdywania pobiera adres punktu końcowego usługi z odpowiedzi na sondę i używa go do wywołania tej usługi.  

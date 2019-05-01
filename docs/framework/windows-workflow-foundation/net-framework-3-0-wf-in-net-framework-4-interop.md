@@ -3,11 +3,11 @@ title: Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 prz
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934722"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 <xref:System.Activities.Statements.Interop> Działanie jest [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działania (WF 4.5), który otacza [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) działania w ramach [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Działanie WF 3 może być czynnością pojedynczego typu liść lub całe drzewo działań. Wykonanie (w tym unieważnienie i obsługa wyjątków) oraz trwałości [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] działanie występuje w kontekście [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] wystąpienia przepływu pracy, który jest wykonywany.  
@@ -18,13 +18,13 @@ ms.locfileid: "59329417"
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Kryteria WF 3 działanie przy użyciu działań Interop  
  Działania WF 3 pomyślnie wykonać w ramach <xref:System.Activities.Statements.Interop> działania muszą być spełnione następujące kryteria:  
   
--   Działanie WF 3 musi pochodzić od klasy <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>.  
+- Działanie WF 3 musi pochodzić od klasy <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>.  
   
--   Działanie WF 3 musi być zadeklarowany jako `public` i nie może być `abstract`.  
+- Działanie WF 3 musi być zadeklarowany jako `public` i nie może być `abstract`.  
   
--   Działanie WF 3 musi mieć publicznego konstruktora domyślnego.  
+- Działanie WF 3 musi mieć publicznego konstruktora domyślnego.  
   
--   Ze względu na ograniczenia w interfejsie typy, które <xref:System.Activities.Statements.Interop> działanie może obsługiwać, <xref:System.Workflow.Activities.HandleExternalEventActivity> i <xref:System.Workflow.Activities.CallExternalMethodActivity> nie może być używany bezpośrednio, ale pochodnych działań utworzonych za pomocą narzędzia działania komunikacji przepływu pracy (WCA.exe) może służyć. Zobacz [narzędzia programu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=178889) Aby uzyskać szczegółowe informacje.  
+- Ze względu na ograniczenia w interfejsie typy, które <xref:System.Activities.Statements.Interop> działanie może obsługiwać, <xref:System.Workflow.Activities.HandleExternalEventActivity> i <xref:System.Workflow.Activities.CallExternalMethodActivity> nie może być używany bezpośrednio, ale pochodnych działań utworzonych za pomocą narzędzia działania komunikacji przepływu pracy (WCA.exe) może służyć. Zobacz [narzędzia programu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=178889) Aby uzyskać szczegółowe informacje.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Konfigurowanie WF 3 działania w ramach działań Interop  
  Aby skonfigurować i przekazać dane do i z działania programu WF 3, wewnątrz międzyoperacyjnej granicy, właściwości i metadanych właściwości działania WF 3 są udostępniane przez <xref:System.Activities.Statements.Interop> działania. Działanie WF 3 właściwości metadanych (takie jak <xref:System.Workflow.ComponentModel.Activity.Name%2A>) są udostępniane za pośrednictwem <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> kolekcji. Jest to kolekcja par nazwa wartość używanych do definiowania wartości dla właściwości metadanych działanie WF 3. Właściwość metadanych jest wspierana przez właściwość zależności, dla którego właściwość <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> flaga jest ustawiona.  

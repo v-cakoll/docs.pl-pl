@@ -3,11 +3,11 @@ title: Ograniczenia deklaratywne
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
 ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945824"
 ---
 # <a name="declarative-constraints"></a>Ograniczenia deklaratywne
 Ograniczenia deklaratywne udostępnia zaawansowane metody sprawdzania poprawności działania i jej relacji z innymi działaniami. Ograniczenia są skonfigurowane do działania podczas procesu tworzenia, ale można również określić dodatkowe ograniczenia przez hosta przepływu pracy. Ten temat zawiera omówienie sposobu użycia ograniczenia deklaratywne, aby zapewnić działanie sprawdzania poprawności.  

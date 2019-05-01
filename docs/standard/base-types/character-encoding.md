@@ -15,18 +15,18 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936802"
 ---
 # <a name="character-encoding-in-net"></a>Kodowanie znaków w programie .NET
 Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele różnych sposobów. Kodowanie znaków to system, który pary, każdy znak w obsługiwanych znaków, zestaw z jakąś wartość, która reprezentuje ten znak. Na przykład Morse'a jest znakiem kodowania tej pary każdego znaku w alfabetu łacińskiego z wzorcem kropki i łączniki, które są odpowiednie na potrzeby transmisji przez telegraficznego wierszy. Kodowanie znaków dla pary komputerów dla każdego znaku obsługiwany zestaw z wartością liczbową, który reprezentuje ten znak znaków. Kodowanie znaków ma dwa różne składniki:  
   
--   Koder, który tłumaczy sekwencji znaków do sekwencji wartości liczbowych (w bajtach).  
+- Koder, który tłumaczy sekwencji znaków do sekwencji wartości liczbowych (w bajtach).  
   
--   Dekoder, który tłumaczy sekwencję bajtów do sekwencji znaków.  
+- Dekoder, który tłumaczy sekwencję bajtów do sekwencji znaków.  
   
  Kodowanie znaków w tym artykule opisano zasady, według których koder i dekoder działać. Na przykład <xref:System.Text.UTF8Encoding> klasy w tym artykule opisano zasady kodowanie i dekodowanie z 8-bitową przekształcania formatu Unicode (UTF-8), który używa jednej do czterech bajtach oznaczającego pojedynczy znak Unicode. Kodowanie i dekodowanie mogą również obejmować sprawdzania poprawności. Na przykład <xref:System.Text.UnicodeEncoding> klasa sprawdza wszystkie surogaty, aby upewnić się, ponieważ stanowią one prawidłowe znaki dwuskładnikowe. (Para zastępcza składa się z znakiem z zakresu od U + D800 do U + DBFF następuje znak z punktem kodu z zakresu od U + DC00 do U + DFFF punktu kodu).  Strategia rezerwowa określa sposób obsługi przez koder nieprawidłowe znaki lub jak dekodera obsługuje nieprawidłowe bajty.  
   
@@ -37,27 +37,27 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
   
  Ten temat zawiera następujące sekcje:  
   
--   [Kodowanie na platformie .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [Kodowanie na platformie .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [Wybieranie klasy kodowania](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [Wybieranie klasy kodowania](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [Używanie obiektu kodowania](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [Używanie obiektu kodowania](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [Wybieranie strategii rezerwowe](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [Wybieranie strategii rezerwowe](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementowanie niestandardowego strategia rezerwowa](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Implementowanie niestandardowego strategia rezerwowa](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>Kodowanie na platformie .NET  
  Wszystkich znaków kodowania klasy .NET dziedziczą w <xref:System.Text.Encoding?displayProperty=nameWithType> klasy, która jest klasą abstrakcyjną, definiujący funkcje wspólne do wszystkich znaków kodowania. Można uzyskać dostęp do poszczególnych obiektów kodowania zaimplementowany w środowisku .NET, wykonaj następujące czynności:  
   
--   Użyj właściwości statycznej <xref:System.Text.Encoding> klasy, która zwraca obiekty reprezentujące kodowania znaków standardowych dostępnych w programie .NET (ASCII, UTF-7, UTF-8, UTF-16 i UTF-32). Na przykład <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> właściwość zwraca <xref:System.Text.UnicodeEncoding> obiektu. Każdy obiekt używa zastąpienie rezerwowego ciągów uchwytu, które go nie można zakodować i bajtów, które nie można go zdekodować. (Aby uzyskać więcej informacji, zobacz [rezerwowe zastąpienie](../../../docs/standard/base-types/character-encoding.md#Replacement) sekcji.)  
+- Użyj właściwości statycznej <xref:System.Text.Encoding> klasy, która zwraca obiekty reprezentujące kodowania znaków standardowych dostępnych w programie .NET (ASCII, UTF-7, UTF-8, UTF-16 i UTF-32). Na przykład <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> właściwość zwraca <xref:System.Text.UnicodeEncoding> obiektu. Każdy obiekt używa zastąpienie rezerwowego ciągów uchwytu, które go nie można zakodować i bajtów, które nie można go zdekodować. (Aby uzyskać więcej informacji, zobacz [rezerwowe zastąpienie](../../../docs/standard/base-types/character-encoding.md#Replacement) sekcji.)  
   
--   Wywoływanie konstruktora klasy kodowania firmy. Obiekty ASCII, UTF-7, UTF-8, UTF-16 i UTF-32 kodowania mogą być utworzone w ten sposób. Domyślnie każdy obiekt używa zastąpienie rezerwowego do obsługi ciągów, które go nie można zakodować i bajtów, których nie można go zdekodować, ale można określić, czy należy zgłosić wyjątek zamiast tego. (Aby uzyskać więcej informacji, zobacz [rezerwowe zastąpienie](../../../docs/standard/base-types/character-encoding.md#Replacement) i [rezerwowe wyjątek](../../../docs/standard/base-types/character-encoding.md#Exception) sekcje.)  
+- Wywoływanie konstruktora klasy kodowania firmy. Obiekty ASCII, UTF-7, UTF-8, UTF-16 i UTF-32 kodowania mogą być utworzone w ten sposób. Domyślnie każdy obiekt używa zastąpienie rezerwowego do obsługi ciągów, które go nie można zakodować i bajtów, których nie można go zdekodować, ale można określić, czy należy zgłosić wyjątek zamiast tego. (Aby uzyskać więcej informacji, zobacz [rezerwowe zastąpienie](../../../docs/standard/base-types/character-encoding.md#Replacement) i [rezerwowe wyjątek](../../../docs/standard/base-types/character-encoding.md#Exception) sekcje.)  
   
--   Wywołaj <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> Konstruktor i przekazywanie ich liczba całkowita, która reprezentuje kodowania. Standard kodowania obiektów użyj rezerwowe zastąpienia i stronę kodową i zestaw znaków dwubajtowych (DBCS) kodowanie obiektów Użyj najlepszego dopasowania powrotu do ciągów uchwytu, które ich nie można zakodować i bajtów, które ich nie można zdekodować. (Aby uzyskać więcej informacji, zobacz [rezerwowe Best-Fit](../../../docs/standard/base-types/character-encoding.md#BestFit) sekcji.)  
+- Wywołaj <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> Konstruktor i przekazywanie ich liczba całkowita, która reprezentuje kodowania. Standard kodowania obiektów użyj rezerwowe zastąpienia i stronę kodową i zestaw znaków dwubajtowych (DBCS) kodowanie obiektów Użyj najlepszego dopasowania powrotu do ciągów uchwytu, które ich nie można zakodować i bajtów, które ich nie można zdekodować. (Aby uzyskać więcej informacji, zobacz [rezerwowe Best-Fit](../../../docs/standard/base-types/character-encoding.md#BestFit) sekcji.)  
   
--   Wywołaj <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> metody, która zwraca wszystkie standardowe, stronę kodową lub kodowanie znaków Dwubajtowych dostępne na platformie .NET. Przeciążenia pozwalają określać rezerwowego obiektu dla koder i dekoder.  
+- Wywołaj <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> metody, która zwraca wszystkie standardowe, stronę kodową lub kodowanie znaków Dwubajtowych dostępne na platformie .NET. Przeciążenia pozwalają określać rezerwowego obiektu dla koder i dekoder.  
   
 > [!NOTE]
 >  Unicode Standard przypisuje punkt kodowy (liczba) i nazwę każdego znaku w każdej obsługiwanej skryptu. Na przykład znak "A" jest reprezentowany przez punkt kodowy U + 0041 i nazwie "LATIN CAPITAL LETTER A". Kodowania Format przekształcenia Unicode (UTF) zdefiniuj sposoby kodowanie tego punktu kodu do sekwencji bajtów jednego lub więcej. Schemat kodowania Unicode upraszcza opracowywanie aplikacji gotowej dla całego świata, ponieważ zezwala ona na znaki z dowolnego zestawu może być reprezentowana w jednym kodowania znaków. Deweloperzy aplikacji nie ma już do śledzenia schemat kodowania, który został użyty do utworzenia znaków dla określonego języka lub zapis systemu, a dane mogą być udostępniane między systemami w wielu krajach bez jest uszkodzony.  
@@ -87,17 +87,17 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
   
  Jeśli planowane jest używane kodowanie ASCII (<xref:System.Text.ASCIIEncoding>), wybierz <xref:System.Text.UTF8Encoding> zamiast tego. Dwa kodowania są identyczne dla zestawu znaków ASCII, ale <xref:System.Text.UTF8Encoding> ma następujące zalety:  
   
--   Może ona reprezentować każdego znaku Unicode, natomiast <xref:System.Text.ASCIIEncoding> obsługuje tylko znak Unicode wartości od U + 0000 i U + 007F.  
+- Może ona reprezentować każdego znaku Unicode, natomiast <xref:System.Text.ASCIIEncoding> obsługuje tylko znak Unicode wartości od U + 0000 i U + 007F.  
   
--   Zapewnia ona wykrywanie błędów i większe bezpieczeństwo.  
+- Zapewnia ona wykrywanie błędów i większe bezpieczeństwo.  
   
--   On ma zostać dostosowana do można tak szybko, jak to możliwe i powinien być szybciej niż inne kodowanie. Nawet w przypadku zawartości, która jest całkowicie ASCII, operacje wykonywane przy użyciu <xref:System.Text.UTF8Encoding> są szybsze niż operacje wykonywane przy użyciu <xref:System.Text.ASCIIEncoding>.  
+- On ma zostać dostosowana do można tak szybko, jak to możliwe i powinien być szybciej niż inne kodowanie. Nawet w przypadku zawartości, która jest całkowicie ASCII, operacje wykonywane przy użyciu <xref:System.Text.UTF8Encoding> są szybsze niż operacje wykonywane przy użyciu <xref:System.Text.ASCIIEncoding>.  
   
  Należy rozważyć użycie <xref:System.Text.ASCIIEncoding> tylko w przypadku starszych aplikacji. Jednak nawet w przypadku starszych aplikacji <xref:System.Text.UTF8Encoding> może być lepszym rozwiązaniem w następujących sytuacjach (zakładając, że ustawienia domyślne):  
   
--   Jeśli aplikacja ma zawartość, która nie jest ściśle ASCII i koduje go jako <xref:System.Text.ASCIIEncoding>, każdy znak spoza zestawu ASCII kodowane jako znak zapytania (?). Jeśli następnie aplikacja dekoduje tych danych, informacje zostaną utracone.  
+- Jeśli aplikacja ma zawartość, która nie jest ściśle ASCII i koduje go jako <xref:System.Text.ASCIIEncoding>, każdy znak spoza zestawu ASCII kodowane jako znak zapytania (?). Jeśli następnie aplikacja dekoduje tych danych, informacje zostaną utracone.  
   
--   Jeśli aplikacja ma zawartość, która nie jest ściśle ASCII i koduje go jako <xref:System.Text.UTF8Encoding>, wynik jest niezrozumiały, jeśli jest interpretowany jako ASCII. Jednak jeśli następnie aplikacja używa dekodera UTF-8 do zdekodowania tych danych, dane wykonuje pomyślnie komunikacji dwustronnej.  
+- Jeśli aplikacja ma zawartość, która nie jest ściśle ASCII i koduje go jako <xref:System.Text.UTF8Encoding>, wynik jest niezrozumiały, jeśli jest interpretowany jako ASCII. Jednak jeśli następnie aplikacja używa dekodera UTF-8 do zdekodowania tych danych, dane wykonuje pomyślnie komunikacji dwustronnej.  
   
  W aplikacji sieci web powinny odzwierciedlać znaków wysłane do klienta w odpowiedzi na żądania sieci web, kodowanie, używany przez klienta. W większości przypadków należy ustawić <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> właściwości do wartości zwracanej przez <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> właściwości do wyświetlania tekstu w kodowaniu, że użytkownik oczekuje.  
   
@@ -130,11 +130,11 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
 ## <a name="choosing-a-fallback-strategy"></a>Wybieranie strategii rezerwowe  
  Gdy metoda podejmuje próbę kodowania i dekodowania znak, ale nie istnieje żadne mapowanie, musi on implementować strategia rezerwowa, który określa sposób obsługi mapowania nie powiodło się. Istnieją trzy typy rezerwowego strategii:  
   
--   Rezerwowe najlepszego dopasowania  
+- Rezerwowe najlepszego dopasowania  
   
--   Zastąpienie rezerwowe  
+- Zastąpienie rezerwowe  
   
--   Wyjątek rezerwowe  
+- Wyjątek rezerwowe  
   
 > [!IMPORTANT]
 >  Najbardziej typowe problemy podczas operacji kodowania wystąpić, gdy znak Unicode nie można zamapować na kodowanie strony określonego kodu. Najbardziej typowe problemy w dekodowanie operacje wystąpić, gdy sekwencje nieprawidłowy bajt nie można przetłumaczyć prawidłowych znaków Unicode. Z tego względu należy wiedzieć rezerwowego strategię, jakiej używa określonego obiektu kodowania. Jeśli to możliwe, należy określić strategia rezerwowa używane przez obiekt kodowania, podczas tworzenia wystąpienia obiektu.  
@@ -195,9 +195,9 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
   
  <xref:System.Text.EncoderFallbackException> i <xref:System.Text.DecoderFallbackException> obiektów należy podać następujące informacje o warunku, który spowodował wyjątek:  
   
--   <xref:System.Text.EncoderFallbackException> Obiekt zawiera <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> metody, która wskazuje, czy znak lub znaki, które nie może zostać zakodowana reprezentują para zastępcza Nieznany (w tym przypadku metoda ta zwraca `true`) lub nieznany pojedynczego znaku (w takiej sytuacji, metoda zwraca `false`). Znaki w para zastępcza są dostępne z <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> i <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> właściwości. Nieznany pojedynczy znak jest dostępne z <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> właściwości. <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> Właściwość wskazuje pozycji w ciągu odnaleziono pierwszy znak, który nie jest zaszyfrowana.  
+- <xref:System.Text.EncoderFallbackException> Obiekt zawiera <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> metody, która wskazuje, czy znak lub znaki, które nie może zostać zakodowana reprezentują para zastępcza Nieznany (w tym przypadku metoda ta zwraca `true`) lub nieznany pojedynczego znaku (w takiej sytuacji, metoda zwraca `false`). Znaki w para zastępcza są dostępne z <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> i <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> właściwości. Nieznany pojedynczy znak jest dostępne z <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> właściwości. <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> Właściwość wskazuje pozycji w ciągu odnaleziono pierwszy znak, który nie jest zaszyfrowana.  
   
--   <xref:System.Text.DecoderFallbackException> Obiekt zawiera <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> właściwość, która zwraca tablicę bajtów, które nie mogą zostać zdekodowane. <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> Właściwość wskazuje pozycję początkową nieznany bajtów.  
+- <xref:System.Text.DecoderFallbackException> Obiekt zawiera <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> właściwość, która zwraca tablicę bajtów, które nie mogą zostać zdekodowane. <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> Właściwość wskazuje pozycję początkową nieznany bajtów.  
   
  Mimo że <xref:System.Text.EncoderFallbackException> i <xref:System.Text.DecoderFallbackException> obiektów podaj odpowiednie informacje diagnostyczne o wyjątku, nie zapewniają one dostęp do kodowania lub dekodowania buforu. W związku z tym nie zezwalają na nieprawidłowe dane do zastąpienia lub poprawione w metodzie kodowania lub dekodowania.  
   
@@ -205,13 +205,13 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementowanie niestandardowego strategia rezerwowa  
  Oprócz mapowanie najlepszego dopasowania są implementowane wewnętrznie przez stron kodowych, .NET zawiera następujące klasy do implementowania strategia rezerwowa:  
   
--   Użyj <xref:System.Text.EncoderReplacementFallback> i <xref:System.Text.EncoderReplacementFallbackBuffer> zostać zastąpione znaki kodowania operacji.  
+- Użyj <xref:System.Text.EncoderReplacementFallback> i <xref:System.Text.EncoderReplacementFallbackBuffer> zostać zastąpione znaki kodowania operacji.  
   
--   Użyj <xref:System.Text.DecoderReplacementFallback> i <xref:System.Text.DecoderReplacementFallbackBuffer> do zastąpienia znaków dekodowanie operacji.  
+- Użyj <xref:System.Text.DecoderReplacementFallback> i <xref:System.Text.DecoderReplacementFallbackBuffer> do zastąpienia znaków dekodowanie operacji.  
   
--   Użyj <xref:System.Text.EncoderExceptionFallback> i <xref:System.Text.EncoderExceptionFallbackBuffer> zgłosić <xref:System.Text.EncoderFallbackException> po znaku nie może być zakodowany.  
+- Użyj <xref:System.Text.EncoderExceptionFallback> i <xref:System.Text.EncoderExceptionFallbackBuffer> zgłosić <xref:System.Text.EncoderFallbackException> po znaku nie może być zakodowany.  
   
--   Użyj <xref:System.Text.DecoderExceptionFallback> i <xref:System.Text.DecoderExceptionFallbackBuffer> zgłosić <xref:System.Text.DecoderFallbackException> po znaku nie mogą zostać zdekodowane.  
+- Użyj <xref:System.Text.DecoderExceptionFallback> i <xref:System.Text.DecoderExceptionFallbackBuffer> zgłosić <xref:System.Text.DecoderFallbackException> po znaku nie mogą zostać zdekodowane.  
   
  Ponadto można zaimplementować niestandardowego rozwiązania, które używa rezerwowe najlepszego dopasowania, rezerwowy zastąpienia lub rezerwowe wyjątek, wykonaj następujące czynności:  
   
@@ -226,24 +226,24 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
   
  Podczas tworzenia niestandardowego rozwiązania rezerwowe dla koder i dekoder, należy zaimplementować następujące elementy członkowskie:  
   
--   <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> właściwość, która zwraca maksymalną liczbę znaków, które mogą rezerwowego najlepszego dopasowania, wymiana albo wyjątek wróć do Zamień jeden znak. Dla niestandardowego wyjątku rezerwowy jego wartość wynosi zero.  
+- <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> właściwość, która zwraca maksymalną liczbę znaków, które mogą rezerwowego najlepszego dopasowania, wymiana albo wyjątek wróć do Zamień jeden znak. Dla niestandardowego wyjątku rezerwowy jego wartość wynosi zero.  
   
--   <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> metody, która zwraca niestandardowe <xref:System.Text.EncoderFallbackBuffer> lub <xref:System.Text.DecoderFallbackBuffer> implementacji. Metoda jest wywoływana przez koder po napotkaniu pierwszego znaku, który nie może pomyślnie kodowanie lub przez dekoder, po napotkaniu pierwszego bajtu, która nie może pomyślnie dekodowania.  
+- <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> metody, która zwraca niestandardowe <xref:System.Text.EncoderFallbackBuffer> lub <xref:System.Text.DecoderFallbackBuffer> implementacji. Metoda jest wywoływana przez koder po napotkaniu pierwszego znaku, który nie może pomyślnie kodowanie lub przez dekoder, po napotkaniu pierwszego bajtu, która nie może pomyślnie dekodowania.  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>Wyprowadzanie z EncoderFallbackBuffer lub DecoderFallbackBuffer  
  Aby zaimplementować niestandardowe rozwiązanie alternatywne, również należy utworzyć klasę, która dziedziczy po elemencie <xref:System.Text.EncoderFallbackBuffer> operacji kodowania i z <xref:System.Text.DecoderFallbackBuffer> dekodowania operacji. Wystąpień tych klas są zwracane przez <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> metody <xref:System.Text.EncoderFallback> i <xref:System.Text.DecoderFallback> klasy. <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> Metoda jest wywoływana przez koder po napotkaniu pierwszego znaku, który nie jest możliwe do kodowania, i <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> metoda jest wywoływana przez dekoder po napotkaniu co najmniej jeden bajtów, które nie jest w stanie do odkodowania. <xref:System.Text.EncoderFallbackBuffer> i <xref:System.Text.DecoderFallbackBuffer> klasy zapewniają implementacji rezerwowej. Każde wystąpienie reprezentuje bufor, który zawiera znaki powrotu, które zastąpi znak, który nie może zostać zakodowana lub sekwencja bajtów, które nie mogą zostać zdekodowane.  
   
  Podczas tworzenia niestandardowego rozwiązania rezerwowe dla koder i dekoder, należy zaimplementować następujące elementy członkowskie:  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> metody. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> jest wywoływana przez koder zapewnienie bufora rezerwowy z informacjami o znak, który go nie można zakodować. Ponieważ znak, który ma być zdekodowany, może być para zastępcza, ta metoda jest przeciążony. Kilkoma przeciążeniami jest przekazywany znak, który ma być zdekodowany i jej indeks w ciągu. Drugie przeciążenie jest przekazywany wysokim i niskim zastępcze wraz z jej indeks w ciągu. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> Metoda jest wywoływana przez dekoder zapewnienie bufora rezerwowy informacji na temat bajtów, które nie można go zdekodować. Ta metoda jest przekazywana tablicę bajtów, które nie można go zdekodować, wraz z indeks pierwszego bajtu. Określ metodę planu awaryjnego powinna zwrócić `true` Jeśli bufora rezerwowy może dostarczyć najlepszego dopasowania lub znak zastępczy lub znaków dwubajtowych; w przeciwnym razie powinna zwrócić `false`. Dla wyjątku rezerwowy Określ metodę planu awaryjnego należy zgłosić wyjątek.  
+- <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> metody. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> jest wywoływana przez koder zapewnienie bufora rezerwowy z informacjami o znak, który go nie można zakodować. Ponieważ znak, który ma być zdekodowany, może być para zastępcza, ta metoda jest przeciążony. Kilkoma przeciążeniami jest przekazywany znak, który ma być zdekodowany i jej indeks w ciągu. Drugie przeciążenie jest przekazywany wysokim i niskim zastępcze wraz z jej indeks w ciągu. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> Metoda jest wywoływana przez dekoder zapewnienie bufora rezerwowy informacji na temat bajtów, które nie można go zdekodować. Ta metoda jest przekazywana tablicę bajtów, które nie można go zdekodować, wraz z indeks pierwszego bajtu. Określ metodę planu awaryjnego powinna zwrócić `true` Jeśli bufora rezerwowy może dostarczyć najlepszego dopasowania lub znak zastępczy lub znaków dwubajtowych; w przeciwnym razie powinna zwrócić `false`. Dla wyjątku rezerwowy Określ metodę planu awaryjnego należy zgłosić wyjątek.  
   
--   <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> metody, która jest wywoływana wielokrotnie przez koder lub dekoder, które można pobrać następny znak z bufora rezerwowy. Gdy wszystkie znaki powrotu zostały zwrócone, metoda powinna zwrócić U + 0000.  
+- <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> metody, która jest wywoływana wielokrotnie przez koder lub dekoder, które można pobrać następny znak z bufora rezerwowy. Gdy wszystkie znaki powrotu zostały zwrócone, metoda powinna zwrócić U + 0000.  
   
--   <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> właściwość, która zwraca liczbę pozostałych znaków w buforze rezerwowego.  
+- <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> właściwość, która zwraca liczbę pozostałych znaków w buforze rezerwowego.  
   
--   <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> metody, która przenosi bieżąca pozycja w buforze rezerwowym poprzedni znak.  
+- <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> metody, która przenosi bieżąca pozycja w buforze rezerwowym poprzedni znak.  
   
--   <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> metody, która ponownie inicjuje bufora rezerwowy.  
+- <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> metody, która ponownie inicjuje bufora rezerwowy.  
   
  W przypadku powrotu najlepszego dopasowania lub zastąpienie rezerwowe implementacji rezerwowej klasy pochodne klasy <xref:System.Text.EncoderFallbackBuffer> i <xref:System.Text.DecoderFallbackBuffer> również utrzymania dwa pola wystąpieniem prywatnym: Dokładna liczba znaków w buforze; i indeks następnego znaku bufor do zwrócenia.  
   

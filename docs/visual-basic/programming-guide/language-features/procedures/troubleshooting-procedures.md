@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791797"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Procedury rozwiązywania problemów (Visual Basic)
 Ta strona zawiera listę typowych problemów występujących podczas pracy z procedurami.  
@@ -46,9 +46,9 @@ Ta strona zawiera listę typowych problemów występujących podczas pracy z pro
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Argument nie jest modyfikowany przez wywołanie procedury  
  Jeśli zamierzasz zezwolić procedury można zmienić elementu programistycznego, bazowy argumentu w wywoływanym kodzie, musisz przekazać go przez odwołanie. Ale procedury mogą uzyskać dostęp do elementów argumentu typu odwołania, nawet wtedy, gdy przekazywane przez wartość.  
   
--   **Bazowy zmiennej**. Aby zezwolić na procedury zastąpić wartość zmiennej bazowego samego elementu, procedury należy zadeklarować parametr [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Ponadto kod wywołujący nie ująć argument w nawiasach, ponieważ mogłoby, które zastępują `ByRef` mechanizm przekazywania.  
+- **Bazowy zmiennej**. Aby zezwolić na procedury zastąpić wartość zmiennej bazowego samego elementu, procedury należy zadeklarować parametr [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Ponadto kod wywołujący nie ująć argument w nawiasach, ponieważ mogłoby, które zastępują `ByRef` mechanizm przekazywania.  
   
--   **Elementy typu odwołania**. Przy deklarowaniu parametru [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), procedury nie można zmodyfikować bazowego zmiennej elementu. Jednak jeśli argument jest typem referencyjnym, procedura modyfikować elementów członkowskich obiektu, na który wskazuje, nawet jeśli nie można zastąpić, wartość zmiennej. Na przykład jeśli argument jest zmienną tablicową, procedury nie można przypisać nową tablicę do niego, ale można zmienić, co najmniej jeden z jego elementów. Zmienione elementy są odzwierciedlane w podstawowej zmienną tablicy w wywoływanym kodzie.  
+- **Elementy typu odwołania**. Przy deklarowaniu parametru [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), procedury nie można zmodyfikować bazowego zmiennej elementu. Jednak jeśli argument jest typem referencyjnym, procedura modyfikować elementów członkowskich obiektu, na który wskazuje, nawet jeśli nie można zastąpić, wartość zmiennej. Na przykład jeśli argument jest zmienną tablicową, procedury nie można przypisać nową tablicę do niego, ale można zmienić, co najmniej jeden z jego elementów. Zmienione elementy są odzwierciedlane w podstawowej zmienną tablicy w wywoływanym kodzie.  
   
  W poniższym przykładzie zdefiniowano dwie procedury potrwać zmienną tablicową według wartości, które działają na jego elementach. Procedura `increase` po prostu dodaje je do każdego elementu. Procedura `replace` przypisuje nową tablicę z parametrem `a()` , a następnie dodaje je do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawowe zmienną tablicy w wywoływanym kodzie ponieważ `a()` zadeklarowano `ByVal`.  
   
@@ -75,13 +75,13 @@ Ta strona zawiera listę typowych problemów występujących podczas pracy z pro
   
  Następujące elementy, mimo że odnoszą się do listy parametrów nie są składniki sygnatury procedury:  
   
--   Słowa kluczowe modyfikator procedury, takich jak `Public`, `Shared`, i `Static`  
+- Słowa kluczowe modyfikator procedury, takich jak `Public`, `Shared`, i `Static`  
   
--   Nazwy parametrów  
+- Nazwy parametrów  
   
--   Słowa kluczowe modyfikator parametrów, takich jak `ByRef` i `Optional`  
+- Słowa kluczowe modyfikator parametrów, takich jak `ByRef` i `Optional`  
   
--   Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)  
+- Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)  
   
  Procedury nie mogą przeciążać przez zróżnicowanie tylko co najmniej jeden z wymienionych elementów.  
   
@@ -95,11 +95,11 @@ Ta strona zawiera listę typowych problemów występujących podczas pracy z pro
   
  Po określeniu przeciążenia, które ma zostać wywołana Uważaj obserwować następujące reguły:  
   
--   Podaj prawidłową liczbę argumentów i w odpowiedniej kolejności.  
+- Podaj prawidłową liczbę argumentów i w odpowiedniej kolejności.  
   
--   W idealnym przypadku argumenty powinny mieć dokładnie te same typy danych jako odpowiednich parametrów. W każdym przypadku typ danych każdego argumentu musi mogą zostać poszerzone do, jego odpowiadającego mu parametru. Ta zasada obowiązuje nawet w przypadku [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) równa `Off`. Jeśli przeciążenia wymaga wszelkie konwersja zawężająca z listy argumentów, które przeciążenia nie jest uprawnione do wywołania.  
+- W idealnym przypadku argumenty powinny mieć dokładnie te same typy danych jako odpowiednich parametrów. W każdym przypadku typ danych każdego argumentu musi mogą zostać poszerzone do, jego odpowiadającego mu parametru. Ta zasada obowiązuje nawet w przypadku [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) równa `Off`. Jeśli przeciążenia wymaga wszelkie konwersja zawężająca z listy argumentów, które przeciążenia nie jest uprawnione do wywołania.  
   
--   Jeśli podasz argumenty, które wymagają rozszerzenia, należy ich typów danych, jak najbliżej odpowiednich typów danych parametrów. Jeśli dwa lub więcej przeciążenia akceptuje argument typów danych, kompilator rozpoznaje wywołania do przeciążenia, które wymaga minimalnej liczbie rozszerzanie.  
+- Jeśli podasz argumenty, które wymagają rozszerzenia, należy ich typów danych, jak najbliżej odpowiednich typów danych parametrów. Jeśli dwa lub więcej przeciążenia akceptuje argument typów danych, kompilator rozpoznaje wywołania do przeciążenia, które wymaga minimalnej liczbie rozszerzanie.  
   
  Można zmniejszyć ryzyko niezgodności typu danych przy użyciu [funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md) konwersji — słowo kluczowe podczas przygotowywania argumenty.  
   

@@ -1,29 +1,29 @@
 ---
-title: 1035 - RuntimeTransactionSet
+title: 1035 — RuntimeTransactionSet
 ms.date: 03/30/2017
 ms.assetid: 03b37de9-778c-4beb-b0e3-de73ece6088e
 ms.openlocfilehash: 198e11dd94b0ad5cdc1e01c3611280754ca081d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924855"
 ---
-# <a name="1035---runtimetransactionset"></a>1035 - RuntimeTransactionSet
+# <a name="1035---runtimetransactionset"></a>1035 — RuntimeTransactionSet
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|1035|  
-|Słowa kluczowe|WFRuntime|  
+|Identyfikator|1035|  
+|słowa kluczowe|WFRuntime|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- Wskazuje, że działanie ustawił transakcja czasu wykonywania.  
+ Wskazuje, że działanie ustawił transakcji środowiska uruchomieniowego.  
   
 ## <a name="message"></a>Komunikat  
- Transakcja czasu wykonywania została ustawiona przez działanie %1, nazwa wyświetlana: %2, identyfikator wystąpienia: '%3'.  Wykonanie izolowane, ograniczone do działania %4, nazwa wyświetlana: %5, identyfikator wystąpienia: '%6'.  
+ Transakcja środowiska uruchomieniowego została ustawiona przez działanie "%1", DisplayName: "%2", InstanceId: "%3".  Wykonanie wyizolowane do działania "%4", DisplayName: '%5', InstanceId: '%6'.  
   
 ## <a name="details"></a>Szczegóły  
   
@@ -31,8 +31,8 @@ ms.locfileid: "33510037"
 |--------------------|--------------------|-----------------|  
 |Działanie|xs:String|Nazwa typu działania.|  
 |Nazwa wyświetlana|xs:String|Nazwa wyświetlana działania.|  
-|Identyfikator wystąpienia|xs:String|Identyfikator wystąpienia działania.|  
-|IsolatedActivity|xs:String|Nazwa typu transakcji jest izolowane, ograniczone do działania.|  
-|IsolatedActivityDisplayName|xs:String|Nazwa wyświetlana transakcji jest izolowane, ograniczone do działania.|  
-|IsolatedActivityInstanceId|xs:String|Identyfikator wystąpienia transakcji jest izolowane, ograniczone do działania.|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|InstanceId|xs:String|Identyfikator wystąpienia działania.|  
+|IsolatedActivity|xs:String|Nazwa typu transakcji jest izolowane do działania.|  
+|IsolatedActivityDisplayName|xs:String|Nazwa wyświetlana transakcji jest izolowane do działania.|  
+|IsolatedActivityInstanceId|xs:String|Identyfikator wystąpienia transakcji jest izolowane do działania.|  
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

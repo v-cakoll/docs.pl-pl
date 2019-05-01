@@ -5,11 +5,11 @@ helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928639"
 ---
 # <a name="implementing-service-contracts"></a>Implementowanie kontraktów usług
 Usługa jest klasa, która udostępnia funkcje dostępne dla klientów w jednej lub więcej punktów końcowych. Aby utworzyć usługę, należy napisać klasę, która implementuje kontraktu usługi Windows Communication Foundation (WCF). Można zrobić to w jednym z dwóch sposobów. Można zdefiniować kontrakt oddzielnie jako interfejs, a następnie Utwórz klasę, która implementuje ten interfejs. Alternatywnie można utworzyć klasy i umowę bezpośrednio przez umieszczenie <xref:System.ServiceModel.ServiceContractAttribute> atrybutu w samej klasy i <xref:System.ServiceModel.OperationContractAttribute> atrybutu metody dostępne dla klientów usługi.  

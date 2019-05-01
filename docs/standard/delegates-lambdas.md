@@ -7,11 +7,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
 ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941040"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaci i wyrażenia lambda
 
@@ -46,9 +46,9 @@ public class Program
 
 W celu uproszczenia procesu tworzenia, .NET zawiera zbiór typami delegatów, które programiści mogą ponownie użyć i nie trzeba tworzyć nowe typy. Są to `Func<>`, `Action<>` i `Predicate<>`, i można ich używać w różnych miejscach interfejsów API platformy .NET bez konieczności do definiowania nowych typów obiektów delegowanych. Jak widać w ich sygnaturach, które przede wszystkim ze sposobem, w których zostały one przeznaczone do użycia istnieją oczywiście niektóre różnice między trzy:
 
-*   `Action<>` jest używany, gdy trzeba wykonać akcję przy użyciu argumentów delegata.
-*   `Func<>` jest używana zazwyczaj w przypadku transformacji w kasie, oznacza to, należy przekształcić argumenty delegata w różne wyniki. Prognozy są głównym przykładem.
-*   `Predicate<>` jest używany, gdy zachodzi potrzeba określenia, jeśli argument spełnia warunek delegata. Można również będą zapisywane jako `Func<T, bool>`.
+* `Action<>` jest używany, gdy trzeba wykonać akcję przy użyciu argumentów delegata.
+* `Func<>` jest używana zazwyczaj w przypadku transformacji w kasie, oznacza to, należy przekształcić argumenty delegata w różne wyniki. Prognozy są głównym przykładem.
+* `Predicate<>` jest używany, gdy zachodzi potrzeba określenia, jeśli argument spełnia warunek delegata. Można również będą zapisywane jako `Func<T, bool>`.
 
 Możemy teraz pobrać naszym powyższym przykładzie i ponownie napisać przy użyciu `Func<>` delegować zamiast typu niestandardowego. Program będzie nadal uruchomione, dokładnie tak samo.
 
@@ -159,6 +159,6 @@ public MainWindow()
 
 ## <a name="further-reading-and-resources"></a>Dalsze informacje i zasoby
 
-*   [Delegaty](../../docs/csharp/programming-guide/delegates/index.md)
-*   [Funkcje anonimowe](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [Wyrażenia lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Delegaty](../../docs/csharp/programming-guide/delegates/index.md)
+* [Funkcje anonimowe](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Wyrażenia lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

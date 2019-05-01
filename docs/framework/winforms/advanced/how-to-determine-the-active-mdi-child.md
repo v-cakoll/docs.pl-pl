@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
 ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937556"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Instrukcje: Określanie elementu podrzędnego MDI Active
 Czasami chcesz dostarczyć polecenia, który działa na formant, który ma fokus w formularzu podrzędnym aktualnie aktywne. Na przykład załóżmy, że chcesz skopiować zaznaczony tekst z pola tekstowego formularz podrzędny do Schowka. Należy utworzyć procedurę, która kopiuje zaznaczony tekst do Schowka z użyciem <xref:System.Windows.Forms.Control.Click> zdarzeń Kopiuj element menu standardowe menu Edycja.  

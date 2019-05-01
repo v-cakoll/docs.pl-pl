@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934930"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType — Metoda
 Pobiera tablicę elementów określonego typu lub wskaźnik lub odwołanie do określonego typu.  
@@ -54,11 +54,11 @@ HRESULT GetArrayOrPointerType (
 ## <a name="remarks"></a>Uwagi  
  Wartość *elementType* musi mieć jedną z następujących czynności:  
   
--   ELEMENT_TYPE_PTR  
+- ELEMENT_TYPE_PTR  
   
--   POLE  
+- POLE  
   
--   ELEMENT_TYPE_ARRAY lub ELEMENT_TYPE_SZARRAY  
+- ELEMENT_TYPE_ARRAY lub ELEMENT_TYPE_SZARRAY  
   
  Jeśli wartość *elementType* ELEMENT_TYPE_PTR lub pole, *nRank* musi mieć wartość zero.  
   

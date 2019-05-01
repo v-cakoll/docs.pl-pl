@@ -11,11 +11,11 @@ helpviewer_keywords:
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
 ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941378"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Instrukcje: udostępnianie właściwości kontrolek składowych
 Noszą nazwę kontrolek, które tworzą kontrolki złożonej *formanty składników*. Te kontrolki są zwykle zgłaszane w prywatnej, a zatem nie są dostępne przez dewelopera. Jeśli chcesz udostępnić użytkownikom przyszłych właściwości tych kontrolek, należy je udostępnić użytkownikowi. Właściwość składowej formantu jest uwidaczniany przez tworzenie właściwości w kontrolce użytkownika i używanie `get` i `set` metod dostępu właściwości do efektu zmianę właściwości prywatnej składowej formantu.  

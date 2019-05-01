@@ -1,19 +1,19 @@
 ---
-title: Okres odnawiania blokady hosta
+title: Okres odnowienia blokady hosta
 ms.date: 03/30/2017
 ms.assetid: f8ba94fc-27e0-4d8e-8f85-50a6d2a3cd43
 ms.openlocfilehash: 91d83259c766120f7e3ffc9e49f1cf1b18c32a18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945616"
 ---
-# <a name="host-lock-renewal-period"></a>Okres odnawiania blokady hosta
-**Okres odnawiania blokady hosta** właściwość w magazynie wystąpień przepływu pracy SQL pozwala określić okres czasu, w którym host odnawia jego blokadę wystąpienia przepływu pracy. Blokada pozostaje ważny na okres odnawiania blokady hosta + 30 sekund. Jeśli host nie może odnowić blokady (innymi słowy, przedłużyć dzierżawę) w tym okresie, blokady wygaśnie, a dostawca trwałości odblokowuje wystąpienie. Wartość tej właściwości jest typu TimeSpan w postaci "hh: mm:". Minimalna dozwolona wartość to "00: 00:01" (1 sekunda). Wartość domyślna tej właściwości to "00: 00:30" (30 sekund).  
+# <a name="host-lock-renewal-period"></a>Okres odnowienia blokady hosta
+**Okres odnowienia blokady hosta** właściwość Store wystąpienia przepływu pracy SQL pozwala określić okres czasu, w którym hosta odnawia blokady w wystąpieniu przepływu pracy. Blokada pozostaje ważny na okres odnowienia blokady hosta + 30 sekund. Jeśli host nie odnowić blokady (innymi słowy, przedłużyć dzierżawę) w tym przedziale czasu wygaśnięcia blokady i dostawcy stanów trwałych odblokowuje wystąpienia. Wartość tej właściwości jest typu TimeSpan format "gg". Minimalna dozwolona wartość to "00: 00:01" (1 sekunda). Wartość domyślna tej właściwości to "00: 00:30" (30 sekund).  
   
- Ta właściwość jest istotna w scenariuszach, w którym hosta usługi przepływu pracy nie powiedzie się, zanim można odblokować wystąpienie usługi przepływu pracy, który jest właścicielem. W tym scenariuszu blokady dla wystąpienia usługi przepływu pracy w bazie danych trwałości usunięciu dostawca trwałości po wygaśnięciu blokady, dzięki czemu mogą uzyskiwać innego hosta usługi przepływu pracy uruchomionych na tym samym komputerze lub inny komputer w farmie serwerów Zablokuj i załadować wystąpienia przepływu pracy usługi do pamięci, aby wznowić działania z jej ostatniego utrwalonego stanu.  
+ Ta właściwość ma istotne znaczenie w scenariuszach, w którym hosta usługi przepływu pracy nie powiedzie się, zanim go odblokować wystąpienie usługi przepływu pracy, który jest właścicielem. W tym scenariuszu blokady w wystąpieniu usługi przepływu pracy w bazie danych trwałości zostanie usunięty przez dostawcę trwałości po wygaśnięciu blokady, dzięki czemu mogą uzyskiwać innego hosta usługi przepływu pracy uruchomionej na tym samym komputerze lub inny komputer w farmie serwerów Blokowanie i załadować wystąpienia usługi przepływu pracy do pamięci, aby wznowić jego wykonywanie z jej ostatniego utrwalonego stanu.  
   
- Ustawienie wyższej wartości dla tej właściwości powoduje wystąpienie usługi do zablokowania w bazie danych trwałości dłużej przepływu pracy i w związku z tym opóźnienia odzyskiwania wystąpienia z ostatniego punktu trwałości. Ustawienie przez krótki czas dla tej właściwości spowoduje, że nowe wystąpienie hosta usługi przepływu pracy, aby pobrać wystąpienia usługi przepływu pracy nie powiodło się szybko, ale powoduje wzrost obciążenia pracą hosta usługi przepływu pracy oraz bazy danych programu SQL Server.  
+ Ustawienie wyższej wartości dla tej właściwości powoduje, że przepływ pracy wystąpień usługi zostanie zablokowane w bazie danych trwałości przez dłuższy czas i w związku z tym opóźnia odzyskiwania wystąpienie z ostatniego punktu stanu trwałego. Ustawienie krótkiego interwału dla tej właściwości powoduje, że nowe wystąpienie hosta usługi przepływu pracy, aby pobrać wystąpienie usługi przepływu pracy nie powiodło się szybko, ale powoduje wzrost obciążenia hosta usługi przepływu pracy oraz bazy danych programu SQL Server.  
   
- W magazynie wystąpień przepływu pracy SQL działa wewnętrzny zadanie, które okresowo budzi i wykrywa wystąpienia z wygasłych blokad na nich. Po znalezieniu wystąpień z wygasłych blokad, umieszcza wystąpienia w tabeli RunnableInstances tak, aby hosta przepływu pracy może odbierać i Uruchom te wystąpienia.
+ Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, która okresowo budzi wykryje wystąpienia z wygasłych blokadami na nich. Po znalezieniu wystąpień z wygasłych blokad, umieszcza wystąpienia w tabeli RunnableInstances tak, aby hosta przepływu pracy może odbierać i Uruchom te wystąpienia.

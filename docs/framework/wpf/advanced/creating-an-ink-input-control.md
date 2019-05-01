@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928720"
 ---
 # <a name="creating-an-ink-input-control"></a>Tworzenie formantu danych wejściowych atramentu
 Można utworzyć formant niestandardowy, dynamicznie i statycznie renderowanie pisma odręcznego. Oznacza to renderowanie pisma odręcznego, jak użytkownik rysuje pociągnięcia, powodując pisma odręcznego się "flow" z pióra i wyświetlić pisma odręcznego po nim jest dodawany do kontroli, za pomocą pióra, wklejonych ze Schowka, albo załadować z pliku. Aby powodować dynamiczne renderowanie pisma odręcznego, musisz użyć kontrolki <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Statycznie renderowanie pisma odręcznego, konieczne jest przesłonięcie metody zdarzeń pióra (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, i <xref:System.Windows.UIElement.OnStylusUp%2A>) do zbierania <xref:System.Windows.Input.StylusPoint> dane, tworzyć pociągnięć i dodać je do <xref:System.Windows.Controls.InkPresenter> (która renderuje pismo odręczne na formancie).  
   
  Ten temat zawiera następujące podsekcje:  
   
--   [Instrukcje: Zbieranie danych punktu pióra i utworzyć pociągnięć odręcznych](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [Instrukcje: Zbieranie danych punktu pióra i utworzyć pociągnięć odręcznych](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Instrukcje: Włączanie kontroli nad do przyjmowania danych wejściowych z myszy](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [Instrukcje: Włączanie kontroli nad do przyjmowania danych wejściowych z myszy](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [Umieszczenie go razem](#PuttingItTogether)  
+- [Umieszczenie go razem](#PuttingItTogether)  
   
--   [Za pomocą dodatkowych dodatków plug-in i DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [Za pomocą dodatkowych dodatków plug-in i DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Podsumowanie](#AdvancedInkHandling_Conclusion)  
+- [Podsumowanie](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Instrukcje: Zbieranie danych punktu pióra i utworzyć pociągnięć odręcznych  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945343"
 ---
 # <a name="from-clause-visual-basic"></a>From — Klauzula (Visual Basic)
 Określa co najmniej jednej zmiennej zakresu i kolekcji do wykonywania zapytań.  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  Każdy `From` klauzula może występować w dowolnej kombinacji klauzule dodatkowe kwerendy w celu doprecyzowania zapytania. Zapytania można dostosować w następujący sposób:  
   
--   Łączenie wielu kolekcji niejawnie za pomocą `From` i `Select` zdań, lub jawnie przy użyciu `Join` lub `Group Join` klauzul.  
+- Łączenie wielu kolekcji niejawnie za pomocą `From` i `Select` zdań, lub jawnie przy użyciu `Join` lub `Group Join` klauzul.  
   
--   Użyj `Where` klauzulę filtrującą dane wyniku zapytania.  
+- Użyj `Where` klauzulę filtrującą dane wyniku zapytania.  
   
--   Sortowanie wyników za pomocą `Order By` klauzuli.  
+- Sortowanie wyników za pomocą `Order By` klauzuli.  
   
--   Zgrupować podobne wyniki za pomocą `Group By` klauzuli.  
+- Zgrupować podobne wyniki za pomocą `Group By` klauzuli.  
   
--   Użyj `Aggregate` klauzuli w celu identyfikacji funkcji agregujących do oceny, czy wynik całego zapytania.  
+- Użyj `Aggregate` klauzuli w celu identyfikacji funkcji agregujących do oceny, czy wynik całego zapytania.  
   
--   Użyj `Let` klauzulę, aby wprowadzić zmienną iteracji, którego wartość jest określona przez wyrażenie zamiast kolekcji.  
+- Użyj `Let` klauzulę, aby wprowadzić zmienną iteracji, którego wartość jest określona przez wyrażenie zamiast kolekcji.  
   
--   Użyj `Distinct` klauzuli ignorowanie wyników zapytania duplikatów.  
+- Użyj `Distinct` klauzuli ignorowanie wyników zapytania duplikatów.  
   
--   Identyfikowanie części wyników do zwrócenia przy użyciu `Skip`, `Take`, `Skip While`, i `Take While` klauzul.  
+- Identyfikowanie części wyników do zwrócenia przy użyciu `Skip`, `Take`, `Skip While`, i `Take While` klauzul.  
   
 ## <a name="example"></a>Przykład  
  Następujące zapytanie używa wyrażenia `From` klauzulę, aby zadeklarować zmienną zakresu `cust` dla każdego `Customer` obiektu `customers` kolekcji. `Where` Klauzuli używa zmiennej zakresu, aby uniemożliwić klientom określonego regionu danych wyjściowych. `For Each` Pętli Wyświetla nazwę firmy, dla każdego klienta, w wyniku zapytania.  

@@ -6,11 +6,11 @@ ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 744c97e8728d0a65bff8e7bb7a7dbb298afe1800
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934553"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopiowanie istniejących węzłów z jednego dokumentu do innego
 **ImportNode** metoda to mechanizm, za pomocą którego węzła lub poddrzewo w całym węźle jest kopiowany z jednego **XmlDocument** do innego. Węzeł zwracana z wywołania jest kopią węzeł w dokumencie źródłowym, w tym wartości atrybutów, nazwa węzła, typ węzła i wszystkich atrybutów związane z przestrzeni nazw, takie jak prefiks, lokalna nazwa i identyfikator (URI nazw). Dokument źródłowy nie jest zmieniany. Po zaimportowaniu węzeł nadal trzeba dodać je do drzewa za pomocą jednej z metod służy do wstawiania węzłów.  
@@ -28,7 +28,7 @@ ms.locfileid: "44088092"
 |XmlComment|Kopiuje węzła, w tym jego danych.|Kopiuje węzła, w tym jego danych.|  
 |XmlDocumentFragment|Elementy podrzędne węzła źródłowego są rekursywnie zaimportowany i wynikowy węzły ponownie w celu utworzenia odpowiednich poddrzewa.|Pusta **XmlDocumentFragment** zostanie utworzony.|  
 |XmlDocumentType|Kopiuje węzła, w tym jego data.*|Kopiuje węzła, w tym jego data.*|  
-|XmlElement|Elementy podrzędne elementu źródłowego są rekursywnie zaimportowany i wynikowy węzły ponownie w celu utworzenia odpowiednich poddrzewa. **Uwaga:** atrybuty domyślne nie są kopiowane. Jeśli dokument, zostaną zaimportowane do definiuje atrybutów domyślnych dla tej nazwy elementu, te są przypisywane.|Określony atrybut węzłów elementu źródłowego są importowane i generowane **XmlAttribute** węzły są dołączone do nowego elementu. Węzły podrzędne nie są kopiowane. **Uwaga:** atrybuty domyślne nie są kopiowane. Jeśli dokument, zostaną zaimportowane do definiuje atrybutów domyślnych dla tej nazwy elementu, te są przypisywane.|  
+|XmlElement|Elementy podrzędne elementu źródłowego są rekursywnie zaimportowany i wynikowy węzły ponownie w celu utworzenia odpowiednich poddrzewa. **Uwaga:**  Atrybuty domyślne nie są kopiowane. Jeśli dokument, zostaną zaimportowane do definiuje atrybutów domyślnych dla tej nazwy elementu, te są przypisywane.|Określony atrybut węzłów elementu źródłowego są importowane i generowane **XmlAttribute** węzły są dołączone do nowego elementu. Węzły podrzędne nie są kopiowane. **Uwaga:**  Atrybuty domyślne nie są kopiowane. Jeśli dokument, zostaną zaimportowane do definiuje atrybutów domyślnych dla tej nazwy elementu, te są przypisywane.|  
 |XmlEntityReference|Ponieważ dokumentów źródłowych i docelowych może mieć jednostki zdefiniowanych inaczej, ta metoda tylko kopiuje **XmlEntityReference** węzła. Tekst zastępczy nie jest włączony. Jeśli plik docelowy zawiera jednostki zdefiniowane, jego wartość zostanie przypisany.|Ponieważ dokumentów źródłowych i docelowych może mieć jednostki zdefiniowanych inaczej, ta metoda tylko kopiuje **XmlEntityReference** węzła. Tekst zastępczy nie jest włączony. Jeśli plik docelowy zawiera jednostki zdefiniowane, jego wartość zostanie przypisany.|  
 |XmlProcessingInstruction|Kopiuje wartości docelowej i danych z zaimportowanych węzła.|Kopiuje wartości docelowej i danych z zaimportowanych węzła.|  
 |XmlText|Kopiuje węzła, w tym jego danych.|Kopiuje węzła, w tym jego danych.|  

@@ -3,11 +3,11 @@ title: Architektura aktywacji WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932717"
 ---
 # <a name="was-activation-architecture"></a>Architektura aktywacji WAS
 W tym temacie wyszczególniono oraz omówienie składników usługi aktywacji procesów systemu Windows (znany także jako WAS).  
@@ -15,15 +15,15 @@ W tym temacie wyszczególniono oraz omówienie składników usługi aktywacji pr
 ## <a name="activation-components"></a>Składniki aktywacji  
  ZOSTAŁ składa się z kilku składników architektury:  
   
--   Odbiornik kart. Usługi Windows odbierać wiadomości od określonych protokołów sieciowych, które komunikują się z WAS do rozsyłania wiadomości przychodzących do procesu roboczego poprawne.  
+- Odbiornik kart. Usługi Windows odbierać wiadomości od określonych protokołów sieciowych, które komunikują się z WAS do rozsyłania wiadomości przychodzących do procesu roboczego poprawne.  
   
--   BYŁO. Usługa Windows, która zarządza tworzeniem i okresem istnienia procesów roboczych.  
+- BYŁO. Usługa Windows, która zarządza tworzeniem i okresem istnienia procesów roboczych.  
   
--   Ogólny proces pliku wykonywalnego procesu roboczego (w3wp.exe).  
+- Ogólny proces pliku wykonywalnego procesu roboczego (w3wp.exe).  
   
--   Menedżer aplikacji. Zarządza tworzeniem i okresem istnienia domen aplikacji, które przetwarzają hostowanie aplikacji w ramach procesu roboczego.  
+- Menedżer aplikacji. Zarządza tworzeniem i okresem istnienia domen aplikacji, które przetwarzają hostowanie aplikacji w ramach procesu roboczego.  
   
--   Programy obsługi protokołu. Składniki związane z protokołem, które są uruchamiane w procesie roboczym i zarządzania komunikacją między procesu roboczego i kart odbiornika. Istnieją dwa typy obsługi protokołu: procesu obsługi protokołu i programy obsługi protokołu obiektu AppDomain.  
+- Programy obsługi protokołu. Składniki związane z protokołem, które są uruchamiane w procesie roboczym i zarządzania komunikacją między procesu roboczego i kart odbiornika. Istnieją dwa typy obsługi protokołu: procesu obsługi protokołu i programy obsługi protokołu obiektu AppDomain.  
   
  Gdy WAS aktywuje wystąpienia procesu roboczego ładuje obsługi protokołu procesu, które są wymagane do procesu roboczego i używa Menedżera aplikacji, aby utworzyć domenę aplikacji do hostowania aplikacji. Domeny aplikacji, ładuje kod aplikacji, a także obsługi protokołu domeny aplikacji, które protokoły sieciowe używane przez wymagają aplikacji.  
   

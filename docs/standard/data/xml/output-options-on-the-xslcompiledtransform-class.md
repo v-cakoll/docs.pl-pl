@@ -6,11 +6,11 @@ ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949711"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opcje danych wyjściowych klasy XslCompiledTransform
 W tym temacie opisano dostępne opcje wyjściowe XSLT. Możesz określić opcje danych wyjściowych w arkuszu stylów lub na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
@@ -25,12 +25,12 @@ W tym temacie opisano dostępne opcje wyjściowe XSLT. Możesz określić opcje 
 |— metoda|Obsługiwane.|  
 |version|Ignorowane. Wersja jest zawsze 1.0 dla formatu XML i 4.0 dla kodu HTML.|  
 |encoding|Ignorowane w przypadku podawania do <xref:System.IO.TextWriter>. <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> Właściwość jest używana zamiast tego.|  
-|Pomiń xml deklaracji|Obsługiwane.|  
+|omit-xml-declaration|Obsługiwane.|  
 |niezależne|Obsługiwane.|  
-|publiczna doctype|Obsługiwane.|  
-|DOCTYPE system|Obsługiwane.|  
-|elementy w przypadku sekcja CDATA|Obsługiwane.|  
-|wcięcie|Obsługiwane.|  
+|doctype-public|Obsługiwane.|  
+|doctype-system|Obsługiwane.|  
+|cdata-section-elements|Obsługiwane.|  
+|Zwiększ wcięcie|Obsługiwane.|  
 |Typ nośnika|Obsługiwane.|  
   
 #### <a name="sending-output-to-an-xmlwriter"></a>Wysyłanie danych wyjściowych do XmlWriter  
@@ -39,7 +39,7 @@ W tym temacie opisano dostępne opcje wyjściowe XSLT. Możesz określić opcje 
 ## <a name="output-types"></a>Typy danych wyjściowych  
  Poniższa lista zawiera opis typów danych wyjściowych, dostępne na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> polecenia.  
   
-#### <a name="xmlwriter"></a>Parametr XmlWriter  
+#### <a name="xmlwriter"></a>XmlWriter  
  <xref:System.Xml.XmlWriter> Klasy zapisuje strumieni XML lub plików. Można określić funkcji do obsługi na <xref:System.Xml.XmlWriter> obiekt, w tym opcje danych wyjściowych za pomocą <xref:System.Xml.XmlWriterSettings> klasy. <xref:System.Xml.XmlWriter> Klasa jest integralną częścią <xref:System.Xml> framework. Użyj tego typu danych wyjściowych do potoku wyników danych wyjściowych do innego procesu XML.  
   
 #### <a name="string"></a>String  
@@ -55,7 +55,7 @@ W tym temacie opisano dostępne opcje wyjściowe XSLT. Możesz określić opcje 
   
 ## <a name="notes"></a>Uwagi  
   
--   Podczas pisania się puste znaczniki, spacja jest zapisywany między ostatni znak nazwy elementu i ukośnik odwrotny, `<myElement />` na przykład. Dzięki temu starsze przeglądarki poprawnie wyświetlić wygenerowanych stron HTML.  
+- Podczas pisania się puste znaczniki, spacja jest zapisywany między ostatni znak nazwy elementu i ukośnik odwrotny, `<myElement />` na przykład. Dzięki temu starsze przeglądarki poprawnie wyświetlić wygenerowanych stron HTML.  
   
 ## <a name="see-also"></a>Zobacz także
 

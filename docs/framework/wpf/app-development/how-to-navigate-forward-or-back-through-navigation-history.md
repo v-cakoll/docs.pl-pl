@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Poruszaj się w przód i wstecz w historii nawigacji'
+title: 'Instrukcje: Poruszanie się w przód i wstecz w historii nawigacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
 ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947761"
 ---
-# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Instrukcje: Poruszaj się w przód i wstecz w historii nawigacji
+# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Instrukcje: Poruszanie się w przód i wstecz w historii nawigacji
 Ten przykład ilustruje sposób przejścia do przodu i Wstecz w historii nawigacji dla wpisów.  
   
 ## <a name="example"></a>Przykład  
  Kod, który jest uruchamiany z zawartości w następujących hostów można przejść do przodu lub Wstecz w historii nawigacji, jeden wpis w danym momencie.  
   
--   <xref:System.Windows.Navigation.NavigationWindow> za pomocą <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow> za pomocą <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> za pomocą <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame> za pomocą <xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
  Zanim przejdziesz do przodu o jedną pozycję, musisz najpierw sprawdzić, czy znajdują się wpisy w historii przeglądania do przodu, sprawdzając **CanGoForward** właściwości. Aby przejść do przodu o jedną pozycję, należy wywołać **GoForward** metody. Jest to zilustrowane w poniższym przykładzie:  
   

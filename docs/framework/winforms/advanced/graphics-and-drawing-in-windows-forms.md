@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
 ms.openlocfilehash: 08f87436ade62bb54295b012a1c24dc177ea9667
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938180"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Grafika i rysowanie w formularzach systemu Windows
 Środowisko uruchomieniowe języka wspólnego używa zaawansowanych implementację graficzny interfejs urządzenia Windows ([!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]) o nazwie [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tworzenia grafiki, rysować tekst i obrazy graficzne jako obiekty manipulowania. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jest przeznaczony do oferty, wydajność i łatwość użycia. Możesz użyć [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] do renderowania obrazy na Windows Forms i formanty. Mimo że nie można użyć [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bezpośrednio na formularzach sieci Web, można wyświetlić obrazy za pomocą kontrolki serwera sieci Web obrazu.  

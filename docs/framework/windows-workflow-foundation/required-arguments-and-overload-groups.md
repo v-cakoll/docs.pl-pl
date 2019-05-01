@@ -1,15 +1,15 @@
 ---
-title: Wymagane Argumenty i Grupy metod Przeciążonych
+title: Wymagane argumenty i grupy metod przeciążonych
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937790"
 ---
-# <a name="required-arguments-and-overload-groups"></a>Wymagane Argumenty i Grupy metod Przeciążonych
+# <a name="required-arguments-and-overload-groups"></a>Wymagane argumenty i grupy metod przeciążonych
 Działania można skonfigurować tak, aby niektóre argumenty są wymagane powiązać na ważne potrzeby wykonywania działania. `RequiredArgument` Atrybut jest używany do wskazania, że niektórych argumentów w ramach działania są wymagane i `OverloadGroup` atrybut służy do grupowania kategorii wymaganych argumentów. Za pomocą atrybutów, autorzy działanie może zapewnić proste lub złożone działanie sprawdzania poprawności konfiguracji.  
   
 ## <a name="using-required-arguments"></a>Przy użyciu wymaganych argumentów  
@@ -144,19 +144,19 @@ Public class DbUpdate: AsyncCodeActivity
   
  Podczas definiowania grupę przeciążenia:  
   
--   Grupę przeciążenia nie może być podzbiór lub zbiór równoważny, innej grupy przeciążenia.  
+- Grupę przeciążenia nie może być podzbiór lub zbiór równoważny, innej grupy przeciążenia.  
   
     > [!NOTE]
     >  Istnieje jeden wyjątek od tej reguły. Jeśli grupa przeciążenie jest podzbiorem innej grupy przeciążenia i podzbiór zawiera tylko argumenty gdzie `RequiredArgument` jest `false`, grupy przeciążenie jest nieprawidłowy.  
   
--   Grupy metod przeciążonych może pokrywać się, ale jest to błąd, jeśli na przecięciu grupy zawiera wszystkie wymagane argumenty z jedną lub obie grupy metod przeciążonych. W poprzednim przykładzie `G2` i `G3` przeciążać nakładających się grup, ale ponieważ wspólną nie zawierała wszystkie argumenty jednego lub dwóch grup była nieprawidłowa.  
+- Grupy metod przeciążonych może pokrywać się, ale jest to błąd, jeśli na przecięciu grupy zawiera wszystkie wymagane argumenty z jedną lub obie grupy metod przeciążonych. W poprzednim przykładzie `G2` i `G3` przeciążać nakładających się grup, ale ponieważ wspólną nie zawierała wszystkie argumenty jednego lub dwóch grup była nieprawidłowa.  
   
  Podczas tworzenia powiązania argumentów w grupie przeciążenia:  
   
--   Grupę przeciążenie jest uznawany za powiązane z, jeśli wszystkie `RequiredArgument` argumentów w grupie są powiązane.  
+- Grupę przeciążenie jest uznawany za powiązane z, jeśli wszystkie `RequiredArgument` argumentów w grupie są powiązane.  
   
--   Jeśli grupa zawiera zero `RequiredArgument` argumentów i co najmniej jednego argumentu powiązania, a następnie grupy jest uznawany za granicę.  
+- Jeśli grupa zawiera zero `RequiredArgument` argumentów i co najmniej jednego argumentu powiązania, a następnie grupy jest uznawany za granicę.  
   
--   Jeśli nie grupy metod przeciążonych są powiązane, chyba że nie ma jednej grupy przeciążenia, występuje błąd sprawdzania poprawności `RequiredArgument` argumentów w nim.  
+- Jeśli nie grupy metod przeciążonych są powiązane, chyba że nie ma jednej grupy przeciążenia, występuje błąd sprawdzania poprawności `RequiredArgument` argumentów w nim.  
   
--   Jest błędem do więcej niż jedna grupa przeciążenia, powiązana, będącego, wszystkie wymagane argumenty z kilkoma przeciążeniami grupy są powiązane i wszystkich argumentów w innej grupie przeciążenie jest również powiązane.
+- Jest błędem do więcej niż jedna grupa przeciążenia, powiązana, będącego, wszystkie wymagane argumenty z kilkoma przeciążeniami grupy są powiązane i wszystkich argumentów w innej grupie przeciążenie jest również powiązane.

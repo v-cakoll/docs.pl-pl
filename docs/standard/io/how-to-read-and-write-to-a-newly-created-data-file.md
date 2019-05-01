@@ -16,11 +16,11 @@ ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 065907ae0d4a38ff2ef68de6025251e28220ee96
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947215"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType> i <xref:System.IO.BinaryReader?displayProperty=nameWithType> klasy są używane do zapisywania i odczytywania danych innych niż ciągi znaków. Poniższy przykład pokazuje, jak utworzyć pusty plik strumienia w nim zapisywać dane i odczytywać dane. 

@@ -3,11 +3,11 @@ title: Rozszerzalność hosta usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929795"
 ---
 # <a name="workflow-service-host-extensibility"></a>Rozszerzalność hosta usługi przepływu pracy
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] udostępnia <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy do hostowania usług przepływu pracy. Ta klasa jest używana, gdy samodzielnie obsługujesz usługi przepływu pracy w zarządzanej aplikacji lub usługi Windows. Ta klasa jest również używana w przypadku hostowania usługi przepływu pracy przy użyciu usług Internet Information Services (IIS) lub Windows Process Activation Service (WAS). <xref:System.ServiceModel.Activities.WorkflowServiceHost> Klasa udostępnia punkty rozszerzenia, które umożliwiają dodanie rozszerzenia niestandardowe, zmienić zachowanie bezczynności, a następnie Hostuj przepływy pracy bez usługi (przepływy pracy, które nie korzystają z działań dotyczących komunikatów).  
@@ -18,13 +18,13 @@ ms.locfileid: "59196479"
 ## <a name="react-to-unhandled-exceptions"></a>Reagowanie na nieobsłużonych wyjątków  
  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> Można określić akcję do wykonania, jeśli wystąpił nieobsługiwany wyjątek wystąpi wewnątrz usługi przepływu pracy. <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior.Action%2A> Właściwości określa jedno z <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction> wartości:  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> — Przerywa wystąpienie usługi przepływu pracy.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> — Przerywa wystąpienie usługi przepływu pracy.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> — Wycofanie do ostatniego utrwalonego stanu i wstrzymuje wystąpienie usługi przepływu pracy. To tylko wtedy, gdy przepływ pracy już zawiera co najmniej raz utrwalone. W przeciwnym razie wystąpienie przepływu pracy zostało przerwane.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> — Wycofanie do ostatniego utrwalonego stanu i wstrzymuje wystąpienie usługi przepływu pracy. To tylko wtedy, gdy przepływ pracy już zawiera co najmniej raz utrwalone. W przeciwnym razie wystąpienie przepływu pracy zostało przerwane.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> — Anuluje wystąpienia.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> — Anuluje wystąpienia.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> — Kończy się wystąpienia.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> — Kończy się wystąpienia.  
   
  To zachowanie można skonfigurować w kodzie, jak pokazano w poniższym przykładzie.  
   

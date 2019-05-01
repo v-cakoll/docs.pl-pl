@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940494"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Instrukcje: Debugowanie aplikacji obsługujących oświadczenia i usług za pomocą śledzenia programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)  
+- Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)  
   
--   Rozwiązywanie problemów i debugowanie aplikacji programu WIF  
+- Rozwiązywanie problemów i debugowanie aplikacji programu WIF  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera opis czynności, jak skonfigurować śledzenia programu WIF, gromadzić dzienniki śledzenia i jak można analizować śledzenia loguje się przy użyciu narzędzia podglądu śledzenia. Umożliwia mapowanie ogólnych dla wpisów śledzenia akcje niezbędne do rozwiązywania problemów związanych z programu WIF.  
   
 ## <a name="contents"></a>Spis treści  
   
--   Cele  
+- Cele  
   
--   Zestawienie czynności  
+- Zestawienie czynności  
   
--   Krok 1: Konfigurowanie śledzenia za pomocą Web.config — plik konfiguracji programu WIF  
+- Krok 1: Konfigurowanie śledzenia za pomocą Web.config — plik konfiguracji programu WIF  
   
--   Krok 2: analizowanie za pomocą narzędzia podglądu śledzenia plików śledzenia programu WIF  
+- Krok 2: analizowanie za pomocą narzędzia podglądu śledzenia plików śledzenia programu WIF  
   
--   Krok 3: określenie rozwiązań, aby naprawić program WIF problemy związane z usługą  
+- Krok 3: określenie rozwiązań, aby naprawić program WIF problemy związane z usługą  
   
--   Powiązane elementy  
+- Powiązane elementy  
   
 ## <a name="objectives"></a>Cele  
   
--   Konfigurowanie śledzenia programu WIF.  
+- Konfigurowanie śledzenia programu WIF.  
   
--   Wyświetl dzienniki śledzenia w narzędziu przeglądarki danych śledzenia.  
+- Wyświetl dzienniki śledzenia w narzędziu przeglądarki danych śledzenia.  
   
--   Identyfikowanie WIF powiązane problemy w dziennikach śledzenia.  
+- Identyfikowanie WIF powiązane problemy w dziennikach śledzenia.  
   
--   Zastosuj działania naprawcze, aby program WIF powiązane problemy znalezione w dziennikach śledzenia.  
+- Zastosuj działania naprawcze, aby program WIF powiązane problemy znalezione w dziennikach śledzenia.  
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1: Konfigurowanie śledzenia za pomocą Web.config — plik konfiguracji programu WIF  
+- Krok 1: Konfigurowanie śledzenia za pomocą Web.config — plik konfiguracji programu WIF  
   
--   Krok 2: analizowanie za pomocą narzędzia podglądu śledzenia plików śledzenia programu WIF  
+- Krok 2: analizowanie za pomocą narzędzia podglądu śledzenia plików śledzenia programu WIF  
   
--   Krok 3: określenie rozwiązań, aby naprawić program WIF problemy związane z usługą  
+- Krok 3: określenie rozwiązań, aby naprawić program WIF problemy związane z usługą  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>Krok 1: Konfigurowanie śledzenia za pomocą Web.config — plik konfiguracji programu WIF  
  W tym kroku dodasz zmiany do sekcji konfiguracyjnych w *Web.config* pliku, pozwalających na korzystanie z programu WIF do śledzenia jego zdarzeń i przechowywania ich w dzienniku śledzenia.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321552"
   
 ## <a name="related-items"></a>Powiązane elementy  
   
--   [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

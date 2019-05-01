@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931745"
 ---
 # <a name="custom-serialization"></a>Niestandardowej serializacji
 Niestandardowej serializacji to proces sterowania serializacji i deserializacji obiektu określonego typu. Kontrolując serializacji jest możliwe w celu zapewnienia zgodności serializacji, które jest możliwość serializacji i deserializacji pomiędzy wersjami typu bez przerywania podstawowych funkcji typu. Na przykład w pierwszej wersji typu, może istnieć tylko dwa pola. W następnej wersji typu są dodawane kilka więcej pól. Jeszcze drugi wersji aplikacji, musi mieć możliwość serializacji i deserializacji oba typy. W następujących sekcjach opisano kontrola serializacji.
@@ -35,13 +35,13 @@ Niestandardowej serializacji to proces sterowania serializacji i deserializacji 
 ## <a name="running-custom-methods-during-and-after-serialization"></a>Uruchamianie niestandardowych metod w trakcie i po serializacji  
  Najlepsze praktyki i najłatwiejszy sposób (wprowadzona w wersji 2.0 programu .NET Framework) stosuje się następujące atrybuty do metody, które są używane do poprawnych danych podczas i po serializacji:  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
  Te atrybuty zezwalać na typ do korzystania z jednej z lub wszystkie cztery fazy procesy serializacji i deserializacji. Atrybuty określają metody, które powinny być używane w fazie każdego typu. Metody nie uzyskać dostępu do strumienia serializacji, ale umożliwiają zamiast tego można zmieniać przed i po serializacji, lub przed i po deserializacji obiektu. Atrybuty można zastosować na wszystkich poziomach hierarchii dziedziczenia typu, a każda metoda jest wywoływana w hierarchii od podstawy do najbardziej pochodnej. Ten mechanizm pozwala uniknąć złożoności i wszelkie problemy wynikowe stosowania <xref:System.Runtime.Serialization.ISerializable> interfejsu, zapewniając odpowiedzialność za serializacji i deserializacji w celu wykonania najbardziej pochodnej. Ponadto ten mechanizm pozwala elementy formatujące do ignorowania populacji pola i pobieranie ze strumienia serializacji. Szczegóły i kontrolowanie serializacji i deserializacji przykłady kliknij dowolne z poprzednich łącza.  
   

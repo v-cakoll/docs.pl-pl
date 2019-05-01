@@ -6,11 +6,11 @@ ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19aeab232f366818291bd682ab9c063a75be6687
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936750"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>Typy węzłów rozpoznawanych w zapytaniach XPath
 Typy węzłów rozpoznawane w zapytaniu XPath nie są te same typy węzłów można odnaleźć w modelu DOM (Document Object).  
@@ -18,25 +18,25 @@ Typy węzłów rozpoznawane w zapytaniu XPath nie są te same typy węzłów mo�
 ## <a name="w3c-xpath-node-types"></a>Typy węzłów XPath W3C  
  Typy węzłów rozpoznawane w zapytaniu XPath nie są typy węzłów, o których odnaleźć w modelu DOM (Document Object). Poniżej przedstawiono typy węzłów XPath, które są reprezentowane przez <xref:System.Xml.XPath.XPathNodeType> wyliczenia.  
   
--   <xref:System.Xml.XPath.XPathNodeType.All>  
+- <xref:System.Xml.XPath.XPathNodeType.All>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Attribute>  
+- <xref:System.Xml.XPath.XPathNodeType.Attribute>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Comment>  
+- <xref:System.Xml.XPath.XPathNodeType.Comment>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Element>  
+- <xref:System.Xml.XPath.XPathNodeType.Element>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Namespace>  
+- <xref:System.Xml.XPath.XPathNodeType.Namespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
+- <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Root>  
+- <xref:System.Xml.XPath.XPathNodeType.Root>  
   
--   <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
+- <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Text>  
+- <xref:System.Xml.XPath.XPathNodeType.Text>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
+- <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
  Te typy węzłów są oparte na modelu danych XPath, gdzie węzły są uzyskiwane z ustawić informacji XML. <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> i <xref:System.Xml.XPath.XPathNodeType.Whitespace> typy węzłów są rozszerzeniami Microsoft .NET Framework do typów węzeł podstawowy opisane w modelu danych XPath.  
   

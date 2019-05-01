@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: 603ee57475b3e7b1af607d49050e3276fd3082d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929080"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Instrukcje: Wdrażanie asynchronicznej operacji usługi
 W aplikacjach Windows Communication Foundation (WCF) Operacja usługi może być implementowany asynchronicznego lub synchronicznego bez dyktowanie do klienta, jak wywołać go. Na przykład operacje asynchroniczne usługi może być wywoływana synchronicznie, a operacje synchroniczne usługi, które mogą być wywoływane asynchronicznie. Na przykład, który pokazuje, jak asynchroniczne wywoływanie operacji w aplikacji klienckiej, zobacz [jak: Asynchroniczne wywoływanie operacji usługi](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Aby uzyskać więcej informacji na temat operacje synchroniczne i asynchroniczne, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md) i [synchroniczne i asynchroniczne operacje](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). W tym temacie opisano podstawowe struktury asynchronicznej operacji usługi, gdy kod nie jest gotowy. Aby uzyskać pełny przykład stron usługi i klienta, zobacz [asynchroniczne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -34,11 +34,11 @@ W aplikacjach Windows Communication Foundation (WCF) Operacja usługi może być
   
 1. Przy użyciu interfejsu kontraktu usługi:  
   
-    1.  Synchroniczne `SampleMethod` operacji.  
+    1. Synchroniczne `SampleMethod` operacji.  
   
-    2.  Asynchroniczna `BeginSampleMethod` operacji.  
+    2. Asynchroniczna `BeginSampleMethod` operacji.  
   
-    3.  Asynchroniczna `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` pary operacji.  
+    3. Asynchroniczna `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` pary operacji.  
   
 2. Implementacja usługi przy użyciu <xref:System.IAsyncResult?displayProperty=nameWithType> obiektu.  
   

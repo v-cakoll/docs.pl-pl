@@ -10,11 +10,11 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777042"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Instrukcje: Dodawanie obsługi klasy dla zdarzenia trasowanego
 Zdarzenia trasowane mogą być obsługiwane przez funkcje obsługi klas lub wystąpień obsługi na dowolny węzeł w trasie. Funkcje obsługi klas są wywoływane najpierw i może służyć przez implementacje klasy do pomijania zdarzenia z obsługi wystąpienia lub wprowadzenia innych zdarzeń zachowań określonych zdarzeń, które są własnością klas bazowych. W tym przykładzie przedstawiono dwie techniki ściśle powiązanych implementacji funkcje obsługi klas.  

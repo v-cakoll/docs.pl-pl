@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: KrzysztofCwalina
 ms.openlocfilehash: 1aeef9e1be6e5fe747f440a8cb7f21095cb22f49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945499"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Nazwy zestawów i bibliotek DLL
 Zestaw jest jednostką wdrożenia i tożsamości dla programów kodu zarządzanego. Mimo że zestawy może obejmować jeden lub więcej plików, zwykle zestawu mapuje jeden do jednego z biblioteką DLL. W związku z tym w tej sekcji opisano tylko DLL konwencje nazewnictwa, które następnie mogą zostać zmapowane do konwencji nazewnictwa zestawu.  

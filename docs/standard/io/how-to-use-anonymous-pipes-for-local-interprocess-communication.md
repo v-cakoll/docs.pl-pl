@@ -16,11 +16,11 @@ ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 810b29b4abde174e3634a03d5c7b5e0e43de11b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947176"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej
 Anonimowe potoki zapewniają komunikację międzyprocesorową na komputerze lokalnym. One oferuje mniej funkcji niż nazwane potoki, ale wymagają również mniejsze obciążenie. Za pomocą potoków anonimowych ułatwiają komunikację międzyprocesorową na komputerze lokalnym. Anonimowe potoki nie można używać do komunikacji za pośrednictwem sieci.  

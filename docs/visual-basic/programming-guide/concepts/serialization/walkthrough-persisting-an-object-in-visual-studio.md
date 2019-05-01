@@ -3,11 +3,11 @@ title: Przechowywanie obiektu w programie Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783477"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Przewodnik: Przechowywanie obiektu w programie Visual Studio (Visual Basic)
 Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasie projektowania, wszystkie wartości wprowadzone w czasie wykonywania zostaną utracone, kiedy niszczony jest obiekt. Można użyć serializacji do utrwalenia danych obiektu między wystąpieniami, dzięki czemu możesz przechowywać wartości, a następnie pobrać jednego z nich przy następnym uruchomieniu jest tworzone wystąpienie obiektu.  
@@ -127,7 +127,7 @@ Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasi
   
 ### <a name="to-mark-a-class-as-serializable"></a>Aby oznaczyć klasę jako możliwe do serializacji  
   
--   Zmień deklarację klasy dla klasy pożyczek w następujący sposób:  
+- Zmień deklarację klasy dla klasy pożyczek w następujący sposób:  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasi
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>Aby zapobiec elementu członkowskiego serializowanego  
   
--   Zmienianie deklaracji pod kątem `PropertyChanged` zdarzeń w następujący sposób:  
+- Zmienianie deklaracji pod kątem `PropertyChanged` zdarzeń w następujący sposób:  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasi
   
 ### <a name="to-add-references-to-namespaces"></a>Aby dodać odwołania do przestrzeni nazw  
   
--   Dodaj następujące instrukcje na górze `Form1` klasy:  
+- Dodaj następujące instrukcje na górze `Form1` klasy:  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasi
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>Aby zapisać dane i serializacji klasę  
   
--   Dodaj następujący kod do `Form1_FormClosing` procedury zdarzenia:  
+- Dodaj następujący kod do `Form1_FormClosing` procedury zdarzenia:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

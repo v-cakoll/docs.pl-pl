@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936360"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Scalanie elementów menu w formancie MenuStrip formularzy systemu Windows
 W przypadku aplikacji interfejsu wielu dokumentów (MDI) w menu formularz nadrzędny można scalać elementy menu lub menu całego formularza podrzędnego.  
@@ -20,9 +20,9 @@ W przypadku aplikacji interfejsu wielu dokumentów (MDI) w menu formularz nadrz�
 ## <a name="general-concepts"></a>Pojęcia ogólne  
  Scalanie procedury dotyczą zarówno do obiektu docelowego, jak i do kontroli źródła:  
   
--   Element docelowy jest <xref:System.Windows.Forms.MenuStrip> formantu main lub formularza nadrzędnego MDI, do którego są scalanie elementów menu.  
+- Element docelowy jest <xref:System.Windows.Forms.MenuStrip> formantu main lub formularza nadrzędnego MDI, do którego są scalanie elementów menu.  
   
--   Obiekt źródłowy ma <xref:System.Windows.Forms.MenuStrip> formantu na formularz podrzędny MDI, która zawiera elementy menu, które chcesz scalić w menu Cel.  
+- Obiekt źródłowy ma <xref:System.Windows.Forms.MenuStrip> formantu na formularz podrzędny MDI, która zawiera elementy menu, które chcesz scalić w menu Cel.  
   
  <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Właściwość identyfikuje element menu, w których listy rozwijanej zostanie wypełniona tytuły bieżącego MDI nadrzędne elementy podrzędne MDI formularza. Na przykład zazwyczaj liście elementów podrzędnych MDI, które są aktualnie otwarte na **okna** menu.  
   

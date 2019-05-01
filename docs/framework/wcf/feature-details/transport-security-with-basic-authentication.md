@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 ms.openlocfilehash: 5c2ff8ac3b424a2541ba7604b5952b2a3ed0a21a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933060"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem podstawowym
 Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klienta. Serwer musi mieć prawidłowy certyfikat X.509, który może służyć do Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatowi serwera. Ponadto usługa sieci Web już implementacją protokołu SSL, który może służyć. Aby uzyskać więcej informacji dotyczących włączania uwierzytelniania podstawowego w Internet Information Services (IIS), zobacz <https://go.microsoft.com/fwlink/?LinkId=83822>.  
@@ -30,9 +30,9 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 ## <a name="service"></a>Usługa  
  Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
+- Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
   
--   Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
+- Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
  Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który korzysta z Windows domena nazwa użytkownika i hasło dla bezpieczeństwie transferu. Należy pamiętać, że usługa wymaga certyfikatu X.509 do uwierzytelniania klienta. Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) i [jak: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  

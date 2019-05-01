@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943354"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Instrukcje: Kontrolowanie dostępności zmiennej (Visual Basic)
 Kontrolowanie dostępności zmiennej, określając jego *poziom dostępu*. Poziom dostępu decyduje o tym, jaki kod ma uprawnienie do odczytu lub zapisu do zmiennej.  
   
--   *Zmienne Członkowskie* (zdefiniowany na poziomie modułu i na zewnątrz dowolnej procedury) domyślnie publicznym dostępem, który oznacza, że wszelki kod, który je wyświetlić mają do nich dostęp. Można to zmienić, określając modyfikatora dostępu.  
+- *Zmienne Członkowskie* (zdefiniowany na poziomie modułu i na zewnątrz dowolnej procedury) domyślnie publicznym dostępem, który oznacza, że wszelki kod, który je wyświetlić mają do nich dostęp. Można to zmienić, określając modyfikatora dostępu.  
   
--   *Zmienne lokalne* (zdefiniowane wewnątrz procedury) nominalnie ma dostęp publiczny, mimo że tylko kod w ramach ich procedury mają do nich dostęp. Nie można zmienić poziomu dostępu do zmiennej lokalnej, ale można zmienić poziomu dostępu procedury, która go zawiera.  
+- *Zmienne lokalne* (zdefiniowane wewnątrz procedury) nominalnie ma dostęp publiczny, mimo że tylko kod w ramach ich procedury mają do nich dostęp. Nie można zmienić poziomu dostępu do zmiennej lokalnej, ale można zmienić poziomu dostępu procedury, która go zawiera.  
   
  Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   

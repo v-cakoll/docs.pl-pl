@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
 ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931446"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Instrukcje: Implementowanie powiadomienia o zmianie właściwości
 Do obsługi <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> powiązanie umożliwiające powiązanie właściwości docelowej do automatycznie odzwierciedlają zmiany dynamicznej w źródle powiązania (na przykład, aby mieć okienko podglądu aktualizowane automatycznie, gdy użytkownik edytuje formularza), klasa wymaga do udostępniania powiadomień o odpowiednie zmiany właściwości. W tym przykładzie pokazano, jak utworzyć klasę, która implementuje <xref:System.ComponentModel.INotifyPropertyChanged>.  

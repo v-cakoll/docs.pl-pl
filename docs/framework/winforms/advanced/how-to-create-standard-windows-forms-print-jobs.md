@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
 ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937660"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Instrukcje: Tworzenie standardowych zadań drukowania formularzy systemu Windows
 Jest podstawą drukowanie w formularzach Windows Forms <xref:System.Drawing.Printing.PrintDocument> składnika — w szczególności <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń. Pisanie kodu do obsługi <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzenia, można określić wydruku i jak go wydrukować.  

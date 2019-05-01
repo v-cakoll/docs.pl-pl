@@ -9,11 +9,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
 ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937839"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Instrukcje: Tworzenie prywatnej kolekcji czcionek
 <xref:System.Drawing.Text.PrivateFontCollection> Klasa dziedziczy <xref:System.Drawing.Text.FontCollection> abstrakcyjna klasa bazowa. Możesz użyć <xref:System.Drawing.Text.PrivateFontCollection> obiekt, aby zachować zestaw czcionki specjalnie dla twojej aplikacji. Zbieranie prywatnych czcionki mogą obejmować czcionki systemowe zainstalowane, a także czcionek, które nie zostały zainstalowane na komputerze. Aby dodać plik czcionki do kolekcji prywatnych czcionki, należy wywołać <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> metody <xref:System.Drawing.Text.PrivateFontCollection> obiektu.  
@@ -25,11 +25,11 @@ ms.locfileid: "59210694"
 ## <a name="example"></a>Przykład  
  Poniższy przykład dodaje następujące pliki czcionki trzy do <xref:System.Drawing.Text.PrivateFontCollection> obiektu:  
   
--   C:\\*systemroot*\Fonts\Arial.tff (Arial, regularne)  
+- C:\\*systemroot*\Fonts\Arial.tff (Arial, regularne)  
   
--   C:\\*systemroot*\Fonts\CourBI.tff (Courier New pogrubiona kursywa)  
+- C:\\*systemroot*\Fonts\CourBI.tff (Courier New pogrubiona kursywa)  
   
--   C:\\*systemroot*\Fonts\TimesBd.tff (razy nowe Roman, pogrubioną)  
+- C:\\*systemroot*\Fonts\TimesBd.tff (razy nowe Roman, pogrubioną)  
   
  Ten kod pobiera tablicę <xref:System.Drawing.FontFamily> obiekty <xref:System.Drawing.Text.FontCollection.Families%2A> właściwość <xref:System.Drawing.Text.PrivateFontCollection> obiektu.  
   

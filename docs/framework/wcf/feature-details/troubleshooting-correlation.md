@@ -3,11 +3,11 @@ title: Korelacja rozwiązywania problemów
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932824"
 ---
 # <a name="troubleshooting-correlation"></a>Korelacja rozwiązywania problemów
 Korelacja służy do wiązania komunikatów usługi przepływu pracy i wystąpienia poprawne przepływu pracy, ale jeśli nie jest poprawnie skonfigurowany, nie otrzyma wiadomości i aplikacje nie będą działać poprawnie. Ten temat zawiera omówienie kilku metod w celu rozwiązywania problemów korelacji i wyświetla także niektóre typowe problemy, które mogą wystąpić, gdy używasz korelacji.
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- Stan trwały nie jest dozwolone między <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary lub <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary. Tworzona jest strefa no-persist ważny, dopóki oba działania zostały wykonane. Jeśli działania, takie jak działanie opóźnienia, znajduje się w tej strefie no-persist, powoduje, że przepływ pracy przejdzie w stan bezczynności przepływu pracy nie zostanie utrzymany, nawet wtedy, gdy jej host jest skonfigurowany do utrwalenia przepływów pracy, gdy staną się bezczynności. Jeśli działania, takie jak działanie utrwalanie próbuje jawnie utrwalanie w strefie nie utrwalanie, wyjątek krytyczny jest zgłaszany, przerwań przepływu pracy, a <xref:System.ServiceModel.FaultException> jest zwracany do obiektu wywołującego. Komunikat o wyjątku krytycznego "System.InvalidOperationException: utrwalanie działania nie może być zawarta w blokach nie trwałości.". Ten wyjątek nie są zwracane do obiektu wywołującego, ale można zaobserwować, jeśli śledzenie jest wyłączone. W komunikacie o <xref:System.ServiceModel.FaultException> zwracane do obiektu wywołującego jest "nie można wykonać operacji, ponieważ wystąpienie przepływu pracy"5836145b-7da2 - 49 d 0-a052-a49162adeab6"została ukończona".
+ Stan trwały nie jest dozwolone między <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> pary lub <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> pary. Tworzona jest strefa no-persist ważny, dopóki oba działania zostały wykonane. Jeśli działania, takie jak działanie opóźnienia, znajduje się w tej strefie no-persist, powoduje, że przepływ pracy przejdzie w stan bezczynności przepływu pracy nie zostanie utrzymany, nawet wtedy, gdy jej host jest skonfigurowany do utrwalenia przepływów pracy, gdy staną się bezczynności. Jeśli działania, takie jak działanie utrwalanie próbuje jawnie utrwalanie w strefie nie utrwalanie, wyjątek krytyczny jest zgłaszany, przerwań przepływu pracy, a <xref:System.ServiceModel.FaultException> jest zwracany do obiektu wywołującego. Komunikat o wyjątku krytycznego "System.InvalidOperationException: Utrwalanie działania nie może być zawarta w blokach nie trwałości. ". Ten wyjątek nie są zwracane do obiektu wywołującego, ale można zaobserwować, jeśli śledzenie jest wyłączone. W komunikacie o <xref:System.ServiceModel.FaultException> zwracane do obiektu wywołującego jest "nie można wykonać operacji, ponieważ wystąpienie przepływu pracy"5836145b-7da2 - 49 d 0-a052-a49162adeab6"została ukończona".
 
  Aby uzyskać więcej informacji na temat korelacji "żądanie-odpowiedź" zobacz ["żądanie-odpowiedź"](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- Jeśli zapytanie XPath jest niepoprawnie skonfigurowane tak, są pobierane żadne dane korelacji, błąd jest zwracany z następującym komunikatem: "korelacji zapytanie zwróciło pusty zestaw wyników. Upewnij się, że zapytania korelacji dla punktu końcowego są poprawnie skonfigurowane." Szybki sposób rozwiązać ten problem jest kwerenda XPath Zamień na wartość literału zgodnie z opisem w poprzedniej sekcji. Ten problem może wystąpić, jeśli używasz konstruktora zapytań XPath w **Dodaj inicjatory korelacji** lub **definice Vlastnosti Correlateson** usługi przepływu pracy i okien dialogowych używa kontrakty komunikatów. W poniższym przykładzie zdefiniowano klasę kontraktu komunikatu.
+ Jeśli zapytanie XPath jest niepoprawnie skonfigurowane tak, są pobierane żadne dane korelacji, błąd jest zwracany z następującym komunikatem: "Korelacji zapytanie zwróciło pusty zestaw wyników. Upewnij się, że zapytania korelacji dla punktu końcowego są poprawnie skonfigurowane." Szybki sposób rozwiązać ten problem jest kwerenda XPath Zamień na wartość literału zgodnie z opisem w poprzedniej sekcji. Ten problem może wystąpić, jeśli używasz konstruktora zapytań XPath w **Dodaj inicjatory korelacji** lub **definice Vlastnosti Correlateson** usługi przepływu pracy i okien dialogowych używa kontrakty komunikatów. W poniższym przykładzie zdefiniowano klasę kontraktu komunikatu.
 
 ```csharp
 [MessageContract]

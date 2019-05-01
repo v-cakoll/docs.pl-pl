@@ -3,11 +3,11 @@ title: Rozpoczynanie pracy z usługą F# za pomocą narzędzia wiersza polecenia
 description: Dowiedz się, jak tworzenie prostego rozwiązania wielu projektów F# przy użyciu interfejsu wiersza polecenia platformy .NET Core w dowolnym systemie operacyjnym (Windows, macOs lub Linux).
 ms.date: 03/26/2018
 ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938700"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Rozpoczynanie pracy z usługą F# przy użyciu interfejsu wiersza polecenia platformy .NET Core
 

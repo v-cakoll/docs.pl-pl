@@ -11,11 +11,11 @@ ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926311"
 ---
 # <a name="exceptions-in-managed-threads"></a>Wyjątki w zarządzanych wątkach
 Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe języka wspólnego pozwala najbardziej nieobsługiwanych wyjątków w wątkach, aby kontynuować naturalnie. W większości przypadków oznacza to, że nieobsługiwany wyjątek powoduje zamknięcie aplikacji.  
@@ -25,11 +25,11 @@ Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe j�
   
  Środowisko uruchomieniowe języka wspólnego zawiera wyjątki backstop na pewnych nieobsłużony, które są używane do sterowania przepływem programu:  
   
--   A <xref:System.Threading.ThreadAbortException> jest zgłaszany w wątku, ponieważ <xref:System.Threading.Thread.Abort%2A> została wywołana.  
+- A <xref:System.Threading.ThreadAbortException> jest zgłaszany w wątku, ponieważ <xref:System.Threading.Thread.Abort%2A> została wywołana.  
   
--   <xref:System.AppDomainUnloadedException> Jest zgłaszany w wątku, ponieważ Trwa zwalnianie domeny aplikacji, w którym wykonywany jest wątek.  
+- <xref:System.AppDomainUnloadedException> Jest zgłaszany w wątku, ponieważ Trwa zwalnianie domeny aplikacji, w którym wykonywany jest wątek.  
   
--   Środowisko uruchomieniowe języka wspólnego lub procesu hosta kończy wątku, zgłaszając wyjątek wewnętrzny.  
+- Środowisko uruchomieniowe języka wspólnego lub procesu hosta kończy wątku, zgłaszając wyjątek wewnętrzny.  
   
  Jeśli dowolny z tych wyjątków nieobsługiwanego w wątkach, utworzone przez środowisko uruchomieniowe języka wspólnego wątek kończy się wyjątek, ale środowisko uruchomieniowe języka wspólnego nie zezwala na wyjątek kontynuować.  
   
@@ -47,11 +47,11 @@ Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe j�
 ## <a name="change-from-previous-versions"></a>Zmiana z poprzednich wersji  
  Najbardziej znacząca zmiana dotyczy tylko zarządzanych wątków. W wersjach programu .NET Framework 1.0 i 1.1 środowisko uruchomieniowe języka wspólnego dostarcza backstop dla nieobsłużonych wyjątków w następujących sytuacjach:  
   
--   Brak coś takiego jak nieobsługiwany wyjątek w wątku z puli wątków. Gdy zadanie zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli, a następnie zwraca wątku do puli wątków.  
+- Brak coś takiego jak nieobsługiwany wyjątek w wątku z puli wątków. Gdy zadanie zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli, a następnie zwraca wątku do puli wątków.  
   
--   Brak coś takiego nieobsługiwany wyjątek w wątku utworzonych za pomocą <xref:System.Threading.Thread.Start%2A> metody <xref:System.Threading.Thread> klasy. Gdy kod działający na takich wątków zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli i bez problemu zmieniała kończy wątku.  
+- Brak coś takiego nieobsługiwany wyjątek w wątku utworzonych za pomocą <xref:System.Threading.Thread.Start%2A> metody <xref:System.Threading.Thread> klasy. Gdy kod działający na takich wątków zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli i bez problemu zmieniała kończy wątku.  
   
--   Brak coś takiego jak nieobsługiwany wyjątek w wątku finalizatora. Gdy finalizator zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli, a następnie umożliwia wątek finalizatora ponownie uruchomić finalizatorów.  
+- Brak coś takiego jak nieobsługiwany wyjątek w wątku finalizatora. Gdy finalizator zgłasza wyjątek, który nie obsługuje, środowisko uruchomieniowe Wyświetla ślad stosu wyjątku do konsoli, a następnie umożliwia wątek finalizatora ponownie uruchomić finalizatorów.  
   
  Stan pierwszego planu i tła wątków zarządzanych nie wpływa na to zachowanie.  
   
@@ -60,11 +60,11 @@ Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe j�
 ### <a name="migrating-code"></a>Migrowanie kodu  
  Ogólnie rzecz biorąc zmiana udostępni wcześniej nierozpoznany problemów programowania, aby ich. W niektórych przypadkach jednak programistów wprowadzić jakieś zalet backstop środowiska uruchomieniowego, na przykład zakończyć wątków. W zależności od sytuacji powinni rozważyć jedną z następujących strategii migracji:  
   
--   Restrukturyzacja kodu, dzięki czemu wątek kończy działanie bez problemu zmieniała po odebraniu sygnału.  
+- Restrukturyzacja kodu, dzięki czemu wątek kończy działanie bez problemu zmieniała po odebraniu sygnału.  
   
--   Użyj <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metodę, aby przerwać wątku.  
+- Użyj <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metodę, aby przerwać wątku.  
   
--   Wątek musi zostać zatrzymana, aby kontynuować zakończenia procesu, aby wątek wątku w tle, aby było automatycznie przerywane na zakończenie procesu.  
+- Wątek musi zostać zatrzymana, aby kontynuować zakończenia procesu, aby wątek wątku w tle, aby było automatycznie przerywane na zakończenie procesu.  
   
  We wszystkich przypadkach strategii powinien być zgodny z wytycznymi projektowania dla wyjątków. Zobacz [projektowania wskazówki dotyczące wyjątków](../../../docs/standard/design-guidelines/exceptions.md).  
   

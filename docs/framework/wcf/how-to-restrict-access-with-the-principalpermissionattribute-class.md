@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
 ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929093"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute
 Kontrolowanie dostępu do zasobów na komputerze domeny Windows jest zadaniem podstawowych zabezpieczeń. Na przykład tylko w przypadku niektórych użytkowników powinny mieć możliwość wyświetlania poufnych danych, np. informacji o płacach. W tym temacie wyjaśniono, jak ograniczyć dostęp do metody przez wymaganie, który użytkownik należy do wstępnie zdefiniowanej grupie. Przykładowy pracy [Autoryzowanie dostępu do operacji usługi](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -86,7 +86,6 @@ Kontrolowanie dostępu do zasobów na komputerze domeny Windows jest zadaniem po
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>

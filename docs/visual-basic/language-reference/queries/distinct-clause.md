@@ -9,11 +9,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
 ms.openlocfilehash: fbca9fa8aa227d8d5b6488bef179f4bda08bb38c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945356"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct — Klauzula (Visual Basic)
 Ogranicza wartości bieżącej zmiennej zakresu w celu wyeliminowania zduplikowanych wartości w klauzulach kolejnych zapytań.  

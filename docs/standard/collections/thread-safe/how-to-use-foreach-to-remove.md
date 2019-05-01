@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Używanie metody ForEach do usuwanie elementów blockingcollection'
+title: 'Instrukcje: Używanie metody ForEach do usuwania elementów z kolekcji BlockingCollection'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d13f123953c32cae01df501c0e251ec29b0478b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937452"
 ---
-# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Instrukcje: Używanie metody ForEach do usuwanie elementów blockingcollection
+# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Instrukcje: Używanie metody ForEach do usuwania elementów z kolekcji BlockingCollection
 
 Oprócz wykonywania elementów z <xref:System.Collections.Concurrent.BlockingCollection%601> przy użyciu <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> i <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> metody, można również użyć [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) ([dla każdego](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) w języku Visual Basic) do usuwanie elementów, aż do dodawania ukończone i kolekcja jest pusta. Jest to nazywane *mutacja wyliczenie* lub *wykorzystywanie wyliczenie* , ponieważ w odróżnieniu od typowych `foreach` (`For Each`) pętli, ten moduł wyliczający modyfikuje kolekcji źródłowej, usuwając elementy.
 

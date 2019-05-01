@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
 ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789223"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstrakcje (typy abstrakcyjne i interfejsy)
 Abstrakcja to typ, który zawiera opis kontraktu, ale nie zapewnia pełnej implementacji kontraktu. Abstrakcje są zwykle implementowane jako abstrakcyjnych klas lub interfejsów, a pochodzą one z dobrze zdefiniowanego zestawu dokumentacji opisujące wymagany semantykę typów Implementowanie kontraktu. Najważniejsze elementy abstrakcji w programie .NET Framework między innymi <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, i <xref:System.Object>.  

@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940520"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji internetowej MVC ASP.NET za pomocą programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostego obsługującej oświadczenia aplikacji sieci web platformy ASP.NET MVC. Zawiera również instrukcje dotyczące testowania prostą aplikację sieci web obsługującej oświadczenia platformy ASP.NET MVC w dla pomyślnego wdrożenia opartego na oświadczeniach uwierzytelniania. Niniejszy instruktaż nie zawiera szczegółowych instrukcji tworzenia Usługa tokenu zabezpieczającego (STS), a przyjęto założenie, że zostały już skonfigurowane usługi tokenu Zabezpieczającego.  
   
 ## <a name="contents"></a>Spis treści  
   
--   Cele  
+- Cele  
   
--   Zestawienie czynności  
+- Zestawienie czynności  
   
--   Krok 1 — utworzenie aplikacji proste platformy ASP.NET MVC  
+- Krok 1 — utworzenie aplikacji proste platformy ASP.NET MVC  
   
--   Krok 2 — Konfigurowanie aplikacji platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
+- Krok 2 — Konfigurowanie aplikacji platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
   
--   Krok 3 — Przetestowanie rozwiązania  
+- Krok 3 — Przetestowanie rozwiązania  
   
--   Powiązane elementy  
+- Powiązane elementy  
   
 ## <a name="objectives"></a>Cele  
   
--   Konfigurowanie aplikacji sieci web platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
+- Konfigurowanie aplikacji sieci web platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
   
--   Testowanie pomyślne obsługującej oświadczenia aplikacji sieci web platformy ASP.NET MVC  
+- Testowanie pomyślne obsługującej oświadczenia aplikacji sieci web platformy ASP.NET MVC  
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1 — utworzenie aplikacji proste platformy ASP.NET MVC  
+- Krok 1 — utworzenie aplikacji proste platformy ASP.NET MVC  
   
--   Krok 2 — Konfigurowanie aplikacji platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
+- Krok 2 — Konfigurowanie aplikacji platformy ASP.NET MVC dla uwierzytelniania opartego na oświadczeniach  
   
--   Krok 3 — Przetestowanie rozwiązania  
+- Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>Krok 1 — utworzenie aplikacji proste platformy ASP.NET MVC  
  W tym kroku utworzysz nową aplikację ASP.NET MVC.  
@@ -218,4 +218,4 @@ ms.locfileid: "59335670"
   
 ## <a name="related-items"></a>Powiązane elementy  
   
--   [Instrukcje: Tworzenie aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia za pomocą programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Instrukcje: Tworzenie aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia za pomocą programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

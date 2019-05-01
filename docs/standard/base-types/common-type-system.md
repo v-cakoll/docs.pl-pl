@@ -20,32 +20,32 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936763"
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządzane w środowisko uruchomieniowe języka wspólnego, a ponadto jest ważną częścią obsługi integracji wielu języków. Wspólny system typów wykonuje następujące funkcje:  
   
--   Tworzy ramy, ułatwiająca włączenie integracji wielu języków, bezpieczeństwo typów i wykonywanie kodu o wysokiej wydajności.  
+- Tworzy ramy, ułatwiająca włączenie integracji wielu języków, bezpieczeństwo typów i wykonywanie kodu o wysokiej wydajności.  
   
--   Zapewnia model obiektowy, obsługujący pełne wdrożenie wielu języków programowania.  
+- Zapewnia model obiektowy, obsługujący pełne wdrożenie wielu języków programowania.  
   
--   Definiuje reguły, których muszą przestrzegać języki, co pomaga zapewnić, że obiekty napisane w różnych językach mogą współdziałać ze sobą.  
+- Definiuje reguły, których muszą przestrzegać języki, co pomaga zapewnić, że obiekty napisane w różnych językach mogą współdziałać ze sobą.  
   
--   Zawiera bibliotekę zawierającą pierwotne typy danych (takich jak <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32>, i <xref:System.UInt64>) używane w rozwoju aplikacji.  
+- Zawiera bibliotekę zawierającą pierwotne typy danych (takich jak <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32>, i <xref:System.UInt64>) używane w rozwoju aplikacji.  
   
  Ten temat zawiera następujące sekcje:  
   
--   [Typy na platformie .NET](#types_in_the_net_framework)  
+- [Typy na platformie .NET](#types_in_the_net_framework)  
   
--   [Definicje typu](#type_definitions)  
+- [Definicje typu](#type_definitions)  
   
--   [Elementy członkowskie typu](#type_members)  
+- [Elementy członkowskie typu](#type_members)  
   
--   [Cechy typów członków](#characteristics_of_type_members)  
+- [Cechy typów członków](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
 ## <a name="types-in-net"></a>Typy na platformie .NET  
@@ -57,15 +57,15 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
  Wspólny system typów programu .NET obsługuje następujących pięć kategorii typów:  
   
--   [Klasy](#Classes)  
+- [Klasy](#Classes)  
   
--   [Struktury](#Structures)  
+- [Struktury](#Structures)  
   
--   [Wyliczenia](#Enumerations)  
+- [Wyliczenia](#Enumerations)  
   
--   [Interfejsy](#Interfaces)  
+- [Interfejsy](#Interfaces)  
   
--   [Delegaty](#Delegates)  
+- [Delegaty](#Delegates)  
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>Klasy  
@@ -106,13 +106,13 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
  Do wyliczeń są stosowane następujące dodatkowe ograniczenia:  
   
--   Nie można ich definiować własnych metod.  
+- Nie można ich definiować własnych metod.  
   
--   Nie mogą wdrażać interfejsów.  
+- Nie mogą wdrażać interfejsów.  
   
--   Nie mogą określać właściwości ani zdarzeń.  
+- Nie mogą określać właściwości ani zdarzeń.  
   
--   Nie może być ogólny, chyba że są rodzajowe tylko z powodu zagnieżdżenia wewnątrz typu rodzajowego. Oznacza to, że wyliczenie nie może mieć parametrów typu swój własny.  
+- Nie może być ogólny, chyba że są rodzajowe tylko z powodu zagnieżdżenia wewnątrz typu rodzajowego. Oznacza to, że wyliczenie nie może mieć parametrów typu swój własny.  
   
     > [!NOTE]
     >  Zagnieżdżone typy (włącznie z wyliczeniami) utworzone za pomocą języka Visual Basic, C# i C++ zawierają parametry wszystkich otaczających typów ogólnych i dlatego są standardowe, nawet jeśli nie mają parametrów typu w swoich własnych. Aby uzyskać więcej informacji, zobacz "Zagnieżdżone typy" w <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> temat referencyjny.  
@@ -130,13 +130,13 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
  Do interfejsów są stosowane następujące ograniczenia:  
   
--   Interfejs może być zadeklarowany z dowolnym opcjami dostępu, ale członkowie interfejsu muszą mieć powszechnej dostępności.  
+- Interfejs może być zadeklarowany z dowolnym opcjami dostępu, ale członkowie interfejsu muszą mieć powszechnej dostępności.  
   
--   Interfejsy nie mogą definiować konstruktorów.  
+- Interfejsy nie mogą definiować konstruktorów.  
   
--   Interfejsy nie mogą definiować pól.  
+- Interfejsy nie mogą definiować pól.  
   
--   Interfejsy mogą definiować tylko członków wystąpień. Nie mogą określać elementów statycznych.  
+- Interfejsy mogą definiować tylko członków wystąpień. Nie mogą określać elementów statycznych.  
   
  Każdy język musi zawierać reguły mapowania implementacja na interfejs który wymaga członka, ponieważ więcej niż jeden interfejs może zadeklarować członka o tym samym podpisie, a członkowie ci mogą mieć osobne implementacje.  
   
@@ -170,17 +170,17 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
 ## <a name="type-definitions"></a>Definicje typu  
  Definicja typu obejmuje następujące funkcje:  
   
--   Wszelkie atrybuty zdefiniowane w typie.  
+- Wszelkie atrybuty zdefiniowane w typie.  
   
--   Typu (widoczność).  
+- Typu (widoczność).  
   
--   Nazwa typu.  
+- Nazwa typu.  
   
--   Typ podstawowy typu.  
+- Typ podstawowy typu.  
   
--   Wszystkie interfejsy implementowane przez typ.  
+- Wszystkie interfejsy implementowane przez typ.  
   
--   Definicje dla każdego członka typu.  
+- Definicje dla każdego członka typu.  
   
 ### <a name="attributes"></a>Atrybuty  
  Atrybuty zawierają dodatkowe metadane zdefiniowane przez użytkownika. Najczęściej są one używane do przechowywania dodatkowych informacji o typie w jego zestawie lub do zmodyfikowania zachowania członka typu w jednym środowisku czasu projektowania lub czasu wykonywania.  
@@ -199,22 +199,22 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
  Domena dostępności członka zagnieżdżonego `M` zadeklarowane w typie `T` w programie `P` jest zdefiniowany następująco (biorąc pod uwagę, że `M` może być typem):  
   
--   Jeśli deklarowana dostępność metody `M` jest `public`, domena dostępności `M` jest domena dostępności `T`.  
+- Jeśli deklarowana dostępność metody `M` jest `public`, domena dostępności `M` jest domena dostępności `T`.  
   
--   Jeśli deklarowana dostępność metody `M` jest `protected internal`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `P` i tekstu programu o dowolnym typie pochodnych `T` zadeklarowaną poza tekstem `P`.  
+- Jeśli deklarowana dostępność metody `M` jest `protected internal`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `P` i tekstu programu o dowolnym typie pochodnych `T` zadeklarowaną poza tekstem `P`.  
   
--   Jeśli deklarowana dostępność metody `M` jest `protected`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `T` i dowolnego typu opracowane z `T`.  
+- Jeśli deklarowana dostępność metody `M` jest `protected`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `T` i dowolnego typu opracowane z `T`.  
   
--   Jeśli deklarowana dostępność metody `M` jest `internal`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `P`.  
+- Jeśli deklarowana dostępność metody `M` jest `internal`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `P`.  
   
--   Jeśli deklarowana dostępność metody `M` jest `private`, domena dostępności `M` znajduje się tekst program `T`.  
+- Jeśli deklarowana dostępność metody `M` jest `private`, domena dostępności `M` znajduje się tekst program `T`.  
   
 ### <a name="type-names"></a>Nazwy typów  
  Wspólny system typów nakłada tylko dwa ograniczenia dotyczące nazw:  
   
--   Wszystkie nazwy są kodowane jako ciągi znaków Unicode, (16-bitowe).  
+- Wszystkie nazwy są kodowane jako ciągi znaków Unicode, (16-bitowe).  
   
--   Nazwy nie są dozwolone w osadzonym wartości (16-bitowy) 0x0000.  
+- Nazwy nie są dozwolone w osadzonym wartości (16-bitowy) 0x0000.  
   
  Jednakże większość języków nakłada dodatkowe ograniczenia na nazwy typów. Wszystkie porównania są wykonywane na podstawie bajt po bajcie i dlatego jest rozróżniana wielkość liter i niezależne od ustawień regionalnych.  
   
@@ -229,25 +229,25 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
 ## <a name="type-members"></a>Składowe typu  
  Środowisko wykonawcze umożliwia zdefiniowanie członków typu, który określa zachowanie i stan typu. Elementy członkowskie typu są następujące:  
   
--   [Pola](#Fields)  
+- [Pola](#Fields)  
   
--   [Właściwości](#Properties)  
+- [Właściwości](#Properties)  
   
--   [Metody](#Methods)  
+- [Metody](#Methods)  
   
--   [Konstruktory](#Constructors)  
+- [Konstruktory](#Constructors)  
   
--   [Zdarzenia](#Events)  
+- [Zdarzenia](#Events)  
   
--   [Zagnieżdżone typy](#NestedTypes)  
+- [Zagnieżdżone typy](#NestedTypes)  
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>Pola  
  Pole opisuje i zawiera część stanu typu. Pola mogą być dowolnego typu obsługiwanego przez środowisko uruchomieniowe. Najczęściej pola są `private` lub `protected`, dzięki czemu są one dostępne tylko z w ramach klasy lub z klasy pochodnej. Jeśli wartość pola można modyfikować spoza jego typu, jest zazwyczaj używana metoda dostępu do zestawu właściwości. Pola udostępnione publicznie są zwykle tylko do odczytu i mogą być dwojakiego rodzaju:  
   
--   Stałe, których wartości są przypisywane w czasie projektowania. Są to statyczne elementy członkowskie klasy, chociaż nie zostały określone przy użyciu `static` (`Shared` w języku Visual Basic) słowa kluczowego.  
+- Stałe, których wartości są przypisywane w czasie projektowania. Są to statyczne elementy członkowskie klasy, chociaż nie zostały określone przy użyciu `static` (`Shared` w języku Visual Basic) słowa kluczowego.  
   
--   Zmienne tylko do odczytu, w których wartości można przypisać w konstruktorze klasy.  
+- Zmienne tylko do odczytu, w których wartości można przypisać w konstruktorze klasy.  
   
  Poniższy przykład ilustruje te dwa sposoby użycia pól tylko do odczytu.  
   
@@ -312,9 +312,9 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
 ### <a name="inheriting-overriding-and-hiding-members"></a>Dziedziczenie, zastępowanie i ukrywanie członków  
  Typ pochodny dziedziczy wszystkich członków typu podstawowego; oznacza to, że te elementy członkowskie są zdefiniowane w i dostępne dla typu pochodnego. Zachowanie lub jakość członków dziedziczonych można modyfikować na dwa sposoby:  
   
--   Typ pochodny może ukrywać dziedziczonego członka przez definiowanie nowego członka o tym samym podpisie. Może to zostać zrobione, Oznacz jako prywatne wcześniejszego członka publicznego lub zdefiniowania nowego zachowania metody dziedziczonej, który jest oznaczony jako `final`.  
+- Typ pochodny może ukrywać dziedziczonego członka przez definiowanie nowego członka o tym samym podpisie. Może to zostać zrobione, Oznacz jako prywatne wcześniejszego członka publicznego lub zdefiniowania nowego zachowania metody dziedziczonej, który jest oznaczony jako `final`.  
   
--   Typ pochodny może zastąpić dziedziczoną metodę wirtualną. Metoda przesłaniania zawiera nową definicję metody, która będzie wywołana na podstawie typu wartości w czasie wykonywania, a nie typu zmiennej znanego w czasie kompilacji. Metoda może zastąpić metodę wirtualną tylko wtedy, gdy metoda wirtualna nie jest oznaczony jako `final` i nowa metoda jest co najmniej tak samo dostępna jak metoda wirtualna.  
+- Typ pochodny może zastąpić dziedziczoną metodę wirtualną. Metoda przesłaniania zawiera nową definicję metody, która będzie wywołana na podstawie typu wartości w czasie wykonywania, a nie typu zmiennej znanego w czasie kompilacji. Metoda może zastąpić metodę wirtualną tylko wtedy, gdy metoda wirtualna nie jest oznaczony jako `final` i nowa metoda jest co najmniej tak samo dostępna jak metoda wirtualna.  
   
 ## <a name="see-also"></a>Zobacz także
 

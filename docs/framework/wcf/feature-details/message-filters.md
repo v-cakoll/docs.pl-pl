@@ -5,11 +5,11 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786001"
 ---
 # <a name="message-filters"></a>Filtry komunikatów
 Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzysta z <xref:System.ServiceModel.Dispatcher.MessageFilter> implementacji, które sprawdzanie określonych sekcji wiadomości, takich jak adres, nazwę punktu końcowego lub określonych instrukcji języka XPath. Jeśli żaden z filtry komunikatów za pomocą [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] własnych potrzeb, możesz utworzyć niestandardowy filtr, tworząc nową metodę implementacji elementu bazowego <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy.  
@@ -28,7 +28,7 @@ Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzyst
 |Akcja|Używa <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> klasę wiadomości zawierające określonej akcji.|Akcja do filtrowania.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
 |EndpointAddress|Używa <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> klasy, za pomocą <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` do dopasowania komunikaty zawierające określonego adresu.|Adres do filtrowania (w nagłówku To).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
 |EndpointAddressPrefix|Używa <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> klasy, za pomocą <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` do dopasowania komunikaty zawierające prefiksu określonego adresu.|Adres do filtrowania przy użyciu najdłuższy zgodny prefiks.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|i|Używa <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> klasę, która zawsze ocenia oba warunki przed zwróceniem.|danych filtru nie jest używany; Zamiast tego Filtr1 i filtr2 mają nazwy odpowiednie filtry komunikatów (również w tabeli), które powinny być **i**ed razem.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|Oraz|Używa <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> klasę, która zawsze ocenia oba warunki przed zwróceniem.|danych filtru nie jest używany; Zamiast tego Filtr1 i filtr2 mają nazwy odpowiednie filtry komunikatów (również w tabeli), które powinny być **i**ed razem.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |Niestandardowe|Typ zdefiniowany przez użytkownika, która rozszerza <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy i ma konstruktora biorąc ciągu.|Atrybut customtype — jest w pełni kwalifikowana nazwa typu klasy, aby utworzyć; danych filtru jest parametry do przekazania do konstruktora, podczas tworzenia filtru.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|Używa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> klasę wiadomości na podstawie nazwy przybyły na punktu końcowego usługi.|Nazwa punktu końcowego usługi, na przykład: "serviceEndpoint1".  Powinno to być jeden z punktów końcowych dostępne w usłudze Routing.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|Używa <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> klasy. Ten filtr dopasowuje wartość do wszystkich nadchodzących wiadomości.|danych filtru nie jest używana. Ten filtr będzie zawsze zgodna wszystkie komunikaty.|\<filter name="matchAll1" filterType="MatchAll" />|  

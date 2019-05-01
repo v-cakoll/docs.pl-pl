@@ -8,17 +8,17 @@ ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935255"
 ---
 # <a name="bad-record-length"></a>Zła długość rekordu
 Wśród możliwe przyczyny tego błędu są:  
   
--   Długość określone w zmiennej rekordu `FileGet`, `FileGetObject`, `FilePut` lub `FilePutObject` instrukcji różni się od długości określonej w odpowiednich `FileOpen` instrukcji.  
+- Długość określone w zmiennej rekordu `FileGet`, `FileGetObject`, `FilePut` lub `FilePutObject` instrukcji różni się od długości określonej w odpowiednich `FileOpen` instrukcji.  
   
--   Zmienna w `FilePut` lub `FilePutObject` instrukcji jest lub zawiera ciąg znaków o zmiennej długości.  
+- Zmienna w `FilePut` lub `FilePutObject` instrukcji jest lub zawiera ciąg znaków o zmiennej długości.  
   
--   Zmienna w `FilePut` lub `FilePutObject` jest lub zawiera `Variant` typu.  
+- Zmienna w `FilePut` lub `FilePutObject` jest lub zawiera `Variant` typu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   

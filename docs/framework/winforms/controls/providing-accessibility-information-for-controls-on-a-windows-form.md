@@ -7,24 +7,24 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
 ms.openlocfilehash: 0f589f37d79c9ec8d55153aac4c846726a379055
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948023"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Podawanie informacji o ułatwieniach dostępu dotyczących formantów w formularzu systemu Windows
 Narzędzi ułatwień dostępu są programy specjalistyczne i urządzenia, które pomagają osobom niepełnosprawnym bardziej efektywne wykorzystanie komputerów. Przykłady obejmują czytniki zawartości ekranu dla osób, które są blind i głosu narzędzia danych wejściowych dla osób, które udostępniają ustnej polecenia zamiast przy użyciu myszy lub klawiatury. Tych narzędzi ułatwień dostępu w interakcje z właściwości ułatwień dostępu, udostępnianych przez kontrolek formularzy Windows Forms. Te właściwości są:  
   
--   **AccessibilityObject**  
+- **AccessibilityObject**  
   
--   **AccessibleDefaultActionDescription**  
+- **AccessibleDefaultActionDescription**  
   
--   **AccessibleDescription**  
+- **AccessibleDescription**  
   
--   **AccessibleName**  
+- **AccessibleName**  
   
--   **AccessibleRole**  
+- **AccessibleRole**  
   
 ## <a name="accessibilityobject-property"></a>Właściwość AccessibilityObject  
  Ta właściwość tylko do odczytu zawiera <xref:System.Windows.Forms.AccessibleObject> wystąpienia. **Element AccessibleObject** implementuje <xref:Accessibility.IAccessible> interfejs, który zawiera informacje dotyczące opis kontrolki, położenie na ekranie, możliwości nawigacji i wartości. Projektant ustawia tę wartość, gdy formant został dodany do formularza.  

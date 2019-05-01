@@ -11,11 +11,11 @@ helpviewer_keywords:
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
 ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934696"
 ---
 # <a name="system-information-and-windows-forms"></a>Informacje o systemie i formularze systemu Windows
 Czasami jest konieczne do zbierania informacji o komputerze, na którym aplikacja jest uruchomiona w celu podejmowania decyzji w kodzie. Na przykład Niewykluczone, że funkcja, która dotyczy tylko po podłączeniu do określonej domeny; w takim przypadku należałoby możliwość określenia domeny i wyłączyć funkcję, jeśli domena nie jest obecny.  

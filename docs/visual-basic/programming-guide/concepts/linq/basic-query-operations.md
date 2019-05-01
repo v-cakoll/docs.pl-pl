@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925651"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Podstawowe operacje zapytań (Visual Basic)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia w języku Visual Basic i niektóre typowe rodzaje operacji, które można wykonywać w zapytaniu. Więcej informacji znajduje się w następujących tematach:  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Aby wybrać wiele pól ze źródła danych, dostępne są dwie opcje:  
   
--   W `Select` klauzuli, określ pola, które chcesz uwzględnić w wyniku. Kompilator określi typ anonimowy, który ma te pola z jego właściwości. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+- W `Select` klauzuli, określ pola, które chcesz uwzględnić w wyniku. Kompilator określi typ anonimowy, który ma te pola z jego właściwości. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
      Ponieważ zwróconych elementów w poniższym przykładzie są wystąpieniami typu anonimowego, nie możesz odwołać się do typu według nazwy innym miejscu w kodzie. Nazwy wyznaczony przez kompilator typu zawiera znaki, które nie są dozwolone w normalnym kodu języka Visual Basic. W poniższym przykładzie elementów w kolekcji, który jest zwracany przez zapytanie w `londonCusts4` są wystąpieniami typu anonimowego  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      —lub—  
   
--   Definiowanie typu nazwanego, który zawiera określonego pola, które chcesz uwzględnić w wyniku i tworzenie i Inicjowanie wystąpienia typu w `Select` klauzuli. Użyj tej opcji tylko wtedy, gdy trzeba użyć poszczególnych wyników spoza kolekcji, w której są zwracane, lub jeśli trzeba przekazać je jako parametry w wywołaniach metod. Typ `londonCusts5` w poniższym przykładzie jest IEnumerable (Of NamePhone).  
+- Definiowanie typu nazwanego, który zawiera określonego pola, które chcesz uwzględnić w wyniku i tworzenie i Inicjowanie wystąpienia typu w `Select` klauzuli. Użyj tej opcji tylko wtedy, gdy trzeba użyć poszczególnych wyników spoza kolekcji, w której są zwracane, lub jeśli trzeba przekazać je jako parametry w wywołaniach metod. Typ `londonCusts5` w poniższym przykładzie jest IEnumerable (Of NamePhone).  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

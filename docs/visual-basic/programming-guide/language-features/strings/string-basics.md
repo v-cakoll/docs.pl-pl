@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938336"
 ---
 # <a name="string-basics-in-visual-basic"></a>Podstawowe informacje o ciągach w Visual Basic
 `String` Typ danych reprezentuje szereg znaków (każdy reprezentuje z kolei wystąpienie `Char` — typ danych). W tym temacie wprowadzono podstawowe pojęcia ciągów w Visual Basic.  

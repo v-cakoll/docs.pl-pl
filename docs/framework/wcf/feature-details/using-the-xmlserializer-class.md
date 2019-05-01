@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933071"
 ---
 # <a name="using-the-xmlserializer-class"></a>Używanie klasy XmlSerializer
 Windows Communication Foundation (WCF) można użyć dwóch technologii serializacji w różnych, aby przekształcać dane w aplikacji do formatu XML, które są przesyłane między klientami i usług, w procesie zwanym serializacji.  
@@ -20,15 +20,15 @@ Windows Communication Foundation (WCF) można użyć dwóch technologii serializ
 ## <a name="datacontractserializer-as-the-default"></a>DataContractSerializer jako domyślny  
  Domyślnie używa WCF <xref:System.Runtime.Serialization.DataContractSerializer> klasy do serializacji typów danych. Przez ten serializator obsługuje następujące typy:  
   
--   Typy pierwotne (na przykład liczby całkowite, ciągi i bajtów tablice), a także niektóre typy specjalne, takie jak <xref:System.Xml.XmlElement> i <xref:System.DateTime>, które są traktowane jako elementów podstawowych.  
+- Typy pierwotne (na przykład liczby całkowite, ciągi i bajtów tablice), a także niektóre typy specjalne, takie jak <xref:System.Xml.XmlElement> i <xref:System.DateTime>, które są traktowane jako elementów podstawowych.  
   
--   Typy kontraktów danych (typy oznaczone <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu).  
+- Typy kontraktów danych (typy oznaczone <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu).  
   
--   Typy oznaczone <xref:System.SerializableAttribute> atrybut, który zawierają typami, które implementują <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
+- Typy oznaczone <xref:System.SerializableAttribute> atrybut, który zawierają typami, które implementują <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
   
--   Typami, które implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejsu.  
+- Typami, które implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejsu.  
   
--   Wiele typowych kolekcji typów, które obejmują wiele typów kolekcji ogólnej.  
+- Wiele typowych kolekcji typów, które obejmują wiele typów kolekcji ogólnej.  
   
  Wiele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów można podzielić na dwie ostatnie kategorie i dlatego są możliwe do serializacji. Tablice typów możliwych do serializacji są również możliwe do serializacji. Aby uzyskać pełną listę, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
@@ -42,11 +42,11 @@ Windows Communication Foundation (WCF) można użyć dwóch technologii serializ
 ## <a name="manually-switching-to-the-xmlserializer"></a>Ręczne przełączanie się do elementu XmlSerializer  
  Czasami może być konieczne ręcznie przełączysz się do <xref:System.Xml.Serialization.XmlSerializer>. Dzieje się tak, na przykład w następujących przypadkach:  
   
--   Podczas migracji aplikacji z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web WCF, może zajść potrzeba ponownego użycia istniejącej, <xref:System.Xml.Serialization.XmlSerializer>— typy kontraktów zgodnych typów, zamiast tworzyć nowe dane.  
+- Podczas migracji aplikacji z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web WCF, może zajść potrzeba ponownego użycia istniejącej, <xref:System.Xml.Serialization.XmlSerializer>— typy kontraktów zgodnych typów, zamiast tworzyć nowe dane.  
   
--   Gdy precyzyjną kontrolę nad tym XML, który pojawia się w wiadomościach jest ważne, ale dokument usługi sieci Web Services Description Language (WSDL) nie jest dostępny, na przykład podczas tworzenia usługi przy użyciu typów, które mają się pewnych standardowych, opublikowanych schematu to nie jest zgodna z elementu DataContractSerializer.  
+- Gdy precyzyjną kontrolę nad tym XML, który pojawia się w wiadomościach jest ważne, ale dokument usługi sieci Web Services Description Language (WSDL) nie jest dostępny, na przykład podczas tworzenia usługi przy użyciu typów, które mają się pewnych standardowych, opublikowanych schematu to nie jest zgodna z elementu DataContractSerializer.  
   
--   Podczas tworzenia usługi, które są zgodne ze standardem starszych kodowaniem SOAP.  
+- Podczas tworzenia usługi, które są zgodne ze standardem starszych kodowaniem SOAP.  
   
  W tych i innych przypadkach, można ręcznie przełączysz się do <xref:System.Xml.Serialization.XmlSerializer> klasy, stosując `XmlSerializerFormatAttribute` atrybutu do swojej usługi, jak pokazano w poniższym kodzie.  
   
@@ -101,11 +101,11 @@ Windows Communication Foundation (WCF) można użyć dwóch technologii serializ
   
  Istnieją trzy różne typy typy, które implementują `IXmlSerializable`: typy, które reprezentują arbitralnie wybrane typy zawartości, reprezentujących pojedynczy element, a starsza wersja <xref:System.Data.DataSet> typów.  
   
--   Typy zawartości, użyj metody dostawcy schemat określony przez `XmlSchemaProviderAttribute` atrybutu. Metoda nie zwraca `null` i <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> właściwości w atrybucie pozostanie ustawiony na wartość domyślną `false`. Jest to najbardziej typowe użycie `IXmlSerializable` typów.  
+- Typy zawartości, użyj metody dostawcy schemat określony przez `XmlSchemaProviderAttribute` atrybutu. Metoda nie zwraca `null` i <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> właściwości w atrybucie pozostanie ustawiony na wartość domyślną `false`. Jest to najbardziej typowe użycie `IXmlSerializable` typów.  
   
--   Typy elementów są używane podczas `IXmlSerializable` typu musi kontrolować własną nazwą elementu głównego. Aby oznaczyć typu jako typu elementu, ustaw wartość <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> właściwość <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu `true` lub je zwracają `null` z metody dostawcy schematu. Posiadanie metody dostawcy schematu jest opcjonalne dla typów elementów — użytkownik może określić `null` zamiast nazwy metody w `XmlSchemaProviderAttribute`. Jednak jeśli `IsAny` jest `true` i metody dostawcy schemat jest określony, metoda musi zwracać `null`.  
+- Typy elementów są używane podczas `IXmlSerializable` typu musi kontrolować własną nazwą elementu głównego. Aby oznaczyć typu jako typu elementu, ustaw wartość <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> właściwość <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu `true` lub je zwracają `null` z metody dostawcy schematu. Posiadanie metody dostawcy schematu jest opcjonalne dla typów elementów — użytkownik może określić `null` zamiast nazwy metody w `XmlSchemaProviderAttribute`. Jednak jeśli `IsAny` jest `true` i metody dostawcy schemat jest określony, metoda musi zwracać `null`.  
   
--   Starsza wersja <xref:System.Data.DataSet> typy są `IXmlSerializable` typy, które nie są oznaczone przez `XmlSchemaProviderAttribute` atrybutu. Zamiast tego opierają się na <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> metody do generowania schemat. Ten wzorzec jest używany dla `DataSet` typu i jego typizowany zestaw danych pochodzi z klasy we wcześniejszych wersjach programu .NET Framework, ale teraz jest przestarzały i nie jest obsługiwana tylko dla starszych powodów. Nie zależą od tego wzorca i zawsze stosuj `XmlSchemaProviderAttribute` do Twojej `IXmlSerializable` typów.  
+- Starsza wersja <xref:System.Data.DataSet> typy są `IXmlSerializable` typy, które nie są oznaczone przez `XmlSchemaProviderAttribute` atrybutu. Zamiast tego opierają się na <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> metody do generowania schemat. Ten wzorzec jest używany dla `DataSet` typu i jego typizowany zestaw danych pochodzi z klasy we wcześniejszych wersjach programu .NET Framework, ale teraz jest przestarzały i nie jest obsługiwana tylko dla starszych powodów. Nie zależą od tego wzorca i zawsze stosuj `XmlSchemaProviderAttribute` do Twojej `IXmlSerializable` typów.  
   
 ### <a name="ixmlserializable-content-types"></a>Typy zawartości IXmlSerializable  
  Podczas serializacji typu, który implementuje element członkowski danych `IXmlSerializable` jest typ zawartości zdefiniowany wcześniej serializator zapisuje element otoki dla składowej danych i przekazuje kontrolę <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> metody. <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> Implementacji może zapisywać żadnych XML, który obejmuje dodawanie atrybutów do elementu otoki. Po `WriteXml` jest wykonywane, serializator zamyka element.  
@@ -133,37 +133,37 @@ Windows Communication Foundation (WCF) można użyć dwóch technologii serializ
   
  Serializacja i deserializacja typ elementu jest bardzo podobny do serializacji i deserializacji typu zawartości. Jednak istnieją pewne ważne różnice:  
   
--   `WriteXml` Implementacji oczekuje się, można zapisać dokładnie jeden element (który z kolei może zawierać wiele elementów podrzędnych). Nie powinien być wpisywanie atrybutów poza ten pojedynczy element wielu elementów równorzędnych lub zawartość mieszana. Element może być pusty.  
+- `WriteXml` Implementacji oczekuje się, można zapisać dokładnie jeden element (który z kolei może zawierać wiele elementów podrzędnych). Nie powinien być wpisywanie atrybutów poza ten pojedynczy element wielu elementów równorzędnych lub zawartość mieszana. Element może być pusty.  
   
--   `ReadXml` Implementacji element otoki nie powinny do odczytu. Oczekuje się, aby przeczytać jeden element, `WriteXml` tworzy.  
+- `ReadXml` Implementacji element otoki nie powinny do odczytu. Oczekuje się, aby przeczytać jeden element, `WriteXml` tworzy.  
   
--   Podczas serializacji typu elementu regularnie (na przykład, jako element członkowski danych w kontraktu danych), serializator danych wyjściowych element otoki przed wywołaniem `WriteXml`, podobnie jak w przypadku typów zawartości. Jednak podczas serializacji typu elementu na najwyższym poziomie, Serializator nie zwykle wyświetla element otoki w ogóle wokół elementu, `WriteXml` zapisuje, chyba że nazwę główną i przestrzeni nazw są jawnie określone podczas tworzenia serializatora w `DataContractSerializer` lub `NetDataContractSerializer` konstruktorów. Aby uzyskać więcej informacji, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+- Podczas serializacji typu elementu regularnie (na przykład, jako element członkowski danych w kontraktu danych), serializator danych wyjściowych element otoki przed wywołaniem `WriteXml`, podobnie jak w przypadku typów zawartości. Jednak podczas serializacji typu elementu na najwyższym poziomie, Serializator nie zwykle wyświetla element otoki w ogóle wokół elementu, `WriteXml` zapisuje, chyba że nazwę główną i przestrzeni nazw są jawnie określone podczas tworzenia serializatora w `DataContractSerializer` lub `NetDataContractSerializer` konstruktorów. Aby uzyskać więcej informacji, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
--   Podczas serializacji typu elementu na najwyższym poziomie bez określania nazwy głównej i przestrzeni nazw w czasie tworzenia <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> i <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> zasadniczo nic nie rób i <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> wywołania `WriteXml`. W tym trybie nie może być obiektu poddawanego serializacji `null` i nie można przypisać polymorphically. Ponadto nie można włączyć zachowania wykresu obiektu i `NetDataContractSerializer` nie mogą być używane.  
+- Podczas serializacji typu elementu na najwyższym poziomie bez określania nazwy głównej i przestrzeni nazw w czasie tworzenia <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> i <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> zasadniczo nic nie rób i <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> wywołania `WriteXml`. W tym trybie nie może być obiektu poddawanego serializacji `null` i nie można przypisać polymorphically. Ponadto nie można włączyć zachowania wykresu obiektu i `NetDataContractSerializer` nie mogą być używane.  
   
--   Podczas deserializacji typ elementu na najwyższym poziomie bez określania nazwy głównej i przestrzeni nazw w czasie tworzenia <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> zwraca `true` jeśli znajdzie uruchamiania dowolnego elementu. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> za pomocą `verifyObjectName` parametr `true` zachowuje się w taki sam sposób jak `IsStartObject` przed faktycznie odczytu obiektu. `ReadObject` następnie przekazuje sterowanie do `ReadXml` metody.  
+- Podczas deserializacji typ elementu na najwyższym poziomie bez określania nazwy głównej i przestrzeni nazw w czasie tworzenia <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> zwraca `true` jeśli znajdzie uruchamiania dowolnego elementu. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> za pomocą `verifyObjectName` parametr `true` zachowuje się w taki sam sposób jak `IsStartObject` przed faktycznie odczytu obiektu. `ReadObject` następnie przekazuje sterowanie do `ReadXml` metody.  
   
  Schemat eksportowany dla typów elementów jest taki sam, jak w przypadku `XmlElement` wpisz zgodnie z opisem w sekcji wcześniej, z tą różnicą, że metoda dostawcy schematu można dodać dodatkowe schematu w celu <xref:System.Xml.Schema.XmlSchemaSet> podobnie jak w przypadku typów zawartości. Za pomocą `XmlRootAttribute` atrybut z typami elementu nie jest dozwolony, a element globalny deklaracje nigdy nie są emitowane dla tych typów.  
   
 ### <a name="differences-from-the-xmlserializer"></a>Różnice w stosunku do elementu XmlSerializer  
  `IXmlSerializable` Interfejsu i `XmlSchemaProviderAttribute` i `XmlRootAttribute` atrybuty są także zrozumiałe <xref:System.Xml.Serialization.XmlSerializer> . Jednak istnieją pewne różnice w jaki sposób są one traktowane w modelu kontraktu danych. Istotne różnice przedstawiono na poniższej liście:  
   
--   Metody dostawcy schematu muszą być publiczne, które zostaną użyte w `XmlSerializer`, ale nie musi być publiczne, które zostaną użyte w modelu kontraktu danych.  
+- Metody dostawcy schematu muszą być publiczne, które zostaną użyte w `XmlSerializer`, ale nie musi być publiczne, które zostaną użyte w modelu kontraktu danych.  
   
--   Metoda dostawcy schematu jest wywoływana, gdy `IsAny` jest `true` w modelu kontraktu danych, ale nie z `XmlSerializer`.  
+- Metoda dostawcy schematu jest wywoływana, gdy `IsAny` jest `true` w modelu kontraktu danych, ale nie z `XmlSerializer`.  
   
--   Gdy `XmlRootAttribute` atrybut nie jest obecny do zawartości lub typy zestawów danych w starszej wersji, `XmlSerializer` eksportuje deklaracji element globalny w pustej przestrzeni nazw. W modelu kontraktu danych przestrzeń nazw używaną zwykle jest przestrzeń nazw kontraktu danych, zgodnie z wcześniejszym opisem.  
+- Gdy `XmlRootAttribute` atrybut nie jest obecny do zawartości lub typy zestawów danych w starszej wersji, `XmlSerializer` eksportuje deklaracji element globalny w pustej przestrzeni nazw. W modelu kontraktu danych przestrzeń nazw używaną zwykle jest przestrzeń nazw kontraktu danych, zgodnie z wcześniejszym opisem.  
   
  Należy pamiętać o tych różnic, podczas tworzenia typów, które są używane w obu technologii serializacji.  
   
 ### <a name="importing-ixmlserializable-schema"></a>Importowanie schematu interfejsu IXmlSerializable  
  Podczas importowania schematu wygenerowany na podstawie `IXmlSerializable` typów, istnieje kilka możliwości:  
   
--   Wygenerowany schemat może być schematu kontraktu prawidłowych danych, zgodnie z opisem w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). W takim przypadku schematu, które mogą być importowane w zwykły sposób, i są generowane typy kontraktu danych regularne.  
+- Wygenerowany schemat może być schematu kontraktu prawidłowych danych, zgodnie z opisem w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). W takim przypadku schematu, które mogą być importowane w zwykły sposób, i są generowane typy kontraktu danych regularne.  
   
--   Wygenerowany schemat może nie być poprawne dane schematu kontraktu. Na przykład metoda dostawcy schematu może wygenerować schematu, która obejmuje atrybutów XML, które nie są obsługiwane w modelu kontraktu danych. W takim przypadku można zaimportować schematu jako `IXmlSerializable` typów. Domyślnie nie jest w ten tryb importu, ale można łatwo można włączyć — na przykład za pomocą `/importXmlTypes` przełącznik wiersza polecenia, aby [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Jest to opisane szczegółowo w temacie [Importowanie schematu do generowania klasy](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md). Należy pamiętać, że należy skontaktować się bezpośrednio z pliku XML dla wystąpień typu. Można także rozważyć użycie innej technologii serializacji, który obsługuje szerszy zakres schematów — zobacz temat w przy użyciu `XmlSerializer`.  
+- Wygenerowany schemat może nie być poprawne dane schematu kontraktu. Na przykład metoda dostawcy schematu może wygenerować schematu, która obejmuje atrybutów XML, które nie są obsługiwane w modelu kontraktu danych. W takim przypadku można zaimportować schematu jako `IXmlSerializable` typów. Domyślnie nie jest w ten tryb importu, ale można łatwo można włączyć — na przykład za pomocą `/importXmlTypes` przełącznik wiersza polecenia, aby [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Jest to opisane szczegółowo w temacie [Importowanie schematu do generowania klasy](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md). Należy pamiętać, że należy skontaktować się bezpośrednio z pliku XML dla wystąpień typu. Można także rozważyć użycie innej technologii serializacji, który obsługuje szerszy zakres schematów — zobacz temat w przy użyciu `XmlSerializer`.  
   
--   Może zajść potrzeba ponownego użycia istniejącej `IXmlSerializable` typów serwera proxy zamiast generować nową. W takim przypadku funkcja przywoływane typy opisana w schemacie importowanie do tematu wygenerować typy można wskazać typ do ponownego użycia. Odpowiada to użyciu `/reference` Włącz svcutil.exe, który określa zestaw, który zawiera typy do ponownego użycia.  
+- Może zajść potrzeba ponownego użycia istniejącej `IXmlSerializable` typów serwera proxy zamiast generować nową. W takim przypadku funkcja przywoływane typy opisana w schemacie importowanie do tematu wygenerować typy można wskazać typ do ponownego użycia. Odpowiada to użyciu `/reference` Włącz svcutil.exe, który określa zestaw, który zawiera typy do ponownego użycia.  
   
 ### <a name="xmlserializer-legacy-behavior"></a>Zachowanie elementu XmlSerializer starszej wersji  
  W .NET Framework 4.0 i starszych elementu XmlSerializer wygenerowane zestawy serializacji tymczasowych przez napisanie kodu języka C# do pliku. Plik został następnie kompilowane do zestawu.  To zachowanie ma niektórych niepożądanych skutków, takich jak spowalnianiu czas uruchamiania dla serializatora. W programie .NET Framework 4.5 to zachowanie została zmieniona na generowanie zestawów bez konieczności użycia kompilatora. Niektórzy deweloperzy mogą chcieć wyświetlić wygenerowany kod C#. Możesz określić to starsze zachowanie za pomocą następującej konfiguracji:  

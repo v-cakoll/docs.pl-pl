@@ -3,11 +3,11 @@ title: Model obiektów odnajdywania WCF
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935541"
 ---
 # <a name="wcf-discovery-object-model"></a>Model obiektów odnajdywania WCF
 Odnajdywanie w programie WCF składa się zestaw typów, które udostępniają jednolity model programowania, który pozwala na zapis usług, które są wykrywalni środowiska uruchomieniowego i klienci, w których odnaleźć i korzystać z tych usług.  
@@ -22,49 +22,49 @@ Odnajdywanie w programie WCF składa się zestaw typów, które udostępniają j
 ## <a name="object-model"></a>Model obiektów  
  Interfejs API odnajdywania WCF definiuje następujące klasy:  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementClient>  
+- <xref:System.ServiceModel.Discovery.AnnouncementClient>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementService>  
+- <xref:System.ServiceModel.Discovery.AnnouncementService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClient>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClient>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
+- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
+- <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryService>  
+- <xref:System.ServiceModel.Discovery.DiscoveryService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
+- <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
   
--   <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
+- <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria>  
+- <xref:System.ServiceModel.Discovery.FindCriteria>  
   
--   <xref:System.ServiceModel.Discovery.FindRequestContext>  
+- <xref:System.ServiceModel.Discovery.FindRequestContext>  
   
--   <xref:System.ServiceModel.Discovery.FindResponse>  
+- <xref:System.ServiceModel.Discovery.FindResponse>  
   
--   <xref:System.ServiceModel.Discovery.ResolveCriteria>  
+- <xref:System.ServiceModel.Discovery.ResolveCriteria>  
   
--   <xref:System.ServiceModel.Discovery.ResolveResponse>  
+- <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
  
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
 ## <a name="announcementclient"></a>AnnouncementClient  
  <xref:System.ServiceModel.Discovery.AnnouncementClient> Klasa udostępnia synchroniczne i asynchroniczne metody do wysyłania wiadomości anonsów. Istnieją dwa typy komunikatów Anons, Hello i Bye. Wiadomości powitania są wysyłane do wskazywać, że usługa stała się dostępna i komunikat Bye jest wysyłany do wskazania, że istniejąca usługa stała się niedostępna. Deweloper tworzy <xref:System.ServiceModel.Discovery.AnnouncementClient> wypadku przekazanie wystąpienia <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> jako parametr konstruktora.  
@@ -90,7 +90,7 @@ Odnajdywanie w programie WCF składa się zestaw typów, które udostępniają j
 ## <a name="discoverymessagesequencegenerator"></a>DiscoveryMessageSequenceGenerator  
  <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator> Służy do generowania <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> podczas odnajdywania lub ogłoszenie komunikatów wysyła usługi.  
   
-## <a name="discoveryservice"></a>Discoveryservice i  
+## <a name="discoveryservice"></a>DiscoveryService  
  <xref:System.ServiceModel.Discovery.DiscoveryService> Klasę abstrakcyjną zapewnia platformę do odbierania i przetwarzania `Probe` i `Resolve` wiadomości. Gdy `Probe` wiadomość zostanie odebrana, <xref:System.ServiceModel.Discovery.DiscoveryService> tworzy wystąpienie <xref:System.ServiceModel.Discovery.FindRequestContext> na podstawie wiadomości przychodzących, a następnie wywołuje <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> metodę wirtualną. Gdy `Resolve` wiadomość zostanie odebrana, <xref:System.ServiceModel.Discovery.DiscoveryService> wywołuje <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginResolve%2A> metodę wirtualną. Możesz dziedziczyć od tej klasy w celu zapewnienia niestandardowych implementacji usługi odnajdywania.  
   
 ## <a name="discoveryproxy"></a>DiscoveryProxy  
@@ -105,7 +105,7 @@ Odnajdywanie w programie WCF składa się zestaw typów, które udostępniają j
 ## <a name="endpointdiscoverymetadata"></a>EndpointDiscoveryMetadata  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> Klasy zawiera reprezentację niezależny od wersji punktu końcowego opublikowana przez usługę. Zawiera on adresy punktów końcowych, nasłuchiwania identyfikatory URI, nazwy typów kontraktu, zakresy, wersja metadanych i rozszerzeniami określonymi przez dewelopera usługi. <xref:System.ServiceModel.Discovery.FindCriteria> Wysłane przez klienta podczas `Probe` operacji jest dopasowywana <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Jeśli spełnia kryteria, a następnie <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> jest zwracana do klienta. Adres punktu końcowego w <xref:System.ServiceModel.Discovery.ResolveCriteria> jest dopasowywana adres punktu końcowego <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Jeśli spełnia kryteria, a następnie <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> jest zwracana do klienta.  
   
-## <a name="findcriteria"></a>Kryteria znajdowania  
+## <a name="findcriteria"></a>FindCriteria  
  <xref:System.ServiceModel.Discovery.FindCriteria> Klasa jest klasą niezależny od wersji, można określić kryteria używane podczas znajdowania usługi. W pełni obsługuje kryteria zdefiniowane odnajdowania WS dla zgodnych usług. Ma również rozszerzeń, które deweloperzy mogą używać do określenia wartości niestandardowych, które mogą być używane podczas dopasowywania procesów. Deweloper opracowuje kryteriów zakończenia dla `Find` operację, określając <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>, określający łączna liczba usług szuka dewelopera lub który określa <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, która jest wartością, Określa, jak długo klient czeka na odpowiedzi.  
   
 ## <a name="findrequestcontext"></a>FindRequestContext  

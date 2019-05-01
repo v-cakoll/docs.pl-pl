@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], hosting controls
 ms.assetid: e79a9d4e-64ec-41f5-93ec-f5492633cbb2
 ms.openlocfilehash: 008b6da56c3428d0edcc44778b4d3bef1a52c443
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941234"
 ---
 # <a name="how-to-host-controls-in-windows-forms-datagridview-cells"></a>Instrukcje: kontrolki hosta w komórkach DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Control oferuje kilka typów kolumn, aby umożliwić użytkownikom wprowadzanie i edytowanie wartości w na różne sposoby. Te typy kolumn nie odpowiadają Twoim potrzebom wprowadzanie danych, można jednak utworzyć swój własny typ kolumny, wraz z komórkami, które hostują formantów wybrane. Aby to zrobić, należy zdefiniować klas, które wynikają z <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.DataGridViewCell>. Należy także zdefiniować klasę, która pochodzi od klasy <xref:System.Windows.Forms.Control> i implementuje <xref:System.Windows.Forms.IDataGridViewEditingControl> interfejsu.  
@@ -31,7 +31,7 @@ ms.locfileid: "59194204"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Poniższy przykład wymaga:  
   
--   Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

@@ -6,8 +6,8 @@ ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943939"
 ---
 # <a name="custom-binding-security"></a>Zabezpieczenia wiązania niestandardowego
 Niniejszy przykład pokazuje sposób konfigurowania zabezpieczeń przy użyciu niestandardowego powiązania. Widoczny jest sposób użyć niestandardowego powiązania, aby włączyć zabezpieczenia na poziomie komunikatu wraz z bezpiecznym transportem. Jest to przydatne, gdy bezpiecznym transportem jest wymagana do przesyłania komunikatów między klientem a usługą i jednocześnie komunikaty muszą być bezpieczne na poziomie komunikatu. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczane przez system.
@@ -19,9 +19,9 @@ Niniejszy przykład pokazuje sposób konfigurowania zabezpieczeń przy użyciu n
 
  Konfiguracja usługi definiuje niestandardowego powiązania, który obsługuje następujące funkcje:
 
--   Komunikację TCP chronionych z użyciem protokołu TLS/SSL.
+- Komunikację TCP chronionych z użyciem protokołu TLS/SSL.
 
--   Zabezpieczenia komunikatów Windows.
+- Zabezpieczenia komunikatów Windows.
 
  Konfiguracja powiązania niestandardowego pozwala bezpiecznym transportem, jednocześnie umożliwiając zabezpieczenia na poziomie komunikatu. Określanie kolejności elementów wiązania jest ważny w celu definiowania niestandardowego powiązania, ponieważ każdy z nich reprezentuje warstwę w stosie kanału (zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md)). Powiązania niestandardowego jest zdefiniowany w plikach konfiguracji usługi i klienta, jak pokazano w poniższym Przykładowa konfiguracja.
 
@@ -76,7 +76,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
  Poniżej zawiera krótkie omówienie różnych sekcji plików wsadowych, które dotyczą tego przykładu tak, aby ich można modyfikować, aby uruchomić w prawidłowej konfiguracji:
 
--   Tworzenie certyfikatu serwera.
+- Tworzenie certyfikatu serwera.
 
      Następujące wiersze z pliku Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Ten plik wsadowy wartością domyślną jest nazwa serwera, na hoście lokalnym.
 
@@ -92,7 +92,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
 
      Przechowywać następujące wiersze w Setup.bat jest kopiowanie plików certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
 
@@ -128,36 +128,36 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 1. Na komputerze usługi:  
   
-    1.  Utwórz katalog wirtualny o nazwie servicemodelsamples na komputerze usługi.  
+    1. Utwórz katalog wirtualny o nazwie servicemodelsamples na komputerze usługi.  
   
-    2.  Skopiuj pliki programu usługi z \inetpub\wwwroot\servicemodelsamples do katalogu wirtualnego na komputerze usługi. Upewnij się, skopiuj pliki w podkatalogu \bin.  
+    2. Skopiuj pliki programu usługi z \inetpub\wwwroot\servicemodelsamples do katalogu wirtualnego na komputerze usługi. Upewnij się, skopiuj pliki w podkatalogu \bin.  
   
-    3.  Skopiuj pliki Setup.bat i Cleanup.bat komputer usługi.  
+    3. Skopiuj pliki Setup.bat i Cleanup.bat komputer usługi.  
   
-    4.  Uruchom następujące polecenie w wierszu polecenia dewelopera dla programu Visual Studio otwartych z uprawnieniami administratora: `Setup.bat service`. Spowoduje to utworzenie certyfikatu usługi o nazwie podmiotu, pasujące do nazwy komputera, na którym uruchomiono plik wsadowy na.  
+    4. Uruchom następujące polecenie w wierszu polecenia dewelopera dla programu Visual Studio otwartych z uprawnieniami administratora: `Setup.bat service`. Spowoduje to utworzenie certyfikatu usługi o nazwie podmiotu, pasujące do nazwy komputera, na którym uruchomiono plik wsadowy na.  
   
         > [!NOTE]
         >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2010 wiersz polecenia. Wymaga to, że zmiennej środowiskowej path odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w ramach programu Visual Studio 2010 wiersz polecenia.
 
-    5.  Zmiana [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) wewnątrz pliku Service.exe.config, aby odzwierciedlić nazwę podmiotu certyfikatu, wygenerowany w poprzednim kroku.
+    5. Zmiana [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) wewnątrz pliku Service.exe.config, aby odzwierciedlić nazwę podmiotu certyfikatu, wygenerowany w poprzednim kroku.
 
-    6.  Uruchom Service.exe z poziomu wiersza polecenia.
+    6. Uruchom Service.exe z poziomu wiersza polecenia.
 
 2. Na komputerze klienckim:
 
-    1.  Skopiuj pliki programu klienta z folderu \client\bin\ na komputerze klienckim. Również skopiować plik Cleanup.bat.
+    1. Skopiuj pliki programu klienta z folderu \client\bin\ na komputerze klienckim. Również skopiować plik Cleanup.bat.
 
-    2.  Uruchom Cleanup.bat, aby usunąć wszelkie stare certyfikaty z poprzednich przykładów.
+    2. Uruchom Cleanup.bat, aby usunąć wszelkie stare certyfikaty z poprzednich przykładów.
 
-    3.  Eksportowanie certyfikatu usługi otworzyć wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze usługi (Zastąp `%SERVER_NAME%` z w pełni kwalifikowaną nazwę komputera, na którym Usługa jest uruchomiona):
+    3. Eksportowanie certyfikatu usługi otworzyć wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze usługi (Zastąp `%SERVER_NAME%` z w pełni kwalifikowaną nazwę komputera, na którym Usługa jest uruchomiona):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4.  Skopiuj %SERVER_NAME%.cer komputer kliencki (Zastąp nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym jest uruchomiona usługa).
+    4. Skopiuj %SERVER_NAME%.cer komputer kliencki (Zastąp nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym jest uruchomiona usługa).
 
-    5.  Zaimportuj certyfikat usługi otworzyć wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze klienckim (Zastąp % nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym Usługa jest uruchomiona):
+    5. Zaimportuj certyfikat usługi otworzyć wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze klienckim (Zastąp % nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym Usługa jest uruchomiona):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -165,7 +165,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
          Kroki nie są konieczne, jeśli certyfikat został wystawiony przez zaufanego wystawcy c, d i e.
 
-    6.  Zmodyfikuj plik App.config klienta w następujący sposób:
+    6. Zmodyfikuj plik App.config klienta w następujący sposób:
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7.  Jeśli usługa jest uruchomiona w ramach konta innego niż Usługa sieciowa lub konta System lokalny w środowisku domeny, może być konieczne zmodyfikowanie tożsamość punktu końcowego dla punktu końcowego usługi w pliku App.config klienta można ustawić odpowiednie nazwy UPN lub nazwy SPN na podstawie na koncie, które jest używane do uruchamiania usługi. Aby uzyskać więcej informacji o tożsamości punktu końcowego, zobacz [uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tematu.
+    7. Jeśli usługa jest uruchomiona w ramach konta innego niż Usługa sieciowa lub konta System lokalny w środowisku domeny, może być konieczne zmodyfikowanie tożsamość punktu końcowego dla punktu końcowego usługi w pliku App.config klienta można ustawić odpowiednie nazwy UPN lub nazwy SPN na podstawie na koncie, które jest używane do uruchamiania usługi. Aby uzyskać więcej informacji o tożsamości punktu końcowego, zobacz [uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tematu.
 
-    8.  Uruchom Client.exe z poziomu wiersza polecenia.
+    8. Uruchom Client.exe z poziomu wiersza polecenia.
 
 ### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki
 
--   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.
+- Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.

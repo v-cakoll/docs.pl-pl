@@ -10,11 +10,11 @@ helpviewer_keywords:
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
 ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931507"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Instrukcje: Przechodzenie do obiektów w danych CollectionView
 Widoki zezwala na tej samej kolekcji danych do wyświetlenia na różne sposoby, w zależności od tego, czy sortowanie, filtrowanie i grupowanie. Widoki również zapewnić bieżącej koncepcję rekordów wskaźnika i włączyć, przesuwając wskaźnik. W tym przykładzie pokazano, jak uzyskać bieżący obiekt, a także przechodzenie do obiektów w zbieraniu danych, korzystając z funkcji podawany <xref:System.Windows.Data.CollectionView> klasy.  

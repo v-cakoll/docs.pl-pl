@@ -10,11 +10,11 @@ helpviewer_keywords:
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 ms.openlocfilehash: f52dfce66b6d62a8eb7bf75b626feacfb9172c29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927533"
 ---
 # <a name="asynchronous-server-socket-example"></a>Przykład asynchronicznego gniazda serwera
 Poniższy przykład program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest tworzone za pomocą asynchronicznego gniazda, więc wykonywanie aplikacji serwera nie jest wstrzymany, podczas oczekiwania na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg w konsoli i następnie zwraca ciąg do klienta. Ciąg z klienta może zawierać ciąg "\<EOF >" celu sygnalizowania, że koniec komunikatu.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
 ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928963"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Instrukcje: Ustawianie właściwości ProtectionLevel
 Można ustawić poziom ochrony przez zastosowanie odpowiedniego atrybutu i ustawienie właściwości. Można ustawić ochrony na poziomie usługi, aby wpływają na wszystkie elementy w każdej wiadomości lub ochrony można ustawić na coraz bardziej szczegółowym poziomie, od metody części wiadomości. Aby uzyskać więcej informacji na temat `ProtectionLevel` właściwości, zobacz [zrozumieć poziom ochrony](../../../docs/framework/wcf/understanding-protection-level.md).  

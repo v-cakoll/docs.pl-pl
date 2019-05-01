@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
 ms.openlocfilehash: 8030a9a25c86dffcbd28af61ea4b3948d647e6fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770503"
 ---
 # <a name="printdialog"></a>PrintDialog
 <xref:System.Windows.Controls.PrintDialog> Formant jest używany do utworzenia wystąpienia standardowe okno dialogowe, automatycznie konfiguruje <xref:System.Printing.PrintTicket> i <xref:System.Printing.PrintQueue> zgodnie z danych wejściowych użytkownika.  

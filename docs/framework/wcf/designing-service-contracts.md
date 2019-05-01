@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785037"
 ---
 # <a name="designing-service-contracts"></a>Projektowanie kontraktów usług
 W tym temacie opisano, jakie usługi zamówień są, jak są one definiowane, jakie operacje są dostępne (i wpływ na podstawowej wymianę komunikatów), jakiego typu dane są używane i innych problemów, które ułatwiają Projektuj operacje, które spełniają wymagania wymagania dotyczące scenariusza.  
@@ -24,28 +24,28 @@ W tym temacie opisano, jakie usługi zamówień są, jak są one definiowane, ja
   
  Podczas projektowania kontraktu usługi, w tym temacie opisano następujące decyzje:  
   
--   Określa, czy używać klas lub interfejsów.  
+- Określa, czy używać klas lub interfejsów.  
   
--   Jak określić typy danych, które chcesz wymienić.  
+- Jak określić typy danych, które chcesz wymienić.  
   
--   Typy wzorców programu exchange, których można użyć.  
+- Typy wzorców programu exchange, których można użyć.  
   
--   Czy istnieje możliwość wymagania dotyczące zabezpieczeń jawne część Umowy.  
+- Czy istnieje możliwość wymagania dotyczące zabezpieczeń jawne część Umowy.  
   
--   Ograniczenia dotyczące operacji wejścia i wyjścia.  
+- Ograniczenia dotyczące operacji wejścia i wyjścia.  
   
 ## <a name="classes-or-interfaces"></a>Klas lub interfejsów  
  Klasy i interfejsy reprezentuje zbiór funkcji i w związku z tym, zarówno może służyć do definiowania kontraktu usługi WCF. Zaleca się jednak, aby używać interfejsów, ponieważ modelują one bezpośrednio kontraktów usług. Bez konieczności implementowania interfejsów nie więcej niż definiowanie grup metodami z podpisami niektórych. Implementuj interfejs kontrakt usługi i udało Ci się wdrożyć usługi WCF.  
   
  Wszystkie zalety zarządzane interfejsy dotyczą interfejsy kontraktu usługi:  
   
--   Interfejsy kontraktu usługi można rozszerzyć dowolną liczbę inne interfejsy kontraktu usługi.  
+- Interfejsy kontraktu usługi można rozszerzyć dowolną liczbę inne interfejsy kontraktu usługi.  
   
--   Pojedyncza klasa może implementować dowolną liczbę kontraktów usług, zaimplementowanie tych interfejsów kontraktu usługi.  
+- Pojedyncza klasa może implementować dowolną liczbę kontraktów usług, zaimplementowanie tych interfejsów kontraktu usługi.  
   
--   Implementację kontraktu usługi można zmodyfikować, zmieniając implementacji interfejsu, podczas gdy kontrakt usługi pozostają bez zmian.  
+- Implementację kontraktu usługi można zmodyfikować, zmieniając implementacji interfejsu, podczas gdy kontrakt usługi pozostają bez zmian.  
   
--   Możesz wersji usługi przez zaimplementowanie interfejsu stary i nowy. Stare klienci łączą się z oryginalnej wersji, podczas gdy nowsze klienci mogą łączyć się nowsza wersja.  
+- Możesz wersji usługi przez zaimplementowanie interfejsu stary i nowy. Stare klienci łączą się z oryginalnej wersji, podczas gdy nowsze klienci mogą łączyć się nowsza wersja.  
   
 > [!NOTE]
 >  Gdy dziedziczy z innych interfejsów kontraktu usługi, nie można zastąpić właściwości operacji, np. nazwę lub przestrzeń nazw. Jeśli użytkownik spróbuje to zrobić, należy utworzyć nową operację bieżącej umowy serwisowej.  
@@ -251,11 +251,11 @@ End Interface
   
  To usługa, która to implementuje `IExplicitProtectionLevelSampleService` kontraktu i ma punkt końcowy, który używa domyślnego <xref:System.ServiceModel.WSHttpBinding> (wartość domyślna <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>, czyli <xref:System.ServiceModel.SecurityMode.Message>) ma następującą charakterystykę:  
   
--   `GetString` Wiadomości operacji czy zaszyfrowana i podpisana.  
+- `GetString` Wiadomości operacji czy zaszyfrowana i podpisana.  
   
--   `GetInt` Operacji komunikaty są wysyłane jako niezaszyfrowane i bez znaku (to znaczy, gładkie) tekst.  
+- `GetInt` Operacji komunikaty są wysyłane jako niezaszyfrowane i bez znaku (to znaczy, gładkie) tekst.  
   
--   `GetGuid` Operacji <xref:System.Guid?displayProperty=nameWithType> jest zwracany w komunikacie, który zostaje zaszyfrowany i podpisany.  
+- `GetGuid` Operacji <xref:System.Guid?displayProperty=nameWithType> jest zwracany w komunikacie, który zostaje zaszyfrowany i podpisany.  
   
  Aby uzyskać więcej informacji na temat poziomów ochrony i sposobu ich używania, zobacz [zrozumieć poziom ochrony](../../../docs/framework/wcf/understanding-protection-level.md). Aby uzyskać więcej informacji na temat zabezpieczeń, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
   

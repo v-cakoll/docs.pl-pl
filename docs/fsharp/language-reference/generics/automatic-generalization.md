@@ -3,11 +3,11 @@ title: Automatyczna generalizacja
 description: Dowiedz się, jak F# automatycznie stanowi uogólnienie argumentów i typy funkcji, tak że każde działa z wieloma typami, gdy jest to możliwe.
 ms.date: 05/16/2016
 ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937543"
 ---
 # <a name="automatic-generalization"></a>Automatyczna generalizacja
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
 ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934683"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Wprowadzenie do platformy WPF w programie Visual Studio
 Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom jednolity model programowania do tworzenia aplikacji klasycznych line-of-business na Windows.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
 ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938258"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Przewodnik: Sprawdzanie poprawności hasła złożoności (Visual Basic)
 Ta metoda sprawdza, czy niektóre cechy silnego hasła i aktualizuje jako parametr ciągu przy użyciu informacji o tym, które sprawdza, czy hasła nie powiodło się.  
@@ -28,20 +28,20 @@ Ta metoda sprawdza, czy niektóre cechy silnego hasła i aktualizuje jako parame
   
  Ten przykład wymaga:  
   
--   Dostęp do elementów członkowskich <xref:System.Text.RegularExpressions> przestrzeni nazw. Dodaj `Imports` instrukcji, jeśli użytkownik są nie pełni kwalifikujących się nazwy elementów członkowskich w kodzie. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Dostęp do elementów członkowskich <xref:System.Text.RegularExpressions> przestrzeni nazw. Dodaj `Imports` instrukcji, jeśli użytkownik są nie pełni kwalifikujących się nazwy elementów członkowskich w kodzie. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Zabezpieczenia  
  Jeśli przenosisz hasła przez sieć, należy użyć metody bezpiecznego przesyłania danych. Aby uzyskać więcej informacji, zobacz [zabezpieczenia aplikacji sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Można zwiększyć dokładność `ValidatePassword` funkcja poprzez dodanie dodatkowej złożoności kontroli:  
   
--   Porównaj hasło i jego podciągów przed nazwę użytkownika, identyfikator użytkownika i słownika zdefiniowanego przez aplikację. Ponadto należy traktować podobnych znaków jako równoważne podczas przeprowadzania porównania. Na przykład zaliczenie litery "l" i "e" odpowiednikiem cyfry "1" i "3".  
+- Porównaj hasło i jego podciągów przed nazwę użytkownika, identyfikator użytkownika i słownika zdefiniowanego przez aplikację. Ponadto należy traktować podobnych znaków jako równoważne podczas przeprowadzania porównania. Na przykład zaliczenie litery "l" i "e" odpowiednikiem cyfry "1" i "3".  
   
--   Jeśli ma tylko jedną wielką literę, upewnij się, że nie jest pierwszym znakiem hasła.  
+- Jeśli ma tylko jedną wielką literę, upewnij się, że nie jest pierwszym znakiem hasła.  
   
--   Upewnij się, że ostatnich dwóch znaków hasła są znaki.  
+- Upewnij się, że ostatnich dwóch znaków hasła są znaki.  
   
--   Nie zezwalaj na hasła, w których wszystkie symbole są wprowadzane z klawiatury w górnym wierszu.  
+- Nie zezwalaj na hasła, w których wszystkie symbole są wprowadzane z klawiatury w górnym wierszu.  
   
 ## <a name="see-also"></a>Zobacz także
 

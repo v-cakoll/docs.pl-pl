@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937972"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Instrukcje: Tworzenie rodzin czcionek i czcionek
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] grupuje czcionki o tej samej krój czcionki, ale różnych stylów do rodziny czcionek. Na przykład rodziny czcionka Arial zawiera następujące czcionki:  
   
--   Regularne Arial  
+- Regularne Arial  
   
--   Arial pogrubienia  
+- Arial pogrubienia  
   
--   Kursywa Arial  
+- Kursywa Arial  
   
--   Arial Bold Italic  
+- Arial Bold Italic  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa czterech stylów do formularza rodzin: regularnych, pogrubienie, kursywa i pogrubiona kursywa. Określeniem, takie jak *zawęzić* i *zaokrąglone* nie są uważane za style; przeciwnie są one częścią nazwę rodziny. Na przykład Arial Narrow jest rodzinę czcionek, za pomocą następujących elementów członkowskich:  
   
--   Arial zwykłych Narrow  
+- Arial zwykłych Narrow  
   
--   Wąski Arial pogrubienia  
+- Wąski Arial pogrubienia  
   
--   Arial wąskie kursywa  
+- Arial wąskie kursywa  
   
--   Arial wąskie pogrubiona kursywa  
+- Arial wąskie pogrubiona kursywa  
   
  Zanim można rysować tekst z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], musisz utworzyć <xref:System.Drawing.FontFamily> obiektu i <xref:System.Drawing.Font> obiektu. <xref:System.Drawing.FontFamily> Obiektu określa krój czcionki (na przykład Arial), a <xref:System.Drawing.Font> obiekt Określa rozmiar, styl i jednostek.  
   

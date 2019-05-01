@@ -9,11 +9,11 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
 ms.openlocfilehash: f89a5004afeffe5aa9a28cb2d43374aede8a935e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936529"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Instrukcje: Wykonywanie asynchronicznych zapytań usługi danych (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta asynchroniczne operacje można wykonywać klient serwer, takich jak wykonywanie zapytań i zapisywanie zmian. Aby uzyskać więcej informacji, zobacz [operacji asynchronicznych](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
 ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923243"
 ---
 # <a name="creating-user-defined-bindings"></a>Tworzenie wiązań zdefiniowanych przez użytkownika
 Istnieje kilka sposobów tworzenia powiązania nie został dostarczony przez system:  
   
--   Tworzenie niestandardowego powiązania, na podstawie <xref:System.ServiceModel.Channels.CustomBinding> klasy, która jest kontenerem, który można wypełnić elementy powiązania. Niestandardowe powiązanie jest dodawane do punktu końcowego usługi. Można utworzyć niestandardowego powiązania, które albo programowo, albo w konfiguracji aplikacji pliku. Aby użyć elementu powiązania z pliku konfiguracji aplikacji, element powiązania musi rozszerzać <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Aby uzyskać więcej informacji na temat powiązania niestandardowej zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md) i <xref:System.ServiceModel.Channels.CustomBinding>.  
+- Tworzenie niestandardowego powiązania, na podstawie <xref:System.ServiceModel.Channels.CustomBinding> klasy, która jest kontenerem, który można wypełnić elementy powiązania. Niestandardowe powiązanie jest dodawane do punktu końcowego usługi. Można utworzyć niestandardowego powiązania, które albo programowo, albo w konfiguracji aplikacji pliku. Aby użyć elementu powiązania z pliku konfiguracji aplikacji, element powiązania musi rozszerzać <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Aby uzyskać więcej informacji na temat powiązania niestandardowej zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md) i <xref:System.ServiceModel.Channels.CustomBinding>.  
   
--   Można utworzyć klasę, która pochodzi od standardowego powiązania. Na przykład można wyprowadzić klasę z <xref:System.ServiceModel.WSHttpBinding> i zastąpić <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> metodę, aby uzyskać elementy powiązania i Wstaw element niestandardowego powiązania lub określenia konkretnej wartości dotyczące zabezpieczeń.  
+- Można utworzyć klasę, która pochodzi od standardowego powiązania. Na przykład można wyprowadzić klasę z <xref:System.ServiceModel.WSHttpBinding> i zastąpić <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> metodę, aby uzyskać elementy powiązania i Wstaw element niestandardowego powiązania lub określenia konkretnej wartości dotyczące zabezpieczeń.  
   
--   Można utworzyć nową <xref:System.ServiceModel.Channels.Binding> typu na całkowitą kontrolę wykonania całego powiązania.  
+- Można utworzyć nową <xref:System.ServiceModel.Channels.Binding> typu na całkowitą kontrolę wykonania całego powiązania.  
   
 ## <a name="the-order-of-binding-elements"></a>Kolejność elementów wiązania  
  Każdy element powiązania reprezentuje krok przetwarzania podczas wysyłania lub odbierania komunikatów. W czasie wykonywania elementy powiązania Tworzenie kanałów i odbiorników niezbędne do utworzenia stosów kanałów przychodzących i wychodzących.  

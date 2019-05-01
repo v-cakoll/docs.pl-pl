@@ -7,11 +7,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
 ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941209"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Instrukcje: ukrywanie ToolStripMenuItems przy użyciu narzędzia Projektant
 Ukrywanie elementów menu jest sposób sterowania interfejsem użytkownika (UI), aplikacji i ograniczyć polecenia użytkownika. Często chcesz ukryć całe menu, gdy wszystkie elementy menu na nim są niedostępne. Przedstawia informacje o przeszkadzał dla użytkownika. Ponadto warto ukryć i Wyłącz menu lub elementu menu, jak samodzielnie ukrywanie nie uniemożliwia użytkownikowi dostęp do poleceń menu przy użyciu klawisza skrótu. Aby uzyskać więcej informacji na temat Wyłączanie elementów menu, zobacz [jak: Wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant](how-to-disable-toolstripmenuitems-using-the-designer.md).  

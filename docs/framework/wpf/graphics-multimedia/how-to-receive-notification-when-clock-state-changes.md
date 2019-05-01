@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Otrzymaj powiadomienie po zmianie stanu zegara'
+title: 'Instrukcje: Odbieranie powiadomienia po zmianie stanu zegara'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
 ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942142"
 ---
-# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Instrukcje: Otrzymaj powiadomienie po zmianie stanu zegara
+# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Instrukcje: Odbieranie powiadomienia po zmianie stanu zegara
 Zegar <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> wystąpi zdarzenie po jego <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> staje się nieprawidłowy, np. gdy zegar uruchomienia lub zatrzymania. Możesz zarejestrować dla tego zdarzenia z bezpośrednio przy użyciu <xref:System.Windows.Media.Animation.Clock>, możesz także zarejestrować przy użyciu <xref:System.Windows.Media.Animation.Timeline>.  
   
  W poniższym przykładzie <xref:System.Windows.Media.Animation.Storyboard> oraz dwóch <xref:System.Windows.Media.Animation.DoubleAnimation> obiekty służą do animować szerokość dwoma prostokątami. <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> Zdarzeń służy do nasłuchiwania zmian stanu zegara.  

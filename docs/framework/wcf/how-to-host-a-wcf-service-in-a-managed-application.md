@@ -6,13 +6,13 @@ dev_langs:
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929314"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Instrukcje: hostowanie usługi WCF w zarządzanej aplikacji
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji
 
 Aby hostować usługi w ramach zarządzaną aplikację, Osadź kod dla usługi w kodzie aplikacji zarządzanej, albo obowiązkowo w kodzie, w sposób deklaratywny za pośrednictwem konfiguracji lub przy użyciu domyślnych punktów końcowych, definiowanie punktu końcowego usługi, a następnie utwórz wystąpienie <xref:System.ServiceModel.ServiceHost>.
 
@@ -50,7 +50,7 @@ Poniższa procedura demonstruje sposób implementacji usługi samodzielnie hosto
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Aby uzyskać więcej informacji o tym, jak definiować ani implementować interfejsu usługi, zobacz [porady: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) i [porady: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Aby uzyskać więcej informacji o tym, jak definiować ani implementować interfejsu usługi, zobacz [jak: Definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) i [jak: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
 
 5. W górnej części `Main` metody, Utwórz wystąpienie obiektu <xref:System.Uri> klasy przy użyciu podstawowego adresu usługi.
 
@@ -99,11 +99,11 @@ Poniższy przykład tworzy <xref:System.ServiceModel.ServiceHost> obiektu do hos
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [Instrukcje: hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Instrukcje: Hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Host samodzielny](../../../docs/framework/wcf/samples/self-host.md)
 - [Usługi hostingowe](../../../docs/framework/wcf/hosting-services.md)
-- [Instrukcje: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Instrukcje: implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [Instrukcje: Definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Instrukcje: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 - [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Powiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md)

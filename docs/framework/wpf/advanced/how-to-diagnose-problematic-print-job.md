@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776262"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Instrukcje: Diagnozowanie problematycznych zadań drukowania
 Administratorzy sieci często pola skarg od użytkowników dotyczące zadania drukowania, które nie drukowania lub wydrukować powoli. Bogaty zestaw właściwości zadania drukowania, udostępniane w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework zapewniają środki do przeprowadzania szybkiej diagnostyki zdalnej zadań drukowania.  
@@ -25,13 +25,13 @@ Administratorzy sieci często pola skarg od użytkowników dotyczące zadania dr
   
 1. Zidentyfikuj zadania drukowania, które użytkownik jest skarżących o. Użytkownicy często nie można tego zrobić dokładnie. Może nie wiedzieć nazwy serwerów wydruku i drukarek. Może zawierać opis lokalizacji drukarki w terminologii innego, niż zostało użyte w ustawieniach jego <xref:System.Printing.PrintQueue.Location%2A> właściwości. W związku z tym jest to dobry pomysł, aby wygenerować listę użytkownika aktualnie przesłanych zadań. Jeśli istnieje więcej niż jeden, następnie komunikacji między określonym użytkownikiem a administrator systemu drukowania może służyć do punktu przyczepienia zadanie, które występują problemy. Poniżej znajdują się podkroki.  
   
-    1.  Uzyskaj listę wszystkich serwerów wydruku.  
+    1. Uzyskaj listę wszystkich serwerów wydruku.  
   
-    2.  Pętla za pośrednictwem serwerów do wykonywania zapytań ich kolejek wydruku.  
+    2. Pętla za pośrednictwem serwerów do wykonywania zapytań ich kolejek wydruku.  
   
-    3.  W ramach każdego przebiegu pętli serwera pętli wszystkich kolejek na serwerze do wykonywania zapytań swoich zadań  
+    3. W ramach każdego przebiegu pętli serwera pętli wszystkich kolejek na serwerze do wykonywania zapytań swoich zadań  
   
-    4.  W ramach każdego przebiegu pętli kolejki w pętli poprzez zadania, a następnie Zbierz informacje identyfikujące te, które zostały przesłane przez użytkownika wnioskujących.  
+    4. W ramach każdego przebiegu pętli kolejki w pętli poprzez zadania, a następnie Zbierz informacje identyfikujące te, które zostały przesłane przez użytkownika wnioskujących.  
   
 2. W przypadku wykryto problematyczne zadanie drukowania, należy sprawdzić odpowiednie właściwości, aby zobaczyć, co może być problem. Na przykład jest zadanie w stanie błędu, lub czy drukarki obsługi kolejki przejdź do trybu offline przed zadania można wydrukować?  
   
@@ -49,9 +49,9 @@ Administratorzy sieci często pola skarg od użytkowników dotyczące zadania dr
   
  Na tym etapie aplikacja zawiera rozgałęziona struktura odpowiadający sprawdzanie stanu zadania drukowania na dwa sposoby:  
   
--   Może odczytywać flagi o <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwość, która jest typu <xref:System.Printing.PrintJobStatus>.  
+- Może odczytywać flagi o <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwość, która jest typu <xref:System.Printing.PrintJobStatus>.  
   
--   Można znaleźć każdej odpowiednie właściwości, takie jak <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> i <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- Można znaleźć każdej odpowiednie właściwości, takie jak <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> i <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
   
  W tym przykładzie przedstawiono obie metody, dzięki czemu użytkownik został wcześniej zostanie wyświetlony monit, aby metody i odpowiedziała, zgłaszając "Y", jeśli użytkownik chce używać flagi o <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> właściwości. Poniżej znajdują się szczegółowe informacje o dwóch metod. Na koniec aplikacja używa metodę o nazwie **ReportQueueAndJobAvailability** Aby sporządzić raport na temat tego, czy zadanie może zostać zrealizowane o tej porze dnia. Metoda ta jest omówiona w [odnajdywanie czy drukowania zadania może być drukowane na ten pory dnia](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
   

@@ -3,11 +3,11 @@ title: 'Instrukcje: tworzenie poświadczeń pomocniczych'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
 ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787611"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Instrukcje: tworzenie poświadczeń pomocniczych
 Istnieje możliwość schematu niestandardowego zabezpieczeń, która wymaga więcej niż jedno poświadczenie. Na przykład usługa może wymagać od klienta nie tylko nazwę użytkownika i hasło, ale również poświadczeń, który okazał się klienta znajduje się nad niż 18 lat. Drugie poświadczenie jest *obsługi poświadczeń*. W tym temacie wyjaśniono, jak wdrożyć tych poświadczeń w kliencie programu Windows Communication Foundation (WCF).  
@@ -39,28 +39,28 @@ Istnieje możliwość schematu niestandardowego zabezpieczeń, która wymaga wi�
   
  Pierwszym krokiem podczas tworzenia niestandardowego powiązania jest utworzyć elementu powiązania zabezpieczeń, który może być jednym z trzech typów:  
   
--   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
  Wszystkie klasy dziedziczą z <xref:System.ServiceModel.Channels.SecurityBindingElement>, która obejmuje cztery odpowiednie właściwości:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
   
 #### <a name="scopes"></a>Zakresy  
  Istnieją dwa zakresy do obsługi poświadczeń:  
   
--   *Punkt końcowy tokenów pomocniczych* obsługuje wszystkie operacje dla punktu końcowego. Oznacza to, że poświadczenie, które reprezentuje token pomocniczy można zawsze wtedy, gdy dowolne operacje punktu końcowego są wywoływane.  
+- *Punkt końcowy tokenów pomocniczych* obsługuje wszystkie operacje dla punktu końcowego. Oznacza to, że poświadczenie, które reprezentuje token pomocniczy można zawsze wtedy, gdy dowolne operacje punktu końcowego są wywoływane.  
   
--   *Obsługa tokenów operacji* obsługuje tylko operacji do określonego punktu końcowego.  
+- *Obsługa tokenów operacji* obsługuje tylko operacji do określonego punktu końcowego.  
   
  Obsługa poświadczeń może być wskazane przez nazwy właściwości, wymaganego lub opcjonalnego. Oznacza to jeśli pomocnicze poświadczenie jest używane, jeśli jest obecny, chociaż nie jest konieczne, ale uwierzytelnianie zakończy się niepowodzeniem, jeśli nie jest obecny.  
   

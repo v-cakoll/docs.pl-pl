@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932798"
 ---
 # <a name="using-message-contracts"></a>Używanie kontraktów komunikatu
 Zwykle podczas tworzenia aplikacji Windows Communication Foundation (WCF), deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy z serializacją i nie trzeba zajmować się struktury komunikaty, w których odbywa się dane. Dla tych aplikacji tworząc kontraktów danych dla parametrów lub zwracanych wartości jest bardzo proste. (Aby uzyskać więcej informacji, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>Atrybuty nagłówek SOAP  
  SOAP standard definiuje następujące atrybuty, które mogą występować w nagłówku:  
   
--   `Actor/Role` (`Actor` w SOAP 1.1, `Role` w SOAP 1.2)  
+- `Actor/Role` (`Actor` w SOAP 1.1, `Role` w SOAP 1.2)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  `Actor` Lub `Role` atrybut określa identyfikator (URI) węzła, dla których przeznaczony jest dany nagłówek. `MustUnderstand` Atrybut określa, czy węzeł przetwarzania nagłówka musi go zrozumieć. `Relay` Atrybut określa, czy nagłówek do węzłów podrzędnych. Usługi WCF nie wykonuje jakiegokolwiek przetwarzania tych atrybutów na komunikaty przychodzące z wyjątkiem `MustUnderstand` atrybutu, jak to określono w sekcji "Przechowywanie wersji kontraktów komunikatu" w dalszej części tego tematu. Jednakże umożliwia odczytywanie i zapisywanie tych atrybutów zgodnie z potrzebami, tak jak w poniższym opisie.  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  Obowiązują następujące reguły dla nagłówków wersji:  
   
--   Usługi WCF nie obiekt do brakujących nagłówków — odpowiednie elementy członkowskie są pozostawiane wartościami domyślnymi.  
+- Usługi WCF nie obiekt do brakujących nagłówków — odpowiednie elementy członkowskie są pozostawiane wartościami domyślnymi.  
   
--   Usługi WCF ignoruje także nieoczekiwane dodatkowe nagłówki. Jedynym wyjątkiem od tej reguły jest, jeśli dodatkowe nagłówek ma `MustUnderstand` ustawioną wartość atrybutu `true` w przychodzącej wiadomości SOAP — w tym przypadku jest zgłaszany wyjątek, ponieważ nie można przetworzyć nagłówek, który musi być rozumiane.  
+- Usługi WCF ignoruje także nieoczekiwane dodatkowe nagłówki. Jedynym wyjątkiem od tej reguły jest, jeśli dodatkowe nagłówek ma `MustUnderstand` ustawioną wartość atrybutu `true` w przychodzącej wiadomości SOAP — w tym przypadku jest zgłaszany wyjątek, ponieważ nie można przetworzyć nagłówek, który musi być rozumiane.  
   
  Komunikat o treści mają podobne zasady przechowywania wersji — Brak i dodatkowe części treści wiadomości są ignorowane.  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  Podczas tworzenia lub uzyskiwania dostępu do wiadomości przy użyciu typ kontraktu komunikatu, która dziedziczy inne typy kontraktu komunikatu, obowiązują następujące reguły:  
   
--   Wszystkie nagłówki wiadomości w hierarchii dziedziczenia pochodzą ze sobą w celu utworzenia pełnego zestawu nagłówków wiadomości.  
+- Wszystkie nagłówki wiadomości w hierarchii dziedziczenia pochodzą ze sobą w celu utworzenia pełnego zestawu nagłówków wiadomości.  
   
--   Wszystkie części treści wiadomości w hierarchii dziedziczenia pochodzą ze sobą w celu utworzenia pełnego treść. Części treści są uporządkowane zgodnie ze zwykłymi regułami sortowania (przez <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości i następnie alfabetycznej), niezwiązany z ich miejsca w hierarchii dziedziczenia. Za pomocą Dziedziczenie kontraktów komunikatu, w których części treści wiadomości wystąpić na różnych poziomach drzewa dziedziczenia jest zdecydowanie odradzane. Jeśli klasa bazowa i Klasa pochodna należy zdefiniować nagłówek lub część treści o takiej samej nazwie, elementu członkowskiego z klasy podstawowej większość służy do przechowywania wartości w tej części w nagłówku lub w treści.  
+- Wszystkie części treści wiadomości w hierarchii dziedziczenia pochodzą ze sobą w celu utworzenia pełnego treść. Części treści są uporządkowane zgodnie ze zwykłymi regułami sortowania (przez <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości i następnie alfabetycznej), niezwiązany z ich miejsca w hierarchii dziedziczenia. Za pomocą Dziedziczenie kontraktów komunikatu, w których części treści wiadomości wystąpić na różnych poziomach drzewa dziedziczenia jest zdecydowanie odradzane. Jeśli klasa bazowa i Klasa pochodna należy zdefiniować nagłówek lub część treści o takiej samej nazwie, elementu członkowskiego z klasy podstawowej większość służy do przechowywania wartości w tej części w nagłówku lub w treści.  
   
  Należy wziąć pod uwagę klas w poniższym przykładzie kodu.  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>Zagadnienia dotyczące WSDL  
  Podczas generowania kontraktu usługi sieci Web Services Description Language (WSDL) z usługi, który używa kontrakty komunikatów, to należy pamiętać, że nie wszystkie funkcje kontraktu komunikatu są odzwierciedlane w wynikowej WSDL. Należy wziąć pod uwagę następujące kwestie:  
   
--   WSDL nie można wyrazić koncepcji tablicy nagłówków. Podczas tworzenia wiadomości z tablicą przy użyciu nagłówków <xref:System.ServiceModel.MessageHeaderArrayAttribute>, WSDL wynikowy odzwierciedla tylko jeden nagłówek zamiast tablicy.  
+- WSDL nie można wyrazić koncepcji tablicy nagłówków. Podczas tworzenia wiadomości z tablicą przy użyciu nagłówków <xref:System.ServiceModel.MessageHeaderArrayAttribute>, WSDL wynikowy odzwierciedla tylko jeden nagłówek zamiast tablicy.  
   
--   Dokument WSDL wynikowy może nie odzwierciedlać pewne informacje poziom ochrony.  
+- Dokument WSDL wynikowy może nie odzwierciedlać pewne informacje poziom ochrony.  
   
--   Typ komunikatu wygenerowany w formacie WSDL ma taką samą nazwę jak nazwa klasy typ kontraktu komunikatu.  
+- Typ komunikatu wygenerowany w formacie WSDL ma taką samą nazwę jak nazwa klasy typ kontraktu komunikatu.  
   
--   Gdy kontrakt przy użyciu tego samego komunikatu w wielu operacjach, wiele typów wiadomości są generowane w dokumencie WSDL. Nazwy są tworzone unikatowe, przez dodanie liczby "2", "3" i tak dalej do późniejszego wykorzystania. Podczas importowania pliku WSDL Wstecz, wiele typy kontraktu komunikatu są tworzone i są identyczne, z wyjątkiem ich nazwy.  
+- Gdy kontrakt przy użyciu tego samego komunikatu w wielu operacjach, wiele typów wiadomości są generowane w dokumencie WSDL. Nazwy są tworzone unikatowe, przez dodanie liczby "2", "3" i tak dalej do późniejszego wykorzystania. Podczas importowania pliku WSDL Wstecz, wiele typy kontraktu komunikatu są tworzone i są identyczne, z wyjątkiem ich nazwy.  
   
 ## <a name="soap-encoding-considerations"></a>Uwagi dotyczące kodowania SOAP  
  WCF pozwala na używanie starszej wersji protokołu SOAP stylu XML, kodowania, jego użycie nie jest zalecane. Korzystając z tego stylu (przez ustawienie `Use` właściwości `Encoded` na <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> stosowane do umowy serwisowej), mają zastosowanie następujące dodatkowe kwestie:  
   
--   Nagłówki wiadomości są nieobsługiwane. oznacza to, że atrybut <xref:System.ServiceModel.MessageHeaderAttribute> i atrybut tablicy <xref:System.ServiceModel.MessageHeaderArrayAttribute> są niezgodne z kodowaniem SOAP.  
+- Nagłówki wiadomości są nieobsługiwane. oznacza to, że atrybut <xref:System.ServiceModel.MessageHeaderAttribute> i atrybut tablicy <xref:System.ServiceModel.MessageHeaderArrayAttribute> są niezgodne z kodowaniem SOAP.  
   
--   Jeśli kontraktu komunikatu jest nie zawinięty, oznacza to, jeśli właściwość <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> ustawiono `false`, kontraktu komunikatu może mieć część treści tylko jeden.  
+- Jeśli kontraktu komunikatu jest nie zawinięty, oznacza to, jeśli właściwość <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> ustawiono `false`, kontraktu komunikatu może mieć część treści tylko jeden.  
   
--   Nazwa elementu otoki dla kontraktu komunikatu żądania musi odpowiadać nazwie operacji. Użyj `WrapperName` właściwości kontraktu komunikatu, w tym.  
+- Nazwa elementu otoki dla kontraktu komunikatu żądania musi odpowiadać nazwie operacji. Użyj `WrapperName` właściwości kontraktu komunikatu, w tym.  
   
--   Nazwa elementu otoki dla kontraktu komunikatu odpowiedzi musi być taka sama jak nazwa operacji sufiks przez "Response". Użyj <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> właściwości kontraktu komunikatu, w tym.  
+- Nazwa elementu otoki dla kontraktu komunikatu odpowiedzi musi być taka sama jak nazwa operacji sufiks przez "Response". Użyj <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> właściwości kontraktu komunikatu, w tym.  
   
--   Kodowaniem SOAP zachowuje odwołania do obiektu. Rozważmy na przykład, poniższy kod.  
+- Kodowaniem SOAP zachowuje odwołania do obiektu. Rozważmy na przykład, poniższy kod.  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

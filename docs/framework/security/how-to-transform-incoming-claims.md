@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940442"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Instrukcje: Przekształcanie oświadczeń przychodzących
 ## <a name="applies-to"></a>Dotyczy:  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługujących oświadczenia i przekształcanie oświadczeń przychodzących. On również instrukcje testowania aplikacji, aby zweryfikować, że oświadczenia po przekształceniu są dostarczane, gdy aplikacja jest uruchomiona.  
   
 ## <a name="contents"></a>Spis treści  
   
--   Cele  
+- Cele  
   
--   Omówienie  
+- Omówienie  
   
--   Zestawienie czynności  
+- Zestawienie czynności  
   
--   Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
+- Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
   
--   Krok 2 — Implementowanie oświadczeń przy użyciu niestandardowych ClaimsAuthenticationManager przekształcania  
+- Krok 2 — Implementowanie oświadczeń przy użyciu niestandardowych ClaimsAuthenticationManager przekształcania  
   
--   Krok 3 — Przetestowanie rozwiązania  
+- Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="objectives"></a>Cele  
   
--   Skonfigurować aplikację ASP.NET Web Forms pod kątem uwierzytelniania opartego na oświadczeniach  
+- Skonfigurować aplikację ASP.NET Web Forms pod kątem uwierzytelniania opartego na oświadczeniach  
   
--   Przekształcanie oświadczeń przychodzących przez dodanie oświadczenie roli administratora  
+- Przekształcanie oświadczeń przychodzących przez dodanie oświadczenie roli administratora  
   
--   Testowanie aplikacji formularzy sieci Web ASP.NET, aby zobaczyć, czy działa prawidłowo  
+- Testowanie aplikacji formularzy sieci Web ASP.NET, aby zobaczyć, czy działa prawidłowo  
   
 ## <a name="overview"></a>Omówienie  
  Program WIF przedstawia klasę o nazwie <xref:System.Security.Claims.ClaimsAuthenticationManager> umożliwiającej użytkownikom na modyfikowanie oświadczeń, zanim zostaną one zaprezentowane na aplikację jednostki uzależnionej (RP). <xref:System.Security.Claims.ClaimsAuthenticationManager> Jest przydatne w przypadku separacji między uwierzytelniania i odpowiedni kod aplikacji. W poniższym przykładzie przedstawiono sposób dodawania roli do roszczeń w przychodzącej <xref:System.Security.Claims.ClaimsPrincipal> , może być wymagane przez jednostkę Uzależnioną.  
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
+- Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
   
--   Krok 2 — Implementowanie oświadczeń przy użyciu niestandardowych ClaimsAuthenticationManager przekształcania  
+- Krok 2 — Implementowanie oświadczeń przy użyciu niestandardowych ClaimsAuthenticationManager przekształcania  
   
--   Krok 3 — Przetestowanie rozwiązania  
+- Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
  W tym kroku utworzysz nową aplikację ASP.NET Web Forms.  

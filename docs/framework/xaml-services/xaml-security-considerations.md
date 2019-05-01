@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938791"
 ---
 # <a name="xaml-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń XAML
 W tym temacie opisano najlepsze rozwiązania dotyczące zabezpieczeń w aplikacji, korzystając z XAML i interfejsu API programu .NET Framework XAML Services.  
@@ -34,9 +34,9 @@ W tym temacie opisano najlepsze rozwiązania dotyczące zabezpieczeń w aplikacj
 ## <a name="xaml-namespaces-and-assembly-trust"></a>Przestrzenie nazw XAML i zaufania zestawu  
  Podstawowa składnia niekwalifikowaną i definicję dla interpretowanie niestandardowe mapowanie przestrzeni nazw XAML do zestawu XAML nie rozróżnia zaufanych i niezaufanych zestawu jako ładowany do domeny aplikacji. W efekcie jest technicznie możliwe dla niezaufanego zestawu, aby podszywały się pod zaufanym zestawie zamierzony mapowanie przestrzeni nazw XAML i przechwytywać deklarowanego obiektu źródło XAML i informacje o właściwościach. Jeśli masz wymagania dotyczące zabezpieczeń, aby uniknąć tej sytuacji, należy wprowadzać zamierzony mapowanie przestrzeni nazw XAML przy użyciu jednej z następujących technik:  
   
--   Użyj w pełni kwalifikowanej nazwy zestawu z silną nazwę mapowania przestrzeni nazw XAML, wszystkie wprowadzone przez użytkownika aplikacji XAML.  
+- Użyj w pełni kwalifikowanej nazwy zestawu z silną nazwę mapowania przestrzeni nazw XAML, wszystkie wprowadzone przez użytkownika aplikacji XAML.  
   
--   Ogranicz mapowania ustalony zestaw elementów zestawy odwołań, tworząc określonego zestawu <xref:System.Xaml.XamlSchemaContext> dla Twojego XAML czytników i XAML obiektu modułów zapisujących. Zobacz <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+- Ogranicz mapowania ustalony zestaw elementów zestawy odwołań, tworząc określonego zestawu <xref:System.Xaml.XamlSchemaContext> dla Twojego XAML czytników i XAML obiektu modułów zapisujących. Zobacz <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>Mapowanie typu XAML i dostęp do systemu typów  
  XAML obsługuje własny typ w systemie na wiele sposobów elementu równorzędnego do Implementowanie CLR na podstawowy system typu CLR. Dla niektórych aspektów rozpoznawania typu, gdy wykonujesz decyzji dotyczących zaufania o typie, w oparciu o informacje o typie należy Odrocz do informacji o typie w środowisku CLR, typy kopii. Jest tak, ponieważ niektóre z określonych funkcji raportowania w systemie typu XAML są pozostawione otwarte jako metod wirtualnych, a w związku z tym, nie są w pełni pod kontrolą oryginalnej implementacji usług programu .NET Framework XAML. Te punkty rozszerzeń istnieje, ponieważ w systemie typu XAML jest rozszerzalny, aby dopasować rozszerzalności XAML, sama i jego możliwe alternatywnych strategii mapowania typów w porównaniu z domyślną implementację kopii środowiska CLR i domyślny kontekst schematu XAML. Aby uzyskać więcej informacji, zobacz Uwagi dotyczące określonych na kilku właściwości <xref:System.Xaml.XamlType> i <xref:System.Xaml.XamlMember>.  

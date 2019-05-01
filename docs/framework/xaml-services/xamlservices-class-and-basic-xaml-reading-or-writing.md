@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938739"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Klasa XAMLServices i podstawowy odczyt lub zapis XAML
 <xref:System.Xaml.XamlServices> jest klasą dostarczone przez .NET Framework XAML Services może służyć do scenariuszy XAML, które nie wymagają określonej dostęp do strumienia węzłów XAML lub informacje o systemie typu XAML uzyskany z tych węzłów. <xref:System.Xaml.XamlServices> Interfejs API można podsumować w następujący: `Load` lub `Parse` do obsługi ścieżką obciążenia XAML `Save` do obsługi XAML Zapisz ścieżkę, i `Transform` do udostępniania technika, która dołącza ścieżki obciążenia i Zapisz ścieżkę. `Transform` może służyć do zmiany z jednego schematu XAML do innego. Ten temat zawiera podsumowanie wszystkich te klasyfikacje interfejsu API i opisano różnice między przeciążeń określonej metody.  
@@ -25,9 +25,9 @@ ms.locfileid: "59162271"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> i <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> są przeciążenia, które korzystają z czytników formaty z poprzednich wersji programu .NET Framework. Aby korzystać z tych przeciążeń, powinien już utworzonego wystąpienia czytnika i używać jej `Create` interfejsu API, aby załadować XAML w odpowiednim formularzu (tekstowym lub XML). Jeśli masz już przeniesiony wskaźniki rekordu na inne czytniki lub wykonać inne operacje z nimi, to nie jest ważna. Logika ścieżki obciążenia z <xref:System.Xaml.XamlServices.Load%2A> zawsze przetwarza całego XAML, dane wejściowe z katalogu głównego w dół. Scenariusze te przeciążenia mogą obejmować następujące czynności:  
   
--   Zaprojektuj powierzchni, gdy zapewniają prosty XAML funkcje z istniejących edytora tekstu XML specyficzne edycji.  
+- Zaprojektuj powierzchni, gdy zapewniają prosty XAML funkcje z istniejących edytora tekstu XML specyficzne edycji.  
   
--   Warianty podstawowe <xref:System.IO> scenariuszach, gdzie dedykowanych czytelnicy jest używany do otwierania plików i strumieni. Logika wykonuje podstawowe sprawdzenie lub przetwarzania zawartości przed ponowną próbą załadowania jako XAML.  
+- Warianty podstawowe <xref:System.IO> scenariuszach, gdzie dedykowanych czytelnicy jest używany do otwierania plików i strumieni. Logika wykonuje podstawowe sprawdzenie lub przetwarzania zawartości przed ponowną próbą załadowania jako XAML.  
   
  Możesz załadować pliku lub strumienia lub załadować <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, lub <xref:System.Xaml.XamlReader> , zawijanie dane wejściowe XAML, ładując za pomocą interfejsów API czytelnika.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "59162271"
   
  `Load` Podpisu, który zawiera bardziej zaawansowane scenariusze jest <xref:System.Xaml.XamlServices.Load%28System.Xaml.XamlReader%29>. Ta sygnatura można użyć jednej z następujących przypadkach:  
   
--   Zdefiniowano własną implementację <xref:System.Xaml.XamlReader>.  
+- Zdefiniowano własną implementację <xref:System.Xaml.XamlReader>.  
   
--   Należy określić ustawienia <xref:System.Xaml.XamlReader> , różnią się od ustawienia domyślne.  
+- Należy określić ustawienia <xref:System.Xaml.XamlReader> , różnią się od ustawienia domyślne.  
   
  Przykłady innych niż domyślne ustawień dowolną z następujących ustawień: <xref:System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot%2A>; <xref:System.Xaml.XamlReaderSettings.BaseUri%2A>; <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A>; <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A>; <xref:System.Xaml.XamlReaderSettings.ValuesMustBeString%2A>. Czytnik domyślne <xref:System.Xaml.XamlServices> jest <xref:System.Xaml.XamlXmlReader>. Jeśli podasz własne <xref:System.Xaml.XamlXmlReader>, przy użyciu ustawień, poniżej przedstawiono właściwości, aby ustawić wartości niedomyślnej <xref:System.Xaml.XamlXmlReaderSettings>: <xref:System.Xaml.XamlXmlReaderSettings.CloseInput%2A>; <xref:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlLang%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve%2A>.  
   

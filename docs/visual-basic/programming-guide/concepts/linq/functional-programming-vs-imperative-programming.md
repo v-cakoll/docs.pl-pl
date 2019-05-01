@@ -3,11 +3,11 @@ title: Programowanie funkcjonalne a Programowanie imperatywne (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931669"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Programowanie funkcjonalne a Programowanie imperatywne (Visual Basic)
 W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, przy użyciu bardziej tradycyjny imperatywnego (proceduralne).  
@@ -35,11 +35,11 @@ W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, p
 ## <a name="advantages-of-pure-functions"></a>Korzyści wynikające z czystych funkcji  
  Głównym powodem zaimplementować przekształceń funkcjonalnych jako czystych funkcji jest konfigurowalna czy czystych funkcji: oznacza to, niezależna i bezstanowe. Te cechy Przenieś szereg korzyści, w tym następujące czynności:  
   
--   Zwiększenia czytelności i łatwości utrzymania. To ponieważ każda funkcja zaprojektowano w celu wykonania określonego zadania znajduje się jego argumenty. Funkcja nie zależą od dowolnego stanu zewnętrznego.  
+- Zwiększenia czytelności i łatwości utrzymania. To ponieważ każda funkcja zaprojektowano w celu wykonania określonego zadania znajduje się jego argumenty. Funkcja nie zależą od dowolnego stanu zewnętrznego.  
   
--   Łatwiejsze opracowywanie reiterative. Ponieważ kod jest łatwiejszy do refaktoryzacji, zmiany projektu są często łatwiejsze do wdrożenia. Na przykład załóżmy, że skomplikowaną transformację zapisu, a następnie należy pamiętać, że jakiś kod jest powtarzany kilka razy w transformacji. Jeśli zrefaktoryzujesz przy użyciu czystej metody można wywołać czystego metodę momencie bez martwienia się o efekty uboczne.  
+- Łatwiejsze opracowywanie reiterative. Ponieważ kod jest łatwiejszy do refaktoryzacji, zmiany projektu są często łatwiejsze do wdrożenia. Na przykład załóżmy, że skomplikowaną transformację zapisu, a następnie należy pamiętać, że jakiś kod jest powtarzany kilka razy w transformacji. Jeśli zrefaktoryzujesz przy użyciu czystej metody można wywołać czystego metodę momencie bez martwienia się o efekty uboczne.  
   
--   Łatwiejsze testowanie i debugowanie. Ponieważ łatwiej można było przetestować czystych funkcji izolacji, można napisać kod testu, który wywołuje czystą funkcję typowe wartości, przypadki brzegowe prawidłowe i przypadki brzegowe nieprawidłowy.  
+- Łatwiejsze testowanie i debugowanie. Ponieważ łatwiej można było przetestować czystych funkcji izolacji, można napisać kod testu, który wywołuje czystą funkcję typowe wartości, przypadki brzegowe prawidłowe i przypadki brzegowe nieprawidłowy.  
   
 ## <a name="transitioning-for-oop-developers"></a>Przejście dla deweloperów Obiektowo  
  W tradycyjnym zorientowanym obiektowo (Obiektowo), większość programistów są przyzwyczajeni do programowania w stylu imperatywne/procedur. Aby przełączyć się do rozwoju w stylu funkcjonalności czystego, muszą oni wprowadzić przejścia w ich myślenia i ich podejście do programowania.  

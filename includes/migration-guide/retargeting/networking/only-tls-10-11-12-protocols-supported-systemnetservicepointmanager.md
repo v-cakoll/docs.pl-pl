@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8438341d6fcc5cf0415a2cae059bc76477a5c5e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640124"
 ---
 ### <a name="only-tls-10-11-and-12-protocols-supported-in-systemnetservicepointmanager-and-systemnetsecuritysslstream"></a>Tylko protokoły Tls 1.0, 1.1 i 1.2, obsługiwane w System.Net.ServicePointManager i elementu System.Net.Security.SslStream
 

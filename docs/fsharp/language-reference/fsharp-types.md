@@ -3,11 +3,11 @@ title: Typy F#
 description: Informacje o typach, które są używane w F# i w jaki sposób F# typów o nazwie i opisem.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934644"
 ---
 # <a name="f-types"></a>Typy F#
 

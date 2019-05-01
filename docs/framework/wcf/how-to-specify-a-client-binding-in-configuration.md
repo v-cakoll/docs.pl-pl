@@ -3,11 +3,11 @@ title: 'Instrukcje: Określanie powiązań klienta w konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
 ms.openlocfilehash: 633bb0feeb0f9354bd6ff8ee6637f123d3e3cbf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928937"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Instrukcje: Określanie powiązań klienta w konfiguracji
 W tym przykładzie utworzono aplikację konsolową w języku klienta do używania usługi Kalkulator i deklaratywne określono powiązania dla tego klienta w konfiguracji. Klient uzyskuje dostęp do `CalculatorService`, który implementuje `ICalculator` interfejsu i usługi oraz klienta, użyj <xref:System.ServiceModel.BasicHttpBinding> klasy.  

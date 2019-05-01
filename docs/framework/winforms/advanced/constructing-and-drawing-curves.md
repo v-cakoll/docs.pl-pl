@@ -7,11 +7,11 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
 ms.openlocfilehash: 92e7b1e8b4ce37db633b5dafe212a252b854d1af
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935450"
 ---
 # <a name="constructing-and-drawing-curves"></a>Konstruowanie i rysowanie krzywych
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] obsługuje kilka typów krzywych: wielokropek, łuki, krzywe kardynalne i krzywych Beziera. Elipsy jest definiowany przez jego prostokąt otaczający; Łuk jest częścią elipsę zdefiniowany przez kąt początkowy i kąta odchylenia. Krzywa kardynalna jest definiowany przez tablicę punkty i parametrem napięcie — krzywej płynnie przechodzi przez każdy punkt w tablicy, a parametr napięcie ma wpływ na sposób załamania krzywej. Krzywej Beziera jest definiowany przez dwa punkty końcowe i dwóch punktów kontrolnych, które krzywej nie przechodzi przez punkty kontrolne, ale punkty kontrolne mają wpływ na kierunek i zakrzywia zgodnie z krzywej przechodzi z jednym punktem końcowym do drugiego.  

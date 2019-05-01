@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
 ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945291"
 ---
 # <a name="join-clause-visual-basic"></a>Join — Klauzula (Visual Basic)
 Łączy dwie kolekcje w jedną kolekcję. Operacja łączenia jest oparta na zgodności kluczy i używa `Equals` operatora.  

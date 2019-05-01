@@ -3,11 +3,11 @@ title: Reliable Messaging Protocol w wersji 1,1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933994"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Reliable Messaging Protocol w wersji 1,1
 W tym temacie omówiono szczegóły dotyczące implementacji usług Windows Communication Foundation (WCF) dla WS-ReliableMessaging protokołu lutego 2007 (w wersji 1.1) niezbędne do współpracy przy użyciu protokołu HTTP. Usługi WCF zgodna ze specyfikacją WS-ReliableMessaging, ograniczenia i wyjaśnienia szczegółowo opisane w tym temacie. Należy pamiętać, protokół WS-ReliableMessaging w wersji 1.1 jest implementowany, począwszy od [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
@@ -427,7 +427,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="one-way-non-addressable-initiator"></a>Jednokierunkowa, nie mogą być adresowane inicjatora  
   
-#### <a name="binding"></a>Powiązanie  
+#### <a name="binding"></a>Wiązanie  
  Usługi WCF zapewnia wymiany komunikatów jednokierunkową przy użyciu jednej sekwencji przez jeden kanał HTTP. Usługi WCF używa żądania HTTP do przesłania wszystkie komunikaty z inicjatora do odpowiedzi obiektu odpowiadającego w trybie i HTTP do przesłania wszystkie komunikaty z obiektu odpowiadającego w trybie do inicjatora.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence — Exchange  
@@ -444,7 +444,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="one-way-addressable-initiator"></a>Jednym ze sposobów, mogą być adresowane inicjatora  
   
-#### <a name="binding"></a>Powiązanie  
+#### <a name="binding"></a>Wiązanie  
  WCF zapewnia wymiany komunikatów jednokierunkową przy użyciu jednej sekwencji przez jedną dla ruchu przychodzącego i jeden wychodzących kanał HTTP. WCF używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence — Exchange  
@@ -452,7 +452,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="duplex-addressable-initiator"></a>Duplex, Addressable Initiator  
   
-#### <a name="binding"></a>Powiązanie  
+#### <a name="binding"></a>Wiązanie  
  Usługi WCF zapewnia wymiany komunikatów pełni asynchronicznego, dwukierunkowej, używając dwóch sekwencji przez jedną dla ruchu przychodzącego i jeden wychodzących kanał HTTP. Niepodstawowe tej wymiany komunikatów `Request/Reply`, `Addressable` wymiany komunikatów inicjatora w sposób ograniczony. WCF używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence — Exchange  
@@ -467,7 +467,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>"Żądanie-odpowiedź" i inicjatorze jednokierunkowe, nie mogą być adresowane  
   
-#### <a name="binding"></a>Powiązanie  
+#### <a name="binding"></a>Wiązanie  
  Usługi WCF zapewnia jednokierunkowe i wymiany komunikatów "żądanie-odpowiedź" za pomocą dwóch sekwencji jednego kanał HTTP. Usługi WCF używa żądania HTTP do przesłania wszystkie komunikaty z inicjatora do odpowiedzi obiektu odpowiadającego w trybie i HTTP do przesłania wszystkie komunikaty z obiektu odpowiadającego w trybie do inicjatora.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence — Exchange  
@@ -504,7 +504,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="requestreply-addressable-initiator"></a>Żądanie/nietypizowana odpowiedź, mogą być adresowane inicjatora  
   
-#### <a name="binding"></a>Powiązanie  
+#### <a name="binding"></a>Wiązanie  
  Usługi WCF zapewnia wymiany komunikatów "żądanie-odpowiedź" za pomocą dwóch sekwencji przez jedną dla ruchu przychodzącego i jeden wychodzących kanał HTTP. Niepodstawowe tej wymiany komunikatów `Duplex, Addressable` wymiany komunikatów inicjatora w sposób ograniczony. WCF używa żądania HTTP do przekazywania wszystkich wiadomości. Wszystkie odpowiedzi HTTP ma pustą treść i kod stanu HTTP 202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence — Exchange  

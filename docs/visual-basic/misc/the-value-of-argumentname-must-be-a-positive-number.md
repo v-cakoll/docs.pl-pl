@@ -5,11 +5,11 @@ f1_keywords:
 - vbrApplicationLog_NegativeNumber
 ms.assetid: 597c412c-499e-49d2-b656-af2d90c292a5
 ms.openlocfilehash: 1f401068a7344be8c0d1da10e9d64005ed7e50ee
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942678"
 ---
 # <a name="the-value-of-argumentname-must-be-a-positive-number"></a>Wartość \<argumentname > musi być liczbą dodatnią
 Wartość <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> właściwość musi być większa od zera.  
@@ -18,7 +18,7 @@ Wartość <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSp
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Ustaw <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> właściwości na wartość dodatnią.  
+- Ustaw <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> właściwości na wartość dodatnią.  
   
 ## <a name="see-also"></a>Zobacz także
 

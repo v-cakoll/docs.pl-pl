@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
 ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779275"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier krzywe w GDI +
 Krzywej Beziera jest określony przez cztery punkty krzywej: dwa punkty końcowe (p1 i p2) i punkty kontrolne dwóch (c1 i c2). Krzywa rozpoczyna się od p1 i kończy się na p2. Krzywa nie przechodzi przez punkty kontrolne, ale punktów kontrolnych pełnić rolę pól, ściągając krzywej w niektórych kierunkach i wywieranie wpływu na sposób, w jaki załamania krzywej. Poniższa ilustracja przedstawia krzywej Beziera, wraz z jej punktów końcowych i punkty kontrolne.  

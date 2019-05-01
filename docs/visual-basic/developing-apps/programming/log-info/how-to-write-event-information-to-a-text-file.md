@@ -7,11 +7,11 @@ helpviewer_keywords:
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934335"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Instrukcje: Zapisywanie informacji zdarzeniach w pliku tekstowym (Visual Basic)
 Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informacji o zdarzeniach występujących w aplikacji. W tym przykładzie pokazano, jak używać `My.Application.Log.WriteEntry` metodę, aby rejestrować informacje śledzenia do pliku dziennika.  
@@ -24,11 +24,11 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
   
      Jeśli nie ma żadnego pliku app.config:  
   
-    1.  Na **projektu** menu, wybierz **Dodaj nowy element**.  
+    1. Na **projektu** menu, wybierz **Dodaj nowy element**.  
   
-    2.  Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
+    2. Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
   
-    3.  Kliknij przycisk **Dodaj**.  
+    3. Kliknij przycisk **Dodaj**.  
   
 2. Znajdź `<listeners>` sekcji w pliku konfiguracyjnym aplikacji.  
   
@@ -61,7 +61,7 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
   
 ### <a name="to-write-event-information-to-the-file-log"></a>Można zapisać informacji o zdarzeniach do pliku dziennika  
   
--   Użyj `My.Application.Log.WriteEntry` lub `My.Application.Log.WriteException` metody, aby zapisać informacje o dzienniku plików. Aby uzyskać więcej informacji, zobacz [jak: Zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) i [jak: Rejestrowania wyjątków](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+- Użyj `My.Application.Log.WriteEntry` lub `My.Application.Log.WriteException` metody, aby zapisać informacje o dzienniku plików. Aby uzyskać więcej informacji, zobacz [jak: Zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) i [jak: Rejestrowania wyjątków](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
   
      Po skonfigurowaniu odbiornika plik dziennika dla zestawu, odbiera wszystkie komunikaty powodujące `My.Application.Log` zapisuje z tego zestawu.  
   

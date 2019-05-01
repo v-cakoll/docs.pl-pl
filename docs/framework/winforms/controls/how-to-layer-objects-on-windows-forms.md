@@ -13,11 +13,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941079"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Instrukcje: tworzenie warstw obiektów na formularzach systemu Windows
 Podczas tworzenia interfejsu użytkownika złożonych lub praca wielu dokumentów (MDI) interfejsu często warto warstwy kontroli i formularze podrzędne, aby utworzyć bardziej złożone interfejsy użytkownika (UI). Aby przenieść i śledzenie kontrolek i systemu windows w ramach grupy, manipulować ich porządek osi z. *Porządek* jest warstwy visual kontrolek w formularzu wzdłuż osi z formularza (na głębokości). Okno w górnej części porządek nakłada się na inne okna. Inne okna nakładać się na okna w dolnej części porządku osi z.  
@@ -33,7 +33,7 @@ Podczas tworzenia interfejsu użytkownika złożonych lub praca wielu dokumentó
   
 ### <a name="to-layer-controls-programmatically"></a>Aby programowo warstwy formantów  
   
--   Użyj <xref:System.Windows.Forms.Control.BringToFront%2A> i <xref:System.Windows.Forms.Control.SendToBack%2A> metody do manipulowania porządek kontrolki.  
+- Użyj <xref:System.Windows.Forms.Control.BringToFront%2A> i <xref:System.Windows.Forms.Control.SendToBack%2A> metody do manipulowania porządek kontrolki.  
   
      Na przykład jeśli <xref:System.Windows.Forms.TextBox> kontroli `txtFirstName`, jest poniżej innej kontrolki, a chcesz ma go na początku, użyj następującego kodu:  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
 ms.openlocfilehash: b687f83562b3a6f9dd5993f2af1c55ffe6dc8042
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932512"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox — Formant (Formularze systemu Windows)
 Windows Forms, pola tekstowe są używane do pobrać dane wejściowe od użytkownika lub do wyświetlania tekstu. `TextBox` Kontroli jest zazwyczaj używana do edycji tekstu, mimo że można również on tylko do odczytu. Pola tekstowe można wyświetlić wiele wierszy, zawijanie tekstu do rozmiaru formantu i dodać podstawowe formatowanie. `TextBox` Kontrolka zezwala na jeden format tekstu wyświetlane lub wprowadzony w formancie.  

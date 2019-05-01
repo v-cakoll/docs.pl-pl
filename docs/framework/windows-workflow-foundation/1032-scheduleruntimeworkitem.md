@@ -1,29 +1,29 @@
 ---
-title: 1032 - ScheduleRuntimeWorkItem
+title: 1032 — ScheduleRuntimeWorkItem
 ms.date: 03/30/2017
 ms.assetid: 54688101-becf-42f3-80ca-f53a7b527620
 ms.openlocfilehash: 505b852d54e256b2c2bfff8d90944dd4e993e0c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924868"
 ---
-# <a name="1032---scheduleruntimeworkitem"></a>1032 - ScheduleRuntimeWorkItem
+# <a name="1032---scheduleruntimeworkitem"></a>1032 — ScheduleRuntimeWorkItem
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|1032|  
-|Słowa kluczowe|WFRuntime|  
+|Identyfikator|1032|  
+|słowa kluczowe|WFRuntime|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- Wskazuje, że zaplanowano RuntimeWorkItem.  
+ Wskazuje, że RuntimeWorkItem została zaplanowana.  
   
 ## <a name="message"></a>Komunikat  
- Zaplanowano element roboczy środowiska wykonawczego dla działania %1, nazwa wyświetlana: %2, identyfikator wystąpienia: '%3'.  
+ Element roboczy środowiska uruchomieniowego została zaplanowana dla działania "%1", DisplayName: "%2", InstanceId: "%3".  
   
 ## <a name="details"></a>Szczegóły  
   
@@ -31,5 +31,5 @@ ms.locfileid: "33510250"
 |--------------------|--------------------|-----------------|  
 |Działanie|xs:String|Nazwa typu działania.|  
 |Nazwa wyświetlana|xs:String|Nazwa wyświetlana działania.|  
-|Identyfikator wystąpienia|xs:String|Identyfikator wystąpienia działania.|  
-|Domeny aplikacji|xs:String|Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.|
+|InstanceId|xs:String|Identyfikator wystąpienia działania.|  
+|AppDomain|xs:String|Ciąg zwracany przez AppDomain.CurrentDomain.FriendlyName.|

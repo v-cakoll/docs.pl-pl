@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923282"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań
 Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestandardowych rozszerzeń, które Inspekcja i sprawdź poprawność konfiguracji usługi lub modyfikowanie zachowania w czasie wykonywania w aplikacji klienta i usługi Windows Communication Foundation (WCF). W tym temacie opisano interfejsów zachowanie, jak je wdrożyć i jak je dodać do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo, albo w pliku konfiguracji. Aby uzyskać więcej informacji na temat za pomocą zachowań dostarczane przez system, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) i [Określanie zachowania środowiska uruchomieniowego klienta](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -20,11 +20,11 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
 ### <a name="behavior-methods"></a>Zachowanie metody  
  Ma wszystkie zachowania `AddBindingParameters` metody `ApplyDispatchBehavior` metody `Validate` metody i `ApplyClientBehavior` metody z jednym wyjątkiem: Ponieważ <xref:System.ServiceModel.Description.IServiceBehavior> nie można wykonać na kliencie nie implementuje on `ApplyClientBehavior`.  
   
--   Użyj `AddBindingParameters` metodę, aby zmodyfikować lub dodać niestandardowe obiekty na kolekcję powiązań niestandardowych mającej dostęp do własnego użytku, gdy środowisko uruchomieniowe jest konstruowany. Na przykład, to w jaki sposób są określone wymagania dotyczące ochrony, który mają wpływ na sposób kanał został opracowany, ale nie są znane przez dewelopera kanału.  
+- Użyj `AddBindingParameters` metodę, aby zmodyfikować lub dodać niestandardowe obiekty na kolekcję powiązań niestandardowych mającej dostęp do własnego użytku, gdy środowisko uruchomieniowe jest konstruowany. Na przykład, to w jaki sposób są określone wymagania dotyczące ochrony, który mają wpływ na sposób kanał został opracowany, ale nie są znane przez dewelopera kanału.  
   
--   Użyj `Validate` metody badania opis drzewa i odpowiedni obiekt środowiska uruchomieniowego, aby upewnić się, że jest zgodny z pewne określone kryteria.  
+- Użyj `Validate` metody badania opis drzewa i odpowiedni obiekt środowiska uruchomieniowego, aby upewnić się, że jest zgodny z pewne określone kryteria.  
   
--   Użyj `ApplyDispatchBehavior` i `ApplyClientBehavior` metody do sprawdzenia opis drzewa i modyfikowania środowiska uruchomieniowego dla określonego zakresu na usługi lub klienta. Można także wstawić także obiekty rozszerzeń.  
+- Użyj `ApplyDispatchBehavior` i `ApplyClientBehavior` metody do sprawdzenia opis drzewa i modyfikowania środowiska uruchomieniowego dla określonego zakresu na usługi lub klienta. Można także wstawić także obiekty rozszerzeń.  
   
     > [!NOTE]
     >  Drzewo opis znajduje się w tych metod, ale jest do zbadania tylko. W przypadku modyfikowania drzewa opis zachowanie jest niezdefiniowane.  
@@ -38,13 +38,13 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
   
  Istnieją cztery rodzaje zachowań w programie WCF:  
   
--   Usługa zachowania (<xref:System.ServiceModel.Description.IServiceBehavior> typy) umożliwiają dostosowanie środowiska uruchomieniowego całej usługi, w tym <xref:System.ServiceModel.ServiceHostBase>.  
+- Usługa zachowania (<xref:System.ServiceModel.Description.IServiceBehavior> typy) umożliwiają dostosowanie środowiska uruchomieniowego całej usługi, w tym <xref:System.ServiceModel.ServiceHostBase>.  
   
--   Zachowań punktu końcowego (<xref:System.ServiceModel.Description.IEndpointBehavior> typy) umożliwiają dostosowanie punkty końcowe usługi i ich skojarzone <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> obiektów.  
+- Zachowań punktu końcowego (<xref:System.ServiceModel.Description.IEndpointBehavior> typy) umożliwiają dostosowanie punkty końcowe usługi i ich skojarzone <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> obiektów.  
   
--   Kontrakt zachowania (<xref:System.ServiceModel.Description.IContractBehavior> typy) umożliwiają dostosowanie zarówno <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klas w aplikacji klienta i usługi, odpowiednio.  
+- Kontrakt zachowania (<xref:System.ServiceModel.Description.IContractBehavior> typy) umożliwiają dostosowanie zarówno <xref:System.ServiceModel.Dispatcher.ClientRuntime> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klas w aplikacji klienta i usługi, odpowiednio.  
   
--   Operacja zachowania (<xref:System.ServiceModel.Description.IOperationBehavior> typy) umożliwiają dostosowanie <xref:System.ServiceModel.Dispatcher.ClientOperation> i <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy ponownie na kliencie i usługi.  
+- Operacja zachowania (<xref:System.ServiceModel.Description.IOperationBehavior> typy) umożliwiają dostosowanie <xref:System.ServiceModel.Dispatcher.ClientOperation> i <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy ponownie na kliencie i usługi.  
   
  Można dodać te zachowania do różnych obiektów, opis, implementując atrybuty niestandardowe, za pomocą plików konfiguracji aplikacji, lub bezpośrednio przez dodanie ich do kolekcji zachowań w obiekcie odpowiedni opis. Muszą jednak być dodane do opisu usługi lub obiektu opis punktu końcowego usługi przed wywołaniem <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> na <xref:System.ServiceModel.ServiceHost> lub <xref:System.ServiceModel.ChannelFactory%601>.  
   

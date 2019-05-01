@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
 ms.openlocfilehash: 775c6a297047c7a0e16db091f9a22686fdb01efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928885"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Instrukcje: Określanie typu poświadczeń klienta
 Po ustawieniu trybu zabezpieczeń (transportu lub wiadomości), istnieje możliwość ustawienia typu poświadczeń klienta. Ta właściwość określa, jakiego typu poświadczeń klienta należy podać usługi na potrzeby uwierzytelniania. Aby uzyskać więcej informacji na temat ustawiania trybu zabezpieczeń (niezbędne krok przed ustawieniem typu poświadczeń klienta), zobacz [jak: Ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  

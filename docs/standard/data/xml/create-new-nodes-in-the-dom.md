@@ -6,36 +6,36 @@ ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 390ffa1dd9f2e76372b0e4fcbf2916918b64d748
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934605"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Tworzenie nowych węzłów w modelu DOM
 <xref:System.Xml.XmlDocument> Ma metody create, dla wszystkich typów węzłów. Podaj metody o nazwie, gdy jest to wymagane, a zawartość lub inne parametry te węzły, które mają zawartość (na przykład węzeł tekstowy) i węzeł jest tworzony. Dostępne są następujące metody: te, które wymagają nazwy i kilka innych parametrów, wprowadzić, aby utworzyć odpowiedni węzeł.  
   
--   <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
+- <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateComment%2A>  
+- <xref:System.Xml.XmlDocument.CreateComment%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateDocumentFragment%2A>  
+- <xref:System.Xml.XmlDocument.CreateDocumentFragment%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateDocumentType%2A>  
+- <xref:System.Xml.XmlDocument.CreateDocumentType%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateElement%2A>  
+- <xref:System.Xml.XmlDocument.CreateElement%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateNode%2A>  
+- <xref:System.Xml.XmlDocument.CreateNode%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateProcessingInstruction%2A>  
+- <xref:System.Xml.XmlDocument.CreateProcessingInstruction%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateSignificantWhitespace%2A>  
+- <xref:System.Xml.XmlDocument.CreateSignificantWhitespace%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateTextNode%2A>  
+- <xref:System.Xml.XmlDocument.CreateTextNode%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateWhitespace%2A>  
+- <xref:System.Xml.XmlDocument.CreateWhitespace%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateXmlDeclaration%2A>  
+- <xref:System.Xml.XmlDocument.CreateXmlDeclaration%2A>  
   
  Inne typy węzłów mają wymagania więcej niż tylko dostarczanie danych do parametrów.  
   

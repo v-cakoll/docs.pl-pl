@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Kontrola serializacji w klasach pochodnych'
+title: 'Instrukcje: kontrola serializacji klas pochodnych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922515"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Instrukcje: Kontrola serializacji w klasach pochodnych
+# <a name="how-to-control-serialization-of-derived-classes"></a>Instrukcje: kontrola serializacji klas pochodnych
 Za pomocą **elementu XmlElementAttribute** atrybutu, aby zmienić nazwę elementu XML nie jest jedynym sposobem dostosować serializacji obiektu. Można również dostosować strumień XML wynikających z istniejącej klasy, a jeśli <xref:System.Xml.Serialization.XmlSerializer> wystąpienia jak do serializacji nowej klasy.  
   
  Na przykład, biorąc pod uwagę `Book` klasy, można dziedziczyć po nim i Utwórz `ExpandedBook` klasy, która ma kilka innych właściwości. Jednakże, należy wydać **XmlSerializer** do zaakceptowania typu pochodnego podczas serializacji lub deserializacji. Można to zrobić, tworząc <xref:System.Xml.Serialization.XmlElementAttribute> wystąpienia oraz ustawienie jego **typu** właściwości na typ klasy pochodnej. Dodaj **elementu XmlElementAttribute** do <xref:System.Xml.Serialization.XmlAttributes> wystąpienia. Następnie dodaj **atrybutów XmlAttributes** do <xref:System.Xml.Serialization.XmlAttributeOverrides> wystąpienie określający typ zastępowaniu oraz nazwę składowej, która akceptuje klasę pochodną. Jest to pokazane w poniższym przykładzie.  

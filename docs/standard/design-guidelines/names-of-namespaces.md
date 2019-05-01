@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940988"
 ---
 # <a name="names-of-namespaces"></a>Nazwy przestrzeni nazw
 Jako przy użyciu innych zasadach nazywania celem podczas nadawania nazw przestrzeni nazw jest utworzenie przejrzystości wystarczające do programisty należy od razu wiedzieć, co to jest prawdopodobnie zawartości przestrzeni nazw przy użyciu platformy. Następujący szablon określa zasady nazewnictwa przestrzeni nazw:  
@@ -49,7 +49,7 @@ Jako przy użyciu innych zasadach nazywania celem podczas nadawania nazw przestr
   
  Istnieją konkretne wskazówki dotyczące unikanie konflikt nazw typu różne kategorie przestrzeni nazw.  
   
--   **Przestrzenie nazw modelu aplikacji**  
+- **Przestrzenie nazw modelu aplikacji**  
   
      Przestrzenie nazw należących do modelu jednej aplikacji są bardzo często używane ze sobą, ale prawie nigdy nie są one używane przestrzenie nazw innych modeli aplikacji. Na przykład <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw jest bardzo rzadko używana razem z <xref:System.Web.UI?displayProperty=nameWithType> przestrzeni nazw. Oto lista aplikacji dobrze znanego modelu przestrzeni nazw grup:  
   
@@ -60,11 +60,11 @@ Jako przy użyciu innych zasadach nazywania celem podczas nadawania nazw przestr
   
      Na przykład, należy dodawać typu o nazwie `Page` do <xref:System.Web.UI.Adapters?displayProperty=nameWithType> przestrzeni nazw, ponieważ <xref:System.Web.UI?displayProperty=nameWithType> przestrzeń nazw zawiera już typ o nazwie `Page`.  
   
--   **Przestrzenie nazw infrastruktury**  
+- **Przestrzenie nazw infrastruktury**  
   
      Ta grupa zawiera przestrzenie nazw, które rzadko są importowane podczas tworzenia typowych aplikacji. Na przykład `.Design` przestrzenie nazw są używane głównie podczas tworzenia programowania narzędzi. Unikanie konfliktów z typami w tych obszarach nazw nie jest krytyczny.  
   
--   **Przestrzenie nazw Core**  
+- **Przestrzenie nazw Core**  
   
      Przestrzenie nazw Core obejmuje wszystkie `System` przestrzeni nazw, z wyłączeniem przestrzeni nazw modeli aplikacji i infrastruktury przestrzeni nazw. Przestrzenie nazw Core należą między innymi, `System`, `System.IO`, `System.Xml`, i `System.Net`.  
   
@@ -72,7 +72,7 @@ Jako przy użyciu innych zasadach nazywania celem podczas nadawania nazw przestr
   
      Na przykład nie wolno używać `Stream` jako nazwy typu. Spowodowałoby to konflikt z <xref:System.IO.Stream?displayProperty=nameWithType>, bardzo często używane typu.  
   
--   **Technologia przestrzeni nazw grup**  
+- **Technologia przestrzeni nazw grup**  
   
      Ta kategoria zawiera wszystkie przestrzenie nazw przy użyciu tego samego pierwsze dwa węzły przestrzeni nazw `(<Company>.<Technology>*`), takie jak `Microsoft.Build.Utilities` i `Microsoft.Build.Tasks`. Należy pamiętać, że typy należące do pojedynczego technologia nie kolidują ze sobą.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
 ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941193"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Instrukcje: implementowanie niestandardowego elementu ToolStripRenderer
 Można dostosować wygląd <xref:System.Windows.Forms.ToolStrip> kontroli poprzez implementację klasy, która pochodzi od klasy <xref:System.Windows.Forms.ToolStripRenderer>. Daje to możliwość tworzenia wrażenie, że różni się od wyglądem, pod warunkiem <xref:System.Windows.Forms.ToolStripProfessionalRenderer> i <xref:System.Windows.Forms.ToolStripSystemRenderer> klasy.  
@@ -23,11 +23,11 @@ Można dostosować wygląd <xref:System.Windows.Forms.ToolStrip> kontroli poprze
   
  `GridStripRenderer` Klasy dostosowuje trzy aspekty `GridStrip` wygląd formantu:  
   
--   `GridStrip` Obramowanie  
+- `GridStrip` Obramowanie  
   
--   <xref:System.Windows.Forms.ToolStripButton> Obramowanie  
+- <xref:System.Windows.Forms.ToolStripButton> Obramowanie  
   
--   <xref:System.Windows.Forms.ToolStripButton> Obraz  
+- <xref:System.Windows.Forms.ToolStripButton> Obraz  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -35,7 +35,7 @@ Można dostosować wygląd <xref:System.Windows.Forms.ToolStrip> kontroli poprze
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
+- Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

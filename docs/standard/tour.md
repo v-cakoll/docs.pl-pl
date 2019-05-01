@@ -7,11 +7,11 @@ ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936308"
 ---
 # <a name="tour-of-net"></a>Przewodnik po środowisku .NET
 
@@ -111,7 +111,7 @@ Programowanie asynchroniczne jest najwyższej jakości pojęcie w ramach platfor
 
 Aby dowiedzieć się więcej na temat programowania asynchronicznego w .NET, zacznij od [Przegląd Async](async.md) tematu.
 
-## <a name="language-integrated-query-linq"></a>Zapytanie o języku zintegrowanym (LINQ)
+## <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
 LINQ to zaawansowany zestaw funkcji języka C# i VB, które umożliwiają pisanie prostego, deklaratywnego kod działających na danych. Dane mogą być w wielu formularzach (np. obiektów w pamięci, bazie danych SQL lub dokumentu XML), ale tworzonego zazwyczaj kodu LINQ nie różnią się od źródła danych.
 

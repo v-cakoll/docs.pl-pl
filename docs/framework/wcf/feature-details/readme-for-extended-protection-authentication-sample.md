@@ -6,8 +6,8 @@ ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946669"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Plik ReadMe dla uwierzytelniania na potrzeby zabezpieczeń rozszerzonych — przykład
 Rozszerzona ochrona jest inicjatywy zabezpieczeń, aby zapewnić ochronę przed ataków typu man-in--middle (MITM) ataków, w których osoba atakująca ("man-in--middle") przechwytuje poświadczenia klienta i są one używane do dostępu do bezpiecznych zasobów na serwerze zamierzonego klienta.  
@@ -27,9 +27,9 @@ Rozszerzona ochrona jest inicjatywy zabezpieczeń, aby zapewnić ochronę przed 
   
 4. Ten przykładowy skrypt wymaga klienta do nawiązania bezpiecznego kanału z serwerem i dlatego wymaga obecności certyfikatu serwera, które mogą być instalowane z Menedżera usług Internet Information Services (IIS).  
   
-    1.  Otwórz Menedżera usług IIS -> certyfikatów serwera (na karcie Widok funkcji).  
+    1. Otwórz Menedżera usług IIS -> certyfikatów serwera (na karcie Widok funkcji).  
   
-    2.  Na potrzeby testowania w tym przykładzie, można utworzyć certyfikatu z podpisem własnym. (Jeśli nie chcesz, aby program Internet Explorer będzie wyświetlany monit o certyfikat nie jest bezpieczne, można zainstalować go w magazynie zaufanego certyfikatu głównego urzędu).  
+    2. Na potrzeby testowania w tym przykładzie, można utworzyć certyfikatu z podpisem własnym. (Jeśli nie chcesz, aby program Internet Explorer będzie wyświetlany monit o certyfikat nie jest bezpieczne, można zainstalować go w magazynie zaufanego certyfikatu głównego urzędu).  
   
 5. Przejdź do okienka akcji dla domyślnej witryny sieci Web. Kliknij przycisk Edytuj lokacji -> powiązania. Dodaj HTTPS jako typ, jeśli nie jest jeszcze obecne, numer portu 443 i przypisz certyfikat SSL utworzony w kroku powyżej.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
 ms.openlocfilehash: 3b35fcfe2a713b18b25c30690ef012848898b8e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772206"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>Przykłady składni zapytania oparte na metodzie: Projekcja (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Select%2A> i <xref:System.Linq.Enumerable.SelectMany%2A> metod do wykonywania zapytań <xref:System.Data.DataSet> za pomocą składni zapytania oparte na metodzie.  

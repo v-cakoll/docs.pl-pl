@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
 ms.openlocfilehash: 8a8265873e4287e1455659aa4d9fae7e1d570a00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932850"
 ---
 # <a name="using-ws-atomictransaction"></a>Używanie elementu WS-AtomicTransaction
 WS-AtomicTransaction (WS-AT) jest protokołem interoperacyjne transakcji. Umożliwia ona przepływu transakcji rozproszonych za pomocą wiadomości usługi sieci Web i koordynacji w sposób interoperacyjny między infrastruktury heterogenicznych transakcji. WS-AT korzysta z protokołu dwufazowego, można dostarczać atomic wyniku między aplikacji rozproszonych, menedżerowie transakcji i menedżerów zasobów.  
@@ -20,9 +20,9 @@ WS-AtomicTransaction (WS-AT) jest protokołem interoperacyjne transakcji. Umożl
   
  Wybór protokołu czynników:  
   
--   Format nagłówków wiadomości, używany do przepływu transakcji od klienta do serwera.  
+- Format nagłówków wiadomości, używany do przepływu transakcji od klienta do serwera.  
   
--   Protokół sieciowy używany do uruchomienia Protokół dwufazowego Menedżera transakcji klienta i serwera transakcji, aby rozpoznać wyniku transakcji.  
+- Protokół sieciowy używany do uruchomienia Protokół dwufazowego Menedżera transakcji klienta i serwera transakcji, aby rozpoznać wyniku transakcji.  
   
  Jeśli serwera i klienta są zapisywane przy użyciu usługi WCF, nie musisz używać WS-AT. Zamiast tego można użyć ustawień domyślnych `NetTcpBinding` z `TransactionFlow` włączony atrybut, który będzie używany `OleTransactions` zamiast tego protokołu. Aby uzyskać więcej informacji, zobacz [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). W przeciwnym razie przepływają transakcji usługi sieci Web oparta na technologii innych firm, należy użyć WS-AT.  
   

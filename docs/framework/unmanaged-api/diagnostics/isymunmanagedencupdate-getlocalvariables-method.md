@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16e91a0c748e5b148e79dc73cf213b03c68c5021
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939727"
 ---
-# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="696c4-102">ISymUnmanagedENCUpdate::GetLocalVariables — Metoda</span><span class="sxs-lookup"><span data-stu-id="696c4-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
-<span data-ttu-id="696c4-103">Pobiera zmienne lokalne.</span><span class="sxs-lookup"><span data-stu-id="696c4-103">Gets the local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="58fe0-102">ISymUnmanagedENCUpdate::GetLocalVariables — Metoda</span><span class="sxs-lookup"><span data-stu-id="58fe0-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
+<span data-ttu-id="58fe0-103">Pobiera zmienne lokalne.</span><span class="sxs-lookup"><span data-stu-id="58fe0-103">Gets the local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="696c4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="696c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58fe0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="58fe0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalVariables(  
@@ -38,25 +38,25 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="696c4-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="696c4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="58fe0-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="58fe0-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="696c4-106">[in] Token metadanych metody.</span><span class="sxs-lookup"><span data-stu-id="696c4-106">[in] The metadata token of the method.</span></span>  
+ <span data-ttu-id="58fe0-106">[in] Token metadanych metody.</span><span class="sxs-lookup"><span data-stu-id="58fe0-106">[in] The metadata token of the method.</span></span>  
   
  `cLocals`  
- <span data-ttu-id="696c4-107">[in] A `ULONG` oznacza rozmiar `rgLocals` parametru.</span><span class="sxs-lookup"><span data-stu-id="696c4-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
+ <span data-ttu-id="58fe0-107">[in] A `ULONG` oznacza rozmiar `rgLocals` parametru.</span><span class="sxs-lookup"><span data-stu-id="58fe0-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
   
  `rgLocals`  
- <span data-ttu-id="696c4-108">[out] Tablica zwrócona [isymunmanagedvariable —](isymunmanagedvariable-interface.md) wystąpień.</span><span class="sxs-lookup"><span data-stu-id="696c4-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
+ <span data-ttu-id="58fe0-108">[out] Tablica zwrócona [isymunmanagedvariable —](isymunmanagedvariable-interface.md) wystąpień.</span><span class="sxs-lookup"><span data-stu-id="58fe0-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="696c4-109">[out] Wskaźnik do `ULONG` wielkości, która otrzymuje `rgLocals` buforu, muszą zawierać zmienne lokalne.</span><span class="sxs-lookup"><span data-stu-id="696c4-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
+ <span data-ttu-id="58fe0-109">[out] Wskaźnik do `ULONG` wielkości, która otrzymuje `rgLocals` buforu, muszą zawierać zmienne lokalne.</span><span class="sxs-lookup"><span data-stu-id="58fe0-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="696c4-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="696c4-110">Return Value</span></span>  
- <span data-ttu-id="696c4-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="696c4-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="58fe0-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="58fe0-110">Return Value</span></span>  
+ <span data-ttu-id="58fe0-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="58fe0-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="696c4-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="696c4-112">Requirements</span></span>  
- <span data-ttu-id="696c4-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="696c4-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58fe0-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="58fe0-112">Requirements</span></span>  
+ <span data-ttu-id="58fe0-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="58fe0-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="696c4-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="696c4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58fe0-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="58fe0-114">See also</span></span>
 
-- [<span data-ttu-id="696c4-115">ISymUnmanagedENCUpdate, interfejs</span><span class="sxs-lookup"><span data-stu-id="696c4-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="58fe0-115">ISymUnmanagedENCUpdate, interfejs</span><span class="sxs-lookup"><span data-stu-id="58fe0-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

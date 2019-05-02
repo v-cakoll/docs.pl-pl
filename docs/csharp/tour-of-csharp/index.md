@@ -54,21 +54,21 @@ Aby dowiedzieć się więcej o języku C#,  zapoznaj się z poniższymi tematami
 * [Struktura programu](program-structure.md)
   - Dowiedz się, podstawowych pojęć organizacji w C# języka: ***programy***, ***przestrzenie nazw***, ***typy***, ***członków***i ***zestawy***.
 * [Typy i zmienne](types-and-variables.md)
-  - Dowiedz się więcej o ***typy wartości***, ***typy odwołań***, i ***zmienne*** w C# języka.
+  - Dowiedz się więcej o ***typach wartości***, ***typach referencyjnych***, i ***zmiennych*** w języku C#.
 * [Wyrażenia](expressions.md)
-  - ***Wyrażenia*** są konstruowane na podstawie ***operandów*** i ***operatorów***. Wyrażenia dają wartość.
+  - ***Wyrażenia*** są tworzone przy użyciu ***operandów*** (argumentów operacji) i ***operatorów***. Wyrażenia zwracają wartość.
 * [Instrukcje](statements.md)
-  - Możesz użyć ***instrukcji*** do działania programu express.
+  - ***Instrukcje*** służą do przekazywania programowi informacji o tym, co ma on wykonać.
 * [Klasy i obiekty](classes-and-objects.md)
-  - ***Klasy*** są najbardziej podstawowe języka C# dla typów. ***Obiekty*** są wystąpieniami klasy. Klasy są tworzone przy użyciu ***członków***, które są uwzględniane w tym temacie.
+  - ***Klasy*** są najbardziej podstawowym typem w języku C#. ***Obiekty*** są wystąpieniami klasy. Klasy są tworzone przy użyciu ***składowych***, które także opisano w tym temacie.
 * [Struktury](structs.md)
-  - ***Struktury*** są struktur danych, które w przeciwieństwie do klasy, są typami wartości.
+  - ***Struktury*** to struktury danych, które (w przeciwieństwie do klas) są typami wartości.
 * [Tablice](arrays.md)
-  - ***Tablicy*** to struktura danych, która zawiera szereg zmiennych, które są dostępne za pośrednictwem obliczanej indeksów.
+  - ***Tablica*** to struktura danych zawierająca pewną liczbę zmiennych, do których dostęp jest uzyskiwany za pomocą obliczonych indeksów.
 * [Interfejsy](interfaces.md)
   - ***Interfejsu*** definiuje kontrakt, który może być implementowany przez klas i struktur. Interfejs może zawierać metody, właściwości, zdarzeń i indeksatorów. Interfejs nie zawiera implementacji członków definiuje — jedynie określa elementy członkowskie, które muszą być dostarczane przez klasy lub struktury, które implementują interfejs.
 * [Wyliczenia](enums.md)
-  - ***Typu wyliczeniowego*** jest typem wartości odrębnych z szeregu nazwanych stałych.
+  - ***Typ wyliczeniowy*** to odrębny typ wartości zawierający zestaw nazwanych stałych.
 * [Delegaty](delegates.md)
   - A ***typ delegowany*** reprezentuje odwołania do metod z określonego parametru listy i typ zwracany. Delegatów można umożliwić traktować metod jako jednostki, które mogą być przypisane do zmiennych i przekazywane jako parametry. Delegaty są podobne do koncepcji wskaźników funkcji, w przeciwieństwie do innych języków, ale w przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo i bezpieczny typowo.
 * [Atrybuty](attributes.md)

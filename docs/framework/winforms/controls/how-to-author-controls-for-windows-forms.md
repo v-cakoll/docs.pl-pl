@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8adc9644f987166729c43b79a6891960978341dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612726"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows
 Formant reprezentuje graficzny link między użytkownikiem i program. Kontrolki można podać i przetwarzania danych, akceptują dane wejściowe użytkownika, odpowiadanie na zdarzenia lub wykonywać dowolna liczba innych funkcji, które łączą się z użytkownikiem a aplikacją. Ponieważ formant jest zasadniczo składnika za pomocą interfejsu graficznego, może być każda funkcja, która jest składnikiem, również zapewnić interakcji z użytkownikiem. Formanty są tworzone do obsługi określonych celów i tworzenie formantów jest po prostu kolejne zadania programowania. Mając to na uwadze następujące kroki przedstawiają Przegląd kontroli procesu tworzenia. Linki udostępniają dodatkowe informacje na temat poszczególnych kroków.  
@@ -25,13 +25,13 @@ Formant reprezentuje graficzny link między użytkownikiem i program. Kontrolki 
   
 1. Należy określić co chcesz kontrolki do wykonania, co do część będzie odtwarzany w aplikacji. Dostępne są następujące czynniki do rozważenia:  
   
-    -   Jakiego rodzaju interfejsu graficznego potrzebujesz?  
+    - Jakiego rodzaju interfejsu graficznego potrzebujesz?  
   
-    -   Jakie interakcji użytkownika będzie obsługiwać ten formant?  
+    - Jakie interakcji użytkownika będzie obsługiwać ten formant?  
   
-    -   Funkcje, których potrzebujesz świadczą żadnych istniejących kontrolek?  
+    - Funkcje, których potrzebujesz świadczą żadnych istniejących kontrolek?  
   
-    -   Możesz uzyskać funkcjonalność, czego potrzebujesz, łącząc kilka kontrolek Windows Forms  
+    - Możesz uzyskać funkcjonalność, czego potrzebujesz, łącząc kilka kontrolek Windows Forms  
   
 2. Jeśli potrzebujesz model obiektów dla kontrolki określają, jak będą dystrybuowane w całym modelu obiektów funkcje i podzielić funkcje między formantem i wszystkich podobiektów. Model obiektu może być przydatne, planowania złożonych kontroli, czy chcesz zastosować kilka funkcji.  
   

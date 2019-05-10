@@ -2,12 +2,12 @@
 title: Folder źródłowy i folder docelowy są takie same
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
-ms.openlocfilehash: a3739afd25971433d78d84bb183c51ab674ecd9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f631e3a349c049960963227fcd954b46ae4fbeaa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619085"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>Folder źródłowy i folder docelowy są takie same
 Podjęto próbę, aby skopiować lub przenieść plik, ale katalogu określonego źródła i katalog docelowy są takie same. Może to być wynikiem niepoprawnie podczas analizowania ścieżki do pliku.  

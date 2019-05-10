@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99644be4a275c1de7f4b89ca23368a26a8b76f5b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009971"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614540"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Wytyczne do projektowania kontrolek w określonych stylach
 W tym dokumencie przedstawiono podsumowanie zestaw najlepszych rozwiązań, aby wziąć pod uwagę podczas projektowania formantu, który ma być łatwe w określonych stylach i templatable. Zdecydowaliśmy się ten zestaw najlepszych rozwiązań za pośrednictwem wiele prób i błędów podczas pracy nad style kontrolki motyw wbudowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestaw formantów. Dowiedzieliśmy się, że pomyślnie stylów jest tak dużej ilości funkcją modelu obiektu dobrze zaprojektowanego się stylu samego. Odbiorców dla tego dokumentu jest autorem formantu, nie Autor stylu.  

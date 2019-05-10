@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 719e24652ea40d601523e32ecbdb58ce5d4fa645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787975"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616597"
 ---
 # <a name="constrained-execution-regions"></a>Ograniczone regiony wykonania
 Region ograniczonego wykonania (CER) jest częścią mechanizm służący do tworzenia niezawodnego kodu zarządzanego. CER definiuje obszar, w której środowisko uruchomieniowe języka wspólnego (CLR) jest ograniczony z zgłaszanie wyjątków poza pasmem, które mogłyby uniemożliwić wykonanie w całości kodu w obszarze. W tym regionie kod użytkownika jest ograniczony z wykonywania kodu, które mogłyby spowodować zgłaszanie wyjątków poza pasmem. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Metody musi bezpośrednio poprzedzać `try` bloku i znaczniki `catch`, `finally`, i `fault` bloków jako ograniczone regiony wykonania. Gdy oznaczony jako ograniczone region, kod tylko należy wywołać inny kod z kontrakty niezawodności silne, a kod nie może przydzielić lub wykonywać wywołania wirtualnego nieprzygotowane lub zawodnej metody, chyba że kod jest przygotowana do obsługi błędów. Przerywa wątku opóźnienia środowiska CLR dla kodu, który jest wykonywany w CER.  

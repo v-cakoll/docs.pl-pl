@@ -1,14 +1,14 @@
 ---
-title: Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
+title: Uogólnione modele dodatku i kształtu funkcji na użytek explainability modelu
 description: Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f7b8b9a3daabb16f59c901911a1f6950ce864fff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ef56f737a2ad0cba616e32229ac3a395146fb6d2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689794"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662129"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
 

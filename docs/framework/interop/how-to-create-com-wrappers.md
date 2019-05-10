@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16fc9b24c91ba8d8a55596335d03f8fadf47910e
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
-ms.translationtype: HT
+ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910693"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469656"
 ---
 # <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
 
@@ -38,7 +38,7 @@ W programie Visual Studio 2005 można dodać otoki COM jako odwołanie do projek
 
      W **Eksploratora rozwiązań**, należy pamiętać, że składnik COM został dodany do folderu odwołań w projekcie.
 
-Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Możesz rozpocząć od zadeklarowania obiektu, takie jak za pomocą `Imports` poufności informacji dotyczące [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] lub `Using` poufności informacji dotyczące [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].
+Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Możesz rozpocząć od zadeklarowania obiektu, takie jak za pomocą `Imports` instrukcji dla języka Visual Basic lub `Using` poufności informacji dotyczące C#.
 
 > [!NOTE]
 > Jeśli chcesz program Microsoft Office składniki, najpierw zainstaluj [podstawowe zestawy międzyoperacyjne pakietu Office Microsoft](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) z Microsoft Download Center. W kroku 4, wybierz najnowszą dostępną dla produktu Office ma, takich jak biblioteki obiektów **Biblioteka obiektów programu Microsoft Word 11.0**.  

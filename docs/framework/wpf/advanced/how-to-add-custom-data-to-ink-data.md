@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c59a205df5358daec101339cc6a308c8e38a9d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777055"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640868"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Instrukcje: Dodawanie niestandardowych danych do danych pisma odręcznego
 Możesz dodać niestandardowe dane do pisma odręcznego, w którym zostanie zapisany w przypadku pisma odręcznego jest zapisywany w formacie pisma odręcznego serializacji (ISF).  Można zapisać niestandardowe dane do <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, lub <xref:System.Windows.Ink.Stroke>.  Możliwość zapisywania niestandardowych danych na trzy obiekty daje możliwość zdecydować, najlepszym miejscem, aby zapisać dane.  Wszystkie trzy klasy korzystając z podobnych metod do przechowywania i dostępu do danych niestandardowych.  

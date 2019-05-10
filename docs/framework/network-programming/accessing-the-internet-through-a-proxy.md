@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9bd2ee7dab36172cba68532e50cfcd14fd884db
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033179"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649534"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Dostęp do Internetu za pośrednictwem serwera proxy
 Jeśli Twoja witryna wymaga serwera proxy, aby uzyskać dostęp do Internetu, należy skonfigurować wystąpienie serwera proxy, aby umożliwić aplikacji do komunikowania się z serwera proxy sieci Web.  

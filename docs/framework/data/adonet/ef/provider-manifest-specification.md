@@ -2,12 +2,12 @@
 title: Specyfikacja manifestu dostawcy
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034007"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641163"
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono, jak dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -251,7 +251,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nazwa|String|Tak|n/d|Nazwa typu danych specyficznego dla dostawcy|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Tak|n/d|Nazwa typu EDM|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Yes|n/d|Nazwa typu EDM|  
   
 ###### <a name="function-node"></a>Węzeł — funkcja  
  Każda funkcja określa jednej funkcji dostępnych za pośrednictwem dostawcy.  

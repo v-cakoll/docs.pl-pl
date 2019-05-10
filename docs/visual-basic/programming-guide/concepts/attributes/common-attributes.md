@@ -2,12 +2,12 @@
 title: Atrybuty wspólne (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 58de23280f2e8765d945ac765d9455a89c45c9cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794033"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642405"
 ---
 # <a name="common-attributes-visual-basic"></a>Atrybuty wspólne (Visual Basic)
 W tym temacie opisano atrybuty, które są najczęściej używane w programach Visual Basic.  

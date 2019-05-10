@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30766
 ms.assetid: 13918600-6087-40d7-8134-32aa9d3bfda4
-ms.openlocfilehash: 2561995e6b03efb2b6c10b7ded7cd76805ec481c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 421cc098956150526345c34c053a1df46fd08285
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662082"
 ---
 # <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>"\<functionname >' nie został zadeklarowany (inteligentnych urządzeń/błąd kompilatora Visual Basic)
 <`functionname`> nie został zadeklarowany. Funkcje We/Wy pliku jest zwykle dostępna w `Microsoft.VisualBasic` przestrzeni nazw, ale wersji docelowej programu .NET Compact Framework nie jest ona obsługiwana.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18d8a22e20626a30585f556f97b54c65f1ab46a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793721"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645776"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementowanie transakcji jawnej przy użyciu CommitableTransaction
 <xref:System.Transactions.CommittableTransaction> Klasy zapewnia sposób jawny dla aplikacji używać transakcji, w przeciwieństwie do używania <xref:System.Transactions.TransactionScope> niejawnie klasy. Jest to przydatne w przypadku aplikacji, które chcą korzystać z tej samej transakcji w wielu wywołań funkcji lub wielu wywołań wątku. W odróżnieniu od <xref:System.Transactions.TransactionScope> klasy, Edytor aplikacji musi wywołać specjalnie <xref:System.Transactions.CommittableTransaction.Commit%2A> i <xref:System.Transactions.Transaction.Rollback%2A> metody w celu zatwierdzenia lub przerwania transakcji.  

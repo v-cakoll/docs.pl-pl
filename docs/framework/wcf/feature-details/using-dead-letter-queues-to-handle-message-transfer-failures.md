@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c83d48994c6038dfde67867a1766777c479c2169
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050704"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637733"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem
 Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te komunikaty zakończone niepowodzeniem są rejestrowane w kolejce wiadomości utraconych. Dostarczanie nie powiodło się, może być spowodowany powodów, takich jak awarie sieci, usunięto kolejkę, pełną kolejkę, wystąpił błąd uwierzytelniania lub niepowodzenie dostarczać oprogramowanie na czas.  

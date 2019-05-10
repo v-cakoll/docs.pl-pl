@@ -2,12 +2,12 @@
 title: Podstawowe pojęcia związane z programem Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945668"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650933"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Podstawowe pojęcia związane z programem Windows Workflow
 Projektowanie przepływów pracy w [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] korzysta z koncepcji, które mogą być nowe dla niektórych programistów. W tym temacie opisano niektóre z pojęć i ich implementacji.  

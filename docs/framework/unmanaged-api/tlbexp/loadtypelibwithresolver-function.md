@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 51d7cd273aa7a8799a1aac90d828ec81a7670906
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049339"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603266"
 ---
-# <a name="loadtypelibwithresolver-function"></a><span data-ttu-id="79f7e-102">LoadTypeLibWithResolver — Funkcja</span><span class="sxs-lookup"><span data-stu-id="79f7e-102">LoadTypeLibWithResolver Function</span></span>
-<span data-ttu-id="79f7e-103">Ładuje bibliotekę typów i korzysta z podanym [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) rozpoznać wszystkie biblioteki typu wewnętrznie odwołania.</span><span class="sxs-lookup"><span data-stu-id="79f7e-103">Loads a type library and uses the supplied [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) to resolve any internally referenced type libraries.</span></span>  
+# <a name="loadtypelibwithresolver-function"></a><span data-ttu-id="3e51b-102">LoadTypeLibWithResolver — Funkcja</span><span class="sxs-lookup"><span data-stu-id="3e51b-102">LoadTypeLibWithResolver Function</span></span>
+<span data-ttu-id="3e51b-103">Ładuje bibliotekę typów i korzysta z podanym [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) rozpoznać wszystkie biblioteki typu wewnętrznie odwołania.</span><span class="sxs-lookup"><span data-stu-id="3e51b-103">Loads a type library and uses the supplied [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) to resolve any internally referenced type libraries.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79f7e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="79f7e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e51b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3e51b-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadTypeLibWithResolver(  
@@ -36,64 +36,64 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79f7e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="79f7e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3e51b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3e51b-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="79f7e-106">[in] Ścieżka pliku biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="79f7e-106">[in] The file path of the type library.</span></span>  
+ <span data-ttu-id="3e51b-106">[in] Ścieżka pliku biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="3e51b-106">[in] The file path of the type library.</span></span>  
   
  `regkind`  
- <span data-ttu-id="79f7e-107">[in] A [wyliczenie REGKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flagi, które kontroluje sposób zrejestrowanej biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="79f7e-107">[in] A [REGKIND enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flag that controls how the type library is registered.</span></span> <span data-ttu-id="79f7e-108">Jego możliwe wartości to:</span><span class="sxs-lookup"><span data-stu-id="79f7e-108">Its possible values are:</span></span>  
+ <span data-ttu-id="3e51b-107">[in] A [wyliczenie REGKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flagi, które kontroluje sposób zrejestrowanej biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="3e51b-107">[in] A [REGKIND enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flag that controls how the type library is registered.</span></span> <span data-ttu-id="3e51b-108">Jego możliwe wartości to:</span><span class="sxs-lookup"><span data-stu-id="3e51b-108">Its possible values are:</span></span>  
   
-- <span data-ttu-id="79f7e-109">`REGKIND_DEFAULT`: Użyj domyślnego zachowania rejestracji.</span><span class="sxs-lookup"><span data-stu-id="79f7e-109">`REGKIND_DEFAULT`: Use default registration behavior.</span></span>  
+- <span data-ttu-id="3e51b-109">`REGKIND_DEFAULT`: Użyj domyślnego zachowania rejestracji.</span><span class="sxs-lookup"><span data-stu-id="3e51b-109">`REGKIND_DEFAULT`: Use default registration behavior.</span></span>  
   
-- <span data-ttu-id="79f7e-110">`REGKIND_REGISTER`: Zarejestruj tego typu biblioteki.</span><span class="sxs-lookup"><span data-stu-id="79f7e-110">`REGKIND_REGISTER`: Register this type library.</span></span>  
+- <span data-ttu-id="3e51b-110">`REGKIND_REGISTER`: Zarejestruj tego typu biblioteki.</span><span class="sxs-lookup"><span data-stu-id="3e51b-110">`REGKIND_REGISTER`: Register this type library.</span></span>  
   
-- <span data-ttu-id="79f7e-111">`REGKIND_NONE`: Nie rejestruj tej biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="79f7e-111">`REGKIND_NONE`: Do not register this type library.</span></span>  
+- <span data-ttu-id="3e51b-111">`REGKIND_NONE`: Nie rejestruj tej biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="3e51b-111">`REGKIND_NONE`: Do not register this type library.</span></span>  
   
  `pTlbResolver`  
- <span data-ttu-id="79f7e-112">[in] Wskaźnik do implementacji [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span><span class="sxs-lookup"><span data-stu-id="79f7e-112">[in] A pointer to the implementation of the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span></span>  
+ <span data-ttu-id="3e51b-112">[in] Wskaźnik do implementacji [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span><span class="sxs-lookup"><span data-stu-id="3e51b-112">[in] A pointer to the implementation of the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span></span>  
   
  `pptlib`  
- <span data-ttu-id="79f7e-113">[out] Odwołanie do biblioteki typów, który jest ładowany.</span><span class="sxs-lookup"><span data-stu-id="79f7e-113">[out] A reference to the type library that is being loaded.</span></span>  
+ <span data-ttu-id="3e51b-113">[out] Odwołanie do biblioteki typów, który jest ładowany.</span><span class="sxs-lookup"><span data-stu-id="3e51b-113">[out] A reference to the type library that is being loaded.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="79f7e-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="79f7e-114">Return Value</span></span>  
- <span data-ttu-id="79f7e-115">Jedna z wartości HRESULT, wymienione w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="79f7e-115">One of the HRESULT values listed in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3e51b-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="3e51b-114">Return Value</span></span>  
+ <span data-ttu-id="3e51b-115">Jedna z wartości HRESULT, wymienione w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="3e51b-115">One of the HRESULT values listed in the following table.</span></span>  
   
-|<span data-ttu-id="79f7e-116">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="79f7e-116">Return value</span></span>|<span data-ttu-id="79f7e-117">Znaczenie</span><span class="sxs-lookup"><span data-stu-id="79f7e-117">Meaning</span></span>|  
+|<span data-ttu-id="3e51b-116">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="3e51b-116">Return value</span></span>|<span data-ttu-id="3e51b-117">Znaczenie</span><span class="sxs-lookup"><span data-stu-id="3e51b-117">Meaning</span></span>|  
 |------------------|-------------|  
-|`S_OK`|<span data-ttu-id="79f7e-118">Powodzenie.</span><span class="sxs-lookup"><span data-stu-id="79f7e-118">Success.</span></span>|  
-|`E_OUTOFMEMORY`|<span data-ttu-id="79f7e-119">Za mało pamięci.</span><span class="sxs-lookup"><span data-stu-id="79f7e-119">Out of memory.</span></span>|  
-|`E_POINTER`|<span data-ttu-id="79f7e-120">Co najmniej jeden ze wskaźników są nieprawidłowe.</span><span class="sxs-lookup"><span data-stu-id="79f7e-120">One or more of the pointers are invalid.</span></span>|  
-|`E_INVALIDARG`|<span data-ttu-id="79f7e-121">Co najmniej jeden z argumentów są nieprawidłowe.</span><span class="sxs-lookup"><span data-stu-id="79f7e-121">One or more of the arguments are invalid.</span></span>|  
-|`TYPE_E_IOERROR`|<span data-ttu-id="79f7e-122">Funkcja nie można zapisać do pliku.</span><span class="sxs-lookup"><span data-stu-id="79f7e-122">The function could not write to the file.</span></span>|  
-|`TYPE_E_REGISTRYACCESS`|<span data-ttu-id="79f7e-123">Nie można otworzyć bazy danych rejestracji systemu.</span><span class="sxs-lookup"><span data-stu-id="79f7e-123">The system registration database could not be opened.</span></span>|  
-|`TYPE_E_INVALIDSTATE`|<span data-ttu-id="79f7e-124">Nie można otworzyć biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="79f7e-124">The type library could not be opened.</span></span>|  
-|`TYPE_E_CANTLOADLIBRARY`|<span data-ttu-id="79f7e-125">Nie można załadować biblioteki typów lub DLL.</span><span class="sxs-lookup"><span data-stu-id="79f7e-125">The type library or DLL could not be loaded.</span></span>|  
+|`S_OK`|<span data-ttu-id="3e51b-118">Powodzenie.</span><span class="sxs-lookup"><span data-stu-id="3e51b-118">Success.</span></span>|  
+|`E_OUTOFMEMORY`|<span data-ttu-id="3e51b-119">Za mało pamięci.</span><span class="sxs-lookup"><span data-stu-id="3e51b-119">Out of memory.</span></span>|  
+|`E_POINTER`|<span data-ttu-id="3e51b-120">Co najmniej jeden ze wskaźników są nieprawidłowe.</span><span class="sxs-lookup"><span data-stu-id="3e51b-120">One or more of the pointers are invalid.</span></span>|  
+|`E_INVALIDARG`|<span data-ttu-id="3e51b-121">Co najmniej jeden z argumentów są nieprawidłowe.</span><span class="sxs-lookup"><span data-stu-id="3e51b-121">One or more of the arguments are invalid.</span></span>|  
+|`TYPE_E_IOERROR`|<span data-ttu-id="3e51b-122">Funkcja nie można zapisać do pliku.</span><span class="sxs-lookup"><span data-stu-id="3e51b-122">The function could not write to the file.</span></span>|  
+|`TYPE_E_REGISTRYACCESS`|<span data-ttu-id="3e51b-123">Nie można otworzyć bazy danych rejestracji systemu.</span><span class="sxs-lookup"><span data-stu-id="3e51b-123">The system registration database could not be opened.</span></span>|  
+|`TYPE_E_INVALIDSTATE`|<span data-ttu-id="3e51b-124">Nie można otworzyć biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="3e51b-124">The type library could not be opened.</span></span>|  
+|`TYPE_E_CANTLOADLIBRARY`|<span data-ttu-id="3e51b-125">Nie można załadować biblioteki typów lub DLL.</span><span class="sxs-lookup"><span data-stu-id="3e51b-125">The type library or DLL could not be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="79f7e-126">Uwagi</span><span class="sxs-lookup"><span data-stu-id="79f7e-126">Remarks</span></span>  
- <span data-ttu-id="79f7e-127">[Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) wywołania `LoadTypeLibWithResolver` funkcji w procesie konwersji zestawu do typu biblioteki.</span><span class="sxs-lookup"><span data-stu-id="79f7e-127">The [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) calls the `LoadTypeLibWithResolver` function during the assembly-to-type-library conversion process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3e51b-126">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3e51b-126">Remarks</span></span>  
+ <span data-ttu-id="3e51b-127">[Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) wywołania `LoadTypeLibWithResolver` funkcji w procesie konwersji zestawu do typu biblioteki.</span><span class="sxs-lookup"><span data-stu-id="3e51b-127">The [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) calls the `LoadTypeLibWithResolver` function during the assembly-to-type-library conversion process.</span></span>  
   
- <span data-ttu-id="79f7e-128">Ta funkcja ładuje określonej biblioteki typu przy użyciu minimalnego dostępu do rejestru.</span><span class="sxs-lookup"><span data-stu-id="79f7e-128">This function loads the specified type library with minimal access to the registry.</span></span> <span data-ttu-id="79f7e-129">Funkcja następnie sprawdza, czy biblioteki typów dla wewnętrznie odwołania biblioteki typów, z których każdy musi być załadowane i dodawane do biblioteki typu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="79f7e-129">The function then examines the type library for internally referenced type libraries, each of which must be loaded and added to the parent type library.</span></span>  
+ <span data-ttu-id="3e51b-128">Ta funkcja ładuje określonej biblioteki typu przy użyciu minimalnego dostępu do rejestru.</span><span class="sxs-lookup"><span data-stu-id="3e51b-128">This function loads the specified type library with minimal access to the registry.</span></span> <span data-ttu-id="3e51b-129">Funkcja następnie sprawdza, czy biblioteki typów dla wewnętrznie odwołania biblioteki typów, z których każdy musi być załadowane i dodawane do biblioteki typu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="3e51b-129">The function then examines the type library for internally referenced type libraries, each of which must be loaded and added to the parent type library.</span></span>  
   
- <span data-ttu-id="79f7e-130">Przed załadowaniem przywoływanej biblioteki typów, ścieżki pliku odwołania muszą zostać rozwiązane do pełnej ścieżki pliku.</span><span class="sxs-lookup"><span data-stu-id="79f7e-130">Before a referenced type library can be loaded, its reference file path must be resolved to a full file path.</span></span> <span data-ttu-id="79f7e-131">Jest to realizowane za pośrednictwem [resolvetypelib — metoda](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) dostarczanym przez [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), która jest przekazywana w `pTlbResolver` parametru.</span><span class="sxs-lookup"><span data-stu-id="79f7e-131">This is accomplished through the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) that is provided by the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), which is passed in the `pTlbResolver` parameter.</span></span>  
+ <span data-ttu-id="3e51b-130">Przed załadowaniem przywoływanej biblioteki typów, ścieżki pliku odwołania muszą zostać rozwiązane do pełnej ścieżki pliku.</span><span class="sxs-lookup"><span data-stu-id="3e51b-130">Before a referenced type library can be loaded, its reference file path must be resolved to a full file path.</span></span> <span data-ttu-id="3e51b-131">Jest to realizowane za pośrednictwem [resolvetypelib — metoda](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) dostarczanym przez [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), która jest przekazywana w `pTlbResolver` parametru.</span><span class="sxs-lookup"><span data-stu-id="3e51b-131">This is accomplished through the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) that is provided by the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), which is passed in the `pTlbResolver` parameter.</span></span>  
   
- <span data-ttu-id="79f7e-132">Gdy znana jest pełną ścieżką do pliku biblioteki typów w przywoływanych, `LoadTypeLibWithResolver` funkcji ładuje i dodaje przywoływanej biblioteki typów do biblioteki typów nadrzędnego, tworzenie biblioteki typów wzorca połączone.</span><span class="sxs-lookup"><span data-stu-id="79f7e-132">When the full file path of the referenced type library is known, the `LoadTypeLibWithResolver` function loads and adds the referenced type library to the parent type library, creating a combined master type library.</span></span>  
+ <span data-ttu-id="3e51b-132">Gdy znana jest pełną ścieżką do pliku biblioteki typów w przywoływanych, `LoadTypeLibWithResolver` funkcji ładuje i dodaje przywoływanej biblioteki typów do biblioteki typów nadrzędnego, tworzenie biblioteki typów wzorca połączone.</span><span class="sxs-lookup"><span data-stu-id="3e51b-132">When the full file path of the referenced type library is known, the `LoadTypeLibWithResolver` function loads and adds the referenced type library to the parent type library, creating a combined master type library.</span></span>  
   
- <span data-ttu-id="79f7e-133">Po funkcji rozpoznaje i ładuje wszystkie biblioteki wewnętrznie odwołanie typu, zwraca odwołanie do biblioteki wzorca rozpoznany typ w `pptlib` parametru.</span><span class="sxs-lookup"><span data-stu-id="79f7e-133">After the function resolves and loads all internally referenced type libraries, it returns a reference to the master resolved type library in the `pptlib` parameter.</span></span>  
+ <span data-ttu-id="3e51b-133">Po funkcji rozpoznaje i ładuje wszystkie biblioteki wewnętrznie odwołanie typu, zwraca odwołanie do biblioteki wzorca rozpoznany typ w `pptlib` parametru.</span><span class="sxs-lookup"><span data-stu-id="3e51b-133">After the function resolves and loads all internally referenced type libraries, it returns a reference to the master resolved type library in the `pptlib` parameter.</span></span>  
   
- <span data-ttu-id="79f7e-134">`LoadTypeLibWithResolver` Funkcja jest zazwyczaj wywoływana przez [Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), który dostarcza własnego wewnętrznego [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementacji `pTlbResolver` parametr.</span><span class="sxs-lookup"><span data-stu-id="79f7e-134">The `LoadTypeLibWithResolver` function is generally called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), which supplies its own internal [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation in the `pTlbResolver` parameter.</span></span>  
+ <span data-ttu-id="3e51b-134">`LoadTypeLibWithResolver` Funkcja jest zazwyczaj wywoływana przez [Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), który dostarcza własnego wewnętrznego [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementacji `pTlbResolver` parametr.</span><span class="sxs-lookup"><span data-stu-id="3e51b-134">The `LoadTypeLibWithResolver` function is generally called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), which supplies its own internal [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation in the `pTlbResolver` parameter.</span></span>  
   
- <span data-ttu-id="79f7e-135">Jeśli wywołasz `LoadTypeLibWithResolver` bezpośrednio, należy podać własne [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementacji.</span><span class="sxs-lookup"><span data-stu-id="79f7e-135">If you call `LoadTypeLibWithResolver` directly, you must supply your own [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation.</span></span>  
+ <span data-ttu-id="3e51b-135">Jeśli wywołasz `LoadTypeLibWithResolver` bezpośrednio, należy podać własne [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementacji.</span><span class="sxs-lookup"><span data-stu-id="3e51b-135">If you call `LoadTypeLibWithResolver` directly, you must supply your own [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79f7e-136">Wymagania</span><span class="sxs-lookup"><span data-stu-id="79f7e-136">Requirements</span></span>  
- <span data-ttu-id="79f7e-137">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79f7e-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e51b-136">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3e51b-136">Requirements</span></span>  
+ <span data-ttu-id="3e51b-137">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e51b-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79f7e-138">**Nagłówek:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="79f7e-138">**Header:** TlbRef.h</span></span>  
+ <span data-ttu-id="3e51b-138">**Nagłówek:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="3e51b-138">**Header:** TlbRef.h</span></span>  
   
- <span data-ttu-id="79f7e-139">**Biblioteka:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="79f7e-139">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="3e51b-139">**Biblioteka:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="3e51b-139">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="79f7e-140">**Wersja programu .NET framework:** 3.5, 3.0, 2.0</span><span class="sxs-lookup"><span data-stu-id="79f7e-140">**.NET Framework Version:** 3.5, 3.0, 2.0</span></span>  
+ <span data-ttu-id="3e51b-140">**Wersja programu .NET framework:** 3.5, 3.0, 2.0</span><span class="sxs-lookup"><span data-stu-id="3e51b-140">**.NET Framework Version:** 3.5, 3.0, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79f7e-141">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="79f7e-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e51b-141">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3e51b-141">See also</span></span>
 
-- [<span data-ttu-id="79f7e-142">Tlbexp, funkcje pomocy</span><span class="sxs-lookup"><span data-stu-id="79f7e-142">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
-- [<span data-ttu-id="79f7e-143">LoadTypeLibEx — funkcja</span><span class="sxs-lookup"><span data-stu-id="79f7e-143">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [<span data-ttu-id="3e51b-142">Tlbexp, funkcje pomocy</span><span class="sxs-lookup"><span data-stu-id="3e51b-142">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [<span data-ttu-id="3e51b-143">LoadTypeLibEx — funkcja</span><span class="sxs-lookup"><span data-stu-id="3e51b-143">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

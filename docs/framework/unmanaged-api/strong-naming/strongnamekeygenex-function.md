@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af75a645b11325b96740807f9a3df65f5a676026
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 736e537a3f773acbd61dbad013b8dfb7cc429076
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000249"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666014"
 ---
-# <a name="strongnamekeygenex-function"></a><span data-ttu-id="7bfbb-102">StrongNameKeyGenEx — Funkcja</span><span class="sxs-lookup"><span data-stu-id="7bfbb-102">StrongNameKeyGenEx Function</span></span>
-<span data-ttu-id="7bfbb-103">Generuje nową parę kluczy publiczny/prywatny z określonego rozmiaru klucza do użycia silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
+# <a name="strongnamekeygenex-function"></a><span data-ttu-id="749c3-102">StrongNameKeyGenEx — Funkcja</span><span class="sxs-lookup"><span data-stu-id="749c3-102">StrongNameKeyGenEx Function</span></span>
+<span data-ttu-id="749c3-103">Generuje nową parę kluczy publiczny/prywatny z określonego rozmiaru klucza do użycia silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="749c3-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
   
- <span data-ttu-id="7bfbb-104">Ta funkcja jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-104">This function has been deprecated.</span></span> <span data-ttu-id="7bfbb-105">Użyj [iclrstrongname::strongnamekeygenex —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-105">Use the [ICLRStrongName::StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md) method instead.</span></span>  
+ <span data-ttu-id="749c3-104">Ta funkcja jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="749c3-104">This function has been deprecated.</span></span> <span data-ttu-id="749c3-105">Użyj [iclrstrongname::strongnamekeygenex —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="749c3-105">Use the [ICLRStrongName::StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7bfbb-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="7bfbb-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="749c3-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="749c3-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameKeyGenEx (  
@@ -40,47 +40,47 @@ BOOLEAN StrongNameKeyGenEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7bfbb-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="7bfbb-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="749c3-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="749c3-107">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="7bfbb-108">[in] Nazwa żądany kontener kluczy.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-108">[in] The requested key container name.</span></span> <span data-ttu-id="7bfbb-109">`wszKeyContainer` musi być ciągiem niepustym, lub wartość null, można wygenerować tymczasowej nazwy.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-109">`wszKeyContainer` must be a non-empty string, or null to generate a temporary name.</span></span>  
+ <span data-ttu-id="749c3-108">[in] Nazwa żądany kontener kluczy.</span><span class="sxs-lookup"><span data-stu-id="749c3-108">[in] The requested key container name.</span></span> <span data-ttu-id="749c3-109">`wszKeyContainer` musi być ciągiem niepustym, lub wartość null, można wygenerować tymczasowej nazwy.</span><span class="sxs-lookup"><span data-stu-id="749c3-109">`wszKeyContainer` must be a non-empty string, or null to generate a temporary name.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="7bfbb-110">[in] Określa, czy należy pozostawić klawisz zarejestrowany.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-110">[in] Specifies whether to leave the key registered.</span></span> <span data-ttu-id="7bfbb-111">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="7bfbb-111">The following values are supported:</span></span>  
+ <span data-ttu-id="749c3-110">[in] Określa, czy należy pozostawić klawisz zarejestrowany.</span><span class="sxs-lookup"><span data-stu-id="749c3-110">[in] Specifies whether to leave the key registered.</span></span> <span data-ttu-id="749c3-111">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="749c3-111">The following values are supported:</span></span>  
   
-- <span data-ttu-id="7bfbb-112">0x00000000 — używany podczas `wszKeyContainer` ma wartość null, aby wygenerować nazwę kontenera kluczy tymczasowych.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-112">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
+- <span data-ttu-id="749c3-112">0x00000000 — używany podczas `wszKeyContainer` ma wartość null, aby wygenerować nazwę kontenera kluczy tymczasowych.</span><span class="sxs-lookup"><span data-stu-id="749c3-112">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
   
-- <span data-ttu-id="7bfbb-113">0x00000001 (`SN_LEAVE_KEY`) — określa, że klucz powinien być zarejestrowany po lewej.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-113">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
+- <span data-ttu-id="749c3-113">0x00000001 (`SN_LEAVE_KEY`) — określa, że klucz powinien być zarejestrowany po lewej.</span><span class="sxs-lookup"><span data-stu-id="749c3-113">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
   
  `dwKeySize`  
- <span data-ttu-id="7bfbb-114">[in] Żądany rozmiar klucza w bitach.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-114">[in] The requested size of the key, in bits.</span></span>  
+ <span data-ttu-id="749c3-114">[in] Żądany rozmiar klucza w bitach.</span><span class="sxs-lookup"><span data-stu-id="749c3-114">[in] The requested size of the key, in bits.</span></span>  
   
  `ppbKeyBlob`  
- <span data-ttu-id="7bfbb-115">[out] Zwrócone pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-115">[out] The returned public/private key pair.</span></span>  
+ <span data-ttu-id="749c3-115">[out] Zwrócone pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="749c3-115">[out] The returned public/private key pair.</span></span>  
   
  `pcbKeyBlob`  
- <span data-ttu-id="7bfbb-116">[out] Rozmiar w bajtach z `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-116">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
+ <span data-ttu-id="749c3-116">[out] Rozmiar w bajtach z `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="749c3-116">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7bfbb-117">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7bfbb-117">Return Value</span></span>  
- <span data-ttu-id="7bfbb-118">`true` Po pomyślnym zakończeniu; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-118">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="749c3-117">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="749c3-117">Return Value</span></span>  
+ <span data-ttu-id="749c3-118">`true` Po pomyślnym zakończeniu; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="749c3-118">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7bfbb-119">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7bfbb-119">Remarks</span></span>  
- <span data-ttu-id="7bfbb-120">Wymaga platformy .NET Framework w wersji 1.0 i 1.1 `dwKeySize` o długości 1024 bitów, aby podpisać zestaw silną nazwą; w wersji 2.0 dodaje obsługiwanych w przypadku 2048-bitowe klucze.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-120">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="749c3-119">Uwagi</span><span class="sxs-lookup"><span data-stu-id="749c3-119">Remarks</span></span>  
+ <span data-ttu-id="749c3-120">Wymaga platformy .NET Framework w wersji 1.0 i 1.1 `dwKeySize` o długości 1024 bitów, aby podpisać zestaw silną nazwą; w wersji 2.0 dodaje obsługiwanych w przypadku 2048-bitowe klucze.</span><span class="sxs-lookup"><span data-stu-id="749c3-120">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
   
- <span data-ttu-id="7bfbb-121">Po pobraniu klucza, należy wywołać [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) funkcję, aby zwolnić alokacji pamięci.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-121">After the key is retrieved, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
+ <span data-ttu-id="749c3-121">Po pobraniu klucza, należy wywołać [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) funkcję, aby zwolnić alokacji pamięci.</span><span class="sxs-lookup"><span data-stu-id="749c3-121">After the key is retrieved, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
   
- <span data-ttu-id="7bfbb-122">Jeśli `StrongNameKeyGenEx` funkcja nie jest ukończone pomyślnie, wywołaj [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcję, aby pobrać ostatni błąd wygenerowany.</span><span class="sxs-lookup"><span data-stu-id="7bfbb-122">If the `StrongNameKeyGenEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="749c3-122">Jeśli `StrongNameKeyGenEx` funkcja nie jest ukończone pomyślnie, wywołaj [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcję, aby pobrać ostatni błąd wygenerowany.</span><span class="sxs-lookup"><span data-stu-id="749c3-122">If the `StrongNameKeyGenEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7bfbb-123">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7bfbb-123">Requirements</span></span>  
- <span data-ttu-id="7bfbb-124">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7bfbb-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="749c3-123">Wymagania</span><span class="sxs-lookup"><span data-stu-id="749c3-123">Requirements</span></span>  
+ <span data-ttu-id="749c3-124">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="749c3-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7bfbb-125">**Nagłówek:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="7bfbb-125">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="749c3-125">**Nagłówek:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="749c3-125">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="7bfbb-126">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7bfbb-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="749c3-126">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="749c3-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7bfbb-127">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7bfbb-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="749c3-127">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="749c3-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7bfbb-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7bfbb-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="749c3-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="749c3-128">See also</span></span>
 
-- [<span data-ttu-id="7bfbb-129">StrongNameKeyGenEx, metoda</span><span class="sxs-lookup"><span data-stu-id="7bfbb-129">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
-- [<span data-ttu-id="7bfbb-130">StrongNameKeyGen, metoda</span><span class="sxs-lookup"><span data-stu-id="7bfbb-130">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [<span data-ttu-id="7bfbb-131">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="7bfbb-131">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="749c3-129">StrongNameKeyGenEx, metoda</span><span class="sxs-lookup"><span data-stu-id="749c3-129">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [<span data-ttu-id="749c3-130">StrongNameKeyGen, metoda</span><span class="sxs-lookup"><span data-stu-id="749c3-130">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
+- [<span data-ttu-id="749c3-131">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="749c3-131">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

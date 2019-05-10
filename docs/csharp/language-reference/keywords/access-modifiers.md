@@ -5,48 +5,48 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 587f1b03292db643d721e599ea93c39ba188117d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662156"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593012"
 ---
-# <a name="access-modifiers-c-reference"></a><span data-ttu-id="5240f-102">Modyfikatory dostępu (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="5240f-102">Access Modifiers (C# Reference)</span></span>
-<span data-ttu-id="5240f-103">Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowaną dostępność składowej lub typu.</span><span class="sxs-lookup"><span data-stu-id="5240f-103">Access modifiers are keywords used to specify the declared accessibility of a member or a type.</span></span> <span data-ttu-id="5240f-104">Ta sekcja wprowadza modyfikatory dostępu cztery:</span><span class="sxs-lookup"><span data-stu-id="5240f-104">This section introduces the four access modifiers:</span></span>  
+# <a name="access-modifiers-c-reference"></a><span data-ttu-id="edada-102">Modyfikatory dostępu (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="edada-102">Access Modifiers (C# Reference)</span></span>
+<span data-ttu-id="edada-103">Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowaną dostępność składowej lub typu.</span><span class="sxs-lookup"><span data-stu-id="edada-103">Access modifiers are keywords used to specify the declared accessibility of a member or a type.</span></span> <span data-ttu-id="edada-104">Ta sekcja wprowadza modyfikatory dostępu cztery:</span><span class="sxs-lookup"><span data-stu-id="edada-104">This section introduces the four access modifiers:</span></span>  
   
 - `public`
 - `protected`
 - `internal`
 - `private`
   
- <span data-ttu-id="5240f-105">Następujące sześć poziomów ułatwień dostępu, można określić za pomocą modyfikatorów dostępu:</span><span class="sxs-lookup"><span data-stu-id="5240f-105">The following six accessibility levels can be specified using the access modifiers:</span></span>  
+ <span data-ttu-id="edada-105">Następujące sześć poziomów ułatwień dostępu, można określić za pomocą modyfikatorów dostępu:</span><span class="sxs-lookup"><span data-stu-id="edada-105">The following six accessibility levels can be specified using the access modifiers:</span></span>  
   
-- <span data-ttu-id="5240f-106">[`public`](public.md): Dostęp nie jest ograniczona.</span><span class="sxs-lookup"><span data-stu-id="5240f-106">[`public`](public.md): Access is not restricted.</span></span>  
+- <span data-ttu-id="edada-106">[`public`](public.md): Dostęp nie jest ograniczona.</span><span class="sxs-lookup"><span data-stu-id="edada-106">[`public`](public.md): Access is not restricted.</span></span>  
   
-- <span data-ttu-id="5240f-107">[`protected`](protected.md): Dostęp jest ograniczony do zawierający klasy lub typy pochodzące z klasy zawierającej.</span><span class="sxs-lookup"><span data-stu-id="5240f-107">[`protected`](protected.md): Access is limited to the containing class or types derived from the containing class.</span></span>  
+- <span data-ttu-id="edada-107">[`protected`](protected.md): Dostęp jest ograniczony do zawierający klasy lub typy pochodzące z klasy zawierającej.</span><span class="sxs-lookup"><span data-stu-id="edada-107">[`protected`](protected.md): Access is limited to the containing class or types derived from the containing class.</span></span>  
   
-- <span data-ttu-id="5240f-108">[`internal`](internal.md): Dostęp jest ograniczony do bieżącego zestawu.</span><span class="sxs-lookup"><span data-stu-id="5240f-108">[`internal`](internal.md): Access is limited to the current assembly.</span></span>  
+- <span data-ttu-id="edada-108">[`internal`](internal.md): Dostęp jest ograniczony do bieżącego zestawu.</span><span class="sxs-lookup"><span data-stu-id="edada-108">[`internal`](internal.md): Access is limited to the current assembly.</span></span>  
   
-- <span data-ttu-id="5240f-109">[`protected internal`](protected-internal.md): Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące z klasy zawierającej.</span><span class="sxs-lookup"><span data-stu-id="5240f-109">[`protected internal`](protected-internal.md): Access is limited to the current assembly or types derived from the containing class.</span></span>  
+- <span data-ttu-id="edada-109">[`protected internal`](protected-internal.md): Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące z klasy zawierającej.</span><span class="sxs-lookup"><span data-stu-id="edada-109">[`protected internal`](protected-internal.md): Access is limited to the current assembly or types derived from the containing class.</span></span>  
   
-- <span data-ttu-id="5240f-110">[`private`](private.md): Dostęp jest ograniczony do typu zawierającego.</span><span class="sxs-lookup"><span data-stu-id="5240f-110">[`private`](private.md): Access is limited to the containing type.</span></span>  
+- <span data-ttu-id="edada-110">[`private`](private.md): Dostęp jest ograniczony do typu zawierającego.</span><span class="sxs-lookup"><span data-stu-id="edada-110">[`private`](private.md): Access is limited to the containing type.</span></span>  
 
-- <span data-ttu-id="5240f-111">[`private protected`](private-protected.md): Dostęp jest ograniczony do zawierający klasy lub typów pochodnych typu zawierającego klasy w bieżącym zestawie.</span><span class="sxs-lookup"><span data-stu-id="5240f-111">[`private protected`](private-protected.md): Access is limited to the containing class or types derived from the containing class within the current assembly.</span></span>  
+- <span data-ttu-id="edada-111">[`private protected`](private-protected.md): Dostęp jest ograniczony do zawierający klasy lub typów pochodnych typu zawierającego klasy w bieżącym zestawie.</span><span class="sxs-lookup"><span data-stu-id="edada-111">[`private protected`](private-protected.md): Access is limited to the containing class or types derived from the containing class within the current assembly.</span></span>  
   
- <span data-ttu-id="5240f-112">Ta sekcja wprowadza również następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="5240f-112">This section also introduces the following:</span></span>  
+ <span data-ttu-id="edada-112">Ta sekcja wprowadza również następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="edada-112">This section also introduces the following:</span></span>  
   
-- <span data-ttu-id="5240f-113">[Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md): Za pomocą modyfikatorów dostępu cztery do deklarowania sześciu poziomów ułatwień dostępu.</span><span class="sxs-lookup"><span data-stu-id="5240f-113">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md): Using the four access modifiers to declare six levels of accessibility.</span></span>  
+- <span data-ttu-id="edada-113">[Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md): Za pomocą modyfikatorów dostępu cztery do deklarowania sześciu poziomów ułatwień dostępu.</span><span class="sxs-lookup"><span data-stu-id="edada-113">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md): Using the four access modifiers to declare six levels of accessibility.</span></span>  
   
-- <span data-ttu-id="5240f-114">[Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md): Określa, gdzie, w sekcjach program członka mogą być przywoływane.</span><span class="sxs-lookup"><span data-stu-id="5240f-114">[Accessibility Domain](../../../csharp/language-reference/keywords/accessibility-domain.md): Specifies where, in the program sections, a member can be referenced.</span></span>  
+- <span data-ttu-id="edada-114">[Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md): Określa, gdzie, w sekcjach program członka mogą być przywoływane.</span><span class="sxs-lookup"><span data-stu-id="edada-114">[Accessibility Domain](../../../csharp/language-reference/keywords/accessibility-domain.md): Specifies where, in the program sections, a member can be referenced.</span></span>  
   
-- <span data-ttu-id="5240f-115">[Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczenia dotyczące używania zadeklarowany poziomów ułatwień dostępu.</span><span class="sxs-lookup"><span data-stu-id="5240f-115">[Restrictions on Using Accessibility Levels](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): A summary of the restrictions on using declared accessibility levels.</span></span>  
+- <span data-ttu-id="edada-115">[Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczenia dotyczące używania zadeklarowany poziomów ułatwień dostępu.</span><span class="sxs-lookup"><span data-stu-id="edada-115">[Restrictions on Using Accessibility Levels](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): A summary of the restrictions on using declared accessibility levels.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5240f-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5240f-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="edada-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="edada-116">See also</span></span>
 
-- [<span data-ttu-id="5240f-117">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="5240f-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="5240f-118">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="5240f-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="5240f-119">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="5240f-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="5240f-120">Modyfikatory dostępu</span><span class="sxs-lookup"><span data-stu-id="5240f-120">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [<span data-ttu-id="5240f-121">Słowa kluczowe dostępu</span><span class="sxs-lookup"><span data-stu-id="5240f-121">Access Keywords</span></span>](../../../csharp/language-reference/keywords/access-keywords.md)
-- [<span data-ttu-id="5240f-122">Modyfikatory</span><span class="sxs-lookup"><span data-stu-id="5240f-122">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
+- [<span data-ttu-id="edada-117">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="edada-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="edada-118">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="edada-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="edada-119">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="edada-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="edada-120">Modyfikatory dostępu</span><span class="sxs-lookup"><span data-stu-id="edada-120">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [<span data-ttu-id="edada-121">Słowa kluczowe dostępu</span><span class="sxs-lookup"><span data-stu-id="edada-121">Access Keywords</span></span>](../../../csharp/language-reference/keywords/access-keywords.md)
+- [<span data-ttu-id="edada-122">Modyfikatory</span><span class="sxs-lookup"><span data-stu-id="edada-122">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)

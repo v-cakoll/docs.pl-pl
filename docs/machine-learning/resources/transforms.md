@@ -1,15 +1,15 @@
 ---
-title: Przekształcenia danych | STRUKTURZE ML.NET
+title: Przekształcenia danych
 description: Poznaj składniki inżynierów funkcji obsługiwanych w strukturze ML.NET.
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 506abcc826059f4d252378b1bde0b852949a42e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019142"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636555"
 ---
 # <a name="data-transformations"></a>Przekształcenia danych
 

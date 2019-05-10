@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9503af53cd699405d14f4f92a1d962a59918f759
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608562"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Obsługa wyjątków (Przewodnik programowania w języku C#)
 A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest używany przez programistów C# do kodu partycji, który może mieć wpływ wyjątku. Skojarzone [catch](../../../csharp/language-reference/keywords/try-catch.md) bloki są używane do obsługi wszystkich wyjątków wynikowe. A [na koniec](../../../csharp/language-reference/keywords/try-finally.md) blok zawiera kod, który jest wykonywany niezależnie od tego, czy wyjątek jest zgłaszany w `try` bloku, np. przy zwalnianiu zasobów, które są przydzielane w `try` bloku. A `try` bloku wymaga co najmniej jednym skojarzone `catch` bloków lub `finally` bloku i / lub.  

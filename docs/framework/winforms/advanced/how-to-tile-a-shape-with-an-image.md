@@ -10,12 +10,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a906db44a548361df2822efa24d1dd1849cb5a24
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954929"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063737"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Instrukcje: Wypełnianie kafelków w obrębie kształtu obrazem
 Zgodnie z kafelków mogą być umieszczane obok siebie na pokrycie piętra, prostokątne obrazy mogą być umieszczone obok siebie do wypełnienia kształtu (fragment). Na kafelku wewnątrz kształtu, użyj pędzla tekstury. Podczas konstruowania <xref:System.Drawing.TextureBrush> obiektu w Argumenty przekazane do konstruktora jest <xref:System.Drawing.Image> obiektu. Malowanie wnętrza kształtu przy użyciu pędzli tekstury, kształt zostanie wypełniony powtarzających się kopii tego obrazu.  
@@ -26,11 +26,11 @@ Zgodnie z kafelków mogą być umieszczane obok siebie na pokrycie piętra, pros
   
 - W tym przykładzie używa na poniższej ilustracji 75 x 75 do kafelka prostokąt 200 x 200.  
   
- ![Tile 1](./media/tile1.gif "tile1")  
+ ![Obraz Kafelek, który pokazuje czerwone dom i drzewa.](./media/how-to-tile-a-shape-with-an-image/rectangle-tile-200x200.gif)  
   
 - Poniższa ilustracja przedstawia, jak prostokąta jest rozmieszczany przy użyciu obrazu. Należy pamiętać, że wszystkie Kafelki mają tę samą orientację; nie ma żadnych Przerzucanie.  
   
- ![Tile 2](./media/tile2.gif "tile2")  
+ ![Prostokąt układu sąsiadującego za pomocą obrazu przy użyciu tego samego orientacja dla wszystkich kafelków.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-no-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
@@ -39,7 +39,7 @@ Zgodnie z kafelków mogą być umieszczane obok siebie na pokrycie piętra, pros
   
 - W tym przykładzie używa tego samego obrazu 75 x 75 do wypełnienia prostokąt 200 x 200. Tryb zawijania jest ustawiony na przerzucić obraz w poziomie. Poniższa ilustracja przedstawia, jak prostokąta jest rozmieszczany przy użyciu obrazu. Należy pamiętać, że po przeniesieniu z jednym kafelkiem dalej w danym wierszu obrazu jest odwrócony poziomo.  
   
- ![Tile 3](./media/tile3.gif "tile3")  
+ ![Prostokąt układu sąsiadującego za pomocą obrazu odwrócić w poziomie.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
@@ -55,7 +55,7 @@ Zgodnie z kafelków mogą być umieszczane obok siebie na pokrycie piętra, pros
   
 - W tym przykładzie używa tego samego obrazu 75 x 75 do kafelka prostokąt 200 x 200. Tryb zawijania jest ustawiony na przerzucić obraz w poziomie i w pionie. Poniższa ilustracja przedstawia, jak prostokąta jest rozmieszczany przez obraz. Należy pamiętać, że po przeniesieniu z jednym kafelkiem dalej w danym wierszu obrazu jest odwrócony poziomo i jak przenieść z jednym kafelkiem dalej w danej kolumnie, obraz, który jest odwrócony w pionie.  
   
- ![Tile 5](./media/tile5.gif "tile5")  
+ ![Prostokąt układu sąsiadującego za pomocą obrazu odwrócić poziomo i pionowo.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-vertical-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  

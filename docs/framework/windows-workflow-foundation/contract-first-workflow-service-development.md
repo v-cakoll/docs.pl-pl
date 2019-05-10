@@ -2,12 +2,12 @@
 title: Programowanie usługi przepływu pracy narzędzia Contract-First
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774208"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587607"
 ---
 # <a name="contract-first-workflow-service-development"></a>Programowanie usługi przepływu pracy narzędzia Contract-First
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Windows Workflow Foundation (WF) lepszą integrację między usługami sieci web i przepływów pracy w formie Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu. Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia projektowanie najpierw kontrakt w kodzie. Narzędzie następnie automatycznie generuje szablon działania w przyborniku dla operacji w kontrakcie. Ten temat zawiera omówienie sposobu działania i właściwości w usłudze przepływu pracy mapowania na atrybuty kontraktu usługi. Aby uzyskać przykład krok po kroku tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu usługi, zobacz [jak: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
@@ -51,8 +51,8 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Wind
 |-------------------|---------------|-----------------|-------------------|  
 |CallbackContract|Nie|Pobiera lub ustawia typ kontrakt wywołania zwrotnego, gdy kontrakt jest kontraktu dwukierunkowego.|(N/D)|  
 |ConfigurationName|Nie|Pobiera lub ustawia nazwę używaną do lokalizowania usługi w pliku konfiguracji aplikacji.|(N/D)|  
-|HasProtectionLevel|Tak|Pobiera wartość wskazującą, czy element członkowski ma przypisany poziom ochrony.|Receive.ProtectionLevel nie może mieć wartości null.|  
-|Nazwa|Tak|Pobiera lub ustawia nazwę \<portType > elementu w sieci Web Services Description Language (WSDL).|Receive.ServiceContractName.LocalName powinny być zgodne.|  
+|HasProtectionLevel|Yes|Pobiera wartość wskazującą, czy element członkowski ma przypisany poziom ochrony.|Receive.ProtectionLevel nie może mieć wartości null.|  
+|Nazwa|Yes|Pobiera lub ustawia nazwę \<portType > elementu w sieci Web Services Description Language (WSDL).|Receive.ServiceContractName.LocalName powinny być zgodne.|  
 |Przestrzeń nazw|Yes|Pobiera lub ustawia obszar nazw \<portType > elementu w sieci Web Services Description Language (WSDL).|Receive.ServiceContractName.NameSpace powinny być zgodne.|  
 |protectionLevel|Yes|Określa, czy powiązania dla kontraktu musi obsługiwać wartość właściwości ProtectionLevel.|Receive.ProtectionLevel powinny być zgodne.|  
 |SessionMode|Nie|Pobiera lub ustawia informację, czy sesje są dozwolone, niedozwolone lub wymagane.|(N/D)|  
@@ -92,15 +92,15 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Wind
 |-------------------|---------------|-----------------|-------------------|  
 |isReference|Nie|Pobiera lub ustawia wartość wskazującą, czy chcesz zachować dane odwołanie do obiektu.|(N/D)|  
 |Nazwa|Tak|Pobiera lub ustawia nazwę kontraktu danych dla typu.|Nie nastąpi sprawdzanie poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
-|Przestrzeń nazw|Tak|Pobiera lub ustawia obszar nazw dla kontraktu danych dla typu.|Nie nastąpi sprawdzanie poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
+|Przestrzeń nazw|Yes|Pobiera lub ustawia obszar nazw dla kontraktu danych dla typu.|Nie nastąpi sprawdzanie poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
 |TypeId|Nie|Po zaimplementowaniu w klasie pochodnej pobiera unikatowy identyfikator dla tego atrybutu. (Dziedziczone z atrybutu).|(N/D)|  
   
 ### <a name="FaultContract"></a> Atrybuty kontraktu błędów  
   
 |Nazwa właściwości|Obsługiwane|Opis|Sprawdzanie poprawności WF|  
 |-------------------|---------------|-----------------|-------------------|  
-|Akcja|Yes|Pobiera lub ustawia akcję komunikat o błędzie protokołu SOAP, który jest określony jako część kontrakt operacji.|SendReply.Action powinny być zgodne.|  
-|DetailType|Yes|Pobiera typ obiektu podlegającego serializacji, który zawiera informacje o błędzie.|SendReply.Content powinien być zgodny z typem|  
+|Akcja|Tak|Pobiera lub ustawia akcję komunikat o błędzie protokołu SOAP, który jest określony jako część kontrakt operacji.|SendReply.Action powinny być zgodne.|  
+|DetailType|Tak|Pobiera typ obiektu podlegającego serializacji, który zawiera informacje o błędzie.|SendReply.Content powinien być zgodny z typem|  
 |HasProtectionLevel|Nie|Pobiera wartość wskazującą, czy komunikat o błędzie protokołu SOAP ma przypisany poziom ochrony.|(N/D)|  
 |Nazwa|Nie|Pobiera lub ustawia nazwę komunikat o błędzie w sieci Web Services Description Language (WSDL).|(N/D)|  
 |Przestrzeń nazw|Nie|Pobiera lub ustawia obszar nazw błąd protokołu SOAP.|(N/D)|  

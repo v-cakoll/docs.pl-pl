@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-ms.openlocfilehash: 1bf3eb97d633322f6bd04f8e975ae3fc8ec54329
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 13ecd6c0d613199210610c1c094ae1bdabaa71a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680171"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608471"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Różnice między szablonami C++ i typami ogólnymi C# (Przewodnik programowania w języku C#)
 Szablony typami ogólnymi C# i C++ są obie funkcje językowe, pozwalające na obsługę typów sparametryzowanych. Istnieją jednak wiele różnic między nimi. Na poziomie składni typami ogólnymi C# są prostsze sparametryzowanych typów bez złożoność szablonów języka C++. Ponadto C# nie próbuje zapewniają wszystkich funkcji, które zapewniają szablonów języka C++. Na poziomie wdrożenia główną różnicą jest, że podstawienia typu ogólnego C# są wykonywane w czasie wykonywania i informacje o typie ogólny, tym samym są zachowywane do wystąpień obiektów. Aby uzyskać więcej informacji, zobacz [typy ogólne w czasie wykonywania](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  

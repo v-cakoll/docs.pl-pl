@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0903aac366426e8b4d271ae4bfaa54c79a198e5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077176"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583751"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Porównywanie wierszy danych (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] definiuje różne operatory zestawów do porównywania elementów źródła, aby zobaczyć, czy są równe. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] udostępnia następujące operatory zestawów:  
   
--   <xref:System.Linq.Enumerable.Distinct%2A>  
+- <xref:System.Linq.Enumerable.Distinct%2A>  
   
--   <xref:System.Linq.Enumerable.Union%2A>  
+- <xref:System.Linq.Enumerable.Union%2A>  
   
--   <xref:System.Linq.Enumerable.Intersect%2A>  
+- <xref:System.Linq.Enumerable.Intersect%2A>  
   
--   <xref:System.Linq.Enumerable.Except%2A>  
+- <xref:System.Linq.Enumerable.Except%2A>  
   
  Te operatory porównania elementy źródłowe, wywołując <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> i <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> metody dla każdej kolekcji elementów. W przypadku właściwości <xref:System.Data.DataRow>, te operatory wykonać porównanie odwołań, które zwykle nie jest idealnym rozwiązaniem zachowanie operacje na zestawie danych tabelarycznych. Dla operacji zestawu zazwyczaj chcesz określić, czy są równe wartości elementów i nie odwołania do elementu. W związku z tym <xref:System.Data.DataRowComparer> klasa została dodana do [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Tej klasy może służyć do porównywania wartości wierszy.  
   

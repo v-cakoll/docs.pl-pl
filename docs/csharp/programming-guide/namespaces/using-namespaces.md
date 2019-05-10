@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678403"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452686"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Używanie przestrzeni nazw (Przewodnik programowania w języku C#)
 Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposoby. Po pierwsze klas .NET Framework umożliwia organizowanie jego wiele klas przestrzenie nazw. Po drugie deklarowania własne przestrzenie nazw może kontrolować zakres klasy i metody nazwy w dużych projektach programowania.  
@@ -39,7 +39,7 @@ Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposob
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>Używanie przestrzeni nazw do zakresu kontroli  
- `namespace` Słowo kluczowe jest używane do deklarowania zakresu. Możliwość tworzenia zakresów w obrębie projektu ułatwia organizowanie kodu i pozwala na tworzenie typów globalnie unikatowa. W poniższym przykładzie klasę o nazwie `SampleClass` jest zdefiniowany w dwie przestrzenie nazw, jednej zagnieżdżone wewnątrz innych. [. Operator](../../../csharp/language-reference/operators/member-access-operator.md) jest używany do odróżnienia, która metoda jest wywoływana.  
+ `namespace` Słowo kluczowe jest używane do deklarowania zakresu. Możliwość tworzenia zakresów w obrębie projektu ułatwia organizowanie kodu i pozwala na tworzenie typów globalnie unikatowa. W poniższym przykładzie klasę o nazwie `SampleClass` jest zdefiniowany w dwie przestrzenie nazw, jednej zagnieżdżone wewnątrz innych. [Dostęp do elementu członkowskiego `.` operator](../../language-reference/operators/member-access-operators.md#member-access-operator-) jest używany do odróżnienia, która metoda jest wywoływana.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -93,6 +93,6 @@ Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposob
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)
 - [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [. operator](../../../csharp/language-reference/operators/member-access-operator.md)
+- [. operator](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

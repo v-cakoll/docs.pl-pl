@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867145"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469703"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektu: Jak obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  
@@ -38,7 +38,7 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
  Konstruktory i destruktory kontrolować, tworzenie i niszczenie obiektów. `Sub New` i `Sub Finalize` procedury w Visual Basic, zainicjować i niszczy obiektów; zastępują one `Class_Initialize` i `Class_Terminate` metod używanych w Visual Basic 6.0 i starszych wersji.  
   
 ### <a name="sub-new"></a>Nowe podrzędne  
- `Sub New` Konstruktor można uruchomić tylko raz, po utworzeniu klasy. Nie można wywołać w jawnie w dowolnym miejscu innym niż w pierwszym wierszu kodu innego konstruktora z tej samej klasie lub klasie pochodnej. Ponadto kod w `Sub New` metody jest zawsze uruchamiany przed innymi kodami w klasie. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] i nowszych wersjach niejawnie Utwórz `Sub New` konstruktora w czasie wykonywania, jeżeli nie zdefiniujesz jawnie `Sub New` procedury dla klasy.  
+ `Sub New` Konstruktor można uruchomić tylko raz, po utworzeniu klasy. Nie można wywołać w jawnie w dowolnym miejscu innym niż w pierwszym wierszu kodu innego konstruktora z tej samej klasie lub klasie pochodnej. Ponadto kod w `Sub New` metody jest zawsze uruchamiany przed innymi kodami w klasie. Visual Basic i nowszych wersjach niejawnie tworzenie `Sub New` konstruktora w czasie wykonywania, jeżeli nie zdefiniujesz jawnie `Sub New` procedury dla klasy.  
   
  Aby utworzyć konstruktor dla klasy, należy utworzyć procedurę o nazwie `Sub New` w dowolnym miejscu definicji klasy. Aby utworzyć sparametryzowania konstruktora, określ nazwy i typy danych argumentów `Sub New` tak samo jak należy określić argumenty dla innej procedury, zgodnie z poniższym kodem:  
   
@@ -60,7 +60,7 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
   
  `Finalize` Destruktor jest metodą chronionych, który można wywołać tylko z klasy należy ona do lub z klas pochodnych. Wywołania systemowe `Finalize` automatycznie kiedy obiekt jest niszczony, więc nie należy jawnie wywołać `Finalize` z poza klasy pochodnej `Finalize` implementacji.  
   
- W odróżnieniu od `Class_Terminate`, które wykonuje, gdy tylko obiekt jest ustawiony na wartość nothing, jest zwykle opóźnienia między kiedy obiekt traci zakresu i kiedy wywołuje języka Visual Basic `Finalize` destruktora. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] i nowsze wersje umożliwiają drugi rodzaj destruktora, <xref:System.IDisposable.Dispose%2A>, której można jawnie wywołać w dowolnym momencie, aby od razu zwolnić zasoby.  
+ W odróżnieniu od `Class_Terminate`, które wykonuje, gdy tylko obiekt jest ustawiony na wartość nothing, jest zwykle opóźnienia między kiedy obiekt traci zakresu i kiedy wywołuje języka Visual Basic `Finalize` destruktora. Visual Basic i nowsze wersje umożliwiają dla drugiego rodzaju destruktora, <xref:System.IDisposable.Dispose%2A>, której można jawnie wywołać w dowolnym momencie, aby od razu zwolnić zasoby.  
   
 > [!NOTE]
 >  A `Finalize` destruktor nie powinna zgłaszać wyjątków, ponieważ nie mogą być obsługiwane przez aplikację i może spowodować nieplanowane zamknięcie aplikacji.  

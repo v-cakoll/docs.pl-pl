@@ -2,12 +2,12 @@
 title: typ złożony
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a6a7190a144280930d67f179373f29f6b19e98cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583675"
 ---
 # <a name="complex-type"></a>typ złożony
 A *typu złożonego* jest szablon służący do definiowania właściwości zaawansowane, ze strukturą na [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) lub na inne typy złożone. Każdy szablon zawiera następujące informacje:  

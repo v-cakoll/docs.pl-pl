@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011566"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211205"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Przewodnik: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio
 
@@ -68,17 +68,13 @@ Lista kompletny kod znajduje się [jak: Tworzenie formantu formularzy Windows wy
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby ukończyć ten przewodnik, potrzebne są:
-
-- Wystarczające uprawnienia, aby można było utworzyć i uruchomić projekty aplikacji Windows Forms na komputerze, w którym jest zainstalowany program Visual Studio.
+W celu przeprowadzenia tego instruktażu, należy programu Visual Studio.
 
 ## <a name="creating-the-project"></a>Tworzenie projektu
 
 Pierwszym krokiem jest utworzenie projektu aplikacji. Użyjesz tego projektu do kompilowania aplikacji, który jest hostem kontrolki niestandardowej.
 
-### <a name="to-create-the-project"></a>Aby utworzyć projekt
-
-- Utwórz projekt Windows Forms aplikacji o nazwie "MarqueeControlTest" (**pliku** > **New** > **projektu**  >   **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).
+Otwórz program Visual Studio i Utwórz projekt Windows Forms aplikacji o nazwie "MarqueeControlTest" (**pliku** > **New** > **projektu**  >  **Visual C#**  lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).
 
 ## <a name="creating-a-control-library-project"></a>Tworzenie projektu biblioteki kontrolek
 

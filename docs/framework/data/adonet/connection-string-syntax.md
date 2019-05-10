@@ -2,12 +2,12 @@
 title: Składnia parametrów połączenia
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4ec2b8a0a478f59ca66f8699e7846004a3a409cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608024"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583601"
 ---
 # <a name="connection-string-syntax"></a>Składnia parametrów połączenia
 Każdy dostawca danych .NET Framework ma `Connection` obiektu, który dziedziczy z <xref:System.Data.Common.DbConnection> oraz specyficzne dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości. Składnia ciągu połączenia określone dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości. W poniższej tabeli wymieniono dostawców cztery danych, które są zawarte w .NET Framework.  
@@ -112,11 +112,11 @@ Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder
 |Wymusić ustawienie klienta protokołu szyfrowania|Ustawienie klienta, certyfikat serwera zaufania|Szyfrowanie/Szyfrowanie dla atrybut parametrów połączenia danych|Atrybut parametrów połączenia certyfikat serwera zaufania|Wynik|  
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Nie|Brak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie nie występuje.|  
-|Nie|Brak|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
+|Nie|Brak|Yes|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
 |Nie|Brak|Yes|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
 |Yes|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
 |Tak|Tak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
-|Yes|Yes|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
+|Tak|Yes|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
 |Tak|Yes|Yes|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
   
  Aby uzyskać więcej informacji, zobacz [przy użyciu szyfrowania bez sprawdzania poprawności](/sql/relational-databases/native-client/features/using-encryption-without-validation).

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954833"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063723"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Instrukcje: Stosowanie macierzy kolorów do transformacji pojedynczego koloru
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowania obrazami. <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów przechowywać kolor każdego piksela jako wartość liczby 32-bitowej: 8 bitów na każdy czerwony, zielony, niebieski i alfa. Każdy z czterech składników jest liczba z przedziału od 0 do 255, od 0, reprezentujących natężenie i 255 reprezentujący pełnej intensywności. Składnik alfa określa Przezroczystość koloru: 0 jest w pełni przezroczyste, a 255 jest całkowicie nieprzezroczyste.  
@@ -32,13 +32,13 @@ ms.locfileid: "61954833"
   
  Następujące mnożenie macierzy wykona pary przekształcenia w podanej kolejności.  
   
- ![Ponowne kolorowanie](./media/recoloring01.gif "recoloring01")  
+ ![Zrzut ekranu przedstawiający mnożenie macierzy transformacji.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/multiplication-color-matrix.gif)
   
  Elementów macierzy kolorów są indeksowane (liczony od zera), wiersz, a następnie kolumny. Na przykład wpis w piątym wierszu, a trzecia kolumna macierzy M jest oznaczona M [4] [2].  
   
  5 x 5 macierzą (pokazane na poniższej ilustracji) ma 1s na przekątnej i 0s wszędzie, gdzie else. Jeśli wektor kolor mnożenia macierz tożsamości, vector kolorów nie zmienia się. Wygodny sposób do utworzenia macierzy transformacji kolorów jest rozpoczynać macierz tożsamości i wprowadź niewielką zmianę, który produkuje żądane transformacje.  
   
- ![Ponowne kolorowanie](./media/recoloring02.gif "recoloring02")  
+ ![Zrzut ekranu przedstawiający macierz tożsamości 5 x 5 dla transformacji kolorów.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/5x5-identity-matrix-color-transformation.gif)  
   
  Bardziej szczegółowe omówienie macierzy, a przekształcenia zobacz [systemy i przekształcenia współrzędnych](coordinate-systems-and-transformations.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61954833"
   
  Poniższa ilustracja pokazuje oryginalny obraz po lewej stronie i przekształcone obraz po prawej stronie.  
   
- ![Colors](./media/colortrans1.png "colortrans1")  
+ ![Purpurowa kwadratowy po lewej i kwadrat fuksja po prawej stronie.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/color-transformation.png)  
   
  Kod w poniższym przykładzie używa następujące kroki, aby wykonać ponowne kolorowanie:  
   

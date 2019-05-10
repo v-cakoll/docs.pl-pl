@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873236"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469715"
 ---
 # <a name="interop-marshaling"></a>Organizowanie międzyoperacyjne
 <a name="top"></a> Marshaling międzyoperacyjny decyduje o tym, jak dane są przekazywane w metodzie argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania. Marshaling międzyoperacyjny jest czynnością środowiska wykonawczego, wykonywane przez usługę organizowania wykonywalnych języka wspólnego.  
@@ -71,7 +71,7 @@ ms.locfileid: "61873236"
  Jeśli planujesz eksportu serwera zarządzanego, należy pamiętać, określa, czy klient modelu COM apartamentu serwera. Serwerów zarządzanych, wywoływany przez klient modelu COM, zainicjować w MTA musi zapewnić bezpieczeństwo wątkowe.  
   
 ### <a name="managed-clients-and-com-servers"></a>Zarządzanych klientów i serwerów COM  
- Ustawieniem domyślnym dla klientów zarządzanych apartamentach jest MTA; Typ aplikacji klient modelu .NET można jednak zmienić domyślne ustawienie. Na przykład [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] ustawienie typu apartment klienta jest komórce jednowątkowej Możesz użyć <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> właściwości lub <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> właściwość, aby sprawdzić i zmienić ustawienia typu apartment klient zarządzany.  
+ Ustawieniem domyślnym dla klientów zarządzanych apartamentach jest MTA; Typ aplikacji klient modelu .NET można jednak zmienić domyślne ustawienie. Na przykład ustawienie typu apartment klienta Visual Basic jest komórce jednowątkowej Możesz użyć <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> właściwości lub <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> właściwość, aby sprawdzić i zmienić ustawienia typu apartment klient zarządzany.  
   
  Tworzenie składnika ustawienie koligacji wątku serwera COM. W poniższej tabeli przedstawiono kombinacje ustawień apartamentu dla klientów programu .NET i serwerów COM. Pokazuje również, wynikowy marshaling wymagania dotyczące kombinacje.  
   

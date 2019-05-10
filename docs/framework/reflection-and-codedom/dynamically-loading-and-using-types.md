@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61983934"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469678"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamiczne ładowanie i używanie typów
-Odbicie zapewnia infrastrukturę, która używane przez Kompilatory języka, takich jak [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] i JScript w celu zaimplementowania ukryte późne powiązania. Powiązanie jest proces lokalizowania deklaracja (wykonanie), która odpowiada jednoznacznie określonym typie. Ten proces odbywa się w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnego wiązania. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] pozwala na używanie ukryte późne powiązania w kodzie; Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika spowodować odpowiedniej metody do wywołania w czasie wykonywania. Te argumenty są wystąpienie (obiekt) do wywołania metody, nazwę wywoływanej metody (ciąg), a argumenty przekazane do wywoływanej metody (tablicę obiektów).  
+Odbicie zapewnia infrastrukturę używaną przez Kompilatory języka do zaimplementowania ukryte późne powiązania. Powiązanie jest proces lokalizowania deklaracja (wykonanie), która odpowiada jednoznacznie określonym typie. Ten proces odbywa się w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnego wiązania. Visual Basic umożliwia ukryte późne powiązania w kodzie; Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika spowodować odpowiedniej metody do wywołania w czasie wykonywania. Te argumenty są wystąpienie (obiekt) do wywołania metody, nazwę wywoływanej metody (ciąg), a argumenty przekazane do wywoływanej metody (tablicę obiektów).  
   
  W poniższym przykładzie kompilator Visual Basic używa odbicia niejawnie do wywołania metody na obiekt, którego typ nie jest znany w czasie kompilacji. A **HelloWorld** klasa ma **PrintHello** do drukowania "Hello World" połączona z tekstem, który jest przekazywany do metody **PrintHello** metody. **PrintHello** metodę o nazwie w tym przykładzie jest faktycznie <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; kodu języka Visual Basic umożliwia **PrintHello** metoda do wywołania, tak jakby były znane typ obiektu (helloObj), podczas kompilacji czas (wczesne powiązania), a nie na wykonawczego (LCID).  
   

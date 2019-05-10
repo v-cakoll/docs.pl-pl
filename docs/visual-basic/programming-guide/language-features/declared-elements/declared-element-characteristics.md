@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830170"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912986"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Zadeklarowana charakterystyka elementów (Visual Basic)
 A *cechy* zadeklarowany element jest elementem tego elementu, który ma wpływ na sposób kod może korzystać z niego. Każdy element zadeklarowany ma co najmniej jeden z następujących właściwości, które są skojarzone z nią:  
@@ -37,18 +37,18 @@ A *cechy* zadeklarowany element jest elementem tego elementu, który ma wpływ n
 |Element|Typ danych|Okres istnienia|Zakres <sup>1</sup>|Poziom dostępu|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |Zmienna|Tak|Yes|Yes|Tak|  
-|Stała|Tak|Nie|Yes|Tak|  
+|Stała|Tak|Nie|Yes|Yes|  
 |Wyliczenie|Tak|Nie|Yes|Tak|  
 |Struktura|Nie|Nie|Yes|Tak|  
-|Właściwość|Tak|Yes|Yes|Tak|  
+|Właściwość|Tak|Yes|Yes|Yes|  
 |Metoda|Nie|Yes|Yes|Tak|  
-|Procedura (`Sub` lub `Function`)|Nie|Yes|Yes|Yes|  
+|Procedura (`Sub` lub `Function`)|Nie|Yes|Yes|Tak|  
 |Parametr procedury|Yes|Yes|Yes|Nie|  
 |Return — funkcja|Tak|Yes|Yes|Nie|  
-|Operator|Tak|Nie|Yes|Tak|  
+|Operator|Yes|Nie|Yes|Tak|  
 |Interface|Nie|Nie|Yes|Tak|  
 |Class|Nie|Nie|Yes|Tak|  
-|Zdarzenie|Nie|Nie|Yes|Tak|  
+|Zdarzenie|Nie|Nie|Yes|Yes|  
 |Delegate|Nie|Nie|Yes|Tak|  
   
  <sup>1</sup> zakres jest czasami określane jako *widoczność*.  

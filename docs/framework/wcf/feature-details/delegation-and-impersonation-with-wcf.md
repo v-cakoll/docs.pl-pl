@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4f86636cd244ce53ed00f80b38777e78a3278d6f
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856716"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912507"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegowanie i personifikacja za pomocą programu WCF
 *Personifikacja* jest typową techniką, której usługi użyć do ograniczenia dostępu klienta do zasobów w domenie usługi. Zasobów domeny usługi może być zasoby maszyny, takie jak pliki lokalne (dokona personifikacji) lub zasobów na innej maszynie, na przykład do udziału plików (delegowania). Dla przykładowej aplikacji, zobacz [Personifikowanie klienta](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Na przykład jak używać personifikacji zobacz [jak: Personifikowanie klienta w usłudze](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -116,7 +116,7 @@ ms.locfileid: "61856716"
 |Anonimowe|Tak|n/d|Personifikacja|  
 |Anonimowe|Nie|n/d|Identyfikacja|  
 |Identyfikacja|n/d|n/d|Identyfikacja|  
-|Personifikacja|Yes|n/d|Personifikacja|  
+|Personifikacja|Tak|n/d|Personifikacja|  
 |Personifikacja|Nie|n/d|Identyfikacja|  
 |Delegowanie|Tak|Yes|Delegowanie|  
 |Delegowanie|Tak|Nie|Personifikacja|  
@@ -127,16 +127,16 @@ ms.locfileid: "61856716"
   
 |`AllowedImpersonationLevel`|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/d|Yes|Tak|Delegowanie|  
-|n/d|Tak|Nie|Personifikacja|  
+|n/d|Tak|Yes|Delegowanie|  
+|n/d|Yes|Nie|Personifikacja|  
 |n/d|Nie|n/d|Identyfikacja|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Poziom personifikacji uzyskany z systemem S4U personifikacji  
   
 |Usługa ma `SeTcbPrivilege`|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Yes|Tak|n/d|Personifikacja|  
-|Tak|Nie|n/d|Identyfikacja|  
+|Tak|Tak|n/d|Personifikacja|  
+|Yes|Nie|n/d|Identyfikacja|  
 |Nie|n/d|n/d|Identyfikacja|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Mapowanie certyfikatu klienta na konto Windows  

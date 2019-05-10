@@ -2,12 +2,12 @@
 title: Aktywacja wystąpienia
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641677"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584921"
 ---
 # <a name="instance-activation"></a>Aktywacja wystąpienia
 Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, okresowo budzi się i wykrywa wystąpienia przepływu pracy możliwy do uruchomienia lub aktywowalnej w bazie danych trwałości. Jeśli zostaną znalezione wystąpienia możliwy do uruchomienia przepływu pracy, powiadamia hosta przepływu pracy, który jest w stanie aktywacji wystąpienia. Jeśli Magazyn wystąpienia wykryje wystąpienia przepływu pracy aktywowalnej, powiadamia ogólnego hosta, który aktywuje hosta przepływu pracy, który z kolei uruchamia wystąpienie przepływu pracy. W poniższych sekcjach w tym temacie opisano proces aktywacji wystąpienia szczegółowo.  

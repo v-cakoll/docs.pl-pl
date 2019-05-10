@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672097"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064037"
 ---
 # <a name="c-guide"></a>Przewodnik po języku C#
 
@@ -39,7 +39,7 @@ Przewodnik zawiera kilka sekcji. Możesz je czytać po kolei lub przejść bezpo
   * Wprowadzenie do samouczków C# zawiera interaktywne samouczki przeznaczone dla nowych deweloperów. Pozwalają one na poznawanie i eksplorację języka w przeglądarce internetowej, za pomocą interfejsu konsolowego - Read-Eval-Print-Loop (REPL). Po zakończeniu interaktywnych lekcji możesz rozwijać swoje umiejętności programowania, powtarzając te zadania na swojej maszynie.
 
 * [Samouczki](tutorials/index.md)
-  * Ta sekcja zawiera szereg kompletnych scenariuszy z uwzględnieniem zarówno opisów, jak i kodu. Wskazuje, dlaczego niektóre idiomy są preferowane, które funkcje języka C# najlepiej działają w różnych sytuacjach, a także pokazuje referencyjne wdrożenia dla typowych zadań. Jeżeli najlepiej uczysz się, widząc kod, zacznij od tej sekcji. Możesz także pobrać cały kod i poeksperymentować z nim w swoim środowisku.
+  * Ta sekcja zawiera szereg kompletnych scenariuszy z uwzględnieniem zarówno opisów, jak i kodu. Wskazuje, dlaczego niektóre idiomy są preferowane, które funkcje języka C# najlepiej działają w różnych sytuacjach, a także pokazuje referencyjne wdrożenia dla typowych zadań. Jeśli dowiesz się najlepiej, sprawdzając kod, należy uruchomić w tej sekcji. Możesz także pobrać cały kod i poeksperymentować z nim w swoim środowisku.
 
 * [Prezentacja języka C#](tour-of-csharp/index.md)
   * Ta sekcja zawiera ogólne omówienie języka. Opisuje ona elementy, z których składają się programy napisane w języku C#, a także pokazuje jego możliwości. Zawiera krótkie przykłady wszystkich elementów składni i tłumaczy najważniejsze zagadnienia dotyczące języka.

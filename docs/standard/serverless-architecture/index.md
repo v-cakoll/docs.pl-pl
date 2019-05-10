@@ -3,13 +3,13 @@ title: 'Aplikacje niewymagające użycia serwera: Architektura, wzorce i impleme
 description: Przewodnik dotyczący architektury bezserwerowej. Dowiedz się, kiedy, dlaczego i jak zaimplementować architekturę bezserwerową (w przeciwieństwie do infrastruktury jako usługi [IaaS] lub platforma jako usługa [PaaS]) w twoich aplikacjach firmowych.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 6/26/2018
-ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 06/26/2018
+ms.openlocfilehash: 148a79e39c047897719e4f97efd84676b1b92636
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054214"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062696"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplikacje niewymagające użycia serwera: Architektura, wzorce i implementacji platformy Azure
 

@@ -2,12 +2,12 @@
 title: Włączanie dostępu między bazami danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 70b4b7b55311bfc5dba1b537a603e0d15d7f3d9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ef018566c5d3881d2f9b77dad932712d1fb11841
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583700"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Włączanie dostępu między bazami danych w programie SQL Server
 Tworzenie łańcucha własności między bazami danych występuje, gdy procedura w jednej bazie danych jest zależna od obiektów w innej bazie danych. Łańcucha własności między bazami danych działa w taki sam sposób jak łańcucha własności, w ramach pojedynczej bazy danych, z tą różnicą, że łańcucha własności nieprzerwany wymaga, że wszyscy właściciele obiektu są mapowane do tego samego konta logowania. Jeśli obiekt źródłowy w źródłowej bazie danych i obiektów docelowych w docelowych baz danych są własnością tego samego konta logowania, programu SQL Server nie sprawdza uprawnienia do obiektów docelowych.  

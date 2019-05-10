@@ -1,17 +1,21 @@
 ---
 title: polecenia DotNet-Dodaj odwołania — polecenie
 description: Dotnet Dodaj odwołanie do polecenia zapewnia wygodny sposób, aby dodać odwołania projektu do projektu.
-ms.date: 12/04/2018
-ms.openlocfilehash: 8df9fa3c9469f74b27a9cb8120936f03532b016c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 04/24/2019
+ms.openlocfilehash: f33a379534dca88133babbb5ca78bca614e441c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755194"
 ---
 # <a name="dotnet-add-reference"></a>polecenia DotNet-Dodawanie odwołania
 
+**Ten artykuł dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 

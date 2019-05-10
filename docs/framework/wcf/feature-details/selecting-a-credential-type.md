@@ -2,12 +2,12 @@
 title: Wybieranie typu poświadczeń
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 20c070e9351219a649735ac404231cf6f265d814
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748810"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586128"
 ---
 # <a name="selecting-a-credential-type"></a>Wybieranie typu poświadczeń
 *Poświadczenia* jest Windows Communication Foundation (WCF) używanych do ustalenia tożsamości lub możliwości danych. Na przykład usługi passport jest poświadczeń, przez Rząd potwierdzenie zaawansowanych możliwości dostępnych w kraju lub regionie. W programie WCF poświadczenia mogą mieć wiele form, takich jak tokeny nazwy użytkownika i certyfikaty X.509. W tym temacie omówiono poświadczenia, jak są używane w programie WCF i jak wybierać odpowiednie poświadczenia dla aplikacji.  

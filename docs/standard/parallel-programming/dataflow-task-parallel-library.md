@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d44ec0e0601383133e6c59e44cd81031918d4b6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a58211226b93c8fde9fa4240e04a245fb83a00d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973436"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629040"
 ---
 # <a name="dataflow-task-parallel-library"></a>Przepływ danych (Biblioteka zadań równoległych)
 <a name="top"></a> Biblioteka zadań równoległych (TPL) zapewnia składników przepływu danych, aby zwiększyć niezawodność aplikacji obsługujących współbieżności. Te składniki przepływu danych są nazywane zbiorczo *Biblioteka przepływu danych TPL*. Ten model przepływu danych promuje aktorów programowania przez dostarczanie komunikatów w trakcie przekazywania dla gruboziarnistych przepływu danych i ich przetwarzanie potokowe zadania. Składniki przepływu danych z typów i planowania infrastruktury TPL i integracji z C#, Visual Basic i F# Obsługa języków w programowaniu asynchronicznym. Te składniki przepływu danych są przydatne, jeśli masz wiele operacji, które muszą asynchronicznie komunikować się ze sobą, lub gdy chcesz przetwarzania danych, gdy stanie się dostępny. Na przykład rozważmy aplikację, która przetwarza dane obrazu z kamery internetowej. Za pomocą modelu przepływu danych, aplikacja może przetwarzać ramki obrazu po ich udostępnieniu. Jeśli aplikacja zwiększa klatek, na przykład, wykonując światła redukcji korekty lub efektu czerwonych utworzeniem *potoku* składników przepływu danych. Każdy etap potoku może używać więcej funkcji równoległości gruboziarnistych, takich jak funkcje, które są dostarczane przez TPL w celu przekształcenia obrazu.  

@@ -2,12 +2,12 @@
 title: XDocument, klasa — Przegląd (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: e3ef7d66cb9759bd71e69c1a0db3614a02f785b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a2b2e7490116cfd7ff3cff783a4a3a985a39d0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680641"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595336"
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument, klasa — Przegląd (C#)
 W tym temacie przedstawiono <xref:System.Xml.Linq.XDocument> klasy.  

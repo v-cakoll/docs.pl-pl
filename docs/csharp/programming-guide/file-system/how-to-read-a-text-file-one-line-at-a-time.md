@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 831f306a19d926b70170c1a6ebc4ab670f1b9851
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4e6c4cfce1b5e97f70040b318eb68ee78ee4a953
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711008"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595389"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Instrukcje: Odczytywanie pliku tekstowego po jednym wierszu (Visual C#)
 Ten przykład odczytuje zawartość pliku tekstowego, jeden wiersz w czasie, na ciąg za pośrednictwem `ReadLine` metody `StreamReader` klasy. Każdy wiersz tekstu jest przechowywany w ciągu `line` i wyświetlane na ekranie.  

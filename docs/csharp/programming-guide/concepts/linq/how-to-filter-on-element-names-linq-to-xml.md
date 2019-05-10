@@ -2,12 +2,12 @@
 title: 'Instrukcje: Filtrowanie nazw elementów (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 586c371fdd014eee6eb21563214d9e26a0e264fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 20aeae636df35fa156bb7dd1019dd65bcd9e8532
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668123"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597097"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Instrukcje: Filtrowanie nazw elementów (LINQ to XML) (C#)
 Wywołanie jednej z metod, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, możesz przefiltrować listę według nazwy elementu.  

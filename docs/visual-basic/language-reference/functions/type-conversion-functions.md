@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3321a9a290e6ba49be289848e4d16907ad9edbda
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802300"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662581"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funkcje konwersji typu (Visual Basic)
 Te funkcje są skompilowany w tekście, co oznacza, że kod konwersji jest częścią kodu, który oblicza wyrażenie. Czasami jest Brak wywołania do procedury wykonywania konwersji, co zwiększa wydajność. Każda funkcja przekształca wynik wyrażenia na określony typ danych.  

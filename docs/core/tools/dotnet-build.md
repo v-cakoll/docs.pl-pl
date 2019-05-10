@@ -1,17 +1,21 @@
 ---
 title: polecenie kompilacji DotNet
 description: Dotnet kompilacji polecenia kompilacji w projekt i wszystkie jego zależności.
-ms.date: 12/04/2018
-ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 04/24/2019
+ms.openlocfilehash: 2e58bace8055ba793bf7a6ca3a51eb20aa689768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665276"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755218"
 ---
 # <a name="dotnet-build"></a>Kompilacja DotNet
 
+**Ten artykuł dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 
@@ -19,25 +23,12 @@ ms.locfileid: "61665276"
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
-    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
-    [-r|--runtime] [-v|--verbosity] [--version-suffix]
-
-dotnet build [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Opis
 
@@ -75,8 +66,6 @@ Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projek
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 * **`-c|--configuration {Debug|Release}`**
 
   Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
@@ -87,11 +76,15 @@ Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projek
 
 * **`--force`**
 
-  Wymusza wszystkie zależności rozwiązany, nawet wtedy, gdy ostatnie przywracanie zakończyło się pomyślnie. Określanie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.
+  Wymusza wszystkie zależności rozwiązany, nawet wtedy, gdy ostatnie przywracanie zakończyło się pomyślnie. Określanie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku. Dostępne, ponieważ .NET Core 2.0 SDK.
 
 * **`-h|--help`**
 
   Drukuje krótki pomoc dotyczącą polecenia.
+
+* **`--interactive`**
+
+  Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji. Na przykład w celu ukończenia uwierzytelniania. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
 
 * **`--no-dependencies`**
 
@@ -101,9 +94,13 @@ Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projek
 
   Oznaczenie kompilacji jako niebezpieczny dla kompilacji przyrostowej. Ta flaga powoduje wyłączenie kompilacji przyrostowej i wymusza czyste odbudowania tego wykresu zależności projektu.
 
+* **`--no-logo`**
+
+  Nie wyświetla transparentu lub komunikat o prawach autorskich. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
+
 * **`--no-restore`**
 
-  Nie jest wykonywana niejawna przywracania, podczas kompilacji.
+  Nie jest wykonywana niejawna przywracania, podczas kompilacji. Dostępne, ponieważ .NET Core 2.0 SDK.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -115,51 +112,11 @@ Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projek
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
+  Ustawia poziom szczegółowości MSBuild. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`. Wartość domyślna to `minimal`.
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Określa sufiks wersji znak gwiazdki (`*`) w polu wersja pliku projektu. Format jest zgodny wskazówki wersji NuGet.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
-
-* **`-f|--framework <FRAMEWORK>`**
-
-  Kompiluje dla określonego [framework](../../standard/frameworks.md). Struktura musi być zdefiniowany w [pliku projektu](csproj.md).
-
-* **`-h|--help`**
-
-  Drukuje krótki pomoc dotyczącą polecenia.
-
-* **`--no-dependencies`**
-
-  Ignoruje odwołania do projektu do projektu (P2P) i tylko kompilacje określonym katalogu głównym projektu.
-
-* **`--no-incremental`**
-
-  Oznaczenie kompilacji jako niebezpieczny dla kompilacji przyrostowej. Ta flaga powoduje wyłączenie kompilacji przyrostowej i wymusza czyste odbudowania tego wykresu zależności projektu.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Katalog, w której chcesz umieścić skompilowane pliki binarne. Musisz również zdefiniować `--framework` po określeniu tej opcji.
-
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
-
-  Określa docelowe środowisko uruchomieniowe. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych (RID), zobacz [katalogu RID](../rid-catalog.md).
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Określa sufiks wersji znak gwiazdki (`*`) w polu wersja pliku projektu. Format jest zgodny wskazówki wersji NuGet.
-
----
+  Ustawia wartość `$(VersionSuffix)` właściwość do użycia podczas tworzenia projektu. To tylko wtedy, gdy `$(Version)` nie jest właściwością. Następnie `$(Version)` ustawiono `$(VersionPrefix)` w połączeniu z `$(VersionSuffix)`, oddzielone kreską.
 
 ## <a name="examples"></a>Przykłady
 
@@ -175,10 +132,10 @@ Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projek
   dotnet build --configuration Release
   ```
 
-* Tworzenie projektu i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 16.04):
+* Tworzenie projektu i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 18.04):
 
   ```console
-  dotnet build --runtime ubuntu.16.04-x64
+  dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * Skompiluj projekt, a następnie użyj określonego źródła pakietu NuGet podczas operacji przywracania (.NET Core 2.0 SDK i nowsze wersje):

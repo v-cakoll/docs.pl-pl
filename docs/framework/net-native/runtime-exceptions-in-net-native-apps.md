@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3b682d4b43ece406ee320d6d4f96ed5cda5f17c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866785"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650352"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Wyjątki środowiska uruchomieniowego w aplikacjach .NET Native
 Jest ważne przetestować kompilacji wydania aplikacji Universal Windows Platform na ich platformach docelowych, ponieważ konfiguracji debug i release całkowicie różnią się. Domyślnie korzysta z konfiguracji debugowania środowiska uruchomieniowego .NET Core do kompilowania aplikacji, ale konfiguracja wydania używa platformy .NET Native do kompilowania aplikacji do kodu macierzystego.  

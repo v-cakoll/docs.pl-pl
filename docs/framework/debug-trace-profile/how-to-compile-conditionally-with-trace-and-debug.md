@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c9b60cdef2af25ce712fcb2401b7f776d3add5b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660399"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem
 Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjściowe debugowania przejdź do okna danych wyjściowych w programie Visual Studio. Jednak aby włączyć funkcje śledzenia do wdrożonej aplikacji, należy skompilować instrumentowanej aplikacji przy użyciu **śledzenia** dyrektywy kompilatora włączone. Dzięki temu kod śledzenia jest kompilowana do wersji aplikacji. Jeśli nie włączysz **śledzenia** dyrektywy, cały kod śledzenia jest ignorowany podczas kompilacji, a nie znajduje się w kodzie pliku wykonywalnego, który zostanie wdrożony.  

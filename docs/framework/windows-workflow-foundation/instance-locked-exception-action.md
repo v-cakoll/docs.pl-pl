@@ -2,12 +2,12 @@
 title: Działanie zablokowanego wyjątku wystąpienia
 ms.date: 03/30/2017
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
-ms.openlocfilehash: 0cb39c51436271999c66c30210e0da79adc92e72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d8fd2d1299a8563ae41b098c1cfb7a0ba30bb8f8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699542"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662983"
 ---
 # <a name="instance-locked-exception-action"></a>Działanie zablokowanego wyjątku wystąpienia
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> Właściwość Store wystąpienia przepływu pracy SQL pozwala określić, jaka akcja dostawcy stanów trwałych programu SQL powinna wykonać, gdy odbierze <xref:System.Runtime.DurableInstancing.InstanceLockedException>. Dostawcy stanów trwałych odbiera tego wyjątku, gdy próbuje zablokować wystąpienie usługi przepływu pracy, który jest zablokowany przez inny host usługi. Wartości dla tej właściwości to <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry>, i <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. Wartość domyślna to <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. Na poniższej liście opisano trzy opcje:  

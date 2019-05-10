@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f7652b0c63212f9566c709421b56168377a0ace3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665213"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Przewodnik: Tworzenie przycisku przy użyciu języka XAML
 Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do użycia w aplikacji Windows Presentation Foundation (WPF). W tym przewodniku używa szablonu i style w celu utworzenia zasobu dostosowany przycisk, który umożliwia oddzielenie logiki przycisk od deklaracji przycisku i ponowne użycie kodu. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

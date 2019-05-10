@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 38f425e50b7981c17a96a78e1e28bafb2cf258fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932899"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635137"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem systemu Windows
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez usługę Windows security. Aby uzyskać więcej informacji na temat programowania, zobacz [jak: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
@@ -25,7 +25,7 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 |Współdziałanie|Tylko usługi WCF|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą zintegrowanego uwierzytelniania Windows)<br /><br /> Tak (za pomocą zintegrowanego uwierzytelniania Windows)|  
 |Integralność|Tak|  
-|Poufność|Tak|  
+|Poufność|Yes|  
 |Transport|NET.TCP|  
 |Wiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
   

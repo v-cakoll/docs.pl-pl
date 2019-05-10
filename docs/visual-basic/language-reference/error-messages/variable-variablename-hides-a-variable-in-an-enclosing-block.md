@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 36fe543dd4546c6fe930f259a55cea856917370f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766893"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662662"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Zmienna "\<nazwa_zmiennej >" ukrywa zmienną w otaczającym bloku
 Zmienna ujęte w blok ma taką samą nazwę jak inny zmiennej lokalnej.  

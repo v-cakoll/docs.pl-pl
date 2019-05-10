@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62015126"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644822"
 ---
 # <a name="managed-threading-basics"></a>Zarządzana wątkowość — podstawy
 
@@ -42,9 +42,6 @@ Pięciu pierwszych tematach w tej sekcji mają ułatwić ustalenie, kiedy używa
   
  [Zarządzana i niezarządzana wątkowość w systemie Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Związek między zarządzana i niezarządzana wątkowość, zawiera listę zarządzanych odpowiedników dla Windows wątkowości interfejsów API, a w tym artykule omówiono interakcji apartamentach COM i zarządzanych wątków.  
-  
- [Thread.Suspend, odzyskiwanie pamięci i punkty bezpieczeństwa](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- W tym artykule opisano wątku zawieszenia i wyrzucania elementów kolekcji.  
   
  [Lokalny magazyn wątków: Względne wątkom pola statyczne i gniazda danych](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  W tym artykule opisano mechanizmy względne wątkom magazynu.  

@@ -3,11 +3,11 @@ title: Samouczki języka C#
 description: Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.
 ms.date: 10/25/2018
 ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63773900"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755775"
 ---
 # <a name="c-tutorials"></a>Samouczki języka C#
 

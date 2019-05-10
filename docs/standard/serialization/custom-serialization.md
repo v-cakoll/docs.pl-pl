@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 983860c680b7c9bcf36406f61582a6b641fd26a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931745"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645305"
 ---
 # <a name="custom-serialization"></a>Niestandardowej serializacji
 Niestandardowej serializacji to proces sterowania serializacji i deserializacji obiektu określonego typu. Kontrolując serializacji jest możliwe w celu zapewnienia zgodności serializacji, które jest możliwość serializacji i deserializacji pomiędzy wersjami typu bez przerywania podstawowych funkcji typu. Na przykład w pierwszej wersji typu, może istnieć tylko dwa pola. W następnej wersji typu są dodawane kilka więcej pól. Jeszcze drugi wersji aplikacji, musi mieć możliwość serializacji i deserializacji oba typy. W następujących sekcjach opisano kontrola serializacji.

@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633891"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, operacje analizy i formatowanie wartości daty i godziny, nie należy polegać na format domyślny (czyli w większości przypadków format kultury lokalnego serwera sieci Web) podczas interakcji z użytkownikiem. Zamiast tego formularzy sieci Web, Obsługa daty i godziny ciągi wprowadzane przez użytkownika, które należy przeanalizować ciągi przy użyciu preferowanej kultury użytkownika. Podobnie dane daty i godziny, powinna być wyświetlana dla użytkownika w formacie, który jest zgodny z kultury użytkownika. W tym temacie pokazano, jak to zrobić.  

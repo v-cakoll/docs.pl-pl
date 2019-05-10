@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c854d8742e50a7136455da72a239623fb0c0d91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748447"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639744"
 ---
 # <a name="vector-graphics-overview"></a>Przegląd grafiki wektorowej
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysuje linie, prostokąty i inne kształty w układzie współrzędnych. Można wybrać spośród różnych systemów współrzędnych, ale w układzie współrzędnych domyślna ma pochodzenia w lewym górnym rogu z osi x, wskazując i prawej osi y skierowany w dół. Jednostka miary w układzie współrzędnych domyślny jest piksela.  

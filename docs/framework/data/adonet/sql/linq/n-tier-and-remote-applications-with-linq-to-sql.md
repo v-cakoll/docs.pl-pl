@@ -2,12 +2,12 @@
 title: N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 31f06fd5e840c51c0133d22078d79cd4f945c369
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794501"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660920"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL
 Można utworzyć aplikacji n warstwowa lub wielowarstwowa, które używają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Zazwyczaj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kontekst danych, klas jednostek i logiki budowa zapytania znajdują się w warstwie środkowej jako warstwa dostępu do danych (DAL). Logika biznesowa i trwałe dane mogą być implementowane całkowicie w klasy częściowe i metody jednostek i kontekst danych, lub może być implementowana w osobnych klas.

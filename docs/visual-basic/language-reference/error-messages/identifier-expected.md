@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: 11a305581ba498715f7f24ecb75f737acdf12bfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 619b1c55ef035530c6854fa15763fb9c187565a6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936321"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662029"
 ---
 # <a name="identifier-expected"></a>Oczekiwano identyfikatora
 Element programowania, który nie jest rozpoznawanym zadeklarowanych elementów występuje z kontekstu wymagania nazwę elementu. Jedną z możliwych przyczyn jest to, że atrybut został określony gdzieś innych niż na początku instrukcji.  

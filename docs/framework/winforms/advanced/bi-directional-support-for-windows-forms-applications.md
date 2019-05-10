@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655665"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
 Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługują dwukierunkowej języków (od prawej do lewej), takich jak arabski i hebrajski. W tym standardowych formularzy, okna dialogowe, formularze MDI i wszystkich kontrolek, można pracować w nich — oznacza to, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
@@ -51,12 +51,12 @@ Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługu
 |<xref:System.Windows.Forms.ListView>|Ustawia kolejność czytania od prawej do lewej; elementy pozostają wyrównane do lewej|Odzwierciedla kontrolki|Tak|  
 |<xref:System.Windows.Forms.MainMenu>|Wyświetlana wyrównany do prawej od prawej do lewej kolejność odczytu w czasie wykonywania (nie w czasie projektowania)|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.MaskedTextBox>|Wyświetla tekst od prawej do lewej.|Nie wpływu|Nie|  
-|<xref:System.Windows.Forms.MonthCalendar>|Nie wpływa na; w zależności od języka systemu operacyjnego|Odzwierciedla kontrolki|Tak|  
+|<xref:System.Windows.Forms.MonthCalendar>|Nie wpływa na; w zależności od języka systemu operacyjnego|Odzwierciedla kontrolki|Yes|  
 |<xref:System.Windows.Forms.NotifyIcon>|Nieobsługiwane|Nieobsługiwane|Nie|  
 |<xref:System.Windows.Forms.NumericUpDown>|Przyciski w górę i w dół są wyrównane do lewej|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.OpenFileDialog>|W systemach operacyjnych od prawej do lewej, ustawienie zawierający formularz <xref:System.Windows.Forms.Control.RightToLeft> właściwość <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> lokalizuje okna dialogowego |Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.PageSetupDialog>|Nie wpływa na; w zależności od języka systemu operacyjnego|Nie wpływu|Nie|  
-|<xref:System.Windows.Forms.Panel>|Formanty podrzędne mogą dziedziczyć tę właściwość|Użyj <xref:System.Windows.Forms.TableLayoutPanel> znajdujących się pod kontrolą w prawo do działu pomocy technicznej po lewej stronie|Tak|  
+|<xref:System.Windows.Forms.Panel>|Formanty podrzędne mogą dziedziczyć tę właściwość|Użyj <xref:System.Windows.Forms.TableLayoutPanel> znajdujących się pod kontrolą w prawo do działu pomocy technicznej po lewej stronie|Yes|  
 |<xref:System.Windows.Forms.PictureBox>|Nieobsługiwane|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.PrintDialog>|Nie wpływa na; w zależności od języka systemu operacyjnego|Nie wpływu|Nie|  
 |<xref:System.Drawing.Printing.PrintDocument>|Stają się wyrównane do lewej pasek przewijania pionowego i poziomego paska przewijania rozpoczyna się od lewej strony|Nie wpływu|Nie|  
@@ -71,7 +71,7 @@ Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługu
 |<xref:System.Windows.Forms.TabControl>|Nie dotyczy tej właściwości|Odzwierciedla kontrolki|Tak|  
 |<xref:System.Windows.Forms.TextBox>|Wyświetla tekst od prawej do lewej od prawej do lewej kolejność odczytu|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.Timer>|Nie jest wymagane|Nie jest wymagane|Nie|  
-|<xref:System.Windows.Forms.ToolBar>|Nie dotyczy tej właściwości; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Żadnego wpływu; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Tak|  
+|<xref:System.Windows.Forms.ToolBar>|Nie dotyczy tej właściwości; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Żadnego wpływu; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Yes|  
 |<xref:System.Windows.Forms.ToolTip>|Ustawia RTL kolejność odczytu|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.TrackBar>|Przewijania lub śledzenie rozpoczyna się od prawej; gdy <xref:System.Windows.Forms.TrackBar.Orientation%2A> , jest pionowa impulsów wystąpić z prawej strony|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.TreeView>|Ustawia RTL tylko kolejność odczytu|Odzwierciedla kontrolki|Tak|  

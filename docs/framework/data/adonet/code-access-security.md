@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174112"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583569"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczeń dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury, dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji są wykonywane z uprawnienia użytkownika lub jednostki. W rezultacie systemów komputerowych, może być uszkodzone i prywatnych danych naruszenia zabezpieczeń w przypadku złośliwego lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podwyższonym poziomem uprawnień.  
@@ -27,11 +27,11 @@ ms.locfileid: "59174112"
   
  Istnieją trzy typy uprawnień dostępu do kodu:  
   
--   `Code access permissions` pochodzi od <xref:System.Security.CodeAccessPermission> klasy. Uprawnienia są wymagane, aby uzyskać dostęp do chronionych zasobów, takich jak pliki i zmiennych środowiskowych i wykonywanie chronionej operacji, takich jak uzyskiwanie dostępu do kodu niezarządzanego.  
+- `Code access permissions` pochodzi od <xref:System.Security.CodeAccessPermission> klasy. Uprawnienia są wymagane, aby uzyskać dostęp do chronionych zasobów, takich jak pliki i zmiennych środowiskowych i wykonywanie chronionej operacji, takich jak uzyskiwanie dostępu do kodu niezarządzanego.  
   
--   `Identity permissions` reprezentuje właściwości, które identyfikują zestawu. Uprawnienia są przyznawane na podstawie dowodów, które mogą zawierać elementy, takie jak podpis cyfrowy lub którego pochodzi ten kod zestawu. Uprawnienia tożsamości, ale również dziedziczyć <xref:System.Security.CodeAccessPermission> klasy bazowej.  
+- `Identity permissions` reprezentuje właściwości, które identyfikują zestawu. Uprawnienia są przyznawane na podstawie dowodów, które mogą zawierać elementy, takie jak podpis cyfrowy lub którego pochodzi ten kod zestawu. Uprawnienia tożsamości, ale również dziedziczyć <xref:System.Security.CodeAccessPermission> klasy bazowej.  
   
--   `Role-based security permissions` zależą od tego, czy podmiot zabezpieczeń ma określonej tożsamości lub jest członkiem określonej roli. <xref:System.Security.Permissions.PrincipalPermission> Klasa umożliwia zarówno kontroli deklaratywnego i imperatywnego uprawnienia względem aktywny podmiot zabezpieczeń.  
+- `Role-based security permissions` zależą od tego, czy podmiot zabezpieczeń ma określonej tożsamości lub jest członkiem określonej roli. <xref:System.Security.Permissions.PrincipalPermission> Klasa umożliwia zarówno kontroli deklaratywnego i imperatywnego uprawnienia względem aktywny podmiot zabezpieczeń.  
   
  Aby ustalić, czy kod jest autoryzowany do uzyskania dostępu do zasobu lub wykonania operacji, system zabezpieczeń w środowisku uruchomieniowym przechodzi przez stos wywołań, porównywanie udzielone uprawnienia każdy obiekt wywołujący, aby uprawnienia są wymagane. Jeśli dowolny obiekt wywołujący na stosie wywołań nie ma wymaganego uprawnienia <xref:System.Security.SecurityException> jest generowany i następuje odmowa dostępu.  
   

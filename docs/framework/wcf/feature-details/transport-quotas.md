@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a40fa9beec1eabeb02c6ccc4e2ab8179aa49288c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050717"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585773"
 ---
 # <a name="transport-quotas"></a>Przydziały dla transportu
 Przydziały dla transportu to mechanizm zasad dotyczących decydowania, gdy połączenie jest korzystanie z zasobów. Przydział to stały limit, który uniemożliwia korzystanie z dodatkowych zasobów, po przekroczeniu wartości limitu przydziału. Przydziały dla transportu uniemożliwia złośliwym lub przypadkowe atakom typu odmowa usługi.  

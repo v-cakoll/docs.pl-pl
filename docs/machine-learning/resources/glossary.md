@@ -1,14 +1,14 @@
 ---
-title: Usługi Machine learning — słownik w strukturze ML.NET
+title: Glosariusz uczenia maszynowego
 description: Słownik ważne terminy dotyczące uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w strukturze ML.NET.
 ms.custom: seodec18
 ms.date: 03/05/2019
-ms.openlocfilehash: cc236aaa99fd8a7b05af666a5b96f657d8bd3ad4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019181"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063670"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine learning słownik terminów ważne
 
@@ -29,6 +29,16 @@ W [klasyfikacji binarnej](#binary-classification), metryki oceny, która jest wa
 
 A [klasyfikacji](#classification) zamierzone, gdzie [etykiety](#label) jest tylko jeden z dwóch klas. Aby uzyskać więcej informacji, zobacz [klasyfikacji binarnej](tasks.md#binary-classification) części [zadania uczenia maszynowego](tasks.md) tematu.
 
+## <a name="calibration"></a>Odwzorowania
+
+Odwzorowania jest procesem mapowania nieprzetworzonej oceny na członkostwo klasy, binarne i wieloklasowej klasyfikacji. Niektóre Instruktorzy strukturze ML.NET mają `NonCalibrated` sufiks. Te algorytmy produktu nieprzetworzonej oceny, które następnie muszą być zamapowane na prawdopodobieństwo klasy. 
+
+## <a name="catalog"></a>Wykaz 
+
+W strukturze ML.NET wykaz to zbiór funkcji rozszerzenia, pogrupowane według wspólnych celów.
+
+Na przykład każda maszyna uczenia zadań (binarnej klasyfikacji, regresji, klasyfikacji itp.) ma wykaz algorytmów uczenia maszynowego dostępnych (Instruktorzy). To katalogu dla wykładowców Klasyfikacja binarna: <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
+
 ## <a name="classification"></a>Klasyfikacja
 
 Gdy dane są używane do prognozowania kategorię, [uczenia maszynowego w trybie nadzorowanym](#supervised-machine-learning) zadania nosi nazwę klasyfikacji. [Klasyfikacja binarna](#binary-classification) odwołuje się do przewidywania tylko dwóm kategoriom (na przykład klasyfikowania obrazów jako obraz dog lub cat). [Klasyfikacji wieloklasowej](#multiclass-classification) odwołuje się do przewidywania wielu kategorii (na przykład podczas klasyfikowania obrazów jako obraz określonych rasy pies).
@@ -36,6 +46,25 @@ Gdy dane są używane do prognozowania kategorię, [uczenia maszynowego w trybie
 ## <a name="coefficient-of-determination"></a>Determinacji
 
 W [regresji](#regression), metryki oceny, która wskazuje, jak dobrze pasuje do modelu danych. Z zakresu od 0 do 1. Wartość 0 oznacza, że dane są losowych lub w inny sposób nie można dopasować do modelu. Wartość 1 oznacza, że model dokładnie pasują do danych. To jest często nazywany r<sup>2</sup>, R<sup>2</sup>, lub r kwadrat.
+
+## <a name="data"></a>Dane
+
+Dane są decydujące znaczenie dla dowolnej aplikacji uczenia maszynowego. W strukturze ML.NET danych jest reprezentowany przez <xref:Microsoft.ML.IDataView> obiektów. Obiekty widoku danych:
+- składają się z kolumnami i wierszami
+- są opóźnieniem oceniane, czyli mogą ładować tylko danych, gdy operacja wymaga ona
+- zawiera schemat definiujący typ, formatu i długości kolumn
+
+## <a name="estimator"></a>Estimator
+
+Klasa w strukturze ML.NET, który implementuje <xref:Microsoft.ML.IEstimator`1> interfejsu.
+
+Narzędzie do szacowania to specyfikacja transformacji (przekształcenia przygotowania danych i transformacji szkolenie modelu uczenia maszynowego). Aplikacjom można łączyć w łańcuch potokiem do przekształcenia. Parametry narzędzie do szacowania lub potoku aplikacjom są rozpoznawane podczas <xref:Microsoft.ML.IEstimator`1.Fit*> jest wywoływana. Wynik <xref:Microsoft.ML.IEstimator`1.Fit*> jest [transformatora](#transformer).
+
+## <a name="extension-method"></a>Metoda rozszerzenia
+
+Metoda .NET, która jest częścią klasy, ale jest zdefiniowana poza klasy. Pierwszy parametr metody rozszerzenia jest element statyczny `this` odwołanie do klasy, do którego należy metoda rozszerzenia.
+
+Metody rozszerzenia są często używane w strukturze ML.NET do utworzenia wystąpienia elementu [aplikacjom](#estimator).
 
 ## <a name="feature"></a>Funkcja
 
@@ -60,6 +89,12 @@ Element można przewidzieć przy użyciu modelu uczenia maszynowego. Na przykła
 ## <a name="log-loss"></a>Utrata dziennika
 
 W [klasyfikacji](#classification), metryki oceny, który charakteryzuje dokładność klasyfikatora. Jest mniejsze utrata dziennika, jest bardziej precyzyjne klasyfikatora.
+
+## <a name="loss-function"></a>Utrata — funkcja
+
+Funkcja utraty różni się od wartości etykiety szkolenia i prognozowania wprowadzone przez model. Parametry modelu są szacowane, minimalizując funkcja utraty.
+
+Różne Instruktorzy można skonfigurować przy użyciu różnych utraty funkcji.
 
 ## <a name="mean-absolute-error-mae"></a>Średni bezwzględny błąd (dostosowania)
 
@@ -93,6 +128,13 @@ W [klasyfikacji](#classification), dokładność dla klasy jest liczba elementó
 
 W [klasyfikacji](#classification), odwołania do klasy jest liczba elementów, poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów, które faktycznie należą do klasy.
 
+## <a name="regularization"></a>Uregulowania
+
+ Uregulowania penalizes modelu liniowego dla jest zbyt skomplikowana. Istnieją dwa rodzaje uregulowania:
+
+- Uregulowania $ $L_1 powoduje wyzerowanie wagi funkcji nieistotne. Rozmiar zapisany model może stać się mniejszych po tego rodzaju uregulowania.
+- Uregulowania $ $L_2 minimalizuje zakres wagi nieznaczące funkcji, jest bardziej ogólny proces i mniej wrażliwa na elementy odstające.
+
 ## <a name="regression"></a>Regresji
 
 A [uczenia maszynowego w trybie nadzorowanym](#supervised-machine-learning) zadań, której dane wyjściowe jest wartością rzeczywistą, na przykład, double. Przykłady obejmują Prognozowanie cen akcji. Aby uzyskać więcej informacji, zobacz [regresji](tasks.md#regression) części [zadania uczenia maszynowego](tasks.md) tematu.
@@ -117,9 +159,11 @@ Podklasa klasy usługi machine learning, w którym żądany model przewiduje ety
 
 Proces identyfikowania [modelu](#model) dla danego szkoleniowy zestaw danych. Dla modelu liniowego oznacza to, znajdowanie wag. Dla drzewa obejmuje to identyfikowanie punktów podziału.
 
-## <a name="transform"></a>Transformacja
+## <a name="transformer"></a>Transformer
 
-A [potoku](#pipeline) składnika, który przekształca dane. Na przykład z pliku tekstowego do wektor numerów.
+Klasa strukturze ML.NET, który implementuje <xref:Microsoft.ML.ITransformer> interfejsu.
+
+Transformer przekształca jeden <xref:Microsoft.ML.IDataView> do innego. Transformer jest tworzony przez szkolenie [narzędzie do szacowania](#estimator), lub potoku narzędzie do szacowania. 
 
 ## <a name="unsupervised-machine-learning"></a>Uczenie maszynowe nienadzorowanych
 

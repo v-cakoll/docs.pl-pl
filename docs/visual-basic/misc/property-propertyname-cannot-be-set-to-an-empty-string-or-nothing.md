@@ -2,12 +2,12 @@
 title: Właściwość <propertyname> nie można ustawić na ciąg pusty lub nie rób
 ms.date: 07/20/2015
 ms.assetid: c4f6ceb2-cee0-4e79-9cc6-cb20276d24f8
-ms.openlocfilehash: e01b1ea32a62a8da4df2fd0ae120f32fc58c0cb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 146d1d9acf3f6ab0bb0f4cba45567a2901616e5b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592179"
 ---
 # <a name="property-propertyname-cannot-be-set-to-an-empty-string-or-nothing"></a>Właściwość \<propertyname > nie można ustawić na ciąg pusty lub nie rób
 Właściwość wymaga wartości innej niż ciąg pusty ("") lub `Nothing`. Może to być wynikiem niepoprawnie obliczania wartości.  

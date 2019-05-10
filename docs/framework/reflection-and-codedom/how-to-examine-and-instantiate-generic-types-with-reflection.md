@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 949760026bc965fbb9a94d1f40eb0996a1ce7e92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592393"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Instrukcje: Badanie i tworzenie wystąpień typów ogólnych za pomocą odbicia
 Informacje o typach ogólnych jest uzyskane w ten sam sposób jak informacje o innych typach:, sprawdzając <xref:System.Type> obiekt, który reprezentuje typ ogólny. Główna różnica polega na tym, typu ogólnego zawiera listę <xref:System.Type> obiekty reprezentujące jego parametrów typu rodzajowego. Pierwsza procedura w tej sekcji sprawdza typów ogólnych.  

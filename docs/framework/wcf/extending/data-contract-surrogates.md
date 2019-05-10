@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587505"
 ---
 # <a name="data-contract-surrogates"></a>Surogaty kontraktu danych
 Kontrakt danych *zastępczy* jest funkcją zaawansowaną utworzonych na podstawie modelu kontraktu danych. Ta funkcja jest przeznaczony do zastosowania w przypadku dostosowywania typu i podstawienia w sytuacjach, w którym użytkownicy chcą zmienić, jak typ jest serializowana, zdeserializowany lub przewidywanych do metadanych. Sytuacje, gdzie mogą być używane zastępczy jest, gdy kontrakt danych nie została określona dla typu, pola i właściwości nie są oznaczone za pomocą <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu lub użytkownicy chcą dynamiczne tworzenie odmiany schematu.  

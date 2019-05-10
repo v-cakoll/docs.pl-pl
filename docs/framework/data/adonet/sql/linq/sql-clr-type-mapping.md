@@ -2,12 +2,12 @@
 title: Mapowania typów środowiska SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d2ec70d014198299bd911b1a72ab8eb26c096ba9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592472"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowania typów środowiska SQL-CLR
 Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obiektów, które są jest wyrażone w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL tłumaczy języku zintegrowanym zapytania w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników programu LINQ to SQL tłumaczy wyniki z powrotem do obiektów, które może pracować w języku użytkownika, programowania.  

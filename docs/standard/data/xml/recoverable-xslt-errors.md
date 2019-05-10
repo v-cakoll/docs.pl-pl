@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698775"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590056"
 ---
 # <a name="recoverable-xslt-errors"></a>Odwracalne błędy XSLT
 Zalecenie w wersji 1.0 W3C przekształcenia XSL (XSLT) obejmuje obszary, w których implementacja dostawcy może podjąć decyzję sposób obsługi sytuacji. Te obszary są uznawane za poufne zachowanie. Na przykład, w sekcji 7.3 tworzenia przetwarzania instrukcji, zalecenie specyfikacji XSLT 1.0 stwierdza, występuje błąd, jeśli utworzenie wystąpienia zawartość `xsl:processing-instruction` tworzy węzłów innych niż węzły tekstowe. Dla niektórych problemów specyfikacji XSLT 1.0 zalecenie wskazuje, jakie decyzją należy dokonać, jeśli procesor zdecyduje się odzyskać sprawność po błędzie. Ten problem, podane w sekcji 7.3 W3C mówi, że implementacja można odzyskać z tego błędu, ignorując węzły i ich zawartości.  
@@ -24,7 +24,7 @@ Zalecenie w wersji 1.0 W3C przekształcenia XSL (XSLT) obejmuje obszary, w któr
   
 - Odwołania do sekcji znajdują się w [W3C przekształcenia XSL (XSLT) w wersji 1.0 zalecenie](https://www.w3.org/TR/xslt) i [Errata specyfikacji wersji 1.0 W3C przekształcenia XSL (XSLT)](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
-|Warunek XSLT|Sekcja|Zachowanie XslCompiledTransform|  
+|Warunek XSLT|`Section`|Zachowanie XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  
 |Węzeł tekstowy jest zgodny zarówno `xsl:strip-space` i `xsl:preserve-space`.|3.4|Odzyskiwanie|  
 |Węzeł źródłowy odpowiada więcej niż jeden szablon reguły.|5.5|Odzyskiwanie|  

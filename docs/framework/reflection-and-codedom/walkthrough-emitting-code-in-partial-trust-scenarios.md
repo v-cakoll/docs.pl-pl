@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592441"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych
 Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają specjalnych uprawnień w kodzie częściowo zaufanym. Ponadto emisji odbicia posiada funkcję, anonimowo obsługiwane metody dynamiczne, który jest przeznaczony do użycia z częściowej relacji zaufania, jak również przezroczyste dla zabezpieczeń zestawów.  

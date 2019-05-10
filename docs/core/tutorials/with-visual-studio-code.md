@@ -5,11 +5,11 @@ author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
 ms.openlocfilehash: 7ea2aed3b340b7ae7a6dcd83df30f9453380af15
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63773815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750872"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i Visual Studio Code
 

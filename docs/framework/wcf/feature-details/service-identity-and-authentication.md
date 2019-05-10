@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 834829d8eee95a8a62363a05b4af9430c435753b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748268"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586226"
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
 Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podstawie usługi sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po klient inicjuje komunikację do punktu końcowego i usługa uwierzytelnia klienta, klient porównuje wartości tożsamości punktu końcowego z procesu uwierzytelniania punktu końcowego, zwrócona wartość. Jeśli są zgodne, klient jest pewność, że skontaktuje się z punktem końcowym usługi oczekiwane. Ta opcja działa jako ochrony przed *wyłudzania informacji* poprzez uniemożliwienie nastąpi przekierowanie do punktu końcowego hostowanego przez usługę złośliwego klienta.  

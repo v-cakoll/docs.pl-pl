@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 806e4605411304f58d0428f2588454ba9652946e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917842"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610371"
 ---
 # <a name="scope-in-visual-basic"></a>Zakres w Visual Basic
 *Zakres* zadeklarowanych elementów to zbiór cały kod, który może odwoływać się do niego bez kwalifikowania nazwy i udostępniając je za pośrednictwem [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Element może mieć zakresu w jednej z następujących poziomach:  

@@ -2,17 +2,17 @@
 title: Mapowanie relacji określonych dla zagnieżdżonych elementów
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cd0fd66fe70be4b8dea14ac7420e95c4b8bb1158
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785388"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604017"
 ---
-# <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="70ae6-102">Mapowanie relacji określonych dla zagnieżdżonych elementów</span><span class="sxs-lookup"><span data-stu-id="70ae6-102">Map Relations Specified for Nested Elements</span></span>
-<span data-ttu-id="70ae6-103">Schemat może zawierać **msdata:Relationship** adnotacji, aby jawnie określić mapowanie między dowolne dwa elementy w schemacie.</span><span class="sxs-lookup"><span data-stu-id="70ae6-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="70ae6-104">Dwa elementy, które są określone w **msdata:Relationship** może być zagnieżdżona w schemacie, ale nie trzeba być.</span><span class="sxs-lookup"><span data-stu-id="70ae6-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="70ae6-105">Proces mapowania używa **msdata:Relationship** w schemacie, aby wygenerować podstawowy klucz/relacji klucza obcego między dwiema kolumnami.</span><span class="sxs-lookup"><span data-stu-id="70ae6-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  
+# <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="a9a1c-102">Mapowanie relacji określonych dla zagnieżdżonych elementów</span><span class="sxs-lookup"><span data-stu-id="a9a1c-102">Map Relations Specified for Nested Elements</span></span>
+<span data-ttu-id="a9a1c-103">Schemat może zawierać **msdata:Relationship** adnotacji, aby jawnie określić mapowanie między dowolne dwa elementy w schemacie.</span><span class="sxs-lookup"><span data-stu-id="a9a1c-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="a9a1c-104">Dwa elementy, które są określone w **msdata:Relationship** może być zagnieżdżona w schemacie, ale nie trzeba być.</span><span class="sxs-lookup"><span data-stu-id="a9a1c-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="a9a1c-105">Proces mapowania używa **msdata:Relationship** w schemacie, aby wygenerować podstawowy klucz/relacji klucza obcego między dwiema kolumnami.</span><span class="sxs-lookup"><span data-stu-id="a9a1c-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  
   
- <span data-ttu-id="70ae6-106">Poniższy przykład przedstawia schematu XML, w którym **OrderDetail** element jest elementem podrzędnym **kolejności**.</span><span class="sxs-lookup"><span data-stu-id="70ae6-106">The following example shows an XML Schema in which the **OrderDetail** element is a child element of **Order**.</span></span> <span data-ttu-id="70ae6-107">**Msdata:Relationship** identyfikuje tę relację nadrzędny podrzędny i określa, że **OrderNumber** kolumny wynikowe **kolejności** tabela jest powiązana z **OrderNo** kolumny wynikowe **OrderDetail** tabeli.</span><span class="sxs-lookup"><span data-stu-id="70ae6-107">The **msdata:Relationship** identifies this parent-child relationship and specifies that the **OrderNumber** column of the resulting **Order** table is related to the **OrderNo** column of the resulting **OrderDetail** table.</span></span>  
+ <span data-ttu-id="a9a1c-106">Poniższy przykład przedstawia schematu XML, w którym **OrderDetail** element jest elementem podrzędnym **kolejności**.</span><span class="sxs-lookup"><span data-stu-id="a9a1c-106">The following example shows an XML Schema in which the **OrderDetail** element is a child element of **Order**.</span></span> <span data-ttu-id="a9a1c-107">**Msdata:Relationship** identyfikuje tę relację nadrzędny podrzędny i określa, że **OrderNumber** kolumny wynikowe **kolejności** tabela jest powiązana z **OrderNo** kolumny wynikowe **OrderDetail** tabeli.</span><span class="sxs-lookup"><span data-stu-id="a9a1c-107">The **msdata:Relationship** identifies this parent-child relationship and specifies that the **OrderNumber** column of the resulting **Order** table is related to the **OrderNo** column of the resulting **OrderDetail** table.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -52,16 +52,16 @@ ms.locfileid: "61785388"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="70ae6-108">Proces mapowania schematu XML tworzy następujące <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="70ae6-108">The XML Schema mapping process creates the following in the <xref:System.Data.DataSet>:</span></span>  
+ <span data-ttu-id="a9a1c-108">Proces mapowania schematu XML tworzy następujące <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="a9a1c-108">The XML Schema mapping process creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
-- <span data-ttu-id="70ae6-109">**Kolejności** i **OrderDetail** tabeli.</span><span class="sxs-lookup"><span data-stu-id="70ae6-109">An **Order** and an **OrderDetail** table.</span></span>  
+- <span data-ttu-id="a9a1c-109">**Kolejności** i **OrderDetail** tabeli.</span><span class="sxs-lookup"><span data-stu-id="a9a1c-109">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- <span data-ttu-id="70ae6-110">Relacja między **kolejności** i **OrderDetail** tabel.</span><span class="sxs-lookup"><span data-stu-id="70ae6-110">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="70ae6-111">**Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .</span><span class="sxs-lookup"><span data-stu-id="70ae6-111">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+- <span data-ttu-id="a9a1c-110">Relacja między **kolejności** i **OrderDetail** tabel.</span><span class="sxs-lookup"><span data-stu-id="a9a1c-110">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="a9a1c-111">**Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .</span><span class="sxs-lookup"><span data-stu-id="a9a1c-111">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -72,10 +72,10 @@ ms.locfileid: "61785388"
     Nested: True  
     ```  
   
- <span data-ttu-id="70ae6-112">Proces mapowania nie tworzy żadnych ograniczeń.</span><span class="sxs-lookup"><span data-stu-id="70ae6-112">The mapping process does not create any constraints.</span></span>  
+ <span data-ttu-id="a9a1c-112">Proces mapowania nie tworzy żadnych ograniczeń.</span><span class="sxs-lookup"><span data-stu-id="a9a1c-112">The mapping process does not create any constraints.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70ae6-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="70ae6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9a1c-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a9a1c-113">See also</span></span>
 
-- [<span data-ttu-id="70ae6-114">Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="70ae6-114">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="70ae6-115">Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet</span><span class="sxs-lookup"><span data-stu-id="70ae6-115">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="70ae6-116">ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych</span><span class="sxs-lookup"><span data-stu-id="70ae6-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="a9a1c-114">Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="a9a1c-114">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="a9a1c-115">Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet</span><span class="sxs-lookup"><span data-stu-id="a9a1c-115">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="a9a1c-116">ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych</span><span class="sxs-lookup"><span data-stu-id="a9a1c-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

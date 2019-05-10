@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3efee2e2b595f1e0d9116dcac3fdaa99aa4659d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8bde206d56bc7e8c930e1e428512232caccfb940
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598899"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586844"
 ---
-# <a name="functionleave2-function"></a><span data-ttu-id="79d1f-102">FunctionLeave2 — Funkcja</span><span class="sxs-lookup"><span data-stu-id="79d1f-102">FunctionLeave2 Function</span></span>
-<span data-ttu-id="79d1f-103">Powiadamia program profilujący, że funkcji ma zwrócić do elementu wywołującego i zawiera informacje dotyczące stosu ramki i funkcja wartość zwracaną.</span><span class="sxs-lookup"><span data-stu-id="79d1f-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
+# <a name="functionleave2-function"></a><span data-ttu-id="b7bae-102">FunctionLeave2 — Funkcja</span><span class="sxs-lookup"><span data-stu-id="b7bae-102">FunctionLeave2 Function</span></span>
+<span data-ttu-id="b7bae-103">Powiadamia program profilujący, że funkcji ma zwrócić do elementu wywołującego i zawiera informacje dotyczące stosu ramki i funkcja wartość zwracaną.</span><span class="sxs-lookup"><span data-stu-id="b7bae-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79d1f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="79d1f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7bae-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b7bae-104">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionLeave2 (  
@@ -37,50 +37,50 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79d1f-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="79d1f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b7bae-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b7bae-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="79d1f-106">[in] Identyfikator funkcji, która zwraca.</span><span class="sxs-lookup"><span data-stu-id="79d1f-106">[in] The identifier of the function that is returning.</span></span>  
+ <span data-ttu-id="b7bae-106">[in] Identyfikator funkcji, która zwraca.</span><span class="sxs-lookup"><span data-stu-id="b7bae-106">[in] The identifier of the function that is returning.</span></span>  
   
  `clientData`  
- <span data-ttu-id="79d1f-107">[in] Identyfikator funkcji ponownie zmapowany, który program profilujący wcześniej określona za pomocą [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="79d1f-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
+ <span data-ttu-id="b7bae-107">[in] Identyfikator funkcji ponownie zmapowany, który program profilujący wcześniej określona za pomocą [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="b7bae-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
   
  `func`  
- <span data-ttu-id="79d1f-108">[in] A `COR_PRF_FRAME_INFO` wartość, która wskazuje informacji na temat ramki stosu.</span><span class="sxs-lookup"><span data-stu-id="79d1f-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="b7bae-108">[in] A `COR_PRF_FRAME_INFO` wartość, która wskazuje informacji na temat ramki stosu.</span><span class="sxs-lookup"><span data-stu-id="b7bae-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="79d1f-109">Program profilujący powinien traktować to jako nieprzezroczysty uchwyt, który może być przekazywany do aparatu wykonywania w [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="79d1f-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="b7bae-109">Program profilujący powinien traktować to jako nieprzezroczysty uchwyt, który może być przekazywany do aparatu wykonywania w [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="b7bae-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
  `retvalRange`  
- <span data-ttu-id="79d1f-110">[in] Wskaźnik do [cor_prf_function_argument_range —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) strukturę, która określa lokalizację w pamięci wartość zwracaną przez funkcję.</span><span class="sxs-lookup"><span data-stu-id="79d1f-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>  
+ <span data-ttu-id="b7bae-110">[in] Wskaźnik do [cor_prf_function_argument_range —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) strukturę, która określa lokalizację w pamięci wartość zwracaną przez funkcję.</span><span class="sxs-lookup"><span data-stu-id="b7bae-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>  
   
- <span data-ttu-id="79d1f-111">Aby uzyskać dostęp do informacji o wartości zwracanej, `COR_PRF_ENABLE_FUNCTION_RETVAL` musi zostać ustawiona flaga.</span><span class="sxs-lookup"><span data-stu-id="79d1f-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="79d1f-112">Można użyć programu profilującego [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodę, aby ustawić flagi zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="79d1f-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
+ <span data-ttu-id="b7bae-111">Aby uzyskać dostęp do informacji o wartości zwracanej, `COR_PRF_ENABLE_FUNCTION_RETVAL` musi zostać ustawiona flaga.</span><span class="sxs-lookup"><span data-stu-id="b7bae-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="b7bae-112">Można użyć programu profilującego [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodę, aby ustawić flagi zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="b7bae-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="79d1f-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="79d1f-113">Remarks</span></span>  
- <span data-ttu-id="79d1f-114">Wartości `func` i `retvalRange` parametry nie są prawidłowe po `FunctionLeave2` funkcja zwraca wartości mogą ulec zmianie lub zostać zniszczone.</span><span class="sxs-lookup"><span data-stu-id="79d1f-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b7bae-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b7bae-113">Remarks</span></span>  
+ <span data-ttu-id="b7bae-114">Wartości `func` i `retvalRange` parametry nie są prawidłowe po `FunctionLeave2` funkcja zwraca wartości mogą ulec zmianie lub zostać zniszczone.</span><span class="sxs-lookup"><span data-stu-id="b7bae-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
   
- <span data-ttu-id="79d1f-115">`FunctionLeave2` Funkcji jest wywołanie zwrotne; należy go zaimplementować.</span><span class="sxs-lookup"><span data-stu-id="79d1f-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="79d1f-116">Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.</span><span class="sxs-lookup"><span data-stu-id="79d1f-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="b7bae-115">`FunctionLeave2` Funkcji jest wywołanie zwrotne; należy go zaimplementować.</span><span class="sxs-lookup"><span data-stu-id="b7bae-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="b7bae-116">Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.</span><span class="sxs-lookup"><span data-stu-id="b7bae-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="79d1f-117">Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="79d1f-117">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="b7bae-117">Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="b7bae-117">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="79d1f-118">Przy uruchamianiu musisz najpierw zapisać wszystkich rejestrów, z których korzysta Licencjobiorca, łącznie z programami znajdującymi się na jednostki zmiennoprzecinkowej (FPU).</span><span class="sxs-lookup"><span data-stu-id="79d1f-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="b7bae-118">Przy uruchamianiu musisz najpierw zapisać wszystkich rejestrów, z których korzysta Licencjobiorca, łącznie z programami znajdującymi się na jednostki zmiennoprzecinkowej (FPU).</span><span class="sxs-lookup"><span data-stu-id="b7bae-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="79d1f-119">Na zakończenie możesz przywrócić stosu, usuwanie, wyłączanie wszystkich parametrów, które zostały wypchnięte przez wywołującego.</span><span class="sxs-lookup"><span data-stu-id="79d1f-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="b7bae-119">Na zakończenie możesz przywrócić stosu, usuwanie, wyłączanie wszystkich parametrów, które zostały wypchnięte przez wywołującego.</span><span class="sxs-lookup"><span data-stu-id="b7bae-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="79d1f-120">Implementacja `FunctionLeave2` nie powinny blokować, ponieważ zostanie opóźnione, wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="79d1f-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="79d1f-121">Implementacja nie powinien podejmować wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznego dla kolekcji wyrzucania elementów.</span><span class="sxs-lookup"><span data-stu-id="79d1f-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="79d1f-122">Jeśli próba zostanie podjęta wyrzucania elementów bezużytecznych, środowisko uruchomieniowe spowoduje zablokowanie aż do `FunctionLeave2` zwraca.</span><span class="sxs-lookup"><span data-stu-id="79d1f-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
+ <span data-ttu-id="b7bae-120">Implementacja `FunctionLeave2` nie powinny blokować, ponieważ zostanie opóźnione, wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="b7bae-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="b7bae-121">Implementacja nie powinien podejmować wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznego dla kolekcji wyrzucania elementów.</span><span class="sxs-lookup"><span data-stu-id="b7bae-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="b7bae-122">Jeśli próba zostanie podjęta wyrzucania elementów bezużytecznych, środowisko uruchomieniowe spowoduje zablokowanie aż do `FunctionLeave2` zwraca.</span><span class="sxs-lookup"><span data-stu-id="b7bae-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
   
- <span data-ttu-id="79d1f-123">Ponadto `FunctionLeave2` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="79d1f-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="b7bae-123">Ponadto `FunctionLeave2` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="b7bae-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79d1f-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="79d1f-124">Requirements</span></span>  
- <span data-ttu-id="79d1f-125">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79d1f-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b7bae-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b7bae-124">Requirements</span></span>  
+ <span data-ttu-id="b7bae-125">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b7bae-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79d1f-126">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="79d1f-126">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="b7bae-126">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="b7bae-126">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="79d1f-127">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79d1f-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b7bae-127">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b7bae-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="79d1f-128">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79d1f-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b7bae-128">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7bae-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79d1f-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="79d1f-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7bae-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b7bae-129">See also</span></span>
 
-- [<span data-ttu-id="79d1f-130">FunctionEnter2, funkcja</span><span class="sxs-lookup"><span data-stu-id="79d1f-130">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="79d1f-131">FunctionTailcall2, funkcja</span><span class="sxs-lookup"><span data-stu-id="79d1f-131">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="79d1f-132">SetEnterLeaveFunctionHooks2, metoda</span><span class="sxs-lookup"><span data-stu-id="79d1f-132">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="79d1f-133">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="79d1f-133">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="b7bae-130">FunctionEnter2, funkcja</span><span class="sxs-lookup"><span data-stu-id="b7bae-130">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="b7bae-131">FunctionTailcall2, funkcja</span><span class="sxs-lookup"><span data-stu-id="b7bae-131">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="b7bae-132">SetEnterLeaveFunctionHooks2, metoda</span><span class="sxs-lookup"><span data-stu-id="b7bae-132">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="b7bae-133">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="b7bae-133">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

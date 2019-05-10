@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5d2539bc732cdc41c7514fd5d81c449ed8f17a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 73a1fd2a8ad0ad4dc638270c77921438f973de15
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992891"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630688"
 ---
-# <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a><span data-ttu-id="c3568-102">ICLRStrongName::StrongNameSignatureGenerationEx — Metoda</span><span class="sxs-lookup"><span data-stu-id="c3568-102">ICLRStrongName::StrongNameSignatureGenerationEx Method</span></span>
-<span data-ttu-id="c3568-103">Generuje podpisu silnej nazwy dla określonego zestawu, zgodnie z określone flagi.</span><span class="sxs-lookup"><span data-stu-id="c3568-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  
+# <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a><span data-ttu-id="66b07-102">ICLRStrongName::StrongNameSignatureGenerationEx — Metoda</span><span class="sxs-lookup"><span data-stu-id="66b07-102">ICLRStrongName::StrongNameSignatureGenerationEx Method</span></span>
+<span data-ttu-id="66b07-103">Generuje podpisu silnej nazwy dla określonego zestawu, zgodnie z określone flagi.</span><span class="sxs-lookup"><span data-stu-id="66b07-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3568-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c3568-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66b07-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="66b07-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureGenerationEx (  
@@ -41,60 +41,60 @@ HRESULT StrongNameSignatureGenerationEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c3568-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c3568-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="66b07-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="66b07-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="c3568-106">[in] Ścieżka do pliku, który zawiera manifest zestawu, dla którego zostanie wygenerowany podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="c3568-106">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
+ <span data-ttu-id="66b07-106">[in] Ścieżka do pliku, który zawiera manifest zestawu, dla którego zostanie wygenerowany podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="66b07-106">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
   
  `wszKeyContainer`  
- <span data-ttu-id="c3568-107">[in] Nazwa kontenera kluczy, który zawiera pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="c3568-107">[in] The name of the key container that contains the public/private key pair.</span></span>  
+ <span data-ttu-id="66b07-107">[in] Nazwa kontenera kluczy, który zawiera pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="66b07-107">[in] The name of the key container that contains the public/private key pair.</span></span>  
   
- <span data-ttu-id="c3568-108">Jeśli `pbKeyBlob` ma wartość null, `wszKeyContainer` należy określić prawidłowy kontener w ramach dostawcy usług kryptograficznych (CSP).</span><span class="sxs-lookup"><span data-stu-id="c3568-108">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="c3568-109">W tym przypadku parę kluczy, przechowywane w kontenerze służy do podpisywania pliku.</span><span class="sxs-lookup"><span data-stu-id="c3568-109">In this case, the key pair stored in the container is used to sign the file.</span></span>  
+ <span data-ttu-id="66b07-108">Jeśli `pbKeyBlob` ma wartość null, `wszKeyContainer` należy określić prawidłowy kontener w ramach dostawcy usług kryptograficznych (CSP).</span><span class="sxs-lookup"><span data-stu-id="66b07-108">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="66b07-109">W tym przypadku parę kluczy, przechowywane w kontenerze służy do podpisywania pliku.</span><span class="sxs-lookup"><span data-stu-id="66b07-109">In this case, the key pair stored in the container is used to sign the file.</span></span>  
   
- <span data-ttu-id="c3568-110">Jeśli `pbKeyBlob` nie ma wartości null, zakłada, że pary kluczy muszą być zawarte w kluczowych duży obiekt binarny (BLOB).</span><span class="sxs-lookup"><span data-stu-id="c3568-110">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="66b07-110">Jeśli `pbKeyBlob` nie ma wartości null, zakłada, że pary kluczy muszą być zawarte w kluczowych duży obiekt binarny (BLOB).</span><span class="sxs-lookup"><span data-stu-id="66b07-110">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="c3568-111">[in] Wskaźnik do pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="c3568-111">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="c3568-112">Ta para jest w formacie utworzone przez Win32 `CryptExportKey` funkcji.</span><span class="sxs-lookup"><span data-stu-id="c3568-112">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="c3568-113">Jeśli `pbKeyBlob` jest null, kontenerze klucza określonym przez `wszKeyContainer` założono, że zawiera pary kluczy.</span><span class="sxs-lookup"><span data-stu-id="c3568-113">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="66b07-111">[in] Wskaźnik do pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="66b07-111">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="66b07-112">Ta para jest w formacie utworzone przez Win32 `CryptExportKey` funkcji.</span><span class="sxs-lookup"><span data-stu-id="66b07-112">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="66b07-113">Jeśli `pbKeyBlob` jest null, kontenerze klucza określonym przez `wszKeyContainer` założono, że zawiera pary kluczy.</span><span class="sxs-lookup"><span data-stu-id="66b07-113">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="c3568-114">[in] Rozmiar w bajtach z `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="c3568-114">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="66b07-114">[in] Rozmiar w bajtach z `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="66b07-114">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbSignatureBlob`  
- <span data-ttu-id="c3568-115">[out] Wskaźnik do lokalizacji, do której środowisko uruchomieniowe języka wspólnego zwraca podpis.</span><span class="sxs-lookup"><span data-stu-id="c3568-115">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="c3568-116">Jeśli `ppbSignatureBlob` jest wartość null, środowisko uruchomieniowe przechowuje podpisu w pliku określonym przez `wszFilePath`.</span><span class="sxs-lookup"><span data-stu-id="c3568-116">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
+ <span data-ttu-id="66b07-115">[out] Wskaźnik do lokalizacji, do której środowisko uruchomieniowe języka wspólnego zwraca podpis.</span><span class="sxs-lookup"><span data-stu-id="66b07-115">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="66b07-116">Jeśli `ppbSignatureBlob` jest wartość null, środowisko uruchomieniowe przechowuje podpisu w pliku określonym przez `wszFilePath`.</span><span class="sxs-lookup"><span data-stu-id="66b07-116">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
   
- <span data-ttu-id="c3568-117">Jeśli `ppbSignatureBlob` jest inna niż null, środowisko uruchomieniowe języka wspólnego przydziela miejsce, w której ma zostać zwrócone podpis.</span><span class="sxs-lookup"><span data-stu-id="c3568-117">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="c3568-118">Obiekt wywołujący musi zwolnić tego miejsca przy użyciu [iclrstrongname::strongnamefreebuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="c3568-118">The caller must free this space using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
+ <span data-ttu-id="66b07-117">Jeśli `ppbSignatureBlob` jest inna niż null, środowisko uruchomieniowe języka wspólnego przydziela miejsce, w której ma zostać zwrócone podpis.</span><span class="sxs-lookup"><span data-stu-id="66b07-117">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="66b07-118">Obiekt wywołujący musi zwolnić tego miejsca przy użyciu [iclrstrongname::strongnamefreebuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="66b07-118">The caller must free this space using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
   
  `pcbSignatureBlob`  
- <span data-ttu-id="c3568-119">[out] Rozmiar w bajtach sygnatury zwracanego.</span><span class="sxs-lookup"><span data-stu-id="c3568-119">[out] The size, in bytes, of the returned signature.</span></span>  
+ <span data-ttu-id="66b07-119">[out] Rozmiar w bajtach sygnatury zwracanego.</span><span class="sxs-lookup"><span data-stu-id="66b07-119">[out] The size, in bytes, of the returned signature.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="c3568-120">[in] Jeden lub więcej z następujących wartości:</span><span class="sxs-lookup"><span data-stu-id="c3568-120">[in] One or more of the following values:</span></span>  
+ <span data-ttu-id="66b07-120">[in] Jeden lub więcej z następujących wartości:</span><span class="sxs-lookup"><span data-stu-id="66b07-120">[in] One or more of the following values:</span></span>  
   
-- <span data-ttu-id="c3568-121">`SN_SIGN_ALL_FILES` (0x00000001) - ponownie obliczyć skrótów wszystkich modułów połączonych.</span><span class="sxs-lookup"><span data-stu-id="c3568-121">`SN_SIGN_ALL_FILES` (0x00000001) - Recompute all hashes for linked modules.</span></span>  
+- <span data-ttu-id="66b07-121">`SN_SIGN_ALL_FILES` (0x00000001) - ponownie obliczyć skrótów wszystkich modułów połączonych.</span><span class="sxs-lookup"><span data-stu-id="66b07-121">`SN_SIGN_ALL_FILES` (0x00000001) - Recompute all hashes for linked modules.</span></span>  
   
-- <span data-ttu-id="c3568-122">`SN_TEST_SIGN` (0x00000002) - test podpisanie zestawu.</span><span class="sxs-lookup"><span data-stu-id="c3568-122">`SN_TEST_SIGN` (0x00000002) - Test-sign the assembly.</span></span>  
+- <span data-ttu-id="66b07-122">`SN_TEST_SIGN` (0x00000002) - test podpisanie zestawu.</span><span class="sxs-lookup"><span data-stu-id="66b07-122">`SN_TEST_SIGN` (0x00000002) - Test-sign the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c3568-123">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c3568-123">Return Value</span></span>  
- <span data-ttu-id="c3568-124">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="c3568-124">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="66b07-123">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="66b07-123">Return Value</span></span>  
+ <span data-ttu-id="66b07-124">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="66b07-124">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c3568-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c3568-125">Remarks</span></span>  
- <span data-ttu-id="c3568-126">Określ wartość null w przypadku `wszFilePath` do obliczania rozmiaru podpisu bez tworzenia podpisu.</span><span class="sxs-lookup"><span data-stu-id="c3568-126">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66b07-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="66b07-125">Remarks</span></span>  
+ <span data-ttu-id="66b07-126">Określ wartość null w przypadku `wszFilePath` do obliczania rozmiaru podpisu bez tworzenia podpisu.</span><span class="sxs-lookup"><span data-stu-id="66b07-126">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
   
- <span data-ttu-id="c3568-127">Podpis mogą być przechowywane bezpośrednio w pliku albo zwracany do wywołującego.</span><span class="sxs-lookup"><span data-stu-id="c3568-127">The signature can be either stored directly in the file, or returned to the caller.</span></span>  
+ <span data-ttu-id="66b07-127">Podpis mogą być przechowywane bezpośrednio w pliku albo zwracany do wywołującego.</span><span class="sxs-lookup"><span data-stu-id="66b07-127">The signature can be either stored directly in the file, or returned to the caller.</span></span>  
   
- <span data-ttu-id="c3568-128">Jeśli `SN_SIGN_ALL_FILES` jest określony, ale klucz publiczny nie jest uwzględniony (zarówno `pbKeyBlob` i `wszFilePath` mają wartość null), skróty dla połączonych modułów są obliczane ponownie, ale zestaw nie jest ponownie podpisany.</span><span class="sxs-lookup"><span data-stu-id="c3568-128">If `SN_SIGN_ALL_FILES` is specified but a public key is not included (both `pbKeyBlob` and `wszFilePath` are null), hashes for linked modules are recomputed, but the assembly is not re-signed.</span></span>  
+ <span data-ttu-id="66b07-128">Jeśli `SN_SIGN_ALL_FILES` jest określony, ale klucz publiczny nie jest uwzględniony (zarówno `pbKeyBlob` i `wszFilePath` mają wartość null), skróty dla połączonych modułów są obliczane ponownie, ale zestaw nie jest ponownie podpisany.</span><span class="sxs-lookup"><span data-stu-id="66b07-128">If `SN_SIGN_ALL_FILES` is specified but a public key is not included (both `pbKeyBlob` and `wszFilePath` are null), hashes for linked modules are recomputed, but the assembly is not re-signed.</span></span>  
   
- <span data-ttu-id="c3568-129">Jeśli `SN_TEST_SIGN` określono typowego nagłówka środowiska uruchomieniowego języka nie jest modyfikowany w celu wskazania, że zestaw jest podpisany silną nazwą.</span><span class="sxs-lookup"><span data-stu-id="c3568-129">If `SN_TEST_SIGN` is specified, the common language runtime header is not modified to indicate that the assembly is signed with a strong name.</span></span>  
+ <span data-ttu-id="66b07-129">Jeśli `SN_TEST_SIGN` określono typowego nagłówka środowiska uruchomieniowego języka nie jest modyfikowany w celu wskazania, że zestaw jest podpisany silną nazwą.</span><span class="sxs-lookup"><span data-stu-id="66b07-129">If `SN_TEST_SIGN` is specified, the common language runtime header is not modified to indicate that the assembly is signed with a strong name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3568-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c3568-130">Requirements</span></span>  
- <span data-ttu-id="c3568-131">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3568-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66b07-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="66b07-130">Requirements</span></span>  
+ <span data-ttu-id="66b07-131">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66b07-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3568-132">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="c3568-132">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="66b07-132">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="66b07-132">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="c3568-133">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c3568-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="66b07-133">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="66b07-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c3568-134">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3568-134">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="66b07-134">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66b07-134">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3568-135">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c3568-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66b07-135">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="66b07-135">See also</span></span>
 
-- [<span data-ttu-id="c3568-136">StrongNameSignatureGeneration, metoda</span><span class="sxs-lookup"><span data-stu-id="c3568-136">StrongNameSignatureGeneration Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [<span data-ttu-id="c3568-137">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="c3568-137">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="66b07-136">StrongNameSignatureGeneration, metoda</span><span class="sxs-lookup"><span data-stu-id="66b07-136">StrongNameSignatureGeneration Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [<span data-ttu-id="66b07-137">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="66b07-137">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

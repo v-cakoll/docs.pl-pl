@@ -5,26 +5,27 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - namespaces [C#], keywords
 ms.assetid: 091a66eb-b10d-4f54-9102-5ac0d4bdb84b
-ms.openlocfilehash: 5db71465bbba6c91c971a3bd570fdd97d362608d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc8ce3383bac9453c3963696c4ac2be520ad8110
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661109"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452421"
 ---
 # <a name="namespace-keywords-c-reference"></a>Słowa kluczowe przestrzeni nazw (odwołanie w C#)
+
 W tej sekcji opisano słów kluczowych i operatory, które są skojarzone z za pomocą przestrzeni nazw:  
   
-- [namespace](../../../csharp/language-reference/keywords/namespace.md)  
-- [using](../../../csharp/language-reference/keywords/using.md)  
+- [namespace](namespace.md)  
+- [using](using-directive.md)  
 - [Przy użyciu statycznej](using-static.md)
-- [. operator](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
-- [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)  
+- [. operator](../operators/member-access-operators.md#member-access-operator-)  
+- [:: operator](../operators/namespace-alias-qualifer.md)  
+- [extern alias](extern-alias.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Przestrzenie nazw](../../programming-guide/namespaces/index.md)

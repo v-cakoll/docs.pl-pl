@@ -2,12 +2,12 @@
 title: zestaw jednostek
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: da70d25790918340e92df83b1c2c704c5dc54226
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033959"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599634"
 ---
 # <a name="entity-set"></a>zestaw jednostek
 *Zestaw jednostek* to kontener logiczny dla wystąpień [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) i wystąpień dowolnego typu opracowane z tego typu jednostki. (Aby uzyskać informacji na temat typów pochodnych, zobacz [modelu danych jednostki: Dziedziczenie](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Relacja między typem encji i zestaw jednostek jest analogiczna do relację wiersz tabeli w relacyjnej bazie danych: Np. wiersz typ jednostki opisujący strukturę danych i jak tabela, zestaw jednostek zawiera wystąpień danego struktury. Zestaw jednostek nie jest konstrukcja; modelowania danych nie opisano w strukturze danych. Zamiast tego zestaw jednostek zapewnia konstrukcję w środowisku hostingu lub magazynu (np. środowisko uruchomieniowe języka wspólnego lub bazą danych programu SQL Server) do wystąpienia typu jednostki grupy, dzięki czemu mogą być mapowane do magazynu danych.  

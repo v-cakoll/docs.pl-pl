@@ -2,12 +2,12 @@
 title: Protokoły zabezpieczeń wersja 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 684ab50b6dab4b97577acf7673ed14c53e5af13e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8114183109befcb77c3bf2b35fe246118da5afde
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586876"
 ---
 # <a name="security-protocols-version-10"></a>Protokoły zabezpieczeń wersja 1.0
 Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usług sieci Web, które obejmują wszystkie istniejące enterprise komunikatów wymagań dotyczących zabezpieczeń. W tej sekcji opisano szczegóły Windows Communication Foundation (WCF) w wersji 1.0 (zaimplementowany w <xref:System.ServiceModel.Channels.SecurityBindingElement>) dla następujących sieci Web usług protokołów zabezpieczeń.  
@@ -45,18 +45,18 @@ Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usł
 |KerberosOverTransport|Windows|X509|Transport|  
 |IssuedTokenOverTransport|Federacyjna|X509|Transport|  
 |SspiNegotiatedOverTransport|Interfejs Sspi Windows negocjowane|Interfejs Sspi Windows negocjowane|Transport|  
-|AnonymousForCertificate|Brak|X509|Komunikat|  
-|UserNameForCertificate|Nazwa użytkownika/hasło|X509|Komunikat|  
-|MutualCertificate|X509|X509|Komunikat|  
-|MutualCertificateDuplex|X509|X509|Komunikat|  
-|IssuedTokenForCertificate|Federacyjna|X509|Komunikat|  
-|Kerberos|Windows|Windows|Komunikat|  
-|IssuedToken|Federacyjna|Federacyjna|Komunikat|  
-|SspiNegotiated|Interfejs Sspi Windows negocjowane|Interfejs Sspi Windows negocjowane|Komunikat|  
-|AnonymousForSslNegotiated|Brak|X509, TLS-Nego|Komunikat|  
-|UserNameForSslNegotiated|Nazwa użytkownika/hasło|X509, TLS-Nego|Komunikat|  
-|MutualSslNegotiated|X509|X509, TLS-Nego|Komunikat|  
-|IssuedTokenForSslNegotiated|Federacyjna|X509, TLS-Nego|Komunikat|  
+|AnonymousForCertificate|Brak|X509|Message|  
+|UserNameForCertificate|Nazwa użytkownika/hasło|X509|Message|  
+|MutualCertificate|X509|X509|Message|  
+|MutualCertificateDuplex|X509|X509|Message|  
+|IssuedTokenForCertificate|Federacyjna|X509|Message|  
+|Kerberos|Windows|Windows|Message|  
+|IssuedToken|Federacyjna|Federacyjna|Message|  
+|SspiNegotiated|Interfejs Sspi Windows negocjowane|Interfejs Sspi Windows negocjowane|Message|  
+|AnonymousForSslNegotiated|Brak|X509, TLS-Nego|Message|  
+|UserNameForSslNegotiated|Nazwa użytkownika/hasło|X509, TLS-Nego|Message|  
+|MutualSslNegotiated|X509|X509, TLS-Nego|Message|  
+|IssuedTokenForSslNegotiated|Federacyjna|X509, TLS-Nego|Message|  
   
  Punktów końcowych przy użyciu tych trybów uwierzytelniania można wyrazić swoje wymagania dotyczące zabezpieczeń przy użyciu usługi WS-SecurityPolicy (WS-SP). W tym dokumencie opisano strukturę nagłówka zabezpieczeń i infrastruktury komunikatów dla każdego trybu uwierzytelniania i zawiera przykłady zasad i wiadomości.  
   

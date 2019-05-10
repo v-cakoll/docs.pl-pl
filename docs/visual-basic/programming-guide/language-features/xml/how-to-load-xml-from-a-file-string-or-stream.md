@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 2b9da2062068ef25c5df97ef19b1502999ea78ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 097c766fc9efbc810859ab693d3b26f5c1db57ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052537"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598334"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Instrukcje: Ładowanie kodu XML z pliku, ciągu lub Stream (Visual Basic)
 Możesz utworzyć [literałów XML](../../../../visual-basic/language-reference/xml-literals/index.md) i wypełnić je przy użyciu zawartości ze źródła zewnętrznego pliku, ciągu lub strumienia za pomocą kilku metod. W poniższych przykładach przedstawiono te metody.  

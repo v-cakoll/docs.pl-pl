@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800181"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211780"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms — omówienie
 
@@ -32,7 +32,7 @@ Poniższy przegląd omawia zalety inteligentnych aplikacji klienckich, najważni
 
  Formularze Windows ma zaawansowanych kontrolek interfejsu użytkownika, które emulują funkcji wysokiej jakości aplikacji, takie jak Microsoft Office. Kiedy używasz <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.MenuStrip> kontrolki, możesz utworzyć pasków narzędzi i menu, które zawierają tekst i obrazy, wyświetlić podmenu i hostują inne kontrolki, takie jak pola tekstowe i pola kombi.
 
- Za pomocą programu Visual Studio przeciągania i upuszczania **Windows Forms Designer**, możesz łatwo tworzyć aplikacje Windows Forms. Po prostu zaznacz formanty z kursor i Dodaj miejsce w formularzu. Projektant udostępnia narzędzia, takie jak linii siatki i przyciągania uprości wyrównywanie formantów. Czy przy użyciu programu Visual Studio lub kompilacji w wierszu polecenia, można użyć <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> i <xref:System.Windows.Forms.SplitContainer> służy do tworzenia zaawansowanych tworzą układów w krótszym czasie.
+ Za pomocą przeciągania i upuszczania **Windows Forms Designer** w programie Visual Studio, możesz łatwo tworzyć aplikacje Windows Forms. Po prostu zaznacz formanty z kursor i Dodaj miejsce w formularzu. Projektant udostępnia narzędzia, takie jak linii siatki i przyciągania uprości wyrównywanie formantów. Czy przy użyciu programu Visual Studio lub kompilacji w wierszu polecenia, można użyć <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> i <xref:System.Windows.Forms.SplitContainer> służy do tworzenia zaawansowanych tworzą układów w krótszym czasie.
 
  Na koniec, jeśli musisz utworzyć własne niestandardowe elementy interfejsu użytkownika <xref:System.Drawing> przestrzeń nazw zawiera dużą liczbę klas do renderowania linii, okręgi i inne kształty bezpośrednio na formularzu.
 

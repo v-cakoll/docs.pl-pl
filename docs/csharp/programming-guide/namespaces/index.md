@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710111"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452719"
 ---
 # <a name="namespaces-c-programming-guide"></a>Przestrzenie nazw (Przewodnik programowania w języku C#)
 
@@ -48,12 +48,11 @@ Przestrzenie nazw mają następujące właściwości:
   
 ## <a name="see-also"></a>Zobacz także
 
+- [Przewodnik programowania w języku C#](../index.md)
 - [Używanie przestrzeni nazw](using-namespaces.md)
 - [Instrukcje: Użycie globalnych aliasów Namespace](how-to-use-the-global-namespace-alias.md)
 - [Instrukcje: Użyj mojej Namespace](how-to-use-the-my-namespace.md)
-- [Przewodnik programowania w języku C#](../index.md)
 - [Nazwy identyfikatorów](../inside-a-program/identifier-names.md)
 - [Słowa kluczowe przestrzeni nazw](../../language-reference/keywords/namespace-keywords.md)
 - [using, dyrektywa](../../language-reference/keywords/using-directive.md)
 - [:: operator](../../language-reference/operators/namespace-alias-qualifer.md)
-- [. operator](../../language-reference/operators/member-access-operator.md)

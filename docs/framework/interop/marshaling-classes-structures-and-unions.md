@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb39f6f68d0d36449153ae16eca38a15cb7055de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648621"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469725"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling klas, struktur i unii
 Klasy i struktury są podobne w .NET Framework. Jednocześnie może mieć pola, właściwości i zdarzenia. Może to być również metody statyczne i Niestatyczne. Jeden zauważalnej różnicy jest struktury są typami wartości a klasy są typami odwołań.  
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` Klasa zawiera obiekt ciągu znaków ANSI. <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> Pole określa ANSI format. `MyUnsafeStruct`, zawierające struktury jest <xref:System.IntPtr> typu zamiast ciągu.  
   
- `LibWrap` Klasa zawiera przeciążone `TestOutArrayOfStructs` metody prototypu. Jeśli metoda deklaruje wskaźnik, jako parametr, klasa powinien być oznaczony przez `unsafe` — słowo kluczowe. Ponieważ [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] nie można użyć niebezpieczny kod metody przeciążonej, modyfikator unsafe i `MyUnsafeStruct` struktury nie są konieczne.  
+ `LibWrap` Klasa zawiera przeciążone `TestOutArrayOfStructs` metody prototypu. Jeśli metoda deklaruje wskaźnik, jako parametr, klasa powinien być oznaczony przez `unsafe` — słowo kluczowe. Ponieważ Visual Basic nie można użyć niebezpieczny kod metody przeciążonej, modyfikator unsafe i `MyUnsafeStruct` struktury nie są konieczne.  
   
  `App` Klasy implementuje `UsingMarshaling` metody, która wykonuje zadania niezbędne do przekazania tablicy. Tablica jest oznaczona za pomocą `out` (`ByRef` w języku Visual Basic) słowa kluczowego, aby wskazać, że dane przekazuje z / / wywoływany do elementu wywołującego. Implementacja używa następujących <xref:System.Runtime.InteropServices.Marshal> metody klasy:  
   
@@ -276,7 +276,7 @@ typedef struct _MYSTRSTRUCT2
   
 - <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> Aby zwolnić pamięć, zarezerwowane dla tablicy.  
   
- Jak wcześniej wspomniano, C# umożliwia niebezpieczny kod i [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] nie. W C# próbki, `UsingUnsafePointer` jest implementacją alternatywną metodą, który używa wskaźników zamiast <xref:System.Runtime.InteropServices.Marshal> klasy w celu przekazania kopii, tablica zawierająca `MyUnsafeStruct` struktury.  
+ Jak wcześniej wspomniano, C# umożliwia niebezpieczny kod i Visual Basic nie obsługuje. W C# próbki, `UsingUnsafePointer` jest implementacją alternatywną metodą, który używa wskaźników zamiast <xref:System.Runtime.InteropServices.Marshal> klasy w celu przekazania kopii, tablica zawierająca `MyUnsafeStruct` struktury.  
   
 ### <a name="declaring-prototypes"></a>Deklarowanie prototypów  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d2d5c34a501368ed77d6ceef73b57c6bd79be
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013910"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469509"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Stałe i wyliczenia (Visual Basic)
 Visual Basic udostępnia wiele wstępnie zdefiniowanych stałych i wyliczenia dla deweloperów. Stałe przechowywać wartości, które pozostają stałe w trakcie wykonywania aplikacji. Wyliczenia zapewniają wygodny sposób pracy z zestawami pokrewnych stałych i skojarzyć wartości stałych o nazwach.  
@@ -27,7 +27,7 @@ Visual Basic udostępnia wiele wstępnie zdefiniowanych stałych i wyliczenia dl
 |`DEBUG`|A `Boolean` wartość, która może być ustawiona w **właściwości projektu** okno dialogowe. Domyślnie z konfiguracji debugowania dla projektu definiuje `DEBUG`. Gdy `DEBUG` jest zdefiniowany, <xref:System.Diagnostics.Debug> metod klasy generują dane wyjściowe do **dane wyjściowe** okna. Gdy nie jest zdefiniowany, <xref:System.Diagnostics.Debug> metod klasy nie są kompilowane i są generowane nie dane wyjściowe debugowania.|  
 |`TARGET`|Ciąg reprezentujący typ danych wyjściowych dla projektu lub ustawienia wiersza polecenia **/target** opcji. Możliwe wartości `TARGET` są:<br /><br /> -"winexe", dla aplikacji Windows.<br />-"exe", dla aplikacji konsoli.<br />-"library" dla biblioteki klas.<br />-"module" dla modułu.<br />**/Target** opcja może być ustawiona w programie Visual Studio zintegrowanego środowiska programistycznego. Aby uzyskać więcej informacji, zobacz [/TARGET (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|A `Boolean` wartość, która może być ustawiona w **właściwości projektu** okno dialogowe. Domyślnie wszystkie konfiguracje dla projektu jest zdefiniowanie `TRACE`. Gdy `TRACE` jest zdefiniowany, <xref:System.Diagnostics.Trace> metod klasy generują dane wyjściowe do **dane wyjściowe** okna. Gdy nie jest zdefiniowany, <xref:System.Diagnostics.Trace> klas, metod nie są kompilowane i nie `Trace` są generowane dane wyjściowe.|  
-|`VBC_VER`|Liczba reprezentująca wersja języka Visual Basic w *głównych*. *drobne* formatu. Numer wersji [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] jest 8.0.|  
+|`VBC_VER`|Liczba reprezentująca wersja języka Visual Basic w *głównych*. *drobne* formatu.|  
   
 ### <a name="print-and-display-constants"></a>Drukowanie i stałe Wyświetl  
  Podczas wywołania wydruku i funkcji wyświetlania, w kodzie zamiast wartości faktycznych można użyć następujących stałych.  

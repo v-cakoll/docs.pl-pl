@@ -2,7 +2,7 @@
 title: $ — Interpolacja ciągów - C# odwołania
 ms.custom: seodec18
 description: Interpolacja ciągów pozwala bardziej czytelne i wygodne składni do formatowania danych wyjściowych ciąg znaków, niż tradycyjne ciągu formatowania złożonego.
-ms.date: 03/26/2018
+ms.date: 04/29/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61659920"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210428"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — Interpolacja ciągów (odwołanie w C#)
 
@@ -26,7 +26,7 @@ ms.locfileid: "61659920"
 
 Interpolacja ciągów pozwala bardziej czytelne i wygodne składni utworzyć sformatowane ciągi niż [ciągu formatowania złożonego](../../../standard/base-types/composite-formatting.md) funkcji. W poniższym przykładzie użyto obu funkcji, aby utworzyć ten sam wynik:
 
-[!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
+[!code-csharp-interactive[compare with composite formatting](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
 ## <a name="structure-of-an-interpolated-string"></a>Struktura ciągu interpolowanego
 
@@ -48,7 +48,7 @@ Elementy w nawiasach kwadratowych są opcjonalne. W poniższej tabeli opisano ka
 
 W poniższym przykładzie użyto opcjonalne składniki formatowania opisane powyżej:
 
-[!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
+[!code-csharp-interactive[specify alignment and format string](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
 ## <a name="special-characters"></a>Znaki specjalne
 
@@ -58,7 +58,7 @@ Jako dwukropkiem (":") ma specjalne znaczenie w elemencie wyrażenie interpolowa
 
 Poniższy przykład pokazuje, jak dołączyć nawiasu klamrowego w ciągu wynikowym i sposobu użycia operatora warunkowego w wyrażenie interpolowane:
 
-[!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
+[!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
 Ciąg verbatim interpolowane zaczyna się od `$` następuje znak `@` znaków. Aby uzyskać więcej informacji na temat ciągi verbatim zobacz [ciąg](../keywords/string.md) i [identyfikator dosłownego wyrażenia](verbatim.md) tematów.
 
@@ -83,11 +83,21 @@ Istnieją trzy niejawną konwersję z ciągu interpolowanego:
 
 W poniższym przykładzie użyto niejawnej konwersji <xref:System.FormattableString> utworzyć ciągi wynikowe charakterystyczne dla kultury:
 
-[!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
+[!code-csharp-interactive[create culture-specific result strings](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-Jeśli jesteś nowym użytkownikiem Interpolacja ciągów, zobacz [Interpolacja w ciągów C# ](../../tutorials/exploration/interpolated-strings.yml) interaktywnego samouczka. Lub możesz spróbować [Interpolacja w ciągów C# ](../../tutorials/string-interpolation.md) samouczek lokalnie na komputerze.
+Jeśli jesteś nowym użytkownikiem Interpolacja ciągów, zobacz [Interpolacja w ciągów C# ](../../tutorials/exploration/interpolated-strings.yml) interaktywnego samouczka. Możesz również sprawdzić innego [Interpolacja w ciągów C# ](../../tutorials/string-interpolation.md) samouczek, który demonstruje sposób użycia ciągów interpolowanych w celu wygenerowania sformatowane ciągi.
+
+## <a name="compilation-of-interpolated-strings"></a>Kompilacja ciągi interpolowane
+
+Jeśli w ciągu interpolowanym ma typ `string`, zwykle jest przekształcana na <xref:System.String.Format%2A?displayProperty=nameWithType> wywołania metody. Kompilator może zastąpić <xref:System.String.Format%2A?displayProperty=nameWithType> z <xref:System.String.Concat%2A?displayProperty=nameWithType> Jeśli analizowany zachowanie byłaby równoważna łączenia.
+
+Jeśli w ciągu interpolowanym ma typ <xref:System.IFormattable> lub <xref:System.FormattableString>, kompilator generuje wywołanie <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType> metody.
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz [ciągi interpolowane](~/_csharplang/spec/expressions.md#interpolated-strings) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -4,12 +4,12 @@ description: Zalecane najlepsze w celu debugowania bibliotek platformy .NET przy
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 10596f589af7abee6ff7833ef25c606294337196
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d3e2b0b3aedbab150072bf6eebff4acb5f8a0b7
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910247"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211674"
 ---
 # <a name="source-link"></a>Link do źródła
 
@@ -37,7 +37,7 @@ Możesz użyć [Eksplorator pakietów NuGet](https://github.com/NuGetPackageExpl
 
 **ROZWAŻ ✔️** publikowania plików symboli (`*.pdb`).
 
-> Najlepszego środowiska debugowania biblioteki powinny pliki symboli pubish oraz przy użyciu Linku źródłowego. Aby uzyskać więcej informacji na temat plików symboli i pakiety symboli, zobacz [symboli pakietów](./nuget.md#symbol-packages).
+> Najlepszego środowiska debugowania biblioteki należy opublikować pliki symboli oraz przy użyciu Linku źródłowego. Aby uzyskać więcej informacji na temat plików symboli i pakiety symboli, zobacz [symboli pakietów](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Poprzednie](dependencies.md)

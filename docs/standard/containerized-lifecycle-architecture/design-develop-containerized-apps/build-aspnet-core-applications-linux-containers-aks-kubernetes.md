@@ -1,17 +1,17 @@
 ---
-title: Tworzenie aplikacji platformy ASP.NET Core 2.1 wdrażane jako kontenery systemu Linux w klastrach usługi AKS/Kubernetes
+title: Tworzenie aplikacji platformy ASP.NET Core 2.2 wdrażane jako kontenery systemu Linux w klastrach usługi AKS/Kubernetes
 description: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 28d2f557e4434ef7e5c2c3f8d17d6d3d6a80ce2a
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052754"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452789"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Tworzenie aplikacji platformy ASP.NET Core 2.1 wdrażane jako kontenery systemu Linux do programu orchestrator AKS/Kubernetes
+# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Tworzenie aplikacji platformy ASP.NET Core 2.2 wdrażane jako kontenery systemu Linux do programu orchestrator AKS/Kubernetes
 
 Usługa Azure Kubernetes usługi (AKS) to usługi platformy Azure zarządzanego rozwiązania Kubernetes mechanizmów, które upraszczają wdrażanie kontenerów i zarządzanie nimi.
 
@@ -23,13 +23,13 @@ Główne funkcje usługi AKS to:
 - Użytkownika można skonfigurować skalowanie
 - Prostsze środowisko użytkownika dla deweloperów i operatorów klastra.
 
-Poniższe przykłady zapoznaj się z tworzenia aplikacji platformy ASP.NET Core 2.1, która działa w systemie Linux i wdraża klaster AKS na platformie Azure, podczas gdy projektowanie odbywa się przy użyciu programu Visual Studio 2017.
+Poniższe przykłady zapoznaj się z tworzenia aplikacji platformy ASP.NET Core 2.2, która działa w systemie Linux i wdraża klaster AKS na platformie Azure, podczas gdy projektowanie odbywa się przy użyciu programu Visual Studio 2017.
 
-## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Tworzenie projektu 2.1 platformy ASP.NET Core przy użyciu programu Visual Studio 2017
+## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Tworzenie projektu 2.2 platformy ASP.NET Core przy użyciu programu Visual Studio 2017
 
 Platforma ASP.NET Core to platforma deweloperska ogólnego przeznaczenia obsługiwane przez firmę Microsoft i społeczności platformy .NET w witrynie GitHub. Jest dla wielu platform, obsługi Windows, macOS i Linux i mogą być używane w urządzeń, chmury i scenariuszach osadzonych IoT.
 
-W tym przykładzie użyto prostego projektu, który opiera się na szablon interfejsu API sieci Web programu Visual Studio, więc nie potrzebujesz żadnej wiedzy dodatkowe do tworzenia przykładu. Musisz utworzyć projekt przy użyciu standardowego szablonu, który zawiera wszystkie elementy, aby uruchomić małych projektów za pomocą interfejsu API REST, przy użyciu technologii ASP.NET Core 2.1.
+W tym przykładzie użyto prostego projektu, który opiera się na szablon interfejsu API sieci Web programu Visual Studio, więc nie potrzebujesz żadnej wiedzy dodatkowe do tworzenia przykładu. Musisz utworzyć projekt przy użyciu standardowego szablonu, który zawiera wszystkie elementy, aby uruchomić małych projektów za pomocą interfejsu API REST, przy użyciu technologii ASP.NET Core 2.2.
 
 ![Dodaj okno nowego projektu w programie Visual Studio, wybierając aplikację sieci Web programu ASP.NET Core.](media/create-aspnet-core-application.png)
 
@@ -39,13 +39,13 @@ Aby utworzyć przykładowy projekt w programie Visual Studio, wybierz **pliku** 
 
 Program Visual Studio Wyświetla listę szablonów dla projektów sieci web. W tym przykładzie wybierz **API** do tworzenia aplikacji interfejsu API sieci Web programu ASP.NET.
 
-Sprawdź, czy zostało wybrane platformy ASP.NET Core 2.1 jako platformę. .NET core 2.1 znajduje się w najnowszej wersji programu Visual Studio 2017 i jest automatycznie zainstalowane i skonfigurowane podczas instalacji programu Visual Studio 2017.
+Sprawdź, czy zostało wybrane platformy ASP.NET Core 2.2 jako platformę. .NET core 2.2 znajduje się w najnowszej wersji programu Visual Studio 2017 i jest automatycznie zainstalowane i skonfigurowane podczas instalacji programu Visual Studio 2017.
 
 ![Visual Studio okno dialogowe Wybieranie typu aplikacji sieci Web programu ASP.NET Core z wybraną opcją interfejsu API.](media/create-web-api-application.png)
 
-**Rysunek 4-37**. Wybieranie platformy ASP.NET CORE 2.1 i interfejsu API sieci Web typu projektu
+**Rysunek 4-37**. Wybieranie platformy ASP.NET CORE 2.2 i interfejsu API sieci Web typu projektu
 
-W przypadku poprzednich wersji programu .NET Core, można go pobrać i zainstalować wersja 2.1 z <https://www.microsoft.com/net/download/core#/sdk>.
+W przypadku poprzednich wersji programu .NET Core, można go pobrać i zainstalować wersję 2,2 z <https://www.microsoft.com/net/download/core#/sdk>.
 
 Podczas tworzenia projektu, można dodać obsługę platformy Docker lub później, więc użytkownik może "przekształcać" projektu w dowolnym momencie. Aby dodać obsługę platformy Docker, po utworzeniu projektu, kliknij prawym przyciskiem myszy węzeł projektu w Eksploratorze rozwiązań, a następnie wybierz **Dodaj** > **obsługę platformy Docker** w menu kontekstowym.
 
@@ -59,7 +59,7 @@ Aby ukończyć dodawanie obsługę platformy Docker, możesz wybrać Windows lub
 
 **Rysunek 4-39**. Wybieranie kontenerów systemu Linux.
 
-Te proste kroki masz aplikacji platformy ASP.NET Core 2.1, uruchomionej w kontenerze systemu Linux.
+Te proste kroki masz aplikacji platformy ASP.NET Core 2.2, uruchomionej w kontenerze systemu Linux.
 
 Jak widać, integrację między usługą Visual Studio 2017 i platformy Docker jest całkowicie ukierunkowana na produktywność dla deweloperów.
 
@@ -125,6 +125,12 @@ Po uruchomieniu `docker tag` polecenia, listy obrazów za pomocą `docker images
 
 ### <a name="push-the-image-into-the-azure-acr"></a>Wypychanie obrazu do rejestru Azure container Registry w platformie Azure
 
+Zaloguj się do usługi Azure Container Registry
+
+```console
+az acr login --name mssampleacr
+```
+
 Wypychanie obrazu do usługi Azure ACR za pomocą następującego polecenia:
 
 ```console
@@ -158,7 +164,7 @@ spec:
         app: mssample-kub-app
     spec:
       containers:
-        - mane: mssample-services-app
+        - name: mssample-services-app
           image: mssampleacr.azurecr.io/mssampleaksapplication:v1
           ports:
             - containerPort: 80

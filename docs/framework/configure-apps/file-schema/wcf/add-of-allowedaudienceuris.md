@@ -2,12 +2,12 @@
 title: <add> dla <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: a3ad50462cfa268a1826b62603110be3c5ba33db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a18305d2981b1a1c8cf56a9dfcbb14ab3ce1ff92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701180"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607224"
 ---
 # <a name="add-of-allowedaudienceuris"></a>\<Dodaj > z \<allowedAudienceUris >
 Dodaje identyfikator Uri elementu docelowego dla którego <xref:System.IdentityModel.Tokens.SamlSecurityToken> tokenu zabezpieczeń może być kierowany aby były uważane za prawidłowe przez <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> wystąpienia.  

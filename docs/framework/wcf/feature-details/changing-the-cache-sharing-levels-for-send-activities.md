@@ -2,12 +2,12 @@
 title: Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1561d053dc04bbea18f4d6cb43399c2c625d5da1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784296"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614851"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> Rozszerzenie umożliwia dostosowywania pamięci podręcznej udostępnianie poziomy, ustawienia pamięci podręcznej fabryki kanału i ustawień kanału pamięci podręcznej dla przepływów pracy, który wysyła wiadomości do punktów końcowych usługi za pomocą <xref:System.ServiceModel.Activities.Send> działań dotyczących komunikatów. Te przepływy pracy są zwykle przepływy pracy klienta, ale mogą być również usługi przepływu pracy, które znajdują się w <xref:System.ServiceModel.WorkflowServiceHost>. Zawiera pamięci podręcznej fabryki kanału pamięci podręcznej <xref:System.ServiceModel.ChannelFactory%601> obiektów. Pamięci podręcznej kanału zawiera kanały pamięci podręcznej.  

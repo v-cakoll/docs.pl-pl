@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904552"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613033"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 Windows Communication Foundation (WCF) to architektura służąca do budowania aplikacji usługowych. Przy użyciu usługi WCF, możesz wysłać danych jako asynchroniczną komunikaty z punktu końcowego z jednej usługi do innego. Punkt końcowy usługi może być częścią stale dostępnych usług hostowanych przez usługi IIS lub może być usługą hostowaną w aplikacji. Punkt końcowy może być klientem usługi, która żąda danych z punktu końcowego usługi. Komunikaty można tak proste, jak pojedynczy znak lub słowo wysłana w formacie XML, lub tak złożonego jako strumień danych binarnych. Kilka przykładowe scenariusze obejmują:

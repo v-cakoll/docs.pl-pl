@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971915"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617262"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Rozszerzenia znaczników dla przeglądu XAML
 Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie jest podstawowy ani określonego typu XAML. Użycie atrybutu rozszerzenia znaczników użytku sekwencję znaków znanych otwierającym nawiasie klamrowym `{` zakres rozszerzenia znaczników i zamykający nawias klamrowy `}` aby wyjść. Korzystając z usług programu .NET Framework XAML, możesz korzystać z niektórych wstępnie zdefiniowanych rozszerzeń znaczników języka XAML z zestawu System.Xaml. Możesz również podklasy z <xref:System.Windows.Markup.MarkupExtension> klasy zdefiniowane w System.Xaml i zdefiniować własne rozszerzenia znaczników. Lub możesz użyć rozszerzenia znaczników zdefiniowana przez strukturę określonego, jeśli są już odwołanie do tej struktury.  
@@ -27,7 +27,7 @@ Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie
 ### <a name="xtype"></a>x: Type  
  `x:Type` dostarcza <xref:System.Type> obiektu dla typu nazwanego. Ta funkcja jest używana najczęściej w mechanizmów opóźnienia, które należy użyć podstawowy typ środowiska CLR i wpisać pochodnym jako moniker grupowania lub identyfikator. WPF style i szablony i ich użycie funkcji `TargetType` właściwości, znajdują się konkretnemu przykładowi. Aby uzyskać więcej informacji, zobacz [x: Type Markup Extension](x-type-markup-extension.md).  
   
-### <a name="xstatic"></a>x: Static  
+### <a name="xstatic"></a>X:static  
  `x:Static` Tworzy statyczny wartości z jednostki kodu typ wartości, które nie są bezpośrednio typ wartości właściwości, ale mogą być obliczane do tego typu. Jest to przydatne do określenia wartości, które już istnieją jako stałe dobrze znane w definicji typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  

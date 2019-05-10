@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f093229af96cba679959fa052bd6b5809d347f4b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949607"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606025"
 ---
 # <a name="sending-and-receiving-faults"></a>Wysyłanie i odbieranie błędów
 Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a w przypadku dwukierunkowego od klienta do usługi w sposób interoperacyjny. Zazwyczaj usługa definiuje zawartość błędów niestandardowych i określa, jakie operacje można przywrócić je. (Aby uzyskać więcej informacji, zobacz [definiowanie i określanie błędów](../../../docs/framework/wcf/defining-and-specifying-faults.md).) W tym temacie omówiono, jak usługi lub klienta dwukierunkowego może wysyłać te błędy Jeśli nastąpiła odpowiadającego warunku błędu i jak klient lub aplikacja usługi obsługuje te błędy. Aby uzyskać omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

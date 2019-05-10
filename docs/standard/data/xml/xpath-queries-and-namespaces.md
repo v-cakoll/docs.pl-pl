@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f35725f5e1a08f2fcb1d6bc87765f50308c963f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026786"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615349"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Zapytania XPath i przestrzenie nazw
 Zapytania XPath zdawali sobie sprawę z przestrzeni nazw w dokumencie XML i użyć prefiksy przestrzeni nazw do kwalifikowania nazwy elementów i atrybutów. Kwalifikowanie nazw elementów i atrybutów z prefiksem nazw ogranicza węzłów zwróconych przez zapytanie XPath do tych węzłów, które należą do określonego obszaru nazw.  

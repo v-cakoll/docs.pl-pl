@@ -2,12 +2,12 @@
 title: Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607503"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604023"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
 **Keyref** element umożliwia ustanowienie łączy między elementami w dokumencie. Jest to podobne do relacji klucza obcego w relacyjnej bazie danych. Jeśli schemat określa **keyref** elementu, element jest konwertowany podczas procesu mapowania schematu do odpowiedniego ograniczenia klucza obcego dla kolumn w tabelach <xref:System.Data.DataSet>. Domyślnie **keyref** element generuje również relacji z **ParentTable**, **ChildTable**, **ParentColumn**i  **ChildColumn** właściwości określone w relacji.  

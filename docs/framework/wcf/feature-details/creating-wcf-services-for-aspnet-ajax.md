@@ -2,12 +2,12 @@
 title: Tworzenie usług WCF w technologii AJAX na platformie ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: 1f98a27197115c56686d593105f438fee633f34a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 52f60020d4ff7be6520f5f9aa3bb7a027af4b482
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857132"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627099"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Tworzenie usług WCF w technologii AJAX na platformie ASP.NET
 Microsoft ASP.NET AJAX umożliwia szybkie tworzenie strony sieci Web, które zawierają zaawansowany interfejs użytkownika przy użyciu elementów interfejsu użytkownika dynamiczne i dobrze znane. ASP.NET AJAX udostępnia biblioteki skryptu klienta, obejmujące przeglądarek ECMAScript (JavaScript) i dynamiczny technologii HTML (DHTML) i integruje się je z platform programistycznych opartych na serwerze programu ASP.NET 2.0. Za pomocą kodu ASP.NET AJAX, możesz poprawić środowisko użytkownika i wydajność aplikacji sieci Web.  

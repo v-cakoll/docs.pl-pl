@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f6898008fa3e3e7e385a2bc77c5b2eac7eeda2ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971850"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617153"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code — Typ funkcji XAML
 Umożliwia umieszczanie kodu w ramach produkcji XAML. Taki kod może być kompilowane albo przez dowolnego implementacji procesora XAML, który kompiluje XAML lub po lewej stronie w środowisku produkcyjnym XAML do nowszych zastosowań, takich jak interpretacji przez środowisko uruchomieniowe.  

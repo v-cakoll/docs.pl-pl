@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 51217e2c94fd9727c8f7907e791cdebaec98f14f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8bff4297f99b6549b80604860985568445bbdc0b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011960"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625656"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>Kiedy należy wdrażać kontenery systemu Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
 

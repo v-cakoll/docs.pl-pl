@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6ec6d9fc4cff01c020f2e100b8371b1ff744b076
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614489"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Przegląd Renderowanie grafiki WPF
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwy visual. Dotyczy on rolę <xref:System.Windows.Media.Visual> klasy renderowania pomocy technicznej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelu.  

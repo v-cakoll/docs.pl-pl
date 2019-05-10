@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f25573c0fef29ef54dc04c5287757903429d89d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762067"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615199"
 ---
 # <a name="sealing"></a>Pieczętowanie
 Jest jedną z funkcji struktury zorientowane obiektowo, deweloperzy mogą rozszerzać i dostosowywać je w sposób nieoczekiwany przez projektantów framework. Jest to, możliwości i zagrożenia extensible projektu. Podczas projektowania preferowanej struktury, dlatego też jest bardzo ważne, uważnie projektować pod kątem rozszerzalności, jeśli pożądane jest i ograniczyć rozszerzalności, gdy jest niebezpieczne.  

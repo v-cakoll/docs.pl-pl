@@ -2,12 +2,12 @@
 title: Uzyskiwanie dostępu do elementu OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc3be627c8dfc8d8e49fde01684968a54912f548
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617346"
 ---
 # <a name="accessing-operationcontext"></a>Uzyskiwanie dostępu do elementu OperationContext
 W tym przykładzie przedstawiono sposób działania dotyczące komunikatów (<xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.Send>) może służyć za pomocą działania niestandardowego zakresu dostępu do <xref:System.ServiceModel.OperationContext.Current%2A> i dołączyć lub pobrać nagłówek niestandardowy komunikat w wiadomości wychodzące lub przychodzące.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 53283619d1bd2727bdca1df6a3a408ec0ce873a5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770568"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625708"
 ---
 # <a name="popup-overview"></a>Przegląd Okna podręczne
 <xref:System.Windows.Controls.Primitives.Popup> Kontroli zapewnia sposób wyświetlania zawartości w oddzielnym oknie, który pojawia się za pośrednictwem bieżącego okna aplikacji względem wyznaczonego współrzędne elementu lub ekranu. W tym temacie przedstawiono <xref:System.Windows.Controls.Primitives.Popup> kontroli i zawiera informacje dotyczące jego użycia.  

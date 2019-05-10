@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c761a4a866aed3f8d42b28cdc8a360cd4923a7fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788144"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616669"
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.  

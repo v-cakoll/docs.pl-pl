@@ -2,12 +2,12 @@
 title: LINQ to XML — Przegląd klasy (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10a6384167ee6ad6463a7f2f993b871fc8baea9e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051523"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610741"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML — Przegląd klasy (Visual Basic)
 Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] klas w <xref:System.Xml.Linq> przestrzeni nazw oraz krótki opis każdego z nich.  

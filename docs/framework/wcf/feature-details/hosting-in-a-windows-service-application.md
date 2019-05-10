@@ -2,12 +2,12 @@
 title: Hostowanie w aplikacji usługi systemu Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855961"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613308"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hostowanie w aplikacji usługi systemu Windows
 Usługi Windows (znana wcześniej jako usługi Windows NT) zapewniają proces modelu szczególnie odpowiednie dla aplikacji, które muszą znajdować się w pliku wykonywalnym długotrwałych i nie są wyświetlane w dowolnej postaci interfejsu użytkownika. Okres istnienia procesu systemu Windows, aplikacji usługi jest zarządzany przez Menedżera sterowania usługami (SCM), dzięki czemu można uruchomić, zatrzymać i oraz ich wstrzymywania aplikacji usług Windows. Możesz skonfigurować proces usługi Windows do automatycznego uruchamiania podczas uruchamiania komputera, dzięki czemu odpowiednie środowisko hostingu dla aplikacji "zawsze włączone". Aby uzyskać więcej informacji na temat aplikacji usług Windows zobacz [aplikacji usług Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  

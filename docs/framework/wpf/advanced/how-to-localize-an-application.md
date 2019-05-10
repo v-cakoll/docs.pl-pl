@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298321"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614621"
 ---
 # <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizowanie aplikacji
 W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu locbaml — narzędzie.  
@@ -91,21 +91,21 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 4. Dostępne są następujące opcje, które można określić po uruchomieniu locbaml —:  
   
-    -   **analizowanie** lub **-p:** Analizuje Baml, zasobów, lub [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] plików, aby wygenerować plik CSV lub txt.  
+    - **analizowanie** lub **-p:** Analizuje Baml, zasobów, lub [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] plików, aby wygenerować plik CSV lub txt.  
   
-    -   **Generowanie** lub **-g:** Generuje zlokalizowany plik binarny, używając przetłumaczonego pliku.  
+    - **Generowanie** lub **-g:** Generuje zlokalizowany plik binarny, używając przetłumaczonego pliku.  
   
-    -   **limit** lub **-o** {*filedirectory*] **:** Nazwa pliku wyjściowego.  
+    - **limit** lub **-o** {*filedirectory*] **:** Nazwa pliku wyjściowego.  
   
-    -   **kultura** lub **- cul** {*kultury*] **:** Ustawienia regionalne, zestawów danych wyjściowych.  
+    - **kultura** lub **- cul** {*kultury*] **:** Ustawienia regionalne, zestawów danych wyjściowych.  
   
-    -   **Tłumaczenie** lub **- trans** {*translation.csv*] **:** Przetłumaczone lub zlokalizowanego pliku.  
+    - **Tłumaczenie** lub **- trans** {*translation.csv*] **:** Przetłumaczone lub zlokalizowanego pliku.  
   
-    -   **asmpath** lub **- asmpath:** {*filedirectory*] **:** Jeśli Twoje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kod zawiera kontrolki niestandardowe, należy podać **asmpath** do zestawu kontrolki niestandardowej.  
+    - **asmpath** lub **- asmpath:** {*filedirectory*] **:** Jeśli Twoje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kod zawiera kontrolki niestandardowe, należy podać **asmpath** do zestawu kontrolki niestandardowej.  
   
-    -   **nologo:** Wyświetla informacje o nie logo lub praw autorskich.  
+    - **nologo:** Wyświetla informacje o nie logo lub praw autorskich.  
   
-    -   **verbose:** Wyświetla informacje o trybie informacji pełnej.  
+    - **verbose:** Wyświetla informacje o trybie informacji pełnej.  
   
     > [!NOTE]
     >  Jeśli potrzebujesz listę opcji, gdy uruchamiasz narzędzie, należy wpisać **LocBaml.exe** i naciśnij klawisz ENTER.  
@@ -133,19 +133,19 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 
    Siedem pola są:  
   
-   1.  **Nazwa BAML**. Nazwa zasobu BAML w odniesieniu do zestawu satelickiego języka źródłowego.  
+   1. **Nazwa BAML**. Nazwa zasobu BAML w odniesieniu do zestawu satelickiego języka źródłowego.  
   
-   2.  **Klucz zasobu**. Identyfikator zlokalizowanych zasobów.  
+   2. **Klucz zasobu**. Identyfikator zlokalizowanych zasobów.  
   
-   3.  **Kategoria**. Typ wartości. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
+   3. **Kategoria**. Typ wartości. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
   
-   4.  **Czytelność**. Czy można odczytać wartości przez lokalizatorowi. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
+   4. **Czytelność**. Czy można odczytać wartości przez lokalizatorowi. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
   
-   5.  **Modifiability**. Czy wartość może być modyfikowany przez lokalizatorowi. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
+   5. **Modifiability**. Czy wartość może być modyfikowany przez lokalizatorowi. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
   
-   6.  **Komentarze**. Dodatkowy opis wartości w celu określenia, jak wartość jest zlokalizowana. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
+   6. **Komentarze**. Dodatkowy opis wartości w celu określenia, jak wartość jest zlokalizowana. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
   
-   7.  **Wartość**. Wartość tekstowa do translacji na żądaną kulturę.  
+   7. **Wartość**. Wartość tekstowa do translacji na żądaną kulturę.  
   
    W poniższej tabeli przedstawiono sposób mapowania tych pól do wartości rozdzielanego pliku CSV:  
   
@@ -188,9 +188,9 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 7. Aby przetestować nowego zestawu satelickiego, musisz zmienić kulturę, w którym aplikacja jest uruchamiana. Można to zrobić na jeden z dwóch sposobów:  
   
-    -   Zmień ustawienia regionalne systemu operacyjnego (**Start** &#124; **Panelu sterowania** &#124; **Opcje regionalne i językowe**).  
+    - Zmień ustawienia regionalne systemu operacyjnego (**Start** &#124; **Panelu sterowania** &#124; **Opcje regionalne i językowe**).  
   
-    -   W aplikacji Dodaj następujący kod do pliku App.xaml.cs:  
+    - W aplikacji Dodaj następujący kod do pliku App.xaml.cs:  
   
    [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
@@ -199,11 +199,11 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>Wskazówki dotyczące korzystania z locbaml —  
   
--   Wszystkie zależne zestawy, które definiują niestandardowe formanty, musi być skopiowany do katalogu lokalnego locbaml — lub zainstalowane w GAC. Jest to konieczne, ponieważ lokalizacja interfejsu API musi mieć dostęp do zestawów zależnych, gdy odczytuje [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
+- Wszystkie zależne zestawy, które definiują niestandardowe formanty, musi być skopiowany do katalogu lokalnego locbaml — lub zainstalowane w GAC. Jest to konieczne, ponieważ lokalizacja interfejsu API musi mieć dostęp do zestawów zależnych, gdy odczytuje [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
   
--   Jeśli główny zestaw jest podpisany, wygenerowany Biblioteka DLL zasobu, również muszą być podpisane w celu użycia go do załadowania.  
+- Jeśli główny zestaw jest podpisany, wygenerowany Biblioteka DLL zasobu, również muszą być podpisane w celu użycia go do załadowania.  
   
--   Wersja zlokalizowanych zasobów biblioteki DLL muszą być zsynchronizowane z zestawu głównego.  
+- Wersja zlokalizowanych zasobów biblioteki DLL muszą być zsynchronizowane z zestawu głównego.  
   
 <a name="Whats_Next"></a>   
 ## <a name="whats-next"></a>Jaka jest przyszłość  

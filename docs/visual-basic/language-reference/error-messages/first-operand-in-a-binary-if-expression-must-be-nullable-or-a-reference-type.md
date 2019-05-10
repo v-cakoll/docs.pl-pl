@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a73a66313e7ca540711838c4d147d6bd163ec8d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801299"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625568"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Typem pierwszego operandu w binarnym wyrażeniu „If” musi być typ zerowalny lub typ referencyjny
 `If` Wyrażenie może przyjmować dwa lub trzy argumenty. Podczas wysyłania tylko dwóch argumentów pierwszy argument musi być typem referencyjnym lub typ dopuszczający wartość null. Jeśli pierwszy argument daje w wyniku nic innego niż `Nothing`, zwracana jest jego wartość. Jeśli pierwszy argument daje w wyniku `Nothing`, drugi argument funkcji jest obliczany i zwracany.  

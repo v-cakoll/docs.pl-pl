@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 3ea5f5fb3b94c3edfd129a08a57c4c584b1412aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f67789159cee64e928ae88cede9f4dbf33df1b40
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61681419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608696"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (C# Programming Guide)
 W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są zgodne ze standardem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wzorzec do klas i struktur. Wszystkie zdarzenia w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas są oparte na <xref:System.EventHandler> delegować, która została zdefiniowana w następujący sposób:  

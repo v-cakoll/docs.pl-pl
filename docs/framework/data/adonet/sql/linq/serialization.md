@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff2b2f6575c82f3769823431ec6363775bf9d698
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037040"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616080"
 ---
 # <a name="serialization"></a>Serializacja
 W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] możliwości serializacji. Sekcjach poniżej zawierają informacje dotyczące sposobu dodawania serializacji podczas generowania kodu w czasie projektowania i zachowania czasu wykonywania serializacji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] klasy.  

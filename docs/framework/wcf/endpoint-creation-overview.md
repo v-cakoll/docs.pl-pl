@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fa6486db483c004430e0e8ed75c75a6b25c05d6b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858458"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613598"
 ---
 # <a name="endpoint-creation-overview"></a>Przegląd tworzenia punktów końcowych
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punktów końcowych* usługi. Punkty końcowe zapewniają klientom dostęp do funkcji, która oferuje usługi WCF. W tej sekcji opisuje strukturę punktu końcowego i opisano sposób definiowania punktu końcowego w konfiguracji i w kodzie.  

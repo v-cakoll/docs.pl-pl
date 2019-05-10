@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 60ed101df691db9f1afa8e47702f131bee384495
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625313"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Presentation Foundation (WPF) za pośrednictwem systemu windows. Głównym celem okna jest do hostowania zawartości, która wizualizuje dane oraz umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemem windows w aplikacje autonomiczne.  

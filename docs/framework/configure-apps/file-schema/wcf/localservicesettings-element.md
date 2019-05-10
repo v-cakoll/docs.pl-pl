@@ -2,12 +2,12 @@
 title: <localServiceSettings>, element
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 91e9944de30a78b904d1679512f622bcc2955af4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614573"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610196"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings> element
 Określa ustawienia zabezpieczenia lokalnej usługi dla tego powiązania.  

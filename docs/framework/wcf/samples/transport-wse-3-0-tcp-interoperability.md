@@ -2,12 +2,12 @@
 title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5ad1f2e55bf0dab2736bbc95933d12be43dddd76
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032733"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617343"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
 Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demonstruje sposób implementacji dwukierunkowego sesji TCP jako niestandardowy transportu Windows Communication Foundation (WCF). Ilustruje też, jak można użyć rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi systemami wdrożone. Poniższe kroki pokazują jak utworzyć niestandardowe transport WCF:  

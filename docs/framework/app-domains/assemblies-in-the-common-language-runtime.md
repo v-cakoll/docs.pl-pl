@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607822"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Zestawy w środowisku uruchomieniowym języka wspólnego
 Zestawy są blokami konstrukcyjnymi aplikacji .NET Framework; tworzą one podstawową jednostką wdrażania, kontroli wersji, ponownego użycia, określania zakresu aktywacji i uprawnień zabezpieczeń. Zestaw jest kolekcją typów i zasobów, które zostały opracowane w celu współpracują ze sobą i tworzą jednostkę logiczną funkcji. Zestaw zawiera środowisko uruchomieniowe języka wspólnego informacje potrzebne do należy pamiętać o implementacji typu. Do środowiska uruchomieniowego typem nie istnieje poza kontekstem zestawu.  

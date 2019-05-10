@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ef107ae0dceb7ee937b21d65cba92cbcf6a9a96c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638333"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628999"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Instrukcje: Obsługa wyjątków w zapytaniu PLINQ
 Pierwszy przykład w tym temacie przedstawiono sposób obsługi <xref:System.AggregateException?displayProperty=nameWithType> , mogą być generowane w wyniku zapytania PLINQ, podczas wykonywania. Drugi przykład pokazuje, jak umieścić bloków try-catch w obrębie delegatów, w jak najbardziej zbliżony do której zostanie zgłoszony wyjątek. W ten sposób możesz przechwytywać je jak najszybciej występują i ewentualnie kontynuować wykonywanie zapytania. Kiedy wyjątki mogą się pojawiać z powrotem w sąsiednim wątku, jest możliwe, że zapytanie może w dalszym ciągu przetwarzać niektóre elementy po wyjątku jest zgłaszany.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: 2de892d94afdfcdc580d20f90fb60ebabf4a9b37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 61ed671b48fd07559c8403b9f5761dbaee3a66ab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612578"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Instrukcje: powiązanie kontrolki formularzy systemu Windows z obiektem fabryki
 Podczas tworzenia formantów, które współdziałają z danymi będą czasami jest konieczne powiązać formant z obiektem lub metodę, która generuje innych obiektów. Obiekt lub metoda jest wywoływana fabrykę. Źródło danych może być na przykład, wartość zwracana z wywołania metody, zamiast obiektu w pamięci lub typu. Kontrolki można powiązać z tym rodzajem źródła danych, tak długo, jak źródło zwraca kolekcję.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344666"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625864"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Instrukcje: Tworzenie zasad wydawcy
 Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestawu, dołączając plik zasad wydawcy w z uaktualnionych zestawu. Plik zasad wydawcy określa przekierowanie zestawu i podstawowe ustawienia kodu i ma taki sam format jak plik konfiguracji aplikacji. Plik zasad wydawcy jest skompilowany w zestawie i umieszczone w globalnej pamięci podręcznej.  
@@ -57,15 +57,15 @@ Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestaw
   
      W tym poleceniu:  
   
-    -   *PublisherPolicyFile* argument jest nazwą plik zasad wydawcy.  
+    - *PublisherPolicyFile* argument jest nazwą plik zasad wydawcy.  
   
-    -   *PublisherPolicyAssemblyFile* argument jest nazwą zestaw zasad wydawcy, która wynika z tego polecenia. Nazwy pliku zestawu musi być zgodny z formatem:  
+    - *PublisherPolicyAssemblyFile* argument jest nazwą zestaw zasad wydawcy, która wynika z tego polecenia. Nazwy pliku zestawu musi być zgodny z formatem:  
   
          **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   *KeyPairFile* argument jest nazwą pliku zawierającego parę kluczy. Musisz zarejestrować zestaw i zestaw zasad wydawcy z tej samej pary kluczy.  
+    - *KeyPairFile* argument jest nazwą pliku zawierającego parę kluczy. Musisz zarejestrować zestaw i zestaw zasad wydawcy z tej samej pary kluczy.  
   
-    -   *ProcessorArchitecture* argument określa platformy docelowej zestawu specyficznych dla procesora.  
+    - *ProcessorArchitecture* argument określa platformy docelowej zestawu specyficznych dla procesora.  
   
         > [!NOTE]
         >  Pozwalają objąć architektury określonemu procesorowi jest nowa w .NET Framework w wersji 2.0.  

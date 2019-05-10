@@ -2,12 +2,12 @@
 title: System.Math, metody
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
-ms.openlocfilehash: 1dae31b30962505c07c198f3bd35fceb8f400efb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5200f31bd319bad49651c3096e1c1364a8003377
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917686"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613774"
 ---
 # <a name="systemmath-methods"></a>System.Math, metody
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje następujących <xref:System.Math> metody.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e88ba4260e9deaf53ae828f222d32f8ece61ffa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873343"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614097"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Wytyczne dotyczące tworzenia składników pod kątem wykonywania równoczesnego
 Wykonaj te ogólne wytyczne do tworzenia aplikacji zarządzanych lub składników przeznaczonych do wykonywania side-by-side:  

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Porównywanie zawartości dwóch folderów (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 63027e892fe8404001c6869be33af8cff1bc014a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855715"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643996"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Instrukcje: Porównywanie zawartości dwóch folderów (LINQ) (Visual Basic)
 W tym przykładzie przedstawiono trzy sposoby, aby porównać dwa listach plików:  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a47436d9f7df099f54d450f6f8176b8cba6d7f5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938739"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622896"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Klasa XAMLServices i podstawowy odczyt lub zapis XAML
 <xref:System.Xaml.XamlServices> jest klasą dostarczone przez .NET Framework XAML Services może służyć do scenariuszy XAML, które nie wymagają określonej dostęp do strumienia węzłów XAML lub informacje o systemie typu XAML uzyskany z tych węzłów. <xref:System.Xaml.XamlServices> Interfejs API można podsumować w następujący: `Load` lub `Parse` do obsługi ścieżką obciążenia XAML `Save` do obsługi XAML Zapisz ścieżkę, i `Transform` do udostępniania technika, która dołącza ścieżki obciążenia i Zapisz ścieżkę. `Transform` może służyć do zmiany z jednego schematu XAML do innego. Ten temat zawiera podsumowanie wszystkich te klasyfikacje interfejsu API i opisano różnice między przeciążeń określonej metody.  

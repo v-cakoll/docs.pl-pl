@@ -2,12 +2,12 @@
 title: Instrukcje dotyczące zapory
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 06e5ba64ab0ec3558e4c773c9cb21f961384e0c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650039"
 ---
 # <a name="firewall-instructions"></a>Instrukcje dotyczące zapory
 Należy włączyć kilka portów i programów w zaporze, aby mógł działać przykładów Windows Communication Foundation (WCF). Wiele przykładów komunikują się przy użyciu portów z zakresu 8000-8003 i portu 9000. Zapora jest włączona domyślnie i uniemożliwia dostęp do tych portów. Aby włączyć zaporę dla próbki, wykonaj jedną z następujących procedur, w zależności od wymagań i środowisko zabezpieczeń:  

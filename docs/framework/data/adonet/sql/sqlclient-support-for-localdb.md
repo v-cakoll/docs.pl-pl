@@ -2,12 +2,12 @@
 title: Obsługa SqlClient w bazie danych LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23fe0d19ad31c0b09e1a12b5ea25e45a973a14f4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670056"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645830"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Obsługa SqlClient w bazie danych LocalDB
 Począwszy od programu SQL Server o nazwie kodowej Denali Uproszczona wersja programu SQL Server, o nazwie LocalDB, będą dostępne. W tym temacie omówiono sposób nawiązywania połączeń z bazą danych LocalDB.  

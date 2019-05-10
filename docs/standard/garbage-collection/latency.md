@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965025"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622783"
 ---
 # <a name="latency-modes"></a>Tryby opóźnienia
 Do odzyskania obiektów, wyrzucanie elementów bezużytecznych należy zatrzymać wszystkie wątki wykonywania w aplikacji. W niektórych sytuacjach, np. gdy aplikacja pobiera dane lub wyświetla zawartość pełne wyrzucanie elementów bezużytecznych występuje w czasie krytycznych i utrudniać wydajności. Można dostosować wszechobecność moduł zbierający elementy bezużyteczne, ustawiając <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> jedną z właściwości <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> wartości.  

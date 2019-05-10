@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: edc150d118153849dd84eb40f1443d842c7d346d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ffd21505c92a3a9402b0d5225f34412a12288ab8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875891"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645625"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Instrukcje: Włączanie stronicowania wyników usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia ograniczenie liczby jednostek zwróconych przez zapytanie usługi danych. Limity strony są definiowane w metodzie, która jest wywoływana, gdy usługa zostanie zainicjowana i mogą być ustawione osobno dla każdego zestawu jednostek.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 45eaa66396049b619c9164b20eed798505d478a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607037"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu DataGrid
 > [!NOTE]
@@ -61,13 +61,13 @@ ms.locfileid: "59161034"
   
  Elementy danych w ramach kontenerów siatki danych będzie obsługiwać minimum:  
   
--   SelectionItem — wzorzec kontrolki (jeśli siatki danych jest możliwy)  
+- SelectionItem — wzorzec kontrolki (jeśli siatki danych jest możliwy)  
   
--   Przewiń — wzorzec kontrolki (jeśli siatki danych przewijany)  
+- Przewiń — wzorzec kontrolki (jeśli siatki danych przewijany)  
   
--   Grid — wzorzec kontrolki  
+- Grid — wzorzec kontrolki  
   
--   TableItem — Wzorzec kontrolki  
+- TableItem — Wzorzec kontrolki  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  

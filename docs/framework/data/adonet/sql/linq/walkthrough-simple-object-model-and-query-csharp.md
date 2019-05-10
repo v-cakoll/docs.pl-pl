@@ -2,12 +2,12 @@
 title: 'Przewodnik: Prosty model obiektu i zapytanie (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309462"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617971"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Przewodnik: Prosty model obiektu i zapytanie (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza minimalnej złożoności. Utworzy klasę jednostki, który modeluje tabelę Klienci w przykładowej bazie danych Northwind. Spowoduje to utworzenie prostego zapytania do listy klientów, którzy znajdują się w Londynie.  
@@ -20,24 +20,24 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
   
--   W tym przewodniku używa dedykowanego folder ("c:\linqtest5") do przechowywania plików. Przed rozpoczęciem instruktażu, należy utworzyć ten folder.  
+- W tym przewodniku używa dedykowanego folder ("c:\linqtest5") do przechowywania plików. Przed rozpoczęciem instruktażu, należy utworzyć ten folder.  
   
--   Ten poradnik wymaga przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych, skopiuj plik do folderu c:\linqtest5.  
+- Ten poradnik wymaga przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych, skopiuj plik do folderu c:\linqtest5.  
   
 ## <a name="overview"></a>Omówienie  
  Ten przewodnik składa się z sześciu głównych zadań:  
   
--   Tworzenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.  
+- Tworzenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.  
   
--   Mapowanie klasy do tabeli bazy danych.  
+- Mapowanie klasy do tabeli bazy danych.  
   
--   Wyznaczanie właściwości klasy do reprezentowania kolumny bazy danych.  
+- Wyznaczanie właściwości klasy do reprezentowania kolumny bazy danych.  
   
--   Określenie połączenia z bazą danych Northwind.  
+- Określenie połączenia z bazą danych Northwind.  
   
--   Tworzenie prostego zapytania do bazy danych.  
+- Tworzenie prostego zapytania do bazy danych.  
   
--   Wykonywanie zapytania i obserwowania wyniki.  
+- Wykonywanie zapytania i obserwowania wyniki.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Tworzenie składnika LINQ to SQL rozwiązanie  
  W tym pierwszym zadaniu tworzyć rozwiązania programu Visual Studio, który zawiera niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.  
@@ -76,22 +76,22 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>Aby utworzyć klasę jednostki i mapowany do tabeli bazy danych  
   
--   Wpisz lub wklej następujący kod do pliku Program.cs bezpośrednio nad `Program` deklaracji klasy:  
+- Wpisz lub wklej następujący kod do pliku Program.cs bezpośrednio nad `Program` deklaracji klasy:  
   
      [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>Wyznaczanie właściwości klasy do reprezentowania kolumny bazy danych  
  W tym kroku należy wykonać kilka zadań.  
   
--   Możesz użyć <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby wyznaczyć `CustomerID` i `City` właściwości jednostki klasy, reprezentując kolumn w tabeli bazy danych.  
+- Możesz użyć <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby wyznaczyć `CustomerID` i `City` właściwości jednostki klasy, reprezentując kolumn w tabeli bazy danych.  
   
--   Możesz wyznaczyć `CustomerID` właściwości jako kolumna klucza podstawowego w bazie danych.  
+- Możesz wyznaczyć `CustomerID` właściwości jako kolumna klucza podstawowego w bazie danych.  
   
--   Możesz wyznaczyć `_CustomerID` i `_City` pól magazynu prywatnego. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] można następnie przechowywać i pobierać wartości bezpośrednio, zamiast publiczne metody dostępu, które mogą obejmować logiki biznesowej.  
+- Możesz wyznaczyć `_CustomerID` i `_City` pól magazynu prywatnego. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] można następnie przechowywać i pobierać wartości bezpośrednio, zamiast publiczne metody dostępu, które mogą obejmować logiki biznesowej.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Do reprezentowania charakterystyki dwie kolumny bazy danych  
   
--   Wpisz lub wklej następujący kod do pliku Program.cs wewnątrz nawiasów klamrowych dla `Customer` klasy.  
+- Wpisz lub wklej następujący kod do pliku Program.cs wewnątrz nawiasów klamrowych dla `Customer` klasy.  
   
      [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]  
   
@@ -102,7 +102,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-specify-the-database-connection"></a>Aby określić połączenie z bazą danych  
   
--   Wpisz lub wklej następujący kod do `Main` metody.  
+- Wpisz lub wklej następujący kod do `Main` metody.  
   
      Należy pamiętać, że `northwnd.mdf` pliku zakłada, że w folderze linqtest5. Aby uzyskać więcej informacji zobacz sekcję wymagania wstępne we wcześniejszej części tego przewodnika.  
   
@@ -115,7 +115,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-create-a-simple-query"></a>Aby utworzyć proste zapytanie  
   
--   Wpisz lub wklej następujący kod do `Main` metody `Table<Customer>` deklaracji.  
+- Wpisz lub wklej następujący kod do `Main` metody `Table<Customer>` deklaracji.  
   
      [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]  
   

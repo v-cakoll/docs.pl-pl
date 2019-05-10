@@ -2,21 +2,21 @@
 title: Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199586"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613044"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (WCF) udostępnia podstawowe elementy, które są wymagane do kompilowania usług HTTP w sieci WEB z programem WCF. Usługi WCF WEB HTTP można uzyskać dostęp przez największą liczbę potencjalnych klientów, w tym przeglądarki sieci Web i ma następujące wymagania:  
   
--   **Identyfikatory URI i identyfikator URI przetwarzania** identyfikatorów URI odgrywają główną rolę w projekcie usługi sieci WEB HTTP. WCF WEB HTTP używa modelu programowania <xref:System.UriTemplate> i <xref:System.UriTemplateTable> klasy zapewniające możliwości przetwarzania identyfikatora URI.  
+- **Identyfikatory URI i identyfikator URI przetwarzania** identyfikatorów URI odgrywają główną rolę w projekcie usługi sieci WEB HTTP. WCF WEB HTTP używa modelu programowania <xref:System.UriTemplate> i <xref:System.UriTemplateTable> klasy zapewniające możliwości przetwarzania identyfikatora URI.  
   
--   **Obsługa operacje GET i POST** usługi sieci WEB HTTP użytkowania zlecenie GET za pobieranie danych, oprócz różnych wywołania poleceń do modyfikacji danych i zdalnego wywoływania. WCF WEB HTTP używa modelu programowania <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> skojarzyć operacji usługi zarówno GET, jak i innych poleceń HTTP, takich jak PUT, POST i usuwania.  
+- **Obsługa operacje GET i POST** usługi sieci WEB HTTP użytkowania zlecenie GET za pobieranie danych, oprócz różnych wywołania poleceń do modyfikacji danych i zdalnego wywoływania. WCF WEB HTTP używa modelu programowania <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> skojarzyć operacji usługi zarówno GET, jak i innych poleceń HTTP, takich jak PUT, POST i usuwania.  
   
--   **Wiele formatów danych** stylu sieci Web usług przetworzenia wielu rodzajów danych oprócz komunikaty protokołu SOAP. WCF WEB HTTP używa modelu programowania <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior> do obsługi wielu formatów różnych danych, w tym dokumentów XML, obiekt danych JSON i strumieni zawartości binarnej, takie jak obrazy, pliki wideo lub zwykłego tekstu.  
+- **Wiele formatów danych** stylu sieci Web usług przetworzenia wielu rodzajów danych oprócz komunikaty protokołu SOAP. WCF WEB HTTP używa modelu programowania <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior> do obsługi wielu formatów różnych danych, w tym dokumentów XML, obiekt danych JSON i strumieni zawartości binarnej, takie jak obrazy, pliki wideo lub zwykłego tekstu.  
   
  Model programowania protokołu HTTP sieci WEB WCF rozszerza zasięg usługi WCF do scenariuszy komunikacji między stylu sieci Web, które zawierają usług HTTP w sieci WEB, usług AJAX i JSON oraz (ATOM/RSS) zespolone kanały informacyjne. Aby uzyskać więcej informacji na temat usług AJAX i JSON, zobacz [JSON Obsługa integracji AJAX i](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Aby uzyskać więcej informacji na temat syndykacji zobacz [omówienie syndykacji WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
@@ -33,23 +33,23 @@ Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (
   
  Ten szablon zawiera opis identyfikatorów URI podobne do następującego:  
   
--   a/x/c  
+- a/x/c  
   
--   a/y/c  
+- a/y/c  
   
--   a/z/c  
+- a/z/c  
   
--   i tak dalej.  
+- i tak dalej.  
   
  W tym szablonie notacji nawias klamrowy ("{segment}") wskazuje segment zmiennej zamiast wartości literału.  
   
  .NET framework zapewnia interfejs API, Praca z szablonami URI nazywana <xref:System.UriTemplate>. `UriTemplates` Zezwalaj na wykonywanie następujących czynności:  
   
--   Można też wywołać jedną z `Bind` metody z zestawem parametrów do wygenerowania *pełni zamkniętego URI* który jest zgodny z szablonem. Oznacza to, że wszystkie zmienne w szablonie identyfikatora URI są zastępowane wartości rzeczywiste.  
+- Można też wywołać jedną z `Bind` metody z zestawem parametrów do wygenerowania *pełni zamkniętego URI* który jest zgodny z szablonem. Oznacza to, że wszystkie zmienne w szablonie identyfikatora URI są zastępowane wartości rzeczywiste.  
   
--   Możesz wywołać `Match`() za pomocą kandydat identyfikatora URI, który używa szablonu, aby rozbić Release candidate, identyfikator URI do jego składnika części i zwraca słownik, który zawiera różne części identyfikatora URI etykietą zgodnie ze zmiennymi w szablonie.  
+- Możesz wywołać `Match`() za pomocą kandydat identyfikatora URI, który używa szablonu, aby rozbić Release candidate, identyfikator URI do jego składnika części i zwraca słownik, który zawiera różne części identyfikatora URI etykietą zgodnie ze zmiennymi w szablonie.  
   
--   `Bind`() i `Match`() są inverses, dzięki czemu można wywołać `Match`( `Bind`(x)) i wróć za pomocą tego samego środowiska pracy z usługą.  
+- `Bind`() i `Match`() są inverses, dzięki czemu można wywołać `Match`( `Bind`(x)) i wróć za pomocą tego samego środowiska pracy z usługą.  
   
  Istnieje wiele razy (zwłaszcza na serwerze, gdy jest konieczne wysyła żądania do operacji usługi, w oparciu o identyfikator URI) chcesz śledzić zbiór <xref:System.UriTemplate> obiektów w strukturze danych, które można niezależnie dotyczą każdego zamkniętego Szablony. <xref:System.UriTemplateTable> reprezentuje zestaw szablonów identyfikatora URI, a następnie wybiera najlepsze dopasowanie, biorąc pod uwagę zestaw szablonów i Kandydat identyfikatora URI. To nie jest powiązany z określonego stosu sieciowego (dołączony do programu WCF) aby można było go używać wszędzie tam, gdzie to konieczne.  
   
@@ -127,11 +127,11 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Formaty i modelu programowania protokołu HTTP sieci WEB WCF  
  Model programowania protokołu HTTP sieci WEB WCF oferuje nowe funkcje do pracy z wielu formatów danych. W warstwie powiązania <xref:System.ServiceModel.WebHttpBinding> mogą odczytywać i zapisywać różne rodzaje danych:  
   
--   XML  
+- XML  
   
--   JSON  
+- JSON  
   
--   Strumienie binarne nieprzezroczyste  
+- Strumienie binarne nieprzezroczyste  
   
  Oznacza to, model programowania protokołu HTTP sieci WEB WCF może obsłużyć dowolny typ danych, ale mogą programować przy <xref:System.IO.Stream>.  
   

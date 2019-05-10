@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340402"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614628"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Instrukcje: Obsługa zdarzenia ContextMenuOpening
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Zdarzenia mogą być obsługiwane w aplikacji albo dostosować istniejący przed menu kontekstowe do wyświetlania lub Pomiń menu, które w przeciwnym razie będzie można wyświetlić, ustawiając <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwości `true` danych zdarzenia. Typową przyczyną ustawienia <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true` zdarzeń danych ma zastąpić menu całkowicie nową <xref:System.Windows.Controls.ContextMenu> obiektu, co czasami wymaga anuluje operację i uruchomienie nowej open. Jeśli podczas pisania procedur obsługi dla <xref:System.Windows.FrameworkElement.ContextMenuOpening> zdarzeń, powinno być znane problemy dotyczące synchronizacji między <xref:System.Windows.Controls.ContextMenu> kontroli i usługi, która jest odpowiedzialna za otwarcie i ogólnie rzecz biorąc pozycjonowanie menu kontekstowe dla formantów. W tym temacie pokazano niektóre z technik kodu dla różnych menu kontekstowe, otwierając scenariuszy i ilustruje przypadek, gdzie błąd synchronizacji jest dostarczany do gry.  
   
  Istnieje kilka scenariuszy obsługi <xref:System.Windows.FrameworkElement.ContextMenuOpening> zdarzeń:  
   
--   Dostosowywanie elementów menu, zanim ekran.  
+- Dostosowywanie elementów menu, zanim ekran.  
   
--   Wymiana całego menu przed wyświetlania.  
+- Wymiana całego menu przed wyświetlania.  
   
--   Całkowicie pomijanie dowolnego istniejącego menu kontekstowego i wyświetlanie nie menu kontekstowego.  
+- Całkowicie pomijanie dowolnego istniejącego menu kontekstowego i wyświetlanie nie menu kontekstowego.  
   
 ## <a name="example"></a>Przykład  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8ac605b562531329333b5f05e081d89de55d8cd2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928612"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645446"
 ---
 # <a name="introduction-to-extensibility"></a>Wprowadzenie do rozszerzalności
 Model aplikacji Windows Communication Foundation (WCF) jest przeznaczony do rozwiązywania większa część wymagania dotyczące komunikacji z dowolnej aplikacji rozproszonej. Jednak zawsze są scenariusze, które nie obsługują modelu aplikacji domyślnej i implementacje dostarczane przez system. Model rozszerzalności programu WCF jest przeznaczony do obsługi scenariuszy niestandardowych, dzięki któremu można zmodyfikować zachowanie systemu na każdym poziomie, nawet do punktu zamiany modelu całej aplikacji. W tym temacie opisano różne obszary rozszerzenia i wskazuje, aby uzyskać więcej informacji na temat każdego.  

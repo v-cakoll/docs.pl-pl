@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: bac3ff5f08d6dc31b87191934eb5547289fb606d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 05919f0e3cd873d3f6afe9a45736ab38d0da878b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645584"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ Considerations (WCF Data Services)
 Ten temat zawiera informacje o sposobie w LINQ, które zapytania są składa się i są stosowane podczas korzystania z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta i ograniczeń za pomocą LINQ do zapytań usługi danych, który implementuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Aby uzyskać więcej informacji na temat tworzenia i wykonywanie zapytań względem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie danych usługi, zobacz [zapytań usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 59d19128b8fbb0af2c8b24dd18763347a53cfd9e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763922"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643991"
 ---
 # <a name="working-with-data-definition-language"></a>Praca z językiem definicji danych
 Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] w wersji 4 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje języka definicji danych (DDL). Dzięki temu można utworzyć lub usunąć wystąpienie bazy danych na podstawie parametrów połączenia i metadanych modelu magazynu (SSDL).  

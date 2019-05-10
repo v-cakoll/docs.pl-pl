@@ -14,8 +14,6 @@
           href: foreground-and-background-threads.md
         - name: Zarządzana i niezarządzana wątkowość w systemie Windows
           href: managed-and-unmanaged-threading-in-windows.md
-        - name: 'Thread.Suspend, wyrzucanie elementów bezużytecznych i punkty bezpieczeństwa'
-          href: thread-suspend-garbage-collection-and-safe-points.md
         - name: 'Pamięć lokalna wątku: Powiązane z wątkiem pola statyczne i gniazda danych'
           href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
     - name: Używanie wątków i wątkowości

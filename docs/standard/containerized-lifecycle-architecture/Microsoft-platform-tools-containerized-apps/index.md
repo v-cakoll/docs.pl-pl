@@ -4,12 +4,12 @@ description: Ustal, jakimi oferty firmy Microsoft do obsługi cykl życia aplika
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934667"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664396"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
 
@@ -31,7 +31,7 @@ Tabela 3-1 pokazuje, czy zamiar metodyki DevOps firmy Microsoft dla konteneryzow
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Platforma dla aplikacji platformy Docker   | • Microsoft Visual Studio i Visual Studio Code<br /> • .NET<br /> • Platformy Microsoft Azure Container Service<br /> • Usługi azure Service Fabric<br /> • Usługi azure Container Registry<br /> | • Dowolnego edytora kodu (na przykład Sublime)<br /> • Dowolnego języka (Node.js, Java, Go, itp.)<br /> • Dowolnego programu orchestrator i harmonogramu<br /> • Dowolnego rejestru platformy Docker<br /> |
 | Metodyka DevOps na potrzeby aplikacji platformy Docker     | Usługi azure DevOps •<br /> • Microsoft Team Foundation Server<br /> • Usługi azure Container Service<br /> • Usługi azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • W środowisku lokalnym Mesos Docker Datacenter, Docker Swarm, DC/OS, Kubernetes, itp.<br /> |
-| Zarządzanie i monitorowanie  | • Operations Management Suite<br /> • Applications Insights<br /> | • Platformy Marathon, Chronos itp.<br />
+| Zarządzanie i monitorowanie  | • Azure monitorowania | • Platformy Marathon, Chronos itp.<br />|
 
 Platformy firmy Microsoft oraz narzędzi dla konteneryzowanych aplikacji platformy Docker, zgodnie z definicją w tabeli 3-1, obejmują następujące składniki:
 

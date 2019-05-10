@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: caaf641f919c10751f59df8972af9d95fa930d88
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800129"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655574"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są prawidłowe, zanim aplikacja używa go. Może wymagać, że niektóre pola tekstowego jest o zerowej długości, że pole formatowane jako numer telefonu lub innego typu danych sformułowany lub czy ciąg zawiera niebezpiecznych znaków, które mogłyby zostać użyte w celu złamania zabezpieczeń bazy danych. Formularze Windows oferuje kilka sposobów umożliwiające sprawdzanie poprawności danych wejściowych w aplikacji.  

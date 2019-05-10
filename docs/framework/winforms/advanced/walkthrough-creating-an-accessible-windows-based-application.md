@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747546"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665927"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Przewodnik: Tworzenie dostępnej aplikacji bazującej na systemie Windows
 Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć ułatwień dostępu przepisami lub ustaleniami dotyczącymi oprogramowania zakupionego. Logo Certified for Windows zawiera wymagania dotyczące ułatwień dostępu. Szacowany mieszkańcy 30 mln Stanów Zjednoczonych samodzielnie, wiele potencjalnych klientów, są zagrożone dostępność oprogramowania.  
   
  Ten przewodnik pozwala sprostać pięć wymagania dotyczące ułatwień dostępu, logo Certified for Windows. Zgodnie z tymi wymaganiami dostępnej aplikacji wykonują następujące czynności:  
   
--   Obsługuje rozmiar panelu sterowania, kolory, czcionki i wprowadź ustawienia. Pasek menu, pasek tytułu, obramowania i pasek stanu będzie wszystkie rozmiar się po użytkownik zmienia ustawienia Panelu sterowania. Nie dodatkowe zmiany do kontrolki lub kodu są wymagane w tej aplikacji.  
+- Obsługuje rozmiar panelu sterowania, kolory, czcionki i wprowadź ustawienia. Pasek menu, pasek tytułu, obramowania i pasek stanu będzie wszystkie rozmiar się po użytkownik zmienia ustawienia Panelu sterowania. Nie dodatkowe zmiany do kontrolki lub kodu są wymagane w tej aplikacji.  
   
--   Obsługa trybu wysokiego kontrastu.  
+- Obsługa trybu wysokiego kontrastu.  
   
--   Podaj udokumentowanego klawiatury dostęp do wszystkich funkcji.  
+- Podaj udokumentowanego klawiatury dostęp do wszystkich funkcji.  
   
--   Udostępnianie lokalizacji fokus klawiatury ModelID.  
+- Udostępnianie lokalizacji fokus klawiatury ModelID.  
   
--   Należy unikać przekazywania ważnych informacji za pomocą dźwięku samodzielnie.  
+- Należy unikać przekazywania ważnych informacji za pomocą dźwięku samodzielnie.  
   
  Aby uzyskać więcej informacji, zobacz [zasoby do projektowania dostępnych aplikacji](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
@@ -41,29 +41,29 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
   
 #### <a name="to-begin-making-the-application"></a>Aby rozpocząć tworzenie aplikacji  
   
--   Utwórz nową aplikację Windows w języku Visual Basic lub Visual C#. Nadaj projektowi nazwę **PizzaOrder**. (Aby uzyskać szczegółowe informacje, zobacz [tworzenie nowych rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects).)  
+- Utwórz nową aplikację Windows w języku Visual Basic lub Visual C#. Nadaj projektowi nazwę **PizzaOrder**. (Aby uzyskać szczegółowe informacje, zobacz [tworzenie nowych rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects).)  
   
 ## <a name="adding-the-controls-to-the-form"></a>Dodawanie formantów do formularza  
  Podczas dodawania formantów do formularza, należy pamiętać, poniższe wskazówki umożliwiają dostępnej aplikacji:  
   
--   Ustaw <xref:System.Windows.Forms.Control.AccessibleDescription%2A> i <xref:System.Windows.Forms.Control.AccessibleName%2A> właściwości. W tym przykładzie domyślne ustawienie dla <xref:System.Windows.Forms.Control.AccessibleRole%2A> jest wystarczająca. Aby uzyskać więcej informacji na temat właściwości ułatwień dostępu, zobacz [dostarczanie informacji o ułatwieniach dostępu dla formantów w formularzu Windows](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+- Ustaw <xref:System.Windows.Forms.Control.AccessibleDescription%2A> i <xref:System.Windows.Forms.Control.AccessibleName%2A> właściwości. W tym przykładzie domyślne ustawienie dla <xref:System.Windows.Forms.Control.AccessibleRole%2A> jest wystarczająca. Aby uzyskać więcej informacji na temat właściwości ułatwień dostępu, zobacz [dostarczanie informacji o ułatwieniach dostępu dla formantów w formularzu Windows](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
--   Ustaw rozmiar czcionki do 10 punktów i większych.  
+- Ustaw rozmiar czcionki do 10 punktów i większych.  
   
     > [!NOTE]
     >  Jeśli ustawisz rozmiar czcionki w formularzu do 10 podczas uruchamiania, wszystkie kontrolki, następnie dodawane do formularza będzie miał rozmiar czcionki, 10.  
   
--   Upewnij się, że wszystkie kontrolki etykiety, która opisuje kontrolki TextBox bezpośrednio poprzedza formant pola tekstowego w kolejności tabulacji.  
+- Upewnij się, że wszystkie kontrolki etykiety, która opisuje kontrolki TextBox bezpośrednio poprzedza formant pola tekstowego w kolejności tabulacji.  
   
--   Dodaj klucz dostępu, korzystając ze znaku "&", do <xref:System.Windows.Forms.Control.Text%2A> dowolną kontrolkę, użytkownik może chcieć przejść do właściwości.  
+- Dodaj klucz dostępu, korzystając ze znaku "&", do <xref:System.Windows.Forms.Control.Text%2A> dowolną kontrolkę, użytkownik może chcieć przejść do właściwości.  
   
--   Dodaj klucz dostępu, korzystając ze znaku "&", do <xref:System.Windows.Forms.Control.Text%2A> właściwość etykiety, który poprzedza formant, który użytkownik może chcieć przejść do. Ustawić etykiety <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwości `true`, dzięki czemu fokus jest ustawiony do następnej kontrolki w kolejności tabulacji, gdy użytkownik naciśnie klawisz dostępu.  
+- Dodaj klucz dostępu, korzystając ze znaku "&", do <xref:System.Windows.Forms.Control.Text%2A> właściwość etykiety, który poprzedza formant, który użytkownik może chcieć przejść do. Ustawić etykiety <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwości `true`, dzięki czemu fokus jest ustawiony do następnej kontrolki w kolejności tabulacji, gdy użytkownik naciśnie klawisz dostępu.  
   
--   Dodaj klucze dostępu do wszystkich elementów menu.  
+- Dodaj klucze dostępu do wszystkich elementów menu.  
   
 #### <a name="to-make-your-windows-application-accessible"></a>Aby udostępnić aplikację Windows  
   
--   Dodaj formanty do formularza, a następnie ustaw właściwości, zgodnie z poniższym opisem. Zobacz obraz na koniec tabeli dla modeli rozmieszczanie formantów w formularzu.  
+- Dodaj formanty do formularza, a następnie ustaw właściwości, zgodnie z poniższym opisem. Zobacz obraz na koniec tabeli dla modeli rozmieszczanie formantów w formularzu.  
   
     |Obiekt|Właściwość|Wartość|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
     |Element MenuItem|Nazwa|exitApp|  
     ||Tekst|Za & kończ|
     
-      Formularz będzie wyglądać podobnie do następującego:
+      Your form will look something like the following image:
     
-      ![Formularz kolejności pizza z pola tekstowego, a rozmiar i toppings wybór nazwy.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>Obsługa trybu wysokiego kontrastu  
  Trybu wysokiego kontrastu jest ustawienie systemu Windows, który poprawia czytelność przy użyciu kontrastujących i rozmiary czcionek, które są przydatne dla użytkowników niedowidzących. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Właściwość została podana w celu ustalenia, czy ustawiono trybu wysokiego kontrastu.  
   
  Jeśli jest SystemInformation.HighContrast `true`, aplikacja powinna:  
   
--   Wyświetlanie wszystkich elementów interfejsu użytkownika przy użyciu schematu kolorów systemu  
+- Wyświetlanie wszystkich elementów interfejsu użytkownika przy użyciu schematu kolorów systemu  
   
--   Przekazuje za pomocą wizualnych lub dźwięk wszystkie informacje, które jest przekazywane przez kolor. Na przykład jeśli elementy konkretnej listy są wyróżnione za pomocą czerwonego czcionki, można również dodasz pogrubioną czcionką, tak, aby użytkownik miał cue-color, że elementy są wyróżnione.  
+- Przekazuje za pomocą wizualnych lub dźwięk wszystkie informacje, które jest przekazywane przez kolor. Na przykład jeśli elementy konkretnej listy są wyróżnione za pomocą czerwonego czcionki, można również dodasz pogrubioną czcionką, tak, aby użytkownik miał cue-color, że elementy są wyróżnione.  
   
--   Pomiń wszelkie obrazy i wzorce pod tekstem  
+- Pomiń wszelkie obrazy i wzorce pod tekstem  
   
  Aplikacja powinna sprawdzać, czy ustawienie <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> podczas uruchamiania aplikacji i odpowiedzieć na zdarzenie systemowe <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Zdarzenie jest wywoływane zawsze wtedy, gdy wartość <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> zmiany.  
   

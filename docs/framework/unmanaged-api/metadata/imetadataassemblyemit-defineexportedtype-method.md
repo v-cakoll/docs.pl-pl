@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625437"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType — Metoda
 Tworzy `ExportedType` struktury zawierającej metadanych dla określonego wyeksportować typu, a następnie zwraca token skojarzone metadane.  
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Token, określający, gdzie typ eksportowany jest zaimplementowana. Prawidłowe wartości i ich znaczenie skojarzone są:  
   
--   `mdFile` Typ jest zaimplementowana w innym pliku w tym zestawie.  
+- `mdFile` Typ jest zaimplementowana w innym pliku w tym zestawie.  
   
--   `mdAssemblyRef` Typ jest zaimplementowana w innym zestawie.  
+- `mdAssemblyRef` Typ jest zaimplementowana w innym zestawie.  
   
--   `mdExportedTYpe` Typ jest zagnieżdżony w ramach innego typu.  
+- `mdExportedTYpe` Typ jest zagnieżdżony w ramach innego typu.  
   
--   `mdFileNil` Typ znajduje się w tym samym pliku manifestu i nie jest typem zagnieżdżonym.  
+- `mdFileNil` Typ znajduje się w tym samym pliku manifestu i nie jest typem zagnieżdżonym.  
   
  `tkTypeDef`  
  [in] Token metadanych, który określa typ do wyeksportowania. Ta wartość jest wprowadzana w `TypeDef` tabeli w pliku, który implementuje ten typ. i ma zastosowanie tylko wtedy, gdy ten plik znajduje się w tym zestawie.  

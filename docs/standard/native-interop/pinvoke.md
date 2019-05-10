@@ -4,12 +4,12 @@ description: Dowiedz się, jak wywoływać funkcje natywne za pośrednictwem met
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: d1da6be56e14f72e17cf8fc9ba343ce148fe0931
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ed1eb69a418317bbee2502418cc2521a68b65542
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973514"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063182"
 ---
 # <a name="platform-invoke-pinvoke"></a>Wywołanie platformy (P/Invoke)
 
@@ -178,7 +178,7 @@ namespace PInvokeSamples
 
     // The native callback takes a pointer to a struct. The below class
     // represents that struct in managed code. You can find more information
-    // about this in the section on marshalling below.
+    // about this in the section on marshaling below.
     [StructLayout(LayoutKind.Sequential)]
     public class StatClass
     {
@@ -254,7 +254,7 @@ namespace PInvokeSamples
 }
 ```
 
-Zarówno poprzednich przykładach są zależne od parametrów, a w obu przypadkach parametry są podane jako typami zarządzanymi. Środowisko uruchomieniowe wykonuje "dobre" i przetwarza je na ich odpowiedniki po drugiej stronie. Dowiedz się więcej o jak typy są skierowany do kodu natywnego w naszej strony na [kierowania typu](type-marshalling.md).
+Zarówno poprzednich przykładach są zależne od parametrów, a w obu przypadkach parametry są podane jako typami zarządzanymi. Środowisko uruchomieniowe wykonuje "dobre" i przetwarza je na ich odpowiedniki po drugiej stronie. Dowiedz się więcej o jak typy są przekazywane do kodu natywnego w naszej strony na [marshaling typu](type-marshaling.md).
 
 ## <a name="more-resources"></a>Inne zasoby
 

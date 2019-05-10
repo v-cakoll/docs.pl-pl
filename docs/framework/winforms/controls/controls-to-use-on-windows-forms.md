@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011765"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469516"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Formanty do użycia w formularzach systemu Windows
 Oto alfabetycznym listę kontrolek i składników, których można użyć w formularzach Windows Forms. Oprócz formanty Windows Forms, opisanych w tej sekcji można dodać ActiveX i niestandardowych formantów do formularzy Windows Forms. Jeśli nie możesz znaleźć, formant, który należy wymienionych w tym miejscu, można również utworzyć własne. Aby uzyskać więcej informacji, zobacz [tworzenia kontrolek Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md). Aby uzyskać więcej informacji o wybieraniu formantu zobacz [formantów formularzy Windows za pomocą funkcji](windows-forms-controls-by-function.md).  
@@ -229,7 +229,7 @@ Oto alfabetycznym listę kontrolek i składników, których można użyć w form
  Zawiera łącza do tematów instrukcje krok po kroku, zalecenia, dla którego rodzaju formantu, aby utworzyć i innych informacji na temat tworzenia własnego formantu.  
   
  [Formantów i programowanych obiektów w różnych językach i bibliotekach](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Zawiera tabelę, która mapuje kontrolek w Visual Basic 6.0 do odpowiednich kontroli w [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Należy pamiętać, że formanty są teraz klas w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Zawiera tabelę, która mapuje kontrolek w Visual Basic 6.0 do odpowiednich kontroli w języku Visual Basic. Należy zauważyć, że kontrolki są teraz klas w programie .NET Framework.  
   
  [Instrukcje: Dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  Opisuje sposób używania formantów na formularzach Windows Forms.

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6cb389cd0458d1c9e7af94586c394764f01e4bab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053447"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665189"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Umożliwia deweloperom do wyświetlenia, przekształcania i formatowanie obrazów.  
@@ -144,7 +144,7 @@ Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tl
   
  Poniższa ilustracja przedstawia dane wyjściowe z przykładu i demonstruje wpływają na poszczególne <xref:System.Windows.Controls.Image.Stretch%2A> ustawienia mają podczas zastosowane do obrazu.  
   
- ![Different TileBrush Stretch settings](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![Różne ustawienia TileBrush Stretch](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
 Różne ustawienia Stretch Database  
   
  [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
@@ -152,7 +152,7 @@ Różne ustawienia Stretch Database
 ### <a name="painting-with-images"></a>Malowanie przy użyciu obrazów  
  Obrazy mogą być także wyświetlane w aplikacji przez malowanie <xref:System.Windows.Media.Brush>. Pędzle umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] obiektów ze wszystkim z proste, pełne kolory do złożonych zestawów wzorców i obrazy. Aby rysować przy użyciu obrazów, użyj <xref:System.Windows.Media.ImageBrush>. <xref:System.Windows.Media.ImageBrush> Jest typem <xref:System.Windows.Media.TileBrush> definiujący swoją zawartość jako obraz mapy bitowej. <xref:System.Windows.Media.ImageBrush> Wyświetla pojedynczy obraz, który jest określony przez jego <xref:System.Windows.Media.ImageBrush.ImageSource%2A> właściwości. Można kontrolować, jak obraz jest rozciągany tak, wyrównany i fragmentacji, dzięki któremu można będzie zapobiegać zniekształceniom oraz wzorców i innych skutków. Na poniższej ilustracji przedstawiono niektóre efekty, które można osiągnąć za pomocą <xref:System.Windows.Media.ImageBrush>.  
   
- ![ImageBrush output examples](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ ![ImageBrush danych wyjściowych przykłady](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej  
   
  W poniższym przykładzie pokazano, jak namalować tła przycisku przy użyciu obrazów przy użyciu <xref:System.Windows.Media.ImageBrush>.  
@@ -162,7 +162,7 @@ Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej
  Aby uzyskać dodatkowe informacje na temat <xref:System.Windows.Media.ImageBrush> zobaczyć malowanie obrazami [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md).  
   
 <a name="_metadata"></a>   
-## <a name="image-metadata"></a>Image Metadata  
+## <a name="image-metadata"></a>Metadane obrazu  
  Niektóre pliki obrazów zawiera metadane opisujące zawartość i właściwości pliku. Na przykład większość cyfrowe aparaty fotograficzne tworzenia obrazów, które zawierają metadane dotyczące producenta i modelu aparatu używane do przechwytywania obrazu. Każdy format obrazu obsługuje metadanych w inny sposób, ale [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zapewnia jednolity sposób przechowywania i pobierania metadanych dla każdego obsługiwanym formacie obrazu.  
   
  Dostęp do metadanych jest oferowana w ramach <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> właściwość <xref:System.Windows.Media.Imaging.BitmapSource> obiektu. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Zwraca <xref:System.Windows.Media.Imaging.BitmapMetadata> obiekt, który zawiera wszystkie metadane, które są zawarte w obrazie. Te dane mogą być w jednym schemacie metadanych lub kombinacji różnych systemów. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] obsługuje następujących schematów metadanych obrazu: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tekst (PNG dane tekstowe), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], i [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  

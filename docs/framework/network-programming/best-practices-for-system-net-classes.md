@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 5bb3ac545613da68d5f370fefbf94b674b70fe64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 57d0c3640c65d425ded63f53e32416053c3eb926
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866811"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624669"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Najlepsze rozwiązania dotyczące klas System.Net
 Poniższe zalecenia pomogą należy używać klas znajdujących się w <xref:System.Net> do ich Najważniejsze zalety:  

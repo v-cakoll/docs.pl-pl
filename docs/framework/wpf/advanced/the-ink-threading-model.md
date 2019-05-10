@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007391"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621361"
 ---
 # <a name="the-ink-threading-model"></a>Model wątkowości typu atrament
 Jest jedną z zalet pisma odręcznego na komputerze typu Tablet, może się wydawać, bardzo podobnie jak za pomocą regularnego pióra i dokument.  Aby to osiągnąć, Pióro zbiera dane wejściowe stawki znacznie wyższa niż myszy i renderuje pismo odręczne jako zapisy użytkownika.  Wątek interfejsu użytkownika aplikacji nie wystarcza do zbierania danych pióra i renderowanie pisma odręcznego, ponieważ może zostać zablokowany.  Aby rozwiązać tego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacja używa dwa dodatkowe wątki, gdy użytkownik zapisze pisma odręcznego.  

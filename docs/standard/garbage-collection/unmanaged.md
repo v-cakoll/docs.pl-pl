@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e32d2d4424d05b95af1eda400974da3293b8499
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ae5d27be18a57bfafe5bb9fcf9424d708d643e3b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969107"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622856"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Oczyszczanie zasobów niezarządzanych
 Dla większości obiektów tworzonych przez aplikację na których możesz polegać. Moduł wyrzucania elementów bezużytecznych przez sieć do obsługi zarządzania pamięcią. Jeśli jednak są tworzone obiekty zawierające niezarządzane zasoby, należy jawnie zwalniać te zasoby po zakończeniu używania ich w aplikacji. Najpopularniejsze typy niezarządzanych zasobów to obiekty, które umieszczają w otoce zasoby systemu operacyjnego, takie jak pliki, okna, połączenia sieciowe lub połączenia bazy danych. Mimo że moduł odśmiecania pamięci jest w stanie śledzić okres istnienia obiektu hermetyzującego niezarządzany zasób, nie ma informacji, jak zwolnić i wyczyścić niezarządzany zasób.  

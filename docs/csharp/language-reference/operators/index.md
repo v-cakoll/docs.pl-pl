@@ -1,6 +1,6 @@
 ---
 title: Operatory języka C#
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,34 +18,34 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689817"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452371"
 ---
 # <a name="c-operators"></a>Operatory języka C#
 
-C# zawiera wiele operatorów, które są symbolami określającymi operacje (matematycznych, indeksowanie, wywołanie funkcji itp.) do wykonania w wyrażeniu. Możesz [przeciążenia](../../programming-guide/statements-expressions-operators/overloadable-operators.md) wiele operatorów, aby zmienić ich znaczenia w przypadku zastosowania do typu zdefiniowanego przez użytkownika.
+C#zawiera szereg wstępnie zdefiniowanych operatory obsługiwane przez typy wbudowane. Na przykład [operatorów arytmetycznych](arithmetic-operators.md) wykonywać operacji arytmetycznych na wartościach operandy wbudowanych typów liczbowych i [logiczna operatorów logicznych](boolean-logical-operators.md) wykonywać operacje logiczne z [bool ](../keywords/bool.md) argumentów operacji.
 
-Operacje na typach całkowitoliczbowych (takie jak `==`, `!=`, `<`, `>`, `&`, `|`) są ogólnie dozwolone w wyliczeniu (`enum`) typy.
+Typ zdefiniowany przez użytkownika może doprowadzić do przeciążenia operatorów, aby zdefiniować odpowiednie zachowanie w przypadku argumentów operacji typu. Aby uzyskać więcej informacji, zobacz [operator](../keywords/operator.md) artykułu — słowo kluczowe.
 
-Poniższe rozdziały zawierają listę operatorów języka C# od o najwyższym priorytecie do najniższego. Operatory w każdej sekcji udostępniać na tym samym poziomie pierwszeństwa.
+Na poniższej liście sekcje C# operatorów, począwszy od najniższej najwyższy priorytet. Operatory w każdej sekcji udostępniać na tym samym poziomie pierwszeństwa.
 
 ## <a name="primary-operators"></a>Operatory podstawowe
 
 Są to najwyższy pierwszeństwo operatorów.
 
-[x.y](member-access-operator.md) — dostęp do elementu członkowskiego.
+[x.y](member-access-operators.md#member-access-operator-) — dostęp do elementu członkowskiego.
 
-[x? y](null-conditional-operators.md) — wartość null, dostęp warunkowy elementu członkowskiego. Zwraca `null` Jeśli po lewej stronie operand ma wartość `null`.
+[x? y](member-access-operators.md#null-conditional-operators--and-) — wartość null, dostęp warunkowy elementu członkowskiego. Zwraca `null` Jeśli po lewej stronie operand ma wartość `null`.
 
-[x? [t] ](null-conditional-operators.md) — wartość null, dostęp warunkowy indeksu. Zwraca `null` Jeśli po lewej stronie operand ma wartość `null`.
+[x? [t] ](member-access-operators.md#null-conditional-operators--and-) — wartość null elementu tablicy warunkowego lub wpisz dostęp indeksatora. Zwraca `null` Jeśli po lewej stronie operand ma wartość `null`.
 
-[f(x)](invocation-operator.md) — wywołania funkcji.
+[f(x)](member-access-operators.md#invocation-operator-) — metody wywołania lub delegować wywołania.
 
-[&#91;x&#93; ](index-operator.md) — indeksowanie obiektu agregacji.
+[&#91;x&#93; ](member-access-operators.md#indexer-operator-) — element w tablicy, lub wpisz dostęp indeksatora.
 
 [x ++](arithmetic-operators.md#increment-operator-) — zwiększenie przyrostkowe. Zwraca wartość x, a następnie aktualizuje lokalizację przechowywania z wartością x, która jest większa o jeden (zazwyczaj dodaje liczbę całkowitą 1).
 
@@ -61,9 +61,13 @@ Są to najwyższy pierwszeństwo operatorów.
 
 [wartość Default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) — tworzy domyślną wartość typu T.
 
+[nameof](../keywords/nameof.md) -uzyskuje proste (niekwalifikowanej) Nazwa zmiennej, typu lub składowej jako ciąg stałej.
+
 [Delegowanie](../../programming-guide/statements-expressions-operators/anonymous-methods.md) — deklaruje i zwraca wystąpienie delegata.
 
 [Operator sizeof](../keywords/sizeof.md) — zwraca rozmiar w bajtach argument typu.
+
+[stackalloc](../keywords/stackalloc.md) -przydziela blok pamięci na stosie.
 
 [->](dereference-operator.md) — wyłuskanie wskaźnika w połączeniu z dostępu do elementu członkowskiego.
 
@@ -125,13 +129,13 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x \< y](less-than-operator.md) — mniejsze niż (wartość true, jeśli x jest mniejsza niż y).
+[x \< y](comparison-operators.md#less-than-operator-) — mniejsze niż (wartość true, jeśli x jest mniejsza niż y).
 
-[x > y](greater-than-operator.md) — większa (wartość true, jeśli x jest większa niż y).
+[x > y](comparison-operators.md#greater-than-operator-) — większa (wartość true, jeśli x jest większa niż y).
 
-[x \<= y](less-than-equal-operator.md) — mniejsze niż lub równe.
+[x \<= y](comparison-operators.md#less-than-or-equal-operator-) — mniejsze niż lub równe.
 
-[x > = y](greater-than-equal-operator.md) — większa lub równa.
+[x > = y](comparison-operators.md#greater-than-or-equal-operator-) — większa lub równa.
 
 [jest](../keywords/is.md) — wpisz zgodności. Zwraca wartość PRAWDA, jeśli ocenianą lewy operand mogą być rzutowane na typ określony w prawy operand (typu statycznego).
 
@@ -187,7 +191,7 @@ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet ni�
 
 [t? x: y](conditional-operator.md) — w przypadku testowania `t` daje w wyniku wartość true, a następnie oceniana i zwracana `x`; w przeciwnym razie oceniana i zwracana `y`.
 
-## <a name="assignment-and-lambda-operators"></a>Operatory przypisania i Lambda
+## <a name="assignment-and-lambda-operators"></a>Operatory przypisania i lambda
 
 Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 

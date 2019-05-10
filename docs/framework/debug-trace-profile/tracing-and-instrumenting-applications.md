@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614227"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469531"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Śledzenie i instrumentacja aplikacji
 Śledzenie jest sposobem monitorowania wykonywanie aplikacji, gdy jest on uruchomiony. Możesz dodać Instrumentacji śledzenia i debugowania aplikacji .NET Framework, Opracuj go, gdy zarówno podczas opracowywania aplikacji, jak i po jej wdrożeniu, można użyć tego instrumentacji. Możesz użyć <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> klasy do rejestrowania informacji o błędach oraz wykonywania aplikacji w dzienniki, pliki tekstowe lub innych urządzeń do późniejszej analizy.  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Aby wygenerować wyniki niestandardowych, należy Implementowanie własnych odbiornika. Odbiornik śledzenia niestandardowe mogą, na przykład wyświetlanie wiadomości do okna komunikatu lub połączenie z bazą danych do dodawania komunikatów do tabeli. Wszystkie niestandardowe odbiorniki powinien obsługiwać sześciu metod wymienionych powyżej. Aby uzyskać więcej informacji na temat tworzenia odbiorników zdefiniowane dla deweloperów, zobacz <xref:System.Diagnostics.TraceListener> w dokumentacji .NET Framework.  
   
 > [!NOTE]
->  W [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], **Debug.Write —**, **Debug.WriteIf**, **Debug.WriteLine**, i **Debug.WriteLineIf** zastąpiono metody **Debug.Print** metody, które były dostępne we wcześniejszych wersjach programu Visual Basic.  
+>  W języku Visual Basic **Debug.Write —**, **Debug.WriteIf**, **Debug.WriteLine**, i **Debug.WriteLineIf** zastąpiono metody **Debug.Print** metody, które były dostępne we wcześniejszych wersjach programu Visual Basic.  
   
  **Zapisu** i **WriteLine** metody zawsze wpisać tekst należy określić. **Asercja**, **writeif —**, i **WriteLineIf** wymagają argument logiczny, który kontroluje, czy zapisują określony tekst; zapisują określony tekst tylko jeśli wyrażenie ma **true** (dla **writeif —** i **WriteLineIf**), lub **false** (dla **Asercja**). **Się nie powieść** metody są zawsze zapisywane określony tekst. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) i odwołania programu .NET Framework.  
   

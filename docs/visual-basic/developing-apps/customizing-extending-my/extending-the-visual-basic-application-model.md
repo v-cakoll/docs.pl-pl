@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602448"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469494"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Rozszerzanie modelu aplikacji Visual Basic
 Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridable` członkowie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy. Ta technika umożliwia dostosowywanie zachowania dotyczącego modelu aplikacji i dodawać wywołania do swoje własne metody, jak aplikacja uruchamia się i kończy pracę.  
@@ -76,10 +76,10 @@ Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridab
   
  Jeśli aplikacja jest aplikacją pojedynczego wystąpienia, a aplikacja jest już uruchomiona, kolejne wystąpienie aplikacji wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> metody w oryginalnym wystąpieniu aplikacji, a następnie zamyka.  
  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Konstruktor wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości w celu określenia aparat renderowania tekstu do użycia dla aplikacji formularzy. Domyślnie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwość zwraca `False`, wskazując, że aparat renderowania GDI tekstu można użyć, co jest ustawieniem domyślnym w [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Można zastąpić <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości do zwrócenia `True`, która wskazuje, że używane tekstu aparat renderowania GDI +, co jest ustawieniem domyślnym w Visual Basic .NET 2002 i Visual Basic .NET 2003.  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Konstruktor wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości w celu określenia aparat renderowania tekstu do użycia dla aplikacji formularzy. Domyślnie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwość zwraca `False`, wskazując, że aparat renderowania GDI tekstu można użyć, co jest ustawieniem domyślnym w języku Visual Basic 2005 i nowszych wersjach. Można zastąpić <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości do zwrócenia `True`, która wskazuje, że używane tekstu aparat renderowania GDI +, co jest ustawieniem domyślnym w Visual Basic .NET 2002 i Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Konfigurowanie aplikacji  
- Jako część modelu aplikacji Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> klasy zawiera właściwości chronionego, skonfigurowanych aplikacji. Te właściwości należy ustawić w konstruktorze klasy implementującej.  
+ Jako część modelu aplikacji Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy zawiera właściwości chronionego, skonfigurowanych aplikacji. Te właściwości należy ustawić w konstruktorze klasy implementującej.  
   
  W domyślny projekt Windows Forms **projektanta projektu** tworzy kod, aby ustawić właściwości przy użyciu projektanta ustawień. Właściwości są używane tylko wtedy, gdy aplikacja jest uruchamiana; Po uruchomieniu aplikacji ich ustawienie nie ma znaczenia.  
   

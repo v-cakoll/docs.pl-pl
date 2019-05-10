@@ -1,17 +1,21 @@
 ---
 title: polecenia DotNet Dodaj pakiet — polecenie
 description: Polecenie "dotnet Dodaj pakiet" zapewnia wygodny sposób, aby dodać odwołanie do pakietu NuGet do projektu.
-ms.date: 12/04/2018
-ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 04/24/2019
+ms.openlocfilehash: 79059e062368fc9c4b6b8cb31740fdf13ea2b9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751411"
 ---
 # <a name="dotnet-add-package"></a>polecenia DotNet Dodaj pakiet
 
+**Ten artykuł dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 
@@ -78,11 +82,11 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Przywraca pakietu w określonym katalogu.
+  Katalog miejsca w celu przywrócenia pakietów.
 
 * **`-s|--source <SOURCE>`**
 
-  Używa określonego źródła pakietu NuGet podczas operacji przywracania.
+  Źródło pakietu NuGet, która ma być używany podczas operacji przywracania.
 
 * **`-v|--version <VERSION>`**
 

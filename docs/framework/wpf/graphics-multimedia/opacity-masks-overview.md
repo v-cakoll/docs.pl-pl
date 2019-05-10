@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008476"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625270"
 ---
 # <a name="opacity-masks-overview"></a>Przegląd Masek krycia
 Maski krycia umożliwiać wykonywanie części elementu lub visual przezroczyste lub częściowo przezroczyste. Aby utworzyć maski krycia, należy zastosować <xref:System.Windows.Media.Brush> do <xref:System.Windows.UIElement.OpacityMask%2A> właściwość elementu lub <xref:System.Windows.Media.Visual>.  Pędzel jest mapowany na element "lub" visual, a wartość nieprzezroczystości każdego piksela pędzla służy do określania wynikowy nieprzezroczystość każdego piksela odpowiedniego elementu lub visual.  

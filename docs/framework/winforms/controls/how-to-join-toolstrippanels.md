@@ -8,31 +8,31 @@ helpviewer_keywords:
 - toolbars [Windows Forms], joining together
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
-ms.openlocfilehash: f73c13c4aac1abef70a2ceb0a30c3e46d8664748
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5ef934aa1e72b0793ca938953fe18efcbb212adb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941105"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651620"
 ---
-# <a name="how-to-join-toolstrippanels"></a><span data-ttu-id="ffaf6-102">Instrukcje: łączenie ToolStripPanels</span><span class="sxs-lookup"><span data-stu-id="ffaf6-102">How to: Join ToolStripPanels</span></span>
-<span data-ttu-id="ffaf6-103">Możesz dołączyć <xref:System.Windows.Forms.ToolStrip> mające na celu <xref:System.Windows.Forms.ToolStripPanel> w czasie wykonywania, który zapewnia elastyczność aplikacji interfejsu wielu dokumentów (MDI).</span><span class="sxs-lookup"><span data-stu-id="ffaf6-103">You can join <xref:System.Windows.Forms.ToolStrip> controls to a <xref:System.Windows.Forms.ToolStripPanel> at run time, which provides the flexibility of multiple-document interface (MDI) applications.</span></span>  
+# <a name="how-to-join-toolstrippanels"></a><span data-ttu-id="1c67c-102">Instrukcje: łączenie ToolStripPanels</span><span class="sxs-lookup"><span data-stu-id="1c67c-102">How to: Join ToolStripPanels</span></span>
+<span data-ttu-id="1c67c-103">Możesz dołączyć <xref:System.Windows.Forms.ToolStrip> mające na celu <xref:System.Windows.Forms.ToolStripPanel> w czasie wykonywania, który zapewnia elastyczność aplikacji interfejsu wielu dokumentów (MDI).</span><span class="sxs-lookup"><span data-stu-id="1c67c-103">You can join <xref:System.Windows.Forms.ToolStrip> controls to a <xref:System.Windows.Forms.ToolStripPanel> at run time, which provides the flexibility of multiple-document interface (MDI) applications.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ffaf6-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="ffaf6-104">Example</span></span>  
- <span data-ttu-id="ffaf6-105">Poniższy przykład kodu pokazuje, jak sprzęgać <xref:System.Windows.Forms.ToolStrip> mające na celu <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="ffaf6-105">The following code example demonstrates how to join <xref:System.Windows.Forms.ToolStrip> controls to a <xref:System.Windows.Forms.ToolStripPanel>.</span></span>  
+## <a name="example"></a><span data-ttu-id="1c67c-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="1c67c-104">Example</span></span>  
+ <span data-ttu-id="1c67c-105">Poniższy przykład kodu pokazuje, jak sprzęgać <xref:System.Windows.Forms.ToolStrip> mające na celu <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="1c67c-105">The following code example demonstrates how to join <xref:System.Windows.Forms.ToolStrip> controls to a <xref:System.Windows.Forms.ToolStripPanel>.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#11)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#11)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ffaf6-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="ffaf6-106">Compiling the Code</span></span>  
- <span data-ttu-id="ffaf6-107">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="ffaf6-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1c67c-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="1c67c-106">Compiling the Code</span></span>  
+ <span data-ttu-id="1c67c-107">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="1c67c-107">This example requires:</span></span>  
   
-- <span data-ttu-id="ffaf6-108">Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="ffaf6-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="1c67c-108">Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="1c67c-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="ffaf6-109">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="ffaf6-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="ffaf6-110">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="ffaf6-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="1c67c-109">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="1c67c-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="1c67c-110">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="1c67c-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ffaf6-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ffaf6-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c67c-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1c67c-111">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [<span data-ttu-id="ffaf6-112">Instrukcje: Używanie elementu ToolStripPanels dla MDI</span><span class="sxs-lookup"><span data-stu-id="ffaf6-112">How to: Use ToolStripPanels for MDI</span></span>](how-to-use-toolstrippanels-for-mdi.md)
+- [<span data-ttu-id="1c67c-112">Instrukcje: Używanie elementu ToolStripPanels dla MDI</span><span class="sxs-lookup"><span data-stu-id="1c67c-112">How to: Use ToolStripPanels for MDI</span></span>](how-to-use-toolstrippanels-for-mdi.md)

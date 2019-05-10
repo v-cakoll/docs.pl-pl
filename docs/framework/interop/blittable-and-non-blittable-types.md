@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873590"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469457"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Typy kopiowalne i niekopiowalne
 Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych i niezarządzanych i nie wymagają specjalnej obsługi, organizator międzyoperacyjny. Te typy są nazywane *kopiowalnymi* , ponieważ nie wymaga konwersji, gdy są one przekazywane między kodu zarządzanego i niezarządzanego.  
@@ -71,7 +71,7 @@ Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Konwertuje struktury z układem stały pamięci.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Konwertuje tablicy stylu C lub `SAFEARRAY`.|  
   
- Typy klas i obiektów są obsługiwane tylko przez współdziałania z modelem COM. Dla odpowiednich typów w pakietach [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#i C++, zobacz [Przegląd biblioteki klas](../../../docs/standard/class-library-overview.md).  
+ Typy klas i obiektów są obsługiwane tylko przez współdziałania z modelem COM. Dla odpowiadające typy w języku Visual Basic C#, i C++, zobacz [Przegląd biblioteki klas](../../../docs/standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

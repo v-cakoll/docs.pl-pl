@@ -2,12 +2,12 @@
 title: Obowiązki dewelopera podczas zastępowania domyślnego zachowania
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 12ea526d71946cdc7ab821f5e38948fcbb57d158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4d895600eeaba9c410e9af359208361e83c42c4d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033491"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910599"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Obowiązki dewelopera podczas zastępowania domyślnego zachowania
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie wymusza następujące wymagania, ale zachowanie jest niezdefiniowane, jeśli te wymagania nie zostały spełnione.  

@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675536"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754376"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -321,7 +321,7 @@ Możesz spróbować asynchronicznymi strumieniami samodzielnie w naszym samouczk
 
 Zakresy i indeksów, które zapewniają zwięzłą składnię do określania podzakresów w tablicy, <xref:System.Span%601>, lub <xref:System.ReadOnlySpan%601>.
 
-Można określić indeksu **od końca**. Należy określić **od końca** przy użyciu `^` operatora. Znasz `array[2]` oznacza element "2 od samego początku". Teraz `array[^2]` oznacza, że element "2 od końca". Indeks `^0` oznacza "koniec" lub indeks, który następuje po ostatnim elemencie.
+Można określić indeksu **od końca** przy użyciu `^` znak przed indeksu. Indeksowanie od końca zaczyna się od reguły, `0..^0` określa cały zakres. Aby wyliczyć całej tablicy, należy uruchomić *na pierwszy element*i Kontynuuj, dopóki nie będziesz *elementem*. Reakcji zachowania `MoveNext` metody na moduł wyliczający: zwraca wartość false, gdy wyliczenie przekazuje po ostatnim elemencie. Indeks `^0` "koniec" oznacza, że `array[array.Length]`, lub indeks, który następuje po ostatnim elemencie. Znasz `array[2]` oznacza element "2 od samego początku". Teraz `array[^2]` oznacza, że element "2 od końca". 
 
 Można określić **zakres** z **operatora zakresu**: `..`. Na przykład `0..^0` określa cały zakres tablicy: 0 od początku do, z wyłączeniem 0 od końca. Jeden z operandów może używać "start" lub "end". Ponadto można pominąć oba operandy. Wartości domyślne to `0` dla indeksu początkowego i `^0` dla indeksu zakończenia.
 
@@ -340,7 +340,7 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
 
 Indeks każdego elementu wspiera koncepcję "od rozpoczęcia" i "od końca", a zakresy są nie do końca zakresu. "Start" całej tablicy jest pierwszym elementem. "Koniec" całej tablicy jest *przeszłości* po ostatnim elemencie.
@@ -383,3 +383,5 @@ Zakres następnie można używać wewnątrz `[` i `]` znaków:
 ```csharp
 var text = words[phrase];
 ```
+
+Możesz zapoznać się więcej na temat indeksów i zakresów adresów w tym samouczku na [indeksów i zakresy](../tutorials/ranges-indexes.md).

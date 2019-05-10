@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: dc817fdb9684f794efc6599444e80be1ef7f9654
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660134"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753815"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 
@@ -163,23 +163,6 @@ Operator odejmowania `-` odejmuje jej drugiego operandu od jego pierwszego opera
 
 Możesz również użyć `-` operator usuwanie delegata. Aby uzyskać więcej informacji, zobacz [ `-` operator](subtraction-operator.md) artykułu.
 
-## <a name="operator-precedence-and-associativity"></a>Pierwszeństwo i kojarzenie operatorów
-
-Poniższa lista zamówień operatorów arytmetycznych, zaczynając od najwyższy priorytet do najniższego:
-
-- Inkrementacja przyrostkowa `x++` i dekrementacyjne `x--` operatorów
-- Inkrementacja przedrostkowa `++x` i dekrementacyjne `--x` i jednoargumentowe `+` i `-` operatorów
-- Mnożenia `*`, `/`, i `%` operatorów
-- Dodatek `+` i `-` operatorów
-
-Operatory arytmetyczne binarne są lewostronne. Oznacza to operatory o tym samym poziomie priorytetu są obliczane od lewej do prawej.
-
-Użyj nawiasów, `()`, aby zmienić kolejność oceny nałożonych przez pierwszeństwo i kojarzenie operatorów.
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-Aby uzyskać pełną listę C# operatory uporządkowane według poziomu priorytetu, zobacz [ C# operatory](index.md).
-
 ## <a name="compound-assignment"></a>Przydział złożony
 
 Dla operatora binarnego `op`, wyrażenie przypisania złożonego formularza
@@ -205,6 +188,23 @@ Z powodu [promocji na liczbowe](~/_csharplang/spec/expressions.md#numeric-promot
 [!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
 Możesz także użyć `+=` i `-=` operatory subskrybowanie i anulowanie subskrypcji [zdarzenia](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-precedence-and-associativity"></a>Pierwszeństwo i kojarzenie operatorów
+
+Poniższa lista zamówień operatorów arytmetycznych, zaczynając od najwyższy priorytet do najniższego:
+
+- Inkrementacja przyrostkowa `x++` i dekrementacyjne `x--` operatorów
+- Inkrementacja przedrostkowa `++x` i dekrementacyjne `--x` i jednoargumentowe `+` i `-` operatorów
+- Mnożenia `*`, `/`, i `%` operatorów
+- Dodatek `+` i `-` operatorów
+
+Operatory arytmetyczne binarne są lewostronne. Oznacza to operatory o tym samym poziomie priorytetu są obliczane od lewej do prawej.
+
+Użyj nawiasów, `()`, aby zmienić kolejność oceny nałożonych przez pierwszeństwo i kojarzenie operatorów.
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+Aby uzyskać pełną listę C# operatory uporządkowane według poziomu priorytetu, zobacz [ C# operatory](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Przepełnienie arytmetyczne i dzielenie przez zero
 

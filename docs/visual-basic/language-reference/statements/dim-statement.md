@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: cab1cc07d23a44e57bdb0962a323b014308cb1e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a16060efc45cc0642aa6612d02644e252cd53d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638235"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751798"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim — Instrukcja (Visual Basic)
 
@@ -260,7 +260,7 @@ W poniższej tabeli opisano wyniki różnych kombinacji określania typu danych 
 |Nie|Nie|`Dim qty`|Jeśli [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) jest wyłączone (domyślnie), zmienna jest ustawiana `Nothing`.<br /><br /> Jeśli `Option Strict` jest włączona, wystąpi błąd kompilacji.|
 |Nie|Yes|`Dim qty = 5`|Jeśli [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) znajduje się na (ustawienie domyślne), zmienna przyjmuje dane typu inicjatora. Zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest wyłączone, zmienna ma typ danych `Object`.<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest włączona, wystąpi błąd kompilacji.|
 |Yes|Nie|`Dim qty As Integer`|Zmienna jest ustawiana na wartość domyślną dla typu danych. Zobacz tabelę w dalszej części tej sekcji.|
-|Tak|Tak|`Dim qty  As Integer = 5`|Jeśli typ danych Inicjator nie jest konwertowany na określony typ danych, wystąpi błąd kompilacji.|
+|Yes|Tak|`Dim qty  As Integer = 5`|Jeśli typ danych Inicjator nie jest konwertowany na określony typ danych, wystąpi błąd kompilacji.|
 
 W przypadku określenia typu danych, ale nie należy określać inicjatora, Visual Basic inicjuje zmienną wartością domyślną dla jego typu danych. W poniższej tabeli przedstawiono domyślne wartości inicjowania.
 

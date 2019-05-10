@@ -2,12 +2,12 @@
 title: Obsługa wyjątków i błędów
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654997"
 ---
 # <a name="handling-exceptions-and-faults"></a>Obsługa wyjątków i błędów
 Wyjątki są używane do komunikowania się błędy lokalnie w implementacji klienta lub usługi. Błędy, z drugiej strony, są używane do komunikacji błędów przez granice usługi, takie jak z serwera do klienta lub na odwrót. Oprócz błędów kanały transportu często używają mechanizmów specyficznych dla transportu do komunikowania się błędy na poziomie transportu. Na przykład transportu HTTP używa kodów stanu, takie jak 404 do komunikowania się nieistniejące adresu URL punktu końcowego (jest nie punktu końcowego do odesłania błędów). Ten dokument zawiera trzy sekcje, które zapewniają wskazówki autorom w niestandardowym kanale. Pierwsza sekcja zawiera wskazówki dotyczące kiedy i jak zdefiniować i zgłaszać wyjątki. Druga sekcja zawiera wskazówki dotyczące generowania i korzystanie z błędów. Trzecia sekcja wyjaśnia, jak Podaj informacje o śledzeniu ułatwiające użytkownika niestandardowego kanału Rozwiązywanie problemów z uruchomionych aplikacji.  

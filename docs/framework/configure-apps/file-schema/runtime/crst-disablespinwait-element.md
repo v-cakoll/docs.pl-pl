@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704833"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754676"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > element
 
-Określa, czy wyłączyć pokrętła — oczekiwanie na sekcję krytyczną rywalizacją. \ 
+Określa, czy wyłączyć pokrętła — oczekiwanie na sekcję krytyczną rywalizacją.  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -36,14 +36,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Włączone**|Określa, czy pokrętła — oczekiwanie na sekcje krytyczne jest włączona, gdy są one rywalizacją.|  
+|**Włączone**|Określa, czy pokrętła — oczekiwanie na sekcje krytyczne, gdy są one rywalizacją jest wyłączona.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|1|Oczekiwania pokrętła jest włączona.|  
-|0|Oczekiwania pokrętła jest wyłączona. Jest to opcja domyślna|  
+|1|Wyłącz pokrętła oczekiwania, gdy nie można pobrać sekcję krytyczną.|  
+|0|Nie należy wyłączać pokrętła oczekiwania, gdy sekcję krytyczną, nie można pobrać. Jest to wartość domyślna.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

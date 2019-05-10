@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 82a739d3823ff93bf2f797eabf3a8a326b10741c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018622"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602531"
 ---
 # <a name="key-security-concepts"></a>Główne pojęcia dotyczące zabezpieczeń
 Microsoft .NET Framework oferuje opartej na rolach zabezpieczeń, ułatwiających adresu z punktu widzenia bezpieczeństwa kod aplikacji mobilnych i świadczenia pomocy technicznej, umożliwiająca składników ustalić, użytkownicy są autoryzowane w celu.  

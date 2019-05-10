@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bc603d90ae4636ac50ab9cbabf7d176309498b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8ccfb0dee0eb6380d48498ba61f763eb777bded1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754948"
 ---
 # <a name="metadata-and-self-describing-components"></a>Składniki samoopisujące się i metadane
 

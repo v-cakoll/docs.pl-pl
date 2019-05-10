@@ -1,17 +1,21 @@
 ---
 title: czyszczenie polecenia DotNet
 description: Polecenia dotnet clean czyści bieżącego katalogu.
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 04/14/2019
+ms.openlocfilehash: 3e735c02c9be9b6f51a8cdf048c18eff34f838cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754125"
 ---
 # <a name="dotnet-clean"></a>Wyczyść DotNet
 
+**Ten temat dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 
@@ -20,7 +24,7 @@ ms.locfileid: "61665218"
 ## <a name="synopsis"></a>Streszczenie
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +34,9 @@ dotnet clean [-h|--help]
 
 ## <a name="arguments"></a>Argumenty
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-Projekt programu MSBuild do czyszczenia. Jeśli nie określono pliku projektu, MSBuild przeszukuje bieżącego katalogu roboczego dla pliku, który ma rozszerzenie pliku, który kończy się *proj* i używa tego pliku.
+Projektu programu MSBuild lub rozwiązanie do czyszczenia. Jeśli nie określono pliku projektu lub rozwiązania, MSBuild przeszukuje bieżącego katalogu roboczego dla pliku, który ma rozszerzenie pliku, który kończy się *proj* lub *sln*oraz korzysta z tego pliku.
 
 ## <a name="options"></a>Opcje
 
@@ -48,9 +52,13 @@ Projekt programu MSBuild do czyszczenia. Jeśli nie określono pliku projektu, M
 
   Drukuje krótki pomoc dotyczącą polecenia.
 
+* **`--interactive`**
+
+  Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji. Na przykład w celu ukończenia uwierzytelniania. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Katalog, w której są umieszczane dane wyjściowe kompilacji. Określ `-f|--framework <FRAMEWORK>` przełącznika z przełącznikiem katalogu danych wyjściowych, jeśli określona struktura podczas kompilowania projektu.
+  Katalog, który zawiera artefaktów kompilacji, aby wyczyścić. Określ `-f|--framework <FRAMEWORK>` przełącznika z przełącznikiem katalogu danych wyjściowych, jeśli określona struktura podczas kompilowania projektu.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +66,7 @@ Projekt programu MSBuild do czyszczenia. Jeśli nie określono pliku projektu, M
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone poziomy są q [uiet], m [najmniej], [ormal] n, d [egółowy] i diag [Diagnostyka].
+  Ustawia poziom szczegółowości MSBuild. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`. Wartość domyślna to `normal`.
 
 ## <a name="examples"></a>Przykłady
 

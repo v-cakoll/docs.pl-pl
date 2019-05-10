@@ -1,14 +1,14 @@
 ---
 title: C#Wyrażenia — Przewodnik po przykładzie C# języka
 description: bloki konstrukcyjne są wyrażenia, argumenty operacji i operatory C# języka
-ms.date: 11/06/2016
+ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706341"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753649"
 ---
 # <a name="expressions"></a>Wyrażenia
 
@@ -23,73 +23,11 @@ Gdy operand występuje między dwoma operatorami o tym samym priorytecie *asocja
 
 Pierwszeństwo i asocjacyjność mogą być kontrolowane za pomocą nawiasów. Na przykład `x + y * z` najpierw mnoży `y` przez `z` , a następnie dodaje wynik do `x`, ale `(x + y) * z` najpierw dodaje `x` i `y` i następnie wynik mnoży przez `z`.
 
-Większość operatorów może być *przeciążona*. Przeciążanie operatora umożliwia określanie definiowanych przez użytkownika implementacji operatorów dla operacji, w których jeden lub oba operandy mają typ struktury lub klasy zdefiniowanej przez użytkownika.
+Większość operatorów może być [ *przeciążone*](../language-reference/keywords/operator.md). Przeciążanie operatora umożliwia określanie definiowanych przez użytkownika implementacji operatorów dla operacji, w których jeden lub oba operandy mają typ struktury lub klasy zdefiniowanej przez użytkownika.
 
-Poniżej znajduje się podsumowanie operatorów języka C#. Kategorie operatorów wypisane są w kolejności pierwszeństwa od najwyższego do najniższego. Operatory w tej samej kategorii mają takie samo pierwszeństwo. Pod każdą z kategorii znajduje się lista wyrażeń znajdujących się w niej, wraz z opisem danego typu wyrażenia.
+C#udostępnia wiele operatorów przeprowadzić [arytmetyczne](../language-reference/operators/arithmetic-operators.md), [logiczne](../language-reference/operators/boolean-logical-operators.md), [bitowe- and -shift](../language-reference/operators/bitwise-and-shift-operators.md) operacji i [równości](../language-reference/operators/equality-operators.md) i [kolejności](../language-reference/operators/comparison-operators.md) porównania.
 
-* Podstawowy
-  - `x.m`: Dostęp do elementu członkowskiego
-  - `x(...)`: Wywołanie metody i delegata
-  - `x[...]`: Dostęp do tablicy i indeksatora
-  - `x++`: Postinkrementacja
-  - `x--`: Postdekrementacja
-  - `new T(...)`: Utworzenie obiektu i delegata
-  - `new T(...){...}`: Utworzenie obiektu za pomocą inicjatora
-  - `new {...}`:  Inicjator obiektu anonimowego
-  - `new T[...]`: Do utworzenia tablicy
-  - `typeof(T)`: Uzyskaj <xref:System.Type> dla obiektu `T`
-  - `checked(x)`: Obliczenie wyrażenia w kontekście sprawdzanym
-  - `unchecked(x)`: Obliczenie wyrażenia w kontekście niesprawdzanym
-  - `default(T)`: Uzyskanie wartości domyślnej typu `T`
-  - `delegate {...}`: Funkcja anonimowa (metoda anonimowa)
-* Jednoargumentowy
-  - `+x`: Tożsamość
-  - `-x`: Negacja
-  - `!x`: Negacja logiczna
-  - `~x`: Negacja bitowa
-  - `++x`: Preinkrementacja
-  - `--x`: Predekrementacja
-  - `(T)x`: Jawna konwersja `x` na typ `T`
-  - `await x`: Asynchronicznie poczekaj na ukończenie `x`
-* Mnożeniowy
-  - `x * y`: Mnożenie
-  - `x / y`: Dzielenie
-  - `x % y`: Reszta
-* Dodatku
-  - `x + y`: Dodawanie, łączenie ciągów, łączenie delegatów
-  - `x – y`: Odejmowanie, usuwanie delegata
-* Shift
-  - `x << y`: Przesunięcie w lewo
-  - `x >> y`: Przesunięcie w prawo
-* Relacyjne i badania typu
-  - `x < y`: Mniejsze niż
-  - `x > y`: Większe niż
-  - `x <= y`: Mniejsze niż lub równe
-  - `x >= y`: Większe niż lub równe
-  - `x is T`: Zwróć `true` Jeśli `x` jest `T`, `false` inaczej
-  - `x as T`: Zwróć `x` wpisanych w formie `T`, lub `null` Jeśli `x` nie jest `T`
-* Równości
-  - `x == y`: Równa się
-  - `x != y`: Nie równa się
-* Logicznego AND
-  - `x & y`: Liczba całkowita bitowe i logicznych logiczne AND
-* Logicznego XOR
-  - `x ^ y`: Bitowe XOR dla wartości całkowitych, logiczne XOR dla wartości binarnych
-* Logicznego OR
-  - `x | y`: Bitowe OR dla wartości całkowitych, logiczne OR dla wartości binarnych
-* Warunkowego AND
-  - `x && y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `false`
-* Warunkowego OR
-  - `x || y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `true`
-* Łączenia wartości null
-  - `x ?? y`: Daje w wyniku `y` Jeśli `x` ma wartość null, aby `x` inaczej
-* Warunkowe
-  - `x ? y : z`: Ocenia `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest `false`
-* Przypisania lub funkcji anonimowej
-  - `x = y`: Przypisanie
-  - `x op= y`: Złożone przypisanie; obsługiwane operatory to
-    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-  - `(T x) => y`: Funkcja anonimowa (wyrażenie lambda)
+Aby uzyskać pełną listę C# operatory uporządkowane według poziomu priorytetu, zobacz [ C# operatory](../language-reference/operators/index.md).
 
 > [!div class="step-by-step"]
 > [Poprzednie](types-and-variables.md)

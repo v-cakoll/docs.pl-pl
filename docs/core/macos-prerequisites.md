@@ -6,11 +6,11 @@ ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 12/14/2018
 ms.openlocfilehash: 3f5dce25ed03061d690432684975909d15bbad57
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63773851"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64752954"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Wymagania wstępne dla platformy .NET Core w systemie macOS
 

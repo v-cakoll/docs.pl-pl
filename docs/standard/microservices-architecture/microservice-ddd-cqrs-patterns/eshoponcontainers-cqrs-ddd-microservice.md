@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc8c27c25fb6d07207586eb65d5ac9cc543bcc1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6e39b0ce48e7caf755054eb558ab0c99b0ec76e8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818004"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755070"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Stosowanie podejścia CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
 
@@ -19,7 +19,7 @@ Kluczową cechą tych wzorców i należy koniecznie zwrócić uwagę, jest, że 
 
 W związku z tym można użyć różnych "Odczyt" model danych niż logiki transakcyjnej "zapisuje" model domeny, mimo że szeregowania mikrousług korzystają z tej samej bazy danych. Dlatego jest to uproszczone podejście CQRS.
 
-Z drugiej strony poleceń, które wyzwalają transakcji i aktualizacji danych, zmiany stanu w systemie. Za pomocą poleceń, musisz należy zachować ostrożność podczas dotyczących złożoności i ciągle zmieniające reguł biznesowych. To jest, gdy chcesz zastosować technik DDD, aby lepiej modelowanych systemu.
+Z drugiej strony poleceń, które wyzwalają transakcji i aktualizacji danych, zmiany stanu w systemie. Za pomocą poleceń, musisz należy zachować ostrożność podczas dotyczących złożoności i ciągle zmieniające reguł biznesowych. Jest to, gdzie chcesz zastosować technik DDD, aby lepiej modelowanych systemu.
 
 Nie można zastosować powszechnie wzorców DDD, w tym przewodniku. Wprowadzają ograniczenia dotyczące projektu. Te ograniczenia zapewniają korzyści, takich jak wyższej jakości, wraz z upływem czasu, szczególnie w przypadku polecenia i innego kodu, który modyfikuje stan systemu. Jednak te ograniczenia zwiększenia złożoności, z mniejszą liczbą korzyści, Odczyt i wykonywanie zapytań o dane.
 

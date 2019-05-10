@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908664"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654968"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Ogólne informacje o przyspieszeniach w PLINQ
 Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ do zapytań obiekt, wykonując delegatów zapytania równolegle na komputerach z wielordzeniowymi procesorami. Program PLINQ sprawdza się najlepiej, gdy przetwarzania każdego elementu w kolekcji źródłowej jest niezależne, bez udostępnionego stanu związane między poszczególnych obiektów delegowanych. Operacje takie są wspólne w składniku LINQ do obiektów i PLINQ i są często nazywane "*delightfully równoległe*" ponieważ one nadają się łatwo do planowania w wielu wątkach. Jednak nie wszystkie kwerendy składać się z samych operacji delightfully równoległych; w większości przypadków zapytanie obejmuje niektóre operatory, albo nie może być przeprowadzana równolegle lub który spowolnić wykonywanie równoległe. A nawet w przypadku zapytań, które są całkowicie delightfully równoległego, PLINQ musi nadal partycji źródła danych harmonogramu pracy nad wątków i zazwyczaj scalać wyniki po wykonaniu kwerendy. Wszystkie te operacje dodawania obliczeniową koszty przetwarzania równoległego; te koszty, dodawanie funkcji przetwarzania równoległego, są nazywane *obciążenie*. Aby uzyskać optymalną wydajność w zapytaniu PLINQ, celem jest maksymalne części, które są delightfully równoległe i zminimalizować części, które wymagają narzutu. Ten artykuł zawiera informacje, dzięki którym można tworzyć zapytania PLINQ, które są najbardziej efektywne podczas nadal reaguje poprawne wyniki.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63773866"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755890"
 ---
 # <a name="extern-c-reference"></a>extern (odwołanie w C#)
 

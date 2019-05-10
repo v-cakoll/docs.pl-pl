@@ -3,12 +3,12 @@ title: Zapis w bezpieczny i skuteczny C# kodu
 description: Najnowsze ulepszenia C# języka umożliwiają pisanie weryfikowalny kod bezpieczny, że wydajność była poprzednio skojarzona z niebezpieczny kod.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753888"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Zapis w bezpieczny i skuteczny C# kodu
 
@@ -180,6 +180,8 @@ Zamiast tego, jeśli obliczeń odległość używa struktury niezmienne `Readonl
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 Kompilator generuje kod bardziej efektywne, gdy wywołujesz członkowie `readonly struct`: `this` Odwołanie, zamiast kopii receiver, jest zawsze `in` parametr przekazywany przez odwołanie do elementu członkowskiego. Tego rodzaju optymalizacji zapisywanie, kopiowanie, gdy używasz `readonly struct` jako `in` argumentu.
+
+Nie mają być przekazywane typem wartościowym jako `in` argumentu. <xref:System.Nullable%601> Typ nie został zadeklarowany jako struktury tylko do odczytu. Że oznacza, że kompilator powinien wygenerować obrony kopie na potrzeby wszystkich argumentów typu dopuszczającego wartość null, wartość przekazywana do metody przy użyciu `in` modyfikatora w deklaracji parametru.
 
 Możesz zobaczyć program przykładu, który ilustruje różnice wydajności przy użyciu [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) w naszym [repozytorium przykładów](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) w witrynie GitHub. Porównuje się sukcesem, struktura mutable według wartości i według odwołania przekazywanie struktury niezmienne według wartości i według odwołania. Korzystanie z niezmiennego struktury i — dostęp próbny przez odwołanie jest najszybszy.
 

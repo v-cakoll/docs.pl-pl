@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973531"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755202"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -27,9 +27,9 @@ Różne implementacje platformy .NET docelowych określonych wersji programu .NE
 
 ## <a name="net-implementation-support"></a>Obsługa wdrażania platformy .NET
 
-W poniższej tabeli wymieniono wersje minimalną platformy, które obsługują każdej wersji .NET Standard.
+W poniższej tabeli wymieniono **minimalne** wersje platformy, które obsługują każdej wersji .NET Standard. Oznacza to, że nowsze wersje uwzględnione na liście platformy obsługują także odpowiedniej wersji .NET Standard. Na przykład program .NET Core 2.2 obsługuje .NET Standard 2.0 i wcześniejszych.
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 Aby znaleźć najnowsza wersja programu .NET Standard, możesz wybrać docelową, wykonaj następujące czynności:
 

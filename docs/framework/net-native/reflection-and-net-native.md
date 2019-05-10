@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5cb2d983427c51d8d96de7b73c2dca8f7877425e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866969"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651870"
 ---
 # <a name="reflection-and-net-native"></a>Odbicie i architektura .NET Native
 W .NET Framework zarządzania obsługuje programowanie metaprogramowanie przez interfejs API odbicia. Odbicie umożliwia sprawdzanie obiektów w aplikacji, wywoływanie metod na obiektach odnajdywanych za pomocą inspekcji, generowanie nowych typów w czasie wykonywania i obsługuje wiele scenariuszy kod dynamicznych. Obsługuje ona również serializacji i deserializacji, co pozwala wartości pól obiektu może być utrwalona i później ją przywrócono. Te wszystkie scenariusze wymagają kompilatora .NET Framework just-in-time (JIT) można wygenerować kodu natywnego, w oparciu o dostępne metadane.  

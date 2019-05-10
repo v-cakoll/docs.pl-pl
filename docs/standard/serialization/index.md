@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: e05d358452a247b0d071f78d19c0bf721502899a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 13ba804e76a64c6a0b32ba5a203258e76c209ff4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018037"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644913"
 ---
 # <a name="serialization-in-net"></a>Serializacja w .NET
 Serializacja jest proces konwersji stan obiektu do formularza, które mogą być utrwalone lub transportowane. Uzupełnienia do serializacji jest deserializacji, który konwertuje strumienia na obiekt. Razem te procesy umożliwiają danych można łatwo przechowywane i przekazywane.  

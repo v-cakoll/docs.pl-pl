@@ -2,12 +2,12 @@
 title: Konfigurowanie walidacji działania
 ms.date: 03/30/2017
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
-ms.openlocfilehash: 65928de1dc8b8d9914648463a136790c7978f53c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c971b56e269fbb330bd9ad0a551a9fb9ca01196
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774182"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655115"
 ---
 # <a name="configuring-activity-validation"></a>Konfigurowanie walidacji działania
 Działanie sprawdzania poprawności umożliwia działanie autorzy i użytkowników zidentyfikować i raportowania błędów w konfiguracji działanie przed jej wykonanie. Windows Workflow Foundation (WF) udostępnia następujące trzy typy walidacji działania:  

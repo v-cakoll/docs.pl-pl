@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3177ae53d8b932a52dccf11b12d44fd07ec1c4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61871465"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648483"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Środki zaradcze: Nowy kompilator JIT 64-bitowych
 Począwszy od programu .NET Framework 4.6, środowisko uruchomieniowe zawiera nowe 64-bitowego kompilatora JIT dla kompilacji just in time. Ta zmiana nie ma wpływu na kompilacji z 32-bitowego kompilatora JIT.  

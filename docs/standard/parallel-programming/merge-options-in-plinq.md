@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06f772b8d26ec87519efdaae7b621f3fd2d321c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946955"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647726"
 ---
 # <a name="merge-options-in-plinq"></a>Opcje scalania w PLINQ
 Gdy zapytanie jest wykonywany jako równoległego, PLINQ partycje sekwencji źródłowej wiele wątków może pracować na różnych częściach współbieżnie, zazwyczaj w oddzielnych wątkach. Jeśli wyniki mają być używane w jednym wątku, na przykład w `foreach` (`For Each` w języku Visual Basic) w pętli, a następnie wyniki z każdego wątku muszą być scalone jednej sekwencji. Rodzaj scalania, który wykonuje PLINQ jest zależna od operatorów, które są obecne w zapytaniu. Na przykład operatory, które nakładają nowe zamówienie na wynikach musi buforu wszystkie elementy ze wszystkich wątków. Z punktu widzenia zużywającym wątku (jest to również w przypadku użytkowników aplikacji) pełni buforowane zapytanie może działać zauważalne okres czasu, tworzy jej pierwszego wyniku. Inne operatory domyślnie są częściowo buforowane; dają one ich wyniki w partiach. Jeden operator <xref:System.Linq.ParallelEnumerable.ForAll%2A> nie jest buforowana domyślnie. Natychmiast daje wszystkie elementy ze wszystkich wątków.  

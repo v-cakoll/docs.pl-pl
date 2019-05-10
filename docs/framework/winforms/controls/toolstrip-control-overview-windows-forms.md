@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 75df256f852b45af4bc6cf519c13ccd62ae1d689
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009529"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654770"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.ToolStrip> kontrolki i ich skojarzonych klas zapewniają wspólną platformę łączenie elementów interfejsu użytkownika w paski narzędzi, paski stanu i menu. <xref:System.Windows.Forms.ToolStrip> kontrolki oferują bogate środowisko czasu projektowania, która obejmuje aktywacji w miejscu i edytowanie, układu niestandardowego i rafting, który jest możliwość udostępniania poziomej lub pionowej przestrzeni pasków narzędzi.  

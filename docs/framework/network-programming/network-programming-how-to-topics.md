@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: c165470cd00ac39a45464ec5a534eb0eea531be2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e4c786467a8fd30f64431001da6d239b654a47af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647292"
 ---
 # <a name="network-programming-how-to-topics"></a>Programowanie dla sieci — tematy z instrukcjami
 Poniższa lista zawiera łącza do tematów instrukcje w dokumentacji koncepcyjnej programowanie dla sieci.  

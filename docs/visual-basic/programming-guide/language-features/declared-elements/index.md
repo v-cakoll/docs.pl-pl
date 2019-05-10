@@ -2,12 +2,12 @@
 title: Zadeklarowane elementy w Visual Basic
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: cafc280bb4dbee388717ead4f748d66ea5d3ce72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639175"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Zadeklarowane elementy w Visual Basic
 A *zadeklarowany element* jest elementem programowania, która jest zdefiniowana w instrukcji deklaracji. Zadeklarowane elementy zawierają zmienne, stałe, wyliczenia, klasy, struktury, moduły, interfejsy, procedur, parametry procedury, funkcja zwraca, odwołania zewnętrzną procedurę, operatory, właściwości, zdarzeń i delegatów.  

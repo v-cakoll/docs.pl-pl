@@ -2,12 +2,12 @@
 title: Rozszerzalność hosta usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4f1f67feb728cb2236f84c88ff223058d34990dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929795"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648366"
 ---
 # <a name="workflow-service-host-extensibility"></a>Rozszerzalność hosta usługi przepływu pracy
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] udostępnia <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy do hostowania usług przepływu pracy. Ta klasa jest używana, gdy samodzielnie obsługujesz usługi przepływu pracy w zarządzanej aplikacji lub usługi Windows. Ta klasa jest również używana w przypadku hostowania usługi przepływu pracy przy użyciu usług Internet Information Services (IIS) lub Windows Process Activation Service (WAS). <xref:System.ServiceModel.Activities.WorkflowServiceHost> Klasa udostępnia punkty rozszerzenia, które umożliwiają dodanie rozszerzenia niestandardowe, zmienić zachowanie bezczynności, a następnie Hostuj przepływy pracy bez usługi (przepływy pracy, które nie korzystają z działań dotyczących komunikatów).  

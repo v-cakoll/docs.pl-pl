@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 01ab11d8e3c1d2c84514770816ca9c9eab0835b6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053109"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649191"
 ---
 # <a name="table-overview"></a>Przegląd Tabela
 <xref:System.Windows.Documents.Table> jest element poziomu bloku, który obsługuje oparte na siatce prezentacji zawartości dokumentu przepływu. Elastyczność tego elementu sprawia, że bardzo przydatne, ale także stanowi bardziej skomplikowane, aby zrozumieć i zastosować poprawnie.  

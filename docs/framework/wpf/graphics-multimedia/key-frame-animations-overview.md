@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5c0e574ea494bedc1c359d38cda0d17bbb03fcdf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785817"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645344"
 ---
 # <a name="key-frame-animations-overview"></a>Przegląd Animacja kluczowych klatek
 W tym temacie przedstawiono Animacja kluczowych klatek. Animacje kluczowych klatek — umożliwiają animowanie za pomocą więcej niż dwóch wartości docelowych i kontrolować metodę interpolacji animacji.  

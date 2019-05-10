@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b5bd821e328d2d25d499e85b130e54a794986ac0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048052"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627012"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfejs dostawcy obsługi zabezpieczeń (SSPI) obsługuje zabezpieczenia procesów. Po wystąpieniu błędów zabezpieczeń w warstwie interfejsu SSPI, są one udostępniane przez Windows Communication Foundation (WCF). Ten temat zawiera framework i zestaw pytań, aby łatwiej diagnozować błędy.  

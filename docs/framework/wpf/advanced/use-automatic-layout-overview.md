@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098783"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620887"
 ---
 # <a name="use-automatic-layout-overview"></a>Przegląd Użyj automatycznego układu
 W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji przy użyciu możliwych do zlokalizowania [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. W przeszłości lokalizacja interfejs użytkownika był czasochłonny proces. Każdego z języków interfejsu użytkownika została dostosowana do wymagana korekta poszczególne piksele. Dzisiaj z właściwy projekt i po prawej stronie standardy, kodowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] można skonstruować tak, aby lokalizatorzy mają mniejsza Zmienianie rozmiaru i położenia celu. Podejścia do pisania aplikacji, które można łatwiej o zmienionym rozmiarze i zmienionym nosi nazwę automatycznego układu oraz można osiągnąć za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projektowania aplikacji.  
@@ -19,15 +19,15 @@ W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania
 ## <a name="advantages-of-using-automatic-layout"></a>Korzyści wynikające z używania automatycznego układu  
  Ponieważ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system prezentacji jest wydajny i elastyczny, daje możliwość elementów układu w aplikacji, którą można dostosować zgodnie z wymaganiami w różnych językach. Poniższa lista wskazuje niektóre korzyści wynikające z układem automatycznym.  
 
--   Interfejs użytkownika wyświetla się także w dowolnym języku.  
+- Interfejs użytkownika wyświetla się także w dowolnym języku.  
 
--   Ogranicza potrzebę ponownie dopasować położenie i rozmiar kontrolki po jest przetłumaczony tekst.  
+- Ogranicza potrzebę ponownie dopasować położenie i rozmiar kontrolki po jest przetłumaczony tekst.  
   
--   Ogranicza potrzebę Dopasuj rozmiar okna.  
+- Ogranicza potrzebę Dopasuj rozmiar okna.  
 
--   Układ interfejsu użytkownika poprawnie renderowany w dowolnym języku.  
+- Układ interfejsu użytkownika poprawnie renderowany w dowolnym języku.  
 
--   Lokalizacja można zmniejszyć do punktu, jest on nieco więcej niż ciąg tłumaczenia.  
+- Lokalizacja można zmniejszyć do punktu, jest on nieco więcej niż ciąg tłumaczenia.  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>Automatyczny układ i kontrolek  

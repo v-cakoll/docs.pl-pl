@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856547"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626970"
 ---
 # <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
 Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na trzy główne obszary funkcjonalne: transfer zabezpieczeń, kontroli dostępu i inspekcji. Bezpieczeństwie transferu zapewnia integralność, poufności i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: zabezpieczenia, zabezpieczenia komunikatów transportu lub `TransportWithMessageCredential`.  
@@ -42,7 +42,7 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na tr
 |----------|-----------------|  
 |Brak|Bez zabezpieczeń znajduje się w warstwie transportowej lub warstwie wiadomości. Brak wstępnie zdefiniowanych powiązań Użyj tego trybu domyślnie z wyjątkiem [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element lub, w przypadku korzystania z kodu, <xref:System.ServiceModel.BasicHttpBinding> klasy.|  
 |Transport|Używa bezpiecznym transportem, taki jak HTTPS integralności, poufności i wzajemnego uwierzytelniania.|  
-|Komunikat|Używa zabezpieczeń komunikatu protokołu SOAP integralności, poufność i wzajemnego uwierzytelniania. Komunikaty protokołu SOAP są zabezpieczone zgodnie ze standardami WS-Security.|  
+|Message|Używa zabezpieczeń komunikatu protokołu SOAP integralności, poufność i wzajemnego uwierzytelniania. Komunikaty protokołu SOAP są zabezpieczone zgodnie ze standardami WS-Security.|  
 |W trybie mieszanym|Zastosowań transportu zabezpieczeń uwierzytelniania integralności, poufności i serwera. Używa komunikatu zabezpieczenia (WS-Security i innych standardów) do uwierzytelniania klientów.<br /><br /> (Jest to wyliczenie, w tym trybie `TransportWithMessageCredential`.)|  
 |Oba|Wykonuje ochrony i uwierzytelnianie na obu poziomach. Ten tryb jest dostępna tylko w [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) elementu.|  
   

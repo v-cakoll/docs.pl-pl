@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9bd2af8cd74c32bcda3a6105f39af470f961289d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625717"
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 <xref:System.Windows.Controls.Panel> elementy są składniki, które kontrolują renderowanie elementów — ich rozmiar i wymiarów, ich pozycji i rozmieszczenie ich zawartość elementu podrzędnego. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zawiera szereg wstępnie zdefiniowanych <xref:System.Windows.Controls.Panel> elementów, a także możliwość utworzenia niestandardowych <xref:System.Windows.Controls.Panel> elementów.  
@@ -64,10 +64,10 @@ ms.locfileid: "62051029"
   
 |Nazwa elementu|Panel interfejsu użytkownika?|Opis|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|Tak|Definiuje obszar, w którym możesz jawnie pozycjonować elementy podrzędne współrzędnymi względem <xref:System.Windows.Controls.Canvas> obszaru.|  
+|<xref:System.Windows.Controls.Canvas>|Yes|Definiuje obszar, w którym możesz jawnie pozycjonować elementy podrzędne współrzędnymi względem <xref:System.Windows.Controls.Canvas> obszaru.|  
 |<xref:System.Windows.Controls.DockPanel>|Tak|Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub pionie, względem siebie.|  
-|<xref:System.Windows.Controls.Grid>|Tak|Definiuje elastyczny obszar siatki składający się z kolumnami i wierszami. Elementy podrzędne <xref:System.Windows.Controls.Grid> umieszczony dokładnie przy użyciu <xref:System.Windows.FrameworkElement.Margin%2A> właściwości.|  
-|<xref:System.Windows.Controls.StackPanel>|Yes|Rozmieszcza elementy podrzędne w jednej linii, która może być zorientowana poziomo czy pionowo.|  
+|<xref:System.Windows.Controls.Grid>|Yes|Definiuje elastyczny obszar siatki składający się z kolumnami i wierszami. Elementy podrzędne <xref:System.Windows.Controls.Grid> umieszczony dokładnie przy użyciu <xref:System.Windows.FrameworkElement.Margin%2A> właściwości.|  
+|<xref:System.Windows.Controls.StackPanel>|Tak|Rozmieszcza elementy podrzędne w jednej linii, która może być zorientowana poziomo czy pionowo.|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|Nie|Obsługuje układ przycisków karty w <xref:System.Windows.Controls.TabControl>.|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Nie|Organizuje zawartości w ramach <xref:System.Windows.Controls.ToolBar> kontroli.|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|Nie|<xref:System.Windows.Controls.Primitives.UniformGrid> Służy do Rozmieść elementy podrzędne w siatce, ze wszystkimi rozmiarami równy komórki.|  

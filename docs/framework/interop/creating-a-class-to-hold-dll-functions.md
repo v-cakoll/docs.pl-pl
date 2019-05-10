@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643585"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626412"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Tworzenie klasy utrzymującej funkcje DLL
 Zawijanie często używanych funkcji DLL w klasie zarządzanej jest efektywne podejście do hermetyzacji funkcje platformy. Chociaż nie jest wymagane, aby to zrobić w każdym przypadku, zapewniając otoka klasy jest wygodne, ponieważ Definiowanie funkcji DLL może być skomplikowane i podatne na błędy. Jeśli programujesz w języku Visual Basic lub C#, należy zadeklarować funkcji DLL w obrębie klasy lub w module języka Visual Basic.  

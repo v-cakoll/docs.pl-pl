@@ -2,12 +2,12 @@
 title: Przechowywanie wersji odnajdywania
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
-ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3f90fc5183e974b9045c156e0ae74099abfbc41a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856651"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626953"
 ---
 # <a name="discovery-versioning"></a>Przechowywanie wersji odnajdywania
 Ten temat zawiera krótkie omówienie wdrożenia niektóre nowe funkcje odnajdywania. Daje ona również przegląd informacji na temat sposobu wybierz wersję odnajdywania do użycia.  

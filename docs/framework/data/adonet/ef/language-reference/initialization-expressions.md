@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 6f6f27eaecd760e565eeb98a286252981d6df0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 78bafcad0a0f34c74ea58f107621ad145c1b405b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61615028"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631530"
 ---
 # <a name="initialization-expressions"></a>Wyrażenia inicjowania
 Wyrażenia inicjowania inicjuje nowy obiekt. Większość wyrażenia inicjowania są obsługiwane, w tym najbardziej nowe C# 3.0 i wyrażenia inicjowania 9.0 Visual Basic. Następujące typy można zainicjowany i zwrócony przez LINQ zapytanie jednostki:  

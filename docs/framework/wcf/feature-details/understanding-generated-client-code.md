@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dedfa55cb7be7eed396c897dedc6bf375c34436e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626255"
 ---
 # <a name="understanding-generated-client-code"></a>Opis wygenerowanego kodu klienta
 [Narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generuje kod klienta i pliku konfiguracji aplikacji klienta do użycia podczas tworzenia aplikacji klienckich. Ten temat zawiera przewodnik po przykładach wygenerowanego kodu dla scenariuszy umowy usług w warstwie standardowa. Aby uzyskać więcej informacji dotyczących tworzenia aplikacji klienckiej, za pomocą wygenerowanego kodu, zobacz [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  

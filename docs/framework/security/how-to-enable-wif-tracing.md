@@ -3,12 +3,12 @@ title: 'Instrukcje: Włączanie śledzenia programu WIF'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 72e22fb5e0358c5f216bfe59d16ad030ce02e0eb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940455"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626058"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Instrukcje: Włączanie śledzenia programu WIF
 ## <a name="applies-to"></a>Dotyczy:  

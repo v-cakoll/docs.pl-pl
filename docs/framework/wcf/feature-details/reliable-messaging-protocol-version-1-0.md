@@ -2,12 +2,12 @@
 title: Reliable Messaging Protocol w wersji 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 02a0815f62999c27507ed5e1610f090e944c135a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 857bbbf9ffa1311c38cfc007e0cdc6bde06d6284
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946708"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617577"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Reliable Messaging Protocol w wersji 1.0
 W tym temacie omówiono szczegóły dotyczące implementacji usług Windows Communication Foundation (WCF) dla protokołu WS-Reliable Messaging protocol February 2005 (w wersji 1.0) niezbędne do współpracy przy użyciu protokołu HTTP. Usługi WCF następuje specyfikacji WS-Reliable Messaging z ograniczeniami i wyjaśnienia szczegółowo opisane w tym temacie. Należy pamiętać, protokół WS-ReliableMessaging w wersji 1.0 jest implementowany, począwszy od [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  

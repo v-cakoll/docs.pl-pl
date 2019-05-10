@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622704"
 ---
 # <a name="garbage-collection-notifications"></a>Powiadomienia dotyczące odzyskiwania pamięci
 Istnieją sytuacje, w których pełne wyrzucanie elementów bezużytecznych (czyli kolekcji generacji 2) przez środowisko uruchomieniowe języka wspólnego może niekorzystnie wpłynąć na wydajność. Może to być problem szczególnie z serwerów, które przetwarzają duże ilości żądań; w tym przypadku długo wyrzucania elementów bezużytecznych może powodować limit czasu żądania. Aby zapobiec pełnego występowaniu krytyczny okres, możesz otrzymać, pełne odśmiecanie zbliża się do, a następnie podjęcia działania, aby przekierować obciążenie do innego wystąpienia serwera. Można również wywołać kolekcję użytkownika, pod warunkiem, że bieżące wystąpienie serwera nie jest konieczne przetwarzanie żądań.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868982"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624697"
 ---
 # <a name="apis-that-rely-on-reflection"></a>Interfejsy API, które działają na podstawie odbicia
 W niektórych przypadkach użycie odbicia w kodzie nie jest oczywisty, a więc [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi nie przechowują metadane, które są potrzebne w czasie wykonywania. W tym temacie omówiono niektóre typowe interfejsów API lub typowe wzorce programowania, które nie są traktowane jako część interfejs API odbicia, ale opierają się na podstawie odbicia, aby zostać pomyślnie uruchomiony. Jeśli będziesz ich używać w kodzie źródłowym, można dodać informacji o nich dyrektyw środowiska uruchomieniowego (. rd.xml) plików nie zgłaszają wywołań do tych interfejsów API [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątku lub innych wyjątków w czasie wykonywania.  

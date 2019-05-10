@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698892"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634755"
 ---
 # <a name="anchors-in-regular-expressions"></a>Zakotwiczenia w wyrażeniach regularnych
 <a name="top"></a> Kotwice lub atomic asercjami o zerowej szerokości, należy określić pozycja w ciągu, w którym dopasowanie musi wystąpić. Korzystając z elementu zakotwiczenia w wyrażeniu wyszukiwania, aparat wyrażeń regularnych nie przechodzi ciągu lub używa znaków; Wyszukuje dopasowania w określonej pozycji. Na przykład `^` Określa, że dopasowanie musi rozpoczynać się na początku wiersza lub ciągu. W związku z tym, wyrażenie regularne `^http:` pasuje do "http:" tylko wtedy, gdy wystąpi go na początku wiersza. W poniższej tabeli wymieniono kotwic obsługiwane przez wyrażenia regularne w .NET.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967040"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626853"
 ---
 # <a name="data-binding-and-windows-forms"></a>Wiązanie danych i formularze systemu Windows
 W formularzach Windows Forms można powiązać źródła danych nie jest po prostu tradycyjnych, ale także do niemal wszystkich struktury, która zawiera dane. Możesz powiązać tablicę wartości, które obliczania w czasie wykonywania, Odczyt z pliku lub pochodzić od wartości innych kontrolek.  

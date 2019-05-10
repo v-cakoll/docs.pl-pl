@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 59a25eb9b854f0f303d8b1d97db40406c2818df8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951713"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626278"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu
 Kod biblioteki musi wywoływać kod niezarządzany (na przykład kodu natywnego interfejsów API, taką jak system Win32). Ponieważ oznacza to, że zewnętrzne obwodu zabezpieczeń dla kodu zarządzanego, właściwym Uwaga jest wymagana. Jeśli swój kod neutralnym poziomie bezpieczeństwa, zarówno kod, jak i wszelki kod, który ją wywołuje musi mieć niezarządzanych uprawnień kodu (<xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> określono flagę).  

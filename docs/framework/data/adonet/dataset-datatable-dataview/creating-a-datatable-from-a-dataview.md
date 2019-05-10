@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c70dd0401ea518613a2b51f047de13f6c7270152
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034401"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621188"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Tworzenie elementu DataTable przy użyciu elementu DataView
 Gdy pobierane są dane ze źródła danych i wypełnione <xref:System.Data.DataTable> z danymi, możesz chcieć sortowanie, filtrowanie lub inny sposób ograniczyć zwracanych danych bez pobierania go ponownie. <xref:System.Data.DataView> Klasy sprawia, że jest to możliwe. Ponadto, jeśli musisz utworzyć nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView>, możesz użyć <xref:System.Data.DataView.ToTable%2A> metodę, aby skopiować wszystkie wiersze i kolumny lub podzbiór danych do nowego <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Metoda zapewnia przeciążeń:  

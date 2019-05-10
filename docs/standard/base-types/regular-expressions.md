@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33aaf09e284db5c818eb0ff3917533cce5e70ad7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811660"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620697"
 ---
 # <a name="net-regular-expressions"></a>Wyrażeń regularnych programu .NET
 Wyrażenia regularne umożliwiają zaawansowane, elastyczne i wydajne przetwarzanie tekstu. Rozbudowane notacji dopasowania do wzorca wyrażenia regularnego umożliwia do szybkiego analizowania dużych ilości tekstu, aby znaleźć wzory znaków specyficznych; Aby sprawdzić poprawność tekstu, aby upewnić się, czy jest on zgodny wstępnie zdefiniowanych wzorca (np. adres e-mail); Aby wyodrębnić, Edytuj, zastępowania lub usuwania podciągów tekstu; i dodawać wyodrębnione ciągi do kolekcji, aby wygenerować raport. Dla wielu aplikacji, które zajmują się ciągów lub że analizy dużych bloków tekstu, wyrażenia regularne są niezbędne narzędzia.  

@@ -2,12 +2,12 @@
 title: Walidacja klienta
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 9659c262377af76294c52d1be97146923bc91b71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a8cbb077488c222798bfd4b7f88f2de63f5e422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651025"
 ---
 # <a name="client-validation"></a>Walidacja klienta
 Usługi często Publikowanie metadanych, aby włączyć automatyczne generowanie i konfigurowanie typów serwera proxy klienta. Jeśli usługa nie jest zaufany, aplikacje klienckie należy zweryfikować, że metadane odpowiada aplikacji klienta zasady dotyczące zabezpieczeń, transakcje, typ kontraktu usługi i tak dalej. W poniższym przykładzie pokazano, jak napisać klienta zachowanie punktu końcowego, która weryfikuje punktu końcowego usługi, aby upewnić się, że punkt końcowy usługi jest bezpieczny w użyciu.  

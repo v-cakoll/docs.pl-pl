@@ -14,12 +14,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1d62bbac8550a5e632760e196463285e4c9a14ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651760"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Instrukcje: pobieranie pliku w tle
 Pobieranie pliku jest typowym zadaniem i jest często przydatne do wykonania tej operacji potencjalnie czasochłonne w oddzielnym wątku. Użyj <xref:System.ComponentModel.BackgroundWorker> składnika, aby wykonać to zadanie za pomocą bardzo niewielkiej ilości kodu.  

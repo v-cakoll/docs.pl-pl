@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876281"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645878"
 ---
 # <a name="sql-server-express-user-instances"></a>Wystąpienia użytkownika programu SQL Server Express
 Microsoft SQL Server Express Edition, (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, który jest dostępny tylko w przypadku używania dostawcy danych .NET Framework dla programu SQL Server (`SqlClient`). Wystąpienia użytkownika jest osobnego wystąpienia programu SQL Server Express aparatu bazy danych generowanych przez wystąpienie nadrzędne. Wystąpienia użytkownika umożliwiają użytkownikom niebędącym administratorami na swoich komputerach lokalnych do dołączenia i nawiązać połączenie z SQL Server Express bazy danych. Każde wystąpienie jest uruchamiany w kontekście zabezpieczeń użytkownika, na podstawie jednego wystąpienia na użytkownika.  

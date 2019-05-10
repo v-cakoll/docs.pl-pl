@@ -4,12 +4,12 @@ description: Dowiedz się więcej "wewnętrzną pętlę" przepływu pracy dla op
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050569"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664381"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
 
@@ -21,11 +21,11 @@ Przed wyzwoleniem zewnętrzna Pętla przepływu pracy, obejmujące cały DevOps 
 
 Kontener lub wystąpienia obrazu platformy Docker będzie zawierać tych składników:
 
--   Wybór systemu operacyjnego (na przykład dystrybucji systemu Linux lub Windows)
+- Wybór systemu operacyjnego (na przykład dystrybucji systemu Linux lub Windows)
 
 - Pliki dodawane przez dewelopera (na przykład pliki binarne aplikacji)
 
--   Konfiguracja (na przykład ustawienia środowiska i zależności)
+- Konfiguracja (na przykład ustawienia środowiska i zależności)
 
 - Instrukcje dotyczące jakie procesy do uruchomione przez platformy Docker
 
@@ -115,7 +115,7 @@ Poniżej przedstawiono przykładowy plik DockerFile dla kontenera platformy .NET
 
 ```Dockerfile
 # Base Docker image to use  
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-W tym przypadku obraz, który jest oparty na oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows) dla każdego wiersza w wersji 2.1 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Aby uzyskać więcej informacji na ten temat, zobacz [obrazu platformy Docker programu ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) strony i [obrazu platformy Docker programu .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) strony).
+W tym przypadku obraz, który jest oparty na wersji 2.2 oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows), zgodnie z wiersza `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Aby uzyskać więcej informacji na ten temat, zobacz [obrazu platformy Docker programu ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) strony i [obrazu platformy Docker programu .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) strony).
 
 W pliku DockerFile można również poinstruować platformy Docker do nasłuchiwania na portach TCP, którego będziesz używać w czasie wykonywania (np. port 80).
 

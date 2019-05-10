@@ -6,12 +6,12 @@ helpviewer_keywords:
 - toolbars [WPF]
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
-ms.openlocfilehash: 580b56ebb47aa7bd50da0a966ccf60f7ea9fb2a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 90ff02747d762b5853a1f60eb99be574503e27f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699191"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640841"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>Instrukcje: Kontrolki stylu na pasku ToolBar
 <xref:System.Windows.Controls.ToolBar> Definiuje <xref:System.Windows.ResourceKey> obiekty do określania stylu kontrolki w ramach <xref:System.Windows.Controls.ToolBar>.  Do określania stylu kontrolki w <xref:System.Windows.Controls.ToolBar>ustaw `x:key` atrybut stylu do <xref:System.Windows.ResourceKey> zdefiniowane w <xref:System.Windows.Controls.ToolBar>.  

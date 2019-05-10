@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a9d8c02a05723814d074ff91c847471287588618
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746631"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642976"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Instrukcje: kontrolowanie punktu wstawiania w kontrolce TextBox formularzy systemu Windows
 Gdy formularze Windows <xref:System.Windows.Forms.TextBox> formant najpierw otrzymuje fokus, wstawiania domyślną w polu tekstowym znajduje się po lewej stronie wszelki istniejący tekst. Użytkownik może przenieść punkt wstawiania, za pomocą klawiatury lub myszy. Jeśli pole tekstowe traci, a następnie ponownie otrzymuje fokus, kursor będzie wszędzie tam, gdzie użytkownik ostatniego umieszczenia go.  

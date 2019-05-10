@@ -2,12 +2,12 @@
 title: Omówienie odnajdywania WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 80cecec2143d78d9dee13e9071b6ebb5a4b1bdb0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784257"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662508"
 ---
 # <a name="wcf-discovery-overview"></a>Omówienie odnajdywania WCF
 API odnajdywania udostępniają jednolity model programowania do opublikowania dynamiczne i odnajdywania usług sieci Web przy użyciu protokołu WS Discovery. Te interfejsy API umożliwiają services, aby publikować z nimi i klientów w celu znalezienia opublikowanych usług. Gdy usługa jest wykrywalne, usługa ma możliwość wysyłania komunikatów Anons, a także nasłuchiwania i odpowiadania na żądania odnajdywania. Wykrywalny usług można wysłać wiadomości powitania poinformować ich przybycia w sieci i Bye komunikaty, aby poinformować o ich wyjścia z sieci. Aby znaleźć usługi, klienci wysyłają `Probe` żądanie, które zawiera określone kryteria, takich jak typ kontraktu usługi, słowa kluczowe i zakresu w sieci. Usługi odbierać `Probe` żądania i określić, czy spełniają kryteria. Jeśli usługa jest zgodny, odpowie, wysyłając `ProbeMatch` wiadomość do klienta przy użyciu informacji niezbędnych do kontaktu z usługą. Klienci mogą również wysyłać `Resolve` żądań, które pozwalają znaleźć usług, które uległy zmianie adresu punktu końcowego. Zgodnych usług odpowiadanie na `Resolve` żądań, wysyłając `ResolveMatch` wiadomość do klienta.  

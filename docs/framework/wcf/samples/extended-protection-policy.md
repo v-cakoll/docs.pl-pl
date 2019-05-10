@@ -2,12 +2,12 @@
 title: Zasady ochrony rozszerzonej
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c2a79798569e308c37bd66bf0bdf8dee0cfa6951
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650058"
 ---
 # <a name="extended-protection-policy"></a>Zasady ochrony rozszerzonej
 Rozszerzona ochrona jest inicjatywy zabezpieczeń, ochrony przed atakami typu man-in--middle (MITM). Ataki MITM to zagrożenie bezpieczeństwa, w którym MITM przyjmuje poświadczeń klienta i przekazuje je do serwera.  

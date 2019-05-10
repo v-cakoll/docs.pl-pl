@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032022"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655486"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Przegląd Dwukierunkowe funkcje WPF
 W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma wiele funkcji, które obsługują szybkiego opracowywania zawartości dwukierunkowy, na przykład mieszanej po lewej stronie kliknij prawym przyciskiem myszy i kliknij prawym przyciskiem myszy, aby left danych w tym samym dokumencie. W tym samym czasie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tworzy doskonałe środowisko dla użytkowników, którzy potrzebują dwukierunkowe funkcje, takie jak arabski i hebrajski wypowiedzi użytkowników.  

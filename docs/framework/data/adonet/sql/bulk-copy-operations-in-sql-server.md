@@ -2,12 +2,12 @@
 title: Operacje kopiowania masowego w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878647"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649548"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operacje kopiowania masowego w programie SQL Server
 Microsoft SQL Server zawiera popularne narzędzia wiersza polecenia o nazwie **bcp** dla szybko zbiorcze kopiowanie dużych plików do tabel lub widoków w bazach danych programu SQL Server. <xref:System.Data.SqlClient.SqlBulkCopy> Klasy umożliwia pisanie kodu zarządzanego rozwiązania, które zapewniają podobne funkcje. Istnieją inne sposoby, aby załadować dane do tabeli programu SQL Server (na przykład instrukcji INSERT), ale <xref:System.Data.SqlClient.SqlBulkCopy> oferuje zalety istotnie poprawiającą wydajność, nad nimi.  

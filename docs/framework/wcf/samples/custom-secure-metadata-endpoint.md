@@ -2,12 +2,12 @@
 title: Niestandardowy bezpieczny punkt końcowy metadanych
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0b2a09cb4e64d3f921a3fb633aef7cd171b6b591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990720"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650173"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Niestandardowy bezpieczny punkt końcowy metadanych
 Niniejszy przykład pokazuje, jak wdrożyć usługę z punktu końcowego metadanych bezpieczny, który korzysta z jednego powiązania-metadata exchange i sposobie konfigurowania [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) lub klientów do pobrania metadane z punktu końcowego metadanych. Istnieją dwa powiązania dostarczane przez system dla punktów końcowych metadanych udostępniania: mexHttpBinding i mexHttpsBinding. mexHttpBinding jest używany do udostępnienia punktu końcowego metadanych za pośrednictwem protokołu HTTP w sposób, które nie są bezpieczne. mexHttpsBinding jest używany do udostępnienia punktu końcowego metadanych za pośrednictwem protokołu HTTPS w bezpieczny sposób. Ten przykład ilustruje sposób uwidocznić punkt końcowy metadanych bezpiecznego przy użyciu <xref:System.ServiceModel.WSHttpBinding>. Należy to zrobić, jeśli chcesz zmienić ustawienia zabezpieczeń na powiązania, ale nie chcesz używać protokołu HTTPS. Jeśli używasz mexHttpsBinding punktu końcowego metadanych będą bezpieczne, ale nie ma sposobu na modyfikowanie ustawień powiązania.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1bbbb558134e5f11537de0efef594be2b964cdcb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642480"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647384"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Instrukcje: określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji
 Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne zdefiniowanie zachowania buforowania na podstawie lokalizacji żądanego zasobu. W tym temacie przedstawiono programowe Ustawianie zasad pamięci podręcznej. Aby uzyskać informacje na temat ustawiania zasad dla aplikacji za pomocą plików konfiguracji, zobacz [ \<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  

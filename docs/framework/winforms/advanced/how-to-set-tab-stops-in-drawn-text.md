@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8e8f1bf193a41530a19e1046e3907b4c926b779f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967062"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637033"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Instrukcje: Ustawienie pozycji tabulatorów w rysowanym tekście
 Można ustawienie pozycji tabulatorów tekst, wywołując <xref:System.Drawing.StringFormat.SetTabStops%2A> metody <xref:System.Drawing.StringFormat> obiektu, a następnie przekazywanie, <xref:System.Drawing.StringFormat> obiekt <xref:System.Drawing.Graphics.DrawString%2A> metody <xref:System.Drawing.Graphics> klasy.  

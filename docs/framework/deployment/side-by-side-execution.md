@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644634"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641036"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Wykonywanie równoczesne w programie .NET Framework
 Wykonywanie równoczesne stwarza możliwość uruchamiania wielu wersji aplikacji lub składnika na jednym komputerze. Można mieć wiele wersji środowiska uruchomieniowego języka wspólnego i wiele wersji aplikacji oraz składników, które używają wersji środowiska uruchomieniowego na jednym komputerze w tym samym czasie.  

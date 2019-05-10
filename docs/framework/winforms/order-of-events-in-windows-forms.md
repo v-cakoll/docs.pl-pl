@@ -9,12 +9,12 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f581ca5ee1376251a593e7b8813ef4b0e0f41b64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800792"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655603"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Kolejność zdarzeń w formularzach systemu Windows
 Kolejność, w której zdarzenia są wywoływane w aplikacjach Windows Forms ma szczególne znaczenie dla deweloperów zaniepokojona obsługi, każde z tych wydarzeń z kolei. Rozwiązania wymaga dokładnych obsługi zdarzeń, takich jak kiedy są odświeżanie części formularza, niezbędne jest rozpoznawanie dokładne kolejność, w której zdarzenia są wywoływane w czasie wykonywania. Ten temat zawiera kilka szczegółów rzędu kilku zdarzeń kilku etapach ważne w okresie istnienia aplikacji i formantów. Aby uzyskać szczegółowe informacje na temat kolejności zdarzeń wejściowych myszy zobacz [zdarzeń myszy w formularzach Windows Forms](mouse-events-in-windows-forms.md). Aby uzyskać przegląd zdarzeń w formularzach Windows Forms, zobacz [Przegląd zdarzeń](events-overview-windows-forms.md). Aby uzyskać szczegółowe informacje o korzeń procedury obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](event-handlers-overview-windows-forms.md).  

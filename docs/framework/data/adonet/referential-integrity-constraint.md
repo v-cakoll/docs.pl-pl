@@ -2,12 +2,12 @@
 title: ograniczenie integralności referencyjnej
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b442e15c75554e1b06e9ff89c7224430a0605f9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649623"
 ---
 # <a name="referential-integrity-constraint"></a>ograniczenie integralności referencyjnej
 A *ograniczenia integralności referencyjnej* w Entity Data Model (EDM) jest podobny do ograniczenia integralności referencyjnej w relacyjnej bazie danych. W ten sam sposób, w kolumnie (lub kolumny) z tabeli bazy danych odwołać się do klucza podstawowego z innej tabeli [właściwość](../../../../docs/framework/data/adonet/property.md) (lub właściwości) z [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) może odwoływać się [klucza jednostki ](../../../../docs/framework/data/adonet/entity-key.md) innego typu jednostki. Typ jednostki, do którego istnieje odwołanie jest wywoływana *jednostki zakończenia* ograniczenia. Typ jednostki, który odwołuje się do zakończenia podmiotu zabezpieczeń jest wywoływana *zależne zakończenia* ograniczenia.  

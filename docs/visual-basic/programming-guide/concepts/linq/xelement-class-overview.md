@@ -2,12 +2,12 @@
 title: Przegląd klasy XElement (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-ms.openlocfilehash: 7fbe1cc484ea3482bc455c161783bd7a4513d0bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d5ae3feae632c3bc3ce927a6d376e9ec4911e9fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783633"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647396"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>Przegląd klasy XElement (Visual Basic)
 <xref:System.Xml.Linq.XElement> Klasy jest jednym z podstawowych klas w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Reprezentuje XML element. Ta klasa służy do tworzenia elementów; Zmień zawartość elementu; Dodawanie, zmienianie lub usuwanie elementów podrzędnych; Dodawanie atrybutów do elementu; lub serializacji zawartość elementu w postaci tekstu. Może również współpracować z innych klas w <xref:System.Xml?displayProperty=nameWithType>, takich jak <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, i <xref:System.Xml.Xsl.XslCompiledTransform>.  

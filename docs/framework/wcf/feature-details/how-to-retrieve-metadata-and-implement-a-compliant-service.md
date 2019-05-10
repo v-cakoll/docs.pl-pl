@@ -2,12 +2,12 @@
 title: 'Instrukcje: pobieranie metadanych i implementowanie zgodnej usługi'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18711c5d6b4c504b6b4334a7198ff7543c711622
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000795"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643608"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Instrukcje: pobieranie metadanych i implementowanie zgodnej usługi
 Tę samą osobę nie często, projektowania i implementacji usługi. W środowiskach, w których ważne aplikacje współpracy kontrakty mogą być zaprojektowana lub opisanego w sieci Web Services Description Language (WSDL) i deweloper musi implementować to usługa, która spełnia podane kontraktu. Można również migrować istniejącą usługę do programu Windows Communication Foundation (WCF), ale zachować format o komunikacji sieciowej. Ponadto kontrakty dwukierunkowe wymaga wywołań zaimplementować kontrakt wywołania zwrotnego, który jest również.  

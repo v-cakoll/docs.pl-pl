@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1f66b86a61fb0344a449bf0aa46b7655813c7c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032100"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664242"
 ---
 # <a name="type-typename-is-not-defined"></a>Typ "\<typename >' nie jest zdefiniowana
 Wykonywanie instrukcji wprowadził odwołanie do typu, który nie został zdefiniowany. Można zdefiniować typ w instrukcji deklaracji takich jak `Enum`, `Structure`, `Class`, lub `Interface`.  

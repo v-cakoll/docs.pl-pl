@@ -2,12 +2,12 @@
 title: Dostawca tokenów SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 90ae5d27d046ad02de0bfd2c7ac1cec6ec0417fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787507"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664726"
 ---
 # <a name="saml-token-provider"></a>Dostawca tokenów SAML
 Ten przykład demonstruje sposób implementacji niestandardowego klienta Dostawca tokenów SAML. Dostawca tokenu w Windows Communication Foundation (WCF) jest używany dla podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z domyślny dostawca tokenu Menedżera poświadczeń. Usługi WCF jest również dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663431"
 ---
 # <a name="dependency-property-metadata"></a>Metadane zależności właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] System właściwość zawiera metadane systemu, który wykracza poza jakie mogą być zgłaszane o właściwości przy użyciu odbicia lub ogólne raportowania [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Metadane dla właściwości zależności można przypisać również jednoznacznie przez klasę, która definiuje właściwości zależności, można zmienić, gdy właściwość zależności jest dodawany do innej klasy i mogą być szczególnie zastąpione przez wszystkie klasy pochodne, które dziedziczą Właściwości zależności z Definiowanie klasy bazowej.  

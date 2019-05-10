@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c7a874659be8dbaec66b78e1e065bcbec21da3b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746873"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650876"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Instrukcje: zmienianie odstępów i wyrównania elementów ToolStrip w formularzach systemu Windows
 <xref:System.Windows.Forms.ToolStrip> Kontroli w pełni obsługuje układ funkcje, takie jak rozmiary, odstępy między <xref:System.Windows.Forms.ToolStripItem> formantów względem siebie, rozmieszczenie kontrolek w <xref:System.Windows.Forms.ToolStrip>i odstępy kontroli względem <xref:System.Windows.Forms.ToolStrip>.  

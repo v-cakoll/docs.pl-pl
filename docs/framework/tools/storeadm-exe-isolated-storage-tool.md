@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919378"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647251"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Narzędzie wydzielonej pamięci masowej)
 Narzędzie Isolated Storage obsługujące izolowane magazyny wyświetla lub usuwa wszystkie istniejące magazyny bieżącego użytkownika.  

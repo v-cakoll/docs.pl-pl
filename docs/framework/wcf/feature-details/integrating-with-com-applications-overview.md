@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2be428f0ae83596a4398fc9830af40d05f6ab191
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047012"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638650"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami modelu COM
 Windows Communication Foundation (WCF) zapewnia dewelopera kodu zarządzanego przy użyciu bogate środowisko tworzenia połączonych aplikacji. Jednak jeśli masz znaczne inwestycje w niezarządzanym kodzie opartym na modelu COM i nie chcesz migrować, można nadal zintegrować usług sieci Web WCF bezpośrednio do istniejącego kodu przy użyciu monikera programu WCF. Moniker usługi może służyć w środowiskach programistycznych szeroki zakres COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  

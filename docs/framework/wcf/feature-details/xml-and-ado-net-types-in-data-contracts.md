@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0d052c0f178c2dc6e2eb5a740faa42239fb91068
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929522"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637231"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Typy XML i ADO.NET w kontraktach danych
 Model kontraktu danych Windows Communication Foundation (WCF) obsługuje niektóre typy, które reprezentują XML bezpośrednio. Gdy te typy są serializacji XML, serializator dokonuje zapisu zawartość XML na typy bez dalszego przetwarzania. Obsługiwane typy to <xref:System.Xml.XmlElement>, tablice <xref:System.Xml.XmlNode> (, ale nie `XmlNode` wpisz sam), jak również jako typami, które implementują <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> i <xref:System.Data.DataTable> typu, a także typizowanych zestawów danych, są często używane w programowaniu bazy danych. Te typy implementują `IXmlSerializable` interfejsu i w związku z tym możliwy do serializacji w danych są kontraktu modelu. Pewne specjalne zagadnienia dotyczące tych typów są wymienione na końcu tego tematu.  

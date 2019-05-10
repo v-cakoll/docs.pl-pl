@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 738aadf93b726569eb59fc281cca2e482bace0bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935463"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645183"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Określanie zachowania klienta w czasie wykonywania
 Klienci Windows Communication Foundation (WCF), podobnie jak usługi Windows Communication Foundation (WCF), można skonfigurować do modyfikowania zachowania w czasie wykonywania do własnych aplikacji klienckiej. Trzy atrybuty są dostępne dla Określanie zachowania klienta w czasie wykonywania. Obiekty klienta dwustronnego wywołania zwrotnego można użyć <xref:System.ServiceModel.CallbackBehaviorAttribute> i <xref:System.ServiceModel.Description.CallbackDebugBehavior> atrybutów, które mają modyfikowanie ich zachowania w czasie wykonywania. Ten atrybut <xref:System.ServiceModel.Description.ClientViaBehavior>, może służyć do oddzielania logiczne miejsce docelowe z docelowym bezpośredniej sieci. Ponadto klienta dwustronnego wywołania zwrotnego typów mogą korzystać z niektórych zachowań po stronie usługi. Aby uzyskać więcej informacji, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  

@@ -2,12 +2,12 @@
 title: 'Instrukcje: używanie wielu tokenów zabezpieczeń tego samego typu'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e82c2e256b057f45863d0533efd0c53b921cadce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972838"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650278"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Instrukcje: używanie wielu tokenów zabezpieczeń tego samego typu
 - W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, token wiadomość tylko jeden zawartej klienta dla dowolnego typu. Teraz komunikatów klienta może zawierać wiele tokenów typu. W tym temacie pokazano jak dołączyć wielu tokenów tego samego typu w komunikacie klienta.  

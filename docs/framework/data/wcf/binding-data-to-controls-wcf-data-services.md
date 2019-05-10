@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99ad0db9f0adc54d57c5e9a7ed9a5aef3f0a3131
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793451"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652256"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Powiązywanie danych z kontrolkami (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można powiązać formanty, takie jak `ComboBox` i `ListView` formanty do wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasy. Ta kolekcja, która dziedziczy z <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, zawiera dane z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta klasa reprezentuje kolekcję danych dynamicznych, która zapewnia powiadomienia, gdy elementy Pobierz dodane lub usunięte. Jeśli używasz wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> dla powiązania danych [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienckie obsługę następujących zdarzeń, aby upewnić się, że obiekty są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> pozostają zsynchronizowane z danymi w powiązanej elementu interfejsu użytkownika.  

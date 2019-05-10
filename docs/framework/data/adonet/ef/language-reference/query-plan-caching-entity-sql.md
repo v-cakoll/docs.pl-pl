@@ -2,12 +2,12 @@
 title: Planu zapytania z pamięci podręcznej (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9b809962e11ee74a99f736769b47bf3052af5e8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613667"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641463"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Planu zapytania z pamięci podręcznej (jednostka SQL)
 Zawsze, gdy podejmowana jest próba, aby wykonać zapytanie, potok zapytanie wyszukuje pamięci podręcznej planu zapytania Czy dokładne zapytanie jest już skompilowane i dostępne. Jeśli tak, używa buforowanego planu zamiast tworzenia nowej. Jeśli dopasowanie nie zostanie znaleziony w pamięci podręcznej planu zapytania, kwerenda jest skompilowany i pamięci podręcznej. Zapytanie jest identyfikowane za pomocą jego [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kolekcji tekstu i parametrów (nazw i typy). Wszystkie porównania tekstu jest rozróżniana wielkość liter.  

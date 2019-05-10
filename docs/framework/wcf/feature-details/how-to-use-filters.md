@@ -2,12 +2,12 @@
 title: 'Instrukcje: Używanie filtrów'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 42145e58eb35233aefb8f7805570d329abb7d71a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645500"
 ---
 # <a name="how-to-use-filters"></a>Instrukcje: Używanie filtrów
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, który używa wielu filtrów. W tym przykładzie komunikaty są kierowane do dwie implementacje usługi Kalkulator, regularCalc i roundingCalc. Zarówno implementacje obsługują te same operacje; Jednak w jednej usłudze zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy ma być używany zaokrąglania wersję usługi; Jeśli brak preferencji Usługa bazy danych jest wyrażona wiadomość jest równoważone między obiema usługami. Operacje udostępniane przez obie te usługi są:  

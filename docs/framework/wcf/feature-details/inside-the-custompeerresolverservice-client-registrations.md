@@ -2,12 +2,12 @@
 title: 'Szczegóły usługi CustomPeerResolverService: Rejestracje klienta'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d1e1c6493da54bc3ae0e74a33985da59382ea52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972552"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619780"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Szczegóły usługi CustomPeerResolverService: Rejestracje klienta
 Każdy węzeł w siatce publikuje swoje informacje o punkcie końcowym usługi rozpoznawania nazw za pośrednictwem `Register` funkcji. Usługa rozpoznawania nazw przechowuje te informacje jako rekord rejestracji. Ten rekord zawiera unikatowy identyfikator (identyfikator), a informacje o punkcie końcowym (PeerNodeAddress) dla węzła.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aafd494a2330609f68295588cf649bc4666f4cfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949191"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614877"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>Atrybuty ochrony hosta i programowanie SQL Server
 Możliwość załadowanie i wykonanie kodu zarządzanego hosta programu SQL Server wymaga spełniających wymagania dotyczące zabezpieczeń dostępu kodu i ochrona zasobów hosta hostów.  Wymagania dotyczące zabezpieczeń dostępu kodu są określone przez jeden z trzech zestawów uprawnień programu SQL Server: BEZPIECZNY dostęp do zewnętrznych lub UNSAFE. Wykonywanie kodu w SEJFIE lub zestawy uprawnień dostępu zewnętrznego należy unikać niektórych typów ani elementów członkowskich, które mają <xref:System.Security.Permissions.HostProtectionAttribute> zastosowany. <xref:System.Security.Permissions.HostProtectionAttribute> Nie jest uprawnienia zabezpieczeń jak gwarancje niezawodności w identyfikuje konkretny kod tworzy typy lub metody, że host może nie zezwalać.  Korzystanie z <xref:System.Security.Permissions.HostProtectionAttribute> wymusza modelu programowania, która pomaga chronić stabilności hosta.  
@@ -58,9 +58,9 @@ Możliwość załadowanie i wykonanie kodu zarządzanego hosta programu SQL Serv
 |Zestaw uprawnień|BEZPIECZNE|DOSTĘP DO ZEWNĘTRZNYCH|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
 |Zabezpieczenia dostępu kodu|Tylko do wykonywania|Wykonywanie i uzyskać dostęp do zasobów zewnętrznych|Bez ograniczeń|  
-|Ograniczenia dotyczące modelu programowania|Yes|Tak|Brak ograniczeń|  
+|Ograniczenia dotyczące modelu programowania|Yes|Yes|Brak ograniczeń|  
 |Możliwość weryfikacji wymagań|Tak|Yes|Nie|  
-|Wywoływanie kodu natywnego|Nie|Nie|Yes|  
+|Wywoływanie kodu natywnego|Nie|Nie|Tak|  
   
  BEZPIECZNE jest najbardziej niezawodną i bezpieczną trybu z ograniczeniami skojarzone zakresie dozwolonych modelu programowania. BEZPIECZNY kod ma wysoką niezawodność i funkcje zabezpieczeń. Zestawy bezpieczne podane są wystarczające uprawnienia, aby uruchomić, wykonywanie obliczeń i mają dostęp do lokalnej bazy danych. BEZPIECZNE zestawy muszą być i wpisz bezpieczne i nie mogą wywoływać kod niezarządzany.  
   

@@ -2,12 +2,12 @@
 title: 'Przewodnik: Manipulowanie danymi (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330782"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618038"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Przewodnik: Manipulowanie danymi (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz dotyczący dodawania, modyfikowania i usuwania danych w bazie danych. Kopię przykładowej bazy danych Northwind użyje do dodawania klienta, Zmień nazwę klienta i usunąć zamówienie.  
@@ -19,13 +19,13 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Ten przewodnik wymaga następujących elementów:  
   
--   W tym przewodniku używa dedykowanego folder ("c:\linqtest6") do przechowywania plików. Przed rozpoczęciem instruktażu, należy utworzyć ten folder.  
+- W tym przewodniku używa dedykowanego folder ("c:\linqtest6") do przechowywania plików. Przed rozpoczęciem instruktażu, należy utworzyć ten folder.  
   
--   Przykładowa bazy danych Northwind.  
+- Przykładowa bazy danych Northwind.  
   
      Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z witryny pobierania firmy Microsoft. Aby uzyskać instrukcje, zobacz [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Po pobraniu bazy danych, skopiuj plik northwnd.mdf do folderu c:\linqtest6.  
   
--   A C# plik kod wygenerowany z bazy danych Northwind.  
+- A C# plik kod wygenerowany z bazy danych Northwind.  
   
      Ten plik można wygenerować za pomocą [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] lub narzędzia SQLMetal. Ten instruktaż został napisany za pomocą narzędzia SQLMetal za pomocą następującego polecenia:  
   
@@ -36,17 +36,17 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="overview"></a>Omówienie  
  Ten przewodnik składa się z sześciu głównych zadań:  
   
--   Tworzenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.  
+- Tworzenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.  
   
--   Dodawanie pliku kodu bazy danych do projektu.  
+- Dodawanie pliku kodu bazy danych do projektu.  
   
--   Tworzenie nowego obiektu klienta.  
+- Tworzenie nowego obiektu klienta.  
   
--   Modyfikowanie nazwa kontaktu klienta.  
+- Modyfikowanie nazwa kontaktu klienta.  
   
--   Usuwanie zamówienia.  
+- Usuwanie zamówienia.  
   
--   Przesyłanie tych zmian w bazie danych Northwind.  
+- Przesyłanie tych zmian w bazie danych Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Tworzenie składnika LINQ to SQL rozwiązanie  
  W tym pierwszym zadaniu tworzyć rozwiązania programu Visual Studio, który zawiera niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.  
@@ -126,7 +126,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-change-the-name-of-a-customer"></a>Aby zmienić nazwę klienta  
   
--   Dodaj następujący kod powyżej `Console.ReadLine();`:  
+- Dodaj następujący kod powyżej `Console.ReadLine();`:  
   
      [!code-csharp[DLinqWalk3CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#4)]  
   
@@ -137,7 +137,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-delete-a-row"></a>Aby usunąć wiersz  
   
--   Dodaj poniższy kod tuż nad `Console.ReadLine();`:  
+- Dodaj poniższy kod tuż nad `Console.ReadLine();`:  
   
      [!code-csharp[DLinqWalk3CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#5)]  
   

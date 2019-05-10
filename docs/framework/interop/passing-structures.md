@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8e35a09bd3348d5f53c662cf6e0ee9fec733d88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e932481496aef7fd0533054316deb32f65e95deb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872654"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063183"
 ---
-# <a name="passing-structures"></a><span data-ttu-id="36783-102">Przekazywanie struktur</span><span class="sxs-lookup"><span data-stu-id="36783-102">Passing Structures</span></span>
-<span data-ttu-id="36783-103">Wiele funkcji niezarządzanych oczekuje przekazania jako parametr do funkcji elementów członkowskich struktury (typy zdefiniowane przez użytkownika w języku Visual Basic) lub elementów członkowskich klas, które są zdefiniowane w kodzie zarządzanym.</span><span class="sxs-lookup"><span data-stu-id="36783-103">Many unmanaged functions expect you to pass, as a parameter to the function, members of structures (user-defined types in Visual Basic) or members of classes that are defined in managed code.</span></span> <span data-ttu-id="36783-104">Podczas wywołania przekazywanie struktury lub klasy do kodu niezarządzanego za pomocą platformy, należy podać dodatkowe informacje, aby zachować oryginalny układ i wyrównania.</span><span class="sxs-lookup"><span data-stu-id="36783-104">When passing structures or classes to unmanaged code using platform invoke, you must provide additional information to preserve the original layout and alignment.</span></span> <span data-ttu-id="36783-105">W tym temacie przedstawiono <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, który służy do definiowania typów sformatowany.</span><span class="sxs-lookup"><span data-stu-id="36783-105">This topic introduces the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute, which you use to define formatted types.</span></span> <span data-ttu-id="36783-106">Zarządzane struktur i klas, możesz wybrać z zachowaniami przewidywalne układu dostarczanych przez **LayoutKind** wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="36783-106">For managed structures and classes, you can select from several predictable layout behaviors supplied by the **LayoutKind** enumeration.</span></span>  
+# <a name="passing-structures"></a><span data-ttu-id="ba09c-102">Przekazywanie struktur</span><span class="sxs-lookup"><span data-stu-id="ba09c-102">Passing Structures</span></span>
+<span data-ttu-id="ba09c-103">Wiele funkcji niezarządzanych oczekuje przekazania jako parametr do funkcji elementów członkowskich struktury (typy zdefiniowane przez użytkownika w języku Visual Basic) lub elementów członkowskich klas, które są zdefiniowane w kodzie zarządzanym.</span><span class="sxs-lookup"><span data-stu-id="ba09c-103">Many unmanaged functions expect you to pass, as a parameter to the function, members of structures (user-defined types in Visual Basic) or members of classes that are defined in managed code.</span></span> <span data-ttu-id="ba09c-104">Podczas wywołania przekazywanie struktury lub klasy do kodu niezarządzanego za pomocą platformy, należy podać dodatkowe informacje, aby zachować oryginalny układ i wyrównania.</span><span class="sxs-lookup"><span data-stu-id="ba09c-104">When passing structures or classes to unmanaged code using platform invoke, you must provide additional information to preserve the original layout and alignment.</span></span> <span data-ttu-id="ba09c-105">W tym temacie przedstawiono <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, który służy do definiowania typów sformatowany.</span><span class="sxs-lookup"><span data-stu-id="ba09c-105">This topic introduces the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute, which you use to define formatted types.</span></span> <span data-ttu-id="ba09c-106">Zarządzane struktur i klas, możesz wybrać z zachowaniami przewidywalne układu dostarczanych przez **LayoutKind** wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="ba09c-106">For managed structures and classes, you can select from several predictable layout behaviors supplied by the **LayoutKind** enumeration.</span></span>  
   
- <span data-ttu-id="36783-107">Centralny do koncepcji przedstawionych w tym temacie jest jedną istotną różnicą między typami struktury i klasy.</span><span class="sxs-lookup"><span data-stu-id="36783-107">Central to the concepts presented in this topic is an important difference between structure and class types.</span></span> <span data-ttu-id="36783-108">Struktury są typami wartości i klasy są typami odwołań — klasy zawsze zapewniają co najmniej jeden poziom pośredni pamięci (wskaźnik do wartości).</span><span class="sxs-lookup"><span data-stu-id="36783-108">Structures are value types and classes are reference types — classes always provide at least one level of memory indirection (a pointer to a value).</span></span> <span data-ttu-id="36783-109">Różnica ta jest ważne, ponieważ niezarządzane funkcje często wymagają pośredniego, przedstawiony przez sygnatury w pierwszej kolumnie tabeli.</span><span class="sxs-lookup"><span data-stu-id="36783-109">This difference is important because unmanaged functions often demand indirection, as shown by the signatures in the first column of the following table.</span></span> <span data-ttu-id="36783-110">Struktury zarządzanej i deklaracje klas w pozostałych kolumnach pokazano stopnia, do którego można dostosować poziom pośrednictwa w swojej deklaracji. Deklaracje znajdują się zarówno dla języka Visual Basic i Visual C#.</span><span class="sxs-lookup"><span data-stu-id="36783-110">The managed structure and class declarations in the remaining columns show the degree to which you can adjust the level of indirection in your declaration.Declarations are provided for both Visual Basic and Visual C#.</span></span>  
+ <span data-ttu-id="ba09c-107">Centralny do koncepcji przedstawionych w tym temacie jest jedną istotną różnicą między typami struktury i klasy.</span><span class="sxs-lookup"><span data-stu-id="ba09c-107">Central to the concepts presented in this topic is an important difference between structure and class types.</span></span> <span data-ttu-id="ba09c-108">Struktury są typami wartości i klasy są typami odwołań — klasy zawsze zapewniają co najmniej jeden poziom pośredni pamięci (wskaźnik do wartości).</span><span class="sxs-lookup"><span data-stu-id="ba09c-108">Structures are value types and classes are reference types — classes always provide at least one level of memory indirection (a pointer to a value).</span></span> <span data-ttu-id="ba09c-109">Różnica ta jest ważne, ponieważ niezarządzane funkcje często wymagają pośredniego, przedstawiony przez sygnatury w pierwszej kolumnie tabeli.</span><span class="sxs-lookup"><span data-stu-id="ba09c-109">This difference is important because unmanaged functions often demand indirection, as shown by the signatures in the first column of the following table.</span></span> <span data-ttu-id="ba09c-110">Struktury zarządzanej i deklaracje klas w pozostałych kolumnach pokazano stopnia, do którego można dostosować poziom pośrednictwa w swojej deklaracji. Deklaracje znajdują się zarówno dla języka Visual Basic i Visual C#.</span><span class="sxs-lookup"><span data-stu-id="ba09c-110">The managed structure and class declarations in the remaining columns show the degree to which you can adjust the level of indirection in your declaration.Declarations are provided for both Visual Basic and Visual C#.</span></span>  
   
-|<span data-ttu-id="36783-111">Niezarządzane podpisu</span><span class="sxs-lookup"><span data-stu-id="36783-111">Unmanaged signature</span></span>|<span data-ttu-id="36783-112">Deklaracja zarządzanego:</span><span class="sxs-lookup"><span data-stu-id="36783-112">Managed declaration:</span></span> <br /><span data-ttu-id="36783-113">nie operatora pośredniego</span><span class="sxs-lookup"><span data-stu-id="36783-113">no indirection</span></span><br />`Structure MyType`<br />`struct MyType;`|<span data-ttu-id="36783-114">Deklaracja zarządzanego:</span><span class="sxs-lookup"><span data-stu-id="36783-114">Managed declaration:</span></span> <br /><span data-ttu-id="36783-115">jeden poziom pośredni</span><span class="sxs-lookup"><span data-stu-id="36783-115">one level of indirection</span></span><br />`Class MyType`<br />`class MyType;`|  
+|<span data-ttu-id="ba09c-111">Niezarządzane podpisu</span><span class="sxs-lookup"><span data-stu-id="ba09c-111">Unmanaged signature</span></span>|<span data-ttu-id="ba09c-112">Deklaracja zarządzanego:</span><span class="sxs-lookup"><span data-stu-id="ba09c-112">Managed declaration:</span></span> <br /><span data-ttu-id="ba09c-113">nie operatora pośredniego</span><span class="sxs-lookup"><span data-stu-id="ba09c-113">no indirection</span></span><br />`Structure MyType`<br />`struct MyType;`|<span data-ttu-id="ba09c-114">Deklaracja zarządzanego:</span><span class="sxs-lookup"><span data-stu-id="ba09c-114">Managed declaration:</span></span> <br /><span data-ttu-id="ba09c-115">jeden poziom pośredni</span><span class="sxs-lookup"><span data-stu-id="ba09c-115">one level of indirection</span></span><br />`Class MyType`<br />`class MyType;`|  
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> <span data-ttu-id="36783-116">Żądania poziomach pośredników od zera.</span><span class="sxs-lookup"><span data-stu-id="36783-116">Demands zero levels of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="36783-117">Dodaje zero poziomach operatorów pośrednich.</span><span class="sxs-lookup"><span data-stu-id="36783-117">Adds zero levels of indirection.</span></span>|<span data-ttu-id="36783-118">Nie jest możliwe, ponieważ istnieje już jeden poziom pośredni.</span><span class="sxs-lookup"><span data-stu-id="36783-118">Not possible because there is already one level of indirection.</span></span>|  
-|`DoWork(MyType* x);`<br /><br /> <span data-ttu-id="36783-119">Wymaga jednego poziomu pośredniego.</span><span class="sxs-lookup"><span data-stu-id="36783-119">Demands one level of indirection.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="36783-120">Dodaje jeden poziom pośrednictwa.</span><span class="sxs-lookup"><span data-stu-id="36783-120">Adds one level of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="36783-121">Dodaje zero poziomach operatorów pośrednich.</span><span class="sxs-lookup"><span data-stu-id="36783-121">Adds zero levels of indirection.</span></span>|  
-|`DoWork(MyType** x);`<br /><br /> <span data-ttu-id="36783-122">Zapotrzebowania na dwóch poziomach operatorów pośrednich.</span><span class="sxs-lookup"><span data-stu-id="36783-122">Demands two levels of indirection.</span></span>|<span data-ttu-id="36783-123">Nie jest możliwe ponieważ **ByRef** **ByRef** lub `ref` `ref` nie mogą być używane.</span><span class="sxs-lookup"><span data-stu-id="36783-123">Not possible because **ByRef** **ByRef** or `ref` `ref` cannot be used.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="36783-124">Dodaje jeden poziom pośrednictwa.</span><span class="sxs-lookup"><span data-stu-id="36783-124">Adds one level of indirection.</span></span>|  
+|`DoWork(MyType x);`<br /><br /> <span data-ttu-id="ba09c-116">Żądania poziomach pośredników od zera.</span><span class="sxs-lookup"><span data-stu-id="ba09c-116">Demands zero levels of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="ba09c-117">Dodaje zero poziomach operatorów pośrednich.</span><span class="sxs-lookup"><span data-stu-id="ba09c-117">Adds zero levels of indirection.</span></span>|<span data-ttu-id="ba09c-118">Nie jest możliwe, ponieważ istnieje już jeden poziom pośredni.</span><span class="sxs-lookup"><span data-stu-id="ba09c-118">Not possible because there is already one level of indirection.</span></span>|  
+|`DoWork(MyType* x);`<br /><br /> <span data-ttu-id="ba09c-119">Wymaga jednego poziomu pośredniego.</span><span class="sxs-lookup"><span data-stu-id="ba09c-119">Demands one level of indirection.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="ba09c-120">Dodaje jeden poziom pośrednictwa.</span><span class="sxs-lookup"><span data-stu-id="ba09c-120">Adds one level of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="ba09c-121">Dodaje zero poziomach operatorów pośrednich.</span><span class="sxs-lookup"><span data-stu-id="ba09c-121">Adds zero levels of indirection.</span></span>|  
+|`DoWork(MyType** x);`<br /><br /> <span data-ttu-id="ba09c-122">Zapotrzebowania na dwóch poziomach operatorów pośrednich.</span><span class="sxs-lookup"><span data-stu-id="ba09c-122">Demands two levels of indirection.</span></span>|<span data-ttu-id="ba09c-123">Nie jest możliwe ponieważ **ByRef** **ByRef** lub `ref` `ref` nie mogą być używane.</span><span class="sxs-lookup"><span data-stu-id="ba09c-123">Not possible because **ByRef** **ByRef** or `ref` `ref` cannot be used.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="ba09c-124">Dodaje jeden poziom pośrednictwa.</span><span class="sxs-lookup"><span data-stu-id="ba09c-124">Adds one level of indirection.</span></span>|  
   
- <span data-ttu-id="36783-125">W tabeli opisano następujące wytyczne dla deklaracji wywołania platformy:</span><span class="sxs-lookup"><span data-stu-id="36783-125">The table describes the following guidelines for platform invoke declarations:</span></span>  
+ <span data-ttu-id="ba09c-125">W tabeli opisano następujące wytyczne dla deklaracji wywołania platformy:</span><span class="sxs-lookup"><span data-stu-id="ba09c-125">The table describes the following guidelines for platform invoke declarations:</span></span>  
   
-- <span data-ttu-id="36783-126">Struktura przekazywany przez wartość, gdy niezarządzanej funkcji zapotrzebowania na pośrednie nie jest używana.</span><span class="sxs-lookup"><span data-stu-id="36783-126">Use a structure passed by value when the unmanaged function demands no indirection.</span></span>  
+- <span data-ttu-id="ba09c-126">Struktura przekazywany przez wartość, gdy niezarządzanej funkcji zapotrzebowania na pośrednie nie jest używana.</span><span class="sxs-lookup"><span data-stu-id="ba09c-126">Use a structure passed by value when the unmanaged function demands no indirection.</span></span>  
   
-- <span data-ttu-id="36783-127">Użyj przekazywany przez odwołanie struktury lub klasy przekazywany przez wartość, gdy zapotrzebowania na jeden poziom pośredni w funkcji niezarządzanej.</span><span class="sxs-lookup"><span data-stu-id="36783-127">Use either a structure passed by reference or a class passed by value when the unmanaged function demands one level of indirection.</span></span>  
+- <span data-ttu-id="ba09c-127">Użyj przekazywany przez odwołanie struktury lub klasy przekazywany przez wartość, gdy zapotrzebowania na jeden poziom pośredni w funkcji niezarządzanej.</span><span class="sxs-lookup"><span data-stu-id="ba09c-127">Use either a structure passed by reference or a class passed by value when the unmanaged function demands one level of indirection.</span></span>  
   
-- <span data-ttu-id="36783-128">Używanie klasy przekazywany przez odwołanie, gdy niezarządzanej funkcji zapotrzebowania na dwóch poziomach operatorów pośrednich.</span><span class="sxs-lookup"><span data-stu-id="36783-128">Use a class passed by reference when the unmanaged function demands two levels of indirection.</span></span>  
+- <span data-ttu-id="ba09c-128">Używanie klasy przekazywany przez odwołanie, gdy niezarządzanej funkcji zapotrzebowania na dwóch poziomach operatorów pośrednich.</span><span class="sxs-lookup"><span data-stu-id="ba09c-128">Use a class passed by reference when the unmanaged function demands two levels of indirection.</span></span>  
   
-## <a name="declaring-and-passing-structures"></a><span data-ttu-id="36783-129">Deklarowanie i przekazywanie struktur</span><span class="sxs-lookup"><span data-stu-id="36783-129">Declaring and Passing Structures</span></span>  
- <span data-ttu-id="36783-130">Poniższy przykład pokazuje jak zdefiniować `Point` i `Rect` struktury w kodzie zarządzanym i przekazywania typów jako parametr do **PtInRect** funkcji w pliku User32.dll.</span><span class="sxs-lookup"><span data-stu-id="36783-130">The following example shows how to define the `Point` and `Rect` structures in managed code, and pass the types as parameter to the **PtInRect** function in the User32.dll file.</span></span> <span data-ttu-id="36783-131">**PtInRect** ma następujący podpis niezarządzanych:</span><span class="sxs-lookup"><span data-stu-id="36783-131">**PtInRect** has the following unmanaged signature:</span></span>  
+## <a name="declaring-and-passing-structures"></a><span data-ttu-id="ba09c-129">Deklarowanie i przekazywanie struktur</span><span class="sxs-lookup"><span data-stu-id="ba09c-129">Declaring and Passing Structures</span></span>  
+ <span data-ttu-id="ba09c-130">Poniższy przykład pokazuje jak zdefiniować `Point` i `Rect` struktury w kodzie zarządzanym i przekazywania typów jako parametr do **PtInRect** funkcji w pliku User32.dll.</span><span class="sxs-lookup"><span data-stu-id="ba09c-130">The following example shows how to define the `Point` and `Rect` structures in managed code, and pass the types as parameter to the **PtInRect** function in the User32.dll file.</span></span> <span data-ttu-id="ba09c-131">**PtInRect** ma następujący podpis niezarządzanych:</span><span class="sxs-lookup"><span data-stu-id="ba09c-131">**PtInRect** has the following unmanaged signature:</span></span>  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- <span data-ttu-id="36783-132">Należy zauważyć, że należy przekazać struktura Rect przez odwołanie, ponieważ funkcja oczekuje wskaźnika do typu Rect.</span><span class="sxs-lookup"><span data-stu-id="36783-132">Notice that you must pass the Rect structure by reference, since the function expects a pointer to a RECT type.</span></span>  
+ <span data-ttu-id="ba09c-132">Należy zauważyć, że należy przekazać struktura Rect przez odwołanie, ponieważ funkcja oczekuje wskaźnika do typu Rect.</span><span class="sxs-lookup"><span data-stu-id="ba09c-132">Notice that you must pass the Rect structure by reference, since the function expects a pointer to a RECT type.</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -59,8 +59,8 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Friend Class WindowsAPI      
-    Friend Shared Declare Auto Function PtInRect Lib "user32.dll" (
+Friend Class NativeMethods      
+    Friend Declare Auto Function PtInRect Lib "user32.dll" (
         ByRef r As Rect, p As Point) As Boolean  
 End Class  
 ```  
@@ -82,26 +82,24 @@ public struct Rect {
     [FieldOffset(12)] public int bottom;  
 }     
   
-internal static class WindowsAPI
+internal static class NativeMethods
 {  
     [DllImport("User32.dll")]  
     internal static extern bool PtInRect(ref Rect r, Point p);  
 }  
 ```  
   
-## <a name="declaring-and-passing-classes"></a><span data-ttu-id="36783-133">Deklarowanie i przekazywanie klas</span><span class="sxs-lookup"><span data-stu-id="36783-133">Declaring and Passing Classes</span></span>  
- <span data-ttu-id="36783-134">Elementy członkowskie klasy można przekazać do niezarządzanych funkcji DLL, tak długo, jak klasa ma układ członek stałej.</span><span class="sxs-lookup"><span data-stu-id="36783-134">You can pass members of a class to an unmanaged DLL function, as long as the class has a fixed member layout.</span></span> <span data-ttu-id="36783-135">W poniższym przykładzie pokazano sposób przekazywania członkowie `MySystemTime` klasy, które są zdefiniowane w porządku sekwencyjnym do **GetSystemTime** w pliku User32.dll.</span><span class="sxs-lookup"><span data-stu-id="36783-135">The following example demonstrates how to pass members of the `MySystemTime` class, which are defined in sequential order, to the **GetSystemTime** in the User32.dll file.</span></span> <span data-ttu-id="36783-136">**GetSystemTime** ma następujący podpis niezarządzanych:</span><span class="sxs-lookup"><span data-stu-id="36783-136">**GetSystemTime** has the following unmanaged signature:</span></span>  
+## <a name="declaring-and-passing-classes"></a><span data-ttu-id="ba09c-133">Deklarowanie i przekazywanie klas</span><span class="sxs-lookup"><span data-stu-id="ba09c-133">Declaring and Passing Classes</span></span>  
+ <span data-ttu-id="ba09c-134">Elementy członkowskie klasy można przekazać do niezarządzanych funkcji DLL, tak długo, jak klasa ma układ członek stałej.</span><span class="sxs-lookup"><span data-stu-id="ba09c-134">You can pass members of a class to an unmanaged DLL function, as long as the class has a fixed member layout.</span></span> <span data-ttu-id="ba09c-135">W poniższym przykładzie pokazano sposób przekazywania członkowie `MySystemTime` klasy, które są zdefiniowane w porządku sekwencyjnym do **GetSystemTime** w pliku User32.dll.</span><span class="sxs-lookup"><span data-stu-id="ba09c-135">The following example demonstrates how to pass members of the `MySystemTime` class, which are defined in sequential order, to the **GetSystemTime** in the User32.dll file.</span></span> <span data-ttu-id="ba09c-136">**GetSystemTime** ma następujący podpis niezarządzanych:</span><span class="sxs-lookup"><span data-stu-id="ba09c-136">**GetSystemTime** has the following unmanaged signature:</span></span>  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- <span data-ttu-id="36783-137">Inaczej niż w przypadku typów wartości klasy mają zawsze co najmniej jeden poziom pośrednictwa.</span><span class="sxs-lookup"><span data-stu-id="36783-137">Unlike value types, classes always have at least one level of indirection.</span></span>  
+ <span data-ttu-id="ba09c-137">Inaczej niż w przypadku typów wartości klasy mają zawsze co najmniej jeden poziom pośrednictwa.</span><span class="sxs-lookup"><span data-stu-id="ba09c-137">Unlike value types, classes always have at least one level of indirection.</span></span>  
   
 ```vb  
-Imports System  
 Imports System.Runtime.InteropServices  
-Imports Microsoft.VisualBasic  
   
 <StructLayout(LayoutKind.Sequential)> Public Class MySystemTime  
     Public wYear As Short  
@@ -114,17 +112,17 @@ Imports Microsoft.VisualBasic
     Public wMiliseconds As Short  
 End Class  
   
-Friend Class WindowsAPI  
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods  
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         sysTime As MySystemTime)  
-    Friend Shared Declare Auto Function MessageBox Lib "User32.dll" (
+    Friend Declare Auto Function MessageBox Lib "User32.dll" (
         hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
 Public Class TestPlatformInvoke      
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
-        WindowsAPI.GetSystemTime(sysTime)  
+        NativeMethods.GetSystemTime(sysTime)  
   
         Dim dt As String  
         dt = "System time is:" & ControlChars.CrLf & _  
@@ -132,7 +130,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
 ```  
@@ -149,7 +147,7 @@ public class MySystemTime {
     public ushort wSecond;   
     public ushort wMilliseconds;   
 }  
-internal static class WindowsAPI
+internal static class NativeMethods
 {  
     [DllImport("Kernel32.dll")]  
     internal static extern void GetSystemTime(MySystemTime st);  
@@ -164,7 +162,7 @@ public class TestPlatformInvoke
     public static void Main()  
     {  
         MySystemTime sysTime = new MySystemTime();  
-        WindowsAPI.GetSystemTime(sysTime);  
+        NativeMethods.GetSystemTime(sysTime);  
   
         string dt;  
         dt = "System time is: \n" +  
@@ -172,13 +170,13 @@ public class TestPlatformInvoke
               "Month: " + sysTime.wMonth + "\n" +  
               "DayOfWeek: " + sysTime.wDayOfWeek + "\n" +  
               "Day: " + sysTime.wDay;  
-        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
     }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="36783-138">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="36783-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba09c-138">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ba09c-138">See also</span></span>
 
-- [<span data-ttu-id="36783-139">Wywołanie funkcji DLL</span><span class="sxs-lookup"><span data-stu-id="36783-139">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
+- [<span data-ttu-id="ba09c-139">Wywołanie funkcji DLL</span><span class="sxs-lookup"><span data-stu-id="ba09c-139">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

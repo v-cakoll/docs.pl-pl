@@ -8,24 +8,24 @@ helpviewer_keywords:
 - paths [Windows Forms], flattening
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-ms.openlocfilehash: a151b4244e14d3704fd5fa1c55de92211981232f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d59a802618ddd5080c651e822ed4c09641f7f170
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645363"
 ---
-# <a name="how-to-flatten-a-curved-path-into-a-line"></a><span data-ttu-id="3ec07-102">Instrukcje: Spłaszczanie ścieżki krzywej do linii</span><span class="sxs-lookup"><span data-stu-id="3ec07-102">How to: Flatten a Curved Path into a Line</span></span>
-<span data-ttu-id="3ec07-103">A <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt przechowuje sekwencji linii i krzywych Beziera.</span><span class="sxs-lookup"><span data-stu-id="3ec07-103">A <xref:System.Drawing.Drawing2D.GraphicsPath> object stores a sequence of lines and Bézier splines.</span></span> <span data-ttu-id="3ec07-104">Można dodać kilka typów krzywych (wielokropek, łuki kardynalne) do ścieżki, ale każda krzywa jest konwertowany na krzywej Beziera, zanim znajduje się w ścieżce.</span><span class="sxs-lookup"><span data-stu-id="3ec07-104">You can add several types of curves (ellipses, arcs, cardinal splines) to a path, but each curve is converted to a Bézier spline before it is stored in the path.</span></span> <span data-ttu-id="3ec07-105">Spłaszczanie ścieżki składa się z konwersji każdego krzywej Beziera w ścieżce z linii prostych sekwencji.</span><span class="sxs-lookup"><span data-stu-id="3ec07-105">Flattening a path consists of converting each Bézier spline in the path to a sequence of straight lines.</span></span> <span data-ttu-id="3ec07-106">Na poniższej ilustracji przedstawiono ścieżkę przed i po nim spłaszczanie.</span><span class="sxs-lookup"><span data-stu-id="3ec07-106">The following illustration shows a path before and after flattening.</span></span>  
+# <a name="how-to-flatten-a-curved-path-into-a-line"></a><span data-ttu-id="7fad0-102">Instrukcje: Spłaszczanie ścieżki krzywej do linii</span><span class="sxs-lookup"><span data-stu-id="7fad0-102">How to: Flatten a Curved Path into a Line</span></span>
+<span data-ttu-id="7fad0-103">A <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt przechowuje sekwencji linii i krzywych Beziera.</span><span class="sxs-lookup"><span data-stu-id="7fad0-103">A <xref:System.Drawing.Drawing2D.GraphicsPath> object stores a sequence of lines and Bézier splines.</span></span> <span data-ttu-id="7fad0-104">Można dodać kilka typów krzywych (wielokropek, łuki kardynalne) do ścieżki, ale każda krzywa jest konwertowany na krzywej Beziera, zanim znajduje się w ścieżce.</span><span class="sxs-lookup"><span data-stu-id="7fad0-104">You can add several types of curves (ellipses, arcs, cardinal splines) to a path, but each curve is converted to a Bézier spline before it is stored in the path.</span></span> <span data-ttu-id="7fad0-105">Spłaszczanie ścieżki składa się z konwersji każdego krzywej Beziera w ścieżce z linii prostych sekwencji.</span><span class="sxs-lookup"><span data-stu-id="7fad0-105">Flattening a path consists of converting each Bézier spline in the path to a sequence of straight lines.</span></span> <span data-ttu-id="7fad0-106">Na poniższej ilustracji przedstawiono ścieżkę przed i po nim spłaszczanie.</span><span class="sxs-lookup"><span data-stu-id="7fad0-106">The following illustration shows a path before and after flattening.</span></span>  
   
- <span data-ttu-id="3ec07-107">![Proste linii i krzywych](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span><span class="sxs-lookup"><span data-stu-id="3ec07-107">![Straight Lines and Curves](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span></span>  
+ <span data-ttu-id="7fad0-107">![Proste linii i krzywych](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span><span class="sxs-lookup"><span data-stu-id="7fad0-107">![Straight Lines and Curves](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span></span>  
   
-### <a name="to-flatten-a-path"></a><span data-ttu-id="3ec07-108">Spłaszczanie ścieżki</span><span class="sxs-lookup"><span data-stu-id="3ec07-108">To Flatten a Path</span></span>  
+### <a name="to-flatten-a-path"></a><span data-ttu-id="7fad0-108">Spłaszczanie ścieżki</span><span class="sxs-lookup"><span data-stu-id="7fad0-108">To Flatten a Path</span></span>  
   
-- <span data-ttu-id="3ec07-109">Wywołaj <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> metody <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu.</span><span class="sxs-lookup"><span data-stu-id="3ec07-109">call the <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method of a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="3ec07-110"><xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> Metoda otrzymuje argument płaskość, który określa maksymalną odległość między ścieżką spłaszczone i Oryginalna ścieżka.</span><span class="sxs-lookup"><span data-stu-id="3ec07-110">The <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method receives a flatness argument that specifies the maximum distance between the flattened path and the original path.</span></span>  
+- <span data-ttu-id="7fad0-109">Wywołaj <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> metody <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu.</span><span class="sxs-lookup"><span data-stu-id="7fad0-109">call the <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method of a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="7fad0-110"><xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> Metoda otrzymuje argument płaskość, który określa maksymalną odległość między ścieżką spłaszczone i Oryginalna ścieżka.</span><span class="sxs-lookup"><span data-stu-id="7fad0-110">The <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method receives a flatness argument that specifies the maximum distance between the flattened path and the original path.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ec07-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3ec07-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7fad0-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7fad0-111">See also</span></span>
 
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
-- [<span data-ttu-id="3ec07-112">Linie, krzywe i kształty</span><span class="sxs-lookup"><span data-stu-id="3ec07-112">Lines, Curves, and Shapes</span></span>](lines-curves-and-shapes.md)
-- [<span data-ttu-id="3ec07-113">Konstruowanie i rysowanie ścieżek</span><span class="sxs-lookup"><span data-stu-id="3ec07-113">Constructing and Drawing Paths</span></span>](constructing-and-drawing-paths.md)
+- [<span data-ttu-id="7fad0-112">Linie, krzywe i kształty</span><span class="sxs-lookup"><span data-stu-id="7fad0-112">Lines, Curves, and Shapes</span></span>](lines-curves-and-shapes.md)
+- [<span data-ttu-id="7fad0-113">Konstruowanie i rysowanie ścieżek</span><span class="sxs-lookup"><span data-stu-id="7fad0-113">Constructing and Drawing Paths</span></span>](constructing-and-drawing-paths.md)

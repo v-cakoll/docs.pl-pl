@@ -2,17 +2,17 @@
 title: ORDER BY (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e691816ec3d0a66c9f43f9a13cffa26b755b3c39
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641780"
 ---
-# <a name="order-by-entity-sql"></a><span data-ttu-id="f4bd6-102">ORDER BY (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="f4bd6-102">ORDER BY (Entity SQL)</span></span>
-<span data-ttu-id="f4bd6-103">Określa porządek sortowania na obiekty zwrócone w instrukcji SELECT.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-103">Specifies the sort order used on objects returned in a SELECT statement.</span></span>  
+# <a name="order-by-entity-sql"></a><span data-ttu-id="3812a-102">ORDER BY (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="3812a-102">ORDER BY (Entity SQL)</span></span>
+<span data-ttu-id="3812a-103">Określa porządek sortowania na obiekty zwrócone w instrukcji SELECT.</span><span class="sxs-lookup"><span data-stu-id="3812a-103">Specifies the sort order used on objects returned in a SELECT statement.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4bd6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f4bd6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3812a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3812a-104">Syntax</span></span>  
   
 ```  
 [ ORDER BY   
@@ -25,33 +25,33 @@ ms.locfileid: "61760301"
 ]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="f4bd6-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="f4bd6-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="3812a-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="3812a-105">Arguments</span></span>  
  `order_by_expression`  
- <span data-ttu-id="f4bd6-106">Dowolne wyrażenie prawidłowe zapytanie, określając właściwość do sortowania.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-106">Any valid query expression specifying a property on which to sort.</span></span> <span data-ttu-id="f4bd6-107">Można określić wiele wyrażeń sortowania.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-107">Multiple sort expressions can be specified.</span></span> <span data-ttu-id="f4bd6-108">Taką sekwencję wyrażeń sortowania w klauzuli ORDER BY określa organizacji zestawu posortowanego wyników.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-108">The sequence of the sort expressions in the ORDER BY clause defines the organization of the sorted result set.</span></span>  
+ <span data-ttu-id="3812a-106">Dowolne wyrażenie prawidłowe zapytanie, określając właściwość do sortowania.</span><span class="sxs-lookup"><span data-stu-id="3812a-106">Any valid query expression specifying a property on which to sort.</span></span> <span data-ttu-id="3812a-107">Można określić wiele wyrażeń sortowania.</span><span class="sxs-lookup"><span data-stu-id="3812a-107">Multiple sort expressions can be specified.</span></span> <span data-ttu-id="3812a-108">Taką sekwencję wyrażeń sortowania w klauzuli ORDER BY określa organizacji zestawu posortowanego wyników.</span><span class="sxs-lookup"><span data-stu-id="3812a-108">The sequence of the sort expressions in the ORDER BY clause defines the organization of the sorted result set.</span></span>  
   
- <span data-ttu-id="f4bd6-109">COLLATE {collation_name}</span><span class="sxs-lookup"><span data-stu-id="f4bd6-109">COLLATE {collation_name}</span></span>  
- <span data-ttu-id="f4bd6-110">Określa, czy można wykonać operacji klauzuli ORDER BY, zgodnie z sortowania określonego w `collation_name`.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-110">Specifies that the ORDER BY operation should be performed according to the collation specified in `collation_name`.</span></span> <span data-ttu-id="f4bd6-111">COLLATE ma zastosowanie tylko w przypadku wyrażenia ciągu.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-111">COLLATE is applicable only for string expressions.</span></span>  
+ <span data-ttu-id="3812a-109">COLLATE {collation_name}</span><span class="sxs-lookup"><span data-stu-id="3812a-109">COLLATE {collation_name}</span></span>  
+ <span data-ttu-id="3812a-110">Określa, czy można wykonać operacji klauzuli ORDER BY, zgodnie z sortowania określonego w `collation_name`.</span><span class="sxs-lookup"><span data-stu-id="3812a-110">Specifies that the ORDER BY operation should be performed according to the collation specified in `collation_name`.</span></span> <span data-ttu-id="3812a-111">COLLATE ma zastosowanie tylko w przypadku wyrażenia ciągu.</span><span class="sxs-lookup"><span data-stu-id="3812a-111">COLLATE is applicable only for string expressions.</span></span>  
   
- <span data-ttu-id="f4bd6-112">ASC</span><span class="sxs-lookup"><span data-stu-id="f4bd6-112">ASC</span></span>  
- <span data-ttu-id="f4bd6-113">Określa, że wartości w określonej właściwości powinny być sortowane w kolejności rosnącej, od wartości najniższej do najwyższej wartości.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-113">Specifies that the values in the specified property should be sorted in ascending order, from lowest value to highest value.</span></span> <span data-ttu-id="f4bd6-114">Domyślnie włączone.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-114">This is the default.</span></span>  
+ <span data-ttu-id="3812a-112">ASC</span><span class="sxs-lookup"><span data-stu-id="3812a-112">ASC</span></span>  
+ <span data-ttu-id="3812a-113">Określa, że wartości w określonej właściwości powinny być sortowane w kolejności rosnącej, od wartości najniższej do najwyższej wartości.</span><span class="sxs-lookup"><span data-stu-id="3812a-113">Specifies that the values in the specified property should be sorted in ascending order, from lowest value to highest value.</span></span> <span data-ttu-id="3812a-114">Domyślnie włączone.</span><span class="sxs-lookup"><span data-stu-id="3812a-114">This is the default.</span></span>  
   
- <span data-ttu-id="f4bd6-115">DESC</span><span class="sxs-lookup"><span data-stu-id="f4bd6-115">DESC</span></span>  
- <span data-ttu-id="f4bd6-116">Określa, że wartości w określonej właściwości powinny być sortowane w kolejności malejącej, z najwyższą wartość do najmniejszej wartości.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-116">Specifies that the values in the specified property should be sorted in descending order, from highest value to lowest value.</span></span>  
+ <span data-ttu-id="3812a-115">DESC</span><span class="sxs-lookup"><span data-stu-id="3812a-115">DESC</span></span>  
+ <span data-ttu-id="3812a-116">Określa, że wartości w określonej właściwości powinny być sortowane w kolejności malejącej, z najwyższą wartość do najmniejszej wartości.</span><span class="sxs-lookup"><span data-stu-id="3812a-116">Specifies that the values in the specified property should be sorted in descending order, from highest value to lowest value.</span></span>  
   
- <span data-ttu-id="f4bd6-117">LIMIT `n`</span><span class="sxs-lookup"><span data-stu-id="f4bd6-117">LIMIT `n`</span></span>  
- <span data-ttu-id="f4bd6-118">Tylko pierwszy `n` zostaną wybrane elementy.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-118">Only the first `n` items will be selected.</span></span>  
+ <span data-ttu-id="3812a-117">LIMIT `n`</span><span class="sxs-lookup"><span data-stu-id="3812a-117">LIMIT `n`</span></span>  
+ <span data-ttu-id="3812a-118">Tylko pierwszy `n` zostaną wybrane elementy.</span><span class="sxs-lookup"><span data-stu-id="3812a-118">Only the first `n` items will be selected.</span></span>  
   
- <span data-ttu-id="f4bd6-119">SKIP `n`</span><span class="sxs-lookup"><span data-stu-id="f4bd6-119">SKIP `n`</span></span>  
- <span data-ttu-id="f4bd6-120">Pominie pierwszy `n` elementów.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-120">Skips the first `n` items.</span></span>  
+ <span data-ttu-id="3812a-119">SKIP `n`</span><span class="sxs-lookup"><span data-stu-id="3812a-119">SKIP `n`</span></span>  
+ <span data-ttu-id="3812a-120">Pominie pierwszy `n` elementów.</span><span class="sxs-lookup"><span data-stu-id="3812a-120">Skips the first `n` items.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f4bd6-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f4bd6-121">Remarks</span></span>  
- <span data-ttu-id="f4bd6-122">Klauzula ORDER BY logicznie jest stosowany do wyniku klauzuli SELECT.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-122">The ORDER BY clause is logically applied to the result of the SELECT clause.</span></span> <span data-ttu-id="f4bd6-123">Klauzuli ORDER BY może odwoływać się do elementów na liście wyboru przy użyciu ich aliasów.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-123">The ORDER BY clause can reference items in the select list by using their aliases.</span></span> <span data-ttu-id="f4bd6-124">Klauzula ORDER BY może także odwoływać się inne zmienne, które są obecnie w zakresie.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-124">The ORDER BY clause can also reference other variables that are currently in-scope.</span></span> <span data-ttu-id="f4bd6-125">Jednakże jeśli określono klauzuli SELECT DISTINCT modyfikatorem klauzuli ORDER BY może odwoływać się tylko aliasów w klauzuli SELECT.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-125">However, if the SELECT clause has been specified with a DISTINCT modifier, the ORDER BY clause can only reference aliases from the SELECT clause.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3812a-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3812a-121">Remarks</span></span>  
+ <span data-ttu-id="3812a-122">Klauzula ORDER BY logicznie jest stosowany do wyniku klauzuli SELECT.</span><span class="sxs-lookup"><span data-stu-id="3812a-122">The ORDER BY clause is logically applied to the result of the SELECT clause.</span></span> <span data-ttu-id="3812a-123">Klauzuli ORDER BY może odwoływać się do elementów na liście wyboru przy użyciu ich aliasów.</span><span class="sxs-lookup"><span data-stu-id="3812a-123">The ORDER BY clause can reference items in the select list by using their aliases.</span></span> <span data-ttu-id="3812a-124">Klauzula ORDER BY może także odwoływać się inne zmienne, które są obecnie w zakresie.</span><span class="sxs-lookup"><span data-stu-id="3812a-124">The ORDER BY clause can also reference other variables that are currently in-scope.</span></span> <span data-ttu-id="3812a-125">Jednakże jeśli określono klauzuli SELECT DISTINCT modyfikatorem klauzuli ORDER BY może odwoływać się tylko aliasów w klauzuli SELECT.</span><span class="sxs-lookup"><span data-stu-id="3812a-125">However, if the SELECT clause has been specified with a DISTINCT modifier, the ORDER BY clause can only reference aliases from the SELECT clause.</span></span>  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
   
- <span data-ttu-id="f4bd6-126">Każde wyrażenie w klauzuli ORDER BY muszą być pewnego typu, który można porównać pod kątem nierówności uporządkowanym, (mniejsze lub większe niż, i tak dalej).</span><span class="sxs-lookup"><span data-stu-id="f4bd6-126">Each expression in the ORDER BY clause must evaluate to some type that can be compared for ordered inequality (less than or greater than, and so on).</span></span> <span data-ttu-id="f4bd6-127">Te typy są zazwyczaj skalarną w nim elementów podstawowych, takich jak liczby, ciągi i daty.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-127">These types are generally scalar primitives such as numbers, strings, and dates.</span></span> <span data-ttu-id="f4bd6-128">RowTypes porównywalnych typów są również porównywanie kolejności.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-128">RowTypes of comparable types are also order comparable.</span></span>  
+ <span data-ttu-id="3812a-126">Każde wyrażenie w klauzuli ORDER BY muszą być pewnego typu, który można porównać pod kątem nierówności uporządkowanym, (mniejsze lub większe niż, i tak dalej).</span><span class="sxs-lookup"><span data-stu-id="3812a-126">Each expression in the ORDER BY clause must evaluate to some type that can be compared for ordered inequality (less than or greater than, and so on).</span></span> <span data-ttu-id="3812a-127">Te typy są zazwyczaj skalarną w nim elementów podstawowych, takich jak liczby, ciągi i daty.</span><span class="sxs-lookup"><span data-stu-id="3812a-127">These types are generally scalar primitives such as numbers, strings, and dates.</span></span> <span data-ttu-id="3812a-128">RowTypes porównywalnych typów są również porównywanie kolejności.</span><span class="sxs-lookup"><span data-stu-id="3812a-128">RowTypes of comparable types are also order comparable.</span></span>  
   
- <span data-ttu-id="f4bd6-129">Jeśli Twój kod wykonuje iterację na uporządkowany zestaw, innego niż projekcji najwyższego poziomu, dane wyjściowe nie gwarantuje jego zamówienia zachowywane są.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-129">If your code iterates over an ordered set, other than for a top-level projection, the output is not guaranteed to have its order preserved.</span></span>  
+ <span data-ttu-id="3812a-129">Jeśli Twój kod wykonuje iterację na uporządkowany zestaw, innego niż projekcji najwyższego poziomu, dane wyjściowe nie gwarantuje jego zamówienia zachowywane są.</span><span class="sxs-lookup"><span data-stu-id="3812a-129">If your code iterates over an ordered set, other than for a top-level projection, the output is not guaranteed to have its order preserved.</span></span>  
   
 ```  
 -- In the following sample, order is guaranteed to be preserved:  
@@ -68,7 +68,7 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
- <span data-ttu-id="f4bd6-130">Aby zostały uporządkowane UNION, UNION ALL, EXCEPT lub INTERSECT operację, należy użyć następującego wzorca:</span><span class="sxs-lookup"><span data-stu-id="f4bd6-130">To have an ordered UNION, UNION ALL, EXCEPT, or INTERSECT operation, use the following pattern:</span></span>  
+ <span data-ttu-id="3812a-130">Aby zostały uporządkowane UNION, UNION ALL, EXCEPT lub INTERSECT operację, należy użyć następującego wzorca:</span><span class="sxs-lookup"><span data-stu-id="3812a-130">To have an ordered UNION, UNION ALL, EXCEPT, or INTERSECT operation, use the following pattern:</span></span>  
   
 ```  
 SELECT ...  
@@ -76,29 +76,29 @@ FROM ( UNION/EXCEPT/INTERSECT operation )
 ORDER BY ...  
 ```  
   
-## <a name="restricted-keywords"></a><span data-ttu-id="f4bd6-131">Ograniczone słów kluczowych</span><span class="sxs-lookup"><span data-stu-id="f4bd6-131">Restricted keywords</span></span>  
- <span data-ttu-id="f4bd6-132">Następujące słowa kluczowe muszą być ujęte w znaki cudzysłowu, gdy są używane w `ORDER BY` klauzuli:</span><span class="sxs-lookup"><span data-stu-id="f4bd6-132">The following keywords must be enclosed in quotation marks when used in an `ORDER BY` clause:</span></span>  
+## <a name="restricted-keywords"></a><span data-ttu-id="3812a-131">Ograniczone słów kluczowych</span><span class="sxs-lookup"><span data-stu-id="3812a-131">Restricted keywords</span></span>  
+ <span data-ttu-id="3812a-132">Następujące słowa kluczowe muszą być ujęte w znaki cudzysłowu, gdy są używane w `ORDER BY` klauzuli:</span><span class="sxs-lookup"><span data-stu-id="3812a-132">The following keywords must be enclosed in quotation marks when used in an `ORDER BY` clause:</span></span>  
   
-- <span data-ttu-id="f4bd6-133">CROSS</span><span class="sxs-lookup"><span data-stu-id="f4bd6-133">CROSS</span></span>  
+- <span data-ttu-id="3812a-133">CROSS</span><span class="sxs-lookup"><span data-stu-id="3812a-133">CROSS</span></span>  
   
-- <span data-ttu-id="f4bd6-134">FULL</span><span class="sxs-lookup"><span data-stu-id="f4bd6-134">FULL</span></span>  
+- <span data-ttu-id="3812a-134">FULL</span><span class="sxs-lookup"><span data-stu-id="3812a-134">FULL</span></span>  
   
-- <span data-ttu-id="f4bd6-135">KEY</span><span class="sxs-lookup"><span data-stu-id="f4bd6-135">KEY</span></span>  
+- <span data-ttu-id="3812a-135">KEY</span><span class="sxs-lookup"><span data-stu-id="3812a-135">KEY</span></span>  
   
-- <span data-ttu-id="f4bd6-136">PO LEWEJ STRONIE</span><span class="sxs-lookup"><span data-stu-id="f4bd6-136">LEFT</span></span>  
+- <span data-ttu-id="3812a-136">PO LEWEJ STRONIE</span><span class="sxs-lookup"><span data-stu-id="3812a-136">LEFT</span></span>  
   
-- <span data-ttu-id="f4bd6-137">KOLEJNOŚĆ</span><span class="sxs-lookup"><span data-stu-id="f4bd6-137">ORDER</span></span>  
+- <span data-ttu-id="3812a-137">KOLEJNOŚĆ</span><span class="sxs-lookup"><span data-stu-id="3812a-137">ORDER</span></span>  
   
-- <span data-ttu-id="f4bd6-138">ZEWNĘTRZNE</span><span class="sxs-lookup"><span data-stu-id="f4bd6-138">OUTER</span></span>  
+- <span data-ttu-id="3812a-138">ZEWNĘTRZNE</span><span class="sxs-lookup"><span data-stu-id="3812a-138">OUTER</span></span>  
   
-- <span data-ttu-id="f4bd6-139">PO PRAWEJ STRONIE</span><span class="sxs-lookup"><span data-stu-id="f4bd6-139">RIGHT</span></span>  
+- <span data-ttu-id="3812a-139">PO PRAWEJ STRONIE</span><span class="sxs-lookup"><span data-stu-id="3812a-139">RIGHT</span></span>  
   
-- <span data-ttu-id="f4bd6-140">ROW</span><span class="sxs-lookup"><span data-stu-id="f4bd6-140">ROW</span></span>  
+- <span data-ttu-id="3812a-140">ROW</span><span class="sxs-lookup"><span data-stu-id="3812a-140">ROW</span></span>  
   
-- <span data-ttu-id="f4bd6-141">WARTOŚĆ</span><span class="sxs-lookup"><span data-stu-id="f4bd6-141">VALUE</span></span>  
+- <span data-ttu-id="3812a-141">WARTOŚĆ</span><span class="sxs-lookup"><span data-stu-id="3812a-141">VALUE</span></span>  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="f4bd6-142">Określanie kolejności zapytań zagnieżdżonej</span><span class="sxs-lookup"><span data-stu-id="f4bd6-142">Ordering Nested Queries</span></span>  
- <span data-ttu-id="f4bd6-143">Platformy Entity Framework zagnieżdżone wyrażenie można umieścić w dowolnym miejscu w zapytania. kolejność zapytanie zagnieżdżone nie są zachowywane.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-143">In the Entity Framework, a nested expression can be placed anywhere in the query; the order of a nested query is not preserved.</span></span>  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="3812a-142">Określanie kolejności zapytań zagnieżdżonej</span><span class="sxs-lookup"><span data-stu-id="3812a-142">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="3812a-143">Platformy Entity Framework zagnieżdżone wyrażenie można umieścić w dowolnym miejscu w zapytania. kolejność zapytanie zagnieżdżone nie są zachowywane.</span><span class="sxs-lookup"><span data-stu-id="3812a-143">In the Entity Framework, a nested expression can be placed anywhere in the query; the order of a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by the last name.  
@@ -115,19 +115,19 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="f4bd6-144">Przykład</span><span class="sxs-lookup"><span data-stu-id="f4bd6-144">Example</span></span>  
- <span data-ttu-id="f4bd6-145">Następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytanie używa operatora w klauzuli ORDER BY, aby określić kolejność sortowania na obiekty zwrócone w instrukcji SELECT.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-145">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ORDER BY operator to specify the sort order used on objects returned in a SELECT statement.</span></span> <span data-ttu-id="f4bd6-146">Zapytanie jest oparty na modelu sprzedaży AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="f4bd6-146">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="f4bd6-147">Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:</span><span class="sxs-lookup"><span data-stu-id="f4bd6-147">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="3812a-144">Przykład</span><span class="sxs-lookup"><span data-stu-id="3812a-144">Example</span></span>  
+ <span data-ttu-id="3812a-145">Następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytanie używa operatora w klauzuli ORDER BY, aby określić kolejność sortowania na obiekty zwrócone w instrukcji SELECT.</span><span class="sxs-lookup"><span data-stu-id="3812a-145">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ORDER BY operator to specify the sort order used on objects returned in a SELECT statement.</span></span> <span data-ttu-id="3812a-146">Zapytanie jest oparty na modelu sprzedaży AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="3812a-146">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="3812a-147">Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:</span><span class="sxs-lookup"><span data-stu-id="3812a-147">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="f4bd6-148">Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="f4bd6-148">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="3812a-148">Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="3812a-148">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="f4bd6-149">Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:</span><span class="sxs-lookup"><span data-stu-id="f4bd6-149">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="3812a-149">Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:</span><span class="sxs-lookup"><span data-stu-id="3812a-149">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   
-## <a name="see-also"></a><span data-ttu-id="f4bd6-150">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f4bd6-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3812a-150">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3812a-150">See also</span></span>
 
-- [<span data-ttu-id="f4bd6-151">Wyrażenia zapytania</span><span class="sxs-lookup"><span data-stu-id="f4bd6-151">Query Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [<span data-ttu-id="f4bd6-152">Odwołanie do jednostki SQL</span><span class="sxs-lookup"><span data-stu-id="f4bd6-152">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="f4bd6-153">SKIP</span><span class="sxs-lookup"><span data-stu-id="f4bd6-153">SKIP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [<span data-ttu-id="f4bd6-154">LIMIT</span><span class="sxs-lookup"><span data-stu-id="f4bd6-154">LIMIT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [<span data-ttu-id="f4bd6-155">TOP</span><span class="sxs-lookup"><span data-stu-id="f4bd6-155">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [<span data-ttu-id="3812a-151">Wyrażenia zapytania</span><span class="sxs-lookup"><span data-stu-id="3812a-151">Query Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [<span data-ttu-id="3812a-152">Odwołanie do jednostki SQL</span><span class="sxs-lookup"><span data-stu-id="3812a-152">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="3812a-153">SKIP</span><span class="sxs-lookup"><span data-stu-id="3812a-153">SKIP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
+- [<span data-ttu-id="3812a-154">LIMIT</span><span class="sxs-lookup"><span data-stu-id="3812a-154">LIMIT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
+- [<span data-ttu-id="3812a-155">TOP</span><span class="sxs-lookup"><span data-stu-id="3812a-155">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

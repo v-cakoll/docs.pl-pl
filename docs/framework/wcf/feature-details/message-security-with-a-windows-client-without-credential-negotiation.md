@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0e4ac18d4c5835f3bd0539f2a79d68b59860b6e6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038608"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637939"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez protokół Kerberos.  
@@ -24,11 +24,11 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Komunikat|  
+|Tryb zabezpieczeń|Message|  
 |Współdziałanie|Tak, WS-Security-Kerberos tokenu profilu zgodnych klientów|  
 |Uwierzytelnianie (serwer)|Wzajemne uwierzytelnianie serwera i klienta|  
 |Uwierzytelnianie (klient)|Wzajemne uwierzytelnianie serwera i klienta|  
-|Integralność|Yes|  
+|Integralność|Tak|  
 |Poufność|Tak|  
 |Transport|HTTP|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  

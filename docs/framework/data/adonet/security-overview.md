@@ -2,12 +2,12 @@
 title: Overview2 zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4960959dfe6f485a96d29a5da43c2b8c6c98fe3a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664158"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649601"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w której deweloper może zagwarantować, czy aplikacja jest bezpieczne przed atakami wszystkich, ponieważ nie jest możliwe do przewidzenia, jakie rodzaje nowe technologie atakom w przyszłości nastąpi. Z drugiej strony po prostu, ponieważ nikt nie ma luki w zabezpieczeniach jeszcze odnalezionych (lub opublikowany) w systemie nie oznacza brak istnieje, lub może istnieć. Należy Planowanie zabezpieczeń w fazie projektowania projektu, a także zaplanować, jak zabezpieczenia zostaną zachowane w okresie istnienia aplikacji.  

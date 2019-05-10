@@ -2,12 +2,12 @@
 title: Chmury PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641986"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623030"
 ---
 # <a name="pnrp-clouds"></a>Chmury PNRP
 PNRP "chmura" reprezentuje zestaw węzłów, które mogą komunikować się ze sobą za pośrednictwem sieci. Termin "chmura" jest synonimem "siatki elementów równorzędnych" i "peer-to-peer grafu".  

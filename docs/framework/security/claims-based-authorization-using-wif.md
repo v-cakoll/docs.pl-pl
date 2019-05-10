@@ -3,12 +3,12 @@ title: Autoryzacja oparta na oświadczeniach przy użyciu programu WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792837"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650450"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autoryzacja oparta na oświadczeniach przy użyciu programu WIF
 W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów może uzyskać dostęp uwierzytelniona tożsamość i jakie operacje może wykonywać w odniesieniu do tych zasobów. Niewłaściwa lub słaba autoryzacja może doprowadzić do ujawnienia informacji i nieuprawnionej modyfikacji danych. W tym temacie opisano dostępne sposoby zaimplementowania autoryzacji dla aplikacji i usług internetowych programu ASP.NET obsługujących oświadczenia, za pomocą programu Windows Identity Foundation (WIF) i usługi tokenu zabezpieczającego (STS), na przykład usługi kontroli dostępu (ACS) systemu Microsoft Azure.  

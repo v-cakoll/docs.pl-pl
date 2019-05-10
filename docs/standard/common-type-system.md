@@ -4,12 +4,12 @@ description: Dowiedz się, jak System typu wspólnego (CTS) i Common Language Sp
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053200"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664515"
 ---
 # <a name="common-type-system--common-language-specification"></a>System typu wspólnego i specyfikacja Common Language Specification
 

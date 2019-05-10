@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936763"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634643"
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządzane w środowisko uruchomieniowe języka wspólnego, a ponadto jest ważną częścią obsługi integracji wielu języków. Wspólny system typów wykonuje następujące funkcje:  

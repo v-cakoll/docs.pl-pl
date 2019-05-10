@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9d9cc44b8a5d43a3fe0414ddeeb51f37e239480b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027176"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647900"
 ---
 # <a name="xml-documents-and-data"></a>Dokumenty i dane XML
 .NET Framework zapewnia kompleksowego i zintegrowanego zestaw klas, które umożliwiają łatwe tworzenie aplikacji z obsługą XML. Klasy w następujące przestrzenie nazw obsługują analizowania i zapisywania, edytowania plików XML danych XML w pamięci, sprawdzanie poprawności danych i transformacji XSLT.  

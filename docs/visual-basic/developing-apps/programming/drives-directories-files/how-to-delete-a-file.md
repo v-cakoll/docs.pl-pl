@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 288c54fa854d753e9b8030463968137b32353b4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dcaf74a6ff99113903f066740ebf143dfad95f74
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038319"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629159"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Instrukcje: Usuń plik w języku Visual Basic
 `DeleteFile` Metody `My.Computer.FileSystem` obiektu umożliwia usunięcie pliku. Spośród opcji oferuje: czy usunięty plik, aby wysłać **Kosza**, czy należy poprosić użytkownika, aby upewnić się, że należy usunąć plik i co należy zrobić, gdy użytkownik anuluje operację.  

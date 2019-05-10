@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 893782e041b1397fe0598394b69575a5c9e53806
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012922"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625399"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy systemu Windows
 Domyślnie w formularzach Windows <xref:System.Windows.Forms.TextBox> kontrolka Wyświetla pojedynczą linie tekstu i nie są wyświetlane paski przewijania. Jeśli tekst jest dłuższy niż dostępna ilość miejsca, tylko część tekstu jest widoczna. To zachowanie domyślne można zmienić, ustawiając <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, i <xref:System.Windows.Forms.TextBox.ScrollBars%2A> właściwości odpowiednie wartości.  

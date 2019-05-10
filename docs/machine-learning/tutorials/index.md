@@ -1,16 +1,16 @@
 ---
-title: .NET usługi machine learning samouczków — strukturze ML.NET
+title: Samouczki strukturze ML.NET
 description: Zapoznaj się z samouczkami strukturze ML.NET, aby dowiedzieć się, jak tworzyć niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 45534e196c2dc0cd1994445eeb482474b32aaa41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 42f781f53c94d9852f2d75117683eb21dd1c5c6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019116"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634791"
 ---
-# <a name="net-machine-learning-tutorials---mlnet"></a>.NET usługi machine learning samouczków — strukturze ML.NET
+# <a name="mlnet-tutorials"></a>Samouczki strukturze ML.NET 
 
 Następujące samouczki umożliwiają zrozumienie metod wykorzystania [strukturze ML.NET](../index.yml) rozwiązania niestandardowego uczenia maszynowego i integrowanie aplikacji .NET:
 

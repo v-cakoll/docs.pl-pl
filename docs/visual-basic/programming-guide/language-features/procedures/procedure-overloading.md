@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 14a31c440861cdc2296bcd02357e5fe0004bf359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791875"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638855"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Przeciążanie procedury (Visual Basic)
 *Przeciążanie* procedury oznacza zdefiniowaniem go w wielu wersjach, przy użyciu takiej samej nazwie, ale listy różnych parametrów. Przeciążanie ma na celu zdefiniować kilka wersji ściśle powiązanych procedury bez konieczności odróżnić je według nazwy. Można to zrobić przez zróżnicowanie listy parametrów.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a5e3e96ce8c8bb3304c8abcc93a881998382c6ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638008"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Zabezpieczenia na poziomie komunikatu z użyciem klienta nazwy użytkownika
 Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klient zabezpieczone przy użyciu zabezpieczeń na poziomie komunikatu. Usługa jest uwierzytelniana przy użyciu certyfikatu X.509. Klient jest uwierzytelniany przy użyciu nazwy użytkownika i hasła.  
@@ -21,7 +21,7 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Komunikat|  
+|Tryb zabezpieczeń|Message|  
 |Współdziałanie|Windows Communication Foundation (WCF) tylko|  
 |Uwierzytelnianie (serwer)|Początkowego negocjowania wymaga uwierzytelniania przez serwer|  
 |Uwierzytelnianie (klient)|Nazwa użytkownika/hasło|  

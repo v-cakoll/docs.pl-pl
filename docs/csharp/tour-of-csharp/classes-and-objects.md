@@ -3,12 +3,12 @@ title: Klasy i obiekty w C# — Przewodnik po przykładzie C# języka
 description: Jesteś nowym użytkownikiem C#? Przeczytaj omówienie klas, obiektów i dziedziczenie
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 36def74888f67dfa216cea7c093d80724e452c7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750388"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -230,7 +230,7 @@ C# obsługuje zarówno wystąpienia i konstruktorów statycznych. *Konstruktora 
 
 Konstruktor jest zadeklarowany jak metody bez zwrotu typu i taką samą nazwę jak klasa zawierająca. Jeśli deklaracja konstruktora zawiera modyfikator statyczny, deklaruje Konstruktor statyczny. W przeciwnym razie deklaruje konstruktora wystąpień.
 
-Konstruktory wystąpień mogą być przeciążone i może mieć następujące parametry opcjonalne. Na przykład `MyList<T>` klasa deklaruje dwa konstruktory wystąpienia, jedno z bez parametrów, a ta, która przyjmuje `int` parametru. Konstruktory wystąpień są wywoływane przy użyciu `new` operatora. Poniższe instrukcje przydzielić dwie `MyList<string>` wystąpień przy użyciu konstruktora `MyList` klasy z lub bez opcjonalny argument.
+Konstruktory wystąpień mogą być przeciążone i może mieć następujące parametry opcjonalne. Na przykład `MyList<T>` klasa deklaruje jeden konstruktor wystąpienia za pomocą jednego opcjonalne `int` parametru. Konstruktory wystąpień są wywoływane przy użyciu `new` operatora. Poniższe instrukcje przydzielić dwie `MyList<string>` wystąpień przy użyciu konstruktora `MyList` klasy z lub bez opcjonalny argument.
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 

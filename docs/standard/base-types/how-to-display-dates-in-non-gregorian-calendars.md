@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051211"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633999"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański
 <xref:System.DateTime> i <xref:System.DateTimeOffset> typy pełnić ich kalendarza domyślnego kalendarza gregoriańskiego. Oznacza to, że wywołanie wartości daty i godziny `ToString` metoda Wyświetla reprezentację ciągu tego dnia i godzina w kalendarzu gregoriańskim, nawet jeśli ta data i godzina utworzenia przy użyciu innego kalendarza. Jest to zilustrowane w poniższym przykładzie, który używa dwa różne sposoby tworzenia wartości daty i godziny przy użyciu kalendarz perski, ale nadal wyświetlana tych wartości daty i godziny w kalendarzu gregoriańskim, gdy wywołuje <xref:System.DateTime.ToString%2A> metody. W tym przykładzie odzwierciedla dwie techniki często używane, ale niepoprawny do wyświetlania datę w określonym kalendarzu.  

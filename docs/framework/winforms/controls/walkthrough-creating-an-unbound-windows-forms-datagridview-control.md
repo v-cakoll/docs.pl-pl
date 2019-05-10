@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ba821b461434cb7a5247d2962a161a1c171bbd14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792265"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651459"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Przewodnik: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows
 Można często wyświetlić dane tabelaryczne, która nie pochodzi z bazy danych. Na przykład można wyświetlić zawartości dwuwymiarową tablicę ciągów. <xref:System.Windows.Forms.DataGridView> Klasy umożliwia łatwe i dużym stopniu dostosowywane do wyświetlania danych bez powiązania ze źródłem danych. W tym instruktażu pokazano, jak wypełnić <xref:System.Windows.Forms.DataGridView> sterowania i zarządzania nimi dodawania i usuwania wierszy w trybie "niepowiązanych". Domyślnie użytkownik może dodawać nowe wiersze. Aby zapobiec wierszy, ustawianie <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> właściwość `false`.  

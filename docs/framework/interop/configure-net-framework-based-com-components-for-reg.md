@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625450"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework
 Aktywacji bez rejestracji dla składników opartych na programie .NET Framework jest tylko nieco bardziej skomplikowane niż jest dla składników COM. Instalator wymaga dwóch manifesty:  
@@ -107,7 +107,7 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
   
     |Atrybut|Opis|Wymagane|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Identyfikator, który określa klasę do aktywacji.|Yes|  
+    |`clsid`|Identyfikator, który określa klasę do aktywacji.|Tak|  
     |`description`|Ciąg, który informuje użytkownika o informacje o składniku. Pusty ciąg jest ustawieniem domyślnym.|Nie|  
     |`name`|Ciąg, który reprezentuje klasy zarządzanej.|Tak|  
     |`progid`|Identyfikator, który ma być używany do aktywacji z późnym wiązaniem.|Nie|  

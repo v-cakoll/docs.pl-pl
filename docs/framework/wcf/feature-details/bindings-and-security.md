@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857795"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650334"
 ---
 # <a name="bindings-and-security"></a>Wiązania i zabezpieczenia
 Powiązania dostarczane przez system, dołączone za pomocą programu Windows Communication Foundation (WCF) oferują szybki sposób program aplikacji WCF. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. W tym temacie pomaga wybrać odpowiednie powiązanie dla wymagania w zakresie zabezpieczeń.  
@@ -183,7 +183,7 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
 |Ustawienie|Funkcje|  
 |-------------|--------------|  
 |Transport|Uwierzytelnianie serwera<br /><br /> Uwierzytelnianie klienta<br /><br /> Bezpieczeństwo typu punkt-punkt<br /><br /> Współdziałanie<br /><br /> Przyspieszanie sprzętowe<br /><br /> Wysoka przepływność<br /><br /> Zabezpieczanie zapory<br /><br /> Aplikacje z dużym opóźnieniem<br /><br /> Ponownie szyfrować w wielu przeskoków|  
-|Komunikat|Uwierzytelnianie serwera<br /><br /> Uwierzytelnianie klienta<br /><br /> Zabezpieczenia end-to-end<br /><br /> Współdziałanie<br /><br /> Rozbudowane oświadczeń<br /><br /> Federacja<br /><br /> Uwierzytelnianie wieloskładnikowe<br /><br /> Tokeny niestandardowe<br /><br /> Usługa notariusz/sygnatura czasowa<br /><br /> Aplikacje z dużym opóźnieniem<br /><br /> Stan trwały komunikat podpisów|  
+|Message|Uwierzytelnianie serwera<br /><br /> Uwierzytelnianie klienta<br /><br /> Zabezpieczenia end-to-end<br /><br /> Współdziałanie<br /><br /> Rozbudowane oświadczeń<br /><br /> Federacja<br /><br /> Uwierzytelnianie wieloskładnikowe<br /><br /> Tokeny niestandardowe<br /><br /> Usługa notariusz/sygnatura czasowa<br /><br /> Aplikacje z dużym opóźnieniem<br /><br /> Stan trwały komunikat podpisów|  
 |TransportWithMessageCredential|Uwierzytelnianie serwera<br /><br /> Uwierzytelnianie klienta<br /><br /> Bezpieczeństwo typu punkt-punkt<br /><br /> Współdziałanie<br /><br /> Przyspieszanie sprzętowe<br /><br /> Wysoka przepływność<br /><br /> Oświadczenia wzbogaconego klienta<br /><br /> Federacja<br /><br /> Uwierzytelnianie wieloskładnikowe<br /><br /> Tokeny niestandardowe<br /><br /> Zabezpieczanie zapory<br /><br /> Aplikacje z dużym opóźnieniem<br /><br /> Ponownie szyfrować w wielu przeskoków|  
   
  W poniższej tabeli wymieniono powiązania, które obsługują różne ustawienia trybu. Wybierz powiązanie z tabeli, aby użyć do utworzenia punktu końcowego usługi.  

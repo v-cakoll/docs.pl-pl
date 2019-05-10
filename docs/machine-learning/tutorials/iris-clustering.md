@@ -1,24 +1,19 @@
 ---
-title: Kwiatów iris klastra przy użyciu klastrowania uczeń - strukturze ML.NET
+title: Klasyfikowanie irysów kwiatów przy użyciu model klastrowania
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klastrowania
 author: pkulikov
 ms.author: johalex
-ms.date: 04/08/2019
+ms.date: 05/02/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7070189e289e8e18ba0d122d2411a9064182e2b1
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019051"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063563"
 ---
-# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Samouczek: Kwiatów iris klastra przy użyciu klastrowania uczeń za pomocą platformy ML.NET
-
-> [!NOTE]
-> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [Wprowadzenie do struktury ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET 1.0 RC (w wersji Release Candidate) (wersja `1.0.0-preview`)**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+# <a name="tutorial-categorize-iris-flowers-using-a-clustering-model-with-mlnet"></a>Samouczek: Klasyfikowanie irysów kwiatów przy użyciu klastrowania modelu za pomocą platformy ML.NET
 
 W tym samouczku pokazano, jak za pomocą strukturze ML.NET tworzyć [model klastra](../resources/tasks.md#clustering) dla [zbiór danych na temat irysów](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
@@ -46,7 +41,7 @@ Nie wiesz, grupę, do której należy każdego Kwiatek, możesz wybrać [nienadz
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
-1. Otwórz program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W **nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "IrisFlowerClustering", a następnie wybierz **OK** przycisku.
+1. Otwórz program Visual Studio. Wybierz **pliku** > **New** > **projektu** z paska menu. W **nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "IrisFlowerClustering", a następnie wybierz **OK** przycisku.
 
 1. Utwórz katalog o nazwie *danych* w projekcie do przechowywania plików modelu i zestaw danych:
 
@@ -54,7 +49,7 @@ Nie wiesz, grupę, do której należy każdego Kwiatek, możesz wybrać [nienadz
 
 1. Zainstaluj **Microsoft.ML** pakietu NuGet:
 
-    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** kartę, wyszukaj **Microsoft.ML**, a następnie wybierz pakiet z listy i wybierz **zainstalować** przycisku. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na **akceptacja licencji** okno dialogowe Jeśli możesz Akceptuję postanowienia licencyjne dla pakietów wymienionych.
+    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** kartę, wyszukaj **Microsoft.ML**, wybierz opcję **1.0.0** pakietu na liście, a następnie wybierz pozycję  **Zainstaluj** przycisku. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na **akceptacja licencji** okno dialogowe Jeśli możesz Akceptuję postanowienia licencyjne dla pakietów wymienionych.
 
 ## <a name="prepare-the-data"></a>Przygotowywanie danych
 

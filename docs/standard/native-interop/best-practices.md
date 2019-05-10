@@ -4,12 +4,12 @@ description: Dowiedz się, najlepsze rozwiązania dotyczące komunikacji z usłu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973605"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063081"
 ---
 # <a name="native-interoperability-best-practices"></a>Współdziałanie natywne najlepszych rozwiązań
 
@@ -33,7 +33,7 @@ Wskazówki zawarte w tej sekcji ma zastosowanie do wszystkich scenariuszy międz
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Zachowaj domyślne  | Jeśli jawnie ustawiono na zwracane wartości HRESULT false, zakończone niepowodzeniem, zostanie włączony do wyjątków (i wartość zwracana w definicji staje się wartości null w wyniku).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | zależy od interfejsu API  | Ustaw na wartość true, jeśli interfejs API korzysta GetLastError i użyj Marshal.GetLastWin32Error, aby uzyskać wartość. Jeśli interfejs API określa warunek, stwierdzający, że ma błąd, komunikat o błędzie przed wprowadzeniem innych wywołań, aby uniknąć przypadkowego on zastąpiony.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, która przechodzi do `CharSet.Ansi` zachowanie  | Jawnie użyć `CharSet.Unicode` lub `CharSet.Ansi` kiedy ciągów lub znaki są obecne w definicji | Określa zachowanie kierujące ciągi i co `ExactSpelling` gdy `false`. Należy pamiętać, że `CharSet.Ansi` jest faktycznie UTF8 w systemach Unix. _Większość_ czasu Windows używa Unicode, podczas gdy Unix używa UTF8. Zobacz więcej informacji na [dokumentację dotyczącą zestawów znaków](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, która przechodzi do `CharSet.Ansi` zachowanie  | Jawnie użyć `CharSet.Unicode` lub `CharSet.Ansi` kiedy ciągów lub znaki są obecne w definicji | Określa zachowanie marshalingu ciągów i co `ExactSpelling` gdy `false`. Należy pamiętać, że `CharSet.Ansi` jest faktycznie UTF8 w systemach Unix. _Większość_ czasu Windows używa Unicode, podczas gdy Unix używa UTF8. Zobacz więcej informacji na [dokumentację dotyczącą zestawów znaków](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Ustaw tę wartość true, i uzyskać korzyści wydajności niewielkie, ponieważ środowisko wykonawcze nie będzie szukać funkcji alternatywne nazwy z sufiksem "A" lub "W" w zależności od wartości `CharSet` ustawienie ("A", aby uzyskać `CharSet.Ansi` i "T" dla `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Parametry ciągu
@@ -44,7 +44,7 @@ Pamiętaj, aby oznaczyć `[DllImport]` jako `Charset.Unicode` , chyba że jawnie
 
 **NIE OBSŁUGUJĄ ❌** użyj `[Out] string` parametrów. Ciąg parametrów przekazywanych przez wartość z `[Out]` atrybutu mogą destabilizować środowisko wykonawcze, jeśli ciąg jest ciągiem interned. Zobacz więcej informacji na temat w dokumentacji dotyczącej wewnętrzne przygotowanie ciągu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**Należy UNIKAĆ ❌** `StringBuilder` parametrów. `StringBuilder` kierowania *zawsze* tworzona jest kopia natywnych buforu. W efekcie może być bardzo mało wydajne. Wykonaj typowy scenariusz wywołania interfejsu API Windows, która przyjmuje ciąg:
+**Należy UNIKAĆ ❌** `StringBuilder` parametrów. `StringBuilder` marshaling *zawsze* tworzona jest kopia natywnych buforu. W efekcie może być bardzo mało wydajne. Wykonaj typowy scenariusz wywołania interfejsu API Windows, która przyjmuje ciąg:
 
 1. Utwórz SB żądaną wydajność (przydziela pojemność zarządzanego) **{1}**
 2. wywoływanie
@@ -57,11 +57,11 @@ Oznacza to *{4}* alokacji można pobrać parametrów z kodu natywnego. Najlepiej
 
 Problem z `StringBuilder` jest zawsze kopiuje buforze kopii zapasowej pierwszej wartości null. Jeśli przekazany ciąg Wstecz nie jest zakończony lub ciąg przerwany wartością null podwójnej precyzji, metody P/Invoke, jest ona niepoprawna w najlepszym.
 
-Jeśli możesz *czy* użyj `StringBuilder`, jeden ostatnie problemy jest, że pojemność nie **nie** obejmują ukryte wartość null, co jest zawsze uwzględnione w międzyoperacyjności. Często użytkownicy będą mogli uzyskać dostęp do tej nieprawidłowy, ponieważ większość interfejsów API mają rozmiar buforu *tym* o wartości null. Może to spowodować zmarnowany niepotrzebnych alokacji. Ponadto to problemy zapobiega środowiska uruchomieniowego optymalizacji `StringBuilder` zarządzany, aby zminimalizować kopii.
+Jeśli możesz *czy* użyj `StringBuilder`, jeden ostatnie problemy jest, że pojemność nie **nie** obejmują ukryte wartość null, co jest zawsze uwzględnione w międzyoperacyjności. Często użytkownicy będą mogli uzyskać dostęp do tej nieprawidłowy, ponieważ większość interfejsów API mają rozmiar buforu *tym* o wartości null. Może to spowodować zmarnowany niepotrzebnych alokacji. Ponadto to problemy zapobiega środowiska uruchomieniowego optymalizacji `StringBuilder` organizowania w celu zminimalizowania kopii.
 
 **ROZWAŻ ✔️** przy użyciu `char[]`s z `ArrayPool`.
 
-Aby uzyskać więcej informacji na temat kierowania ciągu, zobacz [domyślne kierowania dla ciągów](../../framework/interop/default-marshaling-for-strings.md) i [Dostosowywanie kierowania ciągu](customize-parameter-marshalling.md#customizing-string-parameters).
+Aby uzyskać więcej informacji na temat marshaling ciągów, zobacz [domyślny Marshaling dla ciągów](../../framework/interop/default-marshaling-for-strings.md) i [Dostosowywanie marshaling ciągów](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Windows określonego__  
 > Dla `[Out]` użyje ciągi CLR `CoTaskMemFree` domyślnie, aby zwolnić ciągów lub `SysStringFree` dla ciągów, które są oznaczone jako `UnmanagedType.BSTR`.  
@@ -73,7 +73,7 @@ Aby uzyskać więcej informacji na temat kierowania ciągu, zobacz [domyślne ki
 
 ## <a name="boolean-parameters-and-fields"></a>Wartość logiczna parametry i pola
 
-Wartości logiczne są łatwe do awarię. Domyślnie .NET `bool` jest skierowany do Windows `BOOL`, gdzie jest to wartość 4-bajtowe. Jednak `_Bool`, i `bool` typy w językach C i C++ są *pojedynczego* bajtów. Może to prowadzić do trudne do śledzenia usterek jako pół wartość zwracaną zostaną odrzucone, który będzie tylko *potencjalnie* zmienić wynik. Aby uzyskać więcej informacji na temat kierowania .NET `bool` wartości języka C lub C++ `bool` typów, zobacz dokumentację na [Dostosowywanie pola logicznych kierowania](customize-struct-marshalling.md#customizing-boolean-field-marshalling).
+Wartości logiczne są łatwe do awarię. Domyślnie .NET `bool` jest przekazywane do Windows `BOOL`, gdzie jest to wartość 4-bajtowe. Jednak `_Bool`, i `bool` typy w językach C i C++ są *pojedynczego* bajtów. Może to prowadzić do trudne do śledzenia usterek jako pół wartość zwracaną zostaną odrzucone, który będzie tylko *potencjalnie* zmienić wynik. Aby uzyskać więcej informacji na temat przekazywania międzyprocesowego .NET `bool` wartości języka C lub C++ `bool` typów, zobacz dokumentację na [Dostosowywanie pola logicznych marshaling](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>Identyfikatory GUID
 
@@ -87,7 +87,7 @@ Identyfikatory GUID są użyteczne bezpośrednio w sygnaturach. Wiele interfejs�
 
 ## <a name="blittable-types"></a>Typy Kopiowalne
 
-Typy Kopiowalne są typy, które mają tę samą reprezentację bitowy poziom w kodu zarządzanego i natywnego. Jako takie nie należy do innego formatu w celu skierowany, do i z kodu natywnego, a ponieważ zwiększa to wydajność powinna być preferowane.
+Typy Kopiowalne są typy, które mają tę samą reprezentację bitowy poziom w kodu zarządzanego i natywnego. Jako takie nie należy do innego formatu w celu być przekazywane do i z kodu natywnego, a ponieważ zwiększa to wydajność powinna być preferowane.
 
 **Typy Kopiowalne:**
 
@@ -126,7 +126,7 @@ Zostanie wyświetlony, jeśli typ jest danych kopiowalnych, próbując utworzyć
 Aby uzyskać więcej informacji, zobacz:
 
 - [Typy kopiowalne i niekopiowalne](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Typ zarządzany](type-marshalling.md)
+- [Marshaling typów](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Utrzymywanie zarządzane obiekty aktywne
 
@@ -210,7 +210,7 @@ Windows `PVOID` czyli C `void*` może być organizowany jako `IntPtr` lub `UIntP
 
 Zarządzane struktury są tworzone na stosie i nie są usuwane, dopóki metoda zwraca wartość. Zgodnie z definicją następnie one są "przypięte" (go nie uzyskać przeniesione, GC). Możesz też po prostu korzystać z adresu w niebezpieczny kod bloki kodu natywnego nie użycia wskaźnika poza końcem bieżącej metody.
 
-Struktury danych Kopiowalnych są znacznie wydajniej zgodnie z ich zastosowania po prostu bezpośrednio przez zarządzany warstwy. Spróbuj poprowadzić struktur danych kopiowalnych (na przykład należy unikać `bool`). Aby uzyskać więcej informacji, zobacz [Kopiowalnymi](#blittable-types) sekcji.
+Struktury danych Kopiowalnych są znacznie wydajniej zgodnie z ich zastosowania po prostu bezpośrednio przez warstwę organizowania. Spróbuj poprowadzić struktur danych kopiowalnych (na przykład należy unikać `bool`). Aby uzyskać więcej informacji, zobacz [Kopiowalnymi](#blittable-types) sekcji.
 
 *Jeśli* struktury jest możliwość kopiowania, użyj `sizeof()` zamiast `Marshal.SizeOf<MyStruct>()` zapewnienia lepszej wydajności. Jak wspomniano powyżej, można sprawdzić, czy typ jest możliwość kopiowania, próbując utworzyć z przypiętym `GCHandle`. Jeśli typ nie jest ciągiem lub uznawane za danych kopiowalnych, `GCHandle.Alloc` zgłosi `ArgumentException`.
 
@@ -245,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-Istnieją jednak pewne pytań za pomocą stałych buforów. Stałe bufory typów niekopiowalnych nie będą poprawnie skierowany, więc musi tablicy w miejscu, do wyodrębnienia się do wielu poszczególnych pól. Ponadto w .NET Framework i .NET Core przed 3.0, jeśli struktury zawierającej pole ustalony bufor jest zagnieżdżony w obrębie struktury niekopiowalnych pola ustalony bufor nie będzie można poprawnie skierowany do kodu macierzystego.
+Istnieją jednak pewne pytań za pomocą stałych buforów. Stałe bufory typów niekopiowalnych nie będzie można zorganizować poprawnie, więc tablica w miejscu wymaga do wyodrębnienia się do wielu poszczególnych pól. Ponadto w .NET Framework i .NET Core przed 3.0, jeśli struktury zawierającej pole ustalony bufor jest zagnieżdżony w obrębie struktury niekopiowalnych pola ustalony bufor nie będzie można poprawnie zorganizować kodu natywnego.

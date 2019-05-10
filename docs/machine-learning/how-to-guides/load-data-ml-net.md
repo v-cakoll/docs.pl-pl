@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Ładowanie danych w strukturze ML.NET'
+title: Ładowanie danych
 description: Załaduj plik danych i danych przesyłanych strumieniowo w strukturze ML.NET
-ms.date: 04/03/2019
+ms.date: 05/03/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7702c626aa79c7b661638df5a5f0f90f821b32f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650391"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063653"
 ---
-# <a name="how-to-learn-how-to-load-data-from-file-and-real-time-sources-in-mlnet"></a>Instrukcje: Dowiedz się, jak załadować dane z pliku i źródeł w czasie rzeczywistym w strukturze ML.NET
+# <a name="load-data-from-file-and-in-memory-sources"></a>Ładowanie danych ze źródeł plików i w pamięci
 
 Niniejszy instruktaż przedstawia sposób ładowania danych do przetwarzania i szkolenia w strukturze ML.NET. Dane początkowo są przechowywane w plikach lub źródeł danych w czasie rzeczywistym / przesyłania strumieniowego.
 

@@ -2,12 +2,12 @@
 title: Tworzenie długo działającej usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048143"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063798"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. Długotrwałe usług przepływu pracy może działać przez dłuższy czas. W pewnym momencie przepływu pracy może być bezczynny, oczekiwanie na kilku dodatkowych informacji. W takim przypadku przepływ pracy jest trwały do usługi SQL database i zostanie usunięty z pamięci. Po udostępnieniu dodatkowych informacji wystąpienia przepływu pracy jest ładowany do pamięci i kontynuuje wykonywanie.  W tym scenariuszu w przypadku wdrażania bardzo uproszczony system zamawiania.  Klient wysyła pierwszy komunikat do usługi przepływu pracy, aby rozpocząć kolejności. Zwraca identyfikator zamówienia dla klienta. W tym momencie Usługa przepływu pracy oczekuje na inny komunikat z klienta i przechodzi w stan bezczynności i jest umieszczone w bazie danych programu SQL Server.  Gdy klient wysyła następnej wiadomości w celu uporządkowania elementów, usługi przepływu pracy jest ładowany do pamięci i zakończeniu przetwarzania zamówienia. W przykładowym kodzie zwraca ciąg z informacją, że element został dodany do zamówienia. Przykładowy kod nie jest przeznaczona do rzeczywistej aplikacji w technologii, ale raczej prosty przykład ilustrujący długo działającej usługi przepływu pracy. W tym temacie założono, że wiesz, jak tworzyć projekty programu Visual Studio 2012 i rozwiązań.
@@ -100,10 +100,15 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
     1. Wybierz **sekwencji** zawiera nowo dodanych **Receive** i **SendReply** działania i kliknij przycisk **zmienne** przycisku. Dodaj zmienną wyróżnione na poniższej ilustracji:
 
          ![Dodawanie nowych zmiennych](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "Dodaj zmienną identyfikator elementu.")
+         
+         Również dodać `orderResult` jako **ciąg** w `Sequence` zakresu.
 
     2. Wybierz **Receive** działania i ustaw właściwości pokazane na poniższej ilustracji:
 
          ![Ustaw właściwości działanie Receive](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "ustawiania właściwości działania odbierania.")
+         
+         > [!NOTE]
+         >  Nie zapomnij zmienić **ServiceContractName** pole `../IAddItem`.
 
     3. Kliknij przycisk **zdefiniować...**  łącze w **ReceiveAddItem** działania i Dodaj parametry pokazano na poniższej ilustracji: umożliwia skonfigurowanie działania odbierania i akceptuje dwa parametry: identyfikator zamówienia i identyfikator elementu szeregowane.
 

@@ -3,12 +3,12 @@ title: Standardowe wzorce zdarzeń platformy .NET
 description: Więcej informacji na temat wzorce zdarzeń platformy .NET oraz jak utworzyć źródła zdarzeń w wersji standard i subskrybowanie i przetworzyć standardowych zdarzeń w kodzie.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646634"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062969"
 ---
 # <a name="standard-net-event-patterns"></a>Standardowe wzorce zdarzeń platformy .NET
 
@@ -55,7 +55,7 @@ Najprostszym sposobem, aby dodać wydarzenie do klasy jest można zadeklarować 
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-To wygląda na to jest zadeklarowanie, publiczne pola, które wydają się być złym zwyczajem zorientowane obiektowo. Chcesz chronić dostęp do danych za pomocą właściwości lub metody. Chociaż to, że wygląd złym zwyczajem kod wygenerowany przez kompilator tworzenie otok, tak aby obiekty zdarzeń może zostać oceniony jedynie w bezpieczny sposób. Tylko operacje dostępne dla zdarzenia podobne do pól są Dodaj program obsługi:
+To wygląda na to jest zadeklarowanie, publiczne pola, które wydają się być złym zwyczajem zorientowane obiektowo. Chcesz chronić dostęp do danych za pomocą właściwości lub metody. Chociaż może to wyglądać jak złym zwyczajem, kod wygenerowany przez kompilator tworzenie otok, tak aby obiekty zdarzeń może zostać oceniony jedynie w bezpieczny sposób. Tylko operacje dostępne dla zdarzenia podobne do pól są Dodaj program obsługi:
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 

@@ -2,12 +2,12 @@
 title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15024c0d2308da8cf2cc0d72d79c9f585f2912
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606013"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez architekturę WCF. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, przeglądać i filtrować komunikaty śledzenia w dzienniku, aby zdiagnozować, naprawy i sprawdź problemów z usługą WCF.  
@@ -62,11 +62,11 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Otwieranie i wyświetlanie plików śledzenia WCF  
  Przeglądarki danych śledzenia usługi obsługuje trzy typy plików:  
   
--   Usługi WCF (.svcLog) pliku śledzenia  
+- Usługi WCF (.svcLog) pliku śledzenia  
   
--   Zdarzenia śledzenia w pliku (.etl)  
+- Zdarzenia śledzenia w pliku (.etl)  
   
--   Plik śledzenia crismon  
+- Plik śledzenia crismon  
   
  Przeglądarki danych śledzenia usługi umożliwia Otwórz każdy plik śledzenia obsługiwanych, dodać i integracja śledzenia dodatkowe pliki, lub otworzyć i jednocześnie scalania grupy plików śledzenia.  
   
@@ -106,9 +106,9 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
   
  Istnieją dwa sposoby zarządzania projektami:  
   
--   W **pliku** menu, można otworzyć, Zapisz i zamknij projektów.  
+- W **pliku** menu, można otworzyć, Zapisz i zamknij projektów.  
   
--   W **projektu** karcie, można dodać pliki do projektu.  
+- W **projektu** karcie, można dodać pliki do projektu.  
   
 ### <a name="viewing-wcf-traces"></a>Wyświetlanie WCF śladów  
  Usługi WCF emituje danych śledzenia przy użyciu formatu śledzenie aktywności. W modelu śledzenie aktywności w poszczególnych ślady są grupowane w działania zgodnie z ich celem. Przepływ sterowania logiczne są przesyłane między działaniami. Na przykład w okresie istnienia aplikacji, wiele "działania wysyłania komunikatu" pojawiają się i znikają. Aby uzyskać więcej informacji dotyczących przeglądania danych śledzenia i działań i interfejsu użytkownika przeglądarki danych śledzenia usługi zbyt zobacz [za pomocą przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów z](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
@@ -116,13 +116,13 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 #### <a name="switching-to-different-views"></a>Przełączanie do różnych widoków  
  Przeglądarki danych śledzenia usługi udostępnia następujące widoki. Są wyświetlane jako karty w lewym okienku podglądu, a także jest możliwy z **widoku** menu.  
   
--   Wyświetl działania  
+- Wyświetl działania  
   
--   Widok projektu  
+- Widok projektu  
   
--   Widok komunikatów  
+- Widok komunikatów  
   
--   Widok wykresu  
+- Widok wykresu  
   
 ##### <a name="activity-view"></a>Wyświetl działania  
  Po otwarciu plików śledzenia są widoczne ślady, pogrupowane według działań i wyświetlane w **działania** widoku w okienku po lewej stronie.  
@@ -144,9 +144,12 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
   
 ##### <a name="project-view"></a>Widok projektu  
  Ten widok umożliwia zarządzanie pliki śledzenia w bieżącym projekcie. Zobacz sekcję Zarządzanie projektu, aby uzyskać więcej informacji.  
-  
+
+##### <a name="message-view"></a>Widok komunikatów
+ Ten widok umożliwia wyświetlanie wszystkich dziennik komunikatów ślady, łącznie z procesu akcji, daty/godziny, Acivity i w, / i przejdź do szczegółów śladu skojarzone komunikatu dziennika. Możesz grupować danych śledzenia dziennika komunikatów Hranice Aktivity, proces/wątek lub wysyłania i odbierania dla zapewnienia łatwiejszej nawigacji przepływu wiadomości.
+ 
 ##### <a name="graph-view"></a>Widok wykresu  
- Jednym z najbardziej zaawansowanych funkcji przeglądarki danych śledzenia usługi jest **wykres** widoku, który wyświetla dane śledzenia dla konkretnych działań w formie wykresu. Formularz wykresu umożliwia Zobacz stopniową wykonywania zdarzeń i współzależności między wiele działań, gdy dane są przenoszone między nimi.  
+ Ten widok przedstawia dane śledzenia dla konkretnych działań w formie wykresu. Formularz wykresu umożliwia Zobacz stopniową wykonywania zdarzeń i współzależności między wiele działań, gdy dane są przenoszone między nimi.  
   
  Aby przełączyć się do **wykres** wyświetlić, wybierz działanie w **działania** wyświetlić, a następnie kliknij przycisk **działania** karty lub komunikatów dziennika śledzenia w **komunikat**Widoku. Jeśli wiele plików śledzenia są ładowane i działanie polega na ślady z więcej niż jeden plik, wszystkie istotne dane śledzenia są wyświetlane w widoku wykresu. Ponadto dwukrotne kliknięcie działań i danych śledzenia dziennika komunikatów prowadzi Cię do **wykres** widoku.  
   
@@ -192,9 +195,9 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 ###### <a name="options"></a>Opcje  
  Można wybrać dwie opcje z **opcja** menu w widoku wykresu.  
   
--   Pokaż działanie granic ślady po usunięciu zaznaczenia Ignoruj ślady granic działania na wykresie.  
+- Pokaż działanie granic ślady po usunięciu zaznaczenia Ignoruj ślady granic działania na wykresie.  
   
--   Pokaż pełne ślady Non komunikat, który w przypadku usunięcia zaznaczenia Ignoruj pełne poziomu ślady, z wyjątkiem komunikatów śledzenia. W większości przypadków pełne śledzenie poziomu są mniej ważne w przypadku analizy. Ta opcja jest przydatna, gdy użytkownik nie chce analizować pełne śledzenie poziomu i tylko chcesz skupić się na bardziej ważne ślady.  
+- Pokaż pełne ślady Non komunikat, który w przypadku usunięcia zaznaczenia Ignoruj pełne poziomu ślady, z wyjątkiem komunikatów śledzenia. W większości przypadków pełne śledzenie poziomu są mniej ważne w przypadku analizy. Ta opcja jest przydatna, gdy użytkownik nie chce analizować pełne śledzenie poziomu i tylko chcesz skupić się na bardziej ważne ślady.  
   
 ###### <a name="layout-mode"></a>Tryb układu  
  Podgląd w dwóch trybach układu: **Proces** i **wątku**. To ustawienie określa Największa jednostka organizacji. Wartość domyślna jest w trybie układu **procesu**, co oznacza, że działania są pogrupowane według procesów na wykresie.  
@@ -222,22 +225,22 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 ### <a name="filtering-wcf-traces"></a>Filtrowanie śledzenia WCF  
  Aby ułatwić analiza śledzenia, można filtrować je w następujący sposób:  
   
--   Na pasku narzędzi filtru zapewnia dostęp do wstępnie zdefiniowanych i niestandardowych filtrów. Można ją włączyć za pomocą **widoku** menu.  
+- Na pasku narzędzi filtru zapewnia dostęp do wstępnie zdefiniowanych i niestandardowych filtrów. Można ją włączyć za pomocą **widoku** menu.  
   
--   Wstępnie zdefiniowany filtr podglądu można selektywnie filtrować części śledzenia WCF. Domyślnie ustawiono zezwalająca na wszystkie ślady infrastruktury do przekazywania. Ustawienie tego filtru są zdefiniowane w **opcje filtrowania** podmenu w obszarze **widoku** menu.  
+- Wstępnie zdefiniowany filtr podglądu można selektywnie filtrować części śledzenia WCF. Domyślnie ustawiono zezwalająca na wszystkie ślady infrastruktury do przekazywania. Ustawienie tego filtru są zdefiniowane w **opcje filtrowania** podmenu w obszarze **widoku** menu.  
   
--   Filtry niestandardowe wyrażenie XPath użytkownikom pełną kontrolę nad filtrowania. Można zdefiniować w **niestandardowy filtr** w obszarze **widoku** menu.  
+- Filtry niestandardowe wyrażenie XPath użytkownikom pełną kontrolę nad filtrowania. Można zdefiniować w **niestandardowy filtr** w obszarze **widoku** menu.  
   
  Zostanie wyświetlona tylko tych śladów, które przechodzi przez wszystkie filtry.  
   
 #### <a name="using-the-filter-toolbar"></a>Używanie paska narzędzi filtru  
  Pasek narzędzi Filtr pojawia się u góry tego narzędzia. Jeśli nie jest obecny, możesz to zrobić w **widoku** menu. Pasek ma trzy składniki:  
   
--   Szukać: **Wyszukaj** definiuje do przeszukania operacja filtru tematu. Na przykład, jeśli chcesz znaleźć wszystkie ślady, które są emitowane w kontekście procesu X, Ustaw to pole na X i **wyszukiwania w** pole "Proces Name". Wybrano tej zmiany w kontrolce selektora daty/godziny, gdy filtr na podstawie czasu.  
+- Szukać: **Wyszukaj** definiuje do przeszukania operacja filtru tematu. Na przykład, jeśli chcesz znaleźć wszystkie ślady, które są emitowane w kontekście procesu X, Ustaw to pole na X i **wyszukiwania w** pole "Proces Name". Wybrano tej zmiany w kontrolce selektora daty/godziny, gdy filtr na podstawie czasu.  
   
--   Szukaj w: To pole określa typ filtru do zastosowania.  
+- Szukaj w: To pole określa typ filtru do zastosowania.  
   
--   Poziom: Ustawienie poziomie definiuje minimalny poziom śledzenia może za pomocą filtru. Na przykład jeśli poziom jest ustawiona, aby wskazywał błąd i w górę, są wyświetlane tylko dane śledzenia na poziomie błędu i krytyczne. Ten filtr łączy się z kryteriami, wyszukaj i wyszukaj w.  
+- Poziom: Ustawienie poziomie definiuje minimalny poziom śledzenia może za pomocą filtru. Na przykład jeśli poziom jest ustawiona, aby wskazywał błąd i w górę, są wyświetlane tylko dane śledzenia na poziomie błędu i krytyczne. Ten filtr łączy się z kryteriami, wyszukaj i wyszukaj w.  
   
  **Filtr teraz** przycisk uruchamia operację filtrowania. Niektóre filtry, szczególnie w przypadku, gdy są one stosowane do dużych zestawów danych potrwać bardzo długo. Operacja filtru można anulować, naciskając klawisz **zatrzymać** znajdujący się na pasku stanu w obszarze **operacji** menu.  
   
@@ -321,27 +324,27 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 ### <a name="finding-data"></a>Znajdowanie danych  
  Podgląd oferuje następujące sposoby znajdowania danych:  
   
--   Pasek narzędzi wyszukiwania zapewnia szybki dostęp do najbardziej typowe opcje wyszukiwania.  
+- Pasek narzędzi wyszukiwania zapewnia szybki dostęp do najbardziej typowe opcje wyszukiwania.  
   
--   Okno dialogowe znajdowania umożliwia znaleźć więcej opcji. Nie jest dostępny za pośrednictwem **Edytuj** menu lub przez krótki klawiszy Ctrl + F.  
+- Okno dialogowe znajdowania umożliwia znaleźć więcej opcji. Nie jest dostępny za pośrednictwem **Edytuj** menu lub przez krótki klawiszy Ctrl + F.  
   
  Pasek narzędzi wyszukiwania pojawia się u góry strony podglądu. Jeśli nie jest obecny, możesz to zrobić w **widoku** menu. Pasek ma dwa składniki:  
   
--   Znajdź: Umożliwia wprowadzenie słowa kluczowe do wyszukania.  
+- Znajdź: Umożliwia wprowadzenie słowa kluczowe do wyszukania.  
   
--   Szukaj w: Umożliwia wprowadzenie zakresu wyszukiwania. Możesz wybrać, czy do wyszukania we wszystkich działaniach lub bieżące działanie.  
+- Szukaj w: Umożliwia wprowadzenie zakresu wyszukiwania. Możesz wybrać, czy do wyszukania we wszystkich działaniach lub bieżące działanie.  
   
  Okno dialogowe znajdowania oferuje dwie opcje dodatkowe:  
   
--   Znajdź element docelowy:  
+- Znajdź element docelowy:  
   
-    -   Opcji "nieprzetworzonych danych dzienników dane" przeszukuje wszystkie nieprzetworzone dane słowo kluczowe.  
+    - Opcji "nieprzetworzonych danych dzienników dane" przeszukuje wszystkie nieprzetworzone dane słowo kluczowe.  
   
-    -   Opcji "XML Text" i "Atrybut XML" Wyszukiwanie tylko w elementach XML.  
+    - Opcji "XML Text" i "Atrybut XML" Wyszukiwanie tylko w elementach XML.  
   
-    -   Opcja "Rejestrowany komunikat" przeszukuje słowo kluczowe tylko w wiadomości.  
+    - Opcja "Rejestrowany komunikat" przeszukuje słowo kluczowe tylko w wiadomości.  
   
--   Ignoruj działanie główne: Wyszukiwanie ignoruje ślady w działaniu "000000000000". Zwiększa wydajność w plikach dużych śledzenia w czasie działania głównego zawiera tysiące ślady, z których większość czy opłata za transfery.  
+- Ignoruj działanie główne: Wyszukiwanie ignoruje ślady w działaniu "000000000000". Zwiększa wydajność w plikach dużych śledzenia w czasie działania głównego zawiera tysiące ślady, z których większość czy opłata za transfery.  
   
 ### <a name="navigating-traces"></a>Nawigacja śladów  
  Ponieważ dane śledzenia są zapisywane krok po kroku podczas wykonywania aplikacji, przechodząc ślady mogą pomóc debugowania aplikacji. Przeglądarki danych śledzenia usługi udostępnia różne sposoby do nawigowania po danych śledzenia.  
@@ -349,9 +352,9 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 #### <a name="step-forward-or-backward"></a>Krok do przodu lub Wstecz  
  Należy wziąć pod uwagę każdego śledzenia jako linię kodu w programie, przechodzenie do przodu jest bardzo podobny do "Przekrocz nad" w Visual Studio rozwoju środowiska IDE (Integrated). Różnica polega na tym, że można również przejść do tyłu w śladach. Przechodzenie do przodu polega na przejściu do następnej śledzenia w działaniu.  
   
--   Step Forward: Użyj **działania** menu lub naciśnij pozycję "F10". Można również używać klucza strzałkę "nie działa", w okienku śledzenia.  
+- Step Forward: Użyj **działania** menu lub naciśnij pozycję "F10". Można również używać klucza strzałkę "nie działa", w okienku śledzenia.  
   
--   Krok do tyłu Użyj **działania** menu lub naciśnij pozycję "F9". Można również używać klucza strzałkę "up", w okienku śledzenia.  
+- Krok do tyłu Użyj **działania** menu lub naciśnij pozycję "F9". Można również używać klucza strzałkę "up", w okienku śledzenia.  
   
 > [!NOTE]
 >  Może to potrwać należy do działania wykonywane w ramach innego procesu lub nawet na innym komputerze, ponieważ komunikatów WCF może wykonywać działania identyfikatorów, które rozciągają się maszyn.  
@@ -363,9 +366,9 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
   
  Istnieją dwa sposoby, aby wykonać przeniesienie: myszy lub klawiatury:  
   
--   Przez myszy: Kliknij dwukrotnie śledzenia transferu w okienku śledzenia.  
+- Przez myszy: Kliknij dwukrotnie śledzenia transferu w okienku śledzenia.  
   
--   Przez klawiatury: Wybierz śledzenia transferu i użyj "Transfer postępuj zgodnie z" w **działania** menu lub naciśnij pozycję "F11"  
+- Przez klawiatury: Wybierz śledzenia transferu i użyj "Transfer postępuj zgodnie z" w **działania** menu lub naciśnij pozycję "F11"  
   
 > [!NOTE]
 >  W wielu przypadkach przesyłania działanie A do B działania działanie A czeka, aż działanie B przesyła powrót do działania A. Oznacza to, że działanie A ma bez śledzenia zarejestrowane w trakcie okresu, gdy działanie B jest aktywnie śledzenia. Jednak jest również możliwe, że działanie A nie czeka i ślady dzienników w dalszym ciągu. Istnieje również możliwość, że działanie B nie są przekazywane do działania A. W związku z tym, transferów działań nadal różnią się od wywołania funkcji w tym sensie. Możesz zrozumieć działanie transferów w widoku wykresu.  
@@ -373,9 +376,9 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 #### <a name="jump-to-next-or-previous-transfer"></a>Przejdź do następnej lub poprzedniej transferu  
  Podczas analizy bieżącego działania lub wybrane działania po wybraniu wielu działań, możesz szybko znaleźć działań, które przekazuje go do. "Skok do przesyłania dalej" umożliwia umieszczanie dalej śledzenia transferu w działaniu. Po odnalezieniu śledzenia transferu służy "Follow transferu" Aby wejść do następnego działania.  
   
--   Przejdź do następnego przeniesienia: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F10".  
+- Przejdź do następnego przeniesienia: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F10".  
   
--   Przejdź do poprzedniego transferu: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F9".  
+- Przejdź do poprzedniego transferu: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F9".  
   
 #### <a name="navigate-in-graph-view"></a>Nawigowanie w widoku wykresu  
  Mimo że nawigacja w okienku śledzenia i okienku aktywności jest podobne do debugowania, za pomocą **wykres** widok zawiera dużo lepiej w nawigacji. Zobacz sekcję "Widoku wykresu", aby uzyskać więcej informacji.  

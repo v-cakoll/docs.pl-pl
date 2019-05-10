@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019792"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063060"
 ---
 # <a name="implement-value-objects"></a>Implementowanie obiektów wartości
 
@@ -324,7 +324,7 @@ public class Address
 - **Typy złożone i/lub obiekty wartości**. Dyskusja w repozytorium programu EF Core w witrynie GitHub (karta problemy) \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** Podstawowa klasa obiektu wartości w eShopOnContainers.* * \
+- **ValueObject.cs.** Klasa obiektu wartości bazowej w ramach aplikacji eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **Klasy adresów.** Klasa obiektu wartość próbki w ramach aplikacji eShopOnContainers. \

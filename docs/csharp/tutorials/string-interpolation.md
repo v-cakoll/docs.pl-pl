@@ -3,12 +3,12 @@ title: Interpolacja ciągów w języku C#
 description: Dowiedz się, jak obejmują wyrażenie sformatowane wyniki w ciągu wynikowym w języku C# przy użyciu interpolacji ciągu.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675679"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063230"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolacja ciągów w języku C\#
 
@@ -30,9 +30,7 @@ Jak pokazano w przykładzie, dołączysz wyrażenia w ciągu interpolowanym umie
 {<interpolatedExpression>}
 ```
 
-W czasie kompilacji ciągu interpolowanego zwykle jest przekształcana na <xref:System.String.Format%2A?displayProperty=nameWithType> wywołania metody. Sprawia to, że wszystkie funkcje [ciągu formatowania złożonego](../../standard/base-types/composite-formatting.md) funkcji dostępnych do użycia z ciągami interpolowanymi również.
-
-Kompilator może zastąpić <xref:System.String.Format%2A?displayProperty=nameWithType> dla <xref:System.String.Concat%2A?displayProperty=nameWithType> Jeśli analizowany zachowanie byłaby równoważna łączenia.
+Ciągi interpolowane obsługują wszystkie funkcje [ciągu formatowania złożonego](../../standard/base-types/composite-formatting.md) funkcji. Dzięki temu ich czytelność alternatywą do korzystania z <xref:System.String.Format%2A?displayProperty=nameWithType> metody.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Jak określić ciąg formatu dla wyrażenia interpolowanego
 

@@ -3,16 +3,16 @@ title: Debugowanie aplikacji Hello World platformy .NET Core za pomocą programu
 description: Dowiedz się, jak debugować aplikację Hello World w języku C# lub Visual Basic w programie Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648174"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063056"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debugowanie usługi C# lub Visual Basic .NET Core aplikacji Hello World przy użyciu programu Visual Studio 2017
 
-Jak dotąd wykonano kroki opisane w [kompilacji aplikacji C# Hello World z platformą .NET Core w programie Visual Studio 2017](with-visual-studio.md) lub [tworzenie aplikacji Hello World języka Visual Basic z platformą .NET Core w programie Visual Studio 2017](vb-with-visual-studio.md) do utworzenia i uruchomienia prostej aplikacji konsolowej. Po napisane i skompilowanych aplikacji, możesz rozpocząć testowanie go. Visual Studio zawiera rozbudowany zestaw narzędzi używanych podczas testowania i rozwiązywanie problemów z aplikacją do debugowania.
+Jak dotąd wykonano kroki opisane w [kompilacji aplikacji C# Hello World z platformą .NET Core w programie Visual Studio 2017](with-visual-studio.md) lub [tworzenie aplikacji Hello World języka Visual Basic z platformą .NET Core w programie Visual Studio 2017](vb-with-visual-studio.md) do utworzenia i uruchomienia prostej aplikacji konsolowej. Po napisane i skompilowanych aplikacji, możesz rozpocząć testowanie go. Visual Studio zawiera rozbudowany zestaw narzędzi używanych podczas testowania i rozwiązywanie problemów z aplikacją do debugowania. 
 
 ## <a name="debugging-in-debug-mode"></a>Debugowanie w trybie debugowania
 

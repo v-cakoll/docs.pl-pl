@@ -2,12 +2,12 @@
 title: Programowanie asynchroniczne w języku C#
 description: Omówienie C# Obsługa języków programowania asynchronicznego przy użyciu async, operator await, zadań i zadań<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668682"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064120"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>Zadania asynchronicznego modelu programowania w języku C\#
 
@@ -22,7 +22,7 @@ Jest celem tej składni: Włącz kod odczytuje np. sekwencja instrukcji, ale jes
 1. Dodaj masła i zakleszczenie do wyskakującego powiadomienia.
 1. Umieścić szkła soku pomarańczowego.
 
-Jeśli masz doświadczenie gotowania, będzie wykonać te instrukcje **asynchronicznie**. czy start ciepły pan dla potrawach, a następnie uruchomić bekon. Czy umieścić chleb w tostera, a następnie uruchomić potrawach. W każdym kroku procesu można będzie uruchomić zadanie, a następnie zwrócić uwagę na zadania, które są gotowe do Twojej uwagi.
+W przypadku korzystania z gotowania może wykonać te instrukcje **asynchronicznie**. czy start ciepły pan dla potrawach, a następnie uruchomić bekon. Czy umieścić chleb w tostera, a następnie uruchomić potrawach. W każdym kroku procesu można będzie uruchomić zadanie, a następnie zwrócić uwagę na zadania, które są gotowe do Twojej uwagi.
 
 Gotowania śniadanie jest dobrym przykładem pracę asynchroniczną, która nie jest równoległe. Jedna osoba (lub wątek) może obsługiwać te zadania. Trwając w sposób analogiczny śniadanie, jedna osoba ułatwia śniadanie asynchronicznie przez uruchomienie kolejnego przed ukończeniem pierwszego. Gotowania w miarę czy ktoś obserwuje go. Zaraz po uruchomieniu ciepły pan dla potrawach, możesz rozpocząć smażeniu bekon. Po rozpoczęciu bekon można umieścić chleb w tostera.
 

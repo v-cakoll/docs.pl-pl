@@ -2,12 +2,12 @@
 title: Architektura programu Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d341ebd354d5324c5ad71436837cb85737f46c08
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945928"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605899"
 ---
 # <a name="windows-workflow-architecture"></a>Architektura programu Windows Workflow
 Windows Workflow Foundation (WF) podnosi poziom abstrakcji do tworzenia aplikacji interaktywnych długoterminowych. Jednostki pracy są hermetyzowane jako działania. Działania wykonywane w środowisku, które udostępnia funkcje służące do sterowanie przepływem, obsługa wyjątków, błędów propagacji, trwałości danych o stanie, ładowanie i zwalnianie przepływów pracy w toku, pamięci, śledzenia i przepływu transakcji.  

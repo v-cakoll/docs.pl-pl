@@ -1,15 +1,15 @@
 ---
-title: Zadania uczenia maszynowego — strukturze ML.NET
+title: Zadania uczenia maszynowego
 description: Zapoznaj się z różnych zadań i skojarzonych zadań, które są obsługiwane w strukturze ML.NET uczenia maszynowego.
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019106"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063544"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Zadania uczenia maszynowego w strukturze ML.NET
 
@@ -28,22 +28,36 @@ A [uczenia maszynowego w trybie nadzorowanym](glossary.md#supervised-machine-lea
 
 Aby uzyskać więcej informacji, zobacz [klasyfikacji binarnej](https://en.wikipedia.org/wiki/Binary_classification) artykuł w witrynie Wikipedia.
 
-### <a name="binary-classification-training-algorithms"></a>Klasyfikacja binarna szkolenia algorytmów
+### <a name="binary-classification-trainers"></a>Klasyfikacja binarna instruktorów
 
 Możesz uczyć model klasyfikacji binarnej, używając następujących algorytmów:
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+
+### <a name="binary-classification-inputs-and-outputs"></a>Klasyfikacja binarna wejściami i wyjściami
+
+Aby uzyskać najlepsze wyniki przy użyciu klasyfikacji binarnej dane szkoleniowe należy rozdzielić (czyli równy numery dane szkoleniowe pozytywne i negatywne). Brak i wartości powinny być traktowane przed szkolenia.
+
+Etykieta wejściowych danych kolumny musi być <xref:System.Boolean>.
+Funkcje wejściowe danych kolumny musi być stałym rozmiarze wektor <xref:System.Single>.
+
+Te Instruktorzy wyświetla następujące kolumny:
+
+| Nazwa kolumny danych wyjściowych | Typ kolumny | Opis|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Nieprzetworzonej oceny, która została obliczona przez model|
+| `PredictedLabel` | <xref:System.Boolean> | Etykieta przewidywane, oparte na znak wyniku. Mapuje wynik ujemny `false` i mapuje wynik dodatni `true`.|
 
 ## <a name="multiclass-classification"></a>Wieloklasowej klasyfikacji
 
@@ -58,17 +72,29 @@ Aby uzyskać więcej informacji, zobacz [klasyfikacji Wieloklasowej](https://en.
 >[!NOTE]
 >Jeden vs wszystkich uaktualnień dowolne [uczeń klasyfikacji binarnej](#binary-classification) zajmującym się wieloklasowej zestawów danych. Więcej informacji na temat [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
-### <a name="multiclass-classification-training-algorithms"></a>Wieloklasowej klasyfikacji szkolenia algorytmów
+### <a name="multiclass-classification-trainers"></a>Instruktorzy wieloklasowej klasyfikacji
 
 Możesz uczyć model klasyfikacji wieloklasowej przy użyciu następujących algorytmów szkolenia:
 
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>Klasyfikacji wieloklasowej dane wejściowe i wyjściowe
+
+Etykieta wejściowych danych kolumny musi być [klucz](xref:Microsoft.ML.Data.KeyDataViewType) typu.
+Kolumna funkcji musi być wektor o stałym rozmiarze <xref:System.Single>.
+
+Ta trainer wyświetla następujące czynności:
+
+| Nazwa wyjściowego | Typ | Opis|
+| -- | -- | -- |
+| `Score` | Wektor <xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza większe prawdopodobieństwo należącymi do klasy skojarzonej. Element i tym ma największą wartość, i będzie mieć indeks przewidywane etykiety. Należy pamiętać, że jest liczony od zera indeks. |
+| `PredictedLabel` | [klucz](xref:Microsoft.ML.Data.KeyDataViewType) typu | Indeks przewidywane etykiety. Jeśli wartość jest i, rzeczywiste etykiety będzie kategorii i tym w typie etykiety danych wejściowych o wartości klucza. |
 
 ## <a name="regression"></a>Regresji
 
@@ -78,19 +104,29 @@ A [uczenia maszynowego w trybie nadzorowanym](glossary.md#supervised-machine-lea
 * Prognozowanie przyszłych cen akcji na podstawie danych historycznych i trendów na rynku bieżącego.
 * Prognozowanie sprzedaży produktu, w oparciu o budżet reklamowych.
 
-### <a name="regression-training-algorithms"></a>Regresja szkolenia algorytmów
+### <a name="regression-trainers"></a>Instruktorzy regresji
 
 Możesz uczyć modelu regresji przy użyciu następujących algorytmów:
 
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+
+### <a name="regression-inputs-and-outputs"></a>Regresja wejściami i wyjściami
+
+Etykieta wejściowych danych kolumny musi być <xref:System.Single>.
+
+Instruktorzy w tym celu danych wyjściowych poniżej:
+
+| Nazwa wyjściowego | Typ | Opis|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Nieprzetworzone wynik, który został przewidywane według modelu |
 
 ## <a name="clustering"></a>Klastrowanie
 
@@ -100,11 +136,22 @@ Możesz uczyć modelu regresji przy użyciu następujących algorytmów:
 * Identyfikowanie segmentom klientów i danymi demograficznymi ułatwiające tworzenie kampanii reklamowych docelowych.
 * Kategoryzowanie spisu w oparciu metryki produkcji.
 
-### <a name="clustering-training-algorithms"></a>Klastrowanie szkolenia algorytmów
+### <a name="clustering-trainer"></a>Klastrowanie instruktora
 
 Możesz uczyć model klastrowania przy użyciu następującego algorytmu:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer>
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>Klastrowanie dane wejściowe i wyjściowe
+
+Dane wejściowe funkcji muszą być <xref:System.Single>. Etykiety nie są wymagane.
+
+Ta trainer wyświetla następujące czynności:
+
+| Nazwa wyjściowego | Typ | Opis|
+| -- | -- | -- |
+| `Score` | Wektor <xref:System.Single> | Odległości punkt danych na wszystkich klastrach centriods |
+| `PredictedLabel` | [klucz](xref:Microsoft.ML.Data.KeyDataViewType) typu | Indeks najbliższego klastra przewidzieć przez model. |
 
 ## <a name="anomaly-detection"></a>Wykrywanie anomalii
 
@@ -121,11 +168,21 @@ Wykrywanie anomalii obejmuje wiele ważne zadania w usłudze machine learning:
 
 Anomalie są rzadkie zdarzenia zgodnie z definicją, może być trudne do zbierania została przeanalizowana reprezentatywna próbka danych na potrzeby modelowania. Algorytmów do tej kategorii są przeznaczone szczególnie do wyzwania core tworzenie i szkolenie modeli za pomocą imbalanced zestawów danych.
 
-### <a name="anomaly-detection-training-algorithms"></a>Algorytmy szkolenia wykrywania anomalii
+### <a name="anomaly-detection-trainer"></a>Trainer wykrywania anomalii
 
 Możesz uczyć model wykrywania anomalii przy użyciu następującego algorytmu:
 
 * <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>Wykrywanie anomalii w danych wejściowych i wyjściowych
+
+Funkcje wejściowe muszą być wektor stałych rozmiarach <xref:System.Single>.
+
+Ta trainer wyświetla następujące czynności:
+
+| Nazwa wyjściowego | Typ | Opis|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Wartość nieujemną, nieograniczone wynik, który został obliczana na podstawie modelu wykrywania anomalii |
 
 ## <a name="ranking"></a>Klasyfikacja
 
@@ -135,8 +192,20 @@ Zadanie klasyfikacji tworzy oceniania z zestawu przykładów etykietami. Ten prz
 
 Możesz uczyć model klasyfikacji, za pomocą następujących algorytmów:
 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>Klasyfikacja dane wejściowe i wyjściowe
+
+Typ danych wejściowych etykiety musi być [klucz](xref:Microsoft.ML.Data.KeyDataViewType) typu lub <xref:System.Single>. Wartość etykiety określa istotność, gdzie wyższe wartości wskazują wyższe istotności. Jeśli etykieta jest [klucz](xref:Microsoft.ML.Data.KeyDataViewType) wpisz, a następnie indeks kluczy jest wartością znaczenia, gdzie najmniejszy indeks jest najmniej istotnych. Jeśli etykieta jest <xref:System.Single>, większe wartości wskazują wyższe istotności.
+
+Dane funkcji muszą być wektor o stałym rozmiarze <xref:System.Single> i wierszy danych wejściowych grupy kolumn muszą być [klucz](xref:Microsoft.ML.Data.KeyDataViewType) typu.
+
+Ta trainer wyświetla następujące czynności:
+
+| Nazwa wyjściowego | Typ | Opis|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Niepowiązane wynik, który został obliczana na podstawie modelu w celu wyznaczenia prognozowania |
 
 ## <a name="recommendation"></a>Zalecenie
 

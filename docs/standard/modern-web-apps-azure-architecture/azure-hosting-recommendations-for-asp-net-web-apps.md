@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: cda4c002c73e2dd0db1b2d5d1fa8bc76903c5c62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d328f92ef5e64ee5d92b71472a5e32e2f5d007fd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019489"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063227"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu platformy Azure
 
@@ -26,11 +26,9 @@ Aplikacje sieci Web mogą być przechowywane za pomocą:
 
 - Kontenery
 
-- Azure Service Fabric
-
 - Maszyny wirtualne (VM)
 
-Z tych opcji App Service Web Apps to zalecane podejście do większości scenariuszy. Architektury mikrousługi należy wziąć pod uwagę podejście oparte na kontenerach lub usługi Service Fabric. Jeśli potrzebujesz większej kontroli nad maszynami działania aplikacji, należy wziąć pod uwagę maszyn wirtualnych platformy Azure.
+Z tych opcji App Service Web Apps to zalecane podejście do większości scenariuszy. W przypadku architektur mikrousług należy rozważyć podejście oparte na kontenerach. Jeśli potrzebujesz większej kontroli nad maszynami działania aplikacji, należy wziąć pod uwagę maszyn wirtualnych platformy Azure.
 
 ### <a name="app-service-web-apps"></a>Aplikacje sieci Web usługi App Service
 
@@ -45,6 +43,8 @@ Usługa App Service Web Apps oferuje w pełni zarządzana platforma, zoptymalizo
 - Zabezpieczenia i zgodność.
 
 - Integracja z programem Visual Studio.
+
+- Obsługa kontenerów systemu Linux i Windows za pośrednictwem [Web App for Containers](https://azure.microsoft.com/en-us/services/app-service/containers/).
 
 Usługa Azure App Service jest najlepszym wyborem dla większości aplikacji sieci web. Wdrażanie i zarządzanie są zintegrowane z platformą, witryny można szybko skalować w celu obsługi obciążeń z dużym ruchem i wbudowanego obciążenia równoważenia i usługa traffic manager zapewniają wysoką dostępność. Można przenieść istniejące witryny w usłudze Azure App Service za pomocą narzędzia do migracji online, korzystanie z aplikacji typu open source z galerii aplikacji sieci Web lub Utwórz nową witrynę przy użyciu framework i wybranych przez siebie narzędzi. Funkcja zadań Webjob ułatwia dodawanie zadania w tle przetwarzania do aplikacji sieci web usługi App Service.
 
@@ -61,30 +61,9 @@ Usługa AKS zmniejsza złożoność i nakłady operacyjne związane z zarządzan
 
 Platforma Azure obsługuje zarządzanie węzłami w klastrze AKS nie trzeba ręcznie wykonywać wielu zadań, takich jak Uaktualnianie klastra. Ponieważ platforma Azure wykonuje te krytyczne zadania konserwacji za Ciebie, AKS nie zapewnia bezpośredni dostęp (takich jak przy użyciu protokołu SSH) do klastra.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-Service Fabric to dobry wybór, jeśli tworzysz nową aplikację lub ponownego tworzenia istniejącej aplikacji opartych na architekturze mikrousług. Wdrożenie aplikacji działających w ramach współużytkowanej puli maszyn, można zacząć od małej i do ogromnej skali z setkami lub tysiącami maszyn, zgodnie z potrzebami. Usługi stanowe ułatwiają spójne i niezawodne przechowywanie stanu aplikacji, a Usługa Service Fabric automatycznie zarządza partycjonowaniem usługi, skalowaniem i dostępnością za Ciebie. Usługa Service Fabric obsługuje także interfejs WebAPI z Open Web Interface for .NET (OWIN) i ASP.NET Core. W porównaniu do usługi App Service, Service Fabric udostępnia więcej kontroli nad lub bezpośredni dostęp do podstawowej infrastruktury. Możesz zdalnym do serwerów lub skonfigurowania zadań uruchamiania serwera.
-
 ### <a name="azure-virtual-machines"></a>Usługa Azure Virtual Machines
 
-Jeśli masz istniejącą aplikację, która wymagałaby istotnych zmian do uruchamiania w usłudze App Service lub Service Fabric, możesz wybrać maszyny wirtualne w celu uproszczenia migracji do chmury. Jednak poprawne skonfigurowanie, zabezpieczenie i konserwowanie maszyn wirtualnych wymaga znacznie więcej czasu i doświadczenia w zakresie IT w porównaniu do usługi Azure App Service i Service Fabric. Jeśli rozważasz usługę Azure Virtual Machines, upewnij się, że należy wziąć pod uwagę rutynowej konserwacji pracę wymaganą do dostarczenia poprawek, aktualizacji, a także zarządzać środowiskiem maszyny Wirtualnej. Usługa Azure Virtual Machines to infrastruktura jako usługa (IaaS), usługi App Service i Service Fabric są PaaS.
-
-#### <a name="feature-comparison"></a>Porównanie funkcji
-
-| Funkcja                                                                                    | App Service | Kontenery (AKS) | Service Fabric | Maszyna wirtualna |
-| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
-| Niemal natychmiastowe wdrażanie                                                                    | X           | X                | X              |                 |
-| Skalowanie na większe maszyny bez ponownego wdrażania                                               | X           | X                | X              |                 |
-| Wystąpienia współużytkują zawartość i konfigurację; nie ma potrzeby ponownego wdrażania lub ponownie podczas skalowania | X           | X                | X              |                 |
-| Wiele środowisk wdrażania (produkcyjne, przejściowe)                                     | X           | X                | X              |                 |
-| Automatyczne zarządzanie aktualizacjami systemu operacyjnego                                                             | X           | X                |                |                 |
-| Bezproblemowe przełączanie między platformami 64-32-bitowe                                             | X           | X                |                |                 |
-| Wdrażanie kodu za pomocą narzędzia Git, FTP                                                                  | X           | X                |                | X               |
-| Wdrażanie kodu za pomocą WebDeploy                                                                 | X           | X                |                | X               |
-| Wdrażanie kodu za pomocą serwera TFS                                                                       | X           | X                | X              | X               |
-| Sieć web hosta lub warstwy usługi sieci web architektury wielowarstwowej                                    | X           | X                | X              | X               |
-| Uzyskiwanie dostępu do usług platformy Azure, takich jak Service Bus, Storage, SQL Database                              | X           | X                | X              | X               |
-| Instalowanie dowolnego niestandardowego pakietu MSI                                                                     |             | X                | X              | X               |
+Jeśli masz istniejącą aplikację, która wymagałaby istotnych zmian do uruchamiania w usłudze App Service, możesz wybrać maszyny wirtualne w celu uproszczenia migracji do chmury. Jednak prawidłowo Konfigurowanie, zabezpieczanie i obsługa maszyn wirtualnych wymaga znacznie więcej czasu i doświadczenia w zakresie IT w porównaniu do usługi Azure App Service. Jeśli rozważasz usługę Azure Virtual Machines, upewnij się, że należy wziąć pod uwagę rutynowej konserwacji pracę wymaganą do dostarczenia poprawek, aktualizacji, a także zarządzać środowiskiem maszyny Wirtualnej. Maszyny wirtualne platformy Azure to infrastruktura jako usługa (IaaS), podczas gdy usługi App Service jest PaaS. Należy również rozważyć, czy wdrażania aplikacji jako kontener Windows w usłudze Web App for Containers może być wygodną opcją dla danego scenariusza.
 
 ## <a name="logical-processes"></a>Logiczne procesów
 
@@ -121,8 +100,8 @@ Rysunek 11-2 przedstawiono przykład architektury referencyjnej. Ten diagram w t
 - Overview\ aplikacji sieci Web
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
-- Usługa Azure App Service, maszyny wirtualne, usługi Service Fabric i Cloud Services comparison\
-  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Aplikacja sieci Web dla Containers\
+  <https://azure.microsoft.com/en-us/services/app-service/containers/>
 
 - Wprowadzenie do usługi Azure Kubernetes Service (AKS) \
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

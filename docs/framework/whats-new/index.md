@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914851"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063869"
 ---
 # <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 
@@ -35,7 +35,7 @@ Ten artykuł zawiera podsumowanie kluczowych nowych funkcji i ulepszeń w nastę
 Ten artykuł nie zawiera wyczerpujących informacji odnośnie każdej nowej funkcji i może ulec zmianie. Aby uzyskać ogólne informacje dotyczące programu .NET Framework, zobacz [wprowadzenie](../get-started/index.md). Dla obsługiwanych platform, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md). Łącza pobierania oraz instrukcje dotyczące instalacji, zobacz [Przewodnik instalacji](../install/guide-for-developers.md).
 
 > [!NOTE]
-> Zespół .NET framework udostępnia również funkcje poza pasmem z NuGet, aby rozwijać obsługę platform i wprowadzać nowe funkcje, takie jak niezmienne kolekcje i typy wektorowe obsługujące na SIMD. Aby uzyskać więcej informacji, zobacz [dodatkowe biblioteki klas i interfejsów API](../additional-apis/index.md) i [.NET Framework i wersji Out-of-Band](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Zobacz [pełną listę pakietów NuGet](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) dla programu .NET Framework lub subskrybować [nasz Kanał informacyjny](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
+> Zespół .NET Framework udostępnia również funkcje poza pasmem z NuGet, aby rozwijać obsługę platform i wprowadzać nowe funkcje, takie jak niezmienne kolekcje i typy wektorowe obsługujące na SIMD. Aby uzyskać więcej informacji, zobacz [dodatkowe biblioteki klas i interfejsów API](../additional-apis/index.md) i [.NET Framework i wersji Out-of-Band](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Zobacz [pełną listę pakietów NuGet](https://www.nuget.org/profiles/dotnetframework) dla programu .NET Framework.
 
 <a name="v48" />
 

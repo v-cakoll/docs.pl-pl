@@ -1,21 +1,21 @@
 ---
-title: Użyj strukturze ML.NET w scenariuszu zaleceń filmu
-description: Dowiedz się, jak na potrzeby strukturze ML.NET w scenariuszu rekomendacji zaleca się filmy dla użytkowników.
+title: 'Samouczek: Tworzenie polecania filmu'
+description: W tym samouczku dowiesz się, jak tworzyć polecania filmów za pomocą platformy ML.NET w aplikacji konsoli .NET Core. Użyj kroków C# i Visual Studio 2019 r.
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960688"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063371"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Samouczek: Utwórz polecania filmów za pomocą platformy ML.NET
 
-Ten przykładowy samouczek przedstawia tworzenie polecania filmu, za pośrednictwem używany aplikację konsoli .NET Core za pomocą strukturze ML.NET C# w programie Visual Studio 2017.
+W tym samouczku dowiesz się, jak tworzyć polecania filmów za pomocą platformy ML.NET w aplikacji konsoli .NET Core. Użyj kroków C# i Visual Studio 2019 r.
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > * Tworzenie i uczenie modelu
 > * Ocena modelu
 > * Wdrażanie i korzystanie z modelu
-
-> [!NOTE]
-> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET wersji 0,11**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) repozytorium.
 
@@ -61,10 +56,7 @@ Istnieje kilka sposobów podejście problemy zalecenie, takie jak polecanie list
 
 3. Zainstaluj **Microsoft.ML** i **Microsoft.ML.Recommender** pakiety NuGet:
 
-    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** kartę, wyszukaj **Microsoft.ML**, a następnie wybierz pakiet z listy i wybierz **zainstalować** przycisku. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na **akceptacja licencji** okno dialogowe Jeśli możesz Akceptuję postanowienia licencyjne dla pakietów wymienionych. Powtórz te kroki dla **Microsoft.ML.Recommender**.
-
-    > [!NOTE]
-    > W tym samouczku **Microsoft.ML v0.11.0** i **Microsoft.ML.Recommender v0.11.0**.
+    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** kartę, wyszukaj **Microsoft.ML**, wybierz opcję **1.0.0** pakietu na liście, a następnie wybierz pozycję  **Zainstaluj** przycisku. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na **akceptacja licencji** okno dialogowe Jeśli możesz Akceptuję postanowienia licencyjne dla pakietów wymienionych. Powtórz te kroki dla **Microsoft.ML.Recommender v0.12.0**.
 
 4. Dodaj następujący kod `using` instrukcji w górnej części Twojej *Program.cs* pliku:
 
@@ -175,7 +167,7 @@ Dodaj następujący kod jako następnych dwóch wierszach kodu w `Main()` metod�
 
 ## <a name="build-and-train-your-model"></a>Tworzenie i uczenie modelu
 
-Istnieją trzy główne pojęcia w strukturze ML.NET: [Dane](../basic-concepts-model-training-in-mldotnet.md#data), [transformatory](../basic-concepts-model-training-in-mldotnet.md#transformer), i [aplikacjom](../basic-concepts-model-training-in-mldotnet.md#estimator).
+Istnieją trzy główne pojęcia w strukturze ML.NET: [Dane](../resources/glossary.md#data), [transformatory](../resources/glossary.md#transformer), i [aplikacjom](../resources/glossary.md#estimator).
 
 Uczenie maszynowe szkolenia algorytmów wymaganych danych w określonym formacie. `Transformers` są używane do przekształcania danych tabelarycznych na format zgodny.
 

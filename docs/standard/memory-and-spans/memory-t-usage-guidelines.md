@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909626"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063283"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Pamięć\<T > i zakres\<T > wytyczne dotyczące użycia
 
@@ -86,7 +86,7 @@ W tym kodzie:
 
 - `Main` Metoda zawiera odwołanie do <xref:System.Buffers.IMemoryOwner%601> wystąpienia, więc `Main` metody jest właścicielem buforu.
 
-- `WriteInt32ToBuffer` i `DisplayBufferToConsole` metody akceptują xref:System.Memory%601 > jako publiczny interfejs API. W związku z tym są one konsumentów buforu. I tylko zużywają go jednym naraz.
+- `WriteInt32ToBuffer` i `DisplayBufferToConsole` akceptować metod <xref:System.Memory%601> jako publiczny interfejs API. W związku z tym są one konsumentów buforu. I tylko zużywają go jednym naraz.
 
 Mimo że `WriteInt32ToBuffer` metoda jest przeznaczona do zapisu wartości w buforze `DisplayBufferToConsole` metoda nie jest. Aby to odzwierciedlić go może zaakceptowali argumentu typu <xref:System.ReadOnlyMemory%601>. Aby uzyskać dodatkowe informacje na temat <xref:System.ReadOnlyMemory%601>, zobacz [reguły nr 2: Użyj ReadOnlySpan\<T > lub ReadOnlyMemory\<T >, jeśli bufor ma być tylko do odczytu](#rule-2).
 
@@ -110,13 +110,13 @@ Ponieważ blok pamięci jest właścicielem, ale jest przeznaczona do przekazani
 
 - Istnieje możliwość dla składnika może działać w buforze w tym samym czasie, który inny składnik działa na nim w procesie uszkodzenie danych w buforze.
 
-- While przydzielanych ze stosów rodzaj <xref:System.Span%601> optymalizację wydajności i sprawia, że <xref:System.Span%601> preferowany typ pracy w bloku pamięci, ona też przedmioty <xref:System.Span%601> do niektórych ograniczeń główne ograniczenia. Ważne jest, aby wiedzieć, kiedy należy używać <xref:System.Span%601> i kiedy należy używać <xref:System.Memory%601>.
+- While przydzielanych ze stosów rodzaj <xref:System.Span%601> optymalizację wydajności i sprawia, że <xref:System.Span%601> preferowany typ pracy w bloku pamięci, ona też przedmioty <xref:System.Span%601> niektóre główne ograniczenia. Ważne jest, aby wiedzieć, kiedy należy używać <xref:System.Span%601> i kiedy należy używać <xref:System.Memory%601>.
 
 Oto Nasze zalecenia dotyczące korzystania z pomyślnie <xref:System.Memory%601> i jej powiązane typy. Należy pamiętać, że wskazówki, które ma zastosowanie do <xref:System.Memory%601> i <xref:System.Span%601> dotyczy także <xref:System.ReadOnlyMemory%601> i <xref:System.ReadOnlySpan%601> , chyba że firma Microsoft wyraźnie należy pamiętać, w przeciwnym razie.
 
 **Reguła #1: Synchroniczne interfejsu API, należy użyć zakresu\<T > zamiast pamięci\<T > jako parametru, jeśli jest to możliwe.**
 
-<xref:System.Span%601> jest bardziej wszechstronna niż <xref:System.Memory%601> i może reprezentować szeroką gamę buforów pamięci ciągłej. <xref:System.Span%601> Ponadto zapewnia większą wydajność niż <xref:System.Memory%601>>. Na koniec można użyć <xref:System.Memory%601.Span?displayProperty=nameWithType> właściwości, aby przekonwertować <xref:System.Memory%601> wystąpienia do <xref:System.Span%601>, chociaż zakresu\<T > - do - pamięci\<T > Konwersja nie jest możliwe. Tak, jeśli mają swoje obiekty wywołujące <xref:System.Memory%601> wystąpienia będą możliwe do wywołania metody z <xref:System.Span%601> parametry mimo to.
+<xref:System.Span%601> jest bardziej wszechstronna niż <xref:System.Memory%601> i może reprezentować szeroką gamę buforów pamięci ciągłej. <xref:System.Span%601> Ponadto zapewnia większą wydajność niż <xref:System.Memory%601>. Na koniec można użyć <xref:System.Memory%601.Span?displayProperty=nameWithType> właściwości, aby przekonwertować <xref:System.Memory%601> wystąpienia do <xref:System.Span%601>, chociaż zakresu\<T > - do - pamięci\<T > Konwersja nie jest możliwe. Tak, jeśli mają swoje obiekty wywołujące <xref:System.Memory%601> wystąpienia będą możliwe do wywołania metody z <xref:System.Span%601> parametry mimo to.
 
 Za pomocą parametru typu <xref:System.Span%601> zamiast typu <xref:System.Memory%601> umożliwia też zapisu poprawne konsumencki implementacji metody. Automatycznie uzyskasz kontroli czasu kompilacji, aby upewnić się, że użytkownik nie próbujesz uzyskać dostęp w buforze poza dzierżawy Twojej formy, (uzyskać więcej informacji na ten temat poniżej).
 
@@ -246,7 +246,7 @@ Dowolny składnik, który przenosi własności <xref:System.Buffers.IMemoryOwner
 
 **Reguła #9: Jeżeli metoda synchroniczna p/invoke, interfejs API powinien akceptować zakres\<T > jako parametr.**
 
-Zgodnie z zasadą #1 <xref:System.Span%601> ogólnie jest poprawnego typu na potrzeby synchronicznych interfejsów API. Możesz przypiąć <xref:System.Span%601> \<T > wystąpień za pośrednictwem [ `fixed` ](~/docs/csharp/language-reference/keywords/fixed-statement.md) — słowo kluczowe, jak w poniższym przykładzie.
+Zgodnie z zasadą #1 <xref:System.Span%601> ogólnie jest poprawnego typu na potrzeby synchronicznych interfejsów API. Możesz przypiąć <xref:System.Span%601> wystąpień za pośrednictwem [ `fixed` ](~/docs/csharp/language-reference/keywords/fixed-statement.md) — słowo kluczowe, jak w poniższym przykładzie.
 
 ```csharp
 using System.Runtime.InteropServices;

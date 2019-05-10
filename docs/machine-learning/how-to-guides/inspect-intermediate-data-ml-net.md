@@ -1,79 +1,157 @@
 ---
-title: Sprawdź wartości danych pośrednich podczas przetwarzania potokowego w strukturze ML.NET
+title: Sprawdź wartości danych pośrednich podczas przetwarzania w strukturze ML.NET
 description: Dowiedz się, jak przeprowadzać inspekcję wartości rzeczywiste dane pośrednie podczas strukturze ML.NET usługi machine learning przetwarzania potokowego w programie
-ms.date: 03/05/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 362cb9351c3cb77b6aa67d59154854e882869ad9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.date: 04/29/2019
+author: luisquintanilla
+ms.author: luquinta
+ms.custom: mvc, how-to
+ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968717"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063514"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>Sprawdź wartości danych pośrednich podczas przetwarzania potokowego w strukturze ML.NET
+# <a name="inspect-intermediate-data-values-during-processing"></a>Sprawdź wartości danych pośrednich podczas przetwarzania
 
-> [!NOTE]
-> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+Dowiedz się, jak przeprowadzać inspekcję wartości podczas ładowania, przetwarzania i kroki szkolenia w strukturze ML.NET.
 
-Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
-
-Podczas eksperymentu można obserwować i Zweryfikuj wyniki przetwarzania danych w danym momencie. To nie jest proste, ponieważ operacje strukturze ML.NET są powolne, konstruowanie obiektów, które są zapowiedzi i danych.
-
-`GetColumn<T>` — Metoda rozszerzenia umożliwia sprawdzanie danych pośrednich. Zwraca zawartość jedna kolumna danych jako `IEnumerable`.
-
-Poniższy przykład pokazuje, jak używać `GetColumn<T>` — metoda rozszerzenia:
-
-[Przykładowy plik](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):
-
-<!-- markdownlint-disable MD010 -->
+Jeden reprezentowane danych, takich jak poniżej, który jest ładowany do [ `IDataView` ](xref:Microsoft.ML.IDataView) mogą być kontrolowane na różne sposoby, w strukturze ML.NET.
+ 
+```csharp
+HousingData[] housingData = new HousingData[]
+{
+    new HousingData
+    {
+        Size = 600f,
+        HistoricalPrices = new float[] { 100000f ,125000f ,122000f },
+        CurrentPrice = 170000f
+    },
+    new HousingData
+    {
+        Size = 1000f,
+        HistoricalPrices = new float[] { 200000f, 250000f, 230000f },
+        CurrentPrice = 225000f
+    },
+    new HousingData
+    {
+        Size = 1000f,
+        HistoricalPrices = new float[] { 126000f, 130000f, 200000f },
+        CurrentPrice = 195000f
+    },
+    new HousingData
+    {
+        Size = 850f,
+        HistoricalPrices = new float[] { 150000f,175000f,210000f },
+        CurrentPrice = 205000f
+    },
+    new HousingData
+    {
+        Size = 900f,
+        HistoricalPrices = new float[] { 155000f, 190000f, 220000f },
+        CurrentPrice = 210000f
+    },
+    new HousingData
+    {
+        Size = 550f,
+        HistoricalPrices = new float[] { 99000f, 98000f, 130000f },
+        CurrentPrice = 180000f
+    }
+};
 ```
-Label   Workclass   education   marital-status
-0   Private 11th    Never-married
-0   Private HS-grad Married-civ-spouse
-1   Local-gov   Assoc-acdm  Married-civ-spouse
-1   Private Some-college    Married-civ-spouse
 
-```
-<!-- markdownlint-enable MD010 -->
+## <a name="convert-idataview-to-ienumerable"></a>Konwertuj IDataView do interfejsu IEnumerable
 
-Nasze klasa jest zdefiniowana w następujący sposób:
+Najszybszy sposób sprawdzenia wartości [ `IDataView` ](xref:Microsoft.ML.IDataView) jest, aby przekonwertować go pod kątem [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601). Aby przekonwertować [ `IDataView` ](xref:Microsoft.ML.IDataView) do [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) użyj [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) metody. 
+
+Aby zoptymalizować wydajność, ustaw wartość `reuseRowObject` do `true`. To opóźnieniem spowoduje wypełnienie tego samego obiektu przy użyciu danych bieżącego wiersza, ponieważ jest szacowana w przeciwieństwie tworzenia nowego obiektu dla każdego wiersza w zestawie danych.
 
 ```csharp
-public class InspectedRow
+// Create an IEnumerable of HousingData objects from IDataView
+IEnumerable<HousingData> housingDataEnumerable =
+    mlContext.Data.CreateEnumerable<HousingData>(data, reuseRowObject: true);
+
+// Iterate over each row
+foreach (HousingData row in housingDataEnumerable)
 {
-    [LoadColumn(0)]
-    public bool IsOver50K { get; set; }
-    [LoadColumn(1)]
-    public string WorkClass { get; set; }
-    [LoadColumn(2)]
-    public string Education { get; set; }
-    [LoadColumn(3)]
-    public string MaritalStatus { get; set; }
+    // Do something (print out Size property) with current Housing Data object being evaluated
+    Console.WriteLine(row.Size);
 }
 ```
 
+Jeśli wymagane jest tylko dostęp do części danych lub określonych indeksów, użyj [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) i ustaw `reuseRowObject` wartości parametru `false` , nowy obiekt jest tworzony dla każdego z żądanych wierszy w zestawie danych. Następnie przekonwertować [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) do tablicy lub listy.
+
+> [!WARNING]
+> Konwertowanie wynik [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) do tablicy lub listy załaduje wszystkie żądany [ `IDataView` ](xref:Microsoft.ML.IDataView) wierszy do pamięci, która może wpływać na wydajność.
+
+Po utworzeniu kolekcji można wykonywać operacje na danych. Poniższy fragment kodu pobiera pierwszych trzech wierszy w zestawie danych i oblicza średnią cenę bieżącego.
+
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
-// as a catalog of available operations and as the source of randomness.
-var mlContext = new MLContext();
-
-// Read the data into a data view.
-var data = mlContext.Data.ReadFromTextFile<InspectedRow>(dataPath, hasHeader: true);
-
-// Start creating our processing pipeline. For now, let's just concatenate all the text columns
-// together into one.
-var pipeline = mlContext.Transforms.Concatenate("AllFeatures", "WorkClass", "Education", "MaritalStatus");
-
-// Fit our data pipeline and transform data with it.
-var transformedData = pipeline.Fit(data).Transform(data);
-
-// Extract the 'AllFeatures' column.
-// This will give the entire dataset: make sure to only take several row
-// in case the dataset is huge. The is similar to the static API, except
-// you have to specify the column name and type.
-var featureColumns =
-    transformedData
-        .GetColumn<string[]>(mlContext, "AllFeatures")
-        .Take(20)
+// Create an Array of HousingData objects from IDataView
+HousingData[] housingDataArray =
+    mlContext.Data.CreateEnumerable<HousingData>(data, reuseRowObject: false)
+        .Take(3)
         .ToArray();
+
+// Calculate Average CurrentPrice of First Three Elements
+HousingData firstRow = housingDataArray[0];
+HousingData secondRow = housingDataArray[1];
+HousingData thirdRow = housingDataArray[2];
+float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + thirdRow.CurrentPrice) / 3;
+``` 
+
+## <a name="inspect-values-in-a-single-column"></a>Sprawdź wartości w jednej kolumnie
+
+W dowolnym momencie w modelu procesu tworzenia wartości w jednej kolumnie [ `IDataView` ](xref:Microsoft.ML.IDataView) można uzyskać dostęp za pomocą [ `GetColumn` ](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) metody. [ `GetColumn` ](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) Metoda zwraca wszystkie wartości w jedną kolumnę jako [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601).
+
+```csharp
+IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 ```
+
+## <a name="inspect-idataview-values-one-row-at-a-time"></a>Sprawdzanie IDataView wartości jeden wiersz w czasie
+
+[`IDataView`](xref:Microsoft.ML.IDataView) opóźnieniem jest oceniany. Iterowanie wierszy [ `IDataView` ](xref:Microsoft.ML.IDataView) bez konwersji [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) jak pokazano w poprzednich sekcjach tego dokumentu, tworzenie [ `DataViewRowCursor` ](xref:Microsoft.ML.DataViewRowCursor) przy użyciu [ `GetRowCursor` ](xref:Microsoft.ML.IDataView.GetRowCursor*) metody i przekazywanie w [DataViewSchema](xref:Microsoft.ML.DataViewSchema) z Twojej [ `IDataView` ](xref:Microsoft.ML.IDataView) jako parametr. Następnie Iterowanie wierszy, należy użyć [ `MoveNext` ](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) metoda kursora wraz z [ `ValueGetter` ](xref:Microsoft.ML.ValueGetter%601) delegatów, aby wyodrębnić odpowiednie wartości z każdej z kolumn.
+
+> [!IMPORTANT]
+> Ze względów wydajności poprzez nosicieli używane w strukturze ML.NET [ `VBuffer` ](xref:Microsoft.ML.Data.VBuffer%601) zamiast kolekcji natywnych typów (oznacza to, że `Vector`,`float[]`). 
+
+```csharp
+// Get DataViewSchema of IDataView
+DataViewSchema columns = data.Schema;
+
+// Create DataViewCursor
+using (DataViewRowCursor cursor = data.GetRowCursor(columns))
+{
+    // Define variables where extracted values will be stored to
+    float size = default;
+    VBuffer<float> historicalPrices = default;
+    float currentPrice = default;
+
+    // Define delegates for extracting values from columns
+    ValueGetter<float> sizeDelegate = cursor.GetGetter<float>(columns[0]);
+    ValueGetter<VBuffer<float>> historicalPriceDelegate = cursor.GetGetter<VBuffer<float>>(columns[1]);
+    ValueGetter<float> currentPriceDelegate = cursor.GetGetter<float>(columns[2]);
+    
+    // Iterate over each row
+    while (cursor.MoveNext())
+    {
+        //Get values from respective columns
+        sizeDelegate.Invoke(ref size);
+        historicalPriceDelegate.Invoke(ref historicalPrices);
+        currentPriceDelegate.Invoke(ref currentPrice);
+    }
+}
+```
+
+## <a name="preview-result-of-pre-processing-or-training-on-a-subset-of-the-data"></a>Podgląd wyników wstępnego przetwarzania lub szkolenia dla podzestawu danych
+
+> [!WARNING]
+> Nie używaj `Preview` w środowisku produkcyjnym kod, ponieważ jest przeznaczona do debugowania i może zmniejszyć wydajność.
+
+Model proces tworzenia jest iteracyjny i eksperymentalne. Aby wyświetlić podgląd co danych będzie wyglądać po zakończeniu przetwarzania wstępnego lub szkolenie modelu uczenia maszynowego dla podzestawu danych, użyj [ `Preview` ](xref:Microsoft.ML.DebuggerExtensions.Preview*) metoda, która zwraca [ `DataDebuggerPreview` ](xref:Microsoft.ML.Data.DataDebuggerPreview). Wynik jest obiekt z `ColumnView` i `RowView` właściwości, które są zarówno [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) i zawierać wartości w określonej kolumnie lub wierszu. Określ liczbę wierszy, aby zastosować przekształcenie do przy użyciu `maxRows` parametru.
+
+![Obiekt danych po debugera (wersja zapoznawcza)](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
+
+Wynik sprawdzania [ `IDataView` ](xref:Microsoft.ML.IDataView) powinien wyglądać podobnie do poniższego:
+
+![Widok wierszy podglądu debugera danych](./media/inspect-intermediate-data-ml-net/data-debugger-preview-02.png)

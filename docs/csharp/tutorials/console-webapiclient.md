@@ -3,12 +3,12 @@ title: Tworzenie klienta REST przy użyciu platformy .NET Core
 description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61676004"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063885"
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -36,11 +36,10 @@ Musisz zainstalować wybrany edytor kodu. Opisy poniżej użycia [programu Visua
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
-Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog aplikacji. Upewnij się, że sposób bieżącego katalogu. Wpisz polecenie `dotnet new console` w wierszu polecenia. Spowoduje to utworzenie plikach startowych dla podstawowych aplikacji "Hello World".
+Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog aplikacji. Upewnij się, że sposób bieżącego katalogu. Wpisz polecenie `dotnet new console` w wierszu polecenia. Spowoduje to utworzenie plikach startowych dla podstawowych aplikacji "Hello World". Jak jest to nowy projekt, żaden z zależności jest w miejscu, dzięki czemu przy pierwszym uruchomieniu Pobierz platformę .NET Core, można zainstalować certyfikatu deweloperskiego i uruchamiać Menedżera pakietów NuGet, aby przywrócić brakujących zależności.
 
-Przed rozpoczęciem wprowadzania modyfikacji, Przejdźmy przez czynności, aby uruchomić prostej aplikacji Hello World. Po utworzeniu aplikacji wpisz `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) w wierszu polecenia. To polecenie uruchamia proces przywracania pakietów NuGet. NuGet to Menedżer pakietów .NET. To polecenie pobiera wszystkich brakujących zależności dla Twojego projektu. Jak jest to nowy projekt, żaden z zależności jest w miejscu, dzięki czemu przy pierwszym uruchomieniu pobierze platformę .NET Core. Po wykonaniu tego kroku początkowego, wystarczy uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) podczas dodawania nowych pakietów zależnych lub zaktualizować wersje tych zależności.
-
-Po przywróceniu pakietów, możesz uruchomić `dotnet build`. Wykonuje aparat kompilacji i tworzy aplikację. Na koniec wykonaj `dotnet run` do uruchamiania aplikacji.
+Przed rozpoczęciem wprowadzania modyfikacji, wpisz `dotnet run` ([patrz Uwaga](#dotnet-restore-note)) w wierszu polecenia, aby uruchomić aplikację. `dotnet run` automatycznie wykonuje `dotnet restore` Jeśli środowisko nie ma zależności. Wykonuje także `dotnet build` Jeśli aplikacja wymaga odbudowania.
+Po początkowej konfiguracji, wystarczy uruchomić `dotnet restore` lub `dotnet build` po sens dla Twojego projektu.
 
 ## <a name="adding-new-dependencies"></a>Dodawanie nowych zależności
 
@@ -62,7 +61,7 @@ Dodaj następujący kod bezpośrednio po tym wierszu:
 
 Większość edytory kodu zapewni uzupełnianie przez różne wersje tych bibliotek. Zazwyczaj będziesz chciał użyć najnowszej wersji dowolnego pakietu, który dodajesz. Jednak należy się upewnić, że są zgodne wersje wszystkich pakietów i są również zgodne wersję platformy aplikacji .NET Core.
 
-Po wprowadzeniu tych zmian, należy uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) ponownie, aby pakiet jest zainstalowany w systemie.
+Po wprowadzeniu tych zmian należy wykonać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) tak, aby pakiet jest zainstalowany w systemie.
 
 ## <a name="making-web-requests"></a>Tworzenie żądania sieci Web
 

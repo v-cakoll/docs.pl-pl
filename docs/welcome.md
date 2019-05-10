@@ -3,14 +3,14 @@ title: Zapraszamy do platformy .NET
 description: Wprowadzenie do technologii z rodziny .NET.
 author: mairaw
 ms.author: mairaw
-ms.date: 04/02/2019
+ms.date: 05/06/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4d4edc146efa12fc29c2c7e65727bf5a5b664eb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6aad2d145d31d4799d274aa1b0c8738e91906ae
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767582"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063158"
 ---
 # <a name="welcome-to-net"></a>Zapraszamy do platformy .NET
 
@@ -51,6 +51,7 @@ Ta dokumentacja obejmuje zakresem .NET, platform i języków. Możesz rozpoczą�
 - [Podręcznik języka F#](fsharp/index.md)
 - [Przewodnik po Visual Basic](visual-basic/index.md)
 - [Przewodnik po strukturze ML.NET](machine-learning/index.yml)
+- [.NET dla platformy Apache Spark](spark/index.yml)
 
 Ponadto możesz przeglądać [dokumentacja interfejsu API .NET](/dotnet/api).
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982374"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063893"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje zdarzenia trasowane terminologii, w tym artykule opisano sposób zdarzenia trasowane są przesyłane za pośrednictwem drzewa elementów, podsumowano, jak obsługiwać zdarzenia trasowane i wyjaśniono, jak tworzyć własne niestandardowe zdarzenia trasowane.
@@ -197,10 +197,9 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia wejściowe, które są dostępne w pary są wdrażane tak, aby akcja pojedynczego użytkownika z danych wejściowych, takich jak naciśnięcie przycisku myszy zgłosi zarówno zdarzenia trasowane pary w sekwencji. Najpierw tunelowania zdarzenie jest zgłaszane i przybliżone ilości tych danych trasę. Następnie propagacji zdarzenie jest wywoływane i przybliżone ilości tych danych trasę. Dwa zdarzenia dosłownie udostępniać tego samego wystąpienie danych zdarzeń, ponieważ <xref:System.Windows.UIElement.RaiseEvent%2A> wywołania metody w klasie wykonawczych, która wywołuje zdarzenia propagacji nasłuchuje dane zdarzenia z tunelowania zdarzenia i są ponownie używane nowe zdarzenie zostaje zgłoszone. Odbiorniki z obsługą tunelowania zdarzenia mają pierwsza okazja, aby oznaczyć zdarzenia trasowanego obsługiwane (funkcje obsługi klas po pierwsze, następnie wystąpienia obsługi). Jeśli element wzdłuż trasy tunelowania oznaczone zdarzenia trasowanego jako obsłużony, dane już obsługi zdarzeń jest wysyłany na zdarzenia propagacji, a typowy obsługi dołączony dla równoważnego Propagacja zdarzeń wejściowych nie zostaną wywołane. Na zewnątrz wygląd będzie tak, jakby obsługiwanego propagacji zdarzenie nie ma jeszcze zgłaszane. To zachowanie obsługi przydaje się do składania kontroli, których możesz chcieć wszystkich testowania trafienia na podstawie zdarzeń wejściowych lub skoncentrować się na podstawie zdarzeń wejściowych przekazywanych przez kontroli nad końcowego, a nie jej części złożonego. Elementu formantu końcowego zbliżonej do katalogu głównego w składania i dlatego ma okazję do klasy obsługi zdarzeń tunelowania najpierw, a być może do "replace" tego zdarzenia trasowanego ze zdarzeniem bardziej specyficznych dla formantu, jako część kodu, który tworzy kopie kontrolki Klasa.  
   
- Ilustracją jak danych wejściowych do przetwarzania zdarzeń, działa należy wziąć pod uwagę następujące przykładowe dane wejściowe zdarzenia. Na poniższej ilustracji drzewa `leaf element #2` jest źródłem zarówno `PreviewMouseDown` i następnie `MouseDown` zdarzeń.  
+ Ilustracją jak danych wejściowych do przetwarzania zdarzeń, działa należy wziąć pod uwagę następujące przykładowe dane wejściowe zdarzenia. Na poniższej ilustracji drzewa `leaf element #2` jest źródłem zarówno `PreviewMouseDown` i następnie `MouseDown` zdarzeń:  
   
- ![Diagram routingu zdarzeń](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
-Dane wejściowe zdarzenia Propagacja i tunelowanie  
+ ![Diagram routingu zdarzeń](./media/routed-events-overview/input-event-routing.png)  
   
  Kolejność przetwarzania zdarzeń jest następująca:  
   

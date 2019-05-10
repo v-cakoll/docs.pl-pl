@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd7bf92750c6e314a5c9105bb961bf68b68182cb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773421"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063825"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Instrukcje: Tworzenie i uruchamianie długotrwałego przepływu pracy
 Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w środowisku uruchomieniowym zostaną zachowane, a następnie zwolnij bezczynności przepływy pracy z bazą danych. Kroki opisane w [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md) przedstawiono podstawowe informacje dotyczące przepływu pracy hostingu, za pomocą aplikacji konsoli. Przykłady zostały przedstawione począwszy od przepływów pracy, przepływ pracy cyklu życia obsługi i wznawianie zakładek. W celu przedstawienia skutecznie trwałość przepływu pracy, wymagane jest bardziej złożone hosta przepływu pracy, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy. Ten krok, w tym samouczku przedstawiono sposób tworzenia hosta formularzy Windows, aplikacji, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy, trwałość przepływu pracy i stanowi podstawę dla zaawansowanych funkcji, takich jak śledzenie i przechowywania wersji, które są przedstawione w kolejnych krokach samouczka.  
@@ -108,18 +108,18 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     |formant|Właściwość: Wartość|  
     |-------------|---------------------|  
     |**Etykieta**|Lokalizacja: 7, 20<br /><br /> Tekst: Identyfikator wystąpienia przepływu pracy|  
-    |**ComboBox**|Nazwa: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Lokalizacja: 121, 17<br /><br /> Rozmiar: 227, 21|  
+    |**ComboBox**|Nazwa: Identyfikator wystąpienia<br /><br /> DropDownStyle: DropDownList<br /><br /> Lokalizacja: 121, 17<br /><br /> Rozmiar: 227, 21|  
     |**Etykieta**|Lokalizacja: 7, 47<br /><br /> Tekst: Wynik|  
     |**TextBox**|Nazwa: Wynik<br /><br /> Lokalizacja: 50, 44<br /><br /> Rozmiar: 65, 20|  
     |**Przycisk**|Nazwa: EnterGuess<br /><br /> Lokalizacja: 121, 42<br /><br /> Rozmiar: 75, 23<br /><br /> Tekst: Wprowadź odgadnięcia|  
     |**Przycisk**|Nazwa: QuitGame<br /><br /> Lokalizacja: 274, 42<br /><br /> Rozmiar: 75, 23<br /><br /> Tekst: Zamknij|  
-    |**TextBox**|Nazwa: Stan<br /><br /> Lokalizacja: 10, 73<br /><br /> Wiele linii: Prawda<br /><br /> ReadOnly: Prawda<br /><br /> Paski przewijania: W pionie<br /><br /> Rozmiar: 338, 208|  
+    |**TextBox**|Nazwa: Stan<br /><br /> Lokalizacja: 10, 73<br /><br /> Wiele linii: Prawda<br /><br /> Tylko do odczytu: Prawda<br /><br /> Paski przewijania: W pionie<br /><br /> Rozmiar: 338, 208|  
   
 5. Ustaw **AcceptButton** właściwości formularza w celu **EnterGuess**.  
   
  Poniższy przykład ilustruje wypełniony formularz.  
   
- ![WF45 Wprowadzenie formularz hosta samouczek przepływu pracy](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ ![Zrzut ekranu formularza hosta przepływu pracy Windows Workflow Foundation.](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)  
   
 ### <a name="BKMK_AddHelperMethods"></a> Aby dodać właściwości i metody pomocnicze formularza  
  Kroki opisane w tej sekcji Dodaj właściwości i metody pomocnicze do skonfigurowanego interfejsu użytkownika formularza, do obsługi uruchomiona i wznawianie numer odgadnięcia przepływy pracy klasy formularza.  

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Na
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020000"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063039"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Projektowanie reguł weryfikacji w warstwie modelu domeny
 
@@ -81,7 +81,7 @@ Istnieją różne metody radzenia sobie z opóźnieniem walidacji w domenie. W k
 
 ### <a name="two-step-validation"></a>Weryfikacja dwuetapowa
 
-Należy również rozważyć weryfikacji dwuetapowej. Użyj weryfikacji na poziomie pola na polecenia obiektów transferu danych (dto) i weryfikacji na poziomie dla domeny wewnątrz jednostek. Można to zrobić, zwracając obiekt wyniku zamiast tego wyjątki ułatwi radzić sobie z błędami sprawdzania poprawności.
+Należy również rozważyć weryfikacji dwuetapowej. Użyj weryfikacji na poziomie pola na polecenia obiektów transferu danych (dto) i weryfikacji na poziomie dla domeny wewnątrz jednostek. Można to zrobić, zwracając obiekt wyniku, a nie wyjątków w celu ułatwienia radzić sobie z błędami sprawdzania poprawności.
 
 Za pomocą weryfikacji pola przy użyciu adnotacji danych, na przykład nie duplikowania definicji sprawdzania poprawności. Wykonanie, jednak może być zarówno po stronie serwera, jak i po stronie klienta w przypadku dto (polecenia i modele widoków, na przykład).
 

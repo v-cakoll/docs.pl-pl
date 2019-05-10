@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: a60a03d0f88b6176dc22e850c8a84b605078c657
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 80f9fd4e86abbdcc316ff22090cc980bbb8245d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679885"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595446"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Ogólna struktura programu w języku C# (Przewodnik programowania w języku C#)
 C# programy może obejmować jeden lub więcej plików. Każdy plik może zawierać zero lub więcej przestrzeni nazw. Przestrzeń nazw może zawierać typy, takie jak klasy, struktury, interfejsy, wyliczenia i delegatów, oprócz innych przestrzeniach nazw. Poniżej przedstawiono szkielet programu C#, która zawiera wszystkie te elementy.  

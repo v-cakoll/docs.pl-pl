@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Do
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: b262f5352f62e74ec184e2e00e8cff3aeecc2f64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9203404c0b623570c2b089087b7ce5d676bba376
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760886"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062982"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementowanie zadań w tle w mikrousługach za pomocą interfejsu IHostedService i klasa BackgroundService
 
@@ -96,7 +96,7 @@ namespace Microsoft.Extensions.Hosting
 
 Jak możesz sobie wyobrazić, możesz utworzyć wiele implementacji pomocą interfejsu IHostedService i zarejestruj je w `ConfigureService()` metody do kontenera DI, jak pokazano wcześniej. Wszystkie te usługi hostowanej będzie można uruchamiać i zatrzymywać wraz z aplikacji/mikrousług.
 
-Jako deweloper jest odpowiedzialny za obsługę Akcja zatrzymania lub usługi w przypadku `StopAsync()` metoda jest wywoływana przez hosta.
+Jako deweloper jest odpowiedzialny za obsługę Akcja zatrzymania usług podczas `StopAsync()` metoda jest wywoływana przez hosta.
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>Implementowanie pomocą interfejsu IHostedService za pomocą klasy niestandardowej usługi hostowanej pochodząca z klasy bazowej BackgroundService
 

@@ -4,12 +4,12 @@ description: Cykl życia konteneryzowanych aplikacji platformy Docker korzystaj�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795382"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063311"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Tworzenie potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services dla aplikacji .NET Core 2.0 na kontenerach i wdrażanie w klastrze Kubernetes
 
@@ -21,7 +21,7 @@ Rysunek 5-12 widać scenariusza DevOps end-to-end, obejmujące zarządzania kode
 
 Jest ważne podkreślić, że dwa potoki kompilacji/ciągłej integracji i wersji/ciągłe dostarczanie, są połączone za pośrednictwem rejestru platformy Docker (np. usługi Docker Hub lub Azure Container Registry). Rejestr platformy Docker jest jednym z głównych różnic w porównaniu do tradycyjnego procesu ciągłej integracji/ciągłego wdrażania bez platformy Docker.
 
-Jak pokazano w rysunek 5-13, pierwsza faza jest potok kompilacji/ciągłej integracji. W usługom DevOps platformy Azure można utworzyć potoki kompilacji i ciągłego wdrażania, które będą skompilować kod, Utwórz obrazy platformy Docker i odesłać je do rejestru platformy Docker, takich jak usługi Docker Hub lub Azure Container Registry.
+Jak pokazano w rysunek 5-13, pierwsza faza jest potok kompilacji/ciągłej integracji. W usługom DevOps platformy Azure można utworzyć potoki kompilacji/ciągłej integracji, które będą skompilować kod, Utwórz obrazy platformy Docker i odesłać je do rejestru platformy Docker, takich jak usługi Docker Hub lub Azure Container Registry.
 
 ![Widok DevOps platformy Azure, definicja zadania procesu kompilacji w przeglądarce.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 

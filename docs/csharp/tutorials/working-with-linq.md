@@ -3,12 +3,12 @@ title: Praca z technologią LINQ
 description: Ten samouczek omawia sposób generowania sekwencji za pomocą LINQ, pisanie metody używane w kwerendach LINQ i rozróżnienie między eager i leniwa ocena.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: d6dbe158c5f9b474dbd2cc61982ab8e23e584ec7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675617"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063209"
 ---
 # <a name="working-with-linq"></a>Praca z technologią LINQ
 
@@ -51,7 +51,7 @@ using System.Linq;
 
 Jeśli te trzy wiersze (`using` instrukcji) nie są w górnej części pliku nasz program nie zostanie skompilowany.
 
-Teraz, gdy wszystkie odwołania, które należy rozważyć, co stanowi talii kart. Często talii kart gry zawiera cztery kolory, a każdy sposób ma trzynaście wartości. Normalnie, należy rozważyć utworzenie `Card` klasy bezpośrednio off bat i wypełnianie zbiór `Card` obiekty ręcznie. Za pomocą LINQ może być bardziej zwięzłe niż zwykły sposób radzenia sobie z tworzeniem talii kart. Zamiast tworzyć `Card` klasy, można utworzyć dwie sekwencje do reprezentowania zestawów i rangi texeli, odpowiednio. Utworzysz naprawdę proste parę [ *metody iteracyjne* ](../iterators.md#enumeration-sources-with-iterator-methods) wygeneruje rangę i kolory jako <xref:System.Collections.Generic.IEnumerable%601>s ciągów:
+Teraz, gdy wszystkie odwołania, które należy rozważyć, co stanowi talii kart. Często talii kart gry zawiera cztery kolory, a każdy sposób ma trzynaście wartości. Normalnie, należy rozważyć utworzenie `Card` klasy bezpośrednio off bat i wypełnianie zbiór `Card` obiekty ręcznie. Za pomocą LINQ może być bardziej zwięzłe niż zwykły sposób radzenia sobie z tworzeniem talii kart. Zamiast tworzyć `Card` klasy, można utworzyć dwie sekwencje do reprezentowania kolory i rangi texeli, odpowiednio. Utworzysz naprawdę proste parę [ *metody iteracyjne* ](../iterators.md#enumeration-sources-with-iterator-methods) wygeneruje rangę i kolory jako <xref:System.Collections.Generic.IEnumerable%601>s ciągów:
 
 ```csharp
 // Program.cs

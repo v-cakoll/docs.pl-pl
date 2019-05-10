@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644004"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063048"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Program .NET Framework i wydania poza harmonogramem (OOB)
 
@@ -52,8 +52,6 @@ Wydania OOB dla podstawowych składników środowiska uruchomieniowego (języka 
  Zazwyczaj pakiet OOB ma jedną lub kilka wersji wstępnych i wersję stabilną. Licencja, który towarzyszy wersji wstępnej, zazwyczaj nie zezwala na redystrybucję, ale umożliwia wypróbowanie pakietu i wyrazić swoją opinię. Opinie są włączane do wszelkich aktualizacji wprowadzanych w pakiecie. Ostateczna wersja jest rozpowszechniana jako stabilny pakiet NuGet i zawiera licencję zezwalającą na dystrybucję pakietu NuGet wraz z aplikacją. Stabilne pakiety są obsługiwane przez firmę Microsoft. Firma Microsoft zapewnia obsługę technologii IntelliSense, jak również inne typy dokumentacji, takie jak wpisy w blogu i odpowiedzi na forum dla wszystkich pakietów. Ponadto kod źródłowy może być dostępny w niektórych, ale nie wszystkie pakiety. Zapowiedzi dotyczących nowych i zaktualizowanych pakietów, możesz zasubskrybować [Blog programu .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
  Aby znaleźć stabilne i wstępne pakiety, wybierz **Uwzględnij wydania wstępne** w Menedżerze pakietów NuGet.
-
- Jeśli chcesz otrzymywać powiadomienia o wydaniach stabilny pakiet, Subskrybuj [źródła danych w programie .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
 
 ## <a name="see-also"></a>Zobacz także
 

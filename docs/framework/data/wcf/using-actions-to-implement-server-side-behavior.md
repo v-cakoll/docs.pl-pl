@@ -2,12 +2,12 @@
 title: Używanie akcji do implementacji zachowania po stronie serwera
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875255"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063166"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Używanie akcji do implementacji zachowania po stronie serwera
 
@@ -46,7 +46,7 @@ Akcje protokołu OData umożliwiają implementowanie zachowania, które podejmuj
   
 3. Przechowywanie dowolnego wynikiem Invoke(), dzięki czemu mogą być pobierane, za pomocą GetResult()  
   
- Parametry mogą być przekazywane jako tokenów. To dlatego istnieje możliwość zapisu danych dostawcy usług, działająca z tokenów, które reprezentują zasoby, jeśli jest to przypadek, konieczne może być przekonwertować (marshal) tokeny te służą do rzeczywistych zasobów przed wysłaniem do rzeczywistego akcji. Po parametrze został skierowany, tak aby zmiany do zasobu, które występują podczas wywoływania akcji zostaną zapisane i będą zapisane na dysku musi być w stanie edycji.  
+ Parametry mogą być przekazywane jako tokenów. To dlatego istnieje możliwość zapisu danych dostawcy usług, działająca z tokenów, które reprezentują zasoby, jeśli jest to przypadek, konieczne może być przekonwertować (marshal) tokeny te służą do rzeczywistych zasobów przed wysłaniem do rzeczywistego akcji. Po parametr został przekazany, tak aby zmiany do zasobu, które występują podczas wywoływania akcji zostaną zapisane i będą zapisane na dysku musi być w stanie edycji.  
   
  Ten interfejs wymaga dwóch metod: Wywołania i GetResult. Wywoływanie wywołuje delegata, który implementuje zachowanie akcji i zwraca GetResult wynik monitorowanej akcji.  
   

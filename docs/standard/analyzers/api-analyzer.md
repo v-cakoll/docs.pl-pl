@@ -3,14 +3,14 @@ title: Analizator interfejsu API platformy .NET
 description: Dowiedz się, jak analizatora interfejsu API platformy .NET mogą pomóc wykryć przestarzałe interfejsy API i problemy ze zgodnością platformy.
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947461"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063348"
 ---
 # <a name="net-api-analyzer"></a>Analizator interfejsu API platformy .NET
 
@@ -23,7 +23,7 @@ Analizator interfejsu API jest dostarczany jako pakiet NuGet [Microsoft.DotNet.A
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* Visual Studio 2017 lub Visual Studio for Mac (wszystkie wersje).
+* Visual Studio 2017 i nowsze wersje lub Visual Studio for Mac (wszystkie wersje).
 
 ## <a name="discovering-deprecated-apis"></a>Odnajdywanie przestarzałe interfejsy API
 
@@ -98,6 +98,7 @@ Obecnie analizatora obsługuje następujących przypadkach:
 * Użycie standardowych API platformy .NET i zgłasza <xref:System.PlatformNotSupportedException> (PC001).
 * Użycie standardowych interfejs API programu .NET, która nie jest dostępna dla programu .NET Framework 4.6.1 (PC002).
 * Użycie natywnych interfejsów API, który nie istnieje na platformy uniwersalnej systemu Windows (PC003).
+* Użycie Delegate.BeginInvoke i EndInvoke — interfejsy API (PC004).
 * Użycie interfejsu API, który jest oznaczony jako przestarzały (DEXXXX).
 
 ## <a name="ci-machine"></a>Ciągła Integracja maszyny

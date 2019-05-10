@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793051"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592350"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwiają one aplikację, aby wyświetlić ciągi, obrazy i inne dane w przez użytkownika języka i kultury, a także do dostarczania danych alternatywnego, jeśli nie są dostępne zasoby dotyczące języka przez użytkownika lub kultury. .NET Framework wykorzystuje model Gwiazda — w celu zlokalizowania i pobrania zlokalizowanych zasobów. Piasta to główny zestaw, który zawiera niemożliwe do zlokalizowania kodu wykonywalnego i zasoby dla jednej kultury, które jest wywoływane zero lub kultury domyślnej. Domyślną kulturę używaną jest rezerwowego kulturą aplikacji; jest używany, gdy nie zlokalizowane zasoby są dostępne. Możesz użyć <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby wyznaczyć kultury aplikacji domyślnej kultury. Każdej szprysze nawiązuje połączenie z zestawem satelickim, który zawiera zasoby dla pojedynczej zlokalizowanej kultury, ale nie zawiera żadnego kodu. Ponieważ zestawy satelickie nie są częścią zestawu głównego, można łatwo zaktualizować lub zastąpić zasoby, które odpowiadają określonej kultury bez zastępowania głównym zestawie aplikacji.  

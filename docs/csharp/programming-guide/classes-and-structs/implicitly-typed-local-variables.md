@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72114233044fbf0e9910048343806eb542ed7ea5
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646374"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063754"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalne (C# Programming Guide)
 
@@ -68,6 +68,20 @@ Poniższe ograniczenia mają zastosowanie do deklaracji zmiennych wpisanych niej
 - Nie można zainicjować wiele zmiennych wpisanych niejawnie w tej samej instrukcji.
 
 - Jeśli typ o nazwie `var` znajduje się w zakresie, a następnie `var` — słowo kluczowe zostanie rozwiązany w tej nazwy typu i nie będzie traktowane jako część niejawnie wpisane deklaracji zmiennej lokalnej.
+
+Niejawnego wpisywania z `var` — słowo kluczowe można stosować tylko do zmiennych w zakresie metody lokalnej. Niejawnego wpisywania nie jest dostępna dla pola klasy jako C# kompilator napotyka logiczne paradox przetworzeniu kod: kompilator musi znać typ pola, ale nie można określić typu, dopóki nie zostanie przeanalizowany wyrażenia przypisania, i Nie można obliczyć wyrażenia, nie wiedząc o tym typie. Rozważmy poniższy kod:
+
+```csharp
+private var bookTitles;
+```
+
+`bookTitles` To pole klasy dla danego typu `var`. Ponieważ pole zawiera Brak wyrażenia do obliczenia, nie ma możliwości aby kompilator wywnioskuje typ `bookTitles` powinien być. Ponadto dodanie wyrażenie do pola (tak jak w przypadku dla zmiennej lokalnej) jest również niewystarczające:
+
+```csharp
+private var bookTitles = new List<string>();
+```
+
+Gdy kompilator napotka pól podczas kompilacji kodu, rejestruje typ każdego pola przed przetworzeniem wszystkie wyrażenia skojarzonych z nim. Kompilator napotka na tym samym paradox, próby przeprowadzenia analizy `bookTitles`: musi wiedzieć typu pola, ale kompilator będzie zazwyczaj określić `var`tego typu, analizując wyrażenie, które nie jest możliwe, nie wiedząc o tym typie wcześniej.
 
 Może się okazać, że `var` może być również przydatne w przypadku wyrażeń zapytania, w których jest trudny do określenia dokładnego skonstruowanego typu zmiennej zapytania. Może to być spowodowane grupowania i kolejność operacji.
 

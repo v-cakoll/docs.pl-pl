@@ -2,12 +2,12 @@
 title: Typowe kroki dotyczące korzystania z LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876980"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063004"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Typowe kroki dotyczące korzystania z LINQ to SQL
 Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, wykonaj czynności opisane w dalszej części tego tematu. Należy pamiętać, że wiele kroki są opcjonalne. Jest bardzo prawdopodobne, że można użyć modelu obiektów w stanie domyślnym.  
@@ -55,7 +55,7 @@ Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
 ## <a name="using-the-object-model"></a>Za pomocą modelu obiektów  
  Poniższa ilustracja przedstawia relację między warstwą Deweloper a danych w scenariuszu dwuwarstwowej. W innych sytuacjach, zobacz [N-warstwowe i zdalne aplikacje za pomocą LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![Zrzut ekranu pokazujący Model obiektu Linq.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  Teraz, gdy model obiektów, opisz żądań informacji i manipulowanie danymi w ramach tego modelu. Należy traktować jako liczba obiektów i właściwości w modelu obiektu, a nie w wiersze i kolumny bazy danych. Dotyczy bezpośrednio z bazą danych.  
   

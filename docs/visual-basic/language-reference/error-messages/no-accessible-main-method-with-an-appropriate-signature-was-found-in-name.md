@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
-ms.openlocfilehash: f5053bddf4b9ba791ad6d0733e1dd89c4ded91bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 559c905d1e2e2de4500771a93d6116f9630011ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918271"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591972"
 ---
 # <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Brak metody dostępne "Main" z odpowiednim podpisem został znaleziony w "\<name >"
 Aplikacje wiersza poleceń jest posiadanie `Sub Main` zdefiniowane. `Main` musi być zadeklarowany jako `Public Shared` Jeśli jest zdefiniowana w klasie lub jako `Public` Jeśli zdefiniowany w module.  

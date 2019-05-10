@@ -1,15 +1,15 @@
 ---
 title: Narzędzia .NET Portability Analyzer — .NET
 description: Dowiedz się, jak ocenić, jak przenośny kod jest między różne implementacje platformy .NET, takich jak .NET Core, .NET Standard, platformy uniwersalnej systemu Windows i Xamarin za pomocą narzędzia .NET Portability Analyzer.
-ms.date: 07/26/2017
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7de6aa72b2d30c3e54d2ddf9a2d951688571d654
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628163"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063437"
 ---
 # <a name="the-net-portability-analyzer"></a>Narzędzia .NET Portability Analyzer
 
@@ -19,25 +19,25 @@ Czy chcesz wprowadzić bibliotek dla wielu platform? Chcesz zobaczyć, ile pracy
 
 * [.NET Core](../../core/index.md): Modularny projekt ma używającego side-by-side i jest przeznaczony dla scenariuszy dla wielu platform. Side-by-side umożliwia wdrażanie nowych wersji platformy .NET Core bez przerywania innych aplikacji.
 * [Platforma ASP.NET Core](/aspnet/core): to nowoczesnej sieci web — struktura oparta na module .NET Core, co daje deweloperom te same korzyści.
-* [Platforma Universal Windows](https://devblogs.microsoft.com/dotnet/net-native-performance/): Zwiększyć wydajność aplikacji Windows Store przeznaczonych dla x64 i maszyn ARM przy użyciu platformy .NET Native statyczne kompilacji. 
+* [Platforma Universal Windows](/uwp): Zwiększyć wydajność aplikacji Windows Store przeznaczonych dla x64 i maszyn ARM przy użyciu platformy .NET Native statyczne kompilacji. 
 * + Rozszerzenia platformy .NET core: Obejmuje podstawowe interfejsy API .NET oprócz innych interfejsów API, należący do ekosystemu .NET, takich jak usługi WCF, ASP.NET Core, języka FSharp i platformy Azure.
 * + Rozszerzenia platformy .NET standard: Obejmuje standardowych interfejsów API .NET oprócz innych ekosystemu .NET, takich jak usługi WCF, ASP.NET Core, języka FSharp i platformy Azure.
 
-## <a name="how-to-use-portability-analyzer"></a>Jak używać analizator przenośności
+## <a name="how-to-use-the-portability-analyzer"></a>Jak używać analizator przenośności
 
-Aby rozpocząć korzystanie z narzędzia .NET Portability Analyzer, należy najpierw pobrać i zainstalować rozszerzenie z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Działa w programie Visual Studio 2015 i Visual Studio 2017. Można go skonfigurować w programie Visual Studio za pośrednictwem **analizy** > **Portability Analyzer ustawienia** i wybieranie platform docelowych.
+Aby rozpocząć korzystanie z narzędzia .NET Portability Analyzer, należy najpierw pobrać i zainstalować rozszerzenie z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Działa w programie Visual Studio 2017 i nowszych wersjach. Można go skonfigurować w programie Visual Studio za pośrednictwem **analizy** > **Portability Analyzer ustawienia** i wybieranie platform docelowych.
 
 ![Zrzut ekranu przenośności](./media/portability-analyzer/portability-screenshot.png)
 
 Aby analizować cały projekt, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz **analizowanie przenośności zestawu**. W przeciwnym razie przejdź do **analizy** menu, a następnie wybierz **analizowanie przenośności zestawu**. W tym miejscu wybierz plik wykonywalny projektu lub biblioteki DLL.
 
-![Eksplorator rozwiązań przenośności](./media/portability-analyzer/portability-solution-explorer.png)
+![Analizator przenośności w Eksploratorze rozwiązań](./media/portability-analyzer/portability-solution-explorer.png)
 
-Po uruchomieniu analizy, zobaczą raport przenośność .NET. Tylko typy, które nie są obsługiwane przez platformę docelową są wyświetlane na liście i przejrzeć zalecenia w **wiadomości** karcie **lista błędów**. Możesz również przejść do obszarów problemów bezpośrednio z **wiadomości** kartę.
+Po uruchomieniu analizy, zobaczysz .NET Portability raportu. Tylko typy, które nie są obsługiwane przez platformę docelową są wyświetlane na liście i przejrzeć zalecenia w **wiadomości** karcie **lista błędów**. Możesz również przejść do obszarów problemów bezpośrednio z **wiadomości** kartę.
 
 ![Przenośność raportu](./media/portability-analyzer/portability-report.png)
 
-Nie chcesz używać programu Visual Studio? Można również użyć analizator przenośności w wierszu polecenia. Wystarczy pobrać [analizator przenośności interfejsu API](https://www.microsoft.com/download/details.aspx?id=42678).
+Jeśli nie chcesz używać programu Visual Studio, można użyć analizator przenośności w wierszu polecenia. Wystarczy pobrać analizator przenośności interfejsu API z [dotnet/Microsoft-apiport](https://github.com/Microsoft/dotnet-apiport/releases) repozytorium.
 
 * Wpisz następujące polecenie, aby analizować bieżący katalog: `\...\ApiPort.exe analyze -f .`
 * Aby analizować określonych listą plików .dll, wpisz następujące polecenie: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`

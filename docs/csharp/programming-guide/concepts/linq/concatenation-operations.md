@@ -2,19 +2,19 @@
 title: Operacje łączenia (C#)
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
-ms.openlocfilehash: 7b9ed736de44c92f927fd47105f72631b07af825
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3df591e6c69ac764656aa193404a435900f7ffa7
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702506"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064061"
 ---
 # <a name="concatenation-operations-c"></a>Operacje łączenia (C#)
 Łączenie odnosi się do operacji dołączania jednej sekwencji do innego.  
   
  Poniższa ilustracja przedstawia operację łączenia dwóch sekwencji znaków.  
   
- ![Grafika przedstawiająca łączenie dwóch sekwencji. ](../../../../csharp/programming-guide/concepts/linq/media/concat.png "Concat")  
+ ![Grafika przedstawiająca łączenie dwóch sekwencji.](./media/concatenation-operations/concatenation-two-sequences.png)  
   
  Metody standardowego operatora zapytań, które wykonują łączenia są wymienione w poniższej sekcji.  
   

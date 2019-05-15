@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795307"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592735"
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 
@@ -112,7 +112,7 @@ Wadą szyfrowania klucz tajny jest zakłada obie strony mają uzgodniono klucza 
 
 Przy założeniu, że Alice i Bob znajdują się dwie strony, które mają do komunikacji za pośrednictwem niezabezpieczonych kanału, mogą użyć szyfrowania klucz tajny w następujący sposób: Alice i Bob zobowiązuje się do jednego określonego algorytmu (na przykład AES) za pomocą określonego klucza i IV. Alicja Redaguj komunikat i tworzy strumień sieci (być może nazwanego potoku lub sieci poczty e-mail), na którym chcesz wysłać wiadomość. Następnie użytkownik szyfruje tekst przy użyciu klucza i IV i wysyła zaszyfrowanego komunikatu i IV do niego za pośrednictwem sieci intranet. Robert otrzymuje zaszyfrowanego tekstu i odszyfrowuje ją przy użyciu IV i wcześniej uzgodnionych klucza. W przypadku przechwycenia transmisji interceptor nie można odzyskać oryginalnej wiadomości, ponieważ nie zna klucza. W tym scenariuszu tylko klucz musi pozostać wpisu tajnego. W rzeczywistym scenariuszu Alice i Bob generuje klucz tajny i przenieść klucz tajny (symetrycznego) do drugiej strony jest używane szyfrowanie (asymetrycznie) klucz publiczny. Aby uzyskać więcej informacji o szyfrowaniu klucza publicznego zobacz następną sekcję.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera następujące klasy, które implementują algorytmy szyfrowania klucz tajny:
+Program .NET Framework zawiera następujące klasy, które implementują algorytmy szyfrowania klucz tajny:
 
 - <xref:System.Security.Cryptography.AesManaged> (wprowadzona w [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
 
@@ -154,7 +154,7 @@ Poniższa lista zawiera porównanie klucz publiczny i klucz tajny algorytmów kr
 
 - Algorytmy klucza publicznego są bardzo wolne w porównaniu z algorytmami klucz tajny, a nie są przeznaczone do zaszyfrowania dużych ilości danych. Algorytmy klucza publicznego są przydatne tylko w przypadku przesyłania bardzo małe ilości danych. Zazwyczaj szyfrowania klucza publicznego jest używany do szyfrowania klucza i IV, który będzie używany przez algorytm klucz tajny. Po przesłaniu klucza i IV szyfrowania klucz tajny jest używana w pozostałej części sesji.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera następujące klasy, które implementują algorytmy szyfrowania klucza publicznego:
+Program .NET Framework zawiera następujące klasy, które implementują algorytmy szyfrowania klucza publicznego:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ Aby używać kryptografii klucza publicznego do cyfrowego podpisywania wiadomoś
 > [!NOTE]
 > Podpis można sprawdzić przez nikogo, ponieważ klucz publiczny nadawcy jest popularną wiedzę i najczęściej przygotowywanych do uwzględnienia w formacie podpisu cyfrowego. Ta metoda nie zachowuje poufność wiadomości; wiadomości tajne go musi również być szyfrowana.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera następujące klasy, które implementują algorytmy podpis cyfrowy:
+Program .NET Framework zawiera następujące klasy, które implementują algorytmy podpis cyfrowy:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ Obie strony (Alice i Bob) można używać funkcji skrótu do zapewnienia integra
 
 Żaden z poprzednich metod uniemożliwi ktoś odczytywania komunikatów przez Alice, ponieważ są one przekazywane w postaci zwykłego tekstu. Pełne zabezpieczenia zwykle wymaga (podpisywanie komunikatów) podpisów cyfrowych i szyfrowania.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera następujące klasy, które implementują algorytmy wyznaczania wartości skrótu:
+Program .NET Framework zawiera następujące klasy, które implementują algorytmy wyznaczania wartości skrótu:
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -256,7 +256,7 @@ Obie strony (Alice i Bob) można używać funkcji skrótu do zapewnienia integra
 
 ## <a name="random-number-generation"></a>Generowanie liczby losowej
 
-Generowanie liczby losowej jest integralną częścią wielu operacji kryptograficznych. Na przykład klucze kryptograficzne muszą być jako losowych, jak to możliwe, aby była możliwość ich odtworzenia. Kryptograficznych generatorów liczb losowych, należy wygenerować dane wyjściowe, który jest praktycznie niemożliwe do prognozowania z prawdopodobieństwem, który jest lepsze niż połowy. W związku z tym każda metoda przewidywania dalej bitu danych wyjściowych nie musi wykonywać lepiej niż zgadywania losowych. Klasy w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Użyj generatorów liczb losowych do wygenerowania kluczy kryptograficznych.
+Generowanie liczby losowej jest integralną częścią wielu operacji kryptograficznych. Na przykład klucze kryptograficzne muszą być jako losowych, jak to możliwe, aby była możliwość ich odtworzenia. Kryptograficznych generatorów liczb losowych, należy wygenerować dane wyjściowe, który jest praktycznie niemożliwe do prognozowania z prawdopodobieństwem, który jest lepsze niż połowy. W związku z tym każda metoda przewidywania dalej bitu danych wyjściowych nie musi wykonywać lepiej niż zgadywania losowych. Klasy w .NET Framework Użyj generatorów liczb losowych do wygenerowania kluczy kryptograficznych.
 
 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> Klasa jest implementacją algorytm generator liczb losowych.
 

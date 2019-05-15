@@ -2,17 +2,17 @@
 title: Mapowanie typu danych serwera SQL
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664093"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583720"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapowanie typu danych serwera SQL
 Program SQL Server i .NET Framework są oparte na systemach innego typu. Na przykład, .NET Framework <xref:System.Decimal> struktura ma maksymalną skalę wynoszącą 28, typów danych dziesiętnych i numeric programu SQL Server ma maksymalną skalę wynoszącą 38. Aby zachować spójność danych podczas odczytywania i zapisywania danych <xref:System.Data.SqlClient.SqlDataReader> ujawnia specyficzne dla programu SQL Server typizowane metody dostępu, które zwracają obiekty <xref:System.Data.SqlTypes> oraz metody dostępu, które zwracają .NET Framework typy. Typy programu SQL Server i typów programu .NET Framework są również jest reprezentowanych przez wyliczenia w <xref:System.Data.DbType> i <xref:System.Data.SqlDbType> klasy, które można używać podczas określania <xref:System.Data.SqlClient.SqlParameter> typów danych.  
   
- W poniższej tabeli przedstawiono wywnioskowane [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu <xref:System.Data.DbType> i <xref:System.Data.SqlDbType> wyliczenia i metody dostępu dla <xref:System.Data.SqlClient.SqlDataReader>.  
+ W poniższej tabeli przedstawiono wnioskowany typ .NET Framework <xref:System.Data.DbType> i <xref:System.Data.SqlDbType> wyliczenia i metody dostępu dla <xref:System.Data.SqlClient.SqlDataReader>.  
   
 |Typ aparatu bazy danych programu SQL Server|Typ programu .NET Framework|Wyliczenia SqlDbType|Właściwość SqlDataReader SqlTypes typizowane metody dostępu|Atrybut DbType, wyliczenie|Atrybut SqlDataReader DbType typizowane metody dostępu|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

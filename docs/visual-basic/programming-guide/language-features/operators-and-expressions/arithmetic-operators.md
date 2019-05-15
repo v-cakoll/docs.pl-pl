@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649762"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593240"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatory arytmetyczne w Visual Basic
 Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytmetyczne, które obejmują obliczanie wartości liczbowych, reprezentowane przez literały, zmienne, innych wyrażeń, funkcji i wywołania właściwości i stałe. Również sklasyfikowane za pomocą operatorów arytmetycznych są bit-shift — operatory, które działają na poziomie pojedynczych bitów operandu- and -shift ich wzorców bitowych do lewej lub prawej strony.  
@@ -51,7 +51,7 @@ Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytme
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Próba dzielenia przez Zero  
- Dzielenie przez zero ma różne wyniki w zależności od typów danych związane. W całkowitego podziałów (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zgłasza <xref:System.DivideByZeroException> wyjątku. W operacji dzielenia na `Decimal` lub `Single` typu danych [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] generuje również <xref:System.DivideByZeroException> wyjątku.  
+ Dzielenie przez zero ma różne wyniki w zależności od typów danych związane. W podziałów integralną (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), .NET Framework zgłasza <xref:System.DivideByZeroException> wyjątek. W operacji dzielenia na `Decimal` lub `Single` typ danych .NET Framework generuje również <xref:System.DivideByZeroException> wyjątku.  
   
  W zmiennoprzecinkowych podziału, w których `Double` typu danych, jest zgłaszany żaden wyjątek, a wynik jest składowej klasy reprezentujące <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, lub <xref:System.Double.NegativeInfinity>, w zależności od dzielna. W poniższej tabeli przedstawiono różne wyniki próby dzielenia `Double` wartość przez zero.  
   

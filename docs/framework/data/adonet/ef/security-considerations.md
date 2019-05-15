@@ -2,15 +2,15 @@
 title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 14d07fcb1d97a4e71747d6517f63fbc4108493da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641184"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583496"
 ---
 # <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
-W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
+W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
  Następujące zagadnienia dotyczące zabezpieczeń, Zastosuj do wszystkich aplikacji, które używają [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -63,7 +63,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Administrator źródła danych należy udzielać użytkownikom tylko niezbędnych uprawnień. Mimo że [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest nie DML oświadczenia dotyczące pomocy technicznej, które modyfikują dane, takie jak INSERT, UPDATE lub DELETE, użytkownicy mogą nadal uzyskiwać dostęp do połączenia ze źródłem danych. Złośliwy użytkownik może używać tego połączenia, można wykonać instrukcji DML w macierzystym języku źródła danych.  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>Uruchamianie aplikacji na minimalny poziom uprawnień.  
- Jeśli zezwolisz na zarządzanej aplikacji do uruchamiania przy użyciu uprawnień pełnego zaufania [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] nie ogranicza dostęp aplikacji do Twojego komputera. Może to umożliwić luki w zabezpieczeniach w aplikacji, aby naruszyć bezpieczeństwo całego systemu. Zabezpieczenia dostępu kodu i inne mechanizmy zabezpieczeń w [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], należy uruchomić aplikacje przy użyciu uprawnień częściowego zaufania i minimalny zestaw uprawnień, które są wymagane do włączenia aplikacji funkcji. Następujące uprawnienia dostępu kodu są minimalne uprawnienia użytkownika [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji potrzebom:  
+ Jeśli zezwolisz na zarządzanej aplikacji do uruchamiania przy użyciu uprawnień pełnego zaufania, .NET Framework nie ogranicza dostęp aplikacji do Twojego komputera. Może to umożliwić luki w zabezpieczeniach w aplikacji, aby naruszyć bezpieczeństwo całego systemu. Aby korzystać z zabezpieczeń dostępu kodu i inne mechanizmy zabezpieczeń w programie .NET Framework, należy uruchamiać aplikacje przy użyciu uprawnień częściowego zaufania i minimalny zestaw uprawnień, które są wymagane do włączenia aplikacji funkcji. Następujące uprawnienia dostępu kodu są minimalne uprawnienia użytkownika [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji potrzebom:  
   
 - <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> do otwierania plików określonych metadanych lub <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> do wyszukiwania plików metadanych katalogu.  
   

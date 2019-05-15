@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022405"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592711"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Przewodnik: Wywoływanie Windows API (Visual Basic)
 Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są częścią systemu operacyjnego Windows. Użyj ich do wykonywania zadań, gdy jest trudne do pisania procedur równoważne własne. Na przykład Windows zapewnia funkcję o nazwie `FlashWindowEx` gwarantowaną na pasku tytułu aplikacji alternatywne między poszczególnymi jasny i ciemny.  
   
  Zaletą korzystania z Windows API w kodzie jest, aby mogli oszczędzać czas projektowania, ponieważ zawierają one wielu przydatnych funkcji, które zostały już napisane i długiego czasu oczekiwania ma być używany. Wadą jest to, że interfejsy API Windows może być trudne do pracy z i unforgiving, gdy coś pójdzie źle.  
   
- Interfejsy API Windows reprezentują kategorii specjalnej współdziałania. Interfejsy API Windows korzysta z kodu zarządzanego, nie mają wbudowanej wpisz biblioteki i używać typów danych, które są inne niż te używane w programie Visual Studio. Ze względu na następujące różnice a ponieważ interfejsy API Windows nie są obiektami COM, współpracy z interfejsami API Windows i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] odbywa się przy użyciu platformy wywołać, lub jako PInvoke. Wywołanie platformy jest usługą, które umożliwia zarządzanemu kodowi do wywołania funkcji niezarządzanych zaimplementowane w bibliotekach DLL. Aby uzyskać więcej informacji, zobacz [wykorzystywanie niezarządzanych funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md). Możesz używać PInvoke w języku Visual Basic, przy użyciu `Declare` instrukcji lub stosowanie `DllImport` atrybut pusty procedury.  
+ Interfejsy API Windows reprezentują kategorii specjalnej współdziałania. Interfejsy API Windows korzysta z kodu zarządzanego, nie mają wbudowanej wpisz biblioteki i używać typów danych, które są inne niż te używane w programie Visual Studio. Z powodu tych różnic, a ponieważ interfejsy API Windows nie są obiektami COM, współpracy z interfejsami API Windows i programu .NET Framework odbywa się przy użyciu wywołania platformy, lub jako PInvoke. Wywołanie platformy jest usługą, które umożliwia zarządzanemu kodowi do wywołania funkcji niezarządzanych zaimplementowane w bibliotekach DLL. Aby uzyskać więcej informacji, zobacz [wykorzystywanie niezarządzanych funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md). Możesz używać PInvoke w języku Visual Basic, przy użyciu `Declare` instrukcji lub stosowanie `DllImport` atrybut pusty procedury.  
   
- Wywołania interfejsu API Windows ważnym elementem programowania w przeszłości Visual Basic zostały, ale rzadko są niezbędne przy użyciu programu Visual Basic .NET. W miarę możliwości, skorzystaj z kodu zarządzanego z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] do wykonywania zadań, a nie wywołań interfejsu API Windows. Ten przewodnik zawiera informacje dotyczące tych sytuacji, w której przy użyciu interfejsów API Windows jest to konieczne.  
+ Wywołania interfejsu API Windows ważnym elementem programowania w przeszłości Visual Basic zostały, ale rzadko są niezbędne przy użyciu programu Visual Basic .NET. Jeśli to możliwe, należy użyć kodu zarządzanego z programu .NET Framework do wykonywania zadań, a nie wywołań interfejsu API Windows. Ten przewodnik zawiera informacje dotyczące tych sytuacji, w której przy użyciu interfejsów API Windows jest to konieczne.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

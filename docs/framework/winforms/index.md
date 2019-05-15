@@ -6,15 +6,15 @@ helpviewer_keywords:
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801182"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583427"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Ponieważ formularze są jednostki podstawowej aplikacji, istotne jest, nadaj rozwagą do swoich funkcji i projektowania. Formularz jest ostatecznie bazie pustego czy, jako programista, zwiększanie za pomocą kontrolek, aby utworzyć interfejs użytkownika i kod służący do manipulowania danymi. W tym celu program Visual Studio zapewnia zintegrowanym środowisku programistycznym (IDE) do pomocy w pisaniu kodu, a także zaawansowane kontrolki Ustaw napisane przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. W uzupełnieniu funkcji te kontrolki w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.  
+Ponieważ formularze są jednostki podstawowej aplikacji, istotne jest, nadaj rozwagą do swoich funkcji i projektowania. Formularz jest ostatecznie bazie pustego czy, jako programista, zwiększanie za pomocą kontrolek, aby utworzyć interfejs użytkownika i kod służący do manipulowania danymi. W tym celu program Visual Studio zapewnia zintegrowanym środowisku programistycznym (IDE) do pomocy w pisaniu kodu, a także zaawansowane kontrolki Ustaw napisane przy użyciu programu .NET Framework. W uzupełnieniu funkcji te kontrolki w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wprowadzenie do formularzy Windows Forms](getting-started-with-windows-forms.md)  

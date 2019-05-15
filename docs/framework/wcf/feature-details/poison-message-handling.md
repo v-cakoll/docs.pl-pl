@@ -2,12 +2,12 @@
 title: Obsługa komunikatów zanieczyszczonych
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638424"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592853"
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył maksymalną liczbę prób dostarczenia do aplikacji. Ta sytuacja może wystąpić, gdy aplikacja w kolejce nie może przetworzyć komunikatu z powodu błędów. Aby spełniać wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty, w ramach transakcji. {Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, więc, że komunikat zostanie ponowiony w ramach nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może utknąć w pętli, odbierania i przerywanie ten sam komunikat, dopóki nie przekroczono maksymalną liczbę prób dostarczenia i wyniki Zarządzanie skażonymi komunikatami.  
@@ -52,7 +52,7 @@ A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył mak
   
  Usługi WCF oferuje dwa standardowe powiązania umieszczonych w kolejce:  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innymi punktami końcowymi programu WCF z kolejki wykonywania.  
+- <xref:System.ServiceModel.NetMsmqBinding>. Wiązanie .NET Framework odpowiednia do przeprowadzania komunikacji z innymi punktami końcowymi programu WCF z kolejki.  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Powiązanie odpowiednie dla komunikacji z istniejącymi aplikacjami usługi kolejkowania komunikatów.  
   

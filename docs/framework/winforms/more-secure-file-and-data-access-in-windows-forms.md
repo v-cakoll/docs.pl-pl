@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802092"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592670"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa uprawnień w celu ochrony zasobów i danych. Gdzie aplikacji może odczytać lub zapisać danych zależy od uprawnienia nadane aplikacji. Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych lub może być zmienić sposób dostępu do danych.  
+.NET Framework używa uprawnień w celu ochrony zasobów i danych. Gdzie aplikacji może odczytać lub zapisać danych zależy od uprawnienia nadane aplikacji. Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych lub może być zmienić sposób dostępu do danych.  
   
  Gdy występują ograniczenia zabezpieczeń, masz dwie opcje: asercja uprawnień (przy założeniu, zostanie przyznany aplikacji) lub korzystania z wersji funkcji zapisywane do pracy w trybie częściowego zaufania. W poniższych sekcjach omówiono sposób pracy z pliku, bazy danych i dostęp do rejestru z aplikacji, które są uruchomione w środowisku częściowej relacji zaufania.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61802092"
 >  Domyślnie, narzędzia, które generują [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wdrożeń domyślnie wdrożeń żądania pełne zaufanie z komputerów, na których działają. Jeśli chcesz, aby zwiększyć bezpieczeństwo zalet działających w częściowej relacji zaufania, należy zmienić to ustawienie domyślne w programie Visual Studio lub w jednym z [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] narzędzia (Mage.exe lub MageUI.exe). Aby uzyskać więcej informacji o zabezpieczeniach Windows Forms i na temat sposobu określenia odpowiedniego poziomu zaufania dla aplikacji, zobacz [zabezpieczeń w Windows Forms — omówienie](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dostęp do plików  
- <xref:System.Security.Permissions.FileIOPermission> Klasy kontroli dostępu do plików i folderów w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Domyślnie system zabezpieczeń nie powoduje przyznania <xref:System.Security.Permissions.FileIOPermission> środowiskach częściowej relacji zaufania, takich jak lokalny intranet i stref internetowych. Jednak aplikacja, która wymaga dostępu do plików mogą nadal działać w tych środowiskach, jeśli zmodyfikować projekt aplikacji, lub uzyskiwania dostępu do plików za pomocą różnych metod. Domyślnie strefy Lokalny intranet jest prawo do tego samego dostępu do witryn i tego samego dostępu do katalogów, do łączenia z powrotem do witryny pochodzenia i odczytać z jego katalogu instalacji. Domyślnie strefy Internet jest tylko prawo do łączenia z powrotem do witryny pochodzenia.  
+ <xref:System.Security.Permissions.FileIOPermission> Klasy kontroli dostępu do plików i folderów w .NET Framework. Domyślnie system zabezpieczeń nie powoduje przyznania <xref:System.Security.Permissions.FileIOPermission> środowiskach częściowej relacji zaufania, takich jak lokalny intranet i stref internetowych. Jednak aplikacja, która wymaga dostępu do plików mogą nadal działać w tych środowiskach, jeśli zmodyfikować projekt aplikacji, lub uzyskiwania dostępu do plików za pomocą różnych metod. Domyślnie strefy Lokalny intranet jest prawo do tego samego dostępu do witryn i tego samego dostępu do katalogów, do łączenia z powrotem do witryny pochodzenia i odczytać z jego katalogu instalacji. Domyślnie strefy Internet jest tylko prawo do łączenia z powrotem do witryny pochodzenia.  
   
 ### <a name="user-specified-files"></a>Pliki określone przez użytkownika  
  Jednym ze sposobów, aby poradzić sobie z nie mają dostępu do pliku uprawnień jest aby monitować użytkownika o podanie informacji o pliku określonego za pomocą <xref:System.Windows.Forms.OpenFileDialog> lub <xref:System.Windows.Forms.SaveFileDialog> klasy. Ta interakcja użytkownika pomaga zapewnić niektórych aplikacji nie złośliwie ładować pliki prywatne lub zastąpić ważnych plików. <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> i <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> metody zapewniają uprawnienia odczytu i zapisu plików, otwierając strumienia pliku dla pliku, określonej przez użytkownika. Te metody także chronić pliku użytkownika przesłaniania ścieżki pliku.  
@@ -47,7 +47,7 @@ ms.locfileid: "61802092"
 > [!NOTE]
 >  Określone uprawnienie nie jest wymagana do momentu <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> faktycznie jest wywoływana metoda.  
   
- Uprawnienia, aby wyświetlić okno dialogowe pliku nie przyznaje Twojej aplikacji uzyskanie pełnego dostępu do wszystkich członków <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>, i <xref:System.Windows.Forms.SaveFileDialog> klasy. Uprawnienia, które są wymagane do wywołania każdej metody, zobacz temat referencyjny dla tej metody w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dokumentacji biblioteki klasy.  
+ Uprawnienia, aby wyświetlić okno dialogowe pliku nie przyznaje Twojej aplikacji uzyskanie pełnego dostępu do wszystkich członków <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>, i <xref:System.Windows.Forms.SaveFileDialog> klasy. Uprawnienia, które są wymagane do wywołania każdej metody w temacie odwołania dla tej metody w dokumentacji biblioteki klas .NET Framework.  
   
  Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> metodę, aby otworzyć plik określony przez użytkownika do <xref:System.Windows.Forms.RichTextBox> kontroli. Przykład wymaga <xref:System.Security.Permissions.FileDialogPermission> oraz skojarzonych z nimi <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> wartość wyliczenia. W przykładzie pokazano sposób obsługi <xref:System.Security.SecurityException> ustalenie, czy zapisywanie funkcji powinna być wyłączona. W tym przykładzie wymaga, aby Twoje <xref:System.Windows.Forms.Form> ma <xref:System.Windows.Forms.Button> formantu o nazwie `ButtonOpen`, a <xref:System.Windows.Forms.RichTextBox> formantu o nazwie `RtfBoxMain`.  
   

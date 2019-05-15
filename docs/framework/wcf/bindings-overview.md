@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652115"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592229"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
 Powiązania to obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy usługi WCF wymaga powiązania do być poprawnie określona. W tym temacie opisano rodzaje komunikacji szczegółowe informacje, które definiują powiązania, elementy powiązania, jakie powiązania znajdują się w programie WCF i jak można określić powiązanie dla punktu końcowego.  
@@ -36,9 +36,9 @@ Powiązania to obiekty, które są używane do określania szczegółów komunik
   
 - <xref:System.ServiceModel.WSHttpBinding>: Interoperacyjne powiązanie odpowiednie do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* protokołów.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Używa [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] połączyć się z innymi punktami końcowymi programu WCF na tym samym komputerze.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Używa programu .NET Framework, aby nawiązać połączenie z innymi punktami końcowymi programu WCF na tym samym komputerze.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Używa [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] do tworzenia komunikatu w kolejce połączeń z innymi punktami końcowymi WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Używa programu .NET Framework do tworzenia w kolejce komunikatów połączeń z innymi punktami końcowymi programu WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: To powiązanie oferuje wyższą wydajność niż powiązania protokołu HTTP i stanowi idealne rozwiązanie w sieci lokalnej.
   

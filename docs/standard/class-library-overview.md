@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664623"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593509"
 ---
 # <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
 
@@ -70,7 +70,7 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
 
  Typy .NET wykorzystują schemat nazewnictwa kropka składni, która connotes hierarchii. Ta technika grupy powiązanych typów w przestrzeni nazw, aby mogą być przeszukiwane i łatwiej odwoływać. Pierwsza część imię i nazwisko — maksymalnie kropki (.) po prawej stronie — jest nazwą przestrzeni nazw. Ostatnia część nazwy jest nazwą typu. Na przykład `System.Collections.Generic.List<T>` reprezentuje `List<T>` typ, który należy do `System.Collections.Generic` przestrzeni nazw. Typy w <xref:System.Collections.Generic> może służyć do pracy z kolekcji ogólnych.  
   
- Ten schemat nazewnictwa ułatwia deweloperom biblioteki rozszerzanie [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utworzyć hierarchiczne grupy typów i nazwij je w sposób spójny, zawierającego wiele użytecznych informacji. Umożliwia także typy można jednoznacznie zidentyfikować przez ich pełną nazwę (czyli według nazwy przestrzeni nazw i typ), co uniemożliwia Kolizje nazw typu. Deweloperzy biblioteki powinny używać następującej konwencji, podczas tworzenia nazwy dla ich przestrzenie nazw:  
+ Ten schemat nazewnictwa ułatwia deweloperom biblioteki Rozszerzanie programu .NET Framework do tworzenia grup hierarchicznych typów i nazwij je w sposób spójny, zawierającego wiele użytecznych informacji. Umożliwia także typy można jednoznacznie zidentyfikować przez ich pełną nazwę (czyli według nazwy przestrzeni nazw i typ), co uniemożliwia Kolizje nazw typu. Deweloperzy biblioteki powinny używać następującej konwencji, podczas tworzenia nazwy dla ich przestrzenie nazw:  
   
  *CompanyName*.*TechnologyName*  
   

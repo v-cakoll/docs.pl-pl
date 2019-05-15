@@ -2,12 +2,12 @@
 title: Pojęcia dotyczące serializacji
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 649c4475aa8dcfc657b7591a0068dbfa4af918ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99716a6346689ac4d3201f83b0b8204cad462e8e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018115"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593323"
 ---
 # <a name="serialization-concepts"></a>Pojęcia dotyczące serializacji
 Dlaczego czy chcesz użyć serializacji? Dwie najważniejsze przyczyny są do utrwalenia stanu obiektu na nośniku, więc dokładna kopia może być utworzony ponownie w późniejszym terminie, a aby wysłać obiekt według wartości z jednej aplikacji domeny do innego. Na przykład serializacji jest używany do zapisywania stanu sesji na platformie ASP.NET i skopiować obiekty do Schowka w formularzach Windows Forms. Również służy przez zdalnych do przekazywania obiektów według wartości z jednej aplikacji domeny do innego.
@@ -17,7 +17,7 @@ Dlaczego czy chcesz użyć serializacji? Dwie najważniejsze przyczyny są do ut
 ## <a name="persistent-storage"></a>Magazyn trwały
 Często jest to niezbędne do przechowywania wartości pól obiektu na dysku, a następnie później, pobrania tych danych. Chociaż jest to łatwe do osiągnięcia bez polegania na serializacji, ta metoda jest często skomplikowana względem i podatne, błąd i staje się stopniowo bardziej złożonych, gdy zachodzi potrzeba śledzenia hierarchii obiektów. Wyobraź sobie pisania aplikacji sieci dużych firm, który zawiera tysiące obiektów, i konieczności pisania kodu do zapisywania i przywracania pola i właściwości, do i z dysku dla każdego obiektu. Serializacja oferuje wygodny mechanizm do osiągnięcia tego celu.
 
-Środowisko uruchomieniowe języka wspólnego zarządza, jak obiekty są przechowywane w pamięci i udostępnia mechanizm serializacji automatyczne przy użyciu [odbicia](../../../docs/framework/reflection-and-codedom/reflection.md). Gdy obiekt jest serializowany, nazwa klasy, zestaw i wszystkie składowe danych wystąpienia klasy są zapisywane w pamięci masowej. Obiekty przechowywania często odwołuje się do innych wystąpień w zmiennych elementu członkowskiego. Klasa jest serializowana, mechanizm serializacji śledzi występujących w odwołaniu dla obiektów, już, aby upewnić się, że ten sam obiekt nie jest serializowana więcej niż raz. Architektura serializacji dołączonym do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] poprawnie obsługuje wykresy i obiektów odwołania cykliczne automatycznie. Jedynym wymaganiem umieszczony na obiekcie wykresy jest, że wszystkie obiekty, odwołuje się Zserializowany obiekt musi być oznaczona jako `Serializable` (Aby uzyskać więcej informacji, zobacz [podstawowe serializacji](basic-serialization.md)). Jeśli nie jest to wykonywane, zostanie zwrócony wyjątek serializator próba serializacji obiektu nieoznaczone.
+Środowisko uruchomieniowe języka wspólnego zarządza, jak obiekty są przechowywane w pamięci i udostępnia mechanizm serializacji automatyczne przy użyciu [odbicia](../../../docs/framework/reflection-and-codedom/reflection.md). Gdy obiekt jest serializowany, nazwa klasy, zestaw i wszystkie składowe danych wystąpienia klasy są zapisywane w pamięci masowej. Obiekty przechowywania często odwołuje się do innych wystąpień w zmiennych elementu członkowskiego. Klasa jest serializowana, mechanizm serializacji śledzi występujących w odwołaniu dla obiektów, już, aby upewnić się, że ten sam obiekt nie jest serializowana więcej niż raz. Architektura serializacji udostępniała za pomocą programu .NET Framework poprawnie obsługuje wykresy i obiektów odwołania cykliczne automatycznie. Jedynym wymaganiem umieszczony na obiekcie wykresy jest, że wszystkie obiekty, odwołuje się Zserializowany obiekt musi być oznaczona jako `Serializable` (Aby uzyskać więcej informacji, zobacz [podstawowe serializacji](basic-serialization.md)). Jeśli nie jest to wykonywane, zostanie zwrócony wyjątek serializator próba serializacji obiektu nieoznaczone.
 
 Podczas deserializacji jest klasa serializacji, jest ponownie utworzyć klasę i wartości wszystkich składowych danych zostaną automatycznie przywrócone.
 

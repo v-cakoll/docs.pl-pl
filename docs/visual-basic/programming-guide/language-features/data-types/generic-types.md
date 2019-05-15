@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 9c8ccf2404c4d8fd6e71f7aa41445c3d26ef5da7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 813ee167fdc09c7c7ea12f5f09602230e711d362
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601070"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593382"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Typy ogólne w Visual Basic (Visual Basic)
 A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosowuje się do wykonywania funkcji dla różnych typów danych. Po zdefiniowaniu klasy ogólnej lub procedura ma definiuje oddzielnych wersji dla każdego typu danych, dla którego możesz chcieć wykonać tę funkcję.  
@@ -76,7 +76,7 @@ A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosow
  Aby uzyskać pełniejszy przykład, zobacz [jak: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Kwalifikujące się elementy programowania  
- Można zdefiniować i użyj klasy ogólne, struktury, interfejsy, procedury i delegatów. Należy pamiętać, że [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definiuje kilka klas ogólnych, struktur i interfejsów, które reprezentują elementy rodzajowe często używane. <xref:System.Collections.Generic?displayProperty=nameWithType> Przestrzeń nazw zawiera słowników, list, kolejek i stosów. Przed zdefiniowaniem własne ogólnego elementu, należy sprawdzić, czy jest już dostępna w <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Można zdefiniować i użyj klasy ogólne, struktury, interfejsy, procedury i delegatów. Należy pamiętać, że .NET Framework definiuje kilka klas ogólnych, struktury i interfejsy, które reprezentują często używanych elementów ogólnych. <xref:System.Collections.Generic?displayProperty=nameWithType> Przestrzeń nazw zawiera słowników, list, kolejek i stosów. Przed zdefiniowaniem własne ogólnego elementu, należy sprawdzić, czy jest już dostępna w <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Procedury nie są typami, ale można zdefiniować i użyć procedury ogólne. Zobacz [procedury ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   

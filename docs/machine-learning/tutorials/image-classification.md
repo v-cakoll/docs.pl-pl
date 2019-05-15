@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć klasyfikatora obrazu niestandardowego st
 ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7fddc2d6c60a719090af36b7fe91919bfbd115c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063617"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593423"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Samouczek: Tworzenie klasyfikatora obrazu niestandardowego strukturze ML.NET z TensorFlow
 
@@ -402,7 +402,7 @@ public static void ClassifyImages(MLContext mlContext, string dataLocation, stri
 
 Po pierwsze wywołanie `ReadFromTsv()` metodę w celu utworzenia `IEnumerable<ImageData>` klasę, która zawiera w pełni kwalifikowana ścieżka dla każdego `ImagePath`. Należy tę ścieżkę pliku, aby sparować wyniki danych i prognozowania. Musisz też przekonwertować `IEnumerable<ImageData>` klasy `IDataView` używanego do prognozowania. Dodaj następujący kod jako następne dwa wiersze w `ClassifyImages()` metody:
 
-[!code-csharp[ReadFromTSV](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTSV)]
+[!code-csharp[CallReadFromTSV](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallReadFromTSV)]
 
 Tak jak poprzednio w przypadku danych obrazu szkolenia, przewidywanie kategorii testów obraz dane za pomocą [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) przekazanego do metody w modelu. Dodaj następujący kod do `ClassifyImages()` metodę dla prognoz i przekonwertować `predictions` `IDataView` do `IEnumerable` parowania i wyświetlania:
 

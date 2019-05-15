@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626853"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592308"
 ---
 # <a name="data-binding-and-windows-forms"></a>Wiązanie danych i formularze systemu Windows
 W formularzach Windows Forms można powiązać źródła danych nie jest po prostu tradycyjnych, ale także do niemal wszystkich struktury, która zawiera dane. Możesz powiązać tablicę wartości, które obliczania w czasie wykonywania, Odczyt z pliku lub pochodzić od wartości innych kontrolek.  
   
- Ponadto można powiązać dowolnej właściwości dowolną kontrolkę źródle danych. W powiązaniu danych tradycyjnych zwykle powiązanie właściwości wyświetlania — na przykład <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.TextBox> kontroli — do źródła danych. Za pomocą [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], możesz również możliwość ustawienia innych właściwości, za pośrednictwem powiązania także. Powiązanie można używać do wykonywania następujących zadań:  
+ Ponadto można powiązać dowolnej właściwości dowolną kontrolkę źródle danych. W powiązaniu danych tradycyjnych zwykle powiązanie właściwości wyświetlania — na przykład <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.TextBox> kontroli — do źródła danych. Za pomocą programu .NET Framework możesz również możliwość ustawienia innych właściwości, za pośrednictwem powiązania także. Powiązanie można używać do wykonywania następujących zadań:  
   
 - Ustawianie grafiki kontrolkę typu obraz.  
   

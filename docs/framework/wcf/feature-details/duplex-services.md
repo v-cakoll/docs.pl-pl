@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858042"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592749"
 ---
 # <a name="duplex-services"></a>Usługi dwukierunkowe
 
@@ -87,10 +87,10 @@ Poniższy przykład kodu pokazuje, jak określić klienta adres punktu końcoweg
 ```
 
 > [!WARNING]
-> Automatycznie dwukierunkowego modelu nie wykrywa usługi lub klienta powoduje zamknięcie kanału. Dlatego jeśli klient zakończy się nieoczekiwanie, domyślnie Usługa nie będzie powiadamiany lub jeśli klient zakończy się nieoczekiwanie, usługa nie będzie powiadamiany. Klienci i usługi mogą implementować własne protokół do siebie powiadomienie, jeśli dokonają takiego wyboru.
+> Automatycznie dwukierunkowego modelu nie wykrywa usługi lub klienta powoduje zamknięcie kanału. Dlatego jeśli klient zakończy się nieoczekiwanie, domyślnie Usługa nie będzie powiadamiany lub gdy następuje nieoczekiwane zakończenie usługi, klient nie będzie powiadamiany. Klienci i usługi mogą implementować własne protokół do siebie powiadomienie, jeśli dokonają takiego wyboru. Aby uzyskać więcej informacji na temat obsługi błędów, zobacz [obsługę błędów programu WCF](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dupleks](../../../../docs/framework/wcf/samples/duplex.md)
-- [Określanie zachowania klienta w czasie wykonywania](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Instrukcje: Tworzenie fabryki kanałów i używanie jej do tworzenia kanałów oraz zarządzania nimi](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Dupleks](../samples/duplex.md)
+- [Określanie zachowania klienta w czasie wykonywania](../specifying-client-run-time-behavior.md)
+- [Instrukcje: Tworzenie fabryki kanałów i używanie jej do tworzenia kanałów oraz zarządzania nimi](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

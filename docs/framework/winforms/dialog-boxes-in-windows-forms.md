@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-ms.openlocfilehash: e9fc4500ef11249b84e5cba99d4a890fb472ef3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba40ec42d78199bc59d63a2a1d92fb3655388ad5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967079"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592292"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Okna dialogowe w formularzach systemu Windows
-Okna dialogowe są używane do interakcji z użytkownikiem i pobierania informacji. Mówiąc najprościej, okno dialogowe jest formularz z jego <xref:System.Windows.Forms.FormBorderStyle> wyliczenie ustawioną na `FixedDialog`. Możesz utworzyć własne niestandardowe okna dialogowe, za pomocą programu Windows Forms Designer w programie Visual Studio. Dodaj formanty, takie jak `Label`, `Textbox`, i `Button` dostosowywania okna dialogowe do konkretnych potrzeb. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera również wstępnie zdefiniowanych okien dialogowych, takich jak **Otwórz plik** i okna komunikatów, które można dostosować do własnych aplikacji. Aby uzyskać więcej informacji, zobacz [okno dialogowe formanty i składniki](./controls/dialog-box-controls-and-components-windows-forms.md).  
+Okna dialogowe są używane do interakcji z użytkownikiem i pobierania informacji. Mówiąc najprościej, okno dialogowe jest formularz z jego <xref:System.Windows.Forms.FormBorderStyle> wyliczenie ustawioną na `FixedDialog`. Możesz utworzyć własne niestandardowe okna dialogowe, za pomocą programu Windows Forms Designer w programie Visual Studio. Dodaj formanty, takie jak `Label`, `Textbox`, i `Button` dostosowywania okna dialogowe do konkretnych potrzeb. .NET Framework obejmowały wstępnie zdefiniowanych okien dialogowych, takich jak **Otwórz plik** i okna komunikatów, które można dostosować do własnych aplikacji. Aby uzyskać więcej informacji, zobacz [okno dialogowe formanty i składniki](./controls/dialog-box-controls-and-components-windows-forms.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: Wyświetlanie okien dialogowych dla formularzy Windows Forms](how-to-display-dialog-boxes-for-windows-forms.md)  

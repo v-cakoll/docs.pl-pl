@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 5555f83107a40b40c7f05c7cc5729f721727f67c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 637a1d4b7a523feb2fc8da10a0c18e68774c480a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793942"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586695"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource — (Visual Basic)
 Tworzy łącze do zarządzanego zasobem.  
@@ -39,7 +39,7 @@ Tworzy łącze do zarządzanego zasobem.
   
  `-linkresource` Opcja wymaga jednej z `-target` opcji innych niż `-target:module`.  
   
- Jeśli `filename` jest [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zasobów utworzonym pliku, na przykład przez [Resgen.exe (Generator pliku zasobów)](../../../framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, jest dostępny za pomocą elementów członkowskich w <xref:System.Resources> przestrzeni nazw. (Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>.) Dostęp do wszystkich innych zasobów w czasie wykonywania, użyj metody, które zaczynają się od `GetManifestResource` w <xref:System.Reflection.Assembly> klasy.  
+ Jeśli `filename` jest plikiem zasobów .NET Framework, utworzonym na przykład przez [Resgen.exe (Generator pliku zasobów)](../../../framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, jest dostępny za pomocą elementów członkowskich w <xref:System.Resources> przestrzeni nazw. (Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>.) Dostęp do wszystkich innych zasobów w czasie wykonywania, użyj metody, które zaczynają się od `GetManifestResource` w <xref:System.Reflection.Assembly> klasy.  
   
  Nazwa pliku może być dowolnym formacie pliku. Na przykład można wprowadzić natywną DLL częścią zestawu, dzięki czemu mogą być zainstalowane w globalnej pamięci podręcznej i dostępne z kodu zarządzanego w zestawie.  
   

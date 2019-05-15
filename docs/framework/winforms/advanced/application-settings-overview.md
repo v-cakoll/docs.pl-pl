@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972425"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583552"
 ---
 # <a name="application-settings-overview"></a>Przegląd ustawień aplikacji
 W tym temacie omówiono sposób tworzenia i przechowywania danych ustawień w imieniu użytkowników i aplikacji.  
   
  Funkcja ustawienia aplikacji Windows Forms ułatwia tworzenie i przechowywanie i Obsługa niestandardowych aplikacji i preferencji użytkowników na komputerze klienckim. Za pomocą ustawień aplikacji Windows Forms można przechowywać nie tylko dane aplikacji, takie jak parametry połączenia bazy danych, ale również dane specyficzne dla użytkownika, takie jak preferencje użytkownika. Przy użyciu programu Visual Studio lub niestandardowy zarządzany kod, możesz utworzyć nowe ustawienia, odczytać ich z i zapisanie ich do dysku, powiązać je z właściwościami w formularzach i sprawdzanie poprawności ustawień danych przed ładowania i zapisywania.  
   
- Ustawienia aplikacji pozwala deweloperom na zapisanie stanu w aplikacjach za pomocą bardzo mało kodu niestandardowego i zastępuje właściwości dynamicznych w poprzednich wersjach [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Ustawienia aplikacji zawiera wiele ulepszeń za pośrednictwem właściwości dynamicznych, które są tylko do odczytu, z późnym wiązaniem i wymagają więcej niestandardowych programów. Właściwości dynamiczne klasy zatrzymane w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], ale są one po prostu klasy powłoki, które alokowane opakowywania klas ustawień aplikacji.  
+ Ustawienia aplikacji pozwala deweloperom na zapisanie stanu w aplikacjach za pomocą bardzo mało kodu niestandardowego i zastępuje właściwości dynamicznych w poprzednich wersjach programu .NET Framework. Ustawienia aplikacji zawiera wiele ulepszeń za pośrednictwem właściwości dynamicznych, które są tylko do odczytu, z późnym wiązaniem i wymagają więcej niestandardowych programów. Właściwości dynamiczne klasy zatrzymane w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], ale są one po prostu klasy powłoki, które alokowane opakowywania klas ustawień aplikacji.  
   
 ## <a name="what-are-application-settings"></a>Co to są ustawienia aplikacji?  
  Aplikacje Windows Forms często będą wymagać danych jest krytyczne dla działania aplikacji, ale którego nie chcesz dołączyć bezpośrednio w kodzie aplikacji. Jeśli aplikacja korzysta z usługi sieci Web lub serwera bazy danych, warto przechowywać tych informacji w oddzielnym pliku, aby można go w przyszłości zmienić bez ponownego kompilowania. Podobnie Twoje aplikacje mogą wymagać przechowywania danych, które są specyficzne dla bieżącego użytkownika. Większość aplikacji, na przykład mieć preferencje użytkownika, które dostosować wygląd i zachowanie aplikacji.  
@@ -34,7 +34,7 @@ W tym temacie omówiono sposób tworzenia i przechowywania danych ustawień w im
  Kontrolki niestandardowe można także zapisać własne ustawienia, implementując <xref:System.Configuration.IPersistComponentSettings> interfejsu, który ujawnia <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> metody. Formularze Windows <xref:System.Windows.Forms.ToolStrip> kontrolka implementuje ten interfejs, aby zapisać pozycji pasków narzędzi i elementów paska narzędzi, między sesjami aplikacji. Aby dowiedzieć się więcej o kontrolkach niestandardowych i ustawienia aplikacji, zobacz [ustawienia aplikacji dotyczące kontrolek niestandardowych](application-settings-for-custom-controls.md).  
   
 ## <a name="limitations-of-application-settings"></a>Ograniczenia dotyczące ustawień aplikacji  
- Nie można użyć ustawienia aplikacji w niezarządzanej aplikacji, który jest hostem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Ustawienia nie będą działać w takich środowiskach jak Visual Studio dodatki, Microsoft Office w języku C++ kontrolować hosting w programie Internet Explorer lub dodatków programu Microsoft Outlook i projektów.  
+ Nie można użyć ustawień aplikacji w niezarządzanej aplikacji, który jest hostem środowiska .NET Framework. Ustawienia nie będą działać w takich środowiskach jak Visual Studio dodatki, Microsoft Office w języku C++ kontrolować hosting w programie Internet Explorer lub dodatków programu Microsoft Outlook i projektów.  
   
  Obecnie nie można powiązać z niektórych właściwości w formularzach Windows Forms. Najlepszym przykładem jest <xref:System.Windows.Forms.Form.ClientSize%2A> właściwości jako powiązania do tej właściwości mogłoby spowodować nieprzewidywalne zachowanie w czasie wykonywania. Można zwykle obejścia tych problemów, zapisywanie i ładowanie te ustawienia programowo.  
   

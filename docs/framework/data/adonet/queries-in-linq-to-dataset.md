@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878777"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583866"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Zapytania w LINQ to DataSet
 Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań, takich jak SQL dla relacyjnych baz danych i XQuery dla XML. W związku z tym deweloperzy musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które są zapytania. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferuje prostszy i spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania, zawsze pracujesz z programowania obiektów.  
@@ -31,7 +31,7 @@ Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania s
 ### <a name="query-expression-syntax"></a>Składnia wyrażenia zapytania  
  Wyrażenia kwerendy są deklaratywne składnię. Ta składnia umożliwia deweloperom Pisanie zapytań w języku C# lub Visual Basic w formacie podobnym do bazy danych SQL. Za pomocą składni wyrażeń zapytania, możesz wykonać nawet złożone filtrowanie, porządkowanie i operacji grupowania na źródeł danych za pomocą minimalnej ilości kodu. Aby uzyskać więcej informacji, zobacz [wyrażenia zapytań LINQ](../../../csharp/linq/index.md#query-expression-overview) i [podstawowe operacje zapytań (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
   
- Składnia wyrażenia zapytania jest nowego w języku C# 3.0 i [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]. Jednak [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] środowisko uruchomieniowe języka wspólnego (CLR) nie można odczytać składni wyrażeń zapytania, sam. W związku z tym, w czasie kompilacji wyrażeń zapytania są tłumaczone na coś, co środowisko CLR zrozumienie: wywołania metody. Metody te są nazywane *standardowych operatorów zapytań*. Jako deweloper istnieje możliwość wywołania je bezpośrednio przy użyciu składni metody zamiast przy użyciu składni zapytań. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Przegląd](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Składnia wyrażenia zapytania jest nowego w języku C# 3.0 i [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]. Jednak .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) nie można odczytać składni wyrażeń zapytania, sam. W związku z tym, w czasie kompilacji wyrażeń zapytania są tłumaczone na coś, co środowisko CLR zrozumienie: wywołania metody. Metody te są nazywane *standardowych operatorów zapytań*. Jako deweloper istnieje możliwość wywołania je bezpośrednio przy użyciu składni metody zamiast przy użyciu składni zapytań. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Przegląd](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  W poniższym przykładzie użyto <xref:System.Linq.Enumerable.Select%2A> do zwrócenia wszystkich wierszy z `Product` tabelę i wyświetlić nazwy produktu.  
   

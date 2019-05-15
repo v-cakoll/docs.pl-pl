@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fe07f8e4311417980caccc9c286b4f94c7ea994
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646478"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585956"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Instrukcje: Implementowanie i wywołanie niestandardowej metody rozszerzenia (C# Programming Guide)
 W tym temacie pokazano, jak można implementować własne metody rozszerzenia dla dowolnego typu platformy .NET. Kod klienta można użyć metody rozszerzenia przez dodanie odwołania do biblioteki DLL, która je zawiera i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywę, który określa obszar nazw, w którym zdefiniowano metody rozszerzenia.  
@@ -35,9 +35,6 @@ W tym temacie pokazano, jak można implementować własne metody rozszerzenia dl
  Poniższy przykład implementuje metodę rozszerzenia o nazwie `WordCount` w `CustomExtensions.StringExtension` klasy. Metoda działa na <xref:System.String> klasy, która jest określony jako pierwszy parametr metody. `CustomExtensions` Przestrzeni nazw jest importowany do przestrzeni nazw aplikacji, a metoda jest wywoływana wewnątrz `Main` metody.  
   
  [!code-csharp[csProgGuideExtensionMethods#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#1)]  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby uruchomić ten kod, skopiuj i wklej go do programu Visual C# projekt aplikacji konsoli, która została utworzona w programie Visual Studio. Domyślnie ten projekt jest przeznaczony dla wersji 3.5 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], i ma odwołania do System.Core.dll i `using` dyrektywy dla System.Linq. Jeśli co najmniej jeden z tych wymagań brakuje z projektu, możesz je dodać ręcznie.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Metody rozszerzenia udostępniają nie luk w zabezpieczeniach określone. One nigdy nie można dokonać personifikacji istniejących metod w danym typie ponieważ wszystkich konfliktów nazw są rozpoznawane na rzecz wystąpienia lub statycznej metody zdefiniowane przez samego typu. Metody rozszerzenia nie może uzyskać dostęp do wszelkich danych prywatnych w rozszerzona klasa.  

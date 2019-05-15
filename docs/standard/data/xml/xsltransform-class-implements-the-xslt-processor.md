@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05812d7bdda33f6fa06a6aae7129d1dc73144e37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aadb478b507cdd5d2828a2d224fbca1dc32b21b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751901"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586452"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Implementowanie procesora XSLT przy użyciu klasy XslTransform
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
 
-<xref:System.Xml.Xsl.XslTransform> Klasa jest procesora XSLT implementacji przekształcenia XSL (XSLT) w wersji 1.0 zalecenia. <xref:System.Xml.Xsl.XslTransform.Load%2A> Metoda lokalizuje i odczytuje arkusze stylów i <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda przekształca dokumentu danego źródła. Dowolnego magazynu, który implementuje <xref:System.Xml.XPath.IXPathNavigable> interfejsu może być używany jako dokument źródłowy dla <xref:System.Xml.Xsl.XslTransform>. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Implementuje obecnie <xref:System.Xml.XPath.IXPathNavigable> interfejsu na <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>i <xref:System.Xml.XPath.XPathDocument>, więc wszystkie te mogą być używane jako dokument źródła danych wejściowych do przekształcenia.
+<xref:System.Xml.Xsl.XslTransform> Klasa jest procesora XSLT implementacji przekształcenia XSL (XSLT) w wersji 1.0 zalecenia. <xref:System.Xml.Xsl.XslTransform.Load%2A> Metoda lokalizuje i odczytuje arkusze stylów i <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda przekształca dokumentu danego źródła. Dowolnego magazynu, który implementuje <xref:System.Xml.XPath.IXPathNavigable> interfejsu może być używany jako dokument źródłowy dla <xref:System.Xml.Xsl.XslTransform>. .NET Framework implementuje obecnie <xref:System.Xml.XPath.IXPathNavigable> interfejsu na <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>i <xref:System.Xml.XPath.XPathDocument>, więc wszystkie te mogą być używane jako dokument źródła danych wejściowych do przekształcenia.
 
-<xref:System.Xml.Xsl.XslTransform> Obiektu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obsługuje tylko specyfikacji XSLT 1.0, zdefiniowana za pomocą następujących przestrzeni nazw:
+<xref:System.Xml.Xsl.XslTransform> Obiektu w programie .NET Framework obsługuje tylko specyfikacji XSLT 1.0, zdefiniowana za pomocą następujących przestrzeni nazw:
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -213,7 +213,7 @@ print_root.xsl
 
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>Migracja XSLT z .NET Framework w wersji 1.0 do .NET Framework w wersji 1.1
 
-W poniższej tabeli przedstawiono przestarzałe [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] metod w wersji 1.0 i nowe [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.1 metody <xref:System.Xml.Xsl.XslTransform.Load%2A> metody. Nowe metody umożliwiają ograniczenie uprawnień arkusza stylów, określając dowodów.
+W poniższej tabeli przedstawiono metody .NET Framework przestarzałe w wersji 1.0 i nowa wersja .NET Framework 1.1 metody <xref:System.Xml.Xsl.XslTransform.Load%2A> metody. Nowe metody umożliwiają ograniczenie uprawnień arkusza stylów, określając dowodów.
 
 |.NET Framework w wersji 1.0 obciążenia metody przestarzałe|Zastąpienie .NET Framework w wersji 1.1 obciążenia metody|
 |------------------------------------------------------|---------------------------------------------------------|
@@ -235,7 +235,7 @@ W poniższej tabeli przedstawiono metody przestarzałe i nowe <xref:System.Xml.X
 |Void Przekształcanie (IXPathNavigable danych wejściowych, argumenty XsltArgumentList, dane wyjściowe Stream)|Void Przekształcanie (dane wejściowe IXPathNavigable XsltArgumentList argumenty, Stream dane wyjściowe, element XmlResolver programu rozpoznawania nazw)|
 |Void Przekształcanie (ciąg wejściowy, ciąg dane wyjściowe);|Void Przekształcanie (ciąg wejściowy, ciąg danych wyjściowych element XmlResolver programu rozpoznawania nazw);|
 
-<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> Właściwość jest przestarzała w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.1. Zamiast tego należy użyć nowego <xref:System.Xml.Xsl.XslTransform.Transform%2A> przeciążeń przybierają które <xref:System.Xml.XmlResolver> obiektu.
+<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> Właściwość jest przestarzała w programie .NET Framework w wersji 1.1. Zamiast tego należy użyć nowego <xref:System.Xml.Xsl.XslTransform.Transform%2A> przeciążeń przybierają które <xref:System.Xml.XmlResolver> obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 

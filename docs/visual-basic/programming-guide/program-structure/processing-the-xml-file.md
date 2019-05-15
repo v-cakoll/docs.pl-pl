@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: efd9711f93478b1ecc2ded7b57fa45f38286eeb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651211"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586738"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Przetwarzanie pliku XML (Visual Basic)
-Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje na temat tagów w kodzie, zobacz [tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md).) Ciąg Identyfikatora jednoznacznie identyfikuje konstrukcja. Programy, które przetwarzają pliku XML umożliwiają identyfikowanie odpowiedni ciąg Identyfikatora [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elementu metadanych/odbicia.  
+Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje na temat tagów w kodzie, zobacz [tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md).) Ciąg Identyfikatora jednoznacznie identyfikuje konstrukcja. Programów przetwarzających pliku XML można użyć ciąg Identyfikatora do identyfikowania odpowiadający element metadanych/odbicie .NET Framework.  
   
  Plik XML jest hierarchiczną reprezentację kodu; jest płaskiej listy przy użyciu wygenerowanego Identyfikatora dla każdego elementu.  
   
@@ -34,7 +34,7 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, któ
   
 - Druga część `String` jest w pełni kwalifikowana nazwa elementu, począwszy od głównego obszaru nazw. Nazwa elementu, jego typy otaczającej i przestrzeni nazw są oddzielone kropkami. Jeśli nazwa elementu zawiera kropek, są zastępowane przez znak numeru (#). Zakłada się, że żaden element ma znak liczby bezpośrednio w jego nazwę. Na przykład w pełni kwalifikowanej nazwy `String` będzie Konstruktor `System.String.#ctor`.  
   
-- Dla właściwości i metod w przypadku argumentów dla metody, na liście argumentów w nawiasach jest zgodna. Jeśli nie ma żadnych argumentów, nawiasy nie są obecne. Argumenty są oddzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio jak został zakodowany w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] podpisu.  
+- Dla właściwości i metod w przypadku argumentów dla metody, na liście argumentów w nawiasach jest zgodna. Jeśli nie ma żadnych argumentów, nawiasy nie są obecne. Argumenty są oddzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio, jak jest zakodowany w podpisie .NET Framework.  
   
 ## <a name="example"></a>Przykład  
  W poniższym kodzie pokazano, jak identyfikator ciągi dla klasy i składowych są generowane.  

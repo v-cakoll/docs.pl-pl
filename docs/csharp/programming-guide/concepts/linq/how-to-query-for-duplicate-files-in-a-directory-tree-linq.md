@@ -2,12 +2,12 @@
 title: 'Instrukcje: Zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: aa1db0c4de2a4b149ee4dd859cd7ab5ee4b78031
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4d7ece3c69db294437ac0ca41ed5b1a3307e524
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667850"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584339"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Instrukcje: Zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (C#)
 Czasami pliki, które mają taką samą nazwę mogą znajdować się w więcej niż jeden folder. Na przykład kilka folderów w folderze instalacyjnym programu Visual Studio mają pliku readme.htm. W tym przykładzie pokazano, jak utworzyć zapytanie dotyczące takich zduplikowane nazwy plików w folderze określonym katalogu głównym. Drugi przykład przedstawia sposób wysyłania kwerend do plików, których rozmiar i czas tworzenia również zgodna.  
@@ -170,7 +170,7 @@ class QueryDuplicateFileNames
  Pierwsze zapytanie używa klucza proste ustalenie dopasowania; znajduje to pliki, które mają taką samą nazwę, ale których zawartość może się różnić. Drugie zapytanie używa klucza złożonego do dopasowywania trzy właściwości <xref:System.IO.FileInfo> obiektu. To zapytanie jest znacznie bardziej prawdopodobne znaleźć pliki, które mają taką samą nazwę i zawartość podobne lub identyczne.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+ Tworzenie C# konsoli projekt aplikacji z `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 

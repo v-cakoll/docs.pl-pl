@@ -2,12 +2,12 @@
 title: 'Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855025"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593000"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)
 Ten przykład przedstawia sposób wykonywania obliczeń agregacji, takich jak Suma, średnia, minimum i maksimum dla kolumn w pliku CSV. Zasady przykładu, które przedstawiono poniżej mogą dotyczyć innych typów strukturalnych tekstu.  
@@ -143,7 +143,7 @@ End Class
  Zapytanie działa, korzystając z <xref:System.String.Split%2A> metodę, aby przekonwertować każdego wiersza tekstu do tablicy. Każdy element tablicy reprezentuje kolumnę. Na koniec tekstu w każdej kolumnie jest konwertowana na jego reprezentację liczbową. Jeśli plik jest plikiem rozdzielane znakami tabulacji, wystarczy zaktualizować argumentu w `Split` metody `\t`.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
+Utwórz projekt aplikacji konsoli VB.NET, za pomocą `Imports` instrukcji dla przestrzeni nazw System.Linq.
   
 ## <a name="see-also"></a>Zobacz także
 

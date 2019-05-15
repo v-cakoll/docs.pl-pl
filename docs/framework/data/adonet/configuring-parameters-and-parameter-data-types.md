@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034557"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583829"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 
@@ -33,7 +33,7 @@ Dodając parametry, należy podać <xref:System.Data.ParameterDirection> właśc
 
 ## <a name="working-with-parameter-placeholders"></a>Praca z symbolami zastępczymi parametru
 
-Składnia dla symboli zastępczych parametru zależy od źródła danych. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Dostawców danych obsługi nazewnictwa i określanie parametrów i symbole zastępcze parametr inaczej. Ta składnia jest dostosowane do określonego źródła danych, zgodnie z opisem w poniższej tabeli.
+Składnia dla symboli zastępczych parametru zależy od źródła danych. Dostawcy danych .NET Framework obsługują nazewnictwa i określanie parametrów i symbole zastępcze parametr inaczej. Ta składnia jest dostosowane do określonego źródła danych, zgodnie z opisem w poniższej tabeli.
 
 |Dostawca danych|Składnia nazwy parametru|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ Składnia dla symboli zastępczych parametru zależy od źródła danych. [!INCL
 
 ## <a name="specifying-parameter-data-types"></a>Określenie typów danych parametrów
 
-Typ danych parametru jest specyficzne dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych. Określenie typu konwertuje wartość `Parameter` do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typ dostawcy danych przed przekazaniem wartości do źródła danych. Możesz również określić typ `Parameter` w sposób ogólny, ustawiając `DbType` właściwość `Parameter` obiektu do określonego <xref:System.Data.DbType>.
+Typ danych parametru jest specyficzne dla dostawcy danych .NET Framework. Określenie typu konwertuje wartość `Parameter` typ dostawcy danych .NET Framework przed przekazaniem wartości do źródła danych. Możesz również określić typ `Parameter` w sposób ogólny, ustawiając `DbType` właściwość `Parameter` obiektu do określonego <xref:System.Data.DbType>.
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Typ dostawcy danych `Parameter` obiektu jest wnioskowany z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu `Value` z `Parameter` obiektu, albo z `DbType` z `Parameter` obiektu. W poniższej tabeli przedstawiono wywnioskowane `Parameter` typ oparty na obiekcie, który został przekazany jako `Parameter` wartość lub określone `DbType`.
+Typ dostawcy danych .NET Framework z `Parameter` obiektu jest wnioskowany z typu .NET Framework `Value` z `Parameter` obiektu, albo z `DbType` z `Parameter` obiektu. W poniższej tabeli przedstawiono wywnioskowane `Parameter` typ oparty na obiekcie, który został przekazany jako `Parameter` wartość lub określone `DbType`.
 
 |Typ programu .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -63,7 +63,7 @@ Typ danych parametru jest specyficzne dla [!INCLUDE[dnprdnshort](../../../../inc
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|int|int|int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Wartość liczbowa|
-|<xref:System.Object>|Obiekt|Variant|Variant|Wnioskowanie OdbcType z obiektu nie jest obsługiwane.|Obiekt blob|
+|<xref:System.Object>|Obiekt|Variant|Variant|Wnioskowanie OdbcType z obiektu nie jest obsługiwane.|Blob|
 |<xref:System.String>|String|NVarChar. To niejawna konwersja nie powiedzie się, jeśli ciąg jest większy niż maksymalny rozmiar typu NVarChar to 4000 znaków. Ciągi większej niż 4000 znaków, należy jawnie ustawić <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
 |<xref:System.TimeSpan>|Godzina|Czas w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z przedziału czasu nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBTime|Godzina|DataGodzina|
 |<xref:System.UInt16>|UInt16|Wnioskowanie <xref:System.Data.SqlDbType> z UInt16 nie jest obsługiwane.|UnsignedSmallInt|int|UInt16|
@@ -101,7 +101,7 @@ Procedury składowane oferują wiele zalet w aplikacjach opartych na danych. Za 
 > [!NOTE]
 > Sparametryzowanych instrukcji są wykonywane na serwerze przy użyciu `sp_executesql,` pozwalający do ponownego wykorzystania planu zapytania. Kursory lokalne lub zmiennych w `sp_executesql` usługi batch nie są widoczne dla usługi batch, która wywołuje `sp_executesql`. Ostatnie zmiany w kontekście bazy danych tylko na końcu `sp_executesql` instrukcji. Aby uzyskać więcej informacji, zobacz [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Podczas korzystania z parametrów za pomocą <xref:System.Data.SqlClient.SqlCommand> programu SQL Server wykonaj procedurę składowaną w, nazwy parametrów dodanych do <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji musi być zgodne z nazwami znaczników parametr w procedurze składowanej. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server nie obsługuje przekazywania parametrów do instrukcji SQL lub procedury składowanej symbolu zastępczego znak zapytania (?). Traktuje parametry w procedurze składowanej jako nazwane parametry, a szuka dopasowania z symbolami parametru. Na przykład `CustOrderHist` procedury składowanej jest definiowana za pomocą parametru o nazwie `@CustomerID`. Gdy kod wykonuje procedurę składowaną, należy również użyć parametru o nazwie `@CustomerID`.
+Podczas korzystania z parametrów za pomocą <xref:System.Data.SqlClient.SqlCommand> programu SQL Server wykonaj procedurę składowaną w, nazwy parametrów dodanych do <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji musi być zgodne z nazwami znaczników parametr w procedurze składowanej. .NET Framework Data Provider for SQL Server nie obsługuje znaku zapytania (?) — symbol zastępczy przekazywania parametrów do instrukcji SQL lub procedury składowanej. Traktuje parametry w procedurze składowanej jako nazwane parametry, a szuka dopasowania z symbolami parametru. Na przykład `CustOrderHist` procedury składowanej jest definiowana za pomocą parametru o nazwie `@CustomerID`. Gdy kod wykonuje procedurę składowaną, należy również użyć parametru o nazwie `@CustomerID`.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ W tym przykładzie przedstawiono sposób wywoływania procedur składowanych ser
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Przy użyciu parametrów przy użyciu OleDbCommand lub OdbcCommand
 
-Podczas korzystania z parametrów za pomocą <xref:System.Data.OleDb.OleDbCommand> lub <xref:System.Data.Odbc.OdbcCommand>, kolejność parametrów dodanych do `Parameters` kolekcji musi być zgodna z kolejnością parametrów zdefiniowanych w swojej przechowywanej procedurze. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC traktować parametry w procedurze składowanej jako symbole zastępcze i zastosować wartości parametrów w kolejności. Ponadto, zwróć wartość parametry muszą być pierwsze parametry, które są dodawane do `Parameters` kolekcji.
+Podczas korzystania z parametrów za pomocą <xref:System.Data.OleDb.OleDbCommand> lub <xref:System.Data.Odbc.OdbcCommand>, kolejność parametrów dodanych do `Parameters` kolekcji musi być zgodna z kolejnością parametrów zdefiniowanych w swojej przechowywanej procedurze. .NET Framework Data Provider for OLE DB i .NET Framework Data Provider for ODBC traktować parametry w procedurze składowanej jako symbole zastępcze i stosowanie wartości parametrów w kolejności. Ponadto, zwróć wartość parametry muszą być pierwsze parametry, które są dodawane do `Parameters` kolekcji.
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC nie obsługują parametrów nazwanych przekazywania parametrów do instrukcji SQL lub procedury składowanej. W takim przypadku należy użyć symbolu zastępczego znak zapytania (?), jak w poniższym przykładzie.
+.NET Framework Data Provider for OLE DB i .NET Framework Data Provider for ODBC nie obsługują parametrów nazwanych przekazywania parametrów do instrukcji SQL lub procedury składowanej. W takim przypadku należy użyć symbolu zastępczego znak zapytania (?), jak w poniższym przykładzie.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

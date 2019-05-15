@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211263"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557890"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Przewodnik: Stylu zawartości WPF
 
@@ -58,15 +58,15 @@ Można stosować różne style do formantu WPF, aby zmienić wygląd i zachowani
 
 1. Otwórz `Form1` w programie Windows Forms Designer.
 
-2. W **przybornika**, kliknij dwukrotnie `UserControl1` do utworzenia wystąpienia `UserControl1` w formularzu.
+1. W **przybornika**, kliknij dwukrotnie `UserControl1` do utworzenia wystąpienia `UserControl1` w formularzu.
 
      Wystąpienie `UserControl1` znajduje się w nowym <xref:System.Windows.Forms.Integration.ElementHost> formantu o nazwie `elementHost1`.
 
-3. W panelu tagi inteligentne dla `elementHost1`, kliknij przycisk **Edytuj hostowana zawartość** z listy rozwijanej.
+1. W panelu tagi inteligentne dla `elementHost1`, kliknij przycisk **Edytuj hostowana zawartość** z listy rozwijanej.
 
      `UserControl1` zostanie otwarty w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-4. W widoku XAML, Wstaw następujące XAML po `<UserControl>` tagu początkowego.
+1. W widoku XAML, Wstaw następujące XAML po `<UserControl>` tagu początkowego.
 
      Ta XAML tworzy gradient kontrastujące obramowaniem gradientu. Po kliknięciu formantu gradientów zostały zmienione, aby wygenerować się po naciśnięciu przycisku. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../../wpf/controls/styling-and-templating.md).
 
@@ -118,7 +118,7 @@ Można stosować różne style do formantu WPF, aby zmienić wygląd i zachowani
    </UserControl.Resources>
    ```
 
-4. Zastosuj `SimpleButton` style zdefiniowane w poprzednim kroku, aby przycisk Anuluj, wstawiając następujące XAML w `<Button>` tag przycisk Anuluj.
+1. Zastosuj `SimpleButton` style zdefiniowane w poprzednim kroku, aby przycisk Anuluj, wstawiając następujące XAML w `<Button>` tag przycisk Anuluj.
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -131,15 +131,15 @@ Można stosować różne style do formantu WPF, aby zmienić wygląd i zachowani
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. Skompiluj projekt.
+1. Skompiluj projekt.
 
-6. Otwórz `Form1` w programie Windows Forms Designer.
+1. Otwórz `Form1` w programie Windows Forms Designer.
 
-7. Nowy styl jest stosowany do kontrolki przycisku.
+1. Nowy styl jest stosowany do kontrolki przycisku.
 
-8. Z **debugowania** menu, wybierz opcję **Rozpocznij debugowanie** do uruchomienia aplikacji.
+1. Z **debugowania** menu, wybierz opcję **Rozpocznij debugowanie** do uruchomienia aplikacji.
 
-9. Kliknij przycisk OK lub Anuluj i wyświetlać różnice.
+1. Kliknij przycisk OK lub Anuluj i wyświetlać różnice.
 
 ## <a name="see-also"></a>Zobacz także
 

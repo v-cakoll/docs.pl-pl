@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 01257847956f22c895b00c6055ec1cdd1e89eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc297bd35d7bfdb25fc50135b8e684e1b9452cb2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627087"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592586"
 ---
 # <a name="data-contract-known-types"></a>Znane typy kontraktów danych
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Klasy pozwala na określenie z wyprzedzeniem, typy, które należy wziąć pod uwagę podczas deserializacji. Aby uzyskać przykład pracy, zobacz [znane typy](../../../../docs/framework/wcf/samples/known-types.md) przykład.  
@@ -27,7 +27,7 @@ ms.locfileid: "64627087"
   
 - Deklarowany typ informacji przekazywanych jest <xref:System.Object>. Ponieważ każdy typ dziedziczy z <xref:System.Object>i go nie może być znane z wyprzedzeniem typy są faktycznie przesyłane, odbieranie punkt końcowy nie może ustalić z wyprzedzeniem kontraktu danych dla przesyłanych danych. To jest szczególnym przypadkiem pierwszego elementu: Co kontraktu danych pochodzi z domyślnej umowy puste dane, który jest generowany dla <xref:System.Object>.  
   
-- Niektóre typy, które obejmują [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, mieć elementy członkowskie, które należą do jednej z trzech powyższych kategorii. Na przykład <xref:System.Collections.Hashtable> używa <xref:System.Object> przechowywanie rzeczywistych obiektów w tablicy skrótów. Podczas serializacji tych typów, po stronie odbierającej nie może ustalić z wyprzedzeniem kontraktu danych dla tych członków.  
+- Niektóre typy, które obejmują typów programu .NET Framework, mieć elementy członkowskie, które należą do jednej z trzech powyższych kategorii. Na przykład <xref:System.Collections.Hashtable> używa <xref:System.Object> przechowywanie rzeczywistych obiektów w tablicy skrótów. Podczas serializacji tych typów, po stronie odbierającej nie może ustalić z wyprzedzeniem kontraktu danych dla tych członków.  
   
 ## <a name="the-knowntypeattribute-class"></a>Klasa KnownTypeAttribute  
  Dane odebrane na odbieranie punktu końcowego, środowisko wykonawcze programu WCF próbuje zdeserializowanie danych do wystąpienia typu wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR). Typ, który zostanie uruchomiony do deserializacji jest wybierany sprawdzając pierwszego komunikatu przychodzącego do ustalenia danych umowę które treści wiadomości są zgodne. Następnie aparat deserializacji próbuje odnaleźć typu CLR, który implementuje kontraktu danych, zgodny z treści wiadomości. Zestaw typów Release candidate, które umożliwiają aparatu deserializacji w trakcie tego procesu jest określany jako zestaw Deserializator "znanych typów."  

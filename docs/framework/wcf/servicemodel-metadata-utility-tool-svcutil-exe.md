@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669699"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582698"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)
 
@@ -107,7 +107,7 @@ Usługi za pomocą punktu końcowego Obiekt BasicHttpContextBinding *Svcutil.exe
 |/serializer:Auto|Automatycznie wybierz serializator. To próbuje użyć serializatora kontraktu danych i używa serializatora XmlSerializer, jeśli się nie powiedzie.<br /><br /> Krótka: `/ser`|
 |/serializer:DataContractSerializer|Generuje typy danych używające serializatora kontraktu danych do serializacji i deserializacji.<br /><br /> Krótka: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|Generuje typy danych, które używają <xref:System.Xml.Serialization.XmlSerializer> do serializacji i deserializacji.<br /><br /> Krótka: `/ser:XmlSerializer`|
-|/targetClientVersion|Określ wersję [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji jest adresowany. Prawidłowe wartości to `Version30` i `Version35`. Wartość domyślna to `Version30`.<br /><br /> Krótka: `/tcv`<br /><br /> `Version30`: Użyj `/tcv:Version30` klientów korzystających z generowania kodu [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Użyj `/tcv:Version35` klientów korzystających z generowania kodu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Korzystając z `/tcv:Version35` z `/async` Przełącz zarówno oparte na zdarzeniach i generowane są oparte na wywołanie zwrotne/delegatach metod asynchronicznych. Ponadto obsługa komputerów z obsługą zapytań LINQ z zestawami danych i <xref:System.DateTimeOffset> jest włączona.|
+|/targetClientVersion|Określ, która wersja programu .NET Framework jest przeznaczony dla aplikacji. Prawidłowe wartości to `Version30` i `Version35`. Wartość domyślna to `Version30`.<br /><br /> Krótka: `/tcv`<br /><br /> `Version30`: Użyj `/tcv:Version30` klientów korzystających z generowania kodu [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Użyj `/tcv:Version35` klientów korzystających z generowania kodu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Korzystając z `/tcv:Version35` z `/async` Przełącz zarówno oparte na zdarzeniach i generowane są oparte na wywołanie zwrotne/delegatach metod asynchronicznych. Ponadto obsługa komputerów z obsługą zapytań LINQ z zestawami danych i <xref:System.DateTimeOffset> jest włączona.|
 |/ opakowana|Określa, czy specjalne jest używane różne dokumentów za pomocą parametrów opakowana literał dokumentu. Użyj **/ opakowane** przełącznik z [Service Model metadanych narzędzie (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia do określania normalnego wielkości liter.|
 
 > [!NOTE]

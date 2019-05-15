@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49f28acc5001d63e7a1f6a5bfe8cb3415311e379
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033829"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582749"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET i LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest częścią [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] rodziny technologii. Jest on oparty na usługi świadczone przez [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] dostawcy modelu. W związku z tym możesz mieszać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu przy użyciu istniejących [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] aplikacji i przeprowadzić migrację bieżącego [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] rozwiązania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Następująca ilustracja przedstawia ogólny widok relacji.  
@@ -31,7 +31,7 @@ ms.locfileid: "62033829"
 ## <a name="transactions"></a>Transakcje  
  Możesz podać swoje <xref:System.Data.Linq.DataContext> przy użyciu własnych transakcji bazy danych w przypadku aplikacji już zainicjował transakcji Twojej <xref:System.Data.Linq.DataContext> zaangażować.  
   
- Preferowaną metodą wykonywania transakcji z [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] jest użycie <xref:System.Transactions.TransactionScope> obiektu. Za pomocą tego podejścia, możesz wprowadzać transakcji rozproszonych, który działa wobec obsługiwanych baz danych i innych menedżerów zasobów rezydentnego. Zakresy transakcji wymaga niewielkiej ilości zasobów, aby rozpocząć. One przełącza się do transakcje rozproszone tylko wtedy, gdy wiele połączeń w zakresie transakcji.  
+ Preferowaną metodą działania transakcji za pomocą programu .NET Framework jest użycie <xref:System.Transactions.TransactionScope> obiektu. Za pomocą tego podejścia, możesz wprowadzać transakcji rozproszonych, który działa wobec obsługiwanych baz danych i innych menedżerów zasobów rezydentnego. Zakresy transakcji wymaga niewielkiej ilości zasobów, aby rozpocząć. One przełącza się do transakcje rozproszone tylko wtedy, gdy wiele połączeń w zakresie transakcji.  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  

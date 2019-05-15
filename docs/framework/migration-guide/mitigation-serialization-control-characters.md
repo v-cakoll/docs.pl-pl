@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3355841298e039652eb81918eac98186c1a1f833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7e316f874a2b559cb3fe9d64a9ec7cf25addbe5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61871374"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557781"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Środki zaradcze: Serializacja znaki kontrolne przy użyciu elementu DataContractJsonSerializer
 
@@ -27,8 +27,6 @@ W .NET framework 4.6.2 i wcześniejszymi wersjami <xref:System.Runtime.Serializa
 W przypadku aplikacji przeznaczonych dla wersji programu .NET Framework, począwszy od programu .NET Framework 4.7 serializacji te znaki kontrolne jest zgodny z wersji ECMAScript 6 i V8. Uwzględnione są następujące funkcje interfejsu API:
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 
 ## <a name="mitigation"></a>Ograniczenie
 

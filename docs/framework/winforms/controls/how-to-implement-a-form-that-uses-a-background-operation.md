@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: fc7ca8e96a7ee241b0899ee14f63cd891f23b665
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df7c6caf7b23824a596e94e1bd62205907b0b56a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638361"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592410"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Instrukcje: implementowanie formularza korzystającego z operacji w tle
 Poniższy przykład program tworzy formularz, który oblicza Fibonacci liczb. Obliczenie jest uruchamiane w wątku, który jest oddzielony od wątku interfejsu użytkownika, dzięki czemu interfejs użytkownika będzie nadal działać bez opóźnień w trakcie wykonywania obliczeń.  
@@ -39,8 +39,6 @@ Poniższy przykład program tworzy formularz, który oblicza Fibonacci liczb. Ob
  Ten przykład wymaga:  
   
 - Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
-  
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
   

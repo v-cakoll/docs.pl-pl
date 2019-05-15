@@ -2,12 +2,12 @@
 title: 'Instrukcje: Pobieranie wartości elementu (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: 490e98134497836e0751e48949d4dceda41bcbf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52ebf437b8c1254b3a8c30558e14a254bb1fe5d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61851919"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592492"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Instrukcje: Pobieranie wartości elementu (LINQ to XML) (Visual Basic)
 W tym temacie pokazano, jak można pobrać wartość elementów. Istnieją dwa główne sposoby, aby to zrobić. Jednym ze sposobów jest rzutowanie <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute> do żądanego typu. Operator jawnej konwersji następnie konwertuje zawartość element lub atrybut określonego typu i przypisuje go do zmiennej. Alternatywnie, można użyć <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości lub <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> właściwości.  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Przykład  
- Czasami użytkownik próbuje pobrać wartość elementu, nawet jeśli nie ma pewności, że istnieje. W tym przypadku przypisana element rzutować na typ dopuszczający wartość null (albo `string` lub jednego z typy dopuszczające wartości null w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), jeśli element nie ma przypisanych właśnie ustawiono zmienną `Nothing`. Poniższy kod pokazuje, że gdy elementu może lub nie istnieje, jest łatwiejszy w obsłudze rzutowania niż korzystać <xref:System.Xml.Linq.XElement.Value%2A> właściwości.  
+ Czasami użytkownik próbuje pobrać wartość elementu, nawet jeśli nie ma pewności, że istnieje. W tym przypadku przypisana element rzutować na typ dopuszczający wartość null (albo `string` lub jednego z typy dopuszczające wartości null w programie .NET Framework), jeśli element nie ma przypisanych właśnie ustawiono zmienną `Nothing`. Poniższy kod pokazuje, że gdy elementu może lub nie istnieje, jest łatwiejszy w obsłudze rzutowania niż korzystać <xref:System.Xml.Linq.XElement.Value%2A> właściwości.  
   
 ```vb  
 Dim root As XElement = <Root>  

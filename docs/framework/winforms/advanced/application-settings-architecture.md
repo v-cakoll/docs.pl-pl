@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625779"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592781"
 ---
 # <a name="application-settings-architecture"></a>Architektura ustawień aplikacji
 W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje zaawansowanych funkcji architektury, takich jak ustawienia pogrupowanych i klucze ustawienia.  
@@ -44,7 +44,7 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
 ## <a name="settings-persistence"></a>Ustawienia trwałości  
  <xref:System.Configuration.ApplicationSettingsBase> Klasy nie sam utrwalić lub załadować ustawień; tego zadania znajduje się z dostawcą ustawienia klasy, która pochodzi od klasy <xref:System.Configuration.SettingsProvider>. Jeśli klasa pochodna <xref:System.Configuration.ApplicationSettingsBase> nie określono ustawień dostawcy za pośrednictwem <xref:System.Configuration.SettingsProviderAttribute>, domyślny dostawca, a następnie <xref:System.Configuration.LocalFileSettingsProvider>, jest używany.  
   
- System konfiguracyjny, który pierwotnie został wydany przy użyciu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obsługuje, podając dane konfiguracji statycznej aplikacji za pomocą komputera lokalnego pliku machine.config lub w ramach `app.`pliku exe.config, który można wdrożyć za pomocą Twoja aplikacja. <xref:System.Configuration.LocalFileSettingsProvider> Klasa rozszerza ten macierzystą obsługę w następujący sposób:  
+ System konfiguracyjny, który pierwotnie został wydany przy użyciu programu .NET Framework obsługuje, zapewniając dane konfiguracji statycznej aplikacji za pomocą komputera lokalnego pliku machine.config lub w ramach `app.`pliku exe.config, który można wdrożyć za pomocą Twoja aplikacja. <xref:System.Configuration.LocalFileSettingsProvider> Klasa rozszerza ten macierzystą obsługę w następujący sposób:  
   
 - Ustawienia w zakresie aplikacji mogą być przechowywane w dowolnym pliku machine.config lub `app.`exe.config plików. Machine.config zawsze jest tylko do odczytu, podczas `app`. exe.config jest ograniczony przez zagadnienia dotyczące zabezpieczeń tylko do odczytu dla większości aplikacji.  
   

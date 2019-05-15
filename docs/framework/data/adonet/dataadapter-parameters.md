@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: b8284f45d769f018655ee35a5f0b067703963634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cdca872e9e76b7491dc571209292a692a06d8f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034492"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583754"
 ---
 # <a name="dataadapter-parameters"></a>Parametry elementu DataAdapter
 <xref:System.Data.Common.DbDataAdapter> Ma cztery właściwości, które są używane do pobierania danych z i aktualizować dane do źródła danych: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> właściwość zwraca dane ze źródła danych; i <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, i <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> właściwości są używane do zarządzania zmiany w źródle danych. `SelectCommand` Właściwość musi być ustawiona przed wywołaniem `Fill` metody `DataAdapter`. `InsertCommand`, `UpdateCommand`, Lub `DeleteCommand` właściwości musi być ustawiona przed `Update` metody `DataAdapter` jest wywoływana w zależności od tego, jakie zmiany zostały wprowadzone do danych w <xref:System.Data.DataTable>. Załóżmy, że wiersze zostały dodane `InsertCommand` musi być ustawiona przed wywołaniem `Update`. Gdy `Update` przetwarza wierszy wstawionych, zaktualizowanych lub usuniętych `DataAdapter` używa odpowiednich `Command` właściwości przetwarzania akcji. Aktualne informacje na temat zmodyfikowanych wierszy jest przekazywany do `Command` obiektu za pomocą `Parameters` kolekcji.  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  `Add` Metody `Parameters` kolekcji przyjmuje nazwę parametru, typ danych, rozmiaru (jeśli ma zastosowanie do typu) i nazwę <xref:System.Data.Common.DbParameter.SourceColumn%2A> z `DataTable`. Należy zauważyć, że <xref:System.Data.Common.DbParameter.SourceVersion%2A> z `@CustomerID` parametr ma wartość `Original`. Gwarantuje to, że istniejący wiersz w źródle danych jest aktualizowana, jeśli wartość identyfikujące kolumny lub kolumn została zmieniona w zmodyfikowanego <xref:System.Data.DataRow>. W takim przypadku `Original` wartości wiersza będzie odpowiada bieżącej wartości w źródle danych i `Current` wartości wiersza zawiera zaktualizowaną wartość. `SourceVersion` Dla `@CompanyName` parametr nie jest ustawiona i stosuje domyślną, `Current` wiersza wartości.  
   
 > [!NOTE]
->  Dla obu `Fill` operacji `DataAdapter` i `Get` metody `DataReader`, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typ jest wnioskowany z typem zwracanym z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych. Wywnioskowane [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy i metody dostępu dla typów danych programu Microsoft SQL Server, OLE DB i ODBC są opisane w [mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+>  Dla obu `Fill` operacji `DataAdapter` i `Get` metody `DataReader`, typ .NET Framework jest wnioskowany z typem zwracanym z dostawcy danych .NET Framework. Wywnioskowane typów programu .NET Framework i metody dostępu dla typów danych programu Microsoft SQL Server, OLE DB i ODBC są opisane w [mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn, Parameter.SourceVersion  
  `SourceColumn` i `SourceVersion` mogą być przekazywane jako argumenty do `Parameter` konstruktora lub Ustaw jako właściwości istniejącego `Parameter`. `SourceColumn` Nazywa się <xref:System.Data.DataColumn> z <xref:System.Data.DataRow> gdzie wartość `Parameter` zostanie pobrana. `SourceVersion` Określa `DataRow` wersji, `DataAdapter` używa w celu pobrania wartości.  

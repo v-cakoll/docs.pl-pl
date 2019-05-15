@@ -3,12 +3,12 @@ title: Zapoznaj się z zakresami danych przy użyciu indeksów i zakresy
 description: W tym samouczku zaawansowane nauczy Cię do eksplorowania danych przy użyciu indeksów i zakresy do sprawdzenia wycinki sekwencyjne zestawu danych.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 64fae4581e265d4f70b8356d5c651b4fdaca3fe9
-ms.sourcegitcommit: dd3b897feb5c4ac39732bb165848e37a344b0765
+ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/25/2019
-ms.locfileid: "64431489"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557185"
 ---
 # <a name="indices-and-ranges"></a>Indeksy i zakresy
 
@@ -23,9 +23,13 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Obsługa języka dla indeksów i zakresy
 
-Można określić indeksu **od końca** przy użyciu `^` znak przed indeksu. Indeksowanie od końca zaczyna się od reguły, `0..^0` określa cały zakres. Aby wyliczyć całej tablicy, należy uruchomić *na pierwszy element*i Kontynuuj, dopóki nie będziesz *elementem*. Reakcji zachowania `MoveNext` metody na moduł wyliczający: zwraca wartość false, gdy wyliczenie przekazuje po ostatnim elemencie. Indeks `^0` "koniec" oznacza, że `array[array.Length]`, lub indeks, który następuje po ostatnim elemencie. Znasz `array[2]` oznacza element "2 od samego początku". Teraz `array[^2]` oznacza, że element "2 od końca". 
+Obsługa tego języka opiera się na dwóch nowych typów i dwóch nowych operatorów.
+- <xref:System.Index?displayProperty=nameWithType> reprezentuje indeks do sekwencji.
+- `^` Operatora, który określa, że indeks względem końca sekwencji.
+- <xref:System.Range?displayProperty=nameWithType> reprezentuje zakres sub sekwencji.
+- Operator zakresu (`..`), która określa początek i koniec zakresu jako argumentów.
 
-Można określić **zakres** z **operatora zakresu**: `..`. Na przykład `0..^0` określa cały zakres tablicy: 0 od początku do, z wyłączeniem 0 od końca. Jeden z operandów może używać "start" lub "end". Ponadto można pominąć oba operandy. Wartości domyślne to `0` dla indeksu początkowego i `^0` dla indeksu zakończenia.
+Zacznijmy od reguł dla indeksów. Należy wziąć pod uwagę tablicy `sequence`. `0` Indeksu jest taka sama jak `sequence[0]`. `^0` Indeksu jest taka sama jak `sequence[sequence.Length]`. Należy pamiętać, że `sequence[^0]` zgłosić wyjątek, podobnie jak `sequence[sequence.Length]` jest. Dowolną liczbą `n`, indeks `^n` jest taka sama jak `sequence[sequence.Length - n]`.
 
 ```csharp-interactive
 string[] words = new string[]
@@ -43,11 +47,11 @@ string[] words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-Indeks każdego elementu wspiera koncepcję "od rozpoczęcia" i "od końca", a zakresy są nie do końca zakresu. "Start" całej tablicy jest pierwszym elementem. "Koniec" całej tablicy jest *przeszłości* po ostatnim elemencie.
-
 Możesz pobrać ostatni wyraz z `^1` indeksu. Dodaj następujący kod poniżej inicjowania:
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+
+Określa zakres *start* i *zakończenia* zakresu. Zakresy są wzajemnie, co oznacza *zakończenia* nie wchodzi w zakres. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres. 
 
 Poniższy kod tworzy Podzakres przy użyciu słowa "szybkie", "brown" i "fox". Zawiera on `words[1]` za pośrednictwem `words[3]`. Element `words[4]` nie znajduje się w zakresie. Dodaj następujący kod do tej samej metody. Skopiuj i wklej go w dolnej części okna interaktywnego.
 
@@ -64,11 +68,6 @@ Poniższe przykłady tworzą zakresy, które są otwarte zakończył się dla po
 Można również zadeklarować zakresów lub indeksów jako zmienne. Następnie można użyć zmiennej w środowisku w `[` i `]` znaków:
 
 [!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
-
-Dwóch decyzji projektowych, które wymagają uzyskać więcej informacji można znaleźć w poprzednich przykładach:
-
-- Zakresy są *wyłączne*, co oznacza element w indeksie ostatniego nie znajduje się w zakresie.
-- Indeks `^0` jest *koniec* kolekcji, nie *po ostatnim elemencie* w kolekcji.
 
 Poniższy przykład pokazuje wiele przyczyn tych wyborów. Modyfikowanie `x`, `y`, i `z` do wypróbowania różnych kombinacji. Podczas eksperymentowania, użyj wartości, w których `x` jest mniejsza niż `y`, i `y` jest mniejsza niż `z` dla ważnych kombinacji. Dodaj następujący kod w nowej metodzie. Wypróbuj różne kombinacje:
 

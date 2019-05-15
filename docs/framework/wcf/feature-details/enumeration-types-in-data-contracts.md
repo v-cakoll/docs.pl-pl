@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587617"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586673"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Typy wyliczeniowe w kontraktach danych
 Wyliczenia mogą być wyrażone w modelu kontraktu danych. W tym temacie przedstawiono kilka przykładów, które opisują modelu programowania.  
@@ -39,7 +39,7 @@ Wyliczenia mogą być wyrażone w modelu kontraktu danych. W tym temacie przedst
   
  Na przykład, można użyć `CarConditionEnum` po stronie wysyłania i `CarConditionWithNumbers` po stronie odbierającej. Chociaż po stronie wysyłającej korzysta z wartości "1" dla `Used` i używa po stronie odbierania, wartość "20" reprezentację XML jest `<condition>Used</condition>` dla obu stron.  
   
- Do uwzględnienia w kontraktu danych, należy najpierw zastosować <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu. W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], zawsze stosować specjalna wartość 0 (zero) do wyliczenia, która jest również wartością domyślną dla dowolnego wyliczenia. Jednak nawet ten specjalny odcinek serii nie można serializować wartość zero, chyba że jest on oznaczony wartością <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu.  
+ Do uwzględnienia w kontraktu danych, należy najpierw zastosować <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu. W .NET Framework zawsze można zastosować specjalna wartość 0 (zero) do wyliczenia, która jest również wartością domyślną dla dowolnego wyliczenia. Jednak nawet ten specjalny odcinek serii nie można serializować wartość zero, chyba że jest on oznaczony wartością <xref:System.Runtime.Serialization.EnumMemberAttribute> atrybutu.  
   
  Istnieją dwa wyjątki od tej reguły:  
   

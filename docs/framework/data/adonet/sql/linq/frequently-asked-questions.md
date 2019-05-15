@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657058"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583480"
 ---
 # <a name="frequently-asked-questions"></a>Często zadawane pytania
 Poniższe sekcje odpowiedzi na niektóre typowe problemy, które można napotkać podczas implementowania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  PYTANIE: System.Data.Linq oznaczono do użycia przez częściowo zaufany kod?  
   
- A. Tak, to zestaw System.Data.Linq.dll między tymi [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zestawy oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. Bez tego oznaczania, zestawy w [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] są przeznaczone do użytku tylko przez w pełni zaufany kod.  
+ A. Tak, to zestaw System.Data.Linq.dll wśród tych zestawów .NET Framework, oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. Bez tego oznaczania zestawy .NET Framework są przeznaczone do użytku tylko przez w pełni zaufany kod.  
   
  Główna scenariusza w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dla umożliwiając częściowo zaufanych obiektów wywołujących jest umożliwienie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zestawu można uzyskać dostęp z aplikacji sieci Web, gdzie *zaufania* konfiguracji to średni.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663469"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583362"
 ---
 # <a name="-reference-visual-basic"></a>— Odwołanie (Visual Basic)
 Powoduje, że kompilator udostępnia informacje o typie w określonych zestawach do projektu, które są aktualnie kompilacji.  
@@ -46,7 +46,7 @@ Powoduje, że kompilator udostępnia informacje o typie w określonych zestawach
   
  Aby kompilator mógł rozpoznać typu w zestawie (nie moduł) należy wymusić do rozpoznania typu. Jednym z przykładów jak to zrobić, jest definiowanie wystąpienia tego typu. Inne metody są dostępne do rozpoznawania nazw typów w zestawie dla kompilatora. Na przykład jeśli możesz dziedziczyć z typu w zestawie, nazwa typu następnie staje się znane kompilator.  
   
- Plik odpowiedzi Vbc.rsp odwołania najczęściej używanych [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zestawów, jest używane domyślnie. Użyj `-noconfig` Jeśli nie chcesz, aby kompilator korzystać Vbc.rsp.  
+ Plik odpowiedzi Vbc.rsp, która odwołuje się do powszechnie stosowane zestawów .NET Framework, jest używany domyślnie. Użyj `-noconfig` Jeśli nie chcesz, aby kompilator korzystać Vbc.rsp.  
   
  Krótkiej formy `-reference` jest `/r`.  
   

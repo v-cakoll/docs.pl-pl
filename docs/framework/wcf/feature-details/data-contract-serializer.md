@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c773fbe90e7a45ea2a2718f9bde0aa9e9b67d6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857106"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592568"
 ---
 # <a name="data-contract-serializer"></a>Serializator kontraktów danych
 Infrastruktura usług Windows Communication Foundation (WCF) używa <xref:System.Runtime.Serialization.DataContractSerializer> klasę jako domyślnego elementu serializującego. Tematy w tej sekcji zawierają szczegółowe informacje dotyczące korzystania z niego jako autonomiczny serializatora.  
@@ -21,7 +21,7 @@ Infrastruktura usług Windows Communication Foundation (WCF) używa <xref:System
  Szczegółowe informacje dotyczące używania <xref:System.Runtime.Serialization.DataContractSerializer> klasy do wykresów obiektów serializacji i deserializacji XML dokumenty w obiektach.  
   
  [importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- Opis sposobu generowania schematu języka (XSD) definicji schematu XML z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] klasy lub sposób generowania kodu z dokumentu schematu XSD.  
+ Wyjaśnia, jak można wygenerować schematu języka (XSD) definicji schematu XML z klasy .NET Framework lub sposób generowania kodu z dokumentu schematu XSD.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

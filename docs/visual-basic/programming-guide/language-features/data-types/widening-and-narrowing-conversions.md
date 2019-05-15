@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600894"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586305"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Rozszerzanie i zwężanie konwersji (Visual Basic)
 Ważną kwestią za pomocą konwersji typu jest, czy wynik konwersji znajduje się w zakresie docelowego typu danych.  
@@ -93,7 +93,7 @@ Ważną kwestią za pomocą konwersji typu jest, czy wynik konwersji znajduje si
   
 - <xref:System.OverflowException> — (tylko typy całkowite) Jeśli przekonwertowana wartość jest zbyt duża dla typu docelowego  
   
- Jeśli zdefiniowano klasy lub struktury [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md) ma pełnić rolę operatora konwersji do i z tej klasy lub struktury, która `CType` można zgłoszenie każdego wyjątku, które uzna za stosowne. Ponadto, który `CType` może wywoływać funkcje języka Visual Basic lub [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody, które z kolei może wywoływać różnych wyjątków.  
+ Jeśli zdefiniowano klasy lub struktury [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md) ma pełnić rolę operatora konwersji do i z tej klasy lub struktury, która `CType` można zgłoszenie każdego wyjątku, które uzna za stosowne. Ponadto, który `CType` może wywoływać funkcje języka Visual Basic lub metody .NET Framework, które z kolei może wywoływać różnych wyjątków.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Zmiany w czasie konwersji typu odwołania  
  Konwersja z *odwołania do typu* kopiuje tylko wskaźnik do wartości. Sama wartość nie jest kopiowany ani zmieniać w jakikolwiek sposób. Jedyną czynnością, którą mogą zmieniać to typ danych zmiennej Przytrzymanie wskaźnika myszy. W poniższym przykładzie typ danych jest konwertowany z klasy pochodnej do swojej klasy bazowej, ale obiekt, który obu zmiennych wskazują teraz pozostaje niezmieniony.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591514"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585990"
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członkowskich i dostęp do elementów członkowskich (czyli do wywołania metod i konstruktorów do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej). Użycie odbicia w celu uzyskania informacji na temat typów i elementów członkowskich nie jest ograniczona. Cały kod może używać odbicia do wykonywania następujących zadań:  
@@ -88,7 +88,7 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
 - Zestaw A umożliwia odbicia dostęp do prywatnych elementów członkowskich zestawu B, ponieważ zestaw uprawnień zestaw B nie zawiera żadnych uprawnień, które nie udzielono A.  
   
-- Zestaw, A nie umożliwia dostęp do prywatnych elementów członkowskich odbicia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawy, takie jak mscorlib.dll, ponieważ biblioteka mscorlib.dll jest w pełni zaufany i dlatego ma uprawnienia, które nie zostały przyznane do zestawu A. Element <xref:System.MemberAccessException> jest zgłaszany, gdy zabezpieczenia dostępu kodu przedstawiono stosu w czasie wykonywania.  
+- Zestaw, A nie można używać odbicia dostęp do prywatnych składowych zestawów .NET Framework, takich jak mscorlib.dll, ponieważ jest w pełni zaufany mscorlib.dll i dlatego ma uprawnienia, które nie zostały przyznane do zestawu A. Element <xref:System.MemberAccessException> jest zgłaszany, gdy zabezpieczenia dostępu kodu przedstawiono stosu w czasie wykonywania.  
   
 ## <a name="serialization"></a>Serializacja  
  Do serializacji <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> Flaga umożliwia pobieranie i ustawianie elementów członkowskich typów możliwych do serializacji, niezależnie od tego, w ułatwienia dostępu. To uprawnienie umożliwia kodu odnaleźć i zmienić prywatnego stanu wystąpienia. (Oprócz trwa odpowiednich uprawnień, należy określić typ [oznaczone](../../../docs/standard/attributes/applying-attributes.md) jako możliwy do serializacji w metadanych.)  
@@ -100,7 +100,7 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
 - Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], kod przezroczysty nie może używać odbicia w celu dostęp do elementów członkowskich zabezpieczenia krytyczny.  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flagi została wprowadzona w systemie [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Wcześniejszych wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi dla kodu, który używa odbicia, aby dostęp do elementów członkowskich niepublicznych. Jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flagi została wprowadzona w systemie [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi dla kodu, który używa odbicia, aby dostęp do elementów członkowskich niepublicznych. Jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
   
 - Począwszy od [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], przy użyciu odbicia w celu uzyskania informacji na temat niepublicznych typy i elementy członkowskie nie wymaga żadnych uprawnień. We wcześniejszych wersjach <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> flaga jest wymagana.  
   

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6425b0df5735c2469079e1c5a07a1ddd3be414a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654449"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588806"
 ---
 # <a name="collection-types-in-data-contracts"></a>Typy kolekcji w kontraktach danych
-A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], takie listy mogą być reprezentowane za pomocą tablic lub innych typów (listy ogólnej, ogólny <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, lub <xref:System.Collections.ArrayList>). Na przykład kolekcja może zawierać, listę adresów dla danego klienta. Kolekcje te są nazywane *listy kolekcji*, niezależnie od ich rzeczywistego typu.  
+A *kolekcji* znajduje się lista elementów określonego typu. W .NET Framework, takie listy mogą być reprezentowane z przy użyciu tablic lub innych typów (listy ogólnej, ogólny <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, lub <xref:System.Collections.ArrayList>). Na przykład kolekcja może zawierać, listę adresów dla danego klienta. Kolekcje te są nazywane *listy kolekcji*, niezależnie od ich rzeczywistego typu.  
   
- Istnieje specjalną postać kolekcji, która reprezentuje skojarzenie między jednego przedmiotu ("klucz"), a inny ("wartość"). W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], takie jak, te są reprezentowane przez typy <xref:System.Collections.Hashtable> i generyczny słownik. Na przykład w kolekcji skojarzenie może być mapowany city ("key") jego populację ("value"). Kolekcje te są nazywane *kolekcji słownika*, niezależnie od ich rzeczywistego typu.  
+ Istnieje specjalną postać kolekcji, która reprezentuje skojarzenie między jednego przedmiotu ("klucz"), a inny ("wartość"). W .NET Framework, te są reprezentowane przez typy takie jak <xref:System.Collections.Hashtable> i generyczny słownik. Na przykład w kolekcji skojarzenie może być mapowany city ("key") jego populację ("value"). Kolekcje te są nazywane *kolekcji słownika*, niezależnie od ich rzeczywistego typu.  
   
  Kolekcje otrzymują specjalnego traktowania w modelu kontraktu danych.  
   

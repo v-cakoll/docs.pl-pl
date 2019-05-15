@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702077"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584395"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Instrukcje: Wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)
 
@@ -138,14 +138,6 @@ foreach (var student in queryNamesScores2)
         student.First, student.Last, student.ExamScores.Average());
 }
 ```
-
-## <a name="compiling-the-code"></a>Kompilowanie kodu
-
-Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następujących opcji:
-
-- .NET framework w wersji 3.5 za pomocą odwołania do System.Core.dll.
-- .NET framework w wersji 4.0 lub nowszy.
-- .NET core w wersji 1.0 lub nowszej.
 
 ## <a name="see-also"></a>Zobacz także
 

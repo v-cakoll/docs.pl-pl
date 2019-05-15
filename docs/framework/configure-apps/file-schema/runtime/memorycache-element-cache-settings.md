@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 9ed3c290c3d4836eb783348b559cab46a38b2063
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 872084dabc5d345d10a39f0933ff2ef30ca40355
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592674"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584479"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache >, Element (ustawienia pamięci podręcznej)
 Definiuje element, który jest używany do konfigurowania pamięci podręcznej, który jest oparty na <xref:System.Runtime.Caching.MemoryCache> klasy. <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> Klasa definiuje [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) element, który służy do konfigurowania pamięci podręcznej. Wiele wystąpień <xref:System.Runtime.Caching.MemoryCache> klasy mogą być używane w jednej aplikacji. Każdy `memoryCache` elementu w pliku konfiguracji mogą zawierać ustawienia dla nazwane <xref:System.Runtime.Caching.MemoryCache> wystąpienia.  
@@ -55,7 +55,7 @@ Definiuje element, który jest używany do konfigurowania pamięci podręcznej, 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Zawiera typy, które pozwalają na implementowanie buforowania danych wyjściowych w aplikacjach, które są wbudowane w [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Zawiera typy, które pozwalają na implementowanie buforowania danych wyjściowych w aplikacjach, które są wbudowane w .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
  <xref:System.Runtime.Caching.MemoryCache> Klasa jest konkretną implementację abstrakcyjnej <xref:System.Runtime.Caching.ObjectCache> klasy. Wystąpienia elementu <xref:System.Runtime.Caching.MemoryCache> klasy mogą być dostarczane za pomocą informacji o konfiguracji z plików konfiguracji aplikacji. [MemoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) sekcja konfiguracji zawiera `namedCaches` konfiguracyjnych.  

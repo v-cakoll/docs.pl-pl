@@ -3,12 +3,12 @@ title: Jak zainstalować narzędzie strukturze ML.NET interfejsu wiersza polecen
 description: Omówienie i instalacja narzędzia strukturze ML.NET interfejsu wiersza polecenia (CLI).
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 869c443d519557c9d3976676047e63a4a072d2d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066236"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557855"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Jak zainstalować narzędzie strukturze ML.NET interfejsu wiersza polecenia (CLI)
 
@@ -56,10 +56,10 @@ Pomoc dla dostępnych poleceń dla narzędzia mlnet, takie jak polecenie "auto-t
 
 ## <a name="install-a-specific-release-version"></a>Instalowanie określonej wersji
 
-Jeśli próbujesz zainstalować wersję wstępną lub określoną wersję narzędzia, można określić numeru wersji w następującym formacie:
+Jeśli próbujesz zainstalować wersję wstępną lub określoną wersję narzędzia, możesz określić [framework](../../standard/frameworks.md) w następującym formacie:
 
 ```console
-> dotnet tool install -g <package-name> --version <version-number>
+> dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Możesz również sprawdzić, jeśli pakiet jest prawidłowo zainstalowany, wpisując następujące polecenie:

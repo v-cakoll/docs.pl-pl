@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625370"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592662"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Instrukcje: Tworzenie dodatku, który jest interfejsem użytkownika
 Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Presentation Foundation (WPF), która jest hostowana przez oddzielną aplikację WPF.  
@@ -81,7 +81,7 @@ Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Present
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Wdrażanie aplikacji hosta  
- Adaptery po stronie hosta i widok hosta utworzony, można użyć aplikacji hosta [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelu w dodatku, otwórz potok i uzyskać widok hosta dodatków. Te kroki są wyświetlane w poniższym kodzie.  
+ Adaptery po stronie hosta i widok hosta utworzony aplikacji hosta umożliwia model dodatku .NET Framework Otwórz potok i uzyskać widok hosta dodatków. Te kroki są wyświetlane w poniższym kodzie.  
 
  Aplikacja hosta używa typowy kod model dodatku .NET Framework do aktywowania dodatku, niejawnie zwracające widoku hosta aplikacji hosta. Aplikacja hosta następnie wyświetla widok hosta (czyli <xref:System.Windows.Controls.UserControl>) z <xref:System.Windows.Controls.Grid>.  
   

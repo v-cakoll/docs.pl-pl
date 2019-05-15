@@ -3,12 +3,12 @@ title: Jak używać strukturze ML.NET automatyczne interfejsu API uczenia Maszyn
 description: Strukturze ML.NET automatyczne interfejsu API uczenia Maszynowego automatyzuje modelu proces tworzenia i generuje gotowe do wdrożenia modelu. Dowiedz się, opcje, które umożliwiają skonfigurowanie automatycznych usługi machine learning zadania.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 23410a11f94ab6052ab64bd8968f0ed127441898
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: b05b6ed7c66062b28aaf634913a9598602b62498
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066179"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557878"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Jak używać strukturze ML.NET automatyczne interfejsu API usługi machine learning
 
@@ -42,17 +42,22 @@ Przed utworzeniem eksperymentu, należy określić rodzaj maszyny nauczanym prob
 Tworzenie eksperymentu ustawień dla określonego typu zadania uczenia Maszynowego:
 
 * Klasyfikacja binarna
-```csharp
-var experimentSettings = new BinaryExperimentSettings();
-```
+
+  ```csharp
+  var experimentSettings = new BinaryExperimentSettings();
+  ```
+
 * Wieloklasowej klasyfikacji
-```csharp
-var experimentSettings = new MulticlassExperimentSettings();
-```
+
+  ```csharp
+  var experimentSettings = new MulticlassExperimentSettings();
+  ```
+
 * Regresji
-```csharp
-var experimentSettings = new RegressionExperimentSettings();
-```
+
+  ```csharp
+  var experimentSettings = new RegressionExperimentSettings();
+  ```
 
 ## <a name="configure-experiment-settings"></a>Konfigurowanie ustawień eksperymentu
 

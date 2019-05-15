@@ -2,18 +2,18 @@
 title: Przewodnik programowania (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: d71fb2d0365199bf89b0cfbd05b614ebd7634219
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8141d915b4262bdb66b0b2d9acc4c549956cdbec
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61682173"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585777"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Przewodnik programowania (LINQ to XML) (C#)
 Ta sekcja zawiera informacje o pojęciach i porad dotyczących programowania w języku [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="who-should-read-this-documentation"></a>Kto powinien przeczytać tej dokumentacji  
- Ta dokumentacja jest przeznaczony dla deweloperów, którzy już zrozumienie języka C# i niektórych podstawowych aspektów [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ Ta dokumentacja jest przeznaczony dla deweloperów, którzy już zrozumieć C# i niektórych podstawowych aspektów programu .NET Framework.  
   
  Celem tej dokumentacji jest zapewnienie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] łatwy w użyciu dla wszystkich rodzajów deweloperów. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ułatwia programowanie XML. Nie masz jako deweloper ekspertów z niego korzystać.  
   

@@ -1,18 +1,20 @@
 ---
 title: Co nowego C# 8.0 - C# przewodnik
-description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
+description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny w wersji zapoznawczej 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754376"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557148"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
-Istnieje wiele ulepszeń C# języka, które możesz wypróbować już w wersji zapoznawczej 2. Dostępne są następujące nowe funkcje dodane w wersji zapoznawczej 2:
+Istnieje wiele ulepszeń C# języka, które możesz wypróbować już. 
 
+- [Elementy członkowskie tylko do odczytu](#readonly-members)
+- [Domyślni członkowie interfejsu](#default-interface-members)
 - [Rozszerzenia dopasowywania wzorca](#more-patterns-in-more-places):
   * [Wyrażenia Switch](#switch-expressions)
   * [Wzorce właściwości](#property-patterns)
@@ -21,17 +23,67 @@ Istnieje wiele ulepszeń C# języka, które możesz wypróbować już w wersji z
 - [Za pomocą deklaracji](#using-declarations)
 - [Statyczne funkcje lokalne](#static-local-functions)
 - [Struktury ref możliwe do rozporządzania](#disposable-ref-structs)
-
-Następujące funkcje języka najpierw pojawiła się C# 8.0 w wersji zapoznawczej 1:
-
 - [Typy referencyjne dopuszczające wartość null](#nullable-reference-types)
 - [Asynchroniczne strumienie](#asynchronous-streams)
 - [Indeksy i zakresy](#indices-and-ranges)
 
 > [!NOTE]
-> W tym artykule został ostatnio zaktualizowany na potrzeby C# 8.0 w wersji preview 2.
+> W tym artykule został ostatnio zaktualizowany na potrzeby C# 8.0 w wersji zapoznawczej 5.
 
 Te funkcje można krótko opisano w dalszej części tego artykułu. Jeżeli dostępne są szczegółowe artykuły, znajdują się linki do omówienia i samouczki.
+
+## <a name="readonly-members"></a>Elementy członkowskie tylko do odczytu
+
+Można zastosować `readonly` modyfikator do wszystkich elementów członkowskich struktury. Oznacza to element członkowski nie powoduje modyfikacji stanu. Jest bardziej szczegółowe niż stosowanie `readonly` modyfikatora `struct` deklaracji.  Należy rozważyć następujące struktury mutable:
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+Większość struktur, takich jak `ToString()` metoda nie powoduje modyfikacji stanu. Może sygnalizować, dodając `readonly` modyfikatora deklaracji `ToString()`:
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+Zmian poprzednim generuje ostrzeżenie kompilatora, ponieważ `ToString` uzyskuje dostęp do `Distance` właściwość, która nie jest oznaczony jako `readonly`:
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+Kompilator ostrzega o tym, kiedy zachodzi potrzeba utworzenia kopii obrony.  `Distance` Właściwości nie zmienia stanu, dzięki czemu możesz rozwiązać tego ostrzeżenia, dodając `readonly` modyfikatora deklaracji:
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+Należy zauważyć, że `readonly` modyfikator jest konieczne na właściwością tylko do odczytu. Kompilator nie zakłada `get` akcesory nie należy modyfikować stanu; należy zadeklarować `readonly` jawnie. Kompilator wymusić regułę, która `readonly` elementów członkowskich, nie należy modyfikować stanu. Poniższa metoda nie zostanie skompilowany, chyba że usuniesz `readonly` modyfikator:
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+Ta funkcja umożliwia określanie zgodną z planem projektu, dzięki czemu kompilator może go wymusić i wprowadzić optymalizacje oparte na tym przeznaczeniem.
+
+## <a name="default-interface-members"></a>Domyślni członkowie interfejsu
+
+Można teraz dodawać członków do interfejsów i zapewniać implementację dla tych członków. Tej funkcji języka umożliwia autorom interfejsu API Dodaj metody do interfejsu w nowszych wersjach bez przerywania źródła lub zgodność binarną przy użyciu istniejących implementacji interfejsu. Istniejących implementacji *dziedziczą* domyślną implementację. Ta funkcja umożliwia również C# pod kątem współdziałania z interfejsów API przeznaczonych dla systemu Android lub Swift, który obsługuje podobne funkcje. Domyślne elementy członkowskie z interfejsu też włączyć scenariusze podobne do funkcji języka "cech".
+
+Domyślni członkowie interfejsu wpływa na wiele scenariuszy i elementy języka. Nasz pierwszy samouczek obejmuje [aktualizowanie interfejs za pomocą domyślnej implementacji](../tutorials/default-interface-members-versions.md). Inne samouczki i dokumentacja aktualizacje zostaną wprowadzone w termin głównym wydaniu.
 
 ## <a name="more-patterns-in-more-places"></a>Więcej wzorców w większej liczbie miejsc
 
@@ -321,9 +373,15 @@ Możesz spróbować asynchronicznymi strumieniami samodzielnie w naszym samouczk
 
 Zakresy i indeksów, które zapewniają zwięzłą składnię do określania podzakresów w tablicy, <xref:System.Span%601>, lub <xref:System.ReadOnlySpan%601>.
 
-Można określić indeksu **od końca** przy użyciu `^` znak przed indeksu. Indeksowanie od końca zaczyna się od reguły, `0..^0` określa cały zakres. Aby wyliczyć całej tablicy, należy uruchomić *na pierwszy element*i Kontynuuj, dopóki nie będziesz *elementem*. Reakcji zachowania `MoveNext` metody na moduł wyliczający: zwraca wartość false, gdy wyliczenie przekazuje po ostatnim elemencie. Indeks `^0` "koniec" oznacza, że `array[array.Length]`, lub indeks, który następuje po ostatnim elemencie. Znasz `array[2]` oznacza element "2 od samego początku". Teraz `array[^2]` oznacza, że element "2 od końca". 
+Obsługa tego języka opiera się na dwóch nowych typów i dwóch nowych operatorów.
+- <xref:System.Index?displayProperty=nameWithType> reprezentuje indeks do sekwencji.
+- `^` Operatora, który określa, że indeks względem końca sekwencji.
+- <xref:System.Range?displayProperty=nameWithType> reprezentuje zakres sub sekwencji.
+- Operator zakresu (`..`), który określa początek i koniec zakresu, co jest operandów.
 
-Można określić **zakres** z **operatora zakresu**: `..`. Na przykład `0..^0` określa cały zakres tablicy: 0 od początku do, z wyłączeniem 0 od końca. Jeden z operandów może używać "start" lub "end". Ponadto można pominąć oba operandy. Wartości domyślne to `0` dla indeksu początkowego i `^0` dla indeksu zakończenia.
+Zacznijmy od reguł dla indeksów. Należy wziąć pod uwagę tablicy `sequence`. `0` Indeksu jest taka sama jak `sequence[0]`. `^0` Indeksu jest taka sama jak `sequence[sequence.Length]`. Należy pamiętać, że `sequence[^0]` zgłosić wyjątek, podobnie jak `sequence[sequence.Length]` jest. Dowolną liczbą `n`, indeks `^n` jest taka sama jak `sequence.Length - n`.
+
+Określa zakres *start* i *zakończenia* zakresu. Zakresy są wzajemnie, co oznacza *zakończenia* nie wchodzi w zakres. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres. 
 
 Spójrzmy na kilka przykładów. Rozważmy następującą tablicę, oznaczony za pomocą jej indeks, od samego początku i na końcu:
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-Indeks każdego elementu wspiera koncepcję "od rozpoczęcia" i "od końca", a zakresy są nie do końca zakresu. "Start" całej tablicy jest pierwszym elementem. "Koniec" całej tablicy jest *przeszłości* po ostatnim elemencie.
 
 Możesz pobrać ostatni wyraz z `^1` indeksu:
 

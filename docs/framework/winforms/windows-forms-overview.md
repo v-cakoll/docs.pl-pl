@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211780"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583464"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms — omówienie
 
@@ -22,7 +22,7 @@ Poniższy przegląd omawia zalety inteligentnych aplikacji klienckich, najważni
 
 ### <a name="build-rich-interactive-user-interfaces"></a>Tworzenie interfejsów użytkownika bogate, interaktywne
 
- Windows Forms jest technologią klienta inteligentnego [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], zbiór bibliotek zarządzanych, które upraszczają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Gdy używasz środowiska programowania, takich jak Visual Studio, można utworzyć Windows Forms inteligentnych aplikacji klienckich wyświetlić informacje, żądać danych wejściowych od użytkowników oraz komunikować się ze zdalnymi komputerami za pośrednictwem sieci.
+ Windows Forms to technologia inteligentne klienta dla programu .NET Framework, zbiór bibliotek zarządzanych, które upraszczają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Gdy używasz środowiska programowania, takich jak Visual Studio, można utworzyć Windows Forms inteligentnych aplikacji klienckich wyświetlić informacje, żądać danych wejściowych od użytkowników oraz komunikować się ze zdalnymi komputerami za pośrednictwem sieci.
 
  W formularzach Windows *formularza* jest powierzchnią wizualną, na którym możesz wyświetlić informacje do użytkownika. Zazwyczaj tworzenie aplikacji Windows Forms przez dodawanie kontrolek do formularzy i tworzenie odpowiedzi na działania użytkownika, takich jak kliknięcia lub naciśnięcia klawiszy. A *kontroli* jest element interfejsu użytkownika dyskretnych, który wyświetla dane lub akceptuje dane wejściowe.
 
@@ -90,7 +90,7 @@ Aby uzyskać pełne wprowadzenie do [!INCLUDE[ndptecclick](../../../includes/ndp
 
 ### <a name="other-controls-and-features"></a>Inne formanty i funkcje
 
-Istnieje wiele innych funkcji w formularzach Windows Forms, wchodzące Implementowanie typowych zadań, szybkie i łatwe, takie jak obsługa tworzenie okien dialogowych, drukowanie, dodając pomocy i dokumentacji i lokalizowanie aplikacji na wiele języków. Ponadto formularze Windows opiera się na niezawodne zabezpieczenia systemu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Z tym systemem można zwolnić bardziej bezpieczne aplikacje swoim klientom.
+Istnieje wiele innych funkcji w formularzach Windows Forms, wchodzące Implementowanie typowych zadań, szybkie i łatwe, takie jak obsługa tworzenie okien dialogowych, drukowanie, dodając pomocy i dokumentacji i lokalizowanie aplikacji na wiele języków. Ponadto formularze Windows opiera się na niezawodne zabezpieczenia systemu .NET Framework. Z tym systemem można zwolnić bardziej bezpieczne aplikacje swoim klientom.
 
 #### <a name="implement-other-controls-and-features"></a>Implementowanie inne formanty i funkcje
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909277"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588826"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Podsumowanie informacji o technologii formantów DataGridView (Formularze systemu Windows)
 Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klas, które obsługują jego użycia.  
@@ -29,7 +29,7 @@ Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klas, któ
  `BindingSource`  
   
 ## <a name="background"></a>Tło  
- Projektowanie interfejsu użytkownika często okazać się konieczne do wyświetlenia użytkownikom dane tabelaryczne. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Oferuje kilka sposobów, aby wyświetlić dane w tabeli lub siatki. `DataGridView` Kontrolka reprezentuje najnowszy rozwój tej technologii dla aplikacji Windows Forms.  
+ Projektowanie interfejsu użytkownika często okazać się konieczne do wyświetlenia użytkownikom dane tabelaryczne. .NET Framework oferuje kilka sposobów, aby wyświetlić dane w tabeli lub siatki. `DataGridView` Kontrolka reprezentuje najnowszy rozwój tej technologii dla aplikacji Windows Forms.  
   
  `DataGridView` Formant może wyświetlić wiersze danych z magazynu danych. Wiele typów magazynów danych są obsługiwane. Magazyn danych może zawierać proste, bez typu danych, takich jak jednowymiarowej tablicy, lub może on przechowywać typizowane dane, takie jak <xref:System.Data.DataSet>. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie danych Windows formantu DataGridView formularzy](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   

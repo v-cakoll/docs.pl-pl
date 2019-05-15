@@ -2,18 +2,18 @@
 title: Omówienie programu Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034059"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583847"
 ---
 # <a name="entity-framework-overview"></a>Omówienie programu Entity Framework
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] To zestaw technologii ADO.NET, które obsługują tworzenie aplikacji zorientowanych na dane. Z potrzebami osiągnięcia dwa cele zbytnio zmagały architektów i deweloperów aplikacji zorientowanych na dane. Modelują one muszą jednostek, relacje i logiki problemy biznesowe, które są ich rozwiązywania, a także muszą współpracować z aparatów danych, używane do przechowywania i pobierania danych. Dane mogą obejmować wiele systemów pamięci masowej, każdy z protokołami; nawet aplikacjach, które działają w systemie pojedynczy magazyn muszą równoważyć wymagania systemu magazynu pod kątem wymagań pisania kodu wydajne i łatwy w obsłudze aplikacji.
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Umożliwia deweloperom pracę z danymi w postaci obiektów specyficznych dla domeny i właściwości, takich jak klienci i adresy klientów bez konieczności zajmowania się w tych tabelach bazy danych i kolumnami, gdzie te dane są przechowywane . Za pomocą [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], deweloperzy mogą pracować na wyższym poziomie abstrakcji, gdy zajmują się danymi i mogą tworzyć i utrzymywać zorientowane na dane aplikacji przy użyciu mniejszej ilości kodu niż w tradycyjnej aplikacji. Ponieważ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] jest składnikiem [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacje mogą działać na dowolnym komputerze, na którym [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] począwszy od wersji 3.5 z dodatkiem SP1 jest zainstalowana.
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Umożliwia deweloperom pracę z danymi w postaci obiektów specyficznych dla domeny i właściwości, takich jak klienci i adresy klientów bez konieczności zajmowania się w tych tabelach bazy danych i kolumnami, gdzie te dane są przechowywane . Za pomocą [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], deweloperzy mogą pracować na wyższym poziomie abstrakcji, gdy zajmują się danymi i mogą tworzyć i utrzymywać zorientowane na dane aplikacji przy użyciu mniejszej ilości kodu niż w tradycyjnej aplikacji. Ponieważ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] jest składnikiem programu .NET Framework, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacje mogą działać na dowolnym komputerze, na którym zainstalowany jest .NET Framework, począwszy od wersji 3.5 z dodatkiem SP1.
 
 ## <a name="give-life-to-models"></a>Ożywić modeli
  Na etapie projektowania od i typowe podczas tworzenia aplikacji lub usługi jest podział aplikacji lub usługi na trzy części: modelu domeny, modelu logicznego i modelu fizycznego. Model domeny definiuje jednostek i relacji w systemie, który jest w modelu. Logiczny model relacyjnej bazy danych normalizuje jednostki i relacje do tabel za pomocą ograniczeń klucza obcego. Modelu fizycznego eliminuje możliwości silnika określone dane, określając szczegóły magazynu, takich jak partycjonowanie i indeksowania.

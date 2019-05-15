@@ -2,12 +2,12 @@
 title: Generator EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607674"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584590"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generator EDM (EdmGen.exe)
 
@@ -21,7 +21,7 @@ EdmGen.exe to narzędzie wiersza polecenia służące do pracy z [!INCLUDE[adone
 
 - Generuj plik kodu C# lub Visual Basic, który zawiera wstępnie wygenerowanych widoków dla istniejącego modelu. Aby uzyskać więcej informacji [jak: Wstępnie wygenerować widoków, aby poprawić wydajność zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).
 
-Narzędzie EdmGen.exe jest instalowane w [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] katalogu. W wielu przypadkach znajduje się on w C:\windows\Microsoft.NET\Framework\v4.0. W 64-bitowych systemach znajduje się on w C:\windows\Microsoft.NET\Framework64\v4.0. Można również uzyskać dostęp do narzędzia EdmGen.exe, w wierszu polecenia programu Visual Studio (kliknij **Start**, wskaż **wszystkie programy**, wskaż polecenie **Microsoft Visual Studio 2010**, wskaż polecenie **Visual Studio Tools**, a następnie kliknij przycisk **Visual Studio 2010 Command Prompt**).
+Narzędzie EdmGen.exe jest instalowany w katalogu .NET Framework. W wielu przypadkach znajduje się on w C:\windows\Microsoft.NET\Framework\v4.0. W 64-bitowych systemach znajduje się on w C:\windows\Microsoft.NET\Framework64\v4.0. Można również uzyskać dostęp do narzędzia EdmGen.exe, w wierszu polecenia programu Visual Studio (kliknij **Start**, wskaż **wszystkie programy**, wskaż polecenie **Microsoft Visual Studio 2010**, wskaż polecenie **Visual Studio Tools**, a następnie kliknij przycisk **Visual Studio 2010 Command Prompt**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,7 +46,7 @@ Podczas korzystania z narzędzia EdmGen.exe, należy określić jedną z następ
 |Opcja|Opis|
 |------------|-----------------|
 |`/p[roject]:`\<ciąg >|Określa nazwę projektu, należy użyć. Nazwa projektu jest używany jako domyślny dla przestrzeni nazw, ustawiając nazwę modelu i mapowania plików, nazwa pliku źródłowego obiektu i nazwę pliku źródłowego generowania widoku. Nazwa kontenera jednostki jest równa \<Projekt > kontekstu.|
-|`/prov[ider]:`\<ciąg >|Nazwa [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] dostawcy danych, które ma być używany do generowania pliku modelu (ssdl) magazynu. Domyślny dostawca jest [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/prov[ider]:`\<ciąg >|Nazwa dostawcy danych .NET Framework, który ma być używany do generowania pliku modelu (ssdl) magazynu. Domyślny dostawca jest .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
 |`/c[onnectionstring]:`\<Parametry połączenia >|Określa ciąg, który jest używany do połączenia ze źródłem danych.|
 |`/incsdl:`\<file>|Określa plik .csdl lub katalogu, w którym znajdują się pliki .csdl. Tego argumentu można określić wiele razy, aby określić kilka katalogów lub .csdl plików. Określanie wielu katalogów mogą być przydatne podczas generowania klasy (`/mode:EntityClassGeneration`) lub widokach (`/mode:ViewGeneration`) podczas modelu koncepcyjnego jest podzielone między kilka plików. Może to być również przydatne, gdy chcesz zweryfikować wielu modeli (`/mode:ValidateArtifacts`).|
 |`/refcsdl:`\<file>|Określa dodatkowe .csdl pliku lub plików używany do rozpoznawania odwołań w pliku źródłowym .csdl. (Jest .csdl pliku źródłowego, pliku, określonego przez `/incsdl` opcji). `/refcsdl` Plik zawiera typy, które .csdl pliku źródłowego jest zależny od. Ten argument może być określony wiele razy.|

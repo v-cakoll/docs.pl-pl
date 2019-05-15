@@ -2,12 +2,12 @@
 title: Przykład serializacji kodu JSON ze słabą kontrolą typów
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006359"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589214"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Przykład serializacji kodu JSON ze słabą kontrolą typów
 Podczas serializacji typu zdefiniowanego przez użytkownika, do danego formatu, lub deserializację formatu do typu zdefiniowanego przez użytkownika, to danego typu zdefiniowane przez użytkownika muszą być dostępne zarówno usługi, jak i klienta. Zazwyczaj można to osiągnąć, <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do tych typów zdefiniowanych przez użytkownika i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest stosowany do ich elementów członkowskich. Ten mechanizm również stosowana, gdy praca z obiektami JavaScript Object Notation (JSON), zgodnie z opisem w temacie [jak: Serializowanie i Deserializowanie danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ Podczas serializacji typu zdefiniowanego przez użytkownika, do danego formatu, 
   
  Może to być skomplikowane, zwłaszcza w przypadku, gdy klient musi obsługiwać więcej niż jednego typu obiektu JSON.  
   
- `JsonObject` Typu zawartym w tym przykładzie przedstawiono reprezentację zdeserializowany obiekt JSON ze słabą kontrolą typów. `JsonObject` opiera się na fizyczną mapowanie między obiektami JSON i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] słowniki i mapowanie między tablice notacji JSON i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablic. Poniższy kod przedstawia `JsonObject` typu.  
+ `JsonObject` Typu zawartym w tym przykładzie przedstawiono reprezentację zdeserializowany obiekt JSON ze słabą kontrolą typów. `JsonObject` oparte na naturalnym mapowanie między obiektami JSON i słowników .NET Framework i mapowanie między tablice notacji JSON i tablice platformy .NET Framework. Poniższy kod przedstawia `JsonObject` typu.  
   
 ```  
 // Instantiation of JsonObject json omitted  

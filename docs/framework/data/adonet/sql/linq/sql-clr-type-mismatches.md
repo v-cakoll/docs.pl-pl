@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876866"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582720"
 ---
 # <a name="sql-clr-type-mismatches"></a>Niezgodność typu SQL CLR
 
@@ -39,7 +39,7 @@ Następujące typy nie mają odpowiedniki uzasadnione.
   - **TimeSpan**. Ten typ przedstawia różnicę między dwoma `DateTime` wartości i nie odpowiada żadnemu `timestamp` programu SQL Server. Środowisko CLR <xref:System.TimeSpan?displayProperty=nameWithType> może również mapować do programu SQL Server `TIME` typu w niektórych przypadkach. SQL Server `TIME` typu była przeznaczona tylko do reprezentowania wartości dodatnich mniej niż 24 godziny. Środowisko CLR <xref:System.TimeSpan> ma znacznie większy zakres.
 
   > [!NOTE]
-  > Specyficzne dla programu SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] wpisuje <xref:System.Data.SqlTypes> nie są uwzględnione w tym porównania.
+  > SQL Server i jego .NET Framework typy w <xref:System.Data.SqlTypes> nie są uwzględnione w tym porównania.
 
 - Niezgodność w programie SQL Server:
 
@@ -167,7 +167,7 @@ Operatory i funkcje, które są zasadniczo porównywalne ma semantykę różną 
 
   - Luźne tłumaczenia do `AND` / `OR` operatorów może spowodować nieoczekiwane błędy, jeśli C# wyrażenia opiera się na ocenie drugi operand jest oparty na wynik oceny pierwszy operand.
 
-- `Round()` funkcja ma semantykę różną [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] i języka T-SQL.
+- `Round()` funkcja ma semantykę różną w .NET Framework i T-SQL.
 
 - Indeks początkowy dla ciągów jest 0 w CLR, ale 1 w języku SQL. W związku z tym każda funkcja, która ma indeks musi tłumaczenia indeksu.
 
@@ -194,7 +194,7 @@ Operatory i funkcje, które są zasadniczo porównywalne ma semantykę różną 
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL wykonuje operacje arytmetyczne symetrycznego zaokrąglania podczas [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] banker używa przez zaokrąglenie. Zobacz artykuł bazy wiedzy 196652, aby uzyskać więcej informacji.
+- SQL wykonuje symetrycznego zaokrąglania arytmetyczne, a .NET Framework używa zaokrąglenie kwot. Zobacz artykuł bazy wiedzy 196652, aby uzyskać więcej informacji.
 
 - Porównywanie ciągów znaków są domyślnie dla typowych ustawień regionalnych, bez uwzględniania wielkości liter w języku SQL. W języku Visual Basic, a w C#, ich jest rozróżniana wielkość liter. Na przykład `s == "Food"` (`s = "Food"` w języku Visual Basic) i `s == "Food"` może przynieść różne wyniki, jeśli `s` jest `food`.
 

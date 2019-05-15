@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874240"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582813"
 ---
 # <a name="runtime-profiling"></a>Profilowanie środowiska uruchomieniowego
 Profilowanie jest metoda zbierania danych wydajności w każdym scenariuszu rozwoju lub wdrożenia. Ta sekcja dotyczy dla deweloperów i administratorów, którzy chcą zebrać informacje dotyczące wydajności aplikacji.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Śledzenie wydajności przy użyciu Monitora wydajności (Perfmon.exe)  
- Monitor wydajności jest najprostszym narzędzie służące do profilu usługi [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji. Monitor wydajności graficznie reprezentuje dane liczników wydajności .NET Framework, które są instalowane z środowiska uruchomieniowego języka wspólnego i [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Te liczniki można monitorować wszystko — od zarządzania pamięcią just-in-time (JIT) kompilatora wydajności. Ich poinformować użytkownika o zasoby używane przez aplikację, czyli pośrednich miary wydajności Twojej aplikacji. Zrozumienie sposobu działania aplikacji wewnętrznie, korzystać z tych liczników.  
+ Monitor wydajności jest najprostszym narzędzie służące do profilu aplikacji środowiska .NET Framework. Monitor wydajności graficznie reprezentuje dane liczników wydajności .NET Framework, które są instalowane z środowiska uruchomieniowego języka wspólnego i [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Te liczniki można monitorować wszystko — od zarządzania pamięcią just-in-time (JIT) kompilatora wydajności. Ich poinformować użytkownika o zasoby używane przez aplikację, czyli pośrednich miary wydajności Twojej aplikacji. Zrozumienie sposobu działania aplikacji wewnętrznie, korzystać z tych liczników.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Aby uruchomić Perfmon.exe w systemach Windows Vista i nowsze wersje  
   
@@ -57,7 +57,7 @@ Profilowanie jest metoda zbierania danych wydajności w każdym scenariuszu rozw
 >  W systemach, na którym [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] jest zainstalowany, Monitor wydajności mogą nie wyświetlać dane liczników wydajności w pewnych kategoriach, takich jak **.NET CLR Data** i **.NET CLR sieci**, dla aplikacje, które zostały opracowane przy użyciu [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. Jeśli jest to możliwe, można skonfigurować Monitor wydajności, aby wyświetlić te dane, dodając [ \<forceperformancecounteruniquesharedmemoryreads — >](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) elementu do pliku konfiguracji aplikacji.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Odczytywanie i programowe tworzenie liczników wydajności  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Udostępnia klasy, można użyć do programowego dostępu do tych samych informacji wydajności, który jest dostępny w konsoli Wydajność. Te klasy można również użyć do tworzenia niestandardowych liczników wydajności. W poniższej tabeli opisano niektóre z klas, które są dostarczane w monitorowania wydajności [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ .NET Framework zawiera klasy, których można użyć do programowego dostępu do tych samych informacji wydajności, który jest dostępny w konsoli Wydajność. Te klasy można również użyć do tworzenia niestandardowych liczników wydajności. W poniższej tabeli opisano niektóre z klas, które znajdują się w programie .NET Framework do monitorowania wydajności.  
   
 |Class|Opis|  
 |-----------|-----------------|  

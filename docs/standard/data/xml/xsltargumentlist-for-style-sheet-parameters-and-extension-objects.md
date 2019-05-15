@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11cf0b694d75836ad903edeafc79a55ec4612b45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615240"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586463"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
 <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera rozszerzalny język arkusza stylów dla parametrów przekształcenia (XSLT) i obiekty rozszerzeń XSLT. Przy przekazywaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenie obiekty mogą być wywoływane z arkuszy stylów.  
@@ -36,7 +36,7 @@ ms.locfileid: "64615240"
 ## <a name="xslt-style-sheet-parameters"></a>Parametry arkusza stylów XSLT  
  Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody. Kwalifikowana nazwa i identyfikator (URI nazw) są skojarzone z obiektem parametrów w tym czasie.  
   
- Obiekt parametr powinien odpowiadać typowi World Wide Web Consortium (W3C). W poniższej tabeli przedstawiono odpowiednie typy W3C odpowiednik [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] klasy (typ), oraz czy typ W3C jest typu XML Path Language (XPath) lub XSLT.  
+ Obiekt parametr powinien odpowiadać typowi World Wide Web Consortium (W3C). W poniższej tabeli przedstawiono odpowiednie typy W3C równoważnymi klasami .NET Framework (typ) i czy typ W3C jest typu XML Path Language (XPath) lub XSLT.  
   
 |Typ W3C|Odpowiednik klasy .NET Framework (typ)|Wyrażenie XPath typu lub XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  

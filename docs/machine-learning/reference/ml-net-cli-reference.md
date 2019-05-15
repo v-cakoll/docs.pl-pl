@@ -3,26 +3,26 @@ title: Polecenie train automatycznie za pomocą narzędzia interfejsu wiersza po
 description: Omówienie, przykłady i dokumentacja dotycząca poleceń train automatycznie za pomocą narzędzia interfejsu wiersza polecenia w strukturze ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: cfd2fac48c71ab7147a81292f3b970c2a0e09c02
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066242"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557945"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Polecenie "auto-train" w interfejsie wiersza polecenia w strukturze ML.NET
 
 > [!NOTE]
-> W tym temacie odnosi się do interfejsu wiersza polecenia w strukturze ML.NET i strukturze ML.NET AutoML, które są obecnie dostępne w wersji zapoznawczej, a materiał może ulec zmianie. 
+> W tym temacie odnosi się do interfejsu wiersza polecenia w strukturze ML.NET i strukturze ML.NET AutoML, które są obecnie dostępne w wersji zapoznawczej, a materiał może ulec zmianie.
 
-`auto-train` Polecenie jest polecenie główne udostępniane przez narzędzie interfejsu wiersza polecenia w strukturze ML.NET. Polecenie umożliwia generowanie modelu strukturze ML.NET dobrej jakości (pliku zip Zserializowany model) oraz w przykładzie C# kodu w celu uruchomienia/wynik tego modelu. Ponadto C# kod, aby utworzyć/szkolenie modelu zostanie również wygenerowany się dowiedzieć, jakie algorytmu i korzysta z tego ustawienia wygenerowany "najlepiej modelu". 
+`auto-train` Polecenie jest polecenie główne udostępniane przez narzędzie interfejsu wiersza polecenia w strukturze ML.NET. Polecenie umożliwia generowanie modelu strukturze ML.NET dobrej jakości (pliku zip Zserializowany model) oraz w przykładzie C# kodu w celu uruchomienia/wynik tego modelu. Ponadto C# kod, aby utworzyć/szkolenie modelu zostanie również wygenerowany się dowiedzieć, jakie algorytmu i korzysta z tego ustawienia wygenerowany "najlepiej modelu".
 
 Te zasoby można wygenerować z własne zestawy danych, bez kodowania przez siebie, więc również zwiększa wydajność pracy nawet wtedy, gdy znasz już strukturze ML.NET.
 
 Obecnie są obsługiwane przez interfejs wiersza polecenia strukturze ML.NET zadania uczenia Maszynowego:
 
 - `binary-classification`
-- `multiclass-classification` 
+- `multiclass-classification`
 - `regression`
 
 - Przyszłość: Inne usługi machine learning zadania, takie jak
@@ -38,7 +38,7 @@ Przykład użycia w wierszu polecenia:
 
 `mlnet auto-train` Polecenie generuje następujące zasoby:
 
-- Zserializowany model plik zip ("najlepszy model") gotowych do użycia. 
+- Zserializowany model plik zip ("najlepszy model") gotowych do użycia.
 - C#kod w celu uruchomienia/wynik, który jest generowany modelu (w celu prognozowania w aplikacji użytkownika końcowego za pomocą modelu).
 - C#kod z kodem szkolenia, używany do generowania modelu (Learning celów).
 
@@ -67,13 +67,13 @@ Najprostsza interfejsu wiersza polecenia dla problemu klasyfikacji binarnej (Aut
 Inny prosty polecenia interfejsu wiersza polecenia dla problem regresji:
 
 ``` console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price 
+> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
 ```
 
 Utwórz i wytrenuj model klasyfikacji danych binarnych z train zestawu danych, zestawy danych testowych i dalsze dostosowanie jawnych argumentów:
 
-```console 
-> mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600 
+```console
+> mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
 ```
 
 ## <a name="name"></a>Nazwa
@@ -83,7 +83,7 @@ Utwórz i wytrenuj model klasyfikacji danych binarnych z train zestawu danych, z
 ## <a name="synopsis"></a>Streszczenie
 
 ```console
-> mlnet auto-train 
+> mlnet auto-train
 
 --task | --mltask | -T <value>
 
@@ -122,21 +122,21 @@ Nieprawidłowe opcje danych wejściowych powinna spowodować, że narzędzie int
 
  ----------------------------------------------------------
 
-`--task | --mltask | -T` (string) 
+`--task | --mltask | -T` (string)
 
-Pojedynczy ciąg dostarczający problemu uczenia Maszynowego do rozwiązania. Na przykład dowolny z następujących czynności (interfejs wiersza polecenia po pewnym czasie będzie obsługiwać wszystkie zadania obsługiwane w AutoML): 
+Pojedynczy ciąg dostarczający problemu uczenia Maszynowego do rozwiązania. Na przykład dowolny z następujących czynności (interfejs wiersza polecenia po pewnym czasie będzie obsługiwać wszystkie zadania obsługiwane w AutoML):
 
 - `regression` — Wybierz, jeśli Model usługi uczenie Maszynowe będzie służyć do przewidywania wartości liczbowej
 - `binary-classification` — Wybierz, czy wynik modelu usługi uczenie Maszynowe ma dwa możliwe podzielonych na kategorie wartości logiczne (0 lub 1).
 - `multiclass-classification` — Wybierz, czy wynik modelu usługi uczenie Maszynowe ma wiele możliwych wartości podzielonych na kategorie.
 
-W przyszłości zwalnia takich jak na dodatkowe zadania uczenia Maszynowego i scenariuszy `recommendations`, `clustering` i `ranking` będą obsługiwane. 
+W przyszłości zwalnia takich jak na dodatkowe zadania uczenia Maszynowego i scenariuszy `recommendations`, `clustering` i `ranking` będą obsługiwane.
 
  Tylko jeden ML zadań należy podać ten argument.
 
  ----------------------------------------------------------
 
-`--dataset | -d` (string) 
+`--dataset | -d` (string)
 
 Ten argument zawiera ścieżkę pliku do jednego z następujących opcji:
 
@@ -146,17 +146,17 @@ Ten argument zawiera ścieżkę pliku do jednego z następujących opcji:
 
 ----------------------------------------------------------
 
-`--test-dataset | -t` (string) 
+`--test-dataset | -t` (string)
 
 Ścieżka do pliku, który wskazuje plik zestawu danych testowych, na przykład korzystając z podejścia 80 – 20% podczas wprowadzania ocen regularnym uzyskać metryki dokładności.
 
-Jeśli przy użyciu `--test-dataset`, następnie `--dataset` jest również wymagany. 
+Jeśli przy użyciu `--test-dataset`, następnie `--dataset` jest również wymagany.
 
 `--test-dataset` Argument jest opcjonalny Jeśli użycia zestawu danych walidacji. W takim przypadku użytkownik musi użyć trzy argumenty.
 
 ----------------------------------------------------------
 
-`--validation-dataset | -v` (string) 
+`--validation-dataset | -v` (string)
 
 Ścieżka do pliku, który wskazuje plik zestawu danych walidacji. Sprawdzanie poprawności zestawu danych jest opcjonalna, w każdym przypadku.
 
@@ -164,7 +164,7 @@ Jeśli przy użyciu `validation dataset`, działanie powinno być:
 
 - `test-dataset` i `--dataset` wymagane są również argumentów.
 
-- `validation-dataset` Zestawu danych jest używany do oszacowania błędów prognoz dla modelu zaznaczenia. 
+- `validation-dataset` Zestawu danych jest używany do oszacowania błędów prognoz dla modelu zaznaczenia.
 
 - `test-dataset` Jest używana do oceny błąd Generalizacja końcowa wybranego modelu. W idealnym przypadku zestawu testowego powinny być przechowywane w "Magazyn" i można przełączyć tylko na końcu analizy danych.
 
@@ -172,7 +172,7 @@ Zasadniczo korzystając z `validation dataset` plus `test dataset`, fazę weryfi
 
 1. W pierwszej części właśnie Przyjrzyj się do modeli i wybierz opcję najlepiej podejście przy użyciu danych sprawdzania poprawności (= weryfikacji)
 2. Następnie można oszacować dokładność wybranej metody (= test).
-    
+
 Dzięki temu oddzielenie danych może być 80/10/10 lub 75/15/10. Na przykład:
 
 - `training-dataset` Plik powinien zawierać 75% danych.
@@ -183,15 +183,15 @@ W każdym przypadku użytkownika przy użyciu interfejsu wiersza polecenia, któ
 
 ----------------------------------------------------------
 
-`--label-column-name | -n` (string) 
+`--label-column-name | -n` (string)
 
-Dzięki temu argumentowi kolumny określony cel/element docelowy (zmiennej, którą chcesz przewidzieć) można określić przy użyciu nazwy kolumny w nagłówku typizowanego zestawu danych. 
+Dzięki temu argumentowi kolumny określony cel/element docelowy (zmiennej, którą chcesz przewidzieć) można określić przy użyciu nazwy kolumny w nagłówku typizowanego zestawu danych.
 
 Ten argument jest używany tylko do nadzorowanego uczenia Maszynowego wykonywania zadań, takich jak *problemu klasyfikacji*. Nie można używać dla nienadzorowanych ML zadań takich jak *klastrowania*.
 
 ----------------------------------------------------------
 
-`--label-column-index | -i` (int) 
+`--label-column-index | -i` (int)
 
 Dzięki temu argumentowi kolumny określony cel/element docelowy (zmiennej, którą chcesz przewidzieć) można określić przy użyciu indeksu liczbowego kolumny w pliku zestawu danych (indeks wartości w kolumnach są liczone od 1).
 
@@ -201,7 +201,7 @@ Ten argument jest używany tylko w przypadku nadzorowanych zadania uczenia Maszy
 
 ----------------------------------------------------------
 
-`--ignore-columns | -I` (string)  
+`--ignore-columns | -I` (string)
 
 Dzięki temu argumentowi można zignorować istniejących kolumn w pliku zestawu danych, więc nie są ładowane i wykorzystywane przez procesy szkolenia.
 
@@ -213,20 +213,20 @@ Przykład:
 
 ----------------------------------------------------------
 
-`--has-header | -h` (wartość logiczna) 
+`--has-header | -h` (wartość logiczna)
 
 Określ, jeśli pliki zestawu danych ma wiersz nagłówka.
-Możliwe wartości to: 
+Możliwe wartości to:
 - `true`
 - `false`
 
-Domyślna wartość to `true` Jeśli ten argument nie zostanie określony przez użytkownika. 
+Domyślna wartość to `true` Jeśli ten argument nie zostanie określony przez użytkownika.
 
 Aby można było używać `--label-column-name` argument, musisz mieć nagłówka w pliku zestawu danych i `--has-header` równa `true` (która jest domyślnie).
 
 ----------------------------------------------------------
 
-`--max-exploration-time | -x` (string) 
+`--max-exploration-time | -x` (string)
 
 Domyślnie podczas eksploracji maksymalna wynosi 10 sekund.
 
@@ -236,7 +236,7 @@ Potrzebny czas dla iteracji, może się różnić w zależności od rozmiaru zes
 
 ----------------------------------------------------------
 
-`--cache | -c` (string) 
+`--cache | -c` (string)
 
 Korzystając z buforowania, szkolenie całego zestawu danych będzie załadowanych w pamięci.
 
@@ -246,7 +246,7 @@ Jednak dla dużych zestawów danych, podczas ładowania wszystkie dane w pamięc
 
 Można określić następujące wartości:
 
-`on`: Pamięć podręczna wymusza, który będzie używany podczas szkolenia. 
+`on`: Pamięć podręczna wymusza, który będzie używany podczas szkolenia.
 `off`: Pamięć podręczna wymusza nie powinien być używany podczas szkolenia.
 `auto`: W zależności od heurystyki AutoML pamięci podręcznej będą używane, lub nie. Zwykle małe i średnie zestawów danych będzie korzystać z pamięci podręcznej i dużych zestawów danych nie używać pamięci podręcznej, jeśli używasz `auto` wybór.
 
@@ -254,27 +254,27 @@ Jeśli nie określisz `--cache` parametru, a następnie pamięci podręcznej `au
 
 ----------------------------------------------------------
 
-`--name | -N` (string) 
+`--name | -N` (string)
 
-Nazwa wyjściowego utworzony projekt lub rozwiązanie. Jeśli nie określono nazwy, nazwa `sample-{mltask}` jest używany. 
+Nazwa wyjściowego utworzony projekt lub rozwiązanie. Jeśli nie określono nazwy, nazwa `sample-{mltask}` jest używany.
 
 Plik modelu strukturze ML.NET (. Plik ZIP) otrzyma taką samą nazwę, jak również.
 
 ----------------------------------------------------------
 
-`--output-path | -o` (string) 
+`--output-path | -o` (string)
 
 Lokalizacja/folder główny do umieszczenia wygenerowanych danych wyjściowych. Ustawieniem domyślnym jest bieżący katalog.
 
 ----------------------------------------------------------
 
-`--verbosity | -V` (string) 
+`--verbosity | -V` (string)
 
-Ustawia poziom szczegółowości wyjścia standardowego. 
+Ustawia poziom szczegółowości wyjścia standardowego.
 
 Dozwolone wartości to:
 
-- `q[uiet]` 
+- `q[uiet]`
 - `m[inimal]`  (domyślnie)
 - `diag[nostic]` (poziom rejestrowania informacji)
 
@@ -282,9 +282,9 @@ Domyślnie narzędzie interfejsu wiersza polecenia powinny pokazywać niektóre 
 
 ----------------------------------------------------------
 
-`-h|--help` 
+`-h|--help`
 
-Drukuje pomoc dotyczącą polecenia opis parametru każdego polecenia. 
+Drukuje pomoc dotyczącą polecenia opis parametru każdego polecenia.
 
 ----------------------------------------------------------
 

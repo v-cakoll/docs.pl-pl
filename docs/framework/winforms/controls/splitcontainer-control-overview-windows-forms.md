@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dcdbde480c1900ea488c6db3cc320b20f9f182
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971993"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591484"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.SplitContainer> kontrolki mogą być uważane za złożonego, a dwa panele rozdzielone ruchome paska. Gdy wskaźnik myszy znajduje się nad paskiem, kursor zmienia kształt, aby pokazać, że pasek jest ruchomy.  
   
 > [!IMPORTANT]
->  W **przybornika**, <xref:System.Windows.Forms.SplitContainer> kontrolować zastępuje <xref:System.Windows.Forms.Splitter> formant, który był w poprzedniej wersji programu Visual Studio. <xref:System.Windows.Forms.SplitContainer> Formant jest znacznie preferowany nad <xref:System.Windows.Forms.Splitter> kontroli. <xref:System.Windows.Forms.Splitter> Klasy nadal znajduje się w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] potrzeby utrzymywania zgodności z istniejącymi aplikacjami, ale zdecydowanie zachęcamy do użycia <xref:System.Windows.Forms.SplitContainer> kontroli dla nowych projektów.  
+>  W **przybornika**, <xref:System.Windows.Forms.SplitContainer> kontrolować zastępuje <xref:System.Windows.Forms.Splitter> formant, który był w poprzedniej wersji programu Visual Studio. <xref:System.Windows.Forms.SplitContainer> Formant jest znacznie preferowany nad <xref:System.Windows.Forms.Splitter> kontroli. <xref:System.Windows.Forms.Splitter> Klasy nadal znajduje się w .NET Framework w celu zachowania zgodności z istniejącymi aplikacjami, ale zdecydowanie zachęcamy do użycia <xref:System.Windows.Forms.SplitContainer> kontroli dla nowych projektów.  
   
  Za pomocą <xref:System.Windows.Forms.SplitContainer> formantu, mogą tworzyć interfejsy użytkownika złożonych; często wybór w jeden panel Określa, jakie obiekty są wyświetlane w innych panelu. Taki układ jest bardzo skuteczny sposób na wyświetlanie i informacji o przeglądaniu. Istnienie dwa panele pozwala agregować informacje zawarte w obszarach i słupka lub "podziału," ułatwia użytkownikom zmieniać rozmiar paneli.  
   

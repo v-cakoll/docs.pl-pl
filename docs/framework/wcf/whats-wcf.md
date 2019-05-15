@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e51b93d53e1ad65b2f19f81de8833e83bfb18c1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613033"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582762"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 Windows Communication Foundation (WCF) to architektura służąca do budowania aplikacji usługowych. Przy użyciu usługi WCF, możesz wysłać danych jako asynchroniczną komunikaty z punktu końcowego z jednej usługi do innego. Punkt końcowy usługi może być częścią stale dostępnych usług hostowanych przez usługi IIS lub może być usługą hostowaną w aplikacji. Punkt końcowy może być klientem usługi, która żąda danych z punktu końcowego usługi. Komunikaty można tak proste, jak pojedynczy znak lub słowo wysłana w formacie XML, lub tak złożonego jako strumień danych binarnych. Kilka przykładowe scenariusze obejmują:
@@ -52,7 +52,7 @@ Usługi WCF zawiera następujący zestaw funkcji. Aby uzyskać więcej informacj
 
 - **Kontrakty danych**
 
-     Ponieważ WCF został skompilowany przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], obejmuje także przyjaznego dla kodu metody podawania kontrakty, które chcesz zastosować. Jeden z typów universal zamówień jest kontraktu danych. W zasadzie zgodnie z kodem usługi za pomocą programu Visual C# lub Visual Basic, najprostszym sposobem obsługi danych jest utworzenie klas, które reprezentują jednostki danych z właściwościami, które należą do jednostki danych. Usługi WCF zawiera kompleksowe system do pracy z danymi w ten sposób łatwe. Po utworzeniu klasy reprezentujące danych usługa automatycznie generuje metadanych, które umożliwia klientom są zgodne z typami danych, które zostały tak zaprojektowane. Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+     Ponieważ WCF został opracowany przy użyciu programu .NET Framework, także przyjaznego dla kodu metody dostarczania zamówień, które mają być wymuszane. Jeden z typów universal zamówień jest kontraktu danych. W zasadzie zgodnie z kodem usługi za pomocą programu Visual C# lub Visual Basic, najprostszym sposobem obsługi danych jest utworzenie klas, które reprezentują jednostki danych z właściwościami, które należą do jednostki danych. Usługi WCF zawiera kompleksowe system do pracy z danymi w ten sposób łatwe. Po utworzeniu klasy reprezentujące danych usługa automatycznie generuje metadanych, które umożliwia klientom są zgodne z typami danych, które zostały tak zaprojektowane. Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 
 - **Zabezpieczenia**
 

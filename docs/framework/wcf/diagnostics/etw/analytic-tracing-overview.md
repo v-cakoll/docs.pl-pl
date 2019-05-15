@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8241485d75932cd0b8be85d231897b0bc199f0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048746"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592115"
 ---
 # <a name="analytic-tracing-overview"></a>Omówienie śledzenia analitycznego
 Śledzenie danych analitycznych w [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] o wysokiej wydajności i funkcję śledzenia niski poziom szczegółowości, ustaw na podstawie śledzenie zdarzeń dla Windows (ETW). ETW działa na poziomie jądra można znacznie zmniejszyć koszty operacji śledzenia. Efektywnie je buforuje zdarzenia trybu jądra i użytkownika i umożliwia dynamiczne Włączanie rejestrowania bez konieczności ponownego uruchomienia usługi. Dane śledzenia są dostępne, w przypadku dzienników po nim został wyemitowany i odebranych.  
@@ -47,4 +47,4 @@ ms.locfileid: "62048746"
  Aby uzyskać więcej informacji o sposobie włączania śledzenia przepływu komunikatów, zobacz [Konfigurowanie śledzenia przepływu komunikatów](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>słowa kluczowe  
- Słowa kluczowe są używane do filtrowania komunikatów śledzenia i określić które składnik [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitowane zdarzenia. Aby uzyskać więcej informacji, zobacz [dynamiczne Włączanie analizy śledzenia](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Słowa kluczowe są używane do filtrowania komunikatów śledzenia i określić, który składnik .NET Framework emitowane zdarzenia. Aby uzyskać więcej informacji, zobacz [dynamiczne Włączanie analizy śledzenia](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

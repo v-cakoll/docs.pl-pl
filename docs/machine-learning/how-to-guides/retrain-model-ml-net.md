@@ -1,18 +1,18 @@
 ---
-title: Ponowne szkolenie modelu
+title: Ponowne trenowanie modelu
 description: Dowiedz się, jak ponowne szkolenie modelu w strukturze ML.NET
 ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 552698c02a7846db588822fa68d094dece160ea0
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2f8f8c035166612aabede8a512485bdf296c5655
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063568"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557919"
 ---
-# <a name="re-train-a-model"></a>Ponowne szkolenie modelu
+# <a name="re-train-a-model"></a>Ponowne trenowanie modelu
 
 Dowiedz się, jak doskonalenie model w strukturze ML.NET uczenia maszynowego.
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>Wyodrębnianie parametrów wstępnie uczonego modelu
 
-Po załadowaniu modelu wyodrębnić parametry nauczony model, uzyskując dostęp do [ `Model` ](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) właściwość wstępnie trenowanego modelu. Wstępnie przeszkolonych model został uczony przy użyciu modelu regresji liniowej [ `OnlineGradientDescentTrainer` ](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) tworzy[ `RegressionPredictionTransformer` ](xref:Microsoft.ML.Data.RegressionPredictionTransformer`1) , generuje [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Te parametry modelu regresji liniowej zawierają nauczony odchylenie i wagi lub współczynników w modelu. Te wartości będzie służyć jako punkt początkowy dla nowych ponownie trenowanego modelu.
+Po załadowaniu modelu wyodrębnić parametry nauczony model, uzyskując dostęp do [ `Model` ](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) właściwość wstępnie trenowanego modelu. Wstępnie przeszkolonych model został uczony przy użyciu modelu regresji liniowej [ `OnlineGradientDescentTrainer` ](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) tworzy[ `RegressionPredictionTransformer` ](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) , generuje [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Te parametry modelu regresji liniowej zawierają nauczony odchylenie i wagi lub współczynników w modelu. Te wartości będzie służyć jako punkt początkowy dla nowych ponownie trenowanego modelu.
 
 ```csharp
 // Extract trained model parameters

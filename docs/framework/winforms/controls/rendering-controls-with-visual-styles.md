@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614659"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592609"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderowanie formantów przy użyciu stylów wizualnych
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zapewnia obsługę renderowania kontrolek i innych użytkowników Windows elementów interfejsu (UI), przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują. W tym temacie omówiono kilka poziomów pomocy technicznej w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla formantów renderowania i inne elementy interfejsu użytkownika przy użyciu bieżącego stylu wizualnego systemu operacyjnego.  
+.NET Framework zapewnia obsługę renderowania kontrolek i innych użytkowników Windows elementów interfejsu (UI), przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują. W tym temacie omówiono kilka poziomów pomocy technicznej w programie .NET Framework dla formantów renderowania i inne elementy interfejsu użytkownika przy użyciu bieżącego stylu wizualnego systemu operacyjnego.  
   
 ## <a name="rendering-classes-for-common-controls"></a>Klasy renderowania dla formantów standardowych  
  Renderowanie formantu odwołuje się do rysowania kontrolki interfejsu użytkownika. <xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeń nazw zawiera <xref:System.Windows.Forms.ControlPaint> kontrolek formularzy Windows klasy renderowania niektórych typowych. Jednak ta klasa rysuje kontrolek w stylu klasycznym Windows, który może utrudnić Utrzymaj spójne środowisko interfejsu użytkownika po włączeniu rysowania formantów niestandardowych w aplikacjach przy użyciu stylów wizualnych.  
@@ -61,7 +61,7 @@ ms.locfileid: "64614659"
  Aby uzyskać więcej informacji o korzystaniu z <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> i <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, zobacz [jak: Renderowanie elementu stylu wizualnego](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Włączanie stylów wizualnych  
- Aby włączyć style wizualne dla aplikacji napisanych dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.0, programiści mogą zawierać manifest aplikacji, która określa, że ComCtl32.dll w wersji 6 lub nowszym będzie służyć do rysowania formantów. Aplikacje utworzone przy użyciu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.1 lub nowszej można użyć <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> metody <xref:System.Windows.Forms.Application> klasy.  
+ Aby włączyć style wizualne dla aplikacji napisanych dla platformy .NET Framework w wersji 1.0, programiści mogą zawierać manifest aplikacji, która określa, że ComCtl32.dll w wersji 6 lub nowszym będzie służyć do rysowania formantów. Można użyć aplikacji utworzonych za pomocą programu .NET Framework w wersji 1.1 lub nowszej <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> metody <xref:System.Windows.Forms.Application> klasy.  
   
 ## <a name="checking-for-visual-styles-support"></a>Sprawdzanie, obsługę stylów wizualnych  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> Właściwość <xref:System.Windows.Forms.Application> klasa wskazuje, czy bieżącej aplikacji rysowania formantów przy użyciu stylów wizualnych. Malowanie kontrolki niestandardowej, można sprawdzić wartość <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> do określenia, czy ma być renderowany kontrolki z lub bez stylów wizualnych. W poniższej tabeli przedstawiono cztery warunki, które musi istnieć przez <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> do zwrócenia `true`.  

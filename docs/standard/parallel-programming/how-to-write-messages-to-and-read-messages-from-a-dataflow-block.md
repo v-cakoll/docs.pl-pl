@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 638cd917bdb40fa5bbf1cb02857c71a0127d0e3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 564f5f880f32dbab1387d03f30082e1972c3f353
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769170"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591972"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Instrukcje: Zapisywanie komunikatów w bloku przepływu danych i odczytywanie ich z tego bloku
 W tym dokumencie opisano, jak przy użyciu biblioteki przepływu danych TPL pisanie i odbieranie wiadomości w bloku przepływu danych. Biblioteka przepływu danych TPL zapewnia synchroniczne i asynchroniczne metody zapisywania wiadomości i odczytywać wiadomości w bloku przepływu danych. Ten dokument używa <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> klasy. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Klasy buforuje wiadomości i działa jako źródła komunikatów i jako obiektu docelowego komunikatu.  
@@ -50,17 +50,6 @@ W tym dokumencie opisano, jak przy użyciu biblioteki przepływu danych TPL pisa
   
  [!code-csharp[TPLDataflow_ReadWrite#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#1)]
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowReadWrite.cs` (`DataflowReadWrite.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w wierszu polecenia dla deweloperów programu Visual Studio okna.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   
 ## <a name="next-steps"></a>Następne kroki  
  Ten przykład pokazuje, jak odczytywanie i zapisywanie do bloku wiadomości bezpośrednio. Bloków przepływu danych można też połączyć do formularza *potoki*, służą do liniowej sekwencje bloków przepływu danych lub *sieci*, które są wykresy bloków przepływu danych. W potoku lub w sieci źródeł asynchronicznie propagowanie danych do celów danych staje się dostępna. Na przykład, który tworzy potok podstawowe przepływu danych, zobacz [instruktażu: Tworzenie potoku przepływu danych](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Aby uzyskać przykład tworzenia bardziej złożonych sieci przepływu danych, zobacz [instruktażu: Korzystanie z przepływu danych w Windows Forms aplikacji](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  

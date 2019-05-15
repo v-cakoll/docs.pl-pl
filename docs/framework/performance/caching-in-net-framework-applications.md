@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: c761a4a866aed3f8d42b28cdc8a360cd4923a7fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616669"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586192"
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.  
@@ -19,7 +19,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
  .NET Framework oferuje funkcje pamięci podręcznej, które można użyć w celu poprawy wydajności i skalowalności zarówno Windows klienta i serwera aplikacji, w tym ASP.NET.  
   
 > [!NOTE]
->  W [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] i wcześniejszych wersjach programu ASP.NET implementacji w pamięci podręcznej w <xref:System.Web.Caching> przestrzeni nazw. W poprzednich wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], pamięć podręczna była dostępna tylko w <xref:System.Web> przestrzeni nazw i dlatego wymagane zależności klas programu ASP.NET. W programie .NET Framework 4 <xref:System.Runtime.Caching> przestrzeń nazw zawiera interfejsy API, które są przeznaczone dla sieci Web, jak i innych aplikacji.  
+>  W [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] i wcześniejszych wersjach programu ASP.NET implementacji w pamięci podręcznej w <xref:System.Web.Caching> przestrzeni nazw. W poprzednich wersjach programu .NET Framework, pamięć podręczna była dostępna tylko w <xref:System.Web> przestrzeni nazw i dlatego wymagane zależności klas programu ASP.NET. W programie .NET Framework 4 <xref:System.Runtime.Caching> przestrzeń nazw zawiera interfejsy API, które są przeznaczone dla sieci Web, jak i innych aplikacji.  
   
 ## <a name="caching-data"></a>Buforowanie danych  
  Pamięci podręcznej informacje przy użyciu klas w <xref:System.Runtime.Caching> przestrzeni nazw. Buforowanie klasy w tej przestrzeni nazw zapewniają następujące funkcje:  

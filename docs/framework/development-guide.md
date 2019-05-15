@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644164"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583536"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework — podręcznik programowania
 W tej sekcji wyjaśniono, jak do tworzenia, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji .NET Framework. Sekcja zawiera również informacje odnośnie do zagadnień technologicznych takich jak dynamiczne programowania, interoperacyjności, rozszerzalności, zarządzanie pamięcią i wątków.  
@@ -67,7 +67,7 @@ W tej sekcji wyjaśniono, jak do tworzenia, konfigurowanie, debugowanie, zabezpi
  
 ## <a name="reference"></a>Tematy pomocy  
  [Biblioteka klas programu .NET framework](/dotnet/api/?view=netframework-4.7)  
- Dostarcza składnię, przykłady kodu i informacje użycia dla każdej klasy, która jest zawarta w [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] przestrzeni nazw.  
+ Dostarcza składnię, przykłady kodu i informacje użycia dla każdej klasy, która jest zawarta w przestrzeni nazw .NET Framework.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Wprowadzenie](../../docs/framework/get-started/index.md)  

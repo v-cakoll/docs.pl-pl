@@ -2,12 +2,12 @@
 title: LINQ i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79d6c52656e545c07260f3a97b089c238a74db3c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878748"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583483"
 ---
 # <a name="linq-and-adonet"></a>LINQ i ADO.NET
 Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstw logiki i prezentacji firm (np. Visual C# lub Visual Basic) i język zapytań do interakcji z bazą danych (takich jak [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). To wymaga programista ma być biegły w kilku językach zaczęła obowiązywać, a także powoduje niezgodności języka w środowisku programistycznym. Na przykład aplikację, która używa danych dostęp do interfejsu API do wykonania zapytania względem bazy danych określa zapytanie jako literał ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzane pod kątem błędów, takich jak nieprawidłową składnię lub tego, czy kolumny lub wiersze, które odwołuje się faktycznie istnieje. Istnieje żaden typ weryfikacji parametry zapytania i nie `IntelliSense` obsługuje albo.  
@@ -30,7 +30,7 @@ Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co 
  <xref:System.Data.DataSet> Jest kluczowym elementem programowania odłączonego modelu [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] jest oparta na i jest powszechnie używana. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Umożliwia deweloperom tworzenie bogatszych możliwości kwerend <xref:System.Data.DataSet> przy użyciu tego samego zapytania formułowanie mechanizm który jest dostępny dla innych źródeł danych. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ do SQL  
- [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] jest przydatne narzędzie dla deweloperów, którzy nie wymagają mapowania do modelu koncepcyjnego. Za pomocą [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], możesz użyć [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] model programowania bezpośrednio przez istniejący schemat bazy danych. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] Umożliwia deweloperom Generowanie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] klasy reprezentujące dane. Zamiast mapowania do modelu koncepcyjnego danych, te wygenerowane klasy mapy bezpośrednio do tabel bazy danych, widoki, procedury składowane i funkcje zdefiniowane przez użytkownika.  
+ [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] jest przydatne narzędzie dla deweloperów, którzy nie wymagają mapowania do modelu koncepcyjnego. Za pomocą [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], możesz użyć [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] model programowania bezpośrednio przez istniejący schemat bazy danych. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] Umożliwia deweloperom Generowanie klas .NET Framework, które reprezentują dane. Zamiast mapowania do modelu koncepcyjnego danych, te wygenerowane klasy mapy bezpośrednio do tabel bazy danych, widoki, procedury składowane i funkcje zdefiniowane przez użytkownika.  
   
  Za pomocą [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], programiści mogą pisać kod bezpośrednio w odniesieniu do schematu magazynu, korzystając z tych samych [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] programowania wzorca jako kolekcji w pamięci i <xref:System.Data.DataSet>, oprócz innych źródeł danych, takich jak XML. Aby uzyskać więcej informacji, zobacz [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
   

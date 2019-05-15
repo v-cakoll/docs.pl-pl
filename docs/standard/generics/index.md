@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622811"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592249"
 ---
 # <a name="generics-in-net"></a>Typy ogólne w .NET
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622811"
   
  Poniżej przedstawiono niektóre ograniczenia typów ogólnych:  
   
-- Typy rodzajowe mogą pochodzić z większości klas podstawowych, takich jak <xref:System.MarshalByRefObject> (i ograniczenia może służyć do wymagają, że parametry typu ogólnego pochodzić od klasy bazowej, takie jak <xref:System.MarshalByRefObject>). Jednak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] nie obsługuje typów ogólnych związane z kontekstem. Typ ogólny, mogą pochodzić z <xref:System.ContextBoundObject>, ale próba utworzenia instancji tego typu powoduje, że <xref:System.TypeLoadException>.  
+- Typy rodzajowe mogą pochodzić z większości klas podstawowych, takich jak <xref:System.MarshalByRefObject> (i ograniczenia może służyć do wymagają, że parametry typu ogólnego pochodzić od klasy bazowej, takie jak <xref:System.MarshalByRefObject>). Jednak .NET Framework nie obsługuje typów ogólnych związane z kontekstem. Typ ogólny, mogą pochodzić z <xref:System.ContextBoundObject>, ale próba utworzenia instancji tego typu powoduje, że <xref:System.TypeLoadException>.  
   
 - Wyliczenia nie może mieć parametrów typu genetycznego. Wyliczenie może być ogólny tylko przy okazji (ponieważ na przykład, że zostało zagnieżdżone w typie ogólnym, która jest zdefiniowana za pomocą języka Visual Basic, C# lub C++). Aby uzyskać więcej informacji, zobacz "Wyliczenia" w [Wspólny System typów](../../../docs/standard/base-types/common-type-system.md).  
   

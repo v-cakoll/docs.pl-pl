@@ -1,5 +1,5 @@
 ---
-title: 'Nie można osadzić pliku zasobów „<filename>": <error message>'
+title: "Nie można osadzić pliku zasobów „<filename>': <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30143
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61792083"
 ---
-# <a name="unable-to-embed-resource-file-filename-error-message"></a>Można osadzić pliku zasobów "\<nazwa pliku >": \<komunikat o błędzie >
+# <a name="unable-to-embed-resource-file-filename-error-message"></a>Można osadzić pliku zasobów '\<nazwa pliku >': \<komunikat o błędzie >
 Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd osadzanie natywnego modelu COM + plik zasobów bezpośrednio w zestawie.  
   
  **Identyfikator błędu:** BC30143  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647717"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593452"
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
 <a name="introduction"></a> Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
@@ -56,7 +56,7 @@ ms.locfileid: "64647717"
   
 <a name="compiling_msil_to_native_code"></a>   
 ## <a name="compiling-msil-to-native-code"></a>Kompilowanie MSIL do kodu natywnego  
- Przed uruchomieniem języka Microsoft intermediate language (MSIL), muszą być skompilowane dla środowiska uruchomieniowego języka wspólnego do kodu natywnego dla architektura komputera docelowego. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Udostępnia wykonaj tę konwersję na dwa sposoby:  
+ Przed uruchomieniem języka Microsoft intermediate language (MSIL), muszą być skompilowane dla środowiska uruchomieniowego języka wspólnego do kodu natywnego dla architektura komputera docelowego. Program .NET Framework oferuje wykonaj tę konwersję na dwa sposoby:  
   
 - Kompilator just-in-time (JIT) .NET Framework.  
   

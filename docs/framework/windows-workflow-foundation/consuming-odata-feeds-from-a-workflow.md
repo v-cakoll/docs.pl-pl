@@ -2,16 +2,16 @@
 title: Korzystanie z protokołu OData źródeł z przepływu pracy — WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946068"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592980"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Zużyć OData, źródła danych z przepływu pracy
 
-Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] umożliwiająca tworzenie usług, które używają Open Data Protocol (OData) do prezentowania i wykorzystywania danych w Internecie lub intranecie przy użyciu semantyki (REST) representational state transfer. OData przedstawia dane w postaci zasobów, które są adresowane przez identyfikatory URI. Każda aplikacja może współdziałać z usługi OData na podstawie danych można wysyłać żądania HTTP i przetwarzania strumieniowego źródła danych OData zwracanych usługi danych. Ponadto WCF Data Services zawiera biblioteki klienckie, które oferują więcej możliwości programowania, jeśli korzystasz ze źródłami danych OData z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji. Ten temat zawiera omówienie zużyć OData, źródła danych w przepływie pracy z lub bez korzystania z bibliotek klienckich.
+Usługi danych WCF jest składnikiem programu .NET Framework, która umożliwia tworzenie usług, które używają Open Data Protocol (OData) do prezentowania i wykorzystywania danych w Internecie lub intranecie przy użyciu semantyki (REST) representational state transfer. OData przedstawia dane w postaci zasobów, które są adresowane przez identyfikatory URI. Każda aplikacja może współdziałać z usługi OData na podstawie danych można wysyłać żądania HTTP i przetwarzania strumieniowego źródła danych OData zwracanych usługi danych. Ponadto WCF Data Services zawiera biblioteki klienckie, które oferują więcej możliwości programowania, jeśli korzystasz ze źródłami danych OData w aplikacjach .NET Framework. Ten temat zawiera omówienie zużyć OData, źródła danych w przepływie pracy z lub bez korzystania z bibliotek klienckich.
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Za pomocą przykładowej usługi Northwind OData
 
@@ -19,7 +19,7 @@ Przykłady w tym temacie Użyj przykładu Northwind usługi danych znajdującym 
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Korzystanie ze źródłem danych OData źródłem danych za pomocą biblioteki klienta
 
-WCF Data Services zawiera biblioteki klienckie, które umożliwiają używanie źródła danych z OData [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] i aplikacje klienckie. Te biblioteki upraszczają wysyłanie i odbieranie komunikatów HTTP. Mogą również wykonuje translację elementu ładunek komunikatu do obiektów CLR, które reprezentują dane jednostki. Biblioteki klienckie są wyposażone w dwóch głównych klas <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601>. Klasy te umożliwiają zapytań usługi danych, a następnie pracować z danymi zwróconą jednostkę jako obiekty typu CLR. W tej sekcji omówiono dwa podejścia do tworzenia działań korzystających z bibliotek klienckich.
+WCF Data Services zawiera biblioteki klienckie, które umożliwiają używanie źródła danych z aplikacji .NET Framework i klienta OData. Te biblioteki upraszczają wysyłanie i odbieranie komunikatów HTTP. Mogą również wykonuje translację elementu ładunek komunikatu do obiektów CLR, które reprezentują dane jednostki. Biblioteki klienckie są wyposażone w dwóch głównych klas <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601>. Klasy te umożliwiają zapytań usługi danych, a następnie pracować z danymi zwróconą jednostkę jako obiekty typu CLR. W tej sekcji omówiono dwa podejścia do tworzenia działań korzystających z bibliotek klienckich.
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>Dodawanie odwołania do usługi do usługi danych WCF
 
@@ -34,7 +34,7 @@ Należy pamiętać, że nie istnieją żadne operacje usługi udostępniane prze
 
 ### <a name="using-asynchronous-methods"></a>Używanie metod asynchronicznych
 
-Do adresu możliwych problemów z opóźnieniem, które mogą wystąpić podczas uzyskiwania dostępu do zasobów w sieci Web, zaleca się korzystanie z usług danych WCF asynchronicznie. Biblioteki klienta usługi danych WCF zawierają metody asynchroniczne wywoływanie zapytania, a także Windows Workflow Foundation (WF) <xref:System.Activities.AsyncCodeActivity> klasa do tworzenia działań asynchronicznych. <xref:System.Activities.AsyncCodeActivity> pochodne działania mogą być zapisywane z zalet [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] klas, które mają metod asynchronicznych lub kod, aby być wykonywany asynchronicznie, które mogą być wprowadzane do metody i wywoływane za pomocą delegata. Ta sekcja zawiera dwa przykłady <xref:System.Activities.AsyncCodeActivity> działanie pochodne; taki, który korzysta z biblioteki klienta usługi danych WCF metod asynchronicznych i jedną, która używa delegata.
+Do adresu możliwych problemów z opóźnieniem, które mogą wystąpić podczas uzyskiwania dostępu do zasobów w sieci Web, zaleca się korzystanie z usług danych WCF asynchronicznie. Biblioteki klienta usługi danych WCF zawierają metody asynchroniczne wywoływanie zapytania, a także Windows Workflow Foundation (WF) <xref:System.Activities.AsyncCodeActivity> klasa do tworzenia działań asynchronicznych. <xref:System.Activities.AsyncCodeActivity> pochodne działania mogą być zapisywane z zalet klas .NET Framework, które mają metod asynchronicznych lub kod, aby być wykonywany asynchronicznie mogą być wprowadzane do metody i wywoływane za pomocą delegata. Ta sekcja zawiera dwa przykłady <xref:System.Activities.AsyncCodeActivity> działanie pochodne; taki, który korzysta z biblioteki klienta usługi danych WCF metod asynchronicznych i jedną, która używa delegata.
 
 > [!NOTE]
 > Aby uzyskać więcej informacji, zobacz [operacji asynchronicznych (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md) i [tworzenie działań asynchronicznych](creating-asynchronous-activities-in-wf.md).
@@ -72,7 +72,7 @@ Jeśli wymagana jest dowolnym dodatkowego przetwarzania danych zwróconych przez
 
 ### <a name="using-a-delegate"></a>Używanie delegata
 
-Oprócz asynchroniczne wywołanie metody z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] klasy <xref:System.Activities.AsyncCodeActivity>— w jednej z jego metod działania na podstawie można również zdefiniować logiki przetwarzania asynchronicznego. Ta metoda jest określana za pomocą delegata w ramach działania <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> zastąpienia. Gdy metoda zwróci wartość, środowisko uruchomieniowe wywołuje działania <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> zastąpienia. Podczas wywoływania usługi OData z przepływu pracy, ta metoda może służyć do tworzenia zapytań usługi i Podaj wszelkie dodatkowe przetwarzanie.
+Oprócz wywoływanie metod asynchronicznych klasy .NET Framework, <xref:System.Activities.AsyncCodeActivity>— w jednej z jego metod działania na podstawie można również zdefiniować logiki przetwarzania asynchronicznego. Ta metoda jest określana za pomocą delegata w ramach działania <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> zastąpienia. Gdy metoda zwróci wartość, środowisko uruchomieniowe wywołuje działania <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> zastąpienia. Podczas wywoływania usługi OData z przepływu pracy, ta metoda może służyć do tworzenia zapytań usługi i Podaj wszelkie dodatkowe przetwarzanie.
 
 W poniższym przykładzie `ListCustomers` działania jest zdefiniowana. To działanie wysyła zapytanie usługi przykładowych danych Northwind i zwraca `List<Customer>` zawierającą wszystkich klientów w bazie danych Northwind. Asynchroniczne zadanie jest wykonywane przez `GetCustomers` metody. Ta metoda wysyła zapytanie do usługi dla wszystkich klientów, a następnie kopiuje je do `List<Customer>`. Następnie sprawdza, jeśli są stronicowane wyniki. Jeśli tak, wysyła zapytanie do usługi dla następnej strony wyników, dodaje je do listy i jest powtarzany do momentu pobraniu wszystkich danych klientów.
 

@@ -2,12 +2,12 @@
 title: Zapytania LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6142a1c4713010a75ed8413b935678fce92e40be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902879"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583656"
 ---
 # <a name="linq-to-sql-queries"></a>Zapytania LINQ to SQL
 Należy zdefiniować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytań przy użyciu tej samej składni, tak jak w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Jedyna różnica polega na tym, że obiekty, do którego odwołuje się zapytania są mapowane do elementów w bazie danych. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -15,7 +15,7 @@ Należy zdefiniować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przekłada zapytania, który zapisane na równoważne zapytania SQL, a następnie wysyła je do serwera w celu przetworzenia. W szczególności aplikacja używa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] interfejsu API w celu wykonywania zapytania żądania. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dostawcy następnie przekształca zapytania w tekstu SQL i wykonywania do dostawcy ADO deleguje odpowiednie uprawnienia. Dostawca ADO zwraca wyniki kwerendy w postaci `DataReader`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dostawca tłumaczy wyniki ADO <xref:System.Linq.IQueryable> kolekcję obiektów użytkownika.  
   
 > [!NOTE]
->  Większość metod i operatory na [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] wbudowane typy mają bezpośredniego tłumaczeń do bazy danych SQL. Te, które [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] nie może dokonywać translacji generowanie wyjątków w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+>  Większość metod i operatory na wbudowanych typów programu .NET Framework mają bezpośredni tłumaczeń do bazy danych SQL. Te, które [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] nie może dokonywać translacji generowanie wyjątków w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
  W poniższej tabeli przedstawiono podobieństwa i różnice między [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania elementów.  
   

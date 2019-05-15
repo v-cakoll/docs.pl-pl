@@ -2,12 +2,12 @@
 title: Dane FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032490"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582711"
 ---
 # <a name="filestream-data"></a>Dane FILESTREAM
 
@@ -20,7 +20,7 @@ Określając atrybut FILESTREAM kolumny typu varbinary(max) powoduje, że progra
 
 ## <a name="sqlclient-support-for-filestream"></a>Obsługa SqlClient dla FILESTREAM
 
-[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Dostawcy danych programu SQL Server <xref:System.Data.SqlClient>, obsługuje Odczyt i zapis danych FILESTREAM przy użyciu <xref:System.Data.SqlTypes.SqlFileStream> klasy zdefiniowanej w <xref:System.Data.SqlTypes> przestrzeni nazw. `SqlFileStream` dziedziczy <xref:System.IO.Stream> klasy, która zawiera metody służące do odczytu i zapisu do strumieni danych. Odczyt ze strumienia przesyła dane ze strumienia do struktury danych, takich jak tablica bajtów. Zapisywanie przesyła dane z struktury danych w strumieniu.
+.NET Framework Data Provider for SQL Server <xref:System.Data.SqlClient>, obsługuje Odczyt i zapis danych FILESTREAM przy użyciu <xref:System.Data.SqlTypes.SqlFileStream> klasy zdefiniowanej w <xref:System.Data.SqlTypes> przestrzeni nazw. `SqlFileStream` dziedziczy <xref:System.IO.Stream> klasy, która zawiera metody służące do odczytu i zapisu do strumieni danych. Odczyt ze strumienia przesyła dane ze strumienia do struktury danych, takich jak tablica bajtów. Zapisywanie przesyła dane z struktury danych w strumieniu.
 
 ### <a name="creating-the-sql-server-table"></a>Tworzenie tabeli programu SQL Server
 

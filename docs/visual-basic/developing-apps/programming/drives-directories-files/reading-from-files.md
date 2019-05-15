@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650092"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593370"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Odczyt z plików w Visual Basic
 W tej sekcji opisano sposób wykonywania zadań, które są skojarzone z odczyt z plików.  
@@ -64,4 +64,4 @@ W tej sekcji opisano sposób wykonywania zadań, które są skojarzone z odczyt 
  Pokazuje sposób użycia `My` funkcji z plikami i katalogami.  
   
  [Przewodnik: Manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Pokazuje sposób użycia [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody z plikami i katalogami.
+ Pokazuje sposób użycia metod .NET Framework z plikami i katalogami.

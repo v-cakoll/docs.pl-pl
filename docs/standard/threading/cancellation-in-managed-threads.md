@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531b9b6ae62b34f78f13ff6cd1784a2823584ed6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620784"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586358"
 ---
 # <a name="cancellation-in-managed-threads"></a>Anulowanie w zarządzanych wątkach
 Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework przy użyciu ujednoliconego modelu kooperatywne anulowanie asynchronicznego lub długotrwałe operacje synchroniczne. Ten model opiera się na lekki obiekt o nazwie token anulowania. Obiekt, który wywołuje co najmniej jednej operacji można anulować, na przykład, tworząc nowe wątki lub zadania, przekazuje ten token do każdej operacji. Poszczególne operacje z kolei można przekazać kopie tokenu do innych operacji. W późniejszym czasie obiekt, który utworzył token służy do żądania, że operacje przerwana, co robią. Tylko obiekt żądania można wydawać żądanie anulowania i każdego odbiornika jest odpowiedzialny za obserwowanie żądania i odpowiedzi do niej w sposób odpowiedni i terminowe.  
@@ -60,7 +60,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
 |<xref:System.Threading.CancellationToken>|Typ wartości uproszczone są przekazywane do co najmniej jednego odbiornika, zwykle jako parametr metody. Odbiorniki monitorować wartości `IsCancellationRequested` właściwość tokenu przez sondowanie, a także dojście oczekiwania.|  
 |<xref:System.OperationCanceledException>|Zaakceptuj przeciążeń konstruktora wyjątków w <xref:System.Threading.CancellationToken> jako parametr. Odbiorniki opcjonalnie może zgłosić wyjątek w ten sposób, aby zweryfikować źródło anulowania i powiadomić inne osoby, które zostały wysłane odpowiedzi na żądanie anulowania.|  
   
- Nowy model anulowania jest zintegrowana z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w kilku typach. Najważniejsze są <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> i <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Zalecamy użycie tego nowego modelu anulowania dla wszystkich nowych kodu biblioteki i aplikacji.  
+ Nowy model anulowania jest zintegrowany z .NET Framework w kilku typach. Najważniejsze są <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> i <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Zalecamy użycie tego nowego modelu anulowania dla wszystkich nowych kodu biblioteki i aplikacji.  
   
 ## <a name="code-example"></a>Przykład kodu  
  W poniższym przykładzie tworzy się obiektu żądającego <xref:System.Threading.CancellationTokenSource> obiektu, a następnie przekazuje jej <xref:System.Threading.CancellationTokenSource.Token%2A> właściwości można anulować operacji. Operacja, która odbiera żądanie monitoruje wartość <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość token za pomocą sondowania. Gdy wartość staje się `true`, odbiornik może zakończyć w jakikolwiek sposób jest odpowiednia. W tym przykładzie metoda po prostu kończy działanie, czyli wszystko, co jest wymagane w wielu przypadkach.  

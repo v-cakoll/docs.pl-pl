@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 283d3a0a0350823be8c0680dd24e04999b040363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641133"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583602"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Pozwala na tworzenie usług danych, dzięki czemu klienci mają dostęp do danych jako zasoby przy użyciu identyfikatorów URI, które są oparte na modelu danych. OData obsługuje również definicji operacji usługi. Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia te usługi danych może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniających się potrzeb biznesowych, wymagań dotyczących technologii informacji, lub aby rozwiązać inne problemy. Po wprowadzeniu zmian do istniejącej usługi danych należy rozważyć czy należy zdefiniować nową wersję usługi danych usługi i najlepszy sposób zminimalizować wpływ na istniejące aplikacje klienckie. W tym temacie znajdują się wskazówki dotyczące kiedy i jak utworzyć nową wersję usługi danych. Opisano również, jak usługi danych WCF obsługuje wymiany między klientami i usług danych, które obsługują różne wersje protokołu OData.
@@ -60,7 +60,7 @@ ms.locfileid: "64641133"
 
  Gdy aplikacja używa biblioteki klienta usługi danych WCF dostęp do usługi danych, bibliotek automatycznie ustawić tych nagłówków do prawidłowych wartości w zależności od wersji OData i funkcje, które są używane w aplikacji. Domyślnie usługi danych WCF używa Najniższa wersja protokołu, który obsługuje żądanej operacji.
 
- W poniższej tabeli przedstawiono wersje [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] i [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] który zapewnia obsługę usług danych WCF dla określonych wersji protokołu OData.
+ W poniższej tabeli przedstawiono wersje programu .NET Framework i [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] który zapewnia obsługę usług danych WCF dla określonych wersji protokołu OData.
 
 |Wersja protokołu OData|Obsługa wprowadzone w systemie...|
 |-----------------------------------------------------------------------------------|----------------------------|

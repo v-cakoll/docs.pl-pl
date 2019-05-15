@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 18674a5410cd411ff78e2d3f768b02687cd13f6d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b618d0c153501885fe8c42a04d0723eaa5bcd9af
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637361"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586236"
 ---
 # <a name="using-the-xmlserializer-class"></a>Używanie klasy XmlSerializer
 Windows Communication Foundation (WCF) można użyć dwóch technologii serializacji w różnych, aby przekształcać dane w aplikacji do formatu XML, które są przesyłane między klientami i usług, w procesie zwanym serializacji.  
@@ -30,12 +30,12 @@ Windows Communication Foundation (WCF) można użyć dwóch technologii serializ
   
 - Wiele typowych kolekcji typów, które obejmują wiele typów kolekcji ogólnej.  
   
- Wiele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów można podzielić na dwie ostatnie kategorie i dlatego są możliwe do serializacji. Tablice typów możliwych do serializacji są również możliwe do serializacji. Aby uzyskać pełną listę, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
+ Wiele typów programu .NET Framework można podzielić na dwie ostatnie kategorie i dlatego są możliwe do serializacji. Tablice typów możliwych do serializacji są również możliwe do serializacji. Aby uzyskać pełną listę, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>, Używana wraz z danymi typy kontraktu, jest zalecanym sposobem pisania nowych usług WCF. Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>Kiedy należy używać klasy XmlSerializer  
- Obsługuje również WCF <xref:System.Xml.Serialization.XmlSerializer> klasy. <xref:System.Xml.Serialization.XmlSerializer> Klasy nie jest unikatowy dla usługi WCF. Serializacja tego samego aparatu, który jest [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] użycia usług sieci Web. <xref:System.Xml.Serialization.XmlSerializer> Klasa obsługuje znacznie mniejszą niż zestaw typów niż <xref:System.Runtime.Serialization.DataContractSerializer> klasy, ale zapewnia większą kontrolę nad wynikowy kod XML i obsługuje znacznie więcej język definicji schematu XML (XSD) standardowa. Ponadto nie wymaga żadnych deklaratywne atrybuty typów możliwych do serializacji. Aby uzyskać więcej informacji, zobacz temat serializacji XML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dokumentacji. <xref:System.Xml.Serialization.XmlSerializer> Klasa nie obsługuje typy kontraktu danych.  
+ Obsługuje również WCF <xref:System.Xml.Serialization.XmlSerializer> klasy. <xref:System.Xml.Serialization.XmlSerializer> Klasy nie jest unikatowy dla usługi WCF. Serializacja tego samego aparatu, który jest [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] użycia usług sieci Web. <xref:System.Xml.Serialization.XmlSerializer> Klasa obsługuje znacznie mniejszą niż zestaw typów niż <xref:System.Runtime.Serialization.DataContractSerializer> klasy, ale zapewnia większą kontrolę nad wynikowy kod XML i obsługuje znacznie więcej język definicji schematu XML (XSD) standardowa. Ponadto nie wymaga żadnych deklaratywne atrybuty typów możliwych do serializacji. Aby uzyskać więcej informacji zobacz temat serializacji XML w dokumentacji programu .NET Framework. <xref:System.Xml.Serialization.XmlSerializer> Klasa nie obsługuje typy kontraktu danych.  
   
  Korzystając z Svcutil.exe lub **Dodaj odwołanie do usługi** funkcji w programie Visual Studio do generowania kodu klienta dla usługi innych firm oraz do schematów innych firm, odpowiedni element serializujący została wybrana automatycznie. Jeśli schemat nie jest zgodny z <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Xml.Serialization.XmlSerializer> jest zaznaczone.  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648127"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589018"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "64648127"
   
  <xref:System.Windows.Forms.DataGrid> Może zapewnić interfejsu użytkownika dla zestawu danych, nawigację między powiązanymi tabelami i rozbudowane, formatowania i edycji możliwości.  
   
- Wyświetlanie i manipulowanie danych są odrębne funkcje: Formant obsługuje interfejs użytkownika, natomiast aktualizacji danych są obsługiwane przez architekturę powiązanie danych formularzy Windows oraz przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych. W związku z tym wiele formantów powiązany z tego samego źródła danych zostanie zsynchronizowany.  
+ Wyświetlanie i manipulowanie danych są odrębne funkcje: Kontrolka obsługuje interfejs użytkownika, natomiast aktualizacji danych są obsługiwane przez architekturę powiązanie danych formularzy Windows i dostawcy danych .NET Framework. W związku z tym wiele formantów powiązany z tego samego źródła danych zostanie zsynchronizowany.  
   
 > [!NOTE]
 >  Osoby zaznajomione z kontrolką DataGrid w Visual Basic 6.0 można zauważyć pewne istotne różnice w formularzach Windows Forms <xref:System.Windows.Forms.DataGrid> kontroli.  

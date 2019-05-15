@@ -9,41 +9,39 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: f1c1a0abaeddadb44b40d56eb2f8a28e4b58f4f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84f10540e7735ac1043e63eecda84161c10deeef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651768"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591718"
 ---
-# <a name="how-to-display-time-with-the-datetimepicker-control"></a><span data-ttu-id="f2682-102">Instrukcje: wyświetlanie godziny za pomocą kontrolki DateTimePicker</span><span class="sxs-lookup"><span data-stu-id="f2682-102">How to: Display Time with the DateTimePicker Control</span></span>
-<span data-ttu-id="f2682-103">Jeśli chcesz, aby umożliwić użytkownikom wybranie daty i godziny, do wyświetlenia tej daty i godziny w określonym formacie, należy użyć aplikacji <xref:System.Windows.Forms.DateTimePicker> kontroli.</span><span class="sxs-lookup"><span data-stu-id="f2682-103">If you want your application to enable users to select a date and time, and to display that date and time in the specified format, use the <xref:System.Windows.Forms.DateTimePicker> control.</span></span> <span data-ttu-id="f2682-104">Poniższa procedura przedstawia sposób użycia <xref:System.Windows.Forms.DateTimePicker> formantu, aby wyświetlić czas.</span><span class="sxs-lookup"><span data-stu-id="f2682-104">The following procedure shows how to use the <xref:System.Windows.Forms.DateTimePicker> control to display the time.</span></span>  
+# <a name="how-to-display-time-with-the-datetimepicker-control"></a><span data-ttu-id="32a84-102">Instrukcje: wyświetlanie godziny za pomocą kontrolki DateTimePicker</span><span class="sxs-lookup"><span data-stu-id="32a84-102">How to: Display Time with the DateTimePicker Control</span></span>
+<span data-ttu-id="32a84-103">Jeśli chcesz, aby umożliwić użytkownikom wybranie daty i godziny, do wyświetlenia tej daty i godziny w określonym formacie, należy użyć aplikacji <xref:System.Windows.Forms.DateTimePicker> kontroli.</span><span class="sxs-lookup"><span data-stu-id="32a84-103">If you want your application to enable users to select a date and time, and to display that date and time in the specified format, use the <xref:System.Windows.Forms.DateTimePicker> control.</span></span> <span data-ttu-id="32a84-104">Poniższa procedura przedstawia sposób użycia <xref:System.Windows.Forms.DateTimePicker> formantu, aby wyświetlić czas.</span><span class="sxs-lookup"><span data-stu-id="32a84-104">The following procedure shows how to use the <xref:System.Windows.Forms.DateTimePicker> control to display the time.</span></span>  
   
-### <a name="to-display-the-time-with-the-datetimepicker-control"></a><span data-ttu-id="f2682-105">Aby wyświetlić czas za pomocą formantu DateTimePicker</span><span class="sxs-lookup"><span data-stu-id="f2682-105">To display the time with the DateTimePicker control</span></span>  
+### <a name="to-display-the-time-with-the-datetimepicker-control"></a><span data-ttu-id="32a84-105">Aby wyświetlić czas za pomocą formantu DateTimePicker</span><span class="sxs-lookup"><span data-stu-id="32a84-105">To display the time with the DateTimePicker control</span></span>  
   
-1. <span data-ttu-id="f2682-106">Ustaw <xref:System.Windows.Forms.DateTimePicker.Format%2A> właściwości <xref:System.Windows.Forms.DateTimePickerFormat.Time></span><span class="sxs-lookup"><span data-stu-id="f2682-106">Set the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to <xref:System.Windows.Forms.DateTimePickerFormat.Time></span></span>  
+1. <span data-ttu-id="32a84-106">Ustaw <xref:System.Windows.Forms.DateTimePicker.Format%2A> właściwości <xref:System.Windows.Forms.DateTimePickerFormat.Time></span><span class="sxs-lookup"><span data-stu-id="32a84-106">Set the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to <xref:System.Windows.Forms.DateTimePickerFormat.Time></span></span>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#2)]  
   
-2. <span data-ttu-id="f2682-107">Ustaw <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> właściwość <xref:System.Windows.Forms.DateTimePicker> do `true`.</span><span class="sxs-lookup"><span data-stu-id="f2682-107">Set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property for the <xref:System.Windows.Forms.DateTimePicker> to `true`.</span></span>  
+2. <span data-ttu-id="32a84-107">Ustaw <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> właściwość <xref:System.Windows.Forms.DateTimePicker> do `true`.</span><span class="sxs-lookup"><span data-stu-id="32a84-107">Set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property for the <xref:System.Windows.Forms.DateTimePicker> to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#3)]  
   
-## <a name="example"></a><span data-ttu-id="f2682-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="f2682-108">Example</span></span>  
- <span data-ttu-id="f2682-109">Poniższy przykładowy kod przedstawia sposób tworzenia <xref:System.Windows.Forms.DateTimePicker> który umożliwia użytkownikom wybranie tylko raz.</span><span class="sxs-lookup"><span data-stu-id="f2682-109">The following code sample shows how to create a <xref:System.Windows.Forms.DateTimePicker> that enables users to choose a time only.</span></span>  
+## <a name="example"></a><span data-ttu-id="32a84-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="32a84-108">Example</span></span>  
+ <span data-ttu-id="32a84-109">Poniższy przykładowy kod przedstawia sposób tworzenia <xref:System.Windows.Forms.DateTimePicker> który umożliwia użytkownikom wybranie tylko raz.</span><span class="sxs-lookup"><span data-stu-id="32a84-109">The following code sample shows how to create a <xref:System.Windows.Forms.DateTimePicker> that enables users to choose a time only.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f2682-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="f2682-110">Compiling the Code</span></span>  
- <span data-ttu-id="f2682-111">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="f2682-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="32a84-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="32a84-110">Compiling the Code</span></span>  
+ <span data-ttu-id="32a84-111">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="32a84-111">This example requires:</span></span>  
   
-- <span data-ttu-id="f2682-112">Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="f2682-112">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="32a84-112">Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="32a84-112">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="f2682-113">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="f2682-113">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="f2682-114">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="f2682-114">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f2682-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f2682-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32a84-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="32a84-113">See also</span></span>
 
-- [<span data-ttu-id="f2682-116">DateTimePicker, kontrolka</span><span class="sxs-lookup"><span data-stu-id="f2682-116">DateTimePicker Control</span></span>](datetimepicker-control-windows-forms.md)
+- [<span data-ttu-id="32a84-114">DateTimePicker, kontrolka</span><span class="sxs-lookup"><span data-stu-id="32a84-114">DateTimePicker Control</span></span>](datetimepicker-control-windows-forms.md)

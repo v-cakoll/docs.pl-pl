@@ -6,12 +6,12 @@ title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c1e60b9a9b642542c543da2520906b59a59ddff5
-ms.sourcegitcommit: bad2d2f2311cc689130f15a7500060f446c8d8c7
+ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65188808"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589989"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -253,7 +253,7 @@ ms.locfileid: "65188808"
                                                 <h3><a href="/dotnet/spark">Przewodnik platformy .NET dla platformy Apache Spark</a></h3>
                                                 <p><a href="/dotnet/spark/tutorials">Samouczki</a></p>
                                                 <p><a href="/dotnet/spark/resources">Zasoby</a></p>
-                                                <p><a href="/dotnet/api?view=spark-dotnet">Dokumentacja interfejsu API platformy .NET dla platformy Apache Spark</a></p>
+                                                <p><a href="/dotnet/api/?view=spark-dotnet">Dokumentacja interfejsu API platformy .NET dla platformy Apache Spark</a></p>
                                             </div>
                                         </div>
                                     </div>

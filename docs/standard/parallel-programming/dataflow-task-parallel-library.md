@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a58211226b93c8fde9fa4240e04a245fb83a00d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629040"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589654"
 ---
 # <a name="dataflow-task-parallel-library"></a>Przepływ danych (Biblioteka zadań równoległych)
 <a name="top"></a> Biblioteka zadań równoległych (TPL) zapewnia składników przepływu danych, aby zwiększyć niezawodność aplikacji obsługujących współbieżności. Te składniki przepływu danych są nazywane zbiorczo *Biblioteka przepływu danych TPL*. Ten model przepływu danych promuje aktorów programowania przez dostarczanie komunikatów w trakcie przekazywania dla gruboziarnistych przepływu danych i ich przetwarzanie potokowe zadania. Składniki przepływu danych z typów i planowania infrastruktury TPL i integracji z C#, Visual Basic i F# Obsługa języków w programowaniu asynchronicznym. Te składniki przepływu danych są przydatne, jeśli masz wiele operacji, które muszą asynchronicznie komunikować się ze sobą, lub gdy chcesz przetwarzania danych, gdy stanie się dostępny. Na przykład rozważmy aplikację, która przetwarza dane obrazu z kamery internetowej. Za pomocą modelu przepływu danych, aplikacja może przetwarzać ramki obrazu po ich udostępnieniu. Jeśli aplikacja zwiększa klatek, na przykład, wykonując światła redukcji korekty lub efektu czerwonych utworzeniem *potoku* składników przepływu danych. Każdy etap potoku może używać więcej funkcji równoległości gruboziarnistych, takich jak funkcje, które są dostarczane przez TPL w celu przekształcenia obrazu.  
@@ -282,4 +282,4 @@ ms.locfileid: "64629040"
 |[Instrukcje: Określanie harmonogramu zadań w bloku przepływu danych](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|Pokazuje, jak skojarzyć harmonogram zadań szczególnych, korzystając z przepływu danych w aplikacji.|  
 |[Przewodnik: Poprawa wydajności przy użyciu klas BatchBlock i BatchedJoinBlock](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|Opisuje sposób używania <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> Wstaw klasy, aby zwiększyć wydajność bazy danych, operacji i sposób korzystania <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> klasa do przechwytywania zarówno wyników jak i wyjątków, które występują, gdy program czyta z bazy danych.|  
 |[Przewodnik: Tworzenie typu bloku przepływu danych niestandardowych](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|Przedstawia dwa sposoby tworzenia typu bloku przepływu danych, który implementuje niestandardowe zachowanie.|  
-|[Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Wprowadza TPL bibliotekę, która upraszcza programowania równoległego i współbieżne w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji.|
+|[Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Wprowadza TPL bibliotekę, która upraszcza równoległe i równoczesne Programowanie w aplikacjach .NET Framework.|

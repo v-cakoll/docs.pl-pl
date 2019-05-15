@@ -2,16 +2,16 @@
 title: Samouczki języka C#
 description: Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.
 ms.date: 10/25/2018
-ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755775"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557168"
 ---
 # <a name="c-tutorials"></a>Samouczki języka C#
 
-Witamy w C# samouczków. One rozpoczynać się interakcyjne lekcji, które można uruchomić w przeglądarce. Kolejnych samouczkach, pomagając w bardziej zaawansowanych samouczków pracy z narzędziami programistycznymi .NET do tworzenia C# programy na komputerze.
+Witamy w C# samouczków. One rozpoczynać się interakcyjne lekcji, które można uruchomić w przeglądarce. Kolejnych samouczkach i samouczki bardziej zaawansowane pomagających w pracy z narzędziami programistycznymi .NET do tworzenia C# programy na komputerze.
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>Wprowadzenie do C# interaktywne samouczki
 

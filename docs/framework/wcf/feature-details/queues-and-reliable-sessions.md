@@ -2,12 +2,12 @@
 title: Kolejki i sesje niezawodne
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643534"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557156"
 ---
 # <a name="queues-and-reliable-sessions"></a>Kolejki i sesje niezawodne
 Kolejki i sesje niezawodne są funkcje Windows Communication Foundation (WCF), które implementują niezawodną obsługę komunikatów. Tematy zawarte w tej sekcji omówiono w nim niezawodne funkcje obsługi komunikatów WCF.  
@@ -31,7 +31,7 @@ Kolejki i sesje niezawodne są funkcje Windows Communication Foundation (WCF), k
   
  Niezawodne sesje zapewniają transfery wiarygodnych wiadomości o małych opóźnieniach. Zapewniają one komunikaty protokołu SOAP za pośrednictwem serwerów proxy ani pośredników, równoważna jakiego protokołu TCP zapewnia pakietów przez mostków adresów IP. Aby uzyskać więcej informacji o sesjach niezawodnych, zobacz [sesje niezawodnej](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
-### <a name="queues"></a>kolejki  
+## <a name="queues"></a>kolejki  
  Kolejki programu WCF zapewnia zarówno niezawodne transferu wiadomości i separacji między źródeł i miejsc docelowych kosztem duże opóźnienie. Usługi WCF w kolejce komunikacji jest zbudowana na usługi kolejkowania komunikatów (MSMQ).  
   
  Usługa MSMQ jest dostarczany jako opcję z Windows, która działa jako usługa NT. Ona przechwytuje wiadomości do przesłania w kolejce transmisji w imieniu źródła i dostarczy go do kolejki docelowej. Kolejka docelowa akceptuje komunikaty o imieniu docelowym w celu późniejszego dostarczenia zawsze wtedy, gdy miejsce docelowe żądań dla wiadomości. Menedżerami kolejki usługi MSMQ zaimplementować protokół transferu komunikatów w niezawodny, dzięki czemu komunikaty nie zostaną utracone podczas transmisji. Protokół może być lokalny lub opartego na protokole SOAP, np. Soap Reliable Messaging Protocol (SRMP).  

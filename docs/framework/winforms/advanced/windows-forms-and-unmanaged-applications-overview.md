@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665841"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592504"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Przegląd formularzy systemu Windows i niezarządzanych aplikacji
 Aplikacje Windows Forms i formanty może współpracować z niezarządzanych aplikacji za pomocą niektóre zastrzeżenia. Poniżej opisano scenariusze i konfiguracje obsługujące aplikacje i formanty Windows Forms oraz te, które nie obsługują.  
@@ -47,7 +47,7 @@ Aplikacje Windows Forms i formanty może współpracować z niezarządzanych apl
  Komunikat aplikacji pętli to pętla wewnętrzny programu, które pobierają wiadomości z kolejki komunikatów wątku, tłumaczy je, a następnie wysyła je do aplikacji, które mają być obsługiwane. Pętli komunikatów dla formularza Windows nie ma taką samą architekturę co pętli komunikatów, które zapewniają starszych aplikacji, takich jak aplikacje Visual Basic 6.0 i aplikacjach MFC. Wiadomości okna, które są wysyłane do pętli komunikatów mogą być traktowane inaczej niż w formularzu Windows oczekuje. W związku z tym mogą wystąpić nieoczekiwane zachowanie. Niektóre kombinacje klawiszy mogą nie działać, niektóre działania myszy może nie działać lub niektóre zdarzenia nie mogą zostać podjęte, zgodnie z oczekiwaniami.  
   
 ## <a name="resolving-interoperability-issues"></a>Rozwiązywanie problemów ze współdziałaniem  
- Można rozwiązać te problemy przez wyświetlanie formularza na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pętli komunikatów, która została utworzona przy użyciu <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> metody.  
+ Można rozwiązać te problemy przez wyświetlanie formularza w pętli komunikatów .NET Framework, która została utworzona przy użyciu <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> metody.  
   
  Aby dzieło formularza Windows poprawnie z modelu COM aplikacji klienckiej, należy uruchom go na pętli komunikatów Windows Forms. Aby to zrobić, użyj jednej z następujących metod:  
   

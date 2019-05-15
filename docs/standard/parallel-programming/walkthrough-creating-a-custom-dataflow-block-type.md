@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380bcb6d2a2846d09267eeb3a0d637469ce9fba5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62e2a25e48ead730112a37af451d64c6ccc2e141
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909457"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593435"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Przewodnik: Tworzenie niestandardowego typu bloku przepływu danych
 Mimo że biblioteka przepływu danych TPL udostępnia kilka typów bloku przepływu danych, które umożliwiają wykonywanie różnych funkcji, można również utworzyć typów bloków niestandardowych. Ten dokument zawiera opis sposobu tworzenia typu bloku przepływu danych, który implementuje niestandardowe zachowanie.  
@@ -52,17 +52,6 @@ Mimo że biblioteka przepływu danych TPL udostępnia kilka typów bloku przepł
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w wierszu polecenia dla deweloperów programu Visual Studio okna.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
-
 ## <a name="see-also"></a>Zobacz także
 
 - [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

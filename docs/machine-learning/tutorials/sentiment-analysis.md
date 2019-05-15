@@ -1,19 +1,19 @@
 ---
 title: 'Samouczek: Analizowanie komentarze witryny sieci Web — Klasyfikacja binarna'
-description: Ten samouczek pokazuje, jak utworzyć aplikację konsoli .NET Core, która klasyfikuje tonacji z witryny sieci Web, komentarze i podejmuje odpowiednie działanie. Klasyfikator binarny wskaźniki nastrojów klientów używa C# w programie Visual Studio 2017.
-ms.date: 04/18/2019
+description: Ten samouczek pokazuje, jak utworzyć aplikację konsoli .NET Core, która klasyfikuje tonacji z witryny sieci Web, komentarze i podejmuje odpowiednie działanie. Klasyfikator binarny wskaźniki nastrojów klientów używa C# w programie Visual Studio.
+ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1989a11a2f06ce4d713d6c3ecc70de0da606604e
-ms.sourcegitcommit: 438824ff21f77c4301c6ba8a89a106114aa27bc8
+ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65462229"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593413"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Samouczek: Analizowanie opinii komentarze witryny sieci Web przy użyciu klasyfikacji binarnej w strukturze ML.NET
 
-Ten samouczek pokazuje, jak utworzyć aplikację konsoli .NET Core, która klasyfikuje tonacji z witryny sieci Web, komentarze i podejmuje odpowiednie działanie. Klasyfikator binarny wskaźniki nastrojów klientów używa C# w programie Visual Studio 2017. 
+Ten samouczek pokazuje, jak utworzyć aplikację konsoli .NET Core, która klasyfikuje tonacji z witryny sieci Web, komentarze i podejmuje odpowiednie działanie. Klasyfikator binarny wskaźniki nastrojów klientów używa C# w programie Visual Studio 2017.
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
@@ -29,7 +29,7 @@ Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://git
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform .NET Core"
+* [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) z zainstalowanym obciążeniem "Programowanie dla wielu platform .NET Core"
 
 * [Zdania etykietą tonacji na zestaw danych](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (plik ZIP)
 
@@ -75,7 +75,6 @@ Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://git
 
     - W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmień **nazwa** pole *SentimentData.cs*. Następnie wybierz **Dodaj** przycisku.
 
-    
 5. *SentimentData.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujący kod `using` instrukcji na górze *SentimentData.cs*:
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
@@ -123,7 +122,7 @@ Przygotowywanie aplikacji, a następnie załadować dane:
     `LoadData()` Metoda wykonuje następujące zadania:
 
     * Służy do ładowania danych.
-    *  Dzieli załadowanego zestawu danych na szkolenie i testowanie zestawów danych.
+    * Dzieli załadowanego zestawu danych na szkolenie i testowanie zestawów danych.
     * Zwraca podziału nauczenia i przetestowania zestawów danych.
 
 4. Dodaj następujący kod jako pierwsza linia `LoadData()` metody:
@@ -134,13 +133,13 @@ Przygotowywanie aplikacji, a następnie załadować dane:
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Podziel zestaw danych dla modelu, szkolenia i testowania
 
-Podczas przygotowywania modelu, użyjesz część zestawu danych do nauczenia go, a część zestawu danych, aby przetestować dokładność modelu.  
+Podczas przygotowywania modelu, użyjesz część zestawu danych do nauczenia go, a część zestawu danych, aby przetestować dokładność modelu.
 
 1. Aby podzielić dane załadowane do wymaganych zestawów danych, Dodaj następujący kod w następnym wierszu `LoadData()` metody:
 
     [!code-csharp[SplitData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SplitData "Split the Data")]
 
-    W poprzednim kodzie użyto [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) metodę, aby podzielić załadowanego zestawu danych na szkolenie i testowanie zestawy danych i zwraca je w [TrainTestData](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) klasy. Ustawienia testu procent danych za pomocą `testFraction`parametru. Wartość domyślna wynosi 10%, w tym przypadku używasz 20% do oceny większej ilości danych.  
+    W poprzednim kodzie użyto [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) metodę, aby podzielić załadowanego zestawu danych na szkolenie i testowanie zestawy danych i zwraca je w [TrainTestData](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) klasy. Ustawienia testu procent danych za pomocą `testFraction`parametru. Wartość domyślna wynosi 10%, w tym przypadku używasz 20% do oceny większej ilości danych.
 
 2. Zwróć `splitDataView` na końcu `LoadData()` metody:
 
@@ -160,7 +159,7 @@ Podczas przygotowywania modelu, użyjesz część zestawu danych do nauczenia go
     * Zwraca wartość modelu.
 
 2. Tworzenie `BuildAndTrainModel()` metody tuż za `Main()` metody, używając następującego kodu:
-    
+
     ```csharp
     public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)
     {
@@ -189,10 +188,8 @@ Ta aplikacja używa algorytm klasyfikacji, który kategoryzuje elementy lub wier
 
 Dołącz zadanie uczenia maszynowego z definicjami przekształcania danych, dodając następujące jako następnego wiersza kodu w `BuildAndTrainModel()`:
 
-    
 [!code-csharp[SdcaLogisticRegressionBinaryTrainer](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddTrainer "Add a SdcaLogisticRegressionBinaryTrainer")]
 
-    
 [SdcaLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer) to algorytm klasyfikacji szkolenia. To jest dołączany do `estimator` i akceptuje neural `SentimentText` (`Features`) i `Label` parametrów, aby dowiedzieć się więcej na podstawie historycznych danych wejściowych.
 
 ### <a name="train-the-model"></a>Uczenie modelu
@@ -211,7 +208,7 @@ Dopasuj do modelu `splitTrainSet` danych i zwracają uczonego modelu przez dodan
 
 ## <a name="evaluate-the-model"></a>Ocena modelu
 
-Po model jest uczony, za pomocą testu danych sprawdź poprawność wydajności modelu. 
+Po model jest uczony, za pomocą testu danych sprawdź poprawność wydajności modelu.
 
 1. Tworzenie `Evaluate()` metody tuż za `BuildAndTrainModel()`, używając następującego kodu:
 
@@ -284,7 +281,7 @@ Użyj poniższego kodu, aby wyświetlić metryki:
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest wygoda interfejsu API, dzięki czemu można przekazać, a następnie wykonaj prognozowania w pojedynczym wystąpieniu danych.
-  
+
 4. Dodaj komentarz do testowania uczonego modelu prognozowania w `Predict()` metody przez utworzenie wystąpienia `SentimentData`:
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -306,7 +303,7 @@ Użyj poniższego kodu, aby wyświetlić metryki:
 1. Tworzenie `UseModelWithBatchItems()` metody tuż za `UseModelWithSingleItem()` metody, używając następującego kodu:
 
     ```csharp
-    public static void UseModelWithBatchItems(MLContext mlContext)
+    public static void UseModelWithBatchItems(MLContext mlContext, ITransformer model)
     {
 
     }

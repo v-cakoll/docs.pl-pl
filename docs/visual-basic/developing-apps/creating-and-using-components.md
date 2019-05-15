@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 47e7f94fff4c76b3af7f07b1e023b545eed24953
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f130c4de45f81dfb21c8c87c9e24d22cd4276ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659636"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586728"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Tworzenie składników i korzystanie z nich w Visual Basic
-A *składnika* to klasa, która implementuje <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> interfejsu, lub który pochodzi bezpośrednio lub pośrednio z klasy, która implementuje <xref:System.ComponentModel.IComponent>. A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] składnik to obiekt wielokrotnego użytku, mogą wchodzić w interakcje z innymi obiektami i zapewnia kontrolę nad zasobami zewnętrznymi i obsługi w czasie projektowania.  
+A *składnika* to klasa, która implementuje <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> interfejsu, lub który pochodzi bezpośrednio lub pośrednio z klasy, która implementuje <xref:System.ComponentModel.IComponent>. Składnik .NET Framework to obiekt wielokrotnego użytku, mogą wchodzić w interakcje z innymi obiektami i zapewnia kontrolę nad zasobami zewnętrznymi i obsługi w czasie projektowania.  
   
- Ważną funkcją składniki te są designable, co oznacza, że klasa, która jest składnikiem mogą być używane w zintegrowanym środowisku projektowym Visual Studio. Składnik może dodany do przybornika, przeciągnąć i upuszczone na formularzu i zmieniane na powierzchni projektowej. Należy zauważyć, że podstawowa obsługi w czasie projektowania dotyczące składników ma wbudowaną [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]; deweloperem składnika nie trzeba wykonywać żadnych dodatkowych działań, aby móc korzystać z podstawowe funkcje czasu projektowania.  
+ Ważną funkcją składniki te są designable, co oznacza, że klasa, która jest składnikiem mogą być używane w zintegrowanym środowisku projektowym Visual Studio. Składnik może dodany do przybornika, przeciągnąć i upuszczone na formularzu i zmieniane na powierzchni projektowej. Należy zauważyć, że podstawowa obsługi w czasie projektowania dotyczące składników jest wbudowana w programie .NET Framework; deweloperem składnika nie trzeba wykonywać żadnych dodatkowych działań, aby móc korzystać z podstawowe funkcje czasu projektowania.  
   
  A *kontroli* jest podobne do składnika, ponieważ oba są designable. Formant zapewnia jednak interfejsu użytkownika, a nie składnika. Formant muszą pochodzić z jednej klasy bazowej: <xref:System.Windows.Forms.Control> lub <xref:System.Web.UI.Control>.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647093"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591283"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Przewodnik: Filtrowanie danych wyjściowych My.Application.Log (Visual Basic)
 W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.Application.Log` obiektu, aby kontrolować, jakie informacje są przekazywane z `Log` obiekt do odbiorników i jakie informacje są zapisywane przez odbiorniki. Możesz zmienić sposób rejestrowania, nawet po zakończeniu tworzenia aplikacji, ponieważ informacje o konfiguracji są przechowywane w pliku konfiguracji aplikacji.  
@@ -135,7 +135,7 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
 9. Zmień wartość właściwości `value` atrybutu "Informacje".  
   
     > [!NOTE]
-    >  `DefaultSwitch` Przełącz ustawienie określa `My.Application.Log`. Nie zmienia sposób, w jaki [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> i <xref:System.Diagnostics.Debug?displayProperty=nameWithType> zachowują się klasy.  
+    >  `DefaultSwitch` Przełącz ustawienie określa `My.Application.Log`. Nie zmienia sposób .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> i <xref:System.Diagnostics.Debug?displayProperty=nameWithType> zachowują się klasy.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Osoba filtrowanie odbiorników My.Application.Log  
  Poprzedni przykład pokazuje, jak zmienić ustawienia filtrowania dla wszystkich `My.Application.Log` danych wyjściowych. W tym przykładzie pokazano, jak filtrować odbiornik osobny dziennik. Domyślnie aplikacja ma dwa odbiorniki ten zapis w danych wyjściowych debugowania aplikacji i plik dziennika.  

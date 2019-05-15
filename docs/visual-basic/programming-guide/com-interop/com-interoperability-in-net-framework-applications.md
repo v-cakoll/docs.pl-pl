@@ -6,16 +6,16 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e45f8eafa696c61f917e333c665380c454401e0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022387"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589003"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Współdziałanie COM w aplikacjach .NET Framework (Visual Basic)
 
-Jeśli chcesz użyć obiekty COM i .NET Framework w tej samej aplikacji, które należy spełnić różnic, w jaki sposób obiekty istnieją w pamięci. Obiekt .NET Framework znajduje się w pamięci zarządzanej — pamięci kontrolowanej przez środowisko uruchomieniowe języka wspólnego — i mogą być przenoszone w czasie wykonywania, zgodnie z potrzebami. Obiekt COM znajduje się w pamięci niezarządzanej i nie oczekuje się można przenieść do innej lokalizacji w pamięci. Program Visual Studio i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zapewnia narzędzia umożliwiające kontrolowanie interakcji z nich zarządzane i niezarządzane składniki. Aby uzyskać więcej informacji na temat kodu zarządzanego, zobacz [środowiska uruchomieniowego języka wspólnego](../../../standard/clr.md).
+Jeśli chcesz użyć obiekty COM i .NET Framework w tej samej aplikacji, które należy spełnić różnic, w jaki sposób obiekty istnieją w pamięci. Obiekt .NET Framework znajduje się w pamięci zarządzanej — pamięci kontrolowanej przez środowisko uruchomieniowe języka wspólnego — i mogą być przenoszone w czasie wykonywania, zgodnie z potrzebami. Obiekt COM znajduje się w pamięci niezarządzanej i nie oczekuje się można przenieść do innej lokalizacji w pamięci. Visual Studio i .NET Framework oferuje narzędzia do kontrolowania interakcji z tych składników zarządzanych i niezarządzanych. Aby uzyskać więcej informacji na temat kodu zarządzanego, zobacz [środowiska uruchomieniowego języka wspólnego](../../../standard/clr.md).
 
 Oprócz obiektów COM w aplikacjach platformy .NET, również możesz tworzyć obiekty dostępne z niezarządzanego kodu za pomocą modelu COM. za pomocą języka Visual Basic
 

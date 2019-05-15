@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8f56fcad74287e260c2989534e6bd4931ad646a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633836"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590019"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Instrukcje: Obustronne wartości daty i godziny
 W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznacznej identyfikacji pojedynczego punktu w czasie. W tym temacie pokazano, jak zapisywanie i przywracanie <xref:System.DateTime> wartość <xref:System.DateTimeOffset> wartości i wartości daty i godziny, z czasem strefy, aby wartość przywróconej identyfikuje tym samym czasie jako zapisaną wartość.  
@@ -94,8 +94,6 @@ W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznac
     - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
     - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
-  
-- Odwołanie do biblioteki System.Core.dll.  
   
 - Przykład kodowych innych niż `DateInTimeZone` klasy, powinny być uwzględnione w klasie lub module języka Visual Basic, opakowane w metodach i wywoływane z `Main` metody.  
   

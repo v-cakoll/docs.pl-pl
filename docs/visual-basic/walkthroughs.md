@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021157"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586269"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Język Visual Basic — Wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  
@@ -72,7 +72,7 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  Pokazuje, jak za pomocą funkcji Visual Basic określić informacje o pliku, wyszukiwanie ciągu w pliku i zapisać do pliku.  
   
  [Manipulowanie plikami za pomocą metod .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Pokazuje sposób użycia [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metod umożliwiających ustalenie, informacje o pliku, wyszukiwanie ciągu w pliku i zapisać do pliku.  
+ Pokazuje, jak określić informacje o pliku, wyszukiwanie ciągu w pliku i zapisać do pliku za pomocą metod .NET Framework.  
   
  [Przechowywanie obiektu w języku Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Pokazuje sposób tworzenia prostego obiektu i zachować jego dane do pliku.  

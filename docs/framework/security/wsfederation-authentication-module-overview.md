@@ -3,12 +3,12 @@ title: Omówienie modułu uwierzytelniania WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592367"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586040"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Omówienie modułu uwierzytelniania WSFederation
 Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjnego w aplikacjach ASP.NET, za pośrednictwem modułu uwierzytelniania WS-Federated (WS-Rozproszona). Ten temat pomoże zrozumieć, jak federacyjnego działania uwierzytelniania i jak z niej korzystać.  
@@ -44,7 +44,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
  Rozproszona WS wywołuje również kilka zdarzeń, które można dostosować swoje funkcje w [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji.  
   
 ### <a name="how-the-ws-fam-works"></a>Jak działa Rozproszona WS  
- Rozproszona WS jest zaimplementowana w <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> klasy. Zazwyczaj dodajesz Rozproszona WS potoku HTTP usługi [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacja jednostki Uzależnionej. Gdy nieuwierzytelniony użytkownik próbuje uzyskać dostęp do chronionego zasobu, jednostkę Uzależnioną zwraca odpowiedź HTTP "401 Odmowa autoryzacji". Rozproszona WS przechwytuje odpowiedź zamiast umożliwiając klientowi otrzymasz go, a następnie go przekierowuje użytkownika do określonej usługi STS. Usługa STS wystawia token zabezpieczający, który Rozproszona WS ponownie przechwytuje. Rozproszona WS używa tokenu do utworzenia wystąpienia <xref:System.Security.Claims.ClaimsPrincipal> dla tego uwierzytelnionego użytkownika, które umożliwia regularne [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] mechanizmów autoryzacji do działania.  
+ Rozproszona WS jest zaimplementowana w <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> klasy. Zazwyczaj dodajesz Rozproszona WS potoku HTTP usługi [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacja jednostki Uzależnionej. Gdy nieuwierzytelniony użytkownik próbuje uzyskać dostęp do chronionego zasobu, jednostkę Uzależnioną zwraca odpowiedź HTTP "401 Odmowa autoryzacji". Rozproszona WS przechwytuje odpowiedź zamiast umożliwiając klientowi otrzymasz go, a następnie go przekierowuje użytkownika do określonej usługi STS. Usługa STS wystawia token zabezpieczający, który Rozproszona WS ponownie przechwytuje. Rozproszona WS używa tokenu do utworzenia wystąpienia <xref:System.Security.Claims.ClaimsPrincipal> dla tego uwierzytelnionego użytkownika, które umożliwia regularne mechanizmów autoryzacji .NET Framework działa.  
   
  Ponieważ HTTP jest bezstanowy, potrzebujemy sposób, aby uniknąć powtarzania całego tego procesu, ilekroć dany użytkownik próbuje uzyskać dostęp do innego zasobu chronionego. Jest to miejsce <xref:System.IdentityModel.Services.SessionAuthenticationModule> pochodzą. Gdy Usługa STS wystawia token zabezpieczający dla użytkownika, <xref:System.IdentityModel.Services.SessionAuthenticationModule> również tworzy token zabezpieczający sesji dla użytkownika i umieszcza go w pliku cookie. Podczas kolejnych żądań <xref:System.IdentityModel.Services.SessionAuthenticationModule> przechwytuje ten plik cookie i używa ich do rekonstrukcji użytkownika <xref:System.Security.Claims.ClaimsPrincipal>.  
   

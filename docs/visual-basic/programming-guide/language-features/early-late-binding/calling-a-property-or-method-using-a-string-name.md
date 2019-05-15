@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973345"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590034"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Wywoływanie właściwości lub metody za pomocą nazwy ciągu (Visual Basic)
 W większości przypadków dostęp do właściwości i metod obiektu w czasie projektowania i napisać kod, aby je obsłużyć. Jednak w niektórych przypadkach użytkownik może nie wiedzieć o właściwości i metod obiektu z wyprzedzeniem lub po prostu chcesz elastyczność umożliwienie użytkownikowi końcowemu określić właściwości lub wykonywanie metod w czasie wykonywania.  
@@ -31,7 +31,7 @@ W większości przypadków dostęp do właściwości i metod obiektu w czasie pr
   
  Pierwszy argument *obiektu*, przyjmuje nazwę obiektu, które mają być wykonywane działania. *Nazwaprocedury* argument przyjmuje ciąg, który zawiera nazwę metody lub właściwości procedury wywoływanej. *CallType* argument przyjmuje stałą, który reprezentuje typ procedury, aby wywołać: metody (`Microsoft.VisualBasic.CallType.Method`), właściwość Odczyt (`Microsoft.VisualBasic.CallType.Get`), lub zestaw właściwości (`Microsoft.VisualBasic.CallType.Set`). *Argumenty* argumentu, który jest opcjonalny, pobiera tablicę typu `Object` zawierający żadnych argumentów do procedury.  
   
- Możesz użyć `CallByName` z klasami z bieżącego rozwiązania, ale w większości przypadków umożliwia dostęp do obiektów COM lub obiekty [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zestawów.  
+ Możesz użyć `CallByName` z klasami z bieżącego rozwiązania, ale w większości przypadków umożliwia dostęp do obiektów COM lub z zestawów .NET Framework.  
   
  Załóżmy, że możesz dodać odwołania do zestawu, który zawiera klasę o nazwie `MathClass`, która zawiera nową funkcję o nazwie `SquareRoot`, jak pokazano w poniższym kodzie:  
   

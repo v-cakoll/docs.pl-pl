@@ -8,15 +8,15 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-ms.openlocfilehash: a719381863d560a5666c7fc1a5e7260a1d4c4823
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d143d7ec87a214a900264e069b329ea28a92c3e9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650898"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590385"
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Instrukcje: Zmniejszanie migotania grafiki za pomocą podwójnego buforowania formularzy i kontrolek
-Podwójnego buforowania używa bufora pamięci, aby rozwiązywać problemy migotania skojarzonych wiele operacji malowania. Po włączeniu podwójnego buforowania wszystkich operacji malowania najpierw są renderowane w buforze pamięci zamiast powierzchni do rysowania na ekranie. Po ukończeniu wszystkich operacji malowania bufora pamięci jest kopiowana bezpośrednio na powierzchni do rysowania skojarzone z nią. Ponieważ grafiki tylko jedna operacja jest wykonywana na ekranie, obraz migotanie skojarzone z operacjami złożonego rysowania zostanie wyeliminowany. W przypadku większości aplikacji domyślnej podwójnego buforowania podał [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] udostępni najlepsze rezultaty. Standardowych kontrolek Windows Forms są double buforowana domyślnie. Można włączyć domyślny podwójnego buforowania w formularzach i autorstwa formantów na dwa sposoby. Możesz albo zestaw <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwości `true`, można też wywołać <xref:System.Windows.Forms.Control.SetStyle%2A> metodę, aby ustawić <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flaga `true`. Obie metody zostanie włączony, domyślne podwójnego buforowania danych formularza lub formantu i podaj renderowania pozbawionej migotania grafiki. Wywoływanie <xref:System.Windows.Forms.Control.SetStyle%2A> metoda jest zalecana tylko w przypadku kontrolek niestandardowych, dla których ma napisany cały kod renderowania.  
+Podwójnego buforowania używa bufora pamięci, aby rozwiązywać problemy migotania skojarzonych wiele operacji malowania. Po włączeniu podwójnego buforowania wszystkich operacji malowania najpierw są renderowane w buforze pamięci zamiast powierzchni do rysowania na ekranie. Po ukończeniu wszystkich operacji malowania bufora pamięci jest kopiowana bezpośrednio na powierzchni do rysowania skojarzone z nią. Ponieważ grafiki tylko jedna operacja jest wykonywana na ekranie, obraz migotanie skojarzone z operacjami złożonego rysowania zostanie wyeliminowany. W przypadku większości aplikacji domyślne podwójne buforowanie dostarczane przez program .NET Framework zapewnia najlepsze rezultaty. Standardowych kontrolek Windows Forms są double buforowana domyślnie. Można włączyć domyślny podwójnego buforowania w formularzach i autorstwa formantów na dwa sposoby. Możesz albo zestaw <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwości `true`, można też wywołać <xref:System.Windows.Forms.Control.SetStyle%2A> metodę, aby ustawić <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flaga `true`. Obie metody zostanie włączony, domyślne podwójnego buforowania danych formularza lub formantu i podaj renderowania pozbawionej migotania grafiki. Wywoływanie <xref:System.Windows.Forms.Control.SetStyle%2A> metoda jest zalecana tylko w przypadku kontrolek niestandardowych, dla których ma napisany cały kod renderowania.  
   
  Dla bardziej zaawansowanych podwójnego buforowania scenariuszach, na przykład animacji lub zarządzanie zaawansowanej pamięci można zaimplementować własną podwójnego buforowania logikę. Aby uzyskać więcej informacji, zobacz [jak: Ręczne zarządzanie buforowaną grafiką](how-to-manually-manage-buffered-graphics.md).  
   

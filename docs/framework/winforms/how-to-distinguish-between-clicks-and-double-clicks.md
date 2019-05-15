@@ -10,12 +10,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 210adda7e5444c3e91d869427062ff12ae41f033
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cff6c283651b5994e869756524a3ee83ecdcfda9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591550"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592082"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Instrukcje: Rozróżnianie między kliknięciami a dwukrotnymi kliknięciami
 Zazwyczaj pojedynczej *kliknij* inicjuje reakcji interfejsu użytkownika i *kliknij dwukrotnie* rozszerza akcji. Na przykład jednym kliknięciem zwykle wybiera element, a następnie dwukrotne kliknięcie Edytuje wybrany element. Jednak zdarzenia kliknięcia formularze Windows nie łatwe dodawanie scenariusza, w którym przez kliknięcie i kliknij dwukrotnie plik akcje niezgodne, ponieważ akcja powiązany <xref:System.Windows.Forms.Control.Click> lub <xref:System.Windows.Forms.Control.MouseClick> zdarzeń odbywa się przed akcją powiązane <xref:System.Windows.Forms.Control.DoubleClick>lub <xref:System.Windows.Forms.Control.MouseDoubleClick> zdarzeń. W tym temacie przedstawiono dwa rozwiązania tego problemu. Jest jedno rozwiązanie do obsługi zdarzeń kliknij dwukrotnie plik i wycofać akcje w zakresie obsługi zdarzenia click. W rzadkich sytuacjach może być konieczne symulowania kliknij pozycję i kliknij dwukrotnie działanie, obsługując <xref:System.Windows.Forms.Control.MouseDown> zdarzeń i za pomocą <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> i <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> właściwości <xref:System.Windows.Forms.SystemInformation> klasy. Pomiar czasu między kliknięciami a jeśli drugie kliknięcie występuje przed wartością <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> zostanie osiągnięty, a następnie kliknij przycisk jest w obrębie prostokąta zdefiniowanego przez <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, wykonania akcji kliknij dwukrotnie plik; w przeciwnym razie wykonania akcji kliknij pozycję.  
@@ -39,8 +39,6 @@ Zazwyczaj pojedynczej *kliknij* inicjuje reakcji interfejsu użytkownika i *klik
  Wymagaj tych przykładach:  
   
 - Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
-  
- Aby uzyskać informacje o tworzeniu tych przykładów z poziomu wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Możesz także tworzyć te przykłady w programie Visual Studio, wklejając kod do nowych projektów.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610414"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591960"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Wpływ kultury na ciągi w Visual Basic
 Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przeprowadzenie ciąg konwersje i porównań.  
@@ -38,7 +38,7 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
 ## <a name="using-a-specific-culture"></a>Przy użyciu określonej kultury  
  Wyobraź sobie, że opracowujesz aplikację, która wysyła daty (sformatowany jako ciąg) do usługi sieci Web. W tym przypadku aplikacja musi używać określonej kultury do konwersji ciągu. W celu zilustrowania Dlaczego, należy wziąć pod uwagę wynik za pomocą daty <xref:System.DateTime.ToString> metody: Jeśli aplikacja używa tej metody do formatowania daty 4 lipca 2005, zwraca "7/4/2005 12:00:00 AM" uruchamiania z kulturą Stanów Zjednoczonych angielski (en US), ale zwraca "04.07.2005 00:00:00" uruchamiania z kulturą niemiecki (de-DE).  
   
- Gdy zachodzi potrzeba wykonania konwersji ciągu w formacie określonej kultury, należy użyć `CultureInfo` klasy, która jest wbudowana w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Można utworzyć nową `CultureInfo` obiektu dla określonej kultury, przekazując nazwę kultury, aby <xref:System.Globalization.CultureInfo.%23ctor%2A> konstruktora. Nazwy kultury obsługiwane są wymienione w <xref:System.Globalization.CultureInfo> klasy strony pomocy.  
+ Gdy zachodzi potrzeba wykonania konwersji ciągu w formacie określonej kultury, należy użyć `CultureInfo` klasy, która jest wbudowana w programie .NET Framework. Można utworzyć nową `CultureInfo` obiektu dla określonej kultury, przekazując nazwę kultury, aby <xref:System.Globalization.CultureInfo.%23ctor%2A> konstruktora. Nazwy kultury obsługiwane są wymienione w <xref:System.Globalization.CultureInfo> klasy strony pomocy.  
   
  Alternatywnie można pobrać wystąpienia *niezmiennej kultury* z <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości. Zależy od kultury niezmiennej kultury angielski, ale istnieją pewne różnice. Na przykład niezmiennej kultury określa zegara 24-godzinnego, zamiast 12-godzinnym.  
   
@@ -62,7 +62,7 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- Można również użyć [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] partner `StrComp` funkcji <xref:System.String.Compare%2A?displayProperty=nameWithType> metody. Jest to statyczne, przeciążone metody klasy bazowej ciągu. W poniższym przykładzie pokazano, jak ta metoda jest używana:  
+ Możesz również użyć partner .NET Framework `StrComp` funkcji <xref:System.String.Compare%2A?displayProperty=nameWithType> metody. Jest to statyczne, przeciążone metody klasy bazowej ciągu. W poniższym przykładzie pokazano, jak ta metoda jest używana:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: 2b2eb26aa6c4cf5c4c790fbdc28f58bf44275fc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 110422000fad3d52d936302cca7a3d635f44b917
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591445"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591396"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Instrukcje: praca z kolumnami obrazów w kontrolce DataGridView formularzy systemu Windows
 Poniższy przykład kodu pokazuje sposób użycia <xref:System.Windows.Forms.DataGridView> obrazu kolumn w interaktywny interfejs użytkownika (UI). W przykładzie pokazano także możliwości układ i zmiana rozmiaru obrazu za pomocą <xref:System.Windows.Forms.DataGridViewImageColumn>.  
@@ -29,8 +29,6 @@ Poniższy przykład kodu pokazuje sposób użycia <xref:System.Windows.Forms.Dat
  Ten przykład wymaga:  
   
 - Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
-  
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
 

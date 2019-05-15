@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9f1ddf7691c9c00c3a4a7a20fc81d2f42f5830f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f1392a6ee2e8f5b3f85650ee91e20e7ec3436fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652103"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592216"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfiguracyjnym zapewnia elastyczność związanych z udostępnianiem punktu końcowego i danych zachowanie usługi na miejscu wdrożenia, a nie w czasie projektowania. W tym temacie opisano dostępne metody podstawowej.  
   
- Usługa WCF jest konfigurowane za pomocą [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologia konfiguracji. Najczęściej XML elementy są dodawane do pliku Web.config dla witryny usług Internet Information Services (IIS), który hostuje usługę WCF. Elementy umożliwiają zmianę szczegóły, takie jak adresy punktów końcowych (rzeczywista adresy, używane do komunikacji z usługą) na podstawie maszyny według komputera. Ponadto WCF zawiera kilku elementów dostarczanych przez system, które pozwalają szybko wybrać najbardziej podstawowe funkcje dla usługi. Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, który jest dostarczany z nowy model konfiguracji domyślnej, który upraszcza wymagania dotyczące konfiguracji usługi WCF. Jeśli nie podano żadnej konfiguracji programu WCF dla określonej usługi, środowisko wykonawcze automatycznie konfiguruje usługi przy użyciu niektóre standardowe punkty końcowe i zachowanie wiązania domyślne. W praktyce Zapisywanie konfiguracji jest poważnym należą do programowania aplikacji WCF.  
+ Usługa WCF jest konfigurowany, przy użyciu technologii konfiguracji .NET Framework. Najczęściej XML elementy są dodawane do pliku Web.config dla witryny usług Internet Information Services (IIS), który hostuje usługę WCF. Elementy umożliwiają zmianę szczegóły, takie jak adresy punktów końcowych (rzeczywista adresy, używane do komunikacji z usługą) na podstawie maszyny według komputera. Ponadto WCF zawiera kilku elementów dostarczanych przez system, które pozwalają szybko wybrać najbardziej podstawowe funkcje dla usługi. Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, który jest dostarczany z nowy model konfiguracji domyślnej, który upraszcza wymagania dotyczące konfiguracji usługi WCF. Jeśli nie podano żadnej konfiguracji programu WCF dla określonej usługi, środowisko wykonawcze automatycznie konfiguruje usługi przy użyciu niektóre standardowe punkty końcowe i zachowanie wiązania domyślne. W praktyce Zapisywanie konfiguracji jest poważnym należą do programowania aplikacji WCF.  
   
  Aby uzyskać więcej informacji, zobacz [konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Lista najczęściej często używanych elementów, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
@@ -22,7 +22,7 @@ Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfigur
 >  Podczas wdrażania scenariuszy obok siebie, w których są wdrażane dwa różne wersje usługi, należy określić częściowych nazw zestawów, do których odwołuje się w plikach konfiguracji. Jest to spowodowane plik konfiguracji jest współużytkowany przez wszystkie wersje usługi i mogą być wykonywane w ramach różnych wersji programu .NET Framework.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Plik Web.config i pliku App.config  
- WCF używa systemu konfiguracji System.Configuration [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ WCF używa System.Configuration systemu konfiguracji platformy .NET Framework.  
   
  Podczas konfigurowania usługi w programie Visual Studio, należy użyć pliku Web.config lub pliku App.config do określania ustawień. Wybór nazwy pliku konfiguracji jest określany przez środowisko hostingu, wybrany dla usługi. Jeśli używasz usług IIS do hostowania usługi, należy użyć pliku Web.config. Jeśli używasz innego środowiska hostingu użycie pliku App.config.  
   

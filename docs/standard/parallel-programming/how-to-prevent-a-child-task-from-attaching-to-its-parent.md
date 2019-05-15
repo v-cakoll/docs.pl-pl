@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7506a57e29b7942bd06141baa2d2b048ed998214
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55b9c6c7175d8c7c33d8bfa03330c8e4b8816531
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937439"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592025"
 ---
 # <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Instrukcje: Zapobieganie łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym
 Ten dokument przedstawia sposób zapobiec łączeniu zadania podrzędnego z zadaniem do zadania nadrzędnego. Zapobieganie zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym jest przydatne w przypadku, gdy wywołujesz składnik, który jest zapisywany przez stronę trzecią i używa również zadania. Na przykład składnikiem innej firmy, który używa <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcję, aby utworzyć <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> obiektu może spowodować problemy w kodzie, gdy jest długotrwałe lub zwraca nieobsługiwany wyjątek.  
@@ -27,19 +27,6 @@ Ten dokument przedstawia sposób zapobiec łączeniu zadania podrzędnego z zada
  [!code-vb[TPL_DenyChildAttach#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_denychildattach/vb/denychildattach.vb#1)]  
   
  Ponieważ zadanie nadrzędne nie zakończy się aż do zakończenia wszystkich zadań podrzędnych, długo uruchamiające się zadanie podrzędne może spowodować cała aplikacja do niskiej wydajności. W tym przykładzie Jeśli aplikacja używa domyślnych opcji do utworzenia zadania nadrzędnego, zadanie podrzędne musi zakończyć przed zakończeniem zadania nadrzędnego. Jeśli aplikacja używa <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> opcji element podrzędny nie jest dołączony do obiektu nadrzędnego. Aplikację można wykonać dodatkową pracę, po zakończeniu zadania nadrzędnego i przed musi czekać na zakończenie zadania podrzędnego.  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DenyChildAttach.cs` (`DenyChildAttach.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w wierszu polecenia dla deweloperów programu Visual Studio okna.  
-  
- Visual C#  
-  
- **csc.exe DenyChildAttach.cs**  
-  
- Visual Basic  
-  
- **vbc.exe DenyChildAttach.vb**  
-  
-## <a name="robust-programming"></a>Niezawodne programowanie  
   
 ## <a name="see-also"></a>Zobacz także
 

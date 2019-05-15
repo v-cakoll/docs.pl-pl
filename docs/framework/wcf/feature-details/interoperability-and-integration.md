@@ -2,12 +2,12 @@
 title: Współdziałanie i integracja
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 5a50a8ebece72a0f2f8dc95fd87e73bef5db3195
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919155"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591226"
 ---
 # <a name="interoperability-and-integration"></a>Współdziałanie i integracja
 W tej sekcji omówiono współdziałanie i integracja za pomocą programu Windows Communication Foundation (WCF).  
@@ -23,7 +23,7 @@ W tej sekcji omówiono współdziałanie i integracja za pomocą programu Window
  W tym artykule omówiono różne metody dla aplikacji modelu COM do wywołania usługi WCF.  
   
  [Migrowanie aplikacji usług zdalnych platformy .NET do programu WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- W tym artykule opisano, jak można używać programu WCF za pomocą [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] komunikacji zdalnej.  
+ W tym artykule opisano, jak używać usługi WCF z wywołaniem funkcji zdalnych .NET Framework.  
   
  [Współdziałanie z dodatkiem Web Services Enhancements 3.0](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
  W tym artykule opisano, jak używać WCF z usługami sieci Web implementowane za pomocą sieci Web usługi rozszerzeń (programu WSE) 3.0.  

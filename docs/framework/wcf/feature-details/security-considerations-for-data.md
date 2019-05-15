@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990889"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591533"
 ---
 # <a name="security-considerations-for-data"></a>Zagadnienia związane z zabezpieczeniami danych
 
@@ -28,7 +28,7 @@ Liczba miejsc, w ramach infrastruktury usług Windows Communication Foundation (
 
 Jest odpowiedzialny za autora kodu, aby upewnić się, że istnieje nie luk w zabezpieczeniach. Na przykład, jeśli tworzysz kontraktu danych typu z właściwością elementu członkowskiego danych typu integer, a w polu `set` implementacji metody dostępu przydzielić tablicy, na podstawie wartości właściwości, należy udostępnić możliwości ataku typu "odmowa usługi", jeśli złośliwe komunikat zawiera bardzo dużą wartość dla tego elementu członkowskiego danych. Ogólnie rzecz biorąc Unikaj alokacje na podstawie danych przychodzących lub długie, przetwarzanie w kodzie użytkownika (zwłaszcza, jeśli długie przetwarzanie może być spowodowane małą ilością danych przychodzących). Podczas przeprowadzania analizy zabezpieczeń kodu podanego przez użytkownika, należy również wziąć pod uwagę wszystkie przypadki awarii (czyli wszystkich Programowanie gałęzi gdy wyjątki zostaną zgłoszone).
 
-Ultimate przykładem kodu podanego przez użytkownika jest kod wewnątrz implementacji usługi dla każdej operacji. Zabezpieczenia implementacji usługi jest odpowiedzialny za. To ułatwia utworzenie przypadkowo implementacji niezabezpieczone operacji, które może spowodować luki w zabezpieczeniach typu "odmowa usługi". Na przykład operacja, która przyjmuje ciąg i zwraca listę wszystkich klientów z bazy danych, których nazwa rozpoczyna się od tego ciągu. Jeśli pracujesz z dużych baz danych i ciąg przekazywany jest pojedynczą literą, Twój kod może podejmować prób utworzenia komunikatu w większe niż dostępna pamięć, co powoduje awarię całej usługi. ( <xref:System.OutOfMemoryException> Nie jest możliwe do odzyskania w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] i zawsze powoduje zablokowanie dostępu do aplikacji.)
+Ultimate przykładem kodu podanego przez użytkownika jest kod wewnątrz implementacji usługi dla każdej operacji. Zabezpieczenia implementacji usługi jest odpowiedzialny za. To ułatwia utworzenie przypadkowo implementacji niezabezpieczone operacji, które może spowodować luki w zabezpieczeniach typu "odmowa usługi". Na przykład operacja, która przyjmuje ciąg i zwraca listę wszystkich klientów z bazy danych, których nazwa rozpoczyna się od tego ciągu. Jeśli pracujesz z dużych baz danych i ciąg przekazywany jest pojedynczą literą, Twój kod może podejmować prób utworzenia komunikatu w większe niż dostępna pamięć, co powoduje awarię całej usługi. ( <xref:System.OutOfMemoryException> Nie jest możliwe do odzyskania w programie .NET Framework i zawsze powoduje zablokowanie dostępu do aplikacji.)
 
 Należy upewnić się, że nie złośliwy kod jest podłączony do różnych punktów rozszerzeń. Jest to szczególnie istotne w przypadku, gdy uruchamianie w częściowej relacji zaufania, pracy z typami z częściowo zaufane zestawy lub tworząc składników można używać przez częściowo zaufany kod. Aby uzyskać więcej informacji zobacz "Częściowego zaufania zagrożenia" w dalszej części tego tematu.
 
@@ -54,7 +54,7 @@ Powoduje po stronie odbierającej można przydzielić znacznej ilości pamięci 
 
 Ataki typu "odmowa usługi" zazwyczaj zostały skorygowane przy użyciu przydziałów. Po przekroczeniu przydziału <xref:System.ServiceModel.QuotaExceededException> jest zazwyczaj zgłaszany wyjątek. Bez limitu przydziału, niebezpiecznej wiadomości może spowodować, że całą dostępną pamięć, można uzyskać dostęp, co <xref:System.OutOfMemoryException> wyjątku lub wszystkie stosy dostępne były dostępne, dając w efekcie w <xref:System.StackOverflowException>.
 
-Scenariusz Przekroczono limit przydziału jest możliwe do odzyskania; Jeśli w działającej usłudze, aktualnie przetwarzanego komunikatu jest odrzucana i jest uruchomiony i przetwarza dalsze komunikaty. Scenariusze przepełnienie braku pamięci i stos, jednak nie są możliwe do odzyskania w dowolnym miejscu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; usługa kończy działanie, jeśli wykryje nieważną takie wyjątki.
+Scenariusz Przekroczono limit przydziału jest możliwe do odzyskania; Jeśli w działającej usłudze, aktualnie przetwarzanego komunikatu jest odrzucana i jest uruchomiony i przetwarza dalsze komunikaty. Scenariusze przepełnienie braku pamięci i stos, jednak nie są możliwe do odzyskania w dowolnym miejscu w programie .NET Framework; Zakończenie usługi następuje, jeśli wykryje nieważną takie wyjątki.
 
 Przydziały w programie WCF nie obejmują żadnych wstępnej alokacji. Na przykład jeśli <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> limitu przydziału (znajdujący się w różnych zajęciach) jest ustawiona na 128 KB, nie oznacza to, że 128 KB jest przydzielany automatycznie dla każdego komunikatu. Rzeczywista ilość przydzielonej zależy od rzeczywisty rozmiar wiadomości przychodzącej.
 
@@ -274,7 +274,7 @@ Można uniknąć tej sytuacji jest pamiętać o następujących kwestiach:
 
 - Nie należy projektować typy kontraktu danych opierać się na określonej kolejności, w którym właściwość musi być wywołana metod ustawiających.
 
-- Powinien zachować ostrożność przy użyciu starszych typach oznaczone elementem <xref:System.SerializableAttribute> atrybutu. Wiele z nich zostały zaprojektowane do pracy z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting do użytku z tylko zaufane dane. Istniejące typy oznaczone przy użyciu tego atrybutu może nie jest przeznaczony stanu bezpieczeństwa na uwadze.
+- Powinien zachować ostrożność przy użyciu starszych typach oznaczone elementem <xref:System.SerializableAttribute> atrybutu. Wiele z nich zostały zaprojektowane do pracy z wywołaniem funkcji zdalnych .NET Framework, do użytku z tylko zaufane dane. Istniejące typy oznaczone przy użyciu tego atrybutu może nie jest przeznaczony stanu bezpieczeństwa na uwadze.
 
 - Nie należy polegać na <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu, aby zagwarantować obecności danych w zakresie dotyczącym bezpieczeństwa stanu jest. Dane można zawsze być `null`, `zero`, lub `invalid`.
 
@@ -282,7 +282,7 @@ Można uniknąć tej sytuacji jest pamiętać o następujących kwestiach:
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>Bezpiecznie przy użyciu NetDataContractSerializer
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> Jest mechanizm serializacji, który używa ścisłego sprzężenia do typów. Jest to podobne do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Oznacza to, określa, którego typu wystąpienia, czytając [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Nazwa zestawu i typu danych przychodzących. Wchodzi w skład WCF, ale nie istnieje sposób podany o podłączenie ten mechanizm serializacji; musi być napisany kod niestandardowy. `NetDataContractSerializer` Znajduje się przede wszystkim do jej obsługi ułatwiają migrację z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting do programu WCF. Aby uzyskać więcej informacji, zobacz sekcję istotne w [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
+<xref:System.Runtime.Serialization.NetDataContractSerializer> Jest mechanizm serializacji, który używa ścisłego sprzężenia do typów. Jest to podobne do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Oznacza to określa, którego typu wystąpienia, zapoznając się z zestawu .NET Framework i wpisz nazwę z danych przychodzących. Wchodzi w skład WCF, ale nie istnieje sposób podany o podłączenie ten mechanizm serializacji; musi być napisany kod niestandardowy. `NetDataContractSerializer` Znajduje się przede wszystkim do jej obsługi ułatwiają migrację z wywołaniem funkcji zdalnych .NET Framework do programu WCF. Aby uzyskać więcej informacji, zobacz sekcję istotne w [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
 Ponieważ samej wiadomości może wskazywać na dowolny typ może być załadowany, <xref:System.Runtime.Serialization.NetDataContractSerializer> mechanizm jest z założenia niezabezpieczone i powinien być używany tylko z zaufanych danych. Istnieje możliwość zwiększyć bezpieczeństwo, pisząc integratora typ bezpieczny i ograniczenie typu, który umożliwia tylko bezpiecznych typy załadować (przy użyciu <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> właściwości).
 

@@ -2,12 +2,12 @@
 title: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662468"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591242"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 Windows Communication Foundation (WCF) uwidacznia dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy Instrumentacji zarządzania Windows (WMI) WCF.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) uwidacznia dane inspekcji usługi w czasi
  Ten wpis konfiguracji udostępnia interfejs usługi WMI. Aplikacje do zarządzania można teraz nawiązać połączenie za pośrednictwem tego interfejsu i uzyskać dostęp z Instrumentacją zarządzania aplikacji.  
   
 ## <a name="accessing-wmi-data"></a>Uzyskiwanie dostępu do danych usługi WMI  
- Dane usługi WMI są dostępne na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, aplikacji Visual Basic, aplikacji w języku C++ i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Aby uzyskać więcej informacji, zobacz [przy użyciu usługi WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
+ Dane usługi WMI są dostępne na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów aplikacji Visual Basic C++ aplikacji i programu .NET Framework. Aby uzyskać więcej informacji, zobacz [przy użyciu usługi WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Jeśli używasz programu .NET Framework, pod warunkiem metody do programowego dostępu do danych usługi WMI, należy pamiętać, że tych metod może zgłaszają wyjątki, gdy połączenie zostanie nawiązane. Połączenie nie zostanie nawiązane podczas konstruowania <xref:System.Management.ManagementObject> wystąpienia, ale pierwszego żądania obejmujące rzeczywiste dane programu exchange. Dlatego należy używać `try..catch` bloku catch możliwych wyjątków.  

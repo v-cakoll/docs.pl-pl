@@ -2,12 +2,12 @@
 title: 'Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701934"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585741"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>Kompilowanie kodu
-
-Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następujących opcji:
-
-- .NET framework w wersji 3.5 za pomocą odwołania do System.Core.dll.
-- .NET framework w wersji 4.0 lub nowszy.
-- .NET core w wersji 1.0 lub nowszej.
-  
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027189"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591502"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementowanie zachowań uznaniowych w klasie XslTransform
 
@@ -19,9 +19,9 @@ ms.locfileid: "62027189"
 
 Zachowań uznaniowych są określane jako zachowań na liście [World Wide Web Consortium (W3C) przekształcenia XSL (XSLT) w wersji 1.0 zalecenie](https://www.w3.org/TR/1999/REC-xslt-19991116), w której dostawcy implementacja wybiera, jeden z kilku możliwych Opcje jako sposób obsługi sytuacji. Na przykład w sekcji 7.3 tworzenia przetwarzania instrukcji, W3C zalecenie jest wyświetlany komunikat, występuje błąd, jeśli utworzenie wystąpienia zawartość `xsl:processing-instruction` tworzy węzłów innych niż węzły tekstowe. Dla niektórych problemów W3C informuje, jakie decyzja powinna zostać podjęta przez procesor postanawia odzyskać sprawność po błędzie. Ten problem, podane w sekcji 7.3 W3C mówi, że implementacja można odzyskać z tego błędu, ignorując węzły i ich zawartości.
 
-W związku z tym, dla wszystkich zachowań uznaniowych dozwolone przez konsorcjum W3C w poniższej tabeli wymieniono zachowań uznaniowych zaimplementowane dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementacji <xref:System.Xml.Xsl.XslTransform> klasy i co sekcji zalecenia 1.0 W3C XSLT że omówiono problem.
+W związku z tym, dla wszystkich zachowań uznaniowych dozwolone przez konsorcjum W3C w poniższej tabeli wymieniono zachowań uznaniowych zaimplementowane dla implementacji .NET Framework <xref:System.Xml.Xsl.XslTransform> klasy i co sekcji zalecenia 1.0 W3C XSLT że omówiono problem.
 
-|Problem|Zachowanie|Sekcja|
+|Problem|Zachowanie|`Section`|
 |-------------|--------------|-------------|
 |Węzeł tekstowy jest zgodny zarówno `xsl:strip-space` i `xsl:preserve-space`.|Odzyskiwanie|3.4|
 |Węzeł źródłowy odpowiada więcej niż jeden szablon reguły.|Odzyskiwanie|5.5|

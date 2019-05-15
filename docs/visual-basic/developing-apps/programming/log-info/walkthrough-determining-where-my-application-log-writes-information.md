@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 5115973e3d8e558199f9569baeea9e272c0528b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794348"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591214"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Przewodnik: Ustalanie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
 
@@ -35,7 +35,7 @@ Aby uzyskać więcej informacji na temat domyślnych lokalizacji danych wyjścio
 
     Jeśli nie istnieją następujące sekcje, a następnie skonfigurować w pliku konfiguracji komputera `My.Application.Log` dziennika odbiorników. W poniższych krokach opisano sposób określania definiuje plik konfiguracji komputera:
 
-    1. Zlokalizuj plik machine.config komputera. Zazwyczaj znajduje się on w *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* katalogu, gdzie `SystemRoot` to nazwa katalogu systemu operacyjnego i `frameworkVersion` jest wersją [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
+    1. Zlokalizuj plik machine.config komputera. Zazwyczaj znajduje się on w *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* katalogu, gdzie `SystemRoot` to nazwa katalogu systemu operacyjnego i `frameworkVersion` jest wersja programu .NET Framework.
 
         Ustawienia w pliku machine.config mogą zostać zastąpione przez plik konfiguracji aplikacji.
 

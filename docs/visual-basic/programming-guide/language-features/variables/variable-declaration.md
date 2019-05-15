@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a4c9ae12f2ec30d471c6e73af17567547e4dc421
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598440"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583391"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Deklaracja zmiennej w Visual Basic
 Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcji deklaracji zmiennych jest [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Jej lokalizacja i zawartości należy określić charakterystyki zmiennej.  
@@ -48,7 +48,7 @@ Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcji 
   
 - Typ obiektu lub klasy, zdefiniowanej w aplikacji lub w innej aplikacji  
   
-- A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy, takie jak <xref:System.Windows.Forms.Label> lub <xref:System.Windows.Forms.TextBox>  
+- Klasy .NET Framework, takich jak <xref:System.Windows.Forms.Label> lub <xref:System.Windows.Forms.TextBox>  
   
 - Typ interfejsu, takich jak <xref:System.IComparable> lub <xref:System.IDisposable>  
   

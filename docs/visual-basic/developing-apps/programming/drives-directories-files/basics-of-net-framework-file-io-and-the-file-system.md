@@ -9,25 +9,25 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944001"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591511"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
 
 Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plików i katalogów.
 
-<xref:System.IO> Przestrzeń nazw zawiera <xref:System.IO.File> i <xref:System.IO.Directory> klas, które zapewniają [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] funkcjonalność, która manipuluje plików i katalogów. Ponieważ metody te obiekty są statyczne lub udostępnionych elementów członkowskich, można ich używać bezpośrednio, bez tworzenia wystąpienia klasy najpierw. Skojarzone z tych klas są <xref:System.IO.FileInfo> i <xref:System.IO.DirectoryInfo> klasy, które nie będą niczym nowym użytkownikom `My` funkcji. Aby korzystać z tych klas, muszą w pełni kwalifikowania nazwy lub zaimportować odpowiednie przestrzenie nazw, umieszczając `Imports` instrukcji na początku kodu, których to dotyczy. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
+<xref:System.IO> Przestrzeń nazw zawiera <xref:System.IO.File> i <xref:System.IO.Directory> klasy, które udostępniają funkcje środowiska .NET Framework, które obsługuje pliki i katalogi. Ponieważ metody te obiekty są statyczne lub udostępnionych elementów członkowskich, można ich używać bezpośrednio, bez tworzenia wystąpienia klasy najpierw. Skojarzone z tych klas są <xref:System.IO.FileInfo> i <xref:System.IO.DirectoryInfo> klasy, które nie będą niczym nowym użytkownikom `My` funkcji. Aby korzystać z tych klas, muszą w pełni kwalifikowania nazwy lub zaimportować odpowiednie przestrzenie nazw, umieszczając `Imports` instrukcji na początku kodu, których to dotyczy. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
-> Inne tematy w tej sekcji użyto `My.Computer.FileSystem` zamiast obiektu `System.IO` klasy do pracy z stacje, plików i katalogów. `My.Computer.FileSystem` Obiektu jest przeznaczony głównie do użycia w programach Visual Basic. `System.IO` klasy są przeznaczone do użycia za pomocą dowolnego języka, który obsługuje [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], łącznie z Visual Basic.
+> Inne tematy w tej sekcji użyto `My.Computer.FileSystem` zamiast obiektu `System.IO` klasy do pracy z stacje, plików i katalogów. `My.Computer.FileSystem` Obiektu jest przeznaczony głównie do użycia w programach Visual Basic. `System.IO` klasy są przeznaczone do użycia za pomocą dowolnego języka, który obsługuje program .NET Framework, w tym Visual Basic.
 
 ## <a name="definition-of-a-stream"></a>Definicja Stream
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Używa strumieni w celu obsługi odczytywanie z oraz zapisywanie do plików. Strumień można traktować jako jednowymiarowa zestaw danych ciągłych, która zawiera początek i koniec i gdzie kursor wskazuje bieżącą pozycję w strumieniu.
+.NET Framework używa strumieni umożliwiają odczytywanie z oraz zapisywanie do plików. Strumień można traktować jako jednowymiarowa zestaw danych ciągłych, która zawiera początek i koniec i gdzie kursor wskazuje bieżącą pozycję w strumieniu.
 
 ![Kursor zawiera bieżącą pozycję w strumieniu plików.](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
@@ -45,7 +45,7 @@ Aby uzyskać więcej informacji, zobacz [strumieni redagowanie](../../../../stan
 
 ## <a name="types-of-streams"></a>Typy strumieni
 
-W [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], strumień jest reprezentowany przez <xref:System.IO.Stream> klasy, która stanowi klasa abstrakcyjna, dla wszystkich innych strumieni. Nie można bezpośrednio utworzyć wystąpienie <xref:System.IO.Stream> klasy, ale należy użyć jednej z klas implementuje.
+W .NET Framework, strumień jest reprezentowany przez <xref:System.IO.Stream> klasy, która stanowi klasa abstrakcyjna, dla wszystkich innych strumieni. Nie można bezpośrednio utworzyć wystąpienie <xref:System.IO.Stream> klasy, ale należy użyć jednej z klas implementuje.
 
 Istnieje wiele typów strumieni, ale na potrzeby pracy z pliku wejścia/wyjścia (We/Wy) są najważniejsze typy <xref:System.IO.FileStream> klasy, która umożliwia odczytywanie i zapisywanie do plików, a <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> klasy, która umożliwia tworzenie plików i katalogów w wydzielonej pamięci masowej. Inne strumienie, które mogą być używane podczas pracy z we/wy obejmują:
 
@@ -84,7 +84,7 @@ Poniższa tabela zawiera listę zadań obejmujących dostęp do plików i atrybu
 
 ## <a name="file-permissions"></a>Uprawnienia do pliku
 
-Kontrolowanie dostępu do plików i katalogów może odbywać się przy użyciu <xref:System.Security.Permissions.FileIOPermission> klasy. Może to być szczególnie ważne dla deweloperów korzystających z formularzy sieci Web, które domyślnie są uruchamiane w kontekście konta użytkownika lokalnego specjalne o nazwie ASPNET, który jest tworzony jako część [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] instalacji. W przypadku takich żądań dostępu do aplikacji do zasobu, konto ASPNET ma ograniczoną uprawnienia, które mogą uniemożliwić wykonywanie akcji, takich jak zapisywanie do pliku z aplikacji sieci Web przez użytkownika. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.FileIOPermission>.
+Kontrolowanie dostępu do plików i katalogów może odbywać się przy użyciu <xref:System.Security.Permissions.FileIOPermission> klasy. Może to być szczególnie ważne dla deweloperów korzystających z formularzy sieci Web, które domyślnie są uruchamiane w kontekście specjalne lokalnego konta użytkownika o nazwie ASPNET, który jest tworzony w ramach instalacji programu ASP.NET i .NET Framework. W przypadku takich żądań dostępu do aplikacji do zasobu, konto ASPNET ma ograniczoną uprawnienia, które mogą uniemożliwić wykonywanie akcji, takich jak zapisywanie do pliku z aplikacji sieci Web przez użytkownika. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.FileIOPermission>.
 
 ## <a name="isolated-file-storage"></a>Izolowany magazyn plików
 

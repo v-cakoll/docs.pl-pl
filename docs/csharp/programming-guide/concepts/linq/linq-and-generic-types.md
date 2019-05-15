@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667619"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584410"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ i typy ogólne (C#)
-[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania są oparte na typach ogólnych, które zostały wprowadzone w wersji 2.0 programu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Nie potrzebujesz dogłębnej znajomości ogólne przed rozpoczęciem pisania zapytań. Jednak warto zrozumieć dwa podstawowe pojęcia:  
+[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania są oparte na typach ogólnych, które zostały wprowadzone w wersji 2.0 programu .NET Framework. Nie potrzebujesz dogłębnej znajomości ogólne przed rozpoczęciem pisania zapytań. Jednak warto zrozumieć dwa podstawowe pojęcia:  
   
 1. Podczas tworzenia wystąpienia klasy kolekcji generycznej takich jak <xref:System.Collections.Generic.List%601>, Zamień "T" na typ obiektów, które będzie przechowywać listę. Na przykład listę ciągów jest wyrażona jako `List<string>`oraz listę `Customer` obiektów jest wyrażona jako `List<Customer>`. Listy ogólnej zdecydowanie jest wpisane i udostępnia wiele korzyści w porównaniu z kolekcji, które przechowują elementów jako <xref:System.Object>. Jeśli użytkownik próbuje dodać `Customer` do `List<string>`, otrzymają komunikat o błędzie w czasie kompilacji. Jest łatwa w użyciu ogólnych kolekcji, ponieważ nie trzeba wykonać rzutowanie typów środowiska wykonawczego.  
   

@@ -2,12 +2,12 @@
 title: Śledzenie danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 8f9388d084e9e598e43c0f871b21d05c053e77ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608011"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583783"
 ---
 # <a name="data-tracing-in-adonet"></a>Śledzenie danych w ADO.NET
 
@@ -31,7 +31,7 @@ Aby uzyskać więcej informacji na temat i konfigurowanie zarządzanych śledzen
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Uzyskiwanie dostępu do informacji diagnostycznych w dzienniku zdarzeń rozszerzonych
 
-W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server, dostępu do danych śledzenia ([śledzenie dostępu do danych](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) został zaktualizowany, aby ułatwić ułatwia korelowanie zdarzeń klienta z informacje diagnostyczne, takie jak błędy połączenia z łączność serwera cyklicznego buforu i aplikacji informacje o wydajności w dzienniku zdarzeń rozszerzonych. Aby uzyskać informacje o odczytywaniu dziennika zdarzeń rozszerzonych, zobacz [dane sesji zdarzeń widoku](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
+W .NET Framework Data Provider for SQL Server, dostępu do danych śledzenia ([śledzenie dostępu do danych](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) został zaktualizowany, aby ułatwić ułatwia korelowanie zdarzeń klienta z informacje diagnostyczne, takie jak błędy połączenia z łączność serwera cyklicznego buforu i aplikacji informacje o wydajności w dzienniku zdarzeń rozszerzonych. Aby uzyskać informacje o odczytywaniu dziennika zdarzeń rozszerzonych, zobacz [dane sesji zdarzeń widoku](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
 W przypadku operacji połączenia ADO.NET wyśle klientowi identyfikator połączenia. Jeśli połączenie nie powiedzie się, możesz uzyskać dostęp bufor cykliczny łączności ([rozwiązywania problemów z łącznością w programie SQL Server 2008 buforem pierścienia łączności](https://go.microsoft.com/fwlink/?LinkId=207752)) i Znajdź `ClientConnectionID` pola, a następnie uzyskaj informacje diagnostyczne o Błąd połączenia. Identyfikatory połączenia klienta są rejestrowane w bufor cykliczny, tylko wtedy, gdy wystąpi błąd. (Jeśli połączenie nie powiedzie się przed wysłaniem identyfikatora pakietu, identyfikator połączenia klienta nie będą generowane.) Identyfikator połączenia klienta jest 16-bajtowy identyfikator GUID. Połączenia klienta można także znaleźć IDENTYFIKATORA w danych wyjściowych docelowej rozszerzonych zdarzeń, jeśli `client_connection_id` akcja zostanie dodany do zdarzenia w sesji zdarzeń rozszerzonych. Można włączyć śledzenie dostępu do danych i uruchom ponownie polecenie połączenia i obserwować `ClientConnectionID` pole Śledzenie dostępu do danych, jeśli potrzebujesz dodatkowej pomocy diagnostycznych sterownika klienta.
 

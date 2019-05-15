@@ -8,25 +8,25 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b765cc42f7e060ad11d0e8dcd9991a841cda8b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026704"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586476"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Przekształcenia XSLT przy użyciu klasy XslTransform
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
 
-Celem XSLT jest do przekształcania zawartości w dokumencie źródłowym XML do innego dokumentu, która różni się w formacie lub struktury (na przykład Przekształcanie kodu XML w kodzie HTML do użycia w witrynie sieci Web lub Przekształcanie dokumentu, który zawiera tylko b wymagane pola y aplikacji). Ten proces przekształcania określono przez konsorcjum World Wide Web (W3C)[XSLT w wersji 1.0 zalecenie](https://www.w3.org/TR/1999/REC-xslt-19991116). W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], <xref:System.Xml.Xsl.XslTransform> znaleziono w klasy <xref:System.Xml.Xsl> przestrzeni nazw jest procesora XSLT, który implementuje funkcje tej specyfikacji. Istnieje kilka małych funkcji, które nie zostały wdrożone z zaleceniem W3C specyfikacji XSLT 1.0, na liście [dane wyjściowe z klasy XslTransform](outputs-from-an-xsltransform.md). Na poniższej ilustracji przedstawiono architekturę przekształcania [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].
+Celem XSLT jest do przekształcania zawartości w dokumencie źródłowym XML do innego dokumentu, która różni się w formacie lub struktury (na przykład Przekształcanie kodu XML w kodzie HTML do użycia w witrynie sieci Web lub Przekształcanie dokumentu, który zawiera tylko b wymagane pola y aplikacji). Ten proces przekształcania określono przez konsorcjum World Wide Web (W3C)[XSLT w wersji 1.0 zalecenie](https://www.w3.org/TR/1999/REC-xslt-19991116). W .NET Framework <xref:System.Xml.Xsl.XslTransform> znaleziono w klasy <xref:System.Xml.Xsl> przestrzeni nazw jest procesora XSLT, który implementuje funkcje tej specyfikacji. Istnieje kilka małych funkcji, które nie zostały wdrożone z zaleceniem W3C specyfikacji XSLT 1.0, na liście [dane wyjściowe z klasy XslTransform](outputs-from-an-xsltransform.md). Na poniższej ilustracji przedstawiono architekturę przekształcania programu .NET Framework.
 
 ## <a name="overview"></a>Omówienie
 
 ![Diagram przedstawiający architekturę transformację XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
-Zalecenie XSLT używa XML Path Language (XPath), aby wybrać części dokumentu XML, gdy wyrażenie XPath jest język zapytań, używany do przechodzenia węzłów w drzewie dokumentu. Jak pokazano na diagramie, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementacja XPath jest używana do wybierania części XML przechowywane w kilka klas, takie jak <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>i <xref:System.Xml.XPath.XPathDocument>. <xref:System.Xml.XPath.XPathDocument> Jest magazynem danych zoptymalizowanych XSLT i gdy jest używane z <xref:System.Xml.Xsl.XslTransform>, zapewnia przekształcenia XSLT przy użyciu dobrą wydajność.
+Zalecenie XSLT używa XML Path Language (XPath), aby wybrać części dokumentu XML, gdy wyrażenie XPath jest język zapytań, używany do przechodzenia węzłów w drzewie dokumentu. Jak pokazano na diagramie, wdrożenia programu .NET Framework, XPath jest używany do wybierania części XML przechowywane w kilka klas, takie jak <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>i <xref:System.Xml.XPath.XPathDocument>. <xref:System.Xml.XPath.XPathDocument> Jest magazynem danych zoptymalizowanych XSLT i gdy jest używane z <xref:System.Xml.Xsl.XslTransform>, zapewnia przekształcenia XSLT przy użyciu dobrą wydajność.
 
 Podczas pracy z poniższej listy tabel często używa klas <xref:System.Xml.Xsl.XslTransform> i XPath i ich funkcji.
 

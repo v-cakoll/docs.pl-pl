@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 547c748451e9f7f91dcbe7595d4418835bac9f67
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004032"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582803"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Instrukcje: Rysowanie nieprzezroczystych i półprzezroczystych linii
 Po narysowaniu linii, należy przekazać <xref:System.Drawing.Pen> obiekt <xref:System.Drawing.Graphics.DrawLine%2A> metody <xref:System.Drawing.Graphics> klasy. Jeden z parametrów <xref:System.Drawing.Pen.%23ctor%2A> Konstruktor jest <xref:System.Drawing.Color> obiektu. Aby narysować linię nieprzezroczysty, ustaw składnik alfa koloru do 255. Aby narysować linię półprzezroczystych, należy ustawić składnik alfa na wartość od 1 do 254.  

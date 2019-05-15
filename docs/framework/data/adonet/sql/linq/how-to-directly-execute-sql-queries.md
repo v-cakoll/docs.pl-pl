@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04353361f8356b1d2b2aa3b930bb9b5ab88b9c0b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037768"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583692"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Instrukcje: Bezpośrednie wykonywanie zapytań SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przekłada zapytania, napisany w sparametryzowane zapytania SQL (w postaci tekstu), a następnie wysyła je do programu SQL server dla przetwarzania.  
   
- SQL nie można wykonać różnych metod, które mogą być dostępne lokalnie na aplikację. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] próbuje przekonwertować te metody lokalne równoważne operacje i funkcje, które są dostępne w środowisku SQL. Większość metod i operatory na [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] wbudowane typy mają bezpośredni tłumaczenia poleceń SQL. Niektóre można tworzyć z funkcji, które są dostępne. Tymi, które nie wygenerowały generować wyjątki czasu wykonywania. Aby uzyskać więcej informacji, zobacz [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ SQL nie można wykonać różnych metod, które mogą być dostępne lokalnie na aplikację. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] próbuje przekonwertować te metody lokalne równoważne operacje i funkcje, które są dostępne w środowisku SQL. Większość metod i operatory na wbudowanych typów programu .NET Framework mają bezpośredni tłumaczenia poleceń SQL. Niektóre można tworzyć z funkcji, które są dostępne. Tymi, które nie wygenerowały generować wyjątki czasu wykonywania. Aby uzyskać więcej informacji, zobacz [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
  W przypadkach, gdzie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania jest niewystarczająca dla specjalne zadanie, można użyć <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> metodę, aby wykonać zapytania SQL, a następnie przekonwertować wynik zapytania bezpośrednio do obiektów.  
   

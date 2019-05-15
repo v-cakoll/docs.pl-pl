@@ -6,16 +6,16 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672396"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585941"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i systemu .NET Framework
 
-C# to elegancki i bezpieczny typowo język obiektowy, który umożliwia deweloperom tworzenie różnych bezpiecznych i niezawodnych aplikacji korzystających z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Służy C# do utworzenia klienta Windows aplikacji, usług sieci Web XML, rozpowszechnianych komponentów, aplikacji typu klient serwer, aplikacji baz danych i wielu, m.in. Visual C# zapewnia zaawansowany edytor kodu, dogodne Projektowanie interfejsu użytkownika, zintegrowany debugger i wiele innych narzędzi, aby ułatwić opracowywanie aplikacji opartych na języku C# i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+C#to elegancki i bezpieczny typowo język obiektowy, który umożliwia deweloperom tworzenie różnych bezpiecznych i niezawodnych aplikacji korzystających z programu .NET Framework. Służy C# do utworzenia klienta Windows aplikacji, usług sieci Web XML, rozpowszechnianych komponentów, aplikacji typu klient serwer, aplikacji baz danych i wielu, m.in. Wizualne C# zapewnia zaawansowany edytor kodu, dogodne Projektowanie interfejsu użytkownika, zintegrowany debugger i wiele innych narzędzi, aby ułatwić opracowywanie aplikacji opartych na C# języka i platformy .NET Framework.  
   
 > [!NOTE]
 > Dokumentacja języka Visual C# przyjęto założenie, iż zrozumienie podstawowych pojęć programowania. Jeśli jesteś kompletnym nowicjuszem, możesz chcieć zapoznaj się z Visual C# Express, który jest dostępny w sieci Web. Można również korzystać z książek i zasobów sieci Web o C#, aby uzyskać praktyczne umiejętności programowania.  
@@ -52,7 +52,7 @@ C# to elegancki i bezpieczny typowo język obiektowy, który umożliwia dewelope
 
 ## <a name="net-framework-platform-architecture"></a>Architektura platformy .NET Framework
 
- C# programy uruchamiane [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], integralny składnik systemu Windows, która zawiera wirtualne wykonanie systemu o nazwie środowisko uruchomieniowe języka wspólnego (CLR) i jednolity zbiór bibliotek klas. Środowisko CLR jest komercyjną implementacją przez firmę Microsoft common language infrastructure (CLI), międzynarodowego standardu, który jest podstawą tworzenia środowisk wykonywania i programistycznych w których języki i biblioteki współpracują ze sobą.  
+ C#programy uruchamiane na platformie .NET Framework, integralny składnik systemu Windows, która zawiera wirtualne wykonanie systemu o nazwie środowisko uruchomieniowe języka wspólnego (CLR) i jednolity zbiór bibliotek klas. Środowisko CLR jest komercyjną implementacją przez firmę Microsoft common language infrastructure (CLI), międzynarodowego standardu, który jest podstawą tworzenia środowisk wykonywania i programistycznych w których języki i biblioteki współpracują ze sobą.  
   
  Kodu źródłowego napisanego w języku C# jest skompilowany w języku pośrednim (IL), który jest zgodny ze specyfikacją interfejsu wiersza polecenia. Kod IL i zasoby, takie jak mapy bitowe i ciągi znaków, są przechowywane na dysku w pliku wykonywalnym zwanym zestawem, zwykle z rozszerzeniem .exe lub .dll. Zestaw zawiera manifest, który zawiera informacje dotyczące typów, wersji, kultury i wymagania dotyczące zabezpieczeń zestawu.  
   
@@ -60,9 +60,9 @@ C# to elegancki i bezpieczny typowo język obiektowy, który umożliwia dewelope
   
  ![Od C&#35; źródła kodu w celu wykonania maszyny](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- Współdziałanie języków jest kluczowym elementem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Ponieważ kod IL produkowany przez kompilator języka C# jest zgodny do wspólnych specyfikacji typu (CTS), kod IL generowany z C# mogą współdziałać z kodem, który został wygenerowany z wersji .NET, Visual Basic, Visual C++ lub ponad 20 innymi językami zgodnymi z CTS. Pojedynczy zestaw może zawierać wiele modułów napisanych w różnych językach .NET i typy mogą odwoływać się wzajemnie tak, jakby były one napisane w języku.  
+ Współdziałanie języków jest kluczowym elementem programu .NET Framework. Ponieważ kod IL produkowany przez kompilator języka C# jest zgodny do wspólnych specyfikacji typu (CTS), kod IL generowany z C# mogą współdziałać z kodem, który został wygenerowany z wersji .NET, Visual Basic, Visual C++ lub ponad 20 innymi językami zgodnymi z CTS. Pojedynczy zestaw może zawierać wiele modułów napisanych w różnych językach .NET i typy mogą odwoływać się wzajemnie tak, jakby były one napisane w języku.  
   
- Oprócz wykonywania usług [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] obejmuje również rozbudowaną bibliotekę ponad 4000 klas zorganizowanych w przestrzenie nazw, które zapewniają szeroką gamę przydatnych funkcji wszystko od plików wejściowych i wyjściowych do manipulowania ciągami XML analizowanie kontrolek formularzy Windows Forms. Typowa aplikacja C# używa [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas w szerokim zakresie, aby obsłużyć typowe obowiązku "hydrauliczne".  
+ Oprócz wykonywania usług .NET Framework zawiera również rozbudowaną bibliotekę ponad 4000 klas zorganizowanych w przestrzenie nazw, które zapewniają szeroką gamę przydatnych funkcji związane z plików wejściowych i wyjściowych do manipulowania ciągami XML analizowanie kontrolek formularzy Windows Forms. Typowej C# aplikacja używa biblioteki klas .NET Framework często obsłużyć typowe obowiązku "hydrauliczne".  
   
  Aby uzyskać więcej informacji na temat programu .NET Framework, zobacz [Omówienie programu Microsoft .NET Framework](../../framework/get-started/overview.md).  
   

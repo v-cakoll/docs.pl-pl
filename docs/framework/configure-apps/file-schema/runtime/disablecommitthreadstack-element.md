@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08ffd6ffcb9a8fa356d486f6d2ae1113de0fa682
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5852579758e85bb033af9b6d036fe76444bb8e4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674223"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583854"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack> Element
 Określa, czy stos pełnego wątku jest zatwierdzona, gdy wątek jest uruchomiony.  
@@ -53,7 +53,7 @@ Określa, czy stos pełnego wątku jest zatwierdzona, gdy wątek jest uruchomion
   
 |Element|Opis|  
 |-------------|-----------------|  
-|`configuration`|Element główny w każdym pliku konfiguracji używane przez środowisko uruchomieniowe języka wspólnego i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji.|  
+|`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  

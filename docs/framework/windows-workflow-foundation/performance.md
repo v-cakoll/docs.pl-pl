@@ -2,12 +2,12 @@
 title: Wydajność programu Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592160"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592545"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Wydajność programu Windows Workflow Foundation 4
 
@@ -18,7 +18,7 @@ ms.locfileid: "64592160"
 ## <a name="terminology"></a>Terminologia
  Wersja [!INCLUDE[wf1](../../../includes/wf1-md.md)] wprowadzona w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] zostanie określone jako WF4 dla pozostałej części tego tematu.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] wprowadzono w programie .NET 3.0 i ma kilka drobnych poprawek przy użyciu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] z dodatkiem SP1. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Wersji programu Workflow Foundation będzie wcześniej określano WF3 dla pozostałej części tego tematu. WF3 jest dostarczany w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] side-by-side przy użyciu WF4. Aby uzyskać więcej informacji na temat migrowania artefaktami WF3 WF4 zobacz: [Przewodnik migracji systemu Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF) jest jednolity model programowania firmy Microsoft do budowania aplikacji usługowych. Został po raz pierwszy wprowadzone jako część .NET 3.0 wraz z WF3, a teraz jest jednym z głównych elementach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
+ Windows Communication Foundation (WCF) jest jednolity model programowania firmy Microsoft do budowania aplikacji usługowych. On został po raz pierwszy wprowadzone jako część .NET 3.0 wraz z WF3 i teraz jest jednym z kluczowych składników programu .NET Framework.
 
  Windows Server AppFabric to zestaw zintegrowanych technologii, które ułatwiają tworzenie, skalowanie i zarządzanie nimi w sieci Web i aplikacji złożonych, działających w usługach IIS. Udostępnia narzędzia do monitorowania i zarządzania usługami i przepływami pracy. Aby uzyskać więcej informacji, zobacz [programu Windows Server AppFabric w wersji 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -401,7 +401,7 @@ public class Workflow1 : Activity
 
  WF3 dostarczanych z usługą SQL na podstawie śledzenia.  Ta usługa może pracować w trybie wsadowej i -przetwarzanej.  W trybie-przetwarzanej zdarzenia śledzenia są zapisywane bezpośrednio w bazie danych.  W trybie wsadowej zdarzenia śledzenia są zbierane w tej samej partii jako stan wystąpienia przepływu pracy.  Tryb wsadowej ma lepszą wydajność dla najszerszą gamę projekty przepływu pracy.  Jednak przetwarzanie wsadowe może mieć negatywny wpływ na wydajność, jeśli wiele działań wykonywania przepływu pracy bez utrwalanie i te działania są śledzone.  To sytuacja często może mieć miejsce w pętli, a najlepszym sposobem uniknięcia tego scenariusza jest zaprojektowanie dużą pętli, aby zawierać punkt stanu trwałego.  Wprowadzenie do punktu stanu trwałego w pętli może negatywnie wpłynąć na również pod względem wydajności, więc jest ważne, aby zmierzyć koszty każdego z nich i stworzyć równowagi.
 
- WF4 nie jest dostarczany z usługi śledzenia SQL.  Rejestrowanie śledzenia informacji do usługi SQL database można być lepszego obsługiwane z serwera aplikacji zamiast wbudowane w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. W związku z tym śledzenie SQL jest teraz obsługiwane przez rozwiązania AppFabric.  Dostawcy śledzenia poza pole w WF4 opiera się na śledzenie zdarzeń dla Windows (ETW).
+ WF4 nie jest dostarczany z usługi śledzenia SQL.  Nagrywanie informacje śledzenia bazą danych SQL można być lepszego obsługiwane z serwera aplikacji zamiast wbudowana w programie .NET Framework. W związku z tym śledzenie SQL jest teraz obsługiwane przez rozwiązania AppFabric.  Dostawcy śledzenia poza pole w WF4 opiera się na śledzenie zdarzeń dla Windows (ETW).
 
  ETW to system zdarzeń w poziomie jądra i niskim opóźnieniu wbudowane w Windows.  Używa modelu dostawcy i odbiorcy, który sprawia, że można tylko pociągnąć za sobą spadek do śledzenia zdarzeń po faktycznie konsumenta.  Oprócz zdarzeń jądra, np. procesora, dysku, pamięci i użycie sieci wiele aplikacji oraz korzystać z funkcji ETW.  Zdarzenia ETW są bardziej wydajne niż liczników wydajności, zdarzenia, które można dostosować do aplikacji.  Zdarzenie może zawierać tekst, takie jak identyfikator przepływu pracy lub komunikat informacyjny.  Ponadto zdarzenia są skategoryzowane przy użyciu masek bitowych, tak aby używania tylko podzbiór zdarzeń mają mniej wpływ na wydajność, niż przechwytywania wszystkich zdarzeń.
 

@@ -630,3 +630,6 @@
             - name: Samouczki
               tocHref: /dotnet/machine-learning/tutorials/
               topicHref: /dotnet/machine-learning/tutorials/index
+        - name: Przewodnik platformy .NET dla platformy Apache Spark
+          tocHref: /dotnet/spark/
+          topicHref: /dotnet/spark/index

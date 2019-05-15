@@ -1,0 +1,23 @@
+- name: Przewodnik platformy .NET dla platformy Apache Spark
+  href: index.yml
+- name: Omówienie
+  expanded: true
+  items:
+    - name: Co to jest platforma .NET dla platformy Apache Spark?
+      href: what-is-apache-spark-dotnet.md
+- name: Samouczki
+  items:
+    - name: Wprowadzenie
+      href: tutorials/get-started.md
+- name: Tematy pomocy
+  items:
+    - name: Odwołanie do biblioteki API
+      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+- name: Resources
+  items:
+    - name: Omówienie zasobów
+      href: resources/index.md
+    - name: GitHub
+      href: 'https://github.com/dotnet/spark'
+    - name: Stack Overflow
+      href: 'https://stackoverflow.com/questions/tagged/spark-dotnet'

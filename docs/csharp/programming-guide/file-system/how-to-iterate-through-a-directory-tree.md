@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710811"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585782"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Instrukcje: Iteracyjne przeglądanie drzewa katalogów (C# Programming Guide)
 Wyrażenie "Iterowanie drzewa katalogów" oznacza, że dostęp do każdego pliku w każdej zagnieżdżonej podkatalogu w folderze określonym katalogu głównym, na dowolnym poziomie. Zawsze, nie trzeba otwierać każdego pliku. Możesz po prostu pobrać nazwę pliku lub podkatalog jako `string`, lub można pobrać dodatkowe informacje w formie <xref:System.IO.FileInfo?displayProperty=nameWithType> lub <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> obiektu.  
   
 > [!NOTE]
->  W Windows warunki "directory" i "folder" są używane zamiennie. Większość dokumentacji i użytkownika tekst interfejsu używany jest termin "folder", ale [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas używany jest termin "directory".  
+>  W Windows warunki "directory" i "folder" są używane zamiennie. Większość dokumentacji i użytkownika tekst interfejsu używany jest termin "folder", ale biblioteki klas .NET Framework używa termin "directory".  
   
  W najprostszym przypadku, w którym można ustalić, czy masz uprawnienia dostępu do wszystkich katalogów w określonym katalogu głównym, można użyć `System.IO.SearchOption.AllDirectories` flagi. Ta flaga zwraca wszystkie podkatalogi zagnieżdżonych, pasujących do wzorca określonego. Poniższy przykład pokazuje, jak użyć tej flagi.  
   

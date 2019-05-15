@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: 4fbc97502431b681a77d58a112344287f582ff0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99b6b8615a16715caaf95109cfbba3ba389946fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624141"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591355"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Instrukcje: dodawanie kontrolki do elementu ToolStripContentPanel
 Możesz programowo dodać co najmniej jedną kontrolkę do <xref:System.Windows.Forms.ToolStripContentPanel>.  
@@ -27,8 +27,6 @@ Możesz programowo dodać co najmniej jedną kontrolkę do <xref:System.Windows.
  Poniższy przykład kodu wymaga:  
   
 - Odwołania do zestawów systemu, dane systemowe i przestrzeń nazw System.Windows.Forms.  
-  
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.
   
 ## <a name="see-also"></a>Zobacz także
 

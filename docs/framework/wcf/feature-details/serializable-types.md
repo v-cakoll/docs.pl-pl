@@ -2,12 +2,12 @@
 title: Typy z możliwością serializowania
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586154"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591676"
 ---
 # <a name="serializable-types"></a>Typy z możliwością serializowania
 Domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializuje wszystkich typów publicznie widoczne. Wszystkie właściwości publiczne odczytu/zapisu i pola tego typu są serializowane.  
@@ -36,7 +36,7 @@ Domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializuj
 - Aby "zrezygnować" nad procesem serializacji dla pola, właściwości lub publiczne elementy członkowskie, zastosuj <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> atrybutu tego elementu członkowskiego.  
   
 ## <a name="inheritance"></a>Dziedziczenie  
- Nieoznaczone typy (typy bez <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu) może dziedziczyć z typów, które mają atrybut; Jednakże, odwrotna nie jest dozwolony: typy z atrybutem nie może dziedziczyć z nieoznaczone typy. Ta zasada jest wymuszana głównie w celu zapewnienia zgodności z poprzednimi wersjami przy użyciu kodu napisanego w starszych wersjach [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Nieoznaczone typy (typy bez <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu) może dziedziczyć z typów, które mają atrybut; Jednakże, odwrotna nie jest dozwolony: typy z atrybutem nie może dziedziczyć z nieoznaczone typy. Ta zasada jest wymuszana głównie w celu zapewnienia zgodności z poprzednimi wersjami przy użyciu kodu napisanego w starszych wersjach programu .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz także
 

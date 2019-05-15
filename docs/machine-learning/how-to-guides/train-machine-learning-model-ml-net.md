@@ -1,18 +1,18 @@
 ---
-title: Nauczanie i ocena modelu
+title: Trenowanie i ocenianie modelu
 description: Dowiedz się, jak nauczanie i ocena modeli uczenia maszynowego w strukturze ML.NET
 ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abb17aad6091cd6a5f0b6f82835011d01b40153
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3a3f1f672ed078754162dc377cf5c239d206b715
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063636"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557854"
 ---
-# <a name="train-and-evaluate-a-model"></a>Nauczanie i ocena modelu
+# <a name="train-and-evaluate-a-model"></a>Trenowanie i ocenianie modelu
 
 Informacje o sposobie tworzenia modeli uczenia maszynowego, wyodrębnić parametry nauczony i zmierzyć wydajność za pomocą platformy ML.NET. Mimo że w tym przykładzie szkolenie modeli model regresji, pojęcia mają zastosowanie w większości innych algorytmów.
 
@@ -145,7 +145,7 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Wyodrębnianie parametrów modelu
 
-Po model jest uczony, Wyodrębnij nauczony [ `ModelParameters` ](xref:Microsoft.ML.Trainers.ModelParametersBase`1) kontroli lub ponownego szkolenia. [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) Obciążenia i nauczony lub wagi trenowanego modelu. 
+Po model jest uczony, Wyodrębnij nauczony [ `ModelParameters` ](xref:Microsoft.ML.Trainers.ModelParametersBase%601) kontroli lub ponownego szkolenia. [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) Obciążenia i nauczony lub wagi trenowanego modelu. 
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;

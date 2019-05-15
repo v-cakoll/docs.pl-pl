@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: c18c6df29f79e9bde8474fa38e45dea03d4e0020
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe84cabfaabdc14c7dec6cb69653d41b4c6f6416
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009173"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590160"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML
-HTML zarządzanych document object model (DOM) zapewnia otoki, na podstawie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla klas kodu HTML, udostępnianych przez program Internet Explorer. Korzystając z tych klas do manipulowania strony HTML, hostowana w <xref:System.Windows.Forms.WebBrowser> kontroli, lub tworzyć nowe strony, od początku.  
+HTML zarządzanych document object model (DOM) zapewnia otoki, w oparciu o program .NET Framework dla klas kodu HTML, udostępnianych przez program Internet Explorer. Korzystając z tych klas do manipulowania strony HTML, hostowana w <xref:System.Windows.Forms.WebBrowser> kontroli, lub tworzyć nowe strony, od początku.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: Dostęp do modelu obiektów zarządzanych dokumentów HTML](how-to-access-the-managed-html-document-object-model.md)  

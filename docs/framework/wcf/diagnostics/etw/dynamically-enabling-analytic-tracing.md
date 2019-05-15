@@ -2,12 +2,12 @@
 title: Dynamiczne włączanie śledzenia danych analitycznych
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: fc157e6612a59640aef557b57e5e2dd9e91cb529
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 677a97cedc766393a113f64554ce498547d4a231
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584330"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592096"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Dynamiczne włączanie śledzenia danych analitycznych
 Za pomocą narzędzia, które są dostarczane z systemem operacyjnym Windows, można włączyć lub wyłączyć śledzenie dynamicznie przy użyciu śledzenie zdarzeń dla Windows (ETW). Dla wszystkich [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] usług Windows Communication Foundation (WCF), może być śledzenie danych analitycznych, włączone i wyłączone dynamicznie bez modyfikowania pliku Web.config aplikacji i ponowne uruchomienie usługi. Umożliwia to aplikacji, który emituje zdarzenia śledzenia, aby zachować prawidłowe.  
@@ -31,11 +31,11 @@ Za pomocą narzędzia, które są dostarczane z systemem operacyjnym Windows, mo
 |`EndToEndMonitoring`|Zdarzenia używane do obsługi śledzenia przepływu komunikatów.|  
 |`Troubleshooting`|Bardziej szczegółowe zdarzenia wokół punkty rozszerzeń programu WCF.|  
   
- Druga grupa słowa kluczowe zdefiniować które składnik [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitowane zdarzenia.  
+ Druga grupa słowa kluczowe definiują, który składnik .NET Framework emitowane zdarzenia.  
   
 |Słowo kluczowe|Opis|  
 |-------------|-----------------|  
-|`UserEvents`|Zdarzenia wyemitowane przez kod użytkownika i nie [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|`UserEvents`|Zdarzenia wyemitowane przez kod użytkownika, a nie programu .NET Framework.|  
 |`ServiceModel`|Zdarzenia wyemitowane przez środowisko wykonawcze programu WCF.|  
 |`ServiceHost`|Zdarzenia wyemitowane przez hosta usługi.|  
 |`WCFMessageLogging`|Zdarzenia rejestrowania komunikatów WCF.|  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: ab4a52409e1d24c053184cf65a5e11f735ad89b9
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211502"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591009"
 ---
 # <a name="events-overview-windows-forms"></a>Formularze systemu Windows — przegląd zdarzeń
 Zdarzenie jest działaniem, które można odpowiedzieć lub "handle" w kodzie. Zdarzenia mogą być generowane przez działanie użytkownika, takie jak kliknięcie myszą lub naciśnięciu klawisza; w kodzie programu lub przez system.
@@ -29,7 +29,7 @@ Zdarzenie jest działaniem, które można odpowiedzieć lub "handle" w kodzie. Z
  Aby uzyskać informacje o tym, jak podnieść i zużyć zdarzenie, zobacz [zdarzenia](../../standard/events/index.md).
 
 ## <a name="delegates-and-their-role"></a>Delegaci i ich roli
- Obiekty delegowane są często używane w ramach klasy [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tworzyć mechanizmy obsługi zdarzeń. Delegaty około równoważne do wskaźników funkcji, często używane w [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] i inne języki zorientowane obiektowo. W przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo, bezpieczny i bezpieczne. Dodatkowo, gdy wskaźnik funkcji zawiera tylko odwołanie do określonej funkcji, delegata składa się z odwołaniem do obiektu, a odwołuje się do co najmniej jednej metody w obrębie obiektu.
+ Obiekty delegowane są często używane w ramach platformy .NET do tworzenia mechanizmów obsługi zdarzeń klasy. Delegaty około równoważne do wskaźników funkcji, często używane w [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] i inne języki zorientowane obiektowo. W przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo, bezpieczny i bezpieczne. Dodatkowo, gdy wskaźnik funkcji zawiera tylko odwołanie do określonej funkcji, delegata składa się z odwołaniem do obiektu, a odwołuje się do co najmniej jednej metody w obrębie obiektu.
 
  Ten model zdarzeń wykorzystuje *delegatów* powiązać metod, które są używane do obsługi tych zdarzeń. Delegat umożliwia innych klas zarejestrować dla powiadomień o zdarzeniach, określając metody obsługi. Po wystąpieniu zdarzenia, delegat wywołuje powiązanej metody. Aby uzyskać więcej informacji na temat definiowania obiektów delegowanych, zobacz [zdarzenia](../../standard/events/index.md).
 

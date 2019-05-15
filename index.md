@@ -6,12 +6,12 @@ title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 01472d5586becf0bca2333557a05ddb10ee8b607
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1e60b9a9b642542c543da2520906b59a59ddff5
+ms.sourcegitcommit: bad2d2f2311cc689130f15a7500060f446c8d8c7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794592"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65188808"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -88,7 +88,7 @@ ms.locfileid: "61794592"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/net.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -107,7 +107,7 @@ ms.locfileid: "61794592"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/netcore.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet-core.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -128,7 +128,7 @@ ms.locfileid: "61794592"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/netframework.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet-framework.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -148,7 +148,7 @@ ms.locfileid: "61794592"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/xamarin.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/xamarin-icon.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -168,7 +168,7 @@ ms.locfileid: "61794592"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/csharp.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/csharp-icon.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -188,7 +188,7 @@ ms.locfileid: "61794592"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/fsharp.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/fsharp-icon.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -207,7 +207,7 @@ ms.locfileid: "61794592"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/vb.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/visual-basic.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -226,7 +226,7 @@ ms.locfileid: "61794592"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/mldotnet.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/machine-learning-dotnet.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -235,6 +235,25 @@ ms.locfileid: "61794592"
                                                 <p><a href="/dotnet/machine-learning/resources">Zasoby</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Słownik</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">Dokumentacja interfejsów API ML.NET</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/dotnet/images/hub/netspark.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/dotnet/spark">Przewodnik platformy .NET dla platformy Apache Spark</a></h3>
+                                                <p><a href="/dotnet/spark/tutorials">Samouczki</a></p>
+                                                <p><a href="/dotnet/spark/resources">Zasoby</a></p>
+                                                <p><a href="/dotnet/api?view=spark-dotnet">Dokumentacja interfejsu API platformy .NET dla platformy Apache Spark</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -716,6 +735,25 @@ ms.locfileid: "61794592"
                                                 <div class="cardText">
                                                     <h3>Azure Machine Learning</h3>
                                                     <p>Udostępniaj sztuczną inteligencję wszystkim użytkownikom dzięki kompleksowej, skalowalnej, zaufanej platformie z funkcjami eksperymentowania i zarządzania modelami.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/spark/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/swimlane-net-spark.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Platforma .NET dla platformy Apache Spark</h3>
+                                                    <p>Przetwarzaj partie danych, strumienie w czasie rzeczywistym, dane uczenia maszynowego i zapytania ad-hoc w miejscu, w którym jest napisany kod platformy .NET.</p>
                                                 </div>
                                             </div>
                                         </div>

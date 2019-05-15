@@ -2,12 +2,12 @@
 title: 'Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667577"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584366"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (C#)
 Ten przykład przedstawia sposób Scalanie zawartości dwóch plików, a następnie utwórz zestaw nowych plików, które organizują dane w nowy sposób.  
@@ -126,7 +126,7 @@ class SplitWithGroups
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
- Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+Tworzenie C# konsoli projekt aplikacji z `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.
   
 ## <a name="see-also"></a>Zobacz także
 

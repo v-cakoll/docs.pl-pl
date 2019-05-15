@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638643"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590541"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
 Windows Communication Foundation (WCF) zapewnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli już używasz logiki oparty na komponentach aplikacji hostowanej w modelu COM +, można użyć programu WCF do rozszerzenia Twojej istniejącej logiki, a nie po prostu go do. Typowym scenariuszem jest, gdy chcesz udostępnić istniejącej logiki biznesowej modelu COM + lub korporacyjnych usług za pośrednictwem usług sieci Web.  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) zapewnia bogate środowisko tworzenia apl
   
 - Interfejsy, które przekazuj odwołania do obiektów jako parametrów - następujące podejście odwołanie do obiektu ograniczony zostanie omówione w sekcji ograniczoną obsługę odwołanie do obiektu.  
   
-- Interfejsy, które przekazywania typów, które nie są zgodne z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] konwersje współdziałania COM.  
+- Interfejsy, które przekazywania typów, które nie są zgodne z konwersji współdziałania modelu COM programu .NET Framework.  
   
 - Interfejsy na potrzeby aplikacji, które mają włączone w przypadku hostowania w modelu COM + Tworzenie pul aplikacji.  
   

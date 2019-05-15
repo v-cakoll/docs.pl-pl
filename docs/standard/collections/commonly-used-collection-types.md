@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910315"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589887"
 ---
 # <a name="commonly-used-collection-types"></a>Często używane typy kolekcji
 Typy kolekcji są typowe przykłady kolekcji danych, takich jak tabele zbędnych danych, kolejki, stosów, zbiory, słowniki i listy.  
@@ -36,10 +36,10 @@ Typy kolekcji są typowe przykłady kolekcji danych, takich jak tabele zbędnych
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Kolekcje i struktury danych](../../../docs/standard/collections/index.md)|W tym artykule omówiono różnych typów kolekcji dostępnych w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], w tym stosów, kolejek, list, tablic i słowników.|  
+|[Kolekcje i struktury danych](../../../docs/standard/collections/index.md)|W tym artykule omówiono różne typy kolekcji dostępnych w programie .NET Framework, w tym stosów, kolejek, list, tablic i słowników.|  
 |[Typy kolekcji: słownikowy i tabela skrótów](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Opisuje funkcje typów rodzajowych i nierodzajowych słownika bazujących na skrótach.|  
 |[Sortowane typy kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|W tym artykule opisano klasy, które udostępniają funkcje sortowania w przypadku list i zestawów.|  
-|[Typy ogólne](../../../docs/standard/generics/index.md)|Zawiera opis funkcji ogólne, w tym ogólnych kolekcji, delegatów i interfejsów udostępnianych przez [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Zawiera łącza do dokumentacji funkcji C#, Visual Basic i Visual C++, a także do wspierających technologii, takich jak odbicie.|  
+|[Typy ogólne](../../../docs/standard/generics/index.md)|Zawiera opis funkcji ogólne, w tym ogólnych kolekcji, delegatów i interfejsów udostępnianych przez program .NET Framework. Zawiera łącza do dokumentacji funkcji C#, Visual Basic i Visual C++, a także do wspierających technologii, takich jak odbicie.|  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Collections?displayProperty=nameWithType>  

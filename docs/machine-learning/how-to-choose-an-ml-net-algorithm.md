@@ -4,12 +4,12 @@ description: Dowiedz się, jak wybrać algorytm strukturze ML.NET modelu uczenia
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066185"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557774"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Jak wybrać algorytm strukturze ML.NET
 
@@ -81,8 +81,8 @@ Te Instruktorzy utworzyć trainer wieloklasowej z trainer binarnego. Za pomocą 
 
 |Algorytm|Właściwości|Instruktorzy|
 |---------|----------|--------|
-|Jeden, a wszystkie|Ta wieloklasowej klasyfikatora przygotowuje jeden klasyfikator binarny dla każdej klasy, która odróżnia tę klasę od innych klas. Jest ograniczona w skalowaniu liczby klas do kategoryzowania|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Parowania sprzężenia|Ta wieloklasowej klasyfikatora przygotowuje to algorytm klasyfikacji binarnej na każdej pary klasy. Jest ograniczona w skalowaniu liczby klas, ponieważ każda kombinacja dwóch klas muszą być uczony.|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|Jeden, a wszystkie|Ta wieloklasowej klasyfikatora przygotowuje jeden klasyfikator binarny dla każdej klasy, która odróżnia tę klasę od innych klas. Jest ograniczona w skalowaniu liczby klas do kategoryzowania|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|Parowania sprzężenia|Ta wieloklasowej klasyfikatora przygotowuje to algorytm klasyfikacji binarnej na każdej pary klasy. Jest ograniczona w skalowaniu liczby klas, ponieważ każda kombinacja dwóch klas muszą być uczony.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
@@ -107,4 +107,3 @@ Te Instruktorzy utworzyć trainer wieloklasowej z trainer binarnego. Za pomocą 
 |Właściwości|Instruktorzy|
 |----------|--------|
 |Użyj tego trainer klasyfikacji binarnej do linii bazowej wydajności innych instruktorów. Zaczęła obowiązywać, metryki innych Instruktorzy powinna być lepsze niż wcześniejsze instruktora. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

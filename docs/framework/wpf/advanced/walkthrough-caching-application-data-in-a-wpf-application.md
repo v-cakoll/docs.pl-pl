@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630774"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591208"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.
 
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Udostępnia klasy, które umożliwiają używanie buforowania w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji. W ramach tych zajęć, znajdują się w <xref:System.Runtime.Caching> przestrzeni nazw.
+ .NET Framework zawiera klasy, które umożliwiają używanie buforowania w aplikacjach .NET Framework. W ramach tych zajęć, znajdują się w <xref:System.Runtime.Caching> przestrzeni nazw.
 
 > [!NOTE]
->  <xref:System.Runtime.Caching> Przestrzeń nazw jest nowa w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Ta przestrzeń nazw sprawia, że pamięć podręczna jest dostępna dla wszystkich [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji. W poprzednich wersjach [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], pamięć podręczna była dostępna tylko w <xref:System.Web> przestrzeni nazw i dlatego wymagane zależności klas programu ASP.NET.
+>  <xref:System.Runtime.Caching> Przestrzeń nazw jest nowa w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Ta przestrzeń nazw sprawia, że pamięć podręczna jest dostępna dla wszystkich aplikacji .NET Framework. W poprzednich wersjach programu .NET Framework, pamięć podręczna była dostępna tylko w <xref:System.Web> przestrzeni nazw i dlatego wymagane zależności klas programu ASP.NET.
 
- W tym instruktażu pokazano, jak korzystać z funkcji buforowania, która jest dostępna w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] jako część [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W instruktażu pamięci podręcznej zawartość pliku tekstowego.
+ W tym instruktażu pokazano, jak korzystać z funkcji buforowania, która jest dostępna w programie .NET Framework jako część [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W instruktażu pamięci podręcznej zawartość pliku tekstowego.
 
  Zadania przedstawione w niniejszym przewodniku to m.in.:
 
@@ -67,7 +67,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 4. W **nowy projekt** okno dialogowe, wybierz opcję **aplikacji WPF**.
 
     > [!NOTE]
-    >  Jeśli nie widzisz **aplikacji WPF** szablonu, upewnij się, że są przeznaczone dla wersji programu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] WPF, która obsługuje. W **nowy projekt** okno dialogowe, wybierz opcję [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] z listy.
+    >  Jeśli nie widzisz **aplikacji WPF** szablonu, upewnij się, że są przeznaczone dla wersji programu .NET Framework, która obsługuje WPF. W **nowy projekt** okno dialogowe, wybierz opcję [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] z listy.
 
 5. W **nazwa** tekstu wprowadź nazwę dla projektu. Na przykład można wprowadzić **WPFCaching**.
 

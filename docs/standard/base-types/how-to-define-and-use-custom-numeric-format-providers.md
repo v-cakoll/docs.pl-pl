@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634241"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590470"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia szeroką kontrolę nad reprezentację ciągu wartości liczbowych. Obsługuje następujące funkcje dostosowywania format wartości liczbowe:  
+.NET Framework zapewnia szeroką kontrolę nad reprezentację ciągu wartości liczbowych. Obsługuje następujące funkcje dostosowywania format wartości liczbowe:  
   
 - Ciągi standardowego formatu liczb, które zawierają zestaw wstępnie zdefiniowanych formatów do konwertowania liczb na jego reprezentację ciągu. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma `format` parametru. Aby uzyskać więcej informacji, zobacz [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64634241"
   
 - Niestandardowe <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.NumberFormatInfo> obiektów, które zdefiniować symbole i formatowanie wzorców służącego do wyświetlania ciągów reprezentujących wartości numeryczne. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Int32.ToString%2A>, która ma `provider` parametru. Zazwyczaj `provider` parametr jest używany do określenia formatowanie specyficzne dla kultury.  
   
- W niektórych przypadkach (na przykład gdy aplikacji musi wyświetlić numer konta sformatowane, numer identyfikacyjny lub kod pocztowy) tych trzech metod nie mają zastosowania. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Oferuje również możliwość definiowania formatowania obiektu, który nie jest ani <xref:System.Globalization.CultureInfo> ani <xref:System.Globalization.NumberFormatInfo> obiektu, aby określić sposób formatowania wartości liczbowej. Ten temat zawiera szczegółowe instrukcje dotyczące wdrażania takiego obiektu i przedstawiono przykład formatowania numerów telefonów.  
+ W niektórych przypadkach (na przykład gdy aplikacji musi wyświetlić numer konta sformatowane, numer identyfikacyjny lub kod pocztowy) tych trzech metod nie mają zastosowania. .NET Framework oferuje również możliwość definiowania formatowania obiektu, który nie jest ani <xref:System.Globalization.CultureInfo> ani <xref:System.Globalization.NumberFormatInfo> obiektu, aby określić sposób formatowania wartości liczbowej. Ten temat zawiera szczegółowe instrukcje dotyczące wdrażania takiego obiektu i przedstawiono przykład formatowania numerów telefonów.  
   
 ### <a name="to-define-a-custom-format-provider"></a>Aby zdefiniować dostawcę formatu niestandardowego  
   
@@ -87,9 +87,6 @@ ms.locfileid: "64634241"
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
  W tym przykładzie metoda, która implementuje <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> ma służyć jako metoda wywołania zwrotnego dla <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody. W związku z tym, sprawdza, czy `formatProvider` parametru do określenia, czy zawiera on odwołanie do bieżącego `TelephoneFormatter` obiektu. Jednak metoda może być wywoływana bezpośrednio z kodu. W takim przypadku można użyć `formatProvider` parametru do podania <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.NumberFormatInfo> obiekt, który dostarcza informacje o formatowaniu specyficzne dla kultury.  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w programie Visual Studio, należy umieścić w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
 

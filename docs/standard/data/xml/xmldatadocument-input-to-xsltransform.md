@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a917c0f64a8e61df1521d361ed0c8821fee295b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 811c513e6c8c613801c0ca60c11a9e5577672183
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698693"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592764"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDataDocument klasy XslTransform
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
   
- Microsoft [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementuje Model obiektu dokumentu (DOM) XML, aby zapewnić dostęp do danych w dokumentach XML i dodatkowych klas do odczytu, zapisu i nawigacja w dokumentach XML. <xref:System.Xml.XmlDataDocument>Znajdujące się w <xref:System.Xml> przestrzeni nazw, zapewnia możliwość zsynchronizować z danymi relacyjnymi w relacyjnych dostęp do danych <xref:System.Data.DataSet>. Jednocześnie można wyświetlać i manipulowania XML ze strukturą za pośrednictwem relacyjnych reprezentacja <xref:System.Data.DataSet> i umożliwiają manipulowanie XML lub częściową strukturą, za pośrednictwem modelu DOM reprezentacja <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XmlDataDocument> w związku z tym przekracza granice XML i relacyjnych podejść.  
+ Microsoft .NET Framework implementuje Model obiektu dokumentu (DOM) XML, aby zapewnić dostęp do danych w dokumentach XML i dodatkowych klas do odczytu, zapisu i nawigacja w dokumentach XML. <xref:System.Xml.XmlDataDocument>Znajdujące się w <xref:System.Xml> przestrzeni nazw, zapewnia możliwość zsynchronizować z danymi relacyjnymi w relacyjnych dostęp do danych <xref:System.Data.DataSet>. Jednocześnie można wyświetlać i manipulowania XML ze strukturą za pośrednictwem relacyjnych reprezentacja <xref:System.Data.DataSet> i umożliwiają manipulowanie XML lub częściową strukturą, za pośrednictwem modelu DOM reprezentacja <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XmlDataDocument> w związku z tym przekracza granice XML i relacyjnych podejść.  
   
  Jeśli dane są przechowywane w strukturze relacyjnej, ma być użyty jako wejście do transformacji XSLT można załadować danych relacyjnych w <xref:System.Data.DataSet> i powiąż ją z <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XPath.XPathNavigator>, Dane wejściowe <xref:System.Xml.Xsl.XslTransform>, jest wdrażana w <xref:System.Xml.XmlDataDocument> za pośrednictwem <xref:System.Xml.XPath.IXPathNavigable> interfejsu. Wykonując opartego na danych relacyjnych, załadowanie go do <xref:System.Data.DataSet>i za pomocą synchronizacji w ramach <xref:System.Xml.XmlDataDocument>, dane relacyjne mogą teraz zawierać przekształcenia XSLT na nich wykonane.  
   

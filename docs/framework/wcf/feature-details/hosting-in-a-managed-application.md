@@ -2,15 +2,15 @@
 title: Hosting w aplikacji zarządzanej
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1f4d91994ba44407ff5c93dbd34aa0bdef9332b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855832"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591734"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosting w aplikacji zarządzanej
-Usługi Windows Communication Foundation (WCF) mogą być hostowane w dowolnym [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji. Usługi hostingowe własnym jest najbardziej elastyczna opcja hostingu, ponieważ wymaga co najmniej infrastruktury do wdrożenia. Jednak to również najmniej niezawodne opcji hostingu, ponieważ aplikacje zarządzane nie udostępniają zaawansowane hostingu i funkcji do zarządzania inne opcje hostingu w programie WCF, takimi jak usługi Internet Information Services (IIS) i Windows.  
+Usługi Windows Communication Foundation (WCF) mogą być hostowane w dowolnej aplikacji .NET Framework. Usługi hostingowe własnym jest najbardziej elastyczna opcja hostingu, ponieważ wymaga co najmniej infrastruktury do wdrożenia. Jednak to również najmniej niezawodne opcji hostingu, ponieważ aplikacje zarządzane nie udostępniają zaawansowane hostingu i funkcji do zarządzania inne opcje hostingu w programie WCF, takimi jak usługi Internet Information Services (IIS) i Windows.  
   
  Można utworzyć samodzielnie hostowanej usługi, należy utworzyć i otworzyć wystąpienie <xref:System.ServiceModel.ServiceHost>, który uruchamia usługę nasłuchiwać komunikatów. Aby uzyskać więcej informacji, zobacz [jak: Hostowanie usługi WCF w zarządzanej aplikacji](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   

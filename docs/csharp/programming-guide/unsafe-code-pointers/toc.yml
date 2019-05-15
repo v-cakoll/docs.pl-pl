@@ -4,12 +4,12 @@
     - name: Bufory o ustalonym rozmiarze
       href: fixed-size-buffers.md
     - name: Typy wskaźnika
-      href: pointer-types.md
       items:
+        - name: Omówienie
+          href: pointer-types.md
         - name: Konwersje wskaźników
           href: pointer-conversions.md
         - name: Wyrażenia wskaźników
-          href: pointer-expressions.md
           items:
             - name: 'Instrukcje: uzyskiwanie wartości zmiennej wskaźnikowej'
               href: how-to-obtain-the-value-of-a-pointer-variable.md
@@ -20,7 +20,6 @@
             - name: 'Instrukcje: uzyskiwanie dostępu do elementu tablicy za pomocą wskaźnika'
               href: how-to-access-an-array-element-with-a-pointer.md
             - name: Manipulowanie wskaźnikami
-              href: manipulating-pointers.md
               items:
                 - name: 'Instrukcje: inkrementacja i dekrementacja wskaźników'
                   href: how-to-increment-and-decrement-pointers.md

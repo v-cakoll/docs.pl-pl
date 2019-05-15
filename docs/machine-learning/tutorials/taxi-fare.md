@@ -3,15 +3,15 @@ title: 'Samouczek: Przewidywanie ceny, używając algorytmu regresji'
 description: W tym samouczku pokazano, jak do zbudowania modelu regresji przy użyciu strukturze ML.NET do prognozowania cen, w szczególności taryf taksówek w Nowym Jorku.
 author: jralexander
 ms.author: johalex
-ms.date: 05/06/2019
+ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e46ab2ed9cace9d0769034356db425604f0ea06f
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6fda4e35d6f52b264002a7fc91da3e5f7256fc11
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063401"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557797"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-model-with-mlnet"></a>Samouczek: Przewidywanie ceny za pomocą modelu regresji za pomocą platformy ML.NET
 
@@ -127,7 +127,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>Obciążenia i przekształcania danych
 
-Używa strukturze ML.NET [klasy IDataView](xref:Microsoft.ML.IDataView) jako dane tabelaryczne numeryczny lub tekst opisujący sposób elastyczne i wydajne. `IDataView` można załadować albo pliki tekstowe lub w czasie rzeczywistym (na przykład SQL bazy danych lub pliki dziennika). Dodaj następujący kod jako pierwsza linia `LoadData()` metody:
+Używa strukturze ML.NET [klasy IDataView](xref:Microsoft.ML.IDataView) jako dane tabelaryczne numeryczny lub tekst opisujący sposób elastyczne i wydajne. `IDataView` można załadować albo pliki tekstowe lub w czasie rzeczywistym (na przykład SQL bazy danych lub pliki dziennika). Dodaj następujący kod jako pierwsza linia `Train()` metody:
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 

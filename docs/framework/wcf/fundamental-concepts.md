@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429e019d87800c9487f73ebf37c4d7870835b323
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637270"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591949"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
 Ten dokument zawiera ogólny widok architektury usług Windows Communication Foundation (WCF). Jej celem jest zrozumienie podstawowych pojęć i jak one współdziałają ze sobą. Aby uzyskać samouczek dotyczący tworzenia najprostszym wersję usługi i klienta WCF, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md). Programowanie WCF można znaleźć [programowanie WCF Basic](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -126,7 +126,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Konkretną implementację elementu powiązania. Powiązanie reprezentuje konfiguracji, a kanał jest implementacja skojarzone z tej konfiguracji. Dlatego jest skojarzony z każdego elementu powiązania kanału. Kanały stosu na siebie, aby utworzyć konkretną implementację powiązania: stos kanału.  
   
  Klienta programu WCF  
- Konstrukcja aplikacji klienckiej, która udostępnia operacje usługi jako metody (w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] programowania w języku, np. Visual Basic lub Visual C#). Każda aplikacja może obsługiwać klienta WCF, łącznie z aplikacją, który jest hostem usługi. W związku z tym istnieje możliwość utworzyć usługę, która obejmuje klienci WCF innych usług.  
+ Konstrukcja aplikacji klienckiej, która udostępnia operacje usługi jako metody (platforma .NET Framework programowania w języku, np. Visual Basic lub Visual C#). Każda aplikacja może obsługiwać klienta WCF, łącznie z aplikacją, który jest hostem usługi. W związku z tym istnieje możliwość utworzyć usługę, która obejmuje klienci WCF innych usług.  
   
  Klienta programu WCF mogą być generowane automatycznie za pomocą [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) i wskazując uruchomiona usługa, która publikuje metadane.  
   

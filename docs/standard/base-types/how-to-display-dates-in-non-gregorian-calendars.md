@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633999"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588824"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański
 <xref:System.DateTime> i <xref:System.DateTimeOffset> typy pełnić ich kalendarza domyślnego kalendarza gregoriańskiego. Oznacza to, że wywołanie wartości daty i godziny `ToString` metoda Wyświetla reprezentację ciągu tego dnia i godzina w kalendarzu gregoriańskim, nawet jeśli ta data i godzina utworzenia przy użyciu innego kalendarza. Jest to zilustrowane w poniższym przykładzie, który używa dwa różne sposoby tworzenia wartości daty i godziny przy użyciu kalendarz perski, ale nadal wyświetlana tych wartości daty i godziny w kalendarzu gregoriańskim, gdy wywołuje <xref:System.DateTime.ToString%2A> metody. W tym przykładzie odzwierciedla dwie techniki często używane, ale niepoprawny do wyświetlania datę w określonym kalendarzu.  
@@ -84,11 +84,6 @@ ms.locfileid: "64633999"
 - `DisplayDate`, przeciążona metoda publiczny, który jest przekazywany dwa parametry: albo <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości wyrażenia w kalendarzu, reprezentowane przez `CalendarUtility` obiektu; i kulturę, której reguły formatowania mają zostać użyte. Jego zachowanie w powrocie reprezentacją ciągu daty, zależy od tego, czy kalendarz docelowy jest obsługiwany przez kulturę, której reguły formatowania mają zostać użyte.  
   
  Niezależnie od tego, kalendarz, użyty do utworzenia <xref:System.DateTime> lub <xref:System.DateTimeOffset> w tym przykładzie, że wartość jest zwykle wyrażona jako data gregoriańska wartość. Jest to spowodowane <xref:System.DateTime> i <xref:System.DateTimeOffset> typów nie zachowuje żadnych informacji kalendarza. Wewnętrznie są one reprezentowane jako liczbę znaczników, które upłynęły od północy 1 stycznia 0001. Interpretacja tego numeru, zależy od kalendarza. W przypadku większości kultur kalendarz domyślny jest kalendarz gregoriański.  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- W tym przykładzie wymaga odwołania do System.Core.dll.  
-  
- Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w programie Visual Studio, należy umieścić w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
 

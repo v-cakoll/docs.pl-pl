@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906961"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591102"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Rozwiązywanie problemów związanych z typami danych (Visual Basic)
 Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpić podczas wykonywania operacji na typy danych wewnętrznych.  
@@ -66,7 +66,7 @@ Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpi�
  Należy pamiętać, że nie jest wystarczające, aby zadeklarować `decimalRemainder` jako `Decimal`. Należy też wymusić literałów `Decimal`, lub używają `Double` domyślnie i `decimalRemainder` otrzymuje taką samą wartość niedokładne jak `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Typ wartości logicznej nie konwersji na typ liczbowy dokładnie  
- [Typ danych Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) wartości nie są przechowywane jako liczby i przechowywane wartości nie są przeznaczone do równoważne liczb. Zapewnia zgodność z wcześniejszymi wersjami, słowa kluczowe konwersji Visual Basic ([funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`i tak dalej) do konwersji między `Boolean` typy liczbowe. Jednak inne języki czasami wykonywaniu konwersji inaczej, tak jak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody.  
+ [Typ danych Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) wartości nie są przechowywane jako liczby i przechowywane wartości nie są przeznaczone do równoważne liczb. Zapewnia zgodność z wcześniejszymi wersjami, słowa kluczowe konwersji Visual Basic ([funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`i tak dalej) do konwersji między `Boolean` typy liczbowe. Jednak inne języki czasami wykonywaniu konwersji inaczej, podobnie jak metod .NET Framework.  
   
  Nigdy nie należy wpisać kod, który opiera się na równoważne wartości liczbowe `True` i `False`. Jeśli to możliwe, należy ograniczyć użycie `Boolean` zmienne do wartości logiczne, dla których są one przeznaczone. Po przemieszaniu musi `Boolean` oraz wartości liczbowych, upewnij się, że rozumiesz metodę konwersji, który wybierzesz.  
   
@@ -96,7 +96,7 @@ Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpi�
 ## <a name="string-conversion-fails-at-run-time"></a>Konwersja ciągu nie powiedzie się w czasie wykonywania  
  [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) uczestniczy w bardzo nielicznych konwersje rozszerzające. `String` rozszerza się tylko do samego siebie i `Object`i tylko `Char` i `Char()` ( `Char` tablicy) mogą zostać poszerzone do `String`. Jest to spowodowane `String` zmiennych i stałych może zawierać wartości, które nie mogą zawierać inne typy danych.  
   
- Podczas sprawdzania typu przełącznika ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On`, kompilator nie zezwala na wszystkie niejawne konwersje zawężające. Obejmuje to te, które są obejmujące `String`. Kod można nadal używać słowa kluczowe konwersji takich jak `CStr` i [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md), które bezpośrednio [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] próby konwersji.  
+ Podczas sprawdzania typu przełącznika ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On`, kompilator nie zezwala na wszystkie niejawne konwersje zawężające. Obejmuje to te, które są obejmujące `String`. Kod można nadal używać słowa kluczowe konwersji takich jak `CStr` i [funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md), którego bezpośrednie .NET Framework, aby próba konwersji.  
   
 > [!NOTE]
 >  Błąd konwersji zawężających jest pomijana dla konwersji z elementów w `For Each…Next` kolekcję, aby zmienna sterująca pętli. Aby uzyskać więcej informacji i przykładów, zobacz sekcję "Konwersje zawężające" w [For Each... Następna instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  

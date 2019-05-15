@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469703"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591543"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektu: Jak obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  
@@ -140,7 +140,7 @@ End Sub
  Klasa pochodna nie powinien przesłonić klasy bazowej <xref:System.IDisposable.Dispose%2A> i `Finalize` metody. Gdy te metody są wywoływane z wystąpienia klasy pochodnej, klasa bazowa implementacji tych metod wywołania zastąpienie klasy pochodnej z `Dispose(disposing)` metody.  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Wyrzucanie elementów bezużytecznych i finalizowanie — destruktor  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Używa *odwołania śledzenia wyrzucania elementów bezużytecznych* systemu, aby okresowo wersji nieużywane zasoby. Visual Basic 6.0 i starsze wersje należy użyć innego systemu o nazwie *zliczanie odwołań* do zarządzania zasobami. Mimo że oba systemy, które automatycznie pełnią taką samą funkcję, istnieje kilka istotnych różnic.  
+ .NET Framework używa *odwołania śledzenia wyrzucania elementów bezużytecznych* systemu, aby okresowo wersji nieużywane zasoby. Visual Basic 6.0 i starsze wersje należy użyć innego systemu o nazwie *zliczanie odwołań* do zarządzania zasobami. Mimo że oba systemy, które automatycznie pełnią taką samą funkcję, istnieje kilka istotnych różnic.  
   
  Środowisko CLR okresowo niszczy obiekty, gdy system określi, że takie obiekty nie są już potrzebne. Obiekty są zwalniane szybciej, gdy wszystkie zasoby systemu są w przeciwnym razie podaż i rzadziej. Opóźnienie między kiedy obiekt traci zakresu i gdy środowisko CLR zwalnia go oznacza, że w przeciwieństwie do obiektów w Visual Basic 6.0 i starszych wersjach, nie można ustalić dokładnie gdy obiekt jest niszczony. W takiej sytuacji obiektów mówi się, że masz *niedeterministyczne okres istnienia*. W większości przypadków niedeterministyczne okresu istnienia nie zmienia sposobu pisania aplikacji, tak długo, jak należy pamiętać, że `Finalize` destruktor nie może być od razu wykonywane gdy obiekt traci zakresu.  
   

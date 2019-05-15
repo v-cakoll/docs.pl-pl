@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0031e352fea845ca4831b4df3a67c9cc6b67e876
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7becba9c7626e79f9d001a6a21ed92a336e9d11
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608495"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591983"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Instrukcje: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł
 W tym dokumencie wyjaśniono, jak używać <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> klasy w celu wykonania operacji, gdy dane są dostępne z wielu źródeł. Ilustruje też sposób do używania trybu niezachłanne, aby włączyć wiele bloków sprzężenia wydajniej udostępnianie źródła danych.
@@ -31,17 +31,6 @@ W tym dokumencie wyjaśniono, jak używać <xref:System.Threading.Tasks.Dataflow
  [!code-vb[TPLDataflow_NonGreedyJoin#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_nongreedyjoin/vb/nongreedyjoin.vb#1)]  
   
  Umożliwia efektywne korzystanie z obszaru udostępnionej puli `MemoryResource` obiektów, w tym przykładzie określa <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> obiekt, który ma <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> właściwością `False` utworzyć <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> obiekty, które działają w trybie niezachłanne. Blok niezachłanne złączenia odłoży wszystkie wiadomości przychodzące, dopóki nie jest dostępny z każdego źródła. Jeśli dowolny z komunikatów odroczone zostały zaakceptowane przez inny blok, w bloku sprzężenia powoduje ponowne uruchomienie procesu. Tryb bez zachłanne umożliwia bloki sprzężenia, współdzielących jeden lub więcej bloków źródła kompromis postęp czekać innych bloków danych. W tym przykładzie Jeśli `MemoryResource` obiekt jest dodawany do `memoryResources` puli pierwszy sprzężenia mogą robić postępów do przodu w bloku, aby otrzymać jej drugiego źródła danych. Jeśli były w tym przykładzie do używania trybu zachłannego, co jest ustawieniem domyślnym jeden blok sprzężenia może potrwać `MemoryResource` obiektu i poczekaj na drugi zasób stanie się dostępny. Jednakże, jeśli w bloku sprzężenia drugiego źródła danych dostępne, nie powiedzie się postęp ponieważ `MemoryResource` obiektu jest już zajęta przez inne blok sprzężenia.  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w wierszu polecenia dla deweloperów programu Visual Studio okna.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Użycie niezachłanne może również pomóc uniknięcia zakleszczenia w aplikacji. W przypadku aplikacji oprogramowania *zakleszczenia* występuje, gdy dwa lub więcej procesów każdego zasobu do przechowywania i wzajemnie poczekaj, aż inny proces zwolnić innego zasobu. Rozważmy aplikację, która definiuje dwa <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> obiektów. Oba obiekty każdego odczytywać dane z dwóch bloków źródłowy udostępniony. W trybie zachłannego Jeśli jeden blok sprzężenia odczytuje z pierwszego źródła, a drugi blok sprzężenia odczytuje z drugiego źródła aplikacji może być do zakleszczenia, ponieważ oba bloki sprzężenia wzajemnie oczekiwania dla siebie zwolnić jego zasobów. W trybie niezachłanne każdy blok sprzężenia operacje odczytu od jej źródeł, tylko wtedy, gdy wszystkie dane będą dostępne i w związku z tym, ryzyko zakleszczenia zostanie wyeliminowany.  

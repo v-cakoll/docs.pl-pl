@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: ce019e97e54781976736dd5bd6e6d7e134322f65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916867"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582629"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Wykonywanie zapytań usługi danych (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka kliencka pozwala na wykonywanie zapytań względem usługi danych przy użyciu dobrze znanych [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wzorców programowania, w tym za pomocą zapytanie o języku zintegrowanym (LINQ). Biblioteka klienta tłumaczy kwerendę, która jest zdefiniowana na komputerze klienckim jako wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> klasy do komunikatu żądania HTTP GET. Biblioteka odbiera komunikat odpowiedzi i przekształca je w wystąpieniach klas usługi danych klienta. Te klasy są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> do której <xref:System.Data.Services.Client.DataServiceQuery%601> należy.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka kliencka pozwala na wykonywanie zapytań względem usługi danych przy użyciu dobrze znanych wzorców programowania, w tym za pomocą zapytanie o języku zintegrowanym (LINQ) .NET Framework. Biblioteka klienta tłumaczy kwerendę, która jest zdefiniowana na komputerze klienckim jako wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> klasy do komunikatu żądania HTTP GET. Biblioteka odbiera komunikat odpowiedzi i przekształca je w wystąpieniach klas usługi danych klienta. Te klasy są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> do której <xref:System.Data.Services.Client.DataServiceQuery%601> należy.
 
 ## <a name="data-service-queries"></a>Zapytań usługi danych
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> Klasa ogólna reprezentuje zapytanie, które zwraca kolekcję zero lub więcej wystąpień typu jednostki. Zapytania usługi danych należy zawsze do istniejącego kontekstu usługi danych. Ten kontekst obsługuje usługi identyfikator URI i metadanych informacje, które są wymagane do tworzenia i wykonywanie zapytania.
 
-Kiedy używasz **Dodaj odwołanie do usługi** okno dialogowe, aby dodać usługę danych [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-tworzony jest aplikację kliencką opartą na, klasę kontenera jednostki, który dziedziczy z <xref:System.Data.Services.Client.DataServiceContext> klasy. Ta klasa zawiera właściwości, które zwracają wpisane <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpień. Brak jednej właściwości dla każdego zestawu jednostek usługi ujawnia w danych. Właściwości te ułatwiają Utwórz wystąpienie obiektu wpisane <xref:System.Data.Services.Client.DataServiceQuery%601>.
+Kiedy używasz **Dodaj odwołanie do usługi** tworzony jest okno dialogowe, aby dodać usługę danych do aplikacji klienta opartego na programie .NET Framework, klasę kontenera jednostki, który dziedziczy z <xref:System.Data.Services.Client.DataServiceContext> klasy. Ta klasa zawiera właściwości, które zwracają wpisane <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpień. Brak jednej właściwości dla każdego zestawu jednostek usługi ujawnia w danych. Właściwości te ułatwiają Utwórz wystąpienie obiektu wpisane <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 Zapytanie jest wykonywane w następujących scenariuszach:
 

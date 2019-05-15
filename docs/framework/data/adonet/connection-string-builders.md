@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034544"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583802"
 ---
 # <a name="connection-string-builders"></a>Konstruktorzy parametrów połączeń
-We wcześniejszych wersjach programu [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], w czasie kompilacji sprawdzania tak, aby w czasie wykonywania, generowany jest niepoprawna — słowo kluczowe parametrów połączenia parametrami połączonych wartości nie były wykonywane, <xref:System.ArgumentException>. Każdy z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] danych obsługiwani różnej składni dla słowa kluczowe parametrów połączenia, które wprowadzone konstruowanie ciągi prawidłowe połączenie jest trudne, jeśli jest wykonywane ręcznie. Aby rozwiązać ten problem, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wprowadzono nowe Konstruktorzy parametrów połączeń dla każdego [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych. Każdy dostawca danych obejmuje połączenia silnie typizowane parametry konstruktora klasy dziedziczącej z klasy <xref:System.Data.Common.DbConnectionStringBuilder>. W poniższej tabeli wymieniono [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawców danych i ich skojarzone z nimi połączenie ciąg konstruktora klasy.  
+We wcześniejszych wersjach programu [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], w czasie kompilacji sprawdzania tak, aby w czasie wykonywania, generowany jest niepoprawna — słowo kluczowe parametrów połączenia parametrami połączonych wartości nie były wykonywane, <xref:System.ArgumentException>. Różnej składni każdego dostawcy danych .NET Framework obsługiwane w przypadku słowa kluczowe parametrów połączenia, które wprowadzone tworzenia ciągów prawidłowe połączenie jest trudne, jeśli jest wykonywane ręcznie. Aby rozwiązać ten problem, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wprowadzono nowe Konstruktorzy parametrów połączeń dla każdego dostawcy danych .NET Framework. Każdy dostawca danych obejmuje połączenia silnie typizowane parametry konstruktora klasy dziedziczącej z klasy <xref:System.Data.Common.DbConnectionStringBuilder>. W poniższej tabeli wymieniono dostawcy danych .NET Framework i ich skojarzone z nimi połączenie parametry konstruktora klasy.  
   
 |Dostawca|Klasa ConnectionStringBuilder|  
 |--------------|-----------------------------------|  

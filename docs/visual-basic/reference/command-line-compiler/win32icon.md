@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc48a8f79aa04892c514917da00b8fd6489695b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774832"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593089"
 ---
 # <a name="-win32icon"></a>-win32icon
 Wstawia plik .ico, w pliku wyjściowym. Ten plik .ico, który reprezentuje plik wyjściowy w **Eksploratora plików**.  
@@ -31,7 +31,7 @@ Wstawia plik .ico, w pliku wyjściowym. Ten plik .ico, który reprezentuje plik 
 ## <a name="remarks"></a>Uwagi  
  Plik .ico, który można utworzyć przy użyciu kompilatora zasobów Windows firmy Microsoft (RC). Kompilator zasobów jest wywoływane, gdy kompilujesz program Visual C++; plik .ico, który jest tworzony z pliku .rc. `-win32icon` i `-win32resource` opcje wykluczają się wzajemnie.  
   
- Zobacz [- linkresource — (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) do odwołania [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] pliku zasobów, lub [-zasobów (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) można dołączyć [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] pliku zasobów. Zobacz [-win32resource —](../../../visual-basic/reference/command-line-compiler/win32resource.md) można zaimportować plik res.  
+ Zobacz [- linkresource — (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) k odkazu plikiem zasobów .NET Framework lub [-zasobów (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) można dołączyć plik zasobu .NET Framework. Zobacz [-win32resource —](../../../visual-basic/reference/command-line-compiler/win32resource.md) można zaimportować plik res.  
   
 |Aby ustawić - win32icon w środowisku IDE programu Visual Studio|  
 |---|  

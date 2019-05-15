@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650417"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591416"
 ---
 # <a name="creating-new-strings-in-net"></a>Tworzenie nowych ciągów w programie .NET
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Umożliwia ciągów, które ma zostać utworzony przy użyciu przypisanie proste, a także przeciążenia konstruktora klasy obsługuje tworzenie ciągów za pomocą kilku różnych parametrów. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Również udostępnia kilka metod w <xref:System.String?displayProperty=nameWithType> klasy, które tworzyć nowe parametry obiekty, łącząc kilka ciągów, tablic ciągów, lub obiektów.  
+.NET Framework umożliwia ciągów, które ma zostać utworzony przy użyciu przypisanie proste i również przeciążeń konstruktora klasy obsługuje tworzenie ciągów za pomocą kilku różnych parametrów. Program .NET Framework zawiera także kilka metod w <xref:System.String?displayProperty=nameWithType> klasy, które tworzyć nowe parametry obiekty, łącząc kilka ciągów, tablic ciągów, lub obiektów.  
   
 ## <a name="creating-strings-using-assignment"></a>Tworzenie ciągów za pomocą przypisania  
  Najprostszym sposobem utworzenia nowego <xref:System.String> obiektu jest po prostu przypisać literału ciągu na <xref:System.String> obiektu.  

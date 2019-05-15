@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: ae55752a5a317b749c755ea5f4f479a9faec5745
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecf8fb93688c0e7566083f43581ada8dce53d2ca
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648178"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589588"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Instrukcje: dostosowywanie komórek i kolumn w kontrolce DataGridView (Formularze systemu Windows) przez rozszerzanie ich zachowania i wyglądu
 <xref:System.Windows.Forms.DataGridView> Control oferuje wiele sposobów, aby dostosować wygląd i zachowanie za pomocą właściwości, zdarzenia oraz klasy pomocnika. Od czasu do czasu może mieć wymagania dla Twojego komórek, które wykraczają poza co te funkcje umożliwiają. Możesz utworzyć własną niestandardową <xref:System.Windows.Forms.DataGridViewCell> Aby klasa zapewniała rozszerzoną funkcjonalność.  
@@ -67,9 +67,7 @@ ms.locfileid: "64648178"
  Ten przykład wymaga:  
   
 - Odwołania do zestawów systemu, przestrzeń nazw System.Windows.Forms i System.Drawing.  
-  
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.
-  
+ 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.DataGridView>

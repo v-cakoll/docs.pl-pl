@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750824"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583609"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Tworzenie aplikacji klienckich programu .NET Framework (WCF Data Services — Szybki Start)
 
@@ -84,7 +84,7 @@ To jest ostatnim zadaniem tego przewodnika Szybki Start usług danych WCF. W ram
 
 Pomyślnie utworzono aplikację kliencką, która uzyskuje dostęp do przykładowej, którą Northwind strumieniowego źródła OData. Również ukończono Przewodnik Szybki Start usług danych WCF!
 
-Aby więcej informacji na temat uzyskiwania dostępu do OData Kanał informacyjny z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji, zobacz [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
+Aby uzyskać więcej informacji na temat uzyskiwania dostępu do OData źródła danych z poziomu aplikacji .NET Framework, zobacz [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,19 +2,19 @@
 title: Współdziałanie z aplikacjami POX
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046895"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591051"
 ---
 # <a name="interoperability-with-pox-applications"></a>Współdziałanie z aplikacjami POX
 
 "Zwykłe stare XML" aplikacji (POX) komunikują się przez wymianę nieprzetworzone komunikaty HTTP, które zawierają tylko dane aplikacji XML, który nie jest ujęty w kopercie SOAP. Windows Communication Foundation (WCF) może zapewnić zarówno w przypadku usług, jak i klientów, którzy używają POX wiadomości. W usłudze WCF może służyć do implementowania usług, które uwidaczniają punkty końcowe do klientów, takich jak przeglądarki sieci Web i języków skryptów, które wysyłania i odbierania komunikatów POX. Na komputerze klienckim model programowania WCF może służyć do wdrożenia klientów komunikujących się za pomocą usług opartych na POX.  
   
 > [!NOTE]
-> W tym dokumencie pierwotnie został napisany dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 ma wbudowaną obsługę pracy z aplikacjami POX. Aby uzyskać więcej informacji na temat, zobacz [modelu programowania protokołu HTTP sieci Web programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+> W tym dokumencie pierwotnie został napisany dla .NET Framework 3.0.  .NET framework 3.5 ma wbudowaną obsługę pracy z aplikacjami POX. Aby uzyskać więcej informacji na temat, zobacz [modelu programowania protokołu HTTP sieci Web programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
   
 ## <a name="pox-programming-with-wcf"></a>POX programowania przy użyciu programu WCF
 

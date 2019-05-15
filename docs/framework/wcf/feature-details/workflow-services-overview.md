@@ -2,12 +2,12 @@
 title: Przegląd usług przepływu pracy — WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050340"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590072"
 ---
 # <a name="workflow-services-overview"></a>Przegląd usług przepływu pracy
 
@@ -48,7 +48,7 @@ Usługi WCF definiuje dwa powiązania opartych na usłudze MSMQ <xref:System.Ser
 
 Podobnie jak usługi WCF usług przepływu pracy musi być obsługiwana. Użyj usług WCF <xref:System.ServiceModel.ServiceHost> klasy do hostowania usług i przepływ pracy usługi użyj <xref:System.ServiceModel.Activities.WorkflowServiceHost> do hostowania usług. Podobnie jak usługi WCF usług przepływu pracy mogą być hostowane na wiele sposobów, na przykład:
 
-- W zarządzanej [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji.
+- W aplikacji zarządzanej .NET Framework.
 
 - In Internet Information Services (IIS).
 
@@ -56,7 +56,7 @@ Podobnie jak usługi WCF usług przepływu pracy musi być obsługiwana. Użyj u
 
 - W ramach zarządzanej usługi Windows.
 
-Przepływ pracy usług hostowanych w zarządzanej [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji lub zarządzanych usług Windows, Utwórz wystąpienie obiektu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy i przekazać go wystąpienie <xref:System.ServiceModel.Activities.WorkflowService> zawierający definicję przepływu pracy w ramach <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> właściwości. Definicja przepływu pracy, który zawiera działań dotyczących komunikatów jest udostępniany jako usługa przepływu pracy.
+Przepływ pracy usług hostowanych w aplikacji zarządzanej .NET Framework lub zarządzanych usług Windows, Utwórz wystąpienie obiektu <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy i przekazać go wystąpienie <xref:System.ServiceModel.Activities.WorkflowService> zawierający definicję przepływu pracy w ramach <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> właściwości. Definicja przepływu pracy, który zawiera działań dotyczących komunikatów jest udostępniany jako usługa przepływu pracy.
 
 Hostowanie usługi przepływu pracy w usługach IIS i WAS, należy umieścić plik .xamlx, który zawiera definicję usługi przepływu pracy do katalogu wirtualnego. Domyślny punkt końcowy (przy użyciu <xref:System.ServiceModel.BasicHttpBinding>) jest tworzone automatycznie, aby uzyskać więcej informacji, zobacz [uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md). Można także umieścić plik Web.config w katalogu wirtualnym, aby określić własne punkty końcowe. Jeśli Twoja definicja przepływu pracy jest w zestawie, można umieścić plików .svc w katalogu wirtualnego i zestawu przepływu pracy w katalogu App_Code. Plik .svc należy określić fabryki hostów usług i klasy, która implementuje usługi przepływu pracy. Poniższy przykład pokazuje, jak określić fabryki hostów usług i określić klasę, która implementuje usługi przepływu pracy.
 

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 00b64bdd3795cf282847a3bbaa0940f76faa1c2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637530"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591264"
 ---
 # <a name="using-the-message-class"></a>Używanie klasy Message
 <xref:System.ServiceModel.Channels.Message> Klasy jest niezbędne do programu Windows Communication Foundation (WCF). Cała komunikacja między klientami i usługami ostatecznie powoduje <xref:System.ServiceModel.Channels.Message> wysyłanych i odbieranych wystąpień.  
   
  Nie będzie zazwyczaj korzystają ze <xref:System.ServiceModel.Channels.Message> klasy bezpośrednio. Zamiast tego WCF service model konstrukcji, takie jak kontrakty danych, kontrakty komunikatów i kontrakty operacji są używane do opisywania wiadomości przychodzących i wychodzących. Jednak w niektórych zaawansowanych scenariuszy można programować za pomocą <xref:System.ServiceModel.Channels.Message> klasy bezpośrednio. Na przykład możesz chcieć użyć <xref:System.ServiceModel.Channels.Message> klasy:  
   
-- Gdy będziesz potrzebować alternatywny sposób tworzenia wychodzącego treść wiadomości (na przykład tworzenia komunikatu bezpośrednio z pliku na dysku) zamiast serializacji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów.  
+- Gdy będziesz potrzebować alternatywny sposób tworzenia wychodzącego treść wiadomości (na przykład tworzenia komunikatu bezpośrednio z pliku na dysku) zamiast serializacji obiektów .NET Framework.  
   
-- Gdy będziesz potrzebować alternatywny sposób za pomocą wiadomości przychodzące (na przykład, jeśli chcesz zastosować transformacji XSLT do nieprzetworzonej zawartości XML) zamiast deserializacji do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów.  
+- Gdy będziesz potrzebować alternatywny sposób za pomocą wiadomości przychodzące (na przykład, jeśli chcesz zastosować transformacji XSLT do nieprzetworzonej zawartości XML) zamiast deserializacji obiektów .NET Framework.  
   
 - Gdy zachodzi potrzeba obsługi wiadomości w sposób ogólny, niezależnie od tego, treść wiadomości (na przykład, kiedy routing lub przesyłanie dalej komunikatów podczas kompilowania router, moduł równoważenia obciążenia lub publikowania-subskrypcji systemu).  
   

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960956"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588617"
 ---
 # <a name="about-gdi-managed-code"></a>Informacje o kodzie zarządzanym GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jest to część systemu operacyjnego Windows, który dwuwymiarową grafikę wektorową, przetwarzanie obrazu i typograficzne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usprawnieniem [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (graficzny interfejs urządzenia dołączone do wcześniejszych wersji systemu Windows), dodając nowe funkcje i optymalizowania istniejących funkcji.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zarządzanej klasy interfejsu (zestaw otoki) jest częścią [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], środowisko na potrzeby kompilowania, wdrażania i uruchamiania innych aplikacji i usług sieci Web XML.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zarządzanej klasy interfejsu (zestaw otoki) jest częścią programu .NET Framework środowisko na potrzeby kompilowania, wdrażania i uruchamiania innych aplikacji i usług sieci Web XML.  
   
  Ta sekcja zawiera informacje na temat [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] interfejsu API dla programistów przy użyciu kodu zarządzanego.  
   

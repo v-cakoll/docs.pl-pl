@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033374"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583491"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integracja System.Transactions z programem SQL Server
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Wersji 2.0 wprowadzono framework transakcji, który jest możliwy za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta platforma udostępnia transakcji w taki sposób, że jest w pełni zintegrowana w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], w tym [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+.NET Framework w wersji 2.0 wprowadzono framework transakcji, który jest możliwy za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta platforma udostępnia transakcji w taki sposób, że jest w pełni zintegrowane na platformie .NET Framework, w tym [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Oprócz rozszerzenia programowania <xref:System.Transactions> i [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mogą współpracować ze sobą do koordynowania optymalizacje podczas pracy z transakcji. Awansowanie transakcja jest uproszczone transakcji (local), która może być automatycznie podwyższony do transakcji rozproszonej pełni na zgodnie z potrzebami.  
   
  Począwszy od [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> obsługuje transakcje awansowanie, podczas pracy z programem SQL Server. Awansowanie transakcji nie jest wywoływany dodano obciążenie z transakcji rozproszonych, chyba że dodany obciążenie jest wymagana. Awansowanie transakcje są automatyczne i wymagają interwencji od dewelopera.  
   
- Awansowanie transakcje są dostępne tylko, gdy używasz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (`SqlClient`) z programem SQL Server.  
+ Awansowanie transakcje są dostępne tylko, gdy używasz .NET Framework Data Provider for SQL Server (`SqlClient`) z programem SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Tworzenie awansowanie transakcji  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server zapewnia obsługę awansowanie transakcji, które są obsługiwane za pośrednictwem klasy w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> przestrzeni nazw. Transakcje awansowanie Optymalizowanie transakcji rozproszonych opóźnienie tworzenia transakcji rozproszonej, dopóki nie jest to konieczne. Jeśli jeden usługi resource manager jest wymagany tylko, występuje nie transakcji rozproszonej.  
+ Awansowanie transakcji, które są obsługiwane za pośrednictwem klasy w .NET Framework dla programu .NET Framework Provider for SQL Server zapewnia obsługę <xref:System.Transactions> przestrzeni nazw. Transakcje awansowanie Optymalizowanie transakcji rozproszonych opóźnienie tworzenia transakcji rozproszonej, dopóki nie jest to konieczne. Jeśli jeden usługi resource manager jest wymagany tylko, występuje nie transakcji rozproszonej.  
   
 > [!NOTE]
 >  W przypadku częściowo zaufanych <xref:System.Transactions.DistributedTransactionPermission> jest wymagana, gdy transakcja zostanie podwyższony do poziomu transakcji rozproszonej.  

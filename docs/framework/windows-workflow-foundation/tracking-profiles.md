@@ -2,12 +2,12 @@
 title: Profile śledzenia
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699688"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589938"
 ---
 # <a name="tracking-profiles"></a>Profile śledzenia
 
@@ -17,7 +17,7 @@ ms.locfileid: "61699688"
 
 Profile śledzenia są używane do określania, jakie informacje śledzenia jest emitowane dla wystąpienia przepływu pracy. Jeśli profil nie jest określony, wszystkie zdarzenia śledzenia są emitowane. Jeśli profil jest określony, zdarzenia śledzenia określone w profilu będzie emitowane. W zależności od wymagań dotyczących monitorowania może zapisu profil, który jest bardzo ogólny, które subskrybuje niewielkiego zestawu zmian stanu wysokiego poziomu w przepływie pracy. Z drugiej strony można utworzyć bardzo szczegółowe profil którego wynikowego zdarzenia są rozbudowanych, odtworzenie przepływ wykonania szczegółowe później.
 
-Profile śledzenia objawy elementy XML w ramach standardowej [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pliku konfiguracji lub określone w kodzie. Poniższy przykład jest [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] profil w pliku konfiguracji, który umożliwia śledzenia uczestnika do subskrybowania śledzenia `Started` i `Completed` zdarzenia przepływu pracy.
+Profile śledzenia objawy elementy XML w ramach standardowego pliku konfiguracji .NET Framework lub określić w kodzie. Poniższy przykład jest [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] profil w pliku konfiguracji, który umożliwia śledzenia uczestnika do subskrybowania śledzenia `Started` i `Completed` zdarzenia przepływu pracy.
 
 ```xml
 <system.serviceModel>

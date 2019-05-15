@@ -2,12 +2,12 @@
 title: 'Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: d9b1f97fd8bf3dfb15f3e1ab65b02a81b5607792
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 24ce612ed2da9129cd446c6bea7d2547fc69e2bf
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642323"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592156"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (Visual Basic)
 W programie LINQ, drzew wyrażeń są używane do reprezentowania strukturyzowanych zapytań, których platformą docelową źródeł danych, który implementuje <xref:System.Linq.IQueryable%601>. Na przykład implementuje dostawcę LINQ <xref:System.Linq.IQueryable%601> interfejs do wykonywania zapytań magazynów danych relacyjnych. Kompilator Visual Basic kompiluje zapytań przeznaczonych dla tych źródeł danych do kodu, który kompiluje do drzewa wyrażenie w czasie wykonywania. Dostawca kwerend można przechodzić przez strukturę danych drzewa wyrażeń i tłumaczenie język zapytań, odpowiednie dla źródła danych.  
@@ -102,8 +102,6 @@ Next
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
 - Utwórz nową **aplikację Konsolową** projektu.  
-  
-- Dodaj odwołanie do biblioteki System.Core.dll, jeśli nie jest wywoływany.  
   
 - Obejmują System.Linq.Expressions przestrzeni nazw.  
   

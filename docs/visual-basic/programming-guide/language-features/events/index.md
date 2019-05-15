@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 5986923b10700b1795886c24343a4b45e6bff46e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616701"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586706"
 ---
 # <a name="events-visual-basic"></a>Zdarzenia (Visual Basic)
 Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które są wykonywane w kolejności, w rzeczywistości większość programów są oparte na zdarzeniach — czyli przepływem wykonania jest określana przez zewnętrzne wystąpienia o nazwie *zdarzenia*.  
@@ -104,6 +104,6 @@ Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które 
 |[Instrukcje: Deklarowanie zdarzeń niestandardowych w celu unikania blokowania](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Pokazuje, jak zdefiniować niestandardowe zdarzenie, które umożliwia jej procedury obsługi zdarzeń do wywołania asynchronicznego.|  
 |[Instrukcje: Deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Pokazuje, jak w celu zdefiniowania niestandardowych zdarzeń, która używa pamięci tylko wtedy, gdy zdarzenie jest obsługiwane.|  
 |[Rozwiązywanie problemów z odziedziczonymi programami obsługi zdarzeń w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Zawiera listę typowych problemów, które wynikają z programami obsługi zdarzeń w składników odziedziczonych.|  
-|[Zdarzenia](../../../../standard/events/index.md)|Zawiera omówienie modelu zdarzeń w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
+|[Zdarzenia](../../../../standard/events/index.md)|Omówienie modelu zdarzeń w środowisku .NET Framework.|  
 |[Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|W tym artykule opisano sposób pracy ze zdarzeniami związane z obiektami Windows Forms.|  
 |[Delegaty](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Omówienie delegatów w języku Visual Basic.|

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592441"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585894"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych
 Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają specjalnych uprawnień w kodzie częściowo zaufanym. Ponadto emisji odbicia posiada funkcję, anonimowo obsługiwane metody dynamiczne, który jest przeznaczony do użycia z częściowej relacji zaufania, jak również przezroczyste dla zabezpieczeń zestawów.  
@@ -77,12 +77,12 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     Ostatni parametr <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia metody umożliwia określenie zestawu zestawów, które mają być udzielone pełne zaufanie, a nie zestaw uprawnień w domenie aplikacji. Nie trzeba określać [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawów, które Twoja aplikacja używa, ponieważ te zestawy znajdują się w globalnej pamięci podręcznej. Zestawy w globalnej pamięci podręcznej są zawsze w pełni zaufane. Ten parametr służy do określenia zestawu o silnych nazwach, które nie znajdują się w globalnej pamięci podręcznej.  
+     Ostatni parametr <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia metody umożliwia określenie zestawu zestawów, które mają być udzielone pełne zaufanie, a nie zestaw uprawnień w domenie aplikacji. Nie masz Określ zestawy .NET Framework, które Twoja aplikacja używa, ponieważ te zestawy znajdują się w globalnej pamięci podręcznej. Zestawy w globalnej pamięci podręcznej są zawsze w pełni zaufane. Ten parametr służy do określenia zestawu o silnych nazwach, które nie znajdują się w globalnej pamięci podręcznej.  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>Dodawanie RestrictedMemberAccess do domeny w trybie piaskownicy  
  Aplikacje hosta mogą umożliwić anonimowo obsługiwane metody dynamiczne mają mieć dostęp do prywatnych danych w zestawach posiadających poziomy zaufania równe lub mniejsze niż poziom zaufania zestawu, który emituje kod. Aby włączyć taką możliwość ograniczenia pominięcia testów widoczności usługi just-in-time (JIT), aplikacji hosta dodaje <xref:System.Security.Permissions.ReflectionPermission> obiekt z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi (RMA) do zestawu dotacji.  
   
- Na przykład host może udzielić uprawnień internetowych aplikacji internetowej i RMA, dzięki czemu aplikacja internetowa może emitować Kod, który uzyskuje dostęp do danych prywatnych w swoich własnych zestawach. Ponieważ dostęp jest ograniczony do zestawów równego lub mniejszego zaufania, aplikacja internetowa nie takich jak dostęp do elementów członkowskich całkowicie zaufanych zestawów [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawów.  
+ Na przykład host może udzielić uprawnień internetowych aplikacji internetowej i RMA, dzięki czemu aplikacja internetowa może emitować Kod, który uzyskuje dostęp do danych prywatnych w swoich własnych zestawach. Ponieważ dostęp jest ograniczony do zestawów równego lub mniejszego zaufania, aplikacja internetowa nie dostępu do elementów członkowskich całkowicie zaufanych zestawów, takich jak zestawy .NET Framework.  
   
 > [!NOTE]
 >  Aby zapobiec podniesienie uprawnień, informacje stosu do montażu emitującego jest dołączana w przypadku anonimowo obsługiwane metody dynamiczne są zbudowane. Gdy metoda jest wywoływana, informacja stosu jest sprawdzana. W efekcie anonimowo obsługiwana metoda dynamiczna, która jest wywoływana z całkowicie zaufanego kodu jest nadal ograniczona do poziomu zaufania emitujące zgromadzenia.  
@@ -169,7 +169,7 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     Ograniczenie jest takie, że anonimowo obsługiwana metoda dynamiczna dostęp do prywatnych danych tylko w zestawach z poziomów zaufania równe lub mniejsze niż poziom zaufania emitowanego zgromadzenia. Na przykład, jeśli metoda dynamiczna jest wykonywana z zaufanie do Internetu, jego dostęp do prywatnych danych w innych zestawach, które są również wykonywane z zaufaniem do Internetu, ale nie może uzyskać dostęp do prywatnych danych [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawów. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawy są zainstalowane w globalnej pamięci podręcznej i są zawsze w pełni zaufane.  
+     Ograniczenie jest takie, że anonimowo obsługiwana metoda dynamiczna dostęp do prywatnych danych tylko w zestawach z poziomów zaufania równe lub mniejsze niż poziom zaufania emitowanego zgromadzenia. Na przykład jeśli metoda dynamiczna jest wykonywana z zaufanie do Internetu, jego dostęp do prywatnych danych w innych zestawach, które są również wykonywane z zaufaniem do Internetu, ale nie można uzyskać dostępu prywatnych danych zestawów programu .NET Framework. Zestawy .NET framework są zainstalowane w globalnej pamięci podręcznej i są zawsze w pełni zaufane.  
   
      Anonimowo obsługiwane metody dynamiczne mogą skorzystać z ograniczonej możliwości, aby pominąć kontrole widoczność JIT tylko wtedy, gdy aplikacja hosta udziela <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi. Żądanie tego uprawnienia następuje po wywołaniu metody.  
   

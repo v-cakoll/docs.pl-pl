@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801715"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583743"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Instrukcje: Nawigowanie po danych w formularzach Windows Forms
 W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwiej można powiązać <xref:System.Windows.Forms.BindingSource> składnik do źródła danych, a następnie kontrolki powiązania <xref:System.Windows.Forms.BindingSource>. Można następnie użyć metody wbudowanej nawigacji na <xref:System.Windows.Forms.BindingSource> takich <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> i <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Przy użyciu tych metod skoryguje <xref:System.Windows.Forms.BindingSource.Position%2A> i <xref:System.Windows.Forms.BindingSource.Current%2A> właściwości <xref:System.Windows.Forms.BindingSource> odpowiednio. Można również znaleźć element i ustaw go jako bieżący element ustawiając <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości.  
@@ -26,7 +26,7 @@ W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwi
 1. Ustaw <xref:System.Windows.Forms.BindingSource.Position%2A> właściwość <xref:System.Windows.Forms.BindingSource> pozycja rekordu, aby przejść do powiązanych danych. Poniższy przykład ilustruje użycie <xref:System.Windows.Forms.BindingSource.MoveNext%2A> metody <xref:System.Windows.Forms.BindingSource> do następującej <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości podczas `nextButton` kliknięciu. <xref:System.Windows.Forms.BindingSource> Jest skojarzony z `Customers` tabeli zestawu danych `Northwind`.  
   
     > [!NOTE]
-    >  Ustawienie <xref:System.Windows.Forms.BindingSource.Position%2A> właściwość z wartością poza pierwszy lub ostatni rekord nie powoduje wystąpienie błędu, jako [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] nie zezwoli na ustawienie pozycji do wartości poza granice listy. Jeśli jest to ważne w aplikacji, aby dowiedzieć się, czy wykonano ostatnie pierwszy lub ostatni rekord, obejmują logikę w celu sprawdzenia, czy przekroczy liczba elementów danych.  
+    >  Ustawienie <xref:System.Windows.Forms.BindingSource.Position%2A> właściwość z wartością poza pierwszy lub ostatni rekord nie powoduje błąd, zgodnie z .NET Framework nie pozwala ustawić pozycję na wartość spoza listy. Jeśli jest to ważne w aplikacji, aby dowiedzieć się, czy wykonano ostatnie pierwszy lub ostatni rekord, obejmują logikę w celu sprawdzenia, czy przekroczy liczba elementów danych.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  

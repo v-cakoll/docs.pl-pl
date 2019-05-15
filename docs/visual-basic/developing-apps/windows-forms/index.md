@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615107"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590786"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji Windows Forms, które działają lokalnie na komputerach użytkowników. Visual Studio umożliwia tworzenie aplikacji i interfejsu użytkownika przy użyciu Windows Forms. Aplikacja Windows Forms jest oparta na klasy z <xref:System.Windows.Forms> przestrzeni nazw.  
@@ -25,7 +25,7 @@ Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji W
 - [Windows, usługi aplikacji](../../../framework/windows-services/index.md). Wyświetla listę tematów, które opisują sposób tworzenia usług Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Interfejsy użytkownika bogate, interaktywne tworzenie  
- Formularze Windows to składnik klienta inteligentnych [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], zbiór bibliotek zarządzanych, które umożliwiają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Używanie środowiska programistycznego, takimi jak Visual Studio, możesz tworzyć aplikacje Windows Forms, do wyświetlania informacji, żądać danych wejściowych od użytkowników i komunikować się ze zdalnymi komputerami za pośrednictwem sieci.  
+ Windows Forms jest składnikiem inteligentnych klientów programu .NET Framework, zbiór bibliotek zarządzanych, które umożliwiają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Używanie środowiska programistycznego, takimi jak Visual Studio, możesz tworzyć aplikacje Windows Forms, do wyświetlania informacji, żądać danych wejściowych od użytkowników i komunikować się ze zdalnymi komputerami za pośrednictwem sieci.  
   
  W formularzach Windows Forms formularz jest powierzchnią wizualną, na którym możesz wyświetlić informacje do użytkownika. Często możesz tworzyć aplikacje Windows Forms, umieszczając formantów na formularzach i tworzenia odpowiedzi na działania użytkownika, takich jak kliknięcia lub naciśnięcia klawiszy. A *kontroli* jest element interfejsu użytkownika dyskretnych, który wyświetla dane lub akceptuje dane wejściowe.  
   
@@ -86,7 +86,7 @@ Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji W
 |Zarządzanie zabezpieczeniami za pomocą [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Instrukcje: Włączanie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Inne formanty i funkcje  
- Istnieje wiele innych funkcji w formularzach Windows Forms, wchodzące Implementowanie typowych zadań, szybkie i łatwe, takie jak obsługa tworzenie okien dialogowych, drukowanie, dodając pomocy i dokumentacji i lokalizowanie aplikacji na wiele języków. Ponadto, formularze Windows opiera się na niezawodne zabezpieczenia systemu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], dzięki czemu można zwolnić bardziej bezpieczne aplikacje swoim klientom.  
+ Istnieje wiele innych funkcji w formularzach Windows Forms, wchodzące Implementowanie typowych zadań, szybkie i łatwe, takie jak obsługa tworzenie okien dialogowych, drukowanie, dodając pomocy i dokumentacji i lokalizowanie aplikacji na wiele języków. Ponadto formularze Windows opiera się na niezawodne zabezpieczenia systemu .NET Framework, dzięki czemu można zwolnić bardziej bezpieczne aplikacje swoim klientom.  
   
  Aby uzyskać szczegółowe informacje na temat korzystania z tych funkcji zobacz poniższe tematy pomocy:  
   

@@ -16,18 +16,18 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: af28ba1a167415a59b8e2a4db860497122a5c2c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a61dfa7302611800c0b808a31a386e46304756
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624812"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592146"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Rozwiązywanie problemów związanych z współdziałaniem (Visual Basic)
-Gdy współdziałania między COM i kodu zarządzanego z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], może wystąpić co najmniej jeden z następujących typowych problemów.  
+Oprogramowanie jest współpraca między COM i kodu zarządzanego programu .NET Framework, może wystąpić co najmniej jeden z następujących typowych problemów.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor1"></a> Marshaling międzyoperacyjny  
- Czasami może być używanie typów danych, które nie są częścią [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Zestawy międzyoperacyjne obsługiwać większość pracy dla obiektów COM, ale może być konieczne kontrolować typów danych, które są używane, gdy zarządzane obiekty są widoczne dla modelu COM. Na przykład, należy określić struktur w bibliotekach klas `BStr` niezarządzany typ na ciągi wysyłana do obiektów COM, utworzone przez program Visual Basic 6.0 i starszych wersji. W takich przypadkach można użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby spowodować, że typy zarządzane ujawnianie jako typy niezarządzanych.  
+ Czasami trzeba używać typów danych, które nie są częścią programu .NET Framework. Zestawy międzyoperacyjne obsługiwać większość pracy dla obiektów COM, ale może być konieczne kontrolować typów danych, które są używane, gdy zarządzane obiekty są widoczne dla modelu COM. Na przykład, należy określić struktur w bibliotekach klas `BStr` niezarządzany typ na ciągi wysyłana do obiektów COM, utworzone przez program Visual Basic 6.0 i starszych wersji. W takich przypadkach można użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby spowodować, że typy zarządzane ujawnianie jako typy niezarządzanych.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor2"></a> Eksportowanie ciągi o stałej długości do kodu niezarządzanego  
  W Visual Basic 6.0 i starszych wersjach ciągi są eksportowane do obiektów COM jako sekwencje bajtów bez znaku null zakończenie. Zgodność z innymi językami Visual Basic .NET zawiera znak zakończenia, podczas eksportowania ciągów. Najlepszym sposobem rozwiązania ta niezgodność nie jest eksportowane ciągów, które nie mają znak zakończenia jako tablice tego `Byte` lub `Char`.  
@@ -55,7 +55,7 @@ Gdy współdziałania między COM i kodu zarządzanego z [!INCLUDE[dnprdnshort](
  W odróżnieniu od klas w standardowe zestawy klasy COM są widoczne w zestawach międzyoperacyjnych jako interfejs i klasę, która reprezentuje klasę modelu COM. Nazwa interfejsu jest taka sama jak w przypadku klasy COM. Nazwa klasy międzyoperacyjny jest taka sama, jak w przypadku oryginalnej klasy COM, ale wyrazem "Class" jest dołączona. Na przykład załóżmy, że masz projekt za pomocą odwołania do zestawu międzyoperacyjnego dla obiektu COM. Jeśli klasa COM nosi nazwę `MyComClass`, funkcja IntelliSense i przeglądarki obiektów pokazać interfejs o nazwie `MyComClass` i klasę o nazwie `MyComClassClass`.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor6"></a> Tworzenie wystąpienia klasy .NET Framework  
- Ogólnie rzecz biorąc, Utwórz wystąpienie [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] przy użyciu `New` instrukcję, określając nazwę klasy. Klasa COM, reprezentowane przez zestaw międzyoperacyjny jest jeden przypadek, w którym można użyć `New` instrukcji przy użyciu interfejsu. Jeśli nie używasz klasy COM za pomocą `Inherits` instrukcji, tak samo jak klasy, można użyć interfejsu. Poniższy kod przedstawia sposób tworzenia `Command` obiektu w projekcie, który zawiera odwołanie do obiektu ActiveX firmy Microsoft danych 2.8 obiektów biblioteki modelu COM:  
+ Ogólnie rzecz biorąc, Utwórz wystąpienie klasy .NET Framework za pomocą `New` instrukcję, określając nazwę klasy. Klasa COM, reprezentowane przez zestaw międzyoperacyjny jest jeden przypadek, w którym można użyć `New` instrukcji przy użyciu interfejsu. Jeśli nie używasz klasy COM za pomocą `Inherits` instrukcji, tak samo jak klasy, można użyć interfejsu. Poniższy kod przedstawia sposób tworzenia `Command` obiektu w projekcie, który zawiera odwołanie do obiektu ActiveX firmy Microsoft danych 2.8 obiektów biblioteki modelu COM:  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
@@ -67,7 +67,7 @@ Gdy współdziałania między COM i kodu zarządzanego z [!INCLUDE[dnprdnshort](
 >  Zestawy międzyoperacyjne niejawnie implementować interfejsy, które reprezentują klasy COM. Nie należy próbować użyć `Implements` spowoduje instrukcję, aby zaimplementować te interfejsy lub komunikat o błędzie.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor7"></a> Typy danych dla parametrów i zwracanych wartości  
- W odróżnieniu od członków standardowe zestawy zestaw międzyoperacyjny członkowie mogą mieć typów danych, które różnią się od tych używanych w oryginalnej deklaracji obiektu. Mimo że zestawy międzyoperacyjne niejawnie przekonwertować typy modelu COM zgodnych typów środowiska wykonawczego języka wspólnego, należy zwrócić uwagę na typy danych, które są używane przez obie strony, aby zapobiec wystąpieniu błędów środowiska uruchomieniowego. Na przykład w przypadku obiektów COM, utworzone w języku Visual Basic 6.0 i starsze wersje, wartości typu `Integer` założono [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] równoważny typ `Short`. Zalecane jest, użyj przeglądarki obiektów do zbadania właściwości elementów członkowskich zaimportowane przed ich użyciem.  
+ W odróżnieniu od członków standardowe zestawy zestaw międzyoperacyjny członkowie mogą mieć typów danych, które różnią się od tych używanych w oryginalnej deklaracji obiektu. Mimo że zestawy międzyoperacyjne niejawnie przekonwertować typy modelu COM zgodnych typów środowiska wykonawczego języka wspólnego, należy zwrócić uwagę na typy danych, które są używane przez obie strony, aby zapobiec wystąpieniu błędów środowiska uruchomieniowego. Na przykład w przypadku obiektów COM, utworzone w języku Visual Basic 6.0 i starsze wersje, wartości typu `Integer` założono typ równoważne .NET Framework `Short`. Zalecane jest, użyj przeglądarki obiektów do zbadania właściwości elementów członkowskich zaimportowane przed ich użyciem.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor8"></a> Moduł metod na poziomie modelu COM  
  Większość obiektów COM są używane przez utworzenie wystąpienia klasy modelu COM za pomocą `New` — słowo kluczowe, a następnie wywoływania metod obiektu. Jedynym wyjątkiem od tej reguły pociąga za sobą obiektów COM, które zawierają `AppObj` lub `GlobalMultiUse` klasy COM. Takich klas przypominają modułu poziomu metod w klasach Visual Basic .NET. Visual Basic 6.0 i starsze wersje niejawnie tworzy wystąpienia takich obiektów, należy wywołać metody ich po raz pierwszy. Na przykład w języku Visual Basic 6.0 można dodać odwołanie do biblioteki obiektów Microsoft DAO 3.6 i wywołanie `DBEngine` metody bez tworzenia wystąpienia:  

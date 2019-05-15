@@ -2,12 +2,12 @@
 title: Instrukcje dotyczące hostowania internetowej usługi informacyjnej
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600250"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591879"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instrukcje dotyczące hostowania internetowej usługi informacyjnej
 Aby uruchomić przykłady, które są hostowane przez Internetowe usługi informacyjne (IIS), upewnij się, że usługi IIS został poprawnie zainstalowany i działa.  
@@ -163,7 +163,7 @@ Aby uruchomić przykłady, które są hostowane przez Internetowe usługi inform
 4. Strony sieci Web z tekstu "Hello World" powinna zostać wyświetlona.  
   
 > [!NOTE]
->  Każdorazowo Zainstaluj nową wersję [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], należy ponownie zarejestrować Biblioteka aspnet_isapi jako rozszerzenie usługi sieci Web dla usług IIS. Aby to zrobić, należy wydać `aspnet_regiis –I –enable` polecenia.  
+>  Każdorazowo, zainstaluj nową wersję programu .NET Framework, należy ponownie zarejestrować Biblioteka aspnet_isapi jako rozszerzenie usługi sieci Web dla usług IIS. Aby to zrobić, należy wydać `aspnet_regiis –I –enable` polecenia.  
   
 ## <a name="sample-code"></a>Przykładowy kod  
   

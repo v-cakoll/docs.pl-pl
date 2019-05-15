@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d36b5ff4912b09101694dd0e83291053260f0bf9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026617"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586429"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów lokalnej strefy czasowej i strefy czasowej UTC
 
@@ -50,8 +50,6 @@ Należy zawsze dostęp do lokalnej strefy czasowej przy użyciu <xref:System.Tim
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
 Ten przykład wymaga:
-
-* Odwołania do System.Core.dll dodania do projektu.
 
 * Czy <xref:System> zaimportowane wraz z przestrzeni nazw `using` — instrukcja (wymagane w kodzie języka C#).
 

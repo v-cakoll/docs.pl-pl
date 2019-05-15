@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0da874c74562822d521d4a44782d9372cd62f90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751007"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588654"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i przejście przez hiperłącza. Struktura stron i sposoby, w którym ich można nawigować, zgodnie z definicją hiperłącza, jest określany jako topologia nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które nawigowania w dokumentach. Na potrzeby takich aplikacji użytkownik może przejść z jednej strony do innej strony bez dowolnej stronie znajomości o innych.  
@@ -70,7 +70,7 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
   
  Deklaracja <xref:System.Windows.Navigation.PageFunction%601> jest podobny do deklaracji <xref:System.Windows.Controls.Page> dodając argumentów typu. Jak widać w przykładzie kodu, argumenty typu są określone w obu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników, za pomocą `x:TypeArguments` atrybut i związane z kodem, przy użyciu składni argumentów standardowym typu rodzajowego.  
   
- Nie trzeba używać tylko [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] klasy jako argumentów typu. Element <xref:System.Windows.Navigation.PageFunction%601> może być wywołane w celu zbierania danych specyficznych dla domeny, które jest wyodrębniony jako typ niestandardowy. Poniższy kod przedstawia sposób użycia typ niestandardowy typ argumentu dla <xref:System.Windows.Navigation.PageFunction%601>.  
+ Nie trzeba użyć tylko klas .NET Framework jako argumentów typu. Element <xref:System.Windows.Navigation.PageFunction%601> może być wywołane w celu zbierania danych specyficznych dla domeny, które jest wyodrębniony jako typ niestandardowy. Poniższy kod przedstawia sposób użycia typ niestandardowy typ argumentu dla <xref:System.Windows.Navigation.PageFunction%601>.  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  

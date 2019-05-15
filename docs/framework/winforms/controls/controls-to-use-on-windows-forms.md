@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469516"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589040"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Formanty do użycia w formularzach systemu Windows
 Oto alfabetycznym listę kontrolek i składników, których można użyć w formularzach Windows Forms. Oprócz formanty Windows Forms, opisanych w tej sekcji można dodać ActiveX i niestandardowych formantów do formularzy Windows Forms. Jeśli nie możesz znaleźć, formant, który należy wymienionych w tym miejscu, można również utworzyć własne. Aby uzyskać więcej informacji, zobacz [tworzenia kontrolek Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md). Aby uzyskać więcej informacji o wybieraniu formantu zobacz [formantów formularzy Windows za pomocą funkcji](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Formanty Visual Basic są oparte na klas dostarczonych przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Formanty Visual Basic są oparte na klas dostarczonych przez program .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)  
- Wymieniono i opisano formanty Windows Forms na podstawie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Wymieniono i opisano formanty Windows Forms, oparte na programie .NET Framework.  
   
  [Kontrolki z wbudowaną obsługą rysowania przez właściciela](controls-with-built-in-owner-drawing-support.md)  
  W tym artykule opisano, jak zmienić aspekty wyglądu kontrolki, które nie są dostępne za pośrednictwem właściwości.  
@@ -168,7 +168,7 @@ Oto alfabetycznym listę kontrolek i składników, których można użyć w form
  Zezwala użytkownikowi na zmienianie rozmiaru kontrolki zadokowany.  
   
  [Splitter, kontrolka](splitter-control-windows-forms.md)  
- Zezwala użytkownikowi na zmienianie rozmiaru kontrolki zadokowany ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.x).  
+ Zezwala użytkownikowi na zmienianie rozmiaru kontrolki zadokowany (.NET Framework w wersji 1.x).  
   
  [StatusBar, kontrolka](statusbar-control-windows-forms.md)  
  Wyświetla informacje o stanie związane z formantu, który jest ustawiony fokus. Mimo że <xref:System.Windows.Forms.StatusStrip> zastępuje i rozszerza <xref:System.Windows.Forms.StatusBar> kontrolki z poprzednich wersji <xref:System.Windows.Forms.StatusBar> został zachowany na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości wybranie opcji.  

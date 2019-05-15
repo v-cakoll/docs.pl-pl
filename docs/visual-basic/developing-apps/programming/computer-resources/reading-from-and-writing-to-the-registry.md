@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: 6ce05b956ebf9a544eb8c95165b0f709c694f334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921423"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591480"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Odczytywanie z oraz zapisywanie do rejestru (Visual Basic)
 W tym temacie opisano zadania i pojęć, które są skojarzone z rejestru.  
@@ -29,7 +29,7 @@ W tym temacie opisano zadania i pojęć, które są skojarzone z rejestru.
  Opisuje sposób używania `DeleteSubKey` metody `My.Computer.Registry.CurrentUser` właściwości można usunąć klucza rejestru.  
   
  [Odczytywanie z rejestru i zapisywanie w nim za pomocą przestrzeni nazw Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Opisuje sposób używania `Registry` i `RegistryKey` klasy [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dostępu do rejestru.  
+ Opisuje sposób używania `Registry` i `RegistryKey` klas .NET Framework w celu dostępu do rejestru.  
   
  [Bezpieczeństwo i rejestr](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  W tym artykule omówiono problemy dotyczące zabezpieczeń obejmujące rejestru.  

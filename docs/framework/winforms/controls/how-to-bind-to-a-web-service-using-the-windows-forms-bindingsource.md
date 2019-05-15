@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 0d7d9b2848748a924852c703af85cb78a26c09d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8fb10fef8e4b5624d8066a15d12d6efd1e62dee
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622924"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590506"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Instrukcje: wiązanie z usługą sieci Web za pomocą kontrolki BindingSource formularzy systemu Windows
 Jeśli chcesz powiązać kontrolkę formularza Windows wyniki uzyskane z wywołaniem usługi sieci Web XML, możesz użyć <xref:System.Windows.Forms.BindingSource> składnika. Ta procedura jest podobna do powiązania <xref:System.Windows.Forms.BindingSource> składnik do typu. Należy utworzyć serwer proxy po stronie klienta, który zawiera metody i typy udostępnianych przez usługę sieci Web. Możesz wygenerować, serwer proxy po stronie klienta z usługi sieci Web (.asmx), samego lub plik sieci Web Services Description Language (WSDL). Ponadto serwer proxy po stronie klienta, należy ujawnić pola złożone typy używane przez usługę sieci Web jako właściwości publiczne. Następnie Powiąż <xref:System.Windows.Forms.BindingSource> do jednego z typów ujawnione w sieci Web usługi serwera proxy.  
@@ -69,8 +69,6 @@ Jeśli chcesz powiązać kontrolkę formularza Windows wyniki uzyskane z wywoła
  Ten przykład wymaga:  
   
 - Odwołania do zestawów systemu, System.Drawing, System.Web.Services, przestrzeń nazw System.Windows.Forms i System.Xml.  
-  
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
 

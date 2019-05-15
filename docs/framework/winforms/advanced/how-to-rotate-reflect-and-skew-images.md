@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 505028c491228ffdf9c11d0c71dcd5e1afdc5103
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80ac92d545d9be7a4a611038eaaadbbdbe2e8ecf
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967183"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590327"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Instrukcje: Obracanie, odzwierciedlanie i pochylanie obrazów
 Można obracanie, odzwierciedlanie i pochylanie obrazów, określając docelowe punkty narożników lewym, prawym górnym rogu i lewym dolnym oryginalnego obrazu. Docelowe trzy punkty określają affine — przekształcenia, które mapuje równoległobok oryginalny obraz prostokątny.  

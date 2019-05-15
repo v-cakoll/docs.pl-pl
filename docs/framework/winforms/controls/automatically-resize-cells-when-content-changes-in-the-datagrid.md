@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cells [Windows Forms], resizing automatically
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
-ms.openlocfilehash: 436f5d4a77a3119fe5b16afa1a4e71c55b3751dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3411b68b4dcc64dba86cd9fa8804e0a487cec76d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587637"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586631"
 ---
 # <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Instrukcje: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w kontrolce DataGridView formularzy systemu Windows
 Można skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolować zmiany rozmiaru jego wiersze, kolumny i nagłówki automatycznie zawsze, gdy zmian zawartości, tak aby komórek są zawsze wystarczająco duży, aby wyświetlić ich wartości bez przycinania.  
@@ -35,8 +35,6 @@ Można skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolować zmia
  Ten przykład wymaga:  
   
 - Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
-  
-- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.
   
 ## <a name="see-also"></a>Zobacz także
 

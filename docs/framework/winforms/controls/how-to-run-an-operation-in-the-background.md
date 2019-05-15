@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: a27c6d83a6a132ed5a83031d469e2f527b730d49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77f75a7eb1d7cc536df7110ef55727fbdf789f23
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638377"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591600"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>Instrukcje: uruchamianie operacji w tle
 Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować opóźnienia w interfejsie użytkownika, możesz użyć <xref:System.ComponentModel.BackgroundWorker> klasy, aby uruchomić operację na inny wątek.  
@@ -37,8 +37,6 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować op�
  Ten przykład wymaga:  
   
 - Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
-  
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
 

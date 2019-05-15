@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599955"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585984"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić, typ. Obiekt jest zasadniczo bloku pamięci, która została przydzielona i skonfigurowane zgodnie z planu. Program może tworzyć wiele obiektów w tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w nazwanej zmiennej lub w tablicy lub kolekcji. Kod klienta jest kodem, który używa tych zmiennych w celu wywołania metod i uzyskiwać dostęp do właściwości publiczne obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  
@@ -30,7 +30,7 @@ Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić
   
  [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
- Pamięć dla obu `p1` i `p2` jest przydzielony na stosie wątku. Że pamięć jest odzyskana wraz z typu lub metody, w którym jest zdeklarowana. To jest jednym z powodów dlaczego struktury są kopiowane w przydziale. Z drugiej strony pamięci przydzielonej do wystąpienia klasy jest automatycznie odzyskiwanego (bezużyteczne) przez środowisko uruchomieniowe języka wspólnego, gdy wszystkie odwołania do obiektu zniknie z zakresu. Nie jest możliwe w sposób deterministyczny zniszczenie obiektu klasy, jak w przypadku języka C++. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], zobacz [wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md).  
+ Pamięć dla obu `p1` i `p2` jest przydzielony na stosie wątku. Że pamięć jest odzyskana wraz z typu lub metody, w którym jest zdeklarowana. To jest jednym z powodów dlaczego struktury są kopiowane w przydziale. Z drugiej strony pamięci przydzielonej do wystąpienia klasy jest automatycznie odzyskiwanego (bezużyteczne) przez środowisko uruchomieniowe języka wspólnego, gdy wszystkie odwołania do obiektu zniknie z zakresu. Nie jest możliwe w sposób deterministyczny zniszczenie obiektu klasy, jak w przypadku języka C++. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych w .NET Framework, zobacz [wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  Alokacji i dezalokacji pamięci na stosie zarządzanym jest wysoce zoptymalizowane pod kątem w środowisko uruchomieniowe języka wspólnego. W większości przypadków nie ma znaczące różnic w koszt wydajności związany z przydzielaniem wystąpienie klasy na stosie i przydzielanie wystąpienia struktury, na stosie.  

@@ -2,12 +2,12 @@
 title: Dostawca WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 519f63f8dfc558a83a98ca44f74e926beb81c190
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd1cb5f580ba182516f94f10c809cfa649365045
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007503"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589411"
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
 W tym przykładzie pokazano, jak zbieranie danych z usługi Windows Communication Foundation (WCF) w czasie wykonywania przy użyciu dostawcy Instrumentacji zarządzania Windows (WMI), która jest wbudowana w usługi WCF. Ponadto w tym przykładzie przedstawiono sposób dodawania obiektu WMI zdefiniowanych przez użytkownika do usługi. Przykładowe aktywuje dostawcy WMI o [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  
@@ -32,7 +32,7 @@ W tym przykładzie pokazano, jak zbieranie danych z usługi Windows Communicatio
  Dodawanie obiektów WMI do usługi umożliwia do ujawnienia informacji użytkownika wraz z wbudowaną informacji o dostawcy WMI. Jest to realizowane przez opublikowanie schemat usługi WMI za pomocą aplikacji Installutil.exe. Instrukcje, aby to osiągnąć, podając więcej szczegółów można znaleźć w instrukcjach instalacji na końcu tego tematu.  
   
 ## <a name="accessing-wmi-information"></a>Uzyskiwanie dostępu do informacji usługi WMI  
- Dane usługi WMI są dostępne wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, aplikacji Visual Basic, aplikacji w języku C++ i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
+ Dane usługi WMI są dostępne wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów aplikacji Visual Basic C++ aplikacji i programu .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
   
  W tym przykładzie użyto dwóch skryptów języka Java: jeden wyliczyć usługi uruchomione na komputerze oraz niektóre z ich właściwości, a druga do wyświetlania danych WMI zdefiniowanych przez użytkownika. Skrypt otwiera połączenie z dostawcą WMI, analizuje dane i wyświetla dane zebrane.  
   

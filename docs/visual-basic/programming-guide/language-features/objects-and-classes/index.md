@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: ec5825dacaf67ee2544302f4f95a1b341ecf1bf7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753619"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591567"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Obiekty i klasy w języku Visual Basic
 
@@ -176,7 +176,7 @@ Z drugiej strony elementów członkowskich zadeklarowanych w module są dostępn
 
 Obiekty umożliwiają deklarowanie zmiennych i procedur raz i korzystać z nich je zawsze, gdy potrzebne. Na przykład jeśli chcesz dodać sprawdzania pisowni do aplikacji można zdefiniować wszystkie zmienne i obsługują funkcje umożliwiają korzystanie z funkcji sprawdzania pisowni. Jeśli tworzysz swoje sprawdzania pisowni, jako klasę, możesz użyć w innych aplikacjach, dodając odwołanie do zestawu skompilowanego. Można jeszcze lepiej, możesz zaoszczędzić pewnej pracy za pomocą klasy modułu sprawdzania pisowni, że ktoś już został opracowany.
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Zawiera przykłady wiele składników, które są dostępne do użycia. W poniższym przykładzie użyto <xref:System.TimeZone> klasy w <xref:System> przestrzeni nazw. <xref:System.TimeZone> zawiera elementy członkowskie, które umożliwiają pobieranie informacji o strefie czasowej bieżącego systemu komputera.
+.NET Framework oferuje wiele przykładów składników, które są dostępne do użycia. W poniższym przykładzie użyto <xref:System.TimeZone> klasy w <xref:System> przestrzeni nazw. <xref:System.TimeZone> zawiera elementy członkowskie, które umożliwiają pobieranie informacji o strefie czasowej bieżącego systemu komputera.
 
 ```vb
 Public Sub examineTimeZone()

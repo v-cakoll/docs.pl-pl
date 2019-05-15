@@ -5,14 +5,13 @@
       href: casting-and-type-conversions.md
     - name: Opakowywanie i rozpakowywanie
       href: boxing-and-unboxing.md
-    - name: Używanie typu dynamicznego
-      href: using-type-dynamic.md
-      items:
-        - name: 'Przewodnik: Tworzenie obiektów dynamicznych i posługiwanie się nimi (C# i Visual Basic)'
-          href: walkthrough-creating-and-using-dynamic-objects.md
     - name: 'Instrukcje: Konwertowanie tablicy bajtowej na liczbę całkowitą'
       href: how-to-convert-a-byte-array-to-an-int.md
     - name: 'Instrukcje: Konwertowanie ciągu na liczbę'
       href: how-to-convert-a-string-to-a-number.md
     - name: 'Instrukcje: Konwertowanie ciągów szesnastkowych na typy liczbowe'
       href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+    - name: Używanie typu dynamicznego
+      href: using-type-dynamic.md
+    - name: 'Przewodnik: Tworzenie obiektów dynamicznych i posługiwanie się nimi (C# i Visual Basic)'
+      href: walkthrough-creating-and-using-dynamic-objects.md

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0f33bdc006c6b965ba60257637f3cef182555d7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3fd22cc0842c51b331905369915bd055235680c4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637719"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592190"
 ---
 # <a name="using-data-contracts"></a>Używanie kontraktów danych
 A *kontraktu danych* jest formalną umowę między usługą i klienta, który opisuje abstrakcyjnie danych wymienianych. Oznacza to, do komunikowania się, klienta i usługi nie muszą udostępniać te same typy tylko tych samych kontraktów danych. Dokładnie definiuje kontraktu danych, dla każdego parametr lub zwracany typ danych jest serializowana (przekształcane w XML) do wymiany.  
   
 ## <a name="data-contract-basics"></a>Podstawy kontraktu danych  
- Windows Communication Foundation (WCF) używa mechanizm serializacji, o nazwie serializator kontraktu danych domyślnie do serializacji i deserializacji danych (przekonwertować go do i z pliku XML). Wszystkie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów pierwotnych, takich jak liczby całkowite i ciągów, a także niektórych typów traktowane jako podstawowych, takich jak <xref:System.DateTime> i <xref:System.Xml.XmlElement>, może być serializowany z nie innych przygotowania i mających kontraktów danych domyślne. Wiele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy mają również istniejące kontraktów danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) używa mechanizm serializacji, o nazwie serializator kontraktu danych domyślnie do serializacji i deserializacji danych (przekonwertować go do i z pliku XML). Wszystkie typy pierwotne .NET Framework, takich jak liczby całkowite i ciągi, a także niektórych typów traktowane jako podstawowych, takich jak <xref:System.DateTime> i <xref:System.Xml.XmlElement>, może być serializowany z nie innych przygotowania i mających kontraktów danych domyślne. Wiele typów programu .NET Framework mają również istniejące kontraktów danych. Aby uzyskać pełną listę typów możliwych do serializacji, zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Nowe typy złożone, które tworzysz, musi mieć zdefiniowany jako możliwy do serializacji kontrakt danych. Domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> wnioskuje kontraktu danych i serializuje wszystkich typów publicznie widoczne. Wszystkie właściwości publiczne odczytu/zapisu i pola tego typu są serializowane. Możesz zrezygnować z elementami członkowskimi z serializacji przy użyciu <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. Można także jawnie tworzenie kontraktu danych za pomocą <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów. Zazwyczaj jest to realizowane przez stosowanie <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu typu. Ten atrybut można zastosować do klasy, struktury i wyliczenia. <xref:System.Runtime.Serialization.DataMemberAttribute> Następnie należy zastosować atrybut do każdego członka typu kontraktu danych, aby wskazać, że *element członkowski danych*, oznacza to, powinien zostać Zserializowany. Aby uzyskać więcej informacji, zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   

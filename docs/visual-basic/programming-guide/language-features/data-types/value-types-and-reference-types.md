@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600942"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589817"
 ---
 # <a name="value-types-and-reference-types"></a>Typy wartości i odwołań
 W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfikacji. Typy danych Visual Basic mogą być klasyfikowane według tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnik do danych. Jeśli przechowuje swoje własne dane *typu wartości*; Jeśli przechowuje wskaźnik do danych w pamięci jest *odwołania do typu*.  
@@ -46,7 +46,7 @@ W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfi
   
 - Delegaty  
   
- Klasa jest *odwołania do typu*. Z tego powodu typy odwołań takich jak `Object` i `String` są obsługiwane przez [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy. Należy pamiętać, że każda tablica typu odwołania, nawet jeśli jego członkowie są typami wartości.  
+ Klasa jest *odwołania do typu*. Z tego powodu typy odwołań takich jak `Object` i `String` są obsługiwane przez klas .NET Framework. Należy pamiętać, że każda tablica typu odwołania, nawet jeśli jego członkowie są typami wartości.  
   
  Ponieważ każdy typ odniesienia reprezentuje podstawowej klasy .NET Framework, należy użyć [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe, podczas jego inicjowania. Poniższa instrukcja inicjuje tablicę.  
   

@@ -2,16 +2,16 @@
 title: Programowanie asynchroniczne
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846132"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584494"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
-W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server (SqlClient) służących do obsługi asynchronicznego programowania funkcjonalności, która została wprowadzona w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+W tym temacie omówiono obsługę programowania asynchronicznego w .NET Framework Data Provider for SQL Server (SqlClient) służących do obsługi asynchronicznego programowania funkcjonalności, która została wprowadzona w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
 
 ## <a name="legacy-asynchronous-programming"></a>Programowanie asynchroniczne w starszej wersji
 

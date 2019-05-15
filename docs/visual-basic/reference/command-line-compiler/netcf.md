@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: d7c3bcba8e62d62904ed778a48d0e8ae6738ce00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794004"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586539"
 ---
 # <a name="-netcf"></a>-netcf
 
@@ -28,7 +28,7 @@ Ustawia kompilatora z docelowym [!INCLUDE[Compact](~/includes/compact-md.md)].
 
 ## <a name="remarks"></a>Uwagi
 
-`-netcf` Opcji powoduje, że kompilator języka Visual Basic do obiektu docelowego [!INCLUDE[Compact](~/includes/compact-md.md)] zamiast pełnego [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Funkcje języka, które są dostępne tylko w pełni [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] jest wyłączona.
+`-netcf` Opcji powoduje, że kompilator języka Visual Basic do obiektu docelowego [!INCLUDE[Compact](~/includes/compact-md.md)] zamiast pełny program .NET Framework. Funkcje języka, które są dostępne tylko w pełny program .NET Framework jest wyłączone.
 
 `-netcf` Opcja jest przeznaczona do użycia z [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Funkcje języka, wyłączona przez `-netcf` są te same funkcje języka, nie znajduje się w nim docelowych i związanych z `-sdkpath`.
 

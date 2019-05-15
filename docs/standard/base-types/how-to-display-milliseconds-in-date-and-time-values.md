@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855429"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590593"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny
 Domyślne metody formatowania daty i czasu, takie jak <xref:System.DateTime.ToString?displayProperty=nameWithType>, zawierają godziny, minuty i sekundy wartości czasu, ale wykluczają składnik milisekund. W tym temacie pokazano jak dołączyć datę i składnik czasu w milisekundach w sformatowanym ciągu daty i czasu.  
@@ -50,9 +50,6 @@ Domyślne metody formatowania daty i czasu, takie jak <xref:System.DateTime.ToSt
   
 > [!NOTE]
 >  Istnieje możliwość wyświetlania bardzo małych części ułamkowych sekund, takie jak tysięczne sekund lub sto tysięczne sekund. Jednak te wartości mogą być nieistotne. Dokładność wartości daty i godziny zależy od rozdzielczości zegara systemu. W systemach operacyjnych Windows NT 3.5 (i późniejszych) oraz [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], rozdzielczość zegara wynosi około 10-15 milisekund.  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w programie Visual Studio, należy umieścić w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
 

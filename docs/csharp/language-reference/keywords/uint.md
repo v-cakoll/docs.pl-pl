@@ -7,12 +7,12 @@ f1_keywords:
 - uint_CSharpKeyword
 helpviewer_keywords:
 - uint keyword [C#]
-ms.openlocfilehash: e22468eea63ce082f2e9842e6ec307aba1888964
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a60460f67f9b6cf0b57d40ebf2789536e870d75
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660440"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633146"
 ---
 # <a name="uint-c-reference"></a>uint (odwołanie w C#)
 

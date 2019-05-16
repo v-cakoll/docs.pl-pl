@@ -2,12 +2,12 @@
 title: Typ jednostki
 description: Dowiedz się, jak F# typ "jednostka" jest często używany do przechowywania to miejsce, w której wartość jest wymagana przez składnię języka żadnej wartości jest wymagane lub pożądane.
 ms.date: 05/16/2016
-ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d515e19489bfa7de6f17194fd74176cfa0bcd7c9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982530"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645122"
 ---
 # <a name="unit-type"></a>Typ jednostki
 

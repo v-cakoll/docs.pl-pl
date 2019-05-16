@@ -1,15 +1,13 @@
 ---
 title: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Informacje ogólne relacji między wzorców CQRS i DDD.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdb3f4a87f48a27a7b46b1297a9237af01ffb6b6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020104"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639813"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Zastosuj uproszczone wzorców CQRS i DDD w mikrousługach
 

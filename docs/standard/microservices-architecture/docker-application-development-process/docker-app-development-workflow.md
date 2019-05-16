@@ -1,15 +1,13 @@
 ---
 title: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych na platformie Docker. Rozpocznij krok po kroku i Uzyskaj do niektórych szczegółów, aby zoptymalizować pliki Dockerfile oraz kończyć się znakiem uproszczonego przepływu pracy dostępna przy użyciu programu Visual Studio.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751454"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644490"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 

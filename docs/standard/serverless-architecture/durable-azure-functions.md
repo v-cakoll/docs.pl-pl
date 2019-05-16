@@ -4,12 +4,12 @@ description: Niezawodne usługi Azure functions rozszerza środowisko uruchomien
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776015"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643401"
 ---
 # <a name="durable-azure-functions"></a>Trwałe funkcje platformy Azure
 

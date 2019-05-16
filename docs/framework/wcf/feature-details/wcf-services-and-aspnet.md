@@ -2,12 +2,12 @@
 title: Usługi WCF i platforma ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef772a360ea53c2b5f177ed88ad14c4a1e1277ef
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935577"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637548"
 ---
 # <a name="wcf-services-and-aspnet"></a>Usługi WCF i platforma ASP.NET
 

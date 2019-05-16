@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 8d6ac07b653a27a7c4c5534f441b9d673592124c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 881726ea2cfb23493d85097635adb15608ed741d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592260"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642252"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>Zwracany typ funkcji "\<nazwaprocedury >' nie jest zgodny ze specyfikacją CLS
 A `Function` procedura jest oznaczona jako `<CLSCompliant(True)>` , ale zwraca typ, który jest oznaczony jako `<CLSCompliant(False)>`, nie jest oznaczony jako lub nie kwalifikują się, ponieważ jest to typ niezgodne.  

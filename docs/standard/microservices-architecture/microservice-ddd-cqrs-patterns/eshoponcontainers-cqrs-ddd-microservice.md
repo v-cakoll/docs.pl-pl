@@ -1,15 +1,13 @@
 ---
 title: Stosowanie zasad CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Poznaj sposób, w jaki sposób jest implementowany CQRS szeregowania mikrousługi w ramach aplikacji eShopOnContainers.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 6e39b0ce48e7caf755054eb558ab0c99b0ec76e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a688f6e4050ca56c482510bc13880c8b29b11072
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755070"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639568"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Stosowanie podejścia CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
 

@@ -2,12 +2,12 @@
 title: Obsługa wyjątków
 description: Naucz się podstaw obsługi wyjątków w F# i łącza do obsługi wyrażeń i funkcji wyjątków.
 ms.date: 05/16/2016
-ms.openlocfilehash: 187236ca380c7de0b3714160f6c3703f8fb93d5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f4e57bfd643cba3dab5281df484ebb6162cb4b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025096"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645487"
 ---
 # <a name="exception-handling"></a>Obsługa wyjątków
 

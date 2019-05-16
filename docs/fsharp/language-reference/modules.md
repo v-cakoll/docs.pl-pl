@@ -2,12 +2,12 @@
 title: Moduły
 description: Dowiedz się, jak F# moduł to grupa F# możesz pisać kod, takie jak wartości, typy i wartości funkcji w F# program.
 ms.date: 04/24/2017
-ms.openlocfilehash: 9e5bef4ffe3301a69bbe32483625652d988f8a35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07ea1eb9ed06988a780fd3c5acccbc8383a4dc55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666321"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641774"
 ---
 # <a name="modules"></a>Moduły
 

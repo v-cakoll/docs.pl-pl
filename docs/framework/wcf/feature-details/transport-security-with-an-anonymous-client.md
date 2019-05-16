@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: 20d7e59ba2b4b9dedc0b0daff1c1aa9c5210e61b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aac3b2ac6cfcca137bddaefafd290e744ee991eb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932963"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637437"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Zabezpieczanie transportu za pomocą anonimowego klienta
 
@@ -26,7 +26,7 @@ Aby uzyskać więcej informacji na temat używania certyfikatu z usługą, zobac
 |--------------------|-----------------|
 |Tryb zabezpieczeń|Transport|
 |Współdziałanie|Przy użyciu istniejących usług sieci Web i klientów|
-|Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Yes<br /><br /> Poziom aplikacji (bez obsługi WCF)|
+|Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak<br /><br /> Poziom aplikacji (bez obsługi WCF)|
 |Integralność|Tak|
 |Poufność|Tak|
 |Transport|HTTPS|

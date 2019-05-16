@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1a074991c66f7919a2b883cdbb86456c7926cedb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973536"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669795"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
@@ -24,7 +24,7 @@ ms.locfileid: "61973536"
 - Kolumny reprezentują wersji .NET Standard. Każda komórka nagłówek jest łącze do dokumentu, który pokazuje, w których interfejsy API stało się dodane w tej wersji programu .NET Standard.
 - Wiersze reprezentują różne implementacje platformy .NET.
 - Numer wersji w każdej komórce wskazuje *minimalne* wersję implementacji należy, aby skierować je do tej wersji .NET Standard.
-- Interaktywny spis, można zobaczyć [wersji .NET Standard](https://immo.landwerth.net/netstandard-versions/#).
+- Interaktywny spis, można zobaczyć [wersji .NET Standard](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

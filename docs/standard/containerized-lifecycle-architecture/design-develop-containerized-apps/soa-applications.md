@@ -1,15 +1,13 @@
 ---
 title: Aplikacje SOA
 description: Mieć na uwadze kontenerów można też opcji wdrożenia przydatne w przypadku aplikacji SOA.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: ee71873ac15246f979fd2b08d92280ba797ff6ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795408"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644762"
 ---
 # <a name="service-oriented-applications"></a>Aplikacje zorientowane na usługę
 

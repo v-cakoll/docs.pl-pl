@@ -18,12 +18,12 @@ ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
 ms.custom: updateeachrelease
-ms.openlocfilehash: 798b3d29a13434511f64dfc358fb7690948cacfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017010"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645009"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Omówienie usługi Common Language Runtime (CLR)
 

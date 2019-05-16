@@ -2,12 +2,12 @@
 title: Funkcje
 description: Dowiedz się więcej o funkcji w F# i w jaki sposób F# obsługuje typowych konstrukcji programowania funkcjonalnego.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996791"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645401"
 ---
 # <a name="functions"></a>Funkcje
 
@@ -38,7 +38,7 @@ W poprzednim przykładzie nazwą funkcji jest `f`, argument jest `x`, która ma 
 
 Funkcje mogą zostać oznaczone jako `inline`. Aby uzyskać informacje o `inline`, zobacz [funkcji śródwierszowych](../functions/inline-functions.md).
 
-## <a name="scope"></a>Zakres
+## <a name="scope"></a>Scope
 
 Na dowolnym poziomie zakresu innego niż zakres modułu nie jest błąd, aby ponownie użyć nazwy wartości lub funkcji. Ponowne użycie nazwy później zgłoszonej nazwy zasłania nazwa zadeklarowanej wcześniej. Jednak w zakresie najwyższego poziomu w module, nazwy muszą być unikatowe. Na przykład poniższy kod generuje błąd, gdy się pojawi się w zakresie modułu, ale nie w przypadku, gdy się pojawi się wewnątrz funkcji:
 

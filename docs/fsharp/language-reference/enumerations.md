@@ -2,12 +2,12 @@
 title: Wyliczenia
 description: Dowiedz się, jak używać F# wyliczeń zamiast literałów sprawić, że kod bardziej czytelny i łatwy w obsłudze.
 ms.date: 05/16/2016
-ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff62b1c0a6ab0fda58a30de9387acbb547f6b81
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921579"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645551"
 ---
 # <a name="enumerations"></a>Wyliczenia
 

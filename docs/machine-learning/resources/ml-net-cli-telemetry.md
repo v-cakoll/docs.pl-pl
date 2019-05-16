@@ -4,12 +4,12 @@ description: Dowiedz się więcej o funkcje telemetrii strukturze ML.NET interfe
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066158"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645022"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Zbieranie danych telemetrycznych przez interfejs wiersza polecenia strukturze ML.NET
 
@@ -42,15 +42,17 @@ Zrezygnować z funkcji danych telemetrycznych przez ustawienie `DOTNET_CLI_TELEM
 
 Ta funkcja zbiera następujące dane:
 
-- Polecenia, które są wywoływane, takich jak `auto-train`
+- Jakie polecenia została wywołana, takich jak `auto-train`
+- Nazwy parametrów wiersza polecenia używane (czyli "Nazwa zestawu danych, nazwę kolumny etykiety, zadania uczenia maszynowego, ścieżkę wyjściową, max eksploracji w czasie, poziom szczegółowości")
 - Mieszana adres MAC: kryptograficznie (SHA256) anonimowe i unikatowy identyfikator dla maszyny
 - Sygnatura czasowa wywołania
-- Trzy octet adres IP używany tylko w celu określenia lokalizacji geograficznej
+- Trzy octet adres IP (nie pełnemu) używane tylko w celu określenia lokalizacji geograficznej
 - Nazwy wszystkich argumentów/parametry używane. Nie odbiorcy wartości, takich jak ciągi
+- Nazwa zestawu danych w formie skrótu pliku
+- Przedział rozmiaru pliku zestawu danych
 - Wersja systemu operacyjnego i
-- Wartość parametru--ml zadania: Podzielone wartości, takich jak `regression`, `binary-classification`, i `multiclass-classification`
-- [Skala logarytmiczna zaokrąglone](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power) rozmiar pliku zestawu danych (najbliższym potęgą liczby 2)
-- `ExitCode` polecenia
+- Wartość parametru--zadań: Podzielone wartości, takich jak `regression`, `binary-classification`, i `multiclass-classification`
+- Wersja interfejsu wiersza polecenia w strukturze ML.NET (tj. 0.3.27703.4)
 
 Dane są przesyłane w bezpieczny sposób do serwerów firmy Microsoft przy użyciu [usługi Azure Application Insights](https://azure.microsoft.com/services/application-insights/) technologii, przechowywane w obszarze ograniczony dostęp i używane w ramach rygorystyczne kontrole zabezpieczeń z bezpiecznym [usługi Azure Storage](https://azure.microsoft.com/services/storage/) systemów.
 

@@ -1,15 +1,13 @@
 ---
 title: Testowanie aplikacji internetowych i usług ASP.NET Core
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Eksplorowanie architektury do testowania aplikacji internetowych i usług platformy ASP.NET Core w kontenerach.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 106e38a3cf3a121c4d7f879b718c832d27e0910f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a741fca84f456d635e1790d6be1c72e70345a24
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864299"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644243"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług ASP.NET Core
 

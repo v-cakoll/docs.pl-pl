@@ -4,12 +4,12 @@ description: Zalecenia dotyczące najlepszych rozwiązań dla deweloperów do tw
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85d76c8b2bd0f030e3fbc1987e6ff51d6da44e76
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910133"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644382"
 ---
 # <a name="open-source-library-guidance"></a>Wskazówki dotyczące biblioteki typu open-source
 

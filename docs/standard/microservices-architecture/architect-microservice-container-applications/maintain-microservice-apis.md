@@ -1,15 +1,13 @@
 ---
 title: Tworzenie, rozwijanie i przechowywanie wersji interfejsów API i kontaktów w mikrousługach
 description: Tworzenie mikrousług interfejsów API i kontrakty, uwzględniając rozwój i przechowywanie wersji, ponieważ ulegnie zmianie.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: f42de3895f7f9affe09891fd89621fbb414313e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757095"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644913"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Tworzenie, rozwijanie i przechowywanie wersji interfejsów API i kontaktów w mikrousługach
 

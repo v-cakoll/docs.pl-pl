@@ -1,15 +1,13 @@
 ---
 title: Umieszczanie aplikacji monolitycznych w kontenerze
 description: Umieszczania aplikacji monolitycznych w kontenerze, ale nie od razu korzystać z architektury mikrousług, ma wdrożenia ważne korzyści, które mogą być natychmiast dostarczane.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910860"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640817"
 ---
 # <a name="containerizing-monolithic-applications"></a>Umieszczanie aplikacji monolitycznych w kontenerze
 

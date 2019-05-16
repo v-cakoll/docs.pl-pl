@@ -1,15 +1,13 @@
 ---
 title: Tworzenie prostej mikrousługi CRUD na podstawie danych
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Omówienie tworzenia prostych operacji CRUD (opartej na danych) mikrousług w kontekście aplikacji mikrousług.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 21a06036609ec4c84b496d58423a111ee658f3aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761186"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644426"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostej mikrousługi CRUD na podstawie danych
 

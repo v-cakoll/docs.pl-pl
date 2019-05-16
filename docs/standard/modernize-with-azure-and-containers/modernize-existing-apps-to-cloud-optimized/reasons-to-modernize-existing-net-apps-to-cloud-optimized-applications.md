@@ -1,15 +1,13 @@
 ---
 title: Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 896162116d2c6e92fa3038405c5f3bf40a956ad9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611567"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639059"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 

@@ -2,12 +2,12 @@
 title: Konstruktorów
 description: Dowiedz się, jak definiowanie i korzystanie z konstruktorów w F# tworzenie i Inicjowanie obiektów klasy i struktury.
 ms.date: 05/16/2016
-ms.openlocfilehash: 34989e2877b29f6f9fe1f6cc05e3fd7c90a1306a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47fb6e77ce369d7aa4fce3aa2c97ecf7df280c03
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903971"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645230"
 ---
 # <a name="constructors"></a>Konstruktorów
 

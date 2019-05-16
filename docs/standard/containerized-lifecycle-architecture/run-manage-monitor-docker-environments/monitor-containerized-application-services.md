@@ -1,15 +1,13 @@
 ---
 title: Monitorowanie usług konteneryzowanych aplikacji
 description: Dowiedz się, niektóre kluczowe aspekty monitorowania kontenera architektury
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 4553a35c8db6cfc46187525ef2ffc65cb3ba07c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922749"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641221"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorowanie usług konteneryzowanych aplikacji
 

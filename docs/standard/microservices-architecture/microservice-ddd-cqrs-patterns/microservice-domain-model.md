@@ -1,15 +1,13 @@
 ---
 title: Projektowanie modelu domeny mikrousługi
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Podczas projektowania modelu domeny zorientowanej na wzorzec DDD, należy zrozumieć kluczowe pojęcia.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5c2ac880462851dd18735ced189b3641a759c8ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760964"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644220"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 

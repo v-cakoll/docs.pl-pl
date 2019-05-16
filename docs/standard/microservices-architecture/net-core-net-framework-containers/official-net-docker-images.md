@@ -1,15 +1,13 @@
 ---
 title: Oficjalne obrazy Docker w programie .NET
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Oficjalne obrazy Docker w programie .NET
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8babdfa91eeb903faac06af8b15e3f09aad98f2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019519"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644332"
 ---
 # <a name="official-net-docker-images"></a>Oficjalne obrazy Docker w programie .NET
 

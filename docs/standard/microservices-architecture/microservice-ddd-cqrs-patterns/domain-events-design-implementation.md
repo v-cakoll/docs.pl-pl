@@ -1,15 +1,13 @@
 ---
 title: Wydarzenia związane z domeny. Projektowanie i implementacja
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Uzyskaj szczegółowy widok zdarzeń domeny kluczową koncepcją do nawiązania komunikacji między agregacji.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1990fefb10016596739ea4f3d55d7c7de92faca0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020052"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644547"
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia w domenie: projektowanie i implementacja
 

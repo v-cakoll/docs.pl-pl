@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1b7be132691218bf4b8283c60f9527decfd5023c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945482"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641471"
 ---
 # <a name="target-frameworks"></a>Platformy docelowe
 

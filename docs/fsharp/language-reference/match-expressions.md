@@ -2,12 +2,12 @@
 title: Wyrażenia dopasowania
 description: Dowiedz się, jak F# wyrażenie dopasowania dostarcza rozgałęziania formant, który jest oparty na porównaniu wyrażenia zestaw wzorców.
 ms.date: 04/19/2018
-ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69ff8de1617e6b55d112d310bfcd8b2f967b6e8a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903958"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645201"
 ---
 # <a name="match-expressions"></a>Wyrażenia dopasowania
 

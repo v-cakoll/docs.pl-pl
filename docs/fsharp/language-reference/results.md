@@ -2,12 +2,12 @@
 title: Wyniki
 description: Dowiedz się, jak używać F# "Result" wpisz, aby pomóc w pisaniu kodu błędu odpornej na uszkodzenia.
 ms.date: 04/24/2017
-ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770516"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645322"
 ---
 # <a name="results"></a>Wyniki
 

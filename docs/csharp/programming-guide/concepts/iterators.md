@@ -2,12 +2,12 @@
 title: Iterowania przez kolekcje w języku C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 2b0e1d509cf80e13d2cee3cf0ddf2021d6c84c5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 931f0662b71b4dd99ac4a419c279be5058c61e92
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668500"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635517"
 ---
 # <a name="iterators-c"></a>Iteratory (C#)
 

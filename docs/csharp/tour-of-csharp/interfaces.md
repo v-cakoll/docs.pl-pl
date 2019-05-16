@@ -3,12 +3,12 @@ title: C#Interfejsy — Przewodnik po przykładzie C# języka
 description: Interfejsy definiują kontraktów implementowany przez typy wC#
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: bfc6b59a411ff2ddb3331a8bdf24c0ae3d611273
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 240ddfb321c5a89c8aada4353845915d0e242ae0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706406"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634554"
 ---
 # <a name="interfaces"></a>Interfejsy
 

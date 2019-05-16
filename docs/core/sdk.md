@@ -3,12 +3,12 @@ title: Omówienie zestawu SDK programu .NET core
 description: Dowiedz się o .NET Core SDK, która stanowi zestaw bibliotek i narzędzi służących do tworzenia projektów .NET Core.
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: f23140166ada0c39d4267a4fd2ba5187b6c13c83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b63de92dbee318326f670175ff6824a8c056784
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648727"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631886"
 ---
 # <a name="net-core-sdk-overview"></a>Omówienie zestawu SDK programu .NET core
 

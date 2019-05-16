@@ -2,12 +2,12 @@
 title: Ciągi
 description: Dowiedz się, jak F# typu "string" reprezentuje niezmienny tekst jako sekwencja znaków Unicode.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b55b0c87b6636346677b973e093e7bcba324e98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755353"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642085"
 ---
 # <a name="strings"></a>Ciągi
 

@@ -1,15 +1,13 @@
 ---
 title: Kiedy należy wdrażać kontenery systemu Windows w lokalnej infrastrukturze maszyn wirtualnych IaaS
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Kiedy należy wdrażać kontenery Windows w lokalnej infrastrukturze maszyn wirtualnych IaaS
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: bcfc4990a261b8675c36358c5188a8d26d76479d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5986073e295eeba5921a2d899b236c68a27251fd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621029"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643768"
 ---
 # <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Kiedy należy wdrażać kontenery systemu Windows w lokalnej infrastrukturze maszyn wirtualnych IaaS
 

@@ -2,12 +2,12 @@
 title: polecenie pomocy DotNet
 description: Polecenia dotnet pomocy zawiera bardziej szczegółowe dokumentację online dla określonego polecenia.
 ms.date: 12/04/2018
-ms.openlocfilehash: 44274b698ed83bd3cdb58787f433eeb5c555bc6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8694494720cdb9a540754fdf79eeb99d5dbe61ef
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665120"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631987"
 ---
 # <a name="dotnet-help-reference"></a>Dokumentacja pomocy DotNet
 

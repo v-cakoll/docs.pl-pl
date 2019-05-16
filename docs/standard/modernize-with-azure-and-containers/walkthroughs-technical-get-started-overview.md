@@ -1,15 +1,13 @@
 ---
 title: Omówienie przewodników i wprowadzającej dokumentacji technicznej
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows | Przewodniki i technicznych wprowadzająca
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2202e2f972951e4074ed1941f0a0cfe352ab4b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012418"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638964"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Omówienie przewodników i wprowadzającej dokumentacji technicznej
 

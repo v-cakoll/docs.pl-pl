@@ -1,15 +1,13 @@
 ---
 title: Projektowanie mikrousługi zorientowanej na wzorzec DDD
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Dowiedz się, projekt szeregowania mikrousługi zorientowanej na wzorzec DDD i warstwy aplikacji.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020091"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639670"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Projektowanie mikrousługi zorientowanej na wzorzec DDD
 

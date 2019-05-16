@@ -2,12 +2,12 @@
 title: 'Pętle: for...in — Wyrażenie'
 description: Zobacz jak F# for... w wyrażeniu konstrukcji pętli jest używany do wykonywania iteracji dopasowania wzorca w kolekcji wyliczenia.
 ms.date: 05/16/2016
-ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5346713b1747227f3fe79e308455d976e506f968
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024446"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641803"
 ---
 # <a name="loops-forin-expression"></a>Pętle: for...in — Wyrażenie
 

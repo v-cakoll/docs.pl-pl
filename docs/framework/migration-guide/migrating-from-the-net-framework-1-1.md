@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 546bb50531e62abafe8ab016e2c138ffa9d8720d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c683ce454e4db36367cb097371427d27dc4c555
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61871809"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636327"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migracja z programu .NET Framework 1.1
 

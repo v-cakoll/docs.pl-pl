@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643936"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635528"
 ---
 # <a name="net-framework-guide"></a>.NET framework — przewodnik
 
@@ -28,7 +28,7 @@ ms.locfileid: "61643936"
 
 Aby uzyskać ogólne wprowadzenie do programu .NET Framework dla użytkowników i deweloperów — zobacz [wprowadzenie](./get-started/index.md). Aby zapoznać się z wprowadzeniem do architektury i kluczowe funkcje programu .NET Framework, zobacz [Przegląd](./get-started/overview.md).
 
-.NET Framework mogą być używane, za pomocą platformy Docker, jak i z [kontenery Windows](/virtualization/windowscontainers/about/). Zobacz [wdrażania .NET Framework aplikacje przy użyciu rozwiązania Docker](./docker/index.md) Aby dowiedzieć się, jak uruchamiać aplikacje w kontenerach platformy Docker.
+.NET Framework mogą być używane, za pomocą platformy Docker, jak i z [kontenery Windows](/virtualization/windowscontainers/about/).
 
 ## <a name="installation"></a>Instalacja
 
@@ -51,9 +51,6 @@ Udostępnia zasoby i wskazówki dotyczące instalacji platformy .NET Framework i
 
 * [Przewodnik migracji](./migration-guide/index.md)  
 Udostępnia zasoby i listę zmian, które należy wziąć pod uwagę, jeśli przenosisz aplikację do nowej wersji programu .NET Framework.
-
-* [.NET Framework na platformie Docker — przewodnik](./docker/index.md)  
-Zapewnia zasoby do uruchamiania aplikacji .NET Framework za pomocą platformy Docker, przy użyciu kontenerów Windows.
 
 * [Podręcznik programowania](./development-guide.md)  
 Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.

@@ -1,15 +1,13 @@
 ---
 title: Zapoznaj się z niestandardowych ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania
 description: Dowiedz się, jak można implementować ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania, od początku do obsługi możliwych scenariuszy błędu HTTP.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b40b73a014faa87d4eb42192c72b5a9b6c8d4fa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938661"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644740"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Zapoznaj się z niestandardowych ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania
 

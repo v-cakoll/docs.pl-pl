@@ -4,12 +4,12 @@ description: Przewodnik, na które implementacji .NET należy rozważyć podczas
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772609"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641153"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework dla aplikacji serwerowych
 
@@ -108,6 +108,6 @@ Niektóre firmy Microsoft lub innych platform nie obsługują platformy .NET Cor
 - [Platformy docelowe](frameworks.md)
 - [Przewodnik platformy .NET Core](../core/index.md)
 - [Przenoszenie z .NET Framework i .NET Core](../core/porting/index.md)
-- [.NET Framework na platformie Docker — przewodnik](../framework/docker/index.md)
+- [Wprowadzenie do platform .NET i Docker](../core/docker/intro-net-docker.md)
 - [Omówienie składników platformy .NET](components.md)
 - [Mikrousługi .NET. architektura konteneryzowanych aplikacji .NET](microservices-architecture/index.md)

@@ -1,15 +1,13 @@
 ---
 title: Implementowanie odpornych na błędy połączeń Entity Framework Core SQL
 description: Dowiedz się, jak zaimplementować odporne na błędy połączeń Entity Framework Core SQL. Ta technika jest szczególnie ważne w przypadku korzystania z usługi Azure SQL Database w chmurze.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: b056df033a584bc51fed5ccd52a58a6331298aa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bf5c1827cee1da69aeccdc9f15573c301fc9363
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818667"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639896"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementowanie odpornych na błędy połączeń Entity Framework Core SQL
 

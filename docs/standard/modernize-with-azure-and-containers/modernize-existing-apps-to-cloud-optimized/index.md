@@ -1,15 +1,13 @@
 ---
 title: Modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: edbffe45a2a1652ff477f9785b3afb5b0e493bc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811679"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638944"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 

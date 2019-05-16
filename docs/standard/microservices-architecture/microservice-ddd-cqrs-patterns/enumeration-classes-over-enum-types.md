@@ -1,15 +1,13 @@
 ---
 title: Używanie klas wyliczeń zamiast typów wyliczeń
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Wyczyść wykorzystania klas wyliczeń zamiast typów wyliczeniowych, jako sposób, aby rozwiązać niektóre ograniczenia.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02d5fcef580f71b6f8c4af6d88095e24b0bd3462
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818017"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644480"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Użyj klas wyliczeń zamiast typów wyliczeń
 

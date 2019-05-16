@@ -3,12 +3,12 @@ title: Jak używać strukturze ML.NET automatyczne interfejsu API uczenia Maszyn
 description: Strukturze ML.NET automatyczne interfejsu API uczenia Maszynowego automatyzuje modelu proces tworzenia i generuje gotowe do wdrożenia modelu. Dowiedz się, opcje, które umożliwiają skonfigurowanie automatycznych usługi machine learning zadania.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b05b6ed7c66062b28aaf634913a9598602b62498
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 21bf594ba70e8c466cba757ca4dcfe39ddfa4d1e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557878"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641239"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Jak używać strukturze ML.NET automatyczne interfejsu API usługi machine learning
 
@@ -19,7 +19,7 @@ Automatyczne usługi machine learning (AutoML) automatyzuje proces stosowania uc
 
 ## <a name="load-data"></a>Ładowanie danych
 
-Automatyczne usługi machine learning obsługuje ładowanie zestawu danych do [IDataView](https://docs.microsoft.com/dotnet/api/microsoft.ml.idataview?view=ml-dotnet). Dane mogą być w formie plików wartości rozdzielane tabulatorami (TSV) i plików rozdzielanych przecinkami (CSV).
+Automatyczne usługi machine learning obsługuje ładowanie zestawu danych do [IDataView](xref:Microsoft.ML.IDataView). Dane mogą być w formie plików wartości rozdzielane tabulatorami (TSV) i plików rozdzielanych przecinkami (CSV).
 
 Przykład:
 
@@ -61,7 +61,7 @@ Tworzenie eksperymentu ustawień dla określonego typu zadania uczenia Maszynowe
 
 ## <a name="configure-experiment-settings"></a>Konfigurowanie ustawień eksperymentu
 
-Eksperymenty są wysoce konfigurowalne. Zobacz [dokumentacji interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.auto?view=ml-dotnet) poznania pełnej listy ustawień konfiguracji.
+Eksperymenty są wysoce konfigurowalne. Zobacz [dokumentacji interfejsu API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) poznania pełnej listy ustawień konfiguracji.
 
 Oto niektóre przykłady:
 
@@ -104,15 +104,15 @@ Oto niektóre przykłady:
     ```
 
 Lista obsługiwanych Instruktorzy każdego zadania uczenia Maszynowego znajduje się w temacie odpowiednie łącze poniżej:
-* [Obsługiwane algorytmy Klasyfikacja binarna](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationtrainer?view=automl-dotnet)
-* [Obsługiwane algorytmy Wieloklasowej klasyfikacji](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationtrainer?view=automl-dotnet)
-* [Regresja obsługiwane algorytmy](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressiontrainer?view=automl-dotnet)
+* [Obsługiwane algorytmy Klasyfikacja binarna](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationtrainer?view=automl-dotnet)
+* [Obsługiwane algorytmy Wieloklasowej klasyfikacji](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationtrainer?view=automl-dotnet)
+* [Regresja obsługiwane algorytmy](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressiontrainer?view=automl-dotnet)
 
 ## <a name="optimizing-metric"></a>Optymalizacja metryki
 
 Optymalizacja metryki, jak pokazano w przykładzie powyżej, określa metryki można optymalizować podczas uczenia modelu. Optymalizacja metryki, które można wybrać, jest określana przez typ zadania, które wybierzesz. Poniżej znajduje się lista dostępnych metryk.
 
-|[Klasyfikacja binarna](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet) | [Wieloklasowej klasyfikacji](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet) | [Regression](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet)
+|[Klasyfikacja binarna](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet) | [Wieloklasowej klasyfikacji](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet) | [Regression](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet)
 |-- |-- |--
 |dokładność| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -210,11 +210,11 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 Poniżej wymieniono wszystkie dostępne metryki dla zadania uczenia Maszynowego:
-* [Klasyfikacja binarna metryki](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet
+* [Klasyfikacja binarna metryki](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.binaryclassificationmetric?view=automl-dotnet
 )
-* [Metryki klasyfikacji wieloklasowej](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet
+* [Metryki klasyfikacji wieloklasowej](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.multiclassclassificationmetric?view=automl-dotnet
 )
-* [Metryki regresji](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet
+* [Metryki regresji](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl.regressionmetric?view=automl-dotnet
 )
 
 ## <a name="see-also"></a>Zobacz także

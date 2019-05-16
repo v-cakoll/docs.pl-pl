@@ -2,12 +2,12 @@
 title: 'Pętle: while...do — Wyrażenie'
 description: Zobacz jak podczas... zrobić wyrażenie jest używany do wykonywania iteracji wykonywanie (pętli), gdy spełniony jest warunek określony test.
 ms.date: 05/16/2016
-ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5823ace27348ff4d4397a726bf2254f8fa0ee09b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904023"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641834"
 ---
 # <a name="loops-whiledo-expression"></a>Pętle: while...do — Wyrażenie
 

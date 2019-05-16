@@ -2,12 +2,12 @@
 title: Wersja i zaktualizuj uwagi dla deweloperów języka C#
 description: Wprowadzenie do nowych funkcji języków w bibliotece może wpłynąć na kod, który korzysta z niego.
 ms.date: 09/19/2018
-ms.openlocfilehash: 56685422e2c73dcca25acbdccb3a77a8de9df775
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675510"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634489"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>Wersja i zaktualizuj uwagi dla deweloperów języka C#
 

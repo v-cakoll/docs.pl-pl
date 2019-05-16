@@ -1,15 +1,13 @@
 ---
 title: Rozwiązywanie problemów ze złożonościami biznesowymi w mikrousłudze z wzorcami DDD i CQRS
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Dowiedz się, jak analizować złożone scenariusze zastosowania wzorców CQRS i DDD
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f17acd6765de96bf8cec28c4e212733822fa0b73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d311641e2ac73205c04c3f1147b54991585ce851
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019766"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639796"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Złożoność firm czoła w Mikrousługach przy użyciu wzorców CQRS i DDD
 

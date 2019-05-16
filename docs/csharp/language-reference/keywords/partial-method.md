@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
-ms.openlocfilehash: 742d6ca744ac723179718f1400e600411712dd40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14bcd3329b6ca8e46f6c180c97174a561108d143
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660947"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633356"
 ---
 # <a name="partial-method-c-reference"></a>Metoda częściowa (odwołanie w C#)
 

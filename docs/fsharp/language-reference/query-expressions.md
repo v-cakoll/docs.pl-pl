@@ -2,12 +2,12 @@
 title: Wyrażenia kwerend
 description: Dowiedz się więcej o obsłudze wyrażenia zapytań LINQ w F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc077bfbe25f88104e89508ef6283a5bc42eddbd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795508"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645344"
 ---
 # <a name="query-expressions"></a>Wyrażenia kwerend
 

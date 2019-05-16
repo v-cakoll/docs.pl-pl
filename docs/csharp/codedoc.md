@@ -3,12 +3,12 @@ title: Dokumentowanie kodu przy użyciu komentarzy XML
 description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumentacji XML do generowania pliku dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 956598d7c8193f70e094fcb578c041b8972b9b0c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063150"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633739"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
 
@@ -222,5 +222,5 @@ Dokumentowanie kodu jest zalecane w przypadku wielu powodów. Poniżej przedstaw
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Komentarze dokumentacji XML (C# Programming Guide)](programming-guide/xmldoc/xml-documentation-comments.md)
+- [Komentarze dokumentacji XML (C# Programming Guide)](programming-guide/xmldoc/index.md)
 - [Tagi zalecane dla komentarzy do dokumentacji (C# Programming Guide)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

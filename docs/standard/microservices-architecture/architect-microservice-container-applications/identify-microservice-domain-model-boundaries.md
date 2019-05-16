@@ -1,15 +1,13 @@
 ---
 title: Identyfikowanie ograniczeń modelu domeny dla poszczególnych mikrousług
 description: Zapoznaj się z essence partycjonowania dużych aplikacji na mikrousługi do osiągnięcia architektury dźwięku.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 9142c5abbbd3839caac377876ba54258cdf916b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa903e13b20be1084fad60e6fb7bbb1c61403deb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689765"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644394"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identyfikowanie ograniczeń modelu domeny dla poszczególnych mikrousług
 

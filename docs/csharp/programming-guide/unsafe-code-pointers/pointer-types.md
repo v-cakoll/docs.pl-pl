@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd44bf9e8b3c68b7fb5e45bb7e0aa14e329a5f0e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708824"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635129"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 
@@ -94,7 +94,6 @@ W poniższej tabeli wymieniono operatory i instrukcje, które mogą wykonywać o
 - [Przewodnik programowania w języku C#](../index.md)
 - [Niebezpieczny kod i wskaźniki](index.md)
 - [Konwersje wskaźników](pointer-conversions.md)
-- [Wyrażenia wskaźników](pointer-expressions.md)
 - [Typy](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed, instrukcja](../../language-reference/keywords/fixed-statement.md)

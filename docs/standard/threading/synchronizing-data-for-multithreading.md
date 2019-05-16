@@ -4,28 +4,29 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework], synchronizing threads
+- threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644760"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638764"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
+
 Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedynczy obiekt, ważne jest, można zsynchronizować te wywołania. W przeciwnym razie jeden wątek może spowodować zakłócenie działania innego wątku, a obiekt może pozostać w nieprawidłowym stanie. Klasy, której członkami są chronione przed przerw w zasilaniu nazywa się metodą o bezpiecznych wątkach.  
   
- Common Language Infrastructure udostępnia kilka strategii do synchronizowania dostępu do wystąpienia i statyczne elementy członkowskie:  
+.NET zawiera kilka strategii do synchronizowania dostępu do wystąpienia i statyczne elementy członkowskie:  
   
 - Regiony kodu zsynchronizowane. Możesz użyć <xref:System.Threading.Monitor> klasy lub kompilatora pomocy technicznej dla tej klasy zsynchronizować tylko Blokuj kod, który ich potrzebuje, poprawa wydajności.  
   
-- Ręcznej synchronizacji. Można użyć dla obiektów synchronizacji zawartym w bibliotece klas programu .NET Framework. Zobacz [Przegląd podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md), który zawiera omówienie <xref:System.Threading.Monitor> klasy.  
+- Ręcznej synchronizacji. Można użyć dla obiektów synchronizacji zawartym w bibliotece klas programu .NET. Zobacz [Przegląd podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md), który zawiera omówienie <xref:System.Threading.Monitor> klasy.  
   
-- Konteksty zsynchronizowane. Możesz użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> Aby włączyć synchronizację prostego, automatyczne dla <xref:System.ContextBoundObject> obiektów.  
+- Konteksty zsynchronizowane. W przypadku aplikacji .NET Framework i środowisku Xamarin, można użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> Aby włączyć synchronizację prostego, automatyczne dla <xref:System.ContextBoundObject> obiektów.  
   
 - Klasy kolekcji w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeni nazw. Te klasy oferują synchronizowane wbudowane Dodawanie i usuwanie operacji. Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../docs/standard/collections/thread-safe/index.md).  
   
@@ -42,7 +43,7 @@ Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedy
  Jest to wartość domyślna dla obiektów. Wątek może uzyskać dostęp do dowolnej metody pól w dowolnym momencie. Tylko jeden wątek jednocześnie powinien uzyskać dostęp do tych obiektów.  
   
 ## <a name="manual-synchronization"></a>Ręcznej synchronizacji  
- Biblioteka klas .NET Framework oferuje pewną liczbę klas synchronizacji wątków. Zobacz [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+ Biblioteka klas .NET oferuje pewną liczbę klas synchronizacji wątków. Zobacz [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Regiony kodu zsynchronizowane  
  Możesz użyć <xref:System.Threading.Monitor> klasy lub słowem kluczowym kompilatora, aby zsynchronizować bloki kodu, wystąpienia metod i metod statycznych. Nie jest obsługiwane dla zsynchronizowanej pola statyczne.  
@@ -52,7 +53,7 @@ Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedy
 > [!NOTE]
 >  `lock` i `SyncLock` instrukcje są implementowane za pomocą <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> i <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, więc inne metody <xref:System.Threading.Monitor> mogą być używane w połączeniu z nimi w ramach zsynchronizowane regionu.  
   
- Można również dekoracji metody z **MethodImplAttribute** i **MethodImplOptions.Synchronized**, który ma ten sam efekt jak użycie **Monitor** lub jednego z kompilatora słowa kluczowe do zablokowania całej treści metody.  
+ Można również dekoracji metody z <xref:System.Runtime.CompilerServices.MethodImplAttribute> o wartości <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, który ma ten sam efekt jak użycie <xref:System.Threading.Monitor> lub słowa kluczowe kompilatora do zablokowania całej treści metody.  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> można podzielić wątku z blokowaniem operacje, takie jak oczekiwanie na dostęp do synchronizowanych obszar kodu. **Thread.Interrupt** również służy do dzielenia wątków poza operacje, takie jak <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
@@ -65,7 +66,8 @@ Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedy
  W obu przypadkach, jeśli wyjątek jest zgłaszany w kodzie należy go zablokować, blokadę uzyskaną przez **blokady** lub **SyncLock** zwolnieniu automatycznie. Kompilatory C# i Visual Basic emisji **spróbuj**/**na koniec** zablokować za pomocą **Monitor.Enter** na początku try, i **Monitor.Exit**  w **na koniec** bloku. Jeśli wyjątek jest generowany wewnątrz **blokady** lub **SyncLock** bloku, **na koniec** uruchamia program obsługi pozwala wykonać pracę oczyszczania.  
   
 ## <a name="synchronized-context"></a>Kontekst zsynchronizowane  
- Możesz użyć **SynchronizationAttribute** na dowolnym **ContextBoundObject** zsynchronizować wszystkie wystąpienia metod i pól. Wszystkie obiekty w tej samej domenie kontekstu udostępnianie tego samego blokady. Wiele wątków może uzyskiwać dostęp do metod i pól, ale tylko jednego wątku jest dozwolona w dowolnym momencie.  
+ 
+W programie .NET Framework i środowisku Xamarin tylko aplikacji, można użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> na dowolnym <xref:System.ContextBoundObject> zsynchronizować wszystkie wystąpienia metod i pól. Wszystkie obiekty w tej samej domenie kontekstu udostępnianie tego samego blokady. Wiele wątków może uzyskiwać dostęp do metod i pól, ale tylko jednego wątku jest dozwolona w dowolnym momencie.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,15 +1,13 @@
 ---
 title: Projektowanie warstwy trwałości infrastruktury
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Zapoznaj się z wzorca repozytorium w projekcie warstwy trwałości infrastruktury.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3e9c2ce0a332351f136dcd4dcb6d3da4f794a1eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019779"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644576"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Projektowanie warstwy trwałości infrastruktury
 

@@ -3,12 +3,12 @@ title: Zapisywanie zapytań LINQ w C#
 description: Dowiedz się, jak pisać zapytania LINQ w C#.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: df77326b921d22d90cf90c12e9c0f472d808ed95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61688660"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632876"
 ---
 # <a name="write-linq-queries-in-c"></a>Zapisywanie zapytań LINQ w C\#
 

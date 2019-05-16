@@ -1,15 +1,13 @@
 ---
 title: Kluczowe kwestie do zapamiętania
 description: Pobierz najważniejsze wnioski z architektury Mikrousług .NET dla aplikacji kontenerowych nimi .NET przewodnik/książkę elektroniczną, zapewnienie krótkie omówienie ogólne problemy związane podczas korzystania z architektury mikrousług, takich jak zalety i wady, wzorców DDD projektu i rozwoju, a także odporności, zabezpieczeń i korzystanie z koordynatorów.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020182"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639698"
 ---
 # <a name="key-takeaways"></a>Najważniejsze wnioski
 

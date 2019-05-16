@@ -1,15 +1,13 @@
 ---
 title: Projektowanie reguł weryfikacji w warstwie modelu domeny
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Należy zrozumieć kluczowe pojęcia związane z sprawdzania poprawności modelu domeny.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063039"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639574"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Projektowanie reguł weryfikacji w warstwie modelu domeny
 

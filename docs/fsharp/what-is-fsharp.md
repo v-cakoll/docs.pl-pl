@@ -2,12 +2,12 @@
 title: Co to jestF#
 description: Dowiedz się więcej o tym, co F# język programowania jest i co F# przypomina programowania. Więcej informacji na temat rozbudowane typy danych, funkcje i jak one współdziałają ze sobą.
 ms.date: 08/03/2018
-ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d5b0de9828aa91857d3961bf7d40c02c344adaa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756341"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641571"
 ---
 # <a name="what-is-f"></a>Co to jest F\#
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 893dc726f7b4ee2d2afa69f63d13d1f11a4692db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 047207e495f542108d6f41247b25009d9c9bb909
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708200"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634785"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Instrukcje: Użycie funkcji dokumentacji XML
 
@@ -136,4 +136,4 @@ Dokumentacja XML rozpoczyna się od / / /. Podczas tworzenia nowego projektu kre
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/index.md)

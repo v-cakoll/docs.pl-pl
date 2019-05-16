@@ -3,12 +3,12 @@ title: C#Delegaty — Przewodnik po przykładzie C# języka
 description: Dowiedz się, późne powiązania z C# delegatów
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 2744f774392ef021974535de535b063264ae9a54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35a1e212b50e77eb43271a657c8abb21eb6cfb4a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706393"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634636"
 ---
 # <a name="delegates"></a>Delegaty
 

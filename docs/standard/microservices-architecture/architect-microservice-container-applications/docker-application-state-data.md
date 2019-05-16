@@ -1,15 +1,13 @@
 ---
 title: Stan i dane w aplikacjach platformy Docker
 description: Stan i zarządzanie danymi w aplikacjach platformy Docker. Mikrousługi są dostarczane, ale dane są, jak obsługiwać to korzystanie z mikrousług.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 70c3cee8c5fd1e63f2ff869f49b1fb02ab8f59dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689573"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641363"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 

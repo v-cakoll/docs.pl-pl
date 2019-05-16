@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 63fadd3c37c7533211e7bd0ac07952ca99fd6a79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6bf53cba73c4d7331b2a1c68bf7187c13281d844
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661272"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633454"
 ---
 # <a name="lock-statement-c-reference"></a>Lock — instrukcja (odwołanie w C#)
 

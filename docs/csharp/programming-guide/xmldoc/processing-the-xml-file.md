@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 5b643b9f736169bb4450bb357cc35fee35e155c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f40e14163850716204584f5d5651a08715b80241
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708083"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634779"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 
@@ -87,4 +87,4 @@ W poniższych przykładach pokazano, jak identyfikator ciągi dla klasy i zostan
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/index.md)

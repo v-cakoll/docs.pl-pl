@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejące i pliki csproj .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665432"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631805"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -125,11 +125,13 @@ Jeśli projekt zawiera wiele platform docelowych, wyniki polecenia powinna zosta
 
 ### <a name="sdk-attribute"></a>Atrybutu zestawu SDK
 
-Katalog główny `<Project>` elementu *.csproj* plik ma nowy atrybut o nazwie `Sdk`. `Sdk` Określa zestaw SDK będzie używane przez projekt. Zestaw SDK, jako [dokumentu warstwowe](cli-msbuild-architecture.md) opisuje, to zbiór MSBuild [zadania](/visualstudio/msbuild/msbuild-tasks) i [cele](/visualstudio/msbuild/msbuild-targets) , można tworzyć kod platformy .NET Core. Publikujemy trzech głównych zestawów SDK z narzędziami .NET Core:
+Katalog główny `<Project>` elementu *.csproj* plik ma nowy atrybut o nazwie `Sdk`. `Sdk` Określa zestaw SDK będzie używane przez projekt. Zestaw SDK, jako [dokumentu warstwowe](cli-msbuild-architecture.md) opisuje, to zbiór MSBuild [zadania](/visualstudio/msbuild/msbuild-tasks) i [cele](/visualstudio/msbuild/msbuild-targets) , można tworzyć kod platformy .NET Core. Publikujemy trzech głównych zestawów SDK z narzędziami .NET Core i dodatkowe dwa zestawy SDK podczas korzystania z programu .NET Core 3.0 w wersji zapoznawczej:
 
 1. .NET Core SDK o identyfikatorze `Microsoft.NET.Sdk`
 2. .NET Core web SDK o identyfikatorze `Microsoft.NET.Sdk.Web`
 3. Biblioteki klas Razor platformy .NET Core SDK z Identyfikatorem programu `Microsoft.NET.Sdk.Razor`
+4. Usługa procesu roboczego platformy .NET Core, o identyfikatorze `Microsoft.NET.Sdk.Worker` (.NET Core 3.0 w wersji zapoznawczej)
+5. .NET Core WinForms i WPF o identyfikatorze `Microsoft.NET.Sdk.WindowsDesktop` (.NET Core 3.0 w wersji zapoznawczej)
 
 Musisz mieć `Sdk` atrybut do jednego z tych identyfikatorów w `<Project>` element, aby użyć narzędzi .NET Core i kompilowanie kodu.
 

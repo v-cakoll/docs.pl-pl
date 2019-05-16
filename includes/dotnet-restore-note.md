@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 95fd83d517096eecb69e57f15c8c70f497a290b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 975edd1bda507b46da353db788d9730560f9b573
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646952"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632113"
 ---
 > [!NOTE]
 > Począwszy od programu .NET Core 2.0 SDK, nie trzeba uruchamiać [ `dotnet restore` ](~/docs/core/tools/dotnet-restore.md) , ponieważ jest uruchamiane domyślnie przez wszystkie polecenia, które wymagają Przywracanie wystąpienia, takie jak `dotnet new`, `dotnet build` i `dotnet run`.

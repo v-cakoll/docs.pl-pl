@@ -2,12 +2,12 @@
 title: Mapowanie między formatami JSON i XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: 075f85887f99708dd1f3479bf0b036203886af71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918778"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636439"
 ---
 # <a name="mapping-between-json-and-xml"></a>Mapowanie między formatami JSON i XML
 Czytniki i moduły zapisujące są produkowane przez <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> dostarczać interfejs API XML nad zawartością JavaScript Object Notation (JSON). JSON koduje dane za pomocą podzestawu literałów obiektu języka JavaScript. Czytniki i moduły zapisujące, generowane przez tę fabrykę są również używane podczas zawartość JSON jest wysyłane lub odbierane przez Windows Communication Foundation (WCF) aplikacji przy użyciu <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> lub <xref:System.ServiceModel.WebHttpBinding>.

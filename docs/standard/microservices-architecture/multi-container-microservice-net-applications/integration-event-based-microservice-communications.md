@@ -1,15 +1,13 @@
 ---
 title: Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Dowiedz się, zdarzenia integracji do zaimplementowania komunikacji oparte na zdarzeniach między mikrousługami.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a5cfa280063da742dc1693905fc44cf870c1fcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773581"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640732"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
 

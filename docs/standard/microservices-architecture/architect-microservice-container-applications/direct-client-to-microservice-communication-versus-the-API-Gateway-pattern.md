@@ -1,15 +1,13 @@
 ---
 title: Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 description: Dowiedz się, różnice i wykorzystuje wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f1deb453519eec23e4c9bc8c19800e9caedf0c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 433ad8bc8204a9a57b8b494040a9de6c533bcca8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909599"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641406"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 

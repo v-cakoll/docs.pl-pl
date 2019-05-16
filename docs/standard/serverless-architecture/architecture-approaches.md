@@ -4,12 +4,12 @@ description: Wprowadzenie do architektury zbliża się do tworzenia aplikacji op
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee529abd1f6955d4f542464dd9a2380dd663571f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640197"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638839"
 ---
 # <a name="architecture-approaches"></a>Podejścia do architektury
 

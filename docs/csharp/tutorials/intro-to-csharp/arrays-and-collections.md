@@ -3,12 +3,12 @@ title: Praca z kolekcjami — wprowadzenie do C# samouczek
 description: Dowiedz się, C# eksplorując kolekcji listy, w tym samouczku.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 064b01a30410b147e89b0f87180d5af9269a3a87
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706367"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634515"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Dowiedz się, jak zarządzać zbierania danych przy użyciu typu listy ogólnej
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: e5010c7e9f3550c79c86c6cab4579a0fb15eef10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dde621395f407cd64e047ddfe8c6539e976b3061
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660882"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633021"
 ---
 # <a name="query-keywords-c-reference"></a>Słowa kluczowe zapytania (odwołanie w C#)
 
@@ -21,7 +21,7 @@ Ta sekcja zawiera kontekstowymi słowami kluczowymi, używać w wyrażeniach zap
 
 |Klauzula|Opis|
 |------------|-----------------|
-|[Z](from-clause.md)|Określa źródło danych i zmienną zakresu (podobnie jak zmienna iteracji).|
+|[from](from-clause.md)|Określa źródło danych i zmienną zakresu (podobnie jak zmienna iteracji).|
 |[gdzie](where-clause.md)|Filtry źródła elementy oparte na co najmniej jednego wyrażenia logiczne, rozdzielone i operatory logiczne AND ( `&&` lub <code>&#124;&#124;</code> ).|
 |[select](select-clause.md)|Określa typ i kształt, który będzie mieć elementy w zwracanej sekwencji, gdy zapytanie jest wykonywane.|
 |[Grupy](group-clause.md)|Wyniki zapytania grupy zgodnie z określoną wartością klucza.|

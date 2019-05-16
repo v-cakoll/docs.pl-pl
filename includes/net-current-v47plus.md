@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9aa29ed3809bfd3381b7063064b9e963bdd38dd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8448eb76c26dd87f9ef1e15b9dfb6f549943180b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670094"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629959"
 ---
 Dostępne od 4.7

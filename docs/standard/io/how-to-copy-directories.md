@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a7fa901d887701e0fa41a0887b363adec07dba2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751933"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644681"
 ---
 # <a name="how-to-copy-directories"></a>Instrukcje: Kopiowanie katalogów
 W tym temacie pokazano, jak używać klas we/wy synchronicznie skopiować zawartość katalogu do innej lokalizacji. 

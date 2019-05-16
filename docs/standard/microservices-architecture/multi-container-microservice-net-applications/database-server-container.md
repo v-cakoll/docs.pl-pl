@@ -1,15 +1,13 @@
 ---
 title: Korzystanie z serwera bazy danych uruchomionego jako kontener
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Za pomocą serwera bazy danych uruchomionego jako kontener? tylko w celach deweloperskich! Dowiedz się, dlaczego.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760769"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639733"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych uruchomionego jako kontener
 

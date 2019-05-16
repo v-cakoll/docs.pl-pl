@@ -2,12 +2,12 @@
 title: Operatory arytmetyczne
 description: Dowiedz się więcej o operatorów arytmetycznych, które są dostępne w F# języka programowania.
 ms.date: 04/04/2018
-ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ab813a7ca5018b6bd084aea10627e4afd62015
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925856"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641644"
 ---
 # <a name="arithmetic-operators"></a>Operatory arytmetyczne
 

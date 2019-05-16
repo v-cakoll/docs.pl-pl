@@ -1,15 +1,13 @@
 ---
 title: Odporność i wysoka dostępność w ramach mikrousług
 description: Mikrousługi mają być tak zaprojektowana, radzić sobie ze przejściowe problemy z siecią i błędów zależności, które muszą być odporne na błędy w celu uzyskania wysokiej dostępności.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025573"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639936"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysoka dostępność w ramach mikrousług
 

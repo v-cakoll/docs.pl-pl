@@ -2,12 +2,12 @@
 title: Struktury
 description: Dowiedz się więcej o F# struktury typu compact obiektu, który jest często bardziej efektywne niż klasy dla typów z małą ilością danych i prostego zachowanie.
 ms.date: 05/16/2016
-ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc302b975604bebcd145a385fb59b21417547c5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925882"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645328"
 ---
 # <a name="structures"></a>Struktury
 

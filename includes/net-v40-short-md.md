@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 276c1dbff910be8c6811d74fedd671eaedf06d39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d80a8100153facfbd2b48d87e4be0cea5ff7fb4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673923"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634209"
 ---
-<span data-ttu-id="064e7-101">Program .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="064e7-101">.NET Framework 4</span></span>
+<span data-ttu-id="1be9e-101">Program .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="1be9e-101">.NET Framework 4</span></span>

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 08a382e0aa077f5b237a605ad53f47bb9efb0226
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2aafd0cceacae31caeb65d47c27340decde858bc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670845"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670154"
 ---
-<span data-ttu-id="ef431-101">Microsoft Visual C# 2005</span><span class="sxs-lookup"><span data-stu-id="ef431-101">Microsoft Visual C# 2005</span></span>
+<span data-ttu-id="1e1df-101">Microsoft Visual C# 2005</span><span class="sxs-lookup"><span data-stu-id="1e1df-101">Microsoft Visual C# 2005</span></span>

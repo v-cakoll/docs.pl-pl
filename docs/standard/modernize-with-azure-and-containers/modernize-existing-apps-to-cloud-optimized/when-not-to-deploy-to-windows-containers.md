@@ -1,49 +1,47 @@
 ---
 title: Kiedy nie należy wdrażać kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Kiedy nie należy wdrażać kontenery Windows
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: e06793065d1fd55bbef855576174b07dc9ace4c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 65e793b846b495e9a1be6db9ddfa38bbf0d49445
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751389"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638899"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a><span data-ttu-id="c009a-103">Kiedy nie należy wdrażać kontenerów systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c009a-103">When not to deploy to Windows Containers</span></span>
+# <a name="when-not-to-deploy-to-windows-containers"></a><span data-ttu-id="1b46f-103">Kiedy nie należy wdrażać kontenerów systemu Windows</span><span class="sxs-lookup"><span data-stu-id="1b46f-103">When not to deploy to Windows Containers</span></span>
 
-<span data-ttu-id="c009a-104">Niektóre technologie Windows nie są obsługiwane przez kontenery Windows.</span><span class="sxs-lookup"><span data-stu-id="c009a-104">Some Windows technologies are not supported by Windows Containers.</span></span> <span data-ttu-id="c009a-105">W takich przypadkach nadal należy przeprowadzić migrację do maszyn wirtualnych standardy, zwykle przy użyciu tylko Windows i usług IIS.</span><span class="sxs-lookup"><span data-stu-id="c009a-105">In those cases, you still need to migrate to standards VMs, usually with just Windows and IIS.</span></span>
+<span data-ttu-id="1b46f-104">Niektóre technologie Windows nie są obsługiwane przez kontenery Windows.</span><span class="sxs-lookup"><span data-stu-id="1b46f-104">Some Windows technologies are not supported by Windows Containers.</span></span> <span data-ttu-id="1b46f-105">W takich przypadkach nadal należy przeprowadzić migrację do maszyn wirtualnych standardy, zwykle przy użyciu tylko Windows i usług IIS.</span><span class="sxs-lookup"><span data-stu-id="1b46f-105">In those cases, you still need to migrate to standards VMs, usually with just Windows and IIS.</span></span>
 
-<span data-ttu-id="c009a-106">W przypadkach nie jest obsługiwana w kontenerach Windows, począwszy od maja 2018 r.:</span><span class="sxs-lookup"><span data-stu-id="c009a-106">Cases not supported in Windows Containers, as of May 2018:</span></span>
+<span data-ttu-id="1b46f-106">W przypadkach nie jest obsługiwana w kontenerach Windows, począwszy od maja 2018 r.:</span><span class="sxs-lookup"><span data-stu-id="1b46f-106">Cases not supported in Windows Containers, as of May 2018:</span></span>
 
-- <span data-ttu-id="c009a-107">Microsoft usługi kolejkowania komunikatów (MSMQ) obecnie jest dostępna tylko w kontenerach Windows oparte na wersji v1803 systemu Windows Server, ale nie w poprzednich wersjach.</span><span class="sxs-lookup"><span data-stu-id="c009a-107">Microsoft Message Queuing (MSMQ) currently is only available in Windows Containers based on Windows Server v1803 release, but not in any other prior releases.</span></span>
+- <span data-ttu-id="1b46f-107">Microsoft usługi kolejkowania komunikatów (MSMQ) obecnie jest dostępna tylko w kontenerach Windows oparte na wersji v1803 systemu Windows Server, ale nie w poprzednich wersjach.</span><span class="sxs-lookup"><span data-stu-id="1b46f-107">Microsoft Message Queuing (MSMQ) currently is only available in Windows Containers based on Windows Server v1803 release, but not in any other prior releases.</span></span>
 
-  - [<span data-ttu-id="c009a-108">Forum żądania UserVoice</span><span class="sxs-lookup"><span data-stu-id="c009a-108">UserVoice request forum</span></span>](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
+  - [<span data-ttu-id="1b46f-108">Forum żądania UserVoice</span><span class="sxs-lookup"><span data-stu-id="1b46f-108">UserVoice request forum</span></span>](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
 
-  - [<span data-ttu-id="c009a-109">Forum dyskusyjne</span><span class="sxs-lookup"><span data-stu-id="c009a-109">Discussion forum</span></span>](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
+  - [<span data-ttu-id="1b46f-109">Forum dyskusyjne</span><span class="sxs-lookup"><span data-stu-id="1b46f-109">Discussion forum</span></span>](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
 
-- <span data-ttu-id="c009a-110">Transakcji Koordynator MSDTC (Microsoft Distributed) nie jest obecnie obsługiwane w kontenerach Windows.</span><span class="sxs-lookup"><span data-stu-id="c009a-110">Microsoft Distributed Transaction Coordinator (MSDTC) currently is not supported in Windows Containers.</span></span>
+- <span data-ttu-id="1b46f-110">Transakcji Koordynator MSDTC (Microsoft Distributed) nie jest obecnie obsługiwane w kontenerach Windows.</span><span class="sxs-lookup"><span data-stu-id="1b46f-110">Microsoft Distributed Transaction Coordinator (MSDTC) currently is not supported in Windows Containers.</span></span>
 
-  - [<span data-ttu-id="c009a-111">Problem w usłudze GitHub</span><span class="sxs-lookup"><span data-stu-id="c009a-111">GitHub issue</span></span>](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
+  - [<span data-ttu-id="1b46f-111">Problem w usłudze GitHub</span><span class="sxs-lookup"><span data-stu-id="1b46f-111">GitHub issue</span></span>](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
 
-- <span data-ttu-id="c009a-112">Microsoft Office nie jest obecnie obsługiwane kontenerów.</span><span class="sxs-lookup"><span data-stu-id="c009a-112">Microsoft Office currently does not support containers.</span></span>
+- <span data-ttu-id="1b46f-112">Microsoft Office nie jest obecnie obsługiwane kontenerów.</span><span class="sxs-lookup"><span data-stu-id="1b46f-112">Microsoft Office currently does not support containers.</span></span>
 
-  - [<span data-ttu-id="c009a-113">Forum żądania UserVoice</span><span class="sxs-lookup"><span data-stu-id="c009a-113">UserVoice request forum</span></span>](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
+  - [<span data-ttu-id="1b46f-113">Forum żądania UserVoice</span><span class="sxs-lookup"><span data-stu-id="1b46f-113">UserVoice request forum</span></span>](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
 
-- <span data-ttu-id="c009a-114">Interfejs użytkownika aplikacji (aplikacje klienckie za pomocą interfejsu użytkownika programu visual) nie są obsługiwane scenariusze.</span><span class="sxs-lookup"><span data-stu-id="c009a-114">UI apps (client apps with a visual user interface) are not supported scenarios.</span></span>
+- <span data-ttu-id="1b46f-114">Interfejs użytkownika aplikacji (aplikacje klienckie za pomocą interfejsu użytkownika programu visual) nie są obsługiwane scenariusze.</span><span class="sxs-lookup"><span data-stu-id="1b46f-114">UI apps (client apps with a visual user interface) are not supported scenarios.</span></span>
 
-- <span data-ttu-id="c009a-115">Windows rolami infrastruktury (DNS, DHCP, kontroler domeny, NTP, drukowania, serwer plików, zarządzanie dostępem i Tożsamościami itp.) nie są obsługiwane scenariusze.</span><span class="sxs-lookup"><span data-stu-id="c009a-115">Windows infrastructure roles (DNS, DHCP, DC, NTP, PRINT, File server, IAM etc.) are not supported scenarios.</span></span>
+- <span data-ttu-id="1b46f-115">Windows rolami infrastruktury (DNS, DHCP, kontroler domeny, NTP, drukowania, serwer plików, zarządzanie dostępem i Tożsamościami itp.) nie są obsługiwane scenariusze.</span><span class="sxs-lookup"><span data-stu-id="1b46f-115">Windows infrastructure roles (DNS, DHCP, DC, NTP, PRINT, File server, IAM etc.) are not supported scenarios.</span></span>
 
-<span data-ttu-id="c009a-116">Dodatkowe scenariusze nieobsługiwane i żądań od społeczności można znaleźć UserVoice forum dla kontenerów Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.</span><span class="sxs-lookup"><span data-stu-id="c009a-116">For additional not-supported scenarios and requests from the community, see the UserVoice forum for Windows Containers: <https://windowsserver.uservoice.com/forums/304624-containers>.</span></span>
+<span data-ttu-id="1b46f-116">Dodatkowe scenariusze nieobsługiwane i żądań od społeczności można znaleźć UserVoice forum dla kontenerów Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.</span><span class="sxs-lookup"><span data-stu-id="1b46f-116">For additional not-supported scenarios and requests from the community, see the UserVoice forum for Windows Containers: <https://windowsserver.uservoice.com/forums/304624-containers>.</span></span>
 
-### <a name="additional-resources"></a><span data-ttu-id="c009a-117">Dodatkowe zasoby</span><span class="sxs-lookup"><span data-stu-id="c009a-117">Additional resources</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="1b46f-117">Dodatkowe zasoby</span><span class="sxs-lookup"><span data-stu-id="1b46f-117">Additional resources</span></span>
 
-- <span data-ttu-id="c009a-118">**Maszyny wirtualne i kontenery na platformie Azure**</span><span class="sxs-lookup"><span data-stu-id="c009a-118">**Virtual machines and containers in Azure**</span></span>
+- <span data-ttu-id="1b46f-118">**Maszyny wirtualne i kontenery na platformie Azure**</span><span class="sxs-lookup"><span data-stu-id="1b46f-118">**Virtual machines and containers in Azure**</span></span>
 
     <https://azure.microsoft.com/overview/containers/>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="c009a-119">[Poprzednie](deploy-existing-net-apps-as-windows-containers.md)
-> [dalej](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)</span><span class="sxs-lookup"><span data-stu-id="c009a-119">[Previous](deploy-existing-net-apps-as-windows-containers.md)
+> <span data-ttu-id="1b46f-119">[Poprzednie](deploy-existing-net-apps-as-windows-containers.md)
+> [dalej](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)</span><span class="sxs-lookup"><span data-stu-id="1b46f-119">[Previous](deploy-existing-net-apps-as-windows-containers.md)
 [Next](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)</span></span>

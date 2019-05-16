@@ -1,1 +1,9 @@
-<span data-ttu-id="8b4cf-101">SDL</span><span class="sxs-lookup"><span data-stu-id="8b4cf-101">SDL</span></span>
+---
+ms.openlocfilehash: 154ee40da07b1f00a62a0caab31bf7bc41e708ee
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670275"
+---
+<span data-ttu-id="c99db-101">SDL</span><span class="sxs-lookup"><span data-stu-id="c99db-101">SDL</span></span>

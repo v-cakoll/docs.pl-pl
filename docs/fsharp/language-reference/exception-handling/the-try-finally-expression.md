@@ -2,18 +2,18 @@
 title: 'Wyjątki: Try... finally — wyrażenie'
 description: Dowiedz się, jak F# "try... finally" wyrażenie umożliwia wykonanie kodu oczyszczania, nawet wtedy, gdy blok kodu zgłasza wyjątek.
 ms.date: 05/16/2016
-ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d246bce52b5f30d5e8d7e3c36e9f7d7c48627913
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772700"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645464"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a><span data-ttu-id="5cbdf-103">Wyjątki: Try... finally — wyrażenie</span><span class="sxs-lookup"><span data-stu-id="5cbdf-103">Exceptions: The try...finally Expression</span></span>
+# <a name="exceptions-the-tryfinally-expression"></a><span data-ttu-id="659d5-103">Wyjątki: Try... finally — wyrażenie</span><span class="sxs-lookup"><span data-stu-id="659d5-103">Exceptions: The try...finally Expression</span></span>
 
-<span data-ttu-id="5cbdf-104">`try...finally` Wyrażenie umożliwia wykonanie kodu oczyszczania, nawet wtedy, gdy blok kodu zgłasza wyjątek.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-104">The `try...finally` expression enables you to execute clean-up code even if a block of code throws an exception.</span></span>
+<span data-ttu-id="659d5-104">`try...finally` Wyrażenie umożliwia wykonanie kodu oczyszczania, nawet wtedy, gdy blok kodu zgłasza wyjątek.</span><span class="sxs-lookup"><span data-stu-id="659d5-104">The `try...finally` expression enables you to execute clean-up code even if a block of code throws an exception.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5cbdf-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="5cbdf-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="659d5-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="659d5-105">Syntax</span></span>
 
 ```fsharp
 try
@@ -22,32 +22,32 @@ finally
     expression2
 ```
 
-## <a name="remarks"></a><span data-ttu-id="5cbdf-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5cbdf-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="659d5-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="659d5-106">Remarks</span></span>
 
-<span data-ttu-id="5cbdf-107">`try...finally` Wyrażenie może służyć do wykonywania kodu w *wyrażenie2* w poprzedniej składni, niezależnie od tego, czy wyjątek jest generowany podczas wykonywania *wyrażenie1*.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-107">The `try...finally` expression can be used to execute the code in *expression2* in the preceding syntax regardless of whether an exception is generated during the execution of *expression1*.</span></span>
+<span data-ttu-id="659d5-107">`try...finally` Wyrażenie może służyć do wykonywania kodu w *wyrażenie2* w poprzedniej składni, niezależnie od tego, czy wyjątek jest generowany podczas wykonywania *wyrażenie1*.</span><span class="sxs-lookup"><span data-stu-id="659d5-107">The `try...finally` expression can be used to execute the code in *expression2* in the preceding syntax regardless of whether an exception is generated during the execution of *expression1*.</span></span>
 
-<span data-ttu-id="5cbdf-108">Typ *wyrażenie2* nie wpływa wartość całego wyrażenia; typ zwracany, gdy nie występuje wyjątek jest ostatnią wartość *wyrażenie1*.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-108">The type of *expression2* does not contribute to the value of the whole expression; the type returned when an exception does not occur is the last value in *expression1*.</span></span> <span data-ttu-id="5cbdf-109">Gdy wystąpi wyjątek, jest zwracana żadna wartość, a przepływ sterowania przesyła do następnego dopasowania obsługi wyjątków w górę stosu wywołań.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-109">When an exception does occur, no value is returned and the flow of control transfers to the next matching exception handler up the call stack.</span></span> <span data-ttu-id="5cbdf-110">Jeśli żadna procedura obsługi wyjątku zostanie znaleziony, program zakończy działanie.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-110">If no exception handler is found, the program terminates.</span></span> <span data-ttu-id="5cbdf-111">Zanim wykonywany jest kod w pasującej klauzuli obsługi lub program kończy działanie, kod w `finally` gałęzi jest wykonywany.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-111">Before the code in a matching handler is executed or the program terminates, the code in the `finally` branch is executed.</span></span>
+<span data-ttu-id="659d5-108">Typ *wyrażenie2* nie wpływa wartość całego wyrażenia; typ zwracany, gdy nie występuje wyjątek jest ostatnią wartość *wyrażenie1*.</span><span class="sxs-lookup"><span data-stu-id="659d5-108">The type of *expression2* does not contribute to the value of the whole expression; the type returned when an exception does not occur is the last value in *expression1*.</span></span> <span data-ttu-id="659d5-109">Gdy wystąpi wyjątek, jest zwracana żadna wartość, a przepływ sterowania przesyła do następnego dopasowania obsługi wyjątków w górę stosu wywołań.</span><span class="sxs-lookup"><span data-stu-id="659d5-109">When an exception does occur, no value is returned and the flow of control transfers to the next matching exception handler up the call stack.</span></span> <span data-ttu-id="659d5-110">Jeśli żadna procedura obsługi wyjątku zostanie znaleziony, program zakończy działanie.</span><span class="sxs-lookup"><span data-stu-id="659d5-110">If no exception handler is found, the program terminates.</span></span> <span data-ttu-id="659d5-111">Zanim wykonywany jest kod w pasującej klauzuli obsługi lub program kończy działanie, kod w `finally` gałęzi jest wykonywany.</span><span class="sxs-lookup"><span data-stu-id="659d5-111">Before the code in a matching handler is executed or the program terminates, the code in the `finally` branch is executed.</span></span>
 
-<span data-ttu-id="5cbdf-112">Poniższy przykład demonstruje użycie `try...finally` wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-112">The following code demonstrates the use of the `try...finally` expression.</span></span>
+<span data-ttu-id="659d5-112">Poniższy przykład demonstruje użycie `try...finally` wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="659d5-112">The following code demonstrates the use of the `try...finally` expression.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
 
-<span data-ttu-id="5cbdf-113">Dostępne są następujące dane wyjściowe do konsoli.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-113">The output to the console is as follows.</span></span>
+<span data-ttu-id="659d5-113">Dostępne są następujące dane wyjściowe do konsoli.</span><span class="sxs-lookup"><span data-stu-id="659d5-113">The output to the console is as follows.</span></span>
 
 ```
 Closing stream
 Exception handled.
 ```
 
-<span data-ttu-id="5cbdf-114">Jak widać z danych wyjściowych, strumień został zamknięty, zanim zewnętrzne wyjątek został obsłużony, a plik `test.txt` zawiera tekst `test1`, co oznacza, że bufory opróżnionych i zapisywane na dysku, nawet jeśli wyjątek przesyłane do obsługi wyjątku zewnętrznym kontrolować.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-114">As you can see from the output, the stream was closed before the outer exception was handled, and the file `test.txt` contains the text `test1`, which indicates that the buffers were flushed and written to disk even though the exception transferred control to the outer exception handler.</span></span>
+<span data-ttu-id="659d5-114">Jak widać z danych wyjściowych, strumień został zamknięty, zanim zewnętrzne wyjątek został obsłużony, a plik `test.txt` zawiera tekst `test1`, co oznacza, że bufory opróżnionych i zapisywane na dysku, nawet jeśli wyjątek przesyłane do obsługi wyjątku zewnętrznym kontrolować.</span><span class="sxs-lookup"><span data-stu-id="659d5-114">As you can see from the output, the stream was closed before the outer exception was handled, and the file `test.txt` contains the text `test1`, which indicates that the buffers were flushed and written to disk even though the exception transferred control to the outer exception handler.</span></span>
 
-<span data-ttu-id="5cbdf-115">Należy pamiętać, że `try...with` konstrukcja jest oddzielnym konstrukcji z `try...finally` konstruowania.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-115">Note that the `try...with` construct is a separate construct from the `try...finally` construct.</span></span> <span data-ttu-id="5cbdf-116">W związku z tym jeśli kod wymaga zarówno `with` bloku i `finally` bloku, należy zagnieździć dwóch konstrukcji, jak w poniższym przykładzie kodu.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-116">Therefore, if your code requires both a `with` block and a `finally` block, you have to nest the two constructs, as in the following code example.</span></span>
+<span data-ttu-id="659d5-115">Należy pamiętać, że `try...with` konstrukcja jest oddzielnym konstrukcji z `try...finally` konstruowania.</span><span class="sxs-lookup"><span data-stu-id="659d5-115">Note that the `try...with` construct is a separate construct from the `try...finally` construct.</span></span> <span data-ttu-id="659d5-116">W związku z tym jeśli kod wymaga zarówno `with` bloku i `finally` bloku, należy zagnieździć dwóch konstrukcji, jak w poniższym przykładzie kodu.</span><span class="sxs-lookup"><span data-stu-id="659d5-116">Therefore, if your code requires both a `with` block and a `finally` block, you have to nest the two constructs, as in the following code example.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-<span data-ttu-id="5cbdf-117">W kontekście wyrażenia obliczeń, w tym wyrażenia sekwencji i asynchroniczne przepływy pracy, **try... finally** wyrażeń może mieć implementację niestandardową.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-117">In the context of computation expressions, including sequence expressions and asynchronous workflows, **try...finally** expressions can have a custom implementation.</span></span> <span data-ttu-id="5cbdf-118">Aby uzyskać więcej informacji, zobacz [wyrażenia obliczeń](../computation-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="5cbdf-118">For more information, see [Computation Expressions](../computation-expressions.md).</span></span>
+<span data-ttu-id="659d5-117">W kontekście wyrażenia obliczeń, w tym wyrażenia sekwencji i asynchroniczne przepływy pracy, **try... finally** wyrażeń może mieć implementację niestandardową.</span><span class="sxs-lookup"><span data-stu-id="659d5-117">In the context of computation expressions, including sequence expressions and asynchronous workflows, **try...finally** expressions can have a custom implementation.</span></span> <span data-ttu-id="659d5-118">Aby uzyskać więcej informacji, zobacz [wyrażenia obliczeń](../computation-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="659d5-118">For more information, see [Computation Expressions](../computation-expressions.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5cbdf-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5cbdf-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="659d5-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="659d5-119">See also</span></span>
 
-- [<span data-ttu-id="5cbdf-120">Obsługa wyjątków</span><span class="sxs-lookup"><span data-stu-id="5cbdf-120">Exception Handling</span></span>](index.md)
-- [<span data-ttu-id="5cbdf-121">Wyjątki: `try...with` Wyrażenia</span><span class="sxs-lookup"><span data-stu-id="5cbdf-121">Exceptions: The `try...with` Expression</span></span>](the-try-with-expression.md)
+- [<span data-ttu-id="659d5-120">Obsługa wyjątków</span><span class="sxs-lookup"><span data-stu-id="659d5-120">Exception Handling</span></span>](index.md)
+- [<span data-ttu-id="659d5-121">Wyjątki: `try...with` Wyrażenia</span><span class="sxs-lookup"><span data-stu-id="659d5-121">Exceptions: The `try...with` Expression</span></span>](the-try-with-expression.md)

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 6b4059c9b5820041f826f688b6e57c7201e42d5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4505f6bf0055400214274fec473fe528b21458f6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954270"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670666"
 ---
-<span data-ttu-id="eaf96-101">IDE</span><span class="sxs-lookup"><span data-stu-id="eaf96-101">IDE</span></span>
+<span data-ttu-id="00f30-101">IDE</span><span class="sxs-lookup"><span data-stu-id="00f30-101">IDE</span></span>

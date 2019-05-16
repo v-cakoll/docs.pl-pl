@@ -1,1 +1,9 @@
-<span data-ttu-id="0b588-101">Zestaw SDK systemu Windows</span><span class="sxs-lookup"><span data-stu-id="0b588-101">Windows SDK</span></span>
+---
+ms.openlocfilehash: 191dfe219ec84bc8fc808376081dd05f4ec5e74e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645740"
+---
+<span data-ttu-id="dc54f-101">Windows SDK</span><span class="sxs-lookup"><span data-stu-id="dc54f-101">Windows SDK</span></span>

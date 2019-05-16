@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 570316ae1a5ba4ded47f86b965f37d720013e017
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 8c9f4d31b207e6300a97c7462c2f96f3695cf900
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "25902484"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672863"
 ---
-<span data-ttu-id="38a85-101">Składnik Microsoft Windows Presentation Foundation Imaging</span><span class="sxs-lookup"><span data-stu-id="38a85-101">Microsoft Windows Presentation Foundation Imaging Component</span></span>
+<span data-ttu-id="9abfd-101">Składnik Microsoft Windows Presentation Foundation Imaging</span><span class="sxs-lookup"><span data-stu-id="9abfd-101">Microsoft Windows Presentation Foundation Imaging Component</span></span>

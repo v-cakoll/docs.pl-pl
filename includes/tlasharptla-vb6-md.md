@@ -1,1 +1,9 @@
-<span data-ttu-id="765ab-101">Microsoft Visual Basic 6.0</span><span class="sxs-lookup"><span data-stu-id="765ab-101">Microsoft Visual Basic 6.0</span></span>
+---
+ms.openlocfilehash: 6923f8cdf4bc7e1df6ec729bc4a50bfa7f358397
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669791"
+---
+<span data-ttu-id="f0bcf-101">Microsoft Visual Basic 6.0</span><span class="sxs-lookup"><span data-stu-id="f0bcf-101">Microsoft Visual Basic 6.0</span></span>

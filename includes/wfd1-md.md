@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0db2df51877055fff034f22fce3cf23b34ff92c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b1dd906ab44c7bbf9c0c3ab6be24881f86f68f2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761474"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637282"
 ---
-<span data-ttu-id="95d9e-101">Windows Workflow Designer</span><span class="sxs-lookup"><span data-stu-id="95d9e-101">Windows Workflow Designer</span></span>
+<span data-ttu-id="47e9a-101">Windows Workflow Designer</span><span class="sxs-lookup"><span data-stu-id="47e9a-101">Windows Workflow Designer</span></span>

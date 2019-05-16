@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: 62a78649a96d0a1b03758508241395d7f061504b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67b2621d382651abc27cee2eadad91a6253895c1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660908"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633328"
 ---
-# <a name="private-c-reference"></a><span data-ttu-id="52ccd-102">private (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="52ccd-102">private (C# Reference)</span></span>
+# <a name="private-c-reference"></a><span data-ttu-id="169f8-102">private (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="169f8-102">private (C# Reference)</span></span>
 
-<span data-ttu-id="52ccd-103">`private` — Słowo kluczowe jest modyfikator dostępu składowej.</span><span class="sxs-lookup"><span data-stu-id="52ccd-103">The `private` keyword is a member access modifier.</span></span>
+<span data-ttu-id="169f8-103">`private` — Słowo kluczowe jest modyfikator dostępu składowej.</span><span class="sxs-lookup"><span data-stu-id="169f8-103">The `private` keyword is a member access modifier.</span></span>
 
-> <span data-ttu-id="52ccd-104">Ta strona obejmuje `private` dostępu.</span><span class="sxs-lookup"><span data-stu-id="52ccd-104">This page covers `private` access.</span></span> <span data-ttu-id="52ccd-105">`private` — Słowo kluczowe jest również częścią [ `private protected` ](./private-protected.md) modyfikator dostępu.</span><span class="sxs-lookup"><span data-stu-id="52ccd-105">The `private` keyword is also part of the [`private protected`](./private-protected.md) access modifier.</span></span>
+> <span data-ttu-id="169f8-104">Ta strona obejmuje `private` dostępu.</span><span class="sxs-lookup"><span data-stu-id="169f8-104">This page covers `private` access.</span></span> <span data-ttu-id="169f8-105">`private` — Słowo kluczowe jest również częścią [ `private protected` ](./private-protected.md) modyfikator dostępu.</span><span class="sxs-lookup"><span data-stu-id="169f8-105">The `private` keyword is also part of the [`private protected`](./private-protected.md) access modifier.</span></span>
 
-<span data-ttu-id="52ccd-106">Dostęp prywatny jest ograniczonej poziom dostępu.</span><span class="sxs-lookup"><span data-stu-id="52ccd-106">Private access is the least permissive access level.</span></span> <span data-ttu-id="52ccd-107">Prywatnych składowych jest możliwy wyłącznie z treści klasy lub struktury, w którym są deklarowane, jak w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="52ccd-107">Private members are accessible only within the body of the class or the struct in which they are declared, as in this example:</span></span>
+<span data-ttu-id="169f8-106">Dostęp prywatny jest ograniczonej poziom dostępu.</span><span class="sxs-lookup"><span data-stu-id="169f8-106">Private access is the least permissive access level.</span></span> <span data-ttu-id="169f8-107">Prywatnych składowych jest możliwy wyłącznie z treści klasy lub struktury, w którym są deklarowane, jak w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="169f8-107">Private members are accessible only within the body of the class or the struct in which they are declared, as in this example:</span></span>
 
 ```csharp
 class Employee
@@ -31,30 +31,30 @@ class Employee
 }
 ```
 
-<span data-ttu-id="52ccd-108">Typy zagnieżdżone w tę samą treść mogą też uzyskiwać dostęp tych prywatnych elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="52ccd-108">Nested types in the same body can also access those private members.</span></span>
+<span data-ttu-id="169f8-108">Typy zagnieżdżone w tę samą treść mogą też uzyskiwać dostęp tych prywatnych elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="169f8-108">Nested types in the same body can also access those private members.</span></span>
 
-<span data-ttu-id="52ccd-109">Jest to błąd kompilacji, aby odwołać się od prywatnej składowej poza klasy lub struktury, w którym jest zdeklarowana.</span><span class="sxs-lookup"><span data-stu-id="52ccd-109">It is a compile-time error to reference a private member outside the class or the struct in which it is declared.</span></span>
+<span data-ttu-id="169f8-109">Jest to błąd kompilacji, aby odwołać się od prywatnej składowej poza klasy lub struktury, w którym jest zdeklarowana.</span><span class="sxs-lookup"><span data-stu-id="169f8-109">It is a compile-time error to reference a private member outside the class or the struct in which it is declared.</span></span>
 
-<span data-ttu-id="52ccd-110">Porównanie `private` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](accessibility-levels.md) i [modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="52ccd-110">For a comparison of `private` with the other access modifiers, see [Accessibility Levels](accessibility-levels.md) and [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md).</span></span>
+<span data-ttu-id="169f8-110">Porównanie `private` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](accessibility-levels.md) i [modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="169f8-110">For a comparison of `private` with the other access modifiers, see [Accessibility Levels](accessibility-levels.md) and [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="52ccd-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="52ccd-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="169f8-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="169f8-111">Example</span></span>
 
-<span data-ttu-id="52ccd-112">W tym przykładzie `Employee` klasa zawiera dwa elementy członkowskie danych prywatnych `name` i `salary`.</span><span class="sxs-lookup"><span data-stu-id="52ccd-112">In this example, the `Employee` class contains two private data members, `name` and `salary`.</span></span> <span data-ttu-id="52ccd-113">Jako prywatnych składowych nie będą dostępne z wyjątkiem za pomocą metod elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="52ccd-113">As private members, they cannot be accessed except by member methods.</span></span> <span data-ttu-id="52ccd-114">Metody publiczne, o nazwie `GetName` i `Salary` są dodawane do Zezwalaj na kontrolowany dostęp do prywatnych składowych.</span><span class="sxs-lookup"><span data-stu-id="52ccd-114">Public methods named `GetName` and `Salary` are added to allow controlled access to the private members.</span></span> <span data-ttu-id="52ccd-115">`name` Elementu członkowskiego odbywa się za pomocą publiczną metodę i `salary` elementu członkowskiego odbywa się za pomocą publicznego właściwość tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="52ccd-115">The `name` member is accessed by way of a public method, and the `salary` member is accessed by way of a public read-only property.</span></span> <span data-ttu-id="52ccd-116">(Zobacz [właściwości](../../programming-guide/classes-and-structs/properties.md) Aby uzyskać więcej informacji.)</span><span class="sxs-lookup"><span data-stu-id="52ccd-116">(See [Properties](../../programming-guide/classes-and-structs/properties.md) for more information.)</span></span>
+<span data-ttu-id="169f8-112">W tym przykładzie `Employee` klasa zawiera dwa elementy członkowskie danych prywatnych `name` i `salary`.</span><span class="sxs-lookup"><span data-stu-id="169f8-112">In this example, the `Employee` class contains two private data members, `name` and `salary`.</span></span> <span data-ttu-id="169f8-113">Jako prywatnych składowych nie będą dostępne z wyjątkiem za pomocą metod elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="169f8-113">As private members, they cannot be accessed except by member methods.</span></span> <span data-ttu-id="169f8-114">Metody publiczne, o nazwie `GetName` i `Salary` są dodawane do Zezwalaj na kontrolowany dostęp do prywatnych składowych.</span><span class="sxs-lookup"><span data-stu-id="169f8-114">Public methods named `GetName` and `Salary` are added to allow controlled access to the private members.</span></span> <span data-ttu-id="169f8-115">`name` Elementu członkowskiego odbywa się za pomocą publiczną metodę i `salary` elementu członkowskiego odbywa się za pomocą publicznego właściwość tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="169f8-115">The `name` member is accessed by way of a public method, and the `salary` member is accessed by way of a public read-only property.</span></span> <span data-ttu-id="169f8-116">(Zobacz [właściwości](../../programming-guide/classes-and-structs/properties.md) Aby uzyskać więcej informacji.)</span><span class="sxs-lookup"><span data-stu-id="169f8-116">(See [Properties](../../programming-guide/classes-and-structs/properties.md) for more information.)</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#10)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="52ccd-117">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="52ccd-117">C# language specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="169f8-117">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="169f8-117">C# language specification</span></span>  
 
-<span data-ttu-id="52ccd-118">Aby uzyskać więcej informacji, zobacz [zadeklarowana dostępność](~/_csharplang/spec/basic-concepts.md#declared-accessibility) w [ C# specyfikacji języka](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="52ccd-118">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="52ccd-119">Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.</span><span class="sxs-lookup"><span data-stu-id="52ccd-119">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="169f8-118">Aby uzyskać więcej informacji, zobacz [zadeklarowana dostępność](~/_csharplang/spec/basic-concepts.md#declared-accessibility) w [ C# specyfikacji języka](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="169f8-118">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="169f8-119">Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.</span><span class="sxs-lookup"><span data-stu-id="169f8-119">The language specification is the definitive source for C# syntax and usage.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="52ccd-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="52ccd-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="169f8-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="169f8-120">See also</span></span>
 
-- [<span data-ttu-id="52ccd-121">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="52ccd-121">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="52ccd-122">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="52ccd-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="52ccd-123">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="52ccd-123">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="52ccd-124">Modyfikatory dostępu</span><span class="sxs-lookup"><span data-stu-id="52ccd-124">Access Modifiers</span></span>](access-modifiers.md)
-- [<span data-ttu-id="52ccd-125">Poziomy ułatwień dostępu</span><span class="sxs-lookup"><span data-stu-id="52ccd-125">Accessibility Levels</span></span>](accessibility-levels.md)
-- [<span data-ttu-id="52ccd-126">Modyfikatory</span><span class="sxs-lookup"><span data-stu-id="52ccd-126">Modifiers</span></span>](modifiers.md)
-- [<span data-ttu-id="52ccd-127">public</span><span class="sxs-lookup"><span data-stu-id="52ccd-127">public</span></span>](public.md)
-- [<span data-ttu-id="52ccd-128">protected</span><span class="sxs-lookup"><span data-stu-id="52ccd-128">protected</span></span>](protected.md)
-- [<span data-ttu-id="52ccd-129">internal</span><span class="sxs-lookup"><span data-stu-id="52ccd-129">internal</span></span>](internal.md)
+- [<span data-ttu-id="169f8-121">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="169f8-121">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="169f8-122">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="169f8-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="169f8-123">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="169f8-123">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="169f8-124">Modyfikatory dostępu</span><span class="sxs-lookup"><span data-stu-id="169f8-124">Access Modifiers</span></span>](access-modifiers.md)
+- [<span data-ttu-id="169f8-125">Poziomy ułatwień dostępu</span><span class="sxs-lookup"><span data-stu-id="169f8-125">Accessibility Levels</span></span>](accessibility-levels.md)
+- [<span data-ttu-id="169f8-126">Modyfikatory</span><span class="sxs-lookup"><span data-stu-id="169f8-126">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="169f8-127">public</span><span class="sxs-lookup"><span data-stu-id="169f8-127">public</span></span>](public.md)
+- [<span data-ttu-id="169f8-128">protected</span><span class="sxs-lookup"><span data-stu-id="169f8-128">protected</span></span>](protected.md)
+- [<span data-ttu-id="169f8-129">internal</span><span class="sxs-lookup"><span data-stu-id="169f8-129">internal</span></span>](internal.md)

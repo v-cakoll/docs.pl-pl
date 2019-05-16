@@ -2,42 +2,42 @@
 title: 'Wyjątki: raise — Funkcja'
 description: Dowiedz się, jak F# "raise" funkcja służy do wskazania, że wystąpił błąd lub wyjątkowy warunek.
 ms.date: 05/16/2016
-ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e2515ad7b85c1025bc3aa0aa2a6929a8d35436d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772674"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641965"
 ---
-# <a name="exceptions-the-raise-function"></a><span data-ttu-id="d0a40-103">Wyjątki: raise — Funkcja</span><span class="sxs-lookup"><span data-stu-id="d0a40-103">Exceptions: the raise Function</span></span>
+# <a name="exceptions-the-raise-function"></a><span data-ttu-id="c2a0c-103">Wyjątki: raise — Funkcja</span><span class="sxs-lookup"><span data-stu-id="c2a0c-103">Exceptions: the raise Function</span></span>
 
-<span data-ttu-id="d0a40-104">`raise` Funkcji jest używany do wskazania, że wystąpił błąd lub wyjątkowy warunek.</span><span class="sxs-lookup"><span data-stu-id="d0a40-104">The `raise` function is used to indicate that an error or exceptional condition has occurred.</span></span> <span data-ttu-id="d0a40-105">Informacje o błędzie są przechwytywane w obiekt wyjątku.</span><span class="sxs-lookup"><span data-stu-id="d0a40-105">Information about the error is captured in an exception object.</span></span>
+<span data-ttu-id="c2a0c-104">`raise` Funkcji jest używany do wskazania, że wystąpił błąd lub wyjątkowy warunek.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-104">The `raise` function is used to indicate that an error or exceptional condition has occurred.</span></span> <span data-ttu-id="c2a0c-105">Informacje o błędzie są przechwytywane w obiekt wyjątku.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-105">Information about the error is captured in an exception object.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d0a40-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="d0a40-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="c2a0c-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="c2a0c-106">Syntax</span></span>
 
 ```fsharp
 raise (expression)
 ```
 
-## <a name="remarks"></a><span data-ttu-id="d0a40-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d0a40-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c2a0c-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c2a0c-107">Remarks</span></span>
 
-<span data-ttu-id="d0a40-108">`raise` Funkcja generuje obiekt wyjątku i inicjuje proces odwijanie stosu.</span><span class="sxs-lookup"><span data-stu-id="d0a40-108">The `raise` function generates an exception object and initiates a stack unwinding process.</span></span> <span data-ttu-id="d0a40-109">Proces odwijania stosu jest zarządzany przez środowisko uruchomieniowe języka wspólnego (CLR), więc zachowanie tego procesu jest taka sama jak w dowolnym języku .NET.</span><span class="sxs-lookup"><span data-stu-id="d0a40-109">The stack unwinding process is managed by the common language runtime (CLR), so the behavior of this process is the same as it is in any other .NET language.</span></span> <span data-ttu-id="d0a40-110">Proces odwijania stosu jest wyszukiwanie do obsługi wyjątku, który odpowiada wygenerowany wyjątek.</span><span class="sxs-lookup"><span data-stu-id="d0a40-110">The stack unwinding process is a search for an exception handler that matches the generated exception.</span></span> <span data-ttu-id="d0a40-111">Wyszukiwanie rozpoczyna się w bieżącym `try...with` wyrażenia, jeśli taka istnieje.</span><span class="sxs-lookup"><span data-stu-id="d0a40-111">The search starts in the current `try...with` expression, if there is one.</span></span> <span data-ttu-id="d0a40-112">Każdy wzorzec w `with` bloku jest zaznaczone, w kolejności.</span><span class="sxs-lookup"><span data-stu-id="d0a40-112">Each pattern in the `with` block is checked, in order.</span></span> <span data-ttu-id="d0a40-113">W przypadku odnalezienia pasującego obsługi wyjątków wyjątek jest uznawany za obsługiwany; w przeciwnym razie stos jest odwijany, i `with` bloki łańcuch wywołań są sprawdzane, dopóki nie znaleziono pasującej klauzuli obsługi.</span><span class="sxs-lookup"><span data-stu-id="d0a40-113">When a matching exception handler is found, the exception is considered handled; otherwise, the stack is unwound and `with` blocks up the call chain are checked until a matching handler is found.</span></span> <span data-ttu-id="d0a40-114">Wszelkie `finally` bloki, które wystąpią w łańcuchu wywołań także są wykonywane w kolejności, jak rozwija stos.</span><span class="sxs-lookup"><span data-stu-id="d0a40-114">Any `finally` blocks that are encountered in the call chain are also executed in sequence as the stack unwinds.</span></span>
+<span data-ttu-id="c2a0c-108">`raise` Funkcja generuje obiekt wyjątku i inicjuje proces odwijanie stosu.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-108">The `raise` function generates an exception object and initiates a stack unwinding process.</span></span> <span data-ttu-id="c2a0c-109">Proces odwijania stosu jest zarządzany przez środowisko uruchomieniowe języka wspólnego (CLR), więc zachowanie tego procesu jest taka sama jak w dowolnym języku .NET.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-109">The stack unwinding process is managed by the common language runtime (CLR), so the behavior of this process is the same as it is in any other .NET language.</span></span> <span data-ttu-id="c2a0c-110">Proces odwijania stosu jest wyszukiwanie do obsługi wyjątku, który odpowiada wygenerowany wyjątek.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-110">The stack unwinding process is a search for an exception handler that matches the generated exception.</span></span> <span data-ttu-id="c2a0c-111">Wyszukiwanie rozpoczyna się w bieżącym `try...with` wyrażenia, jeśli taka istnieje.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-111">The search starts in the current `try...with` expression, if there is one.</span></span> <span data-ttu-id="c2a0c-112">Każdy wzorzec w `with` bloku jest zaznaczone, w kolejności.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-112">Each pattern in the `with` block is checked, in order.</span></span> <span data-ttu-id="c2a0c-113">W przypadku odnalezienia pasującego obsługi wyjątków wyjątek jest uznawany za obsługiwany; w przeciwnym razie stos jest odwijany, i `with` bloki łańcuch wywołań są sprawdzane, dopóki nie znaleziono pasującej klauzuli obsługi.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-113">When a matching exception handler is found, the exception is considered handled; otherwise, the stack is unwound and `with` blocks up the call chain are checked until a matching handler is found.</span></span> <span data-ttu-id="c2a0c-114">Wszelkie `finally` bloki, które wystąpią w łańcuchu wywołań także są wykonywane w kolejności, jak rozwija stos.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-114">Any `finally` blocks that are encountered in the call chain are also executed in sequence as the stack unwinds.</span></span>
 
-<span data-ttu-id="d0a40-115">`raise` Funkcji jest odpowiednikiem `throw` w języku C# lub C++.</span><span class="sxs-lookup"><span data-stu-id="d0a40-115">The `raise` function is the equivalent of `throw` in C# or C++.</span></span> <span data-ttu-id="d0a40-116">Użyj `reraise` w obsługi catch do propagowania ten sam wyjątek łańcuch wywołań.</span><span class="sxs-lookup"><span data-stu-id="d0a40-116">Use `reraise` in a catch handler to propagate the same exception up the call chain.</span></span>
+<span data-ttu-id="c2a0c-115">`raise` Funkcji jest odpowiednikiem `throw` w języku C# lub C++.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-115">The `raise` function is the equivalent of `throw` in C# or C++.</span></span> <span data-ttu-id="c2a0c-116">Użyj `reraise` w obsługi catch do propagowania ten sam wyjątek łańcuch wywołań.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-116">Use `reraise` in a catch handler to propagate the same exception up the call chain.</span></span>
 
-<span data-ttu-id="d0a40-117">Poniższe przykłady kodu ilustrują używanie `raise` funkcję, aby wygenerować wyjątek.</span><span class="sxs-lookup"><span data-stu-id="d0a40-117">The following code examples illustrate the use of the `raise` function to generate an exception.</span></span>
+<span data-ttu-id="c2a0c-117">Poniższe przykłady kodu ilustrują używanie `raise` funkcję, aby wygenerować wyjątek.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-117">The following code examples illustrate the use of the `raise` function to generate an exception.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5801.fs)]
 
-<span data-ttu-id="d0a40-118">`raise` Funkcji można również zgłaszać wyjątki .NET, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="d0a40-118">The `raise` function can also be used to raise .NET exceptions, as shown in the following example.</span></span>
+<span data-ttu-id="c2a0c-118">`raise` Funkcji można również zgłaszać wyjątki .NET, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="c2a0c-118">The `raise` function can also be used to raise .NET exceptions, as shown in the following example.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5802.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="d0a40-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d0a40-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2a0c-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c2a0c-119">See also</span></span>
 
-- [<span data-ttu-id="d0a40-120">Obsługa wyjątków</span><span class="sxs-lookup"><span data-stu-id="d0a40-120">Exception Handling</span></span>](index.md)
-- [<span data-ttu-id="d0a40-121">Typy wyjątków</span><span class="sxs-lookup"><span data-stu-id="d0a40-121">Exception Types</span></span>](exception-types.md)
-- [<span data-ttu-id="d0a40-122">Wyjątki: `try...with` Wyrażenia</span><span class="sxs-lookup"><span data-stu-id="d0a40-122">Exceptions: The `try...with` Expression</span></span>](the-try-with-expression.md)
-- [<span data-ttu-id="d0a40-123">Wyjątki: `try...finally` Wyrażenia</span><span class="sxs-lookup"><span data-stu-id="d0a40-123">Exceptions: The `try...finally` Expression</span></span>](the-try-finally-expression.md)
-- [<span data-ttu-id="d0a40-124">Wyjątki: `failwith` — Funkcja</span><span class="sxs-lookup"><span data-stu-id="d0a40-124">Exceptions: The `failwith` Function</span></span>](the-failwith-function.md)
-- [<span data-ttu-id="d0a40-125">Wyjątki: `invalidArg` — Funkcja</span><span class="sxs-lookup"><span data-stu-id="d0a40-125">Exceptions: The `invalidArg` Function</span></span>](the-invalidArg-function.md)
+- [<span data-ttu-id="c2a0c-120">Obsługa wyjątków</span><span class="sxs-lookup"><span data-stu-id="c2a0c-120">Exception Handling</span></span>](index.md)
+- [<span data-ttu-id="c2a0c-121">Typy wyjątków</span><span class="sxs-lookup"><span data-stu-id="c2a0c-121">Exception Types</span></span>](exception-types.md)
+- [<span data-ttu-id="c2a0c-122">Wyjątki: `try...with` Wyrażenia</span><span class="sxs-lookup"><span data-stu-id="c2a0c-122">Exceptions: The `try...with` Expression</span></span>](the-try-with-expression.md)
+- [<span data-ttu-id="c2a0c-123">Wyjątki: `try...finally` Wyrażenia</span><span class="sxs-lookup"><span data-stu-id="c2a0c-123">Exceptions: The `try...finally` Expression</span></span>](the-try-finally-expression.md)
+- [<span data-ttu-id="c2a0c-124">Wyjątki: `failwith` — Funkcja</span><span class="sxs-lookup"><span data-stu-id="c2a0c-124">Exceptions: The `failwith` Function</span></span>](the-failwith-function.md)
+- [<span data-ttu-id="c2a0c-125">Wyjątki: `invalidArg` — Funkcja</span><span class="sxs-lookup"><span data-stu-id="c2a0c-125">Exceptions: The `invalidArg` Function</span></span>](the-invalidArg-function.md)

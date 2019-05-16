@@ -7,61 +7,61 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: d564f4f4462a691504297d65575956c5f06691ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 012284aa42dfa29ad1a5e4ec4a4df5eaacbd4fb7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936282"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642275"
 ---
-# <a name="unable-to-emit-assembly-error-message"></a><span data-ttu-id="2742d-102">Nie można wyemitować zestawu: \<komunikat o błędzie ></span><span class="sxs-lookup"><span data-stu-id="2742d-102">Unable to emit assembly: \<error message></span></span>
+# <a name="unable-to-emit-assembly-error-message"></a><span data-ttu-id="c0ea5-102">Nie można wyemitować zestawu: \<komunikat o błędzie ></span><span class="sxs-lookup"><span data-stu-id="c0ea5-102">Unable to emit assembly: \<error message></span></span>
 
-<span data-ttu-id="2742d-103">Kompilator języka Visual Basic wywołuje Assembly Linker (*Al.exe*, znanego również jako Alink) do generowania zestawów z manifestu i konsolidator zgłasza błąd, na etapie emisji tworzenia zestawu.</span><span class="sxs-lookup"><span data-stu-id="2742d-103">The Visual Basic compiler calls the Assembly Linker (*Al.exe*, also known as Alink) to generate an assembly with a manifest, and the linker reports an error in the emission stage of creating the assembly.</span></span>
+<span data-ttu-id="c0ea5-103">Kompilator języka Visual Basic wywołuje Assembly Linker (*Al.exe*, znanego również jako Alink) do generowania zestawów z manifestu i konsolidator zgłasza błąd, na etapie emisji tworzenia zestawu.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-103">The Visual Basic compiler calls the Assembly Linker (*Al.exe*, also known as Alink) to generate an assembly with a manifest, and the linker reports an error in the emission stage of creating the assembly.</span></span>
 
-<span data-ttu-id="2742d-104">**Identyfikator błędu:** BC30145</span><span class="sxs-lookup"><span data-stu-id="2742d-104">**Error ID:** BC30145</span></span>
+<span data-ttu-id="c0ea5-104">**Identyfikator błędu:** BC30145</span><span class="sxs-lookup"><span data-stu-id="c0ea5-104">**Error ID:** BC30145</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="2742d-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="2742d-105">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="c0ea5-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="c0ea5-105">To correct this error</span></span>
 
-1. <span data-ttu-id="2742d-106">Sprawdź komunikat o błędzie w cudzysłowach i zapoznaj się z tematem [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) uzyskać dokładniejsze objaśnienie i porady.</span><span class="sxs-lookup"><span data-stu-id="2742d-106">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) for further explanation and advice.</span></span>
+1. <span data-ttu-id="c0ea5-106">Sprawdź komunikat o błędzie w cudzysłowach i zapoznaj się z tematem [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) uzyskać dokładniejsze objaśnienie i porady.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-106">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) for further explanation and advice.</span></span>
 
-2. <span data-ttu-id="2742d-107">Spróbuj ręcznie, podpisywania zestawu za pomocą [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) lub [Sn.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md).</span><span class="sxs-lookup"><span data-stu-id="2742d-107">Try signing the assembly manually, using either the [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) or the [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md).</span></span>
+2. <span data-ttu-id="c0ea5-107">Spróbuj ręcznie, podpisywania zestawu za pomocą [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) lub [Sn.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md).</span><span class="sxs-lookup"><span data-stu-id="c0ea5-107">Try signing the assembly manually, using either the [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) or the [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md).</span></span>
 
-3. <span data-ttu-id="2742d-108">Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="2742d-108">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>
+3. <span data-ttu-id="c0ea5-108">Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-108">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>
 
-### <a name="to-sign-the-assembly-manually"></a><span data-ttu-id="2742d-109">Aby podpisać zestaw ręcznie</span><span class="sxs-lookup"><span data-stu-id="2742d-109">To sign the assembly manually</span></span>
+### <a name="to-sign-the-assembly-manually"></a><span data-ttu-id="c0ea5-109">Aby podpisać zestaw ręcznie</span><span class="sxs-lookup"><span data-stu-id="c0ea5-109">To sign the assembly manually</span></span>
 
-1. <span data-ttu-id="2742d-110">Użyj [Sn.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md)) można utworzyć pliku pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="2742d-110">Use the [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)) to create a public/private key pair file.</span></span>
+1. <span data-ttu-id="c0ea5-110">Użyj [Sn.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md)) można utworzyć pliku pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-110">Use the [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)) to create a public/private key pair file.</span></span>
 
-   <span data-ttu-id="2742d-111">Ten plik zawiera *.snk* rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="2742d-111">This file has an *.snk* extension.</span></span>
+   <span data-ttu-id="c0ea5-111">Ten plik zawiera *.snk* rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-111">This file has an *.snk* extension.</span></span>
 
-2. <span data-ttu-id="2742d-112">Usuń odwołanie COM, który generuje błąd z projektu.</span><span class="sxs-lookup"><span data-stu-id="2742d-112">Delete the COM reference that is generating the error from your project.</span></span>
+2. <span data-ttu-id="c0ea5-112">Usuń odwołanie COM, który generuje błąd z projektu.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-112">Delete the COM reference that is generating the error from your project.</span></span>
 
-3. <span data-ttu-id="2742d-113">Otwórz [wiersz polecenia programisty dla programu Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="2742d-113">Open the [Developer Command Prompt for Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).</span></span>
+3. <span data-ttu-id="c0ea5-113">Otwórz [wiersz polecenia programisty dla programu Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="c0ea5-113">Open the [Developer Command Prompt for Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).</span></span>
 
-   <span data-ttu-id="2742d-114">W systemie Windows 10, wprowadź **wiersz polecenia dla deweloperów** w polu wyszukiwania na pasku zadań.</span><span class="sxs-lookup"><span data-stu-id="2742d-114">In Windows 10, enter **Developer command prompt** into the search box on the task bar.</span></span> <span data-ttu-id="2742d-115">Następnie wybierz **wiersz polecenia programisty dla programu VS 2017** z listy wyników.</span><span class="sxs-lookup"><span data-stu-id="2742d-115">Then, select **Developer Command Prompt for VS 2017** from the results list.</span></span>
+   <span data-ttu-id="c0ea5-114">W systemie Windows 10, wprowadź **wiersz polecenia dla deweloperów** w polu wyszukiwania na pasku zadań.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-114">In Windows 10, enter **Developer command prompt** into the search box on the task bar.</span></span> <span data-ttu-id="c0ea5-115">Następnie wybierz **wiersz polecenia programisty dla programu VS 2017** z listy wyników.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-115">Then, select **Developer Command Prompt for VS 2017** from the results list.</span></span>
 
-4. <span data-ttu-id="2742d-116">Zmień katalog na katalog, w którym chcesz umieścić swoje otoki zestawu.</span><span class="sxs-lookup"><span data-stu-id="2742d-116">Change the directory to the directory where you want to place your assembly wrapper.</span></span>
+4. <span data-ttu-id="c0ea5-116">Zmień katalog na katalog, w którym chcesz umieścić swoje otoki zestawu.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-116">Change the directory to the directory where you want to place your assembly wrapper.</span></span>
 
-5. <span data-ttu-id="2742d-117">Wprowadź następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="2742d-117">Enter the following command:</span></span>
+5. <span data-ttu-id="c0ea5-117">Wprowadź następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="c0ea5-117">Enter the following command:</span></span>
 
     ```cmd
     tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>
     ```
 
-   <span data-ttu-id="2742d-118">Jest przykładem rzeczywiste polecenia, które możesz wprowadzić:</span><span class="sxs-lookup"><span data-stu-id="2742d-118">An example of the actual command you might enter is:</span></span>
+   <span data-ttu-id="c0ea5-118">Jest przykładem rzeczywiste polecenia, które możesz wprowadzić:</span><span class="sxs-lookup"><span data-stu-id="c0ea5-118">An example of the actual command you might enter is:</span></span>
 
     ```cmd
     tlbimp c:\windows\system32\msi.dll /out:Interop.WindowsInstaller.dll /keyfile:"c:\documents and settings\mykey.snk"
     ```
 
    > [!TIP]
-   > <span data-ttu-id="2742d-119">Jeśli pliku lub ścieżki zawiera spacje, należy użyć podwójnego cudzysłowu.</span><span class="sxs-lookup"><span data-stu-id="2742d-119">Use double quotation marks if a path or file contains spaces.</span></span>
+   > <span data-ttu-id="c0ea5-119">Jeśli pliku lub ścieżki zawiera spacje, należy użyć podwójnego cudzysłowu.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-119">Use double quotation marks if a path or file contains spaces.</span></span>
 
-6. <span data-ttu-id="2742d-120">W programie Visual Studio należy dodać odwołanie do zestawu .NET do pliku, który został utworzony.</span><span class="sxs-lookup"><span data-stu-id="2742d-120">In Visual Studio, add a .NET Assembly reference to the file you just created.</span></span>
+6. <span data-ttu-id="c0ea5-120">W programie Visual Studio należy dodać odwołanie do zestawu .NET do pliku, który został utworzony.</span><span class="sxs-lookup"><span data-stu-id="c0ea5-120">In Visual Studio, add a .NET Assembly reference to the file you just created.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2742d-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2742d-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0ea5-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c0ea5-121">See also</span></span>
 
-- [<span data-ttu-id="2742d-122">Al.exe</span><span class="sxs-lookup"><span data-stu-id="2742d-122">Al.exe</span></span>](../../../framework/tools/al-exe-assembly-linker.md)
-- [<span data-ttu-id="2742d-123">Sn.exe (narzędzie silnych nazw)</span><span class="sxs-lookup"><span data-stu-id="2742d-123">Sn.exe (Strong Name Tool)</span></span>](../../../framework/tools/sn-exe-strong-name-tool.md)
-- [<span data-ttu-id="2742d-124">Instrukcje: Tworzenie pary kluczy publiczny prywatny</span><span class="sxs-lookup"><span data-stu-id="2742d-124">How to: Create a Public-Private Key Pair</span></span>](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
-- [<span data-ttu-id="2742d-125">Porozmawiaj z nami</span><span class="sxs-lookup"><span data-stu-id="2742d-125">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="c0ea5-122">Al.exe</span><span class="sxs-lookup"><span data-stu-id="c0ea5-122">Al.exe</span></span>](../../../framework/tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="c0ea5-123">Sn.exe (narzędzie silnych nazw)</span><span class="sxs-lookup"><span data-stu-id="c0ea5-123">Sn.exe (Strong Name Tool)</span></span>](../../../framework/tools/sn-exe-strong-name-tool.md)
+- [<span data-ttu-id="c0ea5-124">Instrukcje: Tworzenie pary kluczy publiczny prywatny</span><span class="sxs-lookup"><span data-stu-id="c0ea5-124">How to: Create a Public-Private Key Pair</span></span>](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [<span data-ttu-id="c0ea5-125">Porozmawiaj z nami</span><span class="sxs-lookup"><span data-stu-id="c0ea5-125">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)

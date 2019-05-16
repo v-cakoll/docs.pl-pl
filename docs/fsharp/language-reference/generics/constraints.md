@@ -2,12 +2,12 @@
 title: Ograniczenia
 description: Dowiedz się więcej o F# ograniczenia, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.
 ms.date: 05/16/2016
-ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bf5c6fc4df6c8f2f7f969bd13030172c6b8aab9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937517"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645283"
 ---
 # <a name="constraints"></a>Ograniczenia
 

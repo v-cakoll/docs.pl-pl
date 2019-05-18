@@ -1,1 +1,0 @@
-<span data-ttu-id="98b7d-101">Platform Invocation Services (PInvoke)</span><span class="sxs-lookup"><span data-stu-id="98b7d-101">Platform Invocation Services (PInvoke)</span></span>

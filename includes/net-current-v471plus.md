@@ -1,1 +1,0 @@
-<span data-ttu-id="d959f-101">Dostępne od 4.7.1</span><span class="sxs-lookup"><span data-stu-id="d959f-101">Available since 4.7.1</span></span>

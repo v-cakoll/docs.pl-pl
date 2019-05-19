@@ -5,7 +5,5 @@
       href: command-line-arguments.md
     - name: 'Instrukcje: wyświetlanie argumentów wiersza polecenia'
       href: how-to-display-command-line-arguments.md
-    - name: 'Instrukcje: uzyskiwanie dostępu do argumentów wiersza polecenia za pomocą instrukcji foreach'
-      href: how-to-access-command-line-arguments-using-foreach.md
     - name: Main() — zwracane wartości
       href: main-return-values.md

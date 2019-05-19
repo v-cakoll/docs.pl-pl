@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949867"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881362"
 ---
 # <a name="securing-services"></a>Zabezpieczanie usług
 Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dwóch podstawowe wymagania: transfer zabezpieczeń i autoryzacja. (Wymaganie trzeci, inspekcja zdarzeń zabezpieczeń jest opisana w [inspekcji](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Krótko mówiąc bezpieczeństwie transferu zawiera uwierzytelniania (potwierdzenia tożsamości klienta i usługę), poufności (szyfrowanie wiadomości) i integralności (cyfrowego podpisywania naruszeniem). Autoryzacja jest kontrola dostępu do zasobów, na przykład, dzięki czemu tylko użytkownicy uprzywilejowani do odczytu pliku. Korzystając z funkcji usługi WCF, dwa podstawowe wymagania są łatwo zaimplementować.  
@@ -50,7 +50,7 @@ Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dw�
  Zabezpieczenia w Internecie składa się z takie same wymagania dotyczące bezpieczeństwa w sieci intranet. Usługa musi przedstawić swoje poświadczenia, aby udowodnić, że jego autentyczności, a klienci muszą potwierdzić swoją tożsamość w usłudze. Gdy klient tożsamość jest sprawdzana, usługi można kontrolować jak szeroki dostęp klient ma do zasobów. Ze względu na charakter heterogenicznych Internet, przedstawionych poświadczeń różnią się od tych używanych w domenie Windows. Natomiast kontrolerem Kerberos obsługuje uwierzytelnianie użytkowników w domenie z biletów dla poświadczeń w Internecie, usług i klientów opierają się na jednym z kilka różnych sposobów, aby przedstawić poświadczeń. Celem tego tematu jest jednak przedstawić typowe podejście, które pozwala na tworzenie usługi WCF, który jest dostępny w Internecie.  
   
 ### <a name="using-iis-and-aspnet"></a>Za pomocą usług IIS i platformy ASP.NET  
- Wymagania dotyczące zabezpieczeń internetowych i mechanizmy rozwiązać te problemy, nie są nowością. Usługi IIS to serwer sieci Web firmy Microsoft do korzystania z Internetu i oferuje wiele funkcji zabezpieczeń, umożliwiające rozwiązanie tych problemów. Ponadto [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] zawiera funkcje zabezpieczeń, które mogą używać usług WCF. Aby móc korzystać z tych funkcji zabezpieczeń, hostowanie usługi WCF w programie IIS.  
+ Wymagania dotyczące zabezpieczeń internetowych i mechanizmy rozwiązać te problemy, nie są nowością. Usługi IIS to serwer sieci Web firmy Microsoft do korzystania z Internetu i oferuje wiele funkcji zabezpieczeń, umożliwiające rozwiązanie tych problemów. Ponadto program ASP.NET zawiera funkcje zabezpieczeń, które mogą używać usług WCF. Aby móc korzystać z tych funkcji zabezpieczeń, hostowanie usługi WCF w programie IIS.  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>Przy użyciu członkostwa platformy ASP.NET i dostawców ról  
  Program ASP.NET zawiera dostawcy członkostwa i ról. Dostawca jest bazą danych pary nazwa/hasło użytkownika do uwierzytelniania wywołań, w których również można określić uprawnienia dostępu do obiektu wywołującego. WCF można łatwo użyć istniejących Dostawca członkostwa i ról za pomocą konfiguracji. Dla przykładowej aplikacji, która pokazuje to, zobacz [Dostawca członkostwa i ról](../../../docs/framework/wcf/samples/membership-and-role-provider.md) próbki.  

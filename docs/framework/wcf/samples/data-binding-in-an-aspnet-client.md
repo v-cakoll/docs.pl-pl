@@ -2,12 +2,12 @@
 title: Powiązywanie danych w kliencie programu ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cc6fee822ad300969ccf8556a3eeb410660f256
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990629"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876994"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Powiązywanie danych w kliencie programu ASP.NET
 Niniejszy przykład pokazuje jak powiązać dane zwrócone przez typowe usługi Windows Communication Foundation (WCF) w aplikacji formularzy sieci Web.  
@@ -19,7 +19,7 @@ Niniejszy przykład pokazuje jak powiązać dane zwrócone przez typowe usługi 
   
  Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź". Kontrakt jest definiowany przez `IWeatherService` interfejs, który udostępnia operacji o nazwie `GetWeatherData`. Ta operacja przyjmuje tablicę miasta i zwraca tablicę `WeatherData` obiekty reprezentujące wysokim i niskim prognozowanych temperatury jako uczestnik w mieście.  
   
- Na [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] strony .aspx klienta, sieci DataGrid Web zdefiniowano kontrolkę, która zawiera graficzną reprezentację danych zwracanych przez usługę. Kod strony .aspx, wywołuje usługę WCF dla danych o pogodzie i zwraca dane do tablicy `WeatherData` obiektów. DataGrid Określa, gdzie można pobrać danych z przez ustawienie jego `DataSource` właściwości tablicy. Powiązanie danych odbywa się przy użyciu wywołania do DataGrid `DataBind` metody. Cały ten kod znajduje się wewnątrz.`aspx` na stronie `Page_Load` metody, więc w każdym razem, gdy użytkownik odświeża stronę przeglądarki danych jest aktualizowany w elemencie DataGrid.  
+ Na stronie .aspx klienta ASP.NET Formant DataGrid w sieci Web jest zdefiniowana, który zawiera graficzną reprezentację danych zwracanych przez usługę. Kod strony .aspx, wywołuje usługę WCF dla danych o pogodzie i zwraca dane do tablicy `WeatherData` obiektów. DataGrid Określa, gdzie można pobrać danych z przez ustawienie jego `DataSource` właściwości tablicy. Powiązanie danych odbywa się przy użyciu wywołania do DataGrid `DataBind` metody. Cały ten kod znajduje się wewnątrz.`aspx` na stronie `Page_Load` metody, więc w każdym razem, gdy użytkownik odświeża stronę przeglądarki danych jest aktualizowany w elemencie DataGrid.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   

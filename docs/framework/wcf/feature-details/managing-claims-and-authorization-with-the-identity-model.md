@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046635"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875590"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
 Autoryzacja to proces określania jednostek, które ma uprawnienia do zmiany, wyświetlania lub inny sposób uzyskać dostęp do zasobów komputera. Na przykład w biznesie, tylko menedżerowie może mieć możliwość dostępu do plików pracownikom. Windows Communication Foundation (WCF) obsługuje dwa mechanizmy do wykonywania operacji przetwarzania autoryzacji. Pierwszy mechanizm umożliwia sterowanie autoryzację przy użyciu istniejących typowych konstrukcji języka wspólnego (CLR). Drugim jest znany jako modelu opartego na oświadczeniach *modelu tożsamości*. Usługi WCF używa modelu tożsamości w celu utworzenia oświadczeń z wiadomości przychodzące; Klasy modelu tożsamości można rozszerzyć do obsługi nowych typów oświadczeń autoryzacji niestandardowych schematów. Ten temat zawiera omówienie główne pojęcia dotyczące programowania funkcji modelu tożsamości, a także listy najważniejszych klas, które korzysta z tej funkcji.  
@@ -90,11 +90,12 @@ Autoryzacja to proces określania jednostek, które ma uprawnienia do zmiany, wy
   
  Poniższa ilustracja przedstawia przykład trzech zestawów oświadczeń, gdzie jeden zestaw oświadczeń zawiera, jako jego wystawcę inny zestaw oświadczeń, tożsamości, która z kolei ma System zestawu jako jego wystawca oświadczeń. W związku z tym zestawy oświadczeń tworzą hierarchię, które mogą być arbitralnie głębokie.  
   
- ![Zarządzanie oświadczeniami i autoryzacją](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![Ustawia oświadczenia w hierarchii.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- Wiele zestawów oświadczeń mogą mieć tego samego wydawania oświadczeń w zestawie, jak pokazano na poniższej ilustracji.  
+ Wiele zestawów oświadczeń mogą mieć tego samego wydawania oświadczeń w zestawie, jak pokazano na poniższej ilustracji:
+ 
   
- ![Zarządzanie oświadczeniami i autoryzacją](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![Wiele zestawów oświadczeń wraz z wydaniem tego samego zestawu oświadczeń.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  Z wyjątkiem będącego wystawcy swój własny zestaw oświadczeń modelu tożsamości nie zapewnia pomocy technicznej dla zestawów oświadczeń w celu utworzenia pętli. Ten sposób sytuacji, w którym zestaw oświadczeń A jest wystawiany przez zestaw oświadczeń B, która sama wystawiony przez zestaw oświadczeń A, nigdy nie mogą wystąpić. Ponadto modelu tożsamości nie świadczenia pomocy technicznej dla zestawów oświadczeń mieć wielu wystawców. Jeśli co najmniej dwóch wystawców należy wygenerować danego zestawu oświadczeń, następnie należy użyć wielu zestawów oświadczeń, każdy zawierającym oświadczenia ten sam, ale o różnych wydawców.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651542"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882437"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows
 Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplikacji, często można zapewnić użytkownikom możliwość dodawania nowych wierszy danych w magazynie danych. <xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje tę funkcję, zapewniając wiersza dla nowych rekordów, który jest zawsze wyświetlany jako ostatni wiersz. Jest ona oznaczona symbolem gwiazdki (*) w jej nagłówku wiersza. W poniższych sekcjach omówiono niektóre czynności, należy rozważyć, gdy program za pomocą wiersza dla nowych rekordów jest włączona.  
@@ -47,7 +47,7 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplik
 ## <a name="sorting"></a>Sortowanie  
  W trybie niepowiązanych nowe rekordy są zawsze dodawane do końca <xref:System.Windows.Forms.DataGridView> nawet wtedy, gdy użytkownik ma sortować zawartość <xref:System.Windows.Forms.DataGridView>. Użytkownik będzie musiał ponownie zastosować sortowania, aby posortować wiersza w odpowiednie miejsce; to zachowanie jest podobny do <xref:System.Windows.Forms.ListView> kontroli.  
   
- W danych tryby powiązane i wirtualnych zachowania wstawiania, po zastosowaniu sortowania są zależne od implementacji modelu danych. Aby uzyskać [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], wiersz jest natychmiast posortowane w prawidłowym położeniu.  
+ W danych tryby powiązane i wirtualnych zachowania wstawiania, po zastosowaniu sortowania są zależne od implementacji modelu danych. Dla ADO.NET wiersz jest natychmiast posortowane w prawidłowym położeniu.  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>Inne uwagi dotyczące wiersza dla nowych rekordów  
  Nie można ustawić <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> właściwość ten wiersz, aby `false`. <xref:System.InvalidOperationException> Jest wywoływane, jeśli ta próba zostanie podjęta.  

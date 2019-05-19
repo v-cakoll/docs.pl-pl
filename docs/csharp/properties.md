@@ -2,12 +2,12 @@
 title: Właściwości
 description: Dowiedz się więcej o C# właściwości, które zawierają funkcje sprawdzania poprawności, obliczonych wartości, obliczanie z opóźnieniem i zmienić właściwości powiadomienia.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675783"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878279"
 ---
 # <a name="properties"></a>Właściwości
 
@@ -140,7 +140,7 @@ Końcowe scenariusz, w których trzeba napisać kod w metodzie dostępu właści
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` Operator jest nazywany *operatora warunkowego wartości null*. Sprawdza odwołanie o wartości null ewaluacją po prawej stronie operatora. Wynik końcowy jest to, że w przypadku subskrybentów do `PropertyChanged` zdarzeń, kod, aby wygenerować zdarzenie nie jest wykonywany. Będzie ona zgłaszają `NullReferenceException` bez to sprawdzać w takiej sytuacji. Aby uzyskać więcej informacji, zobacz [`events`](delegates-events.md). W tym przykładzie użyto również nowe `nameof` operatora konwersji z symboli nazwy właściwości na jego reprezentację tekstową.
+`?.` Operator jest nazywany *operatora warunkowego wartości null*. Sprawdza odwołanie o wartości null ewaluacją po prawej stronie operatora. Wynik końcowy jest to, że w przypadku subskrybentów do `PropertyChanged` zdarzeń, kod, aby wygenerować zdarzenie nie jest wykonywany. Będzie ona zgłaszają `NullReferenceException` bez to sprawdzać w takiej sytuacji. Aby uzyskać więcej informacji, zobacz [`events`](events-overview.md). W tym przykładzie użyto również nowe `nameof` operatora konwersji z symboli nazwy właściwości na jego reprezentację tekstową.
 Za pomocą `nameof` można zmniejszyć liczbę błędów, w którym błędnie wpisano nazwę właściwości.
 
 Implementowanie ponownie <xref:System.ComponentModel.INotifyPropertyChanged> jest przykładem przypadek, w którym można wpisać kod w swojej metody dostępu na potrzeby scenariuszy należy.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645751"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875886"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms — omówienie
 
@@ -66,7 +66,7 @@ Aby uzyskać szczegółowe informacje o sposobie używania tych funkcji zobacz n
 |Opis|Temat pomocy|
 |-----------------|----------------|
 |Za pomocą <xref:System.Windows.Forms.BindingSource> składnika|[Instrukcje: Powiązywanie kontrolek formularzy Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|Praca z [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] źródeł danych|[Instrukcje: Sortowanie i filtrowanie danych ADO.NET za pomocą Windows składnika BindingSource formularzy](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Praca ze źródłami danych ADO.NET|[Instrukcje: Sortowanie i filtrowanie danych ADO.NET za pomocą Windows składnika BindingSource formularzy](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Korzystanie z okna źródeł danych|[Wiązanie kontrolek Windows Forms z danymi w programie Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |Przy użyciu ustawień aplikacji|[Instrukcje: Tworzenie ustawień aplikacji](./advanced/how-to-create-application-settings.md)|
 

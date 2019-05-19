@@ -2,12 +2,12 @@
 title: Programowanie zorientowane obiektowo (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2adb1ac24aa625c89fcafe074fe65189aa3767c7
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710969"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880710"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
 
@@ -25,17 +25,17 @@ W tej sekcji opisano następujące pojęcia:
 
   - [Elementy członkowskie klasy](#Members)
 
-        [Properties and Fields](#Properties)
+    - [Właściwości i pola](#Properties)
 
-        [Methods](#Methods)
+    - [Metody](#Methods)
 
-        [Constructors](#Constructors)
+    - [Konstruktory](#Constructors)
 
-        [Finalizers](#Finalizers)
+    - [Finalizatory](#Finalizers)
 
-        [Events](#Events)
+    - [Zdarzenia](#Events)
 
-        [Nested Classes](#NestedClasses)
+    - [Nested Classes](#NestedClasses)
 
   - [Modyfikatory dostępu i poziomy dostępu](#AccessModifiers)
 

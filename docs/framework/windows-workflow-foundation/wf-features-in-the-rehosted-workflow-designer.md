@@ -2,12 +2,12 @@
 title: Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669842"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876522"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. W tym temacie przedstawiono, które z tych funkcji są obsługiwane w rehostowanym projektancie i te, które nie są obecnie obsługiwane.
@@ -37,25 +37,25 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
 
  Poniższy zrzut ekranu przedstawia zmienną i argument menu kontekstowe projektanta.
 
- ![Zmienna i Menu kontekstowego projektanta argumentów](./media/designercontextmenu.png "DesignerContextMenu")
+ ![Zmienna i Menu kontekstowego projektanta argumentów](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Auto umieszczanie w sekwencji
  Od przepływu pracy lub niektóre działania kontenera (takie jak <xref:System.Activities.Statements.NoPersistScope>) może zawierać tylko jednej jednostki działania, dodawanie drugiego działania wymagane dla deweloperów usunąć pierwsze działanie, Dodaj <xref:System.Activities.Statements.Sequence> działania, a następnie dodaj oba działań działanie w sekwencji. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], podczas dodawania drugiego działania do powierzchni projektanta `Sequence` działanie zostanie automatycznie utworzone do opakowania obu działań. Ta funkcja jest obsługiwana w rehostowanym projektancie.
 
  Poniższy zrzut ekranu przedstawia `WriteLine` działania w `Body` z `NoPersistScope`.
 
- ![Automatyczne&#45;otaczające lokalizację wrzucania](./media/autosurround1.png "AutoSurround1")
+ ![Działanie WriteLine w treści działanie NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  Poniższy zrzut ekranu przedstawia utworzone automatycznie `Sequence` działania w `Body` po drugiej `WriteLine` jest spadła poniżej pierwszej.
 
- ![Automatycznie utworzone działaniu sequence](./media/autosurround2.png "AutoSurround2")
+ ![Automatycznie utworzone sekwencji w treści NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>Tryb Pan
  Aby łatwiej przejść z dużych przepływów pracy w projektancie, można włączyć tryb Przesuń, umożliwiając deweloperom kliknij i przeciągnij, aby przenieść widocznej części przepływu pracy, zamiast konieczności używania pasków przewijania. Przycisk, aby uaktywnić tryb panoramowanie jest w prawym dolnym rogu projektanta. Ta funkcja jest obsługiwana w rehostowanym projektancie.
 
  Poniższy zrzut ekranu przedstawia przycisk przesunięcie, który znajduje się w prawym dolnym rogu projektanta przepływów pracy.
 
- ![Przycisk przesunięcie w Projektancie przepływu pracy](./media/panbutton.png "PanButton")
+ ![Pan wyróżnionym w Projektancie przepływu pracy.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  Środkowy przycisk myszy lub spacji może również służyć do Przesuń w Projektancie przepływu pracy.
 
@@ -69,7 +69,7 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
 
  Poniższy zrzut ekranu przedstawiający ukończony przepływ pracy z [Samouczek wprowadzający](getting-started-tutorial.md) Pokazuje widok konspektu sekwencyjnego przepływu pracy.
 
- ![Widoku w Projektancie przepływu pracy konspektu](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![Zrzut ekranu przedstawiający widok konspektu z sekwencyjnego przepływu pracy w programie Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Większa kontrola nad widoczność pasek powłoki i nagłówek elementów
  W rehostowanym projektancie niektóre standardowych kontrolek interfejsu użytkownika nie może mieć znaczenie dla danego przepływu pracy i może być wyłączona. W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], to dostosowanie jest obsługiwana tylko przez pasek powłoki w dolnej części projektanta. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], widoczność powłoki elementy nagłówka w górnej części projektanta może być regulowany poprzez ustawienie <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> z odpowiednią <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> wartość.
@@ -79,18 +79,18 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
 
  Poniższy zrzut ekranu przedstawia punkty załącznika, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika.
 
- ![Węzeł początkowy schemat blokowy przedstawiający punktów połączenie automatyczne](./media/autoconnect1.png "Autoconnect1")
+ ![Schemat blokowy start węzła przedstawiający automatycznie połączyć z punktów](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  Działania również można przeciągać połączeń między węzłami schemat blokowy i Stanami automatyczne wstawianie węzła między dwóch pozostałych węzłach. Poniższy zrzut ekranu przedstawia wyróżnione linii łączącej, gdzie można przeciągnąć z przybornika i porzucić działania.
 
- ![Automatyczne&#45;Wstaw uchwytu upuszczanie działania](./media/autoinsert.png "automatycznego wstawiania")
+ ![Automatyczne wstawianie uchwytu upuszczanie działania](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  Automatyczne łączenie i automatyczne wstawianie są obsługiwane w rehostowanym projektancie.
 
 ### <a name="designer-annotations"></a>Adnotacje projektanta
  W celu ułatwienia tworzenia większych przepływów pracy, Projektant obsługuje dodawanie adnotacji, aby ułatwić śledzenie procesu projektowania. Adnotację można dodać do działań, Stany, węzłów schematu blokowego, zmienne i argumenty. Poniższy zrzut ekranu przedstawia menu kontekstowe służy do dodawania adnotacji do projektanta.
 
- ![Menu kontekstowe adnotacji](./media/annotationdialog.png "annotationdialog")
+ ![Zrzut ekranu przedstawiający menu dodawania notacji.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  Adnotacje projektanta są obsługiwane w rehostowanym projektancie.
 
@@ -134,7 +134,7 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
   
  Poniższy zrzut ekranu przedstawia przepływ pracy automatu stanu ukończenia od [Samouczek wprowadzający](getting-started-tutorial.md) kroku [jak: Tworzenie przepływu pracy automatu stanów](how-to-create-a-state-machine-workflow.md).  
   
- ![Ukończono przepływ pracy automatu stanów](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Ilustracja przedstawiająca przepływ pracy automatu stanu ukończenia.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Aby uzyskać więcej informacji na temat tworzenia przepływów pracy automatu stanów, zobacz [przepływów pracy automatu stanów](state-machine-workflows.md). Przepływy pracy automatu stanów są obsługiwane w rehostowanym projektancie.  
   

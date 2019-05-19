@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875540"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877590"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (WCF Data Services)
 
@@ -88,7 +88,7 @@ Aby uzyskać ogólne informacje o sposobie tworzenia usługi danych, zobacz [Kon
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Włączanie dużych strumieni binarnych w środowisku macierzystym
 
-Podczas tworzenia usługi danych w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web Windows Communication Foundation (WCF) służy do zapewnienia implementacji protokołu HTTP. Domyślnie program WCF ogranicza rozmiar wiadomości HTTP do tylko 65 KB. Aby można było do strumienia dużych danych binarnych do i z usługi danych, należy również skonfigurować aplikację sieci Web, aby umożliwić duże pliki binarne i strumieni na użytek transferu. Aby to zrobić, Dodaj następujące elementy w `<configuration />` element pliku Web.config aplikacji:
+Podczas tworzenia usługi danych w aplikacji sieci Web platformy ASP.NET, Windows Communication Foundation (WCF) umożliwia zapewnienie implementacji protokołu HTTP. Domyślnie program WCF ogranicza rozmiar wiadomości HTTP do tylko 65 KB. Aby można było do strumienia dużych danych binarnych do i z usługi danych, należy również skonfigurować aplikację sieci Web, aby umożliwić duże pliki binarne i strumieni na użytek transferu. Aby to zrobić, Dodaj następujące elementy w `<configuration />` element pliku Web.config aplikacji:
 
 > [!NOTE]
 > Należy użyć <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> tryb transferu, aby upewnić się, że dane binarne w komunikatach żądania i odpowiedzi są przesyłane strumieniowo i nie jest buforowana przez architekturę WCF.
@@ -125,7 +125,7 @@ Dostępne są następujące rzeczy, które należy wziąć pod uwagę podczas im
 
 - Podczas implementacji <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>, lub <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> metody, należy użyć elementu eTag i wartości Content-Type, które są dostarczane jako parametry metody. Nie należy ustawiać tagu eTag lub nagłówki typu zawartości w Twojej <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementacja dostawcy.
 
-- Domyślnie klient wysyła dużych strumieni binarnych za pomocą pakietowego HTTP Transfer-Encoding. Ponieważ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server nie obsługuje tego rodzaju kodowania, nie można używać tego serwera sieci Web do obsługi przesyłania strumieniowego usługi danych, które muszą zaakceptować dużych strumieni binarnych. Aby uzyskać więcej informacji na temat [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, zobacz [serwerów sieci Web w programie Visual Studio dla projektów sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- Domyślnie klient wysyła dużych strumieni binarnych za pomocą pakietowego HTTP Transfer-Encoding. Ponieważ ASP.NET Development Server nie obsługuje tego rodzaju kodowania, nie możesz użyć tego serwera sieci Web do obsługi przesyłania strumieniowego usługi danych, które muszą zaakceptować dużych strumieni binarnych. Aby uzyskać więcej informacji na temat ASP.NET Development Server, zobacz [serwerów sieci Web w programie Visual Studio dla projektów sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 

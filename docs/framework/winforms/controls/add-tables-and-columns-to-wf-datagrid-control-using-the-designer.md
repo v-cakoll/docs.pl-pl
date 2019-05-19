@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b248e9b250ce18f05a2bf57b80af8fbcebb4f811
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642454"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880603"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 
@@ -29,7 +29,7 @@ ms.locfileid: "61642454"
   
 1. Aby wyświetlić dane w tabeli, najpierw musisz powiązać <xref:System.Windows.Forms.DataGrid> kontrolki do zestawu danych. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych przy użyciu narzędzia Projektant](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
-2. Wybierz <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości w oknie dialogowym właściwości, a następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji Właściwość do wyświetlenia **Edytor kolekcji Element DataGridTableStyle**.  
+2.  Wybierz <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości w oknie dialogowym właściwości, a następnie kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok właściwości do wyświetlenia **Edytor kolekcji Element DataGridTableStyle**.  
   
 3. Edytor kolekcji kliknij **Dodaj** do wstawienia styl tabeli.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "61642454"
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Aby dodać kolumnę do formantu DataGrid w Projektancie  
   
-1. W **członków** pole **Edytor kolekcji Element DataGridTableStyle**, wybierz styl odpowiedniej tabeli. W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> kolekcji, a następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png " vbEllipsesButton")) obok właściwości, aby wyświetlić **DataGridColumnStyle — Edytor kolekcji**.  
+1.  W **członków** pole **Edytor kolekcji Element DataGridTableStyle**, wybierz styl odpowiedniej tabeli. W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> kolekcji, a następnie kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok pozycji Właściwość do wyświetlenia **DataGridColumnStyle — Edytor kolekcji**.  
   
 2. Edytor kolekcji kliknij **Dodaj** wstawić styl kolumny lub kliknij strzałkę w dół obok pozycji **Dodaj** do określenia typu kolumny.  
   

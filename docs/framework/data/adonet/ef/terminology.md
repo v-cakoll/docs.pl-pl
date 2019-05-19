@@ -2,12 +2,12 @@
 title: Terminologia programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583531"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877483"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia programu Entity Framework
 W tym temacie definiuje warunki często w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji. Podano linki do powiązanych tematów, w którym dostępne są dodatkowe informacje.  
@@ -30,7 +30,7 @@ W tym temacie definiuje warunki często w [!INCLUDE[adonet_ef](../../../../../in
 |Plik edmx|Plik XML, który zawiera model koncepcyjny (w CSDL), modelu magazynu (w SSDL) i mapowania między nimi (w pliku MSL). Plik edmx jest tworzony przez [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] narzędzia. Aby uzyskać więcej informacji, zobacz [Omówienie pliku edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|Podmiot uczestniczący w skojarzeniu.<br /><br /> Aby uzyskać więcej informacji, zobacz [elementu End (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) i [end skojarzenia](../../../../../docs/framework/data/adonet/association-end.md).|  
 |jednostka|Koncepcja w domenie aplikacji, w którym zdefiniowano typ danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [Element EntityType (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) i [typu jednostki](../../../../../docs/framework/data/adonet/entity-type.md).|  
-|EntityClient|Magazyn niezależne od [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, który zawiera klasy, takie jak `EntityConnection`, `EntityCommand`, i `EntityDataReader`. W programach [!INCLUDE[esql](../../../../../includes/esql-md.md)] połączyć z usługą storage określone [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, takich jak `SqlClient`.<br /><br /> Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
+|EntityClient|Dostawcy danych ADO.NET niezależnie od magazynu, który zawiera klasy, takie jak `EntityConnection`, `EntityCommand`, i `EntityDataReader`. W programach [!INCLUDE[esql](../../../../../includes/esql-md.md)] łączy się z magazynu określonego dostawcy danych ADO.NET, takich jak `SqlClient`.<br /><br /> Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
 |kontener jednostek|Określa, zestawów encji i zestawów skojarzeń, które będą realizowane w określonej przestrzeni nazw.<br /><br /> Aby uzyskać więcej informacji, zobacz [Element EntityContainer (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl) i [kontener jednostek](../../../../../docs/framework/data/adonet/entity-container.md).|  
 |Entity Data Model (EDM)|Zestaw pojęcia, które opisują struktury danych, jako jednostek i relacji, niezależnie od tego, w postaci przechowywane.<br /><br /> Aby uzyskać więcej informacji, zobacz [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).|  
 |Entity Framework|Zestaw technologii, który obsługuje opracowywanie aplikacji zorientowanych na dane, umożliwiając deweloperom pracę z modelami koncepcyjnymi, które są mapowane do schematów logicznych w źródłach danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).|  

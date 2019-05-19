@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 438be2ffbff5c4f88ccfef4cad63dbfc71d132d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648257"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881852"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Instrukcje: Uzyskiwanie miar czcionek
 <xref:System.Drawing.FontFamily> Klasa udostępnia następujące metody, które pobierają różne metryki dla kombinacji określonej rodziny/styl:  
@@ -28,22 +28,22 @@ ms.locfileid: "64648257"
   
  Liczby zwrócone przez te metody są w jednostkach projektowania czcionki, dzięki czemu są one niezależne od rozmiaru i jednostki określonego <xref:System.Drawing.Font> obiektu.  
   
- Poniższa ilustracja przedstawia różne metryki.  
+ Na poniższej ilustracji przedstawiono różne metryki:
   
- ![Czcionki tekstu](./media/fontstext7a.png "fontstext7A")  
+ ![Ilustracja miar czcionek: ascent, zejścia i wierszami.](./media/how-to-obtain-font-metrics/various-font-metrics.png)  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia metryki dla stylu normalnego rodziny czcionek Arial. Tworzy również kod <xref:System.Drawing.Font> obiektu (oparte na Arial rodziny) o rozmiarze 16 pikseli i wyświetla metryki (w pikselach) dla konkretnego <xref:System.Drawing.Font> obiektu.  
   
- Poniższa ilustracja przedstawia dane wyjściowe przykładowego kodu.  
+ Na poniższej ilustracji przedstawiono dane wyjściowe przykładowego kodu:
   
- ![Fonts Text](./media/csfontstext8.png "csFontsText8")  
+ ![Przykładowe dane wyjściowe kodu czcionka Arial metryk.](./media/how-to-obtain-font-metrics/example-output-code-arial-font.png)  
   
  Należy pamiętać, pierwsze dwa wiersze danych wyjściowych na poprzedniej ilustracji. <xref:System.Drawing.Font> Zwraca rozmiar 16 i <xref:System.Drawing.FontFamily> zwraca wysokość em 2048. Te dwie wartości (16 i 2048) są kluczem do konwersji między jednostkami projektowania czcionki i jednostek (w tym przypadku pikselach) <xref:System.Drawing.Font> obiektu.  
   
  Na przykład możesz przekształcić wzrastająca od projektowania jednostek do pikseli w następujący sposób:  
   
- ![Czcionki tekstu](./media/fontstext9.png "FontsText9")  
+ ![Formuła przedstawiający Konwersja jednostki projektu do pikseli](./media/how-to-obtain-font-metrics/convert-font-units-example.png)  
   
  Poniższy kod ustawia położenie tekstu w pionie, ustawiając <xref:System.Drawing.PointF.Y%2A> element członkowski danych <xref:System.Drawing.PointF> obiektu. Współrzędna y jest zwiększana o `font.Height` dla każdego nowego wiersza tekstu. <xref:System.Drawing.Font.Height%2A> Właściwość <xref:System.Drawing.Font> zwraca wierszami (w pikselach) dotyczące konkretnego <xref:System.Drawing.Font> obiektu. W tym przykładzie numer zwrócone przez <xref:System.Drawing.Font.Height%2A> jest 19. Należy pamiętać, że jest taki sam jak numer (z zaokrągleniem do liczby całkowitej), uzyskanego konwertując metryki odstępów między wierszami pikseli.  
   

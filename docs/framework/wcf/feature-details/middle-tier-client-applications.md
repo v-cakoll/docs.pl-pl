@@ -2,18 +2,18 @@
 title: Aplikacje klienckie warstwy środkowej
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649443"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877471"
 ---
 # <a name="middle-tier-client-applications"></a>Aplikacje klienckie warstwy środkowej
 W tym temacie omówiono różne problemy specyficzne dla aplikacje klienckie warstwy środkowej, które używają usług Windows Communication Foundation (WCF).  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Zwiększanie wydajności klienckie warstwy środkowej  
- W porównaniu do poprzednich technologii komunikacji, takich jak usługi sieci Web przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], utworzenie wystąpienia klienta WCF, mogą być bardziej złożone z powodu rozbudowanego zestawu funkcji programu WCF. Na przykład, gdy <xref:System.ServiceModel.ChannelFactory%601> otworzyć obiektu jego ustanowienia bezpiecznej sesji przy użyciu usługi, procedury, która zwiększa się czas uruchamiania dla wystąpienia klienta. Zazwyczaj te możliwości dodatkowych funkcji nie wpływają na aplikacje klienckie znacznie od klienta platformy WCF wykonuje kilka wywołań, a następnie zamyka.  
+ W porównaniu do poprzednich technologii komunikacji, takich jak usługi sieci Web za pomocą programu ASP.NET, utworzenie wystąpienia klienta WCF może być bardziej złożone z powodu rozbudowanego zestawu funkcji programu WCF. Na przykład, gdy <xref:System.ServiceModel.ChannelFactory%601> otworzyć obiektu jego ustanowienia bezpiecznej sesji przy użyciu usługi, procedury, która zwiększa się czas uruchamiania dla wystąpienia klienta. Zazwyczaj te możliwości dodatkowych funkcji nie wpływają na aplikacje klienckie znacznie od klienta platformy WCF wykonuje kilka wywołań, a następnie zamyka.  
   
  Aplikacje klienckie warstwy środkowej, jednak można szybko utworzyć wiele obiektów klienta WCF i, co w efekcie środowiska inicjowania zwiększone wymagania. Istnieją dwa główne sposoby zwiększenie wydajności aplikacji warstwy środkowej podczas wywoływania usługi:  
   

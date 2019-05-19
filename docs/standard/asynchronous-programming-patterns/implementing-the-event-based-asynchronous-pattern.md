@@ -17,17 +17,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55ae6467ca6e7f688bcb7b3fc797050a33074963
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623582"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882524"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zdarzeniach
 Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie zauważalnego opóźnienia, należy wziąć pod uwagę nadając mu funkcje asynchroniczne z zastosowaniem [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- Asynchroniczny wzorzec oparty na zdarzeniach udostępnia standardowy sposób pakietu klasę, która ma funkcje asynchroniczne. Jeśli implementowane za pomocą klas pomocniczych, takich jak <xref:System.ComponentModel.AsyncOperationManager>, klasa będzie działać poprawnie w dowolnym modelu aplikacji, w tym [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], aplikacji konsoli i aplikacji Windows Forms.  
+ Asynchroniczny wzorzec oparty na zdarzeniach udostępnia standardowy sposób pakietu klasę, która ma funkcje asynchroniczne. Jeśli implementowane za pomocą klas pomocniczych, takich jak <xref:System.ComponentModel.AsyncOperationManager>, klasa będzie działać prawidłowo w ramach dowolnego modelu aplikacji, w tym ASP.NET, aplikacji konsoli i aplikacji Windows Forms.  
   
  Na przykład, który implementuje wzorzec asynchroniczny oparty na zdarzeniach, zobacz [jak: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   

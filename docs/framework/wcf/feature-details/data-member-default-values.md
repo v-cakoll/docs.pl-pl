@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592593"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881263"
 ---
 # <a name="data-member-default-values"></a>Domyślne wartości elementów członkowskich danych
 W .NET Framework typy mają koncepcji *wartości domyślne*. Na przykład dla dowolnego typu odwołania, wartość domyślna to `null`, a typ liczby całkowitej wynosi zero. Należy co pewien czas pominięto element członkowski danych z serializowanych danych, gdy jest ustawiona na wartość domyślną. Ponieważ element członkowski ma wartość domyślną, wartość rzeczywistą nie muszą podlegać serializacji; ma to zalety wydajności.  
@@ -54,7 +54,7 @@ W .NET Framework typy mają koncepcji *wartości domyślne*. Na przykład dla do
   
 - Nie ma wartości rzeczywistych do użycia w schemacie. Jest odbieranie punkt końcowy, aby odpowiednio interpretacji brakującego elementu.  
   
- Podczas importowania schematu <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> zostaje automatycznie ustalona `false` zawsze, gdy adnotacji specyficzne dla usługi WCF wymienionych wcześniej wykrycia. Jest również ustawiona na `false` dla typów odwołań, które mają `nillable` właściwością `false` do obsługi scenariuszy określonych współdziałanie, często występujących podczas używania [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web.  
+ Podczas importowania schematu <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> zostaje automatycznie ustalona `false` zawsze, gdy adnotacji specyficzne dla usługi WCF wymienionych wcześniej wykrycia. Jest również ustawiona na `false` dla typów odwołań, które mają `nillable` właściwością `false` do obsługi scenariuszy określonych współdziałanie, często występujących podczas korzystania z usług sieci Web platformy ASP.NET.  
   
 ## <a name="see-also"></a>Zobacz także
 

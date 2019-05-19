@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 7fb3398ec325cd8b483ef7a222c8dd392a4e72b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656011"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875988"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Określanie zachowania środowiska uruchomieniowego usługi
 Po zaprojektowaniu kontraktu usługi ([projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)) i realizowane umowy serwisowej ([Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)) można skonfigurować zachowanie operacji środowisko wykonawcze usług. Ten temat zawiera omówienie usług dostarczanych przez system i zachowania operacji i opisano, gdzie można znaleźć więcej informacji, aby utworzyć nowe zachowania. Podczas gdy niektóre zachowania są stosowane jako atrybuty, wiele są stosowane przy użyciu pliku konfiguracji aplikacji lub programowo. Aby uzyskać więcej informacji na temat konfigurowania aplikacji usługi, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
@@ -77,7 +77,7 @@ Po zaprojektowaniu kontraktu usługi ([projektowanie kontraktów usług](../../.
 ### <a name="service-behaviors"></a>Zachowania usług  
  Następujące zachowania działają w usługach.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Stosowane do usługi WCF w celu wskazania, czy usługi mogą być uruchamiane w [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] w trybie zgodności.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Stosowane do usługi WCF w celu wskazania, czy usługi mogą być uruchamiane w trybie zgodności w programie ASP.NET.  
   
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Określa, jak usługa autoryzuje oświadczenia klienta.  
   

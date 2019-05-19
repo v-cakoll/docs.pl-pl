@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452371"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876950"
 ---
 # <a name="c-operators"></a>Operatory języka C#
 
@@ -69,7 +69,7 @@ Są to najwyższy pierwszeństwo operatorów.
 
 [stackalloc](../keywords/stackalloc.md) -przydziela blok pamięci na stosie.
 
-[->](dereference-operator.md) — wyłuskanie wskaźnika w połączeniu z dostępu do elementu członkowskiego.
+[->](pointer-related-operators.md#pointer-member-access-operator--) — operację wskaźnika pośredniego w połączeniu z dostępu do elementu członkowskiego.
 
 ## <a name="unary-operators"></a>Operatory jednoargumentowe
 
@@ -91,9 +91,9 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [await](../keywords/await.md) — czeka `Task`.
 
-[& x](and-operator.md) — adres.
+[& x](pointer-related-operators.md#address-of-operator-) — adres zmiennej.
 
-[* x](multiplication-operator.md) — dereferencji.
+[* x](pointer-related-operators.md#pointer-indirection-operator-) — operację wskaźnika pośredniego lub wyłuskania.
 
 [TRUE — operator](../keywords/true-false-operators.md) — zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie true.
 

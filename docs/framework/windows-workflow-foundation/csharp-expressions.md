@@ -2,12 +2,12 @@
 title: Wyrażenia języka C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650957"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882077"
 ---
 # <a name="c-expressions"></a>Wyrażenia języka C#
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń języka C# są obsługiwane w Windows Workflow Foundation (WF). Nowe projekty przepływu pracy C# utworzone w programie Visual Studio 2012 przeznaczonych [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] korzystanie z wyrażeń języka C# i używać wyrażeń języka Visual Basic projektów przepływu pracy programu Visual Basic. Istniejące [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] projektów przepływu pracy, które używają wyrażeń języka Visual Basic można przeprowadzić migrację do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] niezależnie od tego, w projekcie języka i są obsługiwane. Ten temat zawiera omówienie wyrażeń języka C# w [!INCLUDE[wf1](../../../includes/wf1-md.md)].
@@ -31,7 +31,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń j�
 ### <a name="WFDesigner"></a> W Projektancie przepływu pracy przy użyciu wyrażeń języka C#
  Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń języka C# są obsługiwane w Windows Workflow Foundation (WF). Projekty przepływu pracy w języku C# utworzone w programie Visual Studio 2012 przeznaczonych [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] używać wyrażeń języka C#, podczas gdy projekty przepływu pracy w języku Visual Basic używają wyrażeń języka Visual Basic. Aby określić żądaną wyrażenie języka C#, wpisz go w pole o nazwie **wprowadź wyrażenie języka C#**. Ta etykieta jest wyświetlana w oknie dialogowym właściwości po wybraniu działania w Projektancie lub działania w Projektancie przepływu pracy. W poniższym przykładzie dwa `WriteLine` działań są zawarte w `Sequence` wewnątrz `NoPersistScope`.
 
- ![Automatycznie utworzone działaniu sequence](./media/autosurround2.png "AutoSurround2")
+ ![Zrzut ekranu pokazujący działania sekwencji utworzone automatycznie.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
 > [!NOTE]
 >  Wyrażeń języka C# są obsługiwane tylko w programie Visual Studio i nie są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. Aby uzyskać więcej informacji o nowych funkcjach WF45 obsługiwane w Projektancie ponownie hostowanej, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Rehostowanym projektancie przepływu pracy](wf-features-in-the-rehosted-workflow-designer.md).

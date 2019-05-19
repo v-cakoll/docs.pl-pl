@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583491"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880590"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integracja System.Transactions z programem SQL Server
-.NET Framework w wersji 2.0 wprowadzono framework transakcji, który jest możliwy za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta platforma udostępnia transakcji w taki sposób, że jest w pełni zintegrowane na platformie .NET Framework, w tym [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+.NET Framework w wersji 2.0 wprowadzono framework transakcji, który jest możliwy za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta platforma udostępnia transakcji w taki sposób, że jest w pełni zintegrowane na platformie .NET Framework, w tym ADO.NET.  
   
- Oprócz rozszerzenia programowania <xref:System.Transactions> i [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mogą współpracować ze sobą do koordynowania optymalizacje podczas pracy z transakcji. Awansowanie transakcja jest uproszczone transakcji (local), która może być automatycznie podwyższony do transakcji rozproszonej pełni na zgodnie z potrzebami.  
+ Oprócz rozszerzenia programowania <xref:System.Transactions> i ADO.NET mogą współpracować ze sobą do koordynowania optymalizacje podczas pracy z transakcji. Awansowanie transakcja jest uproszczone transakcji (local), która może być automatycznie podwyższony do transakcji rozproszonej pełni na zgodnie z potrzebami.  
   
- Począwszy od [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> obsługuje transakcje awansowanie, podczas pracy z programem SQL Server. Awansowanie transakcji nie jest wywoływany dodano obciążenie z transakcji rozproszonych, chyba że dodany obciążenie jest wymagana. Awansowanie transakcje są automatyczne i wymagają interwencji od dewelopera.  
+ Począwszy od wersji 2.0 programu ADO.NET, <xref:System.Data.SqlClient> obsługuje transakcje awansowanie, podczas pracy z programem SQL Server. Awansowanie transakcji nie jest wywoływany dodano obciążenie z transakcji rozproszonych, chyba że dodany obciążenie jest wymagana. Awansowanie transakcje są automatyczne i wymagają interwencji od dewelopera.  
   
  Awansowanie transakcje są dostępne tylko, gdy używasz .NET Framework Data Provider for SQL Server (`SqlClient`) z programem SQL Server.  
   

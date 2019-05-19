@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 49f28acc5001d63e7a1f6a5bfe8cb3415311e379
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4f2f9fa1cb1be421be57ae0671573150871ebd1d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582749"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880467"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET i LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest częścią [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] rodziny technologii. Jest on oparty na usługi świadczone przez [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] dostawcy modelu. W związku z tym możesz mieszać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu przy użyciu istniejących [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] aplikacji i przeprowadzić migrację bieżącego [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] rozwiązania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Następująca ilustracja przedstawia ogólny widok relacji.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest częścią rodziny ADO.NET technologii. Opiera się na usługach dostarczonych przez model dostawcy ADO.NET. W związku z tym możesz mieszać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu z istniejącymi aplikacjami ADO.NET i przeprowadzić migrację bieżącego rozwiązania ADO.NET [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Następująca ilustracja przedstawia ogólny widok relacji.  
   
  ![LINQ to SQL i ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>Połączenia  
- Możesz podać istniejące [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] połączenia podczas tworzenia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>. Wszystkie operacje na <xref:System.Data.Linq.DataContext> (w tym zapytań), użyj tego podano połączenia. Jeśli połączenie jest już otwarty, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pozostawi je się po zakończeniu pracy z nim.  
+ Możesz podać istniejącego połączenia ADO.NET, tworząc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>. Wszystkie operacje na <xref:System.Data.Linq.DataContext> (w tym zapytań), użyj tego podano połączenia. Jeśli połączenie jest już otwarty, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pozostawi je się po zakończeniu pracy z nim.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  

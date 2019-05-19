@@ -2,15 +2,15 @@
 title: Liczby zmiennoprzecinkowe
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 209e53e41495603f4ad559a74bdc87033f6a92a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583669"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882048"
 ---
 # <a name="floating-point-numbers"></a>Liczby zmiennoprzecinkowe
-W tym temacie opisano niektóre problemy, które często deweloperzy napotykają podczas pracy z liczb zmiennoprzecinkowych w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Te problemy są spowodowane przez sposób komputerom przechowywania liczb zmiennoprzecinkowych i nie są specyficzne dla określonego dostawcy takich jak <xref:System.Data.SqlClient> lub <xref:System.Data.OracleClient>.  
+W tym temacie opisano niektóre problemy, które często deweloperzy napotykają podczas pracy z liczb zmiennoprzecinkowych w ADO.NET. Te problemy są spowodowane przez sposób komputerom przechowywania liczb zmiennoprzecinkowych i nie są specyficzne dla określonego dostawcy takich jak <xref:System.Data.SqlClient> lub <xref:System.Data.OracleClient>.  
   
  Liczby zmiennoprzecinkowe zwykle nie mają dokładnie reprezentacja binarna. Zamiast tego komputer przechowuje przybliżeniem liczby. W różnym czasie różną liczbę cyfr, może służyć do reprezentowania liczby. Gdy zmiennoprzecinkowy punktu, że liczba jest konwertowana z reprezentacji jednego innego reprezentacji najmniej znaczącymi cyframi tej liczby może się nieco różnić. Konwersja zazwyczaj występuje, gdy liczba jest rzutowanie z jednego typu na inny typ. Zmiana występuje, czy konwersja występuje w bazie danych, między typami, które reprezentują wartości z bazy danych lub między typami. Z powodu tych zmian numery, które logicznie są takie same może mieć zmian w ich najmniej znaczący cyfr, które spowoduje ich mają różne wartości. Liczba cyfr w numerze może być większy lub mniejszy niż oczekiwano. Gdy sformatowany jako ciąg, liczba nie mogą być wyświetlane z oczekiwaną wartością.  
   

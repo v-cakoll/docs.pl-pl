@@ -2,17 +2,17 @@
 title: Proces zakupów firmowych
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665940"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876173"
 ---
 # <a name="corporate-purchase-process"></a>Proces zakupów firmowych
 W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania dla procesu zakupu propozycji (RFP) na podstawie z automatycznego najlepszym wyborem propozycji. Łączy ona <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i niestandardowe działanie, aby utworzyć przepływ pracy, który reprezentuje proces.
 
- Ten przykład zawiera [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikację kliencką, która umożliwia wchodzenie w interakcje z procesem jako uczestnicy różnych (jako oryginalnego zleceniodawcy lub określonego dostawcy).
+ W tym przykładzie zawiera aplikacji klienckiej ASP.NET, która umożliwia wchodzenie w interakcje z procesem jako uczestnicy różnych (jako oryginalnego zleceniodawcy lub określonego dostawcy).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -36,7 +36,7 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
 
 - Do śledzenia.
 
-- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w różnych klientów ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web i aplikacji formularzy WinForms).
+- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w różnych klientów (aplikacje sieci Web ASP.NET i WinForms aplikacji).
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
@@ -82,7 +82,7 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
 |-------------|-----------------|  
 |Wspólne|Obiekty jednostki, używane w ramach procesu (żądanie propozycji, dostawcy i propozycje dostawcy).|  
 |WfDefinition|Definicja procesu (jako [!INCLUDE[wf1](../../../../includes/wf1-md.md)] program) i host (`PurchaseProcessHost`) używane przez aplikacje klienckie do tworzenia i używania wystąpienia przepływu pracy procesu zakupu.|  
-|Klient sieci Web|[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Aplikację kliencką, która umożliwia użytkownikom tworzenia i uczestniczyć w procesie zakupu wystąpień. Używa innych utworzonych niestandardowo hosta do interakcji z aparatu przepływu pracy.|  
+|Klient sieci Web|Aplikacja klienta platformy ASP.NET, która umożliwia użytkownikom tworzenia i uczestniczyć w procesie zakupu wystąpień. Używa innych utworzonych niestandardowo hosta do interakcji z aparatu przepływu pracy.|  
 |WinFormsClient|Aplikacja kliencka Windows Forms, który umożliwia użytkownikom tworzenia i uczestniczyć w procesie zakupu wystąpień. Używa innych utworzonych niestandardowo hosta do interakcji z aparatu przepływu pracy.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

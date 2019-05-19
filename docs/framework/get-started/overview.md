@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644030"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878030"
 ---
 # <a name="overview-of-the-net-framework"></a>Przegląd programu .NET Framework
 
@@ -45,7 +45,7 @@ Program Internet Explorer jest przykładem niezarządzanej aplikacji, która hos
 
 Poniższa ilustracja pokazuje relację środowiska uruchomieniowego języka wspólnego i biblioteki klas, aplikacjach i całego systemu. Na ilustracji pokazano również działanie kodu zarządzanego działa w większej architekturze.
 
-![Zarządzany kod w obrębie większej architekturze](../../../docs/framework/get-started/media/circle.gif "okrąg") .NET Framework w kontekście
+![Zrzut ekranu pokazujący sposób zarządzany kod działa w większej architekturze.](./media/overview/language-runtime-class-library-relationship.gif)
 
 Główne funkcje programu .NET Framework większej liczby szczegółów można znaleźć w poniższych sekcjach.
 

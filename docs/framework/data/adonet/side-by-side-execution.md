@@ -2,20 +2,20 @@
 title: Wykonywanie równoczesne w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583622"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877093"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Wykonywanie równoczesne w ADO.NET
 Wykonywanie Side-by-side w programie .NET Framework jest możliwość wykonywania aplikacji na komputerze, który ma wiele wersji .NET Framework zainstalowanej, wyłącznie przy użyciu wersji, dla którego aplikacja została skompilowana. Aby uzyskać szczegółowe informacje o konfigurowaniu side-by-side wykonywania, zobacz [Side-by-Side Execution](../../../../docs/framework/deployment/side-by-side-execution.md).  
   
- Aplikacja skompilowana przy użyciu jednej wersji programu .NET Framework może być uruchomiona w innej wersji programu .NET Framework. Jednak zaleca się skompilować wersję aplikacji dla każdej zainstalowanej wersji programu .NET Framework i uruchomić je oddzielnie. W dowolnym scenariuszu, należy pamiętać o zmianach w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] między wersjami, które mogą wpływać na zgodność z nowszymi wersjami lub zgodności z poprzednimi wersjami aplikacji.  
+ Aplikacja skompilowana przy użyciu jednej wersji programu .NET Framework może być uruchomiona w innej wersji programu .NET Framework. Jednak zaleca się skompilować wersję aplikacji dla każdej zainstalowanej wersji programu .NET Framework i uruchomić je oddzielnie. W dowolnym scenariuszu należy pamiętać o zmianach w ADO.NET między wersjami, które mogą wpływać na zgodność z nowszymi wersjami lub zgodności z poprzednimi wersjami aplikacji.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Zgodność z nowszymi wersjami i zgodności z poprzednimi wersjami  
- Zgodność z nowszymi wersjami oznacza, że aplikacja może być skompilowana przy użyciu wcześniejszej wersji programu .NET Framework, ale nadal będzie działać prawidłowo w nowszej wersji programu .NET Framework. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Kod napisany dla .NET Framework w wersji 1.1 jest zgodny wprzód z nowszymi wersjami.  
+ Zgodność z nowszymi wersjami oznacza, że aplikacja może być skompilowana przy użyciu wcześniejszej wersji programu .NET Framework, ale nadal będzie działać prawidłowo w nowszej wersji programu .NET Framework. ADO.NET kod napisany dla .NET Framework w wersji 1.1 jest zgodny wprzód z nowszymi wersjami.  
   
  Zgodność ze starszymi wersjami oznacza, że aplikacja jest kompilowana do nowszej wersji programu .NET Framework, ale kontynuuje działanie w starszych wersjach programu .NET Framework bez utraty funkcjonalności. Oczywiście nie będzie w przypadku funkcji wprowadzonych w nowej wersji programu .NET Framework.  
   
@@ -36,7 +36,7 @@ Wykonywanie Side-by-side w programie .NET Framework jest możliwość wykonywani
   
  Jednak począwszy od programu .NET Framework w wersji 2.0 wszystkie dostawcy danych .NET Framework może służyć w częściowo zaufanej strefy. Ponadto nowa funkcja zabezpieczeń został dodany do dostawcy danych .NET Framework w programie .NET Framework w wersji 1.1. Ta funkcja pozwala ograniczyć połączenia, jakie ciągi mogą być używane w strefie zabezpieczeń. Można również wyłączyć używanie pustych haseł dla określonej strefy. Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu i ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
   
- Każdej instalacji programu .NET Framework jest oddzielnym pliku Security.config —, dlatego nie istnieją żadne problemy ze zgodnością przy użyciu ustawień zabezpieczeń. Jednakże jeśli aplikacja zależy od możliwości zapewnienia dodatkowych zabezpieczeń [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zawarte w .NET Framework w wersji 1.1 lub nowszej, nie będzie możliwe rozprowadzić go na system w wersji 1.0.  
+ Każdej instalacji programu .NET Framework jest oddzielnym pliku Security.config —, dlatego nie istnieją żadne problemy ze zgodnością przy użyciu ustawień zabezpieczeń. Jednak jeśli aplikacja zależy od możliwości zapewnienia dodatkowych zabezpieczeń programu ADO.NET, zawarty w .NET Framework w wersji 1.1 lub nowszej, nie będzie możliwe rozprowadzić go na system w wersji 1.0.  
   
 ## <a name="sqlcommand-execution"></a>Wykonywanie polecenia SqlCommand  
  Począwszy od programu .NET Framework w wersji 1.1, sposób który <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> wykonuje polecenia na dane źródło zostało zmienione.  

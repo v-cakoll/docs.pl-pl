@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650005"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876074"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Instrukcje: Tworzenie gradientu liniowego
 GDI + zapewnia poziomej, pionowej i ukośne gradienty liniowe. Domyślnie w przypadku gradientu liniowego zmienia kolor równomiernie. Można jednak dostosować gradientu liniowego, tak, aby zmienia kolor w sposób obsługuje technologię niejednolitego.  
@@ -31,9 +31,9 @@ Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gr
   
  Na poniższej ilustracji przedstawiono wiersza, elipsy i prostokąt. Należy pamiętać, że kolor gradientu powtarza się, jak pozioma współrzędne przekroczy 200.  
   
- ![Linear Gradient](./media/cslineargradient1.png "cslineargradient1")  
+ ![Wiersz, elipsę i prostokąt wypełniony kolor gradientu.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>Aby użyć poziomy gradientów liniowych  
+## <a name="to-use-horizontal-linear-gradients"></a>Aby użyć poziomy gradientów liniowych  
   
 - Przekaż nieprzezroczyste niebieski czerwonego i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  
   
@@ -56,9 +56,9 @@ Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gr
   
  Na poniższej ilustracji przedstawiono wynikowe elipsy i prostokąt.  
   
- ![Gradient liniowy](./media/cslineargradient2.png "cslineargradient2")  
+ ![Elipsy i prostokąt wypełniony poziomy kolor gradientu.](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>Aby dostosować gradienty liniowe  
+## <a name="to-customize-linear-gradients"></a>Aby dostosować gradienty liniowe  
   
 - Przekaż nieprzezroczyste red czarne i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  
   
@@ -71,9 +71,9 @@ Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gr
   
  Na poniższej ilustracji przedstawiono wiersza i elipsy. Należy pamiętać, kolor zmiany elipsy stopniowo po przeniesieniu wzdłuż żadnego wiersza jest zbliżony do wiersza, przechodzi przez (0, 0) i (200, 100).  
   
- ![Gradient liniowy](./media/cslineargradient3.png "cslineargradient3")  
+ ![Linia i elipsy wypełniony ukośne kolor gradientu.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>Aby utworzyć w użyciu gradientów liniowych  
+## <a name="to-create-diagonal-linear-gradients"></a>Aby utworzyć w użyciu gradientów liniowych  
   
 - Przekaż nieprzezroczyste zielonego nieprzezroczyste i w kolorze niebieskim jako argument trzecia i czwarta, odpowiednio.  
   

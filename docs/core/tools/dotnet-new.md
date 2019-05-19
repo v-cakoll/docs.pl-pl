@@ -1,15 +1,15 @@
 ---
 title: nowe polecenia DotNet
 description: Nowe polecenie dotnet tworzy nowe projekty .NET Core, na podstawie określonego szablonu.
-ms.date: 10/24/2018
-ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 05/06/2019
+ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665016"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878313"
 ---
-# <a name="dotnet-new"></a>nowe polecenia DotNet
+# <a name="dotnet-new"></a>dotnet new
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -19,11 +19,18 @@ ms.locfileid: "61665016"
 
 ## <a name="synopsis"></a>Streszczenie
 
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+```console
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [-l|--list] [--type]
+dotnet new [-h|--help]
+```
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```console
-dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
-    [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
@@ -59,78 +66,162 @@ Wywołuje polecenie [aparatu szablonów](https://github.com/dotnet/templating) d
 
 Szablon do utworzenia wystąpienia podczas wywoływania polecenia. Każdy szablon może być określone opcje, które można przekazać. Aby uzyskać więcej informacji, zobacz [opcje szablonu](#template-options).
 
+Jeśli `TEMPLATE` wartość nie jest identyczny z tekstem **szablony** lub **krótką nazwę** kolumnie dopasowania podciągu odbywa się na tych dwóch kolumn.
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablony, które są zainstalowane przy użyciu zestawu .NET Core SDK 2.2.100. Domyślny język dla szablonu jest wyświetlany w nawiasie.
+
+| Szablony                                    | Krótka nazwa        | Język     | Znaczniki                                  |
+|----------------------------------------------|-------------------|--------------|---------------------------------------|
+| Aplikacja konsoli                          | `console`         | [C#], F#, VB | Typowe/konsoli                        |
+| Biblioteka klas                                | `classlib`        | [C#], F#, VB | Typowe/biblioteki                        |
+| Projekt testów jednostkowych                            | `mstest`          | [C#], F#, VB | Test/MSTest                           |
+| NUnit 3 Test Project                         | `nunit`           | [C#], F#, VB | Test/NUnit                            |
+| Element testu NUnit 3                            | `nunit-test`      | [C#], F#, VB | Test/NUnit                            |
+| xUnit Test Project                           | `xunit`           | [C#], F#, VB | Test/xUnit                            |
+| Strona razor                                   | `page`            | [C#]         | Web/ASP.NET                           |
+| MVC ViewImports                              | `viewimports`     | [C#]         | Web/ASP.NET                           |
+| MVC ViewStart                                | `viewstart`       | [C#]         | Web/ASP.NET                           |
+| ASP.NET Core — puste                           | `web`             | [C#], F#     | W sieci Web lub są puste                             |
+| Aplikacja sieci Web platformy ASP.NET Core (Model-View-Controller) | `mvc`             | [C#], F#     | W sieci Web/MVC                               |
+| Aplikacja sieci Web platformy ASP.NET Core                         | `webapp`, `razor` | [C#]         | Strony sieci Web/MVC/Razor                   |
+| Platforma ASP.NET Core przy użyciu usługi Angular                    | `angular`         | [C#]         | Web/MVC/SPA                           |
+| Platforma ASP.NET Core z użyciem biblioteki React.js                   | `react`           | [C#]         | Web/MVC/SPA                           |
+| Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`      | [C#]         | Web/MVC/SPA                           |
+| Biblioteki klas razor                          | `razorclasslib`   | [C#]         | Biblioteka klas w sieci Web/Razor/biblioteki/Razor |
+| Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`          | [C#], F#     | Web/WebAPI                            |
+| global.json file                             | `globaljson`      |              | Konfiguracja                                |
+| NuGet Config                                 | `nugetconfig`     |              | Konfiguracja                                |
+| Konfiguracja sieci Web                                   | `webconfig`       |              | Konfiguracja                                |
+| Plik rozwiązania                                | `sln`             |              | Rozwiązanie                              |
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablony, które są zainstalowane przy użyciu zestawu .NET Core SDK 2.1.300. Domyślny język dla szablonu jest wyświetlany w nawiasie.
 
-|Opis szablonu                          | Nazwa szablonu    | Języki     |
-|----------------------------------------------|------------------|---------------|
-| Aplikacja konsolowa                          | `console`        | [C#], F#, VB  |
-| Biblioteka klas                                | `classlib`       | [C#], F#, VB  |
-| Projekt testów jednostkowych                            | `mstest`         | [C#], F#, VB  |
-| xUnit test project                           | `xunit`          | [C#], F#, VB  |
-| NUnit test project                           | `nunit`          | [C#], F#, VB  |
-| Strona razor                                   | `page`           | [C#]          |
-| MVC ViewImports                              | `viewimports`    | [C#]          |
-| MVC ViewStart                                | `viewstart`      | [C#]          |
-| Platforma ASP.NET Core puste                           | `web`            | [C#], F#      |
-| Aplikacja sieci Web platformy ASP.NET Core (Model-View-Controller) | `mvc`            | [C#], F#      |
-| Aplikacja sieci Web platformy ASP.NET Core                         | `razor`, `webapp`| [C#]          |
-| Platforma ASP.NET Core przy użyciu usługi Angular                    | `angular`        | [C#]          |
-| Platforma ASP.NET Core z użyciem biblioteki React.js                   | `react`          | [C#]          |
-| Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`     | [C#]          |
-| Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`         | [C#], F#      |
-| Biblioteki klas razor                          | `razorclasslib`  | [C#]          |
-| global.json file                             | `globaljson`     |               |
-| NuGet config                                 | `nugetconfig`    |               |
-| Konfiguracja sieci Web                                   | `webconfig`      |               |
-| Plik rozwiązania                                | `sln`            |               |
+| Szablony                                    | Krótka nazwa      | Język     | Znaczniki                                  |
+|----------------------------------------------|-----------------|--------------|---------------------------------------|
+| Aplikacja konsoli                          | `console`       | [C#], F#, VB | Typowe/konsoli                        |
+| Biblioteka klas                                | `classlib`      | [C#], F#, VB | Typowe/biblioteki                        |
+| Projekt testów jednostkowych                            | `mstest`        | [C#], F#, VB | Test/MSTest                           |
+| xUnit Test Project                           | `xunit`         | [C#], F#, VB | Test/xUnit                            |
+| Strona razor                                   | `page`          | [C#]         | Web/ASP.NET                           |
+| MVC ViewImports                              | `viewimports`   | [C#]         | Web/ASP.NET                           |
+| MVC ViewStart                                | `viewstart`     | [C#]         | Web/ASP.NET                           |
+| ASP.NET Core — puste                           | `web`           | [C#], F#     | W sieci Web lub są puste                             |
+| Aplikacja sieci Web platformy ASP.NET Core (Model-View-Controller) | `mvc`           | [C#], F#     | W sieci Web/MVC                               |
+| Aplikacja sieci Web platformy ASP.NET Core                         | `razor`         | [C#]         | Strony sieci Web/MVC/Razor                   |
+| Platforma ASP.NET Core przy użyciu usługi Angular                    | `angular`       | [C#]         | Web/MVC/SPA                           |
+| Platforma ASP.NET Core z użyciem biblioteki React.js                   | `react`         | [C#]         | Web/MVC/SPA                           |
+| Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`    | [C#]         | Web/MVC/SPA                           | 
+| Biblioteki klas razor                          | `razorclasslib` | [C#]         | Biblioteka klas w sieci Web/Razor/biblioteki/Razor |
+| Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`        | [C#], F#     | Web/WebAPI                            |
+| global.json file                             | `globaljson`    |              | Konfiguracja                                |
+| NuGet Config                                 | `nugetconfig`   |              | Konfiguracja                                |
+| Konfiguracja sieci Web                                   | `webconfig`     |              | Konfiguracja                                |
+| Plik rozwiązania                                | `sln`           |              | Rozwiązanie                              |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablony, które są zainstalowane za pomocą platformy .NET Core SDK 2.0. Domyślny język dla szablonu jest wyświetlany w nawiasie.
+Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablony, które są zainstalowane przy użyciu zestawu .NET Core SDK 2.0.0. Domyślny język dla szablonu jest wyświetlany w nawiasie.
 
-|Opis szablonu                          | Nazwa szablonu | Języki     |
-|----------------------------------------------|---------------|---------------|
-| Aplikacja konsolowa                          | `console`     | [C#], F#, VB  |
-| Biblioteka klas                                | `classlib`    | [C#], F#, VB  |
-| Projekt testów jednostkowych                            | `mstest`      | [C#], F#, VB  |
-| xUnit test project                           | `xunit`       | [C#], F#, VB  |
-| Platforma ASP.NET Core puste                           | `web`         | [C#], F#      |
-| Aplikacja sieci Web platformy ASP.NET Core (Model-View-Controller) | `mvc`         | [C#], F#      |
-| Aplikacja sieci Web platformy ASP.NET Core                         | `razor`       | [C#]          |
-| Platforma ASP.NET Core przy użyciu usługi Angular                    | `angular`     | [C#]          |
-| Platforma ASP.NET Core z użyciem biblioteki React.js                   | `react`       | [C#]          |
-| Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`  | [C#]          |
-| Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`      | [C#], F#      |
-| global.json file                             | `globaljson`  |               |
-| NuGet config                                 | `nugetconfig` |               |
-| Konfiguracja sieci Web                                   | `webconfig`   |               |
-| Plik rozwiązania                                | `sln`         |               |
-| Strona razor                                   | `page`        |               |
-| MVC ViewImports                              | `viewimports` |               |
-| MVC ViewStart                                | `viewstart`   |               |
+| Szablony                                    | Krótka nazwa    | Język     | Znaczniki                |
+|----------------------------------------------|---------------|--------------|---------------------|
+| Aplikacja konsoli                          | `console`     | [C#], F#, VB | Typowe/konsoli      |
+| Biblioteka klas                                | `classlib`    | [C#], F#, VB | Typowe/biblioteki      |
+| Projekt testów jednostkowych                            | `mstest`      | [C#], F#, VB | Test/MSTest         |
+| xUnit Test Project                           | `xunit`       | [C#], F#, VB | Test/xUnit          |
+| ASP.NET Core — puste                           | `web`         | [C#], F#     | W sieci Web lub są puste           |
+| Aplikacja sieci Web platformy ASP.NET Core (Model-View-Controller) | `mvc`         | [C#], F#     | W sieci Web/MVC             |
+| Aplikacja sieci Web platformy ASP.NET Core                         | `razor`       | [C#]         | Strony sieci Web/MVC/Razor |
+| Platforma ASP.NET Core przy użyciu usługi Angular                    | `angular`     | [C#]         | Web/MVC/SPA         |
+| Platforma ASP.NET Core z użyciem biblioteki React.js                   | `react`       | [C#]         | Web/MVC/SPA         |
+| Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`  | [C#]         | Web/MVC/SPA         |
+| Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`      | [C#], F#     | Web/WebAPI          |
+| global.json file                             | `globaljson`  |              | Konfiguracja              |
+| Nuget Config                                 | `nugetconfig` |              | Konfiguracja              |
+| Konfiguracja sieci Web                                   | `webconfig`   |              | Konfiguracja              |
+| Plik rozwiązania                                | `sln`         |              | Rozwiązanie            |
+| Strona razor                                   | `page`        |              | Web/ASP.NET         |
+| MVC ViewImports                              | `viewimports` |              | Web/ASP.NET         |
+| MVC ViewStart                                | `viewstart`   |              | Web/ASP.NET         |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -all` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablony, które są zainstalowane za pomocą zestawu SDK programu .NET Core 1.x. Domyślny język dla szablonu jest wyświetlany w nawiasie.
+Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -all` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablony, które są zainstalowane przy użyciu zestawu .NET Core SDK 1.0.1. Domyślny język dla szablonu jest wyświetlany w nawiasie.
 
-|Opis szablonu  | Nazwa szablonu | Języki |
-|----------------------|---------------|-----------|
-| Aplikacja konsolowa  | `console`     | [C#], F#  |
-| Biblioteka klas        | `classlib`    | [C#], F#  |
-| Projekt testów jednostkowych    | `mstest`      | [C#], F#  |
-| xUnit test project   | `xunit`       | [C#], F#  |
-| Platforma ASP.NET Core puste   | `web`         | [C#]      |
-| Aplikacja sieci Web platformy ASP.NET Core | `mvc`         | [C#], F#  |
-| Interfejs API sieci Web platformy ASP.NET Core | `webapi`      | [C#]      |
-| NuGet config         | `nugetconfig` |           |
-| Konfiguracja sieci Web           | `webconfig`   |           |
-| Plik rozwiązania        | `sln`         |           |
+| Szablony            | Krótka nazwa    | Język | Znaczniki           |
+|----------------------|---------------|----------|----------------|
+| Aplikacja konsoli  | `console`     | [C#], F# | Typowe/konsoli |
+| Biblioteka klas        | `classlib`    | [C#], F# | Typowe/biblioteki |
+| Projekt testów jednostkowych    | `mstest`      | [C#], F# | Test/MSTest    |
+| xUnit Test Project   | `xunit`       | [C#], F# | Test/xUnit     |
+| ASP.NET Core — puste   | `web`         | [C#]     | W sieci Web lub są puste      |
+| Aplikacja sieci Web platformy ASP.NET Core | `mvc`         | [C#], F# | W sieci Web/MVC        |
+| Interfejs API sieci Web platformy ASP.NET Core | `webapi`      | [C#]     | Web/WebAPI     |
+| Nuget Config         | `nugetconfig` |          | Konfiguracja         |
+| Konfiguracja sieci Web           | `webconfig`   |          | Konfiguracja         |
+| Plik rozwiązania        | `sln`         |          | Rozwiązanie       |
 
 ---
 
 ## <a name="options"></a>Opcje
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+`--dry-run`
+
+Wyświetla podsumowanie co się stanie, jeśli dane polecenie zostały uruchomione, jeśli mogłoby spowodować tworzenie szablonu.
+
+`--force`
+
+Wymusza zawartość do wygenerowania nawet wtedy, gdy go zmienić istniejące pliki. Jest to wymagane, gdy projekt zawiera już katalog wyjściowy.
+
+`-h|--help`
+
+Drukuje pomoc dotyczącą polecenia. Może być wywołana dla `dotnet new` polecenia sam lub dowolnego szablonu, takie jak `dotnet new mvc --help`.
+
+`-i|--install <PATH|NUGET_ID>`
+
+Instaluje pakiet źródła lub szablonu z `PATH` lub `NUGET_ID` podane. Jeśli chcesz zainstalować wstępną wersję pakietu szablonu, należy określić wersję w formacie `<package-name>::<package-version>`. Domyślnie `dotnet new` przekazuje \* wersję, która reprezentuje ostatnią wersję stabilny pakiet. Zobacz przykład w [przykłady](#examples) sekcji.
+
+Aby uzyskać informacje dotyczące tworzenia szablonów niestandardowych, zobacz [szablonów niestandardowych dla platformy dotnet nowe](custom-templates.md).
+
+`-l|--list`
+
+Wyświetla listę szablonów zawierających określonej nazwy. Jeśli wywołany dla `dotnet new` polecenie wyświetla listę możliwych szablonów dostępnych dla danego katalogu. Na przykład jeśli katalog zawiera już projekt, nie ma w niej wszystkie szablony projektu.
+
+`-lang|--language {C#|F#|VB}`
+
+Język szablonu w celu utworzenia. Język zaakceptowane, zależą od szablonu (Zobacz ustawienia domyślne w [argumenty](#arguments) sekcji). Nie jest prawidłowy dla niektórych szablonów.
+
+> [!NOTE]
+> Interpretowanie niektóre powłoki `#` jako znak specjalny. W takich przypadkach należy dołączyć wartość parametru języka, takich jak `dotnet new console -lang "F#"`.
+
+`-n|--name <OUTPUT_NAME>`
+
+Nazwa utworzonej danych wyjściowych. Jeśli nazwa nie zostanie określona, jest używana nazwa bieżącego katalogu.
+
+`--nuget-source`
+
+Określa źródła pakietów NuGet do użycia podczas instalacji.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Lokalizacja, aby umieścić wygenerowanych danych wyjściowych. Ustawieniem domyślnym jest bieżący katalog.
+
+`--type`
+
+Filtrowanie na podstawie typów dostępnych szablonów. Wstępnie zdefiniowane wartości to "Projekt", "element" lub "other".
+
+`-u|--uninstall <PATH|NUGET_ID>`
+
+Odinstalowuje pakiet źródła lub szablonu w `PATH` lub `NUGET_ID` podane. Przy wykluczaniu `<PATH|NUGET_ID>` wartości, wszystkie pakiety z aktualnie zainstalowanych szablonów i ich skojarzone szablony są wyświetlane.
+
+> [!NOTE]
+> Aby odinstalować przy użyciu szablonu `PATH`, należy do pełnej kwalifikacji ścieżki. Na przykład *C:/Users/\<użytkownika > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* będzie działać, ale *./GarciaSoftware.ConsoleTemplate.CSharp* z zawierającego folder nie będzie.
+> Ponadto zawiera końcowego ukośnika katalogu kończącego w zmiennej path szablonu.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -266,15 +357,149 @@ Lokalizacja, aby umieścić wygenerowanych danych wyjściowych. Ustawieniem domy
 
 Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są dostępne następujące opcje dodatkowe:
 
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+**console**
+
+`--langVersion <VERSION_NUMBER>` -Ustawia `LangVersion` właściwości w pliku utworzonego projektu. Na przykład użyć `--langVersion 7.3` używać C# 7.3. Nieobsługiwane dla F#.
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+**platformy angular, react reactredux dla platformy**
+
+`--exclude-launch-settings` — Wyłączyć z wyszukiwania *launchSettings.json* z wygenerowanego szablonu.
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+`--no-https` -Projekt nie wymaga protokołu HTTPS. Ta opcja ma zastosowanie tylko wtedy, gdy `IndividualAuth` lub `OrganizationalAuth` nie są używane.
+
+**razorclasslib**
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+**classlib**
+
+`-f|--framework <FRAMEWORK>` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp2.2` do tworzenia biblioteki klas .NET Core lub `netstandard2.0` do tworzenia biblioteki klas .NET Standard. Wartość domyślna to `netstandard2.0`.
+
+`--langVersion <VERSION_NUMBER>` -Ustawia `LangVersion` właściwości w pliku utworzonego projektu. Na przykład użyć `--langVersion 7.3` używać C# 7.3. Nieobsługiwane dla F#.
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+**mstest, xunit**
+
+`-p|--enable-pack` — Umożliwia tworzenie pakietów dla projektu za pomocą [pakietu dotnet](dotnet-pack.md).
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+**rozszerzenie nunit**
+
+`-f|--framework <FRAMEWORK>` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartość domyślna to `netcoreapp2.1`.
+
+`-p|--enable-pack` — Umożliwia tworzenie pakietów dla projektu za pomocą [pakietu dotnet](dotnet-pack.md).
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+**page**
+
+`-na|--namespace <NAMESPACE_NAME>` -Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
+
+`-np|--no-pagemodel` -Tworzy tę stronę bez klasy PageModel.
+
+**viewimports**
+
+`-na|--namespace <NAMESPACE_NAME>` -Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
+
+**web**
+
+`--exclude-launch-settings` — Wyłączyć z wyszukiwania *launchSettings.json* z wygenerowanego szablonu.
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+`--no-https` -Projekt nie wymaga protokołu HTTPS. Ta opcja ma zastosowanie tylko wtedy, gdy `IndividualAuth` lub `OrganizationalAuth` nie są używane.
+
+**MVC, aplikacji sieci Web**
+
+`-au|--auth <AUTHENTICATION_TYPE>` -Typ uwierzytelniania do użycia. Możliwe wartości to:
+
+- `None` — Bez uwierzytelniania (ustawienie domyślne).
+- `Individual` -Uwierzytelnianie indywidualne.
+- `IndividualB2C` -Uwierzytelnianie indywidualne za pomocą usługi Azure AD B2C.
+- `SingleOrg` -Uwierzytelnianie organizacji dla jednej dzierżawy.
+- `MultiOrg` -Uwierzytelnianie organizacji dla wielu dzierżaw.
+- `Windows` -Uwierzytelnianie Windows.
+
+`--aad-b2c-instance <INSTANCE>` Wystąpienie usługi Azure Active Directory B2C Aby nawiązać połączenie. Za pomocą `IndividualB2C` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/tfp/`.
+
+`-ssp|--susi-policy-id <ID>` Identyfikator zasad logowania i rejestracji dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
+
+`-rp|--reset-password-policy-id <ID>` — Resetowanie hasła zasad identyfikator dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
+
+`-ep|--edit-profile-policy-id <ID>` — Edytowanie profilu zasad identyfikator dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
+
+`--aad-instance <INSTANCE>` Wystąpienie usługi Azure Active Directory Aby nawiązać połączenie. Za pomocą `SingleOrg` lub `MultiOrg` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/`.
+
+`--client-id <ID>` — Identyfikator klienta dla tego projektu. Za pomocą `IndividualB2C`, `SingleOrg`, lub `MultiOrg` uwierzytelniania. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
+
+`--domain <DOMAIN>` -Domena dzierżawy katalogu. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `qualified.domain.name`.
+
+`--tenant-id <ID>` — Identyfikator dzierżawy identyfikator katalogu, aby nawiązać połączenie. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
+
+`--callback-path <PATH>` — Ścieżka żądania w podstawowej ścieżka identyfikatora URI przekierowania aplikacji. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `/signin-oidc`.
+
+`-r|--org-read-access` — Umożliwia dostęp do odczytu do katalogu tej aplikacji. Dotyczy tylko `SingleOrg` lub `MultiOrg` uwierzytelniania.
+
+`--exclude-launch-settings` — Wyłączyć z wyszukiwania *launchSettings.json* z wygenerowanego szablonu.
+
+`--no-https` -Projekt nie wymaga protokołu HTTPS. `app.UseHsts` i `app.UseHttpsRedirection` nie są dodawane do `Startup.Configure`. Ta opcja ma zastosowanie tylko wtedy, gdy `Individual`, `IndividualB2C`, `SingleOrg`, lub `MultiOrg` nie są używane.
+
+`-uld|--use-local-db` -Określa, że LocalDB powinny być używane zamiast bazy danych SQLite. Dotyczy tylko `Individual` lub `IndividualB2C` uwierzytelniania.
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+**webapi**
+
+`-au|--auth <AUTHENTICATION_TYPE>` -Typ uwierzytelniania do użycia. Możliwe wartości to:
+
+- `None` — Bez uwierzytelniania (ustawienie domyślne).
+- `IndividualB2C` -Uwierzytelnianie indywidualne za pomocą usługi Azure AD B2C.
+- `SingleOrg` -Uwierzytelnianie organizacji dla jednej dzierżawy.
+- `Windows` -Uwierzytelnianie Windows.
+
+`--aad-b2c-instance <INSTANCE>` Wystąpienie usługi Azure Active Directory B2C Aby nawiązać połączenie. Za pomocą `IndividualB2C` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/tfp/`.
+
+`-ssp|--susi-policy-id <ID>` Identyfikator zasad logowania i rejestracji dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
+
+`--aad-instance <INSTANCE>` Wystąpienie usługi Azure Active Directory Aby nawiązać połączenie. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/`.
+
+`--client-id <ID>` — Identyfikator klienta dla tego projektu. Za pomocą `IndividualB2C` lub `SingleOrg` uwierzytelniania. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
+
+`--domain <DOMAIN>` -Domena dzierżawy katalogu. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `qualified.domain.name`.
+
+`--tenant-id <ID>` — Identyfikator dzierżawy identyfikator katalogu, aby nawiązać połączenie. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
+
+`-r|--org-read-access` — Umożliwia dostęp do odczytu do katalogu tej aplikacji. Dotyczy tylko `SingleOrg` lub `MultiOrg` uwierzytelniania.
+
+`--exclude-launch-settings` — Wyłączyć z wyszukiwania *launchSettings.json* z wygenerowanego szablonu.
+
+`--no-https` -Projekt nie wymaga protokołu HTTPS. `app.UseHsts` i `app.UseHttpsRedirection` nie są dodawane do `Startup.Configure`. Ta opcja ma zastosowanie tylko wtedy, gdy `Individual`, `IndividualB2C`, `SingleOrg`, lub `MultiOrg` nie są używane.
+
+`-uld|--use-local-db` -Określa, że LocalDB powinny być używane zamiast bazy danych SQLite. Dotyczy tylko `Individual` lub `IndividualB2C` uwierzytelniania.
+
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+
+**globaljson**
+
+`--sdk-version <VERSION_NUMBER>` -Określa wersję programu .NET Core SDK do użycia w *global.json* pliku.
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 **console, angular, react, reactredux, razorclasslib**
 
-  `--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp2.0` do tworzenia biblioteki klas .NET Core lub `netstandard2.0` do tworzenia biblioteki klas .NET Standard. Wartość domyślna to `netstandard2.0`.
+`-f|--framework <FRAMEWORK>` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp2.1` do tworzenia biblioteki klas .NET Core lub `netstandard2.0` do tworzenia biblioteki klas .NET Standard. Wartość domyślna to `netstandard2.0`.
 
 `--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
 
@@ -370,19 +595,19 @@ Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są 
 
 **page**
 
-`-na|--namespace <NAMESPACE_NAME>`-Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` -Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
 
 `-np|--no-pagemodel` -Tworzy tę stronę bez klasy PageModel.
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>`-Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` -Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 **Konsola, angular, react reactredux dla platformy**
 
-  `--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
+`--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
 
 **classlib**
 
@@ -488,23 +713,27 @@ Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są 
 
 **console, xunit, mstest, web, webapi**
 
-`-f|--framework` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0` lub `netcoreapp1.1`. Wartość domyślna to `netcoreapp1.0`.
+`-f|--framework <FRAMEWORK>` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0` lub `netcoreapp1.1`. Wartość domyślna to `netcoreapp1.0`.
 
 **classlib**
 
-`-f|--framework` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0`, `netcoreapp1.1`, lub `netstandard1.0` do `netstandard1.6`. Wartość domyślna to `netstandard1.4`.
+`-f|--framework <FRAMEWORK>` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0`, `netcoreapp1.1`, lub `netstandard1.0` do `netstandard1.6`. Wartość domyślna to `netstandard1.4`.
 
 **mvc**
 
-`-f|--framework` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0` lub `netcoreapp1.1`. Wartość domyślna to `netcoreapp1.0`.
+`-f|--framework <FRAMEWORK>` -Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0` lub `netcoreapp1.1`. Wartość domyślna to `netcoreapp1.0`.
 
-`-au|--auth` -Typ uwierzytelniania do użycia. Wartości: `None` lub `Individual`. Wartość domyślna to `None`.
+`-au|--auth <AUTHENTICATION_TYPE>` -Typ uwierzytelniania do użycia. Wartości: `None` lub `Individual`. Wartość domyślna to `None`.
 
 `-uld|--use-local-db` -Określa, czy należy użyć programu LocalDB zamiast bazy danych SQLite. Wartości: `true` lub `false`. Wartość domyślna to `false`.
 
 ---
 
 ## <a name="examples"></a>Przykłady
+
+Tworzenie C# projekt aplikacji konsoli, określając nazwę szablonu:
+
+`dotnet new "Console Application"`
 
 Tworzenie F# projekt aplikacji konsoli w bieżącym katalogu:
 
@@ -514,17 +743,25 @@ Utwórz projekt biblioteki klas .NET Standard w określonym katalogu (dostępne 
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-Utwórz nowy projekt aplikacji w języku C# MVC ASP.NET Core w bieżącym katalogu bez uwierzytelniania:
+Utwórz nowe platformy ASP.NET Core C# projektu MVC w bieżącym katalogu bez uwierzytelniania:
 
 `dotnet new mvc -au None`
 
-Utwórz nową aplikację xUnit:
+Utwórz nowy projekt xUnit:
 
 `dotnet new xunit`
 
 Wyświetl wszystkie szablony dostępne dla platformy MVC:
 
 `dotnet new mvc -l`
+
+Lista wszystkich szablonów pasujących *możemy* podciąg. Nie dokładnego dopasowania zostanie znaleziony, więc dopasowywanie podciągów uruchamiana nazwę krótką i nazwę kolumny.
+
+`dotnet new we -l`
+
+Próba wywołania szablonu zgodnej *ng*. Jeśli nie można ustalić pojedyncze dopasowanie, Utwórz listę szablonów, które są udanych dopasowań.
+
+`dotnet new ng`
 
 Zainstaluj wersję 2.0 szablonów aplikacji jednostronicowej dla platformy ASP.NET Core (opcji polecenia dostępne dla platformy .NET Core SDK 1.1 i tylko nowsze wersje):
 

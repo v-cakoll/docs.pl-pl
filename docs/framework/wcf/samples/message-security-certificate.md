@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: be9913c5109f86bf54e69beb58c53c4ddc3fd28e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c439773449cdb3be4326707a0b408d08afd2c50f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664873"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876701"
 ---
 # <a name="message-security-certificate"></a>Certyfikat zabezpieczeń komunikatów
 Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania certyfikatów X.509 v3 klienta i wymaga uwierzytelnienia serwera za pomocą certyfikat serwera X.509 v3. Ta próbka używa domyślnych ustawień w taki sposób, że wszystkie komunikaty aplikacji między klientem i serwerem są podpisane i szyfrowane. Ten przykład jest oparty na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) i składa się z programu konsoli klienta i Biblioteka usługi hostowanej przez Internetowe usługi informacyjne (IIS). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".  
@@ -252,7 +252,7 @@ Press <ENTER> to terminate client.
   
 - Przyznawanie uprawnień do klucza prywatnego certyfikatu.  
   
-     Następujące wiersze w plik Setup.bat jest udostępnić certyfikat serwera, przechowywane w magazynie dostępne dla [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proces roboczy.  
+     Następujące wiersze w pliku Setup.bat należy certyfikatu serwera, przechowywane w magazynie dostępne dla konta procesu roboczego ASP.NET.  
   
     ```bat
     echo ************  

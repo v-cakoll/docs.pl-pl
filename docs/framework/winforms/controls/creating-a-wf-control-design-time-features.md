@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211205"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882313"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Przewodnik: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio
 
@@ -59,7 +59,7 @@ Zadania zilustrowane w tym przewodniku obejmują:
 
 Po zakończeniu niestandardową kontrolkę będą wyglądać następująco:
 
-![Możliwe formantu MarqueeControl](./media/demomarqueecontrol.gif "DemoMarqueeControl")
+![Aplikacja, przedstawiający ramkę informujący o tym, tekst i przyciski rozpoczęcie i zakończenie.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Lista kompletny kod znajduje się [jak: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
@@ -178,7 +178,7 @@ Podczas tworzenia niestandardowego środowiska czasu projektowania, będzie trze
 
 2. W oknie dialogowym "MarqueeControlLibrary stron właściwości" Wybierz **debugowania** strony.
 
-3. W **Akcja uruchamiania** zaznacz **Uruchom zewnętrzny Program**. Można więc debugowanie osobnego wystąpienia programu Visual Studio, kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) przycisk, aby przejść do środowiska IDE programu Visual Studio. Nazwa pliku wykonywalnego jest devenv.exe, a jeśli został zainstalowany w lokalizacji domyślnej, jego ścieżka jest %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+3. W **Akcja uruchamiania** zaznacz **Uruchom zewnętrzny Program**. Można więc debugowanie osobnego wystąpienia programu Visual Studio, kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) przycisk, aby przejść do środowiska IDE programu Visual Studio. Nazwa pliku wykonywalnego jest devenv.exe, a jeśli został zainstalowany w lokalizacji domyślnej, jego ścieżka jest %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
 
 4. Kliknij przycisk OK, aby zamknąć okno dialogowe.
 

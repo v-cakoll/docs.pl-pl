@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 732267b431c5058fa7039f0fb132e6161c37d4a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 346d7107c9c17c5df06fa0e47f7a35355344f590
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303131"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880737"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Instrukcje: dodawanie lub usuwanie obrazów ImageList przy użyciu narzędzia Projektant
 Możesz dodać obrazy do <xref:System.Windows.Forms.ImageList> składnika kilka różnych sposobów. Dodawanie obrazów bardzo szybko przy użyciu tagu inteligentnego skojarzone z <xref:System.Windows.Forms.ImageList>, lub jeśli kilka innych właściwości są ustawiane na <xref:System.Windows.Forms.ImageList>, może okazać się bardziej wygodne do dodania obrazów za pomocą okna właściwości. Można również dodać obrazy przy użyciu kodu. Aby uzyskać więcej informacji o tym, jak dodać obrazy z kodem, zobacz [jak: Dodawanie lub usuwanie obrazów za pomocą Windows składnika ImageList formularzy](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Zazwyczaj wypełnić <xref:System.Windows.Forms.ImageList> składnika z obrazami, zanim zostanie skojarzony z formantem, ale nie jest to wymagane.  
@@ -23,7 +23,7 @@ Możesz dodać obrazy do <xref:System.Windows.Forms.ImageList> składnika kilka 
   
 1. Wybierz <xref:System.Windows.Forms.ImageList> składnika, lub dodaj je do formularza.  
   
-2. W oknie dialogowym właściwości kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.ImageList.Images%2A> właściwości.  
+2.  W oknie dialogowym właściwości kliknij przycisk oznaczony wielokropkiem (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok pozycji <xref:System.Windows.Forms.ImageList.Images%2A> właściwości.  
   
 3. W **Edytor kolekcji obrazów**, kliknij przycisk **Dodaj** lub **Usuń** do dodania lub usunięcia obrazów z listy.  
   

@@ -3,16 +3,14 @@ title: Wprowadzenie do delegatów
 description: Dowiedz się więcej na temat obiektów delegowanych, w tym temacie wprowadzono podstawowe pojęcia i opisano cele projektu języka dla obiektów delegowanych.
 ms.date: 06/20/2016
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: 84e8bf8a03bd529d9c06ad049530c19daa380065
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43cdf9345f0bae9d5c4d0e6a31d80bc269c37fec
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646699"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879032"
 ---
 # <a name="introduction-to-delegates"></a>Wprowadzenie do delegatów
-
-[Poprzednie](delegates-events.md)
 
 Delegaty zapewniają *późnym wiązaniu* mechanizmu na platformie .NET. Późne wiązanie oznacza, że utworzyć algorytmu, gdy obiekt wywołujący dostarcza również co najmniej jedną metodę, która implementuje część algorytmu.
 

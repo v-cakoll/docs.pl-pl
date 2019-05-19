@@ -2,12 +2,12 @@
 title: Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664816"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876719"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 Większość przykładów Windows Communication Foundation (WCF) są hostowane w Internet Information Services (IIS) i uruchamiane z wspólnego katalogu wirtualnego. Ta procedura konfiguracji jednorazowej tworzy folder z dysku. dodaje także katalog wirtualny usług IIS o nazwie **ServiceModelSamples**.
@@ -19,7 +19,7 @@ Większość przykładów Windows Communication Foundation (WCF) są hostowane w
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedura konfiguracji jednorazowej dla przykładów programu WCF  
   
-1. Upewnij się, że [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jest skonfigurowany. Aby uzyskać więcej informacji na temat sposobu konfigurowania [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], zobacz [informacji usługi instrukcje dotyczące hostowania internetowej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Upewnij się, że program ASP.NET jest skonfigurowany. Aby uzyskać więcej informacji na temat sposobu konfigurowania programu ASP.NET, zobacz [informacji usługi instrukcje dotyczące hostowania internetowej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2. Upewnij się, że [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] jest zainstalowany. Wyszukaj następujący katalog dla wersji 4.0 (lub nowszy): **\Windows\Microsoft.NET\Framework**  
   

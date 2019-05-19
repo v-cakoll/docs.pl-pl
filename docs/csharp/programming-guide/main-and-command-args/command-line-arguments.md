@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709981"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877534"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
 Możesz wysyłać argumenty do `Main` metoda definiując metodę na jeden z następujących sposobów:  
@@ -80,6 +80,5 @@ long num = Convert.ToInt64(s);
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)
 - [Instrukcje: Wyświetlanie argumentów wiersza poleceń](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Instrukcje: Dostęp do argumentów wiersza polecenia za pomocą foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)

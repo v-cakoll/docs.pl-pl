@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 311889d70a5dd9b30f4151c453d489edf77b92e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da2576696b514dca882636125cfb3e31a82d7f6e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591638"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878202"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Instrukcje: Zdalne badanie stanu drukarek
 W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek, które nie działa z powodu zakleszczenie papieru lub Brak papieru lub problematycznych sytuacji. Bogaty zestaw właściwości drukarki ujawnione w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework zapewniają środki do przeprowadzania szybkiej udział w ankiecie stanów drukarki.  
@@ -51,7 +51,7 @@ W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek,
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- Aby sprawdzić stan drukarki przy użyciu flagi programu <xref:System.Printing.PrintQueue.QueueStatus%2A> właściwości, możesz sprawdzić każdy odpowiednie flagi, aby zobaczyć, jeśli jest ustawiony. Standardowy sposób, aby zobaczyć, jeśli jest ustawiony bit jeden zestaw flag bitowych jest do wykonywania operacji logicznych i przy użyciu zestawu flag jako jeden z operandów i Flaga jako drugiego. Ponieważ flagi, sama ma tylko jeden bit, ustaw wartości logicznej i jest to, że, co najwyżej ten sam bit jest ustawiony. Aby dowiedzieć się, czy jest lub nie, po prostu Porównaj wynik logicznej i przy użyciu flagi sam. Aby uzyskać więcej informacji, zobacz <xref:System.Printing.PrintQueueStatus>, [& — Operator (C# odwołania)](~/docs/csharp/language-reference/operators/and-operator.md), i <xref:System.FlagsAttribute>.  
+ Aby sprawdzić stan drukarki przy użyciu flagi programu <xref:System.Printing.PrintQueue.QueueStatus%2A> właściwości, możesz sprawdzić każdy odpowiednie flagi, aby zobaczyć, jeśli jest ustawiony. Standardowy sposób, aby zobaczyć, jeśli jest ustawiony bit jeden zestaw flag bitowych jest do wykonywania operacji logicznych i przy użyciu zestawu flag jako jeden z operandów i Flaga jako drugiego. Ponieważ flagi, sama ma tylko jeden bit, ustaw wartości logicznej i jest to, że, co najwyżej ten sam bit jest ustawiony. Aby dowiedzieć się, czy jest lub nie, po prostu Porównaj wynik logicznej i przy użyciu flagi sam. Aby uzyskać więcej informacji, zobacz <xref:System.Printing.PrintQueueStatus>, [& — Operator (C# odwołania)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), i <xref:System.FlagsAttribute>.  
   
  Dla każdego atrybutu, którego bit jest ustawiony kod dodaje powiadomienie do raportu końcowego, który zostanie wyświetlony użytkownikowi. ( **ReportAvailabilityAtThisTime** metodę, która jest wywoływany pod koniec kodu, omówiono poniżej.)  
   
@@ -85,6 +85,6 @@ W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek,
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& — Operator (C# odwołania)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& — Operator (C# odwołania)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Przegląd drukowania](printing-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c11937f1a0300c4a376657d423ef348a844f700
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637553"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880656"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: formatowanie kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 
@@ -79,7 +79,7 @@ ms.locfileid: "65637553"
 
 1. Wybierz <xref:System.Windows.Forms.DataGrid> kontrolkę w formularzu.
 
-2. W **właściwości** wybierz <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości i kliknij przycisk **wielokropka** (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png " vbEllipsesButton")) przycisku.
+2.  W **właściwości** wybierz <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości i kliknij przycisk **wielokropka** (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) przycisk.
 
 3. W **Edytor kolekcji Element DataGridTableStyle** okno dialogowe, kliknij przycisk **Dodaj** dodać styl tabeli do kolekcji.
 
@@ -89,7 +89,7 @@ ms.locfileid: "65637553"
 
      Nazwa mapowania służy do określania stylu tabeli powinien być używany z tabeli, która.
 
-5. W **Edytor kolekcji Element DataGridTableStyle**, wybierz opcję <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwości i kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton ")).
+5.  W **Edytor kolekcji Element DataGridTableStyle**, wybierz opcję <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwości i kliknij przycisk oznaczony wielokropkiem (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 6. W **DataGridColumnStyle — Edytor kolekcji** okna dialogowego Dodaj style kolumn do styl tabeli został utworzony.
 

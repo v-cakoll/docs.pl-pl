@@ -24,14 +24,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 2c5f569b0ad68132e07b009ec9968c766bb965f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633512"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881045"
 ---
-# <a name="member-access-operators"></a>Operatory dostępu do elementów członkowskich
+# <a name="member-access-operators-c-reference"></a>Operatory dostępu do składowych (C# odwołania)
 
 Gdy uzyskujesz dostęp do składowej typu można używać następujących operatorów:
 
@@ -88,7 +88,7 @@ Aby uzyskać więcej informacji na temat indeksatorów, zobacz [indeksatory](../
 
 ### <a name="other-usages-of-"></a>Inne sposoby użycia]
 
-Uzyskać informacje o dostępie do elementu wskaźnika, zobacz [porady: uzyskiwanie dostępu do elementu tablicy za pomocą wskaźnika](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+Uzyskać informacji o dostępie do elementu wskaźnika, zobacz [wskaźnika elementu dostępu operator []](pointer-related-operators.md#pointer-element-access-operator-) części [wskaźnik związane z operatorów](pointer-related-operators.md) artykułu.
 
 Nawiasy kwadratowe również służy do określania [atrybuty](../../programming-guide/concepts/attributes/index.md):
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 83fd5ab1cfe7f48999dd2765405f58543eeb743a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592555"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882217"
 ---
 # <a name="data-transfer-architectural-overview"></a>Omówienie architektury transferu danych
 Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura obsługi komunikatów. Może odbierać komunikaty, je przetworzyć i wysyłać je do kodu użytkownika wykonywać dalszych akcji lub można skonstruować wiadomości z dane podane przez kod użytkownika i dostarczania ich do miejsca docelowego. W tym temacie, który jest przeznaczony dla zaawansowanych deweloperów, w tym artykule opisano architekturę do obsługi wiadomości i zawartymi danymi. Prostsze, zorientowane na zadania widoku sposób wysyłania i odbierania danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -268,7 +268,7 @@ Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura 
   
  Usługi WCF obsługuje dwie technologie serializacji "fabrycznej" do serializacji i deserializacji parametrów i części wiadomości: <xref:System.Runtime.Serialization.DataContractSerializer> i `XmlSerializer`. Ponadto można napisać niestandardowy serializatory. Jednak inne części WCF (takie jak typowa `GetBody` metody lub protokołu SOAP błędów serializacji) mogą być zmuszeni do używania tylko <xref:System.Runtime.Serialization.XmlObjectSerializer> podklasy (<xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.NetDataContractSerializer>, ale nie <xref:System.Xml.Serialization.XmlSerializer>), lub nawet mogą być zakodowane używana będzie tylko <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- `XmlSerializer` Jest używany mechanizm serializacji w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web. `DataContractSerializer` Jest nowy mechanizm serializacji, która obsługuje nowy model programowania kontraktu danych. `DataContractSerializer` wybór domyślny i wybór do użycia `XmlSerializer` mogą być wykonane na podstawę dla operacji przy użyciu <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> atrybutu.  
+ `XmlSerializer` Jest mechanizm serializacji, używane w usługach sieci Web platformy ASP.NET. `DataContractSerializer` Jest nowy mechanizm serializacji, która obsługuje nowy model programowania kontraktu danych. `DataContractSerializer` wybór domyślny i wybór do użycia `XmlSerializer` mogą być wykonane na podstawę dla operacji przy użyciu <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> atrybutu.  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> i <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> odpowiedzialność podłączeniem elementy formatujące komunikaty dla zachowania operacji `DataContractSerializer` i `XmlSerializer`, odpowiednio. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Zachowanie faktycznie mogą pracować z dowolnego serializator, która pochodzi od klasy <xref:System.Runtime.Serialization.XmlObjectSerializer>, w tym <xref:System.Runtime.Serialization.NetDataContractSerializer> (opisanych szczegółowo w temacie przy użyciu autonomicznego serializacji). Jedną z wywołuje `CreateSerializer` przeciążenia metody wirtualnej można uzyskać z serializatora. Monit o podłączenie innego serializatora, Utwórz nową <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> podklasy i zastąpienie `CreateSerializer` przeciążenia.  
   

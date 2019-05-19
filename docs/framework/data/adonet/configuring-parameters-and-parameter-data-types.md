@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583829"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879970"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 
@@ -96,7 +96,7 @@ Aby uzyskać więcej informacji, zobacz [Generowanie poleceń za pomocą Command
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Przy użyciu parametrów SqlCommand i procedury składowanej
 
-Procedury składowane oferują wiele zalet w aplikacjach opartych na danych. Za pomocą procedur składowanych, operacje bazy danych można być hermetyzowane w pojedynczym poleceniu, zoptymalizowane pod kątem uzyskania najlepszej wydajności i rozszerzone o dodatkowe zabezpieczenia. Chociaż procedury składowanej może być wywoływany przez przekazanie nazwy procedury składowanej, następuje argumenty parametrów jako instrukcji SQL przy użyciu <xref:System.Data.Common.DbCommand.Parameters%2A> zbiór [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> obiektu pozwala na bardziej jawny sposób definiowania składowanych Parametry procedury i dostęp do danych wyjściowych, parametrów i wartości zwracane.
+Procedury składowane oferują wiele zalet w aplikacjach opartych na danych. Za pomocą procedur składowanych, operacje bazy danych można być hermetyzowane w pojedynczym poleceniu, zoptymalizowane pod kątem uzyskania najlepszej wydajności i rozszerzone o dodatkowe zabezpieczenia. Chociaż procedury składowanej może być wywoływany przez przekazanie nazwy procedury składowanej, następuje argumenty parametrów jako instrukcji SQL przy użyciu <xref:System.Data.Common.DbCommand.Parameters%2A> zbiór ADO.NET <xref:System.Data.Common.DbCommand> obiektu pozwala na zdefiniowanie bardziej jawny sposób procedury składowanej Parametry i dostęp do danych wyjściowych, parametrów i wartości zwracane.
 
 > [!NOTE]
 > Sparametryzowanych instrukcji są wykonywane na serwerze przy użyciu `sp_executesql,` pozwalający do ponownego wykorzystania planu zapytania. Kursory lokalne lub zmiennych w `sp_executesql` usługi batch nie są widoczne dla usługi batch, która wywołuje `sp_executesql`. Ostatnie zmiany w kontekście bazy danych tylko na końcu `sp_executesql` instrukcji. Aby uzyskać więcej informacji, zobacz [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).

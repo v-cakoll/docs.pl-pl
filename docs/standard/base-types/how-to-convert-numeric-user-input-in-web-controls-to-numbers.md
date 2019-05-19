@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634174"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882471"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika na liczby w kontrolkach internetowych
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, użytkownicy można wpisać dane liczbowe do <xref:System.Web.UI.WebControls.TextBox> formantu w niemal nieograniczoną liczbę formatów. W rezultacie jest bardzo ważne określić ustawienia regionalne i kultury użytkownika strony sieci Web. Podczas analizy danych wejściowych użytkownika, można użyć konwencji formatowania, zdefiniowane przez użytkownika ustawień regionalnych i kultur.  
@@ -58,7 +58,7 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
  Twój kod może wywołać albo `Parse` lub `TryParse` metody typu liczbowego, który wejściowych użytkownika zostaną przekonwertowane na. Wielokrotnego wywołania metody parse może być wymagane dla pojedynczej operacji analizy. W rezultacie `TryParse` metody jest lepszym rozwiązaniem, ponieważ zwraca `false` w przypadku niepowodzenia operacji analizy. Z kolei obsługi wyjątków dopuszczalnych, które mogą być generowane przez `Parse` metoda może być bardzo kosztowna oferty w aplikacji sieci Web.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby skompilować kod, skopiuj go do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] osobna strona kodu, tak aby znajdował zastępuje istniejący kod. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Strony sieci Web może zawierać następujących formantów:  
+ Aby skompilować ten kod, skopiuj go do strony ASP.NET związanym z kodem, aby zastępuje istniejący kod. Strona sieci Web ASP.NET może zawierać następujących formantów:  
   
 - A <xref:System.Web.UI.WebControls.Label> formant, który nie ma odwołania w kodzie. Ustaw jego <xref:System.Web.UI.WebControls.TextBox.Text%2A> właściwość "Wprowadź liczbę:".  
   
@@ -66,7 +66,7 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
   
 - A <xref:System.Web.UI.WebControls.Button> formantu o nazwie `OKButton`. Ustaw jego <xref:System.Web.UI.WebControls.Button.Text%2A> właściwość "OK".  
   
- Zmień nazwę klasy z `NumericUserInput` na nazwę klasy, która jest zdefiniowana przez `Inherits` atrybutu [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony `Page` dyrektywy. Zmień nazwę `NumericInput` odwołanie do nazwy zdefiniowane przez obiekt `id` atrybutu [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony `form` tagu.  
+ Zmień nazwę klasy z `NumericUserInput` na nazwę klasy, która jest zdefiniowana przez `Inherits` atrybut strony ASP.NET `Page` dyrektywy. Zmień nazwę `NumericInput` odwołanie do nazwy zdefiniowane przez obiekt `id` atrybut strony ASP.NET `form` tagu.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Aby uniemożliwić użytkownikowi wprowadzanie skryptów do strumienia HTML, dane wejściowe użytkownika powinno nigdy nie można bezpośrednio powtarzane w odpowiedzi z serwera. Zamiast tego powinien być kodowany za pomocą <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> metody.  

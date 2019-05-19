@@ -2,12 +2,12 @@
 title: Pobieranie i modyfikowanie danych ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033920"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881432"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Pobieranie i modyfikowanie danych ADO.NET
 Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłem danych i pobierania danych, które zawiera. Dostawcy danych .NET Framework ADO.NET, które służą jako Most między aplikacją a źródłem danych, co umożliwia wykonywanie poleceń również, aby pobierać dane przy użyciu **DataReader** lub **DataAdapter** . Funkcja klucza aplikacji bazy danych jest możliwość aktualizowania danych, która jest przechowywana w bazie danych. W ADO.NET, aktualizowanie danych polega na użyciu **DataAdapter** i <xref:System.Data.DataSet>, i **polecenia** obiektów; i może również obejmować za pomocą transakcji.  
@@ -53,7 +53,7 @@ Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłe
  W tym artykule opisano dostępne dla liczników wydajności `SqlClient` i `OracleClient`.  
   
  [Programowanie asynchroniczne](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- W tym artykule opisano [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] obsługę programowania asynchronicznego.  
+ W tym artykule opisano ADO.NET obsługę programowania asynchronicznego.  
   
  [Obsługa przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  W tym artykule omówiono sposób pisania aplikacji strumienia danych z programu SQL Server bez konieczności jego w pełni załadowany do pamięci.  

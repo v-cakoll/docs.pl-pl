@@ -2,14 +2,14 @@
 title: polecenie pakietu DotNet
 description: Polecenie pakietu dotnet tworzy pakiety NuGet do projektu .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d48e5957e8095cc9ef4eaca2e1e1746c25a2a88
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664847"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876044"
 ---
-# <a name="dotnet-pack"></a>pakietu DotNet
+# <a name="dotnet-pack"></a>dotnet pack
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -46,6 +46,14 @@ Zależności NuGet upakowaną projektu zostaną dodane do *.nuspec* pliku, dzię
 Domyślnie `dotnet pack` najpierw tworzy projekt. Jeśli chcesz uniknąć tego zachowania, należy przekazać `--no-build` opcji. Ta opcja jest często przydatne w scenariuszach kompilacji ciągłej integracji (CI), gdy wiesz, że kod została wcześniej skompilowana.
 
 Możesz podać właściwości programu MSBuild do `dotnet pack` polecenie, aby uzyskać proces pakowania. Aby uzyskać więcej informacji, zobacz [właściwości metadanych NuGet](csproj.md#nuget-metadata-properties) i [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). [Przykłady](#examples) sekcja przedstawia sposób użycia przełącznika -p MSBuild z kilku różnych scenariuszy.
+
+Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowanie, dodaj następującą właściwość do Twojej *.csproj* pliku:
+
+```xml
+<PropertyGroup>
+   <IsPackable>true</IsPackable>
+</PropertyGroup>
+```
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -110,15 +118,6 @@ Możesz podać właściwości programu MSBuild do `dotnet pack` polecenie, aby u
 * **`-v|--verbosity <LEVEL>`**
 
   Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
-
-> [!NOTE]
-> Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowanie, dodaj następującą właściwość do Twojej *.csproj* pliku:
->
-> ```xml
-> <PropertyGroup>
->    <IsPackable>true</IsPackable>
-> </PropertyGroup>
-> ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

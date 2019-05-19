@@ -3,12 +3,12 @@ title: Typy krotki — Przewodnik po języku C#
 description: Dowiedz się więcej o krotki nazwane i nienazwane typy w języku C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706432"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882063"
 ---
 # <a name="c-tuple-types"></a>Typy krotek języka C#
 
@@ -109,7 +109,7 @@ Na koniec krotek mogą zawierać zagnieżdżonych krotek. Równość krotki por�
 
 [!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-Jest to błąd czasu kompilacji, aby porównać dwie spójne kolekcje pod względem równości (lub nierówności) gdy mają różne kształty. Kompilator wygrał "podejmować żadnych dekonstrukcja krotek zagnieżdżonych w celu porównania ich.
+Jest to błąd czasu kompilacji, aby porównać dwie spójne kolekcje pod względem równości (lub nierówności) gdy mają różne kształty. Kompilator nie będzie podejmować żadnych dekonstrukcja krotek zagnieżdżonych w celu porównania ich.
 
 ## <a name="assignment-and-tuples"></a>Przypisanie i krotki
 

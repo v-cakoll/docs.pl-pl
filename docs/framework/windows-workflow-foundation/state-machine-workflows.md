@@ -2,12 +2,12 @@
 title: Przepływy pracy automatu stanów
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c6f4f815f16ec4878b9aa70bd3a69c862d7800
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665328"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876131"
 ---
 # <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów
 Komputer stanu jest dobrze znanego modelu do tworzenia programów. <xref:System.Activities.Statements.StateMachine> Działania, wraz z <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, i inne działania może służyć do tworzenia programów przepływu pracy maszyny stanu. Ten temat zawiera omówienie tworzenia przepływów pracy automatu stanów.  
@@ -23,14 +23,14 @@ Komputer stanu jest dobrze znanego modelu do tworzenia programów. <xref:System.
   
  Aby utworzyć przepływ pracy automatu stanów, Stany są dodawane do <xref:System.Activities.Statements.StateMachine> działania i przejścia są używane sterowanie przepływem między stanami. Poniższy zrzut ekranu z [Samouczek wprowadzający](getting-started-tutorial.md) kroku [jak: Utwórz przepływ pracy automatu stanów](how-to-create-a-state-machine-workflow.md), przedstawia przepływ pracy automatu stanów z trzech stanów i trzy przejścia. **Inicjowanie docelowej** jest wstępny stan i reprezentuje pierwszy stan w przepływie pracy. To jest wyznaczony przez wiersz, co prowadzi do niej **Start** węzła. Stan końcowy w przepływie pracy jest o nazwie **FinalState**i reprezentuje punkt ukończeniu przepływu pracy.  
   
- ![Ukończono przepływ pracy automatu stanów](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Ilustracja przedstawiająca przepływ pracy automatu stanu ukończenia.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  Przepływ pracy automatu stanów musi mieć jeden i tylko jeden stan początkowy i co najmniej jeden stan końcowy. Każdy stan, który nie jest stan końcowy musi mieć co najmniej jedno przejście. W poniższych częściach omówiono tworzenie i konfigurowanie Stany i przejścia.  
   
 ## <a name="creating-and-configuring-states"></a>Tworzenie i konfigurowanie stanów  
  A <xref:System.Activities.Statements.State> reprezentuje stan, w którym mogą mieć automatu stanów. Aby dodać <xref:System.Activities.Statements.State> do przepływu pracy, przeciągnij **stanu** projektanta działań z **automatu stanów** części **przybornika** i upuść je na <xref:System.Activities.Statements.StateMachine> działanie na [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] powierzchni.  
   
- ![WF4 Stan działania maszyny](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![Zrzut ekranu przedstawiający sekcję automatu stanów przybornika.](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
  Aby skonfigurować stan jako **stan początkowy**, kliknij prawym przyciskiem myszy stanu i wybierz **Ustaw jako stan początkowy**. Ponadto w przypadku nie bieżący stan początkowy stan początkowy może być wyznaczony przez przeciąganie linii z **Start** węzła w górnej części przepływu pracy do określonego żądanego stanu. Gdy <xref:System.Activities.Statements.StateMachine> działania jest przenoszony do projektanta przepływu pracy, jest wstępnie skonfigurowany z początkowym stanem o nazwie **stan1**. Przepływ pracy automatu stanów musi mieć jeden i tylko jeden stan początkowy.  
   
@@ -73,7 +73,7 @@ Komputer stanu jest dobrze znanego modelu do tworzenia programów. <xref:System.
  Akcja wyjściowa  
  Działania wykonywane przy zamykaniu stanu  
   
- przejścia  
+ Transition  
  Kierowanych relacji między dwoma stanami, które reprezentuje pełną odpowiedź automatu stanów wystąpienie zdarzenia określonego typu.  
   
  Udostępnione przejścia  

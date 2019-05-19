@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a5fbc28a470415312540fff0acc969f939410b5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633500"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875529"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Wprowadzenie do LINQ w Visual Basic
 Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic i dostarcza proste oraz wydajne narzędzia podczas pracy z danymi wszelkiego rodzaju. Zamiast wysyłania kwerendy do bazy danych w celu przetworzenia lub posługiwanie się różną składnią kwerendy dla każdego typu danych, które przeszukujesz, LINQ wprowadza kwerendy jako część języka Visual Basic. Używa zunifikowaną składnię, bez względu na typ danych.  
@@ -43,7 +43,7 @@ Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic
 |LINQ do obiektów|Dostawca LINQ to Objects umożliwia zapytania w pamięci, kolekcje i tablice. Jeśli obiekt obsługuje <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu, dostawca LINQ to Objects umożliwia przeprowadzenie w nim zapytania.<br /><br /> Możesz włączyć LINQ do dostawcy obiektów importując <xref:System.Linq> przestrzeń nazw, która jest importowana domyślnie dla wszystkich projektów w języku Visual Basic.<br /><br /> Aby uzyskać więcej informacji dotyczących dostawcy LINQ to Objects, zobacz [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ do SQL|Dostawca LINQ to SQL umożliwia zapytania i modyfikację danych w bazie danych programu SQL Server. Ułatwia to mapowanie modelu obiektu dla aplikacji do tabel i obiektów w bazie danych.<br /><br /> Visual Basic sprawia, że łatwiej jest pracować z LINQ to SQL, umieszczając Object Relational Designer (O/R Designer). Projektant jest używany do tworzenia modelu obiektów w aplikacji, która mapuje do obiektów w bazie danych. O/R Designer również zapewnia funkcje procedurom składowanym w mapie i funkcje <xref:System.Data.Linq.DataContext> obiektu, który zarządza komunikacją z bazą danych i zapisuje stan kontroli optymistycznej współbieżności.<br /><br /> Aby uzyskać więcej informacji dotyczących dostawcy LINQ to SQL, zobacz [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Aby uzyskać więcej informacji dotyczących Object Relational Designer, zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ do XML|Dostawca LINQ to XML oferuje zapytania i modyfikację XML. Możesz zmodyfikować XML w pamięci lub załadować XML z, a następnie zapisz XML do pliku.<br /><br /> Ponadto dostawca LINQ to XML umożliwia literały XML i właściwości osi XML, które umożliwiają pisanie XML bezpośrednio w kodzie języka Visual Basic. Aby uzyskać więcej informacji, zobacz [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ do DataSet|Dostawca LINQ to DataSet umożliwia utworzenie zapytania i aktualizację danych w [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawu danych. Możesz dodać moc LINQ do aplikacji, które używają zestawów danych, aby uprościć i rozszerzyć swoje zdolności zapytań, agregowania i aktualizowanie danych w zestawie danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ do DataSet|Dostawca LINQ to DataSet umożliwia wykonywania zapytań i zaktualizować dane w zestawie danych ADO.NET. Możesz dodać moc LINQ do aplikacji, które używają zestawów danych, aby uprościć i rozszerzyć swoje zdolności zapytań, agregowania i aktualizowanie danych w zestawie danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>Struktura zapytania LINQ  
  Kwerenda LINQ, często nazywane *wyrażeniu zapytania*, składa się z kombinacji zdań zapytania, które identyfikują źródła danych i zmiennych iteracji dla zapytania. Wyrażenie zapytania może również obejmować instrukcje dotyczące sortowania, filtrowania, grupowania i łączenie lub obliczeń do zastosowania do źródła danych. Składnia wyrażenia kwerendy przypomina składnię SQL; w związku z tym można znaleźć wiele składni znane.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211599"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882361"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Przewodnik: serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute
 
@@ -66,7 +66,7 @@ Pierwszym krokiem jest, aby utworzyć formant, który jest możliwy do serializa
 
 8. Naciśnij klawisz **F5** skompilować projekt i uruchomić Twoją kontrolą w **UserControl — kontener testowy**.
 
-9. Znajdź `Strings` właściwość <xref:System.Windows.Forms.PropertyGrid> z **UserControl — kontener testowy**. Kliknij przycisk `Strings` właściwości, następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) przycisk, aby otworzyć **Edytor kolekcji ciągów**.
+9. Znajdź `Strings` właściwość <xref:System.Windows.Forms.PropertyGrid> z **UserControl — kontener testowy**. Kliknij przycisk `Strings` właściwości, następnie kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) przycisk, aby otworzyć **Edytor kolekcji ciągów**.
 
 10. Wprowadź kilka ciągów w **Edytor kolekcji ciągów**. Oddziel je, naciskając klawisz **Enter** klucza na końcu każdego ciągu. Kliknij przycisk **OK** po zakończeniu wprowadzania ciągów znaków.
 
@@ -85,7 +85,7 @@ Aby sprawdzić zachowanie serializacji kontrolki, będzie umieścić go w formul
 
 3. Miejsce `SerializationDemoControl` w formularzu.
 
-4. Znajdź `Strings` właściwość **właściwości** okna. Kliknij przycisk `Strings` właściwości, następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) przycisk, aby otworzyć **Edytor kolekcji ciągów**.
+4. Znajdź `Strings` właściwość **właściwości** okna. Kliknij przycisk `Strings` właściwości, następnie kliknij przycisk wielokropka (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) przycisk, aby otworzyć **Edytor kolekcji ciągów**.
 
 5. Wpisz kilka ciągów w **Edytor kolekcji ciągów**. Oddziel je, naciskając klawisz ENTER na końcu każdego ciągu. Kliknij przycisk **OK** po zakończeniu wprowadzania ciągów znaków.
 

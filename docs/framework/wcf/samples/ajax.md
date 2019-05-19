@@ -2,12 +2,12 @@
 title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
-ms.openlocfilehash: ae4a39d48d9c688d14fa8cf131e8010188c2fe10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80166eaed2598f21529e81c81985d78a23bf0c9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944199"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882122"
 ---
 # <a name="ajax"></a>AJAX
 Ta sekcja zawiera przykłady pokazujące, funkcji asynchronicznych języka JavaScript i XML.  
@@ -23,7 +23,7 @@ Ta sekcja zawiera przykłady pokazujące, funkcji asynchronicznych języka JavaS
  Pokazuje, jak używać usługi WCF w celu utworzenia podstawowej usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX).  
   
  [Usługa AJAX używająca żądań POST protokołu HTTP](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
- Pokazuje, jak używać usługi WCF w celu utworzenia [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] asynchronicznego języka JavaScript i XML (technologia AJAX) usługą, która używa metody POST protokołu HTTP.  
+ Pokazuje, jak używać usługi WCF w celu utworzenia usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX), która używa metody POST protokołu HTTP.  
   
  [Usługa AJAX bez konfiguracji](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
  Pokazuje, jak używać usługi WCF w celu utworzenia podstawowej usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX).  

@@ -2,12 +2,12 @@
 title: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Informacje ogólne relacji między wzorców CQRS i DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: bdb3f4a87f48a27a7b46b1297a9237af01ffb6b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a5df8ce495b308df63af47ef1ec2ed26be2b5e37
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639813"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875903"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Zastosuj uproszczone wzorców CQRS i DDD w mikrousługach
 
@@ -19,7 +19,7 @@ CQRS to wzorzec architektoniczny oddzielający modeli do odczytywania i zapisywa
 
 CQS to prosta koncepcja — to kwestia metod w obrębie tego samego obiektu zapytania lub poleceń. Każda metoda zwraca stan lub mutuje stanu, ale nie oba. Nawet obiekt wzorzec jednym repozytorium może być zgodne z CQS. CQS jest uznawana za podstawowe zasady dla CQRS.
 
-[Polecenie i podział odpowiedzialności zapytania (CQRS)](https://martinfowler.com/bliki/CQRS.html) została wprowadzona przez Grega Younga i zdecydowanie wspierane przez Udi Dahan i innym osobom. Jest ona oparta na zasadzie CQS, mimo że jest bardziej szczegółowe. Wzorzec oparty na poleceń i zdarzeń oraz opcjonalnie na wiadomości asynchronicznych mogą zostać uwzględnione. W wielu przypadkach CQRS jest powiązana z bardziej zaawansowanych scenariuszy, takich jak o innej fizycznej bazy danych dla operacji odczytu (zapytania) niż do zapisu (aktualizacje). Ponadto może zaimplementować bardziej wydzielonego system CQRS [określania źródła zdarzeń (ES)](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/) aktualizacji bazy danych, więc można będzie tylko przechowywania zdarzeń w modelu domeny zamiast przechowywania danych w bieżącym stanie. Jednak nie jest to rozwiązanie używane w tym przewodniku; używamy najprostsza metoda CQRS, który składa się z tylko oddzielenie zapytania w poleceniach.
+[Polecenie i podział odpowiedzialności zapytania (CQRS)](https://martinfowler.com/bliki/CQRS.html) została wprowadzona przez Grega Younga i zdecydowanie wspierane przez Udi Dahan i innym osobom. Jest ona oparta na zasadzie CQS, mimo że jest bardziej szczegółowe. Wzorzec oparty na poleceń i zdarzeń oraz opcjonalnie na wiadomości asynchronicznych mogą zostać uwzględnione. W wielu przypadkach CQRS jest powiązana z bardziej zaawansowanych scenariuszy, takich jak o innej fizycznej bazy danych dla operacji odczytu (zapytania) niż do zapisu (aktualizacje). Ponadto może zaimplementować bardziej wydzielonego system CQRS [określania źródła zdarzeń (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) aktualizacji bazy danych, więc można będzie tylko przechowywania zdarzeń w modelu domeny zamiast przechowywania danych w bieżącym stanie. Jednak nie jest to rozwiązanie używane w tym przewodniku; używamy najprostsza metoda CQRS, który składa się z tylko oddzielenie zapytania w poleceniach.
 
 Aspekt separacji CQRS jest osiągana przez grupowanie operacje zapytań w jednej warstwie i polecenia w innej warstwie. Każda warstwa ma swój własny model danych (należy zauważyć, że mówimy modelu, niekoniecznie innej bazy danych) i został skompilowany przy użyciu własnej kombinację wzorców i technologii. Co ważniejsze dwie warstwy mogą być w tej samej warstwie lub mikrousług, tak jak w przykładzie (kolejność mikrousług) używane w tym przewodniku. Lub może być wdrażany na różne mikrousługi i realizowania innych procesów, dzięki czemu mogą być zoptymalizowane pod kątem i niezależnie skalowana, bez wywierania wpływu na siebie nawzajem.
 
@@ -32,6 +32,11 @@ Przykładem tego rodzaju usługi jest szeregowania mikrousług z aplikacji refer
 **Rysunek 7-2**. Uproszczone podejście CQRS i DDD oparte na mikrousługach
 
 Warstwa aplikacji może być sam interfejs API sieci Web. Aspektu ważnych projektu w tym miejscu jest z poleceń, model domeny i transakcje zgodnie ze wzorcem CQRS czy mikrousług został podzielony, zapytania i modele widoków (szczególnie utworzone dla aplikacji klienckich modele danych). To podejście zapewnia zapytania niezależnie od ograniczenia i ograniczenia pochodzące z wzorców DDD, odpowiednich tylko dla transakcji i aktualizacjami, zgodnie z opisem w kolejnych sekcjach.
+
+## <a name="additional-resources"></a>Dodatkowe zasoby
+
+ - **Grega Younga. Przechowywanie wersji w systemie źródło zdarzeń** (bezpłatne do odczytania online Książka elektroniczna) \
+   <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
 >[Poprzednie](index.md)

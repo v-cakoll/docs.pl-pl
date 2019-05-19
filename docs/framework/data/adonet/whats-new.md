@@ -2,16 +2,16 @@
 title: Nowości w programie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: b54f7ab6505f86d0447654f21b197644d68254c0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583433"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877433"
 ---
 # <a name="whats-new-in-adonet"></a>Nowości w programie ADO.NET
 
-Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Następujące funkcje są nowością w programie ADO.NET w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
 
 ## <a name="sqlclient-data-provider"></a>Dostawca danych SqlClient
 

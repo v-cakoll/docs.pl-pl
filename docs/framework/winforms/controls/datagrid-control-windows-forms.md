@@ -8,18 +8,18 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011388"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878775"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid — Formant (Formularze systemu Windows)
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do `DataGrid` kontrolować; jednak `DataGrid` kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Formularze Windows `DataGrid` control oferuje interfejs użytkownika do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zestawów danych, wyświetlanie danych tabelarycznych i włączenie aktualizacji do źródła danych.  
+ Formularze Windows `DataGrid` kontroli udostępnia interfejs użytkownika z zestawami danych ADO.NET, wyświetlając dane tabelaryczne i włączenie aktualizacji do źródła danych.  
   
  Gdy `DataGrid` kontrolki jest ustawiona na poprawnego źródła danych, kontrolka zostanie wypełniona automatycznie, tworzenie kolumn i wierszy, oparte na kształt danych. `DataGrid` Kontroli może służyć do wyświetlania pojedynczej tabeli lub hierarchicznych relacji między tabelami.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "62011388"
  Zawiera opis sposobu dodawania tabel i kolumn do `DataGrid` programistycznie sterować.  
   
  [Instrukcje: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych przy użyciu narzędzia Projektant](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- Opis sposobu tworzenia powiązania [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zestawu danych, aby `DataGrid` kontrolować za pomocą projektanta.  
+ Opis sposobu tworzenia powiązania zestawu danych programu ADO.NET, aby `DataGrid` kontrolować za pomocą projektanta.  
   
  [Instrukcje: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- Opis sposobu tworzenia powiązania [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zestawu danych, aby `DataGrid` kontroli.  
+ Opis sposobu tworzenia powiązania zestawu danych programu ADO.NET, aby `DataGrid` kontroli.  
   
  [Instrukcje: Zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  W tym artykule opisano sposób zmiany danych, Programując `DataGrid` kontroli.  

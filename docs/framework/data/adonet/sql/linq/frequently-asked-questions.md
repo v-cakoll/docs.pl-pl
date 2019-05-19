@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583480"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878256"
 ---
 # <a name="frequently-asked-questions"></a>Często zadawane pytania
 Poniższe sekcje odpowiedzi na niektóre typowe problemy, które można napotkać podczas implementowania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -185,7 +185,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A. Nie próbuj ponownie użyć wystąpienia <xref:System.Data.Linq.DataContext>. Każdy <xref:System.Data.Linq.DataContext> obsługuje stan (łącznie z pamięci podręcznej tożsamości) dla jednej sesji edycji/kwerendy. Aby uzyskać nowe wystąpienia, w oparciu o bieżący stan bazy danych, użyj nowego <xref:System.Data.Linq.DataContext>.  
   
- Można nadal używać bazowych [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] buforowania połączeń. Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia puli (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Można nadal używać podstawowej puli połączeń ADO.NET. Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia puli (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>Drugi element DataContext nie jest aktualizowana.  
  PYTANIE: Czy mogę używać jedno wystąpienie <xref:System.Data.Linq.DataContext> do przechowywania wartości w bazie danych. Jednak sekundy <xref:System.Data.Linq.DataContext> na tej samej bazy danych nie będzie odzwierciedlał zaktualizowanymi wartościami. Drugi <xref:System.Data.Linq.DataContext> wystąpienia wydaje się, że zwracane wartości pamięci podręcznej.  

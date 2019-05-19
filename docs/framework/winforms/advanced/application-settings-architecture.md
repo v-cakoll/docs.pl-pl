@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592781"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876224"
 ---
 # <a name="application-settings-architecture"></a>Architektura ustawień aplikacji
 W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje zaawansowanych funkcji architektury, takich jak ustawienia pogrupowanych i klucze ustawienia.  
@@ -22,7 +22,7 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
  Interfejsy są dostarczane, dzięki którym składników niestandardowych utrwalić własne ustawienia, jeśli są one hostowane w aplikacji. Przy użyciu kluczy ustawienia, składniki zachować ustawienia dla wielu wystąpień składnika oddzielne.  
   
 ## <a name="defining-settings"></a>Definiowanie ustawień  
- Architektura ustawień aplikacji jest używany w obu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i Windows Forms i zawiera wiele klas bazowych, które są udostępniane w obu środowiskach. Najważniejsze jest <xref:System.Configuration.SettingsBase>, która zapewnia dostęp do ustawień za pomocą kolekcji, a także metody niskiego poziomu ładowania i zapisywania ustawień. Każde środowisko implementuje własne klasy pochodzącej od <xref:System.Configuration.SettingsBase> umożliwiają korzystanie z funkcji dodatkowych ustawień dla tego środowiska. W aplikacji opartej na formularzach Windows, wszystkie ustawienia aplikacji musi być zdefiniowana w klasę pochodną <xref:System.Configuration.ApplicationSettingsBase> klasy, która dodaje następujące funkcje do klasy bazowej:  
+ Architektura ustawień aplikacji jest używany w ASP.NET i Windows Forms i zawiera wiele klas bazowych, które są udostępniane w obu środowiskach. Najważniejsze jest <xref:System.Configuration.SettingsBase>, która zapewnia dostęp do ustawień za pomocą kolekcji, a także metody niskiego poziomu ładowania i zapisywania ustawień. Każde środowisko implementuje własne klasy pochodzącej od <xref:System.Configuration.SettingsBase> umożliwiają korzystanie z funkcji dodatkowych ustawień dla tego środowiska. W aplikacji opartej na formularzach Windows, wszystkie ustawienia aplikacji musi być zdefiniowana w klasę pochodną <xref:System.Configuration.ApplicationSettingsBase> klasy, która dodaje następujące funkcje do klasy bazowej:  
   
 - Ładowanie wyższego poziomu i zapisywanie operacji  
   

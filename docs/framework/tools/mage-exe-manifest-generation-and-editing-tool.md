@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: be05b9d502f44fe68dff21da7fe01016b6ed73c2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633270"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877572"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Narzędzie generowania manifestu i edytowania)
 
-Generowanie manifestu i narzędzia do edycji (*Mage.exe*) jest narzędziem wiersza polecenia, który obsługuje tworzenie i edycję manifestów aplikacji i wdrożenia. Narzędzie wiersza polecenia *Mage.exe* może działać zarówno w przypadku skryptów wsadowych, jak i innych aplikacji opartych na Windows, w tym [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji.
+Generowanie manifestu i narzędzia do edycji (*Mage.exe*) jest narzędziem wiersza polecenia, który obsługuje tworzenie i edycję manifestów aplikacji i wdrożenia. Narzędzie wiersza polecenia *Mage.exe* może działać zarówno w przypadku skryptów wsadowych, jak i innych aplikacji opartych na Windows, łącznie z aplikacjami ASP.NET.
 
 Można również użyć *MageUI.exe*, graficznego aplikacji, zamiast *Mage.exe*. Aby uzyskać więcej informacji, zobacz [MageUI.exe (Manifest Generation i graficzny klient Editing Tool)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 

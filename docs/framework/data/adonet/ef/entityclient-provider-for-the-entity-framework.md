@@ -2,18 +2,18 @@
 title: Dostawca EntityClient dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583697"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878804"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Dostawca EntityClient dla programu Entity Framework
 Dostawca EntityClient jest dostawcy danych używanych przez aplikacje platformy Entity Framework na dostęp do danych opisanych w modelu koncepcyjnym. Aby uzyskać informacje o modelach koncepcyjnych, zobacz [modelowanie i mapowanie](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). Dostawca EntityClient używa innego dostawcy danych .NET Framework, dostępu do źródła danych. Na przykład dostawca EntityClient używa dostawcy danych .NET Framework dla programu SQL Server (SqlClient) podczas uzyskiwania dostępu do bazy danych programu SQL Server. Aby uzyskać informacje o dostawcy SqlClient, zobacz [SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Dostawca EntityClient jest zaimplementowana w <xref:System.Data.EntityClient> przestrzeni nazw.  
   
 ## <a name="managing-connections"></a>Zarządzanie połączeniami  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Opartą na specyficznych dla magazynowania [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, zapewniając <xref:System.Data.EntityClient.EntityConnection> źródłowy dostawca danych i relacyjnej bazy danych. Do konstruowania <xref:System.Data.EntityClient.EntityConnection> obiektu musi odwoływać się do zestawu metadanych, który zawiera niezbędne modeli i mapowanie, a także dane specyficzne dla magazynu dostawcy nazwę i parametry połączenia. Po <xref:System.Data.EntityClient.EntityConnection> jest w miejscu, jednostek jest możliwy za pośrednictwem klas wygenerowanych na podstawie modelu koncepcyjnego.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Opartą na dostawcy danych ADO.NET specyficzne dla magazynu, podając <xref:System.Data.EntityClient.EntityConnection> źródłowy dostawca danych i relacyjnej bazy danych. Do konstruowania <xref:System.Data.EntityClient.EntityConnection> obiektu musi odwoływać się do zestawu metadanych, który zawiera niezbędne modeli i mapowanie, a także dane specyficzne dla magazynu dostawcy nazwę i parametry połączenia. Po <xref:System.Data.EntityClient.EntityConnection> jest w miejscu, jednostek jest możliwy za pośrednictwem klas wygenerowanych na podstawie modelu koncepcyjnego.  
   
  Można określić parametry połączenia w pliku app.config.  
   

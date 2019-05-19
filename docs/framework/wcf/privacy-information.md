@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651070"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882187"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
 Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końcowych. Podczas tworzenia aplikacji przy użyciu funkcji Windows Communication Foundation (WCF), wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika, lub może zażądać lub wysyłanie informacji przez Internet do witryny sieci Web. Technologii firmy Microsoft w przypadku osadzenia w aplikacji, technologia ta może mieć własną zachowanie, które mogą mieć wpływ na prywatność. Usługi WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy chce wysłać ją do nas.  
@@ -21,7 +21,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  Może zawierać nagłówki, routing komunikatów, informacje o zabezpieczeniach, transakcji i dłużej w zależności od usług używanych przez aplikację. Komunikaty są zazwyczaj domyślne szyfrowanie przekazywanego materiału. Jedynym wyjątek polega na użyciu `BasicHttpBinding`, który został zaprojektowany do użytku z niezabezpieczonych, starszej wersji usługi sieci Web. Projektant aplikacji odpowiedzialność za ostatecznego projektu. Komunikaty w treści protokołu SOAP zawierają dane specyficzne dla aplikacji; Jednak te dane, takie jak zdefiniowane przez aplikację informacje osobiste mogą być chronione za pomocą funkcji szyfrowania lub poufności WCF. W poniższych sekcjach opisano funkcje, które mogłoby to wpłynąć na zachowania.  
   
-## <a name="messaging"></a>Obsługa wiadomości  
+## <a name="messaging"></a>Obsługa komunikatów  
  Każdy komunikat WCF ma nagłówek adres, który określa miejsce docelowe wiadomości i gdzie odpowiedzi.  
   
  Składnik adresu adresu punktu końcowego jest jednolite zasobów identyfikator (URI), który identyfikuje punkt końcowy. Adres może być adresu sieciowego lub adres logiczny. Adres może zawierać nazwy komputera (nazwa hosta, w pełni kwalifikowana nazwa domeny) i adres IP. Adres punktu końcowego może również zawierać unikatowy identyfikator globalny (GUID) lub zbiór identyfikatorów GUID do adresowania tymczasowe umożliwia brakowi rozróżnienia każdego z adresów. Każdy komunikat zawiera identyfikator komunikatu, który jest identyfikatorem GUID. Ta funkcja postępuje zgodnie ze standardowym odwołanie WS-Addressing.  
@@ -29,7 +29,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
  Warstwa obsługi komunikatów usługi WCF nie zapisuje żadnych danych osobowych do komputera lokalnego. Jednak go może propagację informacje osobiste, na poziomie sieci jeśli deweloper usługi został utworzony, to usługa, która udostępnia takie informacje (np. przez przy użyciu nazwy osoby w nazwy punktu końcowego lub w tym informacje osobiste w sieci Web punktu końcowego Usługi języka opisu, ale nie wymaga klientom dostęp do pliku WSDL przy użyciu protokołu https). Ponadto jeśli deweloper działa [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzie względem punktu końcowego, który udostępnia informacje osobiste, dane wyjściowe narzędzia firmy mogą zawierać te informacje, i jest zapisywany plik wyjściowy lokalny dysk twardy.  
   
 ## <a name="hosting"></a>Hosting  
- Hostingu funkcji w programie WCF umożliwia aplikacjom, które można uruchomić na żądanie lub włączanie udostępniania portów między wieloma aplikacjami. Aplikacja usługi WCF, mogą być hostowane w Internet Information Services (IIS), podobnie jak [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ Hostingu funkcji w programie WCF umożliwia aplikacjom, które można uruchomić na żądanie lub włączanie udostępniania portów między wieloma aplikacjami. Aplikacja usługi WCF, mogą być hostowane w Internet Information Services (IIS), podobna do platformy ASP.NET.  
   
  Hostingu nie ujawnia żadnych konkretnych informacji o sieci i nie przechowuje danych na maszynie.  
   
@@ -47,7 +47,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
 |Dane|Magazyn|  
 |----------|-------------|  
 |Prezentacja poświadczenia, takie jak nazwa użytkownika, certyfikatów X.509, tokenów protokołu Kerberos i odwołania do poświadczeń.|Standardowa Windows poświadczeń mechanizmami zarządzania, takich jak Sklep Windows certyfikatu.|  
-|Członkostwo w informacje o użytkowniku, takie jak nazwy użytkowników i hasła.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dostawcy członkostwa.|  
+|Członkostwo w informacje o użytkowniku, takie jak nazwy użytkowników i hasła.|Dostawców członkostwa ASP.NET.|  
 |Informacje identyfikacyjne dotyczące usługi używany do uwierzytelniania usługi dla klientów.|Adres punktu końcowego usługi.|  
 |Informacje o wywołującym.|Dzienniki inspekcji.|  
   

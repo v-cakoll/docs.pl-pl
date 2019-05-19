@@ -1,14 +1,14 @@
 ---
-title: Rozpoczynanie pracy z usługą Azure Blob storage przy użyciuF#
+title: Rozpoczynanie pracy z usługą Azure Blob Storage przy użyciu języka F#
 description: Store danych bez struktury w chmurze za pomocą usługi Azure Blob storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982517"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880046"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure Blob storage za pomocą F\#
 
@@ -196,8 +196,8 @@ Aby uzyskać więcej informacji, zobacz [Zarządzanie współbieżnością w Mic
 
 Każdy obiekt blob w usłudze Azure storage musi znajdować się w kontenerze. Kontener jest częścią nazwy obiektu blob. Na przykład `mydata` to nazwa kontenera w tych przykładowych identyfikatorami URI obiektów blob:
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 Nazwa kontenera musi być prawidłową nazwą DNS zgodną z następującymi zasadami nazewnictwa:
 

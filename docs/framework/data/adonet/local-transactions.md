@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f686c20a9afd981405e32854fcc594abac78c85c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584451"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882028"
 ---
 # <a name="local-transactions"></a>Transakcje lokalne
-Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używane, gdy chcesz powiązać ze sobą wiele zadań, tak, aby są wykonywane jako pojedyncza jednostka pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabelę, która zawiera informacje dotyczące spisu, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje zostaną wycofane.  
+Transakcje w ADO.NET są używane, gdy chcesz powiązać ze sobą wiele zadań, tak, aby są wykonywane jako pojedyncza jednostka pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabelę, która zawiera informacje dotyczące spisu, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje zostaną wycofane.  
   
 ## <a name="determining-the-transaction-type"></a>Określanie typu transakcji  
  Transakcja jest uważana za lokalnej transakcji, jednofazowy transakcji i obsługiwane przez bazę danych bezpośrednio. Transakcja jest uważana za transakcję rozproszoną, kiedy są koordynowany przez monitor transakcji i używa mechanizmów odporne na uszkodzenia (na przykład dwufazowego) do rozpoznawania transakcji.  
@@ -24,7 +24,7 @@ Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używ
 > Transakcje są najbardziej efektywne, gdy są one wykonywane na serwerze. Jeśli pracujesz z bazą danych programu SQL Server, który sprawia, że zwiększone użycie jawnego transakcji, należy rozważyć, zapisując je jako procedur przechowywanych, za pomocą instrukcji języka Transact-SQL BEGIN TRANSACTION.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Wykonywanie transakcji za pomocą pojedynczego połączenia  
- W [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], możesz kontrolować transakcji za pomocą `Connection` obiektu. Możesz zainicjować lokalnej transakcji przy użyciu `BeginTransaction` metody. Po rozpoczęciu transakcji można zarejestrować polecenia w ramach transakcji przy użyciu `Transaction` właściwość `Command` obiektu. Można następnie Zatwierdź lub wycofać zmiany dokonane w źródle danych, w oparciu o powodzeniu lub niepowodzeniu składniki transakcji.  
+ W ADO.NET, możesz kontrolować transakcje `Connection` obiektu. Możesz zainicjować lokalnej transakcji przy użyciu `BeginTransaction` metody. Po rozpoczęciu transakcji można zarejestrować polecenia w ramach transakcji przy użyciu `Transaction` właściwość `Command` obiektu. Można następnie Zatwierdź lub wycofać zmiany dokonane w źródle danych, w oparciu o powodzeniu lub niepowodzeniu składniki transakcji.  
   
 > [!NOTE]
 >  `EnlistDistributedTransaction` Nie należy używać metody dla lokalnych transakcji.  
@@ -42,7 +42,7 @@ Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używ
   
 4. Wywołaj <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> metody <xref:System.Data.SqlClient.SqlTransaction> obiektu do zrealizowania transakcji, lub zadzwoń <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metodę, aby zakończyć transakcji. Jeśli połączenie jest zamknięte lub usunięty przed albo <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> lub <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metody zostały wykonane, transakcja zostanie wycofana.  
   
- Poniższy przykład kodu demonstruje, przy użyciu logiki transakcyjnej [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] z programem Microsoft SQL Server.  
+ Poniższy przykład kodu demonstruje logiki transakcyjnej ADO.NET przy użyciu programu Microsoft SQL Server.  
   
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  

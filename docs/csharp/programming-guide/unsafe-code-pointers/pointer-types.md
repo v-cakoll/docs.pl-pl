@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: bd44bf9e8b3c68b7fb5e45bb7e0aa14e329a5f0e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635129"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880331"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 
@@ -75,19 +75,21 @@ W poniższej tabeli wymieniono operatory i instrukcje, które mogą wykonywać o
 
 |Operator/instrukcja|Zastosowanie|
 |-------------------------|---------|
-|*|Wykonuje operację wskaźnika pośredniego.|
-|->|Uzyskuje dostęp do elementu członkowskiego struktury za pomocą wskaźnika.|
-|[]|Indeksuje wskaźnik.|
+|`*`|Wykonuje operację wskaźnika pośredniego.|
+|`->`|Uzyskuje dostęp do elementu członkowskiego struktury za pomocą wskaźnika.|
+|`[]`|Indeksuje wskaźnik.|
 |`&`|Uzyskuje adres zmiennej.|
-|++ oraz --|Zwiększa i zmniejsza wartość wskaźnika.|
-|+ oraz -|Wykonuje operacje arytmetyczne na wskaźniku.|
-|==,! =, \<, >, \<= i > =|Porównuje wskaźniki.|
-|`stackalloc`|Przydziela pamięć na stosie.|
-|`fixed` Instrukcja|Tymczasowo ustala zmienną, dzięki czemu można znaleźć ten adres.|
+|`++` i `--`|Zwiększa i zmniejsza wartość wskaźnika.|
+|`+` i `-`|Wykonuje operacje arytmetyczne na wskaźniku.|
+|`==`, `!=`, `<`, `>`, `<=`, i `>=`|Porównuje wskaźniki.|
+|[`stackalloc` Operator](../../language-reference/keywords/stackalloc.md)|Przydziela pamięć na stosie.|
+|[`fixed` Instrukcja](../../language-reference/keywords/fixed-statement.md)|Tymczasowo ustala zmienną, dzięki czemu można znaleźć ten adres.|
 
-## <a name="c-language-specification"></a>Specyfikacja języka C#
+Aby uzyskać więcej informacji na temat wskaźnika powiązane operatorów, zobacz [wskaźnik związane z operatorów](../../language-reference/operators/pointer-related-operators.md).
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz [typy wskaźników](~/_csharplang/spec/unsafe-code.md#pointer-types) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -96,6 +98,3 @@ W poniższej tabeli wymieniono operatory i instrukcje, które mogą wykonywać o
 - [Konwersje wskaźników](pointer-conversions.md)
 - [Typy](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [fixed, instrukcja](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [Konwersja boxing i konwersja unboxing](../types/boxing-and-unboxing.md)

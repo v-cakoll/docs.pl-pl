@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949672"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880723"
 ---
 # <a name="objects-visual-basic"></a>Obiekty (Visual Basic)
 Ten temat zawiera łącza do innych tematów tego dokumentu, środowiska wykonawczego języka Visual Basic obiektów i znajdują się tabele, ich procedur elementu członkowskiego, właściwości i zdarzenia.  
@@ -37,9 +37,9 @@ Ten temat zawiera łącza do innych tematów tego dokumentu, środowiska wykonaw
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Udostępnia właściwości i metody do manipulowania w rejestrze.|  
 |[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|Zawiera właściwości do uzyskiwania dostępu do wystąpienia każdego formularza Windows zadeklarowana w bieżącym projekcie.|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Udostępnia właściwości i metody do zapisywania informacji zdarzeń i wyjątków aplikacji odbiorniki logu dla aplikacji sieci Web.|  
-|[My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)|Pobiera <xref:System.Web.HttpRequest> obiektu dla żądanej strony. `My.Request` Obiekt zawiera informacje o bieżącym żądaniu HTTP.<br /><br /> `My.Request` Obiekt jest dostępny tylko w przypadku [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] aplikacji.|  
+|[My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)|Pobiera <xref:System.Web.HttpRequest> obiektu dla żądanej strony. `My.Request` Obiekt zawiera informacje o bieżącym żądaniu HTTP.<br /><br /> `My.Request` Obiekt jest dostępny tylko w przypadku aplikacji ASP.NET.|  
 |[My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)|Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji.|  
-|[My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)|Pobiera <xref:System.Web.HttpResponse> obiekt, który jest skojarzony z <xref:System.Web.UI.Page>. Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.<br /><br /> `My.Response` Obiekt jest dostępny tylko w przypadku [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] aplikacji.|  
+|[My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)|Pobiera <xref:System.Web.HttpResponse> obiekt, który jest skojarzony z <xref:System.Web.UI.Page>. Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.<br /><br /> `My.Response` Obiekt jest dostępny tylko w przypadku aplikacji ASP.NET.|  
 |[My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)|Udostępnia właściwości i metod dostępu do ustawień aplikacji.|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Zapewnia dostęp do informacji o bieżącym użytkowniku.|  
 |[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Udostępnia właściwości do tworzenia i uzyskiwania dostępu do pojedynczego wystąpienia każdą usługę sieci Web, która odwołuje się do bieżącego projektu.|  

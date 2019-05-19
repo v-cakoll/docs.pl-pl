@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e1e9ce761baa77ea06b3d66aa5b296a186f054b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589018"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878863"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -53,7 +53,7 @@ ms.locfileid: "65589018"
   
  Jeśli dane w zestawie danych powiązane są aktualizowane przy użyciu dowolnego mechanizmu <xref:System.Windows.Forms.DataGrid> kontroli zmiany zostały uwzględnione. Jeśli masz siatki danych i jego style tabeli i Style kolumn `ReadOnly` właściwością `false`, można zaktualizować dane w zestawie danych za pośrednictwem <xref:System.Windows.Forms.DataGrid> kontroli.  
   
- Tylko jedna tabela może być wyświetlana w <xref:System.Windows.Forms.DataGrid> w danym momencie. Jeśli nie zdefiniowano relacji nadrzędny podrzędny między tabelami, użytkownik może poruszać się między powiązanymi tabelami o wybranie tabeli, które mają być wyświetlane w <xref:System.Windows.Forms.DataGrid> kontroli. Aby uzyskać informacje na temat tworzenia powiązań <xref:System.Windows.Forms.DataGrid> kontrolę [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] źródła danych w czasie projektowania lub wykonywania, zobacz [jak: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+ Tylko jedna tabela może być wyświetlana w <xref:System.Windows.Forms.DataGrid> w danym momencie. Jeśli nie zdefiniowano relacji nadrzędny podrzędny między tabelami, użytkownik może poruszać się między powiązanymi tabelami o wybranie tabeli, które mają być wyświetlane w <xref:System.Windows.Forms.DataGrid> kontroli. Aby uzyskać informacje na temat tworzenia powiązań <xref:System.Windows.Forms.DataGrid> kontrolę źródła danych ADO.NET w czasie projektowania lub w czasie wykonywania, zobacz [jak: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
  Źródła danych prawidłowe <xref:System.Windows.Forms.DataGrid> obejmują:  
   

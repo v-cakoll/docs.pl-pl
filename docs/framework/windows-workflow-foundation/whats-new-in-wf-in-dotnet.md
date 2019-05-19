@@ -2,12 +2,12 @@
 title: Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671421"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876659"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 
@@ -118,7 +118,7 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], zmienne i ar
 
 Poniższy zrzut ekranu przedstawia zmienną i argument menu kontekstowe projektanta.
 
-![Zmienna i Menu kontekstowego projektanta argumentów](./media/designercontextmenu.png "DesignerContextMenu")
+![Zmienna i Menu kontekstowego projektanta argumentów](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> Auto umieszczanie w sekwencji
 
@@ -126,11 +126,11 @@ Od przepływu pracy lub niektóre działania kontenera (takie jak <xref:System.A
 
 Poniższy zrzut ekranu przedstawia `WriteLine` działania w `Body` z `NoPersistScope`.
 
-![Automatyczne&#45;otaczające lokalizację wrzucania](./media/autosurround1.png "AutoSurround1")
+![Działanie WriteLine w treści działanie NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 Poniższy zrzut ekranu przedstawia utworzone automatycznie `Sequence` działania w `Body` po drugiej `WriteLine` jest spadła poniżej pierwszej.
 
-![Automatycznie utworzone działaniu sequence](./media/autosurround2.png "AutoSurround2")
+![Automatycznie utworzone sekwencji w treści NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> Tryb Pan
 
@@ -138,7 +138,7 @@ Aby łatwiej przejść z dużych przepływów pracy w projektancie, można włą
 
 Poniższy zrzut ekranu przedstawia przycisk przesunięcie, który znajduje się w prawym dolnym rogu projektanta przepływów pracy.
 
-![Przycisk przesunięcie w Projektancie przepływu pracy](./media/panbutton.png "PanButton")
+![Pan wyróżnionym w Projektancie przepływu pracy.](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 Środkowy przycisk myszy lub spacji może również służyć do Przesuń w Projektancie przepływu pracy.
 
@@ -154,7 +154,7 @@ Aby ułatwić hierarchiczne przepływów pracy można przejść, składniki prze
 
 Poniższy zrzut ekranu przedstawiający ukończony przepływ pracy z [Samouczek wprowadzający](getting-started-tutorial.md) Pokazuje widok konspektu sekwencyjnego przepływu pracy.
 
-![Widoku w Projektancie przepływu pracy konspektu](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Zrzut ekranu przedstawiający widok konspektu z sekwencyjnego przepływu pracy w programie Visual Studio.](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> Wyrażeń języka C#
 
@@ -174,17 +174,17 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], musiały rę
 
 Poniższy zrzut ekranu przedstawia punkty załącznika, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika.
 
-![Węzeł początkowy schemat blokowy przedstawiający punktów połączenie automatyczne](./media/autoconnect1.png "Autoconnect1")
+![Schemat blokowy start węzła przedstawiający automatycznie połączyć z punktów](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 Działania również można przeciągać połączeń między węzłami schemat blokowy i Stanami automatyczne wstawianie węzła między dwóch pozostałych węzłach. Poniższy zrzut ekranu przedstawia wyróżnione linii łączącej, gdzie można przeciągnąć z przybornika i porzucić działania.
 
-![Automatyczne&#45;Wstaw uchwytu upuszczanie działania](./media/autoinsert.png "automatycznego wstawiania")
+![Automatyczne wstawianie uchwytu upuszczanie działania](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> Adnotacje projektanta
 
 W celu ułatwienia tworzenia większych przepływów pracy, Projektant obsługuje dodawanie adnotacji, aby ułatwić śledzenie procesu projektowania. Adnotację można dodać do działań, Stany, węzłów schematu blokowego, zmienne i argumenty. Poniższy zrzut ekranu przedstawia menu kontekstowe służy do dodawania adnotacji do projektanta.
 
-![Menu kontekstowe adnotacji](./media/annotationdialog.png "annotationdialog")
+![Zrzut ekranu przedstawiający menu dodawania adnotacji.](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>Stany debugowania
 
@@ -232,7 +232,7 @@ Przepływy pracy automatu stanów zostały wprowadzone w ramach programu .NET Fr
 
 Poniższy zrzut ekranu przedstawia przepływ pracy automatu stanu ukończenia od [Samouczek wprowadzający](getting-started-tutorial.md) kroku [jak: Tworzenie przepływu pracy automatu stanów](how-to-create-a-state-machine-workflow.md).
 
-![Ukończono przepływ pracy automatu stanów](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Ilustracja przedstawiająca przepływ pracy automatu stanu ukończenia.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 Aby uzyskać więcej informacji na temat tworzenia przepływów pracy automatu stanów, zobacz [przepływów pracy automatu stanów](state-machine-workflows.md).
 

@@ -2,12 +2,12 @@
 title: Tematy pomocy
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877139"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881314"
 ---
 # <a name="reference"></a>Tematy pomocy
 Ta sekcja zawiera informacje dotyczące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deweloperów.  
@@ -45,4 +45,4 @@ Ta sekcja zawiera informacje dotyczące [!INCLUDE[vbtecdlinq](../../../../../../
  Udostępnia portali do [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] tematów.  
   
  [Omówienie kontrolki serwera sieci Web kontrolka LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- W tym artykule opisano sposób, w jaki <xref:System.Web.UI.WebControls.LinqDataSource> kontrolować ujawnia [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] deweloperom sieci Web za pośrednictwem [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] architektura kontroli źródła danych.
+ W tym artykule opisano sposób, w jaki <xref:System.Web.UI.WebControls.LinqDataSource> kontrolować ujawnia [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] dla deweloperów sieci Web przy użyciu architektury kontroli źródła danych programu ASP.NET.

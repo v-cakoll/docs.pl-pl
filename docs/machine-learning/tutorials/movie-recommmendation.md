@@ -1,19 +1,19 @@
 ---
-title: 'Samouczek: Tworzenie polecania filmu'
+title: 'Samouczek: Tworzenie polecania filmu - factorization macierzy'
 description: W tym samouczku dowiesz się, jak tworzyć polecania filmów za pomocą platformy ML.NET w aplikacji konsoli .NET Core. Użyj kroków C# i Visual Studio 2019 r.
 author: briacht
 ms.author: johalex
 ms.date: 05/06/2019
-ms.custom: mvc
+ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063371"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882266"
 ---
-# <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Samouczek: Utwórz polecania filmów za pomocą platformy ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Samouczek: Tworzenie polecania filmu, za pomocą factorizaton macierzy za pomocą platformy ML.NET
 
 W tym samouczku dowiesz się, jak tworzyć polecania filmów za pomocą platformy ML.NET w aplikacji konsoli .NET Core. Użyj kroków C# i Visual Studio 2019 r.
 

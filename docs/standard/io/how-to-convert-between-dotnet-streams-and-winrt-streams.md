@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752050"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877936"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Instrukcje: Konwertowanie .NET Framework i środowiska wykonawczego Windows strumieni (tylko Windows)
 
@@ -51,7 +51,7 @@ Aby przekonwertować z .NET Framework na strumień środowiska wykonawczego Wind
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> Konwertuje zarządzany strumień programu .NET dla aplikacji platformy uniwersalnej systemu Windows na strumień wyjściowy środowiska wykonawczego Windows.
   
-- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) konwertuje zarządzany strumień programu .NET dla aplikacji platformy uniwersalnej systemu Windows na strumień o dostępie losowym, do używanego przez środowisko wykonawcze Windows do odczytu lub zapisu.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType> Konwertuje zarządzany strumień programu .NET dla aplikacji platformy uniwersalnej systemu Windows na strumień o dostępie losowym, do używanego przez środowisko wykonawcze Windows do odczytu lub zapisu.
 
 Po przekonwertowaniu strumień programu .NET Framework na strumień środowiska wykonawczego Windows możliwości konwertowanego strumienia zależą od oryginalnego strumienia. Na przykład, jeśli oryginalny strumień obsługuje Odczyt i zapis i wywołania <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> celu przekonwertowania strumienia, jest zwracany typ `IRandomAccessStream`. `IRandomAccessStream` implementuje `IInputStream` i `IOutputStream`i obsługuje Odczyt i zapis.
 
@@ -59,7 +59,7 @@ Strumieniami programu .NET framework nie obsługują klonowania, nawet po konwer
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Przykład: Konwertuj .NET Framework na strumień o dostępie losowym środowiska wykonawczego Windows
 
-Aby przekonwertować programu .NET Framework na strumień środowiska wykonawczego Windows-strumień o dostępie losowym, należy użyć [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) metodzie, jak pokazano w poniższym przykładzie:
+Aby przekonwertować programu .NET Framework na strumień środowiska wykonawczego Windows-strumień o dostępie losowym, należy użyć <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A> metodzie, jak pokazano w poniższym przykładzie:
 
 > [!IMPORTANT]
 > Upewnij się, że strumień programu .NET Framework, którego używasz, obsługuje wyszukiwanie lub skopiuj go do strumienia, który obsługuje. Możesz użyć <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> właściwości.

@@ -2,12 +2,12 @@
 title: Omówienie programu Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634273"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880032"
 ---
 # <a name="entity-framework-overview"></a>Omówienie programu Entity Framework
 
@@ -49,7 +49,7 @@ Więcej niż kolejna rozwiązaniu mapowania obiektowo relacyjny [!INCLUDE[adonet
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialekt niezależny od magazynu, programu SQL Server, który współpracuje bezpośrednio z jednostkami w modelu koncepcyjnym i obsługujący [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] pojęcia. [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest używany zarówno za pomocą zapytań dotyczących obiektów i zapytania, które są wykonywane przy użyciu dostawca EntityClient. Aby uzyskać więcej informacji, zobacz [omówienie jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje EntityClient dostawcy danych. Ten dostawca zarządza połączeniami przekłada zapytania jednostki na kwerendach specyficznymi dla źródła danych i zwraca wartość czytnik danych [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] używa do zmaterializowania jednostki danych w obiektach. Gdy materializacja obiektu nie jest wymagane, dostawca EntityClient również mogą być używane jak standardowy [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, dzięki czemu aplikacje mogą wykonać [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania i używanie czytnika zwracanych danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje EntityClient dostawcy danych. Ten dostawca zarządza połączeniami przekłada zapytania jednostki na kwerendach specyficznymi dla źródła danych i zwraca wartość czytnik danych [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] używa do zmaterializowania jednostki danych w obiektach. Gdy materializacja obiektu nie jest wymagane, dostawca EntityClient można również jak standardowego dostawcy danych ADO.NET, dzięki czemu aplikacje mogą wykonać [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania i używanie czytnika zwracanych danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 Na poniższym diagramie przedstawiono [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] architektury do uzyskiwania dostępu do danych:
 
@@ -59,7 +59,7 @@ Na poniższym diagramie przedstawiono [!INCLUDE[adonet_ef](../../../../../includ
 
 ## <a name="data-providers"></a>Dostawcy danych
 
-`EntityClient` Dostawca rozszerza [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] modelu dostawców, uzyskując dostęp do danych pod względem koncepcyjny jednostek i relacji. Wykonuje zapytania, które używają [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] dostarcza podstawowy język zapytań, który umożliwia `EntityClient` do komunikowania się z bazą danych. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+`EntityClient` Dostawca rozszerza modelu dostawca ADO.NET, uzyskując dostęp do danych pod względem koncepcyjny jednostek i relacji. Wykonuje zapytania, które używają [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] dostarcza podstawowy język zapytań, który umożliwia `EntityClient` do komunikowania się z bazą danych. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Zawiera zaktualizowany dostawca danych SqlClient obsługuje drzew poleceń w postaci kanonicznej. Aby uzyskać więcej informacji, zobacz [SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md).
 

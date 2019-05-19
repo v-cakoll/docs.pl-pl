@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: e9b2c1077cf3323a7d5b69bee6dff7e6f9611818
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634113"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878087"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (WCF Data Services)
 
-Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dane te jednostki są udostępniane przez [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] po relacyjnej bazy danych w źródle danych. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]— na podstawie modelu danych w aplikacji internetowego programu Visual Studio, która opiera się na istniejącą bazę danych i Utwórz nową usługę danych przy użyciu tego modelu danych.
+Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dane te jednostki są udostępniane przez ADO.NET[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] po relacyjnej bazy danych w źródle danych. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]— na podstawie modelu danych w aplikacji internetowego programu Visual Studio, która opiera się na istniejącą bazę danych i Utwórz nową usługę danych przy użyciu tego modelu danych.
 
 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Także narzędzia wiersza polecenia, które mogą generować [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] modelu spoza projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Generowanie modelu i mapowania plików za pomocą EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
 
@@ -53,7 +53,7 @@ Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dane te 
 
 2. W **przeglądarka modeli**, kliknij prawym przyciskiem myszy model, kliknij przycisk **właściwości**, a następnie zanotuj nazwę kontenera jednostek.
 
-3. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę swojej [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu, a następnie kliknij przycisk **Dodaj** > **nowy element**.
+3. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu ASP.NET, a następnie kliknij **Dodaj** > **nowy element**.
 
 4. W **Dodaj nowy element** okno dialogowe, wybierz opcję **usługi danych WCF** szablonu w **Web** kategorii.
 

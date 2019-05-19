@@ -2,15 +2,15 @@
 title: Współdziałanie z usługami ASP.NET w sieci Web
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: 16e22a091b88d12abccb063d2407db82460458c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638608"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875544"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Współdziałanie z usługami ASP.NET w sieci Web
-Współdziałanie między [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web i usług sieci Web Windows Communication Foundation (WCF), można osiągnąć przez zapewnienie, że usługi implementowane przy użyciu obie technologie są zgodne z WS-I Basic Profile 1.1 specyfikacji. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Sieci Web usługi, które odpowiadają WS-I Basic Profile 1.1 są zgodne z klientów programu WCF za pomocą powiązania dostarczane przez system WCF <xref:System.ServiceModel.BasicHttpBinding>.  
+Współdziałanie usług sieci Web platformy ASP.NET i usług sieci Web Windows Communication Foundation (WCF), można osiągnąć przez zapewnienie, że usługi implementowane przy użyciu obie technologie są zgodne z WS-I Basic Profile 1.1 specyfikacji. Usługi sieci Web platformy ASP.NET, które odpowiadają WS-I Basic Profile 1.1 są zgodne z klientów programu WCF za pomocą powiązania dostarczane przez system WCF <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Użyj [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] możliwość dodania <xref:System.Web.Services.WebService> i <xref:System.Web.Services.WebMethodAttribute> atrybuty do interfejsu, a nie klasę w celu zapisywania klasy do zaimplementowania interfejsu, jak pokazano w poniższym przykładowym kodzie.  
   
@@ -36,13 +36,13 @@ public class Service : IEcho
   
  Unikaj używania <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> atrybutu powoduje, że wiadomości kierowane do metody oparte na w pełni kwalifikowana nazwa elementu treści komunikatu protokołu SOAP, a nie od `SOAPAction` nagłówka HTTP. Korzysta z usługi WCF `SOAPAction` nagłówka HTTP służącą do rozesłania wiadomości.  
   
- Plik XML, do którego <xref:System.Xml.Serialization.XmlSerializer> serializuje semantycznie taka sama jak XML, do którego jest typem domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializuje typem parametru przestrzeni nazw XML jest jawnie zdefiniowany. Podczas definiowania typu danych do użycia z usługą [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]usług, oczekując na przyjęcie WCF sieci Web, wykonaj następujące czynności:  
+ Plik XML, do którego <xref:System.Xml.Serialization.XmlSerializer> serializuje semantycznie taka sama jak XML, do którego jest typem domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializuje typem parametru przestrzeni nazw XML jest jawnie zdefiniowany. Podczas definiowania typu danych do użytku z usługami ASP.NETWeb w oczekiwaniu WCF pracy, wykonaj następujące czynności:  
   
 - Definiowanie typu przy użyciu klas .NET Framework, a nie schematu XML.  
   
 - Dodaj tylko <xref:System.SerializableAttribute> i <xref:System.Xml.Serialization.XmlRootAttribute> do klasy, za pomocą jego jawne definiowanie przestrzeni nazw dla typu. Nie należy dodawać dodatkowe atrybuty z <xref:System.Xml.Serialization> przestrzeń nazw w celu kontrolowania, jak klasy .NET Framework ma być przetłumaczone na XML.  
   
-- Przyjmując takie podejście, powinno być możliwe zapewnienie później klas .NET w kontraktach danych dodając <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> bez zmiany znacznie XML, do którego klasy są serializowane w celu przesłania go. Typy używane w wiadomości według [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web mogą być przetwarzane tak kontraktów danych przez aplikacje WCF, reaguje pozwala między innymi, lepszej wydajności w aplikacjach usługi WCF.  
+- Przyjmując takie podejście, powinno być możliwe zapewnienie później klas .NET w kontraktach danych dodając <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> bez zmiany znacznie XML, do którego klasy są serializowane w celu przesłania go. Typy używane w komunikatach przez usługi sieci Web platformy ASP.NET mogą być przetwarzane jako kontraktów danych przez aplikacje WCF reaguje pozwala między innymi, lepszej wydajności w aplikacjach usługi WCF.  
   
  Należy unikać używania opcji uwierzytelniania udostępniane przez Internetowe usługi informacyjne (IIS). Klienci WCF nie obsługują je. Jeśli usługa musi zostać zabezpieczony, użyj opcji dostępnych przez architekturę WCF, ponieważ te opcje są niezawodne i bazują na standardowych protokołów.  
   

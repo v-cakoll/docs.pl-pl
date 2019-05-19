@@ -2,12 +2,12 @@
 title: Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972617"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878602"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych
 W tym temacie opisano najlepsze rozwiązania dotyczące hostowania usług Windows Communication Foundation (WCF).  
@@ -40,7 +40,7 @@ W tym temacie opisano najlepsze rozwiązania dotyczące hostowania usług Window
  Powiązania witryny sieci Web usług IIS można skonfigurować za pomocą przystawki usług IIS programu Microsoft Management Console (MMC).  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Pule aplikacji uruchomionych w różnych kontekstów użytkownika zastąpić zestawów z innych kont w folderze tymczasowym  
- Aby upewnić się, że pule aplikacji uruchomionych w różnych kontekstów użytkownika nie może zastąpić zestawów z innych kont w pliku tymczasowym [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pliki w folderze, użyj różnych tożsamości i folderów tymczasowych dla różnych aplikacji. Na przykład, jeśli masz dwa /Application1 aplikacji wirtualnych i / Aplikacja2, możesz utworzyć dwie pule aplikacji, A i B, z dwóch różnych tożsamości. Pula aplikacji A można uruchamiana tożsamości w ramach jednego użytkownika (Użytkownik1), podczas gdy można uruchomić puli aplikacji B inną tożsamość użytkownika (Użytkownik2) i skonfigurować /Application1 używaj i /Application2, aby użyć B.  
+ Aby upewnić się, że pule aplikacji uruchomionych w różnych kontekstów użytkownika nie może zastąpić zestawów z innych kont w folderze plików tymczasowych ASP.NET, należy użyć innej tożsamości i folderów tymczasowych dla różnych aplikacji. Na przykład, jeśli masz dwa /Application1 aplikacji wirtualnych i / Aplikacja2, możesz utworzyć dwie pule aplikacji, A i B, z dwóch różnych tożsamości. Pula aplikacji A można uruchamiana tożsamości w ramach jednego użytkownika (Użytkownik1), podczas gdy można uruchomić puli aplikacji B inną tożsamość użytkownika (Użytkownik2) i skonfigurować /Application1 używaj i /Application2, aby użyć B.  
   
  W pliku Web.config, można skonfigurować za pomocą folderu tymczasowego \< system.web/compilation/@tempFolder>. Dla /Application1 może być "c:\tempForUser1", a dla Aplikacja2 może być "c:\tempForUser2". Przyznawanie odpowiednich uprawnień do zapisu do tych folderów dla dwóch tożsamości.  
   

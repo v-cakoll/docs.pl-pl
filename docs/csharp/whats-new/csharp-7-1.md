@@ -2,12 +2,12 @@
 title: Co nowego C# 7.1
 description: Omówienie nowych funkcji w C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675562"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881548"
 ---
 # <a name="whats-new-in-c-71"></a>Co nowego C# 7.1
 
@@ -26,7 +26,7 @@ Dostępne są następujące nowe funkcje języka w tej wersji:
 * [Dopasowania do wzorca w parametrach typu ogólnego](#pattern-matching-on-generic-type-parameters)
   - Wyrażenia dopasowania wzorca można użyć zmiennych, którego typem jest parametr typu ogólnego.
 
-Na koniec, kompilator zawiera dwie pozycje `/refout` i `/refonly` tej kontrolki [odwoływać się do generowania zestawu](#reference-assembly-generation).
+Na koniec, kompilator zawiera dwie pozycje `-refout` i `-refonly` tej kontrolki [odwoływać się do generowania zestawu](#reference-assembly-generation).
 
 Korzystanie z najnowszych funkcji w wersji punktu należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybierz wersję.
 
@@ -109,5 +109,5 @@ Począwszy od C# 7.1, wyrażenie nie zawiera wzorca `is` i `switch` typu wzorzec
 
 ## <a name="reference-assembly-generation"></a>Generowanie zestawu odwołania
 
-Istnieją dwie nowe opcje kompilatora, które generują *tylko do odwołania zestawów*: [jest opcja](../language-reference/compiler-options/refout-compiler-option.md) i [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Istnieją dwie nowe opcje kompilatora, które generują *tylko do odwołania zestawów*: [- opcji refout](../language-reference/compiler-options/refout-compiler-option.md) i [jest opcja refonly -](../language-reference/compiler-options/refonly-compiler-option.md).
 Połączonych artykułów opisano te opcje i zestawy odwołań bardziej szczegółowo.

@@ -2,15 +2,15 @@
 title: Zagadnienia dotyczące migracji (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: f65c558b0cbc02bdff8e78189a38d06a7502434f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e3410c62ba2fb9b8cc3dd0c6aa80707e03793fd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583564"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880069"
 ---
 # <a name="migration-considerations-entity-framework"></a>Zagadnienia dotyczące migracji (Entity Framework)
-[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework zapewnia kilka korzyści z istniejącą aplikacją. Jednym z najbardziej istotna te korzyści jest możliwość stosowania modelu koncepcyjnego do oddzielnych struktur danych używanych przez aplikację ze schematu w źródle danych. Dzięki temu można łatwo wprowadzić przyszłe zmiany w modelu magazynu lub do źródła danych bez wprowadzania zmian wyrównującej do aplikacji. Aby uzyskać więcej informacji o zaletach korzystania z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zobacz [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) i [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
+ADO.NET Entity Framework zapewnia kilka korzyści z istniejącą aplikacją. Jednym z najbardziej istotna te korzyści jest możliwość stosowania modelu koncepcyjnego do oddzielnych struktur danych używanych przez aplikację ze schematu w źródle danych. Dzięki temu można łatwo wprowadzić przyszłe zmiany w modelu magazynu lub do źródła danych bez wprowadzania zmian wyrównującej do aplikacji. Aby uzyskać więcej informacji o zaletach korzystania z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zobacz [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) i [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
   
  Aby móc korzystać z zalet [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], można migrować istniejącą aplikację [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Niektóre zadania są wspólne dla wszystkich migrowanych aplikacji. Typowe zadania obejmują uaktualniania aplikacji do korzystania z programu .NET Framework, począwszy od wersji 3.5 z dodatkiem Service Pack 1 (SP1), definiowania modeli mapowania i konfigurowanie platformy Entity Framework. Podczas migracji aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], istnieją dodatkowe zagadnienia, które są stosowane. Te zagadnienia są zależne od typu migrowanych aplikacji oraz o określonych funkcjach aplikacji. Ten temat zawiera informacje ułatwiające wybór najlepszym podejściem do użycia podczas uaktualniania istniejącej aplikacji.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "65583564"
   
 - Dla dużych i złożonych aplikacji nie należy przeprowadzić migrację całej aplikacji w programie Entity Framework w tym samym czasie. Jednak dowolnej części aplikacji, która nie korzysta z programu Entity Framework nadal musi zostać zmieniony, gdy zmiany źródła danych.  
   
-- Połączenie dostawcy danych, które są używane przez program Entity Framework mogą być współużytkowane z innymi częściami aplikacji, ponieważ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] używa [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych można uzyskać dostępu do źródła danych. Na przykład dostawcy SqlClient jest używany przez program Entity Framework dostępu do bazy danych programu SQL Server. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- Połączenie dostawcy danych, które są używane przez program Entity Framework mogą być współużytkowane z innymi częściami aplikacji, ponieważ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] używa dostawcy danych ADO.NET dostępu do źródła danych. Na przykład dostawcy SqlClient jest używany przez program Entity Framework dostępu do bazy danych programu SQL Server. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Typowe zadania migracji  
  Ścieżka do migrowania istniejących aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zależy od zarówno typ aplikacji i istniejąca strategia dostępu do danych. Jednak należy zawsze wykonać następujące zadania podczas migracji istniejącej aplikacji do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "65583564"
  Począwszy od programu .NET Framework 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje "plain old" obiektów CLR (POCO), nazywany również zakresu trwałość obiektów. W większości przypadków można pracować z istniejących obiektów [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , wprowadzając drobne zmiany. Aby uzyskać więcej informacji, zobacz [Praca z jednostkami obiektów POCO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Można również przeprowadzić migrację aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i użyć klas danych, które są generowane przez narzędzia Entity Framework. Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreatora modelu danych jednostki](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Uwagi dotyczące aplikacji korzystających z dostawców ADO.NET  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawców, takich jak Klient SQL, umożliwiają zapytanie zwracające dane tabelaryczne źródła danych. Dane można również załadować do [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] zestawu danych. Na poniższej liście opisano zagadnienia dotyczące uaktualniania aplikacji korzystającej z istniejącej [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy:  
+ Dostawcy ADO.NET, na przykład klient SQL, umożliwiają zapytanie zwracające dane tabelaryczne źródła danych. Dane można również załadować do zestawu danych ADO.NET. Na poniższej liście opisano zagadnienia dotyczące uaktualniania aplikacji korzystającej z istniejącego dostawcy ADO.NET:  
   
 - Wyświetlanie danych tabelarycznych przy użyciu czytnika danych.  
 
@@ -69,7 +69,7 @@ ms.locfileid: "65583564"
   Jeśli [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie udostępnia funkcji zestawu wymagane przez aplikację przy użyciu nadal może korzystać z zalet zapytań LINQ [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Uwagi dotyczące aplikacji, które wiązanie danych z kontrolkami  
- .NET Framework umożliwia hermetyzację danych w źródle danych, takich jak zestaw danych lub moduł [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] danych kontroli źródła, a następnie powiązać elementy interfejsu użytkownika formantów tych danych. Na poniższej liście opisano zagadnienia dotyczące powiązywanie kontrolek z danymi programu Entity Framework.  
+ .NET Framework umożliwia hermetyzacji danych w źródle danych, takich jak zestaw danych lub kontroli źródła danych programu ASP.NET, a następnie wiążą elementy interfejsu użytkownika do tych kontrolek danych. Na poniższej liście opisano zagadnienia dotyczące powiązywanie kontrolek z danymi programu Entity Framework.  
   
 - Powiązywanie danych z kontrolkami.  
 
@@ -79,9 +79,9 @@ ms.locfileid: "65583564"
   
   Aby uzyskać więcej informacji, zobacz [powiązanie obiektów z kontrolkami](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] kontrolki źródła danych.  
+- Kontrolki źródła danych dla platformy ASP.NET.  
 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje zaprojektowane w celu uproszczenia powiązanie danych w kontroli źródła danych [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] aplikacji sieci Web. Aby uzyskać więcej informacji, zobacz [omówienie kontrolki serwera sieci Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Zawiera kontrolę źródła danych, upraszcza powiązanie danych w aplikacji sieci Web ASP.NET. Aby uzyskać więcej informacji, zobacz [omówienie kontrolki serwera sieci Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Inne zagadnienia  
  Poniżej przedstawiono zagadnienia, które mogą mieć zastosowanie w przypadku migracji określonych typów aplikacji w programie Entity Framework.  
@@ -100,7 +100,7 @@ ms.locfileid: "65583564"
   
 - Aplikacje, które zarządzania stanem.  
 
-  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Aplikacje sieci Web, często musisz utrzymywać stan strony sieci Web lub z sesji użytkownika. Obiekty w <xref:System.Data.Objects.ObjectContext> wystąpienia może być przechowywanych w stan widoku klienta lub w stanie sesji na serwerze i później mogą być pobierane i ponownie dołączyć do nowego obiektu kontekstu. Aby uzyskać więcej informacji, zobacz [Dołączanie i odłączanie obiektów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
+  Aplikacje sieci Web ASP.NET, często musisz utrzymywać stan strony sieci Web lub sesja użytkownika. Obiekty w <xref:System.Data.Objects.ObjectContext> wystąpienia może być przechowywanych w stan widoku klienta lub w stanie sesji na serwerze i później mogą być pobierane i ponownie dołączyć do nowego obiektu kontekstu. Aby uzyskać więcej informacji, zobacz [Dołączanie i odłączanie obiektów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754080"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882344"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfejsy dotyczące wiązania danych
 
-Za pomocą [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], możesz utworzyć wiele różnymi strukturami danych zgodnie z potrzebami powiązania aplikacji i danych, w którym pracujesz. Można tworzyć własnych klas, które zapewniają lub zużywają danych w formularzach Windows Forms. Te obiekty można udostępniają różne poziomy funkcjonalności i poziomie złożoności, z powiązania danych podstawowych do zapewniania obsługi w czasie projektowania, sprawdzanie błędów, powiadomienia o zmianie lub nawet pomocy technicznej ze strukturą wycofywania zmian wprowadzonych w samych danych.
+Za pomocą narzędzia ADO.NET możesz utworzyć wiele różnymi strukturami danych zgodnie z potrzebami powiązania aplikacji i danych, którą pracujesz. Można tworzyć własnych klas, które zapewniają lub zużywają danych w formularzach Windows Forms. Te obiekty można udostępniają różne poziomy funkcjonalności i poziomie złożoności, z powiązania danych podstawowych do zapewniania obsługi w czasie projektowania, sprawdzanie błędów, powiadomienia o zmianie lub nawet pomocy technicznej ze strukturą wycofywania zmian wprowadzonych w samych danych.
 
 ## <a name="consumers-of-data-binding-interfaces"></a>Konsumenci interfejsy powiązania danych
 
@@ -82,7 +82,7 @@ Następujące interfejsy są przeznaczone do użycia przez kontrolek formularzy 
 
 - <xref:System.Collections.IEnumerable> Interfejs
 
-  Klasa, która implementuje <xref:System.Collections.IEnumerable> interfejs jest zwykle używany przez [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Obsługa formularzy Windows dla tego interfejsu jest dostępna tylko <xref:System.Windows.Forms.BindingSource> składnika.
+  Klasa, która implementuje <xref:System.Collections.IEnumerable> interfejs jest zwykle używany przez platformę ASP.NET. Obsługa formularzy Windows dla tego interfejsu jest dostępna tylko <xref:System.Windows.Forms.BindingSource> składnika.
 
   > [!NOTE]
   > <xref:System.Windows.Forms.BindingSource> Składnika kopiuje wszystkie <xref:System.Collections.IEnumerable> elementy do osobną listę dla powiązania celów.

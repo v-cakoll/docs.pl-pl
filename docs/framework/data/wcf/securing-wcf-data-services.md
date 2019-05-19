@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645517"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877351"
 ---
 # <a name="securing-wcf-data-services"></a>Zabezpieczanie usług danych WCF
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywania, wdrażania i uruchamiania aplikacji i usług danych WCF usług tego dostępu, które obsługują Open Data Protocol (OData). Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych aplikacji .NET Framework.  
@@ -55,7 +55,7 @@ context.Credentials = _
  Kiedy usługa danych wymaga poświadczeń logowania, których nie można określić za pomocą <xref:System.Net.NetworkCredential> obiektów, takich jak token oparty na oświadczeniach czy plik cookie, należy ręcznie ustawić nagłówki w żądaniu HTTP zazwyczaj `Authorization` i `Cookie` nagłówków. Aby uzyskać więcej informacji na temat tego rodzaju scenariusza uwierzytelniania, zobacz wpis w blogu [ OData i punkty zaczepienia po stronie klienta uwierzytelniania — część 3 —](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/). Na przykład sposobu ustawiania nagłówków HTTP w komunikacie żądania zobacz [jak: Ustawianie nagłówków w żądaniu klienta](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md).  
   
 ## <a name="impersonation"></a>Personifikacja  
- Na ogół usługa danych uzyskuje dostęp do wymaganych zasobów, takich jak pliki na serwerze lub baza danych, przy użyciu poświadczeń procesu roboczego hostującego usługę danych. Jeśli korzystanie z personifikacji, [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji można wykonywać przy użyciu tożsamości Windows (konto użytkownika) użytkownika zgłaszającego żądanie. Personifikacja jest powszechnie stosowana w aplikacjach, które przy uwierzytelnieniu użytkownika opierają się na programie IIS, i poświadczenia tego podmiotu zabezpieczeń są używane do uzyskiwania dostępu do wymaganych zasobów. Aby uzyskać więcej informacji, zobacz [personifikacji aplikacji ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
+ Na ogół usługa danych uzyskuje dostęp do wymaganych zasobów, takich jak pliki na serwerze lub baza danych, przy użyciu poświadczeń procesu roboczego hostującego usługę danych. Gdy korzystanie z personifikacji aplikacji ASP.NET można wykonać przy użyciu tożsamości Windows (konto użytkownika) użytkownika zgłaszającego żądanie. Personifikacja jest powszechnie stosowana w aplikacjach, które przy uwierzytelnieniu użytkownika opierają się na programie IIS, i poświadczenia tego podmiotu zabezpieczeń są używane do uzyskiwania dostępu do wymaganych zasobów. Aby uzyskać więcej informacji, zobacz [personifikacji aplikacji ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
   
 ## <a name="configuring-data-service-authorization"></a>Konfigurowanie autoryzacji usługi danych  
  Autoryzacja to udzielenie dostępu do zasobów aplikacji podmiotowi zabezpieczeń lub procesowi, który został zidentyfikowany na podstawie przeprowadzonego wcześniej pomyślnego uwierzytelnienia. Ogólną praktyką jest udzielanie użytkownikom usługi danych tylko uprawnień wystarczających do wykonywania operacji wymaganych przez aplikacje klienta.  

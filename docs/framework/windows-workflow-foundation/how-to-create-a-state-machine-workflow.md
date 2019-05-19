@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84d2355a78c7d33bf712baf158f28861e59e75d1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773519"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881937"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Instrukcje: Tworzenie przepływu pracy automatu stanów
 Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.StateMachine> działanie i działań niestandardowych z poprzedniego [jak: Utwórz działanie](how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb.  
@@ -179,7 +179,7 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
   
      Poniższy przykład ilustruje ukończony przepływ pracy.  
   
-     ![Ukończono przepływ pracy automatu stanów](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     ![Ilustracja przedstawiająca przepływ pracy automatu stanu ukończenia.](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
   
 ### <a name="to-build-the-workflow"></a>Tworzenie przepływu pracy  
   

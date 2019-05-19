@@ -2,12 +2,12 @@
 title: Proces zatrudniania
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622486"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881897"
 ---
 # <a name="hiring-process"></a>Proces zatrudniania
 Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyciu działań dotyczących komunikatów i dwa przepływy pracy hostowany jako usług przepływu pracy. Te przepływy pracy są częścią infrastruktury IT w fikcyjnej firmy o nazwie Contoso, Inc.  
@@ -126,7 +126,7 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
 |Czasomierze trwałe|`ResumeRequestService` używa czasomierzy trwałe, aby zdefiniować czas trwania zadania księgowania (po wygaśnięciu limitu czasu, publikowanie zadania zostanie zamknięte).|ResumeRequestService|  
 |Transakcje|<xref:System.Activities.Statements.TransactionScope> Służy do zapewnienia spójności danych w ramach wykonania kilku czynności (po odebraniu nowych resume).|ResumeRequestService|  
 |Transakcje|Niestandardowego uczestnika stanów trwałych (`HiringRequestPersistenceParticipant`) i niestandardowego uczestnika śledzenia (`HistoryFileTrackingParticipant`) Użyj tej samej transakcji.|HiringRequestService|  
-|Za pomocą [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|Przepływy pracy są dostępne z dwóch [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|InternalClient / CareersWebSite|  
+|Za pomocą [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w aplikacjach ASP.NET.|Przepływy pracy są dostępne z dwóch aplikacji platformy ASP.NET.|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>Data Storage  
  Dane są przechowywane w bazie danych programu SQL Server o nazwie `ContosoHR` (skryptu do tworzenia tej bazy danych znajduje się w `DbSetup` folder). Wystąpienia przepływu pracy są przechowywane w bazie danych programu SQL Server o nazwie `InstanceStore` (skrypty służące do tworzenia magazyn wystąpienia są częścią [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dystrybucji).  

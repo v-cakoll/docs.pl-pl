@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583802"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879891"
 ---
 # <a name="connection-string-builders"></a>Konstruktorzy parametrów połączeń
-We wcześniejszych wersjach programu [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], w czasie kompilacji sprawdzania tak, aby w czasie wykonywania, generowany jest niepoprawna — słowo kluczowe parametrów połączenia parametrami połączonych wartości nie były wykonywane, <xref:System.ArgumentException>. Różnej składni każdego dostawcy danych .NET Framework obsługiwane w przypadku słowa kluczowe parametrów połączenia, które wprowadzone tworzenia ciągów prawidłowe połączenie jest trudne, jeśli jest wykonywane ręcznie. Aby rozwiązać ten problem, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wprowadzono nowe Konstruktorzy parametrów połączeń dla każdego dostawcy danych .NET Framework. Każdy dostawca danych obejmuje połączenia silnie typizowane parametry konstruktora klasy dziedziczącej z klasy <xref:System.Data.Common.DbConnectionStringBuilder>. W poniższej tabeli wymieniono dostawcy danych .NET Framework i ich skojarzone z nimi połączenie parametry konstruktora klasy.  
+We wcześniejszych wersjach programu ADO.NET, Sprawdzanie parametrów połączenia przy użyciu wartości ciągu połączonych kompilacji nie wystąpił, tak, aby w czasie wykonywania, generowany jest niepoprawna — słowo kluczowe <xref:System.ArgumentException>. Różnej składni każdego dostawcy danych .NET Framework obsługiwane w przypadku słowa kluczowe parametrów połączenia, które wprowadzone tworzenia ciągów prawidłowe połączenie jest trudne, jeśli jest wykonywane ręcznie. Aby rozwiązać ten problem, ADO.NET w wersji 2.0 wprowadzono nowe Konstruktorzy parametrów połączeń dla każdego dostawcy danych .NET Framework. Każdy dostawca danych obejmuje połączenia silnie typizowane parametry konstruktora klasy dziedziczącej z klasy <xref:System.Data.Common.DbConnectionStringBuilder>. W poniższej tabeli wymieniono dostawcy danych .NET Framework i ich skojarzone z nimi połączenie parametry konstruktora klasy.  
   
 |Dostawca|Klasa ConnectionStringBuilder|  
 |--------------|-----------------------------------|  

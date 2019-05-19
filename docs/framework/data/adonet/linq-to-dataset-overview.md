@@ -2,15 +2,15 @@
 title: Omówienie LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0dd220e609d4934527f121e4e5c85f3d83323d69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878595"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878107"
 ---
 # <a name="linq-to-dataset-overview"></a>Omówienie LINQ to DataSet
-<xref:System.Data.DataSet> Jest jednym z powszechnie używanych składników [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. To kluczowy element odłączonego modelu programowania, który [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] opiera się na, i umożliwia jawne buforowania danych z różnych źródeł danych. W przypadku warstwy prezentacji <xref:System.Data.DataSet> jest ściśle zintegrowany z formantów graficznego interfejsu użytkownika dla powiązania danych. Dla warstwy środkowej zapewnia pamięci podręcznej, który zachowuje relacyjnych kształt danych i zawiera szybkie prostego zapytania i hierarchii nawigacji usługi. To typowa technika pozwala zmniejszyć liczbę żądań w bazie danych jest użycie <xref:System.Data.DataSet> dla pamięci podręcznej w warstwie środkowej. Rozważmy na przykład opartego na danych [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web. Często znaczna część danych aplikacji nie zmieniają się często i jest wspólna dla sesji lub użytkowników. Te dane mogą być przechowywane w pamięci na serwerze sieci Web, co zmniejsza liczbę żądań w bazie danych i przyspiesza interakcji użytkownika. Inna zaleta <xref:System.Data.DataSet> jest możliwość aplikacjom Przenieś podzbiór danych z co najmniej jednego źródła danych do obszaru aplikacji. Aplikacja następnie manipulować danych w pamięci, zachowując jego kształt relacyjnych.  
+<xref:System.Data.DataSet> Jest jednym z powszechnie używane składniki programu ADO.NET. To kluczowy element odłączonego modelu programowania, na podstawie ADO.NET i umożliwia jawne buforowania danych z różnych źródeł danych. W przypadku warstwy prezentacji <xref:System.Data.DataSet> jest ściśle zintegrowany z formantów graficznego interfejsu użytkownika dla powiązania danych. Dla warstwy środkowej zapewnia pamięci podręcznej, który zachowuje relacyjnych kształt danych i zawiera szybkie prostego zapytania i hierarchii nawigacji usługi. To typowa technika pozwala zmniejszyć liczbę żądań w bazie danych jest użycie <xref:System.Data.DataSet> dla pamięci podręcznej w warstwie środkowej. Rozważmy na przykład aplikacji sieci Web platformy ASP.NET opartych na danych. Często znaczna część danych aplikacji nie zmieniają się często i jest wspólna dla sesji lub użytkowników. Te dane mogą być przechowywane w pamięci na serwerze sieci Web, co zmniejsza liczbę żądań w bazie danych i przyspiesza interakcji użytkownika. Inna zaleta <xref:System.Data.DataSet> jest możliwość aplikacjom Przenieś podzbiór danych z co najmniej jednego źródła danych do obszaru aplikacji. Aplikacja następnie manipulować danych w pamięci, zachowując jego kształt relacyjnych.  
   
  Niezależnie od jego dostępność <xref:System.Data.DataSet> ma ograniczone możliwości zapytania. <xref:System.Data.DataTable.Select%2A> Metody można użyć do filtrowania i sortowania, a <xref:System.Data.DataRow.GetChildRows%2A> i <xref:System.Data.DataRow.GetParentRow%2A> metody może służyć do hierarchii nawigacji. Jednak dla wszystkich elementów, bardziej złożone, deweloper musi utworzyć kwerendę niestandardową. Może to spowodować, że aplikacje działają słabo, które są trudne do utrzymania.  
   

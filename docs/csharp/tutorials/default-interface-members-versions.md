@@ -3,16 +3,16 @@ title: Bezpiecznie aktualizować przy użyciu domyślnego interfejsu członków 
 description: Ta zaawansowana w tym samouczku przedstawiono sposób można bezpiecznie dodać nowe możliwości do istniejących definicji interfejsu bez przerywania wszystkich klas i struktur, które implementują ten interfejs.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65453173"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877915"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>Samouczek: Zaktualizuj interfejsów przy użyciu domyślnego interfejsu członków w C# 8
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Samouczek: Zaktualizuj interfejsów przy użyciu domyślnego interfejsu członków w C# 8.0
 
-Począwszy od C# 8 na platformie .NET Core 3.0 implementację można zdefiniować, kiedy Deklarujesz składową interfejsu. Najbardziej typowym scenariuszem jest bezpiecznie dodać elementy członkowskie do interfejsu już ogólnie dostępnych i używanych przez niezliczone klientów.
+Począwszy od C# 8.0 w programie .NET Core 3.0, można zdefiniować implementację przy deklarowaniu składową interfejsu. Najbardziej typowym scenariuszem jest bezpiecznie dodać elementy członkowskie do interfejsu już ogólnie dostępnych i używanych przez niezliczone klientów.
 
 W tym samouczku dowiesz się, jak:
 
@@ -23,7 +23,7 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 (wersja zapoznawcza). C# 8 kompilatora w wersji zapoznawczej jest dostępna, począwszy od [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), lub r [.NET Core 3.0 (wersja zapoznawcza) zestawu SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). Domyślne elementy członkowskie z interfejsu są dostępne począwszy od programu .NET Core 3.0 w wersji zapoznawczej 4.
+Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 (wersja zapoznawcza). C# 8.0 kompilatora w wersji zapoznawczej jest dostępna, począwszy od [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), lub r [.NET Core 3.0 (wersja zapoznawcza) zestawu SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). Domyślne elementy członkowskie z interfejsu są dostępne począwszy od programu .NET Core 3.0 w wersji zapoznawczej 4.
 
 ## <a name="scenario-overview"></a>Omówienie scenariusza
 

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664115"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877446"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Buforowanie połączenia z programem SQL Server (ADO.NET)
 Nawiązywanie połączenia z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonne. Kanał fizycznych, takich jak gniazda lub nazwany potok należy ustalić, musi nastąpić uzgadnianie początkową z serwerem, informacje o parametrach połączenia musi zostać przeanalizowany, połączenie musi zostać uwierzytelniony przez serwer, należy uruchomić testy dla rejestrowanie w Bieżąca transakcja i tak dalej.  
   
- W praktyce większość aplikacji używa tylko jednej lub kilku różnych konfiguracji dla połączenia. Oznacza to, że podczas wykonywania aplikacji wiele połączeń identyczne będzie wielokrotnie otwierania i zamykania. Aby zminimalizować koszty otwarcia połączeń, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] wykorzystuje technikę optymalizacji o nazwie *buforowanie połączeń*.  
+ W praktyce większość aplikacji używa tylko jednej lub kilku różnych konfiguracji dla połączenia. Oznacza to, że podczas wykonywania aplikacji wiele połączeń identyczne będzie wielokrotnie otwierania i zamykania. Aby zminimalizować koszty otwarcia połączeń, ADO.NET wykorzystuje technikę optymalizacji, o nazwie *buforowanie połączeń*.  
   
  Pula połączeń zmniejsza liczbę razy, które muszą być otwarte nowe połączenia. *Pulę* zachowuje własność połączenie fizyczne. Zarządza połączeń przechowując aktywny zestaw aktywnych połączeń dla każdej konfiguracji danego połączenia. Zawsze, gdy użytkownik wywołuje `Open` połączenia, pulę szuka dostępnych połączeń w puli. Jeśli w puli połączeń jest dostępny, zwraca go do obiektu wywołującego, zamiast otwierać nowe połączenie. Gdy aplikacja wywołuje `Close` w ramach połączenia pulę zwraca go do puli zestawów aktywnych połączeń, a nie jej zamknięciem. Gdy połączenie jest zwracany do puli, jest gotowy do można użyć ponownie w następnym `Open` wywołania.  
   
- Tylko na połączenia z taką samą konfigurację można puli. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zapewnia kilka pul w tym samym czasie, jedną dla każdej konfiguracji. Połączenia są podzielone na pule przy użyciu parametrów połączenia, a także przez tożsamość w Windows stosowania zintegrowanych zabezpieczeń. Połączenia są również grupowane w pulach w oparciu czy biorących udział w transakcji. Korzystając z <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, <xref:System.Data.SqlClient.SqlCredential> wystąpienia ma wpływ na puli połączeń. Różne wystąpienia <xref:System.Data.SqlClient.SqlCredential> użyje pule inne połączenie, nawet jeśli identyfikator użytkownika i hasło są takie same.  
+ Tylko na połączenia z taką samą konfigurację można puli. ADO.NET zapewnia kilka pul, w tym samym czasie, jedną dla każdej konfiguracji. Połączenia są podzielone na pule przy użyciu parametrów połączenia, a także przez tożsamość w Windows stosowania zintegrowanych zabezpieczeń. Połączenia są również grupowane w pulach w oparciu czy biorących udział w transakcji. Korzystając z <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, <xref:System.Data.SqlClient.SqlCredential> wystąpienia ma wpływ na puli połączeń. Różne wystąpienia <xref:System.Data.SqlClient.SqlCredential> użyje pule inne połączenie, nawet jeśli identyfikator użytkownika i hasło są takie same.  
   
- Tworzenie puli połączeń mogą znacznie poprawić wydajność i skalowalność aplikacji. Domyślnie, połączenie jest włączone buforowanie w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Chyba że jawnie wyłączyć ją, pulę optymalizuje połączenia, ponieważ są otwarte i zamknięte w aplikacji. Można też podać kilka modyfikatorów parametrów połączenia do sterowania zachowaniem buforowania połączeń. Aby uzyskać więcej informacji zobacz "Kontrolowanie połączenia puli za pomocą połączenia ciągu słowa kluczowe" w dalszej części tego tematu.  
+ Tworzenie puli połączeń mogą znacznie poprawić wydajność i skalowalność aplikacji. Buforowanie połączeń jest włączona domyślnie w ADO.NET. Chyba że jawnie wyłączyć ją, pulę optymalizuje połączenia, ponieważ są otwarte i zamknięte w aplikacji. Można też podać kilka modyfikatorów parametrów połączenia do sterowania zachowaniem buforowania połączeń. Aby uzyskać więcej informacji zobacz "Kontrolowanie połączenia puli za pomocą połączenia ciągu słowa kluczowe" w dalszej części tego tematu.  
   
 > [!NOTE]
 >  Gdy jest włączone buforowanie połączeń, a jeśli wystąpi błąd upływu limitu czasu lub inny błąd logowania, zostanie zgłoszony wyjątek i kolejnych próbach połączenia zakończy się niepowodzeniem dla następnego pięć sekund, "okres blokowanie". Jeśli aplikacja próbuje nawiązać połączenie przed upływem blokowania, pierwszy wyjątek zostanie zgłoszony ponownie. Kolejne błędy po upływie okresu blokowania spowoduje nowych okresów blokujące, które jest dwa razy tak długo, jak w poprzednim okresie blokowania, maksymalnie do jednej minuty.  
@@ -80,7 +80,7 @@ Aby uzyskać więcej informacji na temat zdarzeń powiązanych ze otwierające i
  Jeśli połączenie istnieje na serwerze, na którym nie zniknie, to połączenie może być pobierana z puli, nawet jeśli nie wykryto połączenia ODCIĘTA i ona oznaczona jako niepoprawna pulę połączeń. Jest to wymagane, ponieważ obciążenie sprawdzania, czy połączenie jest nadal ważny wyeliminować korzyści pulę, powodując innej komunikacji dwustronnej z serwerem występuje. W takiej sytuacji pierwsza próba połączenia z wykryje, że połączenia zostały oddzielone, i zgłaszany jest wyjątek.  
   
 ## <a name="clearing-the-pool"></a>Czyszczenie puli  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] w wersji 2.0 wprowadzono dwie nowe metody, aby wyczyścić puli: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> i <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` Czyści pul połączeń dla danego dostawcy i `ClearPool` czyści puli połączeń, który jest skojarzony z określonego połączenia. W przypadku połączenia używane w momencie zgłoszenia wywołania zostały odpowiednio oznaczone. Po zamknięciu, są ignorowane zamiast zwracane do puli.  
+ ADO.NET w wersji 2.0 wprowadzono dwie nowe metody, aby wyczyścić puli: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> i <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` Czyści pul połączeń dla danego dostawcy i `ClearPool` czyści puli połączeń, który jest skojarzony z określonego połączenia. W przypadku połączenia używane w momencie zgłoszenia wywołania zostały odpowiednio oznaczone. Po zamknięciu, są ignorowane zamiast zwracane do puli.  
   
 ## <a name="transaction-support"></a>Obsługa transakcji  
  Połączenia są pobierane z puli i przypisane transakcji na podstawie kontekstu. Chyba że `Enlist=false` określono w parametrach połączenia puli połączeń upewnia się, że połączenie jest zarejestrowany w <xref:System.Transactions.Transaction.Current%2A> kontekstu. Po zamknięciu i zwrócone do puli za pomocą zobowiązaniom połączenie `System.Transactions` transakcji, jego została odłożona w taki sposób, że następne żądania dla tej puli połączeń o takiej samej `System.Transactions` transakcji zwróci tego samego połączenia, jeśli jest ona dostępna. Jeśli takie żądanie zostało wydane, a brak puli połączeń, połączenie jest rysowana od składnika nietransakcyjnego puli i zarejestrowany. Jeśli w dowolnym z tych obszarów puli dostępnych żadnych połączeń, nowe połączenie jest utworzony i zarejestrowany.  

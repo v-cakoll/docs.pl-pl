@@ -2,12 +2,12 @@
 title: Aktywacja UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 158aa804a796f30e7450bda2fadc256ca3579579
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 127516b79bcb15406bfade09bc1309e55aac3dcf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623733"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881006"
 ---
 # <a name="udp-activation"></a>Aktywacja UDP
 Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki. Rozszerza [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki do obsługi aktywacji procesu przy użyciu Windows Process Activation Service (WAS).  
@@ -75,7 +75,7 @@ Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/sa
   
 #### <a name="to-set-up-this-sample"></a>Aby skonfigurować w tym przykładzie  
   
-1. Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, używając następującego polecenia.  
+1. Instalowanie programu ASP.NET 4.0, używając następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

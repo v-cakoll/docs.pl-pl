@@ -2,12 +2,12 @@
 title: Nieobsługiwane scenariusze
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637757"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878735"
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie zawiera implementacji protokołów uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym WCF nie obsługuje uruchamiania usługi za pomocą uwierzytelniania Windows na tej platformie. Inne mechanizmy uwierzytelniania, takich jak nazwy użytkownika/hasła i zintegrowane uwierzytelnianie HTTP/HTTPS są obsługiwane podczas uruchamiania usługi WCF w obszarze Windows XP Home Edition.  
@@ -36,7 +36,7 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
 >  Poprzedni wymagania są określone. Na przykład <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> tworzy element powiązania, który powoduje tożsamości Windows, ale nie można ustalić SCT. W związku z tym, można użyć z `Required` opcja [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Możliwych konfliktów platformy ASP.NET  
- WCF i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jednocześnie włączyć lub wyłączyć personifikację. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacja WCF hostuje konflikt mogą istnieć między WCF i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ustawień konfiguracji. Jeśli konflikt, ustawienia usługi WCF, pierwszeństwo, chyba że <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> właściwość jest ustawiona na <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, w którym to przypadku [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pierwszeństwo ma ustawienie personifikacji.  
+ WCF i platforma ASP.NET można zarówno włączyć lub wyłączyć personifikację. Gdy platforma ASP.NET hostuje aplikację WCF, konflikt mogą istnieć między ustawienia konfiguracji usługi WCF i platformy ASP.NET. Jeśli konflikt, ustawienia usługi WCF, pierwszeństwo, chyba że <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> właściwość jest ustawiona na <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, w którym to przypadku pierwszeństwo ma ustawienie personifikacji platformy ASP.NET.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Załadowań zestawów może zakończyć się niepowodzeniem w ramach personifikacji  
  Jeśli spersonifikowanym kontekście nie ma praw dostępu do załadowania zestawu, a jeśli po raz pierwszy środowisko uruchomieniowe języka wspólnego (CLR) próbuje załadować zestawu dla tego elementu AppDomain, <xref:System.AppDomain> buforuje awarii. Kolejne można załadować tego zestawu (lub zespoły) zakończy się niepowodzeniem, nawet po zakończeniu przywrócenie personifikacji, a nawet wtedy, gdy przywróconym kontekst ma wystarczające uprawnienia dostępu do załadowania zestawu. Jest to spowodowane CLR nie będzie ponownie podejmował prób obciążenia po zmianie kontekstu użytkownika. Należy ponownie uruchomić domeny aplikacji, aby dokonać odzyskiwania po awarii.  
@@ -75,13 +75,13 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Komunikat zabezpieczeń kończy się niepowodzeniem jeśli wymagane jest korzystanie z personifikacji aplikacji ASP.NET i zgodność platformy ASP.NET  
  Usługi WCF nie obsługuje następujących kombinacji ustawień, ponieważ mogą również uniemożliwiać uwierzytelnianie klienta występowaniu:  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Personifikacja jest włączona. Odbywa się w pliku Web.config, ustawiając `impersonate` atrybut <`identity`> elementu `true`.  
+- Personifikacji aplikacji ASP.NET jest włączona. Odbywa się w pliku Web.config, ustawiając `impersonate` atrybut <`identity`> elementu `true`.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Tryb zgodności jest włączony, ustawiając `aspNetCompatibilityEnabled` atrybutu [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) do `true`.  
+- Tryb zgodności ASP.NET jest włączony, ustawiając `aspNetCompatibilityEnabled` atrybutu [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) do `true`.  
   
 - Komunikat tryb zabezpieczeń jest używany.  
   
- Obejście polega na wyłączeniu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w trybie zgodności. Lub, jeśli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności jest wymagany, wyłącz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] personifikacji funkcji i zamiast tego należy używać personifikacji dostarczone do usług WCF. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Obejście polega na wyłączyć tryb zgodności ASP.NET. Lub, jeśli tryb zgodności ASP.NET jest wymagana, wyłącz funkcję personifikacji platformy ASP.NET i zamiast tego należy używać personifikacji dostarczone do usług WCF. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Błąd literału adres IPv6  
  Żądania zabezpieczeń zakończyć się niepowodzeniem, klient i usługa znajdują się na tym samym komputerze, gdy literał adresy IPv6 są używane przez usługę.  

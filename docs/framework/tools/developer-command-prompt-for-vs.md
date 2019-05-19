@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc88106a54a00b4b12e5043da7961791a98102c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780019"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877039"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Wiersz polecenia programisty dla programu Visual Studio
 
@@ -38,7 +38,7 @@ Może mieć kilka wierszy polecenia, w zależności od wersji programu Visual St
 
 ### <a name="in-windows-81"></a>In Windows 8.1
 
-1. Przejdź do **Start** ekran przez naciśnięcie klawiszy logo Windows ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") na klawiaturze, na przykład.
+1. Przejdź do **Start** ekran przez naciśnięcie klawiszy logo Windows ![klawiszy logo Windows na klawiaturze.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) na klawiaturze, na przykład.
 
 2. Na **Start** ekranu, naciśnij klawisz **Ctrl**+**kartę** otworzyć **aplikacje** listy, a następnie wprowadź `V`. Wybranie tej opcji powoduje listy, która zawiera wszystkie zainstalowane wiersz polecenia programu Visual Studio.
 
@@ -46,9 +46,9 @@ Może mieć kilka wierszy polecenia, w zależności od wersji programu Visual St
 
 ### <a name="in-windows-8"></a>W systemie Windows 8
 
-1. Przejdź do **Start** ekran przez naciśnięcie klawiszy logo Windows ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") na klawiaturze, na przykład.
+1. Przejdź do **Start** ekran przez naciśnięcie klawiszy logo Windows ![klawiszy logo Windows na klawiaturze.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) na klawiaturze, na przykład.
 
-2. Na **Start** ekranu, naciśnij klawisze logo Windows ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z`.
+2. Na **Start** ekranu, naciśnij klawisze logo Windows ![klawiszy logo Windows na klawiaturze.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
 
 3. Wybierz **wyświetlić aplikacje** ikony w dolnej części ekranu, a następnie wprowadź `V`. Wybranie tej opcji powoduje listy, która zawiera wszystkie zainstalowane wiersz polecenia programu Visual Studio.
 

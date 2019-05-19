@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628847"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882513"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach
 Asynchroniczny wzorzec oparty na zdarzeniach zapewnia skuteczny sposób udostępnienia zachowanie asynchroniczne w klasach, za pomocą dobrze znanych zdarzenia i delegować semantyki. Aby zaimplementować wzorzec asynchroniczny oparty na zdarzeniach, należy wykonać niektóre szczególne wymagania funkcjonalne. W poniższych sekcjach opisano wymagania i wskazówki, które należy wziąć pod uwagę podczas implementowania klasę, która następuje po wzorca asynchronicznego opartego na zdarzeniach.  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - Przechwytywać wszystkie wyjątki, które występują w operacji asynchronicznej, a następnie ustaw wartość elementu <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> właściwości tego wyjątku.  
   
 ### <a name="threading-and-contexts"></a>Wątki i konteksty  
- Do poprawnego działania klasy jest krytyczny, że procedury obsługi zdarzeń klienta są wywoływane w wątku lub kontekstu dla modelu danej aplikacji, w tym [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] i aplikacjach Windows Forms. Aby zapewnić poprawne działanie asynchroniczne klasy pod dowolnego modelu aplikacji znajdują się dwie klasy pomocnika ważne: <xref:System.ComponentModel.AsyncOperation> i <xref:System.ComponentModel.AsyncOperationManager>.  
+ Do poprawnego działania swojej klasy ważne jest, programy obsługi zdarzeń klienta są wywoływane w wątku lub kontekstu dla modelu danej aplikacji, w tym aplikacji ASP.NET i Windows Forms. Aby zapewnić poprawne działanie asynchroniczne klasy pod dowolnego modelu aplikacji znajdują się dwie klasy pomocnika ważne: <xref:System.ComponentModel.AsyncOperation> i <xref:System.ComponentModel.AsyncOperationManager>.  
   
  <xref:System.ComponentModel.AsyncOperationManager> udostępnia pojedynczą metodę, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, co powoduje zwrócenie <xref:System.ComponentModel.AsyncOperation>. Twoje <em>MethodName</em>**Async** wywołania metody <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> i klasa używa zwracanego <xref:System.ComponentModel.AsyncOperation> śledzić okres istnienia zadania asynchronicznego.  
   

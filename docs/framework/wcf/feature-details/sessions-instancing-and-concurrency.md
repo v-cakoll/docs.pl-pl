@@ -2,12 +2,12 @@
 title: Sesje, tworzenie wystąpień i współbieżność
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 52c9ed5d672ea05fec3333c9fece8b693143d6f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74b9971fa9267ef6156b27261c61d3e998d01883
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586107"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877329"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesje, tworzenie wystąpień i współbieżność
 A *sesji* korelacja wszystkich komunikatów przesyłanych między dwoma punktami końcowymi. *Tworzenie wystąpienia* odwołuje się do kontrolowania okresu istnienia obiektów zdefiniowanych przez użytkownika usług i ich powiązane <xref:System.ServiceModel.InstanceContext> obiektów. *Współbieżność* termin do sterowania liczby wątków działających w <xref:System.ServiceModel.InstanceContext> w tym samym czasie.  
@@ -27,13 +27,13 @@ A *sesji* korelacja wszystkich komunikatów przesyłanych między dwoma punktami
   
 - Brak nie magazynu ogólnych danych skojarzonych z sesją usługi WCF.  
   
- Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji i funkcji zawiera, można zauważyć następujące różnice między tego rodzaju sesji i sesje WCF:  
+ Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> funkcje i klasy w aplikacjach ASP.NET udostępnia, można zauważyć następujące różnice między tego rodzaju sesji i sesje WCF:  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są zawsze inicjowanych przez serwer.  
+- ASP.NET sesje są zawsze inicjowanych przez serwer.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są niejawnie nieuporządkowane.  
+- Sesje ASP.NET są niejawnie nieuporządkowane.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje udostępniają mechanizm magazynu danych ogólnych dla żądań.  
+- Sesji programu ASP.NET udostępniają mechanizm magazynu danych ogólnych dla żądań.  
   
  Aplikacje usługi i aplikacje klienckie wchodzić w interakcje z sesjami na różne sposoby. Aplikacje klienckie zainicjować sesji odbierać i przetwarzać komunikaty wysyłane w ramach sesji. Aplikacje usługi można użyć sesji jako punktu rozszerzalności, można dodać dodatkowe zachowanie. Jest to realizowane przez pracy bezpośrednio z <xref:System.ServiceModel.InstanceContext> lub implementacji dostawcy niestandardowego wystąpienia kontekstu.  
   

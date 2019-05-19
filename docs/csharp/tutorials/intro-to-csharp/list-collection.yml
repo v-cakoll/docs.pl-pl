@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 04/23/2019
-  ms.locfileid: "61675666"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65880560"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Została właśnie utworzona lista ciągów, dodane trzy nazwy do tej listy i drukowane nazwy w całości wielkimi. Używasz pojęcia, które wyjaśniono w samouczkach wcześniej pętli na liście.
+    Została utworzona lista ciągów, dodane trzy nazwy do tej listy i drukowane nazwy w całości wielkimi. Używasz pojęcia, które wyjaśniono w samouczkach wcześniej pętli na liście.
 
 
     Kod, aby wyświetlić nazwy sprawia, że użycie [Interpolacja ciągów](../../language-reference/tokens/interpolated.md) funkcji. Kiedy należy poprzedzić `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Rzeczywistego ciągu zastępuje wartość, która generuje kod C#. W tym przykładzie zastępuje `{name.ToUpper()}` przy użyciu nazwy, konwertowane na wielkie litery, ponieważ wywołujesz <xref:System.String.ToUpper%2A?displayProperty=nameWithType> metody.
@@ -56,7 +56,7 @@ items:
     Kolekcja utworzona używa <xref:System.Collections.Generic.List%601> typu. Tego typu przechowuje elementów. Należy określić typ elementów między nawiasami.
 
 
-    Jednym ważnym aspektem to <xref:System.Collections.Generic.List%601> typ jest, może rosnąć lub maleć, dzięki któremu można dodawać lub usuwać elementy. Dodaj następujący kod poniższego kodu, które zostały już wpisane:
+    Jednym ważnym aspektem to <xref:System.Collections.Generic.List%601> typ jest, może rosnąć lub maleć, dzięki któremu można dodawać lub usuwać elementy. Wyniki można wyświetlić po po wyświetleniu jego zawartość, modyfikując zawartość. Dodaj następujący kod poniższego kodu, które zostały już wpisane (poniżej pętli, która wyświetla zawartość):
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    Dwa więcej nazw zostały dodane na końcu listy. Został również usunięty jeden także.
+    Dwa więcej nazw zostały dodane na końcu listy. Został również usunięty jeden także. Dane wyjściowe z tego bloku kodu pokazuje zawartość początkową, a następnie drukuje pusty wiersz i nowej zawartości.
 
 
     <xref:System.Collections.Generic.List%601> Umożliwia odwoływać się do pojedynczych elementów przez **indeksu** także. Dostęp przy użyciu elementów `[` i `]` tokenów. Dodaj następujący kod poniżej co już i wypróbuj:
@@ -112,7 +112,7 @@ items:
 - title: Wyszukiwanie i sortowanie list
   durationInMinutes: 5
   content: >
-    Nasze przykłady za pomocą list stosunkowo mały, ale aplikacje często może utworzyć listy o wiele więcej elementów, czasami numerowania w tysiącach. Aby znaleźć elementy w tych kolekcjach większe, musisz wyszukiwania na liście dla różnych elementów. <xref:System.Collections.Generic.List%601.IndexOf%2A> Metoda wyszukuje element i zwraca indeks elementu. Spróbuj, aby zobaczyć, jak to działa.  Dodaj następujący kod poniżej co napisanych do tej pory:
+    Nasze przykłady za pomocą list stosunkowo mały, ale aplikacje często może utworzyć listy o wiele więcej elementów, czasami numerowania w tysiącach. Aby znaleźć elementy w tych kolekcjach większe, musisz wyszukiwania na liście dla różnych elementów. <xref:System.Collections.Generic.List%601.IndexOf%2A> Metoda wyszukuje element i zwraca indeks elementu. Wypróbuj ją, aby zobaczyć, jak to działa.  Dodaj następujący kod poniżej co napisanych do tej pory:
 
 
     ```csharp
@@ -152,7 +152,7 @@ items:
 - title: Listę innych typów
   durationInMinutes: 5
   content: >
-    Wcześniej użyto `string` typu na listach do tej pory. Upewnijmy się <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utwórzmy zbioru liczb. Usuń kod, który napiszesz do tej pory i zastąp go to:
+    Wcześniej użyto `string` typu na listach do tej pory. Upewnijmy się <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utwórzmy zbioru liczb. Usuń kod, który napiszesz do tej pory i zastąp go następującym kodem:
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    Który tworzy listę liczb całkowitych i ustawia pierwszych dwóch liczb całkowitych na wartości 1. Są to dwie pierwsze wartości *sekwencji Fibonacci*, sekwencji liczb. Każdy kolejny numer Fibonacci zostanie znaleziony, wykonując sumie poprzednich dwóch liczb. Dodaj następujący kod:
+    Który tworzy listę liczb całkowitych i ustawia pierwszych dwóch liczb całkowitych na wartości 1. *Sekwencji Fibonacci*, sekwencji liczb, rozpoczyna się od dwóch wartości 1. Każdy kolejny numer Fibonacci zostanie znaleziony, wykonując sumie poprzednich dwóch liczb. Dodaj następujący kod:
 
 
     ```csharp
@@ -230,7 +230,7 @@ items:
     Interaktywny samouczek dotyczący listy został ukończony. Jest ostateczny wprowadzenie do C# interaktywnego samouczka. Możesz odwiedzić stronę [lokacji .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) można pobrać zestawu .NET Core SDK, Utwórz projekt na komputerze i Zachowaj kodowania. W kroku "Zachowaj Learning" łączy do tych samouczków można kompilować projekty na swojej maszynie.
 
 
-    Możesz dowiedzieć się więcej [kolekcji .NET](../../../standard/collections/index.md) w następujących tematach:
+    Możesz dowiedzieć się więcej [kolekcji .NET](../../../standard/collections/index.md) w następujących artykułach:
 
     - [Wybieranie typu kolekcji](../../../standard/collections/selecting-a-collection-class.md)
 

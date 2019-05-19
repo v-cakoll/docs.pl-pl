@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633891"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882485"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, operacje analizy i formatowanie wartości daty i godziny, nie należy polegać na format domyślny (czyli w większości przypadków format kultury lokalnego serwera sieci Web) podczas interakcji z użytkownikiem. Zamiast tego formularzy sieci Web, Obsługa daty i godziny ciągi wprowadzane przez użytkownika, które należy przeanalizować ciągi przy użyciu preferowanej kultury użytkownika. Podobnie dane daty i godziny, powinna być wyświetlana dla użytkownika w formacie, który jest zgodny z kultury użytkownika. W tym temacie pokazano, jak to zrobić.  
@@ -98,7 +98,7 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
  Twój kod może wywołać albo <xref:System.DateTime.Parse%2A> lub <xref:System.DateTime.TryParse%2A> metody konwersji użytkownika reprezentacją ciągu daty i czasu <xref:System.DateTime> wartość. Wielokrotnego wywołania metody parse może być wymagane dla pojedynczej operacji analizy. W rezultacie <xref:System.DateTime.TryParse%2A> lepszym rozwiązaniem jest użycie, ponieważ zwraca `false` w przypadku niepowodzenia operacji analizy. Z kolei obsługi wyjątków dopuszczalnych, które mogą być generowane przez <xref:System.DateTime.Parse%2A> metoda może być bardzo kosztowna oferty w aplikacji sieci Web.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby skompilować ten kod, Utwórz [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony sieci Web bez związanym z kodem. Następnie skopiuj przykład do strony sieci Web, dzięki czemu zastępuje istniejący kod. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Strony sieci Web może zawierać następujących formantów:  
+ Aby skompilować ten kod, Utwórz stronę sieci Web platformy ASP.NET bez związanym z kodem. Następnie skopiuj przykład do strony sieci Web, dzięki czemu zastępuje istniejący kod. Strona sieci Web ASP.NET może zawierać następujących formantów:  
   
 - A <xref:System.Web.UI.WebControls.Label> formant, który nie ma odwołania w kodzie. Ustaw jego <xref:System.Web.UI.WebControls.TextBox.Text%2A> właściwość "Wprowadź liczbę:".  
   

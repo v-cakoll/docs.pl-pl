@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 560bb35bf9685abbc40bc7b87a4490752c546ea4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665827"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880639"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Instrukcje: dodawanie i usuwanie kart za pomocą formularzy systemu Windows TabControl przy użyciu narzędzia Projektant
 Po umieszczeniu <xref:System.Windows.Forms.TabControl> formantu w formularzu, zawiera dwie karty domyślnie. Można dodawać lub usuwanie kart za pomocą projektanta.  
@@ -29,7 +29,7 @@ Po umieszczeniu <xref:System.Windows.Forms.TabControl> formantu w formularzu, za
   
      —lub—  
   
-     W **właściwości** okna, kliknij przycisk **wielokropka** przycisku (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.TabControl.TabPages%2A> właściwości, aby otworzyć **TabPage — Edytor kolekcji**. Kliknij przycisk **Dodaj** lub **Usuń** przycisku.  
+     W **właściwości** okna, kliknij przycisk **wielokropka** przycisku (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok pozycji <xref:System.Windows.Forms.TabControl.TabPages%2A> właściwości Aby otworzyć **TabPage — Edytor kolekcji**. Kliknij przycisk **Dodaj** lub **Usuń** przycisku.  
   
 ## <a name="see-also"></a>Zobacz także
 

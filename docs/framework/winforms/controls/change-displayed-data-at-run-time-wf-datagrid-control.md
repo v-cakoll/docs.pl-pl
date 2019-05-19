@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3217680a2bab43124b75529bead97ffcfbb06aea
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961658"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882135"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Instrukcje: zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy systemu Windows
 > [!NOTE]
@@ -64,13 +64,13 @@ ms.locfileid: "61961658"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     W czasie, możesz użyć wykonywania <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę, aby powiązać <xref:System.Windows.Forms.DataGrid> kontrolki do innego źródła danych. Na przykład masz kilka [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] formantami danych, każda jest połączona z inną bazą danych.  
+     W czasie, możesz użyć wykonywania <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę, aby powiązać <xref:System.Windows.Forms.DataGrid> kontrolki do innego źródła danych. Na przykład masz kilka formantów danych ADO.NET, każda jest połączona z inną bazą danych.  
   
 ### <a name="to-change-the-datasource-programmatically"></a>Aby programowo zmienić źródło danych  
   
 1. Ustaw <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę, aby nazwa źródła danych i chcesz powiązać z tabeli.  
   
-     Poniższy przykład pokazuje, jak zmienić źródło daty przy użyciu <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] formant danych (adoPubsAuthors), który jest połączony z tabelą autorów w bazie danych Pubs.  
+     Poniższy przykład pokazuje, jak zmienić źródło daty przy użyciu <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę, aby formant danych ADO.NET (adoPubsAuthors), który jest połączony z tabelą autorów w bazie danych Pubs.  
   
     ```vb  
     Private Sub ResetSource()  

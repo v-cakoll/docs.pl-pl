@@ -1,30 +1,39 @@
 ---
-title: Omówienie zestawu SDK programu .NET core
+title: Omówienie zestawu .NET core SDK
 description: Dowiedz się o .NET Core SDK, która stanowi zestaw bibliotek i narzędzi służących do tworzenia projektów .NET Core.
-ms.date: 06/20/2016
+ms.date: 05/13/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0b63de92dbee318326f670175ff6824a8c056784
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed9d51b337af8edc251a4f3b02c31b72b76ba33d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631886"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877971"
 ---
-# <a name="net-core-sdk-overview"></a>Omówienie zestawu SDK programu .NET core
+# <a name="net-core-sdk-overview"></a>Omówienie zestawu .NET core SDK
 
-.NET core Software Development Kit (SDK) to zbiór bibliotek i narzędzi, które umożliwiają deweloperom tworzenie aplikacji .NET Core oraz bibliotek. To jest pakiet, który najprawdopodobniej uzyska dostęp do deweloperów. 
+.NET core Software Development Kit (SDK) to zbiór bibliotek i narzędzi, które umożliwiają deweloperom tworzenie aplikacji .NET Core oraz bibliotek. Zawiera następujące składniki, które są używane do tworzenia i uruchamiania aplikacji:
 
-Zawiera następujące składniki:
-
-1. Podstawowe narzędzia wiersza polecenia platformy .NET są używane do tworzenia aplikacji
-2. .NET core (biblioteki i środowisko uruchomieniowe), dzięki czemu aplikacje, które zarówno można skompilować i uruchomić
-3. `dotnet` Sterownik do uruchomienia [poleceń interfejsu wiersza polecenia](tools/index.md) oraz uruchamiania aplikacji
+- Narzędzia wiersza polecenia platformy .NET Core.
+- Biblioteki .NET core i środowiska uruchomieniowego.
+- `dotnet` [Sterownika](/tools/index.md#driver).
 
 ## <a name="acquiring-the-net-core-sdk"></a>Pobieranie zestawu .NET Core SDK
-Podobnie jak w przypadku dowolnych narzędzi, najpierw jest Pobierz narzędzia do komputera. Zależnie od scenariusza możesz użyć natywnych instalatorów do zainstalowania zestawu SDK lub użyj skryptu powłoki instalacji.
 
-Natywnych instalatorów przede wszystkim są przeznaczone dla dewelopera maszyn. Zestaw SDK jest dystrybuowane przy użyciu mechanizmu natywnych instalacji każdej z obsługiwanych platform, na przykład DEB pakiety na pakiety MSI lub Ubuntu na Windows. Te pliki instalacyjne spowoduje Instalowanie i konfigurowanie środowiska odpowiednio do potrzeb użytkownikowi korzystanie z zestawu SDK natychmiast po zakończeniu instalacji. Jednak również wymagają uprawnień administracyjnych na komputerze. Instrukcje dotyczące instalacji można wyświetlić na [Przewodnik instalacji platformy .NET Core](https://aka.ms/dotnetcoregs).
+Podobnie jak w przypadku dowolnych narzędzi, najpierw jest Pobierz narzędzia do komputera. Zależnie od scenariusza można zainstalować zestawu SDK przy użyciu jednej z następujących metod:
 
-Z drugiej strony, skryptów instalacji nie wymagają uprawnień administracyjnych. Jednak są również nie zainstaluje wszystkie wstępnie wymagane składniki na komputerze; należy ręcznie zainstalować wszystkie wymagania wstępne. Skrypty są przeznaczone głównie na potrzeby konfigurowania serwerów kompilacji lub gdy chcesz zainstalować narzędzia bez uprawnień administratora (Uwaga zastrzeżenie: wymagania wstępne powyżej). Więcej informacji można znaleźć na [zainstalować temat referencyjny skryptu](tools/dotnet-install-script.md). Jeśli interesują Cię sposobu konfigurowania zestawu SDK na serwerze kompilacji ciągłej integracji, możesz wykonać przyjrzeć się [zestawu SDK z serwerami CI](tools/using-ci-with-cli.md) dokumentu.
+- Za pomocą natywnych instalatorów.
+- Użyj skryptu powłoki instalacji.
 
-Domyślnie zestaw SDK zainstaluje się w sposób "side-by-side" (SxS). Oznacza to, że wiele wersji narzędzi interfejsu wiersza polecenia mogą współistnieć na jednym komputerze w danym momencie. Sposobu poprawna wersja zostanie wykorzystany zostało wyjaśnione bardziej szczegółowo w [sekcji sterownika](tools/index.md#driver) tematu narzędzia wiersza polecenia programu .NET Core.
+Natywnych instalatorów przede wszystkim są przeznaczone dla dewelopera maszyn. Zestaw SDK jest dystrybuowane przy użyciu mechanizmu natywnych instalacji każdej z obsługiwanych platform, takich jak pakiety DEB na pakiety MSI lub Ubuntu na Windows. Te pliki instalacyjne, instalowanie i konfigurowanie środowiska odpowiednio do potrzeb użytkownikowi korzystanie z zestawu SDK natychmiast po zakończeniu instalacji. Jednak również wymagają uprawnień administracyjnych na komputerze. Można znaleźć zestawu SDK do zainstalowania na [pobiera .NET](https://dotnet.microsoft.com/download) strony.
+
+Z drugiej strony, skryptów instalacji nie wymagają uprawnień administracyjnych. Jednak są również nie należy instalować wszystkie wstępnie wymagane składniki na komputerze; należy ręcznie zainstalować wszystkie wymagania wstępne. Skrypty są przeznaczone głównie na potrzeby konfigurowania serwerów kompilacji lub gdy chcesz zainstalować narzędzia bez uprawnień administratora (Uwaga zastrzeżenie: wymagania wstępne powyżej). Więcej informacji można znaleźć [zainstalować odwołanie do skryptu](tools/dotnet-install-script.md) artykułu. Jeśli interesuje Cię sposobu konfigurowania zestawu SDK na serwerze kompilacji ciągłej integracji, zobacz [przy użyciu zestawu .NET Core SDK i narzędzia w ciągłej integracji (CI)](tools/using-ci-with-cli.md) artykułu.
+
+Domyślnie zestaw SDK instaluje się w sposób "side-by-side" (SxS), co oznacza, że wiele wersji narzędzi interfejsu wiersza polecenia mogą współistnieć na jednym komputerze w danym momencie. Jak wersja pobiera pobrane po uruchomieniu polecenia interfejsu wiersza polecenia zostało wyjaśnione bardziej szczegółowo w [wybierz wersję platformy .NET Core do użycia](/versions/selection.md) artykułu.
+
+## <a name="see-also"></a>Zobacz także
+
+- [.NET Core CLI](tools/index.md)
+- [Omówienie przechowywania wersji platformy .NET core](/versions/index.md)
+- [Jak usunąć środowisko uruchomieniowe programu .NET Core i zestawu SDK](versions/remove-runtime-sdk-versions.md)
+- [Wybierz wersję platformy .NET Core do użycia](/versions/selection.md)

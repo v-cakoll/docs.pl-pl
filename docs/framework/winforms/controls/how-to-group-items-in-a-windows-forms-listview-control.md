@@ -12,19 +12,18 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: f616436671da449e4f7b47c0a5d0c1b576584a1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbca1d76f747f53103095c916605ce7335207f51
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941402"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882376"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Instrukcje: grupowanie elementów w kontrolce ListView formularzy systemu Windows
 Z funkcji grupowania <xref:System.Windows.Forms.ListView> kontrolki, można wyświetlić powiązane zestawy elementów w grupach. Te grupy są oddzielone na ekranie nagłówków grup poziomej, zawierające tytułów grup. Możesz użyć <xref:System.Windows.Forms.ListView> grup, aby upewnić się, przechodząc duże listy łatwiejsze przez grupowanie elementów w kolejności alfabetycznej, według daty lub przez inne logiczne grupowanie. Na poniższej ilustracji przedstawiono niektóre zgrupowanych elementów.  
   
- ![Grupy ListView](./media/listviewgroups.gif "ListViewGroups")  
-ListView pogrupowanymi elementami  
-  
+ ![Zrzut ekranu przedstawiający nieparzysta, a nawet grupy ListView.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
+   
  Aby włączyć grupowanie, należy najpierw utworzyć co najmniej jedną grupę w Projektancie lub programowo. Po zdefiniowaniu grupy można przypisać <xref:System.Windows.Forms.ListView> elementów do grupy. To może również przenieść elementy z jednej grupy do innego programowo.  
   
 > [!NOTE]

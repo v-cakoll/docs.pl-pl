@@ -2,15 +2,15 @@
 title: Dostawca członkostwa i ról
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638401"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876745"
 ---
 # <a name="membership-and-role-provider"></a>Dostawca członkostwa i ról
-Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawców członkostwa i ról w celu uwierzytelniania i autoryzowania klientów.  
+Przykładowe Dostawca członkostwa i ról pokazuje, jak usługa może używać członkostwa ASP.NET i dostawców ról do uwierzytelniania i autoryzacji klientów.  
   
  W tym przykładzie klient to aplikacja konsoli (.exe), a usługa jest hostowana przez Internetowe usługi informacyjne (IIS).  
   
@@ -21,11 +21,11 @@ Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INC
   
 - Klienta można uwierzytelniać za pomocą kombinacji nazwy użytkownika i hasła.  
   
-- Serwer można sprawdzić poprawności poświadczeń klienta względem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy członkostwa.  
+- Serwer można sprawdzić poprawności poświadczeń klienta względem dostawcy członkostwa platformy ASP.NET.  
   
 - Serwer mogą być uwierzytelniane przy użyciu certyfikatu X.509 serwera.  
   
-- Serwer można mapować uwierzytelnionego klienta do roli przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról.  
+- Serwer można mapować uwierzytelnionego klienta do roli przy użyciu dostawcy ról ASP.NET.  
   
 - Serwer może używać `PrincipalPermissionAttribute` możesz kontrolować dostęp do niektórych metod, które są udostępniane przez usługę.  
   
@@ -69,7 +69,7 @@ Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INC
 </system.web>  
 ```  
   
- Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, która jest zdefiniowana za pomocą pliku konfiguracji Web.config. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding`, która domyślnie korzysta z uwierzytelniania Windows. W tym przykładzie ustawia standard `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika. Zachowanie Określa, czy certyfikat serwera ma być używany do uwierzytelniania usługi. Certyfikat serwera musi zawierać taką samą wartość `SubjectName` jako `findValue` atrybutu w [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) element konfiguracji. Ponadto zachowanie oznacza, że uwierzytelnianie nazwy użytkownika i hasła pary odbywa się przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy członkostwa i ról mapowanie odbywa się przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, określając nazwy zdefiniowane dla dwóch dostawców.  
+ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, która jest zdefiniowana za pomocą pliku konfiguracji Web.config. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego `wsHttpBinding`, która domyślnie korzysta z uwierzytelniania Windows. W tym przykładzie ustawia standard `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika. Zachowanie Określa, czy certyfikat serwera ma być używany do uwierzytelniania usługi. Certyfikat serwera musi zawierać taką samą wartość `SubjectName` jako `findValue` atrybutu w [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) element konfiguracji. Ponadto zachowanie Określa, że par nazwa użytkownika i hasło uwierzytelniania przez dostawcy członkostwa platformy ASP.NET, a rola mapowanie odbywa się przez dostawcy ról ASP.NET, określając nazwy zdefiniowane dla dwóch dostawców.  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INC
 2. Upewnij się, że skonfigurowano [baza danych usług aplikacji ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Jeśli używasz programu SQL Server Express Edition jest nazwą serwera. \SQLEXPRESS. Ten serwer powinna być używana podczas konfigurowania [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] baza danych usług aplikacji oraz jak parametry połączenia w pliku Web.config.  
+    >  Jeśli używasz programu SQL Server Express Edition jest nazwą serwera. \SQLEXPRESS. Ten serwer stosuje się podczas konfigurowania platformy ASP.NET usługi bazy danych aplikacji oraz jak parametry połączenia w pliku Web.config.  
   
     > [!NOTE]
-    >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Proces roboczy musi mieć uprawnienia w bazie danych, który jest tworzony w tym kroku. Aby to zrobić, należy użyć narzędzia sqlcmd lub SQL Server Management Studio.  
+    >  Konto procesu roboczego ASP.NET, musi mieć uprawnienia w bazie danych, który jest tworzony w tym kroku. Aby to zrobić, należy użyć narzędzia sqlcmd lub SQL Server Management Studio.  
   
 3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu komputerze, użyj poniższych instrukcji.  
   

@@ -1,6 +1,6 @@
 ---
 title: Instrukcja foreach języka C#
-ms.date: 06/29/2018
+ms.date: 05/17/2019
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661639"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880535"
 ---
 # <a name="foreach-in-c-reference"></a>Instrukcja foreach w (odwołanie w C#)
 
@@ -26,6 +26,8 @@ ms.locfileid: "61661639"
 Począwszy od C# 7.3, jeśli moduł wyliczający `Current` właściwość zwraca [odwoływać się do wartości zwracanej](ref.md#reference-return-values) (`ref T` gdzie `T` jest typ elementu kolekcji), można zadeklarować zmiennej iteracji `ref` lub `ref readonly` modyfikator.
 
 W dowolnym punkcie w `foreach` blok instrukcji, można zerwać pętlę za pomocą [podziału](break.md) instrukcji lub krok do następnej iteracji w pętli za pomocą [nadal](continue.md) instrukcji. Możesz również wyjść `foreach` pętli przez [przejdź do](goto.md), [zwracają](return.md), lub [throw](throw.md) instrukcji.
+
+Jeśli `foreach` instrukcji jest stosowany do `null`, <xref:System.NullReferenceException> zgłaszany. Jeśli źródło zbiór `foreach` instrukcja jest pusta, treść `foreach` pętli nie jest wykonywane i pominięte.
 
 ## <a name="examples"></a>Przykłady
 

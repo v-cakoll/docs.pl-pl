@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting caption
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
-ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07355be0809f3dde480cf14b39e26a4266c4d936
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013221"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877395"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows przy użyciu narzędzia Projektant
 Kontrolek formularzy Windows Forms jest zazwyczaj wyświetlane jakiś tekst, który jest powiązany z podstawową funkcją kontroli. Na przykład <xref:System.Windows.Forms.Button> kontroli zwykle wyświetla podpis, który wskazuje, jakie działania będą wykonywane po kliknięciu przycisku. Dla wszystkich kontrolek, możesz ustawić lub zwróć tekst przy użyciu <xref:System.Windows.Forms.Control.Text%2A> właściwości. Czcionkę można zmienić za pomocą <xref:System.Windows.Forms.Control.Font%2A> właściwości.  
@@ -21,7 +21,7 @@ Kontrolek formularzy Windows Forms jest zazwyczaj wyświetlane jakiś tekst, kt�
   
      Do utworzenia klawiszem skrótu podkreślony obejmuje handlowe "i" (&) przed literą, który zostanie klawisz skrótu.  
   
-2. W oknie dialogowym właściwości kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.Control.Font%2A> właściwości.  
+2.  W oknie dialogowym właściwości kliknij przycisk oznaczony wielokropkiem (![przycisk wielokropka (...) w oknie dialogowym właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok pozycji <xref:System.Windows.Forms.Control.Font%2A> właściwości.  
   
      W oknie dialogowym standardowa czcionkę wybierz czcionkę, styl czcionki, rozmiaru, efekty (na przykład przekreślenie lub podkreślenie) i skryptów, które mają.  
   

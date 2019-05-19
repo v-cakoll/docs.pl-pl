@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625812"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881107"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje cyfrowego certyfikatu X.509 oraz sposobu ich używania w programie WCF i zawiera łącza do tematów, opisano te pojęcia dalsze lub które pokazują sposób wykonywania typowych zadań przy użyciu programu WCF i certyfikatów.  
@@ -29,7 +29,7 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
 ## <a name="certificate-stores"></a>Magazyny certyfikatów  
  Certyfikaty znajdują się w magazynach. Dwie lokalizacje magazynu głównych istnieją, które są podzielone na magazynach podrzędnych. Jeśli jesteś administratorem na komputerze, możesz wyświetlić obie magazynów głównych przy użyciu narzędzia przystawki programu MMC. Użytkownicy niebędący administratorami mogą wyświetlać tylko bieżącego magazynu użytkownika.  
   
-- **Magazynu komputer lokalny**. Zawiera certyfikaty uzyskiwał dostęp do maszyny procesów, takich jak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Użyj tej lokalizacji można przechowywać certyfikaty uwierzytelniania serwera wobec klientów.  
+- **Magazynu komputer lokalny**. Zawiera certyfikaty używane przez procesy maszyny, takich jak ASP.NET. Użyj tej lokalizacji można przechowywać certyfikaty uwierzytelniania serwera wobec klientów.  
   
 - **Bieżący magazyn użytkownika**. Interaktywne aplikacje zwykle umieść tutaj certyfikaty dla bieżącego użytkownika komputera. Jeśli tworzysz aplikację kliencką, to zwykle umieszczane są certyfikaty, które przeprowadzają uwierzytelnianie użytkownika do usługi.  
   
@@ -52,7 +52,7 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
 - Jeśli usługi lub klienta jest aplikacja, która jest uruchamiana na koncie użytkownika, użyj **bieżącego użytkownika** przechowywania.  
   
 ### <a name="accessing-stores"></a>Uzyskiwanie dostępu do magazynów  
- Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak foldery na komputerze. Podczas tworzenia usługi hostowanej przez Internetowe usługi informacyjne (IIS) [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proces jest uruchamiany w ramach [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] konta. Konto musi mieć dostęp do magazynu który zawiera certyfikaty używane przez usługę. Każdy z magazynów głównych jest chroniony za pomocą domyślnej listy dostępu, ale listy mogą być modyfikowane. Jeśli utworzysz rolę oddzielne dostępu do magazynu, należy przyznać uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak zmodyfikować listę dostępu za pomocą narzędzia WinHttpCertConfig.exe, zobacz [jak: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Aby uzyskać więcej informacji o korzystaniu z certyfikatów klienta z programem IIS, zobacz [sposób wywoływania usługi sieci Web przy użyciu certyfikatu klienta do uwierzytelniania w aplikacji internetowej ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak foldery na komputerze. Podczas tworzenia usługi hostowanej przez Internetowe usługi informacyjne (IIS), proces ASP.NET jest uruchamiany na koncie platformy ASP.NET. Konto musi mieć dostęp do magazynu który zawiera certyfikaty używane przez usługę. Każdy z magazynów głównych jest chroniony za pomocą domyślnej listy dostępu, ale listy mogą być modyfikowane. Jeśli utworzysz rolę oddzielne dostępu do magazynu, należy przyznać uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak zmodyfikować listę dostępu za pomocą narzędzia WinHttpCertConfig.exe, zobacz [jak: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Aby uzyskać więcej informacji o korzystaniu z certyfikatów klienta z programem IIS, zobacz [sposób wywoływania usługi sieci Web przy użyciu certyfikatu klienta do uwierzytelniania w aplikacji internetowej ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Łańcuch zaufania i urzędy certyfikacji  
  Certyfikaty są tworzone w hierarchii, w którym każdego indywidualnego certyfikatu jest połączony z urzędem certyfikacji, który wystawił ten certyfikat. Jest to łącze do certyfikatu urzędu certyfikacji. Urząd certyfikacji certyfikatu następnie łączy się z urzędem certyfikacji, który wystawił certyfikat oryginalnego urzędu certyfikacji. Ten proces jest powtarzany, aż do osiągnięcia certyfikat głównego urzędu certyfikacji. Certyfikat głównego urzędu certyfikacji jest dodatkowo z natury zaufanych.  

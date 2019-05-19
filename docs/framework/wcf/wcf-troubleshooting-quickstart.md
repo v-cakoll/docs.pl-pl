@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53e164bfdc27d99073cc893f98f332366091a753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613201"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881293"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie wymieniono znane problemy, których klienci mają wystąpiły podczas tworzenia usług WCF klientów i usług. Jeśli ten problem, który zostały przekroczone nie ma na tej liście, zalecamy Konfigurowanie śledzenia dla Twojej usługi. Spowoduje to wygenerowanie pliku śledzenia można wyświetlić w podglądzie pliku śledzenia i uzyskać szczegółowe informacje dotyczące wyjątków, które mogą mieć miejsce w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia zobacz: [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na temat przeglądarka plików śledzenia zobacz: [Usługa Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Co to jest adres podstawowy? Jaki związek między adres punktu końcowego?  
- Adres podstawowy jest główny adres <xref:System.ServiceModel.ServiceHost> klasy. Domyślnie, jeśli dodasz <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy do konfiguracji usługi sieci Web Services Description Language (WSDL) dla wszystkich punktów końcowych, publikuje hosta są pobierane z podstawowy adres HTTP, a także wszelkie adres względny dostarczane z zachowaniem metadanych oraz "? wsdl". Jeśli znasz [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] i IIS, adres podstawowy jest równoważne do katalogu wirtualnego.  
+ Adres podstawowy jest główny adres <xref:System.ServiceModel.ServiceHost> klasy. Domyślnie, jeśli dodasz <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy do konfiguracji usługi sieci Web Services Description Language (WSDL) dla wszystkich punktów końcowych, publikuje hosta są pobierane z podstawowy adres HTTP, a także wszelkie adres względny dostarczane z zachowaniem metadanych oraz "? wsdl". Osoby zaznajomione z platformą ASP.NET i IIS adres podstawowy jest odpowiednikiem katalogu wirtualnego.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Udostępnianie portów między punktu końcowego usługi i punktu końcowego mex przy użyciu NetTcpBinding  
  Jeśli określisz adres podstawowy usługi jako net.tcp://MyServer: 8080/Moja_usługa i dodać następujących punktów końcowych:  

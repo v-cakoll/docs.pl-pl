@@ -9,18 +9,18 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e6e0597f40f32df17d435cb959b246b3b7872fa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002069"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881097"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Instrukcje: Personifikowanie klienta w usłudze
 Personifikowanie klienta usługi Windows Communication Foundation (WCF) umożliwia usługi w celu wykonywania zadań w imieniu klienta. Dla akcji z zastrzeżeniem dostępu kontrolki listy (ACL) sprawdza, takich jak dostęp do katalogów i plików na maszynie lub dostęp do bazy danych programu SQL Server, sprawdź listy ACL jest względem konta użytkownika klienta. W tym temacie przedstawiono podstawowe kroki wymagane do włączenia klienta w domenie Windows ustawić poziom personifikacji klienta. Dla pracy na przykład, zobacz [Personifikowanie klienta](../../../docs/framework/wcf/samples/impersonating-the-client.md). Aby uzyskać więcej informacji na temat personifikację klienta, zobacz [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
->  Gdy klienta i usługi są uruchomione na tym samym komputerze, a klient jest uruchomiony w ramach konta system (czyli `Local System` lub `Network Service`), nie można spersonifikować klienta, po nawiązaniu bezpiecznej sesji przy użyciu stanowych tokenów kontekstu zabezpieczeń. Aplikacja WinForms lub konsoli zwykle jest uruchamiany aktualnie zalogowanego konta, tak aby konta mogą personalizacji domyślnie. Jednakże, gdy klient jest [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony i na tej stronie znajduje się w [!INCLUDE[iis601](../../../includes/iis601-md.md)] lub usług IIS 7.0, a następnie klient jest uruchamiany w ramach `Network Service` konto domyślne. Domyślnie wszystkie powiązania dostarczane przez system, które obsługują bezpiecznej sesji używają bezstanowe tokenu kontekstu zabezpieczeń. Jednakże jeśli klient jest [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] strony i bezpiecznej sesji przy użyciu stanowych tokenów kontekstu zabezpieczeń są używane, nie można spersonifikować klienta. Aby uzyskać więcej informacji na temat tokeny stanowych kontekstu zabezpieczeń w ramach bezpiecznej sesji zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Gdy klienta i usługi są uruchomione na tym samym komputerze, a klient jest uruchomiony w ramach konta system (czyli `Local System` lub `Network Service`), nie można spersonifikować klienta, po nawiązaniu bezpiecznej sesji przy użyciu stanowych tokenów kontekstu zabezpieczeń. Aplikacja WinForms lub konsoli zwykle jest uruchamiany aktualnie zalogowanego konta, tak aby konta mogą personalizacji domyślnie. Gdy klient jest jednak strony ASP.NET i tej stronie znajduje się w [!INCLUDE[iis601](../../../includes/iis601-md.md)] lub usług IIS 7.0, a następnie klient jest uruchamiany w ramach `Network Service` konto domyślne. Domyślnie wszystkie powiązania dostarczane przez system, które obsługują bezpiecznej sesji używają bezstanowe tokenu kontekstu zabezpieczeń. Jednakże jeśli klient znajduje się na stronie ASP.NET i bezpieczne sesje z tokenami usługi stanowej kontekstu zabezpieczeń są używane, nie można spersonifikować klienta. Aby uzyskać więcej informacji na temat tokeny stanowych kontekstu zabezpieczeń w ramach bezpiecznej sesji zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>Aby włączyć personifikację klienta z pamięci podręcznej tokenu Windows w usłudze  
   

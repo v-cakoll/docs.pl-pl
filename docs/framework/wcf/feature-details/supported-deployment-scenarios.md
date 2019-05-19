@@ -2,12 +2,12 @@
 title: Obsługiwane scenariusze wdrażania — WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639133"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881060"
 ---
 # <a name="supported-deployment-scenarios"></a>Obsługiwane scenariusze wdrażania
 
@@ -27,7 +27,7 @@ Aby uzyskać więcej informacji na temat funkcji obsługiwanych w te zestawy upr
 
 ## <a name="partial-trust-on-the-server"></a>Częściowej relacji zaufania na serwerze
 
-Wiele komercyjnych dostawców [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hostowania aplikacji internetowych usług upoważnienie uruchamianą w aplikacje działające na serwerach w [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] trybie średniego zaufania zestawu uprawnień. Usługi WCF mogą być uruchamiane w tych środowiskach, pod warunkiem używają <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, lub <xref:System.ServiceModel.WSHttpBinding> z zabezpieczeniami na poziomie transportu.
+Wiele komercyjnych dostawców aplikacji sieci Web ASP.NET, usługi hostingowe uzasadniają, aplikacji działających na serwerach ich uruchamianie [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] trybie średniego zaufania zestawu uprawnień. Usługi WCF mogą być uruchamiane w tych środowiskach, pod warunkiem używają <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, lub <xref:System.ServiceModel.WSHttpBinding> z zabezpieczeniami na poziomie transportu.
 
 Usługi WCF, uruchomiony w trybie średniego zaufania, środowiskach hostingu mogą również działać jako usługi warstwy środkowej przez wysyłanie komunikatów do innych serwerów w odpowiedzi na żądania klientów. Scenariusze warstwy środkowej na serwerze są obsługiwane, gdy środowisko hostingu przyznał aplikacji odpowiednie <xref:System.Net.WebPermission> na wysyłanie żądań wychodzących z serwerem.
 

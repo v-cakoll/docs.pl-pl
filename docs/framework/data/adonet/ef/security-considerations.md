@@ -2,12 +2,12 @@
 title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583496"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879929"
 ---
 # <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -141,22 +141,23 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Dostęp do metod i właściwości <xref:System.Data.Objects.ObjectContext> w bloku try-catch. Przechwytywanie wyjątków zapobiega nieobsługiwanych wyjątków z udostępnianie wpisów w <xref:System.Data.Objects.ObjectStateManager> lub informacji o modelu (np. nazwy tabel) do użytkowników aplikacji.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Zagadnienia dotyczące zabezpieczeń dla aplikacji ASP.NET  
- Należy rozważyć następujące podczas pracy ze ścieżkami w [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] aplikacji.  
+
+Podczas pracy ze ścieżkami w aplikacjach ASP.NET, należy rozważyć następujące czynności.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Sprawdź, czy hosta sprawdza ścieżkę.  
- Gdy `|DataDirectory|` (ujęty w symbole potoku) jest używany ciąg podstawienia, [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sprawdza, czy rozpoznana ścieżka jest obsługiwana. Na przykład ".." nie jest dozwolona za `DataDirectory`. Tym samym sprawdzanie rozpoznawania operatora główny aplikacji sieci Web (`~`) odbywa się przez proces hostingu [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]. Usługi IIS wykonuje to sprawdzenie; hosty innej niż IIS mogą nie weryfikują jednak czy rozpoznana ścieżka jest obsługiwana. Należy znać zachowanie hosta, na którym jest wdrażany [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.  
+ Gdy `|DataDirectory|` (ujęty w symbole potoku) jest używany ciąg podstawienia, ADO.NET sprawdza, czy rozpoznana ścieżka jest obsługiwana. Na przykład ".." nie jest dozwolona za `DataDirectory`. Tym samym sprawdzanie rozpoznawania operatora główny aplikacji sieci Web (`~`) odbywa się przez proces hostingu platformy ASP.NET. Usługi IIS wykonuje to sprawdzenie; hosty innej niż IIS mogą nie weryfikują jednak czy rozpoznana ścieżka jest obsługiwana. Należy znać zachowanie hosta, na którym jest wdrażany [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Nie należy wprowadzać założeń dotyczących nazw rozpoznana ścieżka.  
  Mimo że wartości, do którego operator głównego (`~`) i `DataDirectory` resolve ciąg podstawienia powinien pozostaje niezmienna, podczas wykonywania aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie ogranicza hosta modyfikowanie tych wartości.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Sprawdź długość ścieżki, przed przystąpieniem do wdrożenia.  
- Przed wdrożeniem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji, należy upewnić się, że wartości operator głównym (~) i `DataDirectory` ciąg podstawienia nie przekraczają limitów długość ścieżki w systemie operacyjnym. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych nie upewnij się, że długość ścieżki w granicach prawidłowe.  
+ Przed wdrożeniem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji, należy upewnić się, że wartości operator głównym (~) i `DataDirectory` ciąg podstawienia nie przekraczają limitów długość ścieżki w systemie operacyjnym. Dostawcy danych ADO.NET nie upewnij się, że długość ścieżki w granicach prawidłowe.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Zagadnienia dotyczące zabezpieczeń dla metadanych programu ADO.NET  
  Podczas generowania i pracą z nimi za pomocą modelu i mapowania plików, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Nie ujawniaj poufnych informacji za pośrednictwem rejestrowania.  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] składniki usługi metadanych nie Rejestruj informacje prywatne. W przypadku wyników, które nie mogą być zwracane z powodu ograniczeń dostępu systemy zarządzania bazami danych i systemy plików powinna zwrócić wyniki, zerowego zamiast zgłaszania wyjątku, który może zawierać informacje poufne.  
+Składniki usługi metadanych ADO.NET nie Rejestruj informacje prywatne. W przypadku wyników, które nie mogą być zwracane z powodu ograniczeń dostępu systemy zarządzania bazami danych i systemy plików powinna zwrócić wyniki, zerowego zamiast zgłaszania wyjątku, który może zawierać informacje poufne.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Nie akceptuj obiektów w obiekcie MetadataWorkspace ze źródeł niezaufanych.  
  Aplikacje powinny akceptuje wystąpień <xref:System.Data.Metadata.Edm.MetadataWorkspace> klasy z niezaufanego źródła. Zamiast tego należy jawnie utworzyć i wypełnienia obszaru roboczego z takich źródeł.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583411"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877949"
 ---
 # <a name="oracle-and-adonet"></a>Oracle i ADO.NET
 > [!NOTE]
@@ -63,7 +63,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Opisuje bezpiecznego kodowania, korzystając z [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ Opisuje bezpiecznego kodowania, gdy za pomocą platformy ADO.NET.  
   
  [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Opisuje sposób tworzenia i używania `DataSets`, wpisane `DataSets`, `DataTables`, i `DataViews`.  
@@ -75,7 +75,7 @@ csc /r:System.Data.OracleClient.dll
  W tym artykule opisano sposób pracy z funkcjami specyficznymi dla programu SQL Server.  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- Zawiera opis klas ogólnych, które umożliwiają pisanie kodu niezależnych od dostawcy w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ Zawiera opis klas ogólnych, które umożliwiają pisanie kodu niezależnych od dostawcy w ADO.NET.  
   
 ## <a name="see-also"></a>Zobacz także
 

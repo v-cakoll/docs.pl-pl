@@ -2,12 +2,12 @@
 title: Omówienie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607365"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877213"
 ---
 # <a name="adonet-overview"></a>Omówienie ADO.NET
 ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML i źródła danych dostępne za pośrednictwem OLE DB i ODBC. Udostępnianie danych aplikacje komercyjne umożliwia ADO.NET nawiązać połączenie z tymi źródłami danych i pobierania, obsługiwać i zaktualizować dane, które zawierają.  
@@ -46,7 +46,7 @@ ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Nowości w programie ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- Zawiera funkcje, które są nowością w programie [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ Dodano funkcje, które są nowością w programie ADO.NET.  
   
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Opisuje bezpiecznego kodowania, gdy za pomocą platformy ADO.NET.  

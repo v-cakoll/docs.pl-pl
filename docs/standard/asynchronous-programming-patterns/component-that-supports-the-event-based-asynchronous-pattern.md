@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628916"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882505"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie zauważalnego opóźnienia, należy wziąć pod uwagę nadając mu funkcje asynchroniczne z zastosowaniem [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- W tym instruktażu pokazano, jak utworzyć składnika, który implementuje wzorzec asynchroniczny oparty na zdarzeniach. Jej implementacji przy użyciu klas pomocy z <xref:System.ComponentModel?displayProperty=nameWithType> przestrzeń nazw, która zapewnia składnika działa prawidłowo w ramach dowolnego modelu aplikacji, w tym [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], konsoli, aplikacji i aplikacji Windows Forms. Ten składnik jest również designable z <xref:System.Windows.Forms.PropertyGrid> kontroli i własnych niestandardowych projektantów.  
+ W tym instruktażu pokazano, jak utworzyć składnika, który implementuje wzorzec asynchroniczny oparty na zdarzeniach. Jej implementacji przy użyciu klas pomocy z <xref:System.ComponentModel?displayProperty=nameWithType> przestrzeń nazw, która zapewnia, że składnik działa prawidłowo w ramach dowolnego modelu aplikacji, w tym ASP.NET, aplikacji konsoli i aplikacji Windows Forms. Ten składnik jest również designable z <xref:System.Windows.Forms.PropertyGrid> kontroli i własnych niestandardowych projektantów.  
   
  Po zakończeniu wykonywania masz aplikację, która oblicza iloczyn liczb asynchronicznie. Twoja aplikacja będzie miała wątku interfejsu użytkownika głównego i wątku dla każdego obliczenia liczba pierwsza. Mimo że testowania, czy jest dużą liczbą prime może potrwać zauważalne ilość czasu, głównego wątku interfejsu użytkownika nie zostanie przerwana przez to opóźnienie i formularz będzie odpowiadać podczas obliczeń. Będzie można uruchomić, ponieważ wiele obliczeń, jak chcesz, aby jednocześnie i selektywnie anulowania oczekującego obliczeń.  
   

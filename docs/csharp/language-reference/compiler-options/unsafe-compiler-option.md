@@ -7,15 +7,16 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662325"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877990"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (opcje kompilatora C#)
-**-Unsafe** — opcja kompilatora umożliwia kod, który używa [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe, aby skompilować.  
+
+**-Unsafe** — opcja kompilatora umożliwia kod, który używa [niebezpieczne](../keywords/unsafe.md) — słowo kluczowe, aby skompilować.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,8 +24,9 @@ ms.locfileid: "61662325"
 -unsafe  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat niebezpieczny kod, zobacz [niebezpieczny kod i wskaźniki](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji na temat niebezpieczny kod, zobacz [niebezpieczny kod i wskaźniki](../../programming-guide/unsafe-code-pointers/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
@@ -46,8 +48,9 @@ Otwórz plik csproj projektu i dodaj następujące elementy:
 
  Aby dowiedzieć się, jak programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
   
-## <a name="example"></a>Przykład  
- Skompilować `in.cs` dla trybu niebezpiecznego:  
+## <a name="example"></a>Przykład
+
+Skompilować `in.cs` dla trybu niebezpiecznego:  
   
 ```console  
 csc -unsafe in.cs  
@@ -55,5 +58,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C#](index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

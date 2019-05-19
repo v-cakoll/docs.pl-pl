@@ -8,15 +8,15 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2a97ab80cde00a47bbdf6830bdba325e1c9f3ef
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972028"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880982"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider — Informacje o składniku (Formularze systemu Windows)
-Formularze Windows [ErrorProvider](errorprovider-component-windows-forms.md) składnika służy do sprawdzania poprawności danych wejściowych użytkownika dla formularza lub formantu. Jest ona zwykle używana w połączeniu z sprawdzania poprawności danych wejściowych użytkownika na formularzu lub wyświetlanie błędów w zestawie danych. Błąd dostawcy jest lepszym niż wyświetlanie komunikatu o błędzie w oknie komunikatu, ponieważ po zamknięciu okno komunikatu, komunikat o błędzie nie jest już widoczna. <xref:System.Windows.Forms.ErrorProvider> Składnika Wyświetla ikonę błędu (![ikonę ErrorProvider](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) obok odpowiednie kontrolki, takie jak pole tekstowe; po użytkownik umieszcza wskaźnik myszy nad ikona błędu etykietka narzędzia zostanie wyświetlony ciąg komunikatu o błędzie.  
+Formularze Windows [ErrorProvider](errorprovider-component-windows-forms.md) składnika służy do sprawdzania poprawności danych wejściowych użytkownika dla formularza lub formantu. Jest ona zwykle używana w połączeniu z sprawdzania poprawności danych wejściowych użytkownika na formularzu lub wyświetlanie błędów w zestawie danych. Błąd dostawcy jest lepszym niż wyświetlanie komunikatu o błędzie w oknie komunikatu, ponieważ po zamknięciu okno komunikatu, komunikat o błędzie nie jest już widoczna. <xref:System.Windows.Forms.ErrorProvider> Składnika Wyświetla ikonę błędu (![białe wykrzyknika, wewnątrz czerwonego koła.](./media/errorprovider-component-overview-windows-forms/vb-error-provider-icon.gif)) obok odpowiednie kontrolki, takie jak pole tekstowe; po użytkownik umieszcza wskaźnik myszy na ikonie błędu, pojawi się etykietka narzędzia, Wyświetlanie ciąg komunikatu o błędzie.  
   
 ## <a name="key-properties"></a>Właściwości klucza  
  <xref:System.Windows.Forms.ErrorProvider> Są właściwości kluczy tego składnika <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, i <xref:System.Windows.Forms.ErrorProvider.Icon%2A>. Korzystając z <xref:System.Windows.Forms.ErrorProvider> składnika za pomocą kontrolek powiązanych z danymi <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> właściwość musi być równa odpowiedniego kontenera (zazwyczaj formularz Windows) w kolejności, w celu wyświetlania ikona błędu w formularzu składnika. Gdy składnik zostanie dodany w Projektancie <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> właściwość jest ustawiona na formularzu zawierającego; Jeśli dodasz kontrolki w kodzie, należy ustawić go samodzielnie.  

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645156"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881477"
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
-W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wiadomości do konwersacji. Sesje WCF są inne niż dostępne w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji obsługują różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje umożliwiające w sesji programu WCF aplikacji i sposobu ich używania.  
+W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wiadomości do konwersacji. Sesje WCF różnią się od obiektu sesji dostępna w aplikacjach ASP.NET, obsługują różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje umożliwiające w sesji programu WCF aplikacji i sposobu ich używania.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Sesje w aplikacjach programu Windows Communication Foundation  
  Gdy kontrakt usługi określa, że wymaga sesji, kontrakt ten jest określenie, że wszystkie wywołania (czyli bazowego wymianę komunikatów, które obsługują wywołania) musi być częścią tej samej konwersacji. Jeśli kontrakt Określa, że zezwala na sesji, ale nie wymaga jednego, klienci mogą łączyć się i albo ustanowienia sesji lub nie ustanowienia sesji. Jeśli sesja zakończy się, a jeśli tak, to a wiadomość jest wysyłana za pośrednictwem tego samego kanału, który jest zwracany wyjątek.  
@@ -30,13 +30,13 @@ W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wia
   
 - Brak nie magazynu ogólnych danych skojarzonych z sesją usługi WCF.  
   
- Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji i funkcji zawiera, można zauważyć następujące różnice między tego rodzaju sesji i sesje WCF:  
+ Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> funkcje i klasy w aplikacjach ASP.NET udostępnia, można zauważyć następujące różnice między tego rodzaju sesji i sesje WCF:  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sesje są zawsze inicjowanych przez serwer.  
+- ASP.NET sesje są zawsze inicjowanych przez serwer.  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sesje są niejawnie nieuporządkowane.  
+- Sesje ASP.NET są niejawnie nieuporządkowane.  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sesje udostępniają mechanizm magazynu danych ogólnych dla żądań.  
+- Sesji programu ASP.NET udostępniają mechanizm magazynu danych ogólnych dla żądań.  
   
  W tym temacie opisano:  
   

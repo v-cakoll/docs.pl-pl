@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6782261953fb5df94498deefb261407a2f0ba33a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626784"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882399"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzystać z danych przechowywanych w bazach danych. Powiązanie danych formularzy Windows, umożliwia dostęp do danych z bazy danych, a także dane w innych strukturach, takich jak tablice i kolekcje, tak długo, jak niektóre minimalne wymagania zostały spełnione.  
@@ -44,12 +44,12 @@ Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzysta�
  <xref:System.Collections.IEnumerable>  
  Kontrolek formularzy Windows Forms może być powiązana ze źródłami danych, które obsługują tylko <xref:System.Collections.IEnumerable> interfejsu, jeśli są one powiązane za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnika.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] obiekty danych  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] zawiera szereg struktur danych odpowiednie dla wiązania. Każdy różni się w jego intensywniejsze i złożoności.  
+ Obiekty danych ADO.NET  
+ ADO.NET zawiera szereg struktur danych odpowiednie dla wiązania. Każdy różni się w jego intensywniejsze i złożoności.  
   
 - <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> jest istotne blokiem konstrukcyjnym <xref:System.Data.DataTable>, w tym, że w skład liczbę kolumn tabeli. Każdy <xref:System.Data.DataColumn> ma <xref:System.Data.DataColumn.DataType%2A> właściwość, która określa rodzaj danych zawierająca kolumny (na przykład utworzyć samochodów w tabeli opisujące samochodów). Użytkownik może prosty wiązania kontrolki (takie jak <xref:System.Windows.Forms.TextBox> kontrolki <xref:System.Windows.Forms.Control.Text%2A> właściwość) do kolumny w tabeli danych.  
   
-- <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> trwa reprezentujący tabelę z wierszami i kolumnami, [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Tabela danych zawiera dwie kolekcje: <xref:System.Data.DataColumn>, reprezentujący kolumn danych w danej tabeli, (które określa rodzaje danych, które mogą być wprowadzane do tej tabeli), a <xref:System.Data.DataRow>, reprezentujący wierszy danych w danej tabeli. Użytkownik może złożone wiązania kontrolki do informacji zawartych w tabeli danych (np. powiązania <xref:System.Windows.Forms.DataGridView> kontrolki tabeli danych). Jednak gdy możesz powiązać <xref:System.Data.DataTable>, jest naprawdę powiązania do tabeli, widoku domyślnego.  
+- <xref:System.Data.DataTable>. Element <xref:System.Data.DataTable> jest reprezentacją tabelę z wierszami i kolumnami w ADO.NET. Tabela danych zawiera dwie kolekcje: <xref:System.Data.DataColumn>, reprezentujący kolumn danych w danej tabeli, (które określa rodzaje danych, które mogą być wprowadzane do tej tabeli), a <xref:System.Data.DataRow>, reprezentujący wierszy danych w danej tabeli. Użytkownik może złożone wiązania kontrolki do informacji zawartych w tabeli danych (np. powiązania <xref:System.Windows.Forms.DataGridView> kontrolki tabeli danych). Jednak gdy możesz powiązać <xref:System.Data.DataTable>, jest naprawdę powiązania do tabeli, widoku domyślnego.  
   
 - <xref:System.Data.DataView>. Element <xref:System.Data.DataView> jest dostosowany widok przedstawiający jednej tabeli danych, filtrowania lub sortowania. Widok danych to dane "snapshot" używana przez formanty powiązane z złożone. Możesz można prostego powiązania lub złożone wiązania danych w widoku danych, ale należy pamiętać, której dokonywane jest wiązanie na stałym "obraz" zamiast źródła danych zawsze przejrzyste i aktualizowanie danych.  
   

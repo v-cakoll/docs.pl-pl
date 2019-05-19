@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: 850b10958446193026506418c57d7f565c98b714
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 7b3e759252317631d3ca7ee483ae483f0d38571b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452766"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878954"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Operatory z możliwością przeciążenia (C# Programming Guide)
 
@@ -26,7 +26,7 @@ C# umożliwia typy zdefiniowane przez użytkownika próby przeciążania operato
 |[&#91;&#93;](../../language-reference/operators/member-access-operators.md#indexer-operator-)|Operatora indeksowania tablicy nie mogą być przeciążone, ale można zdefiniować [indeksatory](../indexers/index.md).|
 |[(T)x](../../language-reference/operators/invocation-operator.md)|Nie może zostać Przeciążony operator rzutowania, ale można definiować nowych operatorów konwersji (zobacz [jawne](../../language-reference/keywords/explicit.md) i [niejawne](../../language-reference/keywords/implicit.md)).|
 |[+=](../../language-reference/operators/addition-assignment-operator.md), [-=](../../language-reference/operators/subtraction-assignment-operator.md), [\*=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [&#124;=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [^=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [\<\<=](../../language-reference/operators/bitwise-and-shift-operators.md#compound-assignment), [>>=](../../language-reference/operators/bitwise-and-shift-operators.md#compound-assignment)|Operatory przypisania nie może być jawnie przeciążona. Jednak jeśli można przeciążać operatora binarnego, odpowiedniego operatora przypisania, jest również niejawnie przeciążona. Na przykład `+=` jest obliczane przy użyciu `+`, które mogą być przeciążone.|
-|[=](../../language-reference/operators/assignment-operator.md), [. ](../../language-reference/operators/member-access-operators.md#member-access-operator-), [?:](../../language-reference/operators/conditional-operator.md), [?? ](../../language-reference/operators/null-coalescing-operator.md), [ -> ](../../language-reference/operators/dereference-operator.md), [ => ](../../language-reference/operators/lambda-operator.md), [f(x)](../../language-reference/operators/member-access-operators.md#invocation-operator-), [jako](../../language-reference/keywords/as.md), [zaznaczone ](../../language-reference/keywords/checked.md), [unchecked](../../language-reference/keywords/unchecked.md), [domyślne](../../programming-guide/statements-expressions-operators/default-value-expressions.md), [delegować](../../programming-guide/statements-expressions-operators/anonymous-methods.md), [jest](../../language-reference/keywords/is.md), [nowe](../../language-reference/keywords/new.md), [sizeof](../../language-reference/keywords/sizeof.md), [typeof](../../language-reference/keywords/typeof.md)|Te operatory nie mogą być przeciążone.|
+|[=](../../language-reference/operators/assignment-operator.md), [. ](../../language-reference/operators/member-access-operators.md#member-access-operator-), [?:](../../language-reference/operators/conditional-operator.md), [?? ](../../language-reference/operators/null-coalescing-operator.md), [ -> ](../../language-reference/operators/pointer-related-operators.md#pointer-member-access-operator--), [ => ](../../language-reference/operators/lambda-operator.md), [f(x)](../../language-reference/operators/member-access-operators.md#invocation-operator-), [jako](../../language-reference/keywords/as.md), [zaznaczone ](../../language-reference/keywords/checked.md), [unchecked](../../language-reference/keywords/unchecked.md), [domyślne](../../programming-guide/statements-expressions-operators/default-value-expressions.md), [delegować](../../programming-guide/statements-expressions-operators/anonymous-methods.md), [jest](../../language-reference/keywords/is.md), [nowe](../../language-reference/keywords/new.md), [sizeof](../../language-reference/keywords/sizeof.md), [typeof](../../language-reference/keywords/typeof.md)|Te operatory nie mogą być przeciążone.|
 
 > [!NOTE]
 > Operatory porównania, jeżeli przeciążona, musi być przeciążane parami; oznacza to jeśli `==` jest przeciążona, `!=` musi również być przeciążony. Występuje również sytuacja odwrotna ma wartość true, jeżeli przeciążenie `!=` wymaga przeciążenie dla elementu `==`. To samo dotyczy operatory porównania `<` i `>` i `<=` i `>=`.

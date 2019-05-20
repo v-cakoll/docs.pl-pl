@@ -3,12 +3,12 @@ title: C#Typy i zmienne — Przewodnik po przykładzie C# języka
 description: Informacje na temat definiowania typów i zadeklarowania zmiennych wC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675744"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881977"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -23,8 +23,8 @@ Poniżej znajdują się z omówieniem C#przez system typów.
     * Podpisana całkowitego: `sbyte`, `short`, `int`, `long`
     * Całkowite bez znaku: `byte`, `ushort`, `uint`, `ulong`
     * Znaki Unicode: `char`
-    * Liczba zmiennoprzecinkowa IEEE: `float`, `double`
-    * Decimal wysokiej precyzji: `decimal`
+    * Binarny IEEE zmiennoprzecinkowe: `float`, `double`
+    * Zmiennoprzecinkowe dziesiętnych wysokiej precyzji: `decimal`
     * Atrybut typu wartość logiczna: `bool`
   - [Typach wyliczeniowych][EnumTypes]
     * Typy zdefiniowane przez użytkownika w postaci `enum E {...}`
@@ -55,33 +55,11 @@ Poniżej znajdują się z omówieniem C#przez system typów.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Osiem typów całkowitych zapewniają obsługę wartości 8-bitową, 16-bitowych, 32-bitowych i 64-bitowe podpisane lub niepodpisane formularza.
-
-Dwa typy zmiennoprzecinkowe, `float` i `double`, są reprezentowane przy użyciu 32-bitowe o pojedynczej dokładności i 64-bitowych podwójnej precyzji IEC 60559 formatów, odpowiednio.
-
-`decimal` Typ to typ danych 128-bitowych, odpowiedni do obliczeń finansowych i walutowych.
+Aby uzyskać więcej informacji na temat typów liczbowych, zobacz [Tabela typów całkowitych](../language-reference/keywords/integral-types-table.md) i [Tabela typów zmiennoprzecinkowych](../language-reference/keywords/floating-point-types-table.md).
 
 C#firmy `bool` typ jest używany do reprezentowania wartości logicznych — wartości, które są albo `true` lub `false`.
 
 Znakowe i przetwarzania w języku C# przy użyciu kodowania Unicode. `char` Typ reprezentuje jednostkę kodu UTF-16 i `string` typu reprezentuje sekwencję jednostki kodu UTF-16.
-
-To znajduje się podsumowanie C#na typy liczbowe.
-
-* Całkowite podpisem
-  - `sbyte`:  8 bitów, z zakresu od -128 do 127
-  - `short`: 16 bitów, z zakresu od-32 768 do 32 767 znaków
-  - `int`  : 32-bitowy, do zakresu od -2,147,483,648 do 2 147 483 647
-  - `long` : 64-bitowy, do zakresu od-9,223,372,036,854,775,808 do 9,223,372,036,854,775,807
-* Całkowite bez znaku
-  - `byte`   :  8 bitów, z zakresu od 0 do 255
-  - `ushort` : 16 bitów, z zakresu od 0 do 65 535 działań
-  - `uint`   : 32-bitowy z zakresu od 0 do 4 294 967 295
-  - `ulong`  : 64-bitowy z zakresu od 0 do 18,446,744,073,709,551,615
-* Liczba zmiennoprzecinkowa
-  - `float`  : 32-bitowy, do zakresu od 1,5 x 10<sup>-45</sup> do 3,4 x 10<sup>38</sup>, dokładności 7 cyfr
-  - `double` : 64-bitowy, do zakresu od 5.0 x 10<sup>-324</sup> do wersji 1.7 x 10<sup>308</sup>, dokładności 15 cyfr
-* Wartość dziesiętna
-  - `decimal` : 128 bitów — zakres jest co najmniej od -7,9 x 10<sup>-28</sup> do 7,9 x 10<sup>28</sup>, z dokładnością co najmniej 28-cyfrowy
 
 C# programy użyj *wpisz deklaracje* do tworzenia nowych typów. Deklaracja typu Określa nazwę i elementy członkowskie nowego typu. Pięciu C#firmy kategorie typów są definiowane przez użytkownika: klasy, typy, typy struktury, typy interfejsów, typach wyliczeniowych i typy delegatów.
 

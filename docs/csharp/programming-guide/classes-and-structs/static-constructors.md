@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 87a7b16d3e096f6a5bf05475ccc7c43862324ae3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 110d83caad0c588fa899a4129897784e9c74aab8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583354"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881915"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Konstruktory statyczne (Przewodnik programowania w języku C#)
 Statyczny Konstruktor jest wykorzystywany do inicjacji dowolne [statyczne](../../../csharp/language-reference/keywords/static.md) danych, lub do wykonania określonej akcji, która musi zostać wykonana tylko raz. Jest wywoływana automatycznie przed pierwsze wystąpienie jest tworzone lub żadnych statycznych składowych są wywoływane.  
@@ -22,7 +22,7 @@ Statyczny Konstruktor jest wykorzystywany do inicjacji dowolne [statyczne](../..
   
 - Statyczny Konstruktor zająć modyfikatory dostępu lub nie mieć parametrów.  
   
-- Statyczny Konstruktor jest wywoływana automatycznie zainicjować [klasy](../../../csharp/language-reference/keywords/class.md) przed pierwsze wystąpienie jest tworzone lub żadnych statycznych składowych są wywoływane.  
+- Statyczny Konstruktor jest wywoływana automatycznie zainicjować [klasy](../../../csharp/language-reference/keywords/class.md) przed pierwsze wystąpienie jest tworzone lub żadnych statycznych składowych są wywoływane. Należy pamiętać, że typ statyczny Konstruktor jest wywoływana po wywołaniu metody statycznej przypisanej do zdarzenia lub delegata, a nie w przypadku, gdy jest ona przypisana.
   
 - Konstruktor statyczny nie może wywołać bezpośrednio.  
   

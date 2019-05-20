@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 2f72f493d99c1e0b0469150c041649486e5ed124
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794995"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881960"
 ---
 # <a name="myresponse-object"></a>My.Response — Obiekt
 Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.Page>. Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.  
@@ -20,7 +20,7 @@ Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.P
 ## <a name="remarks"></a>Uwagi  
  `My.Response` Obiekt zawiera bieżącą <xref:System.Web.HttpResponse> obiekt skojarzony ze stroną.  
   
- `My.Response` Obiektu jest dostępna tylko dla [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] aplikacji.  
+ `My.Response` Obiektu jest dostępna tylko dla aplikacji ASP.NET.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pobiera kolekcję nagłówków z `My.Request` obiektu i zastosowań `My.Response` obiektu do zapisania go do strony ASP.NET.  

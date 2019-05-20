@@ -7,22 +7,22 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 4ef334f6d200e75f29e22a9586f4538309797942
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a852f36c05075365ced8ec39457b15601ca3c3fb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661675"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877081"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed — Instrukcja (odwołanie w C#)
 
-`fixed` Instrukcji zapobiega przemieszczanie zmienną ruchome moduł odśmiecania pamięci. `fixed` Instrukcji jest dozwolona tylko w [niebezpieczne](unsafe.md) kontekstu. `fixed` można również utworzyć [stałych buforów o rozmiarze](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+`fixed` Instrukcji zapobiega przemieszczanie zmienną ruchome moduł odśmiecania pamięci. `fixed` Instrukcji jest dozwolona tylko w [niebezpieczne](unsafe.md) kontekstu. Można również użyć `fixed` — słowo kluczowe, aby utworzyć [stałych buforów o rozmiarze](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 `fixed` Instrukcja ustawia wskaźnik zarządzanego zmiennej i "przypięć" tej zmiennej podczas wykonywania instrukcji. Wskaźniki do zmiennych, ruchome zarządzane są przydatne tylko w `fixed` kontekstu. Bez `fixed` kontekstu, wyrzucanie elementów bezużytecznych może przenosić zmienne nieprzewidywalny. Kompilator języka C# tylko umożliwia przypisywanie wskaźnik do zmiennej zarządzanych w `fixed` instrukcji.
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
 
-Aby zainicjować wskaźnik, należy za pomocą tablicy, ciąg, bufora o stałym rozmiarze lub adres zmiennej. Poniższy przykład ilustruje użycie zmiennej adresów, tablic i ciągów. Aby uzyskać więcej informacji o stałym rozmiarze buforów, zobacz [ustalony rozmiar buforów](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+Aby zainicjować wskaźnik, należy za pomocą tablicy, ciąg, bufora o stałym rozmiarze lub adres zmiennej. Poniższy przykład ilustruje użycie zmiennej adresów, tablic i ciągi:
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
@@ -63,7 +63,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-W trybie bezpiecznym można przydzielić pamięci na stosie, w którym nie podlega wyrzucania elementów bezużytecznych i dlatego nie trzeba przypiąć. Aby uzyskać więcej informacji, zobacz [stackalloc](stackalloc.md).
+Można przydzielić pamięci na stosie, w którym nie podlega wyrzucania elementów bezużytecznych i dlatego nie trzeba przypiąć. Aby uzyskać więcej informacji, zobacz [stackalloc](stackalloc.md).
 
 [!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
 

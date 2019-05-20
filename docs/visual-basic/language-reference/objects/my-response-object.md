@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 2f72f493d99c1e0b0469150c041649486e5ed124
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794995"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881960"
 ---
-# <a name="myresponse-object"></a><span data-ttu-id="33199-102">My.Response — Obiekt</span><span class="sxs-lookup"><span data-stu-id="33199-102">My.Response Object</span></span>
-<span data-ttu-id="33199-103">Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.Page>.</span><span class="sxs-lookup"><span data-stu-id="33199-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="33199-104">Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="33199-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
+# <a name="myresponse-object"></a><span data-ttu-id="80263-102">My.Response — Obiekt</span><span class="sxs-lookup"><span data-stu-id="80263-102">My.Response Object</span></span>
+<span data-ttu-id="80263-103">Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.Page>.</span><span class="sxs-lookup"><span data-stu-id="80263-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="80263-104">Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="80263-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="33199-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="33199-105">Remarks</span></span>  
- <span data-ttu-id="33199-106">`My.Response` Obiekt zawiera bieżącą <xref:System.Web.HttpResponse> obiekt skojarzony ze stroną.</span><span class="sxs-lookup"><span data-stu-id="33199-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="80263-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="80263-105">Remarks</span></span>  
+ <span data-ttu-id="80263-106">`My.Response` Obiekt zawiera bieżącą <xref:System.Web.HttpResponse> obiekt skojarzony ze stroną.</span><span class="sxs-lookup"><span data-stu-id="80263-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
   
- <span data-ttu-id="33199-107">`My.Response` Obiektu jest dostępna tylko dla [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="33199-107">The `My.Response` object is only available for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] applications.</span></span>  
+ <span data-ttu-id="80263-107">`My.Response` Obiektu jest dostępna tylko dla aplikacji ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="80263-107">The `My.Response` object is only available for ASP.NET applications.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="33199-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="33199-108">Example</span></span>  
- <span data-ttu-id="33199-109">Poniższy przykład pobiera kolekcję nagłówków z `My.Request` obiektu i zastosowań `My.Response` obiektu do zapisania go do strony ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="33199-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
+## <a name="example"></a><span data-ttu-id="80263-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="80263-108">Example</span></span>  
+ <span data-ttu-id="80263-109">Poniższy przykład pobiera kolekcję nagłówków z `My.Request` obiektu i zastosowań `My.Response` obiektu do zapisania go do strony ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="80263-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
   
  [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="33199-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="33199-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80263-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="80263-110">See also</span></span>
 
 - <xref:System.Web.HttpResponse>
-- [<span data-ttu-id="33199-111">My.Request, obiekt</span><span class="sxs-lookup"><span data-stu-id="33199-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [<span data-ttu-id="80263-111">My.Request, obiekt</span><span class="sxs-lookup"><span data-stu-id="80263-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)

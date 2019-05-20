@@ -9,6 +9,12 @@
   items:
     - name: Wprowadzenie
       href: tutorials/get-started.md
+    - name: Wdrażanie w usłudze Azure HDInsight
+      href: tutorials/hdinsight-deployment.md
+    - name: Wdrażanie na platformie AWS EMR Spark
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Wdrażanie w usłudze Databricks
+      href: tutorials/databricks-deployment.md
 - name: Tematy pomocy
   items:
     - name: Odwołanie do biblioteki API

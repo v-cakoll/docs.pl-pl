@@ -11,13 +11,13 @@
       href: tutorials/index.md
     - name: Analiza tonacji (klasyfikacja binarna)
       href: tutorials/sentiment-analysis.md
-    - name: Klasyfikacja problemów (klasyfikacja wieloklasowa)
+    - name: Kategoryzowanie problemów z obsługą (klasyfikacja wieloklasowa)
       href: tutorials/github-issue-classification.md
     - name: Przewidywanie cen (regresja)
       href: tutorials/taxi-fare.md
-    - name: Kwiaty irysów (klastrowanie)
+    - name: Kategoryzowanie irysów (klastrowanie metodą k-średnich)
       href: tutorials/iris-clustering.md
-    - name: Rekomendacja filmu (rekomendacja)
+    - name: Rekomendacje dotyczące filmów (faktoryzacja macierzy)
       href: tutorials/movie-recommmendation.md
     - name: Klasyfikacja obrazów (uczenie transferowe)
       href: tutorials/image-classification.md

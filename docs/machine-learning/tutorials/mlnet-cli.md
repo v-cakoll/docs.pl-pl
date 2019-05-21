@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 2679df0317fede9fa5f3885831c65bd87a14981a
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557955"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960394"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Automatycznie Generuj Klasyfikator binarny przy użyciu interfejsu wiersza polecenia
 
@@ -142,12 +142,12 @@ Te zasoby wyliczany zostały wyjaśnione w poniższych krokach tego samouczka.
 
     ![Rozwiązania VS generowane przez interfejs wiersza polecenia](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - Wygenerowany **biblioteki klas** zawierająca Zserializowany model uczenia Maszynowego i klas danych jest coś, co jest bezpośrednio użyć w aplikacji użytkownika końcowego, nawet bezpośrednio odwołuje się do tej biblioteki klas (lub przenoszenia kodu, ponieważ użytkownik sobie tego życzy).
+    - Wygenerowany **biblioteki klas** zawierająca Zserializowany model uczenia Maszynowego (plik zip) i klas danych (modeli danych) jest coś, co jest bezpośrednio użyć w aplikacji użytkownika końcowego, nawet bezpośrednio odwołuje się do tej biblioteki klas (lub przenoszenia Kod, jak preferują).
     - Wygenerowany **aplikacja konsolowa** zawiera wykonywania kodu, należy przejrzeć, a następnie zwykle ponownego użycia kodu oceniania (kod, który uruchamia model uczenia Maszynowego do przewidywania przyszłych zdarzeń), przenosząc tego prostego kodu (zaledwie kilku wierszy) do użytkownika końcowego Aplikacja, której chcesz tworzyć prognozy. 
 
-1. Otwórz **Observation.cs** i **Prediction.cs** klasy pliki znajdujące się w projekcie biblioteki klas. Zobaczysz, że te klasy są "klas danych" lub klasy POCO używana do przechowywania danych. Jest "standardowy kod", ale warto mieć on generowany, gdy zestaw danych zawiera dziesiątki lub nawet setki kolumn. 
-    - `SampleObservation` Klasa jest używana podczas odczytywania danych z zestawu danych. 
-    - `SamplePrediction` Klasy lub
+1. Otwórz **ModelInput.cs** i **ModelOutput.cs** klasy pliki znajdujące się w projekcie biblioteki klas. Zobaczysz, że te klasy są "klas danych" lub klasy POCO używana do przechowywania danych. Jest "standardowy kod", ale warto mieć on generowany, gdy zestaw danych zawiera dziesiątki lub nawet setki kolumn. 
+    - `ModelInput` Klasa jest używana podczas odczytywania danych z zestawu danych. 
+    - `ModelOutput` Klasa jest używana do pobierania wyników prognoz (prognozowania danych).
 
 1. Otwórz plik Program.cs i zapoznaj się z kodu. W zaledwie kilku wierszach jesteś w stanie uruchomić model i przewiduje próbki.
 
@@ -160,13 +160,13 @@ Te zasoby wyliczany zostały wyjaśnione w poniższych krokach tego samouczka.
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ Te zasoby wyliczany zostały wyjaśnione w poniższych krokach tego samouczka.
 
 - Trzeci wiersz kodu należy załadować modelu z modelu serializowane. Plik ZIP z `mlContext.Model.Load()` interfejsu API, podając ścieżkę do tego modelu. Plik ZIP.
 
-- W czwartym wierszu kodu, należy załadować tworzenie `PredictionEngine` obiekt z `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()` interfejsu API. Potrzebujesz `PredictionEngine` obiektu służy do prognozowania przeznaczonych dla pojedynczej próbki danych (w tym przypadku pojedynczy fragment tekstu do prognozowania jego tonacji).
+- W czwartym wierszu kodu, należy załadować tworzenie `PredictionEngine` obiekt z `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` interfejsu API. Potrzebujesz `PredictionEngine` obiektu służy do prognozowania przeznaczonych dla pojedynczej próbki danych (w tym przypadku pojedynczy fragment tekstu do prognozowania jego tonacji).
 
 - Piąty wiersz kodu służy do tworzenia, *jednego źródła danych przykładowych* do użycia przez wywołanie funkcji prognozowania `CreateSingleDataSample()`. Ponieważ narzędzie interfejsu wiersza polecenia nie wie, jakiego rodzaju przykładowych danych do użycia, w ramach tej funkcji ładowania pierwszy wiersz z zestawu danych. Jednak dla tego przypadku możesz można również utworzyć własne dane "zakodowane" zamiast bieżąca implementacja parametru `CreateSingleDataSample()` funkcji, aktualizując ten kod prostsze Implementowanie tej funkcji:
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ Te zasoby wyliczany zostały wyjaśnione w poniższych krokach tego samouczka.
 
 Możesz użyć podobnych "ML modelu kodu oceniania" uruchomić model w prognozy marki i aplikacji przez użytkownika końcowego. 
 
-Na przykład, można bezpośrednio przenieść ten kod do dowolnej aplikacji klasycznych Windows takich jak **WPP** i **WinForms** i uruchomić model w taki sam sposób, niż zostało to zrobione w aplikacji konsoli.
+Na przykład, można bezpośrednio przenieść ten kod do dowolnej aplikacji klasycznych Windows takich jak **WPF** i **WinForms** i uruchomić model w taki sam sposób, niż zostało to zrobione w aplikacji konsoli.
 
 Jednak sposób zaimplementować te wiersze kodu, aby uruchomić model uczenia Maszynowego optymalizacji (który jest plik zip modelu w pamięci podręcznej, a następnie załaduj raz) i ma pojedyncze obiekty, zamiast tworzyć je na każde żądanie, zwłaszcza, jeśli aplikacja musi być skalowalne, takich jak Aplikacja sieci web lub usługę rozproszonej, jak wyjaśniono w poniższej sekcji.
 

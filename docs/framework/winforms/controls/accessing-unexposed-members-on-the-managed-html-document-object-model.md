@@ -8,15 +8,15 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011899"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959624"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do nieujawnionych elementów w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
-Zarządzany HTML Document Object Model (DOM) zawiera klasę o nazwie <xref:System.Windows.Forms.HtmlElement> który udostępnia właściwości, metody i zdarzenia, mających wspólne wszystkich elementów HTML. Czasami jednak konieczne będzie dostęp do elementów członkowskich, które zarządzanego interfejsu bezpośrednio nie ujawnia. W tym temacie analizuje dwa sposoby uzyskania dostępu do nieujawnionych elementów, w tym [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] i funkcje VBScript, zdefiniowane wewnątrz strony sieci Web.  
+Zarządzany HTML Document Object Model (DOM) zawiera klasę o nazwie <xref:System.Windows.Forms.HtmlElement> który udostępnia właściwości, metody i zdarzenia, mających wspólne wszystkich elementów HTML. Czasami jednak konieczne będzie dostęp do elementów członkowskich, które zarządzanego interfejsu bezpośrednio nie ujawnia. W tym temacie analizuje dwa sposoby uzyskania dostępu do nieujawnionych elementów, w tym funkcje języka JScript i VBScript, zdefiniowane wewnątrz strony sieci Web.  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Uzyskiwanie dostępu do nieujawnionych elementów w modelu za pośrednictwem interfejsów zarządzanych  
  <xref:System.Windows.Forms.HtmlDocument> i <xref:System.Windows.Forms.HtmlElement> zapewnia cztery metody, które umożliwiają dostęp do nieujawnionych elementów w modelu. W poniższej tabeli przedstawiono typy i odpowiadającej im metody.  
@@ -67,7 +67,7 @@ Zarządzany HTML Document Object Model (DOM) zawiera klasę o nazwie <xref:Syste
  Najprostszym sposobem korzystania z interfejsów COM jest dodać odwołanie do biblioteki niezarządzanej HTML DOM (MSHTML.dll) z aplikacji, chociaż jest to obsługiwane. Aby uzyskać więcej informacji, zobacz [934368 artykuł bazy wiedzy Knowledge Base](https://support.microsoft.com/kb/934368).  
   
 ## <a name="accessing-script-functions"></a>Uzyskiwanie dostępu do funkcji skryptu  
- Na stronie HTML można zdefiniować jedną lub więcej funkcji za pomocą języka skryptów, takich jak [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] lub VBScript. Te funkcje są umieszczone wewnątrz `SCRIPT` strony na stronie, a może działać na żądanie lub w odpowiedzi na zdarzenie w DOM.  
+ Na stronie HTML można zdefiniować jedną lub więcej funkcji za pomocą języka skryptów, takich jak JScript lub skrypt VBScript. Te funkcje są umieszczone wewnątrz `SCRIPT` strony na stronie, a może działać na żądanie lub w odpowiedzi na zdarzenie w DOM.  
   
  Możesz wywołać wszystkie funkcje skrypt, należy zdefiniować strony HTML przy użyciu <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> metody. Jeśli metoda skrypt zwraca HTML element, można użyć rzutowania, można przekonwertować ten wynik zwracany <xref:System.Windows.Forms.HtmlElement>. Aby uzyskać szczegółowe informacje i przykładowy kod, zobacz <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   

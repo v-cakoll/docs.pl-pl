@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df55b4fa107f3630cd259b755e0aaacdee4904ef
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753053"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960093"
 ---
 # <a name="elevation-of-privilege"></a>Podniesienie uprawnień
 *Podniesienie uprawnień* powstały na skutek zapewniając autoryzacji osoba atakująca uprawnień poza tymi początkowo udzielone. Na przykład osoba atakująca z zestawem uprawnień uprawnienia "tylko do odczytu" jakiś sposób podnosi poziom uprawnień zestawu do uwzględnienia "odczytu i zapisu."  
@@ -21,7 +21,7 @@ ms.locfileid: "64753053"
  <xref:System.IdentityModel.Tokens.SamlAssertion> Klasy weryfikuje podpis cyfrowy zawartych w tokenie języka SAML i domyślnego <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> wymaga podpisania tokeny SAML, certyfikat X.509, który jest nieprawidłowy, gdy <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> klasy jest ustawiona na <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` Tryb samego jest za mała, aby ustalić, czy wystawca SAML token jest zaufany. Usługi, które wymagają bardziej szczegółowy model zaufania można albo użyć autoryzacji i wymuszanie zasad do sprawdzanych wystawcy zestawów oświadczeń produkowane przez uwierzytelnianie przy użyciu tokenów wystawionych lub ustawienia weryfikacji X.509 na <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> ograniczyć zestaw dozwolone certyfikaty podpisywania. Aby uzyskać więcej informacji, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) i [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Przełączanie tożsamości bez kontekstu zabezpieczeń  
- Następujące ma zastosowanie tylko do [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ Poniższe informacje dotyczą tylko WinFX.  
   
  Po nawiązaniu połączenia między klientem i serwerem oraz tożsamości klienta nie zmienia się, z wyjątkiem sytuacji: po otwarciu klienta WCF, jeśli spełnione są wszystkie następujące warunki:  
   

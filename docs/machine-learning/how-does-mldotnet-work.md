@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: a4573575805ad45d251a900f304b8cb01654a39b
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 054fa0e1d9d8cc0d7c32efd4a9e8c81b91cb1335
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557997"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960426"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Co to jest strukturze ML.NET i jak to działa?
 
@@ -65,7 +65,7 @@ W poniższym fragmencie kodu demonstruje najprostszej aplikacji strukturze ML.NE
 
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
-                .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
+                .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
     
             // 3. Train model
             var model = pipeline.Fit(trainingData);
@@ -145,7 +145,7 @@ W naszym przykładzie cena DOM użyliśmy **regresji** zadania. Aby ocenić mode
             new HouseData() { Size = 3.4F, Price = 3.6F }
         };
 
-        var testHouseDataView = mlContext.Data.LoadFromEnumerable(houseData);
+        var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
                 
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
@@ -153,8 +153,8 @@ W naszym przykładzie cena DOM użyliśmy **regresji** zadania. Aby ocenić mode
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
         Console.WriteLine($"RMS error: {metrics.RootMeanSquaredError:0.##}");
 
-        // R^2: 0.99
-        // RMS error: 0.09
+        // R^2: 0.96
+        // RMS error: 0.19
 ```
 
 Metryki oceny informujące o tym, że błąd jest low-ish i tej korelacji między przewidywane wyniki i dane wyjściowe testu jest wysoka. To było łatwe! W przykładach rzeczywistych zajmuje więcej dostrajania do osiągnięcia dobry model metryk.
@@ -187,7 +187,7 @@ W każdym katalogu to zestaw metod rozszerzenia. Przyjrzyjmy się jak metody roz
 
 ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
-        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
+        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
 ```
 
 Ten fragment kodu `Concatenate` i `Sdca` są obie metody w wykazie. Każdy tworzą [IEstimator](xref:Microsoft.ML.IEstimator%601) obiekt, który jest dołączany do potoku.

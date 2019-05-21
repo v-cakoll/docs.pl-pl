@@ -2,14 +2,14 @@
 title: polecenie kompilacji DotNet
 description: Dotnet kompilacji polecenia kompilacji w projekt i wszystkie jego zależności.
 ms.date: 04/24/2019
-ms.openlocfilehash: 6564aacbe520797b47095929cfe72c6b180b99a7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df264fe830259832e5c75db9fd71230ba70a9f18
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632136"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959192"
 ---
-# <a name="dotnet-build"></a>Kompilacja DotNet
+# <a name="dotnet-build"></a>dotnet build
 
 **Ten artykuł dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
 
@@ -144,7 +144,7 @@ Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projek
   dotnet build --source c:\packages\mypackages
   ```
 
-* Skompilować projekt i ustawić 1.2.3.4 wersji jako parametr kompilacji:
+* Skompilować projekt i ustawić wersję 1.2.3.4 jako parametr kompilacji za pomocą `-p` [opcji MSBuild](#msbuild):
 
   ```console
   dotnet build -p:Version=1.2.3.4

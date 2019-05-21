@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 96607a1c744b928b340fe33c2b57a25a59f306dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635269"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960101"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF
 W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji procesów systemu Windows (znany także jako WAS) na [!INCLUDE[wv](../../../../includes/wv-md.md)] do hostowania usług Windows Communication Foundation (WCF) protokołów sieciowych usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano w krokach dla tej konfiguracji:  
@@ -28,7 +28,7 @@ W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji proces
   
 3. Na **zadania** menu, kliknij przycisk **Windows Włącz lub wyłącz funkcje**.  
   
-4. Znajdź [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] węzła, wybierz, a następnie rozwiń węzeł.  
+4. Znajdź węzeł WinFX, wybierz opcję, a następnie rozwiń go.  
   
 5. Wybierz **składników Aktywacja bez Http programu WCF** pole, a następnie Zapisz ustawienia.  
   

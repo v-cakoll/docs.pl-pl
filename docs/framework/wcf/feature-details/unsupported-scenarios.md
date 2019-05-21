@@ -2,12 +2,12 @@
 title: Nieobsługiwane scenariusze
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878735"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959966"
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie zawiera implementacji protokołów uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym WCF nie obsługuje uruchamiania usługi za pomocą uwierzytelniania Windows na tej platformie. Inne mechanizmy uwierzytelniania, takich jak nazwy użytkownika/hasła i zintegrowane uwierzytelnianie HTTP/HTTPS są obsługiwane podczas uruchamiania usługi WCF w obszarze Windows XP Home Edition.  
@@ -50,7 +50,7 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
 ## <a name="cryptography"></a>Kryptografia  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>Algorytm SHA-256 jest obsługiwane tylko w przypadku użycia klucza symetrycznego  
- Usługi WCF obsługuje wiele różnych algorytmów szyfrowania i podpisywania szyfrowanego tworzenia określonych przez użytkownika za pomocą pakiet algorytmów w powiązania dostarczane przez system. Ze względów bezpieczeństwa WCF obsługuje algorytmy Secure Hash Algorithm (SHA) 2, w szczególności algorytmu SHA-256, tworzenia skrótów skrótu podpisu. Ta wersja obsługuje algorytm SHA-256, tylko w przypadku użycia klucza symetrycznego, takie jak klucze Kerberos i gdzie certyfikat X.509 nie jest używany do podpisywania wiadomości. Usługi WCF nie obsługuje podpisów RSA (używana w certyfikatach X.509) za pomocą wyznaczania wartości skrótu SHA-256, ze względu na Brak bieżącej obsługi dla algorytm RSA-SHA256 w [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ Usługi WCF obsługuje wiele różnych algorytmów szyfrowania i podpisywania szyfrowanego tworzenia określonych przez użytkownika za pomocą pakiet algorytmów w powiązania dostarczane przez system. Ze względów bezpieczeństwa WCF obsługuje algorytmy Secure Hash Algorithm (SHA) 2, w szczególności algorytmu SHA-256, tworzenia skrótów skrótu podpisu. Ta wersja obsługuje algorytm SHA-256, tylko w przypadku użycia klucza symetrycznego, takie jak klucze Kerberos i gdzie certyfikat X.509 nie jest używany do podpisywania wiadomości. Usługi WCF nie obsługuje podpisów RSA (używana w certyfikatach X.509) za pomocą wyznaczania wartości skrótu SHA-256, ze względu na Brak bieżącej obsługi dla algorytm RSA-SHA256 w WinFX.  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>Zgodne ze standardem FIPS skróty SHA-256, nie jest obsługiwane  
  Usługi WCF nie obsługuje skróty SHA-256 zgodne ze standardem FIPS, więc algorytm zestawów, korzystających z algorytmu SHA-256 nie są obsługiwane przez architekturę WCF w systemach, w których wymagane jest Użyj zgodnych algorytmów FIPS.  

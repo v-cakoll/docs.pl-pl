@@ -4,12 +4,12 @@ description: Informacji na temat samouczki i przykłady kodu dla platformy .NET 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469468"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960297"
 ---
 # <a name="net-samples-and-tutorials"></a>Samouczki i przykłady kodu platformy .NET
 
@@ -63,7 +63,7 @@ Ta seria przykłady pokazują wiele funkcji, z Language Integrated Query (LINQ).
 
 **Zarządzany serwer COM próbki**
 
-[Serwer COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) w przykładzie pokazano tworzenie zarządzanego serwera COM i jak możesz go globalnie zarejestrować.
+[Serwer COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) w przykładzie pokazano tworzenie zarządzanego serwera COM i jak można globalnie zarejestrowany lub używane za pośrednictwem obsługi modelu COM.
 
 **Microsoft Office PIA próbki**
 

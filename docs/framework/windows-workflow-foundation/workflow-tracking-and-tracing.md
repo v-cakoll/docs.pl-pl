@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 88c4982d45c1a3c450afe0c199a1f8a376348262
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eaf38bad246b1f02449c1a3b99c7fb844c09a4bd
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655658"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959709"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Kontrola i śledzenie przepływu pracy
 Śledzenie przepływu pracy Windows jest [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] funkcja przeznaczona do zapewniają widoczność wykonywania przepływu pracy. Zapewnia to Infrastruktura śledzenia do śledzenia wykonywania wystąpienia przepływu pracy. Infrastruktura śledzenia WF w sposób niewidoczny dla użytkownika instruments przepływu pracy, aby emitować rekordów odzwierciedlający kluczy zdarzeń podczas wykonywania. Ta funkcja jest domyślnie dostępny dla dowolnego [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Żadne zmiany nie są wymagane do [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] przepływu pracy dla śledzenia wystąpienia. Jest to kwestia podejmowania decyzji o tym jak dużo danych śledzenia, które chcesz otrzymywać. Gdy wystąpienie przepływu pracy rozpoczyna się lub kończy, jego przetwarzania śledzenia są emitowane rekordów. Śledzenie również można wyodrębnić business odpowiednie dane skojarzone z zmienne przepływu pracy. Na przykład, jeśli przepływ pracy reprezentuje kolejność przetwarzania systemu, identyfikator zamówienia wyodrębniania wraz z <xref:System.Activities.Tracking.TrackingRecord> obiektu. Ogólnie rzecz biorąc włączania WF śledzenia umożliwia diagnostyki lub danymi analiz biznesowych były dostępne z wykonywania przepływu pracy.  
   
- Śledzenie składniki są odpowiednikiem usługi śledzenia w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], zwiększona wydajność i uproszczony model programowania na potrzeby funkcja śledzenia programu WF. Środowisko uruchomieniowe śledzenia instruments wystąpienia przepływu pracy, aby emitować zdarzenia związane z cyklem życia przepływu pracy, działania przepływu pracy i zdarzeń niestandardowych.  
+ Te składniki śledzenia są odpowiednikiem usługi śledzenia w WinFX. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], zwiększona wydajność i uproszczony model programowania na potrzeby funkcja śledzenia programu WF. Środowisko uruchomieniowe śledzenia instruments wystąpienia przepływu pracy, aby emitować zdarzenia związane z cyklem życia przepływu pracy, działania przepływu pracy i zdarzeń niestandardowych.  
   
  AppFabric w systemie Windows Server umożliwia także monitorowanie wykonania usług WCF i przepływ pracy. Aby uzyskać więcej informacji, zobacz [monitorowanie sieci szkieletowej aplikacji systemu Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273) i [monitorowania aplikacji za pomocą programu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201287)  
   

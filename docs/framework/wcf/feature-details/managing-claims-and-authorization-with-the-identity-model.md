@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875590"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960114"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
 Autoryzacja to proces określania jednostek, które ma uprawnienia do zmiany, wyświetlania lub inny sposób uzyskać dostęp do zasobów komputera. Na przykład w biznesie, tylko menedżerowie może mieć możliwość dostępu do plików pracownikom. Windows Communication Foundation (WCF) obsługuje dwa mechanizmy do wykonywania operacji przetwarzania autoryzacji. Pierwszy mechanizm umożliwia sterowanie autoryzację przy użyciu istniejących typowych konstrukcji języka wspólnego (CLR). Drugim jest znany jako modelu opartego na oświadczeniach *modelu tożsamości*. Usługi WCF używa modelu tożsamości w celu utworzenia oświadczeń z wiadomości przychodzące; Klasy modelu tożsamości można rozszerzyć do obsługi nowych typów oświadczeń autoryzacji niestandardowych schematów. Ten temat zawiera omówienie główne pojęcia dotyczące programowania funkcji modelu tożsamości, a także listy najważniejszych klas, które korzysta z tej funkcji.  
@@ -93,7 +93,6 @@ Autoryzacja to proces określania jednostek, które ma uprawnienia do zmiany, wy
  ![Ustawia oświadczenia w hierarchii.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
  Wiele zestawów oświadczeń mogą mieć tego samego wydawania oświadczeń w zestawie, jak pokazano na poniższej ilustracji:
- 
   
  ![Wiele zestawów oświadczeń wraz z wydaniem tego samego zestawu oświadczeń.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   

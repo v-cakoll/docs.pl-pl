@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a58f375821109c0ec5f2230ae330dc6a2caa102
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583602"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959490"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Pozwala na tworzenie usług danych, dzięki czemu klienci mają dostęp do danych jako zasoby przy użyciu identyfikatorów URI, które są oparte na modelu danych. OData obsługuje również definicji operacji usługi. Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia te usługi danych może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniających się potrzeb biznesowych, wymagań dotyczących technologii informacji, lub aby rozwiązać inne problemy. Po wprowadzeniu zmian do istniejącej usługi danych należy rozważyć czy należy zdefiniować nową wersję usługi danych usługi i najlepszy sposób zminimalizować wpływ na istniejące aplikacje klienckie. W tym temacie znajdują się wskazówki dotyczące kiedy i jak utworzyć nową wersję usługi danych. Opisano również, jak usługi danych WCF obsługuje wymiany między klientami i usług danych, które obsługują różne wersje protokołu OData.
@@ -60,12 +60,12 @@ ms.locfileid: "65583602"
 
  Gdy aplikacja używa biblioteki klienta usługi danych WCF dostęp do usługi danych, bibliotek automatycznie ustawić tych nagłówków do prawidłowych wartości w zależności od wersji OData i funkcje, które są używane w aplikacji. Domyślnie usługi danych WCF używa Najniższa wersja protokołu, który obsługuje żądanej operacji.
 
- W poniższej tabeli przedstawiono wersje programu .NET Framework i [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] który zapewnia obsługę usług danych WCF dla określonych wersji protokołu OData.
+ Poniższe szczegóły tabeli wersji systemu .NET Framework lub Silverlight jako technologii, które umożliwiają usług danych WCF obsługę określonych wersji protokołu OData.
 
 |Wersja protokołu OData|Obsługa wprowadzone w systemie...|
 |-----------------------------------------------------------------------------------|----------------------------|
-|Wersja 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Z dodatkiem Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] w wersji 3|
-|W wersji 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Aktualizacja [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] z dodatkiem SP1. Możesz pobrać i zainstalować aktualizację z [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] w wersji 4|
+|Wersja 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Z dodatkiem Service Pack 1 (SP1)<br />-Programu Silverlight w wersji 3|
+|W wersji 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Aktualizacja [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] z dodatkiem SP1. Możesz pobrać i zainstalować aktualizację z [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Program Silverlight w wersji 4|
 |w wersji 3|— Można pobrać i zainstalować to wersja wstępna, która obsługuje OData w wersji 3 z [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Wersje metadanych

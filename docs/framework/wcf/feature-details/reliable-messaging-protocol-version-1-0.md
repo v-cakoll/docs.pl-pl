@@ -2,15 +2,15 @@
 title: Reliable Messaging Protocol w wersji 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 857bbbf9ffa1311c38cfc007e0cdc6bde06d6284
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db4761efb34e7436ae54819b8e5056c732bd2fab
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617577"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959949"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Reliable Messaging Protocol w wersji 1.0
-W tym temacie omówiono szczegóły dotyczące implementacji usług Windows Communication Foundation (WCF) dla protokołu WS-Reliable Messaging protocol February 2005 (w wersji 1.0) niezbędne do współpracy przy użyciu protokołu HTTP. Usługi WCF następuje specyfikacji WS-Reliable Messaging z ograniczeniami i wyjaśnienia szczegółowo opisane w tym temacie. Należy pamiętać, protokół WS-ReliableMessaging w wersji 1.0 jest implementowany, począwszy od [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+W tym temacie omówiono szczegóły dotyczące implementacji usług Windows Communication Foundation (WCF) dla protokołu WS-Reliable Messaging protocol February 2005 (w wersji 1.0) niezbędne do współpracy przy użyciu protokołu HTTP. Usługi WCF następuje specyfikacji WS-Reliable Messaging z ograniczeniami i wyjaśnienia szczegółowo opisane w tym temacie. Należy pamiętać, że protokół WS-ReliableMessaging w wersji 1.0 jest wykonywane począwszy od WinFX.  
   
  WS-Reliable Messaging February 2005 protokołu jest zaimplementowana w programie WCF przez <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
   
@@ -30,7 +30,7 @@ W tym temacie omówiono szczegóły dotyczące implementacji usług Windows Comm
 |wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
 |wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
   
-## <a name="messaging"></a>Obsługa wiadomości  
+## <a name="messaging"></a>Obsługa komunikatów  
   
 ### <a name="sequence-establishment-messages"></a>Komunikaty do określania sekwencji  
  Implementuje WCF `CreateSequence` i `CreateSequenceResponse` komunikaty, aby ustanowić sekwencji niezawodnych komunikatów. Obowiązują następujące ograniczenia:  
@@ -130,7 +130,7 @@ W tym temacie omówiono szczegóły dotyczące implementacji usług Windows Comm
 </s:Envelope>  
 ```  
   
-### <a name="sequence"></a>Sekwencja  
+### <a name="sequence"></a>Sequence  
  Oto lista ograniczeń, które dotyczą sekwencji:  
   
 - Generuje B1201:WCF i uzyskuje dostęp do sekwencji numerów nie jest wyższa niż `xs:long`firmy maksymalną wartość włącznie 9223372036854775807.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 014adfbf6f9afab0eaacd574cfb181c0eec07b5b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654968"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960314"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Ogólne informacje o przyspieszeniach w PLINQ
 Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ do zapytań obiekt, wykonując delegatów zapytania równolegle na komputerach z wielordzeniowymi procesorami. Program PLINQ sprawdza się najlepiej, gdy przetwarzania każdego elementu w kolekcji źródłowej jest niezależne, bez udostępnionego stanu związane między poszczególnych obiektów delegowanych. Operacje takie są wspólne w składniku LINQ do obiektów i PLINQ i są często nazywane "*delightfully równoległe*" ponieważ one nadają się łatwo do planowania w wielu wątkach. Jednak nie wszystkie kwerendy składać się z samych operacji delightfully równoległych; w większości przypadków zapytanie obejmuje niektóre operatory, albo nie może być przeprowadzana równolegle lub który spowolnić wykonywanie równoległe. A nawet w przypadku zapytań, które są całkowicie delightfully równoległego, PLINQ musi nadal partycji źródła danych harmonogramu pracy nad wątków i zazwyczaj scalać wyniki po wykonaniu kwerendy. Wszystkie te operacje dodawania obliczeniową koszty przetwarzania równoległego; te koszty, dodawanie funkcji przetwarzania równoległego, są nazywane *obciążenie*. Aby uzyskać optymalną wydajność w zapytaniu PLINQ, celem jest maksymalne części, które są delightfully równoległe i zminimalizować części, które wymagają narzutu. Ten artykuł zawiera informacje, dzięki którym można tworzyć zapytania PLINQ, które są najbardziej efektywne podczas nadal reaguje poprawne wyniki.  
@@ -61,7 +61,7 @@ Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ do zapytań 
   
 5. Typ opcji scalania.  
   
-     Program PLINQ można skonfigurować do buforowania danych wyjściowych i przedstawić go we fragmentach, lub wszystkie na raz po cały zestaw wyników jest generowany, lub do poszczególnych wyników strumienia jako są produkowane. Wynik poprzedniego jest obniżenie całkowity czas wykonywania i ostatnie wyniki zmniejszenia opóźnienia między elementami yielded.  Chociaż opcje scalania nie zawsze mają istotny wpływ na ogólną wydajność zapytań, mogą one wpływać na wydajność ponieważ kontrolują jak długo użytkownik musi czekać, aby zobaczyć wyniki. Aby uzyskać więcej informacji, zobacz [opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+     Program PLINQ można skonfigurować do buforowania danych wyjściowych i przedstawić go we fragmentach, lub wszystkie na raz po cały zestaw wyników jest generowany, lub do poszczególnych wyników strumienia jako są produkowane. Wcześniejsze wyniki w pogorszyła całkowity czas wykonywania i ostatnie wyniki zmniejszenia opóźnienia między elementami yielded.  Chociaż opcje scalania nie zawsze mają istotny wpływ na ogólną wydajność zapytań, mogą one wpływać na wydajność ponieważ kontrolują jak długo użytkownik musi czekać, aby zobaczyć wyniki. Aby uzyskać więcej informacji, zobacz [opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 6. Rodzaj partycji.  
   

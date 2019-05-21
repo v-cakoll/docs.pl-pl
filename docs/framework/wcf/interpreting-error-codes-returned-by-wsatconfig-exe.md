@@ -2,12 +2,12 @@
 title: Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928820"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959848"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe
 W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzie konfiguracji WS-AtomicTransaction (wsatConfig.exe) i zalecane akcje do wykonania.  
@@ -35,9 +35,9 @@ W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzi
 |17|Nie można skonfigurować http.sys. Nie można usunąć powiązania certyfikatu SSL z poprzedniego portu.|Umożliwia mapowania na błąd systemowy odpowiedni kod błędu zwrócony komunikat o błędzie. Jeśli to konieczne, użyj httpcfg.exe lub netsh.exe, aby usunąć rezerwacje błędne portu.|  
 |18|Nie można skonfigurować http.sys. Nie można powiązać określony certyfikat z portem, ponieważ poprzednie SSL powiązanie już istnieje.|Inna aplikacja miała już własności określonego portu. Zmień na innym porcie lub odinstalować lub ponownie skonfigurować bieżącej aplikacji.|  
 |19|Ponowne uruchamianie usługi MSDTC nie powiodło się.|Ręcznie uruchom ponownie usługi MSDTC, jeśli to konieczne. Jeśli problem będzie się powtarzać, skontaktuj się z pomocą firmy Microsoft.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|Zainstaluj [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] na maszynie.|  
+|20|WinFX nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|WinFX należy zainstalować na tym komputerze.|  
 |21|Konfiguracja zdalnego nie powiodło się z powodu limitu czasu operacji.|Wywołania do skonfigurowania WS-AT na maszynie zdalnej powinna trwać dłużej niż 90 sekund.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|Zainstaluj [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] na maszynie.|  
+|22|WinFX nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|WinFX należy zainstalować na tym komputerze.|  
 |23|Konfiguracja zdalnego nie powiodło się z powodu wyjątku na komputerze zdalnym.|Sprawdź komunikat o błędzie dla elementów z możliwością wykonywania akcji|  
 |26|Do WsatConfig.exe przekazano nieprawidłowy argument.|Sprawdź wiersz polecenia dla błędów.|  
 |27|`-accounts` Opcji wiersza polecenia jest nieprawidłowy.|Popraw`accounts` opcji wiersza polecenia, aby prawidłowo określić konto użytkownika.|  
@@ -52,10 +52,10 @@ W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzi
 |38|Proces lub użytkownik nie ma wystarczających uprawnień do zmiany konfiguracji zapory.|Wykonywanie WsatConfig.exe w ramach konta administratora.|  
 |39|WsatConfig.exe napotkał błąd podczas aktualizowania konfiguracji zapory.|Sprawdź komunikat o błędzie dla elementów z możliwością wykonywania akcji.|  
 |40|WsatConfig.exe nie będzie mógł udzielić dostępu do odczytu usługi MSDTC do pliku klucza prywatnego certyfikatu|Wykonywanie WsatConfig.exe w ramach konta administratora.|  
-|41|Albo nie instalacji [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] można odnaleźć lub znaleziono wersji nie jest zgodny, co to narzędzie jest w stanie konfiguracji.|Upewnij się, [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] jest poprawnie zainstalowane i tylko narzędzie WsatConfig.exe, dołączonej do wersji [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] skonfigurować WS-AT.|  
+|41|Nie instalacji WinFX można odnaleźć albo odnaleźć wersji jest niezgodny co narzędzie jest w stanie Konfigurowanie.|Upewnij się, że WinFX jest poprawnie zainstalowane, a tylko za pomocą narzędzia WsatConfig.exe, dołączony do tej wersji WinFX, aby skonfigurować WS-AT.|  
 |42|Argument została określona więcej niż raz w wierszu polecenia.|Tylko raz określić każdy argument podczas wykonywania WsatConfig.exe.|  
 |43|WsatConfig.exe nie można zaktualizować ustawień WS-AT, jeśli nie włączono WS-AT.|Określ `-network:enable` jako argument wiersza polecenia.|  
-|44|Brakuje wymaganej poprawki i nie można skonfigurować WS-AT, dopóki nie zostanie zainstalowana poprawka.|Zobacz [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] wersji, aby uzyskać instrukcje dotyczące instalowania wymaganej poprawki.|  
+|44|Brakuje wymaganej poprawki i nie można skonfigurować WS-AT, dopóki nie zostanie zainstalowana poprawka.|Zobacz WinFX wersji, aby uzyskać instrukcje dotyczące instalowania wymaganej poprawki.|  
 |45|`-virtualServer` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-virtualServer` opcji wiersza polecenia, określając nazwę sieciową zasobu klastra, w której chcesz skonfigurować.|  
 |46|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesji śledzenia zdarzeń systemu Windows|Użyj kod błędu zwrócony do mapowania na błąd systemowy odpowiednie.|  
 |47|Proces lub użytkownik nie ma wystarczających uprawnień, aby włączyć sesji śledzenia zdarzeń systemu Windows.|Wykonywanie WsatConfig.exe w ramach konta administratora.|  

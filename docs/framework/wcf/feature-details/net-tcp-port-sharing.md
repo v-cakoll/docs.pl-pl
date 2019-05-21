@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: f40afe25bbc3238ec773ee1ee19673d4d5a3ef1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603942"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960035"
 ---
 # <a name="nettcp-port-sharing"></a>Współużytkowanie portów w składniku Net.TCP
 Windows Communication Foundation (WCF) zapewnia nowy Protokół sieci oparte na protokole TCP (net.tcp://) komunikację o wysokiej wydajności. Usługi WCF wprowadza również nowy składnik systemu, usługi udostępniania portów Net.TCP, która umożliwia użycie portów net.tcp być współużytkowane przez wiele procesów użytkownika.  
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF) zapewnia nowy Protokół sieci oparte na 
  Gdy usługa WCF, która używa net.tcp:// udostępniania portów, infrastruktura transportu TCP usługi WCF nie bezpośrednio otworzyć gniazda TCP w procesie aplikacji. Zamiast tego infrastruktura transportu rejestruje usługi adres podstawowy identyfikator URI (Uniform Resource) za pomocą usługi udostępniania portów Net.TCP i czeka na port udostępnianej usługi, aby nasłuchiwać komunikatów w jej imieniu.  Port udostępnianej usługi wysyła komunikaty adresowane do usługi aplikacji, podczas ich dostarczania.  
   
 ## <a name="installing-port-sharing"></a>Instalowanie współużytkowania portów  
- Usługi udostępniania portów Net.TCP jest dostępna we wszystkich systemach operacyjnych, które obsługują [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ale usługa nie jest domyślnie włączona. Ze względów bezpieczeństwa administrator musi ręcznie włączyć usługi udostępniania portów Net.TCP przed pierwszym użyciu. Usługi udostępniania portów Net.TCP udostępnia opcje konfiguracji, które umożliwiają manipulowanie pewne cechy gniazd sieciowych należących do współużytkowania portów. Aby uzyskać więcej informacji, zobacz [jak: Włączanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Usługi udostępniania portów Net.TCP jest dostępna we wszystkich systemach operacyjnych, które obsługują WinFX, ale usługa nie jest domyślnie włączona. Ze względów bezpieczeństwa administrator musi ręcznie włączyć usługi udostępniania portów Net.TCP przed pierwszym użyciu. Usługi udostępniania portów Net.TCP udostępnia opcje konfiguracji, które umożliwiają manipulowanie pewne cechy gniazd sieciowych należących do współużytkowania portów. Aby uzyskać więcej informacji, zobacz [jak: Włączanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Przy użyciu portów Net.tcp, udostępnianie w aplikacji  
  Najprostszym sposobem na korzystanie z portu net.tcp:// udostępnianie w aplikację WCF jest do udostępnienia usługi za pomocą <xref:System.ServiceModel.NetTcpBinding> a następnie włączyć usługi udostępniania portów Net.TCP przy użyciu <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwości.  

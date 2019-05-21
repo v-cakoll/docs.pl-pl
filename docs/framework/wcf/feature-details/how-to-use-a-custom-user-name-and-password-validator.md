@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 49271e087ad63020e695f3bd46d7f8c47adf2130
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 593e3e97ad7e5ae65447d8618caacf22f762f9b4
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662491"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960063"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Instrukcje: używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła
 Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Windows Communication Foundation (WCF) używa Windows do weryfikowania nazwy użytkownika i hasła. Jednak WCF umożliwia niestandardowych użytkownika nazwy i hasła schematy uwierzytelniania, znany także jako *moduły weryfikacji*. Aby dołączyć moduł weryfikacji nazwy i hasła użytkownika niestandardowego, należy utworzyć klasę, która pochodzi od klasy <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , a następnie skonfigurować go.  
@@ -44,7 +44,7 @@ Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Win
      Korzystając z zabezpieczeń na poziomie transportu za pośrednictwem protokołu HTTP (S), są dodawane [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \< netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) lub [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) , który używa protokołu HTTP (S) i `Basic` schematu uwierzytelniania.  
   
     > [!NOTE]
-    >  Gdy [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] lub nowszej jest używany, można użyć niestandardowego modułu weryfikacji nazwy użytkownika i hasła za pomocą zabezpieczeń transportu i wiadomości. Za pomocą [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], niestandardowego modułu weryfikacji nazwy użytkownika i hasła można używać tylko z zabezpieczeń komunikatów.  
+    >  Gdy [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] lub nowszej jest używany, można użyć niestandardowego modułu weryfikacji nazwy użytkownika i hasła za pomocą zabezpieczeń transportu i wiadomości. Za pomocą WinFX niestandardowego modułu weryfikacji nazwy użytkownika i hasła należy używać tylko z zabezpieczeń komunikatów.  
   
     > [!TIP]
     >  Aby uzyskać więcej informacji na temat korzystania z \<netTcpBinding > w tym kontekście, zobacz [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  

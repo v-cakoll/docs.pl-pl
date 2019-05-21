@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672539"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960382"
 ---
 # <a name="using-threads-and-threading"></a>Używanie wątków i wątkowości
 
@@ -32,7 +32,7 @@ Utwórz nowy wątek, tworząc nowe wystąpienie klasy <xref:System.Threading.Thr
 
 Aby zakończyć wykonywanie wątku, należy użyć <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metody. Ta metoda wywołuje <xref:System.Threading.ThreadAbortException> w wątku, na którym jest wywoływana. Aby uzyskać więcej informacji, zobacz [niszczenie wątków](destroying-threads.md).
 
-Począwszy od programu .NET Framework 4, można użyć <xref:System.Threading.CancellationToken?displayProperty=nameWithType> do wspólne anulowanie wątków. Aby uzyskać więcej informacji, zobacz [wspólne anulowanie wątków](canceling-threads-cooperatively.md).
+Począwszy od programu .NET Framework 4, można użyć <xref:System.Threading.CancellationToken?displayProperty=nameWithType> do wspólne anulowanie wątków. Aby uzyskać więcej informacji, zobacz [anulowanie w zarządzanych wątkach](cancellation-in-managed-threads.md).
 
 Użyj <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> metody wątek wywołujący, poczekaj na zakończenie wątku, na którym jest wywoływana metoda.
 

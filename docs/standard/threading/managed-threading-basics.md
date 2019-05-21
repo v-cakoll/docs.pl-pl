@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644822"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960362"
 ---
 # <a name="managed-threading-basics"></a>Zarządzana wątkowość — podstawy
 
@@ -45,9 +45,6 @@ Pięciu pierwszych tematach w tej sekcji mają ułatwić ustalenie, kiedy używa
   
  [Lokalny magazyn wątków: Względne wątkom pola statyczne i gniazda danych](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  W tym artykule opisano mechanizmy względne wątkom magazynu.  
-  
- [Anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- W tym artykule opisano sposób asynchronicznego lub długotrwałe operacje synchroniczne można anulować przy użyciu tokenu anulowania.  
   
 ## <a name="reference"></a>Tematy pomocy
 

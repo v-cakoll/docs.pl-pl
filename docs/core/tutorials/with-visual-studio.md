@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b92c3b293b37921e1a8b557a7842027ecce8851c
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647090"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959260"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie C# aplikacji Hello World przy użyciu zestawu .NET Core SDK w programie Visual Studio 2017
 
@@ -61,7 +61,7 @@ Rozszerz aplikację, aby monitować użytkownika o ich nazwy i wyświetl ją wra
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   Ten kod zastępuje istniejące <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType>, i <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> instrukcji.
+   Ten kod zastępuje zawartość `Main` metody.
 
    ![Plik c sharp Visual Studio Program przy użyciu zaktualizowanych metody Main](./media/with-visual-studio/visual-csharp-code-window.png)
 

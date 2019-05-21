@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0cb14bba724b50a8a2b723fe88503fafeeea3880
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582698"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959895"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)
 
@@ -49,7 +49,7 @@ Narzędzie nie obsługuje wielowersyjności kodu. Jeśli chcesz wygenerować art
 
 ### <a name="accessing-wsdl-documents"></a>Uzyskiwanie dostępu do dokumentów w formacie WSDL
 
-Gdy używasz narzędzia Svcutil dostępu do dokumentu WSDL, który odwołuje się do usługi tokenu zabezpieczającego (STS), narzędzia Svcutil sprawia, że usługi WS-MetadataExchange wywołań do usługi STS. Jednak usługa mogą uwidocznić swoje dokumenty WSDL, za pomocą usługi WS-MetadataExchange lub HTTP GET. W związku z tym jeśli usługi STS jest dostępne tylko przy użyciu HTTP GET klienta napisanego w dokumencie WSDL [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] zakończy się niepowodzeniem. W przypadku klientów, napisany w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]Svcutil podejmują próbę użycia obu WS-MetadataExchange i HTTP GET w celu uzyskania WSDL usługi STS.
+Gdy używasz narzędzia Svcutil dostępu do dokumentu WSDL, który odwołuje się do usługi tokenu zabezpieczającego (STS), narzędzia Svcutil sprawia, że usługi WS-MetadataExchange wywołań do usługi STS. Jednak usługa mogą uwidocznić swoje dokumenty WSDL, za pomocą usługi WS-MetadataExchange lub HTTP GET. W związku z tym Usługa STS tylko wystawiony dokument WSDL, za pomocą HTTP GET klienta napisanego w WinFX zakończy się niepowodzeniem. W przypadku klientów, napisany w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]Svcutil podejmują próbę użycia obu WS-MetadataExchange i HTTP GET w celu uzyskania WSDL usługi STS.
 
 ## <a name="using-svcutilexe"></a>Using SvcUtil.exe
 
@@ -107,7 +107,7 @@ Usługi za pomocą punktu końcowego Obiekt BasicHttpContextBinding *Svcutil.exe
 |/serializer:Auto|Automatycznie wybierz serializator. To próbuje użyć serializatora kontraktu danych i używa serializatora XmlSerializer, jeśli się nie powiedzie.<br /><br /> Krótka: `/ser`|
 |/serializer:DataContractSerializer|Generuje typy danych używające serializatora kontraktu danych do serializacji i deserializacji.<br /><br /> Krótka: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|Generuje typy danych, które używają <xref:System.Xml.Serialization.XmlSerializer> do serializacji i deserializacji.<br /><br /> Krótka: `/ser:XmlSerializer`|
-|/targetClientVersion|Określ, która wersja programu .NET Framework jest przeznaczony dla aplikacji. Prawidłowe wartości to `Version30` i `Version35`. Wartość domyślna to `Version30`.<br /><br /> Krótka: `/tcv`<br /><br /> `Version30`: Użyj `/tcv:Version30` klientów korzystających z generowania kodu [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Użyj `/tcv:Version35` klientów korzystających z generowania kodu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Korzystając z `/tcv:Version35` z `/async` Przełącz zarówno oparte na zdarzeniach i generowane są oparte na wywołanie zwrotne/delegatach metod asynchronicznych. Ponadto obsługa komputerów z obsługą zapytań LINQ z zestawami danych i <xref:System.DateTimeOffset> jest włączona.|
+|/targetClientVersion|Określ, która wersja programu .NET Framework jest przeznaczony dla aplikacji. Prawidłowe wartości to `Version30` i `Version35`. Wartość domyślna to `Version30`.<br /><br /> Krótka: `/tcv`<br /><br /> `Version30`: Użyj `/tcv:Version30` dla klientów używających WinFX z generowania kodu.<br /><br /> `Version35`: Użyj `/tcv:Version35` klientów korzystających z generowania kodu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Korzystając z `/tcv:Version35` z `/async` Przełącz zarówno oparte na zdarzeniach i generowane są oparte na wywołanie zwrotne/delegatach metod asynchronicznych. Ponadto obsługa komputerów z obsługą zapytań LINQ z zestawami danych i <xref:System.DateTimeOffset> jest włączona.|
 |/ opakowana|Określa, czy specjalne jest używane różne dokumentów za pomocą parametrów opakowana literał dokumentu. Użyj **/ opakowane** przełącznik z [Service Model metadanych narzędzie (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia do określania normalnego wielkości liter.|
 
 > [!NOTE]

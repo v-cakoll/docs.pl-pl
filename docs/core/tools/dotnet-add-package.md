@@ -2,14 +2,14 @@
 title: polecenia DotNet Dodaj pakiet — polecenie
 description: Polecenie "dotnet Dodaj pakiet" zapewnia wygodny sposób, aby dodać odwołanie do pakietu NuGet do projektu.
 ms.date: 04/24/2019
-ms.openlocfilehash: 07cb6cd8e7873def6f969a54c1f7b9a7325f9491
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 82f178026b46eb0237243b8ae49d17fbcc1af6ec
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632274"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959243"
 ---
-# <a name="dotnet-add-package"></a>polecenia DotNet Dodaj pakiet
+# <a name="dotnet-add-package"></a>dotnet add package
 
 **Ten artykuł dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
 
@@ -90,7 +90,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`-v|--version <VERSION>`**
 
-  Wersja pakietu.
+  Wersja pakietu. Zobacz [przechowywanie wersji pakietów NuGet](https://docs.microsoft.com/nuget/reference/package-versioning).
 
 ## <a name="examples"></a>Przykłady
 

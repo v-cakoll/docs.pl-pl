@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c4a4ba28116965db1d4dfdef3cdfb0496aad123
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557921"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960014"
 ---
 # <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 
@@ -1399,7 +1399,7 @@ Przy użyciu plików PDB Ngen NGen można utworzyć pliku PDB, który zawiera ma
 
 ## <a name="whats-new-in-net-2015"></a>What's new in .NET 2015
 
-Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET Core. Niektóre nowe funkcje dotyczą zarówno i inne funkcje są specyficzne dla [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] lub [!INCLUDE[net_core](../../../includes/net-core-md.md)].
+Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET Core. Niektóre nowe funkcje dotyczą zarówno i inne funkcje są specyficzne dla [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] lub .NET Core.
 
 - **ASP.NET Core**
 
@@ -1747,11 +1747,11 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
 - **Obsługa stron kodowych**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] przede wszystkim obsługuje kodowania Unicode i domyślnie udostępnia ograniczoną obsługę stron kodowych. Można dodać obsługę stron kodowych dostępnych w programie .NET Framework, ale niedostępną w [!INCLUDE[net_core](../../../includes/net-core-md.md)] , rejestrując stron kodowych za pomocą <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> metody. Aby uzyskać więcej informacji, zobacz <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     .NET core przede wszystkim obsługuje kodowania Unicode i domyślnie udostępnia ograniczoną obsługę stron kodowych. Można dodać obsługę stron kodowych dostępnych w programie .NET Framework, ale nieobsługiwane na platformie .NET Core, rejestrując stron kodowych za pomocą <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> metody. Aby uzyskać więcej informacji, zobacz <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
-     Aplikacje Windows dla systemu Windows 10, których platformą docelową [!INCLUDE[net_core](../../../includes/net-core-md.md)] i są zapisywane w języku C# lub Visual Basic można korzystać z nowej technologii, która kompiluje aplikacje do kodu natywnego, a nie IL. Wygenerowanie aplikacji jest określony przez szybsze uruchamianie i czasu wykonania. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji z architekturą .NET Native](../net-native/index.md). Omówienie programu .NET Native badający jak różni się od NGEN i kompilacja JIT i przebieg oznacza, że w kodzie, zobacz [.NET Native i kompilacja](../net-native/net-native-and-compilation.md).
+     Aplikacje Windows dla systemu Windows 10, które docelowej platformy .NET Core i są zapisywane C# lub Visual Basic można korzystać z nowej technologii, która kompiluje aplikacje do kodu natywnego, a nie IL. Wygenerowanie aplikacji jest określony przez szybsze uruchamianie i czasu wykonania. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji z architekturą .NET Native](../net-native/index.md). Omówienie programu .NET Native badający jak różni się od NGEN i kompilacja JIT i przebieg oznacza, że w kodzie, zobacz [.NET Native i kompilacja](../net-native/net-native-and-compilation.md).
 
      Twoje aplikacje są kompilowane do kodu macierzystego domyślnie podczas kompilowania ich przy użyciu programu Visual Studio 2015 lub nowszego. Aby uzyskać więcej informacji, zobacz [wprowadzenie do platformy .NET Native](../net-native/getting-started-with-net-native.md).
 

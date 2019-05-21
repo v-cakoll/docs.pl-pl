@@ -2,15 +2,15 @@
 title: Zabezpieczanie aplikacji kanałów równorzędnych
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 8fbad019270851a32d932c33d6fd401cea2b3515
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603321"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959886"
 ---
 # <a name="securing-peer-channel-applications"></a>Zabezpieczanie aplikacji kanałów równorzędnych
-Jak innych powiązań w obszarze [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` ma domyślnie włączona, zabezpieczeń i oferuje zarówno zabezpieczenia na poziomie transportu i komunikat (lub obie). W tym temacie omówiono te dwa rodzaje zabezpieczeń. Typ zabezpieczeń jest określony przez tag tryb zabezpieczeń w specyfikacji powiązania (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
+Innych powiązań w obszarze WinFX, takich jak `NetPeerTcpBinding` ma domyślnie włączona, zabezpieczeń i oferuje zarówno zabezpieczenia na poziomie transportu i komunikat (lub obie). W tym temacie omówiono te dwa rodzaje zabezpieczeń. Typ zabezpieczeń jest określony przez tag tryb zabezpieczeń w specyfikacji powiązania (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
   
 ## <a name="transport-based-security"></a>Zabezpieczenia na poziomie transportu  
  Kanał elementu równorzędnego obsługuje dwa typy poświadczeń uwierzytelniania dla zabezpieczanie transportu, które wymagają ustawienie poziomie `ClientCredentialSettings.Peer` właściwości skojarzonego `ChannelFactory`:  

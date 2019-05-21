@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: Konwersje wskaźników
           href: pointer-conversions.md
-        - name: Wyrażenia wskaźników
-          items:
-            - name: 'Instrukcje: uzyskiwanie wartości zmiennej wskaźnikowej'
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: 'Instrukcje: uzyskiwanie adresu zmiennej'
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: 'Instrukcje: uzyskiwanie dostępu do elementu członkowskiego za pomocą wskaźnika'
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: 'Instrukcje: uzyskiwanie dostępu do elementu tablicy za pomocą wskaźnika'
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: Manipulowanie wskaźnikami
-              items:
-                - name: 'Instrukcje: inkrementacja i dekrementacja wskaźników'
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: Operacje arytmetyczne na wskaźnikach
-                  href: arithmetic-operations-on-pointers.md
-                - name: Porównanie wskaźników
-                  href: pointer-comparison.md
-        - name: 'Instrukcje: używanie wskaźników do kopiowania tablicy bajtów'
+        - name: 'Instrukcje: użycie wskaźników do kopiowania tablicy bajtów'
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md

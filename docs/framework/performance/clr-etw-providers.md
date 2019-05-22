@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788001"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003741"
 ---
 # <a name="clr-etw-providers"></a>Dostawcy CLR ETW
 Środowisko uruchomieniowe języka wspólnego (CLR) ma dwóch dostawców: dostawcę środowiska uruchomieniowego i dostawcę podsumowania.  
   
  Dostawca środowiska uruchomieniowego wywołuje zdarzenia, w zależności od tego, które są włączone słów kluczowych (kategorie zdarzeń). Na przykład, można zbierać zdarzenia ładowania, włączając `LoaderKeyword` — słowo kluczowe.  
   
- Zdarzenia śledzenia dla zdarzeń Windows (ETW) są rejestrowane w pliku z rozszerzeniem .etl, które później mogą być używane po tej operacji przetwarzane w plikach wartości rozdzielanych przecinkami (CSV), zgodnie z potrzebami. Aby uzyskać informacje o sposobie konwertowania pliku etl do pliku CSV, zobacz [kontrolowanie rejestrowania .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Zdarzenia śledzenia dla Windows (ETW) są rejestrowane w pliku z rozszerzeniem .etl, które później mogą być używane po tej operacji przetwarzane w plikach wartości rozdzielanych przecinkami (CSV), zgodnie z potrzebami. Aby uzyskać informacje o sposobie konwertowania pliku etl do pliku CSV, zobacz [kontrolowanie rejestrowania .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Dostawca środowiska uruchomieniowego  
  Dostawca środowiska uruchomieniowego jest głównym dostawcą CLR ETW.  

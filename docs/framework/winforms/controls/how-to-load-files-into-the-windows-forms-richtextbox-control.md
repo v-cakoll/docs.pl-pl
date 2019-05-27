@@ -15,12 +15,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: ffbce7401f068b3d0a7fee4fd8ba04c10cb6f6b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1288d89bc9ffd729b59626b88fd2f3ca61c8669d
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918557"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053558"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Instrukcje: ładowanie plików do kontrolki RichTextBox formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant może wyświetlać zwykłego tekstu, tekst zwykły Unicode lub tekst sformatowany (RTF) pliku. Aby to zrobić, należy wywołać <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metody. Można również użyć <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metodę, aby załadować dane ze strumienia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
@@ -66,7 +66,7 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant może wyświe
        }  
     ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C#, Visual C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.btnOpenFile.Click += new System.EventHandler(this. btnOpenFile_Click);  

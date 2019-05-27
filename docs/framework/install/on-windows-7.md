@@ -5,12 +5,12 @@ description: Dowiedz się, jak zainstalować program .NET Framework na Windows 7
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: b0a79344fec675a88181f6dbdc802b94978b4f06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc39a6658f300fc2cbe7f2686030b86a5f53802c
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643910"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052723"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Instalowanie programu .NET Framework w systemach Windows 7 SP1 i Windows Server 2008 R2
 
@@ -18,7 +18,7 @@ ms.locfileid: "61643910"
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) jest najnowsza wersja. Jest obsługiwana na Windows 7 z dodatkiem SP1 i Windows Server 2008 R2 i jest dołączany [systemu Windows 10 może aktualizować 2019](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update).
+Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) jest najnowsza wersja. Jest obsługiwana na Windows 7 z dodatkiem SP1 i Windows Server 2008 R2 i jest dołączany [systemu Windows 10 może aktualizować 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update).
 
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
@@ -29,7 +29,7 @@ Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, kt�
 
 ## <a name="net-framework-35"></a>Program .NET Framework 3,5
 
-[.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) jest dołączana do Windows 7.
+[.NET Framework 3.5](https://www.microsoft.com/download/details.aspx?id=21) jest dołączana do Windows 7.
 
 .NET Framework 3.5 obsługuje aplikacje są kompilowane dla .NET Framework 1.0 za pośrednictwem 3.5.
 

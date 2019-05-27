@@ -5,12 +5,12 @@ description: Dowiedz się, jak zainstalować program .NET Framework na Windows 8
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 2b4f7c73a47423ccbed966798c7081349e6bc63e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 752f18eb3cbb87e5b6703fd7e0e81762ba3f0f10
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643884"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052072"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Instalowanie programu .NET Framework w systemach Windows 8.1 i Windows Server 2012 R2
 
@@ -18,7 +18,7 @@ ms.locfileid: "61643884"
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) jest najnowsza wersja. Jest obsługiwana na Windows 8.1 i Windows Server 2012 R2 i jest dołączany [systemu Windows 10 może aktualizować 2019](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update).
+Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) jest najnowsza wersja. Jest obsługiwana na Windows 8.1 i Windows Server 2012 R2 i jest dołączany [systemu Windows 10 może aktualizować 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update).
 
 ## <a name="net-framework-8"></a>.NET Framework 8
 

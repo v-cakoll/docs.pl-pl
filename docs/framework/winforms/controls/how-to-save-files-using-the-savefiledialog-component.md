@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 933e049f825bcc8f2afef914f810b52c1cf51245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 18d9b93b78d3ed588eafa48831448983ccd61fe8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638305"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053506"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Instrukcje: zapisywanie plików za pomocą składnika SaveFileDialog
 <xref:System.Windows.Forms.SaveFileDialog> Składnik umożliwia użytkownikom Przeglądaj system plików i wybierz pliki do zapisania. Okno dialogowe zwraca ścieżkę i nazwę pliku, który został wybrany przez użytkownika w oknie dialogowym. Jednak należy napisać kod, aby faktycznie zapisywać pliki na dysku.  
@@ -161,7 +161,7 @@ ms.locfileid: "64638305"
        }  
     ```  
   
-     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C# i wizualna C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  

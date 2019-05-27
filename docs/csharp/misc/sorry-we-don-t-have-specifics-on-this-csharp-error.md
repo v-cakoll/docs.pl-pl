@@ -882,23 +882,23 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684059"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052757"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Niestety nie są dostępne szczegółowe informacje na temat tego błędu języka C#
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Lub możesz poprosić, aby inni deweloperzy przy użyciu jednej z tych forów:  
   
- [W języku Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ [W języku Visual C#](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
  Udostępnia forum dla pytania na temat oraz prowadzić ogólne dyskusje na składni języka Visual C# i kompilatora.  
   
- [Środowisko IDE programu Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ [Środowisko IDE programu Visual C#](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
  Udostępnia forum pytania na temat sposobu pracy w środowisku Visual Studio.  
   
- [Visual C# General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ [Visual C# General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
  Udostępnia forum dla pytania o i problemy z Visual C#, nie są omawiane na innych forach.  
   
  [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)  

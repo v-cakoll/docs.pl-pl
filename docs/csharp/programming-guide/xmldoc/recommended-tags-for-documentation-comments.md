@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 963be5273389ebbdb3458d41b0658de0d94bb2cd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 07594d70b92e2075c3d5aba605eab23d766faed6
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634799"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052748"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Znaczniki zalecane dla komentarzy do dokumentacji (Przewodnik programowania w języku C#)
 Kompilator języka C# przetwarza komentarze dokumentacji w kodzie i sformatuje je jako kod XML w pliku o nazwie określonej w **/doc** opcji wiersza polecenia. Aby utworzyć dokumentację na podstawie pliku generowanych przez kompilator, można utworzyć narzędzie niestandardowe, lub użyj narzędzia takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -36,12 +36,13 @@ Kompilator języka C# przetwarza komentarze dokumentacji w kodzie i sformatuje j
   
  (* oznacza, że kompilator sprawdza składnię.)  
   
- Nawiasy są wyświetlane w tekście komentarza do dokumentacji, użyć `<` i `>`, jak pokazano w poniższym przykładzie.  
+ Nawiasy są wyświetlane w tekście komentarza do dokumentacji, użyć kodu HTML `<` i `>` czyli `&lt;` i `&gt;` odpowiednio. To kodowanie pokazano w poniższym przykładzie:
   
 ```csharp  
-/// <summary cref="C < T >">  
-/// </summary>  
-```  
+/// <summary>
+/// This property always returns a value &lt; 1.
+/// </summary>
+```
   
 ## <a name="see-also"></a>Zobacz także
 

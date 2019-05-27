@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679235"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052401"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarządzanego i niezarządzanego kodu.  
@@ -28,7 +28,7 @@ Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarzą
 >  [Środowiska uruchomieniowego języka wspólnego](../../../standard/clr.md) (CLR) zarządza dostępem do zasobów systemowych. Wywoływanie niezarządzanego kodu, który znajduje się poza środowisko CLR pomija ten mechanizm bezpieczeństwa, a w związku z tym może stanowić zagrożenie bezpieczeństwa. Na przykład kodu niezarządzanego może wywołać zasoby w niezarządzanym kodzie bezpośrednio z pominięciem mechanizmów zabezpieczeń CLR. Aby uzyskać więcej informacji, zobacz [zabezpieczeń na platformie .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>międzyoperacyjność C++  
- Za pomocą międzyoperacyjności języka C++, znany także jako ją po prostu działa (IJW), do opakowania natywnych klasy języka C++, dzięki czemu mogą być używane przez kod, który został utworzony w języku C# lub innym języku .NET Framework. Aby to zrobić, pisanie kodu C++, aby opakować natywnej biblioteki DLL lub składnika COM. W przeciwieństwie do innych językach .NET Framework [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] ma współdziałanie pomocy technicznej, że umożliwia kodu zarządzanego i niezarządzanego zlokalizowanym w tej samej aplikacji, a nawet w tym samym pliku. Następnie utworzysz kodu C++ za pomocą **/CLR** przełącznika kompilatora, aby utworzyć zestaw zarządzany. Na koniec Dodaj odwołanie do zestawu w projekcie języka C# i używać opakowanej obiektów, tak jak w przypadku innych klas zarządzanych.  
+ Za pomocą międzyoperacyjności języka C++, znany także jako ją po prostu działa (IJW), do opakowania natywnych klasy języka C++, dzięki czemu mogą być używane przez kod, który został utworzony w języku C# lub innym języku .NET Framework. Aby to zrobić, pisanie kodu C++, aby opakować natywnej biblioteki DLL lub składnika COM. W przeciwieństwie do innych językach .NET Framework Visual C++ ma współdziałanie pomocy technicznej, że umożliwia kodu zarządzanego i niezarządzanego zlokalizowanym w tej samej aplikacji, a nawet w tym samym pliku. Następnie utworzysz kodu C++ za pomocą **/CLR** przełącznika kompilatora, aby utworzyć zestaw zarządzany. Na koniec Dodaj odwołanie do zestawu w projekcie języka C# i używać opakowanej obiektów, tak jak w przypadku innych klas zarządzanych.  
   
 ## <a name="exposing-com-components-to-c"></a>Udostępnianie składników COM do C\#
  Mogą wykorzystywać składnika modelu COM z projektu języka C#. Ogólne kroki są następujące:  

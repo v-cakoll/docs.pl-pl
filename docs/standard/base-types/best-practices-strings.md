@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0f7c390d2ad7233475786e795fef0290af545145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634742"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052997"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 <a name="top"></a> .NET zapewnia rozbudowaną obsługę dla rozwoju zlokalizowane i uniwersalnych aplikacji i ułatwia zastosowanie Konwencji kultury bieżącej lub określonej kultury, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest to operacja wrażliwość na ustawienia kulturowe. Na przykład ciągów, które są używane wewnętrznie przez aplikację zwykle powinny być traktowane identycznie we wszystkich kulturach. Kiedy dane ciągu kulturalnie niezależne, takie jak XML tagów, HTML tagów, nazwy użytkowników, ścieżki do plików i nazwy obiektów systemowych są interpretowane tak, jakby były one zależne od kultury, kod aplikacji może być zastrzeżeniem subtelnych błędów, niską wydajnością i w niektórych przypadkach problemy z zabezpieczeniami.  
@@ -125,7 +125,7 @@ ms.locfileid: "64634742"
  Porównanie ciągów jest sercem wiele powiązanych z ciągami operacji, szczególnie sortowania i testowanie pod kątem równości. Sortowanie ciągów w określonej kolejności: Jeśli "Mój" pojawia się przed "string", w posortowanej listy ciągów, "Mój" należy porównać mniejsze niż lub równe "string". Ponadto porównanie niejawnie definiuje równości. Operacja porównania zwraca zero dla ciągów, które uzna za równe. Interpretacja dobre jest ani ciągu jest mniejszy od drugiego. Największe znaczenie obejmującego ciągi dołączyć jedno lub oba z następujących procedur: porównanie z innego ciągu i wykonywania operacji sortowania dobrze zdefiniowane.  
 
 > [!NOTE]
-> Możesz pobrać [tabele wagi sortowania](https://www.microsoft.com/en-us/download/details.aspx?id=10921), zbiór plików tekstowych, które zawierają informacje o wagi znaku w operacjach sortowania i porównywania dla systemów operacyjnych Windows, a [domyślne Unicode Tabela elementów sortowania](https://www.unicode.org/Public/UCA/latest/allkeys.txt), najnowszą wersję tabeli wagi sortowania dla systemów Linux i macOS. Określoną wersję tabeli wagi sortowania w systemie Linux i macOS jest zależna od wersji [składniki międzynarodowego standardu Unicode](http://site.icu-project.org/) biblioteki zainstalowane w systemie. Informacje na temat ICU wersji i wersje Unicode, które implementują, zobacz [pobieranie ICU](http://site.icu-project.org/download).
+> Możesz pobrać [tabele wagi sortowania](https://www.microsoft.com/download/details.aspx?id=10921), zbiór plików tekstowych, które zawierają informacje o wagi znaku w operacjach sortowania i porównywania dla systemów operacyjnych Windows, a [domyślne Unicode Tabela elementów sortowania](https://www.unicode.org/Public/UCA/latest/allkeys.txt), najnowszą wersję tabeli wagi sortowania dla systemów Linux i macOS. Określoną wersję tabeli wagi sortowania w systemie Linux i macOS jest zależna od wersji [składniki międzynarodowego standardu Unicode](http://site.icu-project.org/) biblioteki zainstalowane w systemie. Informacje na temat ICU wersji i wersje Unicode, które implementują, zobacz [pobieranie ICU](http://site.icu-project.org/download).
 
  Jednak obliczenia dwa ciągi dla równości lub kolejności sortowania nie uzyskanie wyniku pojedynczą, poprawne; wynik zależy od kryteria używane do porównywania ciągów. W szczególności porównań ciągów, które są porządkowe, lub które są oparte na wielkość liter w wyrazie i sortowanie Konwencji kultury bieżącej lub niezmiennej kultury (w języku angielskim — na podstawie kultury niezależne od ustawień regionalnych) mogą wygenerować różne wyniki.  
 

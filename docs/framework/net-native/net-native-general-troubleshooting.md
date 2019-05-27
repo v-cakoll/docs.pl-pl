@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6bc5697e20c21d988afe6017d05e0e4de53d40d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca0f093e85a5ac983266ba34f78021d6af6018c0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614918"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052031"
 ---
 # <a name="net-native-general-troubleshooting"></a>Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native
-W tym temacie opisano sposób rozwiązywania potencjalnych problemów, które można napotkać podczas tworzenia aplikacji przy użyciu [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+W tym temacie opisano sposób rozwiązywania potencjalnych problemów, które można napotkać podczas tworzenia aplikacji przy użyciu platformy .NET Native.  
   
 - **Problem:** Okno danych wyjściowych kompilacji nie są prawidłowo aktualizowane.  
   
@@ -20,17 +20,17 @@ W tym temacie opisano sposób rozwiązywania potencjalnych problemów, które mo
   
 - **Problem:** Został zwiększony czas kompilacji detalicznej Twojej aplikacji dla ARM.  
   
-     **Rozwiązanie:** W przypadku wdrażania aplikacji z urządzeniem ARM [!INCLUDE[net_native](../../../includes/net-native-md.md)] infrastruktury jest wywoływana. Tej kompilacji wykonuje dużej liczby optymalizacje przy jednoczesnym zapewnieniu tej semantyki niestatyczna, takich jak odbicie w dalszym ciągu działać. Ponadto część .NET Framework, która aplikacja używa statycznie połączone w celu uzyskania optymalnej wydajności i musi być kompilowane do kodu macierzystego, jak również. Jest to, dlaczego Kompilacja trwa dłużej.  
+     **Rozwiązanie:** Gdy wdrażasz aplikację z urządzeniem ARM, jest wywoływana infrastrukturę programu .NET Native. Tej kompilacji wykonuje dużej liczby optymalizacje przy jednoczesnym zapewnieniu tej semantyki niestatyczna, takich jak odbicie w dalszym ciągu działać. Ponadto część .NET Framework, która aplikacja używa statycznie połączone w celu uzyskania optymalnej wydajności i musi być kompilowane do kodu macierzystego, jak również. Jest to, dlaczego Kompilacja trwa dłużej.  
   
      Czasy kompilacji są jednak nadal w ciągu minuty kompilacji standardowych dla większości aplikacji na maszynie deweloperskiej standardowych.  Po prostu generowanie obrazów macierzystych na platformie .NET na maszynie deweloperskiej standardowych zazwyczaj trwa kilka minut.  Nawet w przypadku wszystkich optymalizacji usprawniających wygenerowany kod i za pomocą programu .NET Framework w tym aplikacji, czasy kompilacji są zazwyczaj minutę lub dwie.  
   
      Kontynuujemy pracę nad poprawa wydajności kompilacji, badając wielowątkowych kompilacji i inne optymalizacje.  
   
-- **Problem:** Nie wiem, jeśli aplikacja została skompilowana przy użyciu [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+- **Problem:** Nie wiem, jeśli aplikacja został skompilowany przy użyciu platformy .NET Native.  
   
-     **Rozwiązanie:** Jeśli [!INCLUDE[net_native](../../../includes/net-native-md.md)] kompilator jest wywoływany, można zauważyć już kompilowany razy i Menedżera zadań opisano różne [!INCLUDE[net_native](../../../includes/net-native-md.md)] składnika procesy, takie jak ILC.exe i nutc_driver.exe.  
+     **Rozwiązanie:** Wywoływany jest kompilator platformy .NET Native, można zauważyć, że różne procesy składnik .NET Native, takie jak ILC.exe i nutc_driver.exe będzie wyświetlana dłuższe czasy kompilacji i Menedżera zadań.  
   
-     Po utworzeniu projektu za pomocą [!INCLUDE[net_native](../../../includes/net-native-md.md)], znajdują się dane wyjściowe w obszarze obj\\*config*\ *arch* \\  *projectname*. ilc\out.  Zawartość pakietu natywnej końcowego można znaleźć w bin\\*arch*\\*config*\AppX. Zawartość pakietu natywnej końcowego podlegają \bin\\*arch*\\*config*\AppX Jeśli aplikacja została wdrożona.  
+     Po pomyślnie skompilować projekt przy użyciu platformy .NET Native, znajdują się dane wyjściowe w obszarze obj\\*config*\ *arch*\\*projectname*. ilc\out.  Zawartość pakietu natywnej końcowego można znaleźć w bin\\*arch*\\*config*\AppX. Zawartość pakietu natywnej końcowego podlegają \bin\\*arch*\\*config*\AppX Jeśli aplikacja została wdrożona.  
   
 - **Problem:** Aplikacja platformy .NET Native skompilowany zgłasza wyjątki środowiska uruchomieniowego (zazwyczaj [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) lub [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki), nie generują kiedy skompilowany bez. NET Native.  
   

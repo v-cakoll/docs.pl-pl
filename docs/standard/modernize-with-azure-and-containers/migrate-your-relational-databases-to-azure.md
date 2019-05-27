@@ -2,12 +2,12 @@
 title: Migrowanie relacyjnych baz danych na platformę azure
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows | Migrowanie relacyjnych baz danych na platformę azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638892"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051923"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrowanie relacyjnych baz danych na platformę azure
 
@@ -81,7 +81,7 @@ Standardowa usługi Azure SQL Database jest bliżej PaaS niż wystąpienia zarz�
 
 Jedną z opcji migracji jest aby przenieść swoje oryginalne system zarządzania relacyjnymi bazami danych (RDBMS), w tym Oracle, IBM DB2, MySQL, PostgreSQL i SQL Server na serwerze podobne, w którym jest uruchomiona na Maszynie wirtualnej platformy Azure. Jeśli masz istniejące aplikacje, które wymagają najszybsza migracja do chmury przy minimalnych zmianach, lub jedynie minimalnych zmianach w ogóle, bezpośrednie migracji IaaS w chmurze może być opcją podejście. Może nie być najlepszym sposobem, aby móc korzystać z zalet wszystkie chmury, ale prawdopodobnie jest to najszybszy początkowej.
 
-Obecnie usługa Microsoft Azure obsługuje maksymalnie [331 innej bazy danych serwerów](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) wdrożone jako maszyny wirtualne IaaS. Obejmują one popularnych RDBMS, takich jak SQL Server, Oracle, MySQL, PostgreSQL i IBM DB2 i wiele innych baz danych NoSQL, takie jak bazy danych MongoDB, Cassandra, DataStax, MariaDB i Cloudera.
+Obecnie usługa Microsoft Azure obsługuje maksymalnie [331 innej bazy danych serwerów](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all) wdrożone jako maszyny wirtualne IaaS. Obejmują one popularnych RDBMS, takich jak SQL Server, Oracle, MySQL, PostgreSQL i IBM DB2 i wiele innych baz danych NoSQL, takie jak bazy danych MongoDB, Cassandra, DataStax, MariaDB i Cloudera.
 
 > [!NOTE]
 > Mimo że przenoszenie Twojej RDBMS na Maszynie wirtualnej platformy Azure może być najszybszym sposobem na migrację danych do chmury (ponieważ jest ona IaaS), to podejście wymaga znaczących inwestycji związanych z Twój zespół IT (Administratorzy baz danych i specjalistów IT). Zespołom przedsiębiorstwa muszą mieć możliwość konfigurowania i zarządzania nią, wysoką dostępność, odzyskiwanie po awarii i stosowanie poprawek dla programu SQL Server. Ten kontekst musi także dostosowane środowisko z pełnymi prawami administracyjnymi.

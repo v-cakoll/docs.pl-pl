@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913227"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053464"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Instrukcje: Umieszczanie cudzysłowu w ciągu (Windows Forms)
 Czasami możesz chcieć umieścić znaki cudzysłowu ("") w ciągu tekstowym. Na przykład:  
@@ -26,7 +26,7 @@ Czasami możesz chcieć umieścić znaki cudzysłowu ("") w ciągu tekstowym. Na
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Aby umieścić znaki cudzysłowu w ciągu w kodzie  
   
-1. W języku Visual Basic należy wstawić dwa znaki cudzysłowu w wierszu jako osadzonego znaku cudzysłowu. W elemencie wizualnym C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], Wstaw sekwencja unikowa \\"jako osadzonego znak cudzysłowu. Na przykład utworzyć poprzedniego parametry, należy użyć następującego kodu.  
+1. W języku Visual Basic należy wstawić dwa znaki cudzysłowu w wierszu jako osadzonego znaku cudzysłowu. W wizualizacji C# i wizualna C++, Wstaw sekwencja unikowa \\"jako osadzonego znak cudzysłowu. Na przykład utworzyć poprzedniego parametry, należy użyć następującego kodu.  
   
     ```vb  
     Private Sub InsertQuote()  

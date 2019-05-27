@@ -3044,26 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87d7ce07523af87ae4d2746201ed7af576b3e3a8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594779"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053318"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Niestety nie są dostępne szczegółowe informacje na temat tego błędu języka Visual Basic
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Możesz także zapytać innych deweloperów, korzystając z następujących forów:  
   
- [Język Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
+ [Język Visual Basic](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
  Dyskusje na forum, na którym pytania na temat i ogólne składni języka Visual Basic i kompilatora.  
   
- [Visual Basic Interop and Upgrade](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
+ [Visual Basic Interop and Upgrade](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
  Udostępnia forum dla pytania o i problemów z uaktualnieniem do programu Visual Basic i Praca z funkcjami współpracy.  
   
- [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
  Udostępnia forum pytania na temat sposobu pracy w środowisku Visual Studio.  
   
- [Visual Basic General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
+ [Visual Basic General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
  Udostępnia forum dla pytania o, a następnie generuje za pomocą Visual Basic, które nie są omawiane na innych forach.  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  

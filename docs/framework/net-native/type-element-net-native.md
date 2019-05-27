@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033128"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051992"
 ---
 # <a name="type-element-net-native"></a>\<Typ > (architektura .NET Native)
 Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie jak klasy lub struktury.  
@@ -45,9 +45,9 @@ Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie j
 |`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady do serializacji, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
 |`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
 |`XmlSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
-|`MarshalObject`|Usługa międzyoperacyjna|Atrybut opcjonalny. Zasady kontroli marshaling typów referencyjnych do środowiska uruchomieniowego Windows i modelu COM.|  
-|`MarshalDelegate`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|  
-|`MarshalStructure`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady dla marshaling typów wartości do kodu natywnego.|  
+|`MarshalObject`|Interop|Atrybut opcjonalny. Zasady kontroli marshaling typów referencyjnych do środowiska uruchomieniowego Windows i modelu COM.|  
+|`MarshalDelegate`|Interop|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|  
+|`MarshalStructure`|Interop|Atrybut opcjonalny. Określa zasady dla marshaling typów wartości do kodu natywnego.|  
   
 ## <a name="name-attribute"></a>Nazwa atrybutu  
   
@@ -102,7 +102,7 @@ Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie j
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- Ponieważ metadane <xref:System.Collections.Generic.List%601> klasy nie jest automatycznie dołączany przez [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi przykładzie nie są wyświetlane żądane informacje w czasie wykonywania. Aby zapewnić potrzebnych metadanych, Dodaj następujący kod `<Type>` element do pliku dyrektyw środowiska uruchomieniowego. Należy zauważyć, że ponieważ udostępniliśmy nadrzędnego [< Namespace\> ](../../../docs/framework/net-native/namespace-element-net-native.md) elementu, firma Microsoft nie muszą podawać nazwę w pełni kwalifikowany typ `<Type>` elementu.  
+ Ponieważ metadane <xref:System.Collections.Generic.List%601> klasy nie jest automatycznie dołączany przez łańcuch narzędzi .NET Native, na przykład nie są wyświetlane żądane informacje w czasie wykonywania. Aby zapewnić potrzebnych metadanych, Dodaj następujący kod `<Type>` element do pliku dyrektyw środowiska uruchomieniowego. Należy zauważyć, że ponieważ udostępniliśmy nadrzędnego [< Namespace\> ](../../../docs/framework/net-native/namespace-element-net-native.md) elementu, firma Microsoft nie muszą podawać nazwę w pełni kwalifikowany typ `<Type>` elementu.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie j
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Ponieważ metadane dla <xref:System.String> obiekt nie jest dostępna, wywołanie <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda zgłasza wyjątek <xref:System.NullReferenceException> wyjątek wykonywania czasu, gdy skompilowano z opcją [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi. Aby wyeliminować wyjątek, a następnie podaj wymagane metadane, Dodaj następujący element `<Type>` elementu plik dyrektywy środowiska uruchomieniowego:  
+ Ponieważ metadane <xref:System.String> obiekt nie jest dostępna, wywołanie <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda zgłasza wyjątek <xref:System.NullReferenceException> wyjątek wykonywania czasu, gdy skompilowano z łańcucha narzędzi .NET Native. Aby wyeliminować wyjątek, a następnie podaj wymagane metadane, Dodaj następujący element `<Type>` elementu plik dyrektywy środowiska uruchomieniowego:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

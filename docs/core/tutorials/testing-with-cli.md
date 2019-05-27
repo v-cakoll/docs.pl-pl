@@ -4,12 +4,12 @@ description: W tym samouczku wyjaśniono, jak organizowanie i testowanie projekt
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef7263985288445fca273f37389876aeac2f136b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664639"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051957"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
@@ -108,14 +108,14 @@ Przejdź z powrotem do *src* folder i utworzyć *test* folder z *NewTypesTests* 
 Projekt testowy nie może obecnie testowanie typów w `NewTypes` i wymaga odwołania projektu do `NewTypes` projektu. Aby dodać odwołanie do projektu, należy użyć [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
 
 ```
-dotnet add reference ../../NewTypes/NewTypes.csproj
+dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
 Lub masz również możliwość ręcznego dodawania odwołania projektu, dodając `<ItemGroup>` węzeł *NewTypesTests.csproj* pliku:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 

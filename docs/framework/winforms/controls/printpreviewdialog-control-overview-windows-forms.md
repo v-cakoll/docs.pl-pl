@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 961b3c852f60a0917707bef07d4e26fc4215acca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dce6bf9cb9872183e60e6ccdf7eaf79b6630db51
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012558"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053697"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Printpreviewdialog — informacje o formancie (formularze Windows)
 
@@ -23,7 +23,7 @@ Formularze Windows <xref:System.Windows.Forms.PrintPreviewDialog> sterowania to 
 
 Właściwość klucza jest <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, który ustawia dokumentów, których podgląd będzie wyświetlany. Dokument musi być <xref:System.Drawing.Printing.PrintDocument> obiektu. Aby wyświetlić okno dialogowe, należy wywołać jej <xref:System.Windows.Forms.Form.ShowDialog%2A> metody. Wygładzanie można wprowadzać tekst płynny, ale może również sprawić, że wyświetlana wolniejsze; Aby go użyć, należy ustawić <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> właściwość `true`.
 
-Niektóre właściwości są dostępne za pośrednictwem <xref:System.Windows.Forms.PrintPreviewControl> , <xref:System.Windows.Forms.PrintPreviewDialog> zawiera. (Nie trzeba dodać to <xref:System.Windows.Forms.PrintPreviewControl> do formularza; jest on automatycznie zawarta w <xref:System.Windows.Forms.PrintPreviewDialog> po dodaniu okna dialogowego do formularza.) Przykłady dostępnych za pośrednictwem właściwości <xref:System.Windows.Forms.PrintPreviewControl> są <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> i <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> właściwości, które określają liczbę stron wyświetlany poziomo i pionowo w kontrolce. Możesz uzyskać dostęp <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> właściwość jako `PrintPreviewDialog1.PrintPreviewControl.Columns` w języku Visual Basic `printPreviewDialog1.PrintPreviewControl.Columns` w elemencie wizualnym C#, lub `printPreviewDialog1->PrintPreviewControl->Columns` w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].
+Niektóre właściwości są dostępne za pośrednictwem <xref:System.Windows.Forms.PrintPreviewControl> , <xref:System.Windows.Forms.PrintPreviewDialog> zawiera. (Nie trzeba dodać to <xref:System.Windows.Forms.PrintPreviewControl> do formularza; jest on automatycznie zawarta w <xref:System.Windows.Forms.PrintPreviewDialog> po dodaniu okna dialogowego do formularza.) Przykłady dostępnych za pośrednictwem właściwości <xref:System.Windows.Forms.PrintPreviewControl> są <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> i <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> właściwości, które określają liczbę stron wyświetlany poziomo i pionowo w kontrolce. Możesz uzyskać dostęp <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> właściwość jako `PrintPreviewDialog1.PrintPreviewControl.Columns` w języku Visual Basic `printPreviewDialog1.PrintPreviewControl.Columns` w elemencie wizualnym C#, lub `printPreviewDialog1->PrintPreviewControl->Columns` w elemencie wizualnym C++.
 
 ## <a name="printpreviewdialog-performance"></a>Printpreviewdialog — wydajność
 

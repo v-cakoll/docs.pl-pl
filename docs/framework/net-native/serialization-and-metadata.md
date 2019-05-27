@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650313"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052379"
 ---
 # <a name="serialization-and-metadata"></a>Serializacja i metadane
 Jeśli Twoja aplikacja serializuje i deserializuje obiektów, konieczne może być dodawanie wpisów do Twojej dyrektywy środowiska uruchomieniowego (. rd.xml) plik, aby upewnić się, że metadane potrzebne znajduje się w czasie wykonywania. Istnieją dwie kategorie serializatory, a każdy z nich wymaga innej obsługi w pliku dyrektyw środowiska uruchomieniowego:  
@@ -39,10 +39,10 @@ Jeśli Twoja aplikacja serializuje i deserializuje obiektów, konieczne może by
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Kompilator będzie automatycznie obsługiwać ten kod.  
+ .NET Native kompilator będzie automatycznie obsługiwać ten kod.  
   
 ### <a name="typeof-used-outside-the-constructor"></a>TypeOf używany poza konstruktora  
- Możesz wywołać konstruktora klasy te serializacji i używać C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) — słowo kluczowe poza wyrażenie dostarczane do konstruktora <xref:System.Type> parametru, zgodnie z poniższym kodem [!INCLUDE[net_native](../../../includes/net-native-md.md)] kompilatora Nie można rozpoznać typu:  
+ Możesz wywołać konstruktora klasy te serializacji i używać C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) — słowo kluczowe poza wyrażenie dostarczane do konstruktora <xref:System.Type> parametru, zgodnie z poniższym kodem, kompilator platformy .NET Native nie Aby usunąć typ:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -52,7 +52,7 @@ Jeśli Twoja aplikacja serializuje i deserializuje obiektów, konieczne może by
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Podobnie jeśli takie jak wywołać konstruktora <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> i zapewniają szereg dodatkowych <xref:System.Type> obiekty do serializacji, tak jak w poniższym kodzie [!INCLUDE[net_native](../../../includes/net-native-md.md)] kompilator nie może rozpoznać te typy.  
+ Podobnie jeśli takie jak wywołać konstruktora <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> i zapewniają szereg dodatkowych <xref:System.Type> obiekty do serializacji, jak w poniższym kodzie .NET Native kompilator nie może rozpoznać te typy.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

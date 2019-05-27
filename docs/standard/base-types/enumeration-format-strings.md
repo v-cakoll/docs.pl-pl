@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f2a8fc10d2aad6b2d43bf128697e86aa73c411
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644625"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052852"
 ---
 # <a name="enumeration-format-strings"></a>Wyliczanie ciągów formatujących
 
@@ -48,7 +48,7 @@ Wyświetla wpis wyliczenia jako wartość całkowitą w możliwie najkrótszym r
 
 ## <a name="x-or-x"></a>X lub x
 
-Wyświetla wpis wyliczenia jako wartość szesnastkową. Wartość jest reprezentowana z wiodącymi zerami w razie potrzeby, aby upewnić się, czy wartość jest minimalna ośmiu cyfr, długość. Poniższy przykład ilustruje specyfikator formatu X.
+Wyświetla wpis wyliczenia jako wartość szesnastkową. Wartość jest reprezentowana z zerami zgodnie z potrzebami upewnić się, że ciąg wynikowy ma dwa znaki dla każdego bajtu w typ wyliczeniowy [bazowy typ liczbowy](xref:System.Enum.GetUnderlyingType%2A). Poniższy przykład ilustruje specyfikator formatu X. W tym przykładzie typ podstawowy elementu zarówno <xref:System.ConsoleColor> i <xref:System.IO.FileAttributes> jest <xref:System.Int32>, lub 32-bitowego (lub 4-bajtowych) całkowitą, która tworzy ciąg wyniku 8 znaków.
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]

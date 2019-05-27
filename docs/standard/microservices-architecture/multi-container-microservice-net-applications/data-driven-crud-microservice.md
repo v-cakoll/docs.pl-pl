@@ -2,12 +2,12 @@
 title: Tworzenie prostej mikrousługi CRUD na podstawie danych
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Omówienie tworzenia prostych operacji CRUD (opartej na danych) mikrousług w kontekście aplikacji mikrousług.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644426"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053568"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostej mikrousługi CRUD na podstawie danych
 
@@ -321,7 +321,7 @@ Poniżej przedstawiono główne powody generować metadane programu Swagger dla 
 
 - [AutoRest](https://github.com/Azure/AutoRest). Możesz automatycznie wygenerować klasy klienta platformy .NET do wywoływania struktury Swagger. To narzędzie można używać z interfejsu wiersza polecenia i integruje się również z programem Visual Studio dla łatwą w użyciu przy użyciu graficznego interfejsu użytkownika.
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/). Można automatycznie [użycia i integracji interfejsu API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) do ogólny przepływ pracy Microsoft Flow bez umiejętności programowania wymagane.
+- [Microsoft Flow](https://flow.microsoft.com/). Można automatycznie [użycia i integracji interfejsu API](https://flow.microsoft.com/blog/integrating-custom-api/) do ogólny przepływ pracy Microsoft Flow bez umiejętności programowania wymagane.
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). Będzie można korzystać z interfejsu API automatycznie [aplikacji mobilnych w usłudze PowerApps](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) utworzonych za pomocą [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/), nawet bez znajomości programowania wymagane.
 

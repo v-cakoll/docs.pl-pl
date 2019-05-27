@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 347c7064c199e953b496c9505f08c9e12c1ae670
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756565"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052814"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>Instrukcje: Drukowanie grafiki w formularzach systemu Windows
 Często mają drukowanie grafiki w aplikacji z systemem Windows. <xref:System.Drawing.Graphics> Klasa dostarcza metody do Rysowanie obiektów na urządzeniu, takie jak ekranu lub drukarki.  
@@ -52,7 +52,7 @@ Często mają drukowanie grafiki w aplikacji z systemem Windows. <xref:System.Dr
        }  
     ```  
   
-     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C# i wizualna C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

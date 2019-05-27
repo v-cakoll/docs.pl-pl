@@ -2,12 +2,12 @@
 title: Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 description: Poznaj procedurę "zewnętrzna pętla" przepływ pracy DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641052"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195613"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 
@@ -150,9 +150,9 @@ Przyjrzyjmy się pierwsze u scenariusz mniej złożone: Wdrażanie prostego host
 
 ![Wdrażanie dysku CD kroku (4) można publikować w różnych środowiskach, takich jak q &, środowisk przejściowych i produkcyjnych.](./media/image6.png)
 
-**Rysunek 5 i 6-**. Wdrażanie aplikacji kontenerów do prostych rejestru środowiska hosta platformy Docker
+**Rysunek 5 i 6-** . Wdrażanie aplikacji kontenerów do prostych rejestru środowiska hosta platformy Docker
 
-Rysunek 5 – 7 pokazuje, jak połączyć kompilacji ciągłej integracji do odpowiedzi na pytania/testowym za pośrednictwem usługi DevOps platformy Azure, klikając pozycję Narzędzia Docker Compose w oknie dialogowym Dodaj zadanie. Jednak w przypadku wdrażania w środowiskach przejściowych lub produkcyjnych, zazwyczaj używasz funkcji Release Management, obsługa wielu środowisk (takich jak pytań i odpowiedzi, środowisk przejściowych i produkcyjnych). Jeśli wdrażasz do pojedynczego hostów platformy Docker, jest za pomocą usługi Azure DevOps zadanie "Narzędzia Docker Compose" (który wywołuje `docker-compose up` polecenia kulisy). Jeśli wdrażasz do usługi Azure Container Service używa zadania wdrażania platformy Docker, jak wyjaśniono w poniższej sekcji.
+Rysunek 5 – 7 pokazuje, jak połączyć kompilacji ciągłej integracji do odpowiedzi na pytania/testowym za pośrednictwem usługi DevOps platformy Azure, klikając pozycję Narzędzia Docker Compose w oknie dialogowym Dodaj zadanie. Jednak w przypadku wdrażania w środowiskach przejściowych lub produkcyjnych, zazwyczaj używasz funkcji Release Management, obsługa wielu środowisk (takich jak pytań i odpowiedzi, środowisk przejściowych i produkcyjnych). Jeśli wdrażasz do pojedynczego hostów platformy Docker, jest za pomocą usługi Azure DevOps zadanie "Narzędzia Docker Compose" (który wywołuje `docker-compose up` polecenia kulisy). Jeśli wdrażasz do usługi Azure Kubernetes Service (AKS) używa zadania wdrażania platformy Docker, jak wyjaśniono w poniższej sekcji.
 
 ![Wyświetlany w przeglądarce widok dodawania zadania narzędzia Docker Compose.](./media/image7.png)
 
@@ -186,15 +186,15 @@ Z punktu widzenia ciągłego Dostarczania i usługom DevOps platformy Azure w sz
 
 Początkowo podczas wdrażania aplikacji na niektórych klastrów lub koordynatorów, tradycyjnie używasz skryptów wdrażania i mechanizmy na poszczególnych koordynatorów, (oznacza to, Kubernetes i usługi Service Fabric mają mechanizmy innego wdrożenia) zamiast prostszej i łatwy w użyciu `docker-compose` narzędzie oparte na `docker-compose.yml` pliku definicji. Jednak dzięki gotowej do zadania usługi Azure DevOps usług wdrażana w rozwiązaniu Docker pokazano na rysunku 5-10, teraz również można wdrożyć obsługiwanych koordynatorów korzystając tylko z powszechnie znane `docker-compose.yml` plik odgrywa narzędzie "Translacja" (z Twojej `docker-compose.yml`plik do formatu wymagane przez program orchestrator).
 
-![Zadanie wdrażania widok wykazu zadań w infrastrukturze DevOps platformy Azure, przedstawiający platformy Docker w przeglądarce.](./media/image10.png)
+![Widok wykazu zadań w infrastrukturze DevOps platformy Azure, przedstawiający wdrażanie Kubernetes zadania w przeglądarce.](./media/add-deploy-to-kubernetes-task.png)
 
-**Rysunek 5 – 10**. Dodawanie zadania wdrażania platformy Docker do swojego menedżera zasobów w środowisku
+**Rysunek 5 – 10**. Dodawanie wdrażania do zadania usługi Kubernetes do środowiska
 
-Rysunek 5 – 11 pokazano, jak można edytować zadania wdrażania platformy Docker i określić typ docelowy (Azure Container Service DC/OS, w tym przypadku), plik Docker Compose i połączenie rejestru platformy Docker (np. usługi Azure Container Registry lub Docker Hub). To zadanie, które pobierze gotowych do użycia niestandardowe obrazy usługi Docker zostać wdrożony jako kontenery w klastrze.
+Rysunek 5 – 11 pokazano, jak można edytować wdrażania do zadania usługi Kubernetes z sekcjami, które są dostępne dla konfiguracji. To zadanie, które pobierze gotowych do użycia niestandardowe obrazy usługi Docker zostać wdrożony jako kontenery w klastrze.
 
-![Widok przeglądarki DevOps platformy Azure, Wdróż definicji zadania programu orchestrator.](./media/image11.png)
+![Widok przeglądarki DevOps platformy Azure, Wdróż definicji zadania usługi Kubernetes.](./media/edit-deploy-to-kubernetes-task.png)
 
-**Rysunek 5 – 11**. Docker Wdróż zadań definicji wdrażania do Azure Container Service DC/OS
+**Rysunek 5 – 11**. Docker Wdróż zadań definicji wdrożenia do platformy DC/OS usługi ACS
 
 > [! Informacje o] Aby dowiedzieć się więcej o potok ciągłego wdrażania za pomocą usługi DevOps platformy Azure i Docker, odwiedź <https://azure.microsoft.com/services/devops/pipelines>
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211182"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052833"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Instrukcje: Tworzenie formularzy podrzędnych MDI
 
@@ -34,7 +34,7 @@ W poniższej procedurze użyjesz programu Visual Studio, aby utworzyć formularz
 
 4. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, wskaż **Dodaj**, a następnie wybierz pozycję **Dodaj nowy element**.
 
-5. W **Dodaj nowy element** okno dialogowe, wybierz opcję **formularza Windows** (w języku Visual Basic lub języka Visual C#) lub **Windows Forms aplikacji (.NET)** (w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) z  **Szablony** okienka. W **nazwa** pola, określ nazwę formularza **formularz2**. Kliknij przycisk **Otwórz** przycisk, aby dodać formularz do projektu.
+5. W **Dodaj nowy element** okno dialogowe, wybierz opcję **formularza Windows** (w języku Visual Basic lub Visual C#) lub **Windows Forms aplikacji (.NET)** (w elemencie wizualnym C++) z **Szablony** okienka. W **nazwa** pola, określ nazwę formularza **formularz2**. Kliknij przycisk **Otwórz** przycisk, aby dodać formularz do projektu.
 
     > [!NOTE]
     > Formularz podrzędny MDI, który został utworzony w tym kroku jest standardowy formularz Windows. W efekcie ma <xref:System.Windows.Forms.Form.Opacity%2A> właściwość, która umożliwia kontrolowanie przezroczystości formularza. Jednak <xref:System.Windows.Forms.Form.Opacity%2A> właściwość została zaprojektowana dla okien najwyższego poziomu. Nie używaj go za pomocą formularzy podrzędnych MDI, jak mogą wystąpić problemy malowania.

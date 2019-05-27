@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 898771c3de8b54c08decd91f1a631a6205292912
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960014"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053625"
 ---
 # <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 
@@ -1858,7 +1858,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
      Aby uzyskać więcej informacji o tych zmianach, zobacz [Portable Class Library](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-- Teraz zestawu zawartości w programie .NET Framework zawiera dokumentację dotyczącą [!INCLUDE[net_native](../../../includes/net-native-md.md)], który jest technologia kompilacji wstępnej do kompilowania i wdrażania aplikacji Windows. [!INCLUDE[net_native](../../../includes/net-native-md.md)] kompiluje swoich aplikacji bezpośrednio do kodu natywnego, a nie do języka pośredniego (IL), aby uzyskać lepszą wydajność. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji z architekturą .NET Native](../net-native/index.md).
+- Teraz zestawu zawartości w programie .NET Framework zawiera dokumentację dla platformy .NET Native, czyli technologia kompilacji wstępnej do kompilowania i wdrażania aplikacji Windows. .NET native kompiluje swoich aplikacji bezpośrednio do kodu natywnego, a nie do języka pośredniego (IL), aby uzyskać lepszą wydajność. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji z architekturą .NET Native](../net-native/index.md).
 
 - [Źródła programu .NET Framework odwołanie](https://referencesource.microsoft.com/) udostępnia nowe funkcje przeglądania i ulepszone funkcje. Teraz możesz przejść do kodu źródłowego .NET Framework do trybu online, [Pobierz odwołania](https://referencesource.microsoft.com/download.html) przeglądania w trybie offline i krok po kroku źródła (w tym poprawki i aktualizacje) podczas debugowania. Aby uzyskać więcej informacji, zobacz wpis na blogu [nowy wygląd na potrzeby źródło odwołania .NET](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 

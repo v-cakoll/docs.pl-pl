@@ -3,12 +3,12 @@ title: Projektowanie w przypadku typów referencyjnych dopuszczającego wartoś�
 description: W tym samouczku zaawansowane zawiera wprowadzenie do typów referencyjnych dopuszczającego wartość null. Dowiesz się, że express projektu chcący po wartości odniesienia może mieć wartości null i pozwolić kompilatorowi wymusić, gdy nie może mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706133"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195848"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migrowanie istniejącego kodu w przypadku typów referencyjnych dopuszczającego wartość null
 
@@ -49,8 +49,11 @@ Uaktualnianie wersji językowej wybiera C# 8.0, ale nie uwzględnia kontekst ann
 Dobre, następnym krokiem jest Włącz kontekstu annotation dopuszczający wartość null i zobacz, jak wiele ostrzeżeń są generowane. Dodaj następujący element w obu plikach csproj w rozwiązaniu bezpośrednio pod `LangVersion` elementu:
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> `Nullable` Poprzednia nazwa elementu `NullableContextOptions`. Zmień nazwę dostarczany z programem Visual Studio 2019 r, 16.2 p1. 3.0.100-preview5-011568 zestawu .NET Core SDK nie ma tej zmiany. Jeśli używasz interfejsu wiersza polecenia platformy .NET Core, musisz użyć `NullableContextOptions` aż do następnej wersji zapoznawczej.
 
 Czy kompilacja testowa i zwróć uwagę na liście ostrzeżenie. W małych aplikacji kompilator generuje ostrzeżenia pięć, więc prawdopodobnie spowoduje pozostawienie kontekstu annotation dopuszczający wartość null włączone i rozpocząć rozwiązywanie ostrzeżenia dla całego projektu.
 
@@ -58,7 +61,7 @@ Taka strategia działa tylko w przypadku mniejszych projektów. Dla wszystkich p
 
 ## <a name="warnings-help-discover-original-design-intent"></a>Ostrzeżenia ułatwić, wykrywanie oryginalne założenia projektowe
 
-Istnieją dwie klasy, które generują wiele ostrzeżeń. Rozpoczynać `NewsStoryViewModel` klasy. Usuń `NullableContextOptions` elementu z obu plików csproj dzięki czemu można ograniczyć zakres ostrzeżeń w sekcjach dotyczących pracy z kodem. Otwórz *NewsStoryViewModel.cs* pliku i dodaj następujące dyrektywy, aby umożliwić kontekst annotation dopuszczający wartość null dla `NewsStoryViewModel` i przywrócić ją po tej definicji klasy:
+Istnieją dwie klasy, które generują wiele ostrzeżeń. Rozpoczynać `NewsStoryViewModel` klasy. Usuń `Nullable` elementu z obu plików csproj dzięki czemu można ograniczyć zakres ostrzeżeń w sekcjach dotyczących pracy z kodem. Otwórz *NewsStoryViewModel.cs* pliku i dodaj następujące dyrektywy, aby umożliwić kontekst annotation dopuszczający wartość null dla `NewsStoryViewModel` i przywrócić ją po tej definicji klasy:
 
 ```csharp
 #nullable enable

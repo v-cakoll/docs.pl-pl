@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af8d3b9ea97b678c493de8a58d439b62f448387
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053708"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy systemu Windows
 Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> składnika, aby wyświetlić ikona błędu, gdy użytkownik wprowadzi nieprawidłowe dane. Musi mieć co najmniej dwa formanty w formularzu w celu karcie między nimi i tym samym wywoływać kod sprawdzania poprawności.  
@@ -77,7 +77,7 @@ Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> sk�
        }  
     ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C#, Visual C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.textBox1.Validating += new  

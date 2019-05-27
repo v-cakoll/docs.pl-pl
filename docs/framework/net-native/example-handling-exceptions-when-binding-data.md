@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868537"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052694"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Przykład: Obsługa wyjątków podczas wiązania danych
 > [!NOTE]
 >  W tym temacie odnosi się do platformy .NET Native Developer Preview, czyli wstępnej wersji oprogramowania. Możesz pobrać podglądu [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
   
- Poniższy przykład pokazuje, jak rozwiązać [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątek, który jest zgłaszany, gdy aplikacja skompilowana przy użyciu [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi próbuje powiązanie danych. Poniżej przedstawiono informacje o wyjątku:  
+ Poniższy przykład pokazuje, jak rozwiązać [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątek, który jest zgłaszany, gdy aplikacja skompilowana przy użyciu platformy .NET Native łańcucha narzędzi próbuje powiązanie danych. Poniżej przedstawiono informacje o wyjątku:  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   

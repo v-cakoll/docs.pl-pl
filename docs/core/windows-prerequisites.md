@@ -3,12 +3,12 @@ title: Wymagania wstępne dla platformy .NET Core w Windows
 description: Dowiedz się, jakie zależności dotyczące usługi Windows komputera na opracowywanie i uruchamianie aplikacji .NET Core.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 8eb2913b0fa1fe037a460633064d6f179b64a248
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 423a333edf5b2946a28855352adf2915642b1eae
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634090"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051970"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dla platformy .NET Core w Windows
 
@@ -57,11 +57,11 @@ Następujące artykuły mają pełną listę systemów operacyjnych .NET Core, o
 > [!NOTE]
 > **Dla Windows 8.1 i starszych wersjach, lub Windows Server 2012 R2 i wcześniejszych wersji:**
 >
-> Upewnij się, że instalacja Windows jest aktualny i zawiera [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), którą można zainstalować za pośrednictwem usługi Windows Update. Jeśli nie masz zainstalowano tę aktualizację, zobaczysz następujący błąd podczas uruchamiania aplikacji .NET Core: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Upewnij się, że instalacja Windows jest aktualny i zawiera [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows), którą można zainstalować za pośrednictwem usługi Windows Update. Jeśli nie masz zainstalowano tę aktualizację, zobaczysz następujący błąd podczas uruchamiania aplikacji .NET Core: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Windows 7 lub Windows Server 2008 R2:**
 >
-> Oprócz KB2999226, upewnij się, masz także [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) zainstalowane. Jeśli nie zainstalowano tę aktualizację, zobaczysz błąd podobny do poniższego, podczas uruchamiania aplikacji .NET Core: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
+> Oprócz KB2999226, upewnij się, masz także [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) zainstalowane. Jeśli nie zainstalowano tę aktualizację, zobaczysz błąd podobny do poniższego, podczas uruchamiania aplikacji .NET Core: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-for-net-core-30-preview-3"></a>Wymagania wstępne dla platformy .NET Core 3.0 w wersji zapoznawczej 3
 

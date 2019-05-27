@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866980"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052508"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Klasa MissingMetadataException (architektura .NET Native)
 
-**Platforma .NET dla aplikacji Windows dla systemu Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] tylko**
+**Platforma .NET dla aplikacji Windows dla systemu Windows 10, tylko platforma .NET Native**
 
 Wyjątek, który jest zgłaszany, gdy odbicie jest używany do pobierania metadanych, który nie jest obecny.
 
 **Namespace:** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi. Nie jest przeznaczony do użycia w kodzie innych firm, nie powinien obsługiwać wyjątek w kodzie aplikacji. Zamiast tego wyjątku można wyeliminować, dodając wpisów, aby Twoje [plik dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.
+> `MissingMetadataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego przez łańcuch narzędzi .NET Native. Nie jest przeznaczony do użycia w kodzie innych firm, nie powinien obsługiwać wyjątek w kodzie aplikacji. Zamiast tego wyjątku można wyeliminować, dodając wpisów, aby Twoje [plik dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,8 +34,8 @@ Należy pamiętać, że `MissingMetadataException` klasa pochodzi od <xref:Syste
 
 |Konstruktor|Opis|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|Inicjuje nowe wystąpienie klasy `MissingMetadataException` klasy za pomocą wiadomości dostarczone przez system, który opisuje błąd.<br /><br /> Ten konstruktor jest do użytku wewnętrznego przez [!INCLUDE[net_native](../../../includes/net-native-md.md)] tylko łańcucha narzędzi.|
-|`public MissingMetadataException(String message)`|Inicjuje nowe wystąpienie klasy `MissingMetadataException` klasy przy użyciu określonego komunikatu o błędzie.<br /><br /> Ten konstruktor jest do użytku wewnętrznego przez [!INCLUDE[net_native](../../../includes/net-native-md.md)] tylko łańcucha narzędzi.|
+|`public MissingMetadataException()`|Inicjuje nowe wystąpienie klasy `MissingMetadataException` klasy za pomocą wiadomości dostarczone przez system, który opisuje błąd.<br /><br /> Ten konstruktor jest do użytku wewnętrznego, tylko .NET Native łańcucha narzędzi.|
+|`public MissingMetadataException(String message)`|Inicjuje nowe wystąpienie klasy `MissingMetadataException` klasy przy użyciu określonego komunikatu o błędzie.<br /><br /> Ten konstruktor jest do użytku wewnętrznego, tylko .NET Native łańcucha narzędzi.|
 
 ## <a name="properties"></a>Właściwości
 

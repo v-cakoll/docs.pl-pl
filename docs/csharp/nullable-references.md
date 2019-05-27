@@ -1,15 +1,15 @@
 ---
-title: Typy dopuszczające wartości null odwołań
+title: Typy referencyjne dopuszczające wartość null
 description: Ten artykuł zawiera omówienie typów referencyjnych dopuszczającego wartość null, dodane w C# 8. Dowiesz się, jak ta funkcja zapewnia zabezpieczenie przed wyjątków odwołanie o wartości null dla nowych i istniejących projektów.
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684045"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195922"
 ---
-# <a name="nullable-reference-types"></a>Typy dopuszczające wartości null odwołań
+# <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
 C#wprowadza 8.0 **typy dopuszczające wartości null odwołań** i **typów referencyjnych dopuszcza** , umożliwiają wykonywanie instrukcji ważne informacje o właściwościach dla zmiennych typu odwołania:
 
@@ -58,7 +58,7 @@ Dopuszczanie wartości null typu w deklaracji zmiennej jest kontrolowana przez *
 
 Konteksty dopuszczającego wartość null, Włącz szczegółową kontrolę dla jak kompilator interpretuje zmiennych typu odwołania. **Kontekstu annotation dopuszczający wartość null** z dowolnego źródła dany wiersz jest `enabled` lub `disabled`. Można potraktować przedC# 8 kompilatora jako kompilowania kodu w `disabled` nullable kontekstu: Dowolny typ odwołania może mieć wartości null. **Kontekstu nullable ostrzeżenia** może być ustawiona na `enabled`, `disabled`, lub `safeonly`. Kontekst ostrzeżenia dopuszczającego wartość null określa ostrzeżeń generowanych przez kompilator przy użyciu jego analizę przepływu.
 
-Kontekst annotation dopuszczający wartość null i dopuszcza wartości null kontekstu Ostrzeżenie można ustawić dla projektu używającego `NullableContextOptions` elementu w Twojej `csproj` pliku. Ten element określa, jak kompilator interpretuje dopuszczania wartości null, typów i ostrzeżeń, które są generowane. Prawidłowe ustawienia to:
+Kontekst annotation dopuszczający wartość null i dopuszcza wartości null kontekstu Ostrzeżenie można ustawić dla projektu używającego `Nullable` elementu w Twojej `csproj` pliku. Ten element określa, jak kompilator interpretuje dopuszczania wartości null, typów i ostrzeżeń, które są generowane. Prawidłowe ustawienia to:
 
 - `enable`: Kontekst annotation dopuszczający wartość null jest **włączone**. Kontekst ostrzeżenie dopuszczającego wartość null jest **włączone**.
   - Zmienne typu referencyjnego, `string` na przykład nie dopuszczają wartości.  Wszystkie ostrzeżenia dopuszczania wartości null są włączone.
@@ -70,6 +70,9 @@ Kontekst annotation dopuszczający wartość null i dopuszcza wartości null kon
   - Zmienne typu referencyjnego są oblivious. Wszystkie ostrzeżenia dopuszczania wartości null są włączone.
 - `safeonlywarnings`: Kontekst annotation dopuszczający wartość null jest **wyłączone**. Kontekst ostrzeżenie dopuszczającego wartość null jest **safeonly**.
   - Zmienne typu referencyjnego są oblivious. Wszystkie ostrzeżenia dopuszczania wartości null bezpieczeństwa są włączone.
+
+> [!IMPORTANT]
+> `Nullable` Poprzednia nazwa elementu `NullableContextOptions`. Zmień nazwę dostarczany z programem Visual Studio 2019 r, 16.2 p1. 3.0.100-preview5-011568 zestawu .NET Core SDK nie ma tej zmiany. Jeśli używasz interfejsu wiersza polecenia platformy .NET Core, musisz użyć `NullableContextOptions` aż do następnej wersji zapoznawczej.
 
 Dyrektywy umożliwia również ustawić te ten sam kontekst w dowolnym miejscu w projekcie:
 

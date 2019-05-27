@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu wielokla
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: d47522bef632de1aac890d4de384c1b2c16b7a50
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877342"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195588"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Samouczek: Klasyfikowanie problemów przy użyciu klasyfikacji wieloklasowej przy użyciu uczenia Maszynowego platformy .NET
 
@@ -242,7 +242,7 @@ Zwraca model na końcu `BuildAndTrainModel` metody.
 Teraz, po utworzeniu i uczony model, należy ocenić ją z innego zestawu danych do zapewniania jakości i sprawdzania poprawności. W `Evaluate` metody, model utworzony w `BuildAndTrainModel` jest przekazywany do obliczenia. Tworzenie `Evaluate` metody tuż za `BuildAndTrainModel`, jak w poniższym kodzie:
 
 ```csharp
-public static void Evaluate()
+public static void Evaluate(DataViewSchema trainingDataViewSchema)
 {
 
 }

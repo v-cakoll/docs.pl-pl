@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 136ad9992ea94b027f095f47df0388408029f24e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638917"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053266"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu platformy Azure
 
@@ -44,7 +44,7 @@ Usługa App Service Web Apps oferuje w pełni zarządzana platforma, zoptymalizo
 
 - Integracja z programem Visual Studio.
 
-- Obsługa kontenerów systemu Linux i Windows za pośrednictwem [Web App for Containers](https://azure.microsoft.com/en-us/services/app-service/containers/).
+- Obsługa kontenerów systemu Linux i Windows za pośrednictwem [Web App for Containers](https://azure.microsoft.com/services/app-service/containers/).
 
 Usługa Azure App Service jest najlepszym wyborem dla większości aplikacji sieci web. Wdrażanie i zarządzanie są zintegrowane z platformą, witryny można szybko skalować w celu obsługi obciążeń z dużym ruchem i wbudowanego obciążenia równoważenia i usługa traffic manager zapewniają wysoką dostępność. Można przenieść istniejące witryny w usłudze Azure App Service za pomocą narzędzia do migracji online, korzystanie z aplikacji typu open source z galerii aplikacji sieci Web lub Utwórz nową witrynę przy użyciu framework i wybranych przez siebie narzędzi. Funkcja zadań Webjob ułatwia dodawanie zadania w tle przetwarzania do aplikacji sieci web usługi App Service.
 
@@ -101,7 +101,7 @@ Rysunek 11-2 przedstawiono przykład architektury referencyjnej. Ten diagram w t
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
 - Aplikacja sieci Web dla Containers\
-  <https://azure.microsoft.com/en-us/services/app-service/containers/>
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - Wprowadzenie do usługi Azure Kubernetes Service (AKS) \
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

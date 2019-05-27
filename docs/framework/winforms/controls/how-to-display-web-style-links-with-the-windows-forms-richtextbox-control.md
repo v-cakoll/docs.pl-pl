@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05d9ad4766584b59cca7c31f49b737d4696a9921
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941586"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053536"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Instrukcje: wyświetlanie łączy stylu sieci Web za pomocą kontrolki RichTextBox formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant może wyświetlić linki sieci Web jako kolorowy i podkreślony. Można napisać kod, który powoduje otwarcie okna przeglądarki, przedstawiający witryny sieci Web, określone w tekście linku, po kliknięciu linku.  
@@ -74,13 +74,13 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant może wyświe
        }  
     ```  
   
-     ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Należy zainicjować proces `p`, co można zrobić, umieszczając następującą instrukcję w Konstruktorze formularza:  
+     (Visual C++) Należy zainicjować proces `p`, co można zrobić, umieszczając następującą instrukcję w Konstruktorze formularza:  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C#, Visual C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   

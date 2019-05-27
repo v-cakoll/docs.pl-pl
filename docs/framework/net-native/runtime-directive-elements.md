@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf692ff93a575858d1d1a89346611cb9c5957b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867046"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052410"
 ---
 # <a name="runtime-directive-elements"></a>Elementy dyrektyw środowiska uruchomieniowego
 Format pliku (rd.xml) dyrektyw środowiska uruchomieniowego obsługuje następujące elementy dyrektyw środowiska uruchomieniowego. Zobacz [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) dla hierarchiczną reprezentację.  
@@ -24,7 +24,7 @@ Format pliku (rd.xml) dyrektyw środowiska uruchomieniowego obsługuje następuj
  Jeśli jego zawierający [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) dyrektywa jest atrybut, elementy kodu, do których zastosowano ten atrybut ma zastosowanie zasad wykonywania.  
   
  [\<Dyrektywy >](../../../docs/framework/net-native/directives-element-net-native.md)  
- Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Jego elementy podrzędne są [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) i [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md).  
+ Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla platformy .NET Native. Jego elementy podrzędne są [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) i [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md).  
   
  [\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)  
  Zastosowanie zasad wykonywania na zdarzenie. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  

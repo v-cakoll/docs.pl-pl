@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906324"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052451"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)
 
@@ -405,7 +405,7 @@ Stosowanie `Serialize` zasad do pola obejmuje następujące zmiany zasad:
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Efekt zasad XmlSerializer, DataContractSerializer i klasa DataContractJsonSerializer
 
-W odróżnieniu od `Serialize` zasad, które mają być oparty na odbiciu serializatory, <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zasady są używane do włączenia zbiór serializatory, które nie są [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi. Serializatory te nie są implementowane przy użyciu odbicia, ale zestaw typów, które może być serializowany w czasie wykonywania, jest określana w podobny sposób jak typy, które są reflectable.
+W odróżnieniu od `Serialize` zasad, które mają być oparty na odbiciu serializatory, <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zasady są używane do włączenia zbiór serializatory, które są znane z łańcucha narzędzi .NET Native. Serializatory te nie są implementowane przy użyciu odbicia, ale zestaw typów, które może być serializowany w czasie wykonywania, jest określana w podobny sposób jak typy, które są reflectable.
 
 Zastosowanie jednej z tych zasad do typu umożliwia typu, który ma być serializowany z pasujących serializatora. Ponadto wszystkie typy, które mechanizm serializacji statycznie można określić jako wymagające serializacji również podlegać serializacji.
 

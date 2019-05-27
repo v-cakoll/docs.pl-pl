@@ -4,14 +4,14 @@ description: W tym samouczku dowiesz się, jak konteneryzowanie aplikacji .NET C
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a96f96bd91976b0966fb7e8d0c8fb6fb7842cfe3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631863"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051812"
 ---
-# <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie .NET Core aplikacji
+# <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie aplikacji .NET Core
 
 Tym samouczku pokazano, jak utworzyć obraz platformy Docker, który zawiera aplikację .NET Core. Obraz, który może służyć do utworzenia kontenerów dla lokalnego środowiska deweloperskiego, Chmura prywatna lub chmury publicznej.
 
@@ -410,6 +410,6 @@ Użyj `docker images` polecenie, aby wyświetlić listę obrazów, zainstalowane
 ## <a name="next-steps"></a>Następne kroki
 
 * [Wypróbuj samouczek platformy ASP.NET Core Mikrousług.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Przegląd usług platformy Azure, które obsługują kontenery.](https://azure.microsoft.com/en-us/overview/containers/)
+* [Przegląd usług platformy Azure, które obsługują kontenery.](https://azure.microsoft.com/overview/containers/)
 * [Informacje na temat poleceń pliku Dockerfile.](https://docs.docker.com/engine/reference/builder/)
 * [Poznaj narzędzia kontenerów programu Visual Studio](/visualstudio/containers/overview)

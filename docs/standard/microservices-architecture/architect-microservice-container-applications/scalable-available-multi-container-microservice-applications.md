@@ -2,12 +2,12 @@
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Odkryj opcje do organizowania mikrousług i wielokontenerowych aplikacji pod kątem wysokiej skalowalności i dostępności oraz możliwości usługi Azure Dev miejsca do magazynowania podczas tworzenia cyklem życia aplikacji platformy Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3b7383f6153b787ce8bfad87e3902c34afba0fb2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644892"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196039"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -101,7 +101,7 @@ W środowisku programistycznym [platformy Docker z ogłoszeniem z lipca 2018 r.]
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Wprowadzenie do korzystania z usługi Azure Kubernetes Service (AKS) 
 
-Aby rozpocząć korzystanie z usługi AKS, wdrażania klastra usługi AKS z witryny Azure portal lub za pomocą th interfejsu wiersza polecenia. Aby uzyskać więcej informacji na temat wdrażania klastra usługi Azure Container Service, zobacz [wdrażanie klastra usługi Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
+Aby rozpocząć, za pomocą usługi AKS, musisz wdrożyć klaster AKS z witryny Azure portal lub za pomocą interfejsu wiersza polecenia. Aby uzyskać więcej informacji o wdrażaniu klastra Kubernetes na platformie Azure, zobacz [wdrażanie klastra usługi Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
 Nie ma żadnych opłat za oprogramowanie instalowane domyślnie w jako część usługi AKS. Wszystkie opcje domyślne są implementowane przy użyciu oprogramowania typu open source. AKS jest dostępny dla wielu maszyn wirtualnych na platformie Azure. Opłaty są naliczane tylko za wystąpienia obliczeniowe, które możesz wybrać, jak również inne użyte zasoby infrastruktury bazowej, takie jak storage i sieci. Są naliczane opłaty przyrostowe AKS sam.
 
@@ -145,7 +145,7 @@ Aby uzyskać więcej informacji Sprawdź artykuł [programowanie zespołowe za p
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Wprowadzenie do korzystania z usługi Azure Kubernetes Service (AKS)** \
+- **Wprowadzenie do korzystania z usługi Azure Kubernetes Service (AKS)**  \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \

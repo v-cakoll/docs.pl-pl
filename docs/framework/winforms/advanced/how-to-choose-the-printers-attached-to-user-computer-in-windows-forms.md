@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e81ef8b563afff6dd57a9fbb7674d17c0eb80916
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004448"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053072"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Instrukcje: Wybieranie w formularzach systemu Windows drukarek podłączonych do komputera użytkownika
 Często chcą wybierz drukarek innych niż drukarki domyślnej wydrukowany do użytkowników. Można udostępnić użytkownikom wybór drukarek spośród aktualnie zainstalowane za pomocą <xref:System.Windows.Forms.PrintDialog> składnika. Za pomocą <xref:System.Windows.Forms.PrintDialog> składnika <xref:System.Windows.Forms.DialogResult> z <xref:System.Windows.Forms.PrintDialog> składnik jest przechwytywane i umożliwia wybranie drukarki.  
@@ -89,7 +89,7 @@ Często chcą wybierz drukarek innych niż drukarki domyślnej wydrukowany do u�
        }  
     ```  
   
-     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C# i wizualna C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

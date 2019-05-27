@@ -1,15 +1,15 @@
 ---
-title: F#konwencje kodowania
+title: C# — konwencje kodowania
 description: Informacje ogólne wytyczne i idiomy podczas zapisywania F# kodu.
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902138"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052797"
 ---
-# <a name="f-coding-conventions"></a>F#konwencje kodowania
+# <a name="f-coding-conventions"></a>C# — konwencje kodowania
 
 Poniższe konwencje są formułowane z doświadczenia w pracy z dużymi F# bazach kodu. [Zasadami pięciu dobrze F# kodu](index.md#five-principles-of-good-f-code) stanowiących poszczególne zalecenia. Są one związane z [ F# wytyczne dotyczące projektowania składnika](component-design-guidelines.md), ale są odpowiednie dla dowolnego F# kodu i nie tylko składniki, takie jak biblioteki.
 
@@ -611,7 +611,7 @@ Ponieważ nie ma potrzeby klasy podczas interakcji z API kodu w usłudze Visual 
 
 ## <a name="type-abbreviations"></a>Skróty typów
 
-[Skróty typów](../language-reference/type-abbreviations.md) to wygodny sposób, aby przypisać etykietę do innego typu, takiego jak sygnatura funkcji lub bardziej złożonych typów. Na przykład, następujący alias przypisuje etykietę co jest potrzebne do definiowania obliczeń z [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), biblioteka do uczenia głębokiego:
+[Skróty typów](../language-reference/type-abbreviations.md) to wygodny sposób, aby przypisać etykietę do innego typu, takiego jak sygnatura funkcji lub bardziej złożonych typów. Na przykład, następujący alias przypisuje etykietę co jest potrzebne do definiowania obliczeń z [CNTK](https://docs.microsoft.com/cognitive-toolkit/), biblioteka do uczenia głębokiego:
 
 ```fsharp
 open CNTK

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868787"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052615"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Przykład: Rozwiązywanie problemów z programowaniem dynamicznym
 > [!NOTE]
 >  W tym temacie odnosi się do platformy .NET Native Developer Preview, czyli wstępnej wersji oprogramowania. Możesz pobrać podglądu [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
   
- Nie wszystkie metadane wyszukiwania błędów w aplikacjach opracowanych za pomocą [!INCLUDE[net_native](../../../includes/net-native-md.md)] narzędzia wynik łańcuch wyjątku.  Niektóre mogą manifestu w sposób nieprzewidziany w aplikacji.  Naruszenie zasad dostępu spowodowana przez utworzenie odwołań do obiektów o wartości null można znaleźć w poniższym przykładzie:  
+ Nie wszystkie metadane wyszukiwania błędów w aplikacjach opracowanych za pomocą platformy .NET Native wynik łańcuch narzędzi w wyjątek.  Niektóre mogą manifestu w sposób nieprzewidziany w aplikacji.  Naruszenie zasad dostępu spowodowana przez utworzenie odwołań do obiektów o wartości null można znaleźć w poniższym przykładzie:  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  W tym przypadku Dodawanie dyrektyw środowiska uruchomieniowego, aby uzyskać `App.Core.ViewModels` rozwiązała problem. Główną przyczyną była do wywołań interfejsu API <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> metodę, która jest zwracana **null**, i aplikacja dyskretnie ignorowana problem do momentu awarii wystąpił.  
   
- W dynamiczne programowanie, dobrym rozwiązaniem, gdy za pomocą interfejsów API odbicia w obszarze [!INCLUDE[net_native](../../../includes/net-native-md.md)] jest użycie <xref:System.Type.GetType%2A?displayProperty=nameWithType> przeciążenia, które zgłoszenie wyjątku w przypadku niepowodzenia.  
+ W programowaniu dynamiczne, dobrym rozwiązaniem, gdy za pomocą odbicia interfejsów API w ramach platformy .NET Native jest użycie <xref:System.Type.GetType%2A?displayProperty=nameWithType> przeciążenia, które zgłoszenie wyjątku w przypadku niepowodzenia.  
   
 ## <a name="is-this-an-isolated-case"></a>Jest to przypadek w izolowanym?  
  Inne problemy z również mogą wystąpić w przypadku korzystania z `App.Core.ViewModels`.  Należy zdecydować, czy warto identyfikowanie i rozwiązywanie każdego wyjątku Brak metadanych lub oszczędzanie czasu i dodanie dyrektywy do większej klasy typów.  W tym miejscu, dodając `dynamic` metadanych dla `App.Core.ViewModels` może być najlepszym rozwiązaniem, jeśli powstałe zwiększenie rozmiaru wyjściowych danych binarnych nie będzie to problemem.  

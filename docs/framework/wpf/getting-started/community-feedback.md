@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921787"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053151"
 ---
 # <a name="wpf-community-feedback"></a>Opinia społeczności WPF
 
@@ -24,7 +24,7 @@ Microsoft udostępnia szereg zasoby społeczności, Dowiedz się więcej o, omó
 
 ## <a name="forums"></a>Fora
 
-[WPF forum](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=wpf) zasób podstawowego społeczności Omawiając i rozwiązywania problemów. Fora ułatwia rozpoznawania dyskusji i problem, udostępniając wszechstronny zestaw obsługi funkcji, które obejmują:
+[WPF forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) zasób podstawowego społeczności Omawiając i rozwiązywania problemów. Fora ułatwia rozpoznawania dyskusji i problem, udostępniając wszechstronny zestaw obsługi funkcji, które obejmują:
 
 - Wyszukiwanie.
 - Omówienie śledzenia.

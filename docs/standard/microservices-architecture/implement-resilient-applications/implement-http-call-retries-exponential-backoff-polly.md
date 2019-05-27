@@ -2,12 +2,12 @@
 title: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
 description: Informacje o sposobie obsługi błędów HTTP za pomocą Polly i HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: f9f7c60792527c6bdba9a63b31e3dcbec2963da9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644562"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053114"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementowanie ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania z zasadami dotyczącymi HttpClientFactory i Polly
 
@@ -15,7 +15,7 @@ Jest zalecane podejście do ponawiają próby z wykorzystaniem wykładniczego wy
 
 Polly jest bibliotekę .NET, która zapewnia funkcje obsługi przejściowy błędów i odporności na błędy. Te funkcje można zaimplementować, stosując zasady Polly, np. Ponów próbę, wyłącznik, grodziowym izolacji, limitu czasu i powrotu. Polly jest przeznaczony dla platformy .NET 4.x i .NET Standard biblioteki 1.0 (który obsługuje platformy .NET Core).
 
-Jednak za pomocą biblioteki Polly firmy przy użyciu własnego kodu niestandardowego za pomocą klasy HttpClient może być znacznie skomplikowane. W pierwotnej wersji w ramach aplikacji eShopOnContainers wystąpił [bloków konstrukcyjnych ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) oparte na Polly. Jednak wraz z wydaniem [HttpClientFactory](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests), odporne na błędy komunikacji Http stała się znacznie prostsza do zaimplementowania, tak aby bloków konstrukcyjnych została zakończona w ramach aplikacji eShopOnContainers. 
+Jednak za pomocą biblioteki Polly firmy przy użyciu własnego kodu niestandardowego za pomocą klasy HttpClient może być znacznie skomplikowane. W pierwotnej wersji w ramach aplikacji eShopOnContainers wystąpił [bloków konstrukcyjnych ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) oparte na Polly. Jednak wraz z wydaniem [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md), odporne na błędy komunikacji HTTP stała się znacznie prostsza do zaimplementowania, tak aby bloków konstrukcyjnych została zakończona w ramach aplikacji eShopOnContainers. 
 
 Poniższe kroki pokazują, jak można użyć protokołu Http ponownych prób w usłudze Polly zintegrowane HttpClientFactory, która została wyjaśniona w poprzedniej sekcji.
 

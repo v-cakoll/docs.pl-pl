@@ -3,12 +3,12 @@ title: Projektowanie w przypadku typów referencyjnych dopuszczającego wartoś�
 description: W tym samouczku zaawansowane zawiera wprowadzenie do typów referencyjnych dopuszczającego wartość null. Dowiesz się, że express projektu chcący po wartości odniesienia może mieć wartości null i pozwolić kompilatorowi wymusić, gdy nie może mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706172"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195824"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Samouczek: Wyraźniej Express zgodną z planem projektu w przypadku typów referencyjnych dopuszcza wartości null i nie dopuszcza wartości null
 
@@ -36,15 +36,18 @@ Kod, który Ty napiszesz omawiany w tym przykładzie wyrażenie wskaźnika tym p
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Tworzenie aplikacji i włączanie typów referencyjnych dopuszczającego wartość null
 
-Utwórz nową aplikację konsoli w programie Visual Studio lub z wiersza polecenia przy użyciu `dotnet new console`. Nazwij aplikację `NullableIntroduction`. Po utworzeniu aplikacji, musisz włączyć C# 8 funkcje w wersji beta. Otwórz `csproj` pliku i Dodaj `LangVersion` elementu `PropertyGroup` elementu. Użytkownik musi wyrazić zgodę **typy dopuszczające wartości null odwołań** funkcji, nawet w C# 8 projektów. To dlatego po włączeniu funkcji istniejące deklaracje zmiennych odwołania stają się, że **typów referencyjnych dopuszcza**. Podczas tej decyzji pomogą znaleźć problemy, gdy istniejący kod może nie mieć odpowiednich sprawdzanie wartości null, jego mogą nie odzwierciedla precyzyjnie zgodne z zamiarami użytkownika oryginalnego projektu. Możesz włączyć tę funkcję, ustawiając `NullableContextOptions` elementu `enable`:
+Utwórz nową aplikację konsoli w programie Visual Studio lub z wiersza polecenia przy użyciu `dotnet new console`. Nazwij aplikację `NullableIntroduction`. Po utworzeniu aplikacji, musisz włączyć C# 8 funkcje w wersji beta. Otwórz `csproj` pliku i Dodaj `LangVersion` elementu `PropertyGroup` elementu. Użytkownik musi wyrazić zgodę **typy dopuszczające wartości null odwołań** funkcji, nawet w C# 8 projektów. To dlatego po włączeniu funkcji istniejące deklaracje zmiennych odwołania stają się, że **typów referencyjnych dopuszcza**. Podczas tej decyzji pomogą znaleźć problemy, gdy istniejący kod może nie mieć odpowiednich sprawdzanie wartości null, jego mogą nie odzwierciedla precyzyjnie zgodne z zamiarami użytkownika oryginalnego projektu. Możesz włączyć tę funkcję, ustawiając `Nullable` elementu `enable`:
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> `Nullable` Poprzednia nazwa elementu `NullableContextOptions`. Zmień nazwę dostarczany z programem Visual Studio 2019 r, 16.2 p1. 3.0.100-preview5-011568 zestawu .NET Core SDK nie ma tej zmiany. Jeśli używasz interfejsu wiersza polecenia platformy .NET Core, musisz użyć `NullableContextOptions` aż do następnej wersji zapoznawczej.
+
 > [!NOTE]
-> Gdy C# wydaniu 8 (nie w wersji zapoznawczej), `NullableContextOptions` element zostanie dodany przez nowe szablony projektów. Do tego czasu należy dodać ją ręcznie.
+> Gdy C# wydaniu 8 (nie w wersji zapoznawczej), `Nullable` element zostanie dodany przez nowe szablony projektów. Do tego czasu należy dodać ją ręcznie.
 
 ### <a name="design-the-types-for-the-application"></a>Projektowanie typów dla aplikacji
 

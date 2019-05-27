@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866889"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052500"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Klasa MissingInteropDataException (architektura .NET Native)
-**Platforma .NET dla aplikacji Windows dla systemu Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] tylko**  
+**Platforma .NET dla aplikacji Windows dla systemu Windows 10, tylko platforma .NET Native**  
   
  Wyjątek, który jest zgłaszany, gdy ręcznego marshaling metoda jest wywoływana, ale metadanych dla typu nie zostanie odnaleziony przez analizę statyczną lub w pliku dyrektyw środowiska uruchomieniowego.  
   
  **Namespace:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  `MissingInteropDataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego w [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi. Nie jest przeznaczony do użycia w kodzie innych firm, nie powinien obsługiwać wyjątek w kodzie aplikacji. Zamiast tego wyjątku można wyeliminować, dodając wpisów, aby Twoje [plik dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+>  `MissingInteropDataException` Klasa jest przeznaczona wyłącznie do użytku wewnętrznego przez łańcuch narzędzi .NET Native. Nie jest przeznaczony do użycia w kodzie innych firm, nie powinien obsługiwać wyjątek w kodzie aplikacji. Zamiast tego wyjątku można wyeliminować, dodając wpisów, aby Twoje [plik dyrektywy środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
 ## <a name="syntax"></a>Składnia  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -34,7 +34,7 @@ ms.locfileid: "61866889"
   
 |Konstruktor|Opis|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Inicjuje nowe wystąpienie klasy `MissingInteropDataException` klasy za pomocą Identyfikatora dostarczane przez system komunikatu, który opisuje błąd i typu danych, których brakuje. Ten konstruktor jest do użytku wewnętrznego przez [!INCLUDE[net_native](../../../includes/net-native-md.md)] tylko łańcucha narzędzi.|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Inicjuje nowe wystąpienie klasy `MissingInteropDataException` klasy za pomocą Identyfikatora dostarczane przez system komunikatu, który opisuje błąd i typu danych, których brakuje. Ten konstruktor jest do użytku wewnętrznego, tylko .NET Native łańcucha narzędzi.|  
   
 ## <a name="properties"></a>Właściwości  
   

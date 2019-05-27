@@ -17,6 +17,7 @@ helpviewer_keywords:
 - indexer operator [C#]
 - '[] operator [C#]'
 - null-conditional operators [C#]
+- Elvis operator [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 - invocation operator [C#]
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881045"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195780"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatory dostępu do składowych (C# odwołania)
 
@@ -99,7 +100,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operatory warunkowe null? i? []
 
-Dostępne w C# 6 i nowsze, operatorów warunkowych działających z wartością null dotyczy dostęp do elementu członkowskiego `?.`, lub dostęp do elementu `?[]`, operacja argumentem operacji tylko wtedy, gdy ten argument operacji ma inną niż null. Jeśli argument daje w wyniku `null`, wynik zastosowania operatora jest `null`.
+Dostępne w C# 6 i nowsze, operatorów warunkowych działających z wartością null dotyczy dostęp do elementu członkowskiego `?.`, lub dostęp do elementu `?[]`, operacja argumentem operacji tylko wtedy, gdy ten argument operacji ma inną niż null. Jeśli argument daje w wyniku `null`, wynik zastosowania operatora jest `null`. Operator dostępu do elementu członkowskiego warunkowe null `?.` jest także znana jako Elvis operator.
 
 Operatory warunkowe `null` skracają łańcuch wykonywania operacji. Oznacza to, jeśli jedna operacja w łańcuchu warunkowa składowa lub elementu dostępu do operacji zwraca `null`, pozostała część łańcucha nie jest wykonywany. W poniższym przykładzie `B` nie jest oceniany, jeśli `A` daje w wyniku `null` i `C` nie jest oceniany, jeśli `A` lub `B` daje w wyniku `null`:
 

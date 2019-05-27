@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052363"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > (architektura .NET Native)
 Skonstruowany typ rodzajowy dotyczy zasad odbicia środowiska uruchomieniowego.  
@@ -47,9 +47,9 @@ Skonstruowany typ rodzajowy dotyczy zasad odbicia środowiska uruchomieniowego.
 |`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady do serializacji, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
 |`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
 |`XmlSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
-|`MarshalObject`|Usługa międzyoperacyjna|Atrybut opcjonalny. Zasady kontroli marshaling typów referencyjnych do środowiska uruchomieniowego Windows i modelu COM.|  
-|`MarshalDelegate`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|  
-|`MarshalStructure`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady marshalingu struktur do kodu macierzystego.|  
+|`MarshalObject`|Interop|Atrybut opcjonalny. Zasady kontroli marshaling typów referencyjnych do środowiska uruchomieniowego Windows i modelu COM.|  
+|`MarshalDelegate`|Interop|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|  
+|`MarshalStructure`|Interop|Atrybut opcjonalny. Określa zasady marshalingu struktur do kodu macierzystego.|  
   
 ## <a name="name-attribute"></a>Nazwa atrybutu  
   
@@ -103,7 +103,7 @@ Skonstruowany typ rodzajowy dotyczy zasad odbicia środowiska uruchomieniowego.
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Po kompilacji za pomocą [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi, przykład generuje [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątek w wierszu, który wywołuje <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> metody. Możesz wyeliminować wyjątek i dostarczyć potrzebnych metadanych przez dodanie poniższego `<TypeInstantiation>` element do pliku dyrektyw środowiska uruchomieniowego:  
+ Po kompilacji przy użyciu łańcucha narzędzi .NET Native, przykład generuje [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątek w wierszu, który wywołuje <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> metody. Możesz wyeliminować wyjątek i dostarczyć potrzebnych metadanych przez dodanie poniższego `<TypeInstantiation>` element do pliku dyrektyw środowiska uruchomieniowego:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583536"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052734"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework — podręcznik programowania
 W tej sekcji wyjaśniono, jak do tworzenia, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji .NET Framework. Sekcja zawiera również informacje odnośnie do zagadnień technologicznych takich jak dynamiczne programowania, interoperacyjności, rozszerzalności, zarządzanie pamięcią i wątków.  
@@ -48,7 +48,7 @@ W tej sekcji wyjaśniono, jak do tworzenia, konfigurowanie, debugowanie, zabezpi
  Wyjaśnia, jak można używać plików konfiguracji do zmiany ustawień bez konieczności ponownego kompilowania aplikacji .NET Framework.  
   
  [Kompilowanie aplikacji z architekturą .NET Native](../../docs/framework/net-native/index.md)  
- Wyjaśnia, jak użyć [!INCLUDE[net_native](../../includes/net-native-md.md)] technologia kompilacji wstępnej do kompilowania i wdrażania aplikacji Windows Store. [!INCLUDE[net_native](../../includes/net-native-md.md)] kompiluje aplikacje, które są zapisywane w kodzie zarządzanym (C#) i przeznaczone na platformę .NET Framework do kodu macierzystego.  
+ Wyjaśnia, jak można użyć platformy .NET Native technologia kompilacji wstępnej do kompilowania i wdrażania aplikacji Windows Store. .NET native kompiluje aplikacje, które są zapisywane w kodzie zarządzanym (C#) i przeznaczone na platformę .NET Framework do kodu macierzystego.  
   
  [Zabezpieczenia](../../docs/standard/security/index.md)  
  Zawiera informacje o klasach i usługach w .NET Framework, które ułatwiają tworzenie bezpiecznych aplikacji.  

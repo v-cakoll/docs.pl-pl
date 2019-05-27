@@ -2,12 +2,12 @@
 title: Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji konteneryzowanych
 description: Ustal, jakimi oferty firmy Microsoft do obsługi cykl życia aplikacji platformy Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9e7e821370b98fbda9af0ea69c13eaeab2f35acf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644904"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195595"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
 
@@ -27,8 +27,8 @@ Tabela 3-1 pokazuje, czy zamiar metodyki DevOps firmy Microsoft dla konteneryzow
 
 | Host | Technologie firmy Microsoft | Innych firm — podłączanych platformy Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Platforma dla aplikacji platformy Docker   | • Microsoft Visual Studio i Visual Studio Code<br /> • .NET<br /> • Platformy Microsoft Azure Container Service<br /> • Usługi azure Service Fabric<br /> • Usługi azure Container Registry<br /> | • Dowolnego edytora kodu (na przykład Sublime)<br /> • Dowolnego języka (Node.js, Java, Go, itp.)<br /> • Dowolnego programu orchestrator i harmonogramu<br /> • Dowolnego rejestru platformy Docker<br /> |
-| Metodyka DevOps na potrzeby aplikacji platformy Docker     | Usługi azure DevOps •<br /> • Microsoft Team Foundation Server<br /> • Usługi azure Container Service<br /> • Usługi azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • W środowisku lokalnym Mesos Docker Datacenter, Docker Swarm, DC/OS, Kubernetes, itp.<br /> |
+| Platforma dla aplikacji platformy Docker   | • Microsoft Visual Studio i Visual Studio Code<br /> • .NET<br /> • Platformy Microsoft Azure Kubernetes Service (AKS)<br /> • Usługi azure Service Fabric<br /> • Usługi azure Container Registry<br /> | • Dowolnego edytora kodu (na przykład Sublime)<br /> • Dowolnego języka (Node.js, Java, Go, itp.)<br /> • Dowolnego programu orchestrator i harmonogramu<br /> • Dowolnego rejestru platformy Docker<br /> |
+| Metodyka DevOps na potrzeby aplikacji platformy Docker     | Usługi azure DevOps •<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service (AKS)<br /> • Usługi azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • W środowisku lokalnym Mesos Docker Datacenter, Docker Swarm, DC/OS, Kubernetes, itp.<br /> |
 | Zarządzanie i monitorowanie  | • Azure monitorowania | • Platformy Marathon, Chronos itp.<br />|
 
 Platformy firmy Microsoft oraz narzędzi dla konteneryzowanych aplikacji platformy Docker, zgodnie z definicją w tabeli 3-1, obejmują następujące składniki:
@@ -37,7 +37,7 @@ Platformy firmy Microsoft oraz narzędzi dla konteneryzowanych aplikacji platfor
 
 - **Metodyka DevOps na potrzeby aplikacji platformy Docker** umożliwia programistom tworzenie aplikacji platformy Docker [usługom DevOps platformy Azure](https://azure.microsoft.com/services/devops/) lub dowolny inny produkt innej firmy, takich jak Jenkins do rozbudowy cyklu życia kompleksowej aplikacji automatycznych Management (ALM).
 
-  Dzięki usługom DevOps platformy Azure, deweloperzy mogą tworzyć ukierunkowane kontenera metodyka DevOps na potrzeby szybkie, iteracyjne procesu, który obejmuje kod źródłowy sterowania z dowolnego miejsca (Git usług platformy Azure DevOps, GitHub, dowolnym zdalnym repozytorium Git lub Subversion), ciągłej integracji (CI) , testy jednostkowe wewnętrznego, testy integracji inter container/usługi, ciągłe dostarczanie (CD) i rozwiązania release management (RM). Deweloperzy mogą też zautomatyzować ich Docker aplikacji wersji do usługi Azure Container Service, od projektowania do środowiskach przejściowych i produkcyjnych.
+  Dzięki usługom DevOps platformy Azure, deweloperzy mogą tworzyć ukierunkowane kontenera metodyka DevOps na potrzeby szybkie, iteracyjne procesu, który obejmuje kod źródłowy sterowania z dowolnego miejsca (Git usług platformy Azure DevOps, GitHub, dowolnym zdalnym repozytorium Git lub Subversion), ciągłej integracji (CI) , testy jednostkowe wewnętrznego, testy integracji inter container/usługi, ciągłe dostarczanie (CD) i rozwiązania release management (RM). Deweloperzy mogą też zautomatyzować ich wersji aplikacji platformy Docker do usługi Azure Kubernetes Service (AKS), od projektowania do środowiskach przejściowych i produkcyjnych.
 
 - **Zarządzanie i monitorowanie** IT mogą zarządzać i monitorować aplikacje produkcyjne i usług na kilka sposobów, integrowania zarówno perspektywy w skonsolidowane środowisko.
 

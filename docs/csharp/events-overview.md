@@ -3,12 +3,12 @@ title: Wprowadzenie do zdarzeń
 description: Dowiedz się więcej o zdarzeniach w .NET Core i cele projektu języka firmy Microsoft zdarzeń w tym omówieniu.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646621"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051942"
 ---
 # <a name="introduction-to-events"></a>Wprowadzenie do zdarzeń
 
@@ -65,7 +65,8 @@ Subskrybowanie zdarzenia przy użyciu `+=` operator:
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += onProgress;
+
+fileLister.Progress += onProgress;
 ```
 
 Metody obsługi zwykle jest prefiksem "On" następuje nazwa zdarzenia, jak pokazano powyżej.
@@ -73,7 +74,7 @@ Metody obsługi zwykle jest prefiksem "On" następuje nazwa zdarzenia, jak pokaz
 Anulowanie subskrypcji przy użyciu `-=` operator:
 
 ```csharp
-lister.Progress -= onProgress;
+fileLister.Progress -= onProgress;
 ```
 
 Należy zauważyć, że uznana za zmienną lokalną dla wyrażenia, który reprezentuje program obsługi zdarzeń. Dzięki temu usuwa Anuluj subskrypcję programu obsługi.

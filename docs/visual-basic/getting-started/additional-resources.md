@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797114"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052786"
 ---
 # <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -39,7 +39,7 @@ Następujące witryny sieci web, wytyczne i mogą pomóc w znalezieniu odpowiedz
 
 |Termin|Definicja|
 |----------|----------------|
-|[Forum języka Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|W tym artykule omówiono zagadnienia ogólne języka Visual Basic.|
+|[Forum języka Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|W tym artykule omówiono zagadnienia ogólne języka Visual Basic.|
 
 ### <a name="videos-and-webcasts"></a>Filmy i audycje w sieci Web
 

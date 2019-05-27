@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6c979483497ff640be7d1126d63ce95130f6c02b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770373"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195570"
 ---
 # <a name="best-practices-for-exceptions"></a>Najlepsze praktyki dotyczące wyjątków
 
@@ -54,7 +54,9 @@ Klasa może zapewnić metody lub właściwości, które pozwalają uniknąć naw
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
-Innym sposobem na uniknięcie wyjątki, które ma zwrócić `null` dla ekstremalnie częstych przypadków błędów zamiast zgłaszać wyjątek. Ekstremalnie częste przypadki błędów należy traktować jako normalny przepływ sterowania. Zwracając `null` w takich przypadkach można zminimalizować wpływ na wydajność aplikacji.
+Innym sposobem na uniknięcie wyjątków jest do zwrócenia wartości null (lub domyślny) dla ekstremalnie częstych przypadków błędów zamiast zgłaszać wyjątek. Ekstremalnie częste przypadki błędów należy traktować jako normalny przepływ sterowania. Przez zwrócenie wartości null (lub domyślny) w tych przypadkach, można zminimalizować wpływ na wydajność aplikacji.
+
+Dla typów wartości czy ma być używany Nullable<T> lub wartości domyślnych, ponieważ wskaźnik błędów jest coś, co należy wziąć pod uwagę dla określonej aplikacji. Za pomocą `Nullable<Guid>`, `default` staje się `null` zamiast `Guid.Empty`. Dodając kilka razy `Nullable<T>` może spowodować przejrzyste gdy wartość jest obecne lub nieobecne. Innym razem, dodając `Nullable<T>` można tworzyć dodatkowe przypadki, upewnij się, że nie są niezbędne w celu tylko służą do tworzenia potencjalnymi przyczynami błędów. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Zgłaszają wyjątki, zamiast zwracać kod błędu:
 

@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: c9499e44a6074525c634959e385ee91c03cdf9d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643923"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052173"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalowanie programu .NET Framework w systemie Windows 10 i Windows Server 2016 lub nowszy
 
@@ -52,7 +52,7 @@ Jeśli używasz systemu Windows 10 1507 i 1511 i chcesz zainstalować .NET Frame
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[Platformy .NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53345) jest najnowszej obsługiwanej wersji .NET Framework w systemie Windows 10 1507 i 1511.
+[Platformy .NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) jest najnowszej obsługiwanej wersji .NET Framework w systemie Windows 10 1507 i 1511.
 
 .NET Framework 4.6.2 obsługuje aplikacje są kompilowane dla programu .NET Framework 4.0, za pośrednictwem 4.6.2.
 

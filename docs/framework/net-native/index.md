@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3c845cefad451c608f5c095e4941c3368dc9975
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28b09bf07d831747be0006ffe1f1d8c5ac5171ce
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650545"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052643"
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilowanie aplikacji z architekturą .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] jest technologia kompilacji wstępnej do kompilowania i wdrażania aplikacji Windows, który jest dołączony do programu Visual Studio 2015 i nowszych wersjach. Automatycznie skompiluje wersji aplikacji, które są zapisywane w kodzie zarządzanym (C# lub Visual Basic) i przeznaczone na platformę .NET Framework i Windows 10 do kodu macierzystego.  
+.NET native jest technologia kompilacji wstępnej do kompilowania i wdrażania aplikacji Windows, który jest dołączony do programu Visual Studio 2015 i nowszych wersjach. Automatycznie skompiluje wersji aplikacji, które są zapisywane w kodzie zarządzanym (C# lub Visual Basic) i przeznaczone na platformę .NET Framework i Windows 10 do kodu macierzystego.  
   
- Zazwyczaj aplikacje, które obsługują program .NET Framework są kompilowane do języka pośredniego (IL). W czasie wykonywania kompilator just-in-time (JIT) tłumaczy IL do kodu macierzystego. Z kolei [!INCLUDE[net_native](../../../includes/net-native-md.md)] kompilować aplikacje Windows bezpośrednio do kodu macierzystego. Dla deweloperów oznacza to:  
+ Zazwyczaj aplikacje, które obsługują program .NET Framework są kompilowane do języka pośredniego (IL). W czasie wykonywania kompilator just-in-time (JIT) tłumaczy IL do kodu macierzystego. Z kolei .NET Native kompiluje aplikacje Windows bezpośrednio do kodu macierzystego. Dla deweloperów oznacza to:  
   
 - Twoje aplikacje są wyposażone w wydajności kodu natywnego. Zwykle wydajność będzie nadrzędne w stosunku do kodu, który jest najpierw skompilowane do IL, a następnie kompilowane do kodu macierzystego przy użyciu kompilatora JIT. 
   
@@ -28,7 +28,7 @@ ms.locfileid: "64650545"
   
 - Można nadal korzystać z zasobów udostępnianych przez .NET Framework, w tym jego biblioteki klas, pamięcią automatyczną zarządzania i wyrzucania elementów kolekcji i obsługi wyjątków.  
   
- Dla użytkowników aplikacji [!INCLUDE[net_native](../../../includes/net-native-md.md)] oferuje następujące korzyści:  
+ W przypadku użytkowników aplikacji .NET Native oferuje następujące zalety:  
   
 - Krótszy czas wykonywania dla większości scenariuszy i aplikacji.
   
@@ -41,17 +41,17 @@ ms.locfileid: "64650545"
 > [!IMPORTANT]
 > Większość aplikacji i scenariuszy .NET Native oferuje znacznie krótszy czas uruchamiania i doskonałą wydajność w porównaniu do aplikacji skompilowanych IL lub obrazów NGEN. Jednak wyniki mogą się różnić. Aby upewnić się, że aplikacja skorzystał z ulepszenia wydajności programu .NET Native, należy porównać jego wydajność, korzystając z niego bez — .NET Native wersję aplikacji. Aby uzyskać więcej informacji, zobacz [sesja wydajności — omówienie](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
  
-Ale [!INCLUDE[net_native](../../../includes/net-native-md.md)] obejmuje więcej niż kompilacji do kodu macierzystego. Jego zmienia sposób skompilowane i wykonywane aplikacje .NET Framework. W szczególności:  
+Jednak .NET Native obejmuje więcej niż kompilacji do kodu macierzystego. Jego zmienia sposób skompilowane i wykonywane aplikacje .NET Framework. W szczególności:  
   
 - Podczas wstępnej kompilacji wymagane części programu .NET Framework są łączone statycznie z Twoją aplikacją. Umożliwia to aplikacji do uruchamiania z bibliotekami lokalnego dla aplikacji programu .NET Framework i kompilator do przeprowadzenia analizy globalnego dostarczać wydajności usługi wins. W rezultacie aplikacje będą uruchamiać zawsze szybciej nawet po zakończeniu aktualizacji .NET Framework.  
   
-- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Środowiska uruchomieniowego jest zoptymalizowany pod kątem statyczne wstępnej kompilacji i w zdecydowanej większości przypadków zapewnia najlepszą wydajność. W tym samym czasie zachowuje podstawowe funkcje odbicia, które więc produktywności deweloperów.  
+- Środowisko uruchomieniowe platformy .NET Native została zoptymalizowana pod kątem statyczne wstępnej kompilacji i w zdecydowanej większości przypadków zapewnia najlepszą wydajność. W tym samym czasie zachowuje podstawowe funkcje odbicia, które więc produktywności deweloperów.  
   
-- [!INCLUDE[net_native](../../../includes/net-native-md.md)] wykorzystuje takie same ponownie zakończyć jako C++ kompilatora, który jest zoptymalizowany pod kątem statyczne scenariuszy wstępnej kompilacji.  
+- .NET native używa tego samego zaplecza co C++ kompilatora, który jest zoptymalizowany pod kątem statyczne scenariuszy wstępnej kompilacji.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] może przynieść korzyści wydajności C++ do zarządzanego kodu deweloperów, ponieważ używa ona narzędzi takie same lub podobne jak C++ kulisy, jak pokazano w poniższej tabeli.  
+ .NET native może przynieść korzyści wydajności C++ do zarządzanego kodu deweloperów, ponieważ używa ona narzędzi takie same lub podobne jak C++ kulisy, jak pokazano w poniższej tabeli.  
   
-||[!INCLUDE[net_native](../../../includes/net-native-md.md)]|C++|  
+||Architektura .NET Native|C++|  
 |-|----------------------------------------------------------------|-----------|  
 |Biblioteki|.NET Framework i środowiska wykonawczego Windows|Win32 i środowiska wykonawczego Windows|  
 |Kompilator|Optymalizacja kompilatora UTC|Optymalizacja kompilatora UTC|  

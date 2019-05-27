@@ -14,7 +14,7 @@
     - name: Kategoryzowanie problemów z obsługą (klasyfikacja wieloklasowa)
       href: tutorials/github-issue-classification.md
     - name: Przewidywanie cen (regresja)
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: Kategoryzowanie irysów (klastrowanie metodą k-średnich)
       href: tutorials/iris-clustering.md
     - name: Rekomendacje dotyczące filmów (faktoryzacja macierzy)

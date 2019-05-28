@@ -22,9 +22,9 @@ ms.locfileid: "61674652"
 
 Określa wymagający uwzględnienia plik konfiguracji.
 
-[**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<assemblybinding — >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
+[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblybinding — >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,7 +42,7 @@ Określa wymagający uwzględnienia plik konfiguracji.
 
 |     | Opis |
 | --- | ----------- |
-| [**\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Określa politykę powiązania zestawu na poziomie konfiguracji. |
+| [ **\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Określa politykę powiązania zestawu na poziomie konfiguracji. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -50,10 +50,10 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
- **\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników. Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć  **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwany, aktualizowanie wspólnego pliku konfiguracji informacje zaktualizowanej konfiguracji do wszystkich aplikacji korzystających z zestawu.
+**\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników. Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwany, aktualizowanie wspólnego pliku konfiguracji informacje zaktualizowanej konfiguracji do wszystkich aplikacji korzystających z zestawu.
 
 > [!NOTE]
->  **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
+> **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
 
 Użycie powiązane pliki konfiguracji decydują następujące reguły:
 
@@ -65,9 +65,9 @@ Użycie powiązane pliki konfiguracji decydują następujące reguły:
 
 - Wszystkie powiązane pliki konfiguracji są scalane w celu utworzenia jeden plik, podobne do zachowania `#include` dyrektywy języka C/C++.
 
--  **\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.
+- **\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.
 
-- Odwołania cykliczne są wykrywane i zakończone. Oznacza to jeśli  **\<linkedconfiguration — >** elementy szeregu plików konfiguracyjnych tworzą pętli, pętla jest wykrywany i zatrzymane.
+- Odwołania cykliczne są wykrywane i zakończone. Oznacza to jeśli **\<linkedconfiguration — >** elementy szeregu plików konfiguracyjnych tworzą pętli, pętla jest wykrywany i zatrzymane.
 
 ## <a name="example"></a>Przykład
 
@@ -83,5 +83,5 @@ Poniższy przykład pokazuje, jak dołączyć plik konfiguracji z lokalnego dysk
 
 ## <a name="see-also"></a>Zobacz także
 
-- [**\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [ **\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
 - [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

@@ -15,9 +15,9 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61873733"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Konfigurowanie przekierowywania powiązań zestawów
-Domyślnie aplikacje używają zbiór zestawów .NET Framework, które są dostarczane z wersji środowiska uruchomieniowego, które umożliwiają kompilowanie aplikacji. Możesz użyć **appliesTo** atrybutu na [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) elementu w pliku konfiguracji aplikacji do przekierowywania odwołań do powiązań zestawów do określonej wersji programu .NET Zestawy struktury. Ten atrybut opcjonalny używa numeru wersji .NET Framework w celu wskazania, której wersji ma zastosowanie do. Jeśli nie **appliesTo** atrybut jest określony,  **\<assemblyBinding >** element ma zastosowanie do wszystkich wersji programu .NET Framework.  
+Domyślnie aplikacje używają zbiór zestawów .NET Framework, które są dostarczane z wersji środowiska uruchomieniowego, które umożliwiają kompilowanie aplikacji. Możesz użyć **appliesTo** atrybutu na [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) elementu w pliku konfiguracji aplikacji do przekierowywania odwołań do powiązań zestawów do określonej wersji programu .NET Zestawy struktury. Ten atrybut opcjonalny używa numeru wersji .NET Framework w celu wskazania, której wersji ma zastosowanie do. Jeśli nie **appliesTo** atrybut jest określony, **\<assemblyBinding>** element ma zastosowanie do wszystkich wersji programu .NET Framework.  
   
- **AppliesTo** atrybut wprowadzono w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie  **\<assemblyBinding >** elementy są stosowane podczas korzystania z wersji programu .NET Framework 1.0, nawet jeśli **appliesTo** atrybut jest określony.  
+ **AppliesTo** atrybut wprowadzono w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie **\<assemblyBinding>** elementy są stosowane podczas korzystania z wersji programu .NET Framework 1.0, nawet jeśli **appliesTo** atrybut jest określony.  
   
 > [!NOTE]
 >  Użyj **appliesTo** atrybutu, aby ograniczyć przekierowanie powiązań zestawów do określonej wersji środowiska uruchomieniowego.  
@@ -34,7 +34,7 @@ Domyślnie aplikacje używają zbiór zestawów .NET Framework, które są dosta
 </runtime>  
 ```  
   
-  **\<AssemblyBinding >** elementy są zależne od kolejności. Należy wprowadzić informacje o przekierowaniach powiązań zestawów dla dowolnego środowiska .NET Framework w wersji 1.0 zestawów najpierw następuje informacje o przekierowaniach powiązań zestawów dla dowolne zestawy, .NET Framework w wersji 1.1. Na koniec wprowadź informacje o przekierowaniach powiązań zestawów dla przekierowania z zestawu .NET Framework, która nie korzysta z **appliesTo** atrybut i dlatego ma zastosowanie do wszystkich wersji programu .NET Framework. W przypadku konfliktu przekierowania jest używana pierwsza pasująca instrukcja przekierowania w pliku konfiguracji.  
+ **\<AssemblyBinding>** elementy są zależne od kolejności. Należy wprowadzić informacje o przekierowaniach powiązań zestawów dla dowolnego środowiska .NET Framework w wersji 1.0 zestawów najpierw następuje informacje o przekierowaniach powiązań zestawów dla dowolne zestawy, .NET Framework w wersji 1.1. Na koniec wprowadź informacje o przekierowaniach powiązań zestawów dla przekierowania z zestawu .NET Framework, która nie korzysta z **appliesTo** atrybut i dlatego ma zastosowanie do wszystkich wersji programu .NET Framework. W przypadku konfliktu przekierowania jest używana pierwsza pasująca instrukcja przekierowania w pliku konfiguracji.  
   
  Na przykład aby przekierować jedno odwołanie do zestawu .NET Framework w wersji 1.0, a inne odwołanie do zestawu .NET Framework w wersji 1.1, możesz użyć wzoru pokazanego w poniższym pseudokodzie.  
   

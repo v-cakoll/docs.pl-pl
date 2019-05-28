@@ -9,3 +9,5 @@
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
     - name: Debugowanie drzew wyrażeń
       href: debugging-expression-trees-in-visual-studio.md
+    - name: Składnia widoku DebugView
+      href: debugview-syntax.md

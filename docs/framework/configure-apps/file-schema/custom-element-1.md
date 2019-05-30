@@ -6,49 +6,49 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: bfc2a916e37ac27d45746eb268912b3752f4d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705301"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301153"
 ---
-# <a name="custom-element-for-singletagsectionhandler"></a><span data-ttu-id="c015e-102">Element niestandardowy dla SingleTagSectionHandler</span><span class="sxs-lookup"><span data-stu-id="c015e-102">Custom element for SingleTagSectionHandler</span></span>
+# <a name="custom-element-for-singletagsectionhandler"></a><span data-ttu-id="7709c-102">Element niestandardowy dla SingleTagSectionHandler</span><span class="sxs-lookup"><span data-stu-id="7709c-102">Custom element for SingleTagSectionHandler</span></span>
 
-<span data-ttu-id="c015e-103">Definiuje ustawienia w sekcji niestandardowej konfiguracji, który jest definiowany przez \<sekcji > element i używa <xref:System.Configuration.SingleTagSectionHandler> klasy.</span><span class="sxs-lookup"><span data-stu-id="c015e-103">Defines settings in a custom configuration section that is defined by a \<section> element and uses the <xref:System.Configuration.SingleTagSectionHandler> class.</span></span>
+<span data-ttu-id="7709c-103">Definiuje ustawienia w sekcji niestandardowej konfiguracji, który jest definiowany przez \<sekcji > element i używa <xref:System.Configuration.SingleTagSectionHandler> klasy.</span><span class="sxs-lookup"><span data-stu-id="7709c-103">Defines settings in a custom configuration section that is defined by a \<section> element and uses the <xref:System.Configuration.SingleTagSectionHandler> class.</span></span>
 
-<span data-ttu-id="c015e-104">[**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="c015e-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="c015e-105">&nbsp;&nbsp;*\<sectionName>*</span><span class="sxs-lookup"><span data-stu-id="c015e-105">&nbsp;&nbsp;*\<sectionName>*</span></span>
+<span data-ttu-id="7709c-104">[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="7709c-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="7709c-105">&nbsp;&nbsp; *\<sectionName>*</span><span class="sxs-lookup"><span data-stu-id="7709c-105">&nbsp;&nbsp;*\<sectionName>*</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c015e-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="c015e-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="7709c-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="7709c-106">Syntax</span></span>
 
 ```xml
 <sectionName key="value" key2="value2" ... />
 ```
 
-## <a name="attributes"></a><span data-ttu-id="c015e-107">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="c015e-107">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="7709c-107">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="7709c-107">Attributes</span></span>
 
-<span data-ttu-id="c015e-108">Atrybuty i wartości atrybutów są zdefiniowane przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="c015e-108">Attributes and attribute values are user defined.</span></span>
+<span data-ttu-id="7709c-108">Atrybuty i wartości atrybutów są zdefiniowane przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="7709c-108">Attributes and attribute values are user defined.</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="c015e-109">Element nadrzędny</span><span class="sxs-lookup"><span data-stu-id="c015e-109">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="7709c-109">Element nadrzędny</span><span class="sxs-lookup"><span data-stu-id="7709c-109">Parent element</span></span>
 
-|     | <span data-ttu-id="c015e-110">Opis</span><span class="sxs-lookup"><span data-stu-id="c015e-110">Description</span></span> |
+|     | <span data-ttu-id="7709c-110">Opis</span><span class="sxs-lookup"><span data-stu-id="7709c-110">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="c015e-111">**\<Konfiguracja >**</span><span class="sxs-lookup"><span data-stu-id="c015e-111">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="c015e-112">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c015e-112">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="7709c-111"> *\*\<Konfiguracja >** </span><span class="sxs-lookup"><span data-stu-id="7709c-111">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="7709c-112">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7709c-112">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="c015e-113">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="c015e-113">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="7709c-113">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="7709c-113">Child elements</span></span>
 
-<span data-ttu-id="c015e-114">Brak</span><span class="sxs-lookup"><span data-stu-id="c015e-114">None</span></span>
+<span data-ttu-id="7709c-114">Brak</span><span class="sxs-lookup"><span data-stu-id="7709c-114">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="c015e-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c015e-115">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="7709c-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7709c-115">Remarks</span></span>
 
-<span data-ttu-id="c015e-116"> *\*\<Parametrami sectionName >** element jest elementem niestandardowe zdefiniowane przez [  *\*\<sekcji >** ](~/docs/framework/configure-apps/file-schema/section-element.md) tagów w [  *\*\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) elementu.</span><span class="sxs-lookup"><span data-stu-id="c015e-116">The **\<sectionName>** element is a custom element defined by a [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) tag in the [**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) element.</span></span> <span data-ttu-id="c015e-117">Zwraca system konfiguracji <xref:System.Collections.IDictionary> obiektu po wywołaniu <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c015e-117">The configuration system returns a <xref:System.Collections.IDictionary> object when you call <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="7709c-116"> *\*\<Parametrami sectionName >** element jest elementem niestandardowe zdefiniowane przez [  *\*\<sekcji >** ](~/docs/framework/configure-apps/file-schema/section-element.md) tagów w [  *\*\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) elementu.</span><span class="sxs-lookup"><span data-stu-id="7709c-116">The **\<sectionName>** element is a custom element defined by a [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) tag in the [**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) element.</span></span> <span data-ttu-id="7709c-117">Zwraca system konfiguracji <xref:System.Collections.IDictionary> obiektu po wywołaniu <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7709c-117">The configuration system returns a <xref:System.Collections.IDictionary> object when you call <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c015e-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="c015e-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="7709c-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="7709c-118">Example</span></span>
 
-<span data-ttu-id="c015e-119">Poniższy przykład deklaruje element niestandardowy o nazwie  **\<sampleSection >** zawierającego ustawienia odczytywane przez <xref:System.Configuration.SingleTagSectionHandler> klasy:</span><span class="sxs-lookup"><span data-stu-id="c015e-119">The following example declares a custom element called **\<sampleSection>** that contains settings read by the <xref:System.Configuration.SingleTagSectionHandler> class:</span></span>
+<span data-ttu-id="7709c-119">Poniższy przykład deklaruje element niestandardowy o nazwie  **\<sampleSection >** zawierającego ustawienia odczytywane przez <xref:System.Configuration.SingleTagSectionHandler> klasy:</span><span class="sxs-lookup"><span data-stu-id="7709c-119">The following example declares a custom element called **\<sampleSection>** that contains settings read by the <xref:System.Configuration.SingleTagSectionHandler> class:</span></span>
 
 ```xml
 <configuration>
@@ -62,10 +62,10 @@ ms.locfileid: "61705301"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="c015e-120">Plik konfiguracji</span><span class="sxs-lookup"><span data-stu-id="c015e-120">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="7709c-120">Plik konfiguracji</span><span class="sxs-lookup"><span data-stu-id="7709c-120">Configuration file</span></span>
 
-<span data-ttu-id="c015e-121">Ten element może być użyty w pliku konfiguracyjnym aplikacji, plik konfiguracji komputera (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c015e-121">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="7709c-121">Ten element może być użyty w pliku konfiguracyjnym aplikacji, plik konfiguracji komputera (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="7709c-121">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c015e-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c015e-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7709c-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7709c-122">See also</span></span>
 
-- [<span data-ttu-id="c015e-123">Schemat pliku konfiguracji dla programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c015e-123">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="7709c-123">Schemat pliku konfiguracji dla programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7709c-123">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

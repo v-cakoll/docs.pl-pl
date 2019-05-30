@@ -2,12 +2,12 @@
 title: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
 description: Informacje o sposobie obsługi błędów HTTP za pomocą Polly i HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053114"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301478"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementowanie ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania z zasadami dotyczącymi HttpClientFactory i Polly
 
@@ -69,16 +69,16 @@ Policy
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Wzorzec ponawiania**\
+- **Wzorzec ponawiania**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly i HttpClientFactory**\
+- **Polly i HttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (odporności platformy .NET i biblioteki przejściowy błędów obsługi)**\
+- **Polly (odporności platformy .NET i biblioteki przejściowy błędów obsługi)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker. Jitter: Lepiej wprowadzania rzeczy za pomocą losowości**\
+- **Marc Brooker. Jitter: Lepiej wprowadzania rzeczy za pomocą losowości**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

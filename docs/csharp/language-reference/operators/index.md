@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876950"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300325"
 ---
 # <a name="c-operators"></a>Operatory języka C#
 
@@ -95,9 +95,9 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [* x](pointer-related-operators.md#pointer-indirection-operator-) — operację wskaźnika pośredniego lub wyłuskania.
 
-[TRUE — operator](../keywords/true-false-operators.md) — zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie true.
+[TRUE — operator](true-false-operators.md) — zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie true.
 
-[FALSE — operator](../keywords/true-false-operators.md) — zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie false.
+[FALSE — operator](true-false-operators.md) — zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie false.
 
 ## <a name="multiplicative-operators"></a>Operatory multiplikatywne
 
@@ -197,9 +197,9 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [x = y](assignment-operator.md) — przypisania.
 
-[x += y](addition-assignment-operator.md) — przyrostu. Dodaj wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję, dodającego C# jako program obsługi zdarzeń.
+[x += y](arithmetic-operators.md#compound-assignment) — przyrostu. Dodaj wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza [zdarzeń](../keywords/event.md), następnie `y` musi być odpowiednia metoda który C# dodaje jako program obsługi zdarzeń.
 
-[x-= y](subtraction-assignment-operator.md) — zmniejszanie. Odejmuje wartość `y` od wartości `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję C# usuwa jako program obsługi zdarzeń.
+[x-= y](arithmetic-operators.md#compound-assignment) — zmniejszanie. Odejmuje wartość `y` od wartości `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza [zdarzeń](../keywords/event.md), następnie `y` musi być odpowiednia metoda który C# usuwa jako program obsługi zdarzeń.
 
 [x * = y](arithmetic-operators.md#compound-assignment) — mnożenie i przypisanie. Mnoży wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość.
 

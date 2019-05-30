@@ -1,40 +1,80 @@
 ---
-title: '- Operator - C# odwołania'
+title: '- operatory-= — i C# odwołania'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 05/27/2019
 f1_keywords:
 - -_CSharpKeyword
+- -=_CSharpKeyword
 helpviewer_keywords:
+- subtraction operator [C#]
+- delegate removal [C#]
 - '- operator [C#]'
-- subtraction operator (-) [C#]
+- subtraction assignment operator [C#]
+- event unsubscription [C#]
+- -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 920981addd5c779c9ad1c666ef45e1de5cd23408
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9f43a863de69122e251204668af2ea989fcc993c
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633006"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300090"
 ---
-# <a name="--operator-c-reference"></a>-— operator (C# odwołania)
+# <a name="--and---operators-c-reference"></a>— i Operatorzy-= (C# odwołania)
 
-`-` Operator może działać jako jednoargumentowy lub binarny.
+`-` Operator jest obsługiwany przez wbudowane typy liczbowe i [delegować](../keywords/delegate.md) typów.
 
-## <a name="remarks"></a>Uwagi
+Aby uzyskać informacje o operacji arytmetycznych `-` operatora, zobacz [jednoargumentowe plus lub minus operatory](arithmetic-operators.md#unary-plus-and-minus-operators) i [operator odejmowania -](arithmetic-operators.md#subtraction-operator--) części [operatorów arytmetycznych](arithmetic-operators.md) artykułu.
 
-Jednoargumentowy `-` operatory są wstępnie zdefiniowane dla wszystkich typów liczbowych. Wynik jednoargumentowy `-` operacja na typ liczbowy jest liczbowe negacji operandu.
+## <a name="delegate-removal"></a>Usuwanie delegata
 
-Binarny `-` operatory są wstępnie zdefiniowane dla wszystkich typów liczbowych i wyliczenia na potrzeby odejmowania drugiego operandu od pierwszego.
+Dla argumentów operacji tego samego [delegować](../keywords/delegate.md) typu `-` operator zwraca wystąpienie delegata, który jest obliczany w następujący sposób:
 
-Typy delegatów udostępniają dane binarne `-` operatora, który wykonuje usuwanie delegata.
+- Jeśli oba operandy są inne niż null, a lista wywołania drugi argument operacji jest odpowiednie podlisty ciągłych listy wywołania pierwszego operandu, wynik operacji jest nową listę wywołania uzyskany przez usuwanie wpisów drugiego operandu od Lista wywołania pierwszy operand. Jeśli drugi argument operacji listy pasuje wiele sąsiadujących podlisty na liście pierwszy operand, tylko podlisty pasującego najdalej z prawej strony jest usuwany. Jeśli wyniki usuwania w pustej listy, wynik jest `null`.
+- Jeśli wywołanie listę drugiego operandu nie jest właściwe podlisty ciągłych listy wywołania pierwszego operandu, wynik operacji jest pierwszy operand.
+- Jeśli pierwszy argument jest `null`, wynik operacji jest `null`. Jeśli drugi argument operacji jest `null`, wynik operacji jest pierwszy operand.
 
-Typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia jednoargumentowe `-` binarnej i `-` operatorów. Aby uzyskać więcej informacji, zobacz [operator — słowo kluczowe](../keywords/operator.md).
+W poniższym przykładzie pokazano sposób, w jaki `-` operacja wykonuje usuwanie delegata:
 
-## <a name="example"></a>Przykład
+[!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-[!code-csharp[csRefOperators#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#40)]
+## <a name="subtraction-assignment-operator--"></a>Operator przypisania odejmowania-=
+
+Usługi za pomocą wyrażenia `-=` operatora, takich jak
+
+```csharp
+x -= y
+```
+
+odpowiada wyrażeniu
+
+```csharp
+x = x - y
+```
+
+z tą różnicą, że `x` jest obliczany tylko raz.
+  
+W poniższym przykładzie pokazano użycie `-=` operator:
+
+[!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
+
+Możesz także użyć `-=` operatora, aby określić metodę programu obsługi zdarzeń, aby usunąć po anulowaniu subskrypcji z [zdarzeń](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-overloadability"></a>Overloadability — operator
+
+Typ zdefiniowany przez użytkownika może [przeciążenia](../keywords/operator.md) `-` operatora. Gdy dane binarne `-` operator jest przeciążony, `-=` operator jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć `-=` operatora.
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz [jednoargumentowy minus operator](~/_csharplang/spec/expressions.md#unary-minus-operator) i [operator odejmowania](~/_csharplang/spec/expressions.md#subtraction-operator) sekcje [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
+- [Delegaty](../../programming-guide/delegates/index.md)
+- [Zdarzenia](../../programming-guide/events/index.md)
+- [Checked i unchecked](../keywords/checked-and-unchecked.md)
+- [Operatory arytmetyczne](arithmetic-operators.md)
+- [+ i operatory +=](addition-operator.md)

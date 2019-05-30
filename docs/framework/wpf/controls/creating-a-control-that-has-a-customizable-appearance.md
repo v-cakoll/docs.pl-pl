@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 279f7932d38885331b69616afa719ad782d7244b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3630b9e2f50830faf50599388e4fbb7ec1630b73
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659901"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300738"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Tworzenie formantu, którego wygląd można dostosować
 <a name="introduction"></a>
@@ -78,7 +78,7 @@ Niestandardowy formant NumericUpDown
   
  [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Zachowanie visual `NumericUpDown` formant jest, czy wartość jest czcionką czerwony, gdy jest ujemna.  Jeśli zmienisz <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> w kodzie, gdy `Value` jest ujemna, `NumericUpDown` będzie zawsze wyświetlana z czerwonym wartości ujemnej. Określ visual zachowanie kontrolki <xref:System.Windows.Controls.ControlTemplate> , dodając <xref:System.Windows.VisualState> obiekty do <xref:System.Windows.Controls.ControlTemplate>.  W poniższym przykładzie przedstawiono <xref:System.Windows.VisualState> obiektów dla `Positive` i `Negative` stanów.  `Positive` i `Negative` są wzajemnie się wykluczają (formant jest zawsze w dokładnie jeden z dwóch), dlatego umieszcza przykład <xref:System.Windows.VisualState> obiektów w jednym <xref:System.Windows.VisualStateGroup>.  Gdy kontrolka przechodzi w stan `Negative` stanu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> zmieni kolor na czerwony.  Gdy kontrolka jest w `Positive` stanu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> zwracanie do niego oryginalną wartość.  Definiowanie <xref:System.Windows.VisualState> obiekty w <xref:System.Windows.Controls.ControlTemplate> jest opisane w dalszych [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+ Zachowanie visual `NumericUpDown` formant jest, czy wartość jest czcionką czerwony, gdy jest ujemna.  Jeśli zmienisz <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> w kodzie, gdy `Value` jest ujemna, `NumericUpDown` będzie zawsze wyświetlana z czerwonym wartości ujemnej. Określ visual zachowanie kontrolki <xref:System.Windows.Controls.ControlTemplate> , dodając <xref:System.Windows.VisualState> obiekty do <xref:System.Windows.Controls.ControlTemplate>.  W poniższym przykładzie przedstawiono <xref:System.Windows.VisualState> obiektów dla `Positive` i `Negative` stanów.  `Positive` i `Negative` są wzajemnie się wykluczają (formant jest zawsze w dokładnie jeden z dwóch), dlatego umieszcza przykład <xref:System.Windows.VisualState> obiektów w jednym <xref:System.Windows.VisualStateGroup>.  Gdy kontrolka przechodzi w stan `Negative` stanu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> zmieni kolor na czerwony.  Gdy kontrolka jest w `Positive` stanu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> powraca do oryginalnej wartości.  Definiowanie <xref:System.Windows.VisualState> obiekty w <xref:System.Windows.Controls.ControlTemplate> jest opisane w dalszych [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Pamiętaj ustawić <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> dołączona właściwość w katalogu głównym <xref:System.Windows.FrameworkElement> z <xref:System.Windows.Controls.ControlTemplate>.  
@@ -121,7 +121,7 @@ Niestandardowy formant NumericUpDown
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>Użyj VisualStateManager do zarządzania Stanami  
  <xref:System.Windows.VisualStateManager> Śledzi stanów kontrolki i wykonuje logikę niezbędną do przejścia między stanami. Po dodaniu <xref:System.Windows.VisualState> obiekty do <xref:System.Windows.Controls.ControlTemplate>, dodać je do <xref:System.Windows.VisualStateGroup> i Dodaj <xref:System.Windows.VisualStateGroup> do <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> dołączona właściwość tak, aby <xref:System.Windows.VisualStateManager> dostępu do nich.  
   
- Poniższy przykład jest powtarzany poprzedniego przykładu, który pokazuje <xref:System.Windows.VisualState> obiektów, które odpowiada `Positive` i `Negative` stanów kontrolki. <xref:System.Windows.Media.Animation.Storyboard> w `Negative` <xref:System.Windows.VisualState> włącza <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> czerwony.   Gdy `NumericUpDown` kontrolka znajduje się w `Negative` stan scenorysu w `Negative` rozpoczyna się w stanie.  A następnie <xref:System.Windows.Media.Animation.Storyboard> w `Negative` stanu zatrzymuje, gdy sterowanie powraca do `Positive` stanu.  `Positive` <xref:System.Windows.VisualState> Nie musi zawierać <xref:System.Windows.Media.Animation.Storyboard> ponieważ gdy <xref:System.Windows.Media.Animation.Storyboard> dla `Negative` zatrzymaniu <xref:System.Windows.Controls.TextBlock.Foreground%2A> powróci do oryginalnego koloru.  
+ Poniższy przykład jest powtarzany poprzedniego przykładu, który pokazuje <xref:System.Windows.VisualState> obiektów, które odpowiadają `Positive` i `Negative` stanów kontrolki. <xref:System.Windows.Media.Animation.Storyboard> w `Negative` <xref:System.Windows.VisualState> włącza <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> czerwony.   Gdy `NumericUpDown` kontrolka znajduje się w `Negative` stan scenorysu w `Negative` rozpoczyna się w stanie.  A następnie <xref:System.Windows.Media.Animation.Storyboard> w `Negative` stanu zatrzymuje, gdy sterowanie powraca do `Positive` stanu.  `Positive` <xref:System.Windows.VisualState> Nie musi zawierać <xref:System.Windows.Media.Animation.Storyboard> ponieważ gdy <xref:System.Windows.Media.Animation.Storyboard> dla `Negative` zatrzymaniu <xref:System.Windows.Controls.TextBlock.Foreground%2A> powróci do oryginalnego koloru.  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   

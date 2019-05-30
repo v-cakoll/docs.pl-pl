@@ -5,12 +5,12 @@ ms.date: 12/03/2018
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: f47c9cab7b0b3813f59faa8be0110e0c6318f36e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ccebe0e1a735e500a663f41e60ce21bff39a7785
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661649"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300405"
 ---
 # <a name="false-literal-c-reference"></a>FALSE — literał (odwołanie w C#)
 
@@ -23,6 +23,6 @@ Reprezentuje [bool](bool.md) wartość `false`:
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [true](true.md)
-- [Operatory true i false](true-false-operators.md)
-- [?: operator](../operators/conditional-operator.md)
+- [TRUE — literał](true-literal.md)
+- [Operatory true i false](../operators/true-false-operators.md)
+- [?: — operator](../operators/conditional-operator.md)

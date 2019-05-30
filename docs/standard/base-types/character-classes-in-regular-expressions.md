@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053003"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250880"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 
@@ -51,16 +51,18 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
  .NET obsługuje wyrażenia odejmowania klas znaków, co pozwala na zdefiniowanie zestawu znaków jako wyniku wykluczenia jednej klasy znaków z innej klasy znaków. Aby uzyskać więcej informacji, zobacz [odejmowania klas znaków](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Znak klasy, które dopasowuje znaki według kategorii, takich jak [\w](#WordCharacter) do dopasowuje znak słowa lub [\p{} ](#CategoryOrBlock) do dopasowania kategorii Unicode, zależą od <xref:System.Globalization.CharUnicodeInfo> klasy, aby podać informacje temat kategorii znaków.  Począwszy od [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], znak kategorie są oparte na [Unicode Standard, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] za pośrednictwem [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], są one oparte na [Unicode Standard, wersja wersji 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Znak klasy, które dopasowuje znaki według kategorii, takich jak [\w](#WordCharacter) do dopasowuje znak słowa lub [\p{} ](#CategoryOrBlock) do dopasowania kategorii Unicode, zależą od <xref:System.Globalization.CharUnicodeInfo> klasy, aby podać informacje temat kategorii znaków.  Począwszy od programu .NET Framework 4.6.2 kategorii znaków są oparte na [Unicode Standard, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] za pomocą programu .NET Framework 4.6.1, są oparte na [Unicode Standard, wersja wersji 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Grupa znaków pozytywnych:]  
  Grupa znaków pozytywnych określa listę znaków, z których każdy może wystąpić w ciągu wejściowym, aby wystąpiło dopasowanie. Ta lista znaków może być określona indywidualnie, jako zakres lub na oba te sposoby.  
   
  Składnia służąca do określenia listy indywidualnych znaków jest następująca:  
-  
- [*character_group*]  
-  
+
+```  
+[*character_group*]  
+```
+
  gdzie *character_group* znajduje się lista poszczególnych znaków, które mogą wystąpić w ciągu wejściowym, aby dopasowanie zakończyło się sukcesem. *character_group* może składać się z dowolnej kombinacji jednego lub więcej znaków literału [znaki ucieczki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), lub klas znaków.  
   
  Składnia służąca do określania zakresu znaków jest następująca:  
@@ -69,9 +71,12 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
 [firstCharacter-lastCharacter]  
 ```  
   
- gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres i *lastCharacter* jest znakiem kończącym zakres. Zakres znaków jest ciągłą serią znaków definiowaną przez określenie pierwszego znaku w serii, łącznika (-), a następnie ostatniego znaku w serii. Dwa znaki są ciągłe, jeśli mają sąsiadujące punkty kodowe Unicode.  
-  
- W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zawierających klasy znaków pozytywnych.  
+ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres i *lastCharacter* jest znakiem kończącym zakres. Zakres znaków jest ciągłą serią znaków definiowaną przez określenie pierwszego znaku w serii, łącznika (-), a następnie ostatniego znaku w serii. Dwa znaki są ciągłe, jeśli mają sąsiadujące punkty kodowe Unicode. *firstCharacter* musi być znakiem z dolnym punktem kodu, i *lastCharacter* musi być znakiem z wyższym punktu kodu.
+
+> [!NOTE]
+> Ponieważ grupa znaków pozytywnych może zawierać zarówno zestaw znaków i zakresu znaków, znak łącznika (`-`) jest zawsze interpretowane jako separatora zakresu, chyba że jest to pierwszy lub ostatni znak grupy.
+
+W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zawierających klasy znaków pozytywnych.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -112,17 +117,24 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
 ## <a name="negative-character-group-"></a>Grupa znaków negatywnych: [^]  
  Grupa znaków negatywnych określa listę znaków, z których żaden nie może wystąpić w ciągu wejściowym, aby wystąpiło dopasowanie. Ta lista znaków może być określona indywidualnie, jako zakres lub na oba te sposoby.  
   
- Składnia służąca do określenia listy indywidualnych znaków jest następująca:  
-  
- [*^character_group*]  
-  
+Składnia służąca do określenia listy indywidualnych znaków jest następująca:  
+
+```
+[*^character_group*]  
+```
+
  gdzie *character_group* znajduje się lista poszczególnych znaków, które nie są wyświetlane w ciągu wejściowym, aby dopasowanie zakończyło się sukcesem. *character_group* może składać się z dowolnej kombinacji jednego lub więcej znaków literału [znaki ucieczki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), lub klas znaków.  
   
  Składnia służąca do określania zakresu znaków jest następująca:  
-  
- [^*firstCharacter*-*lastCharacter*]  
-  
- gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter* jest znakiem kończącym zakres. Zakres znaków jest ciągłą serią znaków definiowaną przez określenie pierwszego znaku w serii, łącznika (-), a następnie ostatniego znaku w serii. Dwa znaki są ciągłe, jeśli mają sąsiadujące punkty kodowe Unicode.  
+
+```
+[^*firstCharacter*-*lastCharacter*]  
+```
+
+gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres i *lastCharacter* jest znakiem kończącym zakres. Zakres znaków jest ciągłą serią znaków definiowaną przez określenie pierwszego znaku w serii, łącznika (-), a następnie ostatniego znaku w serii. Dwa znaki są ciągłe, jeśli mają sąsiadujące punkty kodowe Unicode. *firstCharacter* musi być znakiem z dolnym punktem kodu, i *lastCharacter* musi być znakiem z wyższym punktu kodu.
+
+> [!NOTE]
+> Ponieważ grupa znaków negatywnych może zawierać zarówno zestaw znaków i zakresu znaków, znak łącznika (`-`) jest zawsze interpretowane jako separatora zakresu, chyba że jest to pierwszy lub ostatni znak grupy.
   
  Można połączyć co najmniej dwa zakresy znaków. Na przykład aby określić zakres cyfr dziesiętnych od "0" do "9", zakres małych liter od "a" do "f" i zakres wielkich liter od "A" do "F", należy użyć `[0-9a-fA-F]`.  
   

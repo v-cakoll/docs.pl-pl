@@ -1,16 +1,16 @@
 ---
 title: polecenie vstest DotNet
 description: Polecenia dotnet vstest kompiluje projekt i wszystkie jego zależności.
-author: guardrex
+author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: dcf17a59fea1f58757f39721c5dd5947ed30df0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45fda3b34d2649bc6f20cf3f35c65277a9a53cec
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648519"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300033"
 ---
-# <a name="dotnet-vstest"></a>DotNet vstest
+# <a name="dotnet-vstest"></a>dotnet vstest
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 

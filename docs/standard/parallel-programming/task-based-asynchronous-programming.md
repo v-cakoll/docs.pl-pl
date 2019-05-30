@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908599"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300632"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne oparte na zadanie
 
@@ -113,21 +113,21 @@ Opcje mogą być połączone za pomocą bitowej **lub** operacji. Poniższy przy
 
 ## <a name="tasks-threads-and-culture"></a>Zadania, wątki i kultury
 
-Każdy wątek ma skojarzone kultury i kultury UI, która jest zdefiniowana przez <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> właściwości, odpowiednio. Kultury wątku jest używana w operacjach, takich jak formatowanie, analizowanie, sortowania i porównywania ciągów. Kultura interfejsu użytkownika dla wątku jest używany podczas wyszukiwania zasobów. Zazwyczaj chyba że określisz domyślną kulturę używaną do wszystkich wątków w domenie aplikacji przy użyciu <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> właściwości domyślnej kultury i kultury wątku interfejsu użytkownika jest definiowany przez kultury systemu. Jeśli jawnie ustawić kultury wątku i uruchomić nowy wątek, nowy wątek nie dziedziczy kultury wątku wywołującego; Zamiast tego jego kultury jest domyślną kulturą systemu. Modelu programowania opartego na zadaniach dla aplikacji przeznaczonych dla wersji programu .NET Framework w wersjach wcześniejszych niż [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] stosować się do tej praktyką.
+Każdy wątek ma skojarzone kultury i kultury UI, która jest zdefiniowana przez <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> właściwości, odpowiednio. Kultury wątku jest używana w operacjach, takich jak formatowanie, analizowanie, sortowania i porównywania ciągów. Kultura interfejsu użytkownika dla wątku jest używany podczas wyszukiwania zasobów. Zazwyczaj chyba że określisz domyślną kulturę używaną do wszystkich wątków w domenie aplikacji przy użyciu <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> właściwości domyślnej kultury i kultury wątku interfejsu użytkownika jest definiowany przez kultury systemu. Jeśli jawnie ustawić kultury wątku i uruchomić nowy wątek, nowy wątek nie dziedziczy kultury wątku wywołującego; Zamiast tego jego kultury jest domyślną kulturą systemu. Model programowania opartego na zadaniach dla aplikacji przeznaczonych dla wersji .NET Framework wcześniejszych niż .NET Framework 4.6 stosować się do tej praktyką.
 
 > [!IMPORTANT]
-> Należy zauważyć, że kultury wątku wywołującego jako część kontekstu zadania mają zastosowanie do aplikacji, *docelowej* [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], nie aplikacje, *uruchamiana* [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Możliwe jest określanie konkretnej wersji programu .NET Framework podczas tworzenia projektu w programie Visual Studio, wybierając tę wersję z listy rozwijanej w górnej części **nowy projekt** okno dialogowe lub poza programem Visual Studio, można użyć <xref:System.Runtime.Versioning.TargetFrameworkAttribute> atrybutu. W przypadku aplikacji przeznaczonych dla wersji programu .NET Framework w wersjach wcześniejszych niż [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], lub nie przeznaczone na platformę określonej wersji programu .NET Framework, kultury podzadania w dalszym ciągu można określić przez kulturę wątku, na którym jest uruchomiony.
+> Należy zauważyć, że kultury wątku wywołującego jako część kontekstu zadania mają zastosowanie do aplikacji, *docelowej* programu .NET Framework 4.6, nie aplikacje, *uruchamiana* programu .NET Framework 4.6. Możliwe jest określanie konkretnej wersji programu .NET Framework podczas tworzenia projektu w programie Visual Studio, wybierając tę wersję z listy rozwijanej w górnej części **nowy projekt** okno dialogowe lub poza programem Visual Studio, można użyć <xref:System.Runtime.Versioning.TargetFrameworkAttribute> atrybutu. W przypadku aplikacji, docelowymi są wersje programu .NET Framework wcześniejszych niż .NET Framework 4.6 lub że nie docelowej określonej wersji programu .NET Framework, kultury zadania podrzędnego w dalszym ciągu zależeć od kultury wątku, na którym jest uruchomiony.
 
-Począwszy od aplikacji, których platformą docelową [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], kultury wątku wywołującego jest dziedziczona przez każde zadanie podrzędne, nawet wtedy, gdy zadanie jest uruchamiane asynchronicznie na wątku z puli wątków.
+Począwszy od aplikacji przeznaczonych na .NET Framework 4.6, kultury wątku wywołującego jest dziedziczona przez każde zadanie podrzędne, nawet wtedy, gdy zadanie jest uruchamiane asynchronicznie na wątku z puli wątków.
 
-W poniższym przykładzie przedstawiono prosty ilustracji. Używa ona <xref:System.Runtime.Versioning.TargetFrameworkAttribute> atrybutu do elementu docelowego [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i zmiany bieżącej kultury aplikacji albo francuski (Francja) lub, jeśli francuski (Francja) jest już bieżącej kultury angielski (Stany Zjednoczone). Następnie wywołuje delegata, o nazwie `formatDelegate` zwracającego niektóre numery sformatowane jako wartości waluty w nową kulturą. Należy pamiętać, że czy delegata jako zadanie synchronicznie lub asynchronicznie, zwraca oczekiwany wynik ponieważ kultura wątku wywołującego jest dziedziczona przez zadanie asynchroniczne.
+W poniższym przykładzie przedstawiono prosty ilustracji. Używa ona <xref:System.Runtime.Versioning.TargetFrameworkAttribute> atrybutu pod kątem programu .NET Framework 4.6 i zmiany bieżącej kultury aplikacji albo francuski (Francja) lub, jeśli francuski (Francja) jest już bieżącej kultury angielski (Stany Zjednoczone). Następnie wywołuje delegata, o nazwie `formatDelegate` zwracającego niektóre numery sformatowane jako wartości waluty w nową kulturą. Należy pamiętać, że czy delegata jako zadanie synchronicznie lub asynchronicznie, zwraca oczekiwany wynik ponieważ kultura wątku wywołującego jest dziedziczona przez zadanie asynchroniczne.
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
 Jeśli używasz programu Visual Studio, można pominąć <xref:System.Runtime.Versioning.TargetFrameworkAttribute> atrybutu, a zamiast tego wybierz pozycję .NET Framework 4.6 jako element docelowy, podczas tworzenia projektu w **nowy projekt** okna dialogowego.
 
-Dla danych wyjściowych, który odzwierciedla działanie aplikacji w wersji docelowej programu .NET Framework w wersjach wcześniejszych niż [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], Usuń <xref:System.Runtime.Versioning.TargetFrameworkAttribute> atrybutu z kodu źródłowego. Dane wyjściowe odzwierciedlają konwencje formatowania domyślna kultura systemu, nie kultury wątku wywołującego.
+Dla danych wyjściowych, które odzwierciedla zachowanie aplikacji w wersji docelowej programu .NET Framework przed .NET Framework 4.6, Usuń <xref:System.Runtime.Versioning.TargetFrameworkAttribute> atrybutu z kodu źródłowego. Dane wyjściowe odzwierciedlają konwencje formatowania domyślna kultura systemu, nie kultury wątku wywołującego.
 
 Aby uzyskać więcej informacji na temat zadań asynchronicznych i kultury, zobacz sekcję "Kultury i operacje asynchroniczne opartego na zadaniach" w <xref:System.Globalization.CultureInfo> tematu.
 

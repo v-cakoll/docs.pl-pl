@@ -3,12 +3,12 @@ title: Interpolacja ciągów w języku C#
 description: Dowiedz się, jak obejmują wyrażenie sformatowane wyniki w ciągu wynikowym w języku C# przy użyciu interpolacji ciągu.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063230"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251031"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolacja ciągów w języku C\#
 
@@ -27,17 +27,17 @@ Aby zidentyfikować literał ciągu zgodny z ciągu interpolowanego, dodaj ją z
 Jak pokazano w przykładzie, dołączysz wyrażenia w ciągu interpolowanym umieszczając go w nawiasy klamrowe:
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 Ciągi interpolowane obsługują wszystkie funkcje [ciągu formatowania złożonego](../../standard/base-types/composite-formatting.md) funkcji. Dzięki temu ich czytelność alternatywą do korzystania z <xref:System.String.Format%2A?displayProperty=nameWithType> metody.
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Jak określić ciąg formatu dla wyrażenia interpolowanego
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>Jak określić wyrażenie interpolacji ciągu formatu
 
-Należy określić ciąg formatu, który jest obsługiwany przez typ wyniku wyrażenia, postępując zgodnie z wyrażenia interpolowanego z dwukropkiem (":") i ciąg formatu:
+Należy określić ciąg formatu, który jest obsługiwany przez typ wyniku wyrażenia, postępując zgodnie z wyrażenia interpolacji z dwukropkiem (":") i ciąg formatu:
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 Poniższy przykład pokazuje, jak określić ciągi formatów standardowych i niestandardowych wyrażeń, które tworzą daty i godziny lub wyników liczbowych:
@@ -46,12 +46,12 @@ Poniższy przykład pokazuje, jak określić ciągi formatów standardowych i ni
 
 Aby uzyskać więcej informacji, zobacz [element ciągu formatującego](../../standard/base-types/composite-formatting.md#format-string-component) części [formatowania złożonego](../../standard/base-types/composite-formatting.md) tematu. Tę sekcję zawiera łącza do tematów opisujących ciągów formatu standardowego i niestandardowego obsługiwanych przez typów podstawowych platformy .NET.
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Jak kontrolować szerokość pola i wyrównanie sformatowanego wyrażenia interpolowanego
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>Jak kontrolować szerokość pola i wyrównania wyrażeń interpolacji sformatowany
 
-Określ szerokość minimalna pola i wyrównanie wyniku wyrażenia sformatowane postępując zgodnie z wyrażenia interpolowanego za pomocą przecinka (",") i wyrażenie stałe:
+Określ szerokość minimalna pola i wyrównanie wyniku wyrażenia sformatowane wykonując wyrażenie interpolacji za pomocą przecinka (",") i wyrażenie stałe:
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
 Jeśli *wyrównanie* wartość jest dodatnia, wynik wyrażenia sformatowane jest wyrównany do prawej; Jeśli jest negatywny, jest wyrównany do lewej.
@@ -59,7 +59,7 @@ Jeśli *wyrównanie* wartość jest dodatnia, wynik wyrażenia sformatowane jest
 Jeśli musisz określić wyrównania i ciąg formatu, rozpoczynać składnik wyrównania:
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 Poniższy przykład pokazuje, jak określić wyrównania i używa potoku znaków ("|") do rozdzielenia pól tekstowych:
@@ -82,9 +82,9 @@ Poniższy przykład pokazuje, jak dołączyć nawiasy klamrowe w ciągu wynikowy
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Jak używać trójargumentowy operator warunkowy `?:` w wyrażenie interpolowane
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>Jak używać trójargumentowy operator warunkowy `?:` w wyrażeniu interpolacji
 
-Jako dwukropkiem (":") ma specjalne znaczenie w elemencie z wyrażenia interpolowanego, aby można było używać [operator warunkowy](../language-reference/operators/conditional-operator.md) w wyrażeniu, należy ją ująć w nawiasy, co ilustruje poniższy przykład:
+Jako dwukropkiem (":") ma specjalne znaczenie w elemencie z wyrażeniem interpolacji, aby można było używać [operator warunkowy](../language-reference/operators/conditional-operator.md) w wyrażeniu, należy ją ująć w nawiasy, co ilustruje poniższy przykład:
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 

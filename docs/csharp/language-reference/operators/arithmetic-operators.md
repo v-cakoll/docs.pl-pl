@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 25f716084c489c834e9242800f4c7e341c41aa58
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 84976d37514db851fd19c882b2c4c9cb003fc4bf
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880663"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250803"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 
@@ -153,7 +153,7 @@ Operator dodawania `+` oblicza sumę argumentów:
 
 [!code-csharp-interactive[addition operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Addition)]
 
-Możesz również użyć `+` operator dla kombinacji parametrów łączenia i delegata. Aby uzyskać więcej informacji, zobacz [ `+` operator](addition-operator.md) artykułu.
+Możesz również użyć `+` operator dla kombinacji parametrów łączenia i delegata. Aby uzyskać więcej informacji, zobacz [ `+` i `+=` operatory](addition-operator.md) artykułu.
 
 ## <a name="subtraction-operator--"></a>Operator odejmowania-
 

@@ -1,36 +1,31 @@
 ---
-title: + Operator - C# odwołania
+title: + operatory += — i C# odwołania
 ms.custom: seodec18
-ms.date: 10/22/2018
+ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
+- +=_CSharpKeyword
 helpviewer_keywords:
-- + operator [C#]
-- concatenation operator [C#]
 - addition operator [C#]
+- concatenation operator [C#]
+- delegate combination [C#]
+- + operator [C#]
+- addition assignment operator [C#]
+- event subscription [C#]
+- += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 0f04ba837f9c03107acd0b2174cbd07c14a8c213
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d03743bad47c60925462d027d18445047ebc0fc9
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660167"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300119"
 ---
-# <a name="-operator-c-reference"></a>+ — Operator (odwołanie w C#)
+# <a name="-and--operators-c-reference"></a>+ i operatory += (C# odwołania)
 
-`+` Operator jest obsługiwany w dwóch formach: jednoargumentowe plus operatora lub operator binarny dodawania.
+`+` Operator jest obsługiwany przez wbudowane typy liczbowe [ciąg](../keywords/string.md) typu, i [delegować](../keywords/delegate.md) typów.
 
-## <a name="unary-plus-operator"></a>Jednoargumentowy operator plus
-
-Jednoargumentowy `+` operator zwraca wartość swojego operandu. Jest ona obsługiwana przez wszystkie typy liczbowe.
-
-## <a name="numeric-addition"></a>Dodawanie numeryczne
-
-Dla typów liczbowych `+` operator oblicza sumę argumentów:
-
-[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
-
-Aby uzyskać więcej informacji na temat operatory arytmetyczne zobaczyć [operatorów arytmetycznych](arithmetic-operators.md).
+Aby uzyskać informacje o operacji arytmetycznych `+` operatora, zobacz [jednoargumentowe plus lub minus operatory](arithmetic-operators.md#unary-plus-and-minus-operators) i [operator dodawania +](arithmetic-operators.md#addition-operator-) sekcje [operatorów arytmetycznych](arithmetic-operators.md)artykułu.
 
 ## <a name="string-concatenation"></a>{1&gt;Łączenie ciągów&lt;1}
 
@@ -44,15 +39,37 @@ Począwszy od C# 6, [Interpolacja ciągów](../tokens/interpolated.md) zapewnia 
 
 ## <a name="delegate-combination"></a>Delegatów
 
-Aby uzyskać [delegować](../keywords/delegate.md) typów `+` operator zwraca nowe wystąpienie delegata, gdy wywoływany, wywołuje pierwszy operand, a następnie wywołuje drugiego operandu. Jeśli którykolwiek z argumentów jest `null`, `+` operator zwraca wartość innego operandu (które mogą być również `null`). W poniższym przykładzie pokazano, jak delegaty można łączyć z `+` operator:
+Dla argumentów operacji tego samego [delegować](../keywords/delegate.md) typu `+` operator zwraca nowe wystąpienie delegata, gdy wywoływany, wywołuje pierwszy operand, a następnie wywołuje drugiego operandu. Jeśli którykolwiek z argumentów jest `null`, `+` operator zwraca wartość innego operandu (które mogą być również `null`). W poniższym przykładzie pokazano, jak delegaty można łączyć z `+` operator:
 
 [!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
 
 Aby uzyskać więcej informacji na temat typów obiektów delegowanych, zobacz [delegatów](../../programming-guide/delegates/index.md).
 
+## <a name="addition-assignment-operator-"></a>+= — Operator przypisania dodawania
+
+Usługi za pomocą wyrażenia `+=` operatora, takich jak
+
+```csharp
+x += y
+```
+
+odpowiada wyrażeniu
+
+```csharp
+x = x + y
+```
+
+z tą różnicą, że `x` jest obliczany tylko raz.
+  
+W poniższym przykładzie pokazano użycie `+=` operator:
+
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
+
+Możesz także użyć `+=` operatora, aby określić metodę programu obsługi zdarzeń podczas subskrybowania [zdarzeń](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
 ## <a name="operator-overloadability"></a>Overloadability — operator
 
-Typy zdefiniowane przez użytkownika może [przeciążenia](../keywords/operator.md) jednoargumentowy i danych binarnych `+` operatorów. Gdy dane binarne `+` operator jest przeciążony, [operator przypisania dodawania](addition-assignment-operator.md) `+=` jest również niejawnie przeciążona.
+Typ zdefiniowany przez użytkownika może [przeciążenia](../keywords/operator.md) `+` operatora. Gdy dane binarne `+` operator jest przeciążony, `+=` operator jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć `+=` operatora.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -64,6 +81,9 @@ Aby uzyskać więcej informacji, zobacz [jednoargumentowe plus operator](~/_csha
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
 - [Interpolacja ciągów](../tokens/interpolated.md)
-- [Instrukcje: Łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)
+- [Porady: łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)
 - [Delegaty](../../programming-guide/delegates/index.md)
+- [Zdarzenia](../../programming-guide/events/index.md)
 - [Checked i unchecked](../keywords/checked-and-unchecked.md)
+- [Operatory arytmetyczne](arithmetic-operators.md)
+- [— i Operatorzy-=](subtraction-operator.md)

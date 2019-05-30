@@ -1,7 +1,7 @@
 ---
 title: Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 description: Dowiedz się, jak skutecznie używać ciągów w aplikacjach .NET.
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052997"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250819"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 <a name="top"></a> .NET zapewnia rozbudowaną obsługę dla rozwoju zlokalizowane i uniwersalnych aplikacji i ułatwia zastosowanie Konwencji kultury bieżącej lub określonej kultury, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest to operacja wrażliwość na ustawienia kulturowe. Na przykład ciągów, które są używane wewnętrznie przez aplikację zwykle powinny być traktowane identycznie we wszystkich kulturach. Kiedy dane ciągu kulturalnie niezależne, takie jak XML tagów, HTML tagów, nazwy użytkowników, ścieżki do plików i nazwy obiektów systemowych są interpretowane tak, jakby były one zależne od kultury, kod aplikacji może być zastrzeżeniem subtelnych błędów, niską wydajnością i w niektórych przypadkach problemy z zabezpieczeniami.  
@@ -69,7 +69,7 @@ ms.locfileid: "66052997"
   
 - Użyj <xref:System.String.Compare%2A?displayProperty=nameWithType> i <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metody sortowania ciągów nie pod kątem równości.  
   
-- Wrażliwość na ustawienia kulturowe formatowania używać do wyświetlania danych niebędących ciągami, takich jak liczb i dat, w interfejsie użytkownika. Użyj formatowania z kulturą niezmienną do utrwalenia danych innych niż ciąg w postaci ciągu.  
+- Wrażliwość na ustawienia kulturowe formatowania używać do wyświetlania danych niebędących ciągami, takich jak liczb i dat, w interfejsie użytkownika. Użyj — mechanizm formatowania [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture) do utrwalenia danych innych niż ciąg w postaci ciągu.  
   
  Korzystając z ciągów, należy unikać następujące rozwiązania:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052997"
 > [!NOTE]
 > Możesz pobrać [tabele wagi sortowania](https://www.microsoft.com/download/details.aspx?id=10921), zbiór plików tekstowych, które zawierają informacje o wagi znaku w operacjach sortowania i porównywania dla systemów operacyjnych Windows, a [domyślne Unicode Tabela elementów sortowania](https://www.unicode.org/Public/UCA/latest/allkeys.txt), najnowszą wersję tabeli wagi sortowania dla systemów Linux i macOS. Określoną wersję tabeli wagi sortowania w systemie Linux i macOS jest zależna od wersji [składniki międzynarodowego standardu Unicode](http://site.icu-project.org/) biblioteki zainstalowane w systemie. Informacje na temat ICU wersji i wersje Unicode, które implementują, zobacz [pobieranie ICU](http://site.icu-project.org/download).
 
- Jednak obliczenia dwa ciągi dla równości lub kolejności sortowania nie uzyskanie wyniku pojedynczą, poprawne; wynik zależy od kryteria używane do porównywania ciągów. W szczególności porównań ciągów, które są porządkowe, lub które są oparte na wielkość liter w wyrazie i sortowanie Konwencji kultury bieżącej lub niezmiennej kultury (w języku angielskim — na podstawie kultury niezależne od ustawień regionalnych) mogą wygenerować różne wyniki.  
+ Jednak obliczenia dwa ciągi dla równości lub kolejności sortowania nie uzyskanie wyniku pojedynczą, poprawne; wynik zależy od kryteria używane do porównywania ciągów. W szczególności ciąg porównania, które są porządkowe, lub które są oparte na wielkość liter w wyrazie i sortowanie Konwencji bieżącej kultury lub [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture) może generować (niezależne od ustawień regionalnych kultury oparte na język angielski) różne wyniki.  
 
 Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy użyciu platformy .NET na różne systemy operacyjne i wersje systemu operacyjnego może zwracać różne wyniki. Aby uzyskać więcej informacji, zobacz [ciągów i Unicode Standard](xref:System.String#Unicode). 
 
@@ -348,10 +348,36 @@ Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy
  [Powrót do początku](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>Wyświetlanie i utrzymanie sformatowanych danych  
- Podczas wyświetlania danych niebędących ciągami, takich jak liczby i daty i godziny dla użytkowników, należy je sformatować przy użyciu ustawienia kultury użytkownika. Domyślnie <xref:System.String.Format%2A?displayProperty=nameWithType> metody i `ToString` metody typów numerycznych oraz typów daty i godziny używają bieżącej kultury wątku operacji formatowania. Aby jawnie określić, że metoda formatowania, należy użyć bieżącej kultury, można wywoływać przeciążenia metody formatowania, która ma `provider` parametru, takie jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> lub <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>i przekaż go <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości.  
-  
- Jako dane binarne lub jak sformatowane dane, jednak można utrwalić danych innych niż ciąg. Jeśli użytkownik chce zapisać ją jak sformatowane dane, należy wywołać formatowania przeciążenia metody, która obejmuje `provider` parametru i przekaż go <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości. Niezmienna kultura zapewnia spójny format sformatowanych danych, który jest niezależny od kultury i maszyny. Z kolei utrwalanie danych, która jest formatowana przy użyciu kultury innej niż niezmiennej kultury ma kilka ograniczeń:  
+## <a name="displaying-and-persisting-formatted-data"></a>Wyświetlanie i utrzymanie sformatowanych danych
+
+Podczas wyświetlania danych niebędących ciągami, takich jak liczby i daty i godziny dla użytkowników, należy je sformatować przy użyciu ustawienia kultury użytkownika. Domyślnie wszystkie następujące używają bieżącej kultury wątku w operacjach formatowania:
+
+- Obsługiwane przez ciągi interpolowane [ C# ](../../csharp/language-reference/tokens/interpolated.md) i [języka Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) kompilatory.
+
+- Ciąg operacje łączenia, które używają [ C# ](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) lub [języka Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) concatenation — operatory lub wywołania <xref:System.String.Concat%2A?displayProperty=nameWithType> bezpośrednio metodę.
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType> Metody.
+
+- `ToString` Metody typów numerycznych oraz typów daty i godziny.
+
+Aby jawnie określić, czy ciąg powinny być sformatowane przy użyciu konwencji wyznaczonej kultury lub [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture), wykonasz następujące czynności:
+
+- Korzystając z <xref:System.String.Format%2A?displayProperty=nameWithType> i `ToString` metody, wywołują przeciążenia, które ma `provider` parametrów, takich jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> lub <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>i przekaż go <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości <xref:System.Globalization.CultureInfo> wystąpienia, która reprezentuje żądany kultura, lub <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> właściwości.  
+
+- Łączenie ciągów zezwala kompilatorowi wykonanie wszystkie niejawne konwersje. Zamiast tego wykonaj jawną konwersję, wywołując `ToString` przeciążenie `provider` parametru. Na przykład, kompilator niejawnie używa bieżącej kultury podczas konwertowania <xref:System.Double> wartość na ciąg w następującym C# kodu:
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  Zamiast tego możesz jawnie określić kulturę, której konwencje formatowania są używane do konwersji, wywołując <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> metodę, zgodnie z poniższymi C# kod wykonuje:
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- Interpolacja ciągów zamiast ciągu interpolowanego do przypisywania <xref:System.String> wystąpienia, należy przypisać go do <xref:System.FormattableString>. Następnie możesz wywołać jej <xref:System.FormattableString.ToString?displayProperty=nameWithType> metoda generuje ciąg wynikowy, który odzwierciedla konwencje bieżącej kultury, lub możesz wywołać <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> metody do tworzenia ciąg wynikowy, który odzwierciedla konwencje określonej kultury. Można również przekazać ciąg, który można formatować statycznej <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> metody do tworzenia ciąg wynikowy, który odzwierciedla Konwencji niezmiennej kultury. To podejście pokazano w poniższym przykładzie. (Dane wyjściowe z przykładu odpowiada bieżącej kultury en-US).
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+Jako dane binarne lub jak sformatowane dane, jednak można utrwalić danych innych niż ciąg. Jeśli użytkownik chce zapisać ją jak sformatowane dane, należy wywołać formatowania przeciążenia metody, która obejmuje `provider` parametru i przekaż go <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości. Niezmienna kultura zapewnia spójny format sformatowanych danych, który jest niezależny od kultury i maszyny. Z kolei utrwalanie danych, która jest formatowana przy użyciu kultury innej niż niezmiennej kultury ma kilka ograniczeń:  
   
 - Dane są prawdopodobnie bezużyteczne, jeśli jest pobierana w systemie, który ma inną kulturę, lub jeśli użytkownik bieżący system Bieżąca kultura jest zmieniana i podejmie próbę pobrania danych.  
   
@@ -366,7 +392,7 @@ Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy
   
  Jednak w przypadku wymiany <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwość o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> w wywołaniach do <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> i <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, utrwalonych datę i godzinę danych zostały pomyślnie przywrócone, co ilustruje poniższy danych wyjściowych.  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

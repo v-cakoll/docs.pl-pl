@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 898771c3de8b54c08decd91f1a631a6205292912
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
-ms.translationtype: MT
+ms.openlocfilehash: 14ef6eec2503c0af1a7b1fd5ed2dd289978d6fcc
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053625"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301321"
 ---
 # <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 
@@ -689,7 +689,7 @@ Aby uzyskać listę nowych interfejsów API jest dodawany do programu .NET Frame
 
 .NET framework 4.7 zwiększa serializacji przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Ulepszone funkcje za pomocą kryptografii krzywej eliptycznej (ECC)***
+**Ulepszone funkcje za pomocą kryptografii krzywej eliptycznej (ECC)** *
 
 W programie .NET Framework 4.7 `ImportParameters(ECParameters)` metody zostały dodane do <xref:System.Security.Cryptography.ECDsa> i <xref:System.Security.Cryptography.ECDiffieHellman> klasę, aby umożliwić dla obiektu do reprezentowania klawiszem już ustanowione. `ExportParameters(Boolean)` Metoda został również dodany eksportu klucza przy użyciu parametrów jawne krzywej.
 
@@ -725,7 +725,7 @@ Począwszy od programu .NET Framework 4.7 ASP.NET dodaje nowy zestaw interfejsó
 
 - **Monitorowanie pamięci**. Domyślny monitor pamięci w programie ASP.NET: powiadamia aplikacje uruchamianego bliski limitu skonfigurowanego prywatne bajty dla procesu, lub gdy komputer ma za mało całkowitej dostępnej pamięci fizycznej RAM. Gdy zbliża się te limity, powiadomienia są uruchamiane. W przypadku niektórych aplikacji Powiadomienia są uruchamiane zbyt Zamknij skonfigurowanego limitami, umożliwiające reakcje przydatne. Deweloperzy mogą zapisywać swoje własne monitorów pamięci, aby zastąpić domyślny za pomocą <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> właściwości.
 
-- **Reakcje "Limit pamięci:**. Domyślnie program ASP.NET próbuje trim obiektu pamięci podręcznej i okresowo wywoływać <xref:System.GC.Collect%2A?displayProperty=nameWithType> gdy zbliża się limit prywatnych bajtów procesu. W niektórych aplikacjach częstotliwość wywołań <xref:System.GC.Collect%2A?displayProperty=nameWithType> lub ilości pamięci podręcznej, które są spacje są nieefektywne. Deweloperzy mogą teraz Zastąp lub uzupełniają domyślne zachowanie, subskrybując ten biuletyn **IObserver** implementacji w celu monitorowania pamięci aplikacji.
+- **Reakcje "Limit pamięci:** . Domyślnie program ASP.NET próbuje trim obiektu pamięci podręcznej i okresowo wywoływać <xref:System.GC.Collect%2A?displayProperty=nameWithType> gdy zbliża się limit prywatnych bajtów procesu. W niektórych aplikacjach częstotliwość wywołań <xref:System.GC.Collect%2A?displayProperty=nameWithType> lub ilości pamięci podręcznej, które są spacje są nieefektywne. Deweloperzy mogą teraz Zastąp lub uzupełniają domyślne zachowanie, subskrybując ten biuletyn **IObserver** implementacji w celu monitorowania pamięci aplikacji.
 
 <a name="wcf47" />
 
@@ -782,7 +782,7 @@ WPF użytkownika drukowanie interfejsów API w <xref:System.Printing.PrintQueue?
 
 ## <a name="whats-new-in-net-framework-462"></a>Co nowego w programie .NET Framework 4.6.2
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Zawiera nowe funkcje w następujących obszarach:
+.NET Framework 4.6.2 zawiera nowe funkcje w następujących obszarach:
 
 - [ASP.NET](#ASPNET462)
 
@@ -810,11 +810,11 @@ Aby uzyskać listę nowych API dodane do platformy .NET Framework 4.6.2, zobacz 
 
 ### <a name="aspnet"></a>ASP.NET
 
-W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], program ASP.NET zawiera następujące ulepszenia:
+W programie .NET Framework 4.6.2 program ASP.NET zawiera następujące ulepszenia:
 
 **Ulepszona obsługa lokalizowane komunikaty o błędzie w modułów weryfikacji adnotacji danych**
 
-Modułów weryfikacji adnotacji danych umożliwiają wykonywanie sprawdzania poprawności, dodając jeden lub więcej atrybutów do właściwości klasy. Ten atrybut <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> element definiuje tekst komunikatu o błędzie, jeśli weryfikacja zakończy się niepowodzeniem. Począwszy od [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET ułatwia lokalizowanie komunikatów o błędach. Komunikaty o błędach będą zlokalizowane, jeśli:
+Modułów weryfikacji adnotacji danych umożliwiają wykonywanie sprawdzania poprawności, dodając jeden lub więcej atrybutów do właściwości klasy. Ten atrybut <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> element definiuje tekst komunikatu o błędzie, jeśli weryfikacja zakończy się niepowodzeniem. Począwszy od programu .NET Framework 4.6.2 ASP.NET ułatwia lokalizowanie komunikatów o błędach. Komunikaty o błędach będą zlokalizowane, jeśli:
 
 1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> Jest podawany jako atrybut weryfikacji.
 
@@ -873,7 +873,7 @@ End Interface
 
  **Asynchroniczna pomoc techniczna dla dostawców pamięci podręcznej danych wyjściowych**
 
- Począwszy od [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zwracającą zadanie metody może służyć za pomocą dostawcy pamięci podręcznej danych wyjściowych do zapewnienia skalowalności zalety asynchronicznych.  Dostawcy, które implementują te metody zmniejszyć blokuje wątku na serwerze sieci web i poprawić skalowalność usługi ASP.NET.
+ Począwszy od programu .NET Framework 4.6.2 metody zwracającą zadanie może służyć za pomocą dostawcy pamięci podręcznej danych wyjściowych zapewnienie skalowalności zalety asynchronicznych.  Dostawcy, które implementują te metody zmniejszyć blokuje wątku na serwerze sieci web i poprawić skalowalność usługi ASP.NET.
 
  Następujące interfejsy API zostały dodane do obsługi asynchronicznego dostawcy pamięci podręcznej danych wyjściowych:
 
@@ -897,7 +897,7 @@ End Interface
 
 ### <a name="character-categories"></a>Kategorii znaków
 
-Znaki w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] są klasyfikowane na podstawie [standardu Unicode, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], znaki były klasyfikowane na podstawie kategorii znaków Unicode 6.3.
+Znaki w .NET Framework 4.6.2 są klasyfikowane na podstawie [standardu Unicode, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W .NET Framework 4.6 i platformy .NET Framework 4.6.1 znaków zostały sklasyfikowane, na podstawie kategorii znaków Unicode 6.3.
 
 Obsługa Unicode 8.0 jest ograniczona do klasyfikacji znaków, w ramach <xref:System.Globalization.CharUnicodeInfo> klas i typów i metod, które polegać na niej. Obejmują one <xref:System.Globalization.StringInfo> klasy przeciążone <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> metody i [klasy znaku](../../standard/base-types/character-classes-in-regular-expressions.md) rozpoznawane przez aparat wyrażeń regularnych systemu .NET Framework.  Znakowe i porównywanie i sortowanie nie mają wpływu tej zmiany i nadal korzysta ze w podstawowym systemie operacyjnym lub w systemach Windows 7 na znak danych dostarczane przez program .NET Framework.
 
@@ -909,11 +909,11 @@ Zmiany w kategorii znaków Unicode 6.0, 7.0 Unicode, zobacz [Unicode Standard, w
 
 **Obsługa X509 certyfikatów zawierających DSA FIPS 186 3**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Alokowanej dla DSA (algorytmu Digital Signature Algorithm) X509 certyfikatów, których klucze FIPS może przekraczać limitu 1024-bitowy 186-2.
+.NET Framework 4.6.2 alokowanej dla DSA (algorytmu Digital Signature Algorithm) X509 certyfikatów, których klucze FIPS może przekraczać limitu 1024-bitowy 186-2.
 
-Oprócz obsługi większych rozmiarów klucza standardu FIPS 186-3, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] pozwala na korzystanie z sygnaturami z rodziny SHA-2 algorytmów wyznaczania wartości skrótu (SHA256, SHA384 i SHA512). FIPS 186 3 w pomoc techniczna jest świadczona przez nowy <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> klasy.
+Oprócz obsługi większych rozmiarów klucza standardu FIPS 186-3, .NET Framework 4.6.2 umożliwia przetwarzanie sygnaturami z rodziny SHA-2 algorytmów wyznaczania wartości skrótu (SHA256, SHA384 i SHA512). FIPS 186 3 w pomoc techniczna jest świadczona przez nowy <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> klasy.
 
-Zgodnie z najnowszych zmian w <xref:System.Security.Cryptography.RSA> klasy w .NET Framework 4.6 i <xref:System.Security.Cryptography.ECDsa> klasy w .NET Framework 4.6.1 <xref:System.Security.Cryptography.DSA> abstrakcyjna klasa bazowa w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ma dodatkowe metody, aby umożliwić wywołującym używać tej funkcji bez rzutowania. Możesz wywołać <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> metodę rozszerzenia, aby zarejestrować dane, co ilustruje poniższy przykład.
+Zgodnie z najnowszych zmian w <xref:System.Security.Cryptography.RSA> klasy w .NET Framework 4.6 i <xref:System.Security.Cryptography.ECDsa> klasy w .NET Framework 4.6.1 <xref:System.Security.Cryptography.DSA> abstrakcyjna klasa bazowa dla programu .NET Framework 4.6.2 ma dodatkowe metody, aby umożliwić wywołującym używać tej funkcji bez rzutowania. Możesz wywołać <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> metodę rozszerzenia, aby zarejestrować dane, co ilustruje poniższy przykład.
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -957,7 +957,7 @@ End Function
 
 .NET framework 3.5 dodano obsługę Elliptic krzywej Diffie'ego-Hellmana klucz Umowy z trzech różnych procedur funkcja wyprowadzania klucza (KDF). Dane wejściowe procedury i procedur, zostały skonfigurowane za pomocą właściwości na <xref:System.Security.Cryptography.ECDiffieHellmanCng> obiektu. Ale ponieważ nie każda procedura Odczyt wszystkich właściwości danych wejściowych, wystarczającą ilość miejsca na pomyłek w przeszłości dewelopera.
 
-Aby rozwiązać ten w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zostały dodane do następujących trzech metod <xref:System.Security.Cryptography.ECDiffieHellman> klasy bazowej na wyraźniej reprezentują tych procedur KDF i ich dane wejściowe:
+Aby rozwiązać ten problem w programie .NET Framework 4.6.2, zostały dodane do następujących trzech metod <xref:System.Security.Cryptography.ECDiffieHellman> klasy bazowej na wyraźniej reprezentują tych procedur KDF i ich dane wejściowe:
 
 |Metoda ECDiffieHellman|Opis|
 |----------------------------|-----------------|
@@ -967,7 +967,7 @@ Aby rozwiązać ten w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zo
 
 **Obsługa szyfrowania symetrycznego klucza trwały**
 
-Biblioteka kryptografii Windows (CNG) dodano obsługę do przechowywania kluczy symetrycznych utrwalonych i przy użyciu kluczy symetrycznych przechowywane sprzętu i [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] możliwe dla deweloperów skorzystać z tej funkcji.  Ponieważ pojęcie nazw kluczy i kluczy dostawcy jest specyficzne dla implementacji, za pomocą tej funkcji wymaga przy użyciu konstruktora typy konkretną implementację zamiast podejście preferowanych fabryki (np. wywołanie `Aes.Create`).
+Biblioteka kryptografii Windows (CNG) dodano obsługę do przechowywania kluczy symetrycznych utrwalonych i przy użyciu kluczy symetrycznych przechowywane sprzętu i .NET Framework 4.6.2 pozwoliło dla deweloperów skorzystać z tej funkcji.  Ponieważ pojęcie nazw kluczy i kluczy dostawcy jest specyficzne dla implementacji, za pomocą tej funkcji wymaga przy użyciu konstruktora typy konkretną implementację zamiast podejście preferowanych fabryki (np. wywołanie `Aes.Create`).
 
 Obsługa szyfrowania symetrycznego klucza utrwalone istnieje AES (<xref:System.Security.Cryptography.AesCng>) i algorytmu 3DES (<xref:System.Security.Cryptography.TripleDESCng>) algorytmów. Na przykład:
 
@@ -1010,7 +1010,7 @@ End Function
 
 **Obsługa SignedXml wyznaczania wartości skrótu SHA-2**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Dodaje obsługę <xref:System.Security.Cryptography.Xml.SignedXml> klasy dla metody podpis algorytm RSA-SHA256, RSA SHA384 i RSA SHA512 PKCS #1 SHA256, SHA384 i SHA512 odwołania i algorytmami skrótu.
+.NET Framework 4.6.2 dodaje obsługę <xref:System.Security.Cryptography.Xml.SignedXml> klasy dla metody podpis algorytm RSA-SHA256, RSA SHA384 i RSA SHA512 PKCS #1 SHA256, SHA384 i SHA512 odwołania i algorytmami skrótu.
 
 Stałe identyfikatora URI są narażone na <xref:System.Security.Cryptography.Xml.SignedXml>:
 
@@ -1029,7 +1029,7 @@ Stałe identyfikatora URI są narażone na <xref:System.Security.Cryptography.Xm
 
 ### <a name="sqlclient"></a>SqlClient
 
-.NET framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) obejmuje następujące nowe funkcje w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
+.NET framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) obejmuje następujące nowe funkcje w programie .NET Framework 4.6.2:
 
 **Pula połączeń i limitów czasu z bazami danych Azure SQL**
 
@@ -1071,13 +1071,13 @@ Klient SQL wprowadzono dwa ulepszenia dla funkcji Always Encrypted:
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
-W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Communication Foundation została rozszerzona w następujących obszarach:
+W programie .NET Framework 4.6.2 Windows Communication Foundation została rozszerzona w następujących obszarach:
 
 **Obsługa zabezpieczeń transportu WCF certyfikaty przechowywane przy użyciu CNG**
 
-Zabezpieczenia transportu usługi WCF obsługuje certyfikaty przechowywane przy użyciu biblioteki kryptografii Windows (CNG). W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ta obsługa jest ograniczona do korzystania z certyfikatów z kluczem publicznym, zawierającej wykładnika nie więcej niż 32 bity długości. Gdy odpowiedniej aplikacji [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ta funkcja jest domyślnie włączone.
+Zabezpieczenia transportu usługi WCF obsługuje certyfikaty przechowywane przy użyciu biblioteki kryptografii Windows (CNG). W programie .NET Framework 4.6.2 ta obsługa jest ograniczona do korzystania z certyfikatów z kluczem publicznym, zawierającej wykładnika nie więcej niż 32 bity długości. Jeśli aplikacja jest przeznaczony dla .NET Framework 4.6.2, ta funkcja jest domyślnie.
 
-W przypadku aplikacji, których platformą docelową [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] i starszych, ale są uruchomione na [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], można włączyć tę funkcję, dodając następujący wiersz do [ \<środowiska uruchomieniowego >](../configure-apps/file-schema/runtime/runtime-element.md) części pliku app.config lub web.config plik.
+Dla aplikacji przeznaczonych dla platformy .NET Framework 4.6.1 i starszych, ale są uruchomione w środowisku .NET Framework 4.6.2, można włączyć tę funkcję, dodając następujący wiersz do [ \<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) części pliku app.config lub plik Web.config.
 
 ```xml
 <AppContextSwitchOverrides
@@ -1146,7 +1146,7 @@ Korzystając z zabezpieczeń transportu i poświadczeń typu certyfikatu NetTcp,
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Presentation Foundation została rozszerzona w następujących obszarach:
+W programie .NET Framework 4.6.2 Windows Presentation Foundation została rozszerzona w następujących obszarach:
 
 **Sortowanie grup**
 
@@ -1180,11 +1180,11 @@ W poprzednich wersjach programu .NET Framework aplikacje WPF nie mogą skorzysta
 
 **Rozpoznawanie wartości DPI monitora**
 
-Do obsługi najnowszych rozprzestrzenianie wysokiej rozdzielczości DPI i rozdzielczości DPI hybrydowego środowiska w przypadku aplikacji WPF, platformy WPF w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] umożliwia rozpoznawanie monitora. Zobacz [przewodnik dla deweloperów i przykłady](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) w serwisie GitHub, aby uzyskać więcej informacji na temat włączania aplikacji WPF stać się świadome DPI monitora.
+Aby zapewnić obsługę najnowszych rozprzestrzenianie wysokiej rozdzielczości DPI i rozdzielczości DPI hybrydowego środowiska dla aplikacji WPF, platformy WPF w programie .NET Framework 4.6.2 umożliwia rozpoznawanie monitora. Zobacz [przewodnik dla deweloperów i przykłady](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) w serwisie GitHub, aby uzyskać więcej informacji na temat włączania aplikacji WPF stać się świadome DPI monitora.
 
 W poprzednich wersjach programu .NET Framework aplikacje WPF to system-DPI. Innymi słowy interfejs użytkownika aplikacji jest skalowana przez system operacyjny, zgodnie z potrzebami, w zależności od wartości DPI monitora, na którym aplikacja jest renderowany. ,
 
-Dla aplikacji działających w ramach [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], rozpoznawanie wartości DPI monitora zmian w aplikacjach WPF można wyłączyć przez dodanie instrukcji konfiguracji do [ \<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) sekcji konfiguracji aplikacji, plików w następujący sposób:
+Dla aplikacji działających w ramach platformy .NET Framework 4.6.2, rozpoznawanie wartości DPI monitora zmian w aplikacjach WPF można wyłączyć przez dodanie instrukcji konfiguracji do [ \<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) sekcji konfiguracji aplikacji, plików w następujący sposób:
 
 ```xml
 <runtime>
@@ -1196,13 +1196,13 @@ Dla aplikacji działających w ramach [!INCLUDE[net_v462](../../../includes/net-
 
 ### <a name="windows-workflow-foundation-wf"></a>Program Windows Workflow Foundation (WF)
 
-W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Workflow Foundation została rozszerzona w następującym obszarze:
+W programie .NET Framework 4.6.2 Windows Workflow Foundation została rozszerzona w następującym obszarze:
 
 **Obsługa wyrażeń języka C# i technologii IntelliSense w Projektancie WF Re-hosted**
 
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF obsługuje wyrażeń języka C# w obu projektanta programu Visual Studio i przepływy pracy kodu. Re-hosted projektanta przepływu pracy jest kluczowym elementem WF umożliwiający projektanta przepływów pracy w aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation udostępnia możliwość obsługi wyrażeń języka C# i technologii IntelliSense w Projektancie przepływu pracy Re-hosted. Aby uzyskać więcej informacji, zobacz [blogu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` W wersjach programu .NET Framework w wersjach wcześniejszych niż [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], funkcja IntelliSense programu WF projektanta został przerwany, gdy klient ponownie kompiluje projekt przepływu pracy w programie Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływów pracy nie znajdują się w Projektancie i ostrzeżenia z technologii IntelliSense dla brakujących typy przepływów pracy są wyświetlane w **lista błędów** okna. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Rozwiązuje ten problem i sprawia, że funkcja IntelliSense niedostępne.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` W wersjach programu .NET Framework wcześniejszych niż .NET Framework 4.6.2 funkcja IntelliSense programu WF projektanta został przerwany, gdy klient ponownie kompiluje projekt przepływu pracy w programie Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływów pracy nie znajdują się w Projektancie i ostrzeżenia z technologii IntelliSense dla brakujących typy przepływów pracy są wyświetlane w **lista błędów** okna. .NET Framework 4.6.2 rozwiązuje ten problem i udostępnia funkcję IntelliSense.
 
 **Aplikacje V1 przepływu pracy śledzenia przepływu pracy na teraz być uruchamiane w trybie FIPS**
 
@@ -1216,7 +1216,7 @@ Jeśli w tym scenariuszu nie jest włączona, uruchamianie aplikacji w dalszym c
 
 **Ulepszenia przepływu pracy podczas używania aktualizacji dynamicznej z projektanta przepływów pracy w usłudze Visual Studio**
 
-Projektant przepływu pracy, FlowChart, Projektant działań i innych projektantów działań przepływu pracy teraz pomyślnie ładowanie i wyświetlanie przepływów pracy, które zostały zapisane po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> metody. W wersjach programu .NET Framework przed [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], podczas ładowania pliku XAML w programie Visual Studio dla przepływu pracy, który został zapisany po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> może spowodować następujące problemy:
+Projektant przepływu pracy, FlowChart, Projektant działań i innych projektantów działań przepływu pracy teraz pomyślnie ładowanie i wyświetlanie przepływów pracy, które zostały zapisane po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> metody. W wersjach programu .NET Framework przed platformy .NET Framework 4.6.2, załadowaniem pliku XAML w programie Visual Studio dla przepływu pracy, który został zapisany po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> może spowodować następujące problemy:
 
 - Projektant przepływu pracy nie można poprawnie załadować plik XAML (gdy <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> znajduje się na końcu wiersza).
 
@@ -1240,7 +1240,7 @@ Przekonwertowane aplikacje komputerowe uzyskać podobny do aplikacji tożsamośc
 
 ### <a name="debugging-improvements"></a>Ulepszenia debugowania
 
-*Niezarządzane debugowanie API* została rozszerzona w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] celu przeprowadzenia dodatkowej analizy po <xref:System.NullReferenceException> jest generowany, aby była możliwość określenia, które zmienna w jednym wierszu kodu źródłowego jest `null`.   Aby zapewnić obsługę tego scenariusza, następujące interfejsy API zostały dodane do niezarządzanego interfejsu API debugowania.
+*Niezarządzane debugowanie interfejsu API* została rozszerzona w .NET Framework 4.6.2 w celu przeprowadzenia dodatkowej analizy przypadku <xref:System.NullReferenceException> jest generowany, aby była możliwość określenia, które zmienna w jednym wierszu kodu źródłowego jest `null`.   Aby zapewnić obsługę tego scenariusza, następujące interfejsy API zostały dodane do niezarządzanego interfejsu API debugowania.
 
 - [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md), i [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) interfejsów, które ujawniają natywnych domach zarządzane zmienne. Dzięki temu debugery wykonasz jakieś analizy przepływu kodu podczas <xref:System.NullReferenceException> występuje i przeanalizuj informacje wstecz pochodzące ustalenie zarządzanych zmiennej, która odnosi się do natywnych lokalizacji, który był `null`.
 
@@ -1250,7 +1250,7 @@ Przekonwertowane aplikacje komputerowe uzyskać podobny do aplikacji tożsamośc
 
 ## <a name="whats-new-in-net-framework-461"></a>Co nowego w programie .NET Framework 4.6.1
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Zawiera nowe funkcje w następujących obszarach:
+.NET Framework 4.6.1 zawiera nowe funkcje w następujących obszarach:
 
 - [Kryptografia](#Crypto)
 
@@ -1264,7 +1264,7 @@ Przekonwertowane aplikacje komputerowe uzyskać podobny do aplikacji tożsamośc
 
 - [NGen](#NGEN461)
 
-Aby uzyskać więcej informacji na temat [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], zobacz następujące tematy:
+Aby uzyskać więcej informacji na temat platformy .NET Framework 4.6.1 zobacz następujące tematy:
 
 - [Program .NET framework 4.6.1 listy zmian](https://go.microsoft.com/fwlink/?LinkId=622964)
 
@@ -1276,11 +1276,11 @@ Aby uzyskać więcej informacji na temat [!INCLUDE[net_v461](../../../includes/n
 
 ### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Kryptografia: Obsługa X509 certyfikatów zawierających ECDSA
 
-.NET framework 4.6 dodanie obsługi RSACng X509 certyfikatów. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Dodaje obsługę ECDSA (Elliptic krzywej algorytmu Digital Signature Algorithm) X509 certyfikatów.
+.NET framework 4.6 dodanie obsługi RSACng X509 certyfikatów. .NET Framework 4.6.1 dodaje obsługę ECDSA (Elliptic krzywej algorytmu Digital Signature Algorithm) X509 certyfikatów.
 
 ECDSA oferuje lepszą wydajność i jest bardziej bezpieczne algorytmu kryptograficznego, niż RSA, zapewniając doskonałym wyborem, gdzie zabezpieczeń TLS (Transport Layer), wydajności i skalowalności jest istotna. Wdrożenia programu .NET Framework opakowuje wywołania do istniejących funkcji Windows.
 
-Poniższy przykład kodu pokazuje, jak łatwo jest do generowania podpisu dla strumienia bajtów przy użyciu certyfikatów X 509 uwzględnione w nowej funkcji obsługi ECDSA [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
+Poniższy przykład kodu pokazuje, jak łatwo jest do generowania podpisu dla strumienia bajtów przy użyciu nowej funkcji obsługi ECDSA certyfikatów X 509 zawarte w .NET Framework 4.6.1.
 
 [!code-csharp[whatsnew.461.crypto#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
 [!code-vb[whatsnew.461.crypto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
@@ -1314,7 +1314,7 @@ Windows Presentation Foundation zawiera szereg udoskonaleń i zmian.
 
 **Lepsza wydajność**
 
-Opóźnienie w wyzwalanie zdarzeń touch został rozwiązany w [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]. Ponadto, wpisując <xref:System.Windows.Controls.RichTextBox> kontroli nie blokuje wątku renderowania podczas wprowadzania szybkie.
+Opóźnienie w wyzwalanie zdarzeń touch został rozwiązany w .NET Framework 4.6.1. Ponadto, wpisując <xref:System.Windows.Controls.RichTextBox> kontroli nie blokuje wątku renderowania podczas wprowadzania szybkie.
 
 **Ulepszenia sprawdzanie pisowni**
 
@@ -1332,7 +1332,7 @@ Aby uzyskać dodatkowe informacje na temat obsługi języków w programie WPF, z
 
 **Dodatkowa obsługa słowników niestandardowych na użytkownika**
 
-W [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], WPF rozpoznaje słowników niestandardowych, które są zarejestrowane w globalnie. Ta możliwość jest dostępnych dodatkowo oprócz możliwość rejestrowania, je-control.
+W programie .NET Framework 4.6.1 WPF rozpoznaje słowników niestandardowych, które są zarejestrowane w globalnie. Ta możliwość jest dostępnych dodatkowo oprócz możliwość rejestrowania, je-control.
 
 W poprzednich wersjach programu WPF słowników niestandardowych nie rozpoznał wykluczone słowa i listy Autokorekty. Są one obsługiwane w Windows 8.1 i Windows 10 przy użyciu plików, które można umieścić w obszarze `%AppData%\Microsoft\Spelling\<language tag>` katalogu.  Następujące reguły stosuje się do tych plików:
 
@@ -1399,7 +1399,7 @@ Przy użyciu plików PDB Ngen NGen można utworzyć pliku PDB, który zawiera ma
 
 ## <a name="whats-new-in-net-2015"></a>What's new in .NET 2015
 
-Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET Core. Niektóre nowe funkcje dotyczą zarówno i inne funkcje są specyficzne dla [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] lub .NET Core.
+.NET 2015 wprowadzono .NET Framework 4.6 i .NET Core. Niektóre nowe funkcje dotyczą zarówno i inne funkcje są specyficzne dla platformy .NET Framework 4.6 lub .NET Core.
 
 - **ASP.NET Core**
 
@@ -1427,7 +1427,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
         </appSettings>
         ```
 
-         W aplikacji docelowej [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], jego wartość domyślna to `true`. W aplikacje działające na [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] przeznaczone na platformę wcześniejszej wersji programu .NET Framework, jest `false` domyślnie. Można ją włączyć, konfigurując dla ustawienia konfiguracji `true`.
+         W aplikacjach docelowych programu .NET Framework 4.6, jego wartość domyślna to `true`. Aplikacje działające na .NET Framework 4.6, których platformą docelową wcześniejszej wersji programu .NET Framework, to `false` domyślnie. Można ją włączyć, konfigurując dla ustawienia konfiguracji `true`.
 
     - **Obsługa protokołu HTTP/2 (system Windows 10)**
 
@@ -1452,7 +1452,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
     - **Algorytmy wyznaczania wartości skrótu losowego ciągu**
 
-         .NET framework 4.5, wprowadzono [algorytmu wyznaczania wartości skrótu losowego ciągu](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). Jednak go nie jest obsługiwana przez platformę ASP.NET z powodu niektóre platformy ASP.NET funkcje zależne od stabilna wartość skrótu. W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], losowy ciąg algorytmy wyznaczania wartości skrótu są teraz obsługiwane. Aby włączyć tę funkcję, należy użyć `aspnet:UseRandomizedStringHashAlgorithm` ustawienia konfiguracji.
+         .NET framework 4.5, wprowadzono [algorytmu wyznaczania wartości skrótu losowego ciągu](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). Jednak go nie jest obsługiwana przez platformę ASP.NET z powodu niektóre platformy ASP.NET funkcje zależne od stabilna wartość skrótu. W programie .NET Framework 4.6 są teraz obsługiwane algorytmy wyznaczania wartości skrótu losowego ciągu. Aby włączyć tę funkcję, należy użyć `aspnet:UseRandomizedStringHashAlgorithm` ustawienia konfiguracji.
 
         ```xml
         <appSettings>
@@ -1476,7 +1476,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
 - **Zmiany w bibliotece klas podstawowych**
 
-     Wiele nowych interfejsów API dodano wokół [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] do obsługi kluczowych scenariuszy. Te obejmują następujące zmienione lub dodane elementy:
+     Wiele nowych interfejsów API zostały dodane wokół do .NET Framework 4.6 do obsługi kluczowych scenariuszy. Te obejmują następujące zmienione lub dodane elementy:
 
     - **IReadOnlyCollection\<T > implementacji**
 
@@ -1592,7 +1592,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
     - **Zmiany opartego na zadaniach asynchronicznej wzorzec zadaniach (TAP)**
 
-         W przypadku aplikacji, których platformą docelową [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty dziedziczą kultury i kultury interfejsu użytkownika wywołującego wątku. Działanie aplikacji, przeznaczone na platformę poprzednie wersje programu .NET Framework lub których nie docelowe określoną wersję programu .NET Framework jest nienaruszona. Aby uzyskać więcej informacji, zobacz sekcję "Kultury i opartego na zadaniach asynchronicznej operacji" <xref:System.Globalization.CultureInfo> temat poświęcony klasie.
+         W przypadku aplikacji przeznaczonych dla platformy .NET Framework 4.6 <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty dziedziczą kultury i kultury interfejsu użytkownika wywołującego wątku. Działanie aplikacji, przeznaczone na platformę poprzednie wersje programu .NET Framework lub których nie docelowe określoną wersję programu .NET Framework jest nienaruszona. Aby uzyskać więcej informacji, zobacz sekcję "Kultury i opartego na zadaniach asynchronicznej operacji" <xref:System.Globalization.CultureInfo> temat poświęcony klasie.
 
          <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> Klasa służy do reprezentowania danych otoczenia, które jest lokalne przepływu daną kontrolkę asynchronicznych, takich jak `async` metody. Może służyć do utrwalenia danych w wątkach. Można również definiować metody wywołania zwrotnego, która jest powiadamiany o zmianie otoczenia danych albo ponieważ <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> jawnie można zmienić właściwości, lub ponieważ przejście kontekst wątku.
 
@@ -1624,7 +1624,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
     - **Ulepszenia HDPI**
 
-         HDPI na platformie WPF jest teraz lepsza w [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Wprowadzono zmiany do układu zaokrąglania do zmniejszenia wystąpienia wycinka w kontrolkach z obramowaniem. Domyślnie ta funkcja jest włączona tylko wtedy, gdy Twoje <xref:System.Runtime.Versioning.TargetFrameworkAttribute> jest ustawiona na .NET 4.6.  Aplikacje, których docelową platformą są wcześniejsze wersje Framework, ale są uruchomione na [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] zgodzić się na nowe zachowanie, dodając następujący wiersz do [ \<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) sekcji w pliku app.config:
+         Obsługa HDPI na platformie WPF jest teraz lepsza w programie .NET Framework 4.6. Wprowadzono zmiany do układu zaokrąglania do zmniejszenia wystąpienia wycinka w kontrolkach z obramowaniem. Domyślnie ta funkcja jest włączona tylko wtedy, gdy Twoje <xref:System.Runtime.Versioning.TargetFrameworkAttribute> jest ustawiona na .NET 4.6.  Aplikacje, których docelową platformą są wcześniejsze wersje Framework, ale działają na platformie .NET Framework 4.6 zgodzić się na nowe zachowanie, dodając następujący wiersz do [ \<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) sekcji w pliku app.config:
 
         ```xml
         <AppContextSwitchOverrides
@@ -1642,11 +1642,11 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
     - **Touch jest lepsza**
 
-         Odbiorcy raportów o [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) touch, tworzy nieprzewidywalne zachowanie zostały rozwiązane w [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Naciśnij dwukrotnie próg dla aplikacji Windows Store i aplikacji WPF teraz jest taka sama w Windows 8.1 lub nowszym.
+         Odbiorcy raportów o [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) touch, tworzy nieprzewidywalne zachowanie zostały rozwiązane w programie .NET Framework 4.6. Naciśnij dwukrotnie próg dla aplikacji Windows Store i aplikacji WPF teraz jest taka sama w Windows 8.1 lub nowszym.
 
     - **Przezroczysty podrzędne okna obsługi**
 
-         Platformy WPF w [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] obsługuje okien podrzędnych przezroczyste w Windows 8.1 i nowszych. Pozwala na tworzenie okien podrzędnych-prostokątny i przejrzystości w najwyższego poziomu z systemem windows. Możesz włączyć tę funkcję, ustawiając <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> właściwość `true`.
+         WPF w programie .NET Framework 4.6 obsługuje okien podrzędnych przezroczyste w Windows 8.1 lub nowszym. Pozwala na tworzenie okien podrzędnych-prostokątny i przejrzystości w najwyższego poziomu z systemem windows. Możesz włączyć tę funkcję, ustawiając <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> właściwość `true`.
 
 - **Windows Communication Foundation (WCF)**
 
@@ -1719,7 +1719,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
          Windows 10 zawiera nowy algorytm sieci o wysokiej skalowalności, który ułatwia lepsze wykorzystanie zasobów maszyny poprzez ponowne użycie portów lokalnych dla połączenia wychodzące TCP. .NET framework 4.6 obsługuje nowy algorytm, umożliwiając aplikacji .NET wykorzystać nowe zachowanie. W poprzednich wersjach systemu Windows było limit sztuczne liczby jednoczesnych połączeń (zazwyczaj 16 384, domyślny rozmiar dynamicznego zakresu portów), które może ograniczać skalowalność usługi, powodując wyczerpanie portów w warunkach obciążenia.
 
-         W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], dodano dwa nowe interfejsy API umożliwiające ponowne użycie portu, który skutecznie usuwa limit 64 KB na temat jednoczesnych połączeń:
+         W .NET Framework 4.6 dodano dwa nowe interfejsy API umożliwiają wielokrotne użycie portu, który skutecznie usuwa limit 64 KB na temat jednoczesnych połączeń:
 
         - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> Wartość wyliczenia.
 
@@ -1735,7 +1735,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
 - **Zmiany rozmiaru kontrolek Windows Forms.**
 
-     Ta funkcja została rozwinięta w [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] obejmujący <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.ToolStripSplitButton> typów i prostokąt określony przez <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> właściwość używana podczas rysowania <xref:System.Drawing.Design.UITypeEditor> .
+     Ta funkcja została rozwinięta w .NET Framework 4.6, aby uwzględnić <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.ToolStripSplitButton> typów i prostokąt określony przez <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> właściwość używana podczas rysowania <xref:System.Drawing.Design.UITypeEditor>.
 
      Jest to funkcja opcjonalna. Aby ją włączyć, ustaw `EnableWindowsFormsHighDpiAutoResizing` elementu `true` w pliku konfiguracyjnym (app.config) aplikacji:
 

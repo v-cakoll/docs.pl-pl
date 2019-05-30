@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 65d26c0b9a41a6825108b73f822add4d91400055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b7b983122b9e30fd7c6b0d0c517a9483b8881c5
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787689"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301465"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>Instrukcje: tworzenie punktu końcowego w kodzie
 W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkulator, usługa jest wdrażana w `CalculatorService` klasy, a następnie jej punkt końcowy jest zdefiniowana w kodzie, w której jest określony, że należy używać usługa programu <xref:System.ServiceModel.BasicHttpBinding> klasy.  
@@ -34,12 +34,12 @@ W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkula
      [!code-csharp[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4. Tworzenie hosta i wywołania <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> lub jednego z innych przeciążeń, aby dodać punkt końcowy usługi dla hosta.  
+4. Tworzenie hosta i wywołania <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29?displayProperty=nameWithType> lub jednego z innych przeciążeń, aby dodać punkt końcowy usługi dla hosta.  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  
   
-     Określanie powiązania w kodzie, ale Użyj domyślnych punktów końcowych, udostępniane przez środowisko uruchomieniowe, przekazanie basowej adresu do konstruktora podczas tworzenia <xref:System.ServiceModel.ServiceHost>, a nie wywołuj <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+     Aby określić powiązanie w kodzie, ale Użyj domyślnych punktów końcowych, udostępniane przez środowisko uruchomieniowe, Przekaż adres podstawowy do konstruktora podczas tworzenia <xref:System.ServiceModel.ServiceHost>, a nie wywołuj <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType>.  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: e03e1c930b452cf5e4f2c4bb1d06d5363f20c991
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acc2edceee8799d32b6d7daf314293a2da218f09
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661051"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300367"
 ---
 # <a name="operator-keywords-c-reference"></a>Słowa kluczowe operatora (odwołanie w C#)
 
@@ -36,18 +36,6 @@ Używane do wykonywania różnych akcji, takich jak tworzenie obiektów, sprawdz
 - [Operator sizeof](sizeof.md) uzyskuje rozmiar typu niezarządzanego.  
 
 - [TypeOf](typeof.md) uzyskiwany <xref:System.Type?displayProperty=nameWithType> obiektu dla typu.  
-
-- [true](true.md)  
-
-  - [wartość true, Operator](true-false-operators.md) zwraca [bool](bool.md) wartość `true` do wskazania, że argument jest zdecydowanie wartość true.
-
-  - [wartość true, literał](true-literal.md) reprezentuje [bool](bool.md) wartość `true`.
-
-- [false](false.md)  
-
-  - [FALSE — Operator](true-false-operators.md) zwraca [bool](bool.md) wartość `true` do wskazania, że argument jest zdecydowanie wartość false.
-
-  - [FALSE — literał](false-literal.md) reprezentuje [bool](bool.md) wartość `false`.
 
 - [stackalloc](stackalloc.md) przydziela blok pamięci na stosie.  
 

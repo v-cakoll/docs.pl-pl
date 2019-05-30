@@ -2,12 +2,12 @@
 title: Proces programistyczny dotyczący aplikacji opartych na platformie Docker
 description: Uzyskaj Przegląd wysokiego poziomu opcji do tworzenia aplikacji opartych na platformie Docker. Przy użyciu wybranego programu Visual Studio for Windows, Visual Studio for Mac lub Visual Studio Code obsługi dla wielu platform (Windows, Mac i Linux).
 ms.date: 09/27/2018
-ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640084"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300648"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Proces programistyczny dotyczący aplikacji opartych na platformie Docker
 
@@ -25,7 +25,7 @@ Czy wolisz, pełne i zaawansowanego środowiska IDE lub edytora lekkie i elastyc
 
 **Visual Studio Code i platformy Docker CLI**. Jeśli wolisz lekkie i Międzyplatformowe edytor, który obsługuje dowolny język programowania, można użyć programu Microsoft Visual Studio Code (VS Code) i interfejsu wiersza polecenia platformy Docker. Jest to podejście wieloplatformowego opracowywania aplikacji dla komputerów Mac, Linux i Windows. Ponadto Visual Studio Code obsługuje rozszerzenia dla platformy Docker, takie jak IntelliSense dla plików Dockerfile i skrót zadania to uruchamianie poleceń Docker z poziomu edytora.
 
-Instalując [Docker Community Edition (CE)](https://www.docker.com/community-edition) narzędzi, można użyć pojedynczego interfejsu wiersza polecenia platformy Docker do tworzenia aplikacji dla systemów Windows i Linux.
+Instalując [Docker pulpitu Community Edition (CE)](https://hub.docker.com/search/?type=edition&offering=community), można użyć pojedynczego interfejsu wiersza polecenia platformy Docker, aby tworzyć aplikacje dla systemów Windows i Linux.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -35,8 +35,11 @@ Instalując [Docker Community Edition (CE)](https://www.docker.com/community-edi
 - **Program Visual Studio Code** Oficjalna witryna. \
   <https://code.visualstudio.com/download>
 
-- **Platformę docker Community Edition (CE) dla systemów Mac i Windows** \
-  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
+- **Desktop docker for Windows Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+  
+- **Docker Desktop for Mac Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET, języków i struktur dla kontenerów Docker
 

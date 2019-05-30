@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a89df5067fdf6d82ee9836da2409194371b05bc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795242"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301170"
 ---
 # <a name="encrypting-data"></a>Szyfrowanie danych
 Szyfrowanie symetryczne i szyfrowanie asymetryczne są wykonywane przy użyciu różnych procesów. Szyfrowania symetrycznego odbywa się na strumieni i dlatego jest przydatne do szyfrowania dużych ilości danych. Szyfrowanie asymetryczne odbywa się na niewielką liczbę bajtów i dlatego jest użyteczna tylko w przypadku niewielkich ilości danych.  
@@ -246,8 +246,8 @@ class Class1
       RSAParameters rsaKeyInfo = new RSAParameters();  
   
       //Set rsaKeyInfo to the public key values.   
-      rsaKeyInfo.Modulus = PublicKey;  
-      rsaKeyInfo.Exponent = Exponent;  
+      rsaKeyInfo.Modulus = publicKey;  
+      rsaKeyInfo.Exponent = exponent;  
   
       //Import key parameters into RSA.  
       rsa.ImportParameters(rsaKeyInfo);  

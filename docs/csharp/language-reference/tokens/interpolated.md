@@ -13,16 +13,16 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210428"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251000"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — Interpolacja ciągów (odwołanie w C#)
 
-`$` Znak specjalny identyfikuje literał ciągu zgodny z *ciągiem interpolowanym*. Ciągu interpolowanego jest ciągiem literału, który może zawierać *wyrażeń interpolowanych*. Po usunięciu ciągu interpolowanego do ciągu wynikowego, elementy z wyrażeń interpolowanych są zastępowane przez ciągów reprezentujących wyniki wyrażenia. Ta funkcja jest dostępna w języku C# 6 i nowsze wersje języka.
+`$` Znak specjalny identyfikuje literał ciągu zgodny z *ciągiem interpolowanym*. Ciągu interpolowanego jest ciągiem literału, który może zawierać *wyrażeń interpolacji*. Po usunięciu ciągu interpolowanego do ciągu wynikowego, elementy przy użyciu interpolacji wyrażenia są zastępowane przez ciągów reprezentujących wyniki wyrażenia. Ta funkcja jest dostępna w języku C# 6 i nowsze wersje języka.
 
 Interpolacja ciągów pozwala bardziej czytelne i wygodne składni utworzyć sformatowane ciągi niż [ciągu formatowania złożonego](../../../standard/base-types/composite-formatting.md) funkcji. W poniższym przykładzie użyto obu funkcji, aby utworzyć ten sam wynik:
 
@@ -32,18 +32,18 @@ Interpolacja ciągów pozwala bardziej czytelne i wygodne składni utworzyć sfo
 
 Aby zidentyfikować literał ciągu zgodny z ciągu interpolowanego, dodaj ją za pomocą `$` symboli. Nie może mieć dowolny biały obszar między `$` i `"` którego początkowe literału ciągu. Ten sposób powoduje błąd kompilacji.
 
-Struktura element na wyrażenie interpolowane jest następująca:
+Struktura elementu za pomocą wyrażenia interpolacji jest następująca:
 
 ```
-{<interpolatedExpression>[,<alignment>][:<formatString>]}
+{<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Elementy w nawiasach kwadratowych są opcjonalne. W poniższej tabeli opisano każdy element:
 
 |Element|Opis|
 |-------------|-----------------|
-|`interpolatedExpression`|Wyrażenie, które daje wynik do sformatowania. Ciąg reprezentujący `null` wynik jest <xref:System.String.Empty?displayProperty=nameWithType>.|
-|`alignment`|Wyrażenie stałe, którego wartość określa minimalną liczbę znaków w ciągu reprezentującego wynik wyrażenia interpolowane. Jeśli jest to dodatnia, reprezentacji w postaci ciągu jest wyrównany do prawej; Jeśli jest negatywny, jest wyrównany do lewej. Aby uzyskać więcej informacji, zobacz [składnik wyrównania](../../../standard/base-types/composite-formatting.md#alignment-component).|
+|`interpolationExpression`|Wyrażenie, które daje wynik do sformatowania. Ciąg reprezentujący `null` wynik jest <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`alignment`|Wyrażenie stałe, którego wartość określa minimalną liczbę znaków w ciągu reprezentującego wynik wyrażenia interpolacji. Jeśli jest to dodatnia, reprezentacji w postaci ciągu jest wyrównany do prawej; Jeśli jest negatywny, jest wyrównany do lewej. Aby uzyskać więcej informacji, zobacz [składnik wyrównania](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Ciąg formatu, który jest obsługiwany przez typ wyniku wyrażenia. Aby uzyskać więcej informacji, zobacz [element ciągu formatującego](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
 W poniższym przykładzie użyto opcjonalne składniki formatowania opisane powyżej:
@@ -54,9 +54,9 @@ W poniższym przykładzie użyto opcjonalne składniki formatowania opisane powy
 
 Aby uwzględnić nawiasu klamrowego, "{" lub "}", w tekście, generowane przez ciągu interpolowanego, użyj dwóch nawiasów klamrowych, "{{" lub "}}". Aby uzyskać więcej informacji, zobacz [anulowania zapewnianego element nawiasów klamrowych](../../../standard/base-types/composite-formatting.md#escaping-braces).
 
-Jako dwukropkiem (":") ma specjalne znaczenie w elemencie wyrażenie interpolowane, aby można było używać [operator warunkowy](../operators/conditional-operator.md) w wyrażenie interpolowane ująć to wyrażenie w nawiasach.
+Jako dwukropkiem (":") ma specjalne znaczenie w elemencie wyrażenie interpolacji, aby można było używać [operator warunkowy](../operators/conditional-operator.md) w wyrażeniu interpolacji ująć to wyrażenie w nawiasach.
 
-Poniższy przykład pokazuje, jak dołączyć nawiasu klamrowego w ciągu wynikowym i sposobu użycia operatora warunkowego w wyrażenie interpolowane:
+Poniższy przykład pokazuje, jak dołączyć nawiasu klamrowego w ciągu wynikowym i sposobu użycia operatora warunkowego w wyrażeniu interpolacji:
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
@@ -69,7 +69,7 @@ Ciąg verbatim interpolowane zaczyna się od `$` następuje znak `@` znaków. Ab
 
 Istnieją trzy niejawną konwersję z ciągu interpolowanego:
 
-1. Konwersja ciągu interpolowanego do <xref:System.String> wystąpienia, która jest wynikiem rozdzielczość ciąg interpolowany z wyrażenia interpolowanego elementy zastępowane poprawnie sformatowanych ciągów reprezentujących ich wyniki. Ta konwersja skorzysta z bieżącej kultury.
+1. Konwersja ciągu interpolowanego do <xref:System.String> wystąpienie, które jest wynikiem rozdzielczości ciągu interpolowanego z wyrażeniem interpolacji elementy zastępowane poprawnie sformatowanych ciągów reprezentujących ich wyniki. Ta konwersja skorzysta z bieżącej kultury.
 
 1. Konwersja ciągu interpolowanego do <xref:System.FormattableString> wystąpienia, która reprezentuje ciąg formatu złożonego wraz z wynikami wyrażenia do sformatowania. Pozwala to do utworzenia wielu ciągów wynik z specyficzne dla kultury zawartości z jednego <xref:System.FormattableString> wystąpienia. Który wywołać jedną z następujących metod:
 

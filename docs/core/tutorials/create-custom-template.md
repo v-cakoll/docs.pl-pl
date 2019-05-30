@@ -1,17 +1,17 @@
 ---
-title: Utwórz nowy szablon niestandardowy dla platformy dotnet
+title: Tworzenie szablonu niestandardowego dla polecenia dotnet new
 description: Dowiedz się, jak utworzyć niestandardowy szablon dla nowego polecenia dotnet w tę zabawną samouczka.
-author: guardrex
+author: mairaw
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e47da048584ec31c275ff9c122d157f34556268a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647403"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299958"
 ---
-# <a name="create-a-custom-template-for-dotnet-new"></a>Utwórz nowy szablon niestandardowy dla platformy dotnet
+# <a name="create-a-custom-template-for-dotnet-new"></a>Tworzenie szablonu niestandardowego dla polecenia dotnet new
 
 Ten samouczek pokazuje, jak do:
 
@@ -35,7 +35,7 @@ Jeśli chcesz korzystać z pobranych próbki z dystrybucją systemu plików, wyk
 
 ## <a name="create-a-template-from-a-project"></a>Utwórz szablon z projektu
 
-Użyj istniejącego projektu, który został potwierdzony kompiluje i uruchamia lub utworzyć nowy projekt aplikacji konsoli w folderze na dysku twardym. Ten samouczek zakłada, że nazwa folderu projektu jest *GarciaSoftware.ConsoleTemplate.CSharp* przechowywaną w *Documents\Templates* w profilu użytkownika. Nazwa szablonu w projekcie samouczka jest w formacie  *\<nazwa firmy >.\< Typ szablonu >. \<Język programowania >*, ale możesz nazwę projektu i szablon wszystko chcesz.
+Użyj istniejącego projektu, który został potwierdzony kompiluje i uruchamia lub utworzyć nowy projekt aplikacji konsoli w folderze na dysku twardym. Ten samouczek zakłada, że nazwa folderu projektu jest *GarciaSoftware.ConsoleTemplate.CSharp* przechowywaną w *Documents\Templates* w profilu użytkownika. Nazwa szablonu w projekcie samouczka jest w formacie  *\<nazwa firmy >.\< Typ szablonu >. \<Język programowania >* , ale możesz nazwę projektu i szablon wszystko chcesz.
 
 1. Dodawanie folderu do katalogu głównego projektu o nazwie *. template.config*.
 1. Wewnątrz *. template.config* folderze utwórz *template.json* pliku, aby skonfigurować szablon. Aby uzyskać więcej informacji i elementów członkowskich definicje *template.json* plików, zobacz [szablonów niestandardowych dla platformy dotnet nowe](../tools/custom-templates.md#templatejson) tematu i [ *template.json* schemat w Store schematu JSON](http://json.schemastore.org/template).

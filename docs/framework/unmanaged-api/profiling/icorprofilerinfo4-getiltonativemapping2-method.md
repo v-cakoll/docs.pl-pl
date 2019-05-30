@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b625b2962c829e7c0692a61d8f5561818f7ebf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b59fe76bd6d8d5887ac825e844e89e85677e2d7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000522"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380350"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 — Metoda
 Pobiera mapę od firmy Microsoft intermediate language (MSIL) przesuwa się do macierzystych przesunięciach kod zawarty w wersji ponownie skompilowana JIT określonej funkcji.  
@@ -44,7 +44,7 @@ HRESULT GetILToNativeMapping(
  [in] Identyfikator funkcji, która zawiera kod.  
   
  `pReJitId`  
- [in] Tożsamość funkcja ponownie skompilowana JIT. Tożsamość musi mieć wartość zero w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ [in] Tożsamość funkcja ponownie skompilowana JIT. Tożsamość musi mieć wartość zero w programie .NET Framework 4.5.  
   
  `cMap`  
  [in] Maksymalny rozmiar `map` tablicy.  
@@ -59,7 +59,7 @@ HRESULT GetILToNativeMapping(
  `GetILToNativeMapping2` jest podobny do [icorprofilerinfo::getiltonativemapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metody, z tą różnicą, że profiler określić identyfikator funkcji ponownej kompilacji w przyszłości umożliwi wydania.  
   
 > [!NOTE]
->  [Icorprofilerfunctioncontrol::setilinstrumentedcodemap —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) metoda nie jest zaimplementowana w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], dlatego funkcje, które zostały ponownie skompilowana JIT nie mogą mieć mapowania IL do macierzystego, który różni się od pierwotnie Funkcja skompilowany. W efekcie `GetILToNativeMapping2` nelze volat wartość różną od zera Identyfikatora ponownie skompilowana JIT w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+>  [Icorprofilerfunctioncontrol::setilinstrumentedcodemap —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) metoda nie jest zaimplementowana w programie .NET Framework 4.5, funkcje, które zostały ponownie skompilowana JIT nie mogą mieć mapowania IL do macierzystego, który różni się od pierwotnie Funkcja skompilowany. W efekcie `GetILToNativeMapping2` nelze volat wartość różną od zera Identyfikatora ponownie skompilowana JIT w .NET Framework 4.5.  
   
  `GetILToNativeMapping2` Metoda zwraca tablicę `COR_DEBUG_IL_TO_NATIVE_MAP` struktury. W celu przekazania, czy określone zakresy natywne instrukcje odpowiadają specjalne regiony kodu (na przykład prologu), mogą mieć wpisu w tablicy jej `ilOffset` pole jest ustawione na wartość [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) wyliczenie.  
   

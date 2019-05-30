@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2abbe121879e5f47fbce9a82d2afbf52cbef4ba9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 28e9aab575876d425112c08b59b9cfc44a8c09a7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636628"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379947"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Błędy inicjowania programu .NET framework: Zarządzanie wrażeniami użytkownika
 
@@ -75,21 +75,21 @@ Jednak w niektórych przypadkach warto zastąpić ustawienie SEM_FAILCRITICALERR
 |--------------|-----------------|--------------------------|------------------------------------|
 |Zarządzany host EXE|Uruchamia zarządzanych plików exe.|Jest wyświetlana w przypadku brakującą wersję .NET Framework|Nie|
 |Zarządzany host COM|Ładunki zarządzane składniki COM do procesu.|Jest wyświetlana w przypadku brakującą wersję .NET Framework|Tak, ustawiając SEM_FAILCRITICALERRORS Flaga|
-|ClickOnce host|Powoduje uruchomienie aplikacji ClickOnce.|Jest wyświetlana w przypadku brakujących wersji programu .NET Framework, począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|
-|XBAP host|Powoduje uruchomienie aplikacji WPF XBAP.|Jest wyświetlana w przypadku brakujących wersji programu .NET Framework, począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|
+|ClickOnce host|Powoduje uruchomienie aplikacji ClickOnce.|Jest wyświetlana w przypadku brakujących wersji programu .NET Framework, począwszy od programu .NET Framework 4.5|Nie|
+|XBAP host|Powoduje uruchomienie aplikacji WPF XBAP.|Jest wyświetlana w przypadku brakujących wersji programu .NET Framework, począwszy od programu .NET Framework 4.5|Nie|
 
 ## <a name="windows-8-behavior-and-ui"></a>Zachowanie systemu Windows 8 i interfejsu użytkownika
 
-System aktywacji środowiska CLR zawiera te same zachowanie i interfejsu użytkownika po [!INCLUDE[win8](../../../includes/win8-md.md)] tak samo jak na inne wersje systemu operacyjnego Windows, z wyjątkiem po napotkaniu problemy z ładowaniem środowisko CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] obejmuje [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], który używa funkcji CLR 4.5. Jednak [!INCLUDE[win8](../../../includes/win8-md.md)] nie zawiera programu .NET Framework 2.0, 3.0 lub 3.5, która za pomocą wersji CLR 2.0. W rezultacie aplikacje, które są zależne od wersji CLR 2.0 nie należy uruchamiać na [!INCLUDE[win8](../../../includes/win8-md.md)] domyślnie. Zamiast tego są wyświetlane następujące okno dialogowe, aby umożliwić użytkownikom instalowanie programu .NET Framework 3.5. Użytkowników można również włączyć program .NET Framework 3.5 w Panelu sterowania. Obie opcje zostały omówione w artykule [Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).
+System aktywacji środowiska CLR zawiera te same zachowanie i interfejsu użytkownika po [!INCLUDE[win8](../../../includes/win8-md.md)] tak samo jak na inne wersje systemu operacyjnego Windows, z wyjątkiem po napotkaniu problemy z ładowaniem środowisko CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] obejmuje .NET Framework 4.5, który używa CLR 4.5. Jednak [!INCLUDE[win8](../../../includes/win8-md.md)] nie zawiera programu .NET Framework 2.0, 3.0 lub 3.5, która za pomocą wersji CLR 2.0. W rezultacie aplikacje, które są zależne od wersji CLR 2.0 nie należy uruchamiać na [!INCLUDE[win8](../../../includes/win8-md.md)] domyślnie. Zamiast tego są wyświetlane następujące okno dialogowe, aby umożliwić użytkownikom instalowanie programu .NET Framework 3.5. Użytkowników można również włączyć program .NET Framework 3.5 w Panelu sterowania. Obie opcje zostały omówione w artykule [Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).
 
 ![Okno dialogowe instalacji wersji 3.5 w systemie Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "wybór opcji Monituj o zainstalowanie programu .NET Framework 3.5 na żądanie")
 
 > [!NOTE]
-> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Zastępuje programu .NET Framework 4 (Środowisko CLR 4) na komputerze użytkownika. W związku z tym, .NET Framework 4, aplikacje są uruchamiane bezproblemowo, bez wyświetlania tego okna dialogowego w [!INCLUDE[win8](../../../includes/win8-md.md)].
+> .NET Framework 4.5 zastępuje programu .NET Framework 4 (Środowisko CLR 4) na komputerze użytkownika. W związku z tym, .NET Framework 4, aplikacje są uruchamiane bezproblemowo, bez wyświetlania tego okna dialogowego w [!INCLUDE[win8](../../../includes/win8-md.md)].
 
 Po zainstalowaniu programu .NET Framework 3.5, użytkownicy mogą uruchamiać aplikacje zależne od programu .NET Framework 2.0, 3.0 lub 3.5 ich [!INCLUDE[win8](../../../includes/win8-md.md)] komputerów. Zadania mogą także uruchamiane .NET Framework 1.0 i 1.1 aplikacji, pod warunkiem, że te aplikacje nie są jawnie skonfigurowane do uruchamiania tylko na .NET Framework 1.0 i 1.1. Zobacz [migracji z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).
 
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], rejestrowanie aktywacji środowiska CLR został ulepszony, aby dołączyć wpisy dziennika, służące do rejestrowania, kiedy i dlaczego jest wyświetlany komunikat o błędzie inicjowania. Aby uzyskać więcej informacji, zobacz [jak: Debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
+Począwszy od programu .NET Framework 4.5, został ulepszony rejestrowania aktywacji środowiska CLR, aby dołączyć wpisy dziennika, służące do rejestrowania, kiedy i dlaczego jest wyświetlany komunikat o błędzie inicjowania. Aby uzyskać więcej informacji, zobacz [jak: Debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
 
 ## <a name="see-also"></a>Zobacz także
 

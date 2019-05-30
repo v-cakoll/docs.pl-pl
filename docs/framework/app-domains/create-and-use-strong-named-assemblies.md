@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607683"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377885"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnych nazwach
 
@@ -71,7 +71,7 @@ Tę funkcję można wyłączyć dla poszczególnych aplikacji lub komputera. Zob
 |-----------|-----------------|
 |[Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|W tym artykule opisano sposób tworzenia pary kluczy kryptograficznych dla podpisywania zestawu.|
 |[Instrukcje: Podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|W tym artykule opisano sposób tworzenia zestawu z silną nazwą.|
-|[Poprawa silnego nazywania](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Opis ulepszeń silnych nazw w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Poprawa silnego nazywania](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Opis ulepszeń silnych nazw w .NET Framework 4.5.|
 |[Instrukcje: Odwołanie do zestawu o silnej nazwie](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|W tym artykule opisano, jak odwoływać się do typów lub zasoby znajdujące się zestawu z silną nazwą w czasie kompilacji lub czasu wykonywania.|
 |[Instrukcje: Wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Opisuje sposób wyłączania funkcji, które Pomija weryfikację podpisy silnej nazwy. Tę funkcję można wyłączyć dla wszystkich lub określonych aplikacji.|
 |[Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)|Zawiera omówienie pojedynczego pliku i wieloplikowe zestawy.|

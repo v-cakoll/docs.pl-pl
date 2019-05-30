@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 0323c0f10538eda2ed3b365a54470bdecac061a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3ac8b2260e5da1e91c167e3e9ef91039deb983b2
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586203"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380246"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Równoległe przechowywanie wersji w klasie WorkflowServiceHost
-<xref:System.ServiceModel.Activities.WorkflowServiceHost> Versioning side-by-side wprowadzona w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] umożliwia hostowanie wielu wersji usługi przepływu pracy w jednym punkcie końcowym. Side-by-side funkcjonalność umożliwia usługi przepływu pracy, należy skonfigurować tak, aby nowe wystąpienia usługi przepływu pracy są tworzone przy użyciu nową definicję przepływu pracy podczas uruchamiania wystąpienia pełną, przy użyciu istniejącą definicję. Ten temat zawiera omówienie przepływu pracy usługi wykonywania side-by-side przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+<xref:System.ServiceModel.Activities.WorkflowServiceHost> Versioning side-by-side wprowadzone w programie .NET Framework 4.5 zapewnia możliwość hostowania wielu wersji usługi przepływu pracy w jednym punkcie końcowym. Side-by-side funkcjonalność umożliwia usługi przepływu pracy, należy skonfigurować tak, aby nowe wystąpienia usługi przepływu pracy są tworzone przy użyciu nową definicję przepływu pracy podczas uruchamiania wystąpienia pełną, przy użyciu istniejącą definicję. Ten temat zawiera omówienie przepływu pracy usługi wykonywania side-by-side przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
 > [!NOTE]
 >  Aby pobrać próbkę i obejrzyj przewodnik wideo dotyczący przechowywanie wersji side-by-side usługi przepływu pracy, zobacz [równoległe przechowywanie wersji przy użyciu usługi przepływu pracy Xamlx Web-Hosted](https://go.microsoft.com/fwlink/?LinkId=393746).  

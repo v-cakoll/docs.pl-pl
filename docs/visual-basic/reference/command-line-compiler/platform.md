@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 5c01136564d64d5b2f1f56d311a6b7eadf1742f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633082"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380314"
 ---
 # <a name="-platform-visual-basic"></a>-platformy (Visual Basic)
 Określa, którą platformy wersję środowiska uruchomieniowego języka wspólnego (CLR) można uruchomić pliku wyjściowego.  
@@ -31,7 +31,7 @@ Określa, którą platformy wersję środowiska uruchomieniowego języka wspóln
 |`Itanium`|Kompiluje zestaw do uruchomienia w 64-bitowym CLR na komputerze z procesorem Itanium.|  
 |`arm`|Kompiluje zestaw do uruchomienia na komputerze z procesorem ARM (Advanced RISC Machine).|  
 |`anycpu`|Kompiluje zestaw można uruchomić na dowolnej platformie. Aplikacja jest uruchamiana jako aplikacja 32-bitowego na 32-bitowe wersje systemu Windows i jako aplikacji 64-bitowych w 64-bitowych wersjach systemu Windows. Ta flaga jest wartością domyślną.|  
-|`anycpu32bitpreferred`|Kompiluje zestaw można uruchomić na dowolnej platformie. Aplikacja jest uruchamiana jako aplikacja 32-bitowa w 32-bitowych i 64-bitowych wersjach systemu Windows. Ta flaga jest prawidłowy tylko dla plików wykonywalnych (. Z rozszerzeniem EXE) i wymaga [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
+|`anycpu32bitpreferred`|Kompiluje zestaw można uruchomić na dowolnej platformie. Aplikacja jest uruchamiana jako aplikacja 32-bitowa w 32-bitowych i 64-bitowych wersjach systemu Windows. Ta flaga jest prawidłowy tylko dla plików wykonywalnych (. Z rozszerzeniem EXE) i wymaga programu .NET Framework 4.5.|  
   
 ## <a name="remarks"></a>Uwagi  
  Użyj `-platform` opcję, aby określić typ procesora przeznaczone dla pliku wyjściowego.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2edc2e867259f8884467c3d5b0ae3d22ba391a77
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934696"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380118"
 ---
 # <a name="system-information-and-windows-forms"></a>Informacje o systemie i formularze systemu Windows
 Czasami jest konieczne do zbierania informacji o komputerze, na którym aplikacja jest uruchomiona w celu podejmowania decyzji w kodzie. Na przykład Niewykluczone, że funkcja, która dotyczy tylko po podłączeniu do określonej domeny; w takim przypadku należałoby możliwość określenia domeny i wyłączyć funkcję, jeśli domena nie jest obecny.  
@@ -34,8 +34,8 @@ MessageBox.Show("Good morning " & User & ". You are connected to " _
 string User = SystemInformation.UserName;  
 string Domain = SystemInformation.UserDomainName;  
   
-MessageBox.Show("Good morning " + User + ". You are connected to " _  
-+ Domain)  
+MessageBox.Show("Good morning " + User + ". You are connected to "
++ Domain);
 ```  
   
  Wszystkie elementy członkowskie <xref:System.Windows.Forms.SystemInformation> klasy są przeznaczone tylko do odczytu; nie można zmodyfikować ustawień użytkownika. Istnieje ponad 100 elementów członkowskich klasy, zwracanie informacji wszystkiego, co z wybranej liczby monitorów podłączony do komputera (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) odstępy między ikon w Eksploratorze Windows (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> i <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919662"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378509"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (narzędzie eksportowania metadanych środowiska wykonawczego systemu Windows)
-[!INCLUDE[wrt](../../../includes/wrt-md.md)] Narzędzie do eksportu metadanych (Winmdexp.exe) przekształca modułu .NET Framework w pliku, który zawiera [!INCLUDE[wrt](../../../includes/wrt-md.md)] metadanych. Mimo że zestawów .NET Framework i [!INCLUDE[wrt](../../../includes/wrt-md.md)] pliki metadanych używają ten sam fizyczny format, istnieją różnice w zawartości tabel metadanych, co oznacza, że zestawów .NET Framework nie są automatycznie używać jako [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników . Proces przekształcania modułu .NET Framework do [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnik nazywa się *eksportowanie*. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], wynikowy plik metadanych (.winmd) Windows zawiera zarówno metadane, jak i implementację.  
+[!INCLUDE[wrt](../../../includes/wrt-md.md)] Narzędzie do eksportu metadanych (Winmdexp.exe) przekształca modułu .NET Framework w pliku, który zawiera [!INCLUDE[wrt](../../../includes/wrt-md.md)] metadanych. Mimo że zestawów .NET Framework i [!INCLUDE[wrt](../../../includes/wrt-md.md)] pliki metadanych używają ten sam fizyczny format, istnieją różnice w zawartości tabel metadanych, co oznacza, że zestawów .NET Framework nie są automatycznie używać jako [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników . Proces przekształcania modułu .NET Framework do [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnik nazywa się *eksportowanie*. W .NET Framework 4.5 i programu .NET Framework 4.5.1 wynikowy plik metadanych (.winmd) Windows zawiera zarówno metadane, jak i implementację.  
   
  Kiedy używasz  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu, który znajduje się w folderze **Windows Store** języka C# i Visual Basic w programie Visual Studio 2013 lub Visual Studio 2012, kompilator jest plik .winmdobj i krok kompilacji kolejne wywołanie Winmdexp.exe w celu wyeksportowania pliku winmdobj do pliku winmd. Jest to zalecany sposób tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika. Programu Winmdexp.exe należy używać bezpośrednio, gdy potrzebna jest większa kontrola nad procesem kompilacji niż dostępna w Visual Studio.  
   
@@ -34,7 +34,7 @@ winmdexp [options] winmdmodule
 |Argument lub opcja|Opis|  
 |------------------------|-----------------|  
 |`winmdmodule`|Określa moduł (winmdobj) do wyeksportowania. Dozwolony jest tylko jeden moduł. Aby utworzyć ten moduł, użyj `/target` — opcja kompilatora przy użyciu `winmdobj` docelowej. Zobacz [/target: winmdobj (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) lub [/TARGET (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
-|`/docfile:``docfile`<br /><br /> `/d:``docfile`|Określa wyjściowy plik dokumentacji XML, który zostanie wygenerowany przez Winmdexp.exe. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], plik wyjściowy jest zasadniczo taki sam jak wejściowy plik XML w dokumentacji.|  
+|`/docfile:``docfile`<br /><br /> `/d:``docfile`|Określa wyjściowy plik dokumentacji XML, który zostanie wygenerowany przez Winmdexp.exe. W .NET Framework 4.5 plik wyjściowy jest zasadniczo taki sam jak wejściowy plik XML w dokumentacji.|  
 |`/moduledoc:``docfile`<br /><br /> `/md:``docfile`|Określa nazwę pliku dokumentacji XML, wytworzonego przez kompilator za pomocą `winmdmodule`.|  
 |`/modulepdb:``symbolfile`<br /><br /> `/mp:``symbolfile`|Określa nazwę pliku bazy danych (PDB) programu, który zawiera symbole dla `winmdmodule`.|  
 |`/nowarn:``warning`|Wyłącza ostrzeżenie o podanym numerze. Aby uzyskać *ostrzeżenie*, podaj tylko liczbowej części kodu błędu, bez zer wiodących.|  

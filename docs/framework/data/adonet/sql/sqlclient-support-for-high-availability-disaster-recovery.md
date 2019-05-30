@@ -2,15 +2,15 @@
 title: Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251172"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380010"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
-W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) o wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do programu SQL Server 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności zobacz dokumentację SQL Server — książki Online.  
+W tym temacie omówiono Obsługa SqlClient (dodano w .NET Framework 4.5), aby uzyskać wysoką dostępność, odzyskiwanie po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do programu SQL Server 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności zobacz dokumentację SQL Server — książki Online.  
   
  Teraz możesz określić dla odbiornika grupy dostępności (wysokiej dostępności, odzyskiwania po awarii) grupy dostępności (grupy dostępności) lub SQL Server 2012 wystąpienia klastra trybu Failover we właściwości połączenia. Jeśli aplikacja SqlClient jest połączona z bazą danych AlwaysOn w trybie Failover, oryginalne połączenie zostało przerwane i aplikacji, należy otworzyć nowe połączenie do kontynuowania pracy po przełączeniu w tryb failover.  
   
@@ -19,7 +19,7 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
 > [!NOTE]
 >  Zwiększenie limitu czasu połączenia i implementowanie logikę ponawiania próby połączenia zwiększy prawdopodobieństwo, że aplikacja połączy się z grupy dostępności. Ponadto ponieważ połączenia może zakończyć się niepowodzeniem z powodu przejścia w tryb failover, należy zaimplementować logikę ponawiania prób połączenia, ponawianie próby połączenia zakończone niepowodzeniem dopóki ponownie nawiązuje połączenie.  
   
- Następujące właściwości zostały dodane do SqlClient w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
+ Następujące właściwości zostały dodane do SqlClient w .NET Framework 4.5:  
   
 - `ApplicationIntent`  
   

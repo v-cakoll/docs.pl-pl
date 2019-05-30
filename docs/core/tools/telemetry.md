@@ -4,12 +4,12 @@ description: Poznaj funkcje telemetryczne zestawu .NET Core SDK, które zbieraj�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751678"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377503"
 ---
 # <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestawu SDK programu .NET core
 
@@ -68,7 +68,7 @@ Zespół .NET chce wiedzieć, jak te narzędzia są używane, a jeśli działaj�
 
 Dane publikowane jest dostępny co kwartał i znajduje się w [danych użycia programu .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md). Dostępne są następujące kolumny w pliku danych:
 
-- Znacznik czasu
+- Timestamp
 - Occurrences&#8224;
 - Polecenie
 - Geography&#8225;
@@ -79,11 +79,11 @@ Dane publikowane jest dostępny co kwartał i znajduje się w [danych użycia pr
 
 &#8224;*Wystąpień* kolumnie jest wyświetlana łączna liczba użycia tego polecenia dla tego wiersza metryk tego samego dnia.
 
-&#8225;Zazwyczaj *Geografia* kolumnie jest wyświetlana nazwa kraju. W niektórych przypadkach kontynent z Antarktyda pojawia się w tej kolumnie, albo z powodu pracowników naukowo-badawczych przy użyciu platformy .NET Core w Antarktyda lub nieprawidłowej lokalizacji danych.
+&#8225;Zazwyczaj *Geografia* kolumnie jest wyświetlana nazwa kraju/regionu. W niektórych przypadkach kontynent z Antarktyda pojawia się w tej kolumnie, albo z powodu pracowników naukowo-badawczych przy użyciu platformy .NET Core w Antarktyda lub nieprawidłowej lokalizacji danych.
 
 ### <a name="example"></a>Przykład
 
-| Znacznik czasu      | Wystąpienia | Polecenie | Lokalizacja geograficzna | Rodzina systemów operacyjnych | RuntimeID     | OSVersion | SDKVersion |
+| Timestamp      | Wystąpienia | Polecenie | Lokalizacja geograficzna | Rodzina systemów operacyjnych | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
 | 4/16/2017 0:00 | 8           | Uruchom     | Uganda    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
 

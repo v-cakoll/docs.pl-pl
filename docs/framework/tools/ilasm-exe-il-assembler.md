@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779922"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378581"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Asembler IL)
 
@@ -58,7 +58,7 @@ ilasm [options] filename [[options]filename...]
 |**/ include:** `includePath`|Ustawia ścieżkę wyszukiwania plików dołączonych za pomocą `#include`.|
 |**/Itanium**|Określa procesor Intel Itanium jako procesor docelowy.<br /><br /> Jeśli nie liczby bitów obrazu jest określony, wartością domyślną jest **/pe64**.|
 |**następujący/key:** `keyFile`|Kompiluje `filename` za pomocą silnego podpisu, używając klucza prywatnego zawartego w `keyFile`.|
-|**/key:** @`keySource`|Kompiluje `filename` za pomocą mocnej sygnatury przy użyciu klucza prywatnego utworzonego w lokalizacji `keySource`.|
+|**/key:**  @`keySource`|Kompiluje `filename` za pomocą mocnej sygnatury przy użyciu klucza prywatnego utworzonego w lokalizacji `keySource`.|
 |**/ wystawienie**|Tworzy plik listy w standardowym wyjściu. Jeśli ta opcja zostanie pominięta, plik listy nie zostanie utworzony.<br /><br /> Ten parametr nie jest obsługiwany w programie .NET Framework 2.0 i nowszych.|
 |**MDV:** `versionString`|Ustawia ciąg wersji metadanych.|
 |**/msv:** `major`.`minor`|Ustawia wersję strumienia metadanych, gdzie `major` i `minor` są liczbami całkowitymi.|
@@ -79,7 +79,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|
 
 > [!NOTE]
-> Wszystkie opcje *Ilasm.exe* jest rozróżniana wielkość liter i rozpoznawane na podstawie pierwszych trzech liter. Na przykład **/lis** jest odpowiednikiem **/listing** i **/res —**: mój_plik_zasobów.res jest równoważna **/Resource**: mój_plik_zasobów.res. Opcje, które określają argumenty, akceptują dwukropek (:) lub znak równości (=) jako separator między opcją a argumentem. Na przykład **/output**:*plik.roz* jest odpowiednikiem **/output**=*plik.roz*.
+> Wszystkie opcje *Ilasm.exe* jest rozróżniana wielkość liter i rozpoznawane na podstawie pierwszych trzech liter. Na przykład **/lis** jest odpowiednikiem **/listing** i **/res —** : mój_plik_zasobów.res jest równoważna **/Resource**: mój_plik_zasobów.res. Opcje, które określają argumenty, akceptują dwukropek (:) lub znak równości (=) jako separator między opcją a argumentem. Na przykład **/output**:*plik.roz* jest odpowiednikiem **/output**=*plik.roz*.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -108,7 +108,7 @@ Aby uzyskać więcej informacji dotyczących gramatyki języka IL, zobacz opis p
 
 ## <a name="version-information"></a>Informacje o wersji
 
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], można dołączyć atrybut niestandardowy do implementacji interfejsu używając kodu podobnego do następującego:
+Począwszy od programu .NET Framework 4.5, można dołączyć atrybut niestandardowy do implementacji interfejsu używając kodu podobnego do następującego:
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], można doł�
       …
 ```
 
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], można określić umownego organizatora BLOB (duży obiekt binarny) za pomocą jego nieprzetworzonej reprezentacji binarnej, jak pokazano w poniższym kodzie:
+Począwszy od programu .NET Framework 4.5, można określić umownego organizatora BLOB (duży obiekt binarny) za pomocą jego nieprzetworzonej reprezentacji binarnej, jak pokazano w poniższym kodzie:
 
 ```
 .method public hidebysig abstract virtual

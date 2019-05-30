@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4710f299c97a6ef8039314243ca481db51c2bb52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614086"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379961"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 
-W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego zależności systemowe przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe dotyczące instalowania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).
+W tym artykule opisano, jak administrator systemu może wdrożyć program .NET Framework 4.5 i jego zależności systemowe przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe dotyczące instalowania programu .NET Framework 4.5, zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).
 
 > [!NOTE]
-> Oprogramowanie wymienione w niniejszym dokumencie, w tym bez ograniczeń, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager i usługi Active Directory, objęte jest postanowieniami licencyjnymi. W tych instrukcjach przyjęto założenie, że takie postanowienia licencyjne i warunki zostały przejrzane i zaakceptowane przez właściwych licencjobiorców oprogramowania. Te instrukcje nie unieważniają żadnego postanowienia tych umów licencyjnych.
+> Oprogramowanie wymienione w niniejszym dokumencie, w tym, bez ograniczenia, .NET Framework 4.5, programu System Center Configuration Manager i usługi Active Directory, objęte jest postanowieniami licencyjnymi. W tych instrukcjach przyjęto założenie, że takie postanowienia licencyjne i warunki zostały przejrzane i zaakceptowane przez właściwych licencjobiorców oprogramowania. Te instrukcje nie unieważniają żadnego postanowienia tych umów licencyjnych.
 >
 > Aby uzyskać informacje na temat pomocy technicznej dla platformy .NET Framework, zobacz [obsługuje zasady cyklu życia programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) w witrynie Microsoft Support.
 
@@ -55,7 +55,7 @@ Gdy jest dostępna wymagana infrastruktura, należy użyć programu System Cente
 
 ## <a name="deploying-the-net-framework"></a>Wdrażanie programu .NET Framework
 
-System Center 2012 Configuration Manager można użyć do wdrożenia dyskretnej instalacji [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], gdzie użytkownicy nie oddziałują na proces instalacji. Wykonaj następujące kroki:
+System Center 2012 Configuration Manager można użyć do wdrożenia dyskretnej instalacji programu .NET Framework 4.5, w których użytkownicy nie oddziałują na proces instalacji. Wykonaj następujące kroki:
 
 1. [Utwórz kolekcję](#creating_a_collection).
 
@@ -135,7 +135,7 @@ W poniższej tabeli opisano opcje wiersza polecenia określone w kroku 7.
 |------------|-----------------|
 |**/q**|Ustawia tryb cichy. Nie jest wymagane wprowadzanie danych przez użytkownika i nie są wyświetlane dane wyjściowe.|
 |**/ norestart /**|Uniemożliwia Instalatorowi automatyczne wykonywanie ponownego rozruchu. Użycie tej opcji spowoduje, że program Configuration Manager będzie musiał obsługiwać ponowne uruchamianie komputera.|
-|**/chainingpackage** *PackageName*|Określa nazwę pakietu, który tworzy łańcuch. Te informacje są zgłaszane wraz z innymi informacjami sesji instalacji dla tych, którzy podpisali [Program poprawy jakości środowiska Microsoft klienta (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Jeśli nazwa pakietu zawiera spacje, należy użyć podwójnego cudzysłowu jako ogranicznika; na przykład: **chainingpackage "Chaining Product"**.|
+|**/chainingpackage** *PackageName*|Określa nazwę pakietu, który tworzy łańcuch. Te informacje są zgłaszane wraz z innymi informacjami sesji instalacji dla tych, którzy podpisali [Program poprawy jakości środowiska Microsoft klienta (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Jeśli nazwa pakietu zawiera spacje, należy użyć podwójnego cudzysłowu jako ogranicznika; na przykład: **chainingpackage "Chaining Product"** .|
 
 Wykonanie tych kroków spowoduje utworzenie pakietu o nazwie .NET Framework 4.5. Program wdraża instalację dyskretną programu .NET Framework 4.5. W trakcie instalacji dyskretnej użytkownicy nie oddziałują na proces instalacji, a aplikacja łańcuchowa musi przechwytywać kod powrotny i obsługiwać ponowny rozruch; zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=179606).
 
@@ -202,7 +202,7 @@ Teraz pakiet zostanie wdrożony w kolekcji docelowej i rozpocznie się dyskretna
 
 ## <a name="resources"></a>Zasoby
 
-Aby uzyskać więcej informacji dotyczących infrastruktury do testowania wdrożenia [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] do dystrybucji pakietu, zobacz następujące zasoby.
+Aby uzyskać więcej informacji na temat infrastruktury do testowania wdrożenia pakietu redystrybucyjnego programu .NET Framework 4.5 zobacz następujące zasoby.
 
 **Active Directory, DNS, DHCP:**
 
@@ -249,7 +249,7 @@ Możesz użyć [narzędzie do zbierania dzienników](https://www.microsoft.com/d
 
 ### <a name="return-codes"></a>Kody powrotne
 
-W poniższej tabeli wymieniono najczęściej występujące kody powrotne z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] programu instalacyjnego redystrybucyjnego pakietu. Kody powrotne są takie same dla wszystkich wersji instalatora.
+W poniższej tabeli wymieniono najbardziej typowe kody powrotne programu instalacyjnego redystrybucyjnego pakietu programu .NET Framework 4.5. Kody powrotne są takie same dla wszystkich wersji instalatora.
 
 Dla łącza do szczegółowych informacji, zobacz następną sekcję, [kody błędów pobierania](#additional_error_codes).
 

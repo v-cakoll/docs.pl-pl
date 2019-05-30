@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 68169063c9cf152942ff8a7757a1b3d97886002a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa7c0c22d070ec12cb67252dee7dca02c5160b9e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034570"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380084"
 ---
 # <a name="redirecting-assembly-versions"></a>Przekierowywanie wersji zestawu
 
@@ -23,7 +23,7 @@ Możesz przekierować odwołania związane z czasem kompilacji do zestawów .NET
 ## <a name="assembly-unification-and-default-binding"></a>Unifikacja zestawów i powiązania domyślne
  Powiązania do zestawów .NET Framework czasami są przekierowywane w procesie zwanym *unifikacja zestawu*. .NET Framework składa się z wersją środowiska uruchomieniowego języka wspólnego i około dwóch tuzinów zestawów .NET Framework, które tworzą bibliotekę typów. Te zestawy .NET Framework są traktowane w czasie wykonywania jako pojedyncza jednostka. Domyślnie gdy aplikacja jest uruchamiana, wszystkie odwołania do typów w kodzie wykonywanym przez środowisko uruchomieniowe są kierowane do zestawów .NET Framework, które mają ten sam numer wersji środowiska uruchomieniowego, który jest załadowany w procesie. Przekierowań, które występują w tym modelu są domyślnym zachowaniem dla środowiska uruchomieniowego.
 
- Na przykład, jeśli aplikacja odwołuje się do typów w przestrzeni nazw System.XML i została skompilowana przy użyciu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zawiera odwołania statyczne do zestawu System.XML, który jest dostarczany za pomocą środowiska uruchomieniowego w wersji 4.5. Chcąc przekierować odwołanie powiązania tak, aby wskazywać zestaw System.XML dostarczany z .NET Framework 4, możesz umieścić informacje o przekierowaniu w pliku konfiguracji aplikacji. Przekierowanie powiązania w pliku konfiguracji dla ujednoliconego zestawu .NET Framework anuluje ujednolicenie dla tego zestawu.
+ Na przykład jeśli aplikacja odwołuje się do typów w przestrzeni nazw System.XML i została skomplikowana przy użyciu programu .NET Framework 4.5, zawiera odwołania statyczne do zestawu System.XML, który jest dostarczany za pomocą środowiska uruchomieniowego w wersji 4.5. Chcąc przekierować odwołanie powiązania tak, aby wskazywać zestaw System.XML dostarczany z .NET Framework 4, możesz umieścić informacje o przekierowaniu w pliku konfiguracji aplikacji. Przekierowanie powiązania w pliku konfiguracji dla ujednoliconego zestawu .NET Framework anuluje ujednolicenie dla tego zestawu.
 
  Ponadto możesz chcieć ręcznie przekierować powiązanie zestawu dla zestawów innych firm, jeśli istnieje wiele wersji.
 
@@ -55,7 +55,7 @@ Możesz przekierować odwołania związane z czasem kompilacji do zestawów .NET
 
 ### <a name="relying-on-automatic-binding-redirection"></a>Opierając się na automatyczne przekierowywanie powiązań
 
-Po utworzeniu aplikacji klasycznej w programie Visual Studio przeznaczonych [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] lub jego nowsza wersja aplikacji używa automatycznego przekierowywania powiązań. Oznacza to, że jeśli dwa składniki odwołują się do różnych wersji tego samego zestawu z silną nazwą, — środowisko uruchomieniowe automatycznie dodaje przekierowanie powiązań do nowszej wersji zestawu w pliku konfiguracyjnym (app.config) danych wyjściowych aplikacji. Przekierowanie zastępuje unifikację zestawów, w przeciwnym razie może mieć miejsce. Źródłowy plik app.config nie jest modyfikowany. Załóżmy na przykład, że Twoja aplikacja bezpośrednio odwołuje się do składnik .NET Framework out-of-band ale używa biblioteki innej firmy, który jest przeznaczony dla starszej wersji tego samego składnika. Podczas kompilowania aplikacji wyjściowy plik konfiguracji aplikacji jest modyfikowany do przez dołączenie przekierowania powiązania do nowszej wersji składnika. Jeśli tworzysz aplikację sieci web, pojawi się ostrzeżenie kompilacji dotyczące konfliktu powiązania, co z kolei daje możliwość dodania niezbędnego przekierowania powiązania do źródłowego pliku konfiguracji sieci web.
+Po utworzeniu aplikacji klasycznej w programie Visual Studio przeznaczonych dla platformy .NET Framework 4.5.1 lub nowszej wersji, aplikacja używa automatycznego przekierowywania powiązań. Oznacza to, że jeśli dwa składniki odwołują się do różnych wersji tego samego zestawu z silną nazwą, — środowisko uruchomieniowe automatycznie dodaje przekierowanie powiązań do nowszej wersji zestawu w pliku konfiguracyjnym (app.config) danych wyjściowych aplikacji. Przekierowanie zastępuje unifikację zestawów, w przeciwnym razie może mieć miejsce. Źródłowy plik app.config nie jest modyfikowany. Załóżmy na przykład, że Twoja aplikacja bezpośrednio odwołuje się do składnik .NET Framework out-of-band ale używa biblioteki innej firmy, który jest przeznaczony dla starszej wersji tego samego składnika. Podczas kompilowania aplikacji wyjściowy plik konfiguracji aplikacji jest modyfikowany do przez dołączenie przekierowania powiązania do nowszej wersji składnika. Jeśli tworzysz aplikację sieci web, pojawi się ostrzeżenie kompilacji dotyczące konfliktu powiązania, co z kolei daje możliwość dodania niezbędnego przekierowania powiązania do źródłowego pliku konfiguracji sieci web.
 
 Jeśli ręcznie dodasz przekierowania powiązań do pliku app.config źródła, w czasie kompilacji, Visual Studio próbuje ujednolicić zestawy w oparciu o przekierowania powiązań dodane. Załóżmy na przykład, że wstawiasz następujące przekierowanie powiązania dla zestawu:
 
@@ -119,7 +119,7 @@ Można włączyć automatyczne przekierowywanie powiązań, jeśli aplikacja jes
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Ograniczanie powiązania zestawu do określonej wersji
- Możesz użyć **appliesTo** atrybutu na [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) elementu w pliku konfiguracji aplikacji do przekierowywania odwołań do powiązań zestawów do określonej wersji programu .NET Struktura. Ten atrybut opcjonalny używa numeru wersji .NET Framework, aby wskazać dla której wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony, [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) element ma zastosowanie do wszystkich wersji programu .NET Framework.
+ Możesz użyć **appliesTo** atrybutu na [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) elementu w pliku konfiguracji aplikacji do przekierowywania odwołań do powiązań zestawów do określonej wersji programu .NET Struktura. Ten atrybut opcjonalny używa numeru wersji .NET Framework, aby wskazać dla której wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony, [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) element ma zastosowanie do wszystkich wersji programu .NET Framework.
 
  Na przykład aby przekierować powiązanie zestawu dla zestawu .NET Framework 3.5, należy dołączyć następujący kod XML w pliku konfiguracyjnym aplikacji.
 

@@ -2,15 +2,15 @@
 title: Programowanie usługi przepływu pracy narzędzia Contract-First
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 244a6973dde9aba860b08177a42a2ecd64f3479c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587607"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380193"
 ---
 # <a name="contract-first-workflow-service-development"></a>Programowanie usługi przepływu pracy narzędzia Contract-First
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Windows Workflow Foundation (WF) lepszą integrację między usługami sieci web i przepływów pracy w formie Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu. Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia projektowanie najpierw kontrakt w kodzie. Narzędzie następnie automatycznie generuje szablon działania w przyborniku dla operacji w kontrakcie. Ten temat zawiera omówienie sposobu działania i właściwości w usłudze przepływu pracy mapowania na atrybuty kontraktu usługi. Aby uzyskać przykład krok po kroku tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu usługi, zobacz [jak: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+Począwszy od programu .NET Framework 4.5, funkcji Windows Workflow Foundation (WF) lepszą integrację między usługami sieci web i przepływów pracy w formie Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu. Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia projektowanie najpierw kontrakt w kodzie. Narzędzie następnie automatycznie generuje szablon działania w przyborniku dla operacji w kontrakcie. Ten temat zawiera omówienie sposobu działania i właściwości w usłudze przepływu pracy mapowania na atrybuty kontraktu usługi. Aby uzyskać przykład krok po kroku tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu usługi, zobacz [jak: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>W tym temacie:  
   
@@ -51,8 +51,8 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Wind
 |-------------------|---------------|-----------------|-------------------|  
 |CallbackContract|Nie|Pobiera lub ustawia typ kontrakt wywołania zwrotnego, gdy kontrakt jest kontraktu dwukierunkowego.|(N/D)|  
 |ConfigurationName|Nie|Pobiera lub ustawia nazwę używaną do lokalizowania usługi w pliku konfiguracji aplikacji.|(N/D)|  
-|HasProtectionLevel|Yes|Pobiera wartość wskazującą, czy element członkowski ma przypisany poziom ochrony.|Receive.ProtectionLevel nie może mieć wartości null.|  
-|Nazwa|Yes|Pobiera lub ustawia nazwę \<portType > elementu w sieci Web Services Description Language (WSDL).|Receive.ServiceContractName.LocalName powinny być zgodne.|  
+|HasProtectionLevel|Tak|Pobiera wartość wskazującą, czy element członkowski ma przypisany poziom ochrony.|Receive.ProtectionLevel nie może mieć wartości null.|  
+|Nazwa|Tak|Pobiera lub ustawia nazwę \<portType > elementu w sieci Web Services Description Language (WSDL).|Receive.ServiceContractName.LocalName powinny być zgodne.|  
 |Przestrzeń nazw|Yes|Pobiera lub ustawia obszar nazw \<portType > elementu w sieci Web Services Description Language (WSDL).|Receive.ServiceContractName.NameSpace powinny być zgodne.|  
 |protectionLevel|Yes|Określa, czy powiązania dla kontraktu musi obsługiwać wartość właściwości ProtectionLevel.|Receive.ProtectionLevel powinny być zgodne.|  
 |SessionMode|Nie|Pobiera lub ustawia informację, czy sesje są dozwolone, niedozwolone lub wymagane.|(N/D)|  
@@ -79,11 +79,11 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Wind
   
 |Nazwa właściwości|Obsługiwane|Opis|Sprawdzanie poprawności WF|  
 |-------------------|---------------|-----------------|-------------------|  
-|HasProtectionLevel|Tak|Pobiera wartość wskazującą, czy wiadomość zawiera poziom ochrony.|Nie nastąpi sprawdzanie poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
+|HasProtectionLevel|Yes|Pobiera wartość wskazującą, czy wiadomość zawiera poziom ochrony.|Nie nastąpi sprawdzanie poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
 |Atrybut IsWrapped|Tak|Pobiera lub ustawia wartość określającą, czy treść komunikatu ma element otoki.|Nie nastąpi sprawdzanie poprawności (Receive.Content i Sendreply.Content muszą być zgodne typ kontraktu komunikatu).|  
 |protectionLevel|Nie|Pobiera lub ustawia wartość, która jest określona, czy wiadomości musi być szyfrowana, podpisany, lub obu.|(N/D)|  
 |TypeId|Yes|Po zaimplementowaniu w klasie pochodnej pobiera unikatowy identyfikator dla tego atrybutu. (Dziedziczone z atrybutu).|Nie nastąpi sprawdzanie poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
-|WrapperName|Yes|Pobiera lub ustawia nazwę elementu otoki treści wiadomości.|Nie nastąpi sprawdzanie poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
+|WrapperName|Tak|Pobiera lub ustawia nazwę elementu otoki treści wiadomości.|Nie nastąpi sprawdzanie poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
 |WrapperNamespace|Nie|Pobiera lub ustawia obszar nazw elementu otoki treści komunikatu.|(N/D)|  
   
 ### <a name="DataContract"></a> Atrybuty kontraktu danych  
@@ -100,7 +100,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Wind
 |Nazwa właściwości|Obsługiwane|Opis|Sprawdzanie poprawności WF|  
 |-------------------|---------------|-----------------|-------------------|  
 |Akcja|Tak|Pobiera lub ustawia akcję komunikat o błędzie protokołu SOAP, który jest określony jako część kontrakt operacji.|SendReply.Action powinny być zgodne.|  
-|DetailType|Tak|Pobiera typ obiektu podlegającego serializacji, który zawiera informacje o błędzie.|SendReply.Content powinien być zgodny z typem|  
+|DetailType|Yes|Pobiera typ obiektu podlegającego serializacji, który zawiera informacje o błędzie.|SendReply.Content powinien być zgodny z typem|  
 |HasProtectionLevel|Nie|Pobiera wartość wskazującą, czy komunikat o błędzie protokołu SOAP ma przypisany poziom ochrony.|(N/D)|  
 |Nazwa|Nie|Pobiera lub ustawia nazwę komunikat o błędzie w sieci Web Services Description Language (WSDL).|(N/D)|  
 |Przestrzeń nazw|Nie|Pobiera lub ustawia obszar nazw błąd protokołu SOAP.|(N/D)|  

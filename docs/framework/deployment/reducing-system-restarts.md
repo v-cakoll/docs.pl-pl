@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a491b0efd38ed7ff37c8c704b6646dddede5efb3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881596"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379915"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator używa [Menedżera ponownego uruchamiania](https://go.microsoft.com/fwlink/?LinkId=231425) do uniemożliwić systemu powoduje ponowne uruchomienie zawsze, gdy jest to możliwe podczas instalacji. Jeśli program instalacyjny aplikacji instaluje program .NET Framework, mogą łączyć się za pomocą Menedżera ponownego uruchamiania, aby móc korzystać z tej funkcji. Aby uzyskać więcej informacji, zobacz [jak: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+Instalator .NET Framework 4.5 używa [Menedżera ponownego uruchamiania](https://go.microsoft.com/fwlink/?LinkId=231425) do uniemożliwić systemu powoduje ponowne uruchomienie zawsze, gdy jest to możliwe podczas instalacji. Jeśli program instalacyjny aplikacji instaluje program .NET Framework, mogą łączyć się za pomocą Menedżera ponownego uruchamiania, aby móc korzystać z tej funkcji. Aby uzyskać więcej informacji, zobacz [jak: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Ze względu na ponowne uruchomienie  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalacja wymaga ponownego uruchomienia systemu, jeśli aplikacja .NET Framework 4 jest używana podczas instalacji. Jest to spowodowane [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] zastępuje pliki .NET Framework 4 i wymaga tych plików, które będą dostępne podczas instalacji. W wielu przypadkach można zapobiec ponownego uruchomienia przez prewencyjnego wykrywanie i closing.NET Framework 4 aplikacje, które są używane. Jednak niektóre aplikacje systemu nie muszą być zamknięte. W takich przypadkach nie można uniknąć ponownego uruchomienia komputera.  
+ Instalacji programu .NET Framework 4.5 wymaga ponownego uruchomienia systemu, jeśli aplikacja .NET Framework 4 jest używana podczas instalacji. Jest to spowodowane .NET Framework 4.5 zastępuje pliki .NET Framework 4 i wymaga tych plików, które będą dostępne podczas instalacji. W wielu przypadkach można zapobiec ponownego uruchomienia przez prewencyjnego wykrywanie i closing.NET Framework 4 aplikacje, które są używane. Jednak niektóre aplikacje systemu nie muszą być zamknięte. W takich przypadkach nie można uniknąć ponownego uruchomienia komputera.  
   
 ## <a name="end-user-experience"></a>Środowisko użytkownika końcowego  
- Użytkownik końcowy, kto wykonuje pełną instalację programu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] jest możliwość uniknąć ponownego uruchomienia systemu, jeśli Instalator wykryje aplikacji .NET Framework 4 w użyciu. Komunikat wyświetla listę wszystkich uruchomionych aplikacji .NET Framework 4 i zapewnia możliwość Zamknij te aplikacje, przed rozpoczęciem instalacji. Jeśli użytkownik potwierdzi, te aplikacje są zamykane przez Instalatora, a następnie ponowne uruchomienie systemu jest unikane. Jeśli użytkownik nie odpowiada na komunikat w określonym czasie, instalacja będzie kontynuowana bez zamykania aplikacji.  
+ Użytkownik końcowy, kto wykonuje pełnej instalacji programu .NET Framework 4.5 jest możliwość uniknąć ponownego uruchomienia systemu, jeśli Instalator wykryje aplikacji .NET Framework 4 w użyciu. Komunikat wyświetla listę wszystkich uruchomionych aplikacji .NET Framework 4 i zapewnia możliwość Zamknij te aplikacje, przed rozpoczęciem instalacji. Jeśli użytkownik potwierdzi, te aplikacje są zamykane przez Instalatora, a następnie ponowne uruchomienie systemu jest unikane. Jeśli użytkownik nie odpowiada na komunikat w określonym czasie, instalacja będzie kontynuowana bez zamykania aplikacji.  
   
  Jeśli Menedżera ponownego uruchamiania wykryje sytuację, która będzie wymagać ponownego uruchomienia systemu, nawet wtedy, gdy działające aplikacje zostaną zamknięte, nie jest wyświetlany komunikat.  
   

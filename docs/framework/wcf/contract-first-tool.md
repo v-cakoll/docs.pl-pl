@@ -2,15 +2,15 @@
 title: Narzędzie Contract-First
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 95aef67eb43176ab062b38979e714f232898f221
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652072"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380373"
 ---
 # <a name="contract-first-tool"></a>Narzędzie Contract-First
-Kontrakty usług często muszą zostać utworzone z istniejącymi usługami. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], klasy kontraktu danych mogą być tworzone automatycznie z istniejącymi usługami za pomocą narzędzie contract-first. Aby użyć narzędzie contract-first, plik definicji schematu XML (XSD), należy pobrać lokalnie; Narzędzie nie może zaimportować kontraktów danych zdalnych za pośrednictwem protokołu HTTP.
+Kontrakty usług często muszą zostać utworzone z istniejącymi usługami. W programie .NET Framework 4.5 klasy kontraktu danych mogą być tworzone automatycznie z istniejącymi usługami za pomocą narzędzie contract-first. Aby użyć narzędzie contract-first, plik definicji schematu XML (XSD), należy pobrać lokalnie; Narzędzie nie może zaimportować kontraktów danych zdalnych za pośrednictwem protokołu HTTP.
 
  Narzędzie contract-first jest zintegrowana w Visual Studio 2012 jako zadanie kompilacji. Kod generowany przez zadanie kompilacji tworzonych każdym razem, gdy projekt jest kompilowany, tak, aby projekt łatwo można przyjąć zmiany podstawowego kontraktu usługi.
 

@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628874"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377736"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
 
 Gdy używasz opartego na zadaniach asynchronicznej wzorca (TAP) do pracy z operacji asynchronicznych, możesz korzystać z wywołań zwrotnych do osiągnięcia oczekiwania bez blokowania.  W przypadku zadań jest to realizowane przez metody takie jak <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Obsługa komunikacji asynchronicznej opartych na języku ukrywa wywołań zwrotnych, umożliwiając operacji asynchronicznych Oczekiwanie w ramach normalnych sterowanie przepływem i kod generowany przez kompilator obsługuje ten sam poziom interfejsu API.
 
 ## <a name="suspending-execution-with-await"></a>Zawieszenie wykonywania za pomocą Await
- Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], możesz użyć [await](~/docs/csharp/language-reference/keywords/await.md) — słowo kluczowe w języku C# i [operatora Await](~/docs/visual-basic/language-reference/operators/await-operator.md) w języku Visual Basic asynchronicznie oczekują na <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiektów. Jeśli masz oczekujące na <xref:System.Threading.Tasks.Task>, `await` wyrażenie jest typu `void`. Jeśli masz oczekujące na <xref:System.Threading.Tasks.Task%601>, `await` wyrażenie jest typu `TResult`. `await` Wyrażenie musi wystąpić w treści metody asynchronicznej. Aby uzyskać więcej informacji na temat języka C# i Visual Basic obsługują w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz temat specyfikacji języka C# i Visual Basic.
+ Począwszy od programu .NET Framework 4.5, można użyć [await](~/docs/csharp/language-reference/keywords/await.md) — słowo kluczowe w C# i [operatora Await](~/docs/visual-basic/language-reference/operators/await-operator.md) w języku Visual Basic asynchronicznie oczekują na <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiektów. Jeśli masz oczekujące na <xref:System.Threading.Tasks.Task>, `await` wyrażenie jest typu `void`. Jeśli masz oczekujące na <xref:System.Threading.Tasks.Task%601>, `await` wyrażenie jest typu `TResult`. `await` Wyrażenie musi wystąpić w treści metody asynchronicznej. Aby uzyskać więcej informacji na temat C# i obsługi języków Visual Basic w programie .NET Framework 4.5, zobacz C# i specyfikacje języka Visual Basic.
 
  Dzieje się w tle funkcje await instaluje wywołanie zwrotne do zadania za pomocą kontynuacji.  To wywołanie zwrotne wznawia metody asynchronicznej w punkcie zawieszenia. Po wznowieniu metody asynchronicznej Jeśli oczekiwane działanie, zakończyło się pomyślnie i został <xref:System.Threading.Tasks.Task%601>, jego `TResult` jest zwracana.  Jeśli <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> , oczekiwany zostało zakończone w <xref:System.Threading.Tasks.TaskStatus.Canceled> stanu, <xref:System.OperationCanceledException> wyjątku.  Jeśli <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> , oczekiwany zostało zakończone w <xref:System.Threading.Tasks.TaskStatus.Faulted> stanu, jest zgłaszany wyjątek, który spowodował jego błędów. A `Task` błędów wyniku wiele wyjątków może, ale tylko jeden z tych wyjątków jest propagowany. Jednak <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> właściwość zwraca <xref:System.AggregateException> wyjątek, który zawiera wszystkie błędy.
 
@@ -833,7 +833,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> <xref:System.Threading.Tasks.Dataflow> Przestrzeni nazw jest dostępna w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] za pośrednictwem **NuGet**. Aby zainstalować zestaw, który zawiera <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w programie Visual Studio, wybierz polecenie **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online pakiet Microsoft.Tpl.Dataflow.
+> <xref:System.Threading.Tasks.Dataflow> Przestrzeni nazw jest dostępna w .NET Framework 4.5, za pośrednictwem **NuGet**. Aby zainstalować zestaw, który zawiera <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w programie Visual Studio, wybierz polecenie **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online pakiet Microsoft.Tpl.Dataflow.
 
 ## <a name="see-also"></a>Zobacz także
 

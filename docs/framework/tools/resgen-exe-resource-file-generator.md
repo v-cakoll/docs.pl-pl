@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623345"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378465"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generator pliku zasobów)
 Generator plików zasobów (Resgen.exe) konwertuje pliki tekstowe (txt lub restext) i pliki zasobów w formacie XML (resx) na pliki binarne (resources) środowiska uruchomieniowego języka wspólnego, które można osadzić w binarnym pliku wykonywalnym środowiska uruchomieniowego lub zestawie satelickim. (Zobacz [tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -73,7 +73,7 @@ resgen filename.extension [outputDirectory]
   
 |Parametr lub opcja|Opis|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *symbol2*,...]|Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], obsługiwane jest kompilowanie warunkowe w tekstowych (txt lub restext) plikach zasobów. Jeśli *symbol* odpowiada symbolowi umieszczonemu w wejściowym pliku tekstowym w ramach `#ifdef` konstrukcji zasobu ciągu skojarzonego znajdują się w pliku Resources. Jeśli wejściowy plik tekstowy zawiera `#if !` instrukcji z symbolem, który nie jest zdefiniowany przez `/define` zasobu ciągu skojarzonego przełącznika znajdują się w pliku zasobów.<br /><br /> `/define` jest ignorowana, jeśli jest używana z plikami innymi niż tekstowe. W symbolach jest uwzględniania wielkość liter.<br /><br /> Aby uzyskać więcej informacji na temat tej opcji, zobacz [warunkowe kompilowanie zasobów](#Conditional) w dalszej części tego tematu.|  
+|`/define:` *symbol1*[, *symbol2*,...]|Począwszy od programu .NET Framework 4.5, obsługiwane jest kompilowanie warunkowe w tekstowych (txt lub restext) plikach zasobów. Jeśli *symbol* odpowiada symbolowi umieszczonemu w wejściowym pliku tekstowym w ramach `#ifdef` konstrukcji zasobu ciągu skojarzonego znajdują się w pliku Resources. Jeśli wejściowy plik tekstowy zawiera `#if !` instrukcji z symbolem, który nie jest zdefiniowany przez `/define` zasobu ciągu skojarzonego przełącznika znajdują się w pliku zasobów.<br /><br /> `/define` jest ignorowana, jeśli jest używana z plikami innymi niż tekstowe. W symbolach jest uwzględniania wielkość liter.<br /><br /> Aby uzyskać więcej informacji na temat tej opcji, zobacz [warunkowe kompilowanie zasobów](#Conditional) w dalszej części tego tematu.|  
 |`useSourcePath`|Określa, że bieżący katalog pliku wejściowego ma być używany na potrzeby rozpoznawania względnych ścieżek plików.|  
 |`/compile`|Umożliwia określenie wielu plików tekstowych lub resx w celu konwersji na wiele plików resources w pojedynczej zbiorczej operacji. Jeśli ta opcja nie jest określona, można określić tylko jeden argument pliku wejściowego. Pliki wyjściowe są nazywane *filename*Resources.<br /><br /> Tej opcji nie można używać z `/str:` opcji.<br /><br /> Aby uzyskać więcej informacji na temat tej opcji, zobacz [kompilowanie lub konwertowanie wielu plików](#Multiple) w dalszej części tego tematu.|  
 |`/r:``assembly`|Odwołuje się do metadanych z określonego zestawu. Jest używana podczas konwersji plików resx i zezwala programowi Resgen.exe na serializację lub deserializację zasobów obiektu. Jest on podobny do `/reference:` lub `/r:` opcje Kompilatory języka C# i Visual Basic.|  
@@ -244,7 +244,7 @@ resgen MyApp.exe Win8Resources
   
 <a name="Conditional"></a>   
 ### <a name="conditionally-compiling-resources"></a>Warunkowe kompilowanie zasobów  
- Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Resgen.exe obsługuje kompilację warunkową zasobów ciągów w plikach tekstowych (txt i restext). Dzięki temu można używać pojedynczego pliku zasobów w formacie tekstowym w wielu konfiguracjach kompilacji.  
+ Począwszy od programu .NET Framework 4.5, Resgen.exe obsługuje kompilację warunkową zasobów ciągów w plikach tekstowych (txt i restext). Dzięki temu można używać pojedynczego pliku zasobów w formacie tekstowym w wielu konfiguracjach kompilacji.  
   
  W pliku txt lub restext należy użyć `#ifdef`...`#endif` konstrukcja do dołączenia zasobu do binarnego pliku Resources, jeśli symbol jest zdefiniowana, a używasz `#if !`... `#endif` do dołączenia zasobu, jeśli nie zdefiniowano symbolu. W czasie kompilacji, należy zdefiniować symbole za pomocą `/define:` opcji następuje rozdzielana przecinkami lista symboli. Porównanie uwzględnia wielkości liter; wielkość liter w symbolach zdefiniowanych przez `/define` musi odpowiadać wielkości liter w symbolach w plikach tekstowych do skompilowania.  
   

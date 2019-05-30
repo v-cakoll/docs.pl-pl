@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664337"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378299"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Obsługuje wiele scenariuszy programowania oprogramowania za pomocą [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Te scenariusze można podzielić na trzy kategorie:
+.NET Framework 4.5 obsługuje wiele scenariuszy programowania oprogramowania za pomocą [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Te scenariusze można podzielić na trzy kategorie:
 
 - Tworzenie [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji przy użyciu XAML kontrolki, zgodnie z opisem w [plan for Windows Store apps przy użyciu języka C# lub Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [jak OT (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), i [Omówienie aplikacji .NET dla Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ ms.locfileid: "64664337"
 - Typy w składniku mogą pochodzić od [!INCLUDE[wrt](../../../includes/wrt-md.md)] typów. Formanty może pochodzić z typu pierwotnego kontrola <xref:Windows.UI.Xaml.Controls.Primitives> przestrzeni nazw lub od bardziej zakończy formantów takich jak <xref:Windows.UI.Xaml.Controls.Button>.
 
     > [!IMPORTANT]
-    >  Począwszy od [!INCLUDE[win8](../../../includes/win8-md.md)] i [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wszystkie typy publiczne w zarządzanej [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika musi być zapieczętowany. Typ w innym [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika nie może pochodzić z nich. Jeśli chcesz zapewnić zachowanie polimorficzne w składniku, można utworzyć interfejsu i wdrożenie go w typach polimorficznych.
+    >  Począwszy od [!INCLUDE[win8](../../../includes/win8-md.md)] i .NET Framework 4.5, wszystkie typy publiczne w zarządzanej [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika musi być zapieczętowany. Typ w innym [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika nie może pochodzić z nich. Jeśli chcesz zapewnić zachowanie polimorficzne w składniku, można utworzyć interfejsu i wdrożenie go w typach polimorficznych.
 
 - Wszystkie typy parametrów i zwrotu w publicznych typach w składniku muszą być [!INCLUDE[wrt](../../../includes/wrt-md.md)] typy (włącznie z [!INCLUDE[wrt](../../../includes/wrt-md.md)] typy, które definiuje składnika).
 

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750429"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379935"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest redystrybucyjnego środowiska uruchomieniowego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć (łańcuch) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator w ramach wymagań wstępnych instalacji aplikacji. Obecne środowisko dostosowany lub ujednoliconego Instalatora, może chcesz uruchomić w trybie dyskretnym [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i śledzić postęp podczas wyświetlania postępu instalacji aplikacji. Aby włączyć śledzenie dyskretnej [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora (mogą być odtwarzane) definiuje protokół, za pomocą mapowanych na pamięć segment operacji We/Wy (rozwiązanie MMIO) do komunikowania się z ustawień (obserwatora lub chainer). Protokół ten definiuje sposób chainer uzyskać informacje o postępie, Uzyskaj szczegółowe wyniki, odpowiadanie na wiadomości i anulować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora.
+.NET Framework 4.5 jest redystrybucyjnego środowiska uruchomieniowego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć Instalatora .NET Framework 4.5 (łańcuch) w ramach wymagań wstępnych instalacji aplikacji. Do prezentowania środowisko dostosowany lub ujednoliconego Instalatora, możesz dyskretnie uruchomić Instalator programu .NET Framework 4.5 i śledzić postęp podczas wyświetlania postępu instalacji aplikacji. Aby włączyć śledzenie w trybie dyskretnym, Instalator programu .NET Framework 4.5, (które mogą być odtwarzane) definiuje protokół, za pomocą mapowanych na pamięć segment operacji We/Wy (rozwiązanie MMIO) do komunikowania się z ustawień (obserwatora lub chainer). Protokół ten definiuje sposób chainer uzyskać informacje o postępie, Uzyskaj szczegółowe wyniki, odpowiadanie na wiadomości i anulować instalację programu .NET Framework 4.5.
 
-- **Wywołania**. Aby wywołać [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i otrzymywać informacje o postępie w sekcji Rozwiązanie MMIO, program instalacyjny, należy wykonać następujące czynności:
+- **Wywołania**. Aby wywołać Instalatora .NET Framework 4.5 i otrzymywać informacje o postępie w sekcji Rozwiązanie MMIO, program instalacyjny, wykonaj następujące czynności:
 
-    1. Wywołaj [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]pakiet redystrybucyjny programu:
+    1. Wywołania programu .NET Framework 4.5redistributable:
 
         ```
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
@@ -36,9 +36,9 @@ ms.locfileid: "64750429"
 
         Zamień tych nazw z nazwami, które są unikatowe dla programu instalacyjnego.
 
-    2. Przeczytaj, w sekcji Rozwiązanie MMIO. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], operacje pobierania i instalacji są jednocześnie: Jedną z części pakietu programu .NET Framework może być instalowany podczas pobierania innej części. W rezultacie postępu są wysyłane z powrotem (zapisywanych) w sekcji Rozwiązanie MMIO jako dwóch liczb (`m_downloadSoFar` i `m_installSoFar`), zwiększyć z zakresu od 0 do 255. Po zapisaniu 255 i umożliwia zamknięcie systemu .NET Framework, instalacja została zakończona.
+    2. Przeczytaj, w sekcji Rozwiązanie MMIO. W .NET Framework 4.5 operacji pobierania i instalacji są jednocześnie: Jedną z części pakietu programu .NET Framework może być instalowany podczas pobierania innej części. W rezultacie postępu są wysyłane z powrotem (zapisywanych) w sekcji Rozwiązanie MMIO jako dwóch liczb (`m_downloadSoFar` i `m_installSoFar`), zwiększyć z zakresu od 0 do 255. Po zapisaniu 255 i umożliwia zamknięcie systemu .NET Framework, instalacja została zakończona.
 
-- **Kody zakończenia**. Następujące kody zakończenia z polecenia do wywołania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] program do dystrybucji wskazuje, czy Instalator ma zakończonych powodzeniem lub niepowodzeniem:
+- **Kody zakończenia**. Następujące kody zakończenia z polecenia do wywołania pakiet redystrybucyjny programu .NET Framework 4.5 wskazują, czy Instalator ma zakończonych powodzeniem lub niepowodzeniem:
 
   - 0 — instalacja została ukończona pomyślnie.
 
@@ -52,7 +52,7 @@ ms.locfileid: "64750429"
 
 ## <a name="chainer-sample"></a>Przykładowe chainer
 
-Przykładowe Chainer dyskretnie uruchamia i śledzi [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora podczas wyświetlania postępu. Ten przykład jest podobny do przykładu Chainer dostępnego dla programu .NET Framework 4. Jednak dodatkowo go można uniknąć ponownych uruchomień systemu przez przetwarzanie okno komunikatu do zamykania aplikacji .NET Framework 4. Aby dowiedzieć się, to okno komunikatu, zobacz [zmniejszenie uruchamia ponownie podczas .NET Framework 4.5 instalacji systemów](../../../docs/framework/deployment/reducing-system-restarts.md). Możesz użyć tego przykładu z Instalatorem .NET Framework 4; w tym scenariuszu komunikat po prostu nie są wysyłane.
+Przykładowe Chainer dyskretnie uruchamia i śledzi Instalatora .NET Framework 4.5, podczas wyświetlania postępu. Ten przykład jest podobny do przykładu Chainer dostępnego dla programu .NET Framework 4. Jednak dodatkowo go można uniknąć ponownych uruchomień systemu przez przetwarzanie okno komunikatu do zamykania aplikacji .NET Framework 4. Aby dowiedzieć się, to okno komunikatu, zobacz [zmniejszenie uruchamia ponownie podczas .NET Framework 4.5 instalacji systemów](../../../docs/framework/deployment/reducing-system-restarts.md). Możesz użyć tego przykładu z Instalatorem .NET Framework 4; w tym scenariuszu komunikat po prostu nie są wysyłane.
 
 > [!WARNING]
 > Należy uruchomić przykład jako administrator.
@@ -63,7 +63,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h C
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- Plik MMIOChainer.h (zobacz [uzupełnianie kodu](https://go.microsoft.com/fwlink/?LinkId=231369)) zawiera definicję struktury danych i klasa bazowa, z której powinna pochodzić klasy chainer. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Rozszerza rozwiązanie MMIO struktury danych do obsługi danych, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatorowi. Zmian w strukturze rozwiązanie MMIO są zgodne wstecz, aby chainer .NET Framework 4 można pracować z Instalatora .NET Framework 4.5, bez konieczności ponownej kompilacji. Jednak ten scenariusz nie obsługuje tę funkcję w celi zmniejszenia ponownego uruchomienia systemu.
+- Plik MMIOChainer.h (zobacz [uzupełnianie kodu](https://go.microsoft.com/fwlink/?LinkId=231369)) zawiera definicję struktury danych i klasa bazowa, z której powinna pochodzić klasy chainer. .NET Framework 4.5 rozszerza rozwiązanie MMIO struktury danych do obsługi danych wymagających przez Instalatora programu .NET Framework 4.5. Zmian w strukturze rozwiązanie MMIO są zgodne wstecz, aby chainer .NET Framework 4 można pracować z Instalatora .NET Framework 4.5, bez konieczności ponownej kompilacji. Jednak ten scenariusz nie obsługuje tę funkcję w celi zmniejszenia ponownego uruchomienia systemu.
 
     Pole wersji zapewnia sposób identyfikacji poprawki do formatu struktury i komunikatu. Instalator .NET Framework Określa wersję interfejsu chainer przez wywołanie metody `VirtualQuery` funkcję, aby określić rozmiar mapowania pliku. Jeśli rozmiar jest wystarczająco duża, aby uwzględnić pole wersji, Instalatora .NET Framework używa określonej wartości. W przypadku mapowania pliku jest zbyt mała, aby zawierać pole wersji, która jest w przypadku programu .NET Framework 4, proces instalacji zakłada wersja 0 (4). W przypadku chainer nie obsługuje wersji komunikat, który chce wysłać Instalatora .NET Framework, .NET Framework setup zakłada odpowiedź Ignoruj.
 
@@ -96,7 +96,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h C
         };
     ```
 
-- `MmioDataStructure` Strukturę danych nie powinny być używane bezpośrednio; użyj `MmioChainer` zamiast klasy do zaimplementowania swoje chainer. Pochodzi od `MmioChainer` klasa do tworzenia łańcucha [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] do dystrybucji.
+- `MmioDataStructure` Strukturę danych nie powinny być używane bezpośrednio; użyj `MmioChainer` zamiast klasy do zaimplementowania swoje chainer. Pochodzi od `MmioChainer` klasy, aby utworzyć łańcuch redystrybucyjnego .NET Framework 4.5.
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
@@ -151,7 +151,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h C
     }
     ```
 
-- Przed uruchomieniem instalacji, chainer sprawdza, czy [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] jest już zainstalowany przez wywołanie metody `IsNetFx4Present`:
+- Przed uruchomieniem instalacji, chainer sprawdza, czy program .NET Framework 4.5 jest już zainstalowany przez wywołanie metody `IsNetFx4Present`:
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -307,7 +307,7 @@ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h C
     ```
 
     > [!IMPORTANT]
-    > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Pakiet redystrybucyjny zwykle zapisuje komunikaty o postępie wielu i jednego komunikat, który wskazuje ukończenie (po stronie chainer). Odczytuje również asynchronicznie, wyszukiwanie `Abort` rekordów. Jeśli odbierze `Abort` rekordu, go anuluje instalację i zapisuje Zakończono rekord z E_ABORT jako jego dane po instalacji zostało przerwane i operacje instalacji ma została wycofana.
+    > .NET Framework 4.5 redistributable zwykle zapisuje komunikaty o postępie wielu i jednego komunikat, który wskazuje ukończenie (po stronie chainer). Odczytuje również asynchronicznie, wyszukiwanie `Abort` rekordów. Jeśli odbierze `Abort` rekordu, go anuluje instalację i zapisuje Zakończono rekord z E_ABORT jako jego dane po instalacji zostało przerwane i operacje instalacji ma została wycofana.
 
 Typowy serwer tworzy losowe rozwiązanie MMIO nazwę pliku, tworzy plik (jak pokazano w poprzednim przykładzie kodu na `Server::CreateSection`) i uruchamia pakiet redystrybucyjny programu za pomocą `CreateProcess` nazw przy użyciu metody i przekazywania potoku `-pipe someFileSectionName` opcji. Serwer powinien implementować `OnProgress`, `Send`, i `Finished` metody z kodu specyficznego dla interfejsu użytkownika aplikacji.
 

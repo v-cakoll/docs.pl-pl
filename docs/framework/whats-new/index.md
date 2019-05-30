@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14ef6eec2503c0af1a7b1fd5ed2dd289978d6fcc
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
-ms.translationtype: HT
+ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301321"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378551"
 ---
 # <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 
@@ -1200,7 +1200,7 @@ W programie .NET Framework 4.6.2 Windows Workflow Foundation została rozszerzon
 
 **Obsługa wyrażeń języka C# i technologii IntelliSense w Projektancie WF Re-hosted**
 
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF obsługuje wyrażeń języka C# w obu projektanta programu Visual Studio i przepływy pracy kodu. Re-hosted projektanta przepływu pracy jest kluczowym elementem WF umożliwiający projektanta przepływów pracy w aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation udostępnia możliwość obsługi wyrażeń języka C# i technologii IntelliSense w Projektancie przepływu pracy Re-hosted. Aby uzyskać więcej informacji, zobacz [blogu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
+Począwszy od programu .NET Framework 4.5, obsługuje WF C# wyrażeń w obu projektanta programu Visual Studio i przepływy pracy kodu. Re-hosted projektanta przepływu pracy jest kluczowym elementem WF umożliwiający projektanta przepływów pracy w aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation udostępnia możliwość obsługi wyrażeń języka C# i technologii IntelliSense w Projektancie przepływu pracy Re-hosted. Aby uzyskać więcej informacji, zobacz [blogu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` W wersjach programu .NET Framework wcześniejszych niż .NET Framework 4.6.2 funkcja IntelliSense programu WF projektanta został przerwany, gdy klient ponownie kompiluje projekt przepływu pracy w programie Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływów pracy nie znajdują się w Projektancie i ostrzeżenia z technologii IntelliSense dla brakujących typy przepływów pracy są wyświetlane w **lista błędów** okna. .NET Framework 4.6.2 rozwiązuje ten problem i udostępnia funkcję IntelliSense.
 
@@ -1417,7 +1417,7 @@ Przy użyciu plików PDB Ngen NGen można utworzyć pliku PDB, który zawiera ma
 
     - **Wiązanie modelu obsługuje zwracania zadania metody**
 
-         W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ASP.NET dodano funkcję powiązań modelu włączone rozszerzalne, skoncentrowane na kodzie sposobem operacje na danych opartych na podejściu CRUD w stron formularzy sieci Web i kontrolki użytkownika. Obsługuje teraz system wiązania modelu <xref:System.Threading.Tasks.Task>-zwracania metody wiązania modelu. Ta funkcja umożliwia deweloperom formularzy sieci Web przy użyciu nowszych wersji ORMs, łącznie z programu Entity Framework korzystać ze skalowalności zalet async z łatwością systemu powiązanie danych.
+         W .NET Framework 4.5 ASP.NET dodaje funkcję powiązań modelu włączone rozszerzalne, skoncentrowane na kodzie sposobem operacje na danych opartych na podejściu CRUD w stron formularzy sieci Web i kontrolki użytkownika. Obsługuje teraz system wiązania modelu <xref:System.Threading.Tasks.Task>-zwracania metody wiązania modelu. Ta funkcja umożliwia deweloperom formularzy sieci Web przy użyciu nowszych wersji ORMs, łącznie z programu Entity Framework korzystać ze skalowalności zalet async z łatwością systemu powiązanie danych.
 
          Asynchroniczne wiązanie modelu jest kontrolowana przez `aspnet:EnableAsyncModelBinding` ustawienia konfiguracji.
 
@@ -1864,7 +1864,7 @@ Przy użyciu plików PDB Ngen NGen można utworzyć pliku PDB, który zawiera ma
 
 Nowe funkcje i ulepszenia w klasach bazowych w programie .NET Framework 4.5.1 obejmują:
 
-- Automatyczne przekierowywanie powiązań zestawów. Począwszy od programu Visual Studio 2013, gdy kompilujesz aplikację, który jest przeznaczony dla [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], przekierowania powiązań mogą być dodawane do pliku konfiguracji aplikacji Jeśli Twoja aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Można również włączyć tę funkcję dla projektów przeznaczonych dla starszych wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Automatyczne przekierowywanie powiązań zestawów. Począwszy od programu Visual Studio 2013 podczas kompilowania aplikacji, które elementy docelowe programu .NET Framework 4.5.1, przekierowania powiązań mogą być dodawane do pliku konfiguracji aplikacji Jeśli Twoja aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Można również włączyć tę funkcję dla projektów przeznaczonych dla starszych wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Możliwość zbierania informacji diagnostycznych, aby pomóc deweloperom ulepszyć wydajność aplikacji serwera i chmury. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> i <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> metody <xref:System.Diagnostics.Tracing.EventSource> klasy.
 
@@ -1912,7 +1912,7 @@ Aby uzyskać nowe funkcje w programie ASP.NET 4.5.1, zobacz [ASP.NET and Web Too
 
 - Wsparcie dla tablic, które są większe niż 2 gigabajty (GB) na platformach 64-bitowych. Tę funkcję można włączyć w pliku konfiguracyjnym aplikacji. Zobacz [ \<gcAllowVeryLargeObjects > element](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), która zawiera również inne ograniczenia dotyczące obiektu i rozmiaru tablicy.
 
-- Lepszą wydajność dzięki bezużytecznych w tle dla serwerów. Kiedy używasz wyrzucanie elementów bezużytecznych serwera w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrzucanie elementów bezużytecznych w tle jest włączane automatycznie. W sekcji tła serwer wyrzucania elementów bezużytecznych [podstawowe informacje dotyczące wyrzucania elementów bezużytecznych](../../standard/garbage-collection/fundamentals.md) tematu.
+- Lepszą wydajność dzięki bezużytecznych w tle dla serwerów. Gdy używasz serwer wyrzucania elementów bezużytecznych w .NET Framework 4.5, wyrzucanie elementów bezużytecznych w tle jest włączane automatycznie. W sekcji tła serwer wyrzucania elementów bezużytecznych [podstawowe informacje dotyczące wyrzucania elementów bezużytecznych](../../standard/garbage-collection/fundamentals.md) tematu.
 
 - Kompilacja just-in-time (JIT) tła, która jest opcjonalnie dostępna na wielordzeniowych procesorach, aby zwiększyć wydajność aplikacji. Zobacz <xref:System.Runtime.ProfileOptimization>.
 
@@ -1940,7 +1940,7 @@ Aby uzyskać nowe funkcje w programie ASP.NET 4.5.1, zobacz [ASP.NET and Web Too
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
-W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Managed Extensibility Framework (MEF) udostępnia następujące nowe funkcje:
+W .NET Framework 4.5 Managed Extensibility Framework (MEF) udostępnia następujące nowe funkcje:
 
 - Obsługa typów ogólnych.
 
@@ -1954,13 +1954,13 @@ Aby uzyskać więcej informacji, zobacz [Managed Extensibility Framework (MEF)](
 
 ### <a name="asynchronous-file-operations"></a>Asynchroniczne operacje na plikach
 
-W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], nowe funkcje asynchroniczne zostały dodane do języków C# i Visual Basic. Te funkcje Dodawanie modelu opartego na zadaniach do wykonywania operacji asynchronicznych. Aby użyć tego nowego modelu, należy użyć metody asynchronicznej klas we/wy. Zobacz [asynchroniczne We/Wy pliku](../../standard/io/asynchronous-file-i-o.md).
+W .NET Framework 4.5, nowe funkcje asynchroniczne zostały dodane do C# i języków Visual Basic. Te funkcje Dodawanie modelu opartego na zadaniach do wykonywania operacji asynchronicznych. Aby użyć tego nowego modelu, należy użyć metody asynchronicznej klas we/wy. Zobacz [asynchroniczne We/Wy pliku](../../standard/io/asynchronous-file-i-o.md).
 
 <a name="tools" />
 
 ### <a name="tools"></a>Narzędzia
 
-W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Generator plików zasobów (Resgen.exe) umożliwia utworzenie pliku .resw do użytku w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji z pliku Resources osadzonego w zestawie programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen.exe (Generator pliku zasobów)](../tools/resgen-exe-resource-file-generator.md).
+W .NET Framework 4.5 Resource File Generator (Resgen.exe) umożliwia utworzenie pliku .resw do użytku w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji z pliku Resources osadzonego w zestawie programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen.exe (Generator pliku zasobów)](../tools/resgen-exe-resource-file-generator.md).
 
 Zarządzane profilowana Optymalizacja (Mpgo.exe) pozwala na poprawę czas uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepustowości poprzez optymalizację zestawów obrazu natywnego. Narzędzie wiersza polecenia generuje dane profilów dla zestawów natywnych obrazów aplikacji. Zobacz [Mpgo.exe (narzędzie optymalizacji sterowanej zarządzanym profilem)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od programu Visual Studio 2013, możesz użyć Mpgo.exe do optymalizacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
 
@@ -1968,7 +1968,7 @@ Zarządzane profilowana Optymalizacja (Mpgo.exe) pozwala na poprawę czas urucha
 
 ### <a name="parallel-computing"></a>Obliczenia równoległe
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Zawiera kilka nowych funkcji i udoskonaleń do obliczeń równoległych. Obejmują one lepszą wydajność, zwiększoną kontrolę, Ulepszona obsługa programowania asynchronicznego, nową bibliotekę przepływu danych i lepszą obsługę równoległych analiz debugowania i wydajności. Zobacz wpis [nowości w równoległości obliczeń w .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) w Programowanie równoległe z bloga platformy .NET.
+.NET Framework 4.5 zapewnia kilka nowych funkcji i udoskonaleń do obliczeń równoległych. Obejmują one lepszą wydajność, zwiększoną kontrolę, Ulepszona obsługa programowania asynchronicznego, nową bibliotekę przepływu danych i lepszą obsługę równoległych analiz debugowania i wydajności. Zobacz wpis [nowości w równoległości obliczeń w .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) w Programowanie równoległe z bloga platformy .NET.
 
 <a name="web" />
 
@@ -1982,11 +1982,11 @@ Program ASP.NET 4.5 i 4.5.1 dodaje powiązanie modelu dla formularzy sieci Web, 
 
 ### <a name="networking-a-namenetworking-"></a>Sieć <a name="networking" />
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Oferuje nowy interfejs programowania aplikacji protokołu HTTP. Aby uzyskać więcej informacji, zobacz nową <xref:System.Net.Http?displayProperty=nameWithType> i <xref:System.Net.Http.Headers?displayProperty=nameWithType> przestrzeni nazw.
+.NET Framework 4.5 zapewnia nowy interfejs programowania aplikacji protokołu HTTP. Aby uzyskać więcej informacji, zobacz nową <xref:System.Net.Http?displayProperty=nameWithType> i <xref:System.Net.Http.Headers?displayProperty=nameWithType> przestrzeni nazw.
 
 Obsługa jest również nowy interfejs programowania dla akceptowania i interakcji z połączeniem WebSocket przy użyciu istniejących <xref:System.Net.HttpListener> i pokrewne klasy. Aby uzyskać więcej informacji, zobacz nową <xref:System.Net.WebSockets> przestrzeni nazw i <xref:System.Net.HttpListener> klasy.
 
-Ponadto [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] obejmuje następujące ulepszenia sieciowe:
+Ponadto program .NET Framework 4.5 zawiera następujące ulepszenia sieciowe:
 
 - Obsługa URI zgodna ze specyfikacją RFC. Aby uzyskać więcej informacji, zobacz <xref:System.Uri> i pokrewne klasy.
 
@@ -2002,7 +2002,7 @@ Ponadto [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] obejmuje następuj�
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Presentation Foundation (WPF) zawiera zmiany i udoskonalenia w następujących obszarach:
+W .NET Framework 4.5 Windows Presentation Foundation (WPF) zawiera zmiany i udoskonalenia w następujących obszarach:
 
 - Nowy <xref:System.Windows.Controls.Ribbon.Ribbon> formant, który umożliwia implementację interfejsu użytkownika wstążki, który jest hostem kart, Menu aplikacji i paska narzędzi Szybki dostęp.
 
@@ -2026,7 +2026,7 @@ W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Presentation Fou
 
 ### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], następujące funkcje zostały dodane do ułatwi zapis i konserwację aplikacji Windows Communication Foundation (WCF):
+W .NET Framework 4.5 następujące funkcje zostały dodane do ułatwi zapis i konserwację aplikacji Windows Communication Foundation (WCF):
 
 - Uproszczenie wygenerowanych plików konfiguracyjnych.
 
@@ -2068,9 +2068,9 @@ Aby uzyskać więcej informacji, zobacz [What's New in Windows Communication Fou
 
 ### <a name="windows-workflow-foundation-wf"></a>Program Windows Workflow Foundation (WF)
 
-W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kilka nowych funkcji dodanych do Windows Workflow Foundation (WF), w tym:
+W .NET Framework 4.5, kilka nowych funkcji dodanych do Windows Workflow Foundation (WF), w tym:
 
-- Stan przepływów pracy maszyny, które zostały najpierw wprowadzone w ramach programu .NET Framework 4.0.1 ([platformy aktualizacji 1 dla programu .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092)). Ta aktualizacja zawierała kilka nowych klas i działań, które umożliwiły deweloperom tworzenie przepływów pracy automatu stanów. Te klasy i działania zostały zaktualizowane dla [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] do uwzględnienia:
+- Stan przepływów pracy maszyny, które zostały najpierw wprowadzone w ramach programu .NET Framework 4.0.1 ([platformy aktualizacji 1 dla programu .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092)). Ta aktualizacja zawierała kilka nowych klas i działań, które umożliwiły deweloperom tworzenie przepływów pracy automatu stanów. Te klasy i działania zostały zaktualizowane dla programu .NET Framework 4.5 do uwzględnienia:
 
     - Możliwość ustawienia punktów przerwania na stanach.
 
@@ -2122,7 +2122,7 @@ W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kilka nowych funkcji dod
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje są przeznaczone dla określonych czynników formularzy i zwiększają możliwości systemu operacyjnego Windows. Podzbiór [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub 4.5.1 jest dostępny do kompilowania [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje dla Windows przy użyciu języka C# lub Visual Basic. Podzbiór ten jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] i został omówiony w [Przegląd](https://go.microsoft.com/fwlink/?LinkId=228491) w Centrum deweloperów Windows.
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje są przeznaczone dla określonych czynników formularzy i zwiększają możliwości systemu operacyjnego Windows. Podzestaw programu .NET Framework 4.5 lub 4.5.1 jest dostępny do kompilowania [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje dla Windows przy użyciu C# lub Visual Basic. Podzbiór ten jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] i został omówiony w [Przegląd](https://go.microsoft.com/fwlink/?LinkId=228491) w Centrum deweloperów Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Biblioteki klas przenośnych <a name="portable" />
 

@@ -2,16 +2,16 @@
 title: Obsługa przesyłania strumieniowego SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698450"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379993"
 ---
 # <a name="sqlclient-streaming-support"></a>Obsługa przesyłania strumieniowego SqlClient
 
-Przesyłanie strumieniowe pomocy technicznej między programu SQL Server i aplikacją (Nowość w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) obsługuje dane bez określonej struktury na serwerze (dokumenty, obrazy i pliki multimedialne). Bazy danych programu SQL Server może przechowywać duże obiekty binarne (BLOB), ale pobieranie obiektów blob może używać dużej ilości pamięci.
+Przesyłanie strumieniowe pomocy technicznej między programu SQL Server i aplikacją (nowy w .NET Framework 4.5) obsługuje dane bez określonej struktury na serwerze (dokumenty, obrazy i pliki multimedialne). Bazy danych programu SQL Server może przechowywać duże obiekty binarne (BLOB), ale pobieranie obiektów blob może używać dużej ilości pamięci.
 
 Przesyłania strumieniowego pomocy technicznej do i z programu SQL Server ułatwia pisanie aplikacji przesyłanie strumieniowe danych, bez konieczności pełnego ładowania danych do pamięci, co mniej wyjątki przepełnienia pamięci.
 
@@ -101,9 +101,9 @@ Przykład pokazuje, jak wykonać następujące czynności:
 
 - Należy unikać blokowania wątku interfejsu użytkownika, zapewniając asynchronicznego możliwość pobierania dużych plików.
 
-- Transfer plików duże pole tekstowe z programu SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transfer plików duże pole tekstowe z programu SQL Server w programie .NET Framework 4.5.
 
-- Transfer dużych plików XML z programu SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transfer dużych plików XML z programu SQL Server w programie .NET Framework 4.5.
 
 - Pobieranie danych z programu SQL Server.
 
@@ -323,9 +323,9 @@ GO
 
 Przykład pokazuje, jak wykonać następujące czynności:
 
-- Transferowanie dużych obiektów BLOB do programu SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Przekazywanie dużych obiektów BLOB do programu SQL Server w programie .NET Framework 4.5.
 
-- Transferu pliku duże pole tekstowe do programu SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Przenoszenie pliku duże pole tekstowe do programu SQL Server w programie .NET Framework 4.5.
 
 - Przy użyciu nowej funkcji asynchronicznej transferowania dużych obiektów BLOB.
 

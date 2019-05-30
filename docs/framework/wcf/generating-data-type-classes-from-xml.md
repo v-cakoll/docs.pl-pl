@@ -2,15 +2,15 @@
 title: Generowanie klas typów danych z kodu XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bb40105398dbd91b910c4a19828d069c3d9e7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929574"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380220"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Generowanie klas typów danych z kodu XML
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] zawiera nową funkcję umożliwiającą generowanie klas typów danych z pliku XML. W tym temacie opisano sposób automatycznie wygenerować typy danych dla źródła danych RSS bloga platformy .NET.  
+.NET framework 4.5 zawiera nową funkcję umożliwiającą generowanie klas typów danych z pliku XML. W tym temacie opisano sposób automatycznie wygenerować typy danych dla źródła danych RSS bloga platformy .NET.  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>Uzyskiwanie kodu XML z RSS bloga platformy .NET kanału informacyjnego  
   
@@ -22,7 +22,7 @@ ms.locfileid: "61929574"
   
 ### <a name="creating-the-data-types"></a>Tworzenie typów danych  
   
-1. Otwórz plik kodu, w którym serwer proxy ma być używany. Ten plik powinien być częścią [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] projektu.  
+1. Otwórz plik kodu, w którym serwer proxy ma być używany. Ten plik powinien być częścią projektu platformy .NET Framework 4.5.  
   
 2. Umieść kursor w lokalizacji w pliku poza wszelkie istniejące klasy.  
   

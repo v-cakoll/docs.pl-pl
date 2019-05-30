@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37a6dc0caa81a365727bfc32a6a0363bb7e1713d
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4a2ce58576ebf03d756c4e8157ab65d57cd7683b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960146"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380254"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS — Wyliczenie
 Udostępnia zasady powiązania, które są wspólne dla większości hosty środowiska uruchomieniowego. To wyliczenie jest używane przez [iclrmetahostpolicy::getrequestedruntime —](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metody.  
@@ -48,7 +48,7 @@ typedef enum {
 |`METAHOST_POLICY_HIGHCOMPAT`|Definiuje zasady wysokiej zgodności z poprzednią wersją, który nie należy wziąć pod uwagę wszystkie środowisko uruchomieniowe języka wspólnego (CLR), który jest ładowany do bieżącego procesu. Zamiast tego traktuje tylko zainstalowane CLRs i preferencje dotyczące składnika, ponieważ sam plik zestawu, zadeklarowany oparta na wersji lub plik konfiguracji.|  
 |`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Dotyczy zasad uaktualniania wersji wynik powiązania dokładne dopasowanie nie zostanie znaleziony, na podstawie zawartości HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Ma to taki sam skutek jak [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
 |`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Powiązanie wyniki są zwracane, tak, jakby obrazu dostarczonego wywołania zostały uruchomione w ramach nowego procesu. Obecnie `GetRequestedRuntime` ignoruje zbiór obciążana środowisk uruchomieniowych i wiąże względem zestawu zainstalowanych modułów wykonawczych. Ta flaga umożliwia hostowi na określenie środowiska uruchomieniowego, który powiąże EXE po jej uruchomieniu.|  
-|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Wyświetlane jest okno dialogowe błędu, jeśli `GetRequestedRuntime` nie może odnaleźć środowiska uruchomieniowego, który jest zgodny z parametrami wejściowymi. Począwszy od [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], to okno dialogowe błędu może mieć postać Windows funkcji okno dialogowe z pytaniem, czy użytkownik chce włączyć funkcję odpowiednie.|  
+|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Wyświetlane jest okno dialogowe błędu, jeśli `GetRequestedRuntime` nie może odnaleźć środowiska uruchomieniowego, który jest zgodny z parametrami wejściowymi. Począwszy od programu .NET Framework 4.5, to okno dialogowe błędu może mieć postać Windows funkcji okno dialogowe z pytaniem, czy użytkownik chce włączyć funkcję odpowiednie.|  
 |`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` używa obrazu procesu (i wszelkie odpowiedni plik konfiguracji) jako dodatkowe dane wejściowe do przetworzenia powiązania. Domyślnie `GetRequestedRuntime` nie wrócił do ścieżki obrazu procesu (zwykle EXE, który został użyty do uruchamiania procesu) podczas określania środowiska uruchomieniowego, można powiązać.|  
 |`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` należy sprawdzić, czy odpowiednią jednostkę SKU jest zainstalowany, gdy żadne informacje nie będzie dostępna w pliku konfiguracji. Dzięki temu aplikacje, które nie mają plików konfiguracyjnych do elegancko nie powieść się na mniejsze jednostki SKU niż domyślnej instalacji programu .NET Framework. Domyślnie `GetRequestedRuntime` nie sprawdza, czy odpowiednią jednostkę SKU jest zainstalowany, chyba że jednostka SKU nie jest określony w pliku konfiguracyjnym `<supportedRuntime />` elementu.|  
 |`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` powinien ignorować SEM_FAILCRITICALERRORS (który jest ustawiony przez wywołanie metody [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) funkcji) i wyświetlenie okna dialogowego błędu. Domyślnie SEM_FAILCRITICALERRORS powoduje pominięcie okna dialogowego błędu. Zostało odziedziczone z innego procesu, a dyskretnej błędu może być niepożądane w danym scenariuszu.|  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a991a841182438dca4ef0a4067d333180f4f60
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655486"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380183"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Przegląd Dwukierunkowe funkcje WPF
 W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma wiele funkcji, które obsługują szybkiego opracowywania zawartości dwukierunkowy, na przykład mieszanej po lewej stronie kliknij prawym przyciskiem myszy i kliknij prawym przyciskiem myszy, aby left danych w tym samym dokumencie. W tym samym czasie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tworzy doskonałe środowisko dla użytkowników, którzy potrzebują dwukierunkowe funkcje, takie jak arabski i hebrajski wypowiedzi użytkowników.  
@@ -178,11 +178,11 @@ W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](..
   
  **Podstawianie**:  
   
- Ta właściwość określa typ numeru podstawienia do wykonania. Przyjmuje on jedną z następujących <xref:System.Windows.Media.NumberSubstitutionMethod> wartości wyliczenia.  
+ Ta właściwość określa typ numeru podstawienia do wykonania. Przyjmuje on jedną z następujących <xref:System.Windows.Media.NumberSubstitutionMethod> wartości wyliczenia:  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie kultury numer <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> właściwości. Domyślnie włączone.  
   
-- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Liczba kulturą jest arabski lub Farsi kultury, określa, że cyfry są zależne od kontekstu.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Liczba kulturą jest arabski lub perski kultury, określa, że cyfry są zależne od kontekstu.  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Numery zawsze są renderowane jako cyfry Europejskich.  
   

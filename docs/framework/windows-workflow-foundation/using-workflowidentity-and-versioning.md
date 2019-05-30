@@ -2,12 +2,12 @@
 title: Używanie obiektu WorkflowIdentity i wersjonowanie
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 77f5663665d56209cbb1ebc5999d44d411189f04
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf2b2c9502487c8bc8960f2a5625db94c31945f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603296"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380132"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Używanie obiektu WorkflowIdentity i wersjonowanie
 <xref:System.Activities.WorkflowIdentity> Umożliwia dla przepływu pracy deweloperów aplikacji, aby skojarzyć nazwę i <xref:System.Version> przy użyciu definicji przepływu pracy i te informacje, które ma zostać skojarzony z istniejącym wystąpieniem przepływu pracy. Informacje o tożsamości może służyć przez deweloperów aplikacji przepływu pracy można obsługiwać scenariusze takie jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i zapewnia podstawę dla innych funkcji, takich jak aktualizacja dynamiczna. W tym temacie przedstawiono jako omówienie sposobu użycia <xref:System.Activities.WorkflowIdentity> z <xref:System.Activities.WorkflowApplication> hostingu. Aby uzyskać informacji na temat wykonywania side-by-side definicji przepływu pracy w usłudze przepływu pracy, zobacz [równoległe przechowywanie wersji w klasie WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Aby uzyskać informacji na temat aktualizacji dynamicznej, zobacz [aktualizacji dynamicznej](dynamic-update.md).  
@@ -139,9 +139,9 @@ wfApp.Load(instance);
 ```  
   
 ## <a name="UpdatingWF4PersistenceDatabases"></a> Uaktualnianie platformy .NET Framework 4 trwałości baz danych w celu obsługi wersji przepływu pracy  
- Skrypt bazy danych SqlWorkflowInstanceStoreSchemaUpgrade.sql znajduje się do uaktualnienia bazy danych trwałości utworzone za pomocą [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bazy danych skryptów. Ten skrypt aktualizacji bazy danych do obsługi nowych możliwości przechowywania wersji wprowadzonych w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Wszystkie wystąpienia przepływu pracy utrwalonych w bazach danych są podane wartości wersji domyślnych, a następnie mogą brać udział w realizacji side-by-side i aktualizacji dynamicznej.  
+ Skrypt bazy danych SqlWorkflowInstanceStoreSchemaUpgrade.sql znajduje się do uaktualnienia bazy danych trwałości utworzone za pomocą [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bazy danych skryptów. Ten skrypt aktualizacji bazy danych do obsługi nowych funkcji przechowywania wersji, wprowadzone w programie .NET Framework 4.5. Wszystkie wystąpienia przepływu pracy utrwalonych w bazach danych są podane wartości wersji domyślnych, a następnie mogą brać udział w realizacji side-by-side i aktualizacji dynamicznej.  
   
- Jeśli [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aplikacji przepływu pracy podejmuje wszystkie operacje trwałości korzystać z nowych funkcji przechowywania wersji dla bazy danych trwałości, który nie został uaktualniony przy użyciu dostarczonego skryptu <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> generowany jest komunikat podobny do następującego Komunikat.  
+ Jeśli aplikacja przepływu pracy programu .NET Framework 4.5 próbuje wszystkie operacje trwałości korzystać z nowych funkcji przechowywania wersji dla bazy danych trwałości, który nie został uaktualniony przy użyciu dostarczonego skryptu <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> zgłaszany jest komunikat podobny do następujący komunikat.  
   
  **SqlWorkflowInstanceStore ma wersję bazy danych "4.0.0.0". Nie można uruchomić InstancePersistenceCommand "System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand" przed tą wersją bazy danych.  Uaktualnij bazę danych do "4.5.0.0".**  
 ### <a name="ToUpgrade"></a> Aby uaktualnić schemat bazy danych  

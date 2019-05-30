@@ -2,15 +2,15 @@
 title: Wyrażenia języka C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7e29c4cacf97c729a07fa8d234e7c12006418027
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882077"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378413"
 ---
 # <a name="c-expressions"></a>Wyrażenia języka C#
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń języka C# są obsługiwane w Windows Workflow Foundation (WF). Nowe projekty przepływu pracy C# utworzone w programie Visual Studio 2012 przeznaczonych [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] korzystanie z wyrażeń języka C# i używać wyrażeń języka Visual Basic projektów przepływu pracy programu Visual Basic. Istniejące [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] projektów przepływu pracy, które używają wyrażeń języka Visual Basic można przeprowadzić migrację do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] niezależnie od tego, w projekcie języka i są obsługiwane. Ten temat zawiera omówienie wyrażeń języka C# w [!INCLUDE[wf1](../../../includes/wf1-md.md)].
+Począwszy od programu .NET Framework 4.5, C# wyrażenia są obsługiwane w Windows Workflow Foundation (WF). Nowe C# projekty przepływu pracy utworzone w programie Visual Studio 2012, przeznaczonych dla platformy .NET Framework 4.5, użyj C# wyrażeń i projektów przepływu pracy programu Visual Basic używają wyrażeń języka Visual Basic. Istniejące [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] projektów przepływu pracy, które używają wyrażeń języka Visual Basic można przeprowadzić migrację do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] niezależnie od tego, w projekcie języka i są obsługiwane. Ten temat zawiera omówienie wyrażeń języka C# w [!INCLUDE[wf1](../../../includes/wf1-md.md)].
 
 ## <a name="using-c-expressions-in-workflows"></a>Używanie wyrażeń języka C# w przepływach pracy
 
@@ -29,7 +29,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń j�
 - [Przy użyciu wyrażeń języka C# w XAMLX usług przepływu pracy](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> W Projektancie przepływu pracy przy użyciu wyrażeń języka C#
- Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń języka C# są obsługiwane w Windows Workflow Foundation (WF). Projekty przepływu pracy w języku C# utworzone w programie Visual Studio 2012 przeznaczonych [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] używać wyrażeń języka C#, podczas gdy projekty przepływu pracy w języku Visual Basic używają wyrażeń języka Visual Basic. Aby określić żądaną wyrażenie języka C#, wpisz go w pole o nazwie **wprowadź wyrażenie języka C#**. Ta etykieta jest wyświetlana w oknie dialogowym właściwości po wybraniu działania w Projektancie lub działania w Projektancie przepływu pracy. W poniższym przykładzie dwa `WriteLine` działań są zawarte w `Sequence` wewnątrz `NoPersistScope`.
+ Począwszy od programu .NET Framework 4.5, C# wyrażenia są obsługiwane w Windows Workflow Foundation (WF). C#projekty przepływu pracy utworzone w programie Visual Studio 2012, przeznaczonych dla platformy .NET Framework 4.5, użyj C# wyrażeń, podczas gdy projekty przepływu pracy w języku Visual Basic używają wyrażeń języka Visual Basic. Aby określić żądaną wyrażenie języka C#, wpisz go w pole o nazwie **wprowadź wyrażenie języka C#** . Ta etykieta jest wyświetlana w oknie dialogowym właściwości po wybraniu działania w Projektancie lub działania w Projektancie przepływu pracy. W poniższym przykładzie dwa `WriteLine` działań są zawarte w `Sequence` wewnątrz `NoPersistScope`.
 
  ![Zrzut ekranu pokazujący działania sekwencji utworzone automatycznie.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 

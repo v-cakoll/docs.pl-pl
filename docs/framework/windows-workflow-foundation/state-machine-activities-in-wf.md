@@ -2,15 +2,15 @@
 title: Działań automatu stanów w WF
 ms.date: 03/30/2017
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
-ms.openlocfilehash: 5aee2a7cb078d9d62c9296f7dda9f28ff812a88a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64af2698c878066464e2ca3f32d4522d99999aec
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004604"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378052"
 ---
 # <a name="state-machine-activities-in-wf"></a>Działań automatu stanów w WF
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] zawiera kilka działań dostarczane przez system i projektanci działań do tworzenia przepływów pracy automatu stanów.  
+.NET framework 4.5 zawiera kilka działań dostarczane przez system i projektanci działań tworzenia przepływów pracy automatu stanów.  
   
 |||  
 |-|-|  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80559118140b8bf9f5228c3db3811faecc0e8f73
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615153"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378243"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a> W środowisko uruchomieniowe języka wspólnego (CLR) wyrzucanie elementów bezużytecznych działa jako automatycznych Menadżer pamięci. Zapewnia następujące korzyści:  
@@ -149,7 +149,7 @@ ms.locfileid: "64615153"
   
      Ponieważ kolekcje geenracji 2 mogą zajmować wiele segmentów, do starszego segmentu można przenosić obiekty, które są promowane do generacji 2. Zarówno generacji 1 i pozostałości generacji 2 można przenieść do innego segmentu, ponieważ są one promowane do generacji 2.  
   
-     Zazwyczaj duży obiekt sterty nie skompaktowany, ponieważ kopiowanie dużych obiektów obniża wydajność. Jednakże poczynając od wersji [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], możesz użyć <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> właściwości do kompaktowania sterty dużych obiektów na żądanie.  
+     Zazwyczaj duży obiekt sterty nie skompaktowany, ponieważ kopiowanie dużych obiektów obniża wydajność. Jednak począwszy od programu .NET Framework 4.5.1, możesz użyć <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> właściwości do kompaktowania sterty dużych obiektów na żądanie.  
   
  Wyrzucanie elementów bezużytecznych używa następujących informacji w celu ustalenia, czy obiekty są żywe:  
   

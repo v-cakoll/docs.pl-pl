@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623794"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377659"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Wzorca asynchronicznego opartego na zadaniach (TAP)
 Oparta na zadaniach asynchronicznej wzorca (TAP) jest oparty na <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> wpisuje <xref:System.Threading.Tasks?displayProperty=nameWithType> przestrzeni nazw, które są używane do reprezentowania dowolnych operacji asynchronicznych. Wzorzec TAP jest zalecanym asynchronicznym wzorcem projektowym dla nowych prac deweloperskich.  
@@ -95,7 +95,7 @@ We wzorcu TAP do tworzenia wystąpienia i wykonywania operacji asynchronicznej j
  Jeśli implementacje wzorca TAP dostarczają przeciążenia, które przyjmują `progress` parametru, muszą one umożliwić argumentowi `null`, w którym to przypadku będą raportowane żadnego postępu. Implementacje wzorca TAP powinny raportować postęp do <xref:System.Progress%601> synchronicznie, obiekt, który umożliwia metodzie asynchronicznej szybkie dostarczanie postępu i umożliwia konsumentowi postępu ustalenie, jak i gdzie najlepiej obsługiwać informacje. Na przykład wystąpienie postępu może wybrać przekazywanie wywołań zwrotnych i generowanie zdarzeń w kontekście przechwyconych synchronizacji.  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T > implementacji  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Dostarcza jedną <xref:System.IProgress%601> implementacja: <xref:System.Progress%601>. <xref:System.Progress%601> Klasy jest zadeklarowana w następujący sposób:  
+ .NET Framework 4.5 zapewnia pojedynczy <xref:System.IProgress%601> implementacja: <xref:System.Progress%601>. <xref:System.Progress%601> Klasy jest zadeklarowana w następujący sposób:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  

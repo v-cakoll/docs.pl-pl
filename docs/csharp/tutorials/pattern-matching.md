@@ -3,12 +3,12 @@ title: Użyj funkcji dopasowywania wzorca, aby rozszerzyć typy danych
 description: W tym samouczku zaawansowane pokazuje, jak tworzyć funkcje przy użyciu danych i algorytmy, które są tworzone oddzielnie za pomocą metod dopasowania do wzorca.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706224"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378070"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Aby rozszerzyć typy danych przy użyciu funkcji dopasowywania wzorca
 
@@ -35,7 +35,7 @@ Klasyczne projektowanie zorientowane obiektowo wywoływałby do tworzenia typów
 
 W tym samouczku utworzysz i zapoznaj się z aplikacji, która przyjmuje dane przychodzące z kilku źródeł zewnętrznych dla jednego scenariusza. Zobaczysz jak **dopasowywania do wzorca** umożliwia wydajne wykorzystanie i przetworzyć te dane w sposób, który nie był części systemu, oryginalnym.
 
-Należy wziąć pod uwagę głównych Miasto używanej drogi i ceny godziny szczytu do zarządzania ruchem. Możesz napisać aplikację, który oblicza drogi pojazdu na podstawie jego typu. Ulepszenia nowsze dołączania, cen, na podstawie liczby użytkowników w pojeździe. Dalsze udoskonalenia dodać, ceny, oparte na godzinę i dzień tygodnia.
+Należy wziąć pod uwagę głównych obszarze metropolitarnym używanej drogi i ceny godziny szczytu do zarządzania ruchem. Możesz napisać aplikację, który oblicza drogi pojazdu na podstawie jego typu. Ulepszenia nowsze dołączania, cen, na podstawie liczby użytkowników w pojeździe. Dalsze udoskonalenia dodać, ceny, oparte na godzinę i dzień tygodnia.
 
 Z tego krótkiego opisu może mieć szybko ustalonej hierarchię obiektów do modelu tego systemu. Jednak danych pochodzi z wielu źródeł, takich jak inne systemy zarządzania rejestracji vehicle. Te systemy Podaj różnych klas do modelu danych, a nie masz modelu pojedynczy obiekt, w których można użyć. W tym samouczku użyjesz tych klas uproszczona do modelu danych pojazdu z systemów zewnętrznych, jak pokazano w poniższym kodzie:
 

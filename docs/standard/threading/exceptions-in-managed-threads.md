@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645008"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377466"
 ---
 # <a name="exceptions-in-managed-threads"></a>Wyjątki w zarządzanych wątkach
 Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe języka wspólnego pozwala najbardziej nieobsługiwanych wyjątków w wątkach, aby kontynuować naturalnie. W większości przypadków oznacza to, że nieobsługiwany wyjątek powoduje zamknięcie aplikacji.  
@@ -39,7 +39,7 @@ Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe j�
 >  Istnieje możliwość dla środowiska uruchomieniowego do zgłoszenia nieobsługiwany wyjątek, zanim dowolnego kodu zarządzanego miała szansę, aby zainstalować program obsługi wyjątku. Mimo że kod zarządzany miał możliwość obsługi takiego wyjątku, wyjątek może przejść w sposób naturalny.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Udostępnianie wątkowości problemy podczas programowania  
- Jeśli wątki mogą zakończyć się niepowodzeniem w trybie dyskretnym, bez przerywania aplikacji poważnych problemów programowania przejść niewykryte. Jest to konkretnych problemów dla usług i innych aplikacji uruchamianych przez dłuższy czas. Ponieważ wątki kończyć się niepowodzeniem, stan programu stopniowo ulegnie uszkodzeniu. Limitu może obniżyć wydajność aplikacji lub aplikacji może być zawieszeniu.  
+ Jeśli wątki mogą zakończyć się niepowodzeniem w trybie dyskretnym, bez przerywania aplikacji poważnych problemów programowania przejść niewykryte. Jest to konkretnych problemów dla usług i innych aplikacji uruchamianych przez dłuższy czas. Ponieważ wątki kończyć się niepowodzeniem, stan programu stopniowo ulegnie uszkodzeniu. Limitu może obniżyć wydajność aplikacji lub aplikacja może przestać odpowiadać.  
   
  Zezwolenie nieobsługiwanych wyjątków w wątkach, aby kontynuować naturalnie, aż do zakończenia programu, system operacyjny udostępnia takie problemy podczas tworzenia i testowania aplikacji. Raporty o błędach programu zakończenia obsługi debugowania.  
   

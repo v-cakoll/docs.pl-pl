@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779967"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378569"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -69,7 +69,7 @@ Poniższe opcje są prawidłowe dla *.exe*, *.dll*, i *winmd* plików dla pliku 
 |**/classlist**|Dołącza listę klas zdefiniowanych w module.|
 |**/ kreska**|Używa deklaracji przekazującej klasy.|
 |**/headers**|Dołącza informacje nagłówka pliku do wyjścia.|
-|**/ item:** `class`[**::** `member`[`(sig`]]|W zależności od określonego argumentu dezasembluje następujące obiekty:<br /><br /> -Dezasembluje określoną klasę `class`.<br />-Dezasembluje określoną klasę `member` z `class`.<br />-Dezasembluje `member` z `class` o określonej sygnaturze `sig`. Format `sig` jest:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Uwaga** w programie .NET Framework w wersjach 1.0 i 1.1, `sig` musi następować nawias zamykający: `(sig)`. Począwszy od programu Net Framework 2.0, nawias zamykający musi zostać pominięty: `(sig`.|
+|**/ item:** `class`[ **::** `member`[`(sig`]]|W zależności od określonego argumentu dezasembluje następujące obiekty:<br /><br /> -Dezasembluje określoną klasę `class`.<br />-Dezasembluje określoną klasę `member` z `class`.<br />-Dezasembluje `member` z `class` o określonej sygnaturze `sig`. Format `sig` jest:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Uwaga** w programie .NET Framework w wersjach 1.0 i 1.1, `sig` musi następować nawias zamykający: `(sig)`. Począwszy od programu Net Framework 2.0, nawias zamykający musi zostać pominięty: `(sig`.|
 |**/noil**|Wyłącza wyjście kodu zestawu IL.|
 |**/ stats**|Zawiera dane statystyczne dotyczące obrazu.|
 |**/typelist**|Generuje pełną listę typów, aby zachować kolejność typów w rundzie.|
@@ -111,7 +111,7 @@ Możesz uruchomić *Ildasm.exe* za pośrednictwem an.exe lub *.dll* plik, aby ok
 
 ## <a name="version-information"></a>Informacje o wersji
 
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* obsługuje nierozpoznane skierowane obiekty typu BLOB (duży obiekt binarny) przez wyświetlanie surowej zawartości binarnej. Na przykład, poniższy kod przedstawia sposób wyświetlania skierowanego obiektu typu BLOB, wygenerowanego przez program C#.
+Począwszy od programu .NET Framework 4.5 *Ildasm.exe* obsługuje nierozpoznane skierowane obiekty typu BLOB (duży obiekt binarny) przez wyświetlanie surowej zawartości binarnej. Na przykład, poniższy kod przedstawia sposób wyświetlania skierowanego obiektu typu BLOB, wygenerowanego przez program C#.
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -122,7 +122,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* Wyświetla atrybuty, które są stosowane do implementacji interfejsu, jak pokazano w poniższym fragmencie *Ildasm.exe* dane wyjściowe:
+Począwszy od programu .NET Framework 4.5 *Ildasm.exe* Wyświetla atrybuty, które są stosowane do implementacji interfejsu, jak pokazano w poniższym fragmencie *Ildasm.exe* dane wyjściowe:
 
 ```
 .class public auto ansi beforefieldinit MyClass

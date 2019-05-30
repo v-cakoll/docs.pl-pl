@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e10682dbf5615f9d1ef345cf2c7eeeafa87ec28
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607890"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377988"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, że powinna działać w systemie operacyjnym Windows 64-bitowych jako natywną aplikację lub w emulatorze WOW64 (Windows 32-bit na Windows 64-bitowych). WOW64 jest środowiskiem zgodności, które umożliwia aplikacji 32-bitowy, do uruchomienia w systemie 64-bitowych. Emulator WOW64 znajduje się we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
@@ -26,7 +26,7 @@ Podczas kompilowania aplikacji można określić, że powinna działać w system
 > [!NOTE]
 >  Ze względu na projekt x86 emulacji i w podsystemie WOW64 dla rodziny procesorów Itanium, aplikacje są ograniczone do wykonania w jednym procesorze. Te czynniki zmniejszyć wydajność i skalowalność aplikacji .NET Framework 32-bitowych, działających w systemach opartych na procesorach Itanium. Firma Microsoft zaleca użycie [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)], który macierzysty obsługuje 64-bitowych systemów z procesorem Itanium, w celu zwiększenia wydajności i skalowalności.  
   
- Domyślnie po uruchomieniu aplikacji zarządzanej 64-bitowym na 64-bitowym systemie operacyjnym Windows można utworzyć obiekt nie więcej niż 2 gigabajty (GB). Jednak w [!INCLUDE[net_v45](../../includes/net-v45-md.md)], można zwiększyć ten limit.  Aby uzyskać więcej informacji, zobacz [ \<gcAllowVeryLargeObjects > element](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
+ Domyślnie po uruchomieniu aplikacji zarządzanej 64-bitowym na 64-bitowym systemie operacyjnym Windows można utworzyć obiekt nie więcej niż 2 gigabajty (GB). Jednak w .NET Framework 4.5, możesz zwiększyć ten limit.  Aby uzyskać więcej informacji, zobacz [ \<gcAllowVeryLargeObjects > element](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
  Wiele zestawów identycznie uruchomić zarówno 32-bitowe środowisko CLR, jak i 64-bitowe środowisko CLR. Jednak niektóre programy mogą zachowywać się różnie w zależności od środowiska CLR, jeśli zawierają one co najmniej jeden z następujących czynności:  
   

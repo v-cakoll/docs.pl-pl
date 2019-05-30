@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: 0d0d87e2fe14553d468384dfa2cfde1d3ee0d526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ade12c42ac6a307c341bc5be26430fb56e51ee5
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876931"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380037"
 ---
-# <a name="return-the-set-union-of-two-sequences"></a><span data-ttu-id="1315b-102">Zwracanie sumy zbiorów dwóch sekwencji</span><span class="sxs-lookup"><span data-stu-id="1315b-102">Return the Set Union of Two Sequences</span></span>
-<span data-ttu-id="1315b-103">Użyj <xref:System.Linq.Queryable.Union%2A> operator ma być zwracanie sumy zbiorów dwóch sekwencji.</span><span class="sxs-lookup"><span data-stu-id="1315b-103">Use the <xref:System.Linq.Queryable.Union%2A> operator to return the set union of two sequences.</span></span>  
+# <a name="return-the-set-union-of-two-sequences"></a><span data-ttu-id="ea86d-102">Zwracanie sumy zbiorów dwóch sekwencji</span><span class="sxs-lookup"><span data-stu-id="ea86d-102">Return the Set Union of Two Sequences</span></span>
+<span data-ttu-id="ea86d-103">Użyj <xref:System.Linq.Queryable.Union%2A> operator ma być zwracanie sumy zbiorów dwóch sekwencji.</span><span class="sxs-lookup"><span data-stu-id="ea86d-103">Use the <xref:System.Linq.Queryable.Union%2A> operator to return the set union of two sequences.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1315b-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="1315b-104">Example</span></span>  
- <span data-ttu-id="1315b-105">W tym przykładzie użyto <xref:System.Linq.Queryable.Union%2A> celu zwrócenia sekwencji wszystkich krajów, w którym istnieją albo `Customers` lub `Employees`.</span><span class="sxs-lookup"><span data-stu-id="1315b-105">This example uses <xref:System.Linq.Queryable.Union%2A> to return a sequence of all countries in which there are either `Customers` or `Employees`.</span></span>  
+## <a name="example"></a><span data-ttu-id="ea86d-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="ea86d-104">Example</span></span>  
+ <span data-ttu-id="ea86d-105">W tym przykładzie użyto <xref:System.Linq.Queryable.Union%2A> celu zwrócenia sekwencji wszystkich krajach/regionach, w którym istnieją albo `Customers` lub `Employees`.</span><span class="sxs-lookup"><span data-stu-id="ea86d-105">This example uses <xref:System.Linq.Queryable.Union%2A> to return a sequence of all countries/regions in which there are either `Customers` or `Employees`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#43](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#43)]
  [!code-vb[DLinqQueryExamples#43](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#43)]  
   
- <span data-ttu-id="1315b-106">W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Linq.Queryable.Union%2A> operator jest zdefiniowany dla multisets jako Nieuporządkowana łączenie multisets (skutecznie wynik [ `UNION ALL` ](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) klauzuli w języku SQL).</span><span class="sxs-lookup"><span data-stu-id="1315b-106">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Linq.Queryable.Union%2A> operator is defined for multisets as the unordered concatenation of the multisets (effectively the result of the [`UNION ALL`](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) clause in SQL).</span></span>
+ <span data-ttu-id="ea86d-106">W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Linq.Queryable.Union%2A> operator jest zdefiniowany dla multisets jako Nieuporządkowana łączenie multisets (skutecznie wynik [ `UNION ALL` ](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) klauzuli w języku SQL).</span><span class="sxs-lookup"><span data-stu-id="ea86d-106">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Linq.Queryable.Union%2A> operator is defined for multisets as the unordered concatenation of the multisets (effectively the result of the [`UNION ALL`](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) clause in SQL).</span></span>
 
-<span data-ttu-id="1315b-107">Aby uzyskać więcej informacji i przykładów, zobacz <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1315b-107">For more info and examples, see <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="ea86d-107">Aby uzyskać więcej informacji i przykładów, zobacz <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ea86d-107">For more info and examples, see <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="1315b-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1315b-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea86d-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ea86d-108">See also</span></span>
 
-- [<span data-ttu-id="1315b-109">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="1315b-109">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [<span data-ttu-id="1315b-110">Translacja standardowego operatora zapytania</span><span class="sxs-lookup"><span data-stu-id="1315b-110">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [<span data-ttu-id="ea86d-109">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="ea86d-109">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [<span data-ttu-id="ea86d-110">Translacja standardowego operatora zapytania</span><span class="sxs-lookup"><span data-stu-id="ea86d-110">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

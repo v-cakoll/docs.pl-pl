@@ -1,6 +1,7 @@
 - name: Kowariancja i kontrawariancja
-  href: index.md
   items:
+    - name: Omówienie
+      href: index.md
     - name: Wariancje w interfejsach ogólnych
       href: variance-in-generic-interfaces.md
       items:

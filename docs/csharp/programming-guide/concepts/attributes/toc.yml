@@ -3,9 +3,8 @@
   items:
     - name: Tworzenie atrybutów niestandardowych
       href: creating-custom-attributes.md
-      items:
-        - name: AttributeUsage
-          href: attributeusage.md
+    - name: AttributeUsage
+      href: attributeusage.md
     - name: Dostęp do atrybutów przy użyciu odbicia
       href: accessing-attributes-by-using-reflection.md
     - name: 'Instrukcje: Tworzenie unii C/C++ za pomocą atrybutów'

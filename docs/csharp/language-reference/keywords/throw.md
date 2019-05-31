@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6911ff96ca847f554e9b615aba6ab83a212efee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4536a5caa789712227bfd637d65cfc4c22adf80
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660570"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422694"
 ---
 # <a name="throw-c-reference"></a>throw (odwołanie w C#)
 
@@ -75,5 +75,4 @@ Począwszy od C# 7.0, `throw` mogą być używane jako wyrażenie, a także inst
 - [try-catch](try-catch.md)
 - [Try, catch i throw instrukcji w języku C++](try-catch.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Instrukcje obsługi wyjątków](exception-handling-statements.md)
 - [Instrukcje: Jawne zgłaszanie wyjątków](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

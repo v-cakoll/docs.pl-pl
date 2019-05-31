@@ -6,16 +6,16 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 10feb47ce3dfe9e356da381e0d62e6d220c9452a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 096fce3affb9461c57ae9c0ffd57367d1b4349df
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679677"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423421"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Parametry typu ogólnego (C# Programming Guide)
 
-W ogólnym typie lub definicję metody parametr typu jest symbolem zastępczym dla określonego typu, że klient określa podczas tworzenia wystąpienia typu ogólnego. Klasy ogólnej, takich jak `GenericList<T>` na liście [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md), nie można użyć jako — ponieważ nie jest tak naprawdę typu; więcej podobna do planu dla typu. Aby użyć `GenericList<T>`, kod klienta należy zadeklarować i tworzenia wystąpienia typu skonstruowany, określając argument typu w nawiasach ostrych. Typ argumentu dla tej konkretnej klasy mogą być dowolnego typu, rozpoznawane przez kompilator. Dowolną liczbę wystąpień skonstruowanego typu mogą być tworzone, każdy z nich przy użyciu argumentu innego typu, w następujący sposób:  
+W ogólnym typie lub definicję metody parametr typu jest symbolem zastępczym dla określonego typu, że klient określa podczas tworzenia wystąpienia typu ogólnego. Klasy ogólnej, takich jak `GenericList<T>` na liście [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/index.md), nie można użyć jako — ponieważ nie jest tak naprawdę typu; więcej podobna do planu dla typu. Aby użyć `GenericList<T>`, kod klienta należy zadeklarować i tworzenia wystąpienia typu skonstruowany, określając argument typu w nawiasach ostrych. Typ argumentu dla tej konkretnej klasy mogą być dowolnego typu, rozpoznawane przez kompilator. Dowolną liczbę wystąpień skonstruowanego typu mogą być tworzone, każdy z nich przy użyciu argumentu innego typu, w następujący sposób:  
   
 [!code-csharp[csProgGuideGenerics#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#7)]  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796025"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423849"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation — Wyliczenie
 W tym artykule opisano zestaw operacji, dla których hostem akcje można zastosować zasad.  
@@ -55,7 +55,7 @@ typedef enum {
 ## <a name="remarks"></a>Uwagi  
  Wspólnej infrastruktury języka wspólnego (CLR) niezawodność rozróżnia przerwań i zasobów błędów alokacji, występujących w regionach krytycznego kodu, i te, które występują w niekrytyczne regiony kodu. Ta różnica jest przeznaczony do Zezwalaj na hostach w celu ustawienia zasad różne w zależności od tego, gdzie występuje błąd w kodzie.  
   
- A *krytyczne obszar kodu* dowolnego miejsca, gdzie środowisko CLR nie może zagwarantować tego przerywanie zadania lub nieukończone żądania dla zasobów wpłynie na bieżące zadanie. Na przykład, jeśli zadanie jest blokada, otrzymuje wartość HRESULT, który wskazuje niepowodzenie podczas żądania alokacji pamięci jest za mała, aby przerwać to zadanie, aby upewnić się, stabilności, po prostu <xref:System.AppDomain>, ponieważ <xref:System.AppDomain> mogą zawierać inne Oczekiwanie na blokadę tego samego zadania. Aby wstrzymać bieżącą zadanie może spowodować, te inne zadania przestać odpowiadać (lub odłożyć) na czas nieokreślony. W takim przypadku host wymaga możliwości można zwolnić całej <xref:System.AppDomain> zamiast niestabilności potencjalne ryzyko.  
+ A *krytyczne obszar kodu* dowolnego miejsca, gdzie środowisko CLR nie może zagwarantować tego przerywanie zadania lub nieukończone żądania dla zasobów wpłynie na bieżące zadanie. Na przykład, jeśli zadanie jest blokada, otrzymuje wartość HRESULT, który wskazuje niepowodzenie podczas żądania alokacji pamięci jest za mała, aby przerwać to zadanie, aby upewnić się, stabilności, po prostu <xref:System.AppDomain>, ponieważ <xref:System.AppDomain> mogą zawierać inne Oczekiwanie na blokadę tego samego zadania. Aby odrzucić bieżącego zadania może spowodować tych innych zadań może przestać odpowiadać. W takim przypadku host wymaga możliwości można zwolnić całej <xref:System.AppDomain> zamiast niestabilności potencjalne ryzyko.  
   
  A *niekrytyczne obszar kodu*, z drugiej strony, to region, w którym środowiska CLR może zagwarantować, że przerwania lub awarii będzie mieć wpływ na zadania, na którym występuje błąd.  
   

@@ -3,12 +3,12 @@ title: Typy podstawowe — Przewodnik po języku C#
 description: Dowiedz się więcej o podstawowych typów (wartości numeryczne, ciągi i obiekt) we wszystkich programach języka C#
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: a1b842747799fcc8fcb64ecf92d334342b963fa1
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300007"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422098"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
@@ -53,7 +53,7 @@ Aby uzyskać więcej informacji, zobacz [konwersje rzutowania i typ](programming
 
 ## <a name="built-in-types"></a>Typy wbudowane
 
-C# zawiera standardowy zestaw wbudowanych typów liczbowych do reprezentowania liczb całkowitych, pływające wartości punktów, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i innych typów danych. Dostępne są również wbudowane **ciąg** i **obiektu** typów. Są one dostępne do użycia w dowolnym programie C#. Aby dowiedzieć się więcej o wbudowanych typów, zobacz [tabelę odwołań dla typów](language-reference/keywords/reference-tables-for-types.md).  
+C# zawiera standardowy zestaw wbudowanych typów liczbowych do reprezentowania liczb całkowitych, pływające wartości punktów, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i innych typów danych. Dostępne są również wbudowane **ciąg** i **obiektu** typów. Są one dostępne do użycia w dowolnym programie C#. Aby dowiedzieć się więcej o wbudowanych typów, zobacz [tabelę odwołań dla typów wbudowanych](language-reference/keywords/built-in-types-table.md).  
   
 ## <a name="custom-types"></a>Niestandardowe typy
 

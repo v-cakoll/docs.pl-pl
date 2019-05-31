@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 23aae1a41a19689bd5ad4e29f19c8cff704e742c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709698"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423406"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -60,11 +60,11 @@ Typy parametrów metody i wartości zwracane są określone w oznaczeniu metody.
 
 Po zadeklarowaniu zmiennej nie może być ponownie zadeklarowany z nowym typem i nie można przypisać wartość, która nie jest zgodna z deklarowanym typem. Na przykład nie można zadeklarować [int](../../../csharp/language-reference/keywords/int.md) a następnie przypisać jej wartości logicznej [true](../../../csharp/language-reference/keywords/true-literal.md). Jednakże wartości można przekonwertować do innych typów, na przykład gdy są one przypisane do nowych zmiennych lub przekazywane jako argumenty tej metody. A *konwersja typu* która nie powoduje utraty danych jest realizowane automatycznie przez kompilator. Wymaga konwersji, która może spowodować utratę danych *rzutowania* w kodzie źródłowym.
 
-Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md). 
+Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Typy wbudowane
 
-C# zawiera standardowy zestaw wbudowanych typów liczbowych do reprezentowania liczb całkowitych, pływające wartości punktów, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i innych typów danych. Dostępne są również wbudowane `string` i `object` typów. Są one dostępne do użycia w dowolnym programie C#. Aby uzyskać więcej informacji na temat wbudowanych typów, zobacz [tabele odwołań dla typów](../../../csharp/language-reference/keywords/reference-tables-for-types.md).
+C# zawiera standardowy zestaw wbudowanych typów liczbowych do reprezentowania liczb całkowitych, pływające wartości punktów, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i innych typów danych. Dostępne są również wbudowane `string` i `object` typów. Są one dostępne do użycia w dowolnym programie C#. Aby uzyskać więcej informacji na temat wbudowanych typów, zobacz [tabele odwołań dla typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md).
 
 ## <a name="custom-types"></a>Niestandardowe typy
 

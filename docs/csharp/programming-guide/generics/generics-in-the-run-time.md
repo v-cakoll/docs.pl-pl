@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: d45d64d608c117ef5f1477ac55a39c192374d7ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c739ae9b9804ffcb27d6bdc969bf7b5c0fe90512
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680340"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423328"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Typy ogólne w czasie wykonywania (Przewodnik programowania w języku C#)
 W przypadku typu ogólnego lub metody jest kompilowany na język Microsoft intermediate language (MSIL), zawiera metadane, które identyfikuje go jako parametrów typu. Jak kod w języku MSIL dla typu ogólnego jest używany różni się w oparciu czy parametr typu podana jest wartość typu lub typów referencyjnych.  
@@ -51,5 +51,5 @@ W przypadku typu ogólnego lub metody jest kompilowany na język Microsoft inter
 
 - <xref:System.Collections.Generic>
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/index.md)
 - [Typy ogólne](~/docs/standard/generics/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064052"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422928"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 
@@ -87,4 +87,3 @@ Można zdefiniować zachowanie operatorów dla niestandardowych klas i struktur.
 - [Przewodnik programowania w języku C#](../index.md)
 - [Instrukcje, wyrażenia i operatory](index.md)
 - [Operatory języka C#](../../language-reference/operators/index.md)
-- [Słowa kluczowe operatora](../../language-reference/keywords/operator-keywords.md)

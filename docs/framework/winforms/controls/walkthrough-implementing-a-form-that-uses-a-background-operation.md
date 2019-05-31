@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 1988ebd8c5f46346babe212962b617d30d765385
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 60421d6ba634bd7b4107f1c9998fbbe158417c83
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211535"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423836"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Przewodnik: wdrażanie formularza korzystającego z operacji w tle
 
-Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytkownika (UI) przestanie odpowiadać lub "zawiesza się," można użyć <xref:System.ComponentModel.BackgroundWorker> klasy do wykonywania operacji na inny wątek.
+Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytkownika (UI) przestanie odpowiadać lub do blokowania, możesz użyć <xref:System.ComponentModel.BackgroundWorker> klasy do wykonywania operacji na inny wątek.
 
 W tym instruktażu przedstawiono sposób użycia <xref:System.ComponentModel.BackgroundWorker> klasy do wykonywania czasochłonnych obliczeń "w"tle, podczas gdy interfejs użytkownika reaguje.  Po zakończeniu wykonywania masz aplikację, która oblicza numery Fibonacci asynchronicznie. Mimo że obliczeniowej dużą liczbą Fibonacci może potrwać zauważalne ilość czasu, przez to opóźnienie nie zostanie przerwana głównego wątku interfejsu użytkownika, a formularz będzie odpowiadać podczas obliczania.
 

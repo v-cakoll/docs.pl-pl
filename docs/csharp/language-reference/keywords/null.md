@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 94e6fad4f6be335530300839e9b4c97de9efc96f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 12b7f69d7cbcac4a0270dcecfeb0c2cb8eb77fe2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633392"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421993"
 ---
 # <a name="null-c-reference"></a>null (C# Reference)
 
@@ -32,6 +32,5 @@ W poniższym przykładzie pokazano niektóre zachowania null — słowo kluczowe
 - [Dokumentacja języka C#](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Słowa kluczowe literału](literal-keywords.md)
 - [Tabela wartości domyślnych](default-values-table.md)
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

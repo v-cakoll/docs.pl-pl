@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 3e8daf24929339e31cda81a726ec11fdcffc687a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660388"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421741"
 ---
 # <a name="using-directive-c-reference"></a>Using — Dyrektywa (C# odwołania)
 
@@ -102,6 +102,5 @@ Aby uzyskać więcej informacji, zobacz [dyrektywy Using](~/_csharplang/spec/nam
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Słowa kluczowe przestrzeni nazw](namespace-keywords.md)
 - [Przestrzenie nazw](../../programming-guide/namespaces/index.md)
 - [using, instrukcja](using-statement.md)

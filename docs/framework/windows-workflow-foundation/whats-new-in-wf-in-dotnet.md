@@ -2,12 +2,12 @@
 title: Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380142"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423983"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 
@@ -200,7 +200,7 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], błędy spra
 
 ### <a name="BKMK_DesignTimeValidation"></a> Sprawdzanie poprawności tła w czasie projektowania
 
-W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], przepływy pracy zostały zweryfikowane jako proces pierwszoplanowy, które potencjalnie mogą powodować zawieszanie interfejsu użytkownika podczas procesu weryfikacji złożone i czasochłonne. Teraz walidacji przepływu pracy odbywa się na wątku w tle, dzięki czemu interfejs użytkownika nie jest zablokowany.
+W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], przepływy pracy zostały zweryfikowane jako proces pierwszoplanowy może potencjalnie zablokować interfejsu użytkownika podczas procesu weryfikacji złożone i czasochłonne. Teraz walidacji przepływu pracy odbywa się na wątku w tle, dzięki czemu interfejs użytkownika nie jest zablokowany.
 
 ### <a name="BKMK_ViewState"></a> Wyświetlanie stanu znajduje się w innej lokalizacji w plikach XAML
 

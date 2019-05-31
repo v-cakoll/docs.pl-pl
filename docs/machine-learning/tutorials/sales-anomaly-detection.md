@@ -1,15 +1,15 @@
 ---
 title: W przypadku wykrycia anomalii sprzedaży, użyj strukturze ML.NET
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu wykrywania anomalii sprzedaży produktu zrozumienie, jak analizować dane pod kątem klamry anomalii i zmiany punktów podejmowanie odpowiednich działań.
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641152"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423940"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Samouczek: Na użytek strukturze ML.NET wykrywania anomalii sprzedaży produktu 
 
@@ -173,7 +173,7 @@ Użyj [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstima
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-Dopasuj do modelu `productSales` danych i zwracają uczonego modelu przez dodanie poniższego jako następnego wiersza kodu w `DetectSpike()` metody:
+Dopasuj do modelu `productSales` danych przez dodanie poniższego jako następnego wiersza kodu w `DetectSpike()` metody:
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-Jak poprzednio, dopasowania modelu do `productSales` danych i zwracają uczonego modelu przez dodanie poniższego jako następnego wiersza kodu w `DetectChangePoint()` metody:
+Jak poprzednio, dopasowania modelu do `productSales` danych przez dodanie poniższego jako następnego wiersza kodu w `DetectChangePoint()` metody:
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 

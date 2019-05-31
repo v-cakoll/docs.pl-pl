@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629011"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423867"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
 Aplikacje, które jednocześnie wykonywać wiele zadań, ale ciągle reagować na interakcję z użytkownikiem, często wymagają projektu, który korzysta z wielu wątków. <xref:System.Threading> Przestrzeń nazw zawiera wszystkie narzędzia niezbędne do utworzenia aplikacji wielowątkowych o wysokiej wydajności, ale za pomocą tych narzędzi skutecznie wymaga bogate doświadczenie z wielowątkowych inżynierii oprogramowania. W przypadku stosunkowo proste aplikacji wielowątkowych <xref:System.ComponentModel.BackgroundWorker> składnik udostępnia proste rozwiązanie. Dla bardziej zaawansowanych aplikacji asynchronicznych należy rozważyć zaimplementowanie klasę, która jest zgodna wzorca asynchronicznego opartego na zdarzeniach.  
@@ -32,13 +32,13 @@ Aplikacje, które jednocześnie wykonywać wiele zadań, ale ciągle reagować n
   
 - Wykonać wiele operacji równocześnie, otrzymywanie powiadomień po każdym zakończeniu.  
   
-- Oczekiwania na zasoby staną się dostępne bez konieczności zatrzymywania ("wiszące") aplikacji.  
+- Oczekiwania na zasoby staną się dostępne bez konieczności zatrzymywania ("blokuje") aplikacji.  
   
 - Komunikować się z oczekujących operacji asynchronicznych za pomocą znanego modelu zdarzeń i delegatów. Aby uzyskać więcej informacji na temat korzystania z programów obsługi zdarzeń i delegatów, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
   
  Klasa obsługującego wzorzec asynchroniczny oparty na zdarzeniach będzie mieć co najmniej jedną metodę o nazwie _MethodName_**Async**. Te metody mogą dublować synchroniczne wersjach, które do tej samej operacji w bieżącym wątku. Klasa może mieć również _MethodName_**Ukończono** zdarzeń i może mieć _MethodName_**AsyncCancel** (lub po prostu  **CancelAsync**) metody.  
   
- <xref:System.Windows.Forms.PictureBox> to typowa składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach. Pobierz obraz synchronicznie, wywołując jego <xref:System.Windows.Forms.PictureBox.Load%2A> metody, ale jeśli obraz jest duży lub, jeśli połączenie sieciowe jest powolne, dla aplikacji zostanie zatrzymane ("zawiesza się"), aż do zakończenia operacji pobierania i wywołania <xref:System.Windows.Forms.PictureBox.Load%2A> zwraca.  
+ <xref:System.Windows.Forms.PictureBox> to typowa składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach. Pobierania obrazu synchronicznie przez wywołanie jego <xref:System.Windows.Forms.PictureBox.Load%2A> metody, ale jeśli obraz jest duży lub, jeśli połączenie sieciowe jest powolne, aplikacja przestanie odpowiadać, aż do zakończenia operacji pobierania i wywołania w celu <xref:System.Windows.Forms.PictureBox.Load%2A> zwraca.  
   
  Jeśli chcesz, aby aplikacja umożliwia kontynuowanie działania podczas obraz jest ładowany, można wywołać <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> metody i obsługują <xref:System.Windows.Forms.PictureBox.LoadCompleted> zdarzenia, tak jak będzie obsługiwać dowolne inne zdarzenie. Gdy wywołujesz <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> metody, aplikacja będzie kontynuował działanie podczas pobierania rozpoczynające się w oddzielnym wątku ("w tle"). Procedury obsługi zdarzenia będzie wywoływana po zakończeniu operacji ładowania obrazu i obsługi zdarzenia można sprawdzić <xref:System.ComponentModel.AsyncCompletedEventArgs> parametru, aby określić, jeśli pliki do pobrania została ukończona pomyślnie.  
   

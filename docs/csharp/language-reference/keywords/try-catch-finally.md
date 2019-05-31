@@ -9,12 +9,12 @@ helpviewer_keywords:
 - finally blocks [C#]
 - try-catch statement [C#]
 ms.assetid: a1b443b0-ff7a-43ab-b835-0cc9bfbd15ca
-ms.openlocfilehash: 66f24994c7fcd2037887507bae65f590e4f90019
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 787005ec09a2c5c4f0e5033c83fd6a7ab7875b7e
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633880"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422159"
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally (odwołanie w C#)
 
@@ -36,7 +36,6 @@ Wspólne użycie `catch` i `finally` razem, jest do uzyskania i używania zasob�
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Instrukcje try, throw i catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [Instrukcje obsługi wyjątków](exception-handling-statements.md)
 - [throw](throw.md)
 - [Instrukcje: Jawne zgłaszanie wyjątków](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
 - [using, instrukcja](using-statement.md)

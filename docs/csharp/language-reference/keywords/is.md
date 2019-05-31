@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 79cc59eb8de513f547a8fd87db8c95dd9af37375
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac1ec7da7da465f4290000ac9c7254e9492c3c81
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754522"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421819"
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#)
 
@@ -164,4 +164,3 @@ W poniższym przykładzie użyto wzorca var można przypisać wyrażenia do zmie
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)
 - [as](../../../csharp/language-reference/keywords/as.md)
-- [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)

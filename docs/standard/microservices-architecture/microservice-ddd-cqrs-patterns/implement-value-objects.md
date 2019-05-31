@@ -2,12 +2,12 @@
 title: Implementowanie obiektów wartości
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Pobierz szczegóły i funkcje umożliwiające implementowanie obiektów wartości przy użyciu nowych funkcji programu Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644294"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423733"
 ---
 # <a name="implement-value-objects"></a>Implementowanie obiektów wartości
 
@@ -21,7 +21,7 @@ Rysunek 7-13 przedstawiono obiektu wartość adresu w agregacji zamówienia.
 
 **Rysunek 7-13**. Adres obiektu wartości w kolejności agregacji
 
-Jak pokazano w rysunek 7-13, jednostki zwykle składa się z wielu atrybutów. Na przykład `Order` jednostki mogą być modelowane jako jednostki przy użyciu tożsamości i wewnętrznie składa się z zestawu atrybutów, takich jak OrderId OrderDate, OrderItems itp. Ale adresu, który jest po prostu złożone wartością, składa się z kraju, ulicy, Miasto itp. i ma Brak tożsamości w tej domenie, musi być modelowane i traktowane jako obiekt wartości.
+Jak pokazano w rysunek 7-13, jednostki zwykle składa się z wielu atrybutów. Na przykład `Order` jednostki mogą być modelowane jako jednostki przy użyciu tożsamości i wewnętrznie składa się z zestawu atrybutów, takich jak OrderId OrderDate, OrderItems itp. Ale adresu, który jest po prostu złożone wartością, składa się z kraju/regionu, ulicy, Miasto itp. i ma Brak tożsamości w tej domenie, musi być modelowane i traktowane jako obiekt wartości.
 
 ## <a name="important-characteristics-of-value-objects"></a>Istotne cechy obiektów wartości
 

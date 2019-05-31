@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620697"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423782"
 ---
 # <a name="net-regular-expressions"></a>Wyrażeń regularnych programu .NET
 Wyrażenia regularne umożliwiają zaawansowane, elastyczne i wydajne przetwarzanie tekstu. Rozbudowane notacji dopasowania do wzorca wyrażenia regularnego umożliwia do szybkiego analizowania dużych ilości tekstu, aby znaleźć wzory znaków specyficznych; Aby sprawdzić poprawność tekstu, aby upewnić się, czy jest on zgodny wstępnie zdefiniowanych wzorca (np. adres e-mail); Aby wyodrębnić, Edytuj, zastępowania lub usuwania podciągów tekstu; i dodawać wyodrębnione ciągi do kolekcji, aby wygenerować raport. Dla wielu aplikacji, które zajmują się ciągów lub że analizy dużych bloków tekstu, wyrażenia regularne są niezbędne narzędzia.  
@@ -97,7 +97,7 @@ Wyrażenia regularne umożliwiają zaawansowane, elastyczne i wydajne przetwarza
   
 |||  
 |-|-|  
-|`\$`|Zwróć uwagę na pojedyncze wystąpienie znaku dolara ($) w ciągu wejściowym. Ciąg wzorca wyrażenia regularnego zawiera ukośnik odwrotny, aby wskazać, czy symbol Dolar ma być interpretowany dosłownie, a nie jako zakotwiczenia wyrażenia regularnego. (Symbol $ samodzielnie wskazują, że aparat wyrażeń regularnych starać się rozpocząć jego dopasowanie na końcu ciągu.) Aby upewnić się, że symbol waluty bieżącej kultury jest nieprawidłowo interpretowane jako symbol separatora wyrażeń regularnych, przykład wywołuje <xref:System.Text.RegularExpressions.Regex.Escape%2A> metodę, aby uniknąć użycia znaku.|  
+|`\$`|Wyszukaj pojedynczego wystąpienia znaku dolara (`$`) w ciągu wejściowym. Ciąg wzorca wyrażenia regularnego zawiera ukośnik odwrotny, aby wskazać, czy symbol Dolar ma być interpretowany dosłownie, a nie jako zakotwiczenia wyrażenia regularnego. ( `$` Symbol samodzielnie wskazują, że aparat wyrażeń regularnych starać się rozpocząć jego dopasowanie na końcu ciągu.) Aby upewnić się, że symbol waluty bieżącej kultury jest nieprawidłowo interpretowane jako symbol separatora wyrażeń regularnych, przykład wywołuje <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> metodę, aby uniknąć użycia znaku.|  
 |`\s*`|Zwróć uwagę na zero lub więcej wystąpień znaku odstępu.|  
 |`[-+]?`|Zwróć uwagę na wystąpienie zero lub jeden znak wartości dodatnich lub znaku minus.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Zewnętrzne nawiasów wokół tego wyrażenia definiowania go jako grupa przechwytywania lub podwyrażenia. Jeśli zostanie znalezione dopasowanie, można pobrać informacji na temat tej części pasującego ciągu drugiego <xref:System.Text.RegularExpressions.Group> obiektu <xref:System.Text.RegularExpressions.GroupCollection> obiektu zwróconego przez <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości. (Całe dopasowanie reprezentuje pierwszy element w kolekcji.)|  

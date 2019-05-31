@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 1e5a8d221468f5028f7b44af1c634b4c988063a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596292"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423486"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Klasy ogólne (Przewodnik programowania w języku C#)
 Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określonego typu danych. Jest najbardziej popularnym zastosowaniem klas ogólnych kolekcji, takich jak połączonej listy, tabele zbędnych danych, stosów, kolejek, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji są wykonywane w zasadzie taki sam sposób niezależnie od rodzaju przechowywanych danych.  
@@ -36,7 +36,7 @@ Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określoneg
   
      Na przykład w przypadku projektowania klasę, która będzie służyć do tworzenia elementów w kolekcji na podstawie typów ogólnych, może być konieczne takich jak implementować interfejsu <xref:System.IComparable%601> gdzie `T` jest typem klasy.  
   
- Na przykład prosty klasy ogólnej zobacz [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md).  
+ Na przykład prosty klasy ogólnej zobacz [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/index.md).  
   
  Reguły dotyczące parametrów typu i ograniczenia dotyczą kilka zachowanie klasy generycznej, szczególnie w odniesieniu do dziedziczenia i elementów członkowskich ułatwień dostępu. Przed kontynuowaniem należy poznać niektóre terminy. Dla klasy ogólnej `Node<T>,` kod klienta może odwoływać się do klasy albo poprzez określenie argument typ, Utwórz zamknięte skonstruowanego typu (`Node<int>`). Alternatywnie można pozostawić, parametr typu nie zostanie podany, na przykład po określeniu rodzajowego klasy podstawowej, aby utworzyć otwartą skonstruowany typ (`Node<T>`). Klasy ogólne może dziedziczyć z konkretnej, zamknięte zbudowane lub Otwórz skonstruowanych klasach bazowych:  
   

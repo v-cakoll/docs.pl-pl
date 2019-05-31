@@ -3,12 +3,12 @@ title: Historia języka C# — Przewodnik po języku C#
 description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706081"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423240"
 ---
 # <a name="the-history-of-c"></a>Historia języka c\#
 
@@ -45,7 +45,6 @@ Główne funkcje języka C# 1.0 obejmuje:
 - [Wyrażenia](../programming-guide/statements-expressions-operators/expressions.md)
 - [Instrukcje](../programming-guide/statements-expressions-operators/statements.md)
 - [Atrybuty](../programming-guide/concepts/attributes/index.md)
-- [Literały](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# w wersji 1.2
 
@@ -174,4 +173,4 @@ Wszystkie te funkcje oferują ciekawe nowe funkcje dla deweloperów i możliwoś
 
 Ale C# jest umieszczeniem do coraz szerszego użycia. .NET core teraz jest przeznaczony dla dowolnego systemu operacyjnego i oczy mocno na chmurze i przenośność.  Te nowe możliwości bez obaw zajmują projektantom języka pomysły i godzinę, oprócz pojawi się z nowymi funkcjami.
 
-_Artykuł_ [ _oryginalnie opublikowane na blogu NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, uzyskajcie Dietricha Erik i Patrick Smacchia._
+_Artykuł_ [ _oryginalnie opublikowane na blogu NDepend_](https://blog.ndepend.com/c-versions-look-language-history/) _, uzyskajcie Dietricha Erik i Patrick Smacchia._

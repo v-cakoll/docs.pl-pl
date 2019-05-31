@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: d6179624ffbdf423f8d9b895c65ff41ac9846f33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647044"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424038"
 ---
 # <a name="date-data-type-visual-basic"></a>Date — Typ danych (Visual Basic)
 Przechowuje wartości (8-bajtową) IEEE 64-bitowych, które reprezentują w zakresie od 1 stycznia 0001 roku do 31 grudnia 9999 roku daty i godziny od 0:00:00: 00 (północ) za pośrednictwem 11:59:59.9999999 PM. Każdy przyrost reprezentuje 100 nanosekund czas, który upłynął od początku 1 stycznia 1 roku w kalendarzu gregoriańskim. Maksymalna wartość reprezentuje 100 nanosekund przed rozpoczęciem 1 stycznia roku 10000.  
@@ -35,7 +35,7 @@ Przechowuje wartości (8-bajtową) IEEE 64-bitowych, które reprezentują w zakr
 ## <a name="format-requirements"></a>Wymagania dotyczące formatu  
  Należy ująć `Date` literału w ramach krzyżyki (`# #`). Należy określić wartość daty w formacie M/d/rrrr, na przykład `#5/31/1993#`, lub RRRR MM-dd, na przykład `#1993-5-31#`. Podczas określania roku najpierw, można używać ukośników.  To wymaganie jest niezależne od ustawień regionalnych użytkownika i komputera ustawienia daty i godziny formatu.  
   
- Przyczyną tego ograniczenia to, że znaczenie kod nigdy nie należy zmieniać w zależności od ustawień regionalnych, w którym aplikacja jest uruchomiona. Załóżmy, że należy trwale kodować `Date` literału `#3/4/1998#` i ma on oznacza 4 marca 1998 r. W ustawieniach regionalnych, który używa mm/dd/rrrr 3/4/1998 kompiluje, jak planowane. Jednak Załóżmy, że możesz wdrożyć aplikację w wielu krajach. W ustawieniach regionalnych, który używa dd/mm/rrrr literał swoje zakodowane będzie kompilacji do 3 kwietnia 1998 r. W ustawieniach regionalnych, który używa rrrr/mm/dd, literał byłyby nieprawidłowe (kwiecień 1998 0003) i spowodują błąd kompilatora.  
+ Przyczyną tego ograniczenia to, że znaczenie kod nigdy nie należy zmieniać w zależności od ustawień regionalnych, w którym aplikacja jest uruchomiona. Załóżmy, że należy trwale kodować `Date` literału `#3/4/1998#` i ma on oznacza 4 marca 1998 r. W ustawieniach regionalnych, który używa mm/dd/rrrr 3/4/1998 kompiluje, jak planowane. Jednak Załóżmy, że możesz wdrożyć aplikację w wielu krajach/regionach. W ustawieniach regionalnych, który używa dd/mm/rrrr literał swoje zakodowane będzie kompilacji do 3 kwietnia 1998 r. W ustawieniach regionalnych, który używa rrrr/mm/dd, literał byłyby nieprawidłowe (kwiecień 1998 0003) i spowodują błąd kompilatora.  
   
 ## <a name="workarounds"></a>Rozwiązania  
  Aby przekonwertować `Date` literał format ustawień regionalnych lub formatu niestandardowego, podaj literału do <xref:Microsoft.VisualBasic.Strings.Format%2A> funkcji, określając format daty wstępnie zdefiniowanych lub zdefiniowanych przez użytkownika. Poniższy przykład przedstawia to.  

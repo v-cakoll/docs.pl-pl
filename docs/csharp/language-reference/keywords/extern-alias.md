@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 8a33b466bbe75b84d6cd28ebd6f4fc57695aa420
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: d2ecd566731c3d2d472034ecb6412432af24c847
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452440"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422053"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (odwołanie w C#)
 Może być konieczne dwie wersje zestawów, które mają takie same nazwy w pełni kwalifikowanego typu odwołania. Na przykład trzeba użyć dwóch lub więcej wersji zestawu w tej samej aplikacji. Za pomocą alias zestawu zewnętrznego, przestrzenie nazw z każdego zestawu, może zostać zawinięty wewnątrz przestrzeni nazw poziomie głównym o nazwie określonej przez alias, który umożliwia im ma być używany w tym samym pliku.  
@@ -46,6 +46,5 @@ Może być konieczne dwie wersje zestawów, które mają takie same nazwy w peł
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)
 - [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [/ Reference (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

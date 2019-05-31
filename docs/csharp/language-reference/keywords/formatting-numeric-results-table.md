@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 12fe89e3aa63e9d3d8c3f102fe5a01a5f2225375
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661558"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421972"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Formatowanie tabeli wyników liczbowych (odwołanie w C#)
 
@@ -54,7 +54,6 @@ Aby uzyskać więcej informacji, zobacz [Standard Numeric Format Strings](../../
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [Tabele odwołań dla typów](reference-tables-for-types.md)
 - [Formatowanie tekstu](../../../standard/base-types/formatting-types.md)
 - [Złożone formatowanie](../../../standard/base-types/composite-formatting.md)
 - [Interpolacja ciągów](../tokens/interpolated.md)

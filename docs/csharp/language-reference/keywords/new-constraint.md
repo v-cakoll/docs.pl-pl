@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 32fcb13e1f217707d53300c532169b1a1759fa7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2aa68bec13322e332bfe3841bc99403f72301183
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633409"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421798"
 ---
 # <a name="new-constraint-c-reference"></a>New — ograniczenie (odwołanie w C#)
 
@@ -40,5 +40,4 @@ Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typ
 - [Dokumentacja języka C#](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Słowa kluczowe operatora](operator-keywords.md)
 - [Typy ogólne](../../programming-guide/generics/index.md)

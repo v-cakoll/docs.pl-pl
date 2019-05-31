@@ -2,12 +2,12 @@
 title: Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380148"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423962"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 Windows Workflow Foundation (WF) w .NET Framework 4.5 wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. W tym temacie przedstawiono, które z tych funkcji są obsługiwane w rehostowanym projektancie i te, które nie są obecnie obsługiwane.
@@ -106,7 +106,7 @@ Windows Workflow Foundation (WF) w .NET Framework 4.5 wprowadzono wiele nowych f
 >  Czas kompilacji sprawdzania poprawności nie jest obsługiwana w rehostowanym projektancie.  
   
 ### <a name="design-time-background-validation"></a>Sprawdzanie poprawności tła w czasie projektowania  
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], przepływy pracy zostały zweryfikowane jako proces pierwszoplanowy, które potencjalnie mogą powodować zawieszanie interfejsu użytkownika podczas procesu weryfikacji złożone i czasochłonne. Teraz walidacji przepływu pracy odbywa się na wątku w tle, dzięki czemu interfejs użytkownika nie jest zablokowany.  
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], przepływy pracy zostały zweryfikowane jako proces pierwszoplanowy może potencjalnie zablokować interfejsu użytkownika podczas procesu weryfikacji złożone i czasochłonne. Teraz walidacji przepływu pracy odbywa się na wątku w tle, dzięki czemu interfejs użytkownika nie jest zablokowany.  
   
  Sprawdzanie poprawności tła w czasie projektowania jest obsługiwana w rehostowanym projektancie.  
   

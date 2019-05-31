@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627022"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423890"
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości lub są przetwarzane bardzo wolno.  
@@ -46,8 +46,8 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
   
  Aby rozwiązać ten problem, należy ustawić <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwość `true` i używać właściwości podglądu zdarzeń w celu sterowania zachowaniem inspekcji. Aby uzyskać więcej informacji na temat wyświetlania i zarządzania dziennikami zdarzeń za pomocą Podglądu zdarzeń, zobacz [Podgląd zdarzeń](https://go.microsoft.com/fwlink/?LinkId=186123). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Nieprawidłowy implementacje zawiesza się usługi Przyczyna może IAuthorizationPolicy  
- Wywoływanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metodę, uszkodzony wykonania <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfejs może spowodować, że usługa zawiesi się.  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Nieprawidłowy implementacje IAuthorizationPolicy może spowodować, że usługa przestanie odpowiadać  
+ Wywoływanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metodę, uszkodzony wykonania <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfejs może spowodować, że usługa przestanie odpowiadać.  
   
  Środki zaradcze: Użyj tylko przez zaufany kod. Oznacza to, należy użyć tylko kod, który został zapisany i przetestowane, lub który pochodzi z zaufanego dostawcę. Nie zezwalaj na niezaufane rozszerzenia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> być podłączony do kodu bez ukończenia brany pod uwagę. Dotyczy to wszystkich rozszerzeń używanych w implementacji usługi. Usługi WCF nie powoduje żadnych rozróżnienia między kodu aplikacji i obce kod, który jest podłączony przy użyciu punkty rozszerzeń.  
   

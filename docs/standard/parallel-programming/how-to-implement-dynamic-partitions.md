@@ -10,25 +10,27 @@ helpviewer_keywords:
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 792488e53ffb7f870e21fdd1ad3ef94bf0303b1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5719c6afc1c5efc6138f0a4931d1725a6f20909a
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811556"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424048"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>Instrukcje: Implementowanie partycji dynamicznych
+
 Poniższy przykład pokazuje, jak zaimplementować niestandardowy <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> które implementuje dynamiczne partycjonowanie i mogą być używane z niektórych przeciążenia <xref:System.Threading.Tasks.Parallel.ForEach%2A> z PLINQ.  
   
-## <a name="example"></a>Przykład  
- Zawsze wywołuje partycji <xref:System.Collections.IEnumerator.MoveNext%2A> przez moduł wyliczający modułu wyliczającego zapewnia partycji z listy jeden element. W przypadku PLINQ i <xref:System.Threading.Tasks.Parallel.ForEach%2A>, partycja jest <xref:System.Threading.Tasks.Task> wystąpienia. Ponieważ żądania są wykonywane równolegle w wielu wątkach, dostęp do bieżącego indeksu są synchronizowane.  
-  
- [!code-csharp[TPL_Partitioners#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioners.cs#04)]
- [!code-vb[TPL_Partitioners#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/dynamicpartitioner.vb#04)]  
-  
- Jest to przykład fragmentów, partycjonowanie, z każdym fragmentem składający się z jednym elementem. Przez zapewnienie im więcej elementów w danym momencie, może zmniejszyć rywalizację na blokadę, a teoretycznie osiągnąć zwiększyć wydajność. Jednak w pewnym momencie większe fragmenty mogą wymagać dodatkowej logiki równoważenia obciążenia Aby zachować wszystkie wątki zajęty, aż wszystkie zadania są wykonywane.  
+## <a name="example"></a>Przykład
+
+Zawsze wywołuje partycji <xref:System.Collections.IEnumerator.MoveNext%2A> przez moduł wyliczający modułu wyliczającego zapewnia partycji z listy jeden element. W przypadku PLINQ i <xref:System.Threading.Tasks.Parallel.ForEach%2A>, partycja jest <xref:System.Threading.Tasks.Task> wystąpienia. Ponieważ żądania są wykonywane równolegle w wielu wątkach, dostęp do bieżącego indeksu są synchronizowane.  
+
+[!code-csharp[TPL_Partitioners#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner02.cs#OrderableListPartitioner)]
+[!code-vb[TPL_Partitioners#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/dynamicpartitioner.vb#04)]  
+
+Jest to przykład fragmentów, partycjonowanie, z każdym fragmentem składający się z jednym elementem. Przez zapewnienie im więcej elementów w danym momencie, może zmniejszyć rywalizację na blokadę, a teoretycznie osiągnąć zwiększyć wydajność. Jednak w pewnym momencie większe fragmenty mogą wymagać dodatkowej logiki równoważenia obciążenia Aby zachować wszystkie wątki zajęty, aż wszystkie zadania są wykonywane.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Niestandardowe partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
-- [Instrukcje: Implementowanie Partycjonera dla partycjonowania statycznego](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+* [Niestandardowe partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
+* [Instrukcje: Implementowanie Partycjonera dla partycjonowania statycznego](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863652"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424058"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)
 Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) parametrów, nie można zdefiniować przeciążoną wersją, dowolny z jej przeciążeń niejawne dopasowania. Aby uzyskać więcej informacji, zobacz "Niejawne przeciążenia dla opcjonalne parametry" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
@@ -51,7 +51,7 @@ Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/lan
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Aby przeciążanie procedury wykorzystującej więcej niż jeden parametr opcjonalny  
   
-1. Ustal, kombinacje podane argumenty opcjonalne są akceptowane przez logikę procedury. Można zaakceptować połączenie może wystąpić, jeśli jeden parametr opcjonalny jest zależny od innego. Na przykład jeden parametr akceptuje współmałżonka nazwę i inny akceptuje współmałżonka wiek, kombinacja argumentów, podając wiek, ale pomijając nazwę jest nie do przyjęcia.  
+1. Ustal, kombinacje podane argumenty opcjonalne są akceptowane przez logikę procedury. Można zaakceptować połączenie może wystąpić, jeśli jeden parametr opcjonalny jest zależny od innego. Na przykład jeden parametr akceptuje nazwiska osoby i innym akceptuje wieku przez osobę, kombinacja argumentów, podając wiek, ale pomijając nazwę jest nie do przyjęcia.  
   
 2. Dla każdej kombinacji dopuszczalne podanych argumentów opcjonalnych zapisu `Sub` lub `Function` instrukcji deklaracji, która definiuje odpowiednie listy parametrów. Nie używaj `Optional` — słowo kluczowe.  
   

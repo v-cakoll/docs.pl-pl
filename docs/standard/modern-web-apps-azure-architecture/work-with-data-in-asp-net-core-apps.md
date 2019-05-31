@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f765acce89bec1fd73e9c43a6e7d75d78be785d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628072"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423991"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacji platformy ASP.NET Core
 
@@ -330,7 +330,7 @@ Dla większości aplikacji i większość części niemal wszystkich aplikacji p
 
 Tradycyjnie relacyjnych baz danych, takich jak program SQL Server ma zdominowany trwałego magazynu danych w witrynie marketplace, ale nie są one dostępne jedynym rozwiązaniem. Bazy danych NoSQL, takie jak [bazy danych MongoDB](https://www.mongodb.com/what-is-mongodb) oferuje innego podejścia do przechowywania obiektów. Zamiast mapowanie obiektów na tabele oraz wiersze, innym rozwiązaniem jest serializacji wykresu cały obiekt i zapisz wynik. Zalety tego podejścia są co najmniej początkowo prostoty i wydajności. Bez obaw prostszym sposobem przechowywania pojedynczy obiekt Zserializowany za pomocą klucza, niż można rozłożyć obiektu do wielu tabel z relacjami i pobrać aktualizacji i wierszy, które uległy zmianie od ostatniego obiektu z bazy danych. Podobnie Pobieranie i deserializację pojedynczy obiekt z magazynu opartego na kluczach jest zwykle szybsze i prostsze niż złożonych sprzężeń lub wiele zapytań bazy danych wymagane do tworzenia w pełni tego samego obiektu z relacyjnej bazy danych. Brak blokady lub transakcji lub stałego schematu sprawia, że bazy danych NoSQL bardzo podatna na skalowanie na wiele maszyn, obsługa bardzo dużych zestawów danych.
 
-Z drugiej strony bazy danych NoSQL (zazwyczaj są one nazywane) mają swoje wady. Relacyjne bazy danych użyj normalizacji, wymuszanie spójności i unikanie zduplikowanie danych. Zmniejsza całkowity rozmiar bazy danych i zapewnia, że aktualizacje do udostępnionych danych są dostępne bezpośrednio w bazie danych. W relacyjnej bazie danych tabeli adresów może odwołać się do kraju tabeli według identyfikatorów, taki sposób, że jeśli zmieniono nazwę kraju, rekordów adresów będą korzystać z aktualizacji bez muszą zostać zaktualizowane. Jednak w bazie danych NoSQL adres i jego skojarzone kraj może zostać Zserializowany jako część wiele obiektów przechowywanych. Aktualizacja Nazwa kraju wymagałoby wszystkie takie obiekty do zaktualizowania, a nie pojedynczego wiersza. Relacyjne bazy danych może również zagwarantować integralności relacyjnych przez wymuszenie zasad, takie jak klucze obce. Bazy danych NoSQL nie oferują zazwyczaj takie ograniczenia swoich danych.
+Z drugiej strony bazy danych NoSQL (zazwyczaj są one nazywane) mają swoje wady. Relacyjne bazy danych użyj normalizacji, wymuszanie spójności i unikanie zduplikowanie danych. Zmniejsza całkowity rozmiar bazy danych i zapewnia, że aktualizacje do udostępnionych danych są dostępne bezpośrednio w bazie danych. W relacyjnej bazie danych tabeli adresów może odwołać się do kraju tabeli według identyfikatorów, taki sposób, że jeśli zmieniono nazwę kraju/regionu, rekordów adresów będą korzystać z aktualizacji bez muszą zostać zaktualizowane. Jednak w bazie danych NoSQL adres i jego skojarzone kraj może zostać Zserializowany jako część wiele obiektów przechowywanych. Aktualizacja nazwy kraju/regionu wymagałoby wszystkie takie obiekty do zaktualizowania, a nie pojedynczego wiersza. Relacyjne bazy danych może również zagwarantować integralności relacyjnych przez wymuszenie zasad, takie jak klucze obce. Bazy danych NoSQL nie oferują zazwyczaj takie ograniczenia swoich danych.
 
 Inny złożoności musi obsłużyć baz danych NoSQL jest przechowywania wersji. Po zmianie właściwości tego obiektu, nie można mogła zostać przeprowadzona poprzednich wersji, które były przechowywane. W związku z tym aby były zgodne ze schematem nowe należy zaktualizować wszystkich istniejących obiektów, które mają (poprzednia wersja) wersja po serializacji jest obiektu. Różni się to nie koncepcyjnie z relacyjnej bazy danych, w przypadku, gdy schemat zmienia się czasami wymagają skryptów aktualizacji lub mapowania aktualizacji. Jednak liczba wpisów, które muszą zostać zmodyfikowane odbywa się znacznie większa w ujęciu NoSQL, ponieważ ma więcej zduplikowanie danych.
 

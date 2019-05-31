@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: 058dc1d51099196559bee4ec2b96dc883e813f93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e89f2f854d1f66ca2d7bf1cfa5a507c267798f8
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660817"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422725"
 ---
 # <a name="return-c-reference"></a>return (odwołanie w C#)
 
@@ -38,4 +38,3 @@ ms.locfileid: "61660817"
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [return, instrukcja](/cpp/cpp/return-statement-cpp)
-- [Instrukcje skoku](jump-statements.md)

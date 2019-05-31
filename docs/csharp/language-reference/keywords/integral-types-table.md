@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: dc093def716a624162cb695d1151d8a722807094
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661376"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421734"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabela typów całkowitych (odwołanie w C#)
 
@@ -43,7 +43,6 @@ Użyj <xref:System.Numerics.BigInteger?displayProperty=nameWithType> struktury d
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Tabele odwołań dla typów](reference-tables-for-types.md)
 - [Tabela typów zmiennoprzecinkowych](floating-point-types-table.md)
 - [Tabela wartości domyślnych](default-values-table.md)
 - [Formatowanie tabeli wyników liczbowych](formatting-numeric-results-table.md)

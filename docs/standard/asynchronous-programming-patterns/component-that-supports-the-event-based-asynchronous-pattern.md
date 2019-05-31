@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882505"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423876"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie zauważalnego opóźnienia, należy wziąć pod uwagę nadając mu funkcje asynchroniczne z zastosowaniem [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -176,7 +176,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
  `CalculateWorker` Metoda jest opakowana w obiekt delegowany i jest wywoływana asynchronicznie przy użyciu wywołania do `BeginInvoke`.  
   
 > [!NOTE]
->  Raportowanie postępu jest zaimplementowana w `BuildPrimeNumberList` metody. Na komputerach szybkie `ProgressChanged` zdarzenia mogą być wywoływane w krótkim odstępie czasu. Wątek klienta, na którym te zdarzenia są wywoływane, musi mieć możliwość obsługi takiej sytuacji. Kod interfejsu użytkownika może być przeciążony wiadomości i nie może nadążyć, wynikiem zawiesza się zachowanie. Dla interfejsu użytkownika przykład obsługujący tę sytuację, zobacz [jak: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  Raportowanie postępu jest zaimplementowana w `BuildPrimeNumberList` metody. Na komputerach szybkie `ProgressChanged` zdarzenia mogą być wywoływane w krótkim odstępie czasu. Wątek klienta, na którym te zdarzenia są wywoływane, musi mieć możliwość obsługi takiej sytuacji. Kod interfejsu użytkownika może być przeciążony wiadomości i nie może nadążyć, wynikiem sek. Dla interfejsu użytkownika przykład obsługujący tę sytuację, zobacz [jak: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Asynchroniczne wykonywanie obliczeń liczba pierwsza:  
   

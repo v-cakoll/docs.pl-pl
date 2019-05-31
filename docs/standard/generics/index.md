@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592249"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423955"
 ---
 # <a name="generics-in-net"></a>Typy ogólne w .NET
 
@@ -148,7 +148,7 @@ ms.locfileid: "65592249"
   
  Środowisko uruchomieniowe języka wspólnego udostępnia nowe rozkazów i prefiksy do obsługi typów ogólnych w języka Microsoft intermediate language (MSIL), w tym <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>, i <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- Visual C++, C# i Visual Basic wszystkich zapewniają pełną obsługę definiowania i za pomocą typów ogólnych. Aby uzyskać więcej informacji na temat obsługi języków, zobacz [typów ogólnych w Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [wprowadzenie do typów ogólnych](~/docs/csharp/programming-guide/generics/introduction-to-generics.md), i [Przegląd typów ogólnych w Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
+ Visual C++, C# i Visual Basic wszystkich zapewniają pełną obsługę definiowania i za pomocą typów ogólnych. Aby uzyskać więcej informacji na temat obsługi języków, zobacz [typów ogólnych w Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [wprowadzenie do typów ogólnych](~/docs/csharp/programming-guide/generics/index.md), i [Przegląd typów ogólnych w Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
   
  [Powrót do początku](#top)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "65592249"
 |[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|W tym artykule opisano ogólne zasady ustalania, kiedy należy używać rodzajowych typów kolekcji.|  
 |[Instrukcje: Definiowanie typu ogólnego przy użyciu odbicia emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Wyjaśnia, jak można wygenerować zestawów dynamicznych, które obejmują typy ogólne i metody.|  
 |[Typy ogólne w Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Opis funkcji ogólne dla użytkowników programu Visual Basic, w tym tematów zawierających porady dotyczące korzystania z i definiowania typów ogólnych.|  
-|[Wprowadzenie do typów ogólnych](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Zawiera omówienie definiowanie i używanie typów ogólnych dla użytkowników języka C#.|  
+|[Wprowadzenie do typów ogólnych](~/docs/csharp/programming-guide/generics/index.md)|Zawiera omówienie definiowanie i używanie typów ogólnych dla użytkowników języka C#.|  
 |[Przegląd typów ogólnych w Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Opis funkcji ogólne dla użytkowników języka C++, włącznie z różnicami między typy ogólne i szablony.|  
   
 <a name="reference"></a>   

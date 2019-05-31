@@ -1,5 +1,4 @@
 - name: 'Operatory języka C#'
-  href: index.md
   items:
     - name: Operatory arytmetyczne
       href: arithmetic-operators.md

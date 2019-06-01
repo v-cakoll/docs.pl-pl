@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 18afb2765db41abd305fb83907c08fad75a1d72b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 18e737ec1f6c6f76ff882d48ad311a45ba7b756b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635242"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456742"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Używanie typu dynamicznego (C# Programming Guide)
 
@@ -25,7 +25,7 @@ Na przykład jeśli wystąpienie metody `exampleMethod1` w poniższym kodzie ma 
 
 Rola kompilatora w tych przykładach jest pakiet ze sobą informacje o każdej instrukcji proponowania do obiektu lub wyrażenie, które jest `dynamic`. W czasie wykonywania jest badany przechowywanych informacji, a żadnych instrukcji, która jest nieprawidłowa powoduje wyjątek czasu wykonywania.
 
-Wynik operacji najbardziej dynamicznych jest sam `dynamic`. Na przykład, jeśli wskaźnik myszy nad użytkowania `testSum` w poniższym przykładzie funkcja IntelliSense wyświetla typ **testSum dynamiczna (zmienna lokalna)**.
+Wynik operacji najbardziej dynamicznych jest sam `dynamic`. Na przykład, jeśli wskaźnik myszy nad użytkowania `testSum` w poniższym przykładzie funkcja IntelliSense wyświetla typ **testSum dynamiczna (zmienna lokalna)** .
 
 [!code-csharp[CsProgGuideTypes#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#51)]
 
@@ -60,7 +60,7 @@ Rozpoznanie przeciążenia występuje w czasie wykonywania, a nie w czasie kompi
 
 ## <a name="dynamic-language-runtime"></a>Środowisko uruchomieniowe języka dynamicznego
 
-Środowisko uruchomieniowe języka dynamicznego (DLR) jest nowy interfejs API w [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Zapewnia infrastrukturę, która obsługuje `dynamic` typ w języku C#, a także wykonania dynamicznego języków programowania, takich jak IronPython i IronRuby. Aby uzyskać więcej informacji na temat DLR zobacz [dynamiczny przegląd środowiska uruchomieniowego języka](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).
+Środowisko uruchomieniowe języka dynamicznego (DLR) to nowy interfejs API w programie .NET Framework 4. Zapewnia infrastrukturę, która obsługuje `dynamic` typ w języku C#, a także wykonania dynamicznego języków programowania, takich jak IronPython i IronRuby. Aby uzyskać więcej informacji na temat DLR zobacz [dynamiczny przegląd środowiska uruchomieniowego języka](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).
 
 ## <a name="com-interop"></a>COM interop
 

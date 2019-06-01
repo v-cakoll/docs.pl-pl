@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868748"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456500"
 ---
 # <a name="security-transparent-code"></a>Kod o przezroczystym poziomie bezpieczeństwa
 
@@ -59,14 +59,14 @@ Poziom zestawu <xref:System.Security.SecurityRulesAttribute> atrybut jawnie wybi
 
 Dostępne są następujące poziomy:
 
-- Poziom 2 (<xref:System.Security.SecurityRuleSet.Level2>) — [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zasady przejrzystości.
+- Poziom 2 (<xref:System.Security.SecurityRuleSet.Level2>) — zasady przejrzystości programu .NET Framework 4.
 
 - Poziom 1 (<xref:System.Security.SecurityRuleSet.Level1>) — zasady przejrzystości programu .NET Framework 2.0.
 
 Główną różnicą między dwoma poziomami przezroczystości jest, że poziom 1 nie wymusza zasad przejrzystości dla wywołań z poza zestawu i jest przeznaczona tylko dla zgodności.
 
 > [!IMPORTANT]
-> Należy określić poziom 1 przejrzystości, zgodności. oznacza to, określ poziom 1 tylko dla kodu, który został opracowany z .NET Framework 3.5 lub starszym, który używa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybut lub nie używa modelu przezroczystości. Na przykład użyć poziomu przezroczystości 1 dla zestawów .NET Framework 2.0, które umożliwiają wywołania z częściowo zaufanych obiektów wywołujących (APTCA). Dla kodu, który został opracowany dla [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], zawsze używać przezroczystości poziomu 2.
+> Należy określić poziom 1 przejrzystości, zgodności. oznacza to, określ poziom 1 tylko dla kodu, który został opracowany z .NET Framework 3.5 lub starszym, który używa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybut lub nie używa modelu przezroczystości. Na przykład użyć poziomu przezroczystości 1 dla zestawów .NET Framework 2.0, które umożliwiają wywołania z częściowo zaufanych obiektów wywołujących (APTCA). Kod, który został opracowany dla programu .NET Framework 4 należy zawsze używać przezroczystości poziomu 2.
 
 ### <a name="level-2-transparency"></a>Poziom 2 przezroczystości
 
@@ -114,7 +114,7 @@ Model przejrzystości poziomu 1 ma następujące ograniczenia:
 
 ## <a name="transparency-enforcement"></a>Egzekwowanie przejrzystości
 
-Zasady przezroczystości nie są wymuszane aż do wyliczenia przezroczystości. W tym czasie <xref:System.InvalidOperationException> jest generowany, jeśli zostanie naruszona zasada przejrzystości. Czas, który przezroczystości zależy od wielu czynników i nie można przewidzieć. Jest ona obliczana jak najpóźniej. W [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], obliczenia przejrzystości na poziomie zestawu odbywa się szybciej niż w programie .NET Framework 2.0. Jedyną gwarancją jest to, że obliczenia przejrzystości nastąpi przez razem, gdy jest to konieczne. Jest to podobne do jak kompilator just-in-time (JIT) może zmienić punkt gdy metoda jest kompilowana, a wykryto jakieś błędy w tej metodzie. Obliczanie przezroczystości jest niewidoczne, jeśli kod nie ma błędów przezroczystości.
+Zasady przezroczystości nie są wymuszane aż do wyliczenia przezroczystości. W tym czasie <xref:System.InvalidOperationException> jest generowany, jeśli zostanie naruszona zasada przejrzystości. Czas, który przezroczystości zależy od wielu czynników i nie można przewidzieć. Jest ona obliczana jak najpóźniej. W programie .NET Framework 4 obliczenia przejrzystości na poziomie zestawu odbywa się szybciej niż w programie .NET Framework 2.0. Jedyną gwarancją jest to, że obliczenia przejrzystości nastąpi przez razem, gdy jest to konieczne. Jest to podobne do jak kompilator just-in-time (JIT) może zmienić punkt gdy metoda jest kompilowana, a wykryto jakieś błędy w tej metodzie. Obliczanie przezroczystości jest niewidoczne, jeśli kod nie ma błędów przezroczystości.
 
 ## <a name="see-also"></a>Zobacz także
 

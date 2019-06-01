@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765326"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457043"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim — Funkcja
 Ładuje określoną wersję biblioteki dll, który znajduje się w pakiet redystrybucyjny programu .NET Framework.  
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in] Ciąg zakończony zerem, który reprezentuje nazwę biblioteki DLL, należy załadować z biblioteki programu .NET Framework.  
   
  `szVersion`  
- [in] Ciąg zakończony zerem, który reprezentuje wersję biblioteki DLL do załadowania. Jeśli `szVersion` jest null, wersja wybrane do ładowania jest najnowsza wersja określonej biblioteki dll, która jest mniejsza niż w wersji 4. Oznacza to, że wszystkie wersje, równa lub większa niż w wersji 4 są ignorowane w przypadku `szVersion` ma wartość null, a jeśli nie wersji mniejsze niż w wersji 4 jest zainstalowana, biblioteki DLL nie można załadować. Dzięki tej instalacji produktu [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] nie ma wpływu na istniejące aplikacje lub składniki. Zobacz wpis [SxS In-Proc i migracji — Szybki Start](https://go.microsoft.com/fwlink/?LinkId=200329) w blogu zespołu programu CLR.  
+ [in] Ciąg zakończony zerem, który reprezentuje wersję biblioteki DLL do załadowania. Jeśli `szVersion` jest null, wersja wybrane do ładowania jest najnowsza wersja określonej biblioteki dll, która jest mniejsza niż w wersji 4. Oznacza to, że wszystkie wersje, równa lub większa niż w wersji 4 są ignorowane w przypadku `szVersion` ma wartość null, a jeśli nie wersji mniejsze niż w wersji 4 jest zainstalowana, biblioteki DLL nie można załadować. To, aby upewnić się, że instalacja programu .NET Framework 4 nie ma wpływu na istniejące aplikacje lub składniki. Zobacz wpis [SxS In-Proc i migracji — Szybki Start](https://go.microsoft.com/fwlink/?LinkId=200329) w blogu zespołu programu CLR.  
   
  `pvReserved`  
  Zarezerwowane do użytku w przyszłości.  

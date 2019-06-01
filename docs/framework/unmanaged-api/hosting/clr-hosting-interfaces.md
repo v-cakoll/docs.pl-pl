@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789665"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456873"
 ---
 # <a name="clr-hosting-interfaces"></a>Interfejsy hostingu środowiska CLR
 W tej sekcji opisano interfejsy, które niezarządzane hosty służy do integrowania środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach. Informacje odnoszą się do wersji programu .NET Framework 2.0 i nowszych wersjach. Te interfejsy Włącz hosta kontrolują wiele aspektów więcej obsługi niż w wersji 1.0 i 1.1 i zapewnia znacznie ściślejszą integrację środowiska CLR i modelu wykonywania hosta.  
@@ -191,4 +191,4 @@ W tej sekcji opisano interfejsy, które niezarządzane hosty służy do integrow
  Zawiera tematy, które opisują hostingu dostarczanych w .NET Framework w wersji 1.0 i 1.1.  
   
  [Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Zawiera tematy, które opisują hostingu dostarczanych w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+ Zawiera tematy, które opisują hostingu dostarczanych w programie .NET Framework 4.

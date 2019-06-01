@@ -3,13 +3,13 @@ title: Technologii .NET framework jest niedostępna na platformie .NET Core
 description: Dowiedz się więcej o technologii .NET Framework, które nie są dostępne na platformie .NET Core
 author: cartermp
 ms.author: mairaw
-ms.date: 12/07/2018
-ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 04/30/2019
+ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663144"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456084"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologii .NET framework jest niedostępna na platformie .NET Core
 
@@ -42,6 +42,10 @@ Użyj granic zabezpieczeń dostarczone przez system operacyjny, np. konta wirtua
 Podobnie jak urzędy certyfikacji, przezroczystości zabezpieczeń kodu w trybie piaskownicy są oddzielone od zabezpieczeń kod krytyczny w sposób deklaratywny, ale jest [nie są już obsługiwane jako granice zabezpieczeń](~/docs/framework/misc/security-transparent-code.md). Ta funkcja jest intensywnie używana przez program Silverlight. 
 
 Użyj granic zabezpieczeń dostarczone przez system operacyjny, np. konta wirtualizacji, kontenerów lub użytkownika do uruchomionego procesu za pomocą najmniejszej zestaw uprawnień.
+
+## <a name="systementerpriseservices"></a>System.EnterpriseServices
+
+System.EnterpiseServices (COM +) nie jest obsługiwana przez platformy .NET Core.
 
 >[!div class="step-by-step"]
 >[Next](third-party-deps.md)

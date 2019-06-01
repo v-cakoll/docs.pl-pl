@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80559118140b8bf9f5228c3db3811faecc0e8f73
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378243"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457439"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a> W środowisko uruchomieniowe języka wspólnego (CLR) wyrzucanie elementów bezużytecznych działa jako automatycznych Menadżer pamięci. Zapewnia następujące korzyści:  
@@ -253,7 +253,7 @@ Współbieżne wyrzucanie elementów bezużytecznych
  W tle wyrzucanie elementów bezużytecznych generacje efemeryczne (0 i 1) są zbierane zgodnie z potrzebami w trakcie wyrzucania generacji 2. Nie ma żadnego ustawienia dotyczącego wyrzucania elementów bezużytecznych w tle; jest włączany automatycznie za pomocą współbieżne wyrzucanie elementów bezużytecznych. Wyrzucanie elementów bezużytecznych w tle jest zamiennikiem współbieżne wyrzucanie elementów bezużytecznych. Za pomocą współbieżne wyrzucanie elementów bezużytecznych, wyrzucania elementów bezużytecznych w tle odbywa się na dedykowanym wątku i ma zastosowanie tylko do kolekcji generacji 2.  
   
 > [!NOTE]
->  Wyrzucanie elementów bezużytecznych w tle jest dostępne tylko w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i nowszych wersjach. W [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], jest ona obsługiwana tylko w przypadku wyrzucanie elementów bezużytecznych. Począwszy od programu .NET Framework 4.5, wyrzucanie elementów bezużytecznych w tle jest dostępna dla wyrzucania elementów bezużytecznych stacji roboczej i serwerze.  
+>  Wyrzucanie elementów bezużytecznych w tle jest dostępne tylko w programie .NET Framework 4 i nowsze wersje. W programie .NET Framework 4 jest obsługiwana tylko w przypadku wyrzucanie elementów bezużytecznych. Począwszy od programu .NET Framework 4.5, wyrzucanie elementów bezużytecznych w tle jest dostępna dla wyrzucania elementów bezużytecznych stacji roboczej i serwerze.  
   
  Kolekcja pokoleń efemerycznych powstająca podczas wyrzucania elementów bezużytecznych w tle jest określany jako pierwszego wyrzucania elementów bezużytecznych. Po wystąpieniu wyrzucania pierwszego planu, wszystkie zarządzane wątki są wstrzymywane.  
   

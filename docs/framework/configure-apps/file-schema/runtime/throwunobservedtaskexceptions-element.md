@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377892"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456253"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> Element
 Określa, czy zadanie nieobsługiwanych wyjątków powinien wygasają uruchomionego procesu.  
@@ -65,7 +65,7 @@ Określa, czy zadanie nieobsługiwanych wyjątków powinien wygasają uruchomion
   
  Aby ułatwić programistom pisanie kodu asynchronicznego, na podstawie zadań programu .NET Framework 4.5, zmienia to zachowanie domyślne, niewidocznego wyjątków. Niezauważalne wyjątki, które nadal powodują <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> zdarzenia, ale domyślnie nie zakończyć proces. Zamiast tego wyjątek jest ignorowany, po wywołaniu zdarzenia, niezależnie od tego, czy program obsługi zdarzeń przestrzega wyjątku.  
   
- W .NET Framework 4.5, można użyć [ \<throwunobservedtaskexceptions — > element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) w pliku konfiguracyjnym aplikacji, aby umożliwić [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] zachowanie zostanie zgłoszony wyjątek.  
+ W .NET Framework 4.5, można użyć [ \<throwunobservedtaskexceptions — > element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) w pliku konfiguracyjnym aplikacji, aby umożliwić działanie platformy .NET Framework 4 zostanie zgłoszony wyjątek.  
   
  Można również określić zachowanie wyjątek w jednym z następujących sposobów:  
   

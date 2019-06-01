@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591208"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457516"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.
@@ -22,7 +22,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
  .NET Framework zawiera klasy, które umożliwiają używanie buforowania w aplikacjach .NET Framework. W ramach tych zajęć, znajdują się w <xref:System.Runtime.Caching> przestrzeni nazw.
 
 > [!NOTE]
->  <xref:System.Runtime.Caching> Przestrzeń nazw jest nowa w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Ta przestrzeń nazw sprawia, że pamięć podręczna jest dostępna dla wszystkich aplikacji .NET Framework. W poprzednich wersjach programu .NET Framework, pamięć podręczna była dostępna tylko w <xref:System.Web> przestrzeni nazw i dlatego wymagane zależności klas programu ASP.NET.
+>  <xref:System.Runtime.Caching> Przestrzeń nazw jest nowa w .NET Framework 4. Ta przestrzeń nazw sprawia, że pamięć podręczna jest dostępna dla wszystkich aplikacji .NET Framework. W poprzednich wersjach programu .NET Framework, pamięć podręczna była dostępna tylko w <xref:System.Web> przestrzeni nazw i dlatego wymagane zależności klas programu ASP.NET.
 
  W tym instruktażu pokazano, jak korzystać z funkcji buforowania, która jest dostępna w programie .NET Framework jako część [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W instruktażu pamięci podręcznej zawartość pliku tekstowego.
 
@@ -30,7 +30,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 - Tworzenie projektu aplikacji WPF.
 
-- Dodawanie odwołania do [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Dodawanie odwołania do .NET Framework 4.
 
 - Inicjowanie pamięci podręcznej.
 
@@ -62,12 +62,12 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
      **Nowy projekt** zostanie wyświetlone okno dialogowe.
 
-3. W obszarze **zainstalowane szablony**, wybierz język programowania, którego chcesz użyć (**języka Visual Basic** lub **Visual C#**).
+3. W obszarze **zainstalowane szablony**, wybierz język programowania, którego chcesz użyć (**języka Visual Basic** lub **Visual C#** ).
 
 4. W **nowy projekt** okno dialogowe, wybierz opcję **aplikacji WPF**.
 
     > [!NOTE]
-    >  Jeśli nie widzisz **aplikacji WPF** szablonu, upewnij się, że są przeznaczone dla wersji programu .NET Framework, która obsługuje WPF. W **nowy projekt** okno dialogowe, wybierz opcję [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] z listy.
+    >  Jeśli nie widzisz **aplikacji WPF** szablonu, upewnij się, że są przeznaczone dla wersji programu .NET Framework, która obsługuje WPF. W **nowy projekt** okno dialogowe, wybierz pozycję .NET Framework 4 z listy.
 
 5. W **nazwa** tekstu wprowadź nazwę dla projektu. Na przykład można wprowadzić **WPFCaching**.
 
@@ -78,7 +78,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
      Zostanie otwarty projektant WPF w **projektowania** służy do wyświetlania i wyświetla pliku MainWindow.xaml. Program Visual Studio tworzy **mój projekt** folder, plik Application.xaml i pliku MainWindow.xaml.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Zgodne z .NET Framework i dodanie odwołania do pamięci podręcznej zestawów
- Domyślnie docelowych aplikacji programu WPF [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Aby użyć <xref:System.Runtime.Caching> przestrzeni nazw w aplikacji WPF, aplikacja musi być przeznaczony dla [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (nie [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) i może zawierać odwołanie do przestrzeni nazw.
+ Domyślnie docelowych aplikacji programu WPF [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Aby użyć <xref:System.Runtime.Caching> przestrzeni nazw w aplikacji WPF, aplikacja musi być przeznaczony dla .NET Framework 4 (nie [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) i może zawierać odwołanie do przestrzeni nazw.
 
  W związku z tym, następnym krokiem jest zmienić docelową .NET Framework i Dodaj odwołanie do <xref:System.Runtime.Caching> przestrzeni nazw.
 
@@ -97,7 +97,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
      **Zaawansowane ustawienia kompilatora** zostanie wyświetlone okno dialogowe.
 
-4. W **platformy docelowej (wszystkie konfiguracje)** listy wybierz [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Nie należy wybierać [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. W **platformy docelowej (wszystkie konfiguracje)** listy, wybierz pozycję .NET Framework 4. (Nie należy wybierać [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
 5. Kliknij przycisk **OK**.
 
@@ -121,7 +121,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 2. Kliknij przycisk **aplikacji** kartę.
 
-3. W **platformę docelową** listy wybierz [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Nie należy wybierać **.NET Framework 4 Client Profile**.)
+3. W **platformę docelową** listy, wybierz pozycję .NET Framework 4. (Nie należy wybierać **.NET Framework 4 Client Profile**.)
 
 4. Dodaj odwołanie do pamięci podręcznej zestawów, wykonując następujące czynności:
 

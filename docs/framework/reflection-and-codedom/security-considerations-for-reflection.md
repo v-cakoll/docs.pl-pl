@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585990"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457296"
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członkowskich i dostęp do elementów członkowskich (czyli do wywołania metod i konstruktorów do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej). Użycie odbicia w celu uzyskania informacji na temat typów i elementów członkowskich nie jest ograniczona. Cały kod może używać odbicia do wykonywania następujących zadań:  
@@ -58,10 +58,10 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
  Kod aplikacji, uruchamianego z wiersza polecenia jest uruchamiany z pełnym zaufaniem. Tak długo, jak nie jest oznaczony jako przezroczysty, ona używać odbicia na dostęp do elementów członkowskich zabezpieczenia krytyczny. Po uruchomieniu ten sam kod z częściowej relacji zaufania (na przykład w domenie aplikacji w trybie piaskownicy) poziom zaufania zestawu Określa, czy można uzyskać dostęp do kod zabezpieczenia krytyczny: Jeśli zestaw ma silną nazwę i jest zainstalowany w globalnej pamięci podręcznej, jest zaufanym zestawie i wywołując elementy członkowskie krytyczne dla bezpieczeństwa. Jeśli nie jest zaufany, staje się przezroczyste nawet, jeśli nie została oznaczona jako przezroczysty, a nie może uzyskać dostępu członków zabezpieczenia krytyczny.  
   
- Aby uzyskać więcej informacji o modelu zabezpieczeń w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
+ Aby uzyskać więcej informacji na temat modelu zabezpieczeń w programie .NET Framework 4, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
 ## <a name="reflection-and-transparency"></a>Odbicia i przejrzystości  
- Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], środowisko uruchomieniowe języka wspólnego określa poziom przezroczystości typu lub elementu członkowskiego z kilkoma czynnikami, w tym poziom zaufania zestawu i poziom zaufania domeny aplikacji. Odbicie umożliwia <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A>, i <xref:System.Type.IsSecurityTransparent%2A> właściwości, aby umożliwić odnajdowanie poziom przezroczystości typu. W poniższej tabeli przedstawiono prawidłowe kombinacje tych właściwości.  
+ Środowisko uruchomieniowe języka wspólnego, począwszy od programu .NET Framework 4, określa poziom przezroczystości typu lub elementu członkowskiego z kilkoma czynnikami, w tym poziom zaufania zestawu i poziom zaufania domeny aplikacji. Odbicie umożliwia <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A>, i <xref:System.Type.IsSecurityTransparent%2A> właściwości, aby umożliwić odnajdowanie poziom przezroczystości typu. W poniższej tabeli przedstawiono prawidłowe kombinacje tych właściwości.  
   
 |Poziom zabezpieczeń|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
 |--------------------|------------------------|----------------------------|---------------------------|  

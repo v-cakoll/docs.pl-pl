@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607526"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456711"
 ---
 # <a name="shadow-copying-assemblies"></a>Kopiowanie zestawów w tle
 Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należy zaktualizować bez rozładowywania domeny aplikacji w tle. Jest to szczególnie przydatne w przypadku aplikacji, które muszą być dostępne w sposób ciągły, takich jak witryny programu ASP.NET.  
@@ -67,9 +67,9 @@ Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należ
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Startowa wydajność  
- Po uruchomieniu domeny aplikacji, która używa kopiowania w tle występuje opóźnienie podczas zestawów w katalogu aplikacji są kopiowane do katalogu kopii w tle lub zweryfikować, czy są już w tej lokalizacji. Przed [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], wszystkie zestawy zostały skopiowane do katalogu tymczasowego. Każdy zestaw został otwarty, aby sprawdzić nazwę zestawu, a została zweryfikowana silnej nazwy. Każdy zestaw została sprawdzona czy miał został zaktualizowany niedawno kopiowania w katalogu kopii w tle. Jeśli tak, został skopiowany do katalogu kopii w tle. Na koniec tymczasowej kopii zostały odrzucone.  
+ Po uruchomieniu domeny aplikacji, która używa kopiowania w tle występuje opóźnienie podczas zestawów w katalogu aplikacji są kopiowane do katalogu kopii w tle lub zweryfikować, czy są już w tej lokalizacji. Przed .NET Framework 4 wszystkie zestawy zostały skopiowane do katalogu tymczasowego. Każdy zestaw został otwarty, aby sprawdzić nazwę zestawu, a została zweryfikowana silnej nazwy. Każdy zestaw została sprawdzona czy miał został zaktualizowany niedawno kopiowania w katalogu kopii w tle. Jeśli tak, został skopiowany do katalogu kopii w tle. Na koniec tymczasowej kopii zostały odrzucone.  
   
- Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], domyślne zachowanie uruchamiania jest bezpośrednio porównanie pliku Data i godzina każdego zestawu w katalogu aplikacji przy użyciu pliku daty i czasu kopiowania w katalogu kopii w tle. Jeśli zestaw został zaktualizowany, jest kopiowany przy użyciu tej samej procedury jak w starszych wersjach programu .NET Framework; w przeciwnym razie kopia w katalogu kopii w tle jest ładowany.  
+ Począwszy od programu .NET Framework 4, domyślne zachowanie uruchamiania jest bezpośrednio porównanie pliku daty i czasu każdego zestawu w katalogu aplikacji z datą pliku oraz czasu kopiowania w katalogu kopii w tle. Jeśli zestaw został zaktualizowany, jest kopiowany przy użyciu tej samej procedury jak w starszych wersjach programu .NET Framework; w przeciwnym razie kopia w katalogu kopii w tle jest ładowany.  
   
  Wynikowy wzrost wydajności jest największy dla aplikacji, w których zestawy nie zmieniają się często, a zmiany są zazwyczaj występuje w mały podzbiór zestawów. Większość zestawów w zmiany aplikacji są często nowe zachowanie może spowodować regresji wydajności. Można przywrócić zachowanie uruchamiania z poprzednich wersji programu .NET Framework, dodając [ \<shadowCopyVerifyByTimestamp > element](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) do pliku konfiguracji z `enabled="false"`.  
   

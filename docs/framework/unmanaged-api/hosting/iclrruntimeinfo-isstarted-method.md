@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993164"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457384"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted — Metoda
 Wskazuje, czy środowisko uruchomieniowe zostało rozpoczęte (oznacza to, czy [iclrruntimehost::Start — metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) została wywołana i zakończyła się pomyślnie).  
@@ -49,7 +49,7 @@ HRESULT IsStarted(
 |E_NOTIMPL|Typowe wersję środowiska uruchomieniowego języka (wspólnego CLR) jest starsza niż wersja środowiska CLR [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda nie działa z wersji środowiska CLR wcześniejsze niż wersja środowiska CLR [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Ta metoda nie działa z wersjami środowiska CLR wcześniejsze niż wersja środowiska CLR programu .NET Framework 4.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

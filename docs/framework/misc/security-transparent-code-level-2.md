@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868904"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456573"
 ---
 # <a name="security-transparent-code-level-2"></a>Kod o przezroczystym poziomie bezpieczeństwa, poziom 2
 
@@ -58,7 +58,7 @@ Ten temat zawiera następujące sekcje:
 
 ## <a name="usage-examples-and-behaviors"></a>Przykłady użycia i zachowania
 
-Aby określić [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] reguł (poziom 2 przezroczystości), użyj następujących adnotacji dla zestawu:
+Aby określić zasady .NET Framework 4 (poziom 2 przezroczystości), należy użyć następujących adnotacji dla zestawu:
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ Aby zablokować do reguł .NET Framework 2.0 (poziom 1 przejrzystości), należy
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-Jeśli zestaw nie dodawać adnotacje [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] domyślnie są używane zasady. Jednak zalecanym najlepszym rozwiązaniem jest użycie <xref:System.Security.SecurityRulesAttribute> atrybutu zamiast w zależności od tego, wartość domyślna.
+Jeśli nie możesz dodawać adnotacje do zestawu, reguły .NET Framework 4 są używane domyślnie. Jednak zalecanym najlepszym rozwiązaniem jest użycie <xref:System.Security.SecurityRulesAttribute> atrybutu zamiast w zależności od tego, wartość domyślna.
 
 ### <a name="assembly-wide-annotation"></a>Adnotacja całego zestawu
 

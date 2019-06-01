@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6fa91b6f2866ba2dee6963d7258fe193ce058f61
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648498"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457183"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -54,7 +54,7 @@ Managed Extensibility Framework lub MEF to biblioteka do tworzenia aplikacji nie
 
 <a name="where_is_mef_available"></a>
 ## <a name="where-is-mef-available"></a>Gdzie jest MEF?
- MEF jest integralną częścią [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]i jest dostępna wszędzie tam, gdzie .NET Framework jest używany. W aplikacjach klienckich można użyć MEF, używają Windows Forms, WPF i innych technologii, czy w aplikacji serwera, które używają platformy ASP.NET.
+ MEF jest integralną częścią programu .NET Framework 4 i jest dostępna wszędzie tam, gdzie .NET Framework jest używany. W aplikacjach klienckich można użyć MEF, używają Windows Forms, WPF i innych technologii, czy w aplikacji serwera, które używają platformy ASP.NET.
 
 <a name="mef_and_maf"></a>
 ## <a name="mef-and-maf"></a>MEF i MAF

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01f9784cc2263c282d75251556a1f000027ca2ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac2a5d7f72479d5b5f4180de4452143c4dbc8127
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639789"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456624"
 ---
 # <a name="security-transparent-code-level-1"></a>Kod o przezroczystym poziomie bezpieczeństwa, poziom 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -24,7 +24,7 @@ ms.locfileid: "64639789"
  Przezroczystość ułatwia deweloperom wpisywanie bezpieczniejsze biblioteki .NET Framework, które udostępniają funkcje częściowo zaufanego kodu. Poziom 1 przejrzystości wprowadzono w programie .NET Framework w wersji 2.0 i głównie była używana tylko w ramach firmy Microsoft. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], możesz użyć [przezroczystości poziomu 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Jednak poziom 1 przejrzystości została zatrzymana, dzięki czemu można zidentyfikować starszego kodu, który należy uruchomić przy użyciu starszych reguł zabezpieczeń.  
   
 > [!IMPORTANT]
->  Należy określić poziom 1 przejrzystości, zgodności. oznacza to, określ poziom 1 tylko dla kodu, który został opracowany z .NET Framework 3.5 lub starszym korzystającego z <xref:System.Security.AllowPartiallyTrustedCallersAttribute> lub nie używa modelu przezroczystości. Na przykład użyć poziomu przezroczystości 1 dla zestawów .NET Framework 2.0, które umożliwiają wywołania z częściowo zaufanych obiektów wywołujących (APTCA). Dla kodu, który został opracowany dla [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], zawsze używać przezroczystości poziomu 2.  
+>  Należy określić poziom 1 przejrzystości, zgodności. oznacza to, określ poziom 1 tylko dla kodu, który został opracowany z .NET Framework 3.5 lub starszym korzystającego z <xref:System.Security.AllowPartiallyTrustedCallersAttribute> lub nie używa modelu przezroczystości. Na przykład użyć poziomu przezroczystości 1 dla zestawów .NET Framework 2.0, które umożliwiają wywołania z częściowo zaufanych obiektów wywołujących (APTCA). Kod, który został opracowany dla programu .NET Framework 4 należy zawsze używać przezroczystości poziomu 2.  
   
  Ten temat zawiera następujące sekcje:  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: ff820256a27ce455b8eda0c4e7192bc26a3199c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1cc6043afb7f795bb1208d2cf333aeca321462f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663226"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457367"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Typy konwerterów i rozszerzenia znaczników dla XAML
 Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających z systemów typu XAML i moduły zapisujące XAML można wygenerować składniki wykresu obiektu. Mimo że korzystają z niektórych właściwości, typy konwerterów i rozszerzenia znaczników są reprezentowane inaczej w strumień węzłów XAML. W tej dokumentacji zestawu, konwerterów typów, rozszerzenia znaczników i podobne konstrukcje są czasami nazywane zbiorczo konwertery wartości.  
@@ -45,7 +45,7 @@ Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających 
  Aby uzyskać więcej informacji o implementacji wzorca rozszerzenia znaczników dla XAML, zobacz [rozszerzenia znaczników dla przeglądu XAML](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> i <xref:System.Windows.Markup.ValueSerializer> typów znajdują się w <xref:System.Windows.Markup> przestrzeni nazw i nie <xref:System.Xaml> przestrzeni nazw. Oznacza to, że te typy są specyficzne dla technologii WPF lub formularzy Windows, które w przeciwnym razie wypełnić przestrzeni nazw CLR, który zawiera ciąg `Windows`. <xref:System.Windows.Markup.MarkupExtension> i <xref:System.Windows.Markup.ValueSerializer> znajdują się w zestawie System.Xaml i mają niezależne określonym środowiskiem. Te typy istniał w przestrzeni nazw CLR [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] i pozostają w przestrzeni nazw CLR w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pozwala uniknąć przerwy odwołania w istniejących projektach WPF. Aby uzyskać więcej informacji, zobacz [typy migrowane z WPF do System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
+>  <xref:System.Windows.Markup.MarkupExtension> i <xref:System.Windows.Markup.ValueSerializer> typów znajdują się w <xref:System.Windows.Markup> przestrzeni nazw i nie <xref:System.Xaml> przestrzeni nazw. Oznacza to, że te typy są specyficzne dla technologii WPF lub formularzy Windows, które w przeciwnym razie wypełnić przestrzeni nazw CLR, który zawiera ciąg `Windows`. <xref:System.Windows.Markup.MarkupExtension> i <xref:System.Windows.Markup.ValueSerializer> znajdują się w zestawie System.Xaml i mają niezależne określonym środowiskiem. Te typy istniał w przestrzeni nazw CLR [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] i pozostają w przestrzeni nazw CLR w programie .NET Framework 4, aby uniknąć przełomowe odwołania w istniejących projektach WPF. Aby uzyskać więcej informacji, zobacz [typy migrowane z WPF do System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Wartość serializatorów  

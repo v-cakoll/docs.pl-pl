@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a4ded811e0a62edb9ec138068a9439399c3282
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380203"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457058"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
 <a name="introduction"></a> W tabelach, w tym artykule przedstawiono typy, które są przestarzałe w programie .NET Framework 4.5 i .NET Framework 4.6, uporządkowane według zestawu. Poniższe łącza umożliwiają wyświetlenie listy przestarzałych typów i zalecanych rozwiązań alternatywnych, w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementów członkowskich również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](obsolete-members.md).
@@ -588,7 +588,7 @@ ms.locfileid: "66380203"
 
 <a name="IEHost"></a>
 ### <a name="assembly-iehostdll-and-ieexecexe"></a>Zestaw: IEHost.dll i IEExec.exe
- Zestawy IEHost.dll i IEExec.exe zostały usunięte z programu .NET Framework. Wszystkie typy i składowe są przestarzałe i nie są obsługiwane w przypadku programu [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Zestawy te zostały użyte do hostowania kontrolek formularzy Windows Forms i uruchamiania plików wykonywalnych w programie Internet Explorer. Zalecane alternatywne metody obejmują ClickOnce, aplikacje przeglądarki XAML (XBAP) i Microsoft Silverlight.
+ Zestawy IEHost.dll i IEExec.exe zostały usunięte z programu .NET Framework. Wszystkie typy i składowe są przestarzałe i nie są obsługiwane począwszy od programu .NET Framework 4. Zestawy te zostały użyte do hostowania kontrolek formularzy Windows Forms i uruchamiania plików wykonywalnych w programie Internet Explorer. Zalecane alternatywne metody obejmują ClickOnce, aplikacje przeglądarki XAML (XBAP) i Microsoft Silverlight.
 
  [Powrót do początku](#introduction)
 

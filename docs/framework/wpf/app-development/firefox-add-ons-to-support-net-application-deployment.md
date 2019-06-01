@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: ea42710f7963f485675279f25623f26bfd5d4f48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c0ee38037e79fc93a4318fc5309f61c9060213c
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582953"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457101"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Dodatki Firefox wspierające wdrożenie aplikacji .NET
 Włącz Windows Presentation Foundation () wtyczka WPF dla Firefox i .NET Framework Asystenta ustawień dla przeglądarki Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], luźne [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]i aplikacji ClickOnce do pracy z przeglądarki Mozilla Firefox.  
@@ -22,7 +22,7 @@ Włącz Windows Presentation Foundation () wtyczka WPF dla Firefox i .NET Framew
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Wtyczki dla Firefox jest zainstalowana za pomocą [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. Znajdują się w nim 7 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], ale nie uwzględnia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wtyczka dla programu Firefox. Nie można zainstalować [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wtyczkę dla przeglądarki Firefox w systemie Windows 7.  
   
- [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] Nie obejmuje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wtyczka dla programu Firefox. Jednakże jeśli obie [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] i [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] są zainstalowane, wtyczka WPF dla Firefox jest zainstalowana za pomocą [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. W związku z tym [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] aplikacje będą nadal działać, ponieważ WPF Host załaduje poprawną wersję platformy. Aby uzyskać więcej informacji, zobacz [Host WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
+ Nie ma programu .NET Framework 4 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wtyczka dla programu Firefox. Jednakże jeśli obie [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] i zainstalowano program .NET Framework 4, wtyczka WPF dla Firefox jest zainstalowana za pomocą [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. W związku z tym aplikacji .NET Framework 4 nadal będzie działać, ponieważ WPF Host załaduje poprawną wersję platformy. Aby uzyskać więcej informacji, zobacz [Host WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
  .NET Framework Asystenta ustawień dla przeglądarki Firefox umożliwia uruchamianie za pomocą przeglądarki Firefox autonomicznej aplikacji ClickOnce. .NET Framework w Asystencie Firefox funkcji tak samo w przypadku, gdy jest zainstalowany, przed i po nim przeglądarki Firefox. Po uruchomieniu przeglądarki Firefox i [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] jest zainstalowany, Firefox wyszukuje i instaluje .NET Framework Assistant dla programu Firefox. Użytkownicy mogą konfigurować .NET Framework Asystenta ustawień dla przeglądarki Firefox, wykonaj następujące czynności:  

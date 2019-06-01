@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622737"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456847"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 <a name="top"></a> Kowariancja i kontrawariancja to terminy odwołujące się do możliwość używania typu bardziej pochodnego (bardziej szczegółowe) lub mniej pochodnego typu (specyficzne dla języka less) niż oryginalnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. W przykładach założono, klasa bazowa o nazwie `Base` i Klasa pochodna o nazwie `Derived`.  
@@ -81,7 +81,7 @@ ms.locfileid: "64622737"
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Interfejsy ogólne z kowariantnymi parametrami typu  
- Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], kilka interfejsów ogólnych ma kowariantne parametry typu; na przykład: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>, i <xref:System.Linq.IGrouping%602>. Wszystkie parametry typu tych interfejsów są kowariantne, więc parametry typu są używane tylko dla typów zwracanych elementów członkowskich.  
+ Począwszy od programu .NET Framework 4, kilka interfejsów ogólnych ma kowariantne parametry typu; na przykład: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>, i <xref:System.Linq.IGrouping%602>. Wszystkie parametry typu tych interfejsów są kowariantne, więc parametry typu są używane tylko dla typów zwracanych elementów członkowskich.  
   
  W poniższym przykładzie pokazano kowariantne parametry typu. W przykładzie zdefiniowano dwa typy: `Base` ma metodę statyczną o nazwie `PrintBases` przyjmującej `IEnumerable<Base>` (`IEnumerable(Of Base)` w języku Visual Basic) i drukującą elementy. `Derived` dziedziczy `Base`. W przykładzie jest tworzona pusta `List<Derived>` (`List(Of Derived)` w języku Visual Basic) i pokazuje, że tego typu mogą być przekazywane do `PrintBases` i przypisane do zmiennej typu `IEnumerable<Base>` bez rzutowania. <xref:System.Collections.Generic.List%601> implementuje <xref:System.Collections.Generic.IEnumerable%601>, który ma jeden kowariantny parametr typu. Kowariantny parametr typu jest przyczyną wystąpienia `IEnumerable<Derived>` mogą być używane zamiast `IEnumerable<Base>`.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "64622737"
   
 <a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Interfejsy ogólne z kontrawariantnymi parametrami typu  
- Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], kilka interfejsów ogólnych ma kontrawariantne parametry typu; na przykład: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601>, i <xref:System.Collections.Generic.IEqualityComparer%601>. Te interfejsy mają tylko kontrawariantne parametry typu, więc te parametry typów są używane tyko jako typy parametrów w elementach członkowskich tych interfejsów.  
+ Począwszy od programu .NET Framework 4, kilka interfejsów ogólnych ma kontrawariantne parametry typu; na przykład: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601>, i <xref:System.Collections.Generic.IEqualityComparer%601>. Te interfejsy mają tylko kontrawariantne parametry typu, więc te parametry typów są używane tyko jako typy parametrów w elementach członkowskich tych interfejsów.  
   
  W poniższym przykładzie pokazano kontrawariantne parametry typu. W przykładzie zdefiniowano abstrakcyjny (`MustInherit` w języku Visual Basic) `Shape` klasy `Area` właściwości. Przykładzie zdefiniowano też `ShapeAreaComparer` klasę, która implementuje `IComparer<Shape>` (`IComparer(Of Shape)` w języku Visual Basic). Implementacja <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> Metoda opiera się na wartość `Area` właściwości, więc `ShapeAreaComparer` mogą być używane do sortowania `Shape` obiektów według obszaru.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64622737"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Delegaty ogólne z wariantnymi parametrami typu  
- W [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], `Func` delegaty ogólne, takie jak <xref:System.Func%602>, mają kowariantne typy zwracane i kontrawariantne typy parametrów. `Action` Delegaty ogólne, takie jak <xref:System.Action%602>, mają kontrawariantne typy parametrów. Oznacza to, że delegaty można przypisać do zmiennych, które mają bardziej pochodne typy parametrów i (w przypadku właściwości `Func` delegatów ogólnych) mniej pochodne typy zwracane.  
+ W programie .NET Framework 4 `Func` delegaty ogólne, takie jak <xref:System.Func%602>, mają kowariantne typy zwracane i kontrawariantne typy parametrów. `Action` Delegaty ogólne, takie jak <xref:System.Action%602>, mają kontrawariantne typy parametrów. Oznacza to, że delegaty można przypisać do zmiennych, które mają bardziej pochodne typy parametrów i (w przypadku właściwości `Func` delegatów ogólnych) mniej pochodne typy zwracane.  
   
 > [!NOTE]
 >  Ostatni parametr typu ogólnego `Func` delegatów ogólnych Określa typ wartości zwracanej w podpisie delegata. Jest kowariantny (`out` — słowo kluczowe), podczas gdy inne parametry typu ogólnego są kontrawariantne (`in` — słowo kluczowe).  
@@ -146,10 +146,10 @@ ms.locfileid: "64622737"
   
 <a name="DefiningVariantTypeParameters"></a>   
 ## <a name="defining-variant-generic-interfaces-and-delegates"></a>Definiowanie wariantów interfejsów i delegatów ogólnych  
- Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Visual Basic i C# mają słowa kluczowe umożliwiające oznaczanie parametrów typu ogólnego interfejsów i delegatów jako kowariantnych lub kontrawariantnych.  
+ Począwszy od programu .NET Framework 4, Visual Basic i C# słowa kluczowe umożliwiające oznaczanie parametrów typu ogólnego interfejsów i delegatów jako kowariantnych lub kontrawariantnych.  
   
 > [!NOTE]
->  Począwszy od programu .NET Framework 2.0 środowisko uruchomieniowe języka wspólnego obsługuje adnotacje dotyczące wariancji w parametrach typu ogólnego. Przed [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], jedynym sposobem zdefiniowania klasy ogólnej z tymi adnotacjami jest użycie języka Microsoft intermediate language (MSIL) przez skompilowanie klasy za pomocą [Ilasm.exe (asembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) lub wyemitowanie jej w dynamicznym zestaw.  
+>  Począwszy od programu .NET Framework 2.0 środowisko uruchomieniowe języka wspólnego obsługuje adnotacje dotyczące wariancji w parametrach typu ogólnego. Przed .NET Framework 4, jedynym sposobem zdefiniowania klasy ogólnej z tymi adnotacjami jest użycie języka Microsoft intermediate language (MSIL) przez skompilowanie klasy za pomocą [Ilasm.exe (asembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) lub wyemitowanie jej w dynamicznym zestaw.  
   
  Kowariantny parametr typu jest oznaczona atrybutem `out` — słowo kluczowe (`Out` — słowo kluczowe w języku Visual Basic `+` dla [MSIL Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md)). Kowariantnego parametru typu można użyć jako wartości zwracanej metody, która należy do interfejsu, lub typu zwracanego delegata. Kowariantnego parametru typu nie można użyć jako ograniczenia typu ogólnego dla metod interfejsu.  
   
@@ -168,11 +168,11 @@ ms.locfileid: "64622737"
   
 <a name="VariantList"></a>   
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Lista wariantów ogólnych typów interfejsów i delegatów  
- W [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], następujące typy interfejsów i delegatów mają kowariantne i/lub kontrawariantne parametry typu.  
+ W programie .NET Framework 4, następujące typy interfejsów i delegatów mają kowariantne i/lub kontrawariantne parametry typu.  
   
 |Typ|Kowariantne parametry typu|Kontrawariantne parametry typu|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> Aby <xref:System.Action%6016>||Yes|  
+|<xref:System.Action%601> Aby <xref:System.Action%6016>||Tak|  
 |<xref:System.Comparison%601>||Yes|  
 |<xref:System.Converter%602>|Yes|Yes|  
 |<xref:System.Func%601>|Tak||  
@@ -186,7 +186,7 @@ ms.locfileid: "64622737"
 |<xref:System.Linq.IGrouping%602>|Yes||  
 |<xref:System.Linq.IOrderedEnumerable%601>|Yes||  
 |<xref:System.Linq.IOrderedQueryable%601>|Yes||  
-|<xref:System.Linq.IQueryable%601>|Tak||  
+|<xref:System.Linq.IQueryable%601>|Yes||  
   
 ## <a name="see-also"></a>Zobacz także
 

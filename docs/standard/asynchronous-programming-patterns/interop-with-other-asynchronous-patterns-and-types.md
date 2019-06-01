@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2736c4758cbaaeda902b43aeea55611a21ea38ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623811"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457345"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Współdziałanie z innymi wzorcami asynchronicznymi i typami
 .NET Framework 1.0, wprowadzono <xref:System.IAsyncResult> wzorzec, znanych także jako [modelu programowania asynchronicznego (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md), lub `Begin/End` wzorca.  .NET Framework 2.0, dodano [oparte na zdarzeniach asynchroniczny wzorzec (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  Począwszy od programu .NET Framework 4, [opartego na zadaniach asynchronicznej wzorca (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) zastępuje zarówno APM, jak i EAP, ale pozwala na łatwe tworzenie procedury migracji z wcześniejszych wzorców.  
@@ -37,7 +37,7 @@ ms.locfileid: "64623811"
   
 <a name="ApmToTap"></a>   
 ### <a name="from-apm-to-tap"></a>Z APM do wzorca TAP  
- Ponieważ [modelu programowania asynchronicznego (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) wzorzec jest bardzo ze strukturą, tworzenie otoki, aby udostępnić implementację APM jako implementacja wzorca TAP jest bardzo łatwe. W rzeczywistości, .NET Framework, począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], obejmuje procedury pomocnika w formie <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> przeciążenia metody, aby zapewnić to tłumaczenie.  
+ Ponieważ [modelu programowania asynchronicznego (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) wzorzec jest bardzo ze strukturą, tworzenie otoki, aby udostępnić implementację APM jako implementacja wzorca TAP jest bardzo łatwe. W rzeczywistości programu .NET Framework, począwszy od .NET Framework 4, obejmuje procedury pomocnika w formie <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> przeciążenia metody, aby zapewnić to tłumaczenie.  
   
  Należy wziąć pod uwagę <xref:System.IO.Stream> klasy i jego <xref:System.IO.Stream.BeginRead%2A> i <xref:System.IO.Stream.EndRead%2A> metody, które reprezentują synchronicznego odpowiednika APM <xref:System.IO.Stream.Read%2A> metody:  
   

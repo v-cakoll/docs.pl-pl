@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868917"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456641"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Zgodność i migracja zasad zabezpieczenia dostępu kodu
 
@@ -22,7 +22,7 @@ Części zasad zabezpieczenia dostępu kodu (CAS) zostały ustawione jako przest
 
 Ostrzeżenia i błędy można uniknąć przez:
 
-- [Migrowanie](#migration) do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zamiany wywołania przestarzały.
+- [Migrowanie](#migration) do .NET Framework 4 zastępujące wywołuje przestarzały.
 
    \- lub —
 
@@ -114,7 +114,7 @@ Wyjątek czasu wykonywania:
 
 ### <a name="determining-an-assemblys-trust-level"></a>Określanie poziom zaufania zestawu
 
-Urzędy certyfikacji zasad jest często używany do określenia zestawu lub uprawnienie domeny aplikacji zestaw uprawnień lub poziom zaufania. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Udostępnia następujące właściwości przydatne, które nie powinny być rozwiązać zasady zabezpieczeń:
+Urzędy certyfikacji zasad jest często używany do określenia zestawu lub uprawnienie domeny aplikacji zestaw uprawnień lub poziom zaufania. .NET Framework 4 udostępnia następujące właściwości przydatne, które nie powinny być rozwiązać zasady zabezpieczeń:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ Urzędy certyfikacji zasad jest często używany do określenia zestawu lub upra
 
 ### <a name="application-domain-sandboxing"></a>Tryb piaskownicy domeny aplikacji
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> Metoda jest zwykle używane dla piaskownicy zestawów w domenie aplikacji. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Uwidacznia elementy członkowskie, które nie mają używać <xref:System.Security.Policy.PolicyLevel> do tego celu. Aby uzyskać więcej informacji, zobacz [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> Metoda jest zwykle używane dla piaskownicy zestawów w domenie aplikacji. .NET Framework 4 udostępnia elementy członkowskie, które nie mają używać <xref:System.Security.Policy.PolicyLevel> do tego celu. Aby uzyskać więcej informacji, zobacz [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Określanie bezpieczny lub uzasadnione dla ustawione uprawnienie częściowo zaufanego kodu
 
-Hosty często trzeba określić uprawnienia, które są odpowiednie dla kodu w piaskownicy hostowanej. Przed [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], zasady CAS podany sposób, aby zrobić to za pomocą <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> metody. W zastępstwie [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zapewnia <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> metody, która zwraca bezpieczną, standardowe zestawu uprawnień dla podanego dowodów.
+Hosty często trzeba określić uprawnienia, które są odpowiednie dla kodu w piaskownicy hostowanej. Przed .NET Framework 4, zasady CAS podany sposób, aby zrobić to za pomocą <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> metody. W zastępstwie .NET Framework 4 zawiera <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> metody, która zwraca bezpieczną, standardowe zestawu uprawnień dla podanego dowodów.
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Scenariusze bez piaskownicy: Przeciążenia Załadowań zestawów
 
-Przyczyna za pomocą przeciążenia ładowania zestawu może być korzystanie z parametrów, które nie są dostępne, zamiast piaskownicy zestawu. Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], zestawu obciążenia przeciążenia, które nie wymagają <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> obiektu jako parametr, na przykład <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, realizacji tego scenariusza.
+Przyczyna za pomocą przeciążenia ładowania zestawu może być korzystanie z parametrów, które nie są dostępne, zamiast piaskownicy zestawu. Począwszy od programu .NET Framework 4, ładowanie zestawu przeciążenia, które nie wymagają <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> obiektu jako parametr, na przykład <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, realizacji tego scenariusza.
 
 Jeśli chcesz piaskownicy zestawu, należy użyć <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> przeciążenia.
 

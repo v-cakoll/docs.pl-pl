@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: d70418c6d8a626fd3ef54161086b24655037b086
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fdd5a24d444e494caedeed56402658399e97b90a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612839"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457507"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Instrukcje: Dołączanie formantu MenuStrip do nadrzędnego okna MDI (formularze Windows)
 W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów (MDI) może różnić się od nadrzędnego okna MDI. Na przykład element nadrzędny MDI może być arkusza kalkulacyjnego i elementu podrzędnego MDI może być wykres. W takim przypadku chcesz zaktualizować zawartość menu nadrzędny MDI zawartość elementu podrzędnego MDI menu, zgodnie z oknami podrzędnymi MDI różnego rodzaju zostaną aktywowane.  
@@ -43,7 +43,7 @@ W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów 
   
 9. Ustaw <xref:System.Windows.Forms.MergeAction> właściwość `&Special`, `Command&1`, i `Command&2` elementy menu do <xref:System.Windows.Forms.MergeAction.Append>.  
   
-10. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenia `&New` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenia `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 11. W ramach programu obsługi zdarzeń, Wstaw kod, podobnie jak poniższy przykład kodu, aby utworzyć i wyświetlić nowe wystąpienia `Form2` jako elementy podrzędne MDI `Form1`.  
   
@@ -51,9 +51,9 @@ W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów 
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
         Dim NewMDIChild As New Form2()  
         'Set the parent form of the child window.  
-            NewMDIChild.MdiParent = Me  
+        NewMDIChild.MdiParent = Me  
         'Display the new form.  
-            NewMDIChild.Show()  
+        NewMDIChild.Show()  
     End Sub  
     ```  
   
@@ -62,9 +62,9 @@ W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów 
     {  
         Form2 newMDIChild = new Form2();  
         // Set the parent form of the child window.  
-            newMDIChild.MdiParent = this;  
+        newMDIChild.MdiParent = this;  
         // Display the new form.  
-            newMDIChild.Show();  
+        newMDIChild.Show();  
     }  
     ```  
   

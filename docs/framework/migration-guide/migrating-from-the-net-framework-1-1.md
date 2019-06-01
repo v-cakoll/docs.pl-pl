@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c683ce454e4db36367cb097371427d27dc4c555
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c43e17edf5795874d8b92db659f07e8f6ec3c30a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636327"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457244"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migracja z programu .NET Framework 1.1
 
@@ -62,10 +62,10 @@ W celu oceny wpływu możliwych przełomowych zmian w swojej aplikacji, należy 
 
 - [Zmiany w .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) dokumentuje zmiany między [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] i [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
 
-- [Zagadnienia dotyczące migracji programu .NET framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) dokumentuje zmiany między [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] i [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+- [Zagadnienia dotyczące migracji programu .NET framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) dokumentuje zmiany między [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] i .NET Framework 4.
 
 ## <a name="obsolete-types-and-members"></a>Przestarzałe typy i członkowie
 
 Wpływ zdeprecjonowanych typów i składowych jest nieco inny dla aplikacji przekierowanych i ponownie kompilowanych. Korzystanie z przestarzałych typów i elementów członkowskich nie wpłynie na zmienianą aplikację, chyba że przestarzałego typu lub składowej został fizycznie usunięty z zestawu. Konieczności ponownego kompilowania aplikacji korzystającej z przestarzałe typy lub członków zwykle powoduje ostrzeżenia kompilatora, nie błędu kompilatora. Jednak w niektórych przypadkach generuje błąd kompilatora i kod, który używa przestarzałego typu lub składowej nie jest kompilowany pomyślnie. W takim przypadku należy przepisać kod źródłowy, który wywołuje przestarzały typ lub członka, przed ponownym skompilowaniem aplikacji. Aby uzyskać więcej informacji na temat przestarzałych typów i członków, zobacz [What's Obsolete in biblioteki klas](../../../docs/framework/whats-new/whats-obsolete.md).
 
-Aby ocenić wpływ typów i elementów członkowskich, które zostały zaniechane od czasu wydania [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], zobacz [What's Obsolete in biblioteki klas](../../../docs/framework/whats-new/whats-obsolete.md). Przejrzyj listy przestarzałych typów i członków dla [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]i [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+Aby ocenić wpływ typów i elementów członkowskich, które zostały zaniechane od czasu wydania [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], zobacz [What's Obsolete in biblioteki klas](../../../docs/framework/whats-new/whats-obsolete.md). Przejrzyj listy przestarzałych typów i członków dla [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]i .NET Framework 4.

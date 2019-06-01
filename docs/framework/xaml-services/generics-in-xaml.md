@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca0c1b466f5a89730c72f32321394ccfc6d9c7a2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954105"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457359"
 ---
 # <a name="generics-in-xaml"></a>Typy ogólne w XAML
 .NET Framework XAML Services zaimplementowanego w System.Xaml zapewnia obsługę za pomocą typów ogólnych CLR. Ta obsługa obejmuje określenie ograniczenia typów ogólnych jako argument typu i wymuszanie ograniczenia przez wywołanie odpowiedniej `Add` metodę w przypadku kolekcji ogólnej. W tym temacie opisano aspekty przy użyciu i odwoływanie się do typów ogólnych w XAML.  
@@ -38,7 +38,7 @@ ms.locfileid: "61954105"
   
  Możliwe rozwiązania do obsługi ogólnego użycia obejmują definiowanie rozszerzenie niestandardowych znaczników, które może zwracać typów ogólnych albo udostępniające opakowywania klas definition, która pochodzi od typu ogólnego, ale spłaszcza ograniczenie generyczne w definicji klasy.  
   
- W WPF i ustawianie elementów docelowych [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], można użyć XAML 2009 — funkcje wraz z `x:TypeArguments`, lecz tylko w przypadku luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009.  
+ WPF i przeznaczonych dla platformy .NET Framework 4, można użyć XAML 2009 — funkcje wraz z `x:TypeArguments`, lecz tylko w przypadku luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009.  
   
  Niestandardowe przepływy pracy w programie Windows Workflow Foundation dla [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] nie obsługują ogólnego użycia XAML.  
   

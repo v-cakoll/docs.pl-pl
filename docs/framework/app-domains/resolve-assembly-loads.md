@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607670"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456772"
 ---
 # <a name="resolving-assembly-loads"></a>Rozwiązywanie załadowań zestawów
 Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia dla aplikacji wymagających większej kontroli nad ładowania zestawu. Obsługa tego zdarzenia, aplikacja może załadowania zestawu w kontekstu ładowania z poza normalny sondowania ścieżek, wybierz której z kilku wersji zestawu do załadowania, emitują zestawu dynamicznego i przywrócić go i tak dalej. Ten temat zawiera wskazówki dotyczące obsługi <xref:System.AppDomain.AssemblyResolve> zdarzeń.  
@@ -72,7 +72,7 @@ Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayPro
  Podstawowe reguły obsługi <xref:System.AppDomain.AssemblyResolve> zdarzenie jest, że nie powinien próbuj zwrócić zestawu nie rozpoznają. Podczas pisania programu obsługi, należy wiedzieć, zestawy, które mogą spowodować, że zdarzenia do wywołania. Twoja procedura obsługi powinna zwracać wartość null dla innych zestawów.  
   
 > [!IMPORTANT]
->  Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.AppDomain.AssemblyResolve> zdarzenie jest wywoływane dla zestawów satelickich. Ta zmiana ma wpływ na program obsługi zdarzeń, który został napisany dla starszej wersji programu .NET Framework, jeśli program obsługi próbuje rozpoznać wszystkie żądania ładowania zestawu. Ta zmiana nie dotyczy programów obsługi zdarzeń, które Ignoruj zestawy, które nie rozpoznają: Zwracają wartość null, a po nim normalne mechanizmy rezerwowego.  
+>  Począwszy od programu .NET Framework 4, <xref:System.AppDomain.AssemblyResolve> zdarzenie jest wywoływane dla zestawów satelickich. Ta zmiana ma wpływ na program obsługi zdarzeń, który został napisany dla starszej wersji programu .NET Framework, jeśli program obsługi próbuje rozpoznać wszystkie żądania ładowania zestawu. Ta zmiana nie dotyczy programów obsługi zdarzeń, które Ignoruj zestawy, które nie rozpoznają: Zwracają wartość null, a po nim normalne mechanizmy rezerwowego.  
   
  Podczas ładowania zestawu, program obsługi zdarzeń nie mogą używać dowolnego z <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> przeciążenia metody, które mogą powodować <xref:System.AppDomain.AssemblyResolve> zdarzenia można podniesione cyklicznie, ponieważ może to prowadzić do przepełnienia stosu. (Zobacz listę podane wcześniej w tym temacie). Dzieje się tak nawet wtedy, gdy zapewniają obsługę dla żądania załadowania wyjątków, ponieważ jest zgłaszany żaden wyjątek, dopóki nie zwrócono wszystkich procedur obsługi zdarzeń. W związku z tym, poniższy kod powoduje przepełnienie stosu Jeśli `MyAssembly` nie można odnaleźć:  
   

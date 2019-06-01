@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91983a0910b272e621783f0fdb68242ddbd20f03
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675094"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456185"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> Element
 Określa, czy środowisko uruchomieniowe języka wspólnego oblicza kody skrótów dla ciągów na podstawie domeny aplikacji.  
@@ -58,7 +58,7 @@ Określa, czy środowisko uruchomieniowe języka wspólnego oblicza kody skrót�
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie <xref:System.StringComparer> klasy i <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metody użyć pojedynczego algorytmu mieszania, który produkuje spójny kod mieszany w różnych domenach aplikacji. Jest to równoważne ustawieniu `enabled` atrybutu `<UseRandomizedStringHashAlgorithm>` elementu `0`. Jest to algorytm mieszania używany w [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Domyślnie <xref:System.StringComparer> klasy i <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metody użyć pojedynczego algorytmu mieszania, który produkuje spójny kod mieszany w różnych domenach aplikacji. Jest to równoważne ustawieniu `enabled` atrybutu `<UseRandomizedStringHashAlgorithm>` elementu `0`. Jest to algorytm mieszania używany w programie .NET Framework 4.  
   
  <xref:System.StringComparer> Klasy i <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metodę można również użyć innego algorytmu wyznaczania wartości skrótu, który oblicza kody skrótów na poszczególnych domen aplikacji. W rezultacie kody skrótów dla równoważnych ciągów różnią się w różnych domenach aplikacji. Jest to opcjonalna funkcja; Aby z niej korzystać, należy ustawić `enabled` atrybutu `<UseRandomizedStringHashAlgorithm>` elementu `1`.  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583645"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456202"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
 .NET Framework, za pomocą plików konfiguracji zapewnia deweloperom i administratorom kontrolę i elastyczność nad aplikacjami sposób uruchamiania. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, mogą uzyskiwać dostęp do których chronionych zasobów aplikacji, których wersji zestawów aplikacja będzie używać i gdzie znajdują się zdalne aplikacje i obiekty. Deweloperzy mogą umieścić ustawienia w plikach konfiguracyjnych, eliminując konieczność rekompilacji aplikacji za każdym razem, gdy zmieni się ustawienie. W tej sekcji opisano, co może być skonfigurowane i dlaczego Konfigurowanie aplikacji mogą być przydatne.  
@@ -90,7 +90,7 @@ ms.locfileid: "64583645"
  Pliki konfiguracji zabezpieczeń zawierają informacje dotyczące hierarchii grup kodu i zestawów uprawnień skojarzonych z poziomem zasad. Zdecydowanie zalecamy użycie [narzędzie zasad zabezpieczenia dostępu kodu (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) do modyfikowania zasad zabezpieczeń, aby upewnić się, że zasady zmiany nie spowodują uszkodzenia plików konfiguracji zabezpieczeń.  
   
 > [!NOTE]
->  Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], pliki konfiguracji zabezpieczeń znajdują się tylko wtedy, gdy zmieniono zasady zabezpieczeń.  
+>  Począwszy od programu .NET Framework 4, pliki konfiguracji zabezpieczeń występują tylko wtedy, gdy zmieniono zasady zabezpieczeń.  
   
  Pliki konfiguracji zabezpieczeń znajdują się w następujących lokalizacjach:  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586129"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457304"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemy związane z zabezpieczeniami w emisji odbicia
 Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft intermediate language (MSIL), każdy z własną problemy z zabezpieczeniami:  
@@ -78,7 +78,7 @@ Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft int
   
  Jako przy użyciu innych emitowany kod, wykonywanie metody dynamicznej wymaga wszelkie uprawnienia są wymagane przez metody, które korzysta z metody dynamicznej.  
   
- Używa zestawu systemowego, który jest hostem anonimowo hostowane metody dynamiczne <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> modelu przezroczystości, czyli modelu przezroczystości, który był używany w programie .NET Framework przed [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+ Używa zestawu systemowego, który jest hostem anonimowo hostowane metody dynamiczne <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> modelu przezroczystości, czyli modelu przezroczystości, który był używany w programie .NET Framework przed programu .NET Framework 4.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.Reflection.Emit.DynamicMethod> klasy.  
   
@@ -139,7 +139,7 @@ Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft int
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Informacje o wersji  
- Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]przezroczystości zabezpieczeń staje się domyślnego mechanizmu wymuszania i wyeliminowania zasady zabezpieczeń komputera. Zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
+ Począwszy od programu .NET Framework 4, wyeliminowana zasady zabezpieczeń dla komputera i przezroczystości zabezpieczeń staje się domyślnego mechanizmu wymuszania. Zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
  Począwszy od [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flaga nie jest już wymagany podczas emitowania dynamicznych zestawów i metod dynamicznych. Ta flaga jest wymagany we wcześniejszych wersjach programu .NET Framework.  
   

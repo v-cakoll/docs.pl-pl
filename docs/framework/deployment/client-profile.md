@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a327cb25210be7b9b6c341e3d11ccdc856cf46d3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379975"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457288"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
-.NET Client Profile jest podzbiorem .NET Framework, która została dostarczona z [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i wcześniejsze wersje i został zoptymalizowany dla aplikacji klienckich. .NET Framework to platforma deweloperska dla Windows, Windows Phone i platformą Microsoft Azure i zapewnia zarządzanie środowisko wykonywania aplikacji i biblioteki klas .NET Framework. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i jego wcześniejsze wersje oferowały dwie opcje wdrożenia: pełny program .NET Framework i Client Profile. Program Client Profile umożliwiał szybsze wdrażanie i tworzenie mniejszych pakietów instalacyjnych aplikacji, niż pełny program .NET Framework.  
+.NET Client Profile jest podzbiorem .NET Framework, która została dostarczona z .NET Framework 4 i starszych wersji i został zoptymalizowany dla aplikacji klienckich. .NET Framework to platforma deweloperska dla Windows, Windows Phone i platformą Microsoft Azure i zapewnia zarządzanie środowisko wykonywania aplikacji i biblioteki klas .NET Framework. .NET Framework 4 i starszych wersji oferowały dwie opcje wdrożenia: pełny program .NET Framework i Client Profile. Program Client Profile umożliwiał szybsze wdrażanie i tworzenie mniejszych pakietów instalacyjnych aplikacji, niż pełny program .NET Framework.  
   
  Począwszy od programu .NET Framework 4.5, Client Profile został wycofany i jedynie pełny pakiet redystrybucyjny jest dostępny. Optymalizacje dostarczane w programie .NET Framework 4.5, takie jak mniejszy rozmiar do pobrania i szybsze wdrożenie, wyeliminowały konieczność oddzielnego pakietu wdrażania. Pojedynczy pakiet redystrybucyjny usprawnia proces instalacji i upraszcza opcje wdrażania aplikacji.  
   

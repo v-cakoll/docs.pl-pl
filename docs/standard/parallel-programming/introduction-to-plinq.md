@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 670ed89754aa9b4d2052bb1186e0139618190cd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018904"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457489"
 ---
 # <a name="introduction-to-plinq"></a>Wprowadzenie do PLINQ
 
@@ -107,7 +107,7 @@ Poniższa ilustracja przedstawia różnicę między `foreach` i <xref:System.Lin
 
 ## <a name="cancellation"></a>Anulowanie
 
-Program PLINQ jest zintegrowany z typami anulowania w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. (Aby uzyskać więcej informacji, zobacz [anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md).) W związku z tym w przeciwieństwie do sekwencyjnego LINQ do zapytań obiekt, zapytania PLINQ może być anulowane. Aby utworzyć zapytanie PLINQ można anulować, użyj <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> operatora zapytania i podaj <xref:System.Threading.CancellationToken> wystąpienie jako argument. Gdy <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość token jest ustawiona na wartość true, PLINQ będzie zauważy, zatrzyma przetwarzanie na wszystkich wątkach i throw <xref:System.OperationCanceledException>.
+Program PLINQ jest zintegrowany z typami anulowania w .NET Framework 4. (Aby uzyskać więcej informacji, zobacz [anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md).) W związku z tym w przeciwieństwie do sekwencyjnego LINQ do zapytań obiekt, zapytania PLINQ może być anulowane. Aby utworzyć zapytanie PLINQ można anulować, użyj <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> operatora zapytania i podaj <xref:System.Threading.CancellationToken> wystąpienie jako argument. Gdy <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość token jest ustawiona na wartość true, PLINQ będzie zauważy, zatrzyma przetwarzanie na wszystkich wątkach i throw <xref:System.OperationCanceledException>.
 
 Istnieje możliwość, że zapytanie PLINQ może kontynuować przetwarzanie niektóre elementy po ustawieniu tokenu odwołania.
 

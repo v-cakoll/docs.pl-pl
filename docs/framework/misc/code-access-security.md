@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c8508b4ba7d6ac6e25fdcc70fb8162b8908e8fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592865"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456657"
 ---
 # <a name="code-access-security"></a>Zabezpieczenia dostępu kodu
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -67,7 +67,7 @@ Przeszukiwania stosu zabezpieczeń
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Podstawy zabezpieczeń dostępu kodu](../../../docs/framework/misc/code-access-security-basics.md)|Opisuje zabezpieczenia dostępu kodu i jego najbardziej typowych zastosowań.|  
-|[Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Zawiera opis zabezpieczeń modelu przezroczystości w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
+|[Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|W tym artykule opisano model przezroczystości zabezpieczeń w programie .NET Framework 4.|  
 |[Używanie bibliotek pochodzących z częściowo zaufanego kodu](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|W tym artykule opisano sposób włączania biblioteki do użycia z kodem niezarządzanym oraz jak wykorzystać biblioteki z niezarządzanego kodu.|  
 |[Główne pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md)|Zawiera omówienie wiele kluczowe terminy i pojęcia używane w systemie zabezpieczeń .NET Framework.|  
 |[Zabezpieczenia oparte na rolach](../../../docs/standard/security/role-based-security.md)|W tym artykule opisano, jak włączyć zabezpieczenia oparte na rolach.|  

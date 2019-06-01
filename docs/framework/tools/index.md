@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920305"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456096"
 ---
 # <a name="net-framework-tools"></a>Narzędzia programu .NET Framework
 Narzędzia programu .NET Framework ułatwiają tworzenie i wdrażanie aplikacji oraz składników współpracujących z programem .NET Framework oraz zarządzanie nimi.  
@@ -63,10 +63,10 @@ Większość narzędzi programu .NET Framework, które są opisane w tej sekcji,
  Pobiera przenośny plik wykonywalny (PE), który zawiera kod języka pośredniego (IL) i tworzy z niego plik tekstowy, który może być użyty jako wejście do asemblera IL (Ilasm.exe).  
   
  [Installutil.exe (narzędzie instalatora)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Umożliwia instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonym zestawie. (Działa z klasami w <xref:System.Configuration.Install> przestrzeni nazw.) Umożliwia instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonym zestawie. (Działa z klasami w <xref:System.Configuration.Install> przestrzeni nazw.)  
+ Umożliwia instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonym zestawie. (Działa z klasami w <xref:System.Configuration.Install> przestrzeni nazw.) 
   
  [Lc.exe (kompilator licencji)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- Czyta pliki tekstowe, które zawierają informacje o licencjonowaniu i tworzy plik .licenses, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego. Czyta pliki tekstowe, które zawierają informacje o licencjonowaniu i tworzy plik .licenses, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego.  
+ Czyta pliki tekstowe, które zawierają informacje o licencjonowaniu i tworzy plik .licenses, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego. 
   
  [Mage.exe (narzędzie generowania manifestu i edytowania)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  Umożliwia tworzenie, edytowanie i podpisywanie manifestów aplikacji i wdrożenia. Jako narzędzie wiersza polecenia Mage.exe może być uruchamiane zarówno ze skryptów wsadowych, jak i innych aplikacji opartych na systemie Windows, w tym z aplikacji ASP.NET.  

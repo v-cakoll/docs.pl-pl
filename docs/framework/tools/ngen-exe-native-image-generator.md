@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920026"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457427"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 
@@ -139,7 +139,7 @@ Użytkownik musi mieć uprawnienia administracyjne, aby uruchomić program Ngen.
 > [!CAUTION]
 > Nie należy uruchamiać programu Ngen.exe dla zestawów, które nie są w pełni zaufane. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]Ngen.exe kompiluje zestawy w trybie pełnego zaufania i zasady zabezpieczenia dostępu kodu nie są już uwzględniane.
 
-Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], obrazy natywne, które są generowane przez program Ngen.exe może nie już być ładowane do aplikacji, które działają w trybie częściowego zaufania. Zamiast tego wywoływany jest kompilator JIT (Just-In-Time).
+Począwszy od programu .NET Framework 4, obrazy natywne, które są generowane przez program Ngen.exe może nie już być ładowane do aplikacji, które działają w trybie częściowego zaufania. Zamiast tego wywoływany jest kompilator JIT (Just-In-Time).
 
 Ngen.exe generuje obrazy natywne dla zestawu określonego przez `assemblyname` argument `install` akcji i wszystkich jego zależności. Zależności są ustalane na podstawie odwołań w manifeście zestawu. Jedyny scenariusz, w którym potrzebna jest oddzielna instalacja zależności jest, gdy aplikacja ładuje ją przy użyciu odbicia, na przykład przez wywołanie metody <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78b670d8b23b5ecf274432d3758d07dae34dcfcf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607174"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456414"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> Element
 Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarządzanego wykryć naruszenia zasad dostępu i inne wyjątki uszkodzony.  
@@ -64,10 +64,10 @@ Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarz
   
 - Zastosuj <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> atrybutu do metody, która zawiera wyjątki `catch` bloku.  
   
- Ten element konfiguracji jest dostępny tylko w [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] i nowszych.  
+ Ten element konfiguracji jest dostępny tylko w programie .NET Framework 4 lub nowszej.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić, że aplikacji należy powrócić do zachowania przed [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]i przechwytywać wszystkie błędny stan wyjątku błędów.  
+ Jak określić, że aplikacja powinna powrócić do zachowania przed programu .NET Framework 4 i przechwytywać wszystkie błędny stan wyjątku błędów można znaleźć w poniższym przykładzie.  
   
 ```xml  
 <configuration>  

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663233"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457398"
 ---
 # <a name="xaml-services"></a>Usługi XAML
-W tym temacie opisano funkcje, nazywane .NET Framework XAML usługi zestawu technologii. Większość usług i interfejsów API, opisane znajdują się w zestawie System.Xaml, która jest zestawem wprowadzone w programie [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zbiór zestawów programu .NET core. Usługi obejmują czytników i składników zapisywania klasy schematu i obsługa schematu, fabryk, przypisywanie klas, języka XAML, wsparcie wewnętrznej i inne funkcje języka XAML.  
+W tym temacie opisano funkcje, nazywane .NET Framework XAML usługi zestawu technologii. Większość usług i interfejsów API, opisano znajdują się w zestawie System.Xaml, która jest zestawem wprowadzone w programie .NET Framework 4 zbiór zestawów programu .NET core. Usługi obejmują czytników i składników zapisywania klasy schematu i obsługa schematu, fabryk, przypisywanie klas, języka XAML, wsparcie wewnętrznej i inne funkcje języka XAML.  
   
 ## <a name="about-this-documentation"></a>Informacje o tej dokumentacji  
  Dokumentacji koncepcyjnego dla usług programu .NET Framework XAML przyjęto założenie, iż poprzednie środowisko przy użyciu języka XAML i jak ją mogą być stosowane do określonych framework, na przykład [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] lub programu Windows Workflow Foundation lub funkcji określonej technologii obszar, na przykład dostosowania kompilacji funkcje w <xref:Microsoft.Build.Framework.XamlTypes>. Ta dokumentacja nie podjęto próby opisano podstawy XAML jako język znaczników, terminologia składni XAML lub inne materiały wprowadzających. Zamiast tego tej dokumentacji koncentruje się na specjalnie przy użyciu usług .NET Framework XAML, które są włączone w bibliotece System.Xaml zestawu. Większość z tych interfejsów API jest dla scenariuszy integracji języka XAML oraz rozszerzalność. Może zawierać żadnego z następujących czynności:  

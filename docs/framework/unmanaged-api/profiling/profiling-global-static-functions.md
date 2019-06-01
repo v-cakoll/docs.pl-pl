@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758252"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457473"
 ---
 # <a name="profiling-global-static-functions"></a>Profilowanie statycznych funkcji globalnych
 W tej sekcji opisano niezarządzane funkcje interfejsu API, których używa interfejs profilowania API.  
@@ -35,13 +35,13 @@ W tej sekcji opisano niezarządzane funkcje interfejsu API, których używa inte
  Powiadamia program profilujący, że identyfikator danej funkcji może być ponownie mapowany do alternatywnego Identyfikatora do użycia w [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), i [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) wywołań zwrotnych tej funkcji. Umożliwia także profilującemu wskazanie, czy chce odbierać wywołania zwrotne do tej funkcji  
   
  [FunctionEnter2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Powiadamia program profilujący, że kontroli jest przekazywany do funkcji i zawiera informacje o stosie argumenty ramki i funkcji. Przestarzałe w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Powiadamia program profilujący, że kontroli jest przekazywany do funkcji i zawiera informacje o stosie argumenty ramki i funkcji. Przestarzałe w programie .NET Framework 4.  
   
  [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Powiadamia program profilujący, że funkcji ma zwrócić do elementu wywołującego i zawiera informacje dotyczące stosu ramki i funkcja wartość zwracaną. Przestarzałe w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Powiadamia program profilujący, że funkcji ma zwrócić do elementu wywołującego i zawiera informacje dotyczące stosu ramki i funkcja wartość zwracaną. Przestarzałe w programie .NET Framework 4.  
   
  [FunctionTailcall2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Powiadamia program profilujący, że aktualnie wykonywanej funkcji ma wykonywać wywołania tail do innej funkcji oraz informacje o ramki stosu. Przestarzałe w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Powiadamia program profilujący, że aktualnie wykonywanej funkcji ma wykonywać wywołania tail do innej funkcji oraz informacje o ramki stosu. Przestarzałe w programie .NET Framework 4.  
   
  [StackSnapshotCallback, funkcja](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
  Dostarcza informacji na temat każdej zarządzanej ramki i każde uruchomienie niezarządzanych ramek na stosie podczas przeszukiwania stosu jest inicjowane przez profiler [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metody.  

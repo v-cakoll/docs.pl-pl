@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666054"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457230"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Konfigurowanie środowiska profilowania
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666054"
  Aby profilować aplikację CLR, należy ustawić zmienne środowiskowe COR_ENABLE_PROFILING i COR_PROFILER przed uruchomieniem aplikacji. Również należy się upewnić, że profiler DLL jest zarejestrowany.  
   
 > [!NOTE]
->  Począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], profilowania nie muszą być zarejestrowane.  
+>  Począwszy od programu .NET Framework 4, profilowania nie trzeba być zarejestrowane.  
   
 > [!NOTE]
->  Aby używać .NET Framework w wersji 2.0, 3.0 i 3.5 profilowania w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] i nowsze wersje, należy ustawić zmiennej środowiskowej COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
+>  Aby użyć .NET Framework w wersji 2.0, 3.0 i 3.5 profilowania w .NET Framework 4 i nowsze wersje, należy ustawić zmiennej środowiskowej COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
   
 ## <a name="environment-variable-scope"></a>Zakres zmiennej środowiskowej.  
  Jak ustawić zmienne środowiskowe COR_ENABLE_PROFILING i COR_PROFILER określa zakres wpływu. Można ustawić te zmienne na jeden z następujących sposobów:  

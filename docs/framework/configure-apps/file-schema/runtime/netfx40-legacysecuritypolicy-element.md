@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a0ca8560fcd5d7f9d171df3e3b4c3f42e78641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674184"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456473"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> Element
 Określa, czy środowisko wykonawcze używa starszego kodu zasady zabezpieczeń dostępu (CAS).  
@@ -57,7 +57,7 @@ Określa, czy środowisko wykonawcze używa starszego kodu zasady zabezpieczeń 
 ## <a name="remarks"></a>Uwagi  
  W .NET Framework w wersji 3.5 i wcześniejszymi wersjami urzędy certyfikacji zasad jest zawsze w obiekcie. W [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], musi być włączone zasady CAS.  
   
- Urzędy certyfikacji zasad jest specyficzny dla wersji. Zasady niestandardowe urzędów certyfikacji, które istnieją we wcześniejszych wersjach programu .NET Framework musi obowiązywać w [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Urzędy certyfikacji zasad jest specyficzny dla wersji. Zasady niestandardowe urzędów certyfikacji, które istnieją we wcześniejszych wersjach programu .NET Framework musi obowiązywać w programie .NET Framework 4.  
   
  Stosowanie `<NetFx40_LegacySecurityPolicy>` elementu [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] zestawu nie ma wpływu na [kod o przezroczystym poziomie bezpieczeństwa](../../../../../docs/framework/misc/security-transparent-code.md); nadal mają zastosowanie zasady przejrzystości.  
   
@@ -65,7 +65,7 @@ Określa, czy środowisko wykonawcze używa starszego kodu zasady zabezpieczeń 
 >  Stosowanie `<NetFx40_LegacySecurityPolicy>` elementu może spowodować istotnie poprawiającą wydajność dla zestawów obrazu natywnego, utworzone przez [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) nie są zainstalowane w [globalnej pamięci podręcznej zestawów ](../../../../../docs/framework/app-domains/gac.md). Spadek wydajności jest spowodowany brakiem możliwości środowiska uruchomieniowego ładować zestawy jako obrazy natywne, jeśli ten atrybut jest stosowany, co spowoduje ich załadowanych zespołów jako just-in-time.  
   
 > [!NOTE]
->  Jeśli określisz docelowego .NET Framework w wersji starszej niż [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] w ustawieniach projektu dla projektu programu Visual Studio, urzędy certyfikacji zasady zostaną włączone, łącznie z urzędami certyfikacji zasad niestandardowych określony dla danej wersji. Jednak nie będzie mógł używać nowego [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] typów i elementów członkowskich. Można również określić przy użyciu wcześniejszej wersji programu .NET Framework [ \<supportedRuntime > element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) w schemat ustawień uruchamiania w swojej [pliku konfiguracji aplikacji](../../../../../docs/framework/configure-apps/index.md).  
+>  Jeśli określisz docelowego .NET Framework w wersji starszej niż .NET Framework 4 w ustawieniach projektu dla projektu programu Visual Studio, urzędów certyfikacji, zasady zostaną włączone, w tym wszystkie niestandardowe zasady urzędów certyfikacji, wskazana dla danej wersji. Jednak nie można używać nowych typów programu .NET Framework 4 i elementów członkowskich. Można również określić przy użyciu wcześniejszej wersji programu .NET Framework [ \<supportedRuntime > element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) w schemat ustawień uruchamiania w swojej [pliku konfiguracji aplikacji](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
 >  Składni plików konfiguracji jest uwzględniana wielkość liter. Należy użyć składni, zgodnie z postanowieniami w sekcjach składnię i przykład.  

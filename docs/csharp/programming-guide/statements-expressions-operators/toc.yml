@@ -5,37 +5,38 @@
       href: statements.md
     - name: Wyrażenia
       href: expressions.md
-      items:
-        - name: Składowe z wyrażeniem w treści
-          href: expression-bodied-members.md
+    - name: Składowe z wyrażeniem w treści
+      href: expression-bodied-members.md
     - name: Operatory
       href: operators.md
     - name: Funkcje anonimowe
-      href: anonymous-functions.md
       items:
+        - name: Omówienie
+          href: anonymous-functions.md
         - name: Wyrażenia lambda
           href: lambda-expressions.md
-          items:
-            - name: 'Instrukcje: użycie wyrażeń lambda w zapytaniu'
-              href: how-to-use-lambda-expressions-in-a-query.md
-            - name: 'Instrukcje: Użycie wyrażeń lambda poza LINQ'
-              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: 'Instrukcje: użycie wyrażeń lambda w zapytaniu'
+          href: how-to-use-lambda-expressions-in-a-query.md
+        - name: 'Instrukcje: Użycie wyrażeń lambda poza LINQ'
+          href: how-to-use-lambda-expressions-outside-linq.md
         - name: Metody anonimowe
           href: anonymous-methods.md
     - name: Operatory z możliwością przeciążenia
       href: overloadable-operators.md
     - name: Operatory konwersji
-      href: conversion-operators.md
       items:
+        - name: Omówienie konwersji
+          href: conversion-operators.md
         - name: Używanie operatorów konwersji
           href: using-conversion-operators.md
         - name: 'Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur'
           href: how-to-implement-user-defined-conversions-between-structs.md
     - name: Wyrażenia wartości domyślnych
       href: default-value-expressions.md
-    - name: Porównywanie równości
-      href: equality-comparisons.md
+    - name: Równość i porównywanie równości
       items:
+        - name: Porównywanie równości
+          href: equality-comparisons.md
         - name: 'Instrukcje: Definiowanie równości wartości dla typu'
           href: how-to-define-value-equality-for-a-type.md
         - name: 'Instrukcje: Testowanie równości odwołań (tożsamości)'

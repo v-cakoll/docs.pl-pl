@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: efde313c0a1dabee45de4fd7d580a3aff5139928
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 02dac1bfe3420abd474867dcc18f70aadc7aeff4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633809"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422135"
 ---
 # <a name="using-c-reference"></a>using (odwołanie w C#)
 
@@ -28,6 +28,5 @@ ms.locfileid: "65633809"
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Słowa kluczowe przestrzeni nazw](namespace-keywords.md)
 - [Przestrzenie nazw](../../programming-guide/namespaces/index.md)
 - [extern](extern.md)

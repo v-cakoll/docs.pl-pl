@@ -1,6 +1,7 @@
 - name: Dokumentacja języka
-  href: index.md
   items:
+    - name: 'Dokumentacja języka C#'
+      href: index.md
     - name: Konfigurowanie wersji języka
       href: configure-language-version.md
     - name: 'Słowa kluczowe języka C#'

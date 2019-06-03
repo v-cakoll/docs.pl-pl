@@ -2,11 +2,11 @@
   href: index.md
   items:
     - name: Types
-      href: types.md
       items:
         - name: Typy wartości
-          href: value-types.md
           items:
+            - name: Funkcje typów wartości
+              href: value-types.md
             - name: bool
               href: bool.md
             - name: byte
@@ -29,7 +29,7 @@
               href: sbyte.md
             - name: short
               href: short.md
-            - name: 'struktura '
+            - name: struktura
               href: struct.md
             - name: uint
               href: uint.md
@@ -38,8 +38,9 @@
             - name: ushort
               href: ushort.md
         - name: Typy odwołań
-          href: reference-types.md
           items:
+            - name: Funkcje typów odwołań
+              href: reference-types.md
             - name: class
               href: class.md
             - name: delegate
@@ -57,7 +58,6 @@
         - name: var
           href: var.md
         - name: Tabele odwołań dla typów
-          href: reference-tables-for-types.md
           items:
             - name: Tabela typów wbudowanych
               href: built-in-types-table.md
@@ -76,11 +76,11 @@
             - name: Formatowanie tabeli wyników liczbowych
               href: formatting-numeric-results-table.md
     - name: Modyfikatory
-      href: modifiers.md
       items:
         - name: Modyfikatory dostępu
-          href: access-modifiers.md
           items:
+            - name: Krótki przewodnik
+              href: access-modifiers.md
             - name: Poziomy ułatwień dostępu
               href: accessibility-levels.md
             - name: Domena ułatwień dostępu
@@ -128,17 +128,16 @@
         - name: volatile
           href: volatile.md
     - name: Słowa kluczowe instrukcji
-      href: statement-keywords.md
       items:
+        - name: Kategorie instrukcji
+          href: statement-keywords.md
         - name: Instrukcje wyboru
-          href: selection-statements.md
           items:
             - name: if-else
               href: if-else.md
             - name: — przełącznik
               href: switch.md
         - name: Instrukcje iteracji
-          href: iteration-statements.md
           items:
             - name: do
               href: do.md
@@ -149,7 +148,6 @@
             - name: while
               href: while.md
         - name: Instrukcje skoku
-          href: jump-statements.md
           items:
             - name: break
               href: break.md
@@ -160,7 +158,6 @@
             - name: return
               href: return.md
         - name: Instrukcje obsługi wyjątków
-          href: exception-handling-statements.md
           items:
             - name: throw
               href: throw.md
@@ -171,8 +168,9 @@
             - name: try-catch-finally
               href: try-catch-finally.md
         - name: Checked i Unchecked
-          href: checked-and-unchecked.md
           items:
+            - name: Omówienie
+              href: checked-and-unchecked.md
             - name: checked
               href: checked.md
             - name: unchecked
@@ -182,8 +180,9 @@
         - name: 'lock, instrukcja'
           href: lock-statement.md
     - name: Parametry metody
-      href: method-parameters.md
       items:
+        - name: Przekazywanie parametrów
+          href: method-parameters.md
         - name: params
           href: params.md
         - name: in (modyfikator parametrów)
@@ -193,13 +192,13 @@
         - name: out (modyfikator parametrów)
           href: out-parameter-modifier.md
     - name: Słowa kluczowe przestrzeni nazw
-      href: namespace-keywords.md
       items:
         - name: — przestrzeń nazw
           href: namespace.md
         - name: korzystanie
-          href: using.md
           items:
+            - name: Konteksty dyrektywy using
+              href: using.md
             - name: 'using, dyrektywa'
               href: using-directive.md
             - name: 'using static, dyrektywa'
@@ -209,7 +208,6 @@
         - name: extern alias
           href: extern-alias.md
     - name: Słowa kluczowe operatora
-      href: operator-keywords.md
       items:
         - name: as
           href: as.md
@@ -218,8 +216,9 @@
         - name: is
           href: is.md
         - name: new
-          href: new.md
           items:
+            - name: 'new, operator, modyfikator i ograniczenie'
+              href: new.md
             - name: 'new, operator'
               href: new-operator.md
             - name: 'new, modyfikator'
@@ -235,7 +234,6 @@
         - name: nameof
           href: nameof.md
     - name: Słowa kluczowe konwersji
-      href: conversion-keywords.md
       items:
         - name: explicit
           href: explicit.md
@@ -244,14 +242,12 @@
         - name: operator
           href: operator.md
     - name: Słowa kluczowe dostępu
-      href: access-keywords.md
       items:
         - name: base
           href: base.md
         - name: this
           href: this.md
     - name: Słowa kluczowe literału
-      href: literal-keywords.md
       items:
         - name: wartość null
           href: null.md
@@ -262,8 +258,9 @@
         - name: default
           href: default.md
     - name: Kontekstowe słowa kluczowe
-      href: contextual-keywords.md
       items:
+        - name: Krótki przewodnik
+          href: contextual-keywords.md
         - name: add
           href: add.md
         - name: get
@@ -287,8 +284,9 @@
         - name: yield
           href: yield.md
     - name: Słowa kluczowe zapytania
-      href: query-keywords.md
       items:
+        - name: Krótki przewodnik
+          href: query-keywords.md
         - name: Klauzula from
           href: from-clause.md
         - name: Klauzula where

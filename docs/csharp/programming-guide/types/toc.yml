@@ -1,6 +1,7 @@
 - name: Types
-  href: index.md
   items:
+    - name: Użycie i definiowanie typów
+      href: index.md
     - name: Rzutowanie i konwersje typów
       href: casting-and-type-conversions.md
     - name: Opakowywanie i rozpakowywanie

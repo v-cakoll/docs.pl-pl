@@ -13,9 +13,10 @@
       href: async-return-types.md
     - name: Przepływ sterowania w aplikacjach asynchronicznych
       href: control-flow-in-async-programs.md
-    - name: Dostrajanie aplikacji asynchronicznych
-      href: fine-tuning-your-async-application.md
+    - name: Anulowanie zadań i przetwarzanie ukończonych zadań
       items:
+        - name: Omówienie
+          href: fine-tuning-your-async-application.md
         - name: Anulowanie zadania asynchronicznego lub listy zadań
           href: cancel-an-async-task-or-a-list-of-tasks.md
         - name: Anulowanie zadań asynchronicznych po upływie określonego czasu

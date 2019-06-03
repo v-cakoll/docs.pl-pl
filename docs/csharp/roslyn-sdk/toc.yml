@@ -1,6 +1,8 @@
 - name: Zestaw SDK platformy kompilatora .NET (interfejsy API Roslyn)
   href: index.md
   items:
+    - name: Omówienie
+      href: index.md
     - name: Omówienie modelu interfejsu API kompilatora
       href: compiler-api-model.md
     - name: Korzystanie ze składni

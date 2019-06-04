@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d25a3ccdd66ff7acb70f1f5e6c60157b53cc97c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf63b2641c4140b287a3932c2073b445211ad3aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628460"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490368"
 ---
-# <a name="getfileversion-function"></a><span data-ttu-id="55170-102">GetFileVersion — Funkcja</span><span class="sxs-lookup"><span data-stu-id="55170-102">GetFileVersion Function</span></span>
-<span data-ttu-id="55170-103">Pobiera wspólnego języka wspólnego (CLR) informacje o wersji określonego pliku, przy użyciu określonego bufora.</span><span class="sxs-lookup"><span data-stu-id="55170-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
+# <a name="getfileversion-function"></a><span data-ttu-id="a9c88-102">GetFileVersion — Funkcja</span><span class="sxs-lookup"><span data-stu-id="a9c88-102">GetFileVersion Function</span></span>
+<span data-ttu-id="a9c88-103">Pobiera wspólnego języka wspólnego (CLR) informacje o wersji określonego pliku, przy użyciu określonego bufora.</span><span class="sxs-lookup"><span data-stu-id="a9c88-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
   
- <span data-ttu-id="55170-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="55170-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="a9c88-104">Ta funkcja jest przestarzała w programie .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="a9c88-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55170-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="55170-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9c88-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="a9c88-105">Syntax</span></span>  
   
 ```  
 HRESULT GetFileVersion (  
@@ -39,26 +39,26 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="55170-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="55170-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9c88-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="a9c88-106">Parameters</span></span>  
  `szFilename`  
- <span data-ttu-id="55170-107">[in] Ścieżka pliku do badania.</span><span class="sxs-lookup"><span data-stu-id="55170-107">[in] The path of the file to be examined.</span></span>  
+ <span data-ttu-id="a9c88-107">[in] Ścieżka pliku do badania.</span><span class="sxs-lookup"><span data-stu-id="a9c88-107">[in] The path of the file to be examined.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="55170-108">[out w] Bufor przydzielony, aby uzyskać informacje o wersji, która jest zwracana.</span><span class="sxs-lookup"><span data-stu-id="55170-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
+ <span data-ttu-id="a9c88-108">[out w] Bufor przydzielony, aby uzyskać informacje o wersji, która jest zwracana.</span><span class="sxs-lookup"><span data-stu-id="a9c88-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="55170-109">[in] Rozmiar w szerokich znaków z `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="55170-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
+ <span data-ttu-id="a9c88-109">[in] Rozmiar w szerokich znaków z `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="a9c88-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="55170-110">[out] Rozmiar w bajtach zwracanego `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="55170-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
+ <span data-ttu-id="a9c88-110">[out] Rozmiar w bajtach zwracanego `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="a9c88-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55170-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="55170-111">Requirements</span></span>  
- <span data-ttu-id="55170-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55170-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9c88-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a9c88-111">Requirements</span></span>  
+ <span data-ttu-id="a9c88-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9c88-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55170-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="55170-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a9c88-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a9c88-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="55170-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55170-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="a9c88-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9c88-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55170-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="55170-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9c88-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a9c88-115">See also</span></span>
 
-- [<span data-ttu-id="55170-116">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="55170-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="a9c88-116">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="a9c88-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

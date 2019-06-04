@@ -2,24 +2,24 @@
 title: 'Instrukcje: Znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668006"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485388"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="ada92-102">Instrukcje: Znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ada92-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="ada92-103">Możesz chcieć znaleźć wszystkie elementy równorzędne węzła, które mają określoną nazwę.</span><span class="sxs-lookup"><span data-stu-id="ada92-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="ada92-104">Wynikowy kolekcji mogą obejmować węzeł kontekstu, jeśli węzeł kontekstu ma również określonej nazwy.</span><span class="sxs-lookup"><span data-stu-id="ada92-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="1acbc-102">Instrukcje: Znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1acbc-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="1acbc-103">Możesz chcieć znaleźć wszystkie elementy równorzędne węzła, które mają określoną nazwę.</span><span class="sxs-lookup"><span data-stu-id="1acbc-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="1acbc-104">Wynikowy kolekcji mogą obejmować węzeł kontekstu, jeśli węzeł kontekstu ma również określonej nazwy.</span><span class="sxs-lookup"><span data-stu-id="1acbc-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- <span data-ttu-id="ada92-105">Wyrażenie XPath jest:</span><span class="sxs-lookup"><span data-stu-id="ada92-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="1acbc-105">Wyrażenie XPath jest:</span><span class="sxs-lookup"><span data-stu-id="1acbc-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a><span data-ttu-id="ada92-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="ada92-106">Example</span></span>  
- <span data-ttu-id="ada92-107">W tym przykładzie najpierw wyszukuje `Book` elementu, a następnie znajduje wszystkich elementów równorzędnych o nazwie `Book`.</span><span class="sxs-lookup"><span data-stu-id="ada92-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="ada92-108">Wynikowy kolekcja zawiera węzła kontekstu.</span><span class="sxs-lookup"><span data-stu-id="ada92-108">The resulting collection includes the context node.</span></span>  
+## <a name="example"></a><span data-ttu-id="1acbc-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="1acbc-106">Example</span></span>  
+ <span data-ttu-id="1acbc-107">W tym przykładzie najpierw wyszukuje `Book` elementu, a następnie znajduje wszystkich elementów równorzędnych o nazwie `Book`.</span><span class="sxs-lookup"><span data-stu-id="1acbc-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="1acbc-108">Wynikowy kolekcja zawiera węzła kontekstu.</span><span class="sxs-lookup"><span data-stu-id="1acbc-108">The resulting collection includes the context node.</span></span>  
   
- <span data-ttu-id="ada92-109">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Książki (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ada92-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="1acbc-109">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Książki (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1acbc-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -49,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="ada92-110">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="ada92-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="1acbc-110">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="1acbc-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -73,7 +73,3 @@ Results are identical
       of the world.</Description>  
 </Book>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="ada92-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ada92-111">See also</span></span>
-
-- [<span data-ttu-id="ada92-112">LINQ to XML dla użytkowników metody XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="ada92-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

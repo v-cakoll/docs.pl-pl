@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457489"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490972"
 ---
 # <a name="introduction-to-plinq"></a>Wprowadzenie do PLINQ
 
 ## <a name="what-is-a-parallel-query"></a>Co to jest zapytanie równoległe?
 
-Language-Integrated Query (LINQ) została wprowadzona w [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Zawiera funkcje zunifikowany model przeznaczony do wykonywania zapytań o dowolne <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> źródła danych w sposób bezpieczny dla typu. LINQ to Objects do nazwa zapytania LINQ, które są uruchamiane na kolekcjach w pamięci, takich jak <xref:System.Collections.Generic.List%601> i tablice. W tym artykule założono, że masz podstawową wiedzę na temat LINQ. Aby uzyskać więcej informacji, zobacz [Language-Integrated Query (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) lub [Language-Integrated Query (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
+Language-Integrated Query (LINQ) została wprowadzona w programie .NET Framework 3.5. Zawiera funkcje zunifikowany model przeznaczony do wykonywania zapytań o dowolne <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> źródła danych w sposób bezpieczny dla typu. LINQ to Objects do nazwa zapytania LINQ, które są uruchamiane na kolekcjach w pamięci, takich jak <xref:System.Collections.Generic.List%601> i tablice. W tym artykule założono, że masz podstawową wiedzę na temat LINQ. Aby uzyskać więcej informacji, zobacz [Language-Integrated Query (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) lub [Language-Integrated Query (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
 
 Równoległe LINQ (PLINQ) to implementacja przetwarzania równoległego wzorzec LINQ. Zapytanie PLINQ pod wieloma względami przypomina nierównoległy LINQ do kwerendy obiekty. Zapytania PLINQ, podobnie jak w przypadku sekwencyjnych [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] zapytań, działają na wszystkie w pamięci <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> danych źródła i mają wstrzymane wykonanie, co oznacza, że nie rozpocząć wykonywanie aż do wyliczenia zapytania. Podstawowa różnica polega na tym, że PLINQ próbuje w pełni wykorzystać wszystkie procesory w systemie. Odbywa się to poprzez podział źródła danych na segmenty i następnie wykonywanie zapytań w każdym segmencie na oddzielnych wątkach roboczych równolegle na wielu procesorach. W wielu przypadkach wykonywanie równoległe oznacza, że zapytanie działa znacznie szybciej.
 
@@ -36,7 +36,7 @@ W dalszej części tego artykułu zawiera przegląd głównych klas PLINQ i w ty
 
 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> Klasy ujawnia prawie wszystkie funkcje w PLINQ. Ten i pozostałe z <xref:System.Linq?displayProperty=nameWithType> typy przestrzenie nazw są kompilowane do zestawu System.Core.dll. Domyślne projekty C# i Visual Basic w programie Visual Studio odwołują się do zestawu i importują przestrzeń nazw.
 
-<xref:System.Linq.ParallelEnumerable> zawiera implementacje wszystkich standardowych operatorów zapytań, które obsługuje LINQ to Objects, ale go nie podejmuje próby zrównoleglenia. Jeśli nie jesteś zaznajomiony z [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], zobacz [wprowadzenie do LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) i [wprowadzenie do LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
+<xref:System.Linq.ParallelEnumerable> zawiera implementacje wszystkich standardowych operatorów zapytań, które obsługuje LINQ to Objects, ale go nie podejmuje próby zrównoleglenia. Jeśli nie jesteś zaznajomiony z [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], zobacz [wprowadzenie do LINQ (C#)](../../csharp/programming-guide/concepts/linq/index.md) i [wprowadzenie do LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
 
 Oprócz standardowych operatorów zapytań <xref:System.Linq.ParallelEnumerable> klasa zawiera zestaw metod, które umożliwiają zachowania specyficzne dla wykonywania równoległego. Te metody specyficzne dla PLINQ są wymienione w poniższej tabeli.
 

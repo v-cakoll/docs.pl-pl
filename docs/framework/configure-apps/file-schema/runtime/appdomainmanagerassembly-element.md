@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704924"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487772"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appdomainmanagerassembly — > Element
 Określa zestaw, który zapewnia Menedżer domeny aplikacji dla domyślnej domeny aplikacji w procesie.  
@@ -58,7 +58,7 @@ Określa zestaw, który zapewnia Menedżer domeny aplikacji dla domyślnej domen
   
  Format nazwy wyświetlanej zestawu, zobacz <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> właściwości.  
   
- Ten element konfiguracji jest dostępny tylko w [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] i nowszych.  
+ Ten element konfiguracji jest dostępny tylko w programie .NET Framework 4 lub nowszej.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak określić, że Menedżer domeny aplikacji dla domyślnej domeny aplikacji procesu jest `MyMgr` wpisać `AdMgrExample` zestawu.  

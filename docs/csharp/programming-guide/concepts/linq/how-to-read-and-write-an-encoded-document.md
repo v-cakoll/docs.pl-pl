@@ -2,12 +2,12 @@
 title: 'Instrukcje: Odczytywanie i zapisywanie zakodowanego dokumentu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fdf3e05c705ca9caea32306616c79ade0aeb9be3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6340443fddbedb4e27e1d1f8ab3e7c006a039f25
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702311"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485141"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>Instrukcje: Odczytywanie i zapisywanie zakodowanego dokumentu (C#)
 Aby utworzyć zakodowanego dokumentu XML, należy dodać <xref:System.Xml.Linq.XDeclaration> do drzewa XML ustawienie Kodowanie do nazwy strony odpowiedni kod.  
@@ -79,4 +79,3 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [Zaawansowane LINQ to XML programowania (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

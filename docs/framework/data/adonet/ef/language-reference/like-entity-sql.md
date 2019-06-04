@@ -2,12 +2,12 @@
 title: Podobnie jak (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780448"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489915"
 ---
 # <a name="like-entity-sql"></a>Podobnie jak (jednostka SQL)
 Określa, czy określony znak `String` pasuje do określonego wzorca.  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Takich jak operator i klauzuli UCIECZKI nie można zastosować do `System.DateTime` lub `System.Guid` wartości.  
   
- Podobnie jak dopasowywania do wzorca obsługuje ASCII i Unicode. Jeśli wszystkie parametry są znaki ASCII, dopasowanie wzorca ASCII jest przeprowadzane. Jeśli co najmniej jeden z argumentów Unicode, wszystkie argumenty są konwertowane na Unicode i odbywa się dopasowanie wzorca Unicode. Gdy używasz Unicode przy użyciu NOTACJI końcowe spacje są istotne; jednak innego niż Unicode, końcowe spacje nie są istotne. Składnia ciągu wzorca [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest taka sama jak w przypadku [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+ Podobnie jak dopasowywania do wzorca obsługuje ASCII i Unicode. Jeśli wszystkie parametry są znaki ASCII, dopasowanie wzorca ASCII jest przeprowadzane. Jeśli co najmniej jeden z argumentów Unicode, wszystkie argumenty są konwertowane na Unicode i odbywa się dopasowanie wzorca Unicode. Gdy używasz Unicode przy użyciu NOTACJI końcowe spacje są istotne; jednak innego niż Unicode, końcowe spacje nie są istotne. Składnia ciągu wzorca [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest taka sama jak w przypadku języka Transact-SQL.  
   
  Wzorzec może zawierać zwykłe znaki oraz znaki symboli wieloznacznych. Podczas dopasowywania do wzorca zwykłe znaki muszą dokładnie odpowiadać znaków określonych w znaku `string`. Jednak symboli wieloznacznych można dopasować do dowolnych fragmentów ciągu znaków. Gdy jest używany z symbolami wieloznacznymi, LIKE operator jest bardziej elastyczny niż = i! = operatorów porównywania ciągów.  
   

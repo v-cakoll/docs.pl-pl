@@ -2,23 +2,29 @@
 title: Zapytanie o języku zintegrowanym (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: fbd73d879a3e2fe4cc38d6c8548434d21ca06467
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f2cbab6295fd9a2c2b3458f520dbf231d9b5413
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597084"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484543"
 ---
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
-Language-Integrated Query (LINQ) to nazwa zestawu technologii, w oparciu o integrację możliwości zapytania bezpośrednio w języku C#. Tradycyjne zapytania dotyczące danych są wyrażane jako zwykłe ciągi bez typu sprawdzania w kompilacji czasu lub obsługę funkcji IntelliSense. Ponadto konieczne będzie uczenia się języka zapytań różne dla każdego typu źródła danych: Bazy danych SQL, dokumentów XML, różnych usług sieci Web i tak dalej. Za pomocą LINQ kwerenda jest staje się konstrukcją języka, podobnie jak klasy, metody i zdarzenia.
+Language-Integrated Query (LINQ) to nazwa zestawu technologii, w oparciu o integrację możliwości zapytania bezpośrednio w języku C#. Tradycyjne zapytania dotyczące danych są wyrażane jako zwykłe ciągi bez typu sprawdzania w kompilacji czasu lub obsługę funkcji IntelliSense. Ponadto konieczne będzie uczenia się języka zapytań różne dla każdego typu źródła danych: Bazy danych SQL, dokumentów XML, różnych usług sieci Web i tak dalej. Za pomocą LINQ kwerenda jest staje się konstrukcją języka, podobnie jak klasy, metody i zdarzenia. Możesz pisać zapytania dotyczące kolekcje silnie typizowanych obiektów przy użyciu dobrze znanych operatory i słowa kluczowe języka.  Rodzina LINQ technologii zapewnia spójne zapytania dla obiektów (LINQ to Objects), relacyjne bazy danych (LINQ to SQL) i XML (LINQ to XML).  
 
 Deweloper, który zapisuje zapytania, aby uzyskać najbardziej widoczne części "language-integrated" LINQ jest wyrażenia zapytania. Wyrażenia zapytań są zapisywane w deklaratywne *składni zapytania*. Za pomocą składni zapytań, można wykonać filtrowanie, porządkowanie i operacje do źródeł danych z co najmniej kodu. Używasz tych samych wzorców wyrażeń zapytania podstawowego do wykonywania zapytań i przekształcania danych w bazy danych SQL, ADO .NET w zestawach danych, strumienie i dokumentów XML i kolekcjami .NET.
+
+Możesz pisać zapytania LINQ w C# dla programu SQL Server baz danych, XML dokumenty, zestawami danych ADO.NET i kolekcji obiektów, która obsługuje <xref:System.Collections.IEnumerable> lub ogólny <xref:System.Collections.Generic.IEnumerable%601> interfejsu. LINQ jest również obsługiwane przez strony trzecie dla wielu usług sieci Web oraz inne implementacje bazy danych.  
 
 Poniższy przykład przedstawia pełną operację zapytania. Zakończyć operację obejmuje tworzenie źródła danych, definiując wyrażenie zapytania i wykonywania zapytania w `foreach` instrukcji.
 
 [!code-csharp[csProgGuideLINQ#11](../../../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
+ Na poniższej ilustracji w programie Visual Studio pokazuje zapytanie LINQ z częściowo ukończone w bazie danych programu SQL Server w obu C# i Visual Basic z pełną sprawdzenie i obsługę funkcji IntelliSense:  
+  
+ ![Diagram, który pokazuje zapytanie LINQ, za pomocą funkcji Intellisense.](./media/introduction-to-linq/linq-query-intellisense.png)  
+  
 ## <a name="query-expression-overview"></a>Omówienie zapytań w wyrażeniu
 
 - Wyrażenia zapytań może służyć do wykonywania zapytań i przekształcania danych z dowolnego źródła danych z obsługą zapytań LINQ. Na przykład jednego zapytania można pobierać dane z bazy danych SQL i generuje strumień XML jako dane wyjściowe.  
@@ -49,3 +55,7 @@ Aby dowiedzieć się więcej na temat LINQ, należy rozpocząć od staje się po
 Aby uzyskać lepszy opis LINQ ogólnie rzecz biorąc, zobacz [LINQ w C#](../../../linq/linq-in-csharp.md).
 
 Aby rozpocząć pracę z LINQ w C#, zapoznaj się z samouczkiem [Praca z technologią LINQ](../../../tutorials/working-with-linq.md).
+
+## <a name="see-also"></a>Zobacz także
+
+- [Zapytanie o języku zintegrowanym (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

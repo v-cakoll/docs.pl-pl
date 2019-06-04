@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456384"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489413"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience> Element
 Określa, czy środowisko wykonawcze automatycznie poprawki nieprawidłowa platforma wywołania deklaracje w czasie wykonywania, kosztem wolniejsze przejścia między zarządzane, a kod niezarządzany.  
@@ -40,7 +40,7 @@ Określa, czy środowisko wykonawcze automatycznie poprawki nieprawidłowa platf
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`0`|Środowisko wykonawcze używa szybciej międzyoperacyjnego marshaling architektury wprowadzona w [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], który nie może wykryć, i wywołanie platformy niepoprawne poprawki deklaracji. Domyślnie włączone.|  
+|`0`|Środowisko wykonawcze używa szybciej międzyoperacyjnego marshaling architektury wprowadzone w programie .NET Framework 4, która nie może wykryć i wywołania platformy niepoprawne poprawki deklaracji. Domyślnie włączone.|  
 |`1`|Przejść wolniejsze używa środowiska uruchomieniowego, Wykryj i napraw nieprawidłowe platformy, które wywołuje deklaracji.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  

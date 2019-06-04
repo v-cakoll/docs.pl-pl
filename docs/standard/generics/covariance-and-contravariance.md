@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456847"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490744"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 <a name="top"></a> Kowariancja i kontrawariancja to terminy odwołujące się do możliwość używania typu bardziej pochodnego (bardziej szczegółowe) lub mniej pochodnego typu (specyficzne dla języka less) niż oryginalnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. W przykładach założono, klasa bazowa o nazwie `Base` i Klasa pochodna o nazwie `Derived`.  
@@ -59,7 +59,7 @@ ms.locfileid: "66456847"
   
  Kowariancja i kontrawariancja są nazywane zbiorczo *wariancji*. Parametr typu ogólnego, który nie jest oznaczony jako kowariantny lub kontrawariantny nazywa się *niezmiennej*. Krótkie podsumowanie faktów na temat wariancji w środowisku uruchomieniowym języka wspólnego:  
   
-- W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wariantne parametry typu są ograniczone do typów ogólnych interfejsów i delegatów ogólnych.  
+- W programie .NET Framework 4 wariantne parametry typu są ograniczone do typów ogólnych interfejsów i delegatów ogólnych.  
   
 - Ogólny typ interfejsu lub delegata może mieć kowariantne i kontrawariantne parametry typu.  
   
@@ -172,11 +172,11 @@ ms.locfileid: "66456847"
   
 |Typ|Kowariantne parametry typu|Kontrawariantne parametry typu|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> Aby <xref:System.Action%6016>||Tak|  
+|<xref:System.Action%601> Aby <xref:System.Action%6016>||Yes|  
 |<xref:System.Comparison%601>||Yes|  
 |<xref:System.Converter%602>|Yes|Yes|  
 |<xref:System.Func%601>|Tak||  
-|<xref:System.Func%602> Aby <xref:System.Func%6017>|Tak|Yes|  
+|<xref:System.Func%602> Aby <xref:System.Func%6017>|Yes|Yes|  
 |<xref:System.IComparable%601>||Yes|  
 |<xref:System.Predicate%601>||Yes|  
 |<xref:System.Collections.Generic.IComparer%601>||Yes|  
@@ -186,7 +186,7 @@ ms.locfileid: "66456847"
 |<xref:System.Linq.IGrouping%602>|Yes||  
 |<xref:System.Linq.IOrderedEnumerable%601>|Yes||  
 |<xref:System.Linq.IOrderedQueryable%601>|Yes||  
-|<xref:System.Linq.IQueryable%601>|Yes||  
+|<xref:System.Linq.IQueryable%601>|Tak||  
   
 ## <a name="see-also"></a>Zobacz także
 

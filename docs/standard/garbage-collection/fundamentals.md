@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 8d3ac6acf756a0ac468eb4483432467429ed91ca
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457439"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483286"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a> W środowisko uruchomieniowe języka wspólnego (CLR) wyrzucanie elementów bezużytecznych działa jako automatycznych Menadżer pamięci. Zapewnia następujące korzyści:  
@@ -186,7 +186,7 @@ Wątek, który wyzwala wyrzucanie elementów bezużytecznych
   
      Wyrzucanie elementów bezużytecznych może być współbieżnych lub niewspółbieżnie. Współbieżne wyrzucanie elementów bezużytecznych umożliwia zarządzanym wątkom kontynuowanie operacji podczas wyrzucania elementów bezużytecznych.  
   
-     Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne wyrzucanie elementów bezużytecznych.  
+     Począwszy od programu .NET Framework 4, wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne wyrzucanie elementów bezużytecznych.  
   
 - Wyrzucanie elementów bezużytecznych serwera, który jest przeznaczony dla aplikacji serwera wymagających wysokiej przepływności i skalowalności. Wyrzucanie elementów bezużytecznych serwera może być niewspółbieżne lub w tle.  
   

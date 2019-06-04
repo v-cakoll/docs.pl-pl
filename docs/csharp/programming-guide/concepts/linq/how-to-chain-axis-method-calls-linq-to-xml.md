@@ -2,12 +2,12 @@
 title: 'Instrukcje: Połączyć w łańcuch wywołań metody osi (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: ff3a7548e2ec54e8959f9f9b5ed52c0fc6acb1f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39113c1b96ea7376d61c606aaa5f79715dbe3cab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702363"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485924"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Instrukcje: Połączyć w łańcuch wywołań metody osi (LINQ to XML) (C#)
 Typowy wzorzec, który będzie używany w kodzie jest wywołanie metody osi, a następnie wywołania jednej osi metody rozszerzenia.  
@@ -88,7 +88,7 @@ foreach (XElement cp in configParameters)
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje tę samą technikę, XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tę samą technikę, XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
   
  W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   

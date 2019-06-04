@@ -2,12 +2,12 @@
 title: Literały
 description: Dowiedz się więcej o typy literałów w F# języka programowania.
 ms.date: 02/08/2019
-ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904569"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490979"
 ---
 # <a name="literals"></a>Literały
 
@@ -28,6 +28,7 @@ W poniższej tabeli przedstawiono typy literałów w F#. Znaki, które reprezent
 |UInt16|Liczba naturalna bez znaku 16-bitowych|us|`86us`|
 |int<br /><br />int32|32-bitowa liczba całkowita ze znakiem|l lub Brak|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|niepodpisane 32-bitowa liczba naturalna|u lub ul|`86u`<br /><br />`86ul`|
+|nativeint —|wskaźnik natywny podpisem numer naturalnym|n|`123n`|
 |unativeint —|wskaźnik natywny jako liczba naturalna bez znaku|NZ|`0x00002D3Fun`|
 |int64|64-bitowa liczba całkowita ze znakiem|L|`86L`|
 |uint64|niepodpisane 64-bitowa liczba naturalna|UL|`86UL`|

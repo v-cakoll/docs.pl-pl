@@ -2,12 +2,12 @@
 title: 'Instrukcje: Znajdowanie elementów w Namespace (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: 8ba5fc03bbd831cfee0c4fd15e71708c4eafd212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dcd7dcc43ebbb45aa43daf06b132836e17375db
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667986"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485465"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Instrukcje: Znajdowanie elementów w Namespace (XPath-LINQ to XML) (C#)
 Wyrażenia XPath można znaleźć węzły w określonej przestrzeni nazw. Wyrażenia XPath używać prefiksów przestrzeni nazw do określania przestrzeni nazw. Aby analizować wyrażenie XPath, który zawiera prefiksy przestrzeni nazw, należy przekazać obiekt do metody XPath, które implementuje <xref:System.Xml.IXmlNamespaceResolver>. W tym przykładzie użyto <xref:System.Xml.XmlNamespaceManager>.  
@@ -74,6 +74,3 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
-
-- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

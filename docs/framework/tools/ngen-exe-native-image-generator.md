@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457427"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489665"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 
 Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajność zarządzanych aplikacji. Program Ngen.exe tworzy obrazy natywne, które są plikami zawierającymi skompilowany kod maszynowy specyficzny dla procesora, i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Środowisko uruchomieniowe może używać obrazów natywnych z tej pamięci podręcznej, zamiast używać kompilatora JIT (Just-In-Time) w celu skompilowania oryginalnego zestawu.
 
-Zmienia się na Ngen.exe w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]:
+Zmiany w Ngen.exe w .NET Framework 4:
 
 - Program Ngen.exe obecnie kompiluje zestawy w trybie pełnego zaufania, a zasady zabezpieczeń dostępu kodu (CAS) nie są już uwzględniane.
 
@@ -77,7 +77,7 @@ W poniższej tabeli pokazano składnię każdego `action`. Opisy poszczególnych
 |Akcja|Opis|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Generuje obrazy natywne dla zestawu i jego zależności, a także instaluje obrazy w pamięci podręcznej obrazów natywnych.<br /><br /> Jeśli `/queue` jest określona, akcja jest kolejkowana dla usługi obrazów natywnych. Domyślnym priorytetem jest 3. Zobacz [poziomy priorytetów](#PriorityTable) tabeli.|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Usuwa obrazy natywne zestawu i jego zależności z pamięci podręcznej obrazów natywnych.<br /><br /> Aby odinstalować pojedynczy obraz i jego zależności, należy użyć tych samych argumentów wiersza polecenia, które zostały użyte podczas instalacji obrazu. **Uwaga:**  Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Akcja `uninstall` * nie jest już obsługiwana.|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Usuwa obrazy natywne zestawu i jego zależności z pamięci podręcznej obrazów natywnych.<br /><br /> Aby odinstalować pojedynczy obraz i jego zależności, należy użyć tych samych argumentów wiersza polecenia, które zostały użyte podczas instalacji obrazu. **Uwaga:**  Począwszy od programu .NET Framework 4, Akcja `uninstall` * nie jest już obsługiwana.|
 |`update` [`/queue`]|Aktualizuje obrazy natywne, które stały się nieprawidłowe.<br /><br /> Jeśli `/queue` jest określony, aktualizacje są kolejkowane dla usługi obrazów natywnych. Aktualizacje są zawsze planowane z priorytetem 3, więc są uruchamiane, gdy komputer znajduje się w stanie bezczynności.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Wyświetla stan obrazów natywnych dla zestawu i jego zależności.<br /><br /> Jeśli nie zostaną dostarczone argumenty, będą wyświetlane wszystkie dane z pamięci podręcznej obrazów natywnych.|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> —lub—<br /><br /> `eqi` [1&#124;2&#124;3]|Wykonuje umieszczone w kolejce zadania kompilacji.<br /><br /> Jeśli określono priorytet, wykonywane są zadania kompilacji z większym lub równym priorytetem. Jeśli nie określono priorytetu, wykonywane są wszystkie skolejkowane zadania kompilacji.|
@@ -137,7 +137,7 @@ W poniższej tabeli pokazano składnię każdego `action`. Opisy poszczególnych
 Użytkownik musi mieć uprawnienia administracyjne, aby uruchomić program Ngen.exe.
 
 > [!CAUTION]
-> Nie należy uruchamiać programu Ngen.exe dla zestawów, które nie są w pełni zaufane. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]Ngen.exe kompiluje zestawy w trybie pełnego zaufania i zasady zabezpieczenia dostępu kodu nie są już uwzględniane.
+> Nie należy uruchamiać programu Ngen.exe dla zestawów, które nie są w pełni zaufane. Począwszy od programu .NET Framework 4 program Ngen.exe kompiluje zestawy w trybie pełnego zaufania, a zasady zabezpieczenia dostępu kodu nie są już uwzględniane.
 
 Począwszy od programu .NET Framework 4, obrazy natywne, które są generowane przez program Ngen.exe może nie już być ładowane do aplikacji, które działają w trybie częściowego zaufania. Zamiast tego wywoływany jest kompilator JIT (Just-In-Time).
 
@@ -565,8 +565,8 @@ Obraz macierzysty — zadanie jest zarejestrowany, gdy dla każdego Procesora ar
 
 |Nazwa zadania|komputer 32-bitowy|komputer 64-bitowy|
 |---------------|----------------------|----------------------|
-|NET Framework NGEN 4.0.30319|Tak|Tak|
-|NET Framework NGEN 4.0.30319 64|Nie|Tak|
+|NET Framework NGEN 4.0.30319|Yes|Yes|
+|NET Framework NGEN 4.0.30319 64|Nie|Yes|
 
 Obraz macierzysty — zadanie jest dostępna w .NET Framework 4.5 i nowsze wersje, gdy uruchomiony w systemie Windows 8 lub nowszym. We wcześniejszych wersjach systemu Windows, .NET Framework używa [Native Image Service](#native-image-service).
 

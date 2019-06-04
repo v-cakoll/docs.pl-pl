@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456772"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486973"
 ---
 # <a name="resolving-assembly-loads"></a>Rozwiązywanie załadowań zestawów
 Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia dla aplikacji wymagających większej kontroli nad ładowania zestawu. Obsługa tego zdarzenia, aplikacja może załadowania zestawu w kontekstu ładowania z poza normalny sondowania ścieżek, wybierz której z kilku wersji zestawu do załadowania, emitują zestawu dynamicznego i przywrócić go i tak dalej. Ten temat zawiera wskazówki dotyczące obsługi <xref:System.AppDomain.AssemblyResolve> zdarzeń.  
@@ -52,7 +52,7 @@ Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayPro
 > [!NOTE]
 >  Program obsługi musi załadować zestawu do obciążenia z kontekstu, w kontekście ładowania lub bez kontekstu. Jeśli program obsługi ładuje zestawu do kontekstu reflection-only przy użyciu <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> próba obciążenia metody, która wywołała <xref:System.AppDomain.AssemblyResolve> zakończy się niepowodzeniem.  
   
- Jest odpowiedzialny za program obsługi zdarzeń, aby powrócić do odpowiedniego zestawu. Program obsługi może przeanalizować nazwę wyświetlaną żądany zestaw, przekazując <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> wartość właściwości <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> konstruktora. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć programu obsługi <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> właściwości w celu określenia, czy bieżące żądanie dotyczy zależność innego zestawu. Te informacje mogą pomóc w identyfikacji zestawu, który będzie odpowiadał zależności.  
+ Jest odpowiedzialny za program obsługi zdarzeń, aby powrócić do odpowiedniego zestawu. Program obsługi może przeanalizować nazwę wyświetlaną żądany zestaw, przekazując <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> wartość właściwości <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> konstruktora. Począwszy od programu .NET Framework 4, można użyć programu obsługi <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> właściwości w celu określenia, czy bieżące żądanie dotyczy zależność innego zestawu. Te informacje mogą pomóc w identyfikacji zestawu, który będzie odpowiadał zależności.  
   
  Program obsługi zdarzeń może zwrócić inną wersję zestawu niż wersja, której zażądano.  
   

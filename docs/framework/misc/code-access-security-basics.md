@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868774"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488032"
 ---
 # <a name="code-access-security-basics"></a>Podstawy zabezpieczeń dostępu kodu
 
@@ -32,7 +32,7 @@ Należy zapoznać się z następujących koncepcji zabezpieczeń dostępu kodu w
 
 - **Zabezpieczanie bibliotek klas**: Biblioteki klas bezpiecznego używa wymogów bezpieczeństwa, aby upewnić się, że obiekty wywołujące w bibliotece programu mają uprawnienia dostępu do zasobów, które udostępnia biblioteki. Na przykład biblioteki klas bezpiecznego może być metodą tworzenia plików wymagających spowoduje, że elementy go wywołujące pod mają uprawnienia do tworzenia plików. .NET Framework składa się z zabezpieczonych bibliotek klas. Należy pamiętać o uprawnienia wymagane do uzyskania dostępu wszystkie biblioteki, która korzysta z kodu. Aby uzyskać więcej informacji, zobacz [przy użyciu biblioteki klas Secure](#secure_library) w dalszej części tego tematu.
 
-- **Kod o przezroczystym**: Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], oprócz identyfikowania określonych uprawnień, należy także określić czy kodzie powinno być uruchomione jako zabezpieczenia przejrzysty. Kod o przezroczystym poziomie bezpieczeństwa nie można wywołać typy lub elementy członkowskie, które są identyfikowane jako krytyczne dla bezpieczeństwa. Ta reguła ma zastosowanie do aplikacji pełnego zaufania, a także częściowo zaufanych aplikacji. Aby uzyskać więcej informacji, zobacz [kod o przezroczystym poziomie bezpieczeństwa](../../../docs/framework/misc/security-transparent-code.md).
+- **Kod o przezroczystym**: Począwszy od .NET Framework 4, oprócz identyfikowania określonych uprawnień, należy również określić, czy kod powinno być uruchomione jako zabezpieczenia przejrzysty. Kod o przezroczystym poziomie bezpieczeństwa nie można wywołać typy lub elementy członkowskie, które są identyfikowane jako krytyczne dla bezpieczeństwa. Ta reguła ma zastosowanie do aplikacji pełnego zaufania, a także częściowo zaufanych aplikacji. Aby uzyskać więcej informacji, zobacz [kod o przezroczystym poziomie bezpieczeństwa](../../../docs/framework/misc/security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ Zabezpieczenia dostępu kodu nie eliminuje możliwości ludzkiego błędu w pisa
 Składnia zabezpieczeń deklaratywnych używa [atrybuty](../../../docs/standard/attributes/index.md) można umieścić informacje o zabezpieczeniach do [metadanych](../../../docs/standard/metadata-and-self-describing-components.md) kodu. Atrybuty mogą być umieszczone na poziomie zestawu, klasy lub elementu członkowskiego, aby wskazać typ żądania, żądanie lub zastąpienie, którego chcesz użyć. Żądania są używane w aplikacjach przeznaczonych dla środowiska uruchomieniowego języka wspólnego poinformować system zabezpieczeń środowiska wykonawczego o uprawnienia, które aplikacja potrzebuje lub nie ma. Wymagania i zastąpienia są używane w bibliotekach, w celu ochrony zasobów obiektów wywołujących lub aby zastąpić domyślne zachowanie zabezpieczeń.
 
 > [!NOTE]
-> W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], miały miejsce istotne zmiany w modelu zabezpieczeń .NET Framework i terminologię. Aby uzyskać więcej informacji o tych zmianach, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).
+> W programie .NET Framework 4 są istotne zmiany w modelu zabezpieczeń .NET Framework i terminologię. Aby uzyskać więcej informacji o tych zmianach, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).
 
 Aby można było używać zabezpieczeń deklaracyjnych wywołań, musisz zainicjować dane o stanie obiektu uprawnienia tak, aby reprezentuje danego formularza uprawnień, których potrzebujesz. Wszystkie wbudowane uprawnienia ma atrybut, który jest przekazywany <xref:System.Security.Permissions.SecurityAction> wyliczenie opisujący typ operacji zabezpieczeń, którą chcesz wykonać. Uprawnienia zaakceptować również własne parametry, które są na wyłączność dla nich.
 

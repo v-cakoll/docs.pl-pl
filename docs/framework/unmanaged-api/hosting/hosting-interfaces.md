@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e330e0d06077d1eef63cf44f31bbcbf7c3431b59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46ff6032f2cdbd4a5f294198fe3bf71862c67528
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985546"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490249"
 ---
 # <a name="hosting-interfaces"></a>Hosting — Interfejsy
 W tej sekcji opisano interfejsy, które niezarządzane hosty służy do integrowania środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.  
@@ -22,7 +22,7 @@ W tej sekcji opisano interfejsy, które niezarządzane hosty służy do integrow
   
  Wersje programu .NET Framework 3.0 i 3.5 użyj Interfejsy hostingu środowiska .NET Framework w wersji 2.0, a nie wprowadza żadnych funkcji hostingu.  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Interfejsami hostingu zastępują interfejsów .NET Framework 2.0.
+ Interfejsy hostingu .NET Framework 4 zastępują interfejsów .NET Framework 2.0.
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
@@ -32,7 +32,7 @@ W tej sekcji opisano interfejsy, które niezarządzane hosty służy do integrow
  W tym artykule opisano interfejsami hostingu, wprowadzone w programie .NET Framework w wersji 2.0.  
   
  [Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- W tym artykule opisano interfejsami hostingu, wprowadzona w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ W tym artykule opisano interfejsami hostingu, wprowadzone w .NET Framework 4.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

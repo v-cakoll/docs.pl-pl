@@ -2,12 +2,12 @@
 title: Serializowanie do elementu XmlReader (wywoływanie XSLT) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: 7faf86badad116d9e6ea920d9d745261c078c43c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680860"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487182"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serializowanie do elementu XmlReader (wywoływanie XSLT) (C#)
 Kiedy używasz <xref:System.Xml?displayProperty=nameWithType> możliwości współdziałania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], możesz użyć <xref:System.Xml.Linq.XNode.CreateReader%2A> utworzyć <xref:System.Xml.XmlReader>. Moduł odczytujący z tego <xref:System.Xml.XmlReader> odczytuje węzłów z drzewa XML i przetwarza je, odpowiednio.  
@@ -61,4 +61,4 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializowanie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializowanie drzew XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

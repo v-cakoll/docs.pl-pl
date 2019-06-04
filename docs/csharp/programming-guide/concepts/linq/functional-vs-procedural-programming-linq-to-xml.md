@@ -2,12 +2,12 @@
 title: Programowanie funkcjonalne a Proceduralne (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 4c538011ce38708978f8b0f4866af3b3b4195a19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f713e54cefed5b1fcf8c29cd88aa7587a737327
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597149"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486949"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Programowanie funkcjonalne a Proceduralne (LINQ to XML) (C#)
 Istnieją różne rodzaje aplikacji XML:  
@@ -38,8 +38,8 @@ Istnieją różne rodzaje aplikacji XML:
   
  Aby wyświetlić dwa podejścia porównanie, zobacz [vs modyfikowanie drzewa XML w pamięci. Konstrukcja funkcjonalna (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
- Samouczek na temat pisania przekształceń funkcjonalnych, zobacz [czystego funkcjonalności przekształcenia XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Samouczek na temat pisania przekształceń funkcjonalnych, zobacz [czystego funkcjonalności przekształcenia XML (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

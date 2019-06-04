@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ae24cdcb97e30da0bd4aec6569ef3dcda11488c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17a596d9fc223dc53268ae9c91f7d02357b0a9b8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775768"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489977"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Niebezpieczne uprawnienia i administrowanie zasadami
 Niektóre operacje chronionych, dla których program .NET Framework oferuje uprawnienia jest potencjalnie pozwolić system zabezpieczeń obejść. Niebezpieczne uprawnienia należy podać tylko zaufanego kodu, a następnie tylko gdy jest to konieczne. Istnieje zazwyczaj nie chroniącej przed złośliwym kodem, w przypadku przyznania uprawnienia.  
   
 > [!NOTE]
->  W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], miały miejsce istotne zmiany w modelu zabezpieczeń .NET Framework i terminologię. Aby uzyskać więcej informacji o tych zmianach, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
+>  W programie .NET Framework 4 są istotne zmiany w modelu zabezpieczeń .NET Framework i terminologię. Aby uzyskać więcej informacji o tych zmianach, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
  Niebezpieczne uprawnienia są opisane w poniższej tabeli.  
   

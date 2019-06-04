@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456114"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489331"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks> Element
 Użyj żądania, że środowisko uruchomieniowe języka wspólnego (CLR), zmniejszyć pamięci, określając stosu jawnych rozmiarów, podczas tworzenia niektórych wątków, które używa wewnętrznie, zamiast korzystać z domyślnego rozmiaru stosu dla tych wątków.  
@@ -41,7 +41,7 @@ Użyj żądania, że środowisko uruchomieniowe języka wspólnego (CLR), zmniej
 |Wartość|Opis|  
 |-----------|-----------------|  
 |true|Żądanie stosu jawnych rozmiarów.|  
-|false|Użyj domyślnego rozmiaru stosu. Jest to flaga domyślna dla [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|false|Użyj domyślnego rozmiaru stosu. Jest to wartość domyślna dla programu .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

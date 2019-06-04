@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 087518cc43776848785d005f0b6c4c8aa5e2e43e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8eb622b974de350f86a586a0f07b887bffdbd61
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621439"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483066"
 ---
 # <a name="corprofeunsupportedcallsequence-hresult"></a>Wynik CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-Wynik CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT została wprowadzona w .NET Framework w wersji 2.0. [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Zwraca ta wartość HRESULT w przypadku dwóch scenariuszy:  
+Wynik CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT została wprowadzona w .NET Framework w wersji 2.0. .NET Framework 4 zwraca ta wartość HRESULT w przypadku dwóch scenariuszy:  
   
 - Gdy profiler przejmującego wymuszone resetuje wątku należy zarejestrować kontekstu w dowolnym momencie, tak aby wątek podejmie próbę dostępu do struktur, które znajdują się w stanie niespójnym.  
   

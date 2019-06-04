@@ -2,12 +2,12 @@
 title: 'Instrukcje: Pobieranie płytkiej wartości elementu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 593fe1c22664f1e4e8322cb8816e58f4721c5bf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 570f9837d04352fb291f0b79f85fb9d7f68ff09d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667707"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485039"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Instrukcje: Pobieranie płytkiej wartości elementu (C#)
 W tym temacie przedstawiono sposób pobieranie płytkiej wartości elementu. Płytkiej wartości jest wartość określonego elementu, w przeciwieństwie do głębokiego wartość, która zawiera wartości wszystkie elementy potomne połączonych w jeden ciąg.  
@@ -81,4 +81,4 @@ Column  Name="Name"         =Customer.Name
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ do XML osi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ do XML osi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)

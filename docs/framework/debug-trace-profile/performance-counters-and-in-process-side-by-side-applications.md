@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: dd3501bc74da2c9a812f9c4816b5a081b3780cd0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457255"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490030"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Liczniki wydajności i wewnątrzprocesowe, równoczesne aplikacje
 Korzystanie z Monitora wydajności (Perfmon.exe), istnieje możliwość rozróżnienia liczników wydajności na podstawie poszczególnych środowiska uruchomieniowego. W tym temacie opisano zmiany rejestru wymagane do włączenia tej funkcji.  
@@ -27,7 +27,7 @@ Korzystanie z Monitora wydajności (Perfmon.exe), istnieje możliwość rozróż
   
 - Gdy monitorujesz dwie aplikacje, które mają taką samą nazwę. Na przykład, jeśli obie aplikacje są nazywane myapp.exe, zostanie wyświetlony jeden jako **myapp** i innych **myapp nr 1** w **wystąpienia** kolumny. W tym przypadku jest trudne dopasować, licznik wydajności do określonej aplikacji. Nie jest jasne, czy dane są zbierane dla **myapp nr 1** odwołuje się do myapp.exe pierwszej lub drugiej myapp.exe.  
   
-- Jeśli aplikacja korzysta z wielu wystąpień środowiska uruchomieniowego języka wspólnego. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Obsługuje scenariusze hostingu side-by-side wewnątrzprocesowe; oznacza to, pojedynczego procesu lub aplikacji można załadować wiele wystąpień środowiska uruchomieniowego języka wspólnego. Jeśli pojedynczej aplikacji o nazwie obciążeń myapp.exe dwóch wystąpień środowiska uruchomieniowego, domyślnie, zostaną one oznaczone w **wystąpienia** jako kolumny **myapp** i **myapp nr 1**. W tym przypadku nie jest jasne czy **myapp** i **myapp nr 1** odnosić się do dwóch aplikacji o takiej samej nazwie lub tej samej aplikacji za pomocą dwóch środowisk uruchomieniowych. Jeśli wiele aplikacji o takiej samej nazwie można załadować wielu modułów wykonawczych niejednoznaczności jest jeszcze bardziej.  
+- Jeśli aplikacja korzysta z wielu wystąpień środowiska uruchomieniowego języka wspólnego. .NET Framework 4 obsługuje scenariusze hostingu side-by-side w trakcie; oznacza to pojedynczego procesu lub aplikacji można załadować wiele wystąpień środowiska uruchomieniowego języka wspólnego. Jeśli pojedynczej aplikacji o nazwie obciążeń myapp.exe dwóch wystąpień środowiska uruchomieniowego, domyślnie, zostaną one oznaczone w **wystąpienia** jako kolumny **myapp** i **myapp nr 1**. W tym przypadku nie jest jasne czy **myapp** i **myapp nr 1** odnosić się do dwóch aplikacji o takiej samej nazwie lub tej samej aplikacji za pomocą dwóch środowisk uruchomieniowych. Jeśli wiele aplikacji o takiej samej nazwie można załadować wielu modułów wykonawczych niejednoznaczności jest jeszcze bardziej.  
   
  Można ustawić klucz rejestru, aby wyeliminować tę niejednoznaczność. Dla aplikacji utworzonych za pomocą programu .NET Framework 4, zmiany w rejestrze dodaje identyfikator procesu, następuje identyfikator wystąpienia środowiska uruchomieniowego do nazwy aplikacji w **wystąpienia** kolumny. Zamiast *aplikacji* lub *aplikacji*#1 aplikację teraz jest identyfikowany jako *aplikacji*_`p`*processID* \_ `r` *runtimeID* w **wystąpienia** kolumny. Jeśli aplikacja została opracowana przy użyciu poprzedniej wersji środowiska uruchomieniowego języka wspólnego, tego wystąpienia jest reprezentowany jako *aplikacji\_* `p`*processID* pod warunkiem, że. .NET Framework 4 jest zainstalowana.  
   

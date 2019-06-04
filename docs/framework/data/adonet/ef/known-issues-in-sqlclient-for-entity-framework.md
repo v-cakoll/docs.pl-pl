@@ -2,12 +2,12 @@
 title: Znane problemy klienta SQL dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0a6fec7e2d129523e5f68955e51ac50154cb58df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631728"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489532"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy klienta SQL dla programu Entity Framework
 W tej sekcji opisano znane problemy związane z .NET Framework Data Provider for SQL Server (SqlClient).  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Wersja serwera SQL poprawne  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Cele [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] zapytań w zależności od wersji programu SQL Server, który jest określony w `ProviderManifestToken` atrybutu elementu schematu w pliku modelu (ssdl) magazynu. Ta wersja mogą się różnić od wersję używanego serwera SQL nawiązano połączenie. Na przykład, jeśli używasz programu SQL Server 2005 Twoja `ProviderManifestToken` 2008 wygenerowany ma ustawioną wartość atrybutu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] zapytania nie może być wykonywany na serwerze. Na przykład zapytanie, które korzysta z typów czasu nową datę, które zostały wprowadzone w programie SQL Server 2008 nie będzie wykonywał we wcześniejszych wersjach programu SQL Server. Jeśli używasz programu SQL Server 2005, Twoja `ProviderManifestToken` atrybutu jest równa 2000, wygenerowany [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] zapytanie może być mniejsza zoptymalizowane pod kątem lub mogą wystąpić wyjątek, który mówi, że zapytanie nie jest obsługiwany. Aby uzyskać więcej informacji zobacz sekcję operatory Zastosuj krzyżowe i zewnętrzne w we wcześniejszej części tego tematu.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Jest przeznaczony dla zapytanie Transact-SQL, w oparciu o wersji programu SQL Server, który jest określony w `ProviderManifestToken` atrybutu elementu schematu w pliku modelu (ssdl) magazynu. Ta wersja mogą się różnić od wersję używanego serwera SQL nawiązano połączenie. Na przykład, jeśli używasz programu SQL Server 2005 ale Twoja `ProviderManifestToken` 2008 ma ustawioną wartość atrybutu, wygenerowane zapytanie Transact-SQL nie może być wykonywany na serwerze. Na przykład zapytanie, które korzysta z typów czasu nową datę, które zostały wprowadzone w programie SQL Server 2008 nie będzie wykonywał we wcześniejszych wersjach programu SQL Server. Jeśli używasz programu SQL Server 2005, ale Twoja `ProviderManifestToken` atrybutu jest równa 2000, wygenerowane zapytanie Transact-SQL może być mniej zoptymalizowany lub mogą wystąpić wyjątek, który mówi, że zapytanie nie jest obsługiwany. Aby uzyskać więcej informacji zobacz sekcję operatory Zastosuj krzyżowe i zewnętrzne w we wcześniejszej części tego tematu.  
   
- Niektóre zachowania bazy danych są zależne od poziomu zgodności ustawiony na bazie danych. Jeśli Twoje `ProviderManifestToken` 2005 ma ustawioną wartość atrybutu używanej wersji programu SQL Server jest 2005, a poziom zgodności bazy danych jest ustawiony na "80" (SQL Server 2000), wygenerowany [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] będą przeznaczone dla programu SQL Server 2005, ale nie może być wykonywany zgodnie z oczekiwaniami, ze względu na Ustawienie poziomu zgodności. Na przykład jeśli nazwę kolumny na liście klauzuli ORDER BY pasuje do nazwy kolumny w selektorze może spowodować utratę informacji szeregowania.  
+ Niektóre zachowania bazy danych są zależne od poziomu zgodności ustawiony na bazie danych. Jeśli Twoje `ProviderManifestToken` 2005 ma ustawioną wartość atrybutu i używanej wersji programu SQL Server 2005, a poziom zgodności bazy danych jest ustawiony na "80" (SQL Server 2000), wygenerowane języka Transact-SQL będą przeznaczone dla programu SQL Server 2005, ale nie może być wykonywany zgodnie z oczekiwaniami, ze względu na Ustawienie poziomu zgodności. Na przykład jeśli nazwę kolumny na liście klauzuli ORDER BY pasuje do nazwy kolumny w selektorze może spowodować utratę informacji szeregowania.  
   
 ## <a name="nested-queries-in-projection"></a>Zapytania zagnieżdżone w projekcji  
  Zapytania zagnieżdżone w klauzuli projekcji może uzyskać przetłumaczone na zapytania formułuje iloczyn na serwerze. Na niektórych serwerach zaplecza, w tym SQL Server może to spowodować tabeli bazy danych TempDB, aby pobrać dość duży. Może to obniżyć wydajność serwera.  

@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01c82f2867097b98b04727592cf72c29712075ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664531"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491009"
 ---
 # <a name="when-to-use-generic-collections"></a>Kiedy należy używać kolekcji ogólnych
 Za pomocą kolekcji ogólnych ogólnie zaleca się, ponieważ uzyskanie bezpośrednią korzyść bezpieczeństwa typu bez konieczności pochodzić od typu podstawowego kolekcji i implementowanie elementów specyficznych dla typu. Typy generyczne kolekcji również zazwyczaj mają lepszą wydajność niż odpowiadające typy kolekcji nierodzajowymi (i lepiej niż typy, pochodne typy nierodzajowymi bazowej kolekcji) po elementy kolekcji są typami wartości, ponieważ za pomocą typów ogólnych nie ma potrzeby polu elementów.  
   
- Dla programów przeznaczonych [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] lub nowszej, należy użyć klasy kolekcji rodzajowej w <xref:System.Collections.Concurrent> przestrzenią nazw, gdy wiele wątków może być dodanie lub usunięcie elementów z kolekcji jednocześnie.  
+ Dla programów, które obsługują program .NET Framework 4 lub nowszego, należy używać klasy kolekcji rodzajowej w <xref:System.Collections.Concurrent> przestrzenią nazw, gdy wiele wątków może być dodanie lub usunięcie elementów z kolekcji jednocześnie.  
   
  Następujące typy rodzajowe odnoszą się do istniejących typów kolekcji:  
   

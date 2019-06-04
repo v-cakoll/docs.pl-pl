@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 441cae712e7338b36e8983f41341b1721770a0bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723202"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489712"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Zdarzenia ETW w środowisku CLR
 Środowisko uruchomieniowe języka wspólnego (CLR) zapewnia śledzenie zdarzeń użyteczne informacje diagnostyczne Windows (ETW) przy użyciu szerokiej gamy debugowania i profilowania zdarzenia. Zdarzenia CLR ETW korzystać z systemu Windows funkcji ETW śledzenia, rozszerzyć istniejące profilowanie i debugowanie pomoc techniczna jest świadczona przez środowisko uruchomieniowe języka wspólnego.  
   
  Więcej informacji na temat funkcji ETW jest dostępna w artykule [poprawić debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkID=161142) w witrynie MSDN. Informacji dotyczących narzędzia Xperf można znaleźć we wpisie [narzędzi wydajności systemu Windows — narzędzia Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) w blogu NTDebugging.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Lub nowszy jest wymagany na potrzeby wszystkich zdarzeń w zdarzeniu opisane tematów. System operacyjny Windows Vista jest minimalny obsługiwany klient, a system Windows Server 2008 jest minimalny obsługiwany serwer.  
+ .NET Framework 4 lub nowszy jest wymagany dla wszystkich zdarzeń, które są opisane w tematach zdarzeń. System operacyjny Windows Vista jest minimalny obsługiwany klient, a system Windows Server 2008 jest minimalny obsługiwany serwer.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Kontrolowanie logowania w programie .NET Framework](../../../docs/framework/performance/controlling-logging.md)  

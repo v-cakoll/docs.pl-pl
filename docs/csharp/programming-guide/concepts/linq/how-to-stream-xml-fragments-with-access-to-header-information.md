@@ -2,12 +2,12 @@
 title: 'Instrukcje: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: a7e590dcc70dcdb4ea7d5681d623c63f194e0d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ecf20134c0d5897418c7667908f80511a962871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701817"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484840"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Instrukcje: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (C#)
 Czasami trzeba przeczytać arbitralnie dużych plików XML i zapisu aplikacji, tak aby zużycie pamięci aplikacji jest przewidywalne. Jeśli użytkownik podejmie próbę wypełnianie drzewa XML przy użyciu dużego pliku XML, wykorzystanie pamięci będzie proporcjonalny do rozmiaru pliku — oznacza to, że nadmierne. W związku z tym należy zamiast tego użyj technika przesyłania strumieniowego.  
@@ -166,6 +166,3 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
-
-- [Zaawansowane LINQ to XML programowania (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

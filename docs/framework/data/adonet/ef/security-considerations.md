@@ -2,12 +2,12 @@
 title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879929"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489835"
 ---
 # <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -92,7 +92,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Podczas wykonywania zapytań dotyczących modelu koncepcyjnego, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń. Te zagadnienia dotyczą [!INCLUDE[esql](../../../../../includes/esql-md.md)] wysyła kwerendę za pomocą EntityClient i obiekt zapytania za pomocą LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)]oraz metody konstruktora zapytań.  
   
 #### <a name="prevent-sql-injection-attacks"></a>Uniemożliwić ataki przez wstrzyknięcie kodu SQL.  
- Aplikacje często akceptują dane wejściowe w zewnętrznych (z lub innego zewnętrznego agenta użytkownika) i wykonywać akcje w oparciu o te dane wejściowe. Wszystkie dane wejściowe, który bezpośrednio lub pośrednio pochodzi od użytkownika lub zewnętrznego agenta może mieć zawartości, która używa składni języka docelowego w celu wykonywania akcji nieautoryzowanego. Gdy język docelowy jest języka SQL (Structured Query), takich jak [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], manipulowania ten jest znany jako ataku polegającego na iniekcji SQL. Złośliwy użytkownik może wstrzyknąć poleceń bezpośrednio do zapytania i upuść tabeli bazy danych, i spowodować odmowę usługi lub w przeciwnym razie Zmień rodzaj wykonywanej operacji.  
+ Aplikacje często akceptują dane wejściowe w zewnętrznych (z lub innego zewnętrznego agenta użytkownika) i wykonywać akcje w oparciu o te dane wejściowe. Wszystkie dane wejściowe, który bezpośrednio lub pośrednio pochodzi od użytkownika lub zewnętrznego agenta może mieć zawartości, która używa składni języka docelowego w celu wykonywania akcji nieautoryzowanego. Język docelowy jest języka SQL (Structured Query), takie jak języka Transact-SQL, manipulowania ten jest nazywany ataku polegającego na iniekcji SQL. Złośliwy użytkownik może wstrzyknąć poleceń bezpośrednio do zapytania i upuść tabeli bazy danych, i spowodować odmowę usługi lub w przeciwnym razie Zmień rodzaj wykonywanej operacji.  
   
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)] ataki przez iniekcję kodu:  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704755"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489363"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> Element
 Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różnych implementacjach systemu .NET Framework, wyłączając zachowania domyślne, które traktuje zestawy za równorzędne do celów przenoszenia aplikacji.  
@@ -57,7 +57,7 @@ Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różn
 |`assemblyBinding`|Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Począwszy od [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], obsługa jest dostarczana automatycznie dla aplikacji, które mogą użyć jednego z dwóch wdrożeń systemu .NET Framework, na przykład implementacji .NET Framework lub .NET Framework do wdrożenia dodatku Silverlight. Dwie implementacje określonego zestawu .NET Framework są postrzegane jako równoważne przez binder zestawu. W niektórych scenariuszach ta funkcja przenoszenia aplikacji powoduje problemy. W tych scenariuszach `<supportPortability>` element może być użyty, aby wyłączyć funkcję.  
+ Począwszy od programu .NET Framework 4, obsługa jest dostarczana automatycznie dla aplikacji, które mogą użyć jednego z dwóch wdrożeń systemu .NET Framework, na przykład implementacji .NET Framework lub .NET Framework do wdrożenia dodatku Silverlight. Dwie implementacje określonego zestawu .NET Framework są postrzegane jako równoważne przez binder zestawu. W niektórych scenariuszach ta funkcja przenoszenia aplikacji powoduje problemy. W tych scenariuszach `<supportPortability>` element może być użyty, aby wyłączyć funkcję.  
   
  Taki scenariusz jest to zespół, który ma odniesienia zarówno wykonania .NET Framework, jak i programu .NET Framework dla wdrożenia dodatku Silverlight ze szczególnym odniesieniem zespołu. Na przykład projektant XAML, napisany w Windows Presentation Foundation (WPF) może być konieczne odwołać zarówno implementacje pulpitu WPF dla interfejsu użytkownika projektanta i podzbiór WPF, który znajduje się w implementacji programu Silverlight. Domyślnie oddzielne odwołania spowodują błąd kompilatora, ponieważ powiązanie zestawu widzi dwa zestawy jako równoważne. Ten element wyłącza domyślne zachowanie i pozwala kompilacja osiągnąć sukces.  
   

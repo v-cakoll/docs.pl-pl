@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456414"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489435"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> Element
 Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarządzanego wykryć naruszenia zasad dostępu i inne wyjątki uszkodzony.  
@@ -56,7 +56,7 @@ Określa, czy środowisko uruchomieniowe języka wspólnego umożliwia kodu zarz
 ## <a name="remarks"></a>Uwagi  
  W .NET Framework w wersji 3.5 i starszych środowisko uruchomieniowe języka wspólnego mogą przechwytywać wyjątków, które zostały zgłoszone przez Państwa uszkodzony procesu kodu zarządzanego. Naruszenie zasad dostępu znajduje się przykład tego typu wyjątku.  
   
- Począwszy od [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], zarządzany kod nie jest już przechwytuje tego rodzaju wyjątków w `catch` bloków. Można jednak zastąpić tę zmianę i obsługa z obsługą wyjątków uszkodzony na dwa sposoby:  
+ Począwszy od programu .NET Framework 4, kod zarządzany nie jest już przechwytuje tego rodzaju wyjątków w `catch` bloków. Można jednak zastąpić tę zmianę i obsługa z obsługą wyjątków uszkodzony na dwa sposoby:  
   
 - Ustaw `<legacyCorruptedStateExceptionsPolicy>` elementu `enabled` atrybutu `true`. To ustawienie konfiguracji jest zastosowany processwide i ma wpływ na wszystkie metody.  
   

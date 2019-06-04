@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a12f062b2fe3ad6e5ac90f0d268bbbeab44876
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674145"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489446"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> Element
 Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Publisher> dowodów dla zabezpieczeń dostępu kodu (CAS).  
@@ -57,7 +57,7 @@ Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Pub
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  W [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] i nowszym, ten element nie ma wpływu na krótszy czas ładowania zestawu. Aby uzyskać więcej informacji, zobacz sekcję "Uproszczenia zasad zabezpieczeń" w [zmiany zabezpieczeń](../../../../../docs/framework/security/security-changes.md).  
+>  W programie .NET Framework 4 i nowsze ten element nie ma wpływu na krótszy czas ładowania zestawu. Aby uzyskać więcej informacji, zobacz sekcję "Uproszczenia zasad zabezpieczeń" w [zmiany zabezpieczeń](../../../../../docs/framework/security/security-changes.md).  
   
  Środowisko uruchomieniowe języka wspólnego (CLR) próbuje zweryfikować podpisu Authenticode w czasie ładowania, aby utworzyć <xref:System.Security.Policy.Publisher> dowodu dla zestawu. Jednak domyślnie większość aplikacji nie ma potrzeby <xref:System.Security.Policy.Publisher> dowodów. Standardowe zasady CAS nie zależą od <xref:System.Security.Policy.PublisherMembershipCondition>. Należy unikać koszt uruchamiania niepotrzebnych związany z weryfikacji podpisu wydawcy, chyba że aplikacja wykonuje na komputerze za pomocą zasad niestandardowych urzędów certyfikacji lub zamierzający spełniają wymagania dla <xref:System.Security.Permissions.PublisherIdentityPermission> w środowisku częściowego zaufania. (Wymagania dotyczące uprawnień tożsamości zawsze powiedzie się w środowisku pełnego zaufania).  
   

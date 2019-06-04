@@ -2,12 +2,12 @@
 title: OD (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879583"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489943"
 ---
 # <a name="from-entity-sql"></a>OD (jednostka SQL)
 Określa kolekcję używane w [wybierz](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrukcji.  
@@ -46,7 +46,7 @@ LOB.Customers
  Jeśli brak aliasu jest określony, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] spróbuje go wygenerować alias oparte na wyrażeniu kolekcji.  
   
 ### <a name="join-from-clause-item"></a>Dołącz element klauzuli FROM  
- A `JOIN FROM` element klauzuli reprezentuje sprzężenia między dwoma `FROM` elementów w klauzuli. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Obsługa wielu sprzężeń wewnętrznych, po lewej stronie i prawe sprzężenia zewnętrzne, filtrami czasowymi i klauzule full outer JOIN. Wszystkie te sprzężeń są obsługiwane w podobny sposób, że są one obsługiwane w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Podobnie jak w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], dwa `FROM` klauzuli elementy zaangażowany w `JOIN` muszą być niezależne. Oznacza to nie może zostać skorelowane. A `CROSS APPLY` lub `OUTER APPLY` może służyć w tych przypadkach.  
+ A `JOIN FROM` element klauzuli reprezentuje sprzężenia między dwoma `FROM` elementów w klauzuli. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Obsługa wielu sprzężeń wewnętrznych, po lewej stronie i prawe sprzężenia zewnętrzne, filtrami czasowymi i klauzule full outer JOIN. Wszystkie te sprzężeń są obsługiwane w podobny sposób, że są one obsługiwane w języku Transact-SQL. Tak jak w języku Transact-SQL, dwa `FROM` klauzuli elementy zaangażowany w `JOIN` muszą być niezależne. Oznacza to nie może zostać skorelowane. A `CROSS APPLY` lub `OUTER APPLY` może służyć w tych przypadkach.  
   
 #### <a name="cross-joins"></a>Sprzężenia krzyżowe  
  A `CROSS JOIN` zapytania wyrażenie powoduje formułuje iloczyn kartezjański dwie kolekcje, jak pokazano w poniższym przykładzie:  
@@ -77,7 +77,7 @@ LOB.Customers
  Poprzednie wyrażenie zapytania przetwarza kombinacji każdy element kolekcji po lewej stronie porównywane każdy element kolekcji o tym, gdzie po prawej stronie `ON` warunek jest prawdziwy. Jeśli `ON` warunek jest fałszywy, wyrażenie nadal przetwarza jedno wystąpienie elementu po lewej stronie porównywane elementu po prawej stronie przy użyciu wartość null. Przetwarza jedno wystąpienie elementu po prawej stronie porównywane elementu po lewej stronie, za pomocą wartość null.  
   
 > [!NOTE]
->  W celu zachowania zgodności z SQL-92 w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] zewnętrzne — słowo kluczowe jest opcjonalne. W związku z tym `LEFT JOIN`, `RIGHT JOIN`, i `FULL JOIN` są synonimy `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, i `FULL OUTER JOIN`.  
+>  Aby zachować zgodność z SQL-92 w języku Transact-SQL — słowo kluczowe zewnętrzne jest opcjonalne. W związku z tym `LEFT JOIN`, `RIGHT JOIN`, i `FULL JOIN` są synonimy `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, i `FULL OUTER JOIN`.  
   
 ### <a name="apply-clause-item"></a>Zastosuj element klauzuli  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje dwa rodzaje z `APPLY`: `CROSS APPLY` i `OUTER APPLY`.  
@@ -93,7 +93,7 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  W odróżnieniu od w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], nie istnieje potrzeba jawnego unnest etapem [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+>  W odróżnieniu od w języku Transact-SQL, nie ma potrzeby kroku jawne unnest w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
 >  `CROSS` i `OUTER APPLY` operatory zostały wprowadzone w [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. W niektórych przypadkach potoku zapytania może powodować generowanie języka Transact-SQL, który zawiera `CROSS APPLY` i/lub `OUTER APPLY` operatorów. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym wersje programu SQL Server starszych niż [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], nie obsługuje tych operatorów, takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
@@ -137,7 +137,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- W [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (w przeciwieństwie do [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]), `FROM` klauzuli tylko wprowadza aliasów do zakresu. Wszystkie odwołania do tych kolekcji kolumn (właściwości) musi być kwalifikowana z aliasem.  
+ W [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (w przeciwieństwie do języka Transact-SQL) `FROM` klauzuli tylko wprowadza aliasów do zakresu. Wszystkie odwołania do tych kolekcji kolumn (właściwości) musi być kwalifikowana z aliasem.  
   
 ## <a name="pulling-up-keys-from-nested-queries"></a>Ściąganie klucze z zapytań zagnieżdżonej  
  Niektórych rodzajów zapytań, które wymagają ściąganie klucze z zapytań zagnieżdżonej nie są obsługiwane. Na przykład następujące zapytanie jest prawidłowy:  

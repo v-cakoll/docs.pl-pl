@@ -2,12 +2,12 @@
 title: 'Przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: dcbfb859-24fc-4758-b01c-51d1b6f644e6
-ms.openlocfilehash: 54bff9760aa95f624047996a65e11d98b23e863d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c647bb61daed50cda8ae38af03357ec6f91268f9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61681666"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487172"
 ---
 # <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>Przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik ma typowe zamówienie zakupu.  
@@ -51,6 +51,3 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
-
-- [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

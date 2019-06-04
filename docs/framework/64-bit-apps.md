@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e10682dbf5615f9d1ef345cf2c7eeeafa87ec28
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 703ebcf93af77be2d0034bcd99fab397d7729374
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377988"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487008"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, że powinna działać w systemie operacyjnym Windows 64-bitowych jako natywną aplikację lub w emulatorze WOW64 (Windows 32-bit na Windows 64-bitowych). WOW64 jest środowiskiem zgodności, które umożliwia aplikacji 32-bitowy, do uruchomienia w systemie 64-bitowych. Emulator WOW64 znajduje się we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
   
 ## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Uruchamianie 32-bitowego. 64-bitowych aplikacji na Windows  
- Wszystkie aplikacje, które są oparte na .NET Framework 1.0 i 1.1, są traktowane jako aplikacje 32-bitowy na 64-bitowym systemie operacyjnym i są zawsze wykonywane w ramach WOW64 i 32-bitowe środowisko uruchomieniowe języka wspólnego (CLR). 32-bitowych aplikacji, które są oparte na [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)] lub nowsze wersje również uruchomić w emulatorze WOW64 na 64-bitowym.  
+ Wszystkie aplikacje, które są oparte na .NET Framework 1.0 i 1.1, są traktowane jako aplikacje 32-bitowy na 64-bitowym systemie operacyjnym i są zawsze wykonywane w ramach WOW64 i 32-bitowe środowisko uruchomieniowe języka wspólnego (CLR). 32-bitowych aplikacji, które są oparte na programie .NET Framework 4 lub nowszy również uruchomić w emulatorze WOW64 na 64-bitowym.  
   
  Program Visual Studio instaluje 32-bitowej wersji środowiska CLR na x86 komputera i 32-bitowej wersji oraz odpowiednią wersję 64-bitowym CLR na komputerze Windows 64-bitowym. (Ponieważ program Visual Studio jest 32-bitowej aplikacji, podczas instalowania w systemie 64-bitowych, działa w emulatorze WOW64.)  
   
 > [!NOTE]
->  Ze względu na projekt x86 emulacji i w podsystemie WOW64 dla rodziny procesorów Itanium, aplikacje są ograniczone do wykonania w jednym procesorze. Te czynniki zmniejszyć wydajność i skalowalność aplikacji .NET Framework 32-bitowych, działających w systemach opartych na procesorach Itanium. Firma Microsoft zaleca użycie [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)], który macierzysty obsługuje 64-bitowych systemów z procesorem Itanium, w celu zwiększenia wydajności i skalowalności.  
+>  Ze względu na projekt x86 emulacji i w podsystemie WOW64 dla rodziny procesorów Itanium, aplikacje są ograniczone do wykonania w jednym procesorze. Te czynniki zmniejszyć wydajność i skalowalność aplikacji .NET Framework 32-bitowych, działających w systemach opartych na procesorach Itanium. Zalecamy użycie programu .NET Framework 4, który obsługuje natywnych 64-bitowych systemów opartych na procesorze Itanium, w celu zwiększenia wydajności i skalowalności.  
   
  Domyślnie po uruchomieniu aplikacji zarządzanej 64-bitowym na 64-bitowym systemie operacyjnym Windows można utworzyć obiekt nie więcej niż 2 gigabajty (GB). Jednak w .NET Framework 4.5, możesz zwiększyć ten limit.  Aby uzyskać więcej informacji, zobacz [ \<gcAllowVeryLargeObjects > element](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   

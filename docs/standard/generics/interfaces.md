@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683369"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487047"
 ---
 # <a name="generic-interfaces"></a>Interfejsy ogólne
 Ten temat zawiera omówienie ogólnych interfejsów, które udostępniają funkcje wspólne dla rodziny typów ogólnych.  
@@ -24,7 +24,7 @@ Ten temat zawiera omówienie ogólnych interfejsów, które udostępniają funkc
  Interfejsy ogólne zapewniają bezpieczny odpowiedników nierodzajowych interfejsy, porównania porządkowania i równości i funkcji, który jest współużytkowany przez typy generyczne kolekcji.  
   
 > [!NOTE]
->  Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], parametry typu kilka interfejsów ogólnych jest oznaczony jako kowariantny lub kontrawariantny, co zapewnia większą elastyczność przypisywania i używania typami, które implementują te interfejsy. Zobacz [kowariancji i kontrawariancji](../../../docs/standard/generics/covariance-and-contravariance.md).  
+>  Począwszy od programu .NET Framework 4, typ, który parametry kilka interfejsów ogólnych jest oznaczony jako kowariantny lub kontrawariantny, co zapewnia większą elastyczność przypisywania i używania typów, które implementują te interfejsy. Zobacz [kowariancji i kontrawariancji](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Równości i porównania porządkowania  
  W <xref:System> przestrzeni nazw, <xref:System.IComparable%601?displayProperty=nameWithType> i <xref:System.IEquatable%601?displayProperty=nameWithType> interfejsów ogólnych, takich jak ich odpowiedników nierodzajowych, zdefiniuj metody ustalania kolejności porównania i porównywanie równości, odpowiednio. Typy implementują te interfejsy, aby zapewnić możliwość wykonywania takie porównania.  

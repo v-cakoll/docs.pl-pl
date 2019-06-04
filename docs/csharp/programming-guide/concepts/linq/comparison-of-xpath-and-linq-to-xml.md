@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-ms.openlocfilehash: afd8701c6a37fd981d9fc23b57904da80eabf86e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9bf192a2075653802f0c5a8b4e44ff0ceacb975
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668396"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487529"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Porównanie metody XPath i LINQ to XML
 Wyrażenie XPath i LINQ to XML oferuje kilka podobne funkcje. Jednocześnie może służyć do kwerendy drzewa XML, zwracaniu takich wyników jako kolekcja elementów, Kolekcja atrybutów, kolekcja węzłów lub wartość elementu lub atrybutu. Istnieją również pewne różnice.  
@@ -104,6 +104,3 @@ customers.Elements("Customer").Elements("CompanyName")
 |następujące|Bezpośredniego odpowiednika.|  
 |poprzedza|Bezpośredniego odpowiednika.|  
   
-## <a name="see-also"></a>Zobacz także
-
-- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

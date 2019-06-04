@@ -2,12 +2,12 @@
 title: LINQ to XML a MODELU DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 6ab775cc259fd3a337358bca2da6055d7b1ea6bd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cd6edf9e950611d4e0ed205b89c7c7b073955c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596965"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484320"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML a MODELU DOM (C#)
 W tej sekcji opisano niektóre podstawowe różnice między [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i bieżącej dominujący XML programowania interfejsu API, W3C Document Object Model (DOM).  
@@ -75,7 +75,7 @@ XElement contacts =
   
  Należy zauważyć, że wcięć w kodzie do konstruowania drzewa XML pokazuje strukturę elementu bazowego XML.  
   
- Aby uzyskać więcej informacji, zobacz [tworzenie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
+ Aby uzyskać więcej informacji, zobacz [tworzenie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Praca bezpośrednio z elementów XML  
  Gdy program za pomocą XML zespół podstawowego jest zazwyczaj na elementy XML, a być może w atrybutach. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można pracować bezpośrednio z elementów XML oraz atrybuty. Można na przykład, wykonaj następujące czynności:  
@@ -100,7 +100,7 @@ doc.AppendChild(name);
  Podczas korzystania z LINQ to XML, należy użyć <xref:System.Xml.Linq.XDocument> klasy tylko wtedy, gdy chcesz dodać instrukcję przetwarzania lub komentarz na poziomie głównym dokumentu.  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>Uproszczona obsługa nazw i przestrzeni nazw  
- Obsługa nazw, przestrzenie nazw i prefiksy przestrzeni nazw jest zazwyczaj złożonych częścią programowania XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] upraszcza nazw i przestrzeni nazw pozwala pozbyć się konieczności radzenia sobie z prefiksy przestrzeni nazw. Jeśli chcesz kontrolować prefiksy przestrzeni nazw, możesz. Jeśli zdecydujesz się nie zostały jawnie kontrolowanie prefiksów przestrzeni nazw, jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] spowoduje przypisanie prefiksy przestrzeni nazw podczas serializacji, jeśli wymagane są lub będą serializacji przy użyciu domyślnych przestrzeni nazw, jeśli nie są one. Jeśli używane są domyślne obszary nazw, nie będzie żadnych prefiksów przestrzeni nazw w utworzonego dokumentu. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Obsługa nazw, przestrzenie nazw i prefiksy przestrzeni nazw jest zazwyczaj złożonych częścią programowania XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] upraszcza nazw i przestrzeni nazw pozwala pozbyć się konieczności radzenia sobie z prefiksy przestrzeni nazw. Jeśli chcesz kontrolować prefiksy przestrzeni nazw, możesz. Jeśli zdecydujesz się nie zostały jawnie kontrolowanie prefiksów przestrzeni nazw, jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] spowoduje przypisanie prefiksy przestrzeni nazw podczas serializacji, jeśli wymagane są lub będą serializacji przy użyciu domyślnych przestrzeni nazw, jeśli nie są one. Jeśli używane są domyślne obszary nazw, nie będzie żadnych prefiksów przestrzeni nazw w utworzonego dokumentu. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
   
  Inny problem z modelu DOM jest, że nie zezwala Ci zmienić nazwę węzła. Zamiast tego należy utworzyć nowy węzeł i skopiuj wszystkie węzły podrzędne, utraty oryginalną tożsamość węzła. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pozwala uniknąć tego problemu, należy włączyć ustawienia <xref:System.Xml.Linq.XName> właściwość w węźle.  
   
@@ -133,4 +133,4 @@ doc.AppendChild(name);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

@@ -2,12 +2,12 @@
 title: Przykład, który wyprowadza części dokumentu programu Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: fbfecf43824249363bf23596c9a148536423f9a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be4c0ba2ce2a007fa6e19a65d7d86854d85851c4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668344"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486003"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Przykład, który wyprowadza części dokumentu programu Office Open XML (C#)
 W tym temacie przedstawiono sposób Otwórz dokument XML otwórz pakietu Office i przejdź do części znajdujący się w nim.  
@@ -65,7 +65,3 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
 ```  
-  
-## <a name="see-also"></a>Zobacz także
-
-- [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

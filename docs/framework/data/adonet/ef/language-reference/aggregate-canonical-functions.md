@@ -2,12 +2,12 @@
 title: Funkcje agregujące Canonical
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607456"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489512"
 ---
 # <a name="aggregate-canonical-functions"></a>Funkcje agregujące Canonical
 
@@ -224,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 Wyrażenia wewnątrz agregacji oparte na grupach są obliczane w zakresie rozpoznawania nazw, które będą widoczne dla wyrażenie klauzuli WHERE.
 
-Podobnie jak w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], oparte na grupach agregacji można również określić wszystkie lub modyfikator DISTINCT. Jeśli modyfikator DISTINCT jest określony, duplikaty są eliminowane z agregacji kolekcja wejściowa przed agregacji jest kolumną obliczaną. Jeśli określono wszystkie modyfikator (lub jeśli określono nie modyfikator), jest wykonywane nie wyeliminowania zduplikowanych.
+Tak jak w języku Transact-SQL, oparte na grupach agregacji można również określić wszystkie lub modyfikator DISTINCT. Jeśli modyfikator DISTINCT jest określony, duplikaty są eliminowane z agregacji kolekcja wejściowa przed agregacji jest kolumną obliczaną. Jeśli określono wszystkie modyfikator (lub jeśli określono nie modyfikator), jest wykonywane nie wyeliminowania zduplikowanych.
 
 ## <a name="see-also"></a>Zobacz także
 

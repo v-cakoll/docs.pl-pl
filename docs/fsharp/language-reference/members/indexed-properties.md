@@ -2,34 +2,34 @@
 title: Właściwości indeksowane
 description: Więcej informacji na temat właściwości indeksowanych w F#, które umożliwiają dostęp tablicy do danych uporządkowanych.
 ms.date: 10/17/2018
-ms.openlocfilehash: bc330641c451973ddefa0a34fe6e757a808f6cb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903828"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489490"
 ---
 # <a name="indexed-properties"></a>Właściwości indeksowane
 
-Podczas definiowania klasy, która przenosi danych uporządkowanych, czasami może być przydatne do udostępnienia indeksowane dane bez narażania podstawowej implementacji. Jest to zrobić za pomocą `Index` elementu członkowskiego.
+Podczas definiowania klasy, która przenosi danych uporządkowanych, czasami może być przydatne do udostępnienia indeksowane dane bez narażania podstawowej implementacji. Jest to zrobić za pomocą `Item` elementu członkowskiego.
 
 ## <a name="syntax"></a>Składnia
 
 ```fsharp
-// Indexed property that has both get and set defined.
-member self-identifier.Index
+// Indexed property that can be read and written to
+member self-identifier.Item
     with get(index-values) =
         get-member-body
     and set index-values values-to-set =
         set-member-body
 
-// Indexed property with get only
-member self-identifier.Index
+// Indexed property can only be read
+member self-identifier.Item
     with get(index-values) =
         get-member-body
 
-// Indexed property that has set only.
-member self-identifier.Index
+// Indexed property that can only be set
+member self-identifier.Item
     with set index-values values-to-set =
         set-member-body
 ```

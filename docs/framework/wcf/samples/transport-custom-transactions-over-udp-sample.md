@@ -2,12 +2,12 @@
 title: 'Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ff53890da73d81165da6b0e845360424ec869a87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a7b0c4e9ea73fa952710f2b415082b56062dad0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637123"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483101"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP
 Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki w Windows Communication Foundation (WCF)[rozszerzalność transportu](../../../../docs/framework/wcf/samples/transport-extensibility.md). Rozszerza przykładowe transportu UDP do obsługi przepływu transakcji niestandardowe i zademonstrowano użycie <xref:System.ServiceModel.Channels.TransactionMessageProperty> właściwości.  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Bieżąca przykładowa powinien zostać uruchomiony podobnie jak [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki. Aby je uruchomić, należy uruchomić usługę z UdpTestService.exe. Jeśli używasz [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], należy uruchomić usługę z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy UdpTestService.exe w [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] i kliknij przycisk **Uruchom jako administrator**.  
+2. Bieżąca przykładowa powinien zostać uruchomiony podobnie jak [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki. Aby je uruchomić, należy uruchomić usługę z UdpTestService.exe. Jeśli używasz [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], należy uruchomić usługę z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy UdpTestService.exe w Eksploratorze plików, a następnie kliknij przycisk **Uruchom jako administrator**.  
   
 3. To daje następujące wyniki.  
   

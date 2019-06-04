@@ -2,12 +2,12 @@
 title: Modyfikowanie drzewa XML w pamięci a Konstrukcja funkcjonalna (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 1dea6a687f041c3464f582d3339f76713828f244
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55eb95585bdd5d2c52175cacae2e6d049bd06f69
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667608"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484556"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Modyfikowanie drzewa XML w pamięci a Konstrukcja funkcjonalna (LINQ to XML) (C#)
 Modyfikowanie drzewa XML w miejscu jest tradycyjne podejście na zmieniające się kształt dokumentu XML. Typowa aplikacja ładuje dokumentu do magazynu danych, takich jak modelu DOM lub [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; używa interfejsu programowania wstawić węzłów, usuń węzły lub zmienić zawartość węzłów; a następnie zapisuje w pliku XML lub przesyła je za pośrednictwem sieci.  
@@ -73,6 +73,3 @@ Console.WriteLine(newTree);
   
  Jest to bardzo prosty przykład, ale służy do pokazania różnicy w filozofia dwa podejścia. Funkcjonalne podejście dwuoddziałowe zapewnia większą produktywność w przypadku transformacji dokumentów XML większe.  
   
-## <a name="see-also"></a>Zobacz także
-
-- [Modyfikowanie drzew XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

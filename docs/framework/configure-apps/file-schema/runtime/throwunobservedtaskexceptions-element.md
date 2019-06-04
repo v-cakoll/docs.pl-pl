@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 9647297bf976d26a97be0da8807d607789e8a065
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456253"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489577"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> Element
 Określa, czy zadanie nieobsługiwanych wyjątków powinien wygasają uruchomionego procesu.  
@@ -61,7 +61,7 @@ Określa, czy zadanie nieobsługiwanych wyjątków powinien wygasają uruchomion
 ## <a name="remarks"></a>Uwagi  
  Jeśli wyjątek, który jest skojarzony z <xref:System.Threading.Tasks.Task> nie zostało spełnione, istnieje nie <xref:System.Threading.Tasks.Task.Wait%2A> operacji, element nadrzędny nie jest podłączony i <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> właściwości nie została ona odczytana wyjątek zadania jest uważany za niewidocznego.  
   
- W [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], domyślnie, jeśli <xref:System.Threading.Tasks.Task> ma niewidocznego wyjątek bezużyteczne, finalizator zgłasza wyjątek i kończy proces. Przed zakończeniem procesu jest określany przez chronometrażu wyrzucania elementów bezużytecznych i finalizacji jest zakończona.  
+ W programie .NET Framework 4, domyślnie Jeśli <xref:System.Threading.Tasks.Task> ma niewidocznego wyjątek bezużyteczne, finalizator zgłasza wyjątek i kończy proces. Przed zakończeniem procesu jest określany przez chronometrażu wyrzucania elementów bezużytecznych i finalizacji jest zakończona.  
   
  Aby ułatwić programistom pisanie kodu asynchronicznego, na podstawie zadań programu .NET Framework 4.5, zmienia to zachowanie domyślne, niewidocznego wyjątków. Niezauważalne wyjątki, które nadal powodują <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> zdarzenia, ale domyślnie nie zakończyć proces. Zamiast tego wyjątek jest ignorowany, po wywołaniu zdarzenia, niezależnie od tego, czy program obsługi zdarzeń przestrzega wyjątku.  
   

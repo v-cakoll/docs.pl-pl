@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: ab30d44ed2a91fd7f7e53cb868d90a2c5af0fef6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457296"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489713"
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członkowskich i dostęp do elementów członkowskich (czyli do wywołania metod i konstruktorów do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej). Użycie odbicia w celu uzyskania informacji na temat typów i elementów członkowskich nie jest ograniczona. Cały kod może używać odbicia do wykonywania następujących zadań:  
@@ -26,7 +26,7 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
 - Wyliczanie i badania zestawów i modułów.  
   
- Z drugiej strony, przy użyciu odbicia do dostępu do elementów członkowskich, podlega ograniczeniom. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]należy korzystać tylko z zaufanego kodu umożliwia dostęp do elementów członkowskich zabezpieczenia krytyczny odbicia. Ponadto tylko zaufanego kodu można użyć odbicia do połączenia niepubliczne elementy członkowskie, które nie będą dostępne dla kodu skompilowanego. Na koniec kod, który używa odbicia na uzyskiwanie dostępu do członka bezpieczny krytyczny musi mieć uprawnienia, niezależnie od wymagań bezpieczny krytyczny element członkowski, po prostu, podobnie jak w przypadku skompilowany kod.  
+ Z drugiej strony, przy użyciu odbicia do dostępu do elementów członkowskich, podlega ograniczeniom. Począwszy od programu .NET Framework 4, tylko przez zaufany kod umożliwia odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny. Ponadto tylko zaufanego kodu można użyć odbicia do połączenia niepubliczne elementy członkowskie, które nie będą dostępne dla kodu skompilowanego. Na koniec kod, który używa odbicia na uzyskiwanie dostępu do członka bezpieczny krytyczny musi mieć uprawnienia, niezależnie od wymagań bezpieczny krytyczny element członkowski, po prostu, podobnie jak w przypadku skompilowany kod.  
   
  Z zastrzeżeniem odpowiednie uprawnienia kod może użyć odbicia przeprowadzić następujące rodzaje dostępu:  
   
@@ -48,7 +48,7 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>Uzyskiwanie dostępu do elementów krytycznych dla zabezpieczeń  
- Element członkowski jest krytyczne dla bezpieczeństwa, jeśli ma ona <xref:System.Security.SecurityCriticalAttribute>, jeśli należy do typu, który ma <xref:System.Security.SecurityCriticalAttribute>, lub jeśli znajduje się w zestawie zabezpieczenia krytyczny. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], zasady do uzyskiwania dostępu do zabezpieczenia krytyczny elementów członkowskich są następujące:  
+ Element członkowski jest krytyczne dla bezpieczeństwa, jeśli ma ona <xref:System.Security.SecurityCriticalAttribute>, jeśli należy do typu, który ma <xref:System.Security.SecurityCriticalAttribute>, lub jeśli znajduje się w zestawie zabezpieczenia krytyczny. Począwszy od programu .NET Framework 4, zasady dostępu do zabezpieczenia krytyczny elementów członkowskich są następujące:  
   
 - Przezroczysty kod nie można użyć odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny, nawet jeśli kod jest w pełni zaufany. A <xref:System.MethodAccessException>, <xref:System.FieldAccessException>, lub <xref:System.TypeAccessException> zgłaszany.  
   
@@ -98,7 +98,7 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
 ## <a name="version-information"></a>Informacje o wersji  
   
-- Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], kod przezroczysty nie może używać odbicia w celu dostęp do elementów członkowskich zabezpieczenia krytyczny.  
+- Począwszy od programu .NET Framework 4, kod przezroczysty nie można użyć odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny.  
   
 - <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flagi została wprowadzona w systemie [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi dla kodu, który używa odbicia, aby dostęp do elementów członkowskich niepublicznych. Jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
   

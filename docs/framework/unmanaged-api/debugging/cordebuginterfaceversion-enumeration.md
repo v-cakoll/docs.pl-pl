@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7308f37ee96b4efe83aeb198586f7364fdcf9ccc
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 37551d2b43e5343ca27da69c08d522c176b2caa7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457148"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489638"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion — Wyliczenie
 Określa interfejs, wersję programu .NET Framework lub wersji programu .NET Framework, w której wprowadzono interfejs.  
@@ -235,7 +235,7 @@ typedef enum CorDebugInterfaceVersion {
   
 - Wersje programu .NET Framework 3.0 i 3.5 użyj istniejące interfejsy .NET Framework 2.0, a nie wprowadza żadnych nowych interfejsów.  
   
-- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Wprowadza różne wersje interfejsu. Na przykład zarówno `ICorDebugThread3` i `ICorDebugThread4` są traktowane jako trzecia i czwarta wersje `ICorDebugThread` interfejsu. .NET Framework 4 wprowadza również pierwszą wersję `ICorDebugStackWalk` interfejsu i drugą wersję `ICorDebugNativeFrame` interfejsu (`ICorDebugNativeFrame2`).  
+- .NET Framework 4 przedstawiono różne wersje interfejsu. Na przykład zarówno `ICorDebugThread3` i `ICorDebugThread4` są traktowane jako trzecia i czwarta wersje `ICorDebugThread` interfejsu. .NET Framework 4 wprowadza również pierwszą wersję `ICorDebugStackWalk` interfejsu i drugą wersję `ICorDebugNativeFrame` interfejsu (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

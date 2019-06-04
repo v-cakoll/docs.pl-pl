@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456500"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487847"
 ---
 # <a name="security-transparent-code"></a>Kod o przezroczystym poziomie bezpieczeństwa
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456500"
 Zabezpieczenia obejmują trzy części interakcje: tryb piaskownicy, uprawnienia i egzekwowanie. Tryb piaskownicy odnosi się do praktyki tworzenia izolowanych domen, gdzie jakiś kod jest traktowany jako w pełni zaufany, a inny kod jest ograniczony do uprawnień w zestawie dla obszaru piaskownicy. Kod aplikacji, który jest uruchamiany w ramach zestaw uprawnień piaskownicy uważany jest za przezroczysty; oznacza to że nie może wykonywać żadnych operacji, które mogą wpłynąć na bezpieczeństwo. Zestaw przydzielony do piaskownicy został ustalony na podstawie dowodów (<xref:System.Security.Policy.Evidence> klasy). Dowód Określa, jakie konkretne uprawnienia są wymagane przez piaskownice i jakiego rodzaju piaskownice mogą być tworzone. Wymuszanie odnosi się zezwalania kodowi przezroczystości na wykonanie tylko w ramach jego zestawu uprawnień.
 
 > [!IMPORTANT]
-> Zasady zabezpieczeń były kluczowym elementem w poprzednich wersjach programu .NET Framework. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], zasady zabezpieczeń są przestarzałe. Zniesienie zasady zabezpieczeń jest niezależne od przezroczystości zabezpieczeń. Aby uzyskać informacje o skutkach tej zmiany, zobacz [zgodnością zasady zabezpieczeń dostępu kodu i migracji](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> Zasady zabezpieczeń były kluczowym elementem w poprzednich wersjach programu .NET Framework. Począwszy od programu .NET Framework 4, zasady zabezpieczeń są przestarzałe. Zniesienie zasady zabezpieczeń jest niezależne od przezroczystości zabezpieczeń. Aby uzyskać informacje o skutkach tej zmiany, zobacz [zgodnością zasady zabezpieczeń dostępu kodu i migracji](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
 
 W tym temacie opisano bardziej szczegółowo model przezroczystości. Ten temat zawiera następujące sekcje:
 
@@ -70,7 +70,7 @@ Główną różnicą między dwoma poziomami przezroczystości jest, że poziom 
 
 ### <a name="level-2-transparency"></a>Poziom 2 przezroczystości
 
-Poziom 2 przejrzystości został wprowadzony w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Trzy założenia tego modelu to kod przezroczysty, kod zabezpieczenia bezpieczny krytyczny i kod zabezpieczenia krytyczny.
+Poziom 2 przejrzystości został wprowadzony w programie .NET Framework 4. Trzy założenia tego modelu to kod przezroczysty, kod zabezpieczenia bezpieczny krytyczny i kod zabezpieczenia krytyczny.
 
 - Przezroczysty kod, niezależnie od uprawnień, których mu udzielono (w tym pełne zaufanie), można wywołać tylko inne kodu przezroczyste lub kod zabezpieczenia bezpieczny krytyczny. Jeśli kod jest częściowo zaufany, to może wykonywać tylko akcje, które są dozwolone przez zestaw uprawnień do domeny. Przezroczysty kod nie są możliwe następujące czynności:
 

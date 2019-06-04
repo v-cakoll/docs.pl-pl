@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 566f73335861a8eb769b21a254e0e93b51a78d02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 57163ccfcc6dff343a8bbc7d63564ae6b57b5ff6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756393"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490502"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen — Funkcja
 Tworzy [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) obiektu.  
   
- Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Ta funkcja jest przestarzała w programie .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   

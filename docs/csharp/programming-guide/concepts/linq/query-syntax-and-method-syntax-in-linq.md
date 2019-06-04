@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61681812"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484103"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Składnia zapytania i metody w technologii LINQ (C#)
 Większość zapytań w wprowadzające Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) dokumentacji są tworzone za pomocą składni deklaratywne zapytań LINQ. Jednak składnia zapytania muszą być przetłumaczone do wywołania metody dla platformy .NET środowisko uruchomieniowe języka wspólnego (CLR), gdy kod jest kompilowany. Te wywołania metody wywołania standardowych operatorów zapytań, które mają nazwy, takie jak `Where`, `Select`, `GroupBy`, `Join`, `Max`, i `Average`. Możesz je wywołać bezpośrednio przy użyciu składni metody zamiast składni zapytań.  
@@ -41,7 +41,3 @@ Większość zapytań w wprowadzające Language Integrated Query ([!INCLUDE[vbte
   
 ## <a name="composability-of-queries"></a>Możliwości tworzenia zapytań  
  W poprzednim przykładzie kodu należy pamiętać, że `OrderBy` metoda jest wywoływana za pomocą operatora kropki na wywołanie `Where`. `Where` Tworzy sekwencję filtrowane, a następnie `Orderby` działa w tej sekwencji przez posortowanie jej. Ponieważ zapytania zwracają `IEnumerable`, tworzysz je przy użyciu składni metody przez łączenie łańcuchowe wywołania metody. Jest to, jak kompilator działa w tle podczas pisania zapytań za pomocą składni zapytania. A ponieważ zmienna zapytania nie przechowuje wyników kwerendy, można go modyfikować lub używać go jako podstawy dla nowego zapytania w dowolnym momencie, nawet po zakończeniu zostało uruchomione.  
-  
-## <a name="see-also"></a>Zobacz także
-
-- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

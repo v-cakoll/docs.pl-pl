@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586358"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490787"
 ---
 # <a name="cancellation-in-managed-threads"></a>Anulowanie w zarządzanych wątkach
-Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework przy użyciu ujednoliconego modelu kooperatywne anulowanie asynchronicznego lub długotrwałe operacje synchroniczne. Ten model opiera się na lekki obiekt o nazwie token anulowania. Obiekt, który wywołuje co najmniej jednej operacji można anulować, na przykład, tworząc nowe wątki lub zadania, przekazuje ten token do każdej operacji. Poszczególne operacje z kolei można przekazać kopie tokenu do innych operacji. W późniejszym czasie obiekt, który utworzył token służy do żądania, że operacje przerwana, co robią. Tylko obiekt żądania można wydawać żądanie anulowania i każdego odbiornika jest odpowiedzialny za obserwowanie żądania i odpowiedzi do niej w sposób odpowiedni i terminowe.  
+Począwszy od programu .NET Framework 4, .NET Framework używa zunifikowany model przeznaczony dla kooperatywne anulowanie asynchronicznego lub długotrwałe operacje synchroniczne. Ten model opiera się na lekki obiekt o nazwie token anulowania. Obiekt, który wywołuje co najmniej jednej operacji można anulować, na przykład, tworząc nowe wątki lub zadania, przekazuje ten token do każdej operacji. Poszczególne operacje z kolei można przekazać kopie tokenu do innych operacji. W późniejszym czasie obiekt, który utworzył token służy do żądania, że operacje przerwana, co robią. Tylko obiekt żądania można wydawać żądanie anulowania i każdego odbiornika jest odpowiedzialny za obserwowanie żądania i odpowiedzi do niej w sposób odpowiedni i terminowe.  
   
  Ogólny schemat implementowania modelu kooperatywne anulowanie jest:  
   
@@ -122,7 +122,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- W nowym kodzie, który jest przeznaczony dla [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> i <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> zarówno obsługi nowej struktury anulowania w ich `Wait` metody. Możesz przekazać <xref:System.Threading.CancellationToken> do metody, i po żądania anulowania zdarzenia zostanie wznowiona i zgłasza <xref:System.OperationCanceledException>.  
+ W nowym kodzie, który jest przeznaczony dla .NET Framework 4 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> i <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> zarówno obsługi nowej struktury anulowania w ich `Wait` metody. Możesz przekazać <xref:System.Threading.CancellationToken> do metody, i po żądania anulowania zdarzenia zostanie wznowiona i zgłasza <xref:System.OperationCanceledException>.  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

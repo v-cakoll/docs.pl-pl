@@ -2,12 +2,12 @@
 title: Przegląd klasy XAttribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: dba8b29c98499bc056d546a282ff2ee1bb88bfbf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0440e8271edcf54d00a56e2987235afd260f9156
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680405"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483198"
 ---
 # <a name="xattribute-class-overview-c"></a>Przegląd klasy XAttribute (C#)
 Atrybuty są pary nazwa/wartość, które są skojarzone z elementem. <xref:System.Xml.Linq.XAttribute> Klasa reprezentuje atrybutów XML.  
@@ -81,4 +81,4 @@ Console.WriteLine(c);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

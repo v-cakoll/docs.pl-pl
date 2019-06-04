@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877446"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490110"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Buforowanie połączenia z programem SQL Server (ADO.NET)
 Nawiązywanie połączenia z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonne. Kanał fizycznych, takich jak gniazda lub nazwany potok należy ustalić, musi nastąpić uzgadnianie początkową z serwerem, informacje o parametrach połączenia musi zostać przeanalizowany, połączenie musi zostać uwierzytelniony przez serwer, należy uruchomić testy dla rejestrowanie w Bieżąca transakcja i tak dalej.  
@@ -99,7 +99,7 @@ Aby uzyskać więcej informacji na temat zdarzeń powiązanych ze otwierające i
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Fragmentacja puli z powodu wielu baz danych  
  Usługodawcy internetowi hostować wiele witryn sieci Web na jednym serwerze. Aby potwierdzić logowania uwierzytelniania formularzy, a następnie otworzyć połączenia z określoną bazą danych dla tego użytkownika lub grupy użytkowników mogą używać jednej bazy danych. Połączenie z bazą danych uwierzytelniania jest puli i używana przez wszystkich użytkowników. Jednak jest oddzielną pulę połączeń dla każdej bazy danych, które zwiększają liczbę połączeń serwera.  
   
- Dotyczy to również efekt uboczny projektowania aplikacji. Istnieje stosunkowo prosty sposób, aby uniknąć tego efektu bez uszczerbku dla zabezpieczeń podczas nawiązywania połączenia programu SQL Server. Zamiast nawiązywania połączenia z oddzielnej bazy danych dla każdego użytkownika lub grupy, należy nawiązać połączenie z tej samej bazy danych na serwerze, a następnie wykonaj [!INCLUDE[tsql](../../../../includes/tsql-md.md)] użycie instrukcji, aby przejść do żądanej bazy danych. Poniższy fragment kodu przedstawia tworzenie początkowego połączenia `master` bazy danych, a następnie przechodząc do żądanego bazą danych określoną w `databaseName` zmiennej ciągu.  
+ Dotyczy to również efekt uboczny projektowania aplikacji. Istnieje stosunkowo prosty sposób, aby uniknąć tego efektu bez uszczerbku dla zabezpieczeń podczas nawiązywania połączenia programu SQL Server. Zamiast nawiązywania połączenia z oddzielnej bazy danych dla każdego użytkownika lub grupy, należy nawiązać połączenie z tej samej bazy danych na serwerze, a następnie wykonaj instrukcję UŻYJ instrukcji Transact-SQL, aby zmienić z odpowiednią bazą danych. Poniższy fragment kodu przedstawia tworzenie początkowego połączenia `master` bazy danych, a następnie przechodząc do żądanego bazą danych określoną w `databaseName` zmiennej ciągu.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

@@ -2,12 +2,12 @@
 title: W przypadku (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607196"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489503"
 ---
 # <a name="case-entity-sql"></a>W przypadku (jednostka SQL)
 Obliczenie zestawu `Boolean` wyrażenia do obliczenia wyniku.  
@@ -41,7 +41,7 @@ END
  Zwraca typ najwyższy priorytet z zestawu typów w `result_expression` i opcjonalną `else_result_expression`.  
   
 ## <a name="remarks"></a>Uwagi  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Przypomina wyrażenia case [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] zamierzone, Zapisz wyrażenia. Wyrażenie case umożliwia wprowadzając szereg testów warunkowych, aby określić wyrażenie, które umożliwia uzyskanie odpowiednich wyników. Ta forma wyrażenia case dotyczy serii co najmniej jednego `Boolean` wyrażenia, aby określić poprawne wyrażenie wynikowe.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Wyrażenia case przypomina wyrażenia case w instrukcji Transact-SQL. Wyrażenie case umożliwia wprowadzając szereg testów warunkowych, aby określić wyrażenie, które umożliwia uzyskanie odpowiednich wyników. Ta forma wyrażenia case dotyczy serii co najmniej jednego `Boolean` wyrażenia, aby określić poprawne wyrażenie wynikowe.  
   
  Funkcja CASE ocenia `Boolean_expression` dla każdej klauzuli WHEN w kolejności określonej, a następnie zwraca `result_expression` pierwszego `Boolean_expression` która daje w wyniku `true`. Pozostałe wyrażenia nie są sprawdzane. Jeśli nie `Boolean_expression` daje w wyniku `true`, aparat bazy danych zwraca `else_result_expression` Jeśli określono klauzulę ELSE, lub wartość null, jeśli określono żadnej klauzuli ELSE.  
   

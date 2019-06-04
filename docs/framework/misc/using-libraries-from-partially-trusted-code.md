@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586989"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487826"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Używanie bibliotek pochodzących z częściowo zaufanego kodu
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  W tym temacie adresy zachowanie zestawy o silnych nazwach i ma zastosowanie tylko do [poziomu 1](../../../docs/framework/misc/security-transparent-code-level-1.md) zestawów. [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md) zestawów w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] lub nowszej nie dotyczy silne nazwy. Aby uzyskać więcej informacji na temat zmian w systemie zabezpieczeń, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
+>  W tym temacie adresy zachowanie zestawy o silnych nazwach i ma zastosowanie tylko do [poziomu 1](../../../docs/framework/misc/security-transparent-code-level-1.md) zestawów. [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md) zestawów w programie .NET Framework 4 lub nowszym nie dotyczy silne nazwy. Aby uzyskać więcej informacji na temat zmian w systemie zabezpieczeń, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
  Aplikacje odbierające mniejsza niż pełne zaufanie od hosta lub piaskownicy nie są dozwolone do wywołania udostępnionego zarządzanych bibliotek, chyba że moduł zapisujący biblioteki specjalnie pozwala na ich za pośrednictwem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. W związku z tym autorzy aplikacji należy pamiętać, że niektóre biblioteki nie będą dostępne do nich z częściowo zaufanych kontekstu. Domyślnie, cały kod, który wykonuje w częściowym zaufaniu [piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) i nie znajduje się w listy zestawów pełnego zaufania jest częściowo zaufany. Jeśli nie powinien być wykonywany z częściowo zaufanych kontekstu lub być wywoływany przez kod częściowo zaufany kod, masz nie trzeba się troszczyć o informacje przedstawione w tej sekcji. Jednak jeśli piszesz kod, który musi współdziałać z częściowo zaufanego kodu lub nie działać z częściowo zaufanych kontekstu, należy rozważyć następujące czynniki:  
   

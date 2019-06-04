@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457230"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490716"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Konfigurowanie środowiska profilowania
 > [!NOTE]
->  Były istotne zmiany do profilowania w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+>  Były istotne zmiany do profilowania w programie .NET Framework 4.  
   
  Po rozpoczęciu procesu zarządzanego (aplikacji lub usługi), ładuje środowisko uruchomieniowe języka wspólnego (CLR). Po zainicjowaniu środowiska CLR, ocenia ono następujące dwie zmienne środowiskowe do określania, czy proces należy się połączyć program profilujący:  
   

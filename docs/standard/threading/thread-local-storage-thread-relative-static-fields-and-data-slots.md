@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644890"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490918"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Pamięć lokalna wątku: Powiązane z wątkiem pola statyczne i gniazda danych
 Można użyć lokalnego magazynu zarządzanych wątków (TLS) do przechowywania danych, która jest unikatowa w domenie aplikacji i wątku. Program .NET Framework oferuje dwa sposoby użycia zarządzanego protokołu TLS: względne wątkom statycznego miejsca pól i danych.  
@@ -26,7 +26,7 @@ Można użyć lokalnego magazynu zarządzanych wątków (TLS) do przechowywania 
   
  W języku C++ niezarządzane, użyj `TlsAlloc` można dynamicznie przydzielić miejsca i `__declspec(thread)` Aby zadeklarować, że zmienna powinna zostać przydzielona w magazynie względne wątkom. Względne wątkom statyczne pola i dane umożliwiają zarządzanej wersji to zachowanie.  
   
- W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], możesz użyć <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy w celu utworzenia obiektów wątków lokalnych, które są inicjowane opóźnieniem, gdy obiekt jest najpierw zużywane. Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).  
+ W .NET Framework 4, możesz użyć <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy w celu utworzenia obiektów wątków lokalnych, które są inicjowane opóźnieniem, gdy obiekt jest najpierw zużywane. Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unikatowość danych w zarządzany protokół TLS  
  Czy używasz względne wątkom pola statyczne i gniazda danych w zarządzany protokół TLS jest unikatowa kombinacja domeny aplikacji i wątku.  

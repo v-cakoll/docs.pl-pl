@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie zapytań dotyczących LINQ to XML przy użyciu XPath (C#)'
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: a3e9cb29b9ba027cfc70eeb0cd163b24834dff83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 639d9ba8af9ae663bc245028cf4bf57f318d397d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701830"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485183"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Instrukcje: Tworzenie zapytań dotyczących LINQ to XML przy użyciu XPath (C#)
 W tym temacie przedstawiono metody rozszerzenia, które pozwalają na wykonywanie zapytań drzewa XML przy użyciu wyrażenie XPath. Aby uzyskać szczegółowe informacje o używaniu tych metod rozszerzenia, zobacz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
@@ -39,6 +39,3 @@ foreach (XElement el in list)
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
-
-- [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

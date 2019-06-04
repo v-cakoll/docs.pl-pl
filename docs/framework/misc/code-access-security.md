@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b16f169ca61485cf3031076d32178a9407aa54ff
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456657"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488002"
 ---
 # <a name="code-access-security"></a>Zabezpieczenia dostępu kodu
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "66456657"
  Program .NET Framework dostarcza mechanizm zabezpieczeń o nazwie zabezpieczenia dostępu kodu w celu ochrony systemów komputerowych przed złośliwego kodu mobilnych, aby umożliwić kodu z nieznanego źródła do uruchamiania przy użyciu ochrony, a także pomaga zapobiegać zaufanego kodu z celowo lub przypadkowo zagrożenia dla bezpieczeństwa. Zabezpieczenia dostępu kodu umożliwia kodu być uważany za zaufany w różnym stopniu, w zależności od tego, gdzie kod pochodzi, a także na innych aspektów tożsamości kodu. Zabezpieczenia dostępu kodu wymusza także różne poziomy zaufania w kodzie, co zmniejsza ilość kodu, który musi być w pełni zaufany, aby można było uruchomić. Przy użyciu zabezpieczeń dostępu kodu może zmniejszyć prawdopodobieństwo, że Twój kod będzie używane przez złośliwe lub wypełnione błąd kodu. Można jej zmniejszyć Twoja odpowiedzialność, ponieważ możesz określić zestaw operacji, które Twój kod powinien być dozwolony do wykonania. Zabezpieczenia dostępu kodu może również pomóc ograniczyć potencjalne szkody, która może spowodować luki w zabezpieczeniach w kodzie.  
   
 > [!NOTE]
->  Wprowadzono znaczące zmiany zabezpieczeń dostępu kodu w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Najbardziej znacząca zmiana została [przezroczystości zabezpieczeń](../../../docs/framework/misc/security-transparent-code.md), ale istnieją także inne ważne zmiany, które mają wpływ na zabezpieczenia dostępu kodu. Aby uzyskać informacje o tych zmianach, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
+>  Zabezpieczenia dostępu kodu w programie .NET Framework 4 wprowadzono znaczące zmiany. Najbardziej znacząca zmiana została [przezroczystości zabezpieczeń](../../../docs/framework/misc/security-transparent-code.md), ale istnieją także inne ważne zmiany, które mają wpływ na zabezpieczenia dostępu kodu. Aby uzyskać informacje o tych zmianach, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
  Zabezpieczenia dostępu kodu dotyczy przede wszystkim kod biblioteki i częściowo zaufanych aplikacji. Deweloperzy biblioteki należy chronić swój kod przed nieautoryzowanym dostępem z częściowo zaufanych aplikacji. Częściowo zaufane aplikacje to aplikacje, które zostały załadowane z zewnętrznych źródeł, takich jak Internet. Aplikacje, które są instalowane na pulpicie lub w lokalnym intranecie uruchamiania w trybie pełnego zaufania. Aplikacje pełnego zaufania nie dotyczy zabezpieczenia dostępu kodu, chyba że są one oznaczone jako [zabezpieczenia przejrzysty](../../../docs/framework/misc/security-transparent-code.md), ponieważ są w pełni zaufane. Jedynym ograniczeniem dla pełnego zaufania aplikacji jest fakt, że aplikacje, które są oznaczone <xref:System.Security.SecurityTransparentAttribute> atrybutu nie można wywołać kod, który jest oznaczony przy użyciu <xref:System.Security.SecurityCriticalAttribute> atrybutu. Częściowo zaufane aplikacje należy uruchomić w piaskownicy (na przykład w programie Internet Explorer), dzięki czemu można stosować zabezpieczenia dostępu kodu. Jeśli pobieranie aplikacji z Internetu i spróbuj uruchomić go z pulpitu, zostanie wyświetlony <xref:System.NotSupportedException> z komunikatem: "Podjęto próbę załadowania zestawu z lokalizacji sieciowej, która spowodowałaby zestawie, który ma być w trybie piaskownicy w poprzednich wersjach programu .NET Framework. Ta wersja programu .NET Framework nie włącza zasady CAS domyślnie, więc tego obciążenia może być niebezpieczne." Jeśli masz pewność, że aplikacja może być zaufane, można włączyć go do uruchamiania jako pełnego zaufania za pomocą [ \<loadfromremotesources — > element](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md). Aby dowiedzieć się, jak uruchomienie aplikacji w piaskownicy, zobacz [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   

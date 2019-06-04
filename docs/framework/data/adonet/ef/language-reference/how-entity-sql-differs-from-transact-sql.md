@@ -2,15 +2,15 @@
 title: Czym język Entity SQL różni się od języka Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: d6c98741107cd9ea7b0f29e4d06aed7d0ce27888
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54d7a3fa8ce6e8a0aba6194bfc034eb4d47dbf60
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631793"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489926"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Czym język Entity SQL różni się od języka Transact-SQL
-W tym temacie opisano różnice między [!INCLUDE[esql](../../../../../../includes/esql-md.md)] i [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+W tym temacie opisano różnice między [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oraz języka Transact-SQL.  
   
 ## <a name="inheritance-and-relationships-support"></a>Dziedziczenie i relacje obsługi  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] współpracuje bezpośrednio ze schematami koncepcyjnymi encji i obsługuje funkcje modelu koncepcyjnego, takie jak dziedziczenie i relacje.  
@@ -31,9 +31,9 @@ W tym temacie opisano różnice między [!INCLUDE[esql](../../../../../../includ
 - Sprzężenia działają w kolekcjach.  
   
 ## <a name="support-for-expressions"></a>Obsługa wyrażeń  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ma podzapytań (tabele) i wyrażenia (wiersze i kolumny).  
+ Języka Transact-SQL ma podzapytań (tabele) i wyrażenia (wiersze i kolumny).  
   
- Do obsługi kolekcji i kolekcje zagnieżdżone [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sprawia, że wszystkie wyrażenia. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest bardziej konfigurowalna niż [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]— każde wyrażenie może być używane w dowolnym miejscu. Zapytanie wyrażenia zawsze powoduje kolekcji typów przewidywanych i mogą być używane wszędzie, gdzie jest dozwolona w wyrażeniu kolekcji. Aby uzyskać informacje o [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] wyrażeń, które nie są obsługiwane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)], zobacz [nieobsługiwane wyrażenia](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).  
+ Do obsługi kolekcji i kolekcje zagnieżdżone [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sprawia, że wszystkie wyrażenia. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest bardziej konfigurowalna niż języka Transact-SQL — każde wyrażenie może być używane w dowolnym miejscu. Zapytanie wyrażenia zawsze powoduje kolekcji typów przewidywanych i mogą być używane wszędzie, gdzie jest dozwolona w wyrażeniu kolekcji. Aby uzyskać informacje o wyrażeniach języka Transact-SQL, które nie są obsługiwane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)], zobacz [nieobsługiwane wyrażenia](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).  
   
  Poniżej znajdują się wszystkie prawidłowe [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania:  
   
@@ -47,17 +47,17 @@ set(e1)
 ```  
   
 ## <a name="uniform-treatment-of-subqueries"></a>Jednolitego traktowania podzapytań  
- Biorąc pod uwagę jej nacisk na tabele, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] wykonuje kontekstowych interpretacji podzapytania. Na przykład podzapytania w `from` klauzula jest uważany za multiset (tabela). Ale ten sam podzapytanie używane w `select` klauzula jest uważany za skalarne podzapytania. Podobnie, podzapytania używane w lewej części `in` operator jest uważany za podzapytania skalarne, a po prawej stronie powinien być multiset — podzapytanie.  
+ Biorąc pod uwagę jej nacisk na tabele, języka Transact-SQL wykonuje kontekstowych interpretacji podzapytania. Na przykład podzapytania w `from` klauzula jest uważany za multiset (tabela). Ale ten sam podzapytanie używane w `select` klauzula jest uważany za skalarne podzapytania. Podobnie, podzapytania używane w lewej części `in` operator jest uważany za podzapytania skalarne, a po prawej stronie powinien być multiset — podzapytanie.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] eliminuje te różnice. Wyrażenie zawiera jednolitej interpretacji, które nie są zależne od kontekstu, w którym jest używany. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] uwzględnia wszystkich podzapytaniach to zestaw wielokrotny podzapytania. Jeśli wartość skalarną z podzapytania [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapewnia `anyelement` operator, który działa w kolekcji (w tym przypadku podzapytanie) i wyodrębnia wartości pojedynczego wystąpienia z kolekcji.  
   
 ### <a name="avoiding-implicit-coercions-for-subqueries"></a>Unikanie niejawne Coercions dla podzapytań  
- Powiązane efekt uboczny jednolitego traktowania podzapytań jest niejawnej konwersji wartości podzapytań wartości skalarnych. W szczególności w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], multiset wierszy (z jednym polem) jest niejawnie konwertowana na wartość skalarną, której typem danych jest to, że pola.  
+ Powiązane efekt uboczny jednolitego traktowania podzapytań jest niejawnej konwersji wartości podzapytań wartości skalarnych. W szczególności w języku Transact-SQL, multiset wierszy (z jednym polem) jest niejawnie konwertowany na wartość skalarną, której typem danych jest to, że pola.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje tego niejawne przekształcenia. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera operator ANYELEMENT do wyodrębnienia pojedyncze wartości z kolekcji, a `select value` klauzulę, aby uniknąć tworzenia otoki wiersza w wyrażeniu zapytania.  
   
 ## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Wybierz wartość: Unikanie otoki niejawne wiersza  
- Klauzuli select w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] podzapytania niejawnie tworzy otokę wierszy elementów w klauzuli. Oznacza to, że nie można utworzyć kolekcji wartości skalarnych lub obiektów. [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] zezwala na niejawne wymuszenia między rowtype z jednym polem i wartości pojedynczego wystąpienia typu danych.  
+ Klauzula select w podzapytaniu języka Transact-SQL niejawnie tworzy otokę wierszy elementów w klauzuli. Oznacza to, że nie można utworzyć kolekcji wartości skalarnych lub obiektów. Języka Transact-SQL umożliwia niejawne wymuszenia między rowtype z jednym polem i wartości pojedynczego wystąpienia typu danych.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] udostępnia `select value` klauzuli, aby pominąć konstrukcji niejawne wiersza. Można określić tylko jeden element w `select value` klauzuli. W przypadku takich klauzuli nie otoki wiersza została zbudowana w oparciu elementów w `select` klauzuli i kolekcji żądany kształt mogą powstać, na przykład: `select value a`.  
   
@@ -66,11 +66,11 @@ set(e1)
  `select a, b, c`  
   
 ## <a name="left-correlation-and-aliasing"></a>Lewa Korelacja i aliasów  
- W [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], wyrażenia w danym zakresie (takie jak pojedyncza klauzula `select` lub `from`) nie może odwoływać się do wyrażenia zdefiniowany wcześniej w tym samym zakresie. Niektóre dialekty programu SQL Server (w tym [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]) obsługuje ograniczone formy w `from` klauzuli.  
+ W języku Transact-SQL, wyrażenia w danym zakresie (takie jak pojedyncza klauzula `select` lub `from`) nie może odwoływać się do wyrażenia zdefiniowany wcześniej w tym samym zakresie. Niektóre dialekty programu SQL Server (w tym języka Transact-SQL) obsługuje ograniczone formy w `from` klauzuli.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stanowi uogólnienie korelacji po lewej stronie w `from` klauzuli i traktować je równomiernie. Wyrażenia w `from` klauzuli może odwoływać się definicje wcześniejsze (definicje po lewej stronie) w tej samej klauzuli bez konieczności stosowania dodatkowej składni.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] również nakłada dodatkowe ograniczenia dotyczące zapytania obejmujące `group by` klauzul. Wyrażenia w `select` klauzuli i `having` klauzuli takich zapytań może odwoływać się tylko do `group by` kluczy przy użyciu ich aliasów. Następująca konstrukcja jest prawidłowy w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] , ale nie znajdują się w [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] również nakłada dodatkowe ograniczenia dotyczące zapytania obejmujące `group by` klauzul. Wyrażenia w `select` klauzuli i `having` klauzuli takich zapytań może odwoływać się tylko do `group by` kluczy przy użyciu ich aliasów. Następujące konstrukcja jest nieprawidłowy w instrukcji Transact-SQL, ale nie są [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
 ```  
 select t.x + t.y from T as t group by t.x + t.y  
@@ -83,7 +83,7 @@ select k from T as t group by (t.x + t.y) as k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>Odwoływanie się do kolumn (właściwości) tabel (kolekcji)  
- Wszystkie odwołania do kolumn w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] musi być kwalifikowana za pomocą aliasu tabeli. Następująca konstrukcja (przy założeniu, że `a` jest prawidłową kolumną tabeli `T`) jest prawidłowa w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] , ale nie [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ Wszystkie odwołania do kolumn w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] musi być kwalifikowana za pomocą aliasu tabeli. Następująca konstrukcja (przy założeniu, że `a` jest prawidłową kolumną tabeli `T`) jest prawidłowa w języku Transact-SQL, ale nie [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ```  
 select a from T  
@@ -102,7 +102,7 @@ select Tab.a from Tab
 ```  
   
 ## <a name="navigation-through-objects"></a>Nawigacja za pośrednictwem obiektów  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] używa "." Notacja do odwoływania się do kolumn (wiersz) tabeli. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Rozszerza ten zapis (pobierają z języków programowania) do obsługi nawigacji za pomocą właściwości obiektu.  
+ Używa języka Transact-SQL "." Notacja do odwoływania się do kolumn (wiersz) tabeli. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Rozszerza ten zapis (pobierają z języków programowania) do obsługi nawigacji za pomocą właściwości obiektu.  
   
  Na przykład jeśli `p` wyrażenia wpisz osobę, Oto [!INCLUDE[esql](../../../../../../includes/esql-md.md)] składni do odwoływania się do miasta adres tej osoby.  
   
@@ -111,9 +111,9 @@ p.Address.City
 ```  
   
 ## <a name="no-support-for-"></a>Brak obsługi *  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] obsługuje niekwalifikowanej * składni jako alias dla całego wiersza i kwalifikowaną \* składni (t.\*) jako skrót dla pól tej tabeli. Ponadto [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] umożliwia specjalnych licznik (\*) wartość zagregowaną, która zawiera wartości null.  
+ Języka Transact-SQL obsługuje niekwalifikowanej * składni jako alias dla całego wiersza i kwalifikowaną \* składni (t.\*) jako skrót dla pól tej tabeli. Ponadto języka Transact-SQL umożliwia specjalnych licznik (\*) wartość zagregowaną, która zawiera wartości null.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje * konstrukcji. [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] zapytania w postaci `select * from T` i `select T1.* from T1, T2...` mogą być wyrażone w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jako `select value t from T as t` i `select value t1 from T1 as t1, T2 as t2...`, odpowiednio. Ponadto te konstrukcje obsługi dziedziczenia (wartość podaży), podczas gdy `select *` wariantów są ograniczone do najwyższego poziomu właściwości zadeklarowanym typem.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje * konstrukcji. Zapytania Transact-SQL w postaci `select * from T` i `select T1.* from T1, T2...` mogą być wyrażone w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jako `select value t from T as t` i `select value t1 from T1 as t1, T2 as t2...`, odpowiednio. Ponadto te konstrukcje obsługi dziedziczenia (wartość podaży), podczas gdy `select *` wariantów są ograniczone do najwyższego poziomu właściwości zadeklarowanym typem.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje `count(*)` agregacji. Zamiast nich należy używać słów kluczowych `count(0)`.  
   
@@ -126,7 +126,7 @@ from T as t
 group by t.b + t.c as k1  
 ```  
   
- .. jest standardem odpowiednikiem następujące [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]:  
+ ... jest równoważne z instrukcji Transact-SQL:  
   
 ```  
 select b + c, count(*), sum(a)   
@@ -150,7 +150,7 @@ select a, sum(t.b) from T as t group by t.a as a
 ```  
   
 ## <a name="order-by-clause-usage"></a>KOLEJNOŚĆ według użycia klauzuli  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] zezwala na klauzule w klauzuli ORDER BY, należy określić tylko w najwyższej wybierz... OD... GDZIE zablokować. W [!INCLUDE[esql](../../../../../../includes/esql-md.md)] można używać zagnieżdżonych wyrażeń klauzuli ORDER BY i można je umieścić w dowolnym miejscu w zapytaniu, ale szeregowaniem w zapytaniu zagnieżdżone nie są zachowywane.  
+ Języka Transact-SQL umożliwia klauzule w klauzuli ORDER BY, należy określić tylko w najwyższej wybierz... OD... GDZIE zablokować. W [!INCLUDE[esql](../../../../../../includes/esql-md.md)] można używać zagnieżdżonych wyrażeń klauzuli ORDER BY i można je umieścić w dowolnym miejscu w zapytaniu, ale szeregowaniem w zapytaniu zagnieżdżone nie są zachowywane.  
   
 ```  
 -- The following query will order the results by the last name  
@@ -168,10 +168,10 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="identifiers"></a>Identyfikatory  
- W [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], porównanie identyfikatorów opiera się na sortowania bieżącej bazy danych. W [!INCLUDE[esql](../../../../../../includes/esql-md.md)], identyfikatory są zawsze bez uwzględniania wielkości liter i akcent poufnych (czyli [!INCLUDE[esql](../../../../../../includes/esql-md.md)] rozróżnia znaki akcentowane i nieakcentowane; na przykład, "" nie jest równa "ấ"). [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traktuje wersji liter, są wyświetlane takie same, które pochodzą z różne strony kodowe jako różne znaki. Aby uzyskać więcej informacji, zobacz [zestaw znaków danych wejściowych](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
+ W języku Transact-SQL porównanie identyfikatorów opiera się na sortowania bieżącej bazy danych. W [!INCLUDE[esql](../../../../../../includes/esql-md.md)], identyfikatory są zawsze bez uwzględniania wielkości liter i akcent poufnych (czyli [!INCLUDE[esql](../../../../../../includes/esql-md.md)] rozróżnia znaki akcentowane i nieakcentowane; na przykład, "" nie jest równa "ấ"). [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traktuje wersji liter, są wyświetlane takie same, które pochodzą z różne strony kodowe jako różne znaki. Aby uzyskać więcej informacji, zobacz [zestaw znaków danych wejściowych](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
   
 ## <a name="transact-sql-functionality-not-available-in-entity-sql"></a>Funkcje języka Transact-SQL nie jest dostępna w jednostki SQL  
- Następujące [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] funkcja nie jest dostępna w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ Następujące funkcje języka Transact-SQL nie jest dostępna w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  DML  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obecnie nie obsługuje instrukcji DML (Wstawianie, aktualizowanie i usuwanie).  
@@ -180,7 +180,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje języka DDL w bieżącej wersji.  
   
  programowanie imperatywne  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje programowanie imperatywne, w odróżnieniu od [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Zamiast tego użyj języka programowania.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje programowanie imperatywne, w przeciwieństwie do języka Transact-SQL. Zamiast tego użyj języka programowania.  
   
  Funkcje grupowania  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jeszcze zapewniają obsługę grupowanie funkcji (na przykład moduł, pakiet ZBIORCZY i GROUPING_SET).  
@@ -189,13 +189,13 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie (jeszcze) zapewnia obsługę funkcji analitycznych.  
   
  Funkcje wbudowane, operatory  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje podzbiór [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]wbudowanego w funkcje i operatory. Te operatory i funkcje mogą być obsługiwane przez dostawców magazynu głównych. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] korzysta z funkcji specyficznych dla magazynu zadeklarowane w manifeście dostawcy. Ponadto [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] umożliwia deklarację wbudowanych oraz istniejącego użytkownika przechowywane funkcji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do użycia.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje podzbiór języka Transact-SQL zawiera wbudowane funkcje i operatory. Te operatory i funkcje mogą być obsługiwane przez dostawców magazynu głównych. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] korzysta z funkcji specyficznych dla magazynu zadeklarowane w manifeście dostawcy. Ponadto [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] umożliwia deklarację wbudowanych oraz istniejącego użytkownika przechowywane funkcji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do użycia.  
   
  Wskazówki  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie zapewnia mechanizmy wskazówki zapytania.  
   
  Przetwarzanie wsadowe wyników zapytania  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje przetwarzania wsadowego wyników zapytania. Na przykład poniżej przedstawiono prawidłowe [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] (wysyłającym jako zadania wsadowego):  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie obsługuje przetwarzania wsadowego wyników zapytania. Na przykład Oto prawidłowe języka Transact-SQL (wysyłającym jako zadania wsadowego):  
   
 ```  
 select * from products;  

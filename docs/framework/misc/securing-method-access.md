@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625894"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487946"
 ---
 # <a name="securing-method-access"></a>Zabezpieczanie dostępu metody
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -60,7 +60,7 @@ public class Class1
  Użyj deklaracji przedstawione w tej sekcji, aby uniemożliwić określonej klasy i metody, jak również właściwości i zdarzenia, używany przez częściowo zaufany kod. Stosując te deklaracje do klasy, zabezpieczać do jego metod, właściwości i zdarzeń; należy jednak zauważyć, że dostęp do pola nie są stosowane zabezpieczenia deklaratywne. Należy zauważyć, że zapotrzebowanie na łącza pomoże zapewnić ochronę przed tylko bezpośredniego wywoływania i nadal może podlegać zapewnienia ataków.  
   
 > [!NOTE]
->  Nowy model przejrzystości został wprowadzony w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modelu identyfikuje bezpiecznego kodu za pomocą <xref:System.Security.SecurityCriticalAttribute> atrybutu. Kod zabezpieczenia krytyczny wymaga obiektów wywołujących i obiektów dziedziczących jako w pełni zaufane. Zestawy, które są uruchomione w ramach zasad zabezpieczeń dostępu kodu z wcześniejszych wersji systemu .NET Framework, można wywołać zestawy poziomu 2. W tym przypadku zabezpieczenia krytyczny atrybuty są traktowane jak linkdemand dla pełnego zaufania.  
+>  Nowy model przejrzystości został wprowadzony w .NET Framework 4. [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modelu identyfikuje bezpiecznego kodu za pomocą <xref:System.Security.SecurityCriticalAttribute> atrybutu. Kod zabezpieczenia krytyczny wymaga obiektów wywołujących i obiektów dziedziczących jako w pełni zaufane. Zestawy, które są uruchomione w ramach zasad zabezpieczeń dostępu kodu z wcześniejszych wersji systemu .NET Framework, można wywołać zestawy poziomu 2. W tym przypadku zabezpieczenia krytyczny atrybuty są traktowane jak linkdemand dla pełnego zaufania.  
   
  W zestawach o silnej nazwie [LinkDemand](../../../docs/framework/misc/link-demands.md) jest stosowany do wszystkich publicznie dostępnych metod, właściwości i zdarzenia w nim w celu ograniczenia ich użycia dla w pełni zaufanego kodu wywołującego. Aby wyłączyć tę funkcję, należy najpierw zastosować <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. W efekcie jawnie oznaczanie klas, które mają zostać wykluczone z niezaufanych wywołujących jest niezbędne tylko w przypadku zestawy nieoznaczone lub zestawy za pomocą tego atrybutu; Możesz użyć tych deklaracji do oznaczania tam podzbiór typów, które nie są przeznaczone do niezaufanych wywołujących.  
   

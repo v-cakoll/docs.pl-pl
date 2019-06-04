@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 61b141642fa3745c3abcf8d0234f70373fa5485e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457398"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491111"
 ---
 # <a name="xaml-services"></a>Usługi XAML
 W tym temacie opisano funkcje, nazywane .NET Framework XAML usługi zestawu technologii. Większość usług i interfejsów API, opisano znajdują się w zestawie System.Xaml, która jest zestawem wprowadzone w programie .NET Framework 4 zbiór zestawów programu .NET core. Usługi obejmują czytników i składników zapisywania klasy schematu i obsługa schematu, fabryk, przypisywanie klas, języka XAML, wsparcie wewnętrznej i inne funkcje języka XAML.  
@@ -38,7 +38,7 @@ W tym temacie opisano funkcje, nazywane .NET Framework XAML usługi zestawu tech
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML usług i System.Xaml w architekturze .NET  
  W poprzednich wersjach programu Microsoft .NET Framework, obsługa funkcji języka XAML został wdrożony, struktur, które oparty na programie Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation i Windows Communication Foundation (WCF)), a więc zróżnicowane w jego zachowanie i interfejsu API użyta, w zależności od tego, które z określonym środowiskiem były używane. Dotyczyło to też XAML analizator i jego obiekt wykresu mechanizm tworzenia, funkcje wewnętrzne języka XAML, obsługi serializacji i tak dalej.  
   
- W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework XAML Services i zestawu System.Xaml zdefiniowanie ilości co jest potrzebne do obsługi funkcji języka XAML. Obejmuje to klas bazowych dla XAML czytników i składników zapisywania XAML. Najważniejsze funkcja, dodany do usług XAML programu .NET Framework, który nie był obecny we wszystkich wdrożeniach XAML właściwa dla struktury jest reprezentację systemie typu XAML. Typ reprezentujący system przedstawia XAML zorientowane obiektowo jak centra możliwości w XAML bez przełączania zależności na konkretne funkcje platformy.  
+ W .NET Framework 4, .NET Framework XAML Services i zestawu System.Xaml zdefiniować ilości co jest potrzebne do obsługi funkcji języka XAML. Obejmuje to klas bazowych dla XAML czytników i składników zapisywania XAML. Najważniejsze funkcja, dodany do usług XAML programu .NET Framework, który nie był obecny we wszystkich wdrożeniach XAML właściwa dla struktury jest reprezentację systemie typu XAML. Typ reprezentujący system przedstawia XAML zorientowane obiektowo jak centra możliwości w XAML bez przełączania zależności na konkretne funkcje platformy.  
   
  System typów XAML nie jest ograniczone przez formularz znaczników lub szczegóły środowiska wykonawczego pochodzenia XAML; nie jest ograniczona przez dowolnego zapasowy określonego typu systemu. System typów XAML zawiera reprezentacji obiektów dla typów, elementów członkowskich, kontekst schematu XAML, koncepcje poziomie XML i innych pojęcia języka XAML lub funkcje wewnętrzne XAML. Za pomocą lub rozszerzanie systemie typu XAML umożliwia pochodzi od klasy takie jak XAML czytników i składników zapisywania XAML i rozszerzyć funkcjonalność reprezentacje XAML do określonych funkcji włączane przez strukturę, technologia lub aplikacji, która zużywa lub emituje XAML. Pojęcie kontekst schematu XAML umożliwia operacje zapisu wykresu obiektu praktyczne z kombinacji XAML obiekt składnika zapisywania implementacji programu to technologia zapasowy typ systemu jako przekazywane za pomocą informacji o zestawie w kontekście i węzłów XAML źródło. Aby uzyskać więcej informacji na temat koncepcji schematu XAML. zobacz [domyślny kontekst schematu XAML i kontekst schematu XAML w WPF](default-xaml-schema-context-and-wpf-xaml-schema-context.md).  
   

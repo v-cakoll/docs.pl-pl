@@ -2,25 +2,24 @@
 title: Przegląd klasy XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: cddb36ac6401c20478a1254fe3d63afe5bd13099
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 815b7b6523afe7106fcdcbe242d667c5ad6aa56e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595758"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487018"
 ---
 # <a name="xelement-class-overview-c"></a>Przegląd klasy XElement (C#)
 <xref:System.Xml.Linq.XElement> Klasy jest jednym z podstawowych klas w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Reprezentuje XML element. Ta klasa służy do tworzenia elementów; Zmień zawartość elementu; Dodawanie, zmienianie lub usuwanie elementów podrzędnych; Dodawanie atrybutów do elementu; lub serializacji zawartość elementu w postaci tekstu. Może również współpracować z innych klas w <xref:System.Xml?displayProperty=nameWithType>, takich jak <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, i <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
-## <a name="xelement-functionality"></a>Funkcje klasy XElement  
- W tym temacie opisano funkcje udostępniane przez <xref:System.Xml.Linq.XElement> klasy.  
+W tym temacie opisano funkcje udostępniane przez <xref:System.Xml.Linq.XElement> klasy.  
   
-### <a name="constructing-xml-trees"></a>Konstruowanie drzewa XML  
+## <a name="constructing-xml-trees"></a>Konstruowanie drzewa XML  
  Możesz utworzyć drzew XML na różne sposoby, m.in. następujące czynności:  
   
-- Można skonstruować drzewa XML w kodzie. Aby uzyskać więcej informacji, zobacz [tworzenie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
+- Można skonstruować drzewa XML w kodzie. Aby uzyskać więcej informacji, zobacz [tworzenie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
   
-- Można teraz analizować XML z różnych źródeł, w tym <xref:System.IO.TextReader>, pliki tekstowe lub adres internetowy (URL). Aby uzyskać więcej informacji, zobacz [analiza kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md).  
+- Można teraz analizować XML z różnych źródeł, w tym <xref:System.IO.TextReader>, pliki tekstowe lub adres internetowy (URL). Aby uzyskać więcej informacji, zobacz [analiza kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md).  
   
 - Możesz użyć <xref:System.Xml.XmlReader> do wypełniania drzewa. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
@@ -76,26 +75,26 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-### <a name="serializing-xml-trees"></a>Serializowanie drzew XML  
+## <a name="serializing-xml-trees"></a>Serializowanie drzew XML  
  Może wykonywać serializację drzewa XML do <xref:System.IO.File>, <xref:System.IO.TextWriter>, lub <xref:System.Xml.XmlWriter>.  
   
- Aby uzyskać więcej informacji, zobacz [serializowanie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md).  
+ Aby uzyskać więcej informacji, zobacz [serializowanie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
   
-### <a name="retrieving-xml-data-via-axis-methods"></a>Pobieranie danych XML przy użyciu metody osi  
+## <a name="retrieving-xml-data-via-axis-methods"></a>Pobieranie danych XML przy użyciu metody osi  
  Można użyć metody osi, można pobrać atrybutów, elementy podrzędne, elementów podrzędnych i elementów nadrzędnych. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania działają na metody osi i zapewniają kilka metod elastycznym i zaawansowanym nawigowania i przetworzyć drzewa XML.  
   
- Aby uzyskać więcej informacji, zobacz [LINQ do XML osi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md).  
+ Aby uzyskać więcej informacji, zobacz [LINQ do XML osi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md).  
   
-### <a name="querying-xml-trees"></a>Tworzenie zapytań dotyczących drzew XML  
+## <a name="querying-xml-trees"></a>Tworzenie zapytań dotyczących drzew XML  
  Można napisać [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań, które umożliwiają wyodrębnianie danych z drzewa XML.  
   
- Aby uzyskać więcej informacji, zobacz [zapytań drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md).  
+ Aby uzyskać więcej informacji, zobacz [zapytań drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md).  
   
-### <a name="modifying-xml-trees"></a>Modyfikowanie drzew XML  
+## <a name="modifying-xml-trees"></a>Modyfikowanie drzew XML  
  Można zmodyfikować elementu na różne sposoby, m.in. zmiana jego zawartości lub atrybutów. Można również usunąć element, po swoim obiekcie nadrzędnym.  
   
- Aby uzyskać więcej informacji, zobacz [modyfikowanie drzew XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).  
+ Aby uzyskać więcej informacji, zobacz [modyfikowanie drzew XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML — przegląd programowania (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

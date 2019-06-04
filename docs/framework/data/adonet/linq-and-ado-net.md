@@ -2,15 +2,15 @@
 title: LINQ i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bfd5bb845917f9ca8ba3b154a51a946b610ca571
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878332"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489823"
 ---
 # <a name="linq-and-adonet"></a>LINQ i ADO.NET
-Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstw logiki i prezentacji firm (np. Visual C# lub Visual Basic) i język zapytań do interakcji z bazą danych (takich jak [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). To wymaga programista ma być biegły w kilku językach zaczęła obowiązywać, a także powoduje niezgodności języka w środowisku programistycznym. Na przykład aplikację, która używa danych dostęp do interfejsu API do wykonania zapytania względem bazy danych określa zapytanie jako literał ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzane pod kątem błędów, takich jak nieprawidłową składnię lub tego, czy kolumny lub wiersze, które odwołuje się faktycznie istnieje. Istnieje żaden typ weryfikacji parametry zapytania i nie `IntelliSense` obsługuje albo.  
+Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstw logiki i prezentacji firm (np. Visual C# lub Visual Basic) i język zapytań umożliwiający korzystanie z bazy danych (na przykład Transact-SQL) . To wymaga programista ma być biegły w kilku językach zaczęła obowiązywać, a także powoduje niezgodności języka w środowisku programistycznym. Na przykład aplikację, która używa danych dostęp do interfejsu API do wykonania zapytania względem bazy danych określa zapytanie jako literał ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzane pod kątem błędów, takich jak nieprawidłową składnię lub tego, czy kolumny lub wiersze, które odwołuje się faktycznie istnieje. Istnieje żaden typ weryfikacji parametry zapytania i nie `IntelliSense` obsługuje albo.  
   
  [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Umożliwia deweloperom formularza zapytania w oparciu o zestaw w ich kodzie aplikacji bez konieczności używania języka oddzielnego zapytania. Można napisać [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytań dotyczących różnych źródeł danych wyliczalny (oznacza to, że źródła danych, które implementuje <xref:System.Collections.IEnumerable> interface), takie jak struktury danych w pamięci, dokumentów XML, baz danych SQL, i <xref:System.Data.DataSet> obiektów. Mimo że te źródła danych wyliczalny są implementowane w na różne sposoby, wszystkie one udostępnianie tego samego konstrukcje składni i języka. Ponieważ zapytania mogą powstawać w języku programowania, ma używać innego język zapytań, który jest osadzony jako literały ciągu, których nie rozumie lub zweryfikowane przez kompilator. Integrowanie zapytań języka programowania również umożliwia programistom Visual Studio mu bardziej wydajnej pracy, zapewniając typów w czasie kompilacji i sprawdzanie składni, i `IntelliSense`. Te funkcje zmniejszyć zapotrzebowanie na debugowanie zapytania i naprawianie błędów.  
   

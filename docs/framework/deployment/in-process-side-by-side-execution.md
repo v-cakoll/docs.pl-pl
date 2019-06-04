@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 86d735bf84cdb33736701410d365ec90e6177e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457266"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489768"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
-Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć w trakcie side-by-side hostingu do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM, uruchom z .NET Framework w wersji, które zostały skompilowane, niezależnie od wersji programu .NET Framework, który jest ładowany do procesu.  
+Począwszy od programu .NET Framework 4, możesz użyć w trakcie side-by-side hostingu do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM, uruchom z .NET Framework w wersji, które zostały skompilowane, niezależnie od wersji programu .NET Framework, który jest ładowany do procesu.  
   
 ## <a name="background"></a>Tło  
  .NET Framework zawsze ma pod warunkiem side-by-side hostowania dotycząca aplikacje kodu zarządzanego, ale przed .NET Framework 4 nie zapewniają tej funkcji dla składników COM zarządzanych. W przeszłości zarządzanych składników COM, które zostały załadowane do procesu został uruchomiony z wersją środowiska uruchomieniowego, który został już załadowany lub z najnowszej zainstalowanej wersji programu .NET Framework. Jeśli ta wersja nie jest zgodny ze składnikiem COM, składnik może zakończyć się niepowodzeniem.  
@@ -40,9 +40,9 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], mo
   
     |Wersja programu .NET Framework|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|Nie dotyczy|Nie|Yes|  
+    |1.1|Nie dotyczy|Nie|Tak|  
     |2.0 - 3.5|Nie|Nie dotyczy|Tak|  
-    |4|Yes|Yes|Nie dotyczy|  
+    |4|Yes|Tak|Nie dotyczy|  
   
 > [!NOTE]
 >  Wersje programu .NET framework 3.0 i 3.5 są tworzone przyrostowo w wersji 2.0 i nie trzeba uruchamiać równolegle. Te założenia mają taką samą wersję.  
@@ -88,7 +88,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], mo
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano niezarządzany host COM, działającego zarządzanego składnika COM za pomocą wersji programu .NET Framework, który składnik był skompilowany do użycia.  
   
- Z poniższego przykładu, kompilowania i zarejestrowania następujących zarządzanych za pomocą składnika COM [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Można zarejestrować składnika, na **projektu** menu, kliknij przycisk **właściwości**, kliknij przycisk **kompilacji** , a następnie wybierz pozycję **Zarejestruj dla współdziałania COM**pole wyboru.  
+ Aby uruchomić poniższy przykład, skompiluj i zarejestruj poniższe zarządzanego składnika COM za pomocą programu .NET Framework 3.5. Można zarejestrować składnika, na **projektu** menu, kliknij przycisk **właściwości**, kliknij przycisk **kompilacji** , a następnie wybierz pozycję **Zarejestruj dla współdziałania COM**pole wyboru.  
   
 ```csharp
 using System;  

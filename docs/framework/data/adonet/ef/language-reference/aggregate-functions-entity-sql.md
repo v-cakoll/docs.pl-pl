@@ -2,19 +2,19 @@
 title: Aggregate Functions (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 423c7e843f54e48d4f05f26f3f4071bff1795c69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631758"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489965"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Aggregate Functions (Entity SQL)
 Wartość zagregowana jest konstrukcją języka, która zmniejsza objętość kolekcji do skalaru jako część operacji grupy. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] agregacje są dostępne w dwóch formach:  
   
 - [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Funkcje kolekcji, które mogą być używane w dowolnym miejscu w wyrażeniu. W tym za pomocą funkcji agregujących w projekcji oraz predykatów, które działają w kolekcjach. Kolekcja funkcji jest preferowany tryb, określania wartości zagregowanych umieszczonych w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-- Grupy agregacje w wyrażeniach zapytań, które zawierać klauzuli GROUP BY. Podobnie jak w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregacje grupy Zaakceptuj DISTINCT, a wszystkie jako modyfikatory do agregacji danych wejściowych.  
+- Grupy agregacje w wyrażeniach zapytań, które zawierać klauzuli GROUP BY. Tak jak w języku Transact-SQL agregacje grupy Zaakceptuj DISTINCT, a wszystkie jako modyfikatory do agregacji danych wejściowych.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] po raz pierwszy próbuje można zinterpretować wyrażenia w funkcji kolekcji i jeśli wyrażenie ma w kontekście wyrażenia wybierz je zinterpretuje ją jako agregację grupy.  
   

@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456641"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487974"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Zgodność i migracja zasad zabezpieczenia dostępu kodu
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Części zasad zabezpieczenia dostępu kodu (CAS) zostały ustawione jako przestarzałe w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. W rezultacie mogą wystąpić ostrzeżenia kompilacji i wyjątki środowiska uruchomieniowego wywołanie zasad przestarzałych typów i członków [jawnie](#explicit_use) lub [niejawnie](#implicit_use) (za pośrednictwem innych typów i elementów członkowskich).
+Części zasad zabezpieczenia dostępu kodu (CAS) stało się przestarzałe w programie .NET Framework 4. W rezultacie mogą wystąpić ostrzeżenia kompilacji i wyjątki środowiska uruchomieniowego wywołanie zasad przestarzałych typów i członków [jawnie](#explicit_use) lub [niejawnie](#implicit_use) (za pośrednictwem innych typów i elementów członkowskich).
 
 Ostrzeżenia i błędy można uniknąć przez:
 

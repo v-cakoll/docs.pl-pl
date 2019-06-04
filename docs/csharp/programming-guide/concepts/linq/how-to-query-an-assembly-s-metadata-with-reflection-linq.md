@@ -2,14 +2,17 @@
 title: 'Instrukcje: Zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 1e8aa8652470240d63ac950d43e5b41e8b3ef1ca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 52b961c5a016754964285221e252965ff89efd26
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584415"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485236"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Instrukcje: Zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)
+
+Odbicie biblioteki klas .NET Framework API może służyć do badania metadane w zestawie .NET i tworzenie kolekcji typów, elementów członkowskich typu, parametry i tak dalej, które znajdują się w tym zestawie. Ponieważ te kolekcje obsługują ogólnego `IEnumerable` interfejsu, może być odpytywany za pomocą LINQ.  
+  
 Poniższy przykład pokazuje, jak LINQ może służyć za pomocą odbicia do pobierania metadanych określone informacje o metodach, spełniających określone kryteria wyszukiwania. W tym przypadku zapytanie znajdzie nazwy wszystkie metody w zestawie, który zwraca wyliczalny typów, takich jak tablice.  
   
 ## <a name="example"></a>Przykład  

@@ -2,12 +2,12 @@
 title: 'Przykładowy plik XML: Konfiguracja testu w {1 & gt'
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: 975e0bdfe22758b968dde4e97cf5b302579a7ca7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38f7da203ee32bd921e680742e91abde91d8aa08
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711710"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487247"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Przykładowy plik XML: konfiguracja testowa w przestrzeni nazw
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Jest to plik konfiguracji testu. Kod XML jest w przestrzeni nazw.  
@@ -55,7 +55,4 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
   </Test>  
 </Tests>  
 ```  
-  
-## <a name="see-also"></a>Zobacz także
-
-- [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 

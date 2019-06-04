@@ -3,12 +3,12 @@ title: Zapytanie o języku zintegrowanym (LINQ) w języku C#
 description: Wprowadza Language Integrated Query (LINQ) w języku C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 5a5c33f41a668835e7b83f1f717fa5605e53e010
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fe408210b30b5f6118dc66b4c8f7057fb6654881
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633900"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66482982"
 ---
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
@@ -42,7 +42,7 @@ Poniższy przykład przedstawia pełną operację zapytania. Zakończyć operacj
 
 Aby dowiedzieć się więcej na temat LINQ, należy rozpocząć od staje się poznać niektóre podstawowe pojęcia związane z [podstawowe informacje o wyrażeniach zapytań](query-expression-basics.md), a następnie zapoznaj się z dokumentacją dla technologii LINQ, w którym interesuje Cię:
 
-- Dokumenty XML: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
+- Dokumenty XML: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml-overview.md)
 
 - ADO.NET Entity Framework: [Składnik LINQ to entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 

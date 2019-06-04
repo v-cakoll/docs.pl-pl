@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c558c744ee31d8e8299da87e6c2715875dd2dcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e6086772b807440570b94cfff268aa1d78fa048
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873318"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490004"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.
 
@@ -33,7 +33,7 @@ Użytkownicy mogą [zainstalować](https://docs.microsoft.com/dotnet/framework/i
 >
 > Istnieje następująca różnica między wersją .NET Framework i wersji środowiska CLR:
 > - Wersja .NET Framework jest oparta na zbiór zestawów, które tworzą biblioteki klas .NET Framework. Na przykład .NET Framework w wersji obejmują 4.5, 4.6.1 i 4.7.2.
->- Wersja środowiska CLR jest oparty na środowiska uruchomieniowego, w którym wykonywane aplikacji programu .NET Framework. Jednej wersji środowiska CLR zazwyczaj obsługuje wiele wersji .NET Framework. Na przykład środowisko CLR w wersji 4.0.30319. *xxxxx* obsługuje wersje programu .NET Framework 4 za pośrednictwem 4.5.2 i wersji środowiska CLR 4.0.30319.42000 obsługuje wersje programu .NET Framework, począwszy od programu .NET Framework 4.6.
+>- Wersja środowiska CLR jest oparty na środowiska uruchomieniowego, w którym wykonywane aplikacji programu .NET Framework. Jednej wersji środowiska CLR zazwyczaj obsługuje wiele wersji .NET Framework. Na przykład środowisko CLR w wersji 4.0.30319. *xxxxx* obsługuje wersje programu .NET Framework 4, za pośrednictwem 4.5.2, gdzie *xxxxx* jest mniejsza niż 42000, a środowisko CLR w wersji 4.0.30319.42000 obsługuje wersje programu .NET Framework, począwszy od programu .NET Framework 4.6.
 >
 > Aby uzyskać więcej informacji na temat wersji, zobacz [wersje programu .NET Framework i zależności](versions-and-dependencies.md).
 
@@ -204,7 +204,7 @@ Użyj [narzędzia wersji środowiska CLR (Clrver.exe)](../tools/clrver-exe-clr-v
 
     Zwrócony `System.Version` obiektu określa wersję środowiska uruchomieniowego, które aktualnie wykonuje kod. Nie zwraca wersji zestawu ani innych wersji środowiska uruchomieniowego, które mogą być zainstalowane na komputerze.
 
-    W przypadku wersji .NET Framework 4, 4.5, 4.5.1 i 4.5.2, reprezentacja ciągu zwracanego <xref:System.Version> obiekt ma postać 4.0.30319. *XXXXX*. Dla platformy .NET Framework 4.6 i nowszymi wersjami posiada 4.0.30319.42000 formularza.
+    W przypadku wersji .NET Framework 4, 4.5, 4.5.1 i 4.5.2, reprezentacja ciągu zwracanego <xref:System.Version> obiekt ma postać 4.0.30319. *XXXXX*, gdzie *xxxxx* jest mniejsza niż 42000. Dla platformy .NET Framework 4.6 i nowszymi wersjami posiada 4.0.30319.42000 formularza.
 
 2. Po utworzeniu `Version` obiektów, badać je w następujący sposób:
 

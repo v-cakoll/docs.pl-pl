@@ -2,12 +2,12 @@
 title: 'Przykładowy plik XML: klienci i zamówienia (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 74e9ba00b61dbed532c0309043c9a9c944ea6932
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e7eea99a59a4cb1a5d62e728d4812ce3377c09f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680691"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483765"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Przykładowy plik XML: klienci i zamówienia (LINQ to XML)
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera klienci i zamówienia.  
@@ -433,7 +433,3 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
   </Orders>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>Zobacz także
-
-- [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

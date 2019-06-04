@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 96841d23da342fdb4da6c7d53420d6c3319f75c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664559"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491015"
 ---
 # <a name="sorted-collection-types"></a>Sortowane typów kolekcji
 <xref:System.Collections.SortedList?displayProperty=nameWithType> Klasy <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> klasy generycznej i <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> ogólnej klasy są podobne do <xref:System.Collections.Hashtable> klasy i <xref:System.Collections.Generic.Dictionary%602> ogólnej klasy, implementują <xref:System.Collections.IDictionary> interfejs, ale obsługa ich elementy w sortowaniu kolejność według klucza, a nie mają O(1) wstawiania i pobieranie charakterystycznych dla tabel skrótów. Trzy klasy wspólnym kilka funkcji:  
@@ -46,7 +46,7 @@ ms.locfileid: "64664559"
 > [!NOTE]
 >  Dla wartości, które zawierają własne klucze (na przykład, rekordy pracowników, które zawierają numer identyfikacyjny pracownika), można utworzyć kolekcję kluczem, która ma pewne właściwości listy i niektóre właściwości słownika, wynikające z <xref:System.Collections.ObjectModel.KeyedCollection%602> ogólny Klasa.  
   
- Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], <xref:System.Collections.Generic.SortedSet%601> klasa udostępnia własny równoważenia drzewa, która przechowuje dane w kolejności posortowanej po wstawienia, usuwania i wyszukiwania. Ta klasa i <xref:System.Collections.Generic.HashSet%601> implementacji klasy <xref:System.Collections.Generic.ISet%601> interfejsu.  
+ Począwszy od programu .NET Framework 4, <xref:System.Collections.Generic.SortedSet%601> klasa udostępnia własny równoważenia drzewa, która przechowuje dane w kolejności posortowanej po wstawienia, usuwania i wyszukiwania. Ta klasa i <xref:System.Collections.Generic.HashSet%601> implementacji klasy <xref:System.Collections.Generic.ISet%601> interfejsu.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb0944829d9f33277fdf53ad78cc37878336434f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000587"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486963"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 — Interfejs
-Zawiera metody, które profilery kodu używają do komunikacji z środowisko uruchomieniowe języka wspólnego (CLR) do kontrolowania, monitorowanie zdarzeń i żądania informacji. `ICorProfilerInfo3` Interfejs jest rozszerzeniem [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfejsu. Zapewnia nowe metody obsługiwane w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] i nowszych wersjach.  
+Zawiera metody, które profilery kodu używają do komunikacji z środowisko uruchomieniowe języka wspólnego (CLR) do kontrolowania, monitorowanie zdarzeń i żądania informacji. `ICorProfilerInfo3` Interfejs jest rozszerzeniem [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfejsu. Zapewnia nowe metody obsługiwane w programie .NET Framework 4 i nowszych wersjach.  
   
 ## <a name="methods"></a>Metody  
   

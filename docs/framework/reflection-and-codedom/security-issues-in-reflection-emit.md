@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d2995e64d9e8eed365498bcbc1047a321edc10c5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457304"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489734"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemy związane z zabezpieczeniami w emisji odbicia
 Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft intermediate language (MSIL), każdy z własną problemy z zabezpieczeniami:  
@@ -36,7 +36,7 @@ Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft int
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Dynamicznych zestawów  
- Dynamiczne zestawy są tworzone za pomocą przeciążenia <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> metody. Większość przeciążenia tej metody zostały zaniechane w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], ze względu na zniesienie zasady zabezpieczeń komputera. (Zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).) Pozostałe przeciążenia mogą być wykonywane przez każdy kod, niezależnie od poziomu zaufania. Te przeciążone funkcje można podzielić na dwie grupy: te, które określają listę atrybutów, które mają zastosowanie do zestawu dynamicznego, podczas jego tworzenia, a także tych, które nie obsługują. Jeśli nie określisz modelu przezroczystości dla zestawu, stosując <xref:System.Security.SecurityRulesAttribute> atrybutu podczas tworzenia jej modelu przezroczystości jest dziedziczony z emitujące zgromadzenia.  
+ Dynamiczne zestawy są tworzone za pomocą przeciążenia <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> metody. Większość przeciążenia tej metody są przestarzałe w programie .NET Framework 4 z powodu zniesienie zasady zabezpieczeń komputera. (Zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).) Pozostałe przeciążenia mogą być wykonywane przez każdy kod, niezależnie od poziomu zaufania. Te przeciążone funkcje można podzielić na dwie grupy: te, które określają listę atrybutów, które mają zastosowanie do zestawu dynamicznego, podczas jego tworzenia, a także tych, które nie obsługują. Jeśli nie określisz modelu przezroczystości dla zestawu, stosując <xref:System.Security.SecurityRulesAttribute> atrybutu podczas tworzenia jej modelu przezroczystości jest dziedziczony z emitujące zgromadzenia.  
   
 > [!NOTE]
 >  Atrybuty stosowane do zestawu dynamicznego, po jego utworzeniu, za pomocą <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> metody, obowiązują do momentu zestawu został zapisany na dysku i ponownie załadowany do pamięci.  

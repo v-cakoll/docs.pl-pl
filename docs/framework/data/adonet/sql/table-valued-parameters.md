@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: ccef487eb27a5a170d197a6bc670ec4d2bcf8bdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645807"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489810"
 ---
 # <a name="table-valued-parameters"></a>Parametry o wartościach tabelowych
-Parametry z wartościami przechowywanymi w tabeli zawierają łatwy sposób organizowania wielu wierszy danych z aplikacji klienckiej programu SQL Server, bez konieczności wielu wystąpień komunikacji dwustronnej lub specjalne logiki po stronie serwera związane z przetwarzaniem danych. Parametry z wartościami przechowywanymi w tabeli można użyć do hermetyzacji wierszy danych w aplikacji klienckiej i wysyłania danych do serwera za pomocą jednego polecenia sparametryzowanych. Przychodzące wiersze danych są przechowywane w zmiennej tabeli, która może być eksploatowana przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+Parametry z wartościami przechowywanymi w tabeli zawierają łatwy sposób organizowania wielu wierszy danych z aplikacji klienckiej programu SQL Server, bez konieczności wielu wystąpień komunikacji dwustronnej lub specjalne logiki po stronie serwera związane z przetwarzaniem danych. Parametry z wartościami przechowywanymi w tabeli można użyć do hermetyzacji wierszy danych w aplikacji klienckiej i wysyłania danych do serwera za pomocą jednego polecenia sparametryzowanych. Przychodzące wiersze danych są przechowywane w zmiennej tabeli, która może być eksploatowana przy użyciu języka Transact-SQL.  
   
- Wartości parametrów z wartościami przechowywanymi w tabeli kolumn można uzyskać dostęp przy użyciu standardu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji "SELECT". Parametry z wartościami przechowywanymi w tabeli są silnie typizowane i ich struktury jest automatycznie weryfikowana. Rozmiar parametrów z wartościami przechowywanymi w tabeli jest ograniczony tylko ilością pamięci serwera.  
+ Wartości w kolumnie parametry z wartościami przechowywanymi w tabeli są dostępne za pomocą instrukcji języka Transact-SQL ZAZNACZYĆ standardowych. Parametry z wartościami przechowywanymi w tabeli są silnie typizowane i ich struktury jest automatycznie weryfikowana. Rozmiar parametrów z wartościami przechowywanymi w tabeli jest ograniczony tylko ilością pamięci serwera.  
   
 > [!NOTE]
 >  Parametr z wartościami przechowywanymi w tabeli nie może zwrócić danych. Parametry z wartościami przechowywanymi w tabeli są tylko wejściowym; dane wyjściowe — słowo kluczowe nie jest obsługiwane.  
@@ -39,7 +39,7 @@ Parametry z wartościami przechowywanymi w tabeli zawierają łatwy sposób orga
 - Użyj `bcp` programu narzędziowego lub <xref:System.Data.SqlClient.SqlBulkCopy> obiekt, aby załadować wiele wierszy danych do tabeli. Chociaż ta technika jest bardzo wydajny, nie obsługuje przetwarzania po stronie serwera, chyba, że dane są ładowane do tabeli tymczasowej lub zmiennej tabeli.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Tworzenie typów parametru z wartościami przechowywanymi w tabeli  
- Parametry z wartościami przechowywanymi w tabeli zależą od struktury silnie typizowane tabel, które są zdefiniowane przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji CREATE TYPE. Masz typ tabeli na utworzenie i zdefiniowanie struktury w programie SQL Server, zanim użyjesz parametry z wartościami przechowywanymi w tabeli w aplikacjach klienckich. Aby uzyskać więcej informacji na temat tworzenia użytkownika, typach tabel zobacz [typy tabel zdefiniowane przez użytkownika](https://go.microsoft.com/fwlink/?LinkID=98364) w dokumentacji SQL Server — książki Online.  
+ Parametry z wartościami przechowywanymi w tabeli są oparte na struktury silnie typizowane tabel, które są zdefiniowane za pomocą instrukcji języka Transact-SQL CREATE TYPE. Masz typ tabeli na utworzenie i zdefiniowanie struktury w programie SQL Server, zanim użyjesz parametry z wartościami przechowywanymi w tabeli w aplikacjach klienckich. Aby uzyskać więcej informacji na temat tworzenia użytkownika, typach tabel zobacz [typy tabel zdefiniowane przez użytkownika](https://go.microsoft.com/fwlink/?LinkID=98364) w dokumentacji SQL Server — książki Online.  
   
  Poniższa instrukcja umożliwia utworzenie tabeli o nazwie CategoryTableType, który składa się z identyfikatorem kategorii i CategoryName kolumn:  
   
@@ -48,7 +48,7 @@ CREATE TYPE dbo.CategoryTableType AS TABLE
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- Po utworzeniu tabeli, możesz deklarować parametry z wartościami przechowywanymi w tabeli na podstawie tego typu. Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] fragment przedstawia sposób deklarowania parametrem z wartościami przechowywanymi w tabeli, w definicji procedury składowanej. Należy pamiętać, że READONLY — słowo kluczowe jest wymagany do deklarowania parametr z wartościami przechowywanymi w tabeli.  
+ Po utworzeniu tabeli, możesz deklarować parametry z wartościami przechowywanymi w tabeli na podstawie tego typu. Poniższy fragment języka Transact-SQL pokazuje, jak zadeklarować parametr wartościami przechowywanymi w tabeli w definicji procedury składowanej. Należy pamiętać, że READONLY — słowo kluczowe jest wymagany do deklarowania parametr z wartościami przechowywanymi w tabeli.  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
@@ -58,7 +58,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>Modyfikowanie danych za pomocą parametrów z wartościami przechowywanymi w tabeli (Transact-SQL)  
  Parametry z wartościami przechowywanymi w tabeli może służyć w zmiany na podstawie zestawu danych, które mają wpływ na wiele wierszy, wykonując pojedynczej instrukcji. Na przykład można wybrać wszystkie wiersze w parametr z wartościami przechowywanymi w tabeli i wstawianie tabeli bazy danych lub można utworzyć instrukcji update, dołączając do parametru z wartościami przechowywanymi w tabeli do tabeli, które chcesz zaktualizować.  
   
- Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji UPDATE pokazuje sposób użycia parametru z wartościami przechowywanymi w tabeli przez dołączenie go do tabeli Kategorie. Korzystając z parametru z wartościami przechowywanymi w tabeli ze sprzężeniem w klauzuli FROM, musisz mieć również aliasu, jak pokazano w tym miejscu, gdzie parametr z wartościami przechowywanymi w tabeli ma alias "WE":  
+ Poniższa instrukcja języka Transact-SQL aktualizacji pokazuje sposób użycia parametru z wartościami przechowywanymi w tabeli przez dołączenie go do tabeli Kategorie. Korzystając z parametru z wartościami przechowywanymi w tabeli ze sprzężeniem w klauzuli FROM, musisz mieć również aliasu, jak pokazano w tym miejscu, gdzie parametr z wartościami przechowywanymi w tabeli ma alias "WE":  
   
 ```  
 UPDATE dbo.Categories  
@@ -67,7 +67,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- To [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] przykład pokazuje, jak w celu wybrania wierszy z wartościami przechowywanymi w tabeli parametru przeprowadzić WSTAWIANIA w ramach jednej operacji na podstawie zestawu.  
+ W tym przykładzie języka Transact-SQL pokazuje, jak w celu wybrania wierszy z wartościami przechowywanymi w tabeli parametru przeprowadzić WSTAWIANIA w ramach jednej operacji na podstawie zestawu.  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -81,7 +81,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 - Parametry z wartościami przechowywanymi w tabeli mogą być indeksowane tylko do obsługi ograniczenia UNIQUE i PRIMARY KEY. Program SQL Server nie są zachowywane dane statystyczne dotyczące parametrów z wartościami przechowywanymi w tabeli.  
   
-- Parametry z wartościami przechowywanymi w tabeli są tylko do odczytu w [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] kodu. Nie można zaktualizować wartości w kolumnach w wierszach parametr z wartościami przechowywanymi w tabeli i nie można wstawić lub usuwania wierszy. Aby zmodyfikować danych, który jest przekazywany do procedury składowanej lub sparametryzowanych instrukcji w parametr z wartościami przechowywanymi w tabeli, należy wstawić dane do tabeli tymczasowej lub zmiennej tabeli.  
+- Parametry z wartościami przechowywanymi w tabeli są tylko do odczytu w kodzie języka Transact-SQL. Nie można zaktualizować wartości w kolumnach w wierszach parametr z wartościami przechowywanymi w tabeli i nie można wstawić lub usuwania wierszy. Aby zmodyfikować danych, który jest przekazywany do procedury składowanej lub sparametryzowanych instrukcji w parametr z wartościami przechowywanymi w tabeli, należy wstawić dane do tabeli tymczasowej lub zmiennej tabeli.  
   
 - Nie można użyć instrukcji ALTER TABLE, aby zmodyfikować projekt parametrów z wartościami przechowywanymi w tabeli.  
   

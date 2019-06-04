@@ -2,12 +2,12 @@
 title: Usuwanie elementów, atrybutów i węzłów z drzewa XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: f3091c3f46d8b3283c961fffd4d1f0ce991083ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3877a09cc0b86522929079d46d74b7c01b0e658a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711983"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487218"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Usuwanie elementów, atrybutów i węzłów z drzewa XML (C#)
 Możesz zmodyfikować drzewa XML, usunięcie elementów, atrybutów i innych typów węzłów.  
@@ -78,6 +78,3 @@ Console.WriteLine(root);
   
  Należy zauważyć, że pierwszy element podwójnym została usunięta z `Child1`. Wszystkie elementy podrzędne zostały usunięte z `Child2` i `Child3`.  
   
-## <a name="see-also"></a>Zobacz także
-
-- [Modyfikowanie drzew XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

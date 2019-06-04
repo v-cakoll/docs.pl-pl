@@ -2,12 +2,12 @@
 title: Przewodnik programowania
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 102d2ecba162e19258b707c1c902c29b0a7f2f02
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794462"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490047"
 ---
 # <a name="programming-guide"></a>Przewodnik programowania
 Ta sekcja zawiera informacje o sposobie tworzenia i używania usługi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów. Jeśli używasz programu Visual Studio umożliwia również [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do wykonywania wielu spośród tych samych zadań.  
@@ -40,7 +40,7 @@ Ta sekcja zawiera informacje o sposobie tworzenia i używania usługi [!INCLUDE[
  [Procedury składowane](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  Zawiera łącza do tematów, które ilustrują sposób korzystania z procedur składowanych.  
   
- [Wprowadzenie do LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [Wprowadzenie do LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  Zawiera zasoby, które pomogą Ci rozpocząć dowiedzieć się o LINQ do SQL przy użyciu C#.
 
  [Wprowadzenie do LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  

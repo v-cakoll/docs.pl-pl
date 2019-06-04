@@ -2,12 +2,12 @@
 title: Śledzenie SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b69336e9a6fd0d3cf91c2a187412638d08490eea
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785921"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491083"
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
 W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia SQL, który zapisuje rekordy śledzenia bazą danych SQL. Windows Workflow Foundation (WF) zapewnia wgląd w wykonywania wystąpienia przepływu pracy śledzenia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../workflow-tracking-and-tracing.md).
@@ -35,7 +35,7 @@ W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia
   
      Na przykład adres WSDL Usługa lokalna `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8. Za pomocą [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], uruchom klienta testowego WCF (WcfTestClient.exe). Znajduje się on w katalogu programu Microsoft Visual Studio 10.0\Common7\IDE.  
+8. Za pomocą Eksploratora plików, uruchom klienta testowego WCF (WcfTestClient.exe). Znajduje się on w katalogu programu Microsoft Visual Studio 10.0\Common7\IDE.  
   
 9. W kliencie testowym WCF kliknij **pliku** menu, a następnie wybierz **Dodaj usługę**. Wklej adres lokalnej usługi w polu tekstowym. Kliknij przycisk **OK** aby zamknąć okno dialogowe.  
   

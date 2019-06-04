@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wyszukiwanie elementu podrzędnego (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 6ce31c803e1f0877a6029bda9de73e4bf8e79279
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a6d18c86416f7c54df554bc2f518994446a2a84
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702259"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485727"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Instrukcje: Wyszukiwanie elementu podrzędnego (XPath-LINQ to XML) (C#)
 W tym temacie porównano osi elementu podrzędnego XPath do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> metody.  
@@ -45,6 +45,3 @@ Results are identical
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
-
-- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

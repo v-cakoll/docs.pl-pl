@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456573"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487835"
 ---
 # <a name="security-transparent-code-level-2"></a>Kod o przezroczystym poziomie bezpieczeństwa, poziom 2
 
@@ -22,7 +22,7 @@ ms.locfileid: "66456573"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Poziom 2 przejrzystości został wprowadzony w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Trzy założenia tego modelu to kod przezroczysty, kod zabezpieczenia bezpieczny krytyczny i kod zabezpieczenia krytyczny.
+Poziom 2 przejrzystości został wprowadzony w programie .NET Framework 4. Trzy założenia tego modelu to kod przezroczysty, kod zabezpieczenia bezpieczny krytyczny i kod zabezpieczenia krytyczny.
 
 - Przezroczysty kod, łącznie z kodem, który działa jako pełne zaufanie, wywołując inne kodu przezroczyste lub tylko kod zabezpieczenia bezpieczny krytyczny. Można wykonać tylko akcje dozwolone przez uprawnienie częściowej relacji zaufania domeny (jeśli istnieje). Przezroczysty kod nie są możliwe następujące czynności:
 

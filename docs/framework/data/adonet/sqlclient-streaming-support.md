@@ -2,12 +2,12 @@
 title: Obsługa przesyłania strumieniowego SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c5325e60e8303ab46f1c32340a20473b31bcf52e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379993"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489785"
 ---
 # <a name="sqlclient-streaming-support"></a>Obsługa przesyłania strumieniowego SqlClient
 
@@ -78,7 +78,7 @@ Następujące <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> będzie akc
 
 ## <a name="sample----streaming-from-sql-server"></a>Przykład — Przesyłanie strumieniowe z programu SQL Server
 
-Należy użyć następującego [!INCLUDE[tsql](../../../../includes/tsql-md.md)] do tworzenie przykładowej bazy danych:
+Utwórz przykładową bazę danych za pomocą języka Transact-SQL:
 
 ```sql
 CREATE DATABASE [Demo]
@@ -300,7 +300,7 @@ namespace StreamingFromServer {
 
 ## <a name="sample----streaming-to-sql-server"></a>Przykład — Przesyłanie strumieniowe do programu SQL Server
 
-Należy użyć następującego [!INCLUDE[tsql](../../../../includes/tsql-md.md)] do tworzenie przykładowej bazy danych:
+Utwórz przykładową bazę danych za pomocą języka Transact-SQL:
 
 ```sql
 CREATE DATABASE [Demo2]

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b996b60a08a55b1d8e86878974be4887ea2684f8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666316"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490819"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> jest elementem synchronizacji, który odblokowuje wątków oczekujących, po przeprowadzeniu sygnalizowane, ile razy. <xref:System.Threading.CountdownEvent> jest przeznaczona dla scenariuszy, w których w przeciwnym razie trzeba byłoby użyć <xref:System.Threading.ManualResetEvent> lub <xref:System.Threading.ManualResetEventSlim> i ręcznie dekrementacyjne zmienną przed sygnalizacja zdarzenie. Na przykład w scenariuszu rozwidlenia/scalania, po prostu utworzeniem <xref:System.Threading.CountdownEvent> zawierający sygnału liczbę 5, a następnie rozpoczęcia pięć elementów roboczych w wątku puli i mieć każdego wywołania elementu roboczego <xref:System.Threading.CountdownEvent.Signal%2A> po zakończeniu. Każde wywołanie <xref:System.Threading.CountdownEvent.Signal%2A> zmniejsza sygnał liczba o 1. W głównym wątku, wywołanie <xref:System.Threading.CountdownEvent.Wait%2A> blokuje, dopóki liczba sygnałów wynosi zero.  
@@ -40,7 +40,7 @@ ms.locfileid: "64666316"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>CountdownEvent w przypadku anulowania  
- Poniższy przykład pokazuje, jak można anulować operacji oczekiwania na <xref:System.Threading.CountdownEvent> przy użyciu tokenu anulowania. Podstawowy wzorzec następuje modelu ujednoliconego anulowania, która została wprowadzona w systemie [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Aby uzyskać więcej informacji, zobacz [anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
+ Poniższy przykład pokazuje, jak można anulować operacji oczekiwania na <xref:System.Threading.CountdownEvent> przy użyciu tokenu anulowania. Podstawowy wzorzec następuje modelu ujednoliconego anulowania, który został wprowadzony w programie .NET Framework 4. Aby uzyskać więcej informacji, zobacz [anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  

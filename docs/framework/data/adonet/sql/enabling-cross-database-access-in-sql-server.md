@@ -2,12 +2,12 @@
 title: Włączanie dostępu między bazami danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: ef018566c5d3881d2f9b77dad932712d1fb11841
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583700"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490078"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Włączanie dostępu między bazami danych w programie SQL Server
 Tworzenie łańcucha własności między bazami danych występuje, gdy procedura w jednej bazie danych jest zależna od obiektów w innej bazie danych. Łańcucha własności między bazami danych działa w taki sam sposób jak łańcucha własności, w ramach pojedynczej bazy danych, z tą różnicą, że łańcucha własności nieprzerwany wymaga, że wszyscy właściciele obiektu są mapowane do tego samego konta logowania. Jeśli obiekt źródłowy w źródłowej bazie danych i obiektów docelowych w docelowych baz danych są własnością tego samego konta logowania, programu SQL Server nie sprawdza uprawnienia do obiektów docelowych.  
@@ -20,7 +20,7 @@ Tworzenie łańcucha własności między bazami danych występuje, gdy procedura
 - Użytkownicy mający uprawnienie Tworzenie bazy danych można tworzyć nowe bazy danych i dołączanie istniejących baz danych. Jeśli włączono tworzenie łańcucha własności między bazami danych tych użytkowników może uzyskać dostęp do obiektów w innych bazach danych, które mogą nie mieć uprawnień z bazy danych nowo utworzone lub dołączone, które tworzą.  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>Włączanie łańcucha własności między bazami danych  
- Tworzenie łańcucha własności między bazami danych należy włączyć tylko w środowiskach, w którym można w pełni zaufane wysoce uprzywilejowanych użytkowników. Można skonfigurować podczas instalacji dla wszystkich baz danych lub selektywnie dla określonych baz danych przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] polecenia `sp_configure` i `ALTER DATABASE`.  
+ Tworzenie łańcucha własności między bazami danych należy włączyć tylko w środowiskach, w którym można w pełni zaufane wysoce uprzywilejowanych użytkowników. Można skonfigurować podczas instalacji dla wszystkich baz danych lub selektywnie do konkretnych baz danych za pomocą polecenia języka Transact-SQL `sp_configure` i `ALTER DATABASE`.  
   
  Aby selektywnie skonfigurować tworzenie łańcucha własności między bazami danych, użyj `sp_configure` wyłączenia serwera. Następnie użyj polecenia ALTER DATABASE za pomocą zestawu ON DB_CHAINING do skonfigurowania własności między bazami danych, tworzenie łańcucha tylko bazy danych, które tego wymagają.  
   

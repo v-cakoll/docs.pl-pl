@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704911"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487662"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> Element
 Określa, czy należy wyłączyć zachowanie domyślne, które jest, aby zezwolić na host środowiska uruchomieniowego w celu zastąpienia ustawień konfiguracji domeny aplikacji.  
@@ -40,7 +40,7 @@ Określa, czy należy wyłączyć zachowanie domyślne, które jest, aby zezwoli
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|0|Nie należy wyłączać możliwość przesłaniania ustawień Fusion. Jest to domyślne zachowanie, począwszy od [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|0|Nie należy wyłączać możliwość przesłaniania ustawień Fusion. Jest to domyślne zachowanie, począwszy od programu .NET Framework 4.|  
 |1|Wyłącz możliwość zastąpienia ustawień Fusion. Spowoduje to przywrócenie zachowania wcześniejszych wersji programu .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -54,7 +54,7 @@ Określa, czy należy wyłączyć zachowanie domyślne, które jest, aby zezwoli
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Począwszy od [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], zachowanie domyślne jest umożliwienie <xref:System.AppDomainManager> obiekt, aby zastąpić ustawienia konfiguracji za pomocą <xref:System.AppDomainSetup.ConfigurationFile%2A> właściwości lub <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metody <xref:System.AppDomainSetup> obiektu, który jest przekazywany do implementacji z <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodę, w swojej podklasą <xref:System.AppDomainManager>. Dla domyślnej domeny aplikacji ustawienia, które można zmienić zastąpienia ustawień, które zostały określone w pliku konfiguracyjnym aplikacji. W przypadku innych domen aplikacji zastępują ustawienia konfiguracji, które zostały przekazane do <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> lub <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> metody.  
+ Począwszy od programu .NET Framework 4, zachowanie domyślne jest umożliwienie <xref:System.AppDomainManager> obiekt, aby zastąpić ustawienia konfiguracji za pomocą <xref:System.AppDomainSetup.ConfigurationFile%2A> właściwości lub <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metody <xref:System.AppDomainSetup> obiektu, który jest przekazywany do implementacji z <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodę, w swojej podklasą <xref:System.AppDomainManager>. Dla domyślnej domeny aplikacji ustawienia, które można zmienić zastąpienia ustawień, które zostały określone w pliku konfiguracyjnym aplikacji. W przypadku innych domen aplikacji zastępują ustawienia konfiguracji, które zostały przekazane do <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> lub <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> metody.  
   
  Możesz przekazać nowe informacje o konfiguracji, lub przekazać wartości null (`Nothing` w języku Visual Basic), aby wyeliminować informacje o konfiguracji, która została przekazana.  
   

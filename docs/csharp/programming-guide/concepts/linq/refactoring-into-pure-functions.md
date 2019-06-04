@@ -2,12 +2,12 @@
 title: Refaktoryzacja do czystych funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596883"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483991"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refaktoryzacja do czystych funkcji (C#)
 
@@ -24,7 +24,7 @@ Ważnym aspektem czystych przekształceń funkcjonalnych jest nauki refaktoryzac
   
  Jednym ze sposobów przechodzenia do programowania funkcyjnego jest Przeprowadź refaktoryzację istniejącego kodu, aby wyeliminować niepotrzebne efekty uboczne i zależności zewnętrznych. W ten sposób można utworzyć wersji czystą funkcję istniejącego kodu.  
   
- W tym temacie omówiono funkcja czystego jest i co nie jest. [Samouczka: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) samouczek przedstawia sposób modyfikowania dokumentu WordprocessingML i zawiera dwa przykłady jak Refaktoryzacja, przy użyciu czystej funkcji.  
+ W tym temacie omówiono funkcja czystego jest i co nie jest. [Samouczka: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) samouczek przedstawia sposób modyfikowania dokumentu WordprocessingML i zawiera dwa przykłady jak Refaktoryzacja, przy użyciu czystej funkcji.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminując skutki uboczne i zależności zewnętrznych  
  Poniższe przykłady porównać dwie funkcje — czyste i czystą funkcję.  

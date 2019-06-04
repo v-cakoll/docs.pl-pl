@@ -2,12 +2,12 @@
 title: Uwierzytelnianie w programie SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877463"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490100"
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows i w trybie mieszanym.  
@@ -46,7 +46,7 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows 
 - Aplikacje internetowe, takich jak ASP.NET.  
   
 > [!NOTE]
->  Określanie uwierzytelniania Windows nie wyłączać logowania programu SQL Server. Użyj polecenia ALTER LOGIN Wyłącz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcję, aby wyłączyć logowania programu SQL Server w uprawnieniach.  
+>  Określanie uwierzytelniania Windows nie wyłączać logowania programu SQL Server. Wyłączenie logowania do programu SQL Server wysoce uprzywilejowanych za pomocą instrukcji ALTER LOGIN Wyłącz języka Transact-SQL.  
   
 ## <a name="login-types"></a>Typy logowania  
  Program SQL Server obsługuje trzy typy danych logowania:  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596638"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487897"
 ---
 # <a name="securing-wrapper-code"></a>Zabezpieczanie kodu otoki
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596638"
 - [Żądanie LinkDemand](../../../docs/framework/misc/link-demands.md) się dzieje w momencie kompilacji just-in-time (JIT) i sprawdza, czy tylko bezpośredniego wywołującego. Tego sprawdzenia zabezpieczeń nie sprawdza obiekt wywołujący obiektu wywołującego. Po pomyślnej to sprawdzenie nie istnieje żadne dodatkowe zabezpieczenia, obciążenie niezależnie od tego, ile razy może wywołać obiekt wywołujący. Istnieje jednak także nie ochrony przed atakami zapewnienia. Za pomocą **LinkDemand**, umożliwiając złośliwego kodu do wywołania, przy użyciu kodu autoryzowanych wszelki kod, który przejdzie test i może przywoływać kod może potencjalnie uszkodzić zabezpieczeń. W związku z tym, nie używaj **LinkDemand** chyba, że wszystkie możliwe luki zabezpieczeń można uniknąć dokładnie.  
   
     > [!NOTE]
-    >  W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], zapotrzebowanie na łącza zostały zastąpione przez <xref:System.Security.SecurityCriticalAttribute> atrybutu w <xref:System.Security.SecurityRuleSet.Level2> zestawów. <xref:System.Security.SecurityCriticalAttribute> Jest odpowiednikiem zapotrzebowania na łącza, aby uzyskać pełne zaufanie; jednak również wpływa na zasady dziedziczenia. Aby uzyskać więcej informacji na temat tej zmiany, zobacz [kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    >  W programie .NET Framework 4 zapotrzebowania na łącza zostały zastąpione przez <xref:System.Security.SecurityCriticalAttribute> atrybutu w <xref:System.Security.SecurityRuleSet.Level2> zestawów. <xref:System.Security.SecurityCriticalAttribute> Jest odpowiednikiem zapotrzebowania na łącza, aby uzyskać pełne zaufanie; jednak również wpływa na zasady dziedziczenia. Aby uzyskać więcej informacji na temat tej zmiany, zobacz [kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  Dodatkowe środki ostrożności, wymagany, gdy za pomocą **LinkDemand** musi być zaprogramowany pojedynczo; może system zabezpieczeń, pomoc dotycząca wymuszania. Wszelkie błędu zostanie otwarty do osłabienia zabezpieczeń. Wszystkie autoryzowane kodu, że używa Twój kod musi być odpowiedzialne za wykonanie dodatkowe zabezpieczenia, wykonując następujące czynności:  
   

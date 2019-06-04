@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811816"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491099"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan
 <a name="Top"></a> Standardowa <xref:System.TimeSpan> Ciąg formatujący używa pojedynczego specyfikatora formatu w celu zdefiniowania tekstowa reprezentacja <xref:System.TimeSpan> wartość będącą wynikiem operacji formatowania. Dowolny ciąg formatu, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako niestandardowy <xref:System.TimeSpan> ciąg formatu. Aby uzyskać więcej informacji, zobacz [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
@@ -64,7 +64,7 @@ ms.locfileid: "61811816"
 |*ss*|Liczba sekund, która zakresu od "0" do "59".|  
 |*fffffff*|Opcjonalną część ułamkową sekund.  Wartość do zakresu od "0000001" (jeden znaczników lub co 10 milionowych części sekundy) do "9999999" (mniej cykli co drugi 9 999 999 dziesięciomilionowych części sekundy lub jeden).|  
   
- W odróżnieniu od "g" i specyfikatora formatu "G" specyfikator formatu "c" nie jest uwzględniana kultura. Generuje reprezentację ciągu <xref:System.TimeSpan> wartość jest niezmienny i które są wspólne dla wszystkich wcześniejszych wersji programu .NET Framework przed [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. "c" jest ustawieniem domyślnym <xref:System.TimeSpan> ciąg formatu; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metoda formatuje wartość interwału czasu przy użyciu ciągu formatu "c".  
+ W odróżnieniu od "g" i specyfikatora formatu "G" specyfikator formatu "c" nie jest uwzględniana kultura. Generuje reprezentację ciągu <xref:System.TimeSpan> wartość jest niezmienny i które są wspólne dla wszystkich wcześniejszych wersji programu .NET Framework przed programu .NET Framework 4. "c" jest ustawieniem domyślnym <xref:System.TimeSpan> ciąg formatu; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metoda formatuje wartość interwału czasu przy użyciu ciągu formatu "c".  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> obsługuje również "t" i ciągi formatu standardowego "T", które są takie same jak w zachowaniu ciąg formatu standardowego "c".  

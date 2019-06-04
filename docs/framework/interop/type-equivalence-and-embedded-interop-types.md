@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9ec21a21ce3c81c2d29d2edf353a098489c9026
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032890"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489236"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Równoważność typów i osadzone typy międzyoperacyjne
 
-Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wspólnego obsługuje środowisko uruchomieniowe języka osadzanie informacji o typie dla typów modelu COM bezpośrednio do zestawów zarządzanych, zamiast zestawów zarządzanych uzyskać informacje o typie dla typów modelu COM z zestawów międzyoperacyjnych. Informacje o typie osadzony zawiera tylko typy i elementy członkowskie, które są rzeczywiście używane przez zestaw zarządzany, dwóch zestawów zarządzanych, może być bardzo różne widoki tego samego typu COM. Każdy zestaw zarządzany ma inną <xref:System.Type> obiektu do reprezentowania jej widok typów modelu COM. Środowisko uruchomieniowe języka wspólnego obsługuje równoważności typu między te różne widoki dla interfejsy, struktury, wyliczenia i delegaty.
+Począwszy od programu .NET Framework 4 środowisko uruchomieniowe języka wspólnego obsługuje osadzanie informacji o typie dla typów modelu COM bezpośrednio do zestawów zarządzanych, zamiast zestawów zarządzanych uzyskać informacje o typie dla typów modelu COM z zestawów międzyoperacyjnych. Informacje o typie osadzony zawiera tylko typy i elementy członkowskie, które są rzeczywiście używane przez zestaw zarządzany, dwóch zestawów zarządzanych, może być bardzo różne widoki tego samego typu COM. Każdy zestaw zarządzany ma inną <xref:System.Type> obiektu do reprezentowania jej widok typów modelu COM. Środowisko uruchomieniowe języka wspólnego obsługuje równoważności typu między te różne widoki dla interfejsy, struktury, wyliczenia i delegaty.
 
 Równoważności typu oznacza o tym, że obiekt COM, który jest przekazywany z jednego zestawu zarządzanego do innego, mogą być rzutowane do odpowiedniego zarządzane typu w zestawie odbierania.
 

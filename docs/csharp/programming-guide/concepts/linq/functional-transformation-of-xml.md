@@ -2,12 +2,12 @@
 title: Przekształcanie funkcjonalne kodu XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 237a96e3cc1a2e2cb231b23954613f6a0ad0761c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1325644873db29b2c40901ded3eb254b3a31073
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596670"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485957"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Przekształcanie funkcjonalne kodu XML (C#)
 W tym temacie omówiono czyste Przekształcanie funkcjonalne podejście modyfikowanie dokumentów XML i zestawiono ze sobą przy użyciu podejścia proceduralnego.  
@@ -26,7 +26,7 @@ W tym temacie omówiono czyste Przekształcanie funkcjonalne podejście modyfiko
 ### <a name="xml-functional-transformational-technologies"></a>Funkcjonalności innowacyjne technologie XML  
  Firma Microsoft oferuje dwie technologie Przekształcanie funkcjonalne do użycia w dokumentach XML: XSLT i LINQ to XML. XSLT jest obsługiwana w <xref:System.Xml.Xsl> zarządzane przestrzeni nazw i w natywnych implementacji COM programu MSXML. Mimo że XSLT jest niezawodne technologii do manipulowania dokumentów XML, wymaga doświadczenia w domenie specjalistyczne, czyli języka XSLT i towarzyszących interfejsów API.  
   
- LINQ to XML udostępnia narzędzia niezbędne do czystych przekształceń funkcjonalnych kodu w ekspresyjny i zaawansowany sposób, w kodzie języka C# lub Visual Basic. Na przykład użyć wiele przykładów w LINQ do XML dokumentacji czystego podejście funkcjonalności. Ponadto [samouczka: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) samouczku używamy LINQ to XML w funkcjonalne podejście do manipulowania informacje zawarte w dokumencie programu Microsoft Word.  
+ LINQ to XML udostępnia narzędzia niezbędne do czystych przekształceń funkcjonalnych kodu w ekspresyjny i zaawansowany sposób, w kodzie języka C# lub Visual Basic. Na przykład użyć wiele przykładów w LINQ do XML dokumentacji czystego podejście funkcjonalności. Ponadto [samouczka: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) samouczku używamy LINQ to XML w funkcjonalne podejście do manipulowania informacje zawarte w dokumencie programu Microsoft Word.  
   
  Bardziej szczegółowy porównanie LINQ to XML z innymi technologiami XML firmy Microsoft, zobacz [LINQ to XML a. Inne technologie XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md).  
   
@@ -35,5 +35,5 @@ W tym temacie omówiono czyste Przekształcanie funkcjonalne podejście modyfiko
 ## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [LINQ to XML a inne technologie XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

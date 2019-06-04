@@ -2,12 +2,12 @@
 title: Zręczność kryptograficzna w zabezpieczeniach WCF
 ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-ms.openlocfilehash: 0a4171d6e753be9fbdd6974850fc6757ff585ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b8e3b6dc62baf31901520d7f5edac0529e937016
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637848"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490939"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>Zręczność kryptograficzna w zabezpieczeniach WCF
 
@@ -27,7 +27,7 @@ Jest to klienta WCF, która uzyskuje dostęp do usługi po pomyślnym uwierzytel
 
 2. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.
 
-3. Otwórz [!INCLUDE[fileExplorer](~/includes/fileexplorer-md.md)] i przejdź do katalogu \WCF\Basic\Security\CryptoAgility\Service\bin i uruchom plik service.exe z uprawnieniami administratora, kliknij prawym przyciskiem myszy service.exe i wybierając **Uruchom jako administrator**.
+3. Otwórz Eksplorator plików i przejdź do katalogu \WCF\Basic\Security\CryptoAgility\Service\bin i uruchom plik service.exe z uprawnieniami administratora, kliknij prawym przyciskiem myszy service.exe i wybierając **Uruchom jako administrator**.
 
 4. Przejdź do katalogu \WCF\Basic\Security\CryptoAgility\Client\bin, a następnie uruchom plik client.exe normalnie.
 

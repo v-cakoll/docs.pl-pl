@@ -2,12 +2,12 @@
 title: Śledzenie danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583783"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489518"
 ---
 # <a name="data-tracing-in-adonet"></a>Śledzenie danych w ADO.NET
 
@@ -41,7 +41,7 @@ Klienta można uzyskać Identyfikatora połączenia programowo przy użyciu `Sql
 
 ADO.NET wysyła również identyfikator działania właściwe dla wątków. Jeśli sesje są uruchamiane z włączoną opcją TRACK_CAUSALITY, identyfikator działania są przechwytywane w sesji zdarzeń rozszerzonych. Problemy z wydajnością z aktywnym połączeniem, możesz uzyskać identyfikator działania od śledzenie dostępu do danych klienta (`ActivityID` pole) i zlokalizuj identyfikator działania w danych wyjściowych zdarzeń rozszerzonych. Identyfikator działania w ramach zdarzeń rozszerzonych jest 16-bajtowy identyfikator GUID (nie taka sama jak identyfikator GUID dla Identyfikatora połączenia klienta) dołączany wraz z liczbą sekwencji czwartego bajtu. Numer sekwencyjny reprezentuje kolejność żądania w wątku i wskazuje względną kolejność usługi batch oraz instrukcje RPC dla wątku. `ActivityID` Obecnie opcjonalnie jest wysyłana dla instrukcji przetwarzania wsadowego SQL i żądania RPC, gdy jest włączone śledzenie dostępu do danych i 18 bitu dostępu do danych, śledzenie konfiguracji w programie word jest włączona.
 
-Oto przykład, który używa [!INCLUDE[tsql](../../../../includes/tsql-md.md)] można uruchomić sesji zdarzeń rozszerzonych, będą przechowywane w bufor cykliczny, która zarejestruje identyfikator działania wysłane przez klienta na operacje RPC i usługi batch.
+Poniżej przedstawiono przykładu korzystającego z instrukcji Transact-SQL można uruchomić sesji zdarzeń rozszerzonych, będą przechowywane w bufor cykliczny, która zarejestruje identyfikator działania wysłane przez klienta na operacje RPC i usługi batch.
 
 ```sql
 create event session MySession on server

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 891acd56939a2cff8eb377512a8a516f8a189034
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584410"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487429"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ i typy ogólne (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania są oparte na typach ogólnych, które zostały wprowadzone w wersji 2.0 programu .NET Framework. Nie potrzebujesz dogłębnej znajomości ogólne przed rozpoczęciem pisania zapytań. Jednak warto zrozumieć dwa podstawowe pojęcia:  
@@ -38,5 +38,4 @@ ms.locfileid: "65584410"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Typy ogólne](../../../../csharp/programming-guide/generics/index.md)

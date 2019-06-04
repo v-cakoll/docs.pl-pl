@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wykonywanie przekształceń strumieniowych tekstu do pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 906150483f7f76b4429ea390d083e9f18696ac9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d37ea5167576098d4ea343e49ae4ff6bac20d4ba
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667876"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485242"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Instrukcje: Wykonywanie przekształceń strumieniowych tekstu do pliku XML (C#)
 Jedno z podejść do przetwarzania pliku tekstowego jest napisanie metody rozszerzenia, która przesyła strumieniowo plik tekstowy linię w chwili `yield return` konstruowania. Następnie można napisać zapytanie LINQ, która przetwarza plik tekstowy, który w sposób odroczonego z opóźnieniem. Jeśli używasz <xref:System.Xml.Linq.XStreamingElement> do strumienia wyjściowego, będzie można utworzyć przekształcenie z pliku tekstowego do pliku XML, który używa minimalnej ilości pamięci, bez względu na rozmiar do źródłowego pliku tekstowego.  
@@ -89,4 +89,3 @@ class Program
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Linq.XStreamingElement>
-- [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

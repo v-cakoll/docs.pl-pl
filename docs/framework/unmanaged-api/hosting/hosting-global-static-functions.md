@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 4e4ad69d-9343-4f6a-aed8-fe0335a3b979
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd0bdee6127aca259ae5ca1fe1aa8ecc574662b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10e01dfd70d40ecfe6b1c9c36da8923734fb9220
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775222"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490291"
 ---
 # <a name="hosting-global-static-functions"></a>Statyczne funkcje globalne hostingu
 W tej sekcji opisano niezarządzane funkcje hostingu używane przez interfejsy API obsługujące .NET Framework.  
@@ -23,7 +23,7 @@ W tej sekcji opisano niezarządzane funkcje hostingu używane przez interfejsy A
  W tym artykule opisano funkcje wprowadzone w .NET Framework 4.  
   
  [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
- W tym artykule opisano funkcje wprowadzone w .NET Framework 1.1 i 2.0, które zostały zaniechane w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ W tym artykule opisano funkcje wprowadzone w .NET Framework 1.1 i 2.0, które zostały zaniechane w programie .NET Framework 4.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

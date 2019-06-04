@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6447cd37e4718093acfb3a0e2db053c13a027d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f51920bceef6e83af4f6ef029eb49ae495a58b9b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62015146"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490847"
 ---
 # <a name="managed-threading"></a>Zarządzana wątkowość
 Czy jest tworzona dla komputerów z procesorem jeden lub kilka, ma aplikację w celu zapewnienia najbardziej elastyczny interakcji z użytkownikiem, nawet wtedy, gdy aplikacja wykonuje aktualnie inne prace. Przy użyciu wielu wątków wykonania jest jednym z najbardziej zaawansowanych sposobów prace nad aplikacją reagować na działania użytkownika i w tym samym czasie wykorzystanie procesora pomiędzy lub nawet w trakcie zdarzenia użytkownika. Gdy ten rudział przedstawia podstawowe pojęcia wątkowości, koncentruje się na zarządzanym pojęcia wielowątkowości i przy użyciu zarządzanych wątkach.  
   
 > [!NOTE]
->  Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], programowanie wielowątkowe zostało znacznie uproszczone dzięki <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klas, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), nowej kolekcji współbieżnych klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeń nazw, a nowy model programowania, który opiera się na koncepcji zadania, a nie wątków. Aby uzyskać więcej informacji, zobacz [programowania równoległego](../../../docs/standard/parallel-programming/index.md).  
+>  Począwszy od programu .NET Framework 4, programowanie wielowątkowe znacznie zostało uproszczone dzięki <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klas, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), nowej kolekcji współbieżnych klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeni nazw , a nowy model programowania, który opiera się na koncepcji zadania, a nie wątków. Aby uzyskać więcej informacji, zobacz [programowania równoległego](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)  

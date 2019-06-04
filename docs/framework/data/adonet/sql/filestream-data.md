@@ -2,12 +2,12 @@
 title: Dane FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582711"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490067"
 ---
 # <a name="filestream-data"></a>Dane FILESTREAM
 
@@ -16,7 +16,7 @@ Atrybutu magazynowania FILESTREAM jest dla danych binarnych (BLOB) przechowywane
 > [!NOTE]
 > Należy zainstalować .NET Framework 3.5 z dodatkiem SP1 (lub nowszym) do pracy z danymi FILESTREAM przy użyciu SqlClient.
 
-Określając atrybut FILESTREAM kolumny typu varbinary(max) powoduje, że program SQL Server do przechowywania danych na lokalny system plików NTFS zamiast w pliku bazy danych. Chociaż były przechowywane osobno, możesz użyć takie same [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji, które są obsługiwane w przypadku pracy z danymi varbinary(max), która jest przechowywana w bazie danych.
+Określając atrybut FILESTREAM kolumny typu varbinary(max) powoduje, że program SQL Server do przechowywania danych na lokalny system plików NTFS zamiast w pliku bazy danych. Mimo że były przechowywane osobno, można użyć tej samej instrukcji Transact-SQL, które są obsługiwane w przypadku pracy z danymi varbinary(max), która jest przechowywana w bazie danych.
 
 ## <a name="sqlclient-support-for-filestream"></a>Obsługa SqlClient dla FILESTREAM
 
@@ -24,7 +24,7 @@ Określając atrybut FILESTREAM kolumny typu varbinary(max) powoduje, że progra
 
 ### <a name="creating-the-sql-server-table"></a>Tworzenie tabeli programu SQL Server
 
-Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji tworzy tabelę o nazwie Pracownicy i wstawia wiersz danych. Po włączeniu magazynowania FILESTREAM można użyć tej tabeli, w połączeniu z przykładami kodu, które należy wykonać. Na końcu tego tematu znajdują się linki do zasobów programu SQL Server — książki Online.
+Poniższe instrukcje języka Transact-SQL tworzy tabelę o nazwie Pracownicy i wstawia wiersz danych. Po włączeniu magazynowania FILESTREAM można użyć tej tabeli, w połączeniu z przykładami kodu, które należy wykonać. Na końcu tego tematu znajdują się linki do zasobów programu SQL Server — książki Online.
 
 ```sql
 CREATE TABLE employees

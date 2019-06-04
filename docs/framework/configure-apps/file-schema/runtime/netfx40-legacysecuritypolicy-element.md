@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 868c5f0742fa4dc963539fd70414752092156c64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456473"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489416"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> Element
 Określa, czy środowisko wykonawcze używa starszego kodu zasady zabezpieczeń dostępu (CAS).  
@@ -55,11 +55,11 @@ Określa, czy środowisko wykonawcze używa starszego kodu zasady zabezpieczeń 
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- W .NET Framework w wersji 3.5 i wcześniejszymi wersjami urzędy certyfikacji zasad jest zawsze w obiekcie. W [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], musi być włączone zasady CAS.  
+ W .NET Framework w wersji 3.5 i wcześniejszymi wersjami urzędy certyfikacji zasad jest zawsze w obiekcie. W programie .NET Framework 4 można włączyć zasady CAS.  
   
  Urzędy certyfikacji zasad jest specyficzny dla wersji. Zasady niestandardowe urzędów certyfikacji, które istnieją we wcześniejszych wersjach programu .NET Framework musi obowiązywać w programie .NET Framework 4.  
   
- Stosowanie `<NetFx40_LegacySecurityPolicy>` elementu [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] zestawu nie ma wpływu na [kod o przezroczystym poziomie bezpieczeństwa](../../../../../docs/framework/misc/security-transparent-code.md); nadal mają zastosowanie zasady przejrzystości.  
+ Stosowanie `<NetFx40_LegacySecurityPolicy>` element do zestawu .NET Framework 4 nie wpływa na [kod o przezroczystym poziomie bezpieczeństwa](../../../../../docs/framework/misc/security-transparent-code.md); nadal mają zastosowanie zasady przejrzystości.  
   
 > [!IMPORTANT]
 >  Stosowanie `<NetFx40_LegacySecurityPolicy>` elementu może spowodować istotnie poprawiającą wydajność dla zestawów obrazu natywnego, utworzone przez [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) nie są zainstalowane w [globalnej pamięci podręcznej zestawów ](../../../../../docs/framework/app-domains/gac.md). Spadek wydajności jest spowodowany brakiem możliwości środowiska uruchomieniowego ładować zestawy jako obrazy natywne, jeśli ten atrybut jest stosowany, co spowoduje ich załadowanych zespołów jako just-in-time.  

@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250880"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490871"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 
@@ -51,7 +51,7 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
  .NET obsługuje wyrażenia odejmowania klas znaków, co pozwala na zdefiniowanie zestawu znaków jako wyniku wykluczenia jednej klasy znaków z innej klasy znaków. Aby uzyskać więcej informacji, zobacz [odejmowania klas znaków](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Znak klasy, które dopasowuje znaki według kategorii, takich jak [\w](#WordCharacter) do dopasowuje znak słowa lub [\p{} ](#CategoryOrBlock) do dopasowania kategorii Unicode, zależą od <xref:System.Globalization.CharUnicodeInfo> klasy, aby podać informacje temat kategorii znaków.  Począwszy od programu .NET Framework 4.6.2 kategorii znaków są oparte na [Unicode Standard, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] za pomocą programu .NET Framework 4.6.1, są oparte na [Unicode Standard, wersja wersji 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Znak klasy, które dopasowuje znaki według kategorii, takich jak [\w](#WordCharacter) do dopasowuje znak słowa lub [\p{} ](#CategoryOrBlock) do dopasowania kategorii Unicode, zależą od <xref:System.Globalization.CharUnicodeInfo> klasy, aby podać informacje temat kategorii znaków.  Począwszy od programu .NET Framework 4.6.2 kategorii znaków są oparte na [Unicode Standard, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W programie .NET Framework 4, która za pomocą platformy .NET Framework 4.6.1, są oparte na [Unicode Standard, wersja wersji 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Grupa znaków pozytywnych:]  

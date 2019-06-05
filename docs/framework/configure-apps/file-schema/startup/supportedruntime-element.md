@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456211"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489297"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > element
 
@@ -34,7 +34,7 @@ Określa, które wspólnej wersja środowiska uruchomieniowego CLR i, opcjonalni
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|**version**|Atrybut opcjonalny.<br /><br /> Wartość ciągu określająca wersję środowiska uruchomieniowego języka wspólnego (CLR), którą obsługuje ta aplikacja. Aby uzyskać prawidłowe wartości `version` atrybutów, zobacz [wartości "wersja środowiska uruchomieniowego"](#version) sekcji. **Uwaga:**  Za pomocą programu .NET Framework 3.5 "*wersji środowiska uruchomieniowego*" wartość ma postać *głównych*. *drobne*. *Tworzenie*. Począwszy od [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], tylko wymagane numery wersji głównych i pomocniczych (to znaczy "v4.0" zamiast "v4.0.30319"). Zalecane jest użycie krótszego ciągu.|
+|**version**|Atrybut opcjonalny.<br /><br /> Wartość ciągu określająca wersję środowiska uruchomieniowego języka wspólnego (CLR), którą obsługuje ta aplikacja. Aby uzyskać prawidłowe wartości `version` atrybutów, zobacz [wartości "wersja środowiska uruchomieniowego"](#version) sekcji. **Uwaga:**  Za pomocą programu .NET Framework 3.5 "*wersji środowiska uruchomieniowego*" wartość ma postać *głównych*. *drobne*. *Tworzenie*. Począwszy od programu .NET Framework 4, tylko wymagane numery wersji głównych i pomocniczych (to znaczy "v4.0" zamiast "v4.0.30319"). Zalecane jest użycie krótszego ciągu.|
 |**sku**|Atrybut opcjonalny.<br /><br /> Wartość ciągu określająca jednostkę magazynową (SKU), który z kolei określa wersji .NET Framework, które obsługuje tę aplikację.<br /><br /> Począwszy od programu .NET Framework 4.0, użycie `sku` atrybutu jest zalecane.  Jeśli jest obecny, oznacza to, wersji systemu .NET Framework, aplikacji jest przeznaczony dla.<br /><br /> Aby uzyskać prawidłowe wartości atrybutu jednostki sku, zobacz [wartości "identyfikatorem jednostki sku"](#sku) sekcji.|
 
 ## <a name="remarks"></a>Uwagi

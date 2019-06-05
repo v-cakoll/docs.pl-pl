@@ -2,12 +2,12 @@
 title: 'Instrukcje: Znajdź pojedynczego elementu potomnego przy użyciu metody elementów potomnych (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: a13a4aef6a3d22d2b7c3adb8e37996de08978b6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1979814a2a1485938b584d7774b76a020c885f0c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702103"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486827"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Instrukcje: Znajdź pojedynczego elementu potomnego przy użyciu metody elementów potomnych (C#)
 Możesz użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> metodę osi, aby szybko napisać kod, aby znaleźć pojedynczy jednoznacznie o nazwie elementu. Ta technika jest szczególnie przydatne, gdy chcesz znaleźć określonego obiektu podrzędnego o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale często jest szybsze i prostsze do pisania kodu za pomocą <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
@@ -43,7 +43,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  
@@ -72,7 +72,3 @@ Console.WriteLine(grandChild3);
 ```  
 GC3 Value  
 ```  
-  
-## <a name="see-also"></a>Zobacz także
-
-- [Podstawowe zapytania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

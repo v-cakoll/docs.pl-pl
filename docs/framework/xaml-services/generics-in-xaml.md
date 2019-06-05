@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: ca0c1b466f5a89730c72f32321394ccfc6d9c7a2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6ca7986513d1a6cbe160ca1a0af6699c323aac7e
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457359"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690645"
 ---
 # <a name="generics-in-xaml"></a>Typy ogólne w XAML
 .NET Framework XAML Services zaimplementowanego w System.Xaml zapewnia obsługę za pomocą typów ogólnych CLR. Ta obsługa obejmuje określenie ograniczenia typów ogólnych jako argument typu i wymuszanie ograniczenia przez wywołanie odpowiedniej `Add` metodę w przypadku kolekcji ogólnej. W tym temacie opisano aspekty przy użyciu i odwoływanie się do typów ogólnych w XAML.  
@@ -40,7 +40,7 @@ ms.locfileid: "66457359"
   
  WPF i przeznaczonych dla platformy .NET Framework 4, można użyć XAML 2009 — funkcje wraz z `x:TypeArguments`, lecz tylko w przypadku luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009.  
   
- Niestandardowe przepływy pracy w programie Windows Workflow Foundation dla [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] nie obsługują ogólnego użycia XAML.  
+ Niestandardowe przepływy pracy w programie Windows Workflow Foundation programu .NET Framework 3.5 nie obsługują ogólnego użycia XAML.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: d0b35bec3bbc30f411a705220c468fa8961b83cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702428"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722538"
 ---
 # <a name="c-features-that-support-linq"></a>Funkcje C# obsługujące LINQ
 
@@ -49,7 +49,7 @@ Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../.
 Inicjatory obiektów i kolekcji umożliwiają inicjowanie obiektów bez jawnego wywołania konstruktora obiektu. Inicjatory są zwykle używane w wyrażeniach zapytań, gdy ich projektu źródła danych na nowy typ danych. Zakładając, że klasę o nazwie `Customer` z publicznych `Name` i `Phone` właściwości, inicjatora obiektów mogą być używane zgodnie z poniższym kodem:
 
 ```csharp
-Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
+var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
 Kontynuując nasze `Customer` klasy, założono, że jest źródło danych o nazwie `IncomingOrders`oraz że dla każdego zamówienia o dużej `OrderSize`, chcielibyśmy utworzyć nową `Customer` na podstawie tej kolejności. Zapytania LINQ mogą być wykonywane w tym źródle danych i użyj inicjowania obiektu, aby wypełnić kolekcję:

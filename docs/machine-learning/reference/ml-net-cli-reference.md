@@ -3,12 +3,12 @@ title: Polecenie train automatycznie za pomocą narzędzia interfejsu wiersza po
 description: Omówienie, przykłady i dokumentacja dotycząca poleceń train automatycznie za pomocą narzędzia interfejsu wiersza polecenia w strukturze ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557945"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722599"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Polecenie "auto-train" w interfejsie wiersza polecenia w strukturze ML.NET
 
@@ -228,7 +228,7 @@ Aby można było używać `--label-column-name` argument, musisz mieć nagłówk
 
 `--max-exploration-time | -x` (string)
 
-Domyślnie podczas eksploracji maksymalna wynosi 10 sekund.
+Domyślnie podczas eksploracji maksymalna to 30 minut.
 
 Ten argument Ustawia maksymalny czas (w sekundach) dla procesu zapoznać się z wielu instruktorów i konfiguracji. Jeśli podany czas jest zbyt krótki (np. 2 sekund) dla jednej iteracji, może zostać przekroczony skonfigurowany czas. W tym przypadku rzeczywistego czasu jest wymagany czas, aby utworzyć jedną konfigurację modelu w jednej iteracji.
 

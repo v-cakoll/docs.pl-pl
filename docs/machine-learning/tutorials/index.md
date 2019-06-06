@@ -3,12 +3,12 @@ title: Samouczki strukturze ML.NET
 description: Zapoznaj się z samouczkami strukturze ML.NET, aby dowiedzieć się, jak tworzyć niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 42f781f53c94d9852f2d75117683eb21dd1c5c6e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3f14f463dcdb74beb1605626216acd52dd3f6e9a
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634791"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722333"
 ---
 # <a name="mlnet-tutorials"></a>Samouczki strukturze ML.NET 
 
@@ -18,7 +18,7 @@ Następujące samouczki umożliwiają zrozumienie metod wykorzystania [strukturz
 - [Klasyfikacja problemu usługi GitHub](github-issue-classification.md): Pokazuje, jak zastosować **klasyfikacji wieloklasowej** zadań przy użyciu strukturze ML.NET.
 - [Cena predykcyjne](taxi-fare.md): Pokazuje, jak zastosować **regresji** zadań przy użyciu strukturze ML.NET.
 - [Klastrowanie Iris](iris-clustering.md): Pokazuje, jak zastosować **klastrowania** zadań przy użyciu strukturze ML.NET.
-- [Zalecenie](movie-recommmendation.md): generowanie filmu **zalecenia** na podstawie poprzednich klasyfikacji użytkownika
+- [Zalecenie](movie-recommendation.md): generowanie filmu **zalecenia** na podstawie poprzednich klasyfikacji użytkownika
 - [Klasyfikacja obrazów](image-classification.md): Pokazuje, jak ponowne szkolenie z istniejącego modelu Tensorflow do utworzenia przy użyciu strukturze ML.NET klasyfikatora obrazu niestandardowego.
 
 ## <a name="next-steps"></a>Następne kroki

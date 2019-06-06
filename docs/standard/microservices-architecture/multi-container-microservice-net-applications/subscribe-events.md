@@ -2,12 +2,12 @@
 title: Subskrybowanie zdarzeń
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Poznaj szczegóły publikowanie i subskrybowanie zdarzeń integracji.
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639704"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722670"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -322,7 +322,7 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Rozwidlone w ramach aplikacji eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)** \
+- **Rozwidlone w ramach aplikacji eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **Aktivita typu EventDriven komunikatów** \
@@ -378,12 +378,6 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
 
 - **Przewodnik niezawodność** (dokumentacja RabbitMQ) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **Przewodnik niezawodność** (dokumentacja RabbitMQ) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Poprzednie](rabbitmq-event-bus-development-test-environment.md)

@@ -4,12 +4,12 @@ description: Dowiedz się, jak wybrać algorytm strukturze ML.NET modelu uczenia
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 89c3c612d79f02d58a16070feadb645b081dd3e3
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557774"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722637"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Jak wybrać algorytm strukturze ML.NET
 
@@ -21,7 +21,7 @@ Algorytmy działają na **funkcji**. Funkcje są wartości liczbowe obliczane na
 
 Algorytm jest matematycznych, który jest wykonywany w celu wygenerowania **modelu**. Różnych algorytmów, tworzyć modele o różnej charakterystyce. 
 
-Za pomocą platformy ML.NET to ten sam algorytm można zastosować do różnych zadań. Na przykład stochastycznego spadku, skoordynowany Ascent może służyć do klasyfikacji binarnej, kontra klasyfikacji i regresji. Różnica polega na w interpretacji danych wyjściowych algorytmu do dopasowania zadania. 
+Za pomocą platformy ML.NET to ten sam algorytm można zastosować do różnych zadań. Na przykład stochastycznego podwójną Ascent skoordynowanego może służyć do klasyfikacji binarnej, kontra klasyfikacji i regresji. Różnica polega na w interpretacji danych wyjściowych algorytmu do dopasowania zadania. 
 
 Dla każdej kombinacji algorytmów lub zadania strukturze ML.NET udostępnia składnik, który wykonuje uczenie algorytmu i wykonaniu interpretacji. Te składniki są nazywane instruktorów. Na przykład <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> używa **StochasticDualCoordinatedAscent** algorytm dotyczą **regresji** zadania.
 
@@ -42,7 +42,7 @@ Liniowy algorytmy wykonania wielu przebiegów w ciągu danych szkoleniowych. Je�
 |Algorytm|Właściwości|Instruktorzy|
 |---------|----------|--------|
 |uśrednionej perceptron|Najlepsze dla klasyfikacji tekstu|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|Ascent skoordynowanego stochastycznego spadku|Dostrajanie nie jest wymagana dla wydajności dobre domyślne|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|Stochastycznego podwójną ascent skoordynowanego|Dostrajanie nie jest wymagana dla wydajności dobre domyślne|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|Opcja używana podczas wiele funkcji jest duży. Tworzy regresji logistycznej szkolenia statystyki, ale nie skaluje oraz AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |Symboliczne stochastycznego spadku gradientu|To najszybszy i najbardziej dokładna liniowej klasyfikacji binarnej instruktora. Skaluje się również przy użyciu liczba procesorów|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

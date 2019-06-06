@@ -2,12 +2,12 @@
 title: Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 description: Dowiedz się, różnice i wykorzystuje wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą.
 ms.date: 01/07/2019
-ms.openlocfilehash: 433ad8bc8204a9a57b8b494040a9de6c533bcca8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641406"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690366"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 
@@ -146,7 +146,7 @@ W tym przewodniku i odwołanie do przykładowej aplikacji (w ramach aplikacji eS
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) jest uproszczona brama interfejsu API zalecane w przypadku prostszych metod. Ocelot jest Otwórz źródło .NET Core bramy interfejsu API opartych na systemie szczególnie wprowadzone dla architektury mikrousług, wymagających ujednoliconego punktów wejścia w ich systemie. Jest lekkie, szybkie i skalowalne i zapewnia routingu i uwierzytelniania między wiele innych funkcji.
 
-Głównym celem wybierz Ocelot dla [ramach aplikacji eShopOnContainers odwołania aplikacji](https://github.com/dotnet-architecture/eShopOnContainers) jest, ponieważ Ocelot platformy .NET Core uproszczone brama interfejsu API, którą można wdrożyć na tym samym środowisku wdrożenia aplikacji, którym jest wdrażany mikrousługi/kontenerów, takich jak Host platformy Docker, Kubernetes, usługi Service Fabric itp. I ponieważ jest on oparty na platformie .NET Core, Międzyplatformowe, dzięki czemu można wdrażać w systemie Linux lub Windows.
+Głównym celem wybierz Ocelot dla [ramach aplikacji eShopOnContainers odwołania aplikacji](https://github.com/dotnet-architecture/eShopOnContainers) jest, ponieważ Ocelot platformy .NET Core uproszczone brama interfejsu API, którą można wdrożyć na tym samym środowisku wdrożenia aplikacji, którym jest wdrażany mikrousługi/kontenerów, takich jak Host platformy Docker, Kubernetes itp. I ponieważ jest on oparty na platformie .NET Core, Międzyplatformowe, dzięki czemu można wdrażać w systemie Linux lub Windows.
 
 Poprzednich diagramach, przedstawiający niestandardowe bramy interfejsu API działających w kontenerach są dokładnie, jak można również uruchomić Ocelot w kontenerze i aplikacji opartych na mikrousługach.
 
@@ -185,7 +185,7 @@ Po początkowej architektura i wzorce wyjaśnienie sekcje, w kolejnych sekcjach 
 - **Udi Dahan. Kompozycja korzystający z usługi** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemensa Vastersa. Obsługa komunikatów i Mikrousług w 2016 GOTO (wideo)** \
+- **Clemensa Vastersa. Obsługa komunikatów i Mikrousług w 2016 GOTO (wideo)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Brama interfejsu API w skrócie** (seria samouczków bramy interfejsu API platformy ASP.net Core) \

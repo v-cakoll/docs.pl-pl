@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631830"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690166"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (rozszerzenie do debugowania SOS)
 
@@ -68,11 +68,11 @@ Rozszerzenie debugowania SOS (SOS.dll) ułatwia debugowanie programów zarządza
 |**HeapStat** [ **- inclUnrooted** &#124; **-iu**]|Wyświetla rozmiary generacji dla każdej sterty i całkowitą ilość wolnego miejsca w każdej generacji na każdym stosie. Jeśli**inclUnrooted** opcja zostanie określona, raport zawiera informacje o obiektach zarządzanych ze stercie wyrzucania elementów bezużytecznych, który nie jest już zakorzeniony.|
 |**HistClear**|Zwalnia wszystkie zasoby używane przez rodzinę `Hist` poleceń.<br /><br /> Ogólnie rzecz biorąc, nie trzeba jawnie wywoływać `HistClear`, ponieważ każdy `HistInit` czyści poprzednie zasoby.|
 |**HistInit**|Inicjuje struktury SOS z dziennika obciążenia zapisanego w obiekcie debugowanym.|
-|**HistObj** *<obj_address>*|Sprawdza wszystkie rekordy przeniesienia dziennika obciążenia i wyświetla łańcuch przeniesień modułu odśmiecania pamięci, które mogły doprowadzić do adresu przekazanego jako argument.|
-|**HistObjFind**  *<obj_address>*|Wyświetla wszystkie wpisy dziennika, które odwołują się do obiektu pod podanym adresem.|
+|**HistObj** *\<obj_address>*|Sprawdza wszystkie rekordy przeniesienia dziennika obciążenia i wyświetla łańcuch przeniesień modułu odśmiecania pamięci, które mogły doprowadzić do adresu przekazanego jako argument.|
+|**HistObjFind**  *\<obj_address>*|Wyświetla wszystkie wpisy dziennika, które odwołują się do obiektu pod podanym adresem.|
 |**HistRoot** *\<root>*|Wyświetla informacje powiązane zarówno z promocjami, jak i przeniesieniami określonego korzenia.<br /><br /> Wartość korzenia może być użyta do śledzenia ruchu obiektu za pomocą modułu odśmiecania pamięci.|
 |**IP2MD** \< *kod adres*>|Wyświetla `MethodDesc` struktury pod podanym adresem w kodzie, który został skompilowany JIT.|
-|`ListNearObj` (`lno`) *< obj_address >*|Wyświetla obiekty poprzedzające i następujące po określonym adresie. Polecenie wyszukuje adres w stercie modułu odśmiecania pamięci podobny do prawidłowego początku obiektu zarządzanego (na podstawie prawidłowej metody tabel) i obiektu następującego po adresie argumentu.|
+|`ListNearObj` (`lno`) *\<obj_address>*|Wyświetla obiekty poprzedzające i następujące po określonym adresie. Polecenie wyszukuje adres w stercie modułu odśmiecania pamięci podobny do prawidłowego początku obiektu zarządzanego (na podstawie prawidłowej metody tabel) i obiektu następującego po adresie argumentu.|
 |**MinidumpMode** [**0**] [**1**]|Uniemożliwia uruchamianie poleceń niebezpiecznych podczas używania minizrzutu.<br /><br /> Przekaż **0** Aby wyłączyć tę funkcję lub **1** Aby włączyć tę funkcję. Domyślnie **MinidumpMode** wartość jest równa **0**.<br /><br /> Minizrzuty utworzone za pomocą **.dump /m** polecenia lub **.dump** polecenia mają ograniczone dane specyficzne dla środowiska CLR i pozwalają na poprawne uruchamianie tylko podzbioru poleceń SOS. Niektóre polecenia mogą zakończyć się nieoczekiwanym błędem, ponieważ wymagane obszary pamięci nie są mapowane lub są tylko częściowo mapowane. Ta opcja chroni przed uruchamianiem poleceń niebezpiecznych w stosunku do minizrzutów.|
 |**Name2EE** \< *Nazwa modułu*> \<*nazwy typu lub metody*><br /><br /> —lub—<br /><br /> **Name2EE** \< *Nazwa modułu*> **!** \< *nazwy typu lub metody*>|Wyświetla `MethodTable` struktury i `EEClass` struktury dla określonego typu lub metody w określonym module.<br /><br /> Określony moduł musi zostać załadowany w procesie.<br /><br /> Aby uzyskać nazwę odpowiedniego typu, należy przeglądać moduł przy użyciu [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Można również przekazać `*` jako moduł parametru name, aby przeszukać wszystkie załadowane moduły zarządzane. *Nazwa modułu* parametru może być również nazwą debugera dla modułu, taką jak `mscorlib` lub `image00400000`.<br /><br /> To polecenie obsługuję składnię debuger Windows <`module`>`!`<`type`>. Typ musi być w pełni kwalifikowany.|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|Wyświetla rozmiar określonego obiektu. Jeśli nie określisz żadnych parametrów, **ObjSize** polecenie wyświetla rozmiar wszystkich obiektów znalezionych w zarządzanych wątkach, wyświetla wszystkie uchwyty modułu odśmiecania pamięci w procesie i sumuje rozmiar wszystkich obiektów wskazywany przez te uchwyty. **ObjSize** polecenie zawiera rozmiar wszystkich obiektów podrzędnych wraz z obiektem nadrzędnym.<br /><br /> **— Łączny** opcji można użyć w połączeniu z **-stat** argumentu, aby uzyskać szczegółowy widok typów, które nadal są zakorzenione. Za pomocą **! dumpheap-stat** i **! objsize-aggregate - stat**, można określić, które obiekty nie są już zakorzenione i diagnozować różne problemy z pamięcią.|

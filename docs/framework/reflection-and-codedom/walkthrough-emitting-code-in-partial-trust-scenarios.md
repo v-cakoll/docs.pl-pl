@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8842c189abc0f82e81553a1ef33c71b3fa0bef13
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489693"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690311"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych
 Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają specjalnych uprawnień w kodzie częściowo zaufanym. Ponadto emisji odbicia posiada funkcję, anonimowo obsługiwane metody dynamiczne, który jest przeznaczony do użycia z częściowej relacji zaufania, jak również przezroczyste dla zabezpieczeń zestawów.  
   
 > [!NOTE]
->  Przed programem .NET Framework 3.5 wymagany kod emisji <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flagi. To uprawnienie jest zawarte domyślnie w `FullTrust` i `Intranet` zestawy nazwanych uprawnień, ale nie w `Internet` zestaw uprawnień. W związku z tym, biblioteka może być używana w częściowej relacji zaufania tylko wtedy, gdy miała <xref:System.Security.SecurityCriticalAttribute> atrybut i również wykonała <xref:System.Security.PermissionSet.Assert%2A> metodę <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Takie biblioteki wymagają weryfikacji zabezpieczeń zachowania ostrożność, ponieważ kodowanie błędów może spowodować luki w zabezpieczeniach. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Pozwala kod był emitowany w scenariuszach częściowej relacji zaufania, bez wydawania żadnych wymogów bezpieczeństwa, ponieważ generowanie kodu nie jest z natury uprzywilejowaną operacją. Oznacza to, że wygenerowany kod nie ma więcej uprawnień niż zestaw, który emituje go. Dzięki temu biblioteki, które emitują kod zabezpieczenia przejrzysty i usuwa potrzebę zapewnienia <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, dzięki czemu bezpieczna biblioteka nie wymaga takiego przeglądu względem zabezpieczeń.  
+>  Przed programem .NET Framework 3.5 wymagany kod emisji <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flagi. To uprawnienie jest zawarte domyślnie w `FullTrust` i `Intranet` zestawy nazwanych uprawnień, ale nie w `Internet` zestaw uprawnień. W związku z tym, biblioteka może być używana w częściowej relacji zaufania tylko wtedy, gdy miała <xref:System.Security.SecurityCriticalAttribute> atrybut i również wykonała <xref:System.Security.PermissionSet.Assert%2A> metodę <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Takie biblioteki wymagają weryfikacji zabezpieczeń zachowania ostrożność, ponieważ kodowanie błędów może spowodować luki w zabezpieczeniach. .NET Framework 3.5 umożliwia kod był emitowany w scenariuszach częściowej relacji zaufania bez wydawania żadnych wymogów bezpieczeństwa, ponieważ generowanie kodu nie jest z natury uprzywilejowaną operacją. Oznacza to, że wygenerowany kod nie ma więcej uprawnień niż zestaw, który emituje go. Dzięki temu biblioteki, które emitują kod zabezpieczenia przejrzysty i usuwa potrzebę zapewnienia <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, dzięki czemu bezpieczna biblioteka nie wymaga takiego przeglądu względem zabezpieczeń.  
   
  W instruktażu przedstawiono następujące zagadnienia:  
   

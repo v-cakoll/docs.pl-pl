@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195570"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690658"
 ---
 # <a name="best-practices-for-exceptions"></a>Najlepsze praktyki dotyczące wyjątków
 
@@ -56,7 +56,7 @@ Klasa może zapewnić metody lub właściwości, które pozwalają uniknąć naw
 
 Innym sposobem na uniknięcie wyjątków jest do zwrócenia wartości null (lub domyślny) dla ekstremalnie częstych przypadków błędów zamiast zgłaszać wyjątek. Ekstremalnie częste przypadki błędów należy traktować jako normalny przepływ sterowania. Przez zwrócenie wartości null (lub domyślny) w tych przypadkach, można zminimalizować wpływ na wydajność aplikacji.
 
-Dla typów wartości czy ma być używany Nullable<T> lub wartości domyślnych, ponieważ wskaźnik błędów jest coś, co należy wziąć pod uwagę dla określonej aplikacji. Za pomocą `Nullable<Guid>`, `default` staje się `null` zamiast `Guid.Empty`. Dodając kilka razy `Nullable<T>` może spowodować przejrzyste gdy wartość jest obecne lub nieobecne. Innym razem, dodając `Nullable<T>` można tworzyć dodatkowe przypadki, upewnij się, że nie są niezbędne w celu tylko służą do tworzenia potencjalnymi przyczynami błędów. 
+Dla typów wartości czy ma być używany `Nullable<T>` lub wartości domyślnych, ponieważ wskaźnik błędów jest coś, co należy wziąć pod uwagę dla określonej aplikacji. Za pomocą `Nullable<Guid>`, `default` staje się `null` zamiast `Guid.Empty`. Dodając kilka razy `Nullable<T>` może spowodować przejrzyste gdy wartość jest obecne lub nieobecne. Innym razem, dodając `Nullable<T>` można tworzyć dodatkowe przypadki, upewnij się, że nie są niezbędne w celu tylko służą do tworzenia potencjalnymi przyczynami błędów. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Zgłaszają wyjątki, zamiast zwracać kod błędu:
 

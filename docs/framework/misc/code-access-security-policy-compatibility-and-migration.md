@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487974"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690284"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Zgodność i migracja zasad zabezpieczenia dostępu kodu
 
@@ -26,7 +26,7 @@ Ostrzeżenia i błędy można uniknąć przez:
 
    \- lub —
 
-- Za pomocą [element konfiguracji < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) do dołączenia do starsze zachowanie zasady CAS.
+- Za pomocą [ \<NetFx40_LegacySecurityPolicy > element konfiguracji](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) do dołączenia do starsze zachowanie zasady CAS.
 
 Ten temat zawiera następujące sekcje:
 
@@ -142,7 +142,7 @@ Jeśli chcesz piaskownicy zestawu, należy użyć <xref:System.AppDomain.CreateD
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Zgodność: Za pomocą opcji starsza wersja zasady CAS
 
-[Element konfiguracji < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) pozwala określić, że proces lub biblioteki używa starsza zasada CAS. Po włączeniu tego elementu, zasad i dowody przeciążenia będzie działać tak samo, jak w poprzednich wersjach programu framework.
+[ \<NetFx40_LegacySecurityPolicy > element konfiguracji](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) pozwala określić, że proces lub biblioteki używa starsza zasada CAS. Po włączeniu tego elementu, zasad i dowody przeciążenia będzie działać tak samo, jak w poprzednich wersjach programu framework.
 
 > [!NOTE]
 > Urzędów certyfikacji zasad zachowanie jest określone na podstawie wersji środowiska uruchomieniowego, więc modyfikowanie zasad urzędów certyfikacji dla jednej wersji środowiska uruchomieniowego nie wpływa na zasady CAS w innej wersji.

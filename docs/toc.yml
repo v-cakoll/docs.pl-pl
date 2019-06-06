@@ -185,7 +185,6 @@
     - name: Wymagania wstępne systemu Linux
       href: core/linux-prerequisites.md
     - name: Co nowego w programie .NET Core
-      href: core/whats-new/index.md
       items:
         - name: Co nowego w programie .NET Core 3.0
           href: core/whats-new/dotnet-core-3-0.md

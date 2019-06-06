@@ -2,12 +2,12 @@
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Odkryj opcje do organizowania mikrousług i wielokontenerowych aplikacji pod kątem wysokiej skalowalności i dostępności oraz możliwości usługi Azure Dev miejsca do magazynowania podczas tworzenia cyklem życia aplikacji platformy Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: a0f7efa4b21aedfb574659df283adc65741cefdb
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196039"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690499"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -27,7 +27,7 @@ Czegoś Zarządzanie poszczególne kontenery lub bardzo proste aplikacje złożo
 
 Z architektury i projektowania punktu widzenia Jeśli tworzysz duże przedsiębiorstwo składa się z aplikacji opartych na mikrousługach, warto zapoznać się z następujących platform i produktów, które obsługuje zaawansowane scenariusze:
 
-**Klastry i koordynatorów.** Kiedy należy skalować aplikacje na wielu hostach Docker, jak w przypadku dużych aplikacji opartych na mikrousługach, koniecznie będzie można zarządzać tymi hostami jako pojedynczy klaster, zapewniając abstrakcyjność złożoność podstawowej platformy. To, co zapewnia klastry kontenerów i koordynatorów. Przykładami koordynatorów są usługi Azure Service Fabric i Kubernetes. Rozwiązanie Kubernetes jest dostępna na platformie Azure za pomocą usługi Azure Kubernetes Service.
+**Klastry i koordynatorów.** Kiedy należy skalować aplikacje na wielu hostach Docker, jak w przypadku dużych aplikacji opartych na mikrousługach, koniecznie będzie można zarządzać tymi hostami jako pojedynczy klaster, zapewniając abstrakcyjność złożoność podstawowej platformy. To, co zapewnia klastry kontenerów i koordynatorów. Kubernetes jest przykładem koordynatora, a jest dostępna w systemie Azure za pomocą usługi Azure Kubernetes Service.
 
 **Transfery danych.** *Planowanie* oznacza, że mają możliwość, aby administrator mógł Uruchom kontenery w klastrze, dzięki czemu zapewniają także interfejs użytkownika. Harmonogram klastra ma kilka obowiązki: wydajnie korzystać z zasobów klastra, aby ustawić ograniczenia podana przez użytkownika, do wydajne Równoważenie obciążenia kontenerów w węzłach lub hosty i być odporne na błędy przy jednoczesnym zapewnieniu wysokiego dostępność.
 
@@ -51,31 +51,9 @@ Pojęcia związane z klastra i harmonogramu są ściśle powiązane, dlatego pro
 
 > [Usługa Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) jest zarządzanej usługi organizowania kontenerów Kubernetes na platformie Azure, która upraszcza zarządzanie klastrem Kubernetes, wdrażania i operacji.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-![Logo usługi Azure Service Fabric](./media/image27.png)
-
-> [Usługa Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) to platforma mikrousług firmy Microsoft do tworzenia aplikacji. Jest [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) z usług i służąca do tworzenia klastrów maszyn. Usługi można wdrożyć usługi Service Fabric, jako kontenery lub procesy zwykły. Jest to możliwe nawet różne usługi w procesach usługi w kontenerach w tej samej aplikacji i klastra.
->
-> *Usługa Service Fabric* klastrów można wdrożyć na platformie Azure, lokalnie lub w dowolnej chmurze. Jednak wdrożenie na platformie Azure zostało uproszczone dzięki podejściu zarządzanych.
->
-> *Usługa Service Fabric* udostępnia dodatkowe i opcjonalnie przetestowanego rozwiązania ze szczegółami [modeli programowania usługi Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) takich jak [usług stanowych](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) i [elementów Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) .
->
-> *Usługa Service Fabric* dojrzała trwa Windows (lat ewolucji w Windows), mniej dojrzałe w systemie Linux.
->
-> Kontenerów systemów Linux i Windows są obsługiwane w usłudze Service Fabric od 2017 r.
-
-### <a name="azure-service-fabric-mesh"></a>Usługa Azure Service Fabric siatki
-
-![Logo Azure Service Fabric siatki](./media/image35.png)
-
-> [*Usługa Azure Service Fabric siatki* ](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) oferuje samą niezawodność, wydajność o kluczowym znaczeniu i skalowania niż usługi Service Fabric, ale oferty platformy w pełni zarządzany i bez użycia serwera. Nie trzeba zarządzać klastrem maszyn wirtualnych, magazynu i konfiguracji sieci. Możesz skupić się na rozwoju aplikacji.
->
-> *Usługa Service Fabric siatki* obsługuje kontenery systemów Windows i Linux, dzięki czemu możesz tworzyć aplikacje za pomocą dowolnego języka programowania i wybranej platformy.
-
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Przy użyciu koordynatorów opartych na kontenerach, w systemie Microsoft Azure
 
-Kilku dostawców chmury oferują obsługę kontenerów platformy Docker oraz klastrów platformy Docker oraz obsługę aranżacji, w tym Microsoft Azure, Amazon EC2 Container Service i Google kontenera aparatu. Microsoft Azure oferuje Docker klastra i orchestrator na pomoc techniczną za pomocą usługi Azure Kubernetes Service (AKS) i Azure Service Fabric i usługi Azure Service Fabric siatki.
+Kilku dostawców chmury oferują obsługę kontenerów platformy Docker oraz klastrów platformy Docker oraz obsługę aranżacji, w tym Microsoft Azure, Amazon EC2 Container Service i Google kontenera aparatu. Microsoft Azure oferuje platformy Docker, obsługę klastra i programu orchestrator za pomocą usługi Azure Kubernetes Service (AKS).
 
 ## <a name="using-azure-kubernetes-service"></a>Za pomocą usługi Azure Kubernetes Service
 
@@ -156,4 +134,4 @@ Aby uzyskać więcej informacji Sprawdź artykuł [programowanie zespołowe za p
 
 >[!div class="step-by-step"]
 >[Poprzednie](resilient-high-availability-microservices.md)
->[dalej](using-azure-service-fabric.md)
+>[dalej](docker-application-development-process.md)

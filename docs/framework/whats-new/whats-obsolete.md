@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7db411e9ef38adb42c8df2059d166d1fa4184f95
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378376"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690475"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Co to jest przestarzała w bibliotece klas programu .NET Framework
 
@@ -43,7 +43,7 @@ Podczas uaktualniania i ponownie skompilować istniejący kod, za pomocą przest
 
 - Przejrzyj dokumentację dla tego obszaru technologii określić, jak reagować na amortyzacja.
 
-Może nie chcesz ponownie skompilować istniejący kod w nowszej wersji programu .NET Framework. Zamiast tego można określić wersji programu .NET Framework, względem którego istniejącą skompilowany kod działa. Na przykład załóżmy, że masz aplikację o nazwie app1.exe, który został skompilowany [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], jednak aplikacji w celu uruchomienia programu .NET Framework 4.5. Wymagane jest wykonanie następujących kroków:
+Może nie chcesz ponownie skompilować istniejący kod w nowszej wersji programu .NET Framework. Zamiast tego można określić wersji programu .NET Framework, względem którego istniejącą skompilowany kod działa. Na przykład załóżmy, że masz aplikację o nazwie app1.exe skompilowanego dla platformy .NET Framework 3.5, ale chcesz, aby aplikacji w celu uruchomienia programu .NET Framework 4.5. Wymagane jest wykonanie następujących kroków:
 
 1. Utwórz plik konfiguracji dla użytkownika głównego pliku wykonywalnego i nadaj mu nazwę *appName*. exe.config, gdzie *appName* jest nazwą pliku wykonywalnego aplikacji. Dla aplikacji o nazwie app1.exe w naszym przykładzie należy utworzyć plik konfiguracji o nazwie app1.exe.config.
 

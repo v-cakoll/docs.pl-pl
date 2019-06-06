@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777133"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689330"
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
 Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegany wartość rzeczywista dla aplikacji Windows Presentation Foundation (WPF).  
@@ -81,7 +81,7 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
   
  Należy rozważyć zainstalowanie certyfikatu urzędu certyfikacji na komputerze klienckim lub Unikaj używania Authenticode, gdy jest to możliwe. Jeśli wiesz, aplikacja nie wymaga dowód wydawcy, nie trzeba naliczana jest opłata za weryfikacji podpisu.  
   
- Począwszy od [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], ma opcji konfiguracji, która umożliwia weryfikacji Authenticode do obejścia. Aby to zrobić, Dodaj następujące ustawienie do pliku app.exe.config:  
+ Począwszy od programu .NET Framework 3.5, ma opcji konfiguracji, która umożliwia weryfikacji Authenticode do obejścia. Aby to zrobić, Dodaj następujące ustawienie do pliku app.exe.config:  
   
 ```xml  
 <configuration>  

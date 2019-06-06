@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456444"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689907"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > Element
 Określa, że środowisko uruchomieniowe ma używać starszych kolejności sortowania podczas porównywania ciągów.  
@@ -44,7 +44,7 @@ Określa, że środowisko uruchomieniowe ma używać starszych kolejności sorto
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|4096|Identyfikator ustawień regionalnych reprezentujący alternatywną kolejność sortowania. W tym przypadku 4096 reprezentuje kolejność sortowania [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] i wcześniejszych wersji.|  
+|4096|Identyfikator ustawień regionalnych reprezentujący alternatywną kolejność sortowania. W tym przypadku 4096 reprezentuje kolejność sortowania programu .NET Framework 3.5 i wcześniejszymi wersjami.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -57,7 +57,7 @@ Określa, że środowisko uruchomieniowe ma używać starszych kolejności sorto
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ponieważ porównania ciągów, sortowanie i operacje dotyczące wielkości znaków wykonywane przez <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> klasy w .NET Framework 4 są zgodne ze standardem Unicode 5.1. wyniki metod porównujących takich jak <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> i <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> może różnić się od poprzednie wersje programu .NET Framework. Jeśli aplikacja jest zależna od starszego zachowania, można przywrócić porównywania ciągów i reguł sortowania używanych w [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] i wcześniejszych wersjach, umieszczając `<CompatSortNLSVersion>` elementu w pliku konfiguracyjnym aplikacji.  
+ Ponieważ porównania ciągów, sortowanie i operacje dotyczące wielkości znaków wykonywane przez <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> klasy w .NET Framework 4 są zgodne ze standardem Unicode 5.1. wyniki metod porównujących takich jak <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> i <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> może różnić się od poprzednie wersje programu .NET Framework. Jeśli aplikacja jest zależna od starszego zachowania, można przywrócić porównywania ciągów i sortowania reguł używanych w .NET Framework 3.5 i starszych wersjach, umieszczając `<CompatSortNLSVersion>` elementu w pliku konfiguracyjnym aplikacji.  
   
 > [!IMPORTANT]
 >  Przywrócenie starszych reguł porównywania ciągów i sortowania powoduje też, że w systemie lokalnym musi być dostępna dołączana dynamicznie biblioteka sort00001000.dll.  
@@ -76,13 +76,13 @@ Określa, że środowisko uruchomieniowe ma używać starszych kolejności sorto
 sta follows a in the sort order.  
 ```  
   
- Jest to zupełnie inne niż dane wyjściowe, która jest wyświetlana po uruchomieniu przykładu w [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ To różni się całkowicie z danych wyjściowych, który jest wyświetlany po uruchomieniu przykładu w .NET Framework 3.5.  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- Jeśli jednak dodasz następujący plik konfiguracji do omawianego w przykładzie katalogu, a następnie uruchomisz przykład na .NET Framework 4, dane wyjściowe jest taka sama jak wytworzonego przez w przykładzie, gdy jest uruchamiany na [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Jeśli jednak dodasz następujący plik konfiguracji do omawianego w przykładzie katalogu, a następnie uruchomisz przykład na .NET Framework 4, dane wyjściowe jest taka sama jak wytworzonego przez przykład, gdy jest on uruchamiany w .NET Framework 3.5.  
   
 ```xml  
 <?xml version ="1.0"?>  

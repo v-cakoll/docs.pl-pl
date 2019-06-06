@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dab852cb72ee98d7e3e4a871f492a5d69b4ec580
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053266"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690484"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu platformy Azure
 
@@ -48,18 +48,11 @@ Usługa App Service Web Apps oferuje w pełni zarządzana platforma, zoptymalizo
 
 Usługa Azure App Service jest najlepszym wyborem dla większości aplikacji sieci web. Wdrażanie i zarządzanie są zintegrowane z platformą, witryny można szybko skalować w celu obsługi obciążeń z dużym ruchem i wbudowanego obciążenia równoważenia i usługa traffic manager zapewniają wysoką dostępność. Można przenieść istniejące witryny w usłudze Azure App Service za pomocą narzędzia do migracji online, korzystanie z aplikacji typu open source z galerii aplikacji sieci Web lub Utwórz nową witrynę przy użyciu framework i wybranych przez siebie narzędzi. Funkcja zadań Webjob ułatwia dodawanie zadania w tle przetwarzania do aplikacji sieci web usługi App Service.
 
-### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
-
-Usługa Azure Kubernetes Service (AKS) zarządza hostowanym środowiskiem Kubernetes, pozwalając szybko i łatwo wdrażać konteneryzowane aplikacje i Zarządzaj bez doświadczenia z organizowaniem kontenerów. Eliminuje to również obciążenia i konserwacją dzięki inicjowania obsługi administracyjnej, aktualizowaniu i skalowaniu zasobów na żądanie bez przełączania aplikacji w trybie offline.
-
-Usługa AKS zmniejsza złożoność i nakłady operacyjne związane z zarządzaniem klastrem Kubernetes, przenosząc znaczną część tej odpowiedzialności na platformę Azure. Jako hostowana usługa Kubernetes, platforma Azure obsługuje krytyczne zadania, takie jak monitorowanie kondycji i konserwacja. Ponadto płacisz tylko za węzły agenta w ramach Twoich klastrów, nie za wzorce. Jako zarządzana usługa Kubernetes AKS zapewnia:
-
-- Automatyczne uaktualnienia wersji platformy Kubernetes i stosowanie poprawek.
-- Łatwe skalowanie klastra.
-- Samonaprawialną hostowaną warstwę kontroli (wzorce).
-- Oszczędności — płacisz tylko za uruchomione węzły puli agentów.
-
 Platforma Azure obsługuje zarządzanie węzłami w klastrze AKS nie trzeba ręcznie wykonywać wielu zadań, takich jak Uaktualnianie klastra. Ponieważ platforma Azure wykonuje te krytyczne zadania konserwacji za Ciebie, AKS nie zapewnia bezpośredni dostęp (takich jak przy użyciu protokołu SSH) do klastra.
+
+#### <a name="web-app-for-containers"></a>Web App for Containers
+
+Web App for Containers w usłudze Azure App Service umożliwia można użyć własnych obrazów kontenerów w formacie Docker i łatwe wdrażanie i uruchamianie ich w dużej skali przy użyciu platformy Azure. Usługa Web App for Containers obsługuje kontenery z systemem Linux i Windows które można skalować do obsługuje implementacji na dużą skalę.
 
 ### <a name="azure-virtual-machines"></a>Usługa Azure Virtual Machines
 

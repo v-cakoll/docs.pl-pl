@@ -2,12 +2,12 @@
 title: Umieszczanie aplikacji monolitycznych w kontenerze
 description: Umieszczania aplikacji monolitycznych w kontenerze, ale nie od razu korzystać z architektury mikrousług, ma wdrożenia ważne korzyści, które mogą być natychmiast dostarczane.
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640817"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690545"
 ---
 # <a name="containerizing-monolithic-applications"></a>Umieszczanie aplikacji monolitycznych w kontenerze
 
@@ -63,9 +63,9 @@ Czy chcesz pobrać weryfikacji kontenera wdrażane na platformie Azure lub gdy a
 
 **Rysunek 4-4**. Publikowanie aplikacji pojedynczego kontenera w usłudze Azure App Service z programu Visual Studio
 
-Bez platformy Docker Jeśli to konieczne, inne możliwości, struktury lub zależności, które nie są obsługiwane w usłudze Azure App Service, trzeba było poczekaj, aż zespół platformy Azure, zaktualizować tych zależności w usłudze App Service. Czy przełączyć się do innych usług, takich jak Azure Service Fabric, Azure Cloud Services lub nawet maszyn wirtualnych, gdzie trzeba było dalsze kontroli i może zainstalować wymaganego składnika lub framework dla aplikacji.
+Bez platformy Docker Jeśli to konieczne, inne możliwości, struktury lub zależności, które nie są obsługiwane w usłudze Azure App Service, trzeba było poczekaj, aż zespół platformy Azure, zaktualizować tych zależności w usłudze App Service. Czy przełączyć się do innych usług, takich jak Azure Cloud Services lub maszyn wirtualnych, gdzie trzeba było dalsze kontroli i może zainstalować wymaganego składnika lub framework dla aplikacji.
 
-Obsługa kontenerów w programie Visual Studio 2017 zapewnia możliwość zawierać dowolne w danym środowisku aplikacji, jak pokazano na rysunku 4-4. Ponieważ używasz go w kontenerze, jeśli Dodawanie zależności do aplikacji, może zawierać zależności w pliku Dockerfile lub rozwiązania Docker obrazie.
+Obsługa kontenerów w programie Visual Studio 2017 i nowszych wersjach daje możliwość zawierać dowolne w danym środowisku aplikacji, jak pokazano na rysunku 4-4. Ponieważ używasz go w kontenerze, jeśli Dodawanie zależności do aplikacji, może zawierać zależności w pliku Dockerfile lub rozwiązania Docker obrazie.
 
 Również przedstawione w rysunek 4-4 przepływ publikowania wypycha obraz do rejestru kontenerów. Może to być usługa Azure Container Registry (rejestr najbliżej Twoich wdrożeń na platformie Azure i chronione przez usługę Azure Active Directory, grupy i konta) oraz wszelkich innych rejestru platformy Docker, takich jak usługi Docker Hub lub rejestru w środowisku lokalnym.
 

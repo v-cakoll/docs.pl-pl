@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592627"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690436"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Instrukcje: Wykrywanie, czy wtyczka .NET Framework 3.5 jest zainstalowana
-Zanim administratorzy mogą wdrażać aplikacje Windows Presentation Foundation (WPF) w systemie, który jest przeznaczony dla [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], ich musi najpierw potwierdzić, że [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] środowiska uruchomieniowego jest obecny. Ten temat zawiera skrypt napisany w języku HTML/JavaScript, Administratorzy mogą używać do określenia czy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] znajduje się w systemie.  
+Przed Administratorzy mogą wdrażać aplikacje Windows Presentation Foundation (WPF) w systemie, który jest przeznaczony dla .NET Framework 3.5, ich musi najpierw potwierdzić, że środowiska uruchomieniowego .NET Framework 3.5 jest obecny. Ten temat zawiera skrypt napisany w języku HTML/JavaScript, Administratorzy mogą używać do określenia, czy program .NET Framework 3.5 jest obecny w systemie.  
   
 > [!NOTE]
 >  Aby uzyskać szczegółowe informacje na temat instalowania, wdrażanie i wykrywanie programu .NET Framework, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../install/guide-for-developers.md).  
   
 ## <a name="example"></a>Przykład  
- Gdy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] jest zainstalowany, MSI dodaje ".NET CLR" oraz numer wersji do ciąg agenta użytkownika. Poniższy przykład pokazuje skrypt osadzone w prostą stronę HTML. Skrypt wyszukuje ciąg agenta użytkownika, aby określić, czy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] jest zainstalowany i wyświetla komunikat o stanie na wyniki wyszukiwania.  
+ Po zainstalowaniu programu .NET Framework 3.5 MSI dodaje ".NET CLR" oraz numer wersji do ciąg agenta użytkownika. Poniższy przykład pokazuje skrypt osadzone w prostą stronę HTML. Skrypt wyszukuje ciąg agenta użytkownika, aby określić, czy program .NET Framework 3.5 jest zainstalowany i wyświetla komunikat o stanie na wyniki wyszukiwania.  
   
 > [!NOTE]
 >  Ten skrypt jest przeznaczony dla programu Internet Explorer. Inne przeglądarki nie może zawierać informacje o .NET CLR w ciąg agenta użytkownika.  

@@ -2,12 +2,12 @@
 title: Mikrousługi .NET. architektura konteneryzowanych aplikacji .NET
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Mikrousługi są moduły i niezależnie do wdrożenia usługi. Kontenery platformy docker (dla systemu Linux i Windows) można uprościć wdrażanie i testowanie przez tworzenie pakietów usługi i jego zależności w pojedynczą jednostkę, który następnie jest uruchamiany w środowisku izolowanym.
 ms.date: 01/07/2019
-ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: f1abeca8bb7eba615545a88862b20b2711b218fd
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195972"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690639"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET
 
@@ -126,7 +126,7 @@ Uczestnicy i osób dokonujących przeglądu:
 >
 > **Dylan Reisenberger**, architekt i Kierownik Dev w Polly
 >
-> **Steve Smith**, wytwarzającym oprogramowanie & Trainer na ASPSmith Ltd.
+> **Steve "ardalis" Smith** — architekt oprogramowania i Trainer — [Ardalis.com](https://ardalis.com)
 >
 > **Ian Cooper**, kodowania architektury w Brighter
 >

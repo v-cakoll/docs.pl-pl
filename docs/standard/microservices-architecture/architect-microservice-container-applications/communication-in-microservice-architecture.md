@@ -2,12 +2,12 @@
 title: Komunikacja w ramach architektury mikrousługi
 description: Poznaj różne sposoby komunikacji między mikrousługami, zrozumienia konsekwencji synchroniczne i asynchroniczne metody.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7f7a65ef53d401a8533f82168db5a412d5ac9756
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644339"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690557"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Komunikacja w ramach architektury mikrousługi
 
@@ -67,9 +67,9 @@ W poniższych sekcjach opisano wiele stylów komunikacji, można rozważyć uży
 
 ## <a name="communication-styles"></a>Style komunikacji
 
-Istnieje wiele protokołów i opcji, których można użyć do komunikacji, w zależności od typu komunikacji, którego chcesz użyć. Jeśli używasz mechanizm komunikacji/odpowiedzi na podstawie żądań synchronicznych protokoły, takie jak metody HTTP i REST są najbardziej typowy, zwłaszcza, jeśli podczas publikowania usług poza klaster hosta lub mikrousług platformy Docker. Jeśli masz podczas komunikacji między usługami wewnętrznie (w klastrze hosta lub mikrousług platformy Docker), można również użyć mechanizmów komunikacji format binarny (na przykład WCF, za pomocą protokołu TCP i format binarny i komunikacji zdalnej usługi Service Fabric). Alternatywnie można użyć mechanizmów komunikacji asynchronicznej, oparta na komunikatach na przykład protokół AMQP.
+Istnieje wiele protokołów i opcji, których można użyć do komunikacji, w zależności od typu komunikacji, którego chcesz użyć. Jeśli używasz mechanizm komunikacji/odpowiedzi na podstawie żądań synchronicznych protokoły, takie jak metody HTTP i REST są najbardziej typowy, zwłaszcza, jeśli podczas publikowania usług poza klaster hosta lub mikrousług platformy Docker. Jeśli masz podczas komunikacji między usługami wewnętrznie (w klastrze hosta lub mikrousług platformy Docker), można również użyć mechanizmów komunikacji format binarny (na przykład WCF przy użyciu protokołu TCP i format binarny). Alternatywnie można użyć mechanizmów komunikacji asynchronicznej, oparta na komunikatach na przykład protokół AMQP.
 
-Dostępne są także wiele formatów wiadomości, takich jak JSON lub XML lub nawet binarne formatach, które mogą być bardziej wydajne. Jeśli Twoje wybrany format binarny nie jest to standard, prawdopodobnie nie jest dobrym pomysłem jest publicznie publikowania usług z wykorzystaniem tego formatu. Można użyć formatu niestandardowego dla wewnętrznej komunikacji między mikrousługi. Można to zrobić, podczas komunikacji między mikrousługami w ramach platformy Docker lub mikrousług hosta klastra (koordynatorów platformy Docker lub Azure Service Fabric) lub dla aplikacji klienckich własności, komunikujące się z mikrousług.
+Dostępne są także wiele formatów wiadomości, takich jak JSON lub XML lub nawet binarne formatach, które mogą być bardziej wydajne. Jeśli Twoje wybrany format binarny nie jest to standard, prawdopodobnie nie jest dobrym pomysłem jest publicznie publikowania usług z wykorzystaniem tego formatu. Można użyć formatu niestandardowego dla wewnętrznej komunikacji między mikrousługi. Można to zrobić, podczas komunikacji między mikrousług w klastrze hosta lub mikrousług platformy Docker (na przykład Docker koordynatorów) lub dla aplikacji klienckich własności, komunikujące się z mikrousług.
 
 ### <a name="requestresponse-communication-with-http-and-rest"></a>Żądanie/odpowiedź komunikacji przy użyciu tych protokołów REST
 

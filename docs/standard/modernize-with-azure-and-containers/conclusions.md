@@ -2,12 +2,12 @@
 title: Wnioski
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows | wnioski
 ms.date: 10/26/2017
-ms.openlocfilehash: c6f56e312c052f3ea87e62d36a1ae6846a4b8735
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643764"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758879"
 ---
 # <a name="conclusions"></a>Wnioski
 
@@ -15,7 +15,7 @@ ms.locfileid: "65643764"
 
 - Kontener platformy Docker, staje się standardową jednostką wdrożenia dla dowolnej usługi lub aplikacji opartej na serwerze.
 
-- W środowiskach produkcyjnych należy użyć koordynatora (np. usługi Service Fabric lub Kubernetes) do hostowania aplikacji dla komputerów z systemem Windows kontenery skalowalne.
+- W środowiskach produkcyjnych należy użyć koordynatora (takich jak Kubernetes) do hostowania aplikacji dla komputerów z systemem Windows kontenery skalowalne.
 
 - Maszyny wirtualne platformy Azure, hostingu kontenerów to szybki i prosty sposób tworzenia małych środowiska deweloperskie i testowe w chmurze.
 

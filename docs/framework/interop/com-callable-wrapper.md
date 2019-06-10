@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a658a9f706a53697b341463b443c5145a727b4b9
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643624"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758253"
 ---
 # <a name="com-callable-wrapper"></a>Wywoływana otoka COM
 
@@ -186,7 +186,7 @@ Odpowiednie w rzadkich przypadkach; może być automatycznie generowane podwójn
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Upewnij się, że wszystkie powiadomienia o zdarzeniach modelu COM z późnym wiązaniem.
 
-Domyślnie informacje o typie modelu COM jest osadzony bezpośrednio do zestawów zarządzanych, która eliminuje potrzebę stosowania podstawowych zestawów międzyoperacyjnych (PIA). Jednak jedną z ograniczenia informacje o typie osadzony jest ona nieobsługiwana dostarczania powiadomień o zdarzeniach COM przez wywołania z wczesnym wiązaniem vtable, ale obsługuje tylko z późnym wiązaniem `IDispatch::Invoke` wywołania.
+Domyślnie informacje o typie modelu COM jest osadzony bezpośrednio do zestawów zarządzanych, która eliminuje potrzebę stosowania podstawowych zestawów międzyoperacyjnych (PIA). Jednak jest jedną z ograniczenia informacje o typie osadzony go nie obsługuje dostarczania powiadomień o zdarzeniach COM przez wywołania z wczesnym wiązaniem vtable, ale obsługuje tylko z późnym wiązaniem `IDispatch::Invoke` wywołania.
 
 Jeśli aplikacja wymaga wywołania wczesnym wiązaniem do metody interfejsu zdarzeń COM, możesz ustawić **Osadź typy współdziałania** właściwości w programie Visual Studio do `true`, lub Uwzględnij następujący element w pliku projektu:
 

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973843"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758777"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików
-Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znany Folder, po dodaniu folderów <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji. Znane identyfikatory GUID Folder nie jest uwzględniana wielkość liter i są definiowane w pliku KnownFolders.h w [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znany Folder, po dodaniu folderów <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji. Znane identyfikatory GUID Folder nie jest uwzględniana wielkość liter i są zdefiniowane w pliku KnownFolders.h w zestawie Windows SDK.  
   
 > [!NOTE]
 >  W niektórych przypadkach folderem znane dodane do <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> nie będą wyświetlane w **Ulubione łącza** obszaru. Na przykład jeśli określony Folder znane nie jest obecna na komputerze, na którym działa aplikacja, znany Folder nie jest wyświetlany.  

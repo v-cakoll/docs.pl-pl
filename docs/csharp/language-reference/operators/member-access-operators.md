@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: de0715a2ac946fa47f0d83ac8569595e622f0b97
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195780"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758082"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatory dostępu do składowych (C# odwołania)
 
@@ -47,17 +47,17 @@ Możesz użyć `.` token w celu uzyskania dostępu do członka przestrzeni nazw 
 
 - Użyj `.` dostępu zagnieżdżone przestrzenie nazw w przestrzeni nazw, w poniższym przykładzie z do [ `using` dyrektywy](../keywords/using-directive.md) pokazuje:
 
-  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
+  [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
 - Użyj `.` do formularza *kwalifikowana nazwa* uzyskiwać dostęp do typu, w przestrzeni nazw, co ilustruje poniższy kod:
 
-  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
+  [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
 
   Użyj [ `using` dyrektywy](../keywords/using-directive.md) powoduje użycie kwalifikowane nazwy są opcjonalne.
 
 - Użyj `.` dostęp do [elementy członkowskie typu](../../programming-guide/classes-and-structs/index.md#members)statycznych i niestatycznych, co ilustruje poniższy kod:
 
-  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
+  [!code-csharp-interactive[type members](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
 
 Można również użyć `.` dostęp do [— metoda rozszerzenia](../../programming-guide/classes-and-structs/extension-methods.md).
 
@@ -69,7 +69,7 @@ Nawiasy kwadratowe `[]`, są zwykle używane do dostępu do elementu tablicy, in
 
 Poniższy przykład pokazuje, jak uzyskać dostęp do elementów tablicy:
 
-[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
+[!code-csharp-interactive[array access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
 
 Jeśli indeks tablicy jest poza granicami odpowiedniego wymiaru tablicy, <xref:System.IndexOutOfRangeException> zgłaszany.
 
@@ -81,7 +81,7 @@ Aby uzyskać więcej informacji na temat tablic, zobacz [tablic](../../programmi
 
 W poniższym przykładzie użyto .NET <xref:System.Collections.Generic.Dictionary%602> typu, aby zademonstrować dostęp indeksatora:
 
-[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
+[!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
 Indeksatory pozwalają na indeks wystąpienia typu zdefiniowanego przez użytkownika w podobny sposób jak indeksowanie tablicy. W przeciwieństwie do tablicy wskaźników, które musi być liczbą całkowitą, argumenty indeksator może być zadeklarowana jako dowolnego typu.
 
@@ -111,7 +111,7 @@ A?.B?[C];
 
 W poniższym przykładzie pokazano użycie `?.` i `?[]` operatory:
 
-[!code-csharp-interactive[null-conditional operators](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
+[!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 Powyższy przykład pokazuje również użycie [operatorem łączenia wartości null](null-coalescing-operator.md). Można na przykład operatora łączenia wartości null do zapewnienia alternatywnych wyrażenie do oceny, w przypadku, gdy jest wynikiem operacji warunkowych działających z wartością null `null`.
 
@@ -139,7 +139,7 @@ Użyj nawiasów, `()`, aby wywołać [metoda](../../programming-guide/classes-an
 
 Poniższy przykład pokazuje sposób wywołania metody, z lub bez argumentów i wywołanie delegata:
 
-[!code-csharp-interactive[invocation with ()](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
+[!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
 Można także użyć nawiasów podczas wywołujesz [Konstruktor](../../programming-guide/classes-and-structs/constructors.md) z [ `new` ](../keywords/new-operator.md) operatora.
 

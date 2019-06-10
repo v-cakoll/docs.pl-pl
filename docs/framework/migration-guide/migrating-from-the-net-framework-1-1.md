@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e69cbb281970b3113842adc270009e913e009812
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 07c4ede076680f0d1b133b2d50c9055205d609ee
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690335"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758513"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migracja z programu .NET Framework 1.1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] i nowszymi wersjami systemu operacyjnego Windows nie obsługują [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. W rezultacie aplikacje przeznaczone na platformę [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] nie będzie działać bez żadnych modyfikacji na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszej wersji systemu operacyjnego. W tym temacie omówiono kroki wymagane do uruchamiania aplikacji przeznaczonych [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] w obszarze [!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] i [!INCLUDE[win8](../../../includes/win8-md.md)], zobacz [systemem 1.1 aplikacji programu .NET Framework w systemie Windows 8 i nowszych wersjach](../../../docs/framework/install/run-net-framework-1-1-apps.md).
+[!INCLUDE[win7](../../../includes/win7-md.md)] i nowszymi wersjami systemu operacyjnego Windows nie obsługują [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. W rezultacie aplikacji przeznaczonych dla środowiska .NET Framework 1.1 nie będzie działać bez żadnych modyfikacji na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszej wersji systemu operacyjnego. W tym temacie omówiono kroki wymagane do uruchamiania aplikacji, który jest przeznaczony dla .NET Framework 1.1 w obszarze [!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] i [!INCLUDE[win8](../../../includes/win8-md.md)], zobacz [systemem 1.1 aplikacji programu .NET Framework w systemie Windows 8 i nowszych wersjach](../../../docs/framework/install/run-net-framework-1-1-apps.md).
 
 ## <a name="retargeting-or-recompiling"></a>Retargeting i ponowna kompilacja
 
-Istnieją dwa sposoby uzyskania aplikacji skompilowanej przy użyciu [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] do uruchamiania na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszej wersji systemu operacyjnego Windows:
+Istnieją dwa sposoby uzyskania aplikacji skompilowanej przy użyciu programu .NET Framework 1.1 w celu uruchamiania [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszej wersji systemu operacyjnego Windows:
 
 - Można przekierować aplikację do uruchamiania w .NET Framework 4 i nowsze wersje. Trwa przekierowywanie wymaga dodania [ \<supportedRuntime >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) elementu do pliku konfiguracji aplikacji, który umożliwia jego uruchomienie w ramach programu .NET Framework 4 i nowsze wersje. Taki plik konfiguracyjny ma następującą postać:
 
@@ -36,15 +36,15 @@ Istnieją dwa sposoby uzyskania aplikacji skompilowanej przy użyciu [!INCLUDE[n
 
 Niezależnie od tego, czy wolisz ponownie skompilować czy przekierować aplikację musisz określić, czy aplikacja jest wpływ na wszelkie zmiany wprowadzone w nowszych wersjach programu .NET Framework. Zmiany te mają dwie formy:
 
-- Fundamentalne zmiany między [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] i nowszych wersjach programu .NET Framework.
+- Fundamentalne zmiany między .NET Framework 1.1 i nowszych wersjach programu .NET Framework.
 
-- Typy i składowe typu, które zostały oznaczone jako przestarzałe lub przestarzałe między [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] i nowszych wersjach programu .NET Framework.
+- Typy i składowe typu, które zostały oznaczone jako przestarzałe, lub w programie .NET Framework 1.1 i nowszych wersjach programu .NET Framework.
 
-Czy przekierować aplikację, lub ponownie ją kompilując, należy przejrzeć zarówno przełomowe zmiany oraz przestarzałe typy i członków dla każdej wersji programu .NET Framework, która została wydana po [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)].
+Czy przekierować aplikację, lub ponownie ją kompilując, należy przejrzeć zarówno przełomowe zmiany oraz przestarzałe typy i członków dla każdej wersji programu .NET Framework, która została wydana po .NET Framework 1.1.
 
 ## <a name="breaking-changes"></a>Fundamentalne zmiany
 
-Gdy wystąpi zmiana podziału, w zależności od określonej zmiany obejście tego problemu może być dostępne zarówno dla przekierowano element i ponownie kompilowanych. W niektórych przypadkach można dodać elementu podrzędnego do [ \<runtime >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) element pliku konfiguracji aplikacji, aby przywrócić poprzednie zachowanie. Na przykład następujący plik konfiguracji przywraca działanie sortowania i porównywania ciągów używane w [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] i mogą być używane z przebudowanymi pod inne środowisko lub ponownie skompilowanymi aplikacji.
+Gdy wystąpi zmiana podziału, w zależności od określonej zmiany obejście tego problemu może być dostępne zarówno dla przekierowano element i ponownie kompilowanych. W niektórych przypadkach można dodać elementu podrzędnego do [ \<runtime >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) element pliku konfiguracji aplikacji, aby przywrócić poprzednie zachowanie. Na przykład następujący plik konfiguracji przywraca sortowanie ciągów i zachowanie porównania używane w .NET Framework 1.1 i może być używany z przebudowanymi pod inne środowisko lub ponownie skompilowanymi aplikacji.
 
 ```xml
 <configuration>
@@ -58,7 +58,7 @@ Jednak w niektórych przypadkach trzeba zmodyfikować kod źródłowy i ponownie
 
 W celu oceny wpływu możliwych przełomowych zmian w swojej aplikacji, należy przejrzeć następujące listy zmian:
 
-- [Istotne zmiany w programie .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) dokumentuje zmiany w [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] które mogą wpływać na aplikację, który jest przeznaczony dla [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)].
+- [Istotne zmiany w programie .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) dokumentuje zmiany w [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] które mogą wpływać na aplikację, który jest przeznaczony dla .NET Framework 1.1.
 
 - [Zmiany w .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) dokumentuje zmiany między .NET Framework 3.5 i [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
 

@@ -2,12 +2,12 @@
 title: Lift- and -shift istniejących aplikacji .NET do usługi Azure IaaS (obsługa infrastruktury chmury)
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643703"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758860"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Lift- and -shift istniejących aplikacji .NET do usługi Azure IaaS (obsługa infrastruktury chmury)
 
@@ -39,7 +39,7 @@ W kolejnych sekcjach omówiono w nim aplikacje zoptymalizowane pod kątem chmury
 
 Jeśli celem jest po prostu przenieść istniejące aplikacje do chmury, najpierw należy zidentyfikować istniejące aplikacje, które nie wymagają znacznej modyfikacji do uruchamiania w usłudze Azure App Service. Te aplikacje, powinien być pierwszy kandydatami do zoptymalizowane pod kątem chmury. 
 
-Następnie dla aplikacji, nadal nie można przenieść do Windows kontenery i PaaS, takich jak usługi App Service lub koordynatorów, takich jak usługi Azure Service Fabric, migracja tych, które mają zwykły prostych maszyn wirtualnych (IaaS). 
+Następnie dla aplikacji, nadal nie można przenieść do Windows kontenery i PaaS, takich jak usługi App Service lub koordynatorów, takich jak usługi Azure Kubernetes Service migracji tych, które mają zwykły prostych maszyn wirtualnych (IaaS). 
 
 Jednak należy pamiętać, że poprawnie Konfigurowanie, zabezpieczanie i obsługa maszyn wirtualnych wymaga znacznie więcej czasu i doświadczenia w zakresie IT w porównaniu do korzystania z usług PaaS platformy Azure. Jeśli rozważasz usługę Azure Virtual Machines, upewnij się, czy należy wziąć pod uwagę rutynowej konserwacji pracę wymaganą do dostarczenia poprawek, aktualizacji, a także zarządzać środowiskiem maszyny Wirtualnej. Usługa Azure Virtual Machines jest IaaS.
 

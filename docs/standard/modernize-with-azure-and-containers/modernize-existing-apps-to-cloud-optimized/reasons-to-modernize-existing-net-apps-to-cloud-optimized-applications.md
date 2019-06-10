@@ -2,12 +2,12 @@
 title: Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639059"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758747"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 
@@ -27,7 +27,7 @@ Aplikacja jest zoptymalizowane pod kątem chmury w przypadku może w agile spos�
 
 Klucz jest *elastyczność*. Nie można wydać z elastycznością, chyba że można zmniejszyć do minimum wszelkie wdrażania do produkcji problemy i rozwiązywania problemów w środowisku tworzenia i testowania. Kontenery (w szczególności platformy Docker, jak de facto standardem) i usługi zarządzane zostały zaprojektowane specjalnie do tego celu.
 
-Aby osiągnąć elastyczności, potrzebny jest zautomatyzowane procesy metodyki DevOps, które są oparte na potoków ciągłej integracji/ciągłego wdrażania, które wydane skalowalnej platformy w chmurze. Platformy ciągłej integracji/ciągłego wdrażania (na przykład usługom DevOps platformy Azure lub usługi Jenkins), które Wdróż na platformie chmury skalowalne i odporne na błędy (np. usługi Azure App Service, Azure Service Fabric lub usłudze Azure Kubernetes Service) to kluczowych technologii do osiągnięcia elastyczności w chmurze.
+Aby osiągnąć elastyczności, potrzebny jest zautomatyzowane procesy metodyki DevOps, które są oparte na potoków ciągłej integracji/ciągłego wdrażania, które wydane skalowalnej platformy w chmurze. Platformy ciągłej integracji/ciągłego wdrażania (na przykład usługom DevOps platformy Azure lub usługi Jenkins), które Wdróż na platformie chmury skalowalne i odporne na błędy (np. usługi Azure App Service lub Azure Kubernetes Service) to kluczowych technologii do osiągnięcia elastyczności w chmurze.
 
 Na poniższej liście opisano założenia głównego lub rozwiązania dla aplikacji zoptymalizowane pod kątem chmury. Należy zwrócić uwagę na to, że można przyjąć wszystkie lub tylko niektóre z tych zasad, w ramach podejścia progresywnego lub przyrostowej:
 

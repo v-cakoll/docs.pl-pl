@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu wykrywan
 ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423940"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758794"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Samouczek: Na użytek strukturze ML.NET wykrywania anomalii sprzedaży produktu 
 
@@ -373,4 +373,4 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 
 Zapoznaj się z repozytorium GitHub samples usługi Machine Learning można eksplorować przykładową wykrywania anomalii zużycia energii.
 > [!div class="nextstepaction"]
-> [repozytorium GitHub machinelearning-DotNet-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/TimeSeries_PowerAnomalyDetection)
+> [repozytorium GitHub machinelearning-DotNet-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

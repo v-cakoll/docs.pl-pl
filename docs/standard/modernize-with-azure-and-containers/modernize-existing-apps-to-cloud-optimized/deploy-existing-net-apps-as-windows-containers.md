@@ -2,12 +2,12 @@
 title: Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Wdrażanie istniejących aplikacji .NET jako kontenerów Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643752"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758836"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 
@@ -153,7 +153,6 @@ Dostępne są następujące produkty z obsługi kontenerów platformy Azure, kt�
 
 - **Usługa Azure App Service**
 - **Azure Kubernetes Service (AKS i usługi ACS)**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 Następnie usługi Azure Container Registry to rejestr kontenera skalowalne wysokiej hostowanych na platformie Azure, korzystających z wszystkie poprzednie produkty podczas rejestrowania i wdrażania obrazów kontenerów niestandardowych.

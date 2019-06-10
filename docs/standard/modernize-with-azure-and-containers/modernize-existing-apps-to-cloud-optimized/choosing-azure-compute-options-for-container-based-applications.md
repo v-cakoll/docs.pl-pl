@@ -2,12 +2,12 @@
 title: Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 ms.date: 05/04/2018
-ms.openlocfilehash: 28e103c67f47d63582384c9ab468a5f631b5ce9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638976"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758821"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 
@@ -16,9 +16,9 @@ Jak zauważono, należy po przeczytaniu w poprzednich sekcjach, platforma Azure 
 Jako *domyślnie* zalecenia, poniżej przedstawiono główne kryteria, zaleca się w tych wskazówkach:
 
 - **Pojedynczy monolityczną aplikację:** Wybierz usługi Azure App Service
-- **Aplikacja N-warstwowa:** Wybierz koordynatorów, takich jak Azure Kubernetes Service (AKS), Usługa Service Fabric (CPP) lub usługi App Service, jeśli masz jeden lub kilka usług zaplecza
+- **Aplikacja N-warstwowa:** Wybierz koordynatorów, takich jak Azure Kubernetes Service (AKS) lub usługi App Service, jeśli masz jeden lub kilka usług zaplecza
 - **Mikrousługi systemu Linux:** Wybierz usługi AKS/Kubernetes
-- **Mikrousługi Windows:** Choose Service Fabric
+- **Mikrousługi Windows:** Wybierz usługi Azure Web Apps for Containers
 - **Funkcje bezserwerowe & procedury obsługi zdarzeń:** Wybierz usługę Azure Functions
 - **Na dużą skalę usługi Batch:** Wybierz usługi Azure Batch
 
@@ -26,13 +26,9 @@ Jednak to zalecenie powinna zostać podjęta uszczypnięcia soli, jak wybór pro
 
 Po dogłębną analizę aplikacji potrzebom produktu wybrane mogą być inne. Jednak jako punktu wyjścia, warto mieć początkową pomoc, z których można uruchomić oceny i testowania na podstawie niektórych priorytetu.
 
-Na poniższej ilustracji można analizować bardziej globalnego podczas tabeli szczegółowych decyzji.
+Na poniższej ilustracji widać podział różnych rodzajów aplikacji i ich idealne rozwiązanie Azure w scenariuszach hostingu.
 
 ![](./media/image8.5.png)
-
-Zwróć uwagę sposób, w jaki bazowego systemu operacyjnego (Windows vs. System Linux) można także współczynnik decyzji, zgodnie z niektórych koordynatorów są bardziej dojrzała na kontenery systemu Linux i innych kontenerów Windows. Na przykład kontenery systemu Linux są bardzo dla dorosłych w usłudze Kubernetes (AKS na platformie Azure) ale mniej dojrzałe w usłudze Service Fabric. Z drugiej strony kontenery Windows są bardziej dojrzałych w usłudze Service Fabric (wydany w maja 2017 r.) i mniej dojrzałe w usłudze AKS.
-
-Jednak te różnice w dojrzałości system operacyjny będzie w przyszłości zanikanie i wiele platform będą mieć porównywalne dojrzałości systemu operacyjnego i decyzji będzie określić więcej informacji na temat Preferencje na podstawie konkretnych cech, aplikacja może być konieczne lub oparte na każdej z platform ekosystem przyczyny.
 
 > [!div class="step-by-step"]
 > [Poprzednie](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

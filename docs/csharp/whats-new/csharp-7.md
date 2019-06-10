@@ -3,12 +3,12 @@ title: Co nowego w języku C# 7.0 — przewodnik po języku C#
 description: Zapoznaj się z omówieniem nowych funkcji w wersji 7.0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753061"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815971"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
@@ -84,7 +84,7 @@ Można wyodrębnić poszczególne pola, przypisując `Point` do krotki:
 
 Możesz dowiedzieć się w bardziej szczegółowe informacje o krotek w [artykułu krotek](../tuples.md).
 
-## <a name="discards"></a>Odrzuca
+## <a name="discards"></a>Odrzucenia
 
 Często podczas dekonstrukcja krotki lub wywołanie metody z `out` parametrami, jest zmuszony do definiowania zmiennej z żądanymi wartościami nie interesuje i nie będą używane. C# dodaje obsługę *odrzuca* do obsługi tego scenariusza. Odrzucenia to zmienna tylko do zapisu, którego nazwa jest `_` (znaki podkreślenia); można przypisać wszystkie wartości, które zamierzasz odrzucić do jednej zmiennej. Odrzucenia przypomina nieprzypisanej zmiennej; Oprócz instrukcji przypisania odrzuceń, nie można użyć w kodzie.
 
@@ -222,7 +222,7 @@ Zmiana metody do elementu członkowskiego zabudowanego wyrażenie jest [binarne 
 
 ## <a name="throw-expressions"></a>Wyrażenia throw
 
-W języku C# `throw` zawsze było instrukcję. Ponieważ `throw` jest instrukcją nie wyrażenie wystąpiły C# konstrukcje, których nie używasz go. Uwzględnione są niektóre wyrażenia lambda, wyrażenia warunkowe i wyrażenia łączące wartości null. Dodanie elementy członkowskie z wyrażeniem dodanie większej liczby lokalizacji gdzie `throw` wyrażeń może okazać się przydatne. Dzięki czemu można tworzyć dowolne te konstrukcje, C# 7.0 wprowadza *wyrażeń throw*.
+W języku C# `throw` zawsze było instrukcję. Ponieważ `throw` jest instrukcją nie wyrażenie wystąpiły C# konstrukcje, których nie używasz go. Uwzględnione są niektóre wyrażenia lambda, wyrażenia warunkowe i wyrażenia łączące wartości null. Dodanie elementy członkowskie z wyrażeniem dodanie większej liczby lokalizacji gdzie `throw` wyrażeń może okazać się przydatne. Dzięki czemu można tworzyć dowolne te konstrukcje C# wprowadza 7.0 [ *wyrażeń throw*](../language-reference/keywords/throw.md#the-throw-expression).
 
 To dodawanie ułatwia pisanie kodu oparte na wyrażeniach więcej. Nie potrzebujesz dodatkowych instrukcji sprawdzania błędów.
 

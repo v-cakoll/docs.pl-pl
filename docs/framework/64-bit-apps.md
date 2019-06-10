@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 703ebcf93af77be2d0034bcd99fab397d7729374
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487008"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815946"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, że powinna działać w systemie operacyjnym Windows 64-bitowych jako natywną aplikację lub w emulatorze WOW64 (Windows 32-bit na Windows 64-bitowych). WOW64 jest środowiskiem zgodności, które umożliwia aplikacji 32-bitowy, do uruchomienia w systemie 64-bitowych. Emulator WOW64 znajduje się we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
@@ -45,7 +45,7 @@ Podczas kompilowania aplikacji można określić, że powinna działać w system
   
 - Aby uzyskać więcej informacji na temat 64-bitowej wersji środowiska CLR na 64-bitowym komputerze Windows zobacz [Centrum deweloperów .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) w witrynie MSDN.  
   
-- W [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] dokumentacji, zobacz [przewodnik programowania w Windows 64-bitowych](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
+- W dokumentacji zestawu Windows SDK, zobacz [przewodnik programowania w Windows 64-bitowych](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
 - Aby uzyskać informacji dotyczących sposobu pobierania 64-bitowej wersji środowiska CLR, zobacz [.NET Framework Developer Center pobiera](https://go.microsoft.com/fwlink/?LinkId=50953) w witrynie MSDN.  
   

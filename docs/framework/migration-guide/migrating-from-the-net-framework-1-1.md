@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07c4ede076680f0d1b133b2d50c9055205d609ee
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 441a65f9a72dd0fcffb062710df74bb529767cef
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758513"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816064"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migracja z programu .NET Framework 1.1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] i nowszymi wersjami systemu operacyjnego Windows nie obsługują [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. W rezultacie aplikacji przeznaczonych dla środowiska .NET Framework 1.1 nie będzie działać bez żadnych modyfikacji na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszej wersji systemu operacyjnego. W tym temacie omówiono kroki wymagane do uruchamiania aplikacji, który jest przeznaczony dla .NET Framework 1.1 w obszarze [!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] i [!INCLUDE[win8](../../../includes/win8-md.md)], zobacz [systemem 1.1 aplikacji programu .NET Framework w systemie Windows 8 i nowszych wersjach](../../../docs/framework/install/run-net-framework-1-1-apps.md).
+[!INCLUDE[win7](../../../includes/win7-md.md)] i nowszymi wersjami systemu operacyjnego Windows nie obsługują programu .NET Framework 1.1. W rezultacie aplikacji przeznaczonych dla środowiska .NET Framework 1.1 nie będzie działać bez żadnych modyfikacji na [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszej wersji systemu operacyjnego. W tym temacie omówiono kroki wymagane do uruchamiania aplikacji, który jest przeznaczony dla .NET Framework 1.1 w obszarze [!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat programu .NET Framework 1.1 i [!INCLUDE[win8](../../../includes/win8-md.md)], zobacz [systemem 1.1 aplikacji programu .NET Framework w systemie Windows 8 i nowszych wersjach](../../../docs/framework/install/run-net-framework-1-1-apps.md).
 
 ## <a name="retargeting-or-recompiling"></a>Retargeting i ponowna kompilacja
 
@@ -58,7 +58,7 @@ Jednak w niektórych przypadkach trzeba zmodyfikować kod źródłowy i ponownie
 
 W celu oceny wpływu możliwych przełomowych zmian w swojej aplikacji, należy przejrzeć następujące listy zmian:
 
-- [Istotne zmiany w programie .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) dokumentuje zmiany w [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] które mogą wpływać na aplikację, który jest przeznaczony dla .NET Framework 1.1.
+- [Istotne zmiany w programie .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) dokumentuje zmiany w .NET Framework 2.0 z dodatkiem SP1, który może wpływać na aplikację, który jest przeznaczony dla .NET Framework 1.1.
 
 - [Zmiany w .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) dokumentuje zmiany między .NET Framework 3.5 i [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
 
@@ -68,4 +68,4 @@ W celu oceny wpływu możliwych przełomowych zmian w swojej aplikacji, należy 
 
 Wpływ zdeprecjonowanych typów i składowych jest nieco inny dla aplikacji przekierowanych i ponownie kompilowanych. Korzystanie z przestarzałych typów i elementów członkowskich nie wpłynie na zmienianą aplikację, chyba że przestarzałego typu lub składowej został fizycznie usunięty z zestawu. Konieczności ponownego kompilowania aplikacji korzystającej z przestarzałe typy lub członków zwykle powoduje ostrzeżenia kompilatora, nie błędu kompilatora. Jednak w niektórych przypadkach generuje błąd kompilatora i kod, który używa przestarzałego typu lub składowej nie jest kompilowany pomyślnie. W takim przypadku należy przepisać kod źródłowy, który wywołuje przestarzały typ lub członka, przed ponownym skompilowaniem aplikacji. Aby uzyskać więcej informacji na temat przestarzałych typów i członków, zobacz [What's Obsolete in biblioteki klas](../../../docs/framework/whats-new/whats-obsolete.md).
 
-Aby ocenić wpływ typów i elementów członkowskich, które zostały zaniechane od czasu wydania [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], zobacz [What's Obsolete in biblioteki klas](../../../docs/framework/whats-new/whats-obsolete.md). Przejrzyj listy przestarzałych typów i członków dla [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], .NET Framework 3.5 i .NET Framework 4.
+Aby ocenić wpływ typów i elementów członkowskich, które zostały zaniechane od czasu wersji programu .NET Framework 2.0 z dodatkiem SP1, zobacz [What's Obsolete in biblioteki klas](../../../docs/framework/whats-new/whats-obsolete.md). Przejrzyj listy przestarzałych typów i członków dla platformy .NET Framework 2.0 z dodatkiem SP1, .NET Framework 3.5 i .NET Framework 4.

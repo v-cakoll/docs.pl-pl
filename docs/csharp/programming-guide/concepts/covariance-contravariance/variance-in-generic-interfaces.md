@@ -1,13 +1,13 @@
 ---
 title: Wariancje w interfejsach (C#)
-ms.date: 04/10/2019
+ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702480"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815963"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Wariancje w interfejsach (C#)
 
@@ -31,9 +31,9 @@ Rozpoczęcie przeczytania artykułu z .NET Framework 4, następujące interfejsy
 
 Począwszy od programu .NET Framework 4.5, następujące interfejsy są wariant:
 
-- <xref:System.Collections.Generic.IReadOnlyList%601> (T jest kontrawariantny)
+- <xref:System.Collections.Generic.IReadOnlyList%601> (T jest kowariantny)
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T jest kontrawariantny)
+- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T jest kowariantny)
 
 Kowariancja zezwala na metodę, aby mieć zwracanego typu bardziej pochodnego niż określone przez parametr typu ogólnego interfejsu. Aby zilustrować funkcji KOWARIANCJA, należy wziąć pod uwagę te ogólne interfejsy: `IEnumerable<Object>` i `IEnumerable<String>`. `IEnumerable<String>` Interfejsu nie dziedziczy `IEnumerable<Object>` interfejsu. Jednak `String` typ dziedziczyć `Object` typu, a w niektórych przypadkach możesz chcieć przypisać obiekty te interfejsy do siebie nawzajem. Jest to pokazane w poniższym przykładzie kodu.
 

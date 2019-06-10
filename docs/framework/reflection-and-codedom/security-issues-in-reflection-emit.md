@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2995e64d9e8eed365498bcbc1047a321edc10c5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489734"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816136"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemy związane z zabezpieczeniami w emisji odbicia
 Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft intermediate language (MSIL), każdy z własną problemy z zabezpieczeniami:  
@@ -141,14 +141,14 @@ Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft int
 ## <a name="version-information"></a>Informacje o wersji  
  Począwszy od programu .NET Framework 4, wyeliminowana zasady zabezpieczeń dla komputera i przezroczystości zabezpieczeń staje się domyślnego mechanizmu wymuszania. Zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
- Począwszy od [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flaga nie jest już wymagany podczas emitowania dynamicznych zestawów i metod dynamicznych. Ta flaga jest wymagany we wcześniejszych wersjach programu .NET Framework.  
+ Począwszy od .NET Framework 2.0 z dodatkiem Service Pack 1, <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flaga nie jest już wymagany podczas emitowania dynamicznych zestawów i metod dynamicznych. Ta flaga jest wymagany we wcześniejszych wersjach programu .NET Framework.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> za pomocą <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flaga jest domyślnie włączone w `FullTrust` i `LocalIntranet` zestawy nazwanych uprawnień, ale nie w `Internet` zestaw uprawnień. W związku z tym, we wcześniejszych wersjach programu .NET Framework, biblioteka może służyć z uprawnieniami do Internetu tylko wtedy, gdy wykonuje <xref:System.Security.PermissionSet.Assert%2A> dla <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Takie biblioteki wymagają weryfikacji zabezpieczeń zachowania ostrożność, ponieważ kodowanie błędów może spowodować luki w zabezpieczeniach. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] Pozwala kod był emitowany w scenariuszach częściowej relacji zaufania, bez wydawania żadnych wymogów bezpieczeństwa, ponieważ generowanie kodu nie jest z natury uprzywilejowaną operacją. Oznacza to, że wygenerowany kod nie ma więcej uprawnień niż zestaw, który emituje go. Dzięki temu biblioteki, które emitują kod, aby być przezroczyste dla zabezpieczeń i usuwa potrzebę zapewnienia <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, która upraszcza proces bezpieczna biblioteka.  
+>  <xref:System.Security.Permissions.ReflectionPermission> za pomocą <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> flaga jest domyślnie włączone w `FullTrust` i `LocalIntranet` zestawy nazwanych uprawnień, ale nie w `Internet` zestaw uprawnień. W związku z tym, we wcześniejszych wersjach programu .NET Framework, biblioteka może służyć z uprawnieniami do Internetu tylko wtedy, gdy wykonuje <xref:System.Security.PermissionSet.Assert%2A> dla <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Takie biblioteki wymagają weryfikacji zabezpieczeń zachowania ostrożność, ponieważ kodowanie błędów może spowodować luki w zabezpieczeniach. .NET Framework 2.0 z dodatkiem SP1 umożliwia kod był emitowany w scenariuszach częściowej relacji zaufania bez wydawania żadnych wymogów bezpieczeństwa, ponieważ generowanie kodu nie jest z natury uprzywilejowaną operacją. Oznacza to, że wygenerowany kod nie ma więcej uprawnień niż zestaw, który emituje go. Dzięki temu biblioteki, które emitują kod, aby być przezroczyste dla zabezpieczeń i usuwa potrzebę zapewnienia <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, która upraszcza proces bezpieczna biblioteka.  
   
- Ponadto [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] wprowadza <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi do uzyskiwania dostępu do niepublicznych typy i elementy członkowskie z częściowo zaufanych metod dynamicznych. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagę dla metod dynamicznych, które uzyskują dostęp do typów niepublicznych; jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
+ Ponadto program .NET Framework 2.0 z dodatkiem SP1 wprowadzono <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flagi do uzyskiwania dostępu do niepublicznych typy i elementy członkowskie z częściowo zaufanych metod dynamicznych. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagę dla metod dynamicznych, które uzyskują dostęp do typów niepublicznych; jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
   
- Na koniec [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] wprowadza anonimowo obsługiwane metody.  
+ Na koniec .NET Framework 2.0 z dodatkiem SP1 wprowadzono anonimowo obsługiwane metody.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Uzyskiwanie informacji dotyczących typów i elementów członkowskich  
  Począwszy od [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], aby uzyskać informacje na temat niepublicznych typy i elementy członkowskie są wymagane żadne uprawnienia. Odbicie jest używany do uzyskiwania informacji potrzebnych do emitowania metody dynamicznej. Na przykład <xref:System.Reflection.MethodInfo> obiekty służą do emitowania wywołania metody. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> flagi. Aby uzyskać więcej informacji, zobacz [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  

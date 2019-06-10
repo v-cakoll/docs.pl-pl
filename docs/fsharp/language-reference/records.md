@@ -1,17 +1,17 @@
 ---
 title: Rekordy
 description: Dowiedz się, jak F# rekordów reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich.
-ms.date: 05/16/2016
-ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 06/09/2019
+ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795424"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816192"
 ---
 # <a name="records"></a>Rekordy
 
-Rekordy reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich.  Począwszy od F# 4.1, albo mogą być typu struktury lub odwołania.  Są one domyślnie typami odwołań.
+Rekordy reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich. Mogą to być albo typu struktury lub odwołania.  Są one domyślnie typami odwołań.
 
 ## <a name="syntax"></a>Składnia
 

@@ -2,12 +2,12 @@
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Odkryj opcje do organizowania mikrousług i wielokontenerowych aplikacji pod kątem wysokiej skalowalności i dostępności oraz możliwości usługi Azure Dev miejsca do magazynowania podczas tworzenia cyklem życia aplikacji platformy Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: a0f7efa4b21aedfb574659df283adc65741cefdb
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690499"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815840"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -134,4 +134,4 @@ Aby uzyskać więcej informacji Sprawdź artykuł [programowanie zespołowe za p
 
 >[!div class="step-by-step"]
 >[Poprzednie](resilient-high-availability-microservices.md)
->[dalej](docker-application-development-process.md)
+>[dalej](../docker-application-development-process/index.md)

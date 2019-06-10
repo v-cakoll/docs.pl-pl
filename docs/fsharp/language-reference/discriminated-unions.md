@@ -2,12 +2,12 @@
 title: Sumy rozłączne
 description: Dowiedz się, jak używać F# związków wyróżniających.
 ms.date: 05/16/2016
-ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: a3958a9ffb021c0c46c24216f17a1e7ee5605dd3
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557961"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816247"
 ---
 # <a name="discriminated-unions"></a>Sumy rozłączne
 
@@ -111,7 +111,7 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
 
 ## <a name="struct-discriminated-unions"></a>Sumy rozłączne
 
-Począwszy od F# 4.1, może również reprezentować sumy rozłączne jako struktury.  Jest to zrobić za pomocą `[<Struct>]` atrybutu.
+Sumy rozłączne może również reprezentować jako struktury.  Jest to zrobić za pomocą `[<Struct>]` atrybutu.
 
 ```fsharp
 [<Struct>]
@@ -164,14 +164,46 @@ Połączenia rozróżniane działają dobrze, jeśli węzłów w drzewie są het
 
 Kiedy ten kod jest wykonywany, wartość `result` wynosi 5.
 
+## <a name="members"></a>Elementy członkowskie
+
+Istnieje możliwość definiowania elementów członkowskich w związki dyskryminowane. Poniższy przykład pokazuje, jak zdefiniować właściwość i zaimplementować interfejs:
+
+```fsharp
+open System
+
+type IPrintable =
+    abstract Print: unit -> unit
+
+type Shape =
+    | Circle of float
+    | EquilateralTriangle of float
+    | Square of float
+    | Rectangle of float * float
+
+    member this.Area =
+        match this with
+        | Circle r -> 2.0 * Math.PI * r
+        | EquilateralTriangle s -> s * s * sqrt 3.0 / 4.0
+        | Square s -> s * s
+        | Rectangle(l, w) -> l * w
+
+    interface IPrintable with
+        member this.Print () =
+            match this with
+            | Circle r -> printfn "Circle with radius %f" r
+            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
+            | Square s -> printfn "Square with side %f" s
+            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+```
+
 ## <a name="common-attributes"></a>Atrybuty wspólne
 
 Następujące atrybuty są często widoczne w połączenia dyskryminowanych:
 
-* `[RequireQualifiedAccess]`
-* `[NoEquality]`
-* `[NoComparison]`
-* `[Struct]`
+* `[<RequireQualifiedAccess>]`
+* `[<NoEquality>]`
+* `[<NoComparison>]`
+* `[<Struct>]`
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab30d44ed2a91fd7f7e53cb868d90a2c5af0fef6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489713"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816134"
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członkowskich i dostęp do elementów członkowskich (czyli do wywołania metod i konstruktorów do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej). Użycie odbicia w celu uzyskania informacji na temat typów i elementów członkowskich nie jest ograniczona. Cały kod może używać odbicia do wykonywania następujących zadań:  
@@ -42,7 +42,7 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
  Na przykład kod uruchomiony w domenie aplikacji w trybie piaskownicy jest ograniczona do dostępu opisanego na tej liście, chyba, że domena aplikacji przyznaje dodatkowe uprawnienia.  
   
- Począwszy od [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], próby uzyskania dostępu do elementów członkowskich, które są zwykle niedostępne generuje zapotrzebowanie na zestaw uprawnień obiektu docelowego wynosząca <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi. Kod, który jest uruchomiony z pełnym zaufaniem (na przykład, kod w aplikacji, który jest uruchamiany z wiersza polecenia) zawsze może spełnić te uprawnienia. (To jest zastrzeżeniem ograniczeń podczas uzyskiwania dostępu do elementów członkowskich zabezpieczenia krytyczny, zgodnie z opisem w dalszej części tego artykułu).  
+ Począwszy od .NET Framework 2.0 z dodatkiem Service Pack 1, próby uzyskania dostępu do elementów członkowskich, które są zwykle niedostępne generuje zapotrzebowanie na zestaw uprawnień obiektu docelowego wynosząca <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi. Kod, który jest uruchomiony z pełnym zaufaniem (na przykład, kod w aplikacji, który jest uruchamiany z wiersza polecenia) zawsze może spełnić te uprawnienia. (To jest zastrzeżeniem ograniczeń podczas uzyskiwania dostępu do elementów członkowskich zabezpieczenia krytyczny, zgodnie z opisem w dalszej części tego artykułu).  
   
  Opcjonalnie można przyznać domeny aplikacji w trybie piaskownicy <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> Flaga, zgodnie z opisem w sekcji [uzyskiwania dostępu do elementów członkowskich, są zwykle niedostępne](#accessingNormallyInaccessible), w dalszej części tego artykułu.  
   
@@ -100,7 +100,7 @@ Odbicie umożliwia uzyskanie informacji dotyczących typów i elementów członk
   
 - Począwszy od programu .NET Framework 4, kod przezroczysty nie można użyć odbicia dostęp do elementów członkowskich zabezpieczenia krytyczny.  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flagi została wprowadzona w systemie [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi dla kodu, który używa odbicia, aby dostęp do elementów członkowskich niepublicznych. Jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flaga został wprowadzony w programie .NET Framework 2.0 z dodatkiem Service Pack 1. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flagi dla kodu, który używa odbicia, aby dostęp do elementów członkowskich niepublicznych. Jest to uprawnienia, które nigdy nie może być przyznany elementowi częściowo zaufanego kodu.  
   
 - Począwszy od [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], przy użyciu odbicia w celu uzyskania informacji na temat niepublicznych typy i elementy członkowskie nie wymaga żadnych uprawnień. We wcześniejszych wersjach <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> flaga jest wymagana.  
   

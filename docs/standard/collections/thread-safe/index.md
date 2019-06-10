@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457073"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816210"
 ---
 # <a name="thread-safe-collections"></a>Kolekcje bezpieczne wątkowo
 .NET Framework 4 wprowadzono <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeń nazw, która obejmuje kilka klas kolekcji, które są metodą o bezpiecznych wątkach i skalowalne. Wiele wątków może bezpiecznie i wydajnie dodawać i usuwać elementy te kolekcje, bez konieczności umieszczenia dodatkowej synchronizacji w kodzie użytkownika. Kiedy piszesz nowy kod, należy użyć klas kolekcji współbieżnych w każdym przypadku, gdy wiele wątków będzie zapisywać równocześnie do kolekcji. Jeśli z udostępnionej kolekcji odbywa się tylko odczyt, można używać klas z przestrzeni nazw <xref:System.Collections.Generic?displayProperty=nameWithType>. Zalecamy nieużywanie klas kolekcji w wersji 1.0, chyba że aplikacje mają być przeznaczone dla środowiska uruchomieniowego .NET Framework 1.1 lub starszego.  
@@ -22,7 +22,7 @@ ms.locfileid: "66457073"
   
  Klasy kolekcji wprowadzone w środowisku .NET Framework 2.0 są umieszczone w przestrzeni nazw <xref:System.Collections.Generic?displayProperty=nameWithType>. Należą do nich <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> itd. Te klasy oferują większe bezpieczeństwo pod względem typów i lepszą wydajność niż klasy środowiska .NET Framework 1.0. Jednak klasy kolekcji środowiska .NET Framework 2.0 nie zawierają żadnych funkcji synchronizacji wątków. Gdy elementy są dodawane lub usuwane równolegle w wielu wątkach, całą synchronizację musi zapewniać kod użytkownika.  
   
- Firma Microsoft zaleca klas kolekcji współbieżnych w programie .NET Framework 4, ponieważ zapewniają one nie tylko bezpieczeństwo typu klas kolekcji .NET Framework 2.0, ale także bardziej wydajne i kompletne bezpieczeństwo wątkowe niż [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)] kolekcje zapewniają.  
+ Firma Microsoft zaleca klas kolekcji współbieżnych w programie .NET Framework 4, ponieważ zapewniają one nie tylko bezpieczeństwo typu klas kolekcji .NET Framework 2.0, ale także bardziej wydajne i kompletne bezpieczeństwo wątkowe niż kolekcje .NET Framework 1.0 Podaj.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>Blokowanie szczegółowe i mechanizmy bezblokadowe  
  Niektóre typy kolekcji współbieżnych korzystać z uproszczonego synchronizacji mechanizmów takich jak <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim>, i <xref:System.Threading.CountdownEvent>, które są nowością w programie .NET Framework 4. Te rodzaje synchronizacji zazwyczaj używa się *rotowania zajętości* podczas krótkich okresów, zanim przełączą wątek do faktycznego stanu oczekiwania. Jeśli spodziewane czasy oczekiwania będą bardzo krótkie, warto stosować rotowanie, ponieważ znacznie mniej obciąża ono zasoby systemu niż przejścia jądra występujące w czekaniu. W przypadku klas kolekcji wykorzystujących mechanizm rotowania lepsza wydajność oznacza możliwość dodawania i usuwania elementów równolegle przez wiele wątków z bardzo dużą szybkością. Aby uzyskać więcej informacji dotyczących rotowania i blokowania, zobacz [struktury SpinLock](../../../../docs/standard/threading/spinlock.md) i [metody SpinWait](../../../../docs/standard/threading/spinwait.md).  

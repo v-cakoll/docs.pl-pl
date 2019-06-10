@@ -1,13 +1,13 @@
 ---
 title: Literały
 description: Dowiedz się więcej o typy literałów w F# języka programowania.
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490979"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816234"
 ---
 # <a name="literals"></a>Literały
 
@@ -44,13 +44,16 @@ W poniższej tabeli przedstawiono typy literałów w F#. Znaki, które reprezent
 |byte[]|Ciąg ASCII|B|`"text"B`|
 |Ciąg lub bajt]|Ciąg Verbatim|@ prefiksu|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Uwagi
+## <a name="named-literals"></a>Nazwane literały
 
-Ciągi Unicode mogą zawierać jawne kodowania, które można określić za pomocą `\u` następuje 16-bitowych kodów szesnastkowych lub kodowania UTF-32, które można określić za pomocą `\U` następuje kod szesnastkowy 32-bitowy, który reprezentuje Unicode Para zastępcza.
+Wartości, które mają być stałymi mogą być oznaczone [literału](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) atrybutu. Ten atrybut jest w stanie sprawić, że wartość zostanie skompilowana jako stała.
 
-Począwszy od programu F# 3.1, można użyć `+` Zaloguj się połączyć literały ciągów znaków. Możesz również użyć operatora testu koniunkcji lub (`|||`) operator, aby łączyć flagi wyliczeń. Na przykład, poniższy kod jest niedozwolony w F# 3.1:
+W wyrażeniach dopasowania do wzorca identyfikatory, które zaczynają się od małych liter są zawsze traktowane jako zmienne do powiązania, a nie jako literały, więc należy generalnie używać początkowych wielkich liter podczas definiowania literałów.
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,13 +67,11 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-Nie jest dozwolone używanie innych operatorów bitowych.
+## <a name="remarks"></a>Uwagi
 
-## <a name="named-literals"></a>Nazwane literały
+Ciągi Unicode mogą zawierać jawne kodowania, które można określić za pomocą `\u` następuje 16-bitowych kodów szesnastkowych lub kodowania UTF-32, które można określić za pomocą `\U` następuje kod szesnastkowy 32-bitowy, który reprezentuje Unicode Para zastępcza.
 
-Wartości, które mają być stałymi mogą być oznaczone [literału](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) atrybutu. Ten atrybut jest w stanie sprawić, że wartość zostanie skompilowana jako stała.
-
-W wyrażeniach dopasowania do wzorca identyfikatory, które zaczynają się od małych liter są zawsze traktowane jako zmienne do powiązania, a nie jako literały, więc należy generalnie używać początkowych wielkich liter podczas definiowania literałów.
+Używanie innych operatorów bitowych inne niż `|||` nie jest dozwolone.
 
 ## <a name="integers-in-other-bases"></a>Liczby całkowite w innych bazach
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Podkreślenia w literałach numerycznych
 
-Począwszy od F# 4.1, można oddzielić cyfr od znaku podkreślenia (`_`).
+Możesz oddzielić cyfr znaku podkreślenia (`_`).
 
 ```fsharp
 let value = 0xDEAD_BEEF

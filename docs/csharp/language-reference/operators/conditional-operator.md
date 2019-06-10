@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 75fa3ec8d332d0424147095db400d43fc31c105f
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae3039df2c1260211f4c7ec3e813db1d0c6cd42b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758167"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815938"
 ---
 # <a name="-operator-c-reference"></a>?: Operator (odwołanie w C#)
 
@@ -52,7 +52,7 @@ a ? b : (c ? d : e)
 
 Poniższy przykład ilustruje użycie operatora warunkowego:
 
-[!code-csharp[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Wyrażenie warunkowe ref
 
@@ -70,7 +70,7 @@ W przypadku wyrażenie warunkowe ref, typ `consequent` i `alternative` musi być
 
 W poniższym przykładzie pokazano użycie wyrażenie warunkowe ref:
 
-[!code-csharp[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
 Aby uzyskać więcej informacji, zobacz [Uwaga propozycji funkcji](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md).
 
@@ -86,7 +86,7 @@ Operatorów warunkowych nie można przeciążać.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [operator warunkowy](~/_csharplang/spec/expressions.md#conditional-operator) części [ C# specyfikacji języka](../language-specification/index.md).
+Aby uzyskać więcej informacji, zobacz [operator warunkowy](~/_csharplang/spec/expressions.md#conditional-operator) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -94,6 +94,6 @@ Aby uzyskać więcej informacji, zobacz [operator warunkowy](~/_csharplang/spec/
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
 - [if-else, instrukcja](../keywords/if-else.md)
-- [Operatory ?. i ?[]](member-access-operators.md#null-conditional-operators--and-)
-- [??, operator](null-coalescing-operator.md)
+- [?. i? Operatory]](member-access-operators.md#null-conditional-operators--and-)
+- [?? operator](null-coalescing-operator.md)
 - [ref keyword](../keywords/ref.md)

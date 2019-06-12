@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76a5c32660c8a08ef34c40f8f4ee9430e5ead5c8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644250"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833969"
 ---
 # <a name="memory--and-span-related-types"></a>Powiązana z pamięcią i zakresu typów
 
 Począwszy od platformy .NET Core 2.1 .NET zawiera wiele powiązanych typów, które reprezentują ciągłe, silnie typizowane region dowolnego pamięci. Należą do nich następujące elementy:
 
-- <xref:System.Span%601?displayProperty=nameWithType>, typ, który umożliwia dostęp do niego ciągły region pamięci. A <xref:System.Span%601> wystąpienia może być wspierany przez tablicę typu `T`, <xref:System.String>, bufor przydzielony za pomocą [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md), lub wskaźnika do niezarządzanej pamięci. Ponieważ ma ona zostać przydzielone na stosie, ma kilku ograniczeniom. Na przykład pole w klasie nie może być typu <xref:System.Span%601>, ani zakresu można używać w operacji asynchronicznych.
+- <xref:System.Span%601?displayProperty=nameWithType>, typ, który umożliwia dostęp do niego ciągły region pamięci. A <xref:System.Span%601> wystąpienia może być wspierany przez tablicę typu `T`, <xref:System.String>, bufor przydzielony za pomocą [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md), lub wskaźnika do niezarządzanej pamięci. Ponieważ ma ona zostać przydzielone na stosie, ma kilku ograniczeniom. Na przykład pole w klasie nie może być typu <xref:System.Span%601>, ani zakresu można używać w operacji asynchronicznych.
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, wersja niezmienne <xref:System.Span%601> struktury.
 

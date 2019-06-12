@@ -1,5 +1,5 @@
 ---
-title: 'Nie można połączyć z plikiem zasobów „<filename>": <error message>'
+title: "Nie można połączyć z plikiem zasobów „<filename>': <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30144
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61787390"
 ---
-# <a name="unable-to-link-to-resource-file-filename-error-message"></a>Nie można połączyć z plikiem zasobów "\<nazwa pliku >": \<komunikat o błędzie >
+# <a name="unable-to-link-to-resource-file-filename-error-message"></a>Nie można połączyć z plikiem zasobów '\<nazwa pliku >': \<komunikat o błędzie >
 Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd łączenie z natywnego modelu COM + plik zasobów z zestawu.  
   
  **Identyfikator błędu:** BC30144  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613975"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833717"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże się do zestawów, które składają się na aplikację. Domyślnie środowisko uruchomieniowe podejmuje próbę powiązania z dokładną wersją zestawu, który aplikacja została skompilowana przy użyciu. To zachowanie domyślne można przesłonić, ustawień pliku konfiguracji.  
@@ -24,7 +24,7 @@ Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć
  Środowisko uruchomieniowe języka wspólnego wykonuje kilka kroków, podczas próby zlokalizowania zestawu i rozwiązać odwołania do zestawu. Każdy krok jest szczegółowo opisane w poniższych sekcjach. Sondowanie termin jest często używana, gdy opisujące, jak środowisko uruchomieniowe lokalizuje zestawy; odwołuje się do zestawu algorytmów heurystycznych używana do lokalizowania zestawów na podstawie jego nazwy i kultury.  
   
 > [!NOTE]
->  Informacje o powiązaniu można wyświetlić w pliku dziennika, używając [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), który znajduje się w [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+>  Informacje o powiązaniu można wyświetlić w pliku dziennika, używając [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), które znajduje się w Windows Software Development Kit (SDK).  
   
 ## <a name="initiating-the-bind"></a>Inicjowanie powiązania  
  Rozpocznie się proces lokalizowania i powiązanie zestawu, gdy środowisko uruchomieniowe próbuje rozpoznać odwołania do innego zestawu. Ta dokumentacja może być statyczne lub dynamiczne. Kompilator odwołań statycznych rekordów w metadanych manifestu zestawu w czasie kompilacji. Odwołania dynamiczne są zbudowane na bieżąco w wyniku wywołania różnych metod, takich jak <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  

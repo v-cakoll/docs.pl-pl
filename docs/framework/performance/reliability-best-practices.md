@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949230"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833801"
 ---
 # <a name="reliability-best-practices"></a>Najlepsze rozwiązania dotyczące niezawodności
 
@@ -265,7 +265,7 @@ Finalizatory nie mogą być problemy z synchronizacją. Nie należy używać sta
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>Należy unikać niezarządzanej pamięci, jeśli jest to możliwe
 
-Niezarządzanej pamięci mogą przedostawać, podobnie jak dojście systemu operacyjnego.  Jeśli to możliwe, spróbuj użyć pamięci na stosie przy użyciu [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) lub przypiętych obiektu zarządzanego, takie jak [fixed Statement](~/docs/csharp/language-reference/keywords/fixed-statement.md) lub <xref:System.Runtime.InteropServices.GCHandle> przy użyciu byte [].  <xref:System.GC> Po pewnym czasie, które utraciły one.  Jednak jeśli należy przydzielić niezarządzanej pamięci, należy wziąć pod uwagę przy użyciu klasy, która pochodzi od klasy <xref:System.Runtime.InteropServices.SafeHandle> opakowywać alokacji pamięci.
+Niezarządzanej pamięci mogą przedostawać, podobnie jak dojście systemu operacyjnego. Jeśli to możliwe, spróbuj użyć pamięci na stosie przy użyciu [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) lub przypiętych obiektu zarządzanego, takie jak [fixed Statement](~/docs/csharp/language-reference/keywords/fixed-statement.md) lub <xref:System.Runtime.InteropServices.GCHandle> przy użyciu byte []. <xref:System.GC> Po pewnym czasie, które utraciły one. Jednak jeśli należy przydzielić niezarządzanej pamięci, należy wziąć pod uwagę przy użyciu klasy, która pochodzi od klasy <xref:System.Runtime.InteropServices.SafeHandle> opakowywać alokacji pamięci.
 
 Należy pamiętać, że istnieje co najmniej jeden przypadek gdzie <xref:System.Runtime.InteropServices.SafeHandle> jest niewystarczające.  Dla modelu COM wywołań metod, które przydzielenia lub zwolnienia pamięci jest typowe dla jednej biblioteki DLL, można przydzielić pamięci za pomocą `CoTaskMemAlloc` , a następnie innej biblioteki DLL powoduje zwolnienie pamięci za pomocą `CoTaskMemFree`.  Za pomocą <xref:System.Runtime.InteropServices.SafeHandle> w tych miejscach będzie niewłaściwe ponieważ spróbuje ona powiązanie okres istnienia niezarządzanej pamięci z okresem istnienia <xref:System.Runtime.InteropServices.SafeHandle> zamiast zezwalać innym kontrolującym DLL okresu istnienia pamięci.
 

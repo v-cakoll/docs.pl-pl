@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ec022f378feba3368ea79fdd5c6ee7ecccf1b9
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469661"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833674"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Udostępnianie składników COM programowi.NET Framework
 Ta sekcja zawiera podsumowanie procesu potrzebne, aby udostępnić istniejący składnik COM do zarządzanego kodu. Aby uzyskać informacje na temat pisania serwerów COM, który jest ściśle zintegrowane z .NET Framework, zobacz [zagadnień projektowych dotyczących współdziałanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -32,7 +32,7 @@ Ta sekcja zawiera podsumowanie procesu potrzebne, aby udostępnić istniejący s
   
 3. [Kompilowanie projektu międzyoperacyjnego](compiling-an-interop-project.md).  
   
-     [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Udostępnia kompilatory dla kilku języków zgodny z Common Language Specification (CLS), w tym Visual Basic C#, i C++.  
+     Zestaw Windows Software Development Kit (SDK) udostępnia kompilatory dla kilku języków zgodny z Common Language Specification (CLS), w tym Visual Basic C#, i C++.  
   
 4. [Wdrażanie aplikacji międzyoperacyjnych](deploying-an-interop-application.md).  
   

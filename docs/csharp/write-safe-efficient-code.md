@@ -3,12 +3,12 @@ title: Zapis w bezpieczny i skuteczny C# kodu
 description: Najnowsze ulepszenia C# języka umożliwiają pisanie weryfikowalny kod bezpieczny, że wydajność była poprzednio skojarzona z niebezpieczny kod.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753888"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832945"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Zapis w bezpieczny i skuteczny C# kodu
 
@@ -189,7 +189,7 @@ Możesz zobaczyć program przykładu, który ilustruje różnice wydajności prz
 
 Funkcja języka powiązane jest zdolność do deklarowania typu wartości, które muszą być ograniczone do ramki stosu. To ograniczenie włącza kompilator udostępnia kilka optymalizacji. Główną motywacją do tej funkcji został <xref:System.Span%601> i pokrewne struktury. Osiągniesz poprawa wydajności wynikająca ze te rozszerzenia funkcjonalności za pomocą nowych i zaktualizowanych interfejsów API platformy .NET, które używanie <xref:System.Span%601> typu.
 
-Masz podobnych wymaganiach dotyczących pracy z pamięcią utworzone za pomocą [ `stackalloc` ](language-reference/keywords/stackalloc.md) lub w przypadku używania pamięci za pomocą międzyoperacyjnych interfejsów API. Definiowanie swoich własnych `ref struct` typy dla tych wymagań.
+Masz podobnych wymaganiach dotyczących pracy z pamięcią utworzone za pomocą [ `stackalloc` ](language-reference/operators/stackalloc.md) lub w przypadku używania pamięci za pomocą międzyoperacyjnych interfejsów API. Definiowanie swoich własnych `ref struct` typy dla tych wymagań.
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` Typ
 

@@ -1,5 +1,5 @@
 ---
-title: "'<interfacename>. <membername>\"został już zaimplementowany przez klasę bazową\"<baseclassname>\". Ponowną implementację elementu <type> zakłada, że"
+title: "'<interfacename>. <membername>'został już zaimplementowany przez klasę bazową'<baseclassname>'. Ponowną implementację elementu <type> zakłada, że"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42015
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64593314"
 ---
-# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>"\<interfacename >. \<membername > "został już zaimplementowany przez klasę bazową\<baseclassname >". Ponowną implementację elementu \<typ > zakłada, że
+# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>'\<interfacename >. \<membername > 'został już zaimplementowany przez klasę bazową\<baseclassname >'. Ponowną implementację elementu \<typ > zakłada, że
 Właściwość, procedura lub zdarzenia w klasie pochodnej używa `Implements` klauzulę określania składowej interfejsu, który został już zaimplementowany w klasie bazowej.  
   
  Klasa pochodna może ponownie składowej interfejsu, który jest implementowany przez jej klasę bazową. Nie jest taka sama jak zastępowanie implementacji klasy podstawowej. Aby uzyskać więcej informacji, zobacz [implementuje](../../../visual-basic/language-reference/statements/implements-clause.md).  

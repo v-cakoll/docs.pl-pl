@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607822"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832915"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Zestawy w środowisku uruchomieniowym języka wspólnego
 Zestawy są blokami konstrukcyjnymi aplikacji .NET Framework; tworzą one podstawową jednostką wdrażania, kontroli wersji, ponownego użycia, określania zakresu aktywacji i uprawnień zabezpieczeń. Zestaw jest kolekcją typów i zasobów, które zostały opracowane w celu współpracują ze sobą i tworzą jednostkę logiczną funkcji. Zestaw zawiera środowisko uruchomieniowe języka wspólnego informacje potrzebne do należy pamiętać o implementacji typu. Do środowiska uruchomieniowego typem nie istnieje poza kontekstem zestawu.  
@@ -42,7 +42,7 @@ Zestawy są blokami konstrukcyjnymi aplikacji .NET Framework; tworzą one podsta
   
  Zespoły mogą być statyczne lub dynamiczne. Statyczne zestawy mogą obejmować typów programu .NET Framework (klasy i interfejsy), a także zasoby dla zestawu (mapy bitowe, JPEG pliki, pliki zasobów i tak dalej). Statyczne zestawy są przechowywane na dysku w przenośnych plików wykonywalnych (PE). Umożliwia także programu .NET Framework do tworzenia dynamicznych zestawów, które są uruchamiane bezpośrednio z pamięci i nie są zapisywane na dysku przed wykonaniem. Możesz zapisać dynamicznych zestawów na dysku, po ich wykonaniu.  
   
- Istnieje kilka sposobów tworzenia zestawów. Można użyć narzędzi deweloperskich, takich jak Visual Studio, użytego w przeszłości do tworzenia plików .dll lub .exe. Można użyć narzędzi dostępnych w [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] tworzenia zestawów z modułów utworzonych w innych środowiskach programistycznych. Umożliwia także środowiska uruchomieniowego języka wspólnego interfejsów API, takich jak <xref:System.Reflection.Emit?displayProperty=nameWithType>, aby utworzyć zestawów dynamicznych.  
+ Istnieje kilka sposobów tworzenia zestawów. Można użyć narzędzi deweloperskich, takich jak Visual Studio, użytego w przeszłości do tworzenia plików .dll lub .exe. Można użyć narzędzi dostępnych w Windows Software Development Kit (SDK) do tworzenia zestawów przy użyciu modułów utworzonych w innych środowiskach programistycznych. Umożliwia także środowiska uruchomieniowego języka wspólnego interfejsów API, takich jak <xref:System.Reflection.Emit?displayProperty=nameWithType>, aby utworzyć zestawów dynamicznych.  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   

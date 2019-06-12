@@ -2,12 +2,12 @@
 title: Wskazówki dotyczące formatowania kodu F#
 description: Dowiedz się, wskazówki dotyczące formatowania F# kodu.
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816179"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833903"
 ---
 # <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu F#
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Użyj składni prefiks dla typów ogólnych (`Foo<T>`) zamiast składni przyrostka (`T Foo`)
 
-F#dziedziczy zarówno przyrostkowe ML styl nazewnictwa typów ogólnych (na przykład `int list`) oraz prefiks stylu .NET (na przykład `list<int>`). Preferuj styl .NET, z wyjątkiem czterech określonych typów:
+F#dziedziczy zarówno przyrostkowe ML styl nazewnictwa typów ogólnych (na przykład `int list`) oraz prefiks stylu .NET (na przykład `list<int>`). Preferuj styl .NET, z wyjątkiem pięć określonych typów:
 
 1. Aby uzyskać F# listy, formularz przyrostkowe: `int list` zamiast `list<int>`.
 2. Aby uzyskać F# opcje formularz przyrostkowe: `int option` zamiast `option<int>`.
-3. Aby uzyskać F# tablic, użyj składni nazwy `int[]` zamiast `int array` lub `array<int>`.
-4. Komórki odwołań, można użyć `int ref` zamiast `ref<int>` lub `Ref<int>`.
+3. Aby uzyskać F# opcje wartości za pomocą formularza przyrostkowe: `int voption` zamiast `voption<int>`.
+4. Aby uzyskać F# tablic, użyj składni nazwy `int[]` zamiast `int array` lub `array<int>`.
+5. Komórki odwołań, można użyć `int ref` zamiast `ref<int>` lub `Ref<int>`.
 
 W przypadku wszystkich innych typów formularz prefiks.
 

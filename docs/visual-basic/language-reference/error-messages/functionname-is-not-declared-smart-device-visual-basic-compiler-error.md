@@ -1,5 +1,5 @@
 ---
-title: "\"<functionname>\" nie został zadeklarowany (inteligentnych urządzeń — błąd kompilatora Visual Basic)"
+title: "'<functionname>' nie został zadeklarowany (inteligentnych urządzeń — błąd kompilatora Visual Basic)"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30766
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662082"
 ---
-# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>"\<functionname >' nie został zadeklarowany (inteligentnych urządzeń/błąd kompilatora Visual Basic)
+# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<functionname >' nie został zadeklarowany (inteligentnych urządzeń/błąd kompilatora Visual Basic)
 <`functionname`> nie został zadeklarowany. Funkcje We/Wy pliku jest zwykle dostępna w `Microsoft.VisualBasic` przestrzeni nazw, ale wersji docelowej programu .NET Compact Framework nie jest ona obsługiwana.  
   
  **Identyfikator błędu:** BC30766  

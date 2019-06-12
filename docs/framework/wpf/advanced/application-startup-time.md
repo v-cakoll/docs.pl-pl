@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689330"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832699"
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
 Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegany wartość rzeczywista dla aplikacji Windows Presentation Foundation (WPF).  
@@ -24,7 +24,7 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
  Bez wyłączania zasilania uruchamiania występuje, gdy większość na stronach głównych składników środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego zostały już załadowane w pamięci, co pozwala zaoszczędzić czas dostępu drogich dysków. Właśnie dlatego aplikacji zarządzanej rozpoczyna się szybciej, gdy jest uruchamiany po raz drugi.  
   
 ## <a name="implement-a-splash-screen"></a>Implementowanie ekran powitalny  
- W przypadkach, gdy jest istotne, nieuniknione opóźnienie między uruchomieniem aplikacji oraz wyświetlanie pierwszego interfejsu użytkownika, optymalizowanie czasu uruchamiania postrzegany przy użyciu *ekran powitalny*. Ta metoda Wyświetla obraz niemal natychmiast po użytkownik uruchamia aplikację. Gdy aplikacja jest gotowa do wyświetlenia jego pierwszego interfejsu użytkownika, stopniowo zmienia się na ekranie powitalnym. Począwszy od [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], możesz użyć <xref:System.Windows.SplashScreen> klasy do zaimplementowania ekran powitalny. Aby uzyskać więcej informacji, zobacz [dodać ekran powitalny do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ W przypadkach, gdy jest istotne, nieuniknione opóźnienie między uruchomieniem aplikacji oraz wyświetlanie pierwszego interfejsu użytkownika, optymalizowanie czasu uruchamiania postrzegany przy użyciu *ekran powitalny*. Ta metoda Wyświetla obraz niemal natychmiast po użytkownik uruchamia aplikację. Gdy aplikacja jest gotowa do wyświetlenia jego pierwszego interfejsu użytkownika, stopniowo zmienia się na ekranie powitalnym. Począwszy od .NET Framework 3.5 SP1, można użyć <xref:System.Windows.SplashScreen> klasy do zaimplementowania ekran powitalny. Aby uzyskać więcej informacji, zobacz [dodać ekran powitalny do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Możesz również wdrożyć ekranu powitalnego za pomocą natywnego grafiki Win32. Wyświetlanie implementacji przed <xref:System.Windows.Application.Run%2A> metoda jest wywoływana.  
   

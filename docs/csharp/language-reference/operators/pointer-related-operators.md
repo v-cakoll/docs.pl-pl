@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
-ms.translationtype: MT
+ms.openlocfilehash: 0cc104c7246763ee32866fe5233b9774253a2888
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758098"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833136"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Wskaźnik związane z operatorów (C# odwołania)
 
@@ -96,7 +96,7 @@ Poniższy przykład pokazuje, jak uzyskać dostęp do elementów tablicy ze wska
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-W przykładzie użyto [ `stackalloc` operator](../keywords/stackalloc.md) przydzielić blok pamięci na stosie.
+W przykładzie użyto [ `stackalloc` operator](stackalloc.md) przydzielić blok pamięci na stosie.
 
 > [!NOTE]
 > Operator dostępu do elementu wskaźnik nie sprawdzaj liczbach błędy.
@@ -193,5 +193,5 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [`unsafe` Słowo kluczowe](../keywords/unsafe.md)
 - [`fixed` Słowo kluczowe](../keywords/fixed-statement.md)
-- [`stackalloc` Operator](../keywords/stackalloc.md)
+- [`stackalloc` Operator](stackalloc.md)
 - [`sizeof` Operator](../keywords/sizeof.md)

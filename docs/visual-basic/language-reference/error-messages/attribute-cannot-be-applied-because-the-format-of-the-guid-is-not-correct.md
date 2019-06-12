@@ -1,5 +1,5 @@
 ---
-title: „<attribute>" nie może być zastosowane, ponieważ format identyfikatora GUID „<number>" jest nieprawidłowy
+title: „<attribute>' nie może być zastosowane, ponieważ format identyfikatora GUID „<number>' jest nieprawidłowy
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32500
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62054383"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>"\<atrybut >" nie można zastosować, ponieważ format identyfikatora GUID "\<liczba >" jest nieprawidłowy
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<atrybut >' nie można zastosować, ponieważ format identyfikatora GUID '\<liczba >' jest nieprawidłowy
 A `COMClassAttribute` bloku attribute określa unikatowy identyfikator globalny (GUID), który jest niezgodny ze odpowiedni format identyfikatora GUID. `COMClassAttribute` używa identyfikatorów GUID do unikatowego identyfikowania tej klasy, interfejsu i zdarzenie tworzenia.  
   
  Identyfikator GUID składa się z 16-bajtowy, z których pierwszych osiem to liczbowe, a ostatnie 8 to: binary. Ona jest generowany przez narzędzia firmy Microsoft, takie jak uuidgen.exe i jest musi być unikatowy w miejsce i czas.  

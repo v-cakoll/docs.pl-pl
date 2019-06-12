@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593643"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832868"
 ---
 # <a name="delay-signing-an-assembly"></a>Opóźnione podpisywanie zestawu
 Organizacja może mieć ściśle chronionej parę kluczy, że deweloperzy nie mają dostępu do codziennie. Klucz publiczny jest często dostępne, ale dostęp do klucza prywatnego jest ograniczony do tylko kilka osób. Podczas tworzenia zestawów o silnych nazwach, każdy zestaw ten zestaw docelowy o silnej nazwie odwołania zawiera token klucza publicznego, używać, aby zapewnić silnej nazwy zestawu docelowego. Wymaga to, czy klucz publiczny będą dostępne podczas procesu projektowania.  
@@ -28,7 +28,7 @@ Organizacja może mieć ściśle chronionej parę kluczy, że deweloperzy nie ma
   
  Poniższe kroki przedstawiają procedurę opóźnione podpisywanie zestawu:  
   
-1. Uzyskaj część z kluczem publicznym pary kluczy od organizacji, która będzie zajmować się ostateczną podpisywania. Zazwyczaj ten klucz jest w formie pliku .snk, które mogą być tworzone za pomocą [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) dostarczone przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+1. Uzyskaj część z kluczem publicznym pary kluczy od organizacji, która będzie zajmować się ostateczną podpisywania. Zazwyczaj ten klucz jest w formie pliku .snk, które mogą być tworzone za pomocą [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) dostarczane przez Windows Software Development Kit (SDK).  
   
 2. Dodawanie adnotacji do kodu źródłowego dla zestawu za pomocą dwóch atrybutów niestandardowych z <xref:System.Reflection>:  
   

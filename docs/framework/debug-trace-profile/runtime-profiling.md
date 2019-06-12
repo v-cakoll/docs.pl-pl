@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0c56018c61e5566043fb2b9ba8bbee042093f12
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758146"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833761"
 ---
 # <a name="runtime-profiling"></a>Profilowanie środowiska uruchomieniowego
 Profilowanie jest metoda zbierania danych wydajności w każdym scenariuszu rozwoju lub wdrożenia. Ta sekcja dotyczy dla deweloperów i administratorów, którzy chcą zebrać informacje dotyczące wydajności aplikacji.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Śledzenie wydajności przy użyciu Monitora wydajności (Perfmon.exe)  
- Monitor wydajności jest najprostszym narzędzie służące do profilu aplikacji środowiska .NET Framework. Monitor wydajności graficznie reprezentuje dane liczników wydajności .NET Framework, które są instalowane z środowiska uruchomieniowego języka wspólnego i [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Te liczniki można monitorować wszystko — od zarządzania pamięcią just-in-time (JIT) kompilatora wydajności. Ich poinformować użytkownika o zasoby używane przez aplikację, czyli pośrednich miary wydajności Twojej aplikacji. Zrozumienie sposobu działania aplikacji wewnętrznie, korzystać z tych liczników.  
+ Monitor wydajności jest najprostszym narzędzie służące do profilu aplikacji środowiska .NET Framework. Monitor wydajności graficznie reprezentuje dane liczników wydajności .NET Framework, które są instalowane za pomocą środowiska uruchomieniowego języka wspólnego i zestaw Windows Software Development Kit (SDK). Te liczniki można monitorować wszystko — od zarządzania pamięcią just-in-time (JIT) kompilatora wydajności. Ich poinformować użytkownika o zasoby używane przez aplikację, czyli pośrednich miary wydajności Twojej aplikacji. Zrozumienie sposobu działania aplikacji wewnętrznie, korzystać z tych liczników.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Aby uruchomić Perfmon.exe w systemach Windows Vista i nowsze wersje  
   

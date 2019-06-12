@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816149"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832772"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Konsolidator zestawów)
 
@@ -108,7 +108,7 @@ W poniższej tabeli wymieniono błędy generowane przez *Al.exe*.
 |al1015|Nie można odnaleźć pliku "alinkui.dll" wiadomości<br /><br /> *Al.exe* wymaga *Alinkui.dll*. Upewnij się, że ten plik na ścieżce. Jeśli to konieczne, skopiuj go z dysku CD produktu.|
 |al1016|Nie określono żadnych prawidłowych plików wejściowych<br /><br /> *Al.exe* wymaga jednego lub więcej plików wejściowych, które nie mają informacji o zestawie.|
 |al1017|Nazwa pliku docelowego nie została określona.<br /><br /> Wymagane **/out** opcję określającą, Brak nazwy pliku docelowego.|
-|al1018|Nie można załadować wymaganego pliku 'Plik'<br /><br /> Nie można załadować niektórych plików DLL. Zainstaluj ponownie program Visual Studio lub [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].|
+|al1018|Nie można załadować wymaganego pliku 'Plik'<br /><br /> Nie można załadować niektórych plików DLL. Zainstaluj ponownie program Visual Studio lub Windows Software Development Kit (SDK).|
 |al1019|Wystąpił błąd metadanych podczas tworzenia zestawu — Przyczyna<br /><br /> Generowanie zestawu została przerwana z określonej przyczyny. Na przykład ten błąd występuje, jeśli określony plik **/win32res** nie zostanie znaleziona opcja.|
 |al1020|Ignorowanie dołączonego zestawu 'Plik'<br /><br /> Plik wejściowy, który zawierał zestawu została określona. *Al.exe* pliki wejściowe nie mogą zawierać zestawów.|
 |al1021|"ustawienia": przesłanianie poprzedniego ustawienia<br /><br /> Moduł ma wartość dla konkretnego ustawienia, prawdopodobnie przypisane za pomocą atrybutów niestandardowych, która została zastąpiona wartością przekazywanych przy użyciu *Al.exe* opcji wiersza polecenia.|

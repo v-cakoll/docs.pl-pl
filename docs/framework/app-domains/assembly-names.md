@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675081"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832888"
 ---
 # <a name="assembly-names"></a>Nazwy zestawów
 Nazwa zestawu jest przechowywany w metadanych i ma znaczny wpływ na zakres zestawu i użycia przez aplikację. Zestawu z silną nazwą ma w pełni kwalifikowana nazwa, która zawiera nazwę zestawu, kultury, klucz publiczny i numer wersji. Jest to często określane jako wyświetlaną nazwę i dla zestawów załadowanych można uzyskać za pomocą <xref:System.Reflection.Assembly.FullName%2A> właściwości.  
@@ -45,7 +45,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
->  Środowisko uruchomieniowe traktuje nazwy zestawu jako bez uwzględniania wielkości liter, podczas tworzenia wiązania do zestawu, ale zachowuje, niezależnie od przypadku jest używany w nazwie zestawu. Niektóre narzędzia [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] obsługi nazw zestawów jako wielkość liter. Aby uzyskać najlepsze wyniki Zarządzanie nazw zestawów tak, jakby były uwzględniana wielkość liter.  
+>  Środowisko uruchomieniowe traktuje nazwy zestawu jako bez uwzględniania wielkości liter, podczas tworzenia wiązania do zestawu, ale zachowuje, niezależnie od przypadku jest używany w nazwie zestawu. Kilku narzędzi w Windows Software Development Kit (SDK) obsługują nazwy zestawu jako wielkość liter. Aby uzyskać najlepsze wyniki Zarządzanie nazw zestawów tak, jakby były uwzględniana wielkość liter.  
   
 ## <a name="naming-application-components"></a>Nadawanie nazw składników aplikacji  
  Środowisko wykonawcze nie należy wziąć pod uwagę nazwę pliku podczas ustalania tożsamości zestawu. Tożsamość zestawu, który składa się z nazwy zestawu, wersji, kultury i silnej nazwy, musi być czysty do środowiska uruchomieniowego.  

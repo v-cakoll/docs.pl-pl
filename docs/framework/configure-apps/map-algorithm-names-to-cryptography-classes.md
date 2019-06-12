@@ -7,15 +7,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 9e4154923b2bb0abfe48e7a530497c3d5bf28d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583729"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832683"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapowanie nazw algorytmów na klasy kryptografii
-Istnieją cztery sposoby Deweloper można utworzyć obiektu kryptografii przy użyciu [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+Istnieją cztery sposoby deweloper może utworzyć obiekt kryptografii przy użyciu Windows Software Development Kit (SDK):  
   
 - Utwórz obiekt przy użyciu **nowe** operatora.  
   
@@ -25,7 +25,7 @@ Istnieją cztery sposoby Deweloper można utworzyć obiektu kryptografii przy u�
   
 - Utwórz obiekt, który implementuje klasa algorytmów kryptograficznych (takich jak symetrycznym szyfrem) przez wywołanie metody **Utwórz** metody abstrakcyjne klasy dla tego typu algorytmu (takie jak <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
- Na przykład załóżmy, że deweloper chce obliczenia skrótu SHA1 zestawu bajtów. <xref:System.Security.Cryptography> Przestrzeń nazw zawiera dwie implementacje algorytmu SHA1, co czysto zarządzaną implementację i jedną, która opakowuje interfejs CryptoAPI. Deweloper można wybrać do utworzenia wystąpienia określonej implementacji SHA1 (takie jak <xref:System.Security.Cryptography.SHA1Managed>) przez wywołanie metody **nowe** operatora. Jednak jeśli nie ma znaczenia, klasa, która ładuje środowisko uruchomieniowe języka wspólnego, tak długo, jak klasa implementuje algorytm wyznaczania wartości skrótu SHA1, deweloper można utworzyć obiektu przez wywołanie metody <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metody. Ta metoda wywołuje **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, który musi zwrócić implementację algorytmu wyznaczania wartości skrótu SHA1.  
+ Na przykład załóżmy, że deweloper chce obliczenia skrótu SHA1 zestawu bajtów. <xref:System.Security.Cryptography> Przestrzeń nazw zawiera dwie implementacje algorytmu SHA1, co czysto zarządzaną implementację i jedną, która opakowuje interfejs CryptoAPI. Deweloper można wybrać do utworzenia wystąpienia określonej implementacji SHA1 (takie jak <xref:System.Security.Cryptography.SHA1Managed>) przez wywołanie metody **nowe** operatora. Jednak jeśli nie ma znaczenia, klasa, która ładuje środowisko uruchomieniowe języka wspólnego, tak długo, jak klasa implementuje algorytm wyznaczania wartości skrótu SHA1, deweloper można utworzyć obiektu przez wywołanie metody <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metody. Ta metoda wywołuje **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** , który musi zwrócić implementację algorytmu wyznaczania wartości skrótu SHA1.  
   
  Deweloper można również wywołać **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** ponieważ domyślnie kryptografii Konfiguracja obejmuje krótkich nazw dla algorytmów dostarczane w programie .NET Framework.  
   
@@ -34,7 +34,7 @@ Istnieją cztery sposoby Deweloper można utworzyć obiektu kryptografii przy u�
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Mapowanie nazw algorytmów w plikach konfiguracji  
  Domyślnie środowisko wykonawcze zwraca <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> obiektu dla wszystkich, cztery scenariusze. Jednak administrator komputera można zmienić typu obiektu, zwracane metod w ostatnich dwóch scenariuszy. Aby to zrobić, należy zamapować algorytm przyjazną nazwę klasy, których chcesz użyć w pliku konfiguracji komputera (Machine.config).  
   
- Poniższy przykład przedstawia sposób konfigurowania środowiska uruchomieniowego, aby **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, i  **System.Security.Cryptography.HashAlgorithm.Create** zwracają `MySHA1HashClass` obiektu.  
+ Poniższy przykład przedstawia sposób konfigurowania środowiska uruchomieniowego, aby **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")** , i  **System.Security.Cryptography.HashAlgorithm.Create** zwracają `MySHA1HashClass` obiektu.  
   
 ```xml  
 <configuration>  

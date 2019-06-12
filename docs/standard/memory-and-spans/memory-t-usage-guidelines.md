@@ -1,17 +1,17 @@
 ---
-title: Pamięć<T> i zakres<T> wytyczne dotyczące użycia
+title: Wytyczne dotyczące użycia struktur Memory<T> i Span<T>
 ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063283"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834044"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Pamięć\<T > i zakres\<T > wytyczne dotyczące użycia
 
@@ -138,7 +138,7 @@ W rzeczywistości Jeśli połączono tej reguły i zasady nr 1, możemy zrobić 
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-`DisplayBufferToConsole` Metoda współpracuje teraz z niemal każdego typu buforu imaginable: `T[]`, Magazyn jest przydzielany za pomocą [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md)i tak dalej. Możesz nawet przekazać <xref:System.String> bezpośrednio do niego!
+`DisplayBufferToConsole` Metoda współpracuje teraz z niemal każdego typu buforu imaginable: `T[]`, Magazyn jest przydzielany za pomocą [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md)i tak dalej. Możesz nawet przekazać <xref:System.String> bezpośrednio do niego!
 
 **Reguła #3: Jeśli metoda akceptuje pamięci\<T > i zwraca `void`, nie można używać pamięci\<T > wystąpienie, po powrocie z metody.**
 

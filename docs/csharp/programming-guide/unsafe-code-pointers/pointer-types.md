@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880331"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833437"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 
@@ -82,7 +82,7 @@ W poniższej tabeli wymieniono operatory i instrukcje, które mogą wykonywać o
 |`++` i `--`|Zwiększa i zmniejsza wartość wskaźnika.|
 |`+` i `-`|Wykonuje operacje arytmetyczne na wskaźniku.|
 |`==`, `!=`, `<`, `>`, `<=`, i `>=`|Porównuje wskaźniki.|
-|[`stackalloc` Operator](../../language-reference/keywords/stackalloc.md)|Przydziela pamięć na stosie.|
+|[`stackalloc` Operator](../../language-reference/operators/stackalloc.md)|Przydziela pamięć na stosie.|
 |[`fixed` Instrukcja](../../language-reference/keywords/fixed-statement.md)|Tymczasowo ustala zmienną, dzięki czemu można znaleźć ten adres.|
 
 Aby uzyskać więcej informacji na temat wskaźnika powiązane operatorów, zobacz [wskaźnik związane z operatorów](../../language-reference/operators/pointer-related-operators.md).

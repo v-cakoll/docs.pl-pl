@@ -1,5 +1,5 @@
 ---
-title: Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego „<assembly1>" z powodu pośredniego odwołania do tego zestawu z zestawu „<assembly2>".
+title: Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego „<assembly1>' z powodu pośredniego odwołania do tego zestawu z zestawu „<assembly2>'.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40059
@@ -15,8 +15,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64646880"
 ---
-# <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego "\<assembly1 >" z powodu pośredniego odwołania do tego zestawu z zestawu "\<assembly2 >"
-Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego "\<assembly1 >" z powodu pośredniego odwołania do tego zestawu z zestawu "\<assembly2 >". Rozważ zmianę właściwości "Embed Interop Types" na jednym z zestawów.  
+# <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego '\<assembly1 >' z powodu pośredniego odwołania do tego zestawu z zestawu '\<assembly2 >'
+Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego '\<assembly1 >' z powodu pośredniego odwołania do tego zestawu z zestawu '\<assembly2 >'. Rozważ zmianę właściwości 'Embed Interop Types' na jednym z zestawów.  
   
  Dodano odwołanie do zestawu (assembly1), który ma `Embed Interop Types` właściwością `True`. To powoduje, że kompilator, aby osadzić typu międzyoperacyjnego informacje z tego zestawu. Jednak kompilator nie można osadzić typu międzyoperacyjnego informacje z tego zestawu, ponieważ także innego zestawu, że masz przywoływane (zależność assembly2) odwołuje się do tego zestawu (assembly1) i ma `Embed Interop Types` właściwością `False`.  
   

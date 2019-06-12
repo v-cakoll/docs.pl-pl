@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: MT
+ms.openlocfilehash: e72d093dd02f4a67386f58af5df40247c66dc378
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378569"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832798"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -100,7 +100,7 @@ Plik tekstowy produkowane przez *Ildasm.exe* mogą być używane jako wejście d
 > [!NOTE]
 > Obecnie nie można używać tej techniki w połączeniu z plikami PE zawierającymi osadzony kod natywny (na przykład pliki PE generowane przez program Visual C++).  
 
-Można użyć domyślnego graficznego interfejsu użytkownika dezasemblera IL, aby wyświetlić metadane i zdezasemblowany kod jakiegokolwiek istniejącego pliku PE w hierarchicznym widoku drzewa. Aby użyć graficznego interfejsu użytkownika, wpisz **ildasm** w wierszu polecenia bez podawania *PEfilename* argument lub żadnych opcji. Z **pliku** menu, możesz przejść do pliku PE, który chcesz załadować do *Ildasm.exe*. Aby zapisać metadane i dezasemblowany kod wyświetlone dla wybranego PE, zaznacz **zrzutu** polecenia **pliku** menu. Aby zapisać hierarchiczny widok drzewa, wybierz **Zrzuć widok drzewa** polecenia **pliku** menu. Aby uzyskać szczegółowy poradnik na potrzeby ładowania pliku do *Ildasm.exe* i interpretowanie danych wyjściowych, zobacz *Ildasm.exe* samouczek, znajduje się w folderze Samples, dostarczany z programem [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Można użyć domyślnego graficznego interfejsu użytkownika dezasemblera IL, aby wyświetlić metadane i zdezasemblowany kod jakiegokolwiek istniejącego pliku PE w hierarchicznym widoku drzewa. Aby użyć graficznego interfejsu użytkownika, wpisz **ildasm** w wierszu polecenia bez podawania *PEfilename* argument lub żadnych opcji. Z **pliku** menu, możesz przejść do pliku PE, który chcesz załadować do *Ildasm.exe*. Aby zapisać metadane i dezasemblowany kod wyświetlone dla wybranego PE, zaznacz **zrzutu** polecenia **pliku** menu. Aby zapisać hierarchiczny widok drzewa, wybierz **Zrzuć widok drzewa** polecenia **pliku** menu. Aby uzyskać szczegółowy poradnik na potrzeby ładowania pliku do *Ildasm.exe* i interpretowanie danych wyjściowych, zobacz *Ildasm.exe* samouczek, znajduje się w folderze Samples, dostarczany z Windows Software Development Kit (SDK ).
 
 Jeśli podasz *Ildasm.exe* z *PEfilename* argument, który zawiera osadzone zasoby, narzędzie wygeneruje wiele plików wyjściowych: plik tekstowy, który zawiera kod IL i dla każdego z osadzonych zarządzanych zasób, plik Resource wygenerowany przy użyciu nazwy zasobu z metadanych. Jeśli w jest osadzony niezarządzany zasób *PEfilename*, generowany jest plik res, przy użyciu nazwy pliku określonej dla wyjścia IL za **/output** opcji.
 

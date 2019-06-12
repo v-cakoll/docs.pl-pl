@@ -1,5 +1,5 @@
 ---
-title: <type1>"<typename>musi implementować<membername>"dla interfejsu"<interfacename>"
+title: <type1>'<typename>musi implementować<membername>'dla interfejsu'<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -14,8 +14,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61792096"
 ---
-# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 > "\<typename >" musi implementować "\<membername >" dla interfejsu "\<interfacename >"
-"\<typename >" musi implementować "\<membername >" dla interfejsu "\<interfacename >". Implementowanie właściwości musi mieć dopasowania "ReadOnly" / specyfikatorów "WriteOnly".  
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 > '\<typename >' musi implementować '\<membername >' dla interfejsu '\<interfacename >'
+'\<typename >' musi implementować '\<membername >' dla interfejsu '\<interfacename >'. Implementowanie właściwości musi mieć dopasowania 'ReadOnly' / specyfikatorów 'WriteOnly'.  
   
  Klasa lub struktura oświadczeń zaimplementować interfejs, ale nie implementuje procedurę, właściwości lub zdarzenia, zdefiniowany przez interfejs. Należy zaimplementować każdego członka interfejsu.  
   

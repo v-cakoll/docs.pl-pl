@@ -3,12 +3,12 @@ title: Jak zainstalować narzędzie strukturze ML.NET interfejsu wiersza polecen
 description: Omówienie i instalacja narzędzia strukturze ML.NET interfejsu wiersza polecenia (CLI).
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557855"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832933"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Jak zainstalować narzędzie strukturze ML.NET interfejsu wiersza polecenia (CLI)
 
@@ -34,7 +34,7 @@ Interfejs wiersza polecenia strukturze ML.NET zainstalowano podobnie jak wszystk
 Poniższy przykład pokazuje, jak do zainstalowania interfejsu wiersza polecenia strukturze ML.NET w domyślnym, który NuGet kanału informacyjnego lokalizacji:
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 Jeśli nie można zainstalować narzędzia, (to znaczy, jeśli nie jest dostępny na domyślne, które NuGet źródła danych), zostaną wyświetlone komunikaty o błędach. Sprawdź, że źródła danych, które miały są sprawdzane.
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Można potwierdzić, że instalacja zakończyła się pomyślnie, wpisując następujące polecenie:
 
 ```console
-> mlnet
+mlnet
 ```
 
 Pomoc dla dostępnych poleceń dla narzędzia mlnet, takie jak polecenie "auto-train" powinien być widoczny.
@@ -59,13 +59,13 @@ Pomoc dla dostępnych poleceń dla narzędzia mlnet, takie jak polecenie "auto-t
 Jeśli próbujesz zainstalować wersję wstępną lub określoną wersję narzędzia, możesz określić [framework](../../standard/frameworks.md) w następującym formacie:
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Możesz również sprawdzić, jeśli pakiet jest prawidłowo zainstalowany, wpisując następujące polecenie:
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>Odinstaluj pakiet interfejsu wiersza polecenia
@@ -73,7 +73,7 @@ Możesz również sprawdzić, jeśli pakiet jest prawidłowo zainstalowany, wpis
 Wpisz następujące polecenie, aby odinstalować pakiet z komputera lokalnego:
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>Aktualizuj pakiet interfejsu wiersza polecenia
@@ -81,7 +81,7 @@ Wpisz następujące polecenie, aby odinstalować pakiet z komputera lokalnego:
 Wpisz następujące polecenie, aby zaktualizować pakiet z komputera lokalnego:
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>Konfigurowanie interfejsu wiersza polecenia sugestie (oparte na karcie automatycznego uzupełniania)
@@ -101,7 +101,7 @@ Na komputerze, na którym chcesz włączyć uzupełnianie należy wykonać dwie 
 1. Zainstaluj `dotnet-suggest` narzędzie globalne, uruchamiając następujące polecenie:
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. Dodaj skrypt podkładki odpowiednie do swojego profilu powłoki. Użytkownik może być konieczne utworzenie pliku profilu powłoki. Skrypt podkładki przekaże żądania zakończenia z powłoki do `dotnet-suggest` narzędzia, który deleguje do odpowiedniego `System.CommandLine`— na podstawie aplikacji.
@@ -111,7 +111,7 @@ Na komputerze, na którym chcesz włączyć uzupełnianie należy wykonać dwie 
     * W przypadku programu PowerShell, należy dodać zawartość [dotnet zasugerować shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) do Twojego profilu programu PowerShell. Oczekiwaną ścieżką do Twojego profilu programu PowerShell można znaleźć, uruchamiając następujące polecenie w konsoli:
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (Dla innych powłoki [poszukaj](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) lub Otwórz [problem](https://github.com/dotnet/System.CommandLine/issues).)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 68f0c12d173587e8efc0fe283617b5805c6f7eae
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877029"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833364"
 ---
 # <a name="command-line-build-with-cscexe"></a>Kompilacji wiersza polecenia przy użyciu csc.exe
 Można wywołać kompilatora języka C#, wpisując nazwę jego pliku wykonywalnego (*csc.exe*) w wierszu polecenia.
@@ -19,11 +19,11 @@ Jeśli używasz **wiersz polecenia programisty dla programu Visual Studio** okni
 
 Jeśli używasz standardowego okna wiersza polecenia, należy dostosować swoją ścieżkę przed może wywołać *csc.exe* z wszelkie podkatalogi na tym komputerze. Należy również uruchomić *vsvars32.bat* można ustawić odpowiednie zmienne środowiskowe do obsługi kompilacji z wiersza polecenia. Aby uzyskać więcej informacji na temat *vsvars32.bat*, w tym instrukcje dotyczące sposobu Znajdź i uruchom go, zobacz [jak: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
-Jeśli pracujesz na komputerze, który ma tylko [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], można użyć kompilatora języka C# w **SDK Command Prompt**, które można otworzyć **Microsoft .NET Framework SDK** opcji menu.
+Jeśli pracujesz na komputerze, na którym zainstalowano tylko Windows Software Development Kit (SDK), możesz użyć C# kompilatora na **SDK Command Prompt**, które można otworzyć **Microsoft .NET Framework SDK**opcji menu.
 
 Umożliwia także programu MSBuild do kompilowania programów C#, programowo. Aby uzyskać więcej informacji, zobacz [MSBuild](/visualstudio/msbuild/msbuild).
 
-*Csc.exe* pliku wykonywalnego zwykle znajduje się w Microsoft.NET\Framework\\*\<wersji >* folderze *Windows* katalog. Lokalizacji może się różnić w zależności od dokładnej konfiguracji określonego komputera. Jeśli więcej niż jedna wersja programu .NET Framework jest zainstalowany na komputerze, znajdziesz wiele wersji tego pliku. Aby uzyskać więcej informacji na temat tych instalacji, zobacz [porady: Określanie, które wersje programu .NET Framework są zainstalowane](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+*Csc.exe* pliku wykonywalnego zwykle znajduje się w Microsoft.NET\Framework\\ *\<wersji >* folderze *Windows* katalog. Lokalizacji może się różnić w zależności od dokładnej konfiguracji określonego komputera. Jeśli więcej niż jedna wersja programu .NET Framework jest zainstalowany na komputerze, znajdziesz wiele wersji tego pliku. Aby uzyskać więcej informacji na temat tych instalacji, zobacz [porady: Określanie, które wersje programu .NET Framework są zainstalowane](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
 >  Gdy tworzysz projekt za pomocą środowiska IDE programu Visual Studio możesz wyświetlać **csc** polecenia i jego opcji kompilatora skojarzone w **dane wyjściowe** okna. Aby wyświetlić te informacje, postępuj zgodnie z instrukcjami [jak: Wyświetlanie, zapisywanie i konfigurowanie plików dziennika kompilacji](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) Aby zmienić poziom szczegółowości danych dziennika, aby **normalny** lub **szczegółowe**. Wyszukiwanie po ponownym skompilowaniu projektu **dane wyjściowe** okno **csc** można znaleźć wywołania kompilator języka C#.
@@ -93,7 +93,7 @@ csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Różnice między kompilatorem C# i danymi wyjściowymi kompilatora C++
-Istnieją żaden obiekt (*.obj*) pliki utworzone w wyniku wywołania kompilator języka C#; pliki wyjściowe są tworzone bezpośrednio. W efekcie kompilator języka C# nie jest konieczne konsolidatora.
+Istnieją żaden obiekt ( *.obj*) pliki utworzone w wyniku wywołania kompilator języka C#; pliki wyjściowe są tworzone bezpośrednio. W efekcie kompilator języka C# nie jest konieczne konsolidatora.
 
 ## <a name="see-also"></a>Zobacz także
 

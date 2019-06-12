@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 3ffd25dae3826df0f02f2afb707f7317b2d92d24
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 687398e47ad95e3234c29571eeeac0c9d2d83a39
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584548"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832789"
 ---
 # <a name="systemweb-element-web-settings"></a>\<System.Web >, Element (ustawienia sieci Web)
 Zawiera informacje o sposobie zarządzania zachowanie całego procesu w warstwie hostingu platformy ASP.NET.  
@@ -47,10 +47,10 @@ Zawiera informacje o sposobie zarządzania zachowanie całego procesu w warstwie
 |[\<Konfiguracja >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacji programu .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
- `system.web` Elementu i jego podrzędny `applicationPool` element zostały dodane do programu .NET Framework, począwszy od programu [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Po uruchomieniu [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowsze wersje w trybie zintegrowanym, ta kombinacja element umożliwia skonfigurowanie sposobu ASP.NET zarządza wątków i jak go umieszcza w kolejce żądań gdy ASP.NET jest hostowany w puli aplikacji usług IIS. Jeśli uruchamiasz [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowsze wersje w trybie klasycznym lub ISAPI, te ustawienia są ignorowane.  
+ `system.web` Elementu i jego podrzędny `applicationPool` element zostały dodane do programu .NET Framework, począwszy od programu .NET Framework 3.5 z dodatkiem SP1. Po uruchomieniu [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowsze wersje w trybie zintegrowanym, ta kombinacja element umożliwia skonfigurowanie sposobu ASP.NET zarządza wątków i jak go umieszcza w kolejce żądań gdy ASP.NET jest hostowany w puli aplikacji usług IIS. Jeśli uruchamiasz [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowsze wersje w trybie klasycznym lub ISAPI, te ustawienia są ignorowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak skonfigurować sposób działania całego procesu ASP.NET w pliku konfigurację aspnet.config ASP.NET znajduje się w puli aplikacji IIS. W przykładzie założono, że uruchomieniu usług IIS w zintegrowany tryb i że aplikacja używa [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] lub nowszej. To zachowanie nie występuje w wersjach programu .NET Framework wcześniejszych niż [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Wartości w przykładzie są wartości domyślne.  
+ Poniższy przykład pokazuje, jak skonfigurować sposób działania całego procesu ASP.NET w pliku konfigurację aspnet.config ASP.NET znajduje się w puli aplikacji IIS. W przykładzie założono, że uruchomieniu usług IIS w zintegrowany tryb i że aplikacja używa .NET Framework 3.5 z dodatkiem SP1 lub nowszym. To zachowanie nie występuje w wersjach programu .NET Framework wcześniejszych niż .NET Framework 3.5 SP1. Wartości w przykładzie są wartości domyślne.  
   
 ```xml  
 <configuration>  

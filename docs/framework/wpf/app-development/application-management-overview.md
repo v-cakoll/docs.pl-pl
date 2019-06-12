@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623310"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834071"
 ---
 # <a name="application-management-overview"></a>Przegląd Zarządzanie aplikacjami
 Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które mają zastosowanie do wdrożenia aplikacji i zarządzania. Ten temat zawiera omówienie funkcji w <xref:System.Windows.Application> klasa do tworzenia aplikacji i zarządzaniem nimi.  
@@ -127,7 +127,7 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Ekran powitalny  
- Począwszy od [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], można określić obrazu do użycia w oknie uruchamiania lub *ekran powitalny*. <xref:System.Windows.SplashScreen> Klasy można łatwo wyświetlać okno uruchamiania podczas ładowania aplikacji. <xref:System.Windows.SplashScreen> Okna jest tworzony i wyświetlany przed <xref:System.Windows.Application.Run%2A> jest wywoływana. Aby uzyskać więcej informacji, zobacz [czas uruchamiania aplikacji](../advanced/application-startup-time.md) i [dodać ekran powitalny do aplikacji WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Począwszy od .NET Framework 3.5 SP1, należy wskazać obraz ma być używany w oknie uruchamiania lub *ekran powitalny*. <xref:System.Windows.SplashScreen> Klasy można łatwo wyświetlać okno uruchamiania podczas ładowania aplikacji. <xref:System.Windows.SplashScreen> Okna jest tworzony i wyświetlany przed <xref:System.Windows.Application.Run%2A> jest wywoływana. Aby uzyskać więcej informacji, zobacz [czas uruchamiania aplikacji](../advanced/application-startup-time.md) i [dodać ekran powitalny do aplikacji WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Uruchamianie aplikacji  

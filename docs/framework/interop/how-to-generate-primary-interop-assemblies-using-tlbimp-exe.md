@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 09ee63a1283744da407cde2a99802969c7f55127
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910768"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833652"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
 Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:  
   
-- Za pomocą [wpisz Importer biblioteki (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) dostarczone przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Za pomocą [wpisz Importer biblioteki (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) dostarczonych przez Windows Software Development Kit (SDK).  
   
      Najprostszy sposób do tworzenia podstawowych zestawów międzyoperacyjnych polega na użyciu [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe zawiera następujące mechanizmy:  
   
@@ -38,7 +38,7 @@ Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:
   
 1. W wierszu polecenia wpisz polecenie:  
   
-     **tlbimp** *tlbfile***/primary/KeyFile:** *filename* **/out:** *assemblyname*  
+     **tlbimp** *tlbfile* **/primary/KeyFile:** *filename* **/out:** *assemblyname*  
   
      W tym poleceniu *tlbfile* to plik biblioteki typów modelu COM, zawierającą *filename* to nazwa kontenera lub pliku, który zawiera pary kluczy i *assemblyname* jest Nazwa zestawu, aby zalogować się przy użyciu silnej nazwy.  
   

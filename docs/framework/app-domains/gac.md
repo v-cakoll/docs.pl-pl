@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ae9470020449719ccb9760fef992898674ba696
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593628"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832841"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Każdy komputer, na którym zainstalowano środowisko uruchomieniowe języka wspólnego zawiera pamięć podręczna kodu komputera o nazwie Global Assembly Cache. Global Assembly Cache przechowuje zestawy specjalnie na potrzeby być współużytkowane przez wiele aplikacji na komputerze.  
@@ -31,7 +31,7 @@ Każdy komputer, na którym zainstalowano środowisko uruchomieniowe języka wsp
   
 - Skorzystaj z Instalatora, przeznaczony do pracy z globalnej pamięci podręcznej zestawów. To jest preferowaną opcją do instalowania zestawów w globalnej pamięci podręcznej zestawów.  
   
-- Użyj narzędzia dla deweloperów, o nazwie [narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), podana przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Użyj narzędzia dla deweloperów, o nazwie [narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), podana przez Windows Software Development Kit (SDK).  
   
     > [!NOTE]
     >  W scenariuszach wdrażania przy użyciu Instalatora Windows instalować zestawów w globalnej pamięci podręcznej zestawów. Narzędzie Global Assembly Cache tylko w scenariuszach programowania, ponieważ nie dostarcza zliczanie odwołań zestawu i inne funkcje podany przy wywołaniu metody przy użyciu Instalatora Windows.  

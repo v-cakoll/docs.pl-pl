@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708928"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833505"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Bufory o ustalonym rozmiarze (Przewodnik programowania w języku C#)
 
@@ -40,7 +40,7 @@ W poprzednim przykładzie pokazano, uzyskiwanie dostępu do `fixed` bez przypina
 Innej wspólnej tablicy o stałym rozmiarze jest [bool](../../language-reference/keywords/bool.md) tablicy. Elementy w `bool` tablicy są zawsze jednobajtowego w rozmiarze. `bool` tablice nie są odpowiednie do tworzenia tablic bitowe lub buforów.
 
 > [!NOTE]
-> Z wyjątkiem pamięci utworzone za pomocą [stackalloc](../../language-reference/keywords/stackalloc.md), kompilator języka C# i środowisko uruchomieniowe języka wspólnego (CLR) nie sprawdza zabezpieczeń buforu przepełnienia. Podobnie jak w przypadku wszystkich niebezpieczny kod, należy zachować ostrożność.
+> Z wyjątkiem pamięci utworzone za pomocą [stackalloc](../../language-reference/operators/stackalloc.md), kompilator języka C# i środowisko uruchomieniowe języka wspólnego (CLR) nie sprawdza zabezpieczeń buforu przepełnienia. Podobnie jak w przypadku wszystkich niebezpieczny kod, należy zachować ostrożność.
 
 Niebezpieczne bufory różnią się od regularnych tablic w następujący sposób:
 

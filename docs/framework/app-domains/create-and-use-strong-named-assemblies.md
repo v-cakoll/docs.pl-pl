@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377885"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832882"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnych nazwach
 
@@ -51,7 +51,7 @@ Poniższy scenariusz przedstawia proces podpisywanie zestawu silną nazwą, a p�
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>Weryfikacja podpisu obejścia zaufanych zestawów
 
-Począwszy od [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], podpisy silnej nazwy nie są weryfikowane, gdy zestaw jest ładowany do domeny, zaufaną aplikację, takie jak domyślnej domeny aplikacji dla `MyComputer` strefy. Jest to określane jako silnej nazwy pomijania funkcji. W pełni zaufanym środowisku, zażąda dla <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze kończą się pomyślnie dla podpisanej zestawów pełnego zaufania, niezależnie od ich podpisu. Funkcja pomijania silnej nazwy pozwala uniknąć niepotrzebnych nakładów pracy weryfikacji podpisu silnej nazwy zestawów pełnego zaufania w tej sytuacji, dzięki czemu zestawy, które mają ładować się szybciej.
+Począwszy od .NET Framework 3.5 Service Pack 1, podpisy silnej nazwy nie są weryfikowane, gdy zestaw jest ładowany do domeny, zaufaną aplikację, takie jak domyślnej domeny aplikacji dla `MyComputer` strefy. Jest to określane jako silnej nazwy pomijania funkcji. W pełni zaufanym środowisku, zażąda dla <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze kończą się pomyślnie dla podpisanej zestawów pełnego zaufania, niezależnie od ich podpisu. Funkcja pomijania silnej nazwy pozwala uniknąć niepotrzebnych nakładów pracy weryfikacji podpisu silnej nazwy zestawów pełnego zaufania w tej sytuacji, dzięki czemu zestawy, które mają ładować się szybciej.
 
 Funkcja pomijania ma zastosowanie do dowolnego złożenia, który jest podpisany silną nazwą i ma następujące cechy:
 

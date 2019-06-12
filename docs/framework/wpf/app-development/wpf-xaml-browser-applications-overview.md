@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: d536d141d1ac7126c5a3339f75ba374d3e071806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591405"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833985"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
@@ -182,7 +182,7 @@ ms.locfileid: "64591405"
 ## <a name="xbap-start-time-performance-considerations"></a>Zagadnienia związane z wydajnością XBAP początek godziny  
  Ważnym aspektem wydajności XBAP jest jego czas rozpoczęcia. Jeśli pierwszą aplikację WPF, aby załadować, XBAP *zimnego* należy dziesięć sekund lub więcej. Jest to spowodowane przez WPF wyrenderowaniu strony postępu i CLR i WPF należy zimnego uruchomić, aby wyświetlić aplikację.  
   
- Począwszy od [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], czas zimnego startu XBAP skuteczność została osłabiona przez stroną niezarządzanych postępu na wczesnym etapie cyklu wdrażania. Na stronie Postęp jest niemal natychmiast pojawi się po uruchomieniu aplikacji, ponieważ jest on wyświetlany przez natywny kod hostingu i renderowania w formacie HTML.  
+ Począwszy od programu .NET Framework 3.5 z dodatkiem SP1, czas zimnego startu XBAP skuteczność została osłabiona przez stroną niezarządzanych postępu na wczesnym etapie cyklu wdrażania. Na stronie Postęp jest niemal natychmiast pojawi się po uruchomieniu aplikacji, ponieważ jest on wyświetlany przez natywny kod hostingu i renderowania w formacie HTML.  
   
  Ponadto ulepszone współbieżności sekwencji pobierania ClickOnce poprawia czas rozpoczęcia przez maksymalnie 10 procent. Po ClickOnce pliki do pobrania i sprawdza poprawność manifestów, uruchamiania pobierania aplikacji i pasek postępu rozpoczyna się do aktualizacji.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Nie można utworzyć zestawu o silnej nazwie z pliku kluczy „<filename>": <error>'
+title: "Nie można utworzyć zestawu o silnej nazwie z pliku kluczy „<filename>': <error>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31026
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61764182"
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>Nie można utworzyć zestawu o silnej nazwie z pliku kluczy "\<nazwa pliku >": \<błąd >
+# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>Nie można utworzyć zestawu o silnej nazwie z pliku kluczy '\<nazwa pliku >': \<błąd >
 Nie można utworzyć zestawu z silną nazwą z określonego pliku klucza.  
   
  **Identyfikator błędu:** BC31026  

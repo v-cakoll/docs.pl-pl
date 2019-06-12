@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378581"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833888"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Asembler IL)
 
@@ -104,7 +104,7 @@ Aby to mieszane *Ildasm.exe* i *Ilasm.exe* możliwie domyślnie dokładny asembl
 > [!NOTE]
 > *Ildasm.exe* operuje tylko na plikach zapisanych na dysku. Nie wykonuje operacji na plikach zainstalowanych w globalnej pamięci podręcznej zestawów.
 
-Aby uzyskać więcej informacji dotyczących gramatyki języka IL, zobacz opis pliku asmparse.grammar w [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Aby uzyskać więcej informacji dotyczących gramatyki języka IL zobacz opis pliku asmparse.grammar w Windows Software Development Kit (SDK).
 
 ## <a name="version-information"></a>Informacje o wersji
 
@@ -137,7 +137,7 @@ Począwszy od programu .NET Framework 4.5, można określić umownego organizato
         Test(object A_1) cil managed
 ```
 
-Aby uzyskać więcej informacji dotyczących gramatyki języka IL, zobacz opis pliku asmparse.grammar w [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Aby uzyskać więcej informacji dotyczących gramatyki języka IL zobacz opis pliku asmparse.grammar w Windows Software Development Kit (SDK).
 
 ## <a name="examples"></a>Przykłady
 

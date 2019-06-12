@@ -1,5 +1,5 @@
 ---
-title: <type1>"<typename>musi implementować<methodname>"dla interfejsu"<interfacename>"
+title: <type1>'<typename>musi implementować<methodname>'dla interfejsu'<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62013611"
 ---
-# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 > "\<typename >" musi implementować "\<methodname >" dla interfejsu "\<interfacename >"
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 > '\<typename >' musi implementować '\<methodname >' dla interfejsu '\<interfacename >'
 Klasa lub struktura oświadczeń zaimplementować interfejs, ale nie implementuje określonymi przez interfejs. Należy zaimplementować każdego członka interfejsu.  
   
  **Identyfikator błędu:** BC30149  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489665"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832826"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 
@@ -233,7 +233,7 @@ Wstępna kompilacja zestawów przy użyciu programu Ngen.exe może poprawić cza
 Trwałe powiązania mogą wpływać na czas uruchamiania, ponieważ wszystkie obrazy trwale powiązane z głównym zestawem aplikacji muszą zostać załadowane w tym samym czasie.
 
 > [!NOTE]
-> Przed [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], należy umieścić składniki współużytkowane, o silnej nazwie w globalnej pamięci podręcznej, ponieważ moduł ładujący wykonywał dodatkową walidację silnie nazwanych zestawów, które są nie w globalnej pamięci podręcznej zestawów, efektywnie eliminując poprawę w czasie w przypadku uruchamiania uzyskaną dzięki obrazom natywnym. Optymalizacje, które zostały wprowadzone w [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] usunięte dodatkową walidację.
+> .NET Framework 3.5 Service Pack 1 należy umieścić składniki współużytkowane, o silnej nazwie w globalnej pamięci podręcznej, ponieważ moduł ładujący wykonywał dodatkową walidację silnie nazwanych zestawów, które są nie w globalnej pamięci podręcznej zestawów, efektywnie eliminując poprawę w czasie uruchamiania uzyskaną dzięki obrazom natywnym. Optymalizacje, które zostały wprowadzone w programie .NET Framework 3.5 SP1 usunięte dodatkową walidację.
 
 <a name="UsageSummary"></a>
 
@@ -566,7 +566,7 @@ Obraz macierzysty — zadanie jest zarejestrowany, gdy dla każdego Procesora ar
 |Nazwa zadania|komputer 32-bitowy|komputer 64-bitowy|
 |---------------|----------------------|----------------------|
 |NET Framework NGEN 4.0.30319|Yes|Yes|
-|NET Framework NGEN 4.0.30319 64|Nie|Yes|
+|NET Framework NGEN 4.0.30319 64|Nie|Tak|
 
 Obraz macierzysty — zadanie jest dostępna w .NET Framework 4.5 i nowsze wersje, gdy uruchomiony w systemie Windows 8 lub nowszym. We wcześniejszych wersjach systemu Windows, .NET Framework używa [Native Image Service](#native-image-service).
 

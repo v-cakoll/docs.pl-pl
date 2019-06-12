@@ -1,5 +1,5 @@
 ---
-title: "\"<functionname>\" nie został zadeklarowany (inteligentnych urządzeń — błąd kompilatora Visual Basic)"
+title: "'<functionname>' nie został zadeklarowany (inteligentnych urządzeń — błąd kompilatora Visual Basic)"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30766
@@ -14,16 +14,16 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662082"
 ---
-# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a><span data-ttu-id="9d11a-102">"\<functionname >' nie został zadeklarowany (inteligentnych urządzeń/błąd kompilatora Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d11a-102">'\<functionname>' is not declared (Smart Device/Visual Basic Compiler Error)</span></span>
-<span data-ttu-id="9d11a-103"><`functionname`> nie został zadeklarowany.</span><span class="sxs-lookup"><span data-stu-id="9d11a-103"><`functionname`> is not declared.</span></span> <span data-ttu-id="9d11a-104">Funkcje We/Wy pliku jest zwykle dostępna w `Microsoft.VisualBasic` przestrzeni nazw, ale wersji docelowej programu .NET Compact Framework nie jest ona obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="9d11a-104">File I/O functionality is normally available in the `Microsoft.VisualBasic` namespace, but the targeted version of the .NET Compact Framework does not support it.</span></span>  
+# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a><span data-ttu-id="1371e-102">'\<functionname >' nie został zadeklarowany (inteligentnych urządzeń/błąd kompilatora Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1371e-102">'\<functionname>' is not declared (Smart Device/Visual Basic Compiler Error)</span></span>
+<span data-ttu-id="1371e-103"><`functionname`> nie został zadeklarowany.</span><span class="sxs-lookup"><span data-stu-id="1371e-103"><`functionname`> is not declared.</span></span> <span data-ttu-id="1371e-104">Funkcje We/Wy pliku jest zwykle dostępna w `Microsoft.VisualBasic` przestrzeni nazw, ale wersji docelowej programu .NET Compact Framework nie jest ona obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="1371e-104">File I/O functionality is normally available in the `Microsoft.VisualBasic` namespace, but the targeted version of the .NET Compact Framework does not support it.</span></span>  
   
- <span data-ttu-id="9d11a-105">**Identyfikator błędu:** BC30766</span><span class="sxs-lookup"><span data-stu-id="9d11a-105">**Error ID:** BC30766</span></span>  
+ <span data-ttu-id="1371e-105">**Identyfikator błędu:** BC30766</span><span class="sxs-lookup"><span data-stu-id="1371e-105">**Error ID:** BC30766</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9d11a-106">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="9d11a-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1371e-106">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="1371e-106">To correct this error</span></span>  
   
-- <span data-ttu-id="9d11a-107">Wykonywania operacji na plikach za pomocą funkcji zdefiniowanych w `System.IO` przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="9d11a-107">Perform file operations with functions defined in the `System.IO` namespace.</span></span>  
+- <span data-ttu-id="1371e-107">Wykonywania operacji na plikach za pomocą funkcji zdefiniowanych w `System.IO` przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="1371e-107">Perform file operations with functions defined in the `System.IO` namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d11a-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9d11a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1371e-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1371e-108">See also</span></span>
 
 - <xref:System.IO>
-- [<span data-ttu-id="9d11a-109">Dostęp do plików za pomocą Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9d11a-109">File Access with Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
+- [<span data-ttu-id="1371e-109">Dostęp do plików za pomocą Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1371e-109">File Access with Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)

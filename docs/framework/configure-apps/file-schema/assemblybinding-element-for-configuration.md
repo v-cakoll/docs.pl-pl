@@ -39,13 +39,13 @@ ms.locfileid: "61674834"
 
 |     | <span data-ttu-id="2fdd1-114">Opis</span><span class="sxs-lookup"><span data-stu-id="2fdd1-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="2fdd1-115"> *\*\<Konfiguracja >** </span><span class="sxs-lookup"><span data-stu-id="2fdd1-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="2fdd1-116">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2fdd1-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="2fdd1-115"> **\<Konfiguracja >** </span><span class="sxs-lookup"><span data-stu-id="2fdd1-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="2fdd1-116">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2fdd1-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
 ## <a name="child-element"></a><span data-ttu-id="2fdd1-117">Element podrzędny</span><span class="sxs-lookup"><span data-stu-id="2fdd1-117">Child element</span></span>
 
 |     | <span data-ttu-id="2fdd1-118">Opis</span><span class="sxs-lookup"><span data-stu-id="2fdd1-118">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="2fdd1-119"> *\*\<linkedConfiguration>** </span><span class="sxs-lookup"><span data-stu-id="2fdd1-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="2fdd1-120">Określa wymagający uwzględnienia plik konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="2fdd1-120">Specifies a configuration file to include.</span></span> |
+| [<span data-ttu-id="2fdd1-119"> **\<linkedConfiguration>** </span><span class="sxs-lookup"><span data-stu-id="2fdd1-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="2fdd1-120">Określa wymagający uwzględnienia plik konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="2fdd1-120">Specifies a configuration file to include.</span></span> |
 
 ## <a name="remarks"></a><span data-ttu-id="2fdd1-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2fdd1-121">Remarks</span></span>
 

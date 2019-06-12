@@ -42,7 +42,7 @@ ms.locfileid: "61674652"
 
 |     | <span data-ttu-id="e63b7-116">Opis</span><span class="sxs-lookup"><span data-stu-id="e63b7-116">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="e63b7-117"> *\*\<assemblybinding — >** — Element</span><span class="sxs-lookup"><span data-stu-id="e63b7-117">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="e63b7-118">Określa politykę powiązania zestawu na poziomie konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e63b7-118">Specifies assembly binding policy at the configuration level.</span></span> |
+| [<span data-ttu-id="e63b7-117"> **\<assemblybinding — >** — Element</span><span class="sxs-lookup"><span data-stu-id="e63b7-117">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="e63b7-118">Określa politykę powiązania zestawu na poziomie konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e63b7-118">Specifies assembly binding policy at the configuration level.</span></span> |
 
 ## <a name="child-elements"></a><span data-ttu-id="e63b7-119">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="e63b7-119">Child elements</span></span>
 
@@ -83,5 +83,5 @@ ms.locfileid: "61674652"
 
 ## <a name="see-also"></a><span data-ttu-id="e63b7-138">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e63b7-138">See also</span></span>
 
-- [<span data-ttu-id="e63b7-139"> *\*\<assemblybinding — >** — Element</span><span class="sxs-lookup"><span data-stu-id="e63b7-139">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [<span data-ttu-id="e63b7-139"> **\<assemblybinding — >** — Element</span><span class="sxs-lookup"><span data-stu-id="e63b7-139">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
 - [<span data-ttu-id="e63b7-140">Schemat pliku konfiguracji dla programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e63b7-140">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

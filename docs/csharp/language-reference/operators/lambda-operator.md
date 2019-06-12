@@ -1,5 +1,5 @@
 ---
-title: = > — Operator - C# odwołania
+title: = > — operator - C# odwołania
 ms.custom: seodec18
 ms.date: 01/22/2019
 f1_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 4c075cedb3cf479f53409f3b0acf4463fc3d7a03
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758215"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025015"
 ---
 # <a name="-operator-c-reference"></a>= > — operator (C# odwołania)
 
@@ -76,8 +76,7 @@ Aby uzyskać więcej informacji, zobacz [wyrażenia funkcji anonimowych](~/_csha
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#Odwołanie](../index.md)
 - [Operatory języka C#](index.md)
 - [Wyrażenia lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Elementy członkowskie z wyrażeniem w treści](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

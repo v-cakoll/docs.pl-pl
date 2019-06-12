@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ecde6ca8d3a95e356c5b1389ba95c4ad72b68d45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c2332b7371ec4ac7b5cfc0681466536d49bb7be
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623901"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026070"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next — Instrukcja (Visual Basic)
 Powtarza grupę instrukcji dla każdego elementu w kolekcji.  
@@ -49,7 +49,7 @@ Next [ element ]
 |Termin|Definicja|  
 |---|---|  
 |`element`|Wymagane w `For Each` instrukcji. Opcjonalnie w `Next` instrukcji. Zmienna. Używany do iterowania po elementach kolekcji.|  
-|`datatype`|Jeśli wymagane `element` nie jest już zadeklarowany. Typ danych `element`.|  
+|`datatype`|Opcjonalny Jeśli [ `Option Infer` ](option-infer-statement.md) jest włączone (ustawienie domyślne) lub `element` jest już zadeklarowany; wymagany, jeśli `Option Infer` jest wyłączona i `element` nie jest już zadeklarowany. Typ danych `element`.|  
 |`group`|Wymagana. Zmienna typu, który jest typem kolekcji lub obiektu. Odnosi się do kolekcji, nad którym `statements` ma zostać powtórzony.|  
 |`statements`|Opcjonalna. Jedna lub więcej instrukcji między `For Each` i `Next` uruchamianą w każdym elemencie `group`.|  
 |`Continue For`|Opcjonalna. Przekazuje sterowanie do początku `For Each` pętli.|  
@@ -113,8 +113,8 @@ Next [ element ]
  Gdy `For Each`...`Next` Uruchamia instrukcję, Visual Basic ocenia kolekcji tylko jeden raz, przed rozpoczęciem pętli. Jeśli zmiany z bloku instrukcji `element` lub `group`, zmiany te nie wpływają na iteracji pętli.  
   
  Gdy wszystkie elementy w kolekcji kolejno przypisane do `element`, `For Each` pętla zatrzymuje i kontrola przechodzi do instrukcji następującej `Next` instrukcji.  
-  
- Jeśli `element` nie była zadeklarowana poza pętlę, należy zadeklarować ją w `For Each` instrukcji. Możesz deklarować typ `element` jawnie przy użyciu `As` instrukcji lub możesz polegać na wnioskowanie o typie, aby przypisać typu. W obu przypadkach zakres `element` treść pętli. Jednak nie można zadeklarować `element` zarówno na zewnątrz i wewnątrz pętli.  
+ 
+Jeśli [Option Infer](option-infer-statement.md) jest na (ustawienie domyślne), kompilator Visual Basic można wywnioskować typu danych `element`. Jeśli jest wyłączone i `element` nie była zadeklarowana poza pętlę, należy zadeklarować ją w `For Each` instrukcji. Aby zadeklarować typu danych `element` jawnie, użyj `As` klauzuli. Jeśli nie zdefiniowano typ danych elementu poza `For Each`... `Next` konstrukcja, jej zakres jest treść pętli. Należy zauważyć, że nie można zadeklarować `element` zarówno na zewnątrz i wewnątrz pętli.
   
  Opcjonalnie możesz określić `element` w `Next` instrukcji. To zwiększa czytelność program, zwłaszcza, jeśli można zagnieżdżać `For Each` pętli. Należy określić tę samą zmienną, która pojawia się w odpowiednich `For Each` instrukcji.  
   
@@ -124,7 +124,7 @@ Next [ element ]
   
  Jeśli Twój kod jest zależna od przechodzenie kolekcji w określonej kolejności `For Each`... `Next` pętli nie jest najlepszym wyborem, jeśli nie znasz cechy obiekt modułu wyliczającego udostępnia kolekcji. Kolejność przechodzenia nie jest ustalany na podstawie języka Visual Basic, ale przez <xref:System.Collections.IEnumerator.MoveNext%2A> metody obiektu modułu wyliczającego. W związku z tym, nie można przewidzieć, który element w kolekcji jest pierwszym, który ma zostać zwrócone w `element`, lub który jest dalej do zwrócenia po dany element. Może osiągnąć bardziej niezawodne wyników przy użyciu struktury pętli różnych, takich jak `For`... `Next` lub `Do`... `Loop`.  
   
- Typ danych `element` musi być w taki sposób, że typ danych elementów `group` mogą być konwertowane do niego.  
+Środowisko wykonawcze musi mieć możliwość Konwertuj elementy w `group` do `element`. [`Option Strict`] Instrukcja określa, czy dozwolone są zarówno rozszerzanie i zwężanie konwersji (`Option Strict` jest wyłączony, jego wartość domyślna), lub czy są dozwolone tylko konwersje rozszerzające (`Option Strict` znajduje się na). Aby uzyskać więcej informacji, zobacz [zawężających](#narrowing-conversions).
   
  Typ danych `group` musi być typem referencyjnym, który odwołuje się do kolekcji lub tablicy, która jest wyliczalna. Oznacza to, że najczęściej `group` odwołuje się do obiektu, który implementuje <xref:System.Collections.IEnumerable> interfejsu `System.Collections` przestrzeni nazw lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu `System.Collections.Generic` przestrzeni nazw. `System.Collections.IEnumerable` definiuje <xref:System.Collections.IEnumerable.GetEnumerator%2A> metody, która zwraca obiekt modułu wyliczającego dla kolekcji. Obiekt modułu wyliczającego implementuje `System.Collections.IEnumerator` interfejsu `System.Collections` przestrzeni nazw i udostępnia <xref:System.Collections.IEnumerator.Current%2A> właściwości i <xref:System.Collections.IEnumerator.Reset%2A> i <xref:System.Collections.IEnumerator.MoveNext%2A> metody. Visual Basic używa ich do przenoszenia kolekcji.  
   

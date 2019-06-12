@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816073"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024913"
 ---
 # <a name="--and---operators-c-reference"></a>— i Operatorzy-= (C# odwołania)
 
@@ -80,11 +80,9 @@ Aby uzyskać więcej informacji, zobacz [jednoargumentowy minus operator](~/_csh
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#Odwołanie](../index.md)
 - [Operatory języka C#](index.md)
 - [Delegaty](../../programming-guide/delegates/index.md)
 - [Zdarzenia](../../programming-guide/events/index.md)
-- [Checked i unchecked](../keywords/checked-and-unchecked.md)
 - [Operatory arytmetyczne](arithmetic-operators.md)
 - [+ i operatory +=](addition-operator.md)

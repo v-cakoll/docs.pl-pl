@@ -1,19 +1,19 @@
 ---
-title: W przypadku wykrycia anomalii sprzedaży, użyj strukturze ML.NET
-description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu wykrywania anomalii sprzedaży produktu zrozumienie, jak analizować dane pod kątem klamry anomalii i zmiany punktów podejmowanie odpowiednich działań.
-ms.date: 05/29/2019
+title: 'Samouczek: Wykrywanie anomalii w — sprzedaż produktów'
+description: Dowiedz się, jak utworzyć aplikację wykrywania anomalii do danych sprzedaży produktu. Ten samouczek tworzy, używając aplikacji konsoli .NET Core C# w programie Visual Studio 2019 r.
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 6ea5adf79a17bb10ddea676eaea483c2cf627d82
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758794"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026048"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Samouczek: Na użytek strukturze ML.NET wykrywania anomalii sprzedaży produktu 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Samouczek: Wykrywanie anomalii w — sprzedaż produktów za pomocą platformy ML.NET
 
-Ten przykładowy samouczek przedstawia wykrycia anomalii w danych sprzedaży produktu podejmowanie odpowiednich działań za pośrednictwem używany aplikację konsoli .NET Core przy użyciu strukturze ML.NET C# w programie Visual Studio 2019 r. 
+Dowiedz się, jak utworzyć aplikację wykrywania anomalii do danych sprzedaży produktu. Ten samouczek tworzy, używając aplikacji konsoli .NET Core C# w programie Visual Studio.
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]

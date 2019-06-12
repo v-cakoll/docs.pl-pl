@@ -2,12 +2,12 @@
 title: Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858325"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025737"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 
@@ -41,7 +41,7 @@ Proces instalacji programu .NET Framework powoduje automatyczne zarejestrowanie 
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Tworzenie nowej aplikacji usług IIS lub ponowne użycie istniejącej aplikacji ASP.NET
 
-Usługi WCF hostowanych przez usługi IIS muszą znajdować się wewnątrz aplikacji IIS. Można utworzyć nowej aplikacji usług IIS do hostowania usług WCF wyłącznie. Alternatywnie, można wdrożyć usługi WCF do istniejącej aplikacji, który jest już hostem [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] zawartości (takiej jak strony aspx oraz usług sieci Web platformy ASP.NET [ASMX]). Aby uzyskać więcej informacji o tych opcjach, zobacz "Hosting usług WCF Side-by-Side za pomocą platformy ASP.NET" i "Hosting usług WCF w trybie zgodności ASP.NET" sekcje w [usługi WCF i platforma ASP.NET](wcf-services-and-aspnet.md).
+Usługi WCF hostowanych przez usługi IIS muszą znajdować się wewnątrz aplikacji IIS. Można utworzyć nowej aplikacji usług IIS do hostowania usług WCF wyłącznie. Alternatywnie można wdrożyć usługi WCF do istniejącej aplikacji, która jest już hosting zawartości platformy ASP.NET w wersji 2.0 (np. strony aspx oraz usług sieci Web platformy ASP.NET [ASMX]). Aby uzyskać więcej informacji o tych opcjach, zobacz "Hosting usług WCF Side-by-Side za pomocą platformy ASP.NET" i "Hosting usług WCF w trybie zgodności ASP.NET" sekcje w [usługi WCF i platforma ASP.NET](wcf-services-and-aspnet.md).
 
 Należy pamiętać, że [!INCLUDE[iis601](../../../../includes/iis601-md.md)] i nowszych wersjach okresowego ponownego uruchamiania izolowanych aplikacji programowania obiektowego. Wartość domyślna to 1740 minut. Wartość maksymalna obsługiwana jest 71,582 minut. Można wyłączyć ponowne uruchomienie. Aby uzyskać więcej informacji na temat tej właściwości, zobacz [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
@@ -65,7 +65,7 @@ Aby uzyskać więcej informacji na temat składni plików .svc zobacz [ \@Servic
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Wdrażanie implementacji usługi do aplikacji usług IIS
 
-Usługi WCF hostowane w usługach IIS, użyj tego samego modelu kompilacji dynamicznej w postaci [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Podobnie jak w przypadku platformy ASP.NET, możesz wdrożyć kod implementacji usługi WCF hostowanej przez usługi IIS na kilka sposobów, w różnych miejscach, w następujący sposób:
+Usługi WCF hostowane w usługach IIS jako ASP.NET 2.0 przy użyciu tego samego modelu kompilacji dynamicznej. Podobnie jak w przypadku platformy ASP.NET, możesz wdrożyć kod implementacji usługi WCF hostowanej przez usługi IIS na kilka sposobów, w różnych miejscach, w następujący sposób:
 
 - Zgodnie z plikiem dll wstępnie skompilowanym znajduje się w globalnej pamięci podręcznej zestawów (GAC) lub w katalogu \bin aplikacji. Wstępnie skompilowane pliki binarne nie są aktualizowane, dopóki nie wdrożono nową wersję biblioteki klas.
 
@@ -73,7 +73,7 @@ Usługi WCF hostowane w usługach IIS, użyj tego samego modelu kompilacji dynam
 
 - Ponieważ nie skompilowanego kodu są umieszczone bezpośrednio w pliku svc. Kod implementacji można również bezpośrednio znajduje się w pliku .svc usługi, po \@dyrektywy ServiceHost. Wszelkie zmiany kodu wbudowanego spowodować, że aplikacja do odtwarzania i ponownie kompilowane, gdy zostanie odebrane żądanie dalej.
 
-Aby uzyskać więcej informacji na temat [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] modelu kompilacji, zobacz [omówienie kompilacji programu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94773).
+Aby uzyskać więcej informacji na temat modelu kompilacji platformy ASP.NET w wersji 2.0, zobacz [omówienie kompilacji programu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94773).
 
 ## <a name="configure-the-wcf-service"></a>Konfigurowanie usługi WCF
 

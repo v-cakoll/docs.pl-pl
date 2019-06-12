@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 2c99065dacbf391e94c97092336f5dda3adda5b0
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 14e62d53fca16212fae374b2627d1e96cbbca6ac
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815985"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025318"
 ---
 # <a name="-and--operators-c-reference"></a>+ i operatory += (C# odwołania)
 
@@ -79,13 +79,11 @@ Aby uzyskać więcej informacji, zobacz [jednoargumentowe plus operator](~/_csha
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#Odwołanie](../index.md)
 - [Operatory języka C#](index.md)
 - [Interpolacja ciągów](../tokens/interpolated.md)
 - [Porady: łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)
 - [Delegaty](../../programming-guide/delegates/index.md)
 - [Zdarzenia](../../programming-guide/events/index.md)
-- [Checked i unchecked](../keywords/checked-and-unchecked.md)
 - [Operatory arytmetyczne](arithmetic-operators.md)
 - [— i Operatorzy-=](subtraction-operator.md)

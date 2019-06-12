@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 54657fb8ed4c0935c7c21fad333c7a62b42aec2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61688270"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025095"
 ---
 # <a name="methods"></a>Metody
 
@@ -144,9 +144,9 @@ Obiekt wywołujący może następnie wywołania metody w jednym z trzech sposob�
 - Przekazując rozdzielaną przecinkami listę pojedynczych argumentów odpowiedniego typu w metodzie.
 - Zapewniając nie argument tablicy parametrów.
 
-W poniższym przykładzie zdefiniowano metodę o nazwie `DoStringOperation` wykonująca operację ciągu określonego przez jej pierwszy parametr `StringOperation` element członkowski wyliczenia. Ciągi, na których jest do wykonania tej operacji są definiowane przez tablicy parametrów. `Main` Metoda przedstawiono wszystkie trzy sposoby wywoływania metody. Należy zauważyć, że metoda oznakowane za pomocą `params` — słowo kluczowe musi być przygotowana do obsługi przypadek, w którym nie zostaną dostarczone argumenty dla tablicy parametrów, aby jego wartość wynosi `null`.
+W poniższym przykładzie zdefiniowano metodę o nazwie `GetVowels` zwracającego wszystkie samogłoski z tablicy parametrów. `Main` Metoda przedstawiono wszystkie trzy sposoby wywoływania metody. Nie trzeba podać argumenty dla parametrów, które zawierają obiekty wywołujące `params` modyfikator. W takim przypadku parametr jest `null`.
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 

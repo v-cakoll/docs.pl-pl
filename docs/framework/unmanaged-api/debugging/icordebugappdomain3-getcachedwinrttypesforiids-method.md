@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95c84f7f40db0096b26ec448f8f229cdbfe3afb1
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917379"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025908"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs — Metoda
-Pobiera moduł wyliczający dla pamięci podręcznej [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typów w domenie aplikacji w oparciu o ich identyfikatory interfejsu.  
+Pobiera moduł wyliczający dla pamięci podręcznej typów środowiska wykonawczego Windows w domenie aplikacji, w oparciu o ich identyfikatory interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,16 +42,16 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in] Liczba wymaganych typów.  
   
  `iidsToResolve`  
- [in] Wskaźnik do tablicy, który zawiera identyfikatory interfejsu odpowiadający reprezentacje zarządzane [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typy, które mają zostać pobrane.  
+ [in] Wskaźnik do tablicy, która zawiera identyfikatory interfejsu odpowiadający zarządzanych reprezentacja typów środowiska wykonawczego Windows, które mają zostać pobrane.  
   
  `ppTypesEnum`  
- [out] Wskaźnik na adres obiektu interfejsu "icordebugtypeenum —", który umożliwia wyliczenie buforowane zarządzane reprezentacje [!INCLUDE[wrt](../../../../includes/wrt-md.md)] pobierane typy, oparte na identyfikatory interfejsu w `iidsToResolve`.  
+ [out] Wskaźnik na adres obiektu interfejsu "icordebugtypeenum —", który umożliwia wyliczenie zarządzanej pamięci podręcznej reprezentacja typów środowiska wykonawczego Windows pobierane, oparte na identyfikatory interfejsu w `iidsToResolve`.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli metoda nie można pobrać informacji dla identyfikatora określonego interfejsu, odpowiadający mu wpis w kolekcji "Icordebugtypeenum —" będzie mieć typ `ELEMENT_TYPE_END` błędy z powodu problemów z pobierania danych, lub `ELEMENT_TYPE_VOID` dla nieznanego interfejsu identyfikatory.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Platformy:** Środowisko wykonawcze systemu Windows  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

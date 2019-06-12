@@ -1,21 +1,19 @@
 ---
-title: 'Samouczek: Tworzenie klasyfikatora obrazu niestandardowego strukturze ML.NET z TensorFlow'
-description: Dowiedz się, jak tworzyć klasyfikatora obrazu niestandardowego strukturze ML.NET transferu uczenia scenariusza TensorFlow do klasyfikowania obrazów dzięki ponownemu wykorzystaniu wstępnie przeszkolonych modelu TensorFlow.
-ms.date: 05/06/2019
+title: 'Samouczek: Klasyfikator obraz TensorFlow ponownego próbkowania - transferu uczenia'
+description: Dowiedz się, jak ponowne szkolenie modelu TensorFlow Klasyfikacja obrazów przy użyciu transferu uczenia i strukturze ML.NET. Oryginalny model został skonfigurowanych pod kątem klasyfikowania poszczególnych obrazów. Po ponownego trenowania, nowy model organizuje obrazów w ogólne kategorie.
+ms.date: 06/12/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593423"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026083"
 ---
-# <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Samouczek: Tworzenie klasyfikatora obrazu niestandardowego strukturze ML.NET z TensorFlow
+# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Samouczek: Ponowne szkolenie TensorFlow klasyfikatora obrazu przy użyciu transferu uczenia i strukturze ML.NET
 
-Ten przykładowy samouczek przedstawia sposób korzystania z już uczony klasyfikatora obrazu `TensorFlow` modelu do tworzenia nowego modelu niestandardowego do klasyfikowania obrazów na kilka kategorii.
-
-Co zrobić, jeśli można ponownie użyć modelu, który został już wstępnie przeszkolonych do rozwiązywania podobny problem i ponownie ucz wszystkie lub niektóre z warstw tego modelu, aby pomóc w rozwiązaniu problemu? Ta technika ponownego wykorzystania część już trenowanego modelu, aby utworzyć nowy model jest znany jako [transferu learning](https://en.wikipedia.org/wiki/Transfer_learning).
+Dowiedz się, jak ponowne szkolenie modelu TensorFlow classificaton obrazu przy użyciu transferu uczenia i strukturze ML.NET. Oryginalny model został skonfigurowanych pod kątem klasyfikowania poszczególnych obrazów. Po ponownego trenowania, nowy model organizuje obrazów w ogólne kategorie. 
 
 Szkolenie [Klasyfikacja obrazów](https://en.wikipedia.org/wiki/Outline_of_object_recognition) modelu od podstaw wymaga ustawienie miliony parametry ogromnej ilości danych szkoleniowych etykietami i dużych ilości zasobów obliczeniowych (setki procesorów GPU godzin). Nie tak skuteczne, jak szkolenie modelu niestandardowego od podstaw, transfer uczenia umożliwia skrótów tego procesu poprzez współdziałanie z tysięcy obrazów, a miliony obrazy z etykietami i dość szybko utworzyć dostosowany model (w ciągu godziny na maszynie bez PROCESOR GPU).
 
@@ -24,6 +22,10 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > * Omówienie problemu
 > * Ponowne użycie i dostosowywanie wstępnie uczonego modelu
 > * Klasyfikowanie obrazów
+
+## <a name="what-is-transfer-learning"></a>Co to jest uczenie transferu?
+
+Co zrobić, jeśli można ponownie użyć modelu, który został już wstępnie przeszkolonych do rozwiązywania podobny problem i ponownie ucz wszystkie lub niektóre z warstw tego modelu, aby pomóc w rozwiązaniu problemu? Ta technika ponownego wykorzystania część już trenowanego modelu, aby utworzyć nowy model jest znany jako [transferu learning](https://en.wikipedia.org/wiki/Transfer_learning).
 
 ## <a name="image-classification-sample-overview"></a>Omówienie przykładowych klasyfikacji obrazów
 

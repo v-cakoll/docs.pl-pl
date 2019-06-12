@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 8f7382a49c81b6fd8e104b864ffc2f70db7fe4a6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 032215dd2ca028af2a07fe113e7732e4d8e7ad0d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758110"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024983"
 ---
 # <a name="-operator-c-reference"></a>() — operator (C# odwołania)
 
@@ -54,6 +54,5 @@ Aby uzyskać więcej informacji, zobacz [wyrażenia wywołania](~/_csharplang/sp
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#Odwołanie](../index.md)
 - [Operatory języka C#](index.md)

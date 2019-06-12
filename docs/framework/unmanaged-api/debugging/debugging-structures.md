@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a4b5c2a65ae7e4c01ffc3977875e598d076557
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698375"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025924"
 ---
 # <a name="debugging-structures"></a>Struktury debugowania
 
@@ -60,7 +60,7 @@ W tej sekcji opisano niezarządzane struktury, których używa interfejsu API de
 
  [Cordebugexceptionobjectstackframe — struktura](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) reprezentuje stosu ramki informacje z obiekt wyjątku.
 
- [Cordebugguidtotypemapping — struktura](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) mapy [!INCLUDE[wrt](../../../../includes/wrt-md.md)] identyfikator GUID służący do odpowiadającymi mu dostawcami [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) obiektu.
+ [Cordebugguidtotypemapping — struktura](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) mapuje GUID środowiska uruchomieniowego Windows odpowiadającymi mu dostawcami [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) obiektu.
 
  [Struktura DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) definiuje kontener dla żądania adres modułu.
 

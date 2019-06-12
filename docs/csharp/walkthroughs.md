@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: b7240295f154277e722f38e99beb221c1c4d9a34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675721"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025413"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  
@@ -24,7 +24,7 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  Pokazuje, jak utworzyć rozwiązanie asynchroniczne przy użyciu [async](../csharp/language-reference/keywords/async.md) i [await](../csharp/language-reference/keywords/await.md).  
   
  [Tworzenie składników środowiska wykonawczego Windows w języku C# lub Visual Basic i wywoływanie z kodu JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Pokazuje, jak utworzyć [!INCLUDE[wrt](~/includes/wrt-md.md)] wpisz, spakujesz ją w [!INCLUDE[wrt](~/includes/wrt-md.md)] składnika, a następnie wywołać składnika z [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikację, która została stworzona z myślą Windows przy użyciu języka JavaScript.  
+ Pokazuje, jak utworzyć typ środowiska wykonawczego Windows, spakujesz ją w składnika wykonawczego Windows, a następnie Wywołaj składnik z [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikację, która została stworzona z myślą Windows przy użyciu języka JavaScript.  
   
  [Office programowania (C# i Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Pokazuje, jak utworzyć skoroszyt programu Excel i dokument programu Word za pomocą języka C# i Visual Basic.  

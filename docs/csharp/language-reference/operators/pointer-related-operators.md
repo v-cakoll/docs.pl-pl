@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 0cc104c7246763ee32866fe5233b9774253a2888
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833136"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025108"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Wskaźnik związane z operatorów (C# odwołania)
 
@@ -187,11 +187,10 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#Odwołanie](../index.md)
 - [Operatory języka C#](index.md)
 - [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [`unsafe` Słowo kluczowe](../keywords/unsafe.md)
-- [`fixed` Słowo kluczowe](../keywords/fixed-statement.md)
-- [`stackalloc` Operator](stackalloc.md)
-- [`sizeof` Operator](../keywords/sizeof.md)
+- [słowa kluczowego unsafe](../keywords/unsafe.md)
+- [Fixed — słowo kluczowe](../keywords/fixed-statement.md)
+- [stackalloc — operator](stackalloc.md)
+- [sizeof — operator](../keywords/sizeof.md)

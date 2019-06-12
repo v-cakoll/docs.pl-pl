@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877506"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025749"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hostowanie przez Internetowe usługi informacyjne
 Jedną z opcji hostingu usług Windows Communication Foundation (WCF) jest wewnątrz aplikacji usług Internet Information Services (IIS). Ten model hostingu jest podobny do modelu, używane przez program ASP.NET i usług sieci Web (ASMX) usługi sieci Web platformy ASP.NET.  
@@ -34,7 +34,7 @@ Jedną z opcji hostingu usług Windows Communication Foundation (WCF) jest wewn�
   
 - Takimi jak ASP.NET usługi WCF hostowane na platformie ASP.NET można korzystać z modelu hostingu współdzielonego ASP.NET gdy wiele aplikacji znajdują się w typowych procesu roboczego dla serwera ulepszoną gęstość i skalowalności.  
   
-- Usługi WCF hostowane w usługach IIS, użyj tego samego modelu kompilacji dynamicznej w postaci [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], która upraszcza tworzenie i wdrażanie hostowanej usługi.  
+- Usługi WCF hostowane w usługach IIS przy użyciu tego samego modelu kompilacji dynamicznej jako programu ASP.NET 2.0, który upraszcza opracowywanie i wdrażanie usług hostowanych.  
   
  Podczas podejmowania decyzji o do hostowania usług WCF w usługach IIS, ważne jest, aby należy pamiętać, że usługi IIS 5.1 i [!INCLUDE[iis601](../../../../includes/iis601-md.md)] są ograniczone do komunikacji HTTP tylko. Aby uzyskać więcej informacji o wybieraniu Środowisko hostingu, zobacz [usług obsługującego](../../../../docs/framework/wcf/hosting-services.md).  
   

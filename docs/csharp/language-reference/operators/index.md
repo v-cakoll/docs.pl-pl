@@ -1,5 +1,5 @@
 ---
-title: Operatory języka C#
+title: C#Operatorzy — C# odwołania
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833275"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025135"
 ---
-# <a name="c-operators"></a>Operatory języka C#
+# <a name="c-operators-c-reference"></a>C#operatory (C# odwołania)
 
 C#zawiera szereg wstępnie zdefiniowanych operatory obsługiwane przez typy wbudowane. Na przykład [operatorów arytmetycznych](arithmetic-operators.md) wykonywać operacji arytmetycznych na wartościach operandy wbudowanych typów liczbowych i [logiczna operatorów logicznych](boolean-logical-operators.md) wykonywać operacje logiczne z [bool ](../keywords/bool.md) argumentów operacji.
 
@@ -221,8 +221,6 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [C#](../../index.md)
+- [C#Odwołanie](../index.md)
+- [Operatory](../../programming-guide/statements-expressions-operators/operators.md)
 - [Operatory z możliwością przeciążenia](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [Słowa kluczowe języka C#](../keywords/index.md)

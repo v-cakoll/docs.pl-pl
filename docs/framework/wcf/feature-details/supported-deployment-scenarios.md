@@ -2,16 +2,16 @@
 title: Obsługiwane scenariusze wdrażania — WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881060"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025628"
 ---
 # <a name="supported-deployment-scenarios"></a>Obsługiwane scenariusze wdrażania
 
-Podzbiór funkcji Windows Communication Foundation (WCF) obsługiwanych na częściowo zaufane aplikacje zaprojektowano w celu spełnienia wymagań niektórych, ale nie wszystkie scenariusze przy użyciu usługi WCF. Na serwerze, WCF, spełnia wymagania skali Internetu udostępniony dostawcy hostingu, którzy uruchamiają aplikacje innych producentów w [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] zestaw ze względów bezpieczeństwa uprawnień trybie średniego zaufania. Na komputerze klienckim, Obsługa częściowej relacji zaufania usługi WCF zaprojektowano w celu spełnienia wymagań technologie wdrażania, takie jak [wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) lub [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]w aplikacji przeglądarki XAML technologii, która umożliwia bezproblemową i bezpieczną Wdrażanie aplikacji dla komputerów osobistych z niezaufanych witryn.
+Podzbiór funkcji Windows Communication Foundation (WCF) obsługiwanych na częściowo zaufane aplikacje zaprojektowano w celu spełnienia wymagań niektórych, ale nie wszystkie scenariusze przy użyciu usługi WCF. Na serwerze programu WCF spełnia wymagania udostępnionego dostawców hostingu, którzy uruchamiają aplikacje innych producentów w uprawnienie trybie ASP.NET 2.0 średniego zaufania, ustaw ze względów bezpieczeństwa skali Internetu. Na komputerze klienckim, Obsługa częściowej relacji zaufania usługi WCF zaprojektowano w celu spełnienia wymagań technologie wdrażania, takie jak [wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) lub [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]w aplikacji przeglądarki XAML technologii, która umożliwia bezproblemową i bezpieczną Wdrażanie aplikacji dla komputerów osobistych z niezaufanych witryn.
 
 ## <a name="minimum-permission-requirements"></a>Wymagania dotyczące minimalnych uprawnień
 
@@ -27,7 +27,7 @@ Aby uzyskać więcej informacji na temat funkcji obsługiwanych w te zestawy upr
 
 ## <a name="partial-trust-on-the-server"></a>Częściowej relacji zaufania na serwerze
 
-Wiele komercyjnych dostawców aplikacji sieci Web ASP.NET, usługi hostingowe uzasadniają, aplikacji działających na serwerach ich uruchamianie [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] trybie średniego zaufania zestawu uprawnień. Usługi WCF mogą być uruchamiane w tych środowiskach, pod warunkiem używają <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, lub <xref:System.ServiceModel.WSHttpBinding> z zabezpieczeniami na poziomie transportu.
+Wielu dostawców komercyjnych aplikacji sieci Web platformy ASP.NET, usługi hostingowe uzasadniają, aplikacje działające na serwerach Uruchom w zestawie uprawnień trybie ASP.NET 2.0 średniego zaufania. Usługi WCF mogą być uruchamiane w tych środowiskach, pod warunkiem używają <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, lub <xref:System.ServiceModel.WSHttpBinding> z zabezpieczeniami na poziomie transportu.
 
 Usługi WCF, uruchomiony w trybie średniego zaufania, środowiskach hostingu mogą również działać jako usługi warstwy środkowej przez wysyłanie komunikatów do innych serwerów w odpowiedzi na żądania klientów. Scenariusze warstwy środkowej na serwerze są obsługiwane, gdy środowisko hostingu przyznał aplikacji odpowiednie <xref:System.Net.WebPermission> na wysyłanie żądań wychodzących z serwerem.
 

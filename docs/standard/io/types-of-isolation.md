@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 352848f9b14300a6e8291cefa8d7a7ee251e1d14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0d253e917d6f805c471f244cddea44f339343868
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647793"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025522"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do wydzielonej pamięci masowej zawsze jest ograniczony do użytkownika, który go utworzył. Wdrożenie tego typu izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, który rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod, gdy jest otwierany magazyn. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować, że tożsamość bieżącego użytkownika, aby zmienić dynamicznie.  
@@ -53,7 +53,7 @@ Dostęp do wydzielonej pamięci masowej zawsze jest ograniczony do użytkownika,
  Należy zauważyć, że z wyjątkiem roamingu magazynów, wydzielona pamięć masowa jest zawsze niejawnie izolowane przez komputer ponieważ używa ona magazynów, które są lokalne dla danego komputera.  
   
 > [!IMPORTANT]
->  Wydzielona pamięć masowa nie jest dostępna dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klas danych aplikacji w `Windows.Storage` uwzględnione w przestrzeni nazw [!INCLUDE[wrt](../../../includes/wrt-md.md)] interfejsu API, aby przechować lokalne dane i pliki. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów Windows.  
+>  Wydzielona pamięć masowa nie jest dostępna dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klas danych aplikacji w `Windows.Storage` obszary nazw dołączane w interfejsie API środowiska wykonawczego Windows do przechowywania plików i danych lokalnych. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Izolacja według użytkownika i zestawu  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e72d093dd02f4a67386f58af5df40247c66dc378
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832798"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025969"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -53,7 +53,7 @@ Następujące dodatkowe opcje są dostępne dla *.exe*, *.dll*, i *winmd* plikó
 |**/LineNum**|Dołącza odwołania do oryginalnych wierszy źródłowych.|
 |**/nobar**|Pomija wyskakujące okienko ze wskaźnikiem postępu dezasemblera.|
 |**/noca**|Pomija wyjście niestandardowych atrybutów.|
-|**/project**|Wyświetla metadane, pojawi się tak, jak dla kodu zarządzanego, a nie jej w natywnym [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Jeśli `PEfilename` nie jest metadanych Windows (*winmd*) pliku, ta opcja nie ma wpływu. Zobacz [Obsługa programu .NET Framework dla aplikacji Windows Store i środowiska wykonawczego Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Wyświetla metadane, pojawi się tak, jak dla kodu zarządzanego, a nie jej natywnego środowiska wykonawczego Windows. Jeśli `PEfilename` nie jest metadanych Windows (*winmd*) pliku, ta opcja nie ma wpływu. Zobacz [Obsługa programu .NET Framework dla aplikacji Windows Store i środowiska wykonawczego Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Dezasembluje tylko typy publiczne i elementy członkowskie. Odpowiednikiem **/visibility:PUB**.|
 |**/quoteallnames**|Umieszcza wszystkie nazwy w pojedynczym cudzysłowie.|
 |**/raweh**|Wyświetla klauzule obsługi błędów w pierwotnej formie.|

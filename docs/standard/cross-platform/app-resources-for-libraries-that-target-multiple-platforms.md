@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055020"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025579"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
 Można użyć programu .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) projektu typu, aby upewnić się, że zasoby w bibliotekach klas są dostępne na wielu platformach. Ten typ projektu jest dostępny w programie Visual Studio 2012 i jest przeznaczony dla przenośny podzestaw biblioteki klas .NET Framework. Za pomocą [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] gwarantuje, że biblioteki są dostępne z aplikacji komputerowych, aplikacji Silverlight, aplikacji Windows Phone i [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.
@@ -47,9 +47,9 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] i aplikacje Windows Store
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projekty przechowują zasoby w plikach resx, które są następnie kompilowane do plików Resources i osadzone w głównym zestawie lub zestawach satelickich w czasie kompilacji. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje, z drugiej strony, wymagają zasoby, które mają być przechowywane w plikach resw, które są następnie kompilowane do plik indeksu (PRI) zasobów w jednym pakiecie. Jednak mimo niezgodnych formatów pliku Twoje [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] będzie działać w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.
 
- Aby skorzystać z biblioteki klas z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, Dodaj odwołanie do niej w projekcie aplikacji Windows Store. Visual Studio sposób niewidoczny wyodrębniać zasoby z zestawu do pliku resw i go użyć do wygenerowania pliku PRI, z którego [!INCLUDE[wrt](../../../includes/wrt-md.md)] może wyodrębnić zasoby. W czasie wykonywania [!INCLUDE[wrt](../../../includes/wrt-md.md)] wykonuje kod w swojej [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], ale pobiera zasoby z biblioteki klas przenośnych z pliku PRI.
+ Aby skorzystać z biblioteki klas z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, Dodaj odwołanie do niej w projekcie aplikacji Windows Store. Program Visual Studio będzie w sposób niewidoczny wyodrębniać zasoby z zestawu do pliku resw i używają jej do generowania pliku PRI, z której środowisko uruchomieniowe Windows może wyodrębnić zasoby. W czasie wykonywania, środowisko uruchomieniowe Windows wykonuje kod w swojej [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], ale pobiera zasoby z biblioteki klas przenośnych z pliku PRI.
 
- Jeśli Twoje [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu zawiera zlokalizowane zasoby, wdrażać je tak samo, jak bibliotekę w aplikacji klasycznej przy użyciu modelu koncentrator i klienci. Korzystanie z głównego pliku zasobów i wszystkich plików zlokalizowanych zasobów w Twojej [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, Dodaj odwołanie do zestawu głównego. W czasie kompilacji program Visual Studio wyodrębnia zasoby z głównego pliku zasobów i plików zasobów zlokalizowanych do oddzielnych plików resw. Następnie kompiluje pliki resw do jednego PRI pliku, który [!INCLUDE[wrt](../../../includes/wrt-md.md)] uzyskuje dostęp w czasie wykonywania.
+ Jeśli Twoje [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu zawiera zlokalizowane zasoby, wdrażać je tak samo, jak bibliotekę w aplikacji klasycznej przy użyciu modelu koncentrator i klienci. Korzystanie z głównego pliku zasobów i wszystkich plików zlokalizowanych zasobów w Twojej [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, Dodaj odwołanie do zestawu głównego. W czasie kompilacji program Visual Studio wyodrębnia zasoby z głównego pliku zasobów i plików zasobów zlokalizowanych do oddzielnych plików resw. Następnie kompiluje pliki resw do jednego pliku PRI, uzyskujący środowiska wykonawczego Windows w czasie wykonywania.
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Przykład: Niezlokalizowany [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: = — Operator - C# odwołania
+title: = — operator - C# odwołania
 ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 85182acb84ea79cb00a9edb315c3954f440305f4
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 6b8f67f32287b18a9e4ac8f0fa822f6ca4919e7f
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758353"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025265"
 ---
-# <a name="-operator-c-reference"></a>= — Operator (odwołanie w C#)
+# <a name="-operator-c-reference"></a>= — operator (C# odwołania)
 
 Operator przypisania `=` wartość jego prawostronny operand jest przypisywany do zmiennej, [właściwość](../../programming-guide/classes-and-structs/properties.md), lub [indeksatora](../../../csharp/programming-guide/indexers/index.md) elementu przez jej argument po lewej stronie. Wynikiem wyrażenia przypisania jest wartość przypisana do lewostronny operand. Typ operandu po prawej stronie musi być taki sam jak typ operandu po lewej stronie, albo niejawnie przekonwertować do niego.
 
@@ -54,7 +54,6 @@ Aby uzyskać więcej informacji, zobacz [przypisanie proste](~/_csharplang/spec/
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#Odwołanie](../index.md)
 - [Operatory języka C#](index.md)
 - [ref keyword](../keywords/ref.md)

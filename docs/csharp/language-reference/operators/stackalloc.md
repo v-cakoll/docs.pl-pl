@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: eeacd7628a11c87c8d21c7b18687892105374587
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 3be4e827e75e4e26a34d9ed70423af5aa317e7fb
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834101"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025001"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc — operator (C# odwołania)
 
@@ -19,11 +19,11 @@ ms.locfileid: "66834101"
 
 Możesz przypisać wynik `stackalloc` operatora zmiennej jednego z następujących typów:
 
-- Począwszy od C# 7.2, <xref:System.Span%601?displayName=nameWithType> lub <xref:System.ReadOnlySpan%601?displayName=nameWithType>, jak pokazano w poniższym przykładzie:
+- Począwszy od C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, jak pokazano w poniższym przykładzie:
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
-  Nie trzeba stosować `unsafe` kontekstu po przypisaniu stosu przydzielony blok pamięci, aby <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601> zmiennej.
+  Nie trzeba stosować [niebezpieczne](../keywords/unsafe.md) kontekstu po przypisaniu stosu przydzielony blok pamięci, aby <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601> zmiennej.
 
   Podczas pracy z tych typów, można użyć `stackalloc` wyrażenia w [warunkowego](conditional-operator.md) lub wyrażenia przypisania, co ilustruje poniższy przykład:
 
@@ -36,7 +36,7 @@ Możesz przypisać wynik `stackalloc` operatora zmiennej jednego z następujący
 
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
-  Jak pokazano na poprzednim przykładzie, należy użyć [niebezpieczne](../keywords/unsafe.md) kontekście podczas pracy z typami wskaźników.
+  Jak pokazano na poprzednim przykładzie, należy użyć `unsafe` kontekście podczas pracy z typami wskaźników.
 
 Zawartość nowo przydzielonego pamięci jest niezdefiniowane. Począwszy od C# 7.3, można użyć składni inicjatora tablicy definiowanie zawartości nowo alokacji pamięci. W poniższym przykładzie pokazano różne sposoby, aby to zrobić:
 

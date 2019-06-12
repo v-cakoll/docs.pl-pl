@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac253e5ff294360fff89e9746ca3038b4e1ee75c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751102"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026030"
 ---
 # <a name="formatting-types-in-net"></a>Typy formatowania na platformie .NET
 
@@ -123,7 +123,7 @@ Każdy typ, który jest tworzony na podstawie <xref:System.Object?displayPropert
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> Zaczynając od [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] obejmuje <xref:Windows.Foundation.IStringable> interfejsu z jednej metody [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), który zapewnia domyślną obsługę formatowania. Jednak zaleca się że typy zarządzane nie implementowały `IStringable` interfejsu. Aby uzyskać więcej informacji, zobacz " [!INCLUDE[wrt](../../../includes/wrt-md.md)] i `IStringable` interfejsu" sekcji na <xref:System.Object.ToString%2A?displayProperty=nameWithType> odwołania do stron.
+> Zaczynając od [!INCLUDE[win81](../../../includes/win81-md.md)], środowisko wykonawcze Windows obejmuje <xref:Windows.Foundation.IStringable> interfejsu z jednej metody [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), który zapewnia domyślną obsługę formatowania. Jednak zaleca się że typy zarządzane nie implementowały `IStringable` interfejsu. Aby uzyskać więcej informacji, zobacz "środowisko wykonawcze Windows i `IStringable` interfejsu" sekcji na <xref:System.Object.ToString%2A?displayProperty=nameWithType> odwołania do stron.
 
 Ponieważ wszystkie typy inne niż interfejsy są pochodną <xref:System.Object>, ta funkcjonalność jest dostarczana automatycznie do niestandardowych klas lub struktur. Jednak funkcjonalność oferowana przez domyślną `ToString` metoda, jest ograniczona: Mimo że identyfikuje typ, nie podaje żadnych informacji o instancji tego typu. Aby zapewnić reprezentację ciągu obiektu, który zawiera informacje dotyczące tego obiektu, konieczne jest przesłonięcie `ToString` metody.
 

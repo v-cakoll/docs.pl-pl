@@ -93,6 +93,6 @@ Aby uzyskać więcej informacji, zobacz [operator warunkowy](~/_csharplang/spec/
 - [C#Odwołanie](../index.md)
 - [Operatory języka C#](index.md)
 - [if-else, instrukcja](../keywords/if-else.md)
-- [?. i? Operatory]](member-access-operators.md#null-conditional-operators--and-)
+- [?. i?\[\] Operatory](member-access-operators.md#null-conditional-operators--and-)
 - [?? operator](null-coalescing-operator.md)
 - [ref keyword](../keywords/ref.md)

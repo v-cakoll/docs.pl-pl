@@ -17,8 +17,8 @@
       href: tutorials/predict-prices.md
     - name: Kategoryzowanie irysów (klastrowanie metodą k-średnich)
       href: tutorials/iris-clustering.md
-    - name: Rekomendacje dotyczące filmów (faktoryzacja macierzy)
-      href: tutorials/movie-recommmendation.md
+    - name: Zaleca się filmy (macierz factorization)
+      href: tutorials/movie-recommendation.md
     - name: Klasyfikacja obrazów (uczenie transferowe)
       href: tutorials/image-classification.md
     - name: Analiza sprzedaży produktu (wykrywanie anomalii)

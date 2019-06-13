@@ -1,10 +1,8 @@
 - name: Zapytanie o języku zintegrowanym (LINQ)
-  href: index.md
   items:
-    - name: Wprowadzenie do LINQ
-      href: introduction-to-linq.md
+    - name: Omówienie
+      href: index.md
     - name: 'Wprowadzenie do korzystania z LINQ w C#'
-      href: getting-started-with-linq.md
       items:
         - name: Wprowadzenie do zapytań LINQ
           href: introduction-to-linq-queries.md
@@ -23,8 +21,9 @@
         - name: 'Przewodnik: Pisanie zapytań w języku C# (LINQ)'
           href: walkthrough-writing-queries-linq.md
     - name: Standardowe operatory zapytań — przegląd
-      href: standard-query-operators-overview.md
       items:
+        - name: Omówienie
+          href: standard-query-operators-overview.md
         - name: Składnia wyrażeń dla standardowych operatorów zapytań
           href: query-expression-syntax-for-standard-query-operators.md
         - name: Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania
@@ -58,10 +57,12 @@
         - name: Operacje agregacji
           href: aggregation-operations.md
     - name: LINQ do obiektów
-      href: linq-to-objects.md
       items:
+        - name: Omówienie
+          href: linq-to-objects.md
         - name: LINQ i ciągi
           href: linq-and-strings.md
+        - name: Jak artykuły
           items:
             - name: 'Instrukcje: liczenie wystąpień słowa w ciągu (LINQ)'
               href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
@@ -89,12 +90,12 @@
               href: how-to-compute-column-values-in-a-csv-text-file-linq.md
         - name: LINQ i odbicie
           href: linq-and-reflection.md
-          items:
-            - name: 'Instrukcje: zapytanie dotyczące metadanych zestawu z odbiciem (LINQ)'
-              href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+        - name: 'Instrukcje: zapytanie dotyczące metadanych zestawu z odbiciem (LINQ)'
+          href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
         - name: LINQ i katalogi plików
-          href: linq-and-file-directories.md
           items:
+            - name: Omówienie
+              href: linq-and-file-directories.md
             - name: 'Instrukcje: zapytanie o pliki o określonym atrybucie lub nazwie'
               href: how-to-query-for-files-with-a-specified-attribute-or-name.md
             - name: 'Instrukcje: grupowanie plików według rozszerzenia (LINQ)'
@@ -114,10 +115,8 @@
         - name: 'Instrukcje: dodawanie metod niestandardowych do zapytań LINQ'
           href: how-to-add-custom-methods-for-linq-queries.md
     - name: LINQ do XML
-      href: linq-to-xml.md
       items:
         - name: Wprowadzenie (LINQ to XML)
-          href: getting-started-linq-to-xml.md
           items:
             - name: LINQ to XML — przegląd
               href: linq-to-xml-overview.md
@@ -126,10 +125,8 @@
             - name: LINQ to XML a inne technologie XML
               href: linq-to-xml-vs-other-xml-technologies.md
         - name: Przewodnik programowania (LINQ to XML)
-          href: programming-guide-linq-to-xml.md
           items:
             - name: Programowanie LINQ to XML — przegląd
-              href: linq-to-xml-programming-overview.md
               items:
                 - name: Programowanie funkcjonalne a proceduralne (LINQ to XML)
                   href: functional-vs-procedural-programming-linq-to-xml.md
@@ -143,15 +140,13 @@
                   href: xdocument-class-overview.md
                 - name: 'Instrukcje: kompilowanie przykładów LINQ to XML'
                   href: how-to-build-linq-to-xml-examples.md
-            - name: Tworzenie drzew XML
-              href: creating-xml-trees.md
+            - name: Drzew XML
               items:
-                - name: Konstrukcja funkcjonalna (LINQ to XML)
+                - name: konstrukcja funkcjonalna (LINQ to XML)
                   href: functional-construction-linq-to-xml.md
                 - name: 'Tworzenie drzew XML w języku C# (LINQ to XML)'
                   href: creating-xml-trees-linq-to-xml-2.md
                 - name: Analizowanie kodu XML
-                  href: parsing-xml.md
                   items:
                     - name: 'Instrukcje: analizowanie ciągu'
                       href: how-to-parse-a-string.md
@@ -172,7 +167,6 @@
                 - name: Weryfikowanie zawartości obiektów XElement i XDocument
                   href: valid-content-of-xelement-and-xdocument-objects3.md
             - name: Praca z przestrzeniami nazw XML
-              href: working-with-xml-namespaces.md
               items:
                 - name: Przegląd przestrzeni nazw (LINQ to XML)
                   href: namespaces-overview-linq-to-xml.md
@@ -185,7 +179,6 @@
                 - name: 'Instrukcje: pisanie zapytań dotyczących kodu XML w przestrzeniach nazw'
                   href: how-to-write-queries-on-xml-in-namespaces.md
             - name: Serializowanie drzew XML
-              href: serializing-xml-trees.md
               items:
                 - name: Zachowywanie białych znaków podczas serializowania
                   href: preserving-white-space-while-serializing.md
@@ -196,7 +189,6 @@
                 - name: Serializowanie do elementu XmlReader (wywoływanie transformacji XSLT)
                   href: serializing-to-an-xmlreader-invoking-xslt.md
             - name: Osie LINQ to XML
-              href: linq-to-xml-axes.md
               items:
                 - name: Osie LINQ to XML — przegląd
                   href: linq-to-xml-axes-overview.md
@@ -219,10 +211,8 @@
                 - name: 'Instrukcje: pobieranie płytkiej wartości elementu'
                   href: how-to-retrieve-the-shallow-value-of-an-element.md
             - name: Tworzenie zapytań dotyczących drzew XML
-              href: querying-xml-trees.md
               items:
                 - name: Podstawowe zapytania (LINQ to XML)
-                  href: basic-queries-linq-to-xml.md
                   items:
                     - name: 'Instrukcje: wyszukiwanie elementu o określonym atrybucie'
                       href: how-to-find-an-element-with-a-specific-attribute.md
@@ -251,7 +241,6 @@
                     - name: 'Instrukcje: debugowanie zestawów wyników zapytania'
                       href: how-to-debug-empty-query-results-sets.md
                 - name: Projekcje i przekształcenia (LINQ to XML)
-                  href: projections-and-transformations-linq-to-xml.md
                   items:
                     - name: 'Instrukcje: praca ze słownikami przy użyciu LINQ to XML'
                       href: how-to-work-with-dictionaries-using-linq-to-xml.md
@@ -270,7 +259,6 @@
                     - name: 'Instrukcje: generowanie kodu XML z plików CSV'
                       href: how-to-generate-xml-from-csv-files.md
                 - name: Zaawansowane techniki zapytań (LINQ to XML)
-                  href: advanced-query-techniques-linq-to-xml.md
                   items:
                     - name: 'Instrukcje: łączenie dwóch kolekcji (LINQ to XML)'
                       href: how-to-join-two-collections-linq-to-xml.md
@@ -291,7 +279,6 @@
                     - name: 'Instrukcje: wypełnianie drzewa XML z systemu plików'
                       href: how-to-populate-an-xml-tree-from-the-file-system.md
                 - name: LINQ to XML dla użytkowników metody XPath
-                  href: linq-to-xml-for-xpath-users.md
                   items:
                     - name: Porównanie metody XPath i LINQ to XML
                       href: comparison-of-xpath-and-linq-to-xml.md
@@ -328,23 +315,32 @@
                     - name: 'Instrukcje: znajdowanie bezpośrednio poprzednich elementów równorzędnych (XPath-LINQ to XML)'
                       href: how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
                 - name: Czyste przekształcanie funkcjonalne kodu XML
-                  href: pure-functional-transformations-of-xml.md
                   items:
                     - name: Wprowadzenie do czystych przekształceń funkcjonalnych
                       href: introduction-to-pure-functional-transformations.md
-                      items:
-                        - name: Pojęcia i terminologia (przekształcanie funkcjonalne)
-                          href: concepts-and-terminology-functional-transformation.md
-                        - name: Programowanie funkcjonalne a programowanie imperatywne
-                          href: functional-programming-vs-imperative-programming.md
-                        - name: Refaktoryzacja do czystych funkcji
-                          href: refactoring-into-pure-functions.md
-                        - name: Zastosowanie przekształcania funkcjonalnego
-                          href: applicability-of-functional-transformation.md
-                        - name: Przekształcanie funkcjonalne kodu XML
-                          href: functional-transformation-of-xml.md
+                    - name: Pojęcia i terminologia (przekształcanie funkcjonalne)
+                      href: concepts-and-terminology-functional-transformation.md
+                    - name: Programowanie funkcjonalne a programowanie imperatywne
+                      href: functional-programming-vs-imperative-programming.md
+                    - name: Refaktoryzacja do czystych funkcji
+                      href: refactoring-into-pure-functions.md
+                    - name: Zastosowanie przekształcania funkcjonalnego
+                      href: applicability-of-functional-transformation.md
+                    - name: Przekształcanie funkcjonalne kodu XML
+                      href: functional-transformation-of-xml.md
                     - name: 'Samouczek: łączenie łańcuchowe zapytań'
-                      href: tutorial-chaining-queries-together.md
+                      items:
+                        - name: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML
+                          href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+                        - name: Przykład wykonania odroczonego
+                          href: deferred-execution-example.md
+                        - name: Przykład łączenia łańcuchowego zapytań
+                          href: chaining-queries-example.md
+                        - name: Materializacja pośrednia
+                          href: intermediate-materialization.md
+                        - name: Łączenie łańcuchowe standardowych operatorów zapytań
+                          href: chaining-standard-query-operators-together.md
+                    - name: 'Samouczek: łączenie łańcuchowe zapytań'
                       items:
                         - name: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML
                           href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
@@ -357,7 +353,6 @@
                         - name: Łączenie łańcuchowe standardowych operatorów zapytań
                           href: chaining-standard-query-operators-together.md
                     - name: 'Samouczek: manipulowanie zawartością w dokumencie WordprocessingML'
-                      href: tutorial-manipulating-content-in-a-wordprocessingml-document.md
                       items:
                         - name: Kształt dokumentów WordprocessingML
                           href: shape-of-wordprocessingml-documents.md
@@ -378,7 +373,6 @@
                         - name: Znajdowanie tekstu w dokumentach programu Word
                           href: finding-text-in-word-documents.md
                         - name: Szczegóły dokumentów Office Open XML WordprocessingML
-                          href: details-of-office-open-xml-wordprocessingml-documents.md
                           items:
                             - name: Dokument WordprocessingML ze stylami
                               href: wordprocessingml-document-with-styles.md
@@ -387,7 +381,6 @@
                             - name: 'Przykład, który wyprowadza części dokumentu Office Open XML Document'
                               href: example-that-outputs-office-open-xml-document-parts.md
             - name: Modyfikowanie drzew XML (LINQ to XML)
-              href: modifying-xml-trees-linq-to-xml.md
               items:
                 - name: Modyfikowanie drzewa XML w pamięci a konstrukcja funkcjonalna (LINQ to XML)
                   href: in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md
@@ -402,7 +395,6 @@
                 - name: 'Instrukcje: zmienianie przestrzeni nazw dla całego drzewa XML'
                   href: how-to-change-the-namespace-for-an-entire-xml-tree.md
             - name: Wydajność (LINQ to XML)
-              href: performance-linq-to-xml.md
               items:
                 - name: Wydajność zapytań łańcuchowych (LINQ to XML)
                   href: performance-of-chained-queries-linq-to-xml.md
@@ -413,7 +405,6 @@
                 - name: Zapytania skompilowane statycznie (LINQ to XML)
                   href: statically-compiled-queries-linq-to-xml.md
             - name: Zaawansowane programowanie LINQ to XML
-              href: advanced-linq-to-xml-programming.md
               items:
                 - name: Adnotacje LINQ to XML
                   href: linq-to-xml-annotations.md
@@ -434,7 +425,6 @@
                 - name: 'Instrukcje: przekształcanie drzew LINQ to XML w stylu XSLT przy użyciu adnotacji'
                   href: how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
                 - name: 'Serializowanie wykresów obiektów, które zawierają obiekty XElement'
-                  href: serializing-object-graphs-that-contain-xelement-objects.md
                   items:
                     - name: 'Instrukcje: serializowanie przy użyciu elementu XmlSerializer'
                       href: how-to-serialize-using-xmlserializer.md
@@ -443,7 +433,6 @@
             - name: Zabezpieczenia LINQ to XML
               href: linq-to-xml-security.md
             - name: Przykładowe dokumenty XML (LINQ to XML)
-              href: sample-xml-documents-linq-to-xml.md
               items:
                 - name: 'Przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)'
                   href: sample-xml-file-typical-purchase-order-linq-to-xml-1.md

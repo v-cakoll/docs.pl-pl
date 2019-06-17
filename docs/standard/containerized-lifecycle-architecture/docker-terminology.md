@@ -3,10 +3,10 @@ title: Terminologia platformy Docker
 description: Dowiedz się, niektóre podstawowej terminologii, który został użyty codziennie podczas pracy z platformą Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644749"
 ---
 # <a name="docker-terminology"></a>Terminologia platformy Docker
@@ -27,21 +27,21 @@ W tej sekcji przedstawiono terminów i definicje, które należy zapoznać się 
 
 **Kompilacja wieloetapowych**: Jest funkcją, od 17.05 platformy Docker lub wyższym, która pomaga zredukować rozmiar końcowy obrazów. W kilku zdaniach wieloetapowych kompilacji można użyć, na przykład duży obraz podstawowy, zawierające zestaw SDK do kompilowania i publikowania aplikacji i następnie przy użyciu folderu publikowania za pomocą małych tylko do środowiska wykonawczego obrazu podstawowego, dają znacznie mniejszy obraz końcowe
 
-**Repozytorium (repozytorium)**: Zbiór powiązanych obrazów platformy Docker, oznaczone znacznikiem, który wskazuje wersję obrazu. Niektóre repozytoria zawierają wiele wariantów określonego obrazu, takich jak obrazy, które zawierają zestawy SDK (większe), obrazy, które zawierają tylko środowisk uruchomieniowych (jaśniejszy) itp. Warianty te mogą być oznaczone tagami. Jednym repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz.
+**Repozytorium (repozytorium)** : Zbiór powiązanych obrazów platformy Docker, oznaczone znacznikiem, który wskazuje wersję obrazu. Niektóre repozytoria zawierają wiele wariantów określonego obrazu, takich jak obrazy, które zawierają zestawy SDK (większe), obrazy, które zawierają tylko środowisk uruchomieniowych (jaśniejszy) itp. Warianty te mogą być oznaczone tagami. Jednym repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz.
 
 **Rejestr**: To usługa, która zapewnia dostęp do repozytoriów. Rejestr domyślne obrazy najbardziej publiczny jest [usługi Docker Hub](https://hub.docker.com/) (właściciel platformy Docker jako organizacja). Rejestr zawiera zazwyczaj repozytoriów z wielu zespołów. Firmy często mają prywatnych rejestrów do przechowywania i zarządzania obrazami, którym zostały utworzone. Usługa Azure Container Registry jest inny przykład.
 
-**Obraz architektury wielu**: W przypadku wielu architektury jest funkcja, która ułatwia wybór odpowiedniej obrazu, zależnie od platformy, której platformy Docker jest uruchomiona, na przykład, gdy plik Dockerfile żąda obrazu podstawowego **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** z rejestru faktycznie pobiera **`2.2-nanoserver-1709`**, **`2.2-nanoserver-1803`**, **`2.2-nanoserver-1809`** lub **`2.2-stretch`**, w zależności od systemu operacyjnego i wersji, w którym platformy Docker jest uruchomiona.
+**Obraz architektury wielu**: W przypadku wielu architektury jest funkcja, która ułatwia wybór odpowiedniej obrazu, zależnie od platformy, której platformy Docker jest uruchomiona, na przykład, gdy plik Dockerfile żąda obrazu podstawowego **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** z rejestru faktycznie pobiera **`2.2-nanoserver-1709`** , **`2.2-nanoserver-1803`** , **`2.2-nanoserver-1809`** lub **`2.2-stretch`** , w zależności od systemu operacyjnego i wersji, w którym platformy Docker jest uruchomiona.
 
 **Docker Hub**: Publicznego rejestru przekazywania obrazów i pracować z nimi. Usługi docker Hub udostępnia platformy Docker hostingu obrazu, publicznych lub prywatnych rejestrów, wyzwalaczy kompilacji oraz elementów web hook i integracja z usługą GitHub i Bitbucket.
 
 **Usługa Azure Container Registry**: Zasób publicznego do pracy z obrazów platformy Docker i jego składniki na platformie Azure. Dzięki temu rejestru, który znajduje się w pobliżu wdrożeń na platformie Azure i zapewnia kontrolę dostępu, dzięki czemu można użyć usługi Azure Active Directory, grup i uprawnień.
 
-**Docker Trusted Registry (DTR)**: Rejestru usługi Docker (z platformy Docker), może być zainstalowany w środowisku lokalnym, więc znajduje się w obrębie centrum danych organizacji i sieć. Jest to wygodne dla prywatnych obrazów, które powinny być zarządzane w ramach organizacji. Docker Trusted Registry wchodzi w skład produktów Docker Datacenter. Aby uzyskać więcej informacji, zobacz [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Docker Trusted Registry (DTR)** : Rejestru usługi Docker (z platformy Docker), może być zainstalowany w środowisku lokalnym, więc znajduje się w obrębie centrum danych organizacji i sieć. Jest to wygodne dla prywatnych obrazów, które powinny być zarządzane w ramach organizacji. Docker Trusted Registry wchodzi w skład produktów Docker Datacenter. Aby uzyskać więcej informacji, zobacz [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
-**Platformę docker Community Edition (CE)**: Narzędzia programistyczne dla Windows i macOS, tworzenia, uruchamiania i testowania kontenery lokalnie. Docker CE dla Windows zapewnia środowisk deweloperskich dla systemu Linux i Windows kontenery. Hosta platformy Docker w systemie Linux na Windows opiera się na [funkcji Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) maszyny wirtualnej. Host dla kontenerów Windows jest bezpośrednio oparty na Windows. Docker CE dla komputerów Mac opiera się w ramach funkcji Hypervisor firmy Apple i [funkcji hypervisor xhyve](https://github.com/mist64/xhyve), zapewniającą maszyny wirtualnej hosta platformy Docker w systemie Linux na systemu operacyjnego Mac Docker X. CE for Windows i dla komputerów Mac zastępuje przybornika Docker zależała od bazy danych Oracle VirtualBox.
+**Platformę docker Community Edition (CE)** : Narzędzia programistyczne dla Windows i macOS, tworzenia, uruchamiania i testowania kontenery lokalnie. Docker CE dla Windows zapewnia środowisk deweloperskich dla systemu Linux i Windows kontenery. Hosta platformy Docker w systemie Linux na Windows opiera się na [funkcji Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) maszyny wirtualnej. Host dla kontenerów Windows jest bezpośrednio oparty na Windows. Docker CE dla komputerów Mac opiera się w ramach funkcji Hypervisor firmy Apple i [funkcji hypervisor xhyve](https://github.com/mist64/xhyve), zapewniającą maszyny wirtualnej hosta platformy Docker w systemie Linux na systemu operacyjnego Mac Docker X. CE for Windows i dla komputerów Mac zastępuje przybornika Docker zależała od bazy danych Oracle VirtualBox.
 
-**Rozwiązania docker Enterprise Edition (EE)**: Wersja skali korporacyjnej narzędzia platformy Docker do tworzenia aplikacji systemu Linux i Windows.
+**Rozwiązania docker Enterprise Edition (EE)** : Wersja skali korporacyjnej narzędzia platformy Docker do tworzenia aplikacji systemu Linux i Windows.
 
 **Redagowanie**: Narzędzie wiersza polecenia i YAML pliku formatu metadanych do definiowania i uruchamiania aplikacji obsługującej wiele kontenerów. Należy zdefiniować pojedynczej aplikacji opartych na obrazach wielu z co najmniej jeden plik yml, które mogą zastępować wartości w zależności od środowiska. Po utworzeniu definicjami można wdrożyć aplikacji wielokontenerowych zupełnie za pomocą jednego polecenia (docker-compose się), tworzy kontener na obraz na hoście platformy Docker.
 

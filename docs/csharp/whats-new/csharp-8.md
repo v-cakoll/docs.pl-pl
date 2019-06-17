@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny w wersji zapoznawczej 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: e2f3c4f2385873d37c3b125e526913c30d848932
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557148"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041595"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -327,7 +327,7 @@ int M()
 
 A `struct` zadeklarowane za pomocą `ref` modyfikator nie może implementować żadnych interfejsów i dlatego nie może implementować <xref:System.IDisposable>. W związku z tym aby umożliwić `ref struct` usuwana, musi mieć dostępne `void Dispose()` metody. Dotyczy to również `readonly ref struct` deklaracji.
 
-## <a name="nullable-reference-types"></a>Typy dopuszczające wartości null odwołań
+## <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
 W kontekście annotation dopuszczający wartość null, dowolnej zmiennej typu odwołania jest uważany za **Typ referencyjny niedopuszczające wartości null**. Jeśli chcesz wskazać, że zmienna może mieć wartości null, należy dołączyć nazwę typu z `?` Aby zadeklarować zmienną jako **typu dopuszczającego wartość null odwołania**.
 
@@ -381,7 +381,7 @@ Obsługa tego języka opiera się na dwóch nowych typów i dwóch nowych operat
 
 Zacznijmy od reguł dla indeksów. Należy wziąć pod uwagę tablicy `sequence`. `0` Indeksu jest taka sama jak `sequence[0]`. `^0` Indeksu jest taka sama jak `sequence[sequence.Length]`. Należy pamiętać, że `sequence[^0]` zgłosić wyjątek, podobnie jak `sequence[sequence.Length]` jest. Dowolną liczbą `n`, indeks `^n` jest taka sama jak `sequence.Length - n`.
 
-Określa zakres *start* i *zakończenia* zakresu. Zakresy są wzajemnie, co oznacza *zakończenia* nie wchodzi w zakres. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres. 
+Określa zakres *start* i *zakończenia* zakresu. Początek zakresu (włączna) i koniec zakresu jest wzajemnie, co oznacza *start* znajduje się w zakresie, ale *zakończenia* nie wchodzi w zakres. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres. 
 
 Spójrzmy na kilka przykładów. Rozważmy następującą tablicę, oznaczony za pomocą jej indeks, od samego początku i na końcu:
 

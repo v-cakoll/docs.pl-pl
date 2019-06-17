@@ -3,10 +3,10 @@ title: Wprowadzenie do kontenerów i platformy Docker
 description: Uzyskaj ogólny przegląd głównych korzyści z używania platformy Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644959"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Wprowadzenie do kontenerów i platformy Docker

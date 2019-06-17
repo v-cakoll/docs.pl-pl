@@ -2,12 +2,12 @@
 title: Funkcje ciągów
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eb70151628e32f6ad0a87be8ff0cd071ae89235
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879125"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041605"
 ---
 # <a name="string-functions"></a>Funkcje ciągów
 .NET Framework Data Provider for SQL Server (SqlClient) zapewnia `String` funkcje, które wykonują operacje na danych wejściowych `String` i zwracają `String` lub wynik wartość liczbową. Te funkcje są w przestrzeni nazw SqlServer, który jest dostępny, gdy używasz SqlClient. Właściwość przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, który prefiks jest używany przez tego dostawcę dla określonego konstrukcji, takich jak typy i funkcje.  
@@ -27,7 +27,7 @@ ms.locfileid: "61879125"
 |`NCHAR(expression)`|Zwraca Unicode `String` kodem określona liczba całkowita, zgodnie z definicją w standardzie Unicode.<br /><br /> **Argumenty**<br /><br /> `expression`: `Int32`.<br /><br /> **Wartość zwracana**<br /><br /> Unicode `String`.<br /><br /> **Przykład**<br /><br /> `SqlServer.NCHAR(65)`|  
 |`PATINDEX('%pattern%', expression)`|Zwraca pozycję początkową pierwszego wystąpienia wzorca w określonej `String` wyrażenia.<br /><br /> **Argumenty**<br /><br /> `'%pattern%'`: ASCII lub Unicode `String` typu. Symbole wieloznaczne mogą być używane; jednak znakiem % musi występować przed i po nim wzorca (z wyjątkiem wyszukuje pierwszy lub ostatni znaków).<br /><br /> `expression`: ASCII lub Unicode `String` do wyszukiwania określonego wzorca.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.<br /><br /> **Przykład**<br /><br /> `SqlServer.PATINDEX('abc', 'ab')`|  
 |`QUOTENAME('char_string' [, 'quote_char'])`|Zwraca Unicode `String` z ogranicznikami dodaje się do ciągu wejściowego prawidłowy program SQL Server 2005 rozdzielonych identyfikatora.<br /><br /> **Argumenty**<br /><br /> `char_string`: Unicode `String`.<br /><br /> `quote_char`: Ciąg znaków jeden do użycia jako ogranicznika. Może to być pojedynczy znak cudzysłowu ('), po lewej stronie lub prawy nawias ([]) lub podwójny cudzysłów ("). Jeśli `quote_char` nie zostanie określony, są używane nawiasy kwadratowe.<br /><br /> **Wartość zwracana**<br /><br /> Unicode `String`.<br /><br /> **Przykład**<br /><br /> `SqlServer.QUOTENAME('abc[]def')`|  
-|`REPLACE(expression1, expression2, expression3)`|Jest powtarzany wyrażeń znaków określoną liczbę razy.<br /><br /> **Argumenty**<br /><br /> `expression1`: Wyrażenie ciągu, który ma być przeszukiwany. string_expression1 może być typu Unicode lub ciąg ASCII.<br /><br /> `expression2`: Podciąg ma zostać odnaleziona. string_expression2 może być typu Unicode lub ciąg ASCII.<br /><br /> `expression3`; Ciąg zastępujący. string_expression3 może być typu Unicode lub ciąg ASCII.<br /><br /> **Przykład**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
+|`REPLACE(expression1, expression2, expression3)`|Zamienia wyrażenie znaku innego wyrażenia znaków.<br /><br /> **Argumenty**<br /><br /> `expression1`: Wyrażenie ciągu, który ma być przeszukiwany. `expression1` może być typu Unicode lub ciąg ASCII.<br /><br /> `expression2`: Podciąg ma zostać odnaleziona. `expression2` może być typu Unicode lub ciąg ASCII.<br /><br /> `expression3`; Ciąg zastępujący. `expression3` może być typu Unicode lub ciąg ASCII.<br /><br /> **Przykład**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
 |`REPLICATE(char_expression, int_expression)`|Jest powtarzany wyrażeń znaków określoną liczbę razy.<br /><br /> **Argumenty**<br /><br /> `char_expression`: Unicode i ASCII `String` typu.<br /><br /> `int_expression`: `Int64` (nieobsługiwane w programie SQL Server 2000) lub `Int32`.<br /><br /> **Wartość zwracana**<br /><br /> Unicode i ASCII `String` typu.<br /><br /> **Przykład**<br /><br /> `SqlServer.REPLICATE('aa',2)`|  
 |`REVERSE(expression)`|Zwraca Unicode lub ciąg ASCII o jego pozycji znaku wycofane w ciągu wejściowym.<br /><br /> **Argumenty**<br /><br /> `expression`: Unicode i ASCII `String` typu.<br /><br /> **Wartość zwracana**<br /><br /> Unicode i ASCII `String` typu.<br /><br /> **Przykład**<br /><br /> `SqlServer.REVERSE('abcd')`|  
 |`RIGHT(char_expression, count)`|Zwraca wartość prawej części ciągu znakowego z określoną liczbę znaków.<br /><br /> **Argumenty**<br /><br /> `char_expression`Typ Unicode lub ciąg ASCII. Funkcja CAST umożliwia jawne konwertowanie character_expression.<br /><br /> `count`: `Int64` (Nie jest zwracana w programie SQL Server 2000) lub `Int32` typ, który określa, ile znaków character_expression zostaną zwrócone.<br /><br /> **Wartość zwracana**<br /><br /> ASCII `String` typu.<br /><br /> **Przykład**<br /><br /> `SqlServer.RIGHT('SQL Server', 6)`|  

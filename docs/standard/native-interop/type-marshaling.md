@@ -4,12 +4,12 @@ description: Dowiedz się, jak .NET kieruje typów na natywną reprezentację.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065466"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041785"
 ---
 # <a name="type-marshaling"></a>Marshaling typów
 
@@ -79,6 +79,20 @@ Niektóre typy mogą być organizowane wyłącznie jako parametry, a nie pola. T
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 Jeśli te ustawienia domyślne nie są dokładnie chcesz, możesz dostosować, jak parametry są przekazywane. [Kierowanie parametru](customize-parameter-marshaling.md) artykuł przeszukiwania Cię sposobu dostosowywania jak różne typy parametrów są przekazywane.
+
+## <a name="default-marshaling-in-com-scenarios"></a>Domyślny marshaling w scenariuszach COM
+
+Wywołując metod obiektów COM na platformie .NET, środowisko uruchomieniowe platformy .NET zmienia domyślny marshaling reguł wspólne COM semantyki. Poniższa tabela zawiera listę reguł, które korzysta z środowiska uruchomieniowe platformy .NET w scenariuszach COM:
+
+| Typ architektury .NET | Typ macierzysty (COM wywołania metody) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| Typy delegatów | `_Delegate*` w programie .NET Framework. Niedozwolone w programie .NET Core. |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| Tablica platformy .NET | `SAFEARRAY`                   |
+| `string[]` | `SAFEARRAY` z `BSTR`s        |
 
 ## <a name="marshaling-classes-and-structs"></a>Marshaling klas i struktur
 

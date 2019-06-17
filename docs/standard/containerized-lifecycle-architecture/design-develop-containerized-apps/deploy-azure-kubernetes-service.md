@@ -3,10 +3,10 @@ title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w c
 description: Dowiedz się, jak wdrożyć aplikację przy użyciu usługi Azure Kubernetes Service.
 ms.date: 02/15/2019
 ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644644"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Wdrażanie w usłudze Azure Kubernetes Service (AKS)

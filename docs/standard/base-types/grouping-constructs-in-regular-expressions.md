@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634341"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135680"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechwytywane podciągi ciągu wejściowego. Można użyć konstrukcji grupowania, wykonaj następujące czynności:  
@@ -187,7 +187,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechw
   
  gdzie *Nazwa1* jest bieżącą grupę (opcjonalnie) *Nazwa2* jest wcześniej zdefiniowanej grupy i *Podwyrażenie* jest wzorzec dowolnym prawidłowym wyrażeniem regularnym. Równoważenie definicji grup usuwa definicję *Nazwa2* i przechowuje odstęp między *Nazwa2* i *Nazwa1* w *Nazwa1*. Jeśli nie *Nazwa2* grupy jest zdefiniowany, provided dopasowanie. Ponieważ usuwanie ostatnia definicja *Nazwa2* poprzednią definicję, co spowoduje wyświetlenie *Nazwa2*, ta konstrukcja umożliwia używanie stosu przechwyconych obrazów dla grupy *Nazwa2* jako Licznik rejestrowanie informacji o zagnieżdżonej konstrukcji, takich jak nawiasy lub otwierające i zamykające nawiasy kwadratowe.  
   
- Równoważenie definicji grup używa *Nazwa2* jako stosu. Znak początku każdej zagnieżdżonej konstrukcji znajduje się w grupie, a w jego <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> kolekcji. Po dopasowaniu znak zamykającego odpowiadającymi mu dostawcami otwierania znaków zostanie usunięty z grupy, a <xref:System.Text.RegularExpressions.Group.Captures%2A> kolekcji zmniejszyła się o jeden. Po otwierającym i znaki zamknięcia wszystkich zagnieżdżonych konstrukcji dopasowane, *Nazwa1* jest pusty.  
+ Równoważenie definicji grup używa *Nazwa2* jako stosu. Znak początku każdej zagnieżdżonej konstrukcji znajduje się w grupie, a w jego <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> kolekcji. Po dopasowaniu znak zamykającego odpowiadającymi mu dostawcami otwierania znaków zostanie usunięty z grupy, a <xref:System.Text.RegularExpressions.Group.Captures%2A> kolekcji zmniejszyła się o jeden. Po otwierającym i znaki zamknięcia wszystkich zagnieżdżonych konstrukcji dopasowane, *Nazwa2* jest pusty.  
   
 > [!NOTE]
 >  Po użytkownik modyfikuje wyrażenia regularnego w poniższym przykładzie do użycia odpowiednie otwieranie i zamykanie znak zagnieżdżonej konstrukcji, służy do obsługi najbardziej zagnieżdżonej konstrukcji, takich jak wyrażenia matematyczne lub linii kodu programu, które zawierają wiele zagnieżdżonych wywołań metody.  

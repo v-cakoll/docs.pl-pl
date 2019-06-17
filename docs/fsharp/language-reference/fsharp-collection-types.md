@@ -2,12 +2,12 @@
 title: Typy kolekcji F#
 description: Dowiedz się więcej o F# typy kolekcji i jak będą się różnić od typy kolekcji w programie .NET Framework.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996817"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041726"
 ---
 # <a name="f-collection-types"></a>Typy kolekcji F#
 
@@ -31,7 +31,7 @@ W poniższej tabeli przedstawiono F# typy kolekcji.
 
 W tej sekcji porównano funkcje, które są dostępne na F# typy kolekcji. Obliczeniową złożoność funkcji zostanie podany, gdzie N to rozmiar pierwszej kolekcji i M jest większy niż druga kolekcja, jeśli istnieje. Łączniki (-) wskazuje, że ta funkcja jest niedostępna w kolekcji. Ponieważ sekwencje opóźnieniem są oceniane, funkcji, takich jak Seq.distinct może być O(1) zwraca wynik natychmiast, mimo że nadal ma wpływ na wydajność sekwencji, gdy wyliczenia.
 
-|Funkcja|Tablica|Lista|Sekwencja|Mapa|Zestaw|Opis|
+|Funkcja|Tablica|Lista|Sequence|Mapa|Zestaw|Opis|
 |--------|-----|----|--------|---|---|-----------|
 |Dołącz|O(M)|O(N)|O(N)|-|-|Zwraca nową kolekcję zawierającą elementy pierwszej kolekcji następuje elementy druga kolekcja.|
 |add|-|-|-|O (log N)|O (log N)|Zwraca nową kolekcję z elementem, który został dodany.|
@@ -83,6 +83,7 @@ W tej sekcji porównano funkcje, które są dostępne na F# typy kolekcji. Oblic
 |iteri —|O(N)|O(N)|O(N)|-|-|Stosuje daną funkcję do do każdego elementu kolekcji. Liczba całkowita, która jest przekazywana do funkcji wskazuje indeks elementu.|
 |iteri2 —|O(N)|O(N)|-|-|-|Stosuje daną funkcję do pary elementów, które są pobierane z dopasowywania indeksów w dwóch tablicach. Liczba całkowita, która jest przekazywana do funkcji wskazuje indeks elementu. Dwie tablice muszą być tej samej długości.|
 |iter2 —|O(N)|O(N)|O(N)|-|-|Stosuje daną funkcję do pary elementów, które są pobierane z dopasowywania indeksów w dwóch tablicach. Dwie tablice muszą być tej samej długości.|
+|ostatni|O(1)|O(N)|O(N)|-|-|Zwraca ostatni element w kolekcji ma zastosowania.|
 |length|O(1)|O(N)|O(N)|-|-|Zwraca liczbę elementów w kolekcji.|
 |map|O(N)|O(N)|O(1)|-|-|Tworzy kolekcję, której elementy są wynikami zastosowania danej funkcji do każdego elementu tablicy.|
 |map2|O(N)|O(N)|O(1)|-|-|Tworzy kolekcję, której elementy są wynikami zastosowania danej funkcji na odpowiednie elementy dwie kolekcje parowania. Dwóch tablic danych wejściowych musi mieć tę samą długość.|
@@ -120,7 +121,7 @@ W tej sekcji porównano funkcje, które są dostępne na F# typy kolekcji. Oblic
 |sortinplaceby —|Średnio O (N log N)<br /><br />Najgorszy O(N^2)|-|-|-|-|Sortuje elementy tablicy mutacja go w miejscu i rozpoczęcie używania danego projekcji kluczy. Elementy są porównywane za pomocą [porównaj](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
 |sortinplacewith —|Średnio O (N log N)<br /><br />Najgorszy O(N^2)|-|-|-|-|Sortowania mutacja go w miejscu i przy użyciu funkcji porównywania danego jak kolejność elementów tablicy.|
 |sortwith —|Średnio O (N log N)<br /><br />Najgorszy O(N^2)|O (N log N)|-|-|-|Sortuje elementów kolekcji, używając funkcji porównywania danego jako kolejność i zwraca nową kolekcję.|
-|Sub|O(N)|-|-|-|-|Tworzy tablicę zawierającą dany Podzakres, który jest określony przez uruchomienie indeksu i długości.|
+|sub|O(N)|-|-|-|-|Tworzy tablicę zawierającą dany Podzakres, który jest określony przez uruchomienie indeksu i długości.|
 |Suma|O(N)|O(N)|O(N)|-|-|Zwraca sumę elementów w kolekcji.|
 |sumby —|O(N)|O(N)|O(N)|-|-|Zwraca sumę wyników, które są generowane, stosując funkcję do każdego elementu kolekcji.|
 |Tail|-|O(1)|-|-|-|Zwraca listę bez jej pierwszego elementu.|

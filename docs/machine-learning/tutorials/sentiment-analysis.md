@@ -4,12 +4,12 @@ description: Ten samouczek pokazuje, jak utworzyć aplikację konsoli .NET Core,
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 674dc2d12cb8f65753730e187e13fc5e522ff6b3
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593413"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135692"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Samouczek: Analizowanie opinii komentarze witryny sieci Web przy użyciu klasyfikacji binarnej w strukturze ML.NET
 
@@ -46,7 +46,7 @@ Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://git
 ## <a name="prepare-your-data"></a>Przygotowywanie danych
 
 > [!NOTE]
-> Zestawy danych, w tym samouczku są z "From grupy do poszczególnych etykiet korzystanie z funkcji głębokiego" Kotzias et. Al. KDD 2015 i hostowanej na Machine Learning repozytorium — Dua, D. i Karra Taniskidou, E. (2017). UCI usługi Machine Learning repozytorium [http://archive.ics.uci.edu/ml]. Irvine, CA: Uniwersytet kalifornijski School informacji i informatyki.
+> Zestawy danych, w tym samouczku są z "From grupy do poszczególnych etykiet korzystanie z funkcji głębokiego" Kotzias et. Al. KDD 2015 i hostowanej na Machine Learning repozytorium — Dua, D. i Karra Taniskidou, E. (2017). UCI usługi Machine Learning repozytorium [http://archive.ics.uci.edu/ml ]. Irvine, CA: Uniwersytet kalifornijski School informacji i informatyki.
 
 1. Pobierz [pliku ZIP zestawu danych zdania etykietą tonacji UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)i Rozpakuj go.
 
@@ -276,13 +276,13 @@ Użyj poniższego kodu, aby wyświetlić metryki:
 
     [!code-csharp[CallUseModelWithSingleItem](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
-3. Dodaj następujący kod do utworzenia jako pierwszy wiersz w `Predict()` metody:
+3. Dodaj następujący kod do utworzenia jako pierwszy wiersz w `UseModelWithSingleItem()` metody:
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest wygoda interfejsu API, dzięki czemu można przekazać, a następnie wykonaj prognozowania w pojedynczym wystąpieniu danych.
 
-4. Dodaj komentarz do testowania uczonego modelu prognozowania w `Predict()` metody przez utworzenie wystąpienia `SentimentData`:
+4. Dodaj komentarz do testowania uczonego modelu prognozowania w `UseModelWithSingleItem()` metody przez utworzenie wystąpienia `SentimentData`:
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 

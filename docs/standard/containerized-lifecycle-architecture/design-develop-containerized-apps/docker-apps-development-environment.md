@@ -3,10 +3,10 @@ title: Środowisko deweloperskie dla aplikacji platformy Docker
 description: Ustal, jakimi najważniejszych opcjach narzędzia do programowania, które obsługują programowanie platformy Docker w cyklu życia.
 ms.date: 02/15/2019
 ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641416"
 ---
 # <a name="development-environment-for-docker-apps"></a>Środowisko deweloperskie dla aplikacji platformy Docker

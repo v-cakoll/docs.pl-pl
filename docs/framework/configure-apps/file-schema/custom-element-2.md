@@ -19,7 +19,7 @@ ms.locfileid: "66300759"
 
 <span data-ttu-id="47540-103">Definiuje ustawienia powiązane z sekcji konfiguracji niestandardowej, korzystających z <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> klasy.</span><span class="sxs-lookup"><span data-stu-id="47540-103">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span>
 
-<span data-ttu-id="47540-104">[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\\</span><span class="sxs-lookup"><span data-stu-id="47540-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\\</span></span>
+<span data-ttu-id="47540-104">[ **\<Konfiguracja >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="47540-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)</span></span>\
 <span data-ttu-id="47540-105">&nbsp;&nbsp; **\<sectionName>**</span><span class="sxs-lookup"><span data-stu-id="47540-105">&nbsp;&nbsp;**\<sectionName>**</span></span>
 
 ## <a name="attributes"></a><span data-ttu-id="47540-106">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="47540-106">Attributes</span></span>
@@ -30,7 +30,7 @@ ms.locfileid: "66300759"
 
 |     | <span data-ttu-id="47540-109">Opis</span><span class="sxs-lookup"><span data-stu-id="47540-109">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="47540-110"> *\*\<Konfiguracja >** </span><span class="sxs-lookup"><span data-stu-id="47540-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="47540-111">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="47540-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="47540-110"> **\<Konfiguracja >** </span><span class="sxs-lookup"><span data-stu-id="47540-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="47540-111">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="47540-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
 ## <a name="child-elements"></a><span data-ttu-id="47540-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="47540-112">Child elements</span></span>
 

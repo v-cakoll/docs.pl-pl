@@ -807,6 +807,10 @@
               href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
         - name: Rekordy
           href: fsharp/language-reference/records.md
+        - name: Rekordy anonimowe
+          href: fsharp/language-reference/anonymous-records.md
+        - name: Kopiowanie i aktualizacja wyrażeń rekordów
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: Sumy rozłączne
           href: fsharp/language-reference/discriminated-unions.md
         - name: Wyliczenia
@@ -854,8 +858,6 @@
           href: fsharp/language-reference/delegates.md
         - name: Wyrażenia obiektów
           href: fsharp/language-reference/object-expressions.md
-        - name: Kopiowanie i aktualizacja wyrażeń rekordów
-          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: Rzutowanie i konwersje
           href: fsharp/language-reference/casting-and-conversions.md
         - name: Kontrola dostępu

@@ -62,7 +62,7 @@
           href: linq-to-objects.md
         - name: LINQ i ciągi
           href: linq-and-strings.md
-        - name: Jak artykuły
+        - name: Artykuły z instrukcjami
           items:
             - name: 'Instrukcje: liczenie wystąpień słowa w ciągu (LINQ)'
               href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
@@ -140,7 +140,7 @@
                   href: xdocument-class-overview.md
                 - name: 'Instrukcje: kompilowanie przykładów LINQ to XML'
                   href: how-to-build-linq-to-xml-examples.md
-            - name: Drzew XML
+            - name: Drzewa XML
               items:
                 - name: konstrukcja funkcjonalna (LINQ to XML)
                   href: functional-construction-linq-to-xml.md

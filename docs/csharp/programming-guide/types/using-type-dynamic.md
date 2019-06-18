@@ -6,16 +6,16 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 18e737ec1f6c6f76ff882d48ad311a45ba7b756b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a9e1f1fafcee4723c4aed37a0473c0f75512e11a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456742"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169857"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Używanie typu dynamicznego (C# Programming Guide)
 
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza nowy typ `dynamic`. Typ jest typem statyczne, ale obiekt typu `dynamic` pomija sprawdzanie typu statycznego. W większości przypadków, funkcje, takie jak ma typ `object`. W czasie kompilacji, element, który jest `dynamic` założono, że obsługuje żadnych operacji. W związku z tym nie trzeba mieć wątpliwości dotyczące tego, czy obiekt wartość pochodzi z interfejsu API modelu COM, od języka dynamicznego, takich jak IronPython, z HTML Document Object Model (DOM), z odbicia lub gdzie indziej w programie. Jeśli kod nie jest prawidłowy, błędy są przechwytywane w czasie wykonywania.
+C#4 wprowadza nowy typ `dynamic`. Typ jest typem statyczne, ale obiekt typu `dynamic` pomija sprawdzanie typu statycznego. W większości przypadków, funkcje, takie jak ma typ `object`. W czasie kompilacji, element, który jest `dynamic` założono, że obsługuje żadnych operacji. W związku z tym nie trzeba mieć wątpliwości dotyczące tego, czy obiekt wartość pochodzi z interfejsu API modelu COM, od języka dynamicznego, takich jak IronPython, z HTML Document Object Model (DOM), z odbicia lub gdzie indziej w programie. Jeśli kod nie jest prawidłowy, błędy są przechwytywane w czasie wykonywania.
 
 Na przykład jeśli wystąpienie metody `exampleMethod1` w poniższym kodzie ma tylko jeden parametr, kompilator rozpoznaje, że pierwsze wywołanie do metody, `ec.exampleMethod1(10, 4)`, jest nieprawidłowy, ponieważ zawiera dwa argumenty. Wywołanie powoduje błąd kompilatora. Drugie wywołanie do metody, `dynamic_ec.exampleMethod1(10, 4)`, nie jest sprawdzana przez kompilator, ponieważ typ `dynamic_ec` jest `dynamic`. W związku z tym jest zgłaszany żaden błąd kompilatora. Jednak błąd nie zmienia znaczenia Zwróć uwagę na czas nieokreślony. On padł w czasie wykonywania i powoduje, że wyjątek czasu wykonywania.
 
@@ -64,7 +64,7 @@ Rozpoznanie przeciążenia występuje w czasie wykonywania, a nie w czasie kompi
 
 ## <a name="com-interop"></a>COM interop
 
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] zawiera kilka funkcji, które zwiększają możliwości współpracy z interfejsami API modelu COM, takich jak interfejsy API usługi Automation pakietu Office. Wśród ulepszenia są użytkowania `dynamic` typu i [argumentów nazwanych i opcjonalnych](../classes-and-structs/named-and-optional-arguments.md).
+C#4 zawiera kilka funkcji, które zwiększają możliwości współpracy z interfejsami API modelu COM, takich jak interfejsy API usługi Automation pakietu Office. Wśród ulepszenia są użytkowania `dynamic` typu i [argumentów nazwanych i opcjonalnych](../classes-and-structs/named-and-optional-arguments.md).
 
 Wiele metod COM Zezwalaj na zmianę w typy argumentów i typ zwracany przez wyznaczanie typy jako `object`. Jest to wymuszone jawne Rzutowanie wartości do zapewnienia koordynacji z silnie typizowanych zmiennych w języku C#. Jeśli kompilujesz przy użyciu [/Link (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) opcji wprowadzenia `dynamic` typu umożliwia traktowanie wystąpień `object` w podpisach COM tak, jakby były typu `dynamic`, a tym samym Aby uniknąć ilości rzutowania. Na przykład poniższe instrukcje kontrastu, sposób uzyskiwania dostępu do komórek w arkuszu kalkulacyjnym programu Microsoft Office Excel za pomocą `dynamic` typu i bez `dynamic` typu.
 

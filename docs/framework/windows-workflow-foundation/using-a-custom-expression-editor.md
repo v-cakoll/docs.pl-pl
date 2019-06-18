@@ -2,12 +2,12 @@
 title: Używanie edytora wyrażeń niestandardowych
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 9d73134c3f17fad618d26f335d89fdab2d99dbdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650914"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169965"
 ---
 # <a name="using-a-custom-expression-editor"></a>Używanie edytora wyrażeń niestandardowych
 Podaj wyrażenie bogatsze lub prostsze środowisko edytowania plików mogą zostać wdrożone edytora wyrażeń niestandardowych. Istnieje kilka scenariuszy, w których możesz chcieć użyć edytora wyrażeń niestandardowych:  
@@ -222,7 +222,7 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Publikowanie edytora wyrażeń niestandardowych w projekcie środowiska WPF  
- Poniżej przedstawiono kod, który pokazuje, jak ponowne hostowanie projektanta w [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplikacji oraz jak tworzyć i publikować `MyEditorService` usługi. Przed rozpoczęciem korzystania z tego kodu, Dodaj odwołanie do projektu biblioteki MyExpressionEditorService z projektu, który zawiera aplikację avalon2.  
+ Poniżej przedstawiono kod, który pokazuje, jak ponowne hostowanie projektanta w aplikacji WPF oraz jak tworzyć i publikować `MyEditorService` usługi. Przed rozpoczęciem korzystania z tego kodu, Dodaj odwołanie do projektu biblioteki MyExpressionEditorService z projektu, który zawiera aplikację avalon2.  
   
 ```  
 using System.Windows;  

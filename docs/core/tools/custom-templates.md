@@ -1,14 +1,14 @@
 ---
 title: Szablony niestandardowe dla nowej platformy dotnet
 description: Dowiedz się więcej na temat szablonów niestandardowych dla dowolnego typu projektu .NET lub plików.
-author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: 19211d1ac45bbd2e5838c5ee30e380d7d10c3f1c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+author: thraka
+ms.date: 06/14/2019
+ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151950"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169628"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Szablony niestandardowe dla nowej platformy dotnet
 

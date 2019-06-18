@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591502"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170840"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementowanie zachowań uznaniowych w klasie XslTransform
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
 
 Zachowań uznaniowych są określane jako zachowań na liście [World Wide Web Consortium (W3C) przekształcenia XSL (XSLT) w wersji 1.0 zalecenie](https://www.w3.org/TR/1999/REC-xslt-19991116), w której dostawcy implementacja wybiera, jeden z kilku możliwych Opcje jako sposób obsługi sytuacji. Na przykład w sekcji 7.3 tworzenia przetwarzania instrukcji, W3C zalecenie jest wyświetlany komunikat, występuje błąd, jeśli utworzenie wystąpienia zawartość `xsl:processing-instruction` tworzy węzłów innych niż węzły tekstowe. Dla niektórych problemów W3C informuje, jakie decyzja powinna zostać podjęta przez procesor postanawia odzyskać sprawność po błędzie. Ten problem, podane w sekcji 7.3 W3C mówi, że implementacja można odzyskać z tego błędu, ignorując węzły i ich zawartości.
 

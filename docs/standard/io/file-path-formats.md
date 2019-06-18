@@ -1,6 +1,6 @@
 ---
 title: Formaty ścieżek plików w systemie Windows
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752298"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170728"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżek plików w systemie Windows
 
@@ -30,7 +30,7 @@ Standardowa ścieżki DOS może składać się z trzech składników:
 - Nazwa katalogu. [Znakiem separatora katalogu](<xref:System.IO.Path.DirectorySeparatorChar>) oddziela podkatalogów w hierarchii katalogów zagnieżdżonych.
 - Opcjonalnie nazwy pliku. [Znakiem separatora katalogu](<xref:System.IO.Path.DirectorySeparatorChar>) oddziela ścieżkę pliku i nazwa pliku.
 
-Jeśli wszystkie trzy składniki są zainstalowane, ścieżka jest bezwzględna. Jeśli nie określono żadnych woluminu lub litery dysku i nazwy katalogów rozpoczyna się od [znakiem separatora katalogu](<xref:System.IO.Path.DirectorySeparatorChar>), ścieżka jest względna od katalogu głównego na bieżącym dysku. W przeciwnym razie ścieżki jest określana względem bieżącego katalogu. W poniższej tabeli przedstawiono niektóre możliwe katalogu i ścieżek plików.
+Jeśli wszystkie trzy składniki są zainstalowane, ścieżka jest bezwzględna. Jeśli nie określono żadnych woluminu lub litery dysku i nazwę katalogu, który rozpoczyna się od [znakiem separatora katalogu](<xref:System.IO.Path.DirectorySeparatorChar>), ścieżka jest względna od katalogu głównego na bieżącym dysku. W przeciwnym razie ścieżki jest określana względem bieżącego katalogu. W poniższej tabeli przedstawiono niektóre możliwe katalogu i ścieżek plików.
 
 |Ścieżka  |Opis  |
 | -- | -- |
@@ -76,6 +76,11 @@ System operacyjny Windows ma modelu ujednoliconego obiektu, który wskazuje wszy
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+Oprócz identyfikowania dysku przez jego literę dysku, woluminu można zidentyfikować za pomocą jego identyfikatora GUID woluminu. To ma postać:
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > Składnia ścieżki urządzenia systemu DOS jest obsługiwana w implementacji platformy .NET w systemie Windows, począwszy od programu .NET Core 1.1 i .NET Framework 4.6.2.
 
@@ -85,8 +90,8 @@ System operacyjny Windows ma modelu ujednoliconego obiektu, który wskazuje wszy
 
    > [!NOTE]
    > `\\?\` Jest obsługiwana we wszystkich wersjach programu .NET Core i .NET Framework, począwszy od wersji 4.6.2.
-   
-- Link symboliczny do obiektu urządzenia "członu real" (C: w tym przypadku).
+
+- Link symboliczny do obiektu urządzenia "członu real" (C: w przypadku nazwę dysku) lub wolumin {b75e2c83-0000-0000-0000-602f00000000} w przypadku identyfikatora GUID woluminu.
 
    Pierwszy segment ścieżki urządzenia systemu DOS, po specyfikatorze ścieżki urządzenia identyfikuje woluminu lub dysku. (Na przykład `\\?\C:\` i `\\.\BootPartition\`.)
 
@@ -95,7 +100,7 @@ System operacyjny Windows ma modelu ujednoliconego obiektu, który wskazuje wszy
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Dla urządzenia UNC fragment serwera/udział jest formularzy woluminu. Na przykład w `\\?\server1\e:\utilities\\filecomparer\`, fragment serwera/udział jest server1\utilities. Jest to istotne podczas wywoływania metody takie jak <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> segmentów względna katalogu; nigdy nie jest możliwe do nawigacji w przeszłości woluminu. 
+    Dla urządzenia UNC część server i udostępniania formularzy woluminu. Na przykład w `\\?\server1\e:\utilities\\filecomparer\`, fragment serwera/udział jest server1\utilities. Jest to istotne podczas wywoływania metody takie jak <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> segmentów względna katalogu; nigdy nie jest możliwe do nawigacji w przeszłości woluminu. 
 
 Ścieżki urządzenia DOS są w pełni kwalifikowane przez definicję. Segmenty względna katalogu (`.` i `..`) nie są dozwolone. Bieżący katalog nigdy nie wprowadzają do ich użycia.
 

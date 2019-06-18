@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490651"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170437"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5
 W tej sekcji opisano niezarządzane interfejsy hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w .NET Framework 4, .NET Framework 4.5 i nowsze wersje w swoich aplikacjach. Te interfejsy dostarczać metody do hosta skonfigurować i załadowania środowiska uruchomieniowego do procesu.  
@@ -22,7 +22,7 @@ W tej sekcji opisano niezarządzane interfejsy hostów można użyć do integrac
   
 - Używają Zarządzanie okresem istnienia (`AddRef` i `Release`), hermetyzacji (niejawne context) i `QueryInterface` z modelu COM.  
   
-- Istnieje nie należy używać typów modelu COM takich jak `BSTR`, `SAFEARRAY`, lub `VARIANT`.  
+- Nie są używane typy modelu COM takich jak `BSTR`, `SAFEARRAY`, lub `VARIANT`.  
   
 - Nie ma żadnych modeli typu apartment, agregacji ani rejestru aktywacji używanego przez [funkcja CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
   

@@ -8,17 +8,17 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b765cc42f7e060ad11d0e8dcd9991a841cda8b3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ee35ce1016d9e0a825254fad4b08d4b94da16943
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586476"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170953"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Przekształcenia XSLT przy użyciu klasy XslTransform
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
 
 Celem XSLT jest do przekształcania zawartości w dokumencie źródłowym XML do innego dokumentu, która różni się w formacie lub struktury (na przykład Przekształcanie kodu XML w kodzie HTML do użycia w witrynie sieci Web lub Przekształcanie dokumentu, który zawiera tylko b wymagane pola y aplikacji). Ten proces przekształcania określono przez konsorcjum World Wide Web (W3C)[XSLT w wersji 1.0 zalecenie](https://www.w3.org/TR/1999/REC-xslt-19991116). W .NET Framework <xref:System.Xml.Xsl.XslTransform> znaleziono w klasy <xref:System.Xml.Xsl> przestrzeni nazw jest procesora XSLT, który implementuje funkcje tej specyfikacji. Istnieje kilka małych funkcji, które nie zostały wdrożone z zaleceniem W3C specyfikacji XSLT 1.0, na liście [dane wyjściowe z klasy XslTransform](outputs-from-an-xsltransform.md). Na poniższej ilustracji przedstawiono architekturę przekształcania programu .NET Framework.
 

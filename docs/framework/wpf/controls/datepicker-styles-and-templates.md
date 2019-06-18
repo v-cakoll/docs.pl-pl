@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013076fdac8666b974fdf0ce9b09740197031c15
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912252"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170536"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker — Style i szablony
 W tym temacie opisano, style i szablony <xref:System.Windows.Controls.DatePicker> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -62,8 +62,8 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.DatePicker
 |Znakiem wodnym|WatermarkStates|Kontrolka wyświetla jego początkowego tekstu.  <xref:System.Windows.Controls.Primitives.DatePickerTextBox> Jest w stanie, gdy użytkownik został wprowadzony tekst lub nie wybrano daty.|  
 |Unwatermarked|WatermarkStates|Użytkownik wpisze tekst do <xref:System.Windows.Controls.Primitives.DatePickerTextBox> lub wybrać datę w <xref:System.Windows.Controls.DatePicker>.|  
 |Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` i kontrolki jest ustawiony fokus.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` i kontrolka nie ma fokusu.|  
   
 ## <a name="datepicker-controltemplate-example"></a>Przykład ControlTemplate DatePicker  
  Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.DatePicker> kontroli.  

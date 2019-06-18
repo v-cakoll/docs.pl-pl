@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11cf0b694d75836ad903edeafc79a55ec4612b45
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2c9a3b43f81f00a7b6a3a0b3a8e1c102aafe0c0e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586463"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170944"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
 <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera rozszerzalny język arkusza stylów dla parametrów przekształcenia (XSLT) i obiekty rozszerzeń XSLT. Przy przekazywaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenie obiekty mogą być wywoływane z arkuszy stylów.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> i <xref:System.Xml.Xsl.XsltArgumentList> klasy są przestarzałe w programie [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można wykonywać przekształcenia XSLT przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+>  <xref:System.Xml.Xsl.XslTransform> i <xref:System.Xml.Xsl.XsltArgumentList> klasy są przestarzałe w programie .NET Framework 2.0. Można wykonywać przekształcenia XSLT przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
   
  <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera parametry XSLT i obiekty rozszerzeń XSLT. Przy przekazywaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenie obiekty mogą być wywoływane z arkuszy stylów.  
   

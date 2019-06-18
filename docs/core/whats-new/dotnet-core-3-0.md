@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689254"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169785"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 5)
 
@@ -20,10 +20,11 @@ W tym artykule opisano nowości w programie .NET Core 3.0 (za pośrednictwem wer
 
 .NET core 3.0 dodaje obsługę C# 8.0. Zdecydowanie zaleca się używać najnowszej wersji programu Visual Studio 2019 Update 1 (wersja zapoznawcza) lub programu VSCode z rozszerzeniem technologię OmniSharp.
 
-[Pobierz i rozpoczynanie pracy z usługą .NET Core 3.0 w wersji zapoznawczej 5](https://aka.ms/netcore3download) teraz na Windows, Mac i Linux.
+[Pobierz i rozpoczynanie pracy z usługą .NET Core 3.0 w wersji zapoznawczej 6](https://aka.ms/netcore3download) teraz na Windows, Mac i Linux.
 
 Aby uzyskać więcej informacji na temat poszczególnych wersji zapoznawczej zobacz następujące komunikaty:
 
+- [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 4](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 3](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
@@ -112,6 +113,34 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 Aby uzyskać więcej informacji dotyczących publikowania w jednym pliku, zobacz [narzędzia bundler pojedynczy plik, dokument projektowy](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).
 
+## <a name="assembly-linking"></a>Łączenie zestawu
+
+.NET core 3.0 SDK jest powiązana z narzędziem, które można zmniejszyć rozmiar aplikacji, analizując IL i przycinanie nieużywane zestawów.
+
+Aplikacje samodzielne zawierają wszystkie elementy potrzebne do uruchomienia kodu, bez konieczności .NET do zainstalowania na komputerze-hoście. Jednak wiele razy aplikacja wymaga tylko mały podzbiór platformę, by funkcji i innych nieużywane biblioteki można usunąć.
+
+.NET core zawiera teraz ustawienie, który będzie używał [konsolidatora IL](https://github.com/mono/linker) narzędzie do skanowania IL Twojej aplikacji. to narzędzie wykrywa, jaki kod jest wymagana, a następnie przycina nieużywane biblioteki. To narzędzie może znacznie zmniejszyć rozmiar wdrażania niektórych aplikacji.
+
+Aby włączyć to narzędzie `<PublishTrimmed>` ustawienie w projekcie i Opublikuj aplikację samodzielną:
+
+```xml
+<PropertyGroup>
+  <PublishTrimmed>true</PublishTrimmed>
+</PropertyGroup>
+```
+
+```console
+dotnet publish -r <rid> -c Release
+```
+
+Na przykład podstawowa "hello world" nowej konsoli szablonu projektu jest uwzględniony, podczas publikowania osiąga około 70 MB. Za pomocą `<PublishTrimmed>`, zmniejszeniu rozmiaru do około 30 MB.
+
+Należy wziąć pod uwagę, że aplikacje lub struktur (łącznie z platformą ASP.NET Core i WPF), które używają odbicia lub powiązanych funkcji dynamicznych, często przerywał działanie po przycięciu. Uszkodzenie ten występuje, ponieważ konsolidator nie wiedzieć o to dynamiczne zachowanie i nie można określić, jakie typy framework są wymagane w celu odbicia. Należy pamiętać o tym scenariuszu można skonfigurować narzędzia konsolidatora IL.
+
+Przede wszystkim w przeciwnym wypadku upewnij się przetestować aplikację po przycięciu.
+
+Aby uzyskać więcej informacji na temat narzędzia konsolidatora IL, zobacz [dokumentacji](https://aka.ms/dotnet-illink) lub odwiedź [mono/konsolidatora]( https://github.com/mono/linker) repozytorium.
+
 ## <a name="tiered-compilation"></a>Warstwowe kompilacji
 
 [Warstwowe kompilacji](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) jest domyślnie przy użyciu platformy .NET Core 3.0. Ta funkcja umożliwia bardziej adaptacyjnie Użyj kompilator just in Time (JIT), aby uzyskać lepszą wydajność.
@@ -131,6 +160,38 @@ Aby całkowicie wyłączyć TC, użyj tego ustawienia w pliku projektu:
 ```xml
 <TieredCompilation>false</TieredCompilation>
 ```
+
+## <a name="readytorun-images"></a>Obrazy ReadyToRun
+
+Aby poprawić czas uruchamiania aplikacji .NET Core, należy kompilowanie zestawów aplikacji w formacie ReadyToRun (R2R). R2R jest formą ahead of time (AOT) kompilacji.
+
+Pliki binarne R2R zwiększeniu wydajności uruchamiania, co zmniejsza ilość pracy wykonywanej przez kompilator just-in-time (JIT), które musi wykonać jak ładowanie aplikacji. Pliki binarne zawiera podobne kodu natywnego w porównaniu do czego dałby w efekcie kompilator JIT.
+
+Pliki binarne R2R są większe, ponieważ zawierają one zarówno kod języka pośredniego (IL), który nadal jest wymagany dla niektórych scenariuszy i natywną wersję tego samego kodu. R2R jest dostępna tylko po opublikowaniu aplikacja samodzielna przeznaczonego środowiska uruchomieniowe określonych (RID), takie jak x64 w systemie Linux lub Windows x64.
+
+Aby skompilować aplikację jako R2R, należy dodać `<PublishReadyToRun>` ustawienia:
+
+```xml
+<PropertyGroup>
+  <PublishReadyToRun>true</PublishReadyToRun>
+</PropertyGroup>
+```
+
+Opublikuj aplikację samodzielną. Na przykład to polecenie tworzy aplikację samodzielną dla 64-bitowej wersji systemu Windows:
+
+```console
+dotnet publish -c Release -r win-x64 --self-contained true
+```
+
+### <a name="cross-platformarchitecture-restrictions"></a>Obejmujące wiele platform/architecture ograniczenia
+
+Kompilator ReadyToRun nie obsługuje obecnie przeznaczonych dla wielu. Należy skompilować w danym elemencie docelowym. Na przykład chcąc R2R obrazy dla Windows x64, należy do uruchomienia polecenia Opublikuj w tym środowisku.
+
+Wyjątki dla wielu odwołujących:
+
+- Windows x64 może służyć do kompilowania Windows ARM32, ARM64 i x86 obrazów.
+- Windows x86 może służyć do kompilowania Windows ARM32 obrazów.
+- Linux x64 może służyć do kompilowania obrazów systemu Linux ARM32 i ARM64.
 
 ## <a name="build-copies-dependencies"></a>Kopiuje zależności kompilacji
 
@@ -362,9 +423,19 @@ Windows oferuje rozbudowane natywnych interfejsów API w formie płaskiej interf
 
 ## <a name="http2-support"></a>Obsługa protokołu HTTP/2
 
-<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> Typu obsługuje protokół HTTP/2. Obsługa jest obecnie wyłączona, ale może zostać włączona przez wywołanie metody `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` przed użyciem <xref:System.Net.Http.HttpClient>. Obsługa protokołu HTTP/2 można również włączyć, ustawiając `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` zmiennej środowiskowej, aby `true` przed uruchomieniem aplikacji.
+<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> Typu obsługuje protokół HTTP/2. Włączenie protokołu HTTP/2 za pośrednictwem protokołu TLS/ALPN negocjowane jest wersji protokołu HTTP i protokołu HTTP/2 jest używany, gdy serwer wybiera z niej korzystać.
 
-Włączenie protokołu HTTP/2 wersji protokołu HTTP będzie negocjowane za pośrednictwem protokołu TLS/ALPN i protokołu HTTP/2 zostaną użyte tylko, jeśli serwer wybiera z niej korzystać.
+Domyślnym protokołem pozostają HTTP/1.1, ale można włączyć protokołu HTTP/2 na dwa różne sposoby. Po pierwsze można ustawić komunikat żądania HTTP do użycia protokołu HTTP/2:
+
+[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+
+Po drugie, można zmienić <xref:System.Net.Http.HttpClient> do domyślnie używają protokołu HTTP/2:
+
+[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+
+Wiele razy, gdy tworzysz aplikację, chcesz korzystanie z połączenia nieszyfrowanego. Jeśli wiesz, że docelowy punkt końcowy będzie korzystać z protokołu HTTP/2, można włączyć połączenia nieszyfrowanego protokołu HTTP/2. Można ją włączyć, ustawiając `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` zmiennej środowiskowej, aby `1` lub, włączając je w kontekście aplikacji:
+
+[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 & OpenSSL 1.1.1 w systemie Linux
 

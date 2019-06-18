@@ -2,17 +2,17 @@
 title: Zadanie 2. Hostowanie projektanta przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665282"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169997"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Zadanie 2. Hostowanie projektanta przepływu pracy
 W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] w aplikacji Windows Presentation Foundation (WPF).  
   
- Procedura umożliwia skonfigurowanie **siatki** kontrolkę zawierającą projektanta, programowo tworzy wystąpienie <xref:System.Activities.Presentation.WorkflowDesigner> zawierający domyślne <xref:System.Activities.Statements.Sequence> działania, rejestruje metadane projektanta w celu zapewnienia wsparcie wszystkie wbudowane działania i hosty [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] w [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplikacji.  
+ Procedura umożliwia skonfigurowanie **siatki** kontrolkę zawierającą projektanta, programowo tworzy wystąpienie <xref:System.Activities.Presentation.WorkflowDesigner> zawierający domyślne <xref:System.Activities.Statements.Sequence> działania, rejestruje metadane projektanta w celu zapewnienia wsparcie wszystkie wbudowane działania i hosty [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] w aplikacji WPF.  
   
 ### <a name="to-host-the-workflow-designer"></a>Do obsługi projektanta przepływów pracy  
   
@@ -22,7 +22,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
   
 3. Ustaw nazwę siatki, wybierając **siatki** panelu w Projektancie (kliknij pole wewnątrz **MainWindow**) i ustawienie **nazwa** właściwość w górnej części  **Właściwości** okna "grid1".  
   
-4. W **właściwości** okna, kliknij przycisk wielokropka (**...** ) obok pozycji `ColumnDefinitions` właściwości, aby otworzyć **— Edytor kolekcji** okno dialogowe.  
+4. W **właściwości** okna, kliknij przycisk wielokropka ( **...** ) obok pozycji `ColumnDefinitions` właściwości, aby otworzyć **— Edytor kolekcji** okno dialogowe.  
   
 5. W **— Edytor kolekcji** okno dialogowe, kliknij przycisk **Dodaj** przycisk trzy razy, aby wstawić trzy kolumny do układu. Pierwsza kolumna będzie zawierać **przybornika**, druga kolumna będzie obsługiwać [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], a trzecia kolumna stosowanych w odniesieniu do Inspektora właściwości.  
   

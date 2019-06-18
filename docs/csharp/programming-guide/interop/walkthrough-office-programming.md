@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608277"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169849"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Przewodnik: Programowanie Office (C# i Visual Basic)
 Visual Studio oferuje funkcje w języku C# i Visual Basic, które zwiększają programowania Microsoft Office. Przydatne funkcje języka C# zawierają argumenty nazwane i opcjonalne i zwracanie wartości typu `dynamic`. W programowaniu modelu COM, można pominąć `ref` — słowo kluczowe i uzyskanie dostępu do właściwości indeksowanych. Funkcje w języku Visual Basic obejmują automatycznie implementowane właściwości instrukcji w wyrażeniach lambda i inicjatory kolekcji.
@@ -37,7 +37,7 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
   
 2. Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
   
-3. W **zainstalowane szablony** okienku rozwiń **języka Visual Basic** lub **Visual C#**, rozwiń węzeł **Office**, a następnie kliknij przycisk rok wersji Produkt Office.  
+3. W **zainstalowane szablony** okienku rozwiń **języka Visual Basic** lub **Visual C#** , rozwiń węzeł **Office**, a następnie kliknij przycisk rok wersji Produkt Office.  
   
 4. W **szablony** okienku kliknij **Excel \<wersji > dodatku**.  
   
@@ -93,7 +93,7 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
   
      Dwie nowe funkcje języka C# są używane w przypadku tej metody. Obie te funkcje już istnieją w języku Visual Basic.  
   
-    - Metoda [Dodaj](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) ma *opcjonalny parametr* służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłane w poprzednim przykładzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - Metoda [Dodaj](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) ma *opcjonalny parametr* służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie C# 4, umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłane w poprzednim przykładzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Aby uzyskać więcej informacji, zobacz [nazwane i opcjonalne argumenty](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
@@ -159,7 +159,7 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
   
 3. Typ `ildasm` w wierszu polecenia dla deweloperów okna programu Visual Studio, a następnie naciśnij klawisz ENTER. Zostanie wyświetlone okno IL DASM.  
   
-4. Na **pliku** menu w oknie IL DASM, wybierz opcję **pliku** > **Otwórz**. Kliknij dwukrotnie **programu Visual Studio \<wersji >**, a następnie kliknij dwukrotnie **projektów**. Otwórz folder dla projektu i Znajdź folder bin/Debug *Nazwa projektu*.dll. Kliknij dwukrotnie *Nazwa projektu*.dll. Nowe okno wyświetla atrybuty projektu, oprócz odwołania do innych modułach i zestawach. Należy pamiętać, że przestrzenie nazw `Microsoft.Office.Interop.Excel` i `Microsoft.Office.Interop.Word` znajdują się w zestawie. Domyślnie w programie Visual Studio kompilator importuje typy, których potrzebujesz z odwołania PIA do swojego zestawu.  
+4. Na **pliku** menu w oknie IL DASM, wybierz opcję **pliku** > **Otwórz**. Kliknij dwukrotnie **programu Visual Studio \<wersji >** , a następnie kliknij dwukrotnie **projektów**. Otwórz folder dla projektu i Znajdź folder bin/Debug *Nazwa projektu*.dll. Kliknij dwukrotnie *Nazwa projektu*.dll. Nowe okno wyświetla atrybuty projektu, oprócz odwołania do innych modułach i zestawach. Należy pamiętać, że przestrzenie nazw `Microsoft.Office.Interop.Excel` i `Microsoft.Office.Interop.Word` znajdują się w zestawie. Domyślnie w programie Visual Studio kompilator importuje typy, których potrzebujesz z odwołania PIA do swojego zestawu.  
   
      Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie zawartości zestawu](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   

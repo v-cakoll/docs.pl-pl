@@ -8,12 +8,12 @@ metadata:
   ms.date: 03/20/2019
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b1de22769c86f75684f41635287a73558d1d15a
-  ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+  ms.openlocfilehash: 7cec35e0749ea0b38162244171459f311d27cb25
+  ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 04/28/2019
-  ms.locfileid: "64750384"
+  ms.lasthandoff: 06/18/2019
+  ms.locfileid: "67170222"
 items:
 - durationInMinutes: 1
   content: >
@@ -202,7 +202,7 @@ items:
     Aby zmodyfikować zwracane odwołanie, musisz dodać `ref` modyfikator deklaracji zmiennej lokalnej i przed wywołaniem do `Find` do ustaw dla zmiennej odwołania, gdy wartość zwracana jest odwołaniem. Zmodyfikuj kod testu w przeglądarce, aby dopasować następujące czynności:
 
 
-    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return object by reference")]
+    [!code-csharp[TestByRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByRef "test code for return object by reference")]
 
 
     Teraz, drugi `WriteLine` instrukcja w powyższym przykładzie drukuje się wartość `24`, wskazującą, czy zostały zmodyfikowane magazynu w macierzy. Zmienna lokalna została zadeklarowana przy użyciu `ref` modyfikator i potrwa `ref` powrócić. Należy zainicjować `ref` zmiennej gdy jest on zadeklarowany; nie można podzielić deklaracji i inicjowania.

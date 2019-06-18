@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie niestandardowego projektanta działań'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945655"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170668"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Instrukcje: Tworzenie niestandardowego projektanta działań
 
@@ -17,7 +17,7 @@ Niestandardowi Projektanci działań, ale zazwyczaj dziedziczyć <xref:System.Ac
 
 <xref:System.Activities.Presentation.ActivityDesigner> używa dwóch kontrolek pomocnika, <xref:System.Activities.Presentation.WorkflowItemPresenter> i <xref:System.Activities.Presentation.WorkflowItemsPresenter> ułatwiają tworzenie Projektanci działań niestandardowych. Obsługują one często używane funkcje takie jak przeciągnięcie i upuszczenie elementów podrzędnych, usunięcie, wybór i dodanie tych elementów podrzędnych. <xref:System.Activities.Presentation.WorkflowItemPresenter> Umożliwia pojedynczy element podrzędny elementu interfejsu użytkownika wewnątrz, zapewniając "docelowej strefie", jego podczas <xref:System.Activities.Presentation.WorkflowItemsPresenter> może zapewnić obsługuje wiele elementów interfejsu użytkownika, takie jak dodatkowe funkcje, takie jak kolejność, przenoszenie i dodawania elementów podrzędnych.
 
-Kluczowym elementem z historią, która wymaga wyróżniania w implementacji niestandardowego projektanta działań dotyczy sposób, w którym zmiany wizualne powiązane przy użyciu [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] powiązanie danych do wystąpienia, przechowywane w pamięci w procentach co możemy edycji w projektancie. Jest to realizowane przez drzewo elementów modelu, który jest również odpowiedzialny za włączanie powiadomień o zmianach i śledzenia zdarzeń, takich jak zmiany stanów.
+Kluczowym elementem z historią, która wymaga wyróżniania w implementacji niestandardowego projektanta działań dotyczy sposób, w którym zmiany wizualne powiązane przy użyciu powiązanie danych WPF do wystąpienia, przechowywane w pamięci w procentach co możemy edycji w projektancie. Jest to realizowane przez drzewo elementów modelu, który jest również odpowiedzialny za włączanie powiadomień o zmianach i śledzenia zdarzeń, takich jak zmiany stanów.
 
 W tym temacie opisano dwie procedury.
 

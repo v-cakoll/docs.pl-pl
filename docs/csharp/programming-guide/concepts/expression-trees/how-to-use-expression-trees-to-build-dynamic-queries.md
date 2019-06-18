@@ -2,12 +2,12 @@
 title: 'Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 33dbca31af3c088f4cd4af830c690cf9cdaea657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dc8ff7504464e05ce19df3f0dfe907476a17413a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586101"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170329"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
 W programie LINQ, drzew wyrażeń są używane do reprezentowania strukturyzowanych zapytań, których platformą docelową źródeł danych, który implementuje <xref:System.Linq.IQueryable%601>. Na przykład implementuje dostawcę LINQ <xref:System.Linq.IQueryable%601> interfejs do wykonywania zapytań magazynów danych relacyjnych. Kompilator języka C# kompiluje zapytań przeznaczonych dla tych źródeł danych do kodu, który kompiluje do drzewa wyrażenie w czasie wykonywania. Dostawca kwerend można przechodzić przez strukturę danych drzewa wyrażeń i tłumaczenie język zapytań, odpowiednie dla źródła danych.  
@@ -19,7 +19,10 @@ W programie LINQ, drzew wyrażeń są używane do reprezentowania strukturyzowan
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje jak używanie drzew wyrażeń do utworzenia zapytania dotyczącego `IQueryable` źródła danych, a następnie uruchomić go. Kod zostanie skompilowany drzewa wyrażenie do reprezentowania następujące zapytanie:  
   
- `companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16)).OrderBy(company => company)`  
+ ```csharp
+ companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16))
+          .OrderBy(company => company)
+ ```
   
  Metodach fabryki w <xref:System.Linq.Expressions> przestrzeni nazw są używane do tworzenia drzew wyrażeń, które reprezentują wyrażenia, które tworzą ogólną zapytania. Wyrażenia, które reprezentują wywołania metody standardowego operatora zapytań odwoływać się do <xref:System.Linq.Queryable> implementacji tych metod. Drzewa wyrażeń końcowego jest przekazywany do <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> implementacji dostawcy `IQueryable` źródła danych do utworzenia pliku wykonywalnego zapytania typu `IQueryable`. Wyniki są uzyskać, wyliczając tej zmiennej zapytania.  
   

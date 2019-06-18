@@ -2,12 +2,12 @@
 title: Rozszerzalność siatki właściwości — przykładowe WF
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: d22b6e21fbf2d5deb4d47fce683553378e990000
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637680"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170353"
 ---
 # <a name="property-grid-extensibility"></a>Rozszerzalność siatki właściwości
 
@@ -69,7 +69,7 @@ Przykład edytora okna dialogowego pokazuje następujące czynności:
 
 1. Tworzy typ, który pochodzi od klasy <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.
 
-2. Zestawy <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> wartość w Konstruktorze z [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] szablon danych. To mogą być tworzone w XAML, ale w tym przykładzie zostanie on utworzony w kodzie.
+2. Zestawy <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> wartość w Konstruktorze przy użyciu szablonu danych WPF. To mogą być tworzone w XAML, ale w tym przykładzie zostanie on utworzony w kodzie.
 
 3. Szablon danych ma kontekstu danych <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> elementu renderowane w siatce właściwości. W poniższym kodzie następnie powiąże `Value` właściwości. Podstawowe znaczenie ma obejmować <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> zapewnienie przycisk, który wywołuje okno dialogowe w FilePickerEditor.cs.
 

@@ -5,16 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 811c513e6c8c613801c0ca60c11a9e5577672183
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 308725ecc139d3c95ddff6bdf2d75746750673ce
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592764"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170853"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDataDocument klasy XslTransform
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+>  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
   
  Microsoft .NET Framework implementuje Model obiektu dokumentu (DOM) XML, aby zapewnić dostęp do danych w dokumentach XML i dodatkowych klas do odczytu, zapisu i nawigacja w dokumentach XML. <xref:System.Xml.XmlDataDocument>Znajdujące się w <xref:System.Xml> przestrzeni nazw, zapewnia możliwość zsynchronizować z danymi relacyjnymi w relacyjnych dostęp do danych <xref:System.Data.DataSet>. Jednocześnie można wyświetlać i manipulowania XML ze strukturą za pośrednictwem relacyjnych reprezentacja <xref:System.Data.DataSet> i umożliwiają manipulowanie XML lub częściową strukturą, za pośrednictwem modelu DOM reprezentacja <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XmlDataDocument> w związku z tym przekracza granice XML i relacyjnych podejść.  
   

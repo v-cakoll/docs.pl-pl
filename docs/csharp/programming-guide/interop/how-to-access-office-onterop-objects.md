@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76bd9d9bce8e41605b96e979c2a39ea15e1d15ad
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61974834"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169941"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji (C# Programming Guide)
 Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu API usługi Office. Nowe funkcje obejmują argumentów nazwanych i opcjonalnych, nowy typ o nazwie `dynamic`oraz możliwość przekazywania argumentów do parametrów odwołania w metodach COM tak, jakby były one wartości parametrów.  
@@ -34,7 +34,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 2. Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**. **Nowy projekt** pojawi się okno dialogowe.  
   
-3. W **zainstalowane szablony** okienku rozwiń **Visual C#**, a następnie kliknij przycisk **Windows**.  
+3. W **zainstalowane szablony** okienku rozwiń **Visual C#** , a następnie kliknij przycisk **Windows**.  
   
 4. Szukaj w górnej części **nowy projekt** upewnij się, że okno dialogowe **.NET Framework 4** (lub nowsza wersja) został wybrany jako platforma docelowa.  
   
@@ -76,7 +76,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 1. Dodaj następującą metodę do `Program` klasy arkusza programu Excel.  
   
-     Metoda <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> ma parametr opcjonalny służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłany w poniższym kodzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     Metoda <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> ma parametr opcjonalny służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie C# 4, umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłany w poniższym kodzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
@@ -96,7 +96,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]i nowsze wersje, konwertuje zwracanego `Object` do `dynamic` automatycznie, jeśli odwołuje się zestaw [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora lub ekwiwalentnie, jeśli programu Excel **Osadź typy współdziałania**właściwość jest ustawiona na wartość true. Wartość true, to wartością domyślną dla tej właściwości.  
+     C#4 i nowsze wersje, konwertuje zwracane `Object` do `dynamic` automatycznie, jeśli odwołuje się zestaw [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora lub ekwiwalentnie, jeśli programu Excel **Osadź typy współdziałania** właściwość jest ustawiona na wartość true. Wartość true, to wartością domyślną dla tej właściwości.  
   
 ## <a name="to-run-the-project"></a>Aby uruchomić projekt  
   
@@ -110,13 +110,13 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 ## <a name="to-add-a-word-document"></a>Aby dodać dokument programu Word  
   
-1. Aby zilustrować dodatkowych sposobów, w którym [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]i nowsze wersje, zwiększa Office programowania, poniższy kod otwiera aplikację Word i tworzy ikony, który stanowi łącze do arkusza programu Excel.  
+1. Aby zilustrować dodatkowych sposobów, w którym C# 4 i nowsze wersje, rozszerza programowaniu pakietu Office, otwiera aplikację Word poniższy kod i tworzy ikony, który stanowi łącze do arkusza programu Excel.  
   
-     Wklej metodę `CreateIconInWordDoc`, podane w dalszej części tego kroku do `Program` klasy. `CreateIconInWordDoc` używa argumentów nazwanych i opcjonalnych, aby zmniejszyć złożoność wywołania metody do <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> i <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Te wywołania zestawowi dwóch innych nowych funkcji wprowadzonych w [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] , Uprość wywołania metody COM, które mają parametry odwołań. Po pierwsze może wysyłać argumentów do parametrów w formie odwołań, tak, jakby były one wartości parametrów. Oznacza to można wysyłać wartości bezpośrednio, bez tworzenia zmienną dla każdego parametru odwołania. Kompilator generuje tymczasowe zmienne do przechowywania wartości argumentów i odrzuca wszystkie zmienne, po powrocie z wywołania. Po drugie, można pominąć `ref` — słowo kluczowe na liście argumentów.  
+     Wklej metodę `CreateIconInWordDoc`, podane w dalszej części tego kroku do `Program` klasy. `CreateIconInWordDoc` używa argumentów nazwanych i opcjonalnych, aby zmniejszyć złożoność wywołania metody do <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> i <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Te wywołania zestawowi dwóch innych nowych funkcji wprowadzonych w C# 4, które upraszczają wywołania metody COM, które mają odwołania do parametrów. Po pierwsze może wysyłać argumentów do parametrów w formie odwołań, tak, jakby były one wartości parametrów. Oznacza to można wysyłać wartości bezpośrednio, bez tworzenia zmienną dla każdego parametru odwołania. Kompilator generuje tymczasowe zmienne do przechowywania wartości argumentów i odrzuca wszystkie zmienne, po powrocie z wywołania. Po drugie, można pominąć `ref` — słowo kluczowe na liście argumentów.  
   
-     `Add` Metoda ma cztery parametry odwołań, które są opcjonalne. W [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], lub nowsze wersje, możesz pominąć argumenty poszczególnych lub wszystkich parametrów, jeśli chcesz użyć wartości domyślnych. W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i wcześniejszych wersjach, należy podać argument dla każdego parametru i argument musi być zmienną, ponieważ parametry są parametry odwołania.  
+     `Add` Metoda ma cztery parametry odwołań, które są opcjonalne. W C# 4 lub nowszej wersji, można pominąć argumenty poszczególnych lub wszystkich parametrów, jeśli chcesz użyć wartości domyślnych. W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i wcześniejszych wersjach, należy podać argument dla każdego parametru i argument musi być zmienną, ponieważ parametry są parametry odwołania.  
   
-     `PasteSpecial` Metoda Wstawia zawartość Schowka. Metoda ma siedem parametrów odwołania, które są opcjonalne. Poniższy kod określa argumenty dwa z nich: `Link`, aby utworzyć łącze do źródła zawartości Schowka i `DisplayAsIcon`, aby wyświetlić łącza w postaci ikony. W [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], możesz użyć nazwanych argumentów dla tych dwóch i Pomiń pozostałe. Mimo, że są to parametry odwołania, trzeba użyć `ref` — słowo kluczowe, lub aby utworzyć zmienne do wysyłania jako argumenty. Wartości można wysyłać bezpośrednio. W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i wcześniejszych wersjach, konieczne jest wysłanie zmiennych argumentów dla każdego parametru odwołania.  
+     `PasteSpecial` Metoda Wstawia zawartość Schowka. Metoda ma siedem parametrów odwołania, które są opcjonalne. Poniższy kod określa argumenty dwa z nich: `Link`, aby utworzyć łącze do źródła zawartości Schowka i `DisplayAsIcon`, aby wyświetlić łącza w postaci ikony. W C# 4, możesz użyć nazwanych argumentów dla tych dwóch i Pomiń pozostałe. Mimo, że są to parametry odwołania, trzeba użyć `ref` — słowo kluczowe, lub aby utworzyć zmienne do wysyłania jako argumenty. Wartości można wysyłać bezpośrednio. W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i wcześniejszych wersjach, konieczne jest wysłanie zmiennych argumentów dla każdego parametru odwołania.  
   
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
@@ -142,7 +142,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
      Ponadto programowania jest łatwiejsze, ponieważ typy, które są wymagane i zwracane przez metody COM mogą być reprezentowane za pomocą typu `dynamic` zamiast `Object`. Zmienne, które mają typ `dynamic` nie są sprawdzane do czasu wykonywania, który eliminuje konieczność jawnego rzutowania. Aby uzyskać więcej informacji, zobacz [przy użyciu typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
-     W [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], osadzanie informacji o typie, zamiast korzystać z zestawów PIA jest zachowanie domyślne. Z powodu tej wartości domyślnej kilka poprzednich przykładach są uproszczone, ponieważ jawne Rzutowanie nie jest wymagane. Na przykład deklaracja `worksheet` w `DisplayInExcel` jest zapisywany jako `Excel._Worksheet workSheet = excelApp.ActiveSheet` zamiast `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Wywołania `AutoFit` w tej samej metody również wymaga jawnego rzutowania bez domyślnego, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, i `AutoFit` jest metodą programu Excel. Poniższy kod przedstawia rzutowania.  
+     W C# 4, osadzanie typów informacji zamiast przy użyciu zestawów PIA jest zachowanie domyślne. Z powodu tej wartości domyślnej kilka poprzednich przykładach są uproszczone, ponieważ jawne Rzutowanie nie jest wymagane. Na przykład deklaracja `worksheet` w `DisplayInExcel` jest zapisywany jako `Excel._Worksheet workSheet = excelApp.ActiveSheet` zamiast `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Wywołania `AutoFit` w tej samej metody również wymaga jawnego rzutowania bez domyślnego, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, i `AutoFit` jest metodą programu Excel. Poniższy kod przedstawia rzutowania.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   

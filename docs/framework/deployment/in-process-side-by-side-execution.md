@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816055"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170520"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
 Począwszy od programu .NET Framework 4, możesz użyć w trakcie side-by-side hostingu do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM, uruchom z .NET Framework w wersji, które zostały skompilowane, niezależnie od wersji programu .NET Framework, który jest ładowany do procesu.  
@@ -40,9 +40,9 @@ Począwszy od programu .NET Framework 4, możesz użyć w trakcie side-by-side h
   
     |Wersja programu .NET Framework|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|Nie dotyczy|Nie|Tak|  
+    |1.1|Nie dotyczy|Nie|Yes|  
     |2.0 - 3.5|Nie|Nie dotyczy|Tak|  
-    |4|Yes|Yes|Nie dotyczy|  
+    |4|Yes|Tak|Nie dotyczy|  
   
 > [!NOTE]
 >  Wersje programu .NET framework 3.0 i 3.5 są tworzone przyrostowo w wersji 2.0 i nie trzeba uruchamiać równolegle. Te założenia mają taką samą wersję.  
@@ -56,7 +56,7 @@ Począwszy od programu .NET Framework 4, możesz użyć w trakcie side-by-side h
   
      Co należy zrobić: W tym scenariuszu nic nie rób. Składniki COM będą uruchamiane przy użyciu wersji programu .NET Framework zostały zarejestrowane w usłudze.  
   
-- **Scenariusz 2**: Zarządzana aplikacja skompilowana przy użyciu platformy .NET Framework 2.0 z dodatkiem SP1, który chcesz uruchomić z [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ale są gotowi do uruchamiania na .NET Framework 4 nie jest w wersji 2.0.  
+- **Scenariusz 2**: Zarządzana aplikacja skompilowana przy użyciu platformy .NET Framework 2.0 z dodatkiem SP1, który chcesz Uruchom z .NET Framework 2.0, ale są gotowi do uruchamiania na .NET Framework 4 nie jest w wersji 2.0.  
   
      Zainstalowane wersje programu .NET framework: Wcześniejszej wersji programu .NET Framework i .NET Framework 4.  
   

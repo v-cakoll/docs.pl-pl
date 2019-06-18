@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 083fc6ff3dd15252fb6cf2beb27b5be0a6e489f5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 443d4367cc64eb7f9054b2cd52bef59e589f55b3
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423445"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170257"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Metody ogólne (Przewodnik programowania w języku C#)
 Metody ogólnej to metoda, która jest zadeklarowana za pomocą parametrów typu w następujący sposób:  
@@ -31,7 +31,7 @@ Metody ogólnej to metoda, która jest zadeklarowana za pomocą parametrów typu
   
  [!code-csharp[csProgGuideGenerics#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#25)]  
   
- Jeśli zdefiniujesz metody rodzajowej, która przyjmuje te same parametry typu jako klasa zawierająca, kompilator generuje ostrzeżenie CS0693, ponieważ w zakresie metody argument podany dla wewnętrzny `T` ukrywa argument podany dla zewnętrznego `T`. Jeśli wymagana jest elastyczność wywoływania metody rodzajowej klasy z argumentami typu innych niż podany przy wywołaniu metody wystąpienia klasy, rozważ podanie inny identyfikator dla parametru typu metody, jak pokazano na `GenericList2<T>` poniżej przykład.  
+ Jeśli zdefiniujesz metody rodzajowej, która przyjmuje te same parametry typu jako klasa zawierająca, kompilator generuje ostrzeżenie [CS0693](../../misc/cs0693.md) ponieważ w zakresie metody argument podany dla wewnętrzny `T` ukrywa argument nie dostarczono dla zewnętrzny `T`. Jeśli wymagana jest elastyczność wywoływania metody rodzajowej klasy z argumentami typu innych niż podany przy wywołaniu metody wystąpienia klasy, rozważ podanie inny identyfikator dla parametru typu metody, jak pokazano na `GenericList2<T>` poniżej przykład.  
   
  [!code-csharp[csProgGuideGenerics#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#26)]  
   

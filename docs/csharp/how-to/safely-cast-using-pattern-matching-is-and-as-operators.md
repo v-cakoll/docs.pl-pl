@@ -6,14 +6,14 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6887f6977511224a2a5c867e69df306e3bc2cc25
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672123"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169880"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>Porady: bezpieczne rzutowanie za pomocą dopasowywania do wzorca jest i operatory
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Porady: bezpieczne multiemisji za pomocą dopasowywania do wzorca i jest i operatory
 
 Ponieważ obiekty są polimorficznych, jest możliwe dla zmiennej typu klasy bazowej, aby pomieścić pochodnej [typu](../programming-guide/types/index.md). Aby uzyskać dostęp do składowych wystąpienia typu pochodnego, konieczne jest [rzutowania](../programming-guide/types/casting-and-type-conversions.md) wartość do typu pochodnego. Rzutowanie tworzy jednak ryzyko zgłaszanie <xref:System.InvalidCastException>. C# zawiera [dopasowywania do wzorca](../pattern-matching.md) instrukcji, które wykonują rzutowania warunkowo, tylko wtedy, gdy zakończy się powodzeniem. C# oferuje także [jest](../language-reference/keywords/is.md) i [jako](../language-reference/keywords/as.md) operatory, aby sprawdzić, czy wartość jest określonego typu.
 

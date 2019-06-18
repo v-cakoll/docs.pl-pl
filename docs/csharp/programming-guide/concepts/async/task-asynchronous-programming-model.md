@@ -2,12 +2,12 @@
 title: Zadania asynchronicznego programowania modelu (TAP) za pomocą async i await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 002a64cf7f692ffa0cfb5de94cdfc4421d8656bf
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 6e8f5c91bec158ae46b95597d90aaf3a6ab811d3
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025474"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170319"
 ---
 # <a name="task-asynchronous-programming-model"></a>Model programowania asynchronicznego zadań (APM)
 
@@ -127,7 +127,7 @@ Liczby w diagramie odpowiadają poniższym krokom, inicjowane, gdy użytkownik k
      W związku z tym `AccessTheWebAsync` stosuje await operator, aby zawiesić postęp i oddać kontrolę do metody, która wywołała `AccessTheWebAsync`. `AccessTheWebAsync` Zwraca `Task<int>` do obiektu wywołującego. Zadanie przedstawia obietnicę utworzenia w wyniku liczby całkowitej, która jest długością pobranego ciągu.
 
     > [!NOTE]
-    > Jeśli `GetStringAsync` (i w związku z tym `getStringTask`) zakończy się przed `AccessTheWebAsync` czeka na jego, sterowanie pozostanie w `AccessTheWebAsync`. Wydatków, a następnie powrotu do `AccessTheWebAsync` zostałby zmarnowany, gdyby wywołany proces asynchroniczny (`getStringTask`) został już ukończony i `AccessTheWebSync` nie musiałby czekać na wynik końcowy.
+    > Jeśli `GetStringAsync` (i w związku z tym `getStringTask`) zakończy się przed `AccessTheWebAsync` czeka na jego, sterowanie pozostanie w `AccessTheWebAsync`. Wydatków, a następnie powrotu do `AccessTheWebAsync` zostałby zmarnowany, gdyby wywołany proces asynchroniczny (`getStringTask`) został już ukończony i `AccessTheWebAsync` nie musiałby czekać na wynik końcowy.
 
      Przetwarzanie wzorca jest kontynuowane wewnątrz elementu wywołującego (programu obsługi zdarzeń w tym przykładzie). Obiekt wywołujący może wykonywać inne czynności, które nie są zależne od wyników `AccessTheWebAsync` przed oczekiwaniem na wynik lub obiekt wywołujący może czekać natychmiast.   Program obsługi zdarzeń oczekuje na `AccessTheWebAsync`, i `AccessTheWebAsync` oczekuje na `GetStringAsync`.
 

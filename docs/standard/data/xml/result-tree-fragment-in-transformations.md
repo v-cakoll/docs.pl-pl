@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750715"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170775"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Wynikowy fragment drzewa w przekształceniach
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
 
  Fragmenty drzewa wynik, znany także jako fragmenty drzewa wynik to nic więcej niż specjalny rodzaj zestawu węzłów. Dowolnej funkcji, można wykonywać na nich, które mogą być wykonywane w zestawie węzłów. Alternatywnie można również przeprowadzić konwersję wynikowego fragmentu drzewa, do węzła, można ustawić przy użyciu `node-set()` działać, a następnie użyć go w dowolnym miejscu, że zestaw węzłów może być używany.
 

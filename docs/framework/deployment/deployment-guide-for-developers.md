@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4deea506a616a3578261cb85f4d4dd1369f5718e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873925"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170660"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET framework — przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję programu .NET Framework z platformy .NET Framework 4.5 [!INCLUDE[net_current](../../../includes/net-current-version.md)] wraz ze swoimi aplikacjami.
@@ -267,10 +267,12 @@ Instalator .NET Framework zapisuje klucze rejestru, gdy instalacja się powiedzi
 > [!IMPORTANT]
 > Należy sprawdzić wartość **większa lub równa** wartość słowa kluczowego wersji podczas próby wykrycia, czy występuje określonej wersji.
 
+[!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+
 |Wersja|Wartość DWORD dotycząca wersji|
 |-------------|--------------------------------|
-|4.8 framework .NET zainstalowany w systemie Windows 10 może aktualizować 2019 r|528040|
-|4.8 framework .NET zainstalowany we wszystkich wersjach systemów operacyjnych innych niż Windows 10 może aktualizować 2019 r|528049|
+|4\.8 framework .NET zainstalowany w systemie Windows 10 może aktualizować 2019 r|528040|
+|4\.8 framework .NET zainstalowany we wszystkich wersjach systemów operacyjnych innych niż Windows 10 może aktualizować 2019 r|528049|
 |.NET framework 4.7.2 zainstalowany w systemie Windows 10 kwietnia 2018 r. Zaktualizuj i w systemie Windows Server w wersji 1803|461808|
 |.NET framework 4.7.2 zainstalowane we wszystkich wersjach systemów operacyjnych innych niż Windows 10 kwietnia 2018 Update i Windows Server w wersji 1803. W tym Windows 10 października 2018 r. Zaktualizuj. |461814|
 |.NET framework 4.7.1 zainstalowane na Windows 10 Fall Creators Update oraz w systemie Windows Server w wersji 1709|461308|
@@ -392,7 +394,7 @@ Poniższa lista zawiera opcje, które można uwzględnić podczas tworzenia ła�
 |Opcja|Opis|
 |------------|-----------------|
 |**/CEIPConsent**|Zastępuje domyślne zachowanie i wysyła anonimowe opinie do firmy Microsoft w celu wdrażania w przyszłości. Ta opcja może służyć tylko wtedy, gdy Instalator monituje o zgodę, i jeśli użytkownik udziela uprawnień do wysyłania anonimowych opinii do firmy Microsoft.|
-|**chainingpackage** `packageName`|Określa nazwę pliku wykonywalnego, który tworzy łańcuch. Te informacje są wysyłane do firmy Microsoft, jak napotyka anonimowe opinie do ulepszania wdrażania w przyszłości.<br /><br /> Jeśli nazwa pakietu zawiera spacje, należy użyć podwójnego cudzysłowu jako ogranicznika; na przykład: **chainingpackage "Lucerne Publishing"**. Na przykład pakiet łańcuchowy zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=181926) w bibliotece MSDN.|
+|**chainingpackage** `packageName`|Określa nazwę pliku wykonywalnego, który tworzy łańcuch. Te informacje są wysyłane do firmy Microsoft, jak napotyka anonimowe opinie do ulepszania wdrażania w przyszłości.<br /><br /> Jeśli nazwa pakietu zawiera spacje, należy użyć podwójnego cudzysłowu jako ogranicznika; na przykład: **chainingpackage "Lucerne Publishing"** . Na przykład pakiet łańcuchowy zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=181926) w bibliotece MSDN.|
 |**/LCID**  `LCID`<br /><br /> gdzie `LCID` Określa identyfikator ustawień regionalnych (zobacz [obsługiwane języki](#supported-languages))|Instaluje pakiet językowy określony przez `LCID` i wymusza wyświetlanie interfejsu użytkownika, które mają być wyświetlane w tym języku, o ile nie jest ustawiony tryb cichy.<br /><br /> Aby uzyskać Instalator sieci web ta opcja instaluje łańcuchowo pakiet językowy z sieci web. **Uwaga:**  Użyj tej opcji tylko w przypadku Instalatora sieci web.|
 |**/ log** `file`&#124; `folder`|Określa lokalizację pliku dziennika. Wartość domyślna to folder tymczasowy dla procesu, a domyślna nazwa pliku opiera się na pakiet. Jeśli rozszerzenie .txt, generowany jest Dziennik tekstowy. Jeśli określisz dowolne inne rozszerzenie lub Brak rozszerzenia, zostanie utworzony dziennik HTML.|
 |**/msioptions**|Określa opcje przekazywane do elementów .msi i .msp; na przykład: `/msioptions "PROPERTY1='Value'"`.|

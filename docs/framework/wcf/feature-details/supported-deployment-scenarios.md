@@ -2,16 +2,16 @@
 title: Obsługiwane scenariusze wdrażania — WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 2da55176cbfe618b332f2df210e3e1c0516b17ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025628"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170042"
 ---
 # <a name="supported-deployment-scenarios"></a>Obsługiwane scenariusze wdrażania
 
-Podzbiór funkcji Windows Communication Foundation (WCF) obsługiwanych na częściowo zaufane aplikacje zaprojektowano w celu spełnienia wymagań niektórych, ale nie wszystkie scenariusze przy użyciu usługi WCF. Na serwerze programu WCF spełnia wymagania udostępnionego dostawców hostingu, którzy uruchamiają aplikacje innych producentów w uprawnienie trybie ASP.NET 2.0 średniego zaufania, ustaw ze względów bezpieczeństwa skali Internetu. Na komputerze klienckim, Obsługa częściowej relacji zaufania usługi WCF zaprojektowano w celu spełnienia wymagań technologie wdrażania, takie jak [wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) lub [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]w aplikacji przeglądarki XAML technologii, która umożliwia bezproblemową i bezpieczną Wdrażanie aplikacji dla komputerów osobistych z niezaufanych witryn.
+Podzbiór funkcji Windows Communication Foundation (WCF) obsługiwanych na częściowo zaufane aplikacje zaprojektowano w celu spełnienia wymagań niektórych, ale nie wszystkie scenariusze przy użyciu usługi WCF. Na serwerze programu WCF spełnia wymagania udostępnionego dostawców hostingu, którzy uruchamiają aplikacje innych producentów w uprawnienie trybie ASP.NET 2.0 średniego zaufania, ustaw ze względów bezpieczeństwa skali Internetu. Na komputerze klienckim, Obsługa częściowej relacji zaufania usługi WCF zaprojektowano w celu spełnienia wymagań technologie wdrażania, takie jak [wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) lub technologii aplikacja przeglądarki XAML w WPF, która umożliwia bezproblemową i bezpieczną wdrożenia aplikacje klasyczne z niezaufanych witryn.
 
 ## <a name="minimum-permission-requirements"></a>Wymagania dotyczące minimalnych uprawnień
 
@@ -39,7 +39,7 @@ Aby uzyskać więcej informacji, zobacz [jak: Użyj w trybie średniego zaufania
 
 ## <a name="partial-trust-on-the-client"></a>Częściowej relacji zaufania, na komputerze klienckim
 
-Niektóre środki ostrożności zabezpieczeń należy podjąć w przypadku pobierania i uruchamiania kodu z niezaufanych witryn internetowych. Zarówno [wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) i [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]wprowadzić technologii XAML Browser aplikacji (XBAP) używania częściowej relacji zaufania przyznać ograniczone uprawnienia (strefy Internet) do niezaufanego kodu.
+Niektóre środki ostrożności zabezpieczeń należy podjąć w przypadku pobierania i uruchamiania kodu z niezaufanych witryn internetowych. Zarówno [wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) i firmy WPF XAML Browser aplikacji (XBAP) technologii upewnij korzystanie z częściowej relacji zaufania w celu przyznania ograniczone uprawnienia (strefy Internet) do niezaufanego kodu.
 
 Usługi WCF może służyć do komunikacji z serwerami zdalnymi z w ramach częściowo zaufane aplikacje wdrożone przez [wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) lub XBAP. Obejmuje zestaw uprawnień strefy Internet <xref:System.Net.WebPermission> dla hosta źródłowego, co pozwala te aplikacje do komunikowania się z ich serwera pochodzenia przy użyciu dowolnej obsługiwanej wiązania WCF, opisane w [zgodność funkcji zaufania częściowego ](partial-trust-feature-compatibility.md).
 

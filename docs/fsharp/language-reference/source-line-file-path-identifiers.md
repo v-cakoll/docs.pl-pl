@@ -2,12 +2,12 @@
 title: Identyfikatory wiersza źródłowego, pliku i ścieżki
 description: Dowiedz się, jak używać wbudowanych F# wartości identyfikatorów, które umożliwiają uzyskiwanie dostępu do źródła wierszy numer, katalogu i nazwa pliku w kodzie.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663625"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152051"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Identyfikatory wiersza źródłowego, pliku i ścieżki
 
@@ -31,7 +31,7 @@ W poniższej tabeli przedstawiono źródła wiersza, pliku i ścieżkę identyfi
 |---------------------|-----------|
 |`__LINE__`|Daje w wyniku bieżący numer wiersza, biorąc pod uwagę `#line` dyrektywy.|
 |`__SOURCE_DIRECTORY__`|Daje w wyniku pełną ścieżkę bieżącego katalogu źródłowym, biorąc pod uwagę `#line` dyrektywy.|
-|`__SOURCE_FILE__`|Ocenia nazwę bieżącego pliku źródłowego i jego ścieżki, biorąc pod uwagę `#line` dyrektywy.|
+|`__SOURCE_FILE__`|Daje w wyniku nazwę bieżącego pliku źródłowego, bez ścieżki, biorąc pod uwagę `#line` dyrektywy.|
 
 Aby uzyskać więcej informacji na temat `#line` dyrektywy, zobacz [dyrektywy kompilatora](compiler-directives.md).
 
@@ -46,7 +46,7 @@ Dane wyjściowe:
 ```
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
-Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
+Source File: Program.fs
 ```
 
 ## <a name="see-also"></a>Zobacz także

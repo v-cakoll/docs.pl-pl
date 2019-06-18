@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: cafc742474d6f7b46fbfb73374a59a350812a2a5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d62c3480db56b5cbf22c1f3f6ff59ab220a48b09
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639098"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152038"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedury operatorów (Visual Basic)
 Procedury operatora to szereg instrukcji, które definiują zachowanie standardowego operatora (takie jak `*`, `<>`, lub `And`) dla klasy lub struktury, które zostały zdefiniowane. Jest to również nazywane *przeciążenia operatora*.  
@@ -43,13 +43,15 @@ Procedury operatora to szereg instrukcji, które definiują zachowanie standardo
   
 ## <a name="declaration-syntax"></a>Składnia deklaracji  
  Składnia do deklarowania procedury operatora jest następująca:  
+ 
+ ```vb 
+ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  operand2 ]) As datatype  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *typu danych*  
+ ' Statements of the operator procedure.
   
- `' Statements of the operator procedure.`  
-  
- `End Operator`  
-  
+ End Operator
+ ```
+ 
  Możesz użyć `Widening` lub `Narrowing` — słowo kluczowe tylko dla operatora konwersji typu. Symbol operatora jest zawsze [funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md) dla operatora konwersji typu.  
   
  Zadeklaruj dwóch argumentów operacji, aby zdefiniować operator binarny i Zadeklaruj jeden argument, aby zdefiniować operator jednoargumentowy, łącznie z operatora konwersji typu. Wszystkie operandy muszą być zadeklarowane `ByVal`.  

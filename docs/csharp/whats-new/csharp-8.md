@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny w wersji zapoznawczej 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: e2f3c4f2385873d37c3b125e526913c30d848932
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041595"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151980"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -381,7 +381,7 @@ Obsługa tego języka opiera się na dwóch nowych typów i dwóch nowych operat
 
 Zacznijmy od reguł dla indeksów. Należy wziąć pod uwagę tablicy `sequence`. `0` Indeksu jest taka sama jak `sequence[0]`. `^0` Indeksu jest taka sama jak `sequence[sequence.Length]`. Należy pamiętać, że `sequence[^0]` zgłosić wyjątek, podobnie jak `sequence[sequence.Length]` jest. Dowolną liczbą `n`, indeks `^n` jest taka sama jak `sequence.Length - n`.
 
-Określa zakres *start* i *zakończenia* zakresu. Początek zakresu (włączna) i koniec zakresu jest wzajemnie, co oznacza *start* znajduje się w zakresie, ale *zakończenia* nie wchodzi w zakres. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres. 
+Określa zakres *start* i *zakończenia* zakresu. Początek zakresu (włącznie), ale koniec zakresu jest wzajemnie, co oznacza *start* znajduje się w zakresie, ale *zakończenia* nie wchodzi w zakres. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres. 
 
 Spójrzmy na kilka przykładów. Rozważmy następującą tablicę, oznaczony za pomocą jej indeks, od samego początku i na końcu:
 

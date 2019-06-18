@@ -2,18 +2,18 @@
 title: Mikrousługi .NET. architektura konteneryzowanych aplikacji .NET
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Mikrousługi są moduły i niezależnie do wdrożenia usługi. Kontenery platformy docker (dla systemu Linux i Windows) można uprościć wdrażanie i testowanie przez tworzenie pakietów usługi i jego zależności w pojedynczą jednostkę, który następnie jest uruchamiany w środowisku izolowanym.
 ms.date: 01/07/2019
-ms.openlocfilehash: f1abeca8bb7eba615545a88862b20b2711b218fd
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: fe69dcec58ae1d1eed23a49fadbee378ec129990
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690639"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152018"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET
 
 ![Okładki książki](./media/cover-small.png)
 
-**Wersja v2.2.00** — zaktualizowano w celu platformy ASP.NET Core 2.2
+**EDITION w wersji 2.2** — zaktualizowano w celu platformy ASP.NET Core 2.2
 
 Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzanie nimi przy użyciu kontenerów. Omówiono w nim kwestie projektowania architektonicznego i zbliża się do wdrożenia przy użyciu platformy .NET Core i kontenerów rozwiązania Docker. 
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 Microsoft Corporation
+Copyright © 2019 przez firmę Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Nie części zawartości tej książki może odtworzyć lub przenoszone w jakiejkolwiek formie lub za pomocą jakichkolwiek środków bez pisemnej zgody wydawcy.
 

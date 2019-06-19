@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: e40ca31ddc40cccbeb3b8dda1d148ddec5032d7c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 022f0efbbb2e6e9a4ac9d3d7ddcc1fb1022cdbee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489552"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169775"
 ---
 # <a name="startup-element"></a>\<Uruchamianie > element
 
@@ -37,13 +37,13 @@ Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|Atrybut opcjonalny.<br /><br /> Określa, czy włączyć [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] zasad aktywacji środowiska uruchomieniowego lub użyć zasady aktywacji .NET Framework 4.|
+|`useLegacyV2RuntimeActivationPolicy`|Atrybut opcjonalny.<br /><br /> Określa, czy włączyć zasady aktywacji .NET Framework 2.0 środowisko uruchomieniowe zasady aktywacji .NET Framework 4.|
 
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>Atrybut useLegacyV2RuntimeActivationPolicy
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`true`|Włącz [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] środowiska uruchomieniowego zasad aktywacji dla wybranego środowiska uruchomieniowego, czyli można powiązać technik aktywacji starszej wersji środowiska uruchomieniowego (takie jak [corbindtoruntimeex — funkcja](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) do środowiska uruchomieniowego, wybrana z pliku konfiguracji zamiast Ograniczanie je na wersji CLR 2.0. W związku z tym Jeśli wersja środowiska CLR 4 lub nowszego jest wybierany z pliku konfiguracji, zestawy mieszane utworzonych w starszych wersjach programu .NET Framework są ładowane z wybranej wersji środowiska CLR. Ustawienie tej wartości zapobiega środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w procesie.|
+|`true`|Włączanie zasad aktywacji środowiska uruchomieniowego .NET Framework 2.0 dla wybranego środowiska uruchomieniowego, czyli można powiązać technik aktywacji starszej wersji środowiska uruchomieniowego (takie jak [corbindtoruntimeex — funkcja](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) do środowiska uruchomieniowego zamiast tego wybrać z pliku konfiguracji z nakładanie je na wersji CLR 2.0. W związku z tym Jeśli wersja środowiska CLR 4 lub nowszego jest wybierany z pliku konfiguracji, zestawy mieszane utworzonych w starszych wersjach programu .NET Framework są ładowane z wybranej wersji środowiska CLR. Ustawienie tej wartości zapobiega środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w procesie.|
 |`false`|Używanie domyślnych zasad aktywacji dla programu .NET Framework 4 i nowszych wersji, aby zezwolić na starszej wersji środowiska uruchomieniowego technik aktywacji można załadować środowiska CLR w wersji 1.1 lub 2.0 do procesu. Ta wartość zapobiega zestawy mieszane ładowanie do programu .NET Framework 4 lub nowszy, chyba że zostały skompilowane przy użyciu programu .NET Framework 4 lub nowszej. Ta wartość jest domyślna.|
 
 ### <a name="child-elements"></a>Elementy podrzędne

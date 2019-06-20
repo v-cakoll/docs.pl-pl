@@ -8,18 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c7f3b1b1525277bf948070c9121d151f9f520127
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3d18a52068b17b4a4259200754819dd43e28a03
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660856"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267645"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
 `readonly` — Słowo kluczowe jest modyfikator, który może być używana w kontekstach trzy:
 
-- W [pola deklaracji](#readonly-field-example), `readonly` wskazuje przypisania do pola mogą występować wyłącznie jako część deklaracji lub za pomocą konstruktora w tej samej klasy.
+- W [pola deklaracji](#readonly-field-example), `readonly` wskazuje przypisania do pola mogą występować wyłącznie jako część deklaracji lub za pomocą konstruktora w tej samej klasy. Pola tylko do odczytu mogą zostać przypisane i ponownie przypisać wiele razy w ramach deklarację pola i konstruktora. Element `readonly` nie można przypisać pola, po zakończeniu konstruktora. Która ma inny wpływ dla typów wartości i typy referencyjne:
+- Ponieważ typy wartości zawierają bezpośrednio swoje dane, pole to `readonly` typ wartości jest niezmienny. 
+- Ponieważ typy odwołań zawierają odwołania do swoich danych, pola to `readonly` typu odwołania zawsze musi odwoływać się do tego samego obiektu. Ten obiekt jest niezmienny. `readonly` Modyfikator zapobiega zastępowane przez inne wystąpienie typu odwołania pola. Jednak modyfikator nie uniemożliwia dane wystąpienia pola modyfikowana za pomocą pola tylko do odczytu.
+
+> [!WARNING]
+> Typ widoczny na zewnątrz zawiera widoczne na zewnątrz pole tylko do odczytu, która jest typu referencji zmiennej może być luki w zabezpieczeniach i mogą wyzwalać ostrzeżenie [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "Nie deklaruj odczytu modyfikowalnych typów referencyjnych tylko."
+
 - W [ `readonly struct` definicji](#readonly-struct-example), `readonly` wskazuje, że `struct` można modyfikować.
 - W [ `ref readonly` zwrotu metody](#ref-readonly-return-example), `readonly` modyfikator wskazuje, że metoda zwraca odwołanie i zapisy są niedozwolone do tego odwołania.
 
@@ -55,7 +61,9 @@ Tych kontekstach Konstruktor są również tylko kontekstów, w których jest on
 
 W poprzednim przykładzie, jeśli korzystasz z instrukcji, podobnie jak w poniższym przykładzie:
 
-`p2.y = 66;        // Error`
+```csharp
+p2.y = 66;        // Error
+```
 
 zostanie wyświetlony komunikat o błędzie kompilatora:
 
@@ -88,7 +96,7 @@ Dodawanie pola niezaznaczonych `readonly` generuje błąd kompilatora `CS8340`: 
 `readonly` Modyfikator na `ref return` wskazuje, że zwracane odwołanie nie może być modyfikowany. Poniższy przykład zwraca odwołanie do źródła. Używa ona `readonly` modyfikator, aby wskazać, że obiekty wywołujące nie można zmodyfikować punkt początkowy:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
-Typ zwracany nie musi być `readonly struct`. Dowolny typ, który może zostać zwrócony przez `ref` mogą być zwrócone przez `ref readonly`
+Typ zwracany nie musi być `readonly struct`. Dowolny typ, który może zostać zwrócony przez `ref` mogą być zwrócone przez `ref readonly`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

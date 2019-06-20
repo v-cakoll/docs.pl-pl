@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d8b3eef0afd780b4a6568e8c067296d2243087
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649819"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268188"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opcje kompilatora Visual Basic w porządku alfabetycznym
 Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alternatywę do kompilowania programów z programu Visual Studio zintegrowane środowisko programistyczne (IDE). Oto lista opcje wiersza polecenia kompilatora języka Visual Basic, sortowana alfabetycznie.  
@@ -45,7 +45,7 @@ Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alterna
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Określa klasę, która zawiera `Sub Main` procedury należy użyć przy uruchamianiu.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Określa nazwę zestawu, który będzie należeć modułu.|  
 |`-modulename:<string>`|Określ nazwę modułu źródła|  
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Ustawia kompilatora z docelowym [!INCLUDE[Compact](~/includes/compact-md.md)].|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Ustawia kompilatora pod kątem platformy .NET Compact Framework.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Nie można skompilować przy użyciu Vbc.rsp.|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Pomija informacji o transparencie kompilatora.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Powoduje, że kompilator, aby nie odwoływać się do standardowych bibliotek.|  

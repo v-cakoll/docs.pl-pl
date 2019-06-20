@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765963"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268180"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny na platformie .NET
 
@@ -65,14 +65,14 @@ Poniższy przykład ilustruje użycie <xref:System.DateTime.Parse%2A?displayProp
 
 Można również jawnie określić kulturę, której konwencje formatowania są używane podczas analizy ciągu. Należy podać jedną z standard <xref:System.Globalization.DateTimeFormatInfo> obiektów zwróconych przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> właściwości. W poniższym przykładzie użyto dostawcę formatu, aby przeanalizować ciąg niemieckim do <xref:System.DateTime>. Tworzy <xref:System.Globalization.CultureInfo> reprezentujący `de-DE` kultury. Czy `CultureInfo` obiektu zapewnia pomyślne analizowania tego określonego ciągu. Wyklucza to, niezależnie od ustawienie znajduje się w <xref:System.Threading.Thread.CurrentCulture> z <xref:System.Threading.Thread.CurrentThread>.  
   
-[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+[!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
 Jednak mimo że można użyć przeciążenia <xref:System.DateTime.Parse%2A> metodę, aby określić niestandardowych dostawców formatu, metoda nie obsługuje analizowania formatów niestandardowych. Aby przeanalizować daty i godziny wyrażony w postaci niestandardowych, należy użyć <xref:System.DateTime.ParseExact%2A> metody zamiast tego.  
 
 <a name="styles-example"></a>W poniższym przykładzie użyto <xref:System.Globalization.DateTimeStyles> wyliczeniu, aby określić, czy bieżące informacje o daty i godziny nie można dodać do <xref:System.DateTime> dla pola nieokreślony.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
  
 ## <a name="parseexact"></a>Parseexact —
@@ -81,7 +81,7 @@ Jednak mimo że można użyć przeciążenia <xref:System.DateTime.Parse%2A> met
 
 W poniższym przykładzie <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> metody jest przekazywany obiekt ciągu, aby analizować, następuje specyfikatora formatu, a następnie <xref:System.Globalization.CultureInfo> obiektu. To <xref:System.DateTime.ParseExact%2A> metoda można analizować tylko ciągi, które należy wykonać wzorzec daty długiej w `en-US` kultury.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
 Każdy przeciążenia <xref:System.DateTime.Parse%2A> i <xref:System.DateTime.ParseExact%2A> ma również metody <xref:System.IFormatProvider> parametr, który dostarcza specyficzne dla kultury informacje o formatowanie ciągu. To <xref:System.IFormatProvider> obiekt jest <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje standardowej kultury lub <xref:System.Globalization.DateTimeFormatInfo> obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> właściwości.  <xref:System.DateTime.ParseExact%2A> używa również dodatkowy ciąg znaków lub argument tablica ciągu, który definiuje co najmniej jeden niestandardowa data i godzina formatów.  

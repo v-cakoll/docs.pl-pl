@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 2024ccadb06fdea0c24d9d304c2fe040f8cce1d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91f64756b2fbf14dc96550420cd936973e6bec87
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639067"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268297"
 ---
 # <a name="-sdkpath"></a>-sdkpath
 Określa lokalizację mscorlib.dll i Microsoft.VisualBasic.dll.  
@@ -30,7 +30,7 @@ Określa lokalizację mscorlib.dll i Microsoft.VisualBasic.dll.
  Katalog zawierający wersji biblioteki mscorlib.dll i Microsoft.VisualBasic.dll na potrzeby kompilacji. Ta ścieżka nie została zweryfikowana, dopóki nie jest ładowany. Nazwę katalogu należy ująć w znaki cudzysłowu ("") zawiera spację.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta opcja nakazuje kompilatorowi języka Visual Basic obciążenia mscorlib.dll i Microsoft.VisualBasic.dll pliki z lokalizacji innych niż domyślne. `-sdkpath` Opcja została zaprojektowana do użycia z [- netcf —](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Używa różnych wersji tych Obsługa bibliotek, aby uniknąć użycia typów i funkcji języka, które nie znajdują się na urządzeniach.  
+ Ta opcja nakazuje kompilatorowi języka Visual Basic obciążenia mscorlib.dll i Microsoft.VisualBasic.dll pliki z lokalizacji innych niż domyślne. `-sdkpath` Opcja została zaprojektowana do użycia z [- netcf —](../../../visual-basic/reference/command-line-compiler/netcf.md). .NET Compact Framework używa różnych wersji tych Obsługa bibliotek, aby uniknąć użycia typów i funkcji języka, które nie znajdują się na urządzeniach.  
   
 > [!NOTE]
 >  `-sdkpath` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia. `-sdkpath` Ustawiono opcję po załadowaniu projektu urządzenia języka Visual Basic.  
@@ -38,7 +38,7 @@ Określa lokalizację mscorlib.dll i Microsoft.VisualBasic.dll.
  Można określić, czy kompilator powinien kompilować bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic przy użyciu `-vbruntime` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [- vbruntime —](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `Myfile.vb` z [!INCLUDE[Compact](~/includes/compact-md.md)], przy użyciu wersji biblioteki Mscorlib.dll i Microsoft.VisualBasic.dll znajduje się w katalogu instalacji domyślnej z [!INCLUDE[Compact](~/includes/compact-md.md)] na dysku C. Zazwyczaj używasz najnowszej wersji [!INCLUDE[Compact](~/includes/compact-md.md)].  
+ Poniższy kod kompiluje `Myfile.vb` przy użyciu platformy .NET Compact Framework przy użyciu wersji biblioteki Mscorlib.dll i Microsoft.VisualBasic.dll znajduje się w katalogu instalacji domyślnej .NET Compact Framework, na dysku C. Zazwyczaj należy użyć najnowszej wersji platformy .NET Compact Framework.  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

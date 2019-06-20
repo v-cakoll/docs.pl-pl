@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664642"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267917"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu jest używany do definiowania tekstowej reprezentacji wartości daty i godziny. Ciągu formatu daty i godziny, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako niestandardowy ciąg daty i godziny formatu; Aby uzyskać więcej informacji, zobacz [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Ciągu formatu standardowego lub niestandardowego można używać na dwa sposoby:  
@@ -92,7 +92,7 @@ Standardowy format daty i ciągi formatu czasu mogą być używane z obu <xref:S
   
  Ciągi w standardowym formacie można również w operacji analizowania za pomocą <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> metody, które wymagają ciąg wejściowy dokładnie odpowiada wzorcowi jako warunek powodzenia operacji analizy. Wiele ciągów formatów standardowych jest mapowanych na wielu ciągów formatów niestandardowych, więc wartość daty i godziny może być reprezentowana przez wiele formatów, a operacja analizy i tak zakończy się powodzeniem. Należy określić ciąg formatu niestandardowego lub ciągów, które odpowiadają ciągowi formatu standardowego, wywołując <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> metody. W poniższym przykładzie są wyświetlane ciągi formatów niestandardowych mapowane na ciąg formatu standardowego „d” (wzorzec daty krótkiej).  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  W poniższych sekcjach opisano specyfikatory formatu standardowego dla <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości.  
@@ -261,7 +261,7 @@ Standardowy format daty i ciągi formatu czasu mogą być używane z obu <xref:S
   
  W poniższym przykładzie użyto specyfikatora formatu "o", aby wyświetlić szereg <xref:System.DateTime> wartości i <xref:System.DateTimeOffset> wartość w systemie, w Stanach Zjednoczonych Strefa czasowa czasu pacyficznego.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  Poniższy przykład używa specyfikatora formatu "o", aby utworzyć sformatowany ciąg, a następnie przywrócenie oryginalnej wartości daty i godziny przez wywołanie datę i godzinę `Parse` metody.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634548"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268229"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowa data i godzina ciągi formatujące
 
@@ -41,7 +41,7 @@ Niestandardowa data i ciągi formatu czasu mogą być używane z obu <xref:Syste
 
 Podczas operacji analizowania, niestandardowych ciągów daty i godziny formatu może służyć za pomocą <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, i <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> metody. Te metody wymagają, że ciąg wejściowy odpowiada dokładnie określonego wzorca jako warunek powodzenia operacji analizy. W poniższym przykładzie pokazano wywołanie <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metody w celu przeanalizowania daty, która musi zawierać dzień, miesiąc i rok w postaci dwóch cyfr.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-csharp[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
 [!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
 W poniższej tabeli opisano specyfikatory niestandardowego formatu daty i godziny oraz pokazano ciąg wynikowy utworzony przez każdy specyfikator formatu. Domyślnie ciągi wynikowe odzwierciedlają konwencje formatowania kultury en-US. Jeśli określony specyfikator formatu generuje zlokalizowany ciąg wynikowy, w przykładzie wymieniono też kulturę, której dotyczy ciąg wynikowy. Aby uzyskać więcej informacji o korzystaniu z niestandardowych ciągów daty i godziny formatu, zobacz [uwagi](#notes) sekcji.
@@ -509,7 +509,7 @@ Podczas operacji analizowania dwucyfrowy rok, który jest analizowany przy użyc
 
 W poniższym przykładzie specyfikator formatu niestandardowego „yy” jest używany w ciągu formatu niestandardowego.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-csharp[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
 [Powrót do tabeli](#table)
@@ -638,7 +638,7 @@ Wszystkie inne znaki są zawsze interpretowane jako literały znakowe i, w opera
 
 Poniższy przykład zawiera znaki literału "PST" (dla pacyficznego czasu standardowego) i "(PDT)" (dla czasu pacyficznego) do reprezentowania lokalnej strefy czasowej w ciągu formatu. Pamiętaj, że ciągu znajduje się w ciągu wynikowym ciąg, który zawiera ciąg strefy czasu lokalnego również analizowania pomyślnie.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-csharp[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
 [!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
 Istnieją dwa sposoby, aby wskazać, że znaki mają być interpretowane jako znaki literału, a nie jako zarezerwowane znaki tak, aby mogą być zawarte w ciągu wynikowym lub pomyślnie przeanalizować ciągu wejściowego:
@@ -647,12 +647,12 @@ Istnieją dwa sposoby, aby wskazać, że znaki mają być interpretowane jako zn
 
 Poniższy przykład zawiera znaki literału "pst" (dla pacyficznego czasu standardowego) do reprezentowania lokalnej strefy czasowej w ciągu formatu. Ponieważ "s" i "t" Tworzenie niestandardowych formatów ciągów, zarówno znaki należy użyć znaków ucieczki, aby być interpretowane jako literały znakowe.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-csharp[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
 [!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - Umieszczając cały ciąg literału w cudzysłowie lub w apostrofy. Poniższy przykład przypomina poprzedni, z tą różnicą, że "pst" jest ujęta w znaki cudzysłowu do wskazania, że cały ciąg rozdzielany powinno być interpretowane jako literały znaków.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>Uwagi

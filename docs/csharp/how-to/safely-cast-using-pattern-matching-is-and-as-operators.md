@@ -6,28 +6,26 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 6887f6977511224a2a5c867e69df306e3bc2cc25
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: bb6b39c645d49554214a8a013cc849fe0ebcb40a
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169880"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267705"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Porady: bezpieczne multiemisji za pomocą dopasowywania do wzorca i jest i operatory
 
 Ponieważ obiekty są polimorficznych, jest możliwe dla zmiennej typu klasy bazowej, aby pomieścić pochodnej [typu](../programming-guide/types/index.md). Aby uzyskać dostęp do składowych wystąpienia typu pochodnego, konieczne jest [rzutowania](../programming-guide/types/casting-and-type-conversions.md) wartość do typu pochodnego. Rzutowanie tworzy jednak ryzyko zgłaszanie <xref:System.InvalidCastException>. C# zawiera [dopasowywania do wzorca](../pattern-matching.md) instrukcji, które wykonują rzutowania warunkowo, tylko wtedy, gdy zakończy się powodzeniem. C# oferuje także [jest](../language-reference/keywords/is.md) i [jako](../language-reference/keywords/as.md) operatory, aby sprawdzić, czy wartość jest określonego typu.
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
-
 Poniższy przykład demonstruje wzorzec dopasowywania `is` instrukcji. Zawiera metody testowania argumentu metody, aby ustalić, czy jest jednym z możliwych zestawów typów pochodnych:
 
-[!code-csharp-interactive[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
+[!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
 W poprzednim przykładzie pokazano kilka funkcji Składnia dopasowania do wzorca. `if (a is Mammal m)` i `if (o is Mammal m)` instrukcje łączenia testu z przydziałem inicjowania. Przypisanie odbywa się tylko wtedy gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie osadzonego `if` instrukcji, w którym został przypisany. Nie można uzyskać dostępu `m` dalej w tej samej metody. Wypróbuj go w oknie interaktywnym.
 
 Można również użyć tej samej składni do badania, jeśli [typu dopuszczającego wartość null](../programming-guide/nullable-types/index.md) ma wartość, jak pokazano w poniższym przykładowym kodzie:
 
-[!code-csharp-interactive[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
+[!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
 Poprzedni przykład pokazuje inne funkcje za pomocą konwersji dopasowywania do wzorca. Możesz przetestować zmienną deseń zerowy, sprawdzając specjalnie pod kątem `null` wartość. Gdy wartość zmiennej środowiska uruchomieniowego jest `null`, `is` instrukcji sprawdzania dla typu zawsze zwraca `false`. Dopasowanie wzorca `is` instrukcji nie dopuszcza typem wartościowym, takich jak `int?` lub `Nullable<int>`, ale możesz testować dowolny inny typ wartości.
 
@@ -35,7 +33,7 @@ W poprzednim przykładzie pokazano, jak użyć dopasowania wzorca `is` wyrażeni
 
 Jeśli chcesz sprawdzić, czy zmienna jest danego typu, ale nie przypisać ją do nowej zmiennej, można użyć `is` i `as` operatorów dla typów odwołań i typy dopuszczające wartości null. Poniższy kod przedstawia sposób użycia `is` i `as` instrukcji, które były częścią języka C#, zanim dopasowywania do wzorca została wprowadzona, aby sprawdzić, czy zmienna jest danego typu:
 
-[!code-csharp-interactive[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
+[!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
 
 Jak widać, porównując ten kod z kodem dopasowania wzorca Składnia dopasowania do wzorca zapewnia bardziej niezawodne funkcje, łącząc testu i przypisania w pojedynczej instrukcji. Użyj wzorca dopasowania składni, jeśli to możliwe.
 

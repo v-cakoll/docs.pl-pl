@@ -2,18 +2,18 @@
 title: Architektura ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877246"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267972"
 ---
 # <a name="adonet-architecture"></a>Architektura ADO.NET
 Przetwarzanie danych tradycyjnie opierało się głównie na modelu opartego na połączeniach, dwuwarstwowy. Jak przetwarzanie danych coraz większym stopniu korzysta z architektury wielowarstwowej, programistów przełączenie się do odłączonego podejście, aby zapewnić lepszą skalowalność dla swoich aplikacji.  
   
 ## <a name="adonet-components"></a>ADO.NET Components  
- Dwa główne składniki [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] do uzyskiwania dostępu do danych i manipulowania nimi są dostawcy danych .NET Framework i <xref:System.Data.DataSet>.  
+ Dwa główne składniki programu ADO.NET, aby uzyskać dostęp do danych i manipulowania nimi są dostawcy danych .NET Framework i <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>Dostawcy danych .NET Framework  
  Dostawcy danych .NET Framework są składnikami, które zostały jawnie zaprojektowane do manipulowania danymi i szybkie tylko do przodu, tylko do odczytu dostępu do danych. `Connection` Obiektu zapewnia łączność ze źródłem danych. `Command` Obiekt umożliwia dostęp do bazy danych poleceń, aby zwrócić dane, modyfikowania danych, uruchamianie procedur składowanych i wysyłać lub odbierać informacje o parametrach. `DataReader` Zapewnia strumienia o wysokiej wydajności, dane ze źródła danych. Na koniec `DataAdapter` zapewnia połączenie między `DataSet` obiektu i źródła danych. `DataAdapter` Używa `Command` obiektów do wykonywania poleceń SQL w źródle danych, zarówno obciążenie `DataSet` z danymi i uzgadniają zmiany, które zostały wprowadzone do danych w `DataSet` wstecz do źródła danych. Aby uzyskać więcej informacji, zobacz [dostawcy danych .NET Framework](../../../../docs/framework/data/adonet/data-providers.md) i [pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  

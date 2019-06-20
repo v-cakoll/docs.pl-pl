@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649770"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268165"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opcje kompilatora Visual Basic według kategorii
 Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alternatywę do kompilowania programów z w ramach programu Visual Studio zintegrowane środowisko programistyczne (IDE). Oto lista opcje wiersza polecenia kompilatora Visual Basic, które są sortowane według kategorii funkcji.  
@@ -26,7 +26,7 @@ Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alterna
 |`-modulename:<string>`|Określ nazwę modułu źródła|  
 |[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Określanie języka danych wyjściowych kompilatora.|
   
-## <a name="optimization"></a>Optymalizacja  
+## <a name="optimization"></a>optymalizacja  
   
 |Opcja|Cel|  
 |---|---|  
@@ -39,7 +39,7 @@ Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alterna
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Przetwarzanie komentarzy dokumentacji do pliku XML.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Powoduje, że kompilator do wyjściowego zestawu, którego zawartość binarna jest identyczna w kompilacjach, jeśli dane wejściowe są identyczne.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Ustawia kompilatora z docelowym [!INCLUDE[Compact](~/includes/compact-md.md)].|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Ustawia kompilatora pod kątem platformy .NET Compact Framework.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Określa plik wyjściowy.|  
 |[-refonly](refonly-compiler-option.md)|Generuje zestaw odwołania.|
 |[-refout](refout-compiler-option.md)|Określa ścieżkę wyjściową zestawu odwołania.|

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586539"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268280"
 ---
 # <a name="-netcf"></a>-netcf
 
-Ustawia kompilatora z docelowym [!INCLUDE[Compact](~/includes/compact-md.md)].
+Ustawia kompilatora pod kątem platformy .NET Compact Framework.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +28,7 @@ Ustawia kompilatora z docelowym [!INCLUDE[Compact](~/includes/compact-md.md)].
 
 ## <a name="remarks"></a>Uwagi
 
-`-netcf` Opcji powoduje, że kompilator języka Visual Basic do obiektu docelowego [!INCLUDE[Compact](~/includes/compact-md.md)] zamiast pełny program .NET Framework. Funkcje języka, które są dostępne tylko w pełny program .NET Framework jest wyłączone.
+`-netcf` Opcji powoduje, że kompilator języka Visual Basic pod kątem platformy .NET Compact Framework, a nie pełny program .NET Framework. Funkcje języka, które są dostępne tylko w pełny program .NET Framework jest wyłączone.
 
 `-netcf` Opcja jest przeznaczona do użycia z [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Funkcje języka, wyłączona przez `-netcf` są te same funkcje języka, nie znajduje się w nim docelowych i związanych z `-sdkpath`.
 
@@ -85,7 +85,7 @@ Ustawia kompilatora z docelowym [!INCLUDE[Compact](~/includes/compact-md.md)].
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod kompiluje `Myfile.vb` z [!INCLUDE[Compact](~/includes/compact-md.md)], przy użyciu wersji biblioteki mscorlib.dll i Microsoft.VisualBasic.dll znajduje się w katalogu instalacji domyślnej z [!INCLUDE[Compact](~/includes/compact-md.md)] na dysku C. Zazwyczaj używasz najnowszej wersji [!INCLUDE[Compact](~/includes/compact-md.md)].
+Poniższy kod kompiluje `Myfile.vb` przy użyciu platformy .NET Compact Framework przy użyciu wersji biblioteki mscorlib.dll i Microsoft.VisualBasic.dll znajduje się w katalogu instalacji domyślnej .NET Compact Framework, na dysku C. Zazwyczaj należy użyć najnowszej wersji platformy .NET Compact Framework.
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb

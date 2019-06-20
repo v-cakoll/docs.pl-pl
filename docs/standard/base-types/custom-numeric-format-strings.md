@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634520"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268215"
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 
@@ -85,7 +85,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
  Aby zwrócić, ciąg wynikowy, w którym nieobecny, cyfr lub zer wiodących, które są zastępowane przez miejsca do magazynowania, użyj [funkcję formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) i określić szerokość pola, tak jak pokazano w poniższym przykładzie.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Powrót do tabeli](#table)  

@@ -2,12 +2,12 @@
 title: Wybierz wersję języka Visual Basic
 description: Skonfiguruj kompilatora przeprowadzić weryfikacji składni przy użyciu określonej wersji kompilatora.
 ms.date: 05/24/2018
-ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797036"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268268"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Wybierz wersję języka Visual Basic
 
@@ -44,6 +44,7 @@ Wartość `latest` korzysta z najnowszej wersji pomocniczej języka Visual Basic
 |15|Kompilator akceptuje tylko w przypadku składni, która jest dostępne w ramach 15.0 programu Visual Basic lub niższą.|
 |15.3|Kompilator akceptuje tylko w przypadku składni, która jest zawarty w Visual Basic 15.3 lub niższą.|
 |15.5|Kompilator akceptuje tylko w przypadku składni, która jest dostępna w wersji 15.5 programu Visual Basic lub niższy.|
+|15.8|Kompilator akceptuje tylko w przypadku składni, która jest zawarty w języku Visual Basic 15.8 lub niższą.|
 |najnowsza|Kompilator akceptuje wszystkie składni obowiązujący język, który może obsługiwać.|
 
 Ciągi specjalne `default` i `latest` rozwiązania do najnowszej wersji głównych i pomocniczych język zainstalowany na komputerze kompilacji, odpowiednio.

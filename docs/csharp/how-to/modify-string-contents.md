@@ -3,12 +3,12 @@ title: 'Instrukcje: Modyfikowanie zawartości ciągu - C# przewodnik'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672357"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267760"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Instrukcje: Modyfikowanie zawartości ciągu w języku C\#
 
@@ -67,7 +67,7 @@ Poniższy przykład pokazuje, jak zastąpić zestaw znaków w ciągu. Po pierwsz
 Przy użyciu **niebezpieczne** kodu, ciąg "w miejscu" można zmodyfikować po utworzeniu. Niebezpieczny kod pomija wielu funkcji programu .NET, aby zminimalizować niektórych rodzajów błędów w kodzie. Należy użyć niebezpieczny kod można zmodyfikować parametry w miejscu, ponieważ klasa string został zaprojektowany jako **niezmienne** typu. Po jego utworzeniu, jego wartość nie ulega zmianie. Niebezpieczny kod zmierzone tej właściwości przez dostęp i modyfikowania pamięci używanej przez `string` bez korzystania z normalnym `string` metody.
 Poniższy przykład znajduje się w tych rzadkich sytuacjach, gdzie chcesz zmodyfikować parametry w miejscu przy użyciu niebezpieczny kod. W przykładzie pokazano sposób użycia `fixed` — słowo kluczowe. `fixed` — Słowo kluczowe zapobiega przenoszenie z obiektem ciągu w pamięci, gdy kod uzyskuje dostęp do pamięci, przy użyciu wskaźnika niebezpieczny moduł odśmiecania pamięci (GC). Ilustruje też możliwe po stronie efektem użycia niebezpieczne operacje na ciągi powstałego w sposób, że kompilator języka C# wewnętrznie przechowuje ciągi (stażystów). Ogólnie rzecz biorąc nie należy używać tej techniki, chyba że jest to absolutnie konieczne. Możesz dowiedzieć się więcej, czytając artykuły na [niebezpieczne](../language-reference/keywords/unsafe.md) i [stałej](../language-reference/keywords/fixed-statement.md). Dokumentacja interfejsu API <xref:System.String.Intern%2A> zawiera informacje na temat wewnętrzne przygotowanie ciągu.
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 

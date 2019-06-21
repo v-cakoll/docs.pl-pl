@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 05/03/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: 461a00c6ecc1d9a8b9caaca79f9d7905d2bb7528
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063466"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268249"
 ---
 # <a name="prepare-data"></a>Przygotowywanie danych
 
@@ -124,7 +124,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Normalizacji danych przy użyciu normalizacji minimum maksimum [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) metody.
+Normalizacja można zastosować do kolumn z jednej wartości liczbowe, a także wektorów. Normalizować dane w `Price` kolumny przy użyciu normalizacji minimum maksimum z [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) metody.
 
 ```csharp
 // Define min-max estimator
@@ -296,7 +296,7 @@ Przy użyciu pierwszej pozycji, na przykład, poniżej przedstawiono szczegóło
 
 |Transformacja | Opis | Wynik
 |--|--|--|
-|1. NormalizeText | Konwertuje wszystkie litery na małe litery, domyślnie | jest to dobry produktu
+|1. NormalizeText | Konwertuje wszystkie litery na małe litery, domyślnie | Jest to dobry produktu
 |2. TokenizeWords | Dzieli dane ciągu do poszczególnych wyrazów | ["to", "is", "","dobre","produkt"]
 |3. RemoveDefaultStopWords | Usuwa Stop-słowa, takie jak *jest* i *a*. | ["dobre", "produkt"]
 |4. MapValueToKey | Mapuje wartości kluczy (kategorie), na podstawie danych wejściowych |  [1,2]

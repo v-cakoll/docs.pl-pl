@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 60ee4b8c5ac3a572fd352140c968a8ec8f3a084a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632993"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267792"
 ---
 # <a name="yield-c-reference"></a>yield (odwołanie w C#)
 
@@ -30,7 +30,7 @@ yield break;
 
 Możesz użyć `yield return` instrukcja zwraca każdy element w danym momencie.
 
-Korzystanie z metody iteratora przy użyciu [foreach](foreach-in.md) instrukcji lub zapytania LINQ. Każda iteracja `foreach` pętli wywołuje metodę iteratora. Gdy `yield return` osiągnięciu instrukcji w metodzie iteratora `expression` jest zwracany, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu funkcji iteratora.
+Sekwencja zwrócony z metody iteratora mogą być wykorzystywane za pomocą [foreach](foreach-in.md) instrukcji lub zapytania LINQ. Każda iteracja `foreach` pętli wywołuje metodę iteratora. Gdy `yield return` osiągnięciu instrukcji w metodzie iteratora `expression` jest zwracany, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu funkcji iteratora.
 
 Możesz użyć `yield break` instrukcję, aby zakończyć iterację.
 

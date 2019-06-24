@@ -4,12 +4,12 @@ description: Ten samouczek pokazuje, jak utworzyć aplikację konsoli .NET Core,
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 674dc2d12cb8f65753730e187e13fc5e522ff6b3
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: a766d95c62fd3a89e3291e1ab803f5222fac46ea
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135692"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306169"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Samouczek: Analizowanie opinii komentarze witryny sieci Web przy użyciu klasyfikacji binarnej w strukturze ML.NET
 
@@ -41,7 +41,7 @@ Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://git
 
 3. Zainstaluj **pakietu NuGet Microsoft.ML**:
 
-    W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, a następnie wybierz **Przeglądaj** kartę. Wyszukaj **Microsoft.ML**, wybierz pakiet, a następnie wybierz **zainstalować** przycisku. Kontynuuj instalację zgadzając się postanowienia licencyjne dla pakietów, możesz wybrać. Tym samym **Microsoft.ML.FastTree** pakietu NuGet.
+    W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, a następnie wybierz **Przeglądaj** kartę. Wyszukaj **Microsoft.ML**, wybierz pakiet, a następnie wybierz **zainstalować** przycisku. Kontynuuj instalację poprzez zgodę na postanowienia licencyjne dla pakietów, które wybierzesz. Tym samym **Microsoft.ML.FastTree** pakietu NuGet.
 
 ## <a name="prepare-your-data"></a>Przygotowywanie danych
 

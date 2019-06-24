@@ -2,12 +2,12 @@
 title: Omówienie programu Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880032"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307347"
 ---
 # <a name="entity-framework-overview"></a>Omówienie programu Entity Framework
 
@@ -39,7 +39,7 @@ Model magazynu i mapowania można zmienić zgodnie z potrzebami bez koniecznośc
 ## <a name="map-objects-to-data"></a>Map — obiekty do danych
  Programowanie zorientowane obiektowo stanowi wyzwanie, interakcji z systemów magazynowania danych. Dopasuj organizacji klasy często odzwierciedla organizacji tabel relacyjnej bazy danych, nie jest doskonały. Wiele znormalizowanych tabel często odpowiadają jednej klasy i relacje między klasami są często reprezentowane inaczej, niż są przedstawiane relacje między tabelami. Na przykład do reprezentowania klientów dla zamówienia sprzedaży `Order` użyć właściwości, która zawiera odwołanie do wystąpienia klasy `Customer` klasy, podczas gdy `Order` wiersz tabeli w bazie danych, zawiera kolumny klucza obcego (lub zestaw kolumn) z wartością, która odnosi się do wartości klucza podstawowego w `Customer` tabeli. A `Customer` klasa może mieć właściwość o nazwie `Orders` zawierający kolekcję wystąpień `Order` klasy, podczas gdy `Customer` tabeli w bazie danych nie ma kolumny porównywalny. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Oferuje deweloperom elastyczność do reprezentowania relacji w ten sposób lub dokładniej modelowania relacji, ponieważ są one reprezentowane w bazie danych.
 
- Podjęto istniejących rozwiązań można wypełnić tę lukę, często nazywanej "niezgodności impedancji", tylko mapowania obiektowo klas i właściwości do relacyjnych tabel i kolumn. Zamiast tego tradycyjne podejście [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] mapuje tabelach relacyjnych, kolumn i ograniczeń klucza obcego w modelach logicznych jednostek i relacji w modelach koncepcyjnych. Umożliwia to większą elastyczność zarówno w celu zdefiniowania obiektów i optymalizowanie modelu logicznego. [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Narzędzia Generowanie klas extensible danych opartych na modelu koncepcyjnego. Te klasy są klas częściowych, które mogą zostać rozszerzone o dodatkowe elementy członkowskie, które są dodawane przez dewelopera. Domyślnie klas, które są generowane dla konkretnego modelu koncepcyjnego pochodzi od klasy bazowe, które udostępniają usługi materializowanie jednostki jako obiekty oraz śledzenie i zapisywanie zmian. Deweloperzy mogą używać tych klas do pracy z jednostki i relacje jako obiekty powiązane przez skojarzenia. Deweloperzy będą mogli również dostosować klas, które są generowane dla modelu koncepcyjnego. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).
+ Podjęto istniejących rozwiązań można wypełnić tę lukę, często nazywanej "niezgodności impedancji", tylko mapowania obiektowo klas i właściwości do relacyjnych tabel i kolumn. Zamiast tego tradycyjne podejście [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] mapuje tabelach relacyjnych, kolumn i ograniczeń klucza obcego w modelach logicznych jednostek i relacji w modelach koncepcyjnych. Umożliwia to większą elastyczność zarówno w celu zdefiniowania obiektów i optymalizowanie modelu logicznego. Narzędzia modelu Entity Data Model Generowanie klas extensible danych opartych na modelu koncepcyjnego. Te klasy są klas częściowych, które mogą zostać rozszerzone o dodatkowe elementy członkowskie, które są dodawane przez dewelopera. Domyślnie klas, które są generowane dla konkretnego modelu koncepcyjnego pochodzi od klasy bazowe, które udostępniają usługi materializowanie jednostki jako obiekty oraz śledzenie i zapisywanie zmian. Deweloperzy mogą używać tych klas do pracy z jednostki i relacje jako obiekty powiązane przez skojarzenia. Deweloperzy będą mogli również dostosować klas, które są generowane dla modelu koncepcyjnego. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).
 
 ## <a name="access-and-change-entity-data"></a>Dostęp i zmiany danych jednostki
 
@@ -47,7 +47,7 @@ Więcej niż kolejna rozwiązaniu mapowania obiektowo relacyjny [!INCLUDE[adonet
 
 - [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Wykonywanie zapytania dotyczącego typów jednostek, które są zdefiniowane w modelu koncepcyjnym zapewnia obsługę Language-Integrated Query (LINQ). Aby uzyskać więcej informacji, zobacz [składnik LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialekt niezależny od magazynu, programu SQL Server, który współpracuje bezpośrednio z jednostkami w modelu koncepcyjnym i obsługujący [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] pojęcia. [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest używany zarówno za pomocą zapytań dotyczących obiektów i zapytania, które są wykonywane przy użyciu dostawca EntityClient. Aby uzyskać więcej informacji, zobacz [omówienie jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialekt niezależny od magazynu programu SQL Server, który współpracuje bezpośrednio z jednostkami w modelu koncepcyjnym i, która obsługuje pojęcia modelu Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest używany zarówno za pomocą zapytań dotyczących obiektów i zapytania, które są wykonywane przy użyciu dostawca EntityClient. Aby uzyskać więcej informacji, zobacz [omówienie jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje EntityClient dostawcy danych. Ten dostawca zarządza połączeniami przekłada zapytania jednostki na kwerendach specyficznymi dla źródła danych i zwraca wartość czytnik danych [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] używa do zmaterializowania jednostki danych w obiektach. Gdy materializacja obiektu nie jest wymagane, dostawca EntityClient można również jak standardowego dostawcy danych ADO.NET, dzięki czemu aplikacje mogą wykonać [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania i używanie czytnika zwracanych danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
@@ -55,7 +55,7 @@ Na poniższym diagramie przedstawiono [!INCLUDE[adonet_ef](../../../../../includ
 
 ![Diagram architektury programu Entity Framework](../../../../../docs/framework/data/adonet/ef/media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Narzędzia można wygenerować klasy pochodzącej od `System.Data.Objects.ObjectContext` lub `System.Data.Entity.DbContext` reprezentujący kontener jednostek w modelu koncepcyjnym. Ten kontekst udostępnia funkcje służące do śledzenia zmian i zarządzania tożsamościami, współbieżność i relacje. Ta klasa udostępnia również `SaveChanges` metody zapisującej operacji wstawiania, aktualizuje i usuwa ze źródłem danych. Jak zapytania zmiany te są albo wykonywane za pomocą poleceń automatycznie generowane przez system lub procedur składowanych, które są określone przez dewelopera.
+Narzędzia do modelu danych jednostki można wygenerować klasy pochodzącej od `System.Data.Objects.ObjectContext` lub `System.Data.Entity.DbContext` reprezentujący kontener jednostek w modelu koncepcyjnym. Ten kontekst udostępnia funkcje służące do śledzenia zmian i zarządzania tożsamościami, współbieżność i relacje. Ta klasa udostępnia również `SaveChanges` metody zapisującej operacji wstawiania, aktualizuje i usuwa ze źródłem danych. Jak zapytania zmiany te są albo wykonywane za pomocą poleceń automatycznie generowane przez system lub procedur składowanych, które są określone przez dewelopera.
 
 ## <a name="data-providers"></a>Dostawcy danych
 

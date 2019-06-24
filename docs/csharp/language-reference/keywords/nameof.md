@@ -6,12 +6,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: be60593ea5339db700140a6c7fb3fbd17af92912
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 349cbf4e918d97a5a2a5c1e873d7fa114be8e2db
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063791"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306633"
 ---
 # <a name="nameof-c-reference"></a>nameof (odwołanie w C#)
 
@@ -151,4 +151,4 @@ Aby uzyskać więcej informacji, zobacz [wyrażeń Nameof](~/_csharplang/spec/ex
 
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)
+- [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)

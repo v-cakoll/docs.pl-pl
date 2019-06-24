@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 763682f1e4a6ee6d4235d9b9d53ac58db106bac4
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024930"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306542"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatory dostępu do składowych (C# odwołania)
 
@@ -147,7 +147,7 @@ Można także użyć nawiasów podczas wywołujesz [Konstruktor](../../programmi
 
 Możesz także użyć nawiasów, aby określić kolejność, w którym ma być operacji w wyrażeniu. Aby uzyskać więcej informacji, zobacz [Dodawanie nawiasów](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) części [operatory](../../programming-guide/statements-expressions-operators/operators.md) artykułu. Listy uporządkowane według poziomu pierwszeństwo operatorów, zobacz [ C# operatory](index.md).
 
-[Rzutowane wyrażenia,](invocation-operator.md#cast-expression), który wywołać operatora konwersji, należy również użyć nawiasów.
+[Rzutowane wyrażenia,](type-testing-and-conversion-operators.md#cast-operator-), który wykonywania konwersji typu jawnego, należy również użyć nawiasów.
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 

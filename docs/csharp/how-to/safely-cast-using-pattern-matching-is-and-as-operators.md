@@ -6,16 +6,16 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: bb6b39c645d49554214a8a013cc849fe0ebcb40a
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267705"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306353"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Porady: bezpieczne multiemisji za pomocą dopasowywania do wzorca i jest i operatory
 
-Ponieważ obiekty są polimorficznych, jest możliwe dla zmiennej typu klasy bazowej, aby pomieścić pochodnej [typu](../programming-guide/types/index.md). Aby uzyskać dostęp do składowych wystąpienia typu pochodnego, konieczne jest [rzutowania](../programming-guide/types/casting-and-type-conversions.md) wartość do typu pochodnego. Rzutowanie tworzy jednak ryzyko zgłaszanie <xref:System.InvalidCastException>. C# zawiera [dopasowywania do wzorca](../pattern-matching.md) instrukcji, które wykonują rzutowania warunkowo, tylko wtedy, gdy zakończy się powodzeniem. C# oferuje także [jest](../language-reference/keywords/is.md) i [jako](../language-reference/keywords/as.md) operatory, aby sprawdzić, czy wartość jest określonego typu.
+Ponieważ obiekty są polimorficznych, jest możliwe dla zmiennej typu klasy bazowej, aby pomieścić pochodnej [typu](../programming-guide/types/index.md). Aby uzyskać dostęp do składowych wystąpienia typu pochodnego, konieczne jest [rzutowania](../programming-guide/types/casting-and-type-conversions.md) wartość do typu pochodnego. Rzutowanie tworzy jednak ryzyko zgłaszanie <xref:System.InvalidCastException>. C# zawiera [dopasowywania do wzorca](../pattern-matching.md) instrukcji, które wykonują rzutowania warunkowo, tylko wtedy, gdy zakończy się powodzeniem. C# oferuje także [jest](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) i [jako](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) operatory, aby sprawdzić, czy wartość jest określonego typu.
 
 Poniższy przykład demonstruje wzorzec dopasowywania `is` instrukcji. Zawiera metody testowania argumentu metody, aby ustalić, czy jest jednym z możliwych zestawów typów pochodnych:
 

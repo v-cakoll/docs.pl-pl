@@ -2,12 +2,12 @@
 title: Terminologia programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877483"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306338"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia programu Entity Framework
 W tym temacie definiuje warunki często w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji. Podano linki do powiązanych tematów, w którym dostępne są dodatkowe informacje.  
@@ -27,7 +27,7 @@ W tym temacie definiuje warunki często w [!INCLUDE[adonet_ef](../../../../../in
 |współbieżność|Proces, który umożliwia wielu użytkownikom dostępu i zmiany udostępnionych danych w tym samym czasie. Domyślnie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] wdraża model optymistycznej współbieżności.|  
 |kierunek|Odnosi się do asymetryczne charakter niektóre skojarzenia. Kierunek jest określony za pomocą `FromRole` i `ToRole` atrybuty `NavigationProperty` lub `ReferentialConstraint` elementu w schemacie.<br /><br /> Aby uzyskać więcej informacji, zobacz [element NavigationProperty — Element (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl) i [właściwość nawigacji](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |Wczesne ładowanie|Proces ładowania określony zbiór powiązanych obiektów wraz z obiektami, które były wyraźnie wymagane w kwerendzie.|  
-|Plik edmx|Plik XML, który zawiera model koncepcyjny (w CSDL), modelu magazynu (w SSDL) i mapowania między nimi (w pliku MSL). Plik edmx jest tworzony przez [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] narzędzia. Aby uzyskać więcej informacji, zobacz [Omówienie pliku edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
+|Plik edmx|Plik XML, który zawiera model koncepcyjny (w CSDL), modelu magazynu (w SSDL) i mapowania między nimi (w pliku MSL). Plik edmx jest tworzony przez narzędzia modelu danych jednostki. Aby uzyskać więcej informacji, zobacz [Omówienie pliku edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|Podmiot uczestniczący w skojarzeniu.<br /><br /> Aby uzyskać więcej informacji, zobacz [elementu End (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) i [end skojarzenia](../../../../../docs/framework/data/adonet/association-end.md).|  
 |jednostka|Koncepcja w domenie aplikacji, w którym zdefiniowano typ danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [Element EntityType (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) i [typu jednostki](../../../../../docs/framework/data/adonet/entity-type.md).|  
 |EntityClient|Dostawcy danych ADO.NET niezależnie od magazynu, który zawiera klasy, takie jak `EntityConnection`, `EntityCommand`, i `EntityDataReader`. W programach [!INCLUDE[esql](../../../../../includes/esql-md.md)] łączy się z magazynu określonego dostawcy danych ADO.NET, takich jak `SqlClient`.<br /><br /> Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  

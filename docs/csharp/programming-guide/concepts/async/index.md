@@ -2,12 +2,12 @@
 title: Programowanie asynchroniczne w języku C#
 description: Omówienie C# Obsługa języków programowania asynchronicznego przy użyciu async, operator await, zadań i zadań<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a306ff75357f9f61ec9b086485472d99de5ad083
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064120"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307126"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>Zadania asynchronicznego modelu programowania w języku C\#
 

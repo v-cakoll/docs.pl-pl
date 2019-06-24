@@ -33,7 +33,7 @@ a ?? (b ?? c)
 
 `??` Operator może być przydatne w następujących scenariuszach:
 
-- W wyrażeniach z [operatorów warunkowych działających z wartością null?. i?] ](member-access-operators.md#null-conditional-operators--and-), można używać operatora łączenia wartości null zapewnienie alternatywnych wyrażenie do oceny, w przypadku, gdy jest wynikiem wyrażenia warunkowe null operacji `null`:
+- W wyrażeniach z [operatorów warunkowych działających z wartością null?. i ?[]](member-access-operators.md#null-conditional-operators--and-), można używać operatora łączenia wartości null zapewnienie alternatywnych wyrażenie do oceny, w przypadku, gdy jest wynikiem wyrażenia warunkowe null operacji `null`:
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
@@ -61,5 +61,5 @@ Aby uzyskać więcej informacji, zobacz [null operatora łączącego](~/_csharpl
 
 - [C#Odwołanie](../index.md)
 - [Operatory języka C#](index.md)
-- [?. i? Operatory]](member-access-operators.md#null-conditional-operators--and-)
+- [?. i ?[] Operatory](member-access-operators.md#null-conditional-operators--and-)
 - [?: — operator](conditional-operator.md)

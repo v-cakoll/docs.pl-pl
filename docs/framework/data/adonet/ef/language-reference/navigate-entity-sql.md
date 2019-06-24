@@ -2,12 +2,12 @@
 title: Przejdź (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: 993c07b824d30c89773c5cfea90c7c194c6b3869
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ce88cecf210d8b3cf541fe7e870e19a59e344ec
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760418"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307333"
 ---
 # <a name="navigate-entity-sql"></a>Przejdź (jednostka SQL)
 
@@ -35,7 +35,7 @@ Jeśli kardynalność do końca wynosi 1, zwracaną wartością będzie `Ref<T>`
 
 ## <a name="remarks"></a>Uwagi
 
-Relacje są konstrukcje najwyższej jakości w [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM struktury). Można ustanowić relacji między co najmniej dwóch typów jednostek, a użytkownicy mogą uzyskać dostęp za pośrednictwem relacji z jednej strony (jednostka) do innego. `from` i `to` są warunkowo opcjonalne, jeśli nie ma żadnych niejednoznaczności w rozpoznawanie w relacji.
+Relacje są konstrukcje najwyższej jakości w Entity Data Model (EDM). Można ustanowić relacji między co najmniej dwóch typów jednostek, a użytkownicy mogą uzyskać dostęp za pośrednictwem relacji z jednej strony (jednostka) do innego. `from` i `to` są warunkowo opcjonalne, jeśli nie ma żadnych niejednoznaczności w rozpoznawanie w relacji.
 
 Nawigacja jest prawidłowa w przestrzeni O i C.
 

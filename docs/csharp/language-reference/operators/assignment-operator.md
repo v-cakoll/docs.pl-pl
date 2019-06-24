@@ -1,18 +1,18 @@
 ---
 title: = — operator - C# odwołania
 ms.custom: seodec18
-ms.date: 11/26/2018
+ms.date: 06/21/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 6b8f67f32287b18a9e4ac8f0fa822f6ca4919e7f
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025265"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306566"
 ---
 # <a name="-operator-c-reference"></a>= — operator (C# odwołania)
 
@@ -30,19 +30,37 @@ jest wykonywane jako
 a = (b = c)
 ```
 
-Poniższy przykład ilustruje użycie operatora przypisania do przypisywania wartości do zmiennej lokalnej, właściwości i elementu indeksatora:
+Poniższy przykład ilustruje użycie operatora przypisania, za pomocą zmiennej lokalnej, właściwości i elementu indeksatora jako jej argument po lewej stronie:
 
-[!code-csharp-interactive[assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>operator przypisania REF
 
 Począwszy od C# 7.3, można użyć operatora przypisania `= ref` do ponownego przypisania [odwołanie lokalne](../keywords/ref.md#ref-locals) lub [odwołanie lokalne tylko do odczytu](../keywords/ref.md#ref-readonly-locals) zmiennej. Poniższy przykład ilustruje użycie operatora przypisania:
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
-W przypadku operatora przypisania typ operandu po lewej stronie i prawy operand musi być taka sama.
+W przypadku operatora przypisania typ obu argumentów musi być taka sama.
 
-Aby uzyskać więcej informacji, zobacz [Uwaga propozycji funkcji](../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+Aby uzyskać więcej informacji, zobacz [Uwaga propozycji funkcji](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+
+## <a name="compound-assignment"></a>Przydział złożony
+
+Dla operatora binarnego `op`, wyrażenie przypisania złożonego formularza
+
+```csharp
+x op= y
+```
+
+odpowiada wyrażeniu
+
+```csharp
+x = x op y
+```
+
+z tą różnicą, że `x` jest obliczany tylko raz.
+
+Przypisania złożonego jest obsługiwana przez [arytmetyczne](arithmetic-operators.md#compound-assignment), [Boolean logiczna](boolean-logical-operators.md#compound-assignment), i [bitowe logicznej- and -shift](bitwise-and-shift-operators.md#compound-assignment) operatorów.
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 
@@ -50,7 +68,7 @@ Typ zdefiniowany przez użytkownika nie mogą przeciążać operatora przypisani
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [przypisanie proste](~/_csharplang/spec/expressions.md#simple-assignment) części [ C# specyfikacji języka](../language-specification/index.md).
+Aby uzyskać więcej informacji, zobacz [operatory przypisania](~/_csharplang/spec/expressions.md#assignment-operators) części [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,12 +2,12 @@
 title: LINQ i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: bfd5bb845917f9ca8ba3b154a51a946b610ca571
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a23e152d4688e840f4665e9c8d77835acb683564
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489823"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307319"
 ---
 # <a name="linq-and-adonet"></a>LINQ i ADO.NET
 Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstw logiki i prezentacji firm (np. Visual C# lub Visual Basic) i język zapytań umożliwiający korzystanie z bazy danych (na przykład Transact-SQL) . To wymaga programista ma być biegły w kilku językach zaczęła obowiązywać, a także powoduje niezgodności języka w środowisku programistycznym. Na przykład aplikację, która używa danych dostęp do interfejsu API do wykonania zapytania względem bazy danych określa zapytanie jako literał ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzane pod kątem błędów, takich jak nieprawidłową składnię lub tego, czy kolumny lub wiersze, które odwołuje się faktycznie istnieje. Istnieje żaden typ weryfikacji parametry zapytania i nie `IntelliSense` obsługuje albo.  
@@ -16,7 +16,7 @@ Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co 
   
  Transfer danych z tabelami SQL do obiektów w pamięci jest często uciążliwe i podatne na błędy. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Dostawcy implementowany przez [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] i [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] konwertuje dane źródłowe do <xref:System.Collections.IEnumerable>— na podstawie kolekcji obiektów. Programisty należy zawsze widoków danych jako <xref:System.Collections.IEnumerable> kolekcji, zarówno podczas wysyłania zapytania, jak i kiedy aktualizować. Pełna `IntelliSense` pomoc techniczna jest dostępna do pisania zapytań dotyczących tych kolekcjach.  
   
- Istnieją trzy osobne ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] technologii: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapewnia bardziej zaawansowane, zoptymalizowane zapytań <xref:System.Data.DataSet> i [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] pozwala na bezpośrednie wyszukiwanie schematy bazy danych programu SQL Server, a [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] umożliwia zapytania [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].  
+ Istnieją trzy osobne ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] technologii: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapewnia bardziej zaawansowane, zoptymalizowane zapytań <xref:System.Data.DataSet> i [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] pozwala na bezpośrednie wyszukiwanie schematy bazy danych programu SQL Server, a [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] umożliwia zapytania modelu danych jednostki.  
   
  Poniższy diagram zawiera omówienie technologii ADO.NET LINQ wzajemne relacje poszczególnych języków programowania wysokiego poziomu i źródła danych z obsługą zapytań LINQ.  
   
@@ -35,9 +35,9 @@ Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co 
  Za pomocą [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], programiści mogą pisać kod bezpośrednio w odniesieniu do schematu magazynu, korzystając z tych samych [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] programowania wzorca jako kolekcji w pamięci i <xref:System.Data.DataSet>, oprócz innych źródeł danych, takich jak XML. Aby uzyskać więcej informacji, zobacz [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
 ## <a name="linq-to-entities"></a>LINQ do Jednostek  
- Większość aplikacji obecnie są zapisywane na podstawie relacyjnych baz danych. W pewnym momencie te aplikacje należy interakcję z danymi reprezentowane w formularzu relacyjnych. Schematy bazy danych nie są zawsze idealne rozwiązanie do tworzenia aplikacji i modeli koncepcyjnych aplikacji nie są takie same jak modele logiczne baz danych. [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] Model koncepcyjny danych, który może służyć do modelowania danych określonej domeny, aby aplikacje mogą wchodzić w interakcje z danymi w postaci obiektów. Zobacz [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Aby uzyskać więcej informacji.  
+ Większość aplikacji obecnie są zapisywane na podstawie relacyjnych baz danych. W pewnym momencie te aplikacje należy interakcję z danymi reprezentowane w formularzu relacyjnych. Schematy bazy danych nie są zawsze idealne rozwiązanie do tworzenia aplikacji i modeli koncepcyjnych aplikacji nie są takie same jak modele logiczne baz danych. W modelu Entity Data Model jest model koncepcyjny danych, który może służyć do modelowania danych określonej domeny, aby aplikacje mogą wchodzić w interakcje z danymi w postaci obiektów. Zobacz [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Aby uzyskać więcej informacji.  
   
- Za pomocą [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)], w relacyjnej bazie danych jest przedstawiany jako obiekty w środowisku .NET. To sprawia, że obiekt warstwy obiektu docelowego idealne rozwiązanie dla [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] pomocy technicznej, co pozwoli deweloperom na formułowanie zapytania względem bazy danych z języka używany do tworzenia logiki biznesowej. Ta możliwość jest znana jako [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. Zobacz [składnik LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md) Aby uzyskać więcej informacji.  
+ Za pomocą modelu Entity Data Model w relacyjnej bazie danych jest udostępniany jako obiekty w środowisku .NET. To sprawia, że obiekt warstwy obiektu docelowego idealne rozwiązanie dla [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] pomocy technicznej, co pozwoli deweloperom na formułowanie zapytania względem bazy danych z języka używany do tworzenia logiki biznesowej. Ta możliwość jest znana jako [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. Zobacz [składnik LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md) Aby uzyskać więcej informacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

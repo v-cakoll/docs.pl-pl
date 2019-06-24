@@ -2,12 +2,12 @@
 title: Odwołanie do symbolu i operatora
 description: Dowiedz się więcej o symboli i operatorów, które są używane w F# języka programowania.
 ms.date: 02/11/2019
-ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490812"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306189"
 ---
 # <a name="symbol-and-operator-reference"></a>Odwołanie do symbolu i operatora
 
@@ -47,7 +47,7 @@ W poniższej tabeli przedstawiono symbole używane w F# język zawiera łącza d
 |`+?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Dodaje lewej i prawej stronie, gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
 |`,`|[Krotki](../tuples.md)|<ul><li>Oddziela elementów krotki, lub parametry typu.<br /></li></ul>|
 |`-`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Gdy jest używana jako operator binarny, odejmuje po prawej stronie z lewej strony.<br /></li><li>Gdy jest używana jako operator jednoargumentowy, wykonuje operację negacji.<br /></li></ul>|
-|`-`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Odejmuje po prawej stronie z lewej strony, gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
+|`-?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Odejmuje po prawej stronie z lewej strony, gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
 |`->`|[Funkcje](../functions/index.md)<br /><br />[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>W funkcji typy rozgranicza argumenty i zwracać wartości.<br /></li><li>Daje w wyniku wyrażenia (wyrażenia sekwencji); odpowiednikiem `yield` — słowo kluczowe.<br /></li><li>Używać w wyrażeniach dopasowania<br /></li></ul>|
 |`.`|[Elementy członkowskie](../members/index.md)<br /><br />[Typy pierwotne](../primitive-types.md)|<ul><li>Uzyskuje dostęp do elementu członkowskiego, a oddziela poszczególne nazwy w pełni kwalifikowanej nazwy.<br /></li><li>Określa separator dziesiętny liczb zmiennoprzecinkowych.<br /></li></ul>|
 |`..`|[Pętle: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>Określa zakres.<br /></li></ul>|

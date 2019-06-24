@@ -6,12 +6,12 @@ ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: 33169315f8bef45aba52f0696d4acac031584817
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73017b8f4c4c046b428d5270a2ef0241c565b07d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710332"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307045"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Instrukcje: Identyfikowanie typu dopuszczającego wartość null (C# Programming Guide)
 
@@ -19,7 +19,7 @@ Poniższy przykład pokazuje, jak ustalić, czy <xref:System.Type?displayPropert
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 
-Jak pokazano w przykładzie, możesz użyć [typeof](../../language-reference/keywords/typeof.md) operatora do utworzenia <xref:System.Type?displayProperty=nameWithType> obiektu.  
+Jak pokazano w przykładzie, możesz użyć [typeof](../../language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) operatora do utworzenia <xref:System.Type?displayProperty=nameWithType> obiektu.  
   
 Jeśli chcesz określić, czy wystąpienie jest typ dopuszczający wartość null, nie używaj <xref:System.Object.GetType%2A?displayProperty=nameWithType> metodę, aby uzyskać <xref:System.Type> wystąpienia z poprzedniego kodu. Gdy wywołujesz <xref:System.Object.GetType%2A?displayProperty=nameWithType> metody w wystąpieniu typu dopuszczającego wartość null, wystąpienie jest [opakowany](using-nullable-types.md#boxing-and-unboxing) do <xref:System.Object>. Pakowanie instancji innych niż null typu dopuszczającego wartość null jest odpowiednikiem pakowania wartości typu podstawowego <xref:System.Object.GetType%2A> zwraca <xref:System.Type> obiekt, który reprezentuje typ podstawowy elementu typu dopuszczającego wartość null:
 

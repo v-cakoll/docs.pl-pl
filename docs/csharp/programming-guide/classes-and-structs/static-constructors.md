@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 43434b08d7eecde2a35ee3822d36c6da3a700c20
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: f053a74fcb87971506b83ca8ca2076517ddddf56
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151966"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307102"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Konstruktory statyczne (Przewodnik programowania w języku C#)
 Statyczny Konstruktor jest wykorzystywany do inicjacji dowolne [statyczne](../../../csharp/language-reference/keywords/static.md) danych, lub do wykonania określonej akcji, która musi zostać wykonana tylko raz. Jest wywoływana automatycznie przed pierwsze wystąpienie jest tworzone lub żadnych statycznych składowych są wywoływane.  
@@ -35,7 +35,7 @@ Konstruktory statyczne mają następujące właściwości:
 
 - Jeśli nie podasz konstruktora statycznego zainicjować pola statyczne, wszystkie pola statyczne są inicjowane na ich wartości domyślne, zgodnie z zaleceniami z [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). 
   
-- Jeśli statyczny Konstruktor zgłasza wyjątek, środowisko wykonawcze nie wywoła go drugi raz, a typ pozostanie niezainicjowanej okres istnienia domeny aplikacji, w którym jest uruchomiony program. Najczęściej <xref:System.TypeInitializationException> wyjątek jest zgłaszany, gdy Konstruktor statyczny nie może utworzyć wystąpienia typu lub które zdarzyły się nieobsługiwany wyjątek w konstruktorze statycznym. Dla niejawnego konstruktorów statycznych, które nie są jawnie zdefiniowane w kodzie źródłowym rozwiązywania problemów może wymagać kontroli kodu języka pośredniego (IL).
+- Jeśli statyczny Konstruktor zgłasza wyjątek, środowisko wykonawcze nie wywoła go drugi raz, a typ pozostanie niezainicjowanej okres istnienia domeny aplikacji, w którym jest uruchomiony program. Najczęściej <xref:System.TypeInitializationException> wyjątek jest zgłaszany, gdy Konstruktor statyczny nie może utworzyć wystąpienia typu lub dla nieobsługiwanego wyjątku w konstruktorze statycznym. Dla niejawnego konstruktorów statycznych, które nie są jawnie zdefiniowane w kodzie źródłowym rozwiązywania problemów może wymagać kontroli kodu języka pośredniego (IL).
 
 - Obecność statyczny Konstruktor uniemożliwia dodanie <xref:System.Reflection.TypeAttributes.BeforeFieldInit> typu atrybutu. Ogranicza to optymalizacji środowiska wykonawczego.
 

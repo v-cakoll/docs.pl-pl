@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613765"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307186"
 ---
 # <a name="troubleshooting"></a>Rozwiązywanie problemów
 Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w swojej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji i oferuje sugestie, aby uniknąć lub w przeciwnym razie ograniczenia wpływu tych problemów.  
@@ -42,7 +42,7 @@ Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w s
 ## <a name="expression-not-queryable"></a>Wyrażenie nie umożliwia zadawania zapytań  
  Jeśli zostanie wyświetlony, "wyrażenie [wyrażenie] jest nie umożliwia zadawania zapytań; czy nie brakuje odwołania do zestawu?" błąd, upewnij się, z następujących czynności:  
   
-- Aplikacja jest przeznaczony dla [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- Aplikacja jest przeznaczony dla platformy .NET Compact Framework 3.5.  
   
 - Odwołania do `System.Core.dll` i `System.Data.Linq.dll`.  
   

@@ -2,12 +2,12 @@
 title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489835"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307303"
 ---
 # <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -86,7 +86,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Nazwa niezmienna dostawcy jest można modyfikować w pliku app.config. Aplikacja kliencka musi ponosi odpowiedzialność za dostęp do źródłowego dostawcy za pośrednictwem standardowego dostawcy fabryki modelu za pomocą silnej nazwy.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Uprawnienia do modelu i mapowania plików.  
- Administrator należy ograniczyć dostęp do zapisu do modelu i mapowania plików (edmx, .csdl, ssdl i MSL albo identyfikatorem) tylko do użytkowników modyfikujących modelu i mapowania. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Wymaga tylko do odczytu tych plików w czasie wykonywania. Administrator powinien również ograniczyć dostęp do warstwy obiektu i widoku wstępnie skompilowanych plików kodu źródłowego, które są generowane przez [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] narzędzia.  
+ Administrator należy ograniczyć dostęp do zapisu do modelu i mapowania plików (edmx, .csdl, ssdl i MSL albo identyfikatorem) tylko do użytkowników modyfikujących modelu i mapowania. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Wymaga tylko do odczytu tych plików w czasie wykonywania. Administrator należy również ograniczyć dostęp do warstwy obiektu i wyświetl wstępnie skompilowanych plików kodu źródłowego, generowane przez narzędzia modelu Entity Data Model.  
   
 ## <a name="security-considerations-for-queries"></a>Zagadnienia dotyczące zabezpieczeń dla zapytań  
  Podczas wykonywania zapytań dotyczących modelu koncepcyjnego, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń. Te zagadnienia dotyczą [!INCLUDE[esql](../../../../../includes/esql-md.md)] wysyła kwerendę za pomocą EntityClient i obiekt zapytania za pomocą LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)]oraz metody konstruktora zapytań.  

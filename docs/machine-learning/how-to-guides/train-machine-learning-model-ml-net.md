@@ -5,12 +5,12 @@ ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: b7799d19f5ad51ce509cc6872d9053cad1158552
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025596"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307441"
 ---
 # <a name="train-and-evaluate-a-model"></a>Trenowanie i ocenianie modelu
 
@@ -115,7 +115,7 @@ IEstimator<ITransformer> dataPrepEstimator =
 // Create data prep transformer
 ITransformer dataPrepTransformer = dataPrepEstimator.Fit(trainData);
 
-// Apply tranforms to training data
+// Apply transforms to training data
 IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 ```
 
@@ -136,7 +136,7 @@ var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelCol
 Gdy dane są wstępnie przetworzone, użyć [ `Fit` ](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) metody do nauczenia modelu uczenia maszynowego przy użyciu [ `StochasticDualCoordinateAscent` ](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) algorytmu regresji.
 
 ```csharp
-// Define StochasticDualCoodrinateAscent regression algorithm estimator
+// Define StochasticDualCoordinateAscent regression algorithm estimator
 var sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 
 // Build machine learning model
@@ -159,7 +159,7 @@ var trainedModelParameters = trainedModel.Model as LinearRegressionModelParamete
 Aby ułatwić, wybierz opcję najlepiej działający model, istotne jest ocena jej wydajności na danych testowych. Użyj [ `Evaluate` ](xref:Microsoft.ML.RegressionCatalog.Evaluate*) metod w celu mierzenia różne metryki dla trenowanego modelu.
 
 > [!NOTE]
-> `Evaluate` Metoda generuje różne metryki, w zależności od tego, w jakim komputerze został zadania uczenia zostało wykonane. Aby uzyskać więcej informacji, odwiedź stronę [ `Microsoft.ML.Data` dokumentacji interfejsu API](xref:Microsoft.ML.Data) i poszukaj klas, które zawierają `Metrics` w ich imieniu. 
+> `Evaluate` Generuje różne metryki, w zależności od tego, którego urządzenia zostało wykonane zadanie uczenia. Aby uzyskać więcej informacji, odwiedź stronę [ `Microsoft.ML.Data` dokumentacji interfejsu API](xref:Microsoft.ML.Data) i poszukaj klas, które zawierają `Metrics` w ich imieniu. 
 
 ```csharp
 // Measure trained model performance

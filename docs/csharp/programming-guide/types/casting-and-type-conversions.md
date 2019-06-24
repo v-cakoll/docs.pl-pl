@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: bfcad2669c5ae34605c142f9834c52b4b84c36ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cd989b47c87ef32371b45650d531bd8cbeb85032
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608090"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306952"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Konwersje rzutowania i typ (C# Programming Guide)
 
@@ -30,7 +30,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Niejawne konwersje**: Nie specjalnej składni jest wymagana, ponieważ konwersja jest bezpiecznym typem, a żadne dane nie zostaną utracone. Przykłady obejmują konwersji z mniejszych na większych typów całkowitych i konwersje z klasy podstawowej w klasach pochodnych.  
   
-- **Konwersje jawne (rzutowania)**: Konwersje jawne wymaga operatora rzutowania. Rzutowanie jest wymagane, gdy informacji może zostać utracone podczas konwersji, lub gdy Konwersja może się nie powieść z innych przyczyn.  Typowe przykłady obejmują numerycznej konwersji do typu, który ma mniejszą dokładność i mniejszy zakres i konwersja wystąpienia klasy bazowej do klasy pochodnej.  
+- **Konwersje jawne (rzutowania)** : Konwersje jawne wymaga operatora rzutowania. Rzutowanie jest wymagane, gdy informacji może zostać utracone podczas konwersji, lub gdy Konwersja może się nie powieść z innych przyczyn.  Typowe przykłady obejmują numerycznej konwersji do typu, który ma mniejszą dokładność i mniejszy zakres i konwersja wystąpienia klasy bazowej do klasy pochodnej.  
   
 - **Konwersje zdefiniowane przez użytkownika**: Konwersje zdefiniowane przez użytkownika są wykonywane przez specjalne metody, które można zdefiniować umożliwia jawne i niejawne konwersje między typami niestandardowych, które nie mają relacji — Klasa pochodna klasy bazowej. Aby uzyskać więcej informacji, zobacz [operatory konwersji](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C# zawiera [jest](../../../csharp/language-reference/keywords/is.md) i [jako](../../../csharp/language-reference/keywords/as.md) operatorów umożliwiających testowanie zgodności przed wykonaniem faktycznie rzutowania. Aby uzyskać więcej informacji, zobacz [jak: Bezpieczne rzutowanie za pomocą dopasowywania do wzorca, jak i operatory](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ C#udostępnia [jest](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) operatora pozwalają na testowanie zgodności przed wykonaniem faktycznie rzutowania. Aby uzyskać więcej informacji, zobacz [porady: bezpieczne rzutowanie za pomocą dopasowywania do wzorca i as operatorów i is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -93,7 +93,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Typy](../../../csharp/programming-guide/types/index.md)
-- [(), operator](../../../csharp/language-reference/operators/invocation-operator.md)
+- [(), operator](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [explicit](../../../csharp/language-reference/keywords/explicit.md)
 - [implicit](../../../csharp/language-reference/keywords/implicit.md)
 - [Operatory konwersji](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

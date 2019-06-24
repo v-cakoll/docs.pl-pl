@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: e6654718f174c9d8b628b05d85d74952c222eb66
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452735"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307386"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>Automatyczne usługi machine learning za pomocą platformy ML.NET
 
@@ -28,4 +28,4 @@ Automatyczne ML jest obecnie ograniczona do uczenia maszynowego [zadania](resour
 Istnieją trzy sposoby na wykorzystanie ML automatyczne:
 1. W wierszu polecenia za pomocą [interfejsu wiersza polecenia w strukturze ML.NET](automate-training-with-cli.md)
 1. Za pomocą aplikacji za pomocą [automatyczne interfejsu API uczenia Maszynowego](how-to-guides/how-to-use-the-automl-api.md)
-1. Za pomocą graficznego interfejsu użytkownika za pomocą konstruktora modeli strukturze ML.NET
+1. Za pomocą graficznego interfejsu użytkownika, za pomocą konstruktora modelu strukturze ML.NET

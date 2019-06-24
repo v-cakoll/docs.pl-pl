@@ -1,16 +1,16 @@
 ---
 title: Tworzyć prognozy przy użyciu uczonego modelu
 description: Dowiedz się, jak tworzyć prognozy przy użyciu uczonego modelu
-ms.date: 05/03/2019
+ms.date: 06/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: dac3b3bfa68776975a2e5e762f46db16e39d61fb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066176"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307395"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Tworzyć prognozy przy użyciu uczonego modelu
 
@@ -92,7 +92,7 @@ Jeśli uzyskujesz dostęp do `Score` właściwość `prediction` obiektu, należ
 
 ## <a name="batch-prediction"></a>Prognozy usługi Batch
 
-Biorąc pod uwagę następujące dane, ładować je do [ `IDataView` ](xref:Microsoft.ML.IDataView). Ponieważ `CurrentPrice` docelowego lub etykiety, które próbujesz przewidzieć, przy użyciu nowych danych, zakłada się, w tym momencie nie istnieje dla niego wartość.
+Biorąc pod uwagę następujące dane, ładować je do [ `IDataView` ](xref:Microsoft.ML.IDataView). W tym przypadku nazwa [ `IDataView` ](xref:Microsoft.ML.IDataView) jest `inputData`. Ponieważ `CurrentPrice` docelowego lub etykiety, które próbujesz przewidzieć, przy użyciu nowych danych, zakłada się, w tym momencie nie istnieje dla niego wartość.
 
 ```csharp
 // Actual data

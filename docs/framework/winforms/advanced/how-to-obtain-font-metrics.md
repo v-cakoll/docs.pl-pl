@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7d7ad92199bb8a8f01290066f8ae023a14c2f9ce
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881852"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307424"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Instrukcje: Uzyskiwanie miar czcionek
 <xref:System.Drawing.FontFamily> Klasa udostępnia następujące metody, które pobierają różne metryki dla kombinacji określonej rodziny/styl:  
@@ -26,7 +26,7 @@ ms.locfileid: "65881852"
   
 - <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
- Liczby zwrócone przez te metody są w jednostkach projektowania czcionki, dzięki czemu są one niezależne od rozmiaru i jednostki określonego <xref:System.Drawing.Font> obiektu.  
+ Wartości zwracane przez metody te są w jednostkach projektowania czcionki, dzięki czemu są one niezależne od rozmiaru i jednostki określonego <xref:System.Drawing.Font> obiektu.  
   
  Na poniższej ilustracji przedstawiono różne metryki:
   

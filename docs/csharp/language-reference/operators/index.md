@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 99cf5b42700779a3eb48eb6452365056f5fa89ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025135"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306581"
 ---
 # <a name="c-operators-c-reference"></a>C#operatory (C# odwołania)
 
@@ -53,7 +53,7 @@ Są to najwyższy pierwszeństwo operatorów.
 
 [nowe](../keywords/new-operator.md) — podczas tworzenia wystąpienia typu.
 
-[TypeOf](../keywords/typeof.md) — zwraca <xref:System.Type> obiekt reprezentujący argument.
+[TypeOf](type-testing-and-conversion-operators.md#typeof-operator) — zwraca <xref:System.Type> obiekt reprezentujący argument.
 
 [zaznaczone](../keywords/checked.md) — umożliwia przepełnienie sprawdzania pod kątem operacji liczby całkowitej.
 
@@ -87,7 +87,7 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [--x](arithmetic-operators.md#decrement-operator---) — przedrostkowe. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, która jest mniejsza (zazwyczaj odejmuje liczbę całkowitą 1).
 
-[(T) x](invocation-operator.md) — typ rzutowania.
+[(T) x](type-testing-and-conversion-operators.md#cast-operator-) — typ rzutowania.
 
 [await](../keywords/await.md) — czeka `Task`.
 
@@ -137,9 +137,9 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [x > = y](comparison-operators.md#greater-than-or-equal-operator-) — większa lub równa.
 
-[jest](../keywords/is.md) — wpisz zgodności. Zwraca wartość PRAWDA, jeśli ocenianą lewy operand mogą być rzutowane na typ określony w prawy operand (typu statycznego).
+[jest](type-testing-and-conversion-operators.md#is-operator) — wpisz zgodności. Zwraca `true` Jeśli ocenianą Lewy argument operacji może być rzutowany na typ określony przez prawy operand.
 
-[jako](../keywords/as.md) — konwersja typu. Zwraca lewy operand rzutowany na typ określony przez prawy operand (typ statycznej), ale `as` zwraca `null` gdzie `(T)x` spowoduje zgłoszenie wyjątku.
+[jako](type-testing-and-conversion-operators.md#as-operator) — konwersja typu. Zwraca lewy operand rzutowany na typ określony przez prawy operand, ale `as` zwraca `null` gdzie `(T)x` spowoduje zgłoszenie wyjątku.
 
 ## <a name="equality-operators"></a>Operatory równości
 

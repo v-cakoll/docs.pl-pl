@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210445"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307087"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> Element
 Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppContext> Aby klasa zapewniała mechanizm rezygnacji z nowych funkcji.  
@@ -68,7 +68,7 @@ Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppCont
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Określa, czy domyślny algorytm używany do podpisywania części pakietu przez PackageDigitalSignatureManager jest algorytm SHA1 lub SHA256.<br>Ze względu na problemy kolizji z SHA1 firma Microsoft zaleca SHA256.|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Po ustawieniu `false`, umożliwia debugowanie projektów opartych na XAML przepływu pracy z programem Visual Studio, gdy Standard FIPS jest włączony. Bez tego <xref:System.NullReferenceException> jest zgłaszany w wywołaniach do metod w zestawie System.Activities.|.NET framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Określa, czy sumy kontrolnej dla wystąpienia przepływu pracy w debugerze, używa algorytmu MD5 lub SHA1. | .NET framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|Określa, czy mieszania sumy kontrolnej przepływ pracy używa algorytmu SHA1 wprowadzone jako domyślne w programie .NET Framework 4.7 (`true`), lub czy używa domyślny algorytm SHA256 wprowadzone jako domyślne w .NET Framework 4.8 (`false`).<br>Ze względu na problemy kolizji z SHA1 firma Microsoft zaleca SHA256.|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|Określa, czy mieszania sumy kontrolnej przepływ pracy używa algorytmu SHA1 wprowadzone jako domyślne w programie .NET Framework 4.7 (`true`), lub czy wykorzystuje domyślny algorytm SHA256 wprowadzone jako domyślne w .NET Framework 4.8 (`false`).<br>Ze względu na problemy kolizji z SHA1 firma Microsoft zaleca SHA256.|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Określa, czy ślady stosu uzyskać przy użyciu przenośnych plików PDB może zawierać informacje o pliku i wierszu źródła. `false` Aby dołączyć pliku i wierszu informacji o źródle; w przeciwnym razie `true`.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Formanty czy <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> metoda zgłasza wyjątek podczas <xref:System.Drawing.Icon> obiekt ma ramek PNG. Aby uzyskać więcej informacji, zobacz [środki zaradcze: PNG ramki w obiektach ikonę](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|Określa, czy <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> obiekty są prawidłowo usunięte, po dodaniu do kolekcji przy <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> metody. `true` Aby zachować starsze zachowanie; `false` do usuwania wszystkich obiektów prywatnej czcionki. |.NET Framework 4.7.2|
@@ -134,7 +134,7 @@ Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppCont
 |`Switch.UseLegacyAccessibilityFeatures`|Formanty dostępne począwszy od .NET Framework 4.7.1 funkcje ułatwień dostępu są włączone czy wyłączone. | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|Formanty, czy funkcje są dostępne w programie .NET Framework 4.7.2 ułatwień dostępu są włączane (`false`) lub wyłączony (`true`). Jeśli `true`, `Switch.UseLegacyAccessibilityFeatures` musi być także `true` Aby włączyć funkcje ułatwień dostępu w programie .NET Framework 4.7.1.|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|Formanty, czy funkcje ułatwień dostępu wprowadzone w .NET Framework 4.8 są włączone (`false`) lub wyłączony (`true`). Jeśli `true`, `Switch.UseLegacyAccessibilityFeatures` i `Switch.UseLegacyAccessibilityFeatures.2` musi być także `true`.|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|Formanty czy etykietki narzędzi są displaed, gdy użytkownik ustawi wskaźnik myszy nad formantem WPF (`true`), lub czy są wyświetlane zarówno na klawiaturę, jak i za pośrednictwem klawisz skrótu (`false`, domyślne zachowanie). Dla aplikacji uruchomionych na .NET Framework 4,8, ale przeznaczone dla poprzednich wersji programu .NET Framework, jednocześnie umożliwiając klawiatury fokus i Obsługa kluczy skrótów wymaga `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, i `Switch.UseLegacyAccessibilityFeatures.3` można ustawić `false`.|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|Formanty czy etykietki narzędzi są wyświetlane, gdy użytkownik ustawi wskaźnik myszy nad formantem WPF (`true`), lub czy są wyświetlane zarówno na klawiaturę, jak i za pośrednictwem klawisz skrótu (`false`, domyślne zachowanie). Dla aplikacji uruchomionych na .NET Framework 4,8, ale przeznaczone dla poprzednich wersji programu .NET Framework, jednocześnie umożliwiając klawiatury fokus i Obsługa kluczy skrótów wymaga `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, i `Switch.UseLegacyAccessibilityFeatures.3` można ustawić `false`.|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Określa, czy pusta sekwencja klucza w klucze złożone są ignorowane przez sprawdzanie poprawności schematu XSD. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Sprawdzanie poprawności schematu XML](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]

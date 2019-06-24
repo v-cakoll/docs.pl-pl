@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: bd8c52cd798496a4df3086411dfe3be6241fbff5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: d93176b850d84753106accef3bcaedab38f4ddc7
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422347"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306797"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabela typów wbudowanych (odwołanie w C#)
 
@@ -47,7 +47,7 @@ int x = 123;
 System.Int32 y = 123;
 ```
 
-Użyj [typeof](typeof.md) operatorem w celu uzyskania <xref:System.Type?displayProperty=nameWithType> wystąpienia, który reprezentuje określony typ:
+Użyj [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) operatorem w celu uzyskania <xref:System.Type?displayProperty=nameWithType> wystąpienia, który reprezentuje określony typ:
 
 ```csharp
 Type stringType = typeof(string);

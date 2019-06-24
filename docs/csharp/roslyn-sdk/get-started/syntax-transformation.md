@@ -3,12 +3,12 @@ title: Wprowadzenie do składni przekształcania (interfejsy API Roslyn)
 description: Wprowadzenie do przechodzenie przez wykonywanie zapytań i zalet drzewa składni.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675913"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306926"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Wprowadzenie do składni przekształcania
 
@@ -30,7 +30,7 @@ Możesz wybrać jedną z dwóch strategii dla przekształceń składni. **Metoda
 
 Pierwsza transformacja składnia pokazuje, metodach fabryki. Zamierzasz zamienić `using System.Collections;` instrukcję, określając `using System.Collections.Generic;` instrukcji. W tym przykładzie przedstawiono, jak utworzyć <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> obiektów przy użyciu <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> metodach fabryki. Dla każdego rodzaju elementu **węzła**, **tokenu**, lub **elementy towarzyszące składni** nie istnieje metoda fabryki, który tworzy wystąpienie tego typu. Można utworzyć drzewa składni za tworzenie węzłów hierarchicznie w czasie od dołu do góry. Następnie można przekształcać istniejące program można zastępując istniejące węzły nowego drzewa, które zostały utworzone.
 
-Uruchom program Visual Studio i Utwórz nowy język C# **narzędzie do analizy kodu autonomicznego** projektu. W programie Visual Studio, wybierz **pliku** > **New** > **projektu** Aby wyświetlić okno dialogowe Nowy projekt. W obszarze **Visual C#** > **rozszerzalności** wybierz **narzędzie do analizy kodu autonomicznego**. Ten przewodnik Szybki Start zawiera dwa projekty przykładu, więc nazwa rozwiązania **SyntaxTransformationQuickStart**i nazwij projekt **ConstructionCS**. Kliknij przycisk **OK**.
+Uruchom program Visual Studio i Utwórz nowy język C# **narzędzie do analizy kodu autonomicznego** projektu. W programie Visual Studio, wybierz **pliku** > **New** > **projektu** Aby wyświetlić okno dialogowe Nowy projekt. W obszarze **Visual C#**  > **rozszerzalności** wybierz **narzędzie do analizy kodu autonomicznego**. Ten przewodnik Szybki Start zawiera dwa projekty przykładu, więc nazwa rozwiązania **SyntaxTransformationQuickStart**i nazwij projekt **ConstructionCS**. Kliknij przycisk **OK**.
 
 Ten projekt używa <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> metody do konstruowania klasy <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> reprezentujący `System.Collections.Generic` przestrzeni nazw.
 
@@ -63,7 +63,7 @@ Uruchom program ponownie, aby zobaczyć, że po kompilacji drzewa dla kodu w cel
 
 ### <a name="create-a-modified-tree"></a>Utwórz zmodyfikowane drzewa
 
-Gdy masz utworzoną drzewo składni małe, które zawiera jedną instrukcję. Interfejsy API w celu utworzenia nowych węzłów są właściwym wyborem, aby utworzyć pojedyncze instrukcje lub innych małych blokach kodu. Jednak tworzenie większych blokach kodu, należy użyć metody Zastąp węzłów lub wstawianie węzłów na istniejącym drzewie. Należy pamiętać, że drzewa składni są niezmienne. **API składni** nie zapewnia żadnych mechanizm do modyfikowania istniejących drzewo składni po konstrukcji. Zamiast tego zawiera metody, które tworzą nowe drzewa, na podstawie zmian do istniejących. `With*` metody są zdefiniowane w klas konkretnych wywodzących się z <xref:Microsoft.CodeAnalysis.SyntaxNode> lub rozszerzenia metod zadeklarowanych w <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> klasy. Te metody Utwórz nowy węzeł, wprowadzając zmiany w istniejących węzłów podrzędnych właściwości. Ponadto <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> — metoda rozszerzenia może służyć do zastąpienia węzeł podrzędny w poddrzewa. Ta metoda również aktualizuje element nadrzędny, aby wskazać nowo utworzony element podrzędny i powtarza ten proces w górę całe drzewo — proces ten jest znany jako _re spining_ drzewa.
+Gdy masz utworzoną drzewo składni małe, które zawiera jedną instrukcję. Interfejsy API w celu utworzenia nowych węzłów są właściwym wyborem, aby utworzyć pojedyncze instrukcje lub innych małych blokach kodu. Jednak tworzenie większych blokach kodu, należy użyć metody Zastąp węzłów lub wstawianie węzłów na istniejącym drzewie. Należy pamiętać, że drzewa składni są niezmienne. **API składni** nie zapewnia żadnych mechanizm do modyfikowania istniejących drzewo składni po konstrukcji. Zamiast tego zawiera metody, które tworzą nowe drzewa, na podstawie zmian do istniejących. `With*` metody są zdefiniowane w klas konkretnych wywodzących się z <xref:Microsoft.CodeAnalysis.SyntaxNode> lub rozszerzenia metod zadeklarowanych w <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> klasy. Te metody Utwórz nowy węzeł, wprowadzając zmiany w istniejących węzłów podrzędnych właściwości. Ponadto <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> — metoda rozszerzenia może służyć do zastąpienia węzeł podrzędny w poddrzewa. Ta metoda również aktualizuje element nadrzędny, aby wskazać nowo utworzony element podrzędny i powtarza ten proces w górę całe drzewo — proces ten jest znany jako _ponownie obrotowych_ drzewa.
 
 Następnym krokiem jest utworzyć drzewo, który reprezentuje cały (mały) program, a następnie zmodyfikować go. Dodaj następujący kod na początku `Program` klasy:
 
@@ -94,7 +94,7 @@ Ponownie uruchom program. Tym razem drzewa teraz poprawnie importuje `System.Col
 
 `With*` i <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> metody zapewniają wygodny sposób przekształcania poszczególnych gałęzi drzewa składni. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> Klasy wykonuje wiele przekształceń na drzewie składni. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> Klasy jest podklasą <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> Stosuje przekształcenia do określonego typu <xref:Microsoft.CodeAnalysis.SyntaxNode>. Przekształcenia można zastosować do wielu typów <xref:Microsoft.CodeAnalysis.SyntaxNode> obiekty wszędzie tam, gdzie są wyświetlane w drzewie składni. Drugi projekt, w tym przewodniku Szybki Start tworzy wiersza polecenia refaktoryzacji, która usuwa jawnie typów w deklaracjach zmiennych lokalnych, może być używane tam, gdzie wnioskowanie o typie.
 
-Utwórz nowy język C# **narzędzie do analizy kodu autonomicznego** projektu. W programie Visual Studio, kliknij prawym przyciskiem myszy `SyntaxTransformationQuickStart` węzła rozwiązania. Wybierz **Dodaj** > **nowy projekt** do wyświetlenia **okna dialogowego Nowy projekt**. W obszarze **Visual C#** > **rozszerzalności**, wybierz **narzędzie do analizy kodu autonomicznego**. Nazwij swój projekt `TransformationCS` i kliknij przycisk OK.
+Utwórz nowy język C# **narzędzie do analizy kodu autonomicznego** projektu. W programie Visual Studio, kliknij prawym przyciskiem myszy `SyntaxTransformationQuickStart` węzła rozwiązania. Wybierz **Dodaj** > **nowy projekt** do wyświetlenia **okna dialogowego Nowy projekt**. W obszarze **Visual C#**  > **rozszerzalności**, wybierz **narzędzie do analizy kodu autonomicznego**. Nazwij swój projekt `TransformationCS` i kliknij przycisk OK.
 
 Pierwszym krokiem jest utworzenie klasy, która pochodzi od klasy <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> do wykonania przekształceń. Dodaj nowy plik klasy do projektu. W programie Visual Studio, wybierz **projektu** > **Dodaj klasę...** . W **Dodaj nowy element** typ okna dialogowego `TypeInferenceRewriter.cs` jako nazwę pliku.
 
@@ -112,7 +112,7 @@ Dodaj następujący kod, aby zadeklarować prywatnego pola tylko do odczytu do p
 
 Zastąp <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> metody:
 
-```C#
+```csharp
 public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 {
 

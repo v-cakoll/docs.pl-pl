@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661727"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306617"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela jawnych konwersji liczbowych (odwołanie w C#)
 
@@ -66,10 +66,9 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych jawne konwersje międ
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#Odwołanie](../index.md)
 - [Konwersje rzutowania i typ](../../programming-guide/types/casting-and-type-conversions.md)
-- [(), operator](../operators/invocation-operator.md)
+- [operator)](../operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [Tabela typów całkowitych](integral-types-table.md)
 - [Tabela typów zmiennoprzecinkowych](floating-point-types-table.md)
 - [Tabela typów wbudowanych](built-in-types-table.md)

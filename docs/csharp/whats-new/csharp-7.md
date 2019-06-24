@@ -3,12 +3,12 @@ title: Co nowego w języku C# 7.0 — przewodnik po języku C#
 description: Zapoznaj się z omówieniem nowych funkcji w wersji 7.0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815971"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307157"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
@@ -95,7 +95,7 @@ Odrzuca są obsługiwane w następujących scenariuszach:
 * We wzorcu, dopasowanie operację, podając [jest](../language-reference/keywords/is.md) i [Przełącz](../language-reference/keywords/switch.md) instrukcji.
 * Jako identyfikator autonomicznej, aby jawnie Zidentyfikuj wartość do przypisania jako odrzucenia.
 
-W poniższym przykładzie zdefiniowano `QueryCityDataForYears` metodę, która zwraca 6-spójną kolekcją, która zawiera dane jako uczestnik w mieście dla dwóch różnych lat. Wywołanie metody w przykładzie dotyczy tylko wartości dwóch populacji zwracany przez metodę i dlatego traktuje pozostałe wartości w spójnej kolekcji, ponieważ odrzuca, gdy jej deconstructs spójnej kolekcji.
+W poniższym przykładzie zdefiniowano `QueryCityDataForYears` metodę, która zwraca 6-spójną kolekcją, która zawiera dane jako uczestnik w mieście dla dwóch różnych latach. Wywołanie metody w przykładzie dotyczy tylko wartości dwóch populacji zwracany przez metodę i dlatego traktuje pozostałe wartości w spójnej kolekcji, ponieważ odrzuca, gdy jej deconstructs spójnej kolekcji.
 
 [!code-csharp[Tuple-discard](~/samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 

@@ -2,19 +2,19 @@
 title: 'Instrukcje: Określanie parametrów połączenia'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: 7fb722acbb13b3502d004978581701cc70118ff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8386f93d0e80aa824b1e91a130812b9b3a2b3619
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606113"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306382"
 ---
 # <a name="how-to-define-the-connection-string"></a>Instrukcje: Określanie parametrów połączenia
 
 W tym temacie pokazano, jak zdefiniować parametry połączenia, który jest używany podczas nawiązywania połączenia z modelu koncepcyjnego. Ten temat opiera się na [sprzedaży AdventureWorks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) modelu koncepcyjnego. W całym tematy związane z zadaniem używany jest Model sprzedaż AdventureWorks [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji. W tym temacie założono, że użytkownik skonfigurował już [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i zdefiniowane AdventureWorks Sales Model. Aby uzyskać więcej informacji, zobacz [jak: Ręcznie zdefiniować modelu i mapowania plików](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)). Procedury przedstawione w tym temacie znajdują się również w [jak: Ręczne konfigurowanie projektu programu Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).
 
 > [!NOTE]
-> Jeśli używasz [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] kreatora w projekcie programu Visual Studio automatycznie generuje plik edmx i konfiguruje projekt, aby użyć [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreator modelu Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
+> Jeśli używasz kreatora modelu danych jednostki w projekcie programu Visual Studio automatycznie generuje plik edmx i konfiguruje projekt, aby użyć [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreator modelu Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>Aby zdefiniować parametry połączenia programu Entity Framework
 

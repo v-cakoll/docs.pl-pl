@@ -8,15 +8,15 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
-ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce2097568349ad376540163f5fe05d6a3e5b0643
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054578"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348032"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Instrukcje: Tworzenie kształtu przy użyciu elementu StreamGeometry
-<xref:System.Windows.Media.StreamGeometry> jest alternatywą lekki <xref:System.Windows.Media.PathGeometry> do tworzenia kształtów geometrycznych. Użyj <xref:System.Windows.Media.StreamGeometry> niezbędne, aby opisać złożone typy geometryczne, ale nie chcesz koszty obsługi powiązań danych, animacji lub modyfikacji. Na przykład ze względu na jego wydajność <xref:System.Windows.Media.StreamGeometry> klasy jest dobrym wyborem dla opisu moduły definiowania układu.  
+<xref:System.Windows.Media.StreamGeometry> jest uproszczone alternatywa dla <xref:System.Windows.Media.PathGeometry> do tworzenia kształtów geometrycznych. Użyj <xref:System.Windows.Media.StreamGeometry> niezbędne, aby opisać złożone typy geometryczne, ale nie chcesz koszty obsługi powiązań danych, animacji lub modyfikacji. Na przykład ze względu na jego wydajność <xref:System.Windows.Media.StreamGeometry> klasy jest dobrym wyborem dla opisu moduły definiowania układu.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto składni atrybutów, aby utworzyć trójkątna <xref:System.Windows.Media.StreamGeometry> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  

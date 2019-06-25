@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 1f98435aba6994aaca76127cc20b5ffa29df455f
+ms.sourcegitcommit: d9c4808739c8c606957dd0964d952b98ea7b6533
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025241"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67349770"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitowe i operatory przesunięcia (C# odwołania)
 
@@ -60,39 +60,39 @@ Można również użyć `~` symbolu, aby zadeklarować finalizatorów. Aby uzysk
 
 ## <a name="left-shift-operator-"></a>Operator przesunięcia w lewo \<\<
 
-`<<` Operator przenosi jego pierwszego operandu w lewo o liczbę bitów definicją drugim argumentem.
+`<<` Operator przenosi swojego operandu po lewej stronie, w lewo o liczbę bitów zdefiniowane przez jej argument po prawej stronie.
 
 Operacja przesunięcia w lewo odrzuca najbardziej znaczących bitów, które są poza zakresem typu wyniku i ustawia pozycje bitów pusty niskiego rzędu na zero, co ilustruje poniższy przykład:
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-Ponieważ operatory przesunięcia, są zdefiniowane tylko w przypadku `int`, `uint`, `long`, i `ulong` typów, wynik operacji zawsze zawiera co najmniej 32-bitowy. Jeśli pierwszy argument jest innego typu całkowitego (`sbyte`, `byte`, `short`, `ushort`, lub `char`), jego wartość jest konwertowana na `int` typu, co ilustruje poniższy przykład:
+Ponieważ operatory przesunięcia, są zdefiniowane tylko w przypadku `int`, `uint`, `long`, i `ulong` typów, wynik operacji zawsze zawiera co najmniej 32-bitowy. Jeśli argument po lewej stronie jest innego typu całkowitego (`sbyte`, `byte`, `short`, `ushort`, lub `char`), jego wartość jest konwertowana na `int` typu, co ilustruje poniższy przykład:
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-Aby uzyskać informacje o tym, jak drugi argument operacji `<<` operator definiuje licznik przesunięć, zobacz [licznik operatory przesunięcia przesunięć](#shift-count-of-the-shift-operators) sekcji.
+Aby uzyskać informacje na temat prawostronny operand `<<` operator definiuje licznik przesunięć, zobacz [licznik operatory przesunięcia przesunięć](#shift-count-of-the-shift-operators) sekcji.
 
 ## <a name="right-shift-operator-"></a>Operator przesunięcia w prawo >>
 
-`>>` Operator przenosi pierwszy argument operacji bezpośrednio przez liczbę bitów definicją drugim argumentem.
+`>>` Operator przenosi jego lewostronny operand bezpośrednio przez liczbę bitów zdefiniowane przez jej argument po prawej stronie.
 
 Operacja przesunięcia w prawo powoduje odrzucenie mniej znaczące bity, co ilustruje poniższy przykład:
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-Pozycje bitów pusty wyższego rzędu jest ustawiona na podstawie typu pierwszego operandu w następujący sposób:
+Pozycje bitów pusty wyższego rzędu jest ustawiona na podstawie typ operandu po lewej stronie w następujący sposób:
 
-- Jeśli pierwszy operand jest typu [int](../keywords/int.md) lub [długie](../keywords/long.md), operator przesunięcia w prawo wykonuje *arytmetyczne* shift: wartość najbardziej znaczący bit (bit znaku) pierwszego argument operacji jest propagowana do pozycji bitów pusty wyższego rzędu. Oznacza to, pozycje bitów pusty wyższego rzędu są ustawiane na zero, jeśli pierwszy argument jest ujemna i ustawiony na wartość 1, jeśli jest ujemna.
+- Jeśli lewostronny operand jest typu [int](../keywords/int.md) lub [długie](../keywords/long.md), wykonuje operator przesunięcia w prawo *arytmetyczne* shift: wartość najbardziej znaczący bit (bit znaku) z Lewostronny operand jest propagowana do pozycji bitów pusty wyższego rzędu. Oznacza to, pozycje bitów pusty wyższego rzędu są ustawiane na zero, jeśli argument po lewej stronie jest ujemna i ustawiony na wartość 1, jeśli jest ujemna.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Jeśli pierwszy operand jest typu [uint](../keywords/uint.md) lub [ulong](../keywords/ulong.md), operator przesunięcia w prawo wykonuje *logiczne* shift: pozycje bitów pusty wyższego rzędu są zawsze ustawione na zero.
+- Lewostronny operand jest typu [uint](../keywords/uint.md) lub [ulong](../keywords/ulong.md), operator przesunięcia w prawo wykonuje *logiczne* shift: pozycje bitów pusty wyższego rzędu są zawsze ustawione na zero.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-Aby uzyskać informacje o tym, jak drugi argument operacji `>>` operator definiuje licznik przesunięć, zobacz [licznik operatory przesunięcia przesunięć](#shift-count-of-the-shift-operators) sekcji.
+Aby uzyskać informacje na temat prawostronny operand `>>` operator definiuje licznik przesunięć, zobacz [licznik operatory przesunięcia przesunięć](#shift-count-of-the-shift-operators) sekcji.
 
-## <a name="logical-and-operator-amp"></a>Operator logiczny AND &amp;
+## <a name="logical-and-operator-"></a> Operator logiczny AND &amp;
 
 `&` Operator oblicza iloczynu bitowego AND logiczne z argumentów:
 
@@ -158,13 +158,13 @@ Aby uzyskać pełną listę C# operatory uporządkowane według poziomu prioryte
 
 ## <a name="shift-count-of-the-shift-operators"></a>Licznik przesunięć operatorów przesunięcia
 
-Dla operatorów przesunięcia `<<` i `>>`, typ drugiego argumentu operacji musi być [int](../keywords/int.md) lub typ, który ma [wstępnie zdefiniowane niejawnych konwersji liczbowych](../keywords/implicit-numeric-conversions-table.md) do `int`.
+Dla operatorów przesunięcia `<<` i `>>`, typ prawostronny operand musi być [int](../keywords/int.md) lub typ, który ma [wstępnie zdefiniowane niejawnych konwersji liczbowych](../keywords/implicit-numeric-conversions-table.md) do `int`.
 
 Aby uzyskać `x << count` i `x >> count` wyrażeń, licznik przesunięć rzeczywistego zależy od rodzaju `x` w następujący sposób:
 
-- Jeśli typ `x` jest [int](../keywords/int.md) lub [uint](../keywords/uint.md), licznik przesunięć jest definiowany przez niskiego rzędu *pięć* bitów drugiego operandu. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x1F` (lub `count & 0b_1_1111`).
+- Jeśli typ `x` jest [int](../keywords/int.md) lub [uint](../keywords/uint.md), licznik przesunięć jest definiowany przez niskiego rzędu *pięć* bitów prawostronny operand. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x1F` (lub `count & 0b_1_1111`).
 
-- Jeśli typ `x` jest [długie](../keywords/long.md) lub [ulong](../keywords/ulong.md), licznik przesunięć jest definiowany przez niskiego rzędu *sześć* bitów drugiego operandu. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x3F` (lub `count & 0b_11_1111`).
+- Jeśli typ `x` jest [długie](../keywords/long.md) lub [ulong](../keywords/ulong.md), licznik przesunięć jest definiowany przez niskiego rzędu *sześć* bitów prawostronny operand. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x3F` (lub `count & 0b_11_1111`).
 
 Poniższy przykład przedstawia tego zachowania:
 
@@ -180,7 +180,7 @@ Zazwyczaj używa się operatory logiczne bitowe dla typu wyliczenia, która jest
 
 Typ zdefiniowany przez użytkownika może [przeciążenia](../keywords/operator.md) `~`, `<<`, `>>`, `&`, `|`, i `^` operatorów. Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania złożonego jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć operator przypisania złożonego.
 
-Jeśli typ zdefiniowany przez użytkownika `T` przeciążenia `<<` lub `>>` operatora, musi być typem pierwszego operandu `T` i typ drugiego argumentu operacji musi być `int`.
+Jeśli typ zdefiniowany przez użytkownika `T` przeciążenia `<<` lub `>>` operatora, typ lewostronny operand musi być `T` i typ prawostronny operand musi być `int`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

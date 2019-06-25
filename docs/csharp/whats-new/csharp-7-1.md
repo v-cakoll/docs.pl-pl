@@ -2,12 +2,12 @@
 title: Co nowego C# 7.1
 description: Omówienie nowych funkcji w C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881548"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347614"
 ---
 # <a name="whats-new-in-c-71"></a>Co nowego C# 7.1
 
@@ -29,6 +29,13 @@ Dostępne są następujące nowe funkcje języka w tej wersji:
 Na koniec, kompilator zawiera dwie pozycje `-refout` i `-refonly` tej kontrolki [odwoływać się do generowania zestawu](#reference-assembly-generation).
 
 Korzystanie z najnowszych funkcji w wersji punktu należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybierz wersję.
+
+W dalszej części tego artykułu zawiera omówienie każdej funkcji. Dowiesz się jej uzasadnienie, dla każdej funkcji. Dowiesz się, aby składnia. Możesz zapoznać się z tych funkcji w środowisku przy użyciu `dotnet try` narzędzie globalne:
+
+1. Zainstaluj [spróbuj dotnet](https://github.com/dotnet/try/blob/master/README.md#setup) narzędzie globalne.
+1. Klonuj [dotnet/try-samples](https://github.com/dotnet/try-samples) repozytorium.
+1. Ustaw bieżący katalog *csharp7* podkatalog *try-samples* repozytorium.
+1. Uruchom `dotnet try`.
 
 ## <a name="async-main"></a>Asynchroniczna funkcja main
 

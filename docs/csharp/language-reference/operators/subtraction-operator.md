@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024913"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347911"
 ---
 # <a name="--and---operators-c-reference"></a>— i Operatorzy-= (C# odwołania)
 
@@ -30,17 +30,17 @@ Aby uzyskać informacje o operacji arytmetycznych `-` operatora, zobacz [jednoar
 
 Dla argumentów operacji tego samego [delegować](../keywords/delegate.md) typu `-` operator zwraca wystąpienie delegata, który jest obliczany w następujący sposób:
 
-- Jeśli oba operandy są inne niż null, a lista wywołania drugi argument operacji jest odpowiednie podlisty ciągłych listy wywołania pierwszego operandu, wynik operacji jest nową listę wywołania uzyskany przez usuwanie wpisów drugiego operandu od Lista wywołania pierwszy operand. Jeśli drugi argument operacji listy pasuje wiele sąsiadujących podlisty na liście pierwszy operand, tylko podlisty pasującego najdalej z prawej strony jest usuwany. Jeśli wyniki usuwania w pustej listy, wynik jest `null`.
+- Jeśli oba operandy są inne niż null, a lista wywołania prawostronny operand jest właściwe ciągłych podlistę wywołania listę lewostronny operand, wynik operacji jest nową listę wywołania uzyskany przez usunięcie prawostronny operand wpisy na liście wywołania operandu po lewej stronie. Jeśli listy prawostronny operand pasuje wiele sąsiadujących podlisty liście argument po lewej stronie, tylko podlisty pasującego najdalej z prawej strony są usuwane. Jeśli wyniki usuwania w pustej listy, wynik jest `null`.
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- Jeśli wywołanie listę drugiego operandu nie jest właściwe podlisty ciągłych listy wywołania pierwszego operandu, wynik operacji jest pierwszy operand. Na przykład usuwanie delegata, który nie jest częścią delegatów multiemisji nie robi nic i powoduje niezmienione delegatów multiemisji.
+- Jeśli wywołanie listę prawostronny operand nie jest właściwe ciągłych podlistę wywołania listę lewostronny operand, wynik operacji jest lewostronny operand. Na przykład usuwanie delegata, który nie jest częścią delegatów multiemisji nie robi nic i powoduje niezmienione delegatów multiemisji.
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   Poprzedni przykład ilustruje też, że podczas delegata usuwania wystąpień delegata są porównywane. Na przykład, delegatów, które są tworzone z wersji ewaluacyjnej identycznych [wyrażeń lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) nie są takie same. Aby uzyskać więcej informacji na temat równości delegata zobacz [delegować Operatory równości](~/_csharplang/spec/expressions.md#delegate-equality-operators) części [ C# specyfikacji języka](../language-specification/index.md).
 
-- Jeśli pierwszy argument jest `null`, wynik operacji jest `null`. Jeśli drugi argument operacji jest `null`, wynik operacji jest pierwszy operand.
+- Jeśli argument po lewej stronie jest `null`, wynik operacji jest `null`. Jeśli argument po prawej stronie jest `null`, wynik operacji jest lewostronny operand.
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 

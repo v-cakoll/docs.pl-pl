@@ -8,23 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3d18a52068b17b4a4259200754819dd43e28a03
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267645"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348010"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
 `readonly` — Słowo kluczowe jest modyfikator, który może być używana w kontekstach trzy:
 
-- W [pola deklaracji](#readonly-field-example), `readonly` wskazuje przypisania do pola mogą występować wyłącznie jako część deklaracji lub za pomocą konstruktora w tej samej klasy. Pola tylko do odczytu mogą zostać przypisane i ponownie przypisać wiele razy w ramach deklarację pola i konstruktora. Element `readonly` nie można przypisać pola, po zakończeniu konstruktora. Która ma inny wpływ dla typów wartości i typy referencyjne:
-- Ponieważ typy wartości zawierają bezpośrednio swoje dane, pole to `readonly` typ wartości jest niezmienny. 
-- Ponieważ typy odwołań zawierają odwołania do swoich danych, pola to `readonly` typu odwołania zawsze musi odwoływać się do tego samego obiektu. Ten obiekt jest niezmienny. `readonly` Modyfikator zapobiega zastępowane przez inne wystąpienie typu odwołania pola. Jednak modyfikator nie uniemożliwia dane wystąpienia pola modyfikowana za pomocą pola tylko do odczytu.
+- W [pola deklaracji](#readonly-field-example), `readonly` wskazuje przypisania do pola mogą występować wyłącznie jako część deklaracji lub za pomocą konstruktora w tej samej klasy. Pola tylko do odczytu mogą zostać przypisane i ponownie przypisać wiele razy w ramach deklarację pola i konstruktora. 
+  
+  Element `readonly` nie można przypisać pola, po zakończeniu konstruktora. Która ma inny wpływ dla typów wartości i typy referencyjne:
+  
+  - Ponieważ typy wartości zawierają bezpośrednio swoje dane, pole to `readonly` typ wartości jest niezmienny. 
+  - Ponieważ typy odwołań zawierają odwołania do swoich danych, pola to `readonly` typu odwołania zawsze musi odwoływać się do tego samego obiektu. Ten obiekt jest niezmienny. `readonly` Modyfikator zapobiega zastępowane przez inne wystąpienie typu odwołania pola. Jednak modyfikator nie uniemożliwia dane wystąpienia pola modyfikowana za pomocą pola tylko do odczytu.
 
-> [!WARNING]
-> Typ widoczny na zewnątrz zawiera widoczne na zewnątrz pole tylko do odczytu, która jest typu referencji zmiennej może być luki w zabezpieczeniach i mogą wyzwalać ostrzeżenie [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "Nie deklaruj odczytu modyfikowalnych typów referencyjnych tylko."
+  > [!WARNING]
+  > Typ widoczny na zewnątrz zawiera widoczne na zewnątrz pole tylko do odczytu, która jest typu referencji zmiennej może być luki w zabezpieczeniach i mogą wyzwalać ostrzeżenie [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "Nie deklaruj odczytu modyfikowalnych typów referencyjnych tylko."
 
 - W [ `readonly struct` definicji](#readonly-struct-example), `readonly` wskazuje, że `struct` można modyfikować.
 - W [ `ref readonly` zwrotu metody](#ref-readonly-return-example), `readonly` modyfikator wskazuje, że metoda zwraca odwołanie i zapisy są niedozwolone do tego odwołania.
@@ -41,9 +44,9 @@ Można przypisać wartości do `readonly` tylko w następujących kontekstów si
 
 - Gdy zmienna jest inicjowana w deklaracji, na przykład:
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - W konstruktorze wystąpienia klasy, który zawiera deklarację pola wystąpienia.
 - W konstruktorze statycznym klasy, który zawiera deklarację pola statycznego.

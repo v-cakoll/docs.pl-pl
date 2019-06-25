@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592229"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348201"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
 Powiązania to obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy usługi WCF wymaga powiązania do być poprawnie określona. W tym temacie opisano rodzaje komunikacji szczegółowe informacje, które definiują powiązania, elementy powiązania, jakie powiązania znajdują się w programie WCF i jak można określić powiązanie dla punktu końcowego.  
   
 ## <a name="what-a-binding-defines"></a>Definiuje powiązanie  
- Informacje przedstawione w powiązaniu może być bardzo podstawowe lub bardzo złożone. Podstawowe powiązanie określa tylko protokół transportu (np. HTTP) używany do łączenia z punktu końcowego. Ogólnie rzecz biorąc powiązanie zawiera informacje o tym, jak połączyć się z punktem końcowym należy do jednej z następujących kategorii.  
+ Informacje przedstawione w powiązaniu może być bardzo podstawowe lub bardzo złożone. Podstawowe powiązanie określa tylko protokół transportu (np. HTTP) używany do łączenia z punktu końcowego. Ogólnie rzecz biorąc powiązanie zawiera informacje o tym, jak połączyć się z punktem końcowym należy do jednej z następujących kategorii:  
   
- Protokoły  
+ **Protokoły**  
  Określa mechanizm zabezpieczeń używane: niezawodne możliwości obsługi komunikatów lub ustawienia przepływu kontekstu transakcji.  
   
- Kodowanie  
+ **Kodowanie**  
  Określa kodowanie komunikatu (na przykład tekst lub dane binarne).  
   
- Transport  
+ **Transport**  
  Określa podstawowy protokół transportu do użycia (na przykład, TCP lub HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Elementy powiązania  

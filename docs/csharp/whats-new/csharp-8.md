@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny w wersji zapoznawczej 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 9d66d76d6d565d24e27fd021ec2c2c17db74789a
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151980"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347325"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -30,7 +30,12 @@ Istnieje wiele ulepszeń C# języka, które możesz wypróbować już.
 > [!NOTE]
 > W tym artykule został ostatnio zaktualizowany na potrzeby C# 8.0 w wersji zapoznawczej 5.
 
-Te funkcje można krótko opisano w dalszej części tego artykułu. Jeżeli dostępne są szczegółowe artykuły, znajdują się linki do omówienia i samouczki.
+Te funkcje można krótko opisano w dalszej części tego artykułu. Jeżeli dostępne są szczegółowe artykuły, znajdują się linki do omówienia i samouczki. Możesz zapoznać się z tych funkcji w środowisku przy użyciu `dotnet try` narzędzie globalne:
+
+1. Zainstaluj [spróbuj dotnet](https://github.com/dotnet/try/blob/master/README.md#setup) narzędzie globalne.
+1. Klonuj [dotnet/try-samples](https://github.com/dotnet/try-samples) repozytorium.
+1. Ustaw bieżący katalog *csharp8* podkatalog *try-samples* repozytorium.
+1. Uruchom `dotnet try`.
 
 ## <a name="readonly-members"></a>Elementy członkowskie tylko do odczytu
 

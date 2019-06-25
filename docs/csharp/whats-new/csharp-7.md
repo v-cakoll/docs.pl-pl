@@ -3,12 +3,12 @@ title: Co nowego w języku C# 7.0 — przewodnik po języku C#
 description: Zapoznaj się z omówieniem nowych funkcji w wersji 7.0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307157"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347457"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
@@ -34,7 +34,12 @@ C# 7.0 dodaje wiele nowych funkcji do języka C#:
 * [Ulepszenia składni literału liczbowego](#numeric-literal-syntax-improvements)
   - Nowe tokeny poprawić czytelność dla stałych numerycznych.
 
-W dalszej części tego artykułu zawiera omówienie każdej funkcji. Dowiesz się jej uzasadnienie, dla każdej funkcji. Dowiesz się, aby składnia. Możesz zapoznać się z tych funkcji w naszej [możliwość interaktywnego eksplorowania](../tutorials/exploration/csharp-7.yml) z tych funkcji.
+W dalszej części tego artykułu zawiera omówienie każdej funkcji. Dowiesz się jej uzasadnienie, dla każdej funkcji. Dowiesz się, aby składnia. Możesz zapoznać się z tych funkcji w środowisku przy użyciu `dotnet try` narzędzie globalne:
+
+1. Zainstaluj [spróbuj dotnet](https://github.com/dotnet/try/blob/master/README.md#setup) narzędzie globalne.
+1. Klonuj [dotnet/try-samples](https://github.com/dotnet/try-samples) repozytorium.
+1. Ustaw bieżący katalog *csharp7* podkatalog *try-samples* repozytorium.
+1. Uruchom `dotnet try`.
 
 ## <a name="out-variables"></a>`out` Zmienne
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: af3f7a9379aa8ac12ef8c12abc99a0ded9188eb8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 9293071744ff104c91d5fb9b62fffd1ec51a53c4
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025309"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347949"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 
@@ -97,7 +97,7 @@ Jednoargumentowy `*` operator jest [operatora pośredniego wskaźnika](pointer-r
 
 ## <a name="division-operator-"></a>Operator dzielenia /
 
-Operator dzielenia `/` dzieli pierwszy argument operacji za drugim argumentem.
+Operator dzielenia `/` dzieli jego lewostronny operand przez jej argument po prawej stronie.
 
 ### <a name="integer-division"></a>Dzielenie liczby całkowitej
 
@@ -119,11 +119,11 @@ Jeśli jeden z operandów jest `decimal`, inny argument może być żadnego `flo
 
 ## <a name="remainder-operator-"></a>Resztę operator %
 
-Operator reszty `%` oblicza pozostałą po podzieleniu pierwszy argument operacji za drugim argumentem.
+Operator reszty `%` oblicza pozostałą po podzieleniu jego lewostronny operand przez jej argument po prawej stronie.
 
 ### <a name="integer-remainder"></a>Pozostała liczba całkowita
   
-Dla argumentów typu Liczba całkowita, wynikiem `a % b` wartość jest generowany przez `a - (a / b) * b`. Znak resztę różna od zera jest taka sama, jak w przypadku pierwszego operandu w poniższym przykładzie pokazano:
+Dla argumentów typu Liczba całkowita, wynikiem `a % b` wartość jest generowany przez `a - (a / b) * b`. Znak resztę różna od zera jest taki sam jak argument po lewej stronie, jak w poniższym przykładzie pokazano:
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
@@ -157,7 +157,7 @@ Możesz również użyć `+` operator dla kombinacji parametrów łączenia i de
 
 ## <a name="subtraction-operator--"></a>Operator odejmowania-
 
-Operator odejmowania `-` odejmuje jej drugiego operandu od jego pierwszego operandu:
+Operator odejmowania `-` odejmuje jego prawostronny operand z argumentem operacji po lewej stronie:
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 

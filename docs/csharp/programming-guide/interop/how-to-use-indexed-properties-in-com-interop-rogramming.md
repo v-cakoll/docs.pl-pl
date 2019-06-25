@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: 4b064f7042e5e5f0f6d5545c59de2f37897927b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2b992131bb5722b8a10ec4a71fc42602c98a12c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710359"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347624"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Instrukcje: Użycie właściwości indeksowanych w programowaniu usługi Międzyoperacyjnej modelu COM (C# Programming Guide)
 *Właściwości indeksowanych* poprawić sposób, w których COM właściwości, które mają parametry są używane w programowaniu w języku C#. Indeksowane właściwości pracy w połączeniu z innymi funkcjami w języku Visual C#, takich jak [argumentów nazwanych i opcjonalnych](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md), nowy typ ([dynamiczne](../../../csharp/language-reference/keywords/dynamic.md)), i [osadzonych informacji o typie](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md), Zwiększ programowania Microsoft Office.  
@@ -28,7 +28,7 @@ ms.locfileid: "61710359"
 > [!NOTE]
 >  W poprzednim przykładzie użyto również [opcjonalne argumenty](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md) funkcji, która pozwala na pominięcie `Type.Missing`.  
   
- Podobnie jak wartość `Value` właściwość <xref:Microsoft.Office.Interop.Excel.Range> obiektu w programie Visual C# 2008 i starszych, wymagane są dwa argumenty. Dostarcza jeden argument opcjonalny parametr określający typ wartości zakresu. Druga dostarcza wartość `Value` właściwości. Poniższe przykłady ilustrują tych metod. Ustawiają wartość komórki A1 do `Name`.
+ Podobnie jak wartość `Value` właściwość <xref:Microsoft.Office.Interop.Excel.Range> obiektu C# 3.0 i wcześniejszych, wymagane są dwa argumenty. Dostarcza jeden argument opcjonalny parametr określający typ wartości zakresu. Druga dostarcza wartość `Value` właściwości. Poniższe przykłady ilustrują tych metod. Ustawiają wartość komórki A1 do `Name`.
   
  [!code-csharp[csProgGuideIndexedProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#3)]  
   

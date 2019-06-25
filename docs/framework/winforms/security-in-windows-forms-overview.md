@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586648"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348470"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
 
@@ -52,7 +52,7 @@ Podczas opracowywania aplikacji, która jest uruchamiana w częściowej relacji 
 
 Opcjonalne uprawnienia w przypadku żądania, musi obsługiwać wyjątki zabezpieczeń, które mają być generowane, gdy aplikacja wykonuje akcję, która wymaga uprawnienia nie udzielone. Odpowiednie, obsługa <xref:System.Security.SecurityException> zapewni, że aplikacja może w dalszym ciągu działać. Aplikacja może używać wyjątek, aby ustalić, czy funkcja powinna stać się wyłączony dla użytkownika. Na przykład można wyłączyć aplikacji **Zapisz** opcję menu, jeśli nie zostało udzielone uprawnienie wymaganego pliku.
 
-Czasami trudno jest znać, jeśli zostały potwierdzone odpowiednie uprawnienia. Wywołanie metody, która wygląda nieszkodliwe na powierzchni na przykład, mogą uzyskiwać dostęp do systemu plików w pewnym momencie podczas jego wykonywania. Jeśli nie należy wdrażać aplikacji przy użyciu wszystkich wymaganych uprawnień, jego może przetestować prawidłowo podczas jej debugowania na komputerze, ale się nie powieść podczas wdrażania. Zarówno [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] zestawu SDK i programu Visual Studio 2005 zawiera narzędzia do obliczania uprawnienia, aplikacja musi: MT.exe polecenia narzędzia wiersza i funkcja Obliczanie uprawnień programu Visual Studio, odpowiednio.
+Czasami trudno jest znać, jeśli zostały potwierdzone odpowiednie uprawnienia. Wywołanie metody, która wygląda nieszkodliwe na powierzchni na przykład, mogą uzyskiwać dostęp do systemu plików w pewnym momencie podczas jego wykonywania. Jeśli nie należy wdrażać aplikacji przy użyciu wszystkich wymaganych uprawnień, jego może przetestować prawidłowo podczas jej debugowania na komputerze, ale się nie powieść podczas wdrażania. Zestaw SDK programu .NET Framework 2.0 i Visual Studio 2005 zawiera narzędzia do obliczania uprawnienia, aplikacja musi: MT.exe polecenia narzędzia wiersza i funkcja Obliczanie uprawnień programu Visual Studio, odpowiednio.
 
 W poniższych tematach opisano dodatkowe funkcje zabezpieczeń Windows Forms.
 
@@ -77,7 +77,7 @@ W poniższej tabeli opisano te technologie.
 
 Możesz wybrać technologie będzie zależeć od środowiska wdrażania. Aby uzyskać więcej informacji, zobacz [Wybieranie strategii wdrażania ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Domyślnie [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplikacje wdrożone za pomocą programu Visual Studio lub [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] narzędzi zestawu SDK (Mage.exe i MageUI.exe) są skonfigurowane do uruchamiania na komputerze klienckim, który ma pełne zaufanie. Jeśli aplikacja jest wdrażana za niektóre dodatkowe uprawnienia lub za pomocą częściowej relacji zaufania, należy zmienić to ustawienie domyślne. Można to zrobić za pomocą programu Visual Studio lub [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] zestawu SDK narzędzia MageUI.exe, podczas konfigurowania wdrożenia. Aby uzyskać więcej informacji na temat sposobu użycia programu MageUI.exe, zobacz Przewodnik po: Wdrażanie aplikacji ClickOnce z wiersza polecenia.  Zobacz też [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) lub [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Domyślnie [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplikacje wdrożone za pomocą programu Visual Studio lub narzędzi zestawu SDK programu .NET Framework (Mage.exe i MageUI.exe) są skonfigurowane do uruchomienia na komputerze klienckim, który ma pełne zaufanie. Jeśli aplikacja jest wdrażana za niektóre dodatkowe uprawnienia lub za pomocą częściowej relacji zaufania, należy zmienić to ustawienie domyślne. Można to zrobić za pomocą programu Visual Studio lub narzędzia .NET Framework SDK MageUI.exe podczas konfigurowania wdrożenia. Aby uzyskać więcej informacji na temat sposobu użycia programu MageUI.exe, zobacz Przewodnik po: Wdrażanie aplikacji ClickOnce z wiersza polecenia.  Zobacz też [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) lub [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Aby uzyskać więcej informacji na temat zabezpieczeń aspektów [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] i podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Aby uzyskać więcej informacji na temat zaufanego wdrożenia aplikacji, zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).
 

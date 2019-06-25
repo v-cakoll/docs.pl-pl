@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 1869a5c274b3308e718ca550e8e43ff6a72d4b5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25803bd772832cd22e855f530d10a3f3639c180c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611849"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348444"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optymalizacja wydajności: Grafika 2D i obrazowanie
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia szeroką gamę grafika 2D i funkcji przetwarzania obrazów, które mogą być optymalizowane dla wymagań aplikacji. Ten temat zawiera informacje dotyczące optymalizacji wydajności w tych obszarach.  
@@ -52,7 +52,7 @@ ms.locfileid: "64611849"
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>Streamgeometry — obiekty  
- <xref:System.Windows.Media.StreamGeometry> Obiekt jest lekki zamiast <xref:System.Windows.Media.PathGeometry> do tworzenia kształtów geometrycznych. Użyj <xref:System.Windows.Media.StreamGeometry> niezbędne, aby opisać złożonych geometrii. <xref:System.Windows.Media.StreamGeometry> jest zoptymalizowany pod kątem obsługi wielu <xref:System.Windows.Media.PathGeometry> obiektów i działa lepiej w porównaniu z przy użyciu wielu osoba <xref:System.Windows.Media.PathGeometry> obiektów.  
+ <xref:System.Windows.Media.StreamGeometry> Obiekt jest uproszczone zamiast <xref:System.Windows.Media.PathGeometry> do tworzenia kształtów geometrycznych. Użyj <xref:System.Windows.Media.StreamGeometry> niezbędne, aby opisać złożonych geometrii. <xref:System.Windows.Media.StreamGeometry> jest zoptymalizowany pod kątem obsługi wielu <xref:System.Windows.Media.PathGeometry> obiektów i działa lepiej w porównaniu z przy użyciu wielu osoba <xref:System.Windows.Media.PathGeometry> obiektów.  
   
  W poniższym przykładzie użyto składni atrybutów, aby utworzyć trójkątna <xref:System.Windows.Media.StreamGeometry> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   

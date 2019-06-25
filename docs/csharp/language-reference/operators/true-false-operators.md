@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: f4391e73b17c3700dc04240e1289b523c4bdc596
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4e386597594df3092fdb8b1f5329da6539766262
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025032"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347806"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatory true i false (C# odwołania)
 
@@ -28,7 +28,7 @@ Poniższy przykład przedstawia typ, który określa zarówno `true` i `false` o
 
 [!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
-Zwróć uwagę, zachowanie short-circuiting `&&` operatora. Gdy `GetFuelLaunchStatus` metoda zwraca `LaunchStatus.Red`, drugi operand `&&` operator nie jest oceniany. To dlatego, że `LaunchStatus.Red` ma zdecydowanie wartość false. Następnie wynik logicznego i nie zależy od wartości drugiego operandu. Dane wyjściowe z przykładu jest następująca:
+Zwróć uwagę, zachowanie short-circuiting `&&` operatora. Gdy `GetFuelLaunchStatus` metoda zwraca `LaunchStatus.Red`, prawostronny operand `&&` operator nie jest oceniany. To dlatego, że `LaunchStatus.Red` ma zdecydowanie wartość false. Następnie wynik logicznego i nie zależy od wartości po prawej stronie operandu. Dane wyjściowe z przykładu jest następująca:
 
 ```console
 Getting fuel launch status...

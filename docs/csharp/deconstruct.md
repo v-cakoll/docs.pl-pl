@@ -5,16 +5,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 6c24c1ec04bdd7ce7ee2061c2551652e26a28cf9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c5946f5df8a94bf8b54c10f33234b40338a622
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646738"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348159"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Dekonstrukcja krotek i innych typów
 
-Spójna kolekcja zapewnia sposób lekki Pobieranie wielu wartości z wywołania metody. Jednak po pobraniu spójnej kolekcji, trzeba obsługiwać poszczególne elementy. Na podstawie elementów — jest to skomplikowane, co ilustruje poniższy przykład. `QueryCityData` Metoda zwróci wartość 3-krotka, a każdy z jej elementów jest przypisany do zmiennej w oddzielnych operacji.
+Spójna kolekcja umożliwia uproszczone Pobieranie wielu wartości z wywołania metody. Jednak po pobraniu spójnej kolekcji, trzeba obsługiwać poszczególne elementy. Na podstawie elementów — jest to skomplikowane, co ilustruje poniższy przykład. `QueryCityData` Metoda zwróci wartość 3-krotka, a każdy z jej elementów jest przypisany do zmiennej w oddzielnych operacji.
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 

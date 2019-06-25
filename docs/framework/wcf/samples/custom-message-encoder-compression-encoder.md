@@ -2,12 +2,12 @@
 title: 'Niestandardowy koder komunikatów: Koder kompresji'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878460"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348426"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Niestandardowy koder komunikatów: Koder kompresji
 Ten przykład demonstruje sposób implementacji niestandardowego kodera, za pomocą platformy Windows Communication Foundation (WCF).  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  Chociaż może to być wystarczające w większości scenariuszy użytkowników, obsługa plik konfiguracyjny ma krytyczne znaczenie, jeśli usługa ma być hostowane w sieci Web. Aby zapewnić obsługę scenariusza hostingu w sieci Web, możesz tworzyć obsługi niestandardowej konfiguracji, aby zezwolić na element niestandardowego powiązania umożliwiać konfigurację w pliku.  
   
- Można utworzyć program obsługi konfiguracji dla elementu powiązania na podstawie dostarczonych przez system konfiguracji [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Obsługa konfiguracji element powiązania musi pochodzić od klasy <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy. `BindingElementType` Właściwość jest używana w celu poinformowania systemu konfiguracji typu elementu powiązania do utworzenia dla tej sekcji. Wszystkie aspekty `BindingElement` , może być zestaw powinny zostać ujawnione jako właściwości na <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy pochodnej. <xref:System.Configuration.ConfigurationPropertyAttribute> Jest używany jako pomoc w mapowania atrybutów elementów konfiguracji do właściwości i ustawianie wartości domyślnych, jeśli atrybuty są spełnione. Po wartości z konfiguracji zostaną załadowane i zastosowane do właściwości, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> wywoływana jest metoda, która konwertuje właściwości na konkretne wystąpienie elementu powiązania. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> Metoda jest używana do konwersji właściwości na <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy pochodnej na wartości, które ma być ustawiony na element powiązania newlycreated.  
+ Można utworzyć program obsługi konfiguracji dla elementu powiązania na podstawie systemu konfiguracji. Obsługa konfiguracji element powiązania musi pochodzić od klasy <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Informuje system konfiguracji typu elementu powiązania do utworzenia dla tej sekcji. Wszystkie aspekty `BindingElement` , może być zestaw powinny zostać ujawnione jako właściwości na <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy pochodnej. <xref:System.Configuration.ConfigurationPropertyAttribute> Pomaga w mapowania atrybutów elementów konfiguracji do właściwości i ustawianie wartości domyślnych, jeśli atrybuty są spełnione. Po wartości z konfiguracji zostaną załadowane i zastosowane do właściwości, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> wywoływana jest metoda, która konwertuje właściwości na konkretne wystąpienie elementu powiązania. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> Metoda jest używana do konwersji właściwości na <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy pochodnej na wartości, które ma być ustawiony na element nowo utworzone wiązanie.  
   
  Następujący przykładowy kod przedstawia implementację `GZipMessageEncodingElement`.  
   

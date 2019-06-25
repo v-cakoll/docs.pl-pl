@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592609"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348488"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderowanie formantów przy użyciu stylów wizualnych
 .NET Framework zapewnia obsługę renderowania kontrolek i innych użytkowników Windows elementów interfejsu (UI), przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują. W tym temacie omówiono kilka poziomów pomocy technicznej w programie .NET Framework dla formantów renderowania i inne elementy interfejsu użytkownika przy użyciu bieżącego stylu wizualnego systemu operacyjnego.  
@@ -23,7 +23,7 @@ ms.locfileid: "65592609"
 ## <a name="rendering-classes-for-common-controls"></a>Klasy renderowania dla formantów standardowych  
  Renderowanie formantu odwołuje się do rysowania kontrolki interfejsu użytkownika. <xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeń nazw zawiera <xref:System.Windows.Forms.ControlPaint> kontrolek formularzy Windows klasy renderowania niektórych typowych. Jednak ta klasa rysuje kontrolek w stylu klasycznym Windows, który może utrudnić Utrzymaj spójne środowisko interfejsu użytkownika po włączeniu rysowania formantów niestandardowych w aplikacjach przy użyciu stylów wizualnych.  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] Obejmuje klas w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw, renderowanie części i Stany wspólnych formantów przy użyciu stylów wizualnych. Każda z tych klas zawiera `static` metody służące do rysowania formantu lub części kontrolki w określonym stanie przy użyciu bieżącego stylu wizualnego systemu operacyjnego.  
+ .NET Framework 2.0 obejmuje klas w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw, renderowanie części i Stany wspólnych formantów przy użyciu stylów wizualnych. Każda z tych klas zawiera `static` metody służące do rysowania formantu lub części kontrolki w określonym stanie przy użyciu bieżącego stylu wizualnego systemu operacyjnego.  
   
  Niektóre z tych klas są przeznaczone do rysowania pokrewnej kontrolki, niezależnie od tego, czy są dostępne style wizualne. Po włączeniu funkcji stylów wizualnych następnie składowych klasy narysuje pokrewnej kontrolki przy użyciu stylów wizualnych; Wyłączenie funkcji stylów wizualnych składowych klasy będzie narysuj kontrolkę w stylu klasycznym Windows. W ramach tych zajęć, obejmują:  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2dcc9e70f51c3c96cbc3af238fed21021ff7ae2c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642506"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347370"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>Instrukcje: Wyślij dane przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura jest często używane dane do strony sieci Web. 
@@ -31,7 +31,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     ```  
   
     > [!NOTE]
-    > Program .NET Framework zawiera klasy pochodne klasy specyficzne dla protokołu <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klas pochodnych identyfikatorów URI, które zaczynają się od *http:*, *https:*, *ftp:* , a *pliku:*.
+    > Program .NET Framework zawiera klasy pochodne klasy specyficzne dla protokołu <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klas pochodnych identyfikatorów URI, które zaczynają się od *http:* , *https:* , *ftp:* , a *pliku:* .
     Jeśli musisz set lub odczytu właściwości specyficzne dla protokołu, należy rzutować swoje <xref:System.Net.WebRequest> lub <xref:System.Net.WebResponse> obiektu z typem obiektów specyficznych dla protokołu. Aby uzyskać więcej informacji, zobacz [programowanie protokołów podłączanych](programming-pluggable-protocols.md). 
   
 2. Ustaw wszystkie wartości właściwości, które są potrzebne w Twojej `WebRequest` obiektu. Na przykład, aby włączyć uwierzytelnianie, należy ustawić <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> właściwości wystąpienia <xref:System.Net.NetworkCredential> klasy:
@@ -80,8 +80,8 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     Stream dataStream = request.GetRequestStream();  
     ```  
   
-    ```vb  
-    Stream dataStream = request.GetRequestStream()  
+    ```vb
+    Dim dataStream As Stream = request.GetRequestStream()  
     ```  
   
 7. Zapisane dane <xref:System.IO.Stream> obiektu zwróconego przez `GetRequestStream` metody. Na przykład:
@@ -148,7 +148,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
   
 ## <a name="example"></a>Przykład  
   
-Poniższy przykład kodu pokazuje, jak wysyłać dane do serwera sieci web i odczytywać je w swojej odpowiedzi:  
+Poniższy przykład pokazuje, jak wysyłać dane do serwera sieci web i odczytywać je w swojej odpowiedzi:  
 
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]

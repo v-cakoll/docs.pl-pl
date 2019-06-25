@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26fed0a10b9a25f25a580c7ac9a468cbedeb3671
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 00af9cf60d0bd2bac60950617b1315579d1a5a4d
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489471"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347338"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
 Określa, czy PerfCounter.dll używa ustawienia rejestru CategoryOptions w aplikacji .NET Framework w wersji 1.1 do określenia, czy można załadować danych licznika wydajności z pamięci współużytkowanej specyficznego dla kategorii lub globalnej pamięci.  
@@ -55,7 +55,7 @@ enabled="true|false"/>
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- W wersjach programu .NET Framework przed programu .NET Framework 4 wersja PerfCounter.dll, który został załadowany uzgodnić do środowiska uruchomieniowego, który został załadowany w procesie. Jeśli komputer ma zarówno programu .NET Framework w wersji 1.1 i [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] zainstalowany, aplikacji programu .NET Framework 1.1 będzie załadować wersji .NET Framework 1.1 PerfCounter.dll. Począwszy od programu .NET Framework 4, zainstalowaną najnowszą wersję PerfCounter.dll jest ładowany. Oznacza to, że aplikacji .NET Framework 1.1 załaduje PerfCounter.dll w wersji .NET Framework 4, jeśli programu .NET Framework 4 jest zainstalowana na komputerze.  
+ W wersjach programu .NET Framework przed programu .NET Framework 4 wersja PerfCounter.dll, który został załadowany uzgodnić do środowiska uruchomieniowego, który został załadowany w procesie. Jeśli komputer ma zainstalowany .NET Framework 2.0 i .NET Framework w wersji 1.1, aplikacji programu .NET Framework 1.1 będzie załadować wersji .NET Framework 1.1 PerfCounter.dll. Począwszy od programu .NET Framework 4, zainstalowaną najnowszą wersję PerfCounter.dll jest ładowany. Oznacza to, że aplikacji .NET Framework 1.1 załaduje PerfCounter.dll w wersji .NET Framework 4, jeśli programu .NET Framework 4 jest zainstalowana na komputerze.  
   
  Zaczynając od programu .NET Framework 4, podczas korzystania z liczników wydajności, PerfCounter.dll sprawdza, czy wpis rejestru CategoryOptions dla każdego dostawcy ustalić, czy powinni przeczytać z pamięci współużytkowanej specyficznego dla kategorii lub globalnej pamięci współdzielonej. PerfCounter.dll 1.1 programu .NET Framework nie odczytać ten wpis rejestru, ponieważ nie ma informacji o pamięci współużytkowanej specyficznego dla kategorii; zawsze odczytuje z globalnej pamięci współdzielonej.  
   

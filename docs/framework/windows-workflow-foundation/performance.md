@@ -2,12 +2,12 @@
 title: Wydajność programu Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592545"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348535"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Wydajność programu Windows Workflow Foundation 4
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592545"
 ### <a name="wf-runtime"></a>Środowisko uruchomieniowe programu WF
  W samym sercu [!INCLUDE[wf1](../../../includes/wf1-md.md)] środowisko uruchomieniowe jest asynchroniczne harmonogramu, która napędza wykonywania działań w przepływie pracy. Zapewnia wydajne, środowiska wykonawczego przewidywalne działań. Środowisko ma dobrze zdefiniowanego kontraktu w celu wykonywania, kontynuacja, zakończenia, anulowania, wyjątki i przewidywalne modelu wątkowości.
 
- Porównaniu WF3 środowisko uruchomieniowe WF4 ma bardziej wydajne harmonogramu. Korzysta z tej samej puli wątków We/Wy, używany do usługi WCF, który jest bardzo wydajny w wykonywania elementów roboczych wsadowej. Wewnętrzny element harmonogramu kolejki jest zoptymalizowany pod kątem najbardziej typowe wzorce użycia. Środowisko uruchomieniowe WF4 zarządza także Państwa wykonanie przebiega bardzo lekkie z minimalnym synchronizacją i obsługi logiki, podczas gdy WF3 zależy od rejestracji ciężki zdarzenia i wywołania w celu przeprowadzenia synchronizacji złożonych stanami zdarzeń.
+ Porównaniu WF3 środowisko uruchomieniowe WF4 ma bardziej wydajne harmonogramu. Korzysta z tej samej puli wątków We/Wy, używany do usługi WCF, który jest bardzo wydajny w wykonywania elementów roboczych wsadowej. Wewnętrzny element harmonogramu kolejki jest zoptymalizowany pod kątem najbardziej typowe wzorce użycia. Środowisko uruchomieniowe WF4 zarządza także Stany wykonanie przebiega bardzo z minimalnym synchronizacją i obsługi logiki, podczas gdy WF3 zależy od rejestracji ciężki zdarzenia i wywołania w celu przeprowadzenia synchronizacji złożonych stanami zdarzeń.
 
 ### <a name="data-storage-and-flow"></a>Magazyn danych i przepływu
  W WF3, dane związane z działaniem jest modelowane przy użyciu właściwości zależności implementowany przez typ. <xref:System.Windows.DependencyProperty>. Wzorzec właściwość zależności został wprowadzony w Windows Presentation Foundation (WPF). Ogólnie rzecz biorąc ten wzorzec jest bardzo elastyczny obsługuje powiązanie danych łatwy i inne funkcje interfejsu użytkownika. Wzorzec wymaga jednak właściwości można zdefiniować jako statyczne pola w definicji przepływu pracy. Zawsze, gdy [!INCLUDE[wf1](../../../includes/wf1-md.md)] środowiska uruchomieniowego, ustawia lub pobiera wartości właściwości, spowodowałoby to logiki intensywnie ważona wyszukiwania.
@@ -43,12 +43,12 @@ ms.locfileid: "65592545"
 ### <a name="control-flow"></a>Przepływ sterowania
  Podobnie jak w przypadku dowolnego języka programowania [!INCLUDE[wf1](../../../includes/wf1-md.md)] zapewnia obsługę przez wprowadzenie do zestawu działań przepływu sterowania do sekwencjonowania, pętli, rozgałęziania i inne wzorce przepływów sterowania dla definicji przepływu pracy. W WF3, gdy tego samego działania musi ponownie uruchomić nowej <xref:System.Workflow.ComponentModel.ActivityExecutionContext> jest tworzony i działanie został sklonowany za pośrednictwem ciężki serializacji i deserializacji logiki na podstawie <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Zwykle wydajność przepływów sterowania iteracyjne jest znacznie wolniejsze niż wykonywanie sekwencję działań.
 
- WF4 obsługuje to dość w inny sposób. Jego przyjmuje szablon działania, tworzy nowy obiekt ActivityInstance i dodaje go do kolejki harmonogramu. Całego tego procesu obejmuje tworzenie jawnych obiektów i tylko to bardzo lekkie.
+ WF4 obsługuje to dość w inny sposób. Jego przyjmuje szablon działania, tworzy nowy obiekt ActivityInstance i dodaje go do kolejki harmonogramu. Całego tego procesu obejmuje tworzenie jawnych obiektów i tylko jest bardzo uproszczone.
 
 ### <a name="asynchronous-programming"></a>Programowanie asynchroniczne
  Aplikacje zazwyczaj mają lepszą wydajność i skalowalność za pomocą programowania asynchronicznego rozproszonych operacje obliczeniowe lub długotrwałe blokowania operacjami We/Wy. WF4 zapewnia obsługę asynchroniczną za pośrednictwem typów podstawowego elementu activity <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.AsyncCodeActivity%601>. Środowisko uruchomieniowe natywną obsługę działań asynchronicznych i w związku z tym można automatycznie umieść wystąpienia w strefie no-persist pracę asynchroniczną jest zaległe. Niestandardowe działania może pochodzić z tych typów do wykonywania zadań asynchronicznych bez przytrzymując wątku harmonogramu przepływów pracy i zablokowanie wszelkich działań, które można uruchomić równolegle.
 
-### <a name="messaging"></a>Obsługa wiadomości
+### <a name="messaging"></a>Obsługa komunikatów
  Początkowo zawierała WF3 bardzo ograniczona obsługa komunikatów za pośrednictwem sieci web lub zdarzenia zewnętrzne usługi wywołania. W .NET 3.5 przepływy pracy mogą zostać zaimplementowane jako klienci WCF lub widoczne jako usług WCF za pomocą <xref:System.Workflow.Activities.SendActivity> i <xref:System.Workflow.Activities.ReceiveActivity>. W WF4 koncepcji programowania obsługi komunikatów opartego o przepływ pracy ma zostały wzmocnione dzięki ścisłej integracji WCF komunikatów logikę do programu WF.
 
  Potok przetwarzania komunikatów ujednoliconego dostarczane w programie WCF w programie .NET 4 pomaga WF4 usług znacznie lepszą wydajność i skalowalność niż WF3. WF4 udostępnia bogatszy komunikatów obsługę programowania, która umożliwia modelowanie złożonych wzorców wymiany komunikatów (MEPs). Deweloperzy mogą używać obu kontraktów usług wpisane do osiągnięcia łatwego programowania lub kontraktów usług bez osiągnąć większą wydajność bez ponoszenia kosztów serializacji. Po stronie klienta pamięci podręcznej techniczną za pośrednictwem witryny channel <xref:System.ServiceModel.Activities.SendMessageChannelCache> klasy w WF4 pomaga deweloperom wbudowywać szybkie aplikacje przy minimalnym nakładzie pracy. Aby uzyskać więcej informacji, zobacz [Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
@@ -432,7 +432,7 @@ public class Workflow1 : Activity
 
  Monitorowanie kondycji ma około 3% wpływ na przepustowość.  Koszt profilu podstawowego jest około 8%.
 
-## <a name="interop"></a>Usługa międzyoperacyjna
+## <a name="interop"></a>Interop
  WF4 jest niemal ukończone nadpisania [!INCLUDE[wf1](../../../includes/wf1-md.md)] i w związku z tym WF3 przepływów pracy i działań nie są bezpośrednio zgodne z WF4.  Wielu klientów, które wcześniej przyjęte Windows Workflow Foundation mają definicji przepływu pracy wewnętrznymi lub innych firm i niestandardowych działań dla WF3.  Jednym ze sposobów, aby ułatwić przejście na WF4 jest użyć międzyoperacyjny działania, które można wykonać działania WF3 z WF4 przepływu pracy.  Zalecane jest, <xref:System.Activities.Statements.Interop> działania można używać tylko gdy jest to konieczne. Aby uzyskać więcej informacji na temat migracji do WF4 zapoznaj się z [wskazówek dotyczących migracji WF4](https://go.microsoft.com/fwlink/?LinkID=153313).
 
 ### <a name="environment-setup"></a>Konfigurowanie środowiska

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486525"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347392"
 ---
 # <a name="shadow-copying-assemblies"></a>Kopiowanie zestawów w tle
 Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należy zaktualizować bez rozładowywania domeny aplikacji w tle. Jest to szczególnie przydatne w przypadku aplikacji, które muszą być dostępne w sposób ciągły, takich jak witryny programu ASP.NET.  
@@ -34,7 +34,7 @@ Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należ
   
 - [Startowa wydajność](#StartupPerformance) w tym artykule opisano zmiany, które zostały wprowadzone w tle kopiowanie w .NET Framework 4, aby zwiększyć wydajność uruchamiania i jak przywrócić działanie wcześniejszych wersji.  
   
-- [Metody przestarzałe](#ObsoleteMethods) w tym artykule opisano zmiany, które zostały wprowadzone do właściwości i metod tego formantu kopiowanie w tle w [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
+- [Metody przestarzałe](#ObsoleteMethods) opisano zmiany, które zostały wprowadzone do właściwości i metod, które kontrolują kopiowania w tle w programie .NET Framework 2.0.  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Włączanie i korzystanie z kopiowania w tle  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afd4b77529f64852e77926b7fecc0e15033e7735
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82cecb42ebe9353073cca9fd2de7d8dc9f368b10
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052702"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348513"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in ułatwień dostępu w programie .NET Framework
 
@@ -247,7 +247,7 @@ Aby włączyć tę funkcję, aplikacja musi platformą docelową jest program .N
 Po włączeniu wszystkich kontrolek, które zawierają etykietka narzędzia wyświetlić po formant uzyskuje fokus klawiatury. Etykietka narzędzia może być ukryty w czasie lub podczas zmiany fokus klawiatury. Użytkownicy mogą również odrzucić etykietki narzędzia ręcznie przy użyciu nowego skrótu klawiaturowego Ctrl + Shift + F10. Gdy etykietka narzędzia został odrzucony. może być wyświetlany ponownie przy użyciu tego samego skrótu klawiaturowego.
 
 > [!NOTE]
-> [Etykietki narzędzi wstążki] (xref:System.Windows.Controls.Ribbon.RibbonToolTips > na <xref:System.Windows.Controls.Ribbon.Ribbon> kontrolek nie zostanie wyświetlona na klawiaturę; pokazują za pomocą skrótów klawiaturowych.
+> [Wstążka etykietki narzędzi](xref:System.Windows.Controls.Ribbon.RibbonToolTip) na <xref:System.Windows.Controls.Ribbon.Ribbon> kontrolek nie zostanie wyświetlona na klawiaturę; pokazują za pomocą skrótów klawiaturowych.
 
 **Dodano obsługę SizeOfSet i biblioteki PositionInSet UIAutomation właściwości**
 

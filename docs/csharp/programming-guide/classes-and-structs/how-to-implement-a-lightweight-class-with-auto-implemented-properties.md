@@ -6,19 +6,21 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: be4d7e5cf4d2f7c117766858dbba9c7c59c74b73
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 5f3e7b831f701145caa1a4fb50f6bb1a4ece4103
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267683"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347753"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Instrukcje: Implementowanie klasy Lightweight przy użyciu automatycznie implementowanych właściwości (C# Programming Guide)
 Ten przykład przedstawia sposób tworzenia niezmienne klasy lightweight, która służy tylko do hermetyzacji zbiór właściwości zaimplementowane automatycznie. Użyj ten rodzaj konstrukcji zamiast struktury, gdy należy użyć semantyki typu odwołania.  
   
- Istnieje możliwość niezmienialnych właściwości na dwa sposoby.  Można zadeklarować [ustaw](../../../csharp/language-reference/keywords/set.md) dostępu jako [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale jest niezmienny do klientów.  Zamiast tego można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość niezmienne wszędzie, z wyjątkiem w Konstruktorze typu.  
-  
- Kiedy Deklarujesz prywatnej `set` dostępu, nie można używać inicjatora obiektu można zainicjować właściwości. Należy użyć konstruktora lub metody fabryki.  
+ Właściwość niezmienne może wykonać na dwa sposoby:
+  - Można zadeklarować [ustaw](../../../csharp/language-reference/keywords/set.md) dostępu jako [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale jest niezmienny do klientów.  
+    
+    Kiedy Deklarujesz prywatnej `set` dostępu, nie można używać inicjatora obiektu można zainicjować właściwości. Należy użyć konstruktora lub metody fabryki.  
+  - Można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość niezmienne wszędzie, z wyjątkiem w Konstruktorze typu.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia dwa sposoby zaimplementowania niezmienialne klasy, która ma właściwości zaimplementowane automatycznie. Każdy sposób deklaruje jedna z właściwości za pomocą prywatnej `set` i jedna z właściwości z `get` tylko.  Najwyższej klasy używa konstruktora tylko do zainicjowania właściwości i klasy sekundę używa metody statyczne fabryka, która wywołuje konstruktora.  

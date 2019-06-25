@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 327168e3ac77ab1ed7c9841d592781c704839660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca429db9b3ad81555df3c7e02d8827136734e26c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599788"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347743"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą być zwracane typy:
@@ -73,7 +73,7 @@ Począwszy od języka C# 7.0 metody asynchronicznej może zwrócić dowolnego ty
  
 Ponieważ <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> są typami odwołań, alokacji pamięci w ścieżkach newralgicznym dla wydajności, szczególnie w przypadku, gdy alokacje występują w ścisłej pętli, może niekorzystnie wpłynąć na wydajność. Pomoc techniczna dla ogólnych typów zwracanych oznacza, że może zwrócić typu lightweight wartości zamiast typem referencyjnym, aby uniknąć alokacji pamięci dodatkowe. 
 
-.NET zapewnia <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> struktury jako lekki stosowania uogólnionego wartość zwracania zadania. Aby użyć <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> typu, należy dodać `System.Threading.Tasks.Extensions` pakiet NuGet do projektu. W poniższym przykładzie użyto <xref:System.Threading.Tasks.ValueTask%601> przedstawia strukturę, aby pobrać wartość dwóch dice. 
+.NET zapewnia <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> struktury jako uproszczone implementacji uogólnionego wartość zwracania zadania. Aby użyć <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> typu, należy dodać `System.Threading.Tasks.Extensions` pakiet NuGet do projektu. W poniższym przykładzie użyto <xref:System.Threading.Tasks.ValueTask%601> przedstawia strukturę, aby pobrać wartość dwóch dice. 
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 

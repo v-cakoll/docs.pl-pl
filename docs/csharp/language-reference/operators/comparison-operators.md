@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0e6edf9bcc0954bf06e76b238b2bb07dea040a9c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025210"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347895"
 ---
 # <a name="comparison-operators-c-reference"></a>Operatory porównania (C# odwołania)
 
@@ -39,25 +39,25 @@ Typy wyliczeniowe obsługują także operatory porównania. Dla argumentów oper
 
 ## <a name="less-than-operator-"></a>Operator mniejszości \<
 
-`<` Operator zwraca `true` Jeśli pierwszy argument operacji jest mniejszy niż drugi argument operacji `false` inaczej:
+`<` Operator zwraca `true` jeśli jej argument po lewej stronie jest mniejsza niż jej prawostronny operand `false` inaczej:
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>Operator Grater than >
 
-`>` Operator zwraca `true` Jeśli pierwszy argument operacji jest większy niż drugi argument operacji `false` inaczej:
+`>` Operator zwraca `true` jeśli jej argument po lewej stronie jest większa niż jego prawostronny operand `false` inaczej:
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>Mniejsze niż lub równe — operator \<=
 
-`<=` Operator zwraca `true` Jeśli pierwszy argument operacji jest mniejszy niż drugi argument operacji `false` inaczej:
+`<=` Operator zwraca `true` Jeśli argumentem operacji po lewej stronie jest mniejsza niż jej prawostronny operand `false` inaczej:
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>Większe lub równe — operator > =
 
-`>=` Operator zwraca `true` Jeśli pierwszy argument operacji jest większa lub równa drugim argumentem `false` inaczej:
+`>=` Operator zwraca `true` jeśli jej argument po lewej stronie jest większa lub równa jego prawostronny operand `false` inaczej:
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 

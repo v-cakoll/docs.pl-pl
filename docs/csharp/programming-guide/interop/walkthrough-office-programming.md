@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 47a388caecf3164f3b76db91f7c70f39f7b0f659
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169849"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347644"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Przewodnik: Programowanie Office (C# i Visual Basic)
 Visual Studio oferuje funkcje w języku C# i Visual Basic, które zwiększają programowania Microsoft Office. Przydatne funkcje języka C# zawierają argumenty nazwane i opcjonalne i zwracanie wartości typu `dynamic`. W programowaniu modelu COM, można pominąć `ref` — słowo kluczowe i uzyskanie dostępu do właściwości indeksowanych. Funkcje w języku Visual Basic obejmują automatycznie implementowane właściwości instrukcji w wyrażeniach lambda i inicjatory kolekcji.
@@ -27,7 +27,6 @@ W tym instruktażu przedstawiono te funkcje w kontekście programowania pakietu 
 
 Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainstalowana na danym komputerze, w tym przewodniku.  
   
- Jeśli używasz systemu operacyjnego, która jest starsza niż [!INCLUDE[windowsver](~/includes/windowsver-md.md)], upewnij się, że [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] jest zainstalowany.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -115,7 +114,7 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]  
   
-     Te dodatki pokazują innej funkcji w języku C#: traktowanie `Object` zwracane z hostów COM, takich jak Office tak, jakby mają typu [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md). Jest to wykonywane automatycznie po **Osadź typy współdziałania** jest ustawiona na wartość domyślną `True`, lub ekwiwalentnie, gdy zestaw odwołuje się do niej [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora. Typ `dynamic` umożliwia późnym wiązaniu już dostępna w języku Visual Basic i uniknięcie rzutowania jawnego, wymagany w Visual C# 2008 i wcześniejszych wersjach języka.  
+     Te dodatki pokazują innej funkcji w języku C#: traktowanie `Object` zwracane z hostów COM, takich jak Office tak, jakby mają typu [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md). Jest to wykonywane automatycznie po **Osadź typy współdziałania** jest ustawiona na wartość domyślną `True`, lub ekwiwalentnie, gdy zestaw odwołuje się do niej [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora. Typ `dynamic` umożliwia późnym wiązaniu już dostępna w języku Visual Basic i uniknięcie rzutowania jawnego, wymagane w C# 3.0 i wcześniejszych wersjach języka.  
   
      Na przykład `excelApp.Columns[1]` zwraca `Object`, i `AutoFit` nadaje się program Excel [zakres](<xref:Microsoft.Office.Interop.Excel.Range>) metody. Bez `dynamic`, należy rzutować obiektu zwróconego przez `excelApp.Columns[1]` jako wystąpienie `Range` przed wywołaniem metody `AutoFit`.  
   

@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 7.3
 description: Omówienie nowych funkcji w języku C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e45893be671b707efbde352eef04fa92af94954
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832711"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347406"
 ---
 # <a name="whats-new-in-c-73"></a>Co nowego w języku C# 7.3
 
@@ -34,7 +34,13 @@ Nowe opcje kompilatora są:
 - `-publicsign` Aby włączyć, Otwórz źródło oprogramowania (OSS) podpisywanie zestawów.
 - `-pathmap` Aby zapewnić mapowanie katalogi źródłowe.
 
-W dalszej części tego artykułu zawiera szczegółowe informacje i łącza, aby dowiedzieć się więcej na temat ulepszenia.
+W dalszej części tego artykułu zawiera szczegółowe informacje i łącza, aby dowiedzieć się więcej na temat ulepszenia. Możesz zapoznać się z tych funkcji w środowisku przy użyciu `dotnet try` narzędzie globalne:
+
+1. Zainstaluj [spróbuj dotnet](https://github.com/dotnet/try/blob/master/README.md#setup) narzędzie globalne.
+1. Klonuj [dotnet/try-samples](https://github.com/dotnet/try-samples) repozytorium.
+1. Ustaw bieżący katalog *csharp7* podkatalog *try-samples* repozytorium.
+1. Uruchom `dotnet try`.
+
 
 ## <a name="enabling-more-efficient-safe-code"></a>Włączanie bardziej wydajne, bezpieczne kodu
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169904"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348206"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Instrukcje: Pobieranie danych ze schowka
 <xref:System.Windows.Forms.Clipboard> Klasa zawiera metody, które służy do interakcji z funkcją Schowka systemu operacyjnego Windows. Wiele aplikacji używa Schowka jako tymczasowy repozytorium danych. Na przykład edytory użyć Schowka podczas operacji kopiowania i wklejania. Schowek jest również przydatne w przypadku przenoszenia informacji z jednej aplikacji do innej.  
@@ -22,7 +22,7 @@ ms.locfileid: "67169904"
   
  Aby ustalić, czy Schowek zawiera dane w określonym formacie, użyj jednej z `Contains` *Format* metody lub <xref:System.Windows.Forms.Clipboard.GetData%2A> metody. Aby pobrać dane ze Schowka, użyj jednej z `Get` *Format* metody lub <xref:System.Windows.Forms.Clipboard.GetData%2A> metody. Te metody są nowością w programie .NET Framework 2.0.  
   
- Dostęp do danych ze Schowka za pomocą wersji starszej niż [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], użyj <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> — metoda i wywołać metodę zwracanego <xref:System.Windows.Forms.IDataObject>. Aby ustalić, czy określonego formatu jest dostępna w zwróconego obiektu, na przykład wywołać <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> metody.  
+ Aby uzyskać dostęp do danych ze Schowka przy użyciu wersji wcześniejszej niż .NET Framework 2.0, należy użyć <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> metody i wywołać metodę zwracanego <xref:System.Windows.Forms.IDataObject>. Aby ustalić, czy określonego formatu jest dostępna w zwróconego obiektu, na przykład wywołać <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> metody.  
   
 > [!NOTE]
 >  Wszystkie aplikacje oparte na Windows Udostępnianie Schowka systemu Windows. W związku z tym zawartość mogą ulec zmianie po przełączeniu do innej aplikacji.  
@@ -49,7 +49,7 @@ ms.locfileid: "67169904"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Można pobrać danych ze Schowka w wielu formatach  
   
-1. Użyj <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> metody. Należy użyć tej metody do pobierania danych ze Schowka w wersjach wcześniejszych niż [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Użyj <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> metody. Należy użyć tej metody do pobierania danych ze Schowka w wersjach wcześniejszych niż .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

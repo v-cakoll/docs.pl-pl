@@ -2,12 +2,12 @@
 title: Proceduralne przepływy pracy
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: 2ef23f61e67e0b4c08f12322bac429762205ef8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15ff155fb057c4c10663d383a8942108c6e4375c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622852"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348367"
 ---
 # <a name="procedural-workflows"></a>Proceduralne przepływy pracy
 Proceduralne przepływy pracy za pomocą metod sterowanie przepływem podobne do tych w procedurach językach. Te konstrukcje obejmują `While` i `If`. Te przepływy pracy mogą być swobodnie składane, przy użyciu innych działań sterowania przepływem, takich jak <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence>.  
@@ -34,7 +34,7 @@ Proceduralne przepływy pracy za pomocą metod sterowanie przepływem podobne do
  Aby użyć działania sterowania przepływem, przeciągnij i upuść je z **działania** przybornika do działania złożonego wewnątrz okna projektanta.  
   
 > [!NOTE]
->  Jeśli przy użyciu [!INCLUDE[dublin](../../../includes/dublin-md.md)] hosta przepływów pracy, w ramach farmy sieci Web AppFabric przeniesie wystąpień między różnymi serwerami AppFabric. Wymaga to, że zasoby mogą być współużytkowane przez wszystkie węzły.  Brak domyślnych działań przepływu pracy NET 4 zawierać dowolne operacje wymagające dostępu do zasobów lokalnych. Ponieważ AppFabric nie oferuje żadnych mechanizm zaznaczania przepływów pracy jako nieruchome, deweloper nie należy utworzyć niestandardowe działania, które się nie powieść, gdy przepływ pracy zostanie przeniesiony.  
+>  Jeśli używane funkcje hostingu programu Windows Server AppFabric hosta przepływów pracy w ramach farmy sieci Web, AppFabric zostanie przesunięty wystąpień między różnymi serwerami AppFabric. Wymaga to, że zasoby mogą być współużytkowane przez wszystkie węzły.  Brak domyślnych działań przepływu pracy NET 4 zawierać dowolne operacje wymagające dostępu do zasobów lokalnych. Ponieważ AppFabric nie oferuje żadnych mechanizm zaznaczania przepływów pracy jako nieruchome, deweloper nie należy utworzyć niestandardowe działania, które się nie powieść, gdy przepływ pracy zostanie przeniesiony.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 99cf5b42700779a3eb48eb6452365056f5fa89ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: fecfe8473a33be1a777fc5dde80c292f940e0d41
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306581"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347859"
 ---
 # <a name="c-operators-c-reference"></a>C#operatory (C# odwołania)
 
@@ -171,13 +171,13 @@ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet ni�
 
 Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-) — operatora logicznego AND. Jeśli pierwszy operand zwróci wartość false, następnie C# nie może oszacować drugiego operandu.
+[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-) — operatora logicznego AND. Jeśli `x` daje w wyniku `false`, następnie `y` nie jest oceniany.
 
 ## <a name="conditional-or-operator"></a>Operator warunkowy OR
 
 Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) — operator logiczny lub. Jeśli pierwszy argument zwraca wartość true, następnie C# nie może oszacować drugiego operandu.
+[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) — operator logiczny lub. Jeśli `x` daje w wyniku `true`, następnie `y` nie jest oceniany.
 
 ## <a name="null-coalescing-operator"></a>Operatorem łączenia wartości null
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 6a014309829d7dbd477a7ae4a658b84a3f35d91f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84583f96ab8493ff05a4e80dcc843eff1cc7a5ef
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710124"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347584"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Typy ogólne i odbicie (Przewodnik programowania w języku C#)
 Ponieważ środowisko uruchomieniowe języka wspólnego (CLR) ma dostęp do informacji o typie ogólny w czasie wykonywania, można użyć odbicia, aby uzyskać informacje na temat typów ogólnych w taki sam sposób jak w przypadku typów innych niż ogólne. Aby uzyskać więcej informacji, zobacz [typy ogólne w czasie wykonywania](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
   
- W [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] kilka nowych elementów członkowskich są dodawane do <xref:System.Type> klasy, aby włączyć informacje środowiska wykonawczego dla typów ogólnych. Zobacz dokumentację na temat tych klas, aby uzyskać więcej informacji na temat korzystania z tych metod i właściwości. <xref:System.Reflection.Emit> Przestrzeń nazw zawiera także nowych elementów członkowskich, które obsługują elementy ogólne. Zobacz [jak: Definiowanie typu ogólnego przy użyciu odbicia emitować](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ W programie .NET Framework 2.0, kilka nowych elementów członkowskich są dodawane do <xref:System.Type> klasy, aby włączyć informacje środowiska wykonawczego dla typów ogólnych. Zobacz dokumentację na temat tych klas, aby uzyskać więcej informacji na temat korzystania z tych metod i właściwości. <xref:System.Reflection.Emit> Przestrzeń nazw zawiera także nowych elementów członkowskich, które obsługują elementy ogólne. Zobacz [jak: Definiowanie typu ogólnego przy użyciu odbicia emitować](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
  Aby uzyskać listę niezmiennych warunków dla terminów używanych w odbiciu rodzajowym, zobacz <xref:System.Type.IsGenericType%2A> uwagi dotyczące właściwości.  
   

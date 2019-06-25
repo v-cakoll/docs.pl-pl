@@ -2,12 +2,12 @@
 title: Aktywacja wystąpienia
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584921"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348242"
 ---
 # <a name="instance-activation"></a>Aktywacja wystąpienia
 Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, okresowo budzi się i wykrywa wystąpienia przepływu pracy możliwy do uruchomienia lub aktywowalnej w bazie danych trwałości. Jeśli zostaną znalezione wystąpienia możliwy do uruchomienia przepływu pracy, powiadamia hosta przepływu pracy, który jest w stanie aktywacji wystąpienia. Jeśli Magazyn wystąpienia wykryje wystąpienia przepływu pracy aktywowalnej, powiadamia ogólnego hosta, który aktywuje hosta przepływu pracy, który z kolei uruchamia wystąpienie przepływu pracy. W poniższych sekcjach w tym temacie opisano proces aktywacji wystąpienia szczegółowo.  
@@ -35,7 +35,7 @@ Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, okresowo 
 ## <a name="generic-hosts"></a>Ogólny hostów  
  Ogólny host jest hostem z wartością właściwości metadanych **WorkflowServiceType** ogólnego hostów jest równa **WorkflowServiceType.Any** do wskazania, że może obsługiwać dowolny typ przepływu pracy. Host ogólnego ma parametr XName o nazwie **ActivationType**.  
   
- Obecnie usługa Store wystąpienia przepływu pracy SQL obsługuje ogólny hostów przy użyciu wartości parametru ActivationType równa **WAS**. Jeśli nie ustawiono ActivationType WAS, zgłasza Store wystąpienia przepływu pracy SQL <xref:System.Runtime.DurableInstancing.InstancePersistenceException>. Usługa zarządzania przepływu pracy, który jest dostarczany z [!INCLUDE[dublin](../../../includes/dublin-md.md)] jest ogólny hosta, który ma ustawiony typ aktywacji **WAS**.  
+ Obecnie usługa Store wystąpienia przepływu pracy SQL obsługuje ogólny hostów przy użyciu wartości parametru ActivationType równa **WAS**. Jeśli nie ustawiono ActivationType WAS, zgłasza Store wystąpienia przepływu pracy SQL <xref:System.Runtime.DurableInstancing.InstancePersistenceException>. Usługa zarządzania przepływu pracy, który jest dostarczany z funkcje hostingu programu Windows Server AppFabric to ogólny hosta, który ma ustawiony typ aktywacji **WAS**.  
   
  W celu aktywacji WAS ogólnego hosta wymaga zestawu parametrów aktywacji w celu uzyskania adresu punktu końcowego, w którym można aktywować nowe hosty. Parametry aktywacji WAS aktywacji są nazwę lokacji, ścieżka do aplikacji względem lokacji oraz ścieżkę usługi względem aplikacji. Store wystąpienia przepływu pracy SQL przechowuje te parametry aktywacji podczas wykonywania <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   

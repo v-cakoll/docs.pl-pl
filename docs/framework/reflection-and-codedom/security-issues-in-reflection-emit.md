@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816136"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347317"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemy związane z zabezpieczeniami w emisji odbicia
 Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft intermediate language (MSIL), każdy z własną problemy z zabezpieczeniami:  
@@ -151,7 +151,7 @@ Program .NET Framework oferuje trzy sposoby, aby emitować języka Microsoft int
  Na koniec .NET Framework 2.0 z dodatkiem SP1 wprowadzono anonimowo obsługiwane metody.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Uzyskiwanie informacji dotyczących typów i elementów członkowskich  
- Począwszy od [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], aby uzyskać informacje na temat niepublicznych typy i elementy członkowskie są wymagane żadne uprawnienia. Odbicie jest używany do uzyskiwania informacji potrzebnych do emitowania metody dynamicznej. Na przykład <xref:System.Reflection.MethodInfo> obiekty służą do emitowania wywołania metody. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> flagi. Aby uzyskać więcej informacji, zobacz [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
+ Począwszy od programu .NET Framework 2.0, nie ma uprawnień wymaganych do uzyskania informacji na temat niepublicznych typy i elementy członkowskie. Odbicie jest używany do uzyskiwania informacji potrzebnych do emitowania metody dynamicznej. Na przykład <xref:System.Reflection.MethodInfo> obiekty służą do emitowania wywołania metody. Wcześniejszych wersjach programu .NET Framework wymagają <xref:System.Security.Permissions.ReflectionPermission> z <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> flagi. Aby uzyskać więcej informacji, zobacz [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

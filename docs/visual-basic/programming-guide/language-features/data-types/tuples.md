@@ -4,16 +4,16 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 146e9c2360cea153d2f487769d5b983516861e8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16934232e1e202f1b100680a5101332aa622f2cc
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663300"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348491"
 ---
 # <a name="tuples-visual-basic"></a>Krotki (Visual Basic)
 
-Począwszy od 2017 Visual Basic języka Visual Basic oferuje wbudowaną obsługę krotek, który ułatwia tworzenie krotek i uzyskiwania dostępu do elementów krotek łatwiejsze. Spójna Kolekcja to struktura danych lekki, która ma określoną liczbę i sekwencję wartości. Podczas tworzenia wystąpienia spójnej kolekcji należy zdefiniować numer i typ danych w każdej wartości (lub elementu). Na przykład 2-krotka (lub para) ma dwa elementy. Może być pierwszym `Boolean` wartości, a drugą jest wartość `String`. Ponieważ kolekcje ułatwiają do przechowywania wielu wartości w pojedynczy obiekt, często są one używane jako lekka sposób zwracanie wielu wartości z metody.
+Począwszy od 2017 Visual Basic języka Visual Basic oferuje wbudowaną obsługę krotek, który ułatwia tworzenie krotek i uzyskiwania dostępu do elementów krotek łatwiejsze. Spójna kolekcja jest strukturą danych uproszczone, która ma określoną liczbę i sekwencję wartości. Podczas tworzenia wystąpienia spójnej kolekcji należy zdefiniować numer i typ danych w każdej wartości (lub elementu). Na przykład 2-krotka (lub para) ma dwa elementy. Może być pierwszym `Boolean` wartości, a drugą jest wartość `String`. Ponieważ kolekcje ułatwiają do przechowywania wielu wartości w pojedynczy obiekt, często są one używane jako lekka sposób zwracanie wielu wartości z metody.
 
 > [!IMPORTANT]
 > Obsługa krotki wymaga <xref:System.ValueTuple> typu. Jeśli nie zainstalowano programu .NET Framework 4.7, należy dodać pakiet NuGet `System.ValueTuple`, który jest dostępny w galerii NuGet. Bez tego pakietu może wystąpić błąd kompilacji podobny do "Wstępnie zdefiniowany typ"ValueTuple(Of,,,)"nie został zdefiniowany ani zaimportowany."

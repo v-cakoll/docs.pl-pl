@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013884"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347998"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)
 W poniższej tabeli wymieniono klasy często używane dla .NET Framework w pliku we/wy, podzielone na kategorie klas we/wy pliku klasy służące do tworzenia strumieni i klas używanych do odczytu i zapisu do strumieni.  
   
- Aby wprowadzić [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] dokumentacji i znajdź listę bardziej złożone, zobacz [Przegląd biblioteki klas](../../../../standard/class-library-overview.md).  
+Bardziej złożone lista znajduje się [Przegląd biblioteki klas](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Klasy podstawowe operacje We/Wy do plików, dysków i katalogów  
  Poniższej tabeli wymieniono i opisano główne klasy używany dla we/wy pliku.  

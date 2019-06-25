@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 76bd9d9bce8e41605b96e979c2a39ea15e1d15ad
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 9163bfa98d85a3268e154321d1aa6e55783a50f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169941"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347643"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji (C# Programming Guide)
 Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu API usługi Office. Nowe funkcje obejmują argumentów nazwanych i opcjonalnych, nowy typ o nazwie `dynamic`oraz możliwość przekazywania argumentów do parametrów odwołania w metodach COM tak, jakby były one wartości parametrów.  
@@ -24,7 +24,6 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
  Do przeprowadzenia tego instruktażu, musi mieć Microsoft Office Excel 2007 i Microsoft Office Word 2007 lub nowszy zainstalowany na tym komputerze.  
   
- Jeśli używasz systemu operacyjnego, która jest starsza niż [!INCLUDE[windowsver](~/includes/windowsver-md.md)], upewnij się, że [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] jest zainstalowany.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -114,13 +113,13 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
      Wklej metodę `CreateIconInWordDoc`, podane w dalszej części tego kroku do `Program` klasy. `CreateIconInWordDoc` używa argumentów nazwanych i opcjonalnych, aby zmniejszyć złożoność wywołania metody do <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> i <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Te wywołania zestawowi dwóch innych nowych funkcji wprowadzonych w C# 4, które upraszczają wywołania metody COM, które mają odwołania do parametrów. Po pierwsze może wysyłać argumentów do parametrów w formie odwołań, tak, jakby były one wartości parametrów. Oznacza to można wysyłać wartości bezpośrednio, bez tworzenia zmienną dla każdego parametru odwołania. Kompilator generuje tymczasowe zmienne do przechowywania wartości argumentów i odrzuca wszystkie zmienne, po powrocie z wywołania. Po drugie, można pominąć `ref` — słowo kluczowe na liście argumentów.  
   
-     `Add` Metoda ma cztery parametry odwołań, które są opcjonalne. W C# 4 lub nowszej wersji, można pominąć argumenty poszczególnych lub wszystkich parametrów, jeśli chcesz użyć wartości domyślnych. W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i wcześniejszych wersjach, należy podać argument dla każdego parametru i argument musi być zmienną, ponieważ parametry są parametry odwołania.  
+     `Add` Metoda ma cztery parametry odwołań, które są opcjonalne. W C# 4.0 i nowsze wersje, możesz pominąć argumenty poszczególnych lub wszystkich parametrów, jeśli chcesz użyć wartości domyślnych. W C# 3.0 i wcześniejszych wersji, należy podać argument dla każdego parametru, a argument musi być zmienną, ponieważ parametry są parametry odwołania.  
   
-     `PasteSpecial` Metoda Wstawia zawartość Schowka. Metoda ma siedem parametrów odwołania, które są opcjonalne. Poniższy kod określa argumenty dwa z nich: `Link`, aby utworzyć łącze do źródła zawartości Schowka i `DisplayAsIcon`, aby wyświetlić łącza w postaci ikony. W C# 4, możesz użyć nazwanych argumentów dla tych dwóch i Pomiń pozostałe. Mimo, że są to parametry odwołania, trzeba użyć `ref` — słowo kluczowe, lub aby utworzyć zmienne do wysyłania jako argumenty. Wartości można wysyłać bezpośrednio. W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i wcześniejszych wersjach, konieczne jest wysłanie zmiennych argumentów dla każdego parametru odwołania.  
+     `PasteSpecial` Metoda Wstawia zawartość Schowka. Metoda ma siedem parametrów odwołania, które są opcjonalne. Poniższy kod określa argumenty dwa z nich: `Link`, aby utworzyć łącze do źródła zawartości Schowka i `DisplayAsIcon`, aby wyświetlić łącza w postaci ikony. W C# 4.0 i nowsze wersje, możesz użyć nazwanych argumentów dla tych dwóch i Pomiń pozostałe. Mimo, że są to parametry odwołania, trzeba użyć `ref` — słowo kluczowe, lub aby utworzyć zmienne do wysyłania jako argumenty. Wartości można wysyłać bezpośrednio. W C# 3.0 i wcześniejszych wersji, należy podać zmiennych argumentów dla każdego parametru odwołania.  
   
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
-     W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i jego wcześniejsze wersje języka, że wymagane jest bardziej skomplikowanym kodzie.  
+     W C# 3.0 i wcześniejszych wersji języka, że wymagane jest bardziej skomplikowanym kodzie.  
   
      [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
@@ -164,7 +163,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 2. Naciśnij klawisze CTRL + F5, aby wyświetlić wynik. Inne formaty są wymienione w <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> wyliczenia.  
   
-3. Porównaj z instrukcją w kroku 1, z użyciem następujący kod, który wyświetla argumenty, które są wymagane w [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i jego wcześniejsze wersje.  
+3. Porównaj z instrukcją w kroku 1, z użyciem następujący kod, który wyświetla argumenty, które są wymagane w C# 3.0 i wcześniejszych wersji.  
   
      [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 010077cd95a9cf6bd7d4c22a54abc02b167755e8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8af6d7d91efef81569e6f783352ec89d260cdd13
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584315"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347599"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (C# Programming Guide)
 W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są oparte na wzorcu standardowy .NET Framework do klas i struktur. Wszystkie zdarzenia w bibliotece klas programu .NET Framework są oparte na <xref:System.EventHandler> delegować, która została zdefiniowana w następujący sposób:  
@@ -20,7 +20,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ```  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] Wprowadza ogólnego wersji tego obiektu delegowanego <xref:System.EventHandler%601>. Następujące przykłady przedstawiają sposób użycia obu wersji.  
+>  .NET Framework 2.0 wprowadzono ogólnego wersji tego obiektu delegowanego <xref:System.EventHandler%601>. Następujące przykłady przedstawiają sposób użycia obu wersji.  
   
  Mimo że zdarzeń w klasach, które definiujesz może bazować na dowolnego typu delegata prawidłowe nawet obiektów delegowanych, które zwracają wartość, ogólnie zaleca się oprzeć zdarzeń na wzorcu .NET Framework za pomocą <xref:System.EventHandler>, jak pokazano w poniższym przykładzie.  
   

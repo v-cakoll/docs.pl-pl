@@ -5,28 +5,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 010077cd95a9cf6bd7d4c22a54abc02b167755e8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8af6d7d91efef81569e6f783352ec89d260cdd13
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584315"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347599"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a><span data-ttu-id="39d75-102">Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="39d75-102">How to: Publish Events that Conform to .NET Framework Guidelines (C# Programming Guide)</span></span>
-<span data-ttu-id="39d75-103">W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są oparte na wzorcu standardowy .NET Framework do klas i struktur.</span><span class="sxs-lookup"><span data-stu-id="39d75-103">The following procedure demonstrates how to add events that follow the standard .NET Framework pattern to your classes and structs.</span></span> <span data-ttu-id="39d75-104">Wszystkie zdarzenia w bibliotece klas programu .NET Framework są oparte na <xref:System.EventHandler> delegować, która została zdefiniowana w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="39d75-104">All events in the .NET Framework class library are based on the <xref:System.EventHandler> delegate, which is defined as follows:</span></span>  
+# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a><span data-ttu-id="6f6e9-102">Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="6f6e9-102">How to: Publish Events that Conform to .NET Framework Guidelines (C# Programming Guide)</span></span>
+<span data-ttu-id="6f6e9-103">W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są oparte na wzorcu standardowy .NET Framework do klas i struktur.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-103">The following procedure demonstrates how to add events that follow the standard .NET Framework pattern to your classes and structs.</span></span> <span data-ttu-id="6f6e9-104">Wszystkie zdarzenia w bibliotece klas programu .NET Framework są oparte na <xref:System.EventHandler> delegować, która została zdefiniowana w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="6f6e9-104">All events in the .NET Framework class library are based on the <xref:System.EventHandler> delegate, which is defined as follows:</span></span>  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="39d75-105">[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] Wprowadza ogólnego wersji tego obiektu delegowanego <xref:System.EventHandler%601>.</span><span class="sxs-lookup"><span data-stu-id="39d75-105">The [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] introduces a generic version of this delegate, <xref:System.EventHandler%601>.</span></span> <span data-ttu-id="39d75-106">Następujące przykłady przedstawiają sposób użycia obu wersji.</span><span class="sxs-lookup"><span data-stu-id="39d75-106">The following examples show how to use both versions.</span></span>  
+>  <span data-ttu-id="6f6e9-105">.NET Framework 2.0 wprowadzono ogólnego wersji tego obiektu delegowanego <xref:System.EventHandler%601>.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-105">The .NET Framework 2.0 introduces a generic version of this delegate, <xref:System.EventHandler%601>.</span></span> <span data-ttu-id="6f6e9-106">Następujące przykłady przedstawiają sposób użycia obu wersji.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-106">The following examples show how to use both versions.</span></span>  
   
- <span data-ttu-id="39d75-107">Mimo że zdarzeń w klasach, które definiujesz może bazować na dowolnego typu delegata prawidłowe nawet obiektów delegowanych, które zwracają wartość, ogólnie zaleca się oprzeć zdarzeń na wzorcu .NET Framework za pomocą <xref:System.EventHandler>, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="39d75-107">Although events in classes that you define can be based on any valid delegate type, even delegates that return a value, it is generally recommended that you base your events on the .NET Framework pattern by using <xref:System.EventHandler>, as shown in the following example.</span></span>  
+ <span data-ttu-id="6f6e9-107">Mimo że zdarzeń w klasach, które definiujesz może bazować na dowolnego typu delegata prawidłowe nawet obiektów delegowanych, które zwracają wartość, ogólnie zaleca się oprzeć zdarzeń na wzorcu .NET Framework za pomocą <xref:System.EventHandler>, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-107">Although events in classes that you define can be based on any valid delegate type, even delegates that return a value, it is generally recommended that you base your events on the .NET Framework pattern by using <xref:System.EventHandler>, as shown in the following example.</span></span>  
   
-### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a><span data-ttu-id="39d75-108">Do publikowania zdarzeń oparta na wzorcu EventHandler</span><span class="sxs-lookup"><span data-stu-id="39d75-108">To publish events based on the EventHandler pattern</span></span>  
+### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a><span data-ttu-id="6f6e9-108">Do publikowania zdarzeń oparta na wzorcu EventHandler</span><span class="sxs-lookup"><span data-stu-id="6f6e9-108">To publish events based on the EventHandler pattern</span></span>  
   
-1. <span data-ttu-id="39d75-109">(Pomiń ten krok i przejdź do kroku 3a, jeśli nie masz do wysyłania niestandardowych danych za pomocą zdarzenia). Deklarowanie klasy dla niestandardowych danych w zakresie, który jest widoczny dla obu wydawcy i subskrybenta klasy.</span><span class="sxs-lookup"><span data-stu-id="39d75-109">(Skip this step and go to Step 3a if you do not have to send custom data with your event.) Declare the class for your custom data at a scope that is visible to both your publisher and subscriber classes.</span></span> <span data-ttu-id="39d75-110">Następnie dodaj wymagane elementy członkowskie do przechowywania danych zdarzenia niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="39d75-110">Then add the required members to hold your custom event data.</span></span> <span data-ttu-id="39d75-111">W tym przykładzie zwracany jest prosty ciąg.</span><span class="sxs-lookup"><span data-stu-id="39d75-111">In this example, a simple string is returned.</span></span>  
+1. <span data-ttu-id="6f6e9-109">(Pomiń ten krok i przejdź do kroku 3a, jeśli nie masz do wysyłania niestandardowych danych za pomocą zdarzenia). Deklarowanie klasy dla niestandardowych danych w zakresie, który jest widoczny dla obu wydawcy i subskrybenta klasy.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-109">(Skip this step and go to Step 3a if you do not have to send custom data with your event.) Declare the class for your custom data at a scope that is visible to both your publisher and subscriber classes.</span></span> <span data-ttu-id="6f6e9-110">Następnie dodaj wymagane elementy członkowskie do przechowywania danych zdarzenia niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-110">Then add the required members to hold your custom event data.</span></span> <span data-ttu-id="6f6e9-111">W tym przykładzie zwracany jest prosty ciąg.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-111">In this example, a simple string is returned.</span></span>  
   
     ```csharp  
     public class CustomEventArgs : EventArgs  
@@ -43,40 +43,40 @@ public delegate void EventHandler(object sender, EventArgs e);
     }  
     ```  
   
-2. <span data-ttu-id="39d75-112">(Pomiń ten krok, jeśli używasz wersji ogólnych <xref:System.EventHandler%601> .) Należy zadeklarować delegata w klasie publikowania.</span><span class="sxs-lookup"><span data-stu-id="39d75-112">(Skip this step if you are using the generic version of <xref:System.EventHandler%601> .) Declare a delegate in your publishing class.</span></span> <span data-ttu-id="39d75-113">Nadaj mu nazwę, która kończy się *EventHandler*.</span><span class="sxs-lookup"><span data-stu-id="39d75-113">Give it a name that ends with *EventHandler*.</span></span> <span data-ttu-id="39d75-114">Drugi parametr określa swój niestandardowy typ EventArgs.</span><span class="sxs-lookup"><span data-stu-id="39d75-114">The second parameter specifies your custom EventArgs type.</span></span>  
+2. <span data-ttu-id="6f6e9-112">(Pomiń ten krok, jeśli używasz wersji ogólnych <xref:System.EventHandler%601> .) Należy zadeklarować delegata w klasie publikowania.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-112">(Skip this step if you are using the generic version of <xref:System.EventHandler%601> .) Declare a delegate in your publishing class.</span></span> <span data-ttu-id="6f6e9-113">Nadaj mu nazwę, która kończy się *EventHandler*.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-113">Give it a name that ends with *EventHandler*.</span></span> <span data-ttu-id="6f6e9-114">Drugi parametr określa swój niestandardowy typ EventArgs.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-114">The second parameter specifies your custom EventArgs type.</span></span>  
   
     ```csharp  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
     ```  
   
-3. <span data-ttu-id="39d75-115">Zadeklaruj zdarzenie w klasie publikacji przy użyciu jednej z następujących czynności.</span><span class="sxs-lookup"><span data-stu-id="39d75-115">Declare the event in your publishing class by using one of the following steps.</span></span>  
+3. <span data-ttu-id="6f6e9-115">Zadeklaruj zdarzenie w klasie publikacji przy użyciu jednej z następujących czynności.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-115">Declare the event in your publishing class by using one of the following steps.</span></span>  
   
-    1. <span data-ttu-id="39d75-116">Jeśli nie masz żadnych niestandardowej klasy EventArgs, typu zdarzenia będą delegata EventHandler nieogólnego.</span><span class="sxs-lookup"><span data-stu-id="39d75-116">If you have no custom EventArgs class, your Event type will be the non-generic EventHandler delegate.</span></span> <span data-ttu-id="39d75-117">Nie trzeba zadeklarować obiektu delegowanego, ponieważ jest już zadeklarowana w <xref:System> przestrzeni nazw, która jest dołączana w przypadku utworzenia projektu języka C#.</span><span class="sxs-lookup"><span data-stu-id="39d75-117">You do not have to declare the delegate because it is already declared in the <xref:System> namespace that is included when you create your C# project.</span></span> <span data-ttu-id="39d75-118">Dodaj następujący kod do klasy wydawcy.</span><span class="sxs-lookup"><span data-stu-id="39d75-118">Add the following code to your publisher class.</span></span>  
+    1. <span data-ttu-id="6f6e9-116">Jeśli nie masz żadnych niestandardowej klasy EventArgs, typu zdarzenia będą delegata EventHandler nieogólnego.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-116">If you have no custom EventArgs class, your Event type will be the non-generic EventHandler delegate.</span></span> <span data-ttu-id="6f6e9-117">Nie trzeba zadeklarować obiektu delegowanego, ponieważ jest już zadeklarowana w <xref:System> przestrzeni nazw, która jest dołączana w przypadku utworzenia projektu języka C#.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-117">You do not have to declare the delegate because it is already declared in the <xref:System> namespace that is included when you create your C# project.</span></span> <span data-ttu-id="6f6e9-118">Dodaj następujący kod do klasy wydawcy.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-118">Add the following code to your publisher class.</span></span>  
   
         ```csharp  
         public event EventHandler RaiseCustomEvent;  
         ```  
   
-    2. <span data-ttu-id="39d75-119">Jeśli używasz wersji nieogólnego <xref:System.EventHandler> i masz niestandardowej klasy pochodzącej od <xref:System.EventArgs>zadeklarować zdarzenia wewnątrz klasy publikowania i używanie swoim delegacie z kroku 2 jako typu.</span><span class="sxs-lookup"><span data-stu-id="39d75-119">If you are using the non-generic version of <xref:System.EventHandler> and you have a custom class derived from <xref:System.EventArgs>, declare your event inside your publishing class and use your delegate from step 2 as the type.</span></span>  
+    2. <span data-ttu-id="6f6e9-119">Jeśli używasz wersji nieogólnego <xref:System.EventHandler> i masz niestandardowej klasy pochodzącej od <xref:System.EventArgs>zadeklarować zdarzenia wewnątrz klasy publikowania i używanie swoim delegacie z kroku 2 jako typu.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-119">If you are using the non-generic version of <xref:System.EventHandler> and you have a custom class derived from <xref:System.EventArgs>, declare your event inside your publishing class and use your delegate from step 2 as the type.</span></span>  
   
         ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
         ```  
   
-    3. <span data-ttu-id="39d75-120">Jeśli używasz wersji ogólnego, nie trzeba niestandardową klasę delegatów.</span><span class="sxs-lookup"><span data-stu-id="39d75-120">If you are using the generic version, you do not need a custom delegate.</span></span> <span data-ttu-id="39d75-121">Zamiast tego, w klasie publikacji, należy określić typu zdarzenia jako `EventHandler<CustomEventArgs>`, zastępując nazwę klasy między nawiasami.</span><span class="sxs-lookup"><span data-stu-id="39d75-121">Instead, in your publishing class, you specify your event type as `EventHandler<CustomEventArgs>`, substituting the name of your own class between the angle brackets.</span></span>  
+    3. <span data-ttu-id="6f6e9-120">Jeśli używasz wersji ogólnego, nie trzeba niestandardową klasę delegatów.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-120">If you are using the generic version, you do not need a custom delegate.</span></span> <span data-ttu-id="6f6e9-121">Zamiast tego, w klasie publikacji, należy określić typu zdarzenia jako `EventHandler<CustomEventArgs>`, zastępując nazwę klasy między nawiasami.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-121">Instead, in your publishing class, you specify your event type as `EventHandler<CustomEventArgs>`, substituting the name of your own class between the angle brackets.</span></span>  
   
         ```csharp  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  
         ```  
   
-## <a name="example"></a><span data-ttu-id="39d75-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="39d75-122">Example</span></span>  
- <span data-ttu-id="39d75-123">W poniższym przykładzie pokazano poprzednich krokach za pomocą niestandardowej klasy EventArgs i <xref:System.EventHandler%601> jako typ zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="39d75-123">The following example demonstrates the previous steps by using a custom EventArgs class and <xref:System.EventHandler%601> as the event type.</span></span>  
+## <a name="example"></a><span data-ttu-id="6f6e9-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="6f6e9-122">Example</span></span>  
+ <span data-ttu-id="6f6e9-123">W poniższym przykładzie pokazano poprzednich krokach za pomocą niestandardowej klasy EventArgs i <xref:System.EventHandler%601> jako typ zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="6f6e9-123">The following example demonstrates the previous steps by using a custom EventArgs class and <xref:System.EventHandler%601> as the event type.</span></span>  
   
  [!code-csharp[csProgGuideEvents#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="39d75-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="39d75-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f6e9-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6f6e9-124">See also</span></span>
 
 - <xref:System.Delegate>
-- [<span data-ttu-id="39d75-125">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="39d75-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="39d75-126">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="39d75-126">Events</span></span>](../../../csharp/programming-guide/events/index.md)
-- [<span data-ttu-id="39d75-127">Delegaty</span><span class="sxs-lookup"><span data-stu-id="39d75-127">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)
+- [<span data-ttu-id="6f6e9-125">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="6f6e9-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="6f6e9-126">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="6f6e9-126">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+- [<span data-ttu-id="6f6e9-127">Delegaty</span><span class="sxs-lookup"><span data-stu-id="6f6e9-127">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)

@@ -21,10 +21,10 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/24/2019
 ms.locfileid: "65589524"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Instrukcje: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
@@ -59,8 +59,8 @@ W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ci�
 |`(?("")("".+?(?<!\\)""@)`|Jeśli pierwszym znakiem jest znak cudzysłowu, Dopasuj do początkowego znaku cudzysłowu, a następnie co najmniej jedno wystąpienie dowolnego znaku, w którym następuje końcowy znak cudzysłowu. Końcowy znak cudzysłowu nie muszą być poprzedzone znakiem ukośnika odwrotnego (\\). `(?<!` to początek asercja negatywna asercja wsteczna o zerowej szerokości. Ciąg powinien być zakończony znakiem (@).|  
 |<code>&#124;(([0-9a-z]</code>|Jeśli pierwszy znak nie jest znakiem cudzysłowu, Dopasuj dowolny znaku alfabetyczny od do z i od A do Z (wynik porównania jest uwzględniana wielkość liter) lub dowolną cyfrę z zakresu od 0 do 9.|  
 |`(\.(?!\.))`|Jeśli następny znak jest kropką, Dopasuj do niego. Jeśli nie jest to okres, przód na następny znak i kontynuuje dopasowywanie. `(?!\.)` jest to asercja negatywna asercja wyprzedzająca o zerowej szerokości, która zapobiega wyświetlaniu w lokalnym składniku adresu e-mail dwóch następujących po sobie kropek.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>| Jeśli następny znak nie jest kropką, Dopasuj dowolny znak słowa lub jednego z następujących znaków:-! #$% ' * +=? ^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>| Dopasowania wzorca naprzemiennego (kropki następuje znak inny niż kropka, lub jeden z wielu znaków) zero lub więcej razy.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Jeśli następny znak nie jest kropką, Dopasuj dowolny znak słowa lub jednego z następujących znaków:-! #$% ' * +=? ^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Dopasowania wzorca naprzemiennego (kropki następuje znak inny niż kropka, lub jeden z wielu znaków) zero lub więcej razy.|  
 |`@`|Dopasowania znaku @.|  
 |`(?<=[0-9a-z])`|Kontynuuje dopasowywanie, jeśli znak, który poprzedza znak @, jest od A do Z, do z lub od 0 do 9. `(?<=[0-9a-z])` Konstrukcja definiuje potwierdzenia dodatnie asercje wsteczne o zerowej szerokości.|  
 |`(?(\[)`|Sprawdź, czy znak, który następuje po @, jest nawiasem otwierającym.|  

@@ -36,13 +36,13 @@ WMIClass [options]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/l***języka*|Określa język, w którym ma zostać wygenerowana wcześnie powiązana klasa zarządzana. Można określić **CS** (C#; domyślna), **VB** (Visual Basic), **MC** (C++) lub **JS** (JScript) jako argument języka.|  
-|**/m***maszyny*|Określa komputer, z którym należy nawiązać połączenie (na tym komputerze znajduje się klasa WMI). Wartością domyślną jest komputer lokalny.|  
-|**/n***ścieżki*|Określa ścieżkę do przestrzeni nazw usługi WMI zawierającej odpowiednią klasę WMI. Jeśli ta opcja nie jest określona, narzędzie wygeneruje kod dla *WMIClass* w domyślnym **Root\cimv2** przestrzeni nazw.|  
-|**/o***classnamespace*|Określa przestrzeń nazw platformy .NET, w której ma zostać wygenerowana klasa kodu zarządzanego. Jeśli ta opcja nie zostanie określona, narzędzie wygeneruje przestrzeń nazw, używając przestrzeni nazw usługi WMI i prefiksu schematu. Prefiks schematu jest częścią nazwy klasy poprzedzającą znak podkreślenia. Na przykład w przypadku **Win32_OperatingSystem** klasy w **Root\cimv2** przestrzeni nazw, narzędzie wygeneruje klasy w **głównego. CIMV2. Win32**.|  
-|**/p***filepath*|Określa ścieżkę do pliku, w którym ma zostać zapisany wygenerowany kod. Jeśli ta opcja nie zostanie określona, narzędzie utworzy plik w bieżącym katalogu. Nazwa klasy oraz pliku, w którym jest generowana, przy użyciu klasy *WMIClass* argumentu. Nazwa klasy i pliku są takie same jak nazwa *WMIClass.* Jeśli *WMIClass* zawiera znak podkreślenia, narzędzie użyje części nazwy klasy po znaku podkreślenia. Na przykład jeśli *WMIClass* nazwa jest w formacie **Win32_LogicalDisk**, wygenerowana klasa oraz plik nosi nazwę "DyskLogiczny". Jeżeli plik już istnieje, narzędzie zastąpi istniejący plik.|  
-|**/PW***hasła*|Określa hasło używane podczas logowania do komputera określonego przez **/m** opcji.|  
-|**/u***nazwy użytkownika*|Określa nazwę użytkownika do użycia podczas logowania się do komputera określonego przez **/m** opcji.|  
+|**/l** *języka*|Określa język, w którym ma zostać wygenerowana wcześnie powiązana klasa zarządzana. Można określić **CS** (C#; domyślna), **VB** (Visual Basic), **MC** (C++) lub **JS** (JScript) jako argument języka.|  
+|**/m** *maszyny*|Określa komputer, z którym należy nawiązać połączenie (na tym komputerze znajduje się klasa WMI). Wartością domyślną jest komputer lokalny.|  
+|**/n** *ścieżki*|Określa ścieżkę do przestrzeni nazw usługi WMI zawierającej odpowiednią klasę WMI. Jeśli ta opcja nie jest określona, narzędzie wygeneruje kod dla *WMIClass* w domyślnym **Root\cimv2** przestrzeni nazw.|  
+|**/o** *classnamespace*|Określa przestrzeń nazw platformy .NET, w której ma zostać wygenerowana klasa kodu zarządzanego. Jeśli ta opcja nie zostanie określona, narzędzie wygeneruje przestrzeń nazw, używając przestrzeni nazw usługi WMI i prefiksu schematu. Prefiks schematu jest częścią nazwy klasy poprzedzającą znak podkreślenia. Na przykład w przypadku **Win32_OperatingSystem** klasy w **Root\cimv2** przestrzeni nazw, narzędzie wygeneruje klasy w **głównego. CIMV2. Win32**.|  
+|**/p** *filepath*|Określa ścieżkę do pliku, w którym ma zostać zapisany wygenerowany kod. Jeśli ta opcja nie zostanie określona, narzędzie utworzy plik w bieżącym katalogu. Nazwa klasy oraz pliku, w którym jest generowana, przy użyciu klasy *WMIClass* argumentu. Nazwa klasy i pliku są takie same jak nazwa *WMIClass.* Jeśli *WMIClass* zawiera znak podkreślenia, narzędzie użyje części nazwy klasy po znaku podkreślenia. Na przykład jeśli *WMIClass* nazwa jest w formacie **Win32_LogicalDisk**, wygenerowana klasa oraz plik nosi nazwę "DyskLogiczny". Jeżeli plik już istnieje, narzędzie zastąpi istniejący plik.|  
+|**/PW** *hasła*|Określa hasło używane podczas logowania do komputera określonego przez **/m** opcji.|  
+|**/u** *nazwy użytkownika*|Określa nazwę użytkownika do użycia podczas logowania się do komputera określonego przez **/m** opcji.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  

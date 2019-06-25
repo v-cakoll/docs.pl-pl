@@ -43,7 +43,7 @@ Istnieją dwa sposoby, aby określić lokalizację zestawu:
 </configuration>  
 ```  
   
- **Wersji** atrybut jest wymagany dla wszystkich zestawów o silnej nazwie, ale należy pominąć dla zestawów, które są nie o silnej nazwie.  **\<CodeBase >** element wymaga **href** atrybutu. Nie można określić wersji zakresów w  **\<codeBase >** elementu.  
+ **Wersji** atrybut jest wymagany dla wszystkich zestawów o silnej nazwie, ale należy pominąć dla zestawów, które są nie o silnej nazwie. **\<CodeBase>** element wymaga **href** atrybutu. Nie można określić wersji zakresów w  **\<codeBase >** elementu.  
   
 > [!NOTE]
 >  Jeśli są podawania wskazówką podstawowego kodu dla zestawu, który nie jest, o silnych nazwach, wskazówka musi wskazywać podstawy aplikacji lub podkatalogiem katalogu podstawowego aplikacji.  

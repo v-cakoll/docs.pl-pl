@@ -1,7 +1,0 @@
-- name: 'Znaki specjalne języka C#'
-  href: index.md
-  items:
-    - name: $ — interpolacja ciągów
-      href: interpolated.md
-    - name: '@ — identyfikator dosłownego wyrażenia'
-      href: verbatim.md

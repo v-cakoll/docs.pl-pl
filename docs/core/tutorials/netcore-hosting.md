@@ -4,12 +4,12 @@ description: Dowiedz się, obsługa środowiska uruchomieniowego .NET Core z kod
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6cddb6fa7dcd7a7d050749c26249f1f5d876322d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: d3bdaacd4be776e0e9fff01698cca360ea4c9c6d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306201"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402021"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Napisać niestandardowego hosta platformy .NET Core do kontrolowania środowiska uruchomieniowego .NET z kodu natywnego
 
@@ -28,7 +28,7 @@ Możesz też prostą aplikację platformy .NET Core, aby przetestować hosta, wi
 ## <a name="hosting-apis"></a>Interfejsy API hostingu
 Istnieją trzy różne interfejsy API, które mogą służyć do hosta platformy .NET Core. Ten dokument (i skojarzone [przykłady](https://github.com/dotnet/samples/tree/master/core/hosting)) obejmuje wszystkie opcje.
 
-* Hostowanie środowiska uruchomieniowego .NET Core w środowisku .NET Core 3.0 i nowszych preferowaną metodą jest `nethost` i `hostfxr` bibliotek interfejsów API. Te punkty wejścia złożoności znajdowania i konfigurowania rutime inicjowania obsługi i zezwolić na uruchamianie aplikacji zarządzanych i wywoływanie statycznej metody zarządzanych.
+* Hostowanie środowiska uruchomieniowego .NET Core w środowisku .NET Core 3.0 i nowszych preferowaną metodą jest `nethost` i `hostfxr` bibliotek interfejsów API. Te punkty wejścia złożoności znajdowania i konfigurowanie środowiska uruchomieniowego do inicjowania obsługi i zezwolić na uruchamianie aplikacji zarządzanych i wywoływanie statycznej metody zarządzanych.
 * Hostowanie środowiska uruchomieniowego .NET Core, .NET Core 3.0 — przed preferowaną metodą jest [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) interfejsu API. Ten interfejs API udostępnia funkcje łatwe uruchamianie i zatrzymywanie środowiska uruchomieniowego i wywoływania zarządzanego kodu, (albo poprzez uruchomienie zarządzanego pliku exe albo przez wywołanie metody statyczne zarządzanych).
 * .NET core może też być hostowana przy użyciu `ICLRRuntimeHost4` interfejsu w [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h). Ten interfejs API został wokół dłużej niż CoreClrHost.h, więc widoczne starsze hosty korzystania z niego. Nadal działa i umożliwia nieco większą kontrolę nad procesu hostingu niż CoreClrHost. W przypadku większości scenariuszy jednak CoreClrHost.h jest preferowana, teraz ze względu na jej prostsza interfejsów API.
 

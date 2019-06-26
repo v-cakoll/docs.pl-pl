@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611e8df29b37efd880ee1d19515697d899e4fa7e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048299"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402157"
 ---
 # <a name="choosing-a-transport"></a>Wybieranie transportu
 W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, zawartych w Windows Communication Foundation (WCF): HTTP, TCP i nazwane potoki. Zawiera również WCF transportu MSMQ (MSMQ), ale ten dokument nie obejmuje usługi kolejkowania komunikatów.  
@@ -53,7 +53,7 @@ W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, 
 |Atrybut|Opis|Faworytem transportu|  
 |---------------|-----------------|------------------------|  
 |Diagnostyka|Diagnostyka pozwalają wykryć problemy z łącznością transportu. Wszystkich transportów obsługuje możliwość wysyłania informacji wstecz błędów łączności. Usługi WCF nie zawiera jednak narzędzia diagnostyczne badania problemów z siecią.|Brak|  
-|Hosting|Wszystkie punkty końcowe WCF musi być hostowany w aplikacji. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] i starsze obsługują tylko hostowanie aplikacji, które używają protokołu HTTP. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], pomocy technicznej zostaną dodane do obsługi wszystkich transportów WCF, w tym TCP i nazwane potoki. Aby uzyskać więcej informacji, zobacz [hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) i [Hosting w usłudze aktywacji procesów Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
+|Hosting|Wszystkie punkty końcowe WCF musi być hostowany w aplikacji. Usługi IIS 6.0 i starsze wersje obsługują tylko hostowanie aplikacji, które używają protokołu HTTP. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], pomocy technicznej zostaną dodane do obsługi wszystkich transportów WCF, w tym TCP i nazwane potoki. Aby uzyskać więcej informacji, zobacz [hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) i [Hosting w usłudze aktywacji procesów Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspekcja|Inspekcja jest możliwość wyodrębniania i przetwarzania informacji z komunikatów podczas transmisji. Protokół HTTP oddziela routingu i kontrola informacji na podstawie danych, ułatwiając tworzenie narzędzi, które sprawdzanie i analizowania komunikatów. Transporty, które można łatwo sprawdzić może również wymagać mniejszej mocy obliczeniowej w urządzeniach sieciowych. Poziom zabezpieczeń używane na środowisko, czy komunikaty mogą być kontrolowane.|HTTP|  
 |Czas oczekiwania|Opóźnienie jest minimalna ilość czasu wymaganego do ukończenia wymiany wiadomości. Wszystkie operacje sieci mają więcej lub mniej opóźnienia w zależności od wybranego transportu. Przy użyciu komunikacji dupleksu lub jednokierunkowe za pomocą transportu, w których wymiany natywny komunikat jest żądanie odpowiedź, takich jak HTTP, może spowodować, że dodatkowe opóźnienie z powodu wymuszonego korelacji wiadomości. W takiej sytuacji należy rozważyć użycie transportu, w których wymiany natywny komunikat jest dupleksowy, takich jak protokół TCP.|TCP, o nazwie<br /><br /> Potoku|  
 |Zasięg|Zasięg transportu odzwierciedla sposób stanie transport jest na łączenie z innymi systemami. Transportu nazwanego potoku ma bardzo mało zasięg; można połączyć tylko do usług uruchomionych na tym samym komputerze. Transportu TCP i HTTP ma doskonałą zasięgu i może przechodzić przez różne konfiguracje translatora adresów Sieciowych i zapory. Aby uzyskać więcej informacji, zobacz [Praca z translatorami adresów sieciowych i zaporami](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  

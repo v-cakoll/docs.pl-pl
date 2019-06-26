@@ -6,19 +6,19 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 05/06/2019
-ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.date: 06/14/2019
+ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169785"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401957"
 ---
-# <a name="whats-new-in-net-core-30-preview-5"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 5)
+# <a name="whats-new-in-net-core-30-preview-6"></a>What's new in .NET Core 3.0 (w wersji zapoznawczej 6)
 
-W tym artykule opisano nowości w programie .NET Core 3.0 (za pośrednictwem wersja zapoznawcza 5). Jedną z największych ulepszenia to obsługa aplikacji klasycznych Windows (tylko Windows). Za pomocą zestawu .NET Core 3.0 SDK składnika Windows Desktop, można przenosić aplikacje Windows Forms i Windows Presentation Foundation (WPF). Było jasne, składnik Windows Desktop jest tylko obsługiwana i uwzględniane na Windows. Aby uzyskać więcej informacji, zobacz [pulpitu Windows](#windows-desktop) sekcję w dalszej części tego artykułu.
+W tym artykule opisano nowości w programie .NET Core 3.0 (za pomocą wersji zapoznawczej 6). Jedną z największych ulepszenia to obsługa aplikacji klasycznych Windows (tylko Windows). Za pomocą zestawu .NET Core 3.0 SDK składnika Windows Desktop, można przenosić aplikacje Windows Forms i Windows Presentation Foundation (WPF). Było jasne, składnik Windows Desktop jest tylko obsługiwana i uwzględniane na Windows. Aby uzyskać więcej informacji, zobacz [pulpitu Windows](#windows-desktop) sekcję w dalszej części tego artykułu.
 
-.NET core 3.0 dodaje obsługę C# 8.0. Zdecydowanie zaleca się używać najnowszej wersji programu Visual Studio 2019 Update 1 (wersja zapoznawcza) lub programu VSCode z rozszerzeniem technologię OmniSharp.
+.NET core 3.0 dodaje obsługę C# 8.0. Zdecydowanie zaleca się, że używasz [najnowszej wersji programu Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), lub Visual Studio Code z rozszerzeniem technologię OmniSharp.
 
 [Pobierz i rozpoczynanie pracy z usługą .NET Core 3.0 w wersji zapoznawczej 6](https://aka.ms/netcore3download) teraz na Windows, Mac i Linux.
 
@@ -55,7 +55,7 @@ Mimo że program .NET Core 3.0 obsługuje **platformy .NET Standard 2.1**, domy�
 </Project>
 ```
 
-Jeśli używasz programu Visual Studio należy Visual Studio 2019 r, jak program Visual Studio 2017 nie obsługuje **platformy .NET Standard 2.1** lub **.NET Core 3.0 to**. Zdecydowanie zaleca się używanie [Visual Studio 2019 aktualizacja 1 — wersja zapoznawcza](https://visualstudio.microsoft.com/vs/preview/).
+Jeśli używasz programu Visual Studio, potrzebujesz [Visual Studio 2019 r](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), jak program Visual Studio 2017 nie obsługuje **platformy .NET Standard 2.1** lub **.NET Core 3.0 to**.
 
 ## <a name="improved-net-core-version-apis"></a>Ulepszone .NET Core wersje interfejsów API
 
@@ -187,7 +187,7 @@ dotnet publish -c Release -r win-x64 --self-contained true
 
 Kompilator ReadyToRun nie obsługuje obecnie przeznaczonych dla wielu. Należy skompilować w danym elemencie docelowym. Na przykład chcąc R2R obrazy dla Windows x64, należy do uruchomienia polecenia Opublikuj w tym środowisku.
 
-Wyjątki dla wielu odwołujących:
+Wyjątki od przeznaczonych dla wielu:
 
 - Windows x64 może służyć do kompilowania Windows ARM32, ARM64 i x86 obrazów.
 - Windows x86 może służyć do kompilowania Windows ARM32 obrazów.

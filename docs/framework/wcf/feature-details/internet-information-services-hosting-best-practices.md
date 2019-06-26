@@ -2,12 +2,12 @@
 title: Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878602"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402435"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych
 W tym temacie opisano najlepsze rozwiązania dotyczące hostowania usług Windows Communication Foundation (WCF).  
@@ -16,7 +16,7 @@ W tym temacie opisano najlepsze rozwiązania dotyczące hostowania usług Window
  Implementowanie platformy WCF service jako bibliotekę DLL, która jest wdrażana do katalogu \bin aplikacji sieci Web umożliwia ponownego użycia usługi poza modelu aplikacji sieci Web, na przykład w środowisku testowym, który nie może mieć wdrożony Internet Information Services (IIS).  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>Hosty usług w aplikacjach hostowanych przez usługi IIS  
- Nie używaj imperatywne samodzielnego hostowania interfejsów API do tworzenia nowych hostach usługi tego nasłuchiwania na transportu sieciowego nieobsługiwane natywnie przez usługi IIS, środowisko hostingu (na przykład [!INCLUDE[iis601](../../../../includes/iis601-md.md)] do obsługi protokołu TCP usługi, ponieważ komunikację TCP nie jest natywnie obsługiwane w [!INCLUDE[iis601](../../../../includes/iis601-md.md)]). To podejście nie jest zalecane. Hosty usług utworzone obowiązkowo nie są znane w środowisku hostingu usług IIS. Punkt krytyczny jest, że przetwarzania wykonywane przez obowiązkowo utworzonej usługi nie jest uwzględniony przez usługi IIS podczas określania, czy hostingu pula aplikacji jest w stanie bezczynności. Wynik jest aplikacji, które mają takie hosty obowiązkowo utworzonej usługi IIS Środowisko hostingu agresywnie usuwa procesy hosta usług IIS.  
+ Nie używaj imperatywne samodzielnego hostowania interfejsów API do tworzenia nowych hostach usługi tego nasłuchiwania na transportu sieciowego nieobsługiwane natywnie przez środowisko hostingu usług IIS (na przykład usług IIS 6.0 do hosta TCP usługi, ponieważ komunikację TCP nie jest natywnie obsługiwane w usługach IIS 6.0). To podejście nie jest zalecane. Hosty usług utworzone obowiązkowo nie są znane w środowisku hostingu usług IIS. Punkt krytyczny jest, że przetwarzania wykonywane przez obowiązkowo utworzonej usługi nie jest uwzględniony przez usługi IIS podczas określania, czy hostingu pula aplikacji jest w stanie bezczynności. Wynik jest aplikacji, które mają takie hosty obowiązkowo utworzonej usługi IIS Środowisko hostingu agresywnie usuwa procesy hosta usług IIS.  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>Identyfikatory URI i hostowanych przez usługi IIS punktów końcowych  
  Punkty końcowe usługi obsługiwane przez usługi IIS powinny być skonfigurowane przy użyciu względne jednolitych identyfikatorów zasobów (URI), nie bezwzględnych adresów. Gwarantuje to, że adres punktu końcowego mieści się w zestawie adresów identyfikatora URI, które należą do hostowania aplikacji i gwarantuje, że aktywacja oparta na komunikatach się stanie, zgodnie z oczekiwaniami.  

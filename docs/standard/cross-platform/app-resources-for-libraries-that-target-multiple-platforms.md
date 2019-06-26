@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ba4546397adcfcf6142b41482f574cf86607a6b9
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025579"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402113"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
 Można użyć programu .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) projektu typu, aby upewnić się, że zasoby w bibliotekach klas są dostępne na wielu platformach. Ten typ projektu jest dostępny w programie Visual Studio 2012 i jest przeznaczony dla przenośny podzestaw biblioteki klas .NET Framework. Za pomocą [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] gwarantuje, że biblioteki są dostępne z aplikacji komputerowych, aplikacji Silverlight, aplikacji Windows Phone i [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.
@@ -72,12 +72,12 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- Poniższy kod ilustruje sposób, w jaki `UILibrary` klasy i jej zasoby są dostępne z aplikacji trybu konsoli. Wymaga to dodania odwołania do pliku UILIbrary.dll do projektu aplikacji konsoli.
+ Poniższy kod ilustruje sposób, w jaki `UILibrary` klasy i jej zasoby są dostępne z aplikacji trybu konsoli. Wymaga to dodania odwołania do pliku UILibrary.dll do projektu aplikacji konsoli.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- Poniższy kod ilustruje sposób, w jaki `UILibrary` klasy i jej zasoby są dostępne z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Wymaga to dodania odwołania do pliku UILIbrary.dll do projektu aplikacji do Sklepu Windows.
+ Poniższy kod ilustruje sposób, w jaki `UILibrary` klasy i jej zasoby są dostępne z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Wymaga to dodania odwołania do pliku UILibrary.dll do projektu aplikacji Windows Store.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
@@ -94,12 +94,12 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
 |Nazwa|Nom|
 |Tytuł|Base de données des employés|
 
- Poniższy kod ilustruje sposób, w jaki `UILibrary` klasy i jej zasoby są dostępne z aplikacji trybu konsoli. Wymaga to dodania odwołania do pliku UILIbrary.dll do projektu aplikacji konsoli.
+ Poniższy kod ilustruje sposób, w jaki `UILibrary` klasy i jej zasoby są dostępne z aplikacji trybu konsoli. Wymaga to dodania odwołania do pliku UILibrary.dll do projektu aplikacji konsoli.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- Poniższy kod ilustruje sposób, w jaki `UILibrary` klasy i jej zasoby są dostępne z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Wymaga to dodania odwołania do pliku UILIbrary.dll do projektu aplikacji do Sklepu Windows. Używa statycznego `ApplicationLanguages.PrimaryLanguageOverride` właściwości do ustawienia aplikacji na francuską preferowanego języka.
+ Poniższy kod ilustruje sposób, w jaki `UILibrary` klasy i jej zasoby są dostępne z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Wymaga to dodania odwołania do pliku UILibrary.dll do projektu aplikacji Windows Store. Używa statycznego `ApplicationLanguages.PrimaryLanguageOverride` właściwości do ustawienia aplikacji na francuską preferowanego języka.
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

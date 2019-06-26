@@ -4,16 +4,16 @@ description: Dowiedz się, jak ponowne szkolenie modelu TensorFlow Klasyfikacja 
 ms.date: 06/12/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026083"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401740"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Samouczek: Ponowne szkolenie TensorFlow klasyfikatora obrazu przy użyciu transferu uczenia i strukturze ML.NET
 
-Dowiedz się, jak ponowne szkolenie modelu TensorFlow classificaton obrazu przy użyciu transferu uczenia i strukturze ML.NET. Oryginalny model został skonfigurowanych pod kątem klasyfikowania poszczególnych obrazów. Po ponownego trenowania, nowy model organizuje obrazów w ogólne kategorie. 
+Dowiedz się, jak ponowne szkolenie modelu TensorFlow Klasyfikacja obrazów przy użyciu transferu uczenia i strukturze ML.NET. Oryginalny model został skonfigurowanych pod kątem klasyfikowania poszczególnych obrazów. Po ponownego trenowania, nowy model organizuje obrazów w ogólne kategorie. 
 
 Szkolenie [Klasyfikacja obrazów](https://en.wikipedia.org/wiki/Outline_of_object_recognition) modelu od podstaw wymaga ustawienie miliony parametry ogromnej ilości danych szkoleniowych etykietami i dużych ilości zasobów obliczeniowych (setki procesorów GPU godzin). Nie tak skuteczne, jak szkolenie modelu niestandardowego od podstaw, transfer uczenia umożliwia skrótów tego procesu poprzez współdziałanie z tysięcy obrazów, a miliony obrazy z etykietami i dość szybko utworzyć dostosowany model (w ciągu godziny na maszynie bez PROCESOR GPU).
 

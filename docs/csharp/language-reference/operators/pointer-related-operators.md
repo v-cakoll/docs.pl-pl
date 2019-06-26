@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025108"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401441"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Wskaźnik związane z operatorów (C# odwołania)
 
@@ -42,7 +42,7 @@ Aby uzyskać informacje dotyczące typów wskaźnika, zobacz [typy wskaźników]
 > [!NOTE]
 > Wszelkie działania, za pomocą wskaźników wymaga [niebezpieczne](../keywords/unsafe.md) kontekstu. Kod, który zawiera bloki niebezpieczne musi być skompilowana przy użyciu [ `-unsafe` ](../compiler-options/unsafe-compiler-option.md) — opcja kompilatora.
 
-## <a name="address-of-operator-amp"></a>Operator Address-of &amp;
+## <a name="address-of-operator-"></a> Operator Address-of &amp;
 
 Jednoargumentowy `&` operator zwraca adres jego operandu:
 

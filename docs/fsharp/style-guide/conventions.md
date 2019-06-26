@@ -2,12 +2,12 @@
 title: C# — konwencje kodowania
 description: Informacje ogólne wytyczne i idiomy podczas zapisywania F# kodu.
 ms.date: 05/14/2018
-ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052797"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402362"
 ---
 # <a name="f-coding-conventions"></a>C# — konwencje kodowania
 
@@ -378,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-Testy jednostkowe `Transactions.doTransaction` w `ImplementationLogic.Tests.fspoj` jest proste:
+Testy jednostkowe `Transactions.doTransaction` w `ImplementationLogic.Tests.fsproj` jest proste:
 
 ```fsharp
 namespace TransactionsTestingUtil
@@ -552,7 +552,7 @@ F#ma pełne wsparcie dla obiektów i pojęcia zorientowane obiektowo (wprowadzan
 * Notacji z kropką (`x.Length`)
 * Elementy członkowskie wystąpień
 * Niejawne konstruktorów
-* Statyczne elementy członkowskie
+* Statyczne składowe
 * Notacja indeksatora (`arr.[x]`)
 * Argumenty nazwane i opcjonalne
 * Interfejsy i implementacje interfejsu

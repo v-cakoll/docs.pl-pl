@@ -5,16 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 3a642996da8f0126e59e21d3553a7d8ba73dab23
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422680"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401783"
 ---
 # <a name="new-modifier-c-reference"></a>New — modyfikator (odwołanie w C#)
 
 Stosowania jako modyfikator deklaracji, `new` — słowo kluczowe jawnie ukrywa składową, która jest dziedziczona z klasy bazowej. Po ukryciu dziedziczonego członka, pochodna wersja członka zastępuje wersję klasy podstawowej. Chociaż można ukryć elementy członkowskie bez korzystania z `new` modyfikator, zostanie wyświetlone ostrzeżenie kompilatora. Jeśli używasz `new` Aby jawnie ukryć członka, powoduje to pominięcie ostrzeżenia.
+
+Można również użyć `new` słowa kluczowego [utworzenia wystąpienia typu](../operators/new-operator.md) lub jako [ograniczenie typu ogólnego](../keywords/new-constraint.md).
 
 Do ukrywania odziedziczonej składowej, Zadeklaruj go w klasie pochodnej przy użyciu tej samej nazwy elementu członkowskiego i zmodyfikuj go za pomocą `new` — słowo kluczowe. Na przykład:
 
@@ -24,7 +26,7 @@ W tym przykładzie `BaseC.Invoke` jest ukryta przez `DerivedC.Invoke`. Pole `x` 
 
 Ukrywanie nazw poprzez dziedziczenie ma jedną z następujących form:
 
-- Ogólnie rzecz biorąc stała, pole, właściwość lub typ, który został wprowadzony w klasie lub strukturze ukrywa wszystkie składowe klasy podstawowej, które współdzielą jego nazwę.  Istnieją przypadki specjalne.  Na przykład, jeśli zadeklarujesz nowe pole o nazwie `N` typu, którego nie można wywołać i typ podstawowy deklaruje `N` jako metodę, nowe pole nie powoduje ukrycia podstawowej deklaracji w składni wywołania.  Zobacz [specyfikacji języka C# w wersji 5.0](https://www.microsoft.com/download/details.aspx?id=7029) Aby uzyskać szczegółowe informacje (zobacz sekcję "Wyszukanie członka" w sekcji "Wyrażenia").
+- Ogólnie rzecz biorąc stała, pole, właściwość lub typ, który został wprowadzony w klasie lub strukturze ukrywa wszystkie składowe klasy podstawowej, które współdzielą jego nazwę. Istnieją przypadki specjalne. Na przykład, jeśli zadeklarujesz nowe pole o nazwie `N` typu, którego nie można wywołać i typ podstawowy deklaruje `N` jako metodę, nowe pole nie powoduje ukrycia podstawowej deklaracji w składni wywołania. Aby uzyskać więcej informacji, zobacz [wyszukanie członka](~/_csharplang/spec/expressions.md#member-lookup) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 - Metoda wprowadzona w klasie lub strukturze ukrywa właściwości, pola i typy, które współużytkują tę nazwę w klasie bazowej. Ukrywa wszystkie metody klasy podstawowej, które mają taki sam podpis.
 
@@ -48,13 +50,13 @@ W tym przykładzie klasa zagnieżdżona ukrywa klasę, która ma taką samą naz
 
 Jeśli usuniesz `new` modyfikator, program się skompiluje i uruchamiania, ale otrzymasz następujące ostrzeżenie:
 
-```
+```text
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
 ```
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Aby uzyskać więcej informacji, zobacz [nowy modyfikator](~/_csharplang/spec/classes.md#the-new-modifier) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 

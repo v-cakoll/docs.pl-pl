@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960035"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402467"
 ---
 # <a name="nettcp-port-sharing"></a>Współużytkowanie portów w składniku Net.TCP
 Windows Communication Foundation (WCF) zapewnia nowy Protokół sieci oparte na protokole TCP (net.tcp://) komunikację o wysokiej wydajności. Usługi WCF wprowadza również nowy składnik systemu, usługi udostępniania portów Net.TCP, która umożliwia użycie portów net.tcp być współużytkowane przez wiele procesów użytkownika.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) zapewnia nowy Protokół sieci oparte na 
   
  HTTP. SYS modelu, w którym ruch dla wielu różnych aplikacji protokołu HTTP jest multipleksowany do jednego portu TCP stał się standardowego dla Windows platform. Dzięki temu można wspólnego punktu kontroli zapory Administratorzy, zapewniając deweloperom aplikacji w celu zminimalizowania kosztów wdrożenia, tworzenia nowych aplikacji, które mogą ułatwić korzystanie z sieci.  
   
- Możliwość udostępniania portów dla wielu aplikacji HTTP dawna funkcji programu Internetowe usługi informacyjne (IIS). Jednakże było tylko w przypadku wprowadzenia protokołu HTTP. SYS (tryb jądra odbiornika protokołu HTTP) przy użyciu [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pełni uogólniony tej infrastruktury. W efekcie HTTP. SYS umożliwia użytkownika jest swobodny procesom współużytkowanie portów TCP dedykowany dla ruchu HTTP. Ta funkcja umożliwia wielu aplikacji HTTP, które będą mogły nadal współistnieć na tym samym komputerze fizycznych w oddzielnych, izolowane procesów podczas udostępniania infrastruktury sieciowej, wymagane do wysyłania i odbierania ruchu za pośrednictwem portu TCP 80. Usługi udostępniania portów Net.TCP umożliwia ten sam typ udostępniania dla aplikacji net.tcp portów.  
+ Możliwość udostępniania portów dla wielu aplikacji HTTP dawna funkcji programu Internetowe usługi informacyjne (IIS). Jednakże było tylko w przypadku wprowadzenia protokołu HTTP. SYS (tryb jądra odbiornika protokołu HTTP) w usługach IIS 6.0, w pełni uogólniony tej infrastruktury. W efekcie HTTP. SYS umożliwia użytkownika jest swobodny procesom współużytkowanie portów TCP dedykowany dla ruchu HTTP. Ta funkcja umożliwia wielu aplikacji HTTP, które będą mogły nadal współistnieć na tym samym komputerze fizycznych w oddzielnych, izolowane procesów podczas udostępniania infrastruktury sieciowej, wymagane do wysyłania i odbierania ruchu za pośrednictwem portu TCP 80. Usługi udostępniania portów Net.TCP umożliwia ten sam typ udostępniania dla aplikacji net.tcp portów.  
   
 ## <a name="port-sharing-architecture"></a>Architektura współużytkowania portów  
  Architektura współużytkowanie portów w programie WCF ma trzy główne składniki:  

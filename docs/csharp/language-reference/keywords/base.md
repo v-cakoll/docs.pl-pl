@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: ef7995c9f7737d29d7e9479c3b84a25b13943be3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ef0d07aed595fa630459171482e0b0849aed877
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662110"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401593"
 ---
 # <a name="base-c-reference"></a>base (odwołanie w C#)
 
@@ -37,7 +37,7 @@ W tym przykładzie, zarówno klasy bazowej, `Person`i klasy pochodnej `Employee`
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-Aby uzyskać więcej przykładów, zobacz [nowe](../../../csharp/language-reference/keywords/new.md), [wirtualnego](../../../csharp/language-reference/keywords/virtual.md), i [zastąpienia](../../../csharp/language-reference/keywords/override.md).
+Aby uzyskać więcej przykładów, zobacz [nowe](new-modifier.md), [wirtualnego](virtual.md), i [zastąpienia](override.md).
 
 ## <a name="example"></a>Przykład
 

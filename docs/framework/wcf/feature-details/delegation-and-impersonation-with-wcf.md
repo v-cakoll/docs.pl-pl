@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: f037c47618873a6d866433483aadf2f20c4c4971
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b9dd02724b8c2a9e4f50ecd61d822d5f1a478eee
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882251"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402335"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegowanie i personifikacja za pomocą programu WCF
 *Personifikacja* jest typową techniką, której usługi użyć do ograniczenia dostępu klienta do zasobów w domenie usługi. Zasobów domeny usługi może być zasoby maszyny, takie jak pliki lokalne (dokona personifikacji) lub zasobów na innej maszynie, na przykład do udziału plików (delegowania). Dla przykładowej aplikacji, zobacz [Personifikowanie klienta](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Na przykład jak używać personifikacji zobacz [jak: Personifikowanie klienta w usłudze](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "65882251"
  Zakres, do którego usługa może personifikować klienta zależy od uprawnień, który przechowuje konto usługi, podczas prób personifikacji, typ personifikacji używane i prawdopodobnie stopnia personifikacji, który pozwala na kliencie.  
   
 > [!NOTE]
->  Gdy klient i usługa są uruchomione na tym samym komputerze i klient jest uruchomiony w ramach konta system (na przykład `Local System` lub `Network Service`), nie można spersonifikować klienta, po nawiązaniu bezpiecznej sesji przy użyciu stanowych kontekstu zabezpieczeń tokeny. Formularz Windows lub konsoli aplikacji jest zazwyczaj uruchamiany przy użyciu aktualnie zalogowanego konta tak, aby konto mogą personalizacji domyślnie. Gdy klient jest jednak strony ASP.NET i tej stronie znajduje się w [!INCLUDE[iis601](../../../../includes/iis601-md.md)] lub [!INCLUDE[iisver](../../../../includes/iisver-md.md)], a następnie uruchom klienta, w obszarze `Network Service` konto domyślne. Domyślnie wszystkie powiązania dostarczane przez system, które obsługują bezpiecznej sesji używają tokenu kontekstu zabezpieczeń o bezstanowa (SCT). Jednakże jeśli klient znajduje się na stronie ASP.NET i bezpieczne sesje stanowych SCTs są używane, nie można spersonifikować klienta. Aby uzyskać więcej informacji na temat w ramach bezpiecznej sesji przy użyciu stanowych SCTs zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Gdy klient i usługa są uruchomione na tym samym komputerze i klient jest uruchomiony w ramach konta system (na przykład `Local System` lub `Network Service`), nie można spersonifikować klienta, po nawiązaniu bezpiecznej sesji przy użyciu stanowych kontekstu zabezpieczeń tokeny. Formularz Windows lub konsoli aplikacji jest zazwyczaj uruchamiany przy użyciu aktualnie zalogowanego konta tak, aby konto mogą personalizacji domyślnie. Gdy klient jest jednak strony ASP.NET i tej stronie znajduje się w usługach IIS 6.0 lub [!INCLUDE[iisver](../../../../includes/iisver-md.md)], a następnie uruchom klienta, w obszarze `Network Service` konto domyślne. Domyślnie wszystkie powiązania dostarczane przez system, które obsługują bezpiecznej sesji używają tokenu kontekstu zabezpieczeń o bezstanowa (SCT). Jednakże jeśli klient znajduje się na stronie ASP.NET i bezpieczne sesje stanowych SCTs są używane, nie można spersonifikować klienta. Aby uzyskać więcej informacji na temat w ramach bezpiecznej sesji przy użyciu stanowych SCTs zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Personifikacji w metodzie usług: Deklaratywny Model  
  Większość scenariuszy personifikacji wymagają wykonania metody usługi w kontekście obiektu wywołującego. WCF oferuje funkcję personifikacji, który sprawia, że są to proste, umożliwiając użytkownikowi na określenie wymagań personifikacji w <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu. Na przykład, poniższy kod, infrastruktura WCF personifikuje obiekt wywołujący przed wykonaniem `Hello` metody. Dowolne próba dostępu do zasobów natywnych wewnątrz `Hello` metoda powiedzie się tylko wtedy, gdy listy kontroli dostępu (ACL) zasobu umożliwia obiektowi wywołującemu przywileje dostępu. Aby włączyć personifikacji, ustaw <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> jedną z właściwości <xref:System.ServiceModel.ImpersonationOption> wartości wyliczenia, albo <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> lub <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, jak pokazano w poniższym przykładzie.  
@@ -113,12 +113,12 @@ ms.locfileid: "65882251"
   
 |`AllowedImpersonationLevel` Wartość|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anonimowe|Tak|n/d|Personifikacja|  
+|Anonimowe|Yes|n/d|Personifikacja|  
 |Anonimowe|Nie|n/d|Identyfikacja|  
 |Identyfikacja|n/d|n/d|Identyfikacja|  
-|Personifikacja|Yes|n/d|Personifikacja|  
+|Personifikacja|Tak|n/d|Personifikacja|  
 |Personifikacja|Nie|n/d|Identyfikacja|  
-|Delegowanie|Tak|Yes|Delegowanie|  
+|Delegowanie|Yes|Yes|Delegowanie|  
 |Delegowanie|Tak|Nie|Personifikacja|  
 |Delegowanie|Nie|n/d|Identyfikacja|  
   
@@ -127,7 +127,7 @@ ms.locfileid: "65882251"
   
 |`AllowedImpersonationLevel`|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/d|Tak|Yes|Delegowanie|  
+|n/d|Yes|Tak|Delegowanie|  
 |n/d|Tak|Nie|Personifikacja|  
 |n/d|Nie|n/d|Identyfikacja|  
   
@@ -135,8 +135,8 @@ ms.locfileid: "65882251"
   
 |Usługa ma `SeTcbPrivilege`|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Tak|Tak|n/d|Personifikacja|  
-|Tak|Nie|n/d|Identyfikacja|  
+|Yes|Yes|n/d|Personifikacja|  
+|Yes|Nie|n/d|Identyfikacja|  
 |Nie|n/d|n/d|Identyfikacja|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Mapowanie certyfikatu klienta na konto Windows  
@@ -181,7 +181,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Nie|Nie|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Yes|Nie|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Yes|Tak|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Yes|Yes|  
   
  Poniższy przykład kodu pokazuje, jak używać delegowania.  
   

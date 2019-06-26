@@ -1,22 +1,22 @@
 ---
-title: Sprawdź wartości danych pośrednich podczas przetwarzania w strukturze ML.NET
-description: Dowiedz się, jak przeprowadzać inspekcję wartości rzeczywiste dane pośrednie podczas strukturze ML.NET usługi machine learning przetwarzania potokowego w programie
-ms.date: 04/29/2019
+title: Sprawdzanie danych pośrednich podczas przetwarzania w strukturze ML.NET
+description: Dowiedz się, jak przeprowadzać inspekcję danych pośrednich w strukturze ML.NET usługi machine learning potoku ładowania, przetwarzania i szkoleń modelowych kroków w strukturze ML.NET.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063514"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402388"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>Sprawdź wartości danych pośrednich podczas przetwarzania
+# <a name="inspect-intermediate-data-during-processing"></a>Sprawdzanie danych pośrednich podczas przetwarzania
 
-Dowiedz się, jak przeprowadzać inspekcję wartości podczas ładowania, przetwarzania i kroki szkolenia w strukturze ML.NET.
+Dowiedz się, jak przeprowadzać inspekcję danych pośrednich podczas ładowania, przetwarzania i kroki szkolenie modelu w strukturze ML.NET. Pośrednie dane znajdują się dane wyjściowe każdego etapu w potoku uczenia maszynowego.
 
-Jeden reprezentowane danych, takich jak poniżej, który jest ładowany do [ `IDataView` ](xref:Microsoft.ML.IDataView) mogą być kontrolowane na różne sposoby, w strukturze ML.NET.
+Pośrednich danych, takich jak jeden reprezentowane poniżej, który jest ładowany do [ `IDataView` ](xref:Microsoft.ML.IDataView) mogą być kontrolowane na różne sposoby, w strukturze ML.NET.
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,9 +62,9 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>Konwertuj IDataView do interfejsu IEnumerable
 
-Najszybszy sposób sprawdzenia wartości [ `IDataView` ](xref:Microsoft.ML.IDataView) jest, aby przekonwertować go pod kątem [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601). Aby przekonwertować [ `IDataView` ](xref:Microsoft.ML.IDataView) do [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) użyj [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) metody. 
+Najszybszy sposób sprawdzić [ `IDataView` ](xref:Microsoft.ML.IDataView) jest, aby przekonwertować go pod kątem [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601). Aby przekonwertować [ `IDataView` ](xref:Microsoft.ML.IDataView) do [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) użyj [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) metody. 
 
-Aby zoptymalizować wydajność, ustaw wartość `reuseRowObject` do `true`. To opóźnieniem spowoduje wypełnienie tego samego obiektu przy użyciu danych bieżącego wiersza, ponieważ jest szacowana w przeciwieństwie tworzenia nowego obiektu dla każdego wiersza w zestawie danych.
+Aby zoptymalizować wydajność, ustaw `reuseRowObject` do `true`. To opóźnieniem spowoduje wypełnienie tego samego obiektu przy użyciu danych bieżącego wiersza, ponieważ jest szacowana w przeciwieństwie tworzenia nowego obiektu dla każdego wiersza w zestawie danych.
 
 ```csharp
 // Create an IEnumerable of HousingData objects from IDataView
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>Uzyskiwanie dostępu do określonych wskaźników za pomocą interfejsu IEnumerable
 
 Jeśli wymagane jest tylko dostęp do części danych lub określonych indeksów, użyj [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) i ustaw `reuseRowObject` wartości parametru `false` , nowy obiekt jest tworzony dla każdego z żądanych wierszy w zestawie danych. Następnie przekonwertować [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) do tablicy lub listy.
 

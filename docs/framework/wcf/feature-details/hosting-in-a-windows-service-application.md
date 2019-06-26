@@ -2,12 +2,12 @@
 title: Hostowanie w aplikacji usługi systemu Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc95634745aa0c0246cf139d19e0777fde7e1aba
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613308"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402171"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hostowanie w aplikacji usługi systemu Windows
 Usługi Windows (znana wcześniej jako usługi Windows NT) zapewniają proces modelu szczególnie odpowiednie dla aplikacji, które muszą znajdować się w pliku wykonywalnym długotrwałych i nie są wyświetlane w dowolnej postaci interfejsu użytkownika. Okres istnienia procesu systemu Windows, aplikacji usługi jest zarządzany przez Menedżera sterowania usługami (SCM), dzięki czemu można uruchomić, zatrzymać i oraz ich wstrzymywania aplikacji usług Windows. Możesz skonfigurować proces usługi Windows do automatycznego uruchamiania podczas uruchamiania komputera, dzięki czemu odpowiednie środowisko hostingu dla aplikacji "zawsze włączone". Aby uzyskać więcej informacji na temat aplikacji usług Windows zobacz [aplikacji usług Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -20,7 +20,7 @@ Usługi Windows (znana wcześniej jako usługi Windows NT) zapewniają proces mo
   
 - Proces, który jest hostem aplikacji może zostać wyłączony po uruchomieniu. Po rozpoczęciu procesu usługi Windows jest uruchomiona, chyba że jawnie zamykanie systemu przez administratora serwera przy użyciu Menedżera kontroli usług. Aplikacje hostowane w usługach IIS i WAS może można uruchamiać i zatrzymywać dynamicznie, aby optymalnie wykorzystać zasoby systemowe. Aplikacje, które wymagają jawną kontrolę nad okresem istnienia procesu hostingu należy używać usług Windows, a nie przez usługi IIS i WAS.  
   
-- Usługi WCF, należy uruchomić w systemie Windows Server 2003 i użyj transportu innego niż HTTP. W systemie Windows Server 2003 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Środowisko hostingu jest ograniczony do protokołu HTTP do komunikacji tylko. Aplikacje usług Windows nie podlegają to ograniczenie i można użyć dowolnego transport obsługuje WCF, m.in. net.tcp, net.pipe i net.msmq.  
+- Usługi WCF, należy uruchomić w systemie Windows Server 2003 i użyj transportu innego niż HTTP. W systemie Windows Server 2003 Środowisko hostingu usług IIS 6.0 jest ograniczona do tylko komunikacji HTTP. Aplikacje usług Windows nie podlegają to ograniczenie i można użyć dowolnego transport obsługuje WCF, m.in. net.tcp, net.pipe i net.msmq.  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Hostowanie usługi WCF wewnątrz aplikacji usługi Windows  
   

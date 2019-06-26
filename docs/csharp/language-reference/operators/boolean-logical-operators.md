@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 809c88d519cb75f42c1ac00a18e19097c01fd084
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 261c3fa2cc2f94e2a3f76a8a41982c21183e973a
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347931"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401360"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Wartość logiczna operatorów logicznych (C# odwołania)
 
@@ -55,7 +55,7 @@ Dla argumentów operacji [całkowitego](../keywords/integral-types-table.md) typ
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-## <a name="logical-and-operator-amp"></a>Operator logiczny AND &amp;
+## <a name="logical-and-operator-"></a> Operator logiczny AND &amp;
 
 `&` Operator oblicza logicznego i jego operandu. Wynik `x & y` jest `true` Jeśli oba `x` i `y` zwrócić `true`. W przeciwnym razie wynikiem jest `false`.
 
@@ -91,7 +91,7 @@ W poniższym przykładzie prawostronny operand `|` operator jest wywołanie meto
 
 Dla argumentów operacji typu całkowitoliczbowego `|` oblicza operator [bitowe OR logiczne](bitwise-and-shift-operators.md#logical-or-operator-) z argumentów.
 
-## <a name="conditional-logical-and-operator-ampamp"></a>Operator logiczny AND warunkowe &amp;&amp;
+## <a name="conditional-logical-and-operator-"></a> Operator logiczny AND warunkowe &amp;&amp;
 
 Operator logiczny AND warunkowe `&&`, znany także jako "zwarcie" logicznego operatora AND, oblicza logicznego i jego operandu. Wynik `x && y` jest `true` Jeśli oba `x` i `y` zwrócić `true`. W przeciwnym razie wynikiem jest `false`. Jeśli `x` daje w wyniku `false`, `y` nie jest oceniany.
 

@@ -2,12 +2,12 @@
 title: Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025737"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402300"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 
@@ -43,7 +43,7 @@ Proces instalacji programu .NET Framework powoduje automatyczne zarejestrowanie 
 
 Usługi WCF hostowanych przez usługi IIS muszą znajdować się wewnątrz aplikacji IIS. Można utworzyć nowej aplikacji usług IIS do hostowania usług WCF wyłącznie. Alternatywnie można wdrożyć usługi WCF do istniejącej aplikacji, która jest już hosting zawartości platformy ASP.NET w wersji 2.0 (np. strony aspx oraz usług sieci Web platformy ASP.NET [ASMX]). Aby uzyskać więcej informacji o tych opcjach, zobacz "Hosting usług WCF Side-by-Side za pomocą platformy ASP.NET" i "Hosting usług WCF w trybie zgodności ASP.NET" sekcje w [usługi WCF i platforma ASP.NET](wcf-services-and-aspnet.md).
 
-Należy pamiętać, że [!INCLUDE[iis601](../../../../includes/iis601-md.md)] i nowszych wersjach okresowego ponownego uruchamiania izolowanych aplikacji programowania obiektowego. Wartość domyślna to 1740 minut. Wartość maksymalna obsługiwana jest 71,582 minut. Można wyłączyć ponowne uruchomienie. Aby uzyskać więcej informacji na temat tej właściwości, zobacz [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+Należy pamiętać, że usługi IIS 6.0 i nowszych wersjach okresowego ponownego uruchamiania obiektowy programowania aplikacji izolowanej. Wartość domyślna to 1740 minut. Wartość maksymalna obsługiwana jest 71,582 minut. Można wyłączyć ponowne uruchomienie. Aby uzyskać więcej informacji na temat tej właściwości, zobacz [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Utwórz plik .svc dla usługi WCF
 
@@ -103,7 +103,7 @@ Należy zawsze używać punktu końcowego względnych adresów dla punktów koń
 
 ### <a name="available-transports"></a>Dostępne transportu
 
-Usługi WCF hostowane w usługach IIS 5.1 i [!INCLUDE[iis601](../../../../includes/iis601-md.md)] są ograniczone do komunikacji w opartych na protokole HTTP. Na tych platformach usług IIS konfigurowania usługi hostowanej, aby użyć powiązania protokołu HTTP powoduje wystąpienie błędu podczas aktywacji usługi. Aby uzyskać [!INCLUDE[iisver](../../../../includes/iisver-md.md)], obsługiwanych transportów obejmują HTTP, Net.TCP, Net.Pipe, Net.MSMQ i msmq.formatname dla zapewnienia zgodności z istniejącymi aplikacjami usługi MSMQ.
+Usług WCF hostowanych w usługach IIS 5.1 i IIS 6.0 są ograniczone do komunikacji w opartych na protokole HTTP. Na tych platformach usług IIS konfigurowania usługi hostowanej, aby użyć powiązania protokołu HTTP powoduje wystąpienie błędu podczas aktywacji usługi. Aby uzyskać [!INCLUDE[iisver](../../../../includes/iisver-md.md)], obsługiwanych transportów obejmują HTTP, Net.TCP, Net.Pipe, Net.MSMQ i msmq.formatname dla zapewnienia zgodności z istniejącymi aplikacjami usługi MSMQ.
 
 ### <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
 

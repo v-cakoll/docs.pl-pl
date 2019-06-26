@@ -8,14 +8,14 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647934"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402205"
 ---
-# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Test biblioteki .NET Standard z platformą .NET Core w programie Visual Studio 2017
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testowanie biblioteki .NET Standard na platformie .NET Core w programie Visual Studio 2017
 
 W [kompilacji biblioteki .NET Standard z C# i .NET Core w programie Visual Studio 2017](library-with-visual-studio.md) lub [Tworzenie biblioteki .NET Standard, w języku Visual Basic i .NET Core w programie Visual Studio 2017](vb-library-with-visual-studio.md), utworzyć prostą klasę Biblioteka, która dodaje metodę rozszerzenia, aby <xref:System.String> klasy. Teraz utworzysz testu jednostkowego, aby upewnić się, że działa zgodnie z oczekiwaniami. Dodasz projektu testu jednostkowego z rozwiązaniem, utworzonej w poprzednim artykule.
 
@@ -68,7 +68,7 @@ Aby utworzyć projekt testów jednostkowych, wykonaj następujące czynności:
 
    Kod źródłowy, utworzona przez szablon testu jednostki wykonuje następujące czynności:
 
-   * Importuje [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType> przestrzeń nazw, która zawiera typy używane do testowania jednostki.
+   * Importuje <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> przestrzeń nazw, która zawiera typy używane do testowania jednostki.
 
    * Ma to zastosowanie <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) atrybutu `UnitTest1` klasy. Każdej metody w klasie testowej oznakowane za pomocą <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atrybutu jest wykonywane automatycznie po uruchomieniu testu jednostkowego.
 

@@ -1,17 +1,17 @@
 ---
-title: Wprowadzenie do języka C# i Visual Studio Code
+title: Wprowadzenie do języka C# i programu Visual Studio Code
 description: Informacje o sposobie tworzenia i debugowania pierwszej aplikacji platformy .NET Core w języku C# za pomocą programu Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7ea2aed3b340b7ae7a6dcd83df30f9453380af15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750872"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401835"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i Visual Studio Code
+# <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i programu Visual Studio Code
 
 .NET core udostępnia szybka, modularna platforma do tworzenia aplikacji działających w Windows, Linux i macOS. Użyj programu Visual Studio Code z rozszerzeniem języka C#, aby uzyskać Zaawansowane edytowanie z pełnym wsparciem dla języka C# IntelliSense (uzupełnianie kodu inteligentnych) i debugowania.
 
@@ -68,7 +68,7 @@ Możesz też obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Insta
 
 3. Aby otworzyć widok debugowania, kliknij ikonę debugowanie z menu po lewej stronie.
 
-    ![Otwórz kartę debugowania w programie Visual Studio Codee](media/with-visual-studio-code/open-debug-tab.png)
+    ![Otwórz kartę debugowania w programie Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
 4. Znajdź zieloną strzałkę w górnej części okienka. Upewnij się, ma listę rozwijaną obok niego `.NET Core Launch (console)` wybrane.
 
@@ -88,7 +88,7 @@ Możesz też obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Insta
 > [!TIP]
 > Aby uzyskać więcej informacji i rozwiązywanie problemów z porad na temat platformy .NET Core debugowania przy użyciu technologię OmniSharp w programie Visual Studio Code, zobacz [instrukcje dotyczące konfigurowania debugera platformy .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="add-a-class"></a>Dodaj klasę
+## <a name="add-a-class"></a>Dodawanie klasy
 
 1. Aby dodać nowe kliknij prawym przyciskiem myszy klasy w Eksploratorze programu VSCode i wybierz **nowy plik**. Spowoduje to dodanie nowego pliku do folderu otwartych w VSCode.
 2. Nadaj plikowi nazwę `MyClass.cs`. Musisz zapisać ją z `.cs` rozszerzenia na końcu, aby mogła zostać rozpoznany jako plik csharp.

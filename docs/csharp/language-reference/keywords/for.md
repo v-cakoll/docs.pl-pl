@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 166f8a99a3556664f5f3701c94aa8593ac7ebe32
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422080"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401521"
 ---
 # <a name="for-c-reference"></a>Aby uzyskać (odwołanie w C#)
 
@@ -51,7 +51,7 @@ Instrukcje w *inicjatora* sekcji są wykonywane tylko raz, przed wprowadzeniem p
 
   - Wstawianie prefiksu lub przyrostkowe [dekrementacji](../operators/arithmetic-operators.md#decrement-operator---) wyrażenie, takie jak `--i` lub `i--`
 
-  - Tworzenie obiektu za pomocą [nowe](new-operator.md) — słowo kluczowe
+  - Tworzenie obiektu za pomocą [nowe](../operators/new-operator.md) — operator
 
   - [await](await.md) wyrażenia
 
@@ -83,7 +83,7 @@ i < 5
 
 - Wstawianie prefiksu lub przyrostkowe [dekrementacji](../operators/arithmetic-operators.md#decrement-operator---) wyrażenie, takie jak `--i` lub `i--`
 
-- Tworzenie obiektu za pomocą [nowe](new-operator.md) — słowo kluczowe
+- Tworzenie obiektu za pomocą [nowe](../operators/new-operator.md) — operator
 
 - [await](await.md) wyrażenia
 

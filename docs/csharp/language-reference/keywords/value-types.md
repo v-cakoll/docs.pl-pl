@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: afefb1f7bebb66a915074e8f231e73962a1b0ab0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422123"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401445"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (C# odwołania)
 
@@ -88,9 +88,9 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Za pomocą [nowe](new.md) operator wywołuje konstruktora bez parametrów od określonego typu i przypisuje wartość domyślną do zmiennej. W powyższym przykładzie konstruktora bez parametrów przypisaną wartość `0` do `myInt`. Aby uzyskać więcej informacji na temat wartości przypisane przez wywołanie metody konstruktory domyślne zobacz [tabela wartości domyślnych](default-values-table.md).
+Za pomocą [nowe](../operators/new-operator.md) operator wywołuje konstruktora bez parametrów od określonego typu i przypisuje wartość domyślną do zmiennej. W powyższym przykładzie konstruktora bez parametrów przypisaną wartość `0` do `myInt`. Aby uzyskać więcej informacji na temat wartości przypisane przez wywołanie metody konstruktory domyślne zobacz [tabela wartości domyślnych](default-values-table.md).
 
-W przypadku typów zdefiniowanych przez użytkownika, należy użyć [nowe](new.md) do wywołania konstruktora bez parametrów. Na przykład następująca instrukcja wywołuje konstruktora bez parametrów z `Point` struktury:
+W przypadku typów zdefiniowanych przez użytkownika, należy użyć [nowe](../operators/new-operator.md) do wywołania konstruktora bez parametrów. Na przykład następująca instrukcja wywołuje konstruktora bez parametrów z `Point` struktury:
 
 ```csharp
 Point p = new Point(); // Invoke parameterless constructor for the struct.
@@ -98,7 +98,7 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 
 Po tym wywołaniu struktury uznaje się być zdecydowanie przypisywany; oznacza to, że wszystkie jego elementy członkowskie są inicjowane do wartości domyślnych.
 
-Aby uzyskać więcej informacji na temat `new` operatora, zobacz [nowe](new.md).
+Aby uzyskać więcej informacji na temat `new` operatora, zobacz [nowe](../operators/new-operator.md).
 
 Aby dowiedzieć się, jak formatowanie danych wyjściowych typów liczbowych, zobacz [formatowanie tabeli wyników liczbowych](formatting-numeric-results-table.md).
 

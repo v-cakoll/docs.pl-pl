@@ -46,7 +46,7 @@ W aplikacji składających się wyłącznie z kodu zarządzanego środowisko uru
 |Typ niezarządzany|Typu importowanego|  
 |--------------------|-------------------|  
 |**SafeArray (** *typu* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ranga = 1, dolna granica = 0. Rozmiar jest znane tylko wtedy, gdy jest podawany jako zarządzanego podpisu. Bezpieczne tablic, które nie są rangi = 1 lub dolna granica = 0 nie mogą być przekazywane jako **SZARRAY**.|  
-|*Typ***]** |**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ranga = 1, dolna granica = 0. Rozmiar jest znane tylko wtedy, gdy jest podawany jako zarządzanego podpisu.|  
+|*Typ* **]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ranga = 1, dolna granica = 0. Rozmiar jest znane tylko wtedy, gdy jest podawany jako zarządzanego podpisu.|  
   
 ### <a name="safe-arrays"></a>Tablic bezpiecznych programu  
  Po zaimportowaniu bezpieczną tablicą z biblioteki typów na zestaw .NET tablica jest konwertowana na tablicę jednowymiarową znanego typu (takie jak **int**). Tych samych zasad konwersji typów, które są stosowane do parametrów dotyczą również elementy tablicy. Na przykład, bezpieczną tablicą o **BSTR** typy staje się zarządzanych tablicę ciągów i bezpieczną tablicą wariantów staje się tablicy obiektów. **SAFEARRAY** typ elementu jest przechwytywane z biblioteki typów i zapisane w **SAFEARRAY** wartość <xref:System.Runtime.InteropServices.UnmanagedType> wyliczenia.  
@@ -185,8 +185,8 @@ void New3(ref String ar);
 |Zarządzany typ tablicy|Wyeksportowany jako|  
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ jest dostarczany w podpisie. Ranga ma zawsze numer 1, dolna granica jest zawsze 0. Rozmiar zawsze jest znany w czasie wykonywania.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *typu* **>** **\<** *ranga* **>**[**\<** *granice* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Granice rangę, typ, znajdują się w podpisie. Rozmiar zawsze jest znany w czasie wykonywania.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Typ, rangę, granice i rozmiar zawsze są znane w czasie wykonywania.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *typu* **>** **\<** *ranga* **>** [ **\<** *granice* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Granice rangę, typ, znajdują się w podpisie. Rozmiar zawsze jest znany w czasie wykonywania.|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Typ, rangę, granice i rozmiar zawsze są znane w czasie wykonywania.|  
   
  Brak ograniczeń w automatyzacji OLE odnoszących się do tablic struktur, które zawierają LPSTR lub LPWSTR.  W związku z tym **ciąg** pola muszą być przekazywane jako **UnmanagedType.BSTR**. W przeciwnym razie zostanie zgłoszony wyjątek.  
   

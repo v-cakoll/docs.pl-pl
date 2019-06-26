@@ -10,48 +10,48 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: ef7995c9f7737d29d7e9479c3b84a25b13943be3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ef0d07aed595fa630459171482e0b0849aed877
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662110"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401593"
 ---
-# <a name="base-c-reference"></a><span data-ttu-id="e7d4d-103">base (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="e7d4d-103">base (C# Reference)</span></span>
+# <a name="base-c-reference"></a><span data-ttu-id="fb6bc-103">base (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="fb6bc-103">base (C# Reference)</span></span>
 
-<span data-ttu-id="e7d4d-104">`base` Słowo kluczowe jest używane do dostępu do składowych klasy bazowej z poziomu klasy pochodnej:</span><span class="sxs-lookup"><span data-stu-id="e7d4d-104">The `base` keyword is used to access members of the base class from within a derived class:</span></span>
+<span data-ttu-id="fb6bc-104">`base` Słowo kluczowe jest używane do dostępu do składowych klasy bazowej z poziomu klasy pochodnej:</span><span class="sxs-lookup"><span data-stu-id="fb6bc-104">The `base` keyword is used to access members of the base class from within a derived class:</span></span>
 
-- <span data-ttu-id="e7d4d-105">Wywołania metody w klasie bazowej, która została zastąpiona przy użyciu innej metody.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-105">Call a method on the base class that has been overridden by another method.</span></span>
+- <span data-ttu-id="fb6bc-105">Wywołania metody w klasie bazowej, która została zastąpiona przy użyciu innej metody.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-105">Call a method on the base class that has been overridden by another method.</span></span>
 
-- <span data-ttu-id="e7d4d-106">Określ, powinna być wywoływana konstruktora klasy bazowej, podczas tworzenia wystąpień klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-106">Specify which base-class constructor should be called when creating instances of the derived class.</span></span>
+- <span data-ttu-id="fb6bc-106">Określ, powinna być wywoływana konstruktora klasy bazowej, podczas tworzenia wystąpień klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-106">Specify which base-class constructor should be called when creating instances of the derived class.</span></span>
 
-<span data-ttu-id="e7d4d-107">Dostęp klasy bazowej jest dozwolona tylko w konstruktorem, metodą wystąpienia lub metody dostępu właściwości wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-107">A base class access is permitted only in a constructor, an instance method, or an instance property accessor.</span></span>
+<span data-ttu-id="fb6bc-107">Dostęp klasy bazowej jest dozwolona tylko w konstruktorem, metodą wystąpienia lub metody dostępu właściwości wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-107">A base class access is permitted only in a constructor, an instance method, or an instance property accessor.</span></span>
 
-<span data-ttu-id="e7d4d-108">Jest to błąd, aby użyć `base` — słowo kluczowe z wewnątrz metody statycznej.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-108">It is an error to use the `base` keyword from within a static method.</span></span>
+<span data-ttu-id="fb6bc-108">Jest to błąd, aby użyć `base` — słowo kluczowe z wewnątrz metody statycznej.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-108">It is an error to use the `base` keyword from within a static method.</span></span>
 
-<span data-ttu-id="e7d4d-109">Klasa bazowa, która jest dostępna jest klasa bazowa, określonym w deklaracji klasy.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-109">The base class that is accessed is the base class specified in the class declaration.</span></span> <span data-ttu-id="e7d4d-110">Na przykład, jeśli określisz `class ClassB : ClassA`, członkowie ClassA są dostępne z ClassB, niezależnie od tego, klasa bazowa ClassA.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-110">For example, if you specify `class ClassB : ClassA`, the members of ClassA are accessed from ClassB, regardless of the base class of ClassA.</span></span>
+<span data-ttu-id="fb6bc-109">Klasa bazowa, która jest dostępna jest klasa bazowa, określonym w deklaracji klasy.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-109">The base class that is accessed is the base class specified in the class declaration.</span></span> <span data-ttu-id="fb6bc-110">Na przykład, jeśli określisz `class ClassB : ClassA`, członkowie ClassA są dostępne z ClassB, niezależnie od tego, klasa bazowa ClassA.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-110">For example, if you specify `class ClassB : ClassA`, the members of ClassA are accessed from ClassB, regardless of the base class of ClassA.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e7d4d-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="e7d4d-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fb6bc-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="fb6bc-111">Example</span></span>
 
-<span data-ttu-id="e7d4d-112">W tym przykładzie, zarówno klasy bazowej, `Person`i klasy pochodnej `Employee`, ma metodę o nazwie `Getinfo`.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-112">In this example, both the base class, `Person`, and the derived class, `Employee`, have a method named `Getinfo`.</span></span> <span data-ttu-id="e7d4d-113">Za pomocą `base` — słowo kluczowe, jest możliwe do wywołania `Getinfo` metody w klasie bazowej, z poziomu klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-113">By using the `base` keyword, it is possible to call the `Getinfo` method on the base class, from within the derived class.</span></span>
+<span data-ttu-id="fb6bc-112">W tym przykładzie, zarówno klasy bazowej, `Person`i klasy pochodnej `Employee`, ma metodę o nazwie `Getinfo`.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-112">In this example, both the base class, `Person`, and the derived class, `Employee`, have a method named `Getinfo`.</span></span> <span data-ttu-id="fb6bc-113">Za pomocą `base` — słowo kluczowe, jest możliwe do wywołania `Getinfo` metody w klasie bazowej, z poziomu klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-113">By using the `base` keyword, it is possible to call the `Getinfo` method on the base class, from within the derived class.</span></span>
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-<span data-ttu-id="e7d4d-114">Aby uzyskać więcej przykładów, zobacz [nowe](../../../csharp/language-reference/keywords/new.md), [wirtualnego](../../../csharp/language-reference/keywords/virtual.md), i [zastąpienia](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="e7d4d-114">For additional examples, see [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md), and [override](../../../csharp/language-reference/keywords/override.md).</span></span>
+<span data-ttu-id="fb6bc-114">Aby uzyskać więcej przykładów, zobacz [nowe](new-modifier.md), [wirtualnego](virtual.md), i [zastąpienia](override.md).</span><span class="sxs-lookup"><span data-stu-id="fb6bc-114">For additional examples, see [new](new-modifier.md), [virtual](virtual.md), and [override](override.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="e7d4d-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="e7d4d-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fb6bc-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="fb6bc-115">Example</span></span>
 
-<span data-ttu-id="e7d4d-116">Ten przykład przedstawia sposób określania konstruktora klasy bazowej, wywoływana podczas tworzenia wystąpień klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="e7d4d-116">This example shows how to specify the base-class constructor called when creating instances of a derived class.</span></span>
+<span data-ttu-id="fb6bc-116">Ten przykład przedstawia sposób określania konstruktora klasy bazowej, wywoływana podczas tworzenia wystąpień klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="fb6bc-116">This example shows how to specify the base-class constructor called when creating instances of a derived class.</span></span>
 
 [!code-csharp[csrefKeywordsAccess#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#2)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="e7d4d-117">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="e7d4d-117">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="fb6bc-117">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="fb6bc-117">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="e7d4d-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e7d4d-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb6bc-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fb6bc-118">See also</span></span>
 
-- [<span data-ttu-id="e7d4d-119">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="e7d4d-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="e7d4d-120">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="e7d4d-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="e7d4d-121">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="e7d4d-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="e7d4d-122">this</span><span class="sxs-lookup"><span data-stu-id="e7d4d-122">this</span></span>](../../../csharp/language-reference/keywords/this.md)
+- [<span data-ttu-id="fb6bc-119">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="fb6bc-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="fb6bc-120">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="fb6bc-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="fb6bc-121">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="fb6bc-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="fb6bc-122">this</span><span class="sxs-lookup"><span data-stu-id="fb6bc-122">this</span></span>](../../../csharp/language-reference/keywords/this.md)

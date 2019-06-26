@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585984"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398416"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić, typ. Obiekt jest zasadniczo bloku pamięci, która została przydzielona i skonfigurowane zgodnie z planu. Program może tworzyć wiele obiektów w tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w nazwanej zmiennej lub w tablicy lub kolekcji. Kod klienta jest kodem, który używa tych zmiennych w celu wywołania metod i uzyskiwać dostęp do właściwości publiczne obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  
   
 > [!NOTE]
->  Typy statyczne będą działały inaczej niż opisane tutaj. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+> Typy statyczne będą działały inaczej niż opisane tutaj. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
   
 ## <a name="struct-instances-vs-class-instances"></a>Struktura wystąpień programu vs. Wystąpienia klasy  
  Ponieważ klasy są typami odwołań, zmienna obiektu klasy zawiera odwołanie do adresu obiektu w zarządzanym stosie. Jeśli drugi obiekt tego samego typu, jest przypisany do pierwszego obiektu, obie zmienne odnoszą się do obiektu pod tym adresem. Ten punkt jest omówiona bardziej szczegółowo w dalszej części tego tematu.  
   
- Wystąpienia klas są tworzone za pomocą [operatora new](../../../csharp/language-reference/keywords/new-operator.md). W poniższym przykładzie `Person` jest typem i `person1` i `person 2` wystąpienia lub obiektów tego typu.  
+ Wystąpienia klas są tworzone za pomocą [operatora new](../../../csharp/language-reference/operators/new-operator.md). W poniższym przykładzie `Person` jest typem i `person1` i `person 2` wystąpienia lub obiektów tego typu.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -33,7 +33,7 @@ Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić
  Pamięć dla obu `p1` i `p2` jest przydzielony na stosie wątku. Że pamięć jest odzyskana wraz z typu lub metody, w którym jest zdeklarowana. To jest jednym z powodów dlaczego struktury są kopiowane w przydziale. Z drugiej strony pamięci przydzielonej do wystąpienia klasy jest automatycznie odzyskiwanego (bezużyteczne) przez środowisko uruchomieniowe języka wspólnego, gdy wszystkie odwołania do obiektu zniknie z zakresu. Nie jest możliwe w sposób deterministyczny zniszczenie obiektu klasy, jak w przypadku języka C++. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych w .NET Framework, zobacz [wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
->  Alokacji i dezalokacji pamięci na stosie zarządzanym jest wysoce zoptymalizowane pod kątem w środowisko uruchomieniowe języka wspólnego. W większości przypadków nie ma znaczące różnic w koszt wydajności związany z przydzielaniem wystąpienie klasy na stosie i przydzielanie wystąpienia struktury, na stosie.  
+> Alokacji i dezalokacji pamięci na stosie zarządzanym jest wysoce zoptymalizowane pod kątem w środowisko uruchomieniowe języka wspólnego. W większości przypadków nie ma znaczące różnic w koszt wydajności związany z przydzielaniem wystąpienie klasy na stosie i przydzielanie wystąpienia struktury, na stosie.
   
 ## <a name="object-identity-vs-value-equality"></a>Vs tożsamości obiektu. Równość wartości  
  Podczas porównywania dwóch obiektów pod kątem równości, należy najpierw odróżnić czy chcesz wiedzieć, czy dwie zmienne reprezentują tego samego obiektu w pamięci, lub czy są równoważne wartości co najmniej jednego pola. Jeśli mają zamiar porównać wartości, należy rozważyć, czy obiekty są wystąpień typów wartości (struktury) lub typów referencyjnych (klas, obiektów delegowanych, tablice).  
@@ -68,5 +68,5 @@ Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić
 - [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
 - [class](../../../csharp/language-reference/keywords/class.md)
 - [struct](../../../csharp/language-reference/keywords/struct.md)
-- [new, operator](../../../csharp/language-reference/keywords/new-operator.md)
+- [new, operator](../../../csharp/language-reference/operators/new-operator.md)
 - [System typu wspólnego](../../../standard/base-types/common-type-system.md)

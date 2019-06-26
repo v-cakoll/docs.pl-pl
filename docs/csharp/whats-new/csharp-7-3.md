@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 7.3
 description: Omówienie nowych funkcji w języku C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 4e45893be671b707efbde352eef04fa92af94954
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347406"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397777"
 ---
 # <a name="whats-new-in-c-73"></a>Co nowego w języku C# 7.3
 
@@ -40,7 +40,6 @@ W dalszej części tego artykułu zawiera szczegółowe informacje i łącza, ab
 1. Klonuj [dotnet/try-samples](https://github.com/dotnet/try-samples) repozytorium.
 1. Ustaw bieżący katalog *csharp7* podkatalog *try-samples* repozytorium.
 1. Uruchom `dotnet try`.
-
 
 ## <a name="enabling-more-efficient-safe-code"></a>Włączanie bardziej wydajne, bezpieczne kodu
 

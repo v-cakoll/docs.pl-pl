@@ -6,17 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651847"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398545"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Typy anonimowe (Przewodnik programowania w języku C#)
+
 Typy anonimowe umożliwiają wygodne do hermetyzacji zbiór właściwości tylko do odczytu w jeden obiekt bez konieczności jawne zdefiniowanie typu najpierw. Nazwa typu jest generowanych przez kompilator i nie jest dostępna na poziomie kodu źródłowego. Typ każdej właściwości jest wnioskowany przez kompilator.  
   
- Typy anonimowe są tworzone przy użyciu [nowe](../../../csharp/language-reference/keywords/new.md) operator wraz z inicjatora obiektu. Aby uzyskać więcej informacji na temat inicjatorów obiektów zobacz [inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Typy anonimowe są tworzone przy użyciu [nowe](../../../csharp/language-reference/operators/new-operator.md) operator wraz z inicjatora obiektu. Aby uzyskać więcej informacji na temat inicjatorów obiektów zobacz [inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
  Poniższy przykład przedstawia typ anonimowy, który jest inicjowany za pomocą dwie właściwości o nazwie `Amount` i `Message`.  
   

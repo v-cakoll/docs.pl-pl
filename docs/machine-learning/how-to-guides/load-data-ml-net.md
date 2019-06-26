@@ -1,18 +1,18 @@
 ---
-title: Ładowanie danych
-description: Załaduj plik danych i danych przesyłanych strumieniowo w strukturze ML.NET
-ms.date: 05/03/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+title: Ładowanie danych z plików i innych źródeł
+description: Niniejszy instruktaż przedstawia sposób ładowania danych do przetwarzania i szkolenia w strukturze ML.NET. Dane początkowo są przechowywane w plikach lub innych źródeł danych, takich jak bazy danych, JSON, XML lub kolekcji w pamięci.
+ms.date: 06/25/2019
+ms.custom: mvc,how-to, title-hack-0625
+ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063653"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397743"
 ---
-# <a name="load-data-from-file-and-in-memory-sources"></a>Ładowanie danych ze źródeł plików i w pamięci
+# <a name="load-data-from-files-and-other-sources"></a>Ładowanie danych z plików i innych źródeł
 
-Niniejszy instruktaż przedstawia sposób ładowania danych do przetwarzania i szkolenia w strukturze ML.NET. Dane początkowo są przechowywane w plikach lub źródeł danych w czasie rzeczywistym / przesyłania strumieniowego.
+Niniejszy instruktaż przedstawia sposób ładowania danych do przetwarzania i szkolenia w strukturze ML.NET. Dane początkowo są przechowywane w plikach lub innych źródeł danych, takich jak bazy danych, JSON, XML lub kolekcji w pamięci.
 
 ## <a name="create-the-data-model"></a>Tworzenie modelu danych
 
@@ -102,16 +102,15 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-streaming-source"></a>Ładowanie danych ze strumieniowego źródła
+## <a name="load-data-from-other-sources"></a>Ładowanie danych z innych źródeł
 
-Oprócz ładowania danych przechowywanych na dysku, strukturze ML.NET obsługuje ładowanie danych z różnych źródeł przesyłania strumieniowego, które obejmują, ale nie są ograniczone do:
+Oprócz ładowania — dane przechowywane w plikach, strukturze ML.NET obsługuje ładowanie danych ze źródeł, które obejmują, ale nie są ograniczone do:
 
 - Kolekcje w pamięci
 - JSON/XML
 - Bazy danych
 
-> [!IMPORTANT]
-> Należy pamiętać, że podczas pracy z przesyłaniem strumieniowym źródeł, strukturze ML.NET oczekuje, że dane wejściowe, aby być w formie kolekcji w pamięci. W związku z tym podczas pracy z źródeł, takich jak JSON/XML, upewnij się sformatować dane do kolekcji w pamięci.
+Należy pamiętać, że podczas pracy z przesyłaniem strumieniowym źródeł, strukturze ML.NET oczekuje, że dane wejściowe, aby być w formie kolekcji w pamięci. W związku z tym podczas pracy z źródeł, takich jak JSON/XML, upewnij się sformatować dane do kolekcji w pamięci.
 
 Biorąc pod uwagę następujące kolekcji w pamięci:
 

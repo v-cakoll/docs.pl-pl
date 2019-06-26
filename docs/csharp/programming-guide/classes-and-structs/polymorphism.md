@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7cd450fbc2e0a5acd32675ab2c6b46dc2c92757
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583072"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398365"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
 Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektowo, po hermetyzacji i dziedziczenia. Polimorfizm jest wyrazem greckim, co oznacza "wiele kształcie" i ma dwa różne aspekty:  
@@ -54,7 +54,7 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
  Włącz klasy pochodne, aby rozszerzyć klasę bazową, bez konieczności korzystania z implementacji klasy podstawowej metody, właściwości i metod wirtualnych. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Interfejs zapewnia innym sposobem zdefiniowania metody lub zestaw metod, których implementacja pozostanie w klasach pochodnych. Więcej informacji znajdziesz w artykule [Interfejsy](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Ukrywanie składowych klasy bazowej dla nowych członków  
- Jeśli chcesz pochodnej elementów członkowskich mają taką samą nazwę jak element członkowski w klasie bazowej, ale chcesz, aby wziąć udział w wirtualnych wywołania on, możesz użyć [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe. `new` — Słowo kluczowe jest umieszczany przed zwracanym typem składowej klasy, która jest zastępowany. Poniższy kod stanowi przykład:  
+ Jeśli chcesz pochodnej elementów członkowskich mają taką samą nazwę jak element członkowski w klasie bazowej, ale chcesz, aby wziąć udział w wirtualnych wywołania on, możesz użyć [nowe](../../../csharp/language-reference/keywords/new-modifier.md) — słowo kluczowe. `new` — Słowo kluczowe jest umieszczany przed zwracanym typem składowej klasy, która jest zastępowany. Poniższy kod stanowi przykład:  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   

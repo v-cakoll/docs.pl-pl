@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: 15a42b8fb23aed024fede726d0b5fb731d8272f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28e6ba0c20948aa769a1517c664db80b5beb6b68
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680457"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398029"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Wyjątki generowane przez kompilator (Przewodnik programowania w języku C#)
 Niektóre wyjątki są zgłaszane w automatycznie przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR), gdy podstawowe operacje kończą się niepowodzeniem. W poniższej tabeli wymieniono te wyjątki i ich warunków błędów.  
@@ -23,7 +23,7 @@ Niektóre wyjątki są zgłaszane w automatycznie przez .NET Framework środowis
 |<xref:System.IndexOutOfRangeException>|Element zgłaszany, gdy podejmowana jest próba indeksu tablicy, gdy indeks jest mniejsza od zera lub poza granice tablicy.|  
 |<xref:System.InvalidCastException>|Element zgłaszany, gdy konwersja jawna z typu podstawowego interfejsu lub typu pochodnego nie powiedzie się w czasie wykonywania.|  
 |<xref:System.NullReferenceException>|Zgłaszany, gdy użytkownik podejmie próbę odwołują się do obiektu, którego wartością jest [null](../../../csharp/language-reference/keywords/null.md).|  
-|<xref:System.OutOfMemoryException>|Zgłaszany, gdy próba przydzielenia pamięci za pomocą [nowe](../../../csharp/language-reference/keywords/new-operator.md) operator nie powiedzie się. Oznacza to, dostępna dla środowiska uruchomieniowego języka wspólnego pamięci została wyczerpana.|  
+|<xref:System.OutOfMemoryException>|Zgłaszany, gdy próba przydzielenia pamięci za pomocą [nowe](../../../csharp/language-reference/operators/new-operator.md) operator nie powiedzie się. Oznacza to, dostępna dla środowiska uruchomieniowego języka wspólnego pamięci została wyczerpana.|  
 |<xref:System.OverflowException>|Zgłaszany, gdy operacja arytmetyczna w `checked` przepełnienia kontekstu.|  
 |<xref:System.StackOverflowException>|Zgłaszany, gdy stos wykonywania wyczerpaniu przez zbyt wiele wywołań metod oczekujące; Wskazuje zazwyczaj bardzo szczegółowe lub nieskończoną rekursję.|  
 |<xref:System.TypeInitializationException>|Zgłaszany, gdy statyczny Konstruktor zgłasza wyjątek i zgodnego `catch` istnieje klauzuli catch go.|  

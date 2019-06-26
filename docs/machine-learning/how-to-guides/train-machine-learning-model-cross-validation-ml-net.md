@@ -1,20 +1,20 @@
 ---
-title: Nauczanie i ocena model uczenia maszynowego przy użyciu krzyżowego sprawdzania poprawności
-description: Dowiedz się, jak nauczanie i ocena model uczenia maszynowego przy użyciu krzyżowego sprawdzania poprawności
-ms.date: 05/03/2019
+title: Szkolenie modelu uczenia maszynowego, za pomocą krzyżowego sprawdzania poprawności
+description: Dowiedz się, jak na potrzeby tworzenia bardziej niezawodnych modeli uczenia maszynowego w strukturze ML.NET krzyżowego sprawdzania poprawności. Krzyżowa Weryfikacja jest szkolenia i model oceny technika, która dzieli dane na wiele partycji, a następnie szkolenie modeli wielu algorytmów na te partycje.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557834"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397647"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Nauczanie i ocena model uczenia maszynowego przy użyciu krzyżowego sprawdzania poprawności
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Szkolenie modelu uczenia maszynowego, za pomocą krzyżowego sprawdzania poprawności
 
-Dowiedz się, jak na potrzeby tworzenia bardziej niezawodnych modeli uczenia maszynowego w strukturze ML.NET krzyżowego sprawdzania poprawności. 
+Dowiedz się, jak na potrzeby uczenia bardziej niezawodnych modeli uczenia maszynowego w strukturze ML.NET krzyżowego sprawdzania poprawności. 
 
 Krzyżowa Weryfikacja jest szkolenia i model oceny technika, która dzieli dane na wiele partycji, a następnie szkolenie modeli wielu algorytmów na te partycje. Ta technika zwiększa niezawodność modelu, zawierający dane z procesu uczenia. Oprócz poprawianie wydajności niewidzianych uwagi, w środowiskach ograniczonego danych może być skutecznym narzędziem do szkolenia modele z mniejszych zestawu danych.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 Wynik przechowywany w `cvResults` to zbiór [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) obiektów. Ten obiekt zawiera trenowanego modelu, a także metryk, które są zarówno dostępną formę [ `Model` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) i [ `Metrics` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) właściwości odpowiednio. W tym przykładzie `Model` właściwość jest typu [ `ITransformer` ](xref:Microsoft.ML.ITransformer) i `Metrics` właściwość jest typu [ `RegressionMetrics` ](xref:Microsoft.ML.Data.RegressionMetrics). 
 
-## <a name="extract-metrics"></a>Wyodrębnij metryki
+## <a name="evaluate-the-model"></a>Ocena modelu
 
 Metryki dla różnych modeli uczonego jest możliwy za pośrednictwem `Metrics` właściwości poszczególnych [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) obiektu. W tym przypadku [R-kwadrat metryki](https://en.wikipedia.org/wiki/Coefficient_of_determination) uzyskuje dostęp i przechowywane w zmiennej `rSquared`. 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-Jeśli możesz zbadać zawartość `rSquared` zmiennej, dane wyjściowe powinny być pięciu wartości z zakresu od 0 – 1, w przypadku, gdy bliżej 1 oznacza, że najlepiej.
-
-## <a name="select-the-best-performing-model"></a>Wybierz najlepiej działający model
-
-Metryki, takie jak R-kwadrat, wybierz opcję przy użyciu modeli z najlepiej najgorszy wykonywania. Następnie wybierz górny modelu do prognozowania lub wykonanie dodatkowych operacji za pomocą.
+Jeśli możesz zbadać zawartość `rSquared` zmiennej, dane wyjściowe powinny być pięciu wartości z zakresu od 0 – 1, w przypadku, gdy bliżej 1 oznacza, że najlepiej. Metryki, takie jak R-kwadrat, wybierz opcję przy użyciu modeli z najlepiej najgorszy wykonywania. Następnie wybierz górny modelu do prognozowania lub wykonanie dodatkowych operacji za pomocą.
 
 ```csharp
 // Select all models

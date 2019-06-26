@@ -2,13 +2,13 @@
 title: Metryki strukturze ML.NET
 description: Omówienie metryk, które są używane do oceny wydajności na model w strukturze ML.NET
 ms.date: 04/29/2019
-author: ''
-ms.openlocfilehash: 802f0a8fd32c492c8d9f89933b183802cb178cb3
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+author: natke
+ms.openlocfilehash: ca5bc795a9d9ff4fe1035d2ec0672f1f7c21fe0b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053039"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397604"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>Metryki oceny model w strukturze ML.NET
 
@@ -56,7 +56,7 @@ Aby uzyskać dodatkowe szczegóły dotyczące klasyfikacji wieloklasowej metryki
 |-----------|-----------------------|-----------|
 | **R-kwadrat** |  [R-kwadrat (R2)](https://en.wikipedia.org/wiki/Coefficient_of_determination), lub *determinacji* reprezentuje możliwości predykcyjnego modelu jako wartość z zakresu od -inf 1,00. 1,00 oznacza, że istnieje dokładne dopasowanie i dopasowania mogą być arbitrarly niską wyniki. może być ujemna. Ocena oznacza 0,00 modelu jest zgadywania oczekiwanej wartości dla etykiety. R2 środków, jak blisko wartości danych rzeczywistych testów są przewidywane wartości. | **Bliżej 1,00, lepszą jakość**. Jednak czasami niskich wartości R-kwadrat (na przykład 0,50) może być całkowicie normalne lub wystarczające dla danego scenariusza i wysokich wartości R-kwadrat nie zawsze są dobre i się podejrzane. |
 | **Utrata bezwzględne** |  [Bezwzględna utraty](https://en.wikipedia.org/wiki/Mean_absolute_error) lub *średni bezwzględny błąd (dostosowania)* mierzy się, jak blisko prognozy są rzeczywiste wyniki. Jest średnią wszystkich błędów modelu, gdzie błąd modelu jest bezwzględny odległość między wartości prognozowanej etykiety i wartość prawidłowa etykieta. Ten błąd prognozowania jest obliczana dla każdego rekordu testowego zestawu danych. Na koniec średnią wartość jest obliczana dla wszystkich zarejestrowanych bezwzględnych błędów.| **Bliżej 0,00, lepszą jakość.** Należy pamiętać, że średni bezwzględny błąd używa tej samej skali z danymi, mierzony (nie jest znormalizowana do określonego zakresu). Do dokonywania porównań między modelami dla tego samego zestawu danych lub zestaw danych o rozkład wartości podobne etykietę tylko można utraty bezwzględną, utraty Squared i utratę usługi RMS. |
-| **Squared-loss** |  [Utrata Squared](https://en.wikipedia.org/wiki/Mean_squared_error) lub *oznacza kwadrat błędu (MSE)*, nazywane również *oznacza kwadrat odchylenia (MSD)*, informujący o tym, jak blisko linii regresji ma zestaw wartości danych testowych. Odbywa się to przez pobranie odległości od punktów do regresji (odległości te są błędy E) i squaring je. Squaring daje więcej wagę do większych różnice. | Zawsze jest ujemna, i **wartości bliższe 0,00 są lepsze**. W zależności od danych może być niemożliwe uzyskać bardzo małych wartości średniej kwadratów błędów.|
+| **Squared-loss** |  [Utrata Squared](https://en.wikipedia.org/wiki/Mean_squared_error) lub *oznacza kwadrat błędu (MSE)* , nazywane również *oznacza kwadrat odchylenia (MSD)* , informujący o tym, jak blisko linii regresji ma zestaw wartości danych testowych. Odbywa się to przez pobranie odległości od punktów do regresji (odległości te są błędy E) i squaring je. Squaring daje więcej wagę do większych różnice. | Zawsze jest ujemna, i **wartości bliższe 0,00 są lepsze**. W zależności od danych może być niemożliwe uzyskać bardzo małych wartości średniej kwadratów błędów.|
 | **RMS-loss** |  [RMS utraty](https://en.wikipedia.org/wiki/Root-mean-square_deviation) lub *głównego oznacza kwadrat błąd (RMSE)* (nazywane również *odchylenie skuteczną, RMSD*), faktycznie mierzy różnią się przewidzieć przez model wartości i wartości obserwowane ze środowiska, które są w modelu. Utrata usługi RMS jest pierwiastek kwadratowy utraty Squared i ma te same jednostki jako etykieta, podobnie jak utrata bezwzględnymi, chociaż przyznawania ważniejsze większych różnice. Błąd głównego średniej kwadratowej jest najczęściej używany w klimatologia, prognozowania i analizę regresji do zweryfikować eksperymentalne wyniki. | Zawsze jest ujemna, i **wartości bliższe 0,00 są lepsze**. RMSD jest miarą dokładności, aby porównać prognozowania błędy różne modele dla określonego zestawu danych i nie między zestawami danych, ponieważ jest zależna od skali.|
 
 Aby uzyskać dodatkowe szczegóły dotyczące regresji metryki, przeczytaj następujące artykuły:

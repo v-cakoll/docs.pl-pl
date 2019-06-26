@@ -4,12 +4,12 @@ description: Dowiedz się więcej o technologii .NET Framework, które nie są d
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 4a798e85adc056b09761bd17b5d9a143643e77ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456084"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397620"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologii .NET framework jest niedostępna na platformie .NET Core
 
@@ -45,7 +45,7 @@ Użyj granic zabezpieczeń dostarczone przez system operacyjny, np. konta wirtua
 
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 
-System.EnterpiseServices (COM +) nie jest obsługiwana przez platformy .NET Core.
+System.EnterpriseServices (COM +) nie jest obsługiwana przez platformy .NET Core.
 
 >[!div class="step-by-step"]
 >[Next](third-party-deps.md)

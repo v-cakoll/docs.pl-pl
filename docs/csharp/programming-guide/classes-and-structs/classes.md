@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651887"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398589"
 ---
 # <a name="classes-c-programming-guide"></a>Klasy (Przewodnik programowania w języku C#)
 
 ## <a name="reference-types"></a>Typy odwołań  
-Typ, który jest zdefiniowany jako [klasy](../../../csharp/language-reference/keywords/class.md) jest *odwołania do typu*. W czasie wykonywania, kiedy Deklarujesz zmienną typu odwołania, zmienna zawiera wartość [null](../../../csharp/language-reference/keywords/null.md) aż jawnie tworzone jest wystąpienie klasy za pomocą [nowe](../../../csharp/language-reference/keywords/new.md) operatora, lub obiekt niezgodny typ, który mógł zostać utworzony w innych miejscach, jak pokazano w poniższym przykładzie:
+Typ, który jest zdefiniowany jako [klasy](../../../csharp/language-reference/keywords/class.md) jest *odwołania do typu*. W czasie wykonywania, kiedy Deklarujesz zmienną typu odwołania, zmienna zawiera wartość [null](../../../csharp/language-reference/keywords/null.md) aż jawnie tworzone jest wystąpienie klasy za pomocą [nowe](../../../csharp/language-reference/operators/new-operator.md) operatora, lub obiekt niezgodny typ, który mógł zostać utworzony w innych miejscach, jak pokazano w poniższym przykładzie:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -47,7 +47,7 @@ Po utworzeniu obiektu wystarczającej ilości pamięć jest alokowane na zarząd
 
 Chociaż czasami są używane zamiennie, klasy i obiektu są różne. Klasa określa typ obiektu, ale nie jest sam obiekt. Obiekt jest jednostką konkretnych na podstawie klasy i jest czasami określane jako wystąpienia klasy.  
   
- Obiekty mogą być tworzone za pomocą [nowe](../../language-reference/keywords/new.md) — słowo kluczowe następuje nazwa klasy, która obiekt będzie zależeć od, podobnie do następującego:  
+ Obiekty mogą być tworzone za pomocą [nowe](../../language-reference/operators/new-operator.md) — słowo kluczowe następuje nazwa klasy, która obiekt będzie zależeć od, podobnie do następującego:  
 
  ```csharp
  Customer object1 = new Customer();

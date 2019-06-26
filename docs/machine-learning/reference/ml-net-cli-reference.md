@@ -3,12 +3,12 @@ title: Polecenie train automatycznie za pomocą narzędzia interfejsu wiersza po
 description: Omówienie, przykłady i dokumentacja dotycząca poleceń train automatycznie za pomocą narzędzia interfejsu wiersza polecenia w strukturze ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722599"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397661"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Polecenie "auto-train" w interfejsie wiersza polecenia w strukturze ML.NET
 
@@ -44,7 +44,7 @@ Przykład użycia w wierszu polecenia:
 
 Pierwsze dwa zasoby bezpośrednio można w aplikacjach użytkownika końcowego (aplikacji internetowej ASP.NET Core, usług, aplikacji klasycznej, itp.), tworzyć prognozy przy użyciu wygenerowanego modelu uczenia Maszynowego.
 
-Trzeci zasobu, kod szkolenia, dowiesz się, jaki kod interfejsu API w strukturze ML.NET był używany przez interfejs wiersza polecenia do trenowania wygenerowane, dzięki czemu możesz zbadać, jakie określonego trainer/algorytmu i wybrano hyper paramenters interfejsu wiersza polecenia, a aparat AutoML strukturze ML.NET.
+Trzeci zasobu, kod szkolenia, dowiesz się, jaki kod interfejsu API w strukturze ML.NET był używany przez interfejs wiersza polecenia do trenowania wygenerowane, dzięki czemu możesz zbadać, jakie określonego trainer/algorytmu i hiper parametrami wybrano interfejsu wiersza polecenia, a aparat AutoML strukturze ML.NET.
 
 ## <a name="the-auto-train-command-uses-the-automl-engine"></a>Polecenie "auto-train" używa aparatu AutoML
 

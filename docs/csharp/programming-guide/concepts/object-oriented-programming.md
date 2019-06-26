@@ -2,12 +2,12 @@
 title: Programowanie zorientowane obiektowo (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2adb1ac24aa625c89fcafe074fe65189aa3767c7
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880710"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398064"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
 
@@ -241,7 +241,7 @@ Dostępne są następujące modyfikatory dostępu:
 |[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Typ lub element członkowski jest możliwy przez każdy kod z tego samego zestawu lub każdą pochodną klasę w innym zestawie.|
 |[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Typ lub element członkowski możliwy przez kod z tej samej klasy lub w klasie pochodnej w zestawie klasy bazowej.|
 
-Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md). 
+Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 
 ### <a name="InstantiatingClasses"></a> Tworzenie wystąpienia klasy
 
@@ -270,7 +270,7 @@ SampleClass sampleObject = new SampleClass
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [new, operator](../../../csharp/language-reference/keywords/new-operator.md)
+- [new, operator](../../../csharp/language-reference/operators/new-operator.md)
 
 - [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 

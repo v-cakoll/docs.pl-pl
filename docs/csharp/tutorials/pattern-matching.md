@@ -3,12 +3,12 @@ title: Użyj funkcji dopasowywania wzorca, aby rozszerzyć typy danych
 description: W tym samouczku zaawansowane pokazuje, jak tworzyć funkcje przy użyciu danych i algorytmy, które są tworzone oddzielnie za pomocą metod dopasowania do wzorca.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378070"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397830"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Aby rozszerzyć typy danych przy użyciu funkcji dopasowywania wzorca
 
@@ -145,7 +145,7 @@ Trwa uruchamianie zobaczyć, jak wzorce mogą pomóc tworzyć algorytmów, któr
 Urząd płatny chce, aby zachęcić pojazdów przechodzić z maksymalną wydajnością. Decydujesz się one do bardziej pojazdów mają mniejszą liczbę osób, gdy zachęcać pojazdów pełną, udostępniając niższe ceny:
 
 - Samochodów i taksówek za pomocą pasażerowie nie zapłacić dodatkowy 0,50 USD.
-- Uzyskaj rabat w wysokości 0,50, samochodów i taksówek za pomocą dwóch pasażerów.
+- Uzyskaj rabat w wysokości 0,50 USD, samochodów i taksówek za pomocą dwóch pasażerów.
 - Uzyskaj Rabat $1.00, samochodów i taksówek za pomocą trzech lub więcej osób.
 - Autobusów, które są mniej niż 50% zapełnienia zapłacić dodatkowy $2.00.
 - Autobusów, które są ponad 90% zapełnienia uzyskać rabat $1.00.
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-Urząd płatny nie jest związana z liczby pasażerów ciężarówek dostarczania. Zamiast tego są opłaty za bardziej oparte na klasę wagi ciężarówek. Ciężarówek ponad 5000 modułów równoważenia obciążenia jest naliczana dodatkowa 5.00 $. Ciężarówek światła w obszarze 3000 lbs otrzymują rabat w wysokości $2.00. Tej reguły jest implementowane za pomocą następującego kodu:
+Urząd płatny nie jest związana z liczby pasażerów ciężarówek dostarczania. W zamian należy dopasować kwota opłaty oparte na klasę wagi ciężarówek w następujący sposób:
+
+- Ciężarówek ponad 5000 modułów równoważenia obciążenia jest naliczana dodatkowa 5.00 $.
+- Ciężarówek światła w obszarze 3000 lbs otrzymują rabat w wysokości $2.00.
+
+Tej reguły jest implementowane za pomocą następującego kodu:
 
 ```csharp
 vehicle switch

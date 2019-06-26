@@ -4,12 +4,12 @@ description: W tym samouczku dowiesz się, jak używać C# funkcji interpolacji 
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195895"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397805"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Konstruowania sformatowane ciągi za pomocą Interpolacja ciągów
 
@@ -54,7 +54,7 @@ W poniższym przykładzie, najpierw należy zdefiniować [klasy](../../programmi
 public Vegetable(string name) => Name = name;
 ```
 
-Następnie tworzymy wystąpienie `Vegetable` klasę o nazwie `item` przy użyciu [ `new` — słowo kluczowe](../../language-reference/keywords/new-operator.md) i podanie nazwy dla konstruktora `Vegetable`:
+Następnie tworzymy wystąpienie `Vegetable` klasę o nazwie `item` przy użyciu [ `new` operator](../../language-reference/operators/new-operator.md) i podanie nazwy dla konstruktora `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");

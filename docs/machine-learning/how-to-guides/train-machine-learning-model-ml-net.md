@@ -1,20 +1,20 @@
 ---
 title: Trenowanie i ocenianie modelu
-description: Informacje o sposobie tworzenia modeli uczenia maszynowego, wyodrębnić parametry nauczony i zmierzyć wydajność za pomocą platformy ML.NET. Mimo że w tym przykładzie szkolenie modeli model regresji, pojęcia mają zastosowanie w większości innych algorytmów.
-ms.date: 06/11/2019
+description: Dowiedz się, jak tworzyć modele uczenia maszynowego, zbierać metryki i zmierzyć wydajność za pomocą platformy ML.NET Model uczenia maszynowego identyfikuje wzorców w danych szkoleniowych, jak tworzyć prognozy przy użyciu nowych danych.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307441"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397640"
 ---
 # <a name="train-and-evaluate-a-model"></a>Trenowanie i ocenianie modelu
 
-Informacje o sposobie tworzenia modeli uczenia maszynowego, wyodrębnić parametry nauczony i zmierzyć wydajność za pomocą platformy ML.NET. Mimo że w tym przykładzie szkolenie modeli model regresji, pojęcia mają zastosowanie w większości innych algorytmów.
+Dowiedz się, jak tworzyć modele uczenia maszynowego, zbierać metryki i zmierzyć wydajność za pomocą platformy ML.NET Mimo że w tym przykładzie szkolenie modeli model regresji, pojęcia mają zastosowanie w większości innych algorytmów.
 
 ## <a name="split-data-for-training-and-testing"></a>Podział danych na potrzeby szkolenia i testowania
 

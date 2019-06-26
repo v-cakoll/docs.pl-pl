@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583126"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398084"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Przechowywanie wersji przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 Zaprojektowano w języku C#, aby versioning między [podstawowy](../../../csharp/language-reference/keywords/base.md) i klasy pochodne w różnych bibliotek mogą ewoluować i zachować zgodność z poprzednimi wersjami. Oznacza to, na przykład, że wprowadzenie nowego członka w podstawowym [klasy](../../../csharp/language-reference/keywords/class.md) z taką samą nazwę jak element członkowski w klasie pochodnej jest w pełni obsługiwane w języku C# i nie prowadzi do nieoczekiwanego zachowania. Oznacza to również, że klasy musi jawnie określać, czy metoda jest przeznaczona do zastępowania metody dziedziczonej, lub czy metoda jest nowa metoda, która ukrywa o podobnej nazwie dziedziczone metody.  
@@ -20,7 +20,7 @@ Zaprojektowano w języku C#, aby versioning między [podstawowy](../../../csharp
   
 - Należy zdefiniować metodę klasy bazowej [wirtualnego](../../../csharp/language-reference/keywords/virtual.md).  
   
-- Jeśli metoda w klasie pochodnej nie jest poprzedzony przez [nowe](../../../csharp/language-reference/keywords/new.md) lub [zastąpienia](../../../csharp/language-reference/keywords/override.md) słów kluczowych, kompilator zgłosi ostrzeżenie i metody będą zachowywać się tak, jakby `new` — słowo kluczowe były obecne.  
+- Jeśli metoda w klasie pochodnej nie jest poprzedzony przez [nowe](../../../csharp/language-reference/keywords/new-modifier.md) lub [zastąpienia](../../../csharp/language-reference/keywords/override.md) słów kluczowych, kompilator zgłosi ostrzeżenie i metody będą zachowywać się tak, jakby `new` — słowo kluczowe były obecne.  
   
 - Jeśli metoda w klasie pochodnej jest poprzedzony znakiem `new` — słowo kluczowe, metoda jest zdefiniowana jako będące niezależnymi metody w klasie bazowej.  
   

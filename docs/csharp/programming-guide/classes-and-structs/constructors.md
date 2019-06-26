@@ -7,14 +7,15 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: becc3fc8a75cd4d2d5e0c1db2858b15b8b61ae20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c5d34e5350f3ca64753f1d07cabb40712c66b88
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646543"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398542"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktorzy (Przewodnik programowania w języku C#)
+
 Zawsze, gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzone, jego konstruktor jest wywoływany. Klasa lub struktura może mieć wiele konstruktorów, które przyjmują różne argumentów. Konstruktory Włącz programisty należy ustawić wartości domyślne, ograniczyć podczas tworzenia wystąpienia i napisać kod, który jest elastyczny i łatwy do odczytania. Aby uzyskać więcej informacji i przykładów, zobacz [korzystanie z konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) i [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
 
 ## <a name="parameterless-constructors"></a>Konstruktorów bez parametrów
@@ -33,7 +34,7 @@ Jeśli Konstruktor można zaimplementować jako pojedynczej instrukcji, można u
 
 ## <a name="static-constructors"></a>Konstruktory statyczne
 
-Poprzednie przykłady ma wszystkie konstruktory pokazywane wystąpienie, które tworzą nowy obiekt. Klasa lub struktura może być również statyczny Konstruktor inicjuje statyczne elementy członkowskie tego typu.  Konstruktory statyczne są bez parametrów. Jeśli nie podasz konstruktora statycznego zainicjować pola statyczne, kompilator języka C# będzie dostarczać statycznego konstruktora domyślnego i inicjuje pola statyczne, aby przywrócić wartości domyślne, zgodnie z zaleceniami z [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). 
+Poprzednie przykłady ma wszystkie konstruktory pokazywane wystąpienie, które tworzą nowy obiekt. Klasa lub struktura może być również statyczny Konstruktor inicjuje statyczne elementy członkowskie tego typu.  Konstruktory statyczne są bez parametrów. Jeśli nie podasz statyczny Konstruktor zainicjować pola statyczne C# kompilator inicjalizuje pól statycznych, aby przywrócić wartości domyślne, zgodnie z zaleceniami z [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md).
 
 W poniższym przykładzie użyto statycznego konstruktora zainicjować pole statyczne.
 

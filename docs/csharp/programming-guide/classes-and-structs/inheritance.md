@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f49118ebff8dcdfee45ce30de9b35437141e2bb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646325"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398470"
 ---
 # <a name="inheritance-c-programming-guide"></a>Dziedziczenie (Przewodnik programowania w języku C#)
 
@@ -40,7 +40,7 @@ Dziedziczenie, wraz z hermetyzacji i polimorfizmu, jest jednym z trzech właści
  Kiedy klasę bazową deklaruje metodę jako [wirtualnego](../../../csharp/language-reference/keywords/virtual.md), klasa pochodna może [zastąpienia](../../../csharp/language-reference/keywords/override.md) metoda własną implementację. Jeśli klasa bazowa deklaruje element członkowski jako [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md), że metoda musi zostać zastąpiona w dowolnym nieabstrakcyjnej klasie dziedziczącej bezpośrednio z tej klasy. Jeśli klasa pochodna sama jest abstrakcyjna dziedziczy członków abstrakcyjnych bez ich wdrażania. Abstrakcyjna i wirtualnych elementów członkowskich stanowią podstawę polimorfizm, czyli podstawowy drugiego charakterystyka programowanie zorientowane obiektowo. Aby uzyskać więcej informacji, zobacz [polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
 ## <a name="abstract-base-classes"></a>Abstrakcyjnych klas bazowych  
- Można zadeklarować klasy jako [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) Jeśli chcesz zapobiec bezpośredni wystąpienia przy użyciu [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe. Jeśli to zrobisz, klasa może służyć tylko wtedy, gdy nowa klasa pochodzi od niego. Klasa abstrakcyjna może zawierać jeden lub więcej podpisy metod, że same są deklarowane jako abstrakcyjne. Te podpisy określania parametrów i zwracają wartość, ale nie mają implementacji (treści metody). Klasa abstrakcyjna nie musi zawierać członkami abstrakcyjnymi; Jednak jeśli klasa zawiera abstrakcyjną składową, sama klasa musi być zadeklarowany jako abstrakcyjny. Klasy pochodne, które nie są abstrakcyjne samodzielnie zapewniają implementację dla dowolnej metody abstrakcyjne z abstrakcyjną klasę bazową. Aby uzyskać więcej informacji, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Można zadeklarować klasy jako [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) Jeśli chcesz zapobiec bezpośredni wystąpienia przy użyciu [nowe](../../../csharp/language-reference/operators/new-operator.md) operatora. Jeśli to zrobisz, klasa może służyć tylko wtedy, gdy nowa klasa pochodzi od niego. Klasa abstrakcyjna może zawierać jeden lub więcej podpisy metod, że same są deklarowane jako abstrakcyjne. Te podpisy określania parametrów i zwracają wartość, ale nie mają implementacji (treści metody). Klasa abstrakcyjna nie musi zawierać członkami abstrakcyjnymi; Jednak jeśli klasa zawiera abstrakcyjną składową, sama klasa musi być zadeklarowany jako abstrakcyjny. Klasy pochodne, które nie są abstrakcyjne samodzielnie zapewniają implementację dla dowolnej metody abstrakcyjne z abstrakcyjną klasę bazową. Aby uzyskać więcej informacji, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="interfaces"></a>Interfejsy  
  *Interfejsu* jest typem referencyjnym, który przypomina nieco abstrakcyjną klasę bazową, która składa się z tylko członków abstrakcyjnych. Gdy klasa implementuje interfejs, musi zapewniać implementację, dla wszystkich członków interfejsu. Klasę można zaimplementować wiele interfejsów, mimo że może dziedziczyć tylko po jednej bezpośredniej klasie bazowej.  
@@ -51,7 +51,7 @@ Dziedziczenie, wraz z hermetyzacji i polimorfizmu, jest jednym z trzech właści
  Klasa może uniemożliwić dziedziczy z niego lub ze swoich elementów członkowskich, deklarując sam lub elementu członkowskiego jako innych klas [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md). Aby uzyskać więcej informacji, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="derived-class-hiding-of-base-class-members"></a>Klasa pochodna ukrycie elementów członkowskich klasy podstawowej  
- Klasa pochodna można ukryć składowych klasy bazowej przez zadeklarowanie elementów członkowskich z taką samą nazwę i podpis. [Nowe](../../../csharp/language-reference/keywords/new.md) modyfikator może służyć do jawnie wskazywały elementu członkowskiego nie jest przeznaczony do zastąpienia podstawowego elementu członkowskiego. Korzystanie z [nowe](../../../csharp/language-reference/keywords/new.md) nie jest wymagane, ale ostrzeżenia kompilatora zostanie wygenerowany, jeśli [nowe](../../../csharp/language-reference/keywords/new.md) nie jest używany. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [, wiedząc, gdy użycie zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ Klasa pochodna można ukryć składowych klasy bazowej przez zadeklarowanie elementów członkowskich z taką samą nazwę i podpis. [Nowe](../../../csharp/language-reference/keywords/new-modifier.md) modyfikator może służyć do jawnie wskazywały elementu członkowskiego nie jest przeznaczony do zastąpienia podstawowego elementu członkowskiego. Korzystanie z [nowe](../../../csharp/language-reference/keywords/new-modifier.md) nie jest wymagane, ale ostrzeżenia kompilatora zostanie wygenerowany, jeśli [nowe](../../../csharp/language-reference/keywords/new-modifier.md) nie jest używany. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [, wiedząc, gdy użycie zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,26 +6,28 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 5f3e7b831f701145caa1a4fb50f6bb1a4ece4103
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347753"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398495"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Instrukcje: Implementowanie klasy Lightweight przy użyciu automatycznie implementowanych właściwości (C# Programming Guide)
-Ten przykład przedstawia sposób tworzenia niezmienne klasy lightweight, która służy tylko do hermetyzacji zbiór właściwości zaimplementowane automatycznie. Użyj ten rodzaj konstrukcji zamiast struktury, gdy należy użyć semantyki typu odwołania.  
-  
- Właściwość niezmienne może wykonać na dwa sposoby:
-  - Można zadeklarować [ustaw](../../../csharp/language-reference/keywords/set.md) dostępu jako [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale jest niezmienny do klientów.  
-    
-    Kiedy Deklarujesz prywatnej `set` dostępu, nie można używać inicjatora obiektu można zainicjować właściwości. Należy użyć konstruktora lub metody fabryki.  
-  - Można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość niezmienne wszędzie, z wyjątkiem w Konstruktorze typu.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia dwa sposoby zaimplementowania niezmienialne klasy, która ma właściwości zaimplementowane automatycznie. Każdy sposób deklaruje jedna z właściwości za pomocą prywatnej `set` i jedna z właściwości z `get` tylko.  Najwyższej klasy używa konstruktora tylko do zainicjowania właściwości i klasy sekundę używa metody statyczne fabryka, która wywołuje konstruktora.  
-  
-```csharp  
+
+Ten przykład przedstawia sposób tworzenia niezmienne klasy lightweight, która służy tylko do hermetyzacji zbiór właściwości zaimplementowane automatycznie. Użyj ten rodzaj konstrukcji zamiast struktury, gdy należy użyć semantyki typu odwołania.
+
+Właściwość niezmienne może wykonać na dwa sposoby:
+- Można zadeklarować [ustaw](../../../csharp/language-reference/keywords/set.md) dostępu jako [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale jest niezmienny do klientów.
+
+  Kiedy Deklarujesz prywatnej `set` dostępu, nie można używać inicjatora obiektu można zainicjować właściwości. Należy użyć konstruktora lub metody fabryki.
+- Można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość niezmienne wszędzie, z wyjątkiem w Konstruktorze typu.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład przedstawia dwa sposoby zaimplementowania niezmienialne klasy, która ma właściwości zaimplementowane automatycznie. Każdy sposób deklaruje jedna z właściwości za pomocą prywatnej `set` i jedna z właściwości z `get` tylko.  Najwyższej klasy używa konstruktora tylko do zainicjowania właściwości i klasy sekundę używa metody statyczne fabryka, która wywołuje konstruktora.
+
+```csharp
 // This class is immutable. After an object is created,
 // it cannot be modified from outside the class. It uses a
 // constructor to initialize its properties.
@@ -104,18 +106,18 @@ public class Program
         Console.ReadKey();
     }
 }
-  
-/* Output:  
-    Terry Adams, 123 Main St.  
-    Fadi Fakhouri, 345 Cypress Ave.  
-    Hanying Feng, 678 1st Ave  
-    Cesar Garcia, 12 108th St.  
-    Debra Garcia, 89 E. 42nd St.  
-*/  
-```  
-  
- Kompilator tworzy pola zapasowego dla każdej właściwości zaimplementowane automatycznie. Pola nie są dostępne bezpośrednio z kodu źródłowego.  
-  
+
+/* Output:
+    Terry Adams, 123 Main St.
+    Fadi Fakhouri, 345 Cypress Ave.
+    Hanying Feng, 678 1st Ave
+    Cesar Garcia, 12 108th St.
+    Debra Garcia, 89 E. 42nd St.
+*/
+```
+
+Kompilator tworzy pola zapasowego dla każdej właściwości zaimplementowane automatycznie. Pola nie są dostępne bezpośrednio z kodu źródłowego.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)

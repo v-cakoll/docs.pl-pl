@@ -1,18 +1,18 @@
 ---
-title: Przygotowywanie danych
+title: Przygotowuje dane do budowania modelu
 description: Dowiedz się, jak użyć przekształceń w strukturze ML.NET do manipulowania i przygotowuje dane do dodatkowego przetwarzania lub tworzenia modelu.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 05/03/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.date: 06/25/2019
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268249"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397716"
 ---
-# <a name="prepare-data"></a>Przygotowywanie danych
+# <a name="prepare-data-for-building-a-model"></a>Przygotowuje dane do budowania modelu
 
 Dowiedz się, jak używać strukturze ML.NET do przygotowywania danych do dodatkowego przetwarzania lub budowania modelu.
 
@@ -298,7 +298,7 @@ Przy użyciu pierwszej pozycji, na przykład, poniżej przedstawiono szczegóło
 |--|--|--|
 |1. NormalizeText | Konwertuje wszystkie litery na małe litery, domyślnie | Jest to dobry produktu
 |2. TokenizeWords | Dzieli dane ciągu do poszczególnych wyrazów | ["to", "is", "","dobre","produkt"]
-|3. RemoveDefaultStopWords | Usuwa Stop-słowa, takie jak *jest* i *a*. | ["dobre", "produkt"]
+|3. RemoveDefaultStopWords | Usuwa Stop-słowa, takie jak *jest* *i*. | ["dobre", "produkt"]
 |4. MapValueToKey | Mapuje wartości kluczy (kategorie), na podstawie danych wejściowych |  [1,2]
 |5. ProduceNGrams | Przekształca tekst w sekwencji kolejnych wyrazów | [1,1,1,0,0]
 |6. NormalizeLpNorm | Skala wejść przez ich lp typ norm | [ 0.577350529, 0.577350529, 0.577350529, 0, 0 ]

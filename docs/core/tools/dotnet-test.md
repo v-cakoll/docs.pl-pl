@@ -2,14 +2,14 @@
 title: polecenie test DotNet
 description: Polecenia dotnet test służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 05/29/2018
-ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665536"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410368"
 ---
-# <a name="dotnet-test"></a>polecenia DotNet test
+# <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -120,7 +120,7 @@ Katalog, gdzie wyników testu do umieszczenia. Jeśli określony katalog nie ist
 
 `-s|--settings <SETTINGS_FILE>`
 
-Ustawienia używane podczas uruchamiania testów.
+`.runsettings` Plik używany do uruchamiania testów. [Konfigurowanie testów jednostkowych za pomocą `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -190,7 +190,7 @@ Katalog, gdzie wyników testu do umieszczenia. Jeśli określony katalog nie ist
 
 `-s|--settings <SETTINGS_FILE>`
 
-Ustawienia używane podczas uruchamiania testów.
+`.runsettings` Plik używany do uruchamiania testów. [Konfigurowanie testów jednostkowych za pomocą `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -240,7 +240,7 @@ Katalog, w którym można znaleźć plików binarnych do uruchomienia.
 
 `-s|--settings <SETTINGS_FILE>`
 
-Ustawienia używane podczas uruchamiania testów.
+`.runsettings` Plik używany do uruchamiania testów. [Konfigurowanie testów jednostkowych za pomocą `.runsettings` pliku.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 

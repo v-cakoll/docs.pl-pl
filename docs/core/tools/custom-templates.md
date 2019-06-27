@@ -3,12 +3,12 @@ title: Szablony niestandardowe dla nowej platformy dotnet
 description: Dowiedz się więcej na temat szablonów niestandardowych dla dowolnego typu projektu .NET lub plików.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169628"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410349"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Szablony niestandardowe dla nowej platformy dotnet
 
@@ -100,7 +100,7 @@ Szablon niestandardowy jest wypełniona [pakietu dotnet](dotnet-pack.md) polecen
 01. `<PackageType>` Ustawienie zostanie dodane i ustawiona `Template`.
 01. `<PackageVersion>` Ustawienia zostaną dodane i ustawić prawidłową [numer wersji NuGet](/nuget/reference/package-versioning).
 01. `<PackageId>` Ustawienia zostaną dodane i Ustaw unikatowy identyfikator. Ten identyfikator służy do odinstalowania szablonowego pakietu i jest używany przez NuGet źródeł danych, aby zarejestrować Twój pakiet szablonu.
-01. Ustawienia ogólne metadanych powinna być ustawiona: `<Title>`, `<Authors>`, `<Description>`, i `<Tags>`.
+01. Ustawienia ogólne metadanych powinna być ustawiona: `<Title>`, `<Authors>`, `<Description>`, i `<PackageTags>`.
 01. `<TargetFramework>` Ustawienia należy wybrać opcję, nawet jeśli nie jest używany plik binarny, generowane przez szablon procesu. W poniższym przykładzie ustawiono go `netstandard2.0`.
 
 Pakiet szablonu w formie *.nupkg* pakietu NuGet, wymaga, że wszystkie szablony znajdować się w *zawartości* folder w pakiecie. Istnieje kilka więcej ustawień, aby dodać do *.csproj* plik, aby upewnić się, że wygenerowany *.nupkg* można zainstalować jako szablonowego pakietu:
@@ -125,7 +125,7 @@ Oto przykład *.csproj* pliku, który następuje po wszystkich powyższych wytyc
     <Title>AdatumCorporation Templates</Title>
     <Authors>Me</Authors>
     <Description>Templates to use when creating an application for Adatum Corporation.</Description>
-    <Tags>dotnet-new;templates;contoso</Tags>
+    <PackageTags>dotnet-new;templates;contoso</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607698"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423409"
 ---
 # <a name="assembly-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń zestawów
 <a name="top"></a> Podczas kompilowania zestawu można określić zestaw uprawnień, które będą wymagane do uruchomienia. To, czy określone uprawnienia są przyznane do zestawu, czy nie, zależy od dowodów.  
@@ -31,7 +31,7 @@ ms.locfileid: "64607698"
   
 - Dowód wejściowy jest scalany z dowodami zebranymi przez moduł ładujący w celu utworzenia ostatecznego zestawu dowodów stosowanego do rozpoznawania zasad. Metody używające tej semantyki obejmować **Assembly.Load**, **Assembly.LoadFrom**, i **Activator.CreateInstance**.  
   
-- Dowód wejściowy jest używany w niezmienionej formie jako ostateczny zestaw dowodów stosowanych do rozpoznawania zasad. Metody używające tej semantyki obejmować **Assembly.Load(byte[])** i **AppDomain.DefineDynamicAssembly()**.  
+- Dowód wejściowy jest używany w niezmienionej formie jako ostateczny zestaw dowodów stosowanych do rozpoznawania zasad. Metody używające tej semantyki obejmować **Assembly.Load(byte[])** i **AppDomain.DefineDynamicAssembly()** .  
   
  Opcjonalne uprawnienia mogą być przyznawane przez [zasady zabezpieczeń](../../../docs/framework/misc/code-access-security-basics.md) ustawił na komputerze, gdzie zestaw będzie działał. Jeśli kod ma obsługiwać wszystkie potencjalne wyjątki zabezpieczeń, można wykonać jedną z następujących czynności:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "64607698"
   
  Żaden poziom zaufania jest skojarzony z silną nazwą, co sprawia, że [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) ważne. Te dwa narzędzia podpisywania wymagają, aby wydawca potwierdził swoją tożsamość wobec zewnętrznego urzędu i uzyskał certyfikat. Certyfikat jest następnie osadzany w pliku i na jego podstawie administrator może decydować, czy ufa autentyczności kodu.  
   
- Można nadać silną nazwę i podpis cyfrowy utworzony przy użyciu [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) do zestawu, lub możesz użyć dowolnej samodzielnie. Oba narzędzia podpisywania mogą podpisywać tylko jeden plik jednocześnie. W przypadku zestawu wieloplikowego podpisuje się plik zawierający manifest zestawu. Silna nazwa jest przechowywana w pliku zawierającego manifest zestawu, ale podpis utworzony za pomocą [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) znajduje się w zarezerwowanym gnieździe w pliku wykonalnego (PE) pliku zawierającego manifest zestawu. Podpisywanie zestawu za pomocą [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) mogą być używane (z lub bez silnej nazwy) Jeśli masz już hierarchia zaufania, która opiera się na[SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) generowane podpisów lub kiedy zasady używa tylko część klucza, a nie sprawdza łańcuch zaufania.  
+ Można nadać silną nazwę i podpis cyfrowy utworzony przy użyciu [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) do zestawu, lub możesz użyć dowolnej samodzielnie. Oba narzędzia podpisywania mogą podpisywać tylko jeden plik jednocześnie. W przypadku zestawu wieloplikowego podpisuje się plik zawierający manifest zestawu. Silna nazwa jest przechowywana w pliku zawierającego manifest zestawu, ale podpis utworzony za pomocą [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) znajduje się w zarezerwowanym gnieździe w pliku wykonalnego (PE) pliku zawierającego manifest zestawu. Podpisywanie zestawu za pomocą [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) mogą być używane (z lub bez silnej nazwy) Jeśli masz już hierarchia zaufania, która opiera się na [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) generowane podpisów lub kiedy zasady używa tylko część klucza, a nie sprawdza łańcuch zaufania.  
   
 > [!NOTE]
 >  Jeśli do zestawu ma być stosowana silna nazwa i podpis z narzędzia podpisywania, najpierw należy przypisać silną nazwę.  

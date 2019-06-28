@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication>, element
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764091"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423125"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > element
 Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.  
@@ -38,10 +38,10 @@ Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|customCertificateValidatorType|Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiane podczas `certificateValidationMode` ustawiono `Custom`.|  
-|certifcateValidationMode|Określa jeden z trzech trybów używanych do walidacji poświadczenia. Jeśli ustawiono `Custom`, a następnie `customCertificateValidator` musi również zostać dostarczony.|  
-|revocationMode|Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (CRL).|  
-|trustedStoreLocation|Jedną z dwóch lokalizacji magazynu systemu: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana, gdy certyfikat usługi jest negocjowane do klienta. Sprawdzanie poprawności jest wykonywane względem **zaufane osoby** są przechowywane w lokalizacji określonego magazynu.|  
+|`customCertificateValidatorType`|Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiane podczas `certificateValidationMode` ustawiono `Custom`.|  
+|`certificateValidationMode`|Określa jeden z trzech trybów używanych do walidacji poświadczenia. Jeśli ustawiono `Custom`, a następnie `customCertificateValidator` musi również zostać dostarczony.|  
+|`revocationMode`|Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (CRL).|  
+|`trustedStoreLocation`|Jedną z dwóch lokalizacji magazynu systemu: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana, gdy certyfikat usługi jest negocjowane do klienta. Sprawdzanie poprawności jest wykonywane względem **zaufane osoby** są przechowywane w lokalizacji określonego magazynu.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
   

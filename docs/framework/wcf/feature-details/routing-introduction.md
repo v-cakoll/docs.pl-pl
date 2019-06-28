@@ -2,12 +2,12 @@
 title: Wprowadzenie do routingu
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912490"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425366"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólny podłączanych SOAP pośrednie umożliwiającym routing wiadomości na podstawie zawartości komunikatu. Usługa routingu umożliwia tworzenie złożoną logikę routingu, która pozwala na implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi, routing priorytet i routing multiemisji. Usługa routingu znajdują się również dodanymi komentarzami, która pozwala na konfigurowanie wykaz kopii zapasowych punktów końcowych, do którego są wysyłane wiadomości, jeśli wystąpi błąd podczas wysyłania do docelowego podstawowego punktu końcowego.  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>Dynamiczna konfiguracja  
  Po dodaniu punktów końcowych klienta dodatkowych, lub należy modyfikować filtry, które są używane do przesyłania wiadomości, konieczne jest posiadanie sposób aktualizowania konfiguracji dynamicznie w czasie wykonywania, aby zapobiec przerywania usługi do obecnie odbieranie komunikatów za pośrednictwem punktów końcowych Usługa routingu. Modyfikowanie pliku konfiguracji lub kod aplikacji hosta nie zawsze jest wystarczająca, ponieważ każda z tych metod wymaga aplikacji, co może prowadzić do potencjalnej utraty żadnych wiadomości obecnie w przypadku przesyłania i potencjalnych przestojów podczas odtwarzania Oczekiwanie na ponowne uruchomienie usługi.  
   
- Można modyfikować tylko **RoutingConfiguration** programowo. Mimo że możesz wstępnie skonfigurować usługę przy użyciu pliku konfiguracji, można tylko zmodyfikować konfigurację w czasie wykonywania, tworząc nową **RoutingConfigution** i przekazanie do niej jako parametr do <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> — metoda udostępniane przez <xref:System.ServiceModel.Routing.RoutingExtension> usługi rozszerzenia. Obecnie wszystkie wiadomości w dalszym ciągu być kierowane za pomocą poprzedniej konfiguracji, podczas komunikatów odebranych po wywołaniu **ApplyConfiguration** korzystać z nowej konfiguracji. Poniższy przykład przedstawia tworzenie wystąpienia usługi Routing i następnie modyfikowania konfiguracji.  
+ Można modyfikować tylko **RoutingConfiguration** programowo. Mimo że możesz wstępnie skonfigurować usługę przy użyciu pliku konfiguracji, można tylko zmodyfikować konfigurację w czasie wykonywania, tworząc nową **RoutingConfiguration** i przekazanie do niej jako parametr do <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> — metoda udostępniane przez <xref:System.ServiceModel.Routing.RoutingExtension> usługi rozszerzenia. Obecnie wszystkie wiadomości w dalszym ciągu być kierowane za pomocą poprzedniej konfiguracji, podczas komunikatów odebranych po wywołaniu **ApplyConfiguration** korzystać z nowej konfiguracji. Poniższy przykład przedstawia tworzenie wystąpienia usługi Routing i następnie modyfikowania konfiguracji.  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  
@@ -280,7 +280,7 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 >  Wszystkie sesje otwierane przy użyciu poprzedniej konfiguracji nadal przy użyciu poprzedniej konfiguracji. Nowa konfiguracja jest używana tylko przez nowych sesji.  
   
 ## <a name="error-handling"></a>Obsługa błędów  
- Jeśli istnieją <xref:System.ServiceModel.CommunicationException> występuje podczas próby wysłania wiadomości, miejsce do obsługi błędów. Wyjątki te zwykle sygnalizuje Napotkano problem podczas próby skomunikowania się z punktem końcowym zdefiniowanych klienta, takich jak <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>, lub <xref:System.ServiceModel.CommunicationObjectFaultedException>. Kodu obsługi błędu zostanie też przechwytywać i podjął próbę podczas wysyłania <xref:System.TimeoutException> problem wystąpi, który jest inny wspólnej wyjątek, który nie pochodzi od **communicationexception —**.  
+ Jeśli istnieją <xref:System.ServiceModel.CommunicationException> występuje podczas próby wysłania wiadomości, miejsce do obsługi błędów. Wyjątki te zwykle sygnalizuje Napotkano problem podczas próby skomunikowania się z punktem końcowym zdefiniowanych klienta, takich jak <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>, lub <xref:System.ServiceModel.CommunicationObjectFaultedException>. Kodu obsługi błędu zostanie też przechwytywać i podjął próbę podczas wysyłania <xref:System.TimeoutException> problem wystąpi, który jest inny wspólnej wyjątek, który nie pochodzi od **communicationexception —** .  
   
  Gdy wystąpi jedno z poprzednich wyjątków, usługa routingu nie powiedzie się za pośrednictwem listę kopii zapasowych punktów końcowych. Jeśli wszystkie punkty końcowe kopii zapasowej się nie powieść z błędem łączności lub jeśli punkt końcowy zwraca wyjątek, który wskazuje błąd w ramach usługi docelowej, usługa routingu zwraca błąd do aplikacji klienckiej.  
   

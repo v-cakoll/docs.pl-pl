@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877572"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422356"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Narzędzie generowania manifestu i edytowania)
 
@@ -57,7 +57,7 @@ W poniższej tabeli przedstawiono opcje obsługiwane przez `-New` i `-Update` po
 |**-Jeśli - IconFile**  `filePath`||Manifesty aplikacji.|Określa pełną ścieżkę do pliku ikony ICO. Ta ikona pojawia się obok nazwy aplikacji w menu Start oraz we wpisie w aplecie Dodaj lub usuń programy. Jeśli nie zostanie dostarczona ikona, będzie używana ikona domyślna.|
 |**-adres ip, - IncludeProviderURL**  `url`|true|Manifesty wdrożenia.|Wskazuje, czy manifest wdrożenia zawiera wartość lokalizacji aktualizacji ustawioną **- ProviderURL**.|
 |**-i,-zainstaluj** `willInstall`|true|Manifesty wdrożenia.|Wskazuje, czy aplikacja ClickOnce ma zostać zainstalowana na komputerze lokalnym, czy ma być uruchamiana z sieci Web. Instalowanie aplikacji spowoduje, że będzie ona widoczna w Windows **Start** menu. Prawidłowymi wartościami są „true” lub „t” oraz „false” lub „f”.<br /><br /> Jeśli określisz **- MinVersion** opcji, a użytkownik ma wersję mniej niż **- MinVersion** zainstalowany, wymusi to instalację aplikacji, niezależnie od wartości, który jest przekazywany do **- Zainstaluj**.<br /><br /> Tej opcji nie można używać z **- BrowserHosted** opcji. Próba określenia obu tych opcji dla jednego manifestu spowoduje błąd.|
-|**-kc, -KeyContainer** `name`||Wszystkie typy plików.|Określa kontener klucza, który zawiera nazwę klucza prywatnego. Ta opcja wymaga **CyproProvider** opcji.<br/><br/>Ta opcja jest dostępna, począwszy od programu .NET Framework 4.7.|
+|**-kc, -KeyContainer** `name`||Wszystkie typy plików.|Określa kontener klucza, który zawiera nazwę klucza prywatnego. Ta opcja wymaga **CryptoProvider** opcji.<br/><br/>Ta opcja jest dostępna, począwszy od programu .NET Framework 4.7.|
 |**-mv, - MinVersion**  `[version]`|Wersja wymieniona w manifeście wdrożenia ClickOnce, określony przez **— wersja** flagi.|Manifesty wdrożenia.|Minimalna wersja aplikacji, jaką może uruchomić użytkownik. Ta flaga powoduje, że nazwana wersja aplikacji staje się wymaganą aktualizacją. Jeśli zostanie wydana wersja produktu z aktualizacją dotyczącą ważnej zmiany lub krytycznej wady zabezpieczeń, można użyć tej flagi, aby określić, że ta aktualizacja musi zostać zainstalowana, a użytkownik nie może kontynuować używania wcześniejszych wersji.<br /><br /> `version` ma tą samą semantyką jako argument **— wersja** flagi.|
 |**-n, — nazwa** `nameString`|Deploy|Wszystkie typy plików.|Nazwa, która jest używana do identyfikacji aplikacji. Technologia ClickOnce będzie używała tej nazwy, aby identyfikować aplikację w **Start** menu (Jeśli aplikacja jest skonfigurowana do instalowania się) i w oknach dialogowych podnoszenia poziomu uprawnień. **Uwaga:**  Jeśli aktualizujesz istniejący manifest, a nie określisz nazwy wydawcy z tą opcją *Mage.exe* zaktualizuje manifest przy użyciu nazwy organizacji zdefiniowanej na komputerze. Aby użyć innej nazwy, należy użyć tej opcji i określić odpowiednią nazwę wydawcy.|
 |**-pwd, — hasło** `passwd`||Wszystkie typy plików.|Hasło używane do podpisywania manifestu za pomocą certyfikatu cyfrowego. Należy używać w połączeniu z **- CertFile** opcji.|
@@ -81,7 +81,7 @@ W poniższej tabeli przedstawiono opcje obsługiwane przez `-Sign` polecenia, kt
 |**-cf, -CertFile** `filePath`|Określa lokalizację certyfikatu cyfrowego używanego do podpisania manifestu. Ta opcja może służyć w połączeniu z **-hasło** opcję, jeśli certyfikat wymaga hasła dla plików wymiany informacji osobistych (PFX). Począwszy od programu .NET Framework 4.7, jeśli plik nie zawiera klucza prywatnego z kombinacją **- CryptoProvider** i **- KeyContainer** opcje jest wymagana.<br/><br/>Począwszy od .NET Framework 4.6.2, *Mage.exe* podpisuje manifesty CNG, jak również CAPI certyfikatów.|
 |**-ch, -CertHash** `hashSignature`|Skrót certyfikatu cyfrowego przechowywanego w osobistym magazynie certyfikatów na komputerze klienta. Odpowiada właściwości odcisku palca certyfikatu cyfrowego wyświetlanego na konsoli certyfikatów systemu Windows.<br /><br /> `hashSignature` może to być albo wielkie lub małe litery i może być dostarczone w postaci pojedynczego ciągu lub ciągu z oktetami odcisku palca rozdzielonymi spacjami i całość odcisku palca ujęta w znaki cudzysłowu.|
 **-csp, -CryptoProvider** `provider-name`|Określa nazwę dostawcy usług kryptograficznych (CSP), który zawiera kontener klucza prywatnego. Ta opcja wymaga **- KeyContainer** opcji.<br/><br/>Ta opcja jest dostępna, począwszy od programu .NET Framework 4.7.|
-|**-kc, -KeyContainer** `name`|Określa kontener klucza, który zawiera nazwę klucza prywatnego. Ta opcja wymaga **CyproProvider** opcji.<br/><br/>Ta opcja jest dostępna, począwszy od programu .NET Framework 4.7.|
+|**-kc, -KeyContainer** `name`|Określa kontener klucza, który zawiera nazwę klucza prywatnego. Ta opcja wymaga **CryptoProvider** opcji.<br/><br/>Ta opcja jest dostępna, począwszy od programu .NET Framework 4.7.|
 |**-pwd, — hasło** `passwd`|Hasło używane do podpisywania manifestu za pomocą certyfikatu cyfrowego. Należy używać w połączeniu z **- CertFile** opcji.|
 |**-t, - ToFile** `filePath`|Określa ścieżkę wyjściową utworzonego lub zmodyfikowanego pliku.|
 
@@ -214,7 +214,7 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 Poniższy przykład podpisuje istniejący manifest wdrożenia za pomocą certyfikatu cyfrowego i klucza prywatnego w bieżącym katalogu roboczym.
 
 ```console
-mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>Zobacz także

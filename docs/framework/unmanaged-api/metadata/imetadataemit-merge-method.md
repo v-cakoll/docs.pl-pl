@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 179cfc5c0725934e21d7b89a2f8d4c934b049f78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 65dbfd526110be5b9b3348fb677fbde7301e4038
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106058"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424650"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge — Metoda
 Dodaje określony zakres zaimportowane do listy zakresów do scalenia.  
@@ -44,7 +44,7 @@ HRESULT Merge (
  `pIMap`  
  [in] Wskaźnik do [imaptoken —](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) obiekt, który określa tokenu mapowane ponownie.  
   
- `pHandleer`  
+ `pHandler`  
  [in] Wskaźnik do [IUnknown](/cpp/atl/iunknown) obiektu, który określa błędy.  
   
 ## <a name="remarks"></a>Uwagi  

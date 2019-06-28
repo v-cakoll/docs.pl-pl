@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728bc77db959e25fe31d2ff37288b2359dca852e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608401"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424593"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Instrukcje: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 
@@ -22,11 +22,11 @@ Aby sterować wyglądem dokumentu i jej elementów, można użyć style w formac
 
 Oto `DIV` ciągiem styl, który ustawia czcionka Arial i cały tekst pogrubiony:
 
-`<DIV style="font-face:arial;font-weight:bold;">`
-
-`Hello, world!`
-
-`</DIV>`
+```html
+<DIV style="font-face:arial;font-weight:bold;">
+Hello, world!
+</DIV>
+```
 
 Problem dotyczący manipulowanie stylów za pomocą <xref:System.Windows.Forms.HtmlElement.Style%2A> właściwość jest, że można potwierdzić kłopotliwe dodać do, a następnie usuń ustawienia stylu pracy z ciągu. Na przykład stałyby złożonych procedurę renderowania poprzedni tekst kursywą zawsze wtedy, gdy użytkownik umieszcza kursor nad `DIV`i kursywa wyłączone, gdy kursor opuszcza `DIV`. Czas może stać się problemem, jeśli zachodzi potrzeba manipulowania dużej liczby style w ten sposób.
 
@@ -63,19 +63,20 @@ Poniższa procedura zawiera kod, który umożliwia łatwe manipulowanie stylów,
 6. Dodaj następujący kod do pliku kodu projektu.
 
     > [!IMPORTANT]
-    >  Upewnij się, że `webBrowser1_DocumentCompleted` obsługę zdarzeń jest skonfigurowany jako odbiornika dla <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. W programie Visual Studio, kliknij dwukrotnie <xref:System.Windows.Forms.WebBrowser> formant; w edytorze tekstów, skonfiguruj odbiornik programowo.  
-  
+    > Upewnij się, że `webBrowser1_DocumentCompleted` programu obsługi zdarzeń jest skonfigurowany jako odbiornika dla <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. W programie Visual Studio, kliknij dwukrotnie <xref:System.Windows.Forms.WebBrowser> formant; w edytorze tekstów, skonfiguruj odbiornik programowo.
+
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
-  
-7. Uruchom projekt. Uruchom kursor nad pierwszym `DIV` aby obserwować wyniki kodu.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje pełny kod `StyleGenerator` klasy, która analizuje istniejącą wartość stylu, obsługuje dodawanie, zmienianie i usuwanie stylów i zwraca nową wartość stylu z żądanych zmian.  
-  
- [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
- [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
-  
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
+
+7. Uruchom projekt. Uruchom kursor nad pierwszym `DIV` aby obserwować wyniki kodu.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład kodu pokazuje pełny kod `StyleGenerator` klasy, która analizuje istniejącą wartość stylu, obsługuje dodawanie, zmienianie i usuwanie stylów i zwraca nową wartość stylu z żądanych zmian.
+
+[!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+[!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.HtmlElement>

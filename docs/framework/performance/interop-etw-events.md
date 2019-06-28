@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616412"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422423"
 ---
 # <a name="interop-etw-events"></a>Zdarzenia ETW międzyoperacyjności
 <a name="top"></a> Zdarzenia międzyoperacyjności przechwytywania informacji na temat generowania szkieletu intermediate language (MSIL) firmy Microsoft i buforowania.  
@@ -43,7 +43,7 @@ ms.locfileid: "64616412"
 |----------------|---------------|-----------------|  
 |ModuleID|win: UInt16.|Identyfikator modułu.|  
 |StubMethodID|win:UInt64|Identyfikator metody klasy zastępczej.|  
-|StubFlags|win:UInt64|Flagi dla wycinka:<br /><br /> 0x1 — interop wstecznego.<br /><br /> 0x2 — Usługa międzyoperacyjna modelu COM.<br /><br /> 0x4 - wycinku wygenerowanym przez NGen.exe.<br /><br /> 0x8 - delegata.<br /><br /> 0x10 - arrgument zmiennej.<br /><br /> 0x20 — niezarządzane / / wywoływany.|  
+|StubFlags|win:UInt64|Flagi dla wycinka:<br /><br /> 0x1 — interop wstecznego.<br /><br /> 0x2 — Usługa międzyoperacyjna modelu COM.<br /><br /> 0x4 - wycinku wygenerowanym przez NGen.exe.<br /><br /> 0x8 - delegata.<br /><br /> 0x10 - zmiennych argumentów.<br /><br /> 0x20 — niezarządzane / / wywoływany.|  
 |ManagedInteropMethodToken|win: UInt32.|Token dla zarządzanej metody międzyoperacyjnego.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Przestrzeń nazw zarządzanych metoda międzyoperacyjna.|  
 |ManagedInteropMethodName|win:UnicodeString|Nazwa zarządzaną metodą międzyoperacyjnego.|  

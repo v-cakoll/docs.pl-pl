@@ -2,12 +2,12 @@
 title: Wywołania zakończone niepowodzeniami na sekundę
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: ff9320b0990a0543bbb1da553d040ff5a4b4fed9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa8cd4c2d9f642b525b2b9ccb931c4f2101a5129
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797426"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421785"
 ---
 # <a name="calls-failed-per-second"></a>Wywołania zakończone niepowodzeniami na sekundę
 Nazwa komputera: Wywołania zakończone niepowodzeniami na sekundę  
@@ -19,7 +19,7 @@ Nazwa komputera: Wywołania zakończone niepowodzeniami na sekundę
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   
- Ten licznik jest zwiększona za każdym, gdy jest nieobsługiwany w tej operacji.  
+ Ten licznik jest zwiększany za każdym razem, gdy zostanie nieobsługiwany wyjątek w tej operacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

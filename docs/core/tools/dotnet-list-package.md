@@ -1,15 +1,15 @@
 ---
 title: polecenie pakietu listy DotNet
 description: Polecenia dotnet wyświetlenia listy pakietów zapewnia wygodny sposób, aby wyświetlić listę odwołania do pakietu dla projektu lub rozwiązania.
-ms.date: 04/09/2019
-ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 98cc456fff02364310cec98f0282700f7697f07e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631772"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421956"
 ---
-# <a name="dotnet-list-package"></a>polecenia DotNet wyświetlenia listy pakietów
+# <a name="dotnet-list-package"></a>dotnet list package
 
 [!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
 
@@ -20,8 +20,8 @@ ms.locfileid: "65631772"
 ## <a name="synopsis"></a>Streszczenie
 
 ```
-dotnet list [<PROJECT | SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
-   [--include-prerelease] [--include-transitive] [--outdated] [--source]
+dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
+   [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```
 
@@ -104,6 +104,10 @@ Plik projektu lub rozwiązania do wykonywania operacji. Jeśli nie zostanie okre
 * **`--include-transitive`**
 
   Zawiera listę pakietów przechodnich, oprócz pakietów najwyższego poziomu. Gdy użycie tej opcji, masz dostęp do listy pakietów, które zależą od pakietów najwyższego poziomu.
+
+* **`--interactive`**
+
+  Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji. Na przykład w celu ukończenia uwierzytelniania. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
 
 * **`--outdated`**
 

@@ -1,13 +1,13 @@
 ---
 title: polecenia DotNet Dodaj pakiet — polecenie
 description: Polecenie "dotnet Dodaj pakiet" zapewnia wygodny sposób, aby dodać odwołanie do pakietu NuGet do projektu.
-ms.date: 04/24/2019
-ms.openlocfilehash: 82f178026b46eb0237243b8ae49d17fbcc1af6ec
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.date: 06/26/2019
+ms.openlocfilehash: f387d32cbf706e1711439e393c1a7811bc8f47bd
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959243"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422053"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -82,7 +82,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Katalog miejsca w celu przywrócenia pakietów.
+  Katalog miejsca w celu przywrócenia pakietów. Domyślna lokalizacja przywracania pakietów `%userprofile%\.nuget\packages` na Windows i `~/.nuget/packages` w systemach macOS i Linux. Aby uzyskać więcej informacji, zobacz [Zarządzanie globalnymi pakietami, pamięci podręcznej i folderów tymczasowych w programie NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
 * **`-s|--source <SOURCE>`**
 
@@ -111,3 +111,8 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
+
+## <a name="see-also"></a>Zobacz także
+
+- [Zarządzanie globalnymi pakietami, pamięci podręcznej i folderów tymczasowych w programie NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [Przechowywanie wersji pakietów NuGet](https://docs.microsoft.com/nuget/reference/package-versioning)

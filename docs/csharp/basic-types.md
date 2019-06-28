@@ -3,12 +3,12 @@ title: Typy podstawowe — Przewodnik po języku C#
 description: Dowiedz się więcej o podstawowych typów (wartości numeryczne, ciągi i obiekt) we wszystkich programach języka C#
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422098"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424454"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
@@ -28,12 +28,12 @@ Informacje przechowywane w typie mogą być następujące:
   
 - Rodzaje operacji, które są dozwolone.  
   
-Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje, które są wykonywane w kodzie są *bezpieczny*. Na przykład, jeśli zadeklarować zmienną typu [int](language-reference/keywords/int.md), kompilator umożliwi dodatkowo użycia zmiennej operacjach dodawania i odejmowania. Jeśli próbujesz wykonać te same operacje na zmiennej typu [bool](language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w poniższym przykładzie:  
+Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje, które są wykonywane w kodzie są *bezpieczny*. Na przykład, jeśli zadeklarować zmienną typu [int](language-reference/builtin-types/integral-numeric-types.md), kompilator umożliwi dodatkowo użycia zmiennej operacjach dodawania i odejmowania. Jeśli próbujesz wykonać te same operacje na zmiennej typu [bool](language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w poniższym przykładzie:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> Programiści C i C++, zwróć uwagę, że w języku C# [bool](language-reference/keywords/bool.md) nie jest konwertowany na [int](language-reference/keywords/int.md).  
+> Programiści C i C++, zwróć uwagę, że w języku C# [bool](language-reference/keywords/bool.md) nie jest konwertowany na [int](language-reference/builtin-types/integral-numeric-types.md).  
   
 Kompilator osadza informacje o typie pliku wykonywalnego jako metadane. Środowisko uruchomieniowe języka wspólnego (CLR) używa tych metadanych w czasie wykonywania do dalszego gwarantuje bezpieczeństwo typów, gdy przydziela i przejmuje pamięć.  
 
@@ -43,11 +43,11 @@ Kiedy Deklarujesz zmienną lub stałą w programie, należy określić jej typ l
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-Typy parametrów metody i wartości zwracane są określone w oznaczeniu metody. Następująca sygnatura przedstawia metodę, która wymaga [int](language-reference/keywords/int.md) jako argument wejściowy i zwraca ciąg:  
+Typy parametrów metody i wartości zwracane są określone w oznaczeniu metody. Następująca sygnatura przedstawia metodę, która wymaga [int](language-reference/builtin-types/integral-numeric-types.md) jako argument wejściowy i zwraca ciąg:  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Po zadeklarowaniu zmiennej nie może być ponownie zadeklarowany z nowym typem i nie można przypisać wartość, która nie jest zgodna z deklarowanym typem. Na przykład nie można zadeklarować [int](language-reference/keywords/int.md) a następnie przypisać jej wartości logicznej [true](language-reference/keywords/true-literal.md). Jednakże wartości można przekonwertować do innych typów, na przykład gdy są one przypisane do nowych zmiennych lub przekazywane jako argumenty tej metody. A *konwersja typu* która nie powoduje utraty danych jest realizowane automatycznie przez kompilator. Wymaga konwersji, która może spowodować utratę danych *rzutowania* w kodzie źródłowym.
+Po zadeklarowaniu zmiennej nie może być ponownie zadeklarowany z nowym typem i nie można przypisać wartość, która nie jest zgodna z deklarowanym typem. Na przykład nie można zadeklarować [int](language-reference/builtin-types/integral-numeric-types.md) a następnie przypisać jej wartości logicznej [true](language-reference/keywords/true-literal.md). Jednakże wartości można przekonwertować do innych typów, na przykład gdy są one przypisane do nowych zmiennych lub przekazywane jako argumenty tej metody. A *konwersja typu* która nie powoduje utraty danych jest realizowane automatycznie przez kompilator. Wymaga konwersji, która może spowodować utratę danych *rzutowania* w kodzie źródłowym.
 
 Aby uzyskać więcej informacji, zobacz [konwersje rzutowania i typ](programming-guide/types/casting-and-type-conversions.md).
 

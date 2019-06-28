@@ -3,12 +3,12 @@ title: Informacje o platformie .NET Core
 description: Dowiedz się więcej na temat platformy .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003755"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421887"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
@@ -30,7 +30,7 @@ C#, Visual Basic i F# języków może służyć do pisania aplikacji i bibliotek
 
 .NET core udostępnia interfejsy API w wielu sytuacjach należy wykonać kilka z nich:
 
-- Typy pierwotne, takie jak [bool](../csharp/language-reference/keywords/bool.md) i [int](../csharp/language-reference/keywords/int.md).
+- Typy pierwotne, takie jak [bool](../csharp/language-reference/keywords/bool.md) i [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
 - Kolekcje, takie jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Typy narzędzia, takie jak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>, i <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Typy danych, takich jak <xref:System.Data.DataSet?displayProperty=nameWithType>, i [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).

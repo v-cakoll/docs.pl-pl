@@ -2,12 +2,12 @@
 title: 'Instrukcje: Konfigurowanie usług WCF pod kątem współdziałania z klientami programu WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619173"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425400"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Instrukcje: Konfigurowanie usług WCF pod kątem współdziałania z klientami programu WSE 3.0
 Usług Windows Communication Foundation (WCF) są zgodne protokół sieciowy niskiego poziomu z rozszerzeń usługi sieci Web w wersji 3.0 dla klientów programu Microsoft .NET (WSE), gdy usług WCF są skonfigurowane do korzystania z sierpnia 2004 wersję specyfikacji WS-Addressing.  
@@ -24,7 +24,7 @@ Usług Windows Communication Foundation (WCF) są zgodne protokół sieciowy nis
   
     3. Określ tryb uwierzytelniania i wersję specyfikacji WS-Security, które są używane do zabezpieczenia wiadomości, które są zgodne z usługami WSE 3.0, dodając element podrzędny [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) do [ \<powiązanie >](../../../../docs/framework/misc/binding.md).  
   
-         Aby ustawić tryb uwierzytelniania, należy ustawić `authenicationMode` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Tryb uwierzytelniania jest w przybliżeniu do asercję gotowej do użycia zabezpieczeń programu WSE 3.0. Poniższa tabela zawiera mapowanie tryby uwierzytelniania w usłudze WCF do potwierdzenia zabezpieczeń gotowej do użycia w programu WSE 3.0.  
+         Aby ustawić tryb uwierzytelniania, należy ustawić `authenticationMode` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Tryb uwierzytelniania jest w przybliżeniu do asercję gotowej do użycia zabezpieczeń programu WSE 3.0. Poniższa tabela zawiera mapowanie tryby uwierzytelniania w usłudze WCF do potwierdzenia zabezpieczeń gotowej do użycia w programu WSE 3.0.  
   
         |Tryb uwierzytelniania programu WCF|Potwierdzenie zabezpieczeń gotowej do użycia programu WSE 3.0|  
         |-----------------------------|----------------------------------------|  

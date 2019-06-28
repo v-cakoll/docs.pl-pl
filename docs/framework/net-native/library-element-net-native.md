@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce001ed25d7704301d7f809887a445e3492e93fc
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866864"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422533"
 ---
 # <a name="library-element-net-native"></a>\<Biblioteka > (architektura .NET Native)
 Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.  
@@ -58,7 +58,7 @@ Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są 
   
  `<Library>` Element służy jako kontener służący do definiowania elementów programu, w których metadanych jest potrzebnych w czasie wykonywania; ten element nie express zasad. W czasie kompilacji narzędzia kompilatora wyszukiwanie tylko w bibliotece, które są oznaczane `<Library>` element dla elementów programu identyfikowane przez jego elementy podrzędne. Z kolei narzędzia kompilatora Wyszukaj wszystkie biblioteki, w tym.NET Framework podstawowe biblioteki dla elementów programu identyfikowane przez elementy podrzędne [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) elementu.  
   
- `<Library>` dyrektywy może być wykorzystywane w warunkowo. Jeśli nazwa `<Library>` element rozpoczynający się i kończący znak gwiazdki (\*), `<Library>` dyrektywy obowiązuje tylko wtedy, gdy zestaw określony w zakresie od gwiazdki odwołuje się do aplikacji. Na przykład następująca dyrektywa środowisko uruchomieniowe ma zastosowanie tylko wtedy, gdy zestaw Utillities.dll odwołuje się do aplikacji.  
+ `<Library>` dyrektywy może być wykorzystywane w warunkowo. Jeśli nazwa `<Library>` element rozpoczynający się i kończący znak gwiazdki (\*), `<Library>` dyrektywy obowiązuje tylko wtedy, gdy zestaw określony w zakresie od gwiazdki odwołuje się do aplikacji. Na przykład następująca dyrektywa środowisko uruchomieniowe ma zastosowanie tylko wtedy, gdy zestaw Utilities.dll odwołuje się do aplikacji.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

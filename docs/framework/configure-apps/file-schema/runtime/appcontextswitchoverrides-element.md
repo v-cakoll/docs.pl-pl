@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 39060d503a006ab292818b58a6fa71f44dee68a0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307087"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423329"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> Element
 Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppContext> Aby klasa zapewniała mechanizm rezygnacji z nowych funkcji.  
@@ -99,7 +99,7 @@ Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppCont
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Formanty czy wartość [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) właściwość [IntPtr](xref:System.IntPtr) czy reprezentuje lokalizację w pamięci okna obsługi, lub czy jest to uchwyt okna (HWND). Aby uzyskać więcej informacji, zobacz [środki zaradcze: CspParameters.ParentWindowHandle oczekuje HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Określa, czy użycie kryptografii zarządzanych klas w zgłasza trybu FIPS <xref:System.Security.Cryptography.CryptographicException> (`true`) lub opiera się na implementacji bibliotek systemowych (`false`).|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Określa, czy wartość domyślna dla niektórych operacji SignedCMS jest algorytm SHA1 lub SHA256.<br>Ze względu na problemy kolizji z SHA1 firma Microsoft zaleca SHA256.|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|Formanty czy <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype> poprawnie obsługiwała wszystkie nazwane krzywych obsługiwana przez system operacyjny (`false`) lub powraca do starsze zachowanie.|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|Formanty czy <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithType> poprawnie obsługiwała wszystkie nazwane krzywych obsługiwana przez system operacyjny (`false`) lub powraca do starsze zachowanie.|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Określa, czy wartość domyślna dla niektórych operacji SignedXML jest algorytm SHA1 lub SHA256.<br>Ze względu na problemy kolizji z SHA1 firma Microsoft zaleca SHA256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Określa, czy `TransportWithMessageCredential` tryb zabezpieczeń umożliwia komunikatów za pomocą niepodpisany "nagłówek do". Jest to przełącznik zgłoszenie zgody na uczestnictwo. Aby uzyskać więcej informacji, zobacz [zmiany środowiska uruchomieniowego w programie .NET Framework 4.6.1](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Formanty czy <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Konstruktor wyrzuca <xref:System.ArgumentException> po spełnieniu jednego z elementów `null`.|.NET Framework 4.7.1| 
@@ -118,7 +118,7 @@ Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppCont
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Określa, czy Windows Presentation Foundation mają zastosowanie stary algorytm (`true`) lub nowy algorytm (`false`) w przydzielanie miejsca, aby \*-kolumn. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Przydzielenie miejsca na formant siatki do kolumn Star](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns). |.NET framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Zdarzenie zmiany formanty czy selektora lub kartę sterowania zawsze aktualizuje wartość jego właściwości wybranej wartości przed zgłoszeniem zaznaczenia.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|Określa, czy renderowanie na podstawie zaznaczenia — moduł definiowania układu dla <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.PasswordBox> kontroli w celu zapobieżenia zamknięte tekstu (`false`), lub czy renderowania tekstu tylko w warstwie moduł definiowania układu kodu (`true`).|.NET Framework 4.7.2|
-|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|Określa, czy niestandardowe indeksatory IList używane są niepoprawnie (`false`) lub poprawnie (`true`) przez <xref:System.Windows.Data.Binding?displayProperty=nameWithtype> klasy.|.NET Framework 4.8|
+|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|Określa, czy niestandardowe indeksatory IList używane są niepoprawnie (`false`) lub poprawnie (`true`) przez <xref:System.Windows.Data.Binding?displayProperty=nameWithType> klasy.|.NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|Określa, czy wartość DPI zmianach w na systemie (wartość `false`) lub według poszczególnych monitorów (wartość `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|Formanty czy poprawę rozmiaru formantów w <xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType> uruchamiania WPF w trybie pamiętać monitora są wyłączone (`true`) lub włączona (`false`).|.NET Framework 4.8|
 |`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|Określa, czy deweloper musi obsługiwać specjalnie <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> akcji, gdy tekst kontrolki jest obecna. `true` Aby obsłużyć <xref:System.Windows.Forms.DomainUpDown.UpButton> działania. `false` dla <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> i <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> akcji mają być prawidłowo synchronizowany.|.NET Framework 4.7.2|

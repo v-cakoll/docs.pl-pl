@@ -2,12 +2,12 @@
 title: Obsługa wyjątków i błędów
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e99ef5721791af229c68a958e4840a0703d34ac9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654997"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424944"
 ---
 # <a name="handling-exceptions-and-faults"></a>Obsługa wyjątków i błędów
 Wyjątki są używane do komunikowania się błędy lokalnie w implementacji klienta lub usługi. Błędy, z drugiej strony, są używane do komunikacji błędów przez granice usługi, takie jak z serwera do klienta lub na odwrót. Oprócz błędów kanały transportu często używają mechanizmów specyficznych dla transportu do komunikowania się błędy na poziomie transportu. Na przykład transportu HTTP używa kodów stanu, takie jak 404 do komunikowania się nieistniejące adresu URL punktu końcowego (jest nie punktu końcowego do odesłania błędów). Ten dokument zawiera trzy sekcje, które zapewniają wskazówki autorom w niestandardowym kanale. Pierwsza sekcja zawiera wskazówki dotyczące kiedy i jak zdefiniować i zgłaszać wyjątki. Druga sekcja zawiera wskazówki dotyczące generowania i korzystanie z błędów. Trzecia sekcja wyjaśnia, jak Podaj informacje o śledzeniu ułatwiające użytkownika niestandardowego kanału Rozwiązywanie problemów z uruchomionych aplikacji.  
@@ -286,7 +286,7 @@ public override bool OnTryCreateException(
  Dla warunków określonych błędów, które mają scenariuszy odzyskiwania distinct, należy wziąć pod uwagę definiujący klasę pochodną z `ProtocolException`.  
   
 ### <a name="mustunderstand-processing"></a>Przetwarzanie MustUnderstand  
- Protokołu SOAP definiuje ogólnych błędów do sygnalizowania, że wymagany nagłówek nie został zrozumiany przez odbiorcę. Ten błąd jest znany jako `mustUnderstand` błędów. W programie WCF, nigdy nie Generuj niestandardowe kanały `mustUnderstand` błędów. Zamiast tego dyspozytora WCF, która znajduje się w górnej części stos komunikacji WCF, sprawdza, że wszystkie nagłówki, które zostały oznaczone jako MustUndestand = true były zrozumiałe stosu podstawowego. Jeśli dowolny nie były zrozumiałe `mustUnderstand` błąd jest zgłaszany w tym momencie. (Użytkownik może wybrać wyłączyć to `mustUnderstand` przetwarzania i wdróż aplikację otrzymywać wszystkie nagłówki wiadomości. In that Case aplikacja jest odpowiedzialny za wykonanie `mustUnderstand` przetwarzania.) Wygenerowany błędów zawiera nagłówek NotUnderstood zawierającą nazwy wszystkich nagłówków z MustUnderstand = true, która była niezrozumiała.  
+ Protokołu SOAP definiuje ogólnych błędów do sygnalizowania, że wymagany nagłówek nie został zrozumiany przez odbiorcę. Ten błąd jest znany jako `mustUnderstand` błędów. W programie WCF, nigdy nie Generuj niestandardowe kanały `mustUnderstand` błędów. Zamiast tego dyspozytora WCF, która znajduje się w górnej części stos komunikacji WCF, sprawdza, że wszystkie nagłówki, które zostały oznaczone jako MustUnderstand = true były zrozumiałe stosu podstawowego. Jeśli dowolny nie były zrozumiałe `mustUnderstand` błąd jest zgłaszany w tym momencie. (Użytkownik może wybrać wyłączyć to `mustUnderstand` przetwarzania i wdróż aplikację otrzymywać wszystkie nagłówki wiadomości. In that Case aplikacja jest odpowiedzialny za wykonanie `mustUnderstand` przetwarzania.) Wygenerowany błędów zawiera nagłówek NotUnderstood zawierającą nazwy wszystkich nagłówków z MustUnderstand = true, która była niezrozumiała.  
   
  Jeśli kanał protokołu wysyła niestandardowy nagłówek o MustUnderstand = true i odbiera `mustUnderstand` błędów, jego musi ustalić czy jest nagłówek wysłanie go z powodu tego błędu. Istnieją dwa elementy członkowskie na `MessageFault` klasy, które są przydatne w tym:  
   

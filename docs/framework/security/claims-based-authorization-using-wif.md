@@ -3,12 +3,12 @@ title: Autoryzacja oparta na oświadczeniach przy użyciu programu WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650450"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422370"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autoryzacja oparta na oświadczeniach przy użyciu programu WIF
 W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów może uzyskać dostęp uwierzytelniona tożsamość i jakie operacje może wykonywać w odniesieniu do tych zasobów. Niewłaściwa lub słaba autoryzacja może doprowadzić do ujawnienia informacji i nieuprawnionej modyfikacji danych. W tym temacie opisano dostępne sposoby zaimplementowania autoryzacji dla aplikacji i usług internetowych programu ASP.NET obsługujących oświadczenia, za pomocą programu Windows Identity Foundation (WIF) i usługi tokenu zabezpieczającego (STS), na przykład usługi kontroli dostępu (ACS) systemu Microsoft Azure.  
@@ -23,13 +23,13 @@ W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów mo�
  RBAC to podejście do autoryzacji, w którym aplikacja zarządza uprawnieniami użytkowników i wymusza je na podstawie ról użytkowników. Jeśli użytkownik pełni rolę, która jest wymagana do wykonywania pewnej czynności, dostęp jest udzielany; w przeciwnym wypadku następuje odmowa dostępu.  
   
 ### <a name="iprincipalisinrole-method"></a>Metoda IPrincipal.IsInRole  
- Aby zaimplementować podejście RBAC w aplikacjach obsługujących oświadczenia, należy użyć **IsInRole()** method in Class metoda **IPrinicpal** interfejsu, tak samo, jak w innych — aplikacji obsługujących oświadczenia. Istnieje kilka sposobów użycia **IsInRole()** metody:  
+ Aby zaimplementować podejście RBAC w aplikacjach obsługujących oświadczenia, należy użyć **IsInRole()** method in Class metoda **IPrincipal** interfejsu, tak samo, jak w innych — aplikacji obsługujących oświadczenia. Istnieje kilka sposobów użycia **IsInRole()** metody:  
   
-- Jawne wywołanie **IPrincipal.IsInRole("Administrator")**. W tym podejściu wynik jest wartością logiczną. Należy go używać w instrukcjach warunkowych. Można go użyć w dowolny sposób i w dowolnym miejscu w kodzie.  
+- Jawne wywołanie **IPrincipal.IsInRole("Administrator")** . W tym podejściu wynik jest wartością logiczną. Należy go używać w instrukcjach warunkowych. Można go użyć w dowolny sposób i w dowolnym miejscu w kodzie.  
   
-- Za pomocą żądania zabezpieczeń **PrincipalPermission.Demand()**. W tym podejściu wynik jest wyjątkiem w przypadku, gdy wymóg nie jest spełniony. Powinno ono pasować do stosowanej strategii obsługi wyjątków. Zgłaszanie wyjątków jest znacznie bardziej kosztowne z punktu widzenia wydajności w porównaniu do zwracania atrybut typu wartość logiczna. Można go użyć w dowolnym miejscu w kodzie.  
+- Za pomocą żądania zabezpieczeń **PrincipalPermission.Demand()** . W tym podejściu wynik jest wyjątkiem w przypadku, gdy wymóg nie jest spełniony. Powinno ono pasować do stosowanej strategii obsługi wyjątków. Zgłaszanie wyjątków jest znacznie bardziej kosztowne z punktu widzenia wydajności w porównaniu do zwracania atrybut typu wartość logiczna. Można go użyć w dowolnym miejscu w kodzie.  
   
-- Użycie atrybutów deklaratywnych **[PrincipalPermission (SecurityAction.Demand, Role = "Administrator")]**. To podejście jest nazywane deklaratywnym, ponieważ jest używane do dekorowania metod. Nie można go używać w blokach kodu wewnątrz implementacji metody. Wynik jest wyjątkiem w przypadku, gdy wymóg nie jest spełniony. Należy upewnić się, że to podejście pasuje do stosowanej strategii obsługi wyjątków.  
+- Użycie atrybutów deklaratywnych **[PrincipalPermission (SecurityAction.Demand, Role = "Administrator")]** . To podejście jest nazywane deklaratywnym, ponieważ jest używane do dekorowania metod. Nie można go używać w blokach kodu wewnątrz implementacji metody. Wynik jest wyjątkiem w przypadku, gdy wymóg nie jest spełniony. Należy upewnić się, że to podejście pasuje do stosowanej strategii obsługi wyjątków.  
   
 - Za pomocą Autoryzacja adresów URL, za pomocą  **\<autoryzacji >** sekcji **web.config**. To podejście jest odpowiednie w przypadku zarządzania autoryzacją na poziomie adresu URL. Jest to najbardziej zgrubny poziom spośród dotychczas wymienionych. Zaletą tego podejścia jest to, że zmiany są dokonywane w pliku konfiguracji, co oznacza, że nie trzeba kompilować kodu w celu skorzystania ze zmiany.  
   

@@ -3,12 +3,12 @@ title: < system.serviceModel > przepływu pracy
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 005a274df9e9ab99227a3748b7a25c9d465d020f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768878"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422886"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > przepływu pracy
 Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji przepływu pracy.  
@@ -28,14 +28,14 @@ Ta sekcja konfiguracji zawiera wszystkie elementy konfiguracji przepływu pracy.
      </sendMessageChannelCache>  
       <sqlWorkflowInstanceStore   
           connectionStringName="String"   
-          honstLockRenewalPeriod="TimeSpan"  
+          hostLockRenewalPeriod="TimeSpan"  
           instanceCompletionAction="DeleteNothing/DeleteAll"  
           instanceEncodingAction="None/GZip"  
           instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry"  
           runnableInstancesDetectionPeriod="TimeSpan" />  
       <workflowIdle timeToPersist="TimeSpan"  
           timeToUnload="TimeSpan" />  
-      <workflowUnhandledExceptionaction="Abandon/AbandonAndSuspend/Cancel/Terminate" />  
+      <workflowUnhandledExceptionAction="Abandon/AbandonAndSuspend/Cancel/Terminate" />  
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  

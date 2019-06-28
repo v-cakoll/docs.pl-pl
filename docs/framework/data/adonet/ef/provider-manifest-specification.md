@@ -2,12 +2,12 @@
 title: Specyfikacja manifestu dostawcy
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641163"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422718"
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono, jak dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -83,9 +83,9 @@ W tej sekcji omówiono, jak dostawca magazynu danych może obsługiwać typy i f
  Manifest dostawcy jest ładowany przez moduł ładujący Store metadanych (obiektu StoreItemCollection), przy użyciu danych przechowywać połączenia lub tokenu manifestu dostawcy.  
   
 #### <a name="using-a-data-store-connection"></a>Przy użyciu połączenia danych Store  
- Gdy magazyn danych jest dostępne połączenie, wywołaj DbProvderServices.GetProviderManifestToken do zwracania tokenu, który jest przekazywany do metody GetProviderManifest, która zwraca DbProviderManifest. Ta metoda deleguje do implementacji dostawcy GetDbProviderManifestToken.  
+ Gdy połączenie magazynu danych jest dostępna, należy wywołać <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> do zwracania tokenu, który jest przekazywany do <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> metody, która zwraca <xref:System.Data.Common.DbProviderManifest>. Ta metoda deleguje do implementacji dostawcy `GetDbProviderManifestToken`.  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
@@ -250,7 +250,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nazwa|String|Tak|n/d|Nazwa typu danych specyficznego dla dostawcy|  
+|Nazwa|String|Yes|n/d|Nazwa typu danych specyficznego dla dostawcy|  
 |PrimitiveTypeKind|PrimitiveTypeKind|Yes|n/d|Nazwa typu EDM|  
   
 ###### <a name="function-node"></a>Węzeł — funkcja  
@@ -274,7 +274,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nazwa|String|Tak|n/d|Identyfikator/nazwę parametru.|  
 |Typ|String|Tak|n/d|Typ EDM parametru.|  
-|Tryb|Parametr<br /><br /> Kierunek|Tak|n/d|Kierunek parametru:<br /><br /> -w<br />-out<br />-inout|  
+|Tryb|Parametr<br /><br /> Kierunek|Yes|n/d|Kierunek parametru:<br /><br /> -w<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Atrybut Namespace  
  Każdy dostawca magazynu danych, należy zdefiniować przestrzeni nazw lub grupy w przestrzeni nazw dla informacje zdefiniowane w manifeście. Ta przestrzeń nazw może służyć w zapytań jednostki SQL do rozpoznawania nazw funkcji i typów. Przykład: SqlServer. Przestrzeń nazw musi się różnić od canonical przestrzeni nazw, EDM, zdefiniowane przez jednostki Services na potrzeby standardowych funkcji są obsługiwane przez zapytania SQL jednostki.  

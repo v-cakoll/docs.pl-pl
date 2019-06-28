@@ -5,12 +5,12 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: 9a7e370f9cce0e9ddf6dbe49984b7597e041eb84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0487ba5025557f07d9991f911cd71a677a04e2c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674327"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423377"
 ---
 # <a name="add-element-for-namedcaches"></a>\<add> Element for \<namedCaches>
 Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.  
@@ -24,7 +24,7 @@ Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.
   
 ```xml  
 <namedCaches>  
-    <add name="default" />  
+    <add name="Default" />  
       <!-- child elements -->  
  </namedCaches>  
 ```  
@@ -65,7 +65,7 @@ Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="default"   
+          <add name="Default"   
                cacheMemoryLimitMegabytes="0"   
                physicalMemoryPercentage="0"  
                pollingInterval="00:02:00" />  

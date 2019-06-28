@@ -2,12 +2,12 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 2ad1cba170a7ade06de4678651a8dfcb608d5c46
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70f7452a22ae08d6eccd7d3644bdc8df45087ae0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607212"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423187"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 Określa ustawienia puli kanału dla niestandardowego powiązania.  
@@ -24,7 +24,7 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
 ```xml  
 <channelPoolSettings idleTimeout="TimeSpan"
                      leaseTimeout="TimeSpan"
-                     maxOutboundConnectionsPerEndpopint="Integer" />
+                     maxOutboundConnectionsPerEndpoint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  

@@ -2,12 +2,12 @@
 title: Blokada zabezpieczeń PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664783"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425421"
 ---
 # <a name="pii-security-lockdown"></a>Blokada zabezpieczeń PII
 W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF) przez:  
@@ -37,7 +37,7 @@ W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezp
  W tym przykładzie pokazano, jak do sterowania rejestrowaniem z znanych osobiście identyfikowalne dane osobowe w dziennikach śledzenia i wiadomości, takich jak nazwa użytkownika i hasło. Domyślnie rejestrowanie znane też danych osobowych jest wyłączone, jednak w niektórych sytuacjach rejestrowania danych osobowych może być istotne w debugowaniu aplikacji. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ponadto w tym przykładzie użyto śledzenie i rejestrowanie komunikatów. Aby uzyskać więcej informacji, zobacz [śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) próbki.  
   
 ## <a name="encrypting-configuration-file-elements"></a>Szyfrowanie elementy pliku konfiguracji  
- Ze względów bezpieczeństwa we współużytkowanym środowisku hostingu w sieci Web może być pożądane, aby zaszyfrować niektórych elementów konfiguracji, takich jak parametry połączenia bazy danych, które mogą zawierać poufne informacje. Element konfiguracji, może być zaszyfrowany za pomocą narzędzia aspnet_regiis.exe znaleziony w folderze .NET Framework, na przykład % WINDIR%\Micrsoft.NET\Framework\v4.0.20728.  
+ Ze względów bezpieczeństwa we współużytkowanym środowisku hostingu w sieci Web może być pożądane, aby zaszyfrować niektórych elementów konfiguracji, takich jak parametry połączenia bazy danych, które mogą zawierać poufne informacje. Element konfiguracji, może być zaszyfrowany za pomocą narzędzia aspnet_regiis.exe znaleziony w folderze .NET Framework, na przykład % WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Aby zaszyfrować wartości w sekcji appSettings w pliku Web.config dla przykładu  
   

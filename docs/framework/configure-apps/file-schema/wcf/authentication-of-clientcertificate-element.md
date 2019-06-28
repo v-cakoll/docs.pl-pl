@@ -2,12 +2,12 @@
 title: <authentication> z <clientCertificate> — Element
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701336"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423239"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<Uwierzytelnianie > z \<clientCertificate > Element
 Określa zachowania uwierzytelnienia dla certyfikatów klienta używanych przez usługę.  
@@ -41,7 +41,7 @@ Określa zachowania uwierzytelnienia dla certyfikatów klienta używanych przez 
 |customCertificateValidatorType|Opcjonalny ciąg. Typ i zestaw używany do walidacji typu niestandardowego. Ten atrybut musi być ustawiane podczas `certificateValidationMode` ustawiono `Custom`.|  
 |certificateValidationMode|Opcjonalne wyliczenie. Określa jeden z trybów używanych do walidacji poświadczenia. Ten atrybut jest <xref:System.ServiceModel.Security.X509CertificateValidationMode> typu. Jeśli ustawiono <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, a następnie `customCertificateValidator` musi również zostać dostarczony. Wartość domyślna to <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.|  
 |includeWindowsGroups|Opcjonalny atrybut typu wartość logiczna. Określa, jeśli grupy Windows znajdują się w kontekście zabezpieczeń. Ustawienie tego atrybutu na `true` ma wpływ na wydajność, ponieważ powoduje ona rozszerzenia całej grupy. Ustaw ten atrybut na `false` Jeśli potrzebujesz nawiązać listy grup należy użytkownik.|  
-|mapClientCertificateToWindowsAcccount|Wartość logiczna. Określa, czy klienta mogą być mapowane do tożsamości Windows przy użyciu certyfikatu. Usługi Active Directory musi być włączona w tym celu.|  
+|mapClientCertificateToWindowsAccount|Wartość logiczna. Określa, czy klienta mogą być mapowane do tożsamości Windows przy użyciu certyfikatu. Usługi Active Directory musi być włączona w tym celu.|  
 |revocationMode|Opcjonalne wyliczenie. Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (RCL). Wartość domyślna to `Online`. Ta wartość jest ignorowana, gdy za pomocą zabezpieczeń transportu HTTP.|  
 |trustedStoreLocation|Opcjonalne wyliczenie. Jedną z dwóch lokalizacji magazynu systemu: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana, gdy certyfikat usługi jest negocjowane do klienta. Sprawdzanie poprawności jest wykonywane względem **zaufane osoby** są przechowywane w lokalizacji określonego magazynu. Wartość domyślna to `CurrentUser`.|  
   

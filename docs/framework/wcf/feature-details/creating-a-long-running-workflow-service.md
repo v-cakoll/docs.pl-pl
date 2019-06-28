@@ -2,12 +2,12 @@
 title: Tworzenie długo działającej usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1ca0f2ed4c2ab900191165d100848811e5436c3c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063798"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425405"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. Długotrwałe usług przepływu pracy może działać przez dłuższy czas. W pewnym momencie przepływu pracy może być bezczynny, oczekiwanie na kilku dodatkowych informacji. W takim przypadku przepływ pracy jest trwały do usługi SQL database i zostanie usunięty z pamięci. Po udostępnieniu dodatkowych informacji wystąpienia przepływu pracy jest ładowany do pamięci i kontynuuje wykonywanie.  W tym scenariuszu w przypadku wdrażania bardzo uproszczony system zamawiania.  Klient wysyła pierwszy komunikat do usługi przepływu pracy, aby rozpocząć kolejności. Zwraca identyfikator zamówienia dla klienta. W tym momencie Usługa przepływu pracy oczekuje na inny komunikat z klienta i przechodzi w stan bezczynności i jest umieszczone w bazie danych programu SQL Server.  Gdy klient wysyła następnej wiadomości w celu uporządkowania elementów, usługi przepływu pracy jest ładowany do pamięci i zakończeniu przetwarzania zamówienia. W przykładowym kodzie zwraca ciąg z informacją, że element został dodany do zamówienia. Przykładowy kod nie jest przeznaczona do rzeczywistej aplikacji w technologii, ale raczej prosty przykład ilustrujący długo działającej usługi przepływu pracy. W tym temacie założono, że wiesz, jak tworzyć projekty programu Visual Studio 2012 i rozwiązań.
@@ -105,7 +105,7 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
     2. Wybierz **Receive** działania i ustaw właściwości pokazane na poniższej ilustracji:
 
-         ![Ustaw właściwości działanie Receive](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "ustawiania właściwości działania odbierania.")
+         ![Ustaw właściwości działania odbierania](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "ustawiania właściwości działania odbierania.")
          
          > [!NOTE]
          >  Nie zapomnij zmienić **ServiceContractName** pole `../IAddItem`.

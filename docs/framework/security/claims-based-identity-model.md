@@ -3,12 +3,12 @@ title: Model tożsamości oparty na oświadczeniach
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650458"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422406"
 ---
 # <a name="claims-based-identity-model"></a>Model tożsamości oparty na oświadczeniach
 W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użytkownika jest reprezentowana w aplikacji jako zestaw oświadczeń. Jednym oświadczeniem może być nazwa użytkownika, a innym adres e-mail. Chodzi o to, że zewnętrzny system tożsamości jest skonfigurowany do podawania aplikacji wszystkiego, co musi wiedzieć o użytkowniku przy każdym wysyłanym przez niego żądaniu, a przy tym o kryptograficzne zapewnianie, że dane o tożsamości, które otrzymujesz, pochodzą z zaufanego źródła.  
@@ -58,7 +58,7 @@ W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użyt
  Gdy tworzysz aplikację, która opiera się na oświadczeniach, tworzysz aplikację jednostki uzależnionej. Synonimy dla jednostki Uzależnionej to "aplikacja obsługująca oświadczenia" i "aplikacja oparta na oświadczeniach". Zarówno aplikacje internetowe, jak i usługi internetowe mogą być aplikacjami jednostki uzależnionej. Aplikacja jednostki uzależnionej wykorzystuje tokeny wystawione przez usługę STS i wyodrębnia z nich oświadczenia w celu użycia ich do zadań związanych z tożsamością. Program WIF oferuje funkcje ułatwiające tworzenie aplikacji jednostki uzależnionej.  
   
 ### <a name="standards"></a>Standardy  
- Aby wszystkie te elementy mogły współdziałać, w poprzednim scenariuszu zastosowano kilka standardów WS-*. Zasady są pobierane przy użyciu standardu WS-MetadataExchange i są skonstruowane zgodnie ze specyfikacją WS-Policy. Usługa STS uwidacznia punkty końcowe, które implementują specyfikację WS-Trust opisującą sposób żądania i odbierania tokenów zabezpieczających. Większość dzisiejszych usług STS wystawia tokeny sformatowane przy użyciu języka Security Assertion Markup Langauge (SAML). SAML to uznawany przez całą branżę słownik XML, który może służyć do reprezentowania oświadczeń w sposób interoperacyjny. Ewentualnie, w sytuacji wielu platform, pozwala to na komunikowanie się z usługą STS na całkowicie różnej platformie i osiągnięcie rejestracji jednokrotnej dla wszystkich aplikacji, niezależnie od platformy.  
+ Aby wszystkie te elementy mogły współdziałać, w poprzednim scenariuszu zastosowano kilka standardów WS-*. Zasady są pobierane przy użyciu standardu WS-MetadataExchange i są skonstruowane zgodnie ze specyfikacją WS-Policy. Usługa STS uwidacznia punkty końcowe, które implementują specyfikację WS-Trust opisującą sposób żądania i odbierania tokenów zabezpieczających. Dzisiejszych większości usług STS wystawia tokeny sformatowane przy użyciu Assertion Markup języka SAML (Security). SAML to uznawany przez całą branżę słownik XML, który może służyć do reprezentowania oświadczeń w sposób interoperacyjny. Ewentualnie, w sytuacji wielu platform, pozwala to na komunikowanie się z usługą STS na całkowicie różnej platformie i osiągnięcie rejestracji jednokrotnej dla wszystkich aplikacji, niezależnie od platformy.  
   
 ### <a name="browser-based-applications"></a>Aplikacje oparte na przeglądarce  
  Inteligentne aplikacje klienckie to nie jedyne aplikacje, które mogą używać modelu tożsamości opartej na oświadczeniach. Mogą go również używać aplikacje oparte na przeglądarce (zwane także klientami pasywnymi). W poniższym scenariuszu opisano, jak to działa.  

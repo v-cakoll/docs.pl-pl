@@ -2,12 +2,12 @@
 title: Protokoły zabezpieczeń wersja 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 8114183109befcb77c3bf2b35fe246118da5afde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71855b73bb08d5edef05747dcff9e1ac04fb951f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586876"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425095"
 ---
 # <a name="security-protocols-version-10"></a>Protokoły zabezpieczeń wersja 1.0
 Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usług sieci Web, które obejmują wszystkie istniejące enterprise komunikatów wymagań dotyczących zabezpieczeń. W tej sekcji opisano szczegóły Windows Communication Foundation (WCF) w wersji 1.0 (zaimplementowany w <xref:System.ServiceModel.Channels.SecurityBindingElement>) dla następujących sieci Web usług protokołów zabezpieczeń.  
@@ -19,7 +19,7 @@ Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usł
 |WSS: X509 Token Profile 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
 |WSS: SAML 1.1 Token Profile 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
 |WSS: Zabezpieczenia komunikatów SOAP 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
-|1.1 tokenu profilu programu WSS nazwy użytkownika|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|1\.1 tokenu profilu programu WSS nazwy użytkownika|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
 |WSS: X.509 Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
 |WSS: 1.1 profilu tokenu protokołu Kerberos|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
 |WSS: SAML 1.1 Token 1.1 profilu|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
@@ -129,7 +129,7 @@ Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usł
  Usługi WCF obsługuje profile tokenu języka SAML WSS 1.0 i 1.1 tokenów w wersji 1.1 protokołu SAML. Istnieje możliwość zaimplementowania inne wersje formatów tokenu języka SAML.  
   
 ### <a name="15-security-context-token"></a>W wersji 1.5 Token kontekstu zabezpieczeń  
- Usługi WCF obsługuje zabezpieczenia kontekstu tokenu (SCT) wprowadzone w WS SecureCoversation. SCT jest używana do reprezentowania kontekstu zabezpieczeń ustanowionych w mechanizmu SecureConversation również jako negocjacji binarnej protokoły TLS i SSPI, opisane poniżej.  
+ Usługi WCF obsługuje zabezpieczenia kontekstu tokenu (SCT) wprowadzone w WS-SecureConversation. SCT jest używana do reprezentowania kontekstu zabezpieczeń ustanowionych w mechanizmu SecureConversation również jako negocjacji binarnej protokoły TLS i SSPI, opisane poniżej.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Wspólne parametry zabezpieczeń komunikatów  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d224535bb266d0a3673359388c6c211103df7374
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665961"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424845"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Punkty końcowe: adresy, wiązania i kontrakty
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punktów końcowych* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji oferowanych przez usługę WCF.  
@@ -61,7 +61,7 @@ Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się 
   
      Aby uzyskać więcej informacji na temat definiowania kontrakt zobacz [projektowanie kontraktów usług](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
-- Zachowania: Aby dostosować zachowanie lokalny punkt końcowy usługi, można użyć zachowań punktu końcowego. Zachowań punktu końcowego to osiągnąć przez uczestnictwem w procesie tworzenia WCFruntime. Na przykład zachowanie punktu końcowego <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> właściwość, która pozwala na określenie na adres nasłuchiwania inny niż adres protokołu SOAP lub Web Services Description Language (WSDL). Aby uzyskać więcej informacji, zobacz [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+- Zachowania: Aby dostosować zachowanie lokalny punkt końcowy usługi, można użyć zachowań punktu końcowego. Zachowań punktu końcowego to osiągnąć przez uczestnictwem w procesie tworzenia środowisko wykonawcze programu WCF. Na przykład zachowanie punktu końcowego <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> właściwość, która pozwala na określenie na adres nasłuchiwania inny niż adres protokołu SOAP lub Web Services Description Language (WSDL). Aby uzyskać więcej informacji, zobacz [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definiowanie punktów końcowych  
  Można określić punktu końcowego usługi obowiązkowo za pomocą kodu lub w sposób deklaratywny przy użyciu konfiguracji. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie punktu końcowego usługi w konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) i [jak: Tworzenie punktu końcowego usługi w kodzie](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  

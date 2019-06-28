@@ -3,12 +3,12 @@ title: C#Typy i zmienne — Przewodnik po przykładzie C# języka
 description: Informacje na temat definiowania typów i zadeklarowania zmiennych wC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881977"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423455"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -55,7 +55,7 @@ Poniżej znajdują się z omówieniem C#przez system typów.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Aby uzyskać więcej informacji na temat typów liczbowych, zobacz [Tabela typów całkowitych](../language-reference/keywords/integral-types-table.md) i [Tabela typów zmiennoprzecinkowych](../language-reference/keywords/floating-point-types-table.md).
+Aby uzyskać więcej informacji na temat typów liczbowych, zobacz [typów całkowitych](../language-reference/builtin-types/integral-numeric-types.md) i [Tabela typów zmiennoprzecinkowych](../language-reference/keywords/floating-point-types-table.md).
 
 C#firmy `bool` typ jest używany do reprezentowania wartości logicznych — wartości, które są albo `true` lub `false`.
 

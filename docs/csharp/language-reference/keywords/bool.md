@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6aae34433ee6f5d141d95f0c434af1825e9bf4b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662078"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424434"
 ---
 # <a name="bool-c-reference"></a>bool (odwołanie w C#)
 
@@ -55,7 +55,7 @@ W tym przykładzie Wprowadź znak przy użyciu klawiatury i program sprawdza, cz
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Typy całkowite](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

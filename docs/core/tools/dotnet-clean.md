@@ -1,15 +1,15 @@
 ---
 title: czyszczenie polecenia DotNet
 description: Polecenia dotnet clean czyści bieżącego katalogu.
-ms.date: 04/14/2019
-ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631821"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422016"
 ---
-# <a name="dotnet-clean"></a>Wyczyść DotNet
+# <a name="dotnet-clean"></a>dotnet clean
 
 **Ten temat dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
 
@@ -24,7 +24,8 @@ ms.locfileid: "65631821"
 ## <a name="synopsis"></a>Streszczenie
 
 ```
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -55,6 +56,10 @@ Projektu programu MSBuild lub rozwiązanie do czyszczenia. Jeśli nie określono
 * **`--interactive`**
 
   Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji. Na przykład w celu ukończenia uwierzytelniania. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
+
+* **`--nologo`**
+
+  Nie wyświetla transparentu lub komunikat o prawach autorskich. Dostępne, ponieważ .NET Core SDK w wersji 3.0.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

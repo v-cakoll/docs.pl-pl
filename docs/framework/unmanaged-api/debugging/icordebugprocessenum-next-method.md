@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f32b554de191ff84e7c319e2a00e3cd0610a9f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783003"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422195"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next — Metoda
 Pobiera określoną liczbę wystąpień ICorDebugProcess z wyliczenia, zaczynając od bieżącej pozycji.  
@@ -42,7 +42,7 @@ HRESULT Next (
  `celt`  
  [in] Liczba `ICorDebugProcess` wystąpienia mają zostać pobrane.  
   
- `processess`  
+ `processes`  
  [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugProcess` obiekt, który reprezentuje proces.  
   
  `pceltFetched`  

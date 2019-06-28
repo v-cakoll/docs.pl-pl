@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cc4b691763c1aff4bacc2935a0a6cf32c880180
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032802"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422616"
 ---
 # <a name="runtime-callable-wrapper"></a>Wywoływana otoka środowiska uruchomieniowego
 Środowisko uruchomieniowe języka wspólnego udostępnia obiekty COM za pośrednictwem serwera proxy, wywoływana otoka wywoływana w czasie wykonywania (RCW). Mimo że RCW wydaje się być zwykły obiekt do klientów programu .NET, jego podstawową funkcją jest kierowanie wywołań między klientem platformy .NET i obiekt COM.  
@@ -24,7 +24,7 @@ ms.locfileid: "62032802"
 
 Na poniższej ilustracji przedstawiono proces uzyskiwania dostępu do obiektów COM za pomocą wywoływana otoka środowiska uruchomieniowego:
 
- ![Proces uzyskiwania dostępu do obiektów COM — throug RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
+ ![Proces uzyskiwania dostępu do obiektów COM za pomocą RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
 
  Przy użyciu metadanych pochodzące z biblioteki typów, środowisko uruchomieniowe tworzy wywoływanego obiektu COM i otoki dla tego obiektu. Każdy RCW obsługuje pamięć podręczną wskaźniki interfejsu na obiekt COM, otacza i zwalnia swoje odwołanie do obiektu COM, gdy RCW nie jest już potrzebny. Środowisko uruchomieniowe wykonuje wyrzucanie elementów bezużytecznych na RCW.  
   

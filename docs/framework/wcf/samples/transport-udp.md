@@ -2,12 +2,12 @@
 title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 12981e970706c5fc1d954c237309f12c85320c75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ae4bf22f452035d10ecba6bcf93bf580ab7f5f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617372"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422155"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedynczej i multiemisji jako niestandardowy transportu Windows Communication Foundation (WCF). Przykład w tym artykule opisano zalecane procedury tworzenia niestandardowych transportu programu WCF, za pomocą struktura kanału i zgodnie z najlepszymi rozwiązaniami WCF. Kroki umożliwiające utworzenie niestandardowego transportu są następujące:  
@@ -446,7 +446,7 @@ Press <ENTER> to terminate the service and exit...
  Aby ponownie wygenerować kod klienta i konfiguracji za pomocą Svcutil.exe, uruchamiania aplikacji usługi, a następnie uruchom następujące Svcutil.exe z katalogu głównego przykładowego.  
   
 ```console
-svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
+svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
  Należy pamiętać, Svcutil.exe nie generuje konfigurację rozszerzenia powiązania `SampleProfileUdpBinding`, dlatego należy je dodać ręcznie.  

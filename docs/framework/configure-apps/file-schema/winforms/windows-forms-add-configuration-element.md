@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775846"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422825"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms, Dodaj Element konfiguracji
 
@@ -43,7 +43,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Wskazuje, czy formanty zakotwiczonej są skalowane w jednym przebiegu. "true", aby wyłączyć pojedynczego przekazywania skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Pojedynczego Powodzenie, skalowanie" w [uwagi](#remarks) Aby uzyskać więcej informacji. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Wskazuje, czy aplikacja ma obsługującą ustawienia DPI. Ustaw klucz do "PerMonitorV2", aby obsługiwać rozpoznawanie Dpi; w przeciwnym wypadku ustaw ją na "false". Rozpoznawanie DPI to funkcja opcjonalna; Aby móc korzystać z pomocy technicznej Windows Forms o wysokiej rozdzielczości DPI, należy ustawić jej wartość na "PerMonitorV2". Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.CheckedListBox> kontroli korzysta z zalet skalowania i układ ulepszeń wprowadzonych w programie .NET Framework 4.7. "true", aby zrezygnować z usprawnień caling i układ. w przeciwnym razie wartość "false". |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.CheckedListBox> kontroli korzysta z zalet skalowania i układ ulepszeń wprowadzonych w programie .NET Framework 4.7. "true", aby zrezygnować z usprawnień skalowanie i układ. w przeciwnym razie wartość "false". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.DataGridView> kontrolować ulepszenia w zakresie skalowania i układu wprowadzone w programie .NET Framework 4.7. "true", aby zrezygnować z DPI awareness; "false" w przeciwnym razie. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true", aby zrezygnować z odbieraniem wiadomości związanych z skalowania zmiany; rozdzielczości "false" w przeciwnym razie. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Wskazuje, czy aplikacji Windows Forms automatycznie zmiany rozmiaru z powodu zmian skalowania DPI. "true", aby włączyć automatyczną zmianę rozmiaru; w przeciwnym razie wartość false. |

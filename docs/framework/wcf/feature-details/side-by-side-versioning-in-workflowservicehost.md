@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 3ac8b2260e5da1e91c167e3e9ef91039deb983b2
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0dfb2469ac3f497a40a3008c9933977947685979
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380246"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425501"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Równoległe przechowywanie wersji w klasie WorkflowServiceHost
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> Versioning side-by-side wprowadzone w programie .NET Framework 4.5 zapewnia możliwość hostowania wielu wersji usługi przepływu pracy w jednym punkcie końcowym. Side-by-side funkcjonalność umożliwia usługi przepływu pracy, należy skonfigurować tak, aby nowe wystąpienia usługi przepływu pracy są tworzone przy użyciu nową definicję przepływu pracy podczas uruchamiania wystąpienia pełną, przy użyciu istniejącą definicję. Ten temat zawiera omówienie przepływu pracy usługi wykonywania side-by-side przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -82,7 +82,7 @@ End With
 >  Jest to przydatne, jeśli usługa była wdrożona początkowo bez <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> skonfigurowany, a następnie jest tworzony jest dostępna zaktualizowana wersja.  
   
 ### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>Dodawanie nowej wersji do usługi hostowanej w sieci Web przepływu pracy  
- Pierwszym etapem konfigurowania nowej wersji usługi przepływu pracy w usłudze hostowanej w sieci web jest utworzenie nowego folderu w `App_Code` folder, który ma taką samą nazwę jak plik usługi. Jeśli usługa `xamlx` nosi nazwę pliku `MortgageWorkflow.xamlx`, musi nosić nazwę folderu, a następnie `MortgageWorkflow`. Umieść kopię oryginalnego usługi `xamlx` pliku do tego folderu i zmień jego nazwę na nową nazwę, taką jak `MortgageWorkflowV1.xamlx`. Wprowadź żądane zmiany do podstawowej usługi, zaktualizuj jego <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, a następnie wdrożyć usługę. W poniższym przykładzie <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> został zaktualizowany o <xref:System.Activities.WorkflowIdentity.Name%2A> z `MortageWorkflow` i <xref:System.Activities.WorkflowIdentity.Version%2A> z `2.0.0.0`.  
+ Pierwszym etapem konfigurowania nowej wersji usługi przepływu pracy w usłudze hostowanej w sieci web jest utworzenie nowego folderu w `App_Code` folder, który ma taką samą nazwę jak plik usługi. Jeśli usługa `xamlx` nosi nazwę pliku `MortgageWorkflow.xamlx`, musi nosić nazwę folderu, a następnie `MortgageWorkflow`. Umieść kopię oryginalnego usługi `xamlx` pliku do tego folderu i zmień jego nazwę na nową nazwę, taką jak `MortgageWorkflowV1.xamlx`. Wprowadź żądane zmiany do podstawowej usługi, zaktualizuj jego <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, a następnie wdrożyć usługę. W poniższym przykładzie <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> został zaktualizowany o <xref:System.Activities.WorkflowIdentity.Name%2A> z `MortgageWorkflow` i <xref:System.Activities.WorkflowIdentity.Version%2A> z `2.0.0.0`.  
   
  ![Zrzut ekranu pokazujący DefinitionIdentity obiektu WorkflowIdentity.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-workflowidentity.bmp)  
   

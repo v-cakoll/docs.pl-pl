@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: f05ba1ee4e926f9f4c1b6427ecc60b41b45b06e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661454"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424179"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabela niejawnych konwersji liczbowych (odwołanie w C#)
 
@@ -21,20 +21,20 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych niejawne konwersje mi
   
 |Z|Zadanie|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double`, lub `decimal`|  
-|[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double`, lub `decimal`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
 |[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
-|[short](short.md)|`int`, `long`, `float`, `double`, lub `decimal`|  
-|[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
-|[int](int.md)|`long`, `float`, `double`, lub `decimal`|  
-|[uint](uint.md)|`long`, `ulong`, `float`, `double`, lub `decimal`|  
-|[long](long.md)|`float`, `double`, lub `decimal`|  
-|[ulong](ulong.md)|`float`, `double`, lub `decimal`|  
+|[short](../builtin-types/integral-numeric-types.md)|`int`, `long`, `float`, `double`, lub `decimal`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[int](../builtin-types/integral-numeric-types.md)|`long`, `float`, `double`, lub `decimal`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[long](../builtin-types/integral-numeric-types.md)|`float`, `double`, lub `decimal`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`, lub `decimal`|  
 |[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>Uwagi  
 
-- Wszelkie [typu całkowitego](integral-types-table.md) jest niejawnie konwertowany na dowolny [typu zmiennoprzecinkowego](floating-point-types-table.md).
+- Wszelkie [typu całkowitego](../builtin-types/integral-numeric-types.md) jest niejawnie konwertowany na dowolny [typu zmiennoprzecinkowego](floating-point-types-table.md).
 
 - Dokładności, ale wartość nie może być utracone w konwersje z `int`, `uint`, `long`, lub `ulong` do `float` i `long` lub `ulong` do `double`.  
   
@@ -57,7 +57,7 @@ Aby uzyskać więcej informacji dotyczących niejawnych konwersji, zobacz [nieja
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [Tabela typów całkowitych](integral-types-table.md)
+- [Typy całkowite](../builtin-types/integral-numeric-types.md)
 - [Tabela typów zmiennoprzecinkowych](floating-point-types-table.md)
 - [Tabela typów wbudowanych](built-in-types-table.md)
 - [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)

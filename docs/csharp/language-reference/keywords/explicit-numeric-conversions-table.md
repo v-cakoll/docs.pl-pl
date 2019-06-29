@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306617"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424197"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela jawnych konwersji liczbowych (odwołanie w C#)
 
@@ -23,14 +23,14 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych jawne konwersje międ
 
 |Z|Zadanie|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong`, lub `char`|  
-|[byte](byte.md)|`sbyte` lub `char`|  
-|[short](short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong`, lub `char`|  
-|[ushort](ushort.md)|`sbyte`, `byte`, `short`, lub `char`|  
-|[int](int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, lub `char`|  
-|[uint](uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, lub `char`|  
-|[long](long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, lub `char`|  
-|[ulong](ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, lub `char`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`byte`, `ushort`, `uint`, `ulong`, lub `char`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`sbyte` lub `char`|  
+|[short](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong`, lub `char`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, lub `char`|  
+|[int](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, lub `char`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, lub `char`|  
+|[long](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, lub `char`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, lub `char`|  
 |[char](char.md)|`sbyte`, `byte`, lub `short`|  
 |[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, lub `decimal`|  
 |[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub `decimal`|  
@@ -69,7 +69,7 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych jawne konwersje międ
 - [C#Odwołanie](../index.md)
 - [Konwersje rzutowania i typ](../../programming-guide/types/casting-and-type-conversions.md)
 - [operator)](../operators/type-testing-and-conversion-operators.md#cast-operator-)
-- [Tabela typów całkowitych](integral-types-table.md)
+- [Typy całkowite](../builtin-types/integral-numeric-types.md)
 - [Tabela typów zmiennoprzecinkowych](floating-point-types-table.md)
 - [Tabela typów wbudowanych](built-in-types-table.md)
 - [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)

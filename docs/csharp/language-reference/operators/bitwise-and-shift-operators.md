@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 1f98435aba6994aaca76127cc20b5ffa29df455f
-ms.sourcegitcommit: d9c4808739c8c606957dd0964d952b98ea7b6533
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67349770"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424008"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitowe i operatory przesunięcia (C# odwołania)
 
-Następujące operatory bitowe wykonywania lub shift operacji przy użyciu argumentów operacji [typów całkowitych](../keywords/integral-types-table.md):
+Następujące operatory bitowe wykonywania lub shift operacji przy użyciu argumentów operacji [typów całkowitych](../builtin-types/integral-numeric-types.md):
 
 - Jednoargumentowy [ `~` (dopełnienia bitowego)](#bitwise-complement-operator-) — operator
 - Binarny [ `<<` (przesunięcia w lewo)](#left-shift-operator-) i [ `>>` (przesunięcia bitowego w prawo)](#right-shift-operator-) operatory przesunięcia
@@ -82,11 +82,11 @@ Operacja przesunięcia w prawo powoduje odrzucenie mniej znaczące bity, co ilus
 
 Pozycje bitów pusty wyższego rzędu jest ustawiona na podstawie typ operandu po lewej stronie w następujący sposób:
 
-- Jeśli lewostronny operand jest typu [int](../keywords/int.md) lub [długie](../keywords/long.md), wykonuje operator przesunięcia w prawo *arytmetyczne* shift: wartość najbardziej znaczący bit (bit znaku) z Lewostronny operand jest propagowana do pozycji bitów pusty wyższego rzędu. Oznacza to, pozycje bitów pusty wyższego rzędu są ustawiane na zero, jeśli argument po lewej stronie jest ujemna i ustawiony na wartość 1, jeśli jest ujemna.
+- Jeśli lewostronny operand jest typu [int](../builtin-types/integral-numeric-types.md) lub [długie](../builtin-types/integral-numeric-types.md), wykonuje operator przesunięcia w prawo *arytmetyczne* shift: wartość najbardziej znaczący bit (bit znaku) z Lewostronny operand jest propagowana do pozycji bitów pusty wyższego rzędu. Oznacza to, pozycje bitów pusty wyższego rzędu są ustawiane na zero, jeśli argument po lewej stronie jest ujemna i ustawiony na wartość 1, jeśli jest ujemna.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Lewostronny operand jest typu [uint](../keywords/uint.md) lub [ulong](../keywords/ulong.md), operator przesunięcia w prawo wykonuje *logiczne* shift: pozycje bitów pusty wyższego rzędu są zawsze ustawione na zero.
+- Lewostronny operand jest typu [uint](../builtin-types/integral-numeric-types.md) lub [ulong](../builtin-types/integral-numeric-types.md), operator przesunięcia w prawo wykonuje *logiczne* shift: pozycje bitów pusty wyższego rzędu są zawsze ustawione na zero.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
@@ -158,13 +158,13 @@ Aby uzyskać pełną listę C# operatory uporządkowane według poziomu prioryte
 
 ## <a name="shift-count-of-the-shift-operators"></a>Licznik przesunięć operatorów przesunięcia
 
-Dla operatorów przesunięcia `<<` i `>>`, typ prawostronny operand musi być [int](../keywords/int.md) lub typ, który ma [wstępnie zdefiniowane niejawnych konwersji liczbowych](../keywords/implicit-numeric-conversions-table.md) do `int`.
+Dla operatorów przesunięcia `<<` i `>>`, typ prawostronny operand musi być [int](../builtin-types/integral-numeric-types.md) lub typ, który ma [wstępnie zdefiniowane niejawnych konwersji liczbowych](../keywords/implicit-numeric-conversions-table.md) do `int`.
 
 Aby uzyskać `x << count` i `x >> count` wyrażeń, licznik przesunięć rzeczywistego zależy od rodzaju `x` w następujący sposób:
 
-- Jeśli typ `x` jest [int](../keywords/int.md) lub [uint](../keywords/uint.md), licznik przesunięć jest definiowany przez niskiego rzędu *pięć* bitów prawostronny operand. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x1F` (lub `count & 0b_1_1111`).
+- Jeśli typ `x` jest [int](../builtin-types/integral-numeric-types.md) lub [uint](../builtin-types/integral-numeric-types.md), licznik przesunięć jest definiowany przez niskiego rzędu *pięć* bitów prawostronny operand. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x1F` (lub `count & 0b_1_1111`).
 
-- Jeśli typ `x` jest [długie](../keywords/long.md) lub [ulong](../keywords/ulong.md), licznik przesunięć jest definiowany przez niskiego rzędu *sześć* bitów prawostronny operand. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x3F` (lub `count & 0b_11_1111`).
+- Jeśli typ `x` jest [długie](../builtin-types/integral-numeric-types.md) lub [ulong](../builtin-types/integral-numeric-types.md), licznik przesunięć jest definiowany przez niskiego rzędu *sześć* bitów prawostronny operand. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x3F` (lub `count & 0b_11_1111`).
 
 Poniższy przykład przedstawia tego zachowania:
 

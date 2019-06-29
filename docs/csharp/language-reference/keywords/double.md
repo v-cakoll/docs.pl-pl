@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 50e11e8547c2887ace677d2c86dcf055326ff9a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4d6bb4eb698e4afbda6571ba382e828a5f836a4
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661818"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424263"
 ---
 # <a name="double-c-reference"></a>double (odwołanie w C#)
 
@@ -53,7 +53,7 @@ Aby uzyskać więcej informacji na temat tych wartości, zobacz Standard IEEE bi
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie [int](../../../csharp/language-reference/keywords/int.md), [krótki](../../../csharp/language-reference/keywords/short.md), [float](../../../csharp/language-reference/keywords/float.md), a `double` są dodawane, jednocześnie zapewniając `double` wynik.
+W poniższym przykładzie [int](../builtin-types/integral-numeric-types.md), [krótki](../../../csharp/language-reference/builtin-types/integral-numeric-types.md), [float](../../../csharp/language-reference/keywords/float.md), a `double` są dodawane, jednocześnie zapewniając `double` wynik.
 
 [!code-csharp[csrefKeywordsTypes#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#9)]
 

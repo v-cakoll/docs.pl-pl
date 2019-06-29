@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 25f6fb5e8780611a6ca7396873d0a33684b65a48
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ef219f2b98e37b8a62d3ee7b88dbc5374d87fca5
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301372"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423533"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Instrukcje: Konwertowanie ciągu na liczbę (C# Programming Guide)
 
@@ -51,7 +51,7 @@ W poniższej tabeli wymieniono niektóre metody z <xref:System.Convert> klasę, 
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- Poniższy przykład wywołuje <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> metodę, aby przekonwertować ciąg wejściowy [int](../../../csharp/language-reference/keywords/int.md). Przykład wyłapuje dwa najbardziej powszechne wyjątki, które mogą zostać wyrzucone przez tę metodę <xref:System.FormatException> i <xref:System.OverflowException>. Jeśli wynikowe liczbę można zwiększyć bez przekraczania <xref:System.Int32.MaxValue?displayProperty=nameWithType>, przykład dodaje 1 do wyniku i wyświetla dane wyjściowe.  
+ Poniższy przykład wywołuje <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> metodę, aby przekonwertować ciąg wejściowy [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Przykład wyłapuje dwa najbardziej powszechne wyjątki, które mogą zostać wyrzucone przez tę metodę <xref:System.FormatException> i <xref:System.OverflowException>. Jeśli wynikowe liczbę można zwiększyć bez przekraczania <xref:System.Int32.MaxValue?displayProperty=nameWithType>, przykład dodaje 1 do wyniku i wyświetla dane wyjściowe.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   

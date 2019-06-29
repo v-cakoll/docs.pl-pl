@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 65a7fbb2ef8fd24e80b4ccf979a7f3fc7cf19934
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398096"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423642"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -39,12 +39,12 @@ Informacje przechowywane w typie mogą być następujące:
 
 - Rodzaje operacji, które są dozwolone.
 
-Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje, które są wykonywane w kodzie są *bezpieczny*. Na przykład, jeśli zadeklarować zmienną typu [int](../../../csharp/language-reference/keywords/int.md), kompilator umożliwi dodatkowo użycia zmiennej operacjach dodawania i odejmowania. Jeśli próbujesz wykonać te same operacje na zmiennej typu [bool](../../../csharp/language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w poniższym przykładzie:
+Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje, które są wykonywane w kodzie są *bezpieczny*. Na przykład, jeśli zadeklarować zmienną typu [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md), kompilator umożliwi dodatkowo użycia zmiennej operacjach dodawania i odejmowania. Jeśli próbujesz wykonać te same operacje na zmiennej typu [bool](../../../csharp/language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> Programiści C i C++, zwróć uwagę, że w języku C# [bool](../../../csharp/language-reference/keywords/bool.md) nie jest konwertowany na [int](../../../csharp/language-reference/keywords/int.md).
+> Programiści C i C++, zwróć uwagę, że w języku C# [bool](../../../csharp/language-reference/keywords/bool.md) nie jest konwertowany na [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md).
 
 Kompilator osadza informacje o typie pliku wykonywalnego jako metadane. Środowisko uruchomieniowe języka wspólnego (CLR) używa tych metadanych w czasie wykonywania do dalszego gwarantuje bezpieczeństwo typów, gdy przydziela i przejmuje pamięć.
 
@@ -54,11 +54,11 @@ Kiedy Deklarujesz zmienną lub stałą w programie, należy określić jej typ l
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-Typy parametrów metody i wartości zwracane są określone w oznaczeniu metody. Następująca sygnatura przedstawia metodę, która wymaga [int](../../../csharp/language-reference/keywords/int.md) jako argument wejściowy i zwraca ciąg:
+Typy parametrów metody i wartości zwracane są określone w oznaczeniu metody. Następująca sygnatura przedstawia metodę, która wymaga [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) jako argument wejściowy i zwraca ciąg:
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Po zadeklarowaniu zmiennej nie może być ponownie zadeklarowany z nowym typem i nie można przypisać wartość, która nie jest zgodna z deklarowanym typem. Na przykład nie można zadeklarować [int](../../../csharp/language-reference/keywords/int.md) a następnie przypisać jej wartości logicznej [true](../../../csharp/language-reference/keywords/true-literal.md). Jednakże wartości można przekonwertować do innych typów, na przykład gdy są one przypisane do nowych zmiennych lub przekazywane jako argumenty tej metody. A *konwersja typu* która nie powoduje utraty danych jest realizowane automatycznie przez kompilator. Wymaga konwersji, która może spowodować utratę danych *rzutowania* w kodzie źródłowym.
+Po zadeklarowaniu zmiennej nie może być ponownie zadeklarowany z nowym typem i nie można przypisać wartość, która nie jest zgodna z deklarowanym typem. Na przykład nie można zadeklarować [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) a następnie przypisać jej wartości logicznej [true](../../../csharp/language-reference/keywords/true-literal.md). Jednakże wartości można przekonwertować do innych typów, na przykład gdy są one przypisane do nowych zmiennych lub przekazywane jako argumenty tej metody. A *konwersja typu* która nie powoduje utraty danych jest realizowane automatycznie przez kompilator. Wymaga konwersji, która może spowodować utratę danych *rzutowania* w kodzie źródłowym.
 
 Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md).
 
@@ -74,7 +74,7 @@ Możesz użyć [struktury](../../../csharp/language-reference/keywords/struct.md
 
 Jest to ważne, aby zrozumieć dwa podstawowe punkty o systemie typu na platformie .NET:
 
-- Obsługuje zasady dziedziczenia. Typy mogą pochodzić od innych typów nazywanych *typy podstawowe*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy z kolei może pochodzić od innego typu, w którym przypadku typ pochodny dziedziczy członków obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy liczbowe, takie jak <xref:System.Int32?displayProperty=nameWithType> (— słowo kluczowe języka C#: [int](../../../csharp/language-reference/keywords/int.md)), pochodzi ostatecznie z jednego typu podstawowego, który jest <xref:System.Object?displayProperty=nameWithType> (— słowo kluczowe języka C#: [obiektu](../../../csharp/language-reference/keywords/object.md)). Ta ujednolicona hierarchia typu jest nazywany [Wspólny System typów](../../../standard/base-types/common-type-system.md) (CTS). Aby uzyskać więcej informacji dotyczących dziedziczenia w C#, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
+- Obsługuje zasady dziedziczenia. Typy mogą pochodzić od innych typów nazywanych *typy podstawowe*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy z kolei może pochodzić od innego typu, w którym przypadku typ pochodny dziedziczy członków obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy liczbowe, takie jak <xref:System.Int32?displayProperty=nameWithType> (— słowo kluczowe języka C#: [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)), pochodzi ostatecznie z jednego typu podstawowego, który jest <xref:System.Object?displayProperty=nameWithType> (— słowo kluczowe języka C#: [obiektu](../../../csharp/language-reference/keywords/object.md)). Ta ujednolicona hierarchia typu jest nazywany [Wspólny System typów](../../../standard/base-types/common-type-system.md) (CTS). Aby uzyskać więcej informacji dotyczących dziedziczenia w C#, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
 
 - Każdy typ w CTS jest zdefiniowany jako *typu wartości* lub *odwołania do typu*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas programu .NET, a także typy własne zdefiniowane przez użytkownika. Typy, które są definiowane za pomocą [struktury](../../../csharp/language-reference/keywords/struct.md) — słowo kluczowe to typy wartości; wszystkie wbudowane typy liczbowe są `structs`. Typy, które są definiowane za pomocą [klasy](../../../csharp/language-reference/keywords/class.md) słów kluczowych to odwołanie do typów. Typy odwołań i typy wartości mają różne zasady czasu kompilacji i różny sposób w czasie wykonywania.
 
@@ -205,4 +205,4 @@ Więcej informacji znajduje się w następujących tematach:
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Konwersja typów danych XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
-- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Typy całkowite](../../language-reference/builtin-types/integral-numeric-types.md)

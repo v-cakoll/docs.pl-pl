@@ -1,19 +1,19 @@
 ---
-title: Biblioteki Framework
+title: Biblioteki platformy
 description: Dowiedz się, jak dostarczać implementacje bibliotek dla wielu typów ogólnych i specyficznych dla aplikacji, algorytmów i funkcjonalności narzędzie.
 author: richlander
 ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615179"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425538"
 ---
-# <a name="framework-libraries"></a>Biblioteki Framework
+# <a name="framework-libraries"></a>Biblioteki platformy
 
 .NET zawiera szerokiej gamy standardowych bibliotek klas, określane jako bibliotek klas bazowych (podstawowy zestaw) lub biblioteki klas framework (kompletny zestaw). Te biblioteki zapewniają implementacje dla wielu typów ogólnych i specyficznych dla aplikacji, algorytmów i funkcjonalności narzędzie. Komercyjnych i społeczności biblioteki są oparte na bibliotek klas framework, zapewniając łatwy w użyciu standardowych bibliotek dla wielu różnych zadań wykonywanych w firmie.
 
@@ -28,11 +28,11 @@ BCL udostępnia najbardziej podstawowe typy i funkcje narzędzia i są podstawą
 .NET zawiera zestaw typów pierwotnych, które są używane (w różnym stopniu) we wszystkich programach. Te typy zawierać dane, takie jak liczby, ciągi, bajtów i dowolnych obiektów. C# Język zawiera słowa kluczowe dla tych typów. Przykładowy zestaw te typy są wymienione poniżej pod warunkiem za pomocą dopasowywania C# słów kluczowych.
 
 * <xref:System.Object?displayProperty=nameWithType> ([obiektu](../csharp/language-reference/keywords/object.md)) — system typów ultimate klasy podstawowej w środowisku CLR. Jest głównym hierarchii typów.
-* <xref:System.Int16?displayProperty=nameWithType> ([krótki](../csharp/language-reference/keywords/short.md))-16-bitowe podpisane typu Liczba całkowita. Niepodpisane <xref:System.UInt16> istnieje również.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md))-32-bitowe podpisane typu Liczba całkowita. Niepodpisane [UInt32](../csharp/language-reference/keywords/uint.md) istnieje również.
+* <xref:System.Int16?displayProperty=nameWithType> ([krótki](../csharp/language-reference/builtin-types/integral-numeric-types.md))-16-bitowe podpisane typu Liczba całkowita. Niepodpisane <xref:System.UInt16> istnieje również.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md))-32-bitowe podpisane typu Liczba całkowita. Niepodpisane [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) istnieje również.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) — typ zmiennoprzecinkowy 32-bitowych.
 * <xref:System.Decimal?displayProperty=nameWithType> ([dziesiętna](../csharp/language-reference/keywords/decimal.md))-128-bitowego typu dziesiętnego.
-* <xref:System.Byte?displayProperty=nameWithType> ([bajtów](../csharp/language-reference/keywords/byte.md))-8-bitowa liczba całkowita bez znaku reprezentuje bajtów pamięci.
+* <xref:System.Byte?displayProperty=nameWithType> ([bajtów](../csharp/language-reference/builtin-types/integral-numeric-types.md))-8-bitowa liczba całkowita bez znaku reprezentuje bajtów pamięci.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) — typu boolean, która reprezentuje `true` lub `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md))-16-bitowych typu liczbowego, który reprezentuje znak Unicode.
 * <xref:System.String?displayProperty=nameWithType> ([ciąg](../csharp/language-reference/keywords/string.md))-reprezentuje serię znaków. Różni się od `char[]`, ale umożliwia indeksowanie w poszczególnych osób `char` w `string`.

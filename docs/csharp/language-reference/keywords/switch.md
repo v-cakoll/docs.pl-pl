@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660609"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424124"
 ---
 # <a name="switch-c-reference"></a>Switch (odwołanie w C#)
 
@@ -46,7 +46,7 @@ W C# 6 i starszych wersjach, wyrażenie dopasowania musi być wyrażeniem, któr
 - [char](char.md).
 - [ciąg](string.md).
 - [bool](bool.md).
-- wartość całkowita, takich jak [int](int.md) lub [długie](long.md).
+- wartość całkowita, takich jak [int](../builtin-types/integral-numeric-types.md) lub [długie](../builtin-types/integral-numeric-types.md).
 - [wyliczenia](enum.md) wartość.
 
 Wyrażenie dopasowania, począwszy od języka C# 7.0, może być dowolnym wyrażeniem inną niż null.
@@ -121,7 +121,7 @@ Wzór stałej sprawdza, czy wyrażenie dopasowania jest równa określonej stał
 gdzie *stałej* jest wartością do testowania. *Stała* może być dowolną z następujących stałych wyrażeń:
 
 - A [bool](bool.md) literału, albo `true` lub `false`.
-- Dowolnego całkowitego stałych, takich jak [int](int.md), [długie](long.md), lub [bajt](byte.md).
+- Dowolnego całkowitego stałych, takich jak [int](../builtin-types/integral-numeric-types.md), [długie](../builtin-types/integral-numeric-types.md), lub [bajt](../builtin-types/integral-numeric-types.md).
 - Nazwa deklarowanej `const` zmiennej.
 - Stała wyliczenia.
 - A [char](char.md) literału.

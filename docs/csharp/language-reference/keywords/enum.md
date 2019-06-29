@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661805"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424240"
 ---
 # <a name="enum-c-reference"></a>enum (odwołanie w C#)
 
@@ -35,13 +35,12 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 W tym wyliczeniu sekwencję elementów jest zmuszony do uruchamiania z `1` zamiast `0`. Jednak zaleca się tym stałą, który ma wartość 0. Aby uzyskać więcej informacji, zobacz [Typy wyliczeniowe](../../programming-guide/enumeration-types.md).
 
-Każdy typ wyliczenia ma podstawowy typ, który może być dowolnego typu całkowitoliczbowego z wyjątkiem [char](char.md). Domyślny typ podstawowy wyliczenia elementów to [int](int.md). Aby zadeklarować wyliczenie innego typu całkowitego, takich jak [bajtów](byte.md), użyj dwukropka po identyfikatorze, a następnie według typu, jak pokazano w poniższym przykładzie.
+Każdy typ wyliczenia ma podstawowy typ, który może być dowolnym [typ liczbowy całkowity](../builtin-types/integral-numeric-types.md). [Char](char.md) typ nie może być podstawowym typem wyliczenia. Domyślny typ podstawowy wyliczenia elementów to [int](../builtin-types/integral-numeric-types.md). Aby zadeklarować wyliczenie innego typu całkowitego, takich jak [bajtów](../builtin-types/integral-numeric-types.md), użyj dwukropka po identyfikatorze, a następnie według typu, jak pokazano w poniższym przykładzie.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Zatwierdzone typy wyliczenia [bajtów](byte.md), [sbyte](sbyte.md), [krótki](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [długie](long.md), lub [ulong](ulong.md).
 
 Zmienna typu wyliczeniowego można przypisać dowolną wartość z zakresu typu podstawowego; wartości nie są ograniczone do nazwanych stałych.
 
@@ -50,7 +49,7 @@ Wartość domyślna `enum E` jest wartością produkowane przez wyrażenie `(E)0
 > [!NOTE]
 > Moduł wyliczający nie może zawierać biały znak w nazwie.
 
-Podstawowy typ Określa, ile pamięci masowej jest przydzielany dla każdego typu wyliczeniowego. Jednak jawnego rzutowania jest niezbędne do konwersji z `enum` typu na typ całkowitoliczbowy. Na przykład następująca instrukcja przypisuje modułu wyliczającego `Sun` do zmiennej typu [int](int.md) przy użyciu rzutowanie do konwersji z `enum` do `int`.
+Podstawowy typ Określa, ile pamięci masowej jest przydzielany dla każdego typu wyliczeniowego. Jednak jawnego rzutowania jest niezbędne do konwersji z `enum` typu na typ całkowitoliczbowy. Na przykład następująca instrukcja przypisuje modułu wyliczającego `Sun` do zmiennej typu [int](../builtin-types/integral-numeric-types.md) przy użyciu rzutowanie do konwersji z `enum` do `int`.
 
 ```csharp
 int x = (int)Day.Sun;
@@ -101,7 +100,7 @@ Jeśli usuniesz `Flags`, w przykładzie są wyświetlane następujące wartości
 - [Dokumentacja języka C#](../index.md)
 - [Typy wyliczeniowe](../../programming-guide/enumeration-types.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Tabela typów całkowitych](integral-types-table.md)
+- [Typy całkowite](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabela typów wbudowanych](built-in-types-table.md)
 - [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)
 - [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)

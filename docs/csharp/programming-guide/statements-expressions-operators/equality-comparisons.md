@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50b1cdb8b7e5087f1fd6669e7163e2c15e9b23bf
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710033"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423658"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Porównywanie równości (C# Programming Guide)
 
@@ -28,7 +28,7 @@ Czasami jest konieczne porównanie dwóch wartości dla równości. W niektóryc
 
 ## <a name="value-equality"></a>Równość wartości
 
- Równość wartości oznacza, że dwa obiekty zawierają tę samą wartość lub wartości. Dla podstawowych typów wartości takie jak [int](../../../csharp/language-reference/keywords/int.md) lub [bool](../../../csharp/language-reference/keywords/bool.md), testy na równoważność wartości są proste. Możesz użyć [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) operatora, jak pokazano w poniższym przykładzie.  
+ Równość wartości oznacza, że dwa obiekty zawierają tę samą wartość lub wartości. Dla podstawowych typów wartości takie jak [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) lub [bool](../../../csharp/language-reference/keywords/bool.md), testy na równoważność wartości są proste. Możesz użyć [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) operatora, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 int a = GetOriginalValue();  

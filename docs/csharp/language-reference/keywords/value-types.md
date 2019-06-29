@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: afefb1f7bebb66a915074e8f231e73962a1b0ab0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401445"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424030"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (C# odwołania)
 
@@ -40,11 +40,11 @@ Każdy typ wartości ma niejawnego konstruktora bez parametrów, która inicjuje
 
 *Typów prostych* zestaw wstępnie zdefiniowanych struktura typów dostarczonych przez C# i składają się następujące typy:
 
-- [Typy całkowite](integral-types-table.md): liczbowych typów całkowitych i [char](char.md) typu
+- [Typy całkowite](../builtin-types/integral-numeric-types.md): liczbowych typów całkowitych i [char](char.md) typu
 - [Typy zmiennoprzecinkowe](floating-point-types-table.md)
 - [bool](bool.md)
 
-Proste typy są identyfikowane za pomocą słów kluczowych, ale te słowa kluczowe są po prostu aliasami dla struktury wstępnie zdefiniowanych typów w pakietach <xref:System> przestrzeni nazw. Na przykład [int](int.md) jest aliasem <xref:System.Int32?displayProperty=nameWithType>. Aby uzyskać pełną listę aliasów, zobacz [Tabela typów wbudowanych](built-in-types-table.md).
+Proste typy są identyfikowane za pomocą słów kluczowych, ale te słowa kluczowe są po prostu aliasami dla struktury wstępnie zdefiniowanych typów w pakietach <xref:System> przestrzeni nazw. Na przykład [int](../builtin-types/integral-numeric-types.md) jest aliasem <xref:System.Int32?displayProperty=nameWithType>. Aby uzyskać pełną listę aliasów, zobacz [Tabela typów wbudowanych](built-in-types-table.md).
 
 Proste typy różnią się od innych typów struktury w sposób, aby umożliwić pewne dodatkowe operacje:
 

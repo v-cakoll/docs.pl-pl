@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ad01f9e4f5a8b1a153b1ef306e9d6168335eb3d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661935"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424308"
 ---
 # <a name="decimal-c-reference"></a>decimal (odwołanie w C#)
 
@@ -81,7 +81,7 @@ Wynikiem jest następujący błąd:
 
 `Operator '+' cannot be applied to operands of type 'double' and 'decimal'`
 
-W tym przykładzie `decimal` i [int](../../../csharp/language-reference/keywords/int.md) są używane razem w jednym wyrażeniu. Wynik daje w wyniku `decimal` typu.
+W tym przykładzie `decimal` i [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) są używane razem w jednym wyrażeniu. Wynik daje w wyniku `decimal` typu.
 
 [!code-csharp[csrefKeywordsTypes#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#6)]
 
@@ -101,7 +101,7 @@ W tym przykładzie dane wyjściowe są formatowane przy użyciu ciągu formatu w
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Typy całkowite](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -2,12 +2,12 @@
 title: Opis zmian stanu
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771623"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424776"
 ---
 # <a name="understanding-state-changes"></a>Opis zmian stanu
 W tym temacie omówiono Stany i przejścia, które mają kanały, typy używane do struktury stany kanału i sposobie ich implementacji.  
@@ -28,7 +28,7 @@ W tym temacie omówiono Stany i przejścia, które mają kanały, typy używane 
   
  Każdy <xref:System.ServiceModel.ICommunicationObject> rozpoczyna się w stanie Created. W tym stanie aplikacji można skonfigurować obiekt przez ustawienie jego właściwości. Gdy obiekt jest w stanie innym niż utworzony, jest uważany za niezmienialny.  
   
- ![Kanał transitition stanu](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Przejście stanu kanału](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Rysunek 1. Automatu stanów ICommunicationObject.  
   
  Windows Communication Foundation (WCF) zapewnia abstrakcyjna klasa bazowa o nazwie <xref:System.ServiceModel.Channels.CommunicationObject> implementującej <xref:System.ServiceModel.ICommunicationObject> i automatu stanów kanału. Poniższa ilustracja jest diagram stanu modyfikacji, które są specyficzne dla <xref:System.ServiceModel.Channels.CommunicationObject>. Oprócz <xref:System.ServiceModel.ICommunicationObject> automatu stanów pokazuje przybliżonego dodatkowe <xref:System.ServiceModel.Channels.CommunicationObject> metody są wywoływane.  
@@ -140,9 +140,9 @@ Zastąpienie metody OnAbort implementacji niestandardowych Zakończ logiki, taki
 |Utworzono|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Otwieranie|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Otwarte|Brak|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Zamykanie|Tak|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
+|Zamykanie|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Zamykanie|Nie|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Zamknięte|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> w przypadku, że obiekt został zamknięty przez poprzednie i jawne wywołanie przerwania. Jeśli możesz wywołać operację Close dla obiektu, a następnie <xref:System.ObjectDisposedException?displayProperty=nameWithType> zgłaszany.|  
+|Zamknięte|Tak|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> w przypadku, że obiekt został zamknięty przez poprzednie i jawne wywołanie przerwania. Jeśli możesz wywołać operację Close dla obiektu, a następnie <xref:System.ObjectDisposedException?displayProperty=nameWithType> zgłaszany.|  
 |Zamknięte|Nie|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Wystąpił błąd|Brak|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   

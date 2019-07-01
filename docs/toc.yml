@@ -194,6 +194,12 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: Co nowego w programie .NET Core 2.0
           href: core/whats-new/dotnet-core-2-0.md
+    - name: Zgodność aplikacji
+      items:
+        - name: Ocenianie zmian powodujących niezgodność
+          href: core/compatibility/index.md
+        - name: Kategorie zmian powodujących niezgodność
+          href: core/compatibility/categories.md
     - name: Samouczki
       href: core/tutorials/index.md
       items:
@@ -1363,7 +1369,7 @@
               href: visual-basic/language-reference/modifiers/notinheritable.md
             - name: NotOverridable
               href: visual-basic/language-reference/modifiers/notoverridable.md
-            - name: Optional
+            - name: Optional (Opcjonalność)
               href: visual-basic/language-reference/modifiers/optional.md
             - name: Out (modyfikator ogólny)
               href: visual-basic/language-reference/modifiers/out-generic-modifier.md

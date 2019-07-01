@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624162"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487271"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Instrukcje: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodzajów aplikacji:  
@@ -43,7 +43,7 @@ Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodza
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
   
-1. Aplikacja lub <xref:System.Windows.Forms.UserControl> będzie wymagać pełnego zaufania w celu uzyskania dostępu do zarządzanego kodu HTML DOM. Jeżeli wdrażasz aplikacji Windows Forms przy użyciu [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], możesz poprosić o pełnym zaufaniu przy użyciu zaufanego wdrożenia aplikacji lub podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications) Aby uzyskać szczegółowe informacje.  
+1. Aplikacja lub <xref:System.Windows.Forms.UserControl> będzie wymagać pełnego zaufania w celu uzyskania dostępu do zarządzanego kodu HTML DOM. Jeśli wdrażasz aplikację Windows Forms przy użyciu aplikacji ClickOnce, możesz poprosić o pełnego zaufania za pomocą podnoszenia poziomu uprawnień lub zaufanego wdrożenia aplikacji; zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications) Aby uzyskać szczegółowe informacje.  
   
 ## <a name="see-also"></a>Zobacz także
 

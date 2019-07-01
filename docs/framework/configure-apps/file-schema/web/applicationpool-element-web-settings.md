@@ -5,18 +5,18 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832722"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486722"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool >, Element (ustawienia sieci Web)
-Określa ustawienia konfiguracyjne, które są używane przez program ASP.NET do zarządzania zachowaniem całego procesu, gdy aplikacja ASP.NET działa w trybie zintegrowanym z [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszej.  
+Określa ustawienia konfiguracyjne, które są używane przez platformę ASP.NET do zarządzania zachowaniem całego procesu, gdy aplikacja ASP.NET działa w trybie zintegrowanym w usługach IIS 7.0 lub nowszej wersji.  
   
 > [!IMPORTANT]
->  Ten element i funkcja obsługuje działają tylko, jeśli Twoja aplikacja ASP.NET jest hostowana w [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszej wersji.  
+>  Ten element i funkcja obsługuje działają tylko w przypadku aplikacji ASP.NET znajduje się w usługach IIS 7.0 lub nowszy.  
   
  \<Konfiguracja >  
 \<System.Web >, Element (ustawienia sieci Web)  
@@ -52,12 +52,12 @@ Określa ustawienia konfiguracyjne, które są używane przez program ASP.NET do
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Zawiera informacje na temat współdziałania platformy ASP.NET z aplikacją hosta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po uruchomieniu [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub jego nowsza wersja w trybie zintegrowanym tej kombinacji elementu umożliwia skonfigurowanie, jak ASP.NET zarządza żądaniami wątków i kolejki, gdy aplikacja jest obsługiwana w puli aplikacji usług IIS. Jeśli uruchomienie usług IIS 6 lub uruchomiony [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] w trybie klasycznym lub trybu ISAPI, te ustawienia są ignorowane.  
+ Po uruchomieniu usług IIS 7.0 lub nowszym w trybie zintegrowanym tej kombinacji elementu umożliwia skonfigurowanie, jak ASP.NET zarządza żądaniami wątków i kolejki, gdy aplikacja jest obsługiwana w puli aplikacji usług IIS. Jeśli uruchamianie usług IIS 6 lub uruchom usługi IIS 7.0 w trybie klasycznym lub w trybie ISAPI, te ustawienia są ignorowane.  
   
  `applicationPool` Ustawienia mają zastosowanie do wszystkich pul aplikacji działających w określonej wersji programu .NET Framework. Ustawienia są zawarte w plikach aspnet.config. Dostępna jest wersja tego pliku dla wersji 2.0 i 4.0 programu .NET Framework. (W wersji 3.0 i 3.5 programu .NET Framework Udostępnij plik aspnet.config w wersji 2.0).  
   
 > [!IMPORTANT]
->  Jeśli uruchamiasz [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] na [!INCLUDE[win7](../../../../../includes/win7-md.md)], można skonfigurować plik aspnet.config osobne dla każdej puli aplikacji. Dzięki temu można dostosować wydajność wątków dla każdej puli aplikacji.  
+>  Po uruchomieniu usług IIS 7.0 na [!INCLUDE[win7](../../../../../includes/win7-md.md)], można skonfigurować plik aspnet.config osobne dla każdej puli aplikacji. Dzięki temu można dostosować wydajność wątków dla każdej puli aplikacji.  
   
  Aby uzyskać `maxConcurrentRequestsPerCPU` ustawienie domyślne ustawienie "5000" w programie .NET Framework 4 skutecznie wyłącza ograniczanie żądań, które są kontrolowane przez platformę ASP.NET, chyba że faktycznie mieć co najmniej 5000 żądań na CPU. Domyślne ustawienie zależy od zamiast puli wątków CLR automatycznie zarządzać współbieżności dla każdego procesora CPU. Aplikacji, które składają się zwiększone użycie asynchronicznego przetwarzania żądania lub wiele długotrwałych żądań, zablokowane na We/Wy, sieci będą mogli korzystać z zwiększenia domyślnego limitu w programie .NET Framework 4. Ustawienie `maxConcurrentRequestsPerCPU` na zero spowoduje wyłączenie korzystanie z zarządzanych wątków do przetwarzania żądań ASP.NET. Po uruchomieniu aplikacji w puli aplikacji usług IIS, żądań, pozostają w wątku usługi IIS operacji We/Wy i w związku z tym współbieżności jest ograniczany przez usługi IIS wątek ustawienia.  
   
@@ -66,9 +66,9 @@ Określa ustawienia konfiguracyjne, które są używane przez program ASP.NET do
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak skonfigurować zachowanie całego procesu ASP.NET w pliku konfigurację aspnet.config w następujących okolicznościach:  
   
-- Aplikacja jest obsługiwana w [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] puli aplikacji.  
+- Aplikacja jest obsługiwana w puli aplikacji usług IIS 7.0.  
   
-- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] działa w trybie zintegrowanym.  
+- Usługi IIS 7.0 jest uruchomiony w trybie zintegrowanym.  
   
 - Aplikacja używa .NET Framework 3.5 z dodatkiem SP1 lub nowszym.  
   

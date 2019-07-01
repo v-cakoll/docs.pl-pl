@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (Portal Page)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 21d6ddb4b793d2502b315888d79fb826741fed2e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307484"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487811"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Portal Page)
-[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] Umożliwia wykonywanie zapytań za pośrednictwem dowolnego obiektu wyliczalny w ADO.NET przy użyciu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] model programowania.  
+LINQ to ADO.NET umożliwia wykonywanie zapytań za pośrednictwem dowolnego obiektu wyliczalny w ADO.NET przy użyciu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] model programowania.  
   
 > [!NOTE]
->  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] Dokumentacja znajduje się w sekcji ADO.NET programu .NET Framework SDK: [LINQ i ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
+>  LINQ to ADO.NET dokumentacji znajduje się w sekcji ADO.NET programu .NET Framework SDK: [LINQ i ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
  Istnieją trzy osobne ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] technologii: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] zapewnia bardziej zaawansowane, zoptymalizowane zapytań <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] pozwala na bezpośrednie wyszukiwanie schematy bazy danych programu SQL Server, a [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] umożliwia zapytania modelu danych jednostki.  
   

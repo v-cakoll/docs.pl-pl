@@ -2,12 +2,12 @@
 title: Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402300"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486928"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne
 
@@ -103,7 +103,7 @@ Należy zawsze używać punktu końcowego względnych adresów dla punktów koń
 
 ### <a name="available-transports"></a>Dostępne transportu
 
-Usług WCF hostowanych w usługach IIS 5.1 i IIS 6.0 są ograniczone do komunikacji w opartych na protokole HTTP. Na tych platformach usług IIS konfigurowania usługi hostowanej, aby użyć powiązania protokołu HTTP powoduje wystąpienie błędu podczas aktywacji usługi. Aby uzyskać [!INCLUDE[iisver](../../../../includes/iisver-md.md)], obsługiwanych transportów obejmują HTTP, Net.TCP, Net.Pipe, Net.MSMQ i msmq.formatname dla zapewnienia zgodności z istniejącymi aplikacjami usługi MSMQ.
+Usług WCF hostowanych w usługach IIS 5.1 i IIS 6.0 są ograniczone do komunikacji w opartych na protokole HTTP. Na tych platformach usług IIS konfigurowania usługi hostowanej, aby użyć powiązania protokołu HTTP powoduje wystąpienie błędu podczas aktywacji usługi. Dla usług IIS 7.0 obsługiwanych transportów obejmują HTTP, Net.TCP, Net.Pipe, Net.MSMQ i msmq.formatname dla wstecznej zgodności z istniejącymi aplikacjami usługi MSMQ.
 
 ### <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
 

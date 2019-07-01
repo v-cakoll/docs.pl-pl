@@ -2,18 +2,18 @@
 title: Niezawodny dostawca wystawionych tokenów
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: b7f204fcb2c1b72a73e091ecf37c2921f7575516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bfe8f8bb8c3775760bc69031e338a156d690ab25
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650086"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487599"
 ---
 # <a name="durable-issued-token-provider"></a>Niezawodny dostawca wystawionych tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostawca wystawionych tokenów.  
   
 ## <a name="discussion"></a>Dyskusja  
- Dostawca tokenu w Windows Communication Foundation (WCF) umożliwia podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:  
+ Dostawca tokenu w Windows Communication Foundation (WCF) umożliwia podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z CardSpace dostawcę tokenów. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:  
   
 - Jeśli masz Magazyn poświadczeń, który wbudowanego dostawcy tokenu nie może działać z.  
   

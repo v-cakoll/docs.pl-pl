@@ -2,12 +2,12 @@
 title: Wyjątki modelu IdentityModel
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998520"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486667"
 ---
 # <a name="identitymodel-exceptions"></a>Wyjątki modelu IdentityModel
 Ten temat zawiera listę wszystkich wyjątków generowanych przez modelu IdentityModel.  
@@ -100,11 +100,11 @@ Ten temat zawiera listę wszystkich wyjątków generowanych przez modelu Identit
 |SAMLAssertionMissingMajorVersionAttributeOnRead|Brak elementu MajorVersion dla odczytywanego elementu SamlAssertion nie istnieje lub ma on długość 0.|  
 |SamlAttributeClaimRightShouldBePossessProperty|Ten konstruktor SamlAttribute wymaga, że prawo żądania ma wartość system.IdentityModel.Claims.Rights.PossessProperty.|  
 |AuthorizationPolicyEvaluated|Oceny zasad o określonym identyfikatorze.|  
-|SAMLUnableToLoadCondtions|\<SAML: conditions > nie można załadować elementu.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<SAML: conditions > nie można załadować elementu.|  
 |AESKeyLengthNotSupported|Klucz określonego usługi bits nie jest obsługiwany. Tylko 128, 192- i 256 klucz usługi bits jest obsługiwany.|  
 |UserNameCannotBeEmpty|Nazwa użytkownika nie może być pusta.|  
 |AlgorithmAndPublicKeyMisMatch|Określony algorytm i klucz publiczny nie są zgodne.|  
-|SAMLUnableToLoadCondtion|\<SAML: conditions > nie można załadować elementu.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<SAML: conditions > nie można załadować elementu.|  
 |SamlAssertionMissingSigningCredentials|Nie ustawiono elementu SigningCredentials w elemencie SamlAssertion. Element SamlAssertion musi być podpisany, ustaw prawidłowy element SigningCredentials w elemencie SamlAssertion, aby kontynuować.|  
 |SspiPayloadNotEncrypted|Dane binarne nie została zaszyfrowana za pomocą kontekstu zabezpieczeń SSPI.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|SamlAuthorizationDecisionStatement, który jest odczytywany nie zawiera żadnych SamlAction.|  

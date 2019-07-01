@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348470"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487261"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
 
@@ -21,7 +21,7 @@ Przed wydaniem programu .NET Framework cały kod uruchomiony na komputerze użyt
 
 .NET Framework wprowadza infrastruktura zabezpieczeń dostępu kodu, która umożliwia odróżnienie uprawnienia lub prawa, które kod ma z prawa, które użytkownik ma. Domyślnie kod pochodzący z sieci Internet, jak i intranetową można uruchamiać tylko w określane jako częściowej relacji zaufania. Częściowej relacji zaufania przedmioty aplikacji szereg ograniczeń: między innymi, aplikacja jest ograniczony dostęp do lokalnego dysku twardego i nie można uruchomić kod niezarządzany. .NET Framework określa zasoby, które kod może być dostępu na podstawie tożsamości ten kod: jego pochodzenie, czy ma [zestawy Strong-Named](../app-domains/strong-named-assemblies.md)na to, czy jest on podpisany za pomocą certyfikatu i tak dalej.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] technologii, która umożliwia wdrażanie aplikacji Windows Forms, pomaga ułatwiają tworzenie aplikacji działających w częściowej relacji zaufania, w trybie pełnego zaufania lub w częściowej relacji zaufania z podwyższonym poziomem uprawnień. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dostarcza funkcje takie jak podniesienie uprawnień i wdrażanie zaufanych aplikacji, dzięki czemu aplikacja poprosić pełnego zaufania lub z podwyższonym poziomem uprawnień użytkownika lokalnego w odpowiedzialny sposób.
+Technologii ClickOnce, która umożliwia wdrażanie aplikacji Windows Forms, pomaga ułatwiają tworzenie aplikacji działających w częściowej relacji zaufania, w trybie pełnego zaufania lub w częściowej relacji zaufania z podwyższonym poziomem uprawnień. ClickOnce dostarcza funkcje, takie jak podniesienie uprawnień i wdrażanie zaufanych aplikacji, więc aplikacja poprosić pełnego zaufania lub z podwyższonym poziomem uprawnień użytkownika lokalnego w odpowiedzialny sposób.
 
 ## <a name="understanding-security-in-the-net-framework"></a>Opis zabezpieczeń w programie .NET Framework
 
@@ -34,7 +34,7 @@ Jeśli użytkownik uruchomienia pliku wykonywalnego formularze Windows bezpośre
 >
 > Domyślne uprawnienia przyznane w każdym z tych zestawów uprawnień są wymienione w [domyślnych zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100)) tematu. W zależności od uprawnień, które aplikacja otrzyma jest działa poprawnie lub generuje wyjątek zabezpieczeń.
 >
-> Będzie można wdrożyć wiele aplikacji Windows Forms przy użyciu [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]. Narzędzia służące do generowania [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wdrożenia ma ustawienia domyślne zabezpieczeń inną niż co została omówiony wcześniej. Aby uzyskać więcej informacji zobacz następujące dyskusji.
+> Wiele aplikacji Windows Forms zostanie wdrożony przy użyciu aplikacji ClickOnce. Narzędzia służące do generowania wdrażania ClickOnce ma ustawienia domyślne zabezpieczeń inną niż co została omówiony wcześniej. Aby uzyskać więcej informacji zobacz następujące dyskusji.
 
 Rzeczywiste uprawnienia przyznane aplikacji może różnić się od wartości domyślnych, ponieważ zasady zabezpieczeń można zmodyfikować; to oznacza, że aplikacja może mieć uprawnień na jednym komputerze, ale nie na innym.
 
@@ -64,9 +64,9 @@ W poniższych tematach opisano dodatkowe funkcje zabezpieczeń Windows Forms.
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Wdrażanie aplikacji z odpowiednimi uprawnieniami
 
-Najbardziej typowe sposób wdrażania aplikacji Windows Forms, komputer kliencki jest [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], to technologia wdrażania, który opisuje wszystkie składniki Twoja aplikacja potrzebuje do uruchomienia. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] używa plików XML o nazwie manifesty do opisania zestawów i plików, wchodzące w skład aplikacji, a także uprawnienia aplikacji wymaga.
+To najbardziej typowe sposób wdrażania aplikacji Windows Forms do komputera klienckiego za pomocą technologii ClickOnce, to technologia wdrażania, która opisuje wszystkie składniki, które Twoja aplikacja potrzebuje do uruchomienia. Technologia ClickOnce używa plików XML o nazwie manifesty do opisania zestawów i plików, wchodzące w skład aplikacji, a także uprawnienia aplikacji wymaga.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ma dwie technologie do żądania z podwyższonym poziomem uprawnień na komputerze klienckim. Obie technologie opierają się na korzystanie z certyfikatów Authenticode. Certyfikaty w celu uzyskania niektóre pewności użytkowników, które aplikacja ma pochodzą z zaufanego źródła.
+ClickOnce ma dwie technologie do żądania z podwyższonym poziomem uprawnień na komputerze klienckim. Obie technologie opierają się na korzystanie z certyfikatów Authenticode. Certyfikaty w celu uzyskania niektóre pewności użytkowników, które aplikacja ma pochodzą z zaufanego źródła.
 
 W poniższej tabeli opisano te technologie.
 
@@ -77,9 +77,9 @@ W poniższej tabeli opisano te technologie.
 
 Możesz wybrać technologie będzie zależeć od środowiska wdrażania. Aby uzyskać więcej informacji, zobacz [Wybieranie strategii wdrażania ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Domyślnie [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplikacje wdrożone za pomocą programu Visual Studio lub narzędzi zestawu SDK programu .NET Framework (Mage.exe i MageUI.exe) są skonfigurowane do uruchomienia na komputerze klienckim, który ma pełne zaufanie. Jeśli aplikacja jest wdrażana za niektóre dodatkowe uprawnienia lub za pomocą częściowej relacji zaufania, należy zmienić to ustawienie domyślne. Można to zrobić za pomocą programu Visual Studio lub narzędzia .NET Framework SDK MageUI.exe podczas konfigurowania wdrożenia. Aby uzyskać więcej informacji na temat sposobu użycia programu MageUI.exe, zobacz Przewodnik po: Wdrażanie aplikacji ClickOnce z wiersza polecenia.  Zobacz też [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) lub [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Domyślnie ClickOnce aplikacje wdrożone za pomocą programu Visual Studio lub narzędzi zestawu SDK programu .NET Framework (Mage.exe i MageUI.exe) są skonfigurowane do uruchomienia na komputerze klienckim, który ma pełne zaufanie. Jeśli aplikacja jest wdrażana za niektóre dodatkowe uprawnienia lub za pomocą częściowej relacji zaufania, należy zmienić to ustawienie domyślne. Można to zrobić za pomocą programu Visual Studio lub narzędzia .NET Framework SDK MageUI.exe podczas konfigurowania wdrożenia. Aby uzyskać więcej informacji na temat sposobu użycia programu MageUI.exe, zobacz Przewodnik po: Wdrażanie aplikacji ClickOnce z wiersza polecenia.  Zobacz też [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) lub [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
-Aby uzyskać więcej informacji na temat zabezpieczeń aspektów [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] i podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Aby uzyskać więcej informacji na temat zaufanego wdrożenia aplikacji, zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).
+Aby dowiedzieć się więcej o aspekty zabezpieczeń technologii ClickOnce i podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Aby uzyskać więcej informacji na temat zaufanego wdrożenia aplikacji, zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Testowanie aplikacji
 

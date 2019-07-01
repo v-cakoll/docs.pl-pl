@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 9a02a912c170bfc4d997f1d8a0fe4f4d5bedb147
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a9864184e92c3c6bbcf6a613fd1092238181a93
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665809"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487302"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą pomieścić własnych unikatowych dokumentów HTML. Przy użyciu klatek można łatwo tworzyć strony HTML, w których statyczne, takie jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.  
@@ -36,7 +36,7 @@ Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą po
 ## <a name="frames-and-security"></a>Ramki i zabezpieczeń  
  Dostęp do ramki jest skomplikowane faktem, że zarządzany HTML DOM implementuje środkiem bezpieczeństwa, znane jako *między ramkami skryptów zabezpieczeń*. Jeśli dokument zawiera `FRAMESET` z co najmniej dwóch `FRAME`s w różnych domenach, te `FRAME`s nie mogą współdziałać ze sobą. Innymi słowy `FRAME` , wyświetla zawartość w witrynie sieci Web nie może uzyskać dostęp do informacji w `FRAME` obsługujący takich jak witryny innych firm `http://www.adatum.com/`. To są implementowane na poziomie <xref:System.Windows.Forms.HtmlWindow> klasy. Można uzyskać ogólne informacje na temat `FRAME` hostingu z innej witryny sieci Web, takich jak adres URL, ale będzie mógł uzyskać dostępu do jego <xref:System.Windows.Forms.HtmlWindow.Document%2A> lub zmienić rozmiar lub położenie jego hostingu `FRAME` lub `IFRAME`.  
   
- Ta reguła obowiązuje także w systemie windows, które można otworzyć za pomocą <xref:System.Windows.Forms.HtmlWindow.Open%2A> i <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> metody. Jeśli okno otwierania znajduje się w innej domenie niż strona hostowana w <xref:System.Windows.Forms.WebBrowser> control, nie będzie mógł przenieść to okno, lub przejrzyj jego zawartość. Ograniczenia te są wymuszane również, jeśli używasz <xref:System.Windows.Forms.WebBrowser> formantu, aby wyświetlić witrynę sieci Web, która różni się od witryny sieci Web, używane do wdrażania aplikacji opartej na formularzach Windows. Jeśli używasz [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] używać technologii wdrażania, aby zainstalować aplikację z witryny sieci Web A, a <xref:System.Windows.Forms.WebBrowser> Aby wyświetlić witrynę sieci Web B, nie będzie dostępu do witryny sieci Web użytkownika B danych.  
+ Ta reguła obowiązuje także w systemie windows, które można otworzyć za pomocą <xref:System.Windows.Forms.HtmlWindow.Open%2A> i <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> metody. Jeśli okno otwierania znajduje się w innej domenie niż strona hostowana w <xref:System.Windows.Forms.WebBrowser> control, nie będzie mógł przenieść to okno, lub przejrzyj jego zawartość. Ograniczenia te są wymuszane również, jeśli używasz <xref:System.Windows.Forms.WebBrowser> formantu, aby wyświetlić witrynę sieci Web, która różni się od witryny sieci Web, używane do wdrażania aplikacji opartej na formularzach Windows. Jeśli technologii wdrażania ClickOnce jest używany do instalowania aplikacji z witryny sieci Web A, a używasz <xref:System.Windows.Forms.WebBrowser> Aby wyświetlić witrynę sieci Web B, nie będzie dostępu do witryny sieci Web użytkownika B danych.  
   
 ## <a name="see-also"></a>Zobacz także
 

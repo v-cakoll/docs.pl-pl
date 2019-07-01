@@ -2,12 +2,12 @@
 title: Niestandardowy host usługi
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c2a1fc1b398a3a9efcd0c824ca041a790448dd3
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990668"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487643"
 ---
 # <a name="custom-service-host"></a>Niestandardowy host usługi
 W tym przykładzie przedstawiono sposób użycia niestandardowego utworów zależnych od <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania. Metoda ta umożliwia wielokrotnego użytku alternatywa konfigurowanie dużej liczby usług w typowy sposób. W przykładzie pokazano również sposób użycia <xref:System.ServiceModel.Activation.ServiceHostFactory> klasy, aby użyć niestandardowego elementu ServiceHost w środowisku hostingu usług Internet Information Services (IIS) lub Windows Process Activation Service (WAS).  
@@ -168,11 +168,11 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Po rozwiązaniu został utworzony, uruchom Setup.bat jest, aby skonfigurować aplikację ServiceModelSamples w [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Katalog ServiceModelSamples teraz powinny się wyświetlać jako [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplikacji.  
+3. Po rozwiązaniu została skompilowana, uruchom Setup.bat jest, aby skonfigurować aplikację ServiceModelSamples w usługach IIS 7.0. Katalog ServiceModelSamples teraz powinna zostać wyświetlona jako aplikację IIS 7.0.  
   
 4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5. Aby usunąć [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplikację, uruchom Cleanup.bat.  
+5. Aby usunąć aplikację usług IIS 7.0, uruchom Cleanup.bat.  
   
 ## <a name="see-also"></a>Zobacz także
 

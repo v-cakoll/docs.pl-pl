@@ -1,13 +1,13 @@
 ---
 title: Ciągi
 description: Dowiedz się, jak F# typu "string" reprezentuje niezmienny tekst jako sekwencja znaków Unicode.
-ms.date: 05/16/2016
-ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/28/2019
+ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642085"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487767"
 ---
 # <a name="strings"></a>Ciągi
 
@@ -29,7 +29,7 @@ Literały ciągów są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwro
 |Ukośnik odwrotny|`\\`|
 |Znak cudzysłowu|`\"`|
 |Apostrof|`\'`|
-|znak Unicode|`\uXXXX` lub `\UXXXX` (gdzie `X` wskazuje cyfra szesnastkowa)|
+|znak Unicode|`\uXXXX` (UTF-16) lub `\U00XXXXXX` (UTF-32) (gdzie `X` wskazuje cyfra szesnastkowa)|
 
 Jeśli poprzedzone symbolem @ literał jest ciąg verbatim. Oznacza to, że wszelkie sekwencje ucieczki są ignorowane, z tą różnicą, że dwa znaki cudzysłowu są interpretowane jako jeden znak cudzysłowu.
 

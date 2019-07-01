@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 4200918057a32d077dbc44f48057f8e886d87a44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624509"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487089"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Instrukcje: konfigurowanie poświadczeń usługi federacyjnej
 W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa się z następujących procedur głównego:  
@@ -28,7 +28,7 @@ W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa
   
 1. Użyj <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> właściwość <xref:System.ServiceModel.Description.ServiceCredentials> klasy, aby zwrócić odwołanie do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> wystąpienia. Właściwość jest dostępny z <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwość <xref:System.ServiceModel.ServiceHostBase> klasy.  
   
-2. Ustaw <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> właściwości `true` Jeśli samodzielnie wystawionych tokenów, takich jak [!INCLUDE[infocard](../../../../includes/infocard-md.md)] karty, to uwierzytelnianie. Wartość domyślna to `false`.  
+2. Ustaw <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> właściwość `true` przypadku własnym wystawionych tokenów, takich jak karty CardSpace uwierzytelnienia. Wartość domyślna to `false`.  
   
 3. Wypełnianie kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwość wystąpieniami <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy. Każde wystąpienie reprezentuje wystawcy, z której usługa uwierzytelnia tokenów.  
   
@@ -47,7 +47,7 @@ W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa
   
 1. Tworzenie `<issuedTokenAuthentication>` element jako element podrzędny <`serviceCredentials`> element.  
   
-2. Ustaw `allowUntrustedRsaIssuers` atrybutu `<issuedTokenAuthentication>` elementu `true` Jeśli uwierzytelnia własnym wystawiony token, taki jak [!INCLUDE[infocard](../../../../includes/infocard-md.md)] karty.  
+2. Ustaw `allowUntrustedRsaIssuers` atrybutu `<issuedTokenAuthentication>` elementu `true` Jeśli uwierzytelnia własnym wystawiony token, takie jak karty CardSpace.  
   
 3. Tworzenie `<knownCertificates>` element jako element podrzędny elementu `<issuedTokenAuthentication>` elementu.  
   

@@ -1,13 +1,13 @@
 ---
-title: Co to jestF#
+title: Co to jest F#
 description: Dowiedz się więcej o tym, co F# język programowania jest i co F# przypomina programowania. Więcej informacji na temat rozbudowane typy danych, funkcje i jak one współdziałają ze sobą.
 ms.date: 08/03/2018
-ms.openlocfilehash: 9d5b0de9828aa91857d3961bf7d40c02c344adaa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641571"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486832"
 ---
 # <a name="what-is-f"></a>Co to jest F\#
 
@@ -40,7 +40,7 @@ F#udostępnia wiele funkcji, w tym:
 * Lightweight — Składnia
 * Klasa Immutable domyślnie
 * Wnioskowanie o typie i automatyczna Generalizacja
-* Funkcje pierwszej klasy
+* Funkcje pierwszoklasowe
 * Typy danych zaawansowane
 * Dopasowanie do wzorca
 * Programowanie asynchroniczne
@@ -100,7 +100,7 @@ F#funkcje są również najwyższej jakości, co oznacza, mogą być przekazywan
 F#ma pełne wsparcie dla obiektów, które są typy danych przydatne, gdy potrzebujesz mieszania danych i funkcji. F#funkcje są używane do manipulowania obiektami.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
+type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided

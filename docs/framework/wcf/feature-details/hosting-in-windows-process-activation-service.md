@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402353"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486640"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
 Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Model procesów WAS stanowi uogólnienie modelu procesów usług IIS 6.0 serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF do użycia protokołów HTTP i protokołów innych niż HTTP, np. Net.TCP, w środowisku macierzystym, który obsługuje aktywację w oparciu o wiadomości i oferuje możliwość hostowania wielu aplikacji na danym komputerze.  
@@ -25,10 +25,7 @@ Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia
 - Konfiguracja aplikacji scentralizowane i zarządzanie.  
   
 - Umożliwia aplikacjom móc korzystać z modelu procesów usług IIS bez konieczności wdrażania śladu pełnej instalacji usług IIS.  
-  
- Aby uzyskać więcej informacji na temat funkcji WAS zobacz [IIS 7.0 Beta: Usługi IIS 7.0 w sieci Web administracji](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
-  
- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) współpracuje z [!INCLUDE[iisver](../../../../includes/iisver-md.md)] i Windows Process Activation Service (WAS) zapewnienie rozbudowanych aplikacji, środowisko dla usług NET4 WCF i WF hostingu. Te korzyści to m.in. Zarządzanie cyklem życia procesu, odtwarzanie procesów, dostawców usług hostingu, ochrona przed seriami błędów, oddzielanie procesu, aktywacji na żądanie i monitorowania kondycji. Aby uzyskać szczegółowe informacje, zobacz [funkcje hostingu programu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) i [pojęcia hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
+[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) współpracuje z usług IIS 7.0 i usługa Windows Process Activation Service (WAS) w celu zapewnienia zaawansowanych aplikacji, środowisko dla usług NET4 WCF i WF hostingu. Te korzyści to m.in. Zarządzanie cyklem życia procesu, odtwarzanie procesów, dostawców usług hostingu, ochrona przed seriami błędów, oddzielanie procesu, aktywacji na żądanie i monitorowania kondycji. Aby uzyskać szczegółowe informacje, zobacz [funkcje hostingu programu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) i [pojęcia hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>Elementy WAS adresowania modelu  
  Aplikacje mają adresy identyfikator (URI), które są jednostkami kod, którego okres istnienia i wykonywania środowisko są zarządzane przez serwer. Pojedyncze wystąpienie serwera WAS może być macierzystego do wielu różnych aplikacji. Serwery Organizuj aplikacje w grupy o nazwie *witryn*. W ramach lokacji aplikacje są rozmieszczone w hierarchiczny sposób, który odzwierciedla strukturę identyfikatory URI, które służą jako ich zewnętrzne adresy.  

@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (Portal Page)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: b21d19aaa0b470bd59acb59c84b0777d099e6274
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: ca6ea75aad1ecd2f4676b4a1a367428ea6c48cf9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307175"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486906"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Portal Page)
-[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] Umożliwia wykonywanie zapytań za pośrednictwem dowolnego obiektu wyliczalny w ADO.NET przy użyciu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] model programowania.  
+LINQ to ADO.NET umożliwia wykonywanie zapytań za pośrednictwem dowolnego obiektu wyliczalny w ADO.NET przy użyciu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] model programowania.  
   
 > [!NOTE]
->  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] Dokumentacja znajduje się w sekcji ADO.NET programu .NET Framework SDK: [LINQ i ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
+>  LINQ to ADO.NET dokumentacji znajduje się w sekcji ADO.NET programu .NET Framework SDK: [LINQ i ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  Istnieją trzy osobne ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] technologii: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] zapewnia bardziej zaawansowane, zoptymalizowane zapytań <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] pozwala na bezpośrednie wyszukiwanie schematy bazy danych programu SQL Server, a [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] umożliwia zapytania modelu danych jednostki.  
   

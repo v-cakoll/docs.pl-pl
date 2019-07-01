@@ -2,12 +2,12 @@
 title: Zachowania zabezpieczeń w programie WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 378edb6ddd7a66249a0c7548a3d9465475f670a8
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424677"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487751"
 ---
 # <a name="security-behaviors-in-wcf"></a>Zachowania zabezpieczeń w programie WCF
 W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachowanie w czasie wykonywania na poziomie usługi, lub na poziomie punktu końcowego. (Aby uzyskać więcej informacji na temat zachowań ogólnie rzecz biorąc, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Zachowania zabezpieczeń* umożliwić kontrolę nad poświadczeniami, uwierzytelniania, autoryzacji i dzienniki inspekcji. Można użyć zachowań, programowania lub za pośrednictwem konfiguracji. Ten temat koncentruje się na temat konfigurowania następujące zachowania związane z funkcjami zabezpieczeń:  
@@ -87,7 +87,7 @@ W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachow
  Aby uzyskać więcej informacji o używaniu ten element konfiguracji, zobacz [jak: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>Zezwalanie użytkownikom anonimowym CardSpace  
- Ustawienie `AllowUntrustedRsaIssuers` atrybutu `<IssuedTokenAuthentication>` elementu `true` jawnie umożliwia dowolnego klienta przedstawić token wystawiony samodzielnie podpisany przy użyciu dowolnego pary kluczy RSA. Wystawca ma *niezaufanych* ponieważ klucz nie zawiera wystawcy danych skojarzonych z nim. A [!INCLUDE[infocard](../../../../includes/infocard-md.md)] użytkownik może utworzyć własny wystawionego kartę, która zawiera własny podana oświadczeń tożsamości. Tej funkcji należy używać ostrożnie. Aby użyć tej funkcji, pomyśl o klucz publiczny RSA jako bardziej bezpiecznym hasłem, które mają być przechowywane w bazie danych wraz z nazwą użytkownika. Przed zezwoleniem na dostęp klienta do usługi, sprawdź klient przedstawiony klucz publiczny RSA, porównując go z kluczem publicznym przechowywanych dla nazwy użytkownika przedstawiony. Przy założeniu, że ustanowiono procesu rejestracji, według których użytkownicy mogą zarejestrować swoje nazwy użytkownika i skojarz je z własnym wystawiony klucze publiczne RSA.  
+ Ustawienie `AllowUntrustedRsaIssuers` atrybutu `<IssuedTokenAuthentication>` elementu `true` jawnie umożliwia dowolnego klienta przedstawić token wystawiony samodzielnie podpisany przy użyciu dowolnego pary kluczy RSA. Wystawca ma *niezaufanych* ponieważ klucz nie zawiera wystawcy danych skojarzonych z nim. Użytkownik CardSpace może utworzyć własny wystawionego kartę, która zawiera własny podana oświadczeń tożsamości. Tej funkcji należy używać ostrożnie. Aby użyć tej funkcji, pomyśl o klucz publiczny RSA jako bardziej bezpiecznym hasłem, które mają być przechowywane w bazie danych wraz z nazwą użytkownika. Przed zezwoleniem na dostęp klienta do usługi, sprawdź klient przedstawiony klucz publiczny RSA, porównując go z kluczem publicznym przechowywanych dla nazwy użytkownika przedstawiony. Przy założeniu, że ustanowiono procesu rejestracji, według których użytkownicy mogą zarejestrować swoje nazwy użytkownika i skojarz je z własnym wystawiony klucze publiczne RSA.  
   
 ## <a name="client-credentials"></a>Poświadczenia klienta  
  Poświadczenia klienta są używane do uwierzytelniania klienta do usługi w przypadkach, gdy jest wymagane uwierzytelnianie wzajemne. Aby określić certyfikaty usługi dla scenariuszy gdzie klienta należy zabezpieczyć komunikaty do usługi za pomocą certyfikatu usługi, można użyć sekcji.  

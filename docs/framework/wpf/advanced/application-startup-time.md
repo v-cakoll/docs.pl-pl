@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832699"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487187"
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
 Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegany wartość rzeczywista dla aplikacji Windows Presentation Foundation (WPF).  
@@ -65,7 +65,7 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
  Moduły Ngen i JIT może mieć wpływ najgorszy. Jest to spowodowane mscorjit.dll muszą zostać załadowane, a gdy kompilator JIT pracuje nad kodem, liczbę stron w obrazów Ngen muszą być dostępne, gdy kompilator JIT czyta metadane zestawów.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen i technologii ClickOnce  
- Sposób, którą chcesz wdrożyć aplikację można również ustawić różnica w czasie ładowania. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] wdrożenie aplikacji nie obsługuje polecenia Ngen. Jeśli zdecydujesz się użyć Ngen.exe dla aplikacji, należy użyć innego mechanizmu wdrażania, takich jak Instalator Windows.  
+ Sposób, którą chcesz wdrożyć aplikację można również ustawić różnica w czasie ładowania. Wdrażanie aplikacji ClickOnce nie obsługuje polecenia Ngen. Jeśli zdecydujesz się użyć Ngen.exe dla aplikacji, należy użyć innego mechanizmu wdrażania, takich jak Instalator Windows.  
   
  Aby uzyskać więcej informacji, zobacz [Ngen.exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -112,9 +112,9 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
  Jeśli musisz użyć <xref:System.Xml.Serialization.XmlSerializer> klasy, można osiągnąć lepszą wydajność w przypadku wstępnie wygenerować zestawu serializacji.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Konfigurowanie ClickOnce, aby sprawdzić aktualizacje po uruchomieniu  
- Jeśli aplikacja używa [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], unikaj dostępu do sieci podczas uruchamiania, konfigurując [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] do sprawdzenia lokacji wdrożenia aktualizacji po uruchomieniu aplikacji.  
+ Jeśli aplikacja korzysta z technologii ClickOnce, należy unikać dostępu do sieci podczas uruchamiania, konfigurując ClickOnce, aby sprawdzić lokacji wdrożenia aktualizacji po uruchomieniu aplikacji.  
   
- Jeśli używasz modelu (XBAP) aplikacji przeglądarki XAML, należy pamiętać, że [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] sprawdza lokacji wdrożenia aktualizacji, nawet jeśli jest już XBAP [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] pamięci podręcznej. Aby uzyskać więcej informacji, zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Jeśli używasz modelu (XBAP) aplikacji przeglądarki XAML, należy pamiętać o tym, ClickOnce sprawdza lokacji wdrożenia aktualizacji, nawet jeśli XBAP jest już w pamięci podręcznej funkcji ClickOnce. Aby uzyskać więcej informacji, zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Automatycznie skonfigurować usługę PresentationFontCache do ekranu startowego  
  Do uruchomienia po ponownym uruchomieniu pierwszej aplikacji WPF to usługa PresentationFontCache. Usługa przechowuje czcionki systemowe, zwiększa czcionki dostęp i zwiększa ogólną wydajność. Występuje obciążenie podczas uruchamiania usługi, a w niektórych środowiskach kontrolowanego, rozważ skonfigurowanie usługi do automatycznego uruchamiania, po ponownym rozruchu systemu.  

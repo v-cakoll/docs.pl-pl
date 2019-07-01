@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347986"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487791"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji Windows Forms, które działają lokalnie na komputerach użytkowników. Visual Studio umożliwia tworzenie aplikacji i interfejsu użytkownika przy użyciu Windows Forms. Aplikacja Windows Forms jest oparta na klasy z <xref:System.Windows.Forms> przestrzeni nazw.  
@@ -71,19 +71,19 @@ Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji W
 |Korzystanie z okna źródeł danych|[Przewodnik: Wyświetlanie danych w formularzu Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Wdrażanie aplikacji na komputerach klienckich  
- Napisana aplikacja trzeba wysłać ją do użytkowników, tak, aby zainstalować i uruchomić ją na komputerach klienckich. Za pomocą [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] technologii, można wdrażać aplikacje z poziomu programu Visual Studio za pomocą kilku kliknięć i udostępniać użytkownikom adres URL wskazujący aplikację w sieci Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] zarządza wszystkie elementy i zależności w aplikacji oraz zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
+ Napisana aplikacja trzeba wysłać ją do użytkowników, tak, aby zainstalować i uruchomić ją na komputerach klienckich. Przy użyciu technologii ClickOnce, można wdrażać aplikacje z poziomu programu Visual Studio za pomocą kilku kliknięć i udostępniać użytkownikom adres URL wskazujący aplikację w sieci Web. ClickOnce zarządza wszystkie elementy i zależności w aplikacji, a także zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] aplikacje mogą być skonfigurowane do uruchamiania tylko wtedy, gdy użytkownik jest połączony z siecią lub uruchomić zarówno w trybie online i offline. Po określeniu, czy aplikacja powinna obsługiwać operacji w trybie offline, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] dodaje łącze do aplikacji użytkownika **Start** menu, dzięki czemu użytkownik może go otwierać bez korzystania z adresu URL.  
+ Aplikacje ClickOnce może być skonfigurowany do uruchamiania tylko wtedy, gdy użytkownik jest połączony z siecią lub uruchomić zarówno w trybie online i offline. Po określeniu, czy aplikacja powinna obsługiwać operacji w trybie offline, ClickOnce dodaje łącze do aplikacji w użytkownika **Start** menu, dzięki czemu użytkownik może go otwierać bez korzystania z adresu URL.  
   
- Podczas aktualizacji aplikacji, możesz opublikować nowy manifest wdrożenia i nową kopię aplikacji na serwerze sieci Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] wykrywa, że nie jest dostępna aktualizacja i uaktualnień instalacji przez użytkownika; nie niestandardowych programów jest wymagany do zaktualizowania starej zestawów.  
+ Podczas aktualizacji aplikacji, możesz opublikować nowy manifest wdrożenia i nową kopię aplikacji na serwerze sieci Web. ClickOnce wykryje, że nie jest dostępna aktualizacja i uaktualnień instalacji przez użytkownika; nie niestandardowych programów jest wymagany do zaktualizowania starej zestawów.  
   
- Aby uzyskać pełne wprowadzenie do [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Aby uzyskać szczegółowe informacje na temat korzystania z tych funkcji zobacz poniższe tematy pomocy:  
+ Aby uzyskać pełne wprowadzenie do technologii ClickOnce, zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Aby uzyskać szczegółowe informacje na temat korzystania z tych funkcji zobacz poniższe tematy pomocy:  
   
 |Zadanie|Zobacz|  
 |--------|---------|  
-|Wdrażanie aplikacji za pomocą [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Instrukcje: Publikowanie aplikacji ClickOnce za pomocą Kreatora publikacji](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Przewodnik: Ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|Aktualizacja [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] wdrożenia|[Instrukcje: Zarządzanie aktualizacjami dla aplikacji ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Zarządzanie zabezpieczeniami za pomocą [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Instrukcje: Włączanie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Wdrażanie aplikacji za pomocą technologii ClickOnce|[Instrukcje: Publikowanie aplikacji ClickOnce za pomocą Kreatora publikacji](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Przewodnik: Ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Aktualizacja składników wdrożenia ClickOnce|[Instrukcje: Zarządzanie aktualizacjami dla aplikacji ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|Zarządzanie zabezpieczeniami za pomocą technologii ClickOnce|[Instrukcje: Włączanie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Inne formanty i funkcje  
  Istnieje wiele innych funkcji w formularzach Windows Forms, wchodzące Implementowanie typowych zadań, szybkie i łatwe, takie jak obsługa tworzenie okien dialogowych, drukowanie, dodając pomocy i dokumentacji i lokalizowanie aplikacji na wiele języków. Ponadto formularze Windows opiera się na niezawodne zabezpieczenia systemu .NET Framework, dzięki czemu można zwolnić bardziej bezpieczne aplikacje swoim klientom.  

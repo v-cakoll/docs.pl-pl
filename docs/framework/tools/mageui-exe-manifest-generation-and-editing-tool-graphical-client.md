@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f303583b1cff785ab0020e616fee58ef02a1c58
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920061"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487041"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)
 
@@ -50,7 +50,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
 |**Zaloguj się przy zapisywaniu**|Monituje o podpisanie pliku przy każdym zapisie modyfikacji.|  
-|**Użyj domyślnego certyfikatu podpisywania**|Używa klucza wprowadzonego w **plik certyfikatu** pole tekstowe do podpisania wszystkich plików. Eliminuje monit podpisywania, który zwykle pojawia się podczas zapisywania pliku i **Zaloguj się przy zapisywaniu** jest zaznaczone. Użyj wielokropka (**...** ) znajdujący się obok **plik certyfikatu** pole tekstowe, aby wybrać plik klucza.|  
+|**Użyj domyślnego certyfikatu podpisywania**|Używa klucza wprowadzonego w **plik certyfikatu** pole tekstowe do podpisania wszystkich plików. Eliminuje monit podpisywania, który zwykle pojawia się podczas zapisywania pliku i **Zaloguj się przy zapisywaniu** jest zaznaczone. Użyj wielokropka ( **...** ) znajdujący się obok **plik certyfikatu** pole tekstowe, aby wybrać plik klucza.|  
 |Algorytm porządkowania|Określa algorytm, za pomocą którego zostaną wygenerowane skróty zależności. Wartością musi być „sha256RSA” lub „sha1RSA”. Domyślną wartością jest SHA1. Używana zarówno w manifestach aplikacji, jak i wdrażania. Jeśli użytkownik poda certyfikat podczas zapisywania manifestu, używane są algorytmy w certyfikacie do wygenerowania rozkładów zależności.|  
   
 ## <a name="signing-options-dialog-box"></a>Okno dialogowe Opcje podpisywania  
@@ -63,7 +63,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Podpisz plikiem certyfikatu**|Podpisuje manifest certyfikatem cyfrowym przechowywanym w systemie plików.|  
 |**Plik**|Zapewnia miejsce do wpisania ścieżki do pliku pfx reprezentującego certyfikat.|  
 |**...**|Otwiera **wybierz plik** okno dialogowe wybierania istniejącego pliku pfx.|  
-|**Nowy**|Generuje nowy pfx niesprawdzalny przez urząd certyfikacji (CA). Aby uzyskać więcej informacji dotyczących typów certyfikatów używanych do podpisywania [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wdrożeń, zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).|  
+|**Nowy**|Generuje nowy pfx niesprawdzalny przez urząd certyfikacji (CA). Aby uzyskać więcej informacji na temat typów certyfikatów używanych do podpisywania wdrożeń technologii ClickOnce zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Hasło**|Miejsce na wpisanie hasła używanego do podpisywania tym certyfikatem. Jeśli nie ma to zastosowania, może być puste.|  
 |**Podpisz przechowywanym certyfikatem**|Wyświetla listę wyboru certyfikatów cyfrowych przechowywanych w magazynie certyfikatów na komputerze.|  
 |**TimeStamping URI**|Wyświetla identyfikator URI usługi sygnatur cyfrowych. Przypisanie do manifestu znacznika czasu zapobiega konieczności ponownego podpisania manifestu, jeśli certyfikat cyfrowy wygaśnie przed wdrożeniem następnej wersji aplikacji. Aby uzyskać więcej informacji, zobacz [Windows członkowie programu głównych certyfikatów](https://go.microsoft.com/fwlink/?LinkId=159000) i [ClickOnce i podpis Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
@@ -116,7 +116,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Katalog aplikacji**|Katalog, w którym znajdują się pliki aplikacji. Użyj wielokropka (**...** ) przycisk, aby wybrać katalog.|  
+|**Katalog aplikacji**|Katalog, w którym znajdują się pliki aplikacji. Użyj wielokropka ( **...** ) przycisk, aby wybrać katalog.|  
 |**Wypełnij**|Dodaje do manifestu aplikacji wszystkie pliki w katalogu aplikacji i podkatalogów. Jeśli MageUI.exe znajdzie jednego pliku wykonywalnego w katalogu, jego automatycznie oznacza to jako punkt wejścia, który jest wykonywany jako pierwszy, gdy aplikacja ClickOnce jest uruchamiana na komputerze klienckim.|  
 |**Pliki aplikacji**|Wyświetla listę wszystkich plików w aplikacji. Każdy plik ma trzy atrybuty można edytować, omówiono poniżej.|  
 |**Typ pliku**|Typ pliku może być jedną z czterech wartości:<br /><br /> -Brak.<br />-   Entry Point. Podstawowy plik wykonywalny aplikacji. Tylko jeden plik wykonywalny może zostać oznaczony jako punkt wejścia.<br />— Plik danych. Plik, taki jak plik XML, który dostarcza dane do aplikacji.<br />— Plik ikony. Ikony aplikacji, takich jak pojawia się na pulpicie lub w rogu okna aplikacji.|  
@@ -139,7 +139,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Nazwa**|Określa informacje identyfikacyjne dotyczące tego wdrożenia.|  
 |**Opis**|Określa wydawcę, produkt i pomocy technicznej informacji.|  
 |**Opcje wdrażania**|Określa dodatkowe informacje na temat wdrożenia, takie jak typ aplikacji i lokalizacja początkowa.|  
-|**Opcje aktualizacji**|Określa, jak często [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ma sprawdzać dostępność aktualizacji aplikacji.|  
+|**Opcje aktualizacji**|Określa, jak często technologia ClickOnce będzie sprawdzać aktualizacje aplikacji.|  
 |**Odwołanie do aplikacji**|Określa manifest aplikacji dla tego wdrożenia.|  
   
 ### <a name="name-tab"></a>Nazwa karty  
@@ -167,9 +167,9 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |----------------|-----------------|  
 |**Typ aplikacji**|Opcjonalna. Określa, czy ta aplikacja instaluje się na komputerze klienckim (**zainstalować lokalnie**), działa w trybie online (**tylko Online**), lub aplikacji WPF, która działa w przeglądarce (**przeglądarki WPF Aplikacja**). Wartość domyślna to **zainstalować lokalnie**.|  
 |**Lokalizacja początkowa**|Opcjonalna. Adres URL, z którego powinien rzeczywiście uruchomienia aplikacji. Przydatne podczas wdrażania aplikacji z dysku CD, który powinien automatycznie zaktualizowana z sieci Web.|  
-|**Obejmują lokalizacja początkowa (ProviderURL) w manifeście**|Opcjonalna. Określa adres URL, który [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] będzie szukać aktualizacji aplikacji.|  
-|**Automatycznie, uruchom aplikację po zainstalowaniu**|Wymagana. Określa, że [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplikacja powinna działać natychmiast po wstępnej instalacji z adresu URL. Wartość domyślna to, że pole wyboru jest zaznaczone.|  
-|**Zezwalaj na parametry adresu URL, które zostaną przekazane do aplikacji**|Wymagana. Umożliwia przekazanie danych parametru [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplikacji za pomocą ciągu zapytania, dołączone do adresu URL pliku manifestu wdrożenia. Wartość domyślna to, że pole wyboru jest wyczyszczone.|  
+|**Obejmują lokalizacja początkowa (ProviderURL) w manifeście**|Opcjonalna. Określa adres URL, pod którym technologia ClickOnce będzie szukać aktualizacji aplikacji.|  
+|**Automatycznie, uruchom aplikację po zainstalowaniu**|Wymagana. Określa, czy aplikacja ClickOnce uruchamiać natychmiast po wstępnej instalacji z adresu URL. Wartość domyślna to, że pole wyboru jest zaznaczone.|  
+|**Zezwalaj na parametry adresu URL, które zostaną przekazane do aplikacji**|Wymagana. Zezwala na transfer danych parametru w aplikacji ClickOnce za pomocą ciągu zapytania, dołączone do adresu URL pliku manifestu wdrożenia. Wartość domyślna to, że pole wyboru jest wyczyszczone.|  
 |**Rozszerzenie pliku .deploy**|Wymagana. Po wybraniu wszystkich plików w manifeście aplikacji musi mieć rozszerzenie .deploy. Wartość domyślna to, że pole wyboru jest wyczyszczone.|  
   
 ### <a name="update-options-tab"></a>Karta Opcje aktualizacji  
@@ -177,9 +177,9 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Ta aplikacja ma sprawdzać dostępność aktualizacji**|Określa, czy [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ma sprawdzać dostępność aktualizacji aplikacji. Jeśli to pole wyboru nie jest zaznaczone, aplikacja nie będzie sprawdzać dostępność aktualizacji, jeśli nie możesz zaktualizować programowo przy użyciu interfejsów API w <xref:System.Deployment.Application> przestrzeni nazw.|  
+|**Ta aplikacja ma sprawdzać dostępność aktualizacji**|Określa, czy technologia ClickOnce będzie sprawdzać aktualizacje aplikacji. Jeśli to pole wyboru nie jest zaznaczone, aplikacja nie będzie sprawdzać dostępność aktualizacji, jeśli nie możesz zaktualizować programowo przy użyciu interfejsów API w <xref:System.Deployment.Application> przestrzeni nazw.|  
 |**Wybierz, jeśli aplikacja ma sprawdzać dostępność aktualizacji**|Oferuje dwie opcje sprawdzania aktualizacji:<br /><br /> -   **Przed uruchomieniem aplikacji**. Sprawdzenie aktualizacji są wykonywane przed wykonywania aplikacji.<br />-   **Po uruchomieniu aplikacji**. Sprawdzenie aktualizacji rozpoczyna się po formularza głównego aplikacji została zainicjowana i uruchomi przy następnym uruchomieniu aplikacji.|  
-|**Częstotliwość sprawdzania aktualizacji**|Określa, jak często [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ma sprawdzać dostępność aktualizacji:<br /><br /> -   **Sprawdź za każdym razem, gdy aplikacja zostanie uruchomiona**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wykona sprawdzenie aktualizacji, za każdym razem, gdy użytkownik otwiera aplikację.<br />-   **Sprawdź, co**: Wybierz przedział czasu i jednostek (godzin, dni lub tygodni), który musi upłynąć przed sprawdzania dostępności aktualizacji.|  
+|**Częstotliwość sprawdzania aktualizacji**|Określa, jak często ClickOnce ma sprawdzać dostępność aktualizacji:<br /><br /> -   **Sprawdź za każdym razem, gdy aplikacja zostanie uruchomiona**. ClickOnce wykona sprawdzenie aktualizacji, za każdym razem, gdy użytkownik otwiera aplikację.<br />-   **Sprawdź, co**: Wybierz przedział czasu i jednostek (godzin, dni lub tygodni), który musi upłynąć przed sprawdzania dostępności aktualizacji.|  
 |**Określanie minimalnej wymaganej wersji tej aplikacji**|Opcjonalna. Określa wymaganą instalację, uniemożliwiając użytkownikom pracy przy użyciu starszej wersji określonej wersji aplikacji.|  
 |**Wersja**|Jeśli wymagane **określanie minimalnej wymaganej wersji tej aplikacji** pole wyboru jest zaznaczone. Podany numer wersji musi mieć postać *N.N.N.N*. Wymagany jest tylko pierwszy numer kompilacji głównych. Na przykład dla wersji 1.0 aplikacji prawidłowe wartości obejmuje `1`, `1.0`, `1.0.0`, i `1.0.0.0`.|  
   

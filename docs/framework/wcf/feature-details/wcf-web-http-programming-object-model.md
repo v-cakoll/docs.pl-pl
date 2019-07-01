@@ -2,12 +2,12 @@
 title: Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648407"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487692"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
 Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie usług Windows Communication Foundation (WCF) w sieci Web za pomocą podstawowego żądania HTTP bez protokołu SOAP. WCF WEB HTTP programowania modelu została stworzona na podstawie istniejącego modelu rozszerzalności programu WCF. Definiuje następujące klasy:  
@@ -97,7 +97,7 @@ Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie u
  WCF WEB HTTP programowania modelu nie korzysta z opartej na protokole SOAP wiadomości i dlatego nie obsługuje protokołu WS-* protokołów. Można jednak udostępnić ten sam kontrakt przez dwa różne punkt końcowy: ją przy użyciu protokołu SOAP, a inne nie przy użyciu protokołu SOAP. Zobacz [jak: Ujawnianie kontraktu klientom internetowym i SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) przykład.  
   
 ## <a name="security"></a>Zabezpieczenia  
- Ponieważ WCF WEB HTTP modelu programowania nie obsługuje protokołu WS-* protokołów, jedynym sposobem, aby zabezpieczyć usługi sieci Web oparta na sieci WEB HTTP modelu programowania programu WCF jest do udostępnienia usługi za pomocą protokołu SSL. Aby uzyskać więcej informacji o konfigurowaniu protokołu SSL za pomocą [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zobacz [Implementowanie protokołu SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Ponieważ WCF WEB HTTP modelu programowania nie obsługuje protokołu WS-* protokołów, jedynym sposobem, aby zabezpieczyć usługi sieci Web oparta na sieci WEB HTTP modelu programowania programu WCF jest do udostępnienia usługi za pomocą protokołu SSL. Aby uzyskać więcej informacji o konfigurowaniu protokołu SSL za pomocą usług IIS 7.0 zobacz [Implementowanie protokołu SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Zobacz także
 

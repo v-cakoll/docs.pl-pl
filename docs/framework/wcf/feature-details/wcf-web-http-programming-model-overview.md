@@ -2,12 +2,12 @@
 title: Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d4908eb75324d4316ea615d1a0acc286750752e7
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613044"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487717"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (WCF) udostępnia podstawowe elementy, które są wymagane do kompilowania usług HTTP w sieci WEB z programem WCF. Usługi WCF WEB HTTP można uzyskać dostęp przez największą liczbę potencjalnych klientów, w tym przeglądarki sieci Web i ma następujące wymagania:  
@@ -138,7 +138,7 @@ interface ICustomer
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] zapewnia obsługę dla danych JSON (technologia AJAX), a także zespolone kanały informacyjne (w tym ATOM i RSS). Aby uzyskać więcej informacji o tych funkcjach, zobacz [WCF Web HTTP formatowanie](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[omówienie syndykacji WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) i [JSON Obsługa integracji AJAX i](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>Model programowania protokołu HTTP sieci WEB WCF i zabezpieczenia  
- Ponieważ model programowania protokołu HTTP sieci WEB WCF nie obsługuje protokołu WS-* protokołów, jest jedynym sposobem, aby zabezpieczyć usługi WCF WEB HTTP, aby uwidocznić usługę przy użyciu protokołu HTTPS przy użyciu protokołu SSL. Aby uzyskać więcej informacji o konfigurowaniu protokołu SSL za pomocą [!INCLUDE[iisver](../../../../includes/iisver-md.md)], zobacz [Implementowanie protokołu SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Ponieważ model programowania protokołu HTTP sieci WEB WCF nie obsługuje protokołu WS-* protokołów, jest jedynym sposobem, aby zabezpieczyć usługi WCF WEB HTTP, aby uwidocznić usługę przy użyciu protokołu HTTPS przy użyciu protokołu SSL. Aby uzyskać więcej informacji na temat konfigurowania protokołu SSL za pomocą usług IIS 7.0, zobacz [Implementowanie protokołu SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Rozwiązywanie problemów z Model programowania protokołu HTTP sieci WEB WCF  
  Podczas wywoływania WCF WEB HTTP services przy użyciu <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> próba utworzenia kanału, <xref:System.ServiceModel.Description.WebHttpBehavior> używa <xref:System.ServiceModel.EndpointAddress> ustawione w pliku konfiguracji nawet jeśli inny <xref:System.ServiceModel.EndpointAddress> jest przekazywany do <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  

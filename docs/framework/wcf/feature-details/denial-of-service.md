@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423890"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486940"
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości lub są przetwarzane bardzo wolno.  
@@ -67,7 +67,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
  W rzadkich przypadkach, kiedy certyfikat X.509 zawiera wiele nazwy alternatywnej podmiotu i autoryzacji, za pomocą alternatywnej nazwy podmiotu, autoryzacja może zakończyć się niepowodzeniem.  
   
 ## <a name="protect-configuration-files-with-acls"></a>Ochrona plików konfiguracji przy użyciu list kontroli dostępu  
- Można określić wymaganych i opcjonalnych oświadczeń w kod i pliki konfiguracyjne dla [!INCLUDE[infocard](../../../../includes/infocard-md.md)] wystawionych tokenów. Skutkuje to odpowiednie elementy, które są emitowane w `RequestSecurityToken` wiadomości, które są wysyłane do zabezpieczenia tokenu usługi. Osoba atakująca można modyfikować kodu lub konfiguracji, aby usunąć wymaganego lub opcjonalnego roszczenia, potencjalnie wprowadzenie usługę tokenu zabezpieczającego, aby wystawić tokenu, który nie zezwala na dostęp do usługi docelowej.  
+ Możesz określić wymaganych i opcjonalnych oświadczeń w kod i pliki konfiguracyjne dla CardSpace wystawionych tokenów. Skutkuje to odpowiednie elementy, które są emitowane w `RequestSecurityToken` wiadomości, które są wysyłane do zabezpieczenia tokenu usługi. Osoba atakująca można modyfikować kodu lub konfiguracji, aby usunąć wymaganego lub opcjonalnego roszczenia, potencjalnie wprowadzenie usługę tokenu zabezpieczającego, aby wystawić tokenu, który nie zezwala na dostęp do usługi docelowej.  
   
  Aby uniknąć: Wymaga dostępu do komputera, zmodyfikuj plik konfiguracji. Użyj kontroli dostępu do pliku listy (kontroli dostępu ACL) do zabezpieczenia plików konfiguracyjnych. Usługi WCF wymaga kodu w katalogu aplikacji lub w globalnej pamięci podręcznej zanim umożliwi taki kod, aby go załadować z konfiguracji. Użyj listy ACL katalogu, aby zabezpieczyć katalogi.  
   

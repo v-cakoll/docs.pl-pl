@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047818"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487112"
 ---
 # <a name="how-to-create-a-federated-client"></a>Instrukcje: tworzenie klienta federacyjnego
 W Windows Communication Foundation (WCF), Tworzenie klienta dla *usługa federacyjna* składa się z trzech głównych kroków:  
@@ -39,7 +39,7 @@ W Windows Communication Foundation (WCF), Tworzenie klienta dla *usługa federac
   
 4. Sprawdź wszystkie dodatkowe [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) elementy wewnątrz skomentowanej się <`alternativeIssuedTokenParameters`> element. Podczas korzystania z narzędzia Svcutil.exe do generowania konfiguracji dla usługi federacyjnej, jeśli usługi federacyjnej lub dowolnej usługi tokenu zabezpieczeń pośrednich adres wystawcy nie jest określony, ale raczej Określ adres metadanych usługi tokenu zabezpieczającego, która udostępnia wiele punktów końcowych, wynikowy plik konfiguracji odnosi się do pierwszego punktu końcowego. Dodatkowe punkty końcowe są w pliku konfiguracyjnym jako zakomentowany <`alternativeIssuedTokenParameters`> elementy.  
   
-     Określić, czy jest to jeden z nich <`issuedTokenParameters`> jest już obecny w konfiguracji jednego. Na przykład klient lepszym rozwiązaniem może być uwierzytelniania usługi tokenów zabezpieczeń przy użyciu Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] tokenu zamiast pary nazwa/hasło użytkownika.  
+     Określić, czy jest to jeden z nich <`issuedTokenParameters`> jest już obecny w konfiguracji jednego. Na przykład klient lepszym rozwiązaniem może być uwierzytelniania usługi tokenów zabezpieczeń przy użyciu tokenu Windows CardSpace zamiast pary nazwa/hasło użytkownika.  
   
     > [!NOTE]
     >  Gdzie wielu usługach tokenów zabezpieczeń należy te typy można przemierzać przed komunikacji z usługą, jest możliwe dla usługi tokenu zabezpieczającego pośrednich, na do kierowania klienta do usługi tokenu zabezpieczającego niepoprawne. W związku z tym, upewnij się, że punkt końcowy usługi tokenu zabezpieczającego w [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) usługę tokenu zabezpieczającego oczekiwanego i nie nieznany usługę tokenu zabezpieczającego.  

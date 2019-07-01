@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: db7ca2690fc7b76d3e843a4ed51ef356890ab9eb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b1a0a07876e9cc111e8c5eef56f208d7bf2cb49f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402394"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487700"
 ---
 # <a name="hosting-services"></a>Usługi hostingowe
 Stanie się aktywna, usługa musi być hostowany w środowisku uruchomieniowym, tworzy go, która określa jego kontekstu i okresu istnienia. Usługi Windows Communication Foundation (WCF) są przeznaczone do uruchamiania w każdym procesie Windows obsługuje kodu zarządzanego.  
@@ -34,7 +34,7 @@ Stanie się aktywna, usługa musi być hostowany w środowisku uruchomieniowym, 
  Należy pamiętać, że usług hostowanych przez usługi IIS można używać tylko protokołu HTTP. Jego implementacji w usługach IIS 5.1 wprowadził pewne ograniczenia dotyczące [!INCLUDE[wxp](../../../includes/wxp-md.md)]. Aktywacja oparta na komunikatach udostępniane na potrzeby usługi WCF IIS 5.1 w [!INCLUDE[wxp](../../../includes/wxp-md.md)] blokuje wszystkie inne obsługiwanej samodzielnie usługi WCF na tym samym komputerze z przy użyciu portu 80 do komunikowania się. Usługi WCF mogą być uruchamiane w tym samym procesie puli/procesu roboczego elementu AppDomain/aplikacji, jak inne aplikacje, gdy hostowany przez usługi IIS 6.0 w [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Jednak ponieważ WCF i IIS 6.0 używa stosu protokołu HTTP (HTTP.sys) trybu jądra, innych samodzielnie hostowanej usługi WCF, które są uruchomione na tym samym komputerze, w odróżnieniu od usług IIS 5.1 usług IIS 6.0 mogą udostępniać portu 80.  
   
 #### <a name="windows-process-activation-service-was"></a>Usługa aktywacji procesów systemu Windows (WAS)  
- Usługa aktywacji procesów systemu Windows (WAS) jest nowy proces aktywacji mechanizm [!INCLUDE[lserver](../../../includes/lserver-md.md)] są również dostępne na [!INCLUDE[wv](../../../includes/wv-md.md)]. Zachowuje on znanego modelu procesów usług IIS 6.0 (pule aplikacji i aktywacja oparta na komunikatach procesu) i hosting funkcji (takich jak natychmiastową ochronę przed błędami, monitorowanie kondycji i odtwarzanie), ale usuwa zależność od protokołu HTTP z aktywacji Architektura. [!INCLUDE[iisver](../../../includes/iisver-md.md)] używa WAS, aby wykonać aktywację opartą na komunikat za pośrednictwem protokołu HTTP. Dodatkowe składniki programu WCF także podłączyć do WAS zapewnienie aktywacja oparta na komunikatach za pośrednictwem innych protokołów obsługiwanych przez usługi WCF, takich jak TCP, usługi MSMQ i nazwanych potoków. Dzięki temu, że aplikacje, które używają protokołów komunikacyjnych korzystanie z funkcji usług IIS jak odtwarzanie procesów, szybkie ochrony i wspólny system konfiguracji, które były tylko dostępne dla aplikacji opartych na protokole HTTP.  
+ Usługa aktywacji procesów systemu Windows (WAS) jest nowy proces aktywacji mechanizm [!INCLUDE[lserver](../../../includes/lserver-md.md)] są również dostępne na [!INCLUDE[wv](../../../includes/wv-md.md)]. Zachowuje on znanego modelu procesów usług IIS 6.0 (pule aplikacji i aktywacja oparta na komunikatach procesu) i hosting funkcji (takich jak natychmiastową ochronę przed błędami, monitorowanie kondycji i odtwarzanie), ale usuwa zależność od protokołu HTTP z aktywacji Architektura. Usługi IIS 7.0 używa WAS do wykonywania aktywacji oparta na komunikatach za pośrednictwem protokołu HTTP. Dodatkowe składniki programu WCF także podłączyć do WAS zapewnienie aktywacja oparta na komunikatach za pośrednictwem innych protokołów obsługiwanych przez usługi WCF, takich jak TCP, usługi MSMQ i nazwanych potoków. Dzięki temu, że aplikacje, które używają protokołów komunikacyjnych korzystanie z funkcji usług IIS jak odtwarzanie procesów, szybkie ochrony i wspólny system konfiguracji, które były tylko dostępne dla aplikacji opartych na protokole HTTP.  
   
  Ta opcja hostingu wymaga, który został skonfigurowany w sposób prawidłowo, ale nie wymaga pisania żadnego kodu hostingu jako część aplikacji. Aby uzyskać więcej informacji na temat sposobu konfigurowania został hostingu, zobacz [jak: Hostowanie usługi WCF w WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
@@ -56,7 +56,7 @@ Stanie się aktywna, usługa musi być hostowany w środowisku uruchomieniowym, 
 |Aplikacje zarządzane ("może być samodzielnie hostowane")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> NET.TCP,<br /><br /> NET.pipe,<br /><br /> net.msmq|Nie|  
 |Usługi Windows (znana wcześniej jako usługi NT)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> NET.TCP,<br /><br /> NET.pipe,<br /><br /> net.msmq|Nie|  
 |IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Tak|  
-|IIS 6,0|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Yes|  
+|IIS 6,0|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Tak|  
 |Usługa aktywacji procesów systemu Windows (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> NET.TCP,<br /><br /> NET.pipe,<br /><br /> net.msmq|Yes|  
   
  Należy zauważyć, że uruchomiona usługa lub dowolnego rozszerzenia z hosta niezaufanego naruszeń zabezpieczeń. Ponadto należy pamiętać, że podczas otwierania <xref:System.ServiceModel.ServiceHost> w ramach personifikacji, aplikacja musi zapewnić, że użytkownik nie zaloguje się off, na przykład, buforując <xref:System.Security.Principal.WindowsIdentity> użytkownika.  

@@ -2,12 +2,12 @@
 title: Zgodność platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01329769b74c8a5841b5a2024d3ed674c108be1c
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002667"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487669"
 ---
 # <a name="aspnet-compatibility"></a>Zgodność platformy ASP.NET
 Niniejszy przykład pokazuje, jak włączyć tryb zgodności ASP.NET w Windows Communication Foundation (WCF). Usługi działające w zgodność platformy ASP.NET, tryb uczestniczą w pełni potoku platformy ASP.NET w aplikacji i ułatwia korzystanie z funkcji programu ASP.NET, takich jak plik lub adres URL autoryzacji, stan sesji i <xref:System.Web.HttpContext> klasy. <xref:System.Web.HttpContext> Klasy zezwala na dostęp do plików cookie, sesje i inne funkcje platformy ASP.NET. Ten tryb wymaga powiązania użyj transportu HTTP i usługi muszą być hostowane w usługach IIS.  
@@ -123,7 +123,7 @@ Press <ENTER> to terminate client.
   
 2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Po rozwiązaniu został utworzony, uruchom Setup.bat jest, aby skonfigurować aplikację ServiceModelSamples w [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Katalog ServiceModelSamples teraz powinny się wyświetlać jako [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplikacji.  
+3. Po rozwiązaniu została skompilowana, uruchom Setup.bat jest, aby skonfigurować aplikację ServiceModelSamples w usługach IIS 7.0. Katalog ServiceModelSamples teraz powinna zostać wyświetlona jako aplikację IIS 7.0.  
   
 4. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

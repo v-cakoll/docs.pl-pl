@@ -2,15 +2,15 @@
 title: Dostawca tokenów
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: f4316e459666dd434da5ec77694d079d9ca5639f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3f56ed46507d68092268c3202cee6234fda7b42
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622946"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487469"
 ---
 # <a name="token-provider"></a>Dostawca tokenów
-Ten przykład demonstruje sposób implementacji niestandardowego dostawcy tokenów. Dostawca tokenu w Windows Communication Foundation (WCF) jest używany dla podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z domyślny dostawca tokenu Menedżera poświadczeń. Usługi WCF jest również dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:
+Ten przykład demonstruje sposób implementacji niestandardowego dostawcy tokenów. Dostawca tokenu w Windows Communication Foundation (WCF) jest używany dla podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z domyślny dostawca tokenu Menedżera poświadczeń. Usługi WCF jest również dostarczany z CardSpace dostawcę tokenów. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:
 
 - Jeśli masz Magazyn poświadczeń, który te dostawcy tokenów nie może działać z.
 
@@ -115,7 +115,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
 
      Aby wykonać to zadanie, pochodzi niestandardowego dostawcy tokenów <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy i zastąpień <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> metody. Ta metoda tworzy i zwraca nowy `UserNameSecurityToken`.
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
         // obtain username and password from the user using console window
@@ -132,7 +132,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> Służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla konkretnego <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> przekazanego do niej w `CreateSecurityTokenProvider` metody. Menedżer tokenów zabezpieczeń jest również używany do tworzenia wystawcy uwierzytelnienia tokenu i Serializator tokenów, ale te nie są objęte tego przykładu. W tym przykładzie Menedżer tokenów zabezpieczeń niestandardowe dziedziczy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy i zastąpień `CreateSecurityTokenProvider` żądana jest metoda do zwrócenia username niestandardowego dostawcy tokenów, jeśli przekazany wymagania tokenu wskazywać tego dostawcy nazwy użytkownika.
 
-    ```
+    ```csharp
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         MyUserNameClientCredentials myUserNameClientCredentials;
@@ -163,7 +163,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
 
      Klasa poświadczeń klienta jest używany do reprezentowania poświadczenia, które są skonfigurowane dla serwera proxy klienta i tworzy zabezpieczeń Menedżer tokenów, który jest używany do uzyskiwania wystawców uwierzytelnienia tokenu, dostawcy tokenów i tokenów serializatora.
 
-    ```
+    ```csharp
     public class MyUserNameClientCredentials : ClientCredentials
     {
         public MyUserNameClientCredentials()
@@ -188,7 +188,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
 
      Aby klientowi korzystanie z poświadczeń klienta niestandardowych przykład usuwa domyślną klasę poświadczeń klienta i dostarcza nową klasę poświadczeń klienta.
 
-    ```
+    ```csharp
     static void Main()
     {
         // ...
@@ -204,7 +204,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
 
  W usłudze, aby wyświetlić informacje o wywołującym, użyj <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> jak pokazano w poniższym przykładzie kodu. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> Zawiera oświadczenia informacje dotyczące bieżącego obiektu wywołującego.
 
-```
+```csharp
 static void DisplayIdentityInformation()
 {
     Console.WriteLine("\t\tSecurity context identity  :  {0}",

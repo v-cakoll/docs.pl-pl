@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626970"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486862"
 ---
 # <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
 Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na trzy główne obszary funkcjonalne: transfer zabezpieczeń, kontroli dostępu i inspekcji. Bezpieczeństwie transferu zapewnia integralność, poufności i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: zabezpieczenia, zabezpieczenia komunikatów transportu lub `TransportWithMessageCredential`.  
@@ -80,7 +80,7 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na tr
 |Windows|Umożliwia wymianę komunikatów SOAP występuje w kontekście uwierzytelnionych poświadczeń Windows. Używa mechanizmu negocjacji interfejsu SSPI, do wyboru protokołu Kerberos lub NTLM jako usługi uwierzytelniania.|  
 |Nazwa użytkownika|Umożliwia usłudze wymagają uwierzytelnienia klienta za pomocą poświadczenie nazwy użytkownika. Należy pamiętać, usługi WCF nie zezwala na wszystkie operacje kryptograficzne przy użyciu nazwy użytkownika, np. generowania podpisu i szyfrowania danych. W efekcie WCF wymusza, czy transport jest zabezpieczony przy użyciu poświadczeń nazwy użytkownika.|  
 |Certyfikat|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu.|  
-|[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą [!INCLUDE[infocard](../../../../includes/infocard-md.md)].|  
+|CardSpace|Umożliwia usłudze wymagają, za pomocą CardSpace uwierzytelnienia klienta.|  
   
 ### <a name="programming-credentials"></a>Programowanie poświadczeń  
  Dla każdego typu poświadczeń klienta model programowania WCF umożliwia określanie wartości poświadczeń i poświadczeń moduły weryfikacji za pomocą zachowań usługi i zachowania kanału.  

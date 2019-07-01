@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 1141bd8344887990ddd8646eba9d25c5d9a4287d
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960101"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487047"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF
 W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji procesów systemu Windows (znany także jako WAS) na [!INCLUDE[wv](../../../../includes/wv-md.md)] do hostowania usług Windows Communication Foundation (WCF) protokołów sieciowych usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano w krokach dla tej konfiguracji:  
@@ -34,7 +34,7 @@ W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji proces
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>Aby skonfigurować WAS do obsługi Aktywacja TCP  
   
-1. Aby zapewnić obsługę aktywacji net.tcp, domyślna witryna sieci Web musi zostać powiązana portów net.tcp. Można to zrobić za pomocą Appcmd.exe, który został zainstalowany przy użyciu [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zestaw narzędzi do zarządzania. W oknie wiersza polecenia uprawnień administratora uruchom następujące polecenie.  
+1. Aby zapewnić obsługę aktywacji net.tcp, domyślna witryna sieci Web musi zostać powiązana portów net.tcp. Można to zrobić przy użyciu Appcmd.exe, który jest instalowany z zestawem narzędzi zarządzania usług IIS 7.0. W oknie wiersza polecenia uprawnień administratora uruchom następujące polecenie.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  

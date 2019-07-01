@@ -2,12 +2,12 @@
 title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 925148c4bd084f843f125ab9e851a5404bbe4b89
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664819"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487554"
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 Niniejszy przykład pokazuje, jak hostować aplikacje w Windows Process Activation Service (WAS), które są odczytywane z kolejki komunikatów. W tym przykładzie użyto `netMsmqBinding` i opiera się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji hostowanej w sieci Web w języku klienta i jest samodzielnie hostowana w konsoli, aby obserwować stan zamówienia zakupu przesłane dane wyjściowe.  
@@ -215,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1. Upewnij się, że [!INCLUDE[iisver](../../../../includes/iisver-md.md)] jest zainstalowany, ponieważ jest on wymagany do aktywacji WAS.  
+1. Upewnij się, zainstalowanie usług IIS 7.0, ponieważ jest on wymagany do aktywacji WAS.  
   
 2. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ponadto należy zainstalować składniki Aktywacja bez HTTP programu WCF:  
   
@@ -249,7 +249,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Dla wygody poniższe kroki są implementowane w pliku wsadowym, o nazwie AddMsmqSiteBinding.cmd znajduje się w katalogu próbki.  
   
-    1. Aby zapewnić obsługę aktywacji net.msmq, domyślna witryna sieci Web musi zostać powiązana z protokołem net.msmq. Można to zrobić za pomocą appcmd.exe, który został zainstalowany przy użyciu [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zestaw narzędzi do zarządzania. Z wiersza polecenia o podniesionych uprawnień (administrator) uruchom następujące polecenie.  
+    1. Aby zapewnić obsługę aktywacji net.msmq, domyślna witryna sieci Web musi zostać powiązana z protokołem net.msmq. Można to zrobić za pomocą appcmd.exe, który jest instalowany z zestawem narzędzi zarządzania usług IIS 7.0. Z wiersza polecenia o podniesionych uprawnień (administrator) uruchom następujące polecenie.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

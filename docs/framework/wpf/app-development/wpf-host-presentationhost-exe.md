@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: cdd2b451324b1a0edd7aa76494da72623b8326ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 543076c3b00bf7946111df4c18d8c71928ce7ee2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591263"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487327"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Host WPF (PresentationHost.exe)
 Windows Presentation Foundation (WPF), hosta (PresentationHost.exe) to aplikacja, która umożliwia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje hostowane w przeglądarkach zgodne (w tym [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] lub nowszy). Domyślnie Windows Presentation Foundation (WPF), hosta jest zarejestrowany jako powłoki i [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] Obsługa obsługiwane w przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawartość, która obejmuje:  
@@ -41,7 +41,7 @@ Windows Presentation Foundation (WPF), hosta (PresentationHost.exe) to aplikacja
 |-debugSecurityZoneURL \<url>|Używane z [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] wartości, aby wskazać PresentationHost.exe, że aplikację można debugować tak, jakby jego zostały wdrożone z określonego [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]. Określa strefę wdrożenia i witrynę pochodzenia.|  
 |-embedding|Wymagane przez OLE. Jeśli `-event` lub `-debug` parametr jest określony, nie jest konieczne określić `-embedding` parametru, ponieważ ten parametr ma wartość wewnętrznie.|  
 |-Zdarzenie \<eventname >|Otwórz zdarzenie o tej nazwie, a wyda sygnał, gdy PresentationHost.exe jest inicjowany i gotowe do hostowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawartości. PresentationHost.exe przestaną obowiązywać w przypadku, gdy wystąpił błąd podczas otwierania zdarzenia, np. Jeśli go nie już istnieje.|  
-|-launchApplication \<adresu url >|Uruchamia autonomiczny [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] aplikacji z określonego adresu URL. [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] i są stosowane zasady zabezpieczeń WinINet dotyczących aplikacji platformy .NET.|  
+|-launchApplication \<adresu url >|Uruchamia samodzielnej aplikacji ClickOnce z określonego adresu URL. [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] i są stosowane zasady zabezpieczeń WinINet dotyczących aplikacji platformy .NET.|  
   
 ## <a name="scenarios"></a>Scenariusze  
   

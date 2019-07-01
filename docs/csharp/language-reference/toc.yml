@@ -214,14 +214,14 @@
                   href: keywords/using-statement.md
             - name: extern alias
               href: keywords/extern-alias.md
-        - name: Słowa kluczowe operatora
+        - name: Słowa kluczowe testowania typu
           items:
-            - name: as
-              href: keywords/as.md
-            - name: await
-              href: keywords/await.md
             - name: is
               href: keywords/is.md
+        - name: Słowa kluczowe operatora
+          items:
+            - name: await
+              href: keywords/await.md
             - name: new
               items:
                 - name: 'new, operator, modyfikator i ograniczenie'
@@ -234,8 +234,6 @@
                   href: keywords/new-constraint.md
             - name: sizeof
               href: keywords/sizeof.md
-            - name: typeof
-              href: keywords/typeof.md
             - name: nameof
               href: keywords/nameof.md
         - name: Słowa kluczowe konwersji
@@ -342,30 +340,34 @@
         - name: Operatory dostępu do elementów członkowskich
           href: operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+        - name: Operatory testowania typu i konwersji
+          href: operators/type-testing-and-conversion-operators.md
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
         - name: Operatory związane ze wskaźnikiem
           href: operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-        - name: '(), operator'
-          href: operators/invocation-operator.md
-        - name: '::, operator'
-          href: operators/namespace-alias-qualifer.md
+        - name: = — Operator
+          href: operators/assignment-operator.md
+          displayName: 'assignment, ref'
         - name: '+ and +=, operatory'
           href: operators/addition-operator.md
           displayName: 'string concatenation, delegate combination, event subscription'
         - name: '- i -=, operatory'
           href: operators/subtraction-operator.md
           displayName: 'delegate removal, event unsubscription'
-        - name: = — Operator
-          href: operators/assignment-operator.md
         - name: '?:, operator'
           href: operators/conditional-operator.md
-          displayName: 'conditional, ternary'
+          displayName: 'conditional, ternary, ref'
         - name: '?? operator'
           href: operators/null-coalescing-operator.md
           displayName: null-coalescing
         - name: '=>, operator'
           href: operators/lambda-operator.md
-        - name: stackalloc
+          displayName: lambda
+        - name: '::, operator'
+          href: operators/namespace-alias-qualifer.md
+          displayName: namespace alias qualifier
+        - name: 'stackalloc, operator'
           href: operators/stackalloc.md
         - name: 'true i false, operatory'
           href: operators/true-false-operators.md

@@ -80,6 +80,14 @@
   items:
     - name: Omówienie
       href: automl-overview.md
+    - name: Konstruktor modelu
+      items:
+        - name: Co to jest konstruktor modelu?
+          href: automate-training-with-model-builder.md
+        - name: Instalowanie konstruktora modelu
+          href: how-to-guides/install-model-builder.md
+        - name: Przewidywanie cen za pomocą konstruktora modelu
+          href: tutorials/predict-prices-with-model-builder.md
     - name: Interfejs wiersza polecenia struktury ML.NET
       items:
         - name: Instalowanie interfejsu wiersza polecenia

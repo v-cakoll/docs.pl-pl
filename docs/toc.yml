@@ -302,8 +302,9 @@
     - name: Omówienie zestawu .NET Core SDK
       href: core/sdk.md
     - name: Narzędzia interfejsu wiersza polecenia platformy .NET Core
-      href: core/tools/index.md
       items:
+        - name: Omówienie interfejsu wiersza polecenia platformy .NET Core
+          href: core/tools/index.md
         - name: Telemetria
           href: core/tools/telemetry.md
         - name: Narzędzia globalne
@@ -311,6 +312,8 @@
           items:
             - name: Tworzenie narzędzia globalnego
               href: core/tools/global-tools-how-to-create.md
+        - name: Podwyższony poziom dostępu
+          href: core/tools/elevated-access.md
         - name: Model rozszerzalności
           href: core/tools/extensibility.md
         - name: Ciągła integracja
@@ -530,8 +533,6 @@
                   href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
         - name: 'Eksplorowanie języka C# 6'
           href: csharp/tutorials/exploration/csharp-6.yml
-        - name: 'Eksplorowanie języka C# 7.0'
-          href: csharp/tutorials/exploration/csharp-7.yml
         - name: Eksplorowanie interpolacji ciągów — interakcyjne
           href: csharp/tutorials/exploration/interpolated-strings.yml
         - name: Eksplorowanie interpolacji ciągów — w Twoim środowisku

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063723"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505815"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Instrukcje: Stosowanie macierzy kolorów do transformacji pojedynczego koloru
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowania obrazami. <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów przechowywać kolor każdego piksela jako wartość liczby 32-bitowej: 8 bitów na każdy czerwony, zielony, niebieski i alfa. Każdy z czterech składników jest liczba z przedziału od 0 do 255, od 0, reprezentujących natężenie i 255 reprezentujący pełnej intensywności. Składnik alfa określa Przezroczystość koloru: 0 jest w pełni przezroczyste, a 255 jest całkowicie nieprzezroczyste.  
+GDI + zapewnia <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowania obrazami. <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów przechowywać kolor każdego piksela jako wartość liczby 32-bitowej: 8 bitów na każdy czerwony, zielony, niebieski i alfa. Każdy z czterech składników jest liczba z przedziału od 0 do 255, od 0, reprezentujących natężenie i 255 reprezentujący pełnej intensywności. Składnik alfa określa Przezroczystość koloru: 0 jest w pełni przezroczyste, a 255 jest całkowicie nieprzezroczyste.  
   
  Wektor kolorów jest 4-krotka formularza (czerwony, zielony, niebieski, alfa). Na przykład wektor kolorów (0, 255, 0, 255) reprezentuje nieprzezroczyste kolor, który nie ma czerwony lub niebieski, ale ma kolor zielony w pełnej intensywności.  
   
- Inną konwencję reprezentująca kolorów używa numer 1 do pełnej intensywności. Przy użyciu Konwencji, kolor, który został opisany w poprzednim akapicie jest przedstawiany przez vector (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa konwencji 1 jako pełnej intensywności, podczas wykonywania przekształcenia kolorów.  
+ Inną konwencję reprezentująca kolorów używa numer 1 do pełnej intensywności. Przy użyciu Konwencji, kolor, który został opisany w poprzednim akapicie jest przedstawiany przez vector (0, 1, 0, 1). GDI + jest używana konwencja 1 jako pełnej intensywności, gdy wykonuje transformacji kolorów.  
   
  Linear — przekształcenia (obrotu, skalowanie i podobne) można stosować do wektorów kolorów, poprzez pomnożenie wektorów kolorów w macierzy 4 x 4. Jednak nie można używać macierzy 4 x 4, aby wykonać tłumaczenie (nieliniowych). Jeśli dodasz fikcyjnego współrzędnych piąty (na przykład numer 1) do każdego wektorów kolor, można użyć macierzy 5 × 5 można zastosować dowolną kombinację linear — przekształcenia i tłumaczenia. Przekształcenie składający się z liniowego transformacji, następuje tłumaczenia jest wywoływana affine — przekształcenia.  
   

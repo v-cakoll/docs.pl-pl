@@ -9,18 +9,18 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: f46c24b699aa49db2bc4b8467ce96a125602acec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df54289722cf12bad840722c6eafdaa43279a5dc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645747"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504583"
 ---
 # <a name="metafiles-in-gdi"></a>Metapliki w GDI+
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia <xref:System.Drawing.Imaging.Metafile> klasy, dzięki czemu mogą rejestrować i wyświetlanie metaplików. Metaplik, nazywany również obrazem wektora jest obraz, który jest przechowywany jako sekwencja rysowania poleceń i ustawień. Polecenia i ustawienia są rejestrowane w <xref:System.Drawing.Imaging.Metafile> obiektu, które mogą być przechowywane w pamięci lub zapisany do pliku lub strumienia.  
+GDI + zapewnia <xref:System.Drawing.Imaging.Metafile> klasy, dzięki czemu mogą rejestrować i wyświetlanie metaplików. Metaplik, nazywany również obrazem wektora jest obraz, który jest przechowywany jako sekwencja rysowania poleceń i ustawień. Polecenia i ustawienia są rejestrowane w <xref:System.Drawing.Imaging.Metafile> obiektu, które mogą być przechowywane w pamięci lub zapisany do pliku lub strumienia.  
   
 ## <a name="metafile-formats"></a>Formaty metaplików  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można wyświetlić metapliki, które były przechowywane w następujących formatach:  
+ GDI + można wyświetlić metapliki, które były przechowywane w następujących formatach:  
   
 - Windows metaplików (WMF)  
   
@@ -28,9 +28,9 @@ ms.locfileid: "64645747"
   
 - EMF+  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można rejestrować metapliki format EMF i EMF +, ale nie w formacie programu WMF.  
+ GDI + można rejestrować metapliki format EMF i EMF +, ale nie w formacie programu WMF.  
   
- EMF + jest rozszerzeniem EMF, która umożliwia [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] rekordy, które mają być przechowywane. Istnieją dwie odmiany format EMF +: EMF + tylko i EMF + dwa porty. Metapliki EMF + tylko zawierają tylko [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] rekordów. Metapliki takie mogą być wyświetlane przez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , ale nie za [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]. Metapliki EMF + podwójne zawiera [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] i [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] rekordów. Każdy [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] rekordów w podwójne EMF + metaplik jest powiązany z alternatywnego [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] rekordu. Metapliki takie mogą być wyświetlane przez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] lub [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ EMF + jest rozszerzeniem EMF umożliwiająca GDI + rekordy mają być przechowywane. Istnieją dwie odmiany format EMF +: EMF + tylko i EMF + dwa porty. Metapliki EMF + tylko zawierać tylko rekordy GDI +. Metapliki takie mogą być wyświetlane w GDI +, ale nie GDI. Metapliki EMF + podwójnego zawiera rekordy GDI + i GDI. Każdy rekord GDI + w metaplik EMF + podwójnego jest powiązany z alternatywny rekord GDI. Metapliki takie mogą być wyświetlane w GDI + lub GDI.  
   
  Poniższy przykład wyświetla metaplik, który został wcześniej zapisany jako plik. Metaplik jest wyświetlany z jego lewego górnego rogu w (100, 100).  
   

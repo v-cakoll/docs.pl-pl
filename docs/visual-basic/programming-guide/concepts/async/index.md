@@ -2,12 +2,12 @@
 title: Programowanie asynchroniczne z Async i Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 030ef4549bc820cab66d33fa81c205158c09fff9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026098"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505955"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programowanie asynchroniczne z Async i Await (Visual Basic)
 
@@ -39,7 +39,7 @@ Podejście async oferuje również odpowiednik automatycznego przejścia do list
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Metody asynchroniczne są łatwiejsze do zapisu
 
-[Async](../../../../visual-basic/language-reference/modifiers/async.md) i [Await](../../../../visual-basic/language-reference/modifiers/async.md) słowa kluczowe w języku Visual Basic to samo jądro programowania asynchronicznego. Za pomocą tych dwóch słów kluczowych, można użyć zasobów .NET Framework lub środowiska wykonawczego Windows, do tworzenia metody asynchronicznej niemal jako prosty jak przy tworzeniu metody synchronicznej. Metody asynchroniczne definiowane za pomocą `Async` i `Await` są określane jako metody async.
+[Async](../../../../visual-basic/language-reference/modifiers/async.md) i [Await](../../../../visual-basic/language-reference/operators/await-operator.md) słowa kluczowe w języku Visual Basic to samo jądro programowania asynchronicznego. Za pomocą tych dwóch słów kluczowych, można użyć zasobów .NET Framework lub środowiska wykonawczego Windows, do tworzenia metody asynchronicznej niemal jako prosty jak przy tworzeniu metody synchronicznej. Metody asynchroniczne definiowane za pomocą `Async` i `Await` są określane jako metody async.
 
 W poniższym przykładzie przedstawiono metodę async. Prawie wszystko w kodzie powinno wyglądać znajomo. Komentarze wywołują funkcje dodawane przez użytkownika w celu uzyskania asynchroniczności.
 

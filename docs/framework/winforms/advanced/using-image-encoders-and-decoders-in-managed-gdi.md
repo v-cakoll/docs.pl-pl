@@ -5,17 +5,17 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: e56bc20eb55d694d19b25d9e94e5c9d9e3952628
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8cd66f3ce3da462867da9e23c38b3f6d877c058c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666449"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505088"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Używanie kodeków obrazu w zarządzanym GDI+
-<xref:System.Drawing> Przestrzeń nazw zawiera <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowania obrazami. Za pomocą kodeków obrazu w [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], można napisać obrazów z pamięci na dysk. Za pomocą dekodery obrazów w [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], możesz załadować obrazy z dysku do pamięci. Koder przekształca dane w <xref:System.Drawing.Image> lub <xref:System.Drawing.Bitmap> obiekt do formatu pliku wyznaczonym dysku. Dekoder przekształca dane w pliku dysku do formatu wymaganego przez <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów.  
+<xref:System.Drawing> Przestrzeń nazw zawiera <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowania obrazami. Za pomocą kodery obrazów w GDI +, można napisać obrazów z pamięci na dysk. Za pomocą dekodery obrazów w GDI +, należy załadować obrazy z dysku do pamięci. Koder przekształca dane w <xref:System.Drawing.Image> lub <xref:System.Drawing.Bitmap> obiekt do formatu pliku wyznaczonym dysku. Dekoder przekształca dane w pliku dysku do formatu wymaganego przez <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zawiera wbudowane kodeków, które obsługują następujące typy plików:  
+ GDI + ma wbudowane kodeków, które obsługują następujące typy plików:  
   
 - BMP  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64666449"
   
 - TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ma również wbudowane dekoderów, które obsługują następujące typy plików:  
+ GDI + ma również wbudowane dekoderów, które obsługują następujące typy plików:  
   
 - WMF  
   

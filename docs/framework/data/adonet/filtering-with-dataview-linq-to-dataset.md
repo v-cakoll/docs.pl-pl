@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1af8863dd22b5ebb3a2c87009b9c51d5ec25bb89
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645692"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504841"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrowanie za pomocą widoku danych (LINQ to DataSet)
 Możliwość filtrowania danych przy użyciu określonych kryteriów, a następnie prezentować dane do klienta za pomocą kontrolki interfejsu użytkownika jest istotnym elementem powiązanie danych. <xref:System.Data.DataView> oferuje kilka sposobów, aby filtrować dane i zwracanie podzbiorów danych wiersze spełniające kryteria filtru określonego. Oprócz parametrów na podstawie funkcji filtrowania <xref:System.Data.DataView> udostępnia również możliwość używania [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażeń do kryteriów filtrowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia pozwalają znacznie bardziej złożone i zaawansowane operacje filtrowania niż filtrowania opartego na ciąg.  
   
  Istnieją dwa sposoby, aby odfiltrować dane przy użyciu <xref:System.Data.DataView>:  
   
-- Tworzenie <xref:System.Data.DataView> z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania, w której klauzula.  
+- Utwórz <xref:System.Data.DataView> w zapytaniu składnika LINQ to DataSet, w której klauzula.  
   
 - Korzystając z istniejących, oparte na ciągach filtrowania możliwości <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Tworzenie widoku danych zapytania z informacjami filtrowania  
- A <xref:System.Data.DataView> obiektu można tworzyć na podstawie [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania. Jeśli kwerenda zawiera `Where` klauzuli <xref:System.Data.DataView> są tworzone za pomocą filtrowania informacji z zapytania. Wyrażenie w `Where` jest używana do określenia, które wiersze danych, które zostaną uwzględnione w <xref:System.Data.DataView>, i jest podstawą dla filtru.  
+ Element <xref:System.Data.DataView> obiektu można tworzyć na podstawie LINQ do kwerendy zestawu danych. Jeśli kwerenda zawiera `Where` klauzuli <xref:System.Data.DataView> są tworzone za pomocą filtrowania informacji z zapytania. Wyrażenie w `Where` jest używana do określenia, które wiersze danych, które zostaną uwzględnione w <xref:System.Data.DataView>, i jest podstawą dla filtru.  
   
  Filtry oparte na wyrażeniach oferują lepszą i bardziej złożone filtrowanie niż prostsze filtry oparte na ciąg. Filtry oparte na ciągach i oparte na wyrażeniach wzajemnie się wykluczają. Gdy opartego na ciągach <xref:System.Data.DataView.RowFilter%2A> jest ustawiany po <xref:System.Data.DataView> jest tworzona na podstawie zapytania, wyrażenie filtru zależności wywnioskowane z kwerendy jest wyczyszczone.  
   
@@ -59,14 +59,14 @@ Możliwość filtrowania danych przy użyciu określonych kryteriów, a następn
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>Przy użyciu właściwości RowFilter  
- Istniejące oparte na ciągach filtrowania funkcjonalność <xref:System.Data.DataView> nadal działa w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kontekstu. Aby uzyskać więcej informacji na temat oparte na ciągach <xref:System.Data.DataView.RowFilter%2A> filtrowania, zobacz [sortowanie i filtrowanie danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Istniejące oparte na ciągach filtrowania funkcjonalność <xref:System.Data.DataView> nadal działa w składniku LINQ to DataSet kontekstu. Aby uzyskać więcej informacji na temat oparte na ciągach <xref:System.Data.DataView.RowFilter%2A> filtrowania, zobacz [sortowanie i filtrowanie danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
  Poniższy przykład tworzy <xref:System.Data.DataView> z tabeli Kontakt, a następnie ustawia <xref:System.Data.DataView.RowFilter%2A> właściwość zwraca wiersze, których nazwisko kontaktu jest "Zhu":  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- Po <xref:System.Data.DataView> została utworzona na podstawie <xref:System.Data.DataTable> lub [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania, można użyć <xref:System.Data.DataView.RowFilter%2A> właściwości w celu określenia podzbiór wierszy na podstawie ich wartości w kolumnach. Filtry oparte na ciągach i oparte na wyrażeniach wzajemnie się wykluczają. Ustawienie <xref:System.Data.DataView.RowFilter%2A> właściwość spowoduje wyczyszczenie wyrażenie filtru, na podstawie wywnioskować [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytań i wyrażenia filtru nie może być resetowany.  
+ Po <xref:System.Data.DataView> została utworzona na podstawie <xref:System.Data.DataTable> zapytaniu składnika LINQ to DataSet, możesz też <xref:System.Data.DataView.RowFilter%2A> właściwości w celu określenia podzbiór wierszy na podstawie ich wartości w kolumnach. Filtry oparte na ciągach i oparte na wyrażeniach wzajemnie się wykluczają. Ustawienie <xref:System.Data.DataView.RowFilter%2A> właściwość spowoduje wyczyszczenie wyrażenie filtru, wnioskowany z LINQ do zestawu danych zapytania i wyrażenia filtru nie może być resetowany.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  

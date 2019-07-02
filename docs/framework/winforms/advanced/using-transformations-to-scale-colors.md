@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81c0ddf5b937d604559a9eb1a8b598885546c97f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791160"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504965"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Używanie przekształceń do skalowania kolorów
 Przekształcenie skalowania mnoży co najmniej cztery składowych przez liczbę. Wpisów macierzy kolorów, które reprezentują skalowania są podane w poniższej tabeli.  
@@ -35,7 +35,7 @@ Przekształcenie skalowania mnoży co najmniej cztery składowych przez liczbę.
   
  ![Zrzut ekranu porównuje kolory oryginalnego i skalowanych.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
- W poniższej tabeli wymieniono wektorów kolor słupków cztery przed i po nim niebieski skalowania. Pamiętaj, że składnik niebieski w czwartym pasek koloru próby z 0,8 Update 0.6. To dlatego, że [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zachowuje część ułamkową wyniku. Na przykład (2)(0.8) = 1.6, i Update 0.6 część ułamkową parametru 1.6. Zachowywanie tylko część ułamkową gwarantuje, czy wynik jest zawsze w zakresie [0, 1].  
+ W poniższej tabeli wymieniono wektorów kolor słupków cztery przed i po nim niebieski skalowania. Pamiętaj, że składnik niebieski w czwartym pasek koloru próby z 0,8 Update 0.6. Wynika to z GDI + część ułamkową wyniku zachowuje. Na przykład (2)(0.8) = 1.6, i Update 0.6 część ułamkową parametru 1.6. Zachowywanie tylko część ułamkową gwarantuje, czy wynik jest zawsze w zakresie [0, 1].  
   
 |Oryginał|Skalowanie|  
 |--------------|------------|  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664171"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504633"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Zapytania Jednotabelowe (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] zapytania pracować nad źródeł danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. <xref:System.Data.DataTable> Klasa nie implementuje albo interfejsu, więc należy wywołać <xref:System.Data.DataTableExtensions.AsEnumerable%2A> metody, jeśli chcesz użyć <xref:System.Data.DataTable> jako źródło w `From` klauzuli [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania.  
@@ -20,7 +20,7 @@ ms.locfileid: "61664171"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- Lokalnej zmiennej zapytania jest inicjowany przy użyciu wyrażenie zapytania, który działa na co najmniej jedno źródło informacji poprzez zastosowanie jednego lub więcej operatorów zapytań, z poziomu standardowych operatorów zapytań, albo w przypadku [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], operatory specyficzne dla <xref:System.Data.DataSet>klasy. Wyrażenia zapytania w poprzednim przykładzie korzysta z dwóch standardowych operatorów zapytań: `Where` i `Select`.  
+ Lokalnej zmiennej zapytania jest inicjowany przy użyciu wyrażenie zapytania, który działa na co najmniej jedno źródło informacji poprzez zastosowanie jednego lub więcej operatorów zapytań, z poziomu standardowych operatorów zapytań, albo w przypadku LINQ to DataSet, operatory specyficzne dla <xref:System.Data.DataSet>klasy. Wyrażenia zapytania w poprzednim przykładzie korzysta z dwóch standardowych operatorów zapytań: `Where` i `Select`.  
   
  `Where` Klauzuli filtry sekwencji na podstawie warunku, w tym przypadku `OnlineOrderFlag` ustawiono `true`. `Select` Operator przydzielało i zwracało obiekt wyliczalny, który przechwytuje Argumenty przekazane do operatora. W tym powyżej przykładzie typu anonimowego jest tworzony przy użyciu trzech właściwości: `SalesOrderID`, `OrderDate`, i `SalesOrderNumber`. Wartości te trzy właściwości są ustawione na wartości `SalesOrderID`, `OrderDate`, i `SalesOrderNumber` kolumny z `SalesOrderHeader` tabeli.  
   

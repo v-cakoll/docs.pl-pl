@@ -10,21 +10,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614672"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506178"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Renderowanie formantu formularzy systemu Windows
-Renderowanie odnosi się do procesu tworzenia wizualnej reprezentacji na ekranie użytkownika. Formularze Windows używa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (nowe Windows biblioteki graficznej) do renderowania. Klasy zarządzane, które zapewniają dostęp do [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] znajdują się w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw i jego podobszary nazw.  
+Renderowanie odnosi się do procesu tworzenia wizualnej reprezentacji na ekranie użytkownika. Formularze Windows używa interfejsu GDI (nowe Windows biblioteki graficznej) do renderowania. Klasy zarządzane, umożliwiające dostęp do interfejsu GDI znajdują się w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw i jego podobszary nazw.  
   
  Renderowanie kontrolki obejmuje następujące elementy:  
   
 - Rysowanie funkcje zapewniane przez klasę bazową <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
-- Istotne elementy [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] biblioteki funkcji graficznych.  
+- Elementy podstawowe biblioteki graficzne interfejsu GDI.  
   
 - Geometria obszaru rysowania.  
   
@@ -61,7 +61,7 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> jest zarządzane klasa, która hermetyzuje funkcjonalność rysowania, zgodnie z opisem w dyskusji nad [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] w dalszej części tego tematu. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Jest wystąpieniem <xref:System.Drawing.Rectangle> struktury i definiuje dostępne obszaru, w którym można narysować kontrolkę. Można obliczyć dewelopera kontrolek <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> przy użyciu <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwość kontrolki, zgodnie z opisem w dyskusji geometrii w dalszej części tego tematu.  
+ <xref:System.Drawing.Graphics> jest zarządzany klasa, która hermetyzuje funkcjonalność rysowania, zgodnie z opisem w dyskusji GDI w dalszej części tego tematu. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Jest wystąpieniem <xref:System.Drawing.Rectangle> struktury i definiuje dostępne obszaru, w którym można narysować kontrolkę. Można obliczyć dewelopera kontrolek <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> przy użyciu <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwość kontrolki, zgodnie z opisem w dyskusji geometrii w dalszej części tego tematu.  
   
  Kontrolki musisz podać logiki renderowania przez zastąpienie <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, która dziedziczy <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> uzyskuje dostęp do obiektów grafiki i prostokąt można narysować w za pośrednictwem <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> i <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwości <xref:System.Windows.Forms.PaintEventArgs> wystąpienia przekazane do niego.  
   
@@ -93,7 +93,7 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  Gdy <xref:System.Windows.Forms.Control.OnPaintBackground%2A> ma nomenklaturę zdarzenia podobne i ma ten sam argument co `OnPaint` metody <xref:System.Windows.Forms.Control.OnPaintBackground%2A> nie jest metodą true zdarzeń. Istnieje nie `PaintBackground` zdarzeń i <xref:System.Windows.Forms.Control.OnPaintBackground%2A> nie wywoła delegatów zdarzeń. Podczas zastępowania <xref:System.Windows.Forms.Control.OnPaintBackground%2A> metody, klasy pochodnej nie jest wymagane do wywołania <xref:System.Windows.Forms.Control.OnPaintBackground%2A> metody klasy bazowej.  
   
 ## <a name="gdi-basics"></a>Podstawy interfejsu GDI +  
- <xref:System.Drawing.Graphics> Klasa zawiera metody służące do rysowania różnych kształtów, np. okręgi, trójkąty, łuki i wielokropek, a także metody do wyświetlania tekstu. <xref:System.Drawing?displayProperty=nameWithType> Przestrzeni nazw i jego podobszary nazw zawierają klasy, które hermetyzują elementów graficznych, takich jak kształty (okręgów, prostokąty, łuki i inne), kolory, czcionki, pędzli i tak dalej. Aby uzyskać więcej informacji na temat [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], zobacz [używanie zarządzanych klas grafiki](../advanced/using-managed-graphics-classes.md). Podstawowe informacje o [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] są także opisane w [jak: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ <xref:System.Drawing.Graphics> Klasa zawiera metody służące do rysowania różnych kształtów, np. okręgi, trójkąty, łuki i wielokropek, a także metody do wyświetlania tekstu. <xref:System.Drawing?displayProperty=nameWithType> Przestrzeni nazw i jego podobszary nazw zawierają klasy, które hermetyzują elementów graficznych, takich jak kształty (okręgów, prostokąty, łuki i inne), kolory, czcionki, pędzli i tak dalej. Aby uzyskać więcej informacji na temat interfejsu GDI, zobacz [używanie zarządzanych klas grafiki](../advanced/using-managed-graphics-classes.md). Podstawowe informacje o GDI są także opisane w [jak: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="geometry-of-the-drawing-region"></a>Geometria obszaru rysowania  
  <xref:System.Windows.Forms.Control.ClientRectangle%2A> Właściwości formantu określa prostokątny obszar, dostępna dla kontrolki na ekranie użytkownika, gdy <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwość <xref:System.Windows.Forms.PaintEventArgs> określa obszar, który faktycznie jest malowane. (Należy pamiętać, że malowanie odbywa się w <xref:System.Windows.Forms.Control.Paint> metody zdarzeń, która przyjmuje <xref:System.Windows.Forms.PaintEventArgs> wystąpienie jako argument). Formant może być konieczne malowanie tylko część jej dostępnych obszarów tak jak w przypadku gdy niewielki fragment zmiany wyświetlania kontrolki. W takiej sytuacji dewelopera kontrolek obliczyć rzeczywiste prostokąt można narysować w i przekazać go do <xref:System.Windows.Forms.Control.Invalidate%2A>. Przeciążone wersje <xref:System.Windows.Forms.Control.Invalidate%2A> o <xref:System.Drawing.Rectangle> lub <xref:System.Drawing.Region> jako argument Użyj tego argumentu, aby wygenerować <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> właściwość <xref:System.Windows.Forms.PaintEventArgs>.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967524"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505641"
 ---
 # <a name="matrix-representation-of-transformations"></a>Macierzowe przedstawienie transformacji
 M x n macierzy jest zbioru liczb rozmieszczone w mln wierszy i kolumn n. Poniższa ilustracja przedstawia kilka macierzy.  
@@ -66,7 +66,7 @@ M x n macierzy jest zbioru liczb rozmieszczone w mln wierszy i kolumn n. Poniżs
   
  ![Przekształcenia](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można przechowywać affine — przekształcenia w <xref:System.Drawing.Drawing2D.Matrix> obiektu. Ponieważ trzecia kolumna macierzy, który reprezentuje affine — przekształcenia jest zawsze (0, 0, 1), określ tylko sześć cyfr w pierwszych dwóch kolumn będących jej podczas konstruowania <xref:System.Drawing.Drawing2D.Matrix> obiektu. Wykonywanie instrukcji `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` tworzy macierzy pokazano na poprzednim rysunku.  
+ W GDI + mogą przechowywać affine — przekształcenia w <xref:System.Drawing.Drawing2D.Matrix> obiektu. Ponieważ trzecia kolumna macierzy, który reprezentuje affine — przekształcenia jest zawsze (0, 0, 1), określ tylko sześć cyfr w pierwszych dwóch kolumn będących jej podczas konstruowania <xref:System.Drawing.Drawing2D.Matrix> obiektu. Wykonywanie instrukcji `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` tworzy macierzy pokazano na poprzednim rysunku.  
   
 ## <a name="composite-transformations"></a>Composite — przekształcenia  
  Złożone przekształcenia to sekwencja przekształceń, jeden następuje drugiego. Należy wziąć pod uwagę macierzy, a przekształcenia na poniższej liście:  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73d1759aec3abe2e3e9c371f949cf051930d103c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588617"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506132"
 ---
 # <a name="about-gdi-managed-code"></a>Informacje o kodzie zarządzanym GDI+
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jest to część systemu operacyjnego Windows, który dwuwymiarową grafikę wektorową, przetwarzanie obrazu i typograficzne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usprawnieniem [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (graficzny interfejs urządzenia dołączone do wcześniejszych wersji systemu Windows), dodając nowe funkcje i optymalizowania istniejących funkcji.  
+GDI + jest częścią systemu operacyjnego Windows, który dwuwymiarową grafikę wektorową, przetwarzanie obrazu i typograficzne. GDI + zwiększa z użyciem interfejsu GDI (graficzny interfejs urządzenia dostarczane z wcześniejszymi wersjami systemu Windows), dodając nowe funkcje i optymalizowania istniejących funkcji.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zarządzanej klasy interfejsu (zestaw otoki) jest częścią programu .NET Framework środowisko na potrzeby kompilowania, wdrażania i uruchamiania innych aplikacji i usług sieci Web XML.  
+ Interfejs klasy zarządzanej GDI + (zestaw otoki) jest częścią programu .NET Framework środowisko na potrzeby kompilowania, wdrażania i uruchamiania innych aplikacji i usług sieci Web XML.  
   
- Ta sekcja zawiera informacje na temat [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] interfejsu API dla programistów przy użyciu kodu zarządzanego.  
+ Ta sekcja zawiera informacje o interfejsie API GDI + dla programistów przy użyciu kodu zarządzanego.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Linie, krzywe i kształty](lines-curves-and-shapes.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "65588617"
  W tym artykule omówiono typu dostępne obrazy i sposób pracy z nimi.  
   
  [Systemy i przekształcenia współrzędnych](coordinate-systems-and-transformations.md)  
- W tym artykule omówiono sposób przekształcania grafiki przy użyciu [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ W tym artykule omówiono sposób przekształcania grafiki za pomocą GDI +.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8acb732841aa7aaaad3e8fdd2cf2962ff44dd60b
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025408"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506058"
 ---
 # <a name="xarray-markup-extension"></a>x:Array — Rozszerzenie znaczników
 Oferuje ogólną pomoc techniczną dla tablic obiektów w XAML poprzez rozszerzenie znaczników. Odpowiada to `x:ArrayExtension` typu XAML w [MS-XAML].  
   
 ## <a name="xaml-object-element-usage"></a>Użycie elementu obiektu języka XAML  
   
-```  
+```xaml
 <x:Array Type="typeName">  
   arrayContents  
 </x:Array>  
@@ -55,17 +55,14 @@ Oferuje ogólną pomoc techniczną dla tablic obiektów w XAML poprzez rozszerze
   
  Na przykład Oto prostej tablicy dwa ciągi przy użyciu `sys` prefiksu (a także `x`) zdefiniowana na poziomie tablicy.  
   
- [xaml]  
-  
- `<x:Array Type="sys:String" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
-  
- `xmlns:sys="clr-namespace:System;assembly=mscorlib">`  
-  
- `<sys:String>Hello</sys:String>`  
-  
- `<sys:String>World</sys:String>`  
-  
- `</x:Array>`  
+```xaml
+<x:Array Type="sys:String"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String>Hello</sys:String>
+    <sys:String>World</sys:String>
+</x:Array>
+```
   
  Niestandardowe typy, które są używane jako elementów tablicy klasa również musi obsługiwać wymagania dotyczące wystąpienia w XAML jako elementy obiektu. Aby uzyskać więcej informacji, zobacz [XAML oraz klas niestandardowe dla WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   

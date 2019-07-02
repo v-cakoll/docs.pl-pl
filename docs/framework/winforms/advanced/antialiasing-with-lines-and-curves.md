@@ -9,15 +9,15 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871c5cb3cd9356f677633acb04fe82021a9787c5
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961104"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506139"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Stosowanie antyaliasingu do linii i krzywych
-Kiedy używasz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Aby narysować linię, podaj punkt początkowy i końcowy punkt wiersza, ale nie należy podać wszystkie informacje dotyczące poszczególnych pikseli w wierszu. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] działa w połączeniu z oprogramowanie sterownik ekranu w celu ustalenia, które piksele zostanie włączona, aby wyświetlić wiersz na urządzeniu określonego.  
+Korzystając z użyciem interfejsu GDI + Aby narysować linię, podaj punkt początkowy i końcowy punkt wiersza, ale nie należy podać wszystkie informacje dotyczące poszczególnych pikseli w wierszu. GDI + działa w połączeniu z oprogramowanie sterownik ekranu w celu ustalenia, które piksele zostanie włączona, aby wyświetlić wiersz na urządzeniu określonego.  
   
 ## <a name="aliasing"></a>Tworzenie aliasów  
  Należy wziąć pod uwagę bezpośrednio czerwoną linię, która przechodzi z punktu (4, 2) w punkcie (16, 10). Założono w układzie współrzędnych pochodzenia w lewym górnym rogu i to jednostka miary piksela. Również założono osi x punktów w dół po prawej stronie i punktach osi y. Na poniższej ilustracji przedstawiono rozszerzonej czerwoną linią rysowana na tle różnych kolorach.  

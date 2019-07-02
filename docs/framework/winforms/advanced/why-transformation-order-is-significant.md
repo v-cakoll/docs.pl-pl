@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08927ebaa460e19e558dce22f39c13c31f0e49d0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747462"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504908"
 ---
 # <a name="why-transformation-order-is-significant"></a>Dlaczego kolejność przekształcania jest ważna
 Pojedynczy <xref:System.Drawing.Drawing2D.Matrix> obiektu można przechowywać w jednej transformacji lub sekwencja przekształceń. Drugim jest nazywany złożonych transformacji. Macierzy transformacji złożonego mnożąc macierzy transformacji indywidualnych.  
   
 ## <a name="composite-transform-examples"></a>Przykłady złożone przekształcenia  
- W złożonych transformacji ważne jest kolejność pojedyncze przekształcenia. Na przykład jeśli najpierw obrócić, a następnie skalować, tłumaczenie, uzyskujesz różne wyniki niż w przypadku najpierw tłumaczenia, obracanie, następnie skalowanie. W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], composite — przekształcenia są zbudowane od lewej do prawej. Jeśli S, R i T są odpowiednio macierzy skalowania, obrotu i tłumaczenia, następnie produktu SRT (w tej kolejności) jest macierzy transformacji złożonego, pierwszy skalowana, obraca się, a następnie dokonuje translacji. Macierz produkowane przez produkt SRT różni się od macierzy produkowane przez produkt TR, Technical Router.  
+ W złożonych transformacji ważne jest kolejność pojedyncze przekształcenia. Na przykład jeśli najpierw obrócić, a następnie skalować, tłumaczenie, uzyskujesz różne wyniki niż w przypadku najpierw tłumaczenia, obracanie, następnie skalowanie. W GDI + composite — przekształcenia są kompilowane od lewej do prawej. Jeśli S, R i T są odpowiednio macierzy skalowania, obrotu i tłumaczenia, następnie produktu SRT (w tej kolejności) jest macierzy transformacji złożonego, pierwszy skalowana, obraca się, a następnie dokonuje translacji. Macierz produkowane przez produkt SRT różni się od macierzy produkowane przez produkt TR, Technical Router.  
   
  Jedną z przyczyn których kolejność ma znaczenie jest, że transformacji, takie jak obrotu i skalowania są wykonywane względem współrzędnych punktu początkowego. Skalowanie obiektu, który skupia się na źródło daje różne wyniki niż skalowanie obiekt, który został przeniesiony poza pochodzenia. Podobnie Obracanie obiektu, który skupia się na źródło daje różne wyniki niż Obracanie obiektu, który został przeniesiony poza pochodzenia.  
   

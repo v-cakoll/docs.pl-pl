@@ -4,12 +4,12 @@ description: Ten samouczek pokazuje, jak utworzyć aplikację konsoli .NET Core,
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a766d95c62fd3a89e3291e1ab803f5222fac46ea
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 833aeeb045ef1fd7bb0e6dbd2236bc3d9da2e8fc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306169"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506150"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Samouczek: Analizowanie opinii komentarze witryny sieci Web przy użyciu klasyfikacji binarnej w strukturze ML.NET
 
@@ -93,12 +93,16 @@ Klasa wejściowy zestaw danych `SentimentData`, ma `string` dla komentarzy do u�
 |WOW... Pracowałem z tego miejsca.              |    1     |
 |Usługa była bardzo szybkie.              |    1     |
 
-`SentimentPrediction` Klasa prognozowania służy po szkoleń modelowych. Dziedziczy `SentimentData` do wyświetlania `SentimentText` z prognozy. `SentimentPrediction` zawiera pojedynczy atrybut typu wartość logiczna (`Sentiment`) i `PredictedLabel` `ColumnName` atrybutu. `Label` Umożliwia tworzenie i uczenie modelu, a także używane z Podziel się z zestawu danych testowych do ewaluacji modelu. `PredictedLabel` Używany podczas prognoz i oceny. W wersji ewaluacyjnej są używane dane szkoleniowe, przewidywane wartości i modelu.
+`SentimentPrediction` Klasa prognozowania służy po szkoleń modelowych. Dziedziczy `SentimentData` tak, aby dane wejściowe `SentimentText` mogą być wyświetlane wraz z prognozowania danych wyjściowych. `Prediction` Logiczną jest wartością, których model przewiduje, gdy jest używany z nowe dane wejściowe `SentimentText`.
 
-[Klasy MLContext](xref:Microsoft.ML.MLContext) stanowi punkt wyjścia dla wszystkich operacji w strukturze ML.NET. Inicjowanie `mlContext` tworzy nowe środowisko strukturze ML.NET, które mogą być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Przypomina, model `DBContext` platformy Entity Framework.
+Klasa wynikowa `SentimentPrediction` zawiera dwie inne właściwości, obliczana na podstawie modelu: `Score` -nieprzetworzonej oceny obliczana na podstawie modelu, i `Probability` — wynik kalibrować prawdopodobieństwo tekstu o pozytywną tonację.
+
+W tym samouczku jest najważniejsze właściwości `Prediction`.
 
 ## <a name="load-the-data"></a>Ładowanie danych
 Dane w strukturze ML.NET jest reprezentowany jako [klasy IDataView](xref:Microsoft.ML.IDataView). `IDataView` jest elastyczny i wydajny sposób opisu danych tabelarycznych (liczbowe i tekstowe). Dane można załadować z pliku tekstowego lub w czasie rzeczywistym (na przykład SQL bazy danych lub dziennika plików) do `IDataView` obiektu.
+
+[Klasy MLContext](xref:Microsoft.ML.MLContext) stanowi punkt wyjścia dla wszystkich operacji w strukturze ML.NET. Inicjowanie `mlContext` tworzy nowe środowisko strukturze ML.NET, które mogą być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Przypomina, model `DBContext` platformy Entity Framework.
 
 Przygotowywanie aplikacji, a następnie załadować dane:
 

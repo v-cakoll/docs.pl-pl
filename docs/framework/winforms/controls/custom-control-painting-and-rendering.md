@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14abac5678bfffa3cdb61307fd3cb54681c82a99
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011487"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506086"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Malowanie i renderowanie formantu niestandardowego
 Malowanie niestandardowych formantów jest jednym z wielu zadań skomplikowane, łatwe w programie .NET Framework. Podczas tworzenia niestandardowego formantu, masz wiele opcji dotyczących kontroli nad wyglądem graficznego. Jeśli tworzony formant, który dziedziczy z `Control`, należy podać kod, który umożliwia formantu do renderowania jej graficzną reprezentację. Jeśli utworzysz formant użytkownika przez dziedziczenie z `UserControl`, lub są dziedziczone z jednej z kontrolek Windows Forms, może zastąpić standardowa graficzną reprezentację i podanie kodu grafiki. Jeśli chcesz udostępnić niestandardowe renderowanie kontrolek składowych `UserControl` tworzenia, opcje stają się bardziej ograniczone, ale nadal zezwalają na szeroką gamę możliwości graficznego dla aplikacji i formantów.  
@@ -47,7 +47,7 @@ Malowanie niestandardowych formantów jest jednym z wielu zadań skomplikowane, 
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Instrukcje: Tworzenie obiektów graficznych do rysowania](../advanced/how-to-create-graphics-objects-for-drawing.md)  
- Wprowadza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funkcje grafiki z programu Visual Studio perspektywy i udostępnia łącza do dodatkowych informacji.  
+ Wprowadza funkcje graficzne interfejsu GDI + z punktu widzenia programu Visual Studio i zawiera linki do dodatkowych informacji.  
   
  [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)  
  W tym artykule opisano rodzaje niestandardowe formanty, które można tworzyć.

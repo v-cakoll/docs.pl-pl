@@ -9,15 +9,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766298"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505048"
 ---
 # <a name="using-nested-graphics-containers"></a>Używanie zagnieżdżonych kontenerów grafiki
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zapewnia kontenery, których można użyć, aby tymczasowo zastąpić, lub rozszerzyć część stanu w <xref:System.Drawing.Graphics> obiektu. Utwórz kontener, wywołując <xref:System.Drawing.Graphics.BeginContainer%2A> metody <xref:System.Drawing.Graphics> obiektu. Możesz wywołać <xref:System.Drawing.Graphics.BeginContainer%2A> wielokrotnie w celu utworzenia zagnieżdżone kontenery. Każde wywołanie <xref:System.Drawing.Graphics.BeginContainer%2A> muszą łączyć się z wywołaniem <xref:System.Drawing.Graphics.EndContainer%2A>.  
+GDI + zapewnia kontenery, których można użyć, aby tymczasowo zastąpić, lub rozszerzyć część stanu w <xref:System.Drawing.Graphics> obiektu. Utwórz kontener, wywołując <xref:System.Drawing.Graphics.BeginContainer%2A> metody <xref:System.Drawing.Graphics> obiektu. Możesz wywołać <xref:System.Drawing.Graphics.BeginContainer%2A> wielokrotnie w celu utworzenia zagnieżdżone kontenery. Każde wywołanie <xref:System.Drawing.Graphics.BeginContainer%2A> muszą łączyć się z wywołaniem <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>Przekształcenia w zagnieżdżone kontenery  
  Poniższy przykład tworzy <xref:System.Drawing.Graphics> obiektów i kontenerów, w tym <xref:System.Drawing.Graphics> obiektu. Przekształcanie świata <xref:System.Drawing.Graphics> obiekt jest jednostki translacji 100, w kierunku x i 80 jednostek w kierunku y. Transformacja świata kontenera jest 30 stopni. Kod sprawia, że wywołanie `DrawRectangle(pen, -60, -30, 120, 60)` dwa razy. Pierwsze wywołanie <xref:System.Drawing.Graphics.DrawRectangle%2A> znajduje się wewnątrz kontenera; oznacza to wywołanie jest z zakresu od wywołania <xref:System.Drawing.Graphics.BeginContainer%2A> i <xref:System.Drawing.Graphics.EndContainer%2A>. Drugie wywołanie <xref:System.Drawing.Graphics.DrawRectangle%2A> po wywołaniu <xref:System.Drawing.Graphics.EndContainer%2A>.  

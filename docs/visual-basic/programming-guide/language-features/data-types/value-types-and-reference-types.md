@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f25caec43b7118b7b64db1b14516b0c5ea80f4f6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589817"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504878"
 ---
 # <a name="value-types-and-reference-types"></a>Typy wartości i odwołań
-W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfikacji. Typy danych Visual Basic mogą być klasyfikowane według tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnik do danych. Jeśli przechowuje swoje własne dane *typu wartości*; Jeśli przechowuje wskaźnik do danych w pamięci jest *odwołania do typu*.  
+Istnieją dwa rodzaje typów w języku Visual Basic: typy referencyjne i typy wartości. W zmiennych typu referencyjnego są przechowywane odwołania do ich danych (obiekty), a zmienne typu wartości zawierają bezpośrednio swoje dane. W przypadku typów referencyjnych dwie zmienne mogą odwoływać się do jednego obiektu, a więc operacje wykonane na jednej zmiennych mogą mieć wpływ na obiekt, do którego odwołuje się druga zmienna. Z typami wartości każda zmienna ma własną kopię danych i nie jest możliwe dla operacji na jednej zmiennej miały wpływ na inne (z wyjątkiem w przypadku właściwości [ByRef modyfikator parametrów](../../../language-reference/modifiers/byref.md)).
   
 ## <a name="value-types"></a>Typy wartości  
  Typ danych jest *typu wartości* Jeśli przechowuje dane w obrębie własnej alokacji pamięci. Typy wartości są następujące:  
@@ -36,7 +36,7 @@ W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfi
  Typ wartości można zadeklarować za pomocą zastrzeżonego słowa kluczowego, na przykład `Decimal`. Można również użyć `New` — słowo kluczowe można zainicjować typu wartości. Jest to szczególnie przydatne, jeśli typ ma konstruktora przyjmującego parametry. Na przykład <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> konstruktora, który tworzy nową `Decimal` wartości z części podane.  
   
 ## <a name="reference-types"></a>Typy odwołań  
- A *odwołania do typu* zawiera wskaźnik do innej lokalizacji w pamięci, która przechowuje dane. Typy odwołań są następujące:  
+ A *odwołania do typu* przechowuje odwołania do jego danych. Typy odwołań są następujące:  
   
 - `String`  
   
@@ -46,7 +46,7 @@ W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfi
   
 - Delegaty  
   
- Klasa jest *odwołania do typu*. Z tego powodu typy odwołań takich jak `Object` i `String` są obsługiwane przez klas .NET Framework. Należy pamiętać, że każda tablica typu odwołania, nawet jeśli jego członkowie są typami wartości.  
+ Klasa jest *odwołania do typu*. Należy pamiętać, że każda tablica typu odwołania, nawet jeśli jego członkowie są typami wartości.  
   
  Ponieważ każdy typ odniesienia reprezentuje podstawowej klasy .NET Framework, należy użyć [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe, podczas jego inicjowania. Poniższa instrukcja inicjuje tablicę.  
   
@@ -68,7 +68,7 @@ Dim totals() As Single = New Single(8) {}
 - Zmienne, stałe i pola  
   
 ## <a name="working-with-the-object-data-type"></a>Praca z typem danych obiektu  
- Można przypisać do zmiennej typu odwołania lub typu wartościowego `Object` typu danych. `Object` Zawsze zmienna przechowuje wskaźnik do danych, nigdy nie dane. Jednak jeśli przypisujesz typ wartości do `Object` zmiennej działa tak, jakby posiada własnych danych. Aby uzyskać więcej informacji, zobacz [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+ Można przypisać do zmiennej typu odwołania lub typu wartościowego `Object` typu danych. `Object` Zmiennej zawsze zawiera odwołanie do danych, nigdy nie dane. Jednak jeśli przypisujesz typ wartości do `Object` zmiennej działa tak, jakby posiada własnych danych. Aby uzyskać więcej informacji, zobacz [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
  Można dowiedzieć się, czy `Object` zmiennej działa jako typu odwołania lub typu wartościowego przez przekazanie jej do <xref:Microsoft.VisualBasic.Information.IsReference%2A> method in Class metoda <xref:Microsoft.VisualBasic.Information> klasy <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Zwraca `True` Jeśli zawartość `Object` zmienna reprezentuje typ odwołania.  
   

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169810"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505773"
 ---
 # <a name="how-to-read-image-metadata"></a>Instrukcje: Odczytywanie metadanych obrazu
-Niektóre pliki obrazu zawierają metadane, które mogą odczytać w celu określenia funkcji obrazu. Na przykład cyfrowych fotografii może zawierać metadane, które mogą odczytać w celu określenia producenta i modelu aparatu używane do przechwytywania obrazu. Za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], mogą odczytywać metadane istniejącego i można także zapisać nowe metadane do plików obrazu.  
+Niektóre pliki obrazu zawierają metadane, które mogą odczytać w celu określenia funkcji obrazu. Na przykład cyfrowych fotografii może zawierać metadane, które mogą odczytać w celu określenia producenta i modelu aparatu używane do przechwytywania obrazu. Za pomocą GDI + mogą odczytywać metadane istniejącego i można także zapisać nowe metadane do plików obrazu.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] przechowuje wyraźne metadanych w <xref:System.Drawing.Imaging.PropertyItem> obiektu. Może odczytywać <xref:System.Drawing.Image.PropertyItems%2A> właściwość <xref:System.Drawing.Image> obiekt, aby pobrać wszystkie metadane z pliku. <xref:System.Drawing.Image.PropertyItems%2A> Właściwość zwraca tablicę <xref:System.Drawing.Imaging.PropertyItem> obiektów.  
+ GDI + przechowuje wyraźne metadanych w <xref:System.Drawing.Imaging.PropertyItem> obiektu. Może odczytywać <xref:System.Drawing.Image.PropertyItems%2A> właściwość <xref:System.Drawing.Image> obiekt, aby pobrać wszystkie metadane z pliku. <xref:System.Drawing.Image.PropertyItems%2A> Właściwość zwraca tablicę <xref:System.Drawing.Imaging.PropertyItem> obiektów.  
   
  A <xref:System.Drawing.Imaging.PropertyItem> obiekt ma następujące cztery właściwości: `Id`, `Value`, `Len`, i `Type`.  
   

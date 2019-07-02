@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641468"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505453"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Krzywe otwarte i zamknięte w GDI+
 Na poniższej ilustracji przedstawiono dwie krzywe: otwarty i jedną zamknięte.  
@@ -23,7 +23,7 @@ Na poniższej ilustracji przedstawiono dwie krzywe: otwarty i jedną zamknięte.
  ![Krzywe otwarte i zamknięte](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>Zarządzany interfejs dla krzywych  
- Zamknięte krzywych mają wewnętrzne i może zostać wypełniony przy użyciu pędzla. <xref:System.Drawing.Graphics> Klasy w [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia następujące metody do wypełniania kształtów zamkniętych i krzywych: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, i <xref:System.Drawing.Graphics.FillRegion%2A>. Przy każdym wywołaniu jednej z następujących metod, należy przekazać jeden z typów określonych pędzla (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, lub <xref:System.Drawing.Drawing2D.PathGradientBrush>) jako argument.  
+ Zamknięte krzywych mają wewnętrzne i może zostać wypełniony przy użyciu pędzla. <xref:System.Drawing.Graphics> Klasy w GDI + udostępnia następujące metody do wypełniania kształtów zamkniętych i krzywych: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, i <xref:System.Drawing.Graphics.FillRegion%2A>. Przy każdym wywołaniu jednej z następujących metod, należy przekazać jeden z typów określonych pędzla (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, lub <xref:System.Drawing.Drawing2D.PathGradientBrush>) jako argument.  
   
  <xref:System.Drawing.Graphics.FillPie%2A> Metody jest uzupełnieniem do <xref:System.Drawing.Graphics.DrawArc%2A> metody. Podobnie jak <xref:System.Drawing.Graphics.DrawArc%2A> metoda rysuje część zarys elipsy, <xref:System.Drawing.Graphics.FillPie%2A> metoda wypełni część wewnętrzne elipsy. Poniższy przykład łuk i wstawia odpowiednią część wewnętrzne elipsy:  
   

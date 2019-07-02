@@ -5,15 +5,15 @@ helpviewer_keywords:
 - transformations
 - examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
-ms.openlocfilehash: 22984ca8b12b1b71cfc5df78f8ac4005e1ad55f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 806cf5e9e9043b477c4bf90956e9a32e11911c23
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791095"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505007"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>Używanie przekształceń w zarządzanym GDI+
-Affine — przekształcenia obejmują obracanie, skalowanie, odzwierciedlający, pochylanie i tłumaczenie. W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> klasy stanowi podstawę dla przeprowadzania affine — przekształcenia rysunki wektorowe, obrazów i tekstu.  
+Affine — przekształcenia obejmują obracanie, skalowanie, odzwierciedlający, pochylanie i tłumaczenie. W GDI + <xref:System.Drawing.Drawing2D.Matrix> klasy stanowi podstawę dla przeprowadzania affine — przekształcenia rysunki wektorowe, obrazów i tekstu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Używanie transformacji świata](using-the-world-transformation.md)  

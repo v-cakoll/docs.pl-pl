@@ -2,12 +2,12 @@
 title: Zabezpieczenia transportu HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402307"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487016"
 ---
 # <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
 Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarczana przez implementację protokołu Secure Sockets Layer (SSL). Protokół SSL jest powszechnie używanych w Internecie uwierzytelniania usługi do klienta, a następnie, aby zapewnić poufność (szyfrowanie) do kanału. W tym temacie wyjaśniono, jak działa protokół SSL oraz jego implementacji w Windows Communication Foundation (WCF).  
@@ -38,9 +38,9 @@ Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarc
 ### <a name="using-iis-for-transport-security"></a>Korzystanie z usług IIS dla zabezpieczeń transportu  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Aby skonfigurować [!INCLUDE[iisver](../../../../includes/iisver-md.md)] jako bezpiecznego hosta (przy użyciu protokołu SSL), zobacz [IIS 7.0 Beta: Konfigurowanie protokołu Secure Sockets Layer w usługach IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Aby skonfigurować usługi IIS 7.0, jako bezpiecznego hosta (przy użyciu protokołu SSL), zobacz [Konfigurowanie Secure Sockets Layer w usługach IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
- Konfigurowanie certyfikatów do użytku z programem [!INCLUDE[iisver](../../../../includes/iisver-md.md)], zobacz [IIS 7.0 Beta: Konfigurowanie certyfikatów serwera w usługach IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+Aby skonfigurować certyfikaty do użytku z usługami IIS 7.0, zobacz [Konfigurowanie certyfikatów serwera w usługach IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6,0  
  Aby skonfigurować usługi IIS 6.0, jako bezpiecznego hosta (przy użyciu protokołu SSL), zobacz [Konfigurowanie Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601).  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607339"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504204"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Tworzenie elementu DataTable w wyniku zapytania (LINQ to DataSet)
 Wiązanie danych jest często używana <xref:System.Data.DataTable> obiektu. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyniki zapytania i kopiuje dane do <xref:System.Data.DataTable>, która następnie umożliwia powiązanie danych. Po wykonaniu operacji danych, nowa <xref:System.Data.DataTable> jest scalany z powrotem do źródła skrzynki <xref:System.Data.DataTable>.  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda przystępuje do następującej procedury, aby utworzyć <xref:System.Data.DataTable> w wyniku zapytania:  
   
-1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Klony metoda <xref:System.Data.DataTable> z tabeli źródłowej ( <xref:System.Data.DataTable> obiekt, który implementuje <xref:System.Linq.IQueryable%601> interfejsu). <xref:System.Collections.IEnumerable> Źródło ma zazwyczaj pochodzenia [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] wyrażenie lub metody zapytania.  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Klony metoda <xref:System.Data.DataTable> z tabeli źródłowej ( <xref:System.Data.DataTable> obiekt, który implementuje <xref:System.Linq.IQueryable%601> interfejsu). <xref:System.Collections.IEnumerable> Źródła ogólnie pochodzący z LINQ do kwerendy wyrażenie lub metoda zestawu danych.  
   
 2. Schemat sklonowany <xref:System.Data.DataTable> została stworzona od kolumny pierwszy wyliczane <xref:System.Data.DataRow> obiektu w tabeli źródłowej i nazwa tabeli sklonowany jest nazwą tabeli źródłowej z wyrazem "query" dołączone do niego.  
   

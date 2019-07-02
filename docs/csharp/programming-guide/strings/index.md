@@ -1,17 +1,17 @@
 ---
 title: Parametry - C# przewodnik programowania
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398123"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503999"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartością tekstową. Wewnętrznie, tekst jest przechowywany jako sekwencyjną kolekcją tylko do odczytu z <xref:System.Char> obiektów. Brak nie znaku zakończenia o wartości null na końcu ciągu języka C#; w związku z tym ciąg języka C# może zawierać dowolną liczbę osadzone znaki null ('\0'). <xref:System.String.Length%2A> Właściwość ciągu reprezentuje liczbę `Char` obiektów zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punkty kodowe Unicode w ciągu, należy użyć <xref:System.Globalization.StringInfo> obiektu.  
@@ -62,13 +62,16 @@ Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartości�
 |\n|Nowy wiersz|0x000A|  
 |\r|Powrót karetki|0x000D|  
 |\t|tabulator poziomy|0x0009|  
-|\U|Sekwencja unikowa Unicode znaki dwuskładnikowe.|\Unnnnnnnn|  
-|\u|Sekwencja unikowa Unicode|\u0041 = "A"|  
+|\U|Sekwencja unikowa Unicode (UTF-32)|`\U00nnnnnn` (e.g. `\U0001F47D` = "&#x1F47D;")|  
+|\u|Sekwencja unikowa Unicode (UTF-16)|`\unnnn` (np. `\u0041` = "A")|  
 |\v|tabulator pionowy|0x000B|  
-|\x|Sekwencja unikowa Unicode jest podobny do "\u" z wyjątkiem o zmiennej długości.|\x0041 lub \x41 = "A"|  
+|\x|Sekwencja unikowa Unicode jest podobny do "\u" z wyjątkiem o zmiennej długości.|`\x0041` lub `\x41` = "A"|  
+  
+> [!WARNING]
+>  Korzystając z `\x` ucieczki sekwencji i określenie mniej niż 4 cyfr szesnastkowych, jeśli znaki, które znajdują się bezpośrednio po sekwencji unikowej prawidłowych cyfr szesnastkowych (czyli 0-9, A-F i a-f), będą one interpretowane jako części sekwencji unikowej. Na przykład `\xA1` tworzy "&#161;", który jest punkt kodowy 00A1 U +. Jednak jeśli następny znak to "A" lub "a", następnie sekwencja unikowa będzie zamiast tego interpretowana jako `\xA1A` i generować "&#x0A1A;", który jest punkt kodowy 0A1A U +. W takich przypadkach, określając wszystkie 4 cyfr szesnastkowych (np. `\x00A1` ) będzie zapobiec błędnej możliwe.  
   
 > [!NOTE]
->  W czasie kompilacji ciągi verbatim są konwertowane na zwykłe ciągi przy użyciu tych samych sekwencje ucieczki. W związku z tym jeśli ciąg verbatim można wyświetlić w oknie czujki debugera, zobaczysz znaki ucieczki, które zostały dodane przez kompilator nie verbatim wersji z kodu źródłowego. Na przykład ciąg verbatim @"C:\files.txt" będą wyświetlane w oknie czujki jako "C:\\\files.txt".  
+>  W czasie kompilacji ciągi verbatim są konwertowane na zwykłe ciągi przy użyciu tych samych sekwencje ucieczki. W związku z tym jeśli ciąg verbatim można wyświetlić w oknie czujki debugera, zobaczysz znaki ucieczki, które zostały dodane przez kompilator nie verbatim wersji z kodu źródłowego. Na przykład ciąg verbatim `@"C:\files.txt"` będą wyświetlane w oknie czujki jako "C:\\\files.txt".  
   
 ## <a name="format-strings"></a>Ciągi formatujące  
  Ciąg formatu to ciąg, w których zawartość jest określany dynamicznie w czasie wykonywania. Ciągi formatu są tworzone przez osadzanie *wyrażeń interpolowanych* lub symbole zastępcze w nawiasach klamrowych wewnątrz ciągu. Wszystko wewnątrz nawiasów klamrowych (`{...}`) zostanie rozpoznana jako wartość i dane wyjściowe jako sformatowany ciąg w czasie wykonywania. Istnieją dwie metody tworzenia ciągów formatu: ciąg interpolowania i formatowania złożonego.

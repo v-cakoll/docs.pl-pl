@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643359"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505505"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Instrukcje: Tworzenie obiektów graficznych do rysowania
-Zanim można narysować linie i kształty, renderowanie tekstu, lub wyświetlanie obrazów i manipulowania nimi za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], musisz utworzyć <xref:System.Drawing.Graphics> obiektu. <xref:System.Drawing.Graphics> Obiekt reprezentuje [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] rysowania powierzchni i jest obiekt, który jest używany do tworzenia obrazów graficznych.  
+Aby można było rysowanie linii i kształtów, renderowanie tekstu, lub wyświetlania i manipulowania obrazów za pomocą GDI +, musisz utworzyć <xref:System.Drawing.Graphics> obiektu. <xref:System.Drawing.Graphics> Obiekt reprezentuje GDI + powierzchni do rysowania i jest obiekt, który jest używany do tworzenia obrazów graficznych.  
   
  W pracy z grafikami znajdują się dwa kroki:  
   

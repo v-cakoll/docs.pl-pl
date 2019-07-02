@@ -7,15 +7,15 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747696"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503941"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Wprowadzenie do programowania grafiki
-W tej sekcji pokazano, jak rozpocząć pracę z usługą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] w aplikacji Windows Forms. Poniższe tematy przedstawiają sposób wykonania kilku [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zadań, takich jak rysowanie i wypełnianie kształty i tekst.  
+W tej sekcji pokazano, jak rozpocząć korzystanie z GDI + w aplikacji Windows Forms. Poniższe tematy przedstawiają sposób wykonania kilku GDI + zadań, takich jak rysowanie i napełniania kształty i tekst.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: Tworzenie obiektów graficznych do rysowania](how-to-create-graphics-objects-for-drawing.md)  

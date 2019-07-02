@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487261"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506162"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
 
@@ -77,7 +77,7 @@ W poniższej tabeli opisano te technologie.
 
 Możesz wybrać technologie będzie zależeć od środowiska wdrażania. Aby uzyskać więcej informacji, zobacz [Wybieranie strategii wdrażania ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Domyślnie ClickOnce aplikacje wdrożone za pomocą programu Visual Studio lub narzędzi zestawu SDK programu .NET Framework (Mage.exe i MageUI.exe) są skonfigurowane do uruchomienia na komputerze klienckim, który ma pełne zaufanie. Jeśli aplikacja jest wdrażana za niektóre dodatkowe uprawnienia lub za pomocą częściowej relacji zaufania, należy zmienić to ustawienie domyślne. Można to zrobić za pomocą programu Visual Studio lub narzędzia .NET Framework SDK MageUI.exe podczas konfigurowania wdrożenia. Aby uzyskać więcej informacji na temat sposobu użycia programu MageUI.exe, zobacz Przewodnik po: Wdrażanie aplikacji ClickOnce z wiersza polecenia.  Zobacz też [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) lub [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Domyślnie ClickOnce aplikacje wdrożone za pomocą programu Visual Studio lub narzędzi zestawu SDK programu .NET Framework (Mage.exe i MageUI.exe) są skonfigurowane do uruchomienia na komputerze klienckim, który ma pełne zaufanie. Jeśli aplikacja jest wdrażana za niektóre dodatkowe uprawnienia lub za pomocą częściowej relacji zaufania, należy zmienić to ustawienie domyślne. Można to zrobić za pomocą programu Visual Studio lub narzędzia .NET Framework SDK MageUI.exe podczas konfigurowania wdrożenia. Aby uzyskać więcej informacji na temat sposobu użycia programu MageUI.exe, zobacz [instruktażu: Ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Zobacz też [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) lub [jak: Ustawienie uprawnień niestandardowych dla aplikacji ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Aby dowiedzieć się więcej o aspekty zabezpieczeń technologii ClickOnce i podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Aby uzyskać więcej informacji na temat zaufanego wdrożenia aplikacji, zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).
 

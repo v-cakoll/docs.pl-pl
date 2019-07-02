@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585941"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504033"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i systemu .NET Framework
 
@@ -54,7 +54,7 @@ C#to elegancki i bezpieczny typowo język obiektowy, który umożliwia deweloper
 
  C#programy uruchamiane na platformie .NET Framework, integralny składnik systemu Windows, która zawiera wirtualne wykonanie systemu o nazwie środowisko uruchomieniowe języka wspólnego (CLR) i jednolity zbiór bibliotek klas. Środowisko CLR jest komercyjną implementacją przez firmę Microsoft common language infrastructure (CLI), międzynarodowego standardu, który jest podstawą tworzenia środowisk wykonywania i programistycznych w których języki i biblioteki współpracują ze sobą.  
   
- Kodu źródłowego napisanego w języku C# jest skompilowany w języku pośrednim (IL), który jest zgodny ze specyfikacją interfejsu wiersza polecenia. Kod IL i zasoby, takie jak mapy bitowe i ciągi znaków, są przechowywane na dysku w pliku wykonywalnym zwanym zestawem, zwykle z rozszerzeniem .exe lub .dll. Zestaw zawiera manifest, który zawiera informacje dotyczące typów, wersji, kultury i wymagania dotyczące zabezpieczeń zestawu.  
+ Kod źródłowy napisany C# jest skompilowany w [pośredniego (IL) języka](../../standard/managed-code.md) który jest zgodny ze specyfikacją interfejsu wiersza polecenia. Kod IL i zasoby, takie jak mapy bitowe i ciągi znaków, są przechowywane na dysku w pliku wykonywalnym zwanym zestawem, zwykle z rozszerzeniem .exe lub .dll. Zestaw zawiera manifest, który zawiera informacje dotyczące typów, wersji, kultury i wymagania dotyczące zabezpieczeń zestawu.  
   
  Gdy wykonany zostaje program C#, zestaw jest ładowany do CLR, który może wykonać różne akcje w oparciu o informacje zawarte w manifeście. Następnie jeśli spełnione są wymagania bezpieczeństwa, CLR wykonuje dokładnie na czas (JIT) kompilacja, aby skonwertować kod IL do instrukcji maszyny macierzystej. Środowisko CLR oferuje również inne usługi związane z automatycznym wyrzucania elementów bezużytecznych, obsługa wyjątków i zarządzanie zasobami. Kod, który jest wykonywany przez środowisko CLR jest czasami określane jako "kod zarządzany" w przeciwieństwie do "Kod niezarządzanego" który jest skompilowany w macierzystym języku maszynowym, który jest przeznaczony dla określonego systemu. Poniższy diagram ilustruje relacje kompilacji i środowiska wykonawczego języka C# plików kodu źródłowego, biblioteki klas .NET Framework, zespołów i środowiska CLR.  
   

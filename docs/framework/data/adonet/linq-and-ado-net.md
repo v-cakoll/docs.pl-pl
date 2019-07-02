@@ -2,21 +2,21 @@
 title: LINQ i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: a23e152d4688e840f4665e9c8d77835acb683564
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 16b06549573bc79378539cf7f5ccdcb60c812e81
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307319"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504467"
 ---
 # <a name="linq-and-adonet"></a>LINQ i ADO.NET
 Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstw logiki i prezentacji firm (np. Visual C# lub Visual Basic) i język zapytań umożliwiający korzystanie z bazy danych (na przykład Transact-SQL) . To wymaga programista ma być biegły w kilku językach zaczęła obowiązywać, a także powoduje niezgodności języka w środowisku programistycznym. Na przykład aplikację, która używa danych dostęp do interfejsu API do wykonania zapytania względem bazy danych określa zapytanie jako literał ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzane pod kątem błędów, takich jak nieprawidłową składnię lub tego, czy kolumny lub wiersze, które odwołuje się faktycznie istnieje. Istnieje żaden typ weryfikacji parametry zapytania i nie `IntelliSense` obsługuje albo.  
   
  [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Umożliwia deweloperom formularza zapytania w oparciu o zestaw w ich kodzie aplikacji bez konieczności używania języka oddzielnego zapytania. Można napisać [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytań dotyczących różnych źródeł danych wyliczalny (oznacza to, że źródła danych, które implementuje <xref:System.Collections.IEnumerable> interface), takie jak struktury danych w pamięci, dokumentów XML, baz danych SQL, i <xref:System.Data.DataSet> obiektów. Mimo że te źródła danych wyliczalny są implementowane w na różne sposoby, wszystkie one udostępnianie tego samego konstrukcje składni i języka. Ponieważ zapytania mogą powstawać w języku programowania, ma używać innego język zapytań, który jest osadzony jako literały ciągu, których nie rozumie lub zweryfikowane przez kompilator. Integrowanie zapytań języka programowania również umożliwia programistom Visual Studio mu bardziej wydajnej pracy, zapewniając typów w czasie kompilacji i sprawdzanie składni, i `IntelliSense`. Te funkcje zmniejszyć zapotrzebowanie na debugowanie zapytania i naprawianie błędów.  
   
- Transfer danych z tabelami SQL do obiektów w pamięci jest często uciążliwe i podatne na błędy. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Dostawcy implementowany przez [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] i [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] konwertuje dane źródłowe do <xref:System.Collections.IEnumerable>— na podstawie kolekcji obiektów. Programisty należy zawsze widoków danych jako <xref:System.Collections.IEnumerable> kolekcji, zarówno podczas wysyłania zapytania, jak i kiedy aktualizować. Pełna `IntelliSense` pomoc techniczna jest dostępna do pisania zapytań dotyczących tych kolekcjach.  
+ Transfer danych z tabelami SQL do obiektów w pamięci jest często uciążliwe i podatne na błędy. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Dostawcy w składniku LINQ to DataSet i [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] konwertuje dane źródłowe do <xref:System.Collections.IEnumerable>— na podstawie kolekcji obiektów. Programisty należy zawsze widoków danych jako <xref:System.Collections.IEnumerable> kolekcji, zarówno podczas wysyłania zapytania, jak i kiedy aktualizować. Pełna `IntelliSense` pomoc techniczna jest dostępna do pisania zapytań dotyczących tych kolekcjach.  
   
- Istnieją trzy osobne ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] technologii: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapewnia bardziej zaawansowane, zoptymalizowane zapytań <xref:System.Data.DataSet> i [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] pozwala na bezpośrednie wyszukiwanie schematy bazy danych programu SQL Server, a [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] umożliwia zapytania modelu danych jednostki.  
+ Istnieją trzy osobne ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] technologii: LINQ to DataSet, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. LINQ do DataSet zawiera bardziej zaawansowane, zoptymalizowane zapytań <xref:System.Data.DataSet> i [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] pozwala na bezpośrednie wyszukiwanie schematy bazy danych programu SQL Server, a [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] umożliwia zapytania modelu danych jednostki.  
   
  Poniższy diagram zawiera omówienie technologii ADO.NET LINQ wzajemne relacje poszczególnych języków programowania wysokiego poziomu i źródła danych z obsługą zapytań LINQ.  
   
@@ -24,10 +24,10 @@ Obecnie wielu deweloperów firmy należy za pomocą języków programowania (co 
   
  Aby uzyskać więcej informacji na temat LINQ, zobacz [Language Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md).
   
- Poniższe sekcje zawierają więcej informacji na temat [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
+ Poniższe sekcje zawierają więcej informacji na temat programu LINQ do zestawu danych, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
   
 ## <a name="linq-to-dataset"></a>LINQ do DataSet  
- <xref:System.Data.DataSet> Jest kluczowym elementem odłączonego modelu programowania, ADO.NET jest oparta na, która jest powszechnie używana. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Umożliwia deweloperom tworzenie bogatszych możliwości kwerend <xref:System.Data.DataSet> przy użyciu tego samego zapytania formułowanie mechanizm który jest dostępny dla innych źródeł danych. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+ <xref:System.Data.DataSet> Jest kluczowym elementem odłączonego modelu programowania, ADO.NET jest oparta na, która jest powszechnie używana. LINQ to DataSet oferuje deweloperom tworzenie bogatszych możliwości kwerend <xref:System.Data.DataSet> przy użyciu tego samego zapytania formułowanie mechanizm który jest dostępny dla innych źródeł danych. Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ do SQL  
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] jest przydatne narzędzie dla deweloperów, którzy nie wymagają mapowania do modelu koncepcyjnego. Za pomocą [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], możesz użyć [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] model programowania bezpośrednio przez istniejący schemat bazy danych. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] Umożliwia deweloperom Generowanie klas .NET Framework, które reprezentują dane. Zamiast mapowania do modelu koncepcyjnego danych, te wygenerowane klasy mapy bezpośrednio do tabel bazy danych, widoki, procedury składowane i funkcje zdefiniowane przez użytkownika.  

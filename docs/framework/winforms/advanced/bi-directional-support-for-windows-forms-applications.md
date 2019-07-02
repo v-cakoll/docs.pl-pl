@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655665"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506214"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
 Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługują dwukierunkowej języków (od prawej do lewej), takich jak arabski i hebrajski. W tym standardowych formularzy, okna dialogowe, formularze MDI i wszystkich kontrolek, można pracować w nich — oznacza to, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
@@ -48,7 +48,7 @@ Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługu
 |<xref:System.Windows.Forms.Label>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.LinkLabel>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.ListBox>|Elementy są wyrównane do prawej|Nie wpływu|Nie|  
-|<xref:System.Windows.Forms.ListView>|Ustawia kolejność czytania od prawej do lewej; elementy pozostają wyrównane do lewej|Odzwierciedla kontrolki|Tak|  
+|<xref:System.Windows.Forms.ListView>|Ustawia kolejność czytania od prawej do lewej; elementy pozostają wyrównane do lewej|Odzwierciedla kontrolki|Yes|  
 |<xref:System.Windows.Forms.MainMenu>|Wyświetlana wyrównany do prawej od prawej do lewej kolejność odczytu w czasie wykonywania (nie w czasie projektowania)|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.MaskedTextBox>|Wyświetla tekst od prawej do lewej.|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.MonthCalendar>|Nie wpływa na; w zależności od języka systemu operacyjnego|Odzwierciedla kontrolki|Yes|  
@@ -71,7 +71,7 @@ Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługu
 |<xref:System.Windows.Forms.TabControl>|Nie dotyczy tej właściwości|Odzwierciedla kontrolki|Tak|  
 |<xref:System.Windows.Forms.TextBox>|Wyświetla tekst od prawej do lewej od prawej do lewej kolejność odczytu|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.Timer>|Nie jest wymagane|Nie jest wymagane|Nie|  
-|<xref:System.Windows.Forms.ToolBar>|Nie dotyczy tej właściwości; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Żadnego wpływu; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Yes|  
+|<xref:System.Windows.Forms.ToolBar>|Nie dotyczy tej właściwości; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Żadnego wpływu; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Tak|  
 |<xref:System.Windows.Forms.ToolTip>|Ustawia RTL kolejność odczytu|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.TrackBar>|Przewijania lub śledzenie rozpoczyna się od prawej; gdy <xref:System.Windows.Forms.TrackBar.Orientation%2A> , jest pionowa impulsów wystąpić z prawej strony|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.TreeView>|Ustawia RTL tylko kolejność odczytu|Odzwierciedla kontrolki|Tak|  
@@ -82,7 +82,7 @@ Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługu
  Formularze Windows obsługują standardu Unicode, dzięki czemu może zawierać dowolny znak, po utworzeniu aplikacji dwukierunkowej. Jednak nie wszystkie formanty Windows Forms obsługują znaki Unicode na wszystkich platformach. Aby uzyskać więcej informacji, zobacz [kodowanie i globalizacja formularzy Windows](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
- Możesz użyć [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysowanie tekstu za pomocą kolejność czytania od prawej do lewej. <xref:System.Drawing.Graphics.DrawString%2A> Obsługuje metodę, która służy do rysowania tekstu, `StringFormat` parametr, który można ustawić <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> członkiem <xref:System.Drawing.StringFormatFlags> wyliczenie, aby można było odwrócić punkt początkowy dla tekstu.  
+ Umożliwia GDI + Rysowanie tekstu za pomocą kolejność czytania od prawej do lewej. <xref:System.Drawing.Graphics.DrawString%2A> Obsługuje metodę, która służy do rysowania tekstu, `StringFormat` parametr, który można ustawić <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> członkiem <xref:System.Drawing.StringFormatFlags> wyliczenie, aby można było odwrócić punkt początkowy dla tekstu.  
   
 ## <a name="common-dialog-boxes"></a>Wspólne okna dialogowe  
  Narzędzia systemowe, takie jak okno dialogowe Otwieranie pliku będące pod kontrolą systemu Windows. Dziedziczą one elementy języka systemu operacyjnego. Korzystania z wersji systemu Windows przy użyciu ustawień języka tych okien dialogowych za pomocą języków dwukierunkowych będzie działać poprawnie.  

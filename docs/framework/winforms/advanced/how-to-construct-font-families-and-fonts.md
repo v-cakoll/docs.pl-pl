@@ -8,15 +8,15 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: d3c4b5b4293b62cfec0f8471f90be673854e9009
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2d609525858c7a8ff77c0b86900b4fc7d6b4e39a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590363"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505947"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Instrukcje: Tworzenie rodzin czcionek i czcionek
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] grupuje czcionki o tej samej krój czcionki, ale różnych stylów do rodziny czcionek. Na przykład rodziny czcionka Arial zawiera następujące czcionki:  
+GDI + grupuje czcionki o tej samej krój czcionki, ale różnych stylów do rodziny czcionek. Na przykład rodziny czcionka Arial zawiera następujące czcionki:  
   
 - Regularne Arial  
   
@@ -26,7 +26,7 @@ ms.locfileid: "65590363"
   
 - Arial Bold Italic  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa czterech stylów do formularza rodzin: regularnych, pogrubienie, kursywa i pogrubiona kursywa. Określeniem, takie jak *zawęzić* i *zaokrąglone* nie są uważane za style; przeciwnie są one częścią nazwę rodziny. Na przykład Arial Narrow jest rodzinę czcionek, za pomocą następujących elementów członkowskich:  
+ GDI + korzysta z czterech style do formularza rodzin: regularnych, pogrubienie, kursywa i pogrubiona kursywa. Określeniem, takie jak *zawęzić* i *zaokrąglone* nie są uważane za style; przeciwnie są one częścią nazwę rodziny. Na przykład Arial Narrow jest rodzinę czcionek, za pomocą następujących elementów członkowskich:  
   
 - Arial zwykłych Narrow  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65590363"
   
 - Arial wąskie pogrubiona kursywa  
   
- Zanim można rysować tekst z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], musisz utworzyć <xref:System.Drawing.FontFamily> obiektu i <xref:System.Drawing.Font> obiektu. <xref:System.Drawing.FontFamily> Obiektu określa krój czcionki (na przykład Arial), a <xref:System.Drawing.Font> obiekt Określa rozmiar, styl i jednostek.  
+ Można rysować tekst z użyciem interfejsu GDI +, musisz najpierw utworzyć <xref:System.Drawing.FontFamily> obiektu i <xref:System.Drawing.Font> obiektu. <xref:System.Drawing.FontFamily> Obiektu określa krój czcionki (na przykład Arial), a <xref:System.Drawing.Font> obiekt Określa rozmiar, styl i jednostek.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy stylu normalnego czcionka Arial o rozmiarze 16 pikseli. W poniższym kodzie pierwszy argument przekazany do <xref:System.Drawing.Font.%23ctor%2A> Konstruktor jest <xref:System.Drawing.FontFamily> obiektu. Drugi argument określa rozmiar czcionki, mierzoną w jednostkach identyfikowane przez czwarty argument. Trzeci argument określa styl.  

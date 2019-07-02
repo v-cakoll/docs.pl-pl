@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583866"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504713"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Zapytania w LINQ to DataSet
 Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań, takich jak SQL dla relacyjnych baz danych i XQuery dla XML. W związku z tym deweloperzy musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które są zapytania. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferuje prostszy i spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania, zawsze pracujesz z programowania obiektów.  
   
  A [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania operacja obejmuje trzy czynności: uzyskać lub źródeł danych, Utwórz zapytanie i wykonać zapytanie.  
   
- Źródła danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejs ogólny może być odpytywana za pomocą [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Wywoływanie <xref:System.Data.DataTableExtensions.AsEnumerable%2A> na <xref:System.Data.DataTable> zwraca obiekt, który implementuje ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejs, który służy jako źródło danych dla [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania.  
+ Źródła danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejs ogólny może być odpytywana za pomocą [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Wywoływanie <xref:System.Data.DataTableExtensions.AsEnumerable%2A> na <xref:System.Data.DataTable> zwraca obiekt, który implementuje ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejs, który służy jako źródło danych dla programu LINQ do zapytań zestawu danych.  
   
  W zapytaniu określasz dokładnie informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje powinny można sortowane, grupowane i kształtowane przed zwróceniem. W [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], zapytanie jest przechowywana w zmiennej. Jeśli zapytanie zaprojektowano w celu zwrócenia sekwencji wartości, sama zmienna zapytania musi być typem wyliczenia. Ta zmienna zapytania nie podejmuje żadnych działań i nie zwraca żadnych danych; tylko przechowuje informacje o kwerendzie. Po utworzeniu zapytania należy wykonać to zapytanie, aby pobrać wszystkie dane.  
   
@@ -26,7 +26,7 @@ Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania s
  W przeciwieństwie do odroczonego zapytań, zwracające je sekvence hodnot zapytań, które zwracają wartości pojedynczego wystąpienia są wykonywane natychmiast. Oto kilka przykładów pojedynczych zapytań <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, i <xref:System.Linq.Enumerable.First%2A>. Działają one od razu, ponieważ wyniki zapytania są wymagane do obliczenia pojedynczego wyniku. Na przykład w celu obliczenia średniej wyników zapytania zapytanie musi zostać wykonana tak, aby funkcja uśredniania wprowadził pracować z danymi. Można również użyć <xref:System.Linq.Enumerable.ToList%2A> lub <xref:System.Linq.Enumerable.ToArray%2A> metod na podstawie kwerendy, aby wymusić natychmiastowe wykonanie zapytania, który nie generuje wartości pojedynczego wystąpienia. Te techniki, aby wymusić natychmiastowe wykonanie może być przydatne, gdy chcesz buforować wyniki zapytania.
   
 ## <a name="queries"></a>Kwerendy  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania można formułować w dwóch różnych składni: składnia wyrażenia oraz składni zapytania oparte na metodzie zapytania.  
+ Zapytań LINQ to DataSet może zostać sformułowane w dwóch różnych składni: składnia wyrażenia oraz składni zapytania oparte na metodzie zapytania.  
   
 ### <a name="query-expression-syntax"></a>Składnia wyrażenia zapytania  
  Wyrażenia kwerendy są deklaratywne składnię. Ta składnia umożliwia deweloperom Pisanie zapytań w języku C# lub Visual Basic w formacie podobnym do bazy danych SQL. Za pomocą składni wyrażeń zapytania, możesz wykonać nawet złożone filtrowanie, porządkowanie i operacji grupowania na źródeł danych za pomocą minimalnej ilości kodu. Aby uzyskać więcej informacji, zobacz [wyrażenia zapytań LINQ](../../../csharp/linq/index.md#query-expression-overview) i [podstawowe operacje zapytań (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
@@ -39,7 +39,7 @@ Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania s
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Składni zapytania oparte na metodzie  
- Inny sposób, aby sformułować [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania jest przy użyciu zapytań oparte na metodzie. Składnia zapytania oparte na metodzie to sekwencja wywołań metody bezpośredniej [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] metod operatorów, przekazując wyrażenia lambda jako parametry. Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Inny sposób, aby sformułować LINQ do zapytań zestaw danych jest użycie zapytania oparte na metodzie. Składnia zapytania oparte na metodzie to sekwencja wywołań metody bezpośredniej [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] metod operatorów, przekazując wyrażenia lambda jako parametry. Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  W tym przykładzie użyto <xref:System.Linq.Enumerable.Select%2A> do zwrócenia wszystkich wierszy z `Product` i wyświetlić nazwy produktu.  
   

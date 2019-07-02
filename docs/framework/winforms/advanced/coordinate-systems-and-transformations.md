@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d267253a1a75117f986790d1e0002a3607944577
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755769"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506053"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Systemy i przekształcenia współrzędnych
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zapewnia transformacji świata i przekształcenie strony, dzięki czemu można przekształcać (Obróć, skalowanie, tłumaczenie i tak dalej) elementy rysowania. Dwa przekształcenia pozwalają również na pracy w różnych systemów współrzędnych.  
+GDI + zapewnia transformacji świata i przekształcenie strony, dzięki czemu można przekształcać (Obróć, skalowanie, tłumaczenie i tak dalej) elementy rysowania. Dwa przekształcenia pozwalają również na pracy w różnych systemów współrzędnych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Typy systemów współrzędnych](types-of-coordinate-systems.md)  

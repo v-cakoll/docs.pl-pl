@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 682474120cbeeeb4cb83b69188a5a125228279d3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34abfc86e980a24ebb835cfd88d2522f8372c68d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631632"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506023"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Instrukcje: Rysowanie linii z zakończeniem linii
-Możesz narysować początek lub koniec wiersza w jednym z kilku kształtów wywoływana z zakończeniem linii. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] obsługuje kilka zakończeniem linii, takich jak round, kwadratowy, romb i grotu strzałki.  
+Możesz narysować początek lub koniec wiersza w jednym z kilku kształtów wywoływana z zakończeniem linii. GDI + obsługuje kilka zakończeniem linii, takich jak round, kwadratowy, romb i grotu strzałki.  
   
 ## <a name="example"></a>Przykład  
  Możesz określić limity wiersz na początku wiersza (start cap), na koniec wiersza (zakończenie) lub łączniki linii kreskowanej (kreska cap).  

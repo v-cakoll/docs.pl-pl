@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003941"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505697"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Obrazy, mapy bitowe i metapliki
 `Image` Klasa jest abstrakcyjna klasa bazowa, która zapewnia metody do pracy z obrazów rastrowych (mapy bitowe) i wektor obrazy (metapliki). `Bitmap` Klasy i <xref:System.Drawing.Imaging.Metafile> zarówno dziedziczyć z klasy `Image` klasy. `Bitmap` Klasa rozszerza możliwości `Image` klasy, zapewniając dodatkowe metody do ładowania, zapisywania i manipulowania obrazów rastrowych. <xref:System.Drawing.Imaging.Metafile> Klasa rozszerza możliwości `Image` klasy, zapewniając dodatkowe metody dla nagrywania i sprawdzając obrazy wektorowe.  
@@ -22,7 +22,7 @@ ms.locfileid: "62003941"
  W tym artykule omówiono różne formaty obrazu.  
   
  [Metapliki w GDI+](metafiles-in-gdi.md)  
- W tym artykule omówiono [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Obsługa metapliki.  
+ W tym artykule omówiono GDI + Obsługa metapliki.  
   
  [Rysowanie, pozycjonowanie i klonowanie obrazów w GDI+](drawing-positioning-and-cloning-images-in-gdi.md)  
  W tym artykule omówiono metody Rysowanie wektora i obrazy rastrowe z kodem zarządzanym.  

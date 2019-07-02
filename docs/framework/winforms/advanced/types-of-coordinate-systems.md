@@ -15,15 +15,15 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792366"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505262"
 ---
 # <a name="types-of-coordinate-systems"></a>Typy systemów współrzędnych
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa trzech przestrzeni współrzędnych: świata, strony i urządzeń. Współrzędne świata są współrzędne używane do modelowania określonego świata graficznego i współrzędne, które są przekazywane do metody w programie .NET Framework. Współrzędne strony można znaleźć w układzie współrzędnych używana przez powierzchnię rysunku, na przykład jako formularz lub formant. Współrzędne urządzenia są współrzędne używane przez urządzenie fizyczne rysowania, takie jak ekran, lub arkusz papieru. Podczas wywoływania `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, punkty, które są przekazywane do <xref:System.Drawing.Graphics.DrawLine%2A> metody —`(0, 0)` i `(160, 80)`— znajdują się w przestrzeni współrzędnych świata. Przed [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można narysować linię na ekranie, współrzędne przechodzą przez sekwencję transformacji. Jeden przekształcenia, nazywane transformacji świata konwertuje współrzędne świata na współrzędne strony, a inny przekształcenia, o nazwie przekształcenie strony konwertuje współrzędne strony współrzędnych urządzenia.  
+GDI + używa trzech przestrzeni współrzędnych: świata, strony i urządzeń. Współrzędne świata są współrzędne używane do modelowania określonego świata graficznego i współrzędne, które są przekazywane do metody w programie .NET Framework. Współrzędne strony można znaleźć w układzie współrzędnych używana przez powierzchnię rysunku, na przykład jako formularz lub formant. Współrzędne urządzenia są współrzędne używane przez urządzenie fizyczne rysowania, takie jak ekran, lub arkusz papieru. Podczas wywoływania `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, punkty, które są przekazywane do <xref:System.Drawing.Graphics.DrawLine%2A> metody —`(0, 0)` i `(160, 80)`— znajdują się w przestrzeni współrzędnych świata. Przed użyciem interfejsu GDI + można narysować linię na ekranie, współrzędne przechodzi przez sekwencję transformacji. Jeden przekształcenia, nazywane transformacji świata konwertuje współrzędne świata na współrzędne strony, a inny przekształcenia, o nazwie przekształcenie strony konwertuje współrzędne strony współrzędnych urządzenia.  
   
 ## <a name="transforms-and-coordinate-systems"></a>Transformacje i systemów współrzędnych  
  Załóżmy, że chcesz pracować z współrzędnych pochodzenia w treści obszaru klienta, a nie w lewym górnym rogu. Powiedz, na przykład, ma punkt początkowy za 100 pikseli od lewej krawędzi obszaru klienta i 50 pikseli od górnej krawędzi obszaru klienta. Poniższa ilustracja przedstawia układ współrzędnych.  

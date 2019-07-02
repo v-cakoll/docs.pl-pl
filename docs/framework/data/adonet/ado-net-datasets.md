@@ -2,12 +2,12 @@
 title: Zestawy danych ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877223"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504270"
 ---
 # <a name="adonet-datasets"></a>Zestawy danych ADO.NET
 <xref:System.Data.DataSet> Obiekt ma decydujące znaczenie dla obsługi odłączony, rozproszone scenariusze danych za pomocą narzędzia ADO.NET. **DataSet** jest rezydentnego reprezentację danych, które zapewnia spójny model programowania relacyjnych niezależnie od tego źródła danych. Mogą być używane z wieloma i różnymi źródłami danych z danymi XML lub do zarządzania danymi lokalne dla aplikacji. **DataSet** przedstawia kompletny zestaw danych, w tym powiązane tabele, ograniczenia i relacje między tabelami. Poniższa ilustracja przedstawia **DataSet** modelu obiektów.  
@@ -41,7 +41,7 @@ Model obiektów DataSet
  **DataSet**, **DataTable**, i **DataColumn** wszystkie mają **ExtendedProperties** właściwości. **Właściwości rozszerzone** jest **PropertyCollection** umieszczane informacje niestandardowe, takie jak instrukcji SELECT, który został użyty do wygenerowania zestawu wyników lub czasu wygenerowania danych. **ExtendedProperties** kolekcji jest trwały informacji o schemacie dla **zestawu danych**.  
   
 ## <a name="linq-to-dataset"></a>LINQ do DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapewnia zintegrowane języka zapytań możliwości dla odłączonych — dane przechowywane w zestawie danych. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] używa standardu [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] składni i dostarcza sprawdzanie składni w czasie kompilacji, wpisując statycznych i obsługę funkcji IntelliSense podczas korzystania z programu Visual Studio IDE.  
+ LINQ do zestawu danych udostępnia zintegrowane języka zapytań możliwości odłączonego — dane przechowywane w zestawie danych. LINQ do zestawu danych używa standardu [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] składni i dostarcza sprawdzanie składni w czasie kompilacji, wpisując statycznych i obsługę funkcji IntelliSense podczas korzystania z programu Visual Studio IDE.  
   
  Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   

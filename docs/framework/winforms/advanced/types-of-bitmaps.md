@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663951"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505295"
 ---
 # <a name="types-of-bitmaps"></a>Typy map bitowych
 Mapy bitowej jest tablicą bitów, które określają kolor każdego piksela prostokątny tablicy pikseli. Liczba bitów przeznaczone danego piksela określa liczbę kolorów, które mogą być przypisane do tego pikseli. Na przykład, jeśli każdego piksela jest reprezentowany przez 4 bity, następnie piksela podanego można przypisać jedną 16 różnych kolorach (2 ^ 4 = 16). W poniższej tabeli przedstawiono kilka przykładów liczbę kolorów, które mogą zostać przypisani do piksela, reprezentowane przez daną liczbę bitów.  
@@ -53,7 +53,7 @@ Mapy bitowej jest tablicą bitów, które określają kolor każdego piksela pro
  ![Próbki mapy bitowej](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formaty plików graficznych  
- Istnieje wiele standardowych formatów Zapisywanie map bitowych w plikach na dysku. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] obsługuje grafiki plików opisane w sekcjach.  
+ Istnieje wiele standardowych formatów Zapisywanie map bitowych w plikach na dysku. GDI + obsługuje grafiki pliku opisane w sekcjach.  
   
 ### <a name="bmp"></a>BMP  
  BMP to standardowy format używany przez Windows do przechowywania obrazów niezależnych od urządzenia i niezależny od aplikacji. Liczba bitów na piksel (1, 4, 8, 15, 24, 32 lub 64) dla danego pliku BMP jest określony w nagłówku pliku. Pliki BMP z 24 bity na piksel są powszechne. Pliki BMP nie zwykle są kompresowane i dlatego nie są dobrze nadaje się do przeniesienia w Internecie.  

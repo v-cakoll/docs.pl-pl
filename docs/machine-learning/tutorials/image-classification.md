@@ -4,12 +4,12 @@ description: Dowiedz się, jak ponowne szkolenie modelu TensorFlow Klasyfikacja 
 ms.date: 06/12/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401740"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539850"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Samouczek: Ponowne szkolenie TensorFlow klasyfikatora obrazu przy użyciu transferu uczenia i strukturze ML.NET
 
@@ -31,11 +31,11 @@ Co zrobić, jeśli można ponownie użyć modelu, który został już wstępnie 
 
 Próbka jest aplikacja konsolowa która używa strukturze ML.NET do tworzenia obrazu klasyfikatora na podstawie wstępnie uczonego modelu do klasyfikowania obrazów z małą ilością danych szkoleniowych.
 
-Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) repozytorium.
+Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) repozytorium. Należy pamiętać, że domyślnie konfiguracji projektu platformy .NET, w tym samouczku jest przeznaczony dla platformy .NET core 2.2.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform .NET Core".
+* [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform .NET Core". 
 
 * Pakiet Nuget Microsoft.ML 1.0.0
 * Pakiet Nuget Microsoft.ML.ImageAnalytics 1.0.0

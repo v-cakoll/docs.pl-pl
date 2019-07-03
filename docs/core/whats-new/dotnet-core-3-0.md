@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401957"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539272"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>What's new in .NET Core 3.0 (w wersji zapoznawczej 6)
 
@@ -107,6 +107,15 @@ Podczas `dotnet build` lub `dotnet publish`, tworzony jest plik wykonywalny, kt�
 
 Aby opublikować wykonywalnej pojedynczego pliku, należy ustawić `PublishSingleFile` w projekcie lub w wierszu polecenia za pomocą `dotnet publish` polecenia:
 
+```xml
+<PropertyGroup>
+  <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  <PublishSingleFile>true</PublishSingleFile>
+</PropertyGroup>
+```
+
+—lub—
+
 ```console
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
@@ -121,7 +130,7 @@ Aplikacje samodzielne zawierają wszystkie elementy potrzebne do uruchomienia ko
 
 .NET core zawiera teraz ustawienie, który będzie używał [konsolidatora IL](https://github.com/mono/linker) narzędzie do skanowania IL Twojej aplikacji. to narzędzie wykrywa, jaki kod jest wymagana, a następnie przycina nieużywane biblioteki. To narzędzie może znacznie zmniejszyć rozmiar wdrażania niektórych aplikacji.
 
-Aby włączyć to narzędzie `<PublishTrimmed>` ustawienie w projekcie i Opublikuj aplikację samodzielną:
+Aby włączyć to narzędzie, należy dodać `<PublishTrimmed>` ustawienie w projekcie i Opublikuj aplikację samodzielną:
 
 ```xml
 <PropertyGroup>

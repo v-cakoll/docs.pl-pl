@@ -4,16 +4,16 @@ description: Jak automatycznie szkolenie modelu uczenia maszynowego za pomocą k
 author: natke
 ms.date: 06/26/2019
 ms.custom: overview
-ms.openlocfilehash: 6f5bbe3c389e3ca42550a48ef3e6edbc963ac2e9
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 6049db79753986544de18faebfd047aa190af153
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410657"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539802"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Co to jest konstruktor modelu i jak to działa?
 
-Konstruktor modelu strukturze ML.NET jest łatwy do zrozumienia graficzny rozszerzenie programu Visual Studio do tworzenia, uczenia i wdrażania niestandardowych modeli uczenia maszynowego. 
+Konstruktor modelu strukturze ML.NET jest łatwy do zrozumienia graficzny rozszerzenie programu Visual Studio do tworzenia, uczenia i wdrażania niestandardowych modeli uczenia maszynowego.
 
 Konstruktor modelu używa automatycznych usługi machine learning (AutoML) do eksplorowania algorytmów uczenia maszynowego różnych i ustawienia, aby pomóc w znalezieniu taki, który najlepiej odpowiada Twojemu scenariuszowi.
 
@@ -52,7 +52,7 @@ Klasyfikacja binarna jest używany do skategoryzowania danych na dwie klasy (tak
 - Ta transakcja karty kredytowej jest fałszywe? (wykrywanie oszustw)
 
 Jeśli dany scenariusz wymaga klasyfikacji na dwie kategorie, możesz użyć tego szablonu, za pomocą własnego zestawu danych.
- 
+
 #### <a name="issue-classification-multiclass-classification"></a>Klasyfikacja problemów (klasyfikacja wieloklasowa)
 
 Klasyfikacja problemu może służyć do klasyfikowania problemów opinii (na przykład w serwisie GitHub) klientów przy użyciu problem tytuł i opis. To przykład zadania klasyfikacji wieloklasowej.
@@ -142,10 +142,10 @@ Możesz podać czasu szkoleń. Ogólnie rzecz biorąc szkolenia dłużej daje ba
 Rozmiar zestawu danych  | Typ zestawu danych       | Średni Czas na nauczenie
 ------------- | ------------------ | --------------
 0 - 10 mb     | Liczbowe i tekstowe   | 10 s
-10 - 100 mb   | Liczbowe i tekstowe   | 10 min 
-100 – 500 mb  | Liczbowe i tekstowe   | 30 min 
-500 — 1 Gb    | Liczbowe i tekstowe   | 60 min 
-1 Gb+         | Liczbowe i tekstowe   | 3 godziny + 
+10 - 100 mb   | Liczbowe i tekstowe   | 10 min
+100 – 500 mb  | Liczbowe i tekstowe   | 30 min
+500 — 1 Gb    | Liczbowe i tekstowe   | 60 min
+1 Gb+         | Liczbowe i tekstowe   | 3 godziny +
 
 Dokładny czas na nauczenie również zależy od:
 
@@ -160,13 +160,13 @@ Konstruktor modelu przetestowano w skali od 1 TB pojemności zestawu danych, ale
 
 Ocena jest proces za pomocą uczonego modelu do prognozowania z nowymi danymi testu, a następnie pomiaru jak dobre prognozy są.
 
-Konstruktor modelu dzieli dane szkoleniowe na zestaw szkoleniowy i zestaw testów. Dane szkoleniowe (80%) Służy do nauczenia modelu, a dane testowe (20%) jest wstrzymywane do oceny modelu.  Metryki używane do oceny, zależą od zadania uczenia Maszynowego. Aby uzyskać więcej informacji, zobacz [model metryk oceny](resources/metrics.md).  
+Konstruktor modelu dzieli dane szkoleniowe na zestaw szkoleniowy i zestaw testów. Dane szkoleniowe (80%) Służy do nauczenia modelu, a dane testowe (20%) jest wstrzymywane do oceny modelu.  Metryki używane do oceny, zależą od zadania uczenia Maszynowego. Aby uzyskać więcej informacji, zobacz [model metryk oceny](resources/metrics.md).
 
 ### <a name="sentiment-analysis-binary-classification"></a>Analiza tonacji (klasyfikacja binarna)
 
 Metryka domyślna Klasyfikacja binarna problemów jest **dokładność**. Dokładność definiuje część poprawne prognozy modelu sprawia, że za pośrednictwem zestawu danych testowych. **Bliżej 100%, tym lepiej jest**.
 
-Inne metryki zgłaszane, takie jak AUC (powierzchni pod krzywą), czyli miary stawkę dodatnią wartość true, a fałszywie dodatnich, powinien być większy niż 0,50 dla modeli do przyjęcia. 
+Inne metryki zgłaszane, takie jak AUC (powierzchni pod krzywą), czyli miary stawkę dodatnią wartość true, a fałszywie dodatnich, powinien być większy niż 0,50 dla modeli do przyjęcia.
 
 Dodatkowe metryki, takie jak ocena F1 może służyć do kontrolowania równowagę między precyzji (wskaźnik poprawne prognozy do całkowitej prognozy tej klasy) oraz odwołania (część poprawne prognozy do całkowitej rzeczywiste elementy członkowskie tej klasy).
 
@@ -176,15 +176,14 @@ Metryka domyślnej dla klasyfikacji wieloklasowej problemów jest **wczesnych do
 
 W przypadku problemów, których data dzieli się na wielu klas istnieją dwa rodzaje dokładność:
 
-- Operacje Micro dokładność: ułamek prognoz, które są prawidłowe we wszystkich wystąpieniach. W tym scenariuszu klasyfikacji problemu micro dokładności jest część przychodzące problemy, które zostaną przypisane do odpowiedniej kategorii. 
+- Operacje Micro dokładność: ułamek prognoz, które są prawidłowe we wszystkich wystąpieniach. W tym scenariuszu klasyfikacji problemu micro dokładności jest część przychodzące problemy, które zostaną przypisane do odpowiedniej kategorii.
 - Dokładność makra: średni dokładności na poziomie klasy. W tym scenariuszu klasyfikacji problemu dokładności jest mierzona dla każdej kategorii, a następnie są uśredniane dokładności kategorii. Dla tej metryki dla wszystkich klas są podane weight równe. W przypadku zestawów danych doskonale o zrównoważonym obciążeniu (jeśli istnieje taka sama liczba przykłady wystąpienia każdej kategorii), micro dokładności i dokładność makra są takie same.
-
 
 ### <a name="price-prediction-regression"></a>Przewidywanie cen (regresja)
 
 Metryka domyślnej dla problemów regresji jest **RSquared**. 1 jest najlepsze możliwe wartości. Im bliżej RSquared jest 1, tym lepiej modelu.
 
-Inne metryki zgłoszony, takie jak utrata bezwzględną, kwadrat straty, i utratę usługi RMS może służyć do zrozumienia modelu i porównaj je z innymi modelami regresji. 
+Inne metryki zgłoszony, takie jak utrata bezwzględną, kwadrat straty, i utratę usługi RMS może służyć do zrozumienia modelu i porównaj je z innymi modelami regresji.
 
 ## <a name="improve"></a>Poprawa
 
@@ -192,7 +191,7 @@ Jeśli model ocenę wydajności nie jest tak dobre, jak ma to być, możesz:
 
 * Szkolenie na dłuższy okres czasu. Za pomocą więcej czasu, aparat learning automatycznych maszyny do wypróbowania więcej algorytmów i ustawienia.
 
-* Dodawanie większej ilości danych. Czasami ilość danych nie jest wystarczające do nauczenia modelu uczenia maszynowego wysokiej jakości. 
+* Dodawanie większej ilości danych. Czasami ilość danych nie jest wystarczające do nauczenia modelu uczenia maszynowego wysokiej jakości.
 
 * Saldo danych. Klasyfikacja zadań upewnij się, że zestaw szkoleniowy jest równoważone w kategorii. Na przykład, jeśli ma cztery klasy 100 przykłady szkolenia i dwie klasy pierwszy (tag1 i tag2) są używane do 90 rekordy, ale inne dwóch (tag3 i tag4) są używane tylko w pozostałych 10 rekordów, Brak danych o zrównoważonym obciążeniu może spowodować, że model można mieć trudności z loro ectly przewidzieć tag3 lub tag4.
 

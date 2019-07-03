@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 2fe0360a0548bddb0ebba566eca0d121c9ec9160
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32cdb5b0f27817856ab586eb38f89df63c1c4d3b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774702"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539857"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Instrukcje: Wywoływanie funkcji definiowanych przez model w zapytaniach
-W tym temacie opisano sposób wywołania funkcji, które są zdefiniowane w modelu koncepcyjnym z poziomu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania.  
+W tym temacie opisano sposób wywołania funkcji, które są zdefiniowane w modelu koncepcyjnym z w ramach programu LINQ do zapytań jednostki.  
   
- Poniższa procedura zawiera WYSOKOPOZIOMOWY zarys wywoływania funkcji definiowanych przez model z poziomu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. W poniższym przykładzie zapewnia więcej szczegółów na temat czynności opisane w procedurze. W procedurze przyjęto założenie, że zdefiniowano funkcję w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
+ Poniższa procedura zawiera WYSOKOPOZIOMOWY zarys wywoływania definiowanych przez model funkcji z w ramach LINQ do kwerendy jednostek. W poniższym przykładzie zapewnia więcej szczegółów na temat czynności opisane w procedurze. W procedurze przyjęto założenie, że zdefiniowano funkcję w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>Aby wywołać funkcję zdefiniowaną w modelu koncepcyjnym  
   
 1. Dodaj powszechnie używaną metodą języka wspólnego (CLR) do aplikacji, która mapuje do funkcji zdefiniowanych w modelu koncepcyjnym. Aby zmapować metody, należy najpierw zastosować <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> do metody. Należy pamiętać, że <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> i <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> parametrów atrybutu są odpowiednio nazwę przestrzeni nazw modelu koncepcyjnego i nazwy funkcji w modelu koncepcyjnym. Funkcja rozpoznawania nazw dla programu LINQ jest uwzględniana wielkość liter.  
   
-2. Wywołaj funkcję [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania.  
+2. Wywołanie funkcji w zapytaniu składnika LINQ to Entities.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje sposób wywołania funkcji, która jest zdefiniowana w modelu koncepcyjnym z poziomu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. W przykładzie użyto modelu szkoły. Aby uzyskać informacje na temat modelu szkoły, zobacz [tworzenie przykładowej bazy danych School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) i [generowania edmx School pliku](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
+ Poniższy przykład przedstawia sposób wywołania funkcji, która jest zdefiniowana w modelu koncepcyjnego z w ramach LINQ do kwerendy jednostek. W przykładzie użyto modelu szkoły. Aby uzyskać informacje na temat modelu szkoły, zobacz [tworzenie przykładowej bazy danych School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) i [generowania edmx School pliku](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
   
  Następująca funkcja modelu koncepcyjnego zwraca liczbę lat, ponieważ został zatrudniony pod kierunkiem instruktora. Aby uzyskać informacje dotyczące dodawania funkcji do modelu koncepcyjnego, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).)  
   
@@ -37,7 +37,7 @@ W tym temacie opisano sposób wywołania funkcji, które są zdefiniowane w mode
  [!code-vb[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#2)]  
   
 ## <a name="example"></a>Przykład  
- Teraz można wywołać funkcję modelu koncepcyjnego z poziomu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Poniższy kod wywołuje metodę w celu wyświetlenia wszystkich instruktorów, które zostały wynajęte ponad dziesięć lat temu:  
+ Teraz można wywołać funkcję modelu koncepcyjnego z w ramach LINQ do kwerendy jednostek. Poniższy kod wywołuje metodę w celu wyświetlenia wszystkich instruktorów, które zostały wynajęte ponad dziesięć lat temu:  
   
  [!code-csharp[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#3)]
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  

@@ -1,20 +1,18 @@
 ---
 title: Wybierz wersję platformy .NET Core do użycia
 description: Dowiedz się, jak platformy .NET Core znajdzie i automatycznie wybiera wersje środowiska uruchomieniowego dla Twojego programu. Ponadto w tym artykule pokazano, jak do wymuszenia określonej wersji.
-author: billwagner
-ms.author: wiwagn
-ms.date: 06/27/2018
+author: thraka
+ms.author: adegeo
+ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646923"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539302"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Wybierz wersję platformy .NET Core do użycia
-
-[!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
 W tym artykule opisano zasady używane przez narzędzia .NET Core, zestaw SDK i środowiska uruchomieniowego do wybierania wersji. Te zasady zapewniają równowagi między uruchamiających aplikacje przy użyciu określonej wersji i włączenie jej obsługi ułatwiają realizację uaktualniania maszyny użytkowników końcowych i deweloper. Te zasady, wykonaj następujące czynności:
 
@@ -87,19 +85,20 @@ Host wybiera najnowszą wersję poprawki zainstalowane na komputerze. Na przykł
 
 Jeśli nie jest dopuszczalne `2.0.*` wersji zostanie znaleziony, nowy `2.*` wersja jest używana. Na przykład, jeśli określono `netcoreapp2.0` i tylko `2.1.0` jest zainstalowany, jest uruchamiana aplikacja, za pomocą `2.1.0` środowiska uruchomieniowego. To zachowanie jest określany jako "wersja pomocnicza przodu." Niższe wersje również nie były uznawane za. Po zainstalowaniu nie akceptowalnego czasu wykonywania aplikacja nie będzie działać.
 
-Kilka przykładów użycia pokazują to zachowanie:
+Kilka przykładów użycia pokazują to zachowanie, jeśli platformą docelową jest program w wersji 2.0:
 
-- 2.0.4 jest wymagana. 2.0.5 jest zainstalowana najnowsza wersja poprawki. 2.0.5 jest używany.
-- 2.0.4 jest wymagana. Nie w wersji 2.0. * wersje są zainstalowane. 1.1.1 jest najwyższym zainstalowanego środowiska uruchomieniowego. Wyświetlany jest komunikat o błędzie.
-- 2.0.4 jest wymagana. 2.0.0 jest najwyższa wersja zainstalowana. Wyświetlany jest komunikat o błędzie.
-- 2.0.4 jest wymagana. Nie w wersji 2.0. * wersje są zainstalowane. 2.2.2 jest najnowsza wersja środowiska uruchomieniowego 2.x zainstalowane. 2.2.2 jest używany.
-- 2.0.4 jest wymagana. Brak wersji 2.x są instalowane. 3.0.0 (zainstalowano nie jest obecnie dostępna wersja). Wyświetlany jest komunikat o błędzie.
+- określono w wersji 2.0. 2.0.5 jest zainstalowana najnowsza wersja poprawki. 2.0.5 jest używany.
+- określono w wersji 2.0. Nie w wersji 2.0. * wersje są zainstalowane. 1.1.1 jest najwyższym zainstalowanego środowiska uruchomieniowego. Wyświetlany jest komunikat o błędzie.
+- określono w wersji 2.0. Nie w wersji 2.0. * wersje są zainstalowane. 2.2.2 jest najnowsza wersja środowiska uruchomieniowego 2.x zainstalowane. 2.2.2 jest używany.
+- określono w wersji 2.0. Brak wersji 2.x są instalowane. 3.0.0 jest zainstalowany. Wyświetlany jest komunikat o błędzie.
 
 Wersja pomocnicza przodu ma jeden efekt uboczny, który może mieć wpływ na użytkowników końcowych. Rozważmy następujący scenariusz:
 
-- 2.0.4 jest wymagana. Nie w wersji 2.0. * wersje są zainstalowane. 2.2.2 jest zainstalowany. 2.2.2 jest używany.
-- 2.0.5 nowszy jest zainstalowany. 2.0.5 stosowanych w odniesieniu do uruchomienia kolejnych aplikacji, nie 2.2.2. Najnowszą poprawkę wymagana wersja pomocnicza jest preferowane w porównaniu do nowszej wersji pomocniczej.
-- Istnieje możliwość, że 2.0.5 i 2.2.2 zachowywać się inaczej, szczególnie w przypadku scenariuszy, takich jak serializacji danych binarnych.
+1. Aplikacja określa, że wymagane jest w wersji 2.0.
+2. Uruchamiania w wersji 2.0. * to nie jest zainstalowany, jednak 2.2.2 jest. 2\.2.2, użyta zostanie wersja.
+3. Później użytkownik instaluje 2.0.5 i uruchamia ponownie aplikację, 2.0.5 będzie używany.
+
+Istnieje możliwość, że 2.0.5 i 2.2.2 zachowywać się inaczej, szczególnie w przypadku scenariuszy, takich jak serializacji danych binarnych.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Niezależne wdrożenia obejmują wybrane środowisko uruchomieniowe
 

@@ -2,12 +2,12 @@
 title: Omówienie programu Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 498d0478dc94048a69c393151d3ff8a752706e1c
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307347"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539469"
 ---
 # <a name="entity-framework-overview"></a>Omówienie programu Entity Framework
 
@@ -45,7 +45,7 @@ Model magazynu i mapowania można zmienić zgodnie z potrzebami bez koniecznośc
 
 Więcej niż kolejna rozwiązaniu mapowania obiektowo relacyjny [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] to zasadniczo dotyczące włączania aplikacji dostępu i zmiany danych, która jest reprezentowana jako jednostek i relacji w modelu koncepcyjnym. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Używa informacji w modelu i mapowania plików do translacji zapytań obiektu dla typów jednostek reprezentowanych w model koncepcyjny do zapytań specyficznych dla źródła danych. Wyniki zapytania są zmaterializowanego w obiektach, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zarządza. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Oferuje następujące sposoby wykonywania zapytań modelu koncepcyjnego i zwracać obiekty:
 
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Wykonywanie zapytania dotyczącego typów jednostek, które są zdefiniowane w modelu koncepcyjnym zapewnia obsługę Language-Integrated Query (LINQ). Aby uzyskać więcej informacji, zobacz [składnik LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- Składnik LINQ to Entities. Wykonywanie zapytania dotyczącego typów jednostek, które są zdefiniowane w modelu koncepcyjnym zapewnia obsługę Language-Integrated Query (LINQ). Aby uzyskać więcej informacji, zobacz [składnik LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialekt niezależny od magazynu programu SQL Server, który współpracuje bezpośrednio z jednostkami w modelu koncepcyjnym i, która obsługuje pojęcia modelu Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest używany zarówno za pomocą zapytań dotyczących obiektów i zapytania, które są wykonywane przy użyciu dostawca EntityClient. Aby uzyskać więcej informacji, zobacz [omówienie jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 

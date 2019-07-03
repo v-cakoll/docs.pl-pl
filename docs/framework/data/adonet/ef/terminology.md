@@ -2,12 +2,12 @@
 title: Terminologia programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: bc3712628d308629208af893e8fdee16cbba1e93
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306338"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539877"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia programu Entity Framework
 W tym temacie definiuje warunki często w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji. Podano linki do powiązanych tematów, w którym dostępne są dodatkowe informacje.  
@@ -44,7 +44,7 @@ W tym temacie definiuje warunki często w [!INCLUDE[adonet_ef](../../../../../in
 |Niezależnie od skojarzenia|Skojarzenia między jednostkami, które są reprezentowane i śledzone przez tworzenie niezależnych obiektów.|  
 |klawisz|Atrybut typu jednostki, która określa, które właściwości lub zestaw właściwości używany do identyfikowania unikatowe wystąpień typu jednostki. Reprezentowane w warstwie obiektów przez <xref:System.Data.EntityKey> klasy.<br /><br /> Aby uzyskać więcej informacji, zobacz [klucz elementu (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) i [klucz jednostki](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |Ładowanie z opóźnieniem|Gdy obiekty są zwracane przez zapytanie, obiekty powiązane nie są ładowane w tym samym czasie. Zamiast tego są one ładowane automatycznie podczas uzyskiwania dostępu do właściwości nawigacji.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Składnia zapytania definiuje jego zestaw operatorów, które umożliwiają przechodzenie, filtrowanie i operacje być wyrażone w sposób bezpośredni i deklaracyjny w Visual C# i Visual Basic.<br /><br /> Aby uzyskać więcej informacji, zobacz [składnik LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|LINQ do Jednostek|Składnia zapytania definiuje jego zestaw operatorów, które umożliwiają przechodzenie, filtrowanie i operacje być wyrażone w sposób bezpośredni i deklaracyjny w Visual C# i Visual Basic.<br /><br /> Aby uzyskać więcej informacji, zobacz [składnik LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |mapowanie|Specyfikacja korelacji między elementów w modelu koncepcyjnego i elementów w modelu magazynu.<br /><br /> Aby uzyskać więcej informacji, zobacz [Specyfikacja MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |pliku MSL albo identyfikatorem|Plik XML, który zawiera mapowania między modelu koncepcyjnego i modelem w pamięci masowej w pliku MSL.|  
 |mapping specification language (MSL)|Język oparty na formacie XML, który jest używany do mapowania elementy zdefiniowane w model koncepcyjny do elementów w modelu magazynu.<br /><br /> Aby uzyskać więcej informacji, zobacz [Specyfikacja MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  

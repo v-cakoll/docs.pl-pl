@@ -2,24 +2,24 @@
 title: Standardowe operatory zapytań w zapytaniach składnika LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2661f1b492ff8f2ed18c7b396326562050ca45b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797725"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539442"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardowe operatory zapytań w zapytaniach składnika LINQ to Entities
 W zapytaniu należy określić informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje powinny można sortowane, grupowane i kształtowane przed zwróceniem. LINQ zapewnia zestaw metod standardowego zapytania, które można użyć w zapytaniu. Większość z tych metod działają na sekwencje; w tym kontekście sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Funkcjonalność zapytań operatorów standardowej kwerendy obejmuje filtrowania, projekcji, agregacji, sortowanie, grupowanie, stronicowanie i więcej. Niektórych często używane standardowego zapytania, operatory są wyposażone w dedykowane składni słowa kluczowego, dzięki czemu można wywołać przy użyciu składni wyrażeń zapytania. Wyrażenie kwerendy jest inny, bardziej czytelny sposób wyrażania kwerendę, niż odpowiednik oparte na metodzie. Klauzule wyrażenia zapytania są tłumaczone na wywołania do metody zapytania w czasie kompilacji. Aby uzyskać listę standardowych operatorów zapytań, które mają klauzule wyrażenia zapytania równoważne, zobacz [standardowe operatory zapytań — Przegląd](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
- Nie wszystkie standardowe operatory zapytań są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Aby uzyskać więcej informacji, zobacz [obsługiwane i nieobsługiwane LINQ metody (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Ten temat zawiera informacje o standardowych operatorów zapytań, które są specyficzne dla [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Aby uzyskać więcej informacji o znanych problemach w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytań, zobacz [znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
+ Nie wszystkie standardowe operatory zapytań są obsługiwane w składniku LINQ do zapytań jednostki. Aby uzyskać więcej informacji, zobacz [obsługiwane i nieobsługiwane LINQ metody (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Ten temat zawiera informacje o standardowych operatorów zapytań, które są specyficzne dla programu LINQ to Entities. Aby uzyskać więcej informacji o znanych problemach w składniku LINQ do jednostek zapytań, zobacz [znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
 ## <a name="projection-and-filtering-methods"></a>Prognoza i filtrowanie metody  
  *Projekcja* odwołuje się do przekształcania elementów zestawu w formie żądanego wyników. Na przykład można poddawać projekcji podzbiór właściwości muszą z każdego obiektu w wyniku ustawisz, można właściwość projektu i przeprowadzania obliczeń matematycznych lub można poddawać projekcji cały obiekt z zestawu wyników. Metody rzutowania są `Select` i `SelectMany`.  
   
  *Filtrowanie* odwołuje się do operacji ograniczyć zestaw wyników, aby zawiera tylko te elementy, które pasują do określonego warunku. Metoda filtrowania jest `Where`.  
   
- Większość przeciążenia projekcji i filtrowania metody są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], z wyjątkiem tych, które akceptują argument pozycyjny.  
+ Większość przeciążenia Prognoza i metod filtrowania są obsługiwane w składniku LINQ to Entities, z wyjątkiem tych, które akceptują argument pozycyjny.  
   
 ## <a name="join-methods"></a>Dołącz do metody  
  Łączenie jest operacją ważne w zapytaniach, przeznaczonych dla źródeł danych, które mają relacje nie można nawigować do siebie nawzajem. Przyłączenia dwóch źródeł danych jest skojarzenie obiektów w jednym źródle danych z obiektów w źródle danych, które mają wspólny atrybut lub właściwość. Metody to join `Join` i `GroupJoin`.  
@@ -29,7 +29,7 @@ W zapytaniu należy określić informacje, które mają zostać pobrane ze źró
 ## <a name="set-methods"></a>Ustaw metody  
  Operacje na zestawie w składniku LINQ to operacje zapytań, które oprzeć ich zestawów wyników na obecność lub Brak elementów równoważnych w tej samej lub innej kolekcji (lub zestaw). Metody set są `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect`, i `Union`.  
   
- Większość przeciążenia metod zestawu są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], ale istnieją pewne różnice w zachowaniu w porównaniu do programu LINQ do obiektów. Jednak ustawić metody, które używają <xref:System.Collections.Generic.IEqualityComparer%601> nie są obsługiwane, ponieważ nie można przetłumaczyć modułu porównującego do źródła danych.  
+ Większość przeciążenia metody set są obsługiwane w składniku LINQ to Entities, chociaż istnieją pewne różnice w zachowaniu w porównaniu do programu LINQ do obiektów. Jednak ustawić metody, które używają <xref:System.Collections.Generic.IEqualityComparer%601> nie są obsługiwane, ponieważ nie można przetłumaczyć modułu porównującego do źródła danych.  
   
 ## <a name="ordering-methods"></a>Metody sortowania  
  Porządkowanie i sortowania, odnosi się do porządkowania elementów zestawu wyników, w oparciu o jeden lub więcej atrybutów. Określając z więcej niż jednego kryterium sortowania może przerwać ties w obrębie grupy.  

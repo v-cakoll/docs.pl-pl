@@ -2,12 +2,12 @@
 title: Wariancje w interfejsach (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815963"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539495"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Wariancje w interfejsach (C#)
 
@@ -87,7 +87,7 @@ IEnumerable<int> integers = new List<int>();
 // IEnumerable<Object> objects = integers;
 ```
 
-Jest również pamiętać, że klasy, które implementują interfejsów typu variant, są nadal niezmienne. Na przykład mimo że <xref:System.Collections.Generic.List%601> implementuje interfejs kowariantne <xref:System.Collections.Generic.IEnumerable%601>, nie można niejawnie przekonwertować `List<Object>` do `List<String>`. Jest to zilustrowane w poniższym przykładzie kodu.
+Jest również pamiętać, że klasy, które implementują interfejsów typu variant, są nadal niezmienne. Na przykład mimo że <xref:System.Collections.Generic.List%601> implementuje interfejs kowariantne <xref:System.Collections.Generic.IEnumerable%601>, nie można niejawnie przekonwertować `List<String>` do `List<Object>`. Jest to zilustrowane w poniższym przykładzie kodu.
 
 ```csharp
 // The following line generates a compiler error

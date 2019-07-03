@@ -1,21 +1,28 @@
 ---
 title: polecenia DotNet migracji polecenia
 description: Migrowanie dotnet polecenia migrowana projekt i wszystkie jego zależności.
-ms.date: 05/25/2018
-ms.openlocfilehash: 861cd2cb982c6f41baf00a2cbd7e04b26816af76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631949"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539398"
 ---
-# <a name="dotnet-migrate"></a>Migrowanie DotNet
+# <a name="dotnet-migrate"></a>dotnet migrate
 
+**Ten temat dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 
-`dotnet migrate` -Wykonuje migrację projektów w wersji zapoznawczej 2 platformy .NET Core do projektu .NET Core SDK 1.0.
+`dotnet migrate` -Wykonuje migrację projektów w wersji zapoznawczej 2 platformy .NET Core do projektu .NET Core SDK stylu.
+
+> [!NOTE]
+> `dotnet migrate` zostaną usunięte z zestawu .NET Core 3.0 SDK w następnej wersji (wersja zapoznawcza).
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -26,7 +33,7 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet migrate` Polecenia migrowana prawidłowe 2 (wersja zapoznawcza) *project.json*— na podstawie projektu prawidłowe platformy .NET Core SDK 1.0 *csproj* projektu.
+`dotnet migrate` Polecenia migrowana prawidłowe 2 (wersja zapoznawcza) *project.json*— na podstawie projektu prawidłowy zestaw SDK platformy .NET Core — styl *csproj* projektu.
 
 Domyślnie polecenie jest migrowana projektu głównego i odwołania do projektu, które zawiera projekt główny. To zachowanie jest wyłączone, za pomocą `--skip-project-references` opcji w czasie wykonywania.
 

@@ -2,17 +2,21 @@
 title: polecenie wypychania nuget DotNet
 description: Polecenie wypychania nuget dotnet wypycha pakietu do serwera i publikuje go.
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 7382cb93da3d7ed68f5731b3996c735c3f1461e4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 4d5efa94c6a4494158aea447be98256d2a307cd6
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631712"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539132"
 ---
-# <a name="dotnet-nuget-push"></a>wypychane nuget DotNet
+# <a name="dotnet-nuget-push"></a>dotnet nuget push
 
+**Ten temat dotyczy: ✓** platformy .NET Core SDK w wersji 1.x i nowszymi wersjami
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 
@@ -20,23 +24,11 @@ ms.locfileid: "65631712"
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Opis
 
@@ -49,8 +41,6 @@ dotnet nuget push [-h|--help]
   Określa ścieżkę pliku do pakietu, który ma zostać wypchnięty.
 
 ## <a name="options"></a>Opcje
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-d|--disable-buffering`**
 
@@ -96,46 +86,6 @@ Drukuje krótki pomoc dotyczącą polecenia.
 
   Określa limit czasu Wypychanie do serwera w ciągu kilku sekund. Wartość domyślna to 300 sekund (5 minut). Określanie 0 (zero sekund) stosuje się wartością domyślną.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-d|--disable-buffering`**
-
-  Wyłącza buforowanie podczas wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.
-
-* **`--force-english-output`**
-
-  Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.
-
-* **`-h|--help`**
-
-  Drukuje krótki pomoc dotyczącą polecenia.
-
-* **`-k|--api-key <API_KEY>`**
-
-  Klucz interfejsu API dla serwera.
-
-* **`-n|--no-symbols`**
-
-  Nie wypychania symbole (nawet jeśli istnieje).
-
-* **`-s|--source <SOURCE>`**
-
-  Określa adres URL serwera. Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.
-
-* **`-sk|--symbol-api-key <API_KEY>`**
-
-  Klucz interfejsu API serwera symboli.
-
-* **`-ss|--symbol-source <SOURCE>`**
-
-  Określa adres URL serwera symboli.
-
-* **`-t|--timeout <TIMEOUT>`**
-
-  Określa limit czasu Wypychanie do serwera w ciągu kilku sekund. Wartość domyślna to 300 sekund (5 minut). Określanie 0 (zero sekund) stosuje się wartością domyślną.
-
----
-
 ## <a name="examples"></a>Przykłady
 
 * Wypycha *foo.nupkg* do domyślnego źródła wypychania, określając klucz interfejsu API:
@@ -173,3 +123,7 @@ Drukuje krótki pomoc dotyczącą polecenia.
   ```console
   dotnet nuget push *.nupkg
   ```
+  
+  > [!NOTE]
+  > To polecenie nie działa, prawdopodobnie z powodu błędów, które istniały w starszych wersjach zestawu SDK (zestaw SDK programu .NET Core 2.1 i wcześniejszych wersjach).
+  > Aby rozwiązać ten problem, Uaktualnij używanej wersji zestawu SDK lub zamiast tego uruchom następujące polecenie: `dotnet nuget push **/*.nupkg`

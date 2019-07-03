@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489902"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539735"
 ---
 # <a name="null-comparisons"></a>Porównania wartości Null
-A `null` wartości w źródle danych wskazuje, czy wartość jest nieznany. W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania, można sprawdzić w przypadku wartości null wartości, tak aby niektóre obliczeń lub porównania są realizowane wyłącznie na wiersze, które mają prawidłowy lub innych niż null, danych. Semantyka wartości null CLR, jednak może różnić się od semantyka wartości null, źródła danych. Większość baz danych użyć wersji przechowywanymi w trzech logiki do obsługi porównania wartości null. Oznacza to, że porównanie z wartością null nie można rozpoznać `true` lub `false`, daje w wyniku `unknown`. Często jest to implementacja ANSI na wartości null, ale nie zawsze jest to wymagane.  
+A `null` wartości w źródle danych wskazuje, czy wartość jest nieznany. W zapytaniach składnika LINQ to Entities możesz sprawdzić wartości null, aby niektórych obliczeń lub porównania są realizowane wyłącznie na wiersze, które mają prawidłowe lub innych niż null, dane. Semantyka wartości null CLR, jednak może różnić się od semantyka wartości null, źródła danych. Większość baz danych użyć wersji przechowywanymi w trzech logiki do obsługi porównania wartości null. Oznacza to, że porównanie z wartością null nie można rozpoznać `true` lub `false`, daje w wyniku `unknown`. Często jest to implementacja ANSI na wartości null, ale nie zawsze jest to wymagane.  
   
  Domyślnie w programie SQL Server porównywanie wartości null jest równa null, zwraca wartość null. W poniższym przykładzie wiersze gdzie `ShipDate` jest wartością null są wykluczone z zestawu wyników i instrukcji języka Transact-SQL zwróci 0 wierszy.  
   
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Przekazywanie kolekcji o wartości Null do funkcji agregacji  
- W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], jeśli przekazujesz kolekcji, która obsługuje `IQueryable` do funkcji agregującej, operacje agregacji są wykonywane w bazie danych. Może to być różnice w wynikach zapytania, które były wykonywane w pamięci i zapytania, które zostało wykonane w bazie danych. Za pomocą zapytania w pamięci Jeśli brak dopasowań, zapytanie zwraca zero. W bazie danych, takie same zapytanie zwraca `null`. Jeśli `null` wartość jest przekazywana do funkcji agregującej LINQ, zostanie zgłoszony wyjątek. Aby zaakceptować to możliwe `null` wartości rzutowania typów i właściwości typów, które odbierają wyników zapytania do typów dopuszczających wartości null.  
+ W składniku LINQ to Entities, gdy przekazujesz kolekcji, która obsługuje `IQueryable` do funkcji agregującej, operacje agregacji są wykonywane w bazie danych. Może to być różnice w wynikach zapytania, które były wykonywane w pamięci i zapytania, które zostało wykonane w bazie danych. Za pomocą zapytania w pamięci Jeśli brak dopasowań, zapytanie zwraca zero. W bazie danych, takie same zapytanie zwraca `null`. Jeśli `null` wartość jest przekazywana do funkcji agregującej LINQ, zostanie zgłoszony wyjątek. Aby zaakceptować to możliwe `null` wartości rzutowania typów i właściwości typów, które odbierają wyników zapytania do typów dopuszczających wartości null.  
   
 ## <a name="see-also"></a>Zobacz także
 

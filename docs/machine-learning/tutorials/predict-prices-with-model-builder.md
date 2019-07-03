@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db9788e3065a0f2f21d712b2d4826efea2d8a829
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410654"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539633"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Przewidywanie za pomocą regresji za pomocą konstruktora modelu cen
 
@@ -51,7 +51,7 @@ Aby uzyskać listę wymagań wstępnych i instrukcje dotyczące instalacji, odwi
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy *taksówek taryfy train.csv* plik i wybierz **właściwości**. W obszarze **zaawansowane**, zmień wartość właściwości **Kopiuj do katalogu wyjściowego** do **Kopiuj Jeśli nowszy**.
 
-Każdy wiersz w `taxi-fare-train.csv` zestaw danych zawiera szczegółowe informacje o wymianie danych wprowadzonych przez taksówek. 
+Każdy wiersz w `taxi-fare-train.csv` zestaw danych zawiera szczegółowe informacje o wymianie danych wprowadzonych przez taksówek.
 
 1. Otwórz **taksówek taryfy train.csv** zestawu danych
 
@@ -102,7 +102,7 @@ Czas wymagany do do nauczenia modelu jest proporcjonalny do ilości danych. Skor
 Przez cały proces szkolenia postępu dane są wyświetlane w `Progress` części kroku pociągu.
 
 - Stan wyświetlany stan ukończenia procesu uczenia.
-- Najlepsze dokładności Wyświetla dokładność najlepiej działający model znalezione przez konstruktora modeli do tej pory. Większą dokładność oznacza, że model przewiduje właściwie na danych testowych. 
+- Najlepsze dokładności Wyświetla dokładność najlepiej działający model znalezione przez konstruktora modeli do tej pory. Większą dokładność oznacza, że model przewiduje właściwie na danych testowych.
 - Najlepszy algorytm Wyświetla nazwę algorytmu działają najlepiej wykonać znalezione przez konstruktora modeli do tej pory.
 - Ostatni algorytm Wyświetla nazwę algorytmu do nauczenia modelu, ostatnio używane przez konstruktora modelu.
 
@@ -122,8 +122,8 @@ Dwa projekty zostaną utworzone w wyniku procesu uczenia.
 - TaxiFarePredictionML.Model: Biblioteki klas .NET Standard zawierający modeli danych, które zdefiniować schemat danych wejściowych i wyjściowych modelu danych, a także utrwalonych wersję najlepiej działający model podczas szkolenia.
 
 1. W sekcji kodu, narzędzia konstruktora modeli wybierz **dodać projekty** dodać projekty do rozwiązania.
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy *TaxiFarePrediction* projektu. Następnie wybierz **Dodaj > istniejący element**. Plik typu listy rozwijanej wybierz `All Files`, przejdź do *TaxiFarePredictionML.Model* projekt katalogu i wybierz `MLModel.zip` pliku. Kliknij prawym przyciskiem myszy ostatnio dodane `MLModel.zip` plik i wybierz *właściwości*. Kopiuj do katalogu wyjściowego opcji, można wybrać *Kopiuj Jeśli nowszy* z listy rozwijanej.
-1. Kliknij prawym przyciskiem myszy *TaxiFarePrediction* projektu. Następnie **Dodaj > dokumentacja**. Wybierz **projektów > rozwiązania** węzła i z listy, sprawdź *TaxiFarePredictionML.Model* projektu, a następnie wybierz przycisk OK.
+2. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy *TaxiFarePrediction* projektu. Następnie wybierz **Dodaj > istniejący element**. Plik typu listy rozwijanej wybierz `All Files`, przejdź do *TaxiFarePredictionML.Model* projekt katalogu i wybierz `MLModel.zip` pliku. Kliknij prawym przyciskiem myszy ostatnio dodane `MLModel.zip` plik i wybierz *właściwości*. Kopiuj do katalogu wyjściowego opcji, można wybrać *Kopiuj Jeśli nowszy* z listy rozwijanej.
+3. Kliknij prawym przyciskiem myszy *TaxiFarePrediction* projektu. Następnie **Dodaj > dokumentacja**. Wybierz **projektów > rozwiązania** węzła i z listy, sprawdź *TaxiFarePredictionML.Model* projektu, a następnie wybierz przycisk OK.
 
 4. Otwórz *Program.cs* w pliku *TaxiFarePrediction* projektu.
 5. Dodaj następujące instrukcje using:

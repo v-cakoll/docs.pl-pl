@@ -2,18 +2,18 @@
 title: Obsługiwane i nieobsługiwane metody LINQ (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 338069b5139999a046d1b1b10a8eac4acb1d9e06
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797686"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539429"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Obsługiwane i nieobsługiwane metody LINQ (LINQ to Entities)
-Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych operatorów zapytań, które są obsługiwane lub nieobsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Wiele LINQ standardowych operatorów zapytań ma przeciążona wersja, która akceptuje argument liczby całkowitej. Argument liczby całkowitej odpowiada liczony od zera indeks w sekwencji, sprawdzonych, <xref:System.Collections.Generic.IEqualityComparer%601>, lub <xref:System.Collections.Generic.IComparer%601>. O ile nie określono inaczej, te przeciążone wersje LINQ standardowe operatory zapytań nie są obsługiwane, a próby ich wykorzystania spowoduje zgłoszenie wyjątku.  
+Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych operatorów zapytań, które są obsługiwane lub nieobsługiwane w składniku LINQ do zapytań jednostki. Wiele LINQ standardowych operatorów zapytań ma przeciążona wersja, która akceptuje argument liczby całkowitej. Argument liczby całkowitej odpowiada liczony od zera indeks w sekwencji, sprawdzonych, <xref:System.Collections.Generic.IEqualityComparer%601>, lub <xref:System.Collections.Generic.IComparer%601>. O ile nie określono inaczej, te przeciążone wersje LINQ standardowe operatory zapytań nie są obsługiwane, a próby ich wykorzystania spowoduje zgłoszenie wyjątku.  
   
 ## <a name="projection-and-restriction-methods"></a>Projekcja i metod ograniczenia  
- Większość metod projekcji i ograniczeń LINQ są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania, z wyjątkiem tych, które akceptują argument pozycyjny. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę obsługiwanych i nieobsługiwanych metod Prognoza i ograniczeń.  
+ Większość metod projekcji i ograniczeń LINQ są obsługiwane w składniku LINQ do zapytań jednostki, z wyjątkiem tych, które akceptują argument pozycyjny. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę obsługiwanych i nieobsługiwanych metod Prognoza i ograniczeń.  
   
 |Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -27,7 +27,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 |<xref:System.Linq.Queryable.Where%2A>|Nieobsługiwane|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>Dołącz do metody  
- Metody sprzężenia LINQ są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], z wyjątkiem tych, które akceptują `IEqualityComparer` , ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych sprzężenia.  
+ Metody przyłączenie do LINQ są obsługiwane w składniku LINQ to Entities, z wyjątkiem tych, które akceptują `IEqualityComparer` , ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych sprzężenia.  
   
 |Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -37,7 +37,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 |<xref:System.Linq.Queryable.Join%2A>|Nieobsługiwane|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>Ustaw metody  
- Większość zestawu LINQ, które metody są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania, z wyjątkiem tych, które używają <xref:System.Collections.Generic.EqualityComparer%601>. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych zestawu.  
+ Większość metod zestawu LINQ są obsługiwane w programie LINQ do zapytań jednostki, z wyjątkiem tych, które korzystają <xref:System.Collections.Generic.EqualityComparer%601>. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych zestawu.  
   
 |Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -59,7 +59,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 |<xref:System.Linq.Queryable.Union%2A>|Nieobsługiwane|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>Metody sortowania  
- Większość LINQ metody sortowania są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], z wyjątkiem tych, które akceptują <xref:System.Collections.Generic.IComparer%601>, ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). W poniższej tabeli wymieniono obsługiwane i nieobsługiwane, metody sortowania.  
+ Większość LINQ metody sortowania są obsługiwane w składniku LINQ to Entities, z wyjątkiem tych, które akceptują <xref:System.Collections.Generic.IComparer%601>, ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). W poniższej tabeli wymieniono obsługiwane i nieobsługiwane, metody sortowania.  
   
 |Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -74,7 +74,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 |<xref:System.Linq.Queryable.Reverse%2A>|Nieobsługiwane|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>Grupowanie metody  
- Większość metod LINQ grupowania są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], z wyjątkiem tych, które akceptują <xref:System.Collections.Generic.IEqualityComparer%601>, ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych grupowania.  
+ Większość metod LINQ grupowania są obsługiwane w składniku LINQ to Entities, z wyjątkiem tych, które akceptują <xref:System.Collections.Generic.IEqualityComparer%601>, ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych grupowania.  
   
 |Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -88,7 +88,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 |<xref:System.Linq.Queryable.GroupBy%2A>|Nieobsługiwane|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="aggregate-methods"></a>Metody agregacji  
- Większość metod agregacji, które akceptują pierwotne typy danych są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). W poniższej tabeli wymieniono metody agregacji obsługiwane i nieobsługiwane.  
+ Większość metod agregacji, które akceptują pierwotne typy danych są obsługiwane w składniku LINQ to Entities. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). W poniższej tabeli wymieniono metody agregacji obsługiwane i nieobsługiwane.  
   
 |Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -153,7 +153,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 |<xref:System.Linq.Queryable.OfType%2A>|Obsługiwane w przypadku <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Metody stronicowania  
- Wiele metod stronicowania LINQ nie są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod stronicowanie obsługiwane i nieobsługiwane.  
+ Wiele metod stronicowania LINQ nie są obsługiwane w składniku LINQ do zapytań jednostki. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod stronicowanie obsługiwane i nieobsługiwane.  
   
 |Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

@@ -2,12 +2,12 @@
 title: LINQ do Jednostek
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630735"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539773"
 ---
 # <a name="linq-to-entities"></a>LINQ do Jednostek
 Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), która umożliwia programistom pisanie kwerend modelu koncepcyjnego Entity Framework przy użyciu języka Visual Basic lub Visual C#. Zapytania dotyczące programu Entity Framework są reprezentowane przez zapytania w drzewie poleceń, których wykonanie względem kontekst. Składnik LINQ to Entities konwertuje zapytań Language-Integrated zapytania (LINQ) z poleceniem Drzewo zapytań, wykonuje zapytania względem programu Entity Framework i zwraca obiekty używane przez Entity Framework i LINQ. Poniżej przedstawiono proces tworzenia i wykonywanie w zapytaniu składnika LINQ to Entities:  
@@ -47,7 +47,7 @@ Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), 
   
  Aby dowiedzieć się, jak sposób wywołania metody CLR są mapowane na funkcje canonical w źródle danych, zobacz [metody mapowania kanonicznej funkcji CLR](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- Aby uzyskać informacji na temat jak wywoływać canonical, bazy danych i funkcji niestandardowych z poziomu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytań, zobacz [podczas wywoływania funkcji w zapytaniach jednostek składnika LINQ to](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ Aby dowiedzieć się, jak wywołanie canonical, bazy danych i niestandardowe functions z poziomu programu LINQ do jednostek zapytań, zobacz [podczas wywoływania funkcji w składniku LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Wykonywanie zapytania  
  Po utworzeniu zapytania LINQ przez użytkownika wartość jest konwertowana na reprezentację w postaci, która jest zgodna z platformy Entity Framework (w postaci drzew poleceń), który następnie jest wykonywane względem źródła danych. W czasie wykonywania zapytań wszystkie wyrażenia zapytań (lub zapytania) są obliczane na kliencie lub na serwerze. Wyrażenia, które są używane w tym w wyniku materializacja lub projekcji jednostki. Aby uzyskać więcej informacji, zobacz [wykonywania zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Aby uzyskać informacji na temat zwiększyć wydajność przez kompilowanie zapytania raz, a następnie wykonywanie go kilka razy z różnymi parametrami, zobacz [zapytania skompilowane (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  

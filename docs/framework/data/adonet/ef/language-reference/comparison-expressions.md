@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: a37e7e3d0759cb3cf17d2b4cbd3dd2e4877ff6c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b0d7e668526fd71943513db2fc3c076c8bd3bad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785401"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539931"
 ---
 # <a name="comparison-expressions"></a>Wyrażenia porównania
-Wyrażenie porównania sprawdza, czy stałą wartość, wartość właściwości lub metody powodują jest równe, nie równe, większe niż lub mniejsze niż inną wartość. Jeśli w danym porównaniu jest nieprawidłowa dla [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], zostanie zgłoszony wyjątek. Wszystkie porównania niejawne i jawne, wymagają, że wszystkie składniki są porównywalne w źródle danych. Porównywanie wyrażeń są często stosowane w `Where` klauzule ograniczania wyników zapytania.  
+Wyrażenie porównania sprawdza, czy stałą wartość, wartość właściwości lub metody powodują jest równe, nie równe, większe niż lub mniejsze niż inną wartość. Jeśli w danym porównaniu jest nieprawidłowy dla programu LINQ to Entities, zostanie zgłoszony wyjątek. Wszystkie porównania niejawne i jawne, wymagają, że wszystkie składniki są porównywalne w źródle danych. Porównywanie wyrażeń są często stosowane w `Where` klauzule ograniczania wyników zapytania.  
   
  W składni wyrażenia zapytania poniższy kod przedstawia zapytanie, które zwraca wyniki, gdzie numer zamówienia sprzedaży jest równa "SO43663":  
   
@@ -40,7 +40,7 @@ Wyrażenie porównania sprawdza, czy stałą wartość, wartość właściwości
  [!code-csharp[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constantexpression)]
  [!code-vb[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#constantexpression)]  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] nie obsługuje przy użyciu klasy użytkownika jako stała. Jednak odwołaniem do właściwości w klasie użytkownika jest uznawany za stałą, zostanie przekonwertowane na wyrażeniu stałym drzewa poleceń i wykonywane w źródle danych.  
+ Składnik LINQ to Entities nie obsługuje używania klasy użytkownika jako stała. Jednak odwołaniem do właściwości w klasie użytkownika jest uznawany za stałą, zostanie przekonwertowane na wyrażeniu stałym drzewa poleceń i wykonywane w źródle danych.  
   
  [!code-csharp[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myclass)]
  [!code-vb[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myclass)]  

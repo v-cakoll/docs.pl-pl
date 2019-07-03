@@ -2,12 +2,12 @@
 title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307303"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539840"
 ---
 # <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -100,9 +100,9 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania akceptować wszędzie, gdzie parametry, że literały są akceptowane. Należy użyć sparametryzowanych zapytań zamiast iniekcji literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć użycie [metody konstruktora zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) bezpiecznie skonstruowanie jednostki SQL.  
   
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ataki przez iniekcję kodu:  
+- LINQ do jednostek ataki przez iniekcję kodu:  
   
-     Mimo że w kompozycją zapytań [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], odbywa się za pośrednictwem interfejsu API modelu obiektu. W odróżnieniu od [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań, [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] zapytania nie składają się przy użyciu manipulowanie ciągami lub łączenia i nie są one podatne na tradycyjnych ataki przez wstrzyknięcie kodu SQL.  
+     Mimo że w kompozycją zapytań jest możliwe w składniku LINQ to Entities, odbywa się za pośrednictwem interfejsu API modelu obiektu. W odróżnieniu od [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań LINQ do zapytań jednostki nie składają się przy użyciu manipulowanie ciągami lub łączenia i nie są podatne na tradycyjnych ataki przez wstrzyknięcie kodu SQL.  
   
 #### <a name="prevent-very-large-result-sets"></a>Zapobiegaj bardzo dużych zestawów wyników.  
  Zestaw wyników bardzo dużych może spowodować systemów klienckich, aby zamknąć, jeżeli klient wykonuje operacje, które zużywają zasoby proporcjonalny do rozmiaru zestawu wyników. Nieoczekiwanie dużych zestawów danych może wystąpić w następujących warunkach:  
@@ -113,7 +113,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
 - W zagnieżdżonej [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania.  
   
- Akceptując danych wejściowych użytkownika, należy się upewnić, że dane wejściowe nie może powodować zestawy wyników do wydają się większe niż co system może obsłużyć danych. Można również użyć <xref:System.Linq.Queryable.Take%2A> method in Class metoda [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] lub [LIMIT](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operatora w [!INCLUDE[esql](../../../../../includes/esql-md.md)] konieczność ograniczenia rozmiaru zestawu wyników.  
+ Akceptując danych wejściowych użytkownika, należy się upewnić, że dane wejściowe nie może powodować zestawy wyników do wydają się większe niż co system może obsłużyć danych. Można również użyć <xref:System.Linq.Queryable.Take%2A> metody w składniku LINQ to Entities lub [LIMIT](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operatora w [!INCLUDE[esql](../../../../../includes/esql-md.md)] konieczność ograniczenia rozmiaru zestawu wyników.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Należy unikać zwracania wyników IQueryable, gdy Uwidaczniającą metody potencjalnie niezaufanych wywołujących.  
  Należy unikać cofania się <xref:System.Linq.IQueryable%601> typów z metod, które są dostępne do potencjalnie niezaufanych wywołujących z następujących powodów:  

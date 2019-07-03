@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3f24fb335169c2b38ce945377bc4e64a47fe9d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785349"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539919"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Zapytania skompilowane (LINQ to Entities)
 Jeśli masz aplikację, która wykonuje zapytania strukturalnie podobne wiele razy w programie Entity Framework, często może zwiększyć wydajność, kompilowanie zapytania jeden raz i jej wykonanie kilka razy z różnymi parametrami. Na przykład aplikacja może mieć do pobrania wszystkich klientów określonego miasta; Miasto jest określone w czasie wykonywania przez użytkownika w postaci. Składnik LINQ to Entities obsługuje przy użyciu zapytania skompilowane do tego celu.  
@@ -19,7 +19,7 @@ Jeśli masz aplikację, która wykonuje zapytania strukturalnie podobne wiele ra
   
  <xref:System.Data.Objects.CompiledQuery> Klasa udostępnia kompilacji i pamięci podręcznej zapytań do ponownego wykorzystania. Ta klasa zawiera model <xref:System.Data.Objects.CompiledQuery>firmy `Compile` metody z kilka przeciążeń. Wywołaj `Compile` metodę, aby utworzyć nowe delegowanie do reprezentowania kompilowanym zapytaniu. `Compile` Metod udostępnianych za pomocą <xref:System.Data.Objects.ObjectContext> i wartości parametrów, zwracają obiekt delegowany, który daje wynik, niektóre (takie jak <xref:System.Linq.IQueryable%601> wystąpienie). Zapytanie kompiluje się raz w ciągu pierwszego wykonania. Opcje scalania, ustaw dla zapytania w czasie kompilacji nie można zmienić później. Po kwerendy jest kompilowany można podać tylko parametry typu podstawowego, ale nie można zamienić części zapytania, które spowoduje zmianę wygenerowanych SQL. Aby uzyskać więcej informacji, zobacz [opcje scalania struktury jednostek i kompilowane zapytań](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Wyrażeniu zapytania, <xref:System.Data.Objects.CompiledQuery>firmy `Compile` kompiluje metody jest reprezentowane przez jedną z ogólnych `Func` deleguje odpowiednie uprawnienia, takie jak <xref:System.Func%605>. Co najwyżej umożliwiająca Hermetyzowanie wyrażenia zapytania `ObjectContext` parametr, parametr zwracany i 16 parametry zapytania. Jeśli więcej niż 16 parametry zapytania są wymagane, można utworzyć struktury, których właściwości reprezentują parametry zapytania. Po ustawieniu właściwości można następnie użyć właściwości struktury w wyrażeniu zapytania.  
+ LINQ do jednostek wyrażenie zapytania, <xref:System.Data.Objects.CompiledQuery>firmy `Compile` kompiluje metody jest reprezentowane przez jedną z ogólnych `Func` deleguje odpowiednie uprawnienia, takie jak <xref:System.Func%605>. Co najwyżej umożliwiająca Hermetyzowanie wyrażenia zapytania `ObjectContext` parametr, parametr zwracany i 16 parametry zapytania. Jeśli więcej niż 16 parametry zapytania są wymagane, można utworzyć struktury, których właściwości reprezentują parametry zapytania. Po ustawieniu właściwości można następnie użyć właściwości struktury w wyrażeniu zapytania.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie kompiluje, a następnie wywołuje zapytanie, które akceptuje <xref:System.Decimal> parametr wejściowy i zwraca sekwencję zleceń, których termin łączna liczba jest większa niż lub równa 200,00 $:  

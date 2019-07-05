@@ -3,12 +3,12 @@ title: Praca z technologią LINQ
 description: Ten samouczek omawia sposób generowania sekwencji za pomocą LINQ, pisanie metody używane w kwerendach LINQ i rozróżnienie między eager i leniwa ocena.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: cc9ff83b1db2972f12cc55eaf32a686a1e6f7f4c
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486988"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569550"
 ---
 # <a name="working-with-linq"></a>Praca z technologią LINQ
 
@@ -267,6 +267,14 @@ Należy pamiętać, firma Microsoft wygenerowania oryginalnego slajdów, za pomo
 W swojej `Extensions.cs` pliku, wpisz lub skopiuj poniższe metody. Ta metoda rozszerzenia tworzy nowy plik o nazwie `debug.log` w ramach katalogu projektu i rejestruje zapytania, które obecnie jest wykonywana w pliku dziennika. Ta metoda rozszerzenia można dołączyć do dowolnego zapytania, aby oznaczyć, że zapytanie jest wykonywane.
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+
+Pojawi się czerwona fala w obszarze `File`, czyli nie istnieje. Go nie będzie skompilować, ponieważ kompilator nie może ustalić, jakie `File` jest. Aby rozwiązać ten problem, upewnij się, że należy dodać następujący wiersz kodu w ramach pierwszego wiersza w `Extensions.cs`:
+
+```csharp
+using System.IO;
+```
+
+To powinno rozwiązać problem, a czerwony błąd znika.
 
 Następnie przygotuj Instrumentację definicję każdego zapytania za pomocą komunikatu dziennika:
 

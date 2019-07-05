@@ -2,14 +2,14 @@
 title: Port kodu z .NET Framework i .NET Core
 description: Zrozumieć proces przenoszenia i Odkryj narzędzia, które mogą być przydatne podczas przenoszenia projektu .NET Framework i .NET Core.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 07/03/2019
 ms.custom: seodec18
-ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4206907bcee7ff5c71c9898fee4cb6cad02f1696
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663235"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569479"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Przyłącz kod z .NET Framework i .NET Core
 
@@ -39,8 +39,8 @@ Jest to proces, firma Microsoft zaleca należy wykonać podczas przenoszenia pro
 
 Na poniższej liście przedstawiono narzędzia, że może się okazać przydatne podczas przenoszenia proces:
 
-* Narzędzia .NET portability Analyzer - [narzędzia wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases) lub [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), łańcuch narzędzi, który można wygenerować raport jak przenośny kod jest między .NET Framework i .NET Core za pomocą zestaw, zestaw z rozbiciem na poszczególne problemy. Aby uzyskać więcej informacji, zobacz [narzędzia .NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
-* Analizator interfejsu API platformy .NET — analizatora Roslyn, który wykryje potencjalne zagrożenia zgodność dla C# interfejsów API na różnych platformach i wykrywa wywołania interfejsów API przestarzałych. Aby uzyskać więcej informacji, zobacz [analizatora interfejsu API platformy .NET](../../standard/analyzers/api-analyzer.md).
+* Narzędzia .NET portability Analyzer - [narzędzia wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases) lub [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), to narzędzie, które można wygenerować raportu dotyczącego sposobu przenośny kod jest między .NET Framework i docelowej platformy .NET Core. Raport zawiera podział zestawu według zestawu, typu i interfejsów API brakuje na docelowej platformy .NET Core. Aby uzyskać więcej informacji, zobacz [narzędzia .NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md). Zaleca się uruchomienie narzędzia narzędzia .NET Portability Analyzer, przed rozpoczęciem przenoszenia, ponieważ pomoże zidentyfikować przerwy w Brak interfejsów API.
+* Analizator interfejsu API .NET — analizatora Roslyn, który umożliwia odnalezienie .NET Standard interfejsu API, który zgłasza <xref:System.PlatformNotSupportedException> na niektórych platformach wykrywa wywołania interfejsów API przestarzałych i wykrywa niektóre inne potencjalne zagrożenia zgodność dla C# interfejsów API na różnych platformach. Aby uzyskać więcej informacji, zobacz [analizatora interfejsu API platformy .NET](../../standard/analyzers/api-analyzer.md). Ta analizatora przydaje się po utworzeniu projekt .NET Core w celu zidentyfikowania różnic zachowanie środowiska uruchomieniowego na różnych platformach. 
 * Odwrócone wyszukiwanie pakietu - A [usługi sieci web przydatne](https://packagesearch.azurewebsites.net) umożliwiająca wyszukiwania dla typu i znajdowania pakiety zawierające tego typu.
 
 Ponadto, możesz spróbować rozwiązań mniejszych portu lub poszczególnych projektów do formatu pliku projektu .NET Core za pomocą [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) narzędzia.
@@ -50,3 +50,4 @@ Ponadto, możesz spróbować rozwiązań mniejszych portu lub poszczególnych pr
 
 >[!div class="step-by-step"]
 >[Next](net-framework-tech-unavailable.md)
+

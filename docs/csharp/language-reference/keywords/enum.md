@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 57043963640f3c384b1e1a9aa7aeb65114689e9f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424240"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569533"
 ---
 # <a name="enum-c-reference"></a>enum (odwołanie w C#)
 
-`enum` Słowo kluczowe jest używane do deklarowania wyliczania, typem samodzielnym, który zawiera zestaw nazwanych stałych zwanego listą modułów wyliczających.  
+`enum` Słowo kluczowe jest używane do deklarowania wyliczania, typem samodzielnym, który zawiera zestaw nazwanych stałych zwanego listą modułów wyliczających.
 
 Zazwyczaj najlepiej jest zdefiniowanie wyliczenia bezpośrednio w przestrzeni nazw, tak, aby wszystkie klasy w przestrzeni nazw do niego dostęp za pomocą równy wygody. Jednak wyliczenia może być zagnieżdżona w klasie lub strukturze.
 
@@ -40,7 +40,6 @@ Każdy typ wyliczenia ma podstawowy typ, który może być dowolnym [typ liczbow
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
-
 
 Zmienna typu wyliczeniowego można przypisać dowolną wartość z zakresu typu podstawowego; wartości nie są ograniczone do nazwanych stałych.
 

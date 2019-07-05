@@ -2,12 +2,12 @@
 title: polecenia DotNet Dodaj pakiet — polecenie
 description: Polecenie "dotnet Dodaj pakiet" zapewnia wygodny sposób, aby dodać odwołanie do pakietu NuGet do projektu.
 ms.date: 06/26/2019
-ms.openlocfilehash: f387d32cbf706e1711439e393c1a7811bc8f47bd
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 50a352be66f2b4bd4498d79f61dc01f56d4b00c5
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422053"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569505"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 

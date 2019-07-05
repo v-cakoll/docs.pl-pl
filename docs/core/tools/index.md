@@ -3,12 +3,12 @@ title: Narzędzia programu .NET core interfejsu wiersza polecenia (CLI)
 description: Przegląd funkcji i narzędzi .NET Core interfejsu wiersza polecenia (CLI).
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647427"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569517"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET core
 
@@ -99,7 +99,7 @@ Interfejs wiersza polecenia przyjmuje model rozszerzeń, który umożliwia okre�
 
 ## <a name="command-structure"></a>Struktura polecenia
 
-Struktura polecenia interfejsu wiersza polecenia składa się z [sterownika ("dotnet")](#driver), [polecenie (lub "verb")](#command-verb)i ewentualnie polecenia [argumenty](#arguments) i [opcje](#options). Zostanie wyświetlony ten wzorzec w przypadku większości operacji interfejsu wiersza polecenia, takie jak tworzenie nowej aplikacji konsoli i uruchamiając go z poziomu wiersza polecenia jako następujące polecenia, Pokaż podczas wykonywania z katalogu o nazwie *moja_aplikacja*:
+Struktura polecenia interfejsu wiersza polecenia składa się z [sterownika ("dotnet")](#driver), [polecenie](#command)i ewentualnie polecenia [argumenty](#arguments) i [opcje](#options). Zostanie wyświetlony ten wzorzec w przypadku większości operacji interfejsu wiersza polecenia, takie jak tworzenie nowej aplikacji konsoli i uruchamiając go z poziomu wiersza polecenia jako następujące polecenia, Pokaż podczas wykonywania z katalogu o nazwie *moja_aplikacja*:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -134,9 +134,9 @@ Podczas dostarczania polecenia do sterownika, `dotnet.exe` rozpoczyna się proce
 
 Po pierwsze sterownik Określa wersję zestawu SDK do użycia. Jeśli ma nie ["global.json"](global-json.md), służy najnowszą wersję zestawu SDK, które są dostępne. Może to być w wersji zapoznawczej albo stabilną wersję, w zależności od tego, co to jest najnowsze na komputerze.  Po określeniu wersji zestawu SDK wykonuje polecenie.
 
-### <a name="command-verb"></a>Polecenie ("verb")
+### <a name="command"></a>Polecenie
 
-Polecenie (lub "verb") jest po prostu polecenie, które wykonują akcję. Na przykład `dotnet build` kompiluje kod. `dotnet publish` publikuje swój kod. Polecenia są implementowane jako aplikacji konsoli za pomocą `dotnet {verb}` Konwencji.
+Polecenie wykonuje akcję. Na przykład `dotnet build` kompilowany jest kod. `dotnet publish` publikuje kodu. Polecenia są implementowane jako aplikacji konsoli za pomocą `dotnet {command}` Konwencji.
 
 ### <a name="arguments"></a>Argumenty
 
@@ -148,7 +148,7 @@ Opcje, które należy przekazać w wierszu polecenia są opcje polecenia wywoły
 
 ## <a name="migration-from-projectjson"></a>Migracja z pliku project.json
 
-Jeśli używasz narzędzia do tworzenia w wersji 2 *project.json*— na podstawie projektów, zapoznaj się z [migracji dotnet](dotnet-migrate.md) zawiera informacje na temat migracji projektu do programu MSBuild /*.csproj*do użytku z wersji narzędzia. Dla platformy .NET Core projektów utworzonych przed wydaniem narzędzi w wersji 2, ręcznie zaktualizować projekt, postępując zgodnie ze wskazówkami w [migrowanie ze środowiska DNX, .NET Core interfejsu wiersza polecenia (project.json)](../migration/from-dnx.md) , a następnie użyj `dotnet migrate` lub bezpośrednio uaktualnienia Twoich projektów.
+Jeśli używasz narzędzia do tworzenia w wersji 2 *project.json*— na podstawie projektów, zapoznaj się z [migracji dotnet](dotnet-migrate.md) zawiera informacje na temat migracji projektu do programu MSBuild / *.csproj*do użytku z wersji narzędzia. Dla platformy .NET Core projektów utworzonych przed wydaniem narzędzi w wersji 2, ręcznie zaktualizować projekt, postępując zgodnie ze wskazówkami w [migrowanie ze środowiska DNX, .NET Core interfejsu wiersza polecenia (project.json)](../migration/from-dnx.md) , a następnie użyj `dotnet migrate` lub bezpośrednio uaktualnienia Twoich projektów.
 
 ## <a name="see-also"></a>Zobacz także
 

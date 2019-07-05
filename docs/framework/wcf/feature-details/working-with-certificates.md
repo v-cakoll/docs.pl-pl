@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483034"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569553"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje cyfrowego certyfikatu X.509 oraz sposobu ich używania w programie WCF i zawiera łącza do tematów, opisano te pojęcia dalsze lub które pokazują sposób wykonywania typowych zadań przy użyciu programu WCF i certyfikatów.  
@@ -85,8 +85,8 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
   
  Podczas tworzenia niestandardowego wystawcy uwierzytelnienia, jest najważniejszą metodą, aby zastąpić <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> metody. Na przykład niestandardowe uwierzytelnianie Zobacz [moduł weryfikacji certyfikatów X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) próbki. Aby uzyskać więcej informacji, zobacz [niestandardowe poświadczenia i Walidacja poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Za pomocą polecenia cmdlet programu Powershell New-SelfSignedCertificate, aby zbudować łańcucha certyfikatów  
- Polecenia cmdlet programu Powershell, New-SelfSignedCertificate tworzy certyfikaty X.509 i pary kluczy prywatnych klucza/publiczne. Można zapisać klucza prywatnego na dysku, a następnie użyć jej do wystawiania i Utwórz nowe certyfikaty, dlatego symulowania hierarchii certyfikatów połączonych. Polecenie cmdlet jest przeznaczona do użytku tylko jako pomoc podczas opracowywania usługi i nigdy nie powinien być używany do tworzenia certyfikatów, aby uzyskać rzeczywiste wdrożenie. Podczas tworzenia usługi WCF, wykonaj następujące kroki, aby utworzyć łańcuch zaufania za pomocą polecenia cmdlet New-SelfSignedCertificate.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Za pomocą polecenia cmdlet programu PowerShell New-SelfSignedCertificate, aby zbudować łańcucha certyfikatów  
+ Polecenia cmdlet programu PowerShell, New-SelfSignedCertificate tworzy certyfikaty X.509 i pary kluczy prywatnych klucza/publiczne. Można zapisać klucza prywatnego na dysku, a następnie użyć jej do wystawiania i Utwórz nowe certyfikaty, dlatego symulowania hierarchii certyfikatów połączonych. Polecenie cmdlet jest przeznaczona do użytku tylko jako pomoc podczas opracowywania usługi i nigdy nie powinien być używany do tworzenia certyfikatów, aby uzyskać rzeczywiste wdrożenie. Podczas tworzenia usługi WCF, wykonaj następujące kroki, aby utworzyć łańcuch zaufania za pomocą polecenia cmdlet New-SelfSignedCertificate.  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Aby utworzyć łańcuch zaufania za pomocą polecenia cmdlet New-SelfSignedCertificate  
   

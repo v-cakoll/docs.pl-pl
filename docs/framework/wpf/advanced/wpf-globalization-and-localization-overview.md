@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ce54c3299d599e990fa02abd3cea1460d588e280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28aeaae7292224dc8f56787efbde82712340af11
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662255"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610398"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Przegląd Lokalizacja i globalizacja WPF
 
@@ -90,7 +90,7 @@ Podczas opracowywania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sha
 
 Proces lokalizacji rozpoczyna się po Niezlokalizowany `MyDialog.resources.dll` utworzony plik. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elementów i właściwości w swojej pierwotnej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są wyodrębniane z formularz BAML XAML do pary klucz wartość, przy użyciu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] w obszarze <xref:System.Windows.Markup.Localizer>. Lokalizatorzy używają pary klucz wartość, aby zlokalizować aplikację. Możesz wygenerować nowy. resource.dll z nowymi wartościami miar po zakończeniu lokalizacji.
   
- Klucze pary klucz wartość są `x:Uid` wartości, które są wprowadzane przez dewelopera w oryginalnym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Te `x:Uid` Włącz wartości [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] do śledzenia i scalania zmian, które odbywa się między warstwą Deweloper a lokalizatorowi podczas lokalizacji. Na przykład, jeśli deweloper zmienia [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] po rozpoczęciu lokalizatorowi lokalizowanie można scalić zmiany programowania za pomocą proces lokalizacji już zakończonej tak, aby minimalny tłumaczenia praca zostanie utracona.  
+ Klucze pary klucz wartość są `x:Uid` wartości, które są wprowadzane przez dewelopera w oryginalnym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Te `x:Uid` wartości Włącz interfejs API, aby śledzić i scalania zmian, które odbywa się między warstwą Deweloper a lokalizatorowi podczas lokalizacji. Na przykład, jeśli deweloper zmienia [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] po rozpoczęciu lokalizatorowi lokalizowanie można scalić zmiany programowania za pomocą proces lokalizacji już zakończonej tak, aby minimalny tłumaczenia praca zostanie utracona.  
   
  Na poniższym rysunku przedstawiono typowej lokalizacji przepływu pracy, który jest oparty na formularz BAML XAML. Ten diagram przyjęto założenie, że deweloper zapisuje aplikację w języku angielskim. Deweloper tworzy i globalizes aplikacji WPF. W pliku projektu do zestawów dla deweloperów `<UICulture>en-US</UICulture>` tak, aby podczas kompilacji, Język neutralny zestawu głównego pobiera wygenerowany z satelity. resources.dll zawierający wszystkie lokalizowalne zasoby. Alternatywnie można jeden zachowanie języka źródłowego w głównym zestawie, ponieważ lokalizacji WPF interfejsy API obsługują wyodrębniania z głównego zestawu. Po zakończeniu procesu kompilacji XAML Pobierz skompilowany do BAML. Neutralne kulturalnie MyDialog.exe.resources.dll uzyskać dostarczane klientom wypowiedzi angielskiego.  
   

@@ -21,21 +21,21 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6cb389cd0458d1c9e7af94586c394764f01e4bab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b84a2e4c3cf4126a6efa7edaf868080dbc48b859
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665189"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610391"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Umożliwia deweloperom do wyświetlenia, przekształcania i formatowanie obrazów.  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>Składnik obrazowania WPF  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zapewnia znaczące ulepszenia w zakresie możliwości w ramach imaging [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Tworzenie obrazu funkcji, takich jak wyświetlanie mapy bitowej lub za pomocą obrazu na formancie wspólnego zostały wcześniej zależnej od [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] lub [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] bibliotek. Te [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] oferują funkcje obsługi obrazów linii bazowej, ale brak funkcje, takie jak obsługa kodera-dekodera rozszerzalność i obsługę obrazu o dużej wierności. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zaprojektowano w celu pokonania braków [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] i [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] i podaj nowy zestaw [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] wyświetlić obrazy i używać w aplikacjach.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zapewnia znaczące ulepszenia w zakresie możliwości w ramach imaging [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Tworzenie obrazu funkcji, takich jak wyświetlanie mapy bitowej lub za pomocą obrazu na formancie wspólnego zostały wcześniej zależnej od [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] lub [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] bibliotek. Tych interfejsów API zapewniają imaging funkcjonalności, ale brak funkcji, takich jak obsługę rozszerzalność kodera-dekodera oraz obraz o dużej wierności linii bazowej. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zaprojektowano w celu pokonania braków [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] i [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] i podaj nowy zestaw interfejsu API, aby wyświetlić obrazy i używać ich w aplikacjach.  
   
- Istnieją dwa sposoby dostępu do [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], zarządzane i niezarządzane składnik. Niezarządzane składnik udostępnia następujące funkcje.  
+ Istnieją dwa sposoby dostępu do [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] interfejsu API, zarządzanego składnika i składnika niezarządzanych. Niezarządzane składnik udostępnia następujące funkcje.  
   
 - Model rozszerzalności dla formatów obraz nowe lub chronione prawem własności.  
   
@@ -51,9 +51,9 @@ Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tl
   
 - Niezarządzane infrastruktury, aby zapewnić bezproblemową integrację obrazów z innymi korzysta z zarządzanego składnika [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] funkcje, takie jak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animacji i grafiki. Składnik zarządzany również korzysta z Windows Presentation Foundation (WPF) obrazowania kodera-dekodera rozszerzalności modelu, który umożliwia automatyczne rozpoznawanie nowych formatów obrazów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
   
- W większości zarządzanej [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] znajdują się w <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> przestrzeni nazw, chociaż kilka ważnych typów, takich jak <xref:System.Windows.Media.ImageBrush> i <xref:System.Windows.Media.ImageDrawing> znajdują się w <xref:System.Windows.Media?displayProperty=nameWithType> przestrzeni nazw i <xref:System.Windows.Controls.Image> znajduje się w <xref:System.Windows.Controls?displayProperty=nameWithType> przestrzeni nazw.  
+ W większości zarządzanej [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] interfejsów API znajdują się w <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> przestrzeni nazw, chociaż kilka ważnych typów, takich jak <xref:System.Windows.Media.ImageBrush> i <xref:System.Windows.Media.ImageDrawing> znajdują się w <xref:System.Windows.Media?displayProperty=nameWithType> przestrzeni nazw i <xref:System.Windows.Controls.Image> znajduje się w <xref:System.Windows.Controls?displayProperty=nameWithType> przestrzeń nazw.  
   
- Ten temat zawiera dodatkowe informacje na temat zarządzanego składnika. Aby uzyskać więcej informacji na temat niezarządzaną [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] zobacz [niezarządzanych WPF Imaging Component](/windows/desktop/wic/-wic-lh) dokumentacji.  
+ Ten temat zawiera dodatkowe informacje na temat zarządzanego składnika. Aby uzyskać więcej informacji o niezarządzanego interfejsu API, zobacz artykuł [niezarządzanych WPF Imaging Component](/windows/desktop/wic/-wic-lh) dokumentacji.  
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Formaty obrazu WPF  
@@ -144,7 +144,7 @@ Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tl
   
  Poniższa ilustracja przedstawia dane wyjściowe z przykładu i demonstruje wpływają na poszczególne <xref:System.Windows.Controls.Image.Stretch%2A> ustawienia mają podczas zastosowane do obrazu.  
   
- ![Różne ustawienia TileBrush Stretch](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![Different TileBrush Stretch settings](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
 Różne ustawienia Stretch Database  
   
  [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
@@ -152,7 +152,7 @@ Różne ustawienia Stretch Database
 ### <a name="painting-with-images"></a>Malowanie przy użyciu obrazów  
  Obrazy mogą być także wyświetlane w aplikacji przez malowanie <xref:System.Windows.Media.Brush>. Pędzle umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] obiektów ze wszystkim z proste, pełne kolory do złożonych zestawów wzorców i obrazy. Aby rysować przy użyciu obrazów, użyj <xref:System.Windows.Media.ImageBrush>. <xref:System.Windows.Media.ImageBrush> Jest typem <xref:System.Windows.Media.TileBrush> definiujący swoją zawartość jako obraz mapy bitowej. <xref:System.Windows.Media.ImageBrush> Wyświetla pojedynczy obraz, który jest określony przez jego <xref:System.Windows.Media.ImageBrush.ImageSource%2A> właściwości. Można kontrolować, jak obraz jest rozciągany tak, wyrównany i fragmentacji, dzięki któremu można będzie zapobiegać zniekształceniom oraz wzorców i innych skutków. Na poniższej ilustracji przedstawiono niektóre efekty, które można osiągnąć za pomocą <xref:System.Windows.Media.ImageBrush>.  
   
- ![ImageBrush danych wyjściowych przykłady](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ ![ImageBrush output examples](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej  
   
  W poniższym przykładzie pokazano, jak namalować tła przycisku przy użyciu obrazów przy użyciu <xref:System.Windows.Media.ImageBrush>.  
@@ -162,12 +162,12 @@ Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej
  Aby uzyskać dodatkowe informacje na temat <xref:System.Windows.Media.ImageBrush> zobaczyć malowanie obrazami [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md).  
   
 <a name="_metadata"></a>   
-## <a name="image-metadata"></a>Metadane obrazu  
+## <a name="image-metadata"></a>Image Metadata  
  Niektóre pliki obrazów zawiera metadane opisujące zawartość i właściwości pliku. Na przykład większość cyfrowe aparaty fotograficzne tworzenia obrazów, które zawierają metadane dotyczące producenta i modelu aparatu używane do przechwytywania obrazu. Każdy format obrazu obsługuje metadanych w inny sposób, ale [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zapewnia jednolity sposób przechowywania i pobierania metadanych dla każdego obsługiwanym formacie obrazu.  
   
  Dostęp do metadanych jest oferowana w ramach <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> właściwość <xref:System.Windows.Media.Imaging.BitmapSource> obiektu. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Zwraca <xref:System.Windows.Media.Imaging.BitmapMetadata> obiekt, który zawiera wszystkie metadane, które są zawarte w obrazie. Te dane mogą być w jednym schemacie metadanych lub kombinacji różnych systemów. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] obsługuje następujących schematów metadanych obrazu: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tekst (PNG dane tekstowe), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], i [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
- Aby uprościć proces odczytu metadanych, <xref:System.Windows.Media.Imaging.BitmapMetadata> udostępnia kilka nazwane właściwości, które są łatwo dostępne takie jak <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, i <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Wiele z tych właściwości o nazwie można również zapisać metadane. Dodatkowa obsługa podczas odczytywania metadanych znajduje się przez czytnik zapytania metadanych. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Metoda służy do pobierania metadanych czytnik zapytania, podając zapytanie ciągu, takich jak *"/ app1/exif /"*. W poniższym przykładzie <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> służy do uzyskiwania tekstu przechowywanego w *"/ Text/opis"* lokalizacji.  
+ Aby uprościć proces odczytu metadanych, <xref:System.Windows.Media.Imaging.BitmapMetadata> udostępnia kilka nazwane właściwości, które są łatwo dostępne takie jak <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, i <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Wiele z tych właściwości o nazwie można również zapisać metadane. Dodatkowa obsługa podczas odczytywania metadanych znajduje się przez czytnik zapytania metadanych. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Metoda służy do pobierania metadanych czytnik zapytania, podając zapytanie ciągu, takich jak *"/ app1/exif /"* . W poniższym przykładzie <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> służy do uzyskiwania tekstu przechowywanego w *"/ Text/opis"* lokalizacji.  
   
  [!code-cpp[BitmapMetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
@@ -183,7 +183,7 @@ Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej
 ## <a name="codec-extensibility"></a>Rozszerzalność kodera-dekodera  
  Funkcja core [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] modelu rozszerzalności dla nowych kodeki obrazów. Te niezarządzane interfejsy umożliwiają deweloperom kodera-dekodera integracja koderów-dekoderów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dzięki nowej formatów obrazów automatycznie mogą być używane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
   
- Przykładowe możliwości rozszerzania [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], zobacz [kodera-dekodera Win32 przykładowe](https://go.microsoft.com/fwlink/?LinkID=160052). W tym przykładzie pokazano, jak utworzyć dekodera i koder formatu obrazu niestandardowego.  
+ Przykładowy interfejs API rozszerzania, [kodera-dekodera Win32 przykładowe](https://go.microsoft.com/fwlink/?LinkID=160052). W tym przykładzie pokazano, jak utworzyć dekodera i koder formatu obrazu niestandardowego.  
   
 > [!NOTE]
 >  Koder-dekoder musi być podpisany cyfrowo dla systemu, aby można było go rozpoznać.  

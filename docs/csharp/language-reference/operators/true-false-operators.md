@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: cb5cde6be16ecf8898c5976e8db23d5ef70d1a47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 7cbfca932b5f9f8a6f658e84204da5005da5ffb8
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401306"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609835"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatory true i false (C# odwołania)
 
@@ -26,7 +26,7 @@ Typ za pomocą zdefiniowanego `true` operator może być typ wyniku wyrażenia w
 
 ## <a name="user-defined-conditional-logical-operators"></a>Zdefiniowane przez użytkownika operatorów logicznych warunkowych
 
-Jeśli typ za pomocą zdefiniowanego `true` i `false` operatory [przeciążenia](../keywords/operator.md) [operator logiczny OR](boolean-logical-operators.md#logical-or-operator-) `|` lub [logicznego operatora AND](boolean-logical-operators.md#logical-and-operator-) `&` w określony sposób, [warunkowego logicznego operatora OR](boolean-logical-operators.md#conditional-logical-or-operator-) `||` lub [warunkowego logicznego operatora AND](boolean-logical-operators.md#conditional-logical-and-operator-) `&&`, odpowiednio, mogą być obliczane dla argumentów typu. Aby uzyskać więcej informacji, zobacz [zdefiniowanych przez użytkownika operatorów logicznych warunkowych](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Jeśli typ za pomocą zdefiniowanego `true` i `false` operatory [przeciążenia](operator-overloading.md) [operator logiczny OR](boolean-logical-operators.md#logical-or-operator-) `|` lub [logicznego operatora AND](boolean-logical-operators.md#logical-and-operator-) `&` w określony sposób, [warunkowego logicznego operatora OR](boolean-logical-operators.md#conditional-logical-or-operator-) `||` lub [warunkowego logicznego operatora AND](boolean-logical-operators.md#conditional-logical-and-operator-) `&&`, odpowiednio, mogą być obliczane dla argumentów typu. Aby uzyskać więcej informacji, zobacz [zdefiniowanych przez użytkownika operatorów logicznych warunkowych](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="example"></a>Przykład
 

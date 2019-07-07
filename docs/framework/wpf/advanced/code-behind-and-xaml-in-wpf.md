@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 01122991e99e41259c3b83a38eba002734d749ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655525"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610531"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Związane z kodem i XAML w WPF
 <a name="introduction"></a> Związane z kodem to termin używany do opisania kod, który jest sprzężony z obiektów zdefiniowanych przez kod znaczników, gdy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strona jest kompilowana do znaczników. W tym temacie opisano wymagania związane z kodem, a także mechanizm alternatywny wbudowanego kodu dla kodu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "64655525"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>Ograniczenia dotyczące kodu wbudowanego  
- Należy rozważyć unikanie lub ograniczenie używania kodu wbudowanego. Pod względem architektury i kodowania filozofia utrzymywanie separacji między znaczników i związane z kodem przechowuje role projektanta i deweloperów znacznie bardziej distinct. Na poziom bardziej technicznych, kodu napisanego dla kodu wbudowanego może być niewygodna do pisania, ponieważ zawsze pisania w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wygenerowane klasy częściowe i można używać tylko domyślne mapowania przestrzeni nazw XML. Ponieważ nie można dodać `using` instrukcji, muszą w pełni kwalifikujesz się do wielu [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] wywołania, które wprowadzasz. Wartość domyślna [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mapowania zawierają najbardziej, ale nie wszystkie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzenie nazw, które znajdują się w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestawy; należy do pełnej kwalifikacji wywołania do typów i elementów członkowskich znajdujących się w innych przestrzeniach nazw środowiska CLR. Również nie można zdefiniować niczego poza częściowej klasy w kodzie wbudowane, a wszystkie jednostki kodu użytkownika, którego odwołujesz się musi istnieć jako członkowie lub zmiennej w generowanej klasie częściowej. Inne funkcje specyficzne dla języka programowania, takich jak makra lub `#ifdef` przed zmienne globalne i zmienne kompilacji, również nie są dostępne. Aby uzyskać więcej informacji, zobacz [x: Code, wewnętrzny typ XAML](../../xaml-services/x-code-intrinsic-xaml-type.md).  
+ Należy rozważyć unikanie lub ograniczenie używania kodu wbudowanego. Pod względem architektury i kodowania filozofia utrzymywanie separacji między znaczników i związane z kodem przechowuje role projektanta i deweloperów znacznie bardziej distinct. Na poziom bardziej technicznych, kodu napisanego dla kodu wbudowanego może być niewygodna do pisania, ponieważ zawsze pisania w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wygenerowane klasy częściowe i można używać tylko domyślne mapowania przestrzeni nazw XML. Ponieważ nie można dodać `using` instrukcji, muszą w pełni kwalifikujesz się do wielu wywołań interfejsu API, które wprowadzasz. Wartość domyślna [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mapowania zawierają najbardziej, ale nie wszystkie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzenie nazw, które znajdują się w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestawy; należy do pełnej kwalifikacji wywołania do typów i elementów członkowskich znajdujących się w innych przestrzeniach nazw środowiska CLR. Również nie można zdefiniować niczego poza częściowej klasy w kodzie wbudowane, a wszystkie jednostki kodu użytkownika, którego odwołujesz się musi istnieć jako członkowie lub zmiennej w generowanej klasie częściowej. Inne funkcje specyficzne dla języka programowania, takich jak makra lub `#ifdef` przed zmienne globalne i zmienne kompilacji, również nie są dostępne. Aby uzyskać więcej informacji, zobacz [x: Code, wewnętrzny typ XAML](../../xaml-services/x-code-intrinsic-xaml-type.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 1b0bc360c4c04457e71115dc5caf935841a2bbc1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619636"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610520"
 ---
 # <a name="freezable-objects-overview"></a>Przegląd Obiekty Freezable
 W tym temacie opisano, jak skutecznie używać i Utwórz <xref:System.Windows.Freezable> obiektów, które zapewniają funkcje specjalne, które mogą pomóc zwiększyć wydajność aplikacji. Przykładami obiektów freezable pędzle, pióra, przekształcenia, geometrii i animacji.  
@@ -150,7 +150,7 @@ mc:Ignorable="PresentationOptions"
   
 - Na początku dowolnego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , odczytuje elementy członkowskie danych właściwości bez zależności, wywołaj <xref:System.Windows.Freezable.ReadPreamble%2A> metody.  
   
-- Na początku dowolnego interfejsu API, który zapisuje elementy członkowskie danych właściwości bez zależności, należy wywołać <xref:System.Windows.Freezable.WritePreamble%2A> metody. (Gdy została wywołana <xref:System.Windows.Freezable.WritePreamble%2A> w [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], nie potrzebujesz do wywoływania dodatkowych <xref:System.Windows.Freezable.ReadPreamble%2A> Jeśli przeczytaj również elementy członkowskie danych właściwości innych zależności.)  
+- Na początku dowolnego interfejsu API, który zapisuje elementy członkowskie danych właściwości bez zależności, należy wywołać <xref:System.Windows.Freezable.WritePreamble%2A> metody. (Gdy została wywołana <xref:System.Windows.Freezable.WritePreamble%2A> w interfejsie API, nie potrzebujesz do wywoływania dodatkowych <xref:System.Windows.Freezable.ReadPreamble%2A> Jeśli przeczytaj również elementy członkowskie danych właściwości innych zależności.)  
   
 - Wywołaj <xref:System.Windows.Freezable.WritePostscript%2A> metoda przed wyjściem metody modyfikujące właściwość zależności innych składowych danych.  
   

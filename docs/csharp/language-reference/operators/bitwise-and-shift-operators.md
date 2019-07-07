@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424008"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609944"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitowe i operatory przesunięcia (C# odwołania)
 
@@ -178,7 +178,7 @@ Zazwyczaj używa się operatory logiczne bitowe dla typu wyliczenia, która jest
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 
-Typ zdefiniowany przez użytkownika może [przeciążenia](../keywords/operator.md) `~`, `<<`, `>>`, `&`, `|`, i `^` operatorów. Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania złożonego jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć operator przypisania złożonego.
+Typ zdefiniowany przez użytkownika może [przeciążenia](operator-overloading.md) `~`, `<<`, `>>`, `&`, `|`, i `^` operatorów. Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania złożonego jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć operator przypisania złożonego.
 
 Jeśli typ zdefiniowany przez użytkownika `T` przeciążenia `<<` lub `>>` operatora, typ lewostronny operand musi być `T` i typ prawostronny operand musi być `int`.
 

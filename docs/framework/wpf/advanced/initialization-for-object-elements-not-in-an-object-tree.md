@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0032492a9403660e91980f5e968b519a4306589
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001471"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610491"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicjalizacja elementów obiektu poza drzewem obiektu
 Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inicjowania mają być opóźniane do procesów, które są zwykle oparte na ten element jest podłączony do drzewa logicznego lub drzewa wizualnego. W tym temacie opisano kroki, które mogą być wymagane, aby zainicjować element, który nie jest podłączony do obu drzewa.  
@@ -33,7 +33,7 @@ Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-
  Jeśli element właściwości są ustawiane na <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> pochodne klasy, wówczas może wywołać klasy wersje <xref:System.Windows.FrameworkElement.BeginInit%2A> i <xref:System.Windows.FrameworkElement.EndInit%2A> zamiast rzutowania <xref:System.ComponentModel.ISupportInitialize>.  
   
 ### <a name="sample-code"></a>Przykładowy kod  
- Poniższy przykład przedstawia przykładowy kod dla aplikacji konsoli, która korzysta z renderowania [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] i <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> luzem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku, aby zilustrować właściwe rozmieszczenie <xref:System.Windows.FrameworkElement.BeginInit%2A> i <xref:System.Windows.FrameworkElement.EndInit%2A> wokół nawzajem [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] wywołania właściwości, które wpływają na renderowanie, Dostosuj.  
+ Poniższy przykład przedstawia przykładowy kod dla aplikacji konsoli, która korzysta z renderowania [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] i <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> luzem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku, aby zilustrować właściwe rozmieszczenie <xref:System.Windows.FrameworkElement.BeginInit%2A> i <xref:System.Windows.FrameworkElement.EndInit%2A> wokół innych wywołań interfejsu API, które dopasować właściwości, które wpływają na renderowania.  
   
  W przykładzie pokazano tylko funkcji main. Funkcje `Rasterize` i `Save` (niewyświetlany) są funkcje narzędzia, które powinien zachować ostrożność, przetwarzanie obrazu i we/wy.  
   

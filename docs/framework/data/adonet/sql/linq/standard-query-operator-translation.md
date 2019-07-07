@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876889"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610551"
 ---
 # <a name="standard-query-operator-translation"></a>Translacja standardowego operatora zapytania
 
@@ -198,7 +198,7 @@ Aby uzyskać więcej informacji na temat mapowania do tych typów daty i godziny
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 Support
 
-Następujące [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] ograniczenia (w porównaniu do [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) wpływają na [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pomocy technicznej.
+Następujące [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] ograniczenia (w porównaniu do programu Microsoft SQL Server 2005) mają wpływ na [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pomocy technicznej.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply i zewnętrznych stosowanie operatorów
 
@@ -208,7 +208,7 @@ Te operatory nie są dostępne w [!INCLUDE[ss2k](../../../../../../includes/ss2k
 
 ### <a name="text--ntext"></a>Text / ntext
 
-Typy danych `text`  /  `ntext` nie można używać w niektórych operacji zapytań dotyczących `varchar(max)`  /  `nvarchar(max)`, które są obsługiwane przez [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].
+Typy danych `text`  /  `ntext` nie można używać w niektórych operacji zapytań dotyczących `varchar(max)`  /  `nvarchar(max)`, które są obsługiwane przez program Microsoft SQL Server 2005.
 
 Rozwiązanie jest dostępne dla tego ograniczenia. Ściślej mówiąc, nie można użyć `Distinct()` na dowolny wynik, który zawiera elementy członkowskie, które są mapowane na `text` lub `ntext` kolumn.
 
@@ -232,7 +232,7 @@ Materializacja tworzy obiekty CLR z wierszy zwracanych przez co najmniej jeden z
 
   - Rzutowania typów w projekcji
 
-- Metody, które należy wykonać <xref:System.Linq.Enumerable.AsEnumerable%2A> metoda są *wykonywany lokalnie,*. Ta metoda nie powoduje natychmiastowe wykonanie.
+- Metody, które należy wykonać <xref:System.Linq.Enumerable.AsEnumerable%2A> metoda są *wykonywany lokalnie,* . Ta metoda nie powoduje natychmiastowe wykonanie.
 
 - Możesz użyć `struct` jako zwracany typ wyniku zapytania lub elementem członkowskim typu wyniku. Jednostki są wymagane do klasy. Typy anonimowe są zmaterializowanego jako wystąpienia klasy, ale nazwanej struktury (inne niż jednostek) mogą być używane w projekcji.
 

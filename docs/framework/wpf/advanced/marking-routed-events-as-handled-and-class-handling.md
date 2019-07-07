@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598655"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610372"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy
 Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w ramach danych zdarzenia. Obsługa zdarzenia skróci efektywne trasy. Obsługa klasy jest koncepcji programowania, który jest obsługiwany przez zdarzenia trasowane. Klasa program obsługi ma możliwość obsługi określonego zdarzenia trasowanego na poziomie klasy, za pomocą programu obsługi, które jest wywoływane przed jakakolwiek Obsługa wystąpienia na dowolne wystąpienie klasy.  
@@ -49,7 +49,7 @@ Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w 
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Funkcje obsługi klas i wystąpień obsługi  
- Zdarzenia trasowane należy wziąć pod uwagę dwa różne typy obiektów nasłuchujących na zdarzenie: klasy detektory i odbiorniki wystąpień. Odbiorniki klas istnieje, ponieważ typy mają wywołany konkretny <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, w jego konstruktorze statycznym lub ma zastąpić metodę wirtualną obsługi klasę z klasy bazowej elementu. Odbiorniki wystąpień elementów konkretnej klasy wystąpienia/gdzie obsługi co najmniej jeden zostały dołączone do tego zdarzenia trasowanego przez wywołanie <xref:System.Windows.UIElement.AddHandler%2A>. Istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia trasowane wykonywać wywołania <xref:System.Windows.UIElement.AddHandler%2A> jako część [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Dodaj zdarzenie otoki{} i Usuń{} implementacji zdarzenia, który jest również, jak prostą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mechanizm dołączania programy obsługi zdarzeń za pomocą składni atrybutów jest włączona. W związku z tym nawet prostą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] użycia ostatecznie jest równa <xref:System.Windows.UIElement.AddHandler%2A> wywołania.  
+ Zdarzenia trasowane należy wziąć pod uwagę dwa różne typy obiektów nasłuchujących na zdarzenie: klasy detektory i odbiorniki wystąpień. Odbiorniki klas istnieje, ponieważ typy mają wywołany konkretny <xref:System.Windows.EventManager> interfejsu API,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, w jego konstruktorze statycznym lub ma zastąpić metodę wirtualną obsługi klasę z klasy bazowej elementu. Odbiorniki wystąpień elementów konkretnej klasy wystąpienia/gdzie obsługi co najmniej jeden zostały dołączone do tego zdarzenia trasowanego przez wywołanie <xref:System.Windows.UIElement.AddHandler%2A>. Istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia trasowane wykonywać wywołania <xref:System.Windows.UIElement.AddHandler%2A> jako część [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Dodaj zdarzenie otoki{} i Usuń{} implementacji zdarzenia, który jest również, jak prostą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mechanizm dołączania programy obsługi zdarzeń za pomocą składni atrybutów jest włączona. W związku z tym nawet prostą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] użycia ostatecznie jest równa <xref:System.Windows.UIElement.AddHandler%2A> wywołania.  
   
  Elementy w drzewie wizualnym, są sprawdzane pod kątem implementacji zarejestrowanego programu obsługi. Programy obsługi potencjalnie są wywoływane w całej trasie, w kolejności, należącej do rodzaju strategii routingu dla tego zdarzenia trasowane. Na przykład Propagacja zdarzeń trasowanych najpierw będzie wywoływać te programy obsługi, które są dołączone do tego samego elementu, który spowodował zdarzenie trasowane. Następnie zdarzenia trasowanego "bąbelki", aby następny element nadrzędny i tak dalej, aż zostanie osiągnięty elementu głównego aplikacji.  
   

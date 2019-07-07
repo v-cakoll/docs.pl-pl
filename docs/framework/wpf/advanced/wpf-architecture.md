@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053148"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610347"
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation (WPF). Obejmuje większość najważniejszych podsystemów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]oraz opis sposobu interakcji. Szczegóły również niektóre wybory dokonane przez architektów z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -50,7 +50,7 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  Jedną z podstawowego filozofię architektury używane w budynku [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] został preferencji dla właściwości, za pośrednictwem metody lub zdarzenia. Właściwości deklaracyjne i Zezwalaj, aby łatwo określić przeznaczenie zamiast akcji. Obsługiwane też opartych na modelu lub danych opartych na systemie do wyświetlania zawartości interfejsu użytkownika. To podejście ma zamierzony efekt tworzenia innych właściwości, które można powiązać, aby można było skuteczniej kontrolować zachowanie aplikacji.  
   
- Aby uzyskać więcej systemu prowadzona przez właściwości, bogatszy system właściwości niż co [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zapewnia był potrzebny. Prosty przykład tego bogactwa jest powiadomienia o zmianach. Aby włączyć dwie wiążących, konieczne będzie obie strony powiązania do obsługi powiadomień o zmianach. Aby mogła mieć problem związany z wartości właściwości, należy być powiadamiany po zmianie wartości właściwości. Microsoft .NET Framework ma interfejs **inotifypropertychange —**, co pozwala obiektu do opublikowania powiadomienia o zmianach, jednak jest to opcjonalne.  
+ Aby uzyskać więcej systemu prowadzona przez właściwości, bogatszy system właściwości niż co [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zapewnia był potrzebny. Prosty przykład tego bogactwa jest powiadomienia o zmianach. Aby włączyć dwie wiążących, konieczne będzie obie strony powiązania do obsługi powiadomień o zmianach. Aby mogła mieć problem związany z wartości właściwości, należy być powiadamiany po zmianie wartości właściwości. Microsoft .NET Framework ma interfejs **inotifypropertychange —** , co pozwala obiektu do opublikowania powiadomienia o zmianach, jednak jest to opcjonalne.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia bogatszy system właściwości pochodną <xref:System.Windows.DependencyObject> typu. System właściwości jest naprawdę system właściwości "zależności", ponieważ śledzi zależności między wyrażeniami właściwości i wartości właściwości revalidates automatycznie, gdy zmienią się zależności. Na przykład, jeśli właściwość, która dziedziczy (takich jak <xref:System.Windows.Controls.Control.FontSize%2A>), system jest automatycznie aktualizowana, jeśli właściwość zmieni się na element nadrzędny elementu, który dziedziczy wartości.  
   
@@ -62,7 +62,7 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- W systemie zdefiniowane następnym krokiem będzie niedługo pikseli na ekranie. <xref:System.Windows.Media.Visual> Klasa oferuje do tworzenia drzewa obiektów wizualnych, każdy opcjonalnie zawiera instrukcje rysowania oraz metadane dotyczące sposób renderowania tych instrukcji (wycinka, przekształcania, itp.). <xref:System.Windows.Media.Visual> została zaprojektowana jako bardzo lekka i elastyczne, więc większość funkcji bez publicznego [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] zagrożeń i dużym stopniu polegają na funkcjach wywołania zwrotnego chronionych.  
+ W systemie zdefiniowane następnym krokiem będzie niedługo pikseli na ekranie. <xref:System.Windows.Media.Visual> Klasa oferuje do tworzenia drzewa obiektów wizualnych, każdy opcjonalnie zawiera instrukcje rysowania oraz metadane dotyczące sposób renderowania tych instrukcji (wycinka, przekształcania, itp.). <xref:System.Windows.Media.Visual> została zaprojektowana jako bardzo lekka i elastyczne, więc większość funkcji też nie ujawnienia interfejsu API i dużym stopniu polegają na funkcjach wywołania zwrotnego chronionych.  
   
  <xref:System.Windows.Media.Visual> to naprawdę punkt wejścia do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kompozycji systemu. <xref:System.Windows.Media.Visual> punkt połączenia między tych dwóch podsystemów zarządzanej [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] i milcore niezarządzanych.  
   
@@ -112,7 +112,7 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
   
  Podstawowe zasady, wynikające z <xref:System.Windows.FrameworkElement> wokół układ aplikacji. <xref:System.Windows.FrameworkElement> opiera się na kontrakt podstawowy układ wynikające z <xref:System.Windows.UIElement> i dodaje pojęcie układu "miejsce", który ułatwia autorom układ ma spójny zestaw właściwości opartych na semantykę układu. Właściwości, takie jak <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A> (Aby nazwać kilka) zapewniają wszystkie składniki pochodzące z <xref:System.Windows.FrameworkElement> spójne zachowanie w kontenery układów.  
   
- <xref:System.Windows.FrameworkElement> zapewnia także łatwiej [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] narażenia na wiele funkcji, znaleziono w warstwach podstawowej [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Na przykład <xref:System.Windows.FrameworkElement> zapewnia bezpośredni dostęp do animacji przy użyciu <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> metody. A <xref:System.Windows.Media.Animation.Storyboard> zapewnia sposób skryptu wielu animacji z zestawem właściwości.  
+ <xref:System.Windows.FrameworkElement> zapewnia także łatwiej narażenia interfejsu API wiele funkcji, które znajdują się w warstwie podstawowej [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Na przykład <xref:System.Windows.FrameworkElement> zapewnia bezpośredni dostęp do animacji przy użyciu <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> metody. A <xref:System.Windows.Media.Animation.Storyboard> zapewnia sposób skryptu wielu animacji z zestawem właściwości.  
   
  Dwie rzeczy najważniejszych, <xref:System.Windows.FrameworkElement> wprowadza to powiązanie danych i stylów.  
   

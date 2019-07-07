@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0cd0a06dc919ecf11f1a3d343fe8ff023a5f8524
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401463"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609911"
 ---
 # <a name="c-operators-c-reference"></a>C#operatory (C# odwołania)
 
 C#zawiera szereg wstępnie zdefiniowanych operatory obsługiwane przez typy wbudowane. Na przykład [operatorów arytmetycznych](arithmetic-operators.md) wykonywać operacji arytmetycznych na wartościach operandy wbudowanych typów liczbowych i [logiczna operatorów logicznych](boolean-logical-operators.md) wykonywać operacje logiczne z [bool ](../keywords/bool.md) argumentów operacji.
 
-Typ zdefiniowany przez użytkownika może doprowadzić do przeciążenia operatorów, aby zdefiniować odpowiednie zachowanie w przypadku argumentów operacji typu. Aby uzyskać więcej informacji, zobacz [operator](../keywords/operator.md) artykułu — słowo kluczowe.
+Typ zdefiniowany przez użytkownika może doprowadzić do przeciążenia operatorów, aby zdefiniować odpowiednie zachowanie w przypadku argumentów operacji typu. Aby uzyskać więcej informacji, zobacz [przeciążania operatora](operator-overloading.md).
 
 Na poniższej liście sekcje C# operatorów, począwszy od najniższej najwyższy priorytet. Operatory w każdej sekcji udostępniać na tym samym poziomie pierwszeństwa.
 
@@ -223,4 +223,3 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 - [C#Odwołanie](../index.md)
 - [Operatory](../../programming-guide/statements-expressions-operators/operators.md)
-- [Operatory z możliwością przeciążenia](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

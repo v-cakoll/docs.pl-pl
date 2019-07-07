@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 551d4cd8bf26a1c1caf3cbf611d9f338ae2581be
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422928"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609501"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 
@@ -80,7 +80,7 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>Przeładowanie operatora
 
-Można zdefiniować zachowanie operatorów dla niestandardowych klas i struktur. Ten proces jest nazywany *przeciążenia operatora*. Aby uzyskać więcej informacji, zobacz [operatory z możliwością przeciążenia](overloadable-operators.md) i [operator](../../language-reference/keywords/operator.md) artykułu — słowo kluczowe.
+Można zdefiniować zachowanie operatorów dla niestandardowych klas i struktur. Ten proces jest nazywany *przeciążenia operatora*. Aby uzyskać więcej informacji, zobacz [przeciążania operatora](../../language-reference/operators/operator-overloading.md).
   
 ## <a name="see-also"></a>Zobacz także
 

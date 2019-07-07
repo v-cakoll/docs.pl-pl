@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878256"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610583"
 ---
 # <a name="frequently-asked-questions"></a>Często zadawane pytania
 Poniższe sekcje odpowiedzi na niektóre typowe problemy, które można napotkać podczas implementowania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -132,9 +132,9 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ```  
   
 ## <a name="errors-using-sql-compact-35"></a>Błędy przy użyciu języka SQL Compact 3.5  
- PYTANIE: Otrzymuję komunikat o błędzie podczas przeciągania tabel z [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] bazy danych.  
+ PYTANIE: Błąd podczas przeciągania tabel z bazy danych programu SQL Server Compact 3.5.  
   
- A. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Nie obsługuje [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)], mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest środowiska wykonawczego. W takiej sytuacji należy tworzenia własnych klas jednostek i dodawanie odpowiednich atrybutów.  
+ A. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Nie obsługuje programu SQL Server Compact 3.5, mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest środowiska wykonawczego. W takiej sytuacji należy tworzenia własnych klas jednostek i dodawanie odpowiednich atrybutów.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Błędy w relacjach dziedziczenia  
  PYTANIE: Po użyciu kształtu dziedziczenia przybornika w [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nawiązać dwie jednostki, ale występują błędy.  
@@ -144,7 +144,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Dostawca modelu  
  PYTANIE: Model publiczny dostawca jest dostępny?  
   
- A. Model nie publiczny dostawca jest dostępny. W tej chwili [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje program SQL Server i [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] tylko.  
+ A. Model nie publiczny dostawca jest dostępny. W tej chwili [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tylko obsługuje program SQL Server i SQL Server Compact 3.5.  
   
 ## <a name="sql-injection-attacks"></a>Ataki polegające na iniekcji SQL  
  PYTANIE: Jak jest [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chronione przed atakami polegającymi na iniekcji SQL?  

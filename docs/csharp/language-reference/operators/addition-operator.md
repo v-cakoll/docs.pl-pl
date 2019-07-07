@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347975"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610038"
 ---
 # <a name="-and--operators-c-reference"></a>+ i operatory += (C# odwołania)
 
@@ -71,7 +71,7 @@ Możesz także użyć `+=` operatora, aby określić metodę programu obsługi z
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 
-Typ zdefiniowany przez użytkownika może [przeciążenia](../keywords/operator.md) `+` operatora. Gdy dane binarne `+` operator jest przeciążony, `+=` operator jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć `+=` operatora.
+Typ zdefiniowany przez użytkownika może [przeciążenia](operator-overloading.md) `+` operatora. Gdy dane binarne `+` operator jest przeciążony, `+=` operator jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć `+=` operatora.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00fe1a02b52ef2ddc393bc7424efa73fc4059a9c
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661480"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610110"
 ---
 # <a name="implicit-c-reference"></a>implicit (odwołanie w C#)
 
@@ -35,5 +35,5 @@ Dzięki wyeliminowaniu zbędnych rzutowania, niejawne konwersje można zwiększy
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [explicit](explicit.md)
-- [Operator (odwołanie w C#)](operator.md)
+- [Przeładowanie operatora](../operators/operator-overloading.md)
 - [Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

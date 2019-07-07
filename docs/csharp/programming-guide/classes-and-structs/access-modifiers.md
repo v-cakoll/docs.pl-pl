@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683941"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609648"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, który kontroluje, czy mogą być używane z innym kodem w swoim zestawie lub innych zestawów. Następujące modyfikatory dostępu służy do określania dostępność typu lub elementu członkowskiego, gdy trzeba je zadeklarować:  
@@ -53,7 +53,7 @@ Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, któ
   
  Typ dowolnego elementu członkowskiego, który jest pola, właściwości lub zdarzenia musi być co najmniej tak samo dostępna jak ten element członkowski. Podobnie typ zwracany i typy parametrów, dowolnego elementu członkowskiego, który jest metoda, indeksator lub delegata musi być co najmniej tak samo dostępna jak ten element członkowski. Na przykład, nie może mieć publiczną metodę `M` zwracającego klasę `C` chyba że `C` również jest publiczny. Podobnie, nie może mieć właściwość chroniona typu `A` Jeśli `A` jest zadeklarowany jako prywatny.  
   
- Operatory zdefiniowane przez użytkownika musi zawsze być zadeklarowany jako publiczny. Aby uzyskać więcej informacji, zobacz [— operator (odwołanie w C#)](../../../csharp/language-reference/keywords/operator.md).  
+ Operatory zdefiniowane przez użytkownika, zawsze musi być zadeklarowany jako publiczne ale statyczne. Aby uzyskać więcej informacji, zobacz [przeciążania operatora](../../../csharp/language-reference/operators/operator-overloading.md).  
   
  Finalizatory nie może mieć modyfikatorów dostępności.  
   

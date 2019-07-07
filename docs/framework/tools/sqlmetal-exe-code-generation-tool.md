@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586052"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610537"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Narzędzie generowania kodu)
 Narzędzie wiersza polecenia SqlMetal generuje kod i mapowanie dla [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] składnika programu .NET Framework. Stosując opisane w dalszej części tego tematu opcje, można za pomocą programu SqlMetal wykonać kilka różnych akcji, takich jak:  
@@ -49,7 +49,7 @@ sqlmetal [options] [<input file>]
 |**/ database:**  *\<name >*|Określa wykaz baz danych na serwerze.|  
 |**/ User:**  *\<name >*|Określa identyfikator logowania użytkownika. Wartość domyślna: Użyj uwierzytelniania Windows.|  
 |**/ password:**  *\<hasło >*|Określa hasło logowania. Wartość domyślna: Użyj uwierzytelniania Windows.|  
-|**/ conn:**  *\<parametry połączenia >*|Określa parametry połączenia z bazą danych. Nie można używać z **/Server**, **/database**, **/User**, lub **/Password** opcje.<br /><br /> W parametrach połączenia nie można umieszczać nazwy pliku. Zamiast tego należy określić nazwę pliku w wierszu polecenia jako plik wejściowy. Na przykład poniższy wiersz określa "c:\northwnd.mdf" jako plik wejściowy: **sqlmetal /code:"c:\northwind.cs" / Language: CSharp "c:\northwnd.mdf"**.|  
+|**/ conn:**  *\<parametry połączenia >*|Określa parametry połączenia z bazą danych. Nie można używać z **/Server**, **/database**, **/User**, lub **/Password** opcje.<br /><br /> W parametrach połączenia nie można umieszczać nazwy pliku. Zamiast tego należy określić nazwę pliku w wierszu polecenia jako plik wejściowy. Na przykład poniższy wiersz określa "c:\northwnd.mdf" jako plik wejściowy: **sqlmetal /code:"c:\northwind.cs" / Language: CSharp "c:\northwnd.mdf"** .|  
 |**/ timeout:**  *\<sekund >*|Określa wartość limitu czasu używaną, gdy program SqlMetal uzyskuje dostęp do bazy danych. Wartość domyślna: 0 (czyli brak limitu czasu).|  
   
  **Opcje wyodrębniania**  
@@ -72,18 +72,18 @@ sqlmetal [options] [<input file>]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/Language:**  *\<języka >*|Określa język kodu źródłowego.<br /><br /> Nieprawidłowa  *\<języka >*: vb, csharp.<br /><br /> Wartość domyślna: Pochodzi z rozszerzeniem nazwy pliku kodu.|  
+|**/Language:**  *\<języka >*|Określa język kodu źródłowego.<br /><br /> Nieprawidłowa  *\<języka >* : vb, csharp.<br /><br /> Wartość domyślna: Pochodzi z rozszerzeniem nazwy pliku kodu.|  
 |**/ NAMESPACE:**  *\<name >*|Określa przestrzeń nazw wygenerowanego kodu. Wartość domyślna: brak przestrzeni nazw.|  
 |**/ Context:**  *\<typ >*|Określa nazwę klasy kontekstu danych. Wartość domyślna: Pochodzi od nazwy bazy danych.|  
 |**/entitybase:** *\<type>*|Określa klasę bazową klas obiektów w generowanym kodzie. Wartość domyślna: Jednostki nie mają klasy bazowej.|  
 |**/ pluralize**|Automatycznie zmienia nazwy klas i składowych na liczbę mnogą lub pojedynczą.<br /><br /> Ta opcja jest dostępna tylko w Stanach Zjednoczonych Wersja w języku angielskim.|  
-|**/Serialization:**  *\<opcja >*|Generuje klasy, które można serializować.<br /><br /> Nieprawidłowa  *\<opcja >*: None, Unidirectional. Wartość domyślna: Brak.<br /><br /> Aby uzyskać więcej informacji, zobacz [serializacji](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/Serialization:**  *\<opcja >*|Generuje klasy, które można serializować.<br /><br /> Nieprawidłowa  *\<opcja >* : None, Unidirectional. Wartość domyślna: Brak.<br /><br /> Aby uzyskać więcej informacji, zobacz [serializacji](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **Plik wejściowy**  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**\<Plik wejściowy >**|Określa plik mdf programu SQL Server Express [!INCLUDE[ssEW](../../../includes/ssew-md.md)] pliku .sdf lub plik pośredni dbml.|  
+|**\<Plik wejściowy >**|Określa plik mdf programu SQL Server Express, plik sdf programu SQL Server Compact 3.5 lub plik pośredni dbml.|  
   
 ## <a name="remarks"></a>Uwagi  
  Działanie programu SqlMetal w rzeczywistości obejmuje wykonanie dwóch kroków:  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  Jeśli nie **/Server** jest określony, **localhost/sqlexpress** zakłada, że.  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] zgłasza wyjątek, jeśli spełnione są co najmniej jeden z następujących warunków:  
+ Microsoft SQL Server 2005 zgłasza wyjątek, jeśli jest to jeden lub więcej z następujących warunków jest spełniony:  
   
 - Program SqlMetal próbuje wyodrębnić procedurę składowaną, którą sam wywołuje.  
   

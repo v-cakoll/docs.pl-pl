@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063893"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610440"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje zdarzenia trasowane terminologii, w tym artykule opisano sposób zdarzenia trasowane są przesyłane za pośrednictwem drzewa elementów, podsumowano, jak obsługiwać zdarzenia trasowane i wyjaśniono, jak tworzyć własne niestandardowe zdarzenia trasowane.
@@ -98,7 +98,7 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  Gdy zdarzenia trasowane stają się zaawansowane jest, jeśli używasz jednego z sugerowanych scenariuszy: Definiowanie często używanych procedur obsługi w typowy katalog główny składania własny formant lub Definiowanie klasy formantu niestandardowego.  
   
- Detektory zdarzenia trasowanego i źródła zdarzeń trasowanych nie muszą udostępniać typowe zdarzenia w jego hierarchii. Wszelkie <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> może to być odbiornik zdarzeń dla dowolnego zdarzenia trasowane. W związku z tym, można użyć pełnego zestawu zdarzenia trasowane, które są dostępne w całej pracy [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ustawiona jako koncepcyjny "interfejs" zgodnie z którą różnych elementów w aplikacji mogą wymieniać informacje o zdarzeniu. To pojęcie "interfejsu" dla zdarzenia trasowane jest szczególnie przydatny dla zdarzenia wejściowe.  
+ Detektory zdarzenia trasowanego i źródła zdarzeń trasowanych nie muszą udostępniać typowe zdarzenia w jego hierarchii. Wszelkie <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> może to być odbiornik zdarzeń dla dowolnego zdarzenia trasowane. W związku z tym można użyć pełnego zestawu zdarzenia trasowane, które są dostępne w całej pracy interfejsu API, Ustaw jako koncepcyjny "interfejs" zgodnie z którą różnych elementów w aplikacji mogą wymieniać informacje o zdarzeniu. To pojęcie "interfejsu" dla zdarzenia trasowane jest szczególnie przydatny dla zdarzenia wejściowe.  
   
  Zdarzenia trasowane można również komunikować się za pośrednictwem drzewa elementów, ponieważ dane zdarzeń dla zdarzenia jest perpetuated do każdego elementu w trasie. Jeden element można zmienić element dane zdarzenia, a ta zmiana będzie dostępny do następnego elementu w trasie.  
   

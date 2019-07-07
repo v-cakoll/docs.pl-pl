@@ -2,12 +2,12 @@
 title: Jak artykułów (Przewodnik C#)
 description: Szybkie wskazówki i przykłady kodu krótki, ukierunkowane kolekcję
 ms.date: 12/20/2017
-ms.openlocfilehash: 77b68af5802f79060e30b2817661de4cb5e46942
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879013"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609260"
 ---
 # <a name="how-to-c"></a>Instrukcje (C#)
 
@@ -21,7 +21,7 @@ Istnieje kilka porady i wskazówki, które są wspólne praktyki dla deweloperó
 - [Dowiedz się, różnice między przekazywaniem struktury i klasy do metody](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Jak używać wyrażeń lambda](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Rozwiązać konflikty nazw typu za pomocą aliasu globalna przestrzeń nazw](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Przeciążanie operatora użyj](../language-reference/keywords/operator.md).
+- [Przeciążanie operatora użyj](../language-reference/operators/operator-overloading.md).
 - [Implementowanie i wywołanie niestandardowej metody rozszerzenia](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Chcieć nawet języku C# programistów [użyj `My` przestrzeni nazw z VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Utwórz nową metodę `enum` typu przy użyciu metody rozszerzenia](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).

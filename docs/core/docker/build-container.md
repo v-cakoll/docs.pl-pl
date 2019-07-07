@@ -4,12 +4,12 @@ description: W tym samouczku dowiesz się, jak konteneryzowanie aplikacji .NET C
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 6a1d366aceecdf4bd22a04f823aa6805060f8069
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539192"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609295"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie aplikacji .NET Core
 
@@ -177,7 +177,7 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 W terminalu przejdź do katalogu do folderu roboczego, który został utworzony na początku w górę. Utwórz plik o nazwie *pliku Dockerfile* w folderze roboczym, a następnie otwórz go w edytorze tekstów. W pierwszym wierszu pliku, należy dodać następujące polecenie:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
 
 `FROM` Polecenie informuje, Docker, aby ściągnąć obraz oznaczony **2.2** z **mcr.microsoft.com/dotnet/core/runtime** repozytorium. Upewnij się, ściągania środowiska uruchomieniowego .NET Core, które odpowiada celem zestawu SDK środowiska uruchomieniowego. Na przykład aplikację utworzoną w poprzedniej sekcji używane .NET Core 2.2 SDK i utworzyć aplikację, która docelowej platformy .NET Core 2.2. Dlatego obraz podstawowy, o których mowa w *pliku Dockerfile* oznakowano **2.2**.

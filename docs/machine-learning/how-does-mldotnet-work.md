@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 58e79cf0b017d65644f25250d05d252b5635c21e
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152003"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610184"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Co to jest strukturze ML.NET i jak to działa?
 
@@ -164,16 +164,19 @@ W tej sekcji kursu wzorców architektury strukturze ML.NET. Jeśli jesteś dośw
 Aplikację strukturze ML.NET rozpoczyna się od <xref:Microsoft.ML.MLContext> obiektu. Ten obiekt pojedyncze zawiera **katalogi**. Wykaz jest fabryki danych, ładowania i zapisywania przekształceń, instruktorów i składników operacji modelu. Każdy obiekt wykazu zawiera metody służące do tworzenia różnych typów składników:
 
 ||||
-|-|-|-|
-|Ładowanie danych i zapisywanie||<xref:Microsoft.ML.DataOperationsCatalog>|
-|Przygotowywanie danych||<xref:Microsoft.ML.TransformsCatalog>|
-|Szkolenie algorytmów|Klasyfikacja binarna|<xref:Microsoft.ML.BinaryClassificationCatalog>|
-||Wieloklasowej klasyfikacji|<xref:Microsoft.ML.MulticlassClassificationCatalog>|
-||Wykrywanie anomalii|<xref:Microsoft.ML.AnomalyDetectionCatalog>|
-||Klasyfikacja|<xref:Microsoft.ML.RankingCatalog>|
-||Regresji|<xref:Microsoft.ML.RegressionCatalog>|
-||Zalecenie|<xref:Microsoft.ML.RecommendationCatalog>|
-|Sposób użycia modelu ||<xref:Microsoft.ML.ModelOperationsCatalog>|
+|-|-|-|-|
+|Ładowanie danych i zapisywanie||<xref:Microsoft.ML.DataOperationsCatalog>||
+|Przygotowywanie danych||<xref:Microsoft.ML.TransformsCatalog>||
+|Szkolenie algorytmów|Klasyfikacja binarna|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+||Wieloklasowej klasyfikacji|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||Wykrywanie anomalii|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||Klastrowanie|<xref:Microsoft.ML.ClusteringCatalog>||
+||Prognozowanie|<xref:Microsoft.ML.Forecasting>||
+||Klasyfikacja|<xref:Microsoft.ML.RankingCatalog>||
+||Regresji|<xref:Microsoft.ML.RegressionCatalog>||
+||Zalecenie|<xref:Microsoft.ML.RecommendationCatalog>|Dodaj Microsoft.ML.Recommender|
+||Szeregi czasowe|<xref:Microsoft.ML.TimeSeriesCatalog>|add Microsoft.ML.TimeSeries|
+|Sposób użycia modelu ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 Możesz przejść do metod tworzenia w każdej z powyższych kategorii. W programie Visual Studio wykazów są wyświetlane za pomocą funkcji IntelliSense.
 

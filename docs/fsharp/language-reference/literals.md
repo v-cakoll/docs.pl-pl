@@ -2,12 +2,12 @@
 title: Literały
 description: Dowiedz się więcej o typy literałów w F# języka programowania.
 ms.date: 06/28/2019
-ms.openlocfilehash: 53647d8cbc2a59527a50e122bc1abc6055c1fce5
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c9ced0b505817a161ca39c6c9f853f94cedf410
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487781"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610153"
 ---
 # <a name="literals"></a>Literały
 
@@ -69,7 +69,7 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>Uwagi
 
-Ciągi Unicode mogą zawierać jawne kodowania, które można określić za pomocą `\u` następuje 16-bitowych kodów szesnastkowych (FFFF 0000 -) lub kodowania UTF-32, które można określić za pomocą `\U` następuje kod szesnastkowy 32-bitowy, który reprezentuje wszelkie punkt kodu Unicode (00000000 - 00010FFFF).
+Ciągi Unicode mogą zawierać jawne kodowania, które można określić za pomocą `\u` następuje 16-bitowych kodów szesnastkowych (FFFF 0000 -) lub kodowania UTF-32, które można określić za pomocą `\U` następuje kod szesnastkowy 32-bitowy, który reprezentuje wszelkie punkt kodu Unicode (00000000 - 0010FFFF).
 
 Używanie innych operatorów bitowych inne niż `|||` nie jest dozwolone.
 

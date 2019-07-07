@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: cd14b51daee12e8de18586b262bdf2928bffbdc2
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 3caacf8628e6ab07b731f0574ca3a0f7e973adcd
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504007"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609891"
 ---
 # <a name="equality-operators-c-reference"></a>Operatory porównania (C# odwołania)
 
@@ -83,7 +83,7 @@ W poniższym przykładzie pokazano użycie `!=` operator:
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 
-Typ zdefiniowany przez użytkownika może [przeciążenia](../keywords/operator.md) `==` i `!=` operatorów. Jeśli typem przeciążeń, jeden z dwóch operatorów on także przeciążać inny.
+Typ zdefiniowany przez użytkownika może [przeciążenia](operator-overloading.md) `==` i `!=` operatorów. Jeśli typem przeciążeń, jeden z dwóch operatorów on także przeciążać inny.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

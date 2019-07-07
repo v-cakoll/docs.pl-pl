@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4108583a5f97d1349fb54c335d55252352ea4883
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423997"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609991"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 
@@ -243,7 +243,7 @@ Aby uzyskać więcej informacji, zobacz uwagi w [System.Double](/dotnet/api/syst
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 
-Typ zdefiniowany przez użytkownika może [przeciążenia](../keywords/operator.md) jednoargumentowe (`++`, `--`, `+`, i `-`) i binarny (`*`, `/`, `%`, `+`i `-`) operatory arytmetyczne. Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania złożonego jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć operator przypisania złożonego.
+Typ zdefiniowany przez użytkownika może [przeciążenia](operator-overloading.md) jednoargumentowe (`++`, `--`, `+`, i `-`) i binarny (`*`, `/`, `%`, `+`i `-`) operatory arytmetyczne. Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania złożonego jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć operator przypisania złożonego.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

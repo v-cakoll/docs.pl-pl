@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 4f2f9fa1cb1be421be57ae0671573150871ebd1d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6a6e057b45c1305a889ce4ed915b437a29ab2794
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880467"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662066"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET i LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest częścią rodziny ADO.NET technologii. Opiera się na usługach dostarczonych przez model dostawcy ADO.NET. W związku z tym możesz mieszać [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu z istniejącymi aplikacjami ADO.NET i przeprowadzić migrację bieżącego rozwiązania ADO.NET [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Następująca ilustracja przedstawia ogólny widok relacji.  
@@ -36,7 +36,7 @@ ms.locfileid: "65880467"
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- Nie można użyć tej metody dla wszystkich baz danych. Na przykład połączeń klient SQL nie można podwyższyć poziomu transakcji systemu podczas działania względem [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] serwera. Zamiast tego automatycznie współdziała on do transakcji rozproszonych, pełna zawsze wtedy, gdy widzi, używany zakres transakcji.  
+ Nie można użyć tej metody dla wszystkich baz danych. Na przykład połączeń klient SQL nie można podwyższyć poziomu transakcji systemu, gdy działa na serwerze SQL Server 2000. Zamiast tego automatycznie współdziała on do transakcji rozproszonych, pełna zawsze wtedy, gdy widzi, używany zakres transakcji.  
   
 ## <a name="direct-sql-commands"></a>Polecenia SQL bezpośrednie  
  Czasami mogą wystąpić sytuacje gdzie zdolność <xref:System.Data.Linq.DataContext> mają być odczytane lub Prześlij zmiany jest niewystarczająca dla specjalne zadanie, które chcesz wykonać. W takiej sytuacji można użyć <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> metody do wysyłania poleceń SQL w bazie danych i konwertowania wyników zapytania do obiektów.  

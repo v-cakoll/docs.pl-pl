@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424343"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661456"
 ---
 # <a name="char-c-reference"></a>char (odwołanie w C#)
 
@@ -33,7 +33,7 @@ Stałe `char` typu mogą być zapisywane jako literały znakowe, szesnastkowa se
 
 ## <a name="conversions"></a>Konwersje
 
-A `char` mogą być niejawnie konwertowane na [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [double](../../../csharp/language-reference/keywords/double.md), lub [dziesiętnych](../../../csharp/language-reference/keywords/decimal.md). Jednak nie istnieją żadne niejawne konwersje z innych typów `char` typu.
+A `char` mogą być niejawnie konwertowane na [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [double](../builtin-types/floating-point-numeric-types.md), lub [dziesiętnych](../builtin-types/floating-point-numeric-types.md). Jednak nie istnieją żadne niejawne konwersje z innych typów `char` typu.
 
 <xref:System.Char?displayProperty=nameWithType> Typu udostępnia kilka metod statycznych do pracy z `char` wartości.
 

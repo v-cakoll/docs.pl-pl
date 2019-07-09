@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06d2b576e70afb904683ca1a182c6e061faabf79
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628264"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663825"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie platformy ASP.NET Core MVC aplikacji
 
@@ -30,7 +30,7 @@ Testy jednostkowe, ze względu na fakt, przetestować pojedynczą jednostkę kod
 
 ### <a name="integration-tests"></a>Testy integracyjne
 
-Chociaż jest to dobry pomysł, aby hermetyzować swój kod, który współdziała z infrastrukturą, takich jak bazy danych i systemy plików, będą nadal mieć część kodu, i prawdopodobnie warto go przetestować. Ponadto należy sprawdzić, czy warstwy kodu wchodzić w interakcje w oczekiwany sposób w przypadku w pełni rozpoznać zależności aplikacji. Jest to odpowiedzialność testów integracji. Testy integracji zwykle być wolniejszy i trudniejsze do skonfigurowania niż testy jednostkowe, ponieważ są one często są zależne od zależności zewnętrzne i infrastruktury. W związku z tym należy unikać różne rzeczy, które mogłyby zostać testów przy użyciu testów jednostkowych w testów integracji. Jeśli danego scenariusza można przetestować za pomocą testu jednostkowego, należy go przetestować, za pomocą testu jednostkowego. Jeśli nie jest możliwe, rozważ użycie wiąże się test integracji.
+Chociaż jest to dobry pomysł, aby hermetyzować swój kod, który współdziała z infrastrukturą, takich jak bazy danych i systemy plików, będą nadal mieć część kodu, i prawdopodobnie warto go przetestować. Ponadto należy sprawdzić, czy warstwy kodu wchodzić w interakcje w oczekiwany sposób w przypadku w pełni rozpoznać zależności aplikacji. Jest to odpowiedzialność testów integracji. Testy integracji zwykle być wolniejszy i trudniejsze do skonfigurowania niż testy jednostkowe, ponieważ są one często są zależne od zależności zewnętrzne i infrastruktury. W związku z tym należy unikać testowania rzeczy, które mogą być badane za pomocą testów jednostkowych w testów integracji. Jeśli danego scenariusza można przetestować za pomocą testu jednostkowego, należy go przetestować, za pomocą testu jednostkowego. Jeśli nie jest możliwe, rozważ użycie wiąże się test integracji.
 
 Testy integracji mają często bardziej złożone ustawienia i procedury usuwania niż testy jednostkowe. Na przykład test integracji, który przechodzi z istniejącej bazy danych należy sposób, aby przywrócić bazę danych do znanego stanu przed każdym przebiegu testu. Jak są dodawane nowe testy i schemat bazy danych w środowisku produkcyjnym rozwoju, testów, te skrypty będą przeważnie zwiększanie się rozmiaru i złożoności. W wielu dużych systemach jest niepraktyczne uruchomić pełne zestawy testów integracyjnych na stanowisko pracy dewelopera przed zaewidencjonowaniem zmiany do kontroli źródła udostępnionych. W takich przypadkach testy integracji mogą być uruchamiane na serwerze kompilacji.
 

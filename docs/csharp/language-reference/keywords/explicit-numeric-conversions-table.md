@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d1533872850a953a38800aaeac85b9e6e565d374
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424197"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661371"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela jawnych konwersji liczbowych (odwołanie w C#)
 
@@ -32,9 +32,9 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych jawne konwersje międ
 |[long](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, lub `char`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, lub `char`|  
 |[char](char.md)|`sbyte`, `byte`, lub `short`|  
-|[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, lub `decimal`|  
-|[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub `decimal`|  
-|[decimal](decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub `double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, lub `decimal`|  
+|[double](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub `decimal`|  
+|[decimal](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub `double`|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -70,6 +70,6 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych jawne konwersje międ
 - [Konwersje rzutowania i typ](../../programming-guide/types/casting-and-type-conversions.md)
 - [operator)](../operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [Typy całkowite](../builtin-types/integral-numeric-types.md)
-- [Tabela typów zmiennoprzecinkowych](floating-point-types-table.md)
+- [Tabela typów zmiennoprzecinkowych](../builtin-types/floating-point-numeric-types.md)
 - [Tabela typów wbudowanych](built-in-types-table.md)
 - [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)

@@ -2,12 +2,12 @@
 title: OD (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489943"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662168"
 ---
 # <a name="from-entity-sql"></a>OD (jednostka SQL)
 Określa kolekcję używane w [wybierz](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrukcji.  
@@ -96,7 +96,7 @@ LOB.Customers
 >  W odróżnieniu od w języku Transact-SQL, nie ma potrzeby kroku jawne unnest w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS` i `OUTER APPLY` operatory zostały wprowadzone w [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. W niektórych przypadkach potoku zapytania może powodować generowanie języka Transact-SQL, który zawiera `CROSS APPLY` i/lub `OUTER APPLY` operatorów. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym wersje programu SQL Server starszych niż [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], nie obsługuje tych operatorów, takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
+>  `CROSS` i `OUTER APPLY` operatory zostały wprowadzone w programie SQL Server 2005. W niektórych przypadkach potoku zapytania może powodować generowanie języka Transact-SQL, który zawiera `CROSS APPLY` i/lub `OUTER APPLY` operatorów. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym programu SQL Server w wersjach starszych niż SQL Server 2005 nie obsługują tych operatorów, takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
 >   
 >  Niektóre typowe scenariusze, które mogą prowadzić do występowania `CROSS APPLY` i/lub `OUTER APPLY` operatory w zapytaniu dane wyjściowe są następujące: skorelowane podzapytanie za pomocą stronicowania; AnyElement za pośrednictwem skorelowane podzapytanie lub kolekcję produkowane przez nawigacji; LINQ zapytania używające grupowanie metod, które akceptują selektor elementu; zapytanie, w którym `CROSS APPLY` lub `OUTER APPLY` są jawnie określone, zapytania, które zawiera `DEREF` skonstruować za pośrednictwem `REF` konstruowania.  
   

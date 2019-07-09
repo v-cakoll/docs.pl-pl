@@ -2,12 +2,12 @@
 title: Eskalacja zarządzania transakcjami
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630572"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662464"
 ---
 # <a name="transaction-management-escalation"></a>Eskalacja zarządzania transakcjami
 System Windows obsługuje zestaw usług i moduły, które razem stanowią Menedżera transakcji. Eskalacja zarządzania transakcji opisano proces migrację transakcji z jeden ze składników Menedżera transakcji na inny.  
@@ -25,7 +25,7 @@ System Windows obsługuje zestaw usług i moduły, które razem stanowią Mened�
   
 - Co najmniej jeden trwały zasobem, który nie obsługuje jednofazowy powiadomień jest zarejestrowany w transakcji.  
   
-- Co najmniej dwa trwałe zasobów, które obsługują jednofazowy powiadomienia biorących udział w transakcji. Na przykład rejestrowanie jednego połączenia z [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] nie powoduje, że można podwyższyć poziomu transakcji. Jednak zawsze przy otwieraniu drugie połączenie z [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] bazy danych, co powoduje bazy danych zarejestrować, <xref:System.Transactions> infrastruktury wykrywa on jest drugi trwałe zasobów w transakcji, a Eskalowanie go do transakcji MSDTC.  
+- Co najmniej dwa trwałe zasobów, które obsługują jednofazowy powiadomienia biorących udział w transakcji. Na przykład rejestrowanie jednego połączenia z SQL Server 2005 nie powoduje transakcji podwyższenie poziomu. Jednak zawsze przy otwieraniu drugie połączenie z bazą danych programu SQL Server 2005, bazy danych zarejestrować, powodując <xref:System.Transactions> infrastruktury wykrywa on jest drugi trwałe zasobów w transakcji, a Eskalowanie go do transakcji MSDTC.  
   
 - Żądania transakcji w domenie innej aplikacji lub innego procesu "organizowania" jest wywoływana. Na przykład serializacji obiektu transakcji między granic domeny aplikacji. Obiekt transakcji jest przekazywane przez wartość, co oznacza, że każda próba krzyż granic domeny aplikacji (nawet w tym samym procesie) powoduje serializacji obiektu transakcji. Można przekazać obiektów transakcji przez wywołania zdalnej metody pobierającej <xref:System.Transactions.Transaction> jako parametr lub możesz wykonać następujące czynności dostępu zdalnego składników transakcyjnych obsługiwany. Serializuje obiekt transakcji i powoduje eskalację jako podczas transakcji jest serializowana na domenę aplikacji. Jest dystrybuowany i lokalny Menedżer transakcji nie jest już odpowiednie.  
   

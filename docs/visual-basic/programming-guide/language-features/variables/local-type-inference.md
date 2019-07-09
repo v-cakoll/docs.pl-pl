@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 786466cb0b94a96e629a1f173388ed7d40be7256
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052589"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661918"
 ---
 # <a name="local-type-inference-visual-basic"></a>Wnioskowanie o typie lokalnym (Visual Basic)
 Kompilator języka Visual Basic używa *wnioskowanie o typie* Aby określić typy danych zmiennych lokalnych zadeklarowana bez `As` klauzuli. Kompilator wnioskuje typ zmiennej z typu wyrażenia inicjowania. Dzięki temu można deklarować zmienne bez jawne określenie typu, jak pokazano w poniższym przykładzie. W wyniku deklaracji zarówno `num1` i `num2` są silnie typizowane jako liczby całkowite.  
@@ -65,7 +65,7 @@ Kompilator języka Visual Basic używa *wnioskowanie o typie* Aby określić typ
   
  `Option Infer Off`  
   
- Jeśli nie określisz wartości `Option Infer` w kodzie jest domyślna wartość kompilatora `Option Infer On`. Dla projektów uaktualniony z [!INCLUDE[vb_orcas_long](~/includes/vb-orcas-long-md.md)] lub wcześniej, domyślna wartość kompilatora `Option Infer Off`.  
+ Jeśli nie określisz wartości `Option Infer` w kodzie jest domyślna wartość kompilatora `Option Infer On`. 
   
  Jeśli ustawiono wartość `Option Infer` w pliku powoduje konflikt z wartości ustawionej w IDE lub w wierszu polecenia, wartość w pliku ma pierwszeństwo.  
   

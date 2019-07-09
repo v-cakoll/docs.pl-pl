@@ -2,12 +2,12 @@
 title: Ciągi
 description: Dowiedz się, jak F# typu "string" reprezentuje niezmienny tekst jako sekwencja znaków Unicode.
 ms.date: 07/05/2019
-ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610164"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660598"
 ---
 # <a name="strings"></a>Ciągi
 
@@ -32,10 +32,10 @@ Literały ciągów są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwro
 |Ukośnik odwrotny|`\\`|
 |Znak cudzysłowu|`\"`|
 |Apostrof|`\'`|
-|znak Unicode|`\DDD` (gdzie `D` wskazuje wartości dziesiętnej cyfrę; zakres 000 - 255; np. `\231` = "ç")|
-|znak Unicode|`\xHH` (gdzie `H` wskazuje cyfra szesnastkowa; zakres 00 - FF; np. `\xE7` = "ç")|
-|znak Unicode|`\uHHHH` (UTF-16) (gdzie `H` wskazuje cyfra szesnastkowa; zakres 0000 – FFFF;  np. `\u00E7` = "ç")|
-|znak Unicode|`\U00HHHHHH` (UTF-32) (gdzie `H` wskazuje cyfra szesnastkowa; zakres 000000 - 10FFFF;  np. `\U0001F47D` = "👽")|
+|znak Unicode|`\DDD` (gdzie `D` wskazuje wartości dziesiętnej cyfrę; zakres 000 - 255; na przykład `\231` = "ç")|
+|znak Unicode|`\xHH` (gdzie `H` wskazuje cyfra szesnastkowa; zakres 00 - FF; na przykład `\xE7` = "ç")|
+|znak Unicode|`\uHHHH` (UTF-16) (gdzie `H` wskazuje cyfra szesnastkowa; zakres 0000 – FFFF;  na przykład `\u00E7` = "ç")|
+|znak Unicode|`\U00HHHHHH` (UTF-32) (gdzie `H` wskazuje cyfra szesnastkowa; zakres 000000 - 10FFFF;  na przykład `\U0001F47D` = "👽")|
 
 > [!IMPORTANT]
 > `\DDD` Sekwencja unikowa to Notacja dziesiętna, a nie ósemkowy podobnie jak w innych językach. W związku z tym, cyfr `8` i `9` są prawidłowe oraz sekwencję `\032` reprezentuje spację (U + 0020), byłoby tego samego punktu kodu w notacji ósemkowej `\040`.

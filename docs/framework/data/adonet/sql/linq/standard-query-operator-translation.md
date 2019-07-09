@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610551"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661874"
 ---
 # <a name="standard-query-operator-translation"></a>Translacja standardowego operatora zapytania
 
@@ -198,13 +198,13 @@ Aby uzyskać więcej informacji na temat mapowania do tych typów daty i godziny
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 Support
 
-Następujące [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] ograniczenia (w porównaniu do programu Microsoft SQL Server 2005) mają wpływ na [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pomocy technicznej.
+Następujące ograniczenia programu SQL Server 2000 (w porównaniu do programu Microsoft SQL Server 2005) mają wpływ na [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pomocy technicznej.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply i zewnętrznych stosowanie operatorów
 
-Te operatory nie są dostępne w [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] próbuje szereg modyfikacji oprogramowania, aby zastąpić odpowiednie sprzężenia.
+Te operatory nie są dostępne w programie SQL Server 2000. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] próbuje szereg modyfikacji oprogramowania, aby zastąpić odpowiednie sprzężenia.
 
-`Cross Apply` i `Outer Apply` są generowane dla tego relacji. Zestaw zapytań, dla których są możliwe takich modyfikacji oprogramowania nie jest dobrze zdefiniowane. Z tego powodu minimalny zestaw zapytań, które jest obsługiwane w przypadku [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] to zestaw, który nie wymaga nawigacji relacji.
+`Cross Apply` i `Outer Apply` są generowane dla tego relacji. Zestaw zapytań, dla których są możliwe takich modyfikacji oprogramowania nie jest dobrze zdefiniowane. Z tego powodu minimalny zestaw zapytań, który jest obsługiwany dla programu SQL Server 2000 jest zestaw, który nie wymaga nawigacji relacji.
 
 ### <a name="text--ntext"></a>Text / ntext
 
@@ -214,11 +214,11 @@ Rozwiązanie jest dostępne dla tego ograniczenia. Ściślej mówiąc, nie możn
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Zachowanie wyzwolone przez zapytań zagnieżdżonej
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (za pośrednictwem SP4) integratorów modeli zawiera specyfikę, które są uruchamiane w zapytań zagnieżdżonej. Zestaw zapytań SQL, który wyzwala te idiosyncrasies nie jest dobrze zdefiniowane. Z tego powodu nie można zdefiniować zestaw [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytań, które mogłyby spowodować wyjątków programu SQL Server.
+Obiekt wiążący programu SQL Server 2000 (za pośrednictwem SP4) ma specyfikę, które są uruchamiane w zapytań zagnieżdżonej. Zestaw zapytań SQL, który wyzwala te idiosyncrasies nie jest dobrze zdefiniowane. Z tego powodu nie można zdefiniować zestaw [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytań, które mogłyby spowodować wyjątków programu SQL Server.
 
 ### <a name="skip-and-take-operators"></a>Pomiń i Pobierz operatorów
 
-<xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są one używane w zapytaniach względem [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i Pobierz wyjątki w programie SQL Server 2000 do niego dostępu" w [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
+<xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są one używane w kwerendach do programu SQL Server 2000. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i Pobierz wyjątki w programie SQL Server 2000 do niego dostępu" w [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
 
 ## <a name="object-materialization"></a>Materializacja obiektu
 

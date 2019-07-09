@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424030"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661587"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (C# odwołania)
 
@@ -41,7 +41,7 @@ Każdy typ wartości ma niejawnego konstruktora bez parametrów, która inicjuje
 *Typów prostych* zestaw wstępnie zdefiniowanych struktura typów dostarczonych przez C# i składają się następujące typy:
 
 - [Typy całkowite](../builtin-types/integral-numeric-types.md): liczbowych typów całkowitych i [char](char.md) typu
-- [Typy zmiennoprzecinkowe](floating-point-types-table.md)
+- [Typy zmiennoprzecinkowe](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
 Proste typy są identyfikowane za pomocą słów kluczowych, ale te słowa kluczowe są po prostu aliasami dla struktury wstępnie zdefiniowanych typów w pakietach <xref:System> przestrzeni nazw. Na przykład [int](../builtin-types/integral-numeric-types.md) jest aliasem <xref:System.Int32?displayProperty=nameWithType>. Aby uzyskać pełną listę aliasów, zobacz [Tabela typów wbudowanych](built-in-types-table.md).
@@ -93,7 +93,7 @@ Za pomocą [nowe](../operators/new-operator.md) operator wywołuje konstruktora 
 W przypadku typów zdefiniowanych przez użytkownika, należy użyć [nowe](../operators/new-operator.md) do wywołania konstruktora bez parametrów. Na przykład następująca instrukcja wywołuje konstruktora bez parametrów z `Point` struktury:
 
 ```csharp
-Point p = new Point(); // Invoke parameterless constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Po tym wywołaniu struktury uznaje się być zdecydowanie przypisywany; oznacza to, że wszystkie jego elementy członkowskie są inicjowane do wartości domyślnych.

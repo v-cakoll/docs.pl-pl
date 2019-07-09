@@ -4,12 +4,12 @@ description: Dowiedz się, jak za pomocą narzędzia interfejsu wiersza poleceni
 author: CESARDELATORRE
 ms.date: 04/17/2019
 ms.custom: how-to
-ms.openlocfilehash: 33383582140d9df4290a0bbf30659301af837d1d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e5f75dc70ea5a76951d8698ea9c0d07cb2d4ddec
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066263"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663925"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatyzowanie szkolenie modelu przy użyciu interfejsu wiersza polecenia strukturze ML.NET
 
@@ -17,16 +17,16 @@ Interfejs wiersza polecenia strukturze ML.NET "demokratyzuje" strukturze ML.NET 
 
 Używanie interfejsu API strukturze ML.NET przez siebie, (bez AutoML strukturze ML.NET interfejs wiersza polecenia), musisz wybrać trainer (wykonanie Algorytm uczenia maszynowego, dla określonego zadania), a zbiór przekształceń danych (technicznego opracowywania funkcji) do zastosowania do danych. Optymalne potoku będą się różnić dla każdego zestawu danych, a następnie wybierając optymalnego algorytmu z listy opcji dodaje do złożoności. Dodatkowo każdy algorytm ma zestaw hiperparametrów do dostrajania konfiguracji. Dzięki temu możesz poświęcić tygodni na przygotowaniu i czasami miesięcy na uczenia modelu optymalizacji próby znalezienia najlepsze kombinacji hiperparametrów, technicznego opracowywania funkcji i algorytmów uczenia maszynowego.
 
-Proces ten można zautomatyzować za pomocą strukturze ML.NET interfejsu wiersza polecenia, która implementuje aparatu inteligentne AutoML strukturze ML.NET. 
+Proces ten można zautomatyzować za pomocą strukturze ML.NET interfejsu wiersza polecenia, która implementuje aparatu inteligentne AutoML strukturze ML.NET.
 
 > [!NOTE]
-> W tym temacie odnosi się do strukturze ML.NET **interfejsu wiersza polecenia** i strukturze ML.NET **AutoML**, które są obecnie dostępne w wersji zapoznawczej i materiał może ulec zmianie. 
+> W tym temacie odnosi się do strukturze ML.NET **interfejsu wiersza polecenia** i strukturze ML.NET **AutoML**, które są obecnie dostępne w wersji zapoznawczej i materiał może ulec zmianie.
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>Co to jest strukturze ML.NET interfejsu wiersza polecenia (CLI)?
 
 Strukturze ML.NET interfejsu wiersza polecenia można uruchomić na dowolnym wiersza polecenia (Windows, Mac lub Linux) do generowania modeli strukturze ML.NET dobrej jakości i kod źródłowy, w oparciu o zestaw danych szkoleniowych.
 
-Jak pokazano na poniższej ilustracji, możesz się łatwo wygenerować model strukturze ML.NET wysokiej jakości (pliku zip Zserializowany model) oraz przykład C# kodu w celu uruchomienia/wynik tego modelu. Ponadto C# kod, aby utworzyć/szkolenie modelu zostanie również wygenerowany, dzięki czemu można zbadać i powtarzanie czynności w algorytmie i ustawień używanych na potrzeby tego wygenerowany "najlepiej modelu". 
+Jak pokazano na poniższej ilustracji, możesz się łatwo wygenerować model strukturze ML.NET wysokiej jakości (pliku zip Zserializowany model) oraz przykład C# kodu w celu uruchomienia/wynik tego modelu. Ponadto C# kod, aby utworzyć/szkolenie modelu zostanie również wygenerowany, dzięki czemu można zbadać i powtarzanie czynności w algorytmie i ustawień używanych na potrzeby tego wygenerowany "najlepiej modelu".
 
 ![obraz](media/automate-training-with-cli/cli-high-level-process.png "aparatu AutoML pracującym w strukturze ML.NET interfejsu wiersza polecenia")
 
@@ -35,7 +35,7 @@ Te zasoby można wygenerować z własne zestawy danych, bez kodowania przez sieb
 Obecnie są obsługiwane przez interfejs wiersza polecenia strukturze ML.NET zadania uczenia Maszynowego:
 
 - `binary-classification`
-- `multiclass-classification` 
+- `multiclass-classification`
 - `regression`
 - Przyszłość: inne usługi machine learning zadań takich jak `recommendation`, `ranking`, `anomaly-detection`, `clustering`
 
@@ -53,15 +53,15 @@ Można go uruchomić taki sam sposób na *programu Windows PowerShell*, * bash s
 
 Interfejs wiersza polecenia `auto-train` polecenie generuje następujące zasoby w folderze danych wyjściowych:
 
-- Zserializowany model plik zip ("najlepszy model") gotowych do użycia dla wykonywania prognoz. 
+- Zserializowany model plik zip ("najlepszy model") gotowych do użycia dla wykonywania prognoz.
 - C#rozwiązanie:
-    - C#kod w celu uruchomienia/wynik, który jest generowany modelu (w celu prognozowania w aplikacji użytkownika końcowego za pomocą modelu).
-    - C#kod z kodem szkolenia, używany do generowania modelu (w przypadku uczenia celów lub ponownego szkolenia modelu).
+  - C#kod w celu uruchomienia/wynik, który jest generowany modelu (w celu prognozowania w aplikacji użytkownika końcowego za pomocą modelu).
+  - C#kod z kodem szkolenia, używany do generowania modelu (w przypadku uczenia celów lub ponownego szkolenia modelu).
 - Plik dziennika o informacje o wszystkich iteracji/symulacji w wielu algorytmów oceniane, łącznie z ich szczegółowe konfiguracji/potoku.
 
 Pierwsze dwa zasoby bezpośrednio można w aplikacjach użytkownika końcowego (aplikacji internetowej ASP.NET Core, usług, aplikacji klasycznej, itp.), tworzyć prognozy przy użyciu wygenerowanego modelu uczenia Maszynowego.
 
-Trzeci zasobu, kod szkolenia pokazuje możesz jaki kod interfejsu API w strukturze ML.NET był używany przez interfejs wiersza polecenia do nauczenia modelu wygenerowane, aby można było ponowne szkolenie modelu i zbadaj i iteracji na którym określonego trainer/algorytmu i hiperparametrów wybrano przez interfejs wiersza polecenia i AutoML Dzieje się w tle. 
+Trzeci zasobu, kod szkolenia pokazuje możesz jaki kod interfejsu API w strukturze ML.NET był używany przez interfejs wiersza polecenia do nauczenia modelu wygenerowane, aby można było ponowne szkolenie modelu i zbadaj i iteracji na którym określonego trainer/algorytmu i hiperparametrów wybrano przez interfejs wiersza polecenia i AutoML Dzieje się w tle.
 
 ## <a name="understanding-the-quality-of-the-model"></a>Informacje o jakość modelu
 
@@ -71,7 +71,7 @@ W tym miejscu zawiera podsumowanie tych metryk, pogrupowane według zadań uczen
 
 ### <a name="metrics-for-binary-classification-models"></a>Metryki dla modeli klasyfikacji binarnej
 
- Następujące Wyświetla listę metryk klasyfikacji binarnej ML zadań, aby najważniejsze pięć modeli znalezione przez interfejs wiersza polecenia: 
+Następujące Wyświetla listę metryk klasyfikacji binarnej ML zadań, aby najważniejsze pięć modeli znalezione przez interfejs wiersza polecenia:
 
 ![obraz](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
@@ -81,7 +81,7 @@ Aby poznać i zrozumieć metryki, które są danymi wyjściowymi interfejsu wier
 
 ### <a name="metrics-for-multi-class-classification-models"></a>Metryki dla modeli klasyfikacji wieloklasowej
 
- Następujące Wyświetla listę metryk klasyfikacji wieloklasowej ML zadań, aby najważniejsze pięć modeli znalezione przez interfejs wiersza polecenia: 
+Następujące Wyświetla listę metryk klasyfikacji wieloklasowej ML zadań, aby najważniejsze pięć modeli znalezione przez interfejs wiersza polecenia:
 
 ![obraz](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 

@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 81e9a86c4761b329918bf04023dea42d2e1ad6f5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423525"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661081"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 
@@ -24,10 +24,10 @@ void* identifier; //allowed but not recommended
 Typ określony przed `*` w wskaźnik typu jest nazywana **typu Obiekt obsługujący**. Dowolne z następujących typów może być typem obiekt obsługujący:
 
 - Dowolnego typu całkowitoliczbowego: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md), [bajtów](../../language-reference/builtin-types/integral-numeric-types.md), [krótki](../../language-reference/builtin-types/integral-numeric-types.md), [ushort](../../language-reference/builtin-types/integral-numeric-types.md), [int](../../language-reference/builtin-types/integral-numeric-types.md), [uint](../../language-reference/builtin-types/integral-numeric-types.md), [długie](../../language-reference/builtin-types/integral-numeric-types.md), [ulong](../../language-reference/builtin-types/integral-numeric-types.md).
-- Wszystkie typy zmiennoprzecinkowe: [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).
+- Wszystkie typy zmiennoprzecinkowe: [float](../../language-reference/builtin-types/floating-point-numeric-types.md), [double](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - [CHAR](../../language-reference/keywords/char.md).
 - [wartość logiczna](../../language-reference/keywords/bool.md).
-- [dziesiętna](../../language-reference/keywords/decimal.md).
+- [dziesiętna](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - Wszelkie [wyliczenia](../../language-reference/keywords/enum.md) typu.
 - Dowolny typ wskaźnika. Dzięki temu wyrażenia takie jak `void**`.
 - Dowolny typ struktury zdefiniowany przez użytkownika, który zawiera tylko pola niezarządzanych typów.

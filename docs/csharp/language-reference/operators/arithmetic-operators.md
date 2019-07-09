@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 4108583a5f97d1349fb54c335d55252352ea4883
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609991"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661531"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 
@@ -41,7 +41,7 @@ Następujące operatory wykonywać operacji arytmetycznych na wartościach typy 
 - Jednoargumentowy [ `++` (inkrementacja)](#increment-operator-), [ `--` (dekrementacja)](#decrement-operator---), [ `+` (plus)](#unary-plus-and-minus-operators), i [ `-` (minus)](#unary-plus-and-minus-operators) operatorów
 - Binarny [ `*` (mnożenie)](#multiplication-operator-), [ `/` (dział)](#division-operator-), [ `%` (resztę)](#remainder-operator-), [ `+` () Dodawanie)](#addition-operator-), i [ `-` (odejmowanie)](#subtraction-operator--) operatorów
 
-Te operatory obsługują wszystkie [całkowitego](../builtin-types/integral-numeric-types.md) i [zmiennoprzecinkowych](../keywords/floating-point-types-table.md) typów liczbowych.
+Te operatory obsługują wszystkie [całkowitego](../builtin-types/integral-numeric-types.md) i [zmiennoprzecinkowych](../builtin-types/floating-point-numeric-types.md) typów liczbowych.
 
 ## <a name="increment-operator-"></a>Operator inkrementacji ++
 

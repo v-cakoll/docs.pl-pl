@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6d76d677bcf7dfa7df632bde8de76401a46db05
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877594"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661891"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Wyliczanie wystąpień programu SQL Server (ADO.NET)
 Program SQL Server zezwala na aplikacji, aby znaleźć wystąpień programu SQL Server w ramach bieżącej sieci. <xref:System.Data.Sql.SqlDataSourceEnumerator> Klasa udostępnia te informacje do deweloperów aplikacji, zapewniając <xref:System.Data.DataTable> zawierające informacje dotyczące wszystkich serwerów widoczne. Ta wartość zwrócona tabela zawiera listę wystąpień serwera dostępne w sieci, z którą jest zgodne z listą udostępniany, gdy użytkownik próbuje utworzyć nowe połączenie, a następnie rozwija listy rozwijanej zawierające wszystkie dostępne serwery na **połączenia Właściwości** okno dialogowe. Wyniki wyświetlane nie zawsze są pełne.  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Nazwa serwera.|  
 |**InstanceName**|Nazwa wystąpienia serwera. Pole puste, jeśli serwer działa jako domyślnego wystąpienia.|  
 |**IsClustered**|Wskazuje, czy serwer jest częścią klastra.|  
-|**Wersja**|Wersja serwera. Na przykład:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
+|**Wersja**|Wersja serwera. Na przykład:<br /><br /> -9.00.x (SQL Server 2005)<br />-   10.0.xx (SQL Server 2008)<br />-10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Wyliczenie ograniczeń  
  Wszystkie dostępne serwery mogą lub nie mogą być wyświetlane. Lista może się różnić w zależności od czynników, takich jak przekroczenia limitu czasu i siecią ruchu. Może to spowodować, że na liście, aby różniłaby się w dwóch kolejnych wywołań. Zostaną wyświetlone tylko serwery w tej samej sieci. Pakietów emisji zazwyczaj nie przechodzą przez routery, dlatego nie może zostać wyświetlony serwer, na liście, ale będzie stabilny przez wywołania.  

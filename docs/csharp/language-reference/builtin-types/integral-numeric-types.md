@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: bde0b7cea52951cd72bde6cfd7d8f1c7dbcb8f46
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 141475c4d92278be02d6a832a93cd8553a4bcbd8
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425586"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661136"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Całkowite typy liczbowe (C# odwołania)
 
@@ -118,8 +118,16 @@ Aby przekonwertować co typ całkowity innego typu całkowitego, gdy niejawna ko
 
 - [C#Specyfikacja języka — typy całkowite](~/_csharplang/spec/types.md#integral-types)
 - [C#Odwołanie](../index.md)
-- [Tabela typów zmiennoprzecinkowych](../keywords/floating-point-types-table.md)
+- [Typy zmiennoprzecinkowe](floating-point-numeric-types.md)
 - [Tabela wartości domyślnych](../keywords/default-values-table.md)
 - [Formatowanie tabeli wyników liczbowych](../keywords/formatting-numeric-results-table.md)
 - [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>

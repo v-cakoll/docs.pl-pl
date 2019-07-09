@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610184"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660635"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Co to jest strukturze ML.NET i jak to działa?
 
@@ -163,7 +163,7 @@ W tej sekcji kursu wzorców architektury strukturze ML.NET. Jeśli jesteś dośw
 
 Aplikację strukturze ML.NET rozpoczyna się od <xref:Microsoft.ML.MLContext> obiektu. Ten obiekt pojedyncze zawiera **katalogi**. Wykaz jest fabryki danych, ładowania i zapisywania przekształceń, instruktorów i składników operacji modelu. Każdy obiekt wykazu zawiera metody służące do tworzenia różnych typów składników:
 
-||||
+|||||
 |-|-|-|-|
 |Ładowanie danych i zapisywanie||<xref:Microsoft.ML.DataOperationsCatalog>||
 |Przygotowywanie danych||<xref:Microsoft.ML.TransformsCatalog>||
@@ -171,11 +171,11 @@ Aplikację strukturze ML.NET rozpoczyna się od <xref:Microsoft.ML.MLContext> ob
 ||Wieloklasowej klasyfikacji|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Wykrywanie anomalii|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||Klastrowanie|<xref:Microsoft.ML.ClusteringCatalog>||
-||Prognozowanie|<xref:Microsoft.ML.Forecasting>||
+||Prognozowanie|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Klasyfikacja|<xref:Microsoft.ML.RankingCatalog>||
 ||Regresji|<xref:Microsoft.ML.RegressionCatalog>||
-||Zalecenie|<xref:Microsoft.ML.RecommendationCatalog>|Dodaj Microsoft.ML.Recommender|
-||Szeregi czasowe|<xref:Microsoft.ML.TimeSeriesCatalog>|add Microsoft.ML.TimeSeries|
+||Zalecenie|<xref:Microsoft.ML.RecommendationCatalog>|Dodaj `Microsoft.ML.Recommender` pakietu NuGet|
+||Szeregi czasowe|<xref:Microsoft.ML.TimeSeriesCatalog>|Dodaj `Microsoft.ML.TimeSeries` pakietu NuGet|
 |Sposób użycia modelu ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 Możesz przejść do metod tworzenia w każdej z powyższych kategorii. W programie Visual Studio wykazów są wyświetlane za pomocą funkcji IntelliSense.

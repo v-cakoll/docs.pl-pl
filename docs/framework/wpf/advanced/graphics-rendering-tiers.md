@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: a0ed7bb48c0b8c81b44d4e321dec902ba68fc523
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77694b2a86c91f3e6946ecd50f4765404750f37b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640856"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664158"
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
 Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajności na urządzeniu z systemem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -101,7 +101,7 @@ Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajnośc
 |Ustawienie|Opis|  
 |-------------|-----------------|  
 |**Wyłącz opcję Przyspieszanie sprzętowe**|Określa, czy powinno być włączone przyspieszanie sprzętowe.|  
-|**Maksymalna wartość wielopróbkowego**|Określa stopień multisampling dla antialiasingu [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zawartości.|  
+|**Maksymalna wartość wielopróbkowego**|Określa stopień multisampling antyaliasingu do zawartości 3D.|  
 |**Wymagany sterownik wideo daty ustawienie**|Określa, czy system wyłącza przyspieszanie sprzętowe dla sterowników wydanych przed listopada 2004.|  
 |**Za pomocą opcji rasteryzatora odwołanie**|Określa, czy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] należy używać rasteryzatora odwołania.|  
   

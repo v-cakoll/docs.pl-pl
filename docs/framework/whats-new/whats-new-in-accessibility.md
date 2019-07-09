@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425579"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661385"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in ułatwień dostępu w programie .NET Framework
 
@@ -257,39 +257,39 @@ Począwszy od programu .NET Framework 4.8 WPF udostępnia te dwie właściwości
 
 - Za pomocą właściwości zależności.
 
-   WPF dodaje dwie nowe właściwości zależności <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> i <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Projektant umożliwia XAML ustawienia ich wartości:
+  WPF dodaje dwie nowe właściwości zależności <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> i <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Projektant umożliwia XAML ustawienia ich wartości:
 
-   ```xaml
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="1">Button 1</Button>
+  ```xaml
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="1">Button 1</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="2">Button 2</Button>
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="2">Button 2</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="3">Button 3</Button>
-   ```
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="3">Button 3</Button>
+  ```
 
 - Przez zastąpienie AutomationPeer metod wirtualnych.
 
-   <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> i <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> metody wirtualne zostały dodane do klasy AutomationPeer. Deweloper opracowuje wartości `SizeOfSet` i `PositionInSet` przez zastąpienie tych metod, jak pokazano w poniższym przykładzie:
+  <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> i <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> metody wirtualne zostały dodane do klasy AutomationPeer. Deweloper opracowuje wartości `SizeOfSet` i `PositionInSet` przez zastąpienie tych metod, jak pokazano w poniższym przykładzie:
 
-   ```csharp
-   public class MyButtonAutomationPeer : ButtonAutomationPeer
-   {
-      protected override int GetSizeOfSetCore()
-      {
-         // Call into your own logic to provide a value for SizeOfSet
-         return CalculateSizeOfSet();
-      }
+  ```csharp
+  public class MyButtonAutomationPeer : ButtonAutomationPeer
+  {
+    protected override int GetSizeOfSetCore()
+    {
+        // Call into your own logic to provide a value for SizeOfSet
+        return CalculateSizeOfSet();
+    }
 
-      protected override int GetPositionInSetCore()
-      {
-         // Call into your own logic to provide a value for PositionInSet
-         return CalculatePositionInSet();
-      }
-   }
-   ```
+    protected override int GetPositionInSetCore()
+    {
+        // Call into your own logic to provide a value for PositionInSet
+        return CalculatePositionInSet();
+    }
+  }
+  ```
 
 Ponadto elementy w <xref:System.Windows.Controls.ItemsControl> wystąpienia oferują wartości tych właściwości, które automatycznie bez dodatkowych działań od dewelopera. Jeśli <xref:System.Windows.Controls.ItemsControl> są grupowane, kolekcję grup jest reprezentowany jako zestaw, a każda grupa jest traktowana jako oddzielny zestaw z każdym elementem w tej grupie, podając jego pozycja w tej grupie, a także rozmiar grupy. Automatyczne wartości nie dotyczy wirtualizacji. Nawet wtedy, gdy element nie jest wykonywane, nadal jest wliczane do łączny rozmiar zestawu i ma wpływ na położenie w zestawie z jego elementów równorzędnych.
 
@@ -447,10 +447,10 @@ Aby zapewnić obsługę regionów na żywo, następujące interfejsy API został
 
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> Wyliczenia, który definiuje następujące możliwości **LiveSetting** wartości:
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Element nie wysyła powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Elementu wysyła-interruptive powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Element nie wysyła powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Elementu wysyła-interruptive powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Elementu wysyła interruptive powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Elementu wysyła interruptive powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.
 
 Można utworzyć LiveRegion, ustawiając **AutomationProperties.LiveSetting** właściwości w elemencie zainteresowania, jak pokazano w poniższym przykładzie:
 
@@ -478,81 +478,81 @@ Począwszy od .NET Framework 4.7.1 o wysokim kontraście wprowadzono ulepszenia 
 
 - <xref:System.Windows.Controls.Expander> Kontrolki
 
-    Fokus visual dla <xref:System.Windows.Controls.Expander> kontroli jest teraz widoczna. Wizualizacje klawiatury dla <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>, i <xref:System.Windows.Controls.RadioButton> formanty są również widoczne. Na przykład:
+  Fokus visual dla <xref:System.Windows.Controls.Expander> kontroli jest teraz widoczna. Wizualizacje klawiatury dla <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>, i <xref:System.Windows.Controls.RadioButton> formanty są również widoczne. Na przykład:
 
-    Przed: 
+  Przed: 
 
-    ![Formant ekspandera fokus przed ulepszenia ułatwień dostępu](media/expander-before.png)
+  ![Formant ekspandera fokus przed ulepszenia ułatwień dostępu](media/expander-before.png)
 
-    Po: 
+  Po: 
 
-    ![Formant ekspandera fokus po ulepszenia ułatwień dostępu](media/expander-after.png)
+  ![Formant ekspandera fokus po ulepszenia ułatwień dostępu](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> i <xref:System.Windows.Controls.RadioButton> formantów
 
-    Tekst w <xref:System.Windows.Controls.CheckBox> i <xref:System.Windows.Controls.RadioButton> kontrolki jest teraz lepiej widoczne po wybraniu w wysokiego kontrastu, motywów. Na przykład:
+  Tekst w <xref:System.Windows.Controls.CheckBox> i <xref:System.Windows.Controls.RadioButton> kontrolki jest teraz lepiej widoczne po wybraniu w wysokiego kontrastu, motywów. Na przykład:
 
-    Przed: 
+  Przed: 
 
-    ![Przycisk radiowy o wysokim kontraście fokus przed ulepszenia ułatwień dostępu](media/radio-button-before.png)
+  ![Przycisk radiowy o wysokim kontraście fokus przed ulepszenia ułatwień dostępu](media/radio-button-before.png)
 
-    Po: 
+  Po: 
 
-    ![Przycisk radiowy o wysokim kontraście fokus po ulepszenia ułatwień dostępu](media/radio-button-after.png)
+  ![Przycisk radiowy o wysokim kontraście fokus po ulepszenia ułatwień dostępu](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> Kontrolki
 
-    Począwszy od .NET Framework 4.7.1, obramowania wyłączone <xref:System.Windows.Controls.ComboBox> formant jest kolor wyłączonego tekstu. Na przykład:
+  Począwszy od .NET Framework 4.7.1, obramowania wyłączone <xref:System.Windows.Controls.ComboBox> formant jest kolor wyłączonego tekstu. Na przykład:
 
-    Przed: 
+  Przed: 
 
-     ![Pole kombi wyłączone obramowanie i tekst przed ulepszenia ułatwień dostępu](media/combo-disabled-before.png)
+  ![Pole kombi wyłączone obramowanie i tekst przed ulepszenia ułatwień dostępu](media/combo-disabled-before.png)
 
-    Po:   
+  Po:   
 
-     ![Pole kombi wyłączony obramowanie i tekstu po ulepszenia ułatwień dostępu](media/combo-disabled-after.png)
+  ![Pole kombi wyłączony obramowanie i tekstu po ulepszenia ułatwień dostępu](media/combo-disabled-after.png)
 
-    Ponadto wyłączone i skoncentrowany przyciski używają kolor motywu poprawne.
+  Ponadto wyłączone i skoncentrowany przyciski używają kolor motywu poprawne.
 
-    Przed:
+  Przed:
 
-    ![Kolory motywu przycisk przed ulepszenia ułatwień dostępu](media/button-themes-before.png) 
+  ![Kolory motywu przycisk przed ulepszenia ułatwień dostępu](media/button-themes-before.png) 
 
-    Po: 
+  Po: 
 
-    ![Kolory motywu przycisku po ulepszenia ułatwień dostępu](media/button-themes-after.png) 
+  ![Kolory motywu przycisku po ulepszenia ułatwień dostępu](media/button-themes-after.png) 
 
-    Na koniec w .NET Framework 4.7 i wcześniejszymi wersjami, ustawienie <xref:System.Windows.Controls.ComboBox> stylu kontrolki do `Toolbar.ComboBoxStyleKey` spowodowane strzałkę listy rozwijanej, aby była niewidoczna. Ten problem jest rozwiązany, począwszy od .NET Framework 4.7.1. Na przykład:
+  Na koniec w .NET Framework 4.7 i wcześniejszymi wersjami, ustawienie <xref:System.Windows.Controls.ComboBox> stylu kontrolki do `Toolbar.ComboBoxStyleKey` spowodowane strzałkę listy rozwijanej, aby była niewidoczna. Ten problem jest rozwiązany, począwszy od .NET Framework 4.7.1. Na przykład:
 
-    Przed: 
+  Przed: 
 
-    ![Toolbar.ComboBoxStyleKey przed ulepszenia ułatwień dostępu](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey przed ulepszenia ułatwień dostępu](media/comboboxstylekey-before.png) 
 
-    Po: 
+  Po: 
 
-    ![Toolbar.ComboBoxStyleKey po ulepszenia ułatwień dostępu](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey po ulepszenia ułatwień dostępu](media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> Kontrolki
 
-    Począwszy od .NET Framework 4.7.1, strzałkę wskaźnika sortowania w <xref:System.Windows.Controls.DataGrid> kontroluje teraz używa Popraw kolory motywu. Na przykład:
+  Począwszy od .NET Framework 4.7.1, strzałkę wskaźnika sortowania w <xref:System.Windows.Controls.DataGrid> kontroluje teraz używa Popraw kolory motywu. Na przykład:
 
-    Przed: 
+  Przed: 
 
-    ![Sortowanie strzałkę wskaźnika przed ulepszenia ułatwień dostępu](media/sort-indicator-before.png) 
+  ![Sortowanie strzałkę wskaźnika przed ulepszenia ułatwień dostępu](media/sort-indicator-before.png) 
 
-    Po:   
+  Po:   
 
-    ![Strzałka wskaźnika sortowania po ulepszenia ułatwień dostępu](media/sort-indicator-after.png) 
+  ![Strzałka wskaźnika sortowania po ulepszenia ułatwień dostępu](media/sort-indicator-after.png) 
 
-    Ponadto w i wcześniejszych wersji programu .NET Framework 4.7, domyślnego stylu łącze zmieniana na niepoprawny kolor na myszy w trybach o wysokim kontraście. Ten problem został rozwiązany, począwszy od .NET Framework 4.7.1. Podobnie <xref:System.Windows.Controls.DataGrid> wyboru kolumn używa oczekiwanego kolorów opinii fokus klawiatury, począwszy od .NET Framework 4.7.1.
+  Ponadto w i wcześniejszych wersji programu .NET Framework 4.7, domyślnego stylu łącze zmieniana na niepoprawny kolor na myszy w trybach o wysokim kontraście. Ten problem został rozwiązany, począwszy od .NET Framework 4.7.1. Podobnie <xref:System.Windows.Controls.DataGrid> wyboru kolumn używa oczekiwanego kolorów opinii fokus klawiatury, począwszy od .NET Framework 4.7.1.
 
-    Przed: 
+  Przed: 
 
-    ![Styl łącza domyślne DataGrid przed ulepszenia ułatwień dostępu](media/default-link-style-before.png) 
+  ![Styl łącza domyślne DataGrid przed ulepszenia ułatwień dostępu](media/default-link-style-before.png) 
 
-    Po:    
+  Po:    
 
-    ![Styl łącza domyślne DataGrid po ulepszenia ułatwień dostępu](media/default-link-style-after.png) 
+  ![Styl łącza domyślne DataGrid po ulepszenia ułatwień dostępu](media/default-link-style-after.png) 
 
 Aby uzyskać więcej informacji na temat ulepszenia ułatwień dostępu programu WPF w programie .NET Framework 4.7.1, zobacz [ulepszenia ułatwień dostępu w programie WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -581,13 +581,13 @@ Niektóre zmiany o wysokim kontraście należą:
 
 - Wyłączony tekst jest łatwiejsza do odczytania. Na przykład:
 
-    Przed:
+  Przed:
 
-    ![Wyłączony tekst przed ulepszenia ułatwień dostępu](media/wf-disabled-before.png) 
+  ![Wyłączony tekst przed ulepszenia ułatwień dostępu](media/wf-disabled-before.png) 
 
-    Po:
+  Po:
 
-    ![Wyłączony tekst po ulepszenia ułatwień dostępu](media/wf-disabled-after.png) 
+  ![Wyłączony tekst po ulepszenia ułatwień dostępu](media/wf-disabled-after.png) 
 
 - Duży kontrast ulepszenia w oknie dialogowym wyjątku wątku.
 

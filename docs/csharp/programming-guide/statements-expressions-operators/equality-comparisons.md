@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 50b1cdb8b7e5087f1fd6669e7163e2c15e9b23bf
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4a634f99542b2cf1a2cca9314c5eb648e841b158
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423658"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661179"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Porównywanie równości (C# Programming Guide)
 
@@ -47,7 +47,7 @@ if( b == a)
   
 ### <a name="value-equality-for-floating-point-values"></a>Równość wartości dla wartości zmiennoprzecinkowych
 
- Porównywanie równości wartości zmiennoprzecinkowych ([double](../../../csharp/language-reference/keywords/double.md) i [float](../../../csharp/language-reference/keywords/float.md)) są problematyczne ze względu na niedokładności zmiennoprzecinkowych operacji arytmetycznych na komputerach binarnych. Aby uzyskać więcej informacji, zobacz uwagi w temacie <xref:System.Double?displayProperty=nameWithType>.  
+ Porównywanie równości wartości zmiennoprzecinkowych ([double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) i [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) są problematyczne ze względu na niedokładności zmiennoprzecinkowych operacji arytmetycznych na komputerach binarnych. Aby uzyskać więcej informacji, zobacz uwagi w temacie <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   

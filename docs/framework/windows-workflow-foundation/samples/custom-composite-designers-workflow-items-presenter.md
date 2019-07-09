@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881925"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662866"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 
@@ -45,7 +45,7 @@ Kod w tym przykładzie przedstawiono poniżej:
   - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> jest szablon, który można przekazać do określania układu elementów w kolekcji. W tym przypadku jest używany panel stosu poziomej.
 
   Ten poniższy przykład kodu pokazuje to.
-  
+
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
                                 Items="{Binding Path=ModelItem.Branches}">
@@ -64,7 +64,7 @@ Kod w tym przykładzie przedstawiono poniżej:
 
 - Wykonaj stowarzyszenie `DesignerAttribute` do `Parallel` typu i następnie dane wyjściowe zgłaszane atrybutów.
 
-    - Najpierw należy zarejestrować wszystkie domyślne projektantów.
+  - Najpierw należy zarejestrować wszystkie domyślne projektantów.
 
     Poniżej przedstawiono przykładowy kod.
 
@@ -82,7 +82,7 @@ Kod w tym przykładzie przedstawiono poniżej:
     RegisterCustomMetadata()
     ```
 
-    - Następnie zastąp równoległego w `RegisterCustomMetadata` metody.
+  - Następnie zastąp równoległego w `RegisterCustomMetadata` metody.
 
     Poniższy kod przedstawia to w języku C# i Visual Basic.
 

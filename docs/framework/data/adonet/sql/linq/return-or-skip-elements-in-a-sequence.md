@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: bedb6df564e4301ec8009992ec0ec5c51de729e0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910822"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661895"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zwracanie lub pomijanie elementów w sekwencji
 Użyj <xref:System.Linq.Queryable.Take%2A> operatora zwracają danej liczby elementów w sekwencji, a następnie pominąć resztę.  
@@ -49,9 +49,9 @@ Użyj <xref:System.Linq.Queryable.Take%2A> operatora zwracają danej liczby elem
  Ze względu na ograniczenia w kolejności w programie SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] spróbuje przenieść porządkowanie argument <xref:System.Linq.Queryable.Take%2A> lub <xref:System.Linq.Queryable.Skip%2A> operatora wynik operatora.  
   
 > [!NOTE]
->  Tłumaczenie różni się [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] i [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]. Jeśli planujesz używać <xref:System.Linq.Queryable.Skip%2A> z zapytaniem o dowolnej złożoności, należy użyć [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
+>  Tłumaczenie jest inny dla programu SQL Server 2000 i SQL Server 2005. Jeśli planujesz używać <xref:System.Linq.Queryable.Skip%2A> z zapytaniem o dowolnej złożoności, użyj programu SQL Server 2005.  
   
- Należy wziąć pod uwagę następujące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wyszukiwać [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]:  
+ Należy wziąć pod uwagę następujące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania dla programu SQL Server 2000:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  

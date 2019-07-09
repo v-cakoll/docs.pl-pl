@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674006"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660784"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Przegląd automatyzacji interfejsu użytkownika — TextPattern
 
@@ -41,7 +41,7 @@ Krótko mówiąc, można użyć technologii ułatwień dostępu, które wymagaj�
 
 ## <a name="control-types"></a>Typy formantów
 
-#### <a name="text"></a>Tekst
+### <a name="text"></a>Tekst
 
 Kontrolka tekstu jest podstawowy element reprezentuje fragment tekstu na ekranie.
 
@@ -50,14 +50,14 @@ Kontrolki tekstu autonomicznego może służyć jako etykieta lub statyczny teks
 > [!NOTE]
 > Kontrolki tekstu mogą nie być wyświetlane w widoku zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa (zobacz [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)). Jest to spowodowane kontrolek tekstu są często wyświetlane za pomocą właściwości nazwy innej kontrolki. Na przykład tekst, który jest używany jako etykieta kontrolki edycji jest uwidaczniany za pomocą właściwości Name obiektu kontrolki edycji. Ponieważ w widoku zawartości kontrolki edycji [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, nie jest konieczne dla elementu tekstu, aby być w tym widoku [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa. Tylko tekst, który pojawia się w widoku zawartości to tekst, który nie jest nadmiarowe informacje. Dzięki temu wszystkie ułatwianiem szybkie filtrowanie tylko na informacje, które użytkownicy muszą.
 
-#### <a name="edit"></a>Edytowanie
+### <a name="edit"></a>Edytowanie
 
 Edytuj Włącz kontrolki użytkownika, aby wyświetlić i edytować pojedynczy wiersz tekstu.
 
 > [!NOTE]
 > Pojedynczy wiersz tekstu może opakować w niektórych scenariuszach układu.
 
-#### <a name="document"></a>dokument
+### <a name="document"></a>dokument
 
 Formantów dokumentów umożliwia użytkownikowi Przejdź i uzyskaj informacje od wielu stronach tekstu.
 
@@ -93,8 +93,10 @@ A <xref:System.Windows.Automation.TextPattern> dostawcy zawsze musi obsługiwać
 |`System.Windows.Automation.TextPatternIdentifiers Class`|Zawiera wartości, które są używane jako identyfikatory dla dostawców tekstu (zobacz <xref:System.Windows.Automation.TextPatternIdentifiers>).|
 
 <a name="Security"></a>
+
 ## <a name="security"></a>Zabezpieczenia
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Architektura została zaprojektowana z myślą o bezpieczeństwie (zobacz [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Opisane w tym omówieniu klasy TextPattern wymagają jednak pewne zagadnienia dotyczące zabezpieczeń.
+
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Architektura została zaprojektowana z myślą o bezpieczeństwie (zobacz [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Opisane w tym omówieniu klasy TextPattern wymagają jednak pewne zagadnienia dotyczące zabezpieczeń.
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tekst dostawców podać interfejsach tylko do odczytu i nie są oferowane możliwości zmiany istniejącego tekstu w kontrolce.
 
@@ -104,9 +106,9 @@ A <xref:System.Windows.Automation.TextPattern> dostawcy zawsze musi obsługiwać
 
 - Jedną z najbardziej znaczących zmian w usłudze security dla [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] szeroko nazywa się "Secure Input" obejmującym technologii, takich jak najmniej uprzywilejowane (lub ograniczony) konta użytkownika (LUA) i izolacji poziom uprawnień podsystemu (UIPI) interfejsu użytkownika.
 
-    - Podsystemu UIPI zapobiega jeden program z kontroli i/lub innego więcej "uprzywilejowanych" program monitorowania, zapobieganie atakom komunikat okna między procesami, które podszywały się pod dane wejściowe użytkownika.
+  - Podsystemu UIPI zapobiega jeden program z kontroli i/lub innego więcej "uprzywilejowanych" program monitorowania, zapobieganie atakom komunikat okna między procesami, które podszywały się pod dane wejściowe użytkownika.
 
-    - LUA Ustawia limity uprawnienia aplikacji, które są uruchamiane przez użytkowników w grupie Administratorzy. Aplikacje nie musi mieć uprawnienia administratora, ale zamiast tego zostanie uruchomiony z minimalnych niezbędnych uprawnień. W konsekwencji mogą istnieć pewne ograniczenia wymuszane w scenariuszach LUA. Głównie ciągu obcięcie (takie jak ciągi TextPattern), gdzie może być konieczne limit rozmiaru ciągi pobierane z aplikacji na poziomie administratora, aby nie musieli przydzielić pamięci w punkcie wyłączenia aplikacji.
+  - LUA Ustawia limity uprawnienia aplikacji, które są uruchamiane przez użytkowników w grupie Administratorzy. Aplikacje nie musi mieć uprawnienia administratora, ale zamiast tego zostanie uruchomiony z minimalnych niezbędnych uprawnień. W konsekwencji mogą istnieć pewne ograniczenia wymuszane w scenariuszach LUA. Głównie ciągu obcięcie (takie jak ciągi TextPattern), gdzie może być konieczne limit rozmiaru ciągi pobierane z aplikacji na poziomie administratora, aby nie musieli przydzielić pamięci w punkcie wyłączenia aplikacji.
 
 <a name="Performance"></a>
 
@@ -120,19 +122,25 @@ Jeden taktyką poprawę wydajności energii jest upewnienie się klientów autom
 
 ## <a name="textpattern-terminology"></a>Terminologia TextPattern
 
-**Atrybut** formatowania charakterystyka zakres tekstu (na przykład <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> lub <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
+**Atrybut**\
+Formatowania charakterystyka zakres tekstu (na przykład <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> lub <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
 
-**Zakres wymiar degeneracji** wymiaru degeneracji zakres to zakres tekstu pusta lub zero znaków. Celów TextPattern — wzorzec kontrolki umieść punkt wstawiania (lub daszek system) są uznawane za wymiaru degeneracji zakresu. Jeśli nie wybrano tekstu, <xref:System.Windows.Automation.TextPattern.GetSelection%2A> zwróci wymiaru degeneracji zakresu w punkcie wstawiania tekstu i <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> zwróci wymiaru degeneracji zakresu jako jego początkowy punkt końcowy. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> i <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> może zwrócić wymiaru degeneracji zakresów, kiedy dostawca tekst nie może odnaleźć żadnych zakresów tekstu, spełniające dany warunek. Ten zakres wymiaru degeneracji służy jako początkowy punkt końcowy przy użyciu dostawcy tekstu. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> i <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> zwrócić odwołanie o wartości null (`Nothing` w Microsoft Visual Basic .NET) aby uniknąć mylenia go z zakresem odnalezionych w stosunku do wymiaru degeneracji zakresu.
+**Wymiar degeneracji zakresu**\
+Wymiaru degeneracji zakres to zakres tekstu pusta lub zero znaków. Celów TextPattern — wzorzec kontrolki umieść punkt wstawiania (lub daszek system) są uznawane za wymiaru degeneracji zakresu. Jeśli nie wybrano tekstu, <xref:System.Windows.Automation.TextPattern.GetSelection%2A> zwróci wymiaru degeneracji zakresu w punkcie wstawiania tekstu i <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> zwróci wymiaru degeneracji zakresu jako jego początkowy punkt końcowy. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> i <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> może zwrócić wymiaru degeneracji zakresów, kiedy dostawca tekst nie może odnaleźć żadnych zakresów tekstu, spełniające dany warunek. Ten zakres wymiaru degeneracji służy jako początkowy punkt końcowy przy użyciu dostawcy tekstu. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> i <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> zwrócić odwołanie o wartości null (`Nothing` w Microsoft Visual Basic .NET) aby uniknąć mylenia go z zakresem odnalezionych w stosunku do wymiaru degeneracji zakresu.
 
-**Obiekt osadzony** istnieją dwa typy osadzonych obiektów w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] modelu tekstu. Składają się one oparte na tekście elementów zawartości, takie jak hiperłącza lub tabele i kontrolki elementów, takich jak obrazy i przyciski. Aby uzyskać więcej informacji, zobacz [dostępu do osadzonych obiektów przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).
+**Obiekt osadzony**\
+Istnieją dwa typy osadzonych obiektów w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] modelu tekstu. Składają się one oparte na tekście elementów zawartości, takie jak hiperłącza lub tabele i kontrolki elementów, takich jak obrazy i przyciski. Aby uzyskać więcej informacji, zobacz [dostępu do osadzonych obiektów przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).
 
-**Punkt końcowy** bezwzględną <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> lub <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punkt zakresu tekstu w kontenerze tekstu.
+**Punkt końcowy**\
+Bezwzględna <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> lub <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punkt zakresu tekstu w kontenerze tekstu.
 
 ![Wartości TextPatternRangeEndpoints &#40;początek i koniec&#41;. ](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints") poniższy rysunek ilustruje zbiór punkt początkowy i końcowy.
 
-**TextRange** reprezentację fragment tekstu za pomocą początkowego i punktu końcowego, w kontenerze tekstu, w tym wszystkie skojarzone atrybutów i funkcje.
+**TextRange**\
+Reprezentacja fragment tekstu za pomocą początkowego i punktu końcowego, w kontenerze tekstu, w tym wszystkie skojarzone atrybutów i funkcje.
 
-<xref:System.Windows.Automation.Text.TextUnit> Wstępnie zdefiniowane jednostka tekst (znak, word, wiersza lub akapitu) używany do przechodzenia między logiczne segmenty zakres tekstu.
+<xref:System.Windows.Automation.Text.TextUnit>\
+Wstępnie zdefiniowane jednostka tekst (znak, word, wiersza lub akapitu) używany do przechodzenia między logiczne segmenty zakres tekstu.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690533"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663988"
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 
@@ -207,19 +207,19 @@ Obie strony (Alice i Bob) można używać funkcji skrótu do zapewnienia integra
 
 - Alicja wysyła wiadomości w postaci zwykłego tekstu i skrótu wiadomości (podpis cyfrowy) do niego. Robert otrzymuje wyznacza wartość skrótu wiadomości i porównuje jego wartość skrótu, aby wartość skrótu, który on otrzymany od Alice. Jeśli wartości skrótu są identyczne, wiadomość nie została zmieniona. Jeśli wartości nie są identyczne, komunikat zostało zmienione po jego autorem, Alicji.
 
-    Niestety ta metoda nie można ustalić autentyczności nadawcy. Każdy może spersonifikować Alicja i wysłać wiadomość do niego. Używają tego samego algorytmu wyznaczania wartości skrótu do podpisania wiadomości, a wszystko, co można określić Bob to, czy komunikat odpowiada jego podpisu. Jest to jeden formularz atak typu man-in--middle. Aby uzyskać więcej informacji, zobacz [przykład komunikacji Secure Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Niestety ta metoda nie można ustalić autentyczności nadawcy. Każdy może spersonifikować Alicja i wysłać wiadomość do niego. Używają tego samego algorytmu wyznaczania wartości skrótu do podpisania wiadomości, a wszystko, co można określić Bob to, czy komunikat odpowiada jego podpisu. Jest to jeden formularz atak typu man-in--middle. Aby uzyskać więcej informacji, zobacz [przykład komunikacji Secure Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alicja wysyła wiadomości w postaci zwykłego tekstu do niego za pośrednictwem niezabezpieczonych kanału publicznych. Wysyła skrótu wiadomości do niego za pośrednictwem bezpiecznego kanału prywatnych. Robert otrzymuje komunikat w postaci zwykłego tekstu, skróty go i porównuje skrót do prywatnie wymiana skrótu. Jeśli skróty są zgodne, Robert wie, dwie rzeczy:
 
-    - Wiadomość nie została zmodyfikowana.
+  - Wiadomość nie została zmodyfikowana.
 
-    - Nadawca wiadomości (Alice) jest autentyczny.
+  - Nadawca wiadomości (Alice) jest autentyczny.
 
-    Dla tego systemu do pracy Alicja należy ukryć swojej oryginalnej wartości skrótu od wszystkich stron z wyjątkiem sytuacji Bob.
+  Dla tego systemu do pracy Alicja należy ukryć swojej oryginalnej wartości skrótu od wszystkich stron z wyjątkiem sytuacji Bob.
 
 - Alicja wysyła wiadomości w postaci zwykłego tekstu do niego za pośrednictwem niezabezpieczonych kanału publicznych i umieszcza skrótu wiadomości w publicznie dostępnej witrynę sieci Web.
 
-    Ta metoda zapobiega, komunikat o naruszeniu, uniemożliwiając każdy przy użyciu wartości skrótu. Mimo, że komunikat i jego skrót mogą być odczytywane przez nikogo, można zmienić tylko przez Alice wartość skrótu. Osoba atakująca, która chce, aby dokonać personifikacji Alicja będzie wymagać dostępu do witryny sieci Web Alicji.
+  Ta metoda zapobiega, komunikat o naruszeniu, uniemożliwiając każdy przy użyciu wartości skrótu. Mimo, że komunikat i jego skrót mogą być odczytywane przez nikogo, można zmienić tylko przez Alice wartość skrótu. Osoba atakująca, która chce, aby dokonać personifikacji Alicja będzie wymagać dostępu do witryny sieci Web Alicji.
 
 Żaden z poprzednich metod uniemożliwi ktoś odczytywania komunikatów przez Alice, ponieważ są one przekazywane w postaci zwykłego tekstu. Pełne zabezpieczenia zwykle wymaga (podpisywanie komunikatów) podpisów cyfrowych i szyfrowania.
 

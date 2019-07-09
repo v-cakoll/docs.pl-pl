@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762729"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663157"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderującego ustawień rejestru, które wpływają na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -33,7 +33,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
 |Ustawienie|Opis|  
 |-------------|-----------------|  
 |**Wyłącz opcję Przyspieszanie sprzętowe**|Określa, czy powinno być włączone przyspieszanie sprzętowe.|  
-|**Maksymalna wartość wielopróbkowego**|Określa stopień multisampling dla antialiasingu [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zawartości.|  
+|**Maksymalna wartość wielopróbkowego**|Określa stopień multisampling antyaliasingu do zawartości 3D.|  
 |**Wymagany sterownik wideo daty ustawienie**|Określa, czy system wyłącza przyspieszanie sprzętowe dla sterowników wydanych przed listopada 2004.|  
 |**Za pomocą opcji rasteryzatora odwołanie**|Określa, czy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] należy używać rasteryzatora odwołania.|  
   
@@ -57,9 +57,9 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **Maksymalną wartość wielopróbkowego** umożliwia dostosowanie maksymalną ilość antialiasingu z [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zawartości. Użyj tego poziomu, aby wyłączyć [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] antialiasingu w [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] lub ją włączyć w [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ **Maksymalną wartość wielopróbkowego** umożliwia dostosowanie maksymalną ilość antialiasingu zawartości 3D. Użyj tego poziomu, aby wyłączyć antialiasingu 3-w [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] lub ją włączyć w [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
   
- **Maksymalną wartość wielopróbkowego** jest wartość typu DWORD z zakresu od 0 do 16. Wartość 0 oznacza, że wielopróbkowego antialiasingu zawartości 3D powinny być wyłączone i wartość 16 spróbuje użyć maksymalnie 16 x wielopróbkowego antialiasingu, jeśli jest obsługiwany przez karty wideo. Należy pamiętać, że ustawienie tej wartości klucza rejestru na komputerach za pomocą sterowników XPDM spowoduje, że aplikacje korzystać z dużą ilością dodatkową pamięć, zmniejszyć wydajność z [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] renderowania i może potencjalnie powodować błędy renderowania i problemów ze stabilnością.  
+ **Maksymalną wartość wielopróbkowego** jest wartość typu DWORD z zakresu od 0 do 16. Wartość 0 oznacza, że wielopróbkowego antialiasingu zawartości 3D powinny być wyłączone i wartość 16 spróbuje użyć maksymalnie 16 x wielopróbkowego antialiasingu, jeśli jest obsługiwany przez karty wideo. Należy pamiętać, że ustawienie tej wartości klucza rejestru na komputerach za pomocą sterowników XPDM spowoduje, że aplikacje korzystać z dużą ilością dodatkową pamięć, zmniejszyć wydajność renderowania 3W i może potencjalnie wprowadzić błędy renderowania i stabilności problemy.  
   
  Gdy ten klucz rejestru nie jest ustawiona, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wartość domyślna to 0 dla sterowników XPDM i 4 dla sterowników WDDM.  
   

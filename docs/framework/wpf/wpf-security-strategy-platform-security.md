@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 6372f9cb4c332eb77cd70a9b0786eff005216516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642881"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663565"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jednocześnie również wykorzystuje funkcje zabezpieczeń, możliwości platformy, która zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy są łączone w celu zapewnienia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, ochronę w głębi, który próbuje uniknąć dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
@@ -132,7 +132,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
 - **LocalIntranet**. W przypadku aplikacji, uruchomione z **lokalny Intranet** strefy. Podzbiór uprawnienia są przyznawane zapewniają umiarkowane dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, nieograniczony dostęp do interfejsu użytkownika, okna dialogowe pliku bez ograniczeń, ograniczone odbicia, ograniczony dostęp do zmiennych środowiskowych. Uprawnienia dla krytycznych zasobów, takich jak rejestru nie są dostarczane.  
   
-- **Internet**. W przypadku aplikacji, uruchomione z **Internet** lub **Zaufane witryny** strefy. Podzbiór uprawnienia udzielane pod warunkiem ograniczony dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, można otworzyć pliku tylko i ograniczenia interfejsu użytkownika. Zasadniczo to uprawnienie ustawia izoluje aplikacje z komputera klienckiego.  
+- **Internet**. W przypadku aplikacji, uruchomione z **Internet** lub **Zaufane witryny** strefy. Podzbiór uprawnienia udzielane pod warunkiem ograniczony dostęp do zasobów komputera klienta, w tym wydzielonej pamięci masowej, można otworzyć pliku tylko i ograniczenia interfejsu użytkownika. Zasadniczo to uprawnienie Ustaw izoluje aplikacje z komputera klienckiego.  
   
  Aplikacje określone jako pochodzącej z **niezaufanych witryn** strefy są przyznawane żadne uprawnienia przez [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] wcale. W związku z tym zestawu wstępnie zdefiniowanych uprawnień nie istnieje dla nich.  
   
@@ -149,7 +149,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  Do wykonania tej operacji [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], podstawowe [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kod musi być wykonany więcej funkcji niż jest dostępne dla wywołania [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], w tym:  
   
-- Tworzenie uchwyt okna (hWnd) do renderowania  
+- Tworzenie uchwyt okna (HWND) do renderowania  
   
 - Podczas wysyłania wiadomości  
   
@@ -157,7 +157,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  Z zabezpieczeń będzie krytycznego punktu widzenia, dzięki czemu bezpośredni dostęp do dowolnego z tych operacji z aplikacji w trybie piaskownicy.  
   
- Na szczęście [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] przeznaczony dla tej sytuacji, umożliwiając te operacje do wykonania z podwyższonym poziomem uprawnień w imieniu aplikacji w trybie piaskownicy. Podczas wszystkich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operacje są porównywane z ograniczonymi uprawnieniami zabezpieczeń strefy Internet domeny aplikacji [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (tak jak inne biblioteki systemu) otrzymuje zestawu uprawnień, który zawiera wszystkie możliwe uprawnienia  
+ Na szczęście [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] przeznaczony dla tej sytuacji, umożliwiając te operacje do wykonania z podwyższonym poziomem uprawnień w imieniu aplikacji w trybie piaskownicy. Podczas wszystkich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operacje są porównywane z ograniczonymi uprawnieniami zabezpieczeń strefy Internet domeny aplikacji [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (tak jak inne biblioteki systemu) otrzymuje zestawu uprawnień, który zawiera wszystkie możliwe uprawnienia.
   
  Takie rozwiązanie wymaga [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] odbiera podwyższonego poziomu uprawnień podczas uniemożliwia tych uprawnień jest regulowane przez zestaw uprawnień strefy Internet domeny aplikacji hosta.  
   
@@ -174,7 +174,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
 ### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
  [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] to technologia wdrażania kompleksowe, jest dołączana do .NET Framework, która integruje się z [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (zobacz [ClickOnce zabezpieczeń i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment) Aby uzyskać szczegółowe informacje). Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje można wdrożyć przy użyciu [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], natomiast aplikacje hostowane w przeglądarce musi zostać wdrożony za pomocą [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
- Aplikacje wdrożone za pomocą [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] są podane jako dodatkowa warstwa zabezpieczeń za pośrednictwem [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; zasadniczo [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] wdrożone aplikacje zażądać uprawnień, które są im niezbędne. Otrzymują uprawnienia Jeśli nie przekraczają zestaw uprawnień strefy, w którym aplikacja jest wdrażana. Zmniejszenie zestaw uprawnień tylko do tych, które są potrzebne, nawet jeśli są mniejsze niż te dostarczone przez zestaw uprawnień strefy uruchamiania, jest wiele zasobów, które aplikacja ma dostęp do ograniczenie do minimum systemu od zera. W związku z tym jeśli przejęta aplikacji jest mniejsze ryzyko uszkodzenia komputer kliencki.  
+ Aplikacje wdrożone za pomocą [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] są podane jako dodatkowa warstwa zabezpieczeń za pośrednictwem [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; zasadniczo [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] wdrożone aplikacje zażądać uprawnień, które są im niezbędne. Otrzymują uprawnienia Jeśli nie przekraczają zestaw uprawnień strefy, w którym aplikacja jest wdrażana. Dzięki zmniejszeniu zestaw uprawnień tylko do tych, które są potrzebne, nawet jeśli są mniejsze niż te dostarczone przez uprawnień strefy uruchamiania Ustaw, liczby zasobów, czy aplikacja ma dostęp do jest ograniczone do minimum systemu od zera. W związku z tym jeśli przejęta aplikacji jest mniejsze ryzyko uszkodzenia komputer kliencki.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Metodologia zabezpieczenia krytyczny  
@@ -208,7 +208,6 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Opis zabezpieczeń w programie Microsoft Internet Explorer 6 Windows XP z dodatkiem SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
 - [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
 - [Zabezpieczenia](security-wpf.md)
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)

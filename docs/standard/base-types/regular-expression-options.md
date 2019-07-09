@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb3120887a1a42d01b8d8ddc3351d1209294ffc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811473"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663985"
 ---
 # <a name="regular-expression-options"></a>Opcje wyrażeń regularnych
 
@@ -44,26 +44,26 @@ Można określić opcje dla wyrażeń regularnych w jeden z trzech sposobów:
 
 - W `options` parametru <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statycznym (`Shared` w języku Visual Basic) metoda dopasowania do wzorca, takich jak <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. `options` Parametr jest bitową kombinacją OR <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wyliczonych wartości.
 
-    Jeśli opcje są dostarczane do <xref:System.Text.RegularExpressions.Regex> wystąpienia przy użyciu `options` parametr konstruktora klasy, opcje są przypisane do <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwości. Jednak <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwość nie będzie odzwierciedlał opcje wbudowane we wzorcu wyrażenia regularnego, sam.
+  Jeśli opcje są dostarczane do <xref:System.Text.RegularExpressions.Regex> wystąpienia przy użyciu `options` parametr konstruktora klasy, opcje są przypisane do <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwości. Jednak <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwość nie będzie odzwierciedlał opcje wbudowane we wzorcu wyrażenia regularnego, sam.
 
-    Poniższy przykład stanowi ilustrację. Używa ona `options` parametru <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody, aby umożliwić dopasowanie bez uwzględniania wielkości liter i Ignorowanie wzorca odstępu przy identyfikowaniu wyrazy zaczynające się na literę "d".
+  Poniższy przykład stanowi ilustrację. Używa ona `options` parametru <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody, aby umożliwić dopasowanie bez uwzględniania wielkości liter i Ignorowanie wzorca odstępu przy identyfikowaniu wyrazy zaczynające się na literę "d".
 
-    [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
-    [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
+  [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
+  [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
 - Stosując opcje wbudowane we wzorcu wyrażenia regularnego przy użyciu składni `(?imnsx-imnsx)`. Opcja dotyczy wzorca od punktu, opcją jest zdefiniowany do końca wzorca lub punktu, w którym opcją jest niezdefiniowana przez inną opcję wbudowaną. Należy pamiętać, że <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwość <xref:System.Text.RegularExpressions.Regex> wystąpienia nie będzie odzwierciedlał te opcje określane w tekście. Aby uzyskać więcej informacji, zobacz [różne konstrukcje](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md) tematu.
 
-    Poniższy przykład stanowi ilustrację. Używa opcji wbudowanej, aby umożliwić dopasowanie bez uwzględniania wielkości liter i Ignorowanie wzorca odstępu przy identyfikowaniu wyrazy zaczynające się na literę "d".
+  Poniższy przykład stanowi ilustrację. Używa opcji wbudowanej, aby umożliwić dopasowanie bez uwzględniania wielkości liter i Ignorowanie wzorca odstępu przy identyfikowaniu wyrazy zaczynające się na literę "d".
 
-    [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
-    [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
+  [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
+  [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
 - Stosując opcje wbudowane w określonej metodzie grupowania konstruowania we wzorcu wyrażenia regularnego przy użyciu składni `(?imnsx-imnsx:` *Podwyrażenie*`)`. Żaden znak przed zestawem opcji nie włącza zestawu; znak minus przed zestawem opcji wyłącza zestaw. (`?` jest stałą częścią składni konstrukcji języka, który jest wymagany, czy opcje są włączone lub wyłączone.) Opcja ma zastosowanie tylko do tej grupy. Aby uzyskać więcej informacji, zobacz [Konstrukcje grupujące](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-    Poniższy przykład stanowi ilustrację. Jej używa opcji wbudowanej w konstrukcję grupującą, aby umożliwić dopasowanie bez uwzględniania wielkości liter i Ignorowanie wzorca odstępu przy identyfikowaniu wyrazy zaczynające się na literę "d".
+  Poniższy przykład stanowi ilustrację. Jej używa opcji wbudowanej w konstrukcję grupującą, aby umożliwić dopasowanie bez uwzględniania wielkości liter i Ignorowanie wzorca odstępu przy identyfikowaniu wyrazy zaczynające się na literę "d".
 
-    [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
-    [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
+  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
+  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
 
 Jeśli opcje są określone w jednej linii, znak minus (`-`) przed opcją lub zestawem opcji powoduje wyłączenie tych opcji. Na przykład wbudowana konstrukcja `(?ix-ms)` włącza <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> i <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> a wyłącza opcje <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> i <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> opcje. Wszystkie opcje wyrażeń regularnych są domyślnie wyłączone.
 
@@ -296,9 +296,9 @@ Jednak w następujących przypadkach białe znaki w wyrażeniu regularnym nie s�
 
 - Biały znak nie jest dozwolone w obrębie sekwencji znaków, która wprowadza element języka. Na przykład:
 
-    - Element języka `(?:` *Podwyrażenie* `)` reprezentuje grupę nieprzechwytującą i `(?:` część elementu nie można osadzić miejsca do magazynowania. Wzorzec `(? :` *Podwyrażenie* `)` zgłasza <xref:System.ArgumentException> w czasie wykonywania, ponieważ aparat wyrażeń regularnych nie można przeanalizować wzorzec i wzorzec `( ?:` *Podwyrażenie*  `)` nie powiedzie się dopasować *Podwyrażenie*.
+  - Element języka `(?:` *Podwyrażenie* `)` reprezentuje grupę nieprzechwytującą i `(?:` część elementu nie można osadzić miejsca do magazynowania. Wzorzec `(? :` *Podwyrażenie* `)` zgłasza <xref:System.ArgumentException> w czasie wykonywania, ponieważ aparat wyrażeń regularnych nie można przeanalizować wzorzec i wzorzec `( ?:` *Podwyrażenie*  `)` nie powiedzie się dopasować *Podwyrażenie*.
 
-    - Element języka `\p{` *nazwa*`}`, która reprezentuje kategorię Unicode, lub o nazwie bloku, nie może zawierać spacji osadzonych w `\p{` część elementu. Jeśli dołączysz do odstępu, element zgłasza <xref:System.ArgumentException> w czasie wykonywania.
+  - Element języka `\p{` *nazwa*`}`, która reprezentuje kategorię Unicode, lub o nazwie bloku, nie może zawierać spacji osadzonych w `\p{` część elementu. Jeśli dołączysz do odstępu, element zgłasza <xref:System.ArgumentException> w czasie wykonywania.
 
 Włączenie tej opcji pomaga uprościć wyrażenia regularne, które są często trudne do analizowania i zrozumienia. Zwiększa czytelność i umożliwia dokumentowanie wyrażenia regularnego.
 
@@ -364,32 +364,32 @@ Zachowanie ECMAScript i kanonicznych wyrażeń regularnych różni się w trzech
 
 - Składnia klasy znaku. Ponieważ kanoniczne wyrażenia regularne obsługują Unicode, natomiast ECMAScript nie, klasy znaku w ECMAScript mają bardziej ograniczoną składnię, a niektóre elementy języka klasy znaku mają inne znaczenie. Na przykład ECMAScript nie obsługuje elementów języka, takich jak elementy kategorii lub blok Unicode `\p` i `\P`. Podobnie `\w` element, który pasuje do znaku słowa, jest odpowiednikiem `[a-zA-Z_0-9]` klasy znaków, korzystając z ECMAScript i `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` korzystając z zachowania kanonicznego. Aby uzyskać więcej informacji, zobacz [klas znaków](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).
 
-    Poniższy przykład ilustruje różnicę między kanonicznym i ECMAScript dopasowywania do wzorca. Definiuje wyrażenie regularne `\b(\w+\s*)+`, które odpowiada wyrazom następują znaki odstępu. Dane wejściowe składa się z dwóch ciągów, jeden używa zestawu znaków łacińskich, a druga używa zestawu znaków cyrylicy. Tak jak pokazano w danych wyjściowych, wywołanie <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody, która używa dopasowywania ECMAScript nie powiedzie się do dopasowania słów w cyrylicy, podczas gdy wywołanie metody używające dopasowania kanonicznego.
+  Poniższy przykład ilustruje różnicę między kanonicznym i ECMAScript dopasowywania do wzorca. Definiuje wyrażenie regularne `\b(\w+\s*)+`, które odpowiada wyrazom następują znaki odstępu. Dane wejściowe składa się z dwóch ciągów, jeden używa zestawu znaków łacińskich, a druga używa zestawu znaków cyrylicy. Tak jak pokazano w danych wyjściowych, wywołanie <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody, która używa dopasowywania ECMAScript nie powiedzie się do dopasowania słów w cyrylicy, podczas gdy wywołanie metody używające dopasowania kanonicznego.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
-    [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
+  [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
+  [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
 
 - Grupy przechwytywania odwołujące. Klasa przechwytywania wyrażeń regularnych z odwołaniem wstecznym do siebie musi być aktualizowana przy każdej iteracji przechwytywania. Jak pokazano na poniższym przykładzie, ta funkcja umożliwia wyrażenia regularnego `((a+)(\1) ?)+` do pasuje do ciągu wejściowego "aa aaaa aaaaaa", korzystając z ECMAScript, ale nie przy wykorzystaniu dopasowania kanonicznego.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
-    [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
+  [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
+  [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
 
-    Wyrażenie regularne jest zdefiniowane, jak pokazano w poniższej tabeli.
+  Wyrażenie regularne jest zdefiniowane, jak pokazano w poniższej tabeli.
 
-    |Wzorzec|Opis|
-    |-------------|-----------------|
-    |(a+)|Odpowiada literze "a" jeden lub więcej razy. Jest to druga grupa przechwytywania.|
-    |(\1)|Dopasuj podciąg przechwycony przez pierwszą grupę przechwytywania. Jest to trzecia grupa przechwytywania.|
-    |?|Dopasowuje zero lub jeden znak spacji.|
-    |((a+)(\1) ?)+|Dopasowanie wzorca jednego lub więcej znaki "a następuje ciąg, który pasuje do pierwszej grupy przechwytywania" następuje zero lub jeden obszar znaków, jeden lub więcej razy. Jest to pierwsza grupa przechwytywania.|
+  |Wzorzec|Opis|
+  |-------------|-----------------|
+  |(a+)|Odpowiada literze "a" jeden lub więcej razy. Jest to druga grupa przechwytywania.|
+  |(\1)|Dopasuj podciąg przechwycony przez pierwszą grupę przechwytywania. Jest to trzecia grupa przechwytywania.|
+  |?|Dopasowuje zero lub jeden znak spacji.|
+  |((a+)(\1) ?)+|Dopasowanie wzorca jednego lub więcej znaki "a następuje ciąg, który pasuje do pierwszej grupy przechwytywania" następuje zero lub jeden obszar znaków, jeden lub więcej razy. Jest to pierwsza grupa przechwytywania.|
 
 - Rozdzielczość niejasności między ósemkową zwraca i wprowadza odwołania wsteczne. W poniższej tabeli podsumowano różnice w ósemkowych w porównaniu z dopasowywania wstecznego interpretacji przez canonical i wyrażeń regularnych ECMAScript.
 
-    |Wyrażenie regularne|Zachowanie kanoniczne|Zachowanie ECMAScript|
-    |------------------------|------------------------|-------------------------|
-    |`\0` następują cyfry ósemkowe 0 do 2|Interpretuj jako ósemkowy. Na przykład `\044` jest zawsze interpretowane jako wartość ósemkowa i oznacza "$".|Takie samo zachowanie.|
-    |`\` następuje numer od 1 do 9, bez dodatkowych cyfr dziesiętnych|Interpretuj jako odwołanie wsteczne. Na przykład `\9` zawsze oznacza odwołanie wsteczne nr 9, nawet jeśli dziewiąta grupa przechwytywania nie istnieje. Jeśli grupa przechwytywania nie istnieje, analizator składni wyrażeń regularnych zgłasza <xref:System.ArgumentException>.|Jeśli przechwytywanie pojedynczą cyfrą dziesiętną grupa istnieje, Utwórz wsteczne odwołanie do tej cyfry. W przeciwnym razie interpretuje wartość jako literał.|
-    |`\` następuje numer od 1 do 9, a następnie dodatkowe cyfry dziesiętne|Interpretuj cyfry jako wartość dziesiętną. Jeśli ta grupa przechwytywania istnieje, następuje interpretacja wyrażenia jako odwołanie wsteczne.<br /><br /> W przeciwnym wypadku interpretuje wiodące cyfry ósemkowe do ósemkowej 377; oznacza to należy rozważyć tylko niskie 8 bitów wartości. Interpretuj pozostałe cyfry jako literały. Na przykład w wyrażeniu `\3000`, jeśli istnieje grupa przechwytywania 300, następuje interpretacja jako odwołania wstecznego 300; Jeśli grupa przechwytywania 300 nie istnieje, następuje interpretacja jako ósemkowe 300, następuje 0.|Interpretuj jako odwołanie wsteczne, konwertując dowolną liczbę cyfr jak najbliżej wartość dziesiętnych, która może odwoływać się do przechwytywania. Jeśli mogą być konwertowane nie cyfry, następuje interpretacja jako wartości ósemkowej za pomocą wiodących cyfr ósemkowych aż do ósemkowej 377; interpretuj pozostałe cyfry jako literały.|
+  |Wyrażenie regularne|Zachowanie kanoniczne|Zachowanie ECMAScript|
+  |------------------------|------------------------|-------------------------|
+  |`\0` następują cyfry ósemkowe 0 do 2|Interpretuj jako ósemkowy. Na przykład `\044` jest zawsze interpretowane jako wartość ósemkowa i oznacza "$".|Takie samo zachowanie.|
+  |`\` następuje numer od 1 do 9, bez dodatkowych cyfr dziesiętnych | Interpretuj jako odwołanie wsteczne. Na przykład `\9` zawsze oznacza odwołanie wsteczne nr 9, nawet jeśli dziewiąta grupa przechwytywania nie istnieje. Jeśli grupa przechwytywania nie istnieje, analizator składni wyrażeń regularnych zgłasza <xref:System.ArgumentException>.|Jeśli przechwytywanie pojedynczą cyfrą dziesiętną grupa istnieje, Utwórz wsteczne odwołanie do tej cyfry. W przeciwnym razie interpretuje wartość jako literał.|
+  |`\` następuje numer od 1 do 9, a następnie dodatkowe cyfry dziesiętne | Interpretuj cyfry jako wartość dziesiętną. Jeśli ta grupa przechwytywania istnieje, następuje interpretacja wyrażenia jako odwołanie wsteczne.<br /><br /> W przeciwnym wypadku interpretuje wiodące cyfry ósemkowe do ósemkowej 377; oznacza to należy rozważyć tylko niskie 8 bitów wartości. Interpretuj pozostałe cyfry jako literały. Na przykład w wyrażeniu `\3000`, jeśli istnieje grupa przechwytywania 300, następuje interpretacja jako odwołania wstecznego 300; Jeśli grupa przechwytywania 300 nie istnieje, następuje interpretacja jako ósemkowe 300, następuje 0.|Interpretuj jako odwołanie wsteczne, konwertując dowolną liczbę cyfr jak najbliżej wartość dziesiętnych, która może odwoływać się do przechwytywania. Jeśli mogą być konwertowane nie cyfry, następuje interpretacja jako wartości ósemkowej za pomocą wiodących cyfr ósemkowych aż do ósemkowej 377; interpretuj pozostałe cyfry jako literały.|
 
 [Powrót do początku](#Top)
 
@@ -399,7 +399,7 @@ Zachowanie ECMAScript i kanonicznych wyrażeń regularnych różni się w trzech
 
 Domyślnie gdy aparat wyrażeń regularnych wykonuje porównania bez uwzględniania wielkości liter, używa konwencji obudowy bieżącej kultury, aby określić równoważne znaki wielkich i małych.
 
-To zachowanie jest jednak niepożądane dla niektórych rodzajów porównań, szczególnie podczas porównywania danych wprowadzonych przez użytkownika z nazwami zasobów systemowych, takich jak hasła, pliki lub adresy URL. Poniższy przykład ilustruje taki scenariusz. Kod jest przeznaczony do blokowania dostępu do dowolnego zasobu, którego adres URL jest poprzedzony elementem **FILE://**. Wyrażenie regularne próbuje dopasowanie bez uwzględniania wielkości liter na ciąg przy użyciu wyrażeń regularnych `$FILE://`. Jednak gdy bieżącą kulturą systemu jest tr-TR (Turecki-Turcja), "I" nie jest odpowiednikiem wielkie litery "i". W wyniku wywołania <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metoda zwraca `false`, i jest dozwolony dostęp do pliku.
+To zachowanie jest jednak niepożądane dla niektórych rodzajów porównań, szczególnie podczas porównywania danych wprowadzonych przez użytkownika z nazwami zasobów systemowych, takich jak hasła, pliki lub adresy URL. Poniższy przykład ilustruje taki scenariusz. Kod jest przeznaczony do blokowania dostępu do dowolnego zasobu, którego adres URL jest poprzedzony elementem **FILE://** . Wyrażenie regularne próbuje dopasowanie bez uwzględniania wielkości liter na ciąg przy użyciu wyrażeń regularnych `$FILE://`. Jednak gdy bieżącą kulturą systemu jest tr-TR (Turecki-Turcja), "I" nie jest odpowiednikiem wielkie litery "i". W wyniku wywołania <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metoda zwraca `false`, i jest dozwolony dostęp do pliku.
 
 [!code-csharp[Conceptual.Regex.Language.Options#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#14)]
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]

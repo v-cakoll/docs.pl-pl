@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946990"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663011"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i składniki niezależne od języka
 
@@ -29,35 +29,35 @@ W tym artykule:
 
 * [Reguły zgodności ze specyfikacją CLS](#cls-compliance-rules)
 
-    * [Typy i podpisy typu członka](#types-and-type-member-signatures)
+  * [Typy i podpisy typu członka](#types-and-type-member-signatures)
 
-    * [Konwencje nazewnictwa](#naming-conventions)
+  * [Konwencje nazewnictwa](#naming-conventions)
 
-    * [Konwersja typu](#type-conversion)
+  * [Konwersja typu](#type-conversion)
 
-    * [Tablice](#arrays)
+  * [Tablice](#arrays)
 
-    * [Interfejsy](#interfaces)
+  * [Interfejsy](#interfaces)
 
-    * [Wyliczenia](#enumerations)
+  * [Wyliczenia](#enumerations)
 
-    * [Ogólnie rzecz biorąc wpisz członków](#type-members-in-general)
+  * [Ogólnie rzecz biorąc wpisz członków](#type-members-in-general)
 
-    * [Ułatwienia dostępu członków](#member-accessibility)
+  * [Ułatwienia dostępu członków](#member-accessibility)
 
-    * [Typy ogólne i członkowie](#generic-types-and-members)
+  * [Typy ogólne i członkowie](#generic-types-and-members)
 
-    * [Konstruktory](#constructors)
+  * [Konstruktory](#constructors)
 
-    * [Właściwości](#properties)
+  * [Właściwości](#properties)
 
-    * [Zdarzenia](#events)
+  * [Zdarzenia](#events)
 
-    * [Overloads](#overloads)
+  * [Overloads](#overloads)
 
-    * [Wyjątki](#exceptions)
+  * [Wyjątki](#exceptions)
 
-    * [Atrybuty](#attributes)
+  * [Atrybuty](#attributes)
 
 * [Atrybut CLSCompliantAttribute](#the-clscompliantattribute-attribute)
 
@@ -1307,11 +1307,11 @@ Wyliczenia zgodne ze specyfikacją CLS muszą wykonać następujące czynności:
 
 * Istnieją dwa rodzaje wyliczeń:
 
-    * Wyliczenie, które reprezentuje zestaw wzajemnie się wykluczających, nazwanych wartości całkowitych. Ten typ wyliczenia jest oznaczany przez brak z [System.FlagsAttribute](xref:System.FlagsAttribute) atrybutu niestandardowego.
+  * Wyliczenie, które reprezentuje zestaw wzajemnie się wykluczających, nazwanych wartości całkowitych. Ten typ wyliczenia jest oznaczany przez brak z [System.FlagsAttribute](xref:System.FlagsAttribute) atrybutu niestandardowego.
 
-    * Wyliczenie, które reprezentuje zestaw flag bitowych, które można połączyć do generowania wartości nienazwanej. Ten typ wyliczenia jest wskazywane przez obecność [System.FlagsAttribute](xref:System.FlagsAttribute) atrybutu niestandardowego.
+  * Wyliczenie, które reprezentuje zestaw flag bitowych, które można połączyć do generowania wartości nienazwanej. Ten typ wyliczenia jest wskazywane przez obecność [System.FlagsAttribute](xref:System.FlagsAttribute) atrybutu niestandardowego.
 
- Aby uzyskać więcej informacji, zobacz dokumentację dla [wyliczenia](xref:System.Enum) struktury.
+Aby uzyskać więcej informacji, zobacz dokumentację dla [wyliczenia](xref:System.Enum) struktury.
 
 * Wartość wyliczenia nie jest ograniczona do zakresu jego określonych wartości. Innymi słowy zakres wartości wyliczenia to zakres wartości bazowej. Możesz użyć `Enum.IsDefined` metodę, aby określić, czy określona wartość jest członkiem wyliczenia.
 

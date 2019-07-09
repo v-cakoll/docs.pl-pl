@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 58ee58577b9ff71112103abb4d33c8b85d3c806f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a770bcbbc8ac553c55e9dda5097abec8790182e5
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786141"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663737"
 ---
 # <a name="graphics-and-multimedia"></a>Grafika i multimedia
 
@@ -59,7 +59,7 @@ WPF obsługuje wysokiej jakości grafika 2-D. Funkcje obejmują pędzle, geometr
 
 ### <a name="2-d-shapes"></a>Kształty 2-D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera bibliotekę często używane, rysowania wektor [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] kształtów, takich jak prostokąty i wielokropek, co pokazano na poniższej ilustracji.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera bibliotekę często używane, rysowania wektor kształty 2-D, takich jak prostokąty i wielokropek, co pokazano na poniższej ilustracji.
 
 ![Diagram przedstawiający wielokropek i prostokąty.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -101,7 +101,7 @@ Aby uzyskać więcej informacji, zobacz [kształty i podstawowe Rysowanie w WPF 
 
 ### <a name="2-d-geometries"></a>2-D geometrii
 
-Gdy [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] kształty, które [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera nie są wystarczające, można użyć [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Obsługa geometrii i ścieżki, aby utworzyć własny. Poniższa ilustracja przedstawia, jak używać geometrii do tworzenia kształtów, jako pędzla do rysowania i kiedy należy przyciąć innych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] elementów.
+Gdy 2-D kształty, które [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera nie są wystarczające, można użyć [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Obsługa geometrii i ścieżki, aby utworzyć własny. Poniższa ilustracja przedstawia, jak używać geometrii do tworzenia kształtów, jako pędzla do rysowania i kiedy należy przyciąć innych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] elementów.
 
 ![Zrzut ekranu przedstawiający sposób geometrii można użyć do tworzenia kształtów.](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ Aby uzyskać więcej informacji, zobacz [Przegląd Geometria](geometry-overview.
 
 ### <a name="2-d-effects"></a>Efekty 2-D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera bibliotekę [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] klasy, których można tworzyć różne efekty. [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] Możliwości renderowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy, które mają gradientów, mapy bitowe, rysunki i wideo; i manipulować nimi przy użyciu obrotu, skalowanie i pochylanie. Na poniższej ilustracji przedstawiono przykładowy wiele efekty, można osiągnąć za pomocą [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Pędzle.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera bibliotekę klas 2-D, których można tworzyć różne efekty. Możliwości renderowania 2-D [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy, które mają gradientów, mapy bitowe, rysunki i wideo; i manipulować nimi przy użyciu obrotu, skalowanie i pochylanie. Na poniższej ilustracji przedstawiono przykładowy wiele efekty, można osiągnąć za pomocą [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Pędzle.
 
 ![Ilustracja przedstawiająca różnych pędzle WPF i elementy programu paint.](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ Aby uzyskać więcej informacji, zobacz [pędzle WPF — Przegląd](wpf-brushes-
 
 ## <a name="3-d-rendering"></a>Renderowanie 3-D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera zestaw [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] możliwości renderowania, które integrują się z [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] obsługi grafiki w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w kolejności, w celu utworzenia bardziej atrakcyjne układ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i wizualizacja danych. Na jednym końcu spektrum [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Umożliwia renderowanie [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] obrazów na powierzchni [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] kształty, które przedstawiono na poniższej ilustracji.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera zestaw możliwości renderowania 3W, które integrują się z pomocą techniczną grafika 2-D w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w kolejności, w celu utworzenia bardziej atrakcyjne układ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i wizualizacja danych. Na jednym końcu spektrum [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Umożliwia renderowanie obrazów 2-D na powierzchni 3W kształtów, co pokazano na poniższej ilustracji.
 
 ![Zrzut ekranu przedstawiający 3W kształtów różne tekstury próbki.](./media/index/visual-three-dimensional-shape.png)
 

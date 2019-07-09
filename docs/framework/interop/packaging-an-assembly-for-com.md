@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6933aa5ee253f78806aba401749256934f490126
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833584"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662370"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Pakowanie zestawu dla modelu COM
 
@@ -61,7 +61,7 @@ COM, deweloperzy mogą korzystać z następujące informacje na temat typów zar
 
   Niezależnie od wybranego mechanizmu tylko typy publiczne zdefiniowane w zestawie, który podasz znajdują się w wygenerowanej biblioteki typów.
 
-  Można bibliotekę typów w osobnym pliku pakietu lub osadzenie go jako plik zasobów Win32 w ciągu. Aplikacja oparta na sieci. Microsoft Visual Basic 6.0 wykonać to zadanie dla Ciebie automatycznie. Jednakże korzystając z [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], należy ręcznie osadzić biblioteki typów. Aby uzyskać instrukcje, zobacz [jak: Osadzanie bibliotek typu jako zasobów Win32 w. Aplikacje oparte na NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
+Aby uzyskać instrukcje, zobacz [jak: Osadzanie bibliotek typu jako zasobów Win32 w. Aplikacje oparte na NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 

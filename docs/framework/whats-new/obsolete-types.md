@@ -8,73 +8,77 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d8af0f32c676f4438334f7c64b771e237db90dd3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457058"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663852"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
+
 <a name="introduction"></a> W tabelach, w tym artykule przedstawiono typy, które są przestarzałe w programie .NET Framework 4.5 i .NET Framework 4.6, uporządkowane według zestawu. Poniższe łącza umożliwiają wyświetlenie listy przestarzałych typów i zalecanych rozwiązań alternatywnych, w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementów członkowskich również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](obsolete-members.md).
 
 - [Przestarzałe typy w zestawy systemowe](#obsolete_types_in_system_assemblies)
 
-    - [mscorlib.dll](#mscorlib)
+  - [mscorlib.dll](#mscorlib)
 
-    - [System.Core.dll](#Core)
+  - [System.Core.dll](#Core)
 
-    - [System.Data.dll](#data)
+  - [System.Data.dll](#data)
 
-    - [System.Data.OracleClient.dll](#oracleclient)
+  - [System.Data.OracleClient.dll](#oracleclient)
 
-    - [System.Design.dll](#design)
+  - [System.Design.dll](#design)
 
-    - [System.dll](#system)
+  - [System.dll](#system)
 
-    - [System.EnterpriseServices.dll](#enterpriseservices)
+  - [System.EnterpriseServices.dll](#enterpriseservices)
 
-    - [System.Net.dll](#net)
+  - [System.Net.dll](#net)
 
-    - [System.ServiceModel.dll](#servicemodel)
+  - [System.ServiceModel.dll](#servicemodel)
 
-    - [System.Web.dll](#web)
+  - [System.Web.dll](#web)
 
-    - [System.Web.Mobile.dll](#mobile)
+  - [System.Web.Mobile.dll](#mobile)
 
-    - [System.Workflow.Activities.dll](#workflow_activities)
+  - [System.Workflow.Activities.dll](#workflow_activities)
 
-    - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
+  - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
 
-    - [System.Workflow.Runtime.dll](#workflow_runtime)
+  - [System.Workflow.Runtime.dll](#workflow_runtime)
 
-    - [System.WorkflowServices.dll](#workflowservices)
+  - [System.WorkflowServices.dll](#workflowservices)
 
-    - [System.Xaml.dll](#xaml)
+  - [System.Xaml.dll](#xaml)
 
-    - [System.Xml.dll](#xml)
+  - [System.Xml.dll](#xml)
 
-    - [WindowsBase.dll](#WindowsBase)
+  - [WindowsBase.dll](#WindowsBase)
 
 - [Przestarzałe typy w zestawach firmy Microsoft](#obsolete_types_in_microsoft_assemblies)
 
-    - [IEHost.dll i IEExec.exe](#IEHost)
+  - [IEHost.dll i IEExec.exe](#IEHost)
 
-    - [Microsoft.Build.Engine.dll](#Engine)
+  - [Microsoft.Build.Engine.dll](#Engine)
 
-    - [Microsoft.JScript.dll](#jscript)
+  - [Microsoft.JScript.dll](#jscript)
 
-    - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
+  - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
 
-    - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
+  - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
 
-    - [Microsoft.VisualC.dll](#visualc)
+  - [Microsoft.VisualC.dll](#visualc)
 
 <a name="obsolete_types_in_system_assemblies"></a>
+
 ## <a name="obsolete-types-in-system-assemblies"></a>Przestarzałe typy w zestawy systemowe
- W poniższej tabeli wymieniono typy, które zostały zadeklarowane jako przestarzałe w zestawy systemowe. Te zestawy są używane dla ogólnych\-cel tworzenia aplikacji, który jest przeznaczony dla .NET Framework.
+
+W poniższej tabeli wymieniono typy, które zostały zadeklarowane jako przestarzałe w zestawy systemowe. Te zestawy są używane dla ogólnych\-cel tworzenia aplikacji, który jest przeznaczony dla .NET Framework.
 
 <a name="mscorlib"></a>
+
 ### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll
 
 |Typ|Message|
@@ -137,18 +141,20 @@ ms.locfileid: "66457058"
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|Zabezpieczenia deklaratywne na poziomie zestawu jest przestarzała i nie jest już domyślnie jest wymuszany przez środowisko CLR.|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Ten typ jest przestarzały i zostanie usunięta w przyszłej wersji programu .NET Framework.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="Core"></a>
+
 ### <a name="assembly-systemcoredll"></a>Zestaw: System.Core.dll
 
 |Typ|Message|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|Użycie tego typu generuje błąd kompilatora.<br /><br /> Nie należy używać tego typu.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="data"></a>
+
 ### <a name="assembly-systemdatadll"></a>Zestaw: System.Data.dll
 
 |Typ|Message|
@@ -158,9 +164,10 @@ ms.locfileid: "66457058"
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|<xref:System.Data.TypedDataSetGenerator> Klasy zostanie usunięta w przyszłej wersji. Użyj <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> w System.Design.dll.|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|<xref:System.Xml.XmlDataDocument> Klasy zostanie usunięta w przyszłej wersji.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="oracleclient"></a>
+
 ### <a name="assembly-systemdataoracleclientdll"></a>Zestaw: System.Data.OracleClient.dll
 
 |Typ|Message|
@@ -174,9 +181,10 @@ ms.locfileid: "66457058"
 |<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> jest przestarzała.|
 |<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> jest przestarzała.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="design"></a>
+
 ### <a name="assembly-systemdesigndll"></a>Zestaw: System.Design.dll
 
 |Typ|Message|
@@ -196,9 +204,10 @@ ms.locfileid: "66457058"
 |<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=nameWithType>|Użycie tego typu nie jest zalecane, ponieważ autoformat — okno dialogowe jest uruchamiany przez projektanta hosta. Lista dostępnych autoformaty jest uwidaczniany w <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> w <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType> właściwości.|
 |<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=nameWithType>|Zalecaną alternatywą jest <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=nameWithType> ponieważ używa ona <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType> do edycji zawartości. Regiony projektanta umożliwiają lepsze kontrolowanie różnych zawartości edytowany.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="system"></a>
+
 ### <a name="assembly-systemdll"></a>Zestaw: PLik System.dll
 
 |Typ|Message|
@@ -211,18 +220,20 @@ ms.locfileid: "66457058"
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Ta klasa jest przestarzała. Użyj <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> zamiast niego dostęp i ustawanie globalnego domyślny serwer proxy. Użyj "null" zamiast <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|
 |<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Użycie tego typu generuje błąd kompilatora.<br /><br /> Ten interfejs API obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="enterpriseservices"></a>
+
 ### <a name="assembly-systementerpriseservicesdll"></a>Zestaw: System.EnterpriseServices.dll
 
 |Typ|Message|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|<xref:System.EnterpriseServices.RegistrationHelperTx> Klasy jest przestarzała.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="net"></a>
+
 ### <a name="assembly-systemnetdll"></a>Zestaw: System.Net.dll
 
 |Typ|Message|
@@ -237,9 +248,10 @@ ms.locfileid: "66457058"
 |<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Użycie tego typu generuje błąd kompilatora.<br /><br /> Ten interfejs API obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.|
 |<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Użycie tego typu generuje błąd kompilatora.<br /><br /> Ten interfejs API obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="servicemodel"></a>
+
 ### <a name="assembly-systemservicemodeldll"></a>Zestaw: System.ServiceModel.dll
 
 |Typ|Message|
@@ -253,9 +265,10 @@ ms.locfileid: "66457058"
 |<xref:System.ServiceModel.Configuration.PeerTransportElement?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Funkcja kanał elementu równorzędnego jest przestarzała i zostanie usunięte w przyszłości.|
 |<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Funkcja kanał elementu równorzędnego jest przestarzała i zostanie usunięte w przyszłości.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="web"></a>
+
 ### <a name="assembly-systemwebdll"></a>Zestaw: System.Web.dll
 
 |Typ|Message|
@@ -274,9 +287,10 @@ ms.locfileid: "66457058"
 |<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Ten typ jest przestarzały. Produkt uwierzytelniania usługi Passport nie jest już obsługiwana i została zastąpiona przez [Account Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413)|
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|Zalecaną alternatywą jest <xref:System.Convert?displayProperty=nameWithType> i <xref:System.String.Format%2A?displayProperty=nameWithType>.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="mobile"></a>
+
 ### <a name="assembly-systemwebmobiledll"></a>Zestaw: System.Web.Mobile.dll
 
 |Typ|Message|
@@ -474,9 +488,10 @@ ms.locfileid: "66457058"
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidationSummaryAdapter?displayProperty=nameWithType>|Zestaw System.Web.Mobile.dll jest przestarzała i nie powinna być używana. Aby uzyskać informacje o sposobie tworzenia aplikacji dla urządzeń przenośnych ASP.NET, zobacz [platformy ASP.NET dla deweloperów przenośne](https://go.microsoft.com/fwlink/?LinkId=157231).|
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidatorAdapter?displayProperty=nameWithType>|Zestaw System.Web.Mobile.dll jest przestarzała i nie powinna być używana. Aby uzyskać informacje o sposobie tworzenia aplikacji dla urządzeń przenośnych ASP.NET, zobacz [platformy ASP.NET dla deweloperów przenośne](https://go.microsoft.com/fwlink/?LinkId=157231).|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="workflow_activities"></a>
+
 ### <a name="assembly-systemworkflowactivitiesdll"></a>Zestaw: System.Workflow.Activities.dll
 
 |Typ|Message|
@@ -487,9 +502,10 @@ ms.locfileid: "66457058"
 |<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|
 |<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="workflow_componentmodel"></a>
+
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>Zestaw: System.Workflow.ComponentModel.dll
 
 |Typ|Message|
@@ -505,9 +521,10 @@ ms.locfileid: "66457058"
 |<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|
 |<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="workflow_runtime"></a>
+
 ### <a name="assembly-systemworkflowruntimedll"></a>Zestaw: System.Workflow.Runtime.dll
 
 |Typ|Message|
@@ -520,9 +537,10 @@ ms.locfileid: "66457058"
 |Wszystkie typy w <xref:System.Workflow.Runtime.Hosting> przestrzeni nazw, z wyjątkiem <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|
 |Wszystkie typy w <xref:System.Workflow.Runtime.Tracking> przestrzeni nazw|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="workflowservices"></a>
+
 ### <a name="assembly-systemworkflowservicesdll"></a>Zestaw: System.WorkflowServices.dll
 
 |Typ|Message|
@@ -549,18 +567,20 @@ ms.locfileid: "66457058"
 |Wszystkie typy w <xref:System.Workflow.Activities?displayProperty=nameWithType> przestrzeni nazw|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Typy WF 3 są przestarzałe. Zamiast tego użyj nowych typów WF 4 z <xref:System.Activities>.\*.|
 |<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Typy WF 3 są przestarzałe. Zamiast tego użyj nowych typów WF 4 z <xref:System.Activities>.\*.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="xaml"></a>
+
 ### <a name="assembly-systemxamldll"></a>Zestaw: System.Xaml.dll
 
 |Typ|Message|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|To nie jest używana przez XAML parser. Zajrzyj <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="xml"></a>
+
 ### <a name="assembly-systemxmldll"></a>Zestaw: System.Xml.dll
 
 |Typ|Message|
@@ -571,28 +591,34 @@ ms.locfileid: "66457058"
 |<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|Użycie tego typu generuje błąd kompilatora. Ten interfejs API obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.|
 |<xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>|Ta klasa jest przestarzała. Użyj <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType> zamiast tego.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="WindowsBase"></a>
+
 ### <a name="assembly-windowsbasedll"></a>Zestaw: WindowsBase.dll
 
 |Typ|Message|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> jest przestarzała. Ten interfejs nie jest już używana.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="obsolete_types_in_microsoft_assemblies"></a>
+
 ## <a name="obsolete-types-in-microsoft-assemblies"></a>Przestarzałe typy w zestawach firmy Microsoft
- W poniższych sekcjach wymieniono przestarzałe typy w zestawach firmy Microsoft. Te zestawy są zestawy specjalnych, takich jak zestawy, przeznaczonych dla poszczególnych języków (na przykład Microsoft.JScript.dll lub Microsoft.VisualC.dll).
+
+W poniższych sekcjach wymieniono przestarzałe typy w zestawach firmy Microsoft. Te zestawy są zestawy specjalnych, takich jak zestawy, przeznaczonych dla poszczególnych języków (na przykład Microsoft.JScript.dll lub Microsoft.VisualC.dll).
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Zestaw: IEHost.dll i IEExec.exe
- Zestawy IEHost.dll i IEExec.exe zostały usunięte z programu .NET Framework. Wszystkie typy i składowe są przestarzałe i nie są obsługiwane począwszy od programu .NET Framework 4. Zestawy te zostały użyte do hostowania kontrolek formularzy Windows Forms i uruchamiania plików wykonywalnych w programie Internet Explorer. Zalecane alternatywne metody obejmują ClickOnce, aplikacje przeglądarki XAML (XBAP) i Microsoft Silverlight.
 
- [Powrót do początku](#introduction)
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Zestaw: IEHost.dll i IEExec.exe
+
+Zestawy IEHost.dll i IEExec.exe zostały usunięte z programu .NET Framework. Wszystkie typy i składowe są przestarzałe i nie są obsługiwane począwszy od programu .NET Framework 4. Zestawy te zostały użyte do hostowania kontrolek formularzy Windows Forms i uruchamiania plików wykonywalnych w programie Internet Explorer. Zalecane alternatywne metody obejmują ClickOnce, aplikacje przeglądarki XAML (XBAP) i Microsoft Silverlight.
+
+[Powrót do początku](#introduction)
 
 <a name="Engine"></a>
+
 ### <a name="assembly-microsoftbuildenginedll"></a>Zestaw: Microsoft.Build.Engine.dll
 
 |Typ|Message|
@@ -600,9 +626,10 @@ ms.locfileid: "66457058"
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Ta klasa jest przestarzała. Użyj <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> z *Microsoft.Build* zestawu zamiast tego.|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Ta klasa jest przestarzała. Użyj <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> z *Microsoft.Build* zestawu zamiast tego.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="jscript"></a>
+
 ### <a name="assembly-microsoftjscriptdll"></a>Zestaw: Microsoft.JScript.dll
 
 |Typ|Message|
@@ -626,13 +653,14 @@ ms.locfileid: "66457058"
 |<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=nameWithType>|Ten typ została zakończona w programie Visual Studio 2005; nie ma zastępstwa dla tej funkcji. Zobacz <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> dokumentacji, aby uzyskać dodatkową pomoc.|
 |<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=nameWithType>|Ten typ została zakończona w programie Visual Studio 2005; nie ma zastępstwa dla tej funkcji. Zobacz <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> dokumentacji, aby uzyskać dodatkową pomoc.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="VBCompat"></a>
+
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Zestaw: Microsoft.VisualBasic.Compatibility.dll
 
 Aby uzyskać informacje na temat migracji z programu Visual Basic 6, zobacz [Centrum zasobów programu Visual Basic 6.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
-  
+
 |Typ|Message|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Ta składowa jest przestarzała.|
@@ -703,9 +731,10 @@ Aby uzyskać informacje na temat migracji z programu Visual Basic 6, zobacz [Cen
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.WebItemUnexpectedErrorReadingTemplateFile?displayProperty=nameWithType>|Ta składowa jest przestarzała.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ZOrderConstants?displayProperty=nameWithType>|Ta składowa jest przestarzała.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="VBCompatData"></a>
+
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Zestaw: Microsoft.VisualBasic.Compatibility.Data.dll
 
 |Typ|Message|
@@ -760,9 +789,10 @@ Aby uzyskać informacje na temat migracji z programu Visual Basic 6, zobacz [Cen
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UNAME?displayProperty=nameWithType>|Ta składowa jest przestarzała.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode?displayProperty=nameWithType>|Ta składowa jest przestarzała.|
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="visualc"></a>
+
 ### <a name="assembly-microsoftvisualcdll"></a>Zestaw: Microsoft.VisualC.dll
 
 |Typ|Message|

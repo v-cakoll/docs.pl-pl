@@ -2,12 +2,12 @@
 title: Usługi WCF i platforma ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: ef772a360ea53c2b5f177ed88ad14c4a1e1277ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d42787492b00b8e0a5a732d641947fec61b5ff96
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637548"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663679"
 ---
 # <a name="wcf-services-and-aspnet"></a>Usługi WCF i platforma ASP.NET
 
@@ -29,15 +29,15 @@ Wyniki modelu side-by-side są następujące:
 
 - Wewnątrz elementu AppDomain funkcje implementowane przez środowisko wykonawcze protokołu HTTP można zastosować do zawartości platformy ASP.NET, ale nie do programu WCF. Wiele funkcji specyficzne dla protokołu HTTP w aplikacji platformy ASP.NET nie dotyczą usług WCF hostowanych w domenie aplikacji, która zawiera zawartości ASP.NET. Przykłady te funkcje są następujące:
 
-    - HttpContext: <xref:System.Web.HttpContext.Current%2A> jest zawsze `null` podczas uzyskiwania dostępu do z, w ramach usługi WCF. Zamiast nich należy używać słów kluczowych <xref:System.ServiceModel.Channels.RequestContext>.
+  - HttpContext: <xref:System.Web.HttpContext.Current%2A> jest zawsze `null` podczas uzyskiwania dostępu do z, w ramach usługi WCF. Zamiast nich należy używać słów kluczowych <xref:System.ServiceModel.Channels.RequestContext>.
 
-    - Autoryzacja oparta na pliku: Model zabezpieczeń usługi WCF nie zezwala na listy kontroli dostępu (ACL) zastosowane do pliku .svc usługi przy podejmowaniu decyzji, czy żądanie obsługi jest autoryzowany.
+  - Autoryzacja oparta na pliku: Model zabezpieczeń usługi WCF nie zezwala na listy kontroli dostępu (ACL) zastosowane do pliku .svc usługi przy podejmowaniu decyzji, czy żądanie obsługi jest autoryzowany.
 
-    - Autoryzacja oparta na konfiguracji adresu URL: Podobnie, model zabezpieczeń usługi WCF nie pasuje do żadnych reguł autoryzacji opartej na adres URL określony w firmy System.Web \<autoryzacji > element konfiguracji. Te ustawienia są ignorowane w przypadku żądań usług WCF, jeśli usługa znajduje się w obszarze adres URL zabezpieczony przez ASP. Reguły autoryzacji adresów URL w sieci.
+  - Autoryzacja oparta na konfiguracji adresu URL: Podobnie, model zabezpieczeń usługi WCF nie pasuje do żadnych reguł autoryzacji opartej na adres URL określony w firmy System.Web \<autoryzacji > element konfiguracji. Te ustawienia są ignorowane w przypadku żądań usług WCF, jeśli usługa znajduje się w obszarze adres URL zabezpieczony przez ASP. Reguły autoryzacji adresów URL w sieci.
 
-    - Rozszerzalność HttpModule: Infrastruktury hostingu WCF przechwytuje WCF podczas żądania <xref:System.Web.HttpApplication.PostAuthenticateRequest> zdarzenie jest zgłaszane i nie zwraca przetwarzania w potoku HTTP programu ASP.NET. Moduły, które są kodowane w celu przechwycenia żądań na późniejszym etapie w potoku przechwytuje żądania usługi WCF.
+  - Rozszerzalność HttpModule: Infrastruktury hostingu WCF przechwytuje WCF podczas żądania <xref:System.Web.HttpApplication.PostAuthenticateRequest> zdarzenie jest zgłaszane i nie zwraca przetwarzania w potoku HTTP programu ASP.NET. Moduły, które są kodowane w celu przechwycenia żądań na późniejszym etapie w potoku przechwytuje żądania usługi WCF.
 
-    - Personifikacja w programie ASP.NET: Domyślnie WCF żądań zawsze działa zgodnie z IIS przetwarzanie tożsamości, nawet wtedy, gdy program ASP.NET jest ustawiona na Włączanie personifikacji przy użyciu System.Web firmy \<Personifikuj tożsamość = "true" / > opcja konfiguracji.
+  - Personifikacja w programie ASP.NET: Domyślnie WCF żądań zawsze działa zgodnie z IIS przetwarzanie tożsamości, nawet wtedy, gdy program ASP.NET jest ustawiona na Włączanie personifikacji przy użyciu System.Web firmy \<Personifikuj tożsamość = "true" / > opcja konfiguracji.
 
 Te ograniczenia mają zastosowanie tylko do usług WCF hostowanych w aplikacji usług IIS. Zachowanie zawartości ASP.NET nie występuje w obecności WCF.
 

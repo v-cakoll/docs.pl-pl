@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85792aea8a72ffc0c9b579473332756c6ca3bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64756023"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663837"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Instrukcje: Równoczesne hostowanie wielu wersji przepływu pracy
 
@@ -27,11 +27,11 @@ W tym kroku samouczka `WriteLine` działań w przepływie pracy są modyfikowane
 
 - [Aby zaktualizować przepływów pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-    - [Aktualizacja Automat stanów przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [Aktualizacja Automat stanów przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-    - [Aktualizacja przepływu pracy schematu blokowego](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [Aktualizacja przepływu pracy schematu blokowego](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-    - [Aby zaktualizować sekwencyjnego przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [Aby zaktualizować sekwencyjnego przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
 - [Aby zaktualizować WorkflowVersionMap obejmujący poprzednich wersji przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
@@ -68,7 +68,7 @@ W tym kroku samouczka `WriteLine` działań w przepływie pracy są modyfikowane
 
 ### <a name="BKMK_UpdateWorkflows"></a> Aby zaktualizować przepływów pracy
 
- W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` działań, które Prześlij opinię na temat odgadnięcia użytkownika są aktualizowane i nowej `WriteLine` dodanym działaniem, zawiera dodatkowe informacje o gry, gdy liczba jest złamać.
+W tej sekcji definicji przepływu pracy są aktualizowane. Dwa `WriteLine` działań, które Prześlij opinię na temat odgadnięcia użytkownika są aktualizowane i nowej `WriteLine` dodanym działaniem, zawiera dodatkowe informacje o gry, gdy liczba jest złamać.
 
 #### <a name="BKMK_UpdateStateMachine"></a> Aktualizacja Automat stanów przepływu pracy
 

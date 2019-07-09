@@ -3,12 +3,12 @@ title: Liczby w elemencie C# — wprowadzenie do C# samouczek
 description: Dowiedz się, C# eksplorując typy liczbowe, ich właściwości i metody.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 65b31c29fa9662619f92efb7977577f12d23fb30
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423423"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661054"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipulowanie liczb całkowitych i zmiennoprzecinkowych w języku C\#
 
@@ -321,7 +321,7 @@ Ukończono "liczby w elemencie C#" Szybki Start. Możesz kontynuować [gałęzie
 Możesz dowiedzieć się więcej na temat liczb w języku C# w następujących tematach:
 
 - [Typy całkowite](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Tabela typów zmiennoprzecinkowych](../../language-reference/keywords/floating-point-types-table.md)
+- [Tabela typów zmiennoprzecinkowych](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [Tabela typów wbudowanych](../../language-reference/keywords/built-in-types-table.md)
 - [Tabela niejawnych konwersji liczbowych](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabela jawnych konwersji liczbowych](../../language-reference/keywords/explicit-numeric-conversions-table.md)

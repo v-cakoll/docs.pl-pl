@@ -19,16 +19,13 @@
                 - name: Typy liczb całkowitych
                   displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
                   href: builtin-types/integral-numeric-types.md
+                - name: Zmiennoprzecinkowe rodzaje wartości numerycznych
+                  displayName: 'float, decimal, double, rational, real'
+                  href: builtin-types/floating-point-numeric-types.md
                 - name: char
                   href: keywords/char.md
-                - name: decimal
-                  href: keywords/decimal.md
-                - name: double
-                  href: keywords/double.md
                 - name: enum
                   href: keywords/enum.md
-                - name: float
-                  href: keywords/float.md
                 - name: struktura
                   href: keywords/struct.md
             - name: Typy odwołań
@@ -55,8 +52,6 @@
               items:
                 - name: Tabela typów wbudowanych
                   href: keywords/built-in-types-table.md
-                - name: Tabela typów zmiennoprzecinkowych
-                  href: keywords/floating-point-types-table.md
                 - name: Tabela typów wartości
                   href: keywords/value-types-table.md
                 - name: Tabela wartości domyślnych

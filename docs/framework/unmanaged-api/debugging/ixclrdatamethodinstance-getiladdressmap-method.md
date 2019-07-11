@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e88897342bf18111ebd4914948ab45085c35ea08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942366"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744683"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>Metoda IXCLRDataMethodInstance::GetILAddressMap
 
@@ -30,7 +30,7 @@ Pobiera IL, aby informacje dotyczące mapowania adresu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 HRESULT GetILAddressMap(
     [in] ULONG32                                   mapLen,
     [out] ULONG32                                 *mapNeeded,

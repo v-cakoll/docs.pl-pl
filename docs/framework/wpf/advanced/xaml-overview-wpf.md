@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457539"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762324"
 ---
 # <a name="xaml-overview-wpf"></a>Przegląd XAML (WPF)
 W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML można zapisać [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie opisano szczegółowo XAML jako implementowany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML, sama jest pojęciem języka większych niż [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

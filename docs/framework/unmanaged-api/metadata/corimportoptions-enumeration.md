@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c0937804eb82d1c96a605b55a00784ba58fe13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045750"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781824"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions — Wyliczenie
 Zawiera wartości flagi, które kontrolują zachowanie podczas Importowanie zestawu poza bieżącym zakresem.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef enum CorImportOptions {  
   
     MDImportOptionDefault                = 0x00000000,  

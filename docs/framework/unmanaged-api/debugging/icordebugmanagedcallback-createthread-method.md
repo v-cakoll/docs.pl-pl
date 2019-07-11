@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c48e92c73347957d8acc5c209f6f5473e9e18524
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2192b5d3b240211c8982eab7539896ea3626a072
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988276"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759671"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread — Metoda
 Powiadamia debugera, czy wątek rozpoczęła wykonywanie kodu zarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT CreateThread (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread    *thread  

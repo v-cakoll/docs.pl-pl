@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac747bf46c4dd1451e58615b1ec0311d75c899e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630430"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760480"
 ---
 # <a name="how-to-set-the-input-mask"></a>Instrukcje: ustawienie maski wprowadzania
 Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, który obsługuje składni deklaratywnej akceptowanie lub odrzucanie dane wejściowe użytkownika. Ustawiając właściwość maski, można określić danych wejściowych użytkownika dozwolony bez konieczności pisania wszelkie logikę niestandardowego sprawdzania poprawności w aplikacji. Aby uzyskać więcej informacji, zobacz sekcję Uwagi <xref:System.Windows.Forms.MaskedTextBox> klasy.  
@@ -19,7 +19,7 @@ Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, 
 ## <a name="setting-the-mask-property-manually"></a>Właściwość maski ręcznie  
  Jeśli znasz znaki, które obsługuje właściwość maska, można go wprowadzić ręcznie. Podsumowanie znaków, które obsługuje właściwość maska, zobacz sekcję Uwagi <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwości.  
   
-#### <a name="to-set-the-mask-property-manually"></a>Aby ręcznie ustawić właściwość maski  
+### <a name="to-set-the-mask-property-manually"></a>Aby ręcznie ustawić właściwość maski  
   
 1. W **projektowania** widoku, wybierz opcję <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -30,7 +30,7 @@ Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, 
 ## <a name="using-the-input-mask-dialog-box"></a>Za pomocą okna dialogowego maska wprowadzania  
  Maska wprowadzania, okno dialogowe zawiera kilka wstępnie zdefiniowanych maski wprowadzania. Można również zmienić maski wstępnie zdefiniowanych lub ręcznie wprowadź własne maski.  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>Aby otworzyć okno dialogowe maska wprowadzania  
+### <a name="to-open-the-input-mask-dialog-box"></a>Aby otworzyć okno dialogowe maska wprowadzania  
   
 1. W **projektowania** widoku, wybierz opcję <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -46,7 +46,7 @@ Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, 
   
      **Maska wprowadzania** pojawi się okno dialogowe.  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>Aby użyć okna dialogowego maska wprowadzania  
+### <a name="to-use-the-input-mask-dialog-box"></a>Aby użyć okna dialogowego maska wprowadzania  
   
 1. (Opcjonalnie) Kliknij jeden z wstępnie zdefiniowanych masek na liście.  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62a8be1e330338043df50bd80576b5aa65447b9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5fab4ef0d67ab6b86510bd4b2f814d9456213fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951778"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763993"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly — Metoda
 Pobiera odwołanie do zestawu, który nie odwołuje się [iclrassemblyreferencelist —](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) zwrócone z [ihostassemblymanager::getnonhoststoreassemblies —](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje `ProvideAssembly` dla każdego zestawu, który nie jest widoczna na liście.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT ProvideAssembly (  
     [in]  AssemblyBindInfo *pBindInfo,  
     [out] UINT64           *pAssemblyId,  

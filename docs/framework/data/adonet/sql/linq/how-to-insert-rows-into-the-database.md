@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb62522a951afd3a7159114d3b6575f1d83278bc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903074"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743320"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>Instrukcje: Wstawianie wierszy do bazy danych
 Wstawianie wierszy w bazie danych przez dodawanie obiektów do powiązanych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> kolekcji, a następnie przesyłanie zmian do bazy danych. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy zmiany w środowisku SQL odpowiednie `INSERT` poleceń.  
@@ -18,7 +18,7 @@ Wstawianie wierszy w bazie danych przez dodawanie obiektów do powiązanych [!IN
 > [!NOTE]
 >  Można zastąpić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] domyślne metody `Insert`, `Update`, i `Delete` bazy danych operacji. Aby uzyskać więcej informacji, zobacz [Dostosowywanie Insert, Update i operacje usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
 >   
->  Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Tworzenie procedur składowanych w tym samym celu.  
+>  Deweloperzy korzystający z programu Visual Studio umożliwia tworzenie procedur składowanych w tym samym celu Object Relational Designer.  
   
  W następujących krokach założono, że prawidłowy <xref:System.Data.Linq.DataContext> połączenie z bazą danych Northwind. Aby uzyskać więcej informacji, zobacz [jak: Łączenie z bazą danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md).  
   

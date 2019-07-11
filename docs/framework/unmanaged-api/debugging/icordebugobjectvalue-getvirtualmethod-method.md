@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 612d09c8303f7216e4f384668bee755ac375f6ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1e8ffefbe52344edd782b7d5d5b8d01b57f11f3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942314"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766250"
 ---
 # <a name="icordebugobjectvaluegetvirtualmethod-method"></a>ICorDebugObjectValue::GetVirtualMethod — Metoda
 `GetVirtualMethod` nie jest zaimplementowana w tej wersji programu .NET Framework.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetVirtualMethod (  
     [in]  mdMemberRef        memberRef,  
     [out] ICorDebugFunction  **ppFunction  

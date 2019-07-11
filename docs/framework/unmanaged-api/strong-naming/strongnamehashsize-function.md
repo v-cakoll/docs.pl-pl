@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e807b502e0905f9ae785203289447c71d25e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8093a702069e4ecd4dad761ad0a431abe81d6141
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041026"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780427"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize — Funkcja
 Pobiera rozmiar bufora wymaganych do wyznaczania wartości skrótu, za pomocą określonego algorytmu skrótu.  
@@ -30,7 +30,7 @@ Pobiera rozmiar bufora wymaganych do wyznaczania wartości skrótu, za pomocą o
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 BOOLEAN StrongNameHashSize (  
     [in]  ULONG   ulHashAlg,  
     [out] DWORD   *pcbSize  

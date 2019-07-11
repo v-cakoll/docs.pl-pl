@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ffd9ab9ddb95945744ecf210d0ae1d9d9812ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb26a96c46b01a2981afba0ac6b405c0b50f6d9a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779815"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781420"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables — Metoda
 Pobiera liczbę tabel w zakresie bieżącego `IMetaDataTables` wystąpienia.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetNumTables (  
     [out]  ULONG   *pcTables  
 );  

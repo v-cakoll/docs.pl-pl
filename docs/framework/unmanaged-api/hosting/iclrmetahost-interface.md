@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45089d1b64264e000c07603808f0c5fb1263b042
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984636"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776572"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost — Interfejs
 Udostępnia metody, które zwracają określonej wersji środowiska uruchomieniowego języka wspólnego (CLR) na podstawie jego numeru wersji, listę wszystkich zainstalowanych CLRs, listy wszystkie środowiska uruchomieniowe, które są ładowane w określonym procesie, odnajdź wersję środowiska CLR używane do kompilowania zestawu, Zakończ proces Zamknięcie czyste środowisko uruchomieniowe i powiązań dla zapytań dotyczących starszej wersji interfejsu API.  
@@ -41,7 +41,7 @@ Udostępnia metody, które zwracają określonej wersji środowiska uruchomienio
 ## <a name="remarks"></a>Uwagi  
  Jedynym sposobem, aby pobrać wystąpienie ten interfejs jest wywołanie [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) funkcji w następujący sposób:  
   
-```  
+```cpp  
 ICLRMetaHost *pMetaHost = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,  
                    IID_ICLRMetaHost, (LPVOID*)&pMetaHost);  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32499e74e8af9a865347bd800d3db4c303a7344c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e38d1f3cfe78b7f47a37c12c84282196f4385fbb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796737"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780745"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc — Metoda
 Żądania, że host przydzielić określonej ilości pamięci sterty.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT Alloc (  
     [in] SIZE_T  cbSize,   
     [in] EMemoryCriticalLevel dwCriticalLevel,   

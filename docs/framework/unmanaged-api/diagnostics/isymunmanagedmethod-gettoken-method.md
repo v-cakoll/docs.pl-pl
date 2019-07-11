@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ec6e25452a40ae67570badde8a883878d103f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bb9a444d8e8b674d1f173214d8bac427f24e408
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939571"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759406"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken — Metoda
 Zwraca token metadanych dla tej metody.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetToken(  
    [out, retval]  mdMethodDef  *pToken);  
 ```  

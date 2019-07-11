@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 1277b35723777760deebb6606ddc90bd21e654ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306566"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744119"
 ---
 # <a name="-operator-c-reference"></a>= — operator (C# odwołania)
 
@@ -64,7 +64,7 @@ Przypisania złożonego jest obsługiwana przez [arytmetyczne](arithmetic-operat
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 
-Typ zdefiniowany przez użytkownika nie mogą przeciążać operatora przypisania. Typ zdefiniowany przez użytkownika można jednak zdefiniować niejawną konwersję do innego typu. Dzięki temu wartość typu zdefiniowanego przez użytkownika można przypisać do zmiennej, właściwość lub indeksator elementu innego typu. Aby uzyskać więcej informacji, zobacz [niejawne](../keywords/implicit.md) artykułu — słowo kluczowe.
+Typ zdefiniowany przez użytkownika nie mogą przeciążać operatora przypisania. Typ zdefiniowany przez użytkownika można jednak zdefiniować niejawną konwersję do innego typu. Dzięki temu wartość typu zdefiniowanego przez użytkownika można przypisać do zmiennej, właściwość lub indeksator elementu innego typu. Aby uzyskać więcej informacji, zobacz [konwersja zdefiniowana przez użytkownika operatory](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

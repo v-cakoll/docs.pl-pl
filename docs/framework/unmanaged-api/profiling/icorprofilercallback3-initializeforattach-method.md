@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84d07fe975bab1b0af81299893b52142630b5bb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1a95b3078f4a592e28e0deb9869fc520cde811d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992241"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779279"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach — Metoda
 Metoda wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), aby dać profilerowi możliwość zainicjowania jego stanu po operacji dołączania.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT InitializeForAttach(  
             [in] IUnknown * pCorProfilerInfoUnk,  
             [in] void * pvClientData,  

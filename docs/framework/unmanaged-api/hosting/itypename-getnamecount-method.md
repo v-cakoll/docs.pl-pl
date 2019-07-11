@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d91eaf3287f7b38ac8240b04490bd9e9dc594d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 776af3db0a1d50e56e679fe50a99f620c281f06e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043592"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748962"
 ---
 # <a name="itypenamegetnamecount-method"></a>ITypeName::GetNameCount — Metoda
 Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetNameCount (  
     [out, retval] DWORD* pCount  
 );  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f88c0feea48ee96745effc36798bb26b4ccbf3cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 484dacd4d9803139edf3fd5bad22c164d50de3dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000366"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757239"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly — Funkcja
 Tworzy token silnej nazwy z określonego pliku zestawu.  
@@ -30,7 +30,7 @@ Tworzy token silnej nazwy z określonego pliku zestawu.
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 BOOLEAN StrongNameTokenFromAssembly (  
     [in]  LPCWSTR   wszFilePath,  
     [out] BYTE      **ppbStrongNameToken,  

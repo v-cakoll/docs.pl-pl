@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013936"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783201"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Przewodnik: Manipulowanie plikami za pomocą metod .NET Framework (Visual Basic)
 W tym instruktażu pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:System.IO.StreamReader> klasy, sprawdź, jeśli plik jest dostępny, wyszukiwanie ciągu w pliku odczytu z wystąpieniem <xref:System.IO.StreamReader> klasy, a następnie zapisać do pliku za pomocą <xref:System.IO.StreamWriter> klasy.  
@@ -30,7 +30,7 @@ W tym instruktażu pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sy
 ## <a name="creating-the-application"></a>Tworzenie aplikacji  
  Uruchom program Visual Studio i rozpocząć projektu, tworząc formularz, który użytkownik może użyć do zapisu do wskazanego pliku.  
   
-#### <a name="to-create-the-project"></a>Aby utworzyć projekt  
+### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
 1. Na **pliku** menu, wybierz opcję **nowy projekt**.  
   
@@ -51,7 +51,7 @@ W tym instruktażu pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sy
 ## <a name="writing-to-the-file"></a>Zapisywanie do pliku  
  Aby dodać możliwość zapisu do pliku za pośrednictwem aplikacji, użyj <xref:System.IO.StreamWriter> klasy. <xref:System.IO.StreamWriter> jest przeznaczona dla danych wyjściowych znaków, przy użyciu określonego kodowania, natomiast <xref:System.IO.Stream> klasa jest przeznaczona do obsługi bajtowych danych wejściowych i wyjściowych. Użyj <xref:System.IO.StreamWriter> dla liniami informacji do pliku tekstowego standardowych. Aby uzyskać więcej informacji na temat <xref:System.IO.StreamWriter> klasy, zobacz <xref:System.IO.StreamWriter>.  
   
-#### <a name="to-add-writing-functionality"></a>Aby dodać funkcję zapisywania  
+### <a name="to-add-writing-functionality"></a>Aby dodać funkcję zapisywania  
   
 1. Z **widoku** menu, wybierz **kodu** można otworzyć edytora kodu.  
   
@@ -96,7 +96,7 @@ W tym instruktażu pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sy
 |<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Text**|`GetEntries`<br /><br /> **Pobieranie wpisów**|  
 |<xref:System.Windows.Forms.ComboBox>|**Nazwa**<br /><br /> **Text**<br /><br /> **Włączone**|`PickEntries`<br /><br /> **Wybierz pozycję**<br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>Aby wypełnić pola kombi.  
+### <a name="to-populate-the-combo-box"></a>Aby wypełnić pola kombi.  
   
 1. `PickEntries` <xref:System.Windows.Forms.ComboBox> Jest używany na potrzeby wyświetlania dat, w których użytkownik prześle każdego wpisu, dzięki czemu użytkownik może wybrać wpis z określonej daty. Tworzenie <xref:System.Windows.Forms.Control.Click> procedurę obsługi zdarzeń do `GetEntries` przycisku i Dodaj następujący kod.  
   
@@ -104,7 +104,7 @@ W tym instruktażu pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sy
   
 2. Aby przetestować kod, naciśnij klawisz F5, aby skompilować aplikację, a następnie kliknij przycisk **Pobierz zapisy**. Kliknij strzałkę listy rozwijanej w <xref:System.Windows.Forms.ComboBox> na potrzeby wyświetlania dat wpisu.  
   
-#### <a name="to-choose-and-display-individual-entries"></a>Aby wybrać i wyświetlić poszczególne wpisy  
+### <a name="to-choose-and-display-individual-entries"></a>Aby wybrać i wyświetlić poszczególne wpisy  
   
 1. Tworzenie <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń dla `Display` przycisku i Dodaj następujący kod.  
   
@@ -123,7 +123,7 @@ W tym instruktażu pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sy
 |<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Text**<br /><br /> **Włączone**|`EditEntry`<br /><br /> **Edytuj wpis**<br /><br /> `False`|  
 |<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Text**<br /><br /> **Włączone**|`SubmitEdit`<br /><br /> **Prześlij edycji**<br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>Aby włączyć usuwanie i modyfikowanie wpisów  
+### <a name="to-enable-deletion-and-modification-of-entries"></a>Aby włączyć usuwanie i modyfikowanie wpisów  
   
 1. Dodaj następujący kod do `Display` przycisku <xref:System.Windows.Forms.Control.Click> zdarzeń po `DisplayEntry.Text = ReadString`.  
   

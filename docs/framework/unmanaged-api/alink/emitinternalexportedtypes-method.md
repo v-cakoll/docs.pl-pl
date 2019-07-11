@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15174480c4345f2514572701a5525f0f192ad120
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790016"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742104"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes — Metoda
 Emituje typów dodanych do zestawu. Wywołaj tę metodę po wiadomo, że dodano typy wewnętrzne.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT EmitInternalExportedTypes(  
     mdAssembly AssemblyID  
 ) PURE;  

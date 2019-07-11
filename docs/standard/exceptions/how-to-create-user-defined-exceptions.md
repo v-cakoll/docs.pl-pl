@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42860f549877436f43bfdc20fb3abde91d36101d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970927"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783189"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>Jak utworzyć wyjątki zdefiniowane przez użytkownika
 
 .NET dostarcza hierarchię klas wyjątków wywodzących się z klasy podstawowej <xref:System.Exception>. Jeśli żaden z wstępnie zdefiniowanych wyjątków nie spełnia Twoich potrzeb, możesz utworzyć własne klasy wyjątków wywodzące się z klasy <xref:System.Exception>.
 
-Tworząc własne wyjątki, zakończ nazwę klasy zdefiniowanego przez siebie wyjątku słowem „Exception” i utwórz trzy wspólne konstruktory, jak pokazano w przykładzie poniżej.  W przykładzie zdefiniowano klasę wyjątku o nazwie `EmployeeListNotFoundException`. Klasa jest pochodną <xref:System.Exception> i zawiera trzy konstruktory.
+Podczas tworzenia własnych wyjątków, zakończenia Nazwa klasy wyjątków zdefiniowanych przez użytkownika z wyrazem "Wyjątek", a następnie wdrożyć trzech typowych konstruktorów, jak pokazano w poniższym przykładzie. W przykładzie zdefiniowano klasę wyjątku o nazwie `EmployeeListNotFoundException`. Klasa jest pochodną <xref:System.Exception> i zawiera trzy konstruktory.
 
 [!code-cpp[dg_exceptionDesign#14](../../../samples/snippets/cpp/VS_Snippets_CLR/dg_exceptionDesign/cpp/example2.cpp#14)]
 [!code-csharp[dg_exceptionDesign#14](../../../samples/snippets/csharp/VS_Snippets_CLR/dg_exceptionDesign/cs/example2.cs#14)]

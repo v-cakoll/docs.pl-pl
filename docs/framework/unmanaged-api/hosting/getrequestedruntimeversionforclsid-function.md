@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca125932ede48aa43bc51e3d5a7851fb7762547
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9dfce10c94e04dcd405e06ab6d0984e64984709e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490323"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779562"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID — Funkcja
 Pobiera odpowiednie wspólnego języka wspólnego (CLR) informacje o wersji dla klasy z określonym `CLSID`.  
@@ -30,7 +30,7 @@ Pobiera odpowiednie wspólnego języka wspólnego (CLR) informacje o wersji dla 
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
     [in]  REFCLSID   rclsid,   
     [out]  LPWSTR     pVersion,   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b30bd3e97af8d222f629c5b4f9f318a9b6379e78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697962"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738491"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual — Metoda
 Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych w celu zwolnienia pamięci, która była przydzielona wcześniej w przestrzeni adresowej procesu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT FreeVirtual(  
     [in] CLRDATA_ADDRESS addr,  
     [in] ULONG32 size,  

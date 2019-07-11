@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 490af9ca67b538e0093115a6b371b65d9788772f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e1a2358590b95b39b6495b74078f079c5b34876
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641368"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765677"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>ICLRRuntimeHost::UnloadAppDomain — Metoda
 Zwalnia zarządzanej <xref:System.AppDomain> , który odpowiada określony identyfikator liczbowy.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT UnloadAppDomain(  
     [in] DWORD dwAppDomainId  
     [in] BOOL  fWaitUntilDone  

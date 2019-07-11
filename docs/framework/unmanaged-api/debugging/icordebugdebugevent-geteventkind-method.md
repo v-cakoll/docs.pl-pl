@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62eede48eea01563dbc3e170720694a24343d0a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fdbc320e13e0cb140f5ef7aa63b878b43ca0189b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964765"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750052"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>Metoda ICorDebugDebugEvent::GetEventKind
 Wskazuje rodzaj zdarzeń, to `ICorDebugDebugEvent` obiekt reprezentuje.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetEventKind(  
     [out]CorDebugDebugEventKind *pDebugEventKind  
 );  

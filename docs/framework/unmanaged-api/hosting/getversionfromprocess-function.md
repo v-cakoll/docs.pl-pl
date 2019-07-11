@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3055ac73f15329015f532f42c1f922eab38828cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4015ecec38466650488a653641f5af93c4680f22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490307"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779596"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess — Funkcja
 Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR) skojarzony z określonym dojściem do procesu.  
@@ -31,7 +31,7 @@ Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR) skojarz
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetVersionFromProcess (  
     [in]  HANDLE  hProcess,   
     [out] LPWSTR  pVersion,   

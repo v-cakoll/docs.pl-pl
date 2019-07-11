@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0739cc38d1f12967f0daef2d6828e04a256ade6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0076b70c85c21f0c4b1fb140b15000f99dbff742
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650677"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755137"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace — Metoda
 Określa, że dany w pełni kwalifikowanej nazwy obszaru nazw jest używany w zakresie leksykalnym aktualnie otwarte. Przestrzeń nazw będzie używany w ramach wszystkie zakresy, które dziedziczą z aktualnie otwartego zakresu. Zamyka bieżący zakres spowoduje również przerwanie użycie przestrzeni nazw.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT UsingNamespace(  
     [in] const WCHAR *fullName);  
 ```  

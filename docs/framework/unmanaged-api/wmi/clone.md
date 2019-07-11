@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf9cca10a580af7991889de6993e931347fc27ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80faf1a5a6297f5b105fdb609366f6774f8692b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968158"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761646"
 ---
 # <a name="clone-function"></a>Clone, funkcja
 Zwraca nowy obiekt, który jest kompletny klonowania bieżącego obiektu.   
@@ -30,7 +30,7 @@ Zwraca nowy obiekt, który jest kompletny klonowania bieżącego obiektu.
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT Clone (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 

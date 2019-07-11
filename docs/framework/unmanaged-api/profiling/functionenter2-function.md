@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6e5b74e508f55ec8e94b09960e496ff21936228
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 413cde3d0977c1fd6897fc5bd6fa7a3fef00ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586972"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763336"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 — Funkcja
 Powiadamia program profilujący, że kontroli jest przekazywany do funkcji i zawiera informacje o stosie argumenty ramki i funkcji. Ta funkcja zastępuje [functionenter —](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void __stdcall FunctionEnter2 (  
     [in]  FunctionID                       funcId,   
     [in]  UINT_PTR                         clientData,   

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - type constructors
 - virtual members
 - constructors, types
-- default constructors
+- parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 074aa391b71257584a01171e95da7472354cdc2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925466"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746775"
 ---
 # <a name="constructor-design"></a>Projekt konstruktora
 Istnieją dwa rodzaje konstruktorów: wpisz konstruktorów i konstruktorów wystąpienia.  
   
  Konstruktorzy typów są statyczne i są uruchamiane przez środowisko CLR, zanim typ jest używany. Konstruktory wystąpień uruchamiane, gdy tworzone jest wystąpienie typu.  
   
- Konstruktorzy typów nie przyjmuje żadnych parametrów. Konstruktory wystąpień może. Konstruktory wystąpień, które nie przyjmuje żadnych parametrów są często nazywane domyślnych konstruktorów.  
+ Konstruktorzy typów nie przyjmuje żadnych parametrów. Konstruktory wystąpień może. Konstruktory wystąpień, które nie przyjmuje żadnych parametrów są często nazywane konstruktorów bez parametrów.  
   
  Konstruktory są najbardziej naturalny sposób tworzenia wystąpień tego typu. Większość programistów poszuka i spróbuj użyć konstruktora, zanim rozważa alternatywne sposoby tworzenia wystąpień (takie jak metodach fabryki).  
   
@@ -49,15 +49,15 @@ Istnieją dwa rodzaje konstruktorów: wpisz konstruktorów i konstruktorów wyst
   
  **✓ DO** zgłaszanie wyjątków z konstruktorów wystąpienia, w razie potrzeby.  
   
- **✓ DO** jawnie deklarować publicznego konstruktora domyślnego w klasach, jeśli takie Konstruktor jest wymagana.  
+ **CZY ✓** jawnie deklarować publicznego konstruktora bez parametrów w klasach, jeśli taki Konstruktor jest wymagana.  
   
- Jeśli w danym typie, nie jawnie deklarować żadnych konstruktorów, wielu języków (takich jak C#) spowoduje automatyczne dodanie publicznego konstruktora domyślnego. (Klasy abstrakcyjne uzyskać Konstruktor chroniony).  
+ Jeśli nie jawnie deklarować żadnych konstruktorów typu, wielu języków (takie jak C#) automatycznie doda publiczny konstruktor bez parametrów. (Klasy abstrakcyjne uzyskać Konstruktor chroniony).  
   
- Dodawanie sparametryzowania konstruktora do klasy zapobiega dodawaniu konstruktora domyślnego przez kompilator. To często powoduje, że przypadkowe przełomowe zmiany.  
+ Dodawanie sparametryzowania konstruktora do klasy zabezpiecza kompilator przed dodanie konstruktora bez parametrów. To często powoduje, że przypadkowe przełomowe zmiany.  
   
- **X AVOID** jawnie Definiowanie domyślnych konstruktorów w strukturach.  
+ **X należy UNIKAĆ** jawne określenie konstruktorów bez parametrów w strukturach.  
   
- Ułatwia to utworzenie tablicy szybciej, ponieważ jeśli nie zdefiniowano domyślnego konstruktora, nie ma być uruchamiane na każdego miejsca, w tablicy. Należy pamiętać, że wiele kompilatorów, w tym C#, nie zezwalaj na zwracanie struktur mieć konstruktory bez parametrów, dlatego.  
+ Ułatwia to utworzenie tablicy szybciej, ponieważ jeśli nie zdefiniowano konstruktora bez parametrów, ma być uruchamiane na każdego miejsca, w tablicy. Należy pamiętać, że wiele kompilatorów, w tym C#, nie zezwalaj na zwracanie struktur mieć konstruktory bez parametrów, dlatego.  
   
  **X AVOID** wywoływania wirtualne elementy członkowskie dla obiekt wewnątrz jego konstruktora.  
   

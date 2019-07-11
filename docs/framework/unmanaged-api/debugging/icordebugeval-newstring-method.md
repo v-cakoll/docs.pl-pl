@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989030"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753338"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString — Metoda
 Przydziela nowego wystąpienia ciągu przy użyciu określonej zawartości.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT NewString (  
     [in] LPCWSTR   string  
 );  

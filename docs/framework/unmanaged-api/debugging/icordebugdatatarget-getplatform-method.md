@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0769f30b6ac166e065fb6299c61c1e71e402c49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607056"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750380"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform — Metoda
 Zawiera informacje dotyczące platformy, w tym architektury procesora i systemu operacyjnego, na którym jest uruchomiony proces docelowy.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);  
 ```  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9b4ee64022374cb4e1950acceb3f32925b736bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 610225708bf990850fce73d6d7ff66c556e24e5d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994295"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760594"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL — Metoda
 Ustawia wartość określającą, czy wywołania [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) przekazać wartości, które są względem kodu natywnego lub względną Microsoft pośredniego kod language (MSIL) metody, która jest jest zmieniana argumentu za pomocą.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT SetRangeIL (  
     [in] BOOL    bIL  
 );  

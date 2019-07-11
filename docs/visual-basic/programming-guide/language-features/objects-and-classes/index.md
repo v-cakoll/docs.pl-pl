@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591567"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755166"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Obiekty i klasy w języku Visual Basic
 
@@ -28,7 +28,7 @@ Aby zrozumieć relację między obiektem i jego klasa, pomyśl o zielonki plikó
 
 Aby korzystać z jej elementów członkowskich, należy utworzyć obiekt.
 
-#### <a name="to-create-an-object-from-a-class"></a>Aby utworzyć obiekt z klasy
+### <a name="to-create-an-object-from-a-class"></a>Aby utworzyć obiekt z klasy
 
 1. Określ, z której klasy, którą chcesz utworzyć obiekt.
 
@@ -135,7 +135,7 @@ Elementy członkowskie są zadeklarowane za pomocą `Shared` — słowo kluczowe
 
 #### <a name="accessing-nonshared-members"></a>Uzyskiwanie dostępu do elementów nieudostępnionych
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>Do uzyskania dostępu do członka nieudostępnionych obiektu
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>Do uzyskania dostępu do członka nieudostępnionych obiektu
 
 1. Upewnij się, że obiekt został utworzony od swojej klasy i przypisane do zmiennej obiektu.
 
@@ -151,7 +151,7 @@ Elementy członkowskie są zadeklarowane za pomocą `Shared` — słowo kluczowe
 
 #### <a name="accessing-shared-members"></a>Uzyskiwanie dostępu do udostępnionych elementów członkowskich
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>Do uzyskania dostępu do członka udostępnionego obiektu
+##### <a name="to-access-a-shared-member-of-an-object"></a>Do uzyskania dostępu do członka udostępnionego obiektu
 
 - Postępuj zgodnie z nazwą klasy *operator dostępu do elementu członkowskiego* (`.`) i następnie nazwę elementu członkowskiego. Należy zawsze dostęp do `Shared` członka obiektu bezpośrednio za pomocą nazwy klasy.
 
@@ -204,7 +204,7 @@ Klasy pochodne więcej podstawowe klasy, są one określane jako mają *hierarch
 
 W poniższym przykładzie załóżmy, że chcesz zdefiniować specjalny rodzaj <xref:System.Windows.Forms.Button> czy działa jak normalne <xref:System.Windows.Forms.Button> , ale udostępnia również metody, która Odwraca kolory pierwszego planu i tła.
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Aby zdefiniować klasę jest tworzony na podstawie już istniejącej klasy
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Aby zdefiniować klasę jest tworzony na podstawie już istniejącej klasy
 
 1. Użyj [Class — instrukcja](../../../../visual-basic/language-reference/statements/class-statement.md) Aby zdefiniować klasę, z którego można utworzyć obiektu potrzebny.
 
@@ -239,7 +239,7 @@ W poniższym przykładzie załóżmy, że chcesz zdefiniować specjalny rodzaj <
 
 Klasy pochodne dziedziczy członków klasy, które są one oparte na, dzięki czemu możesz do zwiększenia złożoności jak postępy w hierarchii klas. Aby uzyskać więcej informacji, zobacz [podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-#### <a name="compiling-the-code"></a>Kompilowanie kodu
+### <a name="compiling-the-code"></a>Kompilowanie kodu
 
 Upewnij się, że kompilator mogą uzyskiwać dostęp do klasy, z którego mają pochodzić nowej klasie. Może to oznaczać pełni kwalifikujących się jego nazwę, jak w poprzednim przykładzie lub identyfikowanie jego przestrzeń nazw w [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Klasa znajduje się w innym projekcie, może być konieczne Dodaj odwołanie do tego projektu. Aby uzyskać więcej informacji, zobacz [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project).
 

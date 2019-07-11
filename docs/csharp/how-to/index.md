@@ -2,12 +2,12 @@
 title: Jak artykułów (Przewodnik C#)
 description: Szybkie wskazówki i przykłady kodu krótki, ukierunkowane kolekcję
 ms.date: 12/20/2017
-ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609260"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744275"
 ---
 # <a name="how-to-c"></a>Instrukcje (C#)
 
@@ -66,7 +66,7 @@ Może być konieczne konwersji obiektu do innego typu.
 - [Konwertowanie tablicy typu byte na liczbę całkowitą](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Konwertowanie ciągu na liczbę](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Użyj dopasowywania wzorców, `as` i `is` operatory, aby bezpiecznie rzutowany na inny typ](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
-- [Zdefiniuj operatory konwersji dla `struct` typy](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
+- [Konwersje typu niestandardowego definiować](../language-reference/operators/user-defined-conversion-operators.md).
 - [Określa, czy typ jest typem wartościowym](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Konwertowanie między typami dopuszcza wartości null i dopuszcza wartość](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 

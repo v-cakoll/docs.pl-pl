@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edd83e62b08aa7892c01577cd8c46f9d965c0894
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41e79a4c9587e3e738039cbf6a84087a2e7fc9b1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789899"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741957"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll — Funkcja
 Umożliwia znalezienie i ładuje Biblioteka DLL komunikatu. Zwraca wartość 0, jeśli biblioteka DLL komunikatu nie można się lub załadowane. Biblioteka DLL komunikatu powinna być w podkatalogu, której nazwa to identyfikator języka lub w bieżącym katalogu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   

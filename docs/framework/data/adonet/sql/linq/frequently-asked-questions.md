@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 07801ee7bfbb32540880cdc8599e5b69797b09f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610583"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743538"
 ---
 # <a name="frequently-asked-questions"></a>Często zadawane pytania
 Poniższe sekcje odpowiedzi na niektóre typowe problemy, które można napotkać podczas implementowania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -53,7 +53,7 @@ Poniższe sekcje odpowiedzi na niektóre typowe problemy, które można napotka�
  A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zawiera różne narzędzia umożliwiające zapoznanie się z kodu SQL, który generuje. Jednym z najważniejszych jest <xref:System.Data.Linq.DataContext.Log%2A>. Aby uzyskać więcej informacji, zobacz [obsługę debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Procedury składowanej nieoczekiwane wyniki  
- PYTANIE: Mam procedury składowanej, którego wartość zwracana jest obliczana na podstawie `MAX()`. Podczas przeciągania procedurę przechowywaną, aby [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] powierzchni, wartość zwracana nie jest prawidłowy.  
+ PYTANIE: Mam procedury składowanej, którego wartość zwracana jest obliczana na podstawie `MAX()`. Podczas przeciągania procedury składowanej do powierzchni Projektanta obiektów relacyjnych, wartość zwracana nie jest prawidłowy.  
   
  A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Umożliwia zwracanie wartości wygenerowanych w bazie danych za pomocą procedur składowanych na dwa sposoby:  
   
@@ -107,7 +107,7 @@ Poniższe sekcje odpowiedzi na niektóre typowe problemy, które można napotka�
 ## <a name="multiple-dbml-files"></a>Wiele DBML, pliki  
  PYTANIE: Mam wiele DBML, pliki, które współużytkują wspólną niektórych tabel, pojawia się błąd kompilatora.  
   
- A. Ustaw **Namespace kontekstu** i **Namespace jednostki** właściwości z [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] różne wartości dla każdego pliku DBML. To podejście pozwala wyeliminować kolizji nazw/obszaru nazw.  
+ A. Ustaw **Namespace kontekstu** i **Namespace jednostki** właściwości z Object Relational Designer różne wartości dla każdego pliku DBML. To podejście pozwala wyeliminować kolizji nazw/obszaru nazw.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Unikanie jawne ustawienie wartości generowanych przez bazę danych na Insert nebo Update  
  PYTANIE: Czy mogę mieć tabelę zawierającą bazy danych `DateCreated` kolumny, która domyślnie SQL `Getdate()`. Podczas próby wstawienia nowego rekordu przy użyciu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], pobiera wartość `NULL`. Czy powinien mieć wartość domyślne bazy danych.  
@@ -134,10 +134,10 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="errors-using-sql-compact-35"></a>Błędy przy użyciu języka SQL Compact 3.5  
  PYTANIE: Błąd podczas przeciągania tabel z bazy danych programu SQL Server Compact 3.5.  
   
- A. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Nie obsługuje programu SQL Server Compact 3.5, mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest środowiska wykonawczego. W takiej sytuacji należy tworzenia własnych klas jednostek i dodawanie odpowiednich atrybutów.  
+ A. Object Relational Designer nie obsługuje programu SQL Server Compact 3.5, mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest środowiska wykonawczego. W takiej sytuacji należy tworzenia własnych klas jednostek i dodawanie odpowiednich atrybutów.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Błędy w relacjach dziedziczenia  
- PYTANIE: Po użyciu kształtu dziedziczenia przybornika w [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nawiązać dwie jednostki, ale występują błędy.  
+ PYTANIE: Kształt dziedziczenia przybornika używany we Object Relational Designer nawiązać dwie jednostki, ale pojawiają się błędy.  
   
  A. Tworzenie relacji jest niewystarczająca. Musisz podać informacje takie jak kolumna dyskryminatora, wartość dyskryminatora klasy bazowej i wartość dyskryminatora klasy pochodnej.  
   
@@ -163,7 +163,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3. Przejrzyj domyślne <xref:System.Data.Linq.Mapping.UpdateCheck> wartość (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) aby określić, czy jest poprawny dla twojej aplikacji.  
   
     > [!CAUTION]
-    >  Jeśli używasz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] w programie Visual Studio, Twoje zmiany mogą być zastępowane.  
+    >  Jeśli używasz Object Relational Designer w programie Visual Studio, Twoje zmiany mogą być zastępowane.  
   
 ## <a name="aptca"></a>APTCA  
  PYTANIE: System.Data.Linq oznaczono do użycia przez częściowo zaufany kod?  

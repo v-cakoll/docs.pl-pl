@@ -2,12 +2,12 @@
 title: 'Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c0de529a0005c9dbaf1f8d0f25957b217280e31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754831"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753021"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)
 
@@ -51,7 +51,7 @@ Ponieważ główna funkcja osadzania typu jest do obsługi, osadzanie informacji
 
 ## <a name="creating-an-interface"></a>Tworzenie interfejsu
 
-#### <a name="to-create-the-type-equivalence-interface-project"></a>Aby utworzyć projekt interfejsu równoważności typu
+### <a name="to-create-the-type-equivalence-interface-project"></a>Aby utworzyć projekt interfejsu równoważności typu
 
 1. W programie Visual Studio na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**.
 
@@ -61,7 +61,7 @@ Ponieważ główna funkcja osadzania typu jest do obsługi, osadzanie informacji
 
 4. Kliknij prawym przyciskiem myszy projekt TypeEquivalenceInterface, a następnie kliknij przycisk **właściwości**. Kliknij przycisk **skompilować** kartę. Ustaw ścieżkę wyjściową do prawidłowej lokalizacji na komputerze deweloperskim, takich jak `C:\TypeEquivalenceSample`. Ta lokalizacja będzie używana również w dalszej części tego przewodnika.
 
-5. Podczas edytowania nadal właściwości projektu, kliknij przycisk **podpisywanie** kartę. Wybierz **Podpisz zestaw** opcji. W **wybierz plik klucza o silnej nazwie** kliknij **< nowy … >**. W **nazwę pliku klucza** wpisz `key.snk`. Wyczyść **Chroń mój plik klucza przy użyciu hasła** pole wyboru. Kliknij przycisk **OK**.
+5. Podczas edytowania nadal właściwości projektu, kliknij przycisk **podpisywanie** kartę. Wybierz **Podpisz zestaw** opcji. W **wybierz plik klucza o silnej nazwie** kliknij **< nowy … >** . W **nazwę pliku klucza** wpisz `key.snk`. Wyczyść **Chroń mój plik klucza przy użyciu hasła** pole wyboru. Kliknij przycisk **OK**.
 
 6. Otwórz plik ISampleInterface.vb. Dodaj następujący kod do pliku klasy ISampleInterface, aby utworzyć interfejs ISampleInterface.
 
@@ -96,7 +96,7 @@ Ponieważ główna funkcja osadzania typu jest do obsługi, osadzanie informacji
 
 ## <a name="creating-a-runtime-class"></a>Tworzenie klasy środowiska uruchomieniowego
 
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>Aby utworzyć projekt środowiska uruchomieniowego równoważności typu
+### <a name="to-create-the-type-equivalence-runtime-project"></a>Aby utworzyć projekt środowiska uruchomieniowego równoważności typu
 
 1. W programie Visual Studio na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**.
 
@@ -106,7 +106,7 @@ Ponieważ główna funkcja osadzania typu jest do obsługi, osadzanie informacji
 
 4. Kliknij prawym przyciskiem myszy projekt TypeEquivalenceRuntime, a następnie kliknij przycisk **właściwości**. Kliknij przycisk **skompilować** kartę. Ustaw ścieżkę wyjściową do tej samej lokalizacji, które są używane w projekcie TypeEquivalenceInterface, na przykład `C:\TypeEquivalenceSample`.
 
-5. Podczas edytowania nadal właściwości projektu, kliknij przycisk **podpisywanie** kartę. Wybierz **Podpisz zestaw** opcji. W **wybierz plik klucza o silnej nazwie** kliknij **< nowy … >**. W **nazwę pliku klucza** wpisz `key.snk`. Wyczyść **Chroń mój plik klucza przy użyciu hasła** pole wyboru. Kliknij przycisk **OK**.
+5. Podczas edytowania nadal właściwości projektu, kliknij przycisk **podpisywanie** kartę. Wybierz **Podpisz zestaw** opcji. W **wybierz plik klucza o silnej nazwie** kliknij **< nowy … >** . W **nazwę pliku klucza** wpisz `key.snk`. Wyczyść **Chroń mój plik klucza przy użyciu hasła** pole wyboru. Kliknij przycisk **OK**.
 
 6. Kliknij prawym przyciskiem myszy projekt TypeEquivalenceRuntime, a następnie kliknij przycisk **Dodaj odwołanie**. Kliknij przycisk **Przeglądaj** kartę, a następnie przejdź do folderu o podanej ścieżce danych wyjściowych. Wybierz plik TypeEquivalenceInterface.dll, a następnie kliknij przycisk **OK**.
 
@@ -142,7 +142,7 @@ Ponieważ główna funkcja osadzania typu jest do obsługi, osadzanie informacji
 
 ## <a name="creating-a-client-project"></a>Tworzenie projektu klienta
 
-#### <a name="to-create-the-type-equivalence-client-project"></a>Aby utworzyć projekt klienta równoważności typu
+### <a name="to-create-the-type-equivalence-client-project"></a>Aby utworzyć projekt klienta równoważności typu
 
 1. W programie Visual Studio na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**.
 
@@ -181,7 +181,7 @@ Ponieważ główna funkcja osadzania typu jest do obsługi, osadzanie informacji
 
 ## <a name="modifying-the-interface"></a>Modyfikowanie interfejsu
 
-#### <a name="to-modify-the-interface"></a>Aby zmodyfikować interfejs
+### <a name="to-modify-the-interface"></a>Aby zmodyfikować interfejs
 
 1. W programie Visual Studio na **pliku** menu wskaż **Otwórz**, a następnie kliknij przycisk **projekt/rozwiązanie**.
 
@@ -201,7 +201,7 @@ Ponieważ główna funkcja osadzania typu jest do obsługi, osadzanie informacji
 
 ## <a name="modifying-the-runtime-class"></a>Modyfikowanie klasy środowiska uruchomieniowego
 
-#### <a name="to-modify-the-runtime-class"></a>Aby zmodyfikować klasy środowiska uruchomieniowego
+### <a name="to-modify-the-runtime-class"></a>Aby zmodyfikować klasy środowiska uruchomieniowego
 
 1. W programie Visual Studio na **pliku** menu wskaż **Otwórz**, a następnie kliknij przycisk **projekt/rozwiązanie**.
 

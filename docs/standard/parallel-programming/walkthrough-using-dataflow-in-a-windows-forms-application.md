@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654415"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755051"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Przewodnik: Korzystanie z przepływu danych w aplikacji Windows Forms
 W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które wykonują przetwarzania obrazów w aplikacji Windows Forms.  
@@ -41,7 +41,7 @@ W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które
 ## <a name="creating-the-windows-forms-application"></a>Tworzenie aplikacji Windows Forms  
  W tej sekcji opisano sposób tworzenia podstawowych aplikacji Windows Forms i dodawanie formantów do formularza głównego.  
   
-#### <a name="to-create-the-windows-forms-application"></a>Aby utworzyć Windows Forms aplikacji  
+### <a name="to-create-the-windows-forms-application"></a>Aby utworzyć Windows Forms aplikacji  
   
 1. W programie Visual Studio Utwórz Visual C# lub Visual Basic **aplikacja interfejsu Windows Forms** projektu. W tym dokumencie projekt nazwano `CompositeImages`.  
   
@@ -57,7 +57,7 @@ W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które
 ## <a name="creating-the-dataflow-network"></a>Tworzenie sieci przepływu danych  
  W tej sekcji opisano, jak utworzyć sieć przepływu danych, który wykonuje przetwarzanie obrazów.  
   
-#### <a name="to-create-the-dataflow-network"></a>Aby utworzyć sieć przepływu danych  
+### <a name="to-create-the-dataflow-network"></a>Aby utworzyć sieć przepływu danych  
   
 1. Dodaj odwołanie do System.Threading.Tasks.Dataflow.dll do projektu.  
   
@@ -107,7 +107,7 @@ W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Proces łączenia dwóch sieci przepływu danych interfejsu użytkownika  
  W tej sekcji opisano, jak połączyć sieć przepływu danych z interfejsu użytkownika. Tworzenie obrazu złożonego i anulowanie operacji są inicjowane z **wybierz Folder** i **anulować** przycisków. Gdy użytkownik wybierze jeden z tych przycisków, odpowiednie działanie jest inicjowane w sposób asynchroniczny.  
   
-#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Aby połączyć sieć przepływu danych z interfejsu użytkownika  
+### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Aby połączyć sieć przepływu danych z interfejsu użytkownika  
   
 1. W Projektancie formularza dla tego formularza, należy utworzyć program obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenie **wybierz Folder** przycisku.  
   

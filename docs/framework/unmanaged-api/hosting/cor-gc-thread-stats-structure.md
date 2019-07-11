@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60a4b56270318a05d0e5a480fdb56eb45593d5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696729"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768065"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS — Struktura
 Zawiera statystyki wątku odnoszących się do wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef struct _COR_GC_THREAD_STATS {  
     ULONGLONG  PerThreadAllocation;   
     ULONG      Flags;   

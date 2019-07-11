@@ -2,12 +2,12 @@
 title: 'Przewodnik: Manipulowanie danymi (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d45861569bc4a8b57427b01e107f87809203e11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618038"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742737"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Przewodnik: Manipulowanie danymi (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz dotyczący dodawania, modyfikowania i usuwania danych w bazie danych. Kopię przykładowej bazy danych Northwind użyje do dodawania klienta, Zmień nazwę klienta i usunąć zamówienie.  
@@ -27,7 +27,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 - A C# plik kod wygenerowany z bazy danych Northwind.  
   
-     Ten plik można wygenerować za pomocą [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] lub narzędzia SQLMetal. Ten instruktaż został napisany za pomocą narzędzia SQLMetal za pomocą następującego polecenia:  
+     Ten plik można wygenerować za pomocą Object Relational Designer lub narzędzie SQLMetal. Ten instruktaż został napisany za pomocą narzędzia SQLMetal za pomocą następującego polecenia:  
   
      **Program sqlmetal /code:"c:\linqtest6\northwind.cs" / Language: CSharp "C:\linqtest6\northwnd.mdf" / pluralize**  
   

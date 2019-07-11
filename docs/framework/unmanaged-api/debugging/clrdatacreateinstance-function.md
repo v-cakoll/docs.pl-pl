@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73a4a8a2fc737bbf4b49ca859f0549ca7efd54a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701284"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740992"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance — Funkcja
 Tworzy obiekt interfejs dla elementu określonego obiektu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT CLRDataCreateInstance (  
     [in]  REFIID           iid,   
     [in]  ICLRDataTarget  *target,   

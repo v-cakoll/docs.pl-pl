@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd7bdcf891146a15953b7466e0f6dc680495bd5a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e6638f731b335ba7552379cdc77fa912a1def4d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585059"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748377"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString — Metoda
 Tłumaczy wartość HRESULT do odpowiedniego komunikatu o błędzie dla określonej kultury.  
@@ -35,7 +35,7 @@ Tłumaczy wartość HRESULT do odpowiedniego komunikatu o błędzie dla określo
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT LoadErrorString(  
      [in] UINT iResourceID,  
      [out, size_is(*pcchBuffer)] LPWSTR pwzBuffer,  

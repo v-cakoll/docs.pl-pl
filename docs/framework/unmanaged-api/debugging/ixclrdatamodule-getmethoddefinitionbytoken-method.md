@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 727005437289b4bc66ab90f280b80a79f4db06db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775502"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744673"
 ---
 # <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>Metoda IXCLRDataModule::GetMethodDefinitionByToken
 
@@ -30,7 +30,7 @@ Pobiera definicję metody odpowiadającej token określonych metadanych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 HRESULT GetMethodDefinitionByToken(
     [in] mdMethodDef token,
     [out] IXCLRDataMethodDefinition** methodDefinition

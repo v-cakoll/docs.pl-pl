@@ -2,18 +2,18 @@
 title: Nauka przez przewodniki
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582919"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743033"
 ---
 # <a name="learning-by-walkthroughs"></a>Nauka przez przewodniki
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera wskazówki dotyczące kilku. W tym temacie rozwiązuje problemy ogólne wskazówki (w tym Rozwiązywanie problemów) i zawiera łącza do kilku klasy podstawowej wskazówki umożliwiające uzyskiwanie informacji o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
->  Przewodniki w tej sekcji wprowadzenie do udostępnienia do kodu podstawowego, który obsługuje [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologii. W praktyce rzeczywiste zazwyczaj używasz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] i projektami Windows Forms swoje [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Dokumentacji zawiera przykłady i wskazówki, w tym celu.  
+>  Przewodniki w tej sekcji wprowadzenie do udostępnienia do kodu podstawowego, który obsługuje [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologii. W praktyce rzeczywiste będzie zazwyczaj przy użyciu projektów Object Relational Designer i Windows Forms z [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji. Dokumentacja O/R Designer zapewnia wskazówki i przykłady w tym celu.  
   
 ## <a name="getting-started-walkthroughs"></a>Wprowadzenie — wskazówki  
  Kilka wskazówki są dostępne w tej sekcji. Te przewodniki są oparte na przykładowej bazy danych Northwind i przedstawić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funkcji tempie delikatnie minimalnej złożoności.  
@@ -57,7 +57,7 @@ ms.locfileid: "64582919"
   
 2. W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, kliknij przycisk **usług SQL Server 2005**.  
   
-3. W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **właściwości**.  
+3. W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)** , a następnie kliknij przycisk **właściwości**.  
   
 4. Kliknij przycisk **logowanie** kartę i sprawdź, jak chcesz zalogować się do serwera.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "64582919"
   
 1. W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, kliknij przycisk **usług SQL Server 2005**.  
   
-2. W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **zatrzymać**.  
+2. W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)** , a następnie kliknij przycisk **zatrzymać**.  
   
-3. Kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **ponowne uruchomienie**.  
+3. Kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)** , a następnie kliknij przycisk **ponowne uruchomienie**.  
   
 ## <a name="see-also"></a>Zobacz także
 

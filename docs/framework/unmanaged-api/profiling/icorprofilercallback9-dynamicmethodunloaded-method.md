@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96cdfb79c1573648173305d6ee789aa8db030ff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 680bd351a64632e67432ee03352ee7caa8f4b2d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780388"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::DynamicMethodUnloaded Method
 [Obsługiwane w programie .NET Framework 4.7.2 i nowszych wersjach]  
@@ -24,7 +24,7 @@ Powiadamia program profilujący, zawsze wtedy, gdy metoda dynamiczna pamięci zb
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT DynamicMethodUnloaded(  
      [in]  FunctionID  functionId
 );  

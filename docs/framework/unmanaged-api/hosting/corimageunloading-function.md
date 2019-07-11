@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cb5f9decbcdfb71f67a5132dc59773f1de8b0a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985806"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758395"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading — Funkcja
 Powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są usuwane z pamięci.  
@@ -30,7 +30,7 @@ Powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są usuwane z pam
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 STDAPI (VOID) _CorImageUnloading(   
    [in] PVOID* ImageBase  
 );  

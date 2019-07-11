@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064037"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744254"
 ---
 # <a name="c-guide"></a>Przewodnik po języku C#
 
@@ -35,7 +35,7 @@ Przewodnik zawiera kilka sekcji. Możesz je czytać po kolei lub przejść bezpo
 * [Wprowadzenie](getting-started/index.md)
   * W tej sekcji opisano, co należy zainstalować, aby używać środowiska deweloperskiego języka C# na preferowanej platformie. Poszczególne tematy wyjaśniają, jak utworzyć pierwszy program w języku C# na różnych obsługiwanych środowiskach.
 
-* [Wprowadzenie do samouczków C#](tutorials/intro-to-csharp/index.md):
+* [Wprowadzenie do C# samouczki](tutorials/intro-to-csharp/index.md)
   * Wprowadzenie do samouczków C# zawiera interaktywne samouczki przeznaczone dla nowych deweloperów. Pozwalają one na poznawanie i eksplorację języka w przeglądarce internetowej, za pomocą interfejsu konsolowego - Read-Eval-Print-Loop (REPL). Po zakończeniu interaktywnych lekcji możesz rozwijać swoje umiejętności programowania, powtarzając te zadania na swojej maszynie.
 
 * [Samouczki](tutorials/index.md)

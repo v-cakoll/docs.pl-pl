@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a59067f72005e87152680e4f990fc74e4acdaa9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ee186604529a3e77a0217c5688df5b62ff8b28c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948944"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736994"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>ICorDebugProcess2::GetDesiredNGENCompilerFlags — Metoda
 Pobiera kompilatora bieżącego ustawienia flagi, używanych przez środowisko uruchomieniowe języka wspólnego (CLR) aby wybrać poprawny prekompilowanych (oznacza to, natywne) obraz ma być załadowany do tego procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetDesiredNGENCompilerFlags (  
     [out] DWORD   *pdwFlags  
 );  

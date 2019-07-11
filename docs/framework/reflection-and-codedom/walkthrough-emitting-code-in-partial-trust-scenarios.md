@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690311"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742464"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych
 Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają specjalnych uprawnień w kodzie częściowo zaufanym. Ponadto emisji odbicia posiada funkcję, anonimowo obsługiwane metody dynamiczne, który jest przeznaczony do użycia z częściowej relacji zaufania, jak również przezroczyste dla zabezpieczeń zestawów.  
@@ -57,7 +57,7 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
   
  Poniższa procedura tworzy domenę aplikacji w trybie piaskownicy, która uruchamia kod z częściowej relacji zaufania, aby przetestować scenariusze, w których emitowany kod może uzyskać dostęp tylko publiczne składowe typów publicznych. Dalsza procedura pokazuje sposób dodawania <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>, aby przetestować scenariusze, w których emitowany kod może uzyskać dostęp do typów niepublicznych w zestawach, którym nadano uprawnienia równe lub mniejsze.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem  
   
 1. Utwórz zestaw uprawnień do przydzielenia do zestawów w domenie aplikacji w trybie piaskownicy. W tym przypadku jest używany zestaw uprawnień strefy Internet.  
   
@@ -87,7 +87,7 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
 > [!NOTE]
 >  Aby zapobiec podniesienie uprawnień, informacje stosu do montażu emitującego jest dołączana w przypadku anonimowo obsługiwane metody dynamiczne są zbudowane. Gdy metoda jest wywoływana, informacja stosu jest sprawdzana. W efekcie anonimowo obsługiwana metoda dynamiczna, która jest wywoływana z całkowicie zaufanego kodu jest nadal ograniczona do poziomu zaufania emitujące zgromadzenia.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem plus RMA  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem plus RMA  
   
 1. Utwórz nową <xref:System.Security.Permissions.ReflectionPermission> obiekt z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) i użyj <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> metodę, aby dodać uprawnienie do zestawu dotacji.  
   

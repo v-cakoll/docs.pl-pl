@@ -2,18 +2,18 @@
 title: N-warstwowa LINQ to SQL z użyciem usług internetowych
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fafaa60dd75def98b486e18faa5bd3ecd1d6315
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033543"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743053"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-warstwowa LINQ to SQL z użyciem usług internetowych
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przeznaczone dla użycia w warstwie środkowej luźno powiązane warstwie dostępu do danych (DAL) takich jak usługi sieci Web. Jeśli Warstwa prezentacji jest to strona sieci Web platformy ASP.NET, a następnie używasz <xref:System.Web.UI.WebControls.LinqDataSource> formant serwera do zarządzania przesyłaniem danych między interfejsu użytkownika sieci Web i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w warstwie środkowej. Jeśli Warstwa prezentacji nie jest to strona programu ASP.NET, następnie warstwy środkowej i warstwy prezentacji należy wykonać wykonania dodatkowych czynności, aby zarządzać serializacji i deserializacji obiektu danych.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Konfigurowanie składnika LINQ to SQL w warstwie środkowej  
- Usługa sieci Web lub aplikacji n warstwowej warstwy środkowej zawiera kontekstu danych i klas jednostek. Te klasy można utworzyć ręcznie lub za pomocą obu SQLMetal.exe lub [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zgodnie z opisem w innym miejscu w dokumentacji. W czasie projektowania masz możliwość klas obiektów możliwych do serializacji. Aby uzyskać więcej informacji, zobacz [jak: Umożliwianie serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Innym rozwiązaniem jest utworzenie oddzielnych zestaw klas, które obejmują dane, które mają być serializowane i projekt do tych typów możliwych do serializacji, po powrocie danych w Twojej [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania.  
+ Usługa sieci Web lub aplikacji n warstwowej warstwy środkowej zawiera kontekstu danych i klas jednostek. Te klasy można utworzyć ręcznie lub za pomocą SQLMetal.exe lub Object Relational Designer, zgodnie z opisem w innym miejscu w dokumentacji. W czasie projektowania masz możliwość klas obiektów możliwych do serializacji. Aby uzyskać więcej informacji, zobacz [jak: Umożliwianie serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Innym rozwiązaniem jest utworzenie oddzielnych zestaw klas, które obejmują dane, które mają być serializowane i projekt do tych typów możliwych do serializacji, po powrocie danych w Twojej [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania.  
   
  Następnie zdefiniuj interfejs za pomocą metod wywołujących klientów do pobrania, wstawiania i aktualizowania danych. OPAKOWYWANIE metod interfejsu użytkownika [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania. Do obsługi wywołania zdalnej metody i serializacja danych, można użyć dowolnego rodzaju mechanizm serializacji. Jedynym wymaganiem jest, czy w przypadku cykliczne lub dwukierunkowej relacji w modelu obiektu, takim między klienci i zamówienia w modelu obiektów programu standardowa Northwind to należy użyć serializatora, która go obsługuje. Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> obsługuje relacje dwukierunkowe, ale element XmlSerializer, który jest używany z usługi internetowej WCF nie jest. Jeśli wybrano opcję Użyj elementu XmlSerializer musi upewnij się, że model obiektu nie ma żadnych relacji cyklicznej.  
   

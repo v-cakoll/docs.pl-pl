@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fd9798b3681d66e71d5703f4d16564b153da07b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37794d40b4b379c5d3a05935cf1f2b7b3da11baa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789633"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777364"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField — Metoda
 Definiuje pojedynczej zmiennej, która nie znajduje się w metody. Ta metoda jest używana w przypadku niektórych pól w klasach, pola bitowe i tak dalej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT DefineField(  
     [in] mdTypeDef    parent,  
     [in] const WCHAR  *name,  

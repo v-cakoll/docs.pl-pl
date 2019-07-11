@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67d4ea6aa51e4702e4891b78cee24ff0c38f94bf
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 630e0c20309b6e791991b64ef8d423ff927b70fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490549"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767903"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost — Funkcja
 Włącza hosty do załadowania określonej wersji środowiska uruchomieniowego języka wspólnego (CLR) do procesu.  
@@ -30,7 +30,7 @@ Włącza hosty do załadowania określonej wersji środowiska uruchomieniowego j
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT CorBindToRuntimeHost (  
     [in] LPCWSTR       pwszVersion,   
     [in] LPCWSTR       pwszBuildFlavor,   

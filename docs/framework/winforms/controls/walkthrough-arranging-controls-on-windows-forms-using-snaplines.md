@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606412"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771645"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. Windows Forms Designer udostępnia wiele narzędzi układu, w tym celu. Jednym z najważniejszych jest <xref:System.Windows.Forms.Design.Behavior.SnapLine> funkcji.  
@@ -53,7 +53,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest tworzenie projektu i konfigurowanie formularza.  
   
-#### <a name="to-create-the-project"></a>Aby utworzyć projekt  
+### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
 1. Utwórz projekt aplikacji systemu Windows o nazwie "SnaplineExample" (**pliku** > **New** > **projektu**  >  **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
   
@@ -62,7 +62,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>Odstępy i wyrównywanie formantów, za pomocą linii przyciągania  
  Linii przyciągania umożliwiają dokładne i intuicyjny sposób wyrównywanie formantów na formularzu. Pojawiają się podczas przenoszenia wybranej kontrolki lub kontrolki obok pozycji, która będzie wyrównane z innego formantu lub zbiór kontrolek. Wybór będzie "przyciągana" sugerowane pozycji w trakcie przemieszczania upłynął innych kontrolek.  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>Aby rozmieścić formanty za pomocą linii przyciągania  
+### <a name="to-arrange-controls-using-snaplines"></a>Aby rozmieścić formanty za pomocą linii przyciągania  
   
 1. Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do formularza.  
   
@@ -85,7 +85,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="aligning-to-form-and-container-margins"></a>Dopasowanie do formularza i marginesów kontenera  
  Linii przyciągania ułatwiają wyrównywanie formantów do formularza i kontener marginesu w spójny sposób.  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>Aby wyrównać formanty do formularza i kontener marginesów  
+### <a name="to-align-controls-to-form-and-container-margins"></a>Aby wyrównać formanty do formularza i kontener marginesów  
   
 1. Wybierz jedną z <xref:System.Windows.Forms.Button> kontroluje i przenieść blisko prawej krawędzi formularza, aż pojawi się snapline —. Snapline — odległości od prawej krawędzi jest sumą formantu <xref:System.Windows.Forms.Control.Margin%2A> właściwości i w formularzu <xref:System.Windows.Forms.Control.Padding%2A> wartości właściwości.  
   
@@ -107,7 +107,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="aligning-to-grouped-controls"></a>Wyrównywanie kontrolek zgrupowanych  
  Linii przyciągania umożliwia wyrównywanie kontrolki zgrupowane również jako kontrolki w ramach <xref:System.Windows.Forms.GroupBox> kontroli.  
   
-#### <a name="to-align-to-grouped-controls"></a>Dostosowanie do kontrolki zgrupowane  
+### <a name="to-align-to-grouped-controls"></a>Dostosowanie do kontrolki zgrupowane  
   
 1. Wybierz dwóch kontrolek w formularzu. Poruszanie się zaznaczenie i zwróć uwagę linii przyciągania, pojawiających się między wybraną i inne kontrolki.  
   
@@ -120,7 +120,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>Za pomocą linii przyciągania, aby umieścić kontrolkę zwijanie jej rozmiaru  
  Linii przyciągania ułatwiają wyrównywanie formantów, kiedy należy najpierw umieścić je w formularzu.  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Umieść formant zwijanie jej rozmiar za pomocą linii przyciągania  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Umieść formant zwijanie jej rozmiar za pomocą linii przyciągania  
   
 1. W **przybornika**, kliknij przycisk <xref:System.Windows.Forms.Button> ikonę kontrolki. Nie przeciągnij go na formularzu.  
   
@@ -137,7 +137,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>Za pomocą linii przyciągania podczas przeciągania kontrolki z przybornika  
  Linii przyciągania ułatwiają wyrównywanie formantów podczas przeciągania z **przybornika** do formularza.  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Aby użyć linii przyciągania podczas przeciągania kontrolki z przybornika  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Aby użyć linii przyciągania podczas przeciągania kontrolki z przybornika  
   
 1. Przeciągnij <xref:System.Windows.Forms.Button> kontrolować z **przybornika** do formularza, ale nie zwolnij przycisk myszy.  
   
@@ -150,7 +150,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="resizing-controls-using-snaplines"></a>Zmiana rozmiaru formantów, za pomocą linii przyciągania  
  Linii przyciągania ułatwiają wyrównywanie formantów, gdy zmieniasz rozmiar.  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>Aby zmienić rozmiar formantu za pomocą linii przyciągania  
+### <a name="to-resize-a-control-using-snaplines"></a>Aby zmienić rozmiar formantu za pomocą linii przyciągania  
   
 1. Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do formularza.  
   
@@ -163,7 +163,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="aligning-a-label-to-a-controls-text"></a>Wyrównanie etykiety do formantu tekstu  
  Niektóre kontrolki oferują snapline — wyrównywania inne formanty do wyświetlanego tekstu.  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>Aby wyrównać etykietę do kontrolki tekstu  
+### <a name="to-align-a-label-to-a-controls-text"></a>Aby wyrównać etykietę do kontrolki tekstu  
   
 1. Przeciągnij <xref:System.Windows.Forms.TextBox> z kontrolować **przybornika** do formularza. Gdy usuniesz <xref:System.Windows.Forms.TextBox> sterowania do formularza, kliknij symbol tagu inteligentne i wybierz **Ustaw tekst na textBox1** opcji. Aby uzyskać więcej informacji, zobacz [instruktażu: Wykonywanie typowych zadań z tagami inteligentnymi na Windows Forms kontrolki](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
@@ -178,7 +178,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="using-snaplines-with-keyboard-navigation"></a>Za pomocą linii przyciągania z klawiatury  
  Linii przyciągania ułatwiają wyrównywanie formantów, gdy są rozmieszczanie ich za pomocą klawiszy strzałek.  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>Linii przyciągania za pomocą klawiatury  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>Linii przyciągania za pomocą klawiatury  
   
 1. Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do formularza. Umieść go w lewym górnym rogu formularza.  
   
@@ -199,7 +199,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="snaplines-and-layout-panels"></a>Liniami przyciągania oraz panele układów  
  Linii przyciągania są wyłączone w ramach paneli układów.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Aby wyłączyć linii przyciągania  
+### <a name="to-selectively-disable-snaplines"></a>Aby wyłączyć linii przyciągania  
   
 1. Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> z kontrolować **przybornika** do formularza.  
   
@@ -214,13 +214,13 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="disabling-snaplines"></a>Wyłączanie linii przyciągania  
  Linii przyciągania są włączone domyślnie. Można wyłączyć linii przyciągania selektywnie lub można je wyłączyć w środowisku projektowym.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Aby wyłączyć linii przyciągania  
+### <a name="to-selectively-disable-snaplines"></a>Aby wyłączyć linii przyciągania  
   
 - Naciśnij klawisz ALT i podczas przenoszenia kontrolki na formularzu.  
   
      Pamiętaj, że są wyświetlane nie linii przyciągania formantu nie przyciąganie do wszelkich potencjalnych pozycji wyrównania.  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>Aby wyłączyć linii przyciągania w środowisku projektowania  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>Aby wyłączyć linii przyciągania w środowisku projektowania  
   
 1. Z **narzędzia** menu Otwórz **opcje** okno dialogowe. Otwórz okno dialogowe Windows Forms Designer. Aby uzyskać więcej informacji, zobacz [ogólne, Windows Forms Designer, okno dialogowe Opcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   

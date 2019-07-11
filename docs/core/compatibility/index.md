@@ -4,12 +4,12 @@ description: Dowiedz się więcej o sposobach, w którym próbuje zachować zgod
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: b58edd9ff0bd56b12b861162cc92d484a3b36c8b
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307495"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736561"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Oceń przełomowe zmiany w programie .NET Core
 
@@ -107,7 +107,7 @@ Zmiany w tej kategorii *zmodyfikować* publiczny obszar powierzchni typu. Więks
 
 - **✔️ Dodanie konstruktora do klasy, wraz z domyślnego (bezparametrowego) konstruktora, jeśli klasa miała wcześniej konstruktorów**
 
-   Jednak dodanie konstruktora do klasy, która miała wcześniej konstruktorów *bez* dodanie konstruktora domyślnego nie jest dozwolone.
+   Jednak dodanie konstruktora do klasy, która miała wcześniej konstruktorów *bez* Dodawanie konstruktora bez parametrów jest niedozwolone.
 
 - **✔️ Zmiana elementu członkowskiego w [abstrakcyjne](../../csharp/language-reference/keywords/abstract.md) do [wirtualny](../../csharp/language-reference/keywords/virtual.md)**
 
@@ -174,7 +174,7 @@ Zmiany w tej kategorii *zmodyfikować* publiczny obszar powierzchni typu. Więks
 
   Spowoduje to podzielenie istniejących klientów, które były powiązane z poprzednim przeciążenia. Na przykład, jeśli klasę utworzono według jednej wersji metody, która akceptuje <xref:System.UInt32>, istniejących klientów pomyślnie powiąże tego przeciążenia przy przekazywaniu <xref:System.Int32> wartość. Jednak jeśli dodasz przeciążenia akceptujący <xref:System.Int32>, podczas ponownej kompilacji lub korzystanie z późnym wiązaniem, kompilator teraz wiąże się z nowym przeciążeniem. Jeśli powoduje różne zachowanie, to istotnej zmiany.
 
-- **❌ Dodanie konstruktora do klasy, która miała wcześniej żaden konstruktor bez dodawania Konstruktor domyślny**
+- **❌ Dodanie konstruktora do klasy, która miała wcześniej żaden konstruktor bez dodawania konstruktora bez parametrów**
 
 - **❌️ Dodawanie [tylko do odczytu](../../csharp/language-reference/keywords/readonly.md) do pola**
 

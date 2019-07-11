@@ -2,17 +2,17 @@
 title: Typowe kroki dotyczące korzystania z LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cbcd8099fd085d0198e5ba77ee0a3e86c1ca70d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063004"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742770"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Typowe kroki dotyczące korzystania z LINQ to SQL
 Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, wykonaj czynności opisane w dalszej części tego tematu. Należy pamiętać, że wiele kroki są opcjonalne. Jest bardzo prawdopodobne, że można użyć modelu obiektów w stanie domyślnym.  
   
- W przypadku bardzo szybko rozpoczniesz pracę, użyj [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do tworzenia modelu obiektu i Rozpocznij kodowanie zapytań.  
+ Dla bardzo szybko rozpoczniesz pracę należy użyć Object Relational Designer do tworzenia modelu obiektu i Rozpocznij kodowanie zapytań.  
   
 ## <a name="creating-the-object-model"></a>Tworzenie modelu obiektu  
  Pierwszym krokiem jest utworzenie modelu obiektu z metadanych istniejących relacyjnej bazy danych. Model obiektów reprezentuje bazę danych, zgodnie z językiem programowania dewelopera. Aby uzyskać więcej informacji, zobacz [LINQ to SQL Model obiektów](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
@@ -20,17 +20,17 @@ Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Wybierz narzędzia do tworzenia modelu.  
  Trzy narzędzia są dostępne do tworzenia modelu.  
   
-- W [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- Object Relational Designer  
   
      Projektant zawiera zaawansowanego interfejsu użytkownika do tworzenia modeli obiektów z istniejącej bazy danych. To narzędzie jest częścią środowiska IDE programu Visual Studio i najlepiej nadaje się dla małych i średnich baz danych.  
   
 - Narzędzia do generowania kodu SQLMetal  
   
-     To narzędzie wiersza polecenia oferuje nieco inny zestaw opcji dostępnych w [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Modelowanie dużych baz danych najlepiej odbywa się za pomocą tego narzędzia. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     To narzędzie wiersza polecenia oferuje nieco inny zestaw opcji przy użyciu projektanta O/R. Modelowanie dużych baz danych najlepiej odbywa się za pomocą tego narzędzia. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 - Edytor kodu  
   
-     Za pomocą edytora kodu Visual Studio lub innego edytora, można napisać własny kod. Nie zaleca tego podejścia może być podatne na błędy, gdy masz istniejącą bazę danych i można użyć dowolnego [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] lub narzędzia SQLMetal. Jednak Edytor kodu może być przydatny w przypadku aktualizowania lub modyfikowania kodu, który został już wygenerowany przy użyciu innych narzędzi. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Za pomocą edytora kodu Visual Studio lub innego edytora, można napisać własny kod. Takie podejście, które mogą być podatne na błędy, gdy masz istniejącą bazę danych i użyć O/R Designer lub narzędzie SQLMetal nie jest zalecane. Jednak Edytor kodu może być przydatny w przypadku aktualizowania lub modyfikowania kodu, który został już wygenerowany przy użyciu innych narzędzi. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Wybierz typ kodu, które mają zostać wygenerowane.  
   
@@ -43,14 +43,14 @@ Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
      Za pomocą tej metody, można zachować metadanych mapowania poza swój kod aplikacji. Aby uzyskać więcej informacji, zobacz [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
-    >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Nie obsługuje generowania zewnętrznych plików mapowania. Aby wdrożyć tę funkcję, należy użyć narzędzia SQLMetal.  
+    >  O/R Designer nie obsługuje generowania zewnętrznych plików mapowania. Aby wdrożyć tę funkcję, należy użyć narzędzia SQLMetal.  
   
 - Za pomocą pliku DBML, którą można modyfikować, przed wygenerowaniem plik kodu końcowego.  
   
      Jest to zaawansowana funkcja.  
   
 ### <a name="3-refine-the-code-file-to-reflect-the-needs-of-your-application"></a>3. Dostosuj plik kodu w celu uwzględnienia wymagań aplikacji.  
- W tym celu można użyć dowolnego [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] lub edytora kodu.  
+ W tym celu można użyć O/R Designer lub edytora kodu.  
   
 ## <a name="using-the-object-model"></a>Za pomocą modelu obiektów  
  Poniższa ilustracja przedstawia relację między warstwą Deweloper a danych w scenariuszu dwuwarstwowej. W innych sytuacjach, zobacz [N-warstwowe i zdalne aplikacje za pomocą LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  

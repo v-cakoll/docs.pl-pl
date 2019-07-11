@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81afb9b40269b04a59c54636c7e88c1f67189593
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 57f57d67c4f7641495feca0b9c128e6ccf456cab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041728"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780199"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject — Metoda
 Pobiera `ClassID` obiektu, biorąc pod uwagę jej `ObjectID`.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetClassFromObject(  
     [in]  ObjectID objectId,  
     [out] ClassID *pClassId);  

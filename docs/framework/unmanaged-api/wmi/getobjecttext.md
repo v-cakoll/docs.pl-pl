@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d34cb399ac0e8780c442eeb2e95cebfd0a22ca02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4438b000a8ecf95949350d3665267276a1d959ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746498"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText, funkcja
 Zwraca tekstową renderowanie obiektu w składni Managed Object Format (MOF).
@@ -30,7 +30,7 @@ Zwraca tekstową renderowanie obiektu w składni Managed Object Format (MOF).
     
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT GetObjectText (
    [in] int                vFunc, 
    [in] IWbemClassObject*   ptr, 

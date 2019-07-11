@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 8cfcdf8595733434cc56c621428c31238dd166dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211170"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771665"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel
 
@@ -55,7 +55,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 
  <xref:System.Windows.Forms.FlowLayoutPanel> Kontrolki można zmienić rozmiar lub przepełnieniem jego formantów podrzędnych jako wymiary zmiany elementu nadrzędnego w formularzu.
 
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Aby rozmieścić formanty w poziomie i w pionie za pomocą FlowLayoutPanel
+### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Aby rozmieścić formanty w poziomie i w pionie za pomocą FlowLayoutPanel
 
 1. Przeciągnij <xref:System.Windows.Forms.FlowLayoutPanel> z kontrolować **przybornika** do formularza.
 
@@ -76,7 +76,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 ## <a name="changing-flow-direction"></a>Zmiana kierunku przepływu
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Właściwości umożliwia zmianę kierunku, w którym są rozmieszczone kontrolki. Można rozmieścić formanty podrzędne od lewej do prawej, z, od prawej do lewej, od góry do dołu lub od dołu do góry.
 
-#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>Aby zmienić kierunek przepływu w FlowLayoutPanel
+### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>Aby zmienić kierunek przepływu w FlowLayoutPanel
 
 1. Zmień wartość właściwości <xref:System.Windows.Forms.FlowLayoutPanel> kontrolki <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> właściwość <xref:System.Windows.Forms.FlowDirection.TopDown>. Należy pamiętać, że są nieco inaczej rozmieszczone formantów podrzędnych w co najmniej jedną kolumnę, w zależności od tego, wysokość formantu.
 
@@ -85,7 +85,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 ## <a name="inserting-flow-breaks"></a>Wstawianie podziałów przepływu
  <xref:System.Windows.Forms.FlowLayoutPanel> Control oferuje właściwości FlowBreak do jego formantów podrzędnych. Ustawienie wartości właściwości FlowBreak `true` powoduje, że <xref:System.Windows.Forms.FlowLayoutPanel> formantu, aby zatrzymać układu kontrolek w bieżącym kierunek przepływu i zawijania do następnego wiersza lub kolumny.
 
-#### <a name="to-insert-flow-breaks"></a>Aby wstawić podziały przepływu
+### <a name="to-insert-flow-breaks"></a>Aby wstawić podziały przepływu
 
 1. Zmień wartość właściwości <xref:System.Windows.Forms.FlowLayoutPanel> kontrolki <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> właściwość <xref:System.Windows.Forms.FlowDirection.TopDown>.
 
@@ -96,7 +96,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>Pozycjonowanie formantów przy użyciu dokowanie i Zakotwiczanie
  Zadokowane i zachowania formantów podrzędnych Zakotwiczanie różnią się od zachowania w innych kontrolek w kontenerze. Zakotwiczanie i dokowanie są względem największych kontroli w kierunku przepływu.
 
-#### <a name="to-position-controls-using-docking-and-anchoring"></a>Aby umieścić kontrolek z wykorzystaniem dokowanie i Zakotwiczanie
+### <a name="to-position-controls-using-docking-and-anchoring"></a>Aby umieścić kontrolek z wykorzystaniem dokowanie i Zakotwiczanie
 
 1. Zwiększ rozmiar <xref:System.Windows.Forms.FlowLayoutPanel> aż <xref:System.Windows.Forms.Button> formanty są rozmieszczone w kolumnie.
 
@@ -115,7 +115,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 
  <xref:System.Windows.Forms.Control.Margin%2A> Właściwość pozwala na kontrolowanie odstępów między formantami.
 
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Aby rozmieścić formanty za pomocą właściwości dopełnienia i marginesów
+### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Aby rozmieścić formanty za pomocą właściwości dopełnienia i marginesów
 
 1. Zmień wartość właściwości <xref:System.Windows.Forms.FlowLayoutPanel> kontrolki <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>. Jeśli formularz jest wystarczający, <xref:System.Windows.Forms.Button> kontrolki zostanie przeniesiony do pierwszej kolumny <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.
 
@@ -126,7 +126,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Wstawianie formantów, klikając je dwukrotnie w przyborniku
  Możesz wypełnić swoje <xref:System.Windows.Forms.FlowLayoutPanel> kontroli przez dwukrotne kliknięcie kontrolek w **przybornika**.
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Aby wstawić formanty przez dwukrotne kliknięcie w przyborniku
+### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Aby wstawić formanty przez dwukrotne kliknięcie w przyborniku
 
 1. Kliknij dwukrotnie <xref:System.Windows.Forms.Button> ikonę kontrolki w **przybornika**. Należy pamiętać, że nowy <xref:System.Windows.Forms.Button> formant jest widoczny w <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.
 
@@ -135,7 +135,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Wstawianie kontrolki za pomocą rysowania konturu jej
  Możesz wstawić kontroli do <xref:System.Windows.Forms.FlowLayoutPanel> kontroli i określ jej rozmiar za pomocą rysowania konturu jej w komórce.
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>Aby wstawić formantu za pomocą rysowania konturu jej
+### <a name="to-insert-a-control-by-drawing-its-outline"></a>Aby wstawić formantu za pomocą rysowania konturu jej
 
 1. W **przybornika**, kliknij przycisk <xref:System.Windows.Forms.Button> ikonę kontrolki. Nie przeciągnij go na formularzu.
 
@@ -148,7 +148,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 ## <a name="inserting-controls-using-the-insertion-bar"></a>Wstawianie kontrolek przy użyciu paska wstawiania
  Możesz wstawić formanty na określonej pozycji w <xref:System.Windows.Forms.FlowLayoutPanel> kontroli. Przeciągnięcie formantu do <xref:System.Windows.Forms.FlowLayoutPanel> obszaru klienckiego kontrolki, aby wskazać, gdzie zostanie wstawiony formantu pojawia się pasek wstawiania.
 
-#### <a name="to-insert-a-control-using-the-caret"></a>Aby wstawić formant, używając symbolu grota
+### <a name="to-insert-a-control-using-the-caret"></a>Aby wstawić formant, używając symbolu grota
 
 1. Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do <xref:System.Windows.Forms.FlowLayoutPanel> sterowania, a następnie wskaż miejsce między dwoma <xref:System.Windows.Forms.Button> kontrolki. Należy pamiętać, że pasek wstawiania jest pobierana, wskazując, skąd <xref:System.Windows.Forms.Button> zostaną umieszczone po upuszczeniu go do <xref:System.Windows.Forms.FlowLayoutPanel> kontroli. Przed porzuceniem nowy <xref:System.Windows.Forms.Button> sterowania do <xref:System.Windows.Forms.FlowLayoutPanel> kontrolować, przenieś wskaźnik myszy około obserwuj, jak Przenosi pasek wstawiania.
 
@@ -157,7 +157,7 @@ Po zakończeniu będziesz mieć zrozumienia rolę odgrywaną przez te funkcje wa
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>Ponowne przypisywanie istniejących formantów do innego elementu nadrzędnego
  Możesz przypisać formantów, które istnieją w formularzu na nowe <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.
 
-#### <a name="to-reparent-existing-controls"></a>Aby zmienić elementu nadrzędnego istniejących formantów
+### <a name="to-reparent-existing-controls"></a>Aby zmienić elementu nadrzędnego istniejących formantów
 
 1. Przeciągnij trzy <xref:System.Windows.Forms.Button> kontrolki z **przybornika** na formularz. Umieść je blisko siebie, ale pozostawić je niewyrównanych.
 

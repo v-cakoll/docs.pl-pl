@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 28cd15a793d303e1d6e64c52c1d0095e8d619c7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d9e3ca31eddff9d08607c4d6d37ca76139bf5d2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789704"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756306"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>Metoda IXCLRDataMethodDefinition::EndEnumInstances
 
@@ -30,7 +30,7 @@ Zwalnia zasoby używane przez Iteratory wewnętrzny używany podczas wyliczania 
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 HRESULT EndEnumInstances(
     [in] CLRDATA_ENUM handle
 );

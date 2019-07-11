@@ -7,17 +7,17 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780838"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755201"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Instrukcje: Deklarowanie obiektu za pomocą inicjatora obiektów (Visual Basic)
 Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w pojedynczej instrukcji. Ponadto należy zainicjować co najmniej jednego członka wystąpienia w tym samym czasie, bez wywoływania sparametryzowania konstruktora.  
   
- Gdy używasz inicjatora obiektu można utworzyć wystąpienia typu nazwanego, wywoływany jest konstruktor domyślny klasy, następuje inicjowanie wyznaczonych członków w kolejności, które określisz.  
+ Gdy używasz inicjatora obiektu można utworzyć wystąpienia typu nazwanego konstruktora bez parametrów dla klasy jest wywoływana, następuje inicjowanie wyznaczonych członków w kolejności, które określisz.  
   
  Poniższa procedura przedstawia sposób tworzenia wystąpienia `Student` klasy na trzy różne sposoby. Klasa ma imię, nazwisko i właściwości klas, które roku, między innymi. Każdy z trzech deklaracje tworzy nowe wystąpienie klasy `Student`, z właściwością `First` ustawiona na "Jan", właściwość `Last` ustawiona na "Tucker", a wszystkie inne elementy członkowskie zestawu do wartości domyślnych. Wynik każdego zgłoszenia w procedurze jest równoważne z poniższego przykładu, który nie korzysta z inicjatora obiektu.  
   

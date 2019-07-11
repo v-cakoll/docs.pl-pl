@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16cfa6df6251cd67860155cb8092e77a835eaaef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 715e53ae04532214d4011d4a40503b2ade5a014d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992423"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782074"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics — Metoda
 Wylicza właściwości i zdarzenia zmiany właściwości, do których odnosi się określonej metody.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT EnumMethodSemantics (  
    [in, out] HCORENUM    *phEnum,  
    [in]  mdMethodDef     mb,   

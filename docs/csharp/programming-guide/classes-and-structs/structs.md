@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 0c0faf9fe6d9752cafa03ee054f669334f56090d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 063d7e3b68fbe6c01ff0df4ae935fec5af6f6891
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703299"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743835"
 ---
 # <a name="structs-c-programming-guide"></a>Struktury (Przewodnik programowania w języku C#)
 
@@ -26,24 +26,17 @@ Struktury współużytkując większość tej samej składni jako klasy. Nazwa s
 - Struktury są kopiowane w przydziale. Gdy struktura jest przypisywana nowej zmiennej, wszystkie dane są kopiowane, a wszelkie zmiany nowa kopia nie zmienia danych do oryginalnej kopii. Ważne jest, aby pamiętać podczas pracy z kolekcjami wartość typy takie jak `Dictionary<string, myStruct>`.  
 - Struktury są typami wartości, w przeciwieństwie do klasy, które są typami odwołań.  
 - W przeciwieństwie do klasy, struktury mogą być utworzone bez użycia `new` operatora.  
-- Struktury można zadeklarować konstruktorów, które mają parametry. 
+- Struktury można zadeklarować konstruktorów, które mają parametry.
 - Struktura nie może dziedziczyć z innej struktury lub klasy, a nie może być podstawą klasy. Wszystkie struktury dziedziczyć bezpośrednio <xref:System.ValueType>, który dziedziczy z <xref:System.Object>.  
-- Struktura może zaimplementować interfejsów. 
+- Struktura może zaimplementować interfejsów.
 - Struktura nie może być `null`, i nie można przypisać zmiennej struktury `null` chyba, że zmienna jest zadeklarowana jako typ dopuszczający wartość null.
   
-## <a name="related-sections"></a>Sekcje pokrewne  
-
-Informacje dodatkowe:  
-  
-- [Używanie struktur](using-structs.md)
-- [Konstruktory](constructors.md)
-- [Typy dopuszczające wartości null](../nullable-types/index.md)
-- [Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
-- [Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
-
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](index.md)
 - [Klasy](classes.md)
+- [Typy dopuszczające wartości null](../nullable-types/index.md)
 - [Nazwy identyfikatorów](../inside-a-program/identifier-names.md)
+- [Używanie struktur](using-structs.md)
+- [Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)

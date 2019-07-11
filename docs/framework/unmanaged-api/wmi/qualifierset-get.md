@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0dc76a2732bf9c1e4f3a26fa2d045bfbcd837ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782576"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get — funkcja
 Pobiera określonego nazwanego kwalifikator.  
@@ -30,7 +30,7 @@ Pobiera określonego nazwanego kwalifikator.
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 HRESULT QualifierSet_Get (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 

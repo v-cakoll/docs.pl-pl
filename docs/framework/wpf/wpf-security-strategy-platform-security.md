@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663565"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756757"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jednocześnie również wykorzystuje funkcje zabezpieczeń, możliwości platformy, która zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy są łączone w celu zapewnienia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, ochronę w głębi, który próbuje uniknąć dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
@@ -140,14 +140,14 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  ![Diagram pokazujący zestawy uprawnień CAS.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Ograniczenia Internet strefy izolowanym stosuje się jednakowo do dowolnego kod, który [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] importuje z biblioteki systemu, w tym [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Gwarantuje to, że każdy bit kod jest zablokowane, nawet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Niestety, aby można było wykonać, [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] musi wykonać funkcje, które wymaga więcej uprawnień niż te, wynikające z piaskownicy zabezpieczeń strefy Internet.  
+ Ograniczenia strefy Internet izolowanym stosuje się jednakowo do wszelki kod, który XBAP importuje z biblioteki systemu, w tym [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Gwarantuje to, że każdy bit kod jest zablokowane, nawet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Niestety Aby móc wykonać XBAP musi korzystać z funkcji, która wymaga więcej uprawnień niż te, wynikające z piaskownicy zabezpieczeń strefy Internet.  
   
- Należy wziąć pod uwagę [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] aplikacja, która zawiera następująca strona:  
+ Należy wziąć pod uwagę aplikacji XBAP, który zawiera następująca strona:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Do wykonania tej operacji [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], podstawowe [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kod musi być wykonany więcej funkcji niż jest dostępne dla wywołania [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], w tym:  
+ Do wykonania tego XBAP bazowego [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kod musi być wykonany więcej funkcji niż jest dostępne do wywoływania XBAP, w tym:  
   
 - Tworzenie uchwyt okna (HWND) do renderowania  
   
@@ -157,7 +157,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  Z zabezpieczeń będzie krytycznego punktu widzenia, dzięki czemu bezpośredni dostęp do dowolnego z tych operacji z aplikacji w trybie piaskownicy.  
   
- Na szczęście [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] przeznaczony dla tej sytuacji, umożliwiając te operacje do wykonania z podwyższonym poziomem uprawnień w imieniu aplikacji w trybie piaskownicy. Podczas wszystkich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operacje są porównywane z ograniczonymi uprawnieniami zabezpieczeń strefy Internet domeny aplikacji [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (tak jak inne biblioteki systemu) otrzymuje zestawu uprawnień, który zawiera wszystkie możliwe uprawnienia.
+ Na szczęście [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] przeznaczony dla tej sytuacji, umożliwiając te operacje do wykonania z podwyższonym poziomem uprawnień w imieniu aplikacji w trybie piaskownicy. Podczas wszystkich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operacje są porównywane z ograniczonymi uprawnieniami zabezpieczeń strefy Internet domeny aplikacji XBAP [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (tak jak inne biblioteki systemu) otrzymuje zestawu uprawnień, który zawiera wszystkie możliwe uprawnienia.
   
  Takie rozwiązanie wymaga [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] odbiera podwyższonego poziomu uprawnień podczas uniemożliwia tych uprawnień jest regulowane przez zestaw uprawnień strefy Internet domeny aplikacji hosta.  
   
@@ -166,7 +166,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- **Asercja** zasadniczo zapobiega nieograniczone uprawnienia wymagane przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] z są ograniczone przez Internet strefa uprawnienia [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
+ **Asercja** zasadniczo zapobiega nieograniczone uprawnienia wymagane przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] z są ograniczone przez Internet strefa uprawnienia XBAP.  
   
  Z punktu widzenia platformy [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest odpowiedzialny za pomocą **Asercja** poprawnie; niepoprawnego użycia **Asercja** można włączyć złośliwego kodu do podniesienia uprawnień. W związku z tym, należy następnie wywoływać tylko **Asercja** w razie potrzeby, oraz aby upewnić się, że piaskownicy ograniczenia pozostają bez zmian. Na przykład kodu w trybie piaskownicy nie może otworzyć plików losowych, ale może on być używać czcionek. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Umożliwia piaskownicy aplikacji przy użyciu funkcji czcionek, wywołując **Asercja**oraz [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] odczytu plików zawiera te czcionki w imieniu aplikacji w trybie piaskownicy.  
   
@@ -178,11 +178,11 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Metodologia zabezpieczenia krytyczny  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Kod, który używa uprawnień, aby umożliwić izolowanego strefy Internet [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] aplikacji musi być przechowywany na najwyższym możliwym stopniu inspekcji zabezpieczeń i kontroli. Aby ułatwić to wymaganie, .NET Framework zawiera nową obsługę zarządzania kod, który podnosi poziom uprawnień uprawnień. W szczególności [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] umożliwia Zidentyfikuj kod, który podnosi poziom uprawnień uprawnień i oznacz go za pomocą <xref:System.Security.SecurityCriticalAttribute>; każdy kod nie jest oznaczony atrybutem <xref:System.Security.SecurityCriticalAttribute> staje się *przezroczyste* przy użyciu tej metody. Z drugiej strony, zarządzanego kodu, który nie jest oznaczony atrybutem <xref:System.Security.SecurityCriticalAttribute> nie będzie mógł wzrasta uprawnień.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Kodu, które używa uprawnień, aby włączyć piaskownicy strefy Internet, dla aplikacji XBAP musi być przechowywany na najwyższym możliwym stopniu inspekcji zabezpieczeń i kontroli. Aby ułatwić to wymaganie, .NET Framework zawiera nową obsługę zarządzania kod, który podnosi poziom uprawnień uprawnień. W szczególności [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] umożliwia Zidentyfikuj kod, który podnosi poziom uprawnień uprawnień i oznacz go za pomocą <xref:System.Security.SecurityCriticalAttribute>; każdy kod nie jest oznaczony atrybutem <xref:System.Security.SecurityCriticalAttribute> staje się *przezroczyste* przy użyciu tej metody. Z drugiej strony, zarządzanego kodu, który nie jest oznaczony atrybutem <xref:System.Security.SecurityCriticalAttribute> nie będzie mógł wzrasta uprawnień.  
   
  Zabezpieczenia-krytyczny metodologii umożliwia organizacji [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kod, który podnosi poziom uprawnień uprawnień do *zabezpieczenia krytyczny jądra*, za pomocą reszta jest przezroczysty. Izolując kod zabezpieczenia krytyczny umożliwia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zespół inżynierów skupić się na dodatkowe analizy i źródła kontrole bezpieczeństwa na zabezpieczenia krytyczny jądra niż wskazówki dotyczące standardowych zabezpieczeń (zobacz [strategia zabezpieczeń WPF -Projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)).  
   
- Należy pamiętać, że .NET Framework pozwala zaufany kod, aby rozszerzyć [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] piaskownicy strefy Internet, umożliwiając programistom pisanie zestawów zarządzanych, które są oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) i wdrażana do użytkownika pamięci podręcznej (globalnej). Oznaczenia zestawu za pomocą APTCA jest operacją zabezpieczeń bardzo ważne, ponieważ pozwala ono żadnego kodu do wywoływania tego zestawu, w tym złośliwy kod z Internetu. Należy zachować wyjątkową ostrożność i najlepsze rozwiązania muszą być używane w ten sposób, a użytkownicy muszą dokonać wyboru zaufać oprogramowanie w celu zainstalowania.  
+ Należy pamiętać, że .NET Framework pozwala zaufany kod, aby rozszerzyć piaskownicy strefy XBAP Internet, umożliwiając programistom pisanie zestawów zarządzanych, które są oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) i wdrażana do użytkownika pamięci podręcznej (globalnej). Oznaczenia zestawu za pomocą APTCA jest operacją zabezpieczeń bardzo ważne, ponieważ pozwala ono żadnego kodu do wywoływania tego zestawu, w tym złośliwy kod z Internetu. Należy zachować wyjątkową ostrożność i najlepsze rozwiązania muszą być używane w ten sposób, a użytkownicy muszą dokonać wyboru zaufać oprogramowanie w celu zainstalowania.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer Security  

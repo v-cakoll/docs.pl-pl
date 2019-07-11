@@ -2,12 +2,12 @@
 title: Implementowanie warstwy trwałości infrastruktury za pomocą programu Entity Framework Core
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Poznaj szczegóły implementacji dla warstwy utrwalania infrastruktury przy użyciu platformy Entity Framework Core.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639524"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778053"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementowanie warstwy trwałości infrastruktury za pomocą platformy Entity Framework Core
 
@@ -21,7 +21,7 @@ Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popu
 
 Wprowadzenie do programu EF Core jest już dostępne w dokumentacji firmy Microsoft, w tym miejscu po prostu udostępniamy łącza do tych informacji.
 
-#### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -230,7 +230,7 @@ builder.RegisterType<OrderRepository>()
 
 Należy zauważyć, że przy użyciu okres istnienia pojedyncze repozytorium, może spowodować poważne współbieżności problemy po Twojej DbContext jest ustawiona na ograniczony okres istnienia (InstancePerLifetimeScope) (okresy domyślnego typu DBContext).
 
-#### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wdrażanie z repozytorium i jednostki pracy w aplikacji ASP.NET MVC** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
@@ -447,7 +447,7 @@ Oprócz enkapsulacji logikę filtrowania, Specyfikacja można określić kształ
 
 Chociaż nie jest zalecane do zwrócenia IQueryable z repozytorium, jest idealnie możesz ich używać w ramach repozytorium do utworzenia zestawu wyników. Widać to podejście używany na liście powyżej, metodę, która używa wyrażeń pośrednich IQueryable, do utworzenia listy zapytania zawiera przed wykonaniem kwerendy z kryteriami specyfikacji w ostatnim wierszu.
 
-#### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Mapowanie tabeli** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
